@@ -213,6 +213,20 @@
     ]
   },
   {
+    "fileName": "10 - 日记模板",
+    "relativePath": "templates/10 - 日记模板.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
     "fileName": "20 - 周记模板",
     "relativePath": "templates/20 - 周记模板.md",
     "headings": [
@@ -231,26 +245,8 @@
     ]
   },
   {
-    "fileName": "10 - 日记模板",
-    "relativePath": "templates/10 - 日记模板.md",
-    "headings": [
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      }
-    ]
-  },
-  {
     "fileName": "contents",
     "relativePath": "pages/contents.md"
-  },
-  {
-    "fileName": "文章发布工作流梳理",
-    "relativePath": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
   },
   {
     "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
@@ -607,6 +603,10 @@
     ]
   },
   {
+    "fileName": "文章发布工作流梳理",
+    "relativePath": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
+  },
+  {
     "fileName": "金句 - MOC",
     "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md",
     "tags": [
@@ -832,6 +832,17 @@
     ]
   },
   {
+    "fileName": "工欲善其事，必先利其器。--《论语》",
+    "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/工欲善其事，必先利其器。--《论语》.md",
+    "backlinks": [
+      {
+        "fileName": "金句 - MOC",
+        "link": "工欲善其事，必先利其器。--《论语》",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md"
+      }
+    ]
+  },
+  {
     "fileName": "听过很多大道理，依旧过不好这一生",
     "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/听过很多大道理，依旧过不好这一生.md",
     "backlinks": [
@@ -844,17 +855,6 @@
         "fileName": "2022-03-27",
         "link": "听过很多大道理，依旧过不好这一生",
         "relativePath": "journals/2022-03-27.md"
-      }
-    ]
-  },
-  {
-    "fileName": "工欲善其事，必先利其器。--《论语》",
-    "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/工欲善其事，必先利其器。--《论语》.md",
-    "backlinks": [
-      {
-        "fileName": "金句 - MOC",
-        "link": "工欲善其事，必先利其器。--《论语》",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md"
       }
     ]
   },
@@ -1877,26 +1877,26 @@
     ]
   },
   {
-    "fileName": "价值序列",
-    "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/价值序列.md"
-  },
-  {
     "fileName": "世事洞明 - 人情练达",
     "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/世事洞明 - 人情练达.md"
+  },
+  {
+    "fileName": "价值序列",
+    "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/价值序列.md"
   },
   {
     "fileName": "韩寒",
     "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/韩寒.md",
     "backlinks": [
       {
-        "fileName": "发现的有趣现象",
-        "link": "韩寒",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md"
-      },
-      {
         "fileName": "令我多次沉醉的人或作品 - MOC",
         "link": "韩寒",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md"
+      },
+      {
+        "fileName": "发现的有趣现象",
+        "link": "韩寒",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md"
       },
       {
         "fileName": "2022-05-09T02_15_57.931Z",
@@ -1946,14 +1946,14 @@
         "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
       },
       {
-        "fileName": "发现的有趣现象",
-        "link": "刘慈欣",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md"
-      },
-      {
         "fileName": "令我多次沉醉的人或作品 - MOC",
         "link": "刘慈欣",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md"
+      },
+      {
+        "fileName": "发现的有趣现象",
+        "link": "刘慈欣",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md"
       },
       {
         "fileName": "2022-05-09T02_15_57.058Z",
@@ -1995,923 +1995,6 @@
         "fileName": "2022-05-09T02_15_57.931Z",
         "link": "东野圭吾",
         "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC/2022-05-09T02_15_57.931Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "转笔入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/转笔入门.md",
-    "headings": [
-      {
-        "heading": "正转",
-        "level": 2
-      },
-      {
-        "heading": "反转",
-        "level": 2
-      },
-      {
-        "heading": "转多圈",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "转笔入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "转笔入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "谁是卧底轻度入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "谁是卧底轻度入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "谁是卧底轻度入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "禁手规则",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md",
-    "headings": [
-      {
-        "heading": "禁手类型",
-        "level": 2
-      },
-      {
-        "heading": "长连禁手",
-        "level": 3
-      },
-      {
-        "heading": "四四禁手",
-        "level": 3
-      },
-      {
-        "heading": "三三禁手",
-        "level": 2
-      },
-      {
-        "heading": "黑棋唯一赢棋招数",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "五子棋必胜法",
-        "link": "禁手规则",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
-      },
-      {
-        "fileName": "五子棋必胜法",
-        "link": "禁手规则",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
-      }
-    ]
-  },
-  {
-    "fileName": "狼人杀轻度入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/狼人杀轻度入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "狼人杀轻度入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "狼人杀轻度入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "滑雪入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/滑雪入门.md",
-    "links": [
-      {
-        "link": "游泳"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "滑雪入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "滑雪入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "游泳入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/游泳入门.md",
-    "links": [
-      {
-        "link": "蛙泳入门"
-      },
-      {
-        "link": "自由泳入门"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "游泳入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "游泳入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "杨玉环",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/杨玉环.md",
-    "headings": [
-      {
-        "heading": "王者荣耀-遇见飞天-台词",
-        "level": 3
-      }
-    ]
-  },
-  {
-    "fileName": "攀岩入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/攀岩入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "攀岩入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "攀岩入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "天谕手游",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/天谕手游.md",
-    "links": [
-      {
-        "link": "MMORPG"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "天谕手游",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "天谕手游",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "五子棋必胜法",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md",
-    "headings": [
-      {
-        "heading": "规则玩法",
-        "level": 2
-      },
-      {
-        "heading": "一个好习惯：先活3，再冲4",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "禁手规则",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md"
-      },
-      {
-        "link": "禁手规则",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "五子棋必胜法",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "五子棋必胜法",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "五分钟脱口秀",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/五分钟脱口秀.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "五分钟脱口秀",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "五分钟脱口秀",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "一些学起来挺有意思的小知识点 - MOC",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
-    "tags": [
-      "moc",
-      "todo/某天"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 17
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "费曼技巧",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
-      },
-      {
-        "link": "《刻意练习》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-      },
-      {
-        "link": "3阶魔方还原入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md"
-      },
-      {
-        "link": "五子棋必胜法",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
-      },
-      {
-        "link": "狼人杀轻度入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/狼人杀轻度入门.md"
-      },
-      {
-        "link": "谁是卧底轻度入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md"
-      },
-      {
-        "link": "五分钟脱口秀",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/五分钟脱口秀.md"
-      },
-      {
-        "link": "转笔入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/转笔入门.md"
-      },
-      {
-        "link": "踩高跷入门"
-      },
-      {
-        "link": "开车机动车入门"
-      },
-      {
-        "link": "攀岩入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/攀岩入门.md"
-      },
-      {
-        "link": "游泳入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/游泳入门.md"
-      },
-      {
-        "link": "滑雪入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/滑雪入门.md"
-      },
-      {
-        "link": "溜冰入门"
-      },
-      {
-        "link": "自行车入门"
-      },
-      {
-        "link": "冒险岛"
-      },
-      {
-        "link": "三国杀"
-      },
-      {
-        "link": "炉石传说"
-      },
-      {
-        "link": "王者荣耀"
-      },
-      {
-        "link": "天谕手游",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/天谕手游.md"
-      },
-      {
-        "link": "地狱边境 limbo"
-      },
-      {
-        "link": "机械迷城"
-      },
-      {
-        "link": "INSIDE"
-      },
-      {
-        "link": "GRIS"
-      }
-    ]
-  },
-  {
-    "fileName": "3阶魔方还原入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "3阶魔方还原入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.744Z",
-        "link": "3阶魔方还原入门",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "软实力和硬通货",
-    "relativePath": "pages/400 - RESOURCE/基础学科/金融学/软实力和硬通货.md",
-    "headings": [
-      {
-        "heading": "软实力",
-        "level": 2
-      },
-      {
-        "heading": "硬通货",
-        "level": 2
-      },
-      {
-        "heading": "什么样的软实力是硬通货？",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "2022-04-26#^2bf905",
-        "cleanLink": "2022-04-26",
-        "displayText": "2022-04-26 > ^2bf905",
-        "relativePath": "journals/2022-04-26.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-04-26",
-        "link": "软实力和硬通货",
-        "relativePath": "journals/2022-04-26.md"
-      }
-    ]
-  },
-  {
-    "fileName": "比较优势",
-    "relativePath": "pages/400 - RESOURCE/基础学科/金融学/比较优势.md",
-    "backlinks": [
-      {
-        "fileName": "经济学常用概念",
-        "link": "比较优势",
-        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.785Z",
-        "link": "比较优势",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念/2022-05-09T02_15_57.785Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "有用的github开源库搜集",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md",
-    "links": [
-      {
-        "link": "好玩的github开源库搜集",
-        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/好玩的github开源库搜集.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-02",
-        "link": "有用的github开源库搜集",
-        "relativePath": "journals/2022-05-02.md"
-      }
-    ]
-  },
-  {
-    "fileName": "好玩的github开源库搜集",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/好玩的github开源库搜集.md",
-    "backlinks": [
-      {
-        "fileName": "有用的github开源库搜集",
-        "link": "好玩的github开源库搜集",
-        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md"
-      }
-    ]
-  },
-  {
-    "fileName": "前端测试",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/前端测试.md",
-    "links": [
-      {
-        "link": "mocha"
-      },
-      {
-        "link": "jest"
-      },
-      {
-        "link": "Selenium"
-      },
-      {
-        "link": "Playwright"
-      },
-      {
-        "link": "混沌测试"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-04-25",
-        "link": "前端测试",
-        "relativePath": "journals/2022-04-25.md"
-      }
-    ]
-  },
-  {
-    "fileName": "vscode打开笔记库",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/vscode打开笔记库.md"
-  },
-  {
-    "fileName": "powershell",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/powershell.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-04",
-        "link": "powershell",
-        "relativePath": "journals/2022-05-04.md"
-      }
-    ]
-  },
-  {
-    "fileName": "golang - MOC",
-    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/golang - MOC.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 17
-        }
-      }
-    }
-  },
-  {
-    "fileName": "边际效用",
-    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效用.md"
-  },
-  {
-    "fileName": "边际效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效应.md",
-    "backlinks": [
-      {
-        "fileName": "经济学常用概念",
-        "link": "边际效应",
-        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.785Z",
-        "link": "边际效应",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念/2022-05-09T02_15_57.785Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "经济学常用概念",
-    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md",
-    "headings": [
-      {
-        "heading": "宏观经济学",
-        "level": 2
-      },
-      {
-        "heading": "微观经济学",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "比较优势",
-        "relativePath": "pages/400 - RESOURCE/基础学科/金融学/比较优势.md"
-      },
-      {
-        "link": "边际效应",
-        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效应.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "微言大义的词语汇总 - MOC",
-        "link": "经济学常用概念",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.377Z",
-        "link": "经济学常用概念",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC/2022-05-09T02_15_57.377Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "真实庭审解说",
-    "relativePath": "pages/400 - RESOURCE/基础学科/法学/真实庭审解说.md",
-    "links": [
-      {
-        "link": "张雷雷故意杀人案庭审"
-      },
-      {
-        "link": "快播案庭审"
-      },
-      {
-        "link": "大悦城商标侵权庭审"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-04-16",
-        "link": "真实庭审解说",
-        "relativePath": "journals/2022-04-16.md"
-      }
-    ]
-  },
-  {
-    "fileName": "测试一下而已",
-    "relativePath": "pages/400 - RESOURCE/基础学科/法学/测试一下而已.md"
-  },
-  {
-    "fileName": "鲶鱼效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/鲶鱼效应.md"
-  },
-  {
-    "fileName": "马太效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/马太效应.md"
-  },
-  {
-    "fileName": "首因效应和近因效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/首因效应和近因效应.md",
-    "headings": [
-      {
-        "heading": "首因效应 （第一印象很重要）",
-        "level": 2
-      },
-      {
-        "heading": "近因效应（新印象是可以塑造的）",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "飞轮效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md",
-    "tags": [
-      "review"
-    ],
-    "frontmatter": {
-      "sr-due": "2022-05-22",
-      "sr-interval": 53,
-      "sr-ease": 290,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 6,
-          "col": 3,
-          "offset": 83
-        }
-      }
-    },
-    "aliases": [
-      "推磨效应"
-    ],
-    "links": [
-      {
-        "link": "架构图-太难画了"
-      },
-      {
-        "link": "数字时代如何更好地工作与生活 - 图",
-        "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md"
-      }
-    ]
-  },
-  {
-    "fileName": "蝴蝶效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/蝴蝶效应.md"
-  },
-  {
-    "fileName": "破窗效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/破窗效应.md"
-  },
-  {
-    "fileName": "皮格马利翁效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应.md",
-    "tags": [
-      "cards"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 29
-        }
-      }
-    }
-  },
-  {
-    "fileName": "登门槛效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/登门槛效应.md"
-  },
-  {
-    "fileName": "棘轮效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/棘轮效应.md"
-  },
-  {
-    "fileName": "晕轮效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/晕轮效应.md",
-    "headings": [
-      {
-        "heading": "我的理解",
-        "level": 2
-      },
-      {
-        "heading": "网上解释",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "收藏者谬误",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/收藏者谬误.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 29
-        }
-      }
-    },
-    "aliases": [
-      "收藏家谬误"
-    ],
-    "headings": [
-      {
-        "heading": "理解",
-        "level": 2
-      },
-      {
-        "heading": "破局",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "Obsidian入门到精通",
-        "displayText": "obsidian",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-03-16",
-        "link": "收藏者谬误",
-        "relativePath": "journals/2022-03-16.md"
-      }
-    ]
-  },
-  {
-    "fileName": "拆屋效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/拆屋效应.md"
-  },
-  {
-    "fileName": "延迟满足",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md",
-    "links": [
-      {
-        "link": "少有人走的路"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "各类文化产品的生产消费时间比",
-        "link": "延迟满足",
-        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
-      }
-    ]
-  },
-  {
-    "fileName": "安慰剂效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/安慰剂效应.md"
-  },
-  {
-    "fileName": "墨菲定律",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/墨菲定律.md",
-    "headings": [
-      {
-        "heading": "个人理解",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "视频笔记-【罗翔】我们为什么要读书？",
-        "link": "墨菲定律",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.936Z",
-        "link": "墨菲定律",
-        "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？/2022-05-09T02_15_57.936Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "发现的有趣现象",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md",
-    "headings": [
-      {
-        "heading": "警惕全职搞培训的",
-        "level": 2
-      },
-      {
-        "heading": "几种知识类的现象级产品",
-        "level": 2
-      },
-      {
-        "heading": "我们其实没有这么多时间，也没有必要，跟着别人学着精通一个领域",
-        "level": 2
-      },
-      {
-        "heading": "计划",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "李开复"
-      },
-      {
-        "link": "刘慈欣",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
-      },
-      {
-        "link": "韩寒",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/韩寒.md"
-      }
-    ]
-  },
-  {
-    "fileName": "PTSD - 创伤后应激障碍",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/PTSD - 创伤后应激障碍.md"
-  },
-  {
-    "fileName": "刻板印象",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/刻板印象.md"
-  },
-  {
-    "fileName": "习得性无助",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/习得性无助.md"
-  },
-  {
-    "fileName": "苏格拉底式",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/苏格拉底式.md",
-    "links": [
-      {
-        "link": "英雄主义"
-      }
-    ]
-  },
-  {
-    "fileName": "第一次逛窑子不知所措",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/第一次逛窑子不知所措.md",
-    "backlinks": [
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "第一次逛窑子不知所措",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_57.058Z",
-        "link": "第一次逛窑子不知所措",
-        "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗/2022-05-09T02_15_57.058Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "柏拉图式",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/柏拉图式.md"
-  },
-  {
-    "fileName": "授人以鱼不如授人以渔",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md",
-    "backlinks": [
-      {
-        "fileName": "和经典名言抬杠 - MOC",
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-02",
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "journals/2022-05-02.md"
-      }
-    ]
-  },
-  {
-    "fileName": "各类文化产品的生产消费时间比",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md",
-    "links": [
-      {
-        "link": "情绪大脑"
-      },
-      {
-        "link": "理智大脑",
-        "relativePath": "pages/300 - AREA/知识管理/理智大脑.md"
-      },
-      {
-        "link": "延迟满足",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md"
-      },
-      {
-        "link": "《认知觉醒》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-03",
-        "link": "各类文化产品的生产消费时间比",
-        "relativePath": "journals/2022-05-03.md"
       }
     ]
   },
@@ -3660,14 +2743,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "各类文化产品的生产消费时间比",
-        "link": "《认知觉醒》",
-        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
-      },
-      {
         "fileName": "读书笔记 - MOC",
         "link": "《认知觉醒》",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
+      },
+      {
+        "fileName": "各类文化产品的生产消费时间比",
+        "link": "《认知觉醒》",
+        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
       },
       {
         "fileName": "2022-05-09T02_15_57.911Z",
@@ -5740,6 +4823,923 @@
     ]
   },
   {
+    "fileName": "谁是卧底轻度入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "谁是卧底轻度入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "谁是卧底轻度入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "滑雪入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/滑雪入门.md",
+    "links": [
+      {
+        "link": "游泳"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "滑雪入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "滑雪入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "转笔入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/转笔入门.md",
+    "headings": [
+      {
+        "heading": "正转",
+        "level": 2
+      },
+      {
+        "heading": "反转",
+        "level": 2
+      },
+      {
+        "heading": "转多圈",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "转笔入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "转笔入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "禁手规则",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md",
+    "headings": [
+      {
+        "heading": "禁手类型",
+        "level": 2
+      },
+      {
+        "heading": "长连禁手",
+        "level": 3
+      },
+      {
+        "heading": "四四禁手",
+        "level": 3
+      },
+      {
+        "heading": "三三禁手",
+        "level": 2
+      },
+      {
+        "heading": "黑棋唯一赢棋招数",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "五子棋必胜法",
+        "link": "禁手规则",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
+      },
+      {
+        "fileName": "五子棋必胜法",
+        "link": "禁手规则",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
+      }
+    ]
+  },
+  {
+    "fileName": "狼人杀轻度入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/狼人杀轻度入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "狼人杀轻度入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "狼人杀轻度入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "游泳入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/游泳入门.md",
+    "links": [
+      {
+        "link": "蛙泳入门"
+      },
+      {
+        "link": "自由泳入门"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "游泳入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "游泳入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "杨玉环",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/杨玉环.md",
+    "headings": [
+      {
+        "heading": "王者荣耀-遇见飞天-台词",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "fileName": "攀岩入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/攀岩入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "攀岩入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "攀岩入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "天谕手游",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/天谕手游.md",
+    "links": [
+      {
+        "link": "MMORPG"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "天谕手游",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "天谕手游",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "五子棋必胜法",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md",
+    "headings": [
+      {
+        "heading": "规则玩法",
+        "level": 2
+      },
+      {
+        "heading": "一个好习惯：先活3，再冲4",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "禁手规则",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md"
+      },
+      {
+        "link": "禁手规则",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/禁手规则.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "五子棋必胜法",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "五子棋必胜法",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "五分钟脱口秀",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/五分钟脱口秀.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "五分钟脱口秀",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "五分钟脱口秀",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "一些学起来挺有意思的小知识点 - MOC",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
+    "tags": [
+      "moc",
+      "todo/某天"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 17
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "费曼技巧",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
+      },
+      {
+        "link": "《刻意练习》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
+      },
+      {
+        "link": "3阶魔方还原入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md"
+      },
+      {
+        "link": "五子棋必胜法",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/五子棋必胜法.md"
+      },
+      {
+        "link": "狼人杀轻度入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/狼人杀轻度入门.md"
+      },
+      {
+        "link": "谁是卧底轻度入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md"
+      },
+      {
+        "link": "五分钟脱口秀",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/五分钟脱口秀.md"
+      },
+      {
+        "link": "转笔入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/转笔入门.md"
+      },
+      {
+        "link": "踩高跷入门"
+      },
+      {
+        "link": "开车机动车入门"
+      },
+      {
+        "link": "攀岩入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/攀岩入门.md"
+      },
+      {
+        "link": "游泳入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/游泳入门.md"
+      },
+      {
+        "link": "滑雪入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/滑雪入门.md"
+      },
+      {
+        "link": "溜冰入门"
+      },
+      {
+        "link": "自行车入门"
+      },
+      {
+        "link": "冒险岛"
+      },
+      {
+        "link": "三国杀"
+      },
+      {
+        "link": "炉石传说"
+      },
+      {
+        "link": "王者荣耀"
+      },
+      {
+        "link": "天谕手游",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/天谕手游.md"
+      },
+      {
+        "link": "地狱边境 limbo"
+      },
+      {
+        "link": "机械迷城"
+      },
+      {
+        "link": "INSIDE"
+      },
+      {
+        "link": "GRIS"
+      }
+    ]
+  },
+  {
+    "fileName": "3阶魔方还原入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "3阶魔方还原入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.744Z",
+        "link": "3阶魔方还原入门",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "软实力和硬通货",
+    "relativePath": "pages/400 - RESOURCE/基础学科/金融学/软实力和硬通货.md",
+    "headings": [
+      {
+        "heading": "软实力",
+        "level": 2
+      },
+      {
+        "heading": "硬通货",
+        "level": 2
+      },
+      {
+        "heading": "什么样的软实力是硬通货？",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "2022-04-26#^2bf905",
+        "cleanLink": "2022-04-26",
+        "displayText": "2022-04-26 > ^2bf905",
+        "relativePath": "journals/2022-04-26.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-04-26",
+        "link": "软实力和硬通货",
+        "relativePath": "journals/2022-04-26.md"
+      }
+    ]
+  },
+  {
+    "fileName": "比较优势",
+    "relativePath": "pages/400 - RESOURCE/基础学科/金融学/比较优势.md",
+    "backlinks": [
+      {
+        "fileName": "经济学常用概念",
+        "link": "比较优势",
+        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.785Z",
+        "link": "比较优势",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念/2022-05-09T02_15_57.785Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "有用的github开源库搜集",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md",
+    "links": [
+      {
+        "link": "好玩的github开源库搜集",
+        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/好玩的github开源库搜集.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-02",
+        "link": "有用的github开源库搜集",
+        "relativePath": "journals/2022-05-02.md"
+      }
+    ]
+  },
+  {
+    "fileName": "好玩的github开源库搜集",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/好玩的github开源库搜集.md",
+    "backlinks": [
+      {
+        "fileName": "有用的github开源库搜集",
+        "link": "好玩的github开源库搜集",
+        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md"
+      }
+    ]
+  },
+  {
+    "fileName": "前端测试",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/前端测试.md",
+    "links": [
+      {
+        "link": "mocha"
+      },
+      {
+        "link": "jest"
+      },
+      {
+        "link": "Selenium"
+      },
+      {
+        "link": "Playwright"
+      },
+      {
+        "link": "混沌测试"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-04-25",
+        "link": "前端测试",
+        "relativePath": "journals/2022-04-25.md"
+      }
+    ]
+  },
+  {
+    "fileName": "vscode打开笔记库",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/vscode打开笔记库.md"
+  },
+  {
+    "fileName": "powershell",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/powershell.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-04",
+        "link": "powershell",
+        "relativePath": "journals/2022-05-04.md"
+      }
+    ]
+  },
+  {
+    "fileName": "golang - MOC",
+    "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/golang - MOC.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 17
+        }
+      }
+    }
+  },
+  {
+    "fileName": "边际效用",
+    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效用.md"
+  },
+  {
+    "fileName": "边际效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效应.md",
+    "backlinks": [
+      {
+        "fileName": "经济学常用概念",
+        "link": "边际效应",
+        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.785Z",
+        "link": "边际效应",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念/2022-05-09T02_15_57.785Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "经济学常用概念",
+    "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md",
+    "headings": [
+      {
+        "heading": "宏观经济学",
+        "level": 2
+      },
+      {
+        "heading": "微观经济学",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "比较优势",
+        "relativePath": "pages/400 - RESOURCE/基础学科/金融学/比较优势.md"
+      },
+      {
+        "link": "边际效应",
+        "relativePath": "pages/400 - RESOURCE/基础学科/经济学/边际效应.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "微言大义的词语汇总 - MOC",
+        "link": "经济学常用概念",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.377Z",
+        "link": "经济学常用概念",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC/2022-05-09T02_15_57.377Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "真实庭审解说",
+    "relativePath": "pages/400 - RESOURCE/基础学科/法学/真实庭审解说.md",
+    "links": [
+      {
+        "link": "张雷雷故意杀人案庭审"
+      },
+      {
+        "link": "快播案庭审"
+      },
+      {
+        "link": "大悦城商标侵权庭审"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-04-16",
+        "link": "真实庭审解说",
+        "relativePath": "journals/2022-04-16.md"
+      }
+    ]
+  },
+  {
+    "fileName": "测试一下而已",
+    "relativePath": "pages/400 - RESOURCE/基础学科/法学/测试一下而已.md"
+  },
+  {
+    "fileName": "鲶鱼效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/鲶鱼效应.md"
+  },
+  {
+    "fileName": "马太效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/马太效应.md"
+  },
+  {
+    "fileName": "首因效应和近因效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/首因效应和近因效应.md",
+    "headings": [
+      {
+        "heading": "首因效应 （第一印象很重要）",
+        "level": 2
+      },
+      {
+        "heading": "近因效应（新印象是可以塑造的）",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "飞轮效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md",
+    "tags": [
+      "review"
+    ],
+    "frontmatter": {
+      "sr-due": "2022-05-22",
+      "sr-interval": 53,
+      "sr-ease": 290,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "col": 3,
+          "offset": 83
+        }
+      }
+    },
+    "aliases": [
+      "推磨效应"
+    ],
+    "links": [
+      {
+        "link": "架构图-太难画了"
+      },
+      {
+        "link": "数字时代如何更好地工作与生活 - 图",
+        "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md"
+      }
+    ]
+  },
+  {
+    "fileName": "蝴蝶效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/蝴蝶效应.md"
+  },
+  {
+    "fileName": "破窗效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/破窗效应.md"
+  },
+  {
+    "fileName": "皮格马利翁效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应.md",
+    "tags": [
+      "cards"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 29
+        }
+      }
+    }
+  },
+  {
+    "fileName": "登门槛效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/登门槛效应.md"
+  },
+  {
+    "fileName": "棘轮效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/棘轮效应.md"
+  },
+  {
+    "fileName": "晕轮效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/晕轮效应.md",
+    "headings": [
+      {
+        "heading": "我的理解",
+        "level": 2
+      },
+      {
+        "heading": "网上解释",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "收藏者谬误",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/收藏者谬误.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 29
+        }
+      }
+    },
+    "aliases": [
+      "收藏家谬误"
+    ],
+    "headings": [
+      {
+        "heading": "理解",
+        "level": 2
+      },
+      {
+        "heading": "破局",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "Obsidian入门到精通",
+        "displayText": "obsidian",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-03-16",
+        "link": "收藏者谬误",
+        "relativePath": "journals/2022-03-16.md"
+      }
+    ]
+  },
+  {
+    "fileName": "拆屋效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/拆屋效应.md"
+  },
+  {
+    "fileName": "延迟满足",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md",
+    "links": [
+      {
+        "link": "少有人走的路"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "各类文化产品的生产消费时间比",
+        "link": "延迟满足",
+        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
+      }
+    ]
+  },
+  {
+    "fileName": "安慰剂效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/安慰剂效应.md"
+  },
+  {
+    "fileName": "墨菲定律",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/墨菲定律.md",
+    "headings": [
+      {
+        "heading": "个人理解",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "视频笔记-【罗翔】我们为什么要读书？",
+        "link": "墨菲定律",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.936Z",
+        "link": "墨菲定律",
+        "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？/2022-05-09T02_15_57.936Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "PTSD - 创伤后应激障碍",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/PTSD - 创伤后应激障碍.md"
+  },
+  {
+    "fileName": "发现的有趣现象",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/发现的有趣现象.md",
+    "headings": [
+      {
+        "heading": "警惕全职搞培训的",
+        "level": 2
+      },
+      {
+        "heading": "几种知识类的现象级产品",
+        "level": 2
+      },
+      {
+        "heading": "我们其实没有这么多时间，也没有必要，跟着别人学着精通一个领域",
+        "level": 2
+      },
+      {
+        "heading": "计划",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "李开复"
+      },
+      {
+        "link": "刘慈欣",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
+      },
+      {
+        "link": "韩寒",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/韩寒.md"
+      }
+    ]
+  },
+  {
+    "fileName": "刻板印象",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/刻板印象.md"
+  },
+  {
+    "fileName": "习得性无助",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/习得性无助.md"
+  },
+  {
+    "fileName": "苏格拉底式",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/苏格拉底式.md",
+    "links": [
+      {
+        "link": "英雄主义"
+      }
+    ]
+  },
+  {
+    "fileName": "第一次逛窑子不知所措",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/第一次逛窑子不知所措.md",
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "第一次逛窑子不知所措",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_57.058Z",
+        "link": "第一次逛窑子不知所措",
+        "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗/2022-05-09T02_15_57.058Z.md"
+      }
+    ]
+  },
+  {
+    "fileName": "柏拉图式",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/柏拉图式.md"
+  },
+  {
+    "fileName": "授人以鱼不如授人以渔",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md",
+    "backlinks": [
+      {
+        "fileName": "和经典名言抬杠 - MOC",
+        "link": "授人以鱼不如授人以渔",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-02",
+        "link": "授人以鱼不如授人以渔",
+        "relativePath": "journals/2022-05-02.md"
+      }
+    ]
+  },
+  {
+    "fileName": "各类文化产品的生产消费时间比",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md",
+    "links": [
+      {
+        "link": "情绪大脑"
+      },
+      {
+        "link": "理智大脑",
+        "relativePath": "pages/300 - AREA/知识管理/理智大脑.md"
+      },
+      {
+        "link": "延迟满足",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md"
+      },
+      {
+        "link": "《认知觉醒》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-03",
+        "link": "各类文化产品的生产消费时间比",
+        "relativePath": "journals/2022-05-03.md"
+      }
+    ]
+  },
+  {
     "fileName": "槟榔",
     "relativePath": "pages/300 - AREA/运动与健康/槟榔.md",
     "backlinks": [
@@ -5798,170 +5798,6 @@
         "relativePath": "pages/300 - AREA/运动与健康/提神.md"
       }
     ]
-  },
-  {
-    "fileName": "计划和回顾",
-    "relativePath": "pages/300 - AREA/知识管理/计划和回顾.md",
-    "headings": [
-      {
-        "heading": "计划和回顾",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "fileName": "相亲是否应该AA制",
-    "relativePath": "pages/300 - AREA/知识管理/相亲是否应该AA制.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-06",
-        "link": "相亲是否应该AA制",
-        "relativePath": "journals/2022-05-06.md"
-      }
-    ]
-  },
-  {
-    "fileName": "番茄工作法",
-    "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md",
-    "backlinks": [
-      {
-        "fileName": "2022-03-14",
-        "link": "番茄工作法",
-        "relativePath": "journals/2022-03-14.md"
-      }
-    ]
-  },
-  {
-    "fileName": "瓜田李下",
-    "relativePath": "pages/300 - AREA/知识管理/瓜田李下.md",
-    "links": [
-      {
-        "link": "君子不立危墙之下"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-05",
-        "link": "瓜田李下",
-        "relativePath": "journals/2022-05-05.md"
-      }
-    ]
-  },
-  {
-    "fileName": "理智大脑",
-    "relativePath": "pages/300 - AREA/知识管理/理智大脑.md",
-    "backlinks": [
-      {
-        "fileName": "各类文化产品的生产消费时间比",
-        "link": "理智大脑",
-        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
-      }
-    ]
-  },
-  {
-    "fileName": "热门批注阅读法",
-    "relativePath": "pages/300 - AREA/知识管理/热门批注阅读法.md",
-    "links": [
-      {
-        "link": "微信读书"
-      }
-    ]
-  },
-  {
-    "fileName": "族繁不及备载",
-    "relativePath": "pages/300 - AREA/知识管理/族繁不及备载.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-05",
-        "link": "族繁不及备载",
-        "relativePath": "journals/2022-05-05.md"
-      }
-    ]
-  },
-  {
-    "fileName": "插件的便利性及安全性，如何权衡",
-    "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md",
-    "links": [
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "chrome",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
-      },
-      {
-        "link": "油猴脚本"
-      },
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      },
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-04-18",
-        "link": "插件的便利性及安全性，如何权衡",
-        "relativePath": "journals/2022-04-18.md"
-      }
-    ]
-  },
-  {
-    "fileName": "哪些中文用英文解释反而更清晰明了",
-    "relativePath": "pages/300 - AREA/知识管理/哪些中文用英文解释反而更清晰明了.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-05",
-        "link": "哪些中文用英文解释反而更清晰明了",
-        "relativePath": "journals/2022-05-05.md"
-      }
-    ]
-  },
-  {
-    "fileName": "互联网时代的输出与创作",
-    "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md",
-    "headings": [
-      {
-        "heading": "将来发布的文章的目标",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "块引用"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-05",
-        "link": "互联网时代的输出与创作",
-        "relativePath": "journals/2022-05-05.md"
-      }
-    ]
-  },
-  {
-    "fileName": "中国居民膳食指南2022版",
-    "relativePath": "pages/300 - AREA/知识管理/中国居民膳食指南2022版.md"
   },
   {
     "fileName": "spaced-repetition学习笔记",
@@ -6170,6 +6006,36 @@
     ]
   },
   {
+    "fileName": "济沅",
+    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/济沅.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 38
+        }
+      }
+    },
+    "aliases": [
+      "李济沅",
+      "我永远的好室友1"
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-03-17",
+        "link": "济沅",
+        "relativePath": "journals/2022-03-17.md"
+      }
+    ]
+  },
+  {
     "fileName": "渐进式写作",
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式写作.md",
     "backlinks": [
@@ -6264,36 +6130,6 @@
         "fileName": "云计算与个人 - MOC",
         "link": "渐进式 - progressive",
         "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "济沅",
-    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/济沅.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 38
-        }
-      }
-    },
-    "aliases": [
-      "李济沅",
-      "我永远的好室友1"
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-03-17",
-        "link": "济沅",
-        "relativePath": "journals/2022-03-17.md"
       }
     ]
   },
@@ -6616,14 +6452,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "互联网时代的输出与创作",
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md"
-      },
-      {
         "fileName": "Obsidian入门到精通",
         "link": "zotero",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
+      },
+      {
+        "fileName": "互联网时代的输出与创作",
+        "link": "zotero",
+        "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md"
       },
       {
         "fileName": "mac必备软件",
@@ -8079,6 +7915,10 @@
     ]
   },
   {
+    "fileName": "Editor Syntax Highlight",
+    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Editor Syntax Highlight.md"
+  },
+  {
     "fileName": "admonition样式效果",
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/admonition样式效果.md",
     "links": [
@@ -8414,8 +8254,168 @@
     ]
   },
   {
-    "fileName": "Editor Syntax Highlight",
-    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Editor Syntax Highlight.md"
+    "fileName": "计划和回顾",
+    "relativePath": "pages/300 - AREA/知识管理/计划和回顾.md",
+    "headings": [
+      {
+        "heading": "计划和回顾",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "相亲是否应该AA制",
+    "relativePath": "pages/300 - AREA/知识管理/相亲是否应该AA制.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-06",
+        "link": "相亲是否应该AA制",
+        "relativePath": "journals/2022-05-06.md"
+      }
+    ]
+  },
+  {
+    "fileName": "番茄工作法",
+    "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md",
+    "backlinks": [
+      {
+        "fileName": "2022-03-14",
+        "link": "番茄工作法",
+        "relativePath": "journals/2022-03-14.md"
+      }
+    ]
+  },
+  {
+    "fileName": "瓜田李下",
+    "relativePath": "pages/300 - AREA/知识管理/瓜田李下.md",
+    "links": [
+      {
+        "link": "君子不立危墙之下"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-05",
+        "link": "瓜田李下",
+        "relativePath": "journals/2022-05-05.md"
+      }
+    ]
+  },
+  {
+    "fileName": "理智大脑",
+    "relativePath": "pages/300 - AREA/知识管理/理智大脑.md",
+    "backlinks": [
+      {
+        "fileName": "各类文化产品的生产消费时间比",
+        "link": "理智大脑",
+        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
+      }
+    ]
+  },
+  {
+    "fileName": "热门批注阅读法",
+    "relativePath": "pages/300 - AREA/知识管理/热门批注阅读法.md",
+    "links": [
+      {
+        "link": "微信读书"
+      }
+    ]
+  },
+  {
+    "fileName": "族繁不及备载",
+    "relativePath": "pages/300 - AREA/知识管理/族繁不及备载.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-05",
+        "link": "族繁不及备载",
+        "relativePath": "journals/2022-05-05.md"
+      }
+    ]
+  },
+  {
+    "fileName": "插件的便利性及安全性，如何权衡",
+    "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md",
+    "links": [
+      {
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "chrome",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
+      },
+      {
+        "link": "油猴脚本"
+      },
+      {
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      },
+      {
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-04-18",
+        "link": "插件的便利性及安全性，如何权衡",
+        "relativePath": "journals/2022-04-18.md"
+      }
+    ]
+  },
+  {
+    "fileName": "哪些中文用英文解释反而更清晰明了",
+    "relativePath": "pages/300 - AREA/知识管理/哪些中文用英文解释反而更清晰明了.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-05",
+        "link": "哪些中文用英文解释反而更清晰明了",
+        "relativePath": "journals/2022-05-05.md"
+      }
+    ]
+  },
+  {
+    "fileName": "互联网时代的输出与创作",
+    "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md",
+    "headings": [
+      {
+        "heading": "将来发布的文章的目标",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "块引用"
+      },
+      {
+        "link": "zotero",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-05",
+        "link": "互联网时代的输出与创作",
+        "relativePath": "journals/2022-05-05.md"
+      }
+    ]
+  },
+  {
+    "fileName": "中国居民膳食指南2022版",
+    "relativePath": "pages/300 - AREA/知识管理/中国居民膳食指南2022版.md"
   },
   {
     "fileName": "团队信息与知识共享",
@@ -9429,11 +9429,6 @@
         "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
       },
       {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
         "fileName": "渐进式 - progressive",
         "link": "obsidian#什么是 Obsidian",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md",
@@ -9444,6 +9439,11 @@
         "fileName": "dataview的数据来源",
         "link": "obsidian",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview的数据来源.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
       },
       {
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
@@ -10116,19 +10116,19 @@
         "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
       },
       {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
         "fileName": "主动插件和被动插件",
         "link": "平台+插件",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/主动插件和被动插件.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
       },
       {
         "fileName": "云计算与个人 - MOC",
@@ -11617,6 +11617,40 @@
     ]
   },
   {
+    "fileName": "个人必用软件梳理",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
+    "tags": [
+      "todo/持续迭代"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 34
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "效率的定义和原则",
+        "link": "个人必用软件梳理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_58.272Z",
+        "link": "个人必用软件梳理",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-09T02_15_58.272Z.md"
+      }
+    ]
+  },
+  {
     "fileName": "个人搜索系统",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md",
     "tags": [
@@ -11831,36 +11865,71 @@
     ]
   },
   {
-    "fileName": "个人必用软件梳理",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
-    "tags": [
-      "todo/持续迭代"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 34
-        }
-      }
-    },
-    "backlinks": [
+    "fileName": "个人信息系统涉及的核心软件和云服务",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md",
+    "links": [
       {
-        "fileName": "效率的定义和原则",
-        "link": "个人必用软件梳理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+        "link": "github",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
       },
       {
-        "fileName": "2022-05-09T02_15_58.272Z",
-        "link": "个人必用软件梳理",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-09T02_15_58.272Z.md"
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "zotero",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "[notion"
+      },
+      {
+        "link": "noti"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "个人搜索系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "常青笔记 - Evergreen Note",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人信息管理系统",
+        "link": "个人信息系统涉及的核心软件和云服务",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "2022-05-09T10_03_04.910Z",
+        "link": "个人信息系统涉及的核心软件和云服务",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T10_03_04.910Z.md"
+      },
+      {
+        "fileName": "2022-05-09T02_15_58.243Z",
+        "link": "个人信息系统涉及的核心软件和云服务",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T02_15_58.243Z.md"
       }
     ]
   },
@@ -11935,75 +12004,6 @@
         "fileName": "2022-05-09T02_15_58.181Z",
         "link": "个人工作流",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-09T02_15_58.181Z.md"
-      }
-    ]
-  },
-  {
-    "fileName": "个人信息系统涉及的核心软件和云服务",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md",
-    "links": [
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "[notion"
-      },
-      {
-        "link": "noti"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "个人搜索系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "常青笔记 - Evergreen Note",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人信息管理系统",
-        "link": "个人信息系统涉及的核心软件和云服务",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "2022-05-09T10_03_04.910Z",
-        "link": "个人信息系统涉及的核心软件和云服务",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T10_03_04.910Z.md"
-      },
-      {
-        "fileName": "2022-05-09T02_15_58.243Z",
-        "link": "个人信息系统涉及的核心软件和云服务",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T02_15_58.243Z.md"
       }
     ]
   },
@@ -12778,11 +12778,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
         "fileName": "重器轻用",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
@@ -12791,6 +12786,11 @@
         "fileName": "context 切换",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
       },
       {
         "fileName": "mac必备软件",
@@ -18034,6 +18034,42 @@
     ]
   },
   {
+    "fileName": "2022-05-09T02_15_58.185Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/chrome/2022-05-09T02_15_58.185Z.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "aliases": [
+      "edge"
+    ],
+    "headings": [
+      {
+        "heading": "必装插件",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "油猴脚本"
+      },
+      {
+        "link": "uBlock"
+      }
+    ]
+  },
+  {
     "fileName": "2022-05-09T02_15_58.208Z",
     "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC/2022-05-09T02_15_58.208Z.md",
     "tags": [
@@ -18098,42 +18134,6 @@
       {
         "heading": "超实用功能",
         "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-09T02_15_58.185Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/chrome/2022-05-09T02_15_58.185Z.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 28
-        }
-      }
-    },
-    "aliases": [
-      "edge"
-    ],
-    "headings": [
-      {
-        "heading": "必装插件",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "油猴脚本"
-      },
-      {
-        "link": "uBlock"
       }
     ]
   },
@@ -19548,6 +19548,16 @@
     ]
   },
   {
+    "fileName": "2022-05-09T02_15_58.281Z",
+    "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/github/2022-05-09T02_15_58.281Z.md",
+    "headings": [
+      {
+        "heading": "readme相关",
+        "level": 2
+      }
+    ]
+  },
+  {
     "fileName": "2022-05-09T02_15_58.286Z",
     "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库/2022-05-09T02_15_58.286Z.md",
     "frontmatter": {
@@ -19575,16 +19585,6 @@
     "headings": [
       {
         "heading": "小型化测试",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-09T02_15_58.281Z",
-    "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/github/2022-05-09T02_15_58.281Z.md",
-    "headings": [
-      {
-        "heading": "readme相关",
         "level": 2
       }
     ]
@@ -19846,6 +19846,16 @@
       {
         "link": "搜索一切",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-03-07",
+    "relativePath": "journals/2022-03-07.md",
+    "headings": [
+      {
+        "heading": "评论",
+        "level": 2
       }
     ]
   },
@@ -21724,16 +21734,6 @@
       },
       {
         "link": "PKM - personal knowledge management"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-03-07",
-    "relativePath": "journals/2022-03-07.md",
-    "headings": [
-      {
-        "heading": "评论",
-        "level": 2
       }
     ]
   },

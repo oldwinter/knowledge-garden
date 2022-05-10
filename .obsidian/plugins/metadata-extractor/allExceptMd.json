@@ -41,20 +41,12 @@
       "relativePath": "draws/fonts"
     },
     {
-      "name": "日记归档",
-      "relativePath": "journals/日记归档"
-    },
-    {
-      "name": "每周总结",
-      "relativePath": "journals/每周总结"
-    },
-    {
-      "name": "每月每季度总结",
-      "relativePath": "journals/每月每季度总结"
-    },
-    {
       "name": "bak",
       "relativePath": "logseq/bak"
+    },
+    {
+      "name": "dict",
+      "relativePath": "templates/dict"
     },
     {
       "name": "200 - PROJECT",
@@ -73,24 +65,20 @@
       "relativePath": "pages/500 - ARCHIVE"
     },
     {
-      "name": "dict",
-      "relativePath": "templates/dict"
+      "name": "日记归档",
+      "relativePath": "journals/日记归档"
+    },
+    {
+      "name": "每周总结",
+      "relativePath": "journals/每周总结"
+    },
+    {
+      "name": "每月每季度总结",
+      "relativePath": "journals/每月每季度总结"
     },
     {
       "name": "Downloaded",
       "relativePath": "draws/Scripts/Downloaded"
-    },
-    {
-      "name": "draws",
-      "relativePath": "logseq/bak/draws"
-    },
-    {
-      "name": "journals",
-      "relativePath": "logseq/bak/journals"
-    },
-    {
-      "name": "pages",
-      "relativePath": "logseq/bak/pages"
     },
     {
       "name": "个人职业生涯",
@@ -125,8 +113,20 @@
       "relativePath": "pages/300 - AREA/运动与健康"
     },
     {
-      "name": "书影音笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记"
+      "name": "draws",
+      "relativePath": "logseq/bak/draws"
+    },
+    {
+      "name": "journals",
+      "relativePath": "logseq/bak/journals"
+    },
+    {
+      "name": "pages",
+      "relativePath": "logseq/bak/pages"
+    },
+    {
+      "name": "已发布长文",
+      "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "基础学科",
@@ -137,44 +137,12 @@
       "relativePath": "pages/400 - RESOURCE/小知识点学习"
     },
     {
+      "name": "书影音笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记"
+    },
+    {
       "name": "知识原子库",
       "relativePath": "pages/400 - RESOURCE/知识原子库"
-    },
-    {
-      "name": "已发布长文",
-      "relativePath": "pages/500 - ARCHIVE/已发布长文"
-    },
-    {
-      "name": "数字时代如何更好地工作与生活 - 图",
-      "relativePath": "logseq/bak/draws/数字时代如何更好地工作与生活 - 图"
-    },
-    {
-      "name": "2022-04-24",
-      "relativePath": "logseq/bak/journals/2022-04-24"
-    },
-    {
-      "name": "2022-05-08",
-      "relativePath": "logseq/bak/journals/2022-05-08"
-    },
-    {
-      "name": "2022-05-09",
-      "relativePath": "logseq/bak/journals/2022-05-09"
-    },
-    {
-      "name": "200 - PROJECT",
-      "relativePath": "logseq/bak/pages/200 - PROJECT"
-    },
-    {
-      "name": "300 - AREA",
-      "relativePath": "logseq/bak/pages/300 - AREA"
-    },
-    {
-      "name": "400 - RESOURCE",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE"
-    },
-    {
-      "name": "500 - ARCHIVE",
-      "relativePath": "logseq/bak/pages/500 - ARCHIVE"
     },
     {
       "name": "vscode",
@@ -197,24 +165,24 @@
       "relativePath": "pages/300 - AREA/知识管理/notion学习笔记"
     },
     {
-      "name": "obsidian学习笔记",
-      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
+      "name": "200 - PROJECT",
+      "relativePath": "logseq/bak/pages/200 - PROJECT"
     },
     {
-      "name": "电影笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记"
+      "name": "300 - AREA",
+      "relativePath": "logseq/bak/pages/300 - AREA"
     },
     {
-      "name": "视频笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记"
+      "name": "400 - RESOURCE",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE"
     },
     {
-      "name": "读书笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记"
+      "name": "500 - ARCHIVE",
+      "relativePath": "logseq/bak/pages/500 - ARCHIVE"
     },
     {
-      "name": "音乐鉴赏",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
+      "name": "数字时代如何更好地工作与生活 - 图",
+      "relativePath": "logseq/bak/draws/数字时代如何更好地工作与生活 - 图"
     },
     {
       "name": "哲学",
@@ -241,6 +209,38 @@
       "relativePath": "pages/400 - RESOURCE/基础学科/金融学"
     },
     {
+      "name": "2022-04-24",
+      "relativePath": "logseq/bak/journals/2022-04-24"
+    },
+    {
+      "name": "2022-05-08",
+      "relativePath": "logseq/bak/journals/2022-05-08"
+    },
+    {
+      "name": "2022-05-09",
+      "relativePath": "logseq/bak/journals/2022-05-09"
+    },
+    {
+      "name": "电影笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记"
+    },
+    {
+      "name": "视频笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记"
+    },
+    {
+      "name": "读书笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记"
+    },
+    {
+      "name": "音乐鉴赏",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
+    },
+    {
+      "name": "obsidian学习笔记",
+      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
+    },
+    {
       "name": "习惯库",
       "relativePath": "pages/400 - RESOURCE/知识原子库/习惯库"
     },
@@ -263,6 +263,26 @@
     {
       "name": "金句库",
       "relativePath": "pages/400 - RESOURCE/知识原子库/金句库"
+    },
+    {
+      "name": "书影音笔记",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记"
+    },
+    {
+      "name": "基础学科",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科"
+    },
+    {
+      "name": "小知识点学习",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习"
+    },
+    {
+      "name": "知识原子库",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库"
+    },
+    {
+      "name": "已发布长文",
+      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "个人职业生涯",
@@ -293,28 +313,60 @@
       "relativePath": "logseq/bak/pages/300 - AREA/运动与健康"
     },
     {
-      "name": "书影音笔记",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记"
-    },
-    {
-      "name": "基础学科",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科"
-    },
-    {
-      "name": "小知识点学习",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习"
-    },
-    {
-      "name": "知识原子库",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库"
-    },
-    {
-      "name": "已发布长文",
-      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文"
-    },
-    {
       "name": "虚构类读物",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
+    },
+    {
+      "name": "单词库&概念库",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库"
+    },
+    {
+      "name": "微言大义的词语汇总 - MOC",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC"
+    },
+    {
+      "name": "思维工具库",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/思维工具库"
+    },
+    {
+      "name": "方法库",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库"
+    },
+    {
+      "name": "金句库",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库"
+    },
+    {
+      "name": "obsidian 是可以用一辈子不换的笔记软件吗",
+      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗"
+    },
+    {
+      "name": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
+      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源"
+    },
+    {
+      "name": "一些学起来挺有意思的小知识点 - MOC",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC"
+    },
+    {
+      "name": "视频笔记",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记"
+    },
+    {
+      "name": "读书笔记",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记"
+    },
+    {
+      "name": "心理学",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学"
+    },
+    {
+      "name": "经济学",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学"
+    },
+    {
+      "name": "金融学",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/金融学"
     },
     {
       "name": "你怎么评价自己",
@@ -353,12 +405,24 @@
       "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯/面试自我介绍"
     },
     {
+      "name": "常用命令行工具",
+      "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具"
+    },
+    {
       "name": "docker",
       "relativePath": "logseq/bak/pages/200 - PROJECT/云计算/docker"
     },
     {
-      "name": "常用命令行工具",
-      "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具"
+      "name": "notion学习笔记",
+      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记"
+    },
+    {
+      "name": "obsidian学习笔记",
+      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记"
+    },
+    {
+      "name": "在线自习室",
+      "relativePath": "logseq/bak/pages/300 - AREA/沟通与表达/在线自习室"
     },
     {
       "name": "markdown与html",
@@ -405,76 +469,100 @@
       "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/视频制作"
     },
     {
-      "name": "在线自习室",
-      "relativePath": "logseq/bak/pages/300 - AREA/沟通与表达/在线自习室"
-    },
-    {
-      "name": "notion学习笔记",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记"
-    },
-    {
-      "name": "obsidian学习笔记",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记"
-    },
-    {
       "name": "咖啡",
       "relativePath": "logseq/bak/pages/300 - AREA/运动与健康/咖啡"
     },
     {
-      "name": "视频笔记",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记"
+      "name": "工具理性与价值理性",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性"
     },
     {
-      "name": "读书笔记",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记"
+      "name": "春秋笔法",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法"
     },
     {
-      "name": "心理学",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学"
+      "name": "权力寻租",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/权力寻租"
     },
     {
-      "name": "经济学",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学"
+      "name": "麦特卡夫定律",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/思维工具库/麦特卡夫定律"
     },
     {
-      "name": "金融学",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/金融学"
+      "name": "《刻意练习》",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》"
     },
     {
-      "name": "一些学起来挺有意思的小知识点 - MOC",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC"
+      "name": "《卡片笔记写作法》",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》"
     },
     {
-      "name": "单词库&概念库",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库"
+      "name": "《史蒂夫·乔布斯传》",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《史蒂夫·乔布斯传》"
     },
     {
-      "name": "微言大义的词语汇总 - MOC",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC"
+      "name": "读书笔记 - MOC",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC"
     },
     {
-      "name": "思维工具库",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/思维工具库"
+      "name": "墨菲定律",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/墨菲定律"
     },
     {
-      "name": "方法库",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库"
+      "name": "收藏者谬误",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/收藏者谬误"
     },
     {
-      "name": "金句库",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库"
+      "name": "皮格马利翁效应",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应"
     },
     {
-      "name": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗"
+      "name": "飞轮效应",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应"
     },
     {
-      "name": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-      "relativePath": "logseq/bak/pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源"
+      "name": "令我多次沉醉的人或作品 - MOC",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC"
     },
     {
-      "name": "github",
-      "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/github"
+      "name": "视频笔记- 9年咨询的storytelling新的",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的"
+    },
+    {
+      "name": "视频笔记-【罗翔】我们为什么要读书？",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？"
+    },
+    {
+      "name": "经济学常用概念",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念"
+    },
+    {
+      "name": "软实力和硬通货",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/金融学/软实力和硬通货"
+    },
+    {
+      "name": "真的猛士，敢于直面惨淡的人生。--鲁迅",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库/真的猛士，敢于直面惨淡的人生。--鲁迅"
+    },
+    {
+      "name": "RIA阅读法",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/RIA阅读法"
+    },
+    {
+      "name": "STAR法则",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/STAR法则"
+    },
+    {
+      "name": "SWOT",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/SWOT"
+    },
+    {
+      "name": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》"
+    },
+    {
+      "name": "方法库 - MOC",
+      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/方法库 - MOC"
     },
     {
       "name": "kubernetes",
@@ -485,108 +573,16 @@
       "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库"
     },
     {
+      "name": "github",
+      "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/github"
+    },
+    {
       "name": "快速10分钟搭建自己的网站",
       "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/快速10分钟搭建自己的网站"
     },
     {
       "name": "快速5分钟搭建本地镜像仓库",
       "relativePath": "logseq/bak/pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库"
-    },
-    {
-      "name": "alfred",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/alfred"
-    },
-    {
-      "name": "linux命令行测速 - speedtest",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux命令行测速 - speedtest"
-    },
-    {
-      "name": "linux常用命令行 - MOC",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC"
-    },
-    {
-      "name": "mac启动台相关配置",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/mac启动台相关配置"
-    },
-    {
-      "name": "个人任务管理系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统"
-    },
-    {
-      "name": "个人信息管理系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统"
-    },
-    {
-      "name": "个人信息系统、知识笔记系统和任务管理系统的联动",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动"
-    },
-    {
-      "name": "个人工作流",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流"
-    },
-    {
-      "name": "个人必用软件梳理",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理"
-    },
-    {
-      "name": "个人搜索系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统"
-    },
-    {
-      "name": "个人知识管理",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理"
-    },
-    {
-      "name": "个人高效学习系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统"
-    },
-    {
-      "name": "垂直搜索",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/垂直搜索"
-    },
-    {
-      "name": "如何高效录入",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入"
-    },
-    {
-      "name": "微信内置搜索",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/微信内置搜索"
-    },
-    {
-      "name": "搜索一切",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切"
-    },
-    {
-      "name": "效率的定义和原则",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则"
-    },
-    {
-      "name": "第二大脑",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑"
-    },
-    {
-      "name": "聚合搜索",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/聚合搜索"
-    },
-    {
-      "name": "语音输入",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入"
-    },
-    {
-      "name": "chrome",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/chrome"
-    },
-    {
-      "name": "obsidian与alfred联动",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/obsidian与alfred联动"
-    },
-    {
-      "name": "必备软件 - MOC",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC"
-    },
-    {
-      "name": "团队信息与知识共享",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享"
     },
     {
       "name": "Obsidian入门到精通",
@@ -677,96 +673,100 @@
       "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式学习"
     },
     {
-      "name": "令我多次沉醉的人或作品 - MOC",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC"
+      "name": "团队信息与知识共享",
+      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享"
     },
     {
-      "name": "视频笔记- 9年咨询的storytelling新的",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的"
+      "name": "alfred",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/alfred"
     },
     {
-      "name": "视频笔记-【罗翔】我们为什么要读书？",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？"
+      "name": "linux命令行测速 - speedtest",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux命令行测速 - speedtest"
     },
     {
-      "name": "《刻意练习》",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》"
+      "name": "linux常用命令行 - MOC",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC"
     },
     {
-      "name": "《卡片笔记写作法》",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》"
+      "name": "mac启动台相关配置",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/mac启动台相关配置"
     },
     {
-      "name": "《史蒂夫·乔布斯传》",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《史蒂夫·乔布斯传》"
+      "name": "个人任务管理系统",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统"
     },
     {
-      "name": "读书笔记 - MOC",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC"
+      "name": "个人信息管理系统",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统"
     },
     {
-      "name": "墨菲定律",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/墨菲定律"
+      "name": "个人信息系统、知识笔记系统和任务管理系统的联动",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动"
     },
     {
-      "name": "收藏者谬误",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/收藏者谬误"
+      "name": "个人工作流",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流"
     },
     {
-      "name": "皮格马利翁效应",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应"
+      "name": "个人必用软件梳理",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理"
     },
     {
-      "name": "飞轮效应",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应"
+      "name": "个人搜索系统",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统"
     },
     {
-      "name": "经济学常用概念",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/经济学/经济学常用概念"
+      "name": "个人知识管理",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理"
     },
     {
-      "name": "软实力和硬通货",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/金融学/软实力和硬通货"
+      "name": "个人高效学习系统",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统"
     },
     {
-      "name": "工具理性与价值理性",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性"
+      "name": "垂直搜索",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/垂直搜索"
     },
     {
-      "name": "春秋笔法",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法"
+      "name": "如何高效录入",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入"
     },
     {
-      "name": "权力寻租",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/权力寻租"
+      "name": "微信内置搜索",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/微信内置搜索"
     },
     {
-      "name": "麦特卡夫定律",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/思维工具库/麦特卡夫定律"
+      "name": "搜索一切",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切"
     },
     {
-      "name": "RIA阅读法",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/RIA阅读法"
+      "name": "效率的定义和原则",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则"
     },
     {
-      "name": "STAR法则",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/STAR法则"
+      "name": "第二大脑",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑"
     },
     {
-      "name": "SWOT",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/SWOT"
+      "name": "聚合搜索",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/聚合搜索"
     },
     {
-      "name": "方法库 - MOC",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/方法库 - MOC"
+      "name": "语音输入",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入"
     },
     {
-      "name": "真的猛士，敢于直面惨淡的人生。--鲁迅",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库/真的猛士，敢于直面惨淡的人生。--鲁迅"
+      "name": "obsidian与alfred联动",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/obsidian与alfred联动"
     },
     {
-      "name": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》"
+      "name": "必备软件 - MOC",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC"
+    },
+    {
+      "name": "chrome",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/chrome"
     }
   ],
   "nonMdFiles": [
@@ -779,11 +779,6 @@
       "name": "Pasted Image 20220320190802_762.png",
       "basename": "Pasted Image 20220320190802_762",
       "relativePath": "assets/Pasted Image 20220320190802_762.png"
-    },
-    {
-      "name": "Pasted Image 20220320190847_762.png",
-      "basename": "Pasted Image 20220320190847_762",
-      "relativePath": "assets/Pasted Image 20220320190847_762.png"
     },
     {
       "name": "Pasted Image 20220320190917_764.png",
@@ -806,14 +801,14 @@
       "relativePath": "assets/Pasted Image 20220320202815_760.png"
     },
     {
-      "name": "Pasted Image 20220320202845_759.png",
-      "basename": "Pasted Image 20220320202845_759",
-      "relativePath": "assets/Pasted Image 20220320202845_759.png"
-    },
-    {
       "name": "Pasted Image 20220320203031_118.png",
       "basename": "Pasted Image 20220320203031_118",
       "relativePath": "assets/Pasted Image 20220320203031_118.png"
+    },
+    {
+      "name": "Pasted Image 20220320202845_759.png",
+      "basename": "Pasted Image 20220320202845_759",
+      "relativePath": "assets/Pasted Image 20220320202845_759.png"
     },
     {
       "name": "Pasted Image 20220320203200_352.png",
@@ -866,14 +861,19 @@
       "relativePath": "logseq/custom.css"
     },
     {
+      "name": "pages-metadata.edn",
+      "basename": "pages-metadata",
+      "relativePath": "logseq/pages-metadata.edn"
+    },
+    {
       "name": "metadata.edn",
       "basename": "metadata",
       "relativePath": "logseq/metadata.edn"
     },
     {
-      "name": "pages-metadata.edn",
-      "basename": "pages-metadata",
-      "relativePath": "logseq/pages-metadata.edn"
+      "name": "Pasted Image 20220320190847_762.png",
+      "basename": "Pasted Image 20220320190847_762",
+      "relativePath": "assets/Pasted Image 20220320190847_762.png"
     },
     {
       "name": "chinese.ttf",

@@ -52,10 +52,14 @@
 
 		function fitElement(element, start, end){
 
-			const size = (end + start) / 2;
+			let size = (end + start) / 2;
 			element.style.fontSize = `${size}px`;
 
 			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
 				return;
 			}
 
