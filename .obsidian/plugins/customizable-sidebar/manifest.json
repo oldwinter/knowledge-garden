@@ -1,0 +1,10 @@
+{
+	"id": "customizable-sidebar",
+	"name": "Customizable Sidebar",
+	"version": "2.2.1",
+	"minAppVersion": "0.12.11",
+	"description": "This Plugin allows to add any Command to Obsidian's Sidebar Ribbon.",
+	"author": "phibr0",
+	"authorUrl": "https://github.com/phibr0/",
+	"isDesktopOnly": false
+}

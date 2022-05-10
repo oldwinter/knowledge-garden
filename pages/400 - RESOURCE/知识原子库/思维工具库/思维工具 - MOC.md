@@ -1,0 +1,11 @@
+---
+tags: MOC
+---
+
+[思维工具 | Tools for Thought (pmthinking.com)](https://index.pmthinking.com/Tools-for-Thought-08234893d878497d94c4651102fb1aeb)
+
+- 系统思考
+- 如何做决策
+- 解决问题
+- 认知偏误
+- 提出问题

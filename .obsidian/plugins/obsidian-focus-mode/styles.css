@@ -1,0 +1,44 @@
+.focus-mode .cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line {
+    opacity: 0.85;
+    filter: saturate(0.85);
+}
+
+.focus-mode div.view-header,
+.focus-mode div.status-bar,
+.focus-mode div.workspace-ribbon:not(.mod-left),
+.focus-mode .workspace-split.maximised .workspace-leaf:not(.mod-active),
+.focus-mode
+    .workspace-split.maximised
+    .workspace-leaf.mod-active
+    ~ .workspace-split {
+    display: none;
+}
+
+.focus-mode .view-content {
+    height: 100%;
+}
+
+.focus-mode .workspace-split.maximised .workspace-leaf.mod-active {
+    /* 4px is for scrollbar width: */
+    flex-basis: calc(100% - 4px);
+}
+
+.focus-mode div.workspace-ribbon {
+    visibility: hidden;
+}
+
+.focus-mode
+    .side-dock-ribbon-action[aria-label="Toggle Focus Mode (Shift + Click to show active pane only)"] {
+    visibility: visible;
+}
+
+/* Thanks to @AidenLx! */
+/* Fixes for the Obsidian Tabs plugin: */
+.focus-mode.plugin-tabs div.view-actions,
+.focus-mode.plugin-tabs .stayopen div.view-header {
+    display: none;
+}
+
+.focus-mode.plugin-tabs div.view-header {
+    display: flex;
+}

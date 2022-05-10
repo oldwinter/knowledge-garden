@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>{{{title}}}</title>
+    <link rel="stylesheet" href="{{{base}}}dist/reveal.css" />
+    <link rel="stylesheet" href="{{{base}}}{{{themeUrl}}}" id="theme" />
+    <link rel="stylesheet" href="{{{base}}}{{{highlightThemeUrl}}}" />
+	<link rel="stylesheet" href="{{{base}}}css/layout.css" />
+	{{#enableCustomControls}}
+	<link rel="stylesheet" href="{{{base}}}plugin/customcontrols/style.css">
+	{{/enableCustomControls}}
+	{{#enableChalkboard}}
+	<link rel="stylesheet" href="{{{base}}}plugin/chalkboard/style.css">
+	{{/enableChalkboard}}
+
+	{{#cssPaths}}
+    <link rel="stylesheet" href="{{{base}}}{{{.}}}" />
+    {{/cssPaths}}
+
+    <script defer src="{{{base}}}dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			const size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">{{{slides}}}</div>
+    </div>
+
+    <script src="{{{base}}}dist/reveal.js"></script>
+
+    <script src="{{{base}}}plugin/markdown/markdown.js"></script>
+    <script src="{{{base}}}plugin/highlight/highlight.js"></script>
+    <script src="{{{base}}}plugin/zoom/zoom.js"></script>
+    <script src="{{{base}}}plugin/notes/notes.js"></script>
+    <script src="{{{base}}}plugin/math/math.js"></script>
+	<script src="{{{base}}}plugin/mermaid/mermaid.js"></script>
+	{{#enableMenu}}
+	<script src="{{{base}}}plugin/menu/menu.js"></script>
+	{{/enableMenu}}
+	{{#enableCustomControls}}
+	<script src="{{{base}}}plugin/customcontrols/plugin.js"></script>
+	{{/enableCustomControls}}
+	{{#enableChalkboard}}
+	<script src="{{{base}}}plugin/chalkboard/plugin.js"></script>
+	{{/enableChalkboard}}
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  {{#enableCustomControls}}
+		  RevealCustomControls,
+	      {{/enableCustomControls}}
+		  {{#enableMenu}}
+		  RevealMenu,
+		  {{/enableMenu}}
+		  {{#enableChalkboard}}
+		  RevealChalkboard, 
+		  {{/enableChalkboard}}
+        ],
+
+		mathjax3: {
+			mathjax: '{{{base}}}plugin/math/mathjax/tex-mml-chtml.js',
+		},
+
+		{{#enableCustomControls}}
+		customcontrols: {
+			controls: [
+				{{#enableOverview}}
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{{/enableOverview}}
+				{{#enableChalkboard}}
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+				{{/enableChalkboard}}
+			]
+		},
+		{{/enableCustomControls}}
+		{{#enableMenu}}
+		menu: {
+			loadIcons: false
+		}
+		{{/enableMenu}}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {{{revealOptionsStr}}}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "installedVersion": "1.0.0-beta1",
+  "activeCalendarSet": "logseq合并",
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": true,
+  "calendarSets": [
+    {
+      "day": {
+        "enabled": true,
+        "format": "YYYY-MM-DD",
+        "folder": "journals",
+        "openAtStartup": false,
+        "templatePath": "templates/10 - 日记模板.md"
+      },
+      "week": {
+        "enabled": true,
+        "format": "gggg-MMM-[W]ww",
+        "folder": "journals/每周总结",
+        "openAtStartup": false,
+        "templatePath": "templates/20 - 周记模板.md"
+      },
+      "month": {
+        "enabled": true,
+        "format": "YYYY-MMMM",
+        "folder": "journals/每月每季度总结",
+        "openAtStartup": false,
+        "templatePath": "templates/30 - 月度模板.md"
+      },
+      "quarter": {
+        "enabled": false,
+        "format": "",
+        "folder": "pages/030 - 每日短记/每月每季度总结",
+        "openAtStartup": false,
+        "templatePath": "020 - 模板文件夹/30 - 月度模板.md"
+      },
+      "year": {
+        "enabled": false,
+        "format": "",
+        "folder": "pages/030 - 每日短记/每月每季度总结",
+        "openAtStartup": false,
+        "templatePath": "020 - 模板文件夹/30 - 月度模板.md"
+      },
+      "id": "logseq合并",
+      "ctime": "2022-04-25T01:05:03+08:00"
+    }
+  ],
+  "enableTimelineComplication": true,
+  "daily": {
+    "format": "YYYY-MM-DD",
+    "folder": "030 - 每日短记",
+    "template": "020 - 模板文件夹/10 - 日记模板.md",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "gggg-[W]ww",
+    "folder": "030 - 每日短记/每周总结",
+    "template": "020 - 模板文件夹/20 - 周记模板.md",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "YYYY-MM",
+    "template": "020 - 模板文件夹/30 - 月度模板.md",
+    "folder": "030 - 每日短记/每月每季度总结",
+    "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "020 - 模板文件夹/30 - 月度模板.md",
+    "folder": "030 - 每日短记/每月每季度总结",
+    "enabled": false
+  },
+  "yearly": {
+    "format": "",
+    "template": "020 - 模板文件夹/30 - 月度模板.md",
+    "folder": "030 - 每日短记/每月每季度总结",
+    "enabled": false
+  }
+}

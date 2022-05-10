@@ -1,0 +1,9 @@
+{
+  "id": "find-unlinked-files",
+  "name": "Find unlinked files and unresolved links",
+  "version": "1.5.0",
+  "description": "Find files that are not linked anywhere and would otherwise be lost in your vault. In other words: files with no backlinks.",
+  "author": "Vinzent",
+  "authorUrl": "https://github.com/Vinzent03",
+  "isDesktopOnly": false
+}

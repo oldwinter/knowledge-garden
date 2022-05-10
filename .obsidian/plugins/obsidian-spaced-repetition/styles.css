@@ -1,0 +1,103 @@
+.sr-link {
+    color: var(--text-accent);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.sr-response {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    bottom: 0;
+}
+.sr-ignorestats-response{
+    grid-template-columns: auto auto!important;
+}
+
+.sr-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sr-deck-counts {
+    color: #ffffff;
+    margin-left: 4px; 
+}
+
+#sr-show-answer {
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+#sr-hr-card-divide {
+    backdrop-filter: invert(40%);
+    border: none;
+    height: 2px;
+}
+
+#sr-hard-btn,
+#sr-good-btn,
+#sr-easy-btn {
+    height: 48px;
+    margin: auto;
+    color: #ffffff;
+}
+
+#sr-hard-btn {
+    background-color: #f44336;
+}
+
+#sr-good-btn {
+    background-color: #2196f3;
+}
+
+#sr-easy-btn {
+    background-color: #4caf50;
+}
+
+#sr-context {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+#sr-flashcard-view {
+    overflow-y: auto;
+    height: 80%;
+}
+
+.sr-ignorestats-btn {
+    /* Bit of a hack, but it works. */
+    margin: 0px !important;
+    margin-right: 12px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .sr-modal-content::-webkit-scrollbar,
+    #sr-flashcard-view::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sr-response,
+    #sr-show-answer {
+        width: 95% !important;
+    }
+
+    #sr-hard-btn,
+    #sr-good-btn,
+    #sr-easy-btn {
+        width: 100px;
+    }
+}

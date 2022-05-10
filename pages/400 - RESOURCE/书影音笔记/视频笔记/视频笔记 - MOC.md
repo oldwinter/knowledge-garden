@@ -1,0 +1,11 @@
+---
+aliases: 个人最爱的好视频
+tags: MOC 
+---
+[[视频笔记- 9年咨询的storytelling新的]]
+[[视频笔记-【罗翔】我们为什么要读书？]]
+
+```dataview
+list
+from "pages/400 - RESOURCE/视频笔记"
+```

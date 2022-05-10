@@ -1,0 +1,11 @@
+{
+  "autoExpand": true,
+  "defaultTemplate": "- $link",
+  "delay": 300,
+  "excludeCurrent": true,
+  "lineEnding": "<-->",
+  "prefixes": {
+    "header": "^",
+    "footer": ">"
+  }
+}

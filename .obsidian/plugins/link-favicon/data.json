@@ -1,0 +1,16 @@
+{
+  "provider": "duckduckgo",
+  "fallbackProvider": "google",
+  "providerDomain": "",
+  "fallbackProviderDomain": "",
+  "ignored": "",
+  "overwritten": [],
+  "protocol": [],
+  "showAliased": true,
+  "showLink": true,
+  "enableReading": true,
+  "enableSource": true,
+  "enableLivePreview": true,
+  "cacheTime": 9,
+  "debounce": 500
+}

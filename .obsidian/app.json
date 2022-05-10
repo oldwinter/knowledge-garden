@@ -1,0 +1,35 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "promptDelete": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": false,
+  "showFrontmatter": false,
+  "tabSize": 4,
+  "defaultViewMode": "source",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "newFileFolderPath": "收集箱",
+  "fileSortOrder": "alphabetical",
+  "attachmentFolderPath": "assets",
+  "readableLineLength": true,
+  "communityPluginSortOrder": "download",
+  "lineWrap": true,
+  "showUnsupportedFiles": true,
+  "strictLineBreaks": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "spellcheck": false,
+  "autoPairMarkdown": true,
+  "showIndentGuide": true,
+  "userIgnoreFilters": [
+    "logseq/bak/",
+    "logseq/"
+  ],
+  "rightToLeft": false
+}

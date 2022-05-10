@@ -1,0 +1,14 @@
+{
+  "enabledButtons": [],
+  "desktop": true,
+  "titleLeft": [],
+  "titleRight": [
+    {
+      "id": "sliding-panes-obsidian:toggle-sliding-panes",
+      "icon": "vertical-three-dots",
+      "name": "Sliding Panes (Andy's Mode): Toggle Sliding Panes"
+    }
+  ],
+  "titleCenter": [],
+  "paneRelief": true
+}

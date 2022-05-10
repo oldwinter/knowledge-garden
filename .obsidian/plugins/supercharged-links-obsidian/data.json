@@ -1,0 +1,95 @@
+{
+  "targetAttributes": [
+    "cards",
+    "review",
+    "excalidraw",
+    "MOC",
+    "todo"
+  ],
+  "targetTags": true,
+  "presetFields": [],
+  "displayFieldsInContextMenu": true,
+  "globallyIgnoredFields": [],
+  "classFilesPath": "",
+  "getFromInlineField": true,
+  "activateSnippet": true,
+  "enableEditor": true,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": true,
+  "selectors": [
+    {
+      "type": "tag",
+      "name": "cards",
+      "value": "cards",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "53f6-363a",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "review",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "b19c-8ca5",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "excalidraw",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "1cde-e955",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "todo",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "75fc-e339",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "MOC",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "7c4c-9ddb",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "path",
+      "name": "review",
+      "value": "clipper",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "6609-da58",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    }
+  ]
+}

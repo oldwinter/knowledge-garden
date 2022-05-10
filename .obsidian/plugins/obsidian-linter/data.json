@@ -1,0 +1,92 @@
+{
+  "ruleConfigs": {
+    "Format Tags in YAML": {
+      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
+    },
+    "Insert YAML attributes": {
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
+      "Text to insert": "aliases: \ntags: "
+    },
+    "YAML Timestamp": {
+      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": false,
+      "Date Created": false,
+      "Date Created Key": "date created",
+      "Date Modified": false,
+      "Date Modified Key": "date modified",
+      "Format": "dddd, MMMM Do YYYY, h:mm:ss a"
+    },
+    "YAML Title": {
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
+      "Title Key": "title"
+    },
+    "Header Increment": {
+      "Heading levels should only increment by one level at a time": false
+    },
+    "File Name Heading": {
+      "Inserts the file name as a H1 heading if no H1 heading exists.": false
+    },
+    "Capitalize Headings": {
+      "Headings should be formatted with capitalization": false,
+      "Style": "Title Case",
+      "Ignore Cased Words": true,
+      "Ignore Words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
+      "Lowercase Words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
+    },
+    "Move Footnotes to the bottom": {
+      "Move all footnotes to the bottom of the document.": true
+    },
+    "Re-Index Footnotes": {
+      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
+    },
+    "Footnote after Punctuation": {
+      "Ensures that footnote references are placed after punctuation, not before.": true
+    },
+    "Remove Multiple Spaces": {
+      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": true
+    },
+    "Remove Hyphenated Line Breaks": {
+      "Removes hyphenated line breaks. Useful when pasting text from textbooks.": true
+    },
+    "Remove Consecutive List Markers": {
+      "Removes consecutive list markers. Useful when copy-pasting list items.": true
+    },
+    "Remove Empty List Markers": {
+      "Removes empty list markers, i.e. list items without content.": true
+    },
+    "Proper Ellipsis": {
+      "Replaces three consecutive dots with an ellipsis.": true
+    },
+    "Trailing spaces": {
+      "Removes extra spaces after every line.": true,
+      "Two Space Linebreak": true
+    },
+    "Heading blank lines": {
+      "All headings have a blank line both before and after (except where the heading is at the beginning or end of the document).": true,
+      "Bottom": true
+    },
+    "Paragraph blank lines": {
+      "All paragraphs should have exactly one blank line both before and after.": true
+    },
+    "Space after list markers": {
+      "There should be a single space after list markers and checkboxes.": true
+    },
+    "Compact YAML": {
+      "Removes leading and trailing blank lines in the YAML front matter.": true
+    },
+    "Consecutive blank lines": {
+      "There should be at most one consecutive blank line.": true
+    },
+    "Convert Spaces to Tabs": {
+      "Converts leading spaces to tabs.": true,
+      "Tabsize": "4"
+    },
+    "Line Break at Document End": {
+      "Ensures that there is exactly one line break at the end of a document.": true
+    }
+  },
+  "lintOnSave": true,
+  "displayChanged": true,
+  "foldersToIgnore": [
+    "templates"
+  ]
+}

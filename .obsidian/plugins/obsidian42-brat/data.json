@@ -1,0 +1,17 @@
+{
+  "pluginList": [
+    "zsviczian/excalibrain",
+    "liamcain/obsidian-calendar-plugin",
+    "liamcain/obsidian-periodic-notes"
+  ],
+  "pluginSubListFrozenVersion": [],
+  "themesList": [],
+  "updateAtStartup": false,
+  "updateThemesAtStartup": false,
+  "ribbonIconEnabled": true,
+  "loggingEnabled": true,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true
+}

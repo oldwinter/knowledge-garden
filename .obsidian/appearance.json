@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 14,
+  "cssTheme": "Shimmering Focus",
+  "enabledCssSnippets": [
+    "supercharged-links-gen",
+    "多栏callout样式"
+  ],
+  "theme": "moonstone",
+  "baseFontSizeAction": false,
+  "translucency": false
+}

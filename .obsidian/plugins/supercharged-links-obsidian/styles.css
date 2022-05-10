@@ -1,0 +1,120 @@
+.frontmatter-prompt-div {
+    display: flex;
+}
+
+.frontmatter-prompt-form {
+    width: 100%;
+}
+.frontmatter-prompt-container {
+    margin-top: 10px;
+}
+
+.frontmatter-prompt-container > input{
+    margin-right: 10px;
+    margin-bottom: 8px
+}
+
+.frontmatter-prompt-input {
+    flex-grow: 1;
+    width: 100%
+}
+
+.frontmatter-prompt-input {
+    flex-grow: 1;
+}
+
+.frontmatter-prompt-checkbox {
+    display: none;
+}
+
+.frontmatter-toggler {
+    text-align: center;
+}
+
+.frontmatter-separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.frontmatter-modal-value {
+    text-align: center
+}
+
+.frontmatter-select {
+    margin-right: 10px
+}
+
+.frontmatter-values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.frontmatter-value-selector-container{
+    margin-bottom: 5px;
+}
+
+.frontmatter-value-selector-label{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.frontmatter-value-selector-inline-label{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.yaml-frontmatter-red{
+    color: #C7254E
+}
+
+.frontmatter-value-selector-toggler {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+
+.frontmatter-value-grid-footer {
+    flex: 1 1 auto;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.frontmatter-textarea-buttons {
+    flex: 1 1 auto;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.position-selector-container {
+    margin-right: 10px;
+}
+
+.heading-selector-button, .heading-selector-button:not(.mod-cta), .heading-selector-button:not(.mod-warning){
+    padding: 0;
+    background-color: transparent;
+}
+
+.frontmatter-value-selector-inline-label-top{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: top
+}
+
+.css-boilerplate-result {
+    width: 30em
+}
+
+div.supercharged-modal {
+    height: 70vh;
+}
+
+div.supercharged-modal h4 {
+    margin: 0;
+}
