@@ -21,7 +21,6 @@
   "find-unlinked-files",
   "mrj-text-expand",
   "obsidian-linter",
-  "quick-explorer",
   "sliding-panes-obsidian",
   "obsidian-icon-folder",
   "obsidian42-brat",
@@ -30,13 +29,8 @@
   "obsidian-focus-mode",
   "url-into-selection",
   "customizable-page-header-buttons",
-  "obsidian-git",
   "obsidian-dynamic-toc",
   "pane-relief",
-  "obsidian-icons-plugin",
-  "customizable-sidebar",
-  "obsidian-jump-to-date-plugin",
-  "obsidian-wordnet-plugin",
-  "obsidian42-text-transporter",
-  "obsidian-footnotes"
+  "obsidian-footnotes",
+  "quick-explorer"
 ]

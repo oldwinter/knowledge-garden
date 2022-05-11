@@ -102,6 +102,8 @@
     <script src="{{{base}}}plugin/notes/notes.js"></script>
     <script src="{{{base}}}plugin/math/math.js"></script>
 	<script src="{{{base}}}plugin/mermaid/mermaid.js"></script>
+	<script src="{{{base}}}plugin/chart/chart.min.js"></script>
+	<script src="{{{base}}}plugin/chart/plugin.js"></script>
 	{{#enableMenu}}
 	<script src="{{{base}}}plugin/menu/menu.js"></script>
 	{{/enableMenu}}
@@ -126,6 +128,23 @@
         return target;
       }
 
+	  function isLight(color) {
+		const hex = color.replace('#', '');
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -140,6 +159,7 @@
           RevealNotes,
           RevealMath.MathJax3,
 		  RevealMermaid,
+		  RevealChart,
 		  {{#enableCustomControls}}
 		  RevealCustomControls,
 	      {{/enableCustomControls}}

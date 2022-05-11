@@ -323,6 +323,15 @@
     background-color: var(--r-background-color);
   }
 }
+.has-dark-background canvas[data-chart] {
+  background-color: white;
+}
+.has-light-background canvas[data-chart] {
+  background-color: unset;
+}
+canvas[data-chart] {
+  padding: 0.5em;
+}
 .reveal p {
   font-weight: 300;
   text-shadow: 1px 1px #222;
