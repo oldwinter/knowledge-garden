@@ -34,5 +34,9 @@
   "obsidian-dynamic-toc",
   "pane-relief",
   "obsidian-icons-plugin",
-  "customizable-sidebar"
+  "customizable-sidebar",
+  "obsidian-jump-to-date-plugin",
+  "obsidian-wordnet-plugin",
+  "obsidian42-text-transporter",
+  "obsidian-footnotes"
 ]

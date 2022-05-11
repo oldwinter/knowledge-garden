@@ -2270,7 +2270,7 @@ var require_loader = __commonJS({
         iterator(documents[index]);
       }
     }
-    function load(input, options) {
+    function load2(input, options) {
       var documents = loadDocuments(input, options);
       if (documents.length === 0) {
         return void 0;
@@ -2287,10 +2287,10 @@ var require_loader = __commonJS({
       return loadAll(input, iterator, common.extend({ schema: DEFAULT_SAFE_SCHEMA }, options));
     }
     function safeLoad(input, options) {
-      return load(input, common.extend({ schema: DEFAULT_SAFE_SCHEMA }, options));
+      return load2(input, common.extend({ schema: DEFAULT_SAFE_SCHEMA }, options));
     }
     module2.exports.loadAll = loadAll;
-    module2.exports.load = load;
+    module2.exports.load = load2;
     module2.exports.safeLoadAll = safeLoadAll;
     module2.exports.safeLoad = safeLoad;
   }
@@ -8550,7 +8550,7 @@ var require_browser = __commonJS({
     exports.log = log;
     exports.formatArgs = formatArgs;
     exports.save = save;
-    exports.load = load;
+    exports.load = load2;
     exports.useColors = useColors;
     exports.storage = typeof chrome != "undefined" && typeof chrome.storage != "undefined" ? chrome.storage.local : localstorage();
     exports.colors = [
@@ -8606,7 +8606,7 @@ var require_browser = __commonJS({
       } catch (e) {
       }
     }
-    function load() {
+    function load2() {
       var r;
       try {
         r = exports.storage.debug;
@@ -8617,7 +8617,7 @@ var require_browser = __commonJS({
       }
       return r;
     }
-    exports.enable(load());
+    exports.enable(load2());
     function localstorage() {
       try {
         return window.localStorage;
@@ -9333,7 +9333,7 @@ var require_browser2 = __commonJS({
     exports.log = log;
     exports.formatArgs = formatArgs;
     exports.save = save;
-    exports.load = load;
+    exports.load = load2;
     exports.useColors = useColors;
     exports.storage = typeof chrome != "undefined" && typeof chrome.storage != "undefined" ? chrome.storage.local : localstorage();
     exports.colors = [
@@ -9389,7 +9389,7 @@ var require_browser2 = __commonJS({
       } catch (e) {
       }
     }
-    function load() {
+    function load2() {
       var r;
       try {
         r = exports.storage.debug;
@@ -9400,7 +9400,7 @@ var require_browser2 = __commonJS({
       }
       return r;
     }
-    exports.enable(load());
+    exports.enable(load2());
     function localstorage() {
       try {
         return window.localStorage;
@@ -11509,7 +11509,7 @@ var require_browser4 = __commonJS({
     exports.log = log;
     exports.formatArgs = formatArgs;
     exports.save = save;
-    exports.load = load;
+    exports.load = load2;
     exports.useColors = useColors;
     exports.storage = typeof chrome != "undefined" && typeof chrome.storage != "undefined" ? chrome.storage.local : localstorage();
     exports.colors = [
@@ -11565,7 +11565,7 @@ var require_browser4 = __commonJS({
       } catch (e) {
       }
     }
-    function load() {
+    function load2() {
       var r;
       try {
         r = exports.storage.debug;
@@ -11576,7 +11576,7 @@ var require_browser4 = __commonJS({
       }
       return r;
     }
-    exports.enable(load());
+    exports.enable(load2());
     function localstorage() {
       try {
         return window.localStorage;
@@ -72870,6 +72870,137 @@ var TemplateProcessor = class {
   }
 };
 
+// src/processors/chartProcessor.ts
+var ChartProcessor = class {
+  constructor() {
+    this.typeRegex = /type:\s(\w*)/;
+    this.labelRegex = /labels:\s(.*)/;
+    this.datasetRegex = /title:\s(.*)\s*data:\s(.*)/g;
+    this.spanGapsRegex = /(spanGaps):\s(.*)/;
+    this.tensionRegex = /(tension):\s(.*)/;
+    this.beginAtZeroRegex = /(beginAtZero):\s(.*)/;
+    this.legendRegex = /(legend):\s(.*)/;
+    this.legendPositionRegex = /(legendPosition):\s(.*)/;
+    this.stackedRegex = /(stacked):\s(.*)/;
+    this.colorMap = ["#4285f4", "#ea4335", "#fbbc05", "#34a853", "#673ab7", "#cccccc", "#777777"];
+  }
+  process(markdown, options) {
+    return this.transformChart(markdown, options);
+  }
+  transformChart(markdown, options) {
+    const startIdx = markdown.indexOf("```chart");
+    if (startIdx < 0) {
+      return markdown;
+    } else {
+      const endIdx = markdown.indexOf("```", startIdx + 11);
+      if (endIdx < 0) {
+        return markdown;
+      }
+      const before = markdown.substring(0, startIdx);
+      const after = markdown.substring(endIdx + 3);
+      const chartMarkup = markdown.substring(startIdx + 8, endIdx);
+      if (this.typeRegex.test(chartMarkup)) {
+        const [, type] = this.typeRegex.exec(chartMarkup);
+        const chart = {
+          data: {
+            datasets: [],
+            labels: []
+          },
+          options: { elements: {} }
+        };
+        if (this.labelRegex.test(chartMarkup)) {
+          const [, labels] = this.labelRegex.exec(chartMarkup);
+          chart.data.labels = parseLabels(labels);
+          this.datasetRegex.lastIndex = 0;
+          let i = 0;
+          let m;
+          while ((m = this.datasetRegex.exec(chartMarkup)) !== null) {
+            if (m.index === this.datasetRegex.lastIndex) {
+              this.datasetRegex.lastIndex++;
+            }
+            const [, title2, data] = m;
+            chart.data.datasets.push({ data: JSON.parse(data), label: title2, backgroundColor: this.colorMap[i] });
+            i++;
+          }
+          chart.options.elements[type] = {};
+          if (this.spanGapsRegex.test(chartMarkup)) {
+            const [, key, value] = this.spanGapsRegex.exec(chartMarkup);
+            chart.options.elements[type][key] = JSON.parse(value);
+          }
+          if (this.tensionRegex.test(chartMarkup)) {
+            const [, key, value] = this.tensionRegex.exec(chartMarkup);
+            chart.options.elements[type][key] = JSON.parse(value);
+          }
+          if (this.beginAtZeroRegex.test(chartMarkup)) {
+            const [, key, value] = this.beginAtZeroRegex.exec(chartMarkup);
+            if (!chart.options.scales) {
+              chart.options.scales = {};
+            }
+            if (!chart.options.scales.y) {
+              chart.options.scales.y = {};
+            }
+            chart.options.scales.y[key] = JSON.parse(value);
+          }
+          if (this.legendRegex.test(chartMarkup)) {
+            const [, , value] = this.legendRegex.exec(chartMarkup);
+            if (!chart.options.plugins) {
+              chart.options.plugins = {};
+            }
+            if (!chart.options.plugins.legend) {
+              chart.options.plugins.legend = {};
+            }
+            chart.options.plugins.legend.display = JSON.parse(value);
+          }
+          if (this.legendPositionRegex.test(chartMarkup)) {
+            const [, , value] = this.legendPositionRegex.exec(chartMarkup);
+            if (!chart.options.plugins) {
+              chart.options.plugins = {};
+            }
+            if (!chart.options.plugins.legend) {
+              chart.options.plugins.legend = {};
+            }
+            chart.options.plugins.legend.position = value;
+          }
+          if (this.stackedRegex.test(chartMarkup)) {
+            const [, key, value] = this.stackedRegex.exec(chartMarkup);
+            if (!chart.options.scales) {
+              chart.options.scales = {};
+            }
+            if (!chart.options.scales.y) {
+              chart.options.scales.y = {};
+            }
+            if (!chart.options.scales.x) {
+              chart.options.scales.x = {};
+            }
+            chart.options.scales.x[key] = JSON.parse(value);
+            chart.options.scales.y[key] = JSON.parse(value);
+          }
+          const canvas = `<canvas style="max-height:${options.height}px" data-chart="${type}" >
+<!--
+${JSON.stringify(chart)}-->
+</canvas>`;
+          console.log(`canvas: ${canvas}`);
+          const result = before.trimEnd() + "\n" + canvas + "\n" + after.trimStart();
+          return this.transformChart(result, options);
+        }
+      }
+      return markdown;
+    }
+  }
+};
+function parseLabels(labels) {
+  return labels.substring(1, labels.length - 1).split(",").map((label) => {
+    let value = label.trim();
+    if (value.startsWith("'") || value.startsWith('"')) {
+      value = value.substring(1);
+    }
+    if (value.endsWith("'") || value.endsWith('"')) {
+      value = value.substring(0, value.length - 1);
+    }
+    return `${value.trim()}`;
+  });
+}
+
 // src/obsidianMarkdownPreprocessor.ts
 var ObsidianMarkdownPreprocessor = class {
   constructor(utils) {
@@ -72891,6 +73022,7 @@ var ObsidianMarkdownPreprocessor = class {
     this.debugViewProcessor = new DebugViewProcessor();
     this.calloutProcessor = new CalloutProcessor();
     this.templateProcessor = new TemplateProcessor(utils);
+    this.chartProcessor = new ChartProcessor();
   }
   process(markdown, options) {
     YamlStore.getInstance().options = options;
@@ -72912,7 +73044,8 @@ var ObsidianMarkdownPreprocessor = class {
     const afterFragmentProcessor = this.fragmentProcessor.process(afterFormatProcessor, options);
     const afterGridProcessor = this.gridProcessor.process(afterFragmentProcessor, options);
     const afterCommentProcessor = this.commentProcessor.process(afterGridProcessor);
-    return afterCommentProcessor;
+    const afterChartProcessor = this.chartProcessor.process(afterCommentProcessor, options);
+    return afterChartProcessor;
   }
 };
 
@@ -72957,6 +73090,7 @@ var RevealRenderer = class {
   async renderFile(filePath, params) {
     let renderForExport = false;
     let renderForPrint = false;
+    let renderForEmbed = false;
     if (!import_lodash2.default.isEmpty(params)) {
       if (import_lodash2.default.has(params, "export")) {
         renderForExport = params?.export;
@@ -72964,20 +73098,23 @@ var RevealRenderer = class {
       if (import_lodash2.default.has(params, "print-pdf")) {
         renderForPrint = true;
       }
+      if (import_lodash2.default.has(params, "embed")) {
+        renderForEmbed = params?.embed;
+      }
     }
     if (renderForExport) {
       ImageCollector.getInstance().reset();
       ImageCollector.getInstance().enable();
     }
     const content = (await (0, import_fs_extra2.readFile)(filePath.toString())).toString();
-    const rendered = await this.render(content, renderForPrint);
+    const rendered = await this.render(content, renderForPrint, renderForEmbed);
     if (renderForExport) {
       ImageCollector.getInstance().disable();
       await this.exporter.export(filePath, rendered, ImageCollector.getInstance().getAll());
     }
     return rendered;
   }
-  async render(input, renderForPrint) {
+  async render(input, renderForPrint, renderEmbedded) {
     const { yamlOptions, markdown } = this.yaml.parseYamlFrontMatter(input);
     const options = this.yaml.getSlideOptions(yamlOptions, renderForPrint);
     const revealOptions = this.yaml.getRevealOptions(options);
@@ -73008,7 +73145,7 @@ var RevealRenderer = class {
       enableMenu,
       revealOptionsStr: JSON.stringify(revealOptions)
     });
-    const template2 = await this.getTemplate();
+    const template2 = await this.getTemplate(renderEmbedded);
     const result = mustache_default.render(template2, context);
     return result;
   }
@@ -73040,8 +73177,13 @@ var RevealRenderer = class {
     const revealTheme = revealThemes.find((themePath) => (0, import_path2.basename)(themePath).replace((0, import_path2.extname)(themePath), "") === theme2);
     return revealTheme ? revealTheme : theme2;
   }
-  async getTemplate() {
-    const templateFile = (0, import_path2.join)(this.pluginDirectory, defaults_default.template);
+  async getTemplate(embed = false) {
+    let templateFile;
+    if (embed) {
+      templateFile = (0, import_path2.join)(this.pluginDirectory, "template/embed.html");
+    } else {
+      templateFile = (0, import_path2.join)(this.pluginDirectory, defaults_default.template);
+    }
     const content = (await (0, import_fs_extra2.readFile)(templateFile.toString())).toString();
     return content;
   }
@@ -73088,6 +73230,12 @@ var RevealServer = class {
     ["plugin", "dist", "css"].forEach((dir) => {
       this._app.use("/" + dir, this._staticDir(import_path3.default.join(this._pluginDirectory, dir)));
     });
+    this._app.get("/embed/*", async (req, res) => {
+      const file = req.originalUrl.replace("/embed", "");
+      const filePath = import_path3.default.join(this._baseDirectory, decodeURI(file.split("?")[0]));
+      const markup = await this._revealRenderer.renderFile(filePath, req.query);
+      res.send(markup);
+    });
     this._app.get(/(\w+\.md)/, async (req, res) => {
       this.filePath = import_path3.default.join(this._baseDirectory, decodeURI(req.url.split("?")[0]));
       const markup = await this._revealRenderer.renderFile(this.filePath, req.query);
@@ -73118,7 +73266,7 @@ var RevealServer = class {
 };
 
 // package.json
-var version = "1.10.1";
+var version = "1.11.0";
 
 // src/main.ts
 var import_path7 = __toModule(require("path"));
@@ -75074,8 +75222,10 @@ var suggestionData = [
     offset: 11
   },
   {
+    name: "element",
     value: "<!-- element  -->",
     description: "@element",
+    strategy: "startsWith",
     offset: 13
   },
   {
@@ -75094,6 +75244,13 @@ var suggestionData = [
     description: "small",
     strategy: "startsWith",
     offset: 30
+  },
+  {
+    name: "embed",
+    value: "```slide\n{\n	slide: [[]],\n	page: 0\n}\n```",
+    description: "@embed",
+    strategy: "startsWith",
+    offset: 21
   }
 ];
 var gridData = [
@@ -76863,6 +77020,7 @@ function firstFromPosition(target, position, tokens) {
 }
 
 // src/main.ts
+var import_js_yaml = __toModule(require_js_yaml2());
 var DEFAULT_SETTINGS = {
   port: "3000",
   autoReload: true,
@@ -76878,7 +77036,7 @@ var DEFAULT_SETTINGS = {
   progress: true,
   slideNumber: false,
   showGrid: false,
-  autoComplete: "always"
+  autoComplete: "inPreview"
 };
 var AdvancedSlidesPlugin = class extends import_obsidian7.Plugin {
   async onload() {
@@ -76959,8 +77117,32 @@ var AdvancedSlidesPlugin = class extends import_obsidian7.Plugin {
         }
         this.registerEditorSuggest(this.autoCompleteSuggester);
       });
+      this.registerMarkdownCodeBlockProcessor("slide", async (src, el) => {
+        try {
+          const parameters = this.readParameters(src);
+          const page = parameters.page ? `${parameters.page}` : "0";
+          const url = new URL(`http://localhost:${this.settings.port}/embed/${parameters.slide}#/${page}`);
+          url.searchParams.append("embed", "true");
+          const viewContent = el.createDiv();
+          viewContent.empty();
+          viewContent.addClass("reveal-preview-view");
+          viewContent.createEl("iframe", {
+            attr: {
+              src: url.toString(),
+              sandbox: "allow-scripts allow-same-origin"
+            }
+          });
+        } catch (e) {
+          el.createEl("h2", { text: "Parameters invalid: " + e.message });
+        }
+      });
     } catch (err) {
     }
+  }
+  readParameters(src) {
+    const params = (0, import_js_yaml.load)(src);
+    params.slide = this.obsidianUtils.findFile(params.slide);
+    return params;
   }
   getViewInstance() {
     for (const leaf of this.app.workspace.getLeavesOfType(REVEAL_PREVIEW_VIEW)) {

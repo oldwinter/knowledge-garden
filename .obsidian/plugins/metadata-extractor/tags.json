@@ -8,18 +8,16 @@
   },
   {
     "tag": "published",
-    "tagCount": 5,
+    "tagCount": 3,
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md",
       "pages/500 - ARCHIVE/已发布长文/华为，今夜请将我遗忘.md",
-      "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md",
-      "logseq/bak/pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源/2022-05-09T02_15_57.375Z.md",
-      "logseq/bak/pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗/2022-05-09T02_15_57.058Z.md"
+      "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
     ]
   },
   {
     "tag": "moc",
-    "tagCount": 29,
+    "tagCount": 21,
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布长文/已发布长文 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md",
@@ -29,88 +27,48 @@
       "pages/400 - RESOURCE/知识原子库/思维工具库/思维工具 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md",
+      "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
+      "pages/400 - RESOURCE/基础学科/计算机科学/golang - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
-      "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
-      "pages/400 - RESOURCE/基础学科/计算机科学/golang - MOC.md",
       "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
       "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md",
       "pages/200 - PROJECT/我的开源项目/我的开源项目 - MOX.md",
       "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
       "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
-      "logseq/bak/pages/400 - RESOURCE/知识原子库/方法库/方法库 - MOC/2022-05-09T02_15_57.400Z.md",
-      "logseq/bak/pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC/2022-05-09T02_15_57.377Z.md",
-      "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md",
-      "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC/2022-05-09T02_15_57.911Z.md",
-      "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC/2022-05-09T02_15_57.931Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-09T02_15_58.181Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC/2022-05-09T02_15_58.208Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-09T02_15_58.239Z.md",
       "INDEX根索引 - MOC.md"
     ]
   },
   {
     "tag": "review",
-    "tagCount": 12,
+    "tagCount": 7,
     "relativePaths": [
       "pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md",
       "pages/400 - RESOURCE/知识原子库/有意思的网络流行语 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法.md",
       "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md",
       "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动.md",
-      "logseq/bak/pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》/2022-05-09T02_15_57.393Z.md",
-      "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法/2022-05-09T02_15_57.486Z.md",
-      "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应/2022-05-09T02_15_57.830Z.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件/2022-05-09T02_15_58.083Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动/2022-05-09T02_15_58.246Z.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
     ]
   },
   {
     "tag": "cards",
-    "tagCount": 4,
+    "tagCount": 2,
     "relativePaths": [
       "pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性.md",
-      "pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应.md",
-      "logseq/bak/pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性/2022-05-09T02_15_57.408Z.md",
-      "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应/2022-05-09T02_15_57.818Z.md"
+      "pages/400 - RESOURCE/基础学科/心理学/皮格马利翁效应.md"
     ]
   },
   {
     "tag": "todo/某天",
-    "tagCount": 8,
+    "tagCount": 4,
     "relativePaths": [
-      "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md",
       "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
-      "pages/300 - AREA/知识管理/obsidian学习笔记/excalidraw.md",
-      "logseq/bak/pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC/2022-05-09T02_15_57.744Z.md",
-      "logseq/bak/pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》/2022-05-09T02_15_57.885Z.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/excalidraw/2022-05-09T02_15_58.077Z.md"
-    ]
-  },
-  {
-    "tag": "todo/持续迭代",
-    "tagCount": 16,
-    "relativePaths": [
-      "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
-      "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md",
-      "pages/300 - AREA/人+科技融合/个人知识笔记系统.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
-      "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
-      "logseq/bak/pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC/2022-05-09T02_15_57.931Z.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/context 切换/2022-05-09T02_15_58.068Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人知识笔记系统/2022-05-09T02_15_58.153Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统/2022-05-09T02_15_58.261Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统/2022-05-09T02_15_58.260Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理/2022-05-09T02_15_58.257Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统/2022-05-09T02_15_58.242Z.md"
+      "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md",
+      "pages/300 - AREA/知识管理/obsidian学习笔记/excalidraw.md"
     ]
   },
   {
@@ -128,6 +86,21 @@
     ]
   },
   {
+    "tag": "todo/持续迭代",
+    "tagCount": 9,
+    "relativePaths": [
+      "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
+      "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md",
+      "pages/300 - AREA/人+科技融合/个人知识笔记系统.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
+      "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
+    ]
+  },
+  {
     "tag": "moc/列表",
     "tagCount": 1,
     "relativePaths": [
@@ -136,51 +109,44 @@
   },
   {
     "tag": "todo/今天",
-    "tagCount": 10,
+    "tagCount": 6,
     "relativePaths": [
       "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md",
       "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
       "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动.md",
-      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件/2022-05-09T02_15_58.083Z.md",
-      "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享/2022-05-09T02_15_58.103Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流/2022-05-09T02_15_58.253Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统和任务管理系统的联动/2022-05-09T02_15_58.246Z.md"
+      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
     ]
   },
   {
     "tag": "test",
-    "tagCount": 2,
+    "tagCount": 1,
     "relativePaths": [
-      "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/dataview/2022-05-09T02_15_58.073Z.md"
+      "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
     ]
   },
   {
     "tag": "test2/test3/test4",
-    "tagCount": 2,
+    "tagCount": 1,
     "relativePaths": [
-      "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md",
-      "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/dataview/2022-05-09T02_15_58.073Z.md"
+      "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+    ]
+  },
+  {
+    "tag": "评论/少数派",
+    "tagCount": 5,
+    "relativePaths": [
+      "pages/300 - AREA/人+科技融合/手机短信和通知转发至统一hub.md",
+      "journals/2022-05-10.md",
+      "journals/2022-05-05.md"
     ]
   },
   {
     "tag": "todo",
-    "tagCount": 37,
+    "tagCount": 20,
     "relativePaths": [
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T10_03_04.910Z.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-09T02_15_58.243Z.md"
-    ]
-  },
-  {
-    "tag": "excalidraw",
-    "tagCount": 2,
-    "relativePaths": [
-      "logseq/bak/draws/数字时代如何更好地工作与生活 - 图/2022-05-09T02_16_00.136Z.md",
-      "draws/数字时代如何更好地工作与生活 - 图.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
     ]
   },
   {
@@ -204,14 +170,6 @@
     "tagCount": 1,
     "relativePaths": [
       "journals/《喜鹊谋杀案》.md"
-    ]
-  },
-  {
-    "tag": "评论/少数派",
-    "tagCount": 4,
-    "relativePaths": [
-      "journals/2022-05-10.md",
-      "journals/2022-05-05.md"
     ]
   },
   {
@@ -240,6 +198,13 @@
     "tagCount": 1,
     "relativePaths": [
       "journals/2022-05-05.md"
+    ]
+  },
+  {
+    "tag": "excalidraw",
+    "tagCount": 1,
+    "relativePaths": [
+      "draws/数字时代如何更好地工作与生活 - 图.md"
     ]
   }
 ]

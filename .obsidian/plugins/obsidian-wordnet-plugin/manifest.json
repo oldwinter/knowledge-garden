@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-wordnet-plugin",
+	"name": "Obsidian42 - WordNet Dictionary",
+	"version": "2.0.1",
+	"minAppVersion": "0.9.12",
+	"description": "WordNet is a large lexical database of English developed by Princeton University.",
+	"author": "TfT Hacker",
+	"authorUrl": "https://github.com/TfTHacker/Obsidian-WordNet",
+	"isDesktopOnly": false
+}

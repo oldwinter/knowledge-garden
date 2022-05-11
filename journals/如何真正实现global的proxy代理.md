@@ -1,0 +1,1 @@
+用v2ray进行翻墙，只会proxy部分走应用层的app。终端执行的python脚本不经应用层，无法proxy。需要使用[[proxifier]]进行全局代理，转发流量至v2ray的sock5端口
