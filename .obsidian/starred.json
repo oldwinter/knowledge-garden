@@ -4,6 +4,26 @@
       "type": "file",
       "title": "Index",
       "path": "INDEX根索引 - MOC.md"
+    },
+    {
+      "type": "search",
+      "title": "x-devonthink-item://",
+      "query": "x-devonthink-item://"
+    },
+    {
+      "type": "search",
+      "title": "github.com/oldwinter",
+      "query": "github.com/oldwinter"
+    },
+    {
+      "type": "file",
+      "title": "外部资源的单向链接汇总",
+      "path": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+    },
+    {
+      "type": "file",
+      "title": "你还在打造数字花园？不妨来看看我的数字闺房",
+      "path": "pages/500 - ARCHIVE/已发布长文/你还在打造数字花园？不妨来看看我的数字闺房.md"
     }
   ]
 }

@@ -4,8 +4,11 @@ tags: MOC
 
 ## 记笔记原则
 
-- 文件夹：极限3层
-- 标签：极限10个，用来表达状态
+- [[自上而下]]
+	- 文件夹：极限3层，定期轻微整理，满足局部模块知识的高内聚即可
+	- 标签：极限30个，用来表达状态或来源
+- [[自下而上]]
+	- 链接一切：以
 ---
 
 ## 方法和指导思想
@@ -31,7 +34,7 @@ limit 1000
 
 ---
 
-## 长期跟进 - Area
+## 短中期跟进 - Area
 
 知识管理
 
@@ -69,18 +72,27 @@ where contains(file.tags,"MOC")
 sort tags desc
 limit 1000
 ```
+
 ## 未完成tasks
+
 ```dataview
 task from #projects/active
 ```
+
 ```dataviewjs
 dv.taskList(dv.pages().file.tasks.where(t => !t.completed));
 ```
 
 ## 已完成tasks
+
 ```dataviewjs
 dv.taskList(dv.pages('"/" and -"pages/500 - ARCHIVE"').file.tasks.where(t => t.completed));
 ```
+
 ## 最近事项
 
 ![[最近编辑、最近创建、最近任务、回顾记忆]]
+
+[[contents]]文件是logseq内置的目录。与indexl这种自动化的dataview区分开，contents进行手动的结构化的汇编。
+
+相当于如果把这个库出一本书或者wiki，那么这里就是目录。但又不必完全索引库里面的全部内容，渐进式地搞就行。

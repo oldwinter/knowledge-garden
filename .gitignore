@@ -8,6 +8,6 @@ logseq/.recycle
 pages/200 - PROJECT/个人职业生涯
 pages/200 - PROJECT/项目管理
 
-# 敏感插件数据屏蔽
+# 带token的敏感插件数据屏蔽
 .obsidian/plugins/remotely-save
 .obsidian/plugins/obsidian-local-rest-api

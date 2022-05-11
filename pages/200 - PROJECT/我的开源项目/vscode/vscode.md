@@ -1,1 +1,1 @@
-
+新版本要求每个仓库手动配置一遍git email和name，虽然更安全，但是非常不方便。解决方式：`requireGitUserConfig置为false`

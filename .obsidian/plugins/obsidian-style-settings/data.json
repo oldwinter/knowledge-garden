@@ -57,7 +57,7 @@
   "shimmering-focus@@show-sidebar-tabs": true,
   "shimmering-focus@@show-titlebar": true,
   "shimmering-focus@@show-titlebar-text": false,
-  "shimmering-focus@@show-ribbons": true,
+  "shimmering-focus@@show-ribbons": false,
   "shimmering-focus@@code-block-tab-size": 2,
   "sanctum@@dark-mode-palette": "sanctum-dark",
   "sanctum@@alt-link": false,
@@ -82,7 +82,7 @@
   "shimmering-focus@@show-header-bar": true,
   "shimmering-focus@@show-urls": false,
   "shimmering-focus@@permanently-show-blockids": false,
-  "shimmering-focus@@shapes": "angular-shapes",
+  "shimmering-focus@@shapes": "squareish-shapes",
   "shimmering-focus@@colored-yaml": false,
   "shimmering-focus@@trim-long-filenames": true,
   "shimmering-focus@@hide-attachment-folders": false,
@@ -128,5 +128,8 @@
   "supercharged-links@@75fc-e339-decoration": "initial",
   "shimmering-focus@@show-graph-controls": false,
   "shimmering-focus@@hardcore-mode": false,
-  "shimmering-focus@@madness-mode": false
+  "shimmering-focus@@madness-mode": false,
+  "shimmering-focus@@no-alternating-rows": false,
+  "shimmering-focus@@longform-left-aligned": false,
+  "shimmering-focus@@overlaying-right-sidebar": false
 }
