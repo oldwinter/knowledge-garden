@@ -61,20 +61,16 @@
       "relativePath": "pages/300 - AREA"
     },
     {
-      "name": "400 - RESOURCE",
-      "relativePath": "pages/400 - RESOURCE"
-    },
-    {
       "name": "500 - ARCHIVE",
       "relativePath": "pages/500 - ARCHIVE"
     },
     {
-      "name": "dict",
-      "relativePath": "templates/dict"
+      "name": "400 - RESOURCE",
+      "relativePath": "pages/400 - RESOURCE"
     },
     {
-      "name": "Downloaded",
-      "relativePath": "draws/Scripts/Downloaded"
+      "name": "dict",
+      "relativePath": "templates/dict"
     },
     {
       "name": "个人职业生涯",
@@ -89,10 +85,6 @@
       "relativePath": "pages/200 - PROJECT/我的开源项目"
     },
     {
-      "name": "项目管理",
-      "relativePath": "pages/200 - PROJECT/项目管理"
-    },
-    {
       "name": "人+科技融合",
       "relativePath": "pages/300 - AREA/人+科技融合"
     },
@@ -101,12 +93,20 @@
       "relativePath": "pages/300 - AREA/沟通与表达"
     },
     {
+      "name": "项目管理",
+      "relativePath": "pages/200 - PROJECT/项目管理"
+    },
+    {
       "name": "知识管理",
       "relativePath": "pages/300 - AREA/知识管理"
     },
     {
       "name": "运动与健康",
       "relativePath": "pages/300 - AREA/运动与健康"
+    },
+    {
+      "name": "已发布长文",
+      "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "书影音笔记",
@@ -123,10 +123,6 @@
     {
       "name": "知识原子库",
       "relativePath": "pages/400 - RESOURCE/知识原子库"
-    },
-    {
-      "name": "已发布长文",
-      "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "vscode",
@@ -331,21 +327,6 @@
       "name": "chinese.ttf",
       "basename": "chinese",
       "relativePath": "draws/fonts/chinese.ttf"
-    },
-    {
-      "name": "Add Connector Point.svg",
-      "basename": "Add Connector Point",
-      "relativePath": "draws/Scripts/Downloaded/Add Connector Point.svg"
-    },
-    {
-      "name": "Add Link to Existing File and Open.svg",
-      "basename": "Add Link to Existing File and Open",
-      "relativePath": "draws/Scripts/Downloaded/Add Link to Existing File and Open.svg"
-    },
-    {
-      "name": "TheBrain-navigation.svg",
-      "basename": "TheBrain-navigation",
-      "relativePath": "draws/Scripts/Downloaded/TheBrain-navigation.svg"
     }
   ]
 }

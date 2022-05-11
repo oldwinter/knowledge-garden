@@ -126,5 +126,7 @@
   "supercharged-links@@53f6-363a-color": "#038B1B",
   "supercharged-links@@c-75fc-e339-use-background": false,
   "supercharged-links@@75fc-e339-decoration": "initial",
-  "shimmering-focus@@show-graph-controls": false
+  "shimmering-focus@@show-graph-controls": false,
+  "shimmering-focus@@hardcore-mode": false,
+  "shimmering-focus@@madness-mode": false
 }

@@ -1,5 +1,4 @@
----
----
+
 
 [chrisgrieser/shimmering-obsidian: Alfred Workflow for various enhancements of Obsidian. (github.com)](https://github.com/chrisgrieser/shimmering-obsidian)
 

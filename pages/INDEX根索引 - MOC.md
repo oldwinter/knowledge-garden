@@ -14,7 +14,6 @@ tags: MOC
 - [[双链笔记]]，[[万物互联]]
 ---
 
-
 ## 进行中 - Project
 
 - 不要强求自己去写东西，一定是项目驱动，兴趣驱动的方式去写。
@@ -44,7 +43,6 @@ sort tags desc
 limit 1000
 ```
 
-
 ---
 
 ## 原子化 - Resource
@@ -56,7 +54,6 @@ where contains(file.tags,"MOC")
 sort tags desc
 limit 1000
 ```
-
 
 ---
 
@@ -72,16 +69,18 @@ where contains(file.tags,"MOC")
 sort tags desc
 limit 1000
 ```
-- [x] 啊 
-- [ ] 啊 [completion:: 2022-05-08]
+## 未完成tasks
 ```dataview
 task from #projects/active
 ```
-
 ```dataviewjs
 dv.taskList(dv.pages().file.tasks.where(t => !t.completed));
-dv.taskList(dv.pages().file.tasks.where(t => t.completed));
 ```
 
+## 已完成tasks
+```dataviewjs
+dv.taskList(dv.pages('"/" and -"pages/500 - ARCHIVE"').file.tasks.where(t => t.completed));
+```
 ## 最近事项
+
 ![[最近编辑、最近创建、最近任务、回顾记忆]]

@@ -5,6 +5,7 @@ tags: published
 ---
 
 ## 我是哪根葱
+
 - 从近 10 年经历看，我算得上是一个『少数派』：
 	- 高光🔦：高考全省排名前 1% 的[[小镇做题家]]
 	- 摆烂🕹：大学 89 人的专业绩点倒数第 1 的[[垫底小胖]]
@@ -21,7 +22,9 @@ tags: published
 	- 初见obsidian觉得很垃圾，炒作品
 	- 强迫自己用了1星期后，直呼惊艳
 	- 用了21天觉得离不开，疯狂摸索周边插件和笔记方法论
+
 ## 如果要我安利 obsidian，我会怎么做
+
 - 如果是纯文字版：
 	- 最戳 G 点的 3 个功能：
 	- 随时引用。随时随地双链，有种码代码的畅快感，能随时引用到曾经写过思考过的东西，很爽。这种爽感，倒逼出了创作激情。
@@ -29,7 +32,9 @@ tags: published
 	- [[平台+插件]]玩法，和 chrome 与 vscode 类似，入门简单，开箱即用，又不失可玩性，且玩法上限极高，甚至无边界。
 	- 甩一个看起来最屌的视频： [也许是 B 站最好的 Obsidian 新手教程！爆肝 30 天，一站式入门双向链接笔记软件_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18a411r7mt?spm_id_from=333.337.search-card.all.click)
 	- 甩一篇看起来最入门的文章： [Obsidian 是什么以及它能用来做什么 - 少数派 (sspai.com)](https://sspai.com/post/67399)
+
 ## 我和 obsidian 的激情 21 天
+
 - 糟糕的初印象：神经网络图，这华而不实的小妖精
 	- 第一次接触[[双链笔记]]概念，是因为不小心点开了 [吕立青_JimmyLv](https://sspai.com/u/jimmylv/updates) 的这个视频 [【效率思维01】我是如何艰难地克服「效率成瘾」的？](https://www.bilibili.com/video/BV11b4y1n7L4?spm_id_from=333.337.search-card.all.click)
 	- 被这 2 个功能点吸引了
@@ -109,7 +114,9 @@ tags: published
 	- ![c|300](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203310013245.jpg)
 	- 回答标题的问题，obsidian 肯定不是可以用一辈子的软件，但我已经决定下一个 3 年用它。
 	- 此外，我往 notion 放了 2 张这篇文章的编辑状态的截图，能直观感受到这种写作方式的好处，有需要自取：https://oldwinter.notion.site/obsidian-069e75af3a554c7ab91c825ecddc8722
+
 ## 如果有人看，接下来的更新计划
+
 - 写到这里发现篇幅已经过长，目前内容，已经足够表达出双链笔记和 obsidian 对我的冲击了，所以，我用 `[[]]` 符号，给自己挖几个坑，等多实践些日子，有更多实际感受，以及原子化笔记素材，再填了。
 	- [[obsidian 的 10 个必装插件，直击我的灵魂]]
 	- [[以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统]]
