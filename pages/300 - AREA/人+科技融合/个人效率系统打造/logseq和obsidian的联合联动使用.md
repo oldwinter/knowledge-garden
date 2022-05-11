@@ -8,5 +8,11 @@ obsidian的发布功能还没试过，但看了别人的发布效果，感觉也
 - logseq自动生成的bak文件夹，会被obsidian扫描，里面大量无用信息。现在logseq也不给配置这个bak文件夹的生成规则。
 	- 先通过[[keyboard maestro]]定时删除log文件夹，作为临时规避方案。
 - 清单语法互相不兼容
-	- 
+	- obsidian的清单语法，是原生的markdown语法，logseq由于其大纲类型，和清单冲突，所以自己扩展了语法。
+		- 先暂时只使用ob的语法，考虑到兼容性。logseq就只看看就行。
 - 块引用语法互相不兼容
+	- obsidian的块引用语法暂时有点鸡肋。但logseq的块引用性能有点差，现在就已经很卡了。
+		- 暂时先不用块引用，尽量原子化卡片page，只使用页引用。等logseq性能好起来了再说。
+- 闪卡flashcard的不兼容
+	- 2者都不成熟，相比之下还是[[spaced-repetition学习笔记]]更成熟一些
+		- 先用obsidian
