@@ -1,12 +1,56 @@
 {
-  "enabledButtons": [],
+  "enabledButtons": [
+    {
+      "id": "app:go-back",
+      "icon": "left-arrow-with-tail",
+      "name": "返回",
+      "showButtons": "both"
+    },
+    {
+      "id": "app:go-forward",
+      "icon": "right-arrow-with-tail",
+      "name": "前进",
+      "showButtons": "both"
+    },
+    {
+      "id": "obsidian-focus-mode:toggle-super-focus-mode",
+      "icon": "fullscreen",
+      "name": "Focus Mode: Toggle Super Focus Mode (Active pane only)",
+      "showButtons": "both"
+    }
+  ],
   "desktop": true,
   "titleLeft": [],
   "titleRight": [
     {
+      "id": "obsidian-focus-mode:toggle-focus-mode",
+      "icon": "enter",
+      "name": "Focus Mode: Toggle Focus Mode"
+    },
+    {
+      "id": "remotely-save:start-sync",
+      "icon": "remotely-save-sync-wait",
+      "name": "Remotely Save: 开始同步（start sync）"
+    },
+    {
       "id": "sliding-panes-obsidian:toggle-sliding-panes",
-      "icon": "vertical-three-dots",
+      "icon": "indent-glyph",
       "name": "Sliding Panes (Andy's Mode): Toggle Sliding Panes"
+    },
+    {
+      "id": "workspace:undo-close-pane",
+      "icon": "undo-glyph",
+      "name": "重新打开上一个关闭的面板"
+    },
+    {
+      "id": "templater-obsidian:insert-templater",
+      "icon": "lucide-file-text",
+      "name": "Templater: Open Insert Template modal"
+    },
+    {
+      "id": "workspaces:save-and-load",
+      "icon": "workspace-glyph",
+      "name": "工作区: 保存当前布局后加载其他工具区布局"
     }
   ],
   "titleCenter": [],

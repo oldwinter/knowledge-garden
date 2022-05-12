@@ -9,8 +9,8 @@
   "showAliased": true,
   "showLink": true,
   "enableReading": true,
-  "enableSource": true,
+  "enableSource": false,
   "enableLivePreview": true,
-  "cacheTime": 9,
+  "cacheTime": 6,
   "debounce": 500
 }

@@ -5,15 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "💻",
-      "⚒",
-      "🗣",
-      "⏩",
-      "Fab42Group",
-      "📹",
-      "📖",
+      "⏳",
+      "📍",
+      "FasNotesMedical",
+      "🎵",
       "🖥️",
-      "🎵"
+      "📖",
+      "📹",
+      "Fab42Group",
+      "⏩",
+      "🗣"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -62,5 +63,8 @@
   "pages/200 - PROJECT/我的开源项目/常用命令行工具": "⌨",
   "pages/200 - PROJECT/项目管理": "⚒",
   "pages/400 - RESOURCE/书影音笔记/音乐鉴赏": "🎵",
-  "pages/200 - PROJECT/个人职业生涯": "💻"
+  "pages/200 - PROJECT/个人职业生涯": "💻",
+  "README.md": "FabBilibili",
+  "pages/contents.md": "📍",
+  "pages/最近编辑、最近创建、最近任务、回顾记忆.md": "⏳"
 }

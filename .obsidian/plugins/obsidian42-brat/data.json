@@ -8,7 +8,7 @@
   "themesList": [],
   "updateAtStartup": false,
   "updateThemesAtStartup": false,
-  "ribbonIconEnabled": true,
+  "ribbonIconEnabled": false,
   "loggingEnabled": true,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,

@@ -6,14 +6,14 @@
   "foldIndent": true,
   "showLineNumber": false,
   "showFrontmatter": false,
-  "tabSize": 2,
+  "tabSize": 4,
   "defaultViewMode": "source",
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "newFileFolderPath": "收集箱",
   "fileSortOrder": "alphabetical",
   "attachmentFolderPath": "assets",
-  "readableLineLength": true,
+  "readableLineLength": false,
   "communityPluginSortOrder": "download",
   "lineWrap": true,
   "showUnsupportedFiles": true,
@@ -31,5 +31,6 @@
     "logseq/bak/",
     "logseq/"
   ],
-  "rightToLeft": false
+  "rightToLeft": false,
+  "trashOption": "system"
 }

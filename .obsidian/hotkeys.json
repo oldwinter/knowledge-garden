@@ -87,5 +87,13 @@
       ],
       "key": "F"
     }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Backspace"
+    }
   ]
 }

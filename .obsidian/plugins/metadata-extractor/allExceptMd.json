@@ -41,22 +41,6 @@
       "relativePath": "draws/fonts"
     },
     {
-      "name": "dict",
-      "relativePath": "templates/dict"
-    },
-    {
-      "name": "日记归档",
-      "relativePath": "journals/日记归档"
-    },
-    {
-      "name": "每周总结",
-      "relativePath": "journals/每周总结"
-    },
-    {
-      "name": "每月每季度总结",
-      "relativePath": "journals/每月每季度总结"
-    },
-    {
       "name": "200 - PROJECT",
       "relativePath": "pages/200 - PROJECT"
     },
@@ -73,6 +57,22 @@
       "relativePath": "pages/500 - ARCHIVE"
     },
     {
+      "name": "日记归档",
+      "relativePath": "journals/日记归档"
+    },
+    {
+      "name": "每周总结",
+      "relativePath": "journals/每周总结"
+    },
+    {
+      "name": "每月每季度总结",
+      "relativePath": "journals/每月每季度总结"
+    },
+    {
+      "name": "dict",
+      "relativePath": "templates/dict"
+    },
+    {
       "name": "个人职业生涯",
       "relativePath": "pages/200 - PROJECT/个人职业生涯"
     },
@@ -85,12 +85,12 @@
       "relativePath": "pages/200 - PROJECT/我的开源项目"
     },
     {
-      "name": "项目管理",
-      "relativePath": "pages/200 - PROJECT/项目管理"
-    },
-    {
       "name": "人+科技融合",
       "relativePath": "pages/300 - AREA/人+科技融合"
+    },
+    {
+      "name": "项目管理",
+      "relativePath": "pages/200 - PROJECT/项目管理"
     },
     {
       "name": "沟通与表达",
@@ -289,29 +289,14 @@
       "relativePath": "assets/Pasted image 20220418144703.png"
     },
     {
-      "name": "image_1651765878530_0.png",
-      "basename": "image_1651765878530_0",
-      "relativePath": "assets/image_1651765878530_0.png"
-    },
-    {
-      "name": "image_1651765968043_0.png",
-      "basename": "image_1651765968043_0",
-      "relativePath": "assets/image_1651765968043_0.png"
-    },
-    {
-      "name": "image_1651766123575_0.png",
-      "basename": "image_1651766123575_0",
-      "relativePath": "assets/image_1651766123575_0.png"
+      "name": "config.edn",
+      "basename": "config",
+      "relativePath": "logseq/config.edn"
     },
     {
       "name": "custom.css",
       "basename": "custom",
       "relativePath": "logseq/custom.css"
-    },
-    {
-      "name": "config.edn",
-      "basename": "config",
-      "relativePath": "logseq/config.edn"
     },
     {
       "name": "metadata.edn",

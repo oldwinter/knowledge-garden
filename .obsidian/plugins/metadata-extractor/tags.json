@@ -33,6 +33,13 @@
     ]
   },
   {
+    "tag": "电视剧/英剧/悬疑",
+    "tagCount": 1,
+    "relativePaths": [
+      "pages/500 - ARCHIVE/《喜鹊谋杀案》.md"
+    ]
+  },
+  {
     "tag": "published",
     "tagCount": 3,
     "relativePaths": [
@@ -43,10 +50,27 @@
   },
   {
     "tag": "todo",
-    "tagCount": 20,
+    "tagCount": 21,
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布长文/写作规划看板 - MOC.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
+      "journals/2022-05-12.md"
+    ]
+  },
+  {
+    "tag": "电视剧/大陆剧/奇幻",
+    "tagCount": 1,
+    "relativePaths": [
+      "pages/500 - ARCHIVE/《异物志》.md"
+    ]
+  },
+  {
+    "tag": "电视剧/大陆剧",
+    "tagCount": 4,
+    "relativePaths": [
+      "pages/500 - ARCHIVE/《且试天下》.md",
+      "pages/500 - ARCHIVE/《风起陇西》.md",
+      "pages/500 - ARCHIVE/《重生之门》.md"
     ]
   },
   {
@@ -80,20 +104,6 @@
     ]
   },
   {
-    "tag": "电影/悬疑",
-    "tagCount": 1,
-    "relativePaths": [
-      "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
-    ]
-  },
-  {
-    "tag": "书籍/小说",
-    "tagCount": 1,
-    "relativePaths": [
-      "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
-    ]
-  },
-  {
     "tag": "todo/持续迭代",
     "tagCount": 9,
     "relativePaths": [
@@ -106,6 +116,20 @@
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
       "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
+    ]
+  },
+  {
+    "tag": "电影/悬疑",
+    "tagCount": 1,
+    "relativePaths": [
+      "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
+    ]
+  },
+  {
+    "tag": "书籍/小说",
+    "tagCount": 1,
+    "relativePaths": [
+      "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
     ]
   },
   {
@@ -150,26 +174,10 @@
     ]
   },
   {
-    "tag": "电视剧/大陆剧",
-    "tagCount": 4,
-    "relativePaths": [
-      "journals/《风起陇西》.md",
-      "journals/《重生之门》.md",
-      "journals/《且试天下》.md"
-    ]
-  },
-  {
-    "tag": "电视剧/大陆剧/奇幻",
+    "tag": "评论/微信/私聊",
     "tagCount": 1,
     "relativePaths": [
-      "journals/《异物志》.md"
-    ]
-  },
-  {
-    "tag": "电视剧/英剧/悬疑",
-    "tagCount": 1,
-    "relativePaths": [
-      "journals/《喜鹊谋杀案》.md"
+      "journals/思源笔记.md"
     ]
   },
   {
