@@ -21,3 +21,12 @@
 ```
 
 使用geoip和geosite，格式和手机客户端不一样，需要去掉逗号，每个地址用空行分割
+
+## 备份配置文件夹
+```
+USER="cdd"
+sudo cp -r ~/.V2rayU/ /Users/$USER/Documents/软件配置云同步/v2rayU/bak
+sudo cp -r ~/Library/LaunchAgents/yanue.v2rayu.v2ray-core.plist /Users/$USER/Documents/软件配置云同步/v2rayU
+sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/软件配置云同步/v2rayU
+```
+

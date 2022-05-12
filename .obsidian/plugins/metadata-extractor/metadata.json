@@ -9162,6 +9162,17 @@
     ]
   },
   {
+    "fileName": "Fig",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md",
+    "backlinks": [
+      {
+        "fileName": "mac必备软件",
+        "link": "Fig",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      }
+    ]
+  },
+  {
     "fileName": "放弃roam用obsidian的理由",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/放弃roam用obsidian的理由.md",
     "headings": [
@@ -9680,18 +9691,6 @@
     ]
   },
   {
-    "fileName": "obs",
-    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obs.md",
-    "backlinks": [
-      {
-        "fileName": "mac必备软件",
-        "link": "obs",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md",
-        "displayText": "pages/300 - AREA/人+科技融合/必备软件/obs"
-      }
-    ]
-  },
-  {
     "fileName": "mac必备软件",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md",
     "links": [
@@ -9736,6 +9735,9 @@
         "link": "翻墙"
       },
       {
+        "link": "onedrive"
+      },
+      {
         "link": "滴答清单",
         "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
       },
@@ -9746,6 +9748,10 @@
       {
         "link": "搜狗输入法",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md"
+      },
+      {
+        "link": "PicGo",
+        "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
       },
       {
         "link": "notion",
@@ -9795,8 +9801,7 @@
       },
       {
         "link": "obs",
-        "displayText": "pages/300 - AREA/人+科技融合/必备软件/obs",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obs.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/obs.md"
       },
       {
         "link": "lx-music-desktop"
@@ -9807,9 +9812,6 @@
       {
         "link": "RSS",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "Paste"
       },
       {
         "link": "zotero",
@@ -9855,7 +9857,8 @@
         "link": "iina"
       },
       {
-        "link": "Fig"
+        "link": "Fig",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md"
       },
       {
         "link": "snipaste"
@@ -9881,8 +9884,7 @@
       },
       {
         "link": "PicGo",
-        "displayText": "pages/300 - AREA/人+科技融合/必备软件/PicGo",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/PicGo.md"
+        "displayText": "pages/300 - AREA/人+科技融合/必备软件/PicGo"
       },
       {
         "link": "popclip",
@@ -9973,6 +9975,11 @@
         "fileName": "必备软件 - MOC",
         "link": "mac必备软件",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+      },
+      {
+        "fileName": "mac系统重装",
+        "link": "mac必备软件",
+        "relativePath": "journals/mac系统重装.md"
       }
     ]
   },
@@ -10142,6 +10149,12 @@
   {
     "fileName": "V2rayU",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/V2rayU.md",
+    "headings": [
+      {
+        "heading": "备份配置文件夹",
+        "level": 2
+      }
+    ],
     "backlinks": [
       {
         "fileName": "安卓手机必备软件",
@@ -10153,18 +10166,6 @@
         "fileName": "mac必备软件",
         "link": "V2rayU",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      }
-    ]
-  },
-  {
-    "fileName": "PicGo",
-    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/PicGo.md",
-    "backlinks": [
-      {
-        "fileName": "mac必备软件",
-        "link": "PicGo",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md",
-        "displayText": "pages/300 - AREA/人+科技融合/必备软件/PicGo"
       }
     ]
   },
@@ -12916,6 +12917,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "mac必备软件",
+        "link": "obs",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
         "fileName": "录屏和直播推流",
         "link": "obs",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/录屏和直播推流.md",
@@ -13026,7 +13032,14 @@
   },
   {
     "fileName": "PicGo",
-    "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
+    "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md",
+    "backlinks": [
+      {
+        "fileName": "mac必备软件",
+        "link": "PicGo",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      }
+    ]
   },
   {
     "fileName": "PPT制作的目的和原则",
@@ -14565,8 +14578,145 @@
     ]
   },
   {
+    "fileName": "mac系统重装",
+    "relativePath": "journals/mac系统重装.md",
+    "headings": [
+      {
+        "heading": "重装前检查",
+        "level": 2
+      },
+      {
+        "heading": "诉求和方案确认",
+        "level": 3
+      },
+      {
+        "heading": "手动安装",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "windows系统重装"
+      },
+      {
+        "link": "Android系统还原出厂设置"
+      },
+      {
+        "link": "iOS系统还原出厂设置"
+      },
+      {
+        "link": "SRE"
+      },
+      {
+        "link": "mac必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      }
+    ]
+  },
+  {
+    "fileName": "项目管理与法律",
+    "relativePath": "journals/项目管理与法律.md",
+    "links": [
+      {
+        "link": "立法、司法和执法"
+      },
+      {
+        "link": "三权分立"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-12",
+        "link": "项目管理与法律",
+        "relativePath": "journals/2022-05-12.md"
+      }
+    ]
+  },
+  {
+    "fileName": "管理者喜欢内卷的员工吗",
+    "relativePath": "journals/管理者喜欢内卷的员工吗.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-12",
+        "link": "管理者喜欢内卷的员工吗",
+        "relativePath": "journals/2022-05-12.md"
+      }
+    ]
+  },
+  {
+    "fileName": "项目owner机制",
+    "relativePath": "journals/项目owner机制.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-12",
+        "link": "项目owner机制",
+        "relativePath": "journals/2022-05-12.md"
+      }
+    ]
+  },
+  {
+    "fileName": "过程和结果可知，则效果和目的可达",
+    "relativePath": "journals/过程和结果可知，则效果和目的可达.md",
+    "links": [
+      {
+        "link": "刑不可知，则威不可测"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "如何高效开会",
+        "link": "过程和结果可知，则效果和目的可达",
+        "relativePath": "journals/如何高效开会.md"
+      }
+    ]
+  },
+  {
+    "fileName": "如何高效开会",
+    "relativePath": "journals/如何高效开会.md",
+    "headings": [
+      {
+        "heading": "通用会议的价值",
+        "level": 2
+      },
+      {
+        "heading": "通用的高效开会技巧",
+        "level": 2
+      },
+      {
+        "heading": "不同诉求采用不同形式",
+        "level": 2
+      },
+      {
+        "heading": "视频会议",
+        "level": 3
+      },
+      {
+        "heading": "站立会议",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "过程和结果可知，则效果和目的可达",
+        "relativePath": "journals/过程和结果可知，则效果和目的可达.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-12",
+        "link": "如何高效开会",
+        "relativePath": "journals/2022-05-12.md"
+      }
+    ]
+  },
+  {
     "fileName": "白噪音",
     "relativePath": "journals/白噪音.md",
+    "links": [
+      {
+        "link": "noize"
+      }
+    ],
     "backlinks": [
       {
         "fileName": "2022-05-12",
@@ -14676,6 +14826,28 @@
       }
     ],
     "links": [
+      {
+        "link": "如何高效开会",
+        "relativePath": "journals/如何高效开会.md"
+      },
+      {
+        "link": "项目owner机制",
+        "relativePath": "journals/项目owner机制.md"
+      },
+      {
+        "link": "管理者喜欢内卷的员工吗",
+        "relativePath": "journals/管理者喜欢内卷的员工吗.md"
+      },
+      {
+        "link": "做为甲方，如何管理外包项目"
+      },
+      {
+        "link": "项目管理与法律",
+        "relativePath": "journals/项目管理与法律.md"
+      },
+      {
+        "link": "macOS系统重装"
+      },
       {
         "link": "思源笔记",
         "relativePath": "journals/思源笔记.md"
