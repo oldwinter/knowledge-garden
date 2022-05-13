@@ -33,14 +33,6 @@
       "relativePath": "templates"
     },
     {
-      "name": "Scripts",
-      "relativePath": "draws/Scripts"
-    },
-    {
-      "name": "fonts",
-      "relativePath": "draws/fonts"
-    },
-    {
       "name": "200 - PROJECT",
       "relativePath": "pages/200 - PROJECT"
     },
@@ -307,11 +299,6 @@
       "name": "metadata.edn",
       "basename": "metadata",
       "relativePath": "logseq/metadata.edn"
-    },
-    {
-      "name": "chinese.ttf",
-      "basename": "chinese",
-      "relativePath": "draws/fonts/chinese.ttf"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "headerWidth": 32,
   "leafWidth": 640,
   "leafAutoWidth": false,
-  "disabled": true,
+  "disabled": false,
   "rotateHeaders": false,
   "headerAlt": false,
   "orienation": "mixed",
