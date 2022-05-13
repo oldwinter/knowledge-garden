@@ -15,36 +15,29 @@
       "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/知识原子库 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/有意思的网络流行语 - MOC.md",
-      "pages/400 - RESOURCE/知识原子库/方法库/方法库 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/思维工具库/思维工具 - MOC.md",
-      "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md",
+      "pages/400 - RESOURCE/知识原子库/方法库/方法库 - MOC.md",
       "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md",
-      "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
+      "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md",
       "pages/400 - RESOURCE/基础学科/计算机科学/golang - MOC.md",
+      "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md",
       "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
-      "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
-      "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md",
       "pages/200 - PROJECT/我的开源项目/我的开源项目 - MOX.md",
       "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
-      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-    ]
-  },
-  {
-    "tag": "电视剧/英剧/悬疑",
-    "tagCount": 1,
-    "relativePaths": [
-      "pages/500 - ARCHIVE/《喜鹊谋杀案》.md"
+      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
+      "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+      "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
     ]
   },
   {
     "tag": "published",
     "tagCount": 3,
     "relativePaths": [
-      "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md",
       "pages/500 - ARCHIVE/已发布长文/华为，今夜请将我遗忘.md",
+      "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md",
       "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
     ]
   },
@@ -58,6 +51,15 @@
     ]
   },
   {
+    "tag": "电视剧/大陆剧",
+    "tagCount": 4,
+    "relativePaths": [
+      "pages/500 - ARCHIVE/《风起陇西》.md",
+      "pages/500 - ARCHIVE/《重生之门》.md",
+      "pages/500 - ARCHIVE/《且试天下》.md"
+    ]
+  },
+  {
     "tag": "电视剧/大陆剧/奇幻",
     "tagCount": 1,
     "relativePaths": [
@@ -65,12 +67,10 @@
     ]
   },
   {
-    "tag": "电视剧/大陆剧",
-    "tagCount": 4,
+    "tag": "电视剧/英剧/悬疑",
+    "tagCount": 1,
     "relativePaths": [
-      "pages/500 - ARCHIVE/《且试天下》.md",
-      "pages/500 - ARCHIVE/《风起陇西》.md",
-      "pages/500 - ARCHIVE/《重生之门》.md"
+      "pages/500 - ARCHIVE/《喜鹊谋杀案》.md"
     ]
   },
   {
@@ -108,14 +108,14 @@
     "tagCount": 9,
     "relativePaths": [
       "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
+      "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
       "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md",
       "pages/300 - AREA/人+科技融合/个人知识笔记系统.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
-      "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
     ]
   },
   {
@@ -140,6 +140,17 @@
     ]
   },
   {
+    "tag": "todo/今天",
+    "tagCount": 5,
+    "relativePaths": [
+      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
+      "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
+      "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+    ]
+  },
+  {
     "tag": "test",
     "tagCount": 1,
     "relativePaths": [
@@ -151,17 +162,6 @@
     "tagCount": 1,
     "relativePaths": [
       "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
-    ]
-  },
-  {
-    "tag": "todo/今天",
-    "tagCount": 5,
-    "relativePaths": [
-      "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
-      "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
-      "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
     ]
   },
   {

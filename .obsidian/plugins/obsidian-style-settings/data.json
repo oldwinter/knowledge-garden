@@ -24,7 +24,6 @@
   "blue-topaz-theme@@table-style-options": "table-style-default",
   "blue-topaz-theme@@color-scheme-options": "color-scheme-options-default",
   "blue-topaz-theme@@show-border-table": false,
-  "blue-topaz-theme@@no-wrapped-table": false,
   "blue-topaz-theme@@folder-style-change-options-colorful": false,
   "blue-topaz-theme@@folder-style-change-options-colorful-subfolder": "folder-colorful-one",
   "blue-topaz-theme@@embed-hover": false,
