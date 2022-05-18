@@ -1,7 +1,6 @@
 ---
 id: 77655f77-5bcc-48dd-a1e0-6d3c7829d788
-tags: published
-publish: true
+published: true
 ---
 
 ## 人之初，性本色

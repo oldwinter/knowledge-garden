@@ -572,17 +572,21 @@ p.align-center {
   height: 100%;
   width: 1%;
 }
-.stretch-column > p > img,
-.stretch-row > p > img,
-.stretch-column > p > video,
-.stretch-row > p > video,
-.stretch-column > p > iframe,
-.stretch-row > p > iframe {
+.stretch-column > * > p > img,
+.stretch-row > * > p > img,
+.stretch-column > * > p > video,
+.stretch-row > * > p > video,
+.stretch-column > * > p > iframe,
+.stretch-row > * > p > iframe {
   height: 100%;
   width: 100%;
   max-width: 100% !important;
   max-height: 100% !important;
   object-fit: cover;
+}
+.stretch-column > * > .image-paragraph {
+  height: 100%;
+  width: 100%;
 }
 :root {
   --dbg-size: 0;

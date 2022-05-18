@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "⏳",
-      "📍",
-      "FasNotesMedical",
-      "🎵",
-      "🖥️",
-      "📖",
-      "📹",
-      "Fab42Group",
+      "🗺",
+      "🗣",
       "⏩",
-      "🗣"
+      "Fab42Group",
+      "📹",
+      "📖",
+      "🖥️",
+      "🎵",
+      "FasNotesMedical",
+      "📍"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -65,6 +65,9 @@
   "pages/400 - RESOURCE/书影音笔记/音乐鉴赏": "🎵",
   "pages/200 - PROJECT/个人职业生涯": "💻",
   "README.md": "FabBilibili",
-  "pages/contents.md": "📍",
-  "pages/最近编辑、最近创建、最近任务、回顾记忆.md": "⏳"
+  "pages/400 - RESOURCE/游戏笔记": "🥌",
+  "pages/000 - INDEX": "📇",
+  "pages/000 - INDEX/最近编辑、最近创建、最近任务、回顾记忆.md": "⏳",
+  "pages/000 - INDEX/contents.md": "📍",
+  "pages/000 - INDEX/INDEX根索引 - MOC.md": "🗺"
 }

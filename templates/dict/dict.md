@@ -1,4 +1,5 @@
 %% Callouts %%
+
 co-abstract=>> [!ABSTRACT] 摘要\n> $END$ | 📔摘要提示區塊  |coa|co-summary|co-tldr
 
 co-bug=>> [!ERROR] 異常\n> $END$ | 🐞異常提示區塊  |cob|ad-bug
@@ -32,5 +33,3 @@ co-reference=>> [!REFERENCE] 參考 \n> $END$ | 📖參考提示區塊  |cor
 co-multicolumn=>> [!multi-column] 分栏 \n> $END$ | 🌂 分栏  |com
 
 co-blankcontainer=>> [!blank-container] 空容器分栏 \n> $END$ | 🌂 分栏2  |com2
-
-

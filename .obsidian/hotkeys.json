@@ -95,5 +95,14 @@
       ],
       "key": "Backspace"
     }
+  ],
+  "note-composer:merge-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
   ]
 }

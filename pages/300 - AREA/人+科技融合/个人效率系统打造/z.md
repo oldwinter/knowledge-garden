@@ -1,8 +1,13 @@
 [mkdir ~/code  
+
 cd ~/code  
+
 git clone https://github.com/rupa/z.git  
+
 echo 'source ~/code/z/z.sh' >> ~/.zshrc  
+
 source ~/.zshrc](<z 是一个相当实用的 cd 命令增强脚本，目前支持 bash
+
 和 zsh。使用 z，我们能够在 Linux 命令行实现更加快速的导航。
 
 安装
@@ -20,7 +25,9 @@ source ~/.zshrc
 这样，就可以正常使用 z 了。
 
 用法
+
 z 会将你每次 cd 过的目录存起来放到 ~/.z 文件中。一旦
+
 有了记录，就可以直接使用 z 来导航目录了，例如：
 
 z co

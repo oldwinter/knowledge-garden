@@ -1,7 +1,7 @@
 ---
 id: e0754685-caf5-429c-bc8c-b05cd5356ea4
 aliases:
-tags: published
+published: true
 ---
 
 ## 我是哪根葱

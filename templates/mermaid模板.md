@@ -14,7 +14,9 @@ graph TD;
     B-->D;  
     C-->D;
 ```
+
 ## 流程图 - flow chart
+
 ```mermaid
 flowchart   TB
  c1-->a2
@@ -31,6 +33,7 @@ flowchart   TB
  three --> two
  two --> c2
 ```
+
 ## 饼图 - pie
 
 ```mermaid
@@ -58,6 +61,7 @@ sequenceDiagram
 ```
 
 ## 状态转移图 - stateDiagram
+
 ```
 stateDiagram-v2
     [*] --> Still
@@ -68,7 +72,6 @@ stateDiagram-v2
     Moving --> Crash
     Crash --> [*]
 ```
-
 
 ## 甘特图 - gantt
 

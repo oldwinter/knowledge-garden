@@ -26,7 +26,9 @@ killall Dock
 完成以上操作后，Launchpad 图标布局已经恢复默认设置，苹果官方提供的 App 都被重新排列到 Launchpad 第一屏幕中，然后根据自己的需要来进行重新排列 App 即可。
 
 ## dock栏完全隐藏
+
 ！设置里还要同时设置自动隐藏
+
 ```applescript
 # defaults write com.apple.dock autohide-delay -int 0      ##（时间设为最短）
 # defaults write com.apple.dock autohide-delay -int 0.5    ##（时间设为 0.5s）

@@ -339,3 +339,16 @@ canvas[data-chart] {
 .reveal table td:first-child {
   border-left: 0;
 }
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+ul > li,
+ol > li {
+  padding-bottom: 0.625em;
+}
+li > ul,
+li > ol {
+  padding-top: 0.625em;
+}

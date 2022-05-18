@@ -1,7 +1,7 @@
 {
   "strategy": "default",
   "matchStrategy": "partial",
-  "maxNumberOfSuggestions": 15,
+  "maxNumberOfSuggestions": 32,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
@@ -108,6 +108,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1652358701377
+        }
+      }
+    },
+    "edge": {
+      "edge": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1652444043032
         }
       }
     }

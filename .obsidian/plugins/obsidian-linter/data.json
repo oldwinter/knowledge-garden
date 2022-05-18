@@ -87,6 +87,6 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    "templates"
+    ""
   ]
 }

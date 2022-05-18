@@ -1,6 +1,6 @@
 {
   "installedVersion": "1.0.0-beta1",
-  "activeCalendarSet": "logseq合并",
+  "activeCalendarSet": "moren",
   "showGettingStartedBanner": false,
   "hasMigratedDailyNoteSettings": true,
   "hasMigratedWeeklyNoteSettings": true,
@@ -15,7 +15,7 @@
       },
       "week": {
         "enabled": true,
-        "format": "gggg-MMM-[W]ww",
+        "format": "gggg-MMMM-[W]ww",
         "folder": "journals/每周总结",
         "openAtStartup": false,
         "templatePath": "templates/20 - 周记模板.md"
@@ -28,20 +28,20 @@
         "templatePath": "templates/30 - 月度模板.md"
       },
       "quarter": {
-        "enabled": false,
+        "enabled": true,
         "format": "",
-        "folder": "pages/030 - 每日短记/每月每季度总结",
+        "folder": "journals/每月每季度总结",
         "openAtStartup": false,
-        "templatePath": "020 - 模板文件夹/30 - 月度模板.md"
+        "templatePath": ""
       },
       "year": {
-        "enabled": false,
+        "enabled": true,
         "format": "",
-        "folder": "pages/030 - 每日短记/每月每季度总结",
+        "folder": "journals/每月每季度总结",
         "openAtStartup": false,
-        "templatePath": "020 - 模板文件夹/30 - 月度模板.md"
+        "templatePath": ""
       },
-      "id": "logseq合并",
+      "id": "moren",
       "ctime": "2022-04-25T01:05:03+08:00"
     }
   ],

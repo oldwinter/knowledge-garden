@@ -1,12 +1,11 @@
 {
   "pluginList": [
     "zsviczian/excalibrain",
-    "liamcain/obsidian-calendar-plugin",
     "liamcain/obsidian-periodic-notes"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
-  "updateAtStartup": false,
+  "updateAtStartup": true,
   "updateThemesAtStartup": false,
   "ribbonIconEnabled": false,
   "loggingEnabled": true,

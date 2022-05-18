@@ -20,7 +20,6 @@ dataviewjs社区有很多酷炫的玩法和现有代码， 当要用的时候，
 
 ### 预备数据：
 
-测试标签 #test #test2/test3/test4
 测试dataviewjs的查询效果，勿删
 测试outlinks[[test]]
 

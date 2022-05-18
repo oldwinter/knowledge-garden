@@ -1,5 +1,5 @@
 {
-  "showExistingOnly": true,
+  "showExistingOnly": false,
   "showAttachments": true,
   "showAllFileTypes": true
 }

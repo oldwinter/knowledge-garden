@@ -9,10 +9,6 @@
       "relativePath": "assets"
     },
     {
-      "name": "clipper",
-      "relativePath": "clipper"
-    },
-    {
       "name": "draws",
       "relativePath": "draws"
     },
@@ -33,12 +29,24 @@
       "relativePath": "templates"
     },
     {
-      "name": "200 - PROJECT",
-      "relativePath": "pages/200 - PROJECT"
+      "name": "Drafts",
+      "relativePath": "journals/Drafts"
+    },
+    {
+      "name": "每月每季度总结",
+      "relativePath": "journals/每月每季度总结"
+    },
+    {
+      "name": "000 - INDEX",
+      "relativePath": "pages/000 - INDEX"
     },
     {
       "name": "300 - AREA",
       "relativePath": "pages/300 - AREA"
+    },
+    {
+      "name": "200 - PROJECT",
+      "relativePath": "pages/200 - PROJECT"
     },
     {
       "name": "400 - RESOURCE",
@@ -53,52 +61,20 @@
       "relativePath": "templates/dict"
     },
     {
-      "name": "日记归档",
-      "relativePath": "journals/日记归档"
-    },
-    {
-      "name": "每周总结",
-      "relativePath": "journals/每周总结"
-    },
-    {
-      "name": "每月每季度总结",
-      "relativePath": "journals/每月每季度总结"
-    },
-    {
       "name": "个人职业生涯",
       "relativePath": "pages/200 - PROJECT/个人职业生涯"
-    },
-    {
-      "name": "云计算",
-      "relativePath": "pages/200 - PROJECT/云计算"
     },
     {
       "name": "我的开源项目",
       "relativePath": "pages/200 - PROJECT/我的开源项目"
     },
     {
+      "name": "云计算",
+      "relativePath": "pages/200 - PROJECT/云计算"
+    },
+    {
       "name": "项目管理",
       "relativePath": "pages/200 - PROJECT/项目管理"
-    },
-    {
-      "name": "书影音笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记"
-    },
-    {
-      "name": "基础学科",
-      "relativePath": "pages/400 - RESOURCE/基础学科"
-    },
-    {
-      "name": "小知识点学习",
-      "relativePath": "pages/400 - RESOURCE/小知识点学习"
-    },
-    {
-      "name": "知识原子库",
-      "relativePath": "pages/400 - RESOURCE/知识原子库"
-    },
-    {
-      "name": "已发布长文",
-      "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "人+科技融合",
@@ -117,20 +93,28 @@
       "relativePath": "pages/300 - AREA/运动与健康"
     },
     {
-      "name": "电影笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记"
+      "name": "书影音笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记"
     },
     {
-      "name": "视频笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记"
+      "name": "基础学科",
+      "relativePath": "pages/400 - RESOURCE/基础学科"
     },
     {
-      "name": "读书笔记",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记"
+      "name": "小知识点学习",
+      "relativePath": "pages/400 - RESOURCE/小知识点学习"
     },
     {
-      "name": "音乐鉴赏",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
+      "name": "游戏笔记",
+      "relativePath": "pages/400 - RESOURCE/游戏笔记"
+    },
+    {
+      "name": "知识原子库",
+      "relativePath": "pages/400 - RESOURCE/知识原子库"
+    },
+    {
+      "name": "已发布长文",
+      "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
       "name": "vscode",
@@ -141,12 +125,44 @@
       "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具"
     },
     {
-      "name": "哲学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/哲学"
+      "name": "个人效率系统打造",
+      "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造"
+    },
+    {
+      "name": "必备软件",
+      "relativePath": "pages/300 - AREA/人+科技融合/必备软件"
+    },
+    {
+      "name": "视频笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记"
+    },
+    {
+      "name": "电影笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记"
+    },
+    {
+      "name": "读书笔记",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记"
+    },
+    {
+      "name": "音乐鉴赏",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
+    },
+    {
+      "name": "notion学习笔记",
+      "relativePath": "pages/300 - AREA/知识管理/notion学习笔记"
+    },
+    {
+      "name": "obsidian学习笔记",
+      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
     },
     {
       "name": "心理学",
       "relativePath": "pages/400 - RESOURCE/基础学科/心理学"
+    },
+    {
+      "name": "哲学",
+      "relativePath": "pages/400 - RESOURCE/基础学科/哲学"
     },
     {
       "name": "法学",
@@ -163,6 +179,10 @@
     {
       "name": "金融学",
       "relativePath": "pages/400 - RESOURCE/基础学科/金融学"
+    },
+    {
+      "name": "习惯库",
+      "relativePath": "pages/400 - RESOURCE/知识原子库/习惯库"
     },
     {
       "name": "人物库",
@@ -183,26 +203,6 @@
     {
       "name": "金句库",
       "relativePath": "pages/400 - RESOURCE/知识原子库/金句库"
-    },
-    {
-      "name": "习惯库",
-      "relativePath": "pages/400 - RESOURCE/知识原子库/习惯库"
-    },
-    {
-      "name": "个人效率系统打造",
-      "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造"
-    },
-    {
-      "name": "必备软件",
-      "relativePath": "pages/300 - AREA/人+科技融合/必备软件"
-    },
-    {
-      "name": "notion学习笔记",
-      "relativePath": "pages/300 - AREA/知识管理/notion学习笔记"
-    },
-    {
-      "name": "obsidian学习笔记",
-      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
     },
     {
       "name": "虚构类读物",
@@ -251,14 +251,14 @@
       "relativePath": "assets/Pasted Image 20220320202845_759.png"
     },
     {
-      "name": "Pasted Image 20220320203031_118.png",
-      "basename": "Pasted Image 20220320203031_118",
-      "relativePath": "assets/Pasted Image 20220320203031_118.png"
-    },
-    {
       "name": "Pasted Image 20220320203200_352.png",
       "basename": "Pasted Image 20220320203200_352",
       "relativePath": "assets/Pasted Image 20220320203200_352.png"
+    },
+    {
+      "name": "Pasted Image 20220320203031_118.png",
+      "basename": "Pasted Image 20220320203031_118",
+      "relativePath": "assets/Pasted Image 20220320203031_118.png"
     },
     {
       "name": "Pasted Image 20220423221352.jpeg",
@@ -281,24 +281,24 @@
       "relativePath": "assets/Pasted image 20220418144703.png"
     },
     {
-      "name": "config.edn",
-      "basename": "config",
-      "relativePath": "logseq/config.edn"
-    },
-    {
       "name": "custom.css",
       "basename": "custom",
       "relativePath": "logseq/custom.css"
     },
     {
-      "name": "pages-metadata.edn",
-      "basename": "pages-metadata",
-      "relativePath": "logseq/pages-metadata.edn"
+      "name": "config.edn",
+      "basename": "config",
+      "relativePath": "logseq/config.edn"
     },
     {
       "name": "metadata.edn",
       "basename": "metadata",
       "relativePath": "logseq/metadata.edn"
+    },
+    {
+      "name": "pages-metadata.edn",
+      "basename": "pages-metadata",
+      "relativePath": "logseq/pages-metadata.edn"
     }
   ]
 }

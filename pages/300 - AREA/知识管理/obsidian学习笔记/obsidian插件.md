@@ -7,17 +7,19 @@ sr-ease: 310
 ---
 
 ## 本仓库的已安装插件列表
+
 ```
 .obsidian/community-plugins.json
 .obsidian/core-plugins.json
 ```
 
-
 ## 插件安装
+
 没有翻墙的话，就从这里下载：
 [Johnny学OB • OB (pory.app)](https://ob.pory.app/)
 
 ## 玩过的插件分析
+
 玩过的插件，即使卸载了，这里先不删除，没准儿以后有用到的时候的。[[主动插件和被动插件]]
 
 | obsidian插件                       | 是否必装 | 原因                                                   | 待考察                                           |
@@ -28,7 +30,7 @@ sr-ease: 310
 | annotator                          |          |                                                        | 插件太重，而且读书笔记做在这里太不轻便了         |
 | [[advanced-url]]                   | y        | 别的软件link到obsidian，直达目的，[[万物互联]]必备     |                                                  |
 | [[advanced-slides]]                | y        | 预览效果不错，也可以网页打开，基于revealjs已经相当成熟 |                                                  |
-| bartender                          | y        | 编辑左侧和下方菜单显示和顺序，有用                     |                                                  |
+| [[bartender]]                          | y        | 编辑左侧和下方菜单显示和顺序，有用                     |                                                  |
 | calendar                           | y        | 如果能坚持每日日记，必装                               |                                                  |
 | cmenu                              |          | 编辑菜单很重要，而且支持定制                           | [[cmenu学习笔记]] ，貌似没多大用，用命令行就行了 |
 | code-block-copy                    |         | 程序员必备：复制代码太方便了，以后应该会自带                           |                                                  |

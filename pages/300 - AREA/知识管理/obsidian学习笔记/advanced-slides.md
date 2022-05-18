@@ -5,6 +5,11 @@ theme: white
 width: 960
 ---
 
+## 为啥用markdown方式的ppt
+
+双向引用，直接ppt还有个好处，就是双向同步，不会改了这忘了那
+还有[[slidev]]正在开发中，等成熟了和[[revealjs]]综合对比看看。
+
 ## 奇技淫巧
 
 [[advanced slides 的 奇技淫巧]]

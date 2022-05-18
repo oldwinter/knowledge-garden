@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "projects": {
+    "journals": {
+      "path": "journals",
+      "indexFile": "Index",
+      "draftsPath": "Drafts/"
+    }
+  },
+  "selectedProject": "journals",
+  "selectedDraft": null,
+  "workflows": {
+    "Default Workflow": {
+      "name": "Default Workflow",
+      "description": "A starter workflow. Feel free to edit, rename, or delete it and create your own.",
+      "steps": [
+        {
+          "id": "strip-frontmatter",
+          "optionValues": {}
+        },
+        {
+          "id": "remove-links",
+          "optionValues": {
+            "remove-wikilinks": false,
+            "remove-external-links": false
+          }
+        },
+        {
+          "id": "prepend-title",
+          "optionValues": {
+            "format": "",
+            "separator": "\n\n"
+          }
+        },
+        {
+          "id": "concatenate-text",
+          "optionValues": {
+            "separator": "\\n\\n---\\n\\n"
+          }
+        },
+        {
+          "id": "write-to-note",
+          "optionValues": {
+            "target": "manuscript.md",
+            "open-after": true
+          }
+        }
+      ]
+    }
+  },
+  "userScriptFolder": null
+}

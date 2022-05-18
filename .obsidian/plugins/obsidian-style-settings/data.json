@@ -111,7 +111,7 @@
   "shimmering-focus@@no-heading-level-in-lp": true,
   "shimmering-focus@@show-starred-nav-buttons": true,
   "shimmering-focus@@move-plugin-name-to-left": true,
-  "shimmering-focus@@modal-base-size": 44,
+  "shimmering-focus@@modal-base-size": 70,
   "shimmering-focus@@no-grayed-out-inactive-pane": false,
   "shimmering-focus@@show-close-button": false,
   "shimmering-focus@@show-scrollbar": false,
@@ -128,5 +128,6 @@
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
   "supercharged-links@@53f6-363a-after": "\"\"",
   "supercharged-links@@53f6-363a-weight": "initial",
-  "supercharged-links@@75fc-e339-after": "\"\""
+  "supercharged-links@@75fc-e339-after": "\"\"",
+  "shimmering-focus@@hide-index-files": true
 }
