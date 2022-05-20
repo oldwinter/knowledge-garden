@@ -1,0 +1,10 @@
+{
+	"id": "notion-like-tables",
+	"name": "Notion-Like Tables",
+	"minAppVersion": "0.12.0",
+	"description": "Create markdown tables using an interface similar to that found in Notion.so.",
+	"author": "Trey Wallis",
+	"authorUrl": "https://github.com/trey-wallis",
+	"isDesktopOnly": false,
+	"version": "3.5.0"
+}

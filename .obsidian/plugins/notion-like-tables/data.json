@@ -1,0 +1,101 @@
+{
+  "appData": {
+    "journals/2022-05-19.md": {}
+  },
+  "state": {
+    "journals/2022-05-19.md": {
+      "table-id-8lbn24": {
+        "data": {
+          "headers": [
+            {
+              "id": "column-id-8naq1x",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            },
+            {
+              "id": "column-id-sit815",
+              "content": "New Column",
+              "sortName": "asc",
+              "width": "100px",
+              "type": "text"
+            }
+          ],
+          "rows": [
+            {
+              "id": "row-id-eadiqa",
+              "creationTime": 1652937050713
+            },
+            {
+              "id": "row-id-xwoh4a",
+              "creationTime": 1652937050713
+            },
+            {
+              "id": "row-id-sq74iy",
+              "creationTime": 1652937050713
+            }
+          ],
+          "cells": [
+            {
+              "id": "cell-id-102jkc",
+              "rowId": "row-id-sq74iy",
+              "headerId": "column-id-8naq1x",
+              "type": "text",
+              "expectedType": null,
+              "text": "j"
+            },
+            {
+              "id": "cell-id-109u6p",
+              "rowId": "row-id-sq74iy",
+              "headerId": "column-id-sit815",
+              "type": "text",
+              "expectedType": null,
+              "text": "ll"
+            },
+            {
+              "id": "cell-id-3r6eqr",
+              "rowId": "row-id-eadiqa",
+              "headerId": "column-id-8naq1x",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-bgte55",
+              "rowId": "row-id-eadiqa",
+              "headerId": "column-id-sit815",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-9mpvw7",
+              "rowId": "row-id-xwoh4a",
+              "headerId": "column-id-8naq1x",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-dndoau",
+              "rowId": "row-id-xwoh4a",
+              "headerId": "column-id-sit815",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            }
+          ],
+          "tags": [],
+          "updateTime": 0
+        },
+        "viewType": "live-preview",
+        "shouldUpdate": false
+      }
+    }
+  },
+  "focusedElement": {
+    "id": "cell-id-28d6ej",
+    "type": "cell"
+  }
+}

@@ -24,7 +24,6 @@
   "sliding-panes-obsidian",
   "obsidian-icon-folder",
   "obsidian42-brat",
-  "obsidian-kanban",
   "obsidian-auto-link-title",
   "obsidian-focus-mode",
   "url-into-selection",
@@ -37,5 +36,6 @@
   "obsidian-hover-editor",
   "excalibrain",
   "longform",
-  "quick-explorer"
+  "quick-explorer",
+  "notion-like-tables"
 ]

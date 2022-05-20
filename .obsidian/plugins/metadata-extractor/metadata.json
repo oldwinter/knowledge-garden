@@ -178,16 +178,29 @@
     "relativePath": "templates/10 - 日记模板.md",
     "headings": [
       {
-        "heading": "<% tp.file.title %>",
-        "level": 1
-      },
-      {
         "heading": "今天的工作日志",
         "level": 2
       },
       {
         "heading": "今天的灵感或闪念",
         "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "contents",
+    "relativePath": "pages/contents.md",
+    "links": [
+      {
+        "link": "README",
+        "relativePath": "README.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "INDEX根索引 - MOC",
+        "link": "contents",
+        "relativePath": "pages/000 - INDEX/INDEX根索引 - MOC.md"
       }
     ]
   },
@@ -15204,23 +15217,6 @@
     ]
   },
   {
-    "fileName": "contents",
-    "relativePath": "pages/000 - INDEX/contents.md",
-    "links": [
-      {
-        "link": "README",
-        "relativePath": "README.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "INDEX根索引 - MOC",
-        "link": "contents",
-        "relativePath": "pages/000 - INDEX/INDEX根索引 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "INDEX根索引 - MOC",
     "relativePath": "pages/000 - INDEX/INDEX根索引 - MOC.md",
     "headings": [
@@ -15295,7 +15291,7 @@
       },
       {
         "link": "contents",
-        "relativePath": "pages/000 - INDEX/contents.md"
+        "relativePath": "pages/contents.md"
       },
       {
         "link": "最近编辑、最近创建、最近任务、回顾记忆",
@@ -15812,7 +15808,7 @@
         "level": 1
       },
       {
-        "heading": "想法",
+        "heading": "想法 %% fold %%",
         "level": 2
       },
       {
@@ -17007,7 +17003,7 @@
       {
         "fileName": "contents",
         "link": "README",
-        "relativePath": "pages/000 - INDEX/contents.md"
+        "relativePath": "pages/contents.md"
       }
     ]
   }

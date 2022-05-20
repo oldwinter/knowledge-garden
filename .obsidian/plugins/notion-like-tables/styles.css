@@ -1,0 +1,279 @@
+/* src/app/components/TagCell/styles.css */
+.NLT__tag-cell {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+.NLT__tag {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 2px 8px;
+  width: fit-content;
+  color: black;
+}
+.NLT__tag-content {
+  width: 100%;
+}
+
+/* src/app/components/Menu/styles.css */
+.NLT__menu {
+  position: relative;
+}
+.NLT__menu-container {
+  position: absolute;
+  border-radius: 4px;
+  font-weight: 400;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+  z-index: var(--layer-menu);
+  width: fit-content;
+}
+
+/* src/app/components/TagCellEdit/component/SelectableTag/styles.css */
+.NLT__selectable-tag {
+  justify-content: space-between;
+}
+
+/* src/app/components/Button/styles.css */
+.NLT__button {
+  padding: 4px 6px;
+  white-space: nowrap;
+}
+.NLT__button--icon {
+  padding: 1px 3px;
+}
+
+/* src/app/components/TagColorMenu/components/ColorItem/styles.css */
+.NLT__color-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.NLT__color-item-square {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+/* src/app/components/TagColorMenu/styles.css */
+.NLT__tag-color-menu {
+  padding: 4px 10px;
+}
+.NLT__tag-color-menu-title {
+  font-size: 0.85rem;
+}
+.NLT__tag-color-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+/* src/app/components/TagCellEdit/styles.css */
+.NLT__tag-menu {
+  width: 15rem;
+}
+.NLT__tag-menu-top {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 4px 10px;
+}
+.NLT__tag-menu-bottom {
+  min-height: 100px;
+  padding: 4px 10px;
+}
+.NLT__tag-menu-text {
+  font-size: 0.85rem;
+  margin: 5px 0px;
+  width: 100%;
+}
+.NLT__tag-menu-input {
+  background-color: transparent !important;
+  border: 0 !important;
+  width: 100%;
+  min-width: 100px;
+  padding-left: 0px !important;
+}
+
+/* src/app/components/EditableTd/styles.css */
+.NLT__td {
+  vertical-align: top;
+  height: 2rem;
+  cursor: default;
+}
+
+/* src/app/components/Table/styles.css */
+tbody > tr > .NLT__td:last-child {
+  border: 0 !important;
+  vertical-align: middle;
+}
+tfoot > tr > .NLT__td {
+  border: 0 !important;
+}
+
+/* src/app/components/IconText/styles.css */
+.NLT__icon-text {
+  display: flex;
+  align-items: center;
+}
+.NLT__icon-text > p {
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* src/app/components/DragMenu/components/DragMenuItem/styles.css */
+.NLT__drag-menu-item:focus-visible {
+  outline: 1px solid blue;
+}
+
+/* src/app/components/DragMenu/styles.css */
+.NLT__drag-menu {
+  font-size: 0.9rem;
+  padding: 4px 10px;
+}
+
+/* src/app/components/HeaderMenu/styles.css */
+.NLT__header-menu {
+  padding: 4px 10px;
+  cursor: default;
+}
+.NLT__header-menu-item:focus-visible {
+  outline: 1px solid blue;
+}
+.NLT__header-menu-header-container {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+.NLT__header-menu-ul {
+  padding: 0;
+  margin: 0;
+}
+.NLT__header-menu-header {
+  font-weight: 700;
+}
+.NLT__header-menu-item {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.NLT__header-menu-input {
+  width: 150px !important;
+}
+
+/* src/app/components/EditableTh/styles.css */
+.NLT__th {
+  text-align: left;
+  background-clip: padding-box;
+}
+.NLT__th:last-child {
+  border: 0 !important;
+}
+.NLT__header-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+.NLT__header-resize-container {
+  position: relative;
+}
+.NLT__header-content {
+  width: 100%;
+  padding-right: 10px;
+  margin-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.NLT__header-resize {
+  position: absolute;
+  cursor: col-resize;
+  width: 10px;
+  left: 7px;
+  min-height: 25px;
+  height: 100%;
+}
+
+/* src/app/app.css */
+.NLT__color--light-gray {
+  background-color: hsl(0, 3%, 94%);
+}
+.NLT__color--gray {
+  background-color: hsl(40, 5%, 88%);
+}
+.NLT__color--brown {
+  background-color: hsl(18, 31%, 89%);
+}
+.NLT__color--orange {
+  background-color: hsl(28, 67%, 88%);
+}
+.NLT__color--yellow {
+  background-color: hsl(43, 82%, 89%);
+}
+.NLT__color--green {
+  background-color: hsl(113, 30%, 89%);
+}
+.NLT__color--blue {
+  background-color: hsl(205, 41%, 89%);
+}
+.NLT__color--purple {
+  background-color: hsl(272, 29%, 90%);
+}
+.NLT__color--pink {
+  background-color: hsl(330, 36%, 91%);
+}
+.NLT__color--red {
+  background-color: hsl(11, 64%, 91%);
+}
+.NLT__error {
+  color: red;
+}
+.NLT__app {
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.NLT__icon--selectable:hover {
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.NLT__icon--md {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+.NLT__selectable {
+  cursor: pointer;
+}
+.NLT__selectable:hover {
+  background-color: var(--interactive-hover);
+}
+.NLT__selected {
+  background-color: var(--interactive-normal);
+}
+.NLT__margin-right {
+  margin-right: 4px;
+}
+.NLT__margin-left {
+  margin-left: 4px;
+}
+.NLT__p {
+  margin: 0;
+}
+.NLT__input {
+  height: 100%;
+  width: 100%;
+  padding: 4px 10px !important;
+}
+.NLT__input--no-border {
+  border: 0 !important;
+}
+.NLT__input--number {
+  text-align: right;
+}
+.NLT__input--textarea {
+  overflow: hidden;
+}
