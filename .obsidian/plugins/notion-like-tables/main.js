@@ -57788,10 +57788,6 @@ function DateCellEdit({
   selectedDate,
   onDateChange
 }) {
-  let minDate = new Date(selectedDate);
-  minDate.setMonth(minDate.getMonth() - 6);
-  let maxDate = new Date(selectedDate);
-  maxDate.setMonth(minDate.getMonth() + 6);
   return /* @__PURE__ */ import_react20.default.createElement(Menu, {
     id: menuId,
     isOpen,
@@ -57804,11 +57800,11 @@ function DateCellEdit({
     autoFocus: true,
     selected: selectedDate,
     onChange: onDateChange,
-    dateFormatCalendar: "MMM yyyy",
-    minDate,
-    maxDate,
     dateFormat: "yyyy/MM/dd",
-    showMonthYearDropdown: true
+    showYearDropdown: true,
+    dateFormatCalendar: "MMMM",
+    yearDropdownItemNumber: 15,
+    scrollableYearDropdown: true
   }));
 }
 

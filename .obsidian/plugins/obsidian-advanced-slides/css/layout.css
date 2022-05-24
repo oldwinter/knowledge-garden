@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --split-div-size: 0;
   --split-gap-size: 0;
@@ -587,6 +588,36 @@ p.align-center {
 .stretch-column > * > .image-paragraph {
   height: 100%;
   width: 100%;
+}
+.arrowList ul {
+  margin: 0;
+}
+.arrowList li {
+  display: grid;
+  grid-template-columns: 1em auto;
+  align-items: center;
+  padding: 0;
+}
+.arrowList li:first-child {
+  padding-top: 0.5em;
+}
+.arrowList li:last-child {
+  padding-bottom: 0.5em;
+}
+.arrowList li:before {
+  content: "\25b6";
+  font-size: 0.75em;
+  color: var(--r-main-color);
+  top: 0.1em;
+  position: relative;
+}
+.wideTable,
+.wideTable > table {
+  width: 100%;
+}
+.noBorder td,
+.noBorder th {
+  border: none !important;
 }
 :root {
   --dbg-size: 0;

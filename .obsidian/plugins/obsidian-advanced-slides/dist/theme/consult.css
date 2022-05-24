@@ -352,3 +352,8 @@ li > ul,
 li > ol {
   padding-top: 0.625em;
 }
+.compressedList > ol > li,
+.compressedList > ul > li:not(:last-child),
+.compressedList * > ul > li:not(:last-child) {
+  padding: 0;
+}

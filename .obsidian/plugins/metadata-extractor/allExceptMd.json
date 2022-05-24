@@ -37,10 +37,6 @@
       "relativePath": "journals/每月每季度总结"
     },
     {
-      "name": "000 - INDEX",
-      "relativePath": "pages/000 - INDEX"
-    },
-    {
       "name": "200 - PROJECT",
       "relativePath": "pages/200 - PROJECT"
     },
@@ -93,10 +89,6 @@
       "relativePath": "pages/300 - AREA/运动与健康"
     },
     {
-      "name": "已发布长文",
-      "relativePath": "pages/500 - ARCHIVE/已发布长文"
-    },
-    {
       "name": "书影音笔记",
       "relativePath": "pages/400 - RESOURCE/书影音笔记"
     },
@@ -117,6 +109,18 @@
       "relativePath": "pages/400 - RESOURCE/知识原子库"
     },
     {
+      "name": "已发布长文",
+      "relativePath": "pages/500 - ARCHIVE/已发布长文"
+    },
+    {
+      "name": "vscode",
+      "relativePath": "pages/200 - PROJECT/我的开源项目/vscode"
+    },
+    {
+      "name": "常用命令行工具",
+      "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具"
+    },
+    {
       "name": "个人效率系统打造",
       "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造"
     },
@@ -131,14 +135,6 @@
     {
       "name": "obsidian学习笔记",
       "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
-    },
-    {
-      "name": "vscode",
-      "relativePath": "pages/200 - PROJECT/我的开源项目/vscode"
-    },
-    {
-      "name": "常用命令行工具",
-      "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具"
     },
     {
       "name": "微信读书同步",
@@ -231,6 +227,10 @@
     {
       "name": "虚构类读物",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
+    },
+    {
+      "name": "000 - INBOX",
+      "relativePath": "pages/000 - INBOX"
     }
   ],
   "nonMdFiles": [

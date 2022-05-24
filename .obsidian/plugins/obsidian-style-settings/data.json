@@ -51,7 +51,7 @@
   "shimmering-focus@@show-titlebar": true,
   "shimmering-focus@@show-titlebar-text": false,
   "shimmering-focus@@show-ribbons": false,
-  "shimmering-focus@@code-block-tab-size": 2,
+  "shimmering-focus@@code-block-tab-size": 4,
   "sanctum@@dark-mode-palette": "sanctum-dark",
   "sanctum@@alt-link": false,
   "sanctum@@no-blur": true,
@@ -129,5 +129,8 @@
   "supercharged-links@@53f6-363a-after": "\"\"",
   "supercharged-links@@53f6-363a-weight": "initial",
   "supercharged-links@@75fc-e339-after": "\"\"",
-  "shimmering-focus@@hide-index-files": true
+  "shimmering-focus@@hide-index-files": true,
+  "shimmering-focus@@menu-font-size": 0.8,
+  "shimmering-focus@@monospace-font-size": 0.7,
+  "shimmering-focus@@longform-font-size": 0.9
 }

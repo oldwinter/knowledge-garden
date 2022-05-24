@@ -91370,5 +91370,6 @@
   "defaultTrayMode": true,
   "previousRelease": "1.6.24",
   "showReleaseNotes": false,
+  "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
   "fieldSuggestor": true
 }
