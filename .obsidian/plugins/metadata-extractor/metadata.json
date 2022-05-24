@@ -473,22 +473,6 @@
     ]
   },
   {
-    "fileName": "obsidian 的 10 个必装插件，直击我的灵魂",
-    "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 的 10 个必装插件，直击我的灵魂.md",
-    "backlinks": [
-      {
-        "fileName": "写作规划看板 - MOC",
-        "link": "obsidian 的 10 个必装插件，直击我的灵魂",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/写作规划看板 - MOC.md"
-      },
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "obsidian 的 10 个必装插件，直击我的灵魂",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      }
-    ]
-  },
-  {
     "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
     "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md",
     "frontmatter": {
@@ -605,7 +589,8 @@
         "link": "随意的，经济的"
       },
       {
-        "link": "文件夹和标签"
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/文件夹和标签.md"
       },
       {
         "link": "原子化笔记"
@@ -650,6 +635,22 @@
         "fileName": "obsidian",
         "link": "obsidian 是可以用一辈子不换的笔记软件吗",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      }
+    ]
+  },
+  {
+    "fileName": "obsidian 的 10 个必装插件，直击我的灵魂",
+    "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 的 10 个必装插件，直击我的灵魂.md",
+    "backlinks": [
+      {
+        "fileName": "写作规划看板 - MOC",
+        "link": "obsidian 的 10 个必装插件，直击我的灵魂",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/写作规划看板 - MOC.md"
+      },
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "obsidian 的 10 个必装插件，直击我的灵魂",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
       }
     ]
   },
@@ -808,59 +809,6 @@
     ]
   },
   {
-    "fileName": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
-    "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md",
-    "tags": [
-      "review"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "sr-due": "2022-10-08",
-      "sr-interval": 165,
-      "sr-ease": 310,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 6,
-          "col": 3,
-          "offset": 80
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "来源",
-        "level": 2
-      },
-      {
-        "heading": "理解",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "大低谷时期"
-      },
-      {
-        "link": "第二次文艺复兴"
-      },
-      {
-        "link": "技术大爆炸"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "Obsidian入门到精通",
-        "link": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      }
-    ]
-  },
-  {
     "fileName": "金句 - MOC",
     "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md",
     "tags": [
@@ -918,6 +866,71 @@
       },
       {
         "link": "善用佳软"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "金句 - MOC",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "金句 - MOC",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
+    "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md",
+    "tags": [
+      "review"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "sr-due": "2022-10-08",
+      "sr-interval": 165,
+      "sr-ease": 310,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "col": 3,
+          "offset": 80
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "来源",
+        "level": 2
+      },
+      {
+        "heading": "理解",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "大低谷时期"
+      },
+      {
+        "link": "第二次文艺复兴"
+      },
+      {
+        "link": "技术大爆炸"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "Obsidian入门到精通",
+        "link": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
       }
     ]
   },
@@ -1342,11 +1355,6 @@
         "fileName": "个人简历 - MOC",
         "link": "STAR法则",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "STAR法则",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
       }
     ]
   },
@@ -1533,6 +1541,67 @@
     "relativePath": "pages/400 - RESOURCE/知识原子库/思维工具库/个人努力与社会进程.md"
   },
   {
+    "fileName": "和经典名言抬杠 - MOC",
+    "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "授人以鱼不如授人以渔",
+        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md"
+      },
+      {
+        "link": "瘦死的骆驼比马大"
+      },
+      {
+        "link": "拔了毛的凤凰不如鸡"
+      },
+      {
+        "link": "船到桥头自然直"
+      },
+      {
+        "link": "苏州过后无艇搭",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/苏州过后无艇搭.md"
+      },
+      {
+        "link": "天无绝人之路"
+      },
+      {
+        "link": "拔出萝卜带出泥",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/拔出萝卜带出泥.md"
+      },
+      {
+        "link": "饱汉不知饿汉饥"
+      },
+      {
+        "link": "朱门酒肉臭路有冻死骨"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "和经典名言抬杠 - MOC",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
     "fileName": "微言大义的词语汇总 - MOC",
     "relativePath": "pages/400 - RESOURCE/知识原子库/微言大义的词语汇总 - MOC.md",
     "tags": [
@@ -1622,81 +1691,6 @@
       {
         "link": "经济学常用概念",
         "relativePath": "pages/400 - RESOURCE/基础学科/经济学/经济学常用概念.md"
-      }
-    ]
-  },
-  {
-    "fileName": "和经典名言抬杠 - MOC",
-    "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 28
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md"
-      },
-      {
-        "link": "瘦死的骆驼比马大"
-      },
-      {
-        "link": "拔了毛的凤凰不如鸡"
-      },
-      {
-        "link": "船到桥头自然直"
-      },
-      {
-        "link": "苏州过后无艇搭",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/苏州过后无艇搭.md"
-      },
-      {
-        "link": "天无绝人之路"
-      },
-      {
-        "link": "拔出萝卜带出泥",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/拔出萝卜带出泥.md"
-      },
-      {
-        "link": "饱汉不知饿汉饥"
-      },
-      {
-        "link": "朱门酒肉臭路有冻死骨"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "和经典名言抬杠 - MOC",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "刚下飞机",
-    "relativePath": "pages/400 - RESOURCE/知识原子库/刚下飞机.md",
-    "tags": [
-      "一个梗"
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-三月",
-        "link": "刚下飞机",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
       }
     ]
   },
@@ -1914,9 +1908,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-三月",
+        "fileName": "flomo",
         "link": "护城河",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
+        "relativePath": "pages/300 - AREA/flomo.md"
       }
     ]
   },
@@ -2002,6 +1996,26 @@
   {
     "fileName": "世事洞明 - 人情练达",
     "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/世事洞明 - 人情练达.md"
+  },
+  {
+    "fileName": "刚下飞机",
+    "relativePath": "pages/400 - RESOURCE/知识原子库/刚下飞机.md",
+    "tags": [
+      "一个梗"
+    ],
+    "links": [
+      {
+        "link": "刚下飞机",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/刚下飞机.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "刚下飞机",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
   },
   {
     "fileName": "韩寒",
@@ -2092,6 +2106,58 @@
     "relativePath": "pages/400 - RESOURCE/犯罪地图.md"
   },
   {
+    "fileName": "王者荣耀",
+    "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md",
+    "links": [
+      {
+        "link": "打野",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/打野.md"
+      },
+      {
+        "link": "项羽"
+      },
+      {
+        "link": "廉颇"
+      },
+      {
+        "link": "后羿"
+      },
+      {
+        "link": "中路",
+        "relativePath": "journals/每月每季度总结/中路.md"
+      },
+      {
+        "link": "杨玉环",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/杨玉环.md"
+      },
+      {
+        "link": "嫦娥",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/嫦娥.md"
+      },
+      {
+        "link": "张良"
+      },
+      {
+        "link": "太乙真人"
+      },
+      {
+        "link": "张飞"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "王者荣耀",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-19",
+        "link": "王者荣耀",
+        "relativePath": "journals/2022-05-19.md"
+      }
+    ]
+  },
+  {
     "fileName": "杨玉环",
     "relativePath": "pages/400 - RESOURCE/游戏笔记/杨玉环.md",
     "headings": [
@@ -2102,6 +2168,19 @@
       {
         "heading": "王者荣耀-遇见飞天-台词",
         "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "中路",
+        "relativePath": "journals/每月每季度总结/中路.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "王者荣耀",
+        "link": "杨玉环",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
       }
     ]
   },
@@ -2116,9 +2195,30 @@
     ],
     "backlinks": [
       {
+        "fileName": "王者荣耀",
+        "link": "嫦娥",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "嫦娥",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "打野",
+    "relativePath": "pages/400 - RESOURCE/游戏笔记/打野.md",
+    "backlinks": [
+      {
+        "fileName": "王者荣耀",
+        "link": "打野",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
+      },
+      {
+        "fileName": "2022-05-22",
+        "link": "打野",
+        "relativePath": "journals/2022-05-22.md"
       }
     ]
   },
@@ -2151,6 +2251,17 @@
     ]
   },
   {
+    "fileName": "谁是卧底轻度入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "谁是卧底轻度入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      }
+    ]
+  },
+  {
     "fileName": "转笔入门",
     "relativePath": "pages/400 - RESOURCE/小知识点学习/转笔入门.md",
     "headings": [
@@ -2171,17 +2282,6 @@
       {
         "fileName": "一些学起来挺有意思的小知识点 - MOC",
         "link": "转笔入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "谁是卧底轻度入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/谁是卧底轻度入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "谁是卧底轻度入门",
         "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
       }
     ]
@@ -2340,17 +2440,6 @@
     ]
   },
   {
-    "fileName": "3阶魔方还原入门",
-    "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md",
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "3阶魔方还原入门",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "一些学起来挺有意思的小知识点 - MOC",
     "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md",
     "tags": [
@@ -2438,7 +2527,8 @@
         "link": "炉石传说"
       },
       {
-        "link": "王者荣耀"
+        "link": "王者荣耀",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
       },
       {
         "link": "天谕手游",
@@ -2455,6 +2545,17 @@
       },
       {
         "link": "GRIS"
+      }
+    ]
+  },
+  {
+    "fileName": "3阶魔方还原入门",
+    "relativePath": "pages/400 - RESOURCE/小知识点学习/3阶魔方还原入门.md",
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "3阶魔方还原入门",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
       }
     ]
   },
@@ -2671,74 +2772,6 @@
     "relativePath": "pages/400 - RESOURCE/基础学科/法学/测试一下而已.md"
   },
   {
-    "fileName": "苏格拉底式",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/苏格拉底式.md",
-    "links": [
-      {
-        "link": "英雄主义"
-      }
-    ]
-  },
-  {
-    "fileName": "第一次逛窑子不知所措",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/第一次逛窑子不知所措.md",
-    "backlinks": [
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "第一次逛窑子不知所措",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      }
-    ]
-  },
-  {
-    "fileName": "柏拉图式",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/柏拉图式.md"
-  },
-  {
-    "fileName": "授人以鱼不如授人以渔",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md",
-    "backlinks": [
-      {
-        "fileName": "和经典名言抬杠 - MOC",
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md"
-      },
-      {
-        "fileName": "2022-五月",
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "各类文化产品的生产消费时间比",
-    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md",
-    "links": [
-      {
-        "link": "情绪大脑"
-      },
-      {
-        "link": "理智大脑",
-        "relativePath": "pages/300 - AREA/知识管理/理智大脑.md"
-      },
-      {
-        "link": "延迟满足",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md"
-      },
-      {
-        "link": "《认知觉醒》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "各类文化产品的生产消费时间比",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
     "fileName": "鲶鱼效应",
     "relativePath": "pages/400 - RESOURCE/基础学科/心理学/鲶鱼效应.md"
   },
@@ -2827,12 +2860,12 @@
     }
   },
   {
-    "fileName": "棘轮效应",
-    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/棘轮效应.md"
-  },
-  {
     "fileName": "登门槛效应",
     "relativePath": "pages/400 - RESOURCE/基础学科/心理学/登门槛效应.md"
+  },
+  {
+    "fileName": "棘轮效应",
+    "relativePath": "pages/400 - RESOURCE/基础学科/心理学/棘轮效应.md"
   },
   {
     "fileName": "晕轮效应",
@@ -2985,6 +3018,74 @@
   {
     "fileName": "PTSD - 创伤后应激障碍",
     "relativePath": "pages/400 - RESOURCE/基础学科/心理学/PTSD - 创伤后应激障碍.md"
+  },
+  {
+    "fileName": "苏格拉底式",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/苏格拉底式.md",
+    "links": [
+      {
+        "link": "英雄主义"
+      }
+    ]
+  },
+  {
+    "fileName": "第一次逛窑子不知所措",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/第一次逛窑子不知所措.md",
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "第一次逛窑子不知所措",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      }
+    ]
+  },
+  {
+    "fileName": "柏拉图式",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/柏拉图式.md"
+  },
+  {
+    "fileName": "各类文化产品的生产消费时间比",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md",
+    "links": [
+      {
+        "link": "情绪大脑"
+      },
+      {
+        "link": "理智大脑",
+        "relativePath": "pages/300 - AREA/知识管理/理智大脑.md"
+      },
+      {
+        "link": "延迟满足",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/延迟满足.md"
+      },
+      {
+        "link": "《认知觉醒》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "各类文化产品的生产消费时间比",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "授人以鱼不如授人以渔",
+    "relativePath": "pages/400 - RESOURCE/基础学科/哲学/授人以鱼不如授人以渔.md",
+    "backlinks": [
+      {
+        "fileName": "和经典名言抬杠 - MOC",
+        "link": "授人以鱼不如授人以渔",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/和经典名言抬杠 - MOC.md"
+      },
+      {
+        "fileName": "2022-五月",
+        "link": "授人以鱼不如授人以渔",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
   },
   {
     "fileName": "卧底间谍用摩斯码是真的吗",
@@ -3565,22 +3666,6 @@
     ]
   },
   {
-    "fileName": "《这样读书就够了》",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《这样读书就够了》.md",
-    "backlinks": [
-      {
-        "fileName": "读书笔记 - MOC",
-        "link": "《这样读书就够了》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
-      },
-      {
-        "fileName": "读书笔记 - MOC",
-        "link": "《这样读书就够了》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "《认知觉醒》",
     "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md",
     "headings": [
@@ -3762,6 +3847,22 @@
       {
         "fileName": "读书笔记 - MOC",
         "link": "《认知觉醒》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "《这样读书就够了》",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《这样读书就够了》.md",
+    "backlinks": [
+      {
+        "fileName": "读书笔记 - MOC",
+        "link": "《这样读书就够了》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
+      },
+      {
+        "fileName": "读书笔记 - MOC",
+        "link": "《这样读书就够了》",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
       }
     ]
@@ -4405,9 +4506,9 @@
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md"
       },
       {
-        "fileName": "2022-三月",
+        "fileName": "如果要给人安利好书",
         "link": "《如何阅读一本书》",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
+        "relativePath": "journals/每月每季度总结/如果要给人安利好书.md"
       }
     ]
   },
@@ -4614,6 +4715,32 @@
     ]
   },
   {
+    "fileName": "《刻意练习》",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md",
+    "backlinks": [
+      {
+        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
+        "link": "《刻意练习》",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+      },
+      {
+        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
+        "link": "《刻意练习》",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+      },
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "《刻意练习》",
+        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "《刻意练习》",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
     "fileName": "《卡片笔记写作法》",
     "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md",
     "tags": [
@@ -4796,314 +4923,419 @@
     ]
   },
   {
-    "fileName": "《刻意练习》",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md",
-    "headings": [
+    "fileName": "马伯庸",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md",
+    "links": [
       {
-        "heading": "热门批注",
-        "level": 2
+        "link": "《风起陇西》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md"
       },
       {
-        "heading": "版权信息",
-        "level": 2
+        "link": "《长安十二时辰》"
       },
       {
-        "heading": "{ 致读者 }",
-        "level": 2
-      },
-      {
-        "heading": "{ 赞誉 }",
-        "level": 2
-      },
-      {
-        "heading": "超越1万小时定律",
-        "level": 3
-      },
-      {
-        "heading": "刻意练习的本质",
-        "level": 3
-      },
-      {
-        "heading": "隐性知识",
-        "level": 3
-      },
-      {
-        "heading": "小结",
-        "level": 3
-      },
-      {
-        "heading": "{ 作者声明 }",
-        "level": 2
-      },
-      {
-        "heading": "莫扎特的完美音高",
-        "level": 3
-      },
-      {
-        "heading": "“天才”是训练的产物",
-        "level": 3
-      },
-      {
-        "heading": "本书将告诉我们什么",
-        "level": 3
-      },
-      {
-        "heading": "史蒂夫的超强记忆力",
-        "level": 3
-      },
-      {
-        "heading": "各领域的杰出人物都靠大量练习",
-        "level": 3
-      },
-      {
-        "heading": "从有目的的练习讲起",
-        "level": 3
-      },
-      {
-        "heading": "有目的的练习的四个特点",
-        "level": 3
-      },
-      {
-        "heading": "遇到瓶颈怎么办",
-        "level": 3
-      },
-      {
-        "heading": "有目的的练习还不够",
-        "level": 3
-      },
-      {
-        "heading": "第2章 大脑的适应能力",
-        "level": 2
-      },
-      {
-        "heading": "伦敦出租车司机的大脑",
-        "level": 3
-      },
-      {
-        "heading": "大脑拥有无限的适应能力",
-        "level": 3
-      },
-      {
-        "heading": "走出舒适区的重要性",
-        "level": 3
-      },
-      {
-        "heading": "练习改变大脑结构",
-        "level": 3
-      },
-      {
-        "heading": "潜能可以被构筑",
-        "level": 3
-      },
-      {
-        "heading": "第3章 心理表征",
-        "level": 2
-      },
-      {
-        "heading": "偶然的盲棋大师",
-        "level": 3
-      },
-      {
-        "heading": "大师比新手强在哪里",
-        "level": 3
-      },
-      {
-        "heading": "心理表征是什么",
-        "level": 3
-      },
-      {
-        "heading": "心理表征有助于找出规律",
-        "level": 3
-      },
-      {
-        "heading": "心理表征有助于解释信息",
-        "level": 3
-      },
-      {
-        "heading": "心理表征有助于组织信息",
-        "level": 3
-      },
-      {
-        "heading": "心理表征有助于制订计划",
-        "level": 3
-      },
-      {
-        "heading": "心理表征有助于高效学习",
-        "level": 3
-      },
-      {
-        "heading": "第4章 黄金标准",
-        "level": 2
-      },
-      {
-        "heading": "从音乐领域开始",
-        "level": 3
-      },
-      {
-        "heading": "最杰出的人，练习时间最长",
-        "level": 3
-      },
-      {
-        "heading": "刻意练习是什么",
-        "level": 3
-      },
-      {
-        "heading": "如何运用刻意练习原则",
-        "level": 3
-      },
-      {
-        "heading": "1万小时法则的错与对",
-        "level": 3
-      },
-      {
-        "heading": "第5章 在工作中运用刻意练习原则",
-        "level": 2
-      },
-      {
-        "heading": "王牌训练计划",
-        "level": 3
-      },
-      {
-        "heading": "让练习变成日常工作的一部分",
-        "level": 3
-      },
-      {
-        "heading": "用王牌训练方法训练医生",
-        "level": 3
-      },
-      {
-        "heading": "致力于传授知识的传统方法",
-        "level": 3
-      },
-      {
-        "heading": "致力于改进技能的新方法",
-        "level": 3
-      },
-      {
-        "heading": "第6章 在生活中运用刻意练习原则",
-        "level": 2
-      },
-      {
-        "heading": "首先，找位好导师",
-        "level": 3
-      },
-      {
-        "heading": "专注和投入至关重要",
-        "level": 3
-      },
-      {
-        "heading": "没有导师，怎么办",
-        "level": 3
-      },
-      {
-        "heading": "跨越停滞阶段",
-        "level": 3
-      },
-      {
-        "heading": "保持动机",
-        "level": 3
-      },
-      {
-        "heading": "第7章 成为杰出人物的路线图",
-        "level": 2
-      },
-      {
-        "heading": "三位女性象棋大师",
-        "level": 3
-      },
-      {
-        "heading": "第一阶段：产生兴趣",
-        "level": 3
-      },
-      {
-        "heading": "第二阶段：变得认真",
-        "level": 3
-      },
-      {
-        "heading": "第三阶段：全力投入",
-        "level": 3
-      },
-      {
-        "heading": "年龄与适应能力的关系",
-        "level": 3
-      },
-      {
-        "heading": "成年人也可培养出完美音高",
-        "level": 3
-      },
-      {
-        "heading": "第四阶段：开拓创新",
-        "level": 3
-      },
-      {
-        "heading": "第8章 怎样解释天生才华",
-        "level": 2
-      },
-      {
-        "heading": "破解“帕格尼尼奇迹”",
-        "level": 3
-      },
-      {
-        "heading": "破解“莫扎特传奇”",
-        "level": 3
-      },
-      {
-        "heading": "破解“天才跳高运动员的神迹”",
-        "level": 3
-      },
-      {
-        "heading": "破解“自闭症奇才”",
-        "level": 3
-      },
-      {
-        "heading": "“缺乏”天生才华的人",
-        "level": 3
-      },
-      {
-        "heading": "训练VS“天才”",
-        "level": 3
-      },
-      {
-        "heading": "换个角度看基因差异",
-        "level": 3
-      },
-      {
-        "heading": "相信天生才华的危险性",
-        "level": 3
-      },
-      {
-        "heading": "第9章 用刻意练习创造全新的世界",
-        "level": 2
-      },
-      {
-        "heading": "刻意练习的前景",
-        "level": 3
-      },
-      {
-        "heading": "创造全新的世界",
-        "level": 3
+        "link": "《古董局中局》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
       }
     ],
     "backlinks": [
       {
-        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-        "link": "《刻意练习》",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+        "fileName": "令我多次沉醉的人或作品 - MOC",
+        "link": "马伯庸",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md"
       },
       {
-        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-        "link": "《刻意练习》",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+        "fileName": "《风起陇西》",
+        "link": "马伯庸",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md"
+      }
+    ]
+  },
+  {
+    "fileName": "视频笔记-【罗翔】我们为什么要读书？",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md",
+    "frontmatter": {
+      "aliases": null,
+      "tags": null,
+      "cards-deck": "INBOX",
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 42
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "观点理解",
+        "level": 2
       },
       {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "《刻意练习》",
-        "relativePath": "pages/400 - RESOURCE/小知识点学习/一些学起来挺有意思的小知识点 - MOC.md"
+        "heading": "个人总体感想",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "书中自有黄金屋，书中自有颜如玉"
+      },
+      {
+        "link": "墨菲定律",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/墨菲定律.md"
+      },
+      {
+        "link": "《如何阅读一本书》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
+      },
+      {
+        "link": "罗翔"
+      },
+      {
+        "link": "叔本华"
+      },
+      {
+        "link": "《人生的智慧》"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "视频笔记 - MOC",
+        "link": "视频笔记-【罗翔】我们为什么要读书？",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
       },
       {
         "fileName": "2022-三月",
-        "link": "《刻意练习》",
+        "link": "视频笔记-【罗翔】我们为什么要读书？",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "视频笔记-youtube",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md"
+  },
+  {
+    "fileName": "视频笔记- 9年咨询的storytelling新的",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 36
+        }
+      }
+    },
+    "aliases": [
+      "storytelling"
+    ],
+    "headings": [
+      {
+        "heading": "视频内容和感谢",
+        "level": 2
+      },
+      {
+        "heading": "[[storytelling]]的3个方法",
+        "level": 3
+      },
+      {
+        "heading": "presetation注意点",
+        "level": 3
+      },
+      {
+        "heading": "总体感悟",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
+      },
+      {
+        "link": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
+      },
+      {
+        "link": "SCQA",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/SCQA.md"
+      },
+      {
+        "link": "《金字塔原理》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
+      },
+      {
+        "link": "《史蒂夫·乔布斯传》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《史蒂夫·乔布斯传》.md"
+      },
+      {
+        "link": "《大败局》"
+      },
+      {
+        "link": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "视频笔记 - MOC",
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
+      },
+      {
+        "fileName": "演讲、教学和培训",
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
+        "displayText": "storytelling"
+      },
+      {
+        "fileName": "演讲、教学和培训",
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
+        "displayText": "storytelling"
+      },
+      {
+        "fileName": "演讲、教学和培训",
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
+        "displayText": "storytelling"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "视频笔记 - MOC",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 36
+        }
+      }
+    },
+    "aliases": [
+      "个人最爱的好视频"
+    ],
+    "links": [
+      {
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
+      },
+      {
+        "link": "视频笔记-【罗翔】我们为什么要读书？",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
+      }
+    ]
+  },
+  {
+    "fileName": "令我多次沉醉的人或作品 - MOC",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
+    "tags": [
+      "moc",
+      "todo/持续迭代"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 52
+        }
+      }
+    },
+    "aliases": [
+      "好书好作品好电影好喜剧好音乐"
+    ],
+    "headings": [
+      {
+        "heading": "初衷",
+        "level": 2
+      },
+      {
+        "heading": "书",
+        "level": 2
+      },
+      {
+        "heading": "国内",
+        "level": 3
+      },
+      {
+        "heading": "国外",
+        "level": 3
+      },
+      {
+        "heading": "电影",
+        "level": 2
+      },
+      {
+        "heading": "电视剧",
+        "level": 2
+      },
+      {
+        "heading": "小品、相声、脱口秀等喜剧",
+        "level": 2
+      },
+      {
+        "heading": "音乐",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "韩寒",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/韩寒.md"
+      },
+      {
+        "link": "刘慈欣",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
+      },
+      {
+        "link": "余华"
+      },
+      {
+        "link": "钱钟书",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/钱钟书.md"
+      },
+      {
+        "link": "王小波"
+      },
+      {
+        "link": "李开复"
+      },
+      {
+        "link": "李笑来"
+      },
+      {
+        "link": "莫言"
+      },
+      {
+        "link": "陈忠实"
+      },
+      {
+        "link": "冯唐"
+      },
+      {
+        "link": "金庸"
+      },
+      {
+        "link": "古龙"
+      },
+      {
+        "link": "周国平"
+      },
+      {
+        "link": "马伯庸",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md"
+      },
+      {
+        "link": "东野圭吾",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/东野圭吾.md"
+      },
+      {
+        "link": "东野圭吾",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/东野圭吾.md"
+      },
+      {
+        "link": "英国-乔治·奥威尔"
+      },
+      {
+        "link": "英国-阿加莎·克里斯蒂"
+      },
+      {
+        "link": "《清醒思考的艺术》"
+      },
+      {
+        "link": "《思考，快与慢》"
+      },
+      {
+        "link": "《学会提问》"
+      },
+      {
+        "link": "《如何阅读一本书》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
+      },
+      {
+        "link": "《金字塔原理》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
+      },
+      {
+        "link": "《卡片笔记写作法》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
+      },
+      {
+        "link": "互联网体检"
+      },
+      {
+        "link": "《像我这样的人》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏/《像我这样的人》.md"
+      }
+    ]
+  },
+  {
+    "fileName": "《古董局中局》",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md",
+    "tags": [
+      "电影/悬疑",
+      "书籍/小说"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 25
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "雷佳音"
+      },
+      {
+        "link": "《长安十二时辰》"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "马伯庸",
+        "link": "《古董局中局》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md"
       }
     ]
   },
@@ -5356,41 +5588,15 @@
     ]
   },
   {
-    "fileName": "马伯庸",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md",
-    "links": [
-      {
-        "link": "《风起陇西》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md"
-      },
-      {
-        "link": "《长安十二时辰》"
-      },
-      {
-        "link": "《古董局中局》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "令我多次沉醉的人或作品 - MOC",
-        "link": "马伯庸",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md"
-      },
-      {
-        "fileName": "《风起陇西》",
-        "link": "马伯庸",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md"
-      }
-    ]
-  },
-  {
-    "fileName": "视频笔记-【罗翔】我们为什么要读书？",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md",
+    "fileName": "同名同姓受害者协会-3300014141",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/同名同姓受害者协会-3300014141.md",
     "frontmatter": {
-      "aliases": null,
-      "tags": null,
-      "cards-deck": "INBOX",
+      "isbn": 9787549637270,
+      "category": "精品小说-悬疑推理",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "3300014141",
+      "reviewCount": 6,
+      "noteCount": 2,
       "position": {
         "start": {
           "line": 0,
@@ -5398,341 +5604,93 @@
           "offset": 0
         },
         "end": {
-          "line": 4,
+          "line": 7,
           "col": 3,
-          "offset": 42
+          "offset": 132
         }
       }
     },
     "headings": [
       {
-        "heading": "观点理解",
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "33",
         "level": 2
       },
       {
-        "heading": "个人总体感想",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "书中自有黄金屋，书中自有颜如玉"
+        "heading": "读书笔记",
+        "level": 1
       },
       {
-        "link": "墨菲定律",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/墨菲定律.md"
-      },
-      {
-        "link": "《如何阅读一本书》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
-      },
-      {
-        "link": "罗翔"
-      },
-      {
-        "link": "叔本华"
-      },
-      {
-        "link": "《人生的智慧》"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "视频笔记 - MOC",
-        "link": "视频笔记-【罗翔】我们为什么要读书？",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "视频笔记-youtube",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md"
-  },
-  {
-    "fileName": "视频笔记- 9年咨询的storytelling新的",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 36
-        }
-      }
-    },
-    "aliases": [
-      "storytelling"
-    ],
-    "headings": [
-      {
-        "heading": "视频内容和感谢",
+        "heading": "6",
         "level": 2
       },
       {
-        "heading": "[[storytelling]]的3个方法",
+        "heading": "划线评论",
         "level": 3
       },
       {
-        "heading": "presetation注意点",
+        "heading": "10",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
         "level": 3
       },
       {
-        "heading": "总体感悟",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
-      },
-      {
-        "link": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
-      },
-      {
-        "link": "SCQA",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/SCQA.md"
-      },
-      {
-        "link": "《金字塔原理》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
-      },
-      {
-        "link": "《史蒂夫·乔布斯传》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《史蒂夫·乔布斯传》.md"
-      },
-      {
-        "link": "《大败局》"
-      },
-      {
-        "link": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/storytelling.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "视频笔记 - MOC",
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
-      },
-      {
-        "fileName": "演讲、教学和培训",
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
-        "displayText": "storytelling"
-      },
-      {
-        "fileName": "演讲、教学和培训",
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
-        "displayText": "storytelling"
-      },
-      {
-        "fileName": "演讲、教学和培训",
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
-        "displayText": "storytelling"
-      }
-    ]
-  },
-  {
-    "fileName": "视频笔记 - MOC",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 36
-        }
-      }
-    },
-    "aliases": [
-      "个人最爱的好视频"
-    ],
-    "links": [
-      {
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
-      },
-      {
-        "link": "视频笔记-【罗翔】我们为什么要读书？",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
-      }
-    ]
-  },
-  {
-    "fileName": "令我多次沉醉的人或作品 - MOC",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md",
-    "tags": [
-      "moc",
-      "todo/持续迭代"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 52
-        }
-      }
-    },
-    "aliases": [
-      "好书好作品好电影好喜剧好音乐"
-    ],
-    "headings": [
-      {
-        "heading": "初衷",
+        "heading": "12",
         "level": 2
       },
       {
-        "heading": "书",
-        "level": 2
-      },
-      {
-        "heading": "国内",
+        "heading": "划线评论",
         "level": 3
       },
       {
-        "heading": "国外",
+        "heading": "14",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
         "level": 3
       },
       {
-        "heading": "电影",
+        "heading": "19",
         "level": 2
       },
       {
-        "heading": "电视剧",
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "33",
         "level": 2
       },
       {
-        "heading": "小品、相声、脱口秀等喜剧",
-        "level": 2
+        "heading": "划线评论",
+        "level": 3
       },
       {
-        "heading": "音乐",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "韩寒",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/韩寒.md"
-      },
-      {
-        "link": "刘慈欣",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
-      },
-      {
-        "link": "余华"
-      },
-      {
-        "link": "钱钟书",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/钱钟书.md"
-      },
-      {
-        "link": "王小波"
-      },
-      {
-        "link": "李开复"
-      },
-      {
-        "link": "李笑来"
-      },
-      {
-        "link": "莫言"
-      },
-      {
-        "link": "陈忠实"
-      },
-      {
-        "link": "冯唐"
-      },
-      {
-        "link": "金庸"
-      },
-      {
-        "link": "古龙"
-      },
-      {
-        "link": "周国平"
-      },
-      {
-        "link": "马伯庸",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md"
-      },
-      {
-        "link": "东野圭吾",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/东野圭吾.md"
-      },
-      {
-        "link": "东野圭吾",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/人物库/东野圭吾.md"
-      },
-      {
-        "link": "英国-乔治·奥威尔"
-      },
-      {
-        "link": "英国-阿加莎·克里斯蒂"
-      },
-      {
-        "link": "《清醒思考的艺术》"
-      },
-      {
-        "link": "《思考，快与慢》"
-      },
-      {
-        "link": "《学会提问》"
-      },
-      {
-        "link": "《如何阅读一本书》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
-      },
-      {
-        "link": "《金字塔原理》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
-      },
-      {
-        "link": "《卡片笔记写作法》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
-      },
-      {
-        "link": "互联网体检"
-      },
-      {
-        "link": "《像我这样的人》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏/《像我这样的人》.md"
+        "heading": "本书评论",
+        "level": 1
       }
     ]
   },
   {
-    "fileName": "《古董局中局》",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md",
-    "tags": [
-      "电影/悬疑",
-      "书籍/小说"
-    ],
+    "fileName": "1988：我想和这个世界谈谈-908735",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1988：我想和这个世界谈谈-908735.md",
     "frontmatter": {
+      "isbn": 9787201081939,
+      "category": "精品小说-社会小说",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "908735",
+      "reviewCount": 2,
+      "noteCount": 0,
       "position": {
         "start": {
           "line": 0,
@@ -5740,72 +5698,366 @@
           "offset": 0
         },
         "end": {
-          "line": 2,
+          "line": 7,
           "col": 3,
-          "offset": 25
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "雷佳音"
-      },
-      {
-        "link": "《长安十二时辰》"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "马伯庸",
-        "link": "《古董局中局》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md"
-      }
-    ]
-  },
-  {
-    "fileName": "《重生之门》",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/《重生之门》.md",
-    "tags": [
-      "电视剧/大陆剧"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 21
+          "offset": 128
         }
       }
     },
     "headings": [
       {
-        "heading": "看之前的吸引点",
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "02",
         "level": 2
       },
       {
-        "heading": "看之后的感受",
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "05",
         "level": 2
       },
       {
-        "heading": "一段话感想",
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "卡片笔记写作法：如何实现从阅读到写作-39136896",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md",
+    "frontmatter": {
+      "isbn": 9787115564672,
+      "category": "文学-语言文字",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "39136896",
+      "reviewCount": 8,
+      "noteCount": 10,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 129
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "中文版序",
+        "level": 2
+      },
+      {
+        "heading": "推荐序三 用卡片笔记积累你的知识复利",
+        "level": 2
+      },
+      {
+        "heading": "第一章 绪论",
+        "level": 2
+      },
+      {
+        "heading": "简洁是最重要的",
+        "level": 2
+      },
+      {
+        "heading": "第三章 成功写作的六个步骤",
+        "level": 2
+      },
+      {
+        "heading": "阅读和理解",
+        "level": 2
+      },
+      {
+        "heading": "记卡片盒笔记",
+        "level": 2
+      },
+      {
+        "heading": "发展想法",
+        "level": 2
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "导论",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "第一章 绪论",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "简洁是最重要的",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "第三章 成功写作的六个步骤",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "阅读和理解",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "认知觉醒：开启自我改变的原动力-33628204",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-33628204.md",
+    "frontmatter": {
+      "isbn": 9787115543424,
+      "category": "心理-心理学综合",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "33628204",
+      "reviewCount": 0,
+      "noteCount": 1,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 129
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "第三节 游戏心态：幸福的人，总是在做另外一件事",
+        "level": 2
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "世界因你不同：李开复自传（纪念版）-814590",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/世界因你不同：李开复自传（纪念版）-814590.md",
+    "frontmatter": {
+      "isbn": 9787508652115,
+      "category": "人物传记-传记综合",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "814590",
+      "reviewCount": 1,
+      "noteCount": 0,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 128
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      },
+      {
+        "heading": "书评 No.1  ^10500316-7z8gXCfBc",
         "level": 2
       }
-    ],
-    "links": [
-      {
-        "link": "易烊千玺"
+    ]
+  },
+  {
+    "fileName": "学会提问（原书第11版）-25614397",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/学会提问（原书第11版）-25614397.md",
+    "frontmatter": {
+      "isbn": 9787111616832,
+      "category": "个人成长-认知思维",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "25614397",
+      "reviewCount": 0,
+      "noteCount": 1,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 130
+        }
       }
-    ],
-    "backlinks": [
+    },
+    "headings": [
       {
-        "fileName": "2022-五月",
-        "link": "《重生之门》",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "两种思维方式：海绵式思维和淘金式思维",
+        "level": 2
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "刻意练习：如何从新手到大师-843464",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-843464.md",
+    "frontmatter": {
+      "isbn": 9787111551287,
+      "category": "个人成长-认知思维",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "843464",
+      "reviewCount": 2,
+      "noteCount": 0,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 128
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "“天才”是训练的产物",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书将告诉我们什么",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
       }
     ]
   },
@@ -5929,6 +6181,89 @@
     ]
   },
   {
+    "fileName": "《重生之门》",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/《重生之门》.md",
+    "tags": [
+      "电视剧/大陆剧"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 21
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "看之前的吸引点",
+        "level": 2
+      },
+      {
+        "heading": "看之后的感受",
+        "level": 2
+      },
+      {
+        "heading": "一段话感想",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "易烊千玺"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "《重生之门》",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "《且试天下》",
+    "relativePath": "pages/400 - RESOURCE/书影音笔记/《且试天下》.md",
+    "tags": [
+      "电视剧/大陆剧"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 21
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "杨洋"
+      },
+      {
+        "link": "赵露思"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "《且试天下》",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
     "fileName": "《喜鹊谋杀案》",
     "relativePath": "pages/400 - RESOURCE/书影音笔记/《喜鹊谋杀案》.md",
     "tags": [
@@ -5974,42 +6309,6 @@
       {
         "fileName": "2022-五月",
         "link": "《喜鹊谋杀案》",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "《且试天下》",
-    "relativePath": "pages/400 - RESOURCE/书影音笔记/《且试天下》.md",
-    "tags": [
-      "电视剧/大陆剧"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 21
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "杨洋"
-      },
-      {
-        "link": "赵露思"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "《且试天下》",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
       }
     ]
@@ -6107,1644 +6406,6 @@
     ]
   },
   {
-    "fileName": "项目管理与法律",
-    "relativePath": "pages/200 - PROJECT/项目管理/项目管理与法律.md",
-    "links": [
-      {
-        "link": "立法、司法和执法"
-      },
-      {
-        "link": "三权分立"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "项目管理与法律",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "项目owner机制",
-    "relativePath": "pages/200 - PROJECT/项目管理/项目owner机制.md",
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "项目owner机制",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "精益",
-    "relativePath": "pages/200 - PROJECT/项目管理/精益.md",
-    "backlinks": [
-      {
-        "fileName": "2022-四月",
-        "link": "精益",
-        "relativePath": "journals/每月每季度总结/2022-四月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "腾讯云",
-    "relativePath": "pages/200 - PROJECT/云计算/腾讯云.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "腾讯云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      },
-      {
-        "fileName": "livesync",
-        "link": "腾讯云",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
-      }
-    ]
-  },
-  {
-    "fileName": "阿里云",
-    "relativePath": "pages/200 - PROJECT/云计算/阿里云.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "阿里云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      },
-      {
-        "fileName": "livesync",
-        "link": "阿里云",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
-      }
-    ]
-  },
-  {
-    "fileName": "华为云",
-    "relativePath": "pages/200 - PROJECT/云计算/华为云.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "华为云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      },
-      {
-        "fileName": "livesync",
-        "link": "华为云",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
-      }
-    ]
-  },
-  {
-    "fileName": "公有云",
-    "relativePath": "pages/200 - PROJECT/云计算/公有云.md",
-    "links": [
-      {
-        "link": "阿里云",
-        "relativePath": "pages/200 - PROJECT/云计算/阿里云.md"
-      },
-      {
-        "link": "腾讯云",
-        "relativePath": "pages/200 - PROJECT/云计算/腾讯云.md"
-      },
-      {
-        "link": "华为云",
-        "relativePath": "pages/200 - PROJECT/云计算/华为云.md"
-      },
-      {
-        "link": "七牛云",
-        "relativePath": "pages/200 - PROJECT/云计算/七牛云.md"
-      },
-      {
-        "link": "azure",
-        "relativePath": "pages/200 - PROJECT/云计算/azure.md"
-      },
-      {
-        "link": "GCS - 谷歌云",
-        "relativePath": "pages/200 - PROJECT/云计算/GCS - 谷歌云.md"
-      },
-      {
-        "link": "AWS",
-        "relativePath": "pages/200 - PROJECT/云计算/AWS.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "公有云",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "云计算与个人 - MOC",
-    "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
-    "tags": [
-      "todo/持续迭代",
-      "moc"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 37
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "link": "渐进式 - progressive",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "效率的定义和原则",
-        "link": "云计算与个人 - MOC",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
-      }
-    ]
-  },
-  {
-    "fileName": "七牛云",
-    "relativePath": "pages/200 - PROJECT/云计算/七牛云.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "七牛云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      }
-    ]
-  },
-  {
-    "fileName": "docker",
-    "relativePath": "pages/200 - PROJECT/云计算/docker.md",
-    "headings": [
-      {
-        "heading": "仓库",
-        "level": 2
-      },
-      {
-        "heading": "Docker in Docker",
-        "level": 2
-      },
-      {
-        "heading": "Docker From Docker",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "快速5分钟搭建本地镜像仓库",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库.md"
-      },
-      {
-        "link": "docker in docker",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/docker in docker.md"
-      },
-      {
-        "link": "docker from docker"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "docker",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
-        "fileName": "平台+插件",
-        "link": "docker",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "fileName": "linux常用命令行 - MOC",
-        "link": "docker",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "azure",
-    "relativePath": "pages/200 - PROJECT/云计算/azure.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "azure",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      }
-    ]
-  },
-  {
-    "fileName": "GCS - 谷歌云",
-    "relativePath": "pages/200 - PROJECT/云计算/GCS - 谷歌云.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "GCS - 谷歌云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      }
-    ]
-  },
-  {
-    "fileName": "AWS",
-    "relativePath": "pages/200 - PROJECT/云计算/AWS.md",
-    "backlinks": [
-      {
-        "fileName": "公有云",
-        "link": "AWS",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      }
-    ]
-  },
-  {
-    "fileName": "我的开源项目 - MOX",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/我的开源项目 - MOX.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 28
-        }
-      }
-    },
-    "links": [
-      {
-        "link": "metacloud"
-      }
-    ]
-  },
-  {
-    "fileName": "数据库",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/数据库.md",
-    "headings": [
-      {
-        "heading": "当前有关数据库分析",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "关系型数据库",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库.md"
-      },
-      {
-        "link": "key-value数据库"
-      },
-      {
-        "link": "文档数据库"
-      }
-    ]
-  },
-  {
-    "fileName": "快速5分钟搭建本地镜像仓库",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 32
-        }
-      }
-    },
-    "aliases": [
-      "本地私有仓库搭建"
-    ],
-    "backlinks": [
-      {
-        "fileName": "docker",
-        "link": "快速5分钟搭建本地镜像仓库",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      }
-    ]
-  },
-  {
-    "fileName": "快速10分钟搭建自己的网站",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速10分钟搭建自己的网站.md",
-    "headings": [
-      {
-        "heading": "浏览器访问某网站的数据流及过程：",
-        "level": 2
-      },
-      {
-        "heading": "域名注册：",
-        "level": 2
-      },
-      {
-        "heading": "域名解析：",
-        "level": 2
-      },
-      {
-        "heading": "服务端监听：",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "前端",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/前端.md",
-    "links": [
-      {
-        "link": "import和require本质区别",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/import和require本质区别.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "前端",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      }
-    ]
-  },
-  {
-    "fileName": "关系型数据库",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 30
-        }
-      }
-    },
-    "aliases": [
-      "ACID规则"
-    ],
-    "backlinks": [
-      {
-        "fileName": "数据库",
-        "link": "关系型数据库",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/数据库.md"
-      }
-    ]
-  },
-  {
-    "fileName": "mongoDB",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/mongoDB.md",
-    "headings": [
-      {
-        "heading": "快速实践",
-        "level": 2
-      },
-      {
-        "heading": "运行",
-        "level": 3
-      },
-      {
-        "heading": "创建用户并测试",
-        "level": 3
-      },
-      {
-        "heading": "创建一个名为 admin，密码为 123456 的用户。",
-        "level": 3
-      },
-      {
-        "heading": "尝试使用上面创建的用户信息进行连接。",
-        "level": 3
-      },
-      {
-        "heading": "Navicat连接并进行数据操作",
-        "level": 3
-      }
-    ]
-  },
-  {
-    "fileName": "kubernetes",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubernetes.md",
-    "headings": [
-      {
-        "heading": "小型化测试",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "kubernetes",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "kubectl",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubectl.md",
-    "backlinks": [
-      {
-        "fileName": "linux常用命令行 - MOC",
-        "link": "kubectl",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "import和require本质区别",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/import和require本质区别.md",
-    "headings": [
-      {
-        "heading": "遵循的模块化规范不一样",
-        "level": 2
-      },
-      {
-        "heading": "出现的时间不同",
-        "level": 2
-      },
-      {
-        "heading": "require/exports 和 import/export 形式不一样",
-        "level": 2
-      },
-      {
-        "heading": "require/exports 和 import/export 本质上的差别",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "前端",
-        "link": "import和require本质区别",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/前端.md"
-      }
-    ]
-  },
-  {
-    "fileName": "github",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md",
-    "headings": [
-      {
-        "heading": "readme相关",
-        "level": 2
-      },
-      {
-        "heading": "免密登陆",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "Git",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人信息系统涉及的核心软件和云服务",
-        "link": "github",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
-      },
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "github",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      },
-      {
-        "fileName": "README",
-        "link": "github",
-        "relativePath": "README.md"
-      }
-    ]
-  },
-  {
-    "fileName": "docker in docker",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/docker in docker.md",
-    "headings": [
-      {
-        "heading": "定义",
-        "level": 2
-      },
-      {
-        "heading": "运行时容器中的yaml定义片段",
-        "level": 2
-      },
-      {
-        "heading": "发现的几个问题",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "docker from docker"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "docker",
-        "link": "docker in docker",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      }
-    ]
-  },
-  {
-    "fileName": "GraphQL和RESTAPI",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/GraphQL和RESTAPI.md"
-  },
-  {
-    "fileName": "Git",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md",
-    "headings": [
-      {
-        "heading": "用github的ssh地址，实现免密码操作",
-        "level": 2
-      },
-      {
-        "heading": "后续操作",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "github",
-        "link": "Git",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "Git",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "linux常用命令行 - MOC",
-        "link": "Git",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
-      },
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "Git",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      }
-    ]
-  },
-  {
-    "fileName": "vscode",
-    "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md",
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
-        "displayText": "VSCode"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "vscode",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
-        "fileName": "平台+插件",
-        "link": "vscode",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "fileName": "mac必备软件",
-        "link": "vscode",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "README",
-        "link": "vscode",
-        "relativePath": "README.md"
-      },
-      {
-        "fileName": "README",
-        "link": "vscode",
-        "relativePath": "README.md"
-      },
-      {
-        "fileName": "README",
-        "link": "vscode",
-        "relativePath": "README.md"
-      }
-    ]
-  },
-  {
-    "fileName": "面试自我介绍",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md",
-    "headings": [
-      {
-        "heading": "要点",
-        "level": 2
-      },
-      {
-        "heading": "提纲",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "面试自我介绍",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "面试自我介绍",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "需求管理",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/需求管理.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 29
-        }
-      }
-    },
-    "aliases": [
-      "需求单管理"
-    ]
-  },
-  {
-    "fileName": "需求单管理",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/需求单管理.md",
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "需求单管理",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "问题管理",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/问题管理.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 29
-        }
-      }
-    },
-    "aliases": [
-      "问题单管理"
-    ]
-  },
-  {
-    "fileName": "过程和结果可知，则效果和目的可达",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md",
-    "links": [
-      {
-        "link": "刑不可知，则威不可测"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "如何高效开会",
-        "link": "过程和结果可知，则效果和目的可达",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-      }
-    ]
-  },
-  {
-    "fileName": "谈谈你的成功经历",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md",
-    "headings": [
-      {
-        "heading": "有2段经历，感觉都值得自己回味。",
-        "level": 2
-      },
-      {
-        "heading": "第一段经历，用3个月不到的时间，考研成功。",
-        "level": 3
-      },
-      {
-        "heading": "第二段经历，2年连续绩效拿A。",
-        "level": 3
-      }
-    ],
-    "links": [
-      {
-        "link": "审时度势，不好高骛远，也不妄自菲薄"
-      },
-      {
-        "link": "擅长的领域自得其乐，避免在不擅长的领域内卷"
-      },
-      {
-        "link": "人体工学椅"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "谈谈你的成功经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "谈谈你的成功经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "谈谈你的失败经历",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md",
-    "headings": [
-      {
-        "heading": "2段失败经历",
-        "level": 2
-      },
-      {
-        "heading": "为团队找OD形式的员工",
-        "level": 3
-      },
-      {
-        "heading": "边缘计算，负责安全和可信整改失败",
-        "level": 3
-      },
-      {
-        "heading": "过度高估了自己，低估了人性，//这段还是不说了",
-        "level": 3
-      }
-    ],
-    "links": [
-      {
-        "link": "君子不立危墙之下"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "谈谈你的失败经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "谈谈你的失败经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "给建平的求职建议",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md",
-    "headings": [
-      {
-        "heading": "离职&求职前自问",
-        "level": 2
-      },
-      {
-        "heading": "准备",
-        "level": 2
-      },
-      {
-        "heading": "必备面试问题准备",
-        "level": 2
-      },
-      {
-        "heading": "常见面试问题准备",
-        "level": 2
-      },
-      {
-        "heading": "专业面试问题准备",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "面试自我介绍",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md"
-      },
-      {
-        "link": "当时为什么选择考研，现在为什么选择工作"
-      },
-      {
-        "link": "上家公司才做了1个月，为什么离职"
-      },
-      {
-        "link": "对加班问题怎么看",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md"
-      },
-      {
-        "link": "和上级意见不一致时，你会怎么办",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md"
-      },
-      {
-        "link": "你还有什么问题问我吗",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md"
-      },
-      {
-        "link": "你的家庭情况是怎么样",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md"
-      },
-      {
-        "link": "你怎么评价自己",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md"
-      },
-      {
-        "link": "你有什么业余爱好",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md"
-      },
-      {
-        "link": "谈谈你的成功经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md"
-      },
-      {
-        "link": "谈谈你的失败经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md"
-      },
-      {
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
-      },
-      {
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
-      },
-      {
-        "link": "你的职业规划是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md"
-      },
-      {
-        "link": "你对薪资的要求"
-      },
-      {
-        "link": "为什么选择我们公司"
-      },
-      {
-        "link": "阐述职业经历和项目经验的方式与方法"
-      },
-      {
-        "link": "回答专业类问题的思路和方法"
-      }
-    ]
-  },
-  {
-    "fileName": "管理者喜欢内卷的员工吗",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/管理者喜欢内卷的员工吗.md",
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "管理者喜欢内卷的员工吗",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "演讲、教学和培训",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
-    "headings": [
-      {
-        "heading": "我心中这3点的区分",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "演讲"
-      },
-      {
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "displayText": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
-      },
-      {
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "displayText": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
-      },
-      {
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "displayText": "storytelling",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-三月",
-        "link": "演讲、教学和培训",
-        "relativePath": "journals/每月每季度总结/2022-三月.md",
-        "displayText": "200 - PROJECT/个人职业生涯/演讲、教学和培训"
-      }
-    ]
-  },
-  {
-    "fileName": "没工作这段时间在做什么",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/没工作这段时间在做什么.md",
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "没工作这段时间在做什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "本机启用ssh自动登陆",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/本机启用ssh自动登陆.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 40
-        }
-      }
-    },
-    "aliases": [
-      "vscode中启用ssh自动登陆"
-    ],
-    "backlinks": [
-      {
-        "fileName": "ssh自动以root权限登陆云服务器",
-        "link": "本机启用ssh自动登陆",
-        "relativePath": "pages/300 - AREA/人+科技融合/ssh自动以root权限登陆云服务器.md"
-      }
-    ]
-  },
-  {
-    "fileName": "明文数据",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/明文数据.md",
-    "tags": [
-      "动态/b站"
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-四月",
-        "link": "明文数据",
-        "relativePath": "journals/每月每季度总结/2022-四月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "微服务",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md",
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "微服务",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "微服务",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      },
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "微服务",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      }
-    ]
-  },
-  {
-    "fileName": "摆烂",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/摆烂.md",
-    "links": [
-      {
-        "link": "万历怠政"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人简介",
-        "link": "摆烂",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
-      }
-    ]
-  },
-  {
-    "fileName": "如何高效开会",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md",
-    "headings": [
-      {
-        "heading": "通用会议的价值",
-        "level": 2
-      },
-      {
-        "heading": "通用的高效开会技巧",
-        "level": 2
-      },
-      {
-        "heading": "不同诉求采用不同形式",
-        "level": 2
-      },
-      {
-        "heading": "视频会议",
-        "level": 3
-      },
-      {
-        "heading": "站立会议",
-        "level": 3
-      }
-    ],
-    "links": [
-      {
-        "link": "过程和结果可知，则效果和目的可达",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "如何高效开会",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "对加班问题怎么看",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md",
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "对加班问题怎么看",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "对加班问题怎么看",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "和上级意见不一致时，你会怎么办",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md",
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "和上级意见不一致时，你会怎么办",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "和上级意见不一致时，你会怎么办",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你还有什么问题问我吗",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md",
-    "headings": [
-      {
-        "heading": "反常规",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你还有什么问题问我吗",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你还有什么问题问我吗",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你的家庭情况是怎么样",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md",
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你的家庭情况是怎么样",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你的家庭情况是怎么样",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你的职业规划是什么",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md",
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你的职业规划是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你的职业规划是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你有什么业余爱好",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md",
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你有什么业余爱好",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你有什么业余爱好",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你最大的缺点是什么",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md",
-    "links": [
-      {
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "你最大的优点是什么",
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你最大的优点是什么",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md",
-    "links": [
-      {
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "你最大的缺点是什么",
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "你怎么评价自己",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md",
-    "links": [
-      {
-        "link": "《人生的智慧》"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "给建平的求职建议",
-        "link": "你怎么评价自己",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "你怎么评价自己",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "为什么选择我们",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/为什么选择我们.md",
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "为什么选择我们",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "个人简历 - MOC",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
-    "tags": [
-      "todo/今天",
-      "moc"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 35
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "必备面试问题",
-        "level": 2
-      },
-      {
-        "heading": "常见面试问题",
-        "level": 2
-      },
-      {
-        "heading": "专业面试问题准备",
-        "level": 2
-      },
-      {
-        "heading": "markdown格式",
-        "level": 2
-      },
-      {
-        "heading": "陈冬冬",
-        "level": 3
-      },
-      {
-        "heading": "基本信息",
-        "level": 4
-      },
-      {
-        "heading": "工作经验和求职意向",
-        "level": 4
-      },
-      {
-        "heading": "教育经历",
-        "level": 3
-      },
-      {
-        "heading": "技术栈及工具链",
-        "level": 3
-      },
-      {
-        "heading": "技术栈",
-        "level": 4
-      },
-      {
-        "heading": "工具链",
-        "level": 4
-      },
-      {
-        "heading": "工作经历",
-        "level": 3
-      }
-    ],
-    "links": [
-      {
-        "link": "面试一个人，只问这四个问题就够"
-      },
-      {
-        "link": "面试自我介绍",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md"
-      },
-      {
-        "link": "为什么从华为离职"
-      },
-      {
-        "link": "为什么这么长时间没找工作"
-      },
-      {
-        "link": "没工作这段时间在做什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/没工作这段时间在做什么.md"
-      },
-      {
-        "link": "你的职业规划是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md"
-      },
-      {
-        "link": "为什么选择我们",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/为什么选择我们.md"
-      },
-      {
-        "link": "你还有什么问题问我吗",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md"
-      },
-      {
-        "link": "对加班问题怎么看",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md"
-      },
-      {
-        "link": "你对薪资的要求"
-      },
-      {
-        "link": "你的家庭情况是怎么样",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md"
-      },
-      {
-        "link": "你怎么评价自己",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md"
-      },
-      {
-        "link": "你有什么业余爱好",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md"
-      },
-      {
-        "link": "谈谈你的成功经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md"
-      },
-      {
-        "link": "谈谈你的失败经历",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md"
-      },
-      {
-        "link": "和上级意见不一致时，你会怎么办",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md"
-      },
-      {
-        "link": "你最大的优点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
-      },
-      {
-        "link": "你最大的缺点是什么",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
-      },
-      {
-        "link": "阐述职业经历和项目经验的方式与方法"
-      },
-      {
-        "link": "回答专业类问题的思路和方法"
-      },
-      {
-        "link": "杭州"
-      },
-      {
-        "link": "微服务",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md"
-      },
-      {
-        "link": "云原生"
-      },
-      {
-        "link": "公有云",
-        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
-      },
-      {
-        "link": "边缘云"
-      },
-      {
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      },
-      {
-        "link": "kubernetes",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubernetes.md"
-      },
-      {
-        "link": "Istio"
-      },
-      {
-        "link": "JavaScript"
-      },
-      {
-        "link": "Chrome DevTools"
-      },
-      {
-        "link": "vscode",
-        "displayText": "VSCode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "Golang"
-      },
-      {
-        "link": "Gin"
-      },
-      {
-        "link": "微服务",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md"
-      },
-      {
-        "link": "Git",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-      },
-      {
-        "link": "DevOps"
-      },
-      {
-        "link": "Linux"
-      },
-      {
-        "link": "MacOS"
-      },
-      {
-        "link": "Shell"
-      },
-      {
-        "link": "GPU"
-      },
-      {
-        "link": "OpenCL"
-      },
-      {
-        "link": "CUDA"
-      },
-      {
-        "link": "GPGPU"
-      },
-      {
-        "link": "计算机网络"
-      },
-      {
-        "link": "常用数据结构和算法"
-      },
-      {
-        "link": "计算机体系结构"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "GTD"
-      },
-      {
-        "link": "onenote的核心优势",
-        "displayText": "onenote",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/onenote的核心优势.md"
-      },
-      {
-        "link": "Windows"
-      },
-      {
-        "link": "云同步"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "需求单管理",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/需求单管理.md"
-      },
-      {
-        "link": "问题单管理"
-      },
-      {
-        "link": "代码管理"
-      },
-      {
-        "link": "DevOps"
-      },
-      {
-        "link": "STAR法则",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/STAR法则.md"
-      },
-      {
-        "link": "OKR",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/OKR.md"
-      },
-      {
-        "link": "个人简介",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "个人简历 - MOC#技术栈",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
-        "cleanLink": "个人简历 - MOC",
-        "displayText": "个人简历 - MOC > 技术栈"
-      },
-      {
-        "fileName": "个人技术栈与工具链梳理",
-        "link": "个人简历 - MOC#工具链",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
-        "cleanLink": "个人简历 - MOC",
-        "displayText": "个人简历 - MOC > 工具链"
-      }
-    ]
-  },
-  {
-    "fileName": "ssh",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/ssh.md",
-    "links": [
-      {
-        "link": "ssh自动以root权限登陆云服务器",
-        "displayText": "200 - PROJECT/个人职业生涯/ssh自动以root权限登陆云服务器"
-      }
-    ]
-  },
-  {
-    "fileName": "个人简介",
-    "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md",
-    "headings": [
-      {
-        "heading": "少数派上的简介",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "小镇做题家 1"
-      },
-      {
-        "link": "摆烂",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/摆烂.md"
-      },
-      {
-        "link": "垫底小胖"
-      },
-      {
-        "link": "幸运女神"
-      },
-      {
-        "link": "内卷の王"
-      },
-      {
-        "link": "躺平一族"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "个人简介",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "鸟尽弓藏",
     "relativePath": "pages/300 - AREA/鸟尽弓藏.md",
     "links": [
@@ -7824,6 +6485,17 @@
     ]
   },
   {
+    "fileName": "个人效率系统打造",
+    "relativePath": "pages/300 - AREA/知识管理/个人效率系统打造.md",
+    "backlinks": [
+      {
+        "fileName": "2022-四月",
+        "link": "个人效率系统打造",
+        "relativePath": "journals/每月每季度总结/2022-四月.md"
+      }
+    ]
+  },
+  {
     "fileName": "计划和回顾",
     "relativePath": "pages/300 - AREA/知识管理/计划和回顾.md",
     "headings": [
@@ -7847,22 +6519,17 @@
   {
     "fileName": "番茄工作法",
     "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md",
+    "links": [
+      {
+        "link": "番茄工作法",
+        "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md"
+      }
+    ],
     "backlinks": [
       {
         "fileName": "2022-三月",
         "link": "番茄工作法",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "理智大脑",
-    "relativePath": "pages/300 - AREA/知识管理/理智大脑.md",
-    "backlinks": [
-      {
-        "fileName": "各类文化产品的生产消费时间比",
-        "link": "理智大脑",
-        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
       }
     ]
   },
@@ -7888,6 +6555,17 @@
     "links": [
       {
         "link": "微信读书"
+      }
+    ]
+  },
+  {
+    "fileName": "理智大脑",
+    "relativePath": "pages/300 - AREA/知识管理/理智大脑.md",
+    "backlinks": [
+      {
+        "fileName": "各类文化产品的生产消费时间比",
+        "link": "理智大脑",
+        "relativePath": "pages/400 - RESOURCE/基础学科/哲学/各类文化产品的生产消费时间比.md"
       }
     ]
   },
@@ -7985,6 +6663,10 @@
     ]
   },
   {
+    "fileName": "中国居民膳食指南2022版",
+    "relativePath": "pages/300 - AREA/知识管理/中国居民膳食指南2022版.md"
+  },
+  {
     "fileName": "阿杰",
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/阿杰.md",
     "frontmatter": {
@@ -8032,6 +6714,11 @@
         "fileName": "Obsidian入门到精通",
         "link": "闪念笔记",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "闪念笔记",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
       },
       {
         "fileName": "README",
@@ -8141,6 +6828,11 @@
         "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
         "link": "渐进式总结",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      },
+      {
+        "fileName": "文件夹和标签",
+        "link": "渐进式总结",
+        "relativePath": "journals/每月每季度总结/文件夹和标签.md"
       }
     ]
   },
@@ -8263,14 +6955,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "云计算与个人 - MOC",
-        "link": "渐进式 - progressive",
-        "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
-      },
-      {
         "fileName": "平台+插件",
         "link": "渐进式 - progressive",
         "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "fileName": "云计算与个人 - MOC",
+        "link": "渐进式 - progressive",
+        "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
       }
     ]
   },
@@ -9756,9 +8448,9 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
       },
       {
-        "fileName": "2022-三月",
+        "fileName": "URL scheme",
         "link": "advanced-url",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
+        "relativePath": "journals/每月每季度总结/URL scheme.md"
       }
     ]
   },
@@ -10276,21 +8968,6 @@
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Editor Syntax Highlight.md"
   },
   {
-    "fileName": "中国居民膳食指南2022版",
-    "relativePath": "pages/300 - AREA/知识管理/中国居民膳食指南2022版.md"
-  },
-  {
-    "fileName": "mac使用技巧",
-    "relativePath": "pages/300 - AREA/知识管理/mac使用技巧.md",
-    "backlinks": [
-      {
-        "fileName": "2022-五月",
-        "link": "mac使用技巧",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
     "fileName": "团队信息与知识共享",
     "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
     "tags": [
@@ -10394,6 +9071,10 @@
       {
         "heading": "使用范围",
         "level": 2
+      },
+      {
+        "heading": "零碎思考",
+        "level": 2
       }
     ],
     "links": [
@@ -10404,7 +9085,8 @@
         "link": "roam research"
       },
       {
-        "link": "URL scheme"
+        "link": "URL scheme",
+        "relativePath": "journals/每月每季度总结/URL scheme.md"
       },
       {
         "link": "个人时间使用的宏观洞察",
@@ -10474,19 +9156,35 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode和obsidian的习惯映射.md"
       },
       {
-        "fileName": "2022-三月",
-        "link": "notion",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "notion",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
       },
       {
+        "fileName": "2022-三月",
+        "link": "notion",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "notion",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
         "fileName": "README",
         "link": "notion",
         "relativePath": "README.md"
+      }
+    ]
+  },
+  {
+    "fileName": "mac使用技巧",
+    "relativePath": "pages/300 - AREA/知识管理/mac使用技巧.md",
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "mac使用技巧",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
       }
     ]
   },
@@ -10626,6 +9324,21 @@
     "relativePath": "pages/300 - AREA/思维导图.md",
     "tags": [
       "评论/b站"
+    ],
+    "headings": [
+      {
+        "heading": "对思维导图的思考",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "思维导图",
+        "relativePath": "pages/300 - AREA/思维导图.md"
+      },
+      {
+        "link": "记忆宫殿"
+      }
     ],
     "backlinks": [
       {
@@ -10790,6 +9503,9 @@
   {
     "fileName": "滴答清单",
     "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md",
+    "tags": [
+      "评论/少数派"
+    ],
     "headings": [
       {
         "heading": "滴答清单",
@@ -10801,11 +9517,6 @@
         "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
         "link": "滴答清单",
         "relativePath": "pages/500 - ARCHIVE/已发布长文/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-      },
-      {
-        "fileName": "个人简历 - MOC",
-        "link": "滴答清单",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
       },
       {
         "fileName": "安卓手机必备软件",
@@ -10853,6 +9564,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
       },
       {
+        "fileName": "个人简历 - MOC",
+        "link": "滴答清单",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
         "fileName": "INDEX根索引 - MOC",
         "link": "滴答清单",
         "relativePath": "pages/000 - INDEX/INDEX根索引 - MOC.md"
@@ -10866,6 +9582,11 @@
         "fileName": "2022-五月",
         "link": "滴答清单",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "滴答清单",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
       },
       {
         "fileName": "README",
@@ -10899,6 +9620,10 @@
     ],
     "headings": [
       {
+        "heading": "为什么要区分知识管理和信息管理",
+        "level": 2
+      },
+      {
         "heading": "更好地工作",
         "level": 2
       },
@@ -10916,6 +9641,16 @@
       }
     ],
     "links": [
+      {
+        "link": "个人知识管理",
+        "displayText": "知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "link": "个人知识管理",
+        "displayText": "信息管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
       {
         "link": "效率的定义和原则",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
@@ -10993,105 +9728,6 @@
         "fileName": "2022-四月",
         "link": "手机短信和通知转发至统一hub",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "平台+插件",
-    "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md",
-    "headings": [
-      {
-        "heading": "类似概念",
-        "level": 2
-      },
-      {
-        "heading": "平台+插件：",
-        "level": 2
-      },
-      {
-        "heading": "优势",
-        "level": 3
-      },
-      {
-        "heading": "劣势",
-        "level": 3
-      },
-      {
-        "heading": "涉及软件汇总：",
-        "level": 2
-      },
-      {
-        "heading": "相关编程工具",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "渐进式 - progressive",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
-      },
-      {
-        "link": "chrome",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      },
-      {
-        "link": "webpack"
-      },
-      {
-        "link": "vite"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "平台+插件",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      },
-      {
-        "fileName": "云计算与个人 - MOC",
-        "link": "平台+插件",
-        "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
-      },
-      {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
-        "fileName": "插件的便利性及安全性，如何权衡",
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
-      },
-      {
-        "fileName": "主动插件和被动插件",
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/主动插件和被动插件.md"
-      },
-      {
-        "fileName": "2022-四月",
-        "link": "平台+插件",
-        "relativePath": "journals/每月每季度总结/2022-四月.md"
-      },
-      {
-        "fileName": "README",
-        "link": "平台+插件",
-        "relativePath": "README.md"
       }
     ]
   },
@@ -11420,26 +10056,6 @@
     ]
   },
   {
-    "fileName": "windows必备软件",
-    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md",
-    "links": [
-      {
-        "link": "everything",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
-      },
-      {
-        "link": "utools"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "必备软件 - MOC",
-        "link": "windows必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "popclip",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md",
     "links": [
@@ -11466,9 +10082,29 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
-        "fileName": "2022-三月",
+        "fileName": "bob",
         "link": "popclip",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
+      }
+    ]
+  },
+  {
+    "fileName": "windows必备软件",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md",
+    "links": [
+      {
+        "link": "everything",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
+      },
+      {
+        "link": "utools"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "必备软件 - MOC",
+        "link": "windows必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
       }
     ]
   },
@@ -11569,11 +10205,6 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview的数据来源.md"
       },
       {
-        "fileName": "平台+插件",
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
         "link": "obsidian",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
@@ -11587,6 +10218,11 @@
         "fileName": "mac必备软件",
         "link": "obsidian",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "平台+插件",
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
       },
       {
         "fileName": "个人信息系统涉及的核心软件和云服务",
@@ -12059,11 +10695,6 @@
         "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
       },
       {
-        "fileName": "平台+插件",
-        "link": "chrome",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
         "fileName": "安卓手机必备软件",
         "link": "chrome",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md",
@@ -12076,6 +10707,11 @@
         "displayText": "edge浏览器"
       },
       {
+        "fileName": "平台+插件",
+        "link": "chrome",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
         "fileName": "PWA - Progressive Web Apps",
         "link": "chrome",
         "relativePath": "pages/300 - AREA/PWA - Progressive Web Apps.md",
@@ -12086,6 +10722,16 @@
   {
     "fileName": "bob",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md",
+    "links": [
+      {
+        "link": "bob",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
+      },
+      {
+        "link": "popclip",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
+      }
+    ],
     "backlinks": [
       {
         "fileName": "popclip",
@@ -12096,11 +10742,6 @@
         "fileName": "mac必备软件",
         "link": "bob",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "bob",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
       }
     ]
   },
@@ -12157,6 +10798,17 @@
     ]
   },
   {
+    "fileName": "Fig",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md",
+    "backlinks": [
+      {
+        "fileName": "mac必备软件",
+        "link": "Fig",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      }
+    ]
+  },
+  {
     "fileName": "BetterTouchTool",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/BetterTouchTool.md",
     "backlinks": [
@@ -12168,13 +10820,101 @@
     ]
   },
   {
-    "fileName": "Fig",
-    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md",
+    "fileName": "平台+插件",
+    "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md",
+    "headings": [
+      {
+        "heading": "类似概念",
+        "level": 2
+      },
+      {
+        "heading": "平台+插件：",
+        "level": 2
+      },
+      {
+        "heading": "优势",
+        "level": 3
+      },
+      {
+        "heading": "劣势",
+        "level": 3
+      },
+      {
+        "heading": "涉及软件汇总：",
+        "level": 2
+      },
+      {
+        "heading": "相关编程工具",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "渐进式 - progressive",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
+      },
+      {
+        "link": "chrome",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      },
+      {
+        "link": "webpack"
+      },
+      {
+        "link": "vite"
+      }
+    ],
     "backlinks": [
       {
-        "fileName": "mac必备软件",
-        "link": "Fig",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "平台+插件",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "主动插件和被动插件",
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/主动插件和被动插件.md"
+      },
+      {
+        "fileName": "云计算与个人 - MOC",
+        "link": "平台+插件",
+        "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md"
+      },
+      {
+        "fileName": "2022-四月",
+        "link": "平台+插件",
+        "relativePath": "journals/每月每季度总结/2022-四月.md"
+      },
+      {
+        "fileName": "README",
+        "link": "平台+插件",
+        "relativePath": "README.md"
       }
     ]
   },
@@ -12478,6 +11218,17 @@
     ]
   },
   {
+    "fileName": "软件项目管理系统",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理系统.md",
+    "backlinks": [
+      {
+        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "link": "软件项目管理系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+      }
+    ]
+  },
+  {
     "fileName": "费曼技巧",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md",
     "backlinks": [
@@ -12505,17 +11256,6 @@
         "fileName": "个人高效学习系统",
         "link": "费曼技巧",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-      }
-    ]
-  },
-  {
-    "fileName": "软件项目管理系统",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理系统.md",
-    "backlinks": [
-      {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
-        "link": "软件项目管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
       }
     ]
   },
@@ -12913,50 +11653,6 @@
     ]
   },
   {
-    "fileName": "搜狗输入法",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md",
-    "headings": [
-      {
-        "heading": "现状分析",
-        "level": 2
-      },
-      {
-        "heading": "调教点",
-        "level": 2
-      },
-      {
-        "heading": "经常忘记用的功能",
-        "level": 2
-      },
-      {
-        "heading": "搜狗的一些问题",
-        "level": 2
-      },
-      {
-        "heading": "将来可能改良点",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "必备软件 - MOC",
-        "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
-      },
-      {
-        "fileName": "mac必备软件",
-        "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "如何高效录入",
-        "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md",
-        "displayText": "文字录入"
-      }
-    ]
-  },
-  {
     "fileName": "搜索一切",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切.md",
     "frontmatter": {
@@ -13007,6 +11703,50 @@
         "fileName": "数字时代如何更好地工作与生活 - 图",
         "link": "搜索一切",
         "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md"
+      }
+    ]
+  },
+  {
+    "fileName": "搜狗输入法",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md",
+    "headings": [
+      {
+        "heading": "现状分析",
+        "level": 2
+      },
+      {
+        "heading": "调教点",
+        "level": 2
+      },
+      {
+        "heading": "经常忘记用的功能",
+        "level": 2
+      },
+      {
+        "heading": "搜狗的一些问题",
+        "level": 2
+      },
+      {
+        "heading": "将来可能改良点",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "必备软件 - MOC",
+        "link": "搜狗输入法",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+      },
+      {
+        "fileName": "mac必备软件",
+        "link": "搜狗输入法",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "如何高效录入",
+        "link": "搜狗输入法",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md",
+        "displayText": "文字录入"
       }
     ]
   },
@@ -13134,6 +11874,10 @@
     ]
   },
   {
+    "fileName": "如何快速发起一场分享",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何快速发起一场分享.md"
+  },
+  {
     "fileName": "如何高效录入",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md",
     "frontmatter": {
@@ -13205,8 +11949,8 @@
     ]
   },
   {
-    "fileName": "如何快速发起一场分享",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何快速发起一场分享.md"
+    "fileName": "信息系统的备份",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/信息系统的备份.md"
   },
   {
     "fileName": "垂直搜索",
@@ -13228,10 +11972,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
       }
     ]
-  },
-  {
-    "fileName": "信息系统的备份",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/信息系统的备份.md"
   },
   {
     "fileName": "任务管理的本质",
@@ -13269,6 +12009,158 @@
   {
     "fileName": "为什么表格的复制粘贴有时候表现诡异",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/为什么表格的复制粘贴有时候表现诡异.md"
+  },
+  {
+    "fileName": "个人知识管理",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md",
+    "tags": [
+      "评论/少数派"
+    ],
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 76
+        }
+      }
+    },
+    "aliases": [
+      "PKM(personal knowledge management)",
+      "『入不孵出』PKM系统",
+      "PKM"
+    ],
+    "headings": [
+      {
+        "heading": "pkm的定义",
+        "level": 2
+      },
+      {
+        "heading": "我的PKM 工具变迁",
+        "level": 2
+      },
+      {
+        "heading": "大学2010-2014",
+        "level": 3
+      },
+      {
+        "heading": "研究生2014-2016",
+        "level": 3
+      },
+      {
+        "heading": "工作2017-2020",
+        "level": 3
+      },
+      {
+        "heading": "2020-至今",
+        "level": 3
+      },
+      {
+        "heading": "为什么需要新工具新方法",
+        "level": 2
+      },
+      {
+        "heading": "零碎想法",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "有限的资源，无限的欲望"
+      },
+      {
+        "link": "everything",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
+      },
+      {
+        "link": "confluence"
+      },
+      {
+        "link": "onenote"
+      },
+      {
+        "link": "everything",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
+      },
+      {
+        "link": "数字时代如何更好地工作与生活 - MOC",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "帕累托"
+      },
+      {
+        "link": "终身学习",
+        "relativePath": "journals/每月每季度总结/终身学习.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "你还在打造数字花园？不妨来看看我的数字闺房",
+        "link": "个人知识管理",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/你还在打造数字花园？不妨来看看我的数字闺房.md",
+        "displayText": "PKM(personal knowledge management)"
+      },
+      {
+        "fileName": "个人时间使用的宏观洞察",
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
+        "displayText": "『入不孵出』PKM系统"
+      },
+      {
+        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+        "displayText": "知识管理"
+      },
+      {
+        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+        "displayText": "信息管理"
+      },
+      {
+        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+      },
+      {
+        "fileName": "3个系统",
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "个人知识管理",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "README",
+        "link": "个人知识管理",
+        "relativePath": "README.md",
+        "displayText": "PKM(personal knowledge management)"
+      },
+      {
+        "fileName": "README",
+        "link": "个人知识管理",
+        "relativePath": "README.md",
+        "displayText": "PKM"
+      }
+    ]
   },
   {
     "fileName": "个人高效学习系统",
@@ -13318,142 +12210,6 @@
         "fileName": "2022-三月",
         "link": "个人高效学习系统",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "个人知识管理",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 76
-        }
-      }
-    },
-    "aliases": [
-      "PKM(personal knowledge management)",
-      "『入不孵出』PKM系统",
-      "PKM"
-    ],
-    "headings": [
-      {
-        "heading": "pkm的定义",
-        "level": 2
-      },
-      {
-        "heading": "我的PKM 工具变迁",
-        "level": 2
-      },
-      {
-        "heading": "大学2010-2014",
-        "level": 3
-      },
-      {
-        "heading": "研究生2014-2016",
-        "level": 3
-      },
-      {
-        "heading": "工作2017-2020",
-        "level": 3
-      },
-      {
-        "heading": "2020-至今",
-        "level": 3
-      },
-      {
-        "heading": "为什么需要新工具新方法",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "有限的资源，无限的欲望"
-      },
-      {
-        "link": "everything",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
-      },
-      {
-        "link": "confluence"
-      },
-      {
-        "link": "onenote"
-      },
-      {
-        "link": "everything",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
-      },
-      {
-        "link": "数字时代如何更好地工作与生活 - MOC",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "帕累托"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "你还在打造数字花园？不妨来看看我的数字闺房",
-        "link": "个人知识管理",
-        "relativePath": "pages/500 - ARCHIVE/已发布长文/你还在打造数字花园？不妨来看看我的数字闺房.md",
-        "displayText": "PKM(personal knowledge management)"
-      },
-      {
-        "fileName": "个人时间使用的宏观洞察",
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
-        "displayText": "『入不孵出』PKM系统"
-      },
-      {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-      },
-      {
-        "fileName": "3个系统",
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "个人知识管理",
-        "relativePath": "journals/每月每季度总结/2022-三月.md",
-        "displayText": "知识管理"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "个人知识管理",
-        "relativePath": "journals/每月每季度总结/2022-三月.md",
-        "displayText": "信息管理"
-      },
-      {
-        "fileName": "README",
-        "link": "个人知识管理",
-        "relativePath": "README.md",
-        "displayText": "PKM(personal knowledge management)"
-      },
-      {
-        "fileName": "README",
-        "link": "个人知识管理",
-        "relativePath": "README.md",
-        "displayText": "PKM"
       }
     ]
   },
@@ -14431,17 +13187,6 @@
     ]
   },
   {
-    "fileName": "chrome-omni插件",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md",
-    "backlinks": [
-      {
-        "fileName": "个人搜索系统",
-        "link": "chrome-omni插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      }
-    ]
-  },
-  {
     "fileName": "docker compose",
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/docker compose.md",
     "frontmatter": {
@@ -14481,13 +13226,13 @@
     ]
   },
   {
-    "fileName": "andy的网络博客",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/andy的网络博客.md",
+    "fileName": "chrome-omni插件",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md",
     "backlinks": [
       {
-        "fileName": "logseq和obsidian的联合联动使用",
-        "link": "andy的网络博客",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/logseq和obsidian的联合联动使用.md"
+        "fileName": "个人搜索系统",
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
       }
     ]
   },
@@ -14520,26 +13265,13 @@
     ]
   },
   {
-    "fileName": "3个系统",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md",
-    "headings": [
+    "fileName": "andy的网络博客",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/andy的网络博客.md",
+    "backlinks": [
       {
-        "heading": "3个系统",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      },
-      {
-        "link": "个人高效学习系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
+        "fileName": "logseq和obsidian的联合联动使用",
+        "link": "andy的网络博客",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/logseq和obsidian的联合联动使用.md"
       }
     ]
   },
@@ -14606,14 +13338,14 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md"
       },
       {
-        "fileName": "平台+插件",
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
         "fileName": "mac必备软件",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "平台+插件",
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
       },
       {
         "fileName": "键盘、鼠标和触摸板",
@@ -14634,6 +13366,30 @@
         "fileName": "个人搜索系统",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      }
+    ]
+  },
+  {
+    "fileName": "3个系统",
+    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md",
+    "headings": [
+      {
+        "heading": "3个系统",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "link": "个人任务管理系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+      },
+      {
+        "link": "个人高效学习系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
       }
     ]
   },
@@ -15150,11 +13906,25 @@
     "tags": [
       "评论/少数派"
     ],
+    "links": [
+      {
+        "link": "护城河",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/护城河.md"
+      },
+      {
+        "link": "存量市场与增量市场"
+      }
+    ],
     "backlinks": [
       {
         "fileName": "2022-四月",
         "link": "flomo",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "flomo",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
       }
     ]
   },
@@ -15184,6 +13954,1653 @@
         "fileName": "2022-五月",
         "link": "PWA - Progressive Web Apps",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "项目管理与法律",
+    "relativePath": "pages/200 - PROJECT/项目管理/项目管理与法律.md",
+    "links": [
+      {
+        "link": "立法、司法和执法"
+      },
+      {
+        "link": "三权分立"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "项目管理与法律",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "项目owner机制",
+    "relativePath": "pages/200 - PROJECT/项目管理/项目owner机制.md",
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "项目owner机制",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "精益",
+    "relativePath": "pages/200 - PROJECT/项目管理/精益.md",
+    "backlinks": [
+      {
+        "fileName": "2022-四月",
+        "link": "精益",
+        "relativePath": "journals/每月每季度总结/2022-四月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "我的开源项目 - MOX",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/我的开源项目 - MOX.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "metacloud"
+      }
+    ]
+  },
+  {
+    "fileName": "数据库",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/数据库.md",
+    "headings": [
+      {
+        "heading": "当前有关数据库分析",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "关系型数据库",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库.md"
+      },
+      {
+        "link": "key-value数据库"
+      },
+      {
+        "link": "文档数据库"
+      }
+    ]
+  },
+  {
+    "fileName": "快速5分钟搭建本地镜像仓库",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 32
+        }
+      }
+    },
+    "aliases": [
+      "本地私有仓库搭建"
+    ],
+    "backlinks": [
+      {
+        "fileName": "docker",
+        "link": "快速5分钟搭建本地镜像仓库",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      }
+    ]
+  },
+  {
+    "fileName": "快速10分钟搭建自己的网站",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速10分钟搭建自己的网站.md",
+    "headings": [
+      {
+        "heading": "浏览器访问某网站的数据流及过程：",
+        "level": 2
+      },
+      {
+        "heading": "域名注册：",
+        "level": 2
+      },
+      {
+        "heading": "域名解析：",
+        "level": 2
+      },
+      {
+        "heading": "服务端监听：",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "前端",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/前端.md",
+    "links": [
+      {
+        "link": "import和require本质区别",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/import和require本质区别.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "前端",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
+      }
+    ]
+  },
+  {
+    "fileName": "关系型数据库",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 30
+        }
+      }
+    },
+    "aliases": [
+      "ACID规则"
+    ],
+    "backlinks": [
+      {
+        "fileName": "数据库",
+        "link": "关系型数据库",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/数据库.md"
+      }
+    ]
+  },
+  {
+    "fileName": "mongoDB",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/mongoDB.md",
+    "headings": [
+      {
+        "heading": "快速实践",
+        "level": 2
+      },
+      {
+        "heading": "运行",
+        "level": 3
+      },
+      {
+        "heading": "创建用户并测试",
+        "level": 3
+      },
+      {
+        "heading": "创建一个名为 admin，密码为 123456 的用户。",
+        "level": 3
+      },
+      {
+        "heading": "尝试使用上面创建的用户信息进行连接。",
+        "level": 3
+      },
+      {
+        "heading": "Navicat连接并进行数据操作",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "fileName": "kubernetes",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubernetes.md",
+    "headings": [
+      {
+        "heading": "小型化测试",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "kubernetes",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "kubectl",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubectl.md",
+    "backlinks": [
+      {
+        "fileName": "linux常用命令行 - MOC",
+        "link": "kubectl",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "import和require本质区别",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/import和require本质区别.md",
+    "headings": [
+      {
+        "heading": "遵循的模块化规范不一样",
+        "level": 2
+      },
+      {
+        "heading": "出现的时间不同",
+        "level": 2
+      },
+      {
+        "heading": "require/exports 和 import/export 形式不一样",
+        "level": 2
+      },
+      {
+        "heading": "require/exports 和 import/export 本质上的差别",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "前端",
+        "link": "import和require本质区别",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/前端.md"
+      }
+    ]
+  },
+  {
+    "fileName": "github",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md",
+    "headings": [
+      {
+        "heading": "readme相关",
+        "level": 2
+      },
+      {
+        "heading": "免密登陆",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "Git",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人信息系统涉及的核心软件和云服务",
+        "link": "github",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
+      },
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "github",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
+      },
+      {
+        "fileName": "README",
+        "link": "github",
+        "relativePath": "README.md"
+      }
+    ]
+  },
+  {
+    "fileName": "docker in docker",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/docker in docker.md",
+    "headings": [
+      {
+        "heading": "定义",
+        "level": 2
+      },
+      {
+        "heading": "运行时容器中的yaml定义片段",
+        "level": 2
+      },
+      {
+        "heading": "发现的几个问题",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "docker from docker"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "docker",
+        "link": "docker in docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      }
+    ]
+  },
+  {
+    "fileName": "GraphQL和RESTAPI",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/GraphQL和RESTAPI.md"
+  },
+  {
+    "fileName": "Git",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md",
+    "headings": [
+      {
+        "heading": "用github的ssh地址，实现免密码操作",
+        "level": 2
+      },
+      {
+        "heading": "后续操作",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "linux常用命令行 - MOC",
+        "link": "Git",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "Git",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
+      },
+      {
+        "fileName": "github",
+        "link": "Git",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "Git",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "vscode",
+    "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md",
+    "backlinks": [
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "vscode",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "mac必备软件",
+        "link": "vscode",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "平台+插件",
+        "link": "vscode",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
+        "displayText": "VSCode"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
+        "fileName": "README",
+        "link": "vscode",
+        "relativePath": "README.md"
+      },
+      {
+        "fileName": "README",
+        "link": "vscode",
+        "relativePath": "README.md"
+      },
+      {
+        "fileName": "README",
+        "link": "vscode",
+        "relativePath": "README.md"
+      }
+    ]
+  },
+  {
+    "fileName": "阿里云",
+    "relativePath": "pages/200 - PROJECT/云计算/阿里云.md",
+    "backlinks": [
+      {
+        "fileName": "livesync",
+        "link": "阿里云",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
+      },
+      {
+        "fileName": "公有云",
+        "link": "阿里云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "腾讯云",
+    "relativePath": "pages/200 - PROJECT/云计算/腾讯云.md",
+    "backlinks": [
+      {
+        "fileName": "livesync",
+        "link": "腾讯云",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
+      },
+      {
+        "fileName": "公有云",
+        "link": "腾讯云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "华为云",
+    "relativePath": "pages/200 - PROJECT/云计算/华为云.md",
+    "backlinks": [
+      {
+        "fileName": "livesync",
+        "link": "华为云",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md"
+      },
+      {
+        "fileName": "公有云",
+        "link": "华为云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "公有云",
+    "relativePath": "pages/200 - PROJECT/云计算/公有云.md",
+    "links": [
+      {
+        "link": "阿里云",
+        "relativePath": "pages/200 - PROJECT/云计算/阿里云.md"
+      },
+      {
+        "link": "腾讯云",
+        "relativePath": "pages/200 - PROJECT/云计算/腾讯云.md"
+      },
+      {
+        "link": "华为云",
+        "relativePath": "pages/200 - PROJECT/云计算/华为云.md"
+      },
+      {
+        "link": "七牛云",
+        "relativePath": "pages/200 - PROJECT/云计算/七牛云.md"
+      },
+      {
+        "link": "azure",
+        "relativePath": "pages/200 - PROJECT/云计算/azure.md"
+      },
+      {
+        "link": "GCS - 谷歌云",
+        "relativePath": "pages/200 - PROJECT/云计算/GCS - 谷歌云.md"
+      },
+      {
+        "link": "AWS",
+        "relativePath": "pages/200 - PROJECT/云计算/AWS.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "公有云",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "云计算与个人 - MOC",
+    "relativePath": "pages/200 - PROJECT/云计算/云计算与个人 - MOC.md",
+    "tags": [
+      "todo/持续迭代",
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 37
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "link": "渐进式 - progressive",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "效率的定义和原则",
+        "link": "云计算与个人 - MOC",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+      }
+    ]
+  },
+  {
+    "fileName": "七牛云",
+    "relativePath": "pages/200 - PROJECT/云计算/七牛云.md",
+    "backlinks": [
+      {
+        "fileName": "公有云",
+        "link": "七牛云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "docker",
+    "relativePath": "pages/200 - PROJECT/云计算/docker.md",
+    "headings": [
+      {
+        "heading": "仓库",
+        "level": 2
+      },
+      {
+        "heading": "Docker in Docker",
+        "level": 2
+      },
+      {
+        "heading": "Docker From Docker",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "快速5分钟搭建本地镜像仓库",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库.md"
+      },
+      {
+        "link": "docker in docker",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/docker in docker.md"
+      },
+      {
+        "link": "docker from docker"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "插件的便利性及安全性，如何权衡",
+        "link": "docker",
+        "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "平台+插件",
+        "link": "docker",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "fileName": "linux常用命令行 - MOC",
+        "link": "docker",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "azure",
+    "relativePath": "pages/200 - PROJECT/云计算/azure.md",
+    "backlinks": [
+      {
+        "fileName": "公有云",
+        "link": "azure",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "GCS - 谷歌云",
+    "relativePath": "pages/200 - PROJECT/云计算/GCS - 谷歌云.md",
+    "backlinks": [
+      {
+        "fileName": "公有云",
+        "link": "GCS - 谷歌云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "AWS",
+    "relativePath": "pages/200 - PROJECT/云计算/AWS.md",
+    "backlinks": [
+      {
+        "fileName": "公有云",
+        "link": "AWS",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      }
+    ]
+  },
+  {
+    "fileName": "面试自我介绍",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md",
+    "headings": [
+      {
+        "heading": "要点",
+        "level": 2
+      },
+      {
+        "heading": "提纲",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "面试自我介绍",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "面试自我介绍",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "需求单管理",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/需求单管理.md",
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "需求单管理",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "需求管理",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/需求管理.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 29
+        }
+      }
+    },
+    "aliases": [
+      "需求单管理"
+    ]
+  },
+  {
+    "fileName": "过程和结果可知，则效果和目的可达",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md",
+    "links": [
+      {
+        "link": "刑不可知，则威不可测"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "如何高效开会",
+        "link": "过程和结果可知，则效果和目的可达",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
+      }
+    ]
+  },
+  {
+    "fileName": "问题管理",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/问题管理.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 29
+        }
+      }
+    },
+    "aliases": [
+      "问题单管理"
+    ]
+  },
+  {
+    "fileName": "谈谈你的成功经历",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md",
+    "headings": [
+      {
+        "heading": "有2段经历，感觉都值得自己回味。",
+        "level": 2
+      },
+      {
+        "heading": "第一段经历，用3个月不到的时间，考研成功。",
+        "level": 3
+      },
+      {
+        "heading": "第二段经历，2年连续绩效拿A。",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "审时度势，不好高骛远，也不妄自菲薄"
+      },
+      {
+        "link": "擅长的领域自得其乐，避免在不擅长的领域内卷"
+      },
+      {
+        "link": "人体工学椅"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "谈谈你的成功经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "谈谈你的成功经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "谈谈你的失败经历",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md",
+    "headings": [
+      {
+        "heading": "2段失败经历",
+        "level": 2
+      },
+      {
+        "heading": "为团队找OD形式的员工",
+        "level": 3
+      },
+      {
+        "heading": "边缘计算，负责安全和可信整改失败",
+        "level": 3
+      },
+      {
+        "heading": "过度高估了自己，低估了人性，//这段还是不说了",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "君子不立危墙之下"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "谈谈你的失败经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "谈谈你的失败经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "给建平的求职建议",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md",
+    "headings": [
+      {
+        "heading": "离职&求职前自问",
+        "level": 2
+      },
+      {
+        "heading": "准备",
+        "level": 2
+      },
+      {
+        "heading": "必备面试问题准备",
+        "level": 2
+      },
+      {
+        "heading": "常见面试问题准备",
+        "level": 2
+      },
+      {
+        "heading": "专业面试问题准备",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "面试自我介绍",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md"
+      },
+      {
+        "link": "当时为什么选择考研，现在为什么选择工作"
+      },
+      {
+        "link": "上家公司才做了1个月，为什么离职"
+      },
+      {
+        "link": "对加班问题怎么看",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md"
+      },
+      {
+        "link": "和上级意见不一致时，你会怎么办",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md"
+      },
+      {
+        "link": "你还有什么问题问我吗",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md"
+      },
+      {
+        "link": "你的家庭情况是怎么样",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md"
+      },
+      {
+        "link": "你怎么评价自己",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md"
+      },
+      {
+        "link": "你有什么业余爱好",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md"
+      },
+      {
+        "link": "谈谈你的成功经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md"
+      },
+      {
+        "link": "谈谈你的失败经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md"
+      },
+      {
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
+      },
+      {
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
+      },
+      {
+        "link": "你的职业规划是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md"
+      },
+      {
+        "link": "你对薪资的要求"
+      },
+      {
+        "link": "为什么选择我们公司"
+      },
+      {
+        "link": "阐述职业经历和项目经验的方式与方法"
+      },
+      {
+        "link": "回答专业类问题的思路和方法"
+      }
+    ]
+  },
+  {
+    "fileName": "管理者喜欢内卷的员工吗",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/管理者喜欢内卷的员工吗.md",
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "管理者喜欢内卷的员工吗",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "演讲、教学和培训",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
+    "headings": [
+      {
+        "heading": "我心中这3点的区分",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "演讲"
+      },
+      {
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "displayText": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
+      },
+      {
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "displayText": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
+      },
+      {
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "displayText": "storytelling",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "演讲、教学和培训",
+        "relativePath": "journals/每月每季度总结/2022-三月.md",
+        "displayText": "200 - PROJECT/个人职业生涯/演讲、教学和培训"
+      }
+    ]
+  },
+  {
+    "fileName": "没工作这段时间在做什么",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/没工作这段时间在做什么.md",
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "没工作这段时间在做什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "本机启用ssh自动登陆",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/本机启用ssh自动登陆.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 40
+        }
+      }
+    },
+    "aliases": [
+      "vscode中启用ssh自动登陆"
+    ],
+    "backlinks": [
+      {
+        "fileName": "ssh自动以root权限登陆云服务器",
+        "link": "本机启用ssh自动登陆",
+        "relativePath": "pages/300 - AREA/人+科技融合/ssh自动以root权限登陆云服务器.md"
+      }
+    ]
+  },
+  {
+    "fileName": "明文数据",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/明文数据.md",
+    "tags": [
+      "动态/b站"
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-四月",
+        "link": "明文数据",
+        "relativePath": "journals/每月每季度总结/2022-四月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "摆烂",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/摆烂.md",
+    "links": [
+      {
+        "link": "万历怠政"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人简介",
+        "link": "摆烂",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
+      }
+    ]
+  },
+  {
+    "fileName": "微服务",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md",
+    "backlinks": [
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "微服务",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "微服务",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "微服务",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "对加班问题怎么看",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md",
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "对加班问题怎么看",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "对加班问题怎么看",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "如何高效开会",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md",
+    "headings": [
+      {
+        "heading": "通用会议的价值",
+        "level": 2
+      },
+      {
+        "heading": "通用的高效开会技巧",
+        "level": 2
+      },
+      {
+        "heading": "不同诉求采用不同形式",
+        "level": 2
+      },
+      {
+        "heading": "视频会议",
+        "level": 3
+      },
+      {
+        "heading": "站立会议",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "过程和结果可知，则效果和目的可达",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-五月",
+        "link": "如何高效开会",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "和上级意见不一致时，你会怎么办",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md",
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "和上级意见不一致时，你会怎么办",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "和上级意见不一致时，你会怎么办",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你还有什么问题问我吗",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md",
+    "headings": [
+      {
+        "heading": "反常规",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你还有什么问题问我吗",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你还有什么问题问我吗",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你的职业规划是什么",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md",
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你的职业规划是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你的职业规划是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你的家庭情况是怎么样",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md",
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你的家庭情况是怎么样",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你的家庭情况是怎么样",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你有什么业余爱好",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md",
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你有什么业余爱好",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你有什么业余爱好",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你最大的缺点是什么",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md",
+    "links": [
+      {
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "你最大的优点是什么",
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你最大的优点是什么",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md",
+    "links": [
+      {
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "你最大的缺点是什么",
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "你怎么评价自己",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md",
+    "links": [
+      {
+        "link": "《人生的智慧》"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "给建平的求职建议",
+        "link": "你怎么评价自己",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/给建平的求职建议.md"
+      },
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "你怎么评价自己",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "为什么选择我们",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/为什么选择我们.md",
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "为什么选择我们",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "个人简历 - MOC",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
+    "tags": [
+      "todo/今天",
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 35
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "一些小技巧尝试",
+        "level": 2
+      },
+      {
+        "heading": "必备面试问题",
+        "level": 2
+      },
+      {
+        "heading": "常见面试问题",
+        "level": 2
+      },
+      {
+        "heading": "专业面试问题准备",
+        "level": 2
+      },
+      {
+        "heading": "markdown格式",
+        "level": 2
+      },
+      {
+        "heading": "陈冬冬",
+        "level": 3
+      },
+      {
+        "heading": "基本信息",
+        "level": 4
+      },
+      {
+        "heading": "工作经验和求职意向",
+        "level": 4
+      },
+      {
+        "heading": "教育经历",
+        "level": 3
+      },
+      {
+        "heading": "技术栈及工具链",
+        "level": 3
+      },
+      {
+        "heading": "技术栈",
+        "level": 4
+      },
+      {
+        "heading": "工具链",
+        "level": 4
+      },
+      {
+        "heading": "工作经历",
+        "level": 3
+      }
+    ],
+    "links": [
+      {
+        "link": "面试一个人，只问这四个问题就够"
+      },
+      {
+        "link": "面试自我介绍",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md"
+      },
+      {
+        "link": "为什么从华为离职"
+      },
+      {
+        "link": "为什么这么长时间没找工作"
+      },
+      {
+        "link": "没工作这段时间在做什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/没工作这段时间在做什么.md"
+      },
+      {
+        "link": "你的职业规划是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md"
+      },
+      {
+        "link": "为什么选择我们",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/为什么选择我们.md"
+      },
+      {
+        "link": "你还有什么问题问我吗",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md"
+      },
+      {
+        "link": "对加班问题怎么看",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/对加班问题怎么看.md"
+      },
+      {
+        "link": "你对薪资的要求"
+      },
+      {
+        "link": "你的家庭情况是怎么样",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md"
+      },
+      {
+        "link": "你怎么评价自己",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md"
+      },
+      {
+        "link": "你有什么业余爱好",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md"
+      },
+      {
+        "link": "谈谈你的成功经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md"
+      },
+      {
+        "link": "谈谈你的失败经历",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md"
+      },
+      {
+        "link": "和上级意见不一致时，你会怎么办",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/和上级意见不一致时，你会怎么办.md"
+      },
+      {
+        "link": "你最大的优点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
+      },
+      {
+        "link": "你最大的缺点是什么",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
+      },
+      {
+        "link": "阐述职业经历和项目经验的方式与方法"
+      },
+      {
+        "link": "回答专业类问题的思路和方法"
+      },
+      {
+        "link": "杭州"
+      },
+      {
+        "link": "微服务",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md"
+      },
+      {
+        "link": "云原生"
+      },
+      {
+        "link": "公有云",
+        "relativePath": "pages/200 - PROJECT/云计算/公有云.md"
+      },
+      {
+        "link": "边缘云"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      },
+      {
+        "link": "kubernetes",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubernetes.md"
+      },
+      {
+        "link": "Istio"
+      },
+      {
+        "link": "JavaScript"
+      },
+      {
+        "link": "Chrome DevTools"
+      },
+      {
+        "link": "vscode",
+        "displayText": "VSCode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "Golang"
+      },
+      {
+        "link": "Gin"
+      },
+      {
+        "link": "微服务",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md"
+      },
+      {
+        "link": "Git",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
+      },
+      {
+        "link": "DevOps"
+      },
+      {
+        "link": "Linux"
+      },
+      {
+        "link": "MacOS"
+      },
+      {
+        "link": "Shell"
+      },
+      {
+        "link": "GPU"
+      },
+      {
+        "link": "OpenCL"
+      },
+      {
+        "link": "CUDA"
+      },
+      {
+        "link": "GPGPU"
+      },
+      {
+        "link": "计算机网络"
+      },
+      {
+        "link": "常用数据结构和算法"
+      },
+      {
+        "link": "计算机体系结构"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "GTD"
+      },
+      {
+        "link": "onenote的核心优势",
+        "displayText": "onenote",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/onenote的核心优势.md"
+      },
+      {
+        "link": "Windows"
+      },
+      {
+        "link": "云同步"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "需求单管理",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/需求单管理.md"
+      },
+      {
+        "link": "问题单管理"
+      },
+      {
+        "link": "代码管理"
+      },
+      {
+        "link": "DevOps"
+      },
+      {
+        "link": "STAR法则",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/STAR法则.md"
+      },
+      {
+        "link": "OKR",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/OKR.md"
+      },
+      {
+        "link": "个人简介",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "个人简历 - MOC#技术栈",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
+        "cleanLink": "个人简历 - MOC",
+        "displayText": "个人简历 - MOC > 技术栈"
+      },
+      {
+        "fileName": "个人技术栈与工具链梳理",
+        "link": "个人简历 - MOC#工具链",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
+        "cleanLink": "个人简历 - MOC",
+        "displayText": "个人简历 - MOC > 工具链"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "个人简历 - MOC",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "个人简介",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md",
+    "headings": [
+      {
+        "heading": "少数派上的简介",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "小镇做题家 1"
+      },
+      {
+        "link": "摆烂",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/摆烂.md"
+      },
+      {
+        "link": "垫底小胖"
+      },
+      {
+        "link": "幸运女神"
+      },
+      {
+        "link": "内卷の王"
+      },
+      {
+        "link": "躺平一族"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人简历 - MOC",
+        "link": "个人简介",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      }
+    ]
+  },
+  {
+    "fileName": "ssh",
+    "relativePath": "pages/200 - PROJECT/个人职业生涯/ssh.md",
+    "links": [
+      {
+        "link": "ssh自动以root权限登陆云服务器",
+        "displayText": "200 - PROJECT/个人职业生涯/ssh自动以root权限登陆云服务器"
       }
     ]
   },
@@ -15298,6 +15715,224 @@
         "relativePath": "pages/000 - INDEX/最近编辑、最近创建、最近任务、回顾记忆.md"
       }
     ]
+  },
+  {
+    "fileName": "新时代如何开始学习一门新知识",
+    "relativePath": "journals/每月每季度总结/新时代如何开始学习一门新知识.md",
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "新时代如何开始学习一门新知识",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "终身学习",
+    "relativePath": "journals/每月每季度总结/终身学习.md",
+    "links": [
+      {
+        "link": "赢者通吃"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "个人知识管理",
+        "link": "终身学习",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "终身学习",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "如果要给人安利好书",
+    "relativePath": "journals/每月每季度总结/如果要给人安利好书.md",
+    "links": [
+      {
+        "link": "《如何阅读一本书》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
+      },
+      {
+        "link": "《学会提问》"
+      },
+      {
+        "link": "《少有人走的人》"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "如果要给人安利好书",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "考研备考经验",
+    "relativePath": "journals/每月每季度总结/考研备考经验.md",
+    "links": [
+      {
+        "link": "成就感和危机感"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "考研备考经验",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "杂念随思随想",
+    "relativePath": "journals/每月每季度总结/杂念随思随想.md",
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "杂念随思随想",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "全球金融市场与互联网公司",
+    "relativePath": "journals/每月每季度总结/全球金融市场与互联网公司.md",
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "全球金融市场与互联网公司",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "URL scheme",
+    "relativePath": "journals/每月每季度总结/URL scheme.md",
+    "links": [
+      {
+        "link": "advanced-url",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-url.md"
+      },
+      {
+        "link": "hook"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "notion",
+        "link": "URL scheme",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "URL scheme",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "中路",
+    "relativePath": "journals/每月每季度总结/中路.md",
+    "backlinks": [
+      {
+        "fileName": "王者荣耀",
+        "link": "中路",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
+      },
+      {
+        "fileName": "杨玉环",
+        "link": "中路",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/杨玉环.md"
+      }
+    ]
+  },
+  {
+    "fileName": "不看新闻",
+    "relativePath": "journals/每月每季度总结/不看新闻.md",
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "不看新闻",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "笔记软件的选择",
+    "relativePath": "journals/每月每季度总结/笔记软件的选择.md",
+    "links": [
+      {
+        "link": "李雷和韩梅梅"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "笔记软件的选择",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "文件夹和标签",
+    "relativePath": "journals/每月每季度总结/文件夹和标签.md",
+    "tags": [
+      "评论/少数派"
+    ],
+    "links": [
+      {
+        "link": "渐进式总结",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
+      },
+      {
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/文件夹和标签.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "文件夹和标签",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "双链笔记与概念挖坑",
+    "relativePath": "journals/每月每季度总结/双链笔记与概念挖坑.md",
+    "links": [
+      {
+        "link": "功利主义"
+      },
+      {
+        "link": "雪中送炭和锦上添花"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-三月",
+        "link": "双链笔记与概念挖坑",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "辩论与争论",
+    "relativePath": "journals/每月每季度总结/辩论与争论.md"
   },
   {
     "fileName": "2022-四月",
@@ -15761,7 +16396,8 @@
         "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/内卷.md"
       },
       {
-        "link": "个人效率系统打造"
+        "link": "个人效率系统打造",
+        "relativePath": "pages/300 - AREA/知识管理/个人效率系统打造.md"
       },
       {
         "link": "刑不可知，则威不可测"
@@ -15796,455 +16432,6 @@
       {
         "link": "罗生门",
         "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/罗生门.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-三月",
-    "relativePath": "journals/每月每季度总结/2022-三月.md",
-    "headings": [
-      {
-        "heading": "2022-03-11",
-        "level": 1
-      },
-      {
-        "heading": "想法 %% fold %%",
-        "level": 2
-      },
-      {
-        "heading": "对思维导图的思考",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-12",
-        "level": 1
-      },
-      {
-        "heading": "灵感/闪念随时记录",
-        "level": 2
-      },
-      {
-        "heading": "今天发生了哪些美好或值得关注的事",
-        "level": 2
-      },
-      {
-        "heading": "工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-13",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天发生了哪些美好或值得关注的事",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-14",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天发生了哪些美好或值得关注的事",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-15",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天发生了哪些美好或值得关注的事",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-16",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-17",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-18",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-19",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-20",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-21",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-22",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-23",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-24",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-25",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-26",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-27",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-28",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-29",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-30",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-31",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "功利主义"
-      },
-      {
-        "link": "雪中送炭和锦上添花"
-      },
-      {
-        "link": "存量市场与增量市场"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "记忆宫殿"
-      },
-      {
-        "link": "李雷和韩梅梅"
-      },
-      {
-        "link": "护城河",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/护城河.md"
-      },
-      {
-        "link": "PKM - personal knowledge management"
-      },
-      {
-        "link": "刚下飞机",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/刚下飞机.md"
-      },
-      {
-        "link": "STAR法则",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/方法库/STAR法则.md"
-      },
-      {
-        "link": "advanced-url",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-url.md"
-      },
-      {
-        "link": "hook"
-      },
-      {
-        "link": "权力寻租",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/权力寻租.md"
-      },
-      {
-        "link": "番茄工作法",
-        "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md"
-      },
-      {
-        "link": "bob",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
-      },
-      {
-        "link": "popclip",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
-      },
-      {
-        "link": "成就感和危机感"
-      },
-      {
-        "link": "《如何阅读一本书》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《如何阅读一本书》.md"
-      },
-      {
-        "link": "《学会提问》"
-      },
-      {
-        "link": "《少有人走的人》"
-      },
-      {
-        "link": "个人知识管理",
-        "displayText": "知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "个人知识管理",
-        "displayText": "信息管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "收藏者谬误",
-        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/收藏者谬误.md"
-      },
-      {
-        "link": "《刻意练习》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-      },
-      {
-        "link": "阿杰",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/阿杰.md"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "tp-link"
-      },
-      {
-        "link": "石墨文档"
-      },
-      {
-        "link": "济沅",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/济沅.md"
-      },
-      {
-        "link": "阿杰",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/阿杰.md"
-      },
-      {
-        "link": "演讲、教学和培训",
-        "displayText": "200 - PROJECT/个人职业生涯/演讲、教学和培训",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md"
-      },
-      {
-        "link": "2022-三月",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
-        "link": "RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "RSSHub",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSSHub.md"
-      },
-      {
-        "link": "tiny tiny RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/tiny tiny RSS.md"
-      },
-      {
-        "link": "个人高效学习系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "印象笔记"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "obsidian",
-        "displayText": "黑曜石",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "三体"
-      },
-      {
-        "link": "听过很多大道理，依旧过不好这一生",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/听过很多大道理，依旧过不好这一生.md"
-      },
-      {
-        "link": "听过很多大道理，依旧过不好这一生",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/听过很多大道理，依旧过不好这一生.md"
-      },
-      {
-        "link": "我们不需要被教导，我们只需要被提醒",
-        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/我们不需要被教导，我们只需要被提醒.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "外部资源的单向链接汇总",
-        "link": "2022-三月",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
       }
     ]
   },
@@ -16690,6 +16877,465 @@
     ]
   },
   {
+    "fileName": "2022-三月",
+    "relativePath": "journals/每月每季度总结/2022-三月.md",
+    "headings": [
+      {
+        "heading": "2022-03-11",
+        "level": 1
+      },
+      {
+        "heading": "2022-03-12",
+        "level": 1
+      },
+      {
+        "heading": "灵感/闪念随时记录",
+        "level": 2
+      },
+      {
+        "heading": "工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-13",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-14",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-15",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-16",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-17",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-18",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-19",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-20",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-21",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-22",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-23",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-24",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-25",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-26",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-27",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-28",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-29",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-30",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "2022-03-31",
+        "level": 1
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      },
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "双链笔记与概念挖坑",
+        "relativePath": "journals/每月每季度总结/双链笔记与概念挖坑.md"
+      },
+      {
+        "link": "@卢曼"
+      },
+      {
+        "link": "@费曼"
+      },
+      {
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/文件夹和标签.md"
+      },
+      {
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "link": "flomo",
+        "relativePath": "pages/300 - AREA/flomo.md"
+      },
+      {
+        "link": "思维导图",
+        "relativePath": "pages/300 - AREA/思维导图.md"
+      },
+      {
+        "link": "笔记软件的选择",
+        "relativePath": "journals/每月每季度总结/笔记软件的选择.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/文件夹和标签.md"
+      },
+      {
+        "link": "刚下飞机",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/刚下飞机.md"
+      },
+      {
+        "link": "金句 - MOC",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md"
+      },
+      {
+        "link": "不看新闻",
+        "relativePath": "journals/每月每季度总结/不看新闻.md"
+      },
+      {
+        "link": "个人简历 - MOC",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
+        "link": "URL scheme",
+        "relativePath": "journals/每月每季度总结/URL scheme.md"
+      },
+      {
+        "link": "权力寻租",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/单词库&概念库/权力寻租.md"
+      },
+      {
+        "link": "全球金融市场与互联网公司",
+        "relativePath": "journals/每月每季度总结/全球金融市场与互联网公司.md"
+      },
+      {
+        "link": "视频笔记-【罗翔】我们为什么要读书？",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
+      },
+      {
+        "link": "视频笔记- 9年咨询的storytelling新的",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
+      },
+      {
+        "link": "金句 - MOC",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/金句 - MOC.md"
+      },
+      {
+        "link": "闪念笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
+      },
+      {
+        "link": "番茄工作法",
+        "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md"
+      },
+      {
+        "link": "杂念随思随想",
+        "relativePath": "journals/每月每季度总结/杂念随思随想.md"
+      },
+      {
+        "link": "考研备考经验",
+        "relativePath": "journals/每月每季度总结/考研备考经验.md"
+      },
+      {
+        "link": "如果要给人安利好书",
+        "relativePath": "journals/每月每季度总结/如果要给人安利好书.md"
+      },
+      {
+        "link": "终身学习",
+        "relativePath": "journals/每月每季度总结/终身学习.md"
+      },
+      {
+        "link": "新时代如何开始学习一门新知识",
+        "relativePath": "journals/每月每季度总结/新时代如何开始学习一门新知识.md"
+      },
+      {
+        "link": "收藏者谬误",
+        "relativePath": "pages/400 - RESOURCE/基础学科/心理学/收藏者谬误.md"
+      },
+      {
+        "link": "《刻意练习》",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
+      },
+      {
+        "link": "阿杰",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/阿杰.md"
+      },
+      {
+        "link": "思维导图",
+        "relativePath": "pages/300 - AREA/思维导图.md"
+      },
+      {
+        "link": "tp-link"
+      },
+      {
+        "link": "石墨文档"
+      },
+      {
+        "link": "济沅",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/济沅.md"
+      },
+      {
+        "link": "阿杰",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/阿杰.md"
+      },
+      {
+        "link": "演讲、教学和培训",
+        "displayText": "200 - PROJECT/个人职业生涯/演讲、教学和培训",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md"
+      },
+      {
+        "link": "2022-三月",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "link": "RSS",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
+      },
+      {
+        "link": "RSSHub",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSSHub.md"
+      },
+      {
+        "link": "tiny tiny RSS",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/tiny tiny RSS.md"
+      },
+      {
+        "link": "个人高效学习系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "印象笔记"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "obsidian",
+        "displayText": "黑曜石",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "三体"
+      },
+      {
+        "link": "听过很多大道理，依旧过不好这一生",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/听过很多大道理，依旧过不好这一生.md"
+      },
+      {
+        "link": "听过很多大道理，依旧过不好这一生",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/听过很多大道理，依旧过不好这一生.md"
+      },
+      {
+        "link": "我们不需要被教导，我们只需要被提醒",
+        "relativePath": "pages/400 - RESOURCE/知识原子库/金句库/我们不需要被教导，我们只需要被提醒.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "外部资源的单向链接汇总",
+        "link": "2022-三月",
+        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+      }
+    ]
+  },
+  {
+    "fileName": "常用icon",
+    "relativePath": "journals/常用icon.md",
+    "links": [
+      {
+        "link": "awesomefont"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-23",
+        "link": "常用icon",
+        "relativePath": "journals/2022-05-23.md"
+      }
+    ]
+  },
+  {
     "fileName": "Index",
     "relativePath": "journals/Index.md",
     "frontmatter": {
@@ -16711,13 +17357,9 @@
     }
   },
   {
-    "fileName": "2022-05-20",
-    "relativePath": "journals/2022-05-20.md",
+    "fileName": "2022-05-23",
+    "relativePath": "journals/2022-05-23.md",
     "headings": [
-      {
-        "heading": "2022-05-20",
-        "level": 1
-      },
       {
         "heading": "今天的工作日志",
         "level": 2
@@ -16725,6 +17367,39 @@
       {
         "heading": "今天的灵感或闪念",
         "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "常用icon",
+        "relativePath": "journals/常用icon.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "BRAT-log",
+        "link": "2022-05-23",
+        "relativePath": "BRAT-log.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-22",
+    "relativePath": "journals/2022-05-22.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "打野",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/打野.md"
       }
     ]
   },
@@ -16747,13 +17422,9 @@
     ]
   },
   {
-    "fileName": "2022-05-19",
-    "relativePath": "journals/2022-05-19.md",
+    "fileName": "2022-05-20",
+    "relativePath": "journals/2022-05-20.md",
     "headings": [
-      {
-        "heading": "2022-05-19",
-        "level": 1
-      },
       {
         "heading": "今天的工作日志",
         "level": 2
@@ -16761,6 +17432,26 @@
       {
         "heading": "今天的灵感或闪念",
         "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-19",
+    "relativePath": "journals/2022-05-19.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "王者荣耀",
+        "relativePath": "pages/400 - RESOURCE/游戏笔记/王者荣耀.md"
       }
     ]
   },
@@ -17004,6 +17695,16 @@
         "fileName": "contents",
         "link": "README",
         "relativePath": "pages/contents.md"
+      }
+    ]
+  },
+  {
+    "fileName": "BRAT-log",
+    "relativePath": "BRAT-log.md",
+    "links": [
+      {
+        "link": "2022-05-23",
+        "relativePath": "journals/2022-05-23.md"
       }
     ]
   }

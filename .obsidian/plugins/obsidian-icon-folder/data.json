@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "🗺",
-      "🗣",
-      "⏩",
-      "Fab42Group",
-      "📹",
-      "📖",
-      "🖥️",
-      "🎵",
+      "FabWeixin",
+      "📍",
       "FasNotesMedical",
-      "📍"
+      "🎵",
+      "🖥️",
+      "📖",
+      "📹",
+      "Fab42Group",
+      "⏩",
+      "🗣"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -69,5 +69,6 @@
   "pages/000 - INDEX": "📇",
   "pages/000 - INDEX/最近编辑、最近创建、最近任务、回顾记忆.md": "⏳",
   "pages/000 - INDEX/INDEX根索引 - MOC.md": "🗺",
-  "pages/contents.md": "📍"
+  "pages/contents.md": "📍",
+  "pages/400 - RESOURCE/书影音笔记/微信读书同步": "FabWeixin"
 }

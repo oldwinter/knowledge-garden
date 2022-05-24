@@ -1,0 +1,2 @@
+- [Lucide](https://lucide.dev/)
+- [[awesomefont]]
