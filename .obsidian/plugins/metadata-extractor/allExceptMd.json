@@ -37,16 +37,20 @@
       "relativePath": "journals/每月每季度总结"
     },
     {
+      "name": "000 - INBOX",
+      "relativePath": "pages/000 - INBOX"
+    },
+    {
       "name": "200 - PROJECT",
       "relativePath": "pages/200 - PROJECT"
     },
     {
-      "name": "300 - AREA",
-      "relativePath": "pages/300 - AREA"
-    },
-    {
       "name": "400 - RESOURCE",
       "relativePath": "pages/400 - RESOURCE"
+    },
+    {
+      "name": "300 - AREA",
+      "relativePath": "pages/300 - AREA"
     },
     {
       "name": "500 - ARCHIVE",
@@ -57,10 +61,6 @@
       "relativePath": "templates/dict"
     },
     {
-      "name": "个人职业生涯",
-      "relativePath": "pages/200 - PROJECT/个人职业生涯"
-    },
-    {
       "name": "云计算",
       "relativePath": "pages/200 - PROJECT/云计算"
     },
@@ -69,24 +69,12 @@
       "relativePath": "pages/200 - PROJECT/我的开源项目"
     },
     {
+      "name": "个人职业生涯",
+      "relativePath": "pages/200 - PROJECT/个人职业生涯"
+    },
+    {
       "name": "项目管理",
       "relativePath": "pages/200 - PROJECT/项目管理"
-    },
-    {
-      "name": "人+科技融合",
-      "relativePath": "pages/300 - AREA/人+科技融合"
-    },
-    {
-      "name": "沟通与表达",
-      "relativePath": "pages/300 - AREA/沟通与表达"
-    },
-    {
-      "name": "知识管理",
-      "relativePath": "pages/300 - AREA/知识管理"
-    },
-    {
-      "name": "运动与健康",
-      "relativePath": "pages/300 - AREA/运动与健康"
     },
     {
       "name": "书影音笔记",
@@ -109,6 +97,22 @@
       "relativePath": "pages/400 - RESOURCE/知识原子库"
     },
     {
+      "name": "人+科技融合",
+      "relativePath": "pages/300 - AREA/人+科技融合"
+    },
+    {
+      "name": "沟通与表达",
+      "relativePath": "pages/300 - AREA/沟通与表达"
+    },
+    {
+      "name": "知识管理",
+      "relativePath": "pages/300 - AREA/知识管理"
+    },
+    {
+      "name": "运动与健康",
+      "relativePath": "pages/300 - AREA/运动与健康"
+    },
+    {
       "name": "已发布长文",
       "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
@@ -119,22 +123,6 @@
     {
       "name": "常用命令行工具",
       "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具"
-    },
-    {
-      "name": "个人效率系统打造",
-      "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造"
-    },
-    {
-      "name": "必备软件",
-      "relativePath": "pages/300 - AREA/人+科技融合/必备软件"
-    },
-    {
-      "name": "notion学习笔记",
-      "relativePath": "pages/300 - AREA/知识管理/notion学习笔记"
-    },
-    {
-      "name": "obsidian学习笔记",
-      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
     },
     {
       "name": "微信读书同步",
@@ -205,6 +193,22 @@
       "relativePath": "pages/400 - RESOURCE/知识原子库/金句库"
     },
     {
+      "name": "个人效率系统打造",
+      "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造"
+    },
+    {
+      "name": "必备软件",
+      "relativePath": "pages/300 - AREA/人+科技融合/必备软件"
+    },
+    {
+      "name": "notion学习笔记",
+      "relativePath": "pages/300 - AREA/知识管理/notion学习笔记"
+    },
+    {
+      "name": "obsidian学习笔记",
+      "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记"
+    },
+    {
       "name": "个人成长",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长"
     },
@@ -227,10 +231,6 @@
     {
       "name": "虚构类读物",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
-    },
-    {
-      "name": "000 - INBOX",
-      "relativePath": "pages/000 - INBOX"
     }
   ],
   "nonMdFiles": [
@@ -280,14 +280,14 @@
       "relativePath": "assets/Pasted Image 20220320203031_118.png"
     },
     {
-      "name": "Pasted Image 20220320203200_352.png",
-      "basename": "Pasted Image 20220320203200_352",
-      "relativePath": "assets/Pasted Image 20220320203200_352.png"
-    },
-    {
       "name": "Pasted Image 20220423221352.jpeg",
       "basename": "Pasted Image 20220423221352",
       "relativePath": "assets/Pasted Image 20220423221352.jpeg"
+    },
+    {
+      "name": "Pasted Image 20220320203200_352.png",
+      "basename": "Pasted Image 20220320203200_352",
+      "relativePath": "assets/Pasted Image 20220320203200_352.png"
     },
     {
       "name": "Pasted Image 20220428150722.png",
