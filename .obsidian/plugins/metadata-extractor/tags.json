@@ -11,7 +11,7 @@
   },
   {
     "tag": "评论/少数派",
-    "tagCount": 17,
+    "tagCount": 18,
     "relativePaths": [
       "pages/000 - INBOX/隐私保护.md",
       "pages/000 - INBOX/文件夹和标签.md",
@@ -19,6 +19,7 @@
       "pages/000 - INBOX/双链笔记与知识图谱.md",
       "pages/000 - INBOX/多维表和excel有什么不同.md",
       "pages/000 - INBOX/爱情的本来模样.md",
+      "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
       "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md",
       "pages/300 - AREA/知识管理/计划和回顾.md",
       "pages/300 - AREA/知识管理/notion学习笔记/notion.md",
@@ -68,6 +69,14 @@
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布长文/写作规划看板 - MOC.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+    ]
+  },
+  {
+    "tag": "对话/微信",
+    "tagCount": 8,
+    "relativePaths": [
+      "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
+      "journals/每月每季度总结/2022-五月.md"
     ]
   },
   {
@@ -207,13 +216,6 @@
     "relativePaths": [
       "pages/300 - AREA/人+科技融合/视频制作.md",
       "pages/200 - PROJECT/个人职业生涯/明文数据.md"
-    ]
-  },
-  {
-    "tag": "对话/微信",
-    "tagCount": 7,
-    "relativePaths": [
-      "journals/每月每季度总结/2022-五月.md"
     ]
   },
   {

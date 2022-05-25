@@ -188,12 +188,116 @@
     ]
   },
   {
-    "fileName": "动态%2Fv2ex",
-    "relativePath": "pages/动态%2Fv2ex.md"
+    "fileName": "INDEX根索引 - MOC",
+    "relativePath": "pages/INDEX根索引 - MOC.md",
+    "headings": [
+      {
+        "heading": "记笔记原则",
+        "level": 2
+      },
+      {
+        "heading": "方法和指导思想",
+        "level": 2
+      },
+      {
+        "heading": "进行中 - Project",
+        "level": 2
+      },
+      {
+        "heading": "短中期跟进 - Area",
+        "level": 2
+      },
+      {
+        "heading": "原子化 - Resource",
+        "level": 2
+      },
+      {
+        "heading": "归档 - Archive",
+        "level": 2
+      },
+      {
+        "heading": "未完成tasks",
+        "level": 2
+      },
+      {
+        "heading": "已完成tasks",
+        "level": 2
+      },
+      {
+        "heading": "最近事项",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "自上而下"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "PARA和MOC法分类笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法分类笔记.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "万物互联",
+        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "contents",
+        "relativePath": "pages/contents.md"
+      },
+      {
+        "link": "最近编辑、最近创建、最近任务、回顾记忆",
+        "relativePath": "pages/最近编辑、最近创建、最近任务、回顾记忆.md"
+      }
+    ]
   },
   {
-    "fileName": "300 - AREA%2F知识管理%2Fobsidian学习笔记%2F平台+插件",
-    "relativePath": "pages/300 - AREA%2F知识管理%2Fobsidian学习笔记%2F平台+插件.md"
+    "fileName": "最近编辑、最近创建、最近任务、回顾记忆",
+    "relativePath": "pages/最近编辑、最近创建、最近任务、回顾记忆.md",
+    "headings": [
+      {
+        "heading": "最近编辑",
+        "level": 3
+      },
+      {
+        "heading": "三天内创建的笔记",
+        "level": 3
+      },
+      {
+        "heading": "TODO",
+        "level": 3
+      },
+      {
+        "heading": "回顾记忆",
+        "level": 3
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "INDEX根索引 - MOC",
+        "link": "最近编辑、最近创建、最近任务、回顾记忆",
+        "relativePath": "pages/INDEX根索引 - MOC.md"
+      }
+    ]
   },
   {
     "fileName": "URL scheme",
@@ -981,131 +1085,23 @@
     ]
   },
   {
-    "fileName": "最近编辑、最近创建、最近任务、回顾记忆",
-    "relativePath": "pages/000 - INBOX/最近编辑、最近创建、最近任务、回顾记忆.md",
-    "headings": [
-      {
-        "heading": "最近编辑",
-        "level": 3
-      },
-      {
-        "heading": "三天内创建的笔记",
-        "level": 3
-      },
-      {
-        "heading": "TODO",
-        "level": 3
-      },
-      {
-        "heading": "回顾记忆",
-        "level": 3
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "INDEX根索引 - MOC",
-        "link": "最近编辑、最近创建、最近任务、回顾记忆",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
-      }
-    ]
-  },
-  {
-    "fileName": "INDEX根索引 - MOC",
-    "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md",
-    "headings": [
-      {
-        "heading": "记笔记原则",
-        "level": 2
-      },
-      {
-        "heading": "方法和指导思想",
-        "level": 2
-      },
-      {
-        "heading": "进行中 - Project",
-        "level": 2
-      },
-      {
-        "heading": "短中期跟进 - Area",
-        "level": 2
-      },
-      {
-        "heading": "原子化 - Resource",
-        "level": 2
-      },
-      {
-        "heading": "归档 - Archive",
-        "level": 2
-      },
-      {
-        "heading": "未完成tasks",
-        "level": 2
-      },
-      {
-        "heading": "已完成tasks",
-        "level": 2
-      },
-      {
-        "heading": "最近事项",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "自上而下"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "PARA和MOC法分类笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法分类笔记.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "万物互联",
-        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "contents",
-        "relativePath": "pages/contents.md"
-      },
-      {
-        "link": "最近编辑、最近创建、最近任务、回顾记忆",
-        "relativePath": "pages/000 - INBOX/最近编辑、最近创建、最近任务、回顾记忆.md"
-      }
-    ]
-  },
-  {
     "fileName": "contents",
     "relativePath": "pages/contents.md",
     "links": [
       {
         "link": "README",
         "relativePath": "README.md"
+      },
+      {
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       }
     ],
     "backlinks": [
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "contents",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       }
     ]
   },
@@ -1562,6 +1558,10 @@
   {
     "fileName": "外部资源的单向链接汇总",
     "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
+    "tags": [
+      "评论/少数派",
+      "对话/微信"
+    ],
     "headings": [
       {
         "heading": "devonthink的资源引用",
@@ -1582,21 +1582,24 @@
     ],
     "links": [
       {
-        "link": "2022-05-02"
+        "link": "2022-五月",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
       },
       {
-        "link": "2022-05-11"
-      },
-      {
-        "link": "2022-三月",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
+        "link": "如何高效开会",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
       },
       {
         "link": "个人工作流",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
       },
       {
-        "link": "2022-04-28"
+        "link": "有用的github开源库搜集",
+        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md"
+      },
+      {
+        "link": "README",
+        "relativePath": "README.md"
       }
     ],
     "backlinks": [
@@ -3533,6 +3536,11 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "外部资源的单向链接汇总",
+        "link": "有用的github开源库搜集",
+        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+      },
       {
         "fileName": "2022-五月",
         "link": "有用的github开源库搜集",
@@ -6993,6 +7001,11 @@
         "heading": "本书评论",
         "level": 1
       }
+    ],
+    "links": [
+      {
+        "link": "刻意练习"
+      }
     ]
   },
   {
@@ -8141,7 +8154,7 @@
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "双链笔记",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
@@ -9870,7 +9883,7 @@
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "PARA和MOC法分类笔记",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "卡片盒笔记法 - Zettelkasten",
@@ -10575,7 +10588,7 @@
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "滴答清单",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
@@ -10665,12 +10678,13 @@
         "end": {
           "line": 3,
           "col": 3,
-          "offset": 43
+          "offset": 57
         }
       }
     },
     "aliases": [
-      "PIM与PKM结合的完整工作流"
+      "PIM与PKM结合的完整工作流",
+      "工作和生活的效率体系建设"
     ],
     "headings": [
       {
@@ -10762,6 +10776,12 @@
         "fileName": "个人知识管理",
         "link": "数字时代如何更好地工作与生活 - MOC",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "fileName": "README",
+        "link": "数字时代如何更好地工作与生活 - MOC",
+        "relativePath": "README.md",
+        "displayText": "工作和生活的效率体系建设"
       }
     ]
   },
@@ -11237,6 +11257,16 @@
     ],
     "backlinks": [
       {
+        "fileName": "INDEX根索引 - MOC",
+        "link": "obsidian",
+        "relativePath": "pages/INDEX根索引 - MOC.md"
+      },
+      {
+        "fileName": "INDEX根索引 - MOC",
+        "link": "obsidian",
+        "relativePath": "pages/INDEX根索引 - MOC.md"
+      },
+      {
         "fileName": "笔记软件的选择",
         "link": "obsidian",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
@@ -11246,16 +11276,6 @@
         "link": "obsidian",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md",
         "displayText": "黑曜石"
-      },
-      {
-        "fileName": "INDEX根索引 - MOC",
-        "link": "obsidian",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
-      },
-      {
-        "fileName": "INDEX根索引 - MOC",
-        "link": "obsidian",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
@@ -12407,7 +12427,7 @@
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "自下而上",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "个人知识管理",
@@ -13422,6 +13442,11 @@
       }
     ],
     "backlinks": [
+      {
+        "fileName": "contents",
+        "link": "个人知识管理",
+        "relativePath": "pages/contents.md"
+      },
       {
         "fileName": "你还在打造数字花园？不妨来看看我的数字闺房",
         "link": "个人知识管理",
@@ -14628,7 +14653,7 @@
       {
         "fileName": "INDEX根索引 - MOC",
         "link": "万物互联",
-        "relativePath": "pages/000 - INBOX/INDEX根索引 - MOC.md"
+        "relativePath": "pages/INDEX根索引 - MOC.md"
       },
       {
         "fileName": "obsidian插件",
@@ -16141,6 +16166,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "外部资源的单向链接汇总",
+        "link": "如何高效开会",
+        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "如何高效开会",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -16675,6 +16705,87 @@
     ]
   },
   {
+    "fileName": "2022-05-29",
+    "relativePath": "journals/2022-05-29.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-28",
+    "relativePath": "journals/2022-05-28.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-27",
+    "relativePath": "journals/2022-05-27.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-26",
+    "relativePath": "journals/2022-05-26.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-25",
+    "relativePath": "journals/2022-05-25.md",
+    "headings": [
+      {
+        "heading": "今天的工作日志",
+        "level": 2
+      },
+      {
+        "heading": "今天的灵感或闪念",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "内网穿透",
+    "relativePath": "journals/内网穿透.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-24",
+        "link": "内网穿透",
+        "relativePath": "journals/2022-05-24.md"
+      }
+    ]
+  },
+  {
     "fileName": "2022-05-24",
     "relativePath": "journals/2022-05-24.md",
     "headings": [
@@ -16685,6 +16796,15 @@
       {
         "heading": "今天的灵感或闪念",
         "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "人生赢家"
+      },
+      {
+        "link": "内网穿透",
+        "relativePath": "journals/内网穿透.md"
       }
     ]
   },
@@ -17516,6 +17636,13 @@
         "link": "行政",
         "relativePath": "pages/400 - RESOURCE/行政.md"
       }
+    ],
+    "backlinks": [
+      {
+        "fileName": "外部资源的单向链接汇总",
+        "link": "2022-五月",
+        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+      }
     ]
   },
   {
@@ -17895,13 +18022,6 @@
         "link": "笔记软件的选择",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
       }
-    ],
-    "backlinks": [
-      {
-        "fileName": "外部资源的单向链接汇总",
-        "link": "2022-三月",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
-      }
     ]
   },
   {
@@ -18144,6 +18264,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       },
       {
+        "link": "数字时代如何更好地工作与生活 - MOC",
+        "displayText": "工作和生活的效率体系建设",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+      },
+      {
         "link": "个人信息管理系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
       },
@@ -18189,6 +18314,11 @@
         "fileName": "contents",
         "link": "README",
         "relativePath": "pages/contents.md"
+      },
+      {
+        "fileName": "外部资源的单向链接汇总",
+        "link": "README",
+        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
       }
     ]
   }

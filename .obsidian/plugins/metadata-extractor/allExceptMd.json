@@ -323,6 +323,11 @@
       "name": "pages-metadata.edn",
       "basename": "pages-metadata",
       "relativePath": "logseq/pages-metadata.edn"
+    },
+    {
+      "name": "明朝那些事儿.epub",
+      "basename": "明朝那些事儿",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/明朝那些事儿.epub"
     }
   ]
 }
