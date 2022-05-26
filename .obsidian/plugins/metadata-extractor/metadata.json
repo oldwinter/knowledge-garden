@@ -1,195 +1,5 @@
 [
   {
-    "fileName": "README",
-    "relativePath": "export/advanced-slides/plugin/chalkboard/README.md",
-    "headings": [
-      {
-        "heading": "Chalkboard",
-        "level": 1
-      },
-      {
-        "heading": "Installation",
-        "level": 2
-      },
-      {
-        "heading": "Usage",
-        "level": 2
-      },
-      {
-        "heading": "Mouse or touch",
-        "level": 3
-      },
-      {
-        "heading": "Keyboard",
-        "level": 3
-      },
-      {
-        "heading": "Playback",
-        "level": 2
-      },
-      {
-        "heading": "Multiplexing",
-        "level": 2
-      },
-      {
-        "heading": "PDF-Export",
-        "level": 2
-      },
-      {
-        "heading": "Configuration",
-        "level": 2
-      },
-      {
-        "heading": "License",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "README",
-    "relativePath": "export/advanced-slides/plugin/chart/README.md",
-    "headings": [
-      {
-        "heading": "Chart",
-        "level": 1
-      },
-      {
-        "heading": "Installation",
-        "level": 2
-      },
-      {
-        "heading": "Configuration",
-        "level": 2
-      },
-      {
-        "heading": "Usage",
-        "level": 2
-      },
-      {
-        "heading": "License",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "README",
-    "relativePath": "export/advanced-slides/plugin/customcontrols/README.md",
-    "headings": [
-      {
-        "heading": "Custom controls",
-        "level": 1
-      },
-      {
-        "heading": "Installation",
-        "level": 2
-      },
-      {
-        "heading": "Configuration",
-        "level": 2
-      },
-      {
-        "heading": "License",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "README",
-    "relativePath": "export/advanced-slides/plugin/menu/README.md",
-    "headings": [
-      {
-        "heading": "reveal.js-menu",
-        "level": 1
-      },
-      {
-        "heading": "Installation",
-        "level": 2
-      },
-      {
-        "heading": "Bower",
-        "level": 3
-      },
-      {
-        "heading": "npm",
-        "level": 3
-      },
-      {
-        "heading": "Manual",
-        "level": 3
-      },
-      {
-        "heading": "Configuration",
-        "level": 2
-      },
-      {
-        "heading": "Themes Stylesheet",
-        "level": 3
-      },
-      {
-        "heading": "Slide Titles",
-        "level": 2
-      },
-      {
-        "heading": "1. The section's `data-menu-title` attribute.",
-        "level": 6
-      },
-      {
-        "heading": "2. Any element with the class `menu-title`.",
-        "level": 6
-      },
-      {
-        "heading": "3. The first heading found or a custom element selector",
-        "level": 6
-      },
-      {
-        "heading": "4. No title is provided",
-        "level": 6
-      },
-      {
-        "heading": "Custom Menu Panels",
-        "level": 2
-      },
-      {
-        "heading": "Custom slide menu items",
-        "level": 6
-      },
-      {
-        "heading": "Ready Event",
-        "level": 2
-      },
-      {
-        "heading": "API",
-        "level": 2
-      },
-      {
-        "heading": "Compatibility",
-        "level": 2
-      },
-      {
-        "heading": "License",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "CONTRIBUTING",
-    "relativePath": "export/advanced-slides/plugin/menu/CONTRIBUTING.md",
-    "headings": [
-      {
-        "heading": "Contributing",
-        "level": 2
-      },
-      {
-        "heading": "Bug Reports",
-        "level": 3
-      },
-      {
-        "heading": "Pull Requests",
-        "level": 3
-      }
-    ]
-  },
-  {
     "fileName": "视频笔记模板",
     "relativePath": "templates/视频笔记模板.md",
     "headings": [
@@ -376,6 +186,34 @@
         "level": 2
       }
     ]
+  },
+  {
+    "fileName": "obsidian 是可以用一辈子不换的笔记软件吗%23^19a9eb",
+    "relativePath": "pages/obsidian 是可以用一辈子不换的笔记软件吗%23^19a9eb.md"
+  },
+  {
+    "fileName": "个人知识管理%7C『入不孵出』PKM系统",
+    "relativePath": "pages/个人知识管理%7C『入不孵出』PKM系统.md"
+  },
+  {
+    "fileName": "个人输出发布系统%7C输出系统",
+    "relativePath": "pages/个人输出发布系统%7C输出系统.md"
+  },
+  {
+    "fileName": "Pasted Image 20220320203200_352.png",
+    "relativePath": "pages/Pasted Image 20220320203200_352.png.md"
+  },
+  {
+    "fileName": "Pasted Image 20220320191818_566.png",
+    "relativePath": "pages/Pasted Image 20220320191818_566.png.md"
+  },
+  {
+    "fileName": "Pasted Image 20220320191102_767.png",
+    "relativePath": "pages/Pasted Image 20220320191102_767.png.md"
+  },
+  {
+    "fileName": "Pasted Image 20220320190802_762.png",
+    "relativePath": "pages/Pasted Image 20220320190802_762.png.md"
   },
   {
     "fileName": "最近编辑、最近创建、最近任务、回顾记忆",
@@ -2049,6 +1887,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "zotero",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-四月",
         "link": "zotero",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -3119,6 +2962,11 @@
         "fileName": "mac必备软件",
         "link": "bartender",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "bartender",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -3170,6 +3018,16 @@
         "fileName": "《卡片笔记写作法》",
         "link": "anki",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "anki",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "anki",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -3529,6 +3387,11 @@
         "fileName": "个人信息管理系统",
         "link": "RSS",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "RSS",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -3899,6 +3762,11 @@
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "notion",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "notion",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -4106,6 +3974,11 @@
         "fileName": "mac必备软件",
         "link": "思维导图",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "思维导图",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       },
       {
         "fileName": "2022-四月",
@@ -4348,6 +4221,11 @@
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "滴答清单",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "滴答清单",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -4484,6 +4362,27 @@
         "link": "数字时代如何更好地工作与生活 - MOC",
         "relativePath": "README.md",
         "displayText": "工作和生活的效率体系建设"
+      }
+    ]
+  },
+  {
+    "fileName": "沙拉查词",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/沙拉查词.md",
+    "backlinks": [
+      {
+        "fileName": "popclip",
+        "link": "沙拉查词",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
+      },
+      {
+        "fileName": "mac必备软件",
+        "link": "沙拉查词",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "沙拉查词",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -4808,6 +4707,11 @@
         "fileName": "个人搜索系统",
         "link": "个性化推荐",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "个性化推荐",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -4844,7 +4748,8 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
       },
       {
-        "link": "沙拉查词"
+        "link": "沙拉查词",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/沙拉查词.md"
       },
       {
         "link": "devonthink",
@@ -4861,6 +4766,11 @@
         "fileName": "bob",
         "link": "popclip",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "popclip",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -4872,6 +4782,11 @@
         "fileName": "mac必备软件",
         "link": "one switch",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "one switch",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -5027,6 +4942,11 @@
         "displayText": "黑曜石"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "README",
         "link": "obsidian",
         "relativePath": "README.md"
@@ -5139,7 +5059,8 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
       },
       {
-        "link": "沙拉查词"
+        "link": "沙拉查词",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/沙拉查词.md"
       },
       {
         "link": "anki",
@@ -5353,6 +5274,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "logseq",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "logseq",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -5382,6 +5308,11 @@
         "fileName": "mac必备软件",
         "link": "iTerm",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "iTerm",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -5393,6 +5324,11 @@
         "fileName": "mac必备软件",
         "link": "expanso",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "expanso",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -5477,6 +5413,12 @@
         "link": "chrome",
         "relativePath": "pages/300 - AREA/PWA - Progressive Web Apps.md",
         "displayText": "edge"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "chrome",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md",
+        "displayText": "edge浏览器"
       }
     ]
   },
@@ -5503,6 +5445,11 @@
         "fileName": "mac必备软件",
         "link": "bob",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "bob",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -5549,6 +5496,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "V2rayU",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-05-26",
         "link": "V2rayU",
         "relativePath": "journals/2022-05-26.md"
@@ -5563,6 +5515,11 @@
         "fileName": "mac必备软件",
         "link": "Fig",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "Fig",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -5574,6 +5531,11 @@
         "fileName": "mac必备软件",
         "link": "BetterTouchTool",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "BetterTouchTool",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -6380,6 +6342,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "数字花园",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "README",
         "link": "数字花园",
         "relativePath": "README.md"
@@ -6501,6 +6468,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "搜索一切",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "数字时代如何更好地工作与生活 - 图",
         "link": "搜索一切",
         "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md"
@@ -6548,6 +6520,11 @@
         "link": "搜狗输入法",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md",
         "displayText": "文字录入"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "搜狗输入法",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -7006,6 +6983,12 @@
         "relativePath": "journals/每月每季度总结/2022-三月.md"
       },
       {
+        "fileName": "数字时代如何更好地工作与生活 - 图",
+        "link": "个人知识管理",
+        "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md",
+        "displayText": "『入不孵出』PKM系统"
+      },
+      {
         "fileName": "README",
         "link": "个人知识管理",
         "relativePath": "README.md",
@@ -7311,6 +7294,11 @@
         "fileName": "数字时代如何更好地工作与生活 - MOC",
         "link": "个人工作流",
         "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_17.166Z",
+        "link": "个人工作流",
+        "relativePath": "logseq/bak/pages/500 - ARCHIVE/外部资源的单向链接汇总/2022-05-26T15_41_17.166Z.md"
       }
     ]
   },
@@ -7584,6 +7572,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "个人信息管理系统",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "README",
         "link": "个人信息管理系统",
         "relativePath": "README.md"
@@ -7670,6 +7663,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "个人任务管理系统",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "README",
         "link": "个人任务管理系统",
         "relativePath": "README.md"
@@ -7684,6 +7682,11 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "zsh",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "zsh",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -7695,6 +7698,11 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "z",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "z",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -7908,6 +7916,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "linux常用命令行 - MOC",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "linux常用命令行 - MOC",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -7941,6 +7954,12 @@
         "link": "linux命令行测速 - speedtest",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md",
         "displayText": "speedtest"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "linux命令行测速 - speedtest",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md",
+        "displayText": "speedtest"
       }
     ]
   },
@@ -7952,6 +7971,12 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "homebrew",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md",
+        "displayText": "brew"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "homebrew",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md",
         "displayText": "brew"
       }
     ]
@@ -8028,6 +8053,11 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "docker compose",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "docker compose",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -8172,6 +8202,11 @@
         "fileName": "个人搜索系统",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "alfred",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -8433,6 +8468,11 @@
         "link": "obs",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/录屏和直播推流.md",
         "displayText": "pages/300 - AREA/人+科技融合/obs"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "obs",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -8515,6 +8555,11 @@
         "relativePath": "pages/400 - RESOURCE/基础学科/心理学/收藏者谬误.md"
       },
       {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "devonthink",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
         "fileName": "2022-五月",
         "link": "devonthink",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -8550,6 +8595,16 @@
         "fileName": "mac必备软件",
         "link": "PicGo",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "PicGo",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "PicGo",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -8602,6 +8657,11 @@
         "fileName": "mac必备软件",
         "link": "AppleScript",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "AppleScript",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       }
     ]
   },
@@ -10744,6 +10804,11 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "powershell",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "powershell",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       },
       {
         "fileName": "2022-五月",
@@ -15714,6 +15779,11 @@
         "fileName": "linux常用命令行 - MOC",
         "link": "kubectl",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "kubectl",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -15850,6 +15920,11 @@
         "fileName": "github",
         "link": "Git",
         "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "Git",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -15882,6 +15957,11 @@
         "fileName": "个人简历 - MOC",
         "link": "vscode",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.178Z",
+        "link": "vscode",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md"
       },
       {
         "fileName": "README",
@@ -16079,6 +16159,11 @@
         "fileName": "个人简历 - MOC",
         "link": "docker",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md"
+      },
+      {
+        "fileName": "2022-05-26T15_41_19.182Z",
+        "link": "docker",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md"
       }
     ]
   },
@@ -16911,6 +16996,493 @@
         "fileName": "2022-四月",
         "link": "ADHD - 多动症",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-26T15_41_19.178Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-26T15_41_19.178Z.md",
+    "links": [
+      {
+        "link": "bartender",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/bartender.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "istat menus"
+      },
+      {
+        "link": "iTerm",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/iTerm.md"
+      },
+      {
+        "link": "BetterTouchTool",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/BetterTouchTool.md"
+      },
+      {
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "link": "搜索一切",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切.md"
+      },
+      {
+        "link": "keyboard maestro"
+      },
+      {
+        "link": "V2rayU",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/V2rayU.md"
+      },
+      {
+        "link": "翻墙"
+      },
+      {
+        "link": "onedrive"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "个人任务管理系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+      },
+      {
+        "link": "搜狗输入法",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md"
+      },
+      {
+        "link": "PicGo",
+        "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "数字花园",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
+      },
+      {
+        "link": "chrome",
+        "displayText": "edge浏览器",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
+      },
+      {
+        "link": "坚果云"
+      },
+      {
+        "link": "webdev"
+      },
+      {
+        "link": "anki",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
+      },
+      {
+        "link": "logseq",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
+      },
+      {
+        "link": "bob",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
+      },
+      {
+        "link": "沙拉查词",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/沙拉查词.md"
+      },
+      {
+        "link": "anki",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "个人信息管理系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "link": "obs",
+        "relativePath": "pages/300 - AREA/人+科技融合/obs.md"
+      },
+      {
+        "link": "lx-music-desktop"
+      },
+      {
+        "link": "reeder"
+      },
+      {
+        "link": "RSS",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
+      },
+      {
+        "link": "zotero",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
+      },
+      {
+        "link": "cleanMyMac X"
+      },
+      {
+        "link": "office"
+      },
+      {
+        "link": "xmind"
+      },
+      {
+        "link": "思维导图",
+        "relativePath": "pages/300 - AREA/思维导图.md"
+      },
+      {
+        "link": "draw.io"
+      },
+      {
+        "link": "permute"
+      },
+      {
+        "link": "看图"
+      },
+      {
+        "link": "GIF Brewery"
+      },
+      {
+        "link": "presentify"
+      },
+      {
+        "link": "keycastr"
+      },
+      {
+        "link": "简悦·同步助手"
+      },
+      {
+        "link": "hook"
+      },
+      {
+        "link": "iina"
+      },
+      {
+        "link": "Fig",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md"
+      },
+      {
+        "link": "snipaste"
+      },
+      {
+        "link": "altTab"
+      },
+      {
+        "link": "hazeover"
+      },
+      {
+        "link": "bandizip"
+      },
+      {
+        "link": "apifox"
+      },
+      {
+        "link": "微信"
+      },
+      {
+        "link": "one switch",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/one switch.md"
+      },
+      {
+        "link": "PicGo",
+        "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
+      },
+      {
+        "link": "popclip",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
+      },
+      {
+        "link": "网易云音乐"
+      },
+      {
+        "link": "个性化推荐",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/个性化推荐.md"
+      },
+      {
+        "link": "百度网盘"
+      },
+      {
+        "link": "阿里云盘"
+      },
+      {
+        "link": "expanso",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/expanso.md"
+      },
+      {
+        "link": "wireshark"
+      },
+      {
+        "link": "telegram"
+      },
+      {
+        "link": "koodo reader"
+      },
+      {
+        "link": "menubarX"
+      },
+      {
+        "link": "FigrCollage"
+      },
+      {
+        "link": "vmware"
+      },
+      {
+        "link": "Movist Pro"
+      },
+      {
+        "link": "迅雷"
+      },
+      {
+        "link": "transmit"
+      },
+      {
+        "link": "loopback"
+      },
+      {
+        "link": "houdahspot"
+      },
+      {
+        "link": "proxifier"
+      },
+      {
+        "link": "iptables"
+      },
+      {
+        "link": "Royal TSX"
+      },
+      {
+        "link": "dash"
+      },
+      {
+        "link": "keycue"
+      },
+      {
+        "link": "clash"
+      },
+      {
+        "link": "navicat"
+      },
+      {
+        "link": "linux常用命令行 - MOC",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC.md"
+      },
+      {
+        "link": "AppleScript",
+        "relativePath": "pages/300 - AREA/人+科技融合/AppleScript.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-26T15_41_19.182Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行 - MOC/2022-05-26T15_41_19.182Z.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "links": [
+      {
+        "link": "powershell",
+        "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/powershell.md"
+      },
+      {
+        "link": "linux命令行测速 - speedtest",
+        "displayText": "speedtest",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux命令行测速 - speedtest.md"
+      },
+      {
+        "link": "homebrew",
+        "displayText": "brew",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/homebrew.md"
+      },
+      {
+        "link": "zsh",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/zsh.md"
+      },
+      {
+        "link": "ohmyzsh"
+      },
+      {
+        "link": "Git",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
+      },
+      {
+        "link": "curl"
+      },
+      {
+        "link": "tree"
+      },
+      {
+        "link": "wget"
+      },
+      {
+        "link": "z",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/z.md"
+      },
+      {
+        "link": "tldr"
+      },
+      {
+        "link": "iptables"
+      },
+      {
+        "link": "vim"
+      },
+      {
+        "link": "sudo"
+      },
+      {
+        "link": "apt-get"
+      },
+      {
+        "link": "http-server"
+      },
+      {
+        "link": "fzf"
+      },
+      {
+        "link": "thefuck"
+      },
+      {
+        "link": "kubectl",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubectl.md"
+      },
+      {
+        "link": "kubectx"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      },
+      {
+        "link": "docker compose",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/docker compose.md"
+      },
+      {
+        "link": "mackup"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-26T15_41_18.474Z",
+    "relativePath": "logseq/bak/pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-843464/2022-05-26T15_41_18.474Z.md",
+    "frontmatter": {
+      "isbn": 9787111551287,
+      "category": "个人成长-认知思维",
+      "doc_type": "weread-highlights-reviews",
+      "bookId": "843464",
+      "reviewCount": 2,
+      "noteCount": 0,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 128
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 1
+      },
+      {
+        "heading": "高亮划线",
+        "level": 1
+      },
+      {
+        "heading": "读书笔记",
+        "level": 1
+      },
+      {
+        "heading": "“天才”是训练的产物",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书将告诉我们什么",
+        "level": 2
+      },
+      {
+        "heading": "划线评论",
+        "level": 3
+      },
+      {
+        "heading": "本书评论",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-26T15_41_17.166Z",
+    "relativePath": "logseq/bak/pages/500 - ARCHIVE/外部资源的单向链接汇总/2022-05-26T15_41_17.166Z.md",
+    "headings": [
+      {
+        "heading": "devonthink的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "滴答清单的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "notion的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "github的资源引用",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "2022-05-02"
+      },
+      {
+        "link": "2022-05-11"
+      },
+      {
+        "link": "2022-三月",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "link": "个人工作流",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
+      },
+      {
+        "link": "2022-04-28"
       }
     ]
   },
@@ -18220,6 +18792,13 @@
         "link": "笔记软件的选择",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
       }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-26T15_41_17.166Z",
+        "link": "2022-三月",
+        "relativePath": "logseq/bak/pages/500 - ARCHIVE/外部资源的单向链接汇总/2022-05-26T15_41_17.166Z.md"
+      }
     ]
   },
   {
@@ -18440,7 +19019,9 @@
     ],
     "links": [
       {
-        "link": "输入系统"
+        "link": "个人知识管理",
+        "displayText": "『入不孵出』PKM系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       },
       {
         "link": "个人输出发布系统",

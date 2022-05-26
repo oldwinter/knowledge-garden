@@ -173,10 +173,11 @@
 
  :ref/linked-references-collapsed-threshold 50
  :favorites ["个人信息系统涉及的核心软件和云服务"]
- :editor/logical-outdenting? true
+ :editor/logical-outdenting? false
  :publishing/all-pages-public? true
  :graph/settings {:journal? true, :builtin-pages? true}
  :feature/enable-timetracking? true
+ :ui/show-brackets? true
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
  ;; :srs/learning-fraction 0.5
