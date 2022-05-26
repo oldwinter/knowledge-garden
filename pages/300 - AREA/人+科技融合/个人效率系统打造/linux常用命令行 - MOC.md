@@ -2,6 +2,17 @@
 aliases: 
 tags: MOC 
 ---
+- 官方下载pkg安装
+	- [[nodejs]]
+	- [[Golang]]
+	- [[docker]]
+- [[docker compose]]
+- homebrew安装
+	- [[fzf]]
+	- [[thefuck]]
+	- [[tldr]]
+	- [[tree]]
+
 [[powershell]]
 
 第三方
@@ -11,19 +22,17 @@ tags: MOC
 - [[ohmyzsh]]
 - [[Git]]
 - [[curl]]
-- [[tree]]
+
 - [[wget]]
 - [[z]]
-- [[tldr]]
+
 - [[iptables]]
 - [[vim]]
 - [[sudo]]
 - [[apt-get]]
 - [[http-server]]
-- [[fzf]]
-- [[thefuck]]
+
 - [[kubectl|kubectl]]
 - [[kubectx]]
-- [[docker]]
-- [[docker compose]]
+
 - [[mackup]]

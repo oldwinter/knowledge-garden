@@ -1,5 +1,195 @@
 [
   {
+    "fileName": "README",
+    "relativePath": "export/advanced-slides/plugin/chalkboard/README.md",
+    "headings": [
+      {
+        "heading": "Chalkboard",
+        "level": 1
+      },
+      {
+        "heading": "Installation",
+        "level": 2
+      },
+      {
+        "heading": "Usage",
+        "level": 2
+      },
+      {
+        "heading": "Mouse or touch",
+        "level": 3
+      },
+      {
+        "heading": "Keyboard",
+        "level": 3
+      },
+      {
+        "heading": "Playback",
+        "level": 2
+      },
+      {
+        "heading": "Multiplexing",
+        "level": 2
+      },
+      {
+        "heading": "PDF-Export",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "License",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "README",
+    "relativePath": "export/advanced-slides/plugin/chart/README.md",
+    "headings": [
+      {
+        "heading": "Chart",
+        "level": 1
+      },
+      {
+        "heading": "Installation",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "Usage",
+        "level": 2
+      },
+      {
+        "heading": "License",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "README",
+    "relativePath": "export/advanced-slides/plugin/customcontrols/README.md",
+    "headings": [
+      {
+        "heading": "Custom controls",
+        "level": 1
+      },
+      {
+        "heading": "Installation",
+        "level": 2
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "License",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "README",
+    "relativePath": "export/advanced-slides/plugin/menu/README.md",
+    "headings": [
+      {
+        "heading": "reveal.js-menu",
+        "level": 1
+      },
+      {
+        "heading": "Installation",
+        "level": 2
+      },
+      {
+        "heading": "Bower",
+        "level": 3
+      },
+      {
+        "heading": "npm",
+        "level": 3
+      },
+      {
+        "heading": "Manual",
+        "level": 3
+      },
+      {
+        "heading": "Configuration",
+        "level": 2
+      },
+      {
+        "heading": "Themes Stylesheet",
+        "level": 3
+      },
+      {
+        "heading": "Slide Titles",
+        "level": 2
+      },
+      {
+        "heading": "1. The section's `data-menu-title` attribute.",
+        "level": 6
+      },
+      {
+        "heading": "2. Any element with the class `menu-title`.",
+        "level": 6
+      },
+      {
+        "heading": "3. The first heading found or a custom element selector",
+        "level": 6
+      },
+      {
+        "heading": "4. No title is provided",
+        "level": 6
+      },
+      {
+        "heading": "Custom Menu Panels",
+        "level": 2
+      },
+      {
+        "heading": "Custom slide menu items",
+        "level": 6
+      },
+      {
+        "heading": "Ready Event",
+        "level": 2
+      },
+      {
+        "heading": "API",
+        "level": 2
+      },
+      {
+        "heading": "Compatibility",
+        "level": 2
+      },
+      {
+        "heading": "License",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "CONTRIBUTING",
+    "relativePath": "export/advanced-slides/plugin/menu/CONTRIBUTING.md",
+    "headings": [
+      {
+        "heading": "Contributing",
+        "level": 2
+      },
+      {
+        "heading": "Bug Reports",
+        "level": 3
+      },
+      {
+        "heading": "Pull Requests",
+        "level": 3
+      }
+    ]
+  },
+  {
     "fileName": "视频笔记模板",
     "relativePath": "templates/视频笔记模板.md",
     "headings": [
@@ -657,7 +847,8 @@
         "link": "内卷の王"
       },
       {
-        "link": "躺平一族"
+        "link": "躺平与摆烂一族",
+        "relativePath": "journals/躺平与摆烂一族.md"
       },
       {
         "link": "context 切换",
@@ -5339,6 +5530,10 @@
       {
         "heading": "备份配置文件夹",
         "level": 2
+      },
+      {
+        "heading": "自建服务器",
+        "level": 2
       }
     ],
     "backlinks": [
@@ -5352,6 +5547,11 @@
         "fileName": "mac必备软件",
         "link": "V2rayU",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "2022-05-26",
+        "link": "V2rayU",
+        "relativePath": "journals/2022-05-26.md"
       }
     ]
   },
@@ -7615,6 +7815,32 @@
     },
     "links": [
       {
+        "link": "nodejs"
+      },
+      {
+        "link": "Golang"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
+      },
+      {
+        "link": "docker compose",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/docker compose.md"
+      },
+      {
+        "link": "fzf"
+      },
+      {
+        "link": "thefuck"
+      },
+      {
+        "link": "tldr"
+      },
+      {
+        "link": "tree"
+      },
+      {
         "link": "powershell",
         "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学/powershell.md"
       },
@@ -7643,17 +7869,11 @@
         "link": "curl"
       },
       {
-        "link": "tree"
-      },
-      {
         "link": "wget"
       },
       {
         "link": "z",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/z.md"
-      },
-      {
-        "link": "tldr"
       },
       {
         "link": "iptables"
@@ -7671,25 +7891,11 @@
         "link": "http-server"
       },
       {
-        "link": "fzf"
-      },
-      {
-        "link": "thefuck"
-      },
-      {
         "link": "kubectl",
         "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubectl.md"
       },
       {
         "link": "kubectx"
-      },
-      {
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/云计算/docker.md"
-      },
-      {
-        "link": "docker compose",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/docker compose.md"
       },
       {
         "link": "mackup"
@@ -14967,7 +15173,8 @@
         "link": "内卷の王"
       },
       {
-        "link": "躺平一族"
+        "link": "躺平与摆烂一族",
+        "relativePath": "journals/躺平与摆烂一族.md"
       }
     ],
     "backlinks": [
@@ -16708,6 +16915,87 @@
     ]
   },
   {
+    "fileName": "无氧运动",
+    "relativePath": "journals/无氧运动.md",
+    "tags": [
+      "评论/少数派"
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-26",
+        "link": "无氧运动",
+        "relativePath": "journals/2022-05-26.md"
+      }
+    ]
+  },
+  {
+    "fileName": "躺平与摆烂一族",
+    "relativePath": "journals/躺平与摆烂一族.md",
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "躺平与摆烂一族",
+        "relativePath": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "个人简介",
+        "link": "躺平与摆烂一族",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
+      },
+      {
+        "fileName": "2022-05-25",
+        "link": "躺平与摆烂一族",
+        "relativePath": "journals/2022-05-25.md"
+      }
+    ]
+  },
+  {
+    "fileName": "科学上网",
+    "relativePath": "journals/科学上网.md",
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 19
+        }
+      }
+    },
+    "aliases": [
+      "翻墙"
+    ],
+    "headings": [
+      {
+        "heading": "什么是翻墙",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有什么好处",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有什么坏处",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有哪些方法",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-26",
+        "link": "科学上网",
+        "relativePath": "journals/2022-05-26.md"
+      }
+    ]
+  },
+  {
     "fileName": "这家创业公司是否值得加入",
     "relativePath": "journals/这家创业公司是否值得加入.md",
     "backlinks": [
@@ -18020,6 +18308,32 @@
         "heading": "今天的灵感或闪念",
         "level": 2
       }
+    ],
+    "links": [
+      {
+        "link": "V2rayU",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/V2rayU.md"
+      },
+      {
+        "link": "科学上网",
+        "relativePath": "journals/科学上网.md"
+      },
+      {
+        "link": "无线技术"
+      },
+      {
+        "link": "显示技术"
+      },
+      {
+        "link": "极客时间"
+      },
+      {
+        "link": "手机碎屏"
+      },
+      {
+        "link": "无氧运动",
+        "relativePath": "journals/无氧运动.md"
+      }
     ]
   },
   {
@@ -18039,6 +18353,10 @@
       {
         "link": "这家创业公司是否值得加入",
         "relativePath": "journals/这家创业公司是否值得加入.md"
+      },
+      {
+        "link": "躺平与摆烂一族",
+        "relativePath": "journals/躺平与摆烂一族.md"
       }
     ]
   },

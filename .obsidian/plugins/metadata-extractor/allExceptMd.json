@@ -231,6 +231,166 @@
     {
       "name": "虚构类读物",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
+    },
+    {
+      "name": "export",
+      "relativePath": "export"
+    },
+    {
+      "name": "advanced-slides",
+      "relativePath": "export/advanced-slides"
+    },
+    {
+      "name": "css",
+      "relativePath": "export/advanced-slides/css"
+    },
+    {
+      "name": "dist",
+      "relativePath": "export/advanced-slides/dist"
+    },
+    {
+      "name": "theme",
+      "relativePath": "export/advanced-slides/dist/theme"
+    },
+    {
+      "name": "fonts",
+      "relativePath": "export/advanced-slides/dist/theme/fonts"
+    },
+    {
+      "name": "source-sans-pro",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro"
+    },
+    {
+      "name": "league-gothic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/league-gothic"
+    },
+    {
+      "name": "lato",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/lato"
+    },
+    {
+      "name": "fontawesome",
+      "relativePath": "export/advanced-slides/dist/fontawesome"
+    },
+    {
+      "name": "plugin",
+      "relativePath": "export/advanced-slides/plugin"
+    },
+    {
+      "name": "search",
+      "relativePath": "export/advanced-slides/plugin/search"
+    },
+    {
+      "name": "zoom",
+      "relativePath": "export/advanced-slides/plugin/zoom"
+    },
+    {
+      "name": "math",
+      "relativePath": "export/advanced-slides/plugin/math"
+    },
+    {
+      "name": "mathjax",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax"
+    },
+    {
+      "name": "notes",
+      "relativePath": "export/advanced-slides/plugin/notes"
+    },
+    {
+      "name": "mermaid",
+      "relativePath": "export/advanced-slides/plugin/mermaid"
+    },
+    {
+      "name": "menu",
+      "relativePath": "export/advanced-slides/plugin/menu"
+    },
+    {
+      "name": "ui",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/ui"
+    },
+    {
+      "name": "sre",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre"
+    },
+    {
+      "name": "mathmaps",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps"
+    },
+    {
+      "name": "output",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output"
+    },
+    {
+      "name": "chtml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml"
+    },
+    {
+      "name": "svg",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/svg"
+    },
+    {
+      "name": "fonts",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts"
+    },
+    {
+      "name": "fonts",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/svg/fonts"
+    },
+    {
+      "name": "woff-v2",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2"
+    },
+    {
+      "name": "input",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input"
+    },
+    {
+      "name": "tex",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex"
+    },
+    {
+      "name": "extensions",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions"
+    },
+    {
+      "name": "mml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml"
+    },
+    {
+      "name": "extensions",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml/extensions"
+    },
+    {
+      "name": "adaptors",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/adaptors"
+    },
+    {
+      "name": "a11y",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/a11y"
+    },
+    {
+      "name": "markdown",
+      "relativePath": "export/advanced-slides/plugin/markdown"
+    },
+    {
+      "name": "highlight",
+      "relativePath": "export/advanced-slides/plugin/highlight"
+    },
+    {
+      "name": "customcontrols",
+      "relativePath": "export/advanced-slides/plugin/customcontrols"
+    },
+    {
+      "name": "chart",
+      "relativePath": "export/advanced-slides/plugin/chart"
+    },
+    {
+      "name": "chalkboard",
+      "relativePath": "export/advanced-slides/plugin/chalkboard"
+    },
+    {
+      "name": "img",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img"
     }
   ],
   "nonMdFiles": [
@@ -328,6 +488,996 @@
       "name": "明朝那些事儿.epub",
       "basename": "明朝那些事儿",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/明朝那些事儿.epub"
+    },
+    {
+      "name": "index.html",
+      "basename": "index",
+      "relativePath": "export/advanced-slides/index.html"
+    },
+    {
+      "name": "layout.css",
+      "basename": "layout",
+      "relativePath": "export/advanced-slides/css/layout.css"
+    },
+    {
+      "name": "mattropolis.css",
+      "basename": "mattropolis",
+      "relativePath": "export/advanced-slides/css/mattropolis.css"
+    },
+    {
+      "name": "vs2015.css",
+      "basename": "vs2015",
+      "relativePath": "export/advanced-slides/css/vs2015.css"
+    },
+    {
+      "name": "league.css",
+      "basename": "league",
+      "relativePath": "export/advanced-slides/dist/theme/league.css"
+    },
+    {
+      "name": "mattropolis.css",
+      "basename": "mattropolis",
+      "relativePath": "export/advanced-slides/dist/theme/mattropolis.css"
+    },
+    {
+      "name": "moon.css",
+      "basename": "moon",
+      "relativePath": "export/advanced-slides/dist/theme/moon.css"
+    },
+    {
+      "name": "night.css",
+      "basename": "night",
+      "relativePath": "export/advanced-slides/dist/theme/night.css"
+    },
+    {
+      "name": "serif.css",
+      "basename": "serif",
+      "relativePath": "export/advanced-slides/dist/theme/serif.css"
+    },
+    {
+      "name": "simple.css",
+      "basename": "simple",
+      "relativePath": "export/advanced-slides/dist/theme/simple.css"
+    },
+    {
+      "name": "sky.css",
+      "basename": "sky",
+      "relativePath": "export/advanced-slides/dist/theme/sky.css"
+    },
+    {
+      "name": "solarized.css",
+      "basename": "solarized",
+      "relativePath": "export/advanced-slides/dist/theme/solarized.css"
+    },
+    {
+      "name": "white.css",
+      "basename": "white",
+      "relativePath": "export/advanced-slides/dist/theme/white.css"
+    },
+    {
+      "name": "source-sans-pro-italic.eot",
+      "basename": "source-sans-pro-italic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.eot"
+    },
+    {
+      "name": "source-sans-pro-italic.ttf",
+      "basename": "source-sans-pro-italic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.ttf"
+    },
+    {
+      "name": "source-sans-pro-italic.woff",
+      "basename": "source-sans-pro-italic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-italic.woff"
+    },
+    {
+      "name": "source-sans-pro-regular.eot",
+      "basename": "source-sans-pro-regular",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.eot"
+    },
+    {
+      "name": "source-sans-pro-regular.ttf",
+      "basename": "source-sans-pro-regular",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.ttf"
+    },
+    {
+      "name": "source-sans-pro-regular.woff",
+      "basename": "source-sans-pro-regular",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-regular.woff"
+    },
+    {
+      "name": "source-sans-pro-semibold.eot",
+      "basename": "source-sans-pro-semibold",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.eot"
+    },
+    {
+      "name": "source-sans-pro-semibold.ttf",
+      "basename": "source-sans-pro-semibold",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.ttf"
+    },
+    {
+      "name": "source-sans-pro-semibold.woff",
+      "basename": "source-sans-pro-semibold",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff"
+    },
+    {
+      "name": "source-sans-pro-semibolditalic.eot",
+      "basename": "source-sans-pro-semibolditalic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.eot"
+    },
+    {
+      "name": "source-sans-pro-semibolditalic.ttf",
+      "basename": "source-sans-pro-semibolditalic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf"
+    },
+    {
+      "name": "source-sans-pro-semibolditalic.woff",
+      "basename": "source-sans-pro-semibolditalic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff"
+    },
+    {
+      "name": "source-sans-pro.css",
+      "basename": "source-sans-pro",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/source-sans-pro.css"
+    },
+    {
+      "name": "LICENSE",
+      "basename": "LICENSE",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/source-sans-pro/LICENSE"
+    },
+    {
+      "name": "league-gothic.css",
+      "basename": "league-gothic",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/league-gothic/league-gothic.css"
+    },
+    {
+      "name": "lato.css",
+      "basename": "lato",
+      "relativePath": "export/advanced-slides/dist/theme/fonts/lato/lato.css"
+    },
+    {
+      "name": "consult.css",
+      "basename": "consult",
+      "relativePath": "export/advanced-slides/dist/theme/consult.css"
+    },
+    {
+      "name": "blood.css",
+      "basename": "blood",
+      "relativePath": "export/advanced-slides/dist/theme/blood.css"
+    },
+    {
+      "name": "black.css",
+      "basename": "black",
+      "relativePath": "export/advanced-slides/dist/theme/black.css"
+    },
+    {
+      "name": "beige.css",
+      "basename": "beige",
+      "relativePath": "export/advanced-slides/dist/theme/beige.css"
+    },
+    {
+      "name": "reveal.js.map",
+      "basename": "reveal.js",
+      "relativePath": "export/advanced-slides/dist/reveal.js.map"
+    },
+    {
+      "name": "reveal.js",
+      "basename": "reveal",
+      "relativePath": "export/advanced-slides/dist/reveal.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/zoom/plugin.js"
+    },
+    {
+      "name": "zoom.esm.js",
+      "basename": "zoom.esm",
+      "relativePath": "export/advanced-slides/plugin/zoom/zoom.esm.js"
+    },
+    {
+      "name": "zoom.js",
+      "basename": "zoom",
+      "relativePath": "export/advanced-slides/plugin/zoom/zoom.js"
+    },
+    {
+      "name": "reveal.esm.js.map",
+      "basename": "reveal.esm.js",
+      "relativePath": "export/advanced-slides/dist/reveal.esm.js.map"
+    },
+    {
+      "name": "reveal.esm.js",
+      "basename": "reveal.esm",
+      "relativePath": "export/advanced-slides/dist/reveal.esm.js"
+    },
+    {
+      "name": "reveal.css",
+      "basename": "reveal",
+      "relativePath": "export/advanced-slides/dist/reveal.css"
+    },
+    {
+      "name": "reset.css",
+      "basename": "reset",
+      "relativePath": "export/advanced-slides/dist/reset.css"
+    },
+    {
+      "name": "all.min.js",
+      "basename": "all.min",
+      "relativePath": "export/advanced-slides/dist/fontawesome/all.min.js"
+    },
+    {
+      "name": "search.js",
+      "basename": "search",
+      "relativePath": "export/advanced-slides/plugin/search/search.js"
+    },
+    {
+      "name": "search.esm.js",
+      "basename": "search.esm",
+      "relativePath": "export/advanced-slides/plugin/search/search.esm.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/search/plugin.js"
+    },
+    {
+      "name": "notes.esm.js",
+      "basename": "notes.esm",
+      "relativePath": "export/advanced-slides/plugin/notes/notes.esm.js"
+    },
+    {
+      "name": "notes.js",
+      "basename": "notes",
+      "relativePath": "export/advanced-slides/plugin/notes/notes.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/notes/plugin.js"
+    },
+    {
+      "name": "speaker-view.html",
+      "basename": "speaker-view",
+      "relativePath": "export/advanced-slides/plugin/notes/speaker-view.html"
+    },
+    {
+      "name": "mermaid.esm.js",
+      "basename": "mermaid.esm",
+      "relativePath": "export/advanced-slides/plugin/mermaid/mermaid.esm.js"
+    },
+    {
+      "name": "mermaid.js",
+      "basename": "mermaid",
+      "relativePath": "export/advanced-slides/plugin/mermaid/mermaid.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/mermaid/plugin.js"
+    },
+    {
+      "name": "LICENSE",
+      "basename": "LICENSE",
+      "relativePath": "export/advanced-slides/plugin/menu/LICENSE"
+    },
+    {
+      "name": "bower.json",
+      "basename": "bower",
+      "relativePath": "export/advanced-slides/plugin/menu/bower.json"
+    },
+    {
+      "name": "gulpfile.js",
+      "basename": "gulpfile",
+      "relativePath": "export/advanced-slides/plugin/menu/gulpfile.js"
+    },
+    {
+      "name": "menu.css",
+      "basename": "menu",
+      "relativePath": "export/advanced-slides/plugin/menu/menu.css"
+    },
+    {
+      "name": "menu.esm.js",
+      "basename": "menu.esm",
+      "relativePath": "export/advanced-slides/plugin/menu/menu.esm.js"
+    },
+    {
+      "name": "menu.js",
+      "basename": "menu",
+      "relativePath": "export/advanced-slides/plugin/menu/menu.js"
+    },
+    {
+      "name": "package.json",
+      "basename": "package",
+      "relativePath": "export/advanced-slides/plugin/menu/package.json"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/menu/plugin.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/math/plugin.js"
+    },
+    {
+      "name": "mathjax3.js",
+      "basename": "mathjax3",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax3.js"
+    },
+    {
+      "name": "mathjax2.js",
+      "basename": "mathjax2",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax2.js"
+    },
+    {
+      "name": "lazy.js",
+      "basename": "lazy",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/ui/lazy.js"
+    },
+    {
+      "name": "menu.js",
+      "basename": "menu",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/ui/menu.js"
+    },
+    {
+      "name": "safe.js",
+      "basename": "safe",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/ui/safe.js"
+    },
+    {
+      "name": "tex-svg.js",
+      "basename": "tex-svg",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-svg.js"
+    },
+    {
+      "name": "tex-svg-full.js",
+      "basename": "tex-svg-full",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-svg-full.js"
+    },
+    {
+      "name": "tex-mml-svg.js",
+      "basename": "tex-mml-svg",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-mml-svg.js"
+    },
+    {
+      "name": "tex-mml-chtml.js",
+      "basename": "tex-mml-chtml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-mml-chtml.js"
+    },
+    {
+      "name": "tex-chtml.js",
+      "basename": "tex-chtml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-chtml.js"
+    },
+    {
+      "name": "tex-chtml-full.js",
+      "basename": "tex-chtml-full",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/tex-chtml-full.js"
+    },
+    {
+      "name": "startup.js",
+      "basename": "startup",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/startup.js"
+    },
+    {
+      "name": "sre-node.js",
+      "basename": "sre-node",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/sre-node.js"
+    },
+    {
+      "name": "sre_browser.js",
+      "basename": "sre_browser",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/sre_browser.js"
+    },
+    {
+      "name": "de.js",
+      "basename": "de",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/de.js"
+    },
+    {
+      "name": "en.js",
+      "basename": "en",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/en.js"
+    },
+    {
+      "name": "es.js",
+      "basename": "es",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/es.js"
+    },
+    {
+      "name": "fr.js",
+      "basename": "fr",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/fr.js"
+    },
+    {
+      "name": "hi.js",
+      "basename": "hi",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/hi.js"
+    },
+    {
+      "name": "it.js",
+      "basename": "it",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/it.js"
+    },
+    {
+      "name": "nemeth.js",
+      "basename": "nemeth",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/sre/mathmaps/nemeth.js"
+    },
+    {
+      "name": "chtml.js",
+      "basename": "chtml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml.js"
+    },
+    {
+      "name": "svg.js",
+      "basename": "svg",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/svg.js"
+    },
+    {
+      "name": "tex.js",
+      "basename": "tex",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/svg/fonts/tex.js"
+    },
+    {
+      "name": "MathJax_Size1-Regular.woff",
+      "basename": "MathJax_Size1-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff"
+    },
+    {
+      "name": "MathJax_Size2-Regular.woff",
+      "basename": "MathJax_Size2-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff"
+    },
+    {
+      "name": "MathJax_Size3-Regular.woff",
+      "basename": "MathJax_Size3-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff"
+    },
+    {
+      "name": "MathJax_Size4-Regular.woff",
+      "basename": "MathJax_Size4-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff"
+    },
+    {
+      "name": "MathJax_Typewriter-Regular.woff",
+      "basename": "MathJax_Typewriter-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff"
+    },
+    {
+      "name": "MathJax_Vector-Bold.woff",
+      "basename": "MathJax_Vector-Bold",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff"
+    },
+    {
+      "name": "MathJax_Vector-Regular.woff",
+      "basename": "MathJax_Vector-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff"
+    },
+    {
+      "name": "MathJax_Zero.woff",
+      "basename": "MathJax_Zero",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff"
+    },
+    {
+      "name": "MathJax_Script-Regular.woff",
+      "basename": "MathJax_Script-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff"
+    },
+    {
+      "name": "MathJax_SansSerif-Regular.woff",
+      "basename": "MathJax_SansSerif-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff"
+    },
+    {
+      "name": "MathJax_SansSerif-Italic.woff",
+      "basename": "MathJax_SansSerif-Italic",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff"
+    },
+    {
+      "name": "MathJax_SansSerif-Bold.woff",
+      "basename": "MathJax_SansSerif-Bold",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff"
+    },
+    {
+      "name": "MathJax_Math-Regular.woff",
+      "basename": "MathJax_Math-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Regular.woff"
+    },
+    {
+      "name": "MathJax_Math-Italic.woff",
+      "basename": "MathJax_Math-Italic",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff"
+    },
+    {
+      "name": "MathJax_Math-BoldItalic.woff",
+      "basename": "MathJax_Math-BoldItalic",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff"
+    },
+    {
+      "name": "MathJax_Main-Regular.woff",
+      "basename": "MathJax_Main-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff"
+    },
+    {
+      "name": "MathJax_Main-Italic.woff",
+      "basename": "MathJax_Main-Italic",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff"
+    },
+    {
+      "name": "MathJax_Main-Bold.woff",
+      "basename": "MathJax_Main-Bold",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff"
+    },
+    {
+      "name": "MathJax_Fraktur-Regular.woff",
+      "basename": "MathJax_Fraktur-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff"
+    },
+    {
+      "name": "MathJax_Fraktur-Bold.woff",
+      "basename": "MathJax_Fraktur-Bold",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff"
+    },
+    {
+      "name": "MathJax_Calligraphic-Regular.woff",
+      "basename": "MathJax_Calligraphic-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff"
+    },
+    {
+      "name": "MathJax_Calligraphic-Bold.woff",
+      "basename": "MathJax_Calligraphic-Bold",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff"
+    },
+    {
+      "name": "MathJax_AMS-Regular.woff",
+      "basename": "MathJax_AMS-Regular",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff"
+    },
+    {
+      "name": "tex.js",
+      "basename": "tex",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/output/chtml/fonts/tex.js"
+    },
+    {
+      "name": "node-main.js",
+      "basename": "node-main",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/node-main.js"
+    },
+    {
+      "name": "mml-svg.js",
+      "basename": "mml-svg",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/mml-svg.js"
+    },
+    {
+      "name": "mml-chtml.js",
+      "basename": "mml-chtml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/mml-chtml.js"
+    },
+    {
+      "name": "loader.js",
+      "basename": "loader",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/loader.js"
+    },
+    {
+      "name": "latest.js",
+      "basename": "latest",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/latest.js"
+    },
+    {
+      "name": "tex-base.js",
+      "basename": "tex-base",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex-base.js"
+    },
+    {
+      "name": "tex-full.js",
+      "basename": "tex-full",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex-full.js"
+    },
+    {
+      "name": "tex.js",
+      "basename": "tex",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex.js"
+    },
+    {
+      "name": "noundefined.js",
+      "basename": "noundefined",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/noundefined.js"
+    },
+    {
+      "name": "physics.js",
+      "basename": "physics",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/physics.js"
+    },
+    {
+      "name": "require.js",
+      "basename": "require",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/require.js"
+    },
+    {
+      "name": "setoptions.js",
+      "basename": "setoptions",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/setoptions.js"
+    },
+    {
+      "name": "tagformat.js",
+      "basename": "tagformat",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/tagformat.js"
+    },
+    {
+      "name": "textcomp.js",
+      "basename": "textcomp",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/textcomp.js"
+    },
+    {
+      "name": "textmacros.js",
+      "basename": "textmacros",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/textmacros.js"
+    },
+    {
+      "name": "unicode.js",
+      "basename": "unicode",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/unicode.js"
+    },
+    {
+      "name": "upgreek.js",
+      "basename": "upgreek",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/upgreek.js"
+    },
+    {
+      "name": "verb.js",
+      "basename": "verb",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/verb.js"
+    },
+    {
+      "name": "noerrors.js",
+      "basename": "noerrors",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/noerrors.js"
+    },
+    {
+      "name": "newcommand.js",
+      "basename": "newcommand",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/newcommand.js"
+    },
+    {
+      "name": "mhchem.js",
+      "basename": "mhchem",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/mhchem.js"
+    },
+    {
+      "name": "mathtools.js",
+      "basename": "mathtools",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/mathtools.js"
+    },
+    {
+      "name": "html.js",
+      "basename": "html",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/html.js"
+    },
+    {
+      "name": "gensymb.js",
+      "basename": "gensymb",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/gensymb.js"
+    },
+    {
+      "name": "extpfeil.js",
+      "basename": "extpfeil",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/extpfeil.js"
+    },
+    {
+      "name": "enclose.js",
+      "basename": "enclose",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/enclose.js"
+    },
+    {
+      "name": "configmacros.js",
+      "basename": "configmacros",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/configmacros.js"
+    },
+    {
+      "name": "colorv2.js",
+      "basename": "colorv2",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/colorv2.js"
+    },
+    {
+      "name": "colortbl.js",
+      "basename": "colortbl",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/colortbl.js"
+    },
+    {
+      "name": "color.js",
+      "basename": "color",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/color.js"
+    },
+    {
+      "name": "centernot.js",
+      "basename": "centernot",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/centernot.js"
+    },
+    {
+      "name": "cancel.js",
+      "basename": "cancel",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/cancel.js"
+    },
+    {
+      "name": "bussproofs.js",
+      "basename": "bussproofs",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/bussproofs.js"
+    },
+    {
+      "name": "braket.js",
+      "basename": "braket",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/braket.js"
+    },
+    {
+      "name": "boldsymbol.js",
+      "basename": "boldsymbol",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/boldsymbol.js"
+    },
+    {
+      "name": "bbox.js",
+      "basename": "bbox",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/bbox.js"
+    },
+    {
+      "name": "autoload.js",
+      "basename": "autoload",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/autoload.js"
+    },
+    {
+      "name": "amscd.js",
+      "basename": "amscd",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/amscd.js"
+    },
+    {
+      "name": "ams.js",
+      "basename": "ams",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/ams.js"
+    },
+    {
+      "name": "all-packages.js",
+      "basename": "all-packages",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/all-packages.js"
+    },
+    {
+      "name": "action.js",
+      "basename": "action",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/tex/extensions/action.js"
+    },
+    {
+      "name": "mml.js",
+      "basename": "mml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml.js"
+    },
+    {
+      "name": "entities.js",
+      "basename": "entities",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml/entities.js"
+    },
+    {
+      "name": "mml3.js",
+      "basename": "mml3",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml/extensions/mml3.js"
+    },
+    {
+      "name": "mml3.sef.json",
+      "basename": "mml3.sef",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/mml/extensions/mml3.sef.json"
+    },
+    {
+      "name": "asciimath.js",
+      "basename": "asciimath",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/input/asciimath.js"
+    },
+    {
+      "name": "core.js",
+      "basename": "core",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/core.js"
+    },
+    {
+      "name": "liteDOM.js",
+      "basename": "liteDOM",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/adaptors/liteDOM.js"
+    },
+    {
+      "name": "assistive-mml.js",
+      "basename": "assistive-mml",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/a11y/assistive-mml.js"
+    },
+    {
+      "name": "complexity.js",
+      "basename": "complexity",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/a11y/complexity.js"
+    },
+    {
+      "name": "explorer.js",
+      "basename": "explorer",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/a11y/explorer.js"
+    },
+    {
+      "name": "semantic-enrich.js",
+      "basename": "semantic-enrich",
+      "relativePath": "export/advanced-slides/plugin/math/mathjax/a11y/semantic-enrich.js"
+    },
+    {
+      "name": "math.js",
+      "basename": "math",
+      "relativePath": "export/advanced-slides/plugin/math/math.js"
+    },
+    {
+      "name": "math.esm.js",
+      "basename": "math.esm",
+      "relativePath": "export/advanced-slides/plugin/math/math.esm.js"
+    },
+    {
+      "name": "katex.js",
+      "basename": "katex",
+      "relativePath": "export/advanced-slides/plugin/math/katex.js"
+    },
+    {
+      "name": "markdown.esm.js",
+      "basename": "markdown.esm",
+      "relativePath": "export/advanced-slides/plugin/markdown/markdown.esm.js"
+    },
+    {
+      "name": "markdown.js",
+      "basename": "markdown",
+      "relativePath": "export/advanced-slides/plugin/markdown/markdown.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/markdown/plugin.js"
+    },
+    {
+      "name": "highlight.esm.js",
+      "basename": "highlight.esm",
+      "relativePath": "export/advanced-slides/plugin/highlight/highlight.esm.js"
+    },
+    {
+      "name": "highlight.js",
+      "basename": "highlight",
+      "relativePath": "export/advanced-slides/plugin/highlight/highlight.js"
+    },
+    {
+      "name": "monokai.css",
+      "basename": "monokai",
+      "relativePath": "export/advanced-slides/plugin/highlight/monokai.css"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/highlight/plugin.js"
+    },
+    {
+      "name": "zenburn.css",
+      "basename": "zenburn",
+      "relativePath": "export/advanced-slides/plugin/highlight/zenburn.css"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/customcontrols/plugin.js"
+    },
+    {
+      "name": "style.css",
+      "basename": "style",
+      "relativePath": "export/advanced-slides/plugin/customcontrols/style.css"
+    },
+    {
+      "name": "chart.min.js",
+      "basename": "chart.min",
+      "relativePath": "export/advanced-slides/plugin/chart/chart.min.js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/chart/plugin.js"
+    },
+    {
+      "name": "plugin (copy).js",
+      "basename": "plugin (copy)",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/plugin (copy).js"
+    },
+    {
+      "name": "plugin.js",
+      "basename": "plugin",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/plugin.js"
+    },
+    {
+      "name": "style.css",
+      "basename": "style",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/style.css"
+    },
+    {
+      "name": "blackboard.png",
+      "basename": "blackboard",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/blackboard.png"
+    },
+    {
+      "name": "boardmarker-black.png",
+      "basename": "boardmarker-black",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-black.png"
+    },
+    {
+      "name": "boardmarker-blue.png",
+      "basename": "boardmarker-blue",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-blue.png"
+    },
+    {
+      "name": "boardmarker-green.png",
+      "basename": "boardmarker-green",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-green.png"
+    },
+    {
+      "name": "boardmarker-orange.png",
+      "basename": "boardmarker-orange",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-orange.png"
+    },
+    {
+      "name": "boardmarker-purple.png",
+      "basename": "boardmarker-purple",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-purple.png"
+    },
+    {
+      "name": "boardmarker-red.png",
+      "basename": "boardmarker-red",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-red.png"
+    },
+    {
+      "name": "boardmarker-yellow.png",
+      "basename": "boardmarker-yellow",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/boardmarker-yellow.png"
+    },
+    {
+      "name": "chalk-blue.png",
+      "basename": "chalk-blue",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-blue.png"
+    },
+    {
+      "name": "chalk-green.png",
+      "basename": "chalk-green",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-green.png"
+    },
+    {
+      "name": "chalk-orange.png",
+      "basename": "chalk-orange",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-orange.png"
+    },
+    {
+      "name": "chalk-purple.png",
+      "basename": "chalk-purple",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-purple.png"
+    },
+    {
+      "name": "chalk-red.png",
+      "basename": "chalk-red",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-red.png"
+    },
+    {
+      "name": "chalk-white.png",
+      "basename": "chalk-white",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-white.png"
+    },
+    {
+      "name": "chalk-yellow.png",
+      "basename": "chalk-yellow",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/chalk-yellow.png"
+    },
+    {
+      "name": "sponge.png",
+      "basename": "sponge",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/sponge.png"
+    },
+    {
+      "name": "whiteboard.png",
+      "basename": "whiteboard",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/img/whiteboard.png"
+    },
+    {
+      "name": "_style.css",
+      "basename": "_style",
+      "relativePath": "export/advanced-slides/plugin/chalkboard/_style.css"
     }
   ]
 }
