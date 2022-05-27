@@ -5,5 +5,6 @@
   "pdfExportImageFormat": "jpg",
   "pdfExportImageQuality": 90,
   "citeFormats": [],
-  "exportFormats": []
+  "exportFormats": [],
+  "shouldShowCiteSuggest": true
 }

@@ -16907,6 +16907,17 @@
     ]
   },
   {
+    "fileName": "双链笔记的异同分析",
+    "relativePath": "journals/双链笔记的异同分析.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-27",
+        "link": "双链笔记的异同分析",
+        "relativePath": "journals/2022-05-27.md"
+      }
+    ]
+  },
+  {
     "fileName": "台风天去舟山旅行",
     "relativePath": "journals/台风天去舟山旅行.md",
     "backlinks": [
@@ -18402,6 +18413,10 @@
         "cleanLink": "advanced-slides",
         "displayText": "advanced-slides > ^4f22e2",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
+      },
+      {
+        "link": "双链笔记的异同分析",
+        "relativePath": "journals/双链笔记的异同分析.md"
       }
     ]
   },

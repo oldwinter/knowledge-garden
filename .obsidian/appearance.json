@@ -7,5 +7,6 @@
   ],
   "theme": "obsidian",
   "baseFontSizeAction": false,
-  "translucency": false
+  "translucency": false,
+  "textFontFamily": "Arial"
 }
