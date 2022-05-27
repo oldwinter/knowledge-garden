@@ -1102,7 +1102,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect6(create, deps) {
+        function useEffect7(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1672,7 +1672,7 @@ var require_react_development = __commonJS({
         exports.useCallback = useCallback8;
         exports.useContext = useContext3;
         exports.useDebugValue = useDebugValue;
-        exports.useEffect = useEffect6;
+        exports.useEffect = useEffect7;
         exports.useImperativeHandle = useImperativeHandle;
         exports.useLayoutEffect = useLayoutEffect;
         exports.useMemo = useMemo;
@@ -56510,70 +56510,15 @@ var import_obsidian3 = __toModule(require("obsidian"));
 
 // src/NLTTable.tsx
 var import_obsidian2 = __toModule(require("obsidian"));
-var import_react30 = __toModule(require_react());
+var import_react31 = __toModule(require_react());
 var import_react_dom2 = __toModule(require_react_dom());
 
 // src/app/App.tsx
-var import_react29 = __toModule(require_react());
+var import_react30 = __toModule(require_react());
 
 // src/app/components/EditableTd/index.tsx
-var import_react21 = __toModule(require_react());
+var import_react22 = __toModule(require_react());
 var import_obsidian = __toModule(require("obsidian"));
-
-// node_modules/uuid/dist/esm-browser/rng.js
-var getRandomValues;
-var rnds8 = new Uint8Array(16);
-function rng() {
-  if (!getRandomValues) {
-    getRandomValues = typeof crypto !== "undefined" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== "undefined" && typeof msCrypto.getRandomValues === "function" && msCrypto.getRandomValues.bind(msCrypto);
-    if (!getRandomValues) {
-      throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
-    }
-  }
-  return getRandomValues(rnds8);
-}
-
-// node_modules/uuid/dist/esm-browser/regex.js
-var regex_default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
-
-// node_modules/uuid/dist/esm-browser/validate.js
-function validate(uuid) {
-  return typeof uuid === "string" && regex_default.test(uuid);
-}
-var validate_default = validate;
-
-// node_modules/uuid/dist/esm-browser/stringify.js
-var byteToHex = [];
-for (i = 0; i < 256; ++i) {
-  byteToHex.push((i + 256).toString(16).substr(1));
-}
-var i;
-function stringify(arr) {
-  var offset = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-  var uuid = (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + "-" + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + "-" + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + "-" + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + "-" + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase();
-  if (!validate_default(uuid)) {
-    throw TypeError("Stringified UUID is invalid");
-  }
-  return uuid;
-}
-var stringify_default = stringify;
-
-// node_modules/uuid/dist/esm-browser/v4.js
-function v4(options, buf, offset) {
-  options = options || {};
-  var rnds = options.random || (options.rng || rng)();
-  rnds[6] = rnds[6] & 15 | 64;
-  rnds[8] = rnds[8] & 63 | 128;
-  if (buf) {
-    offset = offset || 0;
-    for (var i = 0; i < 16; ++i) {
-      buf[offset + i] = rnds[i];
-    }
-    return buf;
-  }
-  return stringify_default(rnds);
-}
-var v4_default = v4;
 
 // src/app/components/TextCell/index.tsx
 var import_react = __toModule(require_react());
@@ -56676,12 +56621,12 @@ var DEBUG = {
     USE_EFFECT: false
   },
   FOCUS_PROVIDER: {
-    HANDLER: false,
-    USE_EFFECT: false
+    HANDLER: true,
+    USE_EFFECT: true
   },
   MENU_PROVIDER: {
-    HANDLER: false,
-    USE_EFFECT: false
+    HANDLER: true,
+    USE_EFFECT: true
   }
 };
 var TABBABLE_ELEMENT_TYPE = {
@@ -57095,8 +57040,7 @@ function TagCell({
   style,
   isCreate,
   showLink = false,
-  onRemoveClick,
-  onClick
+  onRemoveClick
 }) {
   let tagClass = "NLT__tag";
   tagClass += " " + findColorClass(color);
@@ -57111,12 +57055,7 @@ function TagCell({
   }
   return /* @__PURE__ */ import_react2.default.createElement("div", {
     className: cellClass,
-    style,
-    onClick: (e) => {
-      if (!showLink)
-        e.stopPropagation();
-      onClick && onClick(id);
-    }
+    style
   }, isCreate && /* @__PURE__ */ import_react2.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react2.default.createElement("div", {
     className: tagClass
   }, /* @__PURE__ */ import_react2.default.createElement("div", {
@@ -57148,10 +57087,7 @@ function CheckboxCell({ isChecked, onCheckboxChange }) {
     className: "task-list-item-checkbox",
     type: "checkbox",
     checked: isChecked,
-    onChange: (e) => {
-      e.stopPropagation();
-      onCheckboxChange(!isChecked);
-    }
+    onChange: () => onCheckboxChange(!isChecked)
   }));
 }
 
@@ -57189,14 +57125,15 @@ function Menu({
   return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, isOpen && import_react_dom.default.createPortal(/* @__PURE__ */ import_react7.default.createElement("div", {
     className: "NLT__menu",
     id,
+    onClick: (e) => e.stopPropagation(),
     onMouseDown: (e) => e.preventDefault()
   }, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "NLT__menu-container",
     style: {
       top: `${top}px`,
       left: `${left}px`,
-      width: width ? width : "fit-content",
-      height: height ? height : "fit-content"
+      width: width ? `${width}px` : "fit-content",
+      height: height ? `${height}px` : "fit-content"
     }
   }, children)), document.body));
 }
@@ -57272,7 +57209,7 @@ function TextCellEdit({
     top,
     left,
     width,
-    height: `${height}px`
+    height
   }, /* @__PURE__ */ import_react9.default.createElement("textarea", {
     className: "NLT__textarea",
     ref: textAreaRef,
@@ -57283,10 +57220,10 @@ function TextCellEdit({
 }
 
 // src/app/components/TagCellEdit/index.tsx
-var import_react19 = __toModule(require_react());
+var import_react20 = __toModule(require_react());
 
 // src/app/components/TagCellEdit/component/SelectableTag/index.tsx
-var import_react17 = __toModule(require_react());
+var import_react18 = __toModule(require_react());
 
 // src/app/components/IconButton/index.tsx
 var import_react12 = __toModule(require_react());
@@ -57485,6 +57422,9 @@ function TagColorMenu({
   })))));
 }
 
+// src/app/services/hooks/index.ts
+var import_react17 = __toModule(require_react());
+
 // src/app/components/MenuProvider/index.tsx
 var import_react16 = __toModule(require_react());
 
@@ -57571,22 +57511,38 @@ function FocusProvider({
 }
 
 // src/app/components/MenuProvider/index.tsx
-var MenuContext = import_react16.default.createContext({});
-var useMenu = () => {
-  return (0, import_react16.useContext)(MenuContext);
+var MenuContext = import_react16.default.createContext(null);
+var useMenu = (id, level) => {
+  const { openMenu, closeMenu, isMenuOpen } = (0, import_react16.useContext)(MenuContext);
+  return {
+    isMenuOpen: isMenuOpen(id),
+    openMenu: () => openMenu(id, level),
+    closeMenu: () => closeMenu(id)
+  };
 };
 function MenuProvider({ children }) {
   const [openMenus, setOpenMenus] = (0, import_react16.useState)([]);
   const isFocused = useTableFocus();
+  function canOpenMenu(level) {
+    if (openMenus.length === 0)
+      return true;
+    if (openMenus.every((menu) => menu.level < level))
+      return true;
+    return false;
+  }
   function openMenu(id, level) {
-    const menu = { id, level };
-    if (DEBUG.MENU_PROVIDER.HANDLER) {
-      console.log(`[MenuProvider]: openMenu("${id}", ${level})`);
+    if (canOpenMenu(level)) {
+      const menu = { id, level };
+      if (DEBUG.MENU_PROVIDER.HANDLER) {
+        console.log(`[MenuProvider]: openMenu("${id}", ${level})`);
+      }
+      setOpenMenus((prevState) => [...prevState, menu]);
     }
-    setOpenMenus((prevState) => [...prevState, menu]);
   }
   function isMenuOpen(id) {
-    return openMenus.find((menu) => menu.id === id) || false;
+    if (openMenus.find((menu) => menu.id === id))
+      return true;
+    return false;
   }
   function closeAllMenus() {
     if (DEBUG.MENU_PROVIDER.HANDLER) {
@@ -57595,23 +57551,31 @@ function MenuProvider({ children }) {
     setOpenMenus([]);
   }
   const closeMenu = (id) => {
-    if (DEBUG.MENU_PROVIDER.HANDLER) {
-      console.log(`[MenuProvider]: closeMenu(${id})`);
+    if (isMenuOpen(id)) {
+      if (DEBUG.MENU_PROVIDER.HANDLER) {
+        console.log(`[MenuProvider]: closeMenu(${id})`);
+      }
+      setOpenMenus((prevState) => prevState.filter((menu) => menu.id !== id));
     }
-    setOpenMenus((prevState) => prevState.filter((menu) => menu.id !== id));
   };
   function handleClick(e) {
-    if (isFocused && openMenus.length !== 0) {
-      if (e.target instanceof HTMLElement) {
-        let el = e.target;
-        while (el.id === "" && el.className !== "NLT__app") {
-          el = el.parentElement;
-        }
-        const topMenu = findTopMenu();
-        if (el.id !== topMenu.id)
-          closeMenu(topMenu.id);
-      }
+    if (DEBUG.MENU_PROVIDER.HANDLER) {
+      console.log(`[MenuProvider]: handleClick`);
     }
+    setTimeout(() => {
+      if (isFocused && openMenus.length !== 0) {
+        if (e.target instanceof HTMLElement) {
+          let el = e.target;
+          while (el.id === "" && el.className !== "NLT__app") {
+            el = el.parentElement;
+          }
+          const topMenu = findTopMenu();
+          if (el.id !== topMenu.id) {
+            closeMenu(topMenu.id);
+          }
+        }
+      }
+    }, 1);
   }
   function handleKeyUp(e) {
     if (isFocused && openMenus.length !== 0) {
@@ -57634,12 +57598,156 @@ function MenuProvider({ children }) {
       closeAllMenus();
   }, [isFocused]);
   return /* @__PURE__ */ import_react16.default.createElement("div", {
-    onKeyUp: handleKeyUp,
-    onMouseDown: handleClick
+    onMouseDown: (e) => e.preventDefault(),
+    onClick: handleClick,
+    onKeyUp: handleKeyUp
   }, /* @__PURE__ */ import_react16.default.createElement(MenuContext.Provider, {
-    value: { isMenuOpen, openMenu, closeMenu }
+    value: {
+      isMenuOpen,
+      openMenu,
+      closeMenu
+    }
   }, children));
 }
+
+// node_modules/uuid/dist/esm-browser/rng.js
+var getRandomValues;
+var rnds8 = new Uint8Array(16);
+function rng() {
+  if (!getRandomValues) {
+    getRandomValues = typeof crypto !== "undefined" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== "undefined" && typeof msCrypto.getRandomValues === "function" && msCrypto.getRandomValues.bind(msCrypto);
+    if (!getRandomValues) {
+      throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
+    }
+  }
+  return getRandomValues(rnds8);
+}
+
+// node_modules/uuid/dist/esm-browser/regex.js
+var regex_default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
+
+// node_modules/uuid/dist/esm-browser/validate.js
+function validate(uuid) {
+  return typeof uuid === "string" && regex_default.test(uuid);
+}
+var validate_default = validate;
+
+// node_modules/uuid/dist/esm-browser/stringify.js
+var byteToHex = [];
+for (i = 0; i < 256; ++i) {
+  byteToHex.push((i + 256).toString(16).substr(1));
+}
+var i;
+function stringify(arr) {
+  var offset = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+  var uuid = (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + "-" + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + "-" + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + "-" + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + "-" + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase();
+  if (!validate_default(uuid)) {
+    throw TypeError("Stringified UUID is invalid");
+  }
+  return uuid;
+}
+var stringify_default = stringify;
+
+// node_modules/uuid/dist/esm-browser/v4.js
+function v4(options, buf, offset) {
+  options = options || {};
+  var rnds = options.random || (options.rng || rng)();
+  rnds[6] = rnds[6] & 15 | 64;
+  rnds[8] = rnds[8] & 63 | 128;
+  if (buf) {
+    offset = offset || 0;
+    for (var i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+    return buf;
+  }
+  return stringify_default(rnds);
+}
+var v4_default = v4;
+
+// src/app/services/hooks/index.ts
+var useMenuId = () => {
+  const [menuId] = (0, import_react17.useState)(v4_default());
+  return menuId;
+};
+var useMenuRef = (menuId, menuLevel) => {
+  const [menuPosition, setMenuPosition] = (0, import_react17.useState)({
+    top: 0,
+    left: 0,
+    width: 0,
+    height: 0,
+    time: 0
+  });
+  const [shouldOpenMenu, setOpenMenu] = (0, import_react17.useState)(false);
+  const resizeTime = useResizeTime();
+  const { isMenuOpen, openMenu, closeMenu } = useMenu(menuId, menuLevel);
+  (0, import_react17.useEffect)(() => {
+    if (menuPosition.time !== 0 && shouldOpenMenu) {
+      openMenu();
+      setOpenMenu(false);
+    }
+  }, [menuPosition.time, shouldOpenMenu]);
+  const menuRef = (0, import_react17.useCallback)((node) => {
+    if (node instanceof HTMLElement) {
+      const { top, left, width, height } = node.getBoundingClientRect();
+      setMenuPosition({ top, left, width, height, time: Date.now() });
+    }
+  }, [resizeTime, shouldOpenMenu]);
+  return {
+    menuPosition,
+    openMenu: () => setOpenMenu(true),
+    closeMenu,
+    isMenuOpen,
+    menuRef
+  };
+};
+var useDisableScroll = (isOpen) => {
+  const scroll = (0, import_react17.useRef)({
+    top: 0,
+    left: 0
+  });
+  const el = document.getElementsByClassName("NLT__app")[0];
+  function handleScroll() {
+    if (el) {
+      const { top, left } = scroll.current;
+      el.scrollTo(left, top);
+    }
+  }
+  (0, import_react17.useEffect)(() => {
+    if (el instanceof HTMLElement) {
+      if (isOpen) {
+        scroll.current = {
+          top: el.scrollTop,
+          left: el.scrollLeft
+        };
+        el.addEventListener("scroll", handleScroll);
+      } else {
+        el.removeEventListener("scroll", handleScroll);
+      }
+    }
+    return () => {
+      if (el) {
+        el.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [isOpen]);
+};
+var useResizeTime = () => {
+  const [resizeTime, setResizeTime] = (0, import_react17.useState)(0);
+  (0, import_react17.useEffect)(() => {
+    function handleResize() {
+      setResizeTime(Date.now());
+    }
+    setTimeout(() => {
+      const el = document.getElementsByClassName("view-content")[0];
+      if (el) {
+        new ResizeObserver(handleResize).observe(el);
+        handleResize();
+      }
+    }, 1);
+  }, []);
+  return resizeTime;
+};
 
 // src/app/components/TagCellEdit/component/SelectableTag/index.tsx
 function SelectableTag({
@@ -57649,44 +57757,47 @@ function SelectableTag({
   onClick,
   onColorChange
 }) {
-  const { openMenu, closeMenu, isMenuOpen } = useMenu();
-  const [menuId] = (0, import_react17.useState)(v4_default());
-  let tagClass = "NLT__tag";
-  tagClass += " " + findColorClass(color);
+  const menuId = useMenuId();
+  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.TWO);
   function handleColorChange(color2) {
     onColorChange(id, color2);
-    closeMenu(menuId);
+    closeMenu();
   }
-  return /* @__PURE__ */ import_react17.default.createElement("div", {
+  let tagClass = "NLT__tag";
+  tagClass += " " + findColorClass(color);
+  return /* @__PURE__ */ import_react18.default.createElement("div", {
+    ref: menuRef,
     className: "NLT__selectable-tag NLT__selectable",
     onClick: () => onClick(id)
-  }, /* @__PURE__ */ import_react17.default.createElement("div", {
+  }, /* @__PURE__ */ import_react18.default.createElement("div", {
     className: tagClass
-  }, /* @__PURE__ */ import_react17.default.createElement("div", {
+  }, /* @__PURE__ */ import_react18.default.createElement("div", {
     className: "NLT__tag-content"
-  }, html_react_parser_default(content))), /* @__PURE__ */ import_react17.default.createElement(IconButton, {
+  }, html_react_parser_default(content))), /* @__PURE__ */ import_react18.default.createElement(IconButton, {
     icon: ICON.MORE_HORIZ,
     onClick: (e) => {
       e.stopPropagation();
-      openMenu(menuId, MENU_LEVEL.TWO);
+      openMenu();
     }
-  }), /* @__PURE__ */ import_react17.default.createElement(TagColorMenu, {
+  }), /* @__PURE__ */ import_react18.default.createElement(TagColorMenu, {
     menuId,
-    isOpen: isMenuOpen(menuId),
+    isOpen: isMenuOpen,
     selectedColor: color,
-    top: -100,
-    left: -120,
+    top: menuPosition.top - 77,
+    left: menuPosition.left + 110,
     onColorClick: (color2) => handleColorChange(color2)
   }));
 }
 
 // src/app/components/TagCellEdit/component/CreateTag/index.tsx
-var import_react18 = __toModule(require_react());
+var import_react19 = __toModule(require_react());
 function CreateTag({ content, color, onAddTag }) {
-  return /* @__PURE__ */ import_react18.default.createElement("div", {
+  return /* @__PURE__ */ import_react19.default.createElement("div", {
     className: "NLT__create-tag NLT__selectable",
-    onClick: () => onAddTag(content)
-  }, /* @__PURE__ */ import_react18.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react18.default.createElement(TagCell, {
+    onClick: () => {
+      onAddTag(content);
+    }
+  }, /* @__PURE__ */ import_react19.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react19.default.createElement(TagCell, {
     content,
     color,
     hideLink: true
@@ -57709,17 +57820,6 @@ function TagCellEdit({
   onColorChange,
   onRemoveTagClick
 }) {
-  const inputRef = (0, import_react19.useCallback)((node) => {
-    if (node) {
-      if (node instanceof HTMLElement) {
-        if (isOpen) {
-          setTimeout(() => {
-            node.focus();
-          }, 1);
-        }
-      }
-    }
-  }, [isOpen]);
   function handleTextChange(e) {
     if (e.target.value.match(/\s/))
       return;
@@ -57728,12 +57828,12 @@ function TagCellEdit({
   function renderSelectableTags() {
     const filteredTags = tags.filter((tag) => tag.content.includes(inputText));
     const found = tags.find((tag) => tag.content === inputText);
-    return /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, !found && inputText !== "" && /* @__PURE__ */ import_react19.default.createElement(CreateTag, {
+    return /* @__PURE__ */ import_react20.default.createElement(import_react20.default.Fragment, null, !found && inputText !== "" && /* @__PURE__ */ import_react20.default.createElement(CreateTag, {
       key: "create-tag",
       content: inputText,
       color,
       onAddTag
-    }), filteredTags.map((tag) => /* @__PURE__ */ import_react19.default.createElement(SelectableTag, {
+    }), filteredTags.map((tag) => /* @__PURE__ */ import_react20.default.createElement(SelectableTag, {
       key: tag.id,
       id: tag.id,
       color: tag.color,
@@ -57742,18 +57842,18 @@ function TagCellEdit({
       onClick: onTagClick
     })));
   }
-  return /* @__PURE__ */ import_react19.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react20.default.createElement(Menu, {
     id: menuId,
     isOpen,
     top,
     left
-  }, /* @__PURE__ */ import_react19.default.createElement("div", {
+  }, /* @__PURE__ */ import_react20.default.createElement("div", {
     className: "NLT__tag-menu"
-  }, /* @__PURE__ */ import_react19.default.createElement("div", {
+  }, /* @__PURE__ */ import_react20.default.createElement("div", {
     className: "NLT__tag-menu-container"
-  }, /* @__PURE__ */ import_react19.default.createElement("div", {
+  }, /* @__PURE__ */ import_react20.default.createElement("div", {
     className: "NLT__tag-menu-top"
-  }, tags.filter((tag) => tag.selected.includes(cellId) === true).map((tag) => /* @__PURE__ */ import_react19.default.createElement(TagCell, {
+  }, tags.filter((tag) => tag.selected.includes(cellId) === true).map((tag) => /* @__PURE__ */ import_react20.default.createElement(TagCell, {
     key: tag.id,
     cellId,
     id: tag.id,
@@ -57762,21 +57862,21 @@ function TagCellEdit({
     content: tag.content,
     showRemove: true,
     onRemoveClick: onRemoveTagClick
-  })), /* @__PURE__ */ import_react19.default.createElement("input", {
+  })), /* @__PURE__ */ import_react20.default.createElement("input", {
     className: "NLT__tag-input",
-    ref: inputRef,
+    autoFocus: true,
     type: "text",
     value: inputText,
     onChange: handleTextChange
-  })), /* @__PURE__ */ import_react19.default.createElement("div", {
+  })), /* @__PURE__ */ import_react20.default.createElement("div", {
     className: "NLT__tag-menu-bottom"
-  }, /* @__PURE__ */ import_react19.default.createElement("p", {
+  }, /* @__PURE__ */ import_react20.default.createElement("p", {
     className: "NLT__tag-menu-text"
-  }, "Select an option or create one"), /* @__PURE__ */ import_react19.default.createElement("div", null, renderSelectableTags())))));
+  }, "Select an option or create one"), /* @__PURE__ */ import_react20.default.createElement("div", null, renderSelectableTags())))));
 }
 
 // src/app/components/DateCellEdit/index.tsx
-var import_react20 = __toModule(require_react());
+var import_react21 = __toModule(require_react());
 var import_react_datepicker = __toModule(require_react_datepicker_min());
 function DateCellEdit({
   menuId,
@@ -57788,14 +57888,14 @@ function DateCellEdit({
   selectedDate,
   onDateChange
 }) {
-  return /* @__PURE__ */ import_react20.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react21.default.createElement(Menu, {
     id: menuId,
     isOpen,
     top,
     left,
     width,
     height
-  }, /* @__PURE__ */ import_react20.default.createElement(import_react_datepicker.default, {
+  }, /* @__PURE__ */ import_react21.default.createElement(import_react_datepicker.default, {
     className: "NLT__date-input",
     autoFocus: true,
     selected: selectedDate,
@@ -57846,36 +57946,33 @@ function EditableTd({
   onContentChange,
   onAddTag
 }) {
-  const [inputText, setInputText] = (0, import_react21.useState)("");
-  const [cellMenu, setCellMenu] = (0, import_react21.useState)({
-    top: 0,
-    left: 0,
-    width: "0px",
-    height: "0px",
-    tagColor: randomColor()
-  });
-  const { isMenuOpen, openMenu } = useMenu();
-  const [menuId] = (0, import_react21.useState)(v4_default());
-  const content = cell.toString();
+  const [inputText, setInputText] = (0, import_react22.useState)("");
+  const didMount = (0, import_react22.useRef)(false);
+  const [tagColor] = (0, import_react22.useState)(randomColor());
+  const menuId = useMenuId();
+  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
+  useDisableScroll(isMenuOpen);
   const { id, headerId, type, expectedType } = cell;
-  const didMount = (0, import_react21.useRef)(false);
-  const tdRef = (0, import_react21.useCallback)((node) => {
-    if (node) {
-      if (node instanceof HTMLElement) {
-        setTimeout(() => {
-          setCellMenu((prevState) => {
-            const { top, left, width: width2, height } = node.getBoundingClientRect();
-            return __spreadProps(__spreadValues({}, prevState), {
-              top,
-              left,
-              width: `${width2}px`,
-              height: `${height}px`
-            });
-          });
-        }, 1);
+  const content = cell.toString();
+  (0, import_react22.useEffect)(() => {
+    if (!didMount.current) {
+      didMount.current = true;
+    } else {
+      if (!isMenuOpen) {
+        if (DEBUG.EDITABLE_TD.USE_EFFECT)
+          console.log(`[EditableTd] useEffect(updateContent("${inputText}"))`);
+        updateContent(inputText);
       }
     }
-  }, [inputText.length, isMenuOpen(menuId)]);
+  }, [didMount.current, isMenuOpen]);
+  (0, import_react22.useEffect)(() => {
+    if (DEBUG.EDITABLE_TD.USE_EFFECT)
+      console.log(`[EditableTd] useEffect(setInputText("${content}"))`);
+    setInputText(content);
+  }, []);
+  (0, import_react22.useEffect)(() => {
+    didMount.current = true;
+  }, []);
   function handleCellContextClick(e) {
     return __async(this, null, function* () {
       if (DEBUG.EDITABLE_TD.HANDLER)
@@ -57896,18 +57993,23 @@ function EditableTd({
       return;
     if (type === CELL_TYPE.ERROR)
       return;
-    openMenu(menuId, MENU_LEVEL.ONE);
+    openMenu();
   }
   function handleAddTag(text) {
-    if (DEBUG.EDITABLE_TD.HANDLER)
-      console.log(`[EditableTd] handleAddTag("${text}")`);
-    onAddTag(id, headerId, text, cellMenu.tagColor);
-    setInputText("");
+    return __async(this, null, function* () {
+      if (DEBUG.EDITABLE_TD.HANDLER)
+        console.log(`[EditableTd] handleAddTag("${text}")`);
+      closeMenu();
+      onAddTag(id, headerId, text, tagColor);
+    });
   }
   function handleTagClick(tagId) {
-    if (DEBUG.EDITABLE_TD.HANDLER)
-      console.log(`[EditableTd] handleTagClick("${tagId}")`);
-    onTagClick(id, tagId);
+    return __async(this, null, function* () {
+      if (DEBUG.EDITABLE_TD.HANDLER)
+        console.log(`[EditableTd] handleTagClick("${tagId}")`);
+      closeMenu();
+      onTagClick(id, tagId);
+    });
   }
   function updateContent(updated) {
     if (content !== updated) {
@@ -57923,7 +58025,7 @@ function EditableTd({
           if (tag) {
             onTagClick(id, tag.id);
           } else {
-            onAddTag(id, headerId, inputText, cellMenu.tagColor);
+            onAddTag(id, headerId, inputText, tagColor);
           }
           setInputText("");
           break;
@@ -57944,39 +58046,39 @@ function EditableTd({
   function renderCell() {
     switch (type) {
       case CELL_TYPE.TEXT:
-        return /* @__PURE__ */ import_react21.default.createElement(TextCell, {
+        return /* @__PURE__ */ import_react22.default.createElement(TextCell, {
           text: content
         });
       case CELL_TYPE.NUMBER:
-        return /* @__PURE__ */ import_react21.default.createElement(NumberCell, {
+        return /* @__PURE__ */ import_react22.default.createElement(NumberCell, {
           number: content
         });
       case CELL_TYPE.TAG: {
         const tag = tags.find((tag2) => tag2.selected.includes(id));
         if (tag)
-          return /* @__PURE__ */ import_react21.default.createElement(TagCell, {
+          return /* @__PURE__ */ import_react22.default.createElement(TagCell, {
             style: { overflow: "hidden" },
             content: tag.content,
             color: tag.color,
             showLink: true
           });
-        return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null);
+        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
       }
       case CELL_TYPE.DATE:
-        return /* @__PURE__ */ import_react21.default.createElement(DateCell, {
+        return /* @__PURE__ */ import_react22.default.createElement(DateCell, {
           text: content
         });
       case CELL_TYPE.CHECKBOX:
-        return /* @__PURE__ */ import_react21.default.createElement(CheckboxCell, {
+        return /* @__PURE__ */ import_react22.default.createElement(CheckboxCell, {
           isChecked: content.includes("x"),
           onCheckboxChange: handleCheckboxChange
         });
       case CELL_TYPE.ERROR:
-        return /* @__PURE__ */ import_react21.default.createElement(ErrorCell, {
+        return /* @__PURE__ */ import_react22.default.createElement(ErrorCell, {
           type: expectedType
         });
       default:
-        return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null);
+        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
     }
   }
   function handleInputChange(value) {
@@ -57997,35 +58099,35 @@ function EditableTd({
   function renderCellMenu() {
     switch (type) {
       case CELL_TYPE.TEXT:
-        return /* @__PURE__ */ import_react21.default.createElement(TextCellEdit, {
+        return /* @__PURE__ */ import_react22.default.createElement(TextCellEdit, {
           menuId,
-          isOpen: isMenuOpen(menuId),
-          top: cellMenu.top,
-          left: cellMenu.left,
-          width: cellMenu.width,
+          isOpen: isMenuOpen,
+          top: menuPosition.top,
+          left: menuPosition.left,
+          width: menuPosition.width,
           inputText,
           onInputChange: handleInputChange
         });
       case CELL_TYPE.NUMBER:
-        return /* @__PURE__ */ import_react21.default.createElement(NumberCellEdit, {
+        return /* @__PURE__ */ import_react22.default.createElement(NumberCellEdit, {
           menuId,
-          isOpen: isMenuOpen(menuId),
-          top: cellMenu.top,
-          left: cellMenu.left,
-          width: cellMenu.width,
+          isOpen: isMenuOpen,
+          top: menuPosition.top,
+          left: menuPosition.left,
+          width: menuPosition.width,
           inputText,
           onInputChange: handleInputChange
         });
       case CELL_TYPE.TAG:
-        return /* @__PURE__ */ import_react21.default.createElement(TagCellEdit, {
+        return /* @__PURE__ */ import_react22.default.createElement(TagCellEdit, {
           cellId: id,
           tags,
           menuId,
-          isOpen: isMenuOpen(menuId),
-          top: cellMenu.top,
-          left: cellMenu.left,
+          isOpen: isMenuOpen,
+          top: menuPosition.top,
+          left: menuPosition.left,
           inputText,
-          color: cellMenu.tagColor,
+          color: tagColor,
           onInputChange: handleInputChange,
           onColorChange,
           onAddTag: handleAddTag,
@@ -58033,75 +58135,56 @@ function EditableTd({
           onTagClick: handleTagClick
         });
       case CELL_TYPE.DATE:
-        return /* @__PURE__ */ import_react21.default.createElement(DateCellEdit, {
+        return /* @__PURE__ */ import_react22.default.createElement(DateCellEdit, {
           menuId,
-          isOpen: isMenuOpen(menuId),
-          top: cellMenu.top,
-          left: cellMenu.left,
-          width: cellMenu.width,
-          height: cellMenu.height,
+          isOpen: isMenuOpen,
+          top: menuPosition.top,
+          left: menuPosition.left,
+          width: menuPosition.width,
+          height: menuPosition.height,
           selectedDate: inputText !== "" ? new Date(inputText) : new Date(),
           onDateChange: handleDateChange
         });
       default:
-        return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null);
+        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
     }
   }
-  (0, import_react21.useEffect)(() => {
-    if (!didMount.current) {
-      didMount.current = true;
-    } else {
-      if (!isMenuOpen(menuId)) {
-        if (DEBUG.EDITABLE_TD.USE_EFFECT)
-          console.log(`[EditableTd] useEffect(updateContent("${inputText}"))`);
-        updateContent(inputText);
-      }
-    }
-  }, [didMount.current, isMenuOpen(menuId)]);
-  (0, import_react21.useEffect)(() => {
-    if (DEBUG.EDITABLE_TD.USE_EFFECT)
-      console.log(`[EditableTd] useEffect(setInputText("${content}"))`);
-    setInputText(content);
-  }, []);
-  (0, import_react21.useEffect)(() => {
-    didMount.current = true;
-  }, []);
-  return /* @__PURE__ */ import_react21.default.createElement("td", {
+  return /* @__PURE__ */ import_react22.default.createElement("td", {
     className: "NLT__td",
-    ref: tdRef,
+    ref: menuRef,
     onClick: handleCellClick,
     onContextMenu: handleCellContextClick
-  }, renderCellMenu(), /* @__PURE__ */ import_react21.default.createElement("div", {
-    className: "NLT__td-content-container",
+  }, renderCellMenu(), /* @__PURE__ */ import_react22.default.createElement("div", {
+    className: "NLT__td-container",
     style: { width }
   }, renderCell()));
 }
 
 // src/app/components/Table/index.tsx
-var import_react22 = __toModule(require_react());
-var Table = (0, import_react22.forwardRef)(({ headers, rows, onAddColumn, onAddRow }, ref) => {
-  return /* @__PURE__ */ import_react22.default.createElement("table", {
+var import_react23 = __toModule(require_react());
+var Table = (0, import_react23.forwardRef)(({ headers, rows, onAddColumn, onAddRow }, ref) => {
+  return /* @__PURE__ */ import_react23.default.createElement("table", {
     className: "NLT__table"
-  }, /* @__PURE__ */ import_react22.default.createElement("thead", {
+  }, /* @__PURE__ */ import_react23.default.createElement("thead", {
     className: "NLT__thead"
-  }, /* @__PURE__ */ import_react22.default.createElement("tr", null, headers.map((header) => /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, {
+  }, /* @__PURE__ */ import_react23.default.createElement("tr", null, headers.map((header) => /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, {
     key: header.id
-  }, header.component)), /* @__PURE__ */ import_react22.default.createElement("th", {
+  }, header.component)), /* @__PURE__ */ import_react23.default.createElement("th", {
     className: "NLT__th"
-  }, /* @__PURE__ */ import_react22.default.createElement(Button, {
+  }, /* @__PURE__ */ import_react23.default.createElement(Button, {
     onClick: () => onAddColumn()
-  }, "New")))), /* @__PURE__ */ import_react22.default.createElement("tbody", {
+  }, "New")))), /* @__PURE__ */ import_react23.default.createElement("tbody", {
     className: "NLT__tbody"
-  }, rows.map((row) => /* @__PURE__ */ import_react22.default.createElement("tr", {
+  }, rows.map((row) => /* @__PURE__ */ import_react23.default.createElement("tr", {
     key: row.id
-  }, row.component))), /* @__PURE__ */ import_react22.default.createElement("tfoot", {
+  }, row.component))), /* @__PURE__ */ import_react23.default.createElement("tfoot", {
     className: "NLT__tfoot"
-  }, /* @__PURE__ */ import_react22.default.createElement("tr", null, /* @__PURE__ */ import_react22.default.createElement("td", {
+  }, /* @__PURE__ */ import_react23.default.createElement("tr", null, /* @__PURE__ */ import_react23.default.createElement("td", {
     className: "NLT__td"
-  }, /* @__PURE__ */ import_react22.default.createElement(Button, {
+  }, /* @__PURE__ */ import_react23.default.createElement(Button, {
     style: { marginTop: "5px" },
     onClick: () => onAddRow()
-  }, "New")), headers.map((header) => /* @__PURE__ */ import_react22.default.createElement("td", {
+  }, "New")), headers.map((header) => /* @__PURE__ */ import_react23.default.createElement("td", {
     key: header.id,
     className: "NLT__td"
   })))));
@@ -58109,25 +58192,25 @@ var Table = (0, import_react22.forwardRef)(({ headers, rows, onAddColumn, onAddR
 var Table_default = Table;
 
 // src/app/components/RowMenu/index.tsx
-var import_react25 = __toModule(require_react());
+var import_react26 = __toModule(require_react());
 
 // src/app/components/RowMenu/components/RowMenuItem/index.tsx
-var import_react24 = __toModule(require_react());
+var import_react25 = __toModule(require_react());
 
 // src/app/components/IconText/index.tsx
-var import_react23 = __toModule(require_react());
+var import_react24 = __toModule(require_react());
 function IconText({ iconText, icon }) {
-  return /* @__PURE__ */ import_react23.default.createElement("div", {
+  return /* @__PURE__ */ import_react24.default.createElement("div", {
     className: "NLT__icon-text NLT__selectable"
-  }, icon !== "" && findIcon(icon, "NLT__icon--md NLT__margin-right"), /* @__PURE__ */ import_react23.default.createElement("p", null, iconText));
+  }, icon !== "" && findIcon(icon, "NLT__icon--md NLT__margin-right"), /* @__PURE__ */ import_react24.default.createElement("p", null, iconText));
 }
 
 // src/app/components/RowMenu/components/RowMenuItem/index.tsx
 function RowMenuItem({ icon, iconText, onClick }) {
-  return /* @__PURE__ */ import_react24.default.createElement("div", {
+  return /* @__PURE__ */ import_react25.default.createElement("div", {
     onClick: () => onClick(),
     className: "NLT__drag-menu-item"
-  }, /* @__PURE__ */ import_react24.default.createElement(IconText, {
+  }, /* @__PURE__ */ import_react25.default.createElement(IconText, {
     icon,
     iconText
   }));
@@ -58173,56 +58256,37 @@ function RowMenu({
   onDeleteClick,
   onInsertRowClick
 }) {
-  const [menuId] = (0, import_react25.useState)(v4_default());
-  const [buttonId] = (0, import_react25.useState)(v4_default());
-  const [resizeTime, setResizeTime] = (0, import_react25.useState)(0);
-  const [menuPosition, setMenuPosition] = (0, import_react25.useState)({
-    top: 0,
-    left: 0
-  });
-  const { isMenuOpen, openMenu, closeMenu } = useMenu();
+  const [buttonId] = (0, import_react26.useState)(v4_default());
+  const menuId = useMenuId();
+  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
+  useDisableScroll(isMenuOpen);
   function handleButtonClick(e) {
-    if (isMenuOpen(menuId))
-      return;
-    openMenu(menuId, MENU_LEVEL.ONE);
+    openMenu();
   }
   function handleDeleteClick(id) {
     onDeleteClick(id);
-    closeMenu(menuId);
+    closeMenu();
   }
   function handleInsertRowClick(id, insertBelow) {
     onInsertRowClick(id, insertBelow);
-    closeMenu(menuId);
+    closeMenu();
   }
   function handleMoveRowClick(id, moveBelow) {
     onMoveRowClick(id, moveBelow);
-    closeMenu(menuId);
+    closeMenu();
   }
-  const divRef = (0, import_react25.useCallback)((node) => {
-    if (node) {
-      if (node instanceof HTMLElement) {
-        setTimeout(() => {
-          const { top, left, width, height } = node.getBoundingClientRect();
-          setMenuPosition({
-            top: top + height,
-            left: left - width - 60
-          });
-        }, 1);
-      }
-    }
-  }, [isMenuOpen(menuId)]);
-  return /* @__PURE__ */ import_react25.default.createElement("div", {
-    ref: divRef
-  }, /* @__PURE__ */ import_react25.default.createElement(IconButton, {
+  return /* @__PURE__ */ import_react26.default.createElement("div", {
+    ref: menuRef
+  }, /* @__PURE__ */ import_react26.default.createElement(IconButton, {
     id: buttonId,
     icon: ICON.MORE_VERT,
     onClick: handleButtonClick
-  }), /* @__PURE__ */ import_react25.default.createElement(Menu, {
+  }), /* @__PURE__ */ import_react26.default.createElement(Menu, {
     id: menuId,
-    isOpen: isMenuOpen(menuId),
-    top: menuPosition.top,
-    left: menuPosition.left
-  }, /* @__PURE__ */ import_react25.default.createElement("div", {
+    isOpen: isMenuOpen,
+    top: menuPosition.top + menuPosition.height,
+    left: menuPosition.left - menuPosition.width - 65
+  }, /* @__PURE__ */ import_react26.default.createElement("div", {
     className: "NLT__drag-menu"
   }, Object.values(DRAG_MENU_ITEM).map((item) => {
     if (item.name === DRAG_MENU_ITEM.MOVE_UP.name) {
@@ -58233,7 +58297,7 @@ function RowMenu({
       if (isLastRow)
         return;
     }
-    return /* @__PURE__ */ import_react25.default.createElement(RowMenuItem, {
+    return /* @__PURE__ */ import_react26.default.createElement(RowMenuItem, {
       key: item.name,
       icon: item.icon,
       iconText: item.content,
@@ -58261,10 +58325,10 @@ function RowMenu({
 }
 
 // src/app/components/EditableTh/index.tsx
-var import_react28 = __toModule(require_react());
+var import_react29 = __toModule(require_react());
 
 // src/app/components/HeaderMenu/index.tsx
-var import_react27 = __toModule(require_react());
+var import_react28 = __toModule(require_react());
 
 // src/app/components/HeaderMenu/constants.ts
 var SUBMENU = {
@@ -58320,7 +58384,7 @@ var SORT = {
 };
 
 // src/app/components/HeaderMenu/components/HeaderMenuItem/index.tsx
-var import_react26 = __toModule(require_react());
+var import_react27 = __toModule(require_react());
 function HeaderMenuItem({
   icon = "",
   iconText,
@@ -58330,10 +58394,10 @@ function HeaderMenuItem({
   let className = "NLT__header-menu-item NLT__selectable";
   if (selected)
     className += " NLT__selected";
-  return /* @__PURE__ */ import_react26.default.createElement("li", {
+  return /* @__PURE__ */ import_react27.default.createElement("li", {
     className,
     onClick: () => onClick()
-  }, /* @__PURE__ */ import_react26.default.createElement(IconText, {
+  }, /* @__PURE__ */ import_react27.default.createElement(IconText, {
     iconText,
     icon
   }));
@@ -58359,12 +58423,12 @@ function HeaderMenu({
   onMoveColumnClick,
   onClose
 }) {
-  const [inputText, setInputText] = (0, import_react27.useState)("");
-  const [submenu, setSubmenu] = (0, import_react27.useState)(null);
-  const lastLength = (0, import_react27.useRef)(0);
+  const [inputText, setInputText] = (0, import_react28.useState)("");
+  const [submenu, setSubmenu] = (0, import_react28.useState)(null);
+  const lastLength = (0, import_react28.useRef)(0);
   function renderTypeItems() {
     return TYPE_ITEMS.map((item) => {
-      return /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+      return /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
         key: item.name,
         icon: "",
         iconText: item.content,
@@ -58374,9 +58438,9 @@ function HeaderMenu({
     });
   }
   function renderSortItems() {
-    return /* @__PURE__ */ import_react27.default.createElement("ul", {
+    return /* @__PURE__ */ import_react28.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, Object.values(SORT).map((item) => /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    }, Object.values(SORT).map((item) => /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       key: item.name,
       icon: item.icon,
       iconText: `Sort ${item.content}`,
@@ -58385,41 +58449,41 @@ function HeaderMenu({
     })));
   }
   function renderInsertItems() {
-    return /* @__PURE__ */ import_react27.default.createElement("ul", {
+    return /* @__PURE__ */ import_react28.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    }, /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_LEFT,
       iconText: "Insert Left",
       onClick: () => handleInsertColumnClick(id, false)
-    }), /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    }), /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT,
       iconText: "Insert Right",
       onClick: () => handleInsertColumnClick(id, true)
     }));
   }
   function renderMoveItems() {
-    return /* @__PURE__ */ import_react27.default.createElement("ul", {
+    return /* @__PURE__ */ import_react28.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, !inFirstHeader && /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    }, !inFirstHeader && /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_LEFT,
       iconText: "Move Left",
       onClick: () => handleMoveColumnClick(id, false)
-    }), !inLastHeader && /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    }), !inLastHeader && /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT,
       iconText: "Move Right",
       onClick: () => handleMoveColumnClick(id, true)
     }));
   }
   function renderEditItems() {
-    return /* @__PURE__ */ import_react27.default.createElement(import_react27.default.Fragment, null, /* @__PURE__ */ import_react27.default.createElement("div", {
+    return /* @__PURE__ */ import_react28.default.createElement(import_react28.default.Fragment, null, /* @__PURE__ */ import_react28.default.createElement("div", {
       style: { marginBottom: "10px" }
-    }, /* @__PURE__ */ import_react27.default.createElement("input", {
+    }, /* @__PURE__ */ import_react28.default.createElement("input", {
       className: "NLT__input NLT__header-menu-input",
       autoFocus: true,
       type: "text",
       value: inputText,
       onChange: (e) => setInputText(e.target.value)
-    })), /* @__PURE__ */ import_react27.default.createElement(Button, {
+    })), /* @__PURE__ */ import_react28.default.createElement(Button, {
       onClick: () => handleDeleteClick(id)
     }, "Delete"));
   }
@@ -58444,7 +58508,7 @@ function HeaderMenu({
     onClose();
   }
   function renderMenu() {
-    return Object.values(SUBMENU).map((item) => /* @__PURE__ */ import_react27.default.createElement(HeaderMenuItem, {
+    return Object.values(SUBMENU).map((item) => /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
       key: item.name,
       iconText: item.content,
       icon: item.icon,
@@ -58465,19 +58529,19 @@ function HeaderMenu({
         case SUBMENU.TYPE.name:
           return renderTypeItems();
         default:
-          return /* @__PURE__ */ import_react27.default.createElement(import_react27.default.Fragment, null);
+          return /* @__PURE__ */ import_react28.default.createElement(import_react28.default.Fragment, null);
       }
     }
-    return /* @__PURE__ */ import_react27.default.createElement("div", null, /* @__PURE__ */ import_react27.default.createElement("div", {
+    return /* @__PURE__ */ import_react28.default.createElement("div", null, /* @__PURE__ */ import_react28.default.createElement("div", {
       className: "NLT__header-menu-header-container"
-    }, /* @__PURE__ */ import_react27.default.createElement(IconButton, {
+    }, /* @__PURE__ */ import_react28.default.createElement(IconButton, {
       icon: ICON.KEYBOARD_BACKSPACE,
       onClick: () => setSubmenu(null)
-    }), /* @__PURE__ */ import_react27.default.createElement("div", {
+    }), /* @__PURE__ */ import_react28.default.createElement("div", {
       className: "NLT__header-menu-header"
     }, submenu.content)), renderSubmenuItems());
   }
-  (0, import_react27.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     if (!isOpen) {
       if (inputText.length !== lastLength.current) {
         lastLength.current = inputText.length;
@@ -58488,17 +58552,17 @@ function HeaderMenu({
       setSubmenu(null);
     }
   }, [isOpen, inputText.length, lastLength.current]);
-  (0, import_react27.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     setInputText(content);
   }, [content]);
-  return /* @__PURE__ */ import_react27.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react28.default.createElement(Menu, {
     isOpen,
     id: menuId,
     top,
     left
-  }, /* @__PURE__ */ import_react27.default.createElement("div", {
+  }, /* @__PURE__ */ import_react28.default.createElement("div", {
     className: "NLT__header-menu"
-  }, submenu !== null ? /* @__PURE__ */ import_react27.default.createElement(Submenu, null) : renderMenu()));
+  }, submenu !== null ? /* @__PURE__ */ import_react28.default.createElement(Submenu, null) : renderMenu()));
 }
 
 // src/app/components/EditableTh/index.tsx
@@ -58519,25 +58583,19 @@ function EditableTh({
   onDeleteClick,
   onSaveClick
 }) {
-  const [headerPosition, setHeaderPosition] = (0, import_react28.useState)({
-    top: 0,
-    left: 0
-  });
-  const [menuId] = (0, import_react28.useState)(v4_default());
-  const [resizeTime, setResizeTime] = (0, import_react28.useState)(0);
-  const dragRef = (0, import_react28.useRef)(false);
-  const { isMenuOpen, openMenu, closeMenu } = useMenu();
+  const dragRef = (0, import_react29.useRef)(false);
+  const menuId = useMenuId();
+  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
+  useDisableScroll(isMenuOpen);
   function handleHeaderClick(e) {
-    if (isMenuOpen(menuId))
-      return;
     if (dragRef.current)
       return;
-    openMenu(menuId, MENU_LEVEL.ONE);
+    openMenu();
   }
   function handleMouseMove(e) {
     const target = e.target;
     if (target instanceof HTMLElement) {
-      let width2 = e.pageX - headerPosition.left - 17;
+      let width2 = e.pageX - menuPosition.left - 17;
       width2 = parseInt(width2.toString());
       if (width2 < 30)
         return;
@@ -58546,7 +58604,7 @@ function EditableTh({
     }
   }
   function handleClose() {
-    closeMenu(menuId);
+    closeMenu();
   }
   function handleDrag(e) {
     removeEventListeners();
@@ -58562,27 +58620,14 @@ function EditableTh({
       dragRef.current = false;
     }, 50);
   }
-  const thRef = (0, import_react28.useCallback)((node) => {
-    if (node) {
-      if (node instanceof HTMLElement) {
-        setTimeout(() => {
-          const { top, left } = node.getBoundingClientRect();
-          setHeaderPosition({
-            top,
-            left
-          });
-        }, 1);
-      }
-    }
-  }, [isMenuOpen(menuId)]);
-  return /* @__PURE__ */ import_react28.default.createElement("th", {
+  return /* @__PURE__ */ import_react29.default.createElement("th", {
     className: "NLT__th NLT__selectable",
-    ref: thRef,
+    ref: menuRef,
     onClick: handleHeaderClick
-  }, /* @__PURE__ */ import_react28.default.createElement(HeaderMenu, {
-    isOpen: isMenuOpen(menuId),
-    top: headerPosition.top,
-    left: headerPosition.left,
+  }, /* @__PURE__ */ import_react29.default.createElement(HeaderMenu, {
+    isOpen: isMenuOpen,
+    top: menuPosition.top,
+    left: menuPosition.left,
     id,
     menuId,
     content,
@@ -58598,14 +58643,14 @@ function EditableTh({
     onTypeSelect,
     onDeleteClick,
     onClose: handleClose
-  }), /* @__PURE__ */ import_react28.default.createElement("div", {
+  }), /* @__PURE__ */ import_react29.default.createElement("div", {
     className: "NLT__header-content-container"
-  }, /* @__PURE__ */ import_react28.default.createElement("div", {
+  }, /* @__PURE__ */ import_react29.default.createElement("div", {
     className: "NLT__header-content",
     style: { width }
-  }, content), /* @__PURE__ */ import_react28.default.createElement("div", {
+  }, content), /* @__PURE__ */ import_react29.default.createElement("div", {
     className: "NLT__header-resize-container"
-  }, /* @__PURE__ */ import_react28.default.createElement("div", {
+  }, /* @__PURE__ */ import_react29.default.createElement("div", {
     className: "NLT__header-resize",
     onMouseDown: () => {
       window.addEventListener("mousemove", handleMouseMove);
@@ -59073,10 +59118,10 @@ function App({
   tableId,
   el
 }) {
-  const [oldAppData, setOldAppData] = (0, import_react29.useState)(data);
-  const [appData, setAppData] = (0, import_react29.useState)(data);
-  const [debounceUpdate, setDebounceUpdate] = (0, import_react29.useState)(0);
-  const [updateTime, setUpdateTime] = (0, import_react29.useState)(0);
+  const [oldAppData, setOldAppData] = (0, import_react30.useState)(data);
+  const [appData, setAppData] = (0, import_react30.useState)(data);
+  const [debounceUpdate, setDebounceUpdate] = (0, import_react30.useState)(0);
+  const [updateTime, setUpdateTime] = (0, import_react30.useState)(0);
   function handleAddColumn() {
     if (DEBUG.APP.HANDLER)
       console.log("[App]: handleAddColumn called.");
@@ -59371,14 +59416,14 @@ function App({
     });
     setUpdateTime(Date.now());
   }
-  (0, import_react29.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     for (let i = 0; i < appData.headers.length; i++) {
       const header = appData.headers[i];
       if (header.sortName !== SORT.DEFAULT.name)
         sortRows(header.id, header.type, header.sortName, false);
     }
   }, []);
-  (0, import_react29.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     function handleUpdate() {
       return __async(this, null, function* () {
         if (updateTime === 0)
@@ -59392,7 +59437,7 @@ function App({
     }
     handleUpdate();
   }, [updateTime]);
-  (0, import_react29.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     let intervalId = null;
     function startTimer() {
       intervalId = setInterval(() => {
@@ -59407,7 +59452,7 @@ function App({
       startTimer();
     return () => clearInterval(intervalId);
   }, [debounceUpdate]);
-  (0, import_react29.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     let intervalId = null;
     function startTimer() {
       intervalId = setInterval(() => __async(this, null, function* () {
@@ -59431,14 +59476,14 @@ function App({
     startTimer();
     return () => clearInterval(intervalId);
   }, []);
-  return /* @__PURE__ */ import_react29.default.createElement("div", {
+  return /* @__PURE__ */ import_react30.default.createElement("div", {
     className: "NLT__app",
     tabIndex: 0
-  }, /* @__PURE__ */ import_react29.default.createElement(Table_default, {
+  }, /* @__PURE__ */ import_react30.default.createElement(Table_default, {
     headers: appData.headers.map((header, j) => {
       const { id, content, width, type, sortName } = header;
       return __spreadProps(__spreadValues({}, header), {
-        component: /* @__PURE__ */ import_react29.default.createElement(EditableTh, {
+        component: /* @__PURE__ */ import_react30.default.createElement(EditableTh, {
           key: id,
           id,
           width,
@@ -59460,9 +59505,9 @@ function App({
     }),
     rows: appData.rows.map((row, i) => {
       return __spreadProps(__spreadValues({}, row), {
-        component: /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, appData.headers.map((header, j) => {
+        component: /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, appData.headers.map((header, j) => {
           const cell = appData.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === header.id);
-          return /* @__PURE__ */ import_react29.default.createElement(EditableTd, {
+          return /* @__PURE__ */ import_react30.default.createElement(EditableTd, {
             key: cell.id,
             cell,
             width: header.width,
@@ -59473,9 +59518,9 @@ function App({
             onColorChange: handleChangeColor,
             onAddTag: handleAddTag
           });
-        }), /* @__PURE__ */ import_react29.default.createElement("td", {
+        }), /* @__PURE__ */ import_react30.default.createElement("td", {
           className: "NLT__td"
-        }, /* @__PURE__ */ import_react29.default.createElement(RowMenu, {
+        }, /* @__PURE__ */ import_react30.default.createElement(RowMenu, {
           rowId: row.id,
           isFirstRow: i === 0,
           isLastRow: i === appData.rows.length - 1,
@@ -59692,12 +59737,12 @@ var NLTTable = class extends import_obsidian2.MarkdownRenderChild {
       const { tableId, data } = yield loadAppData(this.plugin, this.settings, this.containerEl, this.sourcePath);
       if (data) {
         this.el = this.containerEl.createEl("div");
-        import_react_dom2.default.render(/* @__PURE__ */ import_react30.default.createElement(FocusProvider, {
+        import_react_dom2.default.render(/* @__PURE__ */ import_react31.default.createElement(FocusProvider, {
           plugin: this.plugin,
           sourcePath: this.sourcePath,
           tableId,
           el: this.el
-        }, /* @__PURE__ */ import_react30.default.createElement(MenuProvider, null, /* @__PURE__ */ import_react30.default.createElement(App, {
+        }, /* @__PURE__ */ import_react31.default.createElement(MenuProvider, null, /* @__PURE__ */ import_react31.default.createElement(App, {
           plugin: this.plugin,
           settings: this.settings,
           data,
