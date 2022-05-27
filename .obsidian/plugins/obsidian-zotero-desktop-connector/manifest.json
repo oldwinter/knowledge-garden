@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-zotero-desktop-connector",
+	"name": "Zotero Integration",
+	"version": "2.1.15",
+	"minAppVersion": "0.12.0",
+	"description": "Insert and import citations, bibliographies, notes, and PDF annotations from Zotero.",
+	"author": "mgmeyers",
+	"authorUrl": "https://github.com/mgmeyers/obsidian-zotero-integration",
+	"isDesktopOnly": true
+}
