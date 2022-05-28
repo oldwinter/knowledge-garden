@@ -6919,6 +6919,11 @@
         "fileName": "README",
         "link": "闪念笔记",
         "relativePath": "README.md"
+      },
+      {
+        "fileName": "README",
+        "link": "闪念笔记",
+        "relativePath": "README.md"
       }
     ]
   },
@@ -7221,6 +7226,11 @@
         "fileName": "Obsidian入门到精通",
         "link": "文献笔记",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
+      },
+      {
+        "fileName": "README",
+        "link": "文献笔记",
+        "relativePath": "README.md"
       }
     ]
   },
@@ -18818,11 +18828,11 @@
     "relativePath": "README.md",
     "headings": [
       {
-        "heading": "是什么",
+        "heading": "这是什么代码仓库",
         "level": 2
       },
       {
-        "heading": "为什么",
+        "heading": "为什么要开源笔记",
         "level": 2
       },
       {
@@ -18913,6 +18923,17 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
       },
       {
+        "link": "markdown"
+      },
+      {
+        "link": "闪念笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
+      },
+      {
+        "link": "文献笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/文献笔记.md"
+      },
+      {
         "link": "永久笔记",
         "relativePath": "pages/300 - AREA/永久笔记.md"
       },
@@ -18943,6 +18964,9 @@
       {
         "link": "vscode",
         "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "copilot"
       },
       {
         "link": "个人知识管理",
