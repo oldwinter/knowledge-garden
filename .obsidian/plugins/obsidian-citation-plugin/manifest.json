@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-citation-plugin",
+	"name": "Citations",
+	"version": "0.4.4",
+	"minAppVersion": "0.9.20",
+	"description": "Automatically search and insert citations from a Zotero library",
+	"author": "Jon Gauthier",
+	"authorUrl": "http://foldl.me",
+	"isDesktopOnly": false
+}

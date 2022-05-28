@@ -1,0 +1,146 @@
+{
+  "excalibrainFilepath": "draws/excalibrain.md",
+  "hierarchy": {
+    "parents": [
+      "Parent",
+      "Parents",
+      "up",
+      "u"
+    ],
+    "children": [
+      "Children",
+      "Child",
+      "down",
+      "d"
+    ],
+    "friends": [
+      "Friends",
+      "Friend",
+      "Jump",
+      "Jumps",
+      "j"
+    ]
+  },
+  "renderAlias": true,
+  "backgroundColor": "#0c3e6aff",
+  "excludeFilepaths": [],
+  "showInferredNodes": true,
+  "showAttachments": true,
+  "showVirtualNodes": true,
+  "showFolderNodes": false,
+  "showTagNodes": true,
+  "showPageNodes": true,
+  "maxItemCount": 30,
+  "renderSiblings": true,
+  "baseNodeStyle": {
+    "prefix": "",
+    "backgroundColor": "#00000066",
+    "fillStyle": "solid",
+    "textColor": "#ffffffff",
+    "borderColor": "#00000000",
+    "fontSize": 20,
+    "fontFamily": 3,
+    "maxLabelLength": 30,
+    "roughness": 0,
+    "strokeShaprness": "round",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "padding": 10,
+    "gateRadius": 5,
+    "gateOffset": 15,
+    "gateStrokeColor": "#ffffffff",
+    "gateBackgroundColor": "#ffffffff",
+    "gateFillStyle": "solid"
+  },
+  "centralNodeStyle": {
+    "fontSize": 30,
+    "backgroundColor": "#C49A13FF",
+    "textColor": "#000000ff"
+  },
+  "inferredNodeStyle": {
+    "backgroundColor": "#000005b3",
+    "textColor": "#95c7f3ff"
+  },
+  "virtualNodeStyle": {
+    "backgroundColor": "#ff000066",
+    "fillStyle": "hachure",
+    "textColor": "#ffffffff"
+  },
+  "siblingNodeStyle": {
+    "fontSize": 15
+  },
+  "attachmentNodeStyle": {
+    "prefix": "📎 "
+  },
+  "folderNodeStyle": {
+    "prefix": "📂 ",
+    "strokeShaprness": "sharp",
+    "borderColor": "#ffd700ff",
+    "textColor": "#ffd700ff"
+  },
+  "tagNodeStyle": {
+    "prefix": "#",
+    "strokeShaprness": "sharp",
+    "borderColor": "#4682b4ff",
+    "textColor": "#4682b4ff"
+  },
+  "tagNodeStyles": {},
+  "tagStyleList": [],
+  "baseLinkStyle": {
+    "strokeColor": "#696969FF",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "roughness": 0,
+    "startArrowHead": "none",
+    "endArrowHead": "none"
+  },
+  "inferredLinkStyle": {
+    "strokeStyle": "dashed"
+  },
+  "folderLinkStyle": {
+    "strokeColor": "#ffd700ff"
+  },
+  "tagLinkStyle": {
+    "strokeColor": "#4682b4ff"
+  },
+  "hierarchyLinkStyles": {
+    "Parent": {},
+    "Parents": {},
+    "up": {},
+    "u": {},
+    "Children": {},
+    "Child": {},
+    "down": {},
+    "d": {},
+    "Friends": {},
+    "Friend": {},
+    "Jump": {},
+    "Jumps": {},
+    "j": {}
+  },
+  "navigationHistory": [
+    "journals/祛魅.md",
+    "journals/双链笔记的异同分析.md",
+    "journals/2022-05-27.md",
+    "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+    "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
+    "pages/500 - ARCHIVE/已发布长文/以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统.md",
+    "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md",
+    "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md",
+    "pages/300 - AREA/知识管理/mac使用技巧.md",
+    "draws/ExcaliBrain Snapshot - mac使用技巧.excalidraw.md",
+    "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md",
+    "folder:pages/400 - RESOURCE/知识原子库/单词库&概念库",
+    "pages/400 - RESOURCE/知识原子库/果盘先生.md",
+    "做为甲方，如何管理外包项目",
+    "pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性.md",
+    "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+    "folder:pages/300 - AREA/人+科技融合",
+    "pages/000 - INBOX/隐私保护.md",
+    "pages/200 - PROJECT/个人职业生涯/微服务.md",
+    "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
+    "pages/200 - PROJECT/我的开源项目/vscode/vscode.md",
+    "pages/300 - AREA/人+科技融合/devonthink.md",
+    "pages/300 - AREA/人+科技融合/B站的用户画像.md"
+  ]
+}

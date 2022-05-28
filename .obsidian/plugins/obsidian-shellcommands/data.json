@@ -1,0 +1,35 @@
+{
+  "settings_version": "0.12.0",
+  "debug": false,
+  "obsidian_command_palette_prefix": "Execute: ",
+  "preview_variables_in_command_palette": true,
+  "show_autocomplete_menu": true,
+  "working_directory": "",
+  "default_shells": {},
+  "error_message_duration": 20,
+  "notification_message_duration": 10,
+  "output_channel_clipboard_also_outputs_to_notification": true,
+  "enable_events": true,
+  "shell_commands": {
+    "0": {
+      "platform_specific_commands": {
+        "default": "ls"
+      },
+      "shells": {},
+      "alias": "",
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {}
+    }
+  },
+  "prompts": [],
+  "custom_variables": []
+}

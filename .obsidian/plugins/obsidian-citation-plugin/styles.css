@@ -1,0 +1,114 @@
+/** Citations modal **/
+
+/*
+ * Loading animation from
+ * https://loading.io/css/
+ */
+ .zoteroModalLoading {
+   color: var(--text-muted);
+   text-align: center;
+ }
+.zoteroModalLoadingAnimation {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.zoteroModalLoadingAnimation {
+  content: " ";
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  border-color: #eee transparent #eee transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#zoteroSettingTab .text-monospace {
+  font-family: monospace;
+}
+
+.zoteroModalResults .suggestion-item {
+  height: fit-content;
+  line-height: 1.5rem;
+}
+
+.zoteroTitle {
+  font-size: 14px;
+  display: block;
+}
+.zoteroAuthors {
+  color: #555;
+  font-size: 13px;
+}
+.zoteroAuthorsEmpty::after {
+  font-style: italic;
+  content: 'Unknown authors';
+}
+.zoteroCitekey {
+  color: #555;
+  font-size: 13px;
+  font-family: monospace;
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #ccc;
+}
+
+.theme-dark .zoteroTitle {
+  font-size: 14px;
+  display: block;
+}
+.theme-dark .zoteroAuthors {
+  color: #aaa;
+  font-size: 13px;
+}
+.theme-dark .zoteroCitekey {
+  color: #aaa;
+  font-size: 13px;
+  font-family: monospace;
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #aaa;
+}
+
+/** Settings dialog **/
+.d-none {
+  display: none;
+}
+.zoteroSettingCitationPathLoading,
+.zoteroSettingCitationPathError,
+.zoteroSettingCitationPathSuccess {
+  font-size: 14px;
+}
+.zoteroSettingCitationPathLoading {
+  color: var(--text-muted);
+}
+.zoteroSettingCitationPathError {
+  color: var(--text-error);
+}
+.zoteroSettingCitationPathError:hover {
+  color: var(--text-error-hover);
+}
+.zoteroSettingCitationPathSuccess {
+  color: var(--text-accent);
+}
+.zoteroSettingCitationPathSuccess:hover {
+  color: var(--text-accent-hover);
+}
+
+#zoteroSettingTab textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 10em;
+}

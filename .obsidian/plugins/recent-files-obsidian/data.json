@@ -1,6 +1,154 @@
 {
   "recentFiles": [
     {
+      "basename": "Pasted Image 20220320203200_352.png",
+      "path": "pages/Pasted Image 20220320203200_352.png.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "draws/excalibrain.md"
+    },
+    {
+      "basename": "B站的用户画像",
+      "path": "pages/300 - AREA/人+科技融合/B站的用户画像.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - 图",
+      "path": "draws/数字时代如何更好地工作与生活 - 图.md"
+    },
+    {
+      "basename": "飞轮效应",
+      "path": "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md"
+    },
+    {
+      "basename": "2022-05-28",
+      "path": "journals/2022-05-28.md"
+    },
+    {
+      "basename": "有意思的网络流行语 - MOC",
+      "path": "pages/400 - RESOURCE/知识原子库/有意思的网络流行语 - MOC.md"
+    },
+    {
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+    },
+    {
+      "basename": "春秋笔法",
+      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法.md"
+    },
+    {
+      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+    },
+    {
+      "basename": "BRAT-log",
+      "path": "BRAT-log.md"
+    },
+    {
+      "basename": "自上而下",
+      "path": "pages/自上而下.md"
+    },
+    {
+      "basename": "INDEX根索引 - MOC",
+      "path": "pages/INDEX根索引 - MOC.md"
+    },
+    {
+      "basename": "快捷键、图标、命令行的对比与选择",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键、图标、命令行的对比与选择.md"
+    },
+    {
+      "basename": "2022-05-29",
+      "path": "journals/2022-05-29.md"
+    },
+    {
+      "basename": "滴答清单",
+      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
+    },
+    {
+      "basename": "最近编辑、最近创建、最近任务、回顾记忆",
+      "path": "pages/最近编辑、最近创建、最近任务、回顾记忆.md"
+    },
+    {
+      "basename": "devonthink",
+      "path": "pages/300 - AREA/人+科技融合/devonthink.md"
+    },
+    {
+      "basename": "vscode",
+      "path": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+    },
+    {
+      "basename": "个人技术栈与工具链梳理",
+      "path": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
+    },
+    {
+      "basename": "微服务",
+      "path": "pages/200 - PROJECT/个人职业生涯/微服务.md"
+    },
+    {
+      "basename": "隐私保护",
+      "path": "pages/000 - INBOX/隐私保护.md"
+    },
+    {
+      "basename": "果盘先生",
+      "path": "pages/400 - RESOURCE/知识原子库/果盘先生.md"
+    },
+    {
+      "basename": "工具理性与价值理性",
+      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性.md"
+    },
+    {
+      "basename": "降维打击",
+      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md"
+    },
+    {
+      "basename": "mac使用技巧",
+      "path": "pages/300 - AREA/知识管理/mac使用技巧.md"
+    },
+    {
+      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
+      "path": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
+    },
+    {
+      "basename": "notion",
+      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+    },
+    {
+      "basename": "族繁不及备载",
+      "path": "pages/300 - AREA/知识管理/族繁不及备载.md"
+    },
+    {
+      "basename": "有用的github开源库搜集",
+      "path": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md"
+    },
+    {
+      "basename": "obsidian入门",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
+    },
+    {
+      "basename": "context 切换",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md"
+    },
+    {
+      "basename": "《金字塔原理》",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
+    },
+    {
+      "basename": "刘慈欣",
+      "path": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
+    },
+    {
+      "basename": "以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统",
+      "path": "pages/500 - ARCHIVE/已发布长文/以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统.md"
+    },
+    {
+      "basename": "advanced-slides",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
+    },
+    {
       "basename": "2022-05-27",
       "path": "journals/2022-05-27.md"
     },
@@ -9,8 +157,8 @@
       "path": "journals/双链笔记的异同分析.md"
     },
     {
-      "basename": "advanced-slides",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
+      "basename": "祛魅",
+      "path": "journals/祛魅.md"
     },
     {
       "basename": "工欲善其事，必先利其器。--《论语》",
@@ -33,10 +181,6 @@
       "path": "journals/台风天去舟山旅行.md"
     },
     {
-      "basename": "祛魅",
-      "path": "journals/祛魅.md"
-    },
-    {
       "basename": "学会提问（原书第12版）-39980443",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-39980443.md"
     },
@@ -55,10 +199,6 @@
     {
       "basename": "Pasted Image 20220320190802_762.png",
       "path": "pages/Pasted Image 20220320190802_762.png.md"
-    },
-    {
-      "basename": "Pasted Image 20220320191102_767.png",
-      "path": "pages/Pasted Image 20220320191102_767.png.md"
     }
   ],
   "omittedPaths": [],

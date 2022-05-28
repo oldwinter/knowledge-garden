@@ -23,6 +23,11 @@
   "titleLeft": [],
   "titleRight": [
     {
+      "id": "periodic-notes:open-daily-note",
+      "icon": "lucide-book-open",
+      "name": "Periodic Notes: Open today's daily note"
+    },
+    {
       "id": "obsidian-focus-mode:toggle-focus-mode",
       "icon": "enter",
       "name": "Focus Mode: Toggle Focus Mode"
