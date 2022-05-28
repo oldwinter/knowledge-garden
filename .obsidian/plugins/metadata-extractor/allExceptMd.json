@@ -65,16 +65,8 @@
       "relativePath": "pages/200 - PROJECT/个人职业生涯"
     },
     {
-      "name": "云计算",
-      "relativePath": "pages/200 - PROJECT/云计算"
-    },
-    {
       "name": "我的开源项目",
       "relativePath": "pages/200 - PROJECT/我的开源项目"
-    },
-    {
-      "name": "项目管理",
-      "relativePath": "pages/200 - PROJECT/项目管理"
     },
     {
       "name": "人+科技融合",
@@ -93,24 +85,12 @@
       "relativePath": "pages/300 - AREA/运动与健康"
     },
     {
-      "name": "已发布长文",
-      "relativePath": "pages/500 - ARCHIVE/已发布长文"
-    },
-    {
       "name": "书影音笔记",
       "relativePath": "pages/400 - RESOURCE/书影音笔记"
     },
     {
-      "name": "基础学科",
-      "relativePath": "pages/400 - RESOURCE/基础学科"
-    },
-    {
       "name": "小知识点学习",
       "relativePath": "pages/400 - RESOURCE/小知识点学习"
-    },
-    {
-      "name": "游戏笔记",
-      "relativePath": "pages/400 - RESOURCE/游戏笔记"
     },
     {
       "name": "知识原子库",
@@ -161,30 +141,6 @@
       "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
     },
     {
-      "name": "哲学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/哲学"
-    },
-    {
-      "name": "心理学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/心理学"
-    },
-    {
-      "name": "法学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/法学"
-    },
-    {
-      "name": "经济学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/经济学"
-    },
-    {
-      "name": "计算机科学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/计算机科学"
-    },
-    {
-      "name": "金融学",
-      "relativePath": "pages/400 - RESOURCE/基础学科/金融学"
-    },
-    {
       "name": "习惯库",
       "relativePath": "pages/400 - RESOURCE/知识原子库/习惯库"
     },
@@ -231,6 +187,50 @@
     {
       "name": "虚构类读物",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
+    },
+    {
+      "name": "云计算与云原生",
+      "relativePath": "pages/200 - PROJECT/云计算与云原生"
+    },
+    {
+      "name": "软件项目管理",
+      "relativePath": "pages/200 - PROJECT/软件项目管理"
+    },
+    {
+      "name": "计算机科学",
+      "relativePath": "pages/300 - AREA/计算机科学"
+    },
+    {
+      "name": "人文社科通识",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识"
+    },
+    {
+      "name": "哲学",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识/哲学"
+    },
+    {
+      "name": "心理学",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识/心理学"
+    },
+    {
+      "name": "法学",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识/法学"
+    },
+    {
+      "name": "经济学",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识/经济学"
+    },
+    {
+      "name": "金融学",
+      "relativePath": "pages/400 - RESOURCE/人文社科通识/金融学"
+    },
+    {
+      "name": "游戏笔记",
+      "relativePath": "pages/400 - RESOURCE/小知识点学习/游戏笔记"
+    },
+    {
+      "name": "已发布文章",
+      "relativePath": "pages/500 - ARCHIVE/已发布文章"
     }
   ],
   "nonMdFiles": [

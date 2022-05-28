@@ -183,3 +183,19 @@ for (let group of dv.pages("#todo").groupBy(p => p.genre)) {
 }
 
 ```
+
+### 未完成tasks
+
+```dataview
+task from #projects/active
+```
+
+```dataviewjs
+dv.taskList(dv.pages().file.tasks.where(t => !t.completed));
+```
+
+### 已完成tasks
+
+```dataviewjs
+dv.taskList(dv.pages('"/" and -"pages/500 - ARCHIVE"').file.tasks.where(t => t.completed));
+```

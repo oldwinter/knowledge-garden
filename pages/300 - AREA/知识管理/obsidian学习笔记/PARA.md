@@ -1,3 +1,7 @@
+---
+aliases: 什么是PARA笔记组织法
+---
+
 ## 一个PARA的有效实践
 
 [年度征文｜构建数字大厦 - 少数派 (sspai.com)](https://sspai.com/post/71707)

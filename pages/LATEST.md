@@ -2,7 +2,7 @@
 
 ```dataview
 table WITHOUT ID file.link AS "File",file.mtime as "修改时间"
-from !"模板" and !"kanban"
+from !"templates" and !"assets"
 sort file.mtime desc
 limit 30
 ```
@@ -17,22 +17,7 @@ sort file.ctime desc
 limit 999
 ```
 
-### 未完成tasks
-
-```dataview
-task from #projects/active
-```
-```dataviewjs
-dv.taskList(dv.pages().file.tasks.where(t => !t.completed));
-```
-
-## 已完成tasks
-
-```dataviewjs
-dv.taskList(dv.pages('"/" and -"pages/500 - ARCHIVE"').file.tasks.where(t => t.completed));
-```
-
-### TODO
+### TODO持续迭代不闭环
 
 ```dataview
 table file.mtime as 修改时间, tags
@@ -47,7 +32,7 @@ limit 20
 ```dataview
 table file.mtime as 修改时间, tags
 from ""
-where contains(file.tags,"review")
+where contains(file.tags,"review") OR contains(file.tags,"cards") 
 sort tags desc
-limit 20
+limit 999
 ```

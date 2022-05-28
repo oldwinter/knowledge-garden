@@ -1,16 +1,168 @@
 {
   "recentFiles": [
     {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      "basename": "浙大",
+      "path": "journals/浙大.md"
     },
     {
-      "basename": "INDEX - MOC",
-      "path": "INDEX - MOC.md"
+      "basename": "通识教育",
+      "path": "journals/通识教育.md"
+    },
+    {
+      "basename": "2022-05-29",
+      "path": "journals/2022-05-29.md"
+    },
+    {
+      "basename": "柏拉图式",
+      "path": "pages/400 - RESOURCE/人文社科通识/哲学/柏拉图式.md"
+    },
+    {
+      "basename": "厕纸直接扔马桶",
+      "path": "pages/400 - RESOURCE/原子知识库/习惯库/厕纸直接扔马桶.md"
+    },
+    {
+      "basename": "杭州",
+      "path": "pages/400 - RESOURCE/城市与旅行/杭州.md"
+    },
+    {
+      "basename": "城市与旅行",
+      "path": "pages/400 - RESOURCE/城市与旅行/城市与旅行.md"
+    },
+    {
+      "basename": "投资与理财",
+      "path": "pages/300 - AREA/投资与理财/投资与理财.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+    },
+    {
+      "basename": "2022-05-28",
+      "path": "journals/2022-05-28.md"
+    },
+    {
+      "basename": "计划与回顾",
+      "path": "pages/300 - AREA/知识管理/计划与回顾.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "计算机科学",
+      "path": "pages/300 - AREA/计算机科学/计算机科学.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - MOC",
+      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+    },
+    {
+      "basename": "沟通与表达",
+      "path": "pages/300 - AREA/沟通与表达/沟通与表达.md"
+    },
+    {
+      "basename": "云计算与个人",
+      "path": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
+    },
+    {
+      "basename": "软件项目管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理.md"
+    },
+    {
+      "basename": "INDEX",
+      "path": "pages/INDEX.md"
+    },
+    {
+      "basename": "知识原子库",
+      "path": "pages/400 - RESOURCE/原子知识库/知识原子库.md"
+    },
+    {
+      "basename": "个人职业生涯",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md"
+    },
+    {
+      "basename": "MOC",
+      "path": "journals/MOC.md"
+    },
+    {
+      "basename": "PARA",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
+    },
+    {
+      "basename": "已发布文章",
+      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
+    },
+    {
+      "basename": "外部资源的单向链接汇总",
+      "path": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+    },
+    {
+      "basename": "小知识点",
+      "path": "pages/400 - RESOURCE/小知识点/小知识点.md"
+    },
+    {
+      "basename": "学习目标的分级",
+      "path": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+    },
+    {
+      "basename": "人文社科通识",
+      "path": "pages/400 - RESOURCE/人文社科通识/人文社科通识.md"
+    },
+    {
+      "basename": "书影音",
+      "path": "pages/400 - RESOURCE/书影音笔记/书影音.md"
+    },
+    {
+      "basename": "知识管理",
+      "path": "pages/300 - AREA/知识管理/知识管理.md"
+    },
+    {
+      "basename": "运动与健康",
+      "path": "pages/300 - AREA/运动与健康/运动与健康.md"
+    },
+    {
+      "basename": "云计算与云原生",
+      "path": "pages/200 - PROJECT/云计算与云原生/云计算与云原生.md"
+    },
+    {
+      "basename": "我的开源项目",
+      "path": "pages/200 - PROJECT/我的开源项目/我的开源项目.md"
+    },
+    {
+      "basename": "PARA和MOC法联用组织笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+    },
+    {
+      "basename": "常见笔记组织方法",
+      "path": "journals/常见笔记组织方法.md"
+    },
+    {
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+    },
+    {
+      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+    },
+    {
+      "basename": "有意思的网络流行语 - MOC",
+      "path": "pages/400 - RESOURCE/原子知识库/有意思的网络流行语 - MOC.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
     },
     {
       "basename": "个人信息管理系统",
@@ -18,31 +170,11 @@
     },
     {
       "basename": "KANBAN",
-      "path": "KANBAN.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "LATEST.md"
-    },
-    {
-      "basename": "2022-05-28",
-      "path": "journals/2022-05-28.md"
+      "path": "pages/KANBAN.md"
     },
     {
       "basename": "excalibrain",
       "path": "draws/excalibrain.md"
-    },
-    {
-      "basename": "PARA",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-    },
-    {
-      "basename": "PARA和MOC法分类笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法分类笔记.md"
-    },
-    {
-      "basename": "常见笔记组织方法",
-      "path": "journals/常见笔记组织方法.md"
     },
     {
       "basename": "10 - 日记模板",
@@ -67,138 +199,6 @@
     {
       "basename": "Roam Research",
       "path": "journals/Roam Research.md"
-    },
-    {
-      "basename": "2022-05-26",
-      "path": "journals/2022-05-26.md"
-    },
-    {
-      "basename": "2022-05-27",
-      "path": "journals/2022-05-27.md"
-    },
-    {
-      "basename": "2022-05-29",
-      "path": "journals/2022-05-29.md"
-    },
-    {
-      "basename": "个人文献库",
-      "path": "journals/个人文献库.md"
-    },
-    {
-      "basename": "B站的用户画像",
-      "path": "pages/300 - AREA/人+科技融合/B站的用户画像.md"
-    },
-    {
-      "basename": "为什么要做笔记",
-      "path": "pages/000 - INBOX/为什么要做笔记.md"
-    },
-    {
-      "basename": "笔记软件的选择",
-      "path": "pages/000 - INBOX/笔记软件的选择.md"
-    },
-    {
-      "basename": "文献组织方法",
-      "path": "journals/文献组织方法.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "journals/MOC.md"
-    },
-    {
-      "basename": "鸟尽弓藏",
-      "path": "pages/300 - AREA/鸟尽弓藏.md"
-    },
-    {
-      "basename": "喝酒文化",
-      "path": "pages/300 - AREA/喝酒文化.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - 图",
-      "path": "draws/数字时代如何更好地工作与生活 - 图.md"
-    },
-    {
-      "basename": "飞轮效应",
-      "path": "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md"
-    },
-    {
-      "basename": "有意思的网络流行语 - MOC",
-      "path": "pages/400 - RESOURCE/知识原子库/有意思的网络流行语 - MOC.md"
-    },
-    {
-      "basename": "快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-    },
-    {
-      "basename": "春秋笔法",
-      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/春秋笔法.md"
-    },
-    {
-      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-    },
-    {
-      "basename": "快捷键、图标、命令行的对比与选择",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键、图标、命令行的对比与选择.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
-    },
-    {
-      "basename": "devonthink",
-      "path": "pages/300 - AREA/人+科技融合/devonthink.md"
-    },
-    {
-      "basename": "vscode",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-    },
-    {
-      "basename": "个人技术栈与工具链梳理",
-      "path": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-    },
-    {
-      "basename": "微服务",
-      "path": "pages/200 - PROJECT/个人职业生涯/微服务.md"
-    },
-    {
-      "basename": "隐私保护",
-      "path": "pages/000 - INBOX/隐私保护.md"
-    },
-    {
-      "basename": "果盘先生",
-      "path": "pages/400 - RESOURCE/知识原子库/果盘先生.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "降维打击",
-      "path": "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md"
-    },
-    {
-      "basename": "mac使用技巧",
-      "path": "pages/300 - AREA/知识管理/mac使用技巧.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "pages/500 - ARCHIVE/已发布长文/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "notion",
-      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "族繁不及备载",
-      "path": "pages/300 - AREA/知识管理/族繁不及备载.md"
-    },
-    {
-      "basename": "有用的github开源库搜集",
-      "path": "pages/400 - RESOURCE/基础学科/计算机科学/有用的github开源库搜集.md"
-    },
-    {
-      "basename": "obsidian入门",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
     }
   ],
   "omittedPaths": [],

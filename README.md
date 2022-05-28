@@ -41,7 +41,6 @@
 
 ## 找我从诗词歌赋，谈到人生哲学
 
-[「黑☕️加🧋」的数字花园](http://oldwinter.top/)
-微信：oldwinter2
+- 微信：oldwinter2
 
 [^1]: vscode需额外安装foam插件后，便支持[[双链笔记]]的`[[`语法
