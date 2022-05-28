@@ -13,10 +13,6 @@
       "relativePath": "draws"
     },
     {
-      "name": "export",
-      "relativePath": "export"
-    },
-    {
       "name": "journals",
       "relativePath": "journals"
     },
@@ -41,6 +37,10 @@
       "relativePath": "journals/每月每季度总结"
     },
     {
+      "name": "bak",
+      "relativePath": "logseq/bak"
+    },
+    {
       "name": "000 - INBOX",
       "relativePath": "pages/000 - INBOX"
     },
@@ -63,6 +63,10 @@
     {
       "name": "dict",
       "relativePath": "templates/dict"
+    },
+    {
+      "name": "draws",
+      "relativePath": "logseq/bak/draws"
     },
     {
       "name": "个人职业生涯",
@@ -121,6 +125,10 @@
       "relativePath": "pages/500 - ARCHIVE/已发布长文"
     },
     {
+      "name": "excalibrain",
+      "relativePath": "logseq/bak/draws/excalibrain"
+    },
+    {
       "name": "vscode",
       "relativePath": "pages/200 - PROJECT/我的开源项目/vscode"
     },
@@ -157,12 +165,12 @@
       "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记"
     },
     {
-      "name": "音乐鉴赏",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
-    },
-    {
       "name": "读书笔记",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记"
+    },
+    {
+      "name": "音乐鉴赏",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/音乐鉴赏"
     },
     {
       "name": "哲学",
@@ -213,6 +221,10 @@
       "relativePath": "pages/400 - RESOURCE/知识原子库/金句库"
     },
     {
+      "name": "虚构类读物",
+      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
+    },
+    {
       "name": "个人成长",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长"
     },
@@ -233,32 +245,28 @@
       "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说"
     },
     {
-      "name": "虚构类读物",
-      "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
-    },
-    {
-      "name": "bak",
-      "relativePath": "logseq/bak"
-    },
-    {
       "name": "pages",
       "relativePath": "logseq/bak/pages"
     },
     {
-      "name": "400 - RESOURCE",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE"
+      "name": "000 - INBOX",
+      "relativePath": "logseq/bak/pages/000 - INBOX"
     },
     {
-      "name": "基础学科",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科"
+      "name": "为什么要做笔记",
+      "relativePath": "logseq/bak/pages/000 - INBOX/为什么要做笔记"
     },
     {
-      "name": "心理学",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学"
+      "name": "笔记软件的选择",
+      "relativePath": "logseq/bak/pages/000 - INBOX/笔记软件的选择"
     },
     {
-      "name": "飞轮效应",
-      "relativePath": "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应"
+      "name": "journals",
+      "relativePath": "logseq/bak/journals"
+    },
+    {
+      "name": "2022-05-28",
+      "relativePath": "logseq/bak/journals/2022-05-28"
     }
   ],
   "nonMdFiles": [

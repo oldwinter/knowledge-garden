@@ -40,12 +40,12 @@
   "obsidian-columns",
   "recent-files-obsidian",
   "obsidian-zotero-desktop-connector",
-  "excalibrain",
   "obsidian-shellcommands",
   "obsidian-pandoc",
   "omnisearch",
   "block-reference-count",
   "quick-explorer",
   "obsidian-weread-plugin",
-  "obsidian-citation-plugin"
+  "obsidian-citation-plugin",
+  "obsidian-toggl-integration"
 ]

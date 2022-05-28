@@ -40,8 +40,8 @@
       "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md",
       "pages/300 - AREA/知识管理/计划和回顾.md",
       "pages/300 - AREA/知识管理/notion学习笔记/notion.md",
-      "pages/300 - AREA/人+科技融合/滴答清单.md",
       "pages/300 - AREA/人+科技融合/手机短信和通知转发至统一hub.md",
+      "pages/300 - AREA/人+科技融合/滴答清单.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md",
       "pages/300 - AREA/flomo.md",
       "pages/000 - INBOX/隐私保护.md",
@@ -65,7 +65,7 @@
   },
   {
     "tag": "review",
-    "tagCount": 9,
+    "tagCount": 7,
     "relativePaths": [
       "pages/400 - RESOURCE/知识原子库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md",
       "pages/400 - RESOURCE/知识原子库/有意思的网络流行语 - MOC.md",
@@ -73,9 +73,7 @@
       "pages/400 - RESOURCE/基础学科/心理学/飞轮效应.md",
       "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
-      "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应/2022-05-28T04_00_17.866Z.md",
-      "logseq/bak/pages/400 - RESOURCE/基础学科/心理学/飞轮效应/2022-05-28T03_59_34.089Z.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
     ]
   },
   {
@@ -226,9 +224,9 @@
     "tag": "excalidraw",
     "tagCount": 3,
     "relativePaths": [
-      "excalibrain.md",
+      "logseq/bak/draws/excalibrain/2022-05-28T04_16_56.872Z.md",
       "draws/数字时代如何更好地工作与生活 - 图.md",
-      "draws/ExcaliBrain Snapshot - mac使用技巧.excalidraw.md"
+      "draws/excalibrain.md"
     ]
   }
 ]

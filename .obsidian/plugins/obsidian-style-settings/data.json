@@ -113,7 +113,7 @@
   "shimmering-focus@@move-plugin-name-to-left": true,
   "shimmering-focus@@modal-base-size": 70,
   "shimmering-focus@@no-grayed-out-inactive-pane": false,
-  "shimmering-focus@@show-close-button": false,
+  "shimmering-focus@@show-close-button": true,
   "shimmering-focus@@show-scrollbar": false,
   "supercharged-links@@53f6-363a-before": "🧠",
   "supercharged-links@@c-75fc-e339-use-background": false,
