@@ -52,11 +52,11 @@
  ;; 2. Setup page "Jun 3rd, 2021" as home page without sidebar
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
- ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
+ :default-home {:page "README" :sidebar ["INDEX - MOC"]}
 
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
- ;; :pages-directory "your-directory"
+ :pages-directory "pages/000 - INBOX"
 
  ;; Tell logseq to use a specific folder in the repo as a default location for journals
  ;; if not specified, journals are stored in `journals` directory

@@ -5,7 +5,7 @@
     "supercharged-links-gen",
     "多栏callout样式"
   ],
-  "theme": "moonstone",
+  "theme": "obsidian",
   "baseFontSizeAction": false,
   "translucency": false,
   "textFontFamily": "Arial"

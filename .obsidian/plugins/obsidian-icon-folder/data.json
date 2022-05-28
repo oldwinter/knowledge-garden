@@ -5,6 +5,7 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabDocker",
       "FabWeixin",
       "📍",
       "FasNotesMedical",
@@ -13,8 +14,7 @@
       "📖",
       "📹",
       "Fab42Group",
-      "⏩",
-      "🗣"
+      "⏩"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -66,9 +66,9 @@
   "pages/200 - PROJECT/个人职业生涯": "💻",
   "README.md": "FabBilibili",
   "pages/400 - RESOURCE/游戏笔记": "🥌",
-  "pages/contents.md": "📍",
   "pages/400 - RESOURCE/书影音笔记/微信读书同步": "FabWeixin",
   "pages/000 - INBOX": "📇",
-  "pages/最近编辑、最近创建、最近任务、回顾记忆.md": "⏳",
-  "pages/INDEX根索引 - MOC.md": "🗺"
+  "INDEX - MOC.md": "FabDiscord",
+  "LATEST.md": "FabApple",
+  "KANBAN.md": "FabDocker"
 }

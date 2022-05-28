@@ -30,22 +30,13 @@
   "customizable-page-header-buttons",
   "obsidian-dynamic-toc",
   "obsidian-footnotes",
-  "settings-search",
   "creases",
   "pane-relief",
   "obsidian-hover-editor",
   "longform",
   "notion-like-tables",
   "obsidian-kanban",
-  "obsidian-columns",
   "recent-files-obsidian",
-  "obsidian-zotero-desktop-connector",
-  "obsidian-shellcommands",
-  "obsidian-pandoc",
-  "omnisearch",
-  "block-reference-count",
-  "quick-explorer",
   "obsidian-weread-plugin",
-  "obsidian-citation-plugin",
-  "obsidian-toggl-integration"
+  "obsidian-citation-plugin"
 ]

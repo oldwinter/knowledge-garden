@@ -1,8 +1,72 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+    },
+    {
+      "basename": "INDEX - MOC",
+      "path": "INDEX - MOC.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "KANBAN.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "LATEST.md"
+    },
+    {
       "basename": "2022-05-28",
       "path": "journals/2022-05-28.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "draws/excalibrain.md"
+    },
+    {
+      "basename": "PARA",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
+    },
+    {
+      "basename": "PARA和MOC法分类笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法分类笔记.md"
+    },
+    {
+      "basename": "常见笔记组织方法",
+      "path": "journals/常见笔记组织方法.md"
+    },
+    {
+      "basename": "10 - 日记模板",
+      "path": "templates/10 - 日记模板.md"
+    },
+    {
+      "basename": "思维导图",
+      "path": "pages/300 - AREA/思维导图.md"
+    },
+    {
+      "basename": "ryooo的知识管理工作流",
+      "path": "journals/ryooo的知识管理工作流.md"
+    },
+    {
+      "basename": "dict",
+      "path": "templates/dict/dict.md"
+    },
+    {
+      "basename": "Chrome DevTools",
+      "path": "journals/Chrome DevTools.md"
+    },
+    {
+      "basename": "Roam Research",
+      "path": "journals/Roam Research.md"
     },
     {
       "basename": "2022-05-26",
@@ -17,16 +81,8 @@
       "path": "journals/2022-05-29.md"
     },
     {
-      "basename": "ryooo的知识管理工作流",
-      "path": "journals/ryooo的知识管理工作流.md"
-    },
-    {
       "basename": "个人文献库",
       "path": "journals/个人文献库.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "draws/excalibrain.md"
     },
     {
       "basename": "B站的用户画像",
@@ -45,32 +101,8 @@
       "path": "journals/文献组织方法.md"
     },
     {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "常见笔记组织方法",
-      "path": "journals/常见笔记组织方法.md"
-    },
-    {
       "basename": "MOC",
       "path": "journals/MOC.md"
-    },
-    {
-      "basename": "PARA和MOC法分类笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法分类笔记.md"
-    },
-    {
-      "basename": "PARA",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-    },
-    {
-      "basename": "Pasted Image 20220320203200_352.png",
-      "path": "pages/Pasted Image 20220320203200_352.png.md"
-    },
-    {
-      "basename": "思维导图",
-      "path": "pages/300 - AREA/思维导图.md"
     },
     {
       "basename": "鸟尽弓藏",
@@ -79,10 +111,6 @@
     {
       "basename": "喝酒文化",
       "path": "pages/300 - AREA/喝酒文化.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "数字时代如何更好地工作与生活 - 图",
@@ -109,28 +137,12 @@
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
     },
     {
-      "basename": "BRAT-log",
-      "path": "BRAT-log.md"
-    },
-    {
-      "basename": "自上而下",
-      "path": "pages/自上而下.md"
-    },
-    {
-      "basename": "INDEX根索引 - MOC",
-      "path": "pages/INDEX根索引 - MOC.md"
-    },
-    {
       "basename": "快捷键、图标、命令行的对比与选择",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键、图标、命令行的对比与选择.md"
     },
     {
       "basename": "滴答清单",
       "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
-    },
-    {
-      "basename": "最近编辑、最近创建、最近任务、回顾记忆",
-      "path": "pages/最近编辑、最近创建、最近任务、回顾记忆.md"
     },
     {
       "basename": "devonthink",
@@ -187,18 +199,6 @@
     {
       "basename": "obsidian入门",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
-    },
-    {
-      "basename": "context 切换",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md"
-    },
-    {
-      "basename": "《金字塔原理》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md"
-    },
-    {
-      "basename": "刘慈欣",
-      "path": "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md"
     }
   ],
   "omittedPaths": [],
