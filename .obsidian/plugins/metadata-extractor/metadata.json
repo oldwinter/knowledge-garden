@@ -1,15 +1,5 @@
 [
   {
-    "fileName": "BRAT-log",
-    "relativePath": "BRAT-log.md",
-    "links": [
-      {
-        "link": "2022-05-29",
-        "relativePath": "journals/2022-05-29.md"
-      }
-    ]
-  },
-  {
     "fileName": "视频笔记模板",
     "relativePath": "templates/视频笔记模板.md",
     "headings": [
@@ -685,7 +675,7 @@
       },
       {
         "link": "躺平与摆烂一族",
-        "relativePath": "journals/躺平与摆烂一族.md"
+        "relativePath": "pages/000 - INBOX/躺平与摆烂一族.md"
       },
       {
         "link": "context 切换",
@@ -705,7 +695,7 @@
       },
       {
         "link": "Roam Research",
-        "relativePath": "journals/Roam Research.md"
+        "relativePath": "pages/000 - INBOX/Roam Research.md"
       },
       {
         "link": "第一次逛窑子不知所措",
@@ -7545,8 +7535,8 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
       },
       {
-        "link": "roam research",
-        "relativePath": "journals/Roam Research.md"
+        "link": "Roam Research",
+        "relativePath": "pages/000 - INBOX/Roam Research.md"
       },
       {
         "link": "重器轻用",
@@ -8027,14 +8017,14 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
       },
       {
+        "fileName": "个人文献库",
+        "link": "zotero",
+        "relativePath": "pages/000 - INBOX/个人文献库.md"
+      },
+      {
         "fileName": "2022-四月",
         "link": "zotero",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
-      },
-      {
-        "fileName": "个人文献库",
-        "link": "zotero",
-        "relativePath": "journals/个人文献库.md"
       }
     ]
   },
@@ -9469,7 +9459,7 @@
       {
         "fileName": "常见笔记组织方法",
         "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "journals/常见笔记组织方法.md"
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
       },
       {
         "fileName": "CONTENTS",
@@ -9585,7 +9575,7 @@
       {
         "fileName": "常见笔记组织方法",
         "link": "PARA",
-        "relativePath": "journals/常见笔记组织方法.md"
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
       },
       {
         "fileName": "CONTENTS",
@@ -9766,12 +9756,12 @@
     ],
     "links": [
       {
-        "link": "roam research",
-        "relativePath": "journals/Roam Research.md"
+        "link": "Roam Research",
+        "relativePath": "pages/000 - INBOX/Roam Research.md"
       },
       {
-        "link": "roam research",
-        "relativePath": "journals/Roam Research.md"
+        "link": "Roam Research",
+        "relativePath": "pages/000 - INBOX/Roam Research.md"
       },
       {
         "link": "URL scheme",
@@ -12619,7 +12609,7 @@
       },
       {
         "link": "Chrome DevTools",
-        "relativePath": "journals/Chrome DevTools.md"
+        "relativePath": "pages/000 - INBOX/Chrome DevTools.md"
       },
       {
         "link": "油猴脚本",
@@ -13649,19 +13639,19 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
       },
       {
+        "fileName": "ryooo的知识管理工作流",
+        "link": "个人知识管理",
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
+      },
+      {
+        "fileName": "ryooo的知识管理工作流",
+        "link": "个人知识管理",
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
+      },
+      {
         "fileName": "2022-三月",
         "link": "个人知识管理",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
-        "fileName": "ryooo的知识管理工作流",
-        "link": "个人知识管理",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
-      },
-      {
-        "fileName": "ryooo的知识管理工作流",
-        "link": "个人知识管理",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
       },
       {
         "fileName": "数字时代如何更好地工作与生活 - 图",
@@ -16390,7 +16380,7 @@
       },
       {
         "link": "躺平与摆烂一族",
-        "relativePath": "journals/躺平与摆烂一族.md"
+        "relativePath": "pages/000 - INBOX/躺平与摆烂一族.md"
       }
     ],
     "backlinks": [
@@ -16625,7 +16615,7 @@
       },
       {
         "link": "Chrome DevTools",
-        "relativePath": "journals/Chrome DevTools.md"
+        "relativePath": "pages/000 - INBOX/Chrome DevTools.md"
       },
       {
         "link": "vscode",
@@ -16751,6 +16741,486 @@
         "fileName": "CONTENTS",
         "link": "个人简历",
         "relativePath": "CONTENTS.md"
+      }
+    ]
+  },
+  {
+    "fileName": "ryooo的知识管理工作流",
+    "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md",
+    "links": [
+      {
+        "link": "为什么要做笔记",
+        "relativePath": "pages/000 - INBOX/为什么要做笔记.md"
+      },
+      {
+        "link": "常见笔记组织方法",
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
+      },
+      {
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "link": "个人知识管理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "link": "个人文献库",
+        "relativePath": "pages/000 - INBOX/个人文献库.md"
+      },
+      {
+        "link": "个人知识库"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-28",
+        "link": "ryooo的知识管理工作流",
+        "relativePath": "journals/2022-05-28.md"
+      }
+    ]
+  },
+  {
+    "fileName": "Roam Research",
+    "relativePath": "pages/000 - INBOX/Roam Research.md",
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "Roam Research",
+        "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "渐进式 - progressive",
+        "link": "Roam Research",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
+      },
+      {
+        "fileName": "notion",
+        "link": "Roam Research",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "fileName": "notion",
+        "link": "Roam Research",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "fileName": "2022-05-28",
+        "link": "Roam Research",
+        "relativePath": "journals/2022-05-28.md"
+      }
+    ]
+  },
+  {
+    "fileName": "NSFW",
+    "relativePath": "pages/000 - INBOX/NSFW.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-29",
+        "link": "NSFW",
+        "relativePath": "journals/2022-05-29.md"
+      }
+    ]
+  },
+  {
+    "fileName": "MOC",
+    "relativePath": "pages/000 - INBOX/MOC.md",
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "aliases": [
+      "什么是MOC笔记组织法"
+    ],
+    "backlinks": [
+      {
+        "fileName": "常见笔记组织方法",
+        "link": "MOC",
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "MOC",
+        "relativePath": "CONTENTS.md",
+        "displayText": "什么是MOC笔记组织法"
+      }
+    ]
+  },
+  {
+    "fileName": "Index",
+    "relativePath": "pages/000 - INBOX/Index.md",
+    "frontmatter": {
+      "version": 1,
+      "workflow": "Default Workflow",
+      "drafts": [],
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "col": 3,
+          "offset": 56
+        }
+      }
+    }
+  },
+  {
+    "fileName": "Chrome DevTools",
+    "relativePath": "pages/000 - INBOX/Chrome DevTools.md",
+    "backlinks": [
+      {
+        "fileName": "语音输入",
+        "link": "Chrome DevTools",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入.md"
+      },
+      {
+        "fileName": "个人简历",
+        "link": "Chrome DevTools",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+      },
+      {
+        "fileName": "2022-05-28",
+        "link": "Chrome DevTools",
+        "relativePath": "journals/2022-05-28.md"
+      }
+    ]
+  },
+  {
+    "fileName": "浙大",
+    "relativePath": "pages/000 - INBOX/浙大.md",
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 26
+        }
+      }
+    },
+    "aliases": [
+      "浙江大学",
+      "ZJU"
+    ],
+    "backlinks": [
+      {
+        "fileName": "通识教育",
+        "link": "浙大",
+        "relativePath": "pages/000 - INBOX/通识教育.md"
+      }
+    ]
+  },
+  {
+    "fileName": "这家创业公司是否值得加入",
+    "relativePath": "pages/000 - INBOX/这家创业公司是否值得加入.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-25",
+        "link": "这家创业公司是否值得加入",
+        "relativePath": "journals/2022-05-25.md"
+      }
+    ]
+  },
+  {
+    "fileName": "无氧运动",
+    "relativePath": "pages/000 - INBOX/无氧运动.md",
+    "tags": [
+      "评论/少数派"
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-26",
+        "link": "无氧运动",
+        "relativePath": "journals/2022-05-26.md"
+      }
+    ]
+  },
+  {
+    "fileName": "文献组织方法",
+    "relativePath": "pages/000 - INBOX/文献组织方法.md",
+    "backlinks": [
+      {
+        "fileName": "个人文献库",
+        "link": "文献组织方法",
+        "relativePath": "pages/000 - INBOX/个人文献库.md"
+      }
+    ]
+  },
+  {
+    "fileName": "微信读书同步模板",
+    "relativePath": "pages/000 - INBOX/微信读书同步模板.md",
+    "frontmatter": {
+      "isbn": {
+        "{ metaData.isbn }": null
+      },
+      "category": {
+        "{ metaData.category }": null
+      },
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 63
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "元数据",
+        "level": 2
+      },
+      {
+        "heading": "高亮划线",
+        "level": 2
+      },
+      {
+        "heading": "{{chapter.chapterTitle}}",
+        "level": 3
+      },
+      {
+        "heading": "读书笔记",
+        "level": 2
+      },
+      {
+        "heading": "{{chapter.chapterTitle}}",
+        "level": 3
+      },
+      {
+        "heading": "章节评论 No.{{loop.index}}",
+        "level": 4
+      },
+      {
+        "heading": "划线评论",
+        "level": 4
+      },
+      {
+        "heading": "本书评论",
+        "level": 2
+      },
+      {
+        "heading": "书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}",
+        "level": 3
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-27",
+        "link": "微信读书同步模板",
+        "relativePath": "journals/2022-05-27.md"
+      }
+    ]
+  },
+  {
+    "fileName": "通识教育",
+    "relativePath": "pages/000 - INBOX/通识教育.md",
+    "links": [
+      {
+        "link": "浙大",
+        "relativePath": "pages/000 - INBOX/浙大.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-29",
+        "link": "通识教育",
+        "relativePath": "journals/2022-05-29.md"
+      }
+    ]
+  },
+  {
+    "fileName": "躺平与摆烂一族",
+    "relativePath": "pages/000 - INBOX/躺平与摆烂一族.md",
+    "backlinks": [
+      {
+        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
+        "link": "躺平与摆烂一族",
+        "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "个人简介",
+        "link": "躺平与摆烂一族",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
+      },
+      {
+        "fileName": "2022-05-25",
+        "link": "躺平与摆烂一族",
+        "relativePath": "journals/2022-05-25.md"
+      }
+    ]
+  },
+  {
+    "fileName": "台风天去舟山旅行",
+    "relativePath": "pages/000 - INBOX/台风天去舟山旅行.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-27",
+        "link": "台风天去舟山旅行",
+        "relativePath": "journals/2022-05-27.md"
+      }
+    ]
+  },
+  {
+    "fileName": "双链笔记的异同分析",
+    "relativePath": "pages/000 - INBOX/双链笔记的异同分析.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-27",
+        "link": "双链笔记的异同分析",
+        "relativePath": "journals/2022-05-27.md"
+      }
+    ]
+  },
+  {
+    "fileName": "确定感",
+    "relativePath": "pages/000 - INBOX/确定感.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-29",
+        "link": "确定感",
+        "relativePath": "journals/2022-05-29.md"
+      }
+    ]
+  },
+  {
+    "fileName": "祛魅",
+    "relativePath": "pages/000 - INBOX/祛魅.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-27",
+        "link": "祛魅",
+        "relativePath": "journals/2022-05-27.md"
+      }
+    ]
+  },
+  {
+    "fileName": "内网穿透",
+    "relativePath": "pages/000 - INBOX/内网穿透.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-24",
+        "link": "内网穿透",
+        "relativePath": "journals/2022-05-24.md"
+      }
+    ]
+  },
+  {
+    "fileName": "科学上网",
+    "relativePath": "pages/000 - INBOX/科学上网.md",
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "col": 3,
+          "offset": 19
+        }
+      }
+    },
+    "aliases": [
+      "翻墙"
+    ],
+    "headings": [
+      {
+        "heading": "什么是翻墙",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有什么好处",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有什么坏处",
+        "level": 2
+      },
+      {
+        "heading": "翻墙有哪些方法",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-26",
+        "link": "科学上网",
+        "relativePath": "journals/2022-05-26.md"
+      }
+    ]
+  },
+  {
+    "fileName": "个人文献库",
+    "relativePath": "pages/000 - INBOX/个人文献库.md",
+    "links": [
+      {
+        "link": "文献组织方法",
+        "relativePath": "pages/000 - INBOX/文献组织方法.md"
+      },
+      {
+        "link": "谷歌学术"
+      },
+      {
+        "link": "zotero",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "ryooo的知识管理工作流",
+        "link": "个人文献库",
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
+      }
+    ]
+  },
+  {
+    "fileName": "常见笔记组织方法",
+    "relativePath": "pages/000 - INBOX/常见笔记组织方法.md",
+    "links": [
+      {
+        "link": "文件夹和标签",
+        "relativePath": "pages/000 - INBOX/文件夹和标签.md"
+      },
+      {
+        "link": "PARA",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
+      },
+      {
+        "link": "MOC",
+        "relativePath": "pages/000 - INBOX/MOC.md"
+      },
+      {
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "ryooo的知识管理工作流",
+        "link": "常见笔记组织方法",
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
       }
     ]
   },
@@ -17139,19 +17609,19 @@
         "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
       },
       {
-        "fileName": "2022-三月",
-        "link": "文件夹和标签",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "文件夹和标签",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
         "fileName": "常见笔记组织方法",
         "link": "文件夹和标签",
-        "relativePath": "journals/常见笔记组织方法.md"
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "文件夹和标签",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
       },
       {
         "fileName": "2022-05-28",
@@ -17419,7 +17889,7 @@
       {
         "fileName": "ryooo的知识管理工作流",
         "link": "为什么要做笔记",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
       }
     ]
   },
@@ -17565,163 +18035,6 @@
         "fileName": "2022-四月",
         "link": "ADHD - 多动症",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "NSFW",
-    "relativePath": "journals/NSFW.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-29",
-        "link": "NSFW",
-        "relativePath": "journals/2022-05-29.md"
-      }
-    ]
-  },
-  {
-    "fileName": "确定感",
-    "relativePath": "journals/确定感.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-29",
-        "link": "确定感",
-        "relativePath": "journals/2022-05-29.md"
-      }
-    ]
-  },
-  {
-    "fileName": "躺平与摆烂一族",
-    "relativePath": "journals/躺平与摆烂一族.md",
-    "backlinks": [
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "躺平与摆烂一族",
-        "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      },
-      {
-        "fileName": "个人简介",
-        "link": "躺平与摆烂一族",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简介.md"
-      },
-      {
-        "fileName": "2022-05-25",
-        "link": "躺平与摆烂一族",
-        "relativePath": "journals/2022-05-25.md"
-      }
-    ]
-  },
-  {
-    "fileName": "通识教育",
-    "relativePath": "journals/通识教育.md",
-    "links": [
-      {
-        "link": "浙大",
-        "relativePath": "journals/浙大.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-29",
-        "link": "通识教育",
-        "relativePath": "journals/2022-05-29.md"
-      }
-    ]
-  },
-  {
-    "fileName": "这家创业公司是否值得加入",
-    "relativePath": "journals/这家创业公司是否值得加入.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-25",
-        "link": "这家创业公司是否值得加入",
-        "relativePath": "journals/2022-05-25.md"
-      }
-    ]
-  },
-  {
-    "fileName": "科学上网",
-    "relativePath": "journals/科学上网.md",
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 19
-        }
-      }
-    },
-    "aliases": [
-      "翻墙"
-    ],
-    "headings": [
-      {
-        "heading": "什么是翻墙",
-        "level": 2
-      },
-      {
-        "heading": "翻墙有什么好处",
-        "level": 2
-      },
-      {
-        "heading": "翻墙有什么坏处",
-        "level": 2
-      },
-      {
-        "heading": "翻墙有哪些方法",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-26",
-        "link": "科学上网",
-        "relativePath": "journals/2022-05-26.md"
-      }
-    ]
-  },
-  {
-    "fileName": "祛魅",
-    "relativePath": "journals/祛魅.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-27",
-        "link": "祛魅",
-        "relativePath": "journals/2022-05-27.md"
-      }
-    ]
-  },
-  {
-    "fileName": "浙大",
-    "relativePath": "journals/浙大.md",
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 26
-        }
-      }
-    },
-    "aliases": [
-      "浙江大学",
-      "ZJU"
-    ],
-    "backlinks": [
-      {
-        "fileName": "通识教育",
-        "link": "浙大",
-        "relativePath": "journals/通识教育.md"
       }
     ]
   },
@@ -18942,222 +19255,6 @@
     ]
   },
   {
-    "fileName": "无氧运动",
-    "relativePath": "journals/无氧运动.md",
-    "tags": [
-      "评论/少数派"
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-26",
-        "link": "无氧运动",
-        "relativePath": "journals/2022-05-26.md"
-      }
-    ]
-  },
-  {
-    "fileName": "文献组织方法",
-    "relativePath": "journals/文献组织方法.md",
-    "backlinks": [
-      {
-        "fileName": "个人文献库",
-        "link": "文献组织方法",
-        "relativePath": "journals/个人文献库.md"
-      }
-    ]
-  },
-  {
-    "fileName": "微信读书同步模板",
-    "relativePath": "journals/微信读书同步模板.md",
-    "frontmatter": {
-      "isbn": {
-        "{ metaData.isbn }": null
-      },
-      "category": {
-        "{ metaData.category }": null
-      },
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 63
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "元数据",
-        "level": 2
-      },
-      {
-        "heading": "高亮划线",
-        "level": 2
-      },
-      {
-        "heading": "{{chapter.chapterTitle}}",
-        "level": 3
-      },
-      {
-        "heading": "读书笔记",
-        "level": 2
-      },
-      {
-        "heading": "{{chapter.chapterTitle}}",
-        "level": 3
-      },
-      {
-        "heading": "章节评论 No.{{loop.index}}",
-        "level": 4
-      },
-      {
-        "heading": "划线评论",
-        "level": 4
-      },
-      {
-        "heading": "本书评论",
-        "level": 2
-      },
-      {
-        "heading": "书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}",
-        "level": 3
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-27",
-        "link": "微信读书同步模板",
-        "relativePath": "journals/2022-05-27.md"
-      }
-    ]
-  },
-  {
-    "fileName": "个人文献库",
-    "relativePath": "journals/个人文献库.md",
-    "links": [
-      {
-        "link": "文献组织方法",
-        "relativePath": "journals/文献组织方法.md"
-      },
-      {
-        "link": "谷歌学术"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "ryooo的知识管理工作流",
-        "link": "个人文献库",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
-      }
-    ]
-  },
-  {
-    "fileName": "常见笔记组织方法",
-    "relativePath": "journals/常见笔记组织方法.md",
-    "links": [
-      {
-        "link": "文件夹和标签",
-        "relativePath": "pages/000 - INBOX/文件夹和标签.md"
-      },
-      {
-        "link": "PARA",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-      },
-      {
-        "link": "MOC",
-        "relativePath": "journals/MOC.md"
-      },
-      {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "ryooo的知识管理工作流",
-        "link": "常见笔记组织方法",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
-      }
-    ]
-  },
-  {
-    "fileName": "台风天去舟山旅行",
-    "relativePath": "journals/台风天去舟山旅行.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-27",
-        "link": "台风天去舟山旅行",
-        "relativePath": "journals/2022-05-27.md"
-      }
-    ]
-  },
-  {
-    "fileName": "双链笔记的异同分析",
-    "relativePath": "journals/双链笔记的异同分析.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-27",
-        "link": "双链笔记的异同分析",
-        "relativePath": "journals/2022-05-27.md"
-      }
-    ]
-  },
-  {
-    "fileName": "内网穿透",
-    "relativePath": "journals/内网穿透.md",
-    "backlinks": [
-      {
-        "fileName": "2022-05-24",
-        "link": "内网穿透",
-        "relativePath": "journals/2022-05-24.md"
-      }
-    ]
-  },
-  {
-    "fileName": "ryooo的知识管理工作流",
-    "relativePath": "journals/ryooo的知识管理工作流.md",
-    "links": [
-      {
-        "link": "为什么要做笔记",
-        "relativePath": "pages/000 - INBOX/为什么要做笔记.md"
-      },
-      {
-        "link": "常见笔记组织方法",
-        "relativePath": "journals/常见笔记组织方法.md"
-      },
-      {
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "个人文献库",
-        "relativePath": "journals/个人文献库.md"
-      },
-      {
-        "link": "个人知识库"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-28",
-        "link": "ryooo的知识管理工作流",
-        "relativePath": "journals/2022-05-28.md"
-      }
-    ]
-  },
-  {
     "fileName": "2022-05-28",
     "relativePath": "journals/2022-05-28.md",
     "tags": [
@@ -19185,15 +19282,15 @@
       },
       {
         "link": "ryooo的知识管理工作流",
-        "relativePath": "journals/ryooo的知识管理工作流.md"
+        "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
       },
       {
         "link": "Roam Research",
-        "relativePath": "journals/Roam Research.md"
+        "relativePath": "pages/000 - INBOX/Roam Research.md"
       },
       {
         "link": "Chrome DevTools",
-        "relativePath": "journals/Chrome DevTools.md"
+        "relativePath": "pages/000 - INBOX/Chrome DevTools.md"
       },
       {
         "link": "CloudFlare"
@@ -19207,113 +19304,6 @@
       },
       {
         "link": "git hook"
-      }
-    ]
-  },
-  {
-    "fileName": "Roam Research",
-    "relativePath": "journals/Roam Research.md",
-    "backlinks": [
-      {
-        "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "link": "Roam Research",
-        "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      },
-      {
-        "fileName": "渐进式 - progressive",
-        "link": "roam research",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
-      },
-      {
-        "fileName": "notion",
-        "link": "roam research",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "fileName": "notion",
-        "link": "roam research",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "fileName": "2022-05-28",
-        "link": "Roam Research",
-        "relativePath": "journals/2022-05-28.md"
-      }
-    ]
-  },
-  {
-    "fileName": "MOC",
-    "relativePath": "journals/MOC.md",
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 2,
-          "col": 3,
-          "offset": 28
-        }
-      }
-    },
-    "aliases": [
-      "什么是MOC笔记组织法"
-    ],
-    "backlinks": [
-      {
-        "fileName": "常见笔记组织方法",
-        "link": "MOC",
-        "relativePath": "journals/常见笔记组织方法.md"
-      },
-      {
-        "fileName": "CONTENTS",
-        "link": "MOC",
-        "relativePath": "CONTENTS.md",
-        "displayText": "什么是MOC笔记组织法"
-      }
-    ]
-  },
-  {
-    "fileName": "Index",
-    "relativePath": "journals/Index.md",
-    "frontmatter": {
-      "version": 1,
-      "workflow": "Default Workflow",
-      "drafts": [],
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 4,
-          "col": 3,
-          "offset": 56
-        }
-      }
-    }
-  },
-  {
-    "fileName": "Chrome DevTools",
-    "relativePath": "journals/Chrome DevTools.md",
-    "backlinks": [
-      {
-        "fileName": "语音输入",
-        "link": "Chrome DevTools",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入.md"
-      },
-      {
-        "fileName": "个人简历",
-        "link": "Chrome DevTools",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "2022-05-28",
-        "link": "Chrome DevTools",
-        "relativePath": "journals/2022-05-28.md"
       }
     ]
   },
@@ -19333,7 +19323,7 @@
     "links": [
       {
         "link": "通识教育",
-        "relativePath": "journals/通识教育.md"
+        "relativePath": "pages/000 - INBOX/通识教育.md"
       },
       {
         "link": "《动物庄园》"
@@ -19346,18 +19336,11 @@
       },
       {
         "link": "确定感",
-        "relativePath": "journals/确定感.md"
+        "relativePath": "pages/000 - INBOX/确定感.md"
       },
       {
         "link": "NSFW",
-        "relativePath": "journals/NSFW.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "BRAT-log",
-        "link": "2022-05-29",
-        "relativePath": "BRAT-log.md"
+        "relativePath": "pages/000 - INBOX/NSFW.md"
       }
     ]
   },
@@ -19377,15 +19360,15 @@
     "links": [
       {
         "link": "祛魅",
-        "relativePath": "journals/祛魅.md"
+        "relativePath": "pages/000 - INBOX/祛魅.md"
       },
       {
         "link": "台风天去舟山旅行",
-        "relativePath": "journals/台风天去舟山旅行.md"
+        "relativePath": "pages/000 - INBOX/台风天去舟山旅行.md"
       },
       {
         "link": "微信读书同步模板",
-        "relativePath": "journals/微信读书同步模板.md"
+        "relativePath": "pages/000 - INBOX/微信读书同步模板.md"
       },
       {
         "link": "advanced-slides#^4f22e2",
@@ -19401,7 +19384,7 @@
       },
       {
         "link": "双链笔记的异同分析",
-        "relativePath": "journals/双链笔记的异同分析.md"
+        "relativePath": "pages/000 - INBOX/双链笔记的异同分析.md"
       }
     ]
   },
@@ -19425,7 +19408,7 @@
       },
       {
         "link": "科学上网",
-        "relativePath": "journals/科学上网.md"
+        "relativePath": "pages/000 - INBOX/科学上网.md"
       },
       {
         "link": "无线技术"
@@ -19441,7 +19424,7 @@
       },
       {
         "link": "无氧运动",
-        "relativePath": "journals/无氧运动.md"
+        "relativePath": "pages/000 - INBOX/无氧运动.md"
       }
     ]
   },
@@ -19461,11 +19444,11 @@
     "links": [
       {
         "link": "这家创业公司是否值得加入",
-        "relativePath": "journals/这家创业公司是否值得加入.md"
+        "relativePath": "pages/000 - INBOX/这家创业公司是否值得加入.md"
       },
       {
         "link": "躺平与摆烂一族",
-        "relativePath": "journals/躺平与摆烂一族.md"
+        "relativePath": "pages/000 - INBOX/躺平与摆烂一族.md"
       }
     ]
   },
@@ -19488,7 +19471,7 @@
       },
       {
         "link": "内网穿透",
-        "relativePath": "journals/内网穿透.md"
+        "relativePath": "pages/000 - INBOX/内网穿透.md"
       }
     ]
   },
@@ -19697,7 +19680,7 @@
       {
         "link": "MOC",
         "displayText": "什么是MOC笔记组织法",
-        "relativePath": "journals/MOC.md"
+        "relativePath": "pages/000 - INBOX/MOC.md"
       },
       {
         "link": "PARA和MOC法联用组织笔记",

@@ -1,8 +1,8 @@
 
 
-- 2020年，笔记软件领域的两个标志性软件 `Notion` 和 [[roam research]]
+- 2020年，笔记软件领域的两个标志性软件 `Notion` 和 [[Roam Research]]
  - Notion 引入了块的概念，让网站构建如同搭建积木的一样简单方便。  
- - 而 [[roam research]]则引入 双向链接 以及对卢曼 Zettelkasten 卡片盒方法的宣传，引来一波大热。
+ - 而 [[Roam Research]]则引入 双向链接 以及对卢曼 Zettelkasten 卡片盒方法的宣传，引来一波大热。
 
 ## 技巧
 

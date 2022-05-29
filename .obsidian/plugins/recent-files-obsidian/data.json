@@ -1,40 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "NSFW",
-      "path": "journals/NSFW.md"
-    },
-    {
       "basename": "2022-05-29",
       "path": "journals/2022-05-29.md"
     },
     {
-      "basename": "确定感",
-      "path": "journals/确定感.md"
+      "basename": "2022-05-28",
+      "path": "journals/2022-05-28.md"
+    },
+    {
+      "basename": "2022-05-27",
+      "path": "journals/2022-05-27.md"
+    },
+    {
+      "basename": "2022-05-26",
+      "path": "journals/2022-05-26.md"
+    },
+    {
+      "basename": "2022-05-25",
+      "path": "journals/2022-05-25.md"
+    },
+    {
+      "basename": "2022-05-24",
+      "path": "journals/2022-05-24.md"
+    },
+    {
+      "basename": "2022-05-23",
+      "path": "journals/2022-05-23.md"
+    },
+    {
+      "basename": "常见笔记组织方法",
+      "path": "pages/000 - INBOX/常见笔记组织方法.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
+      "basename": "个人简历",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+    },
+    {
       "basename": "CONTENTS",
       "path": "CONTENTS.md"
+    },
+    {
+      "basename": "通识教育",
+      "path": "pages/000 - INBOX/通识教育.md"
+    },
+    {
+      "basename": "linux常用命令行",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md"
+    },
+    {
+      "basename": "确定感",
+      "path": "pages/000 - INBOX/确定感.md"
+    },
+    {
+      "basename": "NSFW",
+      "path": "pages/000 - INBOX/NSFW.md"
     },
     {
       "basename": "KANBAN",
       "path": "pages/KANBAN.md"
     },
     {
-      "basename": "BRAT-log",
-      "path": "BRAT-log.md"
-    },
-    {
       "basename": "z命令",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/z命令.md"
-    },
-    {
-      "basename": "linux常用命令行",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md"
     },
     {
       "basename": "ohmyzsh",
@@ -50,11 +82,7 @@
     },
     {
       "basename": "浙大",
-      "path": "journals/浙大.md"
-    },
-    {
-      "basename": "通识教育",
-      "path": "journals/通识教育.md"
+      "path": "pages/000 - INBOX/浙大.md"
     },
     {
       "basename": "柏拉图式",
@@ -75,14 +103,6 @@
     {
       "basename": "投资与理财",
       "path": "pages/300 - AREA/投资与理财/投资与理财.md"
-    },
-    {
-      "basename": "个人简历",
-      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "2022-05-28",
-      "path": "journals/2022-05-28.md"
     },
     {
       "basename": "计划与回顾",
@@ -122,7 +142,7 @@
     },
     {
       "basename": "MOC",
-      "path": "journals/MOC.md"
+      "path": "pages/000 - INBOX/MOC.md"
     },
     {
       "basename": "PARA",
@@ -173,32 +193,12 @@
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
     },
     {
-      "basename": "常见笔记组织方法",
-      "path": "journals/常见笔记组织方法.md"
-    },
-    {
       "basename": "快捷键",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
     },
     {
       "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-    },
-    {
-      "basename": "有意思的网络流行语 - MOC",
-      "path": "pages/400 - RESOURCE/原子知识库/有意思的网络流行语 - MOC.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "个人信息管理系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
     }
   ],
   "omittedPaths": [],
