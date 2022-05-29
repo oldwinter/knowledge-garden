@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
+      "basename": "NSFW",
+      "path": "journals/NSFW.md"
+    },
+    {
+      "basename": "2022-05-29",
+      "path": "journals/2022-05-29.md"
+    },
+    {
+      "basename": "确定感",
+      "path": "journals/确定感.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
     },
     {
       "basename": "KANBAN",
@@ -15,10 +27,6 @@
     {
       "basename": "BRAT-log",
       "path": "BRAT-log.md"
-    },
-    {
-      "basename": "2022-05-29",
-      "path": "journals/2022-05-29.md"
     },
     {
       "basename": "z命令",
@@ -191,14 +199,6 @@
     {
       "basename": "个人信息管理系统",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "draws/excalibrain.md"
-    },
-    {
-      "basename": "10 - 日记模板",
-      "path": "templates/10 - 日记模板.md"
     }
   ],
   "omittedPaths": [],
