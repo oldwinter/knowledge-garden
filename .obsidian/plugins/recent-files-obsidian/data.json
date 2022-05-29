@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "从Alfred迁移至Raycast",
+      "path": "journals/从Alfred迁移至Raycast.md"
+    },
+    {
       "basename": "2022-05-29",
       "path": "journals/2022-05-29.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "快捷键",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-    },
-    {
-      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
     }
   ],
   "omittedPaths": [],

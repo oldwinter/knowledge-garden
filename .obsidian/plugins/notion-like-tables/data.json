@@ -92,6 +92,266 @@
         "viewType": "live-preview",
         "shouldUpdate": false
       }
+    },
+    "journals/从Alfred迁移至Raycast.md": {
+      "table-id-wd1kig": {
+        "data": {
+          "headers": [
+            {
+              "id": "column-id-95ogol",
+              "content": "funtion",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            },
+            {
+              "id": "column-id-n53pr6",
+              "content": "both",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            },
+            {
+              "id": "column-id-tl3obk",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            }
+          ],
+          "rows": [
+            {
+              "id": "row-id-uf8gjr",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-0sum17",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-ieu9v2",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-uvhzuu",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-y1lgl4",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-i1jorp",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-mgpmi4",
+              "creationTime": 1653837094707
+            },
+            {
+              "id": "row-id-tovjhe",
+              "creationTime": 1653837094707
+            }
+          ],
+          "cells": [
+            {
+              "id": "cell-id-1v0ozs",
+              "rowId": "row-id-uf8gjr",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "file search"
+            },
+            {
+              "id": "cell-id-1w8lth",
+              "rowId": "row-id-uf8gjr",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-coo3zx",
+              "rowId": "row-id-uf8gjr",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": "没有alfred的in命令"
+            },
+            {
+              "id": "cell-id-5zqad6",
+              "rowId": "row-id-0sum17",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "app search"
+            },
+            {
+              "id": "cell-id-0pm0j9",
+              "rowId": "row-id-0sum17",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-qw694b",
+              "rowId": "row-id-0sum17",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-qwlwuj",
+              "rowId": "row-id-ieu9v2",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "setting search"
+            },
+            {
+              "id": "cell-id-xmveu2",
+              "rowId": "row-id-ieu9v2",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-i4kkg0",
+              "rowId": "row-id-ieu9v2",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-m2yfj4",
+              "rowId": "row-id-uvhzuu",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "web search"
+            },
+            {
+              "id": "cell-id-yyhm59",
+              "rowId": "row-id-uvhzuu",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-fi7iyj",
+              "rowId": "row-id-uvhzuu",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-j6oete",
+              "rowId": "row-id-y1lgl4",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "snippet"
+            },
+            {
+              "id": "cell-id-x6lpip",
+              "rowId": "row-id-y1lgl4",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-gm0syo",
+              "rowId": "row-id-y1lgl4",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-t5m8aa",
+              "rowId": "row-id-i1jorp",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "clipboard history"
+            },
+            {
+              "id": "cell-id-ralv7x",
+              "rowId": "row-id-i1jorp",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-nk44na",
+              "rowId": "row-id-i1jorp",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-962285",
+              "rowId": "row-id-mgpmi4",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": "system operation"
+            },
+            {
+              "id": "cell-id-16ft4h",
+              "rowId": "row-id-mgpmi4",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": "y"
+            },
+            {
+              "id": "cell-id-lo7p84",
+              "rowId": "row-id-mgpmi4",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-8l10ku",
+              "rowId": "row-id-tovjhe",
+              "headerId": "column-id-95ogol",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-k58qre",
+              "rowId": "row-id-tovjhe",
+              "headerId": "column-id-n53pr6",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-vp9rak",
+              "rowId": "row-id-tovjhe",
+              "headerId": "column-id-tl3obk",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            }
+          ],
+          "tags": []
+        },
+        "viewType": "reading",
+        "shouldUpdate": true
+      }
     }
   },
   "focusedElement": {

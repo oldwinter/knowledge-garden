@@ -1,14 +1,14 @@
 [
   {
     "tag": "moc",
-    "tagCount": 32,
+    "tagCount": 33,
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布文章/已发布文章.md",
-      "pages/400 - RESOURCE/城市与旅行/城市与旅行.md",
       "pages/400 - RESOURCE/小知识点/小知识点.md",
       "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md",
-      "pages/400 - RESOURCE/原子知识库/金句库/金句 - MOC.md",
+      "pages/400 - RESOURCE/城市与旅行/城市与旅行.md",
       "pages/400 - RESOURCE/原子知识库/知识原子库.md",
+      "pages/400 - RESOURCE/原子知识库/金句库/金句 - MOC.md",
       "pages/400 - RESOURCE/原子知识库/有意思的网络流行语 - MOC.md",
       "pages/400 - RESOURCE/原子知识库/方法库/方法库 - MOC.md",
       "pages/400 - RESOURCE/原子知识库/思维工具库/思维工具 - MOC.md",
@@ -27,18 +27,19 @@
       "pages/300 - AREA/投资与理财/投资与理财.md",
       "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
       "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md",
       "pages/200 - PROJECT/我的开源项目/我的开源项目.md",
       "pages/200 - PROJECT/云计算与云原生/云计算与云原生.md",
       "pages/200 - PROJECT/云计算与云原生/云计算与个人.md",
+      "pages/200 - PROJECT/个人职业生涯/个人简历.md",
       "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md",
-      "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+      "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
     ]
   },
   {
     "tag": "评论/少数派",
-    "tagCount": 20,
+    "tagCount": 23,
     "relativePaths": [
       "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
       "pages/400 - RESOURCE/原子知识库/单词库&概念库/降维打击.md",
@@ -48,22 +49,25 @@
       "pages/300 - AREA/人+科技融合/手机短信和通知转发至统一hub.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md",
       "pages/300 - AREA/flomo.md",
-      "pages/000 - INBOX/无氧运动.md",
       "pages/000 - INBOX/隐私保护.md",
       "pages/000 - INBOX/网络暴力与网络道德.md",
       "pages/000 - INBOX/爱情的本来模样.md",
+      "pages/000 - INBOX/无氧运动.md",
       "pages/000 - INBOX/文件夹和标签.md",
       "pages/000 - INBOX/多维表和excel有什么不同.md",
       "pages/000 - INBOX/双链笔记与知识图谱.md",
       "pages/000 - INBOX/为什么要读书，阅读动机在哪.md",
+      "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md",
+      "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md",
       "journals/每月每季度总结/2022-五月.md"
     ]
   },
   {
     "tag": "对话/微信",
-    "tagCount": 8,
+    "tagCount": 9,
     "relativePaths": [
       "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
+      "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md",
       "journals/每月每季度总结/2022-五月.md"
     ]
   },
@@ -79,7 +83,7 @@
   },
   {
     "tag": "review",
-    "tagCount": 7,
+    "tagCount": 8,
     "relativePaths": [
       "pages/400 - RESOURCE/原子知识库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md",
       "pages/400 - RESOURCE/原子知识库/有意思的网络流行语 - MOC.md",
@@ -87,7 +91,8 @@
       "pages/400 - RESOURCE/人文社科通识/心理学/飞轮效应.md",
       "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md",
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
     ]
   },
   {
@@ -147,8 +152,8 @@
     "tagCount": 4,
     "relativePaths": [
       "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md",
-      "pages/400 - RESOURCE/书影音笔记/《且试天下》.md",
-      "pages/400 - RESOURCE/书影音笔记/《重生之门》.md"
+      "pages/400 - RESOURCE/书影音笔记/《重生之门》.md",
+      "pages/400 - RESOURCE/书影音笔记/《且试天下》.md"
     ]
   },
   {
@@ -182,13 +187,14 @@
   },
   {
     "tag": "todo/今天",
-    "tagCount": 6,
+    "tagCount": 7,
     "relativePaths": [
       "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
       "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
       "pages/200 - PROJECT/个人职业生涯/个人简历.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md",
       "journals/2022-05-28.md"
     ]
   },
@@ -227,17 +233,22 @@
   },
   {
     "tag": "todo",
-    "tagCount": 21,
+    "tagCount": 34,
     "relativePaths": [
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_20.811Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_11.398Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_29_42.327Z.md",
+      "journals/从Alfred迁移至Raycast.md"
     ]
   },
   {
     "tag": "excalidraw",
     "tagCount": 2,
     "relativePaths": [
-      "draws/excalibrain.md",
-      "draws/数字时代如何更好地工作与生活 - 图.md"
+      "draws/数字时代如何更好地工作与生活 - 图.md",
+      "draws/excalibrain.md"
     ]
   }
 ]
