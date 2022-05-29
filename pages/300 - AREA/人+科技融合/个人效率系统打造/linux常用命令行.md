@@ -24,7 +24,7 @@ tags: MOC
 - [[curl]]
 
 - [[wget]]
-- [[z]]
+- [[z命令]]
 
 - [[iptables]]
 - [[vim]]

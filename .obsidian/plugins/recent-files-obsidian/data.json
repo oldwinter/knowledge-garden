@@ -9,16 +9,44 @@
       "path": "README.md"
     },
     {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "BRAT-log",
+      "path": "BRAT-log.md"
+    },
+    {
+      "basename": "2022-05-29",
+      "path": "journals/2022-05-29.md"
+    },
+    {
+      "basename": "z命令",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/z命令.md"
+    },
+    {
+      "basename": "linux常用命令行",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md"
+    },
+    {
+      "basename": "ohmyzsh",
+      "path": "pages/300 - AREA/人+科技融合/ohmyzsh.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - MOC",
+      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "pages/000 - INBOX/模板与套路.md"
+    },
+    {
       "basename": "浙大",
       "path": "journals/浙大.md"
     },
     {
       "basename": "通识教育",
       "path": "journals/通识教育.md"
-    },
-    {
-      "basename": "2022-05-29",
-      "path": "journals/2022-05-29.md"
     },
     {
       "basename": "柏拉图式",
@@ -59,10 +87,6 @@
     {
       "basename": "计算机科学",
       "path": "pages/300 - AREA/计算机科学/计算机科学.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - MOC",
-      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
     },
     {
       "basename": "沟通与表达",
@@ -169,36 +193,12 @@
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
     },
     {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
-    },
-    {
       "basename": "excalibrain",
       "path": "draws/excalibrain.md"
     },
     {
       "basename": "10 - 日记模板",
       "path": "templates/10 - 日记模板.md"
-    },
-    {
-      "basename": "思维导图",
-      "path": "pages/300 - AREA/思维导图.md"
-    },
-    {
-      "basename": "ryooo的知识管理工作流",
-      "path": "journals/ryooo的知识管理工作流.md"
-    },
-    {
-      "basename": "dict",
-      "path": "templates/dict/dict.md"
-    },
-    {
-      "basename": "Chrome DevTools",
-      "path": "journals/Chrome DevTools.md"
-    },
-    {
-      "basename": "Roam Research",
-      "path": "journals/Roam Research.md"
     }
   ],
   "omittedPaths": [],

@@ -41,3 +41,5 @@ z co
 -t：导航到最近访问的目录
 -l：按使用频率列出目录
 值得一提的是，z 还支持 Tab 补全，想必会为你省时不少吧。>)
+
+[Linux z 命令 command not found z 未找到命令 z 命令详解 z 命令未找到 z 命令安装 - CommandNotFound ⚡️ 坑否](https://commandnotfound.cn/linux/1/589/z-%E5%91%BD%E4%BB%A4)
