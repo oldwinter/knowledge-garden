@@ -26,7 +26,7 @@ kanban-plugin: basic
 ## 🔭LONG TERM
 
 - [ ] [[文章发布工作流梳理]]
-- [ ] [[外部资源的单向链接汇总]]
+- [ ] [[EXTERNAL]]
 - [ ] [[将本库公开发布至github]]
 
 

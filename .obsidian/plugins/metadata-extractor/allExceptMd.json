@@ -37,10 +37,6 @@
       "relativePath": "journals/每月每季度总结"
     },
     {
-      "name": "bak",
-      "relativePath": "logseq/bak"
-    },
-    {
       "name": "000 - INBOX",
       "relativePath": "pages/000 - INBOX"
     },
@@ -63,18 +59,6 @@
     {
       "name": "dict",
       "relativePath": "templates/dict"
-    },
-    {
-      "name": "README",
-      "relativePath": "logseq/bak/README"
-    },
-    {
-      "name": "journals",
-      "relativePath": "logseq/bak/journals"
-    },
-    {
-      "name": "pages",
-      "relativePath": "logseq/bak/pages"
     },
     {
       "name": "个人职业生涯",
@@ -139,14 +123,6 @@
     {
       "name": "已发布文章",
       "relativePath": "pages/500 - ARCHIVE/已发布文章"
-    },
-    {
-      "name": "每月每季度总结",
-      "relativePath": "logseq/bak/journals/每月每季度总结"
-    },
-    {
-      "name": "300 - AREA",
-      "relativePath": "logseq/bak/pages/300 - AREA"
     },
     {
       "name": "vscode",
@@ -241,22 +217,6 @@
       "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记"
     },
     {
-      "name": "2022-三月",
-      "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月"
-    },
-    {
-      "name": "2022-五月",
-      "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月"
-    },
-    {
-      "name": "知识管理",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理"
-    },
-    {
-      "name": "人+科技融合",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合"
-    },
-    {
       "name": "个人成长",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长"
     },
@@ -281,94 +241,6 @@
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物"
     },
     {
-      "name": "notion学习笔记",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记"
-    },
-    {
-      "name": "obsidian学习笔记",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记"
-    },
-    {
-      "name": "个人技术栈与工具链梳理",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理"
-    },
-    {
-      "name": "个人效率系统打造",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造"
-    },
-    {
-      "name": "必备软件",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件"
-    },
-    {
-      "name": "数字时代如何更好地工作与生活 - MOC",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC"
-    },
-    {
-      "name": "notion",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion"
-    },
-    {
-      "name": "Obsidian入门到精通",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通"
-    },
-    {
-      "name": "卡片盒笔记法 - Zettelkasten",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten"
-    },
-    {
-      "name": "渐进式 - progressive",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive"
-    },
-    {
-      "name": "个人信息管理系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统"
-    },
-    {
-      "name": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动"
-    },
-    {
-      "name": "效率的定义和原则",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则"
-    },
-    {
-      "name": "mac必备软件",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件"
-    },
-    {
-      "name": "从Alfred迁移至Raycast",
-      "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast"
-    },
-    {
-      "name": "个人输出发布系统",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统"
-    },
-    {
-      "name": "思源笔记",
-      "relativePath": "logseq/bak/pages/300 - AREA/思源笔记"
-    },
-    {
-      "name": "视频制作",
-      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/视频制作"
-    },
-    {
-      "name": "200 - PROJECT",
-      "relativePath": "logseq/bak/pages/200 - PROJECT"
-    },
-    {
-      "name": "个人职业生涯",
-      "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯"
-    },
-    {
-      "name": "明文数据",
-      "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯/明文数据"
-    },
-    {
-      "name": "插件的便利性及安全性，如何权衡",
-      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡"
-    },
-    {
       "name": "我的小说",
       "relativePath": "pages/200 - PROJECT/我的小说"
     },
@@ -381,24 +253,8 @@
       "relativePath": "pages/200 - PROJECT/我的小说/Drafts/Draft 1"
     },
     {
-      "name": "Index",
-      "relativePath": "logseq/bak/journals/Index"
-    },
-    {
       "name": "Draft 1",
       "relativePath": "journals/Drafts/Draft 1"
-    },
-    {
-      "name": "INDEX",
-      "relativePath": "logseq/bak/pages/INDEX"
-    },
-    {
-      "name": "logseq",
-      "relativePath": "logseq/bak/logseq"
-    },
-    {
-      "name": "config",
-      "relativePath": "logseq/bak/logseq/config"
     }
   ],
   "nonMdFiles": [
@@ -496,16 +352,6 @@
       "name": "明朝那些事儿.epub",
       "basename": "明朝那些事儿",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/明朝那些事儿.epub"
-    },
-    {
-      "name": "2022-05-30T04_22_55.397Z.edn",
-      "basename": "2022-05-30T04_22_55.397Z",
-      "relativePath": "logseq/bak/logseq/config/2022-05-30T04_22_55.397Z.edn"
-    },
-    {
-      "name": "2022-05-30T04_25_13.703Z.edn",
-      "basename": "2022-05-30T04_25_13.703Z",
-      "relativePath": "logseq/bak/logseq/config/2022-05-30T04_25_13.703Z.edn"
     }
   ]
 }

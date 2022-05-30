@@ -202,6 +202,66 @@
     ]
   },
   {
+    "fileName": "EXTERNAL",
+    "relativePath": "pages/EXTERNAL.md",
+    "tags": [
+      "评论/少数派",
+      "对话/微信"
+    ],
+    "headings": [
+      {
+        "heading": "devonthink的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "滴答清单的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "notion的资源引用",
+        "level": 2
+      },
+      {
+        "heading": "github的资源引用",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "2022-五月",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      },
+      {
+        "link": "如何高效开会",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
+      },
+      {
+        "link": "个人工作流",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
+      },
+      {
+        "link": "有用的github开源库搜集",
+        "relativePath": "pages/300 - AREA/计算机科学/有用的github开源库搜集.md"
+      },
+      {
+        "link": "README",
+        "relativePath": "README.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "KANBAN",
+        "link": "EXTERNAL",
+        "relativePath": "pages/KANBAN.md"
+      },
+      {
+        "fileName": "2022-五月",
+        "link": "EXTERNAL",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
     "fileName": "LATEST",
     "relativePath": "pages/LATEST.md",
     "headings": [
@@ -293,82 +353,11 @@
         "relativePath": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
       },
       {
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+        "link": "EXTERNAL",
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
         "link": "将本库公开发布至github"
-      }
-    ]
-  },
-  {
-    "fileName": "INDEX",
-    "relativePath": "pages/INDEX.md",
-    "headings": [
-      {
-        "heading": "记笔记原则",
-        "level": 2
-      },
-      {
-        "heading": "方法和指导思想",
-        "level": 2
-      },
-      {
-        "heading": "进行中 - Project",
-        "level": 2
-      },
-      {
-        "heading": "短中期精进 - Area",
-        "level": 2
-      },
-      {
-        "heading": "原子化 - Resource",
-        "level": 2
-      },
-      {
-        "heading": "归档 - Archive",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "自上而下"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "万物互联",
-        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
-      },
-      {
-        "link": "学习目标的分级",
-        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
-      },
-      {
-        "link": "CONTENTS",
-        "relativePath": "CONTENTS.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
       }
     ]
   },
@@ -477,11 +466,6 @@
         "fileName": "notion",
         "link": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
       }
     ]
   },
@@ -772,78 +756,6 @@
         "fileName": "obsidian",
         "link": "obsidian 是可以用一辈子不换的笔记软件吗",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "obsidian 是可以用一辈子不换的笔记软件吗#^19a9eb",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md",
-        "cleanLink": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "displayText": "obsidian 是可以用一辈子不换的笔记软件吗 > ^19a9eb"
-      }
-    ]
-  },
-  {
-    "fileName": "外部资源的单向链接汇总",
-    "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
-    "tags": [
-      "评论/少数派",
-      "对话/微信"
-    ],
-    "headings": [
-      {
-        "heading": "devonthink的资源引用",
-        "level": 2
-      },
-      {
-        "heading": "滴答清单的资源引用",
-        "level": 2
-      },
-      {
-        "heading": "notion的资源引用",
-        "level": 2
-      },
-      {
-        "heading": "github的资源引用",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "2022-五月",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      },
-      {
-        "link": "如何高效开会",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-      },
-      {
-        "link": "个人工作流",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
-      },
-      {
-        "link": "有用的github开源库搜集",
-        "relativePath": "pages/300 - AREA/计算机科学/有用的github开源库搜集.md"
-      },
-      {
-        "link": "README",
-        "relativePath": "README.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "KANBAN",
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "pages/KANBAN.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-五月",
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
       }
     ]
   },
@@ -873,11 +785,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "先鉴定你的做笔记风格，再选一款app上车",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "先鉴定你的做笔记风格，再选一款app上车",
@@ -919,11 +826,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "金线",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "金线",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -934,11 +836,6 @@
     "fileName": "行政",
     "relativePath": "pages/400 - RESOURCE/行政.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "行政",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "行政",
@@ -957,11 +854,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "第一性原理",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "第一性原理",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -976,11 +868,6 @@
     "fileName": "朋友的分类与分级",
     "relativePath": "pages/400 - RESOURCE/朋友的分类与分级.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "朋友的分类与分级",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-四月",
         "link": "朋友的分类与分级",
@@ -1003,11 +890,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "有闲阶级",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "有闲阶级",
@@ -1255,11 +1137,6 @@
         "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md"
       },
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "嫦娥",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "嫦娥",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -1351,29 +1228,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "INDEX",
-        "link": "学习目标的分级",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
         "fileName": "小知识点",
         "link": "学习目标的分级",
         "relativePath": "pages/400 - RESOURCE/小知识点/小知识点.md"
       },
       {
-        "fileName": "2022-05-30T04_18_16.651Z",
+        "fileName": "PARA和MOC联用组织笔记",
         "link": "学习目标的分级",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "学习目标的分级",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "学习目标的分级",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       }
     ]
   },
@@ -1685,16 +1547,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "金句 - MOC",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "金句 - MOC",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "金句 - MOC",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -1756,11 +1608,6 @@
         "fileName": "Obsidian入门到精通",
         "link": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
       }
     ]
   },
@@ -1838,11 +1685,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "我们不需要被教导，我们只需要被提醒",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "我们不需要被教导，我们只需要被提醒",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -1900,11 +1742,6 @@
       "一个梗"
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "果盘先生",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "果盘先生",
@@ -2325,11 +2162,6 @@
         "fileName": "Obsidian入门到精通",
         "link": "麦特卡夫定律",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "麦特卡夫定律",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
       }
     ]
   },
@@ -2506,11 +2338,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "和经典名言抬杠 - MOC",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "和经典名言抬杠 - MOC",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -2551,11 +2378,6 @@
         "fileName": "微言大义的词语汇总 - MOC",
         "link": "降维打击",
         "relativePath": "pages/400 - RESOURCE/原子知识库/微言大义的词语汇总 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "降维打击",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
       },
       {
         "fileName": "2022-五月",
@@ -2650,11 +2472,6 @@
         "fileName": "精致的利己主义者",
         "link": "权力寻租",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/精致的利己主义者.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "权力寻租",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -2856,11 +2673,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "刚下飞机",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "刚下飞机",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -2971,11 +2783,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "卧底间谍用摩斯码是真的吗",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "卧底间谍用摩斯码是真的吗",
@@ -3272,11 +3079,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "收藏者谬误",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "收藏者谬误",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -3405,11 +3207,6 @@
         "relativePath": "pages/400 - RESOURCE/原子知识库/和经典名言抬杠 - MOC.md"
       },
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "授人以鱼不如授人以渔",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -3437,11 +3234,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "各类文化产品的生产消费时间比",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "各类文化产品的生产消费时间比",
@@ -4004,11 +3796,6 @@
     "fileName": "写小说的一些思路",
     "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/写小说的一些思路.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "写小说的一些思路",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "写小说的一些思路",
@@ -5256,27 +5043,6 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "《卡片笔记写作法》",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.465Z",
-        "link": "《卡片笔记写作法》",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "《卡片笔记写作法》",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md",
-        "displayText": "卡片笔记"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "《卡片笔记写作法》",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "README",
         "link": "《卡片笔记写作法》",
         "relativePath": "README.md",
@@ -5307,11 +5073,6 @@
         "fileName": "一些学起来挺有意思的小知识点 - MOC",
         "link": "《刻意练习》",
         "relativePath": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "《刻意练习》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -5406,11 +5167,6 @@
         "fileName": "视频笔记 - MOC",
         "link": "视频笔记-【罗翔】我们为什么要读书？",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "视频笔记-【罗翔】我们为什么要读书？",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-四月",
@@ -5519,11 +5275,6 @@
         "link": "视频笔记- 9年咨询的storytelling新的",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md",
         "displayText": "storytelling"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -6686,11 +6437,6 @@
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md"
       },
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "《风起陇西》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "《风起陇西》",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -6737,11 +6483,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "《重生之门》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "《重生之门》",
@@ -6793,11 +6534,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "《异物志》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "《异物志》",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -6848,11 +6584,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "《喜鹊谋杀案》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "《喜鹊谋杀案》",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -6888,11 +6619,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "《且试天下》",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "《且试天下》",
@@ -7128,11 +6854,6 @@
     "relativePath": "pages/300 - AREA/运动与健康/槟榔.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "槟榔",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "槟榔",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -7227,14 +6948,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "外部资源的单向链接汇总",
+        "fileName": "EXTERNAL",
         "link": "有用的github开源库搜集",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "有用的github开源库搜集",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
         "fileName": "2022-五月",
@@ -7297,11 +7013,6 @@
         "fileName": "linux常用命令行",
         "link": "powershell",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/linux常用命令行.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "powershell",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
       },
       {
         "fileName": "2022-五月",
@@ -7383,11 +7094,6 @@
     "relativePath": "pages/300 - AREA/知识管理/相亲是否应该AA制.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "相亲是否应该AA制",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "相亲是否应该AA制",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -7405,11 +7111,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "番茄工作法",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "番茄工作法",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -7425,11 +7126,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "瓜田李下",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "瓜田李下",
@@ -7461,11 +7157,6 @@
     "fileName": "族繁不及备载",
     "relativePath": "pages/300 - AREA/知识管理/族繁不及备载.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "族繁不及备载",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "族繁不及备载",
@@ -7526,11 +7217,6 @@
     "relativePath": "pages/300 - AREA/知识管理/哪些中文用英文解释反而更清晰明了.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "哪些中文用英文解释反而更清晰明了",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "哪些中文用英文解释反而更清晰明了",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -7561,16 +7247,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "互联网时代的输出与创作",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "互联网时代的输出与创作",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "互联网时代的输出与创作",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -7594,6 +7270,122 @@
         "fileName": "2022-四月",
         "link": "个人效率系统打造",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "PARA和MOC联用组织笔记",
+    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md",
+    "headings": [
+      {
+        "heading": "PARA",
+        "level": 2
+      },
+      {
+        "heading": "MOC",
+        "level": 2
+      },
+      {
+        "heading": "其他笔记分类组织法",
+        "level": 2
+      },
+      {
+        "heading": "为啥我要选 PARA + MOC 的方式",
+        "level": 2
+      },
+      {
+        "heading": "记笔记原则",
+        "level": 2
+      },
+      {
+        "heading": "方法和指导思想",
+        "level": 2
+      },
+      {
+        "heading": "进行中 - Project",
+        "level": 2
+      },
+      {
+        "heading": "短中期精进 - Area",
+        "level": 2
+      },
+      {
+        "heading": "原子化 - Resource",
+        "level": 2
+      },
+      {
+        "heading": "归档 - Archive",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "杜威十进制分类法",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/杜威十进制分类法.md"
+      },
+      {
+        "link": "高内聚，低耦合"
+      },
+      {
+        "link": "自上而下"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "万物互联",
+        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
+      },
+      {
+        "link": "学习目标的分级",
+        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+      },
+      {
+        "link": "CONTENTS",
+        "relativePath": "CONTENTS.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "卡片盒笔记法 - Zettelkasten",
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
+      },
+      {
+        "fileName": "Obsidian入门到精通",
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
+      },
+      {
+        "fileName": "常见笔记组织方法",
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -7650,31 +7442,6 @@
         "fileName": "Obsidian入门到精通",
         "link": "闪念笔记",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "闪念笔记",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "闪念笔记",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "闪念笔记",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "闪念笔记",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "闪念笔记",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -7754,21 +7521,6 @@
         "fileName": "笔记软件的选择",
         "link": "重器轻用",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "重器轻用",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "重器轻用",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "重器轻用",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
       }
     ]
   },
@@ -7821,16 +7573,6 @@
         "relativePath": "pages/000 - INBOX/文件夹和标签.md"
       },
       {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "渐进式总结",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "渐进式总结",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "渐进式总结",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -7866,11 +7608,6 @@
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
         "link": "渐进式学习",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "渐进式学习",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
       }
     ]
   },
@@ -7887,16 +7624,6 @@
         "fileName": "卡片盒笔记法 - Zettelkasten",
         "link": "渐进式写作",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "渐进式写作",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.465Z",
-        "link": "渐进式写作",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
       }
     ]
   },
@@ -8018,9 +7745,9 @@
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/杜威十进制分类法.md",
     "backlinks": [
       {
-        "fileName": "PARA和MOC法联用组织笔记",
+        "fileName": "PARA和MOC联用组织笔记",
         "link": "杜威十进制分类法",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       }
     ]
   },
@@ -8032,11 +7759,6 @@
         "fileName": "Obsidian入门到精通",
         "link": "文献笔记",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "文献笔记",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
       },
       {
         "fileName": "README",
@@ -8074,16 +7796,6 @@
         "fileName": "个人信息系统涉及的核心软件和云服务",
         "link": "常青笔记 - Evergreen Note",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.465Z",
-        "link": "常青笔记 - Evergreen Note",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.465Z",
-        "link": "常青笔记 - Evergreen Note",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
       }
     ]
   },
@@ -8204,14 +7916,14 @@
     "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md",
     "backlinks": [
       {
-        "fileName": "INDEX",
-        "link": "双链笔记",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
         "fileName": "obsidian 是可以用一辈子不换的笔记软件吗",
         "link": "双链笔记",
         "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
+      },
+      {
+        "fileName": "PARA和MOC联用组织笔记",
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "fileName": "obsidian的使用感受",
@@ -8232,36 +7944,6 @@
         "fileName": "个人知识管理",
         "link": "双链笔记",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "双链笔记",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -8319,8 +8001,8 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式写作.md"
       },
       {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "link": "常青笔记 - Evergreen Note",
@@ -8349,11 +8031,6 @@
         "fileName": "obsidian入门",
         "link": "卡片盒笔记法 - Zettelkasten",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "卡片盒笔记法 - Zettelkasten",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-四月",
@@ -8439,21 +8116,6 @@
         "relativePath": "pages/000 - INBOX/个人文献库.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "zotero",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "zotero",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "zotero",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "zotero",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -8501,11 +8163,6 @@
         "fileName": "RSS",
         "link": "tiny tiny RSS",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "tiny tiny RSS",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -8589,11 +8246,6 @@
         "fileName": "obsidian插件",
         "link": "text expand",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "text expand",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
       },
       {
         "fileName": "2022-五月",
@@ -8894,11 +8546,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "obsidian插件",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
       {
         "fileName": "README",
         "link": "obsidian插件",
@@ -9468,11 +9115,6 @@
         "displayText": "context"
       },
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "context 切换",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "context 切换",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -9552,11 +9194,6 @@
         "fileName": "mac必备软件",
         "link": "bartender",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "bartender",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -9608,21 +9245,6 @@
         "fileName": "mac必备软件",
         "link": "anki",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "anki",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "anki",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "anki",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
       }
     ]
   },
@@ -9925,16 +9547,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
       },
       {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "RSSHub",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "RSSHub",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "RSSHub",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -10008,102 +9620,9 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "RSS",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "RSS",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "RSS",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "RSS",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "RSS",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "PARA和MOC法联用组织笔记",
-    "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md",
-    "headings": [
-      {
-        "heading": "PARA",
-        "level": 2
-      },
-      {
-        "heading": "MOC",
-        "level": 2
-      },
-      {
-        "heading": "其他笔记分类组织法",
-        "level": 2
-      },
-      {
-        "heading": "为啥我要选 PARA + MOC 的方式",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "杜威十进制分类法",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/杜威十进制分类法.md"
-      },
-      {
-        "link": "高内聚，低耦合"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "INDEX",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
-        "fileName": "卡片盒笔记法 - Zettelkasten",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-      },
-      {
-        "fileName": "Obsidian入门到精通",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "常见笔记组织方法",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
-      },
-      {
-        "fileName": "CONTENTS",
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -10201,8 +9720,8 @@
         "link": "低耦合，高内聚"
       },
       {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "link": "PPT制作的目的和原则",
@@ -10297,11 +9816,6 @@
         "fileName": "notion",
         "link": "团队信息与知识共享",
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "团队信息与知识共享",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
       }
     ]
   },
@@ -10354,11 +9868,6 @@
         "fileName": "notion",
         "link": "个人时间使用的宏观洞察",
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "个人时间使用的宏观洞察",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
       }
     ]
   },
@@ -10473,51 +9982,6 @@
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "notion",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "notion",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -10544,11 +10008,6 @@
     "relativePath": "pages/300 - AREA/知识管理/mac使用技巧.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "mac使用技巧",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "mac使用技巧",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -10564,11 +10023,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "白噪音",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "白噪音",
@@ -10677,16 +10131,6 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "永久笔记",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "永久笔记",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "永久笔记",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -10702,11 +10146,6 @@
     "fileName": "效率系统4大子系统联动与配合",
     "relativePath": "pages/300 - AREA/效率系统4大子系统联动与配合.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "效率系统4大子系统联动与配合",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
       {
         "fileName": "README",
         "link": "效率系统4大子系统联动与配合",
@@ -10816,26 +10255,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "思维导图",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "思维导图",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "思维导图",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "思维导图",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "思维导图",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -10871,11 +10290,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "思源笔记",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "思源笔记",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -10891,11 +10305,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "如何真正实现global的proxy代理",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "如何真正实现global的proxy代理",
@@ -10942,11 +10351,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "喝酒文化",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "喝酒文化",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -10954,277 +10358,8 @@
     ]
   },
   {
-    "fileName": "视频制作",
-    "relativePath": "pages/300 - AREA/人+科技融合/视频制作.md",
-    "tags": [
-      "摘录/b站"
-    ],
-    "headings": [
-      {
-        "heading": "教程类视频的分段和进度条",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "obs",
-        "link": "视频制作",
-        "relativePath": "pages/300 - AREA/人+科技融合/obs.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "视频制作",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-五月",
-        "link": "视频制作",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      }
-    ]
-  },
-  {
-    "fileName": "翻译录入",
-    "relativePath": "pages/300 - AREA/人+科技融合/翻译录入.md",
-    "frontmatter": {
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 49
-        }
-      }
-    },
-    "aliases": [
-      "文字截屏翻译 英文转中文 图片自动翻译 OCR翻译"
-    ],
-    "headings": [
-      {
-        "heading": "英文转中文",
-        "level": 2
-      },
-      {
-        "heading": "图片英文转中文",
-        "level": 2
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "如何高效录入",
-        "link": "翻译录入",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md"
-      }
-    ]
-  },
-  {
-    "fileName": "滴答清单",
-    "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md",
-    "tags": [
-      "评论/少数派"
-    ],
-    "headings": [
-      {
-        "heading": "滴答清单",
-        "level": 1
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "INDEX",
-        "link": "滴答清单",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
-        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-        "link": "滴答清单",
-        "relativePath": "pages/500 - ARCHIVE/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-      },
-      {
-        "fileName": "闪念笔记",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "fileName": "安卓手机必备软件",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
-      },
-      {
-        "fileName": "popclip",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
-      },
-      {
-        "fileName": "mac必备软件",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "个人知识笔记系统",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-      },
-      {
-        "fileName": "快捷键",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-      },
-      {
-        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "个人信息管理系统",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "个人信息管理系统",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "个人信息管理系统",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "个人信息管理系统",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "alfred",
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "fileName": "个人简历",
-        "link": "滴答清单",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "笔记软件的选择",
-        "link": "滴答清单",
-        "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "滴答清单",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-五月",
-        "link": "滴答清单",
-        "relativePath": "journals/每月每季度总结/2022-五月.md"
-      },
-      {
-        "fileName": "2022-三月",
-        "link": "滴答清单",
-        "relativePath": "journals/每月每季度总结/2022-三月.md"
-      },
-      {
-        "fileName": "README",
-        "link": "滴答清单",
-        "relativePath": "README.md"
-      }
-    ]
-  },
-  {
-    "fileName": "数字时代如何更好地工作与生活 - MOC",
-    "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+    "fileName": "数字时代如何更好地工作与生活",
+    "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
     "tags": [
       "moc"
     ],
@@ -11335,32 +10470,215 @@
     "backlinks": [
       {
         "fileName": "个人知识管理",
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       },
       {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "数字时代如何更好地工作与生活 - MOC",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md",
-        "displayText": "工作和生活的效率体系建设"
-      },
-      {
         "fileName": "README",
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "relativePath": "README.md",
         "displayText": "工作和生活的效率体系建设"
       },
       {
         "fileName": "CONTENTS",
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "relativePath": "CONTENTS.md",
         "displayText": "工作和生活的效率体系建设"
       },
       {
         "fileName": "CONTENTS",
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "relativePath": "CONTENTS.md",
         "displayText": "人+科技融合"
+      }
+    ]
+  },
+  {
+    "fileName": "视频制作",
+    "relativePath": "pages/300 - AREA/人+科技融合/视频制作.md",
+    "tags": [
+      "摘录/b站"
+    ],
+    "headings": [
+      {
+        "heading": "教程类视频的分段和进度条",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "obs",
+        "link": "视频制作",
+        "relativePath": "pages/300 - AREA/人+科技融合/obs.md"
+      },
+      {
+        "fileName": "2022-五月",
+        "link": "视频制作",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      }
+    ]
+  },
+  {
+    "fileName": "翻译录入",
+    "relativePath": "pages/300 - AREA/人+科技融合/翻译录入.md",
+    "frontmatter": {
+      "tags": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 49
+        }
+      }
+    },
+    "aliases": [
+      "文字截屏翻译 英文转中文 图片自动翻译 OCR翻译"
+    ],
+    "headings": [
+      {
+        "heading": "英文转中文",
+        "level": 2
+      },
+      {
+        "heading": "图片英文转中文",
+        "level": 2
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "如何高效录入",
+        "link": "翻译录入",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md"
+      }
+    ]
+  },
+  {
+    "fileName": "滴答清单",
+    "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md",
+    "tags": [
+      "评论/少数派"
+    ],
+    "headings": [
+      {
+        "heading": "滴答清单",
+        "level": 1
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
+        "link": "滴答清单",
+        "relativePath": "pages/500 - ARCHIVE/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+      },
+      {
+        "fileName": "PARA和MOC联用组织笔记",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+      },
+      {
+        "fileName": "闪念笔记",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
+      },
+      {
+        "fileName": "安卓手机必备软件",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
+      },
+      {
+        "fileName": "popclip",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
+      },
+      {
+        "fileName": "mac必备软件",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "fileName": "个人知识笔记系统",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+      },
+      {
+        "fileName": "快捷键",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+      },
+      {
+        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      },
+      {
+        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      },
+      {
+        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      },
+      {
+        "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      },
+      {
+        "fileName": "个人信息管理系统",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "个人信息管理系统",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "个人信息管理系统",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "个人信息管理系统",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+      },
+      {
+        "fileName": "alfred",
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "fileName": "个人简历",
+        "link": "滴答清单",
+        "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+      },
+      {
+        "fileName": "笔记软件的选择",
+        "link": "滴答清单",
+        "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
+      },
+      {
+        "fileName": "2022-五月",
+        "link": "滴答清单",
+        "relativePath": "journals/每月每季度总结/2022-五月.md"
+      },
+      {
+        "fileName": "2022-三月",
+        "link": "滴答清单",
+        "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "README",
+        "link": "滴答清单",
+        "relativePath": "README.md"
       }
     ]
   },
@@ -11419,11 +10737,6 @@
         "fileName": "语音输入",
         "link": "油猴脚本",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "油猴脚本",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -11440,11 +10753,6 @@
         "fileName": "mac必备软件",
         "link": "沙拉查词",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "沙拉查词",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -11731,11 +11039,6 @@
         "fileName": "个人搜索系统",
         "link": "个性化推荐",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "个性化推荐",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -11790,11 +11093,6 @@
         "fileName": "bob",
         "link": "popclip",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "popclip",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -11806,11 +11104,6 @@
         "fileName": "mac必备软件",
         "link": "one switch",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "one switch",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -11878,16 +11171,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "INDEX",
-        "link": "obsidian",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
-        "fileName": "INDEX",
-        "link": "obsidian",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
         "fileName": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
         "link": "obsidian",
         "relativePath": "pages/500 - ARCHIVE/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
@@ -11901,6 +11184,16 @@
         "fileName": "插件的便利性及安全性，如何权衡",
         "link": "obsidian",
         "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+      },
+      {
+        "fileName": "PARA和MOC联用组织笔记",
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+      },
+      {
+        "fileName": "PARA和MOC联用组织笔记",
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "fileName": "渐进式 - progressive",
@@ -11969,98 +11262,6 @@
         "link": "obsidian",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md",
         "displayText": "黑曜石"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "obsidian#什么是 Obsidian",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md",
-        "cleanLink": "obsidian",
-        "displayText": "Obsidian"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "obsidian",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -12390,31 +11591,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "logseq",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "logseq",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "logseq",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "logseq",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "logseq",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "logseq",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -12444,11 +11620,6 @@
         "fileName": "mac必备软件",
         "link": "iTerm",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "iTerm",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -12460,11 +11631,6 @@
         "fileName": "mac必备软件",
         "link": "expanso",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "expanso",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -12549,17 +11715,6 @@
         "link": "chrome",
         "relativePath": "pages/300 - AREA/PWA - Progressive Web Apps.md",
         "displayText": "edge"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "chrome",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md",
-        "displayText": "edge浏览器"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "chrome",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -12586,11 +11741,6 @@
         "fileName": "mac必备软件",
         "link": "bob",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "bob",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -12602,12 +11752,6 @@
         "fileName": "安卓手机必备软件",
         "link": "bilibili",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "bilibili",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md",
-        "displayText": "b站"
       },
       {
         "fileName": "2022-三月",
@@ -12643,11 +11787,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "V2rayU",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
         "fileName": "2022-05-26",
         "link": "V2rayU",
         "relativePath": "journals/2022-05-26.md"
@@ -12662,11 +11801,6 @@
         "fileName": "mac必备软件",
         "link": "Fig",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "Fig",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -12678,11 +11812,6 @@
         "fileName": "mac必备软件",
         "link": "BetterTouchTool",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "BetterTouchTool",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -12779,26 +11908,6 @@
         "relativePath": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
       },
       {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "平台+插件",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "平台+插件",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.465Z",
-        "link": "平台+插件",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "平台+插件",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "README",
         "link": "平台+插件",
         "relativePath": "README.md"
@@ -12822,11 +11931,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "在网上提问的智慧",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "在网上提问的智慧",
@@ -12891,11 +11995,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "各种新潮的app体验",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "各种新潮的app体验",
@@ -12980,24 +12079,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人输出发布系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
         "link": "个人输出发布系统",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人输出发布系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人输出发布系统",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "数字时代如何更好地工作与生活 - 图",
@@ -13078,9 +12167,9 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人知识笔记系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
@@ -13106,26 +12195,6 @@
         "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
         "link": "个人知识笔记系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人知识笔记系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.256Z",
-        "link": "个人知识笔记系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "个人知识笔记系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人知识笔记系统",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -13168,11 +12237,6 @@
         "fileName": "飞书文档",
         "link": "飞书妙记",
         "relativePath": "pages/000 - INBOX/飞书文档.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "飞书妙记",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
       }
     ]
   },
@@ -13220,9 +12284,9 @@
     },
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "软件项目管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "CONTENTS",
@@ -13347,29 +12411,14 @@
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md",
     "backlinks": [
       {
-        "fileName": "INDEX",
+        "fileName": "PARA和MOC联用组织笔记",
         "link": "自下而上",
-        "relativePath": "pages/INDEX.md"
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "fileName": "个人知识管理",
         "link": "自下而上",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "自下而上",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "自下而上",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "自下而上",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   },
@@ -13472,16 +12521,6 @@
         "fileName": "数字花园",
         "link": "第二大脑",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "第二大脑",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "第二大脑",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -13616,31 +12655,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
       },
       {
-        "fileName": "2022-05-30T03_12_55.806Z",
-        "link": "数字花园",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md"
-      },
-      {
-        "fileName": "2022-05-30T03_12_25.898Z",
-        "link": "数字花园",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_25.898Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "数字花园",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "数字花园",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "数字花园",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "README",
         "link": "数字花园",
         "relativePath": "README.md"
@@ -13708,14 +12722,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "效率的定义和原则",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "效率的定义和原则",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       }
     ]
   },
@@ -13767,11 +12776,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "搜索一切",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
         "fileName": "数字时代如何更好地工作与生活 - 图",
         "link": "搜索一切",
         "relativePath": "draws/数字时代如何更好地工作与生活 - 图.md"
@@ -13819,11 +12823,6 @@
         "link": "搜狗输入法",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md",
         "displayText": "文字录入"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "搜狗输入法",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -13930,11 +12929,6 @@
         "fileName": "效率的定义和原则",
         "link": "快捷键",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.256Z",
-        "link": "快捷键",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md"
       }
     ]
   },
@@ -14029,27 +13023,15 @@
     ],
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "如何高效录入",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
         "displayText": "个人录入输入系统"
       },
       {
         "fileName": "个人信息管理系统",
         "link": "如何高效录入",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
-        "displayText": "个人输入系统"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "如何高效录入",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md",
-        "displayText": "个人录入输入系统"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "如何高效录入",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md",
         "displayText": "个人输入系统"
       }
     ]
@@ -14155,24 +13137,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人高效学习系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "3个系统",
         "link": "个人高效学习系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人高效学习系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "个人高效学习系统",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -14260,8 +13232,8 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/everything.md"
       },
       {
-        "link": "数字时代如何更好地工作与生活 - MOC",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "link": "数字时代如何更好地工作与生活",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "link": "双链笔记",
@@ -14293,21 +13265,21 @@
         "displayText": "『入不孵出』PKM系统"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
         "displayText": "知识管理"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
         "displayText": "信息管理"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "3个系统",
@@ -14323,40 +13295,6 @@
         "fileName": "ryooo的知识管理工作流",
         "link": "个人知识管理",
         "relativePath": "pages/000 - INBOX/ryooo的知识管理工作流.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md",
-        "displayText": "知识管理"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md",
-        "displayText": "信息管理"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md",
-        "displayText": "PKM(personal knowledge management)"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人知识管理",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md",
-        "displayText": "PKM"
       },
       {
         "fileName": "2022-三月",
@@ -14547,9 +13485,9 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人搜索系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "效率的定义和原则",
@@ -14572,16 +13510,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md",
         "cleanLink": "个人搜索系统",
         "displayText": "个人搜索系统 > 搜索判断树"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人搜索系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.256Z",
-        "link": "个人搜索系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md"
       }
     ]
   },
@@ -14611,11 +13539,6 @@
         "fileName": "效率的定义和原则",
         "link": "个人必用软件梳理",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.256Z",
-        "link": "个人必用软件梳理",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md"
       }
     ]
   },
@@ -14682,19 +13605,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "外部资源的单向链接汇总",
+        "fileName": "EXTERNAL",
         "link": "个人工作流",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人工作流",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人工作流",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       }
     ]
   },
@@ -14748,11 +13666,6 @@
         "fileName": "个人信息管理系统",
         "link": "个人信息系统涉及的核心软件和云服务",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "个人信息系统涉及的核心软件和云服务",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
       }
     ]
   },
@@ -14955,9 +13868,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人信息管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "如果要我安利obsidian给别人，我会怎么做",
@@ -14983,26 +13896,6 @@
         "fileName": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
         "link": "个人信息管理系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人信息管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "个人信息管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "个人信息管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人信息管理系统",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -15056,9 +13949,9 @@
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
       },
       {
-        "fileName": "数字时代如何更好地工作与生活 - MOC",
+        "fileName": "数字时代如何更好地工作与生活",
         "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "fileName": "安卓手机必备软件",
@@ -15094,31 +13987,6 @@
         "fileName": "3个系统",
         "link": "个人任务管理系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/3个系统.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.683Z",
-        "link": "个人任务管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "个人任务管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.256Z",
-        "link": "个人任务管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "个人任务管理系统",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "个人任务管理系统",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -15501,21 +14369,6 @@
         "fileName": "个人搜索系统",
         "link": "chrome-omni插件",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "chrome-omni插件",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "chrome-omni插件",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "chrome-omni插件",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       }
     ]
   },
@@ -15654,31 +14507,6 @@
         "fileName": "个人搜索系统",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "alfred",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "alfred",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       }
     ]
   },
@@ -15875,29 +14703,14 @@
     ],
     "backlinks": [
       {
-        "fileName": "INDEX",
+        "fileName": "PARA和MOC联用组织笔记",
         "link": "万物互联",
-        "relativePath": "pages/INDEX.md"
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "fileName": "obsidian插件",
         "link": "万物互联",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "万物互联",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "万物互联",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "万物互联",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   },
@@ -15966,11 +14779,6 @@
         "link": "obs",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/录屏和直播推流.md",
         "displayText": "pages/300 - AREA/人+科技融合/obs"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "obs",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -16058,46 +14866,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.253Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_29.252Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "devonthink",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "devonthink",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -16133,16 +14901,6 @@
         "fileName": "mac必备软件",
         "link": "PicGo",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "PicGo",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "PicGo",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -16175,11 +14933,6 @@
         "fileName": "Obsidian入门到精通",
         "link": "PPT制作的目的和原则",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.352Z",
-        "link": "PPT制作的目的和原则",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md"
       }
     ]
   },
@@ -16223,11 +14976,6 @@
         "fileName": "mac必备软件",
         "link": "AppleScript",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "AppleScript",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       }
     ]
   },
@@ -16306,11 +15054,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "mac系统重装",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "mac系统重装",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -16337,16 +15080,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "flomo",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "flomo",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-四月",
         "link": "flomo",
@@ -16386,11 +15119,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "PWA - Progressive Web Apps",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "PWA - Progressive Web Apps",
@@ -16438,11 +15166,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "项目管理与法律",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "项目管理与法律",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -16453,11 +15176,6 @@
     "fileName": "项目owner机制",
     "relativePath": "pages/200 - PROJECT/软件项目管理/项目owner机制.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "项目owner机制",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "项目owner机制",
@@ -16597,11 +15315,6 @@
         "fileName": "个人技术栈与工具链梳理",
         "link": "前端",
         "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.680Z",
-        "link": "前端",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
       }
     ]
   },
@@ -16757,31 +15470,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.680Z",
-        "link": "github",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "github",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "github",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "github",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "github",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
         "fileName": "README",
         "link": "github",
         "relativePath": "README.md"
@@ -16855,11 +15543,6 @@
         "fileName": "个人简历",
         "link": "Git",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.680Z",
-        "link": "Git",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
       }
     ]
   },
@@ -16897,46 +15580,6 @@
         "fileName": "个人简历",
         "link": "vscode",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.687Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_58_53.583Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_57.428Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
-      },
-      {
-        "fileName": "2022-05-30T02_52_55.021Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_21.384Z",
-        "link": "vscode",
-        "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
       },
       {
         "fileName": "README",
@@ -17179,11 +15822,6 @@
         "fileName": "个人简历",
         "link": "docker",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "2022-05-30T04_01_10.957Z",
-        "link": "docker",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -17496,11 +16134,6 @@
     "relativePath": "pages/200 - PROJECT/个人职业生涯/管理者喜欢内卷的员工吗.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "管理者喜欢内卷的员工吗",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
-      {
         "fileName": "2022-五月",
         "link": "管理者喜欢内卷的员工吗",
         "relativePath": "journals/每月每季度总结/2022-五月.md"
@@ -17649,11 +16282,6 @@
         "fileName": "个人简历",
         "link": "微服务",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.680Z",
-        "link": "微服务",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
       }
     ]
   },
@@ -17706,14 +16334,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "外部资源的单向链接汇总",
+        "fileName": "EXTERNAL",
         "link": "如何高效开会",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "如何高效开会",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
         "fileName": "2022-五月",
@@ -18271,6 +16894,10 @@
     ]
   },
   {
+    "fileName": "PARA%7C什么是PARA笔记组织法",
+    "relativePath": "pages/000 - INBOX/PARA%7C什么是PARA笔记组织法.md"
+  },
+  {
     "fileName": "MOC%7C什么是MOC笔记组织法",
     "relativePath": "pages/000 - INBOX/MOC%7C什么是MOC笔记组织法.md"
   },
@@ -18302,11 +16929,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "飞书文档",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "飞书文档",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -18323,11 +16945,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "集装箱",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "集装箱",
@@ -18346,16 +16963,6 @@
         "fileName": "个人技术栈与工具链梳理",
         "link": "隐私保护",
         "relativePath": "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.680Z",
-        "link": "隐私保护",
-        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "隐私保护",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -18428,11 +17035,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "论执行力的重要性",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "论执行力的重要性",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -18443,11 +17045,6 @@
     "fileName": "论学历的重要性",
     "relativePath": "pages/000 - INBOX/论学历的重要性.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "论学历的重要性",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "论学历的重要性",
@@ -18460,11 +17057,6 @@
     "relativePath": "pages/000 - INBOX/考研备考经验.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "考研备考经验",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "考研备考经验",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -18475,11 +17067,6 @@
     "fileName": "老六",
     "relativePath": "pages/000 - INBOX/老六.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "老六",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "老六",
@@ -18551,11 +17138,6 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       },
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "终身学习",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "终身学习",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -18566,11 +17148,6 @@
     "fileName": "线性增长与指数增长",
     "relativePath": "pages/000 - INBOX/线性增长与指数增长.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "线性增长与指数增长",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "线性增长与指数增长",
@@ -18615,21 +17192,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "笔记软件的选择",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "笔记软件的选择",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "笔记软件的选择",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "笔记软件的选择",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -18650,11 +17212,6 @@
     "fileName": "穷人和富人的保险",
     "relativePath": "pages/000 - INBOX/穷人和富人的保险.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "穷人和富人的保险",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "穷人和富人的保险",
@@ -18800,11 +17357,6 @@
     "relativePath": "pages/000 - INBOX/杂念随思随想.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "杂念随思随想",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "杂念随思随想",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -18857,11 +17409,6 @@
     "fileName": "新时代如何开始学习一门新知识",
     "relativePath": "pages/000 - INBOX/新时代如何开始学习一门新知识.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "新时代如何开始学习一门新知识",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "新时代如何开始学习一门新知识",
@@ -18917,16 +17464,6 @@
         "fileName": "常见笔记组织方法",
         "link": "文件夹和标签",
         "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "文件夹和标签",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "文件夹和标签",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -19062,8 +17599,8 @@
         "relativePath": "pages/000 - INBOX/MOC.md"
       },
       {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       }
     ],
     "backlinks": [
@@ -19095,11 +17632,6 @@
     "relativePath": "pages/000 - INBOX/巨额负债翻身的例子.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "巨额负债翻身的例子",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "巨额负债翻身的例子",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -19122,11 +17654,6 @@
       }
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "如果要给人安利好书",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "如果要给人安利好书",
@@ -19197,11 +17724,6 @@
     ],
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "双链笔记与概念挖坑",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "双链笔记与概念挖坑",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -19213,11 +17735,6 @@
     "relativePath": "pages/000 - INBOX/创业.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "创业",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "创业",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -19228,11 +17745,6 @@
     "fileName": "写一本小说",
     "relativePath": "pages/000 - INBOX/写一本小说.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "写一本小说",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "写一本小说",
@@ -19269,11 +17781,6 @@
     "fileName": "全球金融市场与互联网公司",
     "relativePath": "pages/000 - INBOX/全球金融市场与互联网公司.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "全球金融市场与互联网公司",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
       {
         "fileName": "2022-三月",
         "link": "全球金融市场与互联网公司",
@@ -19327,11 +17834,6 @@
     "fileName": "为内容付费",
     "relativePath": "pages/000 - INBOX/为内容付费.md",
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "为内容付费",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "为内容付费",
@@ -19430,11 +17932,6 @@
     "relativePath": "pages/000 - INBOX/不看新闻.md",
     "backlinks": [
       {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "不看新闻",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-三月",
         "link": "不看新闻",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
@@ -19462,11 +17959,6 @@
       "context"
     ],
     "backlinks": [
-      {
-        "fileName": "2022-05-29T13_28_31.997Z",
-        "link": "上下文",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md"
-      },
       {
         "fileName": "2022-五月",
         "link": "上下文",
@@ -19544,16 +18036,6 @@
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "URL scheme",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "URL scheme",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
-      },
-      {
         "fileName": "2022-四月",
         "link": "URL scheme",
         "relativePath": "journals/每月每季度总结/2022-四月.md"
@@ -19590,21 +18072,6 @@
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
       },
       {
-        "fileName": "2022-05-29T13_28_28.466Z",
-        "link": "roam research",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "roam research",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_28.472Z",
-        "link": "roam research",
-        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md"
-      },
-      {
         "fileName": "2022-05-28",
         "link": "Roam Research",
         "relativePath": "journals/2022-05-28.md"
@@ -19619,11 +18086,6 @@
         "fileName": "text expand",
         "link": "Notion 优质资源汇总",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/text expand.md"
-      },
-      {
-        "fileName": "2022-05-29T13_28_31.996Z",
-        "link": "Notion 优质资源汇总",
-        "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md"
       },
       {
         "fileName": "2022-三月",
@@ -19742,2709 +18204,13 @@
     ]
   },
   {
-    "fileName": "2022-05-30T04_18_16.651Z",
-    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md",
-    "headings": [
-      {
-        "heading": "记笔记原则",
-        "level": 2
-      },
-      {
-        "heading": "方法和指导思想",
-        "level": 2
-      },
-      {
-        "heading": "进行中 - Project",
-        "level": 2
-      },
-      {
-        "heading": "短中期精进 - Area",
-        "level": 2
-      },
-      {
-        "heading": "原子化 - Resource",
-        "level": 2
-      },
-      {
-        "heading": "归档 - Archive",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "自上而下"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "万物互联",
-        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
-      },
-      {
-        "link": "学习目标的分级",
-        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
-      },
-      {
-        "link": "CONTENTS",
-        "relativePath": "CONTENTS.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_18_07.628Z",
-    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md",
-    "headings": [
-      {
-        "heading": "记笔记原则",
-        "level": 2
-      },
-      {
-        "heading": "方法和指导思想",
-        "level": 2
-      },
-      {
-        "heading": "进行中 - Project",
-        "level": 2
-      },
-      {
-        "heading": "短中期精进 - Area",
-        "level": 2
-      },
-      {
-        "heading": "原子化 - Resource",
-        "level": 2
-      },
-      {
-        "heading": "归档 - Archive",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "自上而下"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "万物互联",
-        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
-      },
-      {
-        "link": "学习目标的分级",
-        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
-      },
-      {
-        "link": "CONTENTS",
-        "relativePath": "CONTENTS.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_18_03.955Z",
-    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md",
-    "headings": [
-      {
-        "heading": "记笔记原则",
-        "level": 2
-      },
-      {
-        "heading": "方法和指导思想",
-        "level": 2
-      },
-      {
-        "heading": "进行中 - Project",
-        "level": 2
-      },
-      {
-        "heading": "短中期精进 - Area",
-        "level": 2
-      },
-      {
-        "heading": "原子化 - Resource",
-        "level": 2
-      },
-      {
-        "heading": "归档 - Archive",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "自上而下"
-      },
-      {
-        "link": "自下而上",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
-      },
-      {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "万物互联",
-        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
-      },
-      {
-        "link": "学习目标的分级",
-        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
-      },
-      {
-        "link": "CONTENTS",
-        "relativePath": "CONTENTS.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_01_10.780Z",
-    "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯/明文数据/2022-05-30T04_01_10.780Z.md",
-    "tags": [
-      "动态/b站"
-    ]
-  },
-  {
-    "fileName": "2022-05-30T03_56_59.840Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_59.840Z.md",
-    "tags": [
-      "对话/微信"
-    ],
-    "headings": [
-      {
-        "heading": "思源笔记",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T03_56_52.228Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_52.228Z.md",
-    "tags": [
-      "dv"
-    ],
-    "headings": [
-      {
-        "heading": "思源笔记",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T03_56_50.055Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_50.055Z.md",
-    "tags": [
-      "评论/微信"
-    ],
-    "headings": [
-      {
-        "heading": "思源笔记",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_01_10.777Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/视频制作/2022-05-30T04_01_10.777Z.md",
-    "tags": [
-      "动态/b站"
-    ],
-    "headings": [
-      {
-        "heading": "教程类视频的分段和进度条",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T03_12_55.806Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md",
-    "tags": [
-      "moc",
-      "todo/今天"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 39
-        }
-      }
-    },
-    "aliases": [
-      "输出系统"
-    ],
-    "headings": [
-      {
-        "heading": "定义",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "数字花园",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T03_12_25.898Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_25.898Z.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 33
-        }
-      }
-    },
-    "aliases": [
-      "输出系统"
-    ],
-    "headings": [
-      {
-        "heading": "定义",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "数字花园",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.683Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 57
-        }
-      }
-    },
-    "aliases": [
-      "PIM与PKM结合的完整工作流",
-      "工作和生活的效率体系建设"
-    ],
-    "headings": [
-      {
-        "heading": "为什么要区分知识管理和信息管理",
-        "level": 2
-      },
-      {
-        "heading": "更好地工作",
-        "level": 2
-      },
-      {
-        "heading": "个人角度",
-        "level": 3
-      },
-      {
-        "heading": "团队角度",
-        "level": 3
-      },
-      {
-        "heading": "更好地生活",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "个人知识管理",
-        "displayText": "知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "个人知识管理",
-        "displayText": "信息管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "效率的定义和原则",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
-      },
-      {
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "如何高效录入",
-        "displayText": "个人录入输入系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md"
-      },
-      {
-        "link": "个人信息管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      },
-      {
-        "link": "个人知识笔记系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-      },
-      {
-        "link": "个人输出发布系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
-      },
-      {
-        "link": "个人高效学习系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-      },
-      {
-        "link": "个人搜索系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "link": "个人工作流",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
-      },
-      {
-        "link": "软件项目管理系统"
-      },
-      {
-        "link": "智能手表"
-      },
-      {
-        "link": "智能汽车"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.687Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md",
-    "links": [
-      {
-        "link": "bartender",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/bartender.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "istat menus"
-      },
-      {
-        "link": "iTerm",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/iTerm.md"
-      },
-      {
-        "link": "BetterTouchTool",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/BetterTouchTool.md"
-      },
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "搜索一切",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜索一切.md"
-      },
-      {
-        "link": "keyboard maestro"
-      },
-      {
-        "link": "V2rayU",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/V2rayU.md"
-      },
-      {
-        "link": "翻墙"
-      },
-      {
-        "link": "onedrive"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      },
-      {
-        "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md"
-      },
-      {
-        "link": "PicGo",
-        "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "数字花园",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      },
-      {
-        "link": "chrome",
-        "displayText": "edge浏览器",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
-      },
-      {
-        "link": "坚果云"
-      },
-      {
-        "link": "webdev"
-      },
-      {
-        "link": "anki",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
-      },
-      {
-        "link": "logseq",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
-      },
-      {
-        "link": "bob",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bob.md"
-      },
-      {
-        "link": "沙拉查词",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/沙拉查词.md"
-      },
-      {
-        "link": "anki",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "个人信息管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "link": "obs",
-        "relativePath": "pages/300 - AREA/人+科技融合/obs.md"
-      },
-      {
-        "link": "lx-music-desktop"
-      },
-      {
-        "link": "reeder"
-      },
-      {
-        "link": "RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      },
-      {
-        "link": "cleanMyMac X"
-      },
-      {
-        "link": "office"
-      },
-      {
-        "link": "xmind"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "draw.io"
-      },
-      {
-        "link": "permute"
-      },
-      {
-        "link": "看图"
-      },
-      {
-        "link": "GIF Brewery"
-      },
-      {
-        "link": "presentify"
-      },
-      {
-        "link": "keycastr"
-      },
-      {
-        "link": "简悦·同步助手"
-      },
-      {
-        "link": "hook"
-      },
-      {
-        "link": "iina"
-      },
-      {
-        "link": "Fig",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/Fig.md"
-      },
-      {
-        "link": "snipaste"
-      },
-      {
-        "link": "altTab"
-      },
-      {
-        "link": "hazeover"
-      },
-      {
-        "link": "bandizip"
-      },
-      {
-        "link": "apifox"
-      },
-      {
-        "link": "微信"
-      },
-      {
-        "link": "one switch",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/one switch.md"
-      },
-      {
-        "link": "PicGo",
-        "relativePath": "pages/300 - AREA/人+科技融合/PicGo.md"
-      },
-      {
-        "link": "popclip",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
-      },
-      {
-        "link": "网易云音乐"
-      },
-      {
-        "link": "个性化推荐",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/个性化推荐.md"
-      },
-      {
-        "link": "百度网盘"
-      },
-      {
-        "link": "阿里云盘"
-      },
-      {
-        "link": "expanso",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/expanso.md"
-      },
-      {
-        "link": "wireshark"
-      },
-      {
-        "link": "telegram"
-      },
-      {
-        "link": "koodo reader"
-      },
-      {
-        "link": "menubarX"
-      },
-      {
-        "link": "FigrCollage"
-      },
-      {
-        "link": "vmware"
-      },
-      {
-        "link": "Movist Pro"
-      },
-      {
-        "link": "迅雷"
-      },
-      {
-        "link": "transmit"
-      },
-      {
-        "link": "loopback"
-      },
-      {
-        "link": "houdahspot"
-      },
-      {
-        "link": "proxifier"
-      },
-      {
-        "link": "iptables"
-      },
-      {
-        "link": "Royal TSX"
-      },
-      {
-        "link": "dash"
-      },
-      {
-        "link": "keycue"
-      },
-      {
-        "link": "clash"
-      },
-      {
-        "link": "navicat"
-      },
-      {
-        "link": "linux常用命令行 - MOC"
-      },
-      {
-        "link": "AppleScript",
-        "relativePath": "pages/300 - AREA/人+科技融合/AppleScript.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_29.256Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则/2022-05-29T13_28_29.256Z.md",
-    "frontmatter": {
-      "aliases": null,
-      "tags": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 25
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "比喻",
-        "level": 2
-      },
-      {
-        "heading": "核心原则",
-        "level": 2
-      },
-      {
-        "heading": "相关引用",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "云计算与个人 - MOC"
-      },
-      {
-        "link": "快捷键",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-      },
-      {
-        "link": "个人必用软件梳理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md"
-      },
-      {
-        "link": "个人搜索系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
-      },
-      {
-        "link": "个人知识笔记系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_29.253Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md",
-    "tags": [
-      "todo/今天",
-      "review"
-    ],
-    "frontmatter": {
-      "uid": "ed944eea-f1f3-45b3-bdd1-5706c9028501",
-      "sr-due": "2022-08-23",
-      "sr-interval": 87,
-      "sr-ease": 290,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 6,
-          "col": 3,
-          "offset": 121
-        }
-      }
-    },
-    "aliases": [
-      "效率系统4大子系统联动与配合"
-    ],
-    "headings": [
-      {
-        "heading": "联动的问题",
-        "level": 2
-      },
-      {
-        "heading": "联动试举例",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "all in one"
-      },
-      {
-        "link": "重器轻用",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
-      },
-      {
-        "link": "个人信息管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "个人知识笔记系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "渐进式总结",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_29.252Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md",
-    "tags": [
-      "todo"
-    ],
-    "links": [
-      {
-        "link": "个人信息系统涉及的核心软件和云服务",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
-      },
-      {
-        "link": "如何高效录入",
-        "displayText": "个人输入系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md"
-      },
-      {
-        "link": "hook"
-      },
-      {
-        "link": "简悦"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "keyboard maestro"
-      },
-      {
-        "link": "飞书妙记",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/飞书妙记.md"
-      },
-      {
-        "link": "RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "RSSHub",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSSHub.md"
-      },
-      {
-        "link": "简悦"
-      },
-      {
-        "link": "微信读书"
-      },
-      {
-        "link": "zlibrary"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "onenote"
-      },
-      {
-        "link": "微信"
-      },
-      {
-        "link": "telegram"
-      },
-      {
-        "link": "@吕立青"
-      },
-      {
-        "link": "RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "微信读书"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.680Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md",
-    "headings": [
-      {
-        "heading": "内部梳理",
-        "level": 2
-      },
-      {
-        "heading": "简历上呈现",
-        "level": 3
-      }
-    ],
-    "links": [
-      {
-        "link": "后端"
-      },
-      {
-        "link": "Golang"
-      },
-      {
-        "link": "计算机基础知识"
-      },
-      {
-        "link": "设计模式"
-      },
-      {
-        "link": "计算机网络"
-      },
-      {
-        "link": "计算机体系结构"
-      },
-      {
-        "link": "数据结构和算法"
-      },
-      {
-        "link": "前端",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/前端.md"
-      },
-      {
-        "link": "JavaScript"
-      },
-      {
-        "link": "开发框架"
-      },
-      {
-        "link": "React"
-      },
-      {
-        "link": "Vue"
-      },
-      {
-        "link": "浏览器"
-      },
-      {
-        "link": "项目管理"
-      },
-      {
-        "link": "项目规划"
-      },
-      {
-        "link": "需求分析"
-      },
-      {
-        "link": "系统设计"
-      },
-      {
-        "link": "开发测试"
-      },
-      {
-        "link": "运维运营"
-      },
-      {
-        "link": "团队协作"
-      },
-      {
-        "link": "云原生"
-      },
-      {
-        "link": "IAAS"
-      },
-      {
-        "link": "PAAS"
-      },
-      {
-        "link": "云架构"
-      },
-      {
-        "link": "云服务"
-      },
-      {
-        "link": "运维Devops"
-      },
-      {
-        "link": "微服务",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/微服务.md"
-      },
-      {
-        "link": "Git",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-      },
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "Linux"
-      },
-      {
-        "link": "MacOS"
-      },
-      {
-        "link": "DevOps"
-      },
-      {
-        "link": "可信与安全"
-      },
-      {
-        "link": "编译构建"
-      },
-      {
-        "link": "开源使用"
-      },
-      {
-        "link": "配置管理"
-      },
-      {
-        "link": "软件工程"
-      },
-      {
-        "link": "网络安全"
-      },
-      {
-        "link": "租户侧Web安全"
-      },
-      {
-        "link": "管理侧内网安全"
-      },
-      {
-        "link": "隐私保护",
-        "relativePath": "pages/000 - INBOX/隐私保护.md"
-      },
-      {
-        "link": "质量效能"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_01_10.957Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md",
-    "tags": [
-      "动态/v2ex"
-    ],
-    "links": [
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "chrome",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
-      },
-      {
-        "link": "油猴脚本",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/油猴脚本.md"
-      },
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "docker",
-        "relativePath": "pages/200 - PROJECT/云计算与云原生/docker.md"
-      },
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.466Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md",
-    "headings": [
-      {
-        "heading": "典型特征",
-        "level": 2
-      },
-      {
-        "heading": "延伸思考",
-        "level": 2
-      },
-      {
-        "heading": "特征概括",
-        "level": 2
-      },
-      {
-        "heading": "不同方向的思考",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "重器轻用",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
-      },
-      {
-        "link": "全家桶"
-      },
-      {
-        "link": "平台+插件",
-        "displayText": "300 - AREA/知识管理/obsidian学习笔记/平台+插件"
-      },
-      {
-        "link": "obsidian#什么是 Obsidian",
-        "cleanLink": "obsidian",
-        "displayText": "Obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "roam research",
-        "relativePath": "pages/000 - INBOX/Roam Research.md"
-      },
-      {
-        "link": "重器轻用",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
-      },
-      {
-        "link": "《卡片笔记写作法》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
-      },
-      {
-        "link": "印象笔记"
-      },
-      {
-        "link": "渐进式开发"
-      },
-      {
-        "link": "渐进式总结",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
-      },
-      {
-        "link": "渐进式写作",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式写作.md"
-      },
-      {
-        "link": "渐进式学习",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式学习.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.465Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md",
-    "headings": [
-      {
-        "heading": "定义",
-        "level": 2
-      },
-      {
-        "heading": "好处",
-        "level": 2
-      },
-      {
-        "heading": "特点",
-        "level": 2
-      },
-      {
-        "heading": "卡片要素",
-        "level": 2
-      },
-      {
-        "heading": "我的误区",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "常青笔记 - Evergreen Note",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
-      },
-      {
-        "link": "《卡片笔记写作法》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
-      },
-      {
-        "link": "渐进式写作",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式写作.md"
-      },
-      {
-        "link": "PARA和MOC法分类笔记"
-      },
-      {
-        "link": "常青笔记 - Evergreen Note",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
-      },
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "link": "如何一步步践行卡片笔记写作法"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.352Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/Obsidian入门到精通/2022-05-29T13_28_28.352Z.md",
-    "frontmatter": {
-      "aliases": null,
-      "tags": null,
-      "cards-deck": "INBOX",
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 4,
-          "col": 3,
-          "offset": 41
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "核心原则",
-        "level": 2
-      },
-      {
-        "heading": "几点核心价值",
-        "level": 2
-      },
-      {
-        "heading": "工作台视图规划",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "闪念笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "link": "知识图谱"
-      },
-      {
-        "link": "麦特卡夫定律",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/思维工具库/麦特卡夫定律.md"
-      },
-      {
-        "link": "低耦合，高内聚"
-      },
-      {
-        "link": "PARA和MOC法分类笔记"
-      },
-      {
-        "link": "PPT制作的目的和原则",
-        "relativePath": "pages/300 - AREA/人+科技融合/PPT制作的目的和原则.md"
-      },
-      {
-        "link": "闪念笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "link": "文献笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/文献笔记.md"
-      },
-      {
-        "link": "微信读书"
-      },
-      {
-        "link": "zotero",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/zotero.md"
-      },
-      {
-        "link": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md"
-      },
-      {
-        "link": "永久笔记",
-        "relativePath": "pages/300 - AREA/永久笔记.md"
-      },
-      {
-        "link": "anki",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_28.472Z",
-    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/notion学习笔记/notion/2022-05-29T13_28_28.472Z.md",
-    "tags": [
-      "评论/少数派"
-    ],
-    "headings": [
-      {
-        "heading": "技巧",
-        "level": 2
-      },
-      {
-        "heading": "使用范围",
-        "level": 2
-      },
-      {
-        "heading": "零碎思考",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "roam research",
-        "relativePath": "pages/000 - INBOX/Roam Research.md"
-      },
-      {
-        "link": "roam research",
-        "relativePath": "pages/000 - INBOX/Roam Research.md"
-      },
-      {
-        "link": "URL scheme",
-        "relativePath": "pages/000 - INBOX/URL scheme.md"
-      },
-      {
-        "link": "个人时间使用的宏观洞察",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md"
-      },
-      {
-        "link": "团队信息与知识共享",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md"
-      },
-      {
-        "link": "数字花园",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      },
-      {
-        "link": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-        "relativePath": "pages/500 - ARCHIVE/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-      },
-      {
-        "link": "OCR"
-      },
-      {
-        "link": "obsidian 是可以用一辈子不换的笔记软件吗#^19a9eb",
-        "cleanLink": "obsidian 是可以用一辈子不换的笔记软件吗",
-        "displayText": "obsidian 是可以用一辈子不换的笔记软件吗 > ^19a9eb",
-        "relativePath": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T04_08_19.422Z",
-    "relativePath": "logseq/bak/journals/Index/2022-05-30T04_08_19.422Z.md",
-    "frontmatter": {
-      "version": 1,
-      "workflow": null,
-      "drafts": [
-        {
-          "name": "未命名",
-          "folder": "未命名",
-          "scenes": []
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 7,
-          "col": 3,
-          "offset": 86
-        }
-      }
-    }
-  },
-  {
-    "fileName": "2022-05-30T04_06_52.993Z",
-    "relativePath": "logseq/bak/journals/Index/2022-05-30T04_06_52.993Z.md",
-    "frontmatter": {
-      "version": 1,
-      "workflow": null,
-      "drafts": [
-        {
-          "name": "Draft 1",
-          "folder": "Draft 1",
-          "scenes": []
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 7,
-          "col": 3,
-          "offset": 94
-        }
-      }
-    }
-  },
-  {
-    "fileName": "2022-05-30T02_58_53.583Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md",
-    "tags": [
-      "todo"
-    ],
-    "headings": [
-      {
-        "heading": "为什么要迁移",
-        "level": 2
-      },
-      {
-        "heading": "alfred的问题",
-        "level": 3
-      },
-      {
-        "heading": "raycast的优势",
-        "level": 3
-      },
-      {
-        "heading": "自带功能迁移列表",
-        "level": 2
-      },
-      {
-        "heading": "插件功能迁移",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "raycast"
-      },
-      {
-        "link": "Utools"
-      },
-      {
-        "link": "HapiGo"
-      },
-      {
-        "link": "LaunchBar"
-      },
-      {
-        "link": "keyboard maestro"
-      },
-      {
-        "link": "chrome-omni插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "豆瓣"
-      },
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T02_52_57.428Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md",
-    "tags": [
-      "todo"
-    ],
-    "headings": [
-      {
-        "heading": "为什么要迁移",
-        "level": 2
-      },
-      {
-        "heading": "alfred的问题",
-        "level": 3
-      },
-      {
-        "heading": "raycast的优势",
-        "level": 3
-      },
-      {
-        "heading": "自带功能迁移列表",
-        "level": 2
-      },
-      {
-        "heading": "插件功能迁移",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "raycast"
-      },
-      {
-        "link": "Utools"
-      },
-      {
-        "link": "HapiGo"
-      },
-      {
-        "link": "LaunchBar"
-      },
-      {
-        "link": "keyboard maestro"
-      },
-      {
-        "link": "chrome-omni插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "豆瓣"
-      },
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-30T02_52_55.021Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md",
-    "tags": [
-      "todo"
-    ],
-    "headings": [
-      {
-        "heading": "为什么要迁移",
-        "level": 2
-      },
-      {
-        "heading": "alfred的问题",
-        "level": 3
-      },
-      {
-        "heading": "raycast的优势",
-        "level": 3
-      },
-      {
-        "heading": "自带功能迁移列表",
-        "level": 2
-      },
-      {
-        "heading": "插件功能迁移",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "raycast"
-      },
-      {
-        "link": "Utools"
-      },
-      {
-        "link": "HapiGo"
-      },
-      {
-        "link": "LaunchBar"
-      },
-      {
-        "link": "keyboard maestro"
-      },
-      {
-        "link": "chrome-omni插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "豆瓣"
-      },
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_31.997Z",
-    "relativePath": "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md",
-    "tags": [
-      "评论/少数派",
-      "对话/微信"
-    ],
-    "headings": [
-      {
-        "heading": "2022-05-01",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-02",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-03",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-04",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-05",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-06",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-09",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-10",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-11",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-12",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-13",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-18",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-05-17",
-        "level": 1
-      },
-      {
-        "heading": "今天的工作日志",
-        "level": 2
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "认知协调"
-      },
-      {
-        "link": "无知之幕"
-      },
-      {
-        "link": "写小说的一些思路",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/写小说的一些思路.md"
-      },
-      {
-        "link": "有用的github开源库搜集",
-        "relativePath": "pages/300 - AREA/计算机科学/有用的github开源库搜集.md"
-      },
-      {
-        "link": "授人以鱼不如授人以渔",
-        "relativePath": "pages/400 - RESOURCE/人文社科通识/哲学/授人以鱼不如授人以渔.md"
-      },
-      {
-        "link": "和经典名言抬杠 - MOC",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/和经典名言抬杠 - MOC.md"
-      },
-      {
-        "link": "各类文化产品的生产消费时间比",
-        "relativePath": "pages/400 - RESOURCE/人文社科通识/哲学/各类文化产品的生产消费时间比.md"
-      },
-      {
-        "link": "各种新潮的app体验",
-        "relativePath": "pages/300 - AREA/人+科技融合/各种新潮的app体验.md"
-      },
-      {
-        "link": "powershell",
-        "relativePath": "pages/300 - AREA/计算机科学/powershell.md"
-      },
-      {
-        "link": "槟榔",
-        "relativePath": "pages/300 - AREA/运动与健康/槟榔.md"
-      },
-      {
-        "link": "logseq",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
-      },
-      {
-        "link": "linux常用命令行 - MOC"
-      },
-      {
-        "link": "mac使用技巧",
-        "relativePath": "pages/300 - AREA/知识管理/mac使用技巧.md"
-      },
-      {
-        "link": "哪些中文用英文解释反而更清晰明了",
-        "relativePath": "pages/300 - AREA/知识管理/哪些中文用英文解释反而更清晰明了.md"
-      },
-      {
-        "link": "web3"
-      },
-      {
-        "link": "元宇宙"
-      },
-      {
-        "link": "族繁不及备载",
-        "relativePath": "pages/300 - AREA/知识管理/族繁不及备载.md"
-      },
-      {
-        "link": "瓜田李下",
-        "relativePath": "pages/300 - AREA/知识管理/瓜田李下.md"
-      },
-      {
-        "link": "互联网时代的输出与创作",
-        "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md"
-      },
-      {
-        "link": "无源之水，无根之木"
-      },
-      {
-        "link": "消费主义"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "降维打击",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/单词库&概念库/降维打击.md"
-      },
-      {
-        "link": "相亲是否应该AA制",
-        "relativePath": "pages/300 - AREA/知识管理/相亲是否应该AA制.md"
-      },
-      {
-        "link": "视频制作",
-        "relativePath": "pages/300 - AREA/人+科技融合/视频制作.md"
-      },
-      {
-        "link": "互联网时代的输出与创作",
-        "relativePath": "pages/300 - AREA/知识管理/互联网时代的输出与创作.md"
-      },
-      {
-        "link": "犯罪地点地图"
-      },
-      {
-        "link": "朋友的分类与分级",
-        "relativePath": "pages/400 - RESOURCE/朋友的分类与分级.md"
-      },
-      {
-        "link": "第一性原理",
-        "relativePath": "pages/400 - RESOURCE/第一性原理.md"
-      },
-      {
-        "link": "《异物志》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《异物志》.md"
-      },
-      {
-        "link": "《风起陇西》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《风起陇西》.md"
-      },
-      {
-        "link": "《且试天下》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《且试天下》.md"
-      },
-      {
-        "link": "《重生之门》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《重生之门》.md"
-      },
-      {
-        "link": "《喜鹊谋杀案》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/《喜鹊谋杀案》.md"
-      },
-      {
-        "link": "金线",
-        "relativePath": "pages/400 - RESOURCE/金线.md"
-      },
-      {
-        "link": "为内容付费",
-        "relativePath": "pages/000 - INBOX/为内容付费.md"
-      },
-      {
-        "link": "如何真正实现global的proxy代理",
-        "relativePath": "pages/300 - AREA/如何真正实现global的proxy代理.md"
-      },
-      {
-        "link": "云管端"
-      },
-      {
-        "link": "text expand",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/text expand.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
-      },
-      {
-        "link": "hook"
-      },
-      {
-        "link": "在网上提问的智慧",
-        "relativePath": "pages/300 - AREA/人+科技融合/在网上提问的智慧.md"
-      },
-      {
-        "link": "如何高效开会",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-      },
-      {
-        "link": "项目owner机制",
-        "relativePath": "pages/200 - PROJECT/软件项目管理/项目owner机制.md"
-      },
-      {
-        "link": "管理者喜欢内卷的员工吗",
-        "relativePath": "pages/200 - PROJECT/个人职业生涯/管理者喜欢内卷的员工吗.md"
-      },
-      {
-        "link": "做为甲方，如何管理外包项目"
-      },
-      {
-        "link": "项目管理与法律",
-        "relativePath": "pages/200 - PROJECT/软件项目管理/项目管理与法律.md"
-      },
-      {
-        "link": "mac系统重装",
-        "relativePath": "pages/300 - AREA/mac系统重装.md"
-      },
-      {
-        "link": "思源笔记",
-        "relativePath": "pages/300 - AREA/思源笔记.md"
-      },
-      {
-        "link": "白噪音",
-        "relativePath": "pages/300 - AREA/白噪音.md"
-      },
-      {
-        "link": "先鉴定你的做笔记风格，再选一款app上车",
-        "relativePath": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
-      },
-      {
-        "link": "卧底间谍用摩斯码是真的吗",
-        "relativePath": "pages/400 - RESOURCE/卧底间谍用摩斯码是真的吗.md"
-      },
-      {
-        "link": "PWA - Progressive Web Apps",
-        "relativePath": "pages/300 - AREA/PWA - Progressive Web Apps.md"
-      },
-      {
-        "link": "果盘先生",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/果盘先生.md"
-      },
-      {
-        "link": "老六",
-        "relativePath": "pages/000 - INBOX/老六.md"
-      },
-      {
-        "link": "嫦娥",
-        "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记/嫦娥.md"
-      },
-      {
-        "link": "有闲阶级",
-        "relativePath": "pages/400 - RESOURCE/有闲阶级.md"
-      },
-      {
-        "link": "喝酒文化",
-        "relativePath": "pages/300 - AREA/喝酒文化.md"
-      },
-      {
-        "link": "穷人和富人的保险",
-        "relativePath": "pages/000 - INBOX/穷人和富人的保险.md"
-      },
-      {
-        "link": "context 切换",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/context 切换.md"
-      },
-      {
-        "link": "上下文",
-        "relativePath": "pages/000 - INBOX/上下文.md"
-      },
-      {
-        "link": "行政",
-        "relativePath": "pages/400 - RESOURCE/行政.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_31.996Z",
-    "relativePath": "logseq/bak/journals/每月每季度总结/2022-三月/2022-05-29T13_28_31.996Z.md",
-    "headings": [
-      {
-        "heading": "2022-03-11",
-        "level": 1
-      },
-      {
-        "heading": "2022-03-12",
-        "level": 1
-      },
-      {
-        "heading": "灵感/闪念随时记录",
-        "level": 2
-      },
-      {
-        "heading": "工作日志",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-13",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-14",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-15",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-16",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-17",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-19",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-21",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-23",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-24",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-25",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-26",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-27",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-28",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-29",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-30",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      },
-      {
-        "heading": "2022-03-31",
-        "level": 1
-      },
-      {
-        "heading": "今天的灵感或闪念",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "双链笔记与概念挖坑",
-        "relativePath": "pages/000 - INBOX/双链笔记与概念挖坑.md"
-      },
-      {
-        "link": "@卢曼"
-      },
-      {
-        "link": "@费曼"
-      },
-      {
-        "link": "文件夹和标签",
-        "relativePath": "pages/000 - INBOX/文件夹和标签.md"
-      },
-      {
-        "link": "个人知识管理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "flomo",
-        "relativePath": "pages/300 - AREA/flomo.md"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "笔记软件的选择",
-        "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "文件夹和标签",
-        "relativePath": "pages/000 - INBOX/文件夹和标签.md"
-      },
-      {
-        "link": "刚下飞机",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/刚下飞机.md"
-      },
-      {
-        "link": "金句 - MOC",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/金句库/金句 - MOC.md"
-      },
-      {
-        "link": "不看新闻",
-        "relativePath": "pages/000 - INBOX/不看新闻.md"
-      },
-      {
-        "link": "个人简历 - MOC"
-      },
-      {
-        "link": "URL scheme",
-        "relativePath": "pages/000 - INBOX/URL scheme.md"
-      },
-      {
-        "link": "权力寻租",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/单词库&概念库/权力寻租.md"
-      },
-      {
-        "link": "全球金融市场与互联网公司",
-        "relativePath": "pages/000 - INBOX/全球金融市场与互联网公司.md"
-      },
-      {
-        "link": "视频笔记-【罗翔】我们为什么要读书？",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
-      },
-      {
-        "link": "视频笔记- 9年咨询的storytelling新的",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md"
-      },
-      {
-        "link": "金句 - MOC",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/金句库/金句 - MOC.md"
-      },
-      {
-        "link": "闪念笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "link": "番茄工作法",
-        "relativePath": "pages/300 - AREA/知识管理/番茄工作法.md"
-      },
-      {
-        "link": "杂念随思随想",
-        "relativePath": "pages/000 - INBOX/杂念随思随想.md"
-      },
-      {
-        "link": "考研备考经验",
-        "relativePath": "pages/000 - INBOX/考研备考经验.md"
-      },
-      {
-        "link": "如果要给人安利好书",
-        "relativePath": "pages/000 - INBOX/如果要给人安利好书.md"
-      },
-      {
-        "link": "终身学习",
-        "relativePath": "pages/000 - INBOX/终身学习.md"
-      },
-      {
-        "link": "线性增长与指数增长",
-        "relativePath": "pages/000 - INBOX/线性增长与指数增长.md"
-      },
-      {
-        "link": "新时代如何开始学习一门新知识",
-        "relativePath": "pages/000 - INBOX/新时代如何开始学习一门新知识.md"
-      },
-      {
-        "link": "收藏者谬误",
-        "relativePath": "pages/400 - RESOURCE/人文社科通识/心理学/收藏者谬误.md"
-      },
-      {
-        "link": "《刻意练习》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-      },
-      {
-        "link": "集装箱",
-        "relativePath": "pages/000 - INBOX/集装箱.md"
-      },
-      {
-        "link": "bilibili",
-        "displayText": "b站",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/bilibili.md"
-      },
-      {
-        "link": "创业",
-        "relativePath": "pages/000 - INBOX/创业.md"
-      },
-      {
-        "link": "笔记软件的选择",
-        "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
-      },
-      {
-        "link": "简悦"
-      },
-      {
-        "link": "cubox"
-      },
-      {
-        "link": "tp-link"
-      },
-      {
-        "link": "石墨文档"
-      },
-      {
-        "link": "闪念笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSS.md"
-      },
-      {
-        "link": "RSSHub",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/RSSHub.md"
-      },
-      {
-        "link": "tiny tiny RSS",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/tiny tiny RSS.md"
-      },
-      {
-        "link": "个人高效学习系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-      },
-      {
-        "link": "写一本小说",
-        "relativePath": "pages/000 - INBOX/写一本小说.md"
-      },
-      {
-        "link": "卡片盒笔记法 - Zettelkasten",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-      },
-      {
-        "link": "计划和回顾"
-      },
-      {
-        "link": "隐私保护",
-        "relativePath": "pages/000 - INBOX/隐私保护.md"
-      },
-      {
-        "link": "flomo",
-        "relativePath": "pages/300 - AREA/flomo.md"
-      },
-      {
-        "link": "巨额负债翻身的例子",
-        "relativePath": "pages/000 - INBOX/巨额负债翻身的例子.md"
-      },
-      {
-        "link": "飞书文档",
-        "relativePath": "pages/000 - INBOX/飞书文档.md"
-      },
-      {
-        "link": "论执行力的重要性",
-        "relativePath": "pages/000 - INBOX/论执行力的重要性.md"
-      },
-      {
-        "link": "Notion 优质资源汇总",
-        "relativePath": "pages/000 - INBOX/Notion 优质资源汇总.md"
-      },
-      {
-        "link": "我们不需要被教导，我们只需要被提醒",
-        "relativePath": "pages/400 - RESOURCE/原子知识库/金句库/我们不需要被教导，我们只需要被提醒.md"
-      },
-      {
-        "link": "论学历的重要性",
-        "relativePath": "pages/000 - INBOX/论学历的重要性.md"
-      },
-      {
-        "link": "思维导图",
-        "relativePath": "pages/300 - AREA/思维导图.md"
-      },
-      {
-        "link": "笔记软件的选择",
-        "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
-      }
-    ]
-  },
-  {
-    "fileName": "2022-05-29T13_28_21.384Z",
-    "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md",
-    "headings": [
-      {
-        "heading": "是什么",
-        "level": 2
-      },
-      {
-        "heading": "为什么",
-        "level": 2
-      },
-      {
-        "heading": "快速开始",
-        "level": 2
-      },
-      {
-        "heading": "本库涉及app及作用",
-        "level": 2
-      },
-      {
-        "heading": "周边app的联动与配合",
-        "level": 2
-      },
-      {
-        "heading": "找我从诗词歌赋，谈到人生哲学",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "第二大脑",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-      },
-      {
-        "link": "数字花园",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "内容、工具与方法论"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-      },
-      {
-        "link": "《卡片笔记写作法》",
-        "displayText": "卡片笔记",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "logseq",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "《卡片笔记写作法》",
-        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
-      },
-      {
-        "link": "个人知识管理",
-        "displayText": "PKM(personal knowledge management)",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "第二大脑",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-      },
-      {
-        "link": "平台+插件",
-        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
-      },
-      {
-        "link": "obsidian插件",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-      },
-      {
-        "link": "logseq",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "永久笔记",
-        "relativePath": "pages/300 - AREA/永久笔记.md"
-      },
-      {
-        "link": "项目笔记"
-      },
-      {
-        "link": "remotely save"
-      },
-      {
-        "link": "onedrive"
-      },
-      {
-        "link": "logseq",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/logseq.md"
-      },
-      {
-        "link": "闪念笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-      },
-      {
-        "link": "github",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-      },
-      {
-        "link": "github action"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      },
-      {
-        "link": "个人知识管理",
-        "displayText": "PKM",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-      },
-      {
-        "link": "数字时代如何更好地工作与生活 - MOC",
-        "displayText": "工作和生活的效率体系建设",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-      },
-      {
-        "link": "个人信息管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-      },
-      {
-        "link": "devonthink",
-        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
-      },
-      {
-        "link": "个人任务管理系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
-      },
-      {
-        "link": "滴答清单",
-        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
-      },
-      {
-        "link": "个人知识笔记系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-      },
-      {
-        "link": "obsidian",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-      },
-      {
-        "link": "个人输出发布系统",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
-      },
-      {
-        "link": "notion",
-        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-      },
-      {
-        "link": "效率系统4大子系统联动与配合",
-        "relativePath": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
-      },
-      {
-        "link": "双链笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+    "fileName": "任务清单的得与失",
+    "relativePath": "journals/任务清单的得与失.md",
+    "backlinks": [
+      {
+        "fileName": "2022-05-30",
+        "link": "任务清单的得与失",
+        "relativePath": "journals/2022-05-30.md"
       }
     ]
   },
@@ -22486,6 +18252,12 @@
       {
         "heading": "今天的灵感或闪念",
         "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "任务清单的得与失",
+        "relativePath": "journals/任务清单的得与失.md"
       }
     ]
   },
@@ -23228,8 +19000,8 @@
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
       },
       {
-        "link": "外部资源的单向链接汇总",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+        "link": "EXTERNAL",
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
         "link": "hook"
@@ -23320,9 +19092,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "外部资源的单向链接汇总",
+        "fileName": "EXTERNAL",
         "link": "2022-五月",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+        "relativePath": "pages/EXTERNAL.md"
       }
     ]
   },
@@ -24234,9 +20006,9 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
       },
       {
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "displayText": "工作和生活的效率体系建设",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "link": "个人信息管理系统",
@@ -24281,9 +20053,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "外部资源的单向链接汇总",
+        "fileName": "EXTERNAL",
         "link": "README",
-        "relativePath": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
+        "relativePath": "pages/EXTERNAL.md"
       },
       {
         "fileName": "CONTENTS",
@@ -24307,9 +20079,9 @@
         "link": "双链笔记与卡片笔记"
       },
       {
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "displayText": "工作和生活的效率体系建设",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "link": "个人信息管理系统",
@@ -24366,8 +20138,8 @@
         "relativePath": "pages/000 - INBOX/MOC.md"
       },
       {
-        "link": "PARA和MOC法联用组织笔记",
-        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+        "link": "PARA和MOC联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       },
       {
         "link": "PROJECT - 项目"
@@ -24419,9 +20191,9 @@
         "relativePath": "pages/300 - AREA/沟通与表达/沟通与表达.md"
       },
       {
-        "link": "数字时代如何更好地工作与生活 - MOC",
+        "link": "数字时代如何更好地工作与生活",
         "displayText": "人+科技融合",
-        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "link": "运动与健康",
@@ -24468,24 +20240,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "INDEX",
+        "fileName": "PARA和MOC联用组织笔记",
         "link": "CONTENTS",
-        "relativePath": "pages/INDEX.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_16.651Z",
-        "link": "CONTENTS",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_07.628Z",
-        "link": "CONTENTS",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
-      },
-      {
-        "fileName": "2022-05-30T04_18_03.955Z",
-        "link": "CONTENTS",
-        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
       }
     ]
   }

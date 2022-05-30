@@ -100,9 +100,6 @@
  {:block/name "@费曼",
   :block/created-at 1653395642536,
   :block/updated-at 1653395642536}
- {:block/name "[excalidraw]",
-  :block/created-at 1653835161765,
-  :block/updated-at 1653835161765}
  {:block/name "a",
   :block/created-at 1641967503322,
   :block/updated-at 1641967503322}
@@ -355,12 +352,6 @@
  {:block/name "draw.io",
   :block/created-at 1650819310754,
   :block/updated-at 1650819310754}
- {:block/name "dv'h",
-  :block/created-at 1653883010263,
-  :block/updated-at 1653883010263}
- {:block/name "dv'h/微信",
-  :block/created-at 1653883010262,
-  :block/updated-at 1653883010262}
  {:block/name "edge",
   :block/created-at 1650819310058,
   :block/updated-at 1650819310058}
@@ -370,9 +361,6 @@
  {:block/name "everything",
   :block/created-at 1650819301702,
   :block/updated-at 1650819301702}
- {:block/name "excalibrain",
-  :block/created-at 1653835155408,
-  :block/updated-at 1653835155408}
  {:block/name "excalidraw",
   :block/created-at 1650819299552,
   :block/updated-at 1650819299552}
@@ -493,9 +481,6 @@
  {:block/name "index",
   :block/created-at 1652905498823,
   :block/updated-at 1652905498823}
- {:block/name "index - moc",
-  :block/created-at 1653830939768,
-  :block/updated-at 1653830939768}
  {:block/name "inoreader",
   :block/created-at 1650819307148,
   :block/updated-at 1650819307148}
@@ -538,15 +523,6 @@
  {:block/name "keyboard maestro",
   :block/created-at 1650819306995,
   :block/updated-at 1650819306995}
- {:block/name "keyboard mast",
-  :block/created-at 1653878894434,
-  :block/updated-at 1653878894434}
- {:block/name "keyboard mastro",
-  :block/created-at 1653878888497,
-  :block/updated-at 1653878888497}
- {:block/name "keyboard mastro ",
-  :block/created-at 1653878881364,
-  :block/updated-at 1653878881364}
  {:block/name "keycastr",
   :block/created-at 1650819303267,
   :block/updated-at 1650819303267}
@@ -697,9 +673,6 @@
  {:block/name "moc todo",
   :block/created-at 1650819276269,
   :block/updated-at 1650819276269}
- {:block/name "moc todo/今天",
-  :block/created-at 1653880346083,
-  :block/updated-at 1653880346083}
  {:block/name "moc todo/持续迭代",
   :block/created-at 1650819317742,
   :block/updated-at 1650819317742}
@@ -811,12 +784,6 @@
  {:block/name "okr",
   :block/created-at 1650818061466,
   :block/updated-at 1650818061466}
- {:block/name "omini",
-  :block/created-at 1653878934294,
-  :block/updated-at 1653878934294}
- {:block/name "omni",
-  :block/created-at 1653878938874,
-  :block/updated-at 1653878938874}
  {:block/name "one switch",
   :block/created-at 1650819301625,
   :block/updated-at 1650819301625}
@@ -850,18 +817,9 @@
  {:block/name "pages/300 - area/人+科技融合",
   :block/created-at 1651863115080,
   :block/updated-at 1651863115080}
- {:block/name "pages/300 - area/人+科技融合/b站的用户画像.md",
-  :block/created-at 1653835155393,
-  :block/updated-at 1653835155393}
  {:block/name "pages/300 - area/人+科技融合/obs",
   :block/created-at 1651863115077,
   :block/updated-at 1651863115077}
- {:block/name "pages/300 - area/人+科技融合/可话.md",
-  :block/created-at 1653835155387,
-  :block/updated-at 1653835155387}
- {:block/name "pages/300 - area/人+科技融合/各类app的用户画像.md",
-  :block/created-at 1653835155391,
-  :block/updated-at 1653835155391}
  {:block/name "pages/300 - area/知识管理",
   :block/created-at 1651863119666,
   :block/updated-at 1651863119666}
@@ -884,30 +842,6 @@
  {:block/name "pasted image 20220317004053.png",
   :block/created-at 1650819295347,
   :block/updated-at 1650819295347}
- {:block/name "pasted image 20220320190802_762.png",
-  :block/created-at 1653835161684,
-  :block/updated-at 1653835161684}
- {:block/name "pasted image 20220320190917_764.png",
-  :block/created-at 1653835161671,
-  :block/updated-at 1653835161671}
- {:block/name "pasted image 20220320191102_767.png",
-  :block/created-at 1653835161669,
-  :block/updated-at 1653835161669}
- {:block/name "pasted image 20220320191818_566.png",
-  :block/created-at 1653835161668,
-  :block/updated-at 1653835161668}
- {:block/name "pasted image 20220320202815_760.png",
-  :block/created-at 1653835161667,
-  :block/updated-at 1653835161667}
- {:block/name "pasted image 20220320202845_759.png",
-  :block/created-at 1653835161666,
-  :block/updated-at 1653835161666}
- {:block/name "pasted image 20220320203031_118.png",
-  :block/created-at 1653835161665,
-  :block/updated-at 1653835161665}
- {:block/name "pasted image 20220320203200_352.png",
-  :block/created-at 1653835161663,
-  :block/updated-at 1653835161663}
  {:block/name "pasted image 20220428150722.png",
   :block/created-at 1651208168473,
   :block/updated-at 1651208168473}
@@ -1508,9 +1442,6 @@
  {:block/name "个人输出发布系统",
   :block/created-at 1652390704452,
   :block/updated-at 1652390704452}
- {:block/name "个人输出发布系统|输出系统",
-  :block/created-at 1653835161658,
-  :block/updated-at 1653835161658}
  {:block/name "个人高效学习系统",
   :block/created-at 1650819287273,
   :block/updated-at 1650819287273}
@@ -1826,15 +1757,6 @@
  {:block/name "功利主义阅读法",
   :block/created-at 1650819316740,
   :block/updated-at 1650819316740}
- {:block/name "动态",
-  :block/created-at 1651863105182,
-  :block/updated-at 1651863105182}
- {:block/name "动态/b站",
-  :block/created-at 1651863105187,
-  :block/updated-at 1651863105187}
- {:block/name "动态/v2ex",
-  :block/created-at 1653395640937,
-  :block/updated-at 1653395640937}
  {:block/name "华为云",
   :block/created-at 1650819298214,
   :block/updated-at 1650819298214}
@@ -3227,9 +3149,6 @@
  {:block/name "评论/少数派",
   :block/created-at 1653830953240,
   :block/updated-at 1653830953240}
- {:block/name "评论/微信",
-  :block/created-at 1652390700364,
-  :block/updated-at 1652390700364}
  {:block/name "诚意测试",
   :block/created-at 1652905494793,
   :block/updated-at 1652905494793}

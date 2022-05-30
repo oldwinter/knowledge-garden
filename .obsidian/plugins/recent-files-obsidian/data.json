@@ -1,24 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "INDEX",
-      "path": "pages/INDEX.md"
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
     },
     {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
+      "basename": "2022-05-30",
+      "path": "journals/2022-05-30.md"
+    },
+    {
+      "basename": "任务清单的得与失",
+      "path": "journals/任务清单的得与失.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
     },
     {
       "basename": "KANBAN",
       "path": "pages/KANBAN.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "PARA和MOC联用组织笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
     },
     {
       "basename": "CONTENTS",
       "path": "CONTENTS.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活",
+      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
+    },
+    {
+      "basename": "个人职业生涯",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md"
     },
     {
       "basename": "BRAT-log",
@@ -47,10 +71,6 @@
     {
       "basename": "2022-05-29",
       "path": "journals/2022-05-29.md"
-    },
-    {
-      "basename": "2022-05-30",
-      "path": "journals/2022-05-30.md"
     },
     {
       "basename": "2022-05-28",
@@ -109,10 +129,6 @@
       "path": "pages/300 - AREA/人+科技融合/ohmyzsh.md"
     },
     {
-      "basename": "数字时代如何更好地工作与生活 - MOC",
-      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-    },
-    {
       "basename": "模板与套路",
       "path": "pages/000 - INBOX/模板与套路.md"
     },
@@ -165,10 +181,6 @@
       "path": "pages/400 - RESOURCE/原子知识库/知识原子库.md"
     },
     {
-      "basename": "个人职业生涯",
-      "path": "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md"
-    },
-    {
       "basename": "MOC",
       "path": "pages/000 - INBOX/MOC.md"
     },
@@ -179,26 +191,6 @@
     {
       "basename": "已发布文章",
       "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
-    },
-    {
-      "basename": "外部资源的单向链接汇总",
-      "path": "pages/500 - ARCHIVE/外部资源的单向链接汇总.md"
-    },
-    {
-      "basename": "小知识点",
-      "path": "pages/400 - RESOURCE/小知识点/小知识点.md"
-    },
-    {
-      "basename": "学习目标的分级",
-      "path": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
-    },
-    {
-      "basename": "人文社科通识",
-      "path": "pages/400 - RESOURCE/人文社科通识/人文社科通识.md"
-    },
-    {
-      "basename": "书影音",
-      "path": "pages/400 - RESOURCE/书影音笔记/书影音.md"
     }
   ],
   "omittedPaths": [],

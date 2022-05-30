@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "📕",
-      "FabWeixin",
-      "📍",
-      "FasNotesMedical",
-      "🎵",
-      "🖥️",
-      "📖",
-      "📹",
+      "FabDev",
+      "⏩",
       "Fab42Group",
-      "⏩"
+      "📹",
+      "📖",
+      "🖥️",
+      "🎵",
+      "FasNotesMedical",
+      "📍",
+      "FabWeixin"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -50,7 +50,6 @@
   "pages/400 - RESOURCE/书影音笔记/微信读书同步": "FabWeixin",
   "pages/000 - INBOX": "📇",
   "pages/LATEST.md": "FabApple",
-  "pages/INDEX.md": "FabDiscord",
   "pages/KANBAN.md": "FabDocker",
   "pages/200 - PROJECT/云计算与云原生": "☁️",
   "pages/200 - PROJECT/软件项目管理": "⚒",
@@ -74,5 +73,6 @@
   "pages/400 - RESOURCE/原子知识库/思维工具库": "🧠",
   "pages/400 - RESOURCE/原子知识库/方法库": "⏹",
   "pages/400 - RESOURCE/原子知识库/金句库": "💛",
-  "pages/200 - PROJECT/我的小说": "📕"
+  "pages/200 - PROJECT/我的小说": "📕",
+  "pages/EXTERNAL.md": "FabDev"
 }
