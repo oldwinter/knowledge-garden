@@ -1,19 +1,5 @@
 [
   {
-    "fileName": "BRAT-log",
-    "relativePath": "BRAT-log.md",
-    "links": [
-      {
-        "link": "2022-05-29",
-        "relativePath": "journals/2022-05-29.md"
-      },
-      {
-        "link": "2022-05-29",
-        "relativePath": "journals/2022-05-29.md"
-      }
-    ]
-  },
-  {
     "fileName": "视频笔记模板",
     "relativePath": "templates/视频笔记模板.md",
     "headings": [
@@ -214,7 +200,7 @@
         "level": 2
       },
       {
-        "heading": "滴答清单的资源引用",
+        "heading": "cubox的资源引用",
         "level": 2
       },
       {
@@ -234,6 +220,14 @@
       {
         "link": "如何高效开会",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
+      },
+      {
+        "link": "内网穿透",
+        "relativePath": "pages/000 - INBOX/内网穿透.md"
+      },
+      {
+        "link": "数字时代如何更好地工作与生活",
+        "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
         "link": "个人工作流",
@@ -1023,6 +1017,22 @@
     ]
   },
   {
+    "fileName": "天谕手游",
+    "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记/天谕手游.md",
+    "links": [
+      {
+        "link": "MMORPG"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "一些学起来挺有意思的小知识点 - MOC",
+        "link": "天谕手游",
+        "relativePath": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
+      }
+    ]
+  },
+  {
     "fileName": "王者荣耀",
     "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md",
     "links": [
@@ -1240,22 +1250,6 @@
     ]
   },
   {
-    "fileName": "天谕手游",
-    "relativePath": "pages/400 - RESOURCE/小知识点/天谕手游.md",
-    "links": [
-      {
-        "link": "MMORPG"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "一些学起来挺有意思的小知识点 - MOC",
-        "link": "天谕手游",
-        "relativePath": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
-      }
-    ]
-  },
-  {
     "fileName": "五子棋必胜法",
     "relativePath": "pages/400 - RESOURCE/小知识点/五子棋必胜法.md",
     "headings": [
@@ -1390,7 +1384,7 @@
       },
       {
         "link": "天谕手游",
-        "relativePath": "pages/400 - RESOURCE/小知识点/天谕手游.md"
+        "relativePath": "pages/400 - RESOURCE/小知识点/游戏笔记/天谕手游.md"
       },
       {
         "link": "地狱边境 limbo"
@@ -1425,6 +1419,11 @@
         "fileName": "个人简历",
         "link": "杭州",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "杭州",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -1555,6 +1554,11 @@
         "fileName": "2022-三月",
         "link": "金句 - MOC",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "金句 - MOC",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -1850,6 +1854,13 @@
       {
         "link": "MBTI性格分析",
         "relativePath": "pages/400 - RESOURCE/原子知识库/方法库/MBTI性格分析.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "方法库 - MOC",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -2184,7 +2195,14 @@
           "offset": 17
         }
       }
-    }
+    },
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "思维工具 - MOC",
+        "relativePath": "CONTENTS.md"
+      }
+    ]
   },
   {
     "fileName": "个人努力与社会进程",
@@ -3245,7 +3263,8 @@
     "fileName": "人文社科通识",
     "relativePath": "pages/400 - RESOURCE/人文社科通识/人文社科通识.md",
     "tags": [
-      "moc"
+      "moc",
+      "todo"
     ],
     "frontmatter": {
       "position": {
@@ -3418,6 +3437,13 @@
       {
         "link": "《史蒂夫·乔布斯传》",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/《史蒂夫·乔布斯传》.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "读书笔记 - MOC",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -5315,6 +5341,13 @@
         "link": "视频笔记-【罗翔】我们为什么要读书？",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
       }
+    ],
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "视频笔记 - MOC",
+        "relativePath": "CONTENTS.md"
+      }
     ]
   },
   {
@@ -5554,6 +5587,13 @@
       {
         "link": "《这个杀手不太冷》",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记/《这个杀手不太冷》.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "电影笔记 - MOC",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -6735,6 +6775,10 @@
       },
       {
         "heading": "raycast的优势",
+        "level": 3
+      },
+      {
+        "heading": "raycast的劣势及规避方式",
         "level": 3
       },
       {
@@ -8550,6 +8594,11 @@
         "fileName": "README",
         "link": "obsidian插件",
         "relativePath": "README.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "obsidian插件",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -10000,6 +10049,11 @@
         "fileName": "README",
         "link": "notion",
         "relativePath": "README.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "notion",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -10095,7 +10149,8 @@
       {
         "fileName": "CONTENTS",
         "link": "沟通与表达",
-        "relativePath": "CONTENTS.md"
+        "relativePath": "CONTENTS.md",
+        "displayText": "好好说话"
       }
     ]
   },
@@ -10469,6 +10524,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "EXTERNAL",
+        "link": "数字时代如何更好地工作与生活",
+        "relativePath": "pages/EXTERNAL.md"
+      },
+      {
         "fileName": "个人知识管理",
         "link": "数字时代如何更好地工作与生活",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
@@ -10703,6 +10763,100 @@
     ]
   },
   {
+    "fileName": "个人必用软件梳理",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/个人必用软件梳理.md",
+    "tags": [
+      "todo/持续迭代"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 34
+        }
+      }
+    },
+    "backlinks": [
+      {
+        "fileName": "效率的定义和原则",
+        "link": "个人必用软件梳理",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+      }
+    ]
+  },
+  {
+    "fileName": "必备软件",
+    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "aliases": null,
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 28
+        }
+      }
+    },
+    "headings": [
+      {
+        "heading": "全平台 + 云同步",
+        "level": 2
+      },
+      {
+        "heading": "Mac 独有",
+        "level": 2
+      },
+      {
+        "heading": "Win 独有",
+        "level": 2
+      },
+      {
+        "heading": "安卓独有",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "搜狗输入法",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md"
+      },
+      {
+        "link": "mac必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
+      },
+      {
+        "link": "windows必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md"
+      },
+      {
+        "link": "安卓手机必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "CONTENTS",
+        "link": "必备软件",
+        "relativePath": "CONTENTS.md"
+      }
+    ]
+  },
+  {
     "fileName": "油猴脚本必装脚本",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/油猴脚本必装脚本.md",
     "backlinks": [
@@ -10782,64 +10936,6 @@
     ]
   },
   {
-    "fileName": "必备软件 - MOC",
-    "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md",
-    "tags": [
-      "moc"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 28
-        }
-      }
-    },
-    "headings": [
-      {
-        "heading": "全平台 + 云同步",
-        "level": 2
-      },
-      {
-        "heading": "Mac 独有",
-        "level": 2
-      },
-      {
-        "heading": "Win 独有",
-        "level": 2
-      },
-      {
-        "heading": "安卓独有",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/搜狗输入法.md"
-      },
-      {
-        "link": "mac必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/mac必备软件.md"
-      },
-      {
-        "link": "windows必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md"
-      },
-      {
-        "link": "安卓手机必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
-      }
-    ]
-  },
-  {
     "fileName": "安卓手机必备软件",
     "relativePath": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md",
     "links": [
@@ -10913,9 +11009,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "必备软件 - MOC",
+        "fileName": "必备软件",
         "link": "安卓手机必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
       }
     ]
   },
@@ -11056,9 +11152,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "必备软件 - MOC",
+        "fileName": "必备软件",
         "link": "windows必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
       }
     ]
   },
@@ -11277,6 +11373,11 @@
         "fileName": "README",
         "link": "obsidian",
         "relativePath": "README.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "obsidian",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -11565,9 +11666,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "必备软件 - MOC",
+        "fileName": "必备软件",
         "link": "mac必备软件",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
       },
       {
         "fileName": "mac系统重装",
@@ -12705,7 +12806,7 @@
       },
       {
         "link": "个人必用软件梳理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/个人必用软件梳理.md"
       },
       {
         "link": "个人搜索系统",
@@ -12809,9 +12910,9 @@
     ],
     "backlinks": [
       {
-        "fileName": "必备软件 - MOC",
+        "fileName": "必备软件",
         "link": "搜狗输入法",
-        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件 - MOC.md"
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
       },
       {
         "fileName": "mac必备软件",
@@ -13033,6 +13134,11 @@
         "link": "如何高效录入",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
         "displayText": "个人输入系统"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "如何高效录入",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -13150,6 +13256,11 @@
         "fileName": "2022-三月",
         "link": "个人高效学习系统",
         "relativePath": "journals/每月每季度总结/2022-三月.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "个人高效学习系统",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -13510,35 +13621,11 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md",
         "cleanLink": "个人搜索系统",
         "displayText": "个人搜索系统 > 搜索判断树"
-      }
-    ]
-  },
-  {
-    "fileName": "个人必用软件梳理",
-    "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人必用软件梳理.md",
-    "tags": [
-      "todo/持续迭代"
-    ],
-    "frontmatter": {
-      "aliases": null,
-      "position": {
-        "start": {
-          "line": 0,
-          "col": 0,
-          "offset": 0
-        },
-        "end": {
-          "line": 3,
-          "col": 3,
-          "offset": 34
-        }
-      }
-    },
-    "backlinks": [
+      },
       {
-        "fileName": "效率的定义和原则",
-        "link": "个人必用软件梳理",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+        "fileName": "CONTENTS",
+        "link": "个人搜索系统",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -13613,6 +13700,11 @@
         "fileName": "数字时代如何更好地工作与生活",
         "link": "个人工作流",
         "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "个人工作流",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -15758,6 +15850,11 @@
         "fileName": "效率的定义和原则",
         "link": "云计算与个人",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/效率的定义和原则.md"
+      },
+      {
+        "fileName": "CONTENTS",
+        "link": "云计算与个人",
+        "relativePath": "CONTENTS.md"
       }
     ]
   },
@@ -17757,6 +17854,11 @@
     "relativePath": "pages/000 - INBOX/内网穿透.md",
     "backlinks": [
       {
+        "fileName": "EXTERNAL",
+        "link": "内网穿透",
+        "relativePath": "pages/EXTERNAL.md"
+      },
+      {
         "fileName": "2022-05-24",
         "link": "内网穿透",
         "relativePath": "journals/2022-05-24.md"
@@ -19520,18 +19622,6 @@
         "link": "从Alfred迁移至Raycast",
         "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
       }
-    ],
-    "backlinks": [
-      {
-        "fileName": "BRAT-log",
-        "link": "2022-05-29",
-        "relativePath": "BRAT-log.md"
-      },
-      {
-        "fileName": "BRAT-log",
-        "link": "2022-05-29",
-        "relativePath": "BRAT-log.md"
-      }
     ]
   },
   {
@@ -20076,7 +20166,16 @@
         "link": "第二大脑与数字花园"
       },
       {
+        "link": "阅读、笔记与写作"
+      },
+      {
+        "link": "短文、论文与书籍阅读"
+      },
+      {
         "link": "双链笔记与卡片笔记"
+      },
+      {
+        "link": "非虚构类写作"
       },
       {
         "link": "数字时代如何更好地工作与生活",
@@ -20088,12 +20187,25 @@
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
       },
       {
+        "link": "如何高效录入",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/如何高效录入.md"
+      },
+      {
+        "link": "如何寻找网络资源"
+      },
+      {
         "link": "个人任务管理系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
       },
       {
+        "link": "一元化收集"
+      },
+      {
         "link": "个人知识笔记系统",
         "relativePath": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+      },
+      {
+        "link": "基于markdown的IDE - Obsidian"
       },
       {
         "link": "内容、工具与方法论"
@@ -20109,6 +20221,13 @@
       {
         "link": "效率系统4大子系统联动与配合",
         "relativePath": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
+      },
+      {
+        "link": "个人工作流",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
+      },
+      {
+        "link": "开源、免费与流量"
       },
       {
         "link": "以每日笔记为入口"
@@ -20166,6 +20285,22 @@
         "relativePath": "pages/200 - PROJECT/我的开源项目/我的开源项目.md"
       },
       {
+        "link": "知识笔记库开源"
+      },
+      {
+        "link": "常用命令行工具包"
+      },
+      {
+        "link": "metacloud"
+      },
+      {
+        "link": "raycast插件"
+      },
+      {
+        "link": "obsidian插件",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
+      },
+      {
         "link": "软件项目管理",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理.md"
       },
@@ -20180,6 +20315,13 @@
         "relativePath": "pages/200 - PROJECT/云计算与云原生/云计算与云原生.md"
       },
       {
+        "link": "云计算与个人",
+        "relativePath": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
+      },
+      {
+        "link": "IAAS、PAAS与SAAS"
+      },
+      {
         "link": "AREA - 领域"
       },
       {
@@ -20187,8 +20329,39 @@
         "relativePath": "pages/300 - AREA/计算机科学/计算机科学.md"
       },
       {
+        "link": "计算机基础知识"
+      },
+      {
+        "link": "计算机体系结构"
+      },
+      {
+        "link": "计算机网络"
+      },
+      {
+        "link": "计算机操作系统"
+      },
+      {
+        "link": "数据结构与算法"
+      },
+      {
         "link": "沟通与表达",
+        "displayText": "好好说话",
         "relativePath": "pages/300 - AREA/沟通与表达/沟通与表达.md"
+      },
+      {
+        "link": "沟通 - communicate"
+      },
+      {
+        "link": "说服 - persuade"
+      },
+      {
+        "link": "谈判 - negotiate"
+      },
+      {
+        "link": "演讲 - speech"
+      },
+      {
+        "link": "辩论 - debate"
       },
       {
         "link": "数字时代如何更好地工作与生活",
@@ -20196,16 +20369,66 @@
         "relativePath": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
       },
       {
+        "link": "必备软件",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
+      },
+      {
+        "link": "个人高效学习系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
+      },
+      {
+        "link": "个人搜索系统",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      },
+      {
         "link": "运动与健康",
         "relativePath": "pages/300 - AREA/运动与健康/运动与健康.md"
+      },
+      {
+        "link": "健身"
+      },
+      {
+        "link": "跑步"
+      },
+      {
+        "link": "饮食"
       },
       {
         "link": "知识管理",
         "relativePath": "pages/300 - AREA/知识管理/知识管理.md"
       },
       {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "cubox"
+      },
+      {
         "link": "投资与理财",
         "relativePath": "pages/300 - AREA/投资与理财/投资与理财.md"
+      },
+      {
+        "link": "实业投资"
+      },
+      {
+        "link": "价值投资"
+      },
+      {
+        "link": "区块链与数字货币"
+      },
+      {
+        "link": "股市"
+      },
+      {
+        "link": "合约、配资、期货等金融杠杆"
+      },
+      {
+        "link": "什么值得买"
       },
       {
         "link": "RESOURCE - 资源"
@@ -20215,20 +20438,87 @@
         "relativePath": "pages/400 - RESOURCE/人文社科通识/人文社科通识.md"
       },
       {
+        "link": "法学"
+      },
+      {
+        "link": "金融学"
+      },
+      {
+        "link": "经济学"
+      },
+      {
+        "link": "心理学"
+      },
+      {
+        "link": "哲学"
+      },
+      {
         "link": "书影音",
         "relativePath": "pages/400 - RESOURCE/书影音笔记/书影音.md"
+      },
+      {
+        "link": "电影笔记 - MOC",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/电影笔记/电影笔记 - MOC.md"
+      },
+      {
+        "link": "读书笔记 - MOC",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记 - MOC.md"
+      },
+      {
+        "link": "视频笔记 - MOC",
+        "relativePath": "pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记 - MOC.md"
+      },
+      {
+        "link": "微信读书"
+      },
+      {
+        "link": "电视剧笔记"
       },
       {
         "link": "小知识点",
         "relativePath": "pages/400 - RESOURCE/小知识点/小知识点.md"
       },
       {
+        "link": "游戏笔记"
+      },
+      {
         "link": "知识原子库",
         "relativePath": "pages/400 - RESOURCE/原子知识库/知识原子库.md"
       },
       {
+        "link": "单词库与概念库"
+      },
+      {
+        "link": "方法库 - MOC",
+        "relativePath": "pages/400 - RESOURCE/原子知识库/方法库/方法库 - MOC.md"
+      },
+      {
+        "link": "金句 - MOC",
+        "relativePath": "pages/400 - RESOURCE/原子知识库/金句库/金句 - MOC.md"
+      },
+      {
+        "link": "人物库"
+      },
+      {
+        "link": "思维工具 - MOC",
+        "relativePath": "pages/400 - RESOURCE/原子知识库/思维工具库/思维工具 - MOC.md"
+      },
+      {
+        "link": "习惯库"
+      },
+      {
         "link": "城市与旅行",
         "relativePath": "pages/400 - RESOURCE/城市与旅行/城市与旅行.md"
+      },
+      {
+        "link": "杭州",
+        "relativePath": "pages/400 - RESOURCE/城市与旅行/杭州.md"
+      },
+      {
+        "link": "南京"
+      },
+      {
+        "link": "句容"
       },
       {
         "link": "ARCHIVE - 归档"

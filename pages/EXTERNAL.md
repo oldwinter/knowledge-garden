@@ -24,10 +24,11 @@ x-devonthink-item://
  
 <-->
 
-## 滴答清单的资源引用
+
+## cubox的资源引用
 
 ```expander
-dida365.com/webapp
+cubox://
 ^⬇⬇⬇
 - [[$filename]]
 	$searchresult
@@ -36,6 +37,12 @@ dida365.com/webapp
 ```
  
 ⬇⬇⬇
+- [[内网穿透]]
+	[简单几步实现内网穿透 - 少数派](cubox://card?id=ff80808180d09c820180d7319f8107db)
+---
+- [[数字时代如何更好地工作与生活]]
+	[年度征文 | 我的效率系统三原则 - 少数派](cubox://card?id=ff808081810aedce01810b8b1ec7389a)
+---
 ⬆⬆⬆
  
 <-->

@@ -15,7 +15,11 @@
 
 - 个人用户完全免费
 - 自定义别名，自定义搜索优先级
-- 自己写插件很方便
+- 自己写插件很方便，简单的先从写个脚本开始，为脚本赋予别名或快捷键也可。
+- 快捷键和命令行的逻辑统一
+
+### raycast的劣势及规避方式
+
 
 ## 自带功能迁移列表
 
@@ -50,8 +54,8 @@
 	- 平替。raycast自带，alfred需要插件增强
 - [[notion]]搜索
 	- 平替
-- 文件内搜索 #todo
-	- raycast还未找到插件
+- 文件内搜索
+	- raycast里需要给file search插件配置成搜索文件内容，才能实现。
 - [[obsidian]]操作
 	- alfred的shimming obsidian插件功能强大，raycast只有一个简陋的搜索的插件
 - terminal和finder互相打开
