@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "bionic reading",
-      "path": "journals/bionic reading.md"
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
     },
     {
       "basename": "2022-05-30",
       "path": "journals/2022-05-30.md"
     },
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
+      "basename": "云计算与个人",
+      "path": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
+    },
+    {
+      "basename": "田园女权",
+      "path": "journals/田园女权.md"
+    },
+    {
+      "basename": "bionic reading",
+      "path": "journals/bionic reading.md"
     },
     {
       "basename": "README",
@@ -181,10 +189,6 @@
       "path": "pages/300 - AREA/沟通与表达/沟通与表达.md"
     },
     {
-      "basename": "云计算与个人",
-      "path": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
-    },
-    {
       "basename": "软件项目管理",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "MOC",
       "path": "pages/000 - INBOX/MOC.md"
-    },
-    {
-      "basename": "PARA",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
     }
   ],
   "omittedPaths": [],

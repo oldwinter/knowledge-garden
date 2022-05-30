@@ -1,7 +1,7 @@
 [
   {
     "tag": "评论/少数派",
-    "tagCount": 20,
+    "tagCount": 22,
     "relativePaths": [
       "pages/EXTERNAL.md",
       "pages/400 - RESOURCE/原子知识库/单词库&概念库/降维打击.md",
@@ -11,6 +11,7 @@
       "pages/300 - AREA/人+科技融合/手机短信和通知转发至统一hub.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md",
       "pages/300 - AREA/flomo.md",
+      "pages/200 - PROJECT/云计算与云原生/云计算与个人.md",
       "pages/000 - INBOX/隐私保护.md",
       "pages/000 - INBOX/网络暴力与网络道德.md",
       "pages/000 - INBOX/爱情的本来模样.md",
@@ -19,6 +20,7 @@
       "pages/000 - INBOX/多维表和excel有什么不同.md",
       "pages/000 - INBOX/双链笔记与知识图谱.md",
       "pages/000 - INBOX/为什么要读书，阅读动机在哪.md",
+      "journals/田园女权.md",
       "journals/每月每季度总结/2022-五月.md"
     ]
   },
