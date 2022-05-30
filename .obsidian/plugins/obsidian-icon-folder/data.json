@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "🏙",
-      "⏩",
-      "Fab42Group",
-      "📹",
-      "📖",
-      "🖥️",
-      "🎵",
-      "FasNotesMedical",
+      "📕",
+      "FabWeixin",
       "📍",
-      "FabWeixin"
+      "FasNotesMedical",
+      "🎵",
+      "🖥️",
+      "📖",
+      "📹",
+      "Fab42Group",
+      "⏩"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -73,5 +73,6 @@
   "pages/400 - RESOURCE/原子知识库/单词库&概念库": "🔶",
   "pages/400 - RESOURCE/原子知识库/思维工具库": "🧠",
   "pages/400 - RESOURCE/原子知识库/方法库": "⏹",
-  "pages/400 - RESOURCE/原子知识库/金句库": "💛"
+  "pages/400 - RESOURCE/原子知识库/金句库": "💛",
+  "pages/200 - PROJECT/我的小说": "📕"
 }

@@ -1,12 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "INDEX",
+      "path": "pages/INDEX.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
+    },
+    {
+      "basename": "BRAT-log",
+      "path": "BRAT-log.md"
+    },
+    {
+      "basename": "工具理性与价值理性",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
+    },
+    {
+      "basename": "插件的便利性及安全性，如何权衡",
+      "path": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+    },
+    {
+      "basename": "思源笔记",
+      "path": "pages/300 - AREA/思源笔记.md"
+    },
+    {
+      "basename": "个人输出发布系统",
+      "path": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
+    },
+    {
       "basename": "从Alfred迁移至Raycast",
-      "path": "journals/从Alfred迁移至Raycast.md"
+      "path": "pages/300 - AREA/从Alfred迁移至Raycast.md"
     },
     {
       "basename": "2022-05-29",
       "path": "journals/2022-05-29.md"
+    },
+    {
+      "basename": "2022-05-30",
+      "path": "journals/2022-05-30.md"
     },
     {
       "basename": "2022-05-28",
@@ -37,16 +81,8 @@
       "path": "pages/000 - INBOX/常见笔记组织方法.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "个人简历",
       "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
     },
     {
       "basename": "通识教育",
@@ -63,10 +99,6 @@
     {
       "basename": "NSFW",
       "path": "pages/000 - INBOX/NSFW.md"
-    },
-    {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
     },
     {
       "basename": "z命令",
@@ -113,10 +145,6 @@
       "path": "pages/300 - AREA/知识管理/计划与回顾.md"
     },
     {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
       "basename": "计算机科学",
       "path": "pages/300 - AREA/计算机科学/计算机科学.md"
     },
@@ -131,10 +159,6 @@
     {
       "basename": "软件项目管理",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/软件项目管理.md"
-    },
-    {
-      "basename": "INDEX",
-      "path": "pages/INDEX.md"
     },
     {
       "basename": "知识原子库",
@@ -175,30 +199,6 @@
     {
       "basename": "书影音",
       "path": "pages/400 - RESOURCE/书影音笔记/书影音.md"
-    },
-    {
-      "basename": "知识管理",
-      "path": "pages/300 - AREA/知识管理/知识管理.md"
-    },
-    {
-      "basename": "运动与健康",
-      "path": "pages/300 - AREA/运动与健康/运动与健康.md"
-    },
-    {
-      "basename": "云计算与云原生",
-      "path": "pages/200 - PROJECT/云计算与云原生/云计算与云原生.md"
-    },
-    {
-      "basename": "我的开源项目",
-      "path": "pages/200 - PROJECT/我的开源项目/我的开源项目.md"
-    },
-    {
-      "basename": "PARA和MOC法联用组织笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
-    },
-    {
-      "basename": "快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
     }
   ],
   "omittedPaths": [],

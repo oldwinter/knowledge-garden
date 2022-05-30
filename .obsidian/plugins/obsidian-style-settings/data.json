@@ -132,5 +132,7 @@
   "shimmering-focus@@hide-index-files": true,
   "shimmering-focus@@menu-font-size": 0.8,
   "shimmering-focus@@monospace-font-size": 0.7,
-  "shimmering-focus@@longform-font-size": 1.1
+  "shimmering-focus@@longform-font-size": 1.1,
+  "supercharged-links@@1162-7812-before": "🦜",
+  "supercharged-links@@3c8a-1054-before": "🗣"
 }

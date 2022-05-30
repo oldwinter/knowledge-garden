@@ -1359,6 +1359,21 @@
         "fileName": "小知识点",
         "link": "学习目标的分级",
         "relativePath": "pages/400 - RESOURCE/小知识点/小知识点.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "学习目标的分级",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "学习目标的分级",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "学习目标的分级",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   },
@@ -6978,6 +6993,90 @@
     ]
   },
   {
+    "fileName": "从Alfred迁移至Raycast",
+    "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md",
+    "tags": [
+      "todo"
+    ],
+    "headings": [
+      {
+        "heading": "为什么要迁移",
+        "level": 2
+      },
+      {
+        "heading": "alfred的问题",
+        "level": 3
+      },
+      {
+        "heading": "raycast的优势",
+        "level": 3
+      },
+      {
+        "heading": "自带功能迁移列表",
+        "level": 2
+      },
+      {
+        "heading": "插件功能迁移",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "link": "raycast"
+      },
+      {
+        "link": "Utools"
+      },
+      {
+        "link": "HapiGo"
+      },
+      {
+        "link": "LaunchBar"
+      },
+      {
+        "link": "keyboard maestro"
+      },
+      {
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "豆瓣"
+      },
+      {
+        "link": "github",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      }
+    ],
+    "backlinks": [
+      {
+        "fileName": "2022-05-29",
+        "link": "从Alfred迁移至Raycast",
+        "relativePath": "journals/2022-05-29.md"
+      }
+    ]
+  },
+  {
     "fileName": "鸟尽弓藏",
     "relativePath": "pages/300 - AREA/鸟尽弓藏.md",
     "links": [
@@ -7378,7 +7477,7 @@
     "fileName": "插件的便利性及安全性，如何权衡",
     "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md",
     "tags": [
-      "动态/v2ex"
+      "摘录/v2ex"
     ],
     "links": [
       {
@@ -8133,6 +8232,21 @@
         "fileName": "个人知识管理",
         "link": "双链笔记",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "双链笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "双链笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "双链笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_21.384Z",
@@ -9972,6 +10086,21 @@
         "relativePath": "pages/000 - INBOX/常见笔记组织方法.md"
       },
       {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
+      },
+      {
         "fileName": "CONTENTS",
         "link": "PARA和MOC法联用组织笔记",
         "relativePath": "CONTENTS.md"
@@ -10294,6 +10423,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "团队信息与知识共享",
         "link": "notion",
         "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md"
@@ -10347,6 +10481,21 @@
         "fileName": "2022-05-29T13_28_29.252Z",
         "link": "notion",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_58_53.583Z",
+        "link": "notion",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "notion",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "notion",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_31.997Z",
@@ -10712,7 +10861,7 @@
     "fileName": "思源笔记",
     "relativePath": "pages/300 - AREA/思源笔记.md",
     "tags": [
-      "评论/微信"
+      "对话/微信"
     ],
     "headings": [
       {
@@ -10808,7 +10957,7 @@
     "fileName": "视频制作",
     "relativePath": "pages/300 - AREA/人+科技融合/视频制作.md",
     "tags": [
-      "动态/b站"
+      "摘录/b站"
     ],
     "headings": [
       {
@@ -10980,6 +11129,21 @@
         "fileName": "笔记软件的选择",
         "link": "滴答清单",
         "relativePath": "pages/000 - INBOX/笔记软件的选择.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "滴答清单",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "滴答清单",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "滴答清单",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_28.687Z",
@@ -11255,6 +11419,11 @@
         "fileName": "语音输入",
         "link": "油猴脚本",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/语音输入.md"
+      },
+      {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "油猴脚本",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -11724,6 +11893,11 @@
         "relativePath": "pages/500 - ARCHIVE/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
       },
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "插件的便利性及安全性，如何权衡",
         "link": "obsidian",
         "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
@@ -11797,6 +11971,36 @@
         "displayText": "黑曜石"
       },
       {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
+      },
+      {
         "fileName": "2022-05-29T13_28_28.687Z",
         "link": "obsidian",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
@@ -11817,11 +12021,31 @@
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
       },
       {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
+      },
+      {
         "fileName": "2022-05-29T13_28_28.466Z",
         "link": "obsidian#什么是 Obsidian",
         "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md",
         "cleanLink": "obsidian",
         "displayText": "Obsidian"
+      },
+      {
+        "fileName": "2022-05-30T02_58_53.583Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "obsidian",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_21.384Z",
@@ -12331,6 +12555,11 @@
         "link": "chrome",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md",
         "displayText": "edge浏览器"
+      },
+      {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "chrome",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -12550,6 +12779,16 @@
         "relativePath": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
       },
       {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "平台+插件",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "平台+插件",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
+      },
+      {
         "fileName": "2022-05-29T13_28_28.465Z",
         "link": "平台+插件",
         "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten/2022-05-29T13_28_28.465Z.md"
@@ -12707,8 +12946,10 @@
   {
     "fileName": "个人输出发布系统",
     "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md",
+    "tags": [
+      "todo/今天"
+    ],
     "frontmatter": {
-      "tags": null,
       "position": {
         "start": {
           "line": 0,
@@ -12718,7 +12959,7 @@
         "end": {
           "line": 3,
           "col": 3,
-          "offset": 28
+          "offset": 35
         }
       }
     },
@@ -13114,6 +13355,21 @@
         "fileName": "个人知识管理",
         "link": "自下而上",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "自下而上",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "自下而上",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "自下而上",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   },
@@ -13358,6 +13614,16 @@
         "fileName": "个人输出发布系统",
         "link": "数字花园",
         "relativePath": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
+      },
+      {
+        "fileName": "2022-05-30T03_12_55.806Z",
+        "link": "数字花园",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md"
+      },
+      {
+        "fileName": "2022-05-30T03_12_25.898Z",
+        "link": "数字花园",
+        "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_25.898Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_28.687Z",
@@ -15227,9 +15493,29 @@
     "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md",
     "backlinks": [
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "个人搜索系统",
         "link": "chrome-omni插件",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人搜索系统.md"
+      },
+      {
+        "fileName": "2022-05-30T02_58_53.583Z",
+        "link": "chrome-omni插件",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "chrome-omni插件",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "chrome-omni插件",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       }
     ]
   },
@@ -15320,6 +15606,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "插件的便利性及安全性，如何权衡",
         "link": "alfred",
         "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
@@ -15370,24 +15661,24 @@
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       },
       {
-        "fileName": "2022-05-29T15_51_20.811Z",
+        "fileName": "2022-05-30T04_01_10.957Z",
         "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_20.811Z.md"
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       },
       {
-        "fileName": "2022-05-29T15_51_11.398Z",
+        "fileName": "2022-05-30T02_58_53.583Z",
         "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_11.398Z.md"
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
       },
       {
-        "fileName": "2022-05-29T15_29_42.327Z",
+        "fileName": "2022-05-30T02_52_57.428Z",
         "link": "alfred",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_29_42.327Z.md"
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
       },
       {
-        "fileName": "从Alfred迁移至Raycast",
+        "fileName": "2022-05-30T02_52_55.021Z",
         "link": "alfred",
-        "relativePath": "journals/从Alfred迁移至Raycast.md"
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       }
     ]
   },
@@ -15592,6 +15883,21 @@
         "fileName": "obsidian插件",
         "link": "万物互联",
         "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "万物互联",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "万物互联",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "万物互联",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   },
@@ -15702,6 +16008,11 @@
         "relativePath": "pages/400 - RESOURCE/人文社科通识/心理学/收藏者谬误.md"
       },
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "popclip",
         "link": "devonthink",
         "relativePath": "pages/300 - AREA/人+科技融合/必备软件/popclip.md"
@@ -15760,6 +16071,21 @@
         "fileName": "2022-05-29T13_28_29.252Z",
         "link": "devonthink",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_58_53.583Z",
+        "link": "devonthink",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "devonthink",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "devonthink",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_31.997Z",
@@ -16071,6 +16397,33 @@
         "relativePath": "journals/每月每季度总结/2022-五月.md"
       }
     ]
+  },
+  {
+    "fileName": "Index",
+    "relativePath": "pages/200 - PROJECT/我的小说/Index.md",
+    "frontmatter": {
+      "version": 1,
+      "workflow": null,
+      "drafts": [
+        {
+          "name": "Draft 1",
+          "folder": "Draft 1",
+          "scenes": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 94
+        }
+      }
+    }
   },
   {
     "fileName": "项目管理与法律",
@@ -16389,6 +16742,11 @@
     ],
     "backlinks": [
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "github",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "个人信息系统涉及的核心软件和云服务",
         "link": "github",
         "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
@@ -16402,6 +16760,21 @@
         "fileName": "2022-05-29T13_28_28.680Z",
         "link": "github",
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理/2022-05-29T13_28_28.680Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_58_53.583Z",
+        "link": "github",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "github",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "github",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_21.384Z",
@@ -16495,6 +16868,11 @@
     "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md",
     "backlinks": [
       {
+        "fileName": "从Alfred迁移至Raycast",
+        "link": "vscode",
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
+      },
+      {
         "fileName": "插件的便利性及安全性，如何权衡",
         "link": "vscode",
         "relativePath": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
@@ -16526,14 +16904,24 @@
         "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/必备软件/mac必备软件/2022-05-29T13_28_28.687Z.md"
       },
       {
-        "fileName": "2022-05-29T15_51_20.811Z",
+        "fileName": "2022-05-30T04_01_10.957Z",
         "link": "vscode",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_20.811Z.md"
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       },
       {
-        "fileName": "2022-05-29T15_51_11.398Z",
+        "fileName": "2022-05-30T02_58_53.583Z",
         "link": "vscode",
-        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_11.398Z.md"
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_57.428Z",
+        "link": "vscode",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md"
+      },
+      {
+        "fileName": "2022-05-30T02_52_55.021Z",
+        "link": "vscode",
+        "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
       },
       {
         "fileName": "2022-05-29T13_28_21.384Z",
@@ -16549,11 +16937,6 @@
         "fileName": "2022-05-29T13_28_21.384Z",
         "link": "vscode",
         "relativePath": "logseq/bak/README/2022-05-29T13_28_21.384Z.md"
-      },
-      {
-        "fileName": "从Alfred迁移至Raycast",
-        "link": "vscode",
-        "relativePath": "journals/从Alfred迁移至Raycast.md"
       },
       {
         "fileName": "README",
@@ -16796,6 +17179,11 @@
         "fileName": "个人简历",
         "link": "docker",
         "relativePath": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+      },
+      {
+        "fileName": "2022-05-30T04_01_10.957Z",
+        "link": "docker",
+        "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
       }
     ]
   },
@@ -17217,7 +17605,7 @@
     "fileName": "明文数据",
     "relativePath": "pages/200 - PROJECT/个人职业生涯/明文数据.md",
     "tags": [
-      "动态/b站"
+      "摘录/b站"
     ],
     "backlinks": [
       {
@@ -17881,6 +18269,14 @@
         "relativePath": "CONTENTS.md"
       }
     ]
+  },
+  {
+    "fileName": "MOC%7C什么是MOC笔记组织法",
+    "relativePath": "pages/000 - INBOX/MOC%7C什么是MOC笔记组织法.md"
+  },
+  {
+    "fileName": "数字时代如何更好地工作与生活 - MOC%7C工作和生活的效率体系建设",
+    "relativePath": "pages/000 - INBOX/数字时代如何更好地工作与生活 - MOC%7C工作和生活的效率体系建设.md"
   },
   {
     "fileName": "飞书文档",
@@ -19346,6 +19742,351 @@
     ]
   },
   {
+    "fileName": "2022-05-30T04_18_16.651Z",
+    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md",
+    "headings": [
+      {
+        "heading": "记笔记原则",
+        "level": 2
+      },
+      {
+        "heading": "方法和指导思想",
+        "level": 2
+      },
+      {
+        "heading": "进行中 - Project",
+        "level": 2
+      },
+      {
+        "heading": "短中期精进 - Area",
+        "level": 2
+      },
+      {
+        "heading": "原子化 - Resource",
+        "level": 2
+      },
+      {
+        "heading": "归档 - Archive",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "自上而下"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "万物互联",
+        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
+      },
+      {
+        "link": "学习目标的分级",
+        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+      },
+      {
+        "link": "CONTENTS",
+        "relativePath": "CONTENTS.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T04_18_07.628Z",
+    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md",
+    "headings": [
+      {
+        "heading": "记笔记原则",
+        "level": 2
+      },
+      {
+        "heading": "方法和指导思想",
+        "level": 2
+      },
+      {
+        "heading": "进行中 - Project",
+        "level": 2
+      },
+      {
+        "heading": "短中期精进 - Area",
+        "level": 2
+      },
+      {
+        "heading": "原子化 - Resource",
+        "level": 2
+      },
+      {
+        "heading": "归档 - Archive",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "自上而下"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "万物互联",
+        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
+      },
+      {
+        "link": "学习目标的分级",
+        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+      },
+      {
+        "link": "CONTENTS",
+        "relativePath": "CONTENTS.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T04_18_03.955Z",
+    "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md",
+    "headings": [
+      {
+        "heading": "记笔记原则",
+        "level": 2
+      },
+      {
+        "heading": "方法和指导思想",
+        "level": 2
+      },
+      {
+        "heading": "进行中 - Project",
+        "level": 2
+      },
+      {
+        "heading": "短中期精进 - Area",
+        "level": 2
+      },
+      {
+        "heading": "原子化 - Resource",
+        "level": 2
+      },
+      {
+        "heading": "归档 - Archive",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "自上而下"
+      },
+      {
+        "link": "自下而上",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/自下而上.md"
+      },
+      {
+        "link": "PARA和MOC法联用组织笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC法联用组织笔记.md"
+      },
+      {
+        "link": "双链笔记",
+        "relativePath": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
+      },
+      {
+        "link": "万物互联",
+        "relativePath": "pages/300 - AREA/人+科技融合/万物互联.md"
+      },
+      {
+        "link": "学习目标的分级",
+        "relativePath": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+      },
+      {
+        "link": "CONTENTS",
+        "relativePath": "CONTENTS.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "滴答清单",
+        "relativePath": "pages/300 - AREA/人+科技融合/滴答清单.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T04_01_10.780Z",
+    "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯/明文数据/2022-05-30T04_01_10.780Z.md",
+    "tags": [
+      "动态/b站"
+    ]
+  },
+  {
+    "fileName": "2022-05-30T03_56_59.840Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_59.840Z.md",
+    "tags": [
+      "对话/微信"
+    ],
+    "headings": [
+      {
+        "heading": "思源笔记",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T03_56_52.228Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_52.228Z.md",
+    "tags": [
+      "dv"
+    ],
+    "headings": [
+      {
+        "heading": "思源笔记",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T03_56_50.055Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_50.055Z.md",
+    "tags": [
+      "评论/微信"
+    ],
+    "headings": [
+      {
+        "heading": "思源笔记",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T04_01_10.777Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/视频制作/2022-05-30T04_01_10.777Z.md",
+    "tags": [
+      "动态/b站"
+    ],
+    "headings": [
+      {
+        "heading": "教程类视频的分段和进度条",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T03_12_55.806Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md",
+    "tags": [
+      "moc",
+      "todo/今天"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 39
+        }
+      }
+    },
+    "aliases": [
+      "输出系统"
+    ],
+    "headings": [
+      {
+        "heading": "定义",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "数字花园",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
+      }
+    ]
+  },
+  {
+    "fileName": "2022-05-30T03_12_25.898Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_25.898Z.md",
+    "tags": [
+      "moc"
+    ],
+    "frontmatter": {
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "col": 3,
+          "offset": 33
+        }
+      }
+    },
+    "aliases": [
+      "输出系统"
+    ],
+    "headings": [
+      {
+        "heading": "定义",
+        "level": 2
+      }
+    ],
+    "links": [
+      {
+        "link": "数字花园",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
+      }
+    ]
+  },
+  {
     "fileName": "2022-05-29T13_28_28.683Z",
     "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md",
     "tags": [
@@ -20135,6 +20876,47 @@
     ]
   },
   {
+    "fileName": "2022-05-30T04_01_10.957Z",
+    "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md",
+    "tags": [
+      "动态/v2ex"
+    ],
+    "links": [
+      {
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
+      },
+      {
+        "link": "chrome",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/chrome.md"
+      },
+      {
+        "link": "油猴脚本",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/油猴脚本.md"
+      },
+      {
+        "link": "alfred",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "docker",
+        "relativePath": "pages/200 - PROJECT/云计算与云原生/docker.md"
+      },
+      {
+        "link": "平台+插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/平台+插件.md"
+      }
+    ]
+  },
+  {
     "fileName": "2022-05-29T13_28_28.466Z",
     "relativePath": "logseq/bak/pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive/2022-05-29T13_28_28.466Z.md",
     "headings": [
@@ -20405,8 +21187,62 @@
     ]
   },
   {
-    "fileName": "2022-05-29T15_51_20.811Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_20.811Z.md",
+    "fileName": "2022-05-30T04_08_19.422Z",
+    "relativePath": "logseq/bak/journals/Index/2022-05-30T04_08_19.422Z.md",
+    "frontmatter": {
+      "version": 1,
+      "workflow": null,
+      "drafts": [
+        {
+          "name": "未命名",
+          "folder": "未命名",
+          "scenes": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 86
+        }
+      }
+    }
+  },
+  {
+    "fileName": "2022-05-30T04_06_52.993Z",
+    "relativePath": "logseq/bak/journals/Index/2022-05-30T04_06_52.993Z.md",
+    "frontmatter": {
+      "version": 1,
+      "workflow": null,
+      "drafts": [
+        {
+          "name": "Draft 1",
+          "folder": "Draft 1",
+          "scenes": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 94
+        }
+      }
+    }
+  },
+  {
+    "fileName": "2022-05-30T02_58_53.583Z",
+    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md",
     "tags": [
       "todo"
     ],
@@ -20448,6 +21284,32 @@
       },
       {
         "link": "LaunchBar"
+      },
+      {
+        "link": "keyboard maestro"
+      },
+      {
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "豆瓣"
+      },
+      {
+        "link": "github",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
       },
       {
         "link": "vscode",
@@ -20456,8 +21318,8 @@
     ]
   },
   {
-    "fileName": "2022-05-29T15_51_11.398Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_11.398Z.md",
+    "fileName": "2022-05-30T02_52_57.428Z",
+    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md",
     "tags": [
       "todo"
     ],
@@ -20499,6 +21361,32 @@
       },
       {
         "link": "LaunchBar"
+      },
+      {
+        "link": "keyboard maestro"
+      },
+      {
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "豆瓣"
+      },
+      {
+        "link": "github",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
       },
       {
         "link": "vscode",
@@ -20507,8 +21395,8 @@
     ]
   },
   {
-    "fileName": "2022-05-29T15_29_42.327Z",
-    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_29_42.327Z.md",
+    "fileName": "2022-05-30T02_52_55.021Z",
+    "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md",
     "tags": [
       "todo"
     ],
@@ -20550,6 +21438,36 @@
       },
       {
         "link": "LaunchBar"
+      },
+      {
+        "link": "keyboard maestro"
+      },
+      {
+        "link": "chrome-omni插件",
+        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/chrome-omni插件.md"
+      },
+      {
+        "link": "devonthink",
+        "relativePath": "pages/300 - AREA/人+科技融合/devonthink.md"
+      },
+      {
+        "link": "豆瓣"
+      },
+      {
+        "link": "github",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
+      },
+      {
+        "link": "notion",
+        "relativePath": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+      },
+      {
+        "link": "obsidian",
+        "relativePath": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+      },
+      {
+        "link": "vscode",
+        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
       }
     ]
   },
@@ -21531,60 +22449,43 @@
     ]
   },
   {
-    "fileName": "从Alfred迁移至Raycast",
-    "relativePath": "journals/从Alfred迁移至Raycast.md",
-    "tags": [
-      "todo"
-    ],
+    "fileName": "Index",
+    "relativePath": "journals/Index.md",
+    "frontmatter": {
+      "version": 1,
+      "workflow": null,
+      "drafts": [
+        {
+          "name": "Draft 1",
+          "folder": "Draft 1",
+          "scenes": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 0,
+          "col": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "col": 3,
+          "offset": 94
+        }
+      }
+    }
+  },
+  {
+    "fileName": "2022-05-30",
+    "relativePath": "journals/2022-05-30.md",
     "headings": [
       {
-        "heading": "为什么要迁移",
+        "heading": "今天的工作日志",
         "level": 2
       },
       {
-        "heading": "alfred的问题",
-        "level": 3
-      },
-      {
-        "heading": "raycast的优势",
-        "level": 3
-      },
-      {
-        "heading": "自带功能迁移列表",
+        "heading": "今天的灵感或闪念",
         "level": 2
-      },
-      {
-        "heading": "插件功能迁移",
-        "level": 2
-      }
-    ],
-    "links": [
-      {
-        "link": "alfred",
-        "relativePath": "pages/300 - AREA/人+科技融合/个人效率系统打造/alfred.md"
-      },
-      {
-        "link": "raycast"
-      },
-      {
-        "link": "Utools"
-      },
-      {
-        "link": "HapiGo"
-      },
-      {
-        "link": "LaunchBar"
-      },
-      {
-        "link": "vscode",
-        "relativePath": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-      }
-    ],
-    "backlinks": [
-      {
-        "fileName": "2022-05-29",
-        "link": "从Alfred迁移至Raycast",
-        "relativePath": "journals/2022-05-29.md"
       }
     ]
   },
@@ -22845,7 +23746,7 @@
       },
       {
         "link": "从Alfred迁移至Raycast",
-        "relativePath": "journals/从Alfred迁移至Raycast.md"
+        "relativePath": "pages/300 - AREA/从Alfred迁移至Raycast.md"
       }
     ],
     "backlinks": [
@@ -23570,6 +24471,21 @@
         "fileName": "INDEX",
         "link": "CONTENTS",
         "relativePath": "pages/INDEX.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_16.651Z",
+        "link": "CONTENTS",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_16.651Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_07.628Z",
+        "link": "CONTENTS",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_07.628Z.md"
+      },
+      {
+        "fileName": "2022-05-30T04_18_03.955Z",
+        "link": "CONTENTS",
+        "relativePath": "logseq/bak/pages/INDEX/2022-05-30T04_18_03.955Z.md"
       }
     ]
   }

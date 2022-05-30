@@ -339,6 +339,66 @@
     {
       "name": "从Alfred迁移至Raycast",
       "relativePath": "logseq/bak/journals/从Alfred迁移至Raycast"
+    },
+    {
+      "name": "个人输出发布系统",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统"
+    },
+    {
+      "name": "思源笔记",
+      "relativePath": "logseq/bak/pages/300 - AREA/思源笔记"
+    },
+    {
+      "name": "视频制作",
+      "relativePath": "logseq/bak/pages/300 - AREA/人+科技融合/视频制作"
+    },
+    {
+      "name": "200 - PROJECT",
+      "relativePath": "logseq/bak/pages/200 - PROJECT"
+    },
+    {
+      "name": "个人职业生涯",
+      "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯"
+    },
+    {
+      "name": "明文数据",
+      "relativePath": "logseq/bak/pages/200 - PROJECT/个人职业生涯/明文数据"
+    },
+    {
+      "name": "插件的便利性及安全性，如何权衡",
+      "relativePath": "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡"
+    },
+    {
+      "name": "我的小说",
+      "relativePath": "pages/200 - PROJECT/我的小说"
+    },
+    {
+      "name": "Drafts",
+      "relativePath": "pages/200 - PROJECT/我的小说/Drafts"
+    },
+    {
+      "name": "Draft 1",
+      "relativePath": "pages/200 - PROJECT/我的小说/Drafts/Draft 1"
+    },
+    {
+      "name": "Index",
+      "relativePath": "logseq/bak/journals/Index"
+    },
+    {
+      "name": "Draft 1",
+      "relativePath": "journals/Drafts/Draft 1"
+    },
+    {
+      "name": "INDEX",
+      "relativePath": "logseq/bak/pages/INDEX"
+    },
+    {
+      "name": "logseq",
+      "relativePath": "logseq/bak/logseq"
+    },
+    {
+      "name": "config",
+      "relativePath": "logseq/bak/logseq/config"
     }
   ],
   "nonMdFiles": [
@@ -436,6 +496,16 @@
       "name": "明朝那些事儿.epub",
       "basename": "明朝那些事儿",
       "relativePath": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/明朝那些事儿.epub"
+    },
+    {
+      "name": "2022-05-30T04_22_55.397Z.edn",
+      "basename": "2022-05-30T04_22_55.397Z",
+      "relativePath": "logseq/bak/logseq/config/2022-05-30T04_22_55.397Z.edn"
+    },
+    {
+      "name": "2022-05-30T04_25_13.703Z.edn",
+      "basename": "2022-05-30T04_25_13.703Z",
+      "relativePath": "logseq/bak/logseq/config/2022-05-30T04_25_13.703Z.edn"
     }
   ]
 }

@@ -1,7 +1,7 @@
 [
   {
     "tag": "moc",
-    "tagCount": 33,
+    "tagCount": 35,
     "relativePaths": [
       "pages/500 - ARCHIVE/已发布文章/已发布文章.md",
       "pages/400 - RESOURCE/小知识点/小知识点.md",
@@ -34,6 +34,8 @@
       "pages/200 - PROJECT/云计算与云原生/云计算与个人.md",
       "pages/200 - PROJECT/个人职业生涯/个人简历.md",
       "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_25.898Z.md",
       "logseq/bak/pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC/2022-05-29T13_28_28.683Z.md"
     ]
   },
@@ -64,9 +66,11 @@
   },
   {
     "tag": "对话/微信",
-    "tagCount": 9,
+    "tagCount": 11,
     "relativePaths": [
       "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
+      "pages/300 - AREA/思源笔记.md",
+      "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_59.840Z.md",
       "logseq/bak/journals/每月每季度总结/2022-五月/2022-05-29T13_28_31.997Z.md",
       "journals/每月每季度总结/2022-五月.md"
     ]
@@ -171,6 +175,18 @@
     ]
   },
   {
+    "tag": "todo",
+    "tagCount": 33,
+    "relativePaths": [
+      "pages/300 - AREA/从Alfred迁移至Raycast.md",
+      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_58_53.583Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_57.428Z.md",
+      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-30T02_52_55.021Z.md"
+    ]
+  },
+  {
     "tag": "评论/v2ex",
     "tagCount": 2,
     "relativePaths": [
@@ -179,7 +195,7 @@
     ]
   },
   {
-    "tag": "动态/v2ex",
+    "tag": "摘录/v2ex",
     "tagCount": 1,
     "relativePaths": [
       "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
@@ -187,13 +203,15 @@
   },
   {
     "tag": "todo/今天",
-    "tagCount": 7,
+    "tagCount": 9,
     "relativePaths": [
       "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md",
       "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md",
+      "pages/300 - AREA/人+科技融合/个人输出发布系统.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md",
       "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md",
       "pages/200 - PROJECT/个人职业生涯/个人简历.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/个人输出发布系统/2022-05-30T03_12_55.806Z.md",
       "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动/2022-05-29T13_28_29.253Z.md",
       "journals/2022-05-28.md"
     ]
@@ -207,14 +225,7 @@
     ]
   },
   {
-    "tag": "评论/微信",
-    "tagCount": 1,
-    "relativePaths": [
-      "pages/300 - AREA/思源笔记.md"
-    ]
-  },
-  {
-    "tag": "动态/b站",
+    "tag": "摘录/b站",
     "tagCount": 2,
     "relativePaths": [
       "pages/300 - AREA/人+科技融合/视频制作.md",
@@ -232,15 +243,32 @@
     ]
   },
   {
-    "tag": "todo",
-    "tagCount": 34,
+    "tag": "动态/b站",
+    "tagCount": 2,
     "relativePaths": [
-      "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md",
-      "logseq/bak/pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统/2022-05-29T13_28_29.252Z.md",
-      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_20.811Z.md",
-      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_51_11.398Z.md",
-      "logseq/bak/journals/从Alfred迁移至Raycast/2022-05-29T15_29_42.327Z.md",
-      "journals/从Alfred迁移至Raycast.md"
+      "logseq/bak/pages/200 - PROJECT/个人职业生涯/明文数据/2022-05-30T04_01_10.780Z.md",
+      "logseq/bak/pages/300 - AREA/人+科技融合/视频制作/2022-05-30T04_01_10.777Z.md"
+    ]
+  },
+  {
+    "tag": "dv",
+    "tagCount": 1,
+    "relativePaths": [
+      "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_52.228Z.md"
+    ]
+  },
+  {
+    "tag": "评论/微信",
+    "tagCount": 1,
+    "relativePaths": [
+      "logseq/bak/pages/300 - AREA/思源笔记/2022-05-30T03_56_50.055Z.md"
+    ]
+  },
+  {
+    "tag": "动态/v2ex",
+    "tagCount": 1,
+    "relativePaths": [
+      "logseq/bak/pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡/2022-05-30T04_01_10.957Z.md"
     ]
   },
   {

@@ -5,18 +5,16 @@
 	- 标签：极限30个，用来表达状态或来源
 - [[自下而上]]
 	- 链接一切：以
----
 
 ## 方法和指导思想
 
 - [[PARA和MOC法联用组织笔记]]
 - [[双链笔记]]，[[万物互联]]
 - [[学习目标的分级]]
----
 
 [[CONTENTS]]文件是logseq内置的目录。与indexl这种自动化的dataview区分开，contents进行手动的结构化的汇编。
-相当于如果把这个库出一本书或者wiki，那么这里就是目录。但又不必完全索引库里面的全部内容，渐进式地搞就行。
 
+相当于如果把这个库出一本书或者wiki，那么这里就是目录。但又不必完全索引库里面的全部内容，渐进式地搞就行。
 
 ## 进行中 - Project
 
@@ -33,8 +31,6 @@ sort tags desc
 limit 1000
 ```
 
----
-
 ## 短中期精进 - Area
 
 知识管理
@@ -47,8 +43,6 @@ sort tags desc
 limit 1000
 ```
 
----
-
 ## 原子化 - Resource
 
 ```dataview
@@ -58,8 +52,6 @@ where contains(file.tags,"MOC")
 sort tags desc
 limit 1000
 ```
-
----
 
 ## 归档 - Archive
 

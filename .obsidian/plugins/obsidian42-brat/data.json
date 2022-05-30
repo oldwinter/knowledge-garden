@@ -9,7 +9,7 @@
   "updateAtStartup": true,
   "updateThemesAtStartup": false,
   "ribbonIconEnabled": false,
-  "loggingEnabled": true,
+  "loggingEnabled": false,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,
   "debuggingMode": false,

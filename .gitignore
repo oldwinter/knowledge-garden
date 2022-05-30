@@ -5,8 +5,7 @@ logseq/.recycle
 .DS_Store
 
 # 个人隐私屏蔽
-pages/200 - PROJECT/个人职业生涯
-pages/200 - PROJECT/软件项目管理
+pages/200 - PROJECT
 
 # 带token的敏感插件数据屏蔽
 .obsidian/plugins/remotely-save
