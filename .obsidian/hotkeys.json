@@ -8,7 +8,6 @@
       "key": "K"
     }
   ],
-  "file-explorer:new-file-in-new-pane": [],
   "obsidian-better-command-palette:open-better-commmand-palette": [
     {
       "modifiers": [
@@ -70,15 +69,6 @@
       "key": "F"
     }
   ],
-  "periodic-notes:open-daily-note": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "J"
-    }
-  ],
   "obsidian-footnotes:insert-footnote": [
     {
       "modifiers": [
@@ -103,6 +93,40 @@
         "Shift"
       ],
       "key": "M"
+    }
+  ],
+  "table-editor-obsidian:insert-row": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "J"
+    }
+  ],
+  "periodic-notes:open-daily-note": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "J"
+    }
+  ],
+  "file-explorer:new-file-in-new-pane": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
     }
   ]
 }

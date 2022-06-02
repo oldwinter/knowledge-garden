@@ -73,7 +73,7 @@
   "sanctum@@topside-status-bar": true,
   "shimmering-focus@@no-floating-metadata": false,
   "shimmering-focus@@show-header-bar": true,
-  "shimmering-focus@@show-urls": false,
+  "shimmering-focus@@show-urls": true,
   "shimmering-focus@@permanently-show-blockids": false,
   "shimmering-focus@@shapes": "squareish-shapes",
   "shimmering-focus@@colored-yaml": false,
@@ -129,10 +129,15 @@
   "supercharged-links@@53f6-363a-after": "\"\"",
   "supercharged-links@@53f6-363a-weight": "initial",
   "supercharged-links@@75fc-e339-after": "\"\"",
-  "shimmering-focus@@hide-index-files": true,
+  "shimmering-focus@@hide-index-files": false,
   "shimmering-focus@@menu-font-size": 0.8,
   "shimmering-focus@@monospace-font-size": 0.7,
-  "shimmering-focus@@longform-font-size": 1.1,
   "supercharged-links@@1162-7812-before": "🦜",
-  "supercharged-links@@3c8a-1054-before": "🗣"
+  "supercharged-links@@3c8a-1054-before": "🗣",
+  "shimmering-focus@@longform-hue-shift-dark": 45,
+  "shimmering-focus@@longform-text-indent": false,
+  "shimmering-focus@@longform-hue-shift-light": 105,
+  "shimmering-focus@@longform-font-size": 1.2,
+  "shimmering-focus@@longform-font": "\"杨任东竹石体-Regular\"",
+  "shimmering-focus@@show-fold-indicators": true
 }

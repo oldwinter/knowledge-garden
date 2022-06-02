@@ -1,13 +1,11 @@
 [
   "remotely-save",
-  "obsidian-advanced-slides",
   "table-editor-obsidian",
   "obsidian-advanced-uri",
   "cycle-through-panes",
   "dataview",
   "obsidian-excalidraw-plugin",
   "obsidian-image-auto-upload-plugin",
-  "metadata-extractor",
   "note-refactor-obsidian",
   "obsidian-outliner",
   "periodic-notes",
@@ -28,9 +26,7 @@
   "obsidian-focus-mode",
   "url-into-selection",
   "customizable-page-header-buttons",
-  "obsidian-dynamic-toc",
   "obsidian-footnotes",
-  "creases",
   "pane-relief",
   "obsidian-hover-editor",
   "longform",
@@ -38,6 +34,8 @@
   "obsidian-kanban",
   "recent-files-obsidian",
   "obsidian-weread-plugin",
-  "obsidian-citation-plugin",
-  "settings-search"
+  "settings-search",
+  "obsidian-pandoc-reference-list",
+  "obsidian-pandoc",
+  "quick-explorer"
 ]

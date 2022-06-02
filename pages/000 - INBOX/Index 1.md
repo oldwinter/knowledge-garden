@@ -1,9 +1,21 @@
 ---
 version: 1
-workflow: null
+workflow: Default Workflow
 drafts:
   - name: Draft 1
     folder: Draft 1
+    scenes:
+      - 2022-05-23
+      - 2022-05-24
+      - 2022-05-25
+      - 2022-05-26
+      - 2022-05-27
+      - 2022-05-28
+      - 2022-05-29
+      - 2022-05-31
+      - 2022-05-30
+  - name: Draft 2
+    folder: Draft 2
     scenes: []
 ---
 

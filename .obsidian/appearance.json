@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 12,
+  "baseFontSize": 14,
   "cssTheme": "Shimmering Focus",
   "enabledCssSnippets": [
     "supercharged-links-gen",
@@ -8,5 +8,5 @@
   "theme": "obsidian",
   "baseFontSizeAction": false,
   "translucency": false,
-  "textFontFamily": "Arial"
+  "textFontFamily": "思源黑体"
 }

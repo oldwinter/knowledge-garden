@@ -1,7 +1,6 @@
 {
   "pluginList": [
     "zhaohongxuan/obsidian-weread-plugin",
-    "zsviczian/excalibrain",
     "liamcain/obsidian-periodic-notes"
   ],
   "pluginSubListFrozenVersion": [],

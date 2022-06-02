@@ -13,7 +13,7 @@
     }
   },
   "selectedProject": "journals",
-  "selectedDraft": "Draft 1",
+  "selectedDraft": null,
   "userScriptFolder": null,
   "workflows": {
     "Default Workflow": {
@@ -42,6 +42,32 @@
           "id": "concatenate-text",
           "optionValues": {
             "separator": "\\n\\n---\\n\\n"
+          }
+        },
+        {
+          "id": "write-to-note",
+          "optionValues": {
+            "target": "manuscript.md",
+            "open-after": true
+          }
+        }
+      ]
+    },
+    "合并日记": {
+      "name": "合并日记",
+      "description": "",
+      "steps": [
+        {
+          "id": "prepend-title",
+          "optionValues": {
+            "format": "# $1",
+            "separator": "\n\n"
+          }
+        },
+        {
+          "id": "concatenate-text",
+          "optionValues": {
+            "separator": "\n\n"
           }
         },
         {

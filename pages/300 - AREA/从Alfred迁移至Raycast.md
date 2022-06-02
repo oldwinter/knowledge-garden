@@ -42,8 +42,8 @@
 	- 平替
 - 浏览器tabs搜索，平替[[chrome-omni插件]]
 	- raycast更强，bookmark和history都支持
-- [[devonthink]] 搜索 #todo
-	- raycast暂无替代
+- [[devonthink]] 搜索 
+	- raycast暂无替代，直接打开devonthink的Spotlight index开关，就可以文件直接搜索到，曲线救国
 - 词典查找
 	- 平替
 - [[豆瓣]]电影和书

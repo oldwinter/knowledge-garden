@@ -1,5 +1,5 @@
 {
-  "excalibrainFilepath": "draws/excalibrain.md",
+  "excalibrainFilepath": "excalibrain.md",
   "hierarchy": {
     "parents": [
       "Parent",
@@ -21,6 +21,7 @@
       "j"
     ]
   },
+  "inferAllLinksAsFriends": false,
   "renderAlias": true,
   "backgroundColor": "#0c3e6aff",
   "excludeFilepaths": [],
@@ -28,7 +29,7 @@
   "showAttachments": true,
   "showVirtualNodes": true,
   "showFolderNodes": false,
-  "showTagNodes": true,
+  "showTagNodes": false,
   "showPageNodes": true,
   "maxItemCount": 30,
   "renderSiblings": true,
@@ -92,7 +93,11 @@
     "strokeStyle": "solid",
     "roughness": 0,
     "startArrowHead": "none",
-    "endArrowHead": "none"
+    "endArrowHead": "none",
+    "showLabel": false,
+    "fontSize": 10,
+    "fontFamily": 3,
+    "textColor": "#ffffffff"
   },
   "inferredLinkStyle": {
     "strokeStyle": "dashed"
@@ -119,28 +124,16 @@
     "j": {}
   },
   "navigationHistory": [
-    "journals/祛魅.md",
-    "journals/双链笔记的异同分析.md",
-    "journals/2022-05-27.md",
-    "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
-    "pages/500 - ARCHIVE/外部资源的单向链接汇总.md",
-    "pages/500 - ARCHIVE/已发布长文/以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统.md",
-    "pages/400 - RESOURCE/知识原子库/人物库/刘慈欣.md",
-    "pages/400 - RESOURCE/书影音笔记/读书笔记/《金字塔原理》.md",
-    "pages/300 - AREA/知识管理/mac使用技巧.md",
-    "draws/ExcaliBrain Snapshot - mac使用技巧.excalidraw.md",
-    "pages/400 - RESOURCE/知识原子库/单词库&概念库/降维打击.md",
-    "folder:pages/400 - RESOURCE/知识原子库/单词库&概念库",
-    "pages/400 - RESOURCE/知识原子库/果盘先生.md",
-    "做为甲方，如何管理外包项目",
-    "pages/400 - RESOURCE/知识原子库/单词库&概念库/工具理性与价值理性.md",
-    "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
-    "folder:pages/300 - AREA/人+科技融合",
-    "pages/000 - INBOX/隐私保护.md",
-    "pages/200 - PROJECT/个人职业生涯/微服务.md",
-    "pages/300 - AREA/人+科技融合/个人技术栈与工具链梳理.md",
-    "pages/200 - PROJECT/我的开源项目/vscode/vscode.md",
-    "pages/300 - AREA/人+科技融合/devonthink.md",
-    "pages/300 - AREA/人+科技融合/B站的用户画像.md"
-  ]
+    "draws/excalibrain.md",
+    "双链笔记与卡片笔记",
+    "CONTENTS.md",
+    "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
+    "如何寻找电子书",
+    "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md",
+    "刑不可知，则威不可测"
+  ],
+  "allowOntologySuggester": true,
+  "ontologySuggesterParentTrigger": "::p",
+  "ontologySuggesterChildTrigger": "::c",
+  "ontologySuggesterFriendTrigger": "::f"
 }

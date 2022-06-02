@@ -39,19 +39,11 @@
   "insertCommaAfterFrontMatterCompletion": false,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "zotero": {
-      "zotero": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1651588915181
-        }
-      }
-    },
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 21,
-          "lastUpdated": 1653880295306
+          "count": 23,
+          "lastUpdated": 1654162747289
         }
       }
     },
@@ -180,6 +172,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1653913751703
+        }
+      }
+    },
+    "vim": {
+      "vim": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654153415306
         }
       }
     }

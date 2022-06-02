@@ -352,6 +352,135 @@
         "viewType": "reading",
         "shouldUpdate": true
       }
+    },
+    "pages/000 - INBOX/vscode必备插件.md": {
+      "table-id-0f67ll": {
+        "data": {
+          "headers": [
+            {
+              "id": "column-id-yx2jfa",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            },
+            {
+              "id": "column-id-6y187e",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            }
+          ],
+          "rows": [
+            {
+              "id": "row-id-hbk66s",
+              "creationTime": 1654087520365
+            },
+            {
+              "id": "row-id-et88wh",
+              "creationTime": 1654087520365
+            },
+            {
+              "id": "row-id-vjv9oz",
+              "creationTime": 1654087520365
+            },
+            {
+              "id": "row-id-9q3k39",
+              "creationTime": 1654087520365
+            },
+            {
+              "id": "row-id-3kegqk",
+              "creationTime": 1654087547715
+            }
+          ],
+          "cells": [
+            {
+              "id": "cell-id-5lb11y",
+              "rowId": "row-id-hbk66s",
+              "headerId": "column-id-yx2jfa",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-zhbiqr",
+              "rowId": "row-id-hbk66s",
+              "headerId": "column-id-6y187e",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-mzwkjb",
+              "rowId": "row-id-et88wh",
+              "headerId": "column-id-yx2jfa",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-xnaujm",
+              "rowId": "row-id-et88wh",
+              "headerId": "column-id-6y187e",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-60em99",
+              "rowId": "row-id-vjv9oz",
+              "headerId": "column-id-yx2jfa",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-zkhi9i",
+              "rowId": "row-id-vjv9oz",
+              "headerId": "column-id-6y187e",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-flxpcr",
+              "rowId": "row-id-9q3k39",
+              "headerId": "column-id-yx2jfa",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-154pda",
+              "rowId": "row-id-9q3k39",
+              "headerId": "column-id-6y187e",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-9t31k3",
+              "rowId": "row-id-3kegqk",
+              "headerId": "column-id-yx2jfa",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-rntaxf",
+              "rowId": "row-id-3kegqk",
+              "headerId": "column-id-6y187e",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            }
+          ],
+          "tags": []
+        },
+        "viewType": "reading",
+        "shouldUpdate": true
+      }
     }
   },
   "focusedElement": {
