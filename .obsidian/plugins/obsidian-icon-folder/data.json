@@ -60,7 +60,6 @@
   "pages/400 - RESOURCE/人文社科通识/法学": "⚖",
   "pages/400 - RESOURCE/人文社科通识/经济学": "💰",
   "pages/400 - RESOURCE/人文社科通识/金融学": "💵",
-  "CONTENTS.md": "FabBuffer",
   "pages/300 - AREA/投资与理财": "💰",
   "pages/400 - RESOURCE/城市与旅行": "🏙",
   "pages/400 - RESOURCE/小知识点": "🧶",
@@ -75,5 +74,6 @@
   "pages/200 - PROJECT/我的小说": "📕",
   "pages/EXTERNAL.md": "FabDiaspora",
   "pages/400 - RESOURCE/在线课程MOOC": "🌲",
-  "pages/500 - ARCHIVE/已发布文章": "🔼"
+  "pages/500 - ARCHIVE/已发布文章": "🔼",
+  "INDEXS.md": "FabBuffer"
 }
