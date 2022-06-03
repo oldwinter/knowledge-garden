@@ -1,0 +1,10 @@
+{
+  "id": "alx-folder-note",
+  "name": "AidenLx's Folder Note",
+  "version": "0.16.3",
+  "minAppVersion": "0.13.24",
+  "description": "Add description, summary and more info to folders with folder notes.",
+  "author": "AidenLx",
+  "authorUrl": "https://github.com/aidenlx",
+  "isDesktopOnly": false
+}

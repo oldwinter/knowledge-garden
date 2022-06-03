@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-shortcut-launcher",
+  "name": "Shortcut Launcher",
+  "version": "1.0.1",
+  "minAppVersion": "0.13.0",
+  "description": "Trigger shortcuts in Apple's Shortcuts app from Obsidian with custom commands.",
+  "author": "MacStories",
+  "authorUrl": "https://www.macstories.net",
+  "isDesktopOnly": false
+}

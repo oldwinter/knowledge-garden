@@ -1,0 +1,12 @@
+{
+  "launchers": [
+    {
+      "commandName": "牌",
+      "shortcutName": "ll",
+      "inputTypes": [
+        "Document Name"
+      ],
+      "separator": ","
+    }
+  ]
+}

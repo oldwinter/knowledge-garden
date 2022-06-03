@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "常青笔记 - Evergreen Note",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
+    },
+    {
+      "basename": "2022-06-03",
+      "path": "journals/2022-06-03.md"
+    },
+    {
+      "basename": "2022-06-02",
+      "path": "journals/2022-06-02.md"
+    },
+    {
+      "basename": "Index",
+      "path": "journals/Index.md"
+    },
+    {
       "basename": "Index",
       "path": "pages/200 - PROJECT/我的小说/Index.md"
     },
@@ -29,10 +45,6 @@
       "path": "pages/300 - AREA/人+科技融合/devonthink.md"
     },
     {
-      "basename": "2022-06-02",
-      "path": "journals/2022-06-02.md"
-    },
-    {
       "basename": "目前知名的在线mooc",
       "path": "pages/400 - RESOURCE/在线课程MOOC/目前知名的在线mooc.md"
     },
@@ -51,10 +63,6 @@
     {
       "basename": "2022-06-01",
       "path": "journals/2022-06-01.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "journals/2022-06-03.md"
     },
     {
       "basename": "vim、markdown与org-mode",

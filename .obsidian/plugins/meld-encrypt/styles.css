@@ -1,0 +1,42 @@
+.meld-e-row{
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.meld-e-icon{
+	flex: 1;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.meld-e-row input{
+	flex: 20;
+}
+
+.meld-e-platform-desktop .meld-e-button-confirm {
+	margin-left: 2.8em;
+	padding: 1em 2em;
+}
+.meld-e-platform-desktop .meld-e-button-confirm:focus{
+	font-weight: bold;
+}
+
+.meld-e-message{
+	margin-left: 2.8em;
+	margin-bottom: 1em;
+}
+
+.meld-e-button-next{
+	margin-left: 1em;
+	flex: 3;
+}
+
+.meld-e-platform-mobile .meld-e-button-next{
+	display: inline-block;
+	margin: 0 0 0 1em;
+	width: auto;
+}
+
+.meld-e-hint{
+	flex: 20;
+}

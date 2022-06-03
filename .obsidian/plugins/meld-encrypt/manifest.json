@@ -1,0 +1,10 @@
+{
+	"id": "meld-encrypt",
+	"name": "Meld Encrypt",
+	"version": "1.6.2",
+	"minAppVersion": "0.12.15",
+	"description": "Hide secrets in your notes",
+	"author": "meld-cp",
+	"authorUrl": "https://github.com/meld-cp/obsidian-encrypt",
+	"isDesktopOnly": false
+}

@@ -37,5 +37,10 @@
   "settings-search",
   "obsidian-pandoc-reference-list",
   "obsidian-pandoc",
-  "quick-explorer"
+  "quick-explorer",
+  "obsidian-shortcut-launcher",
+  "quickadd",
+  "alx-folder-note",
+  "obsidian-chartsview-plugin",
+  "obsidian-vault-statistics-plugin"
 ]
