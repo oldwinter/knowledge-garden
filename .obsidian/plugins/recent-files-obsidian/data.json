@@ -1,16 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "常青笔记 - Evergreen Note",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
+    },
+    {
+      "basename": "信息中心与物料中心",
+      "path": "信息中心与物料中心.md"
+    },
+    {
+      "basename": "项目式管理",
+      "path": "项目式管理.md"
+    },
+    {
+      "basename": "我获取信息的方法",
+      "path": "我获取信息的方法.md"
+    },
+    {
+      "basename": "我对信息管理的定义",
+      "path": "我对信息管理的定义.md"
+    },
+    {
+      "basename": "信息是知识的有机组成部分",
+      "path": "信息是知识的有机组成部分.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活",
+      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
+    },
+    {
+      "basename": "过程记录，持续迭代，兜底措施",
+      "path": "过程记录，持续迭代，兜底措施.md"
+    },
+    {
+      "basename": "工具的归工具，玩具的归玩具",
+      "path": "工具的归工具，玩具的归玩具.md"
+    },
+    {
+      "basename": "凯撒的归凯撒，上帝的归上帝",
+      "path": "凯撒的归凯撒，上帝的归上帝.md"
+    },
+    {
+      "basename": "80%默认、20%定制",
+      "path": "80%默认、20%定制.md"
+    },
+    {
+      "basename": "2022-06-01",
+      "path": "journals/2022-06-01.md"
+    },
+    {
+      "basename": "2022-06-02",
+      "path": "journals/2022-06-02.md"
     },
     {
       "basename": "2022-06-03",
       "path": "journals/2022-06-03.md"
     },
     {
-      "basename": "2022-06-02",
-      "path": "journals/2022-06-02.md"
+      "basename": "常青笔记 - Evergreen Note",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
     },
     {
       "basename": "Index",
@@ -53,16 +105,8 @@
       "path": "pages/400 - RESOURCE/在线课程MOOC/在线课程MOOC.md"
     },
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
-    },
-    {
       "basename": "burp suite",
       "path": "pages/000 - INBOX/burp suite.md"
-    },
-    {
-      "basename": "2022-06-01",
-      "path": "journals/2022-06-01.md"
     },
     {
       "basename": "vim、markdown与org-mode",
@@ -91,10 +135,6 @@
     {
       "basename": "EXTERNAL",
       "path": "pages/EXTERNAL.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活",
-      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
     },
     {
       "basename": "2022-三月",
@@ -159,26 +199,6 @@
     {
       "basename": "顺风与逆风",
       "path": "pages/400 - RESOURCE/小知识点/游戏笔记/顺风与逆风.md"
-    },
-    {
-      "basename": "兵线、防御塔及经济",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/兵线、防御塔及经济.md"
-    },
-    {
-      "basename": "红蓝双方地形及ban and pick - bp方法",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/红蓝双方地形及ban and pick - bp方法.md"
-    },
-    {
-      "basename": "出装与对线",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/出装与对线.md"
-    },
-    {
-      "basename": "王者荣耀",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md"
-    },
-    {
-      "basename": "草丛与视野",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/草丛与视野.md"
     }
   ],
   "omittedPaths": [],

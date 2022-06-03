@@ -5,14 +5,9 @@
       "path": "journals",
       "indexFile": "Index",
       "draftsPath": "Drafts/"
-    },
-    "pages/200 - PROJECT/我的小说": {
-      "path": "pages/200 - PROJECT/我的小说",
-      "indexFile": "Index",
-      "draftsPath": "Drafts/"
     }
   },
-  "selectedProject": "pages/200 - PROJECT/我的小说",
+  "selectedProject": "journals",
   "selectedDraft": "Draft 1",
   "userScriptFolder": null,
   "workflows": {
