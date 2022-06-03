@@ -82,6 +82,9 @@
  {:block/name "3阶魔方还原入门",
   :block/created-at 1651682706981,
   :block/updated-at 1651682706981}
+ {:block/name "80%默认优先，20%深度定制",
+  :block/created-at 1654273203506,
+  :block/updated-at 1654273203506}
  {:block/name "@tiago forte",
   :block/created-at 1652905490033,
   :block/updated-at 1652905490033}
@@ -136,6 +139,9 @@
  {:block/name "airtable",
   :block/created-at 1653395637964,
   :block/updated-at 1653395637964}
+ {:block/name "ai作画 - disco diffusion",
+  :block/created-at 1654273203004,
+  :block/updated-at 1654273203004}
  {:block/name "alfred",
   :block/created-at 1650818059636,
   :block/updated-at 1650818059636}
@@ -543,10 +549,10 @@
   :block/updated-at 1654231038420}
  {:block/name "jun 3rd, 2022",
   :block/created-at 1654231038452,
-  :block/updated-at 1654231038452}
+  :block/updated-at 1654276762665}
  {:block/name "jun 4th, 2022",
-  :block/created-at 1654272042673,
-  :block/updated-at 1654272042673}
+  :block/created-at 1654276493585,
+  :block/updated-at 1654276493585}
  {:block/name "kanban",
   :block/created-at 1653830901867,
   :block/updated-at 1653830901867}
@@ -1205,6 +1211,9 @@
  {:block/name "wireshark",
   :block/created-at 1650819310729,
   :block/updated-at 1650819310729}
+ {:block/name "workspace",
+  :block/created-at 1654273219824,
+  :block/updated-at 1654273219824}
  {:block/name "wox",
   :block/created-at 1650819301709,
   :block/updated-at 1650819301709}
@@ -1742,9 +1751,18 @@
  {:block/name "侠之大者",
   :block/created-at 1652203759093,
   :block/updated-at 1652203759093}
+ {:block/name "信息中心与物料中心",
+  :block/created-at 1654273203514,
+  :block/updated-at 1654273203514}
+ {:block/name "信息是知识的有机组成部分",
+  :block/created-at 1654273246748,
+  :block/updated-at 1654273246748}
  {:block/name "信息茧房",
   :block/created-at 1650819298894,
   :block/updated-at 1650819298894}
+ {:block/name "信息集散中心：滴答清单",
+  :block/created-at 1654273203515,
+  :block/updated-at 1654273203515}
  {:block/name "借刀杀人",
   :block/created-at 1652203759192,
   :block/updated-at 1652203759192}
@@ -1823,6 +1841,9 @@
  {:block/name "冯唐",
   :block/created-at 1650819317719,
   :block/updated-at 1650819317719}
+ {:block/name "凯撒的归凯撒，上帝的归上帝",
+  :block/created-at 1654273246807,
+  :block/updated-at 1654273246807}
  {:block/name "出装与对线",
   :block/created-at 1654231033819,
   :block/updated-at 1654231033819}
@@ -2075,6 +2096,9 @@
  {:block/name "声东击西",
   :block/created-at 1652203759183,
   :block/updated-at 1652203759183}
+ {:block/name "多维度链接",
+  :block/created-at 1654273203501,
+  :block/updated-at 1654273203501}
  {:block/name "多维表和excel有什么不同",
   :block/created-at 1653395636926,
   :block/updated-at 1653395636926}
@@ -2246,6 +2270,9 @@
  {:block/name "工具理性与价值理性",
   :block/created-at 1650819301807,
   :block/updated-at 1650819301807}
+ {:block/name "工具的归工具，玩具的归玩具",
+  :block/created-at 1654273203503,
+  :block/updated-at 1654273203503}
  {:block/name "工欲善其事",
   :block/created-at 1654231042520,
   :block/updated-at 1654231042520}
@@ -2432,6 +2459,9 @@
  {:block/name "我们不需要被教导，我们只需要被提醒",
   :block/created-at 1650819292804,
   :block/updated-at 1650819292804}
+ {:block/name "我对信息管理的定义",
+  :block/created-at 1654273203509,
+  :block/updated-at 1654273203509}
  {:block/name "我所理解的生活-212919",
   :block/created-at 1653626311950,
   :block/updated-at 1653626311950}
@@ -2455,7 +2485,7 @@
   :block/updated-at 1652421111457}
  {:block/name "战术后仰",
   :block/created-at 1654231038412,
-  :block/updated-at 1654231038412}
+  :block/updated-at 1654276737568}
  {:block/name "战略上藐视，战术上重视",
   :block/created-at 1650819301823,
   :block/updated-at 1650819301823}
@@ -2681,6 +2711,9 @@
  {:block/name "无线技术",
   :block/created-at 1653579679971,
   :block/updated-at 1653579679971}
+ {:block/name "既要重器轻用，也要万法归一",
+  :block/created-at 1654273203505,
+  :block/updated-at 1654273203505}
  {:block/name "时势造英雄：版本之子",
   :block/created-at 1654231042284,
   :block/updated-at 1654231042284}
@@ -3527,6 +3560,9 @@
  {:block/name "软实力和硬通货",
   :block/created-at 1651031860122,
   :block/updated-at 1651031860122}
+ {:block/name "输入驱动输出，输出倒逼输入",
+  :block/created-at 1654273203504,
+  :block/updated-at 1654273203504}
  {:block/name "输出系统",
   :block/created-at 1650819301173,
   :block/updated-at 1650819301173}
@@ -3551,6 +3587,9 @@
  {:block/name "过程和结果可知，则效果和目的可达",
   :block/created-at 1652390700170,
   :block/updated-at 1652390700170}
+ {:block/name "过程记录，持续迭代，兜底措施",
+  :block/created-at 1654273203507,
+  :block/updated-at 1654273203507}
  {:block/name "运动与健康",
   :block/created-at 1653830900310,
   :block/updated-at 1653830900310}
@@ -3695,6 +3734,9 @@
  {:block/name "项目owner机制",
   :block/created-at 1652390700116,
   :block/updated-at 1652390700116}
+ {:block/name "项目式管理",
+  :block/created-at 1654273203499,
+  :block/updated-at 1654273203499}
  {:block/name "项目笔记",
   :block/created-at 1652254579977,
   :block/updated-at 1652254579977}
@@ -3755,6 +3797,9 @@
  {:block/name "高德地图",
   :block/created-at 1650819313279,
   :block/updated-at 1650819313279}
+ {:block/name "高速缓存",
+  :block/created-at 1654273246702,
+  :block/updated-at 1654273246702}
  {:block/name "鲁班大师",
   :block/created-at 1654231042312,
   :block/updated-at 1654231042312}

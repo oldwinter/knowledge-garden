@@ -1,12 +1,108 @@
 {
   "recentFiles": [
     {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
+      "basename": "数字时代如何更好地工作与生活 - 图",
+      "path": "pages/draws/数字时代如何更好地工作与生活 - 图.md"
+    },
+    {
+      "basename": "2022-06-01",
+      "path": "journals/2022-06-01.md"
+    },
+    {
+      "basename": "2022-06-04",
+      "path": "journals/2022-06-04.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "Pasted Image 20220604012606_767",
+      "path": "assets/Pasted Image 20220604012606_767.png"
+    },
+    {
+      "basename": "Pasted Image 20220320202845_759",
+      "path": "assets/Pasted Image 20220320202845_759.png"
+    },
+    {
+      "basename": "Pasted Image 20220320202815_760",
+      "path": "assets/Pasted Image 20220320202815_760.png"
+    },
+    {
+      "basename": "Pasted Image 20220320191818_566",
+      "path": "assets/Pasted Image 20220320191818_566.png"
+    },
+    {
+      "basename": "Pasted Image 20220320191102_767",
+      "path": "assets/Pasted Image 20220320191102_767.png"
+    },
+    {
+      "basename": "Pasted Image 20220320190917_764",
+      "path": "assets/Pasted Image 20220320190917_764.png"
+    },
+    {
+      "basename": "Pasted Image 20220320190847_762",
+      "path": "assets/Pasted Image 20220320190847_762.png"
+    },
+    {
+      "basename": "Pasted Image 20220320190802_762",
+      "path": "assets/Pasted Image 20220320190802_762.png"
+    },
+    {
+      "basename": "Pasted Image 20220317004053",
+      "path": "assets/Pasted Image 20220317004053.png"
+    },
+    {
+      "basename": "2022-06-03",
+      "path": "journals/2022-06-03.md"
+    },
+    {
+      "basename": "战术后仰",
+      "path": "pages/000 - INBOX/战术后仰.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
+    },
+    {
+      "basename": "README.pandoc",
+      "path": "README.pandoc.md"
+    },
+    {
+      "basename": "500 - ARCHIVE",
+      "path": "pages/500 - ARCHIVE/500 - ARCHIVE.md"
+    },
+    {
+      "basename": "已发布文章",
+      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
+    },
+    {
+      "basename": "华为，今夜请将我遗忘",
+      "path": "pages/500 - ARCHIVE/已发布文章/华为，今夜请将我遗忘.md"
+    },
+    {
+      "basename": "Golang",
+      "path": "pages/000 - INBOX/Golang.md"
+    },
+    {
+      "basename": "AI作画 - disco diffusion",
+      "path": "pages/000 - INBOX/AI作画 - disco diffusion.md"
+    },
+    {
+      "basename": "文章发布工作流梳理",
+      "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "先鉴定你的做笔记风格，再选一款app上车",
+      "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
     },
     {
       "basename": "80%默认优先，20%深度定制",
@@ -45,18 +141,6 @@
       "path": "pages/000 - INBOX/过程记录，持续迭代，兜底措施.md"
     },
     {
-      "basename": "Golang",
-      "path": "journals/Golang.md"
-    },
-    {
-      "basename": "AI作画 - disco diffusion",
-      "path": "journals/AI作画 - disco diffusion.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "journals/2022-06-03.md"
-    },
-    {
       "basename": "效率系统4大子系统联动与配合",
       "path": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
     },
@@ -67,10 +151,6 @@
     {
       "basename": "数字时代如何更好地工作与生活",
       "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
-    },
-    {
-      "basename": "2022-06-01",
-      "path": "journals/2022-06-01.md"
     },
     {
       "basename": "2022-06-02",
@@ -119,78 +199,6 @@
     {
       "basename": "vim、markdown与org-mode",
       "path": "pages/000 - INBOX/vim、markdown与org-mode.md"
-    },
-    {
-      "basename": "org-mode",
-      "path": "pages/000 - INBOX/org-mode.md"
-    },
-    {
-      "basename": "vim",
-      "path": "pages/000 - INBOX/vim.md"
-    },
-    {
-      "basename": "精益",
-      "path": "pages/200 - PROJECT/软件项目管理/精益.md"
-    },
-    {
-      "basename": "过程和结果可知，则效果和目的可达",
-      "path": "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md"
-    },
-    {
-      "basename": "如何高效开会",
-      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-    },
-    {
-      "basename": "EXTERNAL",
-      "path": "pages/EXTERNAL.md"
-    },
-    {
-      "basename": "2022-三月",
-      "path": "journals/每月每季度总结/2022-三月.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "常用icon",
-      "path": "pages/000 - INBOX/常用icon.md"
-    },
-    {
-      "basename": "2022-05-23",
-      "path": "journals/Drafts/Draft 1/2022-05-23.md"
-    },
-    {
-      "basename": "2022-五月",
-      "path": "journals/每月每季度总结/2022-五月.md"
-    },
-    {
-      "basename": "manuscript",
-      "path": "pages/000 - INBOX/manuscript.md"
-    },
-    {
-      "basename": "vscode必备插件",
-      "path": "pages/000 - INBOX/vscode必备插件.md"
-    },
-    {
-      "basename": "bionic reading",
-      "path": "pages/000 - INBOX/bionic reading.md"
-    },
-    {
-      "basename": "任务清单的得与失",
-      "path": "pages/000 - INBOX/任务清单的得与失.md"
-    },
-    {
-      "basename": "2022-05-24",
-      "path": "journals/Drafts/Draft 1/2022-05-24.md"
-    },
-    {
-      "basename": "先鉴定你的做笔记风格，再选一款app上车",
-      "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
-    },
-    {
-      "basename": "文章发布工作流梳理",
-      "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
     }
   ],
   "omittedPaths": [],

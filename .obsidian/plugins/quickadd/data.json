@@ -1,5 +1,40 @@
 {
-  "choices": [],
+  "choices": [
+    {
+      "id": "4987c0d1-5944-41b2-8164-d013135c033c",
+      "name": "aa",
+      "type": "Capture",
+      "command": false,
+      "appendLink": false,
+      "captureTo": "",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    }
+  ],
   "macros": [],
-  "inputPrompt": "single-line"
+  "inputPrompt": "multi-line"
 }

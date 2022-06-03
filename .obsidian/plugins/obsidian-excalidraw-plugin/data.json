@@ -1,8 +1,8 @@
 {
-  "folder": "draws",
+  "folder": "",
   "embedUseExcalidrawFolder": true,
   "templateFilePath": "draws/Template.excalidraw",
-  "scriptFolderPath": "draws/Scripts",
+  "scriptFolderPath": "Excalidraw/Scripts",
   "compress": true,
   "autosave": true,
   "autosaveInterval": 10000,
@@ -49,7 +49,7 @@
   "experimentalFileTag": "✏️",
   "experimentalLivePreview": true,
   "experimentalEnableFourthFont": true,
-  "experimantalFourthFont": "draws/fonts/chinese.ttf",
+  "experimantalFourthFont": "Virgil",
   "fieldSuggester": true,
   "compatibilityMode": false,
   "drawingOpenCount": 0,
@@ -91369,7 +91369,7 @@
   },
   "defaultTrayMode": true,
   "previousRelease": "1.6.24",
-  "showReleaseNotes": false,
+  "showReleaseNotes": true,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
   "fieldSuggestor": true
 }

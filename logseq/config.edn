@@ -13,7 +13,7 @@
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
- :hidden ["draws"]
+ :hidden [""]
 
  ;; When creating the new journal page, the app will use your template if there is one.
  ;; You only need to input your template name here.
@@ -178,6 +178,7 @@
  :graph/settings {:journal? true, :builtin-pages? true}
  :feature/enable-timetracking? true
  :ui/show-brackets? true
+ :feature/enable-journals? true
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
  ;; :srs/learning-fraction 0.5
