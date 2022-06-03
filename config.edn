@@ -13,22 +13,18 @@
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
- :hidden []
+ :hidden ["pages/900 - DRAWS.md"]
 
  ;; When creating the new journal page, the app will use your template if there is one.
  ;; You only need to input your template name here.
  :default-templates
- {:journals ""}
+ {:journals "templates/10 - 日记模板.md"}
 
  ;; Whether to enable hover on tooltip preview feature
  ;; Default is true, you can also toggle this via setting page
  :ui/enable-tooltip? true
 
- :feature/enable-block-timestamps? false
-
- ;; Specify the date on which the week starts.
- ;; Goes from 0 to 6 (Monday to Sunday), default to 6
- :start-of-week 6
+ :feature/enable-block-timestamps? true
 
  ;; Specify a custom CSS import
  ;; This option take precedence over your local `logseq/custom.css` file
@@ -56,12 +52,11 @@
  ;; 2. Setup page "Jun 3rd, 2021" as home page without sidebar
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
- ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
  :default-home {:page "home" :sidebar ["INDEXS"]}
- 
+
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
- ;; :pages-directory "your-directory"
+ :pages-directory "pages/000 - INBOX"
 
  ;; Tell logseq to use a specific folder in the repo as a default location for journals
  ;; if not specified, journals are stored in `journals` directory
@@ -177,7 +172,13 @@
  :ref/default-open-blocks-level 2
 
  :ref/linked-references-collapsed-threshold 50
- :favorites ["INDEXS"]
+ :favorites ["个人信息系统涉及的核心软件和云服务"]
+ :editor/logical-outdenting? false
+ :publishing/all-pages-public? true
+ :graph/settings {:journal? true, :builtin-pages? true}
+ :feature/enable-timetracking? true
+ :ui/show-brackets? true
+ :feature/enable-journals? true
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
  ;; :srs/learning-fraction 0.5
