@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "AI作画 - disco diffusion",
+      "path": "journals/AI作画 - disco diffusion.md"
+    },
+    {
+      "basename": "2022-06-03",
+      "path": "journals/2022-06-03.md"
+    },
+    {
+      "basename": "效率系统4大子系统联动与配合",
+      "path": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
+    },
+    {
       "basename": "CONTENTS",
       "path": "CONTENTS.md"
     },
@@ -55,10 +67,6 @@
     {
       "basename": "2022-06-02",
       "path": "journals/2022-06-02.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "journals/2022-06-03.md"
     },
     {
       "basename": "常青笔记 - Evergreen Note",
@@ -191,14 +199,6 @@
     {
       "basename": "战术后仰",
       "path": "pages/000 - INBOX/战术后仰.md"
-    },
-    {
-      "basename": "开局阵容分析与应对",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/开局阵容分析与应对.md"
-    },
-    {
-      "basename": "顺风与逆风",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/顺风与逆风.md"
     }
   ],
   "omittedPaths": [],
