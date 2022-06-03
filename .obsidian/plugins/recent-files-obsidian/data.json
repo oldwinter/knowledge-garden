@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
+    },
+    {
+      "basename": "80%默认优先，20%深度定制",
+      "path": "pages/000 - INBOX/80%默认优先，20%深度定制.md"
+    },
+    {
+      "basename": "工具的归工具，玩具的归玩具",
+      "path": "pages/000 - INBOX/工具的归工具，玩具的归玩具.md"
+    },
+    {
+      "basename": "信息中心与物料中心",
+      "path": "pages/000 - INBOX/信息中心与物料中心.md"
+    },
+    {
+      "basename": "信息是知识的有机组成部分",
+      "path": "pages/000 - INBOX/信息是知识的有机组成部分.md"
+    },
+    {
+      "basename": "项目式管理",
+      "path": "pages/000 - INBOX/项目式管理.md"
+    },
+    {
+      "basename": "我获取信息的方法",
+      "path": "pages/000 - INBOX/我获取信息的方法.md"
+    },
+    {
+      "basename": "我对信息管理的定义",
+      "path": "pages/000 - INBOX/我对信息管理的定义.md"
+    },
+    {
+      "basename": "凯撒的归凯撒，上帝的归上帝",
+      "path": "pages/000 - INBOX/凯撒的归凯撒，上帝的归上帝.md"
+    },
+    {
+      "basename": "过程记录，持续迭代，兜底措施",
+      "path": "pages/000 - INBOX/过程记录，持续迭代，兜底措施.md"
+    },
+    {
+      "basename": "Golang",
+      "path": "journals/Golang.md"
+    },
+    {
       "basename": "AI作画 - disco diffusion",
       "path": "journals/AI作画 - disco diffusion.md"
     },
@@ -13,52 +61,12 @@
       "path": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
     },
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
-    },
-    {
-      "basename": "信息中心与物料中心",
-      "path": "信息中心与物料中心.md"
-    },
-    {
-      "basename": "项目式管理",
-      "path": "项目式管理.md"
-    },
-    {
-      "basename": "我获取信息的方法",
-      "path": "我获取信息的方法.md"
-    },
-    {
-      "basename": "我对信息管理的定义",
-      "path": "我对信息管理的定义.md"
-    },
-    {
-      "basename": "信息是知识的有机组成部分",
-      "path": "信息是知识的有机组成部分.md"
-    },
-    {
       "basename": "个人信息管理系统",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
     },
     {
       "basename": "数字时代如何更好地工作与生活",
       "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
-    },
-    {
-      "basename": "过程记录，持续迭代，兜底措施",
-      "path": "过程记录，持续迭代，兜底措施.md"
-    },
-    {
-      "basename": "工具的归工具，玩具的归玩具",
-      "path": "工具的归工具，玩具的归玩具.md"
-    },
-    {
-      "basename": "凯撒的归凯撒，上帝的归上帝",
-      "path": "凯撒的归凯撒，上帝的归上帝.md"
-    },
-    {
-      "basename": "80%默认、20%定制",
-      "path": "80%默认、20%定制.md"
     },
     {
       "basename": "2022-06-01",
@@ -75,14 +83,6 @@
     {
       "basename": "Index",
       "path": "journals/Index.md"
-    },
-    {
-      "basename": "Index",
-      "path": "pages/200 - PROJECT/我的小说/Index.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "机遇与个人能力",
@@ -191,14 +191,6 @@
     {
       "basename": "文章发布工作流梳理",
       "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
-    },
-    {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
-    },
-    {
-      "basename": "战术后仰",
-      "path": "pages/000 - INBOX/战术后仰.md"
     }
   ],
   "omittedPaths": [],

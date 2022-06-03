@@ -17,7 +17,7 @@
   "communityPluginSortOrder": "download",
   "lineWrap": true,
   "showUnsupportedFiles": true,
-  "strictLineBreaks": false,
+  "strictLineBreaks": true,
   "pdfExportSettings": {
     "pageSize": "A4",
     "landscape": false,

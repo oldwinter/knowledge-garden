@@ -100,9 +100,6 @@
  {:block/name "@费曼",
   :block/created-at 1653395642536,
   :block/updated-at 1653395642536}
- {:block/name "[excalidraw]",
-  :block/created-at 1654231039744,
-  :block/updated-at 1654231039744}
  {:block/name "a",
   :block/created-at 1641967503322,
   :block/updated-at 1641967503322}
@@ -273,7 +270,7 @@
   :block/updated-at 1650819303877}
  {:block/name "contents",
   :block/created-at 1653728747256,
-  :block/updated-at 1653728747256}
+  :block/updated-at 1654231733233}
  {:block/name "context",
   :block/created-at 1653395635641,
   :block/updated-at 1653395635641}
@@ -547,6 +544,9 @@
  {:block/name "jun 3rd, 2022",
   :block/created-at 1654231038452,
   :block/updated-at 1654231038452}
+ {:block/name "jun 4th, 2022",
+  :block/created-at 1654272042673,
+  :block/updated-at 1654272042673}
  {:block/name "kanban",
   :block/created-at 1653830901867,
   :block/updated-at 1653830901867}
@@ -887,30 +887,6 @@
  {:block/name "pasted image 20220317004053.png",
   :block/created-at 1650819295347,
   :block/updated-at 1650819295347}
- {:block/name "pasted image 20220320190802_762.png",
-  :block/created-at 1654231039740,
-  :block/updated-at 1654231039740}
- {:block/name "pasted image 20220320190917_764.png",
-  :block/created-at 1654231039739,
-  :block/updated-at 1654231039739}
- {:block/name "pasted image 20220320191102_767.png",
-  :block/created-at 1654231039738,
-  :block/updated-at 1654231039738}
- {:block/name "pasted image 20220320191818_566.png",
-  :block/created-at 1654231039737,
-  :block/updated-at 1654231039737}
- {:block/name "pasted image 20220320202815_760.png",
-  :block/created-at 1654231039736,
-  :block/updated-at 1654231039736}
- {:block/name "pasted image 20220320202845_759.png",
-  :block/created-at 1654231039735,
-  :block/updated-at 1654231039735}
- {:block/name "pasted image 20220320203031_118.png",
-  :block/created-at 1654231039734,
-  :block/updated-at 1654231039734}
- {:block/name "pasted image 20220320203200_352.png",
-  :block/created-at 1654231039733,
-  :block/updated-at 1654231039733}
  {:block/name "pasted image 20220428150722.png",
   :block/created-at 1651208168473,
   :block/updated-at 1651208168473}
@@ -1544,9 +1520,6 @@
  {:block/name "个人输出发布系统",
   :block/created-at 1652390704452,
   :block/updated-at 1652390704452}
- {:block/name "个人输出发布系统|输出系统",
-  :block/created-at 1654231039729,
-  :block/updated-at 1654231039729}
  {:block/name "个人高效学习系统",
   :block/created-at 1650819287273,
   :block/updated-at 1650819287273}
@@ -2606,12 +2579,18 @@
  {:block/name "政治正确",
   :block/created-at 1650819314166,
   :block/updated-at 1650819314166}
+ {:block/name "效率成瘾五味药",
+  :block/created-at 1654231733232,
+  :block/updated-at 1654231733232}
  {:block/name "效率的定义和原则",
   :block/created-at 1650819301692,
   :block/updated-at 1650819301692}
  {:block/name "效率系统4大子系统联动与配合",
   :block/created-at 1652390704467,
   :block/updated-at 1652390704467}
+ {:block/name "效率系统三原则",
+  :block/created-at 1654231412487,
+  :block/updated-at 1654231412487}
  {:block/name "教导与提醒",
   :block/created-at 1650819314996,
   :block/updated-at 1650819314996}
@@ -2621,9 +2600,6 @@
  {:block/name "数字时代如何更好地工作与生活",
   :block/created-at 1654231033278,
   :block/updated-at 1654231033278}
- {:block/name "数字时代如何更好地工作与生活 - moc|人+科技融合",
-  :block/created-at 1653830900308,
-  :block/updated-at 1653830900308}
  {:block/name "数字时代如何更好地工作与生活 - moc|工作和生活的效率体系建设",
   :block/created-at 1653579681355,
   :block/updated-at 1653579681355}
