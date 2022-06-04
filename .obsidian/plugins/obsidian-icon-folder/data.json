@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabWeixin",
-      "📍",
-      "FasNotesMedical",
-      "🎵",
-      "🖥️",
-      "📖",
-      "📹",
-      "Fab42Group",
+      "FabEarlybirds",
+      "🌲",
       "⏩",
-      "🌲"
+      "Fab42Group",
+      "📹",
+      "📖",
+      "🖥️",
+      "🎵",
+      "FasNotesMedical",
+      "📍"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -74,5 +74,6 @@
   "pages/200 - PROJECT/我的小说": "📕",
   "pages/EXTERNAL.md": "FabDiaspora",
   "pages/400 - RESOURCE/在线课程MOOC": "🌲",
-  "pages/500 - ARCHIVE/已发布文章": "🔼"
+  "pages/500 - ARCHIVE/已发布文章": "🔼",
+  "INDEXS.md": "FabEarlybirds"
 }
