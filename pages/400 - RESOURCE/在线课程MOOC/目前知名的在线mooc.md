@@ -15,18 +15,15 @@
 - [TED: Ideas Worth Spreading](https://www.ted.com/)
 - [一席](https://yixi.tv/#/home)
 
-主打[[KOL]]课程
+主打 [[KOL]] 课程
 - [网易云课堂 - 悄悄变强大](https://study.163.com/)
 - [腾讯学堂-在线课堂](https://daxuepc.com/)
 - [混沌在线课程_创新课程_商业模式创新课程_哲科思维课程-混沌官网](https://www.hundun.cn/)
 
-主打[[KOL]]和[[UGC]]
+主打 [[KOL]]和[[UGC]]
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)
 - [YouTube](https://www.youtube.com/)
 - [小红书_标记我的生活](https://www.xiaohongshu.com/)
-- 
-主打短课程，app型课程
+主打短课程，app 型课程
 - [得到APP - 知识就是力量，知识就在得到](https://www.dedao.cn/)
 - [极客时间-轻松学习，高效学习-极客邦](https://time.geekbang.org/)
-
-

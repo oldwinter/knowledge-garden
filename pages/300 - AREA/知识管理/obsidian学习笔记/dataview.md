@@ -6,29 +6,31 @@ aliases: dataviewjs
 
 [GitHub - blacksmithgu/obsidian-dataview: A high-performance data index and query language over Markdown files, for https://obsidian.md/.](https://github.com/blacksmithgu/obsidian-dataview)
 
-dataviewjs可以实现更灵活的语法，比如表格插入一个自增长的变量，实现表格的No行号显示效果。
+dataviewjs 可以实现更灵活的语法，比如表格插入一个自增长的变量，实现表格的 No 行号显示效果。
 
-dataviewjs社区有很多酷炫的玩法和现有代码， 当要用的时候，先去找找看，别自己造轮子。
+dataviewjs 社区有很多酷炫的玩法和现有代码， 当要用的时候，先去找找看，别自己造轮子。
 
-dataview有种数据挖掘的感觉。通过不同角度分析和挖掘自己的大脑曾经的思考轨迹和路径。
+dataview 有种数据挖掘的感觉。通过不同角度分析和挖掘自己的大脑曾经的思考轨迹和路径。
 
-## dataviewjs的内置函数与变量
+## dataviewjs 的内置函数与变量
 
 [[dataview的数据来源]]
+
 不支持代码智能联想，只能手动记忆或查表。
+
 [Codeblock Reference - Dataview](https://blacksmithgu.github.io/obsidian-dataview/api/code-reference/)
 
 ## Query
 
 ### 预备数据：
 
-测试dataviewjs的查询效果，勿删
-测试outlinks[[test]]
+测试 dataviewjs 的查询效果，勿删
+测试 outlinks[[test]]
 
 ### 代码
 
-相当于获取dataview对象的内部数据，然后需要通过Render函数，类似console.log打印出来，才能看到。
-目前看，只能根据tag、文件夹、路径/文件名这几个属性query页面pages
+相当于获取 dataview 对象的内部数据，然后需要通过 Render 函数，类似 console.log 打印出来，才能看到。
+目前看，只能根据 tag、文件夹、路径/文件名这几个属性 query 页面 pages
 
 ```dataviewjs
 // ## Query
@@ -63,7 +65,7 @@ dv.paragraph(b);
 
 ## Render
 
-就是将数据打印print出来
+就是将数据打印 print 出来
 
 ```dataviewjs
 // ## Render
@@ -78,12 +80,12 @@ dv.span("This is some text");
 
 ## Dataviews
 
-dataviews和notion的dataview类似，打印展示table、list、tasklist等视图。
+dataviews 和 notion 的 dataview 类似，打印展示 table、list、tasklist 等视图。
 
-相当于是前面获取了pages以后，这里对pages进行profile处理，获取自己关心的一些属性，参照前面打印出来的属性值即可，比如tags、etags、cdate
-获取到的是promise，render函数相当于阻塞获取数据，以及where函数相当于是传入一个筛选功能的函数
+相当于是前面获取了 pages 以后，这里对 pages 进行 profile 处理，获取自己关心的一些属性，参照前面打印出来的属性值即可，比如 tags、etags、cdate
+获取到的是 promise，render 函数相当于阻塞获取数据，以及 where 函数相当于是传入一个筛选功能的函数
 
-taskList起到了render函数同样的作用。
+taskList 起到了 render 函数同样的作用。
 
 ```dataviewjs
 // ## Dataviews
@@ -118,7 +120,7 @@ dv.table(["File", "mday", "cday", "tags"], dv.pages("#review")
 
 ## Utility
 
-相当于提供了一些通用函数进行便捷utils处理。
+相当于提供了一些通用函数进行便捷 utils 处理。
 
 ```javascript
 // ## Utility
@@ -184,7 +186,7 @@ for (let group of dv.pages("#todo").groupBy(p => p.genre)) {
 
 ```
 
-### 未完成tasks
+### 未完成 tasks
 
 ```dataview
 task from #projects/active
@@ -194,7 +196,7 @@ task from #projects/active
 dv.taskList(dv.pages().file.tasks.where(t => !t.completed));
 ```
 
-### 已完成tasks
+### 已完成 tasks
 
 ```dataviewjs
 dv.taskList(dv.pages('"/" and -"pages/500 - ARCHIVE"').file.tasks.where(t => t.completed));

@@ -1,39 +1,44 @@
----
-aliases: markdown格式的ppt, slides学习笔记教程, reveal.js教程
-tags: 
+--- %% fold %%
+
+aliases: markdown 格式的 ppt, slides 学习笔记教程, reveal.js 教程
+
+tags:
+
 theme: white  
+
 width: 960
+
 ---
 
-## 为啥用markdown方式的ppt
+## 为啥用 markdown 方式的 ppt
 
-双向引用，直接ppt还有个好处，就是双向同步，不会改了这忘了那
-还有[[slidev]]正在开发中，等成熟了和[[revealjs]]综合对比看看。 ^4f22e2
+双向引用，直接 ppt 还有个好处，就是双向同步，不会改了这忘了那
+还有 [[slidev]]正在开发中，等成熟了和[[revealjs]] 综合对比看看。 ^4f22e2
 
 ## 奇技淫巧
 
 [[advanced slides 的 奇技淫巧]]
 
-## 插件简介
+## 插件简介 %% fold %%
 
-这个插件就是魔改的[reveal.js](https://revealjs.com/)，和obsidian进行了更好地融合。
-官方文档[Advanced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/getting-start/)
+这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。
+官方文档 [Advanced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/getting-start/)
 > We follow the philosophy of `convention over configuration`, which means that in most cases it is sufficient to simply write a Slide in **Obsidian Markdown syntax**.
 
-%%我用的目的，应该就是基于现有的结构化的文档，进行分钟级的低时间成本改造，立马就可以达到ppt效果。%%
+%% 我用的目的，应该就是基于现有的结构化的文档，进行分钟级的低时间成本改造，立马就可以达到 ppt 效果。%%
 
 ---
 
-## 基本使用
+## 基本使用 %% fold %%
 
 --
 
-### Links
+### Links %% fold %%
 
-- 默认的两个中括号，它不识别，如果需要呈现跳转链接，需要用回传统的markdown的中括号加小括号的方式。[Link to note](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)
+- 默认的两个中括号，它不识别，如果需要呈现跳转链接，需要用回传统的 markdown 的中括号加小括号的方式。[Link to note](obsidian://open?path=D:%2Fpath%2Fto%2Ffile.md)
   --
 
-### 表格
+### 表格 %% fold %%
 
 | a      | b        | c   |
 | ------ | -------- | --- |
@@ -42,7 +47,7 @@ width: 960
 
 --
 
-### 代码支持
+### 代码支持 %% fold %%
 
 ```shell
 git clone https://
@@ -65,13 +70,13 @@ var d=5
 
 --
 
-### 垂直分页
+### 垂直分页 %% fold %%
 
-刚才已经用到，用2个-分割开就行
+刚才已经用到，用 2 个 - 分割开就行
 
 --
 
-### 引入单元素的css
+### 引入单元素的 css %% fold %%
 
 text with border <!-- element class="with-border" -->
 
@@ -81,32 +86,32 @@ text with attribute <!-- element data-toggle="modal" -->
 
 --
 
-### 单页ppt的css全局样式控制
+### 单页 ppt 的 css 全局样式控制 %% fold %%
 
 <!-- .slide: style="background-color: coral;" -->
 这一页的主题被控制
 
 --
 
-### 单页ppt划分成block，进行细粒度css样式控制
+### 单页 ppt 划分成 block，进行细粒度 css 样式控制 %% fold %%
 
 ::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
-块1
+块 1
 	::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
-	块2
+	块 2
 	::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
 
 ::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
 
 ::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
-块3
-块3
+块 3
+块 3
 可见生效方式要有前和尾形成闭合
 ::: <!--SR:!2022-04-02,4,270!2022-04-02,4,270--> <!--SR:!2022-04-02,4,270!2022-04-02,4,270-->
 
 --
 
-### 单页内的元素出现和消失的控制
+### 单页内的元素出现和消失的控制 %% fold %%
 
 Fade in <!-- element class="fragment" -->
 
@@ -128,7 +133,7 @@ Slide up while fading in <!-- element class="fragment fade-up" -->
   
   --
 
-### 单页内的元素用css的style语法控制样式
+### 单页内的元素用 css 的 style 语法控制样式 %% fold %%
 
 <style>
 	.with-border{
@@ -142,7 +147,7 @@ styled text <!-- element class="with-border" -->
 
 --
 
-也可以引入css文件，但我应该用不到，没必要搞这么复杂的样式。
+也可以引入 css 文件，但我应该用不到，没必要搞这么复杂的样式。
 
 ```md
 前后要加---，相当于放在metadata里面
@@ -151,11 +156,11 @@ css: [css/layout.css,css/customFonts.css]
 
 --
 
-### 单页的背景控制，这很有用
+### 单页的背景控制，这很有用 %% fold %%
 
 <!-- .slide: data-background="#ff0000" -->
 
-### Slide with hex based background
+### Slide with hex based background %% fold %%
 
 --
 
@@ -164,46 +169,50 @@ css: [css/layout.css,css/customFonts.css]
   
   --
 
-### 演讲者视图
+### 演讲者视图 %% fold %%
 
-浏览器打开后，按s，
+浏览器打开后，按 s，
 
 note:
 
-note之后，就是演讲者自己的笔记和注释
+note 之后，就是演讲者自己的笔记和注释
 
 --
 
-### 最简单的控制元素进场顺序
+### 最简单的控制元素进场顺序 %% fold %%
 
-用+号和）号。实时阅览模式，➕会被自动变成圆，这里得换成编辑模式
-- aaa
+用 + 号和）号。实时阅览模式，➕会被自动变成圆，这里得换成编辑模式
+- aaa %% fold %%
   + bbb
   + ccc
   
   --
 
-### 打开excalidraw导出开关，这边用svg或png
+### 打开 excalidraw 导出开关，这边用 svg 或 png %% fold %%
 
 ![[数字时代如何更好地工作与生活 - 图.svg|500]]
 
 --
 
-### 各种icon和动画
+### 各种 icon 和动画 %% fold %%
 
-要引入html和css，过于麻烦，以后有需要再说：
+要引入 html 和 css，过于麻烦，以后有需要再说：
+
 [Advaced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/extend-syntax/fontawesome/)
 
 ---
 
-## 版面和布局-分割元素
+## 版面和布局 - 分割元素
 
 --
 <split even>
 
 ![](https://picsum.photos/id/1005/250/250)
+
 ![](https://picsum.photos/id/1010/250/250)
+
 ![](https://picsum.photos/id/1025/250/250)
+
 </split>
 
 --
@@ -243,28 +252,38 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 ![](https://picsum.photos/id/1014/250/250)
 
 ![](https://picsum.photos/id/1015/250/250)
+
 </split>
 
 --
 <split no-margin>
 
 ![](https://picsum.photos/id/1001/250/250)
+
 ![](https://picsum.photos/id/1002/250/250)
+
 ![](https://picsum.photos/id/1003/250/250)
+
 ![](https://picsum.photos/id/1004/250/250)
+
 ![](https://picsum.photos/id/1005/250/250)
+
 ![](https://picsum.photos/id/1006/250/250)
+
 ![](https://picsum.photos/id/1009/250/250)
+
 ![](https://picsum.photos/id/1008/250/250)
+
 </split>
 --
 
 有很多高级的格式和技巧，需要用到的时候再学习。
+
 [Advaced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/extend-syntax/slides/)
 
 ---
 
-## 版面和布局-网格分布
+## 版面和布局 - 网格分布 %% fold %%
 
 --
 <grid drag="60 55" drop="5 10" bg="red">
@@ -323,7 +342,7 @@ Left
 
 </grid>
 
-### Noise <!-- element drag="55 50" drop="bottomright" bg="rgb(0,0,0)"-->
+### Noise <!-- element drag="55 50" drop="bottomright" bg="rgb(0,0,0)"--> %% fold %%
 
 <grid drag="25 20" drop="center" bg="green" rotate="-15">
 
@@ -357,10 +376,10 @@ Text is too blurry <!-- element drag="30 25" drop="5 15" bg="#B565A7" filter="se
 
 ---
 
-## 主题和配置
+## 主题和配置 %% fold %%
 
 --
-在metadata里面加theme:
+在 metadata 里面加 theme:
 
 ```
 -   black (default)
@@ -379,4 +398,4 @@ Text is too blurry <!-- element drag="30 25" drop="5 15" bg="#B565A7" filter="se
 
 --
 
-metadata有各种参数可以控制主题
+metadata 有各种参数可以控制主题

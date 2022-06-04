@@ -93,7 +93,7 @@
   "shimmering-focus@@no-sliding-panes-shadows": true,
   "shimmering-focus@@no-built-in-supercharged-links": true,
   "shimmering-focus@@grayscale-favicons": false,
-  "shimmering-focus@@no-heading-bg": false,
+  "shimmering-focus@@no-heading-bg": true,
   "shimmering-focus@@no-alternating-header-italics": true,
   "shimmering-focus@@classic-inline-backlinks": true,
   "shimmering-focus@@active-line-highlight-options": "active-line-emphasized-bg",
@@ -138,5 +138,7 @@
   "shimmering-focus@@longform-text-indent": false,
   "shimmering-focus@@longform-hue-shift-light": 105,
   "shimmering-focus@@longform-font-size": 1.1,
-  "shimmering-focus@@show-fold-indicators": true
+  "shimmering-focus@@show-fold-indicators": true,
+  "shimmering-focus@@unicode-emojis": false,
+  "shimmering-focus@@h3": 1.25
 }

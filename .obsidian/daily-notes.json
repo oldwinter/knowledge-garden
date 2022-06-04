@@ -1,6 +1,6 @@
 {
   "folder": "journals",
-  "autorun": false,
+  "autorun": true,
   "template": "templates/10 - 日记模板",
   "format": "YYYY-MM-DD"
 }

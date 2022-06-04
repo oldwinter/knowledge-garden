@@ -10,7 +10,7 @@
         "enabled": true,
         "format": "YYYY-MM-DD",
         "folder": "journals",
-        "openAtStartup": false,
+        "openAtStartup": true,
         "templatePath": "templates/10 - 日记模板.md"
       },
       "week": {

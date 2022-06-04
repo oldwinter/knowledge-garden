@@ -1,8 +1,9 @@
 ## 官方文档
 
 [About Mermaid (mermaid-js.github.io)](https://mermaid-js.github.io/mermaid/#/README)
->Mermaid还可以自建服务器 通过url参数的方式提供渲染好的svg数据。  
-在不支持mermaid的markdown预览软件里 可以直接通过引用图片的方式来引用
+
+>Mermaid 还可以自建服务器 通过 url 参数的方式提供渲染好的 svg 数据。  
+在不支持 mermaid 的 markdown 预览软件里 可以直接通过引用图片的方式来引用
 如果后面有机会频繁用再搞。
 
 ## 简单流程图 - graph

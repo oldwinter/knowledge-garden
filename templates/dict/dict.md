@@ -32,4 +32,4 @@ co-reference=>> [!REFERENCE] 參考 \n> $END$ | 📖參考提示區塊  |cor
 
 co-multicolumn=>> [!multi-column] 分栏 \n> $END$ | 🌂 分栏  |com
 
-co-blankcontainer=>> [!blank-container] 空容器分栏 \n> $END$ | 🌂 分栏2  |com2
+co-blankcontainer=>> [!blank-container] 空容器分栏 \n> $END$ | 🌂 分栏 2  |com2

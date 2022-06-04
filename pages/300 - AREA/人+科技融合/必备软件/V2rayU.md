@@ -1,10 +1,13 @@
 
 
 账号网址：
+
 [SecureService -Dashboard (1937o.com)](https://1937o.com/account/)
+
 [SecureService -Dashboard (link2022.com)](https://link2022.com/account/)
+
 当前这个服务商的有些域名服务器，比如美国和英国的，必须得用这个旧版本：v2.3.1
-我的pac文件备份
+我的 pac 文件备份
 
 ```
 ! Put user rules line by line in this file.
@@ -20,7 +23,7 @@
 204.79.197.219
 ```
 
-使用geoip和geosite，格式和手机客户端不一样，需要去掉逗号，每个地址用空行分割
+使用 geoip 和 geosite，格式和手机客户端不一样，需要去掉逗号，每个地址用空行分割
 
 ## 备份配置文件夹
 
@@ -32,7 +35,9 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
 ```
 
 ## 自建服务器
-服务端配置example：
+
+服务端配置 example：
+
 ```
 {
   "log" : {
@@ -60,7 +65,8 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
 }
 ```
 
-客户端配置example：
+客户端配置 example：
+
 ```
 {
   "log": {

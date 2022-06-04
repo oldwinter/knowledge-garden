@@ -1,14 +1,14 @@
 其他竞品：[[utools]]， [[go]]
 
-## workflow调用过程
+## workflow 调用过程
 
-不同workflow可能用本地的/usr/local/php ，python，python3等二进制，所以需要再手动安装这些二进制依赖环境。
+不同 workflow 可能用本地的/usr/local/php ，python，python3 等二进制，所以需要再手动安装这些二进制依赖环境。
 
-## **alfred** 搜索失败后的fallback需要搜索哪几个，优先级分别是什么
+## **alfred** 搜索失败后的 fallback 需要搜索哪几个，优先级分别是什么
 
-## alfred的综合调教
+## alfred 的综合调教
 
-依据[[个人搜索系统#搜索判断树]]改造和聚合
+依据 [[个人搜索系统#搜索判断树]] 改造和聚合
 
 高速缓存聚合： [[devonthink]]
 

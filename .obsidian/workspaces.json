@@ -24,7 +24,7 @@
                   "leaf": "294d5c0ac8ad5331",
                   "group": null,
                   "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{}"
+                  "eState": "{\"scroll\":0}"
                 },
                 {
                   "leaf": "294d5c0ac8ad5331",
@@ -39,13 +39,8 @@
             "id": "007dfcd2f78feb5e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/INDEX根索引 - MOC.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             },
             "pane-relief:history-v1": {
               "pos": 0,
@@ -69,13 +64,8 @@
             "id": "c72102bcaee0294d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/最近编辑、最近创建、最近任务、回顾记忆.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             },
             "pane-relief:history-v1": {
               "pos": 0,
@@ -1059,13 +1049,8 @@
             "id": "7f21bd67fef37270",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             },
             "pane-relief:history-v1": {
               "pos": 0,
@@ -1143,13 +1128,8 @@
             "id": "d693e627cfdf01dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             },
             "pane-relief:history-v1": {
               "pos": 1,
@@ -1294,9 +1274,7 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md"
-                  }
+                  "state": {}
                 },
                 "pane-relief:history-v1": {
                   "pos": 0,
@@ -1309,7 +1287,6 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -1348,7 +1325,6 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": false
                   }
@@ -1397,7 +1373,6 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活 - MOC.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -1423,197 +1398,143 @@
     },
     "日常玩耍": {
       "main": {
-        "id": "b1d84e67a50f2ae5",
+        "id": "2bfcd3c894c1b760",
         "type": "split",
         "children": [
           {
-            "id": "7f21bd67fef37270",
+            "id": "e250d9862abb79d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+                "mode": "source",
                 "backlinks": true,
-                "source": false
+                "source": true
               }
             },
             "pane-relief:history-v1": {
-              "pos": 1,
+              "pos": 0,
               "stack": [
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/效率系统4大子系统联动与配合.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"kanban\",\"state\":{\"file\":\"pages/KANBAN.md\"}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/EXTERNAL.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian publish 发布.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":78},\"to\":{\"line\":4,\"ch\":78}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/github pages.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":22},\"to\":{\"line\":7,\"ch\":22}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian sync 同步.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{\"scroll\":0}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"draws/数字时代如何更好地工作与生活 - 图.md\"}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"scroll\":9.329704510108865}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":17},\"to\":{\"line\":3,\"ch\":17}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "e250d9862abb79d7",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220428164203.png\"}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220428150722.png\"}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220423221352.jpeg\"}}",
-                  "eState": "{}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-212919.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted image 20220418144703.png\"}}",
-                  "eState": "{}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-33628204.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 },
                 {
-                  "leaf": "7f21bd67fef37270",
+                  "leaf": "e250d9862abb79d7",
                   "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320203200_352.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320203031_118.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320202845_759.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320202815_760.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320191818_566.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320191102_767.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320190917_764.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320190847_762.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320190917_764.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320190847_762.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220320190802_762.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"assets/Pasted Image 20220317004053.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7f21bd67fef37270",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/200 - PROJECT/个人职业生涯/个人简历 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"scroll\":0}"
-                }
-              ]
-            }
-          },
-          {
-            "id": "64c5e136f7cdd0c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "64c5e136f7cdd0c5",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "64c5e136f7cdd0c5",
-                  "group": null,
-                  "state": "{\"type\":\"empty\",\"state\":{}}",
-                  "eState": "{}"
-                }
-              ]
-            }
-          },
-          {
-            "id": "0328b79689971382",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "0328b79689971382",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"scroll\":1.9565217391304348}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-39980443.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
                 }
               ]
             }
@@ -1622,16 +1543,16 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "eb260984434e4827",
+        "id": "68643f2d05d42ccb",
         "type": "split",
         "children": [
           {
-            "id": "27365d5cd135ebf7",
+            "id": "1aa62d2c88de131c",
             "type": "tabs",
-            "dimension": 60.219341974077764,
+            "dimension": 61.63836163836164,
             "children": [
               {
-                "id": "90c7a8bb11e0f060",
+                "id": "13b30ded2994ad1d",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -1643,12 +1564,12 @@
                 }
               },
               {
-                "id": "ffbbc356ff6cf0f6",
+                "id": "7e5f7fa72c4c158e",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "工作流",
+                    "query": "pages/",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -1662,7 +1583,19 @@
                 }
               },
               {
-                "id": "d5cad7c1150e349d",
+                "id": "7e31ac824c125918",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                },
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                }
+              },
+              {
+                "id": "e7c54063be87971a",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -1677,10 +1610,22 @@
                 }
               },
               {
-                "id": "2216aabc37d6305f",
+                "id": "6bec07a3491aa6cd",
                 "type": "leaf",
                 "state": {
-                  "type": "starred",
+                  "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+                  "state": {}
+                },
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                }
+              },
+              {
+                "id": "a8a6b815d1d657d6",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
                   "state": {}
                 },
                 "pane-relief:history-v1": {
@@ -1691,17 +1636,17 @@
             ]
           },
           {
-            "id": "32193e9e73c27669",
+            "id": "9d14df0afd7aca85",
             "type": "tabs",
-            "dimension": 39.780658025922236,
+            "dimension": 38.36163836163836,
             "children": [
               {
-                "id": "be2a1cb77ba04354",
+                "id": "6ff7eb945647acf7",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
                   }
                 },
                 "pane-relief:history-v1": {
@@ -1710,12 +1655,24 @@
                 }
               },
               {
-                "id": "2d5c58b9386f1caa",
+                "id": "19e30980607922b3",
+                "type": "leaf",
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                },
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                }
+              },
+              {
+                "id": "ff604259b96733d3",
                 "type": "leaf",
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
+                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -1738,72 +1695,73 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 0.9252288693772946,
+                      "scale": 1.7055069404881416,
                       "close": true
                     }
                   }
                 },
                 "pane-relief:history-v1": {
                   "pos": 0,
-                  "stack": []
+                  "stack": [
+                    {
+                      "leaf": "ff604259b96733d3",
+                      "group": null,
+                      "state": "{\"type\":\"localgraph\",\"state\":{\"file\":\"journals/每月每季度总结/2022-五月.md\",\"options\":{\"collapse-filter\":true,\"search\":\"\",\"localJumps\":1,\"localBacklinks\":true,\"localForelinks\":true,\"localInterlinks\":false,\"showTags\":false,\"showAttachments\":false,\"hideUnresolved\":false,\"collapse-color-groups\":true,\"colorGroups\":[],\"collapse-display\":true,\"showArrow\":false,\"textFadeMultiplier\":0,\"nodeSizeMultiplier\":1,\"lineSizeMultiplier\":1,\"collapse-forces\":true,\"centerStrength\":0.518713248970312,\"repelStrength\":10,\"linkStrength\":1,\"linkDistance\":250,\"scale\":1,\"close\":false}}}",
+                      "eState": "{}"
+                    }
+                  ]
                 }
               },
               {
-                "id": "792288b7ff77b6c9",
+                "id": "7f334493f1c26400",
                 "type": "leaf",
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
+                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": false
                   }
                 },
                 "pane-relief:history-v1": {
                   "pos": 0,
-                  "stack": [
-                    {
-                      "leaf": "792288b7ff77b6c9",
-                      "group": null,
-                      "state": "{\"type\":\"outgoing-link\",\"state\":{\"file\":\"README.md\",\"linksCollapsed\":true,\"unlinkedCollapsed\":false}}",
-                      "eState": "{}"
-                    }
-                  ]
+                  "stack": []
                 }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 256.5
-      },
-      "right": {
-        "id": "df02928bd8e2e772",
-        "type": "split",
-        "children": [
-          {
-            "id": "08dcc397c6535494",
-            "type": "tabs",
-            "children": [
+              },
               {
-                "id": "04a2712e7345a42c",
+                "id": "8033acdab97b1e8d",
                 "type": "leaf",
                 "state": {
-                  "type": "review-queue-list-view",
+                  "type": "advanced-tables-toolbar",
                   "state": {}
                 },
                 "pane-relief:history-v1": {
                   "pos": 0,
                   "stack": []
                 }
-              },
+              }
+            ],
+            "currentTab": 4
+          }
+        ],
+        "direction": "horizontal",
+        "width": 255
+      },
+      "right": {
+        "id": "5eef786fb53f05d2",
+        "type": "split",
+        "children": [
+          {
+            "id": "8f2f04183aba5c68",
+            "type": "tabs",
+            "children": [
               {
-                "id": "80264a8af29bb131",
+                "id": "4500f28740f445be",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md",
+                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -1822,10 +1780,10 @@
           }
         ],
         "direction": "horizontal",
-        "width": 303,
+        "width": 288.5,
         "collapsed": true
       },
-      "active": "64c5e136f7cdd0c5"
+      "active": "e250d9862abb79d7"
     }
   },
   "active": "日常玩耍"

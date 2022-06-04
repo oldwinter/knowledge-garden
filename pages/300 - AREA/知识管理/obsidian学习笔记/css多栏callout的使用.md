@@ -6,26 +6,26 @@ cssClass: two-column-list
 
 [[Obs＃83] 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
 
-MCL Multi Column.css是一個不到8KB大小的CSS檔，只要存入儲存庫**.obsidian/snippets**資料夾並在外觀裡啟用此CSS片段，就能以下列方法呈現更多變化：
+MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存庫**.obsidian/snippets**資料夾並在外觀裡啟用此 CSS 片段，就能以下列方法呈現更多變化：
 
-1. 多欄式呈現筆記的Callouts內容
-2. 指定Callouts的顯示大小與浮動位置(浮動位置在閱讀模式生效)
-3. 將無序列表變成多欄顯示(在閱讀模式生效，Callouts裡也會生效)
+1. 多欄式呈現筆記的 Callouts 內容
+2. 指定 Callouts 的顯示大小與浮動位置 (浮動位置在閱讀模式生效)
+3. 將無序列表變成多欄顯示 (在閱讀模式生效，Callouts 裡也會生效)
 
 > [!info] MCL?  
-> MCL是「Modular CSS Layout」的縮寫
+> MCL 是「Modular CSS Layout」的縮寫
 
 ### [1. 多欄式Callouts](http://jdev.tw/blog/7080#top "Back to top")
 
-> [!tip] Callouts類型  
+> [!tip] Callouts 類型  
 > 1. 顯示標題列：> [!multi-column]  
 > 2. 隱藏標題列：> [!blank-container]
 >
 > [!tip] 使用方法  
 > 1. 欄位間用一個 > 分隔  
-> 2. 每個Callout區塊多增加一個 >  
-> 3. 欄位數由2到N，只要螢幕寬度足夠，會自動分配欄寬  
-> 4. **可使用Style Settings外掛設定**
+> 2. 每個 Callout 區塊多增加一個 >  
+> 3. 欄位數由 2 到 N，只要螢幕寬度足夠，會自動分配欄寬  
+> 4. **可使用 Style Settings 外掛設定**
 
 ![01](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685342.png)
 
@@ -166,18 +166,18 @@ MCL Multi Column.css是一個不到8KB大小的CSS檔，只要存入儲存庫**.
 > [!error|right-small] 浮動到右側
 > 小視窗，靠右
 
-擴充Callouts的語法，在Callout類型後加上Pipe，再輸入下列設定：
+擴充 Callouts 的語法，在 Callout 類型後加上 Pipe，再輸入下列設定：
 
 > [!tip] 語法
 >
-> > [!Callout類型|left/right-small/medium/large]  
+> > [!Callout 類型|left/right-small/medium/large]  
 > > [!blank-container|left/right-small/medium/large]
 
 ### [3. 多欄式列表](http://jdev.tw/blog/7080#top "Back to top")
 
 > [!tip] 使用說明  
-> 1. YAML區加入`cssClasses: 多欄CSS`即會自動顯示成指定的欄數  
-> 2. 多欄CSS有下列幾種：
+> 1. YAML 區加入 `cssClasses: 多欄CSS` 即會自動顯示成指定的欄數  
+> 2. 多欄 CSS 有下列幾種：
 >
 > > 1.  two-column-list: 垂直填充
 > > 2.  three-column-list: 垂直填充

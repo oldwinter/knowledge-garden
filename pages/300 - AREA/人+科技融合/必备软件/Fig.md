@@ -1,4 +1,4 @@
-3个插件必装
+3 个插件必装
 
 Autocomplete
 

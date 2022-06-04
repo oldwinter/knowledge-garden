@@ -1,4 +1,4 @@
-### 最近的30条编辑笔记
+### 最近的 30 条编辑笔记
 
 ```dataview
 table WITHOUT ID file.link AS "File",file.mtime as "修改时间"
@@ -17,7 +17,7 @@ sort file.ctime desc
 limit 999
 ```
 
-### TODO持续迭代不闭环
+### TODO 持续迭代不闭环
 
 ```dataview
 table file.mtime as 修改时间, tags

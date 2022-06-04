@@ -2,12 +2,12 @@
 aliases: 
 tags: MOC 
 ---
-- 官方下载pkg安装
+- 官方下载 pkg 安装
 	- [[nodejs]]
 	- [[Golang]]
 	- [[docker]]
 - [[docker compose]]
-- homebrew安装
+- homebrew 安装
 	- [[fzf]]
 	- [[thefuck]]
 	- [[tldr]]

@@ -16,9 +16,9 @@ preloadIframes: true
 
 note:
 
-## 嵌入iframe作为背景
+## 嵌入 iframe 作为背景
 
-frontmeta里面有preload
+frontmeta 里面有 preload
 
   
 <!-- .slide: data-background-iframe='https://weread.qq.com' data-background-interactive -->
