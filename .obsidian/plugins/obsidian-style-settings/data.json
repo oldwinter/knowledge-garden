@@ -101,7 +101,7 @@
   "shimmering-focus@@no-shadows": true,
   "shimmering-focus@@unlock-theme-beta": false,
   "shimmering-focus@@cursor-styles": "dark-eclipse-cursor",
-  "shimmering-focus@@no-unresolved-link-indicator": false,
+  "shimmering-focus@@no-unresolved-link-indicator": true,
   "shimmering-focus@@tags-in-gutter": false,
   "shimmering-focus@@no-search-result-indicator": false,
   "shimmering-focus@@permanently-show-collapse-indicators": false,
@@ -134,11 +134,14 @@
   "shimmering-focus@@monospace-font-size": 0.7,
   "supercharged-links@@1162-7812-before": "🦜",
   "supercharged-links@@3c8a-1054-before": "🗣",
-  "shimmering-focus@@longform-hue-shift-dark": 60,
+  "shimmering-focus@@longform-hue-shift-dark": 105,
   "shimmering-focus@@longform-text-indent": false,
-  "shimmering-focus@@longform-hue-shift-light": 60,
+  "shimmering-focus@@longform-hue-shift-light": 100,
   "shimmering-focus@@show-fold-indicators": true,
   "shimmering-focus@@unicode-emojis": false,
   "shimmering-focus@@h3": 1.25,
-  "shimmering-focus@@longform-font-size": 1.2
+  "shimmering-focus@@longform-font-size": 1.2,
+  "shimmering-focus@@show-external-link-icon": true,
+  "shimmering-focus@@sidebar-font-size": 0.85,
+  "shimmering-focus@@atomic-ruler": true
 }

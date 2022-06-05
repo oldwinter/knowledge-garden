@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "CONTENTS",
-      "path": "CONTENTS.md"
+      "basename": "模板与套路",
+      "path": "pages/000 - INBOX/模板与套路.md"
+    },
+    {
+      "basename": "每周计划与回顾",
+      "path": "每周计划与回顾.md"
+    },
+    {
+      "basename": "月度季度年度计划与回顾",
+      "path": "月度季度年度计划与回顾.md"
+    },
+    {
+      "basename": "INDEXS",
+      "path": "INDEXS.md"
+    },
+    {
+      "basename": "以每日笔记为入口",
+      "path": "以每日笔记为入口.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "2022-06-05",
+      "path": "journals/2022-06-05.md"
+    },
+    {
+      "basename": "OKR",
+      "path": "pages/400 - RESOURCE/原子知识库/方法库/OKR.md"
+    },
+    {
+      "basename": "CONTENTS",
+      "path": "CONTENTS.md"
     },
     {
       "basename": "数字时代如何更好地工作与生活 - 图",
@@ -171,34 +199,6 @@
     {
       "basename": "全国可飞",
       "path": "pages/000 - INBOX/全国可飞.md"
-    },
-    {
-      "basename": "快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
-    },
-    {
-      "basename": "devonthink",
-      "path": "pages/300 - AREA/人+科技融合/devonthink.md"
-    },
-    {
-      "basename": "目前知名的在线mooc",
-      "path": "pages/400 - RESOURCE/在线课程MOOC/目前知名的在线mooc.md"
-    },
-    {
-      "basename": "在线课程MOOC",
-      "path": "pages/400 - RESOURCE/在线课程MOOC/在线课程MOOC.md"
-    },
-    {
-      "basename": "burp suite",
-      "path": "pages/000 - INBOX/burp suite.md"
-    },
-    {
-      "basename": "vim、markdown与org-mode",
-      "path": "pages/000 - INBOX/vim、markdown与org-mode.md"
     }
   ],
   "omittedPaths": [],
