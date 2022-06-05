@@ -1,20 +1,108 @@
 {
   "recentFiles": [
     {
+      "basename": "快捷键、图标、命令行的对比与选择",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键、图标、命令行的对比与选择.md"
+    },
+    {
+      "basename": "2022-06-05",
+      "path": "journals/2022-06-05.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "草丛与视野",
+      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/草丛与视野.md"
+    },
+    {
       "basename": "TOC",
       "path": "TOC.md"
     },
     {
+      "basename": "常用命令行工具包",
+      "path": "pages/000 - INBOX/常用命令行工具包.md"
+    },
+    {
+      "basename": "人文社科通识",
+      "path": "pages/400 - RESOURCE/人文社科通识/人文社科通识.md"
+    },
+    {
+      "basename": "数据结构与算法",
+      "path": "pages/300 - AREA/计算机科学/数据结构与算法.md"
+    },
+    {
+      "basename": "哲学",
+      "path": "pages/400 - RESOURCE/人文社科通识/哲学.md"
+    },
+    {
+      "basename": "心理学",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学.md"
+    },
+    {
+      "basename": "经济学",
+      "path": "pages/400 - RESOURCE/人文社科通识/经济学.md"
+    },
+    {
+      "basename": "金融学",
+      "path": "pages/400 - RESOURCE/人文社科通识/金融学.md"
+    },
+    {
+      "basename": "法学",
+      "path": "pages/400 - RESOURCE/人文社科通识/法学.md"
+    },
+    {
+      "basename": "计算机操作系统",
+      "path": "pages/300 - AREA/计算机科学/计算机操作系统.md"
+    },
+    {
+      "basename": "计算机体系结构",
+      "path": "pages/300 - AREA/计算机科学/计算机体系结构.md"
+    },
+    {
+      "basename": "计算机网络",
+      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
+    },
+    {
+      "basename": "计算机科学",
+      "path": "pages/300 - AREA/计算机科学/计算机科学.md"
+    },
+    {
+      "basename": "计算机基础知识",
+      "path": "pages/300 - AREA/计算机科学/计算机基础知识.md"
+    },
+    {
+      "basename": "行业影响力",
+      "path": "pages/000 - INBOX/行业影响力.md"
+    },
+    {
+      "basename": "职场影响力",
+      "path": "pages/000 - INBOX/职场影响力.md"
+    },
+    {
+      "basename": "求职与面试",
+      "path": "pages/000 - INBOX/求职与面试.md"
+    },
+    {
+      "basename": "知识笔记库开源",
+      "path": "pages/000 - INBOX/知识笔记库开源.md"
+    },
+    {
       "basename": "PROJECT - 项目",
-      "path": "PROJECT - 项目.md"
+      "path": "pages/000 - INBOX/PROJECT - 项目.md"
     },
     {
       "basename": "月度季度年度计划与回顾",
-      "path": "月度季度年度计划与回顾.md"
+      "path": "pages/000 - INBOX/月度季度年度计划与回顾.md"
     },
     {
       "basename": "每周计划与回顾",
-      "path": "每周计划与回顾.md"
+      "path": "pages/000 - INBOX/每周计划与回顾.md"
     },
     {
       "basename": "模板与套路",
@@ -26,31 +114,27 @@
     },
     {
       "basename": "以每日笔记为入口",
-      "path": "以每日笔记为入口.md"
+      "path": "pages/000 - INBOX/以每日笔记为入口.md"
     },
     {
       "basename": "一元化收集",
-      "path": "一元化收集.md"
+      "path": "pages/000 - INBOX/一元化收集.md"
     },
     {
       "basename": "dailynote",
-      "path": "dailynote.md"
+      "path": "pages/000 - INBOX/dailynote.md"
     },
     {
       "basename": "开源、免费与流量",
-      "path": "开源、免费与流量.md"
+      "path": "pages/000 - INBOX/开源、免费与流量.md"
     },
     {
       "basename": "阅读、笔记与写作",
-      "path": "阅读、笔记与写作.md"
+      "path": "pages/000 - INBOX/阅读、笔记与写作.md"
     },
     {
       "basename": "第二大脑与数字花园",
-      "path": "第二大脑与数字花园.md"
-    },
-    {
-      "basename": "2022-06-05",
-      "path": "journals/2022-06-05.md"
+      "path": "pages/000 - INBOX/第二大脑与数字花园.md"
     },
     {
       "basename": "快捷键",
@@ -115,90 +199,6 @@
     {
       "basename": "Pasted Image 20220320191102_767",
       "path": "assets/Pasted Image 20220320191102_767.png"
-    },
-    {
-      "basename": "Pasted Image 20220320190917_764",
-      "path": "assets/Pasted Image 20220320190917_764.png"
-    },
-    {
-      "basename": "Pasted Image 20220320190847_762",
-      "path": "assets/Pasted Image 20220320190847_762.png"
-    },
-    {
-      "basename": "Pasted Image 20220320190802_762",
-      "path": "assets/Pasted Image 20220320190802_762.png"
-    },
-    {
-      "basename": "Pasted Image 20220317004053",
-      "path": "assets/Pasted Image 20220317004053.png"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "journals/2022-06-03.md"
-    },
-    {
-      "basename": "战术后仰",
-      "path": "pages/000 - INBOX/战术后仰.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "README.pandoc",
-      "path": "README.pandoc.md"
-    },
-    {
-      "basename": "500 - ARCHIVE",
-      "path": "pages/500 - ARCHIVE/500 - ARCHIVE.md"
-    },
-    {
-      "basename": "已发布文章",
-      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
-    },
-    {
-      "basename": "华为，今夜请将我遗忘",
-      "path": "pages/500 - ARCHIVE/已发布文章/华为，今夜请将我遗忘.md"
-    },
-    {
-      "basename": "Golang",
-      "path": "pages/000 - INBOX/Golang.md"
-    },
-    {
-      "basename": "AI作画 - disco diffusion",
-      "path": "pages/000 - INBOX/AI作画 - disco diffusion.md"
-    },
-    {
-      "basename": "文章发布工作流梳理",
-      "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
-    },
-    {
-      "basename": "先鉴定你的做笔记风格，再选一款app上车",
-      "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
-    },
-    {
-      "basename": "80%默认优先，20%深度定制",
-      "path": "pages/000 - INBOX/80%默认优先，20%深度定制.md"
-    },
-    {
-      "basename": "工具的归工具，玩具的归玩具",
-      "path": "pages/000 - INBOX/工具的归工具，玩具的归玩具.md"
-    },
-    {
-      "basename": "信息中心与物料中心",
-      "path": "pages/000 - INBOX/信息中心与物料中心.md"
-    },
-    {
-      "basename": "信息是知识的有机组成部分",
-      "path": "pages/000 - INBOX/信息是知识的有机组成部分.md"
-    },
-    {
-      "basename": "项目式管理",
-      "path": "pages/000 - INBOX/项目式管理.md"
-    },
-    {
-      "basename": "我获取信息的方法",
-      "path": "pages/000 - INBOX/我获取信息的方法.md"
     }
   ],
   "omittedPaths": [],
