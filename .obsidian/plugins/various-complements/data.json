@@ -42,8 +42,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 23,
-          "lastUpdated": 1654162747289
+          "count": 26,
+          "lastUpdated": 1654404189742
         }
       }
     },
@@ -188,6 +188,30 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1654239787656
+        }
+      }
+    },
+    "第二大脑": {
+      "第二大脑": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654415719219
+        }
+      }
+    },
+    "dailynote": {
+      "dailynote": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654416063329
+        }
+      }
+    },
+    "项目笔记": {
+      "项目笔记": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654417672545
         }
       }
     }

@@ -143,5 +143,5 @@
   "shimmering-focus@@longform-font-size": 1.2,
   "shimmering-focus@@show-external-link-icon": true,
   "shimmering-focus@@sidebar-font-size": 0.85,
-  "shimmering-focus@@atomic-ruler": true
+  "shimmering-focus@@atomic-ruler": false
 }

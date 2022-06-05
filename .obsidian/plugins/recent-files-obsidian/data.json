@@ -1,32 +1,76 @@
 {
   "recentFiles": [
     {
-      "basename": "模板与套路",
-      "path": "pages/000 - INBOX/模板与套路.md"
+      "basename": "TOC",
+      "path": "TOC.md"
     },
     {
-      "basename": "每周计划与回顾",
-      "path": "每周计划与回顾.md"
+      "basename": "PROJECT - 项目",
+      "path": "PROJECT - 项目.md"
     },
     {
       "basename": "月度季度年度计划与回顾",
       "path": "月度季度年度计划与回顾.md"
     },
     {
-      "basename": "INDEXS",
-      "path": "INDEXS.md"
+      "basename": "每周计划与回顾",
+      "path": "每周计划与回顾.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "pages/000 - INBOX/模板与套路.md"
+    },
+    {
+      "basename": "计划与回顾",
+      "path": "pages/300 - AREA/知识管理/计划与回顾.md"
     },
     {
       "basename": "以每日笔记为入口",
       "path": "以每日笔记为入口.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "一元化收集",
+      "path": "一元化收集.md"
+    },
+    {
+      "basename": "dailynote",
+      "path": "dailynote.md"
+    },
+    {
+      "basename": "开源、免费与流量",
+      "path": "开源、免费与流量.md"
+    },
+    {
+      "basename": "阅读、笔记与写作",
+      "path": "阅读、笔记与写作.md"
+    },
+    {
+      "basename": "第二大脑与数字花园",
+      "path": "第二大脑与数字花园.md"
     },
     {
       "basename": "2022-06-05",
       "path": "journals/2022-06-05.md"
+    },
+    {
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+    },
+    {
+      "basename": "个人必用软件梳理",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/个人必用软件梳理.md"
+    },
+    {
+      "basename": "常用icon",
+      "path": "pages/000 - INBOX/常用icon.md"
+    },
+    {
+      "basename": "微信读书同步模板",
+      "path": "templates/微信读书同步模板.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "OKR",
@@ -155,50 +199,6 @@
     {
       "basename": "我获取信息的方法",
       "path": "pages/000 - INBOX/我获取信息的方法.md"
-    },
-    {
-      "basename": "我对信息管理的定义",
-      "path": "pages/000 - INBOX/我对信息管理的定义.md"
-    },
-    {
-      "basename": "凯撒的归凯撒，上帝的归上帝",
-      "path": "pages/000 - INBOX/凯撒的归凯撒，上帝的归上帝.md"
-    },
-    {
-      "basename": "过程记录，持续迭代，兜底措施",
-      "path": "pages/000 - INBOX/过程记录，持续迭代，兜底措施.md"
-    },
-    {
-      "basename": "效率系统4大子系统联动与配合",
-      "path": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
-    },
-    {
-      "basename": "个人信息管理系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活",
-      "path": "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md"
-    },
-    {
-      "basename": "2022-06-02",
-      "path": "journals/2022-06-02.md"
-    },
-    {
-      "basename": "常青笔记 - Evergreen Note",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
-    },
-    {
-      "basename": "Index",
-      "path": "journals/Index.md"
-    },
-    {
-      "basename": "机遇与个人能力",
-      "path": "pages/000 - INBOX/机遇与个人能力.md"
-    },
-    {
-      "basename": "全国可飞",
-      "path": "pages/000 - INBOX/全国可飞.md"
     }
   ],
   "omittedPaths": [],

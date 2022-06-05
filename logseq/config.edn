@@ -57,7 +57,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
  ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
- :default-home {:page "home" :sidebar ["INDEXS"]}
+ :default-home {:page "home" :sidebar ["TOC"]}
  
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
@@ -177,7 +177,7 @@
  :ref/default-open-blocks-level 2
 
  :ref/linked-references-collapsed-threshold 50
- :favorites ["INDEXS"]
+ :favorites ["TOC"]
  :publishing/all-pages-public? true
  :editor/logical-outdenting? true
 
