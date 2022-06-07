@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "安卓手机必备软件",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
+    },
+    {
       "basename": "notion",
       "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "本机启用ssh自动登陆",
       "path": "pages/200 - PROJECT/个人职业生涯/本机启用ssh自动登陆.md"
-    },
-    {
-      "basename": "《卡片笔记写作法》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《卡片笔记写作法》.md"
     }
   ],
   "omittedPaths": [
