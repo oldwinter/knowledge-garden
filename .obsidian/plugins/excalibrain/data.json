@@ -4,25 +4,26 @@
     "parents": [
       "Parent",
       "Parents",
-      "up",
-      "u"
+      "u",
+      "up"
     ],
     "children": [
-      "Children",
       "Child",
-      "down",
-      "d"
+      "Children",
+      "d",
+      "down"
     ],
     "friends": [
-      "Friends",
       "Friend",
+      "Friends",
+      "j",
       "Jump",
-      "Jumps",
-      "j"
+      "Jumps"
     ]
   },
   "inferAllLinksAsFriends": false,
   "renderAlias": true,
+  "nodeTitleScript": "",
   "backgroundColor": "#0c3e6aff",
   "excludeFilepaths": [],
   "showInferredNodes": true,
@@ -111,26 +112,32 @@
   "hierarchyLinkStyles": {
     "Parent": {},
     "Parents": {},
-    "up": {},
     "u": {},
-    "Children": {},
+    "up": {},
     "Child": {},
-    "down": {},
+    "Children": {},
     "d": {},
-    "Friends": {},
+    "down": {},
     "Friend": {},
+    "Friends": {},
+    "j": {},
     "Jump": {},
-    "Jumps": {},
-    "j": {}
+    "Jumps": {}
   },
   "navigationHistory": [
-    "draws/excalibrain.md",
-    "双链笔记与卡片笔记",
-    "CONTENTS.md",
-    "pages/300 - AREA/人+科技融合/数字时代如何更好地工作与生活.md",
-    "如何寻找电子书",
-    "pages/200 - PROJECT/个人职业生涯/过程和结果可知，则效果和目的可达.md",
-    "刑不可知，则威不可测"
+    "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md",
+    "决赛圈",
+    "journals/obsidian publish 发布.md",
+    "journals/2022-06-04.md",
+    "journals/obsidian sync 同步.md",
+    "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md",
+    "pages/300 - AREA/人+科技融合/必备软件/obsidian.md",
+    "pages/300 - AREA/mac系统重装的一些坑.md",
+    "pages/300 - AREA/mac系统重装.md",
+    "TOC.md",
+    "cubox",
+    "journals/每月每季度总结/2022-三月.md",
+    "pages/400 - RESOURCE/原子知识库/刚下飞机.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

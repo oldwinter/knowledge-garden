@@ -1,6 +1,6 @@
 {
   "provider": "duckduckgo",
-  "fallbackProvider": "google",
+  "fallbackProvider": "iconhorse",
   "providerDomain": "",
   "fallbackProviderDomain": "",
   "ignored": "",

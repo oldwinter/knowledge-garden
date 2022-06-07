@@ -1,5 +1,8 @@
 {
   "pluginList": [
+    "Oliver-Akins/file-hider",
+    "mgmeyers/obsidian-list-callouts",
+    "Wanxp/obsidian-douban",
     "zhaohongxuan/obsidian-weread-plugin",
     "liamcain/obsidian-periodic-notes"
   ],

@@ -1402,12 +1402,12 @@
         "type": "split",
         "children": [
           {
-            "id": "e250d9862abb79d7",
+            "id": "7de44a74baaecc03",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+                "file": "journals/2022-06-06.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -1417,126 +1417,100 @@
               "pos": 0,
               "stack": [
                 {
-                  "leaf": "e250d9862abb79d7",
+                  "leaf": "7de44a74baaecc03",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{\"scroll\":0}"
                 },
                 {
-                  "leaf": "e250d9862abb79d7",
+                  "leaf": "7de44a74baaecc03",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"TOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"scroll\":0.8329718004338394}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":0},\"to\":{\"line\":33,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/刻意练习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":10},\"to\":{\"line\":3,\"ch\":10}}}"
+                },
+                {
+                  "leaf": "7de44a74baaecc03",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-05.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{\"scroll\":0}"
                 },
                 {
-                  "leaf": "e250d9862abb79d7",
+                  "leaf": "7de44a74baaecc03",
                   "group": null,
-                  "state": "{\"type\":\"kanban\",\"state\":{\"file\":\"pages/KANBAN.md\"}}",
-                  "eState": "{}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":11},\"to\":{\"line\":6,\"ch\":11}},\"scroll\":1.8583190105998422}"
                 },
                 {
-                  "leaf": "e250d9862abb79d7",
+                  "leaf": "7de44a74baaecc03",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/EXTERNAL.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
                   "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian publish 发布.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":78},\"to\":{\"line\":4,\"ch\":78}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/github pages.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":22},\"to\":{\"line\":7,\"ch\":22}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian sync 同步.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"scroll\":9.329704510108865}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":17},\"to\":{\"line\":3,\"ch\":17}},\"scroll\":0}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-212919.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-33628204.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "e250d9862abb79d7",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-39980443.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
                 }
               ]
+            }
+          },
+          {
+            "id": "552966b490ba0d82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "66b459fdd91e04ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TOC.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
             }
           }
         ],
@@ -1549,7 +1523,7 @@
           {
             "id": "1aa62d2c88de131c",
             "type": "tabs",
-            "dimension": 61.63836163836164,
+            "dimension": 44.0400363967243,
             "children": [
               {
                 "id": "13b30ded2994ad1d",
@@ -1569,7 +1543,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "pages/",
+                    "query": "github.com/oldwinter",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -1610,10 +1584,10 @@
                 }
               },
               {
-                "id": "6bec07a3491aa6cd",
+                "id": "3bfefe284aa43f62",
                 "type": "leaf",
                 "state": {
-                  "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+                  "type": "recent-files",
                   "state": {}
                 },
                 "pane-relief:history-v1": {
@@ -1622,10 +1596,10 @@
                 }
               },
               {
-                "id": "a8a6b815d1d657d6",
+                "id": "2886b801ba6d95b4",
                 "type": "leaf",
                 "state": {
-                  "type": "recent-files",
+                  "type": "VIEW_TYPE_LONGFORM_EXPLORER",
                   "state": {}
                 },
                 "pane-relief:history-v1": {
@@ -1638,7 +1612,7 @@
           {
             "id": "9d14df0afd7aca85",
             "type": "tabs",
-            "dimension": 38.36163836163836,
+            "dimension": 55.95996360327571,
             "children": [
               {
                 "id": "6ff7eb945647acf7",
@@ -1646,7 +1620,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
+                    "file": "journals/2022-06-06.md"
                   }
                 },
                 "pane-relief:history-v1": {
@@ -1672,7 +1646,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+                    "file": "journals/2022-06-06.md",
                     "options": {
                       "collapse-filter": true,
                       "search": "",
@@ -1695,7 +1669,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 1.7055069404881416,
+                      "scale": 1.060641329438692,
                       "close": true
                     }
                   }
@@ -1718,9 +1692,9 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+                    "file": "journals/2022-06-06.md",
                     "linksCollapsed": false,
-                    "unlinkedCollapsed": false
+                    "unlinkedCollapsed": true
                   }
                 },
                 "pane-relief:history-v1": {
@@ -1740,28 +1714,166 @@
                   "stack": []
                 }
               }
-            ],
-            "currentTab": 4
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 255
+        "width": 324.0036315917969,
+        "collapsed": true
       },
       "right": {
         "id": "5eef786fb53f05d2",
         "type": "split",
         "children": [
           {
-            "id": "8f2f04183aba5c68",
+            "id": "8a26907d50ddf15a",
             "type": "tabs",
             "children": [
               {
-                "id": "4500f28740f445be",
+                "id": "e250d9862abb79d7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "TOC.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                },
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": [
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"TOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                      "eState": "{\"scroll\":0}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"kanban\",\"state\":{\"file\":\"pages/KANBAN.md\"}}",
+                      "eState": "{}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/EXTERNAL.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian publish 发布.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":78},\"to\":{\"line\":4,\"ch\":78}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/github pages.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":22},\"to\":{\"line\":7,\"ch\":22}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian sync 同步.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"scroll\":0}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"scroll\":9.329704510108865}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":17},\"to\":{\"line\":3,\"ch\":17}},\"scroll\":0}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-212919.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    },
+                    {
+                      "leaf": "e250d9862abb79d7",
+                      "group": null,
+                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-33628204.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "a0b60de7287704e8",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md",
+                    "file": "journals/2022-06-06.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -1775,15 +1887,27 @@
                   "pos": 0,
                   "stack": []
                 }
+              },
+              {
+                "id": "6f5e11ce7854ae20",
+                "type": "leaf",
+                "state": {
+                  "type": "ch.der-tobi.obsidian-simple-mention",
+                  "state": {}
+                },
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                }
               }
             ]
           }
         ],
         "direction": "horizontal",
-        "width": 288.5,
+        "width": 372.8478698730469,
         "collapsed": true
       },
-      "active": "e250d9862abb79d7"
+      "active": "7de44a74baaecc03"
     }
   },
   "active": "日常玩耍"

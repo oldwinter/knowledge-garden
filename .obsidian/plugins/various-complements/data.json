@@ -1,7 +1,7 @@
 {
-  "strategy": "default",
+  "strategy": "chinese",
   "matchStrategy": "partial",
-  "maxNumberOfSuggestions": 32,
+  "maxNumberOfSuggestions": 15,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
@@ -10,16 +10,20 @@
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^",
-  "showMatchStrategy": false,
+  "showMatchStrategy": true,
+  "showComplementAutomatically": true,
   "showIndexingStatus": false,
   "descriptionOnSuggestion": "Short",
-  "selectSuggestionKeys": "Enter",
+  "selectSuggestionKeys": "Ctrl/Cmd+Enter",
   "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
   "openSourceFileKey": "None",
   "propagateEsc": false,
-  "enableCurrentFileComplement": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
   "onlyComplementEnglishOnCurrentFileComplement": true,
-  "enableCurrentVaultComplement": false,
+  "enableCurrentVaultComplement": true,
+  "currentVaultMinNumberOfCharacters": 0,
   "includeCurrentVaultPathPrefixPatterns": "/",
   "excludeCurrentVaultPathPrefixPatterns": "",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
@@ -36,7 +40,7 @@
   "excludeInternalLinkPathPrefixPatterns": "",
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
-  "insertCommaAfterFrontMatterCompletion": false,
+  "insertCommaAfterFrontMatterCompletion": true,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
     "MOC": {
@@ -52,14 +56,6 @@
         "frontMatter": {
           "count": 2,
           "lastUpdated": 1653880343438
-        }
-      }
-    },
-    "contents": {
-      "contents": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1652008582734
         }
       }
     },
@@ -212,6 +208,38 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1654417672545
+        }
+      }
+    },
+    "anki": {
+      "anki": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654451328120
+        }
+      }
+    },
+    "刻意练习": {
+      "刻意练习": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654452479156
+        }
+      }
+    },
+    "渐进式总结": {
+      "渐进式总结": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654457983327
+        }
+      }
+    },
+    "cubox": {
+      "cubox": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654485454073
         }
       }
     }

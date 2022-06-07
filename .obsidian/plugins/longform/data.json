@@ -9,7 +9,6 @@
   },
   "selectedProject": "journals",
   "selectedDraft": "Draft 1",
-  "userScriptFolder": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -22,14 +21,14 @@
         {
           "id": "remove-links",
           "optionValues": {
-            "remove-wikilinks": false,
-            "remove-external-links": false
+            "remove-wikilinks": true,
+            "remove-external-links": true
           }
         },
         {
           "id": "prepend-title",
           "optionValues": {
-            "format": "",
+            "format": "## $1",
             "separator": "\n\n"
           }
         },
@@ -47,32 +46,7 @@
           }
         }
       ]
-    },
-    "合并日记": {
-      "name": "合并日记",
-      "description": "",
-      "steps": [
-        {
-          "id": "prepend-title",
-          "optionValues": {
-            "format": "# $1",
-            "separator": "\n\n"
-          }
-        },
-        {
-          "id": "concatenate-text",
-          "optionValues": {
-            "separator": "\n\n"
-          }
-        },
-        {
-          "id": "write-to-note",
-          "optionValues": {
-            "target": "manuscript.md",
-            "open-after": true
-          }
-        }
-      ]
     }
-  }
+  },
+  "userScriptFolder": null
 }

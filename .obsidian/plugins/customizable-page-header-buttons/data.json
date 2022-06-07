@@ -4,19 +4,19 @@
       "id": "app:go-back",
       "icon": "left-arrow-with-tail",
       "name": "返回",
-      "showButtons": "both"
+      "showButtons": "desktop"
     },
     {
       "id": "app:go-forward",
       "icon": "right-arrow-with-tail",
       "name": "前进",
-      "showButtons": "both"
+      "showButtons": "desktop"
     },
     {
       "id": "obsidian-focus-mode:toggle-super-focus-mode",
       "icon": "fullscreen",
       "name": "Focus Mode: Toggle Super Focus Mode (Active pane only)",
-      "showButtons": "both"
+      "showButtons": "desktop"
     }
   ],
   "desktop": true,
@@ -31,6 +31,11 @@
       "id": "obsidian-focus-mode:toggle-focus-mode",
       "icon": "enter",
       "name": "Focus Mode: Toggle Focus Mode"
+    },
+    {
+      "id": "app:toggle-right-sidebar",
+      "icon": "open-vault",
+      "name": "折叠/展开右侧边栏"
     },
     {
       "id": "remotely-save:start-sync",

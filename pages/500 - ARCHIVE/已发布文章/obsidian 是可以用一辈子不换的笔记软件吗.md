@@ -113,7 +113,7 @@ published: true
 	- ![b|300](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203302356576.jpg)
 	- ![c|300](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203310013245.jpg)
 	- 回答标题的问题，obsidian 肯定不是可以用一辈子的软件，但我已经决定下一个 3 年用它。
-	- 此外，我往 notion 放了 2 张这篇文章的编辑状态的截图，能直观感受到这种写作方式的好处，有需要自取：https://oldwinter.notion.site/obsidian-069e75af3a554c7ab91c825ecddc8722
+	- 此外，我往 notion 放了 2 张这篇文章的编辑状态的截图，能直观感受到这种写作方式的好处，有需要自取： https://oldwinter.notion.site/obsidian-069e75af3a554c7ab91c825ecddc8722
 
 ## 如果有人看，接下来的更新计划
 

@@ -1,3 +1,7 @@
+up:: [[笔记软件的选择]]
+down:: [[obsidian插件]]
+jumps:: [[notion]]
+
 [[Obsidian入门到精通]]
 
 [[如果要我安利obsidian给别人，我会怎么做]]

@@ -1,9 +1,7 @@
 
 
 账号网址：
-
-[SecureService -Dashboard (1937o.com)](https://1937o.com/account/)
-
+1年200元100MB带宽不限流量。2年360.
 [SecureService -Dashboard (link2022.com)](https://link2022.com/account/)
 
 当前这个服务商的有些域名服务器，比如美国和英国的，必须得用这个旧版本：v2.3.1

@@ -1,7 +1,5 @@
 {
   "renderNullAs": "\\-",
-  "taskLinkLocation": "end",
-  "taskLinkText": "🔗",
   "taskCompletionTracking": true,
   "taskCompletionText": "completion",
   "warnOnEmptyResult": true,
@@ -15,7 +13,9 @@
   "inlineQueryPrefix": "=",
   "inlineJsQueryPrefix": "$=",
   "enableDataviewJs": true,
-  "enableInlineDataviewJs": true,
-  "prettyRenderInlineFields": true,
+  "enableInlineDataviewJs": false,
+  "prettyRenderInlineFields": false,
+  "taskLinkLocation": "end",
+  "taskLinkText": "🔗",
   "schemaVersion": 1
 }
