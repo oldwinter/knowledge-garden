@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "UGC、PGC和OGC的区别",
+      "path": "pages/300 - AREA/知识管理/UGC、PGC和OGC的区别.md"
+    },
+    {
+      "basename": "UGC",
+      "path": "pages/300 - AREA/知识管理/UGC.md"
+    },
+    {
       "basename": "计划与回顾",
       "path": "pages/300 - AREA/知识管理/计划与回顾.md"
+    },
+    {
+      "basename": "Occupationally",
+      "path": "pages/300 - AREA/知识管理/Occupationally.md"
     },
     {
       "basename": "obsidian publish 发布",
@@ -187,18 +199,6 @@
     {
       "basename": "罗生门",
       "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/罗生门.md"
-    },
-    {
-      "basename": "卡片笔记写作法：如何实现从阅读到写作-39136896",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md"
-    },
-    {
-      "basename": "华为，今夜请将我遗忘",
-      "path": "pages/500 - ARCHIVE/已发布文章/华为，今夜请将我遗忘.md"
-    },
-    {
-      "basename": "杠精",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/杠精.md"
     }
   ],
   "omittedPaths": [
