@@ -12,10 +12,10 @@
 ## 快速开始
 
 - 看。访问本库的实时在线版本，随意漫游，感受 [[双链笔记]]和[[《卡片笔记写作法》|卡片笔记]]的魅力：[oldwinter的知识花园](https://oldwinter.github.io/knowledge-garden/)。
-- 用。若简单漫游后，还算感兴趣，则 `git clone` 本库，并用 [[obsidian]]、[[logseq]]或[[vscode]][^1] 任意一款 app 打开本库后进行编辑和进一步探索。
+- 用。若简单漫游后，还算感兴趣，则 `git clone` 本库，并用 [[obsidian]]、[[logseq]]或[[VSCode]][^1] 任意一款 app 打开本库后进行编辑和进一步探索。
 - 悟。确定先只使用 obsidian，结合 [[《卡片笔记写作法》]]的方法论，建立自己的[[个人知识管理|PKM(personal knowledge management)]]体系，打造自己的[[第二大脑]]。
 - 玩。obsidian 是 [[平台+插件]]理念加持下的操作系统级的类[[IDE]]笔记软件，可以看看本库使用的[[obsidian插件]]，并评估自己的需求进行增删，让插件更好地为自己服务。
-- 合。工具和方法论都熟悉了以后，不妨开始尝试结合 [[logseq]]和[[vscode]]，共同完成一些 obsidian 实现起来不便的操作。
+- 合。工具和方法论都熟悉了以后，不妨开始尝试结合 [[logseq]]和[[VSCode]]，共同完成一些 obsidian 实现起来不便的操作。
 折叠
 ## 本库涉及 app 及作用
 
@@ -25,7 +25,7 @@
 	- 多端同步。借用第三方 [[remotely save]]插件由[[onedrive]] 负责云存储和同步。
 - [[logseq]] 备用
 	- 发布至 [[github]]。使用[[github action]]自动定时发布。即[oldwinter的知识花园](https://oldwinter.github.io/knowledge-garden/)。
-- [[vscode]] 辅助
+- [[VSCode]] 辅助
 	- 文本和文件的批量 [[正则表达式]] 编辑和删除
 	- 管理 dot 隐藏文件等非 md 配置文件
 	- 借用 [[copilot]] 插件进行 AI 写作

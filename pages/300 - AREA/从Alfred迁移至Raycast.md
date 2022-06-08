@@ -59,7 +59,7 @@
 	- alfred 的 shimming obsidian 插件功能强大，raycast 只有一个简陋的搜索的插件
 - terminal 和 finder 互相打开
 	- 平替
-- [[vscode]] 管理
+- [[VSCode]] 管理
 	- 平替
 - 变量名更改，驼峰大小写等
 	- 平替

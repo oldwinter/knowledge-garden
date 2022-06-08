@@ -14,7 +14,7 @@
 | ---------------------- | ---------------------------------------- | ---- | ---------------------------------- | ---------- | ---------- |
 | [[bartender]]          | 菜单栏管理                               | 5    | 手动                               | y          |            |
 | [[obsidian]]           | 写作 all in one                           | 5    | github 仓库                         |            |            |
-| [[vscode]]             | 写代码 all in one                         | 5    | github 账号                         | y          |            |
+| [[VSCode]]             | 写代码 all in one                         | 5    | github 账号                         | y          |            |
 | [[istat menus]]        | 系统硬件监测                             | 5    | icloud 同步，手动导出               | y          |            |
 | [[iTerm]]              | terminal 必备                             | 5    | icloud 自动同步                     | y          |            |
 | [[BetterTouchTool]]    | 触摸板的高级手势                         | 5    | icloud 自动同步不好使，手动导出预设 | y          |            |

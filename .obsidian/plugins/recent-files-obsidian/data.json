@@ -1,16 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "计划与回顾",
+      "path": "pages/300 - AREA/知识管理/计划与回顾.md"
+    },
+    {
+      "basename": "obsidian publish 发布",
+      "path": "pages/000 - INBOX/obsidian publish 发布.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "学习目标的分级",
+      "path": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+    },
+    {
+      "basename": "基于markdown的IDE - Obsidian",
+      "path": "pages/基于markdown的IDE - Obsidian.md"
+    },
+    {
+      "basename": "TOC",
+      "path": "TOC.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+    },
+    {
+      "basename": "VSCode",
+      "path": "pages/200 - PROJECT/我的开源项目/vscode/VSCode.md"
+    },
+    {
       "basename": "安卓手机必备软件",
       "path": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
     },
     {
       "basename": "notion",
       "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "KANBAN",
@@ -27,14 +63,6 @@
     {
       "basename": "阅读、笔记与写作",
       "path": "pages/000 - INBOX/阅读、笔记与写作.md"
-    },
-    {
-      "basename": "TOC",
-      "path": "TOC.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
     },
     {
       "basename": "以每日日志为入口",
@@ -67,10 +95,6 @@
     {
       "basename": "刚下飞机",
       "path": "pages/400 - RESOURCE/原子知识库/刚下飞机.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "安装docker服务",
@@ -175,30 +199,6 @@
     {
       "basename": "杠精",
       "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/杠精.md"
-    },
-    {
-      "basename": "飞书妙记",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/飞书妙记.md"
-    },
-    {
-      "basename": "读书笔记",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/读书笔记.md"
-    },
-    {
-      "basename": "第一性原理",
-      "path": "pages/400 - RESOURCE/第一性原理.md"
-    },
-    {
-      "basename": "大五人格理论",
-      "path": "pages/400 - RESOURCE/原子知识库/方法库/大五人格理论.md"
-    },
-    {
-      "basename": "常用icon",
-      "path": "pages/000 - INBOX/常用icon.md"
-    },
-    {
-      "basename": "本机启用ssh自动登陆",
-      "path": "pages/200 - PROJECT/个人职业生涯/本机启用ssh自动登陆.md"
     }
   ],
   "omittedPaths": [

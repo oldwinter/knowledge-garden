@@ -8,7 +8,8 @@
     }
   },
   "selectedProject": "journals",
-  "selectedDraft": "Draft 1",
+  "selectedDraft": null,
+  "userScriptFolder": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -47,6 +48,5 @@
         }
       ]
     }
-  },
-  "userScriptFolder": null
+  }
 }

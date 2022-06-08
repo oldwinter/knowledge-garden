@@ -6,7 +6,7 @@
     "多栏callout样式"
   ],
   "theme": "obsidian",
-  "baseFontSizeAction": false,
+  "baseFontSizeAction": true,
   "translucency": false,
   "textFontFamily": ""
 }
