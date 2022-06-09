@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "unresolved links output",
-      "path": "unresolved links output.md"
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
     },
     {
       "basename": "高内聚，低耦合",
-      "path": "pages/高内聚，低耦合.md"
+      "path": "pages/000 - INBOX/高内聚，低耦合.md"
     },
     {
       "basename": "降维打击",
@@ -19,10 +31,6 @@
     {
       "basename": "jekyll",
       "path": "pages/000 - INBOX/jekyll.md"
-    },
-    {
-      "basename": "unlinked files output",
-      "path": "unlinked files output.md"
     },
     {
       "basename": "advanced-slides",
@@ -146,15 +154,7 @@
     },
     {
       "basename": "PTSD",
-      "path": "pages/PTSD.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
+      "path": "pages/000 - INBOX/PTSD.md"
     },
     {
       "basename": "LATEST",
