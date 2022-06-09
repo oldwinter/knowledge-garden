@@ -50,7 +50,6 @@
   "pages/400 - RESOURCE/书影音笔记/微信读书同步": "FabWeixin",
   "pages/000 - INBOX": "📇",
   "pages/LATEST.md": "FabApple",
-  "pages/KANBAN.md": "FabDocker",
   "pages/200 - PROJECT/云计算与云原生": "☁️",
   "pages/200 - PROJECT/软件项目管理": "⚒",
   "pages/300 - AREA/计算机科学": "🖥️",
@@ -76,6 +75,6 @@
   "pages/400 - RESOURCE/在线课程MOOC": "🌲",
   "pages/500 - ARCHIVE/已发布文章": "🔼",
   "HOMEPAGE.md": "FabDiscord",
-  "MOCs.md": "FabDelicious",
-  "TOCs.md": "FabConfluence"
+  "pages/TOCs.md": "FabConfluence",
+  "pages/MOCs.md": "FabDelicious"
 }

@@ -12,19 +12,17 @@ title: advanced slides 的 奇技淫巧
 
 ---
 
-## 嵌入代码块儿，并按顺序点击高亮
-
-![[2022-04-19]]
-
----
-
-note:
-
+- ## 嵌入代码块儿，并按顺序点击高亮
+  
+  
+  ---
+  
+  note:
 ## 嵌入 iframe 作为背景
 
 frontmeta 里面有 preload
 
-  
+
 <!-- .slide: data-background-iframe='https://weread.qq.com' data-background-interactive -->
 
 ---

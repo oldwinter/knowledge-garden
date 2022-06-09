@@ -4,19 +4,19 @@
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
     },
     "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
-      "Text to insert": "aliases: \ntags: "
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
+      "Text to insert": "feed: show\ncontent-type: notes"
     },
     "YAML Timestamp": {
-      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": false,
+      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
       "Date Created": false,
       "Date Created Key": "date created",
-      "Date Modified": false,
-      "Date Modified Key": "date modified",
-      "Format": "dddd, MMMM Do YYYY, h:mm:ss a"
+      "Date Modified": true,
+      "Date Modified Key": "date",
+      "Format": "YYYY-MM-DD"
     },
     "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": true,
       "Title Key": "title"
     },
     "Header Increment": {
@@ -93,6 +93,8 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    ""
+    "templates",
+    "journals",
+    "draws"
   ]
 }

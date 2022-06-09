@@ -13,7 +13,7 @@
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
- :hidden []
+ :hidden ["/draws" "/templates" "/pages/400 - RESOURCE/书影音笔记/微信读书同步"]
 
  ;; When creating the new journal page, the app will use your template if there is one.
  ;; You only need to input your template name here.
@@ -28,7 +28,7 @@
 
  ;; Specify the date on which the week starts.
  ;; Goes from 0 to 6 (Monday to Sunday), default to 6
- :start-of-week 6
+ :start-of-week 0
 
  ;; Specify a custom CSS import
  ;; This option take precedence over your local `logseq/custom.css` file
@@ -57,7 +57,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
  ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
- :default-home {:page "home" :sidebar ["TOC"]}
+ :default-home {:page "home" :sidebar ["README" "TOCs" "MOCs"]}
  
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
