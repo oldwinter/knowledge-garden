@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "金句库",
-      "path": "pages/400 - RESOURCE/原子知识库/金句库/金句库.md"
-    },
-    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "draws/excalibrain.md"
+    },
+    {
+      "basename": "金句库",
+      "path": "pages/400 - RESOURCE/原子知识库/金句库/金句库.md"
     },
     {
       "basename": "常青笔记",
@@ -191,14 +199,6 @@
     {
       "basename": "安卓手机必备软件",
       "path": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
-    },
-    {
-      "basename": "notion",
-      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "高频引用与流式框架",
-      "path": "pages/000 - INBOX/高频引用与流式框架.md"
     }
   ],
   "omittedPaths": [
