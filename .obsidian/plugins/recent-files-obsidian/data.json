@@ -1,204 +1,200 @@
 {
   "recentFiles": [
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "unresolved links output",
+      "path": "unresolved links output.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "高内聚，低耦合",
+      "path": "pages/高内聚，低耦合.md"
     },
     {
-      "basename": "EXTERNAL",
-      "path": "pages/EXTERNAL.md"
+      "basename": "降维打击",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/降维打击.md"
     },
     {
-      "basename": "excalibrain",
-      "path": "draws/excalibrain.md"
+      "basename": "笔记软件的选择",
+      "path": "pages/000 - INBOX/笔记软件的选择.md"
     },
     {
-      "basename": "金句库",
-      "path": "pages/400 - RESOURCE/原子知识库/金句库/金句库.md"
+      "basename": "jekyll",
+      "path": "pages/000 - INBOX/jekyll.md"
     },
     {
-      "basename": "常青笔记",
-      "path": "pages/000 - INBOX/常青笔记.md"
+      "basename": "unlinked files output",
+      "path": "unlinked files output.md"
     },
     {
-      "basename": "KANBAN",
-      "path": "pages/000 - INBOX/KANBAN.md"
+      "basename": "advanced-slides",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md"
     },
     {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
+      "basename": "notion",
+      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
     },
     {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
+      "basename": "微言大义的词语",
+      "path": "pages/400 - RESOURCE/原子知识库/金句库/微言大义的词语.md"
     },
     {
-      "basename": "效率系统4大子系统联动与配合",
-      "path": "pages/300 - AREA/效率系统4大子系统联动与配合.md"
+      "basename": "软实力和硬通货",
+      "path": "pages/400 - RESOURCE/人文社科通识/金融学/软实力和硬通货.md"
     },
     {
-      "basename": "工作和生活的效率体系建设",
-      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
-    },
-    {
-      "basename": "Github Pilot",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/Github Pilot.md"
-    },
-    {
-      "basename": "vscode必备插件",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/vscode必备插件.md"
-    },
-    {
-      "basename": "正则表达式",
-      "path": "pages/000 - INBOX/正则表达式.md"
-    },
-    {
-      "basename": "项目笔记",
-      "path": "pages/000 - INBOX/项目笔记.md"
-    },
-    {
-      "basename": "remotely save",
-      "path": "pages/000 - INBOX/remotely save.md"
-    },
-    {
-      "basename": "永久笔记",
-      "path": "pages/300 - AREA/永久笔记.md"
-    },
-    {
-      "basename": "文献笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/文献笔记.md"
-    },
-    {
-      "basename": "deeplink",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/deeplink.md"
-    },
-    {
-      "basename": "闪念笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-    },
-    {
-      "basename": "markdown",
-      "path": "pages/000 - INBOX/markdown.md"
-    },
-    {
-      "basename": "obsidian插件",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-    },
-    {
-      "basename": "IDE",
-      "path": "pages/000 - INBOX/IDE.md"
-    },
-    {
-      "basename": "平台+插件",
-      "path": "pages/300 - AREA/人+科技融合/平台+插件.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "卡片盒笔记法 - Zettelkasten",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-    },
-    {
-      "basename": "卡片笔记",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/卡片笔记.md"
-    },
-    {
-      "basename": "双链笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/双链笔记.md"
-    },
-    {
-      "basename": "双向链接",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/双向链接.md"
-    },
-    {
-      "basename": "数字花园",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
-    },
-    {
-      "basename": "第二大脑与数字花园",
-      "path": "pages/000 - INBOX/第二大脑与数字花园.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "常青笔记 - Evergreen Note",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/常青笔记 - Evergreen Note.md"
-    },
-    {
-      "basename": "个人知识笔记系统",
-      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-    },
-    {
-      "basename": "vscode",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/vscode.md"
-    },
-    {
-      "basename": "mermaid模板",
-      "path": "templates/mermaid模板.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "10 - 日记模板",
-      "path": "templates/10 - 日记模板.md"
-    },
-    {
-      "basename": "个人简介",
-      "path": "pages/000 - INBOX/个人简介.md"
-    },
-    {
-      "basename": "个人简历",
-      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "各种新潮的app体验",
-      "path": "pages/300 - AREA/人+科技融合/各种新潮的app体验.md"
-    },
-    {
-      "basename": "Git",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-    },
-    {
-      "basename": "UGC、PGC和OGC的区别",
-      "path": "pages/300 - AREA/知识管理/UGC、PGC和OGC的区别.md"
-    },
-    {
-      "basename": "UGC",
-      "path": "pages/300 - AREA/知识管理/UGC.md"
-    },
-    {
-      "basename": "计划与回顾",
-      "path": "pages/300 - AREA/知识管理/计划与回顾.md"
-    },
-    {
-      "basename": "Occupationally",
-      "path": "pages/300 - AREA/知识管理/Occupationally.md"
+      "basename": "SWOT",
+      "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
     },
     {
       "basename": "obsidian publish 发布",
       "path": "pages/000 - INBOX/obsidian publish 发布.md"
     },
     {
-      "basename": "学习目标的分级",
-      "path": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
+      "basename": "frontdata",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/frontdata.md"
     },
     {
-      "basename": "基于markdown的IDE - Obsidian",
-      "path": "pages/基于markdown的IDE - Obsidian.md"
+      "basename": "dataview的数据来源",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview的数据来源.md"
     },
     {
-      "basename": "安卓手机必备软件",
-      "path": "pages/300 - AREA/人+科技融合/必备软件/安卓手机必备软件.md"
+      "basename": "obsidian入门",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
+    },
+    {
+      "basename": "obsidian的使用感受",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian的使用感受.md"
+    },
+    {
+      "basename": "渐进式 - progressive",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
+    },
+    {
+      "basename": "工作和生活的效率体系建设",
+      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
+    },
+    {
+      "basename": "text expand",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/text expand.md"
+    },
+    {
+      "basename": "PARA和MOC联用组织笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+    },
+    {
+      "basename": "obsidian插件",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
+    },
+    {
+      "basename": "ssh",
+      "path": "pages/200 - PROJECT/个人职业生涯/ssh.md"
+    },
+    {
+      "basename": "ssh自动以root权限登陆云服务器",
+      "path": "pages/300 - AREA/人+科技融合/ssh自动以root权限登陆云服务器.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+    },
+    {
+      "basename": "storytelling",
+      "path": "pages/400 - RESOURCE/书影音笔记/视频笔记/storytelling.md"
+    },
+    {
+      "basename": "工具理性与价值理性",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
+    },
+    {
+      "basename": "思维导图",
+      "path": "pages/300 - AREA/思维导图.md"
+    },
+    {
+      "basename": "费曼技巧",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
+    },
+    {
+      "basename": "皮格马利翁效应",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
+    },
+    {
+      "basename": "我的标签使用",
+      "path": "pages/000 - INBOX/我的标签使用.md"
+    },
+    {
+      "basename": "anki",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
+    },
+    {
+      "basename": "obsidian的中括号`[[`搜索的技巧",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian的中括号`[[`搜索的技巧.md"
+    },
+    {
+      "basename": "obsidian",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+    },
+    {
+      "basename": "夸人损人的文字",
+      "path": "pages/000 - INBOX/夸人损人的文字.md"
+    },
+    {
+      "basename": "杠精",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/杠精.md"
+    },
+    {
+      "basename": "Index",
+      "path": "pages/000 - INBOX/Index.md"
+    },
+    {
+      "basename": "PTSD",
+      "path": "pages/PTSD.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "键盘、鼠标和触摸板",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/键盘、鼠标和触摸板.md"
+    },
+    {
+      "basename": "价值序列",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/价值序列.md"
+    },
+    {
+      "basename": "习得性无助",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/习得性无助.md"
+    },
+    {
+      "basename": "PUA",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/PUA.md"
+    },
+    {
+      "basename": "世事洞明，人情练达",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/世事洞明，人情练达.md"
+    },
+    {
+      "basename": "精通体位的太监",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/精通体位的太监.md"
+    },
+    {
+      "basename": "金句库",
+      "path": "pages/400 - RESOURCE/原子知识库/金句库/金句库.md"
+    },
+    {
+      "basename": "个人努力与社会进程",
+      "path": "pages/400 - RESOURCE/原子知识库/思维工具库/个人努力与社会进程.md"
+    },
+    {
+      "basename": "一些学起来挺有意思的小知识点 - MOC",
+      "path": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
     }
   ],
   "omittedPaths": [

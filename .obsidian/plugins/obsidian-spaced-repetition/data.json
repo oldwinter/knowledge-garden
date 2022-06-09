@@ -13,10 +13,10 @@
     "randomizeCardOrder": true,
     "convertHighlightsToClozes": true,
     "convertBoldTextToClozes": false,
-    "singlelineCardSeparator": "::",
-    "singlelineReversedCardSeparator": ":::",
-    "multilineCardSeparator": "?",
-    "multilineReversedCardSeparator": "??",
+    "singlelineCardSeparator": "??",
+    "singlelineReversedCardSeparator": "???",
+    "multilineCardSeparator": "",
+    "multilineReversedCardSeparator": "",
     "tagsToReview": [
       "#review"
     ],
@@ -32,6 +32,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-05-07",
+  "buryDate": "2022-06-09",
   "buryList": []
 }

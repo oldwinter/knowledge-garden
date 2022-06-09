@@ -481,6 +481,70 @@
         "viewType": "reading",
         "shouldUpdate": true
       }
+    },
+    "journals/2022-06-09.md": {
+      "table-id-vhpiuc": {
+        "data": {
+          "headers": [
+            {
+              "id": "column-id-0akhpu",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "text"
+            },
+            {
+              "id": "column-id-kcsk7e",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "number"
+            },
+            {
+              "id": "column-id-86q1dq",
+              "content": "New Column",
+              "sortName": "default",
+              "width": "100px",
+              "type": "date"
+            }
+          ],
+          "rows": [
+            {
+              "id": "row-id-48agbe",
+              "creationTime": 1654772823408
+            }
+          ],
+          "cells": [
+            {
+              "id": "cell-id-mri00r",
+              "rowId": "row-id-48agbe",
+              "headerId": "column-id-0akhpu",
+              "type": "text",
+              "expectedType": null,
+              "text": ""
+            },
+            {
+              "id": "cell-id-kwszvg",
+              "rowId": "row-id-48agbe",
+              "headerId": "column-id-kcsk7e",
+              "type": "number",
+              "expectedType": null,
+              "number": -1
+            },
+            {
+              "id": "cell-id-0plvvb",
+              "rowId": "row-id-48agbe",
+              "headerId": "column-id-86q1dq",
+              "type": "date",
+              "expectedType": null,
+              "date": "2022-06-06T16:00:00.000Z"
+            }
+          ],
+          "tags": []
+        },
+        "viewType": "reading",
+        "shouldUpdate": true
+      }
     }
   },
   "focusedElement": {

@@ -130,7 +130,7 @@
   "shimmering-focus@@monospace-font-size": 0.7,
   "supercharged-links@@1162-7812-before": "🦜",
   "supercharged-links@@3c8a-1054-before": "🗣",
-  "shimmering-focus@@longform-hue-shift-dark": 105,
+  "shimmering-focus@@longform-hue-shift-dark": -130,
   "shimmering-focus@@longform-text-indent": false,
   "shimmering-focus@@longform-hue-shift-light": 100,
   "shimmering-focus@@show-fold-indicators": true,
