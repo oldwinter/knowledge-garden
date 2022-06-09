@@ -1,5 +1,4 @@
 [
-  "remotely-save",
   "periodic-notes",
   "obsidian-spaced-repetition",
   "obsidian-style-settings",
@@ -13,7 +12,6 @@
   "obsidian-advanced-slides",
   "table-editor-obsidian",
   "dataview",
-  "obsidian-advanced-uri",
   "obsidian-auto-link-title",
   "customizable-page-header-buttons",
   "obsidian-focus-mode",
@@ -21,7 +19,6 @@
   "pane-relief",
   "obsidian-icon-folder",
   "link-favicon",
-  "excalibrain",
   "obsidian-excalidraw-plugin",
   "find-unlinked-files",
   "longform",
@@ -31,5 +28,7 @@
   "obsidian-hover-editor",
   "note-refactor-obsidian",
   "notion-like-tables",
-  "obsidian42-brat"
+  "obsidian42-brat",
+  "remotely-save",
+  "obsidian-advanced-uri"
 ]

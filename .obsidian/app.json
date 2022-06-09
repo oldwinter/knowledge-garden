@@ -14,7 +14,7 @@
   "fileSortOrder": "alphabetical",
   "attachmentFolderPath": "draws/assets",
   "readableLineLength": false,
-  "communityPluginSortOrder": "release",
+  "communityPluginSortOrder": "download",
   "lineWrap": true,
   "showUnsupportedFiles": true,
   "strictLineBreaks": true,
@@ -28,8 +28,7 @@
   "autoPairMarkdown": true,
   "showIndentGuide": true,
   "userIgnoreFilters": [
-    "logseq/bak/",
-    "logseq/"
+    "logseq/bak/"
   ],
   "rightToLeft": false,
   "trashOption": "system",

@@ -3,12 +3,12 @@
   "projects": {
     "journals": {
       "path": "journals",
-      "indexFile": "Index",
+      "indexFile": "IndexLF",
       "draftsPath": "Drafts/"
     }
   },
   "selectedProject": "journals",
-  "selectedDraft": null,
+  "selectedDraft": "Draft 1",
   "userScriptFolder": null,
   "workflows": {
     "Default Workflow": {

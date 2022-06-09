@@ -39,3 +39,5 @@ co-reference=>> [!REFERENCE] 參考 \n> $END$ | 📖參考提示區塊  |cor
 co-multicolumn=>> [!multi-column] 分栏 \n> $END$ | 🌂 分栏  |com
 
 co-blankcontainer=>> [!blank-container] 空容器分栏 \n> $END$ | 🌂 分栏 2  |com2
+
+闪念笔记|下下|闪闪

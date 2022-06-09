@@ -1,10 +1,43 @@
 {
   "choices": [
     {
-      "id": "4987c0d1-5944-41b2-8164-d013135c033c",
-      "name": "aa",
-      "type": "Capture",
+      "id": "028983ea-c694-437c-887c-8b785a6155e3",
+      "name": "静静静",
+      "type": "Macro",
       "command": false,
+      "macroId": null
+    },
+    {
+      "id": "980fbf52-6e55-4add-bbeb-f1e55d24ccf1",
+      "name": "尿尿",
+      "type": "Template",
+      "command": true,
+      "templatePath": "",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": false,
+        "folders": [],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "f2e4df29-b005-4901-af10-789e70e4051d",
+      "name": "快",
+      "type": "Capture",
+      "command": true,
       "appendLink": false,
       "captureTo": "",
       "captureToActiveFile": false,
@@ -33,8 +66,143 @@
       },
       "openFile": false,
       "openFileInMode": "default"
+    },
+    {
+      "id": "03774e73-be15-4248-a697-1c2f191e0c7e",
+      "name": "就就",
+      "type": "Multi",
+      "command": false,
+      "choices": [],
+      "collapsed": false
     }
   ],
-  "macros": [],
+  "macros": [
+    {
+      "name": "就就静静静",
+      "id": "e7345830-7b33-421d-8ea6-36a32a8c090f",
+      "commands": [
+        {
+          "name": "保存当前文件",
+          "type": "Obsidian",
+          "id": "76226a7e-6d55-471d-8f99-abb80ec7ca5f",
+          "commandId": "editor:save-file"
+        },
+        {
+          "name": "Copy",
+          "type": "EditorCommand",
+          "id": "84811381-a339-46b8-a91b-259d04701a78",
+          "editorCommandType": "Copy"
+        },
+        {
+          "name": "尿尿",
+          "type": "Choice",
+          "id": "a31bea35-cbc0-4a4e-94f1-99ac28bc36d6",
+          "choiceId": "980fbf52-6e55-4add-bbeb-f1e55d24ccf1"
+        },
+        {
+          "name": "Untitled Capture Choice",
+          "type": "NestedChoice",
+          "id": "e0ad1c70-b961-4f0e-b073-a9cb24aeea97",
+          "choice": {
+            "id": "a77f5ea5-f634-4afa-b027-5dd126deae2e",
+            "name": "Untitled Capture Choice",
+            "type": "Capture",
+            "command": false,
+            "appendLink": false,
+            "captureTo": "",
+            "captureToActiveFile": false,
+            "createFileIfItDoesntExist": {
+              "enabled": false,
+              "createWithTemplate": false,
+              "template": ""
+            },
+            "format": {
+              "enabled": false,
+              "format": ""
+            },
+            "insertAfter": {
+              "enabled": false,
+              "after": "",
+              "insertAtEnd": false,
+              "createIfNotFound": false,
+              "createIfNotFoundLocation": "top"
+            },
+            "prepend": false,
+            "task": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "aa3542c0-c1d1-4b5f-b47a-3c5e97ca0a26",
+          "choice": {
+            "id": "fe31111d-e124-4970-927d-0d63c1c827fb",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "",
+            "fileNameFormat": {
+              "enabled": false,
+              "format": ""
+            },
+            "folder": {
+              "enabled": false,
+              "folders": [],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false
+            },
+            "appendLink": false,
+            "incrementFileName": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "61155b46-9391-4140-9811-48ee11659f4f",
+          "choice": {
+            "id": "5d69d41f-92d5-4e50-8d7f-41dd2dd9bad1",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "",
+            "fileNameFormat": {
+              "enabled": false,
+              "format": ""
+            },
+            "folder": {
+              "enabled": false,
+              "folders": [],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false
+            },
+            "appendLink": false,
+            "incrementFileName": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
   "inputPrompt": "multi-line"
 }

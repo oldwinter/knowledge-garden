@@ -112,7 +112,6 @@
   "shimmering-focus@@no-grayed-out-inactive-pane": false,
   "shimmering-focus@@show-close-button": false,
   "shimmering-focus@@show-scrollbar": false,
-  "supercharged-links@@53f6-363a-before": "🧠",
   "supercharged-links@@c-75fc-e339-use-background": false,
   "supercharged-links@@75fc-e339-decoration": "initial",
   "shimmering-focus@@show-graph-controls": false,
@@ -122,8 +121,6 @@
   "shimmering-focus@@longform-left-aligned": false,
   "shimmering-focus@@overlaying-right-sidebar": false,
   "shimmering-focus@@status-bar-font-size": 0.7,
-  "supercharged-links@@53f6-363a-after": "\"\"",
-  "supercharged-links@@53f6-363a-weight": "initial",
   "supercharged-links@@75fc-e339-after": "\"\"",
   "shimmering-focus@@hide-index-files": true,
   "shimmering-focus@@menu-font-size": 0.8,
@@ -142,5 +139,6 @@
   "shimmering-focus@@atomic-ruler": false,
   "hover-editor@@he-title-bar-height": "28px",
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
-  "shimmering-focus@@no-double-underline": true
+  "shimmering-focus@@no-double-underline": true,
+  "supercharged-links@@8b14-901d-before": "📖 "
 }

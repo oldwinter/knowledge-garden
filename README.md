@@ -52,6 +52,6 @@ title: README
 
 ## 找我从诗词歌赋，谈到人生哲学
 
-- 微信：oldwinter2
+- 微信：oldwinter2 
 
 [^1]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法

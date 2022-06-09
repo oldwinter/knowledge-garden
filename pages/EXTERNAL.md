@@ -16,13 +16,17 @@ x-devonthink-item://
 ---
 >⬆⬆⬆
 ```
-
  
 ⬇⬇⬇
 - [[2022-五月]]
 	- obsidian 进阶，配合几个方法论食用：[dt-回归obsidian的纯与真](x-devonthink-item://D80E37D3-9160-41B9-9427-90F7127E9BF1)
-	- 神笔马良是童话，牛笔立青在人间。评 [dt-【双向链接的前世今生】上都计划与 Roam Research 思维工具](x-devonthink-item://BF9F0C1B-CDB2-4407-A7E9-618266BAEBDB) #评论/少数派 #对话/微信
 	- 何燕燕新文章的研究 [dt-项目笔记为中枢](x-devonthink-item://CCDFA015-291A-4436-AFED-2A8E5AB81ECF)
+---
+- [[夸人损人的文字]]
+	- #评论/少数派 神笔马良是童话，牛笔立青在人间。评 [dt-【双向链接的前世今生】上都计划与 Roam Research 思维工具](x-devonthink-item://BF9F0C1B-CDB2-4407-A7E9-618266BAEBDB)
+---
+- [[如何高效开会]]
+	[一次5人小规模的1小时会议的成本上万元](x-devonthink-item://84858D42-ECBC-4568-B0EC-81725193B58A)
 ---
 ⬆⬆⬆
  

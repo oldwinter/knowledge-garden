@@ -1,7 +1,7 @@
 {
   "strategy": "chinese",
   "matchStrategy": "partial",
-  "maxNumberOfSuggestions": 15,
+  "maxNumberOfSuggestions": 35,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
@@ -12,8 +12,8 @@
   "firstCharactersDisableSuggestions": ":/^",
   "showMatchStrategy": true,
   "showComplementAutomatically": true,
-  "showIndexingStatus": false,
-  "descriptionOnSuggestion": "Short",
+  "showIndexingStatus": true,
+  "descriptionOnSuggestion": "Full",
   "selectSuggestionKeys": "Ctrl/Cmd+Enter",
   "additionalCycleThroughSuggestionsKeys": "None",
   "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
@@ -24,7 +24,7 @@
   "onlyComplementEnglishOnCurrentFileComplement": true,
   "enableCurrentVaultComplement": true,
   "currentVaultMinNumberOfCharacters": 0,
-  "includeCurrentVaultPathPrefixPatterns": "/",
+  "includeCurrentVaultPathPrefixPatterns": "",
   "excludeCurrentVaultPathPrefixPatterns": "",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
@@ -56,46 +56,6 @@
         "frontMatter": {
           "count": 2,
           "lastUpdated": 1653880343438
-        }
-      }
-    },
-    "电视剧/大陆剧": {
-      "电视剧/大陆剧": {
-        "frontMatter": {
-          "count": 4,
-          "lastUpdated": 1652105482315
-        }
-      }
-    },
-    "以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统": {
-      "以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1652257293794
-        }
-      }
-    },
-    "外部资源的单向链接汇总": {
-      "外部资源的单向链接汇总": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1652270790605
-        }
-      }
-    },
-    "自下而上": {
-      "自下而上": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1652278160641
-        }
-      }
-    },
-    "onedrive": {
-      "onedrive": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1652358701377
         }
       }
     },
@@ -240,6 +200,46 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1654485454073
+        }
+      }
+    },
+    "人生赢家": {
+      "人生赢家": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654782781664
+        }
+      }
+    },
+    "微信": {
+      "微信": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1654782990028
+        }
+      }
+    },
+    "读书会": {
+      "读书会": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1654783011279
+        }
+      }
+    },
+    "过程记录，持续迭代，兜底措施": {
+      "过程记录，持续迭代，兜底措施": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1654787514914
+        }
+      }
+    },
+    "闪念笔记": {
+      "闪念笔记": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1654789715510
         }
       }
     }

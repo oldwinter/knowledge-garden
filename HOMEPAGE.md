@@ -9,11 +9,11 @@ title: HOMEPAGE
 
 | 我想要……             |                                                                                           |
 | -------------------- | ----------------------------------------------------------------------------------------- |
-| 获取一点信息         | [RSS阅读](reeder://)                                                                      |
+| 获取一点信息         | [reeder RSS阅读](reeder://)                                                                      |
 | 整理一下剪藏    | [Cubox剪藏](cubox://)                                                                                  |
 | 看看今天的任务       | [滴答清单](ticktick://)                                                                   |
-| 捕获我的闪念/灵感    | [obsidian每日日志](obsidian://advanced-uri?vault=knowledge-garden&daily=true&mode=append) |
-| 整理我的人生数据清单 | [人生数据清单](https://www.notion.so/oldwinter/ae9891b5cf694992873d0867ad55dc84)          |
+| 捕获我的闪念/灵感    | [obsidian 每日日志](obsidian://advanced-uri?daily=true&mode=append) |
+| 整理我的人生数据清单 | [notion 人生数据清单](notion://)          |
 
 ## 输出
 
@@ -23,3 +23,4 @@ title: HOMEPAGE
 | 从库里精选并设计目录结构 TOC       | [[TOCs]]   |
 | 看一下在 obsidian 里最近干了啥       | [[LATEST]] |
 | 看一下在 obsidian 里引用哪些外部资源 | [[EXTERNAL]]           |
+

@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "微信读书同步模板",
+      "path": "templates/微信读书同步模板.md"
+    },
+    {
+      "basename": "刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe.md"
+    },
+    {
+      "basename": "学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "1988：我想和这个世界谈谈-韩寒",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1988：我想和这个世界谈谈-韩寒.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "dict",
+      "path": "templates/dict/dict.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -9,12 +37,80 @@
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "mermaid模板",
-      "path": "templates/mermaid模板.md"
+      "basename": "VSCode",
+      "path": "pages/200 - PROJECT/我的开源项目/vscode/VSCode.md"
     },
     {
-      "basename": "微信读书同步模板",
-      "path": "templates/微信读书同步模板.md"
+      "basename": "双向链接",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/双向链接.md"
+    },
+    {
+      "basename": "MOC",
+      "path": "pages/000 - INBOX/MOC.md"
+    },
+    {
+      "basename": "渐进式总结",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
+    },
+    {
+      "basename": "templater",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/templater.md"
+    },
+    {
+      "basename": "相亲是否应该AA制",
+      "path": "pages/300 - AREA/知识管理/相亲是否应该AA制.md"
+    },
+    {
+      "basename": "发现的有趣现象",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/发现的有趣现象.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "插件的便利性及安全性，如何权衡",
+      "path": "pages/300 - AREA/知识管理/插件的便利性及安全性，如何权衡.md"
+    },
+    {
+      "basename": "视频制作",
+      "path": "pages/300 - AREA/人+科技融合/视频制作.md"
+    },
+    {
+      "basename": "明文数据",
+      "path": "pages/200 - PROJECT/个人职业生涯/明文数据.md"
+    },
+    {
+      "basename": "月度模板",
+      "path": "templates/月度模板.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
+    },
+    {
+      "basename": "机遇与个人能力",
+      "path": "pages/000 - INBOX/机遇与个人能力.md"
+    },
+    {
+      "basename": "夸人损人的文字",
+      "path": "pages/000 - INBOX/夸人损人的文字.md"
+    },
+    {
+      "basename": "周记模板",
+      "path": "templates/周记模板.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "templates/日记模板.md"
+    },
+    {
+      "basename": "obsidian publish 发布",
+      "path": "pages/000 - INBOX/obsidian publish 发布.md"
+    },
+    {
+      "basename": "mermaid模板",
+      "path": "templates/mermaid模板.md"
     },
     {
       "basename": "视频笔记模板",
@@ -33,28 +129,8 @@
       "path": "templates/电视剧模板.md"
     },
     {
-      "basename": "30 - 月度模板",
-      "path": "templates/30 - 月度模板.md"
-    },
-    {
-      "basename": "20 - 周记模板",
-      "path": "templates/20 - 周记模板.md"
-    },
-    {
-      "basename": "10 - 日记模板",
-      "path": "templates/10 - 日记模板.md"
-    },
-    {
       "basename": "SWOT",
       "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
     },
     {
       "basename": "高内聚，低耦合",
@@ -87,10 +163,6 @@
     {
       "basename": "软实力和硬通货",
       "path": "pages/400 - RESOURCE/人文社科通识/金融学/软实力和硬通货.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "pages/000 - INBOX/obsidian publish 发布.md"
     },
     {
       "basename": "frontdata",
@@ -127,78 +199,6 @@
     {
       "basename": "obsidian插件",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-    },
-    {
-      "basename": "ssh",
-      "path": "pages/200 - PROJECT/个人职业生涯/ssh.md"
-    },
-    {
-      "basename": "ssh自动以root权限登陆云服务器",
-      "path": "pages/300 - AREA/人+科技融合/ssh自动以root权限登陆云服务器.md"
-    },
-    {
-      "basename": "个人简历",
-      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "storytelling",
-      "path": "pages/400 - RESOURCE/书影音笔记/视频笔记/storytelling.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "思维导图",
-      "path": "pages/300 - AREA/思维导图.md"
-    },
-    {
-      "basename": "费曼技巧",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
-    },
-    {
-      "basename": "皮格马利翁效应",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
-    },
-    {
-      "basename": "我的标签使用",
-      "path": "pages/000 - INBOX/我的标签使用.md"
-    },
-    {
-      "basename": "anki",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
-    },
-    {
-      "basename": "obsidian的中括号`[[`搜索的技巧",
-      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian的中括号`[[`搜索的技巧.md"
-    },
-    {
-      "basename": "obsidian",
-      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-    },
-    {
-      "basename": "夸人损人的文字",
-      "path": "pages/000 - INBOX/夸人损人的文字.md"
-    },
-    {
-      "basename": "杠精",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/杠精.md"
-    },
-    {
-      "basename": "Index",
-      "path": "pages/000 - INBOX/Index.md"
-    },
-    {
-      "basename": "PTSD",
-      "path": "pages/000 - INBOX/PTSD.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "键盘、鼠标和触摸板",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/键盘、鼠标和触摸板.md"
     }
   ],
   "omittedPaths": [
