@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabDiscord",
-      "📍",
-      "FasNotesMedical",
-      "🎵",
-      "🖥️",
-      "📖",
-      "📹",
-      "Fab42Group",
+      "FabDelicious",
+      "🌲",
       "⏩",
-      "🌲"
+      "Fab42Group",
+      "📹",
+      "📖",
+      "🖥️",
+      "🎵",
+      "FasNotesMedical",
+      "📍"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -75,6 +75,5 @@
   "pages/EXTERNAL.md": "FabDiaspora",
   "pages/400 - RESOURCE/在线课程MOOC": "🌲",
   "pages/500 - ARCHIVE/已发布文章": "🔼",
-  "TOC.md": "FabEarlybirds",
   "HOMEPAGE.md": "FabDiscord"
 }

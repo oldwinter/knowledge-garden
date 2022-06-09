@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Git",
+      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
       "basename": "UGC、PGC和OGC的区别",
       "path": "pages/300 - AREA/知识管理/UGC、PGC和OGC的区别.md"
     },
@@ -21,24 +37,12 @@
       "path": "pages/000 - INBOX/obsidian publish 发布.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "学习目标的分级",
       "path": "pages/400 - RESOURCE/小知识点/学习目标的分级.md"
     },
     {
       "basename": "基于markdown的IDE - Obsidian",
       "path": "pages/基于markdown的IDE - Obsidian.md"
-    },
-    {
-      "basename": "TOC",
-      "path": "TOC.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "个人知识管理",
@@ -59,10 +63,6 @@
     {
       "basename": "notion",
       "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
     },
     {
       "basename": "LATEST",
@@ -141,10 +141,6 @@
       "path": "pages/000 - INBOX/我的标签使用.md"
     },
     {
-      "basename": "MOC",
-      "path": "pages/000 - INBOX/MOC.md"
-    },
-    {
       "basename": "文件夹和标签",
       "path": "pages/000 - INBOX/文件夹和标签.md"
     },
@@ -195,10 +191,6 @@
     {
       "basename": "目前知名的在线mooc",
       "path": "pages/400 - RESOURCE/在线课程MOOC/目前知名的在线mooc.md"
-    },
-    {
-      "basename": "罗生门",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/罗生门.md"
     }
   ],
   "omittedPaths": [
