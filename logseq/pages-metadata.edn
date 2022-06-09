@@ -61,6 +61,12 @@
  {:block/name "21-如何做一个不容易被人讨厌的人？ - 「one · 一个」@annote",
   :block/created-at 1654282897235,
   :block/updated-at 1654282897235}
+ {:block/name "270-->",
+  :block/created-at 1654691752397,
+  :block/updated-at 1654691752397}
+ {:block/name "290-->",
+  :block/created-at 1654691743806,
+  :block/updated-at 1654691743806}
  {:block/name "30 - 月度模板",
   :block/created-at 1654282879461,
   :block/updated-at 1654282879461}
@@ -82,9 +88,15 @@
  {:block/name "3阶魔方还原入门",
   :block/created-at 1654282881407,
   :block/updated-at 1654282881407}
+ {:block/name "4",
+  :block/created-at 1654691752397,
+  :block/updated-at 1654691752397}
  {:block/name "500 - archive",
   :block/created-at 1654282880090,
   :block/updated-at 1654282880090}
+ {:block/name "57",
+  :block/created-at 1654691743804,
+  :block/updated-at 1654691743804}
  {:block/name "80%默认优先，20%深度定制",
   :block/created-at 1654282878642,
   :block/updated-at 1654282878642}
@@ -190,6 +202,9 @@
  {:block/name "area - 领域",
   :block/created-at 1654282878714,
   :block/updated-at 1654282878714}
+ {:block/name "autohotkey",
+  :block/created-at 1654691756849,
+  :block/updated-at 1654691756849}
  {:block/name "automate",
   :block/created-at 1654282904098,
   :block/updated-at 1654282904098}
@@ -373,9 +388,15 @@
  {:block/name "editor syntax highlight",
   :block/created-at 1654282894125,
   :block/updated-at 1654282894125}
+ {:block/name "eula",
+  :block/created-at 1654691733833,
+  :block/updated-at 1654691733833}
  {:block/name "everything",
   :block/created-at 1654282900939,
   :block/updated-at 1654282900939}
+ {:block/name "excalibrain",
+  :block/created-at 1654691733549,
+  :block/updated-at 1654691733549}
  {:block/name "excalidraw",
   :block/created-at 1654282894820,
   :block/updated-at 1654282894820}
@@ -484,6 +505,12 @@
  {:block/name "homebrew|brew",
   :block/created-at 1654282901796,
   :block/updated-at 1654282901796}
+ {:block/name "homepage",
+  :block/created-at 1654691714767,
+  :block/updated-at 1654691714767}
+ {:block/name "homepage 与 workspace",
+  :block/created-at 1654691728119,
+  :block/updated-at 1654691728119}
  {:block/name "hook",
   :block/created-at 1654282899065,
   :block/updated-at 1654282899065}
@@ -499,6 +526,9 @@
  {:block/name "iaas、paas与saas",
   :block/created-at 1654282878712,
   :block/updated-at 1654282878712}
+ {:block/name "ide",
+  :block/created-at 1654691741247,
+  :block/updated-at 1654691741247}
  {:block/name "iina",
   :block/created-at 1654282900666,
   :block/updated-at 1654282900666}
@@ -511,6 +541,9 @@
  {:block/name "in-progress",
   :block/created-at 1654282967723,
   :block/updated-at 1654282967723}
+ {:block/name "inbox",
+  :block/created-at 1654691727607,
+  :block/updated-at 1654691727607}
  {:block/name "index",
   :block/created-at 1654282909696,
   :block/updated-at 1654282909696}
@@ -550,6 +583,15 @@
  {:block/name "jest",
   :block/created-at 1654282893426,
   :block/updated-at 1654282893426}
+ {:block/name "journals",
+  :block/created-at 1654691735964,
+  :block/updated-at 1654691735964}
+ {:block/name "journals/每月每季度总结",
+  :block/created-at 1654691735965,
+  :block/updated-at 1654691735965}
+ {:block/name "journals/每月每季度总结/2022-三月.md",
+  :block/created-at 1654691735888,
+  :block/updated-at 1654691735888}
  {:block/name "json与yaml",
   :block/created-at 1654282899170,
   :block/updated-at 1654282899170}
@@ -565,6 +607,18 @@
  {:block/name "jun 4th, 2022",
   :block/created-at 1654282879997,
   :block/updated-at 1654318917165}
+ {:block/name "jun 5th, 2022",
+  :block/created-at 1654691733505,
+  :block/updated-at 1654691733505}
+ {:block/name "jun 6th, 2022",
+  :block/created-at 1654691733554,
+  :block/updated-at 1654691733554}
+ {:block/name "jun 7th, 2022",
+  :block/created-at 1654691733589,
+  :block/updated-at 1654691733589}
+ {:block/name "jun 8th, 2022",
+  :block/created-at 1654691716830,
+  :block/updated-at 1654691716830}
  {:block/name "kanban",
   :block/created-at 1654282879782,
   :block/updated-at 1654282879782}
@@ -640,6 +694,9 @@
  {:block/name "lx-music-desktop",
   :block/created-at 1654282900680,
   :block/updated-at 1654282900680}
+ {:block/name "lyt 系统",
+  :block/created-at 1654691758283,
+  :block/updated-at 1654691758283}
  {:block/name "mackup",
   :block/created-at 1654282901814,
   :block/updated-at 1654282901814}
@@ -718,6 +775,9 @@
  {:block/name "moc|什么是moc笔记组织法",
   :block/created-at 1654282878688,
   :block/updated-at 1654282878688}
+ {:block/name "moc|索引笔记",
+  :block/created-at 1654691730979,
+  :block/updated-at 1654691730979}
  {:block/name "mongodb",
   :block/created-at 1654282904568,
   :block/updated-at 1654282904568}
@@ -763,6 +823,12 @@
  {:block/name "obsidian",
   :block/created-at 1654282878744,
   :block/updated-at 1654282878744}
+ {:block/name "obsidian publish 发布",
+  :block/created-at 1654691726956,
+  :block/updated-at 1654691726956}
+ {:block/name "obsidian sync 同步",
+  :block/created-at 1654691727236,
+  :block/updated-at 1654691727236}
  {:block/name "obsidian 是可以用一辈子不换的笔记软件吗",
   :block/created-at 1654282879775,
   :block/updated-at 1654282879775}
@@ -805,6 +871,9 @@
  {:block/name "obs＃83 多欄式callouts! 直接套用css片段變身n欄～ image 1.png",
   :block/created-at 1654282895531,
   :block/updated-at 1654282895531}
+ {:block/name "occupationally",
+  :block/created-at 1654691723770,
+  :block/updated-at 1654691723770}
  {:block/name "ocr",
   :block/created-at 1654282898665,
   :block/updated-at 1654282898665}
@@ -847,18 +916,90 @@
  {:block/name "pages",
   :block/created-at 1654282896234,
   :block/updated-at 1654282896234}
+ {:block/name "pages/000 - inbox",
+  :block/created-at 1654691735948,
+  :block/updated-at 1654691735948}
+ {:block/name "pages/000 - inbox/不看新闻.md",
+  :block/created-at 1654691735864,
+  :block/updated-at 1654691735864}
+ {:block/name "pages/000 - inbox/全国可飞.md",
+  :block/created-at 1654691735880,
+  :block/updated-at 1654691735880}
+ {:block/name "pages/000 - inbox/全球金融市场与互联网公司.md",
+  :block/created-at 1654691735862,
+  :block/updated-at 1654691735862}
+ {:block/name "pages/000 - inbox/双链笔记与概念挖坑.md",
+  :block/created-at 1654691735854,
+  :block/updated-at 1654691735854}
+ {:block/name "pages/000 - inbox/如果要给人安利好书.md",
+  :block/created-at 1654691735850,
+  :block/updated-at 1654691735850}
+ {:block/name "pages/000 - inbox/文件夹和标签.md",
+  :block/created-at 1654691735845,
+  :block/updated-at 1654691735845}
+ {:block/name "pages/000 - inbox/新时代如何开始学习一门新知识.md",
+  :block/created-at 1654691735733,
+  :block/updated-at 1654691735733}
+ {:block/name "pages/000 - inbox/杂念随思随想.md",
+  :block/created-at 1654691735732,
+  :block/updated-at 1654691735732}
+ {:block/name "pages/000 - inbox/笔记软件的选择.md",
+  :block/created-at 1654691735728,
+  :block/updated-at 1654691735728}
+ {:block/name "pages/000 - inbox/线性增长与指数增长.md",
+  :block/created-at 1654691735700,
+  :block/updated-at 1654691735700}
+ {:block/name "pages/000 - inbox/终身学习.md",
+  :block/created-at 1654691735699,
+  :block/updated-at 1654691735699}
+ {:block/name "pages/000 - inbox/考研备考经验.md",
+  :block/created-at 1654691735637,
+  :block/updated-at 1654691735637}
+ {:block/name "pages/200 - project",
+  :block/created-at 1654691735952,
+  :block/updated-at 1654691735952}
+ {:block/name "pages/200 - project/个人职业生涯",
+  :block/created-at 1654691735954,
+  :block/updated-at 1654691735954}
+ {:block/name "pages/200 - project/个人职业生涯/个人简历.md",
+  :block/created-at 1654691735863,
+  :block/updated-at 1654691735863}
  {:block/name "pages/300 - area",
   :block/created-at 1654282896236,
   :block/updated-at 1654282896236}
+ {:block/name "pages/300 - area/flomo.md",
+  :block/created-at 1654691735870,
+  :block/updated-at 1654691735870}
  {:block/name "pages/300 - area/人+科技融合",
   :block/created-at 1654282903473,
   :block/updated-at 1654282903473}
  {:block/name "pages/300 - area/人+科技融合/obs",
   :block/created-at 1654282903465,
   :block/updated-at 1654282903465}
+ {:block/name "pages/300 - area/人+科技融合/url scheme.md",
+  :block/created-at 1654691735865,
+  :block/updated-at 1654691735865}
+ {:block/name "pages/300 - area/人+科技融合/个人效率系统打造",
+  :block/created-at 1654691735955,
+  :block/updated-at 1654691735955}
+ {:block/name "pages/300 - area/人+科技融合/个人效率系统打造/个人知识管理.md",
+  :block/created-at 1654691735868,
+  :block/updated-at 1654691735868}
+ {:block/name "pages/300 - area/人+科技融合/滴答清单.md",
+  :block/created-at 1654691735731,
+  :block/updated-at 1654691735731}
+ {:block/name "pages/300 - area/思维导图.md",
+  :block/created-at 1654691735847,
+  :block/updated-at 1654691735847}
  {:block/name "pages/300 - area/知识管理",
   :block/created-at 1654282896237,
   :block/updated-at 1654282896237}
+ {:block/name "pages/300 - area/知识管理/notion学习笔记",
+  :block/created-at 1654691735960,
+  :block/updated-at 1654691735960}
+ {:block/name "pages/300 - area/知识管理/notion学习笔记/notion.md",
+  :block/created-at 1654691735869,
+  :block/updated-at 1654691735869}
  {:block/name "pages/300 - area/知识管理/obsidian学习笔记",
   :block/created-at 1654282896239,
   :block/updated-at 1654282896239}
@@ -866,6 +1007,46 @@
   "pages/300 - area/知识管理/obsidian学习笔记/spaced-repetition学习笔记",
   :block/created-at 1654282896211,
   :block/updated-at 1654282896211}
+ {:block/name "pages/300 - area/知识管理/obsidian学习笔记/闪念笔记.md",
+  :block/created-at 1654691735633,
+  :block/updated-at 1654691735633}
+ {:block/name "pages/300 - area/知识管理/番茄工作法.md",
+  :block/created-at 1654691735730,
+  :block/updated-at 1654691735730}
+ {:block/name "pages/400 - resource",
+  :block/created-at 1654691735901,
+  :block/updated-at 1654691735901}
+ {:block/name "pages/400 - resource/书影音笔记",
+  :block/created-at 1654691735945,
+  :block/updated-at 1654691735945}
+ {:block/name "pages/400 - resource/书影音笔记/视频笔记",
+  :block/created-at 1654691735947,
+  :block/updated-at 1654691735947}
+ {:block/name
+  "pages/400 - resource/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md",
+  :block/created-at 1654691735867,
+  :block/updated-at 1654691735867}
+ {:block/name "pages/400 - resource/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md",
+  :block/created-at 1654691735636,
+  :block/updated-at 1654691735636}
+ {:block/name "pages/400 - resource/原子知识库",
+  :block/created-at 1654691735902,
+  :block/updated-at 1654691735902}
+ {:block/name "pages/400 - resource/原子知识库/刚下飞机.md",
+  :block/created-at 1654691735895,
+  :block/updated-at 1654691735895}
+ {:block/name "pages/400 - resource/原子知识库/单词库&概念库",
+  :block/created-at 1654691735904,
+  :block/updated-at 1654691735904}
+ {:block/name "pages/400 - resource/原子知识库/单词库&概念库/权力寻租.md",
+  :block/created-at 1654691735635,
+  :block/updated-at 1654691735635}
+ {:block/name "pages/400 - resource/原子知识库/金句库",
+  :block/created-at 1654691735903,
+  :block/updated-at 1654691735903}
+ {:block/name "pages/400 - resource/原子知识库/金句库/金句库.md",
+  :block/created-at 1654691735634,
+  :block/updated-at 1654691735634}
  {:block/name "para",
   :block/created-at 1654282894316,
   :block/updated-at 1654282894316}
@@ -911,6 +1092,9 @@
  {:block/name "permute",
   :block/created-at 1654282900673,
   :block/updated-at 1654282900673}
+ {:block/name "personal knowledge management",
+  :block/created-at 1654691758306,
+  :block/updated-at 1654691758306}
  {:block/name "picgo",
   :block/created-at 1654282899052,
   :block/updated-at 1654282899052}
@@ -938,6 +1122,9 @@
  {:block/name "presentify",
   :block/created-at 1654282900669,
   :block/updated-at 1654282900669}
+ {:block/name "professionally",
+  :block/created-at 1654691723775,
+  :block/updated-at 1654691723775}
  {:block/name "project - 项目",
   :block/created-at 1654282878691,
   :block/updated-at 1654282878691}
@@ -1037,6 +1224,9 @@
  {:block/name "slidev",
   :block/created-at 1654282895052,
   :block/updated-at 1654282895052}
+ {:block/name "smart",
+  :block/created-at 1654691743470,
+  :block/updated-at 1654691743470}
  {:block/name "snipaste",
   :block/created-at 1654282900665,
   :block/updated-at 1654282900665}
@@ -1091,6 +1281,9 @@
  {:block/name "text expand",
   :block/created-at 1654282896210,
   :block/updated-at 1654282896210}
+ {:block/name "thebrain",
+  :block/created-at 1654691733550,
+  :block/updated-at 1654691733550}
  {:block/name "thefuck",
   :block/created-at 1654282901791,
   :block/updated-at 1654282901791}
@@ -1100,6 +1293,9 @@
  {:block/name "tldr",
   :block/created-at 1654282901791,
   :block/updated-at 1654282901791}
+ {:block/name "toc",
+  :block/created-at 1654691720466,
+  :block/updated-at 1654691720466}
  {:block/name "todo",
   :block/created-at 1654282967722,
   :block/updated-at 1654282967722}
@@ -1142,6 +1338,9 @@
  {:block/name "ugc",
   :block/created-at 1654282882443,
   :block/updated-at 1654282882443}
+ {:block/name "ugc、pgc和ogc的区别",
+  :block/created-at 1654691723879,
+  :block/updated-at 1654691723879}
  {:block/name "url scheme",
   :block/created-at 1654282898658,
   :block/updated-at 1654282898658}
@@ -1217,6 +1416,9 @@
  {:block/name "windows必备软件",
   :block/created-at 1654282900935,
   :block/updated-at 1654282900935}
+ {:block/name "windows系统与macos系统",
+  :block/created-at 1654691723423,
+  :block/updated-at 1654691723423}
  {:block/name "windows系统重装",
   :block/created-at 1654282892587,
   :block/updated-at 1654282892587}
@@ -1229,6 +1431,9 @@
  {:block/name "wox",
   :block/created-at 1654282902781,
   :block/updated-at 1654282902781}
+ {:block/name "x86架构和arm架构",
+  :block/created-at 1654691723372,
+  :block/updated-at 1654691723372}
  {:block/name "xmind",
   :block/created-at 1654282900675,
   :block/updated-at 1654282900675}
@@ -1592,6 +1797,9 @@
  {:block/name "主动插件和被动插件",
   :block/created-at 1654282896204,
   :block/updated-at 1654282896204}
+ {:block/name "主页与工作区",
+  :block/created-at 1654691728116,
+  :block/updated-at 1654691728116}
  {:block/name "习得性无助",
   :block/created-at 1654282885844,
   :block/updated-at 1654282885844}
@@ -1667,6 +1875,9 @@
  {:block/name "人人都可以学会的电子书制作方法",
   :block/created-at 1654282897223,
   :block/updated-at 1654282897223}
+ {:block/name "人人都是双标狗",
+  :block/created-at 1654691733504,
+  :block/updated-at 1654691733504}
  {:block/name "人体工学椅",
   :block/created-at 1654282906319,
   :block/updated-at 1654282906319}
@@ -1682,6 +1893,9 @@
  {:block/name "人生赢家",
   :block/created-at 1654282906818,
   :block/updated-at 1654282906818}
+ {:block/name "人类高质量男性",
+  :block/created-at 1654691733830,
+  :block/updated-at 1654691733830}
  {:block/name "什么值得买",
   :block/created-at 1654282878754,
   :block/updated-at 1654282878754}
@@ -1697,6 +1911,9 @@
  {:block/name "从微信读书到免费网文，聊聊我眼中的移动阅读行业",
   :block/created-at 1654282897233,
   :block/updated-at 1654282897233}
+ {:block/name "从浏览器输入一个网址到得到网站页面，中间发生了什么",
+  :block/created-at 1654691723479,
+  :block/updated-at 1654691723479}
  {:block/name "代码管理",
   :block/created-at 1654282905195,
   :block/updated-at 1654282905195}
@@ -1706,6 +1923,9 @@
  {:block/name "以 obsidian 为中心，打造懒人专用的个人知识管理 pkm 系统",
   :block/created-at 1654282879773,
   :block/updated-at 1654282879773}
+ {:block/name "以每日日志为入口",
+  :block/created-at 1654691720077,
+  :block/updated-at 1654691720077}
  {:block/name "以每日笔记为入口",
   :block/created-at 1654282878680,
   :block/updated-at 1654282878680}
@@ -1769,6 +1989,9 @@
  {:block/name "侠之大者",
   :block/created-at 1654282886938,
   :block/updated-at 1654282886938}
+ {:block/name "信息不对称",
+  :block/created-at 1654691743049,
+  :block/updated-at 1654691743049}
  {:block/name "信息中心与物料中心",
   :block/created-at 1654282878657,
   :block/updated-at 1654282878657}
@@ -1859,6 +2082,9 @@
  {:block/name "冯唐",
   :block/created-at 1654282881363,
   :block/updated-at 1654282881363}
+ {:block/name "决赛圈",
+  :block/created-at 1654691726964,
+  :block/updated-at 1654691726964}
  {:block/name "凯撒的归凯撒，上帝的归上帝",
   :block/created-at 1654282907815,
   :block/updated-at 1654282907815}
@@ -1961,6 +2187,9 @@
  {:block/name "反间计",
   :block/created-at 1654282881007,
   :block/updated-at 1654282881007}
+ {:block/name "反面答案 <!--sr:!2022-04-02",
+  :block/created-at 1654691752396,
+  :block/updated-at 1654691752396}
  {:block/name "发现的有趣现象",
   :block/created-at 1654282885961,
   :block/updated-at 1654282885961}
@@ -1994,6 +2223,9 @@
  {:block/name "各类文化产品的生产消费时间比",
   :block/created-at 1654282886505,
   :block/updated-at 1654282886505}
+ {:block/name "合桃派",
+  :block/created-at 1654691732903,
+  :block/updated-at 1654691732903}
  {:block/name "合约、配资、期货等金融杠杆",
   :block/created-at 1654282878752,
   :block/updated-at 1654282878752}
@@ -2015,6 +2247,12 @@
  {:block/name "听过很多大道理，依旧过不好这一生",
   :block/created-at 1654282882840,
   :block/updated-at 1654282882840}
+ {:block/name "启动v2ray的客户端，连接并测试连通性",
+  :block/created-at 1654691728645,
+  :block/updated-at 1654691728645}
+ {:block/name "启动v2ray的服务端的docker镜像",
+  :block/created-at 1654691728648,
+  :block/updated-at 1654691728648}
  {:block/name "周国平",
   :block/created-at 1654282890604,
   :block/updated-at 1654282890604}
@@ -2219,18 +2457,30 @@
  {:block/name "学习目标的分级",
   :block/created-at 1654282881640,
   :block/updated-at 1654282881640}
+ {:block/name "学习目标的分级#^86d6ah",
+  :block/created-at 1654691733831,
+  :block/updated-at 1654691733831}
  {:block/name "学会提问（原书第11版）-25614397",
   :block/created-at 1654282892237,
   :block/updated-at 1654282892237}
  {:block/name "学会提问（原书第12版）-39980443",
   :block/created-at 1654282892050,
   :block/updated-at 1654282892050}
+ {:block/name "安卓手机备份",
+  :block/created-at 1654691729121,
+  :block/updated-at 1654691729121}
  {:block/name "安卓手机必备软件",
   :block/created-at 1654282901219,
   :block/updated-at 1654282901219}
+ {:block/name "安卓手机重装步骤",
+  :block/created-at 1654691730060,
+  :block/updated-at 1654691730060}
  {:block/name "安慰剂效应",
   :block/created-at 1654282886115,
   :block/updated-at 1654282886115}
+ {:block/name "安装docker服务",
+  :block/created-at 1654691730075,
+  :block/updated-at 1654691730075}
  {:block/name "实业投资",
   :block/created-at 1654282878747,
   :block/updated-at 1654282878747}
@@ -2279,6 +2529,9 @@
  {:block/name "少有人走的路",
   :block/created-at 1654282886128,
   :block/updated-at 1654282886128}
+ {:block/name "工作台",
+  :block/created-at 1654691728241,
+  :block/updated-at 1654691728241}
  {:block/name "工作和生活的效率体系建设",
   :block/created-at 1654282900267,
   :block/updated-at 1654282900267}
@@ -2327,6 +2580,9 @@
  {:block/name "常见笔记组织方法",
   :block/created-at 1654282893608,
   :block/updated-at 1654282893608}
+ {:block/name "常青笔记",
+  :block/created-at 1654691728236,
+  :block/updated-at 1654691728236}
  {:block/name "常青笔记 - evergreen note",
   :block/created-at 1654282897627,
   :block/updated-at 1654282897627}
@@ -2396,6 +2652,12 @@
  {:block/name "强力研读法",
   :block/created-at 1654282883422,
   :block/updated-at 1654282883422}
+ {:block/name "强调动机的纯正和选择正确的手段达到自己的目的",
+  :block/created-at 1654691743802,
+  :block/updated-at 1654691743802}
+ {:block/name "强调效果的最大化。而价值理性以目的为导向",
+  :block/created-at 1654691743801,
+  :block/updated-at 1654691743801}
  {:block/name "当时为什么选择考研，现在为什么选择工作",
   :block/created-at 1654282906097,
   :block/updated-at 1654282906097}
@@ -2492,6 +2754,9 @@
  {:block/name "我的开源项目",
   :block/created-at 1654282878699,
   :block/updated-at 1654282878699}
+ {:block/name "我的标签使用",
+  :block/created-at 1654691730984,
+  :block/updated-at 1654691730984}
  {:block/name "我获取信息的方法",
   :block/created-at 1654282878647,
   :block/updated-at 1654282878647}
@@ -2591,6 +2856,9 @@
  {:block/name "摘录",
   :block/created-at 1654282893826,
   :block/updated-at 1654282893826}
+ {:block/name "摘录/b",
+  :block/created-at 1654691756025,
+  :block/updated-at 1654691756025}
  {:block/name "摘录/b站",
   :block/created-at 1654282900376,
   :block/updated-at 1654282900376}
@@ -2744,6 +3012,9 @@
  {:block/name "春秋笔法",
   :block/created-at 1654282882657,
   :block/updated-at 1654282882657}
+ {:block/name "是人之所以能成为人的原因。 <!--sr:!2022-06-22",
+  :block/created-at 1654691743804,
+  :block/updated-at 1654691743804}
  {:block/name "显示技术",
   :block/created-at 1654282906827,
   :block/updated-at 1654282906827}
@@ -2858,6 +3129,12 @@
  {:block/name "树上开花",
   :block/created-at 1654282881013,
   :block/updated-at 1654282881013}
+ {:block/name "校园招聘",
+  :block/created-at 1654691731958,
+  :block/updated-at 1654691731958}
+ {:block/name "梦华录",
+  :block/created-at 1654691731487,
+  :block/updated-at 1654691731487}
  {:block/name "梯子",
   :block/created-at 1654282908889,
   :block/updated-at 1654282908889}
@@ -3176,6 +3453,9 @@
  {:block/name "确定感",
   :block/created-at 1654282906863,
   :block/updated-at 1654282906863}
+ {:block/name "社会招聘",
+  :block/created-at 1654691731957,
+  :block/updated-at 1654691731957}
  {:block/name "祛魅",
   :block/created-at 1654282906833,
   :block/updated-at 1654282906833}
@@ -3185,6 +3465,9 @@
  {:block/name "私域与社群",
   :block/created-at 1654282908807,
   :block/updated-at 1654282908807}
+ {:block/name "私有云",
+  :block/created-at 1654691760864,
+  :block/updated-at 1654691760864}
  {:block/name "科学上网",
   :block/created-at 1654282906826,
   :block/updated-at 1654282906826}
@@ -3245,6 +3528,9 @@
  {:block/name "系统设计",
   :block/created-at 1654282899403,
   :block/updated-at 1654282899403}
+ {:block/name "索引笔记",
+  :block/created-at 1654691761899,
+  :block/updated-at 1654691761899}
  {:block/name "紧急避险",
   :block/created-at 1654282891112,
   :block/updated-at 1654282891112}
@@ -3326,6 +3612,9 @@
  {:block/name "考研备考经验",
   :block/created-at 1654282909124,
   :block/updated-at 1654282909124}
+ {:block/name "而不管结果如何。工具理性和价值理性是其他动物所缺乏的",
+  :block/created-at 1654691743803,
+  :block/updated-at 1654691743803}
  {:block/name "职场影响力",
   :block/created-at 1654282878696,
   :block/updated-at 1654282878696}
@@ -3353,6 +3642,12 @@
  {:block/name "自动化软件",
   :block/created-at 1654282904101,
   :block/updated-at 1654282904101}
+ {:block/name "自己部署一个v2ray服务",
+  :block/created-at 1654691732574,
+  :block/updated-at 1654691732574}
+ {:block/name "自带方法论的工具",
+  :block/created-at 1654691721564,
+  :block/updated-at 1654691721564}
  {:block/name "自由泳入门",
   :block/created-at 1654282881795,
   :block/updated-at 1654282881795}
@@ -3455,6 +3750,9 @@
  {:block/name "认知觉醒：开启自我改变的原动力-33628204",
   :block/created-at 1654282892085,
   :block/updated-at 1654282892085}
+ {:block/name "让子弹飞",
+  :block/created-at 1654691726587,
+  :block/updated-at 1654691726587}
  {:block/name "记忆宫殿",
   :block/created-at 1654282892890,
   :block/updated-at 1654282892890}
@@ -3473,6 +3771,9 @@
  {:block/name "评论",
   :block/created-at 1654282879666,
   :block/updated-at 1654282879666}
+ {:block/name "评论/b",
+  :block/created-at 1654691750847,
+  :block/updated-at 1654691750847}
  {:block/name "评论/b站",
   :block/created-at 1654282892898,
   :block/updated-at 1654282892898}
@@ -3614,6 +3915,10 @@
  {:block/name "运维运营",
   :block/created-at 1654282899405,
   :block/updated-at 1654282899405}
+ {:block/name
+  "近代最伟大的哲学家之一——马克思·韦伯提出了“合理性”的概念。他把合理性分为两种——价值理性和工具理性。工具理性是以结果为导向的",
+  :block/created-at 1654691743800,
+  :block/updated-at 1654691743800}
  {:block/name "这家创业公司是否值得加入",
   :block/created-at 1654282906822,
   :block/updated-at 1654282906822}
@@ -3677,6 +3982,9 @@
  {:block/name "问题管理",
   :block/created-at 1654282906450,
   :block/updated-at 1654282906450}
+ {:block/name "间歇式日记",
+  :block/created-at 1654691726582,
+  :block/updated-at 1654691726582}
  {:block/name "闻道有先后，术业有专攻",
   :block/created-at 1654282893745,
   :block/updated-at 1654282893745}
@@ -3731,6 +4039,9 @@
  {:block/name "霍尊陈露事件",
   :block/created-at 1654282884974,
   :block/updated-at 1654282884974}
+ {:block/name "青年旅社",
+  :block/created-at 1654691732959,
+  :block/updated-at 1654691732959}
  {:block/name "非虚构类写作",
   :block/created-at 1654282878630,
   :block/updated-at 1654282878630}
@@ -3815,6 +4126,9 @@
  {:block/name "高速缓存",
   :block/created-at 1654282907597,
   :block/updated-at 1654282907597}
+ {:block/name "高频引用与流式框架",
+  :block/created-at 1654691732895,
+  :block/updated-at 1654691732895}
  {:block/name "鲁班大师",
   :block/created-at 1654282882223,
   :block/updated-at 1654282882223}
