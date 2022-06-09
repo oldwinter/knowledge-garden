@@ -1,5 +1,14 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obsidian
+---
+
 up:: [[笔记软件的选择]]
+
 down:: [[obsidian插件]]
+
 jumps:: [[notion]]
 
 [[Obsidian入门到精通]]

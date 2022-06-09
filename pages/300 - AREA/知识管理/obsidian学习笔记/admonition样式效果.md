@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: admonition样式效果
+---
 已经被官方自带 [[callout]] 取代
 
 快捷键：

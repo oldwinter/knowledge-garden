@@ -5,6 +5,7 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabConfluence",
       "FabDelicious",
       "🌲",
       "⏩",
@@ -13,8 +14,7 @@
       "📖",
       "🖥️",
       "🎵",
-      "FasNotesMedical",
-      "📍"
+      "FasNotesMedical"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -75,5 +75,7 @@
   "pages/EXTERNAL.md": "FabDiaspora",
   "pages/400 - RESOURCE/在线课程MOOC": "🌲",
   "pages/500 - ARCHIVE/已发布文章": "🔼",
-  "HOMEPAGE.md": "FabDiscord"
+  "HOMEPAGE.md": "FabDiscord",
+  "MOCs.md": "FabDelicious",
+  "TOCs.md": "FabConfluence"
 }

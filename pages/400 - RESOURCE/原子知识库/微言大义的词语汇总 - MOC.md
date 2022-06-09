@@ -1,6 +1,10 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags: MOC
+date: 2022-06-09
+title: 微言大义的词语汇总 - MOC
 ---
 
 ## 收录范围

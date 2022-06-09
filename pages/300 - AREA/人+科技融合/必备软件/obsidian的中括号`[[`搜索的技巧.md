@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 'obsidian的中括号`[[`搜索的技巧'
+---
+
 ## obsidian 的中括号 `[[` 搜索的技巧
 
 - 中括号直接输入搜索项，连文件夹路径名都会搜索，有时候会有比较多的信息噪音

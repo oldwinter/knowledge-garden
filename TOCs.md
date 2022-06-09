@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: TOCs
+---
+
 ## [[README]] | 关于本库
 
 - [[第二大脑与数字花园]]
@@ -48,7 +55,7 @@
 ## PAGES | 我的知识库
 
 - [[PARA|什么是PARA笔记组织法]]
-- [[MOC|什么是MOC笔记组织法]]
+- [[MOCs|什么是MOC笔记组织法]]
 - [[PARA和MOC联用组织笔记]]
 	- [[PROJECT - 项目]]
 		- [[个人职业生涯]]

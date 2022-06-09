@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 放弃roam用obsidian的理由
+---
+
 ## 放弃 roam 用 obsidian 的理由
 
 [Why I chose Obsidian over Roam (as a Roam investor) - YouTube](https://www.youtube.com/watch?v=AWUk8-6yG2g)

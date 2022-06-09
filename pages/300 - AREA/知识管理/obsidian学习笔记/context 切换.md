@@ -1,6 +1,10 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags: todo/持续迭代
+date: 2022-06-09
+title: context 切换
 ---
 
 ## 概念

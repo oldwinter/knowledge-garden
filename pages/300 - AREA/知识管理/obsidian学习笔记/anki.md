@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: anki
+---
+
 ## obsidian 里面的用法
 
 - 加 card 标签

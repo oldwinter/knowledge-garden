@@ -1,9 +1,13 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags: review
 sr-due: 2022-06-07
 sr-interval: 69
 sr-ease: 310
+date: 2022-06-09
+title: obsidian插件
 ---
 
 ## 本仓库的已安装插件列表

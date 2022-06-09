@@ -1,7 +1,11 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags:
 cards-deck: INBOX
+date: 2022-06-09
+title: Obsidian入门到精通
 ---
 
 ## 核心原则

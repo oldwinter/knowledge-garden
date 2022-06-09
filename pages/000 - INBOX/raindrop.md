@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: raindrop
+---
 - 国内有 pinbox。相比于原生自带的书签管理，
 	- 核心优势是
 		- 他能解析书签网址的实际内容，从而更容易被搜索到。

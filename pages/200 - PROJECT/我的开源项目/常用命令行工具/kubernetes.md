@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: kubernetes
+---
+
 ## 小型化测试
 
 - minikube 用国内镜像源安装：

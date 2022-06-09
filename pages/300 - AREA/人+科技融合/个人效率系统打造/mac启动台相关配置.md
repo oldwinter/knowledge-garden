@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: mac启动台相关配置
+---
+
 ## Mac 设置 应用程序启动台行数列数
 
 ```

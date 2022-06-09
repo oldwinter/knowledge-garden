@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 渐进式 - progressive
+---
+
 ## 典型特征
 
 以渐进式前端框架 vue 为例：

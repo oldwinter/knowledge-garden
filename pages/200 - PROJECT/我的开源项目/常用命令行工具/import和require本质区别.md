@@ -1,4 +1,9 @@
-
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: import和require本质区别
+---
 
 作者：寸志
 链接：https://www.zhihu.com/question/56820346/answer/150724784

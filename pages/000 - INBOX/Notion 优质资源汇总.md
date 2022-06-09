@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: Notion 优质资源汇总
+---
 为了给刚入门有兴趣去学习 notion 的童鞋节省时间，我整理了一些东西，希望对你们有用。
 
 notion 入门综述

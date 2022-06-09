@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: templater
+---
+
 [Introduction - Templater (silentvoid13.github.io)](https://silentvoid13.github.io/Templater/)
 
 [[如何提高Obsidian的启动速度？]]

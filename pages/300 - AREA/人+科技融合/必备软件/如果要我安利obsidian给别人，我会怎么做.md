@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 如果要我安利obsidian给别人，我会怎么做
+---
+
 ## 如果要我安利 obsidian 给别人，我会怎么做
 
 - 如果是纯文字

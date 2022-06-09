@@ -1,4 +1,6 @@
 ---
+feed: show
+content-type: notes
 
 excalidraw-plugin: parsed
 excalidraw-default-mode: view
@@ -9,9 +11,12 @@ excalidraw-onload-script: "app.plugins.plugins[`excalibrain`].start(ea.targetVie
 
 tags: [excalidraw]
 
+date: 2022-06-09
+title: Text Elements
 ---
 
 # Text Elements
+
 [[pages/400 - RESOURCE/原子知识库/刚下飞机.md]] ^He1C7t8S
 
 [[journals/每月每季度总结/2022-三月.md]] ^Rds3m2Ck
@@ -79,7 +84,9 @@ tags: [excalidraw]
 [[pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md]] ^nMvfrXQA
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -1513,4 +1520,5 @@ SIBR+cYATIJ0YeOsvydAFphpgisAa+UWizblYYSAIpMySBMFE8OMACAKvg/ecSAg
 
 8d5BAXDBA9gNgEMQEAA=
 ```
+
 %%

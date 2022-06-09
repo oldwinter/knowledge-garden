@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: github
+---
+
 ## readme 相关
 
 文件头显示多彩的 badge 图标：

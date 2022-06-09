@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: markdown与html
+---
 
 和 [[json与yaml]] 类似。yaml 之所以有存在价值，也在于其阅读和编辑起来更方便。markdown 相比于 html，用更少的标记符号就能实现同样的效果，对内容的侵入性低，进一步降低输入摩擦力。
 

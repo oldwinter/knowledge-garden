@@ -1,4 +1,9 @@
-
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: devonthink
+---
 
 打开设置里的 wikilink 开关，直接支持 obsidian 等软件的两个中括号的符号，直接在 devonthink 里面，识别反向链接，使用起来更方便了。
 

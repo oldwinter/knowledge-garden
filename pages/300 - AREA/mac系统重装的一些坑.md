@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: mac系统重装的一些坑
+---
+
 ## 版本问题
 
 先抹掉磁盘至 AUFS，再选择更新的方案，接着重启后按 cmd+r，打开升级界面，会导致磁盘的格式和默认安装的系统是 sirrea，二者不兼容，升级失败。应该要 option+cmd+r，将硬盘格式化成最新格式，并且直接升级至 monteney 最新系统。

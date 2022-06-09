@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: dict
+---
 %% Callouts %%
 
 co-abstract=>> [!ABSTRACT] 摘要\n> $END$ | 📔摘要提示區塊  |coa|co-summary|co-tldr

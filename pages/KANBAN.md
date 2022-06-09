@@ -1,5 +1,9 @@
 ---
+feed: show
+content-type: notes
 kanban-plugin: basic
+date: 2022-06-09
+title: KANBAN
 ---
 
 ## 🤔TODO

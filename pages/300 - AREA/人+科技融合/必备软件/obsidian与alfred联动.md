@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obsidian与alfred联动
+---
+
 [chrisgrieser/shimmering-obsidian: Alfred Workflow for various enhancements of Obsidian. (github.com)](https://github.com/chrisgrieser/shimmering-obsidian)
 
 ## 超实用功能

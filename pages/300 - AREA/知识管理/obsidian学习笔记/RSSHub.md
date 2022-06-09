@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: RSSHub
+---
+
 [介绍 | RSSHub](https://docs.rsshub.app/)
 
 ## 自建

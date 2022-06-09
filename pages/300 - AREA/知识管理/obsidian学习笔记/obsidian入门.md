@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obsidian入门
+---
+
 ## 别人眼中的 obsidian
 
 ### Obsidian 官方介绍

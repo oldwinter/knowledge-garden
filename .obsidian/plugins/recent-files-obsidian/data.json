@@ -1,20 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Git",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-    },
-    {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "MOCs",
+      "path": "MOCs.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "TOCs.md"
+    },
+    {
+      "basename": "Git",
+      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
     },
     {
       "basename": "UGC、PGC和OGC的区别",
@@ -51,10 +59,6 @@
     {
       "basename": "个人简历",
       "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "VSCode",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/VSCode.md"
     },
     {
       "basename": "安卓手机必备软件",

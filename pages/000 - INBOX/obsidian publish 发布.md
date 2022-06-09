@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obsidian publish 发布
+---
+
 obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不尽人意，等一段时间再说吧。
 
 - [jackyzha0 (Jacky Zhao) · GitHub](https://github.com/jackyzha0)

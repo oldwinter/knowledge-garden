@@ -1,5 +1,9 @@
 ---
+feed: show
+content-type: notes
 aliases: dataviewjs
+date: 2022-06-09
+title: dataview
 ---
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)

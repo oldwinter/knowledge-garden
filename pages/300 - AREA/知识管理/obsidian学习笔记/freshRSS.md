@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: freshRSS
+---
+
 [FreshRSS, a free, self-hostable aggregator…](https://www.freshrss.org/)
 
 安装方式：

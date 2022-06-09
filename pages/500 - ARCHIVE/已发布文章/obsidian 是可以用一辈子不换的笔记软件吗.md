@@ -1,7 +1,11 @@
 ---
+feed: show
+content-type: notes
 id: e0754685-caf5-429c-bc8c-b05cd5356ea4
 aliases:
 published: true
+date: 2022-06-09
+title: obsidian 是可以用一辈子不换的笔记软件吗
 ---
 
 ## 我是哪根葱

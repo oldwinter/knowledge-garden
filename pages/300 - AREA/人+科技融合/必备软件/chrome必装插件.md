@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: chrome必装插件
+---
+
 ## 必装插件
 
 - 类似的网站/similarsites

@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obsidian的使用感受
+---
+
 obsidian 的使用感受
 
 ## 别人眼中的 obsidian

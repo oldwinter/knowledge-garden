@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: ryooo的知识管理工作流
+---
+
 [Obsidian 中文社区-圆桌第二期 · 面向实战的知识管理工作流分享_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QY4y147VR/?spm_id_from=333.788)
 
 - [[为什么要做笔记]]，合理做笔记，能帮助自己找到以前学过的知识，思考过的东西。

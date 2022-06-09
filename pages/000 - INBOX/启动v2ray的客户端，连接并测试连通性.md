@@ -1,6 +1,15 @@
-mac上以[[V2rayU]]为例：
-和[[启动v2ray的服务端的docker镜像]]里的配置对应。
-重点在vnext里面的配置。
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 启动v2ray的客户端，连接并测试连通性
+---
+
+mac 上以 [[V2rayU]] 为例：
+
+和 [[启动v2ray的服务端的docker镜像]] 里的配置对应。
+重点在 vnext 里面的配置。
+
 ```
 {
   "log": {

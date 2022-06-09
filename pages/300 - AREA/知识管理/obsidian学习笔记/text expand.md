@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: text expand
+---
+
 ## 这个插件对我真的有用吗？
 
 [mrjackphil/obsidian-text-expand: A simple text expand plugin for Obsidian.md (github.com)](https://github.com/mrjackphil/obsidian-text-expand)

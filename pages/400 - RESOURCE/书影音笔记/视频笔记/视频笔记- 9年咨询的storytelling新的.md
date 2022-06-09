@@ -1,6 +1,10 @@
 ---
+feed: show
+content-type: notes
 aliases: storytelling
 tags: 
+date: 2022-06-09
+title: 视频笔记- 9年咨询的storytelling新的
 ---
 
 ## 视频内容和感谢

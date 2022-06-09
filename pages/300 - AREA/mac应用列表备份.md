@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: mac应用列表备份
+---
 简单的导出，很多 app 都用不到了暂时没删除而已。
 
 tree -L 1

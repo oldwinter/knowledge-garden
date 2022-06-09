@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 常青笔记 - Evergreen Note
+---
+
 [何谓常青笔记（EvergreenNotes） (pmthinking.com)](https://index.pmthinking.com/EvergreenNotes-0a3f82b22a654eb18ccf3e83854ec1ba)
 
 [Evergreen notes](cubox://card?id=ff8080818122494e018127bceb8266e3)

@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: Git
+---
+
 ## 用 github 的 ssh 地址，实现免密码操作
 
 ```

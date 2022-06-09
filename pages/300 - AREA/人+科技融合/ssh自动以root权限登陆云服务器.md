@@ -1,4 +1,9 @@
-
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: ssh自动以root权限登陆云服务器
+---
 
 分 2 步：
 - 启动云服务器的 root 权限远程登陆功能

@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: 从Alfred迁移至Raycast
+---
 
 启动器除了 [[alfred]]和[[raycast]]，还有竞品[[Utools]]、[[HapiGo]]、[[LaunchBar]]。
 

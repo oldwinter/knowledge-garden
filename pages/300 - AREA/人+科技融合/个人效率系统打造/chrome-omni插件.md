@@ -1,4 +1,9 @@
-
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: chrome-omni插件
+---
 
 			
 持续关注一下，以后有改良，就坚持使用，

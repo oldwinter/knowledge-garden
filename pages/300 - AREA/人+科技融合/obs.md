@@ -1,4 +1,9 @@
-
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: obs
+---
 
 - [[loopback]]
 	- 虚拟声卡，解决多音源问题

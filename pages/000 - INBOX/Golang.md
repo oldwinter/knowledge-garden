@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: Golang
+---
 首次安装完以后，由于地址被屏蔽，且 go 命令不走 v2ray 代理，所以需要更换 GOPROXY
 
 ```

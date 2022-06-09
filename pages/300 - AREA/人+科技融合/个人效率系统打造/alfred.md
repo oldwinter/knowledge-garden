@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: alfred
+---
 其他竞品：[[utools]]， [[go]]
 
 ## workflow 调用过程

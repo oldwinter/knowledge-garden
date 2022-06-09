@@ -1,5 +1,9 @@
 ---
+feed: show
+content-type: notes
 aliases: 什么是PARA笔记组织法
+date: 2022-06-09
+title: PARA
 ---
 
 ## 一个 PARA 的有效实践

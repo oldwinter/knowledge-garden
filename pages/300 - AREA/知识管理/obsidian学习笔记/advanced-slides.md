@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: advanced-slides
+---
 --- %% fold %%
 
 aliases: markdown 格式的 ppt, slides 学习笔记教程, reveal.js 教程

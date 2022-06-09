@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: logseq和obsidian的联合联动使用
+---
+
 obsidian 的发布功能还没试过，但看了别人的发布效果，感觉也一般。
 
 但 logseq 的发布效果还算不错。所以考虑联合使用 obsidian 和 logseq，并且网上已经有成熟的发布方案。

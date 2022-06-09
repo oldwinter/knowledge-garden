@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: docker in docker
+---
+
 ## 定义
 
 在 docker 的运行时容器中，再运行一个 docker engine，从而在这个容器内，又有一套全新的 docker 运行时系统，与容器外完全隔离。

@@ -1,3 +1,9 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: EXTERNAL
+---
 > 汇总单向引用了我的其他地方的资源的链接，执行 expand 命令刷新
 
 ## devonthink 的资源引用
@@ -10,6 +16,7 @@ x-devonthink-item://
 ---
 >⬆⬆⬆
 ```
+
  
 ⬇⬇⬇
 - [[2022-五月]]
@@ -31,6 +38,7 @@ cubox://
 ---
 >⬆⬆⬆
 ```
+
  
 ⬇⬇⬇
 - [[常青笔记 - Evergreen Note]]
@@ -59,6 +67,7 @@ www.notion.so/oldwinter
 ---
 >⬆⬆⬆
 ```
+
  
 ⬇⬇⬇
 - [[个人工作流]]
@@ -81,6 +90,7 @@ github.com/oldwinter
 ---
 >⬆⬆⬆
 ```
+
  
 ⬇⬇⬇
 ⬆⬆⬆

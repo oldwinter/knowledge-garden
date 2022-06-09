@@ -1,3 +1,10 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: PARA和MOC联用组织笔记
+---
+
 ## PARA
 
 para 不恰当的映射，中短期粒度而言：
@@ -44,7 +51,7 @@ map of contents
 - [[双链笔记]]，[[万物互联]]
 - [[学习目标的分级]]
 
-[[TOC]] 文件是 logseq 内置的目录。与 indexl 这种自动化的 dataview 区分开，contents 进行手动的结构化的汇编。
+[[TOCs]] 文件是 logseq 内置的目录。与 indexl 这种自动化的 dataview 区分开，contents 进行手动的结构化的汇编。
 
 相当于如果把这个库出一本书或者 wiki，那么这里就是目录。但又不必完全索引库里面的全部内容，渐进式地搞就行。
 

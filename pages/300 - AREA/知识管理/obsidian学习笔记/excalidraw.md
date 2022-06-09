@@ -1,6 +1,10 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags: todo/某天
+date: 2022-06-09
+title: excalidraw
 ---
 
 通过图 + 双链的形式，更容易描述清楚复杂系统，找机会尝试。

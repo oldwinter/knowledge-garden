@@ -1,4 +1,12 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-09
+title: docker
+---
+
 ## 快速安装
+
 [[安装docker服务]]
 
 ## 仓库

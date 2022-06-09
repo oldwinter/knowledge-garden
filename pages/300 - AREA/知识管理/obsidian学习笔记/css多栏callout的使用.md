@@ -1,7 +1,11 @@
 ---
+feed: show
+content-type: notes
 aliases: 
 tags: 
 cssClass: two-column-list
+date: 2022-06-09
+title: css多栏callout的使用
 ---
 
 [[Obs＃83] 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
