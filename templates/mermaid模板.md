@@ -1,10 +1,3 @@
----
-feed: show
-content-type: notes
-date: 2022-06-09
-title: mermaid模板
----
-
 ## 官方文档
 
 [About Mermaid (mermaid-js.github.io)](https://mermaid-js.github.io/mermaid/#/README)

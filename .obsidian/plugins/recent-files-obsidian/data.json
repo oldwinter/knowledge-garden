@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "mermaid模板",
+      "path": "templates/mermaid模板.md"
+    },
+    {
+      "basename": "微信读书同步模板",
+      "path": "templates/微信读书同步模板.md"
+    },
+    {
+      "basename": "视频笔记模板",
+      "path": "templates/视频笔记模板.md"
+    },
+    {
+      "basename": "会议纪要模板",
+      "path": "templates/会议纪要模板.md"
+    },
+    {
+      "basename": "电影笔记模板",
+      "path": "templates/电影笔记模板.md"
+    },
+    {
+      "basename": "电视剧模板",
+      "path": "templates/电视剧模板.md"
+    },
+    {
+      "basename": "30 - 月度模板",
+      "path": "templates/30 - 月度模板.md"
+    },
+    {
+      "basename": "20 - 周记模板",
+      "path": "templates/20 - 周记模板.md"
+    },
+    {
+      "basename": "10 - 日记模板",
+      "path": "templates/10 - 日记模板.md"
+    },
+    {
+      "basename": "SWOT",
+      "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
     },
     {
       "basename": "TOCs",
@@ -47,10 +87,6 @@
     {
       "basename": "软实力和硬通货",
       "path": "pages/400 - RESOURCE/人文社科通识/金融学/软实力和硬通货.md"
-    },
-    {
-      "basename": "SWOT",
-      "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
     },
     {
       "basename": "obsidian publish 发布",
@@ -163,38 +199,6 @@
     {
       "basename": "键盘、鼠标和触摸板",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/键盘、鼠标和触摸板.md"
-    },
-    {
-      "basename": "价值序列",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/价值序列.md"
-    },
-    {
-      "basename": "习得性无助",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/习得性无助.md"
-    },
-    {
-      "basename": "PUA",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/PUA.md"
-    },
-    {
-      "basename": "世事洞明，人情练达",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/世事洞明，人情练达.md"
-    },
-    {
-      "basename": "精通体位的太监",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/精通体位的太监.md"
-    },
-    {
-      "basename": "金句库",
-      "path": "pages/400 - RESOURCE/原子知识库/金句库/金句库.md"
-    },
-    {
-      "basename": "个人努力与社会进程",
-      "path": "pages/400 - RESOURCE/原子知识库/思维工具库/个人努力与社会进程.md"
-    },
-    {
-      "basename": "一些学起来挺有意思的小知识点 - MOC",
-      "path": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
     }
   ],
   "omittedPaths": [
