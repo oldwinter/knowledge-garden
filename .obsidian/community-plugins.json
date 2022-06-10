@@ -23,12 +23,12 @@
   "find-unlinked-files",
   "longform",
   "various-complements",
-  "quick-explorer",
   "obsidian-weread-plugin",
   "obsidian-hover-editor",
   "note-refactor-obsidian",
   "notion-like-tables",
   "obsidian42-brat",
   "remotely-save",
-  "obsidian-advanced-uri"
+  "obsidian-advanced-uri",
+  "quick-explorer"
 ]
