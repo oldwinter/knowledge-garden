@@ -5,7 +5,7 @@ date: 2022-06-09
 title: markdown
 ---
 
-relate:: [[vim、markdown与org-mode]]
+x:: [[vim、markdown与org-mode]]
 
 markdown 相比于 txt 这种 0 格式的文本，有辅助符号能帮助我们进行排版；相比于 word 这种超级编辑器，不需要也不支持复杂的排版格式。
 

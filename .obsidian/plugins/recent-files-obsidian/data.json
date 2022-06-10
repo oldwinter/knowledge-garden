@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "LATEST",
       "path": "pages/LATEST.md"
     },
@@ -113,20 +121,12 @@
       "path": "pages/000 - INBOX/MOC.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "云计算与个人",
       "path": "pages/200 - PROJECT/云计算与云原生/云计算与个人.md"
     },
     {
       "basename": "个人职业生涯",
       "path": "pages/200 - PROJECT/个人职业生涯/个人职业生涯.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "云计算与云原生",
