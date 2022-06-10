@@ -36,7 +36,7 @@
       "Move all footnotes to the bottom of the document.": true
     },
     "Re-Index Footnotes": {
-      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
+      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": true
     },
     "Footnote after Punctuation": {
       "Ensures that footnote references are placed after punctuation, not before.": true
@@ -59,6 +59,17 @@
     "Proper Ellipsis": {
       "Replaces three consecutive dots with an ellipsis.": true
     },
+    "Emphasis Style": {
+      "Makes sure the emphasis style is consistent.": true,
+      "Style": "consistent"
+    },
+    "Strong Style": {
+      "Makes sure the strong style is consistent.": true,
+      "Style": "consistent"
+    },
+    "No Bare URLs": {
+      "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": true
+    },
     "Trailing spaces": {
       "Removes extra spaces after every line.": true,
       "Two Space Linebreak": true
@@ -73,8 +84,12 @@
     "Space after list markers": {
       "There should be a single space after list markers and checkboxes.": true
     },
+    "Remove Empty Lines Between List Markers and Checklists": {
+      "There should not be any empty lines between list markers and checklists.": true
+    },
     "Compact YAML": {
-      "Removes leading and trailing blank lines in the YAML front matter.": true
+      "Removes leading and trailing blank lines in the YAML front matter.": true,
+      "Inner New Lines": true
     },
     "Consecutive blank lines": {
       "There should be at most one consecutive blank line.": true
@@ -88,6 +103,9 @@
     },
     "Space between Chinese and English or numbers": {
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": true
+    },
+    "Remove link spacing": {
+      "Removes spacing around link text.": true
     }
   },
   "lintOnSave": true,

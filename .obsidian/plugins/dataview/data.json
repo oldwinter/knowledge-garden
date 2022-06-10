@@ -13,8 +13,8 @@
   "inlineQueryPrefix": "=",
   "inlineJsQueryPrefix": "$=",
   "enableDataviewJs": true,
-  "enableInlineDataviewJs": false,
-  "prettyRenderInlineFields": false,
+  "enableInlineDataviewJs": true,
+  "prettyRenderInlineFields": true,
   "taskLinkLocation": "end",
   "taskLinkText": "🔗",
   "schemaVersion": 1

@@ -1,12 +1,76 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md"
+    },
+    {
+      "basename": "置身事内：中国政府与经济发展-兰小欢",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/置身事内：中国政府与经济发展-兰小欢.md"
+    },
+    {
+      "basename": "微信读书同步模板",
+      "path": "templates/微信读书同步模板.md"
+    },
+    {
+      "basename": "学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "认知觉醒：开启自我改变的原动力-周岭",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-周岭.md"
+    },
+    {
+      "basename": "微信读书清单",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
+    },
+    {
+      "basename": "我所理解的生活-韩寒",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-韩寒.md"
+    },
+    {
+      "basename": "世界因你不同：李开复自传（纪念版）-李开复 范海涛",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/世界因你不同：李开复自传（纪念版）-李开复 范海涛.md"
+    },
+    {
+      "basename": "同名同姓受害者协会-下村敦史",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/同名同姓受害者协会-下村敦史.md"
+    },
+    {
+      "basename": "古龙作品大全集（72册）-古龙",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/古龙作品大全集（72册）-古龙.md"
+    },
+    {
+      "basename": "1988：我想和这个世界谈谈-韩寒",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1988：我想和这个世界谈谈-韩寒.md"
+    },
+    {
+      "basename": "学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe.md"
+    },
+    {
+      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
+      "path": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
+    },
+    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "个人努力与社会进程",
+      "path": "pages/400 - RESOURCE/原子知识库/思维工具库/个人努力与社会进程.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
     },
     {
       "basename": "LATEST",
@@ -135,70 +199,6 @@
     {
       "basename": "vscode必备插件",
       "path": "pages/200 - PROJECT/我的开源项目/vscode/vscode必备插件.md"
-    },
-    {
-      "basename": "VSCode",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/VSCode.md"
-    },
-    {
-      "basename": "Github Pilot",
-      "path": "pages/200 - PROJECT/我的开源项目/vscode/Github Pilot.md"
-    },
-    {
-      "basename": "mongoDB",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/mongoDB.md"
-    },
-    {
-      "basename": "kubernetes",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubernetes.md"
-    },
-    {
-      "basename": "kubectl",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/kubectl.md"
-    },
-    {
-      "basename": "import和require本质区别",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/import和require本质区别.md"
-    },
-    {
-      "basename": "GraphQL和RESTAPI",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/GraphQL和RESTAPI.md"
-    },
-    {
-      "basename": "github",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/github.md"
-    },
-    {
-      "basename": "Git",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/Git.md"
-    },
-    {
-      "basename": "数据库",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/数据库.md"
-    },
-    {
-      "basename": "docker in docker",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/docker in docker.md"
-    },
-    {
-      "basename": "快速10分钟搭建自己的网站",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速10分钟搭建自己的网站.md"
-    },
-    {
-      "basename": "快速5分钟搭建本地镜像仓库",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/快速5分钟搭建本地镜像仓库.md"
-    },
-    {
-      "basename": "关系型数据库",
-      "path": "pages/200 - PROJECT/我的开源项目/常用命令行工具/关系型数据库.md"
-    },
-    {
-      "basename": "项目owner机制",
-      "path": "pages/200 - PROJECT/软件项目管理/项目owner机制.md"
-    },
-    {
-      "basename": "项目管理与法律",
-      "path": "pages/200 - PROJECT/软件项目管理/项目管理与法律.md"
     }
   ],
   "omittedPaths": [
