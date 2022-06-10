@@ -1,6 +1,78 @@
 {
   "recentFiles": [
     {
+      "basename": "做为甲方，如何管理外包项目",
+      "path": "pages/000 - INBOX/做为甲方，如何管理外包项目.md"
+    },
+    {
+      "basename": "反间计",
+      "path": "pages/000 - INBOX/反间计.md"
+    },
+    {
+      "basename": "unlinked files output",
+      "path": "unlinked files output.md"
+    },
+    {
+      "basename": "unresolved links output",
+      "path": "unresolved links output.md"
+    },
+    {
+      "basename": "SWOT",
+      "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
+    },
+    {
+      "basename": "工具理性与价值理性",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
+    },
+    {
+      "basename": "软实力和硬通货",
+      "path": "pages/400 - RESOURCE/人文社科通识/金融学/软实力和硬通货.md"
+    },
+    {
+      "basename": "皮格马利翁效应",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
+    },
+    {
+      "basename": "渐进式 - progressive",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
+    },
+    {
+      "basename": "text expand",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/text expand.md"
+    },
+    {
+      "basename": "obsidian的使用感受",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian的使用感受.md"
+    },
+    {
+      "basename": "obsidian入门",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
+    },
+    {
+      "basename": "dataview的数据来源",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview的数据来源.md"
+    },
+    {
+      "basename": "anki",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
+    },
+    {
+      "basename": "notion",
+      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
+    },
+    {
+      "basename": "思维导图",
+      "path": "pages/300 - AREA/思维导图.md"
+    },
+    {
+      "basename": "费曼技巧",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
+    },
+    {
+      "basename": "obsidian插件",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
+    },
+    {
       "basename": "MOCs",
       "path": "pages/MOCs.md"
     },
@@ -127,78 +199,6 @@
     {
       "basename": "精益",
       "path": "pages/200 - PROJECT/软件项目管理/精益.md"
-    },
-    {
-      "basename": "ssh",
-      "path": "pages/200 - PROJECT/个人职业生涯/ssh.md"
-    },
-    {
-      "basename": "演讲、教学和培训",
-      "path": "pages/200 - PROJECT/个人职业生涯/演讲、教学和培训.md"
-    },
-    {
-      "basename": "需求管理",
-      "path": "pages/200 - PROJECT/个人职业生涯/需求管理.md"
-    },
-    {
-      "basename": "需求单管理",
-      "path": "pages/200 - PROJECT/个人职业生涯/需求单管理.md"
-    },
-    {
-      "basename": "问题管理",
-      "path": "pages/200 - PROJECT/个人职业生涯/问题管理.md"
-    },
-    {
-      "basename": "为什么选择我们",
-      "path": "pages/200 - PROJECT/个人职业生涯/为什么选择我们.md"
-    },
-    {
-      "basename": "微服务",
-      "path": "pages/200 - PROJECT/个人职业生涯/微服务.md"
-    },
-    {
-      "basename": "谈谈你的失败经历",
-      "path": "pages/200 - PROJECT/个人职业生涯/谈谈你的失败经历.md"
-    },
-    {
-      "basename": "谈谈你的成功经历",
-      "path": "pages/200 - PROJECT/个人职业生涯/谈谈你的成功经历.md"
-    },
-    {
-      "basename": "如何高效开会",
-      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-    },
-    {
-      "basename": "你最大的优点是什么",
-      "path": "pages/200 - PROJECT/个人职业生涯/你最大的优点是什么.md"
-    },
-    {
-      "basename": "你最大的缺点是什么",
-      "path": "pages/200 - PROJECT/个人职业生涯/你最大的缺点是什么.md"
-    },
-    {
-      "basename": "你怎么评价自己",
-      "path": "pages/200 - PROJECT/个人职业生涯/你怎么评价自己.md"
-    },
-    {
-      "basename": "你有什么业余爱好",
-      "path": "pages/200 - PROJECT/个人职业生涯/你有什么业余爱好.md"
-    },
-    {
-      "basename": "你还有什么问题问我吗",
-      "path": "pages/200 - PROJECT/个人职业生涯/你还有什么问题问我吗.md"
-    },
-    {
-      "basename": "你的职业规划是什么",
-      "path": "pages/200 - PROJECT/个人职业生涯/你的职业规划是什么.md"
-    },
-    {
-      "basename": "你的家庭情况是怎么样",
-      "path": "pages/200 - PROJECT/个人职业生涯/你的家庭情况是怎么样.md"
-    },
-    {
-      "basename": "明文数据",
-      "path": "pages/200 - PROJECT/个人职业生涯/明文数据.md"
     }
   ],
   "omittedPaths": [
