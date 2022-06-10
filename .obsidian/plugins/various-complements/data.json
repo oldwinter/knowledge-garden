@@ -9,7 +9,7 @@
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^",
+  "firstCharactersDisableSuggestions": ":/^。，：？『",
   "showMatchStrategy": true,
   "showComplementAutomatically": true,
   "showIndexingStatus": true,
@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 27,
-          "lastUpdated": 1654825725832
+          "count": 28,
+          "lastUpdated": 1654863677205
         }
       }
     },
@@ -280,6 +280,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1654827196206
+        }
+      }
+    },
+    "sort": {
+      "sort": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1654863628658
         }
       }
     }

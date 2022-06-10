@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
       "basename": "做为甲方，如何管理外包项目",
       "path": "pages/000 - INBOX/做为甲方，如何管理外包项目.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "项目管理与法律",
       "path": "pages/200 - PROJECT/软件项目管理/项目管理与法律.md"
-    },
-    {
-      "basename": "精益",
-      "path": "pages/200 - PROJECT/软件项目管理/精益.md"
     }
   ],
   "omittedPaths": [
