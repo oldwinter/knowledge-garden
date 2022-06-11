@@ -13,7 +13,7 @@
   "showMatchStrategy": true,
   "showComplementAutomatically": true,
   "showIndexingStatus": true,
-  "descriptionOnSuggestion": "Full",
+  "descriptionOnSuggestion": "Short",
   "selectSuggestionKeys": "Ctrl/Cmd+Enter",
   "additionalCycleThroughSuggestionsKeys": "None",
   "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
