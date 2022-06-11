@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "《三体》",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/《三体》.md"
+    },
+    {
+      "basename": "《刻意练习》",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
       "basename": "梦华录",
       "path": "pages/000 - INBOX/梦华录.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "callout",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/callout.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "《认知觉醒》",
@@ -187,10 +195,6 @@
     {
       "basename": "个人知识笔记系统",
       "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "pages/000 - INBOX/MOC.md"
     }
   ],
   "omittedPaths": [
