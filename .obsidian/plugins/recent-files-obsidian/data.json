@@ -1,16 +1,116 @@
 {
   "recentFiles": [
     {
+      "basename": "闻道有先后，术业有专攻",
+      "path": "pages/400 - RESOURCE/闻道有先后，术业有专攻.md"
+    },
+    {
+      "basename": "三十六计",
+      "path": "pages/400 - RESOURCE/三十六计.md"
+    },
+    {
+      "basename": "让我们灵魂激荡身体欢愉：一个男科医生的手记-任黎明",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/医学健康/让我们灵魂激荡身体欢愉：一个男科医生的手记-任黎明.md"
+    },
+    {
+      "basename": "微信读书清单",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
+    },
+    {
+      "basename": "论自由-约翰·穆勒",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/政治军事/论自由-约翰·穆勒.md"
+    },
+    {
+      "basename": "把时间当作朋友（第3版）-李笑来",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
+    },
+    {
+      "basename": "学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "认知觉醒：开启自我改变的原动力-周岭",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-周岭.md"
+    },
+    {
+      "basename": "拆掉思维里的墙（白金升级版）-古典",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/拆掉思维里的墙（白金升级版）-古典.md"
+    },
+    {
+      "basename": "世界因你不同：李开复自传（纪念版）-李开复 范海涛",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/世界因你不同：李开复自传（纪念版）-李开复 范海涛.md"
+    },
+    {
+      "basename": "史蒂夫·乔布斯传-沃尔特·艾萨克森",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/史蒂夫·乔布斯传-沃尔特·艾萨克森.md"
+    },
+    {
+      "basename": "围城-钱钟书",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/围城-钱钟书.md"
+    },
+    {
+      "basename": "同名同姓受害者协会-下村敦史",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/同名同姓受害者协会-下村敦史.md"
+    },
+    {
+      "basename": "生死疲劳-莫言",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/生死疲劳-莫言.md"
+    },
+    {
+      "basename": "三体（全集）-刘慈欣",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/三体（全集）-刘慈欣.md"
+    },
+    {
+      "basename": "你是我的荣耀（杨洋、迪丽热巴主演）-顾漫",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/你是我的荣耀（杨洋、迪丽热巴主演）-顾漫.md"
+    },
+    {
+      "basename": "1984-乔治·奥威尔",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1984-乔治·奥威尔.md"
+    },
+    {
+      "basename": "置身事内：中国政府与经济发展-兰小欢",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/置身事内：中国政府与经济发展-兰小欢.md"
+    },
+    {
+      "basename": "穷查理宝典：查理·芒格智慧箴言录（全新增订本）-彼得·考夫曼",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/穷查理宝典：查理·芒格智慧箴言录（全新增订本）-彼得·考夫曼.md"
+    },
+    {
+      "basename": "股票作手回忆录-埃德温·利非弗 杰西·利弗莫尔",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/股票作手回忆录-埃德温·利非弗 杰西·利弗莫尔.md"
+    },
+    {
+      "basename": "清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里.md"
+    },
+    {
+      "basename": "刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe.md"
+    },
+    {
+      "basename": "好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "终身学习",
+      "path": "pages/000 - INBOX/终身学习.md"
+    },
+    {
       "basename": "《三体》",
       "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/《三体》.md"
     },
     {
       "basename": "《刻意练习》",
       "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "梦华录",
@@ -29,44 +129,12 @@
       "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md"
     },
     {
-      "basename": "置身事内：中国政府与经济发展-兰小欢",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/置身事内：中国政府与经济发展-兰小欢.md"
-    },
-    {
-      "basename": "微信读书同步模板",
-      "path": "templates/微信读书同步模板.md"
-    },
-    {
-      "basename": "学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利.md"
-    },
-    {
-      "basename": "认知觉醒：开启自我改变的原动力-周岭",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-周岭.md"
-    },
-    {
-      "basename": "微信读书清单",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
-    },
-    {
       "basename": "我所理解的生活-韩寒",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-韩寒.md"
-    },
-    {
-      "basename": "世界因你不同：李开复自传（纪念版）-李开复 范海涛",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/世界因你不同：李开复自传（纪念版）-李开复 范海涛.md"
-    },
-    {
-      "basename": "同名同姓受害者协会-下村敦史",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/同名同姓受害者协会-下村敦史.md"
     },
     {
       "basename": "古龙作品大全集（72册）-古龙",
@@ -79,10 +147,6 @@
     {
       "basename": "学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md"
-    },
-    {
-      "basename": "刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe.md"
     },
     {
       "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
@@ -135,66 +199,6 @@
     {
       "basename": "obsidian的使用感受",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian的使用感受.md"
-    },
-    {
-      "basename": "obsidian入门",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian入门.md"
-    },
-    {
-      "basename": "dataview的数据来源",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview的数据来源.md"
-    },
-    {
-      "basename": "anki",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/anki.md"
-    },
-    {
-      "basename": "notion",
-      "path": "pages/300 - AREA/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "思维导图",
-      "path": "pages/300 - AREA/思维导图.md"
-    },
-    {
-      "basename": "费曼技巧",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
-    },
-    {
-      "basename": "obsidian插件",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "必备软件",
-      "path": "pages/300 - AREA/人+科技融合/必备软件/必备软件.md"
-    },
-    {
-      "basename": "PARA和MOC联用组织笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
-    },
-    {
-      "basename": "以每日日志为入口",
-      "path": "pages/000 - INBOX/以每日日志为入口.md"
-    },
-    {
-      "basename": "工作和生活的效率体系建设",
-      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
-    },
-    {
-      "basename": "个人知识笔记系统",
-      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
     }
   ],
   "omittedPaths": [

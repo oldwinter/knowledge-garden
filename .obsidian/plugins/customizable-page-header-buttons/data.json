@@ -61,6 +61,11 @@
       "id": "workspaces:save-and-load",
       "icon": "workspace-glyph",
       "name": "工作区: 保存当前布局后加载其他工具区布局"
+    },
+    {
+      "id": "obsidian-weread-plugin:sync-weread-notes-command",
+      "icon": "sync",
+      "name": "Weread Plugin: Sync Weread command"
     }
   ],
   "titleCenter": [],
