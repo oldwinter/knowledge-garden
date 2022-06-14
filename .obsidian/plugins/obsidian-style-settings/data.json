@@ -70,7 +70,7 @@
   "sanctum@@topside-status-bar": true,
   "shimmering-focus@@no-floating-metadata": false,
   "shimmering-focus@@show-header-bar": true,
-  "shimmering-focus@@show-urls": true,
+  "shimmering-focus@@show-urls": false,
   "shimmering-focus@@shapes": "squareish-shapes",
   "shimmering-focus@@colored-yaml": true,
   "shimmering-focus@@trim-long-filenames": true,

@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "节奏与关键时间点",
+      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/节奏与关键时间点.md"
+    },
+    {
+      "basename": "卡片笔记",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/卡片笔记.md"
+    },
+    {
+      "basename": "卡片盒笔记法 - Zettelkasten",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
+    },
+    {
+      "basename": "李敖",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/李敖.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -19,14 +47,6 @@
     {
       "basename": "安卓手机如何翻墙",
       "path": "pages/000 - INBOX/安卓手机如何翻墙.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "节奏与关键时间点",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/节奏与关键时间点.md"
     },
     {
       "basename": "王者荣耀",
@@ -179,26 +199,6 @@
     {
       "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
       "path": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "个人努力与社会进程",
-      "path": "pages/400 - RESOURCE/原子知识库/思维工具库/个人努力与社会进程.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "做为甲方，如何管理外包项目",
-      "path": "pages/000 - INBOX/做为甲方，如何管理外包项目.md"
-    },
-    {
-      "basename": "反间计",
-      "path": "pages/000 - INBOX/反间计.md"
     }
   ],
   "omittedPaths": [

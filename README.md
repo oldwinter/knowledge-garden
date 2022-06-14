@@ -54,6 +54,6 @@ title: README
 
 - 微信：oldwinter2
 
-[^1]: 同样的内容，以 3 种不同形式发布:[✍🏻 轻博客](https://blog.oldwinter.top/)、[🌱 数字花园](https://oldwinter.github.io/knowledge-garden/)、[👨‍💻‍ 源代码](https://github.com/oldwinter/knowledge-garden)
+[^1]: 同样的内容，以 3 种不同形式发布:[✍🏻 轻博客](https://blog.oldwinter.top/)、[🌱 数字花园](https://logseq.oldwinter.top/)、[👨‍💻‍ 源代码](https://github.com/oldwinter/knowledge-garden)
 
 [^2]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
