@@ -1,108 +1,4 @@
 {
-  "obsidian-admonition:insert-admonition": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "K"
-    }
-  ],
-  "obsidian-better-command-palette:open-better-commmand-palette": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
-  "various-complements:reload-custom-dictionaries": [],
-  "obsidian-spaced-repetition:srs-note-review-easy": [
-    {
-      "modifiers": [
-        "Alt",
-        "Ctrl"
-      ],
-      "key": "1"
-    }
-  ],
-  "obsidian-spaced-repetition:srs-note-review-good": [
-    {
-      "modifiers": [
-        "Alt",
-        "Ctrl"
-      ],
-      "key": "2"
-    }
-  ],
-  "obsidian-spaced-repetition:srs-note-review-hard": [
-    {
-      "modifiers": [
-        "Alt",
-        "Ctrl"
-      ],
-      "key": "3"
-    }
-  ],
-  "app:go-back": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "["
-    }
-  ],
-  "app:go-forward": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "]"
-    }
-  ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Alt",
-        "Ctrl"
-      ],
-      "key": "F"
-    }
-  ],
-  "obsidian-footnotes:insert-footnote": [
-    {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "F"
-    }
-  ],
-  "app:delete-file": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Backspace"
-    }
-  ],
-  "note-composer:merge-file": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "M"
-    }
-  ],
-  "table-editor-obsidian:insert-row": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "Enter"
-    }
-  ],
   "daily-notes": [
     {
       "modifiers": [
@@ -112,40 +8,22 @@
       "key": "J"
     }
   ],
-  "periodic-notes:open-daily-note": [
+  "daily-notes:goto-next": [
     {
       "modifiers": [
         "Mod",
         "Shift"
       ],
-      "key": "J"
+      "key": "K"
     }
   ],
-  "file-explorer:new-file-in-new-pane": [
+  "daily-notes:goto-prev": [
     {
       "modifiers": [
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
-  "pane-relief:go-next": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "Tab"
-    }
-  ],
-  "pane-relief:go-prev": [
-    {
-      "modifiers": [
-        "Ctrl",
+        "Mod",
         "Shift"
       ],
-      "key": "Tab"
+      "key": "H"
     }
-  ],
-  "cycle-through-panes:cycle-through-panes": [],
-  "cycle-through-panes:cycle-through-panes-reverse": []
+  ]
 }

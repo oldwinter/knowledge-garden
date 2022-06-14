@@ -4,13 +4,13 @@
       "id": "app:go-back",
       "icon": "left-arrow-with-tail",
       "name": "返回",
-      "showButtons": "desktop"
+      "showButtons": "both"
     },
     {
       "id": "app:go-forward",
       "icon": "right-arrow-with-tail",
       "name": "前进",
-      "showButtons": "desktop"
+      "showButtons": "both"
     },
     {
       "id": "obsidian-focus-mode:toggle-super-focus-mode",

@@ -1,0 +1,19 @@
+{
+  "noInfinity": true,
+  "noZero": true,
+  "allFileExtensions": true,
+  "showImgThumbnails": true,
+  "addUnresolved": true,
+  "coTags": true,
+  "defaultSubtypeType": "Label Propagation",
+  "debugMode": false,
+  "superDebugMode": false,
+  "exclusionRegex": "",
+  "exclusionTags": [],
+  "algsToShow": [
+    "Co-Citations",
+    "Adamic Adar",
+    "Jaccard",
+    "Clustering Coefficient"
+  ]
+}

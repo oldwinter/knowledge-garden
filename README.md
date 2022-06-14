@@ -1,11 +1,11 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-14
 title: README
 ---
 
-## 这是什么
+## 这是什么 [^1]
 
 - 真实袒露的 [[第二大脑]]。是个人每日阅读、笔记和写作的完整实时的过程与结果的全盘分享。
 - 未经美化的 [[数字花园]]。避免为了正式发表而过度修葺美化文章，保留了最真实完备的细节。
@@ -22,7 +22,7 @@ title: README
 	- [[HOMEPAGE]]
 	- 传统 [[TOCs]]
 	- 现代 [[MOCs]]
-- 用。若简单漫游后，还算感兴趣，则 `git clone` 本库，并用 [[obsidian]]、[[logseq]]或[[VSCode]][^1] 任意一款 app 打开本库后进行编辑和进一步探索。
+- 用。若简单漫游后，还算感兴趣，则 `git clone` 本库，并用 [[obsidian]]、[[logseq]]或[[VSCode]][^2] 任意一款 app 打开本库后进行编辑和进一步探索。
 - 悟。确定先只使用 obsidian，结合 [[卡片盒笔记法 - Zettelkasten]]的方法论，建立自己的[[个人知识管理]]体系，打造自己的[[第二大脑]]。
 - 玩。obsidian 是 [[平台+插件]]理念加持下的操作系统级的类[[IDE]]笔记软件，可以看看本库使用的[[obsidian插件]]，并评估自己的需求进行增删，让插件更好地为自己服务。
 - 合。工具和方法论都熟悉了以后，不妨开始尝试结合 [[logseq]]和[[VSCode]]，共同完成一些 obsidian 实现起来不便的操作。
@@ -52,6 +52,8 @@ title: README
 
 ## 找我从诗词歌赋，谈到人生哲学
 
-- 微信：oldwinter2 
+- 微信：oldwinter2
 
-[^1]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
+[^1]: 同样的内容，以 3 种不同形式发布:[✍🏻 轻博客](https://blog.oldwinter.top/)、[🌱 数字花园](https://oldwinter.github.io/knowledge-garden/)、[👨‍💻‍ 源代码](https://github.com/oldwinter/knowledge-garden)
+
+[^2]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法

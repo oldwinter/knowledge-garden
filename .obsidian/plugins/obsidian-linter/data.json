@@ -36,7 +36,7 @@
       "Move all footnotes to the bottom of the document.": true
     },
     "Re-Index Footnotes": {
-      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": true
+      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
     },
     "Footnote after Punctuation": {
       "Ensures that footnote references are placed after punctuation, not before.": true

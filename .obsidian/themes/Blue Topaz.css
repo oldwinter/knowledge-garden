@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.15。uid [20220605] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.15, uid [20220605] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.15。uid [20220611] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.15, uid [20220611] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -10,11 +10,11 @@ name: Blue Topaz Theme
 id: blue-topaz-theme
 settings:
   - 
-    id: translucent-setting-panel
+    id: transparent-setting-panel
     title: Translucent Setting Panel
-    title.zh: 半透明窗口
-    description: Make this panel translucent
-    description.zh: 使本窗口半透明，便于设置
+    title.zh: 透明窗口
+    description: Make this panel transparent
+    description.zh: 使本窗口透明，便于设置
     type: class-toggle
     default: false
   - 
@@ -90,7 +90,7 @@ settings:
     description.zh: 主题色主要作用于标题，字体，列表等主色调，建议用对比度强，不易疲劳的色系。如果想单独调整个别类目请在2.1中继续细调。
     type: variable-themed-color
     opacity: true
-    format: rgb
+    format: hex
     default-light: '#95a503'
     default-dark: '#95a503'
   -
@@ -100,7 +100,7 @@ settings:
     description.zh: 浅色主要作用于各类触发背景底色，建议用不影响阅读的背景色系。
     type: variable-themed-color
     opacity: true
-    format: rgb
+    format: hex
     default-light: '#e0e79a'
     default-dark: '#e0e79a'
   -
@@ -110,7 +110,7 @@ settings:
     description.zh: 深色主要作用于主题强调色系，用在各种控件，提示等使用，建议用浅色相关的醒目色系。
     type: variable-themed-color
     opacity: true
-    format: rgb
+    format: hex
     default-light: '#746909'
     default-dark: '#746909'
   - 
@@ -527,6 +527,20 @@ settings:
       - 
         label: Asymmetric Style of Split Panes
         value: asymmetric-split-left
+  -
+    id: titlebar-close-button
+    title: Titlebar close button
+    title.zh: Ob标题栏关闭按钮
+    type: class-select
+    allowEmpty: false
+    default: default-titlebar
+    options:
+      - 
+        label: Default
+        value: default-titlebar
+      - 
+        label: Reversal
+        value: reversal-titlebar
   -
     id: hide-titlebar-text
     title: Hide text in Title Bar
@@ -1070,12 +1084,6 @@ settings:
     type: variable-text
     default: 0.9375em
   -
-    id: font-size-file-header-title-andy-plugin
-    title: File Header (for Sliding Pane plugin)
-    title.zh: 文件抬头标题 (Sliding Pane plugin)
-    type: variable-text
-    default: 1em
-  -
     id: font-size-folder-and-file
     title: Folder and File
     title.zh: 左侧边栏文件字体大小
@@ -1400,6 +1408,13 @@ settings:
     type: variable-number
     default: 1.5
   -
+    id: toggle-paragraph-spacing
+    title: Toggle  paragraph spacing in Reading Mode
+    title.zh: 开启阅读模式段间距
+    description.zh: 开启后对多个<br>标记不再生效
+    type: class-toggle
+    default: false
+  -
     id: paragraph-spacing
     title: Paragraph Spacing
     title.zh: 段间距
@@ -1428,8 +1443,10 @@ settings:
     step: 0.1
   -
     id: text-indentation-two-em
-    title: Slight Indentation of the First Line in Preview Mode
-    title.zh: 段落首行缩进（预览模式）
+    title: Slight Indentation of the First Line 
+    title.zh: 段落首行缩进
+    description.zh: 需要安装Contextual Typography插件
+    description: Contextual Typography plugin needs to be installed
     type: class-toggle
     default: false
   -
@@ -2344,8 +2361,8 @@ settings:
     default: false
   -
     id: cursor-color-temp
-    title: Cursor color (for Obsidian v0.14.6)
-    title.zh: 光标颜色 (适合软件v0.14.6版本)
+    title: Cursor color (Only for Obsidian version below 0.14.6)
+    title.zh: 光标颜色 (只适合软件v0.14.6以下版本)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2353,8 +2370,8 @@ settings:
     default-dark: '#'
   -
     id: fancy-cursor
-    title: Toggle fancy cursor (for Obsidian v0.14.6)
-    title.zh: 切换装饰性光标 (适合软件v0.14.6版本)
+    title: Toggle fancy cursor (Only for Obsidian version below 0.14.6)
+    title.zh: 切换装饰性光标 (只适合软件v0.14.6以下版本)
     type: class-toggle
     default: false
   -
@@ -2515,6 +2532,10 @@ settings:
       - 
         label: Animation with Position Changing
         value: loading-shape-with-custom-gif
+      - 
+        label: Jumping Mario
+        value: loading-page-style-mario
+
   -
     id: loading-custom-text-folder
     title: 2.3.16.1 Custom Text
@@ -2653,6 +2674,14 @@ settings:
     level: 3
     collapsed: true
   -
+    id: tag-click
+    title: Cancel click the tag to trigger auto-jump
+    title.zh: 取消实时预览模式下点击标签自动跳转
+    type: class-toggle
+    default: false
+    description: You can jump by clicking on the # marks in the tags
+    description.zh: 可以通过点击标签中的#号跳转
+  -
     id: tag-style-option
     title: Tag Style
     title.zh: 标签样式
@@ -2768,13 +2797,28 @@ settings:
     type: variable-text
     default: 1px
   -
-    id: tag-click
-    title: Cancel click the tag to trigger auto-jump
-    title.zh: 取消实时预览模式下点击标签自动跳转
-    type: class-toggle
-    default: false
-    description: You can jump by clicking on the # marks in the tags
-    description.zh: 可以通过点击标签中的#号跳转
+    id: tag-color-settings
+    title: 2.3.18 Setting, Menu, Option panes
+    title.zh: 2.3.18 设置、菜单、选项面板
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: setting-etc-pane-style
+    title: Pane Style
+    type: class-select
+    allowEmpty: false
+    default: setting-default-frosted-glass
+    options:
+      - 
+        label: Frosted Glass
+        value: setting-default-frosted-glass
+      - 
+        label: Traditional
+        value: setting-style-traditional
+      - 
+        label: Translucent (only for setting panel)
+        value: translucent-setting-panel
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -2817,6 +2861,12 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  -
+    id: toggle-calendar-shadow
+    title: Toggle Shadow of Current Date
+    title.zh: 开启日历中当前日期的阴影
+    type: class-toggle
+    default: false
   -
     id: style-options-for-calendar-plugin
     title: Calendar
@@ -3006,11 +3056,41 @@ settings:
     level: 2
     collapsed: true
   -
+    id: toggle-acitive-border-right 
+    title: Toggle the Border of an Active File to Right
+    title.zh: 切换激活文件的线至右侧
+    type: class-toggle
+    default: false
+  -
     id: transparent-panes
     title: Transparent Panes for Sliding Panes Plugin
     title.zh: 使用Sliding Panes插件时，透明化部分页面
     type: class-toggle
     default: false
+  -
+    id: bg-sliding-pane-leaf
+    title: Page Background Color
+    title.zh: 笔记页面背景颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: bg-sliding-pane-header
+    title: File Header Background Color
+    title.zh: 文件标题背景颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: font-size-file-header-title-andy-plugin
+    title: Font Size of File Header
+    title.zh: 文件抬头标题字体大小
+    type: variable-text
+    default: 1em
   -
     id: style-options-for-dialogue-plugin-heading
     title: 3.9 Obsidian Memos
@@ -3368,6 +3448,7 @@ body {
   --font-size-loading-add: 1.5em;
 
   /*font family*/
+  --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei", sans-serif;
   --font-family-list: ;/*列表字体*/
   --font-text-theme: Bookerly, "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
   --font-family-h1: var(--font-default);
@@ -3442,7 +3523,11 @@ body {
   --loading-text-after: "✿❀";
   --loading-add-text-color: #d47e86;
   --loading-add-text-color-alt: #a4e39c;
-  
+  --pixel: 20px;
+  --c-1: #da2400;
+  --c-2: #ffb623;
+  --c-3: #8c6e22;
+
   --nord0: #2E3440;
   --nord1: #3B4252;
   --nord1-1: #3B425251;
@@ -3532,33 +3617,6 @@ body {
   --paragraph-spacing: 1;
 }
 
-body.font-family-change-to-default .markdown-source-view,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered),
-body.font-family-change-to-default .markdown-source-view.mod-cm6 .cm-scroller,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h5,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h6,
-body.font-family-change-to-default .nav-file-title,
-body.font-family-change-to-default .nav-folder-title,
-body.font-family-change-to-default a.tag,
-body.font-family-change-to-default .cm-s-obsidian span.cm-hashtag,
-body.font-family-change-to-default .nav-folder.mod-root>.nav-folder-title,
-body.font-family-change-to-default pre.frontmatter.language-yaml::before,
-body.font-family-change-to-default span.cm-strong,
-body.font-family-change-to-default :not(font)>strong,
-body.font-family-change-to-default a,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) .internal-link,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) th,
-body.font-family-change-to-default *:not(font)>em>strong,
-body.font-family-change-to-default *:not(font)>strong>em,
-body.font-family-change-to-default .cm-strong.cm-em {
-  font-family: unset !important;
-}
-
-body.font-family-change-to-default .markdown-rendered code,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
-  font-family: 'Source Code Pro', monospace !important;
-}
-
 body.all-dark .print.theme-light,
 .theme-dark {
   --background-primary: #222222;
@@ -3588,7 +3646,7 @@ body.all-dark .print.theme-light,
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
   --text-selection: #47a5914d;
-  --text-on-accent: #dcddde;
+  --text-on-accent: #e4e4e4;
   --interactive-normal: #2b2b2b;
   --interactive-hover: #373737;
   --interactive-accent: #2d82cc;
@@ -3793,6 +3851,8 @@ body.all-dark .print.theme-light,
   /*Sliding panes*/
   --sliding-panes-header-color: #f1a634d0;
   --background-4-sliding-pane: #252525ed;
+  --bg-sliding-pane-header: #00000043;
+  --bg-sliding-pane-leaf: #0f0f0f36;
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
@@ -3833,6 +3893,7 @@ body.all-dark .print.theme-light,
 
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
+  --background-secondary-translucent-1: #2c2c2c26;
 
   /*rainbow-checklist*/
   --checklist-color-1: #005aa486;
@@ -3865,6 +3926,15 @@ body.all-dark .print.theme-light,
   --cursor-green: #7dff7d;
   --cursor-blue: #8ac7ff;
   --cursor-violet: #bf76ff;
+  
+  --bg-color-settings-0: #07070747;
+  --bg-color-settings-0-1: #ffffff00;
+  --bg-color-settings-1: #7c7c7c6d;
+  --bg-color-settings-2: #1f1f1f52;
+  --bg-color-settings-3: #141414be;
+  --bg-color-settings-4: #2e2e2e9d;
+  --bg-color-settings-5: #424242aa;
+  --bg-color-settings-6: #191919c7;
 }
 
 .theme-light {
@@ -3937,6 +4007,14 @@ body.all-dark .print.theme-light,
   --background-black-or-white-1: #e4e4e4;
   --background-modifier-border-1: #e1dfdf;
   --background-transparent-blue: #c6e5ffde;
+  --bg-color-settings-0: #7d7d7d6b;
+  --bg-color-settings-0-1: #ffffff77;
+  --bg-color-settings-1: #ffffff17;
+  --bg-color-settings-2: #ffffff5a;
+  --bg-color-settings-3: #ffffffda;
+  --bg-color-settings-4: #ffffffd2;
+  --bg-color-settings-5: #d4d4d464;
+  --bg-color-settings-6: #ffffff85;
 
   --scrollbar-thumb: #c6c6c6a8;
 
@@ -4071,7 +4149,6 @@ body.all-dark .print.theme-light,
   --text-purple: #5d1fb9;
   --text-pink: #c40075;
   --text-red: #ff4343;
-
   --background-gray: #ebeced;
   --background-brown: #e9e5e3;
   --background-orange: #faebdd;
@@ -4093,16 +4170,18 @@ body.all-dark .print.theme-light,
   /*Sliding panes*/
   --sliding-panes-header-color: #0e64bb;
   --background-4-sliding-pane: #ffffffef;
+  --bg-sliding-pane-header: #ffffff97;
+  --bg-sliding-pane-leaf: #ffffff88;
 
   /*admonition*/
-  --admonition-bg-color: #ffffffa6;
+  --admonition-bg-color: #ffffff96;
 
   /*checklist*/
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #d7e8f7ef;
-  --color-view-header-gradient-2: #f5fffdef;
+  --color-view-header-gradient-1: #ffffffce;
+  --color-view-header-gradient-2: #ffffffce;
 
   /*checkbox*/
   --checkbox-color-0: #2f92e4;
@@ -4133,7 +4212,7 @@ body.all-dark .print.theme-light,
   --p-kanban-color-shadow: #cfcfcf4d;
 
   /*style settings*/
-  --background-secondary-translucent: #ffffff3d;
+  --background-secondary-translucent: #ffffff3d;  --background-secondary-translucent-1: #ffffff5d;
 
   /*rainbow-checklist*/
   --checklist-color-1: #bbdefbab;
@@ -4384,9 +4463,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --text-checked-checkbox: #9b9b9b;
 
   --activeline-background: #d1f0e521;
-
-  /*style settings*/
-  --background-secondary-translucent: #ffffff3d;
 
   --table-color-calendar-2: rgb(182, 221, 191);
   --table-color-rgb: 182, 221, 191;
@@ -5708,8 +5784,8 @@ body.color-scheme-options-flamingo.theme-light {
   --tape-color: #acacac65;
   --header-color: #f5a7a2;
 
-  --color-view-header-gradient-1: #efe9d9;
-  --color-view-header-gradient-2: #efe9d9;
+  --color-view-header-gradient-1: #efe9d933;
+  --color-view-header-gradient-2: #efe9d933;
 
   --table-color-calendar-2: rgb(214, 118, 146);
   --table-color-rgb: 214, 118, 146;
@@ -5854,8 +5930,8 @@ body.color-scheme-options-flamingo.theme-dark {
   --tape-color: #ffccbc47;
   --header-color: #f39ba0;
 
-  --color-view-header-gradient-1: #212121;
-  --color-view-header-gradient-2: #212121;
+  --color-view-header-gradient-1: #21212122;
+  --color-view-header-gradient-2: #21212122;
 
   --table-color-calendar-2: rgb(215, 86, 125);
   --table-color-rgb: 215, 86, 125;
@@ -7737,7 +7813,7 @@ body.color-scheme-options-lilac.theme-light {
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #efe0f1; /*标题上的颜色*/
+  --color-view-header-gradient-1: #efe0f1ef; /*标题上的颜色*/
   --color-view-header-gradient-2: #e1c9f1ef;
 
   /*checkbox*/
@@ -7754,9 +7830,6 @@ body.color-scheme-options-lilac.theme-light {
   --activeline-background: #d7c4f2;
 
   --interactive-hover: #dbdbdc;
-
-  /*style settings*/
-  --background-secondary-translucent: #ffffff3d;
 
   --table-color-calendar-2: rgb(211, 161, 247);
   --table-color-rgb: 211, 161, 247;
@@ -7976,9 +8049,6 @@ body.color-scheme-options-lilac.theme-dark {
 
   --interactive-hover: #dbdbdc;
 
-  /*style settings*/
-  --background-secondary-translucent: #2c2c2c26;
-
   --table-color-calendar-2: rgb(98, 36, 143);
   --table-color-rgb: 98, 36, 143;
 }
@@ -8029,10 +8099,36 @@ body.color-scheme-options-lilac.theme-dark #calendar-container {
 body.color-scheme-options-lilac.theme-light #calendar-container {
   --theme-color-translucent-3: #dccaffb0;
 }
-
 /*======@awyugan--end========*/
 
-/*===========*/
+body.font-family-change-to-default .markdown-source-view,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered),
+body.font-family-change-to-default .markdown-source-view.mod-cm6 .cm-scroller,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h5,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h6,
+body.font-family-change-to-default .nav-file-title,
+body.font-family-change-to-default .nav-folder-title,
+body.font-family-change-to-default a.tag,
+body.font-family-change-to-default .cm-s-obsidian span.cm-hashtag,
+body.font-family-change-to-default .nav-folder.mod-root>.nav-folder-title,
+body.font-family-change-to-default pre.frontmatter.language-yaml::before,
+body.font-family-change-to-default span.cm-strong,
+body.font-family-change-to-default :not(font)>strong,
+body.font-family-change-to-default a,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) .internal-link,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) th,
+body.font-family-change-to-default *:not(font)>em>strong,
+body.font-family-change-to-default *:not(font)>strong>em,
+body.font-family-change-to-default .cm-strong.cm-em {
+  font-family: unset !important;
+}
+
+body.font-family-change-to-default .cm-s-obsidian .cm-hmd-frontmatter,
+body.font-family-change-to-default .markdown-rendered code,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
+  font-family: 'Source Code Pro', monospace !important;
+}
+
 /* page-size in edit mode*/
 :is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
 .markdown-source-view .CodeMirror {
@@ -9213,13 +9309,42 @@ pre.CodeMirror-line {
 /*preview mode font size*/
 p {
   font-size: var(--font-size-preview-normal);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) p {
   margin-block-start: calc(var(--paragraph-spacing)*1em);
   margin-block-end: calc(var(--paragraph-spacing)*1em);
 }
 
-body.text-indentation-two-em *:not(blockquote) > p {
+
+body.toggle-paragraph-spacing :is(.markdown-preview-view,.markdown-rendered) p>br {
+  content:" ";
+  margin-top: calc((var(--paragraph-spacing) - 1)*1em);
+  display: block;
+}
+
+
+.markdown-source-view.mod-cm6 div.cm-line {
+  padding-bottom: calc((var(--paragraph-spacing) - 1)*1em)!important;
+}
+body.text-indentation-two-em .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header) {
   text-indent: 2em;
 }
+
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p {
+  text-indent: 2em;
+}
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br {
+  content: ' ';
+  white-space: pre;
+  line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+  display:unset;
+}
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br::after {
+  content: '\A         ';
+}
+
+
 
 /*edit mode blockquote font size*/
 .cm-s-obsidian span.cm-quote {
@@ -10706,11 +10831,11 @@ ul>li::marker,
   color: var(--list-format-ul);
 }
 
-/*
-div.HyperMD-list-line.cm-line:not(.HyperMD-table-row) {
-  word-break: break-all;
+
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+  min-width: min-content;
+  white-space: pre-wrap;
 }
-*/
 
 pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
@@ -11907,6 +12032,12 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
   overflow: hidden;
   margin-top: 20px;
   resize: both !important;
+}
+
+body .markdown-preview-view th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
+body .table-view-table>thead>tr>th {
+    background-image: none
 }
 /*修复Itinerary插件显示问题*/
 :is(.markdown-preview-view,.markdown-rendered) :is(.markdown-preview-section,.markdown-rendered) .block-language-itinerary.fc table {
@@ -13191,12 +13322,12 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
 }
 
 body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed .nav-folder-title-content:not(.is-being-renamed) {
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
   transform: rotate(-90deg);
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 body:not(.default-icons) .is-mobile .nav-folder.is-collapsed {
@@ -13520,7 +13651,7 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 }
 
 .modal.mod-settings .vertical-tab-content-container {
-  padding: 30px 0 0;
+  padding:  0;
 }
 
 .vertical-tab-content .setting-item {
@@ -13538,6 +13669,94 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 
 .dropdown {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSI2NDAuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAxMjgwLjAwMDAwMCA2NDAuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+CjxtZXRhZGF0YT4KQ3JlYXRlZCBieSBwb3RyYWNlIDEuMTUsIHdyaXR0ZW4gYnkgUGV0ZXIgU2VsaW5nZXIgMjAwMS0yMDE3CjwvbWV0YWRhdGE+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDY0MC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMyMTk2ZjMiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMCA2MzkyIGMwIC00IDE0MzggLTE0NDUgMzE5NSAtMzIwMiBsMzE5NSAtMzE5NCAzMTk1IDMxOTQgYzE3NTcKMTc1NyAzMTk1IDMxOTggMzE5NSAzMjAyIDAgNSAtMjg3NSA4IC02MzkwIDggLTM1MTUgMCAtNjM5MCAtMyAtNjM5MCAtOHoiLz4KPC9nPgo8L3N2Zz4K);
+}
+
+/*translucent setting panel*/
+body.translucent-setting-panel .modal-bg {
+  background-color: var(--background-secondary-translucent-1);
+}
+
+body.transparent-setting-panel .modal.mod-settings .vertical-tab-content-container,
+body.transparent-setting-panel .horizontal-tab-content, 
+body.transparent-setting-panel .vertical-tab-content {
+  background-color: var(--background-secondary-translucent) !important;
+}
+
+body.transparent-setting-panel .modal-bg,
+body.transparent-setting-panel .modal.mod-settings {
+  background-color: var(--background-secondary-translucent) !important;
+  backdrop-filter: blur(0) !important;	
+}
+
+body:not(.setting-style-traditional) .prompt {
+  background-color: var(--bg-color-settings-4);
+  backdrop-filter: blur(3px);
+}
+
+body:not(.setting-style-traditional).theme-dark .prompt {
+  backdrop-filter: blur(8px);	
+}
+
+body:not(.setting-style-traditional) .vertical-tab-header-group-title {
+  color: var(--text-normal);
+  border-top: 1px dashed var(--text-muted);
+}
+
+body:not(.setting-style-traditional) .modal-bg {
+  background-color: var(--bg-color-settings-0);  
+  backdrop-filter: blur(5px);	
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  background-color: var(--bg-color-settings-0-1);
+  backdrop-filter: blur(3px);	
+  box-shadow: 0 0 20px var(--bg-color-settings-1);
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  border: none;
+}
+body:not(.setting-style-traditional) .vertical-tab-header {
+  background-color: var(--bg-color-settings-1);
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-nav-item, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item {
+  background-color: transparent;
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-nav-item:hover, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item:hover,
+body:not(.setting-style-traditional) .horizontal-tab-nav-item.is-active, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item.is-active {
+  background-color: var(--bg-color-settings-2);
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-content, 
+body:not(.setting-style-traditional) .vertical-tab-content {
+  background-color: var(--bg-color-settings-3);
+}
+
+body.translucent-setting-panel .vertical-tab-content {
+  background-color: var(--bg-color-settings-1);
+}
+
+body.transparent-setting-panel .modal,
+body.transparent-setting-panel .modal.mod-settings,
+body.transparent-setting-panel .vertical-tab-content {
+  background-color: transparent !important;
+}
+
+body.transparent-setting-panel .vertical-tab-header,
+body.transparent-setting-panel .horizontal-tab-nav-item, 
+body.transparent-setting-panel .vertical-tab-nav-item {
+  background-color: var(--background-secondary-translucent) !important;
+}
+
+.modal.mod-settings .vertical-tab-header {
+  padding: 0;
+}
+
+body:not(.setting-style-traditional) .vertical-tab-header-group-title {
+  border: none;
 }
 
 /* ======= graph view ==============*/
@@ -14753,15 +14972,19 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
-body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header {
-  background-color: var(--background-primary);
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .mod-root .workspace-leaf.mod-active .view-header {
+  background-color: var(--bg-sliding-pane-header);
+  border-left: 3px solid var(--interactive-accent) !important;
+}
+
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header.toggle-acitive-border-right .mod-root .workspace-leaf.mod-active .view-header {
   border-right: 3px solid var(--interactive-accent) !important;
 }
 
-body.plugin-sliding-panes .view-header-title {
+body.plugin-sliding-panes.plugin-sliding-panes-rotate-header .view-header-title {
   font-size: var(--font-size-file-header-title-andy-plugin);
   letter-spacing: 0.7px;
-  line-height: 1.9;
+  line-height: 1.7;
   color: var(--text-muted);
 }
 
@@ -14775,36 +14998,42 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-titl
 }
 
 body.plugin-sliding-panes .view-actions {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace>.mod-root .view-header {
-  border-right: 1px solid var(--background-secondary-alt) !important;
-  border-left: 1px solid var(--background-secondary-alt) !important;
+  border-right: none !important;
+  border-left: none !important;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.workspace-leaf-content>.view-header .view-header-icon {
-  padding: 0px 0px 0px 4px !important;
+  padding: 0 0 0 4px !important;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.workspace-leaf-content>.view-header .view-actions {
-  padding: 0px 0px 5px 3px !important;
+  padding: 0 0 5px 2px !important;
 }
 
-body.plugin-sliding-panes:not(.transparent-panes) .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
-  background-color: var(--background-4-sliding-pane);
+body.plugin-sliding-panes:not(.transparent-panes) .workspace-split.mod-root .workspace-leaf .workspace-leaf-content {
+  backdrop-filter: blur(10px);
+  background-color: var(--bg-sliding-pane-leaf);
 }
 
 body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content,
 body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *,
 body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::before,
 body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar-thumb,
-body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar {
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::marker {
   color: transparent !important;
   background: none !important;
   background-color: transparent !important;
   border: none !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+body.plugin-sliding-panes.transparent-panes-alt .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
+  background-color: transparent;
 }
 
 body.plugin-sliding-panes.transparent-panes .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
@@ -14887,7 +15116,7 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 /*天*/
 #calendar-container td {
   width: 12.5%;
-  border-right: 0px solid var(--background-secondary-alt);
+  border-right: none;
   padding: 0 !important;
   line-height: 23px;
 }
@@ -14901,8 +15130,8 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 }
 
 #calendar-container .day.has-note.active:not(.today) {
-  background-color: var(--theme-color-translucent-3) !important;
-  color: var(--text-accent) !important;
+  background-color: var(--theme-color-translucent-1) !important;
+  color: var(--text-normal) !important;
   font-weight: 700;
 }
 
@@ -14913,7 +15142,7 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 #calendar-container .day:active,
 #calendar-container .active,
 #calendar-container .active.today {
-  background-color: var(--theme-color-translucent-3) !important;
+  background-color: var(--theme-color-translucent-1) !important;
   color: var(--text-accent) !important;
   font-weight: 700;
 }
@@ -14924,19 +15153,23 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
   font-weight: 700;
 }
 
-#calendar-container .active.today {
+body.toggle-calendar-shadow #calendar-container .active.today {
   box-shadow: 0 0 1px 2px var(--text-accent);
 }
 
-#calendar-container .today {
+body.toggle-calendar-shadow #calendar-container .today {
   box-shadow: 0 0 5px var(--text-accent);
+}
+
+#calendar-container .today {
+  font-weight: bolder;
 }
 
 /*“Today”*/
 #calendar-container .reset-button {
   font-size: 14px !important;
   margin: 0;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   cursor: pointer;
   line-height: 1.2;
   text-align: center;
@@ -14964,8 +15197,8 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 }
 
 #calendar-container .dot-container {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*月份调整 month*/
@@ -15101,8 +15334,7 @@ button.copy-code-button:hover {
   background-color: var(--theme-color-translucent-1);
 }
 
-.obsidian-banner-wrapper.has-copy-button
-{
+.obsidian-banner-wrapper.has-copy-button {
   position:unset;
 }
 
@@ -15849,7 +16081,7 @@ body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wra
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 0px;
+  border-radius: 0;
   color: black;
 }
 
@@ -16002,7 +16234,7 @@ aside>h2 {
   border: 1px solid;
   border-bottom: 1px solid !important;
   background-color: transparent;
-  padding: 0px 5px 0px 5px;
+  padding: 0 5px;
   max-width: 150px;
   color: #467cf0 !important;
   position: absolute;
@@ -16184,8 +16416,8 @@ aside>h2 {
 /* ======== tooltip ========= */
 .tooltip, 
 .tooltip.mod-right {
-  color:var(--white);
-  background-color:var(--interactive-accent);
+  color: var(--white);
+  background-color: var(--interactive-accent);
 }
 .tooltip .tooltip-arrow {
   border-bottom: 5px solid var(--interactive-accent);
@@ -16219,7 +16451,7 @@ section.footnotes ol>li:not(.task-list-item) {
 /* ================================== */
 /* =========== admonition =========== */
 /* ================================== */
-body.style-options-for-admonition-plugin .admonition  {	
+body.style-options-for-admonition-plugin .admonition {	
   break-inside: avoid;
 }
 
@@ -16228,21 +16460,20 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
 }
 
 .admonition.callout {
-  border-color: rgba(var(--callout-color),0.15) ;
+  border-color: rgba(var(--callout-color),0.15);
 }
 .callout-title.admonition-title {
-  background-color: rgba(var(--callout-color),0.15) ;
+  background-color: rgba(var(--callout-color),0.15);
 }
 
-
- .callout.admonition.admonition-plugin.is-collapsed {
+.callout.admonition.admonition-plugin.is-collapsed {
   overflow: hidden;
 }
 /* ad伪看板效果*/
 body.style-options-for-admonition-plugin .admonition-kanban {
   overflow: visible;
   background-color: rgba(255, 255, 255, 0) !important;
-  border-left: 0 !important;
+  border-left: none !important;
   margin: auto;
   box-shadow: none !important;
 }
@@ -16251,14 +16482,16 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-content 
   margin: 0;
 }
 
-body.style-options-for-admonition-plugin .admonition-kanban .is-mobile ul{ display: flex; }
+body.style-options-for-admonition-plugin .admonition-kanban .is-mobile ul { 
+  display: flex; 
+}
 
 body.style-options-for-admonition-plugin .admonition-kanban ul {
   display: flex;
   margin: 0;
   flex-direction: row;
-  border: 0px solid var(--p-kanban-border-color);
-  padding: 0rem;
+  border: none;
+  padding: 0;
   border-radius: var(--radius-m);
   flex-wrap: wrap;
 }
@@ -16322,7 +16555,7 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0rem;
+  padding: 0;
   margin-top: 0.5rem;
   border-radius: 0;
   border: 0;
@@ -16403,8 +16636,6 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
 
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
-
-
 body.style-options-for-admonition-plugin .is-live-preview .admonition-col2  .callout-content.admonition-content>div:nth-child(2), 
 body.style-options-for-admonition-plugin .is-live-preview .admonition-col3  .callout-content.admonition-content>div:nth-child(2), 
 body.style-options-for-admonition-plugin .is-live-preview .admonition-col4  .callout-content.admonition-content>div:nth-child(2) {
@@ -16417,27 +16648,27 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition-title-icon
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-title-icon {
   display: none;
 }
-body.style-options-for-admonition-plugin .is-live-preview  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote {
-padding:0;
-margin:0;
-line-height:1em;
-  }
-  body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote {
+body.style-options-for-admonition-plugin .is-live-preview  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote {
+  padding: 0;
+  margin: 0;
+  line-height:1em;
+}
+body.style-options-for-admonition-plugin :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote {
   flex: 100%;
   border-left: none;
   padding-left: 0;
   padding-right: 0;
   margin-block-start: 0;
-  margin:0;
-  box-shadow:none;
+  margin: 0;
+  box-shadow: none;
   background-color: transparent;
   color: var(--text-muted);
 }
-body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote p::before {
+body.style-options-for-admonition-plugin :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote p::before {
   display: none;
 }
-body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote p {
-  margin:0;
+body.style-options-for-admonition-plugin :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content blockquote p {
+  margin: 0;
   overflow-wrap: anywhere;
 }
 
@@ -16472,22 +16703,22 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition	{
 }
 
 body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder> .admonition-content {	
-  columns:150px 2;
-  -moz-columns:150px 2;
-  -webkit-columns:150px 2;
+  columns: 150px 2;
+  -moz-columns: 150px 2;
+  -webkit-columns: 150px 2;
   column-gap: 2vw;
-  overflow: visible ;
-  margin:0;
+  overflow: visible;
+  margin: 0;
   /*分栏的分割线
   column-rule: 1px solid #d4d2d2; */
 }
 body.style-options-for-admonition-plugin .callout.admonition-col2> .admonition-content {	
-  columns:150px 2;
-  -moz-columns:150px 2;
-  -webkit-columns:150px 2;
+  columns: 150px 2;
+  -moz-columns: 150px 2;
+  -webkit-columns: 150px 2;
   column-gap: 2vw;
-  overflow: visible ;
-  margin:0;
+  overflow: visible;
+  margin: 0;
   /*分栏的分割线
   column-rule: 1px solid #d4d2d2; */
 }
@@ -16497,7 +16728,7 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul
   
 }
 body.style-options-for-admonition-plugin :is(.markdown-preview-view,.markdown-rendered) .admonition-col2 .admonition-content :is(h3,h4) {	
-  margin-top: -0.001em!important;
+  margin-top: -0.001em !important;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2 .admonition-content ol{	
   margin: 0;
@@ -16546,7 +16777,7 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition	{
 body.style-options-for-admonition-plugin .callout.admonition-col3>.admonition-content {	
   columns: 100px 3;
   -moz-columns: 100px 3;
-  -webkit-columns:100px 3;
+  -webkit-columns: 100px 3;
   column-gap: 1vw;
   overflow: visible;
   margin: 0;
@@ -16554,12 +16785,12 @@ body.style-options-for-admonition-plugin .callout.admonition-col3>.admonition-co
   column-rule: 1px solid #d4d2d2; 
 }
 body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content {	
-  columns:100px 3;
-  -moz-columns:100px 3;
-  -webkit-columns:100px 3;
+  columns: 100px 3;
+  -moz-columns: 100px 3;
+  -webkit-columns: 100px 3;
   column-gap: 1vw;
   overflow: visible ;
-  margin:0;
+  margin: 0;
   break-inside: avoid;
   column-rule: 1px solid #d4d2d2; 
 }
@@ -16568,11 +16799,11 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul
   margin-top: -0.25em;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col3 .admonition-content ul {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col3 .admonition-content ol {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-col3 .admonition-content {	
@@ -16580,12 +16811,12 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition-content {
 }
 
 body.style-options-for-admonition-plugin .admonition-col3 >.admonition-content-holder {
-  margin-top:0!important;
-  margin-bottom:0!important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 body.style-options-for-admonition-plugin .admonition-col3 p{
   text-align: justify;
-  margin-top:0;
+  margin-top: 0;
   padding: 2px;
  /*  height:100%;
   overflow: auto; */
@@ -16606,25 +16837,25 @@ body.style-options-for-admonition-plugin .admonition-col4 {
   
 body.style-options-for-admonition-plugin .admonition-col4 .admonition	{
   overflow: visible;
-  margin:0;
+  margin: 0;
 }
 
 body.style-options-for-admonition-plugin .callout.admonition-col4 > .admonition-content {	
   column-count: 4;
   column-gap: 1vw;
   overflow: visible;
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content-holder>.admonition-content {	
   column-count: 4;
   column-gap: 1vw;
   overflow: visible;
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 
@@ -16633,11 +16864,11 @@ body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul
   margin-top: -0.25em;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4 .admonition-content ul {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4 .admonition-content ol {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content {	
@@ -16645,12 +16876,12 @@ body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content 
 }
 
 body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content-holder {
-  margin-top:0!important;
-  margin-bottom:0!important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 body.style-options-for-admonition-plugin .admonition-col4 p {
   text-align: justify;
-  margin-top:0;
+  margin-top: 0;
   padding: 2px;
 }
 body.style-options-for-admonition-plugin .admonition-col4 p>img{
@@ -16676,12 +16907,12 @@ body.style-options-for-admonition-plugin .admonition-col4-parent .admonition-col
 /*自适应分栏*/
 body.style-options-for-admonition-plugin .admonition-flex {
   margin: auto;
-  box-shadow:none;
-  border-left:0px;
+  box-shadow: none;
+  border-left: none;
 }
 
 .is-live-preview .callout-content.admonition-content >p {
-  margin-top: 0 ; 
+  margin-top: 0; 
 }
 body.style-options-for-admonition-plugin .admonition-flex >.admonition-content-holder {
   margin-top: 0 !important;
@@ -16692,7 +16923,7 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
   margin: 0px;
   display: flex;
   flex-wrap: wrap;
-  border:none; 
+  border: none; 
 }
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content>div{
   flex: 1;
@@ -16710,22 +16941,22 @@ justify-content: space-around;
 body.style-options-for-admonition-plugin .admonition-table {
   overflow: visible;
   margin: auto;
-  box-shadow:none;
+  box-shadow: none;
 }
 body.style-options-for-admonition-plugin .admonition-table .admonition-content {
   width: calc(100% - 5px);
   margin: 0;
-  overflow-x: auto!important; 
+  overflow-x: auto !important; 
   white-space: nowrap;
 }
 
 /*blank ad框全透明隐藏*/
 body.style-options-for-admonition-plugin .admonition-blank {
   overflow: visible;
-  background-color: rgba(255, 255, 255, 0)!important;
-  border-left:0px!important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-left: none !important;
   margin: auto;
-  box-shadow:none;
+  box-shadow: none;
 }
 body.style-options-for-admonition-plugin .admonition-blank .admonition-content {
   overflow: visible;
@@ -16778,7 +17009,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
 
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.admonition-title-content {
   color: white;
-  font-family:  "方正书宋_GBK", var(--font-text);
+  font-family: "方正书宋_GBK", var(--font-text);
   font-size: 1.1em;
 }
 
@@ -16790,7 +17021,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
 }
 
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.admonition-content-holder {
-  margin-top: -1em ;
+  margin-top: -1em;
   padding: 0;
 }
 
@@ -17274,28 +17505,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   padding-left: 20px;
 }
 
-/*translucent setting panel*/
-body.translucent-setting-panel .modal.mod-settings .vertical-tab-content-container {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.translucent-setting-panel .modal-bg,
-body.translucent-setting-panel .vertical-tab-header {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.translucent-setting-panel .modal,
-body.translucent-setting-panel .modal.mod-settings,
-body.translucent-setting-panel .vertical-tab-content {
-  background-color: transparent !important;
-}
-
-body.translucent-setting-panel .vertical-tab-header,
-body.translucent-setting-panel .horizontal-tab-nav-item, 
-body.translucent-setting-panel .vertical-tab-nav-item {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
 .setting-item-description,
 .setting-item-info {
   word-wrap: break-word;
@@ -17601,8 +17810,8 @@ div[data-type="memos_view"] .search-bar-container > .search-bar-inputer {
   border-bottom: 1px solid #ccc;
   border-radius: 0;
 }
-div.mod-right-split  div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper,
-div.mod-left-split  div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper {
+div.mod-right-split div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper,
+div.mod-left-split div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper {
   width:100%;
 }
 
@@ -17744,7 +17953,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"] {
   position: relative;
   float: left;
-  margin: 0.2rem 0.5rem;
+  margin: 0.5rem 1rem 0.5rem 0 !important;
   clear: both;
   display: table;
 }
@@ -17752,7 +17961,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 1rem;
   display: table-caption;
   caption-side: bottom;
   text-align: center;
@@ -17763,7 +17972,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 .markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
   position: relative;
   float: right;
-  margin: 0.2rem 0.5rem;
+  margin: 0.5rem 0 0.5rem 1rem !important;
   clear: both;
   display: table;
 }
@@ -17771,7 +17980,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 1rem;
   display: table-caption;
   caption-side: bottom;
   text-align: center;
@@ -18032,8 +18241,40 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   color: #836f20;
   background: linear-gradient(135deg, #fcd539, #ffeb9b);
 }
+body.style-options-for-buttons-plugin.theme-dark  button.g_yellow {
+  color:  #e4cb58;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_green {
+  color:  #19bc8b;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_lightgreen {
+  color:  #8fc866;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_purple {
+  color:  #ffa260;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_blue {
+  color:  #739df9;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark .grad_button:hover { 
+  color: var(--text-accent)
+}
 
 button.tiny {
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1em;
   min-width:3.5em;
   cursor: pointer;
@@ -18044,7 +18285,7 @@ button.tiny {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 5px;
 }
 button.tiny:hover {
   color: var(--text-on-accent);
@@ -19106,8 +19347,15 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
   margin-right: 1px;
 }
 
-.menu {
+body:not(.setting-style-traditional) .menu {
   border: none;
+  backdrop-filter: blur(8px);
+  background-color: var(--bg-color-settings-6);
+  box-shadow: 0 0 8px var(--bg-color-settings-5);
+}
+
+.menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: var(--bg-color-settings-5);
 }
 
 body.toggle-bg-file-page.theme-dark .nav-files-container::before {
@@ -20768,7 +21016,7 @@ body.background-settings-workplace-background-image.simple-titlebar .titlebar::b
 
 body.background-settings-workplace-background-image.theme-light {
   --background-primary-bg-4-bt: #ffffffb2;
-  --background-secondary-bg-4-bt: #ffffff83;
+  --background-secondary-bg-4-bt: #ffffff63;
   --background-secondary-alt-bg-4-bt: #ffffff69;
   --background-primary-alt-bg-4-bt: #ffffffbe;
   --background-code: #fafafa94;
@@ -21366,6 +21614,614 @@ body:not(.default-loading-page).loading-custom-text.loading-text-shinning-style.
     color-changing-style 3s infinite;
 }
 
+/* the mario animation was created by @B.C.Rikko https://bcrikko.github.io/css-collection/other/mario/index.html */
+
+body:not(.default-loading-page).loading-page-style-mario .progress-bar-message:before {
+content: "";
+  position: relative;
+  visibility: visible !important;
+  display: block;
+  top: calc(var(--pixel) * -6);
+  left: calc(var(--pixel) * -6.5);
+  width: var(--pixel);
+  height: var(--pixel);
+  background: transparent;
+  animation: sprite 0.618s infinite, jump 0.618s infinite;
+}
+
+@keyframes jump {
+  from, 25%, 75%, to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(var(--pixel) * -8));
+  }
+}
+
+@keyframes sprite {
+  from, 24%, 74%, to {
+    box-shadow:
+      /* r:1 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 1) 0 transparent,
+      
+      /* r:2 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 2) 0 transparent,
+      
+      /* r:3 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 3) 0 transparent,
+      
+      /* r:4 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 4) 0 transparent,
+      
+      /* r:5 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 5) 0 transparent,
+      
+      /* r:6 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 6) 0 transparent,
+      
+      /* r:7 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 7) 0 transparent,
+      
+      /* r:8 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 8) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 8) 0 transparent,
+      
+      /* r:9 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 9) 0 transparent,
+      
+      /* r:10 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 10) 0 transparent,
+      
+      /* r:11 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 11) 0 transparent,
+      
+      /* r:12 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 12) 0 transparent,
+      
+      /* r:13 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 13) 0 transparent,
+      
+      /* r:14 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 14) 0 transparent,
+      
+      /* r:15 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 15) 0 transparent,
+
+      /* r:16 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 16) 0 transparent;
+  }
+
+  25%, 75% {
+    box-shadow:
+      /* r:1 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 1) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 1) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 1) 0 var(--c-2),
+
+      /* r:2 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 2) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 2) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 2) 0 var(--c-2),
+      
+      /* r:3 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 3) 0 var(--c-2),
+      
+      /* r:4 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 4) 0 var(--c-2),
+      
+      /* r:5 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 5) 0 var(--c-3),
+      
+      /* r:6 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 6) 0 var(--c-3),
+      
+      /* r:7 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 7) 0 transparent,
+      
+      /* r:8 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 8) 0 transparent,
+      
+      /* r:9 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 9) 0 transparent,
+      
+      /* r:10 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 10) 0 var(--c-3),
+      
+      /* r:11 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 11) 0 var(--c-3),
+      
+      /* r:12 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 12) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 12) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 12) 0 var(--c-3),
+      
+      /* r:13 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 13) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 13) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 13) 0 var(--c-3),
+      
+      /* r:14 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 14) 0 var(--c-3),
+      
+      /* r:15 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 15) 0 transparent,
+      
+      /* r:16 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 16) 0 transparent;
+  }
+}
+
 /*加载画面的进度条框*/
 body:not(.default-loading-page) .progress-bar-line {
   display: none;
@@ -21489,9 +22345,13 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 /* ======= custom cssclass ======= */
 /* ========fullwidth  noyaml noscroll================ */
 /*主页预览宽度*/
-:is(.markdown-preview-view,.markdown-rendered).fullwidth.is-readable-line-width .markdown-preview-sizer, .markdown-source-view.is-readable-line-width.fullwidth .CodeMirror, .is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered), .is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) > div, :is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) {
+:is(.markdown-preview-view,.markdown-rendered).fullwidth.is-readable-line-width .markdown-preview-sizer, 
+.markdown-source-view.is-readable-line-width.fullwidth .CodeMirror, 
+.is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered), 
+.is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) > div, 
+:is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) {
   width: 100% !important;
-  max-width: 100%!important;
+  max-width: 100% !important;
   /* margin: 0 auto; */
 }
 /*隐藏backlinks区域*/
@@ -21606,6 +22466,20 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   .print .markdown-preview-view .admonition-flex .admonition-content {
     display: flex !important;
   }
+
+  body.text-indentation-two-em  .print *:not(blockquote) > p {
+    text-indent: 2em;
+  }
+  body.text-indentation-two-em   .print *:not(blockquote) > p>br {
+    content: ' ';
+    white-space: pre;
+    line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+    display:unset;
+  }
+  body.text-indentation-two-em   .print *:not(blockquote) > p>br::after {
+    content: '\A         ';
+  }
+  
 }
 
 /* ================================== */
@@ -21613,7 +22487,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220605";
+  content: "uid:20220611";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -21731,19 +22605,19 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 
 @media (max-width: 450px) {
   :root{
-      --cards-width: 112.64px;
+    --cards-width: 112.64px;
   }
 }
 
 @media (max-width: 375px) {
   :root{
-      --cards-width: 102.4px;
+    --cards-width: 102.4px;
   }
 }
 
 @media (max-width: 350px) {
   :root{
-      --cards-width: 87.04px;
+    --cards-width: 87.04px;
   }
 }
 .callout.callout[data-callout*=cards] .callout-content {
@@ -21753,7 +22627,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   position: absolute;
   width: var(--cards-width);
   margin-top: -10px;
-  margin-left:   calc(var(--cards-width) /2 * -1);
+  margin-left: calc(var(--cards-width) /2 * -1);
   overflow: hidden;
   height: 3px;
   background: #f0ec05; 
@@ -21849,7 +22723,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   object-fit: cover;
 }
 .callout.callout[data-callout*=cards] table.dataview tbody>tr>td:before {
-  display:none;
+  display: none;
 }
 .callout.callout[data-callout*=cards] table.dataview tbody>tr>td:first-child:after {
   content: "";
@@ -21958,7 +22832,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 }
 .callout.callout[data-callout*=cards] table.dataview thead>tr>th[sortable-style=sortable-asc],
 .callout.callout[data-callout*=cards] table.dataview thead>tr>th[sortable-style=sortable-desc] {
-  color: var(--text-normal)
+  color: var(--text-normal);
 }
 .callout.callout[data-callout*=cards] table.dataview thead>tr>th:hover {
   color: var(--text-normal);
@@ -21967,7 +22841,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 
 /*全透明callout*/
 .callout.callout[data-callout*=blank] {
-  box-shadow:none;
+  box-shadow: none;
   max-width: 100%;
   background: transparent;
   border: 0;
@@ -22000,6 +22874,8 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 [data-callout*=indent]) .callout-content p br {
   content: '';
   white-space: pre;
+  line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+  display:unset;
 }
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content>p {
@@ -22684,7 +23560,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .is-live-preview .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
-  margin-top:-2em;
+  margin-top: -2em;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) .callout-title {
@@ -22697,7 +23573,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content {
-  padding:0;
+  padding: 0;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content>svg {
@@ -22782,7 +23658,6 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 .callout[data-callout="stickies2"] { 
-
   box-shadow:none;
   border-left:0px;
 }
@@ -22841,7 +23716,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   width: max(180px, 30%);
   max-width: 235px;
 	min-height: 235px;
-	padding-top: 1.5em; 
+	padding-top: 2.5em; 
   font-family:  Arial;
   margin-top:20px;
   margin-right:  25px;
@@ -22897,6 +23772,34 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
 .callout[data-callout="stickies3"] >.callout-content a::before {
 content: "";
 }
+
+
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content span { 
+  font-size: smaller;
+}
+
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content img { 
+ max-height: 205px;
+ margin-top:-2.5em;
+}
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content  { 
+  font-size: smaller;
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content blockquote { 
+  color: var(--interactive-normal);
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content em { 
+  color: var(--interactive-accent);
+  -webkit-text-fill-color:unset;
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content strong { 
+  color: var(--interactive-accent)!important;
+
+}
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content .block-language-dataviewjs p { 
+  max-height: 195px;
+ }
+
 .callout:is([data-callout-metadata='yellow']) {
   background: #F7E999;
   -webkit-transform: rotate(2deg);
@@ -22938,7 +23841,10 @@ body.link-click .cm-s-obsidian span.cm-link {
 }
 
 /*禁用实时预览点击标签跳转 需要跳转 点击#号即可*/
-
 body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
   pointer-events: none;
+}
+/*ob关闭按钮顺序调整*/
+body.reversal-titlebar .titlebar-button-container.mod-right {
+  direction: rtl;
 }

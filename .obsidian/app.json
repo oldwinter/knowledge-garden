@@ -1,36 +1,14 @@
 {
-  "legacyEditor": false,
-  "livePreview": false,
   "promptDelete": false,
-  "foldHeading": true,
-  "foldIndent": true,
-  "showLineNumber": false,
-  "showFrontmatter": false,
-  "tabSize": 4,
-  "defaultViewMode": "source",
-  "alwaysUpdateLinks": true,
   "newFileLocation": "current",
-  "newFileFolderPath": "收集箱",
-  "fileSortOrder": "alphabetical",
-  "attachmentFolderPath": "draws/assets",
-  "readableLineLength": false,
-  "communityPluginSortOrder": "release",
-  "lineWrap": true,
   "showUnsupportedFiles": true,
-  "strictLineBreaks": true,
-  "pdfExportSettings": {
-    "pageSize": "A4",
-    "landscape": false,
-    "margin": "0",
-    "downscalePercent": 100
-  },
-  "spellcheck": false,
-  "autoPairMarkdown": true,
-  "showIndentGuide": true,
+  "attachmentFolderPath": "draws/assets",
   "userIgnoreFilters": [
-    "logseq/bak/"
+    "logseq/"
   ],
-  "rightToLeft": false,
-  "trashOption": "system",
-  "communityThemeSortOrder": "download"
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "emacsyKeys": false,
+  "legacyEditor": false,
+  "livePreview": false
 }

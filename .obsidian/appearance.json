@@ -1,12 +1,9 @@
 {
-  "baseFontSize": 16,
   "cssTheme": "Shimmering Focus",
   "enabledCssSnippets": [
     "supercharged-links-gen",
     "多栏callout样式"
   ],
   "theme": "system",
-  "baseFontSizeAction": true,
-  "translucency": false,
-  "textFontFamily": ""
+  "baseFontSize": 14
 }

@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-W23",
+      "path": "2022-W23.md"
+    },
+    {
+      "basename": "ios系统如何翻墙",
+      "path": "pages/000 - INBOX/ios系统如何翻墙.md"
+    },
+    {
+      "basename": "科学上网",
+      "path": "pages/000 - INBOX/科学上网.md"
+    },
+    {
+      "basename": "安卓手机如何翻墙",
+      "path": "pages/000 - INBOX/安卓手机如何翻墙.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "节奏与关键时间点",
+      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/节奏与关键时间点.md"
+    },
+    {
+      "basename": "王者荣耀",
+      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md"
+    },
+    {
+      "basename": "2022-W24",
+      "path": "2022-W24.md"
+    },
+    {
       "basename": "闻道有先后，术业有专攻",
       "path": "pages/400 - RESOURCE/闻道有先后，术业有专攻.md"
     },
@@ -93,14 +129,6 @@
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "终身学习",
       "path": "pages/000 - INBOX/终身学习.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "反间计",
       "path": "pages/000 - INBOX/反间计.md"
-    },
-    {
-      "basename": "SWOT",
-      "path": "pages/400 - RESOURCE/原子知识库/方法库/SWOT.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "软实力和硬通货",
-      "path": "pages/400 - RESOURCE/人文社科通识/金融学/软实力和硬通货.md"
-    },
-    {
-      "basename": "皮格马利翁效应",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
-    },
-    {
-      "basename": "渐进式 - progressive",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式 - progressive.md"
-    },
-    {
-      "basename": "text expand",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/text expand.md"
-    },
-    {
-      "basename": "obsidian的使用感受",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian的使用感受.md"
     }
   ],
   "omittedPaths": [
