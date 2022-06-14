@@ -1,16 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "如何高效开会",
+      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "六顶思考帽模板",
+      "path": "templates/六顶思考帽模板.md"
+    },
+    {
+      "basename": "康奈尔笔记法模板",
+      "path": "templates/康奈尔笔记法模板.md"
+    },
+    {
+      "basename": "模板来源",
+      "path": "templates/模板来源.md"
+    },
+    {
+      "basename": "会议纪要模板",
+      "path": "templates/会议纪要模板.md"
+    },
+    {
+      "basename": "2022-W24",
+      "path": "2022-W24.md"
+    },
+    {
+      "basename": "卡片盒笔记法 - Zettelkasten",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
+    },
+    {
+      "basename": "vscode和obsidian的习惯映射",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode和obsidian的习惯映射.md"
+    },
+    {
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+    },
+    {
       "basename": "节奏与关键时间点",
       "path": "pages/400 - RESOURCE/小知识点/游戏笔记/节奏与关键时间点.md"
     },
     {
       "basename": "卡片笔记",
       "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/卡片笔记.md"
-    },
-    {
-      "basename": "卡片盒笔记法 - Zettelkasten",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
     },
     {
       "basename": "李敖",
@@ -21,16 +61,8 @@
       "path": "pages/MOCs.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "LATEST",
       "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "2022-W23",
@@ -51,10 +83,6 @@
     {
       "basename": "王者荣耀",
       "path": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md"
-    },
-    {
-      "basename": "2022-W24",
-      "path": "2022-W24.md"
     },
     {
       "basename": "闻道有先后，术业有专攻",
@@ -171,34 +199,6 @@
     {
       "basename": "callout",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/callout.md"
-    },
-    {
-      "basename": "《认知觉醒》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《认知觉醒》.md"
-    },
-    {
-      "basename": "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md"
-    },
-    {
-      "basename": "我所理解的生活-韩寒",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-韩寒.md"
-    },
-    {
-      "basename": "古龙作品大全集（72册）-古龙",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/古龙作品大全集（72册）-古龙.md"
-    },
-    {
-      "basename": "1988：我想和这个世界谈谈-韩寒",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1988：我想和这个世界谈谈-韩寒.md"
-    },
-    {
-      "basename": "学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "pages/500 - ARCHIVE/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
     }
   ],
   "omittedPaths": [

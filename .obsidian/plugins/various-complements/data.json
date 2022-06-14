@@ -59,14 +59,6 @@
         }
       }
     },
-    "edge": {
-      "edge": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1652444043032
-        }
-      }
-    },
     "notion": {
       "notion": {
         "internalLink": {
@@ -288,6 +280,14 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1654863628658
+        }
+      }
+    },
+    "co-tip": {
+      "co-tip": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1655222912793
         }
       }
     }
