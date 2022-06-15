@@ -8,15 +8,6 @@
       "key": "J"
     }
   ],
-  "daily-notes:goto-next": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "K"
-    }
-  ],
   "daily-notes:goto-prev": [
     {
       "modifiers": [

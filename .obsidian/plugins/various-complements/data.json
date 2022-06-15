@@ -2,8 +2,8 @@
   "strategy": "chinese",
   "matchStrategy": "partial",
   "maxNumberOfSuggestions": 35,
-  "maxNumberOfWordsAsPhrase": 3,
-  "minNumberOfCharactersTriggered": 0,
+  "maxNumberOfWordsAsPhrase": 6,
+  "minNumberOfCharactersTriggered": 2,
   "minNumberOfWordsTriggeredPhrase": 1,
   "complementAutomatically": true,
   "delayMilliSeconds": 0,
@@ -288,6 +288,38 @@
         "customDictionary": {
           "count": 1,
           "lastUpdated": 1655222912793
+        }
+      }
+    },
+    "GFW list": {
+      "GFW list": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655297481316
+        }
+      }
+    },
+    "V2rayU": {
+      "V2rayU": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655298597826
+        }
+      }
+    },
+    "keyboard maestro": {
+      "keyboard maestro": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655299769930
+        }
+      }
+    },
+    "VSCode": {
+      "VSCode": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655300433611
         }
       }
     }

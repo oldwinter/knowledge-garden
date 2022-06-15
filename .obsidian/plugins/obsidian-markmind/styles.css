@@ -12,6 +12,7 @@
   right:0;
   bottom:0;
   display: flex;
+  font-family: Helvetica,Tahoma, Arial,"PingFang SC",STXihei,"Microsoft yahei","WenQuanYi Micro Hei",sans-serif;
 }
 .mm-mindmap-container{
    width:100%;

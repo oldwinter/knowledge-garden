@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "如何高效开会",
-      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-    },
-    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
@@ -13,8 +9,76 @@
       "path": "README.md"
     },
     {
+      "basename": "快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
+    },
+    {
+      "basename": "vi常用快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vi常用快捷键.md"
+    },
+    {
+      "basename": "terminal中zsh编辑快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/terminal中zsh编辑快捷键.md"
+    },
+    {
+      "basename": "vscode代码编辑和obsidian文本编辑快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode代码编辑和obsidian文本编辑快捷键.md"
+    },
+    {
+      "basename": "hosts文件",
+      "path": "pages/300 - AREA/计算机科学/hosts文件.md"
+    },
+    {
+      "basename": "V2rayU",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/V2rayU.md"
+    },
+    {
+      "basename": "pac模式和配置",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/pac模式和配置.md"
+    },
+    {
+      "basename": "routing模式和配置",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/routing模式和配置.md"
+    },
+    {
+      "basename": "计算机网络",
+      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
+    },
+    {
+      "basename": "vim",
+      "path": "pages/300 - AREA/计算机科学/vim.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
+    },
+    {
+      "basename": "面试自我介绍",
+      "path": "pages/200 - PROJECT/个人职业生涯/面试自我介绍.md"
+    },
+    {
+      "basename": "求职与面试",
+      "path": "pages/000 - INBOX/求职与面试.md"
+    },
+    {
+      "basename": "论自由-约翰·穆勒",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/政治军事/论自由-约翰·穆勒.md"
+    },
+    {
       "basename": "六顶思考帽模板",
       "path": "templates/六顶思考帽模板.md"
+    },
+    {
+      "basename": "contents",
+      "path": "pages/contents.md"
+    },
+    {
+      "basename": "卡片盒笔记法 - Zettelkasten",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
+    },
+    {
+      "basename": "如何高效开会",
+      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
     },
     {
       "basename": "康奈尔笔记法模板",
@@ -29,20 +93,8 @@
       "path": "templates/会议纪要模板.md"
     },
     {
-      "basename": "2022-W24",
-      "path": "2022-W24.md"
-    },
-    {
-      "basename": "卡片盒笔记法 - Zettelkasten",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-    },
-    {
       "basename": "vscode和obsidian的习惯映射",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode和obsidian的习惯映射.md"
-    },
-    {
-      "basename": "快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
     },
     {
       "basename": "节奏与关键时间点",
@@ -101,10 +153,6 @@
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
     },
     {
-      "basename": "论自由-约翰·穆勒",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/政治军事/论自由-约翰·穆勒.md"
-    },
-    {
       "basename": "把时间当作朋友（第3版）-李笑来",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
     },
@@ -151,54 +199,6 @@
     {
       "basename": "1984-乔治·奥威尔",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1984-乔治·奥威尔.md"
-    },
-    {
-      "basename": "置身事内：中国政府与经济发展-兰小欢",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/置身事内：中国政府与经济发展-兰小欢.md"
-    },
-    {
-      "basename": "穷查理宝典：查理·芒格智慧箴言录（全新增订本）-彼得·考夫曼",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/穷查理宝典：查理·芒格智慧箴言录（全新增订本）-彼得·考夫曼.md"
-    },
-    {
-      "basename": "股票作手回忆录-埃德温·利非弗 杰西·利弗莫尔",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/经济理财/股票作手回忆录-埃德温·利非弗 杰西·利弗莫尔.md"
-    },
-    {
-      "basename": "清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里.md"
-    },
-    {
-      "basename": "刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/刻意练习：如何从新手到大师-安德斯·艾利克森 罗伯特·普尔(Robe.md"
-    },
-    {
-      "basename": "好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等.md"
-    },
-    {
-      "basename": "终身学习",
-      "path": "pages/000 - INBOX/终身学习.md"
-    },
-    {
-      "basename": "《三体》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/虚构类读物/《三体》.md"
-    },
-    {
-      "basename": "《刻意练习》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-    },
-    {
-      "basename": "梦华录",
-      "path": "pages/000 - INBOX/梦华录.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "pages/000 - INBOX/模板与套路.md"
-    },
-    {
-      "basename": "callout",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/callout.md"
     }
   ],
   "omittedPaths": [
