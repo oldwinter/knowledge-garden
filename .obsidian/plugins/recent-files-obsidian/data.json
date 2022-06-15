@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "微信读书清单",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
+    },
+    {
+      "basename": "A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte",
+      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "vscode代码编辑和obsidian文本编辑快捷键",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode代码编辑和obsidian文本编辑快捷键.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "快捷键",
@@ -19,10 +31,6 @@
     {
       "basename": "terminal中zsh编辑快捷键",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/terminal中zsh编辑快捷键.md"
-    },
-    {
-      "basename": "vscode代码编辑和obsidian文本编辑快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode代码编辑和obsidian文本编辑快捷键.md"
     },
     {
       "basename": "hosts文件",
@@ -149,10 +157,6 @@
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/医学健康/让我们灵魂激荡身体欢愉：一个男科医生的手记-任黎明.md"
     },
     {
-      "basename": "微信读书清单",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
-    },
-    {
       "basename": "把时间当作朋友（第3版）-李笑来",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "你是我的荣耀（杨洋、迪丽热巴主演）-顾漫",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/你是我的荣耀（杨洋、迪丽热巴主演）-顾漫.md"
-    },
-    {
-      "basename": "1984-乔治·奥威尔",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/1984-乔治·奥威尔.md"
     }
   ],
   "omittedPaths": [
