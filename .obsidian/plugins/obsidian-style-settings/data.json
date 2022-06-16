@@ -114,7 +114,6 @@
   "supercharged-links@@c-75fc-e339-use-background": false,
   "supercharged-links@@75fc-e339-decoration": "initial",
   "shimmering-focus@@show-graph-controls": false,
-  "shimmering-focus@@hardcore-mode": false,
   "shimmering-focus@@madness-mode": false,
   "shimmering-focus@@no-alternating-rows": false,
   "shimmering-focus@@longform-left-aligned": false,
@@ -139,5 +138,6 @@
   "hover-editor@@he-title-bar-height": "28px",
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
   "shimmering-focus@@no-double-underline": true,
-  "supercharged-links@@8b14-901d-before": "📖"
+  "supercharged-links@@8b14-901d-before": "📖",
+  "shimmering-focus@@hardcore-mode": false
 }

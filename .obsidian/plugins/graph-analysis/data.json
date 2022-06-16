@@ -12,6 +12,7 @@
   "exclusionTags": [],
   "algsToShow": [
     "Co-Citations",
+    "HITS",
     "Adamic Adar",
     "Jaccard",
     "Clustering Coefficient"

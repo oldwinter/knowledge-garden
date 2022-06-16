@@ -5,16 +5,16 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabConfluence",
-      "FabDelicious",
-      "🌲",
-      "⏩",
-      "Fab42Group",
-      "📹",
-      "📖",
-      "🖥️",
+      "💻",
+      "FasNotesMedical",
       "🎵",
-      "FasNotesMedical"
+      "🖥️",
+      "📖",
+      "📹",
+      "Fab42Group",
+      "⏩",
+      "🌲",
+      "FabDelicious"
     ],
     "recentlyUsedIconsSize": 10,
     "extraPadding": {
@@ -76,5 +76,6 @@
   "pages/500 - ARCHIVE/已发布文章": "🔼",
   "HOMEPAGE.md": "FabDiscord",
   "pages/TOCs.md": "FabConfluence",
-  "pages/MOCs.md": "FabDelicious"
+  "pages/MOCs.md": "FabDelicious",
+  "pages/400 - RESOURCE/极客时间笔记": "💻"
 }
