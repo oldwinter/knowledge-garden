@@ -1,0 +1,5 @@
+{
+    "hooks": {
+      "pre-commit": "grep -nr '18768' ./pages"
+    }
+  }

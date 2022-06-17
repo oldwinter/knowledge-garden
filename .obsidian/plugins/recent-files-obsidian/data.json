@@ -1,20 +1,112 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "git hook",
+      "path": "pages/000 - INBOX/git hook.md"
+    },
+    {
+      "basename": "贩卖焦虑",
+      "path": "pages/000 - INBOX/贩卖焦虑.md"
+    },
+    {
+      "basename": "浏览器的隐私保护",
+      "path": "pages/000 - INBOX/浏览器的隐私保护.md"
+    },
+    {
+      "basename": "隐私保护",
+      "path": "pages/000 - INBOX/隐私保护.md"
+    },
+    {
+      "basename": "重器轻用",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
+    },
+    {
+      "basename": "cubox",
+      "path": "pages/cubox.md"
     },
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+      "basename": "自带方法论的工具",
+      "path": "pages/400 - RESOURCE/原子知识库/金句库/自带方法论的工具.md"
+    },
+    {
+      "basename": "工作和生活的效率体系建设",
+      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
+    },
+    {
+      "basename": "obsidian",
+      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
+    },
+    {
+      "basename": "obsidian插件",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "团队wiki怎么写",
+      "path": "pages/300 - AREA/人+科技融合/团队wiki怎么写.md"
+    },
+    {
+      "basename": "闪念笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
+    },
+    {
+      "basename": "飞阅会",
+      "path": "pages/300 - AREA/人+科技融合/飞阅会.md"
+    },
+    {
+      "basename": "个人说明书",
+      "path": "pages/300 - AREA/人+科技融合/个人说明书.md"
+    },
+    {
+      "basename": "冲刺日报和周报怎么写",
+      "path": "pages/300 - AREA/人+科技融合/冲刺日报和周报怎么写.md"
+    },
+    {
+      "basename": "如何高效开会",
+      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
+    },
+    {
+      "basename": "飞书的先进团队协作经验",
+      "path": "pages/300 - AREA/人+科技融合/飞书的先进团队协作经验.md"
+    },
+    {
+      "basename": "飞阅会流程介绍",
+      "path": "pages/300 - AREA/人+科技融合/飞阅会流程介绍.md"
+    },
+    {
+      "basename": "字节跳动高效会议最佳实践——飞阅会",
+      "path": "pages/300 - AREA/人+科技融合/字节跳动高效会议最佳实践——飞阅会.md"
+    },
+    {
+      "basename": "个人高效学习系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
+    },
+    {
+      "basename": "皮格马利翁效应",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
     },
     {
       "basename": "LATEST",
       "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "工具理性与价值理性",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
+    },
+    {
+      "basename": "我的标签使用",
+      "path": "pages/000 - INBOX/我的标签使用.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
     },
     {
       "basename": "MOCs",
@@ -27,10 +119,6 @@
     {
       "basename": "EXTERNAL",
       "path": "pages/EXTERNAL.md"
-    },
-    {
-      "basename": "个人高效学习系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
     },
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
@@ -111,94 +199,6 @@
     {
       "basename": "六顶思考帽模板",
       "path": "templates/六顶思考帽模板.md"
-    },
-    {
-      "basename": "contents",
-      "path": "pages/contents.md"
-    },
-    {
-      "basename": "卡片盒笔记法 - Zettelkasten",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/卡片盒笔记法 - Zettelkasten.md"
-    },
-    {
-      "basename": "如何高效开会",
-      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-    },
-    {
-      "basename": "康奈尔笔记法模板",
-      "path": "templates/康奈尔笔记法模板.md"
-    },
-    {
-      "basename": "模板来源",
-      "path": "templates/模板来源.md"
-    },
-    {
-      "basename": "会议纪要模板",
-      "path": "templates/会议纪要模板.md"
-    },
-    {
-      "basename": "vscode和obsidian的习惯映射",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode和obsidian的习惯映射.md"
-    },
-    {
-      "basename": "节奏与关键时间点",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/节奏与关键时间点.md"
-    },
-    {
-      "basename": "卡片笔记",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/卡片笔记.md"
-    },
-    {
-      "basename": "李敖",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/李敖.md"
-    },
-    {
-      "basename": "2022-W23",
-      "path": "2022-W23.md"
-    },
-    {
-      "basename": "ios系统如何翻墙",
-      "path": "pages/000 - INBOX/ios系统如何翻墙.md"
-    },
-    {
-      "basename": "科学上网",
-      "path": "pages/000 - INBOX/科学上网.md"
-    },
-    {
-      "basename": "安卓手机如何翻墙",
-      "path": "pages/000 - INBOX/安卓手机如何翻墙.md"
-    },
-    {
-      "basename": "王者荣耀",
-      "path": "pages/400 - RESOURCE/小知识点/游戏笔记/王者荣耀.md"
-    },
-    {
-      "basename": "闻道有先后，术业有专攻",
-      "path": "pages/400 - RESOURCE/闻道有先后，术业有专攻.md"
-    },
-    {
-      "basename": "三十六计",
-      "path": "pages/400 - RESOURCE/三十六计.md"
-    },
-    {
-      "basename": "让我们灵魂激荡身体欢愉：一个男科医生的手记-任黎明",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/医学健康/让我们灵魂激荡身体欢愉：一个男科医生的手记-任黎明.md"
-    },
-    {
-      "basename": "把时间当作朋友（第3版）-李笑来",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
-    },
-    {
-      "basename": "学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/学会提问（原书第12版）-尼尔·布朗 斯图尔特·基利.md"
-    },
-    {
-      "basename": "认知觉醒：开启自我改变的原动力-周岭",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-周岭.md"
-    },
-    {
-      "basename": "拆掉思维里的墙（白金升级版）-古典",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/拆掉思维里的墙（白金升级版）-古典.md"
     }
   ],
   "omittedPaths": [

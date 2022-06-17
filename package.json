@@ -1,0 +1,23 @@
+{
+  "name": "knowledge-garden",
+  "version": "1.0.0",
+  "description": "--- feed: show content-type: notes date: 2022-06-15 title: README ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldwinter/knowledge-garden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oldwinter/knowledge-garden/issues"
+  },
+  "homepage": "https://github.com/oldwinter/knowledge-garden#readme",
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
+}
