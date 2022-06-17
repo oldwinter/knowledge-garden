@@ -5,6 +5,10 @@
       "path": "pages/000 - INBOX/git hook.md"
     },
     {
+      "basename": "husky",
+      "path": "pages/000 - INBOX/husky.md"
+    },
+    {
       "basename": "贩卖焦虑",
       "path": "pages/000 - INBOX/贩卖焦虑.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "论自由-约翰·穆勒",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/政治军事/论自由-约翰·穆勒.md"
-    },
-    {
-      "basename": "六顶思考帽模板",
-      "path": "templates/六顶思考帽模板.md"
     }
   ],
   "omittedPaths": [

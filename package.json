@@ -4,7 +4,8 @@
   "description": "--- feed: show content-type: notes date: 2022-06-15 title: README ---",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
