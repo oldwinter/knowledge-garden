@@ -1,7 +1,5 @@
 {
   "pluginList": [
-    "Wanxp/obsidian-douban",
-    "Oliver-Akins/file-hider",
     "liamcain/obsidian-periodic-notes"
   ],
   "pluginSubListFrozenVersion": [],

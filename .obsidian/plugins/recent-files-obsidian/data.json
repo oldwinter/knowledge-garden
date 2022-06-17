@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
+    },
+    {
       "basename": "个人高效学习系统",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
     },
@@ -25,16 +53,8 @@
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "vscode代码编辑和obsidian文本编辑快捷键",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode代码编辑和obsidian文本编辑快捷键.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "快捷键",
@@ -133,14 +153,6 @@
       "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/李敖.md"
     },
     {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
       "basename": "2022-W23",
       "path": "2022-W23.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "拆掉思维里的墙（白金升级版）-古典",
       "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/拆掉思维里的墙（白金升级版）-古典.md"
-    },
-    {
-      "basename": "世界因你不同：李开复自传（纪念版）-李开复 范海涛",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/世界因你不同：李开复自传（纪念版）-李开复 范海涛.md"
-    },
-    {
-      "basename": "史蒂夫·乔布斯传-沃尔特·艾萨克森",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/人物传记/史蒂夫·乔布斯传-沃尔特·艾萨克森.md"
-    },
-    {
-      "basename": "围城-钱钟书",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/精品小说/围城-钱钟书.md"
     }
   ],
   "omittedPaths": [
