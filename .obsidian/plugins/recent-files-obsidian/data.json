@@ -1,16 +1,96 @@
 {
   "recentFiles": [
     {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "templates/日记模板.md"
+    },
+    {
+      "basename": "模板来源",
+      "path": "templates/模板来源.md"
+    },
+    {
+      "basename": "六顶思考帽模板",
+      "path": "templates/六顶思考帽模板.md"
+    },
+    {
+      "basename": "康奈尔笔记法模板",
+      "path": "templates/康奈尔笔记法模板.md"
+    },
+    {
+      "basename": "会议纪要模板",
+      "path": "templates/会议纪要模板.md"
+    },
+    {
+      "basename": "电影笔记模板",
+      "path": "templates/电影笔记模板.md"
+    },
+    {
+      "basename": "电视剧笔记模板",
+      "path": "templates/电视剧笔记模板.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "various complements",
+      "path": "pages/000 - INBOX/various complements.md"
+    },
+    {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
+    },
+    {
+      "basename": "先鉴定你的做笔记风格，再选一款app上车",
+      "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
+    },
+    {
+      "basename": "文章发布工作流梳理",
+      "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "已发布文章",
+      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
     },
     {
       "basename": "如何成为学习高手",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
     },
     {
-      "basename": "电视剧模板",
-      "path": "templates/电视剧模板.md"
+      "basename": "如何在考场上超常发挥",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
+    },
+    {
+      "basename": "如何学会考试",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
+    },
+    {
+      "basename": "锂电池充电技巧",
+      "path": "pages/000 - INBOX/锂电池充电技巧.md"
+    },
+    {
+      "basename": "如何告别伪学霸和学酥状态",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+    },
+    {
+      "basename": "如何减少对学习的排斥和厌恶心理",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
       "basename": "快捷键",
@@ -85,10 +165,6 @@
       "path": "pages/cubox.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "自带方法论的工具",
       "path": "pages/400 - RESOURCE/原子知识库/金句库/自带方法论的工具.md"
     },
@@ -103,10 +179,6 @@
     {
       "basename": "obsidian插件",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "团队wiki怎么写",
@@ -127,78 +199,6 @@
     {
       "basename": "冲刺日报和周报怎么写",
       "path": "pages/300 - AREA/人+科技融合/冲刺日报和周报怎么写.md"
-    },
-    {
-      "basename": "如何高效开会",
-      "path": "pages/200 - PROJECT/个人职业生涯/如何高效开会.md"
-    },
-    {
-      "basename": "飞书的先进团队协作经验",
-      "path": "pages/300 - AREA/人+科技融合/飞书的先进团队协作经验.md"
-    },
-    {
-      "basename": "飞阅会流程介绍",
-      "path": "pages/300 - AREA/人+科技融合/飞阅会流程介绍.md"
-    },
-    {
-      "basename": "字节跳动高效会议最佳实践——飞阅会",
-      "path": "pages/300 - AREA/人+科技融合/字节跳动高效会议最佳实践——飞阅会.md"
-    },
-    {
-      "basename": "个人高效学习系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-    },
-    {
-      "basename": "皮格马利翁效应",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "我的标签使用",
-      "path": "pages/000 - INBOX/我的标签使用.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "EXTERNAL",
-      "path": "pages/EXTERNAL.md"
-    },
-    {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
-    },
-    {
-      "basename": "微信读书清单",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/微信读书清单.md"
-    },
-    {
-      "basename": "A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte",
-      "path": "pages/400 - RESOURCE/书影音笔记/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
-    },
-    {
-      "basename": "vscode代码编辑和obsidian文本编辑快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vscode代码编辑和obsidian文本编辑快捷键.md"
-    },
-    {
-      "basename": "vi常用快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/vi常用快捷键.md"
     }
   ],
   "omittedPaths": [
