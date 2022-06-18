@@ -3,9 +3,10 @@
     filter: saturate(0.85);
 }
 
-.focus-mode div.view-header,
-.focus-mode div.status-bar,
-.focus-mode div.workspace-ribbon:not(.mod-left),
+.focus-mode .view-header-icon,
+.focus-mode .view-actions,
+.focus-mode .status-bar,
+.focus-mode .workspace-ribbon:not(.mod-left),
 .focus-mode .workspace-split.maximised .workspace-leaf:not(.mod-active),
 .focus-mode
     .workspace-split.maximised
@@ -23,7 +24,7 @@
     flex-basis: calc(100% - 4px);
 }
 
-.focus-mode div.workspace-ribbon {
+.focus-mode .workspace-ribbon {
     visibility: hidden;
 }
 
@@ -34,11 +35,6 @@
 
 /* Thanks to @AidenLx! */
 /* Fixes for the Obsidian Tabs plugin: */
-.focus-mode.plugin-tabs div.view-actions,
-.focus-mode.plugin-tabs .stayopen div.view-header {
+.focus-mode.plugin-tabs .stayopen .view-header {
     display: none;
-}
-
-.focus-mode.plugin-tabs div.view-header {
-    display: flex;
 }

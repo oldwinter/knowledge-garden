@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-grep -nr '陈冬' ./pages
+## todo 这里写判断脚本，如果非0值，则不执行commit
+grep -nr '陈冬' ./pages && exit 0
