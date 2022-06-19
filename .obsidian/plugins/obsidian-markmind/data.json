@@ -4,7 +4,7 @@
   "fontSize": 16,
   "background": "transparent",
   "layout": "mindmap",
-  "layoutDirect": "mindmap",
+  "layoutDirect": "mind map",
   "protocol": "jump-to-pdf",
   "registerPdfEvent": true,
   "viewerTheme": 2,
@@ -14,5 +14,8 @@
   "annotateBottom": 0,
   "highlightFormat": "\nPage:{{page}}\n<span style=\"color:rgb({{color}})\">■</span>:{{highlightText}}\nComment:{{comment}}\n[📌]({{link}})\n^{{id}}\n",
   "setup": 1649590745501,
-  "uid": "00p01000s01300t01300o01101100s01200t00s"
+  "uid": "00p01000s01300t01300o01101100s01200t00s",
+  "useMarkdownSaveAnnotation": "annos",
+  "activeCode": "123x131j",
+  "mobileActiveCode": "MPV"
 }

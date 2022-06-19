@@ -10,8 +10,8 @@
   "strictLineBreaks": true,
   "emacsyKeys": false,
   "legacyEditor": false,
-  "livePreview": false,
+  "livePreview": true,
   "showLineNumber": false,
-  "communityPluginSortOrder": "download",
+  "communityPluginSortOrder": "release",
   "alwaysUpdateLinks": true
 }

@@ -1,10 +1,6 @@
 {
   "targetAttributes": [
-    "cards",
-    "review",
-    "excalidraw",
-    "MOC",
-    "todo"
+    "published"
   ],
   "targetTags": true,
   "presetFields": [],
@@ -74,10 +70,10 @@
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "1162-7812",
-      "selectText": true,
-      "selectAppend": true,
-      "selectPrepend": true,
-      "selectBackground": true
+      "selectText": false,
+      "selectAppend": false,
+      "selectPrepend": false,
+      "selectBackground": false
     },
     {
       "type": "tag",
@@ -86,10 +82,10 @@
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "3c8a-1054",
-      "selectText": true,
-      "selectAppend": true,
-      "selectPrepend": true,
-      "selectBackground": true
+      "selectText": false,
+      "selectAppend": false,
+      "selectPrepend": false,
+      "selectBackground": false
     },
     {
       "type": "tag",
@@ -98,6 +94,18 @@
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "8b14-901d",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "attribute",
+      "name": "published",
+      "value": "true",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "01f9-c3f3",
       "selectText": true,
       "selectAppend": true,
       "selectPrepend": true,

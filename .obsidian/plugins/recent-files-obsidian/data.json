@@ -1,52 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "如何在考场上超常发挥",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
     },
     {
-      "basename": "日记模板",
-      "path": "templates/日记模板.md"
+      "basename": "如何学会考试",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
     },
     {
-      "basename": "模板来源",
-      "path": "templates/模板来源.md"
+      "basename": "如何减少对学习的排斥和厌恶心理",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
-      "basename": "六顶思考帽模板",
-      "path": "templates/六顶思考帽模板.md"
+      "basename": "如何告别伪学霸和学酥状态",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
-      "basename": "康奈尔笔记法模板",
-      "path": "templates/康奈尔笔记法模板.md"
+      "basename": "如何成为学习高手",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
     },
     {
-      "basename": "会议纪要模板",
-      "path": "templates/会议纪要模板.md"
+      "basename": "道德许可效应",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/道德许可效应.md"
     },
     {
-      "basename": "电影笔记模板",
-      "path": "templates/电影笔记模板.md"
-    },
-    {
-      "basename": "电视剧笔记模板",
-      "path": "templates/电视剧笔记模板.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "various complements",
-      "path": "pages/000 - INBOX/various complements.md"
-    },
-    {
-      "basename": "KANBAN",
-      "path": "pages/KANBAN.md"
+      "basename": "已发布文章",
+      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "知识管理",
+      "path": "pages/300 - AREA/知识管理/知识管理.md"
+    },
+    {
+      "basename": "mermaid journal 模板",
+      "path": "templates/mermaid模板/mermaid journal 模板.md"
+    },
+    {
+      "basename": "mermaid graph 模板",
+      "path": "templates/mermaid模板/mermaid graph 模板.md"
+    },
+    {
+      "basename": "mermaid gantt 模板",
+      "path": "templates/mermaid模板/mermaid gantt 模板.md"
+    },
+    {
+      "basename": "mermaid flow chart 模板",
+      "path": "templates/mermaid模板/mermaid flow chart 模板.md"
+    },
+    {
+      "basename": "Untitled database",
+      "path": "templates/Untitled database.md"
+    },
+    {
+      "basename": "Untitled database 1",
+      "path": "templates/Untitled database 1.md"
+    },
+    {
+      "basename": "Untitled database",
+      "path": "pages/Untitled database.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "LATEST",
@@ -57,6 +77,70 @@
       "path": "pages/EXTERNAL.md"
     },
     {
+      "basename": "KANBAN",
+      "path": "pages/KANBAN.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
+    },
+    {
+      "basename": "cubox",
+      "path": "pages/000 - INBOX/cubox.md"
+    },
+    {
+      "basename": "contents",
+      "path": "pages/contents.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
+    },
+    {
+      "basename": "滴答清单",
+      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
+    },
+    {
+      "basename": "mermaid模板",
+      "path": "templates/mermaid模板/mermaid模板.md"
+    },
+    {
+      "basename": "mermaid stateDiagram 模板",
+      "path": "templates/mermaid模板/mermaid stateDiagram 模板.md"
+    },
+    {
+      "basename": "mermaid sequenceDiagram 模板",
+      "path": "templates/mermaid模板/mermaid sequenceDiagram 模板.md"
+    },
+    {
+      "basename": "mermaid class diagram 模板",
+      "path": "templates/mermaid模板/mermaid class diagram 模板.md"
+    },
+    {
+      "basename": "mermaid pie 模板",
+      "path": "templates/mermaid模板/mermaid pie 模板.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "templates/日记模板.md"
+    },
+    {
+      "basename": "模板来源",
+      "path": "templates/模板来源.md"
+    },
+    {
+      "basename": "various complements",
+      "path": "pages/000 - INBOX/various complements.md"
+    },
+    {
       "basename": "先鉴定你的做笔记风格，再选一款app上车",
       "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
     },
@@ -65,32 +149,8 @@
       "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
     },
     {
-      "basename": "已发布文章",
-      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
-    },
-    {
-      "basename": "如何在考场上超常发挥",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
-    },
-    {
-      "basename": "如何学会考试",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
-    },
-    {
       "basename": "锂电池充电技巧",
       "path": "pages/000 - INBOX/锂电池充电技巧.md"
-    },
-    {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
       "basename": "快捷键",
@@ -107,10 +167,6 @@
     {
       "basename": "roam-like笔记软件",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/roam-like笔记软件.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
     },
     {
       "basename": "devonthink",
@@ -143,62 +199,6 @@
     {
       "basename": "husky",
       "path": "pages/000 - INBOX/husky.md"
-    },
-    {
-      "basename": "贩卖焦虑",
-      "path": "pages/000 - INBOX/贩卖焦虑.md"
-    },
-    {
-      "basename": "浏览器的隐私保护",
-      "path": "pages/000 - INBOX/浏览器的隐私保护.md"
-    },
-    {
-      "basename": "隐私保护",
-      "path": "pages/000 - INBOX/隐私保护.md"
-    },
-    {
-      "basename": "重器轻用",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
-    },
-    {
-      "basename": "cubox",
-      "path": "pages/cubox.md"
-    },
-    {
-      "basename": "自带方法论的工具",
-      "path": "pages/400 - RESOURCE/原子知识库/金句库/自带方法论的工具.md"
-    },
-    {
-      "basename": "工作和生活的效率体系建设",
-      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
-    },
-    {
-      "basename": "obsidian",
-      "path": "pages/300 - AREA/人+科技融合/必备软件/obsidian.md"
-    },
-    {
-      "basename": "obsidian插件",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/obsidian插件.md"
-    },
-    {
-      "basename": "团队wiki怎么写",
-      "path": "pages/300 - AREA/人+科技融合/团队wiki怎么写.md"
-    },
-    {
-      "basename": "闪念笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/闪念笔记.md"
-    },
-    {
-      "basename": "飞阅会",
-      "path": "pages/300 - AREA/人+科技融合/飞阅会.md"
-    },
-    {
-      "basename": "个人说明书",
-      "path": "pages/300 - AREA/人+科技融合/个人说明书.md"
-    },
-    {
-      "basename": "冲刺日报和周报怎么写",
-      "path": "pages/300 - AREA/人+科技融合/冲刺日报和周报怎么写.md"
     }
   ],
   "omittedPaths": [

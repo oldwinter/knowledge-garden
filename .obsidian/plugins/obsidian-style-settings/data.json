@@ -78,7 +78,7 @@
   "shimmering-focus@@show-vault-in-file-explorer": false,
   "shimmering-focus@@show-file-explorer-navigation": false,
   "shimmering-focus@@no-file-explorer-icons": true,
-  "shimmering-focus@@no-folder-icons": true,
+  "shimmering-focus@@no-folder-icons": false,
   "shimmering-focus@@status-bar-mode": "permanently-show-statusbar",
   "shimmering-focus@@hide-backlinks-status-bar": true,
   "shimmering-focus@@hide-signature": true,
@@ -123,8 +123,6 @@
   "shimmering-focus@@hide-index-files": true,
   "shimmering-focus@@menu-font-size": 0.8,
   "shimmering-focus@@monospace-font-size": 0.7,
-  "supercharged-links@@1162-7812-before": "🦜",
-  "supercharged-links@@3c8a-1054-before": "🗣",
   "shimmering-focus@@longform-hue-shift-dark": -130,
   "shimmering-focus@@longform-text-indent": false,
   "shimmering-focus@@longform-hue-shift-light": 100,
@@ -139,5 +137,6 @@
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
   "shimmering-focus@@no-double-underline": true,
   "supercharged-links@@8b14-901d-before": "📖",
-  "shimmering-focus@@hardcore-mode": false
+  "shimmering-focus@@hardcore-mode": false,
+  "supercharged-links@@01f9-c3f3-before": "🏹"
 }
