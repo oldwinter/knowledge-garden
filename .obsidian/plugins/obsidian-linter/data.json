@@ -9,7 +9,7 @@
     },
     "YAML Timestamp": {
       "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
-      "Date Created": false,
+      "Date Created": true,
       "Date Created Key": "date created",
       "Date Modified": true,
       "Date Modified Key": "date",

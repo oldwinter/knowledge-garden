@@ -1,20 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+      "basename": "LYT 笔记框架",
+      "path": "pages/LYT 笔记框架.md"
     },
     {
-      "basename": "计算机网络",
-      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
+      "basename": "如何做笔记 note-making",
+      "path": "pages/如何做笔记 note-making.md"
+    },
+    {
+      "basename": "个人知识笔记系统",
+      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "如何快速完成学习和工作任务",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
     },
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "帕金森法则",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/帕金森法则.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+    },
+    {
+      "basename": "计算机网络",
+      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
     },
     {
       "basename": "如何快速入门新领域，如何快速学会新技能",
@@ -57,28 +81,12 @@
       "path": "pages/000 - INBOX/常见笔记组织方法.md"
     },
     {
-      "basename": "LYT 笔记框架",
-      "path": "LYT 笔记框架.md"
-    },
-    {
       "basename": "@Tiago Forte",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/@Tiago Forte.md"
     },
     {
       "basename": "PARA",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
     },
     {
       "basename": "如何在考场上超常发挥",
@@ -123,22 +131,6 @@
     {
       "basename": "mermaid flow chart 模板",
       "path": "templates/mermaid模板/mermaid flow chart 模板.md"
-    },
-    {
-      "basename": "Untitled database",
-      "path": "templates/Untitled database.md"
-    },
-    {
-      "basename": "Untitled database 1",
-      "path": "templates/Untitled database 1.md"
-    },
-    {
-      "basename": "Untitled database",
-      "path": "pages/Untitled database.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "LATEST",
