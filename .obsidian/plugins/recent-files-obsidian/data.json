@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "渐进式总结",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
+    },
+    {
+      "basename": "文件夹和标签",
+      "path": "pages/000 - INBOX/文件夹和标签.md"
+    },
+    {
+      "basename": "常见笔记组织方法",
+      "path": "pages/000 - INBOX/常见笔记组织方法.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
       "basename": "LYT 笔记框架",
       "path": "pages/LYT 笔记框架.md"
     },
@@ -9,20 +25,104 @@
       "path": "pages/如何做笔记 note-making.md"
     },
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "真实庭审解说",
+      "path": "pages/400 - RESOURCE/人文社科通识/法学/真实庭审解说.md"
+    },
+    {
+      "basename": "高效记忆的根本：主动加工和组块化记忆",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
+    },
+    {
+      "basename": "有损压缩",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/有损压缩.md"
+    },
+    {
+      "basename": "个人高效学习系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
+    },
+    {
+      "basename": "dict",
+      "path": "templates/dict/dict.md"
+    },
+    {
+      "basename": "人物库",
+      "path": "人物库.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "PARA",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
+    },
+    {
+      "basename": "如何全面提升专注力，学习不走神",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
+    },
+    {
+      "basename": "spaced-repetition",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/spaced-repetition.md"
+    },
+    {
+      "basename": "如何快速入门新领域，如何快速学会新技能",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
+    },
+    {
       "basename": "个人知识笔记系统",
       "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+    },
+    {
+      "basename": "如何克服拖延症",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何克服拖延症.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "pages/000 - INBOX/模板与套路.md"
     },
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
+      "basename": "如何成为学习高手",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+    },
+    {
       "basename": "如何快速完成学习和工作任务",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "如何高效读书，如何记住所读",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+    },
+    {
+      "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
+    },
+    {
+      "basename": "如何提高长期记忆能力，复习是唯一路径",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
+    },
+    {
+      "basename": "如何在考场上超常发挥",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
+    },
+    {
+      "basename": "如何学会考试",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
+    },
+    {
+      "basename": "如何告别伪学霸和学酥状态",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+    },
+    {
+      "basename": "如何减少对学习的排斥和厌恶心理",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
       "basename": "帕金森法则",
@@ -37,72 +137,12 @@
       "path": "pages/300 - AREA/计算机科学/计算机网络.md"
     },
     {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
-    },
-    {
-      "basename": "如何快速入门新领域，如何快速学会新技能",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
-    },
-    {
-      "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
-    },
-    {
       "basename": "七层网络模型",
       "path": "pages/300 - AREA/计算机科学/七层网络模型.md"
     },
     {
-      "basename": "高效记忆的根本：主动加工和组块化记忆",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
-    },
-    {
-      "basename": "如何高效读书，如何记住所读",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
-    },
-    {
-      "basename": "有损压缩",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/有损压缩.md"
-    },
-    {
-      "basename": "spaced-repetition",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/spaced-repetition.md"
-    },
-    {
-      "basename": "如何提高长期记忆能力，复习是唯一路径",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
-    },
-    {
-      "basename": "如何全面提升专注力，学习不走神",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
-    },
-    {
-      "basename": "常见笔记组织方法",
-      "path": "pages/000 - INBOX/常见笔记组织方法.md"
-    },
-    {
       "basename": "@Tiago Forte",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/@Tiago Forte.md"
-    },
-    {
-      "basename": "PARA",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-    },
-    {
-      "basename": "如何在考场上超常发挥",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
-    },
-    {
-      "basename": "如何学会考试",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
-    },
-    {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
       "basename": "道德许可效应",
@@ -145,10 +185,6 @@
       "path": "pages/KANBAN.md"
     },
     {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
       "basename": "个人信息管理系统",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息管理系统.md"
     },
@@ -161,36 +197,8 @@
       "path": "pages/contents.md"
     },
     {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
       "basename": "第二大脑",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
-    },
-    {
-      "basename": "mermaid模板",
-      "path": "templates/mermaid模板/mermaid模板.md"
-    },
-    {
-      "basename": "mermaid stateDiagram 模板",
-      "path": "templates/mermaid模板/mermaid stateDiagram 模板.md"
-    },
-    {
-      "basename": "mermaid sequenceDiagram 模板",
-      "path": "templates/mermaid模板/mermaid sequenceDiagram 模板.md"
-    },
-    {
-      "basename": "mermaid class diagram 模板",
-      "path": "templates/mermaid模板/mermaid class diagram 模板.md"
-    },
-    {
-      "basename": "mermaid pie 模板",
-      "path": "templates/mermaid模板/mermaid pie 模板.md"
     }
   ],
   "omittedPaths": [

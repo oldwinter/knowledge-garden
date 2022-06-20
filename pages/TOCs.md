@@ -1,9 +1,11 @@
 ---
+tags: review
 feed: show
 mindmap-plugin: basic
 content-type: notes
-date: 2022-06-19
+date: 2022-06-20
 title: TOCs
+date created: 2022-06-07
 ---
 
 # TOCs
@@ -85,13 +87,13 @@ title: TOCs
 			- [[计算机网络]]
 			- [[计算机操作系统]]
 			- [[数据结构与算法]]
-	  - [[沟通与表达|好好说话]]
+	  - [[沟通与表达]]
 		 - [[沟通 - communicate]]
 		 - [[说服 - persuade]]
 		 - [[谈判 - negotiate]]
 		 - [[演讲 - speech]]
 		 - [[辩论 - debate]]
-	  - [[工作和生活的效率体系建设|人+科技融合]]
+	  - [[工作和生活的效率体系建设]]
 		 - [[必备软件]]
 		 - [[个人高效学习系统]]
 		 - [[个人搜索系统]]

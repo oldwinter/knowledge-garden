@@ -25,7 +25,7 @@
   "enableCurrentVaultComplement": true,
   "currentVaultMinNumberOfCharacters": 0,
   "includeCurrentVaultPathPrefixPatterns": "",
-  "excludeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "templates/dict/dict.md",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
   "customDictionaryPaths": "templates/dict/dict.md\n",
@@ -250,8 +250,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1654828761788
+          "count": 3,
+          "lastUpdated": 1655717715665
         }
       }
     },
@@ -436,6 +436,28 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1655710378251
+        }
+      }
+    },
+    "万事开头难": {
+      "万事开头难": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655717630407
+        }
+      }
+    },
+    "&r": {
+      "&r": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1655722204717
+        }
+      },
+      "tags: review": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1655722327329
         }
       }
     }
