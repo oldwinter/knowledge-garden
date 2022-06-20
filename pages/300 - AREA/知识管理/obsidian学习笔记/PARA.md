@@ -9,7 +9,7 @@ title: PARA
 ## 一个 PARA 的有效实践
 
 [年度征文｜构建数字大厦 - 少数派 (sspai.com)](https://sspai.com/post/71707)
-
+[[@Tiago Forte]]首创
 ## P.A.R.A 的含义与定义
 
 ![](https://cdn.sspai.com/2020/07/19/f4332cfd92d87d2926dfbdfa435a4626.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)

@@ -1,6 +1,86 @@
 {
   "recentFiles": [
     {
+      "basename": "如何成为学习高手",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+    },
+    {
+      "basename": "计算机网络",
+      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
+    },
+    {
+      "basename": "如何快速完成学习和工作任务",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
+    },
+    {
+      "basename": "帕金森法则",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/帕金森法则.md"
+    },
+    {
+      "basename": "如何快速入门新领域，如何快速学会新技能",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
+    },
+    {
+      "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
+    },
+    {
+      "basename": "七层网络模型",
+      "path": "pages/300 - AREA/计算机科学/七层网络模型.md"
+    },
+    {
+      "basename": "高效记忆的根本：主动加工和组块化记忆",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
+    },
+    {
+      "basename": "如何高效读书，如何记住所读",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+    },
+    {
+      "basename": "有损压缩",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/有损压缩.md"
+    },
+    {
+      "basename": "spaced-repetition",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/spaced-repetition.md"
+    },
+    {
+      "basename": "如何提高长期记忆能力，复习是唯一路径",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
+    },
+    {
+      "basename": "如何全面提升专注力，学习不走神",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
+    },
+    {
+      "basename": "常见笔记组织方法",
+      "path": "pages/000 - INBOX/常见笔记组织方法.md"
+    },
+    {
+      "basename": "LYT 笔记框架",
+      "path": "LYT 笔记框架.md"
+    },
+    {
+      "basename": "@Tiago Forte",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/@Tiago Forte.md"
+    },
+    {
+      "basename": "PARA",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "未命名.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "个人知识管理",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
+    },
+    {
       "basename": "如何在考场上超常发挥",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
     },
@@ -17,20 +97,12 @@
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
-    },
-    {
       "basename": "道德许可效应",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/道德许可效应.md"
     },
     {
       "basename": "已发布文章",
       "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "知识管理",
@@ -127,78 +199,6 @@
     {
       "basename": "mermaid pie 模板",
       "path": "templates/mermaid模板/mermaid pie 模板.md"
-    },
-    {
-      "basename": "日记模板",
-      "path": "templates/日记模板.md"
-    },
-    {
-      "basename": "模板来源",
-      "path": "templates/模板来源.md"
-    },
-    {
-      "basename": "various complements",
-      "path": "pages/000 - INBOX/various complements.md"
-    },
-    {
-      "basename": "先鉴定你的做笔记风格，再选一款app上车",
-      "path": "pages/500 - ARCHIVE/先鉴定你的做笔记风格，再选一款app上车.md"
-    },
-    {
-      "basename": "文章发布工作流梳理",
-      "path": "pages/500 - ARCHIVE/文章发布工作流梳理.md"
-    },
-    {
-      "basename": "锂电池充电技巧",
-      "path": "pages/000 - INBOX/锂电池充电技巧.md"
-    },
-    {
-      "basename": "快捷键",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/快捷键.md"
-    },
-    {
-      "basename": "笔记软件的选择",
-      "path": "pages/000 - INBOX/笔记软件的选择.md"
-    },
-    {
-      "basename": "notion-like笔记软件",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/notion-like笔记软件.md"
-    },
-    {
-      "basename": "roam-like笔记软件",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/roam-like笔记软件.md"
-    },
-    {
-      "basename": "devonthink",
-      "path": "pages/300 - AREA/人+科技融合/devonthink.md"
-    },
-    {
-      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
-    },
-    {
-      "basename": "团队信息与知识共享",
-      "path": "pages/300 - AREA/知识管理/notion学习笔记/团队信息与知识共享.md"
-    },
-    {
-      "basename": "个人工作流",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
-    },
-    {
-      "basename": "个人时间使用的宏观洞察",
-      "path": "pages/300 - AREA/知识管理/notion学习笔记/个人时间使用的宏观洞察.md"
-    },
-    {
-      "basename": "git hook",
-      "path": "pages/000 - INBOX/git hook.md"
-    },
-    {
-      "basename": "个人输出发布系统",
-      "path": "pages/300 - AREA/人+科技融合/个人输出发布系统.md"
-    },
-    {
-      "basename": "husky",
-      "path": "pages/000 - INBOX/husky.md"
     }
   ],
   "omittedPaths": [

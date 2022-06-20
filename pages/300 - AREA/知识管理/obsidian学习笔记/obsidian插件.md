@@ -77,7 +77,7 @@ title: obsidian插件
 | quick-explorer                     | y        | 在菜单栏显示当前文件所在文件夹路径，不知道是否有性能问题？ |                                                                          |
 | recent-files                       | y        | 自带的 cmd +o 只能查看近 10 个，这个有 30 个而且有常驻按钮      |                                                                          |
 | sliding-panes                      | y        | 横向无限滑动场景有时候很有用                               |                                                                          |
-| spaced-repetition                  | y        | 间隔复习，知识完美闭环，必装                               | [[spaced-repetition学习笔记]] |
+| spaced-repetition                  | y        | 间隔复习，知识完美闭环，必装                               | [[spaced-repetition]] |
 | tag-wrangler                       | y        | 批量更改标签必用                                           |                                                                          |
 | timelines                          |          |                                                            | time 使用起来太麻烦了                                                     |
 | tracker                            |          |                                                            | 使用起来太麻烦了                                                         |

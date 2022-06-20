@@ -13,6 +13,12 @@
       "showButtons": "both"
     },
     {
+      "id": "workspace:split-vertical",
+      "icon": "vertical-split",
+      "name": "左右拆分",
+      "showButtons": "both"
+    },
+    {
       "id": "obsidian-focus-mode:toggle-super-focus-mode",
       "icon": "fullscreen",
       "name": "Focus Mode: Toggle Super Focus Mode (Active pane only)",
