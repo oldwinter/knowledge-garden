@@ -22,7 +22,13 @@
       "id": "obsidian-focus-mode:toggle-super-focus-mode",
       "icon": "fullscreen",
       "name": "Focus Mode: Toggle Super Focus Mode (Active pane only)",
-      "showButtons": "desktop"
+      "showButtons": "both"
+    },
+    {
+      "id": "obsidian-hover-editor:convert-active-pane-to-popover",
+      "icon": "popup-open",
+      "name": "Hover Editor: Convert active pane to Hover Editor",
+      "showButtons": "both"
     }
   ],
   "desktop": true,
