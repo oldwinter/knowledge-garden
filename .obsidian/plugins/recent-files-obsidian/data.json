@@ -1,12 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "dataview",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+      "basename": "PARA和MOC联用组织笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "pages/EXTERNAL.md"
+    },
+    {
+      "basename": "KANBAN - 看板",
+      "path": "pages/000 - INBOX/KANBAN - 看板.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
     },
     {
       "basename": "dataview常用使用示例范例",
       "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
+    },
+    {
+      "basename": "白噪音",
+      "path": "pages/000 - INBOX/白噪音.md"
+    },
+    {
+      "basename": "卧底间谍用摩斯码是真的吗",
+      "path": "pages/400 - RESOURCE/小知识点/卧底间谍用摩斯码是真的吗.md"
+    },
+    {
+      "basename": "人物库",
+      "path": "pages/400 - RESOURCE/原子知识库/人物库/人物库.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "果盘先生",
+      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/果盘先生.md"
+    },
+    {
+      "basename": "领域入门模板",
+      "path": "templates/领域入门模板.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
     },
     {
       "basename": "延迟满足",
@@ -17,20 +65,8 @@
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
     },
     {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
-    },
-    {
       "basename": "日记模板",
       "path": "templates/日记模板.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "obsidian 从了解到沉醉 - PPT",
@@ -71,14 +107,6 @@
     {
       "basename": "如何克服拖延症",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何克服拖延症.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
-      "basename": "PARA和MOC联用组织笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
     },
     {
       "basename": "markdown与html和css联用",
@@ -171,34 +199,6 @@
     {
       "basename": "高效记忆的根本：主动加工和组块化记忆",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "pages/000 - INBOX/模板与套路.md"
-    },
-    {
-      "basename": "如何快速入门新领域，如何快速学会新技能",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
-    },
-    {
-      "basename": "皮格马利翁效应",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/皮格马利翁效应.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "周记模板",
-      "path": "templates/周记模板.md"
-    },
-    {
-      "basename": "月度模板",
-      "path": "templates/月度模板.md"
-    },
-    {
-      "basename": "UGC、PGC和OGC的区别",
-      "path": "pages/300 - AREA/知识管理/UGC、PGC和OGC的区别.md"
     }
   ],
   "omittedPaths": [
