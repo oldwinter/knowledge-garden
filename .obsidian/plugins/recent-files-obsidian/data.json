@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "MOCs",
+      "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "《刻意练习》",
+      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
+    },
+    {
+      "basename": "一些学起来挺有意思的小知识点 - MOC",
+      "path": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
+    },
+    {
+      "basename": "费曼技巧",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
+    },
+    {
       "basename": "TOCs",
       "path": "pages/TOCs.md"
     },
@@ -125,10 +141,6 @@
       "path": "pages/000 - INBOX/常见笔记组织方法.md"
     },
     {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
       "basename": "LYT 笔记框架",
       "path": "pages/LYT 笔记框架.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "七层网络模型",
       "path": "pages/300 - AREA/计算机科学/七层网络模型.md"
-    },
-    {
-      "basename": "@Tiago Forte",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/@Tiago Forte.md"
-    },
-    {
-      "basename": "道德许可效应",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/道德许可效应.md"
-    },
-    {
-      "basename": "已发布文章",
-      "path": "pages/500 - ARCHIVE/已发布文章/已发布文章.md"
     }
   ],
   "omittedPaths": [
