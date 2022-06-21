@@ -452,6 +452,14 @@
           "lastUpdated": 1655791634963
         }
       }
+    },
+    "roamresearch": {
+      "roamresearch": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1655804857520
+        }
+      }
     }
   }
 }

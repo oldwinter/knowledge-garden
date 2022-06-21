@@ -1,20 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
+      "basename": "重器轻用",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
+    },
+    {
+      "basename": "个人知识笔记系统",
+      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+    },
+    {
+      "basename": "个人任务管理系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+    },
+    {
+      "basename": "个人工作流",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
+    },
+    {
+      "basename": "工作和生活的效率体系建设",
+      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
+    },
+    {
+      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+    },
+    {
+      "basename": "滴答清单",
+      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "第二大脑",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
+      "basename": "obsidian 从了解到沉醉 - PPT",
+      "path": "pages/obsidian 从了解到沉醉 - PPT.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
     },
     {
       "basename": "MOCs",
       "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -163,42 +199,6 @@
     {
       "basename": "有损压缩",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/有损压缩.md"
-    },
-    {
-      "basename": "个人高效学习系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人高效学习系统.md"
-    },
-    {
-      "basename": "dict",
-      "path": "templates/dict/dict.md"
-    },
-    {
-      "basename": "人物库",
-      "path": "pages/人物库.md"
-    },
-    {
-      "basename": "PARA",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA.md"
-    },
-    {
-      "basename": "spaced-repetition",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/spaced-repetition.md"
-    },
-    {
-      "basename": "个人知识笔记系统",
-      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
-    },
-    {
-      "basename": "帕金森法则",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/帕金森法则.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
     }
   ],
   "omittedPaths": [

@@ -8,5 +8,5 @@ logseq/.recycle
 pages/200 - PROJECT
 
 # 带token的敏感插件数据屏蔽
-.obsidian/plugins/remotely-save
+.obsidian/plugins/remotely-save/data.json
 .obsidian/plugins/obsidian-local-rest-api
