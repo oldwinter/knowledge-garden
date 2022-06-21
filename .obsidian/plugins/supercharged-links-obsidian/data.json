@@ -110,6 +110,18 @@
       "selectAppend": true,
       "selectPrepend": true,
       "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "TOC",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "2d72-a9bb",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
     }
   ]
 }

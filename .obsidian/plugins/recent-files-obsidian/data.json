@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "TOCs",
+      "path": "pages/TOCs.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
+    },
+    {
       "basename": "MOCs",
       "path": "pages/MOCs.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "现实中的标题党",
+      "path": "pages/000 - INBOX/现实中的标题党.md"
     },
     {
       "basename": "《刻意练习》",
@@ -15,14 +35,6 @@
     {
       "basename": "费曼技巧",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "面试自我介绍和常见问题回答",
@@ -99,10 +111,6 @@
     {
       "basename": "工具理性与价值理性",
       "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/工具理性与价值理性.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "周记模板",
@@ -191,14 +199,6 @@
     {
       "basename": "个人知识管理",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "计算机网络",
-      "path": "pages/300 - AREA/计算机科学/计算机网络.md"
-    },
-    {
-      "basename": "七层网络模型",
-      "path": "pages/300 - AREA/计算机科学/七层网络模型.md"
     }
   ],
   "omittedPaths": [
