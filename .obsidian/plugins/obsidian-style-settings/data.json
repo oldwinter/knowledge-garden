@@ -134,7 +134,7 @@
   "shimmering-focus@@sidebar-font-size": 0.85,
   "shimmering-focus@@atomic-ruler": false,
   "hover-editor@@he-title-bar-height": "28px",
-  "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
+  "customizable-page-header-buttons@@page-header-spacing-desktop": 0,
   "shimmering-focus@@no-double-underline": true,
   "supercharged-links@@8b14-901d-before": "📖",
   "shimmering-focus@@hardcore-mode": false,

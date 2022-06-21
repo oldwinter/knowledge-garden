@@ -5,6 +5,7 @@ aliases: dataviewjs
 date: 2022-06-09
 title: dataview
 ---
+[ObsidianDataview文档中文 - 知乎](https://www.zhihu.com/column/c_1504479637841866752)
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)
 
