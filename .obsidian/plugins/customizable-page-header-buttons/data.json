@@ -29,6 +29,12 @@
       "icon": "popup-open",
       "name": "Hover Editor: Convert active pane to Hover Editor",
       "showButtons": "both"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "navigate-glyph",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "showButtons": "both"
     }
   ],
   "desktop": true,

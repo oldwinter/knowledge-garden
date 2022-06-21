@@ -1,24 +1,96 @@
 {
   "recentFiles": [
     {
-      "basename": "重器轻用",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
+      "basename": "数字花园",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
     },
     {
-      "basename": "个人知识笔记系统",
-      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
     },
     {
-      "basename": "个人任务管理系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+      "basename": "延迟满足",
+      "path": "pages/400 - RESOURCE/人文社科通识/心理学/延迟满足.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "templates/日记模板.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "obsidian 从了解到沉醉 - PPT",
+      "path": "pages/obsidian 从了解到沉醉 - PPT.md"
+    },
+    {
+      "basename": "如何高效读书，如何记住所读",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+    },
+    {
+      "basename": "如何告别伪学霸和学酥状态",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+    },
+    {
+      "basename": "dict",
+      "path": "templates/dict/dict.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+    },
+    {
+      "basename": "现实中的标题党",
+      "path": "pages/000 - INBOX/现实中的标题党.md"
+    },
+    {
+      "basename": "工作和生活的效率体系建设",
+      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
     },
     {
       "basename": "个人工作流",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
     },
     {
-      "basename": "工作和生活的效率体系建设",
-      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
+      "basename": "个人任务管理系统",
+      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+    },
+    {
+      "basename": "如何克服拖延症",
+      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何克服拖延症.md"
+    },
+    {
+      "basename": "dataview常用使用示例范例",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "pages/LATEST.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "PARA和MOC联用组织笔记",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+    },
+    {
+      "basename": "markdown与html和css联用",
+      "path": "pages/300 - AREA/人+科技融合/markdown与html和css联用.md"
+    },
+    {
+      "basename": "重器轻用",
+      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
+    },
+    {
+      "basename": "个人知识笔记系统",
+      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
     },
     {
       "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
@@ -29,14 +101,6 @@
       "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "obsidian 从了解到沉醉 - PPT",
-      "path": "pages/obsidian 从了解到沉醉 - PPT.md"
-    },
-    {
       "basename": "TOCs",
       "path": "pages/TOCs.md"
     },
@@ -45,20 +109,8 @@
       "path": "pages/MOCs.md"
     },
     {
-      "basename": "LATEST",
-      "path": "pages/LATEST.md"
-    },
-    {
       "basename": "第二大脑",
       "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "现实中的标题党",
-      "path": "pages/000 - INBOX/现实中的标题党.md"
     },
     {
       "basename": "《刻意练习》",
@@ -89,20 +141,12 @@
       "path": "pages/000 - INBOX/短文、论文与书籍阅读.md"
     },
     {
-      "basename": "如何克服拖延症",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何克服拖延症.md"
-    },
-    {
       "basename": "如何全面提升专注力，学习不走神",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
     },
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
-    },
-    {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
       "basename": "如何在考场上超常发挥",
@@ -119,10 +163,6 @@
     {
       "basename": "如何提高长期记忆能力，复习是唯一路径",
       "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
-    },
-    {
-      "basename": "如何高效读书，如何记住所读",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
     },
     {
       "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
@@ -159,46 +199,6 @@
     {
       "basename": "UGC、PGC和OGC的区别",
       "path": "pages/300 - AREA/知识管理/UGC、PGC和OGC的区别.md"
-    },
-    {
-      "basename": "个人简历",
-      "path": "pages/200 - PROJECT/个人职业生涯/个人简历.md"
-    },
-    {
-      "basename": "PARA和MOC联用组织笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
-    },
-    {
-      "basename": "求职与面试",
-      "path": "pages/000 - INBOX/求职与面试.md"
-    },
-    {
-      "basename": "渐进式总结",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/渐进式总结.md"
-    },
-    {
-      "basename": "文件夹和标签",
-      "path": "pages/000 - INBOX/文件夹和标签.md"
-    },
-    {
-      "basename": "常见笔记组织方法",
-      "path": "pages/000 - INBOX/常见笔记组织方法.md"
-    },
-    {
-      "basename": "LYT 笔记框架",
-      "path": "pages/LYT 笔记框架.md"
-    },
-    {
-      "basename": "如何做笔记 note-making",
-      "path": "pages/如何做笔记 note-making.md"
-    },
-    {
-      "basename": "真实庭审解说",
-      "path": "pages/400 - RESOURCE/人文社科通识/法学/真实庭审解说.md"
-    },
-    {
-      "basename": "有损压缩",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/有损压缩.md"
     }
   ],
   "omittedPaths": [

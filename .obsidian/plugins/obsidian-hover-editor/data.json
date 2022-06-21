@@ -1,5 +1,5 @@
 {
-  "defaultMode": "match",
+  "defaultMode": "preview",
   "autoPin": "onMove",
   "triggerDelay": 300,
   "closeDelay": 600,
