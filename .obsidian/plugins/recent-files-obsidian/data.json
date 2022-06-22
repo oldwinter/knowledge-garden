@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "obsidian publish 发布",
+      "path": "Cards/obsidian publish 发布.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "MOCs.md"
+    },
+    {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "shell 常用命令行操作",
+      "path": "Cards/shell 常用命令行操作.md"
+    },
+    {
+      "basename": "2022-06-22",
+      "path": "Calendar/2022-06-22.md"
+    },
+    {
+      "basename": "MOC",
+      "path": "Cards/MOC.md"
+    },
+    {
       "basename": "ACCESS 笔记组织法",
       "path": "Cards/ACCESS 笔记组织法.md"
     },
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "Cards/MOC.md"
     },
     {
       "basename": "LYT 笔记框架",
@@ -63,10 +83,6 @@
     {
       "basename": "PPV",
       "path": "Cards/PPV.md"
-    },
-    {
-      "basename": "2022-06-22",
-      "path": "Calendar/2022-06-22.md"
     },
     {
       "basename": "写卡片3年的8条感悟 by 汪爸刀刀",
@@ -165,10 +181,6 @@
       "path": "Calendar/2022-06-19.md"
     },
     {
-      "basename": "MOCs",
-      "path": "MOCs.md"
-    },
-    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "dataview常用使用示例范例",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
-    },
-    {
-      "basename": "日记模板",
-      "path": "Extras/Templates/日记模板.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "安装docker服务",
-      "path": "Cards/安装docker服务.md"
     }
   ],
   "omittedPaths": [

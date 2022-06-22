@@ -19,3 +19,10 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 [GitHub - oldwinter/digital-garden](https://github.com/oldwinter/digital-garden)
 
 [入口 - 🌱 oldwinterの数字花园](https://blog.oldwinter.top/)
+
+
+## andy滑窗方案主题的
+[GitHub - aravindballa/notes.aravindballa.com](https://github.com/aravindballa/notes.aravindballa.com)
+[https://notes.aravindballa.com](https://notes.aravindballa.com/)
+
+限制挺多，文本中的表格、裸露代码都会报错。但这个还不是关键，它的build速度太慢了，要几十分钟。
