@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "projects": {
-    "journals": {
-      "path": "journals",
-      "indexFile": "IndexLF",
-      "draftsPath": "Drafts/"
-    }
-  },
-  "selectedProject": "journals",
-  "selectedDraft": "Draft 1",
-  "userScriptFolder": null,
+  "projects": {},
+  "selectedProject": null,
+  "selectedDraft": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -48,5 +41,6 @@
         }
       ]
     }
-  }
+  },
+  "userScriptFolder": null
 }

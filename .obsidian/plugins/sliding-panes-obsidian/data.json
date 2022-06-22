@@ -3,7 +3,7 @@
   "leafDesktopWidth": 700,
   "leafMobileWidth": 350,
   "leafAutoWidth": false,
-  "disabled": false,
+  "disabled": true,
   "rotateHeaders": false,
   "headerAlt": false,
   "orienation": "mixed",

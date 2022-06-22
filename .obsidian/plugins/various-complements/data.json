@@ -25,10 +25,10 @@
   "enableCurrentVaultComplement": true,
   "currentVaultMinNumberOfCharacters": 0,
   "includeCurrentVaultPathPrefixPatterns": "",
-  "excludeCurrentVaultPathPrefixPatterns": "templates/dict/dict.md",
+  "excludeCurrentVaultPathPrefixPatterns": "Extras/Templates/dict/dict.md",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "templates/dict/dict.md\n",
+  "customDictionaryPaths": "Extras/Templates/dict/dict.md",
   "columnDelimiter": "Pipe",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "+=",
@@ -37,7 +37,7 @@
   "displayedTextSuffix": " => ...",
   "enableInternalLinkComplement": true,
   "suggestInternalLinkWithAlias": true,
-  "excludeInternalLinkPathPrefixPatterns": "",
+  "excludeInternalLinkPathPrefixPatterns": "logseq/",
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": true,
@@ -60,22 +60,6 @@
         "frontMatter": {
           "count": 2,
           "lastUpdated": 1653880343438
-        }
-      }
-    },
-    "集装箱": {
-      "集装箱": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1653386975020
-        }
-      }
-    },
-    "如何寻找电子书": {
-      "如何寻找电子书": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1653392312109
         }
       }
     },
@@ -474,6 +458,78 @@
         "frontMatter": {
           "count": 1,
           "lastUpdated": 1655822183189
+        }
+      }
+    },
+    "unsorted": {
+      "unsorted": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1655865068722
+        }
+      }
+    },
+    "以每日日志为入口": {
+      "以每日日志为入口": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655865348681
+        }
+      }
+    },
+    "excalidraw": {
+      "excalidraw": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655865408507
+        }
+      }
+    },
+    "Templater": {
+      "Templater": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1655873994593
+        }
+      }
+    },
+    "sources": {
+      "sources": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1655865805838
+        }
+      }
+    },
+    "Archive": {
+      "Archive": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1655866123301
+        }
+      }
+    },
+    "PARA": {
+      "PARA": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1655866284204
+        }
+      }
+    },
+    "encounters": {
+      "encounters": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1655870969681
+        }
+      }
+    },
+    "index": {
+      "index": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1655874706448
         }
       }
     }

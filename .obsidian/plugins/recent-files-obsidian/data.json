@@ -1,204 +1,200 @@
 {
   "recentFiles": [
     {
-      "basename": "PARA和MOC联用组织笔记",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
+      "basename": "Index for Sources",
+      "path": "Sources/Index for Sources.md"
+    },
+    {
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "已发布文章",
+      "path": "Atlas/Scopes/已发布文章.md"
+    },
+    {
+      "basename": "obsidian 从了解到沉醉 - PPT",
+      "path": "Atlas/TOCs/obsidian 从了解到沉醉 - PPT.md"
     },
     {
       "basename": "EXTERNAL",
-      "path": "pages/EXTERNAL.md"
-    },
-    {
-      "basename": "KANBAN - 看板",
-      "path": "pages/000 - INBOX/KANBAN - 看板.md"
+      "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
       "basename": "LATEST",
-      "path": "pages/LATEST.md"
+      "path": "Atlas/Logs/LATEST.md"
     },
     {
-      "basename": "dataview常用使用示例范例",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
+      "basename": "模板汇总",
+      "path": "Atlas/Scopes/模板汇总.md"
     },
     {
-      "basename": "白噪音",
-      "path": "pages/000 - INBOX/白噪音.md"
+      "basename": "日记汇总",
+      "path": "Atlas/Scopes/日记汇总.md"
     },
     {
-      "basename": "卧底间谍用摩斯码是真的吗",
-      "path": "pages/400 - RESOURCE/小知识点/卧底间谍用摩斯码是真的吗.md"
+      "basename": "About Spaces",
+      "path": "Spaces/About Spaces.md"
     },
     {
-      "basename": "人物库",
-      "path": "pages/400 - RESOURCE/原子知识库/人物库/人物库.md"
+      "basename": "Library",
+      "path": "Atlas/Library.md"
     },
     {
-      "basename": "dataview",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/dataview.md"
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
     },
     {
-      "basename": "果盘先生",
-      "path": "pages/400 - RESOURCE/原子知识库/单词库&概念库/果盘先生.md"
+      "basename": "Index for Atlases",
+      "path": "Atlas/Index for Atlases.md"
     },
     {
-      "basename": "领域入门模板",
-      "path": "templates/领域入门模板.md"
+      "basename": "+ About Cards",
+      "path": "Cards/+ About Cards.md"
+    },
+    {
+      "basename": "About Calendar",
+      "path": "Calendar/About Calendar.md"
+    },
+    {
+      "basename": "+ About Encounters",
+      "path": "0-Inbox/+ About Encounters.md"
+    },
+    {
+      "basename": "计算机科学",
+      "path": "Atlas/MOCs/计算机科学.md"
+    },
+    {
+      "basename": "知识原子库",
+      "path": "Atlas/MOCs/知识原子库.md"
+    },
+    {
+      "basename": "有意思的网络流行语 - MOC",
+      "path": "Atlas/MOCs/有意思的网络流行语 - MOC.md"
+    },
+    {
+      "basename": "书影音",
+      "path": "Atlas/MOCs/书影音.md"
+    },
+    {
+      "basename": "和经典名言抬杠 - MOC",
+      "path": "Atlas/MOCs/和经典名言抬杠 - MOC.md"
+    },
+    {
+      "basename": "MOC：可以抛弃文件夹式和标签式分类法了",
+      "path": "Cards/MOC：可以抛弃文件夹式和标签式分类法了.md"
+    },
+    {
+      "basename": "MOC",
+      "path": "Cards/MOC.md"
+    },
+    {
+      "basename": "2022-06-19",
+      "path": "Calendar/2022-06-19.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
+      "basename": "TOCs",
+      "path": "TOCs.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "MOCs.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/ACCESS 笔记组织法.md"
+    },
+    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+      "basename": "sound sensory sensitivity",
+      "path": "0-Inbox/• Cooling Pad/sound sensory sensitivity.md"
     },
     {
-      "basename": "延迟满足",
-      "path": "pages/400 - RESOURCE/人文社科通识/心理学/延迟满足.md"
+      "basename": "We've already discovered aliens...we just call them bees",
+      "path": "0-Inbox/• Cooling Pad/We've already discovered aliens...we just call them bees.md"
     },
     {
-      "basename": "数字花园",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/数字花园.md"
+      "basename": "《风起陇西》",
+      "path": "Sources/Movies + TV/电视剧笔记/《风起陇西》.md"
+    },
+    {
+      "basename": "2022-06-22",
+      "path": "Calendar/2022-06-22.md"
+    },
+    {
+      "basename": "dataview常用使用示例范例",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
     },
     {
       "basename": "日记模板",
-      "path": "templates/日记模板.md"
+      "path": "Extras/Templates/日记模板.md"
     },
     {
-      "basename": "obsidian 从了解到沉醉 - PPT",
-      "path": "pages/obsidian 从了解到沉醉 - PPT.md"
+      "basename": "dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
     },
     {
-      "basename": "如何高效读书，如何记住所读",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+      "basename": "安装docker服务",
+      "path": "Cards/安装docker服务.md"
     },
     {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+      "basename": "爱情的本来模样",
+      "path": "Cards/爱情的本来模样.md"
     },
     {
-      "basename": "dict",
-      "path": "templates/dict/dict.md"
+      "basename": "various complements",
+      "path": "Cards/various complements.md"
     },
     {
-      "basename": "如何成为学习高手",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+      "basename": "80%默认优先，20%深度定制",
+      "path": "Cards/80%默认优先，20%深度定制.md"
     },
     {
-      "basename": "现实中的标题党",
-      "path": "pages/000 - INBOX/现实中的标题党.md"
+      "basename": "Pasted image 20220615201346",
+      "path": "Extras/Media/Images/Pasted image 20220615201346.png"
     },
     {
-      "basename": "工作和生活的效率体系建设",
-      "path": "pages/300 - AREA/人+科技融合/工作和生活的效率体系建设.md"
+      "basename": "PARA和MOC联用组织笔记",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/PARA和MOC联用组织笔记.md"
     },
     {
-      "basename": "个人工作流",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人工作流.md"
+      "basename": "KANBAN - 看板",
+      "path": "Cards/KANBAN - 看板.md"
     },
     {
-      "basename": "个人任务管理系统",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人任务管理系统.md"
+      "basename": "白噪音",
+      "path": "Cards/白噪音.md"
     },
     {
-      "basename": "如何克服拖延症",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何克服拖延症.md"
+      "basename": "卧底间谍用摩斯码是真的吗",
+      "path": "Spaces/Life/Areas/小知识点/卧底间谍用摩斯码是真的吗.md"
     },
     {
-      "basename": "markdown与html和css联用",
-      "path": "pages/300 - AREA/人+科技融合/markdown与html和css联用.md"
+      "basename": "人物库",
+      "path": "Spaces/原子知识库/人物库/人物库.md"
     },
     {
-      "basename": "重器轻用",
-      "path": "pages/300 - AREA/知识管理/obsidian学习笔记/重器轻用.md"
+      "basename": "果盘先生",
+      "path": "Spaces/原子知识库/单词库&概念库/果盘先生.md"
     },
     {
-      "basename": "个人知识笔记系统",
-      "path": "pages/300 - AREA/人+科技融合/个人知识笔记系统.md"
+      "basename": "领域入门模板",
+      "path": "Extras/Templates/领域入门模板.md"
     },
     {
-      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
     },
     {
-      "basename": "滴答清单",
-      "path": "pages/300 - AREA/人+科技融合/滴答清单.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "pages/TOCs.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "pages/MOCs.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "《刻意练习》",
-      "path": "pages/400 - RESOURCE/书影音笔记/读书笔记/《刻意练习》.md"
-    },
-    {
-      "basename": "一些学起来挺有意思的小知识点 - MOC",
-      "path": "pages/400 - RESOURCE/小知识点/一些学起来挺有意思的小知识点 - MOC.md"
-    },
-    {
-      "basename": "费曼技巧",
-      "path": "pages/300 - AREA/人+科技融合/个人效率系统打造/费曼技巧.md"
-    },
-    {
-      "basename": "面试自我介绍和常见问题回答",
-      "path": "pages/200 - PROJECT/个人职业生涯/面试自我介绍和常见问题回答.md"
-    },
-    {
-      "basename": "非虚构类写作",
-      "path": "pages/000 - INBOX/非虚构类写作.md"
-    },
-    {
-      "basename": "双链笔记与卡片笔记",
-      "path": "pages/000 - INBOX/双链笔记与卡片笔记.md"
-    },
-    {
-      "basename": "短文、论文与书籍阅读",
-      "path": "pages/000 - INBOX/短文、论文与书籍阅读.md"
-    },
-    {
-      "basename": "如何全面提升专注力，学习不走神",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
-    },
-    {
-      "basename": "如何在考场上超常发挥",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
-    },
-    {
-      "basename": "如何学会考试",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
-    },
-    {
-      "basename": "如何快速完成学习和工作任务",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
-    },
-    {
-      "basename": "如何提高长期记忆能力，复习是唯一路径",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
-    },
-    {
-      "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
-    },
-    {
-      "basename": "高效记忆的根本：主动加工和组块化记忆",
-      "path": "pages/400 - RESOURCE/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
+      "basename": "延迟满足",
+      "path": "Sources/Courses/人文社科通识/心理学/延迟满足.md"
     }
   ],
   "omittedPaths": [

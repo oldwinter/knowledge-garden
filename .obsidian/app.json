@@ -1,8 +1,8 @@
 {
   "promptDelete": false,
-  "newFileLocation": "current",
+  "newFileLocation": "folder",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "draws/assets",
+  "attachmentFolderPath": "Extras/Media",
   "userIgnoreFilters": [
     "logseq/"
   ],
@@ -13,5 +13,6 @@
   "livePreview": true,
   "showLineNumber": false,
   "communityPluginSortOrder": "release",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "Cards"
 }

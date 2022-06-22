@@ -122,6 +122,30 @@
       "selectAppend": true,
       "selectPrepend": true,
       "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "index",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "0ba9-36fe",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "readme",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "17d0-6ee6",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
     }
   ]
 }

@@ -9,9 +9,9 @@
       "day": {
         "enabled": true,
         "format": "YYYY-MM-DD",
-        "folder": "journals",
+        "folder": "Calendar",
         "openAtStartup": true,
-        "templatePath": "templates/日记模板.md"
+        "templatePath": "Extras/Templates/日记模板.md"
       },
       "week": {
         "enabled": true,

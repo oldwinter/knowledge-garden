@@ -4,7 +4,6 @@
   "table-editor-obsidian",
   "obsidian-advanced-slides",
   "obsidian-auto-link-title",
-  "calendar-beta",
   "customizable-page-header-buttons",
   "dataview",
   "find-unlinked-files",
@@ -14,7 +13,6 @@
   "obsidian-linter",
   "longform",
   "pane-relief",
-  "periodic-notes",
   "quick-explorer",
   "recent-files-obsidian",
   "obsidian-style-settings",
@@ -26,6 +24,5 @@
   "obsidian-spaced-repetition",
   "sliding-panes-obsidian",
   "obsidian42-brat",
-  "obsidian-image-auto-upload-plugin",
-  "heatmap-calendar"
+  "obsidian-image-auto-upload-plugin"
 ]

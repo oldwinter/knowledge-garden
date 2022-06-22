@@ -111,8 +111,7 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    "templates",
-    "journals",
-    "draws"
+    "0-Inbox",
+    "Extras"
   ]
 }

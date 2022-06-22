@@ -1,6 +1,6 @@
 {
-  "folder": "journals",
+  "folder": "Calendar",
   "autorun": true,
-  "template": "templates/日记模板",
+  "template": "Extras/Templates/日记模板",
   "format": "YYYY-MM-DD"
 }
