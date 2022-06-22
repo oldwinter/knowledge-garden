@@ -21,7 +21,7 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 [入口 - 🌱 oldwinterの数字花园](https://blog.oldwinter.top/)
 
 
-## andy滑窗方案主题的
+## andy滑窗方案主题的liys
 [GitHub - aravindballa/notes.aravindballa.com](https://github.com/aravindballa/notes.aravindballa.com)
 [https://notes.aravindballa.com](https://notes.aravindballa.com/)
 

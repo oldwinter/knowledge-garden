@@ -14,5 +14,6 @@
   "showLineNumber": false,
   "communityPluginSortOrder": "download",
   "alwaysUpdateLinks": true,
-  "newFileFolderPath": "Cards"
+  "newFileFolderPath": "Cards",
+  "newLinkFormat": "shortest"
 }

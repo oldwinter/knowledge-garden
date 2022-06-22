@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "LYT 笔记框架",
+      "path": "Cards/LYT 笔记框架.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+    },
+    {
+      "basename": "正则表达式",
+      "path": "Cards/正则表达式.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+    },
+    {
       "basename": "obsidian publish 发布",
       "path": "Cards/obsidian publish 发布.md"
     },
@@ -31,10 +47,6 @@
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "LYT 笔记框架",
-      "path": "Cards/LYT 笔记框架.md"
     },
     {
       "basename": "@Nick Milo",
@@ -187,18 +199,6 @@
     {
       "basename": "sound sensory sensitivity",
       "path": "0-Inbox/• Cooling Pad/sound sensory sensitivity.md"
-    },
-    {
-      "basename": "We've already discovered aliens...we just call them bees",
-      "path": "0-Inbox/• Cooling Pad/We've already discovered aliens...we just call them bees.md"
-    },
-    {
-      "basename": "《风起陇西》",
-      "path": "Sources/Movies + TV/电视剧笔记/《风起陇西》.md"
-    },
-    {
-      "basename": "dataview常用使用示例范例",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
     }
   ],
   "omittedPaths": [
