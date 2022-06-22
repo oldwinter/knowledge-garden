@@ -5,12 +5,16 @@
       "path": "Cards/ACCESS 笔记组织法.md"
     },
     {
-      "basename": "LYT 笔记框架",
-      "path": "Cards/LYT 笔记框架.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "MOC",
       "path": "Cards/MOC.md"
+    },
+    {
+      "basename": "LYT 笔记框架",
+      "path": "Cards/LYT 笔记框架.md"
     },
     {
       "basename": "@Nick Milo",
@@ -79,10 +83,6 @@
     {
       "basename": "+ About Calendar",
       "path": "Calendar/+ About Calendar.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "TOCs",
