@@ -1,0 +1,1 @@
+[Notion Life Design with Pillars, Pipelines & Vaults (PPV)](https://www.yearzero.io/notion-life-design)

@@ -41,9 +41,9 @@
   "titleLeft": [],
   "titleRight": [
     {
-      "id": "periodic-notes:open-daily-note",
-      "icon": "lucide-book-open",
-      "name": "Periodic Notes: Open today's daily note"
+      "id": "daily-notes",
+      "icon": "calendar-glyph",
+      "name": "日记: 打开/创建今天的日记"
     },
     {
       "id": "obsidian-focus-mode:toggle-focus-mode",
