@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Git",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/Git.md"
+    },
+    {
+      "basename": "git submodule",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/git submodule.md"
+    },
+    {
       "basename": "2022-06-21",
       "path": "Calendar/2022-06-21.md"
     },
@@ -187,18 +195,6 @@
     {
       "basename": "obsidian publish 发布",
       "path": "Cards/obsidian publish 发布.md"
-    },
-    {
-      "basename": "LYT 笔记框架",
-      "path": "Cards/LYT 笔记框架.md"
-    },
-    {
-      "basename": "正则表达式",
-      "path": "Cards/正则表达式.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
     }
   ],
   "omittedPaths": [
