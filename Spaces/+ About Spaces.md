@@ -7,6 +7,8 @@ tags: readme说明
 date created: 2022-06-22
 ---
 
+up:: [[ACCESS 笔记组织法]]
+
 # About Spaces
 
 Spaces are one of the most important parts of ACCESS:  Whenever you have something big in your life, deploy a space and set up MAPS (MOCs, Areas, Projects, Support notes).

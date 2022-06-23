@@ -2,7 +2,7 @@
 feed: show
 content-type: notes
 aliases: storytelling
-tags: 
+tags: 视频笔记
 date: 2022-06-23
 title: storytelling
 date created: 2022-06-09

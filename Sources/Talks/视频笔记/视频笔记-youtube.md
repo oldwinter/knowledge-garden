@@ -4,6 +4,7 @@ content-type: notes
 date: 2022-06-23
 title: 视频笔记-youtube
 date created: 2022-06-09
+tags: 视频笔记
 ---
 
 [00:05](https://www.youtube.com/watch?v=o0exK-xFP3k#t=5.068303059127808)

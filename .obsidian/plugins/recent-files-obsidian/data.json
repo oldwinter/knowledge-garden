@@ -1,32 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
-      "basename": "DIKW",
-      "path": "Cards/DIKW.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/obsidian publish 发布.md"
-    },
-    {
-      "basename": "2022-06-09",
-      "path": "Calendar/2022-06-09.md"
-    },
-    {
-      "basename": "2022-06-22",
-      "path": "Calendar/2022-06-22.md"
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
     },
     {
       "basename": "MOCs",
-      "path": "MOCs.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "TOCs.md"
+      "path": "Atlas/MOCs/MOCs.md"
     },
     {
       "basename": "README",
@@ -37,16 +17,148 @@
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "+ About Encounters",
-      "path": "0-Inbox/+ About Encounters.md"
-    },
-    {
       "basename": "+ Library",
       "path": "Atlas/+ Library.md"
     },
     {
+      "basename": "先鉴定你的做笔记风格，再选一款app上车",
+      "path": "Calendar/已发布文章/先鉴定你的做笔记风格，再选一款app上车.md"
+    },
+    {
+      "basename": "文章发布工作流梳理",
+      "path": "Calendar/已发布文章/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "人人在吹的思维导图到底有什么用？",
+      "path": "Calendar/已发布文章/人人在吹的思维导图到底有什么用？.md"
+    },
+    {
+      "basename": "+ Index for Sources",
+      "path": "Sources/+ Index for Sources.md"
+    },
+    {
+      "basename": "+ About Atlas",
+      "path": "Atlas/+ About Atlas.md"
+    },
+    {
+      "basename": "obsidian 从了解到沉醉 - PPT",
+      "path": "Atlas/TOCs/obsidian 从了解到沉醉 - PPT.md"
+    },
+    {
+      "basename": "日记汇总",
+      "path": "Atlas/Scopes/日记汇总.md"
+    },
+    {
+      "basename": "模板汇总",
+      "path": "Atlas/Scopes/模板汇总.md"
+    },
+    {
+      "basename": "2022-06-24",
+      "path": "Calendar/2022-06-24.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "ACCESS文件夹索引的索引",
+      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
+    },
+    {
+      "basename": "+ Index for Calendar",
+      "path": "Calendar/+ Index for Calendar.md"
+    },
+    {
+      "basename": "+ Index for 0-Inbox",
+      "path": "0-Inbox/+ Index for 0-Inbox.md"
+    },
+    {
+      "basename": "sound sensory sensitivity",
+      "path": "0-Inbox/Cooling Pad/sound sensory sensitivity.md"
+    },
+    {
+      "basename": "学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利",
+      "path": "Sources/Books/微信读书同步/个人成长/学会提问（原书第11版）-尼尔·布朗 斯图尔特·基利.md"
+    },
+    {
+      "basename": "学习之道-芭芭拉·奥克利",
+      "path": "Sources/Books/微信读书同步/个人成长/学习之道-芭芭拉·奥克利.md"
+    },
+    {
+      "basename": "微习惯：简单到不可能失败的自我管理法则-斯蒂芬·盖斯",
+      "path": "Sources/Books/微信读书同步/个人成长/微习惯：简单到不可能失败的自我管理法则-斯蒂芬·盖斯.md"
+    },
+    {
+      "basename": "清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里",
+      "path": "Sources/Books/微信读书同步/个人成长/清醒思考的艺术：你最好让别人去犯的52种思维错误-罗尔夫·多贝里.md"
+    },
+    {
+      "basename": "精进：如何成为一个很厉害的人（新版）-采铜",
+      "path": "Sources/Books/微信读书同步/个人成长/精进：如何成为一个很厉害的人（新版）-采铜.md"
+    },
+    {
+      "basename": "好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等",
+      "path": "Sources/Books/微信读书同步/个人成长/好好说话：新鲜有趣的话术精进技巧-马东出品 马薇薇 黄执中 周玄毅等.md"
+    },
+    {
+      "basename": "把时间当作朋友（第3版）-李笑来",
+      "path": "Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md"
+    },
+    {
+      "basename": "2022-06-10",
+      "path": "Calendar/2022-06-10.md"
+    },
+    {
+      "basename": "如何阅读一本书-莫提默·艾德勒 查尔斯·范多伦",
+      "path": "Sources/Books/微信读书同步/教育学习/如何阅读一本书-莫提默·艾德勒 查尔斯·范多伦.md"
+    },
+    {
+      "basename": "长安的荔枝-马伯庸",
+      "path": "Sources/Books/微信读书同步/历史/长安的荔枝-马伯庸.md"
+    },
+    {
+      "basename": "明朝那些事儿（全集）-当年明月",
+      "path": "Sources/Books/微信读书同步/历史/明朝那些事儿（全集）-当年明月.md"
+    },
+    {
+      "basename": "囚徒健身：用失传的技艺练就强大的生存实力-保罗·威德",
+      "path": "Sources/Books/微信读书同步/生活百科/囚徒健身：用失传的技艺练就强大的生存实力-保罗·威德.md"
+    },
+    {
+      "basename": "A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte",
+      "path": "Sources/Books/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
+    },
+    {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/ACCESS 笔记组织法.md"
+    },
+    {
+      "basename": "ACCESS文件夹说明的索引",
+      "path": "Atlas/Scopes/ACCESS文件夹说明的索引.md"
+    },
+    {
+      "basename": "文章发布集合",
+      "path": "Atlas/Scopes/文章发布集合.md"
+    },
+    {
+      "basename": "+ About 0-Inbox",
+      "path": "0-Inbox/+ About 0-Inbox.md"
+    },
+    {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "+ Index for Extras",
+      "path": "Extras/+ Index for Extras.md"
     },
     {
       "basename": "+ Index for Cards",
@@ -57,148 +169,36 @@
       "path": "Cards/+ About Cards.md"
     },
     {
-      "basename": "快速启动一个简易的静态httpserver",
-      "path": "Calendar/快速启动一个简易的静态httpserver.md"
-    },
-    {
-      "basename": "日记模板",
-      "path": "Extras/Templates/日记模板.md"
-    },
-    {
-      "basename": "2022-06-21",
-      "path": "Calendar/2022-06-21.md"
-    },
-    {
-      "basename": "2022-06-20",
-      "path": "Calendar/2022-06-20.md"
-    },
-    {
-      "basename": "2022-06-19",
-      "path": "Calendar/2022-06-19.md"
-    },
-    {
-      "basename": "Index for Sources",
-      "path": "Sources/Index for Sources.md"
-    },
-    {
-      "basename": "git submodule",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/git submodule.md"
-    },
-    {
-      "basename": "刻意练习",
-      "path": "Cards/刻意练习.md"
-    },
-    {
-      "basename": "Git",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/Git.md"
-    },
-    {
-      "basename": "有意思的网络流行语 - MOC",
-      "path": "Atlas/MOCs/有意思的网络流行语 - MOC.md"
-    },
-    {
-      "basename": "2022-四月",
-      "path": "Calendar/每月每季度总结/2022-四月.md"
-    },
-    {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
-    },
-    {
-      "basename": "模板汇总",
-      "path": "Atlas/Scopes/模板汇总.md"
-    },
-    {
-      "basename": "日记汇总",
-      "path": "Atlas/Scopes/日记汇总.md"
-    },
-    {
-      "basename": "文章发布集合",
-      "path": "Atlas/Scopes/文章发布集合.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "华为，今夜请将我遗忘",
-      "path": "Extras/Archive/已发布文章/华为，今夜请将我遗忘.md"
-    },
-    {
-      "basename": "你还在打造数字花园？不妨来看看我的数字闺房",
-      "path": "Extras/Archive/已发布文章/你还在打造数字花园？不妨来看看我的数字闺房.md"
-    },
-    {
-      "basename": "以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统",
-      "path": "Extras/Archive/已发布文章/以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统.md"
-    },
-    {
-      "basename": "先鉴定你的做笔记风格，再选一款app上车",
-      "path": "Extras/Archive/已发布文章/先鉴定你的做笔记风格，再选一款app上车.md"
-    },
-    {
-      "basename": "文章发布工作流梳理",
-      "path": "Extras/Archive/已发布文章/文章发布工作流梳理.md"
-    },
-    {
-      "basename": "人人在吹的思维导图到底有什么用？",
-      "path": "Extras/Archive/已发布文章/人人在吹的思维导图到底有什么用？.md"
-    },
-    {
-      "basename": "obsidian 的 10 个必装插件，直击我的灵魂",
-      "path": "Extras/Archive/已发布文章/obsidian 的 10 个必装插件，直击我的灵魂.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "Extras/Archive/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-      "path": "Extras/Archive/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-    },
-    {
-      "basename": "KANBAN - 看板",
-      "path": "Cards/KANBAN - 看板.md"
-    },
-    {
-      "basename": "import和require本质区别",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/import和require本质区别.md"
-    },
-    {
-      "basename": "2022-三月",
-      "path": "Calendar/每月每季度总结/2022-三月.md"
-    },
-    {
-      "basename": "2022-06-18",
-      "path": "Calendar/2022-06-18.md"
-    },
-    {
-      "basename": "2022-06-01",
-      "path": "Calendar/2022-06-01.md"
-    },
-    {
       "basename": "+ About Calendar",
       "path": "Calendar/+ About Calendar.md"
     },
     {
-      "basename": "LATEST",
-      "path": "Atlas/Logs/LATEST.md"
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
     },
     {
-      "basename": "EXTERNAL",
-      "path": "Atlas/Logs/EXTERNAL.md"
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
     },
     {
-      "basename": "@钱钟书",
-      "path": "Cards/原子知识库/人物库/@钱钟书.md"
+      "basename": "+ About Extras",
+      "path": "Extras/+ About Extras.md"
     },
     {
-      "basename": "@Tiago Forte",
-      "path": "Cards/原子知识库/人物库/@Tiago Forte.md"
+      "basename": "dataviewjs常用使用示例范例",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
     },
     {
-      "basename": "@刘慈欣",
-      "path": "Cards/原子知识库/人物库/@刘慈欣.md"
+      "basename": "dataview常用使用示例范例",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
+    },
+    {
+      "basename": "obsidian publish 发布",
+      "path": "Cards/obsidian publish 发布.md"
+    },
+    {
+      "basename": "令我多次沉醉的人或作品 - MOC",
+      "path": "Atlas/MOCs/令我多次沉醉的人或作品 - MOC.md"
     }
   ],
   "omittedPaths": [

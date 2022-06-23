@@ -2,7 +2,9 @@
 feed: show
 content-type: notes
 aliases: 好书好作品好电影好喜剧好音乐
-tags: MOC todo/持续迭代 
+tags: 
+  - MOC 
+  - todo/持续迭代 
 date: 2022-06-23
 title: 令我多次沉醉的人或作品 - MOC
 date created: 2022-06-09
@@ -31,7 +33,7 @@ date created: 2022-06-09
 - [[金庸]]
 - [[古龙]]
 - [[周国平]]
-- [[马伯庸]]
+- [[@马伯庸]]
 - [[@东野圭吾]]
 
 ### 国外

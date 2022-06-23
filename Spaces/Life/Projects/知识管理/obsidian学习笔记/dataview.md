@@ -2,24 +2,40 @@
 feed: show
 content-type: notes
 aliases: dataviewjs
-date: 2022-06-23
+date: 2022-06-24
 title: dataview
 date created: 2022-06-09
 ---
 
+## 感悟
+
+dataview 的牛逼之处，在于它让我们成为自己笔记库的大数据分析师。不管我们创建的数据有多么杂乱，往往根据自己的思维方式所创建出文件的『文件夹、标签、链接』出现一定的范式而变得有迹可循，再配合上创建时间修改时间等信息，从自己的笔记海洋中抓取自己想要的数据，变得简单。这也是 [[自下而上]]的方法必须要配套的[[工具和方法论]]。
+
+官网：
+
+[GitHub - blacksmithgu/obsidian-dataview: A high-performance data index and query language over Markdown files, for https://obsidian.md/.](https://github.com/blacksmithgu/obsidian-dataview)
+
+## 简单的 dataview 语法
+
+[Queries - Dataview](https://blacksmithgu.github.io/obsidian-dataview/query/queries/)
+
+## 常用范例
+
+[[dataviewjs常用使用示例范例]]
+
+[[dataview常用使用示例范例]]
+
+## dataviewjs 的参考资料
+
 [ObsidianDataview文档中文 - 知乎](https://www.zhihu.com/column/c_1504479637841866752)
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)
-
-[GitHub - blacksmithgu/obsidian-dataview: A high-performance data index and query language over Markdown files, for https://obsidian.md/.](https://github.com/blacksmithgu/obsidian-dataview)
 
 dataviewjs 可以实现更灵活的语法，比如表格插入一个自增长的变量，实现表格的 No 行号显示效果。
 
 dataviewjs 社区有很多酷炫的玩法和现有代码， 当要用的时候，先去找找看，别自己造轮子。
 
 dataview 有种数据挖掘的感觉。通过不同角度分析和挖掘自己的大脑曾经的思考轨迹和路径。
-
-[[dataview常用使用示例范例]]
 
 ## dataviewjs 的内置函数与变量
 
