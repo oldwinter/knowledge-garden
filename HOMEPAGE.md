@@ -3,7 +3,6 @@ feed: show
 content-type: notes
 date: 2022-06-22
 title: HOMEPAGE
-cssclass: clean-embeds list-2-col-cards
 date created: 2022-06-09
 ---
 

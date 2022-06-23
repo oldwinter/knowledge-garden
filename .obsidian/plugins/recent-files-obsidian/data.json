@@ -1,28 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "LYT 笔记框架",
-      "path": "Cards/LYT 笔记框架.md"
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
-      "basename": "如何成为学习高手",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+      "basename": "MOCs",
+      "path": "MOCs.md"
     },
     {
-      "basename": "正则表达式",
-      "path": "Cards/正则表达式.md"
+      "basename": "TOCs",
+      "path": "TOCs.md"
     },
     {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "github pages",
+      "path": "Cards/github pages.md"
     },
     {
       "basename": "obsidian publish 发布",
       "path": "Cards/obsidian publish 发布.md"
     },
     {
-      "basename": "MOCs",
-      "path": "MOCs.md"
+      "basename": "LYT 笔记框架",
+      "path": "Cards/LYT 笔记框架.md"
+    },
+    {
+      "basename": "正则表达式",
+      "path": "Cards/正则表达式.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
     },
     {
       "basename": "2022-06-23",
@@ -43,10 +59,6 @@
     {
       "basename": "ACCESS 笔记组织法",
       "path": "Cards/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "@Nick Milo",
@@ -111,10 +123,6 @@
     {
       "basename": "+ About Calendar",
       "path": "Calendar/+ About Calendar.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "TOCs.md"
     },
     {
       "basename": "Index for Sources",
@@ -191,14 +199,6 @@
     {
       "basename": "2022-06-19",
       "path": "Calendar/2022-06-19.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "sound sensory sensitivity",
-      "path": "0-Inbox/• Cooling Pad/sound sensory sensitivity.md"
     }
   ],
   "omittedPaths": [

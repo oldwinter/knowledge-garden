@@ -1,6 +1,7 @@
 {
   "targetAttributes": [
-    "published"
+    "published",
+    "title"
   ],
   "targetTags": true,
   "presetFields": [],
@@ -142,6 +143,18 @@
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "17d0-6ee6",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "attribute",
+      "name": "title",
+      "value": "HOME",
+      "matchCaseSensitive": false,
+      "match": "startswith",
+      "uid": "f22f-8852",
       "selectText": true,
       "selectAppend": true,
       "selectPrepend": true,

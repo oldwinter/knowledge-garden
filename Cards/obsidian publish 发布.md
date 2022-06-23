@@ -9,10 +9,10 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 
 - [jackyzha0 (Jacky Zhao) · GitHub](https://github.com/jackyzha0)
 - [GitHub - Jekyll-Garden/jekyll-garden.github.io: A Digital Garden Theme for Jekyll. Jekyll Garden lets you create a static HTML version of your markdown notes and publish via Github pages. Made for Obsidian users!](https://github.com/Jekyll-Garden/jekyll-garden.github.io)
-- 都不支持中文搜索，都需要往 frontmatter 里面加 title 和 date 等数据，倒是可以用 linter 插件时间，但还是有点麻烦。
-- 前者目前不支持 wikilink 的双括号结构，需要手动把格式转换成 markdown 绝对路径引用的格式。后者目前中文排版有点问题，反向引用界面溢出边缘了。
+- 前者对于未创建的词条支持不友好，尤其中文，会显示一大串html格式的编码。后者不支持中文搜索，二者都需要往 frontmatter 里面加 title 和 date 等数据，倒是可以用 linter 插件时间，但还是有点麻烦。
+- 前者目前不支持 wikilink 的双括号结构，需要手动把格式转换成 markdown 绝对路径引用的格式，或者全移动至根目录。后者目前中文排版有点问题，反向引用界面溢出边缘了。
 
-## 已选择后者方案
+## 方案对比
 
 欠缺：中文搜索。黑暗模式切换。手机适配右上角按钮。[[frontdata]] 需要添加 feed，content-type，date，title 字段
 
@@ -21,8 +21,13 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 [入口 - 🌱 oldwinterの数字花园](https://blog.oldwinter.top/)
 
 
+
 ## andy滑窗方案主题的liys
 [GitHub - aravindballa/notes.aravindballa.com](https://github.com/aravindballa/notes.aravindballa.com)
 [https://notes.aravindballa.com](https://notes.aravindballa.com/)
 
 限制挺多，文本中的表格、裸露代码都会报错。但这个还不是关键，它的build速度太慢了，要几十分钟。
+
+## 新发现的方案
+[GitHub - maximevaillancourt/digital-garden-jekyll-template: Start your own digital garden using this Jekyll template 🌱](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
+也是基于[[jekyll]]，主题样式有些不同。得看看有没有中文搜索bug

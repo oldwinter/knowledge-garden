@@ -2,7 +2,7 @@
 feed: show
 mindmap-plugin: basic
 content-type: notes
-date: 2022-06-20
+date: 2022-06-23
 title: TOCs
 tags: TOC
 date created: 2022-06-07
@@ -61,8 +61,6 @@ date created: 2022-06-07
 
 - [[PARA]]
 - [[MOC]]
-- [[LYT 笔记框架]]
-	- [[ACCESS 笔记组织法]]
 - [[PARA和MOC联用组织笔记]]
    - [[PROJECT - 项目]]
 	  - [[个人职业生涯]]
@@ -143,3 +141,5 @@ date created: 2022-06-07
 		 - [[句容]]
    - [[ARCHIVE - 归档 ]]
 	  - [[已发布文章]]
+- [[LYT 笔记框架]]
+	- [[ACCESS 笔记组织法]]

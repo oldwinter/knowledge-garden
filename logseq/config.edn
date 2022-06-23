@@ -179,8 +179,8 @@
  :ref/linked-references-collapsed-threshold 50
  :favorites ["TOC"]
  :publishing/all-pages-public? true
- :editor/logical-outdenting? true
- :ui/show-brackets? false
+ :editor/logical-outdenting? false
+ :ui/show-brackets? true
  :feature/enable-flashcards? false
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
