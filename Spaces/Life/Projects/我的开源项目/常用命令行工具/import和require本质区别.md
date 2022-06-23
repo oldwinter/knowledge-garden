@@ -1,12 +1,13 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: import和require本质区别
+date created: 2022-06-09
 ---
 
 作者：寸志
-链接：https://www.zhihu.com/question/56820346/answer/150724784
+链接：<<<<<https://www.zhihu.com/question/56820346/answer/150724784>>>>>
 来源：知乎
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
@@ -30,14 +31,17 @@ CommonJS 作为 Node.js 的规范，一直沿用至今。由于 npm 上 CommonJS
 
 require/exports 的用法只有以下三种简单的写法：
 
+```javascript
 const fs = require('fs')
 
 exports.fs = fs
 
 module.exports = fs
+```
 
 而 import/export 的写法就多种多样：
 
+```javascript
 import fs from 'fs'
 
 import {default as fs} from 'fs'
@@ -59,6 +63,7 @@ export function readFile
 export {readFile, read}
 
 export * from 'fs'
+```
 
 ## require/exports 和 import/export 本质上的差别
 
@@ -68,7 +73,7 @@ export * from 'fs'
 3. ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型；而 CommonJS 则是普通的值传递或者引用传递。
 1、2 相对比较好理解，3 需要看个例子：
 
-```
+```javascript
 // counter.js
 exports.count = 0
 setTimeout(function () {

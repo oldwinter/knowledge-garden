@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: 卡片盒笔记法 - Zettelkasten
+date created: 2022-06-09
 ---
 
 ## 定义

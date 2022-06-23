@@ -2,14 +2,17 @@
 feed: show
 content-type: notes
 aliases: 什么是PARA笔记组织法
-date: 2022-06-09
+date: 2022-06-23
 title: PARA
+date created: 2022-06-09
 ---
 
 ## 一个 PARA 的有效实践
 
 [年度征文｜构建数字大厦 - 少数派 (sspai.com)](https://sspai.com/post/71707)
-[[@Tiago Forte]]首创
+
+[[@Tiago Forte]] 首创
+
 ## P.A.R.A 的含义与定义
 
 ![](https://cdn.sspai.com/2020/07/19/f4332cfd92d87d2926dfbdfa435a4626.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
@@ -25,11 +28,11 @@ P.A.R.A. 是 **项目（Project）、领域（Area）、资源（Resource）、 
 - **资源：**你感兴趣的事情，也是支撑现在 Area 和将来 Area 的外部知识储备
 - **归档：**沉寂的内容，但也许对未来有用
 - **缓存：**快速的收集信息，减少判断的成本（个人添加）
-
-@George Hale 说道：如果要对信息或者工作寄托长久，有三点是必须遵循的，专注一些领域、步步为营和广泛吸收。可量化意味着明确的阶段性和边界，不可直接量化的领域「专家」是偏主观、自我感受和直觉。
-
-其中 Goal 是贯穿始终的，**Area 的持续精进是最终目的**，Project 的选择和执行是阶可量化的段性目标，Resource 是支撑二级的「Area」的资源、资料（外部的）。
-
-**围绕 Area 的精进，我们需要不断吸收外部的有效信息和进行阶段性的「创作」，**而阶段性的创作需要的主题，可以是 Area 的拆分，也可以是基于 Project 的抽象和总结，但来源主要是通过实践（Project）和理论来进行的（即 Resource——外部参考、经验、方法论）。
-
-[P.A.R.A. 是什么及在 Notion 中的应用 - 少数派 (sspai.com)](https://sspai.com/post/61459)
+  
+  @George Hale 说道：如果要对信息或者工作寄托长久，有三点是必须遵循的，专注一些领域、步步为营和广泛吸收。可量化意味着明确的阶段性和边界，不可直接量化的领域「专家」是偏主观、自我感受和直觉。
+  
+  其中 Goal 是贯穿始终的，**Area 的持续精进是最终目的**，Project 的选择和执行是阶可量化的段性目标，Resource 是支撑二级的「Area」的资源、资料（外部的）。
+  
+  **围绕 Area 的精进，我们需要不断吸收外部的有效信息和进行阶段性的「创作」，**而阶段性的创作需要的主题，可以是 Area 的拆分，也可以是基于 Project 的抽象和总结，但来源主要是通过实践（Project）和理论来进行的（即 Resource——外部参考、经验、方法论）。
+  
+  [P.A.R.A. 是什么及在 Notion 中的应用 - 少数派 (sspai.com)](https://sspai.com/post/61459)

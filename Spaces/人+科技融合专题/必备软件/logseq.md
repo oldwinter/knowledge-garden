@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: logseq
+date created: 2022-06-09
 ---
 
 gra- 可以和 obsidian 共同使用一个库，使用 2 者的基本语法即可。

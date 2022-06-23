@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: alfred
+date created: 2022-06-09
 ---
 其他竞品：[[utools]]， [[go]]
 

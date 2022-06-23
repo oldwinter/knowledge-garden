@@ -7,8 +7,9 @@ drafts:
   - name: Draft 1
     folder: Draft 1
     scenes: []
-date: 2022-06-09
+date: 2022-06-23
 title: Index
+date created: 2022-06-09
 ---
 
 This file is managed by Longform. Please avoid editing it directly; doing so will almost certainly confuse the plugin, and may cause a loss of data.

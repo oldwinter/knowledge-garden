@@ -1,13 +1,16 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-20
+date: 2022-06-23
 title: LYT 笔记框架
+date created: 2022-06-19
 ---
+
 [LYT Kit 6: Your starter kit to build your PKM system (+free download for your Obsidian app) - YouTube](https://www.youtube.com/watch?v=ftzQOkzGCLg)
 
-## 概括一下LYT笔记框架的核心内容
-与roamresearch和logseq这种纯大纲，并且所有笔记文件只放在同一个文件夹下面不同，obsidian有文件夹系统。那么LYT主张，文件夹分类和MOC结合使用的方式来组织笔记，并且借用dataview的强大query能力，将搜索结果保存下来。这几种方法相结合使用，让原子化笔记兼具结构性和流动性，更能实现常青笔记强调的，可被检索，可为未来服务的目的。综合来说就是教你如何通过obsidian构建自己的PKM系统。
+## 概括一下 LYT 笔记框架的核心内容
+
+与 roamresearch 和 logseq 这种纯大纲，并且所有笔记文件只放在同一个文件夹下面不同，obsidian 有文件夹系统。那么 LYT 主张，文件夹分类和 MOC 结合使用的方式来组织笔记，并且借用 dataview 的强大 query 能力，将搜索结果保存下来。这几种方法相结合使用，让原子化笔记兼具结构性和流动性，更能实现常青笔记强调的，可被检索，可为未来服务的目的。综合来说就是教你如何通过 obsidian 构建自己的 PKM 系统。
 
 ## LYT 笔记框架概览
 
@@ -21,7 +24,7 @@ title: LYT 笔记框架
 - 什么是 [[流动式框架]]
 	- 为什么说给你的笔记分类是个好主意
 	- 流动式分类学
-- 什么是[[ACCESS 笔记组织法]]
+- 什么是 [[ACCESS 笔记组织法]]
 
 ## 最佳实践
 
@@ -30,8 +33,11 @@ title: LYT 笔记框架
 - [[如何做笔记 note-making]]
 
 ### 使用 MOCs 进行思考
+
 [[MOC第一步：尽情搜集词条]]
+
 [[MOC第二步：不断调整刷新]]
+
 [[MOC第三步：粘合导航发现]]
 
 ### 发展你的 HOMEPAGE 笔记

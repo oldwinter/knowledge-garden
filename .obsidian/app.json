@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "newFileLocation": "folder",
+  "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
   "userIgnoreFilters": [

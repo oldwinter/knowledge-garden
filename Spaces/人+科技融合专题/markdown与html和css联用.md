@@ -1,7 +1,7 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-21
+date: 2022-06-23
 title: markdown与html和css联用
 date created: 2022-06-09
 ---
@@ -42,8 +42,9 @@ hello world
 
 > 此外，单独拎出来的 style 标签，obsidian 的阅读模式不支持，所以直接将样式写在 style 里面，或者在 [[frontdata]] 里面用 cssclass 标签引入自定义 css 样式
 
-我们来测试以下内联样式吧：（切换到阅读模式而非源码模式）
-
+我们来测试以下内联样式吧：（去掉代码块前后缀，并切换到阅读模式而非源码模式）
+```
 <div style="color: red; font-size: 1.5em;">
 世界的奇妙程度远远超越我们的想象，爱因斯坦的理论为我们解开了探索宇宙的新篇章。
 <div/>
+```

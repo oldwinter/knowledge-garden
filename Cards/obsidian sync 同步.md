@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: obsidian sync 同步
+date created: 2022-06-09
 ---
 
 [[remotely save]]和[[livesync]] 各有优劣，前者实时性差且插件同步体验差，但简单方便。后者需要折腾太长时间。

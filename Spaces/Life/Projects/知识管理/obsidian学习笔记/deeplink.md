@@ -2,7 +2,8 @@
 feed: show
 content-type: notes
 title: deeplink
-date: 2022-06-09
+date: 2022-06-23
+date created: 2022-06-09
 ---
 
 x:: [[URL scheme]]

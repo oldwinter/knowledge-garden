@@ -190,13 +190,13 @@ div[data-id="8b14-901d"] div.setting-item-description::after,
 }
 
 div[data-id="01f9-c3f3"] div.setting-item-description,
-[data-link-published="true"  i] {
+[data-link-tags*="done" i] {
     color: var(--01f9-c3f3-color) !important;
     font-weight: var(--01f9-c3f3-weight);
 }
 
 .c-01f9-c3f3-use-background div[data-id="01f9-c3f3"] div.setting-item-description,
-.c-01f9-c3f3-use-background .data-link-text[data-link-published="true"  i] {
+.c-01f9-c3f3-use-background .data-link-text[data-link-tags*="done" i] {
     background-color: var(--01f9-c3f3-background-color) !important;
     border-radius: 5px;
     padding-left: 2px;
@@ -205,12 +205,12 @@ div[data-id="01f9-c3f3"] div.setting-item-description,
 }
 
 div[data-id="01f9-c3f3"] div.setting-item-description::before,
-.data-link-icon[data-link-published="true"  i]::before {
+.data-link-icon[data-link-tags*="done" i]::before {
     content: var(--01f9-c3f3-before);
 }
 
 div[data-id="01f9-c3f3"] div.setting-item-description::after,
-.data-link-icon-after[data-link-published="true"  i]::after {
+.data-link-icon-after[data-link-tags*="done" i]::after {
     content: var(--01f9-c3f3-after);
 }
 
@@ -628,7 +628,7 @@ settings:
         default: '#ffffff'
     - 
         id: 01f9-c3f3
-        title: published is true
+        title: tag is done
         description: Example note
         type: heading
         collapsed: true

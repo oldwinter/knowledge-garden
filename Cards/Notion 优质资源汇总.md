@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: Notion 优质资源汇总
+date created: 2022-06-09
 ---
 为了给刚入门有兴趣去学习 notion 的童鞋节省时间，我整理了一些东西，希望对你们有用。
 
@@ -14,21 +15,21 @@ notion 入门综述
 3、建议不要汉化，汉化后会遇到各种各样的 bug（官方汉化才是硬道理），英文版只需认识一些功能块英文单词，单词量很少，后面建立的过程都是可以用中文去编辑，呈现出来的都是中文。
 下面是我学习过程时用到的一些平台，我只说我用过的，大家可以参考一下。
 1、网站（ps：少数派和知乎等平台有很多有关文章）
-少数派大神：https://linmi.cc/
+少数派大神：<<<<https://linmi.cc/>>>>
 
-notion 教程 https://www.notion.so/Notion-0ce388be12774303af5c9fc6c81cb076
+notion 教程 <<<<https://www.notion.so/Notion-0ce388be12774303af5c9fc6c81cb076>>>>
 
 notion 中文文档
 
-https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501
+<<<<https://www.notion.so/Notion-64ab96a7fccf4d74b9a9a68b338bc501>>>>
 
 notion 中文社区
 
-https://notion.work/
+<<<<https://notion.work/>>>>
 
 notion 使用详解
 
-https://sspai.com/post/52176
+<<<<https://sspai.com/post/52176>>>>
 
 2、B 站 up 主
 官方:
@@ -48,4 +49,4 @@ notion 中文社区
 
 4、教程资源文件
 
-https://wwe.lanzoui.com/b01oga6ha
+<<<<https://wwe.lanzoui.com/b01oga6ha>>>>

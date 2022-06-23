@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: text expand
+date created: 2022-06-09
 ---
 
 ## 这个插件对我真的有用吗？
@@ -14,6 +15,7 @@ title: text expand
 - 这个是新建代码块的表格保存，被动触发，而 dataview 是就地替换，自动刷新。
 - 基于这 2 点，应该还是有些更需要静态数据的场景有用，能作为 dataview 的一个能力延伸，先保留。
 	- 比如某天问题单导出
+
 ## demo
 
 用 cmd p ,expand 命令后，才会重新刷新内容。
@@ -26,7 +28,6 @@ path:"journals"
 |[[$filename]]|$size|
 >⬆⬆⬆
 ```
-
 
 ⬇⬇⬇
 |Filename|Content|

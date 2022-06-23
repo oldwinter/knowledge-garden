@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: 自己部署一个v2ray服务
+date created: 2022-06-09
 ---
 - 买一个区域位于海外的 server，预装 linux
 - 重要！进入 server 的网络配置，或者是安全组配置，将 8899 端口打开。

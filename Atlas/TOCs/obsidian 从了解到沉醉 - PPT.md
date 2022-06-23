@@ -1,7 +1,7 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-22
+date: 2022-06-23
 tags: TOC 
 title: obsidian 从了解到沉醉 - PPT
 date created: 2022-06-21

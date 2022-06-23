@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: ssh自动以root权限登陆云服务器
+date created: 2022-06-09
 ---
 
 分 2 步：

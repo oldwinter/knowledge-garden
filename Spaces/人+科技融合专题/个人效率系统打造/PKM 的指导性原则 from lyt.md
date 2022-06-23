@@ -1,3 +1,11 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-23
+title: PKM 的指导性原则 from lyt
+date created: 2022-06-19
+---
+
 ## PKM 的指导性原则 from lyt
 
 当涉及到管理你的数字知识时，以下是一些需要考虑的指导性价值和原则。

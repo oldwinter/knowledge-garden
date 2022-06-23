@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: jekyll
+date created: 2022-06-09
 ---
 
 [[github pages]]就是基于jekyll。而jekyll基于[[ruby]] 所写。

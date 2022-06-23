@@ -4,8 +4,9 @@ content-type: notes
 aliases: 
 tags:
 cards-deck: INBOX
-date: 2022-06-09
+date: 2022-06-23
 title: Obsidian入门到精通
+date created: 2022-06-09
 ---
 
 ## 核心原则

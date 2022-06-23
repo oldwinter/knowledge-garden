@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-15
+date: 2022-06-23
 title: vscode代码编辑和obsidian文本编辑快捷键
+date created: 2022-06-15
 ---
 |                  | [[VSCode]]          |[[obsidian]] |
 | ---------------- | ------------------- | ------------ |

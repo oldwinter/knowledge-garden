@@ -101,9 +101,9 @@
       "selectBackground": true
     },
     {
-      "type": "attribute",
+      "type": "tag",
       "name": "published",
-      "value": "true",
+      "value": "done",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "01f9-c3f3",

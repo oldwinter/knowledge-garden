@@ -1,3 +1,11 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-23
+title: 我的 PKM 工具变迁
+date created: 2022-06-19
+---
+
 ## 我的 PKM 工具变迁
 
 ### 大学 2010-2014

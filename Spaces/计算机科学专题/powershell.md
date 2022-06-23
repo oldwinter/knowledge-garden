@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: powershell
+date created: 2022-06-09
 ---
 - 👍，作者能聊聊 powershell 的用户群体，都是哪些人嘛？谁值得学它？
   因为貌似我身边的程序员同事，没人使用，如果有需要在 windows 上使用脚本，也是安装 wsl 以后，用 linux 命令，因为更通用。

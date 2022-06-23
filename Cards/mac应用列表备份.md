@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: mac应用列表备份
+date created: 2022-06-09
 ---
 简单的导出，很多 app 都用不到了暂时没删除而已。
 

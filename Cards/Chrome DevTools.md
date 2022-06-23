@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: Chrome DevTools
+date created: 2022-06-09
 ---
 
 overrides 特性可以替换 js，css 等文件，但不能替换 xhr 请求。

@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: org-mode
+date created: 2022-06-09
 ---
 甚至和 [[子弹笔记]] 那种通过各种标记来处理文本和事务的方法很类似。
 

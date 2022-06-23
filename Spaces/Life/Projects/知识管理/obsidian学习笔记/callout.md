@@ -1,13 +1,15 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: callout
+date created: 2022-06-09
 ---
 > [!PHONE]
 > JJ
 
 ## 自带 callout
+
 [Fetching Title#qi59](https://help.obsidian.md/How+to/Use+callouts)
 
 用 co- 前缀，通过 [[various complements]] 变量自动补全插件自动触发。
@@ -21,6 +23,7 @@ The Sidenote Callout width (宽度) and outdention is customizable (定制)
 ```
 > [!SIDENOTE]
 ```
+
 #### STANDARD CALLOUTS
 
 ```
@@ -45,6 +48,7 @@ The Sidenote Callout width (宽度) and outdention is customizable (定制)
 ```
 > [!GOAL]
 ```
+
 ## 多栏扩展 callout
 
 [[css多栏callout的使用]]

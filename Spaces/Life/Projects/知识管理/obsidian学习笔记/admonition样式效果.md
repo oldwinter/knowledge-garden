@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: admonition样式效果
+date created: 2022-06-09
 ---
 已经被官方自带 [[callout]] 取代
 

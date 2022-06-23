@@ -3,8 +3,9 @@ feed: show
 content-type: notes
 id: 7384af7a-8b51-4e01-b3ef-8fbe2c161c0a
 aliases: 
-date: 2022-06-09
+date: 2022-06-23
 title: livesync
+date created: 2022-06-09
 ---
 
 ## Obsidian 最优雅的多端同步插件 LiveSync
@@ -45,7 +46,7 @@ title: livesync
 	- 以腾讯云举例，写到这里，我还特地去申请了个推广链接，如果你后面花钱了，貌似能给我带来一点收入😃，先注册：[腾讯云](https://curl.qcloud.com/3ulU59pY)，再申请试用：[云产品免费试用_云服务免费体验_免费云产品试用 - 腾讯云 (tencent.com)](https://cloud.tencent.com/act/free?from=15048)，申请到 1 个月的『轻量应用服务器』试用（选装最常用的 ubuntu 系统最新版）
 - 装 docker
 	- 申请试用后，他们界面会引导你如何 ssh 登陆。登陆上后，执行几步：
-		- 安装 docker，[Install Docker Engine on Ubuntu | Docker Documentation](https://docs.docker.com/engine/install/ubuntu/)，就按照文档里面提供的一键式安装命令 `curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh`
+		- 安装 docker，[Install Docker Engine on Ubuntu | Docker Documentation](https://docs.docker.com/engine/install/ubuntu/)，就按照文档里面提供的一键式安装命令 `curl -fsSL <<<<https://get.docker.com>>>> -o get-docker.sh && sudo sh get-docker.sh`
 		- 测试是否安装成功：`sudo docker run hello-world`
 - 运行 livesync 的 server 服务
 	- 按照插件官方描述 [obsidian-livesync/setup_own_server.md at main · vrtmrz/obsidian-livesync (github.com)](https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server.md)，3 步
@@ -78,7 +79,6 @@ title: livesync
 - 接着打开同步插件的功能即可
 - ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041617016.png)
 - ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041638512.png)
-
 - 手机端同理，执行上面 2 步。不同之处如下：
 	- 手机端选择 apply and receive，而不是 apply and send
 	- 手机端的设备和仓库名，取一个和电脑端能区分开的名字即可。

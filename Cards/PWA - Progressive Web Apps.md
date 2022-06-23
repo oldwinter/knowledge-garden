@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: PWA - Progressive Web Apps
+date created: 2022-06-09
 ---
 
 [[chrome|edge]] 自带的应用功能，就是 PWA，有些网站，比如飞书和 onedrive 原生天然支持，就很棒。

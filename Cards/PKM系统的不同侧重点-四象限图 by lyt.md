@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-22
+date: 2022-06-23
 title: PKM系统的不同侧重点-四象限图 by lyt
+date created: 2022-06-22
 ---
 
 [[个人知识管理]] 系统当下存在 3 对矛盾：
@@ -11,7 +12,7 @@ title: PKM系统的不同侧重点-四象限图 by lyt
 	- 联想：有点像 [[理想主义和现实主义]] 的对立。
 - folders 和 links 的对立
 - structure 和 chaos 的对立
-注：原文的对立，用的词语是 tension，也有[[张力]]的意思。
+注：原文的对立，用的词语是 tension，也有 [[张力]] 的意思。
 
 ![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206221733367.png)
 

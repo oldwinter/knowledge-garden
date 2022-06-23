@@ -3,8 +3,9 @@ feed: show
 content-type: notes
 aliases: 功利主义阅读法, 快速拆解工具书, 教程类书的阅读方法
 tags: 
-date: 2022-06-09
+date: 2022-06-23
 title: RIA阅读法
+date created: 2022-06-09
 ---
 
 ## 概念 (Reading)

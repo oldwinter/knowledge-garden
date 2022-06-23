@@ -1,7 +1,7 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-22
+date: 2022-06-23
 title: EXTERNAL
 date created: 2022-06-09
 ---
@@ -18,7 +18,6 @@ x-devonthink-item://
 >⬆⬆⬆
 ```
 
-
 ⬇⬇⬇
 - [[2022-五月]]
 	- obsidian 进阶，配合几个方法论食用：[dt-回归obsidian的纯与真](x-devonthink-item://D80E37D3-9160-41B9-9427-90F7127E9BF1)
@@ -33,6 +32,7 @@ x-devonthink-item://
   ⬆⬆⬆
   
   <-->
+
 ## cubox 的资源引用
 
 ```expander
@@ -43,7 +43,6 @@ cubox://
 ---
 >⬆⬆⬆
 ```
-
 
 ⬇⬇⬇
 - [[常青笔记 - Evergreen Note]]
@@ -61,6 +60,7 @@ cubox://
   ⬆⬆⬆
   
   <-->
+
 ## notion 的资源引用
 
 ```expander
@@ -72,17 +72,17 @@ www.notion.so/oldwinter
 >⬆⬆⬆
 ```
 
-
 ⬇⬇⬇
 - [[个人工作流]]
-  	<<<https://www.notion.so/oldwinter/d9f7ffc08a7d4a1d9476e6c8e2d16608>>>
+  	<<<<<<<https://www.notion.so/oldwinter/d9f7ffc08a7d4a1d9476e6c8e2d16608>>>>>>>
   ---
 - [[有用的github开源库搜集]]
-  	定期从 github 的 star 列表里面导出。可能是几百几千条数据的表格，这样看的话，还是用 notion 管理会靠谱一些。 <<<https://www.notion.so/oldwinter/710f77edcd1e496caf49e99bd88ec090>>>
+  	定期从 github 的 star 列表里面导出。可能是几百几千条数据的表格，这样看的话，还是用 notion 管理会靠谱一些。 <<<<<<<https://www.notion.so/oldwinter/710f77edcd1e496caf49e99bd88ec090>>>>>>>
   ---
   ⬆⬆⬆
   
   <-->
+
 ## github 的资源引用
 
 ```expander
@@ -93,7 +93,6 @@ github.com/oldwinter
 ---
 >⬆⬆⬆
 ```
-
 
 ⬇⬇⬇
 ⬆⬆⬆

@@ -2,8 +2,9 @@
 feed: show
 content-type: notes
 tags: MOC
-date: 2022-06-09
+date: 2022-06-23
 title: 一些学起来挺有意思的小知识点 - MOC
+date created: 2022-06-09
 ---
 
 这些技能，基本上只需要几个小时，就能初步入门，感受到一点小乐趣。

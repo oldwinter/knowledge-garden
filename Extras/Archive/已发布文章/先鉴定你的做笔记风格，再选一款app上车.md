@@ -22,5 +22,4 @@ title: 先鉴定你的做笔记风格，再选一款app上车
 by the way: 之前刷过 3 遍以上他的 [[渐进式总结]]的文章，翻译版和英文原版见：[产品沉思录 ProductThinking](https://index.pmthinking.com/3a8c5d77b5be42c58719d174bfbfa935)
 
 以下是正文：
-
 ##

@@ -2,7 +2,7 @@
 feed: show
 content-type: notes
 kanban-plugin: basic
-date: 2022-06-21
+date: 2022-06-23
 title: KANBAN - 看板
 date created: 2022-06-09
 ---

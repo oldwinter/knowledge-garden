@@ -2,9 +2,11 @@
 feed: show
 content-type: notes
 aliases: dataviewjs
-date: 2022-06-09
+date: 2022-06-23
 title: dataview
+date created: 2022-06-09
 ---
+
 [ObsidianDataview文档中文 - 知乎](https://www.zhihu.com/column/c_1504479637841866752)
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)

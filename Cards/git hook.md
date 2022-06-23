@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-17
+date: 2022-06-23
 title: git hook
+date created: 2022-06-09
 ---
 配一下隐私保护 #todo/今天
 

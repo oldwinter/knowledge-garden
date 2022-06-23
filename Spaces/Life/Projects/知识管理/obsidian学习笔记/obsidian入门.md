@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-10
+date: 2022-06-23
 title: obsidian入门
+date created: 2022-06-09
 ---
 
 ## 别人眼中的 obsidian

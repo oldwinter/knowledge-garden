@@ -3,10 +3,10 @@ feed: show
 content-type: notes
 aliases: 
 tags: MOC 
-date: 2022-06-09
+date: 2022-06-23
 title: linux常用命令行
+date created: 2022-06-09
 ---
-
 - 官方下载 pkg 安装
 	- [[nodejs]]
 	- [[Golang]]

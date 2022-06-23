@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: mac系统重装
+date created: 2022-06-09
 ---
 
 ## 相关其他操作

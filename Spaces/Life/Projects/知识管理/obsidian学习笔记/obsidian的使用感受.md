@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: obsidian的使用感受
+date created: 2022-06-09
 ---
 
 obsidian 的使用感受

@@ -14,7 +14,7 @@
   "showComplementAutomatically": true,
   "showIndexingStatus": true,
   "descriptionOnSuggestion": "Short",
-  "selectSuggestionKeys": "Ctrl/Cmd+Enter",
+  "selectSuggestionKeys": "Tab",
   "additionalCycleThroughSuggestionsKeys": "None",
   "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
   "openSourceFileKey": "None",
@@ -40,14 +40,14 @@
   "excludeInternalLinkPathPrefixPatterns": "logseq/",
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
-  "insertCommaAfterFrontMatterCompletion": true,
+  "insertCommaAfterFrontMatterCompletion": false,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 33,
-          "lastUpdated": 1655837405786
+          "count": 34,
+          "lastUpdated": 1655969686261
         },
         "internalLink": {
           "count": 2,
@@ -456,8 +456,8 @@
     "review": {
       "review": {
         "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1655822183189
+          "count": 2,
+          "lastUpdated": 1655969670177
         }
       }
     },
@@ -554,6 +554,30 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1655952605834
+        }
+      }
+    },
+    "readme": {
+      "readme": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1655959353285
+        }
+      }
+    },
+    "article/done": {
+      "article/done": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1655967774600
+        }
+      }
+    },
+    "article/doing": {
+      "article/doing": {
+        "frontMatter": {
+          "count": 3,
+          "lastUpdated": 1655967892565
         }
       }
     }

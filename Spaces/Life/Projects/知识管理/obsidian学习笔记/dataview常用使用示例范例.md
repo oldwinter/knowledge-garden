@@ -1,5 +1,13 @@
+---
+feed: show
+content-type: notes
+date: 2022-06-23
+title: dataview常用使用示例范例
+date created: 2022-06-21
+---
 
 统计整个库的数据：
+
 ```dataviewjs
 var i = [dv.pages().length, 
 					dv.pages("#MOC").length,
@@ -22,6 +30,7 @@ dv.paragraph(`==反向链接== **${i[6]}**个`)
 ```
 
 HeatmapCalendar:
+
 ```dataviewjs
 const calendarData = { 
 	entries: [], // Populated in the DataviewJS loop below
@@ -56,9 +65,8 @@ for(let page of dv.pages('"journals"').sort(p=>p.file.name)){
 renderHeatmapCalendar(this.container, calendarData)
 ```
 
-
-
 通过这种用法，也许能写出根据标题自动生成 mermaid 的代码
+
 ```dataviewjs
 var y = "2022"
 var m = Array(12).fill(0).map(function(v,i){return i});
@@ -86,11 +94,10 @@ labelColors: true
 }
 ```
 
-
 某个文件夹下面的全部反向链接：
+
 ```dataview
 table file.inlinks AS "反向链接"
 from "Cards"
 limit 1
 ```
-

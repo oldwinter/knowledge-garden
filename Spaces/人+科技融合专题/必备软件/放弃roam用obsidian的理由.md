@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: 放弃roam用obsidian的理由
+date created: 2022-06-09
 ---
 
 ## 放弃 roam 用 obsidian 的理由

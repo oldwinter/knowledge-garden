@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: vim、markdown与org-mode
+date created: 2022-06-09
 ---
 共通点：均是对纯文本的快捷操作，使其呈现出不同的视觉效果。
 不同点：

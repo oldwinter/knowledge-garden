@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-10
+date: 2022-06-23
 title: anki
+date created: 2022-06-09
 ---
 
 ## obsidian 里面的用法

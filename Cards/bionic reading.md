@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: bionic reading
+date created: 2022-06-09
 ---
 
 [[Reeder]] 阅读器内置该功能，通过只看英文单词的一半字母，可以有效提升效率。

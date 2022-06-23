@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: Android系统还原出厂设置
+date created: 2022-06-09
 ---
 系统配置备份
 

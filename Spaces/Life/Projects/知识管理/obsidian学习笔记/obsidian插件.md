@@ -6,8 +6,9 @@ tags: review
 sr-due: 2023-04-10
 sr-interval: 305
 sr-ease: 330
-date: 2022-06-10
+date: 2022-06-23
 title: obsidian插件
+date created: 2022-06-09
 ---
 
 ## 本仓库的已安装插件列表
@@ -32,7 +33,7 @@ title: obsidian插件
 | [[admonition样式效果\|admonition]] |          | 引用美化，鲜活页面                                         | 美化quote样式，已经被内置[[callout]] 取代                                 |
 | [[advanced Tables]]                | y        | 这个表格就是用它写的，贼方便                               |                                                                          |
 | [[advanced-slides]]                | y        | 预览效果不错，也可以网页打开，基于 revealjs 已经相当成熟     |                                                                          |
-| [[advanced-url]]                   | y        | 别的软件link到obsidian，直达目的，[[万物互联]] 必备         |                                                                          |
+| [[advanced-url]]                   |y        | 别的软件link到obsidian，直达目的，[[万物互联]] 必备         |                                                                          |
 | [[bartender]]                      |          | 编辑左侧和下方菜单显示和顺序，有用                         |                                                                          |
 | [[dataview]]                       | y        | 待学习，有点麻烦，别人都说是神器                           |                                                                          |
 | [[livesync]]                       |          | 通过自己的 server，进行多端同步                             |                                                                          |

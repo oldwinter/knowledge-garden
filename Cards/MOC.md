@@ -2,8 +2,9 @@
 feed: show
 content-type: notes
 aliases: 什么是MOC笔记组织法, 索引笔记
-date: 2022-06-10
+date: 2022-06-23
 title: MOC
+date created: 2022-06-09
 ---
 什么是 MOC 笔记组织方式？ Map Of Content
 

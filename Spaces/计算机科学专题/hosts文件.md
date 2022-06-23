@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-15
+date: 2022-06-23
 title: hosts文件
+date created: 2022-06-15
 ---
 
 hosts 是电脑、手机等设备中的一个本地系统文件，主要作用是解析域名（将网址指向服务器 IP 地址），而且优先于远程 [[DNS]] 服务，因此可以通过修改 hosts 文件屏蔽某个网址连网，来禁止访问某个网站。

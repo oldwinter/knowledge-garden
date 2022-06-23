@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: PPT制作的目的和原则
+date created: 2022-06-09
 ---
 
 ## 经验

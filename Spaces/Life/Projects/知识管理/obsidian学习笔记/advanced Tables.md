@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: advanced Tables
+date created: 2022-06-09
 ---
 给 markdown 编辑简单的表格带来了极大的便利。也使得 md 写表格有了意义。不然 markdown 的表格功能其实很鸡肋，编辑不方便太耗时。
 - 同理，学会如何利用工具和模板，快速编辑 [[mermaid]]，也是其重要意义，不然也干脆直接用更专业的画图工具就行了。

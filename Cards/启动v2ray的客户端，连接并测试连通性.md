@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: 启动v2ray的客户端，连接并测试连通性
+date created: 2022-06-09
 ---
 
 mac 上以 [[V2rayU]] 为例：

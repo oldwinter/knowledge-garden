@@ -3,8 +3,9 @@ feed: show
 content-type: notes
 aliases: speedtest
 tags: 
-date: 2022-06-09
+date: 2022-06-23
 title: linux命令行测速 - speedtest
+date created: 2022-06-09
 ---
 
 Speedtest 是一个旧宠。它用 Python 实现，并打包在 Apt 中，也可用 pip 安装。你可以将它作为命令行工具或在 Python 脚本中使用。

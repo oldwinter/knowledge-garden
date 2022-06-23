@@ -1,14 +1,15 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: z命令
+date created: 2022-06-09
 ---
 [mkdir ~/code  
 
 cd ~/code  
 
-git clone https://github.com/rupa/z.git  
+git clone <<<<https://github.com/rupa/z.git>>>>  
 
 echo 'source ~/code/z/z.sh' >> ~/.zshrc  
 

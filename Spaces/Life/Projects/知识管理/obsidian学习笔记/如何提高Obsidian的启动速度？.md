@@ -2,8 +2,9 @@
 feed: show
 content-type: notes
 source: https://tft脚本er.medium.com/improve-obsidian-startup-time-on-older-devices-with-the-faststart-script-70a6c590309f
-date: 2022-06-09
+date: 2022-06-23
 title: 如何提高Obsidian的启动速度？
+date created: 2022-06-09
 ---
 > 本文摘抄自 [tft脚本er.medium.com](https://tft脚本er.medium.com/improve-obsidian-startup-time-on-older-devices-with-the-faststart-script-70a6c590309f)
 > 本示例库已经内置此脚本，使用脚本后 Ob 启动速度基本都在 2 秒内。

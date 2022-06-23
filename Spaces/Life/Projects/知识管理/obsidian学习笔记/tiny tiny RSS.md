@@ -3,8 +3,9 @@ feed: show
 content-type: notes
 aliases: TTRSS
 tags: 
-date: 2022-06-09
+date: 2022-06-23
 title: tiny tiny RSS
+date created: 2022-06-09
 ---
 
 [🐋 Awesome TTRSS | 🐋 Awesome TTRSS (henry.wang)](http://ttrss.henry.wang/zh/)
@@ -13,7 +14,7 @@ title: tiny tiny RSS
 
 根据教程，用 [[docker compose]] 一键启动即可
 
-http://oldwinter.top:181/
+<<<<http://oldwinter.top:181/>>>>
 
 缺点：
 - 样式有点丑，估计需要去折腾主题，以后有需要再折腾。现在先用 [[Reeder]]

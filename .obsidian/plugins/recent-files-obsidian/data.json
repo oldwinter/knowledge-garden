@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-06-21",
+      "path": "Calendar/2022-06-21.md"
+    },
+    {
+      "basename": "2022-06-22",
+      "path": "Calendar/2022-06-22.md"
+    },
+    {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "DIKW",
+      "path": "Calendar/DIKW.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "TOCs.md"
+    },
+    {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
@@ -9,12 +33,152 @@
       "path": "MOCs.md"
     },
     {
-      "basename": "TOCs",
-      "path": "TOCs.md"
+      "basename": "有意思的网络流行语 - MOC",
+      "path": "Atlas/MOCs/有意思的网络流行语 - MOC.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "2022-四月",
+      "path": "Calendar/每月每季度总结/2022-四月.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+    },
+    {
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "模板汇总",
+      "path": "Atlas/Scopes/模板汇总.md"
+    },
+    {
+      "basename": "日记汇总",
+      "path": "Atlas/Scopes/日记汇总.md"
+    },
+    {
+      "basename": "文章发布集合",
+      "path": "Atlas/Scopes/文章发布集合.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/ACCESS 笔记组织法.md"
+    },
+    {
+      "basename": "华为，今夜请将我遗忘",
+      "path": "Extras/Archive/已发布文章/华为，今夜请将我遗忘.md"
+    },
+    {
+      "basename": "你还在打造数字花园？不妨来看看我的数字闺房",
+      "path": "Extras/Archive/已发布文章/你还在打造数字花园？不妨来看看我的数字闺房.md"
+    },
+    {
+      "basename": "以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统",
+      "path": "Extras/Archive/已发布文章/以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统.md"
+    },
+    {
+      "basename": "先鉴定你的做笔记风格，再选一款app上车",
+      "path": "Extras/Archive/已发布文章/先鉴定你的做笔记风格，再选一款app上车.md"
+    },
+    {
+      "basename": "文章发布工作流梳理",
+      "path": "Extras/Archive/已发布文章/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "人人在吹的思维导图到底有什么用？",
+      "path": "Extras/Archive/已发布文章/人人在吹的思维导图到底有什么用？.md"
+    },
+    {
+      "basename": "obsidian 的 10 个必装插件，直击我的灵魂",
+      "path": "Extras/Archive/已发布文章/obsidian 的 10 个必装插件，直击我的灵魂.md"
+    },
+    {
+      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
+      "path": "Extras/Archive/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
+    },
+    {
+      "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
+      "path": "Extras/Archive/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
+    },
+    {
+      "basename": "KANBAN - 看板",
+      "path": "Cards/KANBAN - 看板.md"
+    },
+    {
+      "basename": "import和require本质区别",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/import和require本质区别.md"
+    },
+    {
+      "basename": "2022-三月",
+      "path": "Calendar/每月每季度总结/2022-三月.md"
+    },
+    {
+      "basename": "2022-06-18",
+      "path": "Calendar/2022-06-18.md"
+    },
+    {
+      "basename": "2022-06-19",
+      "path": "Calendar/2022-06-19.md"
+    },
+    {
+      "basename": "2022-06-20",
+      "path": "Calendar/2022-06-20.md"
+    },
+    {
+      "basename": "2022-06-01",
+      "path": "Calendar/2022-06-01.md"
+    },
+    {
+      "basename": "+ About Encounters",
+      "path": "0-Inbox/+ About Encounters.md"
+    },
+    {
+      "basename": "+ About Calendar",
+      "path": "Calendar/+ About Calendar.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "Atlas/Logs/LATEST.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
+    },
+    {
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
+    },
+    {
+      "basename": "+ About Cards",
+      "path": "Cards/+ About Cards.md"
+    },
+    {
+      "basename": "@钱钟书",
+      "path": "Cards/原子知识库/人物库/@钱钟书.md"
+    },
+    {
+      "basename": "@Tiago Forte",
+      "path": "Cards/原子知识库/人物库/@Tiago Forte.md"
+    },
+    {
+      "basename": "@刘慈欣",
+      "path": "Cards/原子知识库/人物库/@刘慈欣.md"
+    },
+    {
+      "basename": "@韩寒",
+      "path": "Cards/原子知识库/人物库/@韩寒.md"
+    },
+    {
+      "basename": "@东野圭吾",
+      "path": "Cards/原子知识库/人物库/@东野圭吾.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "Cards/模板与套路.md"
     },
     {
       "basename": "github pages",
@@ -35,170 +199,6 @@
     {
       "basename": "如何成为学习高手",
       "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何成为学习高手.md"
-    },
-    {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
-    },
-    {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
-      "basename": "shell 常用命令行操作",
-      "path": "Cards/shell 常用命令行操作.md"
-    },
-    {
-      "basename": "2022-06-22",
-      "path": "Calendar/2022-06-22.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "Cards/MOC.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "@Nick Milo",
-      "path": "Cards/@Nick Milo.md"
-    },
-    {
-      "basename": "人物库",
-      "path": "Cards/原子知识库/人物库/人物库.md"
-    },
-    {
-      "basename": "@Andy Matuschak",
-      "path": "Cards/@Andy Matuschak.md"
-    },
-    {
-      "basename": "PKM系统的不同侧重点-四象限图 by lyt",
-      "path": "Cards/PKM系统的不同侧重点-四象限图 by lyt.md"
-    },
-    {
-      "basename": "张力",
-      "path": "Cards/张力.md"
-    },
-    {
-      "basename": "内容、工具与方法论",
-      "path": "Cards/内容、工具与方法论.md"
-    },
-    {
-      "basename": "道、法、术、器",
-      "path": "Cards/道、法、术、器.md"
-    },
-    {
-      "basename": "()",
-      "path": "Cards/().md"
-    },
-    {
-      "basename": "2022-06-21",
-      "path": "Calendar/2022-06-21.md"
-    },
-    {
-      "basename": "2022-06-10",
-      "path": "Calendar/2022-06-10.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人知识管理.md"
-    },
-    {
-      "basename": "PPV",
-      "path": "Cards/PPV.md"
-    },
-    {
-      "basename": "写卡片3年的8条感悟 by 汪爸刀刀",
-      "path": "Cards/写卡片3年的8条感悟 by 汪爸刀刀.md"
-    },
-    {
-      "basename": "+ Library",
-      "path": "Atlas/+ Library.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "+ About Calendar",
-      "path": "Calendar/+ About Calendar.md"
-    },
-    {
-      "basename": "Index for Sources",
-      "path": "Sources/Index for Sources.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "已发布文章",
-      "path": "Atlas/Scopes/已发布文章.md"
-    },
-    {
-      "basename": "obsidian 从了解到沉醉 - PPT",
-      "path": "Atlas/TOCs/obsidian 从了解到沉醉 - PPT.md"
-    },
-    {
-      "basename": "EXTERNAL",
-      "path": "Atlas/Logs/EXTERNAL.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "Atlas/Logs/LATEST.md"
-    },
-    {
-      "basename": "模板汇总",
-      "path": "Atlas/Scopes/模板汇总.md"
-    },
-    {
-      "basename": "日记汇总",
-      "path": "Atlas/Scopes/日记汇总.md"
-    },
-    {
-      "basename": "About Spaces",
-      "path": "Spaces/About Spaces.md"
-    },
-    {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
-    },
-    {
-      "basename": "+ About Cards",
-      "path": "Cards/+ About Cards.md"
-    },
-    {
-      "basename": "+ About Encounters",
-      "path": "0-Inbox/+ About Encounters.md"
-    },
-    {
-      "basename": "计算机科学",
-      "path": "Atlas/MOCs/计算机科学.md"
-    },
-    {
-      "basename": "知识原子库",
-      "path": "Atlas/MOCs/知识原子库.md"
-    },
-    {
-      "basename": "有意思的网络流行语 - MOC",
-      "path": "Atlas/MOCs/有意思的网络流行语 - MOC.md"
-    },
-    {
-      "basename": "书影音",
-      "path": "Atlas/MOCs/书影音.md"
-    },
-    {
-      "basename": "和经典名言抬杠 - MOC",
-      "path": "Atlas/MOCs/和经典名言抬杠 - MOC.md"
-    },
-    {
-      "basename": "MOC：可以抛弃文件夹式和标签式分类法了",
-      "path": "Cards/MOC：可以抛弃文件夹式和标签式分类法了.md"
-    },
-    {
-      "basename": "2022-06-19",
-      "path": "Calendar/2022-06-19.md"
     }
   ],
   "omittedPaths": [

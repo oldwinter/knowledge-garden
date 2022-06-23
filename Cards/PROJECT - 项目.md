@@ -1,8 +1,9 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-09
+date: 2022-06-23
 title: PROJECT - 项目
+date created: 2022-06-09
 ---
 
 [[项目笔记]] 的所在地。集中存放短中期聚焦的项目内容。
