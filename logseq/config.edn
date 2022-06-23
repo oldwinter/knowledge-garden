@@ -57,7 +57,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
  ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
- :default-home {:page "home" :sidebar ["README" "TOCs" "MOCs"]}
+ :default-home {:page "README" :sidebar ["TOCs" "MOCs"]}
  
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
