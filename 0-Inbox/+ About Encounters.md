@@ -1,5 +1,5 @@
 up:: [[ACCESS 笔记组织法]]
-tags:: #readme 
+tags:: #readme说明 
 
 # About Inbox
 This is a space to store notes as you capture them.

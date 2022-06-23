@@ -4,7 +4,7 @@ content-type: notes
 date: 2022-06-23
 title: + Index for Cards
 date created: 2022-06-22
-tags: index
+tags: index索引
 ---
 
 ```dataview

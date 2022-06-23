@@ -1,16 +1,72 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
       "basename": "DIKW",
       "path": "Cards/DIKW.md"
     },
     {
-      "basename": "2022-06-21",
-      "path": "Calendar/2022-06-21.md"
+      "basename": "obsidian publish 发布",
+      "path": "Cards/obsidian publish 发布.md"
+    },
+    {
+      "basename": "2022-06-09",
+      "path": "Calendar/2022-06-09.md"
     },
     {
       "basename": "2022-06-22",
       "path": "Calendar/2022-06-22.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "MOCs.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "TOCs.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "+ About Encounters",
+      "path": "0-Inbox/+ About Encounters.md"
+    },
+    {
+      "basename": "+ Library",
+      "path": "Atlas/+ Library.md"
+    },
+    {
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
+    },
+    {
+      "basename": "+ About Cards",
+      "path": "Cards/+ About Cards.md"
+    },
+    {
+      "basename": "快速启动一个简易的静态httpserver",
+      "path": "Calendar/快速启动一个简易的静态httpserver.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "Extras/Templates/日记模板.md"
+    },
+    {
+      "basename": "2022-06-21",
+      "path": "Calendar/2022-06-21.md"
     },
     {
       "basename": "2022-06-20",
@@ -21,24 +77,8 @@
       "path": "Calendar/2022-06-19.md"
     },
     {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
       "basename": "Index for Sources",
       "path": "Sources/Index for Sources.md"
-    },
-    {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "git submodule",
@@ -51,18 +91,6 @@
     {
       "basename": "Git",
       "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/Git.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "TOCs.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "MOCs.md"
     },
     {
       "basename": "有意思的网络流行语 - MOC",
@@ -149,10 +177,6 @@
       "path": "Calendar/2022-06-01.md"
     },
     {
-      "basename": "+ About Encounters",
-      "path": "0-Inbox/+ About Encounters.md"
-    },
-    {
       "basename": "+ About Calendar",
       "path": "Calendar/+ About Calendar.md"
     },
@@ -165,10 +189,6 @@
       "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
-      "basename": "+ About Cards",
-      "path": "Cards/+ About Cards.md"
-    },
-    {
       "basename": "@钱钟书",
       "path": "Cards/原子知识库/人物库/@钱钟书.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "@刘慈欣",
       "path": "Cards/原子知识库/人物库/@刘慈欣.md"
-    },
-    {
-      "basename": "@韩寒",
-      "path": "Cards/原子知识库/人物库/@韩寒.md"
-    },
-    {
-      "basename": "@东野圭吾",
-      "path": "Cards/原子知识库/人物库/@东野圭吾.md"
-    },
-    {
-      "basename": "+ About Spaces",
-      "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "Cards/模板与套路.md"
-    },
-    {
-      "basename": "github pages",
-      "path": "Cards/github pages.md"
     }
   ],
   "omittedPaths": [

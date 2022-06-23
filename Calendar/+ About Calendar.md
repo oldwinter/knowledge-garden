@@ -6,7 +6,7 @@ title: YYYY-MM-DD This is where timestamped notes go
 date created: 2022-06-22
 ---
 
-tags:  #readme
+tags:  #readme说明
 
 # YYYY-MM-DD This is where timestamped notes go
 
