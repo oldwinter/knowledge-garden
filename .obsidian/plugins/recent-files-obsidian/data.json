@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Git",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/Git.md"
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "Index for Sources",
+      "path": "Sources/Index for Sources.md"
+    },
+    {
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
+    },
+    {
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "git submodule",
       "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/git submodule.md"
+    },
+    {
+      "basename": "刻意练习",
+      "path": "Cards/刻意练习.md"
+    },
+    {
+      "basename": "Git",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/Git.md"
     },
     {
       "basename": "2022-06-21",
@@ -17,16 +41,8 @@
       "path": "Calendar/2022-06-22.md"
     },
     {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
       "basename": "DIKW",
       "path": "Calendar/DIKW.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "TOCs",
@@ -51,10 +67,6 @@
     {
       "basename": "利用逆向思维，使自己成为一个真正自律的人",
       "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
     },
     {
       "basename": "模板汇总",
@@ -153,10 +165,6 @@
       "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
-    },
-    {
       "basename": "+ About Cards",
       "path": "Cards/+ About Cards.md"
     },
@@ -191,10 +199,6 @@
     {
       "basename": "github pages",
       "path": "Cards/github pages.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/obsidian publish 发布.md"
     }
   ],
   "omittedPaths": [

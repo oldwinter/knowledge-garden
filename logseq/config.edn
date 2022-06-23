@@ -13,7 +13,7 @@
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
- :hidden ["/draws" "/templates" "/pages/400 - RESOURCE/书影音笔记/微信读书同步"]
+ :hidden ["/0-Inbox" "/Extras" "/Sources"]
 
  ;; When creating the new journal page, the app will use your template if there is one.
  ;; You only need to input your template name here.
@@ -61,11 +61,11 @@
  
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
- ;; :pages-directory "your-directory"
+ :pages-directory "Cards"
 
  ;; Tell logseq to use a specific folder in the repo as a default location for journals
  ;; if not specified, journals are stored in `journals` directory
- ;; :journals-directory "your-directory"
+ :journals-directory "Calendar"
 
  ;; Set this to true will convert
  ;; `[[Grant Ideas]]` to `[[file:./grant_ideas.org][Grant Ideas]]` for org-mode
@@ -180,7 +180,7 @@
  :favorites ["TOC"]
  :publishing/all-pages-public? true
  :editor/logical-outdenting? false
- :ui/show-brackets? true
+ :ui/show-brackets? false
  :feature/enable-flashcards? false
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
