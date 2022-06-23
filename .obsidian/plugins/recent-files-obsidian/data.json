@@ -1,24 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "TOCs",
-      "path": "Atlas/TOCs/TOCs.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "Atlas/MOCs/MOCs.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "华为，今夜请将我遗忘",
+      "path": "Calendar/已发布文章/华为，今夜请将我遗忘.md"
     },
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
+      "basename": "电影笔记",
+      "path": "Atlas/MOCs/电影笔记.md"
+    },
+    {
+      "basename": "知识原子库",
+      "path": "Atlas/MOCs/知识原子库.md"
+    },
+    {
+      "basename": "微信读书清单",
+      "path": "Atlas/Scopes/微信读书清单.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "cubox",
+      "path": "Cards/cubox.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "你还在打造数字花园？不妨来看看我的数字闺房",
+      "path": "Calendar/已发布文章/你还在打造数字花园？不妨来看看我的数字闺房.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "Spaces/Work/Areas/个人职业生涯/个人简历.md"
+    },
+    {
       "basename": "+ Library",
       "path": "Atlas/+ Library.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "Atlas/MOCs/MOCs.md"
     },
     {
       "basename": "先鉴定你的做笔记风格，再选一款app上车",
@@ -129,10 +165,6 @@
       "path": "Sources/Books/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
     },
     {
-      "basename": "+ Index for Spaces",
-      "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
       "basename": "2022-06-23",
       "path": "Calendar/2022-06-23.md"
     },
@@ -167,38 +199,6 @@
     {
       "basename": "+ About Cards",
       "path": "Cards/+ About Cards.md"
-    },
-    {
-      "basename": "+ About Calendar",
-      "path": "Calendar/+ About Calendar.md"
-    },
-    {
-      "basename": "+ About Spaces",
-      "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
-    },
-    {
-      "basename": "dataviewjs常用使用示例范例",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
-    },
-    {
-      "basename": "dataview常用使用示例范例",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview常用使用示例范例.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/obsidian publish 发布.md"
-    },
-    {
-      "basename": "令我多次沉醉的人或作品 - MOC",
-      "path": "Atlas/MOCs/令我多次沉醉的人或作品 - MOC.md"
     }
   ],
   "omittedPaths": [
