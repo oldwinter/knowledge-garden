@@ -26,5 +26,8 @@
   "obsidian-quiet-outline",
   "note-refactor-obsidian",
   "pane-relief",
-  "mrj-text-expand"
+  "mrj-text-expand",
+  "omnisearch",
+  "cm-chs-patch",
+  "obsidian-version-history-diff"
 ]

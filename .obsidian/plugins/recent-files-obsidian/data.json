@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-06-24",
+      "path": "Calendar/2022-06-24.md"
+    },
+    {
+      "basename": "《置身事内》",
+      "path": "Sources/Books/读书笔记/《置身事内》.md"
+    },
+    {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "text expand",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/text expand.md"
+    },
+    {
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "模板汇总",
+      "path": "Atlas/Scopes/模板汇总.md"
+    },
+    {
       "basename": "华为，今夜请将我遗忘",
       "path": "Calendar/已发布文章/华为，今夜请将我遗忘.md"
     },
@@ -31,10 +59,6 @@
     {
       "basename": "cubox",
       "path": "Cards/cubox.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "你还在打造数字花园？不妨来看看我的数字闺房",
@@ -83,14 +107,6 @@
     {
       "basename": "日记汇总",
       "path": "Atlas/Scopes/日记汇总.md"
-    },
-    {
-      "basename": "模板汇总",
-      "path": "Atlas/Scopes/模板汇总.md"
-    },
-    {
-      "basename": "2022-06-24",
-      "path": "Calendar/2022-06-24.md"
     },
     {
       "basename": "dataview",
@@ -165,10 +181,6 @@
       "path": "Sources/Books/微信读书同步/未分类/A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte.md"
     },
     {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
       "basename": "ACCESS 笔记组织法",
       "path": "Cards/ACCESS 笔记组织法.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "+ Index for Extras",
-      "path": "Extras/+ Index for Extras.md"
-    },
-    {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
-    },
-    {
-      "basename": "+ About Cards",
-      "path": "Cards/+ About Cards.md"
     }
   ],
   "omittedPaths": [
