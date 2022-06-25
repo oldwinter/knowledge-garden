@@ -21,7 +21,7 @@
       "#review"
     ],
     "noteFoldersToIgnore": [],
-    "openRandomNote": false,
+    "openRandomNote": true,
     "autoNextNote": true,
     "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
@@ -30,8 +30,8 @@
     "easyBonus": 1.3,
     "maximumInterval": 36525,
     "maxLinkFactor": 1,
-    "showDebugMessages": false
+    "showDebugMessages": true
   },
-  "buryDate": "2022-06-09",
+  "buryDate": "2022-06-25",
   "buryList": []
 }

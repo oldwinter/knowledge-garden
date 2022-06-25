@@ -9,8 +9,6 @@
   "find-unlinked-files",
   "obsidian-focus-mode",
   "obsidian-hover-editor",
-  "link-favicon",
-  "obsidian-linter",
   "longform",
   "quick-explorer",
   "recent-files-obsidian",
@@ -29,5 +27,6 @@
   "mrj-text-expand",
   "omnisearch",
   "cm-chs-patch",
-  "obsidian-version-history-diff"
+  "obsidian-version-history-diff",
+  "obsidian-linter"
 ]

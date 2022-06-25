@@ -95,17 +95,17 @@
       "There should be at most one consecutive blank line.": true
     },
     "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": true,
+      "Converts leading spaces to tabs.": false,
       "Tabsize": "4"
     },
     "Line Break at Document End": {
       "Ensures that there is exactly one line break at the end of a document.": true
     },
     "Space between Chinese and English or numbers": {
-      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": true
+      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
     },
     "Remove link spacing": {
-      "Removes spacing around link text.": true
+      "Removes spacing around link text.": false
     }
   },
   "lintOnSave": true,

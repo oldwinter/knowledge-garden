@@ -1,8 +1,8 @@
 {
   "cssTheme": "Shimmering Focus",
   "enabledCssSnippets": [
-    "supercharged-links-gen",
-    "多栏callout样式"
+    "多栏callout样式",
+    "supercharged-links-gen"
   ],
   "theme": "system",
   "baseFontSize": 16,

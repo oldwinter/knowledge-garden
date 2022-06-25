@@ -35,6 +35,12 @@
       "icon": "navigate-glyph",
       "name": "文件列表: 在文件列表中显示当前文件",
       "showButtons": "both"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "code-glyph",
+      "name": "切换实时阅览/源码模式",
+      "showButtons": "both"
     }
   ],
   "desktop": true,
