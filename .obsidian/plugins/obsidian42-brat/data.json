@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "oleeskild/obsidian-digital-garden",
     "Oliver-Akins/file-hider",
     "zhaohongxuan/obsidian-weread-plugin",
     "liamcain/obsidian-periodic-notes"

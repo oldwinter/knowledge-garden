@@ -16,26 +16,26 @@
       "week": {
         "enabled": true,
         "format": "gggg-MMMM-[W]ww",
-        "folder": "journals/每月每季度总结",
+        "folder": "Calendar/每月每季度总结",
         "openAtStartup": false,
-        "templatePath": "templates/周记模板.md"
+        "templatePath": "Extras/Templates/周记模板.md"
       },
       "month": {
-        "enabled": true,
+        "enabled": false,
         "format": "YYYY-MMMM",
         "folder": "journals/每月每季度总结",
         "openAtStartup": false,
         "templatePath": "templates/月度模板.md"
       },
       "quarter": {
-        "enabled": true,
+        "enabled": false,
         "format": "",
         "folder": "journals/每月每季度总结",
         "openAtStartup": false,
         "templatePath": ""
       },
       "year": {
-        "enabled": true,
+        "enabled": false,
         "format": "",
         "folder": "journals/每月每季度总结",
         "openAtStartup": false,

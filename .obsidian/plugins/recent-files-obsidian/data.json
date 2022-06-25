@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-06-25",
+      "path": "Calendar/2022-06-25.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "微信群公告",
+      "path": "Calendar/微信群公告.md"
+    },
+    {
+      "basename": "如果要我安利obsidian给别人，我会怎么做",
+      "path": "Spaces/人+科技融合专题/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
+    },
+    {
+      "basename": "个人任务管理系统",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人任务管理系统.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "Atlas/Logs/LATEST.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
       "basename": "所处物理环境对学习和工作效率影响极大",
       "path": "Atlas/MOCs/所处物理环境对学习和工作效率影响极大.md"
     },
@@ -49,10 +81,6 @@
       "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
     },
     {
-      "basename": "2022-06-25",
-      "path": "Calendar/2022-06-25.md"
-    },
-    {
       "basename": "remotely save",
       "path": "Cards/remotely save.md"
     },
@@ -61,20 +89,12 @@
       "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "模板与套路",
       "path": "Cards/模板与套路.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "反向链接",
-      "path": "反向链接.md"
+      "path": "Cards/反向链接.md"
     },
     {
       "basename": "双链笔记",
@@ -113,16 +133,8 @@
       "path": "Spaces/人+科技融合专题/个人输出发布系统.md"
     },
     {
-      "basename": "个人任务管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人任务管理系统.md"
-    },
-    {
       "basename": "任务管理的本质",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/任务管理的本质.md"
-    },
-    {
-      "basename": "个人信息管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
     },
     {
       "basename": "微信读书",
@@ -187,18 +199,6 @@
     {
       "basename": "华为，今夜请将我遗忘",
       "path": "Calendar/已发布文章/华为，今夜请将我遗忘.md"
-    },
-    {
-      "basename": "电影笔记",
-      "path": "Atlas/MOCs/电影笔记.md"
-    },
-    {
-      "basename": "知识原子库",
-      "path": "Atlas/MOCs/知识原子库.md"
-    },
-    {
-      "basename": "微信读书清单",
-      "path": "Atlas/Scopes/微信读书清单.md"
     }
   ],
   "omittedPaths": [

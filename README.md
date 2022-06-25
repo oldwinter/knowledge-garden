@@ -25,13 +25,15 @@ tags: readme 说明
     - 传统 [[TOCs]]
     - 现代 [[MOCs]]
 - 用。若简单漫游后，还算感兴趣，则 `git clone` 本库，并用 [[obsidian]]、[[logseq]]或[[VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。
-- 悟。确定先只使用obsidian，结合 [[卡片盒笔记法 - Zettelkasten]]的方法论，建立自己的[[个人知识管理]]体系，打造自己的[[第二大脑]]。
-- 玩。obsidian是 [[平台+插件]]理念加持下的操作系统级的类[[IDE]]笔记软件，可以看看本库使用的[[obsidian插件]]，并评估自己的需求进行增删，让插件更好地为自己服务。
+- 悟。确定先只使用obsidian，结合[[卡片盒笔记法 - Zettelkasten]]的方法论，建立自己的[[个人知识管理]]体系，打造自己的[[第二大脑]]。
+- 玩。obsidian是[[平台+插件]]理念加持下的操作系统级的类[[IDE]]笔记软件，可以看看本库使用的[[obsidian插件]]，并评估自己的需求进行增删，让插件更好地为自己服务。
 - 合。工具和方法论都熟悉了以后，不妨开始尝试结合 [[logseq]] 和 [[VSCode]]，共同完成一些 obsidian 实现起来不便的操作。
 
-## 目录结构及作用
+## 目录结构和本开箱即用库截图
 
 - [[ACCESS 笔记组织法]]
+![开箱即用库首页截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)
+![开箱即用库暗色模式截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)
 
 ## 本库涉及 app 及作用
 
