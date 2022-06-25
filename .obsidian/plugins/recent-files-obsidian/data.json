@@ -5,8 +5,36 @@
       "path": "Calendar/2022-06-25.md"
     },
     {
+      "basename": "2022-06-03",
+      "path": "Calendar/2022-06-03.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "如何快速完成学习和工作任务",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
+    },
+    {
+      "basename": "如何快速入门新领域，如何快速学会新技能",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Atlas/MOCs/如何成为学习高手.md"
+    },
+    {
+      "basename": "快速启动一个简易的静态httpserver",
+      "path": "Calendar/快速启动一个简易的静态httpserver.md"
+    },
+    {
+      "basename": "2022-06-23",
+      "path": "Calendar/2022-06-23.md"
+    },
+    {
+      "basename": "2022-06-24",
+      "path": "Calendar/2022-06-24.md"
     },
     {
       "basename": "微信群公告",
@@ -42,51 +70,43 @@
     },
     {
       "basename": "如何全面提升专注力，学习不走神",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
     },
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
       "basename": "如何告别伪学霸和学酥状态",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
       "basename": "如何在考场上超常发挥",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
     },
     {
       "basename": "如何学会考试",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何学会考试.md"
-    },
-    {
-      "basename": "如何快速完成学习和工作任务",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何学会考试.md"
     },
     {
       "basename": "如何提高长期记忆能力，复习是唯一路径",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
     },
     {
       "basename": "如何高效读书，如何记住所读",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
     },
     {
       "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
     },
     {
       "basename": "高效记忆的根本：主动加工和组块化记忆",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
     },
     {
       "basename": "remotely save",
       "path": "Cards/remotely save.md"
-    },
-    {
-      "basename": "如何快速入门新领域，如何快速学会新技能",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
     },
     {
       "basename": "模板与套路",
@@ -153,20 +173,12 @@
       "path": "Spaces/人+科技融合专题/URL scheme.md"
     },
     {
-      "basename": "如何成为学习高手",
-      "path": "Atlas/MOCs/如何成为学习高手.md"
-    },
-    {
       "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "Sources/Courses/极客时间笔记/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
     },
     {
       "basename": "搜狗输入法",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/搜狗输入法.md"
-    },
-    {
-      "basename": "2022-06-24",
-      "path": "Calendar/2022-06-24.md"
     },
     {
       "basename": "《拆掉思维里的强》",
@@ -185,20 +197,8 @@
       "path": "Sources/Books/读书笔记/《置身事内》.md"
     },
     {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
       "basename": "+ About Sources",
       "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "模板汇总",
-      "path": "Atlas/Scopes/模板汇总.md"
-    },
-    {
-      "basename": "华为，今夜请将我遗忘",
-      "path": "Calendar/已发布文章/华为，今夜请将我遗忘.md"
     }
   ],
   "omittedPaths": [

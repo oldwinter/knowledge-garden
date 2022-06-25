@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "projects": {},
-  "selectedProject": null,
-  "selectedDraft": null,
+  "projects": {
+    "Calendar": {
+      "path": "Calendar",
+      "indexFile": "IndexLongform",
+      "draftsPath": "Drafts/"
+    }
+  },
+  "selectedProject": "Calendar",
+  "selectedDraft": "Draft 1",
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
