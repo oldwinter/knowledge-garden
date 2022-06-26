@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "stefanopagliari/bibnotes",
     "oleeskild/obsidian-digital-garden",
     "Oliver-Akins/file-hider",
     "zhaohongxuan/obsidian-weread-plugin",

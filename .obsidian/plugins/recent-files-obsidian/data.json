@@ -1,24 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "2022-06-26",
+      "path": "Calendar/2022-06-26.md"
     },
     {
-      "basename": "excalibrain",
-      "path": "excalibrain.md"
+      "basename": "获取文献或文章的引文格式",
+      "path": "Calendar/获取文献或文章的引文格式.md"
+    },
+    {
+      "basename": "数学公式识别 LaTex 问题",
+      "path": "Calendar/数学公式识别 LaTex 问题.md"
+    },
+    {
+      "basename": "中文英文字体选用参考",
+      "path": "Calendar/中文英文字体选用参考.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "dataviewjs常用使用示例范例",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
+      "basename": "春秋笔法",
+      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
     },
     {
-      "basename": "2022-06-26",
-      "path": "Calendar/2022-06-26.md"
+      "basename": "excalibrain",
+      "path": "excalibrain.md"
+    },
+    {
+      "basename": "dataviewjs常用使用示例范例",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
     },
     {
       "basename": "如何全面提升专注力，学习不走神",
@@ -157,10 +173,6 @@
       "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
     },
     {
-      "basename": "春秋笔法",
-      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
-    },
-    {
       "basename": "《思考·快与慢》",
       "path": "Sources/Books/读书笔记/《思考·快与慢》.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
       "path": "Calendar/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "Calendar/2022-06-03.md"
-    },
-    {
-      "basename": "如何快速入门新领域，如何快速学会新技能",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "Atlas/MOCs/如何成为学习高手.md"
     }
   ],
   "omittedPaths": [
