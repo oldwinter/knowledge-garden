@@ -9,60 +9,20 @@ date created: 2022-06-21
 统计整个库的数据：
 
 ```dataviewjs
-var i = [dv.pages().length, 
-					dv.pages("#MOC").length,
-					dv.pages("#TOC").length,
-	        dv.pages().file.tags.distinct().length,
-	        dv.pages().file.folder.distinct().length,
-	        dv.pages().file.outlinks.length,
-	        dv.pages().file.inlinks.length]
-	        
-dv.paragraph(`总共有 **${i[0]}** 个文件`)
-//dv.paragraph(`其中孤立文件 **${i[0]}** 个`)
-//dv.paragraph(`其中 **${i[0]}** 个文件`)
+let allFiles = dv.pages()
 
+dv.paragraph(`总共有 **${allFiles.length}** 个文件`)
 
-dv.paragraph(`其中==MOC文件== **${i[1]}** 篇，==TOC文件== **${i[2]}** 篇`)
-dv.paragraph(`==标签== **${i[3]}**个`)
-dv.paragraph(`==文件夹数== **${i[4]}**个`)
-dv.paragraph(`==正向链接== **${i[5]}**个`)
-dv.paragraph(`==反向链接== **${i[6]}**个`)
-```
+dv.paragraph(`==标签== **${allFiles.file.tags.distinct().length}** 个`)
+dv.paragraph(`==文件夹数== **${allFiles.file.folder.distinct().length}** 个`)
+dv.paragraph(`==正向链接== **${allFiles.file.outlinks.length}** 个`)
+dv.paragraph(`==反向链接== **${allFiles.file.inlinks.length}** 个`)
 
-HeatmapCalendar:
+let mocFiles = dv.pages("#MOC")
+let tocFiles = dv.pages("#TOC")
 
-```dataviewjs
-const calendarData = { 
-	entries: [], // Populated in the DataviewJS loop below
-	year: 2022,  // (optional) Defaults to current year
-	colors: {    // (optional) Defaults to green
-	  blue:        ["#8cb9ff","#69a3ff","#428bff","#1872ff","#0058e2"], // first entry is considered default if supplied
-	  green:       ["#c6e48b","#7bc96f","#49af5d","#2e8840","#196127"],
-	  red:         ["#ff9e82","#ff7b55","#ff4d1a","#e73400","#bd2a00"],
-	  orange:      ["#ffa244","#fd7f00","#dd6f00","#bf6000","#9b4e00"],
-	  pink:        ["#ff96cb","#ff70b8","#ff3a9d","#ee0077","#c30062"],
-	  orangeToRed: ["#ffdf04","#ffbe04","#ff9a03","#ff6d02","#ff2c01"]
-	},
-	showCurrentDayBorder: true // (optional) Defaults to true
-}
+dv.paragraph(`总共有==MOC文件== **${mocFiles.length}** 个，==TOC文件== **${tocFiles.length}** 个`)
 
-//DataviewJS loop
-for(let page of dv.pages('"journals"').sort(p=>p.file.name)){ 
-
-	calendarData.entries.push({
-		date: page.file.name, // (required) Format YYYY-MM-DD
-		intensity: page.file.size, // (required) Color intensity for entry, will map intensities automatically
-		content: "", // (optional) Add text to the date cell
-		color: "orange", // (optional) Reference from *calendarData.colors*. If no color is supplied; colors[0] is used
-	})
-
-}
-
-/**
-* param1  HTMLElement   DOM reference for calendar rendering
-* param2  CalendarData  Calendar data object from above
-*/
-renderHeatmapCalendar(this.container, calendarData)
 ```
 
 通过这种用法，也许能写出根据标题自动生成 mermaid 的代码
@@ -94,3 +54,32 @@ labelColors: true
 }
 ```
 [[dataview常用使用示例范例]]
+
+
+```dataviewjs
+const getNestedObject = (nestedObj, pathArr) => {
+    return pathArr.reduce((obj, key) =>
+        (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+}
+
+function getHotkey(arr) {
+    return arr.hotkeys ? [[getNestedObject(arr.hotkeys, [0, 'modifiers'])],
+    [getNestedObject(arr.hotkeys, [0, 'key'])]].flat(2).join('+').replace('Mod', 'Ctrl') : '–';
+}
+
+let cmds = dv.array(Object.entries(app.commands.commands))
+    .where(v => getHotkey(v[1]) != '–')
+    .sort(v => v[1].id, 'asc')
+    .sort(v => getHotkey(v[1]), 'asc');
+
+dv.paragraph(cmds.length + " commands with assigned hotkeys.<br><br>");
+
+dv.table(["Command ID", "Name in current locale", "Hotkeys"],
+  cmds.map(v => [
+    v[1].id,
+    v[1].name,
+    getHotkey(v[1]),
+    ])
+  );
+ 
+```

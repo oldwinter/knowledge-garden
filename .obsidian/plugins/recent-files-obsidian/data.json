@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "微信群公告",
-      "path": "Calendar/微信群公告.md"
+      "basename": "dataviewjs常用使用示例范例",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
+    },
+    {
+      "basename": "2022-06-26",
+      "path": "Calendar/2022-06-26.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
+      "basename": "微信群公告",
+      "path": "Calendar/微信群公告.md"
     },
     {
-      "basename": "2022-06-26",
-      "path": "Calendar/2022-06-26.md"
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
     },
     {
       "basename": "2022-06-25",
@@ -195,10 +199,6 @@
     {
       "basename": "个人输出发布系统",
       "path": "Spaces/人+科技融合专题/个人输出发布系统.md"
-    },
-    {
-      "basename": "任务管理的本质",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/任务管理的本质.md"
     }
   ],
   "omittedPaths": [
