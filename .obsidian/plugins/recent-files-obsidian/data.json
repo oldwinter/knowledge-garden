@@ -1,16 +1,76 @@
 {
   "recentFiles": [
     {
-      "basename": "2022-06-25",
-      "path": "Calendar/2022-06-25.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "Calendar/2022-06-03.md"
+      "basename": "微信群公告",
+      "path": "Calendar/微信群公告.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "2022-06-26",
+      "path": "Calendar/2022-06-26.md"
+    },
+    {
+      "basename": "2022-06-25",
+      "path": "Calendar/2022-06-25.md"
+    },
+    {
+      "basename": "在网上提问的智慧",
+      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
+    },
+    {
+      "basename": "春秋笔法",
+      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "excalibrain.md"
+    },
+    {
+      "basename": "《思考·快与慢》",
+      "path": "Sources/Books/读书笔记/《思考·快与慢》.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "Cards/模板与套路.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
+    },
+    {
+      "basename": "滴答清单",
+      "path": "Spaces/人+科技融合专题/滴答清单.md"
+    },
+    {
+      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
+      "path": "Calendar/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
+    },
+    {
+      "basename": "2022-06-03",
+      "path": "Calendar/2022-06-03.md"
     },
     {
       "basename": "如何快速完成学习和工作任务",
@@ -37,10 +97,6 @@
       "path": "Calendar/2022-06-24.md"
     },
     {
-      "basename": "微信群公告",
-      "path": "Calendar/微信群公告.md"
-    },
-    {
       "basename": "如果要我安利obsidian给别人，我会怎么做",
       "path": "Spaces/人+科技融合专题/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
     },
@@ -55,10 +111,6 @@
     {
       "basename": "LATEST",
       "path": "Atlas/Logs/LATEST.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "所处物理环境对学习和工作效率影响极大",
@@ -109,10 +161,6 @@
       "path": "Cards/remotely save.md"
     },
     {
-      "basename": "模板与套路",
-      "path": "Cards/模板与套路.md"
-    },
-    {
       "basename": "反向链接",
       "path": "Cards/反向链接.md"
     },
@@ -123,10 +171,6 @@
     {
       "basename": "数字花园",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/数字花园.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
     },
     {
       "basename": "+ About Atlas",
@@ -155,50 +199,6 @@
     {
       "basename": "任务管理的本质",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/任务管理的本质.md"
-    },
-    {
-      "basename": "微信读书",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/微信读书.md"
-    },
-    {
-      "basename": "cubox",
-      "path": "Cards/cubox.md"
-    },
-    {
-      "basename": "deeplink",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/deeplink.md"
-    },
-    {
-      "basename": "URL scheme",
-      "path": "Spaces/人+科技融合专题/URL scheme.md"
-    },
-    {
-      "basename": "利用逆向思维，使自己成为一个真正自律的人",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
-    },
-    {
-      "basename": "搜狗输入法",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/搜狗输入法.md"
-    },
-    {
-      "basename": "《拆掉思维里的强》",
-      "path": "Sources/Books/读书笔记/《拆掉思维里的强》.md"
-    },
-    {
-      "basename": "emoji",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/emoji.md"
-    },
-    {
-      "basename": "text expand",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/text expand.md"
-    },
-    {
-      "basename": "《置身事内》",
-      "path": "Sources/Books/读书笔记/《置身事内》.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
     }
   ],
   "omittedPaths": [

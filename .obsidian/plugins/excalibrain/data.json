@@ -18,7 +18,8 @@
       "Friends",
       "j",
       "Jump",
-      "Jumps"
+      "Jumps",
+      "x"
     ]
   },
   "inferAllLinksAsFriends": false,
@@ -122,7 +123,8 @@
     "Friends": {},
     "j": {},
     "Jump": {},
-    "Jumps": {}
+    "Jumps": {},
+    "x": {}
   },
   "navigationHistory": [
     "pages/300 - AREA/知识管理/obsidian学习笔记/livesync.md",
@@ -137,7 +139,17 @@
     "TOC.md",
     "cubox",
     "journals/每月每季度总结/2022-三月.md",
-    "pages/400 - RESOURCE/原子知识库/刚下飞机.md"
+    "pages/400 - RESOURCE/原子知识库/刚下飞机.md",
+    "Calendar/2022-06-25.md",
+    "Calendar/微信群公告.md",
+    "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md",
+    "README.md",
+    "Atlas/TOCs/TOCs.md",
+    "HOMEPAGE.md",
+    "Cards/模板与套路.md",
+    "Sources/Books/读书笔记/《思考·快与慢》.md",
+    "Cards/原子知识库/单词库&概念库/春秋笔法.md",
+    "Spaces/人+科技融合专题/在网上提问的智慧.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

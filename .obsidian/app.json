@@ -12,8 +12,14 @@
   "legacyEditor": false,
   "livePreview": true,
   "showLineNumber": false,
-  "communityPluginSortOrder": "download",
+  "communityPluginSortOrder": "release",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "Cards",
-  "newLinkFormat": "shortest"
+  "newLinkFormat": "shortest",
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

@@ -21,7 +21,6 @@
   "sliding-panes-obsidian",
   "obsidian42-brat",
   "obsidian-image-auto-upload-plugin",
-  "obsidian-quiet-outline",
   "note-refactor-obsidian",
   "pane-relief",
   "mrj-text-expand",
@@ -32,5 +31,7 @@
   "digitalgarden",
   "link-favicon",
   "periodic-notes",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-excalidraw-plugin",
+  "excalibrain"
 ]
