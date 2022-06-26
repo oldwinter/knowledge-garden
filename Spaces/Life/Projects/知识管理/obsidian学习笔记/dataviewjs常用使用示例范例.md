@@ -1,31 +1,18 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-23
-title: dataview常用使用示例范例
+date: 2022-06-26
+title: dataviewjs常用使用示例范例
 date created: 2022-06-21
 ---
 
-统计整个库的数据：
+x:: [[dataview常用使用示例范例]]
 
-```dataviewjs
-let allFiles = dv.pages()
+## 统计整个库的数据：
 
-dv.paragraph(`总共有 **${allFiles.length}** 个文件`)
+[[整个库的统计数据 - dataview]]
 
-dv.paragraph(`==标签== **${allFiles.file.tags.distinct().length}** 个`)
-dv.paragraph(`==文件夹数== **${allFiles.file.folder.distinct().length}** 个`)
-dv.paragraph(`==正向链接== **${allFiles.file.outlinks.length}** 个`)
-dv.paragraph(`==反向链接== **${allFiles.file.inlinks.length}** 个`)
-
-let mocFiles = dv.pages("#MOC")
-let tocFiles = dv.pages("#TOC")
-
-dv.paragraph(`总共有==MOC文件== **${mocFiles.length}** 个，==TOC文件== **${tocFiles.length}** 个`)
-
-```
-
-通过这种用法，也许能写出根据标题自动生成 mermaid 的代码
+## 通过这种用法，也许能写出根据标题自动生成 mermaid 的代码
 
 ```dataviewjs
 var y = "2022"
@@ -52,34 +39,4 @@ series:
 labelColors: true
 \`\`\``)
 }
-```
-[[dataview常用使用示例范例]]
-
-
-```dataviewjs
-const getNestedObject = (nestedObj, pathArr) => {
-    return pathArr.reduce((obj, key) =>
-        (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
-}
-
-function getHotkey(arr) {
-    return arr.hotkeys ? [[getNestedObject(arr.hotkeys, [0, 'modifiers'])],
-    [getNestedObject(arr.hotkeys, [0, 'key'])]].flat(2).join('+').replace('Mod', 'Ctrl') : '–';
-}
-
-let cmds = dv.array(Object.entries(app.commands.commands))
-    .where(v => getHotkey(v[1]) != '–')
-    .sort(v => v[1].id, 'asc')
-    .sort(v => getHotkey(v[1]), 'asc');
-
-dv.paragraph(cmds.length + " commands with assigned hotkeys.<br><br>");
-
-dv.table(["Command ID", "Name in current locale", "Hotkeys"],
-  cmds.map(v => [
-    v[1].id,
-    v[1].name,
-    getHotkey(v[1]),
-    ])
-  );
- 
 ```

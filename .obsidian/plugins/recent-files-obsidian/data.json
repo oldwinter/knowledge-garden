@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "excalibrain.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "dataviewjs常用使用示例范例",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
     },
@@ -9,136 +21,16 @@
       "path": "Calendar/2022-06-26.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "微信群公告",
-      "path": "Calendar/微信群公告.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "2022-06-25",
-      "path": "Calendar/2022-06-25.md"
-    },
-    {
-      "basename": "在网上提问的智慧",
-      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
-    },
-    {
-      "basename": "春秋笔法",
-      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "excalibrain.md"
-    },
-    {
-      "basename": "《思考·快与慢》",
-      "path": "Sources/Books/读书笔记/《思考·快与慢》.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "Cards/模板与套路.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "Atlas/TOCs/TOCs.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "+ About Spaces",
-      "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "+ Index for Spaces",
-      "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "Spaces/人+科技融合专题/滴答清单.md"
-    },
-    {
-      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
-      "path": "Calendar/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
-    },
-    {
-      "basename": "2022-06-03",
-      "path": "Calendar/2022-06-03.md"
-    },
-    {
-      "basename": "如何快速完成学习和工作任务",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
-    },
-    {
-      "basename": "如何快速入门新领域，如何快速学会新技能",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "Atlas/MOCs/如何成为学习高手.md"
-    },
-    {
-      "basename": "快速启动一个简易的静态httpserver",
-      "path": "Calendar/快速启动一个简易的静态httpserver.md"
-    },
-    {
-      "basename": "2022-06-23",
-      "path": "Calendar/2022-06-23.md"
-    },
-    {
-      "basename": "2022-06-24",
-      "path": "Calendar/2022-06-24.md"
-    },
-    {
-      "basename": "如果要我安利obsidian给别人，我会怎么做",
-      "path": "Spaces/人+科技融合专题/必备软件/如果要我安利obsidian给别人，我会怎么做.md"
-    },
-    {
-      "basename": "个人任务管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人任务管理系统.md"
-    },
-    {
-      "basename": "个人信息管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
-    },
-    {
-      "basename": "LATEST",
-      "path": "Atlas/Logs/LATEST.md"
-    },
-    {
-      "basename": "所处物理环境对学习和工作效率影响极大",
-      "path": "Atlas/MOCs/所处物理环境对学习和工作效率影响极大.md"
-    },
-    {
-      "basename": "如果在家，如何反人性做到高度自律",
-      "path": "Atlas/MOCs/如果在家，如何反人性做到高度自律.md"
-    },
-    {
       "basename": "如何全面提升专注力，学习不走神",
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
       "basename": "如何告别伪学霸和学酥状态",
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
     },
     {
-      "basename": "如何在考场上超常发挥",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何在考场上超常发挥.md"
+      "basename": "如何快速完成学习和工作任务",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
     },
     {
       "basename": "如何学会考试",
@@ -153,52 +45,160 @@
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
     },
     {
-      "basename": "连点成线记忆法，记忆时缩写，回忆时扩写",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md"
+      "basename": "如何减少对学习的排斥和厌恶心理",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     },
     {
-      "basename": "高效记忆的根本：主动加工和组块化记忆",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md"
+      "basename": "如果在家，如何反人性做到高度自律",
+      "path": "Atlas/MOCs/如果在家，如何反人性做到高度自律.md"
     },
     {
-      "basename": "remotely save",
-      "path": "Cards/remotely save.md"
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
     },
     {
-      "basename": "反向链接",
-      "path": "Cards/反向链接.md"
+      "basename": "ACCESS文件夹索引的索引",
+      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
     },
     {
-      "basename": "双链笔记",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/双链笔记.md"
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
     },
     {
-      "basename": "数字花园",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/数字花园.md"
+      "basename": "+ Index for Sources",
+      "path": "Sources/+ Index for Sources.md"
     },
     {
-      "basename": "+ About Atlas",
-      "path": "Atlas/+ About Atlas.md"
+      "basename": "+ Index for Extras",
+      "path": "Extras/+ Index for Extras.md"
     },
     {
-      "basename": "个人知识笔记系统",
-      "path": "Spaces/人+科技融合专题/个人知识笔记系统.md"
+      "basename": "+ Index for Calendar",
+      "path": "Calendar/+ Index for Calendar.md"
     },
     {
-      "basename": "个人知识管理",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人知识管理.md"
+      "basename": "整个库的统计数据 - dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
     },
     {
-      "basename": "为什么需要新工具新方法",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/为什么需要新工具新方法.md"
+      "basename": "+ Index for 0-Inbox",
+      "path": "0-Inbox/+ Index for 0-Inbox.md"
     },
     {
-      "basename": "pkm 的定义",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/pkm 的定义.md"
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
     },
     {
-      "basename": "个人输出发布系统",
-      "path": "Spaces/人+科技融合专题/个人输出发布系统.md"
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/ACCESS 笔记组织法.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "微信读书清单",
+      "path": "Atlas/Scopes/微信读书清单.md"
+    },
+    {
+      "basename": "+ About Extras",
+      "path": "Extras/+ About Extras.md"
+    },
+    {
+      "basename": "人人在吹的思维导图到底有什么用？",
+      "path": "Calendar/已发布文章/人人在吹的思维导图到底有什么用？.md"
+    },
+    {
+      "basename": "mermaid stateDiagram 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid stateDiagram 模板.md"
+    },
+    {
+      "basename": "mermaid模板",
+      "path": "Extras/Templates/mermaid模板/mermaid模板.md"
+    },
+    {
+      "basename": "mermaid sequenceDiagram 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid sequenceDiagram 模板.md"
+    },
+    {
+      "basename": "mermaid pie 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid pie 模板.md"
+    },
+    {
+      "basename": "mermaid graph 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid graph 模板.md"
+    },
+    {
+      "basename": "mermaid gantt 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid gantt 模板.md"
+    },
+    {
+      "basename": "mermaid journal 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid journal 模板.md"
+    },
+    {
+      "basename": "mermaid class diagram 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid class diagram 模板.md"
+    },
+    {
+      "basename": "mermaid flow chart 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid flow chart 模板.md"
+    },
+    {
+      "basename": "微信群公告",
+      "path": "Calendar/微信群公告.md"
+    },
+    {
+      "basename": "2022-06-25",
+      "path": "Calendar/2022-06-25.md"
+    },
+    {
+      "basename": "在网上提问的智慧",
+      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
+    },
+    {
+      "basename": "春秋笔法",
+      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
+    },
+    {
+      "basename": "《思考·快与慢》",
+      "path": "Sources/Books/读书笔记/《思考·快与慢》.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "Cards/模板与套路.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
+    },
+    {
+      "basename": "第二大脑",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "滴答清单",
+      "path": "Spaces/人+科技融合专题/滴答清单.md"
+    },
+    {
+      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
+      "path": "Calendar/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
+    },
+    {
+      "basename": "2022-06-03",
+      "path": "Calendar/2022-06-03.md"
+    },
+    {
+      "basename": "如何快速入门新领域，如何快速学会新技能",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速入门新领域，如何快速学会新技能.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Atlas/MOCs/如何成为学习高手.md"
     }
   ],
   "omittedPaths": [
