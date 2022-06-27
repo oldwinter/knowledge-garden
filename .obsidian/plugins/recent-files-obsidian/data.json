@@ -1,12 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "个人工作流",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人工作流.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
+    },
+    {
+      "basename": "mermaid flow chart 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid flow chart 模板.md"
+    },
+    {
+      "basename": "mermaid graph 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid graph 模板.md"
+    },
+    {
+      "basename": "mermaid class diagram 模板",
+      "path": "Extras/Templates/mermaid模板/mermaid class diagram 模板.md"
+    },
+    {
+      "basename": "个人职业生涯",
+      "path": "Spaces/Work/Areas/个人职业生涯/个人职业生涯.md"
+    },
+    {
+      "basename": "给建平的求职建议",
+      "path": "Spaces/Work/Areas/个人职业生涯/给建平的求职建议.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/ACCESS 笔记组织法.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
     {
       "basename": "2022-06-27",
       "path": "Calendar/2022-06-27.md"
+    },
+    {
+      "basename": "LBS和擦边球",
+      "path": "Calendar/LBS和擦边球.md"
     },
     {
       "basename": "日记汇总",
@@ -163,42 +199,6 @@
     {
       "basename": "+ Index for Cards",
       "path": "Cards/+ Index for Cards.md"
-    },
-    {
-      "basename": "ACCESS文件夹索引的索引",
-      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
-    },
-    {
-      "basename": "+ Index for Spaces",
-      "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
-      "basename": "+ Index for Extras",
-      "path": "Extras/+ Index for Extras.md"
-    },
-    {
-      "basename": "+ Index for Calendar",
-      "path": "Calendar/+ Index for Calendar.md"
-    },
-    {
-      "basename": "整个库的统计数据 - dataview",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
-    },
-    {
-      "basename": "+ Index for 0-Inbox",
-      "path": "0-Inbox/+ Index for 0-Inbox.md"
-    },
-    {
-      "basename": "+ Index for Atlases",
-      "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
     }
   ],
   "omittedPaths": [
