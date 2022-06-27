@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-06-27",
+      "path": "Calendar/2022-06-27.md"
+    },
+    {
       "basename": "日记汇总",
       "path": "Atlas/Scopes/日记汇总.md"
     },
@@ -9,20 +17,12 @@
       "path": "Cards/个人简介.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "templater",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/templater.md"
     },
     {
       "basename": "模板与套路",
       "path": "Cards/模板与套路.md"
-    },
-    {
-      "basename": "2022-06-27",
-      "path": "Calendar/2022-06-27.md"
     },
     {
       "basename": "牝鸡司晨",
