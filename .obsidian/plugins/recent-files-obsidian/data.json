@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-06-27",
+      "path": "Calendar/2022-06-27.md"
+    },
+    {
+      "basename": "在网上提问的智慧",
+      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "nginx图形化配置",
+      "path": "Calendar/nginx图形化配置.md"
+    },
+    {
+      "basename": "nginx",
+      "path": "Calendar/nginx.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Atlas/MOCs/如何成为学习高手.md"
+    },
+    {
+      "basename": "如何完成复杂、艰难、令人痛苦的任务",
+      "path": "Atlas/MOCs/如何完成复杂、艰难、令人痛苦的任务.md"
+    },
+    {
+      "basename": "解放感",
+      "path": "Atlas/MOCs/解放感.md"
+    },
+    {
+      "basename": "如何100%保证完成自己的制定计划",
+      "path": "Atlas/MOCs/如何100%保证完成自己的制定计划.md"
+    },
+    {
       "basename": "如何合理地制定计划",
       "path": "Atlas/MOCs/如何合理地制定计划.md"
     },
     {
       "basename": "SMART",
       "path": "Atlas/MOCs/SMART.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "Atlas/MOCs/如何成为学习高手.md"
     },
     {
       "basename": "如何戒掉玩手机",
@@ -31,10 +63,6 @@
     {
       "basename": "反向链接",
       "path": "Cards/反向链接.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "以每日日志为入口",
@@ -171,34 +199,6 @@
     {
       "basename": "mermaid模板",
       "path": "Extras/Templates/mermaid模板/mermaid模板.md"
-    },
-    {
-      "basename": "mermaid sequenceDiagram 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid sequenceDiagram 模板.md"
-    },
-    {
-      "basename": "mermaid pie 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid pie 模板.md"
-    },
-    {
-      "basename": "mermaid graph 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid graph 模板.md"
-    },
-    {
-      "basename": "mermaid gantt 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid gantt 模板.md"
-    },
-    {
-      "basename": "mermaid journal 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid journal 模板.md"
-    },
-    {
-      "basename": "mermaid class diagram 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid class diagram 模板.md"
-    },
-    {
-      "basename": "mermaid flow chart 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid flow chart 模板.md"
     }
   ],
   "omittedPaths": [
