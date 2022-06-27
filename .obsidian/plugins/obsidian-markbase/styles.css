@@ -1,0 +1,13 @@
+#markbase-project-slug-error, .markbase-invalid-token-error {
+    color: red;
+}
+
+.createProjectButton:disabled {
+    background-color: rgb(59, 59, 59) !important;
+    /* color: rgb(100 116 139); */
+    color: black;
+}
+
+.markbase-italic {
+    font-style: italic;
+}

@@ -1,8 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "如何合理地制定计划",
+      "path": "Atlas/MOCs/如何合理地制定计划.md"
+    },
+    {
+      "basename": "SMART",
+      "path": "Atlas/MOCs/SMART.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Atlas/MOCs/如何成为学习高手.md"
+    },
+    {
+      "basename": "如何戒掉玩手机",
+      "path": "Atlas/MOCs/如何戒掉玩手机.md"
+    },
+    {
+      "basename": "dict",
+      "path": "Extras/Templates/dict/dict.md"
+    },
+    {
       "basename": "2022-06-26",
       "path": "Calendar/2022-06-26.md"
+    },
+    {
+      "basename": "2022-06-25",
+      "path": "Calendar/2022-06-25.md"
+    },
+    {
+      "basename": "反向链接",
+      "path": "Cards/反向链接.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "以每日日志为入口",
+      "path": "Cards/以每日日志为入口.md"
+    },
+    {
+      "basename": "+ About Calendar",
+      "path": "Calendar/+ About Calendar.md"
+    },
+    {
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "+ Index for Sources",
+      "path": "Sources/+ Index for Sources.md"
     },
     {
       "basename": "获取文献或文章的引文格式",
@@ -19,10 +67,6 @@
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "春秋笔法",
@@ -79,10 +123,6 @@
     {
       "basename": "+ Index for Spaces",
       "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
-      "basename": "+ Index for Sources",
-      "path": "Sources/+ Index for Sources.md"
     },
     {
       "basename": "+ Index for Extras",
@@ -159,46 +199,6 @@
     {
       "basename": "mermaid flow chart 模板",
       "path": "Extras/Templates/mermaid模板/mermaid flow chart 模板.md"
-    },
-    {
-      "basename": "微信群公告",
-      "path": "Calendar/微信群公告.md"
-    },
-    {
-      "basename": "2022-06-25",
-      "path": "Calendar/2022-06-25.md"
-    },
-    {
-      "basename": "在网上提问的智慧",
-      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
-    },
-    {
-      "basename": "《思考·快与慢》",
-      "path": "Sources/Books/读书笔记/《思考·快与慢》.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "Cards/模板与套路.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "Atlas/TOCs/TOCs.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "+ About Spaces",
-      "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "滴答清单",
-      "path": "Spaces/人+科技融合专题/滴答清单.md"
-    },
-    {
-      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
-      "path": "Calendar/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
     }
   ],
   "omittedPaths": [

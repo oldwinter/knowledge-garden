@@ -34,5 +34,7 @@
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
   "excalibrain",
-  "obsidian-zotero-desktop-connector"
+  "obsidian-zotero-desktop-connector",
+  "obsidian-markbase",
+  "obsidian-bionic-reading-plugin"
 ]
