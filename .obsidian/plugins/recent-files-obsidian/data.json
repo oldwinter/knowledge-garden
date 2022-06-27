@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "2022-06-27",
-      "path": "Calendar/2022-06-27.md"
+      "basename": "日记汇总",
+      "path": "Atlas/Scopes/日记汇总.md"
     },
     {
-      "basename": "在网上提问的智慧",
-      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
+      "basename": "个人简介",
+      "path": "Cards/个人简介.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "templater",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/templater.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "Cards/模板与套路.md"
+    },
+    {
+      "basename": "2022-06-27",
+      "path": "Calendar/2022-06-27.md"
+    },
+    {
+      "basename": "牝鸡司晨",
+      "path": "Calendar/牝鸡司晨.md"
+    },
+    {
+      "basename": "在网上提问的智慧",
+      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
     },
     {
       "basename": "nginx图形化配置",
@@ -179,26 +199,6 @@
     {
       "basename": "dataview",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "微信读书清单",
-      "path": "Atlas/Scopes/微信读书清单.md"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
-    },
-    {
-      "basename": "人人在吹的思维导图到底有什么用？",
-      "path": "Calendar/已发布文章/人人在吹的思维导图到底有什么用？.md"
-    },
-    {
-      "basename": "mermaid stateDiagram 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid stateDiagram 模板.md"
-    },
-    {
-      "basename": "mermaid模板",
-      "path": "Extras/Templates/mermaid模板/mermaid模板.md"
     }
   ],
   "omittedPaths": [
