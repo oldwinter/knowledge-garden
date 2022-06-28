@@ -1,6 +1,138 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-06-29",
+      "path": "Calendar/2022-06-29.md"
+    },
+    {
+      "basename": "2022-06-28",
+      "path": "Calendar/2022-06-28.md"
+    },
+    {
+      "basename": "数字花园、传统博客、公众号",
+      "path": "Calendar/数字花园、传统博客、公众号.md"
+    },
+    {
+      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
+      "path": "Cards/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "2022-06-27",
+      "path": "Calendar/2022-06-27.md"
+    },
+    {
+      "basename": "2022-06-02",
+      "path": "Calendar/2022-06-02.md"
+    },
+    {
+      "basename": "2022-三月",
+      "path": "Calendar/每月每季度总结/2022-三月.md"
+    },
+    {
+      "basename": "2022-五月",
+      "path": "Calendar/每月每季度总结/2022-五月.md"
+    },
+    {
+      "basename": "2022-四月",
+      "path": "Calendar/每月每季度总结/2022-四月.md"
+    },
+    {
+      "basename": "全球流量前20名，有3个是色情网站",
+      "path": "Calendar/全球流量前20名，有3个是色情网站.md"
+    },
+    {
+      "basename": "如何完成复杂、艰难、令人痛苦的任务",
+      "path": "Atlas/MOCs/如何完成复杂、艰难、令人痛苦的任务.md"
+    },
+    {
+      "basename": "如何合理地制定计划",
+      "path": "Atlas/MOCs/如何合理地制定计划.md"
+    },
+    {
+      "basename": "如何做到每天高效学习12个小时",
+      "path": "Atlas/MOCs/如何做到每天高效学习12个小时.md"
+    },
+    {
+      "basename": "如何戒掉玩手机",
+      "path": "Atlas/MOCs/如何戒掉玩手机.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+    },
+    {
+      "basename": "《古董局中局》",
+      "path": "Sources/Movies + TV/电影笔记/《古董局中局》.md"
+    },
+    {
+      "basename": "《花束般的恋爱》",
+      "path": "Sources/Movies + TV/电影笔记/《花束般的恋爱》.md"
+    },
+    {
+      "basename": "《彗星来的那一夜》",
+      "path": "Sources/Movies + TV/电影笔记/《彗星来的那一夜》.md"
+    },
+    {
+      "basename": "《怦然心动》",
+      "path": "Sources/Movies + TV/电影笔记/《怦然心动》.md"
+    },
+    {
+      "basename": "《少年派的奇幻漂流》",
+      "path": "Sources/Movies + TV/电影笔记/《少年派的奇幻漂流》.md"
+    },
+    {
+      "basename": "《泰坦尼克号》",
+      "path": "Sources/Movies + TV/电影笔记/《泰坦尼克号》.md"
+    },
+    {
+      "basename": "《肖申克的救赎》",
+      "path": "Sources/Movies + TV/电影笔记/《肖申克的救赎》.md"
+    },
+    {
+      "basename": "《星际穿越》",
+      "path": "Sources/Movies + TV/电影笔记/《星际穿越》.md"
+    },
+    {
+      "basename": "《这个杀手不太冷》",
+      "path": "Sources/Movies + TV/电影笔记/《这个杀手不太冷》.md"
+    },
+    {
+      "basename": "金融学",
+      "path": "Sources/Courses/人文社科通识/金融学.md"
+    },
+    {
+      "basename": "法学",
+      "path": "Sources/Courses/人文社科通识/法学.md"
+    },
+    {
+      "basename": "哲学",
+      "path": "Sources/Courses/人文社科通识/哲学.md"
+    },
+    {
+      "basename": "心理学",
+      "path": "Sources/Courses/人文社科通识/心理学.md"
+    },
+    {
+      "basename": "经济学",
+      "path": "Sources/Courses/人文社科通识/经济学.md"
+    },
+    {
+      "basename": "目前知名的在线mooc",
+      "path": "Sources/Courses/在线课程MOOC/目前知名的在线mooc.md"
+    },
+    {
+      "basename": "如何成为学习高手",
+      "path": "Atlas/MOCs/如何成为学习高手.md"
+    },
+    {
       "basename": "2022-六月-W26",
       "path": "Calendar/每月每季度总结/2022-六月-W26.md"
     },
@@ -29,14 +161,6 @@
       "path": "Cards/获取文献或文章的引文格式.md"
     },
     {
-      "basename": "2022-06-28",
-      "path": "Calendar/2022-06-28.md"
-    },
-    {
-      "basename": "2022-06-02",
-      "path": "Calendar/2022-06-02.md"
-    },
-    {
       "basename": "战术后仰",
       "path": "Cards/战术后仰.md"
     },
@@ -47,18 +171,6 @@
     {
       "basename": "刚下飞机",
       "path": "Cards/原子知识库/单词库&概念库/刚下飞机.md"
-    },
-    {
-      "basename": "2022-三月",
-      "path": "Calendar/每月每季度总结/2022-三月.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "obsidian publish 发布",
@@ -87,118 +199,6 @@
     {
       "basename": "notion",
       "path": "Spaces/Life/Projects/知识管理/notion学习笔记/notion.md"
-    },
-    {
-      "basename": "github",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/github.md"
-    },
-    {
-      "basename": "个人信息管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
-    },
-    {
-      "basename": "个人工作流",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人工作流.md"
-    },
-    {
-      "basename": "mermaid flow chart 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid flow chart 模板.md"
-    },
-    {
-      "basename": "mermaid graph 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid graph 模板.md"
-    },
-    {
-      "basename": "mermaid class diagram 模板",
-      "path": "Extras/Templates/mermaid模板/mermaid class diagram 模板.md"
-    },
-    {
-      "basename": "个人职业生涯",
-      "path": "Spaces/Work/Areas/个人职业生涯/个人职业生涯.md"
-    },
-    {
-      "basename": "给建平的求职建议",
-      "path": "Spaces/Work/Areas/个人职业生涯/给建平的求职建议.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "2022-06-27",
-      "path": "Calendar/2022-06-27.md"
-    },
-    {
-      "basename": "日记汇总",
-      "path": "Atlas/Scopes/日记汇总.md"
-    },
-    {
-      "basename": "个人简介",
-      "path": "Cards/个人简介.md"
-    },
-    {
-      "basename": "templater",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/templater.md"
-    },
-    {
-      "basename": "模板与套路",
-      "path": "Cards/模板与套路.md"
-    },
-    {
-      "basename": "牝鸡司晨",
-      "path": "Cards/牝鸡司晨.md"
-    },
-    {
-      "basename": "在网上提问的智慧",
-      "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
-    },
-    {
-      "basename": "nginx",
-      "path": "Cards/nginx.md"
-    },
-    {
-      "basename": "如何成为学习高手",
-      "path": "Atlas/MOCs/如何成为学习高手.md"
-    },
-    {
-      "basename": "如何完成复杂、艰难、令人痛苦的任务",
-      "path": "Atlas/MOCs/如何完成复杂、艰难、令人痛苦的任务.md"
-    },
-    {
-      "basename": "解放感",
-      "path": "Atlas/MOCs/解放感.md"
-    },
-    {
-      "basename": "如何100%保证完成自己的制定计划",
-      "path": "Atlas/MOCs/如何100%保证完成自己的制定计划.md"
-    },
-    {
-      "basename": "如何合理地制定计划",
-      "path": "Atlas/MOCs/如何合理地制定计划.md"
-    },
-    {
-      "basename": "SMART",
-      "path": "Atlas/MOCs/SMART.md"
-    },
-    {
-      "basename": "如何戒掉玩手机",
-      "path": "Atlas/MOCs/如何戒掉玩手机.md"
-    },
-    {
-      "basename": "dict",
-      "path": "Extras/Templates/dict/dict.md"
-    },
-    {
-      "basename": "2022-06-26",
-      "path": "Calendar/2022-06-26.md"
-    },
-    {
-      "basename": "2022-06-25",
-      "path": "Calendar/2022-06-25.md"
-    },
-    {
-      "basename": "反向链接",
-      "path": "Cards/反向链接.md"
     }
   ],
   "omittedPaths": [

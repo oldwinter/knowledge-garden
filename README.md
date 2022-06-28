@@ -1,7 +1,7 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-25
+date: 2022-06-28
 title: README
 date created: 2022-06-09
 tags: readme 说明
@@ -29,7 +29,9 @@ tags: readme 说明
 ## 目录结构和本开箱即用库截图
 
 - [[ACCESS 笔记组织法]]
+
 ![开箱即用库首页截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)
+
 ![开箱即用库暗色模式截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)
 
 ## 本库涉及 app 及作用
@@ -59,7 +61,6 @@ tags: readme 说明
 - 微信：oldwinter2
 
 [^1]: [👨‍💻‍ 源代码](https://github.com/oldwinter/knowledge-garden)
-
 [^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
 [^4]: 这是[[obsidian publish 发布]]的方案替换方案2，基于开源项目[[logseq]]
