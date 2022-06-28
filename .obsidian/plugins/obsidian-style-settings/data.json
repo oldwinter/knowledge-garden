@@ -134,7 +134,6 @@
   "shimmering-focus@@sidebar-font-size": 0.85,
   "shimmering-focus@@atomic-ruler": false,
   "hover-editor@@he-title-bar-height": "28px",
-  "customizable-page-header-buttons@@page-header-spacing-desktop": 0,
   "shimmering-focus@@no-double-underline": true,
   "supercharged-links@@8b14-901d-before": "📖 ",
   "shimmering-focus@@hardcore-mode": false,
@@ -142,5 +141,7 @@
   "supercharged-links@@2d72-a9bb-before": "📊 ",
   "supercharged-links@@0ba9-36fe-before": "🗃 ",
   "supercharged-links@@17d0-6ee6-before": "🧾 ",
-  "supercharged-links@@f22f-8852-before": "🏠 "
+  "supercharged-links@@f22f-8852-before": "🏠 ",
+  "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
+  "customizable-page-header-buttons@@page-header-spacing-mobile": 12
 }

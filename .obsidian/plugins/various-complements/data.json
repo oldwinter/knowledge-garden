@@ -10,9 +10,9 @@
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^。，：？『",
-  "showMatchStrategy": true,
-  "showComplementAutomatically": true,
-  "showIndexingStatus": true,
+  "showMatchStrategy": false,
+  "showComplementAutomatically": false,
+  "showIndexingStatus": false,
   "descriptionOnSuggestion": "Short",
   "selectSuggestionKeys": "Tab",
   "additionalCycleThroughSuggestionsKeys": "None",
@@ -55,27 +55,11 @@
         }
       }
     },
-    "todo/今天": {
-      "todo/今天": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1653880343438
-        }
-      }
-    },
     "README": {
       "README": {
         "internalLink": {
           "count": 3,
           "lastUpdated": 1655610717280
-        }
-      }
-    },
-    "vscode": {
-      "vscode": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1653838579080
         }
       }
     },

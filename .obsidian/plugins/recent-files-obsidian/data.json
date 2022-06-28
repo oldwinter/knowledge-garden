@@ -1,12 +1,100 @@
 {
   "recentFiles": [
     {
-      "basename": "个人信息管理系统",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
+      "basename": "2022-六月-W26",
+      "path": "Calendar/每月每季度总结/2022-六月-W26.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "excalibrain.md"
+    },
+    {
+      "basename": "LBS和擦边球",
+      "path": "Cards/LBS和擦边球.md"
+    },
+    {
+      "basename": "中文英文字体选用参考",
+      "path": "Cards/中文英文字体选用参考.md"
+    },
+    {
+      "basename": "微信群公告",
+      "path": "Cards/微信群公告.md"
+    },
+    {
+      "basename": "nginx图形化配置",
+      "path": "Cards/nginx图形化配置.md"
+    },
+    {
+      "basename": "获取文献或文章的引文格式",
+      "path": "Cards/获取文献或文章的引文格式.md"
+    },
+    {
+      "basename": "2022-06-28",
+      "path": "Calendar/2022-06-28.md"
+    },
+    {
+      "basename": "2022-06-02",
+      "path": "Calendar/2022-06-02.md"
+    },
+    {
+      "basename": "战术后仰",
+      "path": "Cards/战术后仰.md"
+    },
+    {
+      "basename": "全国可飞",
+      "path": "Cards/全国可飞.md"
+    },
+    {
+      "basename": "刚下飞机",
+      "path": "Cards/原子知识库/单词库&概念库/刚下飞机.md"
+    },
+    {
+      "basename": "2022-三月",
+      "path": "Calendar/每月每季度总结/2022-三月.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "obsidian publish 发布",
+      "path": "Cards/obsidian publish 发布.md"
+    },
+    {
+      "basename": "vscode打开Obsidian笔记库的好处和作用",
+      "path": "Spaces/计算机科学专题/vscode打开Obsidian笔记库的好处和作用.md"
+    },
+    {
+      "basename": "VSCode",
+      "path": "Spaces/Life/Projects/我的开源项目/vscode/VSCode.md"
+    },
+    {
+      "basename": "devonthink",
+      "path": "Spaces/人+科技融合专题/devonthink.md"
+    },
+    {
+      "basename": "个人信息系统涉及的核心软件和云服务",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
+    },
+    {
+      "basename": "obsidian",
+      "path": "Spaces/人+科技融合专题/必备软件/obsidian.md"
+    },
+    {
+      "basename": "notion",
+      "path": "Spaces/Life/Projects/知识管理/notion学习笔记/notion.md"
+    },
+    {
+      "basename": "github",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/github.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
     },
     {
       "basename": "个人工作流",
@@ -41,10 +129,6 @@
       "path": "Calendar/2022-06-27.md"
     },
     {
-      "basename": "LBS和擦边球",
-      "path": "Calendar/LBS和擦边球.md"
-    },
-    {
       "basename": "日记汇总",
       "path": "Atlas/Scopes/日记汇总.md"
     },
@@ -62,19 +146,15 @@
     },
     {
       "basename": "牝鸡司晨",
-      "path": "Calendar/牝鸡司晨.md"
+      "path": "Cards/牝鸡司晨.md"
     },
     {
       "basename": "在网上提问的智慧",
       "path": "Spaces/人+科技融合专题/在网上提问的智慧.md"
     },
     {
-      "basename": "nginx图形化配置",
-      "path": "Calendar/nginx图形化配置.md"
-    },
-    {
       "basename": "nginx",
-      "path": "Calendar/nginx.md"
+      "path": "Cards/nginx.md"
     },
     {
       "basename": "如何成为学习高手",
@@ -119,86 +199,6 @@
     {
       "basename": "反向链接",
       "path": "Cards/反向链接.md"
-    },
-    {
-      "basename": "以每日日志为入口",
-      "path": "Cards/以每日日志为入口.md"
-    },
-    {
-      "basename": "+ About Calendar",
-      "path": "Calendar/+ About Calendar.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "+ Index for Sources",
-      "path": "Sources/+ Index for Sources.md"
-    },
-    {
-      "basename": "获取文献或文章的引文格式",
-      "path": "Calendar/获取文献或文章的引文格式.md"
-    },
-    {
-      "basename": "数学公式识别 LaTex 问题",
-      "path": "Calendar/数学公式识别 LaTex 问题.md"
-    },
-    {
-      "basename": "中文英文字体选用参考",
-      "path": "Calendar/中文英文字体选用参考.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "春秋笔法",
-      "path": "Cards/原子知识库/单词库&概念库/春秋笔法.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "excalibrain.md"
-    },
-    {
-      "basename": "dataviewjs常用使用示例范例",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataviewjs常用使用示例范例.md"
-    },
-    {
-      "basename": "如何全面提升专注力，学习不走神",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何全面提升专注力，学习不走神.md"
-    },
-    {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
-    },
-    {
-      "basename": "如何快速完成学习和工作任务",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md"
-    },
-    {
-      "basename": "如何学会考试",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何学会考试.md"
-    },
-    {
-      "basename": "如何提高长期记忆能力，复习是唯一路径",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md"
-    },
-    {
-      "basename": "如何高效读书，如何记住所读",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
-    },
-    {
-      "basename": "如果在家，如何反人性做到高度自律",
-      "path": "Atlas/MOCs/如果在家，如何反人性做到高度自律.md"
-    },
-    {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
     }
   ],
   "omittedPaths": [

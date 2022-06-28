@@ -1,10 +1,16 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-23
+date: 2022-06-28
 title: obsidian publish 发布
 date created: 2022-06-09
 ---
+
+## 2022年6月新发现
+
+有个5美元1个月的markbase服务，正在内测。关注。目前双链还不支持。 #todo/某天
+
+## 第三方发布服务
 
 obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不尽人意，等一段时间再说吧。
 
