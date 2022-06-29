@@ -1,40 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
-      "path": "Cards/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
-    },
-    {
-      "basename": "2022-06-27",
-      "path": "Calendar/2022-06-27.md"
+      "basename": "2022-06-29",
+      "path": "Calendar/2022-06-29.md"
     },
     {
       "basename": "2022-06-28",
       "path": "Calendar/2022-06-28.md"
     },
     {
-      "basename": "2022-06-29",
-      "path": "Calendar/2022-06-29.md"
+      "basename": "2022-06-27",
+      "path": "Calendar/2022-06-27.md"
     },
     {
-      "basename": "金句库",
-      "path": "Atlas/MOCs/金句库.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
-      "basename": "不看新闻",
-      "path": "Cards/不看新闻.md"
+      "basename": "这个开源笔记库的设计哲学、日常使用方式和注意事项",
+      "path": "Cards/这个开源笔记库的设计哲学、日常使用方式和注意事项.md"
+    },
+    {
+      "basename": "贩卖焦虑",
+      "path": "Cards/贩卖焦虑.md"
+    },
+    {
+      "basename": "2022年6月，obsidian 依然必装的 10 个插件",
+      "path": "Calendar/已发布文章/2022年6月，obsidian 依然必装的 10 个插件.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Calendar/已发布文章/obsidian开箱即用示例库.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "数字花园、传统博客、公众号",
       "path": "Calendar/数字花园、传统博客、公众号.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "全球流量前20名，有3个是色情网站",
+      "path": "Calendar/全球流量前20名，有3个是色情网站.md"
+    },
+    {
+      "basename": "IndexLongform",
+      "path": "Calendar/IndexLongform.md"
+    },
+    {
+      "basename": "你还在打造数字花园？不妨来看看我的数字闺房",
+      "path": "Calendar/已发布文章/你还在打造数字花园？不妨来看看我的数字闺房.md"
+    },
+    {
+      "basename": "华为，今夜请将我遗忘",
+      "path": "Calendar/已发布文章/华为，今夜请将我遗忘.md"
+    },
+    {
+      "basename": "不看新闻",
+      "path": "Cards/不看新闻.md"
+    },
+    {
+      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
+      "path": "Cards/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
+    },
+    {
+      "basename": "金句库",
+      "path": "Atlas/MOCs/金句库.md"
     },
     {
       "basename": "2022-06-02",
@@ -51,10 +83,6 @@
     {
       "basename": "2022-四月",
       "path": "Calendar/每月每季度总结/2022-四月.md"
-    },
-    {
-      "basename": "全球流量前20名，有3个是色情网站",
-      "path": "Calendar/全球流量前20名，有3个是色情网站.md"
     },
     {
       "basename": "如何完成复杂、艰难、令人痛苦的任务",
@@ -171,34 +199,6 @@
     {
       "basename": "战术后仰",
       "path": "Cards/战术后仰.md"
-    },
-    {
-      "basename": "全国可飞",
-      "path": "Cards/全国可飞.md"
-    },
-    {
-      "basename": "刚下飞机",
-      "path": "Cards/原子知识库/单词库&概念库/刚下飞机.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/obsidian publish 发布.md"
-    },
-    {
-      "basename": "vscode打开Obsidian笔记库的好处和作用",
-      "path": "Spaces/计算机科学专题/vscode打开Obsidian笔记库的好处和作用.md"
-    },
-    {
-      "basename": "VSCode",
-      "path": "Spaces/Life/Projects/我的开源项目/vscode/VSCode.md"
-    },
-    {
-      "basename": "devonthink",
-      "path": "Spaces/人+科技融合专题/devonthink.md"
-    },
-    {
-      "basename": "个人信息系统涉及的核心软件和云服务",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
     }
   ],
   "omittedPaths": [
