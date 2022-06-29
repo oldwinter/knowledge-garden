@@ -4,7 +4,7 @@ content-type: notes
 date: 2022-06-29
 title: README
 date created: 2022-06-09
-tags: readme 说明
+tags: readme说明
 ---
 
 ## 这是什么
@@ -27,6 +27,7 @@ tags: readme 说明
 
 ## 进阶话题
 
+#todo/今天
 - [[2022年6月，obsidian 依然必装的 10 个插件]]
 - [[这个开源笔记库的设计哲学、日常使用方式和注意事项]]
 - [[开源数字花园究竟能为我带来什么收益，为观众带来什么价值]]

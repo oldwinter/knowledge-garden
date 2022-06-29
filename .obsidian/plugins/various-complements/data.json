@@ -536,8 +536,8 @@
     "article/done": {
       "article/done": {
         "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1655967774600
+          "count": 2,
+          "lastUpdated": 1656505833512
         }
       }
     },
@@ -682,6 +682,14 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1656432735612
+        }
+      }
+    },
+    "路径依赖": {
+      "路径依赖": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656508438857
         }
       }
     }

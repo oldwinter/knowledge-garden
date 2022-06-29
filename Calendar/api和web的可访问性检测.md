@@ -1,0 +1,1 @@
+[Freshping | Free website monitoring software by Freshworks](https://www.freshworks.com/website-monitoring/)
