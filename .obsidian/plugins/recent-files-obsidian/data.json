@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "不看新闻",
+      "path": "Cards/不看新闻.md"
+    },
+    {
+      "basename": "金句库",
+      "path": "Atlas/MOCs/金句库.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "个人信息系统涉及的核心软件和云服务",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息系统涉及的核心软件和云服务.md"
-    },
-    {
-      "basename": "obsidian",
-      "path": "Spaces/人+科技融合专题/必备软件/obsidian.md"
-    },
-    {
-      "basename": "notion",
-      "path": "Spaces/Life/Projects/知识管理/notion学习笔记/notion.md"
     }
   ],
   "omittedPaths": [
