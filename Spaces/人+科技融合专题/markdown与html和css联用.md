@@ -40,7 +40,7 @@ hello world
 
 尽量不要走到这一步，丧失了使用 markdown 的初心。
 
-> 此外，单独拎出来的 style 标签，obsidian 的阅读模式不支持，所以直接将样式写在 style 里面，或者在 [[frontdata]] 里面用 cssclass 标签引入自定义 css 样式
+> 此外，单独拎出来的 style 标签，obsidian 的阅读模式不支持，所以直接将样式写在 style 里面，或者在 [[frontmatter]] 里面用 cssclass 标签引入自定义 css 样式
 
 我们来测试以下内联样式吧：（去掉代码块前后缀，并切换到阅读模式而非源码模式）
 ```

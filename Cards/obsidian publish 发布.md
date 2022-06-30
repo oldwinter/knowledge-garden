@@ -21,7 +21,7 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 
 ## 方案对比
 
-欠缺：中文搜索。黑暗模式切换。手机适配右上角按钮。[[frontdata]] 需要添加 feed，content-type，date，title 字段
+欠缺：中文搜索。黑暗模式切换。手机适配右上角按钮。[[frontmatter]] 需要添加 feed，content-type，date，title 字段
 
 [GitHub - oldwinter/digital-garden](https://github.com/oldwinter/digital-garden)
 

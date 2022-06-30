@@ -7,6 +7,20 @@ title: PARA
 date created: 2022-06-09
 ---
 
+[[2022-06-30]]读[[A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte]]，恍然大悟。PARA应该是用来组织信息，而非组织笔记。不应该生搬硬套到我的[[个人知识笔记系统]]中，而是应该纳入[[个人信息管理系统]]。
+
+## PARA系統
+
+Tiago創造的PARA系統包含以下四個區塊：
+
+1.  Project：有明確deadline的東西（_例如：論文發表、產品發佈、馬拉松訓練_）。另外，你會希望你的Project小到每一週都能有變化，這樣你才有動力繼續make progress。一旦你能清楚的列出手邊的Project，這個系統就變得很容易了。
+2.  Areas：你個人需要持續投資、維持的領域（_例如：健康、感情、財富_）。Areas通常是你尋找新嘗試的好地方。
+3.  Resources ：可以和外人分享的東西（_例如：筆記、食譜、文章_）。
+4.  Archive ：短期不會用到的東西（請注意這不是垃圾桶），假如你有一些很久沒看到資料夾或筆記本，他們就是可以被archive的。
+
+如果你還是不太會分辨，可以把Project想成書桌上的東西、Areas想成抽屜裡的東西、Resources想成書櫃上的東西、Archive則是儲物間。
+
+
 ## 一个 PARA 的有效实践
 
 [年度征文｜构建数字大厦 - 少数派 (sspai.com)](https://sspai.com/post/71707)

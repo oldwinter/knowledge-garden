@@ -186,8 +186,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 3,
-          "lastUpdated": 1655717715665
+          "count": 4,
+          "lastUpdated": 1656597511260
         }
       }
     },
@@ -298,8 +298,8 @@
     "思源笔记": {
       "思源笔记": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1655538117437
+          "count": 2,
+          "lastUpdated": 1656597454428
         }
       }
     },
@@ -416,8 +416,8 @@
     "frontdata": {
       "frontdata": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1655819625076
+          "count": 2,
+          "lastUpdated": 1656597573471
         }
       }
     },
@@ -648,8 +648,8 @@
     "数字花园": {
       "数字花园": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656431369145
+          "count": 2,
+          "lastUpdated": 1656605611666
         }
       }
     },
@@ -706,6 +706,38 @@
         "customDictionary": {
           "count": 6,
           "lastUpdated": 1656578434926
+        }
+      }
+    },
+    "个人知识笔记系统": {
+      "个人知识笔记系统": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656594539417
+        }
+      }
+    },
+    "notion-like": {
+      "notion-like": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1656597241244
+        }
+      }
+    },
+    "notion-like笔记软件": {
+      "notion-like笔记软件": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656597248736
+        }
+      }
+    },
+    "自下而上": {
+      "自下而上": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656597275849
         }
       }
     }
