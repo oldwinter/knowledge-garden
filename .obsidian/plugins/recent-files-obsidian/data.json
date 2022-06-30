@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "牝鸡司晨",
+      "path": "Cards/牝鸡司晨.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "哲学",
       "path": "Sources/Courses/人文社科通识/哲学.md"
-    },
-    {
-      "basename": "心理学",
-      "path": "Sources/Courses/人文社科通识/心理学.md"
     }
   ],
   "omittedPaths": [

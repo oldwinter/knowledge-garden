@@ -9,6 +9,7 @@
   },
   "selectedProject": "Calendar",
   "selectedDraft": "Draft 1",
+  "userScriptFolder": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -47,6 +48,5 @@
         }
       ]
     }
-  },
-  "userScriptFolder": null
+  }
 }

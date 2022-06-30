@@ -1,6 +1,6 @@
 ---
 version: 1
-workflow: null
+workflow: Default Workflow
 drafts:
   - name: Draft 1
     folder: Draft 1
