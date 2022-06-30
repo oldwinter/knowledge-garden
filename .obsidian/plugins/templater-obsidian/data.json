@@ -3,14 +3,14 @@
   "templates_folder": "Extras/Templates",
   "templates_pairs": [
     [
-      "",
-      ""
+      "ls",
+      "ls"
     ]
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": true,
-  "enable_system_commands": false,
-  "shell_path": "",
+  "enable_system_commands": true,
+  "shell_path": "/bin/bash",
   "user_scripts_folder": "",
   "enable_folder_templates": true,
   "folder_templates": [

@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "dict",
+      "path": "Extras/Templates/dict/dict.md"
+    },
+    {
+      "basename": "2022-06-30",
+      "path": "Calendar/2022-06-30.md"
+    },
+    {
+      "basename": "tp_学习测试",
+      "path": "Extras/Templates/tp_学习测试.md"
+    },
+    {
+      "basename": "templater",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/templater.md"
+    },
+    {
       "basename": "牝鸡司晨",
       "path": "Cards/牝鸡司晨.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "《星际穿越》",
       "path": "Sources/Movies + TV/电影笔记/《星际穿越》.md"
-    },
-    {
-      "basename": "《这个杀手不太冷》",
-      "path": "Sources/Movies + TV/电影笔记/《这个杀手不太冷》.md"
-    },
-    {
-      "basename": "金融学",
-      "path": "Sources/Courses/人文社科通识/金融学.md"
-    },
-    {
-      "basename": "法学",
-      "path": "Sources/Courses/人文社科通识/法学.md"
-    },
-    {
-      "basename": "哲学",
-      "path": "Sources/Courses/人文社科通识/哲学.md"
     }
   ],
   "omittedPaths": [
