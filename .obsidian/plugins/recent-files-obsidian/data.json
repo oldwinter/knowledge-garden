@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "second brain阅读笔记",
+      "path": "☘️ 花园导览 🍀/🧠 第二大脑建设专题/second brain阅读笔记.md"
+    },
+    {
+      "basename": "如何高效读书，如何记住所读",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
+    },
+    {
+      "basename": "2022-07-01",
+      "path": "Calendar/2022-07-01.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Calendar/已发布文章/obsidian开箱即用示例库.md"
+    },
+    {
+      "basename": "2022年7月，obsidian 依然必装的 10 个插件",
+      "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
+    },
+    {
       "basename": "obsidian插件",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/obsidian插件.md"
     },
@@ -9,16 +37,8 @@
       "path": "Atlas/+ Index for Atlases.md"
     },
     {
-      "basename": "2022年7月，obsidian 依然必装的 10 个插件",
-      "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
-    },
-    {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "2022-07-01",
-      "path": "Calendar/2022-07-01.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -179,26 +199,6 @@
     {
       "basename": "devonthink",
       "path": "Spaces/人+科技融合专题/devonthink.md"
-    },
-    {
-      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
-      "path": "Cards/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
-    },
-    {
-      "basename": "2022-06-27",
-      "path": "Calendar/2022-06-27.md"
-    },
-    {
-      "basename": "贩卖焦虑",
-      "path": "Cards/贩卖焦虑.md"
-    },
-    {
-      "basename": "obsidian开箱即用示例库",
-      "path": "Calendar/已发布文章/obsidian开箱即用示例库.md"
-    },
-    {
-      "basename": "数字花园、传统博客、公众号",
-      "path": "Calendar/数字花园、传统博客、公众号.md"
     }
   ],
   "omittedPaths": [

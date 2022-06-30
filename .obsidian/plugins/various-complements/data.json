@@ -50,8 +50,8 @@
           "lastUpdated": 1655969686261
         },
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1655711105161
+          "count": 3,
+          "lastUpdated": 1656608677527
         }
       }
     },
@@ -738,6 +738,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1656597275849
+        }
+      }
+    },
+    "advanced-url": {
+      "advanced-url": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656607053906
+        }
+      }
+    },
+    "2022-07-01": {
+      "2022-07-01": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656607077230
         }
       }
     }
