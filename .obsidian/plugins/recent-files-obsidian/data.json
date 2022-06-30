@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "夸人损人的文字",
+      "path": "Cards/夸人损人的文字.md"
+    },
+    {
+      "basename": "tp_学习测试",
+      "path": "Extras/Templates/tp_学习测试.md"
+    },
+    {
+      "basename": "+ Index for Extras",
+      "path": "Extras/+ Index for Extras.md"
+    },
+    {
+      "basename": "周记模板",
+      "path": "Extras/Templates/周记模板.md"
+    },
+    {
+      "basename": "+ About Extras",
+      "path": "Extras/+ About Extras.md"
+    },
+    {
       "basename": "dict",
       "path": "Extras/Templates/dict/dict.md"
     },
@@ -9,8 +33,8 @@
       "path": "Calendar/2022-06-30.md"
     },
     {
-      "basename": "tp_学习测试",
-      "path": "Extras/Templates/tp_学习测试.md"
+      "basename": "2022-06-28",
+      "path": "Calendar/2022-06-28.md"
     },
     {
       "basename": "templater",
@@ -19,10 +43,6 @@
     {
       "basename": "牝鸡司晨",
       "path": "Cards/牝鸡司晨.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -87,10 +107,6 @@
     {
       "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
       "path": "Cards/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
-    },
-    {
-      "basename": "2022-06-28",
-      "path": "Calendar/2022-06-28.md"
     },
     {
       "basename": "2022-06-27",
@@ -183,22 +199,6 @@
     {
       "basename": "《怦然心动》",
       "path": "Sources/Movies + TV/电影笔记/《怦然心动》.md"
-    },
-    {
-      "basename": "《少年派的奇幻漂流》",
-      "path": "Sources/Movies + TV/电影笔记/《少年派的奇幻漂流》.md"
-    },
-    {
-      "basename": "《泰坦尼克号》",
-      "path": "Sources/Movies + TV/电影笔记/《泰坦尼克号》.md"
-    },
-    {
-      "basename": "《肖申克的救赎》",
-      "path": "Sources/Movies + TV/电影笔记/《肖申克的救赎》.md"
-    },
-    {
-      "basename": "《星际穿越》",
-      "path": "Sources/Movies + TV/电影笔记/《星际穿越》.md"
     }
   ],
   "omittedPaths": [

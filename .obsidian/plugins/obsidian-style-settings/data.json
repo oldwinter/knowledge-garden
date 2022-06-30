@@ -143,5 +143,7 @@
   "supercharged-links@@17d0-6ee6-before": "🧾 ",
   "supercharged-links@@f22f-8852-before": "🏠 ",
   "customizable-page-header-buttons@@page-header-spacing-mobile": 12,
-  "customizable-page-header-buttons@@page-header-spacing-desktop": 8
+  "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
+  "sanctum@@active-line-hl": true,
+  "things-style@@links-int-on": true
 }
