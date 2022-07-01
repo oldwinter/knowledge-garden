@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "2022-07-01",
-      "path": "Calendar/2022-07-01.md"
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "text expand",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/text expand.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
+    },
+    {
+      "basename": "个人工作流",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人工作流.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "Atlas/Logs/LATEST.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "2022-07-01",
+      "path": "Calendar/2022-07-01.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -23,10 +43,6 @@
     {
       "basename": "CloudFlare",
       "path": "Calendar/CloudFlare.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
       "basename": "obsidian开箱即用示例库",
@@ -183,22 +199,6 @@
     {
       "basename": "双加工理论",
       "path": "Atlas/MOCs/双加工理论.md"
-    },
-    {
-      "basename": "通过刻意练习，改变智识，让自己更聪明",
-      "path": "Atlas/MOCs/通过刻意练习，改变智识，让自己更聪明.md"
-    },
-    {
-      "basename": "学霸学啥都快的根本原因和方法论",
-      "path": "Atlas/MOCs/学霸学啥都快的根本原因和方法论.md"
-    },
-    {
-      "basename": "如何做到每天高效学习12个小时",
-      "path": "Atlas/MOCs/如何做到每天高效学习12个小时.md"
-    },
-    {
-      "basename": "果盘先生",
-      "path": "Cards/原子知识库/单词库&概念库/果盘先生.md"
     }
   ],
   "omittedPaths": [
