@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-07-01",
+      "path": "Calendar/2022-07-01.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "平台+插件",
+      "path": "Spaces/人+科技融合专题/平台+插件.md"
     },
     {
       "basename": "2022-五月",
@@ -11,10 +23,6 @@
     {
       "basename": "CloudFlare",
       "path": "Calendar/CloudFlare.md"
-    },
-    {
-      "basename": "2022-07-01",
-      "path": "Calendar/2022-07-01.md"
     },
     {
       "basename": "🆕 最近更新",
@@ -47,10 +55,6 @@
     {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "个人博客建设",
@@ -195,10 +199,6 @@
     {
       "basename": "果盘先生",
       "path": "Cards/原子知识库/单词库&概念库/果盘先生.md"
-    },
-    {
-      "basename": "刚下飞机",
-      "path": "Cards/原子知识库/单词库&概念库/刚下飞机.md"
     }
   ],
   "omittedPaths": [
