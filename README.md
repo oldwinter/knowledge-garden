@@ -66,7 +66,7 @@ tags: readme说明
 
 - 微信：oldwinter2
 
-[^1]: [👨‍💻‍ 源代码](https://github.com/oldwinter/knowledge-garden)
+[^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方20美元1个月的发布服务地址（太贵了我随时可能不续费😂）：[🌲 oldwinterの数字花园](https://oldwinter.top)
 [^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
 [^4]: 这是[[obsidian publish 发布]]的方案替换方案2，基于开源项目[[logseq]]

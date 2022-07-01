@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-五月",
+      "path": "Calendar/每月每季度总结/2022-五月.md"
+    },
+    {
+      "basename": "CloudFlare",
+      "path": "Calendar/CloudFlare.md"
+    },
+    {
+      "basename": "2022-07-01",
+      "path": "Calendar/2022-07-01.md"
+    },
+    {
       "basename": "🆕 最近更新",
       "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Calendar/已发布文章/obsidian开箱即用示例库.md"
     },
     {
       "basename": "🏹 已发布长文",
@@ -17,14 +37,6 @@
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何高效读书，如何记住所读.md"
     },
     {
-      "basename": "2022-07-01",
-      "path": "Calendar/2022-07-01.md"
-    },
-    {
-      "basename": "obsidian开箱即用示例库",
-      "path": "Calendar/已发布文章/obsidian开箱即用示例库.md"
-    },
-    {
       "basename": "2022年7月，obsidian 依然必装的 10 个插件",
       "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
     },
@@ -35,10 +47,6 @@
     {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -191,14 +199,6 @@
     {
       "basename": "刚下飞机",
       "path": "Cards/原子知识库/单词库&概念库/刚下飞机.md"
-    },
-    {
-      "basename": "《古董局中局》",
-      "path": "Sources/Movies + TV/电影笔记/《古董局中局》.md"
-    },
-    {
-      "basename": "devonthink",
-      "path": "Spaces/人+科技融合专题/devonthink.md"
     }
   ],
   "omittedPaths": [
