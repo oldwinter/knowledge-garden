@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "projects": {
-    "Calendar": {
-      "path": "Calendar",
-      "indexFile": "IndexLongform",
-      "draftsPath": "Drafts/"
-    }
-  },
-  "selectedProject": "Calendar",
-  "selectedDraft": "Draft 1",
-  "userScriptFolder": null,
+  "projects": {},
+  "selectedProject": null,
+  "selectedDraft": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -27,6 +20,12 @@
           }
         },
         {
+          "id": "concatenate-scenes",
+          "optionValues": {
+            "separator": "\\n\\n"
+          }
+        },
+        {
           "id": "prepend-title",
           "optionValues": {
             "format": "## $1",
@@ -36,7 +35,7 @@
         {
           "id": "concatenate-text",
           "optionValues": {
-            "separator": "\\n\\n---\\n\\n"
+            "separator": "\n\n---\n\n"
           }
         },
         {
@@ -48,5 +47,6 @@
         }
       ]
     }
-  }
+  },
+  "userScriptFolder": null
 }

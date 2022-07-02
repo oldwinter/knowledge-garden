@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+      "basename": "2022-07-02",
+      "path": "Calendar/2022-07-02.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
       "basename": "🔨 本库使用指南",
@@ -15,10 +19,6 @@
     {
       "basename": "个人简介",
       "path": "Cards/个人简介.md"
-    },
-    {
-      "basename": "2022-07-02",
-      "path": "Calendar/2022-07-02.md"
     },
     {
       "basename": "second brain阅读笔记",
@@ -195,10 +195,6 @@
     {
       "basename": "2022-06-28",
       "path": "Calendar/2022-06-28.md"
-    },
-    {
-      "basename": "templater",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/templater.md"
     }
   ],
   "omittedPaths": [

@@ -9,7 +9,6 @@
   "find-unlinked-files",
   "obsidian-focus-mode",
   "obsidian-hover-editor",
-  "longform",
   "quick-explorer",
   "recent-files-obsidian",
   "obsidian-style-settings",
@@ -31,5 +30,6 @@
   "periodic-notes",
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
-  "obsidian-markbase"
+  "obsidian-markbase",
+  "longform-refactor"
 ]

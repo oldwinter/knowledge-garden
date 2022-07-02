@@ -1,10 +1,10 @@
 ---
 version: 1
-workflow: Default Workflow
+workflow: null
 drafts:
   - name: Draft 1
     folder: Draft 1
-    scenes: []
+    chapters: []
 ---
 
 
