@@ -15,7 +15,13 @@ date created: 2022-06-09
 ```slide
 {
 	slide: [[advanced-slides-templates模板1]],
-	page: 6
+	page: 3
+}
+```
+```slide
+{
+	slide: [[advanced-slides-templates模板2]],
+	page: 4
 }
 ```
 

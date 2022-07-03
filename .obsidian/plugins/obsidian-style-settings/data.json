@@ -95,7 +95,7 @@
   "shimmering-focus@@active-line-highlight-options": "active-line-emphasized-bg",
   "shimmering-focus@@outline-remove-level-1": false,
   "shimmering-focus@@no-shadows": true,
-  "shimmering-focus@@unlock-theme-beta": false,
+  "shimmering-focus@@unlock-theme-beta": true,
   "shimmering-focus@@cursor-styles": "black-white-cursor",
   "shimmering-focus@@no-unresolved-link-indicator": false,
   "shimmering-focus@@tags-in-gutter": false,
