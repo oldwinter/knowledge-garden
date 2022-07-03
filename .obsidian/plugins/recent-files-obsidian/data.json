@@ -1,6 +1,58 @@
 {
   "recentFiles": [
     {
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
+    },
+    {
+      "basename": "@Tiago Forte",
+      "path": "Cards/原子知识库/人物库/@Tiago Forte.md"
+    },
+    {
+      "basename": "advanced-slides-templates模板2",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides/advanced-slides-templates模板2.md"
+    },
+    {
+      "basename": "嵌入revealjs尝试",
+      "path": "☘️ 花园导览 🍀/嵌入revealjs尝试.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "🔨 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🔨 本库使用指南.md"
+    },
+    {
+      "basename": "☘ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘ 花园导览 🍀.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "advanced-slides",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced-slides.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - 图",
+      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
+    },
+    {
+      "basename": "advanced-slides-templates模板1",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced-slides-templates模板1.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "2022-07-03",
+      "path": "Calendar/2022-07-03.md"
+    },
+    {
       "basename": "夸人损人的文字",
       "path": "Cards/夸人损人的文字.md"
     },
@@ -13,28 +65,8 @@
       "path": "☘️ 花园导览 🍀/👬🏻 其他人的数字花园收录.md"
     },
     {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "🔨 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🔨 本库使用指南.md"
-    },
-    {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
-      "basename": "☘ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘ 花园导览 🍀.md"
-    },
-    {
       "basename": "2022-07-02",
       "path": "Calendar/2022-07-02.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "个人简介",
@@ -63,10 +95,6 @@
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "EXTERNAL",
-      "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
       "basename": "text expand",
@@ -171,34 +199,6 @@
     {
       "basename": "+ About 0-Inbox",
       "path": "0-Inbox/+ About 0-Inbox.md"
-    },
-    {
-      "basename": "tp_学习测试",
-      "path": "Extras/Templates/tp_学习测试.md"
-    },
-    {
-      "basename": "excalibrain 1",
-      "path": "Extras/Draws/excalibrain 1.md"
-    },
-    {
-      "basename": "+ Index for Extras",
-      "path": "Extras/+ Index for Extras.md"
-    },
-    {
-      "basename": "周记模板",
-      "path": "Extras/Templates/周记模板.md"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
-    },
-    {
-      "basename": "dict",
-      "path": "Extras/Templates/dict/dict.md"
-    },
-    {
-      "basename": "2022-06-28",
-      "path": "Calendar/2022-06-28.md"
     }
   ],
   "omittedPaths": [

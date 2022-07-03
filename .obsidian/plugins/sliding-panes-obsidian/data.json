@@ -7,7 +7,7 @@
   "rotateHeaders": false,
   "headerAlt": false,
   "orienation": "mixed",
-  "stackingEnabled": false,
+  "stackingEnabled": true,
   "smoothAnimation": true,
   "leafWidth": 540
 }

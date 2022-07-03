@@ -1,11 +1,55 @@
 ---
 feed: show
 content-type: notes
-date: 2022-06-23
+date: 2022-07-03
 title: advanced-slides
 date created: 2022-06-09
 ---
+
+[[advanced-slides-templates模板1]]
+
+[[advanced-slides-templates模板2]]
+
+用上其template的能力，才能发挥它的高效作用。
+
+```slide
+{
+	slide: [[advanced-slides-templates模板1]],
+	page: 6
+}
+```
+
+![[数字时代如何更好地工作与生活 - 图.svg]]
+
+
+---
+
+<canvas data-chart="line" >
+<!--
+{
+ "data": {
+  "labels": ["January"," February"," March"," April"," May"," June"," July"],
+  "datasets":[
+   {
+    "data":[65,59,80,81,56,55,40],
+    "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+   },
+   {
+    "data":[28,48,40,19,86,27,90],
+    "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+   }
+  ]
+ }
+}
+-->
+</canvas>
+
+
+---
+
 --- %% fold %%
+
+
 
 aliases: markdown 格式的 ppt, slides 学习笔记教程, reveal.js 教程
 
@@ -47,10 +91,10 @@ width: 960
 
 ### 表格 %% fold %%
 
-| a      | b        | c   |
+| a | b | c |
 | ------ | -------- | --- |
-| d      | e        | f   |
-| 大一点 | 自动缩放 | 会不会    |
+| d | e | f |
+| 大一点 | 自动缩放 | 会不会 |
 
 --
 

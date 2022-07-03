@@ -39,7 +39,7 @@
   "exportWithBackground": true,
   "exportPaddingSVG": 10,
   "keepInSync": false,
-  "autoexportSVG": false,
+  "autoexportSVG": true,
   "autoexportPNG": false,
   "autoexportExcalidraw": false,
   "embedType": "excalidraw",
