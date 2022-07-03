@@ -145,5 +145,6 @@
   "customizable-page-header-buttons@@page-header-spacing-mobile": 0,
   "customizable-page-header-buttons@@page-header-spacing-desktop": 0,
   "sanctum@@active-line-hl": true,
-  "things-style@@links-int-on": true
+  "things-style@@links-int-on": true,
+  "shimmering-focus@@annotation-tags-off": true
 }

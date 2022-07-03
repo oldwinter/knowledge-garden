@@ -31,5 +31,6 @@
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
   "obsidian-markbase",
-  "longform-refactor"
+  "longform-refactor",
+  "settings-search"
 ]

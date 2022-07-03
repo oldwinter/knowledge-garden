@@ -47,6 +47,11 @@
   "titleLeft": [],
   "titleRight": [
     {
+      "id": "publish:view-changes",
+      "icon": "paper-plane-glyph",
+      "name": "发布: 发布更改"
+    },
+    {
       "id": "daily-notes",
       "icon": "calendar-glyph",
       "name": "日记: 打开/创建今天的日记"

@@ -20,7 +20,9 @@
     "tagsToReview": [
       "#review"
     ],
-    "noteFoldersToIgnore": [],
+    "noteFoldersToIgnore": [
+      "☘️ 花园导览 🍀"
+    ],
     "openRandomNote": true,
     "autoNextNote": true,
     "disableFileMenuReviewOptions": true,
@@ -32,6 +34,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-06-28",
+  "buryDate": "2022-07-04",
   "buryList": []
 }
