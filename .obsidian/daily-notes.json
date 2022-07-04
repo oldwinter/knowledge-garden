@@ -1,5 +1,5 @@
 {
-  "folder": "Calendar",
+  "folder": "Calendar/每日日志",
   "autorun": true,
   "template": "Extras/Templates/日记模板",
   "format": "YYYY-MM-DD"

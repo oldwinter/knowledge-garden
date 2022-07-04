@@ -9,7 +9,7 @@
       "day": {
         "enabled": true,
         "format": "YYYY-MM-DD",
-        "folder": "Calendar",
+        "folder": "Calendar/每日日志",
         "openAtStartup": true,
         "templatePath": "Extras/Templates/日记模板.md"
       },
