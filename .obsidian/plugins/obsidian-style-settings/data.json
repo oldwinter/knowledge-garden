@@ -146,5 +146,6 @@
   "customizable-page-header-buttons@@page-header-spacing-desktop": 0,
   "sanctum@@active-line-hl": true,
   "things-style@@links-int-on": true,
-  "shimmering-focus@@annotation-tags-off": true
+  "shimmering-focus@@annotation-tags-off": true,
+  "shimmering-focus@@colored-bold-italic": "strong-em-hover-accent"
 }

@@ -1,28 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "Obsidian 最优雅的多端同步插件LiveSync",
-      "path": "☘️ 花园导览 🍀/Obsidian 最优雅的多端同步插件LiveSync.md"
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+      "basename": "整个库的统计数据 - dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "+ Index for Spaces",
-      "path": "Spaces/+ Index for Spaces.md"
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
+    },
+    {
+      "basename": "🎥 我的PPT",
+      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
     },
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
     },
     {
-      "basename": "☘ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘ 花园导览 🍀.md"
+      "basename": "LATEST",
+      "path": "Atlas/Logs/LATEST.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
+    },
+    {
+      "basename": "2022-07-04",
+      "path": "Calendar/2022-07-04.md"
+    },
+    {
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+    },
+    {
+      "basename": "本库最常用工作区及流程",
+      "path": "Cards/本库最常用工作区及流程.md"
+    },
+    {
+      "basename": "🏗 本库建设规划图",
+      "path": "☘️ 花园导览 🍀/其他/🏗 本库建设规划图.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "Obsidian 最优雅的多端同步插件LiveSync",
+      "path": "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
     },
     {
       "basename": "如何全面提升专注力，学习不走神",
@@ -33,28 +73,12 @@
       "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
     },
     {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
       "basename": "本库的设计哲学",
       "path": "Cards/本库的设计哲学.md"
     },
     {
-      "basename": "🧰 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
       "basename": "🏷 本库标签",
       "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
-      "basename": "🎥 我的PPT",
-      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
-    },
-    {
-      "basename": "🏗 本库建设规划图",
-      "path": "☘️ 花园导览 🍀/其他/🏗 本库建设规划图.md"
     },
     {
       "basename": "如何高效读书，如何记住所读",
@@ -117,10 +141,6 @@
       "path": "Spaces/人+科技融合专题/个人效率系统打造/notion-like笔记软件.md"
     },
     {
-      "basename": "本库最常用工作区及流程",
-      "path": "Cards/本库最常用工作区及流程.md"
-    },
-    {
       "basename": "本库常用的快捷键及作用",
       "path": "Cards/本库常用的快捷键及作用.md"
     },
@@ -141,10 +161,6 @@
       "path": "Cards/每周计划与回顾.md"
     },
     {
-      "basename": "dataview",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
       "basename": "主页与工作区",
       "path": "Cards/主页与工作区.md"
     },
@@ -155,10 +171,6 @@
     {
       "basename": "《认知觉醒》",
       "path": "Sources/Books/读书笔记/《认知觉醒》.md"
-    },
-    {
-      "basename": "整个库的统计数据 - dataview",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
     },
     {
       "basename": "个人博客建设",
@@ -187,18 +199,6 @@
     {
       "basename": "如何成为学习高手 - 高冷冷",
       "path": "Atlas/MOCs/如何成为学习高手 - 高冷冷.md"
-    },
-    {
-      "basename": "slidev",
-      "path": "Cards/slidev.md"
-    },
-    {
-      "basename": "revealjs",
-      "path": "Cards/revealjs.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/obsidian publish 发布.md"
     }
   ],
   "omittedPaths": [

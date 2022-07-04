@@ -32,5 +32,7 @@
   "obsidian-excalidraw-plugin",
   "obsidian-markbase",
   "longform-refactor",
-  "settings-search"
+  "settings-search",
+  "obsidian-dynamic-highlights",
+  "obsidian-pandoc-reference-list"
 ]

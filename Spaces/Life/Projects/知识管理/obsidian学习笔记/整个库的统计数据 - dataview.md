@@ -11,9 +11,12 @@ let allFiles = dv.pages()
 
 dv.paragraph(`总共有 **${allFiles.length}** 个文件`)
 
-dv.span(`==标签== **${allFiles.file.tags.distinct().length}** 个`)
+dv.span(`==标签== **${allFiles.file.tags.distinct().length}** 种`)
 dv.span("; ")
 dv.span(`==文件夹数== **${allFiles.file.folder.distinct().length}** 个`)
+dv.span("; ")
+dv.span(`==文件别名== **${allFiles.file.aliases.distinct().length}** 个`)
+
 
 dv.paragraph("\n")
 dv.span(`==正向链接== **${allFiles.file.outlinks.length}** 个`)
