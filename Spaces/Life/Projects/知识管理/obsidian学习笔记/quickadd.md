@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: quickadd
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 和 [[dataview]]与[[templater]] 联动，发挥最大效用。

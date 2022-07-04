@@ -1,10 +1,8 @@
 ---
-feed: show
-content-type: notes
 aliases: dataviewjs
-date: 2022-06-24
 title: dataview
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 感悟

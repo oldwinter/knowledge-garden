@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 'obsidian的中括号`[[`搜索的技巧'
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## obsidian 的中括号 `[[` 搜索的技巧

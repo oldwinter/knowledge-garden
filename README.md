@@ -1,11 +1,9 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-29
 title: README
 date created: 2022-06-09
 tags: readme说明
 home: true
+date modified: 2022-07-05
 ---
 
 ## 这是什么
@@ -35,9 +33,9 @@ home: true
 
 - [[ACCESS 笔记组织法]]
 
-![开箱即用库首页截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)
+![开箱即用库首页截图](<https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)>
 
-![开箱即用库暗色模式截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)
+![开箱即用库暗色模式截图](<https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)>
 
 ## 本库涉及 app 及作用
 

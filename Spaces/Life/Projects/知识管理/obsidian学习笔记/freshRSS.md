@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: freshRSS
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [FreshRSS, a free, self-hostable aggregator…](https://www.freshrss.org/)

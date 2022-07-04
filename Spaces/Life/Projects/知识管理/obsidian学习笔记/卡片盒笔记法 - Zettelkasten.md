@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 卡片盒笔记法 - Zettelkasten
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 定义
@@ -35,7 +33,7 @@ date created: 2022-06-09
 
 ## 卡片要素
 
-![](https://raw.githubusercontent.com/oldwinter/my-pics/master/20220306231443.png)
+![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/20220306231443.png)>
 
  
 

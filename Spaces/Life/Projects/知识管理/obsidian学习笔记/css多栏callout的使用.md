@@ -1,12 +1,10 @@
 ---
-feed: show
-content-type: notes
 aliases: 
 tags: 
 cssClass: two-column-list
-date: 2022-06-23
 title: css多栏callout的使用
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [[Obs＃83] 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
@@ -32,7 +30,7 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 > 3. 欄位數由 2 到 N，只要螢幕寬度足夠，會自動分配欄寬  
 > 4. **可使用 Style Settings 外掛設定**
 
-![01](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685342.png)
+![01](<https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685342.png)>
 
 #### 1.1. 兩欄
 
@@ -59,15 +57,15 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 #### 1.3. 三欄
 
-![01|700](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685415.png)
+![01|700](<https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685415.png)>
 
 > [!multi-column]
 >
 >> [!note]+ 待辦事項
 >> * Item 1
->>    * Item 1-1
->>    * Item 1-2
->>    * Item 1-3
+>> * Item 1-1
+>> * Item 1-2
+>> * Item 1-3
 >>
 >>> [!EXAMPLE] 範例
 >>> ```
@@ -85,7 +83,7 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 #### 1.4. 四欄
 
-![01|700](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685499.png)
+![01|700](<https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685499.png)>
 
 > [!multi-column]
 >
@@ -148,9 +146,9 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 >
 >> [!blank-container]+ 待辦事項
 >> * Item 1
->>    * Item 1-1
->>    * Item 1-2
->>    * Item 1-3
+>> * Item 1-1
+>> * Item 1-2
+>> * Item 1-3
 >> * Item 2
 >>> [!EXAMPLE] 範例
 >>> ```
@@ -184,10 +182,10 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 > 1. YAML 區加入 `cssClasses: 多欄CSS` 即會自動顯示成指定的欄數  
 > 2. 多欄 CSS 有下列幾種：
 >
-> > 1.  two-column-list: 垂直填充
-> > 2.  three-column-list: 垂直填充
-> > 3.  two-column-grid-list: 水平填充
-> > 4.  three-column-grid-list: 水平填充
+> > 1. two-column-list: 垂直填充
+> > 2. three-column-list: 垂直填充
+> > 3. two-column-grid-list: 水平填充
+> > 4. three-column-grid-list: 水平填充
 
 ### [4. 相關鏈接](http://jdev.tw/blog/7080#top "Back to top")
 

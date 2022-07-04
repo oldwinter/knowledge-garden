@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: notion
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 - 2020 年，笔记软件领域的两个标志性软件 `Notion` 和 [[Roam Research]]
  - Notion 引入了块的概念，让网站构建如同搭建积木的一样简单方便。

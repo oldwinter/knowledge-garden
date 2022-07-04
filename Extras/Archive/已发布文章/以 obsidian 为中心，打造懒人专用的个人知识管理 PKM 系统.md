@@ -1,7 +1,0 @@
----
-feed: show
-content-type: notes
-date: 2022-06-09
-tags: article/todo
-title: 以 obsidian 为中心，打造懒人专用的个人知识管理 PKM 系统
----

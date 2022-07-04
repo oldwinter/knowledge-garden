@@ -1,11 +1,9 @@
 ---
-feed: show
-content-type: notes
 tags: 
 aliases: 把妹达人
-date: 2022-06-23
 title: PUA
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 PUA 一词爆火，来源于职场打压话题。

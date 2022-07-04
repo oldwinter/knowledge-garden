@@ -1,10 +1,8 @@
 ---
-feed: show
-content-type: notes
 uid: f5430a84-1fa5-45b4-8023-14edc6137bb9
-date: 2022-06-23
 title: bartender
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## mac 的 bartender

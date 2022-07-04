@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: text expand
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 这个插件对我真的有用吗？
@@ -85,7 +83,6 @@ path:"Calendar"
 |[[2022-06-22]]|353|
 ⬆⬆⬆
 <-->
-
 
 ```expander
 file:2022-0

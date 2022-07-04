@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: AppleScript
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 #todo/某天 貌似有点学习价值，可以充当胶水，让整个工作流更自动化，改天抽空学一下下。
 

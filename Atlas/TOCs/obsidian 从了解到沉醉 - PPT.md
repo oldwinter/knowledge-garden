@@ -1,10 +1,8 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 tags: TOC 
 title: obsidian 从了解到沉醉 - PPT
 date created: 2022-06-21
+date modified: 2022-07-05
 ---
 - 演示：
 	- [[5分钟直观感受双链笔记神奇之处]]

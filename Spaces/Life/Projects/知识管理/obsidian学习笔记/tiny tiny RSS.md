@@ -1,11 +1,9 @@
 ---
-feed: show
-content-type: notes
 aliases: TTRSS
 tags: 
-date: 2022-06-23
 title: tiny tiny RSS
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [🐋 Awesome TTRSS | 🐋 Awesome TTRSS (henry.wang)](http://ttrss.henry.wang/zh/)

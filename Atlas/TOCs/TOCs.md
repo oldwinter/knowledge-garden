@@ -1,11 +1,9 @@
 ---
-feed: show
 mindmap-plugin: basic
-content-type: notes
-date: 2022-06-23
 title: TOCs
 tags: TOC
 date created: 2022-06-07
+date modified: 2022-07-05
 ---
 
 # TOCs

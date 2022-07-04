@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: popclip
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 扩展所在文件夹
 `~/Library/ApplicationSupport/PopClip/Extensions/` 需要手动备份

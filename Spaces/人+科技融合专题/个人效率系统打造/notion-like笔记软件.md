@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: notion-like笔记软件
 date created: 2022-06-18
+date modified: 2022-07-05
 ---
 3 个重要特征:
 - [[block]]

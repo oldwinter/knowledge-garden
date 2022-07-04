@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 常青笔记 - Evergreen Note
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [何谓常青笔记（EvergreenNotes） (pmthinking.com)](https://index.pmthinking.com/EvergreenNotes-0a3f82b22a654eb18ccf3e83854ec1ba)

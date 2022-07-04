@@ -17,7 +17,6 @@
   "tag-wrangler",
   "supercharged-links-obsidian",
   "obsidian-spaced-repetition",
-  "sliding-panes-obsidian",
   "obsidian42-brat",
   "obsidian-image-auto-upload-plugin",
   "note-refactor-obsidian",
@@ -32,5 +31,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-markbase",
   "settings-search",
-  "obsidian-pandoc-reference-list"
+  "obsidian-pandoc-reference-list",
+  "longform-refactor"
 ]

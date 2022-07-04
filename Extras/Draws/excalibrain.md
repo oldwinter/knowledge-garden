@@ -1,6 +1,4 @@
 ---
-feed: show
-content-type: notes
 
 excalidraw-plugin: parsed
 excalidraw-default-mode: view
@@ -11,7 +9,6 @@ excalidraw-onload-script: "app.plugins.plugins[`excalibrain`].start(ea.targetVie
 
 tags: [excalidraw]
 
-date: 2022-06-09
 title: Text Elements
 ---
 

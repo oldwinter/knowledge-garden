@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 如果要我安利obsidian给别人，我会怎么做
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 如果要我安利 obsidian 给别人，我会怎么做

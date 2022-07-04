@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: Git
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 用 github 的 ssh 地址，实现免密码操作
@@ -23,4 +21,5 @@ cat id_rsa.pub
 - push 的时候，第一次需要 set-upstream，后续省略即可。` git push --set-upstream origin-ssh main`
 
 ## 子模块
+
 [[git submodule]]

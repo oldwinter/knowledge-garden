@@ -1,15 +1,14 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: + Index for Spaces
 tags: index索引
 date created: 2022-06-23
+date modified: 2022-07-05
 ---
 
 up:: [[ACCESS 笔记组织法]]
 
 ## 文件夹
+
 ```dataview
 TABLE date
 FROM "Spaces" and -#index索引
@@ -17,6 +16,7 @@ GROUP BY file.folder
 ```
 
 ## 全部文件
+
 ```dataviewjs
 // 获取当前文件所在的文件夹
 const currentFolder = dv.current().file.folder

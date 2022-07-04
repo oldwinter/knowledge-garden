@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 红蓝双方地形及ban and pick - bp方法
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 红蓝双方的地形差异
 红色方，发育路在下路，靠近红区。射手拿红角度而言，算是小优势方。

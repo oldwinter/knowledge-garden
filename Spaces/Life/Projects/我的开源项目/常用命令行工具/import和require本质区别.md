@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: import和require本质区别
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 作者：寸志

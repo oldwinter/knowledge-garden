@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-26
 title: dataviewjs常用使用示例范例
 date created: 2022-06-21
+date modified: 2022-07-05
 ---
 
 x:: [[dataview常用使用示例范例]]

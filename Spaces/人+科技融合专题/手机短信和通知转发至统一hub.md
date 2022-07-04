@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 手机短信和通知转发至统一hub
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 为了全自动化，还是有点小麻烦啊。为了不需要解锁手机看验证码，谈谈我的半自动方案。是安卓加 mac 或 win 端的。
 1，安卓用一个开源项目“短信转发器”，转发短信，来电或应用推送消息至 telegram bot

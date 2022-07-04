@@ -1,10 +1,8 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-26
 title: + Index for Calendar
 tags: index索引
 date created: 2022-06-23
+date modified: 2022-07-05
 ---
 
 up:: [[ACCESS 笔记组织法]]

@@ -1,11 +1,9 @@
 ---
-feed: show
-content-type: notes
 aliases: storytelling
 tags: 视频笔记
-date: 2022-06-23
 title: storytelling
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 视频内容和感谢
@@ -24,7 +22,7 @@ storytelling 是非常大的概念，可以应用在很多场合。
 ### [[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 的 3 个方法
 
 - 第一层次，演讲开始，用故事产生吸引力和画面感 -- 悬疑，数字，反常识等等
-	- [[SCQA]]：背景，冲突，问题，答案。  -- [[《金字塔原理》]]
+	- [[SCQA]]：背景，冲突，问题，答案。 -- [[《金字塔原理》]]
 	- 冲突和问题，本身就自带故事性
 - 第二层次，分享个人故事
 	- 楼下农夫山泉比哇哈哈贵，我却买了它，以这个个人故事展开。

@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: PicGo
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 目前主用 github 图床

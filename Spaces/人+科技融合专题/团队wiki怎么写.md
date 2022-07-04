@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: 团队wiki怎么写
 date created: 2022-06-17
+date modified: 2022-07-05
 ---
 团队 wiki，不直接产生绩效，但是一个有序的 wiki，却能让新人更快入门，也让不同职责的同事之间，更快地更好地获取信息。
 - 如何解决没人愿意花精力写团队 wiki 的问题？类似问题 [[程序员不愿意写文档和注释怎么办]]

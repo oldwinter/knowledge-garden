@@ -1,10 +1,8 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 tags: MOC
 title: MOCs
 date created: 2022-06-06
+date modified: 2022-07-05
 ---
 
 > 这个是一个大 [[MOC]] 或叫根 MOC，是本库的所有 MOC 的 MOC。

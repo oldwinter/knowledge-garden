@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: logseq和obsidian的联合联动使用
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 obsidian 的发布功能还没试过，但看了别人的发布效果，感觉也一般。

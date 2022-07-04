@@ -1,8 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-24
 title: emoji
+date created: 2022-06-24
+date modified: 2022-07-05
 ---
 
 [🤣 Emoji表情大全，颜文字百科 💌 - EmojiXD](https://emojixd.com/)

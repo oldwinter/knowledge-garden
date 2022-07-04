@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: PKM 的指导性原则 from lyt
 date created: 2022-06-19
+date modified: 2022-07-05
 ---
 
 ## PKM 的指导性原则 from lyt

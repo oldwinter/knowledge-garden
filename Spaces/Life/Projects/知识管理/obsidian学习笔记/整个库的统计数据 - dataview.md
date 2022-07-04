@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
 title: 整个库的统计数据 - dataview
 date created: 2022-06-26
-date: 2022-06-26
+date modified: 2022-07-05
 ---
 
 ```dataviewjs

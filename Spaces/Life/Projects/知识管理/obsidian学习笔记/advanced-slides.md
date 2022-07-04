@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-07-03
 title: advanced-slides
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [[advanced-slides-templates模板1]]
@@ -27,7 +25,6 @@ date created: 2022-06-09
 
 ![[数字时代如何更好地工作与生活 - 图.svg]]
 
-
 ---
 
 <canvas data-chart="line" >
@@ -50,12 +47,8 @@ date created: 2022-06-09
 -->
 </canvas>
 
-
 ---
-
 --- %% fold %%
-
-
 
 aliases: markdown 格式的 ppt, slides 学习笔记教程, reveal.js 教程
 
@@ -264,11 +257,11 @@ note 之后，就是演讲者自己的笔记和注释
 --
 <split even>
 
-![](https://picsum.photos/id/1005/250/250)
+![](<https://picsum.photos/id/1005/250/250)>
 
-![](https://picsum.photos/id/1010/250/250)
+![](<https://picsum.photos/id/1010/250/250)>
 
-![](https://picsum.photos/id/1025/250/250)
+![](<https://picsum.photos/id/1025/250/250)>
 
 </split>
 
@@ -298,38 +291,38 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split wrap="4">
 
-![](https://picsum.photos/id/1010/250/250)
+![](<https://picsum.photos/id/1010/250/250)>
 
-![](https://picsum.photos/id/1011/250/250)
+![](<https://picsum.photos/id/1011/250/250)>
 
-![](https://picsum.photos/id/1012/250/250)
+![](<https://picsum.photos/id/1012/250/250)>
 
-![](https://picsum.photos/id/1013/250/250)
+![](<https://picsum.photos/id/1013/250/250)>
 
-![](https://picsum.photos/id/1014/250/250)
+![](<https://picsum.photos/id/1014/250/250)>
 
-![](https://picsum.photos/id/1015/250/250)
+![](<https://picsum.photos/id/1015/250/250)>
 
 </split>
 
 --
 <split no-margin>
 
-![](https://picsum.photos/id/1001/250/250)
+![](<https://picsum.photos/id/1001/250/250)>
 
-![](https://picsum.photos/id/1002/250/250)
+![](<https://picsum.photos/id/1002/250/250)>
 
-![](https://picsum.photos/id/1003/250/250)
+![](<https://picsum.photos/id/1003/250/250)>
 
-![](https://picsum.photos/id/1004/250/250)
+![](<https://picsum.photos/id/1004/250/250)>
 
-![](https://picsum.photos/id/1005/250/250)
+![](<https://picsum.photos/id/1005/250/250)>
 
-![](https://picsum.photos/id/1006/250/250)
+![](<https://picsum.photos/id/1006/250/250)>
 
-![](https://picsum.photos/id/1009/250/250)
+![](<https://picsum.photos/id/1009/250/250)>
 
-![](https://picsum.photos/id/1008/250/250)
+![](<https://picsum.photos/id/1008/250/250)>
 
 </split>
 --

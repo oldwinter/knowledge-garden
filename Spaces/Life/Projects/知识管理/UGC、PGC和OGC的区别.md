@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: UGC、PGC和OGC的区别
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 [UGC，PGC，PUGC，OGC，MGC，BGC，AGC，GGC，MCNGC，最全内容创作者解读 - 知乎](https://zhuanlan.zhihu.com/p/188541515)

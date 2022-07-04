@@ -1,3 +1,8 @@
+---
+title: tpl-con-splash
+date created: 2022-04-25
+date modified: 2022-07-05
+---
 <grid drag="100 100" drop="top" style="background: radial-gradient(#EBC04C, #E07E36);">
 
 <% content %>
@@ -7,8 +12,8 @@
 <style>
 .horizontal_dotted_line{
   border-bottom: 2px dotted gray;
-} 
-} 
+}
+}
 </style>
 
 <grid drag="94 0" drop="3 -6" class="horizontal_dotted_line">
@@ -19,5 +24,7 @@
 </grid>
 
 <grid drag="100 6" drop="bottom">
+
 ###### © 2022 Lernende Organisation<!-- element style="font-weight:300" -->
+
 </grid>

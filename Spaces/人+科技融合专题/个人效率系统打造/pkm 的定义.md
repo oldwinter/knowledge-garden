@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: pkm 的定义
 date created: 2022-06-19
+date modified: 2022-07-05
 ---
 
 ## pkm 的定义

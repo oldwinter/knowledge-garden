@@ -1,9 +1,7 @@
 ---
-feed: show
-content-type: notes
-date: 2022-06-23
 title: onenote
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 工作 3 年多，一直使用 onenote，当时用的很顺手，感觉秒杀所有的市面上的笔记软件，细细想来，主要有这几个其他软件无法取代的功能点，而且缺点并不致命。
 

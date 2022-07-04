@@ -1,11 +1,9 @@
 ---
-feed: show
-content-type: notes
 aliases: 个人定位 公司定位
 tags: 
-date: 2022-06-23
 title: SWOT
 date created: 2022-06-09
+date modified: 2022-07-05
 ---
 
 ## 个人理解
