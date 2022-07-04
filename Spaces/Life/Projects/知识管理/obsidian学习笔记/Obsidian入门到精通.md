@@ -1,5 +1,4 @@
 ---
-aliases: 
 tags:
 cards-deck: INBOX
 title: Obsidian入门到精通

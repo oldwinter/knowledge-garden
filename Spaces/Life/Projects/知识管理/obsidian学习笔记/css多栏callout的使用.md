@@ -1,6 +1,4 @@
 ---
-aliases: 
-tags: 
 cssClass: two-column-list
 title: css多栏callout的使用
 date created: 2022-06-09

@@ -1,5 +1,4 @@
 ---
-aliases: 
 tags: MOC 
 title: linux常用命令行
 date created: 2022-06-09

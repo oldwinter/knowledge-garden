@@ -1,5 +1,4 @@
 ---
-tags: 
 aliases: 把妹达人
 title: PUA
 date created: 2022-06-09

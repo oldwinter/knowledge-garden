@@ -1,5 +1,4 @@
 ---
-aliases: 
 tags: todo/某天
 title: excalidraw
 date created: 2022-06-09

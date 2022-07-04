@@ -1,5 +1,4 @@
 ---
-tags: 
 aliases: 创伤后应激障碍
 title: PTSD
 date created: 2022-06-09
