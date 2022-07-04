@@ -1,0 +1,11 @@
+.nav-folder-title[data-path='logseq'] {
+    display: none;
+}
+
+.nav-file-title[data-path='LICENSE'] {
+    display: none;
+}
+
+.nav-file-title[data-path='cedict_ts.u8'] {
+    display: none;
+}

@@ -2,7 +2,9 @@
   "cssTheme": "Shimmering Focus",
   "enabledCssSnippets": [
     "多栏callout样式",
-    "supercharged-links-gen"
+    "supercharged-links-gen",
+    "隐藏文件和文件夹",
+    "隐藏LICENSE文件和logseq文件夹"
   ],
   "theme": "system",
   "baseFontSize": 16,

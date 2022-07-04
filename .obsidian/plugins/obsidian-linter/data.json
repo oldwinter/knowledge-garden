@@ -4,8 +4,8 @@
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
     },
     "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
-      "Text to insert": "feed: show\ncontent-type: notes"
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
+      "Text to insert": ""
     },
     "YAML Timestamp": {
       "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
@@ -18,6 +18,11 @@
     "YAML Title": {
       "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": true,
       "Title Key": "title"
+    },
+    "Escape YAML Special Characters": {
+      "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": false,
+      "Default Escape Character": "\"",
+      "Try to Escape Single Line Arrays": false
     },
     "Header Increment": {
       "Heading levels should only increment by one level at a time": false
@@ -70,6 +75,9 @@
     "No Bare URLs": {
       "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": true
     },
+    "Two Spaces Between Lines with Content": {
+      "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": false
+    },
     "Trailing spaces": {
       "Removes extra spaces after every line.": true,
       "Two Space Linebreak": true
@@ -113,5 +121,7 @@
   "foldersToIgnore": [
     "0-Inbox",
     "Extras"
-  ]
+  ],
+  "linterLocale": "system-default",
+  "logLevel": 4
 }
