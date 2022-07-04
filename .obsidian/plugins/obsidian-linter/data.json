@@ -12,7 +12,7 @@
       "Date Created": true,
       "Date Created Key": "date created",
       "Date Modified": true,
-      "Date Modified Key": "date",
+      "Date Modified Key": "date modified",
       "Format": "YYYY-MM-DD"
     },
     "YAML Title": {

@@ -63,14 +63,6 @@
         }
       }
     },
-    "第二大脑": {
-      "第二大脑": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654415719219
-        }
-      }
-    },
     "dailynote": {
       "dailynote": {
         "internalLink": {
@@ -79,27 +71,11 @@
         }
       }
     },
-    "项目笔记": {
-      "项目笔记": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654417672545
-        }
-      }
-    },
     "anki": {
       "anki": {
         "internalLink": {
           "count": 3,
           "lastUpdated": 1655633570140
-        }
-      }
-    },
-    "刻意练习": {
-      "刻意练习": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654452479156
         }
       }
     },
@@ -770,6 +746,14 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1656863645315
+        }
+      }
+    },
+    "2022-07-04": {
+      "2022-07-04": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1656947466220
         }
       }
     }

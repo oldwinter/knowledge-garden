@@ -1,9 +1,14 @@
 {
-  "showIndexingNotices": true,
   "respectExcluded": true,
-  "reindexInRealTime": false,
+  "ignoreDiacritics": false,
+  "showIndexingNotices": true,
+  "showShortName": false,
   "weightBasename": 2,
   "weightH1": 1.5,
   "weightH2": 1.3,
-  "weightH3": 1.1
+  "weightH3": 1.1,
+  "CtrlJK": false,
+  "CtrlNP": false,
+  "storeIndexInFile": true,
+  "reindexInRealTime": false
 }

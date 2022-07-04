@@ -6,7 +6,9 @@
   "targetTags": true,
   "presetFields": [],
   "displayFieldsInContextMenu": false,
-  "globallyIgnoredFields": [],
+  "globallyIgnoredFields": [
+    ""
+  ],
   "classFilesPath": "",
   "getFromInlineField": true,
   "activateSnippet": false,
