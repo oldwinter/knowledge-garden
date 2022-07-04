@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Basisprozess",
+      "path": "Extras/Media/Images/Basisprozess.png"
+    },
+    {
+      "basename": "advanced-slides-templates模板2",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides/advanced-slides-templates模板2.md"
+    },
+    {
+      "basename": "tpl-con-3-2",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides/templates/tpl-con-3-2.md"
+    },
+    {
+      "basename": "tpl-con-2-1-box",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides/templates/tpl-con-2-1-box.md"
+    },
+    {
+      "basename": "ReizReaktion",
+      "path": "Extras/Media/Images/ReizReaktion.png"
+    },
+    {
+      "basename": "Title-Wide",
+      "path": "Extras/Media/Images/Title-Wide.png"
+    },
+    {
+      "basename": "如何学会考试",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何学会考试.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "正则表达式",
       "path": "Cards/永久笔记/正则表达式.md"
     },
@@ -35,10 +67,6 @@
     {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -171,34 +199,6 @@
     {
       "basename": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
       "path": "Cards/原子知识库/金句库/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md"
-    },
-    {
-      "basename": "第一性原理",
-      "path": "Cards/原子知识库/思维工具库/第一性原理.md"
-    },
-    {
-      "basename": "个人努力与社会进程",
-      "path": "Cards/原子知识库/思维工具库/个人努力与社会进程.md"
-    },
-    {
-      "basename": "麦特卡夫定律",
-      "path": "Cards/原子知识库/思维工具库/麦特卡夫定律.md"
-    },
-    {
-      "basename": "厕纸直接扔马桶",
-      "path": "Cards/原子知识库/习惯库/厕纸直接扔马桶.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - 图",
-      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - 图",
-      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg"
     }
   ],
   "omittedPaths": [
