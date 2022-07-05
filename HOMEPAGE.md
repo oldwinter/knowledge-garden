@@ -18,7 +18,7 @@ date modified: 2022-07-05
 | 整理一下剪藏 | [Cubox剪藏](cubox://) |
 | 规划今天的任务 | [滴答清单 - 今天](ticktick://v1/show?smartlist=today) |
 | 整理我的人生数据清单 | [notion 人生数据清单](notion://) |
-| 整理邮件 | [Gmail](microsoft-edge-http://tabs) |
+| 整理邮件 | [Gmail](gmail://) |
 
 | 我想要…… | 整理一下知识库 |
 | :------------------------------------ | :------------ |

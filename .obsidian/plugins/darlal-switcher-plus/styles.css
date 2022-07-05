@@ -1,0 +1,59 @@
+:root {
+  --symbol-base-padding: 0px;
+  --symbol-indent-padding: 12px;
+}
+
+.qsp-headings-indicator {}
+.qsp-note {}
+.qsp-path {}
+
+.qsp-path-indicator {
+  margin-right:4px;
+}
+
+.qsp-symbol-indicator {
+  color: var(--text-accent);
+  width: 2.5em;
+  text-align: center;
+  float: left;
+  font-weight: 800;
+}
+
+.qsp-symbol-text {}
+
+.qsp-symbol-l0 {
+  padding-left: var(--symbol-base-padding);
+}
+
+.qsp-symbol-l1 {
+  padding-left: calc(var(--symbol-base-padding) + var(--symbol-indent-padding));
+}
+
+.qsp-symbol-l2 {
+  padding-left: calc(var(--symbol-base-padding) + (2 * var(--symbol-indent-padding)));
+}
+
+.qsp-symbol-l3 {
+  padding-left: calc(var(--symbol-base-padding) + (3 * var(--symbol-indent-padding)));
+}
+
+.qsp-symbol-l4 {
+  padding-left: calc(var(--symbol-base-padding) + (4 * var(--symbol-indent-padding)));
+}
+
+.qsp-symbol-l5 {
+  padding-left: calc(var(--symbol-base-padding) + (5 * var(--symbol-indent-padding)));
+}
+
+.qsp-symbol-l6 {
+  padding-left: calc(var(--symbol-base-padding) + (6 * var(--symbol-indent-padding)));
+}
+
+.qsp-warning {
+  color: var(--text-error);
+}
+
+.qsp-setting-item-indent {
+  border: 0px;
+  padding-left: 36px;
+}

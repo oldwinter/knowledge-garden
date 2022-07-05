@@ -1,0 +1,176 @@
+/* Sets all the text color to red! */
+
+.another-quick-switcher__item {
+    display: flex;
+    align-items: center;
+}
+
+.another-quick-switcher__phantom_item {
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-faint);
+    opacity: 0.5;
+}
+
+.another-quick-switcher__item::before {
+    filter: invert(0.5) hue-rotate(180deg);
+    width: 20px;
+    margin-top: 5px;
+    margin-left: -30px;
+    margin-right: 10px;
+}
+.another-quick-switcher__starred_item::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPiA8cG9seWdvbiBwb2ludHM9IjEyIDIgMTUuMDkgOC4yNiAyMiA5LjI3IDE3IDE0LjE0IDE4LjE4IDIxLjAyIDEyIDE3Ljc3IDUuODIgMjEuMDIgNyAxNC4xNCAyIDkuMjcgOC45MSA4LjI2IDEyIDIiPjwvcG9seWdvbj4gPC9zdmc+");
+}
+.another-quick-switcher__phantom_item::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZD0iTTUxMC44NDYgMzkyLjY3M2MtNS4yMTEgMTIuMTU3LTI3LjIzOSAyMS4wODktNjcuMzYgMjcuMzE4Yy0yLjA2NCAyLjc4Ni0zLjc3NSAxNC42ODYtNi41MDcgMjMuOTU2Yy0xLjYyNSA1LjU2Ni01LjYyMyA4Ljg2OS0xMi4xMjggOC44NjlsLS4yOTctLjAwNWMtOS4zOTUgMC0xOS4yMDMtNC4zMjMtMzguODUyLTQuMzIzYy0yNi41MjEgMC0zNS42NjIgNi4wNDMtNTYuMjU0IDIwLjU4OGMtMjEuODMyIDE1LjQzOC00Mi43NzEgMjguNzY0LTc0LjAyNyAyNy4zOTljLTMxLjY0NiAyLjMzNC01OC4wMjUtMTYuOTA4LTcyLjg3MS0yNy40MDRjLTIwLjcxNC0xNC42NDMtMjkuODI4LTIwLjU4Mi01Ni4yNDEtMjAuNTgyYy0xOC44NjQgMC0zMC43MzYgNC43Mi0zOC44NTIgNC43MmMtOC4wNzMgMC0xMS4yMTMtNC45MjItMTIuNDIyLTkuMDRjLTIuNzAzLTkuMTg5LTQuNDA0LTIxLjI2My02LjUyMy0yNC4xM2MtMjAuNjc5LTMuMjA5LTY3LjMxLTExLjM0NC02OC40OTgtMzIuMTVhMTAuNjI3IDEwLjYyNyAwIDAgMSA4Ljg3Ny0xMS4wNjljNjkuNTgzLTExLjQ1NSAxMDAuOTI0LTgyLjkwMSAxMDIuMjI3LTg1LjkzNGMuMDc0LS4xNzYuMTU1LS4zNDQuMjM3LS41MTVjMy43MTMtNy41MzcgNC41NDQtMTMuODQ5IDIuNDYzLTE4Ljc1M2MtNS4wNS0xMS44OTYtMjYuODcyLTE2LjE2NC0zNi4wNTMtMTkuNzk2Yy0yMy43MTUtOS4zNjYtMjcuMDE1LTIwLjEyOC0yNS42MTItMjcuNTA0YzIuNDM3LTEyLjgzNiAyMS43MjUtMjAuNzM1IDMzLjAwMi0xNS40NTNjOC45MTkgNC4xODEgMTYuODQzIDYuMjk3IDIzLjU0NyA2LjI5N2M1LjAyMiAwIDguMjEyLTEuMjA0IDkuOTYtMi4xNzFjLTIuMDQzLTM1LjkzNi03LjEwMS04Ny4yOSA1LjY4Ny0xMTUuOTY5QzE1OC4xMjIgMjEuMzA0IDIyOS43MDUgMTUuNDIgMjUwLjgyNiAxNS40MmMuOTQ0IDAgOS4xNDEtLjA4OSAxMC4xMS0uMDg5YzUyLjE0OCAwIDEwMi4yNTQgMjYuNzggMTI2LjcyMyA4MS42NDNjMTIuNzc3IDI4LjY1IDcuNzQ5IDc5Ljc5MiA1LjY5NSAxMTYuMDA5YzEuNTgyLjg3MiA0LjM1NyAxLjk0MiA4LjU5OSAyLjEzOWM2LjM5Ny0uMjg2IDEzLjgxNS0yLjM4OSAyMi4wNjktNi4yNTdjNi4wODUtMi44NDYgMTQuNDA2LTIuNDYxIDIwLjQ4LjA1OGwuMDI5LjAxYzkuNDc2IDMuMzg1IDE1LjQzOSAxMC4yMTUgMTUuNTg5IDE3Ljg3Yy4xODQgOS43NDctOC41MjIgMTguMTY1LTI1Ljg3OCAyNS4wMThjLTIuMTE4LjgzNS00LjY5NCAxLjY1NS03LjQzNCAyLjUyNWMtOS43OTcgMy4xMDYtMjQuNiA3LjgwNS0yOC42MTYgMTcuMjcxYy0yLjA3OSA0LjkwNC0xLjI1NiAxMS4yMTEgMi40NiAxOC43NDhjLjA4Ny4xNjguMTY2LjM0Mi4yMzkuNTE1YzEuMzAxIDMuMDMgMzIuNjE1IDc0LjQ2IDEwMi4yMyA4NS45MzRjNi40MjcgMS4wNTggMTEuMTYzIDcuODc3IDcuNzI1IDE1Ljg1OXoiIGZpbGw9ImN1cnJlbnRDb2xvciI+PC9wYXRoPjwvc3ZnPg==")
+}
+.another-quick-switcher__gutter_hidden::before {
+    content: ""
+}
+
+.another-quick-switcher__item__icon {
+    position: absolute;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-muted);
+    left: 10px;
+    top: 6px;
+}
+
+.another-quick-switcher__item__entry {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.another-quick-switcher__item__title {
+    flex: 1;
+}
+
+.another-quick-switcher__item__hot-key-guide::before {
+    content: "[";
+}
+.another-quick-switcher__item__hot-key-guide {
+    padding-left: 5px;
+    font-size: 75%;
+    opacity: 0.7;
+}
+.another-quick-switcher__item__hot-key-guide::after {
+    content: "]";
+}
+
+.another-quick-switcher__header__floating-modal-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.another-quick-switcher__header__floating-prompt {
+    width: 500px;
+}
+.another-quick-switcher__header__floating-prompt .suggestion-item {
+    font-size: 90%;
+}
+
+.another-quick-switcher__item__title__header {
+    line-height: 1.1em;
+    display: list-item;
+    list-style: circle;
+}
+.another-quick-switcher__item__title__header_hit {
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--interactive-accent);
+    font-weight: bold;
+}
+.another-quick-switcher__item__title__header_hit__counter {
+    line-height: 1.1em;
+    font-size: 80%;
+    margin-right: 20px;
+    font-weight: bolder;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-accent)
+}
+.another-quick-switcher__item__title__header_no_hit {
+    /** do nothing */
+}
+
+.another-quick-switcher__item__title__header1 {
+    /* nothing */
+}
+.another-quick-switcher__item__title__header2 {
+    margin-left: 1em;
+}
+.another-quick-switcher__item__title__header3 {
+    margin-left: 2em;
+}
+.another-quick-switcher__item__title__header4 {
+    margin-left: 3em;
+}
+.another-quick-switcher__item__title__header5 {
+    margin-left: 4em;
+}
+.another-quick-switcher__item__title__header6 {
+    margin-left: 5em;
+}
+
+.another-quick-switcher__item__directory {
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-muted);
+    padding-left: 15px;
+}
+
+.another-quick-switcher__item__descriptions {
+}
+
+.another-quick-switcher__item__description {
+    font-size: 0.75em;
+    display: inline-block;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-muted);
+}
+
+.another-quick-switcher__item__description__alias {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.another-quick-switcher__item__description__tag {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/*mobile*/
+
+.is-mobile .another-quick-switcher__item {
+    display: flex;
+    align-items: center;
+}
+
+.is-mobile .another-quick-switcher__item__icon {
+    position: relative;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-muted);
+    left: 0;
+    top: 0;
+    padding-right: 3px;
+}
+
+.is-mobile .another-quick-switcher__item__entry {
+    display: block;
+}
+
+.is-mobile .another-quick-switcher__item__title {
+    display: block;
+}
+
+.is-mobile .another-quick-switcher__item__directory {
+    align-items: center;
+    font-size: 0.75em;
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-muted);
+}
+
+.another-quick-switcher__settings__ignore_path_patterns {
+    height: 120px;
+    width: 500px;
+}
