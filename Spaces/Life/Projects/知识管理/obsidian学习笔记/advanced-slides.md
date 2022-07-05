@@ -67,7 +67,7 @@ width: 960
 
 ## 奇技淫巧
 
-[[advanced slides 的 奇技淫巧]]
+[[advanced slides奇技淫巧]]
 
 ## 插件简介 %% fold %%
 
@@ -112,7 +112,7 @@ let c=3
 var d=5
 ```
 
-[[advanced slides 的 奇技淫巧]]
+[[advanced slides奇技淫巧]]
 
 ---
 

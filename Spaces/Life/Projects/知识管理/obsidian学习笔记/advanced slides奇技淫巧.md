@@ -1,8 +1,8 @@
 ---
 preloadIframes: true  
-title: advanced slides 的 奇技淫巧
+title: advanced slides 的奇技淫巧
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-06
 ---
 
 [Johnny学OB 被低估的Advanced Slides 之 代码笔记如何记_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1p44y1G7Do)
