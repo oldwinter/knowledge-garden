@@ -3,7 +3,7 @@ title: README
 date created: 2022-06-09
 tags: readme说明
 home: true
-date modified: 2022-07-05
+date modified: 2022-07-06
 ---
 
 ## 这是什么
@@ -43,16 +43,16 @@ date modified: 2022-07-05
     - 基于[[markdown]]，进行阅读、笔记和写作。即[[闪念笔记]]、[[文献笔记]]、[[永久笔记]]。
     - 当前阶段聚焦项目的[[文件夹和标签]]式的管理。即[[项目笔记]]。
     - 多端同步。借用第三方[[remotely save]]插件由[[onedrive]]负责云存储和同步。
-- [[logseq]] 备用
+- [[logseq]]备用
     - push至[[github]]。使用[[github action]]自动定时发布。即 [oldwinter 的知识花园](https://garden.oldwinter.top/)[^4]。
-- [[VSCode]] 辅助
+- [[VSCode]]辅助
     - 文本和文件的批量[[正则表达式]]编辑和删除。
-    - 管理 dot 隐藏文件等非 md 配置文件。
-    - 借用[[Github Pilot]]插件进行 AI 写作。
+    - 管理dot隐藏文件等非md配置文件。
+    - 借用[[Github Pilot]]插件进行AI写作。
 
 ## 周边 app 的联动与配合
 
-- 本库聚焦于[[个人知识管理]]，而完整的[[工作和生活的效率体系建设]]，在我看来，共有 4 项：
+- 本库聚焦于[[个人知识管理]]，而完整的[[工作和生活的效率体系建设]]，在我看来，共有4项：
     - [[个人信息管理系统]]。以[[cubox]]为中心。
     - [[个人任务管理系统]]。以[[滴答清单]]为中心。
     - [[个人知识笔记系统]]。以[[obsidian]]为中心。即本库。
@@ -64,7 +64,7 @@ date modified: 2022-07-05
 - 微信：oldwinter2
 - [[个人简介]]
 
-[^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方20美元1个月的发布服务地址（太贵了我随时可能不续费😂）：[🌲 oldwinterの数字花园](https://oldwinter.top)
+[^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方20美元1个月的发布服务地址：[🌲 oldwinterの数字花园](https://oldwinter.top)。太贵了我随时可能不续费😂。
 [^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
 [^4]: 这是[[obsidian publish 发布]]的方案替换方案2，基于开源项目[[logseq]]

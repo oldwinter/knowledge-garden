@@ -20,9 +20,9 @@
       "Title Key": "title"
     },
     "Escape YAML Special Characters": {
-      "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": false,
+      "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
       "Default Escape Character": "\"",
-      "Try to Escape Single Line Arrays": false
+      "Try to Escape Single Line Arrays": true
     },
     "Header Increment": {
       "Heading levels should only increment by one level at a time": false
@@ -73,7 +73,7 @@
       "Style": "consistent"
     },
     "No Bare URLs": {
-      "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": true
+      "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
     },
     "Two Spaces Between Lines with Content": {
       "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": false
