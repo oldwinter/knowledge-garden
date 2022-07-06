@@ -33,9 +33,9 @@ date modified: 2022-07-05
 
 - [[ACCESS 笔记组织法]]
 
-![开箱即用库首页截图](<https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)>
+![开箱即用库首页截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)
 
-![开箱即用库暗色模式截图](<https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)>
+![开箱即用库暗色模式截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)
 
 ## 本库涉及 app 及作用
 
