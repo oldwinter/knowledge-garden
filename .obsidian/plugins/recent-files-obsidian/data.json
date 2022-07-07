@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "Where It All Started - 第二大脑之缘起",
-      "path": "Spaces/第二大脑建设专题/Where It All Started - 第二大脑之缘起.md"
+      "basename": "Introduction The Promise of a Second Brain - 介绍：第二大脑的远景",
+      "path": "Spaces/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md"
     },
     {
       "basename": "Building a Second Brain 翻译和读书笔记",
       "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
     },
     {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "Where It All Started - 第二大脑之缘起",
+      "path": "Spaces/第二大脑建设专题/Where It All Started - 第二大脑之缘起.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "obsidian如何做英文阅读笔记",
+      "path": "Cards/obsidian如何做英文阅读笔记.md"
+    },
+    {
+      "basename": "What Is a Second Brain? - 第二大脑是什么？",
+      "path": "Spaces/第二大脑建设专题/What Is a Second Brain? - 第二大脑是什么？.md"
     },
     {
       "basename": "AboutTheGarden",
@@ -31,10 +47,6 @@
     {
       "basename": "🏷 本库标签",
       "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "👬🏻 别的数字花园收录",
@@ -67,10 +79,6 @@
     {
       "basename": "building your second brain读书笔记 - CODE方法",
       "path": "Spaces/第二大脑建设专题/building your second brain读书笔记 - CODE方法.md"
-    },
-    {
-      "basename": "Introduction The Promise of a Second Brain - 介绍：第二大脑的远景",
-      "path": "Spaces/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md"
     },
     {
       "basename": "上下文",
@@ -161,10 +169,6 @@
       "path": "Spaces/人+科技融合专题/个人效率系统打造/pkm 的定义.md"
     },
     {
-      "basename": "obsidian如何做英文阅读笔记",
-      "path": "Cards/obsidian如何做英文阅读笔记.md"
-    },
-    {
       "basename": "deeplink",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/deeplink.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "ios必备软件",
       "path": "Cards/永久笔记/ios必备软件.md"
-    },
-    {
-      "basename": "advanced-slides",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced-slides.md"
     }
   ],
   "omittedPaths": [
