@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "Building a Second Brain 翻译和读书笔记",
-      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
+      "basename": "自己部署一个v2ray服务",
+      "path": "Cards/永久笔记/自己部署一个v2ray服务.md"
+    },
+    {
+      "basename": "启动v2ray的客户端，连接并测试连通性",
+      "path": "Cards/永久笔记/启动v2ray的客户端，连接并测试连通性.md"
+    },
+    {
+      "basename": "启动v2ray的服务端的docker镜像",
+      "path": "Cards/永久笔记/启动v2ray的服务端的docker镜像.md"
+    },
+    {
+      "basename": "安装docker服务",
+      "path": "Cards/永久笔记/安装docker服务.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
+    },
+    {
+      "basename": "ACCESS文件夹索引的索引",
+      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
+    },
+    {
+      "basename": "文章发布集合",
+      "path": "Atlas/Scopes/文章发布集合.md"
+    },
+    {
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
+    },
+    {
+      "basename": "日记汇总",
+      "path": "Atlas/Scopes/日记汇总.md"
+    },
+    {
+      "basename": "🏷 本库标签",
+      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
+    },
+    {
+      "basename": "+ Index for Sources",
+      "path": "Sources/+ Index for Sources.md"
     },
     {
       "basename": "AboutTheGarden",
       "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "2022-07-08",
+      "path": "Calendar/每日日志/2022-07-08.md"
+    },
+    {
+      "basename": "Building a Second Brain 翻译和读书笔记",
+      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
+    },
+    {
+      "basename": "Introduction The Promise of a Second Brain - 介绍：第二大脑的远景",
+      "path": "Spaces/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md"
     },
     {
       "basename": "🆕 最近更新",
@@ -37,10 +93,6 @@
       "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "🎥 我的PPT",
       "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
     },
@@ -55,14 +107,6 @@
     {
       "basename": "👬🏻 别的数字花园收录",
       "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
-    },
-    {
-      "basename": "🏷 本库标签",
-      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
-      "basename": "Introduction The Promise of a Second Brain - 介绍：第二大脑的远景",
-      "path": "Spaces/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -147,58 +191,6 @@
     {
       "basename": "管理者喜欢内卷的员工吗",
       "path": "Spaces/Work/Areas/个人职业生涯/管理者喜欢内卷的员工吗.md"
-    },
-    {
-      "basename": "和上级意见不一致时，你会怎么办",
-      "path": "Spaces/Work/Areas/个人职业生涯/和上级意见不一致时，你会怎么办.md"
-    },
-    {
-      "basename": "没工作这段时间在做什么",
-      "path": "Spaces/Work/Areas/个人职业生涯/没工作这段时间在做什么.md"
-    },
-    {
-      "basename": "面试自我介绍和常见问题回答",
-      "path": "Spaces/Work/Areas/个人职业生涯/面试自我介绍和常见问题回答.md"
-    },
-    {
-      "basename": "明文数据",
-      "path": "Spaces/Work/Areas/个人职业生涯/明文数据.md"
-    },
-    {
-      "basename": "你怎么评价自己",
-      "path": "Spaces/Work/Areas/个人职业生涯/你怎么评价自己.md"
-    },
-    {
-      "basename": "你的家庭情况是怎么样",
-      "path": "Spaces/Work/Areas/个人职业生涯/你的家庭情况是怎么样.md"
-    },
-    {
-      "basename": "本机启用ssh自动登陆",
-      "path": "Spaces/Work/Areas/个人职业生涯/本机启用ssh自动登陆.md"
-    },
-    {
-      "basename": "摆烂",
-      "path": "Spaces/Work/Areas/个人职业生涯/摆烂.md"
-    },
-    {
-      "basename": "pkm 的定义",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/pkm 的定义.md"
-    },
-    {
-      "basename": "deeplink",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/deeplink.md"
-    },
-    {
-      "basename": "树上开花",
-      "path": "Cards/永久笔记/树上开花.md"
-    },
-    {
-      "basename": "linux必备软件",
-      "path": "Cards/永久笔记/linux必备软件.md"
-    },
-    {
-      "basename": "思考的过程容器",
-      "path": "Cards/永久笔记/思考的过程容器.md"
     }
   ],
   "omittedPaths": [
