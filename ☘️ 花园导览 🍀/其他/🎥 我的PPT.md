@@ -1,5 +1,4 @@
 ---
-title: "\U0001F3A5 我的PPT"
 date created: 2022-07-03
 date modified: 2022-07-05
 ---

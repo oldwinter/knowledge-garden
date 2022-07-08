@@ -5,6 +5,8 @@ date modified: 2022-07-07
 tags: TOC
 ---
 
+[[Building a second brain 读书笔记前言]]
+
 尝试用14天时间，每天抽1个小时翻译一个章节的[[@Tiago Forte]]的这本第二大脑新书。
 
 目标：最后产出：

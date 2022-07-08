@@ -1,12 +1,92 @@
 {
   "recentFiles": [
     {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+    },
+    {
+      "basename": "🗜 效率工具",
+      "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "📩 订阅newsletter",
+      "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
+    },
+    {
+      "basename": "👬🏻 别的数字花园收录",
+      "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
+    },
+    {
+      "basename": "🏷 本库标签",
+      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
+    },
+    {
+      "basename": "🏗 本库路线图",
+      "path": "☘️ 花园导览 🍀/其他/🏗 本库路线图.md"
+    },
+    {
+      "basename": "🎥 我的PPT",
+      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "building your second brain读书笔记 - CODE方法",
+      "path": "Spaces/第二大脑建设专题/building your second brain读书笔记 - CODE方法.md"
+    },
+    {
+      "basename": "Building a Second Brain 翻译和读书笔记",
+      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
+    },
+    {
+      "basename": "Building a second brain 读书笔记前言",
+      "path": "Spaces/第二大脑建设专题/Building a second brain 读书笔记前言.md"
+    },
+    {
+      "basename": "2022-07-08",
+      "path": "Calendar/每日日志/2022-07-08.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "obsidian 从了解到沉醉 - PPT",
+      "path": "Atlas/TOCs/obsidian 从了解到沉醉 - PPT.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
+    },
+    {
       "basename": "自己部署一个v2ray服务",
       "path": "Cards/永久笔记/自己部署一个v2ray服务.md"
     },
     {
       "basename": "启动v2ray的客户端，连接并测试连通性",
       "path": "Cards/永久笔记/启动v2ray的客户端，连接并测试连通性.md"
+    },
+    {
+      "basename": "科学上网",
+      "path": "Cards/永久笔记/科学上网.md"
     },
     {
       "basename": "启动v2ray的服务端的docker镜像",
@@ -37,52 +117,12 @@
       "path": "Atlas/Scopes/日记汇总.md"
     },
     {
-      "basename": "🏷 本库标签",
-      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
       "basename": "+ Index for Sources",
       "path": "Sources/+ Index for Sources.md"
     },
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "2022-07-08",
-      "path": "Calendar/每日日志/2022-07-08.md"
-    },
-    {
-      "basename": "Building a Second Brain 翻译和读书笔记",
-      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
-    },
-    {
       "basename": "Introduction The Promise of a Second Brain - 介绍：第二大脑的远景",
       "path": "Spaces/第二大脑建设专题/Introduction The Promise of a Second Brain - 介绍：第二大脑的远景.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "🧰 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
-      "basename": "🗜 效率工具",
-      "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
-    },
-    {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "第二大脑与数字花园",
@@ -91,22 +131,6 @@
     {
       "basename": "第二大脑",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "🎥 我的PPT",
-      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
-    },
-    {
-      "basename": "🏗 本库路线图",
-      "path": "☘️ 花园导览 🍀/其他/🏗 本库路线图.md"
-    },
-    {
-      "basename": "📩 订阅newsletter",
-      "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
-    },
-    {
-      "basename": "👬🏻 别的数字花园收录",
-      "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -145,10 +169,6 @@
       "path": "Extras/Media/Images/logo_transparent 1.png"
     },
     {
-      "basename": "building your second brain读书笔记 - CODE方法",
-      "path": "Spaces/第二大脑建设专题/building your second brain读书笔记 - CODE方法.md"
-    },
-    {
       "basename": "上下文",
       "path": "Cards/永久笔记/上下文.md"
     },
@@ -179,18 +199,6 @@
     {
       "basename": "个人职业生涯",
       "path": "Spaces/Work/Areas/个人职业生涯/个人职业生涯.md"
-    },
-    {
-      "basename": "给xx的求职建议",
-      "path": "Spaces/Work/Areas/个人职业生涯/给xx的求职建议.md"
-    },
-    {
-      "basename": "过程和结果可知，则效果和目的可达",
-      "path": "Spaces/Work/Areas/个人职业生涯/过程和结果可知，则效果和目的可达.md"
-    },
-    {
-      "basename": "管理者喜欢内卷的员工吗",
-      "path": "Spaces/Work/Areas/个人职业生涯/管理者喜欢内卷的员工吗.md"
     }
   ],
   "omittedPaths": [

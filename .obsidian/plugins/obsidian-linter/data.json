@@ -16,7 +16,7 @@
       "Format": "YYYY-MM-DD"
     },
     "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": true,
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
       "Title Key": "title"
     },
     "Escape YAML Special Characters": {
