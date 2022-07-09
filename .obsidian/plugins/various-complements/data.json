@@ -95,83 +95,11 @@
         }
       }
     },
-    "人生赢家": {
-      "人生赢家": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654782781664
-        }
-      }
-    },
-    "微信": {
-      "微信": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1654782990028
-        }
-      }
-    },
-    "读书会": {
-      "读书会": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1654783011279
-        }
-      }
-    },
-    "过程记录，持续迭代，兜底措施": {
-      "过程记录，持续迭代，兜底措施": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654787514914
-        }
-      }
-    },
-    "闪念笔记": {
-      "闪念笔记": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1654789715510
-        }
-      }
-    },
-    "所有": {
-      "所有": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1654825679873
-        }
-      }
-    },
     "obsidian": {
       "obsidian": {
         "internalLink": {
           "count": 6,
           "lastUpdated": 1656864302684
-        }
-      }
-    },
-    "个人工作流": {
-      "个人工作流": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654827060827
-        }
-      }
-    },
-    "工作和生活的效率体系建设": {
-      "工作和生活的效率体系建设": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654827138869
-        }
-      }
-    },
-    "个人任务管理系统": {
-      "个人任务管理系统": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1654827196206
         }
       }
     },
@@ -496,8 +424,8 @@
     "article/done": {
       "article/done": {
         "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1656505833512
+          "count": 3,
+          "lastUpdated": 1657303544205
         }
       }
     },

@@ -17,11 +17,10 @@ date modified: 2022-07-05
 
 距离上次写这篇臭臭的却有1W+阅读量的长文[Obsidian 是可以一辈子不换的笔记软件吗](https://www.v2ex.com/t/847011)，过去2个月了，这期间，我一直深度使用Obsidian，越用越爱不释手，也积累了1000+条笔记，网上有很多示例库，界面装修可谓华丽，但都缺少实际笔记内容填充，或把obsidian搞得all in one大而全。我想补足这2个方面的缺憾。
 
-另一方面，我觉得传统博客对我这种只想小打小闹写点东西的人而言，太过于消耗时间了，数字花园这种新形式很符合我的口味。而Obsidian的publish服务确实贵，普通人表示难以承受，我从YouTube和Github探索了好久，整出了3个还算好用的开源免费方案，数据都是用的同一套笔记库：
+另一方面，我觉得传统博客对我这种只想小打小闹写点东西的人而言，太过于消耗时间了，数字花园这种新形式很符合我的口味。而Obsidian的publish服务确实贵，普通人表示难以承受，我从YouTube和Github探索了好久，整出了2个还算好用的开源免费方案，数据都是用的同一套笔记库：
 
-3个基于免费开源的数字花园链接如下（笔记数据都是用的那1000+笔记的开源库）：
+2个基于免费开源的数字花园链接如下（笔记数据都是用的那1000+笔记的开源库）：
 - [https://notes.oldwinter.top/](https://notes.oldwinter.top/)
-- [https://blog.oldwinter.top/](https://blog.oldwinter.top/)
 - [https://garden.oldwinter.top/](https://garden.oldwinter.top/)
 
 ## 欢迎已经深度用obsidian超1个月的朋友一起交流
