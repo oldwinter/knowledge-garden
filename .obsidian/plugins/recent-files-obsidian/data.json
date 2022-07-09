@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "🧰 本库使用指南",
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
       "path": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "📩 订阅newsletter",
