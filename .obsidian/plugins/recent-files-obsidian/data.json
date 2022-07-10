@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-07-10",
+      "path": "Calendar/每日日志/2022-07-10.md"
+    },
+    {
+      "basename": "2022-07-04",
+      "path": "Calendar/每日日志/2022-07-04.md"
+    },
+    {
+      "basename": "2022-07-05",
+      "path": "Calendar/每日日志/2022-07-05.md"
+    },
+    {
+      "basename": "2022-07-06",
+      "path": "Calendar/每日日志/2022-07-06.md"
+    },
+    {
+      "basename": "2022-07-07",
+      "path": "Calendar/每日日志/2022-07-07.md"
+    },
+    {
+      "basename": "2022-07-08",
+      "path": "Calendar/每日日志/2022-07-08.md"
+    },
+    {
+      "basename": "2022-07-09",
+      "path": "Calendar/每日日志/2022-07-09.md"
+    },
+    {
       "basename": "2022-06-11",
       "path": "Calendar/每日日志/2022-06-11.md"
     },
@@ -65,10 +93,6 @@
       "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
     },
     {
-      "basename": "2022-07-10",
-      "path": "Calendar/每日日志/2022-07-10.md"
-    },
-    {
       "basename": "《围城》",
       "path": "Sources/Books/读书笔记/虚构类读物/《围城》.md"
     },
@@ -79,10 +103,6 @@
     {
       "basename": "📩 订阅newsletter",
       "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
-    },
-    {
-      "basename": "2022-07-09",
-      "path": "Calendar/每日日志/2022-07-09.md"
     },
     {
       "basename": "🏗 本库路线图",
@@ -141,10 +161,6 @@
       "path": "Spaces/第二大脑建设专题/Building a second brain 读书笔记前言.md"
     },
     {
-      "basename": "2022-07-08",
-      "path": "Calendar/每日日志/2022-07-08.md"
-    },
-    {
       "basename": "+ About Spaces",
       "path": "Spaces/+ About Spaces.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "+ Index for Spaces",
       "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
-      "basename": "ACCESS文件夹索引的索引",
-      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
-    },
-    {
-      "basename": "文章发布集合",
-      "path": "Atlas/Scopes/文章发布集合.md"
-    },
-    {
-      "basename": "+ Index for Cards",
-      "path": "Cards/+ Index for Cards.md"
-    },
-    {
-      "basename": "日记汇总",
-      "path": "Atlas/Scopes/日记汇总.md"
     }
   ],
   "omittedPaths": [
