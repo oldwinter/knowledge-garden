@@ -1,12 +1,15 @@
 ---
-title: README
 date created: 2022-06-09
-tags: readme说明
+date modified: 2022-07-10
 home: true
-date modified: 2022-07-06
+tags: readme说明
+title: README
 ---
+
 [![](https://api.checklyhq.com/v1/badges/checks/3117d17b-44cf-47ee-a400-68bab9a0c76e?style=flat&theme=default&responseTime=true)](https://oldwinter.top)
+
 [![](https://api.checklyhq.com/v1/badges/checks/0861a3c7-d17c-43e6-a59a-977bc4a87b64?style=flat&theme=default&responseTime=true)](https://notes.oldwinter.top)
+
 [![](https://api.checklyhq.com/v1/badges/checks/895cedb5-dcc4-4495-a53d-62bb5ef178be?style=flat&theme=default&responseTime=true)](https://garden.oldwinter.top)
 
 ## 这是什么
@@ -68,6 +71,9 @@ date modified: 2022-07-06
 - [[个人简介]]
 
 [^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方20美元1个月的发布服务地址：[🌲 oldwinterの数字花园](https://oldwinter.top)。太贵了我随时可能不续费😂。
+
 [^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]
+
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法
+
 [^4]: 这是[[obsidian publish 发布]]的方案替换方案2，基于开源项目[[logseq]]

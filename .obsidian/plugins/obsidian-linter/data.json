@@ -19,10 +19,22 @@
       "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
       "Title Key": "title"
     },
+    "YAML Title Alias": {
+      "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": false,
+      "YAML aliases section style": "Multi-line array",
+      "Preserve existing aliases section style": true,
+      "Keep alias that matches the filename": false
+    },
     "Escape YAML Special Characters": {
       "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
       "Default Escape Character": "\"",
       "Try to Escape Single Line Arrays": true
+    },
+    "YAML Key Sort": {
+      "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true,
+      "YAML Key Priority Sort Order": "",
+      "Priority Keys at Start of YAML": true,
+      "YAML Sort Order for Other Keys": "Ascending Alphabetical"
     },
     "Header Increment": {
       "Heading levels should only increment by one level at a time": false
@@ -111,6 +123,9 @@
     },
     "Space between Chinese and English or numbers": {
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
+    },
+    "Remove Space around Fullwidth Characters": {
+      "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab)": false
     },
     "Remove link spacing": {
       "Removes spacing around link text.": false
