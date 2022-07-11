@@ -1,5 +1,5 @@
 {
-  "excalibrainFilepath": "excalibrain.md",
+  "excalibrainFilepath": "Extras/Draws/excalibrain.md",
   "hierarchy": {
     "parents": [
       "Parent",
@@ -23,18 +23,20 @@
     ]
   },
   "inferAllLinksAsFriends": false,
-  "renderAlias": true,
+  "renderAlias": false,
   "nodeTitleScript": "",
   "backgroundColor": "#0c3e6aff",
-  "excludeFilepaths": [],
+  "excludeFilepaths": [
+    "Extras"
+  ],
   "showInferredNodes": true,
-  "showAttachments": true,
+  "showAttachments": false,
   "showVirtualNodes": true,
   "showFolderNodes": false,
   "showTagNodes": false,
   "showPageNodes": true,
   "maxItemCount": 30,
-  "renderSiblings": true,
+  "renderSiblings": false,
   "baseNodeStyle": {
     "prefix": "",
     "backgroundColor": "#00000066",
@@ -144,12 +146,28 @@
     "Calendar/微信群公告.md",
     "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md",
     "README.md",
-    "Atlas/TOCs/TOCs.md",
     "HOMEPAGE.md",
     "Cards/模板与套路.md",
     "Sources/Books/读书笔记/《思考·快与慢》.md",
     "Cards/原子知识库/单词库&概念库/春秋笔法.md",
-    "Spaces/人+科技融合专题/在网上提问的智慧.md"
+    "Spaces/人+科技融合专题/在网上提问的智慧.md",
+    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+    "☘️ 花园导览 🍀/🆕 最近更新.md",
+    "☘️ 花园导览 🍀/🏹 已发布长文.md",
+    "☘️ 花园导览 🍀/其他/🏗 本库路线图.md",
+    "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.md",
+    "☘️ 花园导览 🍀/🗜 效率工具.md",
+    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md",
+    "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
+    "Extras/Draws/ExcaliBrain Snapshot - ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.excalidraw.md",
+    "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.svg",
+    "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀_0.excalidraw.md",
+    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+    "Atlas/MOCs/MOCs.md",
+    "IAAS、PAAS与SAAS",
+    "Cards/永久笔记/第二大脑与数字花园.md",
+    "Atlas/TOCs/TOCs.md",
+    "Spaces/人+科技融合专题/个人效率系统打造/linux常用命令行.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",
