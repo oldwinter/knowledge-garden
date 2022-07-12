@@ -15,7 +15,7 @@ date modified: 2022-07-05
 
 其实有个最好用的插件，不仅能满足当前同步方案的基本效果，还能实现实时同步的效果，亲测完美，延时小于 2s。官方的图如下：
 
-![](<https://forum-zh.obsidian.md/uploads/default/original/2X/e/e631ee36b7b2906e60edda58e5e43cdb57f9544b.gif)>
+![](https://forum-zh.obsidian.md/uploads/default/original/2X/e/e631ee36b7b2906e60edda58e5e43cdb57f9544b.gif)
 
 这个帖子已经完整讨论了 LiveSync 插件的使用方式。[不使用第三方软件实现Obsidian多平台实时同步 - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/2811)
 
@@ -59,9 +59,9 @@ date modified: 2022-07-05
 
 - 安装 livesync 插件，并打开配置项
 - 从上一步，找到自己申请的服务器的公网 ip 地址，比如 121.111.173.186，按照如下填写，密码在上一步的命令行里面，默认是 paasword。接着点击 test，确认连通即可。
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041609451.png)>
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041609451.png)
 - 接着配置一下同步策略，我的策略如下。livesync 对于未限制后台的手机端而言，可能还是有点耗电，酌情使用。
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041613906.png)>
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041613906.png)
 
 #### 手机端新建空库安装 client 端，配置并连接至自己的 server 端，等待同步完成。 - 3 到 10 分钟
 
@@ -72,10 +72,10 @@ date modified: 2022-07-05
 #### 同步第三方插件及其配置 - 3 到 10 分钟
 
 - 若要使用插件同步功能，则需要在电脑端按下图设置，将数据库加密存储
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041616069.png)>
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041616069.png)
 - 接着打开同步插件的功能即可
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041617016.png)>
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041638512.png)>
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041617016.png)
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041638512.png)
 - 手机端同理，执行上面 2 步。不同之处如下：
 	- 手机端选择 apply and receive，而不是 apply and send
 	- 手机端的设备和仓库名，取一个和电脑端能区分开的名字即可。

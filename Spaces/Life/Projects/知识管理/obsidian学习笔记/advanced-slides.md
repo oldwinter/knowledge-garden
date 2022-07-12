@@ -257,11 +257,11 @@ note 之后，就是演讲者自己的笔记和注释
 --
 <split even>
 
-![](<https://picsum.photos/id/1005/250/250)>
+![](https://picsum.photos/id/1005/250/250)
 
-![](<https://picsum.photos/id/1010/250/250)>
+![](https://picsum.photos/id/1010/250/250)
 
-![](<https://picsum.photos/id/1025/250/250)>
+![](https://picsum.photos/id/1025/250/250)
 
 </split>
 
@@ -291,38 +291,38 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split wrap="4">
 
-![](<https://picsum.photos/id/1010/250/250)>
+![](https://picsum.photos/id/1010/250/250)
 
-![](<https://picsum.photos/id/1011/250/250)>
+![](https://picsum.photos/id/1011/250/250)
 
-![](<https://picsum.photos/id/1012/250/250)>
+![](https://picsum.photos/id/1012/250/250)
 
-![](<https://picsum.photos/id/1013/250/250)>
+![](https://picsum.photos/id/1013/250/250)
 
-![](<https://picsum.photos/id/1014/250/250)>
+![](https://picsum.photos/id/1014/250/250)
 
-![](<https://picsum.photos/id/1015/250/250)>
+![](https://picsum.photos/id/1015/250/250)
 
 </split>
 
 --
 <split no-margin>
 
-![](<https://picsum.photos/id/1001/250/250)>
+![](https://picsum.photos/id/1001/250/250)
 
-![](<https://picsum.photos/id/1002/250/250)>
+![](https://picsum.photos/id/1002/250/250)
 
-![](<https://picsum.photos/id/1003/250/250)>
+![](https://picsum.photos/id/1003/250/250)
 
-![](<https://picsum.photos/id/1004/250/250)>
+![](https://picsum.photos/id/1004/250/250)
 
-![](<https://picsum.photos/id/1005/250/250)>
+![](https://picsum.photos/id/1005/250/250)
 
-![](<https://picsum.photos/id/1006/250/250)>
+![](https://picsum.photos/id/1006/250/250)
 
-![](<https://picsum.photos/id/1009/250/250)>
+![](https://picsum.photos/id/1009/250/250)
 
-![](<https://picsum.photos/id/1008/250/250)>
+![](https://picsum.photos/id/1008/250/250)
 
 </split>
 --

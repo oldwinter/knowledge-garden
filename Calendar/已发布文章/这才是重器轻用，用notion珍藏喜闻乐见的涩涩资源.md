@@ -79,7 +79,7 @@ date modified: 2022-07-05
 		- 14 年那会儿，icloud 曾经出现过泄露事件，当时很多著名女星的私密照片都被人拿出来各种传播了，比如 [[饥饿游戏]] 的女主詹妮弗劳伦斯。
 		- 云服务厂商现在已经做的很完善了，你会听说 99.999% 的可靠性承诺，也就是说，当你的数据丢失了，一般是发生了超大的天灾人祸。
 - 我的目录参考（精简并马赛克处理过）：
-- ![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/202204142144961.png)>
+- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202204142144961.png)
 
 ## TIPS 放最后
 

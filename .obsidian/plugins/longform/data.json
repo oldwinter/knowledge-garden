@@ -1,20 +1,8 @@
 {
   "version": 2,
-  "projects": {
-    "Calendar/每日日志": {
-      "path": "Calendar/每日日志",
-      "indexFile": "IndexLF",
-      "draftsPath": "Drafts/"
-    },
-    "Spaces/Life/Projects/我的小说": {
-      "path": "Spaces/Life/Projects/我的小说",
-      "indexFile": "Index小说",
-      "draftsPath": "Drafts/"
-    }
-  },
-  "selectedProject": "Spaces/Life/Projects/我的小说",
-  "selectedDraft": "Draft 1",
-  "userScriptFolder": null,
+  "projects": {},
+  "selectedProject": null,
+  "selectedDraft": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -59,5 +47,6 @@
         }
       ]
     }
-  }
+  },
+  "userScriptFolder": null
 }

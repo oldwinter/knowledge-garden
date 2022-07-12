@@ -4,8 +4,7 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
   "userIgnoreFilters": [
-    "logseq/",
-    "Spaces/Work/"
+    "logseq/"
   ],
   "readableLineLength": true,
   "strictLineBreaks": true,

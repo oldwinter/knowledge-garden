@@ -1,7 +1,7 @@
 ---
-title: PKM系统的不同侧重点-四象限图 by lyt
 date created: 2022-06-22
-date modified: 2022-07-05
+date modified: 2022-07-12
+title: PKM系统的不同侧重点-四象限图 by lyt
 ---
 
 [[个人知识管理]] 系统当下存在 3 对矛盾：
@@ -12,7 +12,7 @@ date modified: 2022-07-05
 - structure 和 chaos 的对立
 注：原文的对立，用的词语是 tension，也有 [[张力]] 的意思。
 
-![](<https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206221733367.png)>
+![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206221733367.png)
 
 | - | folders | links |
 | --------- | -------- | ------- |

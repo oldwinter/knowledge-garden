@@ -117,7 +117,7 @@ date modified: 2022-07-05
 
 安装后，打开 Templater 插件的设置，然后在 Template 文件夹位置，将 Vault 中的本地文件夹设置为模板文件夹。这是 Templater 用来查找所有模板和脚本的文件夹。我们将把我们的 FastStart 脚本放在这个文件夹中。
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*zrsbKmvBdHsY9K8UF44sxw.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*zrsbKmvBdHsY9K8UF44sxw.png)
 
 黑曜石中的模板设置
 
@@ -127,7 +127,7 @@ date modified: 2022-07-05
 
 在您刚刚创建的文件**FastStart-StartupScript**中，将脚本的代码复制到此文件中。让我告诉你在哪里可以找到脚本的代码。转到此 [链接](https://gist.github.com/TfT脚本er/29f838b51338a5c7f46b04973bd0f401)。它包含我们需要的代码。单击链接后，您应该会在浏览器中看到此页面：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*_f17PcUIDRaXvHBMT6kamA.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*_f17PcUIDRaXvHBMT6kamA.png)
 
 FastScript Javascript 代码
 
@@ -135,7 +135,7 @@ FastScript Javascript 代码
 
 这是 JavaScript 代码。选择它，复制它，然后将它粘贴到 Obsidian 中的**FastStart-StartupScript 文件中。**这就是 FastStart-StartupScript 在 Obsidian 中的样子。
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*lD7crUfVRyq4YQdkygdj2w.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*lD7crUfVRyq4YQdkygdj2w.png)
 
 > 注意：重要的是此文件不包含任何其他内容，仅包含您粘贴到文件中的代码。
 
@@ -145,7 +145,7 @@ FastScript Javascript 代码
 
 使用此 [链接](https://gist.github.com/TfT脚本er/94e9327e7310217ef5c98ed155b1f5e7) 中的代码，将其粘贴到您刚刚在 Vault 中创建的文件中。该文件在您的 Vault 中应如下所示：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*i5MYer7lThEjOt0O1xm6eg.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*i5MYer7lThEjOt0O1xm6eg.png)
 
 ## _FastStart-Plugins-ShortDelay 和 FastStart-Plugins-LongDelay_
 
@@ -166,7 +166,7 @@ FastScript Javascript 代码
 
 单击添加新启动模板并将其设置为我们的**FastStart-StartupScript**文件，如下面的屏幕所示：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*NnZnmantCg0Pof6lOlw4Kg.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*NnZnmantCg0Pof6lOlw4Kg.png)
 
 现在，当 Templater 启动时，将加载**FastStart-StartupScript 脚本文件。**
 
@@ -191,7 +191,7 @@ FastScript Javascript 代码
 
 您可能还会发现在社区插件设置中启用调试启动时间很有帮助。它提供了有关插件启动所需时间的反馈：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*3p22F-rKOGo3O2j7kSnUJA.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*3p22F-rKOGo3O2j7kSnUJA.png)
 
 我只会谨慎使用此功能；它不是一个精确的调试工具。我发现每次启动都会得到不同的结果。但它仍然很有价值。
 
@@ -230,7 +230,7 @@ FastStart 基于插件启动的 3 个阶段：
 
 这是我的保险库中 _ 的 FastStart-Plugins-ShortDelay_ 文件的样子：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*nD5dWtDWB1uG7krygdzuiA.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*nD5dWtDWB1uG7krygdzuiA.png)
 
 您可能认识其中一些插件，但也许您从未见过它们的 ID。
 
@@ -238,13 +238,13 @@ FastStart 基于插件启动的 3 个阶段：
 
 要使用此脚本，请在您的 Vault 中创建一个空白文件。然后从命令面板中，运行命令**Templater：打开插入模板：**
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*ycJQHqG4VqMiIZtQdmrccQ.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*ycJQHqG4VqMiIZtQdmrccQ.png)
 
 然后从模板列表中选择 _FastStart-GenerateListOfInstalledPlugins。_
 
 此脚本应生成所有插件的文件。这是我在黑曜石阅读视图中的列表：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*s0538hudvPNk8DUUE4On4g.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*s0538hudvPNk8DUUE4On4g.png)
 
 从这里，您可以找到所有插件的 ID。
 
@@ -254,7 +254,7 @@ FastStart 基于插件启动的 3 个阶段：
 
 现在我们要打开我们在 Vault 中创建的 _FastStart-Plugins-LongDelay 文件。_ 该文件将包含我们要启动的其余插件，但稍晚一些。这是我的样子：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*EJtWI9gyRQVoowDIgGHDnA.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*EJtWI9gyRQVoowDIgGHDnA.png)
 
 如您所见，此文件类似于 _FastStart-Plugins-ShortDelay_。它是相同的。它是插件 ID 的列表。
 
@@ -286,7 +286,7 @@ FastStart 基于插件启动的 3 个阶段：
 
 默认情况下，这些脚本在 2 秒后加载第一组插件，在 30 秒后加载第二组插件。这些数字在这张图片中突出显示：
 
-![](<https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*2Q4kWJMsuRFamMn1AeEiow.png)>
+![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*2Q4kWJMsuRFamMn1AeEiow.png)
 
 您可以通过更改数字来增加或减少这些延迟时间。例如，在一些速度较慢的设备上，您可能希望在 Obsidian 启动后等待 5 到 10 秒，因此将数字从 2 更改为 5。
 

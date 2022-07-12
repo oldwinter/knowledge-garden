@@ -2,7 +2,6 @@
   "remotely-save",
   "obsidian-advanced-uri",
   "table-editor-obsidian",
-  "obsidian-advanced-slides",
   "obsidian-auto-link-title",
   "customizable-page-header-buttons",
   "dataview",
@@ -28,14 +27,7 @@
   "obsidian-linter",
   "periodic-notes",
   "templater-obsidian",
-  "obsidian-excalidraw-plugin",
-  "obsidian-markbase",
   "settings-search",
-  "obsidian-pandoc-reference-list",
-  "longform-refactor",
-  "obsidian-another-quick-switcher",
   "sliding-panes-obsidian",
-  "darlal-switcher-plus",
-  "obsidian-sortable",
-  "excalibrain"
+  "obsidian-sortable"
 ]

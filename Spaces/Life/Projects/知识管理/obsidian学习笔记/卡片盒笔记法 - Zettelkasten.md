@@ -33,7 +33,7 @@ date modified: 2022-07-05
 
 ## 卡片要素
 
-![](<https://raw.githubusercontent.com/oldwinter/my-pics/master/20220306231443.png)>
+![](https://raw.githubusercontent.com/oldwinter/my-pics/master/20220306231443.png)
 
  
 

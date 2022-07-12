@@ -2,8 +2,6 @@
   "pluginList": [
     "nothingislost/obsidian-dynamic-highlights",
     "Quorafind/Obsidian-Bionic-Reading",
-    "stefanopagliari/bibnotes",
-    "zhaohongxuan/obsidian-weread-plugin",
     "liamcain/obsidian-periodic-notes"
   ],
   "pluginSubListFrozenVersion": [],

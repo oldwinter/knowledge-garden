@@ -1,8 +1,68 @@
 {
   "recentFiles": [
     {
+      "basename": "文章发布工作流梳理",
+      "path": "Calendar/文章草稿/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "正则表达式",
+      "path": "Cards/永久笔记/正则表达式.md"
+    },
+    {
+      "basename": "tpl-con-2-1-box",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides模板/templates/tpl-con-2-1-box.md"
+    },
+    {
+      "basename": "tpl-con-3-2",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides模板/templates/tpl-con-3-2.md"
+    },
+    {
+      "basename": "PKM系统的不同侧重点-四象限图 by lyt",
+      "path": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/永久笔记/ACCESS 笔记组织法.md"
+    },
+    {
+      "basename": "MECE法则",
+      "path": "Sources/Books/读书笔记/MECE法则.md"
+    },
+    {
+      "basename": "《金字塔原理》",
+      "path": "Sources/Books/读书笔记/《金字塔原理》.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
       "basename": "linux常用命令行",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/linux常用命令行.md"
+    },
+    {
+      "basename": "TOCs",
+      "path": "Atlas/TOCs/TOCs.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "Atlas/MOCs/MOCs.md"
+    },
+    {
+      "basename": "2022-07-12",
+      "path": "Calendar/每日日志/2022-07-12.md"
+    },
+    {
+      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
+      "path": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
     },
     {
       "basename": "tldr",
@@ -15,10 +75,6 @@
     {
       "basename": "thefuck",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/thefuck.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "Atlas/TOCs/TOCs.md"
     },
     {
       "basename": "excalibrain",
@@ -45,20 +101,8 @@
       "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg"
     },
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
       "basename": "📩 订阅newsletter",
       "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "🆕 最近更新",
@@ -117,10 +161,6 @@
       "path": "Calendar/每日日志/2022-07-13.md"
     },
     {
-      "basename": "2022-07-12",
-      "path": "Calendar/每日日志/2022-07-12.md"
-    },
-    {
       "basename": "2022-07-10",
       "path": "Calendar/每日日志/2022-07-10.md"
     },
@@ -155,50 +195,6 @@
     {
       "basename": "Pasted image 20220611151616",
       "path": "Extras/Media/Images/Pasted image 20220611151616.png"
-    },
-    {
-      "basename": "Pasted Image 20220320203200_352",
-      "path": "Extras/Media/Images/Pasted Image 20220320203200_352.png"
-    },
-    {
-      "basename": "Pasted Image 20220320202845_759",
-      "path": "Extras/Media/Images/Pasted Image 20220320202845_759.png"
-    },
-    {
-      "basename": "Pasted Image 20220320202815_760",
-      "path": "Extras/Media/Images/Pasted Image 20220320202815_760.png"
-    },
-    {
-      "basename": "Pasted Image 20220320191818_566",
-      "path": "Extras/Media/Images/Pasted Image 20220320191818_566.png"
-    },
-    {
-      "basename": "Pasted Image 20220320191102_767",
-      "path": "Extras/Media/Images/Pasted Image 20220320191102_767.png"
-    },
-    {
-      "basename": "Pasted Image 20220320190917_764",
-      "path": "Extras/Media/Images/Pasted Image 20220320190917_764.png"
-    },
-    {
-      "basename": "Pasted Image 20220320190802_762",
-      "path": "Extras/Media/Images/Pasted Image 20220320190802_762.png"
-    },
-    {
-      "basename": "《围城》",
-      "path": "Sources/Books/读书笔记/虚构类读物/《围城》.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "2022年7月，obsidian 依然必装的 10 个插件",
-      "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
-    },
-    {
-      "basename": "Obsidian 最优雅的多端同步插件LiveSync",
-      "path": "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md"
     }
   ],
   "omittedPaths": [
