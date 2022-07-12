@@ -9,4 +9,4 @@ date modified: 2022-07-05
 
 [[2022-06-29]]更新：
 
-- [给Obsidian新手科研人的开箱即用库：BCS’s Vault for Researchers V1.1](https://forum-zh.obsidian.md/t/topic/8114)
+- [给Obsidian新手科研人的开箱即用库：BCS’s Vault for Researchers V1.1](https://forum-zh.obsidian.md/t/topic/8114) 

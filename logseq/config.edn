@@ -9,7 +9,7 @@
  ;; Preferred workflow style.
  ;; Value is either ":now" for NOW/LATER style,
  ;; or ":todo" for TODO/DOING style.
- :preferred-workflow :now
+ :preferred-workflow :todo
 
  ;; The app will ignore those directories or files.
  ;; E.g. "/archived" "/test.md"
@@ -57,7 +57,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Setup page "home" as home page with multiple pages in sidebar
  ;; :default-home {:page "home" :sidebar ["page a" "page b"]}
- :default-home {:page "README" :sidebar ["TOCs" "MOCs"]}
+ :default-home {:page "AboutTheGarden" :sidebar ["TOCs" "MOCs"]}
  
  ;; Tell logseq to use a specific folder in the repo as a default location for notes
  ;; if not specified, notes are stored in `pages` directory
@@ -177,11 +177,12 @@
  :ref/default-open-blocks-level 4
 
  :ref/linked-references-collapsed-threshold 50
- :favorites ["TOC"]
+ :favorites []
  :publishing/all-pages-public? true
  :editor/logical-outdenting? false
- :ui/show-brackets? false
+ :ui/show-brackets? true
  :feature/enable-flashcards? false
+ :journal/page-title-format "yyyy-MM-dd"
 
  ;; any number between 0 and 1 (the greater it is the faster the changes of the next-interval of card reviews) (default 0.5)
  ;; :srs/learning-fraction 0.5

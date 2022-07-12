@@ -1,24 +1,76 @@
 {
   "recentFiles": [
     {
-      "basename": "文章发布工作流梳理",
-      "path": "Calendar/文章草稿/文章发布工作流梳理.md"
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
     },
     {
-      "basename": "正则表达式",
-      "path": "Cards/永久笔记/正则表达式.md"
+      "basename": "2022-07-13",
+      "path": "Calendar/每日日志/2022-07-13.md"
     },
     {
-      "basename": "tpl-con-2-1-box",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides模板/templates/tpl-con-2-1-box.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "2022-07-12",
+      "path": "Calendar/每日日志/2022-07-12.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Cards/永久笔记/obsidian开箱即用示例库.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+    },
+    {
+      "basename": "🎥 我的PPT",
+      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
+    },
+    {
+      "basename": "个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息系统、知识笔记系统、任务管理系统和输出发布系统的联动.md"
+    },
+    {
+      "basename": "git hook",
+      "path": "Cards/永久笔记/git hook.md"
+    },
+    {
+      "basename": "Building a Second Brain 翻译和读书笔记",
+      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
+    },
+    {
+      "basename": "🏷 本库标签",
+      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
+    },
+    {
+      "basename": "PKM系统的不同侧重点-四象限图 by lyt",
+      "path": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md"
     },
     {
       "basename": "tpl-con-3-2",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides模板/templates/tpl-con-3-2.md"
     },
     {
-      "basename": "PKM系统的不同侧重点-四象限图 by lyt",
-      "path": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md"
+      "basename": "tpl-con-2-1-box",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced slides模板/templates/tpl-con-2-1-box.md"
+    },
+    {
+      "basename": "文章发布工作流梳理",
+      "path": "Calendar/文章草稿/文章发布工作流梳理.md"
+    },
+    {
+      "basename": "正则表达式",
+      "path": "Cards/永久笔记/正则表达式.md"
     },
     {
       "basename": "ACCESS 笔记组织法",
@@ -33,18 +85,6 @@
       "path": "Sources/Books/读书笔记/《金字塔原理》.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
       "basename": "linux常用命令行",
       "path": "Spaces/人+科技融合专题/个人效率系统打造/linux常用命令行.md"
     },
@@ -55,10 +95,6 @@
     {
       "basename": "MOCs",
       "path": "Atlas/MOCs/MOCs.md"
-    },
-    {
-      "basename": "2022-07-12",
-      "path": "Calendar/每日日志/2022-07-12.md"
     },
     {
       "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
@@ -85,10 +121,6 @@
       "path": "Cards/永久笔记/第二大脑与数字花园.md"
     },
     {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
-    },
-    {
       "basename": "ExcaliBrain Snapshot - ☘️ 花园导览 🍀_0.excalidraw",
       "path": "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀_0.excalidraw.md"
     },
@@ -111,10 +143,6 @@
     {
       "basename": "🏹 已发布长文",
       "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
-      "basename": "🧰 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
     },
     {
       "basename": "ios必备软件",
@@ -145,20 +173,8 @@
       "path": "Cards/本库如何免费发布至web.md"
     },
     {
-      "basename": "🏷 本库标签",
-      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
       "basename": "obsidian sync 同步",
       "path": "Cards/永久笔记/obsidian sync 同步.md"
-    },
-    {
-      "basename": "🎥 我的PPT",
-      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
-    },
-    {
-      "basename": "2022-07-13",
-      "path": "Calendar/每日日志/2022-07-13.md"
     },
     {
       "basename": "2022-07-10",
@@ -183,18 +199,6 @@
     {
       "basename": "2022-07-08",
       "path": "Calendar/每日日志/2022-07-08.md"
-    },
-    {
-      "basename": "2022-07-09",
-      "path": "Calendar/每日日志/2022-07-09.md"
-    },
-    {
-      "basename": "2022-06-11",
-      "path": "Calendar/每日日志/2022-06-11.md"
-    },
-    {
-      "basename": "Pasted image 20220611151616",
-      "path": "Extras/Media/Images/Pasted image 20220611151616.png"
     }
   ],
   "omittedPaths": [

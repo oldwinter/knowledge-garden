@@ -5,7 +5,7 @@
   "showAttachments": true,
   "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#MOC",
@@ -20,18 +20,32 @@
         "a": 1,
         "rgb": 14069084
       }
+    },
+    {
+      "query": "tag:#review",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "tag:#todo",
+      "color": {
+        "a": 1,
+        "rgb": 6084188
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
+  "collapse-forces": false,
   "centerStrength": 0.602297008547009,
   "repelStrength": 12.119391025641,
   "linkStrength": 1,
   "linkDistance": 251,
-  "scale": 0.3301408934729058,
+  "scale": 0.20669682287984442,
   "close": true
 }

@@ -4,6 +4,9 @@
  {:block/name "\"\\u0001f3f9 已发布长文\"",
   :block/created-at 1656678856573,
   :block/updated-at 1656678856573}
+ {:block/name "'**1. wie wichtig sind<br>team-meetings**'",
+  :block/created-at 1657648214760,
+  :block/updated-at 1657648214760}
  {:block/name "'09:50 - 10:00：准备文档，整理议题和流程'",
   :block/created-at 1655960499698,
   :block/updated-at 1655960499698}
@@ -85,12 +88,45 @@
  {:block/name "'2022-06-23'",
   :block/created-at 1655960618724,
   :block/updated-at 1655960618724}
+ {:block/name "'2022-06-24'",
+  :block/created-at 1657648262448,
+  :block/updated-at 1657648262448}
  {:block/name "'2022-06-25'",
   :block/created-at 1656678865836,
   :block/updated-at 1656678865836}
+ {:block/name "'2022-06-26'",
+  :block/created-at 1657648262997,
+  :block/updated-at 1657648262997}
+ {:block/name "'2022-06-27'",
+  :block/created-at 1657648263100,
+  :block/updated-at 1657648263100}
+ {:block/name "'2022-06-28'",
+  :block/created-at 1657648263304,
+  :block/updated-at 1657648263304}
+ {:block/name "'2022-06-29'",
+  :block/created-at 1657648263349,
+  :block/updated-at 1657648263349}
+ {:block/name "'2022-06-30'",
+  :block/created-at 1657648263398,
+  :block/updated-at 1657648263398}
  {:block/name "'2022-07-01'",
   :block/created-at 1656678866158,
   :block/updated-at 1656678866158}
+ {:block/name "'2022-07-02'",
+  :block/created-at 1657648263994,
+  :block/updated-at 1657648263994}
+ {:block/name "'2022-07-03'",
+  :block/created-at 1657648264126,
+  :block/updated-at 1657648264126}
+ {:block/name "'2022-07-04'",
+  :block/created-at 1657648264394,
+  :block/updated-at 1657648264394}
+ {:block/name "'2022-07-05'",
+  :block/created-at 1657648264440,
+  :block/updated-at 1657648264440}
+ {:block/name "'2022-07-06'",
+  :block/created-at 1657648264830,
+  :block/updated-at 1657648264830}
  {:block/name "'@andy matuschak'",
   :block/created-at 1655959698611,
   :block/updated-at 1655959698611}
@@ -112,6 +148,13 @@
  {:block/name "'@韩寒'",
   :block/created-at 1655959724941,
   :block/updated-at 1655959724941}
+ {:block/name "'@马伯庸'",
+  :block/created-at 1657648363199,
+  :block/updated-at 1657648363199}
+ {:block/name
+  "'minml<!-- element style=\"letter-spacing: 1.5rem;\"-->'",
+  :block/created-at 1657648213594,
+  :block/updated-at 1657648213594}
  {:block/name "'obsidian的中括号`[[`搜索的技巧'",
   :block/created-at 1655957111857,
   :block/updated-at 1655957111857}
@@ -169,6 +212,9 @@
  {:block/name "2022-06-12 00:32:41",
   :block/created-at 1656678985217,
   :block/updated-at 1656678985217}
+ {:block/name "2022-07-13",
+  :block/created-at 1657651607037,
+  :block/updated-at 1657651607037}
  {:block/name "2022-三月",
   :block/created-at 1655956771106,
   :block/updated-at 1655956771106}
@@ -211,6 +257,9 @@
  {:block/name "@吕立青",
   :block/created-at 1655956845483,
   :block/updated-at 1655956845483}
+ {:block/name "@李开复",
+  :block/created-at 1657648209972,
+  :block/updated-at 1657648209972}
  {:block/name "@樊登",
   :block/created-at 1655956931160,
   :block/updated-at 1655956931160}
@@ -245,6 +294,12 @@
  {:block/name "about spaces",
   :block/created-at 1655959184663,
   :block/updated-at 1655959184663}
+ {:block/name "aboutthegarden",
+  :block/created-at 1657648202414,
+  :block/updated-at 1657648202414}
+ {:block/name "aboutthegarden.md",
+  :block/created-at 1657648227615,
+  :block/updated-at 1657648227615}
  {:block/name "access 笔记组织法",
   :block/created-at 1655956764729,
   :block/updated-at 1655956764729}
@@ -269,6 +324,12 @@
  {:block/name "advanced slides 的 奇技淫巧",
   :block/created-at 1655957137657,
   :block/updated-at 1655957137657}
+ {:block/name "advanced slides 的奇技淫巧",
+  :block/created-at 1657648212122,
+  :block/updated-at 1657648212122}
+ {:block/name "advanced slides奇技淫巧",
+  :block/created-at 1657648329792,
+  :block/updated-at 1657648329792}
  {:block/name "advanced tables",
   :block/created-at 1655956960006,
   :block/updated-at 1655956960006}
@@ -278,6 +339,12 @@
  {:block/name "advanced-slides#^4f22e2",
   :block/created-at 1655956772862,
   :block/updated-at 1655956772862}
+ {:block/name "advanced-slides-templates模板1",
+  :block/created-at 1657648329808,
+  :block/updated-at 1657648329808}
+ {:block/name "advanced-slides-templates模板2",
+  :block/created-at 1657648329807,
+  :block/updated-at 1657648329807}
  {:block/name "advanced-slides|slides学习笔记教程",
   :block/created-at 1655957101562,
   :block/updated-at 1655957101562}
@@ -386,6 +453,9 @@
  {:block/name "bartender",
   :block/created-at 1655957111062,
   :block/updated-at 1655957111062}
+ {:block/name "basisprozess.png",
+  :block/created-at 1657648214744,
+  :block/updated-at 1657648214744}
  {:block/name "bettertouchtool",
   :block/created-at 1655957109279,
   :block/updated-at 1655957109279}
@@ -404,15 +474,27 @@
  {:block/name "bob",
   :block/created-at 1655957109780,
   :block/updated-at 1655957109780}
+ {:block/name "books",
+  :block/created-at 1657648237110,
+  :block/updated-at 1657648237110}
  {:block/name "breathing exercises moc",
   :block/created-at 1655956765383,
   :block/updated-at 1655956765383}
+ {:block/name "building a second brain 翻译和读书笔记",
+  :block/created-at 1657648203322,
+  :block/updated-at 1657648203322}
+ {:block/name "building a second brain 读书笔记前言",
+  :block/created-at 1657648208946,
+  :block/updated-at 1657648208946}
  {:block/name "building homes moc",
   :block/created-at 1655956765634,
   :block/updated-at 1655956765634}
  {:block/name "building your second brain读书笔记",
   :block/created-at 1656678869922,
   :block/updated-at 1656678869922}
+ {:block/name "building your second brain读书笔记 - code方法",
+  :block/created-at 1657648208861,
+  :block/updated-at 1657648208861}
  {:block/name "burp suite",
   :block/created-at 1655956768006,
   :block/updated-at 1655956768006}
@@ -428,15 +510,57 @@
  {:block/name "cabin 🪵",
   :block/created-at 1655956765411,
   :block/updated-at 1655956765411}
+ {:block/name "calendar",
+  :block/created-at 1657648356092,
+  :block/updated-at 1657648356092}
+ {:block/name "calendar/每月每季度总结",
+  :block/created-at 1657648356094,
+  :block/updated-at 1657648356094}
+ {:block/name "calendar/每月每季度总结/2022-五月.md",
+  :block/created-at 1657648356038,
+  :block/updated-at 1657648356038}
  {:block/name "callout",
   :block/created-at 1655956769187,
   :block/updated-at 1655956769187}
+ {:block/name "canceled",
+  :block/created-at 1657648458247,
+  :block/updated-at 1657648458247}
+ {:block/name "cancelled",
+  :block/created-at 1657648458246,
+  :block/updated-at 1657648458246}
  {:block/name "card",
   :block/created-at 1655956939705,
   :block/updated-at 1655956939705}
+ {:block/name "cards",
+  :block/created-at 1657648227664,
+  :block/updated-at 1657648227664}
+ {:block/name "cards/本库如何免费发布至web.md",
+  :block/created-at 1657648227631,
+  :block/updated-at 1657648227631}
+ {:block/name "cards/永久笔记",
+  :block/created-at 1657648227675,
+  :block/updated-at 1657648227675}
+ {:block/name "cards/永久笔记/golang.md",
+  :block/created-at 1657648356065,
+  :block/updated-at 1657648356065}
+ {:block/name "cards/永久笔记/ios必备软件.md",
+  :block/created-at 1657648227645,
+  :block/updated-at 1657648227645}
+ {:block/name "cards/永久笔记/linux必备软件.md",
+  :block/created-at 1657648227644,
+  :block/updated-at 1657648227644}
+ {:block/name "cards/永久笔记/obsidian开箱即用示例库.md",
+  :block/created-at 1657648227637,
+  :block/updated-at 1657648227637}
+ {:block/name "cards/永久笔记/常用命令行工具包.md",
+  :block/created-at 1657648356034,
+  :block/updated-at 1657648356034}
  {:block/name "cc字幕",
   :block/created-at 1655957102025,
   :block/updated-at 1655957102025}
+ {:block/name "cheat sheet",
+  :block/created-at 1657648266774,
+  :block/updated-at 1657648266774}
  {:block/name "chrome",
   :block/created-at 1655957107777,
   :block/updated-at 1655957107777}
@@ -482,6 +606,15 @@
  {:block/name "confucianism moc",
   :block/created-at 1655956765466,
   :block/updated-at 1655956765466}
+ {:block/name "consult",
+  :block/created-at 1657648214756,
+  :block/updated-at 1657648214756}
+ {:block/name "consult/assets",
+  :block/created-at 1657648214757,
+  :block/updated-at 1657648214757}
+ {:block/name "consult/assets/reizreaktion.png",
+  :block/created-at 1657648214755,
+  :block/updated-at 1657648214755}
  {:block/name "contents",
   :block/created-at 1655956939707,
   :block/updated-at 1655956939707}
@@ -590,6 +723,9 @@
  {:block/name "draw.io",
   :block/created-at 1655957110990,
   :block/updated-at 1655957110990}
+ {:block/name "e07e36);\">",
+  :block/created-at 1657648216844,
+  :block/updated-at 1657648216844}
  {:block/name "edge",
   :block/created-at 1655957110062,
   :block/updated-at 1655957110062}
@@ -617,6 +753,12 @@
  {:block/name "excalibrain 1",
   :block/created-at 1656678862001,
   :block/updated-at 1656678862001}
+ {:block/name "excalibrain snapshot - ☘️ 花园导览 🍀_0",
+  :block/created-at 1657648227705,
+  :block/updated-at 1657648227705}
+ {:block/name "excalibrain snapshot - ☘️ 花园导览 🍀_0/excalidraw",
+  :block/created-at 1657648227698,
+  :block/updated-at 1657648227698}
  {:block/name "excalidraw",
   :block/created-at 1655956775905,
   :block/updated-at 1655956775905}
@@ -626,12 +768,29 @@
  {:block/name "external",
   :block/created-at 1655956766146,
   :block/updated-at 1655956766146}
+ {:block/name "extras",
+  :block/created-at 1657648227655,
+  :block/updated-at 1657648227655}
+ {:block/name "extras/draws",
+  :block/created-at 1657648227658,
+  :block/updated-at 1657648227658}
+ {:block/name
+  "extras/draws/excalibrain snapshot - ☘️ 花园导览 🍀.excalidraw.md",
+  :block/created-at 1657648227613,
+  :block/updated-at 1657648227613}
+ {:block/name
+  "extras/draws/excalibrain snapshot - ☘️ 花园导览 🍀.excalidraw.svg",
+  :block/created-at 1657648227647,
+  :block/updated-at 1657648227647}
  {:block/name "facebook",
   :block/created-at 1655957106578,
   :block/updated-at 1655957106578}
  {:block/name "favorites",
   :block/created-at 1655956939699,
   :block/updated-at 1655956939699}
+ {:block/name "feature",
+  :block/created-at 1657648281812,
+  :block/updated-at 1657648281812}
  {:block/name "feedly",
   :block/created-at 1655956953636,
   :block/updated-at 1655956953636}
@@ -647,6 +806,9 @@
  {:block/name "flomo",
   :block/created-at 1655956771031,
   :block/updated-at 1655956771031}
+ {:block/name "flowus",
+  :block/created-at 1657648264125,
+  :block/updated-at 1657648264125}
  {:block/name "folder first",
   :block/created-at 1655957116430,
   :block/updated-at 1655957116430}
@@ -764,6 +926,9 @@
  {:block/name "http-server",
   :block/created-at 1655957115716,
   :block/updated-at 1655957115716}
+ {:block/name "hugo和jekyll对比",
+  :block/created-at 1657648235105,
+  :block/updated-at 1657648235105}
  {:block/name "husky",
   :block/created-at 1655956779100,
   :block/updated-at 1655956779100}
@@ -788,12 +953,18 @@
  {:block/name "import和require本质区别",
   :block/created-at 1655956938529,
   :block/updated-at 1655956938529}
+ {:block/name "improvement",
+  :block/created-at 1657648281797,
+  :block/updated-at 1657648281797}
  {:block/name "in-progress",
   :block/created-at 1655956939708,
   :block/updated-at 1655956939708}
  {:block/name "inbox",
   :block/created-at 1655956781153,
   :block/updated-at 1655956781153}
+ {:block/name "indexlf",
+  :block/created-at 1657648267377,
+  :block/updated-at 1657648267377}
  {:block/name "indexlongform",
   :block/created-at 1656678866284,
   :block/updated-at 1656678866284}
@@ -812,6 +983,13 @@
  {:block/name "instagram",
   :block/created-at 1655957106581,
   :block/updated-at 1655957106581}
+ {:block/name
+  "introduction the promise of a second brain - 介绍：第二大脑的远景",
+  :block/created-at 1657648208684,
+  :block/updated-at 1657648208684}
+ {:block/name "ios必备软件",
+  :block/created-at 1657648203353,
+  :block/updated-at 1657648203353}
  {:block/name "ios系统如何翻墙",
   :block/created-at 1655956779512,
   :block/updated-at 1655956779512}
@@ -842,9 +1020,42 @@
  {:block/name "json与yaml",
   :block/created-at 1655957102752,
   :block/updated-at 1655957102752}
+ {:block/name "jul 10th, 2022",
+  :block/created-at 1657648266026,
+  :block/updated-at 1657648266026}
+ {:block/name "jul 11th, 2022",
+  :block/created-at 1657648236997,
+  :block/updated-at 1657648236997}
+ {:block/name "jul 12th, 2022",
+  :block/created-at 1657648266977,
+  :block/updated-at 1657648266977}
+ {:block/name "jul 13th, 2022",
+  :block/created-at 1657648225575,
+  :block/updated-at 1657649055359}
  {:block/name "jul 1st, 2022",
   :block/created-at 1656678851958,
   :block/updated-at 1656678851958}
+ {:block/name "jul 3rd, 2022",
+  :block/created-at 1657648207199,
+  :block/updated-at 1657648207199}
+ {:block/name "jul 4th, 2022",
+  :block/created-at 1657648228758,
+  :block/updated-at 1657648228758}
+ {:block/name "jul 5th, 2022",
+  :block/created-at 1657648281787,
+  :block/updated-at 1657648281787}
+ {:block/name "jul 6th, 2022",
+  :block/created-at 1657648281775,
+  :block/updated-at 1657648281775}
+ {:block/name "jul 7th, 2022",
+  :block/created-at 1657648264892,
+  :block/updated-at 1657648264892}
+ {:block/name "jul 8th, 2022",
+  :block/created-at 1657648265155,
+  :block/updated-at 1657648265155}
+ {:block/name "jul 9th, 2022",
+  :block/created-at 1657648265887,
+  :block/updated-at 1657648265887}
  {:block/name "jun 10th, 2022",
   :block/created-at 1655956769131,
   :block/updated-at 1655956769131}
@@ -1010,6 +1221,9 @@
  {:block/name "linux常用命令行",
   :block/created-at 1655956772154,
   :block/updated-at 1655956772154}
+ {:block/name "linux必备软件",
+  :block/created-at 1657648203342,
+  :block/updated-at 1657648203342}
  {:block/name "literature moc",
   :block/created-at 1655956765685,
   :block/updated-at 1655956765685}
@@ -1073,6 +1287,9 @@
  {:block/name "mar 16th, 2022",
   :block/created-at 1656678986576,
   :block/updated-at 1656678986576}
+ {:block/name "marginnote",
+  :block/created-at 1657648237107,
+  :block/updated-at 1657648237107}
  {:block/name "markdown",
   :block/created-at 1655956770309,
   :block/updated-at 1655956770309}
@@ -1091,6 +1308,9 @@
  {:block/name "mbti性格分析",
   :block/created-at 1655956791856,
   :block/updated-at 1655956791856}
+ {:block/name "mece法则",
+  :block/created-at 1657648219750,
+  :block/updated-at 1657648219750}
  {:block/name "menubarx",
   :block/created-at 1655957110946,
   :block/updated-at 1655957110946}
@@ -1235,6 +1455,9 @@
  {:block/name "obsidian 是可以用一辈子不换的笔记软件吗",
   :block/created-at 1655956777023,
   :block/updated-at 1655956777023}
+ {:block/name "obsidian 最优雅的多端同步插件livesync",
+  :block/created-at 1657648268998,
+  :block/updated-at 1657648268998}
  {:block/name "obsidian与alfred联动",
   :block/created-at 1655957111488,
   :block/updated-at 1655957111488}
@@ -1247,6 +1470,18 @@
  {:block/name "obsidian入门到精通",
   :block/created-at 1655956877310,
   :block/updated-at 1655956877310}
+ {:block/name "obsidian如何做文章阅读笔记",
+  :block/created-at 1657648206454,
+  :block/updated-at 1657648206454}
+ {:block/name "obsidian如何做电视剧笔记",
+  :block/created-at 1657648206448,
+  :block/updated-at 1657648206448}
+ {:block/name "obsidian如何做短课程笔记",
+  :block/created-at 1657648206461,
+  :block/updated-at 1657648206461}
+ {:block/name "obsidian如何做英文阅读笔记",
+  :block/created-at 1657648206442,
+  :block/updated-at 1657648206442}
  {:block/name "obsidian开箱即用示例库",
   :block/created-at 1656678867245,
   :block/updated-at 1656678867245}
@@ -1463,6 +1698,9 @@
  {:block/name "readme",
   :block/created-at 1655956762756,
   :block/updated-at 1655956762756}
+ {:block/name "readme.md",
+  :block/created-at 1657648227614,
+  :block/updated-at 1657648227614}
  {:block/name "readme说明",
   :block/created-at 1656678861407,
   :block/updated-at 1656678861407}
@@ -1541,6 +1779,9 @@
  {:block/name "shell 常用命令行操作",
   :block/created-at 1655956780941,
   :block/updated-at 1655956780941}
+ {:block/name "slack",
+  :block/created-at 1657648264088,
+  :block/updated-at 1657648264088}
  {:block/name "slidev",
   :block/created-at 1655957138117,
   :block/updated-at 1655957138117}
@@ -1559,9 +1800,103 @@
  {:block/name "spaced-repetition",
   :block/created-at 1655956767567,
   :block/updated-at 1655956767567}
+ {:block/name "spaces",
+  :block/created-at 1657648227670,
+  :block/updated-at 1657648227670}
  {:block/name "spaces 中的 maps 组织方法",
   :block/created-at 1655956775915,
   :block/updated-at 1655956775915}
+ {:block/name "spaces/life",
+  :block/created-at 1657648227678,
+  :block/updated-at 1657648227678}
+ {:block/name "spaces/life/projects",
+  :block/created-at 1657648227679,
+  :block/updated-at 1657648227679}
+ {:block/name "spaces/life/projects/我的开源项目",
+  :block/created-at 1657648356111,
+  :block/updated-at 1657648356111}
+ {:block/name "spaces/life/projects/我的开源项目/常用命令行工具",
+  :block/created-at 1657648356113,
+  :block/updated-at 1657648356113}
+ {:block/name "spaces/life/projects/我的开源项目/常用命令行工具/git.md",
+  :block/created-at 1657648356066,
+  :block/updated-at 1657648356066}
+ {:block/name "spaces/life/projects/我的开源项目/常用命令行工具/kubectl.md",
+  :block/created-at 1657648356056,
+  :block/updated-at 1657648356056}
+ {:block/name "spaces/life/projects/知识管理",
+  :block/created-at 1657648227685,
+  :block/updated-at 1657648227685}
+ {:block/name "spaces/life/projects/知识管理/obsidian学习笔记",
+  :block/created-at 1657648227688,
+  :block/updated-at 1657648227688}
+ {:block/name
+  "spaces/life/projects/知识管理/obsidian学习笔记/obsidian入门到精通.md",
+  :block/created-at 1657648227639,
+  :block/updated-at 1657648227639}
+ {:block/name "spaces/work",
+  :block/created-at 1657648356115,
+  :block/updated-at 1657648356115}
+ {:block/name "spaces/work/projects",
+  :block/created-at 1657648356116,
+  :block/updated-at 1657648356116}
+ {:block/name "spaces/work/projects/云计算与云原生",
+  :block/created-at 1657648356117,
+  :block/updated-at 1657648356117}
+ {:block/name "spaces/work/projects/云计算与云原生/docker.md",
+  :block/created-at 1657648356072,
+  :block/updated-at 1657648356072}
+ {:block/name "spaces/人+科技融合专题",
+  :block/created-at 1657648227672,
+  :block/updated-at 1657648227672}
+ {:block/name "spaces/人+科技融合专题/ohmyzsh.md",
+  :block/created-at 1657648356048,
+  :block/updated-at 1657648356048}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造",
+  :block/created-at 1657648356096,
+  :block/updated-at 1657648356096}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造/docker compose.md",
+  :block/created-at 1657648356070,
+  :block/updated-at 1657648356070}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造/homebrew.md",
+  :block/created-at 1657648356064,
+  :block/updated-at 1657648356064}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造/linux命令行测速 - speedtest.md",
+  :block/created-at 1657648356052,
+  :block/updated-at 1657648356052}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造/zsh.md",
+  :block/created-at 1657648356040,
+  :block/updated-at 1657648356040}
+ {:block/name "spaces/人+科技融合专题/个人效率系统打造/z命令.md",
+  :block/created-at 1657648356039,
+  :block/updated-at 1657648356039}
+ {:block/name "spaces/人+科技融合专题/必备软件",
+  :block/created-at 1657648227673,
+  :block/updated-at 1657648227673}
+ {:block/name "spaces/人+科技融合专题/必备软件/mac必备软件.md",
+  :block/created-at 1657648227642,
+  :block/updated-at 1657648227642}
+ {:block/name "spaces/人+科技融合专题/必备软件/windows必备软件.md",
+  :block/created-at 1657648227635,
+  :block/updated-at 1657648227635}
+ {:block/name "spaces/人+科技融合专题/必备软件/安卓手机必备软件.md",
+  :block/created-at 1657648227633,
+  :block/updated-at 1657648227633}
+ {:block/name "spaces/第二大脑建设专题",
+  :block/created-at 1657648227691,
+  :block/updated-at 1657648227691}
+ {:block/name "spaces/第二大脑建设专题/building a second brain 翻译和读书笔记.md",
+  :block/created-at 1657648227650,
+  :block/updated-at 1657648227650}
+ {:block/name "spaces/计算机科学专题",
+  :block/created-at 1657648356097,
+  :block/updated-at 1657648356097}
+ {:block/name "spaces/计算机科学专题/powershell.md",
+  :block/created-at 1657648356047,
+  :block/updated-at 1657648356047}
+ {:block/name "spaces/计算机科学专题/vim.md",
+  :block/created-at 1657648356042,
+  :block/updated-at 1657648356042}
  {:block/name "speedtest",
   :block/created-at 1655957115610,
   :block/updated-at 1655957115610}
@@ -1640,6 +1975,9 @@
  {:block/name "tiny tiny rss",
   :block/created-at 1655956770982,
   :block/updated-at 1655956770982}
+ {:block/name "title-wide.png",
+  :block/created-at 1657648217212,
+  :block/updated-at 1657648217212}
  {:block/name "tldr",
   :block/created-at 1655957115673,
   :block/updated-at 1655957115673}
@@ -1673,6 +2011,24 @@
  {:block/name "tp_学习测试",
   :block/created-at 1656678986885,
   :block/updated-at 1656678986885}
+ {:block/name "tpl-con-2-1-box",
+  :block/created-at 1657648215457,
+  :block/updated-at 1657648215457}
+ {:block/name "tpl-con-3-2",
+  :block/created-at 1657648215849,
+  :block/updated-at 1657648215849}
+ {:block/name "tpl-con-default-box",
+  :block/created-at 1657648215958,
+  :block/updated-at 1657648215958}
+ {:block/name "tpl-con-default-slide",
+  :block/created-at 1657648216261,
+  :block/updated-at 1657648216261}
+ {:block/name "tpl-con-splash",
+  :block/created-at 1657648216820,
+  :block/updated-at 1657648216820}
+ {:block/name "tpl-con-title",
+  :block/created-at 1657648217054,
+  :block/updated-at 1657648217054}
  {:block/name "transmit",
   :block/created-at 1655957110939,
   :block/updated-at 1655957110939}
@@ -1748,6 +2104,9 @@
  {:block/name "vscode必备插件",
   :block/created-at 1655956767814,
   :block/updated-at 1655956767814}
+ {:block/name "vscode打开obsidian笔记库的好处和作用",
+  :block/created-at 1657648284380,
+  :block/updated-at 1657648284380}
  {:block/name "vscode打开obsidian笔记的好处和作用",
   :block/created-at 1656678857846,
   :block/updated-at 1656678857846}
@@ -1785,9 +2144,18 @@
  {:block/name "weread",
   :block/created-at 1656678984007,
   :block/updated-at 1656678984007}
+ {:block/name "weread plugin",
+  :block/created-at 1657648205364,
+  :block/updated-at 1657648205364}
  {:block/name "wget",
   :block/created-at 1655957115705,
   :block/updated-at 1655957115705}
+ {:block/name "what is a second brain? - 第二大脑是什么？",
+  :block/created-at 1657648208693,
+  :block/updated-at 1657648208693}
+ {:block/name "where it all started - 第二大脑之缘起",
+  :block/created-at 1657648208686,
+  :block/updated-at 1657648208686}
  {:block/name "wikipedia",
   :block/created-at 1655956777970,
   :block/updated-at 1655956777970}
@@ -1806,6 +2174,9 @@
  {:block/name "wireshark",
   :block/created-at 1655957110950,
   :block/updated-at 1655957110950}
+ {:block/name "wolai",
+  :block/created-at 1657648264123,
+  :block/updated-at 1657648264123}
  {:block/name "word",
   :block/created-at 1655956777971,
   :block/updated-at 1655956777971}
@@ -1845,6 +2216,45 @@
  {:block/name "z命令",
   :block/created-at 1655957115707,
   :block/updated-at 1655957115707}
+ {:block/name "☘️ 花园导览 🍀",
+  :block/created-at 1657648202474,
+  :block/updated-at 1657648202474}
+ {:block/name "☘️ 花园导览 🍀#个人必备软件",
+  :block/created-at 1657648204707,
+  :block/updated-at 1657648204707}
+ {:block/name "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+  :block/created-at 1657648227653,
+  :block/updated-at 1657648227653}
+ {:block/name "☘️ 花园导览 🍀/其他",
+  :block/created-at 1657648227663,
+  :block/updated-at 1657648227663}
+ {:block/name "☘️ 花园导览 🍀/其他/🎥 我的ppt.md",
+  :block/created-at 1657648227629,
+  :block/updated-at 1657648227629}
+ {:block/name "☘️ 花园导览 🍀/其他/🏗 本库路线图.md",
+  :block/created-at 1657648227628,
+  :block/updated-at 1657648227628}
+ {:block/name "☘️ 花园导览 🍀/其他/🏷 本库标签.md",
+  :block/created-at 1657648227627,
+  :block/updated-at 1657648227627}
+ {:block/name "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
+  :block/created-at 1657648227622,
+  :block/updated-at 1657648227622}
+ {:block/name "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md",
+  :block/created-at 1657648227620,
+  :block/updated-at 1657648227620}
+ {:block/name "☘️ 花园导览 🍀/🆕 最近更新.md",
+  :block/created-at 1657648227630,
+  :block/updated-at 1657648227630}
+ {:block/name "☘️ 花园导览 🍀/🏹 已发布长文.md",
+  :block/created-at 1657648227624,
+  :block/updated-at 1657648227624}
+ {:block/name "☘️ 花园导览 🍀/🗜 效率工具.md",
+  :block/created-at 1657648227618,
+  :block/updated-at 1657648227618}
+ {:block/name "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+  :block/created-at 1657648227617,
+  :block/updated-at 1657648227617}
  {:block/name "《三体》",
   :block/created-at 1655956774376,
   :block/updated-at 1655956774376}
@@ -2841,6 +3251,9 @@
  {:block/name "夸克浏览器",
   :block/created-at 1655957113522,
   :block/updated-at 1655957113522}
+ {:block/name "奇异博士2：疯狂多元宇宙",
+  :block/created-at 1657648264438,
+  :block/updated-at 1657648264438}
  {:block/name "奉为圭臬",
   :block/created-at 1656678983152,
   :block/updated-at 1656678983152}
@@ -2925,6 +3338,9 @@
  {:block/name "如何真正实现global的proxy代理",
   :block/created-at 1655956772331,
   :block/updated-at 1655956772331}
+ {:block/name "如何通过obsidian打造自己的第二大脑",
+  :block/created-at 1657648203327,
+  :block/updated-at 1657648203327}
  {:block/name "如何阅读一本书-莫提默·艾德勒 查尔斯·范多伦",
   :block/created-at 1656678985689,
   :block/updated-at 1656678985689}
@@ -3108,6 +3524,9 @@
  {:block/name "常用命令行工具包",
   :block/created-at 1655956812229,
   :block/updated-at 1655956812229}
+ {:block/name "常见心理学效应",
+  :block/created-at 1657648357584,
+  :block/updated-at 1657648357584}
  {:block/name "常见笔记组织方法",
   :block/created-at 1655956812458,
   :block/updated-at 1655956812458}
@@ -3273,6 +3692,9 @@
  {:block/name "思维工具",
   :block/created-at 1655959672666,
   :block/updated-at 1655959672666}
+ {:block/name "思考的过程容器",
+  :block/created-at 1657648202471,
+  :block/updated-at 1657648202471}
  {:block/name "悬在头上的达摩克利斯之剑",
   :block/created-at 1655956770080,
   :block/updated-at 1655956770080}
@@ -3480,6 +3902,9 @@
  {:block/name "数字时代如何更好地工作与生活 - 图",
   :block/created-at 1655956879275,
   :block/updated-at 1655956879275}
+ {:block/name "数字时代如何更好地工作与生活 - 图.svg",
+  :block/created-at 1657648329809,
+  :block/updated-at 1657648329809}
  {:block/name "数字时代如何更好地工作与生活 - 图.svg|500",
   :block/created-at 1655957138125,
   :block/updated-at 1655957138125}
@@ -3636,12 +4061,30 @@
  {:block/name "服从度测试",
   :block/created-at 1655956809181,
   :block/updated-at 1655956809181}
+ {:block/name "期望效应",
+  :block/created-at 1657648343350,
+  :block/updated-at 1657648343350}
  {:block/name "未命名",
   :block/created-at 1655956817501,
   :block/updated-at 1655956817501}
  {:block/name "本地私有仓库搭建",
   :block/created-at 1655956940163,
   :block/updated-at 1655956940163}
+ {:block/name "本库使用的主题及原因",
+  :block/created-at 1657648205259,
+  :block/updated-at 1657648205259}
+ {:block/name "本库如何免费发布至web",
+  :block/created-at 1657648203304,
+  :block/updated-at 1657648203304}
+ {:block/name "本库常用的快捷键及作用",
+  :block/created-at 1657648205263,
+  :block/updated-at 1657648205263}
+ {:block/name "本库最常用工作区及流程",
+  :block/created-at 1657648205282,
+  :block/updated-at 1657648205282}
+ {:block/name "本库的设计哲学",
+  :block/created-at 1657648205264,
+  :block/updated-at 1657648205264}
  {:block/name "本机启用ssh自动登陆",
   :block/created-at 1655957103623,
   :block/updated-at 1655957103623}
@@ -4026,6 +4469,9 @@
  {:block/name "看图",
   :block/created-at 1655957110988,
   :block/updated-at 1655957110988}
+ {:block/name "看心情整理文件和moc",
+  :block/created-at 1657648205397,
+  :block/updated-at 1657648205397}
  {:block/name "真实庭审解说",
   :block/created-at 1655956814677,
   :block/updated-at 1655956814677}
@@ -4035,6 +4481,9 @@
  {:block/name "瞒天过海",
   :block/created-at 1655956794013,
   :block/updated-at 1655956794013}
+ {:block/name "瞬息全宇宙",
+  :block/created-at 1657648264439,
+  :block/updated-at 1657648264439}
  {:block/name "知识付费",
   :block/created-at 1655956836530,
   :block/updated-at 1655956836530}
@@ -4170,6 +4619,9 @@
  {:block/name "纸短情长",
   :block/created-at 1655956769127,
   :block/updated-at 1655956769127}
+ {:block/name "纸钞屋",
+  :block/created-at 1657648206452,
+  :block/updated-at 1657648206452}
  {:block/name "线性增长与指数增长",
   :block/created-at 1655956770944,
   :block/updated-at 1655956770944}
@@ -4191,6 +4643,9 @@
  {:block/name "结构化表达",
   :block/created-at 1655956793005,
   :block/updated-at 1655956793005}
+ {:block/name "给xx的求职建议",
+  :block/created-at 1657648211362,
+  :block/updated-at 1657648211362}
  {:block/name "给下属写周报",
   :block/created-at 1655957108840,
   :block/updated-at 1655957108840}
@@ -4524,6 +4979,9 @@
  {:block/name "踩高跷入门",
   :block/created-at 1655956930645,
   :block/updated-at 1655956930645}
+ {:block/name "躺平一族",
+  :block/created-at 1657648368042,
+  :block/updated-at 1657648368042}
  {:block/name "躺平与摆烂一族",
   :block/created-at 1655956772804,
   :block/updated-at 1655956772804}
@@ -4602,6 +5060,9 @@
  {:block/name "通识教育",
   :block/created-at 1655956772935,
   :block/updated-at 1655956772935}
+ {:block/name "通过todo标签管理待办",
+  :block/created-at 1657648205382,
+  :block/updated-at 1657648205382}
  {:block/name "通过刻意练习，改变智识，让自己更聪明",
   :block/created-at 1656678870639,
   :block/updated-at 1656678870639}
@@ -4773,6 +5234,9 @@
  {:block/name "顺风与逆风",
   :block/created-at 1655956935171,
   :block/updated-at 1655956935171}
+ {:block/name "预测",
+  :block/created-at 1657648264089,
+  :block/updated-at 1657648264089}
  {:block/name "领域入门模板",
   :block/created-at 1656678977022,
   :block/updated-at 1656678977022}
@@ -4846,5 +5310,32 @@
   :block/created-at 1655956791618,
   :block/updated-at 1655956791618}
  {:block/name "默认是为自己而不是看客写笔记",
-  :block/created-at 1655957145217, 
-  :block/updated-at 1655957145217}]
+  :block/created-at 1655957145217,
+  :block/updated-at 1655957145217}
+ {:block/name "🆕 最近更新",
+  :block/created-at 1657648203261,
+  :block/updated-at 1657648203261}
+ {:block/name "🎥 我的ppt",
+  :block/created-at 1657648203364,
+  :block/updated-at 1657648203364}
+ {:block/name "🏗 本库路线图",
+  :block/created-at 1657648203265,
+  :block/updated-at 1657648203265}
+ {:block/name "🏷 本库标签",
+  :block/created-at 1657648203262,
+  :block/updated-at 1657648203262}
+ {:block/name "🏹 已发布长文",
+  :block/created-at 1657648203358,
+  :block/updated-at 1657648203358}
+ {:block/name "👬🏻 别的数字花园收录",
+  :block/created-at 1657648203377,
+  :block/updated-at 1657648203377}
+ {:block/name "📩 订阅newsletter",
+  :block/created-at 1657648203372,
+  :block/updated-at 1657648203372}
+ {:block/name "🗜 效率工具",
+  :block/created-at 1657648204710,
+  :block/updated-at 1657648204710}
+ {:block/name "🧰 本库使用指南",
+  :block/created-at 1657648203257, 
+  :block/updated-at 1657648203257}]
