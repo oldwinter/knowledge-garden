@@ -55,4 +55,4 @@ date modified: 2022-07-09
 
 [GitHub - oldwinter/knowledge-garden: 真实袒露的第二大脑 second brain，未经美化的数字花园 digital garden](https://github.com/oldwinter/knowledge-garden)
 
-此文的在线双链版本：[2022年7月，obsidian 依然必装的 10 个插件 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/2022%E5%B9%B47%E6%9C%88%EF%BC%8Cobsidian+%E4%BE%9D%E7%84%B6%E5%BF%85%E8%A3%85%E7%9A%84+10+%E4%B8%AA%E6%8F%92%E4%BB%B6)
+>此文的在线双链版本：[2022年7月，obsidian 依然必装的 10 个插件 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/2022%E5%B9%B47%E6%9C%88%EF%BC%8Cobsidian+%E4%BE%9D%E7%84%B6%E5%BF%85%E8%A3%85%E7%9A%84+10+%E4%B8%AA%E6%8F%92%E4%BB%B6)
