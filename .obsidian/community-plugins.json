@@ -6,7 +6,6 @@
   "customizable-page-header-buttons",
   "dataview",
   "find-unlinked-files",
-  "quick-explorer",
   "recent-files-obsidian",
   "obsidian-style-settings",
   "obsidian-weread-plugin",
@@ -17,7 +16,6 @@
   "obsidian42-brat",
   "obsidian-image-auto-upload-plugin",
   "note-refactor-obsidian",
-  "pane-relief",
   "mrj-text-expand",
   "omnisearch",
   "cm-chs-patch",
@@ -30,5 +28,6 @@
   "obsidian-sortable",
   "obsidian-excalidraw-plugin",
   "obsidian-bionic-reading-plugin",
-  "obsidian-another-quick-switcher"
+  "obsidian-focus-mode",
+  "darlal-switcher-plus"
 ]

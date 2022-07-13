@@ -16,23 +16,6 @@
                 "backlinks": true,
                 "source": false
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "294d5c0ac8ad5331",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "294d5c0ac8ad5331",
-                  "group": null,
-                  "state": "{\"type\":\"empty\",\"state\":{}}",
-                  "eState": "{}"
-                }
-              ]
             }
           },
           {
@@ -41,23 +24,6 @@
             "state": {
               "type": "empty",
               "state": {}
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "007dfcd2f78feb5e",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/INDEX根索引 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "007dfcd2f78feb5e",
-                  "group": null,
-                  "state": "{\"type\":\"empty\",\"state\":{}}",
-                  "eState": "{}"
-                }
-              ]
             }
           },
           {
@@ -66,23 +32,6 @@
             "state": {
               "type": "empty",
               "state": {}
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "c72102bcaee0294d",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/最近编辑、最近创建、最近任务、回顾记忆.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "c72102bcaee0294d",
-                  "group": null,
-                  "state": "{\"type\":\"empty\",\"state\":{}}",
-                  "eState": "{}"
-                }
-              ]
             }
           }
         ],
@@ -103,10 +52,6 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -122,10 +67,6 @@
                     "extraContext": false,
                     "sortOrder": "alphabetical"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -137,10 +78,6 @@
                     "sortOrder": "frequency",
                     "useHierarchy": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -149,10 +86,6 @@
                 "state": {
                   "type": "starred",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
             ]
@@ -170,10 +103,6 @@
                   "state": {
                     "file": "README.md"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -209,10 +138,6 @@
                       "close": true
                     }
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -225,17 +150,6 @@
                     "linksCollapsed": false,
                     "unlinkedCollapsed": false
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": [
-                    {
-                      "leaf": "792288b7ff77b6c9",
-                      "group": null,
-                      "state": "{\"type\":\"outgoing-link\",\"state\":{\"file\":\"README.md\",\"linksCollapsed\":true,\"unlinkedCollapsed\":false}}",
-                      "eState": "{}"
-                    }
-                  ]
                 }
               }
             ]
@@ -258,10 +172,6 @@
                 "state": {
                   "type": "review-queue-list-view",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -279,10 +189,6 @@
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
             ]
@@ -1270,115 +1176,16 @@
         "type": "split",
         "children": [
           {
-            "id": "7de44a74baaecc03",
+            "id": "fb16dd8ac82dda20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journals/2022-06-06.md",
+                "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
                 "mode": "source",
                 "backlinks": true,
-                "source": true
+                "source": false
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"TOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"scroll\":0.8329718004338394}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":0},\"to\":{\"line\":33,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/人+科技融合/必备软件/windows必备软件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/刻意练习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":10},\"to\":{\"line\":3,\"ch\":10}}}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-05.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-06.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":11},\"to\":{\"line\":6,\"ch\":11}},\"scroll\":1.8583190105998422}"
-                },
-                {
-                  "leaf": "7de44a74baaecc03",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                }
-              ]
-            }
-          },
-          {
-            "id": "552966b490ba0d82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": true
-              }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            }
-          },
-          {
-            "id": "66b459fdd91e04ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TOC.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": true
-              }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
             }
           }
         ],
@@ -1391,7 +1198,7 @@
           {
             "id": "1aa62d2c88de131c",
             "type": "tabs",
-            "dimension": 44.0400363967243,
+            "dimension": 67.13286713286713,
             "children": [
               {
                 "id": "13b30ded2994ad1d",
@@ -1399,10 +1206,6 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -1411,17 +1214,13 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "github.com/oldwinter",
+                    "query": "tag:#todo/今天",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
-                    "sortOrder": "alphabetical"
+                    "sortOrder": "byModifiedTime"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -1430,10 +1229,6 @@
                 "state": {
                   "type": "starred",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -1445,10 +1240,6 @@
                     "sortOrder": "frequency",
                     "useHierarchy": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -1457,22 +1248,6 @@
                 "state": {
                   "type": "recent-files",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              },
-              {
-                "id": "2886b801ba6d95b4",
-                "type": "leaf",
-                "state": {
-                  "type": "VIEW_TYPE_LONGFORM_EXPLORER",
-                  "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
             ]
@@ -1480,7 +1255,7 @@
           {
             "id": "9d14df0afd7aca85",
             "type": "tabs",
-            "dimension": 55.95996360327571,
+            "dimension": 32.86713286713287,
             "children": [
               {
                 "id": "6ff7eb945647acf7",
@@ -1488,70 +1263,8 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "journals/2022-06-06.md"
+                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              },
-              {
-                "id": "19e30980607922b3",
-                "type": "leaf",
-                "state": {
-                  "type": "review-queue-list-view",
-                  "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              },
-              {
-                "id": "ff604259b96733d3",
-                "type": "leaf",
-                "state": {
-                  "type": "localgraph",
-                  "state": {
-                    "file": "journals/2022-06-06.md",
-                    "options": {
-                      "collapse-filter": true,
-                      "search": "",
-                      "localJumps": 1,
-                      "localBacklinks": true,
-                      "localForelinks": true,
-                      "localInterlinks": false,
-                      "showTags": false,
-                      "showAttachments": false,
-                      "hideUnresolved": false,
-                      "collapse-color-groups": true,
-                      "colorGroups": [],
-                      "collapse-display": true,
-                      "showArrow": false,
-                      "textFadeMultiplier": 0,
-                      "nodeSizeMultiplier": 1,
-                      "lineSizeMultiplier": 1,
-                      "collapse-forces": true,
-                      "centerStrength": 0.518713248970312,
-                      "repelStrength": 10,
-                      "linkStrength": 1,
-                      "linkDistance": 250,
-                      "scale": 1.060641329438692,
-                      "close": true
-                    }
-                  }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": [
-                    {
-                      "leaf": "ff604259b96733d3",
-                      "group": null,
-                      "state": "{\"type\":\"localgraph\",\"state\":{\"file\":\"journals/每月每季度总结/2022-五月.md\",\"options\":{\"collapse-filter\":true,\"search\":\"\",\"localJumps\":1,\"localBacklinks\":true,\"localForelinks\":true,\"localInterlinks\":false,\"showTags\":false,\"showAttachments\":false,\"hideUnresolved\":false,\"collapse-color-groups\":true,\"colorGroups\":[],\"collapse-display\":true,\"showArrow\":false,\"textFadeMultiplier\":0,\"nodeSizeMultiplier\":1,\"lineSizeMultiplier\":1,\"collapse-forces\":true,\"centerStrength\":0.518713248970312,\"repelStrength\":10,\"linkStrength\":1,\"linkDistance\":250,\"scale\":1,\"close\":false}}}",
-                      "eState": "{}"
-                    }
-                  ]
                 }
               },
               {
@@ -1560,14 +1273,10 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "journals/2022-06-06.md",
+                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -1576,172 +1285,15 @@
                 "state": {
                   "type": "advanced-tables-toolbar",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 324.0036315917969,
-        "collapsed": true
-      },
-      "right": {
-        "id": "5eef786fb53f05d2",
-        "type": "split",
-        "children": [
-          {
-            "id": "8a26907d50ddf15a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e250d9862abb79d7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "TOC.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": [
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"TOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/300 - AREA/知识管理/obsidian学习笔记/advanced-slides.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                      "eState": "{\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"kanban\",\"state\":{\"file\":\"pages/KANBAN.md\"}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/EXTERNAL.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian publish 发布.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":78},\"to\":{\"line\":4,\"ch\":78}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/github pages.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/2022-06-04.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":22},\"to\":{\"line\":7,\"ch\":22}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"journals/obsidian sync 同步.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"scroll\":9.329704510108865}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-youtube.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":17},\"to\":{\"line\":3,\"ch\":17}},\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记- 9年咨询的storytelling新的.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/视频笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/马伯庸.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/令我多次沉醉的人或作品 - MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/视频笔记/《古董局中局》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-39136896.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/文学/我所理解的生活-212919.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "e250d9862abb79d7",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"pages/400 - RESOURCE/书影音笔记/微信读书同步/心理/认知觉醒：开启自我改变的原动力-33628204.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                    }
-                  ]
                 }
               },
               {
-                "id": "a0b60de7287704e8",
+                "id": "ce26c6f1b284b418",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "journals/2022-06-06.md",
+                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -1750,32 +1302,71 @@
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
-              },
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 222.5
+      },
+      "right": {
+        "id": "5eef786fb53f05d2",
+        "type": "split",
+        "children": [
+          {
+            "id": "276035328998e775",
+            "type": "tabs",
+            "children": [
               {
-                "id": "6f5e11ce7854ae20",
+                "id": "8f479aa0a656d107",
                 "type": "leaf",
                 "state": {
-                  "type": "ch.der-tobi.obsidian-simple-mention",
+                  "type": "review-queue-list-view",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
             ]
           }
         ],
         "direction": "horizontal",
-        "width": 372.8478698730469,
+        "width": 298.5,
         "collapsed": true
       },
-      "active": "7de44a74baaecc03"
+      "floating": {
+        "id": "7ce459c2bbbd9775",
+        "type": "floating",
+        "children": [
+          {
+            "id": "283a9d7e8c8ddf53",
+            "type": "window",
+            "children": [
+              {
+                "id": "0a93d35b07ceaafa",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Calendar/每日日志/2022-07-13.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": 898,
+            "y": 53,
+            "width": 617,
+            "height": 997,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "fb16dd8ac82dda20"
     }
   },
   "active": "日常玩耍"

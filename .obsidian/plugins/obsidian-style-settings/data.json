@@ -67,7 +67,7 @@
   "sanctum@@compact-outline": false,
   "sanctum@@no-titlebar-title": true,
   "sanctum@@show-yaml": false,
-  "sanctum@@topside-status-bar": true,
+  "sanctum@@topside-status-bar": false,
   "shimmering-focus@@no-floating-metadata": false,
   "shimmering-focus@@show-header-bar": true,
   "shimmering-focus@@show-urls": true,
@@ -95,7 +95,7 @@
   "shimmering-focus@@active-line-highlight-options": "active-line-emphasized-bg",
   "shimmering-focus@@outline-remove-level-1": false,
   "shimmering-focus@@no-shadows": true,
-  "shimmering-focus@@unlock-theme-beta": true,
+  "shimmering-focus@@unlock-theme-beta": false,
   "shimmering-focus@@cursor-styles": "black-white-cursor",
   "shimmering-focus@@no-unresolved-link-indicator": false,
   "shimmering-focus@@tags-in-gutter": false,
@@ -147,5 +147,7 @@
   "sanctum@@active-line-hl": true,
   "things-style@@links-int-on": true,
   "shimmering-focus@@annotation-tags-off": true,
-  "shimmering-focus@@colored-bold-italic": "strong-em-hover-accent"
+  "shimmering-focus@@colored-bold-italic": "strong-em-hover-accent",
+  "sanctum@@light-mode-palette": "sanctum-light",
+  "sanctum@@size-tab-header": 8
 }
