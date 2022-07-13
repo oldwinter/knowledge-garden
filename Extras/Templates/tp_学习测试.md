@@ -21,3 +21,10 @@ File's title next monday: <% tp.date.weekday("YYYY-MM-DD", 7, tp.file.title, "YY
 Date yesterday with format: <% tp.date.yesterday("Do MMMM YYYY") %>
 
 <% tp.user.ls("Hello World!") %>
+
+
+
+
+
+
+

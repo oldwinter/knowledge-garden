@@ -23,6 +23,12 @@
       "icon": "popup-open",
       "name": "Move current pane to new window",
       "showButtons": "both"
+    },
+    {
+      "id": "workspace:toggle-pin",
+      "icon": "filled-pin",
+      "name": "解锁/锁定",
+      "showButtons": "both"
     }
   ],
   "desktop": true,
@@ -37,11 +43,6 @@
       "id": "daily-notes",
       "icon": "calendar-glyph",
       "name": "日记: 打开/创建今天的日记"
-    },
-    {
-      "id": "app:toggle-right-sidebar",
-      "icon": "open-vault",
-      "name": "折叠/展开右侧边栏"
     },
     {
       "id": "remotely-save:start-sync",

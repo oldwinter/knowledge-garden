@@ -1,7 +1,7 @@
 ---
-title: templater
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-13
+title: templater
 ---
 
 [Introduction - Templater (silentvoid13.github.io)](https://silentvoid13.github.io/Templater/)
@@ -11,3 +11,9 @@ date modified: 2022-07-05
 template模板库：
 
 [GitHub - llZektorll/Template_Hub: Obsidian Template Hub started on the 13th of June 2022. It was set up to gather as many note templates as possible.](https://github.com/llZektorll/Template_Hub)
+
+## 常用占位符
+
+<% tp.date.now("YYYY-MM-DD", 0) %>
+<% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>
+<% tp.file.title %>
