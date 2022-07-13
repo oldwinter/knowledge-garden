@@ -28,6 +28,7 @@
   "hoverPreviewWithoutCTRL": false,
   "linkOpacity": 1,
   "openInAdjacentPane": true,
+  "openInMainWorkspace": true,
   "showLinkBrackets": true,
   "allowCtrlClick": true,
   "forceWrap": false,
@@ -91368,7 +91369,7 @@
     }
   },
   "defaultTrayMode": true,
-  "previousRelease": "1.6.34",
+  "previousRelease": "1.7.8",
   "showReleaseNotes": true,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
   "fieldSuggestor": true

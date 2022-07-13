@@ -1497,9 +1497,9 @@ var require_is_stream = __commonJS({
   }
 });
 
-// node_modules/shell-env/node_modules/get-stream/buffer-stream.js
+// node_modules/get-stream/buffer-stream.js
 var require_buffer_stream = __commonJS({
-  "node_modules/shell-env/node_modules/get-stream/buffer-stream.js"(exports, module2) {
+  "node_modules/get-stream/buffer-stream.js"(exports, module2) {
     "use strict";
     var { PassThrough: PassThroughStream } = require("stream");
     module2.exports = (options) => {
@@ -1542,9 +1542,9 @@ var require_buffer_stream = __commonJS({
   }
 });
 
-// node_modules/shell-env/node_modules/get-stream/index.js
+// node_modules/get-stream/index.js
 var require_get_stream = __commonJS({
-  "node_modules/shell-env/node_modules/get-stream/index.js"(exports, module2) {
+  "node_modules/get-stream/index.js"(exports, module2) {
     "use strict";
     var { constants: BufferConstants } = require("buffer");
     var stream = require("stream");
@@ -2027,19 +2027,41 @@ var require_execa = __commonJS({
 var require_lru_cache = __commonJS({
   "node_modules/lru-cache/index.js"(exports, module2) {
     var perf = typeof performance === "object" && performance && typeof performance.now === "function" ? performance : Date;
-    var hasAbortController = typeof AbortController !== "undefined";
-    var AC = hasAbortController ? AbortController : Object.assign(class AbortController {
+    var hasAbortController = typeof AbortController === "function";
+    var AC = hasAbortController ? AbortController : class AbortController {
       constructor() {
-        this.signal = new AC.AbortSignal();
+        this.signal = new AS();
       }
       abort() {
-        this.signal.aborted = true;
+        this.signal.dispatchEvent("abort");
       }
-    }, { AbortSignal: class AbortSignal {
+    };
+    var AS = hasAbortController ? AbortSignal : class AbortSignal {
       constructor() {
         this.aborted = false;
+        this._listeners = [];
       }
-    } });
+      dispatchEvent(type) {
+        if (type === "abort") {
+          this.aborted = true;
+          const e = { type, target: this };
+          this.onabort(e);
+          this._listeners.forEach((f) => f(e), this);
+        }
+      }
+      onabort() {
+      }
+      addEventListener(ev, fn) {
+        if (ev === "abort") {
+          this._listeners.push(fn);
+        }
+      }
+      removeEventListener(ev, fn) {
+        if (ev === "abort") {
+          this._listeners = this._listeners.filter((f) => f !== fn);
+        }
+      }
+    };
     var warned = new Set();
     var deprecatedOption = (opt, instead) => {
       const code = `LRU_CACHE_OPTION_${opt}`;
@@ -2112,13 +2134,10 @@ var require_lru_cache = __commonJS({
           noUpdateTTL,
           maxSize = 0,
           sizeCalculation,
-          fetchMethod
+          fetchMethod,
+          noDeleteOnFetchRejection
         } = options;
-        const {
-          length,
-          maxAge,
-          stale
-        } = options instanceof LRUCache2 ? {} : options;
+        const { length, maxAge, stale } = options instanceof LRUCache2 ? {} : options;
         if (max !== 0 && !isPosInt(max)) {
           throw new TypeError("max option must be a nonnegative integer");
         }
@@ -2163,6 +2182,7 @@ var require_lru_cache = __commonJS({
         }
         this.noDisposeOnSet = !!noDisposeOnSet;
         this.noUpdateTTL = !!noUpdateTTL;
+        this.noDeleteOnFetchRejection = !!noDeleteOnFetchRejection;
         if (this.maxSize !== 0) {
           if (!isPosInt(this.maxSize)) {
             throw new TypeError("maxSize must be a positive integer if specified");
@@ -2282,15 +2302,6 @@ var require_lru_cache = __commonJS({
             this.evict(true);
           }
           this.calculatedSize += this.sizes[index];
-        };
-        this.delete = (k) => {
-          if (this.size !== 0) {
-            const index = this.keyMap.get(k);
-            if (index !== void 0) {
-              this.calculatedSize -= this.sizes[index];
-            }
-          }
-          return LRUCache2.prototype.delete.call(this, k);
         };
       }
       removeItemSize(index) {
@@ -2549,14 +2560,30 @@ var require_lru_cache = __commonJS({
           signal: ac.signal,
           options
         };
-        const p = Promise.resolve(this.fetchMethod(k, v, fetchOpts)).then((v2) => {
+        const cb = (v2) => {
           if (!ac.signal.aborted) {
             this.set(k, v2, fetchOpts.options);
           }
           return v2;
-        });
+        };
+        const eb = (er) => {
+          if (this.valList[index] === p) {
+            const del = !options.noDeleteOnFetchRejection || p.__staleWhileFetching === void 0;
+            if (del) {
+              this.delete(k);
+            } else {
+              this.valList[index] = p.__staleWhileFetching;
+            }
+          }
+          if (p.__returned === p) {
+            throw er;
+          }
+        };
+        const pcall = (res) => res(this.fetchMethod(k, v, fetchOpts));
+        const p = new Promise(pcall).then(cb, eb);
         p.__abortController = ac;
         p.__staleWhileFetching = v;
+        p.__returned = null;
         if (index === void 0) {
           this.set(k, p, fetchOpts.options);
           index = this.keyMap.get(k);
@@ -2566,7 +2593,7 @@ var require_lru_cache = __commonJS({
         return p;
       }
       isBackgroundFetch(p) {
-        return p && typeof p === "object" && typeof p.then === "function" && Object.prototype.hasOwnProperty.call(p, "__staleWhileFetching");
+        return p && typeof p === "object" && typeof p.then === "function" && Object.prototype.hasOwnProperty.call(p, "__staleWhileFetching") && Object.prototype.hasOwnProperty.call(p, "__returned") && (p.__returned === p || p.__returned === null);
       }
       fetch(_0) {
         return __async(this, arguments, function* (k, {
@@ -2576,7 +2603,8 @@ var require_lru_cache = __commonJS({
           noDisposeOnSet = this.noDisposeOnSet,
           size = 0,
           sizeCalculation = this.sizeCalculation,
-          noUpdateTTL = this.noUpdateTTL
+          noUpdateTTL = this.noUpdateTTL,
+          noDeleteOnFetchRejection = this.noDeleteOnFetchRejection
         } = {}) {
           if (!this.fetchMethod) {
             return this.get(k, { allowStale, updateAgeOnGet });
@@ -2588,15 +2616,17 @@ var require_lru_cache = __commonJS({
             noDisposeOnSet,
             size,
             sizeCalculation,
-            noUpdateTTL
+            noUpdateTTL,
+            noDeleteOnFetchRejection
           };
           let index = this.keyMap.get(k);
           if (index === void 0) {
-            return this.backgroundFetch(k, index, options);
+            const p = this.backgroundFetch(k, index, options);
+            return p.__returned = p;
           } else {
             const v = this.valList[index];
             if (this.isBackgroundFetch(v)) {
-              return allowStale && v.__staleWhileFetching !== void 0 ? v.__staleWhileFetching : v;
+              return allowStale && v.__staleWhileFetching !== void 0 ? v.__staleWhileFetching : v.__returned = v;
             }
             if (!this.isStale(index)) {
               this.moveToTail(index);
@@ -2606,7 +2636,7 @@ var require_lru_cache = __commonJS({
               return v;
             }
             const p = this.backgroundFetch(k, index, options);
-            return allowStale && p.__staleWhileFetching !== void 0 ? p.__staleWhileFetching : p;
+            return allowStale && p.__staleWhileFetching !== void 0 ? p.__staleWhileFetching : p.__returned = p;
           }
         });
       }
@@ -2741,109 +2771,14 @@ var require_lru_cache = __commonJS({
         deprecatedProperty("length", "size");
         return this.size;
       }
+      static get AbortController() {
+        return AC;
+      }
+      static get AbortSignal() {
+        return AS;
+      }
     };
     module2.exports = LRUCache2;
-  }
-});
-
-// node_modules/execa/node_modules/get-stream/buffer-stream.js
-var require_buffer_stream2 = __commonJS({
-  "node_modules/execa/node_modules/get-stream/buffer-stream.js"(exports, module2) {
-    "use strict";
-    var { PassThrough: PassThroughStream } = require("stream");
-    module2.exports = (options) => {
-      options = __spreadValues({}, options);
-      const { array } = options;
-      let { encoding } = options;
-      const isBuffer = encoding === "buffer";
-      let objectMode = false;
-      if (array) {
-        objectMode = !(encoding || isBuffer);
-      } else {
-        encoding = encoding || "utf8";
-      }
-      if (isBuffer) {
-        encoding = null;
-      }
-      const stream = new PassThroughStream({ objectMode });
-      if (encoding) {
-        stream.setEncoding(encoding);
-      }
-      let length = 0;
-      const chunks = [];
-      stream.on("data", (chunk) => {
-        chunks.push(chunk);
-        if (objectMode) {
-          length = chunks.length;
-        } else {
-          length += chunk.length;
-        }
-      });
-      stream.getBufferedValue = () => {
-        if (array) {
-          return chunks;
-        }
-        return isBuffer ? Buffer.concat(chunks, length) : chunks.join("");
-      };
-      stream.getBufferedLength = () => length;
-      return stream;
-    };
-  }
-});
-
-// node_modules/execa/node_modules/get-stream/index.js
-var require_get_stream2 = __commonJS({
-  "node_modules/execa/node_modules/get-stream/index.js"(exports, module2) {
-    "use strict";
-    var { constants: BufferConstants } = require("buffer");
-    var stream = require("stream");
-    var { promisify } = require("util");
-    var bufferStream = require_buffer_stream2();
-    var streamPipelinePromisified = promisify(stream.pipeline);
-    var MaxBufferError = class extends Error {
-      constructor() {
-        super("maxBuffer exceeded");
-        this.name = "MaxBufferError";
-      }
-    };
-    function getStream2(inputStream, options) {
-      return __async(this, null, function* () {
-        if (!inputStream) {
-          throw new Error("Expected a stream");
-        }
-        options = __spreadValues({
-          maxBuffer: Infinity
-        }, options);
-        const { maxBuffer } = options;
-        const stream2 = bufferStream(options);
-        yield new Promise((resolve, reject) => {
-          const rejectPromise = (error) => {
-            if (error && stream2.getBufferedLength() <= BufferConstants.MAX_LENGTH) {
-              error.bufferedData = stream2.getBufferedValue();
-            }
-            reject(error);
-          };
-          (() => __async(this, null, function* () {
-            try {
-              yield streamPipelinePromisified(inputStream, stream2);
-              resolve();
-            } catch (error) {
-              rejectPromise(error);
-            }
-          }))();
-          stream2.on("data", () => {
-            if (stream2.getBufferedLength() > maxBuffer) {
-              rejectPromise(new MaxBufferError());
-            }
-          });
-        });
-        return stream2.getBufferedValue();
-      });
-    }
-    module2.exports = getStream2;
-    module2.exports.buffer = (stream2, options) => getStream2(stream2, __spreadProps(__spreadValues({}, options), { encoding: "buffer" }));
-    module2.exports.array = (stream2, options) => getStream2(stream2, __spreadProps(__spreadValues({}, options), { array: true }));
-    module2.exports.MaxBufferError = MaxBufferError;
   }
 });
 
@@ -2945,9 +2880,8 @@ var import_which3 = __toModule(require_which());
 
 // src/editorExtension.ts
 var import_language = __toModule(require("@codemirror/language"));
-var import_rangeset = __toModule(require("@codemirror/rangeset"));
+var import_language2 = __toModule(require("@codemirror/language"));
 var import_state = __toModule(require("@codemirror/state"));
-var import_stream_parser = __toModule(require("@codemirror/stream-parser"));
 var import_view = __toModule(require("@codemirror/view"));
 var import_obsidian = __toModule(require("obsidian"));
 
@@ -2990,7 +2924,7 @@ var citeKeyPlugin = import_view.ViewPlugin.fromClass(class {
     }
   }
   mkDeco(view) {
-    const b = new import_rangeset.RangeSetBuilder();
+    const b = new import_state.RangeSetBuilder();
     const obsView = view.state.field(import_obsidian.editorViewField);
     const citekeyCache = view.state.field(citeKeyCacheField);
     let tree;
@@ -3001,7 +2935,7 @@ var citeKeyPlugin = import_view.ViewPlugin.fromClass(class {
         let pos = from + match.index;
         if (!tree)
           tree = (0, import_language.syntaxTree)(view.state);
-        const nodeProps = tree.resolveInner(pos, 1).type.prop(import_stream_parser.tokenClassNodeProp);
+        const nodeProps = tree.resolveInner(pos, 1).type.prop(import_language2.tokenClassNodeProp);
         if (nodeProps && ignoreListRegEx.test(nodeProps)) {
           continue;
         }
@@ -4243,7 +4177,7 @@ function isStream(stream) {
 }
 
 // node_modules/execa/lib/stream.js
-var import_get_stream = __toModule(require_get_stream2());
+var import_get_stream = __toModule(require_get_stream());
 var import_merge_stream = __toModule(require_merge_stream());
 var handleInput = (spawned, input) => {
   if (input === void 0 || spawned.stdin === void 0) {

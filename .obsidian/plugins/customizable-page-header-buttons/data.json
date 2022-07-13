@@ -1,33 +1,9 @@
 {
   "enabledButtons": [
     {
-      "id": "app:go-back",
-      "icon": "left-arrow-with-tail",
-      "name": "返回",
-      "showButtons": "both"
-    },
-    {
-      "id": "app:go-forward",
-      "icon": "right-arrow-with-tail",
-      "name": "前进",
-      "showButtons": "both"
-    },
-    {
       "id": "workspace:split-vertical",
       "icon": "vertical-split",
       "name": "左右拆分",
-      "showButtons": "both"
-    },
-    {
-      "id": "obsidian-focus-mode:toggle-super-focus-mode",
-      "icon": "fullscreen",
-      "name": "Focus Mode: Toggle Super Focus Mode (Active pane only)",
-      "showButtons": "both"
-    },
-    {
-      "id": "obsidian-hover-editor:convert-active-pane-to-popover",
-      "icon": "popup-open",
-      "name": "Hover Editor: Convert active pane to Hover Editor",
       "showButtons": "both"
     },
     {
@@ -40,6 +16,12 @@
       "id": "editor:toggle-source",
       "icon": "code-glyph",
       "name": "切换实时阅览/源码模式",
+      "showButtons": "both"
+    },
+    {
+      "id": "workspace:move-to-new-window",
+      "icon": "popup-open",
+      "name": "Move current pane to new window",
       "showButtons": "both"
     }
   ],
@@ -55,11 +37,6 @@
       "id": "daily-notes",
       "icon": "calendar-glyph",
       "name": "日记: 打开/创建今天的日记"
-    },
-    {
-      "id": "obsidian-focus-mode:toggle-focus-mode",
-      "icon": "enter",
-      "name": "Focus Mode: Toggle Focus Mode"
     },
     {
       "id": "app:toggle-right-sidebar",

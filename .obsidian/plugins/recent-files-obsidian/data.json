@@ -1,16 +1,68 @@
 {
   "recentFiles": [
     {
+      "basename": "如何合理地制定计划",
+      "path": "Atlas/MOCs/如何合理地制定计划.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "AboutTheGarden",
       "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "模板与套路",
+      "path": "Cards/永久笔记/模板与套路.md"
+    },
+    {
+      "basename": "论倾听的重要性",
+      "path": "Spaces/沟通与表达专题/论倾听的重要性.md"
     },
     {
       "basename": "2022-07-13",
       "path": "Calendar/每日日志/2022-07-13.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "如何克服表达的额啊等口条过多问题",
+      "path": "Spaces/沟通与表达专题/如何克服表达的额啊等口条过多问题.md"
+    },
+    {
+      "basename": "Where It All Started - 第二大脑之缘起",
+      "path": "Spaces/第二大脑建设专题/Where It All Started - 第二大脑之缘起.md"
+    },
+    {
+      "basename": "What Is a Second Brain? - 第二大脑是什么？",
+      "path": "Spaces/第二大脑建设专题/What Is a Second Brain? - 第二大脑是什么？.md"
+    },
+    {
+      "basename": "说教与说服",
+      "path": "Spaces/沟通与表达专题/说教与说服.md"
+    },
+    {
+      "basename": "在线自习室",
+      "path": "Spaces/沟通与表达专题/在线自习室.md"
+    },
+    {
+      "basename": "数字花园",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/数字花园.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
+    },
+    {
+      "basename": "+ About Atlas",
+      "path": "Atlas/+ About Atlas.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -23,10 +75,6 @@
     {
       "basename": "obsidian开箱即用示例库",
       "path": "Cards/永久笔记/obsidian开箱即用示例库.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "🧰 本库使用指南",
@@ -151,54 +199,6 @@
     {
       "basename": "👬🏻 别的数字花园收录",
       "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
-    },
-    {
-      "basename": "🗜 效率工具",
-      "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
-    },
-    {
-      "basename": "🏗 本库路线图",
-      "path": "☘️ 花园导览 🍀/其他/🏗 本库路线图.md"
-    },
-    {
-      "basename": "2022-07-11",
-      "path": "Calendar/每日日志/2022-07-11.md"
-    },
-    {
-      "basename": "Cheat Sheet",
-      "path": "Calendar/每日日志/Cheat Sheet.md"
-    },
-    {
-      "basename": "本库如何免费发布至web",
-      "path": "Cards/本库如何免费发布至web.md"
-    },
-    {
-      "basename": "obsidian sync 同步",
-      "path": "Cards/永久笔记/obsidian sync 同步.md"
-    },
-    {
-      "basename": "2022-07-10",
-      "path": "Calendar/每日日志/2022-07-10.md"
-    },
-    {
-      "basename": "2022-07-04",
-      "path": "Calendar/每日日志/2022-07-04.md"
-    },
-    {
-      "basename": "2022-07-05",
-      "path": "Calendar/每日日志/2022-07-05.md"
-    },
-    {
-      "basename": "2022-07-06",
-      "path": "Calendar/每日日志/2022-07-06.md"
-    },
-    {
-      "basename": "2022-07-07",
-      "path": "Calendar/每日日志/2022-07-07.md"
-    },
-    {
-      "basename": "2022-07-08",
-      "path": "Calendar/每日日志/2022-07-08.md"
     }
   ],
   "omittedPaths": [

@@ -3,24 +3,41 @@
   --symbol-indent-padding: 12px;
 }
 
-.qsp-headings-indicator {}
-.qsp-note {}
-.qsp-path {}
-
+/* suggestion file path icon */
 .qsp-path-indicator {
   margin-right:4px;
 }
 
+/* symbol suggestion, symbol type icon */
 .qsp-symbol-indicator {
-  color: var(--text-accent);
   width: 2.5em;
   text-align: center;
   float: left;
   font-weight: 800;
 }
 
-.qsp-symbol-text {}
+/* warning/error text */
+.qsp-warning {
+  color: var(--text-error);
+}
 
+/* settings panel, indent setting to create visual hierarchy */
+.qsp-setting-item-indent {
+  border: 0px;
+  padding-left: 36px;
+}
+
+/* symbol suggestion should align to the left */
+.suggestion-item.qsp-suggestion-symbol {
+  justify-content: left;
+}
+
+/* symbol suggestion display the icon first (on the left side) */
+.qsp-suggestion-symbol > .qsp-aux {
+  order: -1;
+}
+
+/* symbol suggestion indentation when in outline mode */
 .qsp-symbol-l0 {
   padding-left: var(--symbol-base-padding);
 }
@@ -49,11 +66,49 @@
   padding-left: calc(var(--symbol-base-padding) + (6 * var(--symbol-indent-padding)));
 }
 
-.qsp-warning {
-  color: var(--text-error);
-}
+/* command suggestion item */
+.qsp-suggestion-command {}
 
-.qsp-setting-item-indent {
-  border: 0px;
-  padding-left: 36px;
-}
+/* editor suggestion item */
+.qsp-suggestion-editor {}
+
+/* heading suggestion item */
+.qsp-suggestion-headings {}
+
+/* related item suggestion */
+.qsp-suggestion-related {}
+
+/* starred suggestion item */
+.qsp-suggestion-starred {}
+
+/* symbol suggestion item */
+.qsp-suggestion-symbol {}
+
+/* workspace suggestion item */
+.qsp-suggestion-workspace {}
+
+/* suggestion primary content container */
+.qsp-content {}
+
+/* suggestion title element */
+.qsp-title {}
+
+/* suggestion secondary information element (like file path information) */
+.qsp-note {}
+
+/* suggestion flair/icon container */
+.qsp-aux {}
+
+/* suggestion file path element */
+.qsp-path {}
+
+/* headings suggestion, heading level (H1, H2, etc..) icon */
+.qsp-headings-indicator {}
+
+/* headings level */
+.qsp-headings-l1 {}
+.qsp-headings-l2 {}
+.qsp-headings-l3 {}
+.qsp-headings-l4 {}
+.qsp-headings-l5 {}
+.qsp-headings-l6 {}

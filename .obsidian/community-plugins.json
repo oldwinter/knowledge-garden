@@ -6,8 +6,6 @@
   "customizable-page-header-buttons",
   "dataview",
   "find-unlinked-files",
-  "obsidian-focus-mode",
-  "obsidian-hover-editor",
   "quick-explorer",
   "recent-files-obsidian",
   "obsidian-style-settings",
@@ -29,5 +27,8 @@
   "templater-obsidian",
   "settings-search",
   "sliding-panes-obsidian",
-  "obsidian-sortable"
+  "obsidian-sortable",
+  "obsidian-excalidraw-plugin",
+  "obsidian-bionic-reading-plugin",
+  "obsidian-another-quick-switcher"
 ]
