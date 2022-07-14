@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "2022-07-14",
-      "path": "Calendar/每日日志/2022-07-14.md"
+      "basename": "考研备考经验",
+      "path": "Cards/永久笔记/考研备考经验.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "墨菲定律",
+      "path": "Sources/Courses/人文社科通识/心理学/墨菲定律.md"
     },
     {
       "basename": "2022-07-15",
       "path": "Calendar/每日日志/2022-07-15.md"
+    },
+    {
+      "basename": "2022-07-14",
+      "path": "Calendar/每日日志/2022-07-14.md"
     },
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
@@ -59,10 +71,6 @@
     {
       "basename": "数字花园连通性检测",
       "path": "Atlas/Logs/数字花园连通性检测.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "工具理性与价值理性",
@@ -191,14 +199,6 @@
     {
       "basename": "本地优先的特点",
       "path": "Calendar/每日日志/本地优先的特点.md"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - 图",
-      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
-    },
-    {
-      "basename": "git submodule",
-      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/git submodule.md"
     }
   ],
   "omittedPaths": [
