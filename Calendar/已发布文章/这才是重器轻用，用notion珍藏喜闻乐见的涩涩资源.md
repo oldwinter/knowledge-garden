@@ -1,10 +1,10 @@
 ---
+title: 这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源
+date created: 2022-06-23
+date modified: 2022-07-14
 id: 77655f77-5bcc-48dd-a1e0-6d3c7829d788
 published: true
 tags: article/done
-title: 这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源
-date created: 2022-06-23
-date modified: 2022-07-05
 ---
 
 ## 人之初，性本色
@@ -91,6 +91,7 @@ date modified: 2022-07-05
 notion 链接：<https://oldwinter.notion.site/Notion-8598fb0a563245928ad55f625385e000>
 
 附言 1：
+
 引来了很多人的指责，我的确也有些东西没说清楚，补充说明如下：  
 1 ，请勿 100% 相信云存储的可靠性，即使它声称 99.999% 可靠性。所以极为重要的资源，一定要狡兔三窟。  
 2 ，请勿 100% 相信云厂商的隐私保护，厂商自己都无法 100% 约束自己的员工，更何况有黑客，国家等潜在变量。所以如果一旦泄露，会让你身败名裂的东西，请慎重上云。  

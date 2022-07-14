@@ -32,7 +32,7 @@
     },
     "YAML Key Sort": {
       "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true,
-      "YAML Key Priority Sort Order": "",
+      "YAML Key Priority Sort Order": "title",
       "Priority Keys at Start of YAML": true,
       "YAML Sort Order for Other Keys": "Ascending Alphabetical"
     },

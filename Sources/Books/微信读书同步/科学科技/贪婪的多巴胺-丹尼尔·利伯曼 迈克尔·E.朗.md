@@ -1,18 +1,17 @@
 ---
-tags: weread
-isbn: 9787521731583
+title: 贪婪的多巴胺-丹尼尔·利伯曼 迈克尔·E.朗
+author: 丹尼尔·利伯曼 迈克尔·E.朗
+bookId: '41626009'
 category: 科学科技-自然科学
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/9/41626009/t7_41626009.jpg
-author: 丹尼尔·利伯曼 迈克尔·E.朗
-publisher: 中信出版社
-doc_type: weread-highlights-reviews
-bookId: '41626009'
-reviewCount: 1
-noteCount: 0
-title: 贪婪的多巴胺-丹尼尔·利伯曼 迈克尔·E.朗
 date created: 2022-06-12
-date modified: 2022-07-05
+date modified: 2022-07-14
+doc_type: weread-highlights-reviews
+isbn: 9787521731583
+noteCount: 0
+publisher: 中信出版社
+reviewCount: 1
+tags: weread
 ---
 
 ## 元数据

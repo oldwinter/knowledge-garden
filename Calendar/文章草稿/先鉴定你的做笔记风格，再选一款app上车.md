@@ -1,11 +1,13 @@
 ---
 title: 先鉴定你的做笔记风格，再选一款app上车
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 >本文是对 [[@Tiago Forte]] 的关于如何选择适合自己的笔记 app 的视频的文字翻译版本。
+
 我是读研没能免修英语的渣渣，从没做过视频翻译，这是处女作♍。
+
 我尽量优先做到『信雅达』的达吧。
 
 ### 相关视频链接
@@ -21,4 +23,5 @@ date modified: 2022-07-05
 by the way: 之前刷过 3 遍以上他的 [[渐进式总结]]的文章，翻译版和英文原版见：[产品沉思录 ProductThinking](https://index.pmthinking.com/3a8c5d77b5be42c58719d174bfbfa935)
 
 以下是正文：
+
 ##

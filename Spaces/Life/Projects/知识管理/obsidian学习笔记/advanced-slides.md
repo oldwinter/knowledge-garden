@@ -1,7 +1,7 @@
 ---
 title: advanced-slides
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [[advanced-slides-templates模板1]]
@@ -63,6 +63,7 @@ width: 960
 ## 为啥用 markdown 方式的 ppt
 
 双向引用，直接 ppt 还有个好处，就是双向同步，不会改了这忘了那
+
 还有 [[slidev]]正在开发中，等成熟了和[[revealjs]] 综合对比看看。 ^4f22e2
 
 ## 奇技淫巧
@@ -139,6 +140,7 @@ text with attribute <!-- element data-toggle="modal" -->
 ### 单页 ppt 的 css 全局样式控制 %% fold %%
 
 <!-- .slide: style="background-color: coral;" -->
+
 这一页的主题被控制
 
 --
@@ -146,17 +148,25 @@ text with attribute <!-- element data-toggle="modal" -->
 ### 单页 ppt 划分成 block，进行细粒度 css 样式控制 %% fold %%
 
 :::
+
 块 1
+
 	:::
+
 	块 2
+
 	:::
 
 :::
 
 :::
+
 块 3
+
 块 3
+
 可见生效方式要有前和尾形成闭合
+
 :::
 
 --
@@ -176,11 +186,13 @@ Slide up while fading in <!-- element class="fragment fade-up" -->
 --
 
 点击按顺序出现
+
 - Appear Fourth <!-- element class="fragment" data-fragment-index="4" -->
 - Appear Third <!-- element class="fragment" data-fragment-index="3" -->
 - Appear Second <!-- element class="fragment" data-fragment-index="2" -->
 - Appear First <!-- element class="fragment" data-fragment-index="1" -->
   
+
   --
 
 ### 单页内的元素用 css 的 style 语法控制样式 %% fold %%
@@ -217,6 +229,7 @@ css: [css/layout.css,css/customFonts.css]
 <!-- slide bg="https://picsum.photos/seed/picsum/800/600" -->
 - ### Slide with image background
   
+
   --
 
 ### 演讲者视图 %% fold %%
@@ -232,10 +245,14 @@ note 之后，就是演讲者自己的笔记和注释
 ### 最简单的控制元素进场顺序 %% fold %%
 
 用 + 号和）号。实时阅览模式，➕会被自动变成圆，这里得换成编辑模式
+
 - aaa %% fold %%
+
   + bbb
   + ccc
+
   
+
   --
 
 ### 打开 excalidraw 导出开关，这边用 svg 或 png %% fold %%
@@ -255,6 +272,7 @@ note 之后，就是演讲者自己的笔记和注释
 ## 版面和布局 - 分割元素
 
 --
+
 <split even>
 
 ![](https://picsum.photos/id/1005/250/250)
@@ -266,6 +284,7 @@ note 之后，就是演讲者自己的笔记和注释
 </split>
 
 --
+
 <split even gap="3">
 
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -277,6 +296,7 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 </split>
 
 --
+
 <split left="2" right="1" gap="2">
 
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -306,6 +326,7 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 </split>
 
 --
+
 <split no-margin>
 
 ![](https://picsum.photos/id/1001/250/250)
@@ -336,8 +357,11 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 ## 版面和布局 - 网格分布 %% fold %%
 
 --
+
 <grid drag="60 55" drop="5 10" bg="red">
+
 60 x 55
+
 </grid>
 
 <grid drag="25 55" drop="-5 10" style=bg="green">
@@ -349,6 +373,7 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 </grid>
 
 --
+
 <grid drag="40 30" drop="topleft" bg="red">
 
 Top Left
@@ -368,24 +393,31 @@ Bottom
 </grid>
 
 --
+
 <grid drag="40 100" drop="center" bg="coral" flow="col">
 
 Heading
 
 ![[Image.jpg]]
+
 **Lorem Ipsum** is simply dummy text
+
 </grid>
 
 --
+
 <grid drag="100 40" drop="center" bg="coral" flow="row">
 
 Left
 
 ![[Image.jpg]]
+
 **Lorem Ipsum** is simply dummy text
+
 </grid>
 
 --
+
 <grid drag="55 50" drop="topleft" bg="orange">
 
 ### Make
@@ -401,6 +433,7 @@ Left
 </grid>
 
 --
+
 <grid drag="30 25" drop="left" border="thick dotted blue">
 
 thick dotted blue
@@ -414,8 +447,11 @@ thick dotted blue
 thick dotted blue <!-- element drag="30 25" drop="right" border="medium dashed red"-->
 
 --
+
 <grid drag="50 50" drop="-12 -25" bg="white" filter="grayscale()">
+
 ![[Image.jpg]]
+
 </grid>
 
 Text is too blurry <!-- element drag="30 25" drop="5 15" bg="#B565A7" filter="sepia(10px)" -->
@@ -429,6 +465,7 @@ Text is too blurry <!-- element drag="30 25" drop="5 15" bg="#B565A7" filter="se
 ## 主题和配置 %% fold %%
 
 --
+
 在 metadata 里面加 theme:
 
 ```

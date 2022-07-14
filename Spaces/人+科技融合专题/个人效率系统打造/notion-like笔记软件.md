@@ -1,14 +1,17 @@
 ---
 title: notion-like笔记软件
 date created: 2022-06-18
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
+
 3 个重要特征:
+
 - [[block]]
 - [[folder first]]
 - [[database]]
 
 常见产品:
+
 - 钉钉文档
 - 飞书文档
 - 语雀

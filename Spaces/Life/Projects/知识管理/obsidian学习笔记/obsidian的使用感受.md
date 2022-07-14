@@ -1,7 +1,7 @@
 ---
 title: obsidian的使用感受
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 obsidian 的使用感受
@@ -40,6 +40,7 @@ obsidian 的使用感受
 ### 使用初衷
 
 像软件工程一样，开发我的知识潜力。
+
 像维基百科一样，简历我的个人百科。
 
 ### 待解决问题

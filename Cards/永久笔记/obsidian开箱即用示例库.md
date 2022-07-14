@@ -1,7 +1,7 @@
 ---
 title: obsidian开箱即用示例库
 date created: 2022-06-29
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 - [GitHub - cumany/Blue-topaz-examples: Blue topaz themes example vault for Obsidian](https://github.com/cumany/Blue-topaz-examples)
 - [GitHub - Rainbell129/Obsidian-Homepage: A dashboard for your obsidian vault.](https://github.com/Rainbell129/Obsidian-Homepage)
@@ -9,4 +9,4 @@ date modified: 2022-07-05
 
 [[2022-06-29]]更新：
 
-- [给Obsidian新手科研人的开箱即用库：BCS’s Vault for Researchers V1.1](https://forum-zh.obsidian.md/t/topic/8114) 
+- [给Obsidian新手科研人的开箱即用库：BCS’s Vault for Researchers V1.1](https://forum-zh.obsidian.md/t/topic/8114)

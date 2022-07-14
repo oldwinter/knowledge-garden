@@ -1,18 +1,17 @@
 ---
-tags: weread
-isbn: 9787115404404
+title: 写给大家看的设计书（第4版）-Robin Williams
+author: Robin Williams
+bookId: '907758'
 category: 艺术-设计
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/758/907758/t7_907758.jpg
-author: Robin Williams
-publisher: 人民邮电出版社
-doc_type: weread-highlights-reviews
-bookId: '907758'
-reviewCount: 1
-noteCount: 0
-title: 写给大家看的设计书（第4版）-Robin Williams
 date created: 2022-06-12
-date modified: 2022-07-05
+date modified: 2022-07-14
+doc_type: weread-highlights-reviews
+isbn: 9787115404404
+noteCount: 0
+publisher: 人民邮电出版社
+reviewCount: 1
+tags: weread
 ---
 
 ## 元数据

@@ -1,12 +1,13 @@
 ---
 title: docker in docker
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 ## 定义
 
 在 docker 的运行时容器中，再运行一个 docker engine，从而在这个容器内，又有一套全新的 docker 运行时系统，与容器外完全隔离。
+
 相对的概念：[[docker from docker]]
 
 ## 运行时容器中的 yaml 定义片段

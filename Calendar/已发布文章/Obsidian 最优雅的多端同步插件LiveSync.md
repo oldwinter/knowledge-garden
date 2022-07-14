@@ -1,7 +1,7 @@
 ---
 title: Obsidian 最优雅的多端同步插件LiveSync
 date created: 2022-07-04
-date modified: 2022-07-05
+date modified: 2022-07-14
 tags: article/done
 ---
 

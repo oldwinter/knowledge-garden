@@ -1,8 +1,8 @@
 ---
-aliases: 什么是PARA笔记组织法
 title: PARA
+aliases: 什么是PARA笔记组织法
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [[2022-06-30]]读[[A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte]]，恍然大悟。PARA应该是用来组织信息，而非组织笔记。不应该生搬硬套到我的[[个人知识笔记系统]]中，而是应该纳入[[个人信息管理系统]]。
@@ -40,10 +40,17 @@ P.A.R.A. 是 **项目（Project）、领域（Area）、资源（Resource）、 
 - **归档：**沉寂的内容，但也许对未来有用
 - **缓存：**快速的收集信息，减少判断的成本（个人添加）
   
+
   @George Hale 说道：如果要对信息或者工作寄托长久，有三点是必须遵循的，专注一些领域、步步为营和广泛吸收。可量化意味着明确的阶段性和边界，不可直接量化的领域「专家」是偏主观、自我感受和直觉。
+
   
+
   其中 Goal 是贯穿始终的，**Area 的持续精进是最终目的**，Project 的选择和执行是阶可量化的段性目标，Resource 是支撑二级的「Area」的资源、资料（外部的）。
+
   
+
   **围绕 Area 的精进，我们需要不断吸收外部的有效信息和进行阶段性的「创作」，**而阶段性的创作需要的主题，可以是 Area 的拆分，也可以是基于 Project 的抽象和总结，但来源主要是通过实践（Project）和理论来进行的（即 Resource——外部参考、经验、方法论）。
+
   
+
   [P.A.R.A. 是什么及在 Notion 中的应用 - 少数派 (sspai.com)](https://sspai.com/post/61459)

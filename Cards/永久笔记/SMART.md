@@ -1,7 +1,7 @@
 ---
 title: SMART
 date created: 2022-06-27
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 S=Specific、M=Measurable、A=Attainable、R=Relevant、T=Time-bound

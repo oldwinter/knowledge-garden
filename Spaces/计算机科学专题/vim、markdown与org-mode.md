@@ -1,9 +1,11 @@
 ---
 title: vim、markdown与org-mode
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
+
 共通点：均是对纯文本的快捷操作，使其呈现出不同的视觉效果。
+
 不同点：
 
 [[vim]] 是对文本的控制方法，通过各种快捷键和命令，达到目的。

@@ -1,7 +1,7 @@
 ---
 title: notion
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 - 2020 年，笔记软件领域的两个标志性软件 `Notion` 和 [[Roam Research]]
  - Notion 引入了块的概念，让网站构建如同搭建积木的一样简单方便。
@@ -10,6 +10,7 @@ date modified: 2022-07-05
 ## 技巧
 
 当前不支持除了 http 以外的 [[URL scheme]]，因而无法通过链接直接打开其他应用。
+
 解决方法：通过短网址服务，将比如 obsidian://这个 url 转成 https。缺点就是要跳一下浏览器，但是已经接近完美了。
 
 [TinyURL.com - shorten that long URL into a tiny URL](https://tinyurl.com/app/myurls)

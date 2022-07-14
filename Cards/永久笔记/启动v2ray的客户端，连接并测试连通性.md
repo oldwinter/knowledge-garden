@@ -1,12 +1,13 @@
 ---
 title: 启动v2ray的客户端，连接并测试连通性
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 mac 上以 [[V2rayU]] 为例：
 
 和 [[启动v2ray的服务端的docker镜像]] 里的配置对应。
+
 重点在 vnext 里面的配置。
 
 ```

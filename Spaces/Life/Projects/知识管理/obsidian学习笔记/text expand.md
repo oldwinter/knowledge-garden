@@ -1,7 +1,7 @@
 ---
 title: text expand
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 ## 这个插件对我真的有用吗？
@@ -9,6 +9,7 @@ date modified: 2022-07-05
 [mrjackphil/obsidian-text-expand: A simple text expand plugin for Obsidian.md (github.com)](https://github.com/mrjackphil/obsidian-text-expand)
 
 相比 dataview，
+
 - 这个是搜索的结果保存，而 dataview 是检索 metadata
 - 这个是新建代码块的表格保存，被动触发，而 dataview 是就地替换，自动刷新。
 - 基于这 2 点，应该还是有些更需要静态数据的场景有用，能作为 dataview 的一个能力延伸，先保留。
@@ -27,7 +28,9 @@ path:"Calendar"
 |[[$filename]]|$size|
 >⬆⬆⬆
 ```
+
 ⬇⬇⬇
+
  
 |Filename|Content|
 |---|---|
@@ -93,7 +96,9 @@ file:2022-0
 |[[$filename]]|$size|
 >⬆⬆⬆
 ```
+
 ⬇⬇⬇
+
  
 |Filename|Content|
 |---|---|

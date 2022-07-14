@@ -1,7 +1,7 @@
 ---
-date created: 2022-06-09
-date modified: 2022-07-13
 title: templater
+date created: 2022-06-09
+date modified: 2022-07-14
 ---
 
 [Introduction - Templater (silentvoid13.github.io)](https://silentvoid13.github.io/Templater/)
@@ -15,5 +15,7 @@ template模板库：
 ## 常用占位符
 
 <% tp.date.now("YYYY-MM-DD", 0) %>
+
 <% tp.file.last_modified_date("dddd Do MMMM YYYY HH:mm:ss") %>
+
 <% tp.file.title %>

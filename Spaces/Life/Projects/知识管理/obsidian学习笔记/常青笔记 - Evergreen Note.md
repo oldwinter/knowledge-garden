@@ -1,7 +1,7 @@
 ---
 title: 常青笔记 - Evergreen Note
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [何谓常青笔记（EvergreenNotes） (pmthinking.com)](https://index.pmthinking.com/EvergreenNotes-0a3f82b22a654eb18ccf3e83854ec1ba)
@@ -13,6 +13,7 @@ date modified: 2022-07-05
 常青笔记是一种跨越不同项目的写作和笔记组织方法论，它使得笔记跨越时间地产生进化、贡献和积累。大部分人做的其实是 [[暂态笔记]]
 
 想让做的笔记值得进行跨越时间的发展，是困难的。但下面这些原则可能有用：
+
 - [[常青笔记应该是原子化的]]
 - [[常青笔记应该是概念导向的]]
 - [[常青笔记应该是紧密链接的]]

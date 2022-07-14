@@ -1,8 +1,8 @@
 ---
-aliases: TTRSS
 title: tiny tiny RSS
+aliases: TTRSS
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [🐋 Awesome TTRSS | 🐋 Awesome TTRSS (henry.wang)](http://ttrss.henry.wang/zh/)
@@ -14,5 +14,6 @@ date modified: 2022-07-05
 <<<<http://oldwinter.top:181/>>>>
 
 缺点：
+
 - 样式有点丑，估计需要去折腾主题，以后有需要再折腾。现在先用 [[Reeder]]
 - 部署的 server 也需要翻墙，不然抓不到信息，有点麻烦。

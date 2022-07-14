@@ -1,7 +1,7 @@
 ---
 title: obsidian
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 up:: [[笔记软件的选择]]
@@ -10,7 +10,7 @@ down:: [[obsidian插件]]
 
 jumps:: [[notion]]
 
-[[Obsidian入门到精通]]
+[[我使用Obsidian的核心原则]]
 
 [[如果要我安利obsidian给别人，我会怎么做]]
 

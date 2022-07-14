@@ -87,7 +87,7 @@
   "shimmering-focus@@max-view-enabled": false,
   "shimmering-focus@@focus-view-enabled": false,
   "shimmering-focus@@no-sliding-panes-shadows": true,
-  "shimmering-focus@@no-built-in-supercharged-links": false,
+  "shimmering-focus@@no-built-in-supercharged-links": true,
   "shimmering-focus@@grayscale-favicons": false,
   "shimmering-focus@@no-heading-bg": true,
   "shimmering-focus@@no-alternating-header-italics": true,

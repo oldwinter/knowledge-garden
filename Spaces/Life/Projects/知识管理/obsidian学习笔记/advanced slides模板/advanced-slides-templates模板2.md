@@ -1,11 +1,11 @@
 ---
-theme: consult
+title: '**1. Wie wichtig sind<br>Team-Meetings**'
+date created: 2022-07-03
+date modified: 2022-07-14
 height: 540
 margin: 0
 maxScale: 4
-title: '**1. Wie wichtig sind<br>Team-Meetings**'
-date created: 2022-07-03
-date modified: 2022-07-05
+theme: consult
 ---
 <!-- slide template="[[tpl-con-title]]" -->
 
@@ -27,6 +27,7 @@ date modified: 2022-07-05
 :::
 
 ::: block
+
 1. Wie wichtig sind Team-Meetings?
 2. Die Basisprozesse bein Problemlösen ind Team-Meetings
 3. Mindfulness beim Umgang mit den Basisprozessen beim Problemlösen
@@ -93,7 +94,9 @@ Wie viel Zeit wird in den Teambesprechungen verwendet für Information, Beratun
 :::
 
 :::block
+
 ![[Basisprozess.png]]
+
 :::<!-- element align="center" style="height:85%" -->
 
 ::: source
@@ -113,7 +116,9 @@ Wie viel Zeit wird in den Teambesprechungen verwendet für Information, Beratun
 :::
 
 ::: left
+
 ![[Basisprozess.png]]
+
 :::
 
 <style>
@@ -125,7 +130,9 @@ Wie viel Zeit wird in den Teambesprechungen verwendet für Information, Beratun
 </style>
 
 ::: right
+
 **Organisatorisch-methodische Prozesse**
+
 - Den äußeren Rahmen gestalten: Raum, Zeit, Teilnehmer, Technik, Verpflegung
 - Besprechungsthemen planen: Einladung, Agenda
 - Moderation
@@ -134,6 +141,7 @@ Wie viel Zeit wird in den Teambesprechungen verwendet für Information, Beratun
 Umsetzungsschritte
 
 **Denkprozesse**
+
 - Informationsprozesse
 - Beratungsprozesse
 - Entscheidungsprozess
@@ -171,10 +179,13 @@ Umsetzungsschritte
 :::
 
 ::: left
+
 ![[Consult/assets/ReizReaktion.png]]
+
 :::<!-- element pad="0 0 0 20px" -->
 
 ::: right
+
 1. Die Basisprozesse unterscheiden und dabei die einzelnen Prozesse im Kontext des Ganzen sehen
 2. Jeden Prozess in seiner Entfaltung differenziert beobachten und die Gestaltungsmuster verstehen
 3. Die Wechselwirkungen zwischen den einzelnen Prozessen beobachten und verstehen
@@ -204,6 +215,7 @@ Umsetzungsschritte
 :::
 
 ::: block
+
 1. Klärt bitte die Moderationsverantwortung und schafft Euch eine Arbeitsumgebung<br><br>
 3. Untersucht bitte anhand der nachfolgend abgebildeten Matrix die Stärken und Schwächen von typischen Meetings, die ihr erlebt habt. Tragt dazu Stichworte zusammen und visualisiert Euer Gespräch auf der Pinnwand in der Matrix<br><br>
 4. Nutzt bitte die Dreischrittmethode und die dazugehörenden Einstellungen und Haltungen

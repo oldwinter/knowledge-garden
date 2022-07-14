@@ -1,12 +1,13 @@
 ---
 title: github
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 ## readme 相关
 
 文件头显示多彩的 badge 图标：
+
 - [Shields.io: Quality metadata badges for open source projects](https://shields.io/)
 
 ## 免密登陆

@@ -1,7 +1,7 @@
 ---
 title: VSCode
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 x:: [[vscode打开Obsidian笔记库的好处和作用]]

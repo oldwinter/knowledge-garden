@@ -1,7 +1,7 @@
 ---
-date created: 2022-06-22
-date modified: 2022-07-12
 title: PKM系统的不同侧重点-四象限图 by lyt
+date created: 2022-06-22
+date modified: 2022-07-14
 ---
 
 [[个人知识管理]] 系统当下存在 3 对矛盾：

@@ -1,8 +1,8 @@
 ---
-tags: MOC 
 title: linux常用命令行
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
+tags: MOC 
 ---
 - 官方下载 pkg 安装
 	- [[nodejs]]

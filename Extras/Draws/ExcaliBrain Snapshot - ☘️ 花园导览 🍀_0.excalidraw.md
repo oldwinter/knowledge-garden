@@ -65,7 +65,7 @@ README ^5JylsUbA
 
 [[Spaces/人+科技融合专题/必备软件/mac必备软件.md]] ^IR5934CW
 
-[[Spaces/Life/Projects/知识管理/obsidian学习笔记/Obsidian入门到精通.md]] ^wb5SEr2P
+[[我使用Obsidian的核心原则]] ^wb5SEr2P
 
 [[Cards/永久笔记/obsidian开箱即用示例库.md]] ^v8Ov7EpF
 
@@ -91,7 +91,7 @@ README ^5JylsUbA
 
 [[☘️ 花园导览 🍀/其他/📩 订阅newsletter.md]] ^qsrqXpgN
 
-[[☘️ 花园导览 🍀/🗜 效率工具.md]] ^c04AnF0K
+[[🗜 效率工具]] ^c04AnF0K
 
 [[☘️ 花园导览 🍀/🧰 本库使用指南.md]] ^ogBYtLXK
 

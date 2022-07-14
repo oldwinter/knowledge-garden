@@ -1,8 +1,8 @@
 ---
-cssClass: two-column-list
 title: css多栏callout的使用
+cssClass: two-column-list
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [[Obs＃83] 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
@@ -34,23 +34,36 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!warning|right-small]+ 進行中事項
+
 >> your notes or lists here. using markdown formatting
 
 ### [1.2. 三欄](http://jdev.tw/blog/7080#top "Back to top")
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!warning]+ 進行中事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!success]+ 已完成事項
+
 >> your notes or lists here. using markdown formatting
 
 #### 1.3. 三欄
@@ -59,24 +72,40 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> * Item 1
+
 >> * Item 1-1
+
 >> * Item 1-2
+
 >> * Item 1-3
+
 >>
+
 >>> [!EXAMPLE] 範例
+
 >>> ```
 >>> String msg = "Hello, world!";
 >>> ```
 >
+
 >> [!warning]+ 進行中事項
+
 >> 使用圖片：
+
 >> ![[Obs＃83 多欄式Callouts! 直接套用CSS片段變身N欄～ image 1.png]]
+
 >
+
 >> [!success]+ 已完成事項
+
 >> 使用影片：
+
 >>
+
 >> [用Obsidian學會Markdown|embded](https://youtu.be/lnsQsFCYhNc)
 
 #### 1.4. 四欄
@@ -85,81 +114,139 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!warning]+ 進行中事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!success]+ 已完成事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!info]+ 說明
+
 >> your notes or lists here. using markdown formatting
 
 #### 1.5. 五欄
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!warning]+ 進行中事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!success]+ 已完成事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!info]+ 說明
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!quote]+ 引用
+
 >> your notes or lists here. using markdown formatting
 
 #### 1.6. 六欄
 
 > [!multi-column]
 >
+
 >> [!note]+ 待辦事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!warning]+ 進行中事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!success]+ 已完成事項
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!info]+ 說明
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!quote]+ 引用
+
 >> your notes or lists here. using markdown formatting
+
 >
+
 >> [!error]+ Expired!
+
 >> your notes or lists here. using markdown formatting
 
 #### 1.7. 隱藏標題列
 
 > [!multi-column]
 >
+
 >> [!blank-container]+ 待辦事項
+
 >> * Item 1
+
 >> * Item 1-1
+
 >> * Item 1-2
+
 >> * Item 1-3
+
 >> * Item 2
+
 >>> [!EXAMPLE] 範例
+
 >>> ```
 >>> String msg = "Hello, world!";
 >>> ```
 >
+
 >> [!blank-container]+ 進行中事項
+
 >> 使用圖片：
+
 >> ![[Obs＃83 多欄式Callouts! 直接套用CSS片段變身N欄～ image 1.png]]
+
 >
+
 >> [!blank-container]+ 已完成事項
+
 >> 使用影片：
+
 >>
+
 >> [用Obsidian學會Markdown](https://youtu.be/lnsQsFCYhNc)
 
 ### [2. 指定Callouts大小與浮動位置](http://jdev.tw/blog/7080#top "Back to top")

@@ -1,9 +1,8 @@
 ---
-tags:
-cards-deck: INBOX
 title: Obsidian入门到精通
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
+tags: todo/持续迭代
 ---
 
 ## 核心原则

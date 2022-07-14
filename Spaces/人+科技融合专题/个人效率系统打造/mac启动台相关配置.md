@@ -1,7 +1,7 @@
 ---
 title: mac启动台相关配置
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 ## Mac 设置 应用程序启动台行数列数

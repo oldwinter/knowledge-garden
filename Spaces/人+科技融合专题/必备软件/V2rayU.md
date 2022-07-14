@@ -1,15 +1,17 @@
 ---
 title: V2rayU
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 账号网址：
+
 1 年 200 元 100MB 带宽不限流量。2 年 360.
 
 [SecureService -登录](https://vpnsoso.com/account/)
 
 当前这个服务商的有些域名服务器，比如美国和英国的，必须得用这个旧版本：v2.3.1
+
 我的 pac 文件备份
 
 ```

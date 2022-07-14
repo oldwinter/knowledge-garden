@@ -1,14 +1,14 @@
 ---
-feed: show
+title: obsidian 是可以用一辈子不换的笔记软件吗
+aliases: 
 content-type: notes
+date: 2022-06-10
+date created: 2022-06-09
+date modified: 2022-07-14
+feed: show
 id: e0754685-caf5-429c-bc8c-b05cd5356ea4
-aliases:
 published: true
 tags: article/done
-date: 2022-06-10
-title: obsidian 是可以用一辈子不换的笔记软件吗
-date created: 2022-06-09
-date modified: 2022-07-07
 ---
 
 ## 我是哪根葱
@@ -136,4 +136,5 @@ date modified: 2022-07-07
 	- [[我那用 txt 做笔记的室友，成就却击败 99% 的人]]
 	- [[我那年薪百万的主管如何使用 notion]]
 	  
+
 	  notion 上的链接: [Obsidian 是可以用一辈子不换的笔记软件吗 (notion.site)](https://oldwinter.notion.site/Obsidian-f07ea05db87b4ac69829c7b0485aa0e4)

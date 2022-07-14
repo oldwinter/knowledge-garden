@@ -1,7 +1,7 @@
 ---
 title: Building a Second Brain 翻译和读书笔记
 date created: 2022-07-01
-date modified: 2022-07-07
+date modified: 2022-07-14
 tags: TOC
 ---
 
@@ -10,6 +10,7 @@ tags: TOC
 尝试用14天时间，每天抽1个小时翻译一个章节的[[@Tiago Forte]]的这本第二大脑新书。
 
 目标：最后产出：
+
 - 70%质量水平的翻译原文
 - 自己的理解和概括和运用笔记
 - [[obsidian如何做英文阅读笔记]]的实践笔记

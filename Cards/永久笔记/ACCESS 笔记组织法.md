@@ -1,7 +1,7 @@
 ---
 title: ACCESS 笔记组织法
 date created: 2022-06-22
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 [Folders or Links? The ACCESS Approach - YouTube](https://www.youtube.com/watch?v=p0zWJ-TLghw)
@@ -15,6 +15,7 @@ date modified: 2022-07-05
 ACCESS 基于传统 [[文件夹和标签]]式的[[个人知识管理]]系统，但更引入了[[MOC]]来动态地链接散落或分布在各个文件夹中的笔记，这种动态聚合能力（常借用[[dataview]]实现），也远高于标签的简单聚合能力。因此结合[[文件夹和标签]]及[[MOC]]，最终达到结构性和灵活性的平衡。
 
 使用这个方法不可缺少的能力之一，就是掌握[[dataview]]。
+
 [[2022-07-01]]新增：考虑将[[text expand]]作为MOC的一部分。参见：[Obsidian 笔记重组与拆分的艺术 - 知乎](https://zhuanlan.zhihu.com/p/362762027)
 
 ## 使用方法

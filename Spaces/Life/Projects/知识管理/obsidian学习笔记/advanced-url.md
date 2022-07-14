@@ -1,7 +1,7 @@
 ---
 title: advanced-url
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 别的软件跳转过来，可以通过它，直接实现打开某个特定文件夹或资源。这就为其他软件和 obsidian 联动，提供了无限可能。

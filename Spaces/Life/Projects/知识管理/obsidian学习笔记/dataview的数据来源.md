@@ -1,7 +1,7 @@
 ---
 title: dataview的数据来源
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 在 [[obsidian]] 中，
@@ -9,6 +9,7 @@ date modified: 2022-07-05
 dataview 有 3 种元数据获取方式：
 
 1，是 [[frontmatter]]，和[[dataview]]
+
 	- **Frontmatter**: Frontmatter is a common Markdown extension which allows for YAML metadata to be added to the top of a page. All YAML fields will be available as Dataview fields:
 
 ```
@@ -30,4 +31,5 @@ dataview 有 3 种元数据获取方式：
 ```
 
 3，就是 dataview 内置的 cday，mtime，tags 等参数，应该是从 md 源文件里面读取的。
+
 		

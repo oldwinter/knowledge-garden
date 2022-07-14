@@ -1,11 +1,11 @@
 ---
-margin: 0
-width: 1920
-height: 1200
-transition: slide
 title: 'Minml<!-- element style="letter-spacing: 1.5rem;"-->'
 date created: 2022-07-03
-date modified: 2022-07-05
+date modified: 2022-07-14
+height: 1200
+margin: 0
+transition: slide
+width: 1920
 ---
 
 <!-- slide data-background-image="https://picsum.photos/id/177/2515/1830" -->
@@ -27,6 +27,7 @@ date modified: 2022-07-05
 
 **Agenda 01**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+
 <!-- element style="font-size: 24px"-->
 </grid>
 
@@ -36,6 +37,7 @@ date modified: 2022-07-05
 
 **Agenda 02**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+
 <!-- element style="font-size: 24px"-->
 </grid>
 
@@ -45,6 +47,7 @@ date modified: 2022-07-05
 
 **Agenda 03**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+
 <!-- element style="font-size: 24px"-->
 </grid>
 
@@ -124,7 +127,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- element style="font-size: 20px"-->
 
 ![](<https://picsum.photos/id/225/460/360)<!--> element style="max-height: 100%;max-width:100%"-->
+
 </grid>
+
 <grid drag="24 55" drop="38 45" align="justify" justify-content="space-between" pad="0 30px">
 
 ##### **Value 02**
@@ -132,7 +137,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- element style="font-size: 20px"-->
 
 ![](<https://picsum.photos/id/24/460/360)<!--> element style="max-height: 100%;max-width:100%"-->
+
 </grid>
+
 <grid drag="24 55" drop="62 45" align="justify" justify-content="space-between" pad="0 30px">
 
 ##### **Value 03**
@@ -140,6 +147,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- element style="font-size: 20px"-->
 
 ![](<https://picsum.photos/id/26/460/360)<!--> element style="max-height: 100%;max-width:100%"-->
+
 </grid>
 
 ---
@@ -302,8 +310,11 @@ We help you create, grow and foster connections with your customers. And we thin
 <grid drag="25 100" drop="25 0" justify-content="center">
 
 ![](https://picsum.photos/id/756/400/300)
+
 ![](https://picsum.photos/id/76/400/300)
+
 ![](https://picsum.photos/id/760/400/300)
+
 </grid>
 
 # Our Services<!-- element drag="40 10" drop="38 46" rotate="-90" -->
@@ -380,8 +391,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="40 100" drop="left" bg="#EEB73F" justify-content="center" align="">
 
 ![](https://picsum.photos/id/756/400/300)
+
 ![](https://picsum.photos/id/76/400/300)
+
 ![](https://picsum.photos/id/760/400/300)
+
 </grid>
 
 <grid drag="60 15" drop="60 43" rotate="90">
@@ -422,8 +436,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="100 70" drop="0 30" bg="#EEB73F" flow="row" align="top" pad="0 160px">
 
 ![](https://picsum.photos/id/978/450/700)
+
 ![](https://picsum.photos/id/996/450/700)
+
 ![](https://picsum.photos/id/1011/450/700)
+
 </grid>
 
 ---
@@ -432,6 +449,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="30 100" drop="left">
 
 ![](<https://picsum.photos/id/1015/576/1200)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
 
 <grid drag="35 50" drop="30 0" align="left" pad="100px">
@@ -484,6 +502,7 @@ These brands aren't trophies, they're friends we've met on our journey.<!-- elem
 <grid drag="60 100" drop="right">
 
 ![](<https://picsum.photos/id/1023/1152/1200)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
 
 <grid drag="40 70" drop="-10 15" bg="white" opacity="0.5"/>
@@ -530,6 +549,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="50 100" drop="right">
 
 ![](<https://picsum.photos/id/141/960/1200)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
 
 <grid drag="50 40" drop="50 5" >
@@ -582,7 +602,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="25 40" drop="0 10">
 
 ![](<https://picsum.photos/id/145/480/480)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
+
 <grid drag="20 40" drop="5 50">
 
 ### Basic
@@ -597,7 +619,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="25 40" drop="25 10">
 
 ![](<https://picsum.photos/id/146/480/480)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
+
 <grid drag="20 40" drop="27 50" pad="0 10px 0 20px">
 
 ### Premium
@@ -612,7 +636,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <grid drag="25 40" drop="50 10">
 
 ![](<https://picsum.photos/id/175/480/480)<!--> element style="max-width:100%; max-height:100%"-->
+
 </grid>
+
 <grid drag="20 40" drop="50 50">
 
 ### Pro

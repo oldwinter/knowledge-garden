@@ -1,12 +1,15 @@
 ---
 title: import和require本质区别
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
 ---
 
 作者：寸志
+
 链接：<<<<<https://www.zhihu.com/question/56820346/answer/150724784>>>>>
+
 来源：知乎
+
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 ## 遵循的模块化规范不一样
@@ -66,6 +69,7 @@ export * from 'fs'
 ## require/exports 和 import/export 本质上的差别
 
 形式上看起来五花八门，但本质上：
+
 1. CommonJS 还是 ES6 Module 输出都可以看成是一个具备多个属性或者方法的对象；
 2. default 是 ES6 Module 所独有的关键字，export default fs 输出默认的接口对象，import fs from 'fs' 可直接导入这个对象；
 3. ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型；而 CommonJS 则是普通的值传递或者引用传递。

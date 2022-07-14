@@ -1,14 +1,15 @@
 ---
-aliases: storytelling
-tags: 视频笔记
 title: storytelling
+aliases: storytelling
 date created: 2022-06-09
-date modified: 2022-07-05
+date modified: 2022-07-14
+tags: 视频笔记
 ---
 
 ## 视频内容和感谢
 
 开篇问我们是否有听别人讲 ppt，或者自己讲 ppt，台下人瞌睡的经历。
+
 引导出 原因在于差了 [[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 讲故事这个环节。
 
 [01:16](https://www.bilibili.com/video/BV1hF411t7Tu#t=76.546769)
@@ -37,12 +38,14 @@ storytelling 是非常大的概念，可以应用在很多场合。
 ### presetation 注意点
 
 最终效果，取决于内容。
+
 - storytelling 的技巧，能让内容更容易被听到。
 - 没内容的技巧，显得空洞无物不可靠。
 
 ## 总体感悟
 
 利用金字塔原理，构造背景和冲突，可以引导听众和我们一起去追寻问题和答案。
+
 同时这一整个过程，也可以套用在我们想吸引别人的任何场合。
 
 [[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 的 3 个构造方法：
