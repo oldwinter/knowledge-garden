@@ -75,7 +75,7 @@ README ^5JylsUbA
 
 [[Spaces/人+科技融合专题/必备软件/安卓手机必备软件.md]] ^l28RcuOL
 
-[[Cards/本库如何免费发布至web.md]] ^58VSLvur
+[[本库如何免费发布至web]] ^58VSLvur
 
 [[☘️ 花园导览 🍀/🆕 最近更新.md]] ^fg06CtlY
 

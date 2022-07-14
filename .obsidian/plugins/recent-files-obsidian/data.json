@@ -5,6 +5,14 @@
       "path": "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md"
     },
     {
+      "basename": "第一次购买并备案域名的经验",
+      "path": "Cards/永久笔记/第一次购买并备案域名的经验.md"
+    },
+    {
+      "basename": "git submodule",
+      "path": "Spaces/Life/Projects/我的开源项目/常用命令行工具/git submodule.md"
+    },
+    {
       "basename": "本地优先的特点",
       "path": "Calendar/每日日志/本地优先的特点.md"
     },
@@ -18,11 +26,7 @@
     },
     {
       "basename": "本库如何免费发布至web",
-      "path": "Cards/本库如何免费发布至web.md"
-    },
-    {
-      "basename": "第一次购买并备案域名的经验",
-      "path": "Calendar/已发布文章/第一次购买并备案域名的经验.md"
+      "path": "Cards/永久笔记/本库如何免费发布至web.md"
     },
     {
       "basename": "obsidian publish 发布",
@@ -30,7 +34,7 @@
     },
     {
       "basename": "DNS解析",
-      "path": "Calendar/已发布文章/DNS解析.md"
+      "path": "Cards/永久笔记/DNS解析.md"
     },
     {
       "basename": "2022年7月，obsidian 依然必装的 10 个插件",
@@ -195,10 +199,6 @@
     {
       "basename": "通过todo标签管理待办",
       "path": "Cards/永久笔记/通过todo标签管理待办.md"
-    },
-    {
-      "basename": "Obsidian入门到精通",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/Obsidian入门到精通.md"
     }
   ],
   "omittedPaths": [

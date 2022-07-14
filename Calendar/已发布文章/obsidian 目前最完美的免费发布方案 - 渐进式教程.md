@@ -7,7 +7,7 @@ tags: article/done
 
 ## 几个发布方案对比
 
->支持[[双向链接]]是底线，否则随便用一个主流的静态blog方案就行了.
+>支持[[双向链接]]是底线，否则随便用一个主流的静态blog方案就行了。
 
 先看最终方案的发布页面效果： [🌱 oldwinterの数字花园](https://notes.oldwinter.top/)
 
@@ -19,25 +19,27 @@ tags: article/done
 
 功能点详细比对：
 
-| 功能点和限制 | jekyll方案1 | 官方收费发布方案 | hugo方案(quartz) |
-| ------------------------------- | ----------------------------- | ------------------------------- | ---------------------------------------------- |
-| 反向链接面板 | 支持 | 支持 | 支持 |
-| 正向链接预览 | 支持 | 支持 | 支持 |
-| 链接稳定性 | 只要文件名不改，链接就稳定 | 受文件夹和文件名同时影响 | 只要文件名不改，链接就稳定 |
-| 文件夹层级显示 | 无 | 支持 | 无 |
-| [[首屏加载速度]] | 极快，2s内，下载资源<1M | 中等，5秒内，下载资源<5M | 极快，2s内，下载资源<1M |
-| 图谱显示 | 支持全局图谱，但1K+笔记就很卡 | 完美支持 | 支持局部图谱，中文支持不友好 |
-| [[横向卷动布局- andy mode]] | 不支持 | 支持 | 不支持 |
-| 暗色模式支持 | 不支持 | 支持 | 支持 |
-| 移动端支持 | 支持 | 支持 | 支持 |
-| markdown扩展语法支持 | 只支持基本md语法和`[[`语法 | 支持obsidian的callout和别名语法 | 只支持基本md语法 |
-| 其他限制 | 必须要有YAML区 | 收费 | 必须要有YAML区；不支持`[[`wikilink格式，需妥协 |
+| 功能点和限制 | jekyll方案1 | 官方收费发布方案 | hugo方案(quartz) | logseq方案 |
+| --------------------------- | ----------------------------- | ------------------------------- | ---------------------------------------------- | ---------- |
+| 反向链接面板 | 支持 | 支持 | 支持 | 支持 |
+| 正向链接预览 | 支持 | 支持 | 支持 | 支持 |
+| 支持搜索 | 不支持，但通过google间接实现 | 支持 | 支持，但中文不兼容 | 支持 |
+| 链接稳定性 | 只要文件名不改，链接就稳定 | 受文件夹和文件名同时影响 | 只要文件名不改，链接就稳定 | 只要文件名不改，链接就稳定 |
+| 文件夹层级显示 | 无 | 支持 | 无 | 无 |
+| [[首屏加载速度]] | 极快，2s内，下载资源<1M | 中等，5秒内，下载资源<5M | 极快，2s内，下载资源<1M | 超慢，10秒，下载资源<30M |
+| 图谱显示 | 支持全局图谱，但1K+笔记就很卡 | 完美支持 | 支持局部图谱，中文支持不友好 | 支持，稍卡 |
+| [[横向卷动布局- andy mode]] | 不支持 | 支持 | 不支持 | 不支持 |
+| 暗色模式支持 | 不支持 | 支持 | 支持 | 支持，但固定，不能切换 |
+| 移动端支持 | 支持 | 支持 | 支持 | 支持 |
+| markdown扩展语法支持 | 只支持基本md语法和`[[`语法 | 支持obsidian的callout和别名语法 | 只支持基本md语法 | 只支持基本md语法和`[[`语法 |
+| 其他限制 | 必须要有YAML区 | 收费 | 必须要有YAML区；不支持`[[`wikilink格式，需妥协 | 语法上需要一点克制 |
 
-精力有限，就只对比这3种方案了。下面列上我目前体验对比过的全部第三方开源发布方案，供各位参考，也可以持续观察作者后续的开发进展，再择优选择。
+精力有限，就只对比这4种方案了。下面列上我目前体验对比过的全部第三方开源发布方案，供各位参考，也可以持续观察作者后续的开发进展，再择优选择。
 
 - jekyll方案1，即我选用的方案。[GitHub - maximevaillancourt/digital-garden-jekyll-template: Start your own digital garden using this Jekyll template 🌱](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
 - jekyll方案2，[一位印度老哥写的](https://github.com/Jekyll-Garden/jekyll-garden.github.io)
 - hugo方案(quartz)，[jackyzha0 (Jacky Zhao) · GitHub](https://github.com/jackyzha0)
+- logseq方案，[GitHub - pengx17/logseq-publish: Logseq Publish Action](https://github.com/pengx17/logseq-publish)
 - zola方案，[GitHub - ppeetteerrs/obsidian-zola: A no-brainer solution to turning your Obsidian PKM into a Zola site.](https://github.com/ppeetteerrs/obsidian-zola)
 - perlite方案，[GitHub - secure-77/Perlite: A webbased markdown viewer optimized for Obsidian](https://github.com/secure-77/Perlite)
 - gatsby方案，支持[[横向卷动布局- andy mode]]，但构建时长小时级别，[GitHub - aravindballa/gatsby-theme-andy: A Gatsby theme to build Andy style websites. 📑](https://github.com/aravindballa/gatsby-theme-andy/)

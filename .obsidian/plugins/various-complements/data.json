@@ -732,8 +732,8 @@
     "支持": {
       "支持": {
         "currentVault": {
-          "count": 10,
-          "lastUpdated": 1657737049656
+          "count": 11,
+          "lastUpdated": 1657744288433
         }
       }
     },
@@ -766,6 +766,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1657741067466
+        }
+      }
+    },
+    "搜索": {
+      "搜索": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1657744274957
         }
       }
     }

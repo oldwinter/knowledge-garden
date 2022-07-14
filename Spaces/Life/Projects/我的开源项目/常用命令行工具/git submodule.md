@@ -1,19 +1,23 @@
 ---
-title: git submodule
 date created: 2022-06-23
-date modified: 2022-07-05
+date modified: 2022-07-14
+title: git submodule
 ---
 
 ## 添加子模块
 
 添加一个仓库到本仓库的指定目录，将其设置为子模块：
+
 ```
  git submodule add git@github.com:oldwinter/knowledge-garden.git  _netes/
 ```
 
+⚠️添加ssh子模块，还会有认证鉴权问题，所以如果是public的，用https格式的.git链接最方便。
+
 ## 删除子模块
 
 **删除子模块比较麻烦，需要手动删除相关的文件，否则在添加子模块时有可能出现错误**
+
 同样以删除`assets`文件夹为例
 
 1. 删除子模块文件夹
