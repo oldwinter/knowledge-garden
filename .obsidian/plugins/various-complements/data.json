@@ -784,6 +784,22 @@
           "lastUpdated": 1657793101734
         }
       }
+    },
+    "alias": {
+      "alias": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1657817828434
+        }
+      }
+    },
+    "aliases": {
+      "aliases": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1657817835704
+        }
+      }
     }
   }
 }

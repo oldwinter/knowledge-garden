@@ -5,8 +5,9 @@ logseq/.recycle
 .DS_Store
 
 # 个人隐私屏蔽
-Spaces/Work/Areas
+Spaces/Work
 
 # 带token的敏感插件数据屏蔽
 .obsidian/plugins/remotely-save/data.json
 .obsidian/plugins/obsidian-local-rest-api
+.obsidian/plugins/obsidian-weread-plugin/data.json

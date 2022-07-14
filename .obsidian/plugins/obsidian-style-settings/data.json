@@ -97,7 +97,7 @@
   "shimmering-focus@@no-shadows": true,
   "shimmering-focus@@unlock-theme-beta": false,
   "shimmering-focus@@cursor-styles": "black-white-cursor",
-  "shimmering-focus@@no-unresolved-link-indicator": false,
+  "shimmering-focus@@no-unresolved-link-indicator": true,
   "shimmering-focus@@tags-in-gutter": false,
   "shimmering-focus@@no-search-result-indicator": false,
   "shimmering-focus@@permanently-show-collapse-indicators": true,
@@ -149,5 +149,7 @@
   "shimmering-focus@@annotation-tags-off": true,
   "shimmering-focus@@colored-bold-italic": "strong-em-hover-accent",
   "sanctum@@light-mode-palette": "sanctum-light",
-  "sanctum@@size-tab-header": 8
+  "sanctum@@size-tab-header": 8,
+  "shimmering-focus@@no-multi-color-highlights": true,
+  "shimmering-focus@@no-pseudo-spoiler-tags": false
 }

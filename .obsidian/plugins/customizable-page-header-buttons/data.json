@@ -60,16 +60,6 @@
       "name": "重新打开上一个关闭的面板"
     },
     {
-      "id": "templater-obsidian:insert-templater",
-      "icon": "lucide-file-text",
-      "name": "Templater: Open Insert Template modal"
-    },
-    {
-      "id": "workspaces:save-and-load",
-      "icon": "workspace-glyph",
-      "name": "工作区: 保存当前布局后加载其他工具区布局"
-    },
-    {
       "id": "obsidian-weread-plugin:sync-weread-notes-command",
       "icon": "sync",
       "name": "Weread Plugin: Sync Weread command"
