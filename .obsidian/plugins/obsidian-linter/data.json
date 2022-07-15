@@ -134,7 +134,6 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    "0-Inbox",
     "Extras"
   ],
   "linterLocale": "system-default",

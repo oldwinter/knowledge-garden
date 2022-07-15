@@ -20,6 +20,24 @@
       "Jump",
       "Jumps",
       "x"
+    ],
+    "exclusions": [
+      "excalidraw-border-color",
+      "excalidraw-css",
+      "excalidraw-default-mode",
+      "excalidraw-export-dark",
+      "excalidraw-export-pngscale",
+      "excalidraw-export-svgpadding",
+      "excalidraw-export-transparent",
+      "excalidraw-font",
+      "excalidraw-font-color",
+      "excalidraw-link-brackets",
+      "excalidraw-link-prefix",
+      "excalidraw-linkbutton-opacity",
+      "excalidraw-onload-script",
+      "excalidraw-plugin",
+      "excalidraw-url-prefix",
+      "kanban-plugin"
     ]
   },
   "inferAllLinksAsFriends": false,
@@ -29,14 +47,16 @@
   "excludeFilepaths": [
     "Extras"
   ],
-  "showInferredNodes": true,
+  "showInferredNodes": false,
   "showAttachments": false,
   "showVirtualNodes": true,
   "showFolderNodes": false,
   "showTagNodes": false,
   "showPageNodes": true,
+  "showNeighborCount": true,
+  "showFullTagName": false,
   "maxItemCount": 30,
-  "renderSiblings": false,
+  "renderSiblings": true,
   "baseNodeStyle": {
     "prefix": "",
     "backgroundColor": "#00000066",
@@ -151,7 +171,6 @@
     "Sources/Books/读书笔记/《思考·快与慢》.md",
     "Cards/原子知识库/单词库&概念库/春秋笔法.md",
     "Spaces/人+科技融合专题/在网上提问的智慧.md",
-    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
     "☘️ 花园导览 🍀/🆕 最近更新.md",
     "☘️ 花园导览 🍀/🏹 已发布长文.md",
     "☘️ 花园导览 🍀/其他/🏗 本库路线图.md",
@@ -162,15 +181,19 @@
     "Extras/Draws/ExcaliBrain Snapshot - ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.excalidraw.md",
     "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.svg",
     "Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀_0.excalidraw.md",
-    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
     "Atlas/MOCs/MOCs.md",
     "IAAS、PAAS与SAAS",
     "Cards/永久笔记/第二大脑与数字花园.md",
     "Atlas/TOCs/TOCs.md",
-    "Spaces/人+科技融合专题/个人效率系统打造/linux常用命令行.md"
+    "Spaces/人+科技融合专题/个人效率系统打造/linux常用命令行.md",
+    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+    "☘️ 花园导览 🍀/🧰 本库使用指南.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",
   "ontologySuggesterChildTrigger": "::c",
-  "ontologySuggesterFriendTrigger": "::f"
+  "ontologySuggesterFriendTrigger": "::f",
+  "ontologySuggesterTrigger": ":::",
+  "ontologySuggesterMidSentenceTrigger": "(",
+  "boldFields": false
 }

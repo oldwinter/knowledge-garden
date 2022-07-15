@@ -15,6 +15,8 @@ tags: TOC
 - 自己的理解和概括和运用笔记
 - [[obsidian如何做英文阅读笔记]]的实践笔记
 
+微信读书上的笔记[[Building a Second Brain-Tiago Forte]]
+
 ## 介绍：第二大脑的远景
 
 [[Introduction The Promise of a Second Brain - 介绍：第二大脑的远景]]
