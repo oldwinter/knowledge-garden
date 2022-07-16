@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "chrome必装插件",
+      "path": "Spaces/人+科技融合专题/必备软件/chrome必装插件.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "2022-07-17",
+      "path": "Calendar/每日日志/2022-07-17.md"
+    },
+    {
+      "basename": "obsidian入门路线及资源推荐",
+      "path": "Cards/永久笔记/obsidian入门路线及资源推荐.md"
+    },
+    {
+      "basename": "我的标签使用",
+      "path": "Cards/永久笔记/我的标签使用.md"
+    },
+    {
+      "basename": "个人信息管理系统",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
     },
     {
       "basename": "AboutTheGarden",
       "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "个人简介",
+      "path": "Cards/永久笔记/个人简介.md"
+    },
+    {
+      "basename": "效率系统4大子系统联动与配合",
+      "path": "Cards/永久笔记/效率系统4大子系统联动与配合.md"
+    },
+    {
+      "basename": "读书笔记",
+      "path": "Atlas/MOCs/读书笔记.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "☘️ 花园导览 🍀",
@@ -23,10 +55,6 @@
     {
       "basename": "2022-07-16",
       "path": "Calendar/每日日志/2022-07-16.md"
-    },
-    {
-      "basename": "读书笔记",
-      "path": "Atlas/MOCs/读书笔记.md"
     },
     {
       "basename": "本库的设计哲学",
@@ -157,10 +185,6 @@
       "path": "Calendar/每日日志/2022-07-15.md"
     },
     {
-      "basename": "obsidian入门路线及资源推荐",
-      "path": "Cards/永久笔记/obsidian入门路线及资源推荐.md"
-    },
-    {
       "basename": "图 2022-07-14",
       "path": "Extras/Draws/图 2022-07-14.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
-    },
-    {
-      "basename": "drawnao",
-      "path": "Extras/Draws/drawnao.md"
-    },
-    {
-      "basename": "omnisearch插件",
-      "path": "Cards/永久笔记/omnisearch插件.md"
-    },
-    {
-      "basename": "TOCs",
-      "path": "Atlas/TOCs/TOCs.md"
-    },
-    {
-      "basename": "revealjs",
-      "path": "Cards/永久笔记/revealjs.md"
-    },
-    {
-      "basename": "advanced-slides",
-      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/advanced-slides.md"
-    },
-    {
-      "basename": "计算机网络",
-      "path": "Spaces/计算机科学专题/计算机网络.md"
     }
   ],
   "omittedPaths": [

@@ -1,7 +1,7 @@
 ---
 title: chrome必装插件
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-17
 ---
 
 ## 必装插件
@@ -17,3 +17,5 @@ date modified: 2022-07-14
 - [[uBlock]]
 	- 广告屏蔽，关键还能屏蔽视频广告
 	- 相比于 adblock，adguard 等竞品，它显得更省电更轻量，而且完全开源且免费。其他产品大多推出了商业版，意味着免费版会有些功能残缺。
+- [[Humble New Tab Page]]
+	- 最符合我需求的tab页。不需要搜索栏，因为地址栏的搜索能力，比所有tab类插件带的搜索能力都强。
