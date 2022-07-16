@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-journey-plugin",
+	"name": "Journey",
+	"version": "0.0.7",
+	"minAppVersion": "0.10.10",
+	"description": "Discover the stories between your notes.",
+	"author": "Alexis Rondeau",
+	"authorUrl": "https://publish.obsidian.md/alexisrondeau",
+	"isDesktopOnly": false
+}

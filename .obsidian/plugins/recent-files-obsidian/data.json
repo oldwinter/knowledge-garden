@@ -1,8 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "如何做笔记 note-making",
+      "path": "Cards/永久笔记/如何做笔记 note-making.md"
+    },
+    {
+      "basename": "2022-07-16",
+      "path": "Calendar/每日日志/2022-07-16.md"
+    },
+    {
       "basename": "读书笔记",
       "path": "Atlas/MOCs/读书笔记.md"
+    },
+    {
+      "basename": "本库的设计哲学",
+      "path": "Cards/永久笔记/本库的设计哲学.md"
+    },
+    {
+      "basename": "快捷键、图标、命令行的对比与选择",
+      "path": "Spaces/人+科技融合专题/个人效率系统打造/快捷键、图标、命令行的对比与选择.md"
+    },
+    {
+      "basename": "Cheat Sheet",
+      "path": "Cards/永久笔记/Cheat Sheet.md"
+    },
+    {
+      "basename": "本地优先的特点",
+      "path": "Cards/永久笔记/本地优先的特点.md"
     },
     {
       "basename": "excalibrain",
@@ -13,10 +53,6 @@
       "path": "Cards/永久笔记/第二大脑与数字花园.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "obsidian组织笔记的5个要素",
       "path": "Cards/永久笔记/obsidian组织笔记的5个要素.md"
     },
@@ -25,16 +61,8 @@
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
     },
     {
-      "basename": "本库的设计哲学",
-      "path": "Cards/永久笔记/本库的设计哲学.md"
-    },
-    {
       "basename": "🆕 最近更新",
       "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "🏹 已发布长文",
@@ -43,14 +71,6 @@
     {
       "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
       "path": "Calendar/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "🎥 我的PPT",
@@ -162,7 +182,7 @@
     },
     {
       "basename": "omnisearch插件",
-      "path": "Calendar/每日日志/omnisearch插件.md"
+      "path": "Cards/永久笔记/omnisearch插件.md"
     },
     {
       "basename": "TOCs",
@@ -179,26 +199,6 @@
     {
       "basename": "计算机网络",
       "path": "Spaces/计算机科学专题/计算机网络.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "Extras/Draws/excalibrain.svg"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/永久笔记/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "+ Index for Extras",
-      "path": "Extras/+ Index for Extras.md"
-    },
-    {
-      "basename": "2022-四月",
-      "path": "Calendar/每月每季度总结/2022-四月.md"
     }
   ],
   "omittedPaths": [

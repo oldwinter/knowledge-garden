@@ -1,0 +1,10 @@
+{
+  "id": "mysnippets-plugin",
+  "name": "MySnippets",
+  "version": "1.2.1",
+  "minAppVersion": "0.15.3",
+  "description": "MySnippets is a plugin that adds a status bar menu allowing the user to quickly toggle their snippets on and off 🖌.",
+  "author": "chetachi",
+  "authorUrl": "https://github.com/chetachiezikeuzor",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,132 @@
+.ms-css-editor {
+  width: 100%;
+  height: 36vh;
+  margin-top: 12px;
+  text-align: left;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: scroll;
+  padding: 6px 10px;
+  font-size: 0.875em;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  color: var(--text-muted);
+  font-family: var(--font-monospace);
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/*----------------------------------------------------------------
+STATUS BAR MENU
+----------------------------------------------------------------*/
+
+.MiniSettings-statusbar-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.MySnippets-statusbar-menu {
+  width: 290px;
+  max-height: calc(100% - 90px);
+}
+
+.MySnippets-statusbar-menu .menu-item-icon {
+  display: none;
+}
+
+.MySnippets-statusbar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.MySnippets-statusbar-menu .menu-item.settings-item {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 5px;
+  height: auto;
+  padding: 8px 5px 0px 5px;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--text-faint);
+}
+
+.MySnippets-statusbar-menu.menu-item:hover,
+.MySnippets-statusbar-menu.menu-item .selected:hover,
+.MySnippets-statusbar-menu
+  .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: transparent;
+}
+
+.MySnippets-statusbar-menu .menu-item-title {
+  margin-right: 10px;
+  width: 60%;
+  line-height: initial;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.MS-OpenSnippet {
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-right: 0;
+  margin-left: 8px;
+  display: flex;
+  background-color: var(--interactive-accent);
+}
+
+.MS-OpenSnippet svg {
+  height: 1.35em;
+  width: 1.35em;
+}
+
+.MS-OpenSnippet:hover {
+  background-color: var(--interactive-accent);
+}
+
+.MySnippetsButton {
+  width: 32%;
+  padding: 5px 14px;
+  margin-right: 0;
+  margin-top: 4px;
+  border-radius: 6px;
+  display: flex;
+  font-size: 12px !important;
+}
+
+.MySnippetsButton svg {
+  height: 1.35em;
+  margin: auto;
+  width: 1.35em;
+}
+
+.MySnippetsButton.MS-Reload,
+.MySnippetsButton.MS-Reload:hover,
+.MySnippetsButton.MS-Folder,
+.MySnippetsButton.MS-Folder:hover {
+  background-color: var(--interactive-accent);
+}
+
+.MySnippets-statusbar-menu .menu-item.buttonitem {
+  justify-self: space-between;
+}
+
+.menu.MySnippets-statusbar-menu {
+  overflow: auto;
+}
+
+/*----------------------------------------------------------------
+MYSNIPPETS SUPPORT
+----------------------------------------------------------------*/
+
+.msDonationSection {
+  width: 65%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-normal);
+}

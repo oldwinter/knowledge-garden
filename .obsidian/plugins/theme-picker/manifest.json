@@ -1,0 +1,10 @@
+{
+  "id": "theme-picker",
+  "name": "Theme Picker",
+  "version": "1.0.2",
+  "minAppVersion": "0.9.12",
+  "description": "Quickly preview installed themes",
+  "author": "kenset",
+  "authorUrl": "https://github.com/kenset",
+  "isDesktopOnly": true
+}

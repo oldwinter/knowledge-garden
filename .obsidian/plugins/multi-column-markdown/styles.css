@@ -1,0 +1,185 @@
+.singleColumnSmallLeft {
+    position: absolute;
+    left: 10px;
+    width: 25%;
+}
+
+.singleColumnMedLeft {
+    position: absolute;
+    left: 10px;
+    width: 50%;
+}
+
+.singleColumnLargeLeft {
+    position: absolute;
+    left: 10px;
+    width: 75%;
+}
+
+.singleColumnSmallCenter {
+    margin: auto;
+    width: 25%;
+}
+
+.singleColumnMedCenter {
+    margin: auto;
+    width: 50%;
+}
+
+.singleColumnLargeCenter {
+    margin: auto;
+    width: 75%;
+}
+
+.singleColumnSmallRight {
+    position: absolute;
+    right: 10px;
+    width: 25%;
+}
+
+.singleColumnMedRight {
+    position: absolute;
+    right: 10px;
+    width: 50%;
+}
+
+.singleColumnLargeRight {
+    position: absolute;
+    right: 10px;
+    width: 75%;
+}
+
+.twoEqualColumns_Left {
+    width: 49.75%;
+    margin-right: 0.25%;
+}
+
+.twoEqualColumns_Right {
+    width: 49.75%;
+    margin-left: 0.25%;
+}
+
+.twoColumnsHeavyLeft_Left {
+    width: 66.75%;
+    margin-right: 0.25%;
+}
+.twoColumnsHeavyLeft_Right {
+    width: 32.75%;
+    margin-left: 0.25%;
+}
+
+.twoColumnsHeavyRight_Left {
+    width: 32.75%;
+    margin-right: 0.25%;
+}
+.twoColumnsHeavyRight_Right {
+    width: 66.75%;
+    margin-left: 0.25%;
+}
+
+.threeEqualColumns_Left {
+    width: 32.75%;
+    margin-right: 0.25%;
+}
+.threeEqualColumns_Middle {
+    width: 32.5%;
+    margin-inline: 0.25%;
+}
+.threeEqualColumns_Right {
+    width: 33.75%;
+    margin-left: 0.25%;
+}
+
+.threeColumnsHeavyLeft_Left {
+    width: 49.75%;
+    margin-right: 0.25%;
+}
+.threeColumnsHeavyLeft_Middle {
+    width: 24.5%;
+    margin-inline: 0.25%;
+}
+.threeColumnsHeavyLeft_Right {
+    width: 24.75%;
+    margin-left: 0.25%;
+}
+
+.threeColumnsHeavyMiddle_Left {
+    width: 24.75%;
+    margin-right: 0.25%;
+}
+.threeColumnsHeavyMiddle_Middle {
+    width: 49.5%;
+    margin-inline: 0.25%;
+}
+.threeColumnsHeavyMiddle_Right {
+    width: 24.75%;
+    margin-left: 0.25%;
+}
+
+.threeColumnsHeavyRight_Left {
+    width: 24.75%;
+    margin-right: 0.25%;
+}
+.threeColumnsHeavyRight_Middle {
+    width: 24.5%;
+    margin-inline: 0.25%;
+}
+.threeColumnsHeavyRight_Right {
+    width: 49.75%;
+    margin-left: 0.25%;
+}
+
+.columnContent {
+    padding-inline: 10px;
+}
+
+.columnBorder {
+    border: grey;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+.columnShadow {
+    box-shadow: 0 0.2rem 0.5rem var(--background-modifier-box-shadow);
+}
+
+.multiColumnErrorMessage {
+    margin-bottom: 10px;
+    color: #dc3545;
+    text-align: center;
+}
+
+.multiColumnContainer {
+    margin: 1.5625em 0;
+}
+
+.multiColumnParent {
+    padding: 0;
+    overflow: hidden;
+    color: var(--text-normal);
+    page-break-inside: avoid;
+
+    border-radius: 0.1rem;
+
+    display:flex; 
+    flex-direction:row;
+}
+
+.multiColumnParentShadow {
+    box-shadow: 0 0.2rem 0.5rem var(--background-modifier-box-shadow);
+}
+
+.multiColumnRegionEndTag,
+.multiColumnBreak,
+.multiColumnSettings,
+.multiColumnContent {
+    display: none;
+}
+
+.columnContent .multiColumnContent {
+    display: block;
+}
+
+.MultiColumn_OriginalElement + .MultiColumn_ClonedElement {
+    display: none;
+}

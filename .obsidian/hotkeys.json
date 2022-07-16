@@ -64,11 +64,9 @@
   "obsidian-another-quick-switcher:normal-search": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod",
-        "Shift"
+        "Mod"
       ],
-      "key": "P"
+      "key": "O"
     }
   ]
 }
