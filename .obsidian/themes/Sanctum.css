@@ -3463,6 +3463,10 @@ div.hr {
   color: var(--text-normal);
   border-radius: 4px;
 }
+body {
+  --color-bold: var(--color-bold-custom), var(--text-normal);
+  --color-italic: var(--color-italic-custom), var(--text-normal);
+}
 .cm-s-obsidian .cm-strong,
 .markdown-preview-section strong,
 strong {
@@ -3471,8 +3475,8 @@ strong {
 }
 .cm-em,
 em {
-  font-style: italic;
-  font-weight: var(--font-light);
+  font-style: oblique;
+  font-weight: var(--font-regular);
 }
 body.active-line-hl .cm-active.cm-line,
 body.active-line-hl .CodeMirror-activeline .CodeMirror-linebackground {
@@ -3505,25 +3509,50 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
   padding: 0 2px;
   vertical-align: middle;
 }
+.markdown-rendered mark,
 .markdown-preview-view mark,
 .cm-s-obsidian span.cm-highlight {
   font-weight: var(--font-regular);
-  background-color: rgba(214, 159, 40, 0.5);
+  background-color: transparent;
+  background: linear-gradient(120deg, var(--color-yellow-3), var(--color-yellow-3));
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: 100% 1.2rem;
+  -webkit-box-decoration-break: clone;
 }
-.markdown-preview-view mark:hover,
-.cm-s-obsidian span.cm-highlight:hover {
-  filter: saturate(1.5);
+.theme-dark .markdown-rendered mark,
+.theme-dark .markdown-preview-view mark,
+.theme-dark .cm-s-obsidian span.cm-highlight {
+  color: var(--background-primary);
+  font-weight: var(--font-medium);
 }
+.markdown-rendered em > mark,
 .markdown-preview-view em > mark,
-.cm-s-obsidian span.cm-em.cm-highlight {
-  font-family: var(--font-text-theme);
+.markdown-source-view.mod-cm6 span.cm-highlight.cm-em {
+  font-family: var(--font-text);
   font-style: normal;
-  background-color: rgba(104, 181, 177, 0.5);
+  background-color: transparent;
+  background: linear-gradient(120deg, var(--color-teal-4), var(--color-teal-4));
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: 100% 1.2rem;
+  -webkit-box-decoration-break: clone;
 }
+.theme-dark .markdown-rendered em > mark,
+.theme-dark .markdown-preview-view em > mark,
+.theme-dark .markdown-source-view.mod-cm6 span.cm-highlight.cm-em {
+  font-weight: var(--font-medium);
+}
+.markdown-rendered strong > mark,
 .markdown-preview-view strong > mark,
 .cm-s-obsidian span.cm-strong.cm-highlight {
-  font-weight: var(--font-regular);
-  background-color: rgba(240, 138, 156, 0.5);
+  font-style: normal;
+  background-color: transparent;
+  background: linear-gradient(120deg, var(--color-pink-4), var(--color-pink-4));
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: 100% 1.2rem;
+  -webkit-box-decoration-break: clone;
 }
 del,
 .cm-strikethrough {
@@ -3608,10 +3637,14 @@ li::marker {
 .markdown-preview-view ul li {
   line-height: var(--leading-4);
   margin: 4px 0;
+  padding-left: 4px;
 }
 .markdown-preview-view .list-collapse-indicator {
   margin-left: -2.5rem;
   color: var(--text-faint);
+}
+.markdown-preview-view ul .list-collapse-indicator {
+  padding-left: 4px;
 }
 .markdown-preview-view ol li .list-collapse-indicator {
   margin-left: -3rem;
@@ -3747,7 +3780,6 @@ span.cm-comment .list-bullet::after {
   top: 0;
   right: 0;
   height: 100%;
-  cursor: var(--cursor);
   padding-right: 8px;
 }
 div > .CodeMirror-line span.cm-hashtag-end {
@@ -3882,7 +3914,6 @@ span.cm-hashtag.cm-hashtag-end::before {
 .cm-s-obsidian span.cm-hmd-internal-link:hover,
 .markdown-preview-view .internal-link:hover {
   text-decoration: none;
-  color: var(--text-accent);
   background-color: rgba(var(--color-accent-l)/0.2);
   transition: background var(--duration-moderate-2) var(--motion-entrance-productive);
 }
@@ -3899,7 +3930,6 @@ span.cm-hashtag.cm-hashtag-end::before {
 }
 .markdown-rendered mark,
 .cm-highlight.cm-hmd-internal-link .cm-underline {
-  background: rgba(214, 159, 40, 0.5);
   padding: 3px 0 1.5px 0;
   border-radius: 0;
 }
@@ -3907,15 +3937,19 @@ span.cm-hashtag.cm-hashtag-end::before {
 .alt-link .cm-highlight.cm-hmd-internal-link .cm-underline {
   padding: 0;
 }
-.markdown-rendered em mark,
-.cm-em.cm-highlight.cm-hmd-internal-link .cm-underline {
-  background-color: rgba(104, 181, 177, 0.5);
-  font-style: normal;
+.alt-link .markdown-preview-view mark a.internal-link,
+.alt-link .markdown-source-view.mod-cm6 .cm-highlight .cm-underline,
+.markdown-preview-view mark a.internal-link,
+.markdown-source-view.mod-cm6 .cm-highlight .cm-underline {
+  color: var(--color-black);
+  font-weight: 450;
 }
-.markdown-rendered strong mark,
-.cm-highlight.cm-hmd-internal-link.cm-strong .cm-underline {
-  background-color: rgba(240, 138, 156, 0.5);
-  font-weight: var(--font-regular);
+.alt-link .markdown-preview-view mark a.internal-link:hover,
+.alt-link .markdown-source-view.mod-cm6 .cm-highlight .cm-underline:hover,
+.markdown-preview-view mark a.internal-link:hover,
+.markdown-source-view.mod-cm6 .cm-highlight .cm-underline:hover {
+  text-decoration: underline solid var(--color-accent) 2px;
+  background-color: transparent;
 }
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,
 .alt-link .markdown-preview-view .internal-link {
@@ -4883,7 +4917,7 @@ button.mod-cta:active {
   border-color: var(--color-primary-0);
 }
 .theme-dark button.mod-cta {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   background-color: rgba(var(--color-accent-d)/1);
   border: 1px solid var(--color-primary-0);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.3) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.1);
@@ -4947,12 +4981,13 @@ button.mod-cta:active {
   line-height: var(--leading-2);
   border: 1px solid var(--color-primary-3);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.1) inset, 0 2px 5px 1px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-primary-2);
+  background-color: var(--color-primary-1);
+  margin-left: 16px;
 }
 .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):hover,
 .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):hover,
 .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning):hover {
-  opacity: 0.9;
+  filter: brightness(0.95);
 }
 .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):active,
 .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):active,
@@ -4962,8 +4997,14 @@ button.mod-cta:active {
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
 .theme-dark .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
 .theme-dark .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning) {
+  background-color: var(--color-primary-2);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.5) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--color-primary-2);
+}
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):hover,
+.theme-dark .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):hover,
+.theme-dark .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning):hover {
+  filter: brightness(1.3);
 }
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):active,
 .theme-dark .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):active,
@@ -5070,7 +5111,7 @@ span[title="Unfold line"]:hover,
   transform: rotate(0deg);
 }
 .mod-cm6 .collapse-indicator {
-  font-family: var(--font-sans);
+  font-family: var(--font-text-theme);
   font-size: 1.1rem;
   margin-right: -2px;
   opacity: 0.5;
@@ -5128,15 +5169,16 @@ select.dropdown option {
 .notice {
   font-family: var(--font-mono);
   font-size: var(--font-scale-00);
-  font-weight: var(--font-regular);
+  font-weight: var(--font-light);
   color: var(--background-primary);
   border-radius: 4px;
   transition: var(--duration-moderate-2) var(--motion-entrance-expressive);
   background-color: var(--color-primary-9);
 }
 .theme-dark .notice {
-  background-color: var(--color-primary-9);
+  background-color: var(--color-accent);
   color: var(--background-primary);
+  font-weight: var(--font-medium);
 }
 .menu {
   background-color: var(--color-primary-1);
@@ -5182,6 +5224,12 @@ div.menu .menu-item:hover .menu-item-title {
   border-radius: 0;
   vertical-align: -0.2rem;
 }
+.markdown-source-view.is-live-preview progress:after,
+.markdown-preview-view progress:after {
+  content: "";
+  display: block;
+  font-size: var(--font-scale-000);
+}
 .markdown-source-view.is-live-preview progress[value]::-webkit-progress-bar,
 .markdown-preview-view progress[value]::-webkit-progress-bar {
   background-color: var(--color-primary-2);
@@ -5217,6 +5265,98 @@ div.menu .menu-item:hover .menu-item-title {
 }
 .markdown-source-view.is-live-preview progress[value^="10"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="10"]::-webkit-progress-value {
+  background-color: var(--color-accent);
+}
+.markdown-source-view.is-live-preview progress[value^="0"]:after,
+.markdown-preview-view progress[value^="0"]:after {
+  content: "0%";
+}
+.markdown-source-view.is-live-preview progress[value^="1"]:after,
+.markdown-preview-view progress[value^="1"]:after {
+  content: "10%";
+  padding-left: 10%;
+}
+.markdown-source-view.is-live-preview progress[value^="2"]:after,
+.markdown-preview-view progress[value^="2"]:after {
+  content: "20%";
+  padding-left: 20%;
+}
+.markdown-source-view.is-live-preview progress[value^="3"]:after,
+.markdown-preview-view progress[value^="3"]:after {
+  content: "30%";
+  padding-left: 30%;
+}
+.markdown-source-view.is-live-preview progress[value^="4"]:after,
+.markdown-preview-view progress[value^="4"]:after {
+  content: "40%";
+  padding-left: 40%;
+}
+.markdown-source-view.is-live-preview progress[value^="5"]:after,
+.markdown-preview-view progress[value^="5"]:after {
+  content: "50%";
+  padding-left: 50%;
+}
+.markdown-source-view.is-live-preview progress[value^="6"]:after,
+.markdown-preview-view progress[value^="6"]:after {
+  content: "60%";
+  padding-left: 60%;
+}
+.markdown-source-view.is-live-preview progress[value^="7"]:after,
+.markdown-preview-view progress[value^="7"]:after {
+  content: "70%";
+  padding-left: 70%;
+}
+.markdown-source-view.is-live-preview progress[value^="8"]:after,
+.markdown-preview-view progress[value^="8"]:after {
+  content: "80%";
+  padding-left: 80%;
+}
+.markdown-source-view.is-live-preview progress[value^="9"]:after,
+.markdown-preview-view progress[value^="9"]:after {
+  content: "90%";
+  padding-left: 87%;
+}
+.markdown-source-view.is-live-preview progress[value^="10"]:after,
+.markdown-preview-view progress[value^="10"]:after {
+  content: "100%";
+  padding-left: 85.5%;
+}
+.markdown-source-view.is-live-preview meter,
+.markdown-preview-view meter {
+  display: inline-block;
+  width: 240px;
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-bar,
+.markdown-preview-view meter::-webkit-meter-bar {
+  appearance: none;
+  background-color: var(--color-primary-2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 0px;
+  border: none;
+  height: 4px;
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-optimum-value,
+.markdown-source-view.is-live-preview meter::-webkit-meter-suboptimum-value,
+.markdown-source-view.is-live-preview meter::-webkit-meter-even-less-good-value,
+.markdown-preview-view meter::-webkit-meter-optimum-value,
+.markdown-preview-view meter::-webkit-meter-suboptimum-value,
+.markdown-preview-view meter::-webkit-meter-even-less-good-value {
+  border-radius: 0px;
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-even-less-good-value,
+.markdown-preview-view meter::-webkit-meter-even-less-good-value {
+  background-color: var(--color-red-5);
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-suboptimum-value,
+.markdown-preview-view meter::-webkit-meter-suboptimum-value {
+  background-color: var(--color-orange-5);
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-optimum-value,
+.markdown-preview-view meter::-webkit-meter-optimum-value {
+  background-color: var(--color-green-5);
+}
+.markdown-source-view.is-live-preview meter::-webkit-meter-maximum-value,
+.markdown-preview-view meter::-webkit-meter-maximum-value {
   background-color: var(--color-accent);
 }
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
@@ -5490,7 +5630,7 @@ input[type=range i] {
   height: 24px;
   padding: 0px;
   cursor: default;
-  width: 128px;
+  width: 256px;
   border-radius: 0;
 }
 input[type=range i]::-webkit-slider-runnable-track {
@@ -5519,6 +5659,28 @@ input[type=range i]::-webkit-slider-thumb {
     0 2px 3px 0px rgba(8, 8, 8, 0.1),
     0 1px 0 0 #fefefe inset;
 }
+input[type=range i]::-webkit-slider-thumb:hover {
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  transition: var(--duration-fast-1);
+}
+input[type=range i]:before {
+  pointer-events: none;
+  content: "min";
+  display: block;
+  font-size: var(--font-scale-000);
+  margin: auto;
+  padding-right: 8px;
+}
+input[type=range i]:after {
+  pointer-events: none;
+  content: "max";
+  display: block;
+  font-size: var(--font-scale-000);
+  margin: auto;
+  padding-left: 8px;
+}
 .graph-controls input[type=range]::-webkit-slider-runnable-track {
   margin-top: 0px;
 }
@@ -5530,9 +5692,9 @@ input[type=range i]::-webkit-slider-thumb {
   display: block;
   position: relative;
   user-select: none;
-  height: 24px;
-  width: 44px;
-  border-radius: 30px;
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 0.75rem;
   transition: var(--duration-fast-1) var(--motion-standard-expressive);
   background-color: var(--color-primary-3);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -5564,7 +5726,7 @@ input[type=range i]::-webkit-slider-thumb {
   background: linear-gradient(0deg, var(--color-grey-1) 0%, var(--color-grey-3) 100%);
 }
 .checkbox-container.is-enabled:after {
-  transform: translateX(23px);
+  transform: translateX(1.65rem);
   width: 20px;
   transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 }
@@ -5734,13 +5896,13 @@ body:not(.tasks) .markdown-preview-view li:is([data-task=B], [data-task=X], [dat
   pointer-events: none;
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=x]):not([data-task=" "]),
-body:not(.tasks) .markdown-preview-view li:not([data-task=x]) > .task-list-item-checkbox:checked,
-body:not(.tasks) .markdown-preview-view li:not([data-task=x]) > p > .task-list-item-checkbox:checked,
-body:not(.tasks) li:not([data-task=x]) > .task-list-item-checkbox:checked {
+body:not(.tasks) .markdown-preview-view li:not(li[data-task=x]) > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li:not(li[data-task=x]) > p > .task-list-item-checkbox:checked,
+body:not(.tasks) li:not(li[data-task=x]) > .task-list-item-checkbox:checked {
   background-repeat: no-repeat;
-  background-size: 65%;
-  background-position: center 2.5px;
-  border-radius: 50%;
+  background-size: 18px;
+  background-position: center center;
+  border-radius: 0%;
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=n],
 body:not(.tasks) .markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked,
@@ -5922,6 +6084,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=X], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=X], [data-task=c], [data-task="!"]) > :is(ul, ol) {
   padding-left: 48px;
 }
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=X], [data-task=c], [data-task="!"]) > :is(ul, ol)::before {
+  left: 8px;
+}
 body:not(.tasks) .admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > p > .task-list-item-checkbox {
   margin-left: 0px;
@@ -5941,6 +6106,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], 
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], [data-task="?"]) > :is(ul, ol) {
   padding-left: 48px;
+}
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], [data-task="?"]) > :is(ul, ol)::before {
+  left: 8px;
 }
 body:not(.tasks) .admonitions li:is([data-task=I], [data-task="?"]) > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li:is([data-task=I], [data-task="?"]) > p > .task-list-item-checkbox {
@@ -5962,6 +6130,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] {
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] > :is(ul, ol) {
   padding-left: 48px;
 }
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] > :is(ul, ol)::before {
+  left: 8px;
+}
 body:not(.tasks) .admonitions li[data-task=i] > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li[data-task=i] > p > .task-list-item-checkbox {
   margin-left: 0px;
@@ -5981,6 +6152,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], 
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], [data-task=p]) > :is(ul, ol) {
   padding-left: 48px;
+}
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], [data-task=p]) > :is(ul, ol)::before {
+  left: 8px;
 }
 body:not(.tasks) .admonitions li:is([data-task=W], [data-task=p]) > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li:is([data-task=W], [data-task=p]) > p > .task-list-item-checkbox {
@@ -6002,6 +6176,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], [data-task=b]) > :is(ul, ol) {
   padding-left: 48px;
 }
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], [data-task=b]) > :is(ul, ol)::before {
+  left: 8px;
+}
 body:not(.tasks) .admonitions li:is([data-task=n], [data-task=b]) > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li:is([data-task=n], [data-task=b]) > p > .task-list-item-checkbox {
   margin-left: 0px;
@@ -6021,6 +6198,9 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] {
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] > :is(ul, ol) {
   padding-left: 48px;
+}
+body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] > :is(ul, ol)::before {
+  left: 8px;
 }
 body:not(.tasks) .admonitions li[data-task=B] > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li[data-task=B] > p > .task-list-item-checkbox {
@@ -7798,7 +7978,7 @@ body .checklist-plugin-main .group-header.tag title {
   content: "\200b";
   position: absolute;
   display: block;
-  left: -0.75rem;
+  left: -1rem;
   top: 0;
   bottom: 0;
   border-right: 1px solid var(--indentation-guide);
@@ -10899,6 +11079,13 @@ settings:
 							-
 								label: Yellow/Brown 8
 								value: rgb(57, 46, 26)
+	-	
+			id: bold-and-italic
+			title: Bold & Italic
+			description: Coming soon
+			type: heading
+			level: 3
+			collapsed: true
 	-
 		id: features
 		title: Features

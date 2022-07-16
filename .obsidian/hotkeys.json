@@ -64,7 +64,7 @@
   "obsidian-another-quick-switcher:normal-search": [
     {
       "modifiers": [
-        "Alt",
+        "Ctrl",
         "Mod",
         "Shift"
       ],

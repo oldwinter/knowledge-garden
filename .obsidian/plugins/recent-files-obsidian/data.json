@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "本库的设计哲学",
-      "path": "Cards/永久笔记/本库的设计哲学.md"
+      "basename": "读书笔记",
+      "path": "Atlas/MOCs/读书笔记.md"
+    },
+    {
+      "basename": "excalibrain",
+      "path": "Extras/Draws/excalibrain.md"
+    },
+    {
+      "basename": "第二大脑与数字花园",
+      "path": "Cards/永久笔记/第二大脑与数字花园.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "obsidian组织笔记的5个要素",
+      "path": "Cards/永久笔记/obsidian组织笔记的5个要素.md"
     },
     {
       "basename": "🧰 本库使用指南",
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+    },
+    {
+      "basename": "本库的设计哲学",
+      "path": "Cards/永久笔记/本库的设计哲学.md"
     },
     {
       "basename": "🆕 最近更新",
@@ -19,14 +39,6 @@
     {
       "basename": "🏹 已发布长文",
       "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "excalibrain",
-      "path": "Extras/Draws/excalibrain.md"
     },
     {
       "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
@@ -55,10 +67,6 @@
     {
       "basename": "爱情的本来模样",
       "path": "Cards/永久笔记/爱情的本来模样.md"
-    },
-    {
-      "basename": "第二大脑与数字花园",
-      "path": "Cards/永久笔记/第二大脑与数字花园.md"
     },
     {
       "basename": "ExcaliBrain Snapshot - 🧰 本库使用指南.excalidraw",
@@ -191,14 +199,6 @@
     {
       "basename": "2022-四月",
       "path": "Calendar/每月每季度总结/2022-四月.md"
-    },
-    {
-      "basename": "傲慢与偏见",
-      "path": "Cards/永久笔记/傲慢与偏见.md"
-    },
-    {
-      "basename": "obsidian publish 发布",
-      "path": "Cards/永久笔记/obsidian publish 发布.md"
     }
   ],
   "omittedPaths": [
