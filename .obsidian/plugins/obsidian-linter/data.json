@@ -36,6 +36,10 @@
       "Priority Keys at Start of YAML": true,
       "YAML Sort Order for Other Keys": "Ascending Alphabetical"
     },
+    "Remove YAML Keys": {
+      "Removes the YAML keys specified": false,
+      "YAML Keys to Remove": ""
+    },
     "Header Increment": {
       "Heading levels should only increment by one level at a time": false
     },
@@ -121,6 +125,12 @@
     "Line Break at Document End": {
       "Ensures that there is exactly one line break at the end of a document.": true
     },
+    "Empty Line Around Tables": {
+      "Ensures that there is an empty line around tables unless they start or end a document.": true
+    },
+    "Empty Line Around Code Fences": {
+      "Ensures that there is an empty line around code fences unless they start or end a document.": true
+    },
     "Space between Chinese and English or numbers": {
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
     },
@@ -136,6 +146,6 @@
   "foldersToIgnore": [
     "Extras"
   ],
-  "linterLocale": "system-default",
+  "linterLocale": "zh-cn",
   "logLevel": 4
 }
