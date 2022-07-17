@@ -2,6 +2,7 @@
 title: 先鉴定你的做笔记风格，再选一款app上车
 date created: 2022-06-09
 date modified: 2022-07-14
+tags: article/todo
 ---
 
 >本文是对 [[@Tiago Forte]] 的关于如何选择适合自己的笔记 app 的视频的文字翻译版本。

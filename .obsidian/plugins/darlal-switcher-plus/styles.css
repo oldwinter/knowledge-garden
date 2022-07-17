@@ -87,6 +87,9 @@
 /* workspace suggestion item */
 .qsp-suggestion-workspace {}
 
+/* file suggestion when not in standard mode */
+.qsp-suggestion-file {}
+
 /* suggestion primary content container */
 .qsp-content {}
 

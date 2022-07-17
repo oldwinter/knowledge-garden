@@ -95,7 +95,7 @@ tags: [excalidraw]
 
 [[☘️ 花园导览 🍀/其他/🎥 我的PPT.md]] ^9uIyJ34l
 
-[[☘️ 花园导览 🍀/其他/🏗 本库路线图.md]] ^BHXvxvlO
+[[🏗 本库路线图]] ^BHXvxvlO
 
 [[☘️ 花园导览 🍀/其他/🏷 本库标签.md]] ^aBD2uDmx
 
@@ -103,7 +103,7 @@ tags: [excalidraw]
 
 [[☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md]] ^KZouIF4b
 
-[[☘️ 花园导览 🍀/其他/🗜 效率工具.md]] ^ceexLNWh
+[[🗜 效率工具]] ^ceexLNWh
 
 %%
 # Drawing
