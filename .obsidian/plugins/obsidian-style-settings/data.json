@@ -151,5 +151,7 @@
   "sanctum@@light-mode-palette": "sanctum-light",
   "sanctum@@size-tab-header": 8,
   "shimmering-focus@@no-multi-color-highlights": true,
-  "shimmering-focus@@no-pseudo-spoiler-tags": false
+  "shimmering-focus@@no-pseudo-spoiler-tags": false,
+  "obsidian-california-coast-theme@@cc-no-file-icons": true,
+  "obsidian-california-coast-theme@@cc-no-folder-icons": true
 }

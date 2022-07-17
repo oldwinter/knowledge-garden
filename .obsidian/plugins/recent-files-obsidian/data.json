@@ -1,16 +1,92 @@
 {
   "recentFiles": [
     {
-      "basename": "chrome必装插件",
-      "path": "Spaces/人+科技融合专题/必备软件/chrome必装插件.md"
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "🏗 本库路线图",
+      "path": "☘️ 花园导览 🍀/其他/🏗 本库路线图.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "摆烂",
+      "path": "Spaces/Work/Areas/个人职业生涯/摆烂.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "2022-07-15",
+      "path": "Calendar/每日日志/2022-07-15.md"
+    },
+    {
+      "basename": "Building a Second Brain-Tiago Forte",
+      "path": "Sources/Books/微信读书同步/未分类/Building a Second Brain-Tiago Forte.md"
     },
     {
       "basename": "2022-07-17",
       "path": "Calendar/每日日志/2022-07-17.md"
     },
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "notion",
+      "path": "Spaces/Life/Projects/知识管理/notion学习笔记/notion.md"
+    },
+    {
+      "basename": "效率系统4大子系统联动与配合",
+      "path": "Cards/永久笔记/效率系统4大子系统联动与配合.md"
+    },
+    {
+      "basename": "mac必备软件",
+      "path": "Spaces/人+科技融合专题/必备软件/mac必备软件.md"
+    },
+    {
+      "basename": "👬🏻 别的数字花园收录",
+      "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
+    },
+    {
+      "basename": "📩 订阅newsletter",
+      "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
+    },
+    {
+      "basename": "🏷 本库标签",
+      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
+    },
+    {
+      "basename": "chrome必装插件",
+      "path": "Spaces/人+科技融合专题/必备软件/chrome必装插件.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
       "basename": "obsidian入门路线及资源推荐",
       "path": "Cards/永久笔记/obsidian入门路线及资源推荐.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Cards/永久笔记/obsidian开箱即用示例库.md"
     },
     {
       "basename": "我的标签使用",
@@ -21,32 +97,12 @@
       "path": "Spaces/人+科技融合专题/个人效率系统打造/个人信息管理系统.md"
     },
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "个人简介",
       "path": "Cards/永久笔记/个人简介.md"
     },
     {
-      "basename": "效率系统4大子系统联动与配合",
-      "path": "Cards/永久笔记/效率系统4大子系统联动与配合.md"
-    },
-    {
       "basename": "读书笔记",
       "path": "Atlas/MOCs/读书笔记.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "如何做笔记 note-making",
@@ -87,14 +143,6 @@
     {
       "basename": "🧰 本库使用指南",
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
     },
     {
       "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
@@ -145,60 +193,12 @@
       "path": "Cards/永久笔记/本库使用的主题及原因.md"
     },
     {
-      "basename": "🏗 本库路线图",
-      "path": "☘️ 花园导览 🍀/其他/🏗 本库路线图.md"
-    },
-    {
       "basename": "+ Index for Atlases",
       "path": "Atlas/+ Index for Atlases.md"
     },
     {
       "basename": "+ About Cards",
       "path": "Cards/+ About Cards.md"
-    },
-    {
-      "basename": "第二大脑",
-      "path": "Spaces/人+科技融合专题/个人效率系统打造/第二大脑.md"
-    },
-    {
-      "basename": "Building a Second Brain-Tiago Forte",
-      "path": "Sources/Books/微信读书同步/未分类/Building a Second Brain-Tiago Forte.md"
-    },
-    {
-      "basename": "Building a Second Brain 翻译和读书笔记",
-      "path": "Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md"
-    },
-    {
-      "basename": "🗜 效率工具",
-      "path": "☘️ 花园导览 🍀/其他/🗜 效率工具.md"
-    },
-    {
-      "basename": "👬🏻 别的数字花园收录",
-      "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
-    },
-    {
-      "basename": "📩 订阅newsletter",
-      "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
-    },
-    {
-      "basename": "2022-07-15",
-      "path": "Calendar/每日日志/2022-07-15.md"
-    },
-    {
-      "basename": "图 2022-07-14",
-      "path": "Extras/Draws/图 2022-07-14.md"
-    },
-    {
-      "basename": "图 2022-07-14_0",
-      "path": "Extras/Draws/图 2022-07-14_0.md"
-    },
-    {
-      "basename": "如何成为学习高手 - 高冷冷",
-      "path": "Atlas/MOCs/如何成为学习高手 - 高冷冷.md"
-    },
-    {
-      "basename": "如何减少对学习的排斥和厌恶心理",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
     }
   ],
   "omittedPaths": [

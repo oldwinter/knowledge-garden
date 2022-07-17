@@ -1,8 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "projects": {},
-  "selectedProject": null,
-  "selectedDraft": null,
+  "selectedDraftVaultPath": null,
   "workflows": {
     "Default Workflow": {
       "name": "Default Workflow",
@@ -20,22 +19,16 @@
           }
         },
         {
-          "id": "concatenate-scenes",
-          "optionValues": {
-            "separator": "\\n\\n"
-          }
-        },
-        {
           "id": "prepend-title",
           "optionValues": {
-            "format": "## $1",
+            "format": "$3{#} $1",
             "separator": "\n\n"
           }
         },
         {
           "id": "concatenate-text",
           "optionValues": {
-            "separator": "\n\n---\n\n"
+            "separator": "\\n\\n---\\n\\n"
           }
         },
         {

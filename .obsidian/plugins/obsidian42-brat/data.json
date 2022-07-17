@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "kevboh/longform",
     "Quorafind/Obsidian-Bionic-Reading",
     "liamcain/obsidian-periodic-notes"
   ],

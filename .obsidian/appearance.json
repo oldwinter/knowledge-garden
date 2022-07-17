@@ -6,7 +6,7 @@
     "隐藏文件和文件夹",
     "隐藏LICENSE文件和logseq文件夹"
   ],
-  "theme": "obsidian",
+  "theme": "moonstone",
   "baseFontSize": 14,
   "baseFontSizeAction": false
 }
