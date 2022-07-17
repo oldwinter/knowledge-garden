@@ -1,11 +1,15 @@
 ---
 title: About Spaces
 date created: 2022-06-22
-date modified: 2022-07-14
+date modified: 2022-07-17
 tags: readme说明
 ---
 
 up:: [[ACCESS 笔记组织法]]
+
+## 我的理解
+
+其实就是[[PARA]]，SPACES以项目action为目标，进行信息管理。但多了一个[[MOC]]，把信息串起来。
 
 # About Spaces
 

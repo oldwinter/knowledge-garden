@@ -141,7 +141,7 @@
       "Removes spacing around link text.": false
     }
   },
-  "lintOnSave": true,
+  "lintOnSave": false,
   "displayChanged": true,
   "foldersToIgnore": [
     "Extras"

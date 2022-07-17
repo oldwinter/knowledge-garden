@@ -5,7 +5,9 @@ date modified: 2022-07-14
 tags: readme说明
 ---
 
-hello👋，我是oldwinter❄️。这里是一座「全开放式，每日更新」的[[数字花园]]，由原子化的卡片笔记编织而成。
+hello👋，我是oldwinter❄️，写过几万行代码，带过十几人团队。
+
+这里是一座「全开放式，每日更新」的[[数字花园]]，由原子化的卡片笔记编织而成。
 
 既然你诚心诚意地，闯入了我的花园，那我就大发慈悲地，给你一张地图：[[☘️ 花园导览 🍀]]。
 
@@ -16,7 +18,6 @@ hello👋，我是oldwinter❄️。这里是一座「全开放式，每日更�
 
 这座数字花园使用[[obsidian]]写作和发布，且毫无保留地开源，这里是[[README]]，这里是项目地址：[GitHub - oldwinter/knowledge-garden](https://github.com/oldwinter/knowledge-garden)。
 
-如果您逛完觉得浪费了时间，欢迎来喷我:
+这座花园里，我挖了很多坑🕳，如果你想敦促我加速填坑，欢迎来提issue。如果方便的话，给个star⭐️呗。
 
-- 📩: cdd2zju@gmail.com
-- 💬: oldwinter2
+最后，如果您发现了令人不适的内容，或我的个人隐私，请告知我，万分感谢🦀🦀: cdd2zju@gmail.com

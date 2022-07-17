@@ -2,8 +2,12 @@
 title: dataview
 aliases: dataviewjs
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-17
 ---
+
+## 调试技巧
+
+打开调试控制台，在dataviewjs里面可以直接console.log，以查看所有变量。目前还没找到比较好的智能提示代码的方法。先这样将就用。
 
 ## 感悟
 
