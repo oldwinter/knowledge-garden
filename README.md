@@ -56,7 +56,7 @@ tags: readme说明
 - 微信：oldwinter2
 - [[个人简介]]
 
-[^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方20美元1个月的发布服务地址：[🌲 oldwinterの数字花园](https://oldwinter.top)。太贵了我随时可能不续费😂。
+[^1]: [👨‍💻‍ Github 源代码](https://github.com/oldwinter/knowledge-garden)。官方发布服务地址：[🌲 oldwinterの数字花园](https://oldwinter.top)。太贵了我随时可能不续费😂。
 
 [^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]
 

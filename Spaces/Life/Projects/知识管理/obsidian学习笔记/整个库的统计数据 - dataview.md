@@ -27,3 +27,4 @@ let tocFiles = dv.pages("#TOC")
 dv.paragraph(`总共有==MOC文件== **${mocFiles.length}** 个，==TOC文件== **${tocFiles.length}** 个`)
 
 ```
+统计还未创建出文件的正向链接有多少个。
