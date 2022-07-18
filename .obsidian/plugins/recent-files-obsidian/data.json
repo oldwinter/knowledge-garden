@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "整个库的统计数据 - dataview",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "☘️ 花园导览 🍀",
       "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "2022-06-30",
       "path": "Calendar/每日日志/2022-06-30.md"
-    },
-    {
-      "basename": "2022-06-29",
-      "path": "Calendar/每日日志/2022-06-29.md"
-    },
-    {
-      "basename": "2022-06-28",
-      "path": "Calendar/每日日志/2022-06-28.md"
-    },
-    {
-      "basename": "2022-06-27",
-      "path": "Calendar/每日日志/2022-06-27.md"
     }
   ],
   "omittedPaths": [
