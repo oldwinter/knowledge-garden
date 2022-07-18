@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "王者荣耀",
+      "path": "Spaces/Life/• MOCs/王者荣耀.md"
+    },
+    {
+      "basename": "打团先手与后手",
+      "path": "Spaces/Life/Areas/小知识点/游戏笔记/打团先手与后手.md"
+    },
+    {
+      "basename": "obsidian开箱即用示例库",
+      "path": "Cards/永久笔记/obsidian开箱即用示例库.md"
+    },
+    {
       "basename": "2022-07-18",
       "path": "Calendar/每日日志/2022-07-18.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "PARA",
+      "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/PARA.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
     },
     {
       "basename": "AboutTheGarden",
@@ -13,20 +37,20 @@
       "path": "README.md"
     },
     {
-      "basename": "🏷 本库标签",
-      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
-      "basename": "🎥 我的PPT",
-      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
     },
     {
       "basename": "🆕 最近更新",
       "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
-      "basename": "🧰 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+      "basename": "🏷 本库标签",
+      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
+    },
+    {
+      "basename": "🎥 我的PPT",
+      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
     },
     {
       "basename": "🧀 知识管理",
@@ -63,10 +87,6 @@
     {
       "basename": "dataview",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "如何减少对学习的排斥和厌恶心理",
@@ -179,26 +199,6 @@
     {
       "basename": "2022-07-13",
       "path": "Calendar/每日日志/2022-07-13.md"
-    },
-    {
-      "basename": "2022-07-12",
-      "path": "Calendar/每日日志/2022-07-12.md"
-    },
-    {
-      "basename": "2022-07-11",
-      "path": "Calendar/每日日志/2022-07-11.md"
-    },
-    {
-      "basename": "2022-07-10",
-      "path": "Calendar/每日日志/2022-07-10.md"
-    },
-    {
-      "basename": "2022-07-09",
-      "path": "Calendar/每日日志/2022-07-09.md"
-    },
-    {
-      "basename": "2022-07-08",
-      "path": "Calendar/每日日志/2022-07-08.md"
     }
   ],
   "omittedPaths": [

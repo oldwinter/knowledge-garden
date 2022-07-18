@@ -12,3 +12,7 @@ date modified: 2022-07-17
 
 - [给Obsidian新手科研人的开箱即用库：BCS’s Vault for Researchers V1.1](https://forum-zh.obsidian.md/t/topic/8114)
 	- 这个库挺符合我的口味，对obsidian要用来做什么，不用来做什么有很清晰的定界。
+
+[[2022-07-18]]更新：
+- [GitHub - juestchaos/Obsidian-Plug-and-Play: 一个简单的Obsidian 库](https://github.com/juestchaos/Obsidian-Plug-and-Play)
+	- 关注文本和内容本身，值得学习。
