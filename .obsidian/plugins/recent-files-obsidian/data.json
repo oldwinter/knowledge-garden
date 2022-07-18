@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-07-18",
+      "path": "Calendar/每日日志/2022-07-18.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "2022-07-08",
       "path": "Calendar/每日日志/2022-07-08.md"
-    },
-    {
-      "basename": "2022-07-07",
-      "path": "Calendar/每日日志/2022-07-07.md"
-    },
-    {
-      "basename": "2022-07-06",
-      "path": "Calendar/每日日志/2022-07-06.md"
     }
   ],
   "omittedPaths": [
