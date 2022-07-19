@@ -200,21 +200,363 @@
  {:block/name "06",
   :block/created-at 1655956776715,
   :block/updated-at 1655956776715}
+ {:block/name "1",
+  :block/created-at 1658207662388,
+  :block/updated-at 1658207662388}
  {:block/name "1984-乔治·奥威尔",
   :block/created-at 1656678984385,
   :block/updated-at 1656678984385}
  {:block/name "1988：我想和这个世界谈谈-韩寒",
   :block/created-at 1656678984438,
   :block/updated-at 1656678984438}
+ {:block/name "2022-03-08",
+  :block/created-at 1658207750934,
+  :block/updated-at 1658207750934}
  {:block/name "2022-03-08#^1caf57",
   :block/created-at 1655956805922,
   :block/updated-at 1655956805922}
+ {:block/name "2022-03-09",
+  :block/created-at 1658207750935,
+  :block/updated-at 1658207750935}
+ {:block/name "2022-03-11",
+  :block/created-at 1658207666625,
+  :block/updated-at 1658207666625}
+ {:block/name "2022-03-12",
+  :block/created-at 1658207666906,
+  :block/updated-at 1658207666906}
+ {:block/name "2022-03-13",
+  :block/created-at 1658207667055,
+  :block/updated-at 1658207667055}
+ {:block/name "2022-03-14",
+  :block/created-at 1658207667134,
+  :block/updated-at 1658207667134}
+ {:block/name "2022-03-15",
+  :block/created-at 1658207667299,
+  :block/updated-at 1658207667299}
+ {:block/name "2022-03-16",
+  :block/created-at 1658207667357,
+  :block/updated-at 1658207667357}
+ {:block/name "2022-03-17",
+  :block/created-at 1658207667586,
+  :block/updated-at 1658207667586}
+ {:block/name "2022-03-19",
+  :block/created-at 1658207667690,
+  :block/updated-at 1658207667690}
+ {:block/name "2022-03-21",
+  :block/created-at 1658207667720,
+  :block/updated-at 1658207667720}
+ {:block/name "2022-03-23",
+  :block/created-at 1658207667778,
+  :block/updated-at 1658207667778}
+ {:block/name "2022-03-24",
+  :block/created-at 1658207667925,
+  :block/updated-at 1658207667925}
+ {:block/name "2022-03-25",
+  :block/created-at 1658207667946,
+  :block/updated-at 1658207667946}
+ {:block/name "2022-03-26",
+  :block/created-at 1658207667976,
+  :block/updated-at 1658207667976}
+ {:block/name "2022-03-27",
+  :block/created-at 1658207668006,
+  :block/updated-at 1658207668006}
+ {:block/name "2022-03-28",
+  :block/created-at 1658207668266,
+  :block/updated-at 1658207668266}
+ {:block/name "2022-03-29",
+  :block/created-at 1658207668354,
+  :block/updated-at 1658207668354}
+ {:block/name "2022-03-30",
+  :block/created-at 1658207668400,
+  :block/updated-at 1658207668400}
+ {:block/name "2022-03-31",
+  :block/created-at 1658207668451,
+  :block/updated-at 1658207668451}
+ {:block/name "2022-04-01",
+  :block/created-at 1658207668606,
+  :block/updated-at 1658207668606}
+ {:block/name "2022-04-05",
+  :block/created-at 1658207668664,
+  :block/updated-at 1658207668664}
+ {:block/name "2022-04-06",
+  :block/created-at 1658207668718,
+  :block/updated-at 1658207668718}
+ {:block/name "2022-04-07",
+  :block/created-at 1658207668775,
+  :block/updated-at 1658207668775}
+ {:block/name "2022-04-08",
+  :block/created-at 1658207668856,
+  :block/updated-at 1658207668856}
+ {:block/name "2022-04-10",
+  :block/created-at 1658207668937,
+  :block/updated-at 1658207668937}
+ {:block/name "2022-04-12",
+  :block/created-at 1658207668973,
+  :block/updated-at 1658207668973}
+ {:block/name "2022-04-13",
+  :block/created-at 1658207668993,
+  :block/updated-at 1658207668993}
+ {:block/name "2022-04-14",
+  :block/created-at 1658207669110,
+  :block/updated-at 1658207669110}
+ {:block/name "2022-04-15",
+  :block/created-at 1658207669175,
+  :block/updated-at 1658207669175}
+ {:block/name "2022-04-16",
+  :block/created-at 1658207669216,
+  :block/updated-at 1658207669216}
+ {:block/name "2022-04-18",
+  :block/created-at 1658207669241,
+  :block/updated-at 1658207669241}
+ {:block/name "2022-04-20",
+  :block/created-at 1658207669305,
+  :block/updated-at 1658207669305}
+ {:block/name "2022-04-21",
+  :block/created-at 1658207669338,
+  :block/updated-at 1658207669338}
+ {:block/name "2022-04-22",
+  :block/created-at 1658207669421,
+  :block/updated-at 1658207669421}
+ {:block/name "2022-04-23",
+  :block/created-at 1658207669500,
+  :block/updated-at 1658207669500}
+ {:block/name "2022-04-24",
+  :block/created-at 1658207669526,
+  :block/updated-at 1658207669526}
+ {:block/name "2022-04-25",
+  :block/created-at 1658207669666,
+  :block/updated-at 1658207669666}
+ {:block/name "2022-04-26",
+  :block/created-at 1658207669809,
+  :block/updated-at 1658207669809}
+ {:block/name "2022-04-27",
+  :block/created-at 1658207669831,
+  :block/updated-at 1658207669831}
+ {:block/name "2022-04-28",
+  :block/created-at 1658207669885,
+  :block/updated-at 1658207669885}
+ {:block/name "2022-04-29",
+  :block/created-at 1658207670050,
+  :block/updated-at 1658207670050}
+ {:block/name "2022-04-30",
+  :block/created-at 1658207670122,
+  :block/updated-at 1658207670122}
+ {:block/name "2022-05-01",
+  :block/created-at 1658207670152,
+  :block/updated-at 1658207670152}
+ {:block/name "2022-05-02",
+  :block/created-at 1658207670199,
+  :block/updated-at 1658207670199}
+ {:block/name "2022-05-03",
+  :block/created-at 1658207670267,
+  :block/updated-at 1658207670267}
+ {:block/name "2022-05-04",
+  :block/created-at 1658207670316,
+  :block/updated-at 1658207670316}
+ {:block/name "2022-05-05",
+  :block/created-at 1658207670373,
+  :block/updated-at 1658207670373}
+ {:block/name "2022-05-06",
+  :block/created-at 1658207670442,
+  :block/updated-at 1658207670442}
+ {:block/name "2022-05-07",
+  :block/created-at 1658207750932,
+  :block/updated-at 1658207750932}
+ {:block/name "2022-05-09",
+  :block/created-at 1658207670564,
+  :block/updated-at 1658207670564}
+ {:block/name "2022-05-10",
+  :block/created-at 1658207670666,
+  :block/updated-at 1658207670666}
+ {:block/name "2022-05-11",
+  :block/created-at 1658207670976,
+  :block/updated-at 1658207670976}
+ {:block/name "2022-05-12",
+  :block/created-at 1658207671272,
+  :block/updated-at 1658207671272}
+ {:block/name "2022-05-13",
+  :block/created-at 1658207671491,
+  :block/updated-at 1658207671491}
+ {:block/name "2022-05-17",
+  :block/created-at 1658207671591,
+  :block/updated-at 1658207671591}
+ {:block/name "2022-05-18",
+  :block/created-at 1658207671638,
+  :block/updated-at 1658207671638}
+ {:block/name "2022-05-23",
+  :block/created-at 1658207671704,
+  :block/updated-at 1658207671704}
+ {:block/name "2022-05-24",
+  :block/created-at 1658207671778,
+  :block/updated-at 1658207671778}
+ {:block/name "2022-05-25",
+  :block/created-at 1658207671951,
+  :block/updated-at 1658207671951}
+ {:block/name "2022-05-26",
+  :block/created-at 1658207672080,
+  :block/updated-at 1658207672080}
+ {:block/name "2022-05-27",
+  :block/created-at 1658207672264,
+  :block/updated-at 1658207672264}
+ {:block/name "2022-05-28",
+  :block/created-at 1658207672447,
+  :block/updated-at 1658207672447}
+ {:block/name "2022-05-29",
+  :block/created-at 1658207672571,
+  :block/updated-at 1658207672571}
+ {:block/name "2022-05-30",
+  :block/created-at 1658207672652,
+  :block/updated-at 1658207672652}
+ {:block/name "2022-05-31",
+  :block/created-at 1658207672709,
+  :block/updated-at 1658207672709}
+ {:block/name "2022-06-01",
+  :block/created-at 1658207717390,
+  :block/updated-at 1658207717390}
+ {:block/name "2022-06-02",
+  :block/created-at 1658207717389,
+  :block/updated-at 1658207717389}
+ {:block/name "2022-06-03",
+  :block/created-at 1658207717388,
+  :block/updated-at 1658207717388}
+ {:block/name "2022-06-04",
+  :block/created-at 1658207717387,
+  :block/updated-at 1658207717387}
+ {:block/name "2022-06-05",
+  :block/created-at 1658207717387,
+  :block/updated-at 1658207717387}
+ {:block/name "2022-06-06",
+  :block/created-at 1658207717409,
+  :block/updated-at 1658207717409}
+ {:block/name "2022-06-07",
+  :block/created-at 1658207717386,
+  :block/updated-at 1658207717386}
+ {:block/name "2022-06-08",
+  :block/created-at 1658207717385,
+  :block/updated-at 1658207717385}
+ {:block/name "2022-06-09",
+  :block/created-at 1658207717377,
+  :block/updated-at 1658207717377}
+ {:block/name "2022-06-10",
+  :block/created-at 1658207717376,
+  :block/updated-at 1658207717376}
+ {:block/name "2022-06-11",
+  :block/created-at 1658207717375,
+  :block/updated-at 1658207717375}
+ {:block/name "2022-06-12",
+  :block/created-at 1658207717375,
+  :block/updated-at 1658207717375}
  {:block/name "2022-06-12 00:32:41",
   :block/created-at 1656678985217,
   :block/updated-at 1656678985217}
+ {:block/name "2022-06-13",
+  :block/created-at 1658207717375,
+  :block/updated-at 1658207717375}
+ {:block/name "2022-06-14",
+  :block/created-at 1658207717372,
+  :block/updated-at 1658207717372}
+ {:block/name "2022-06-15",
+  :block/created-at 1658207717372,
+  :block/updated-at 1658207717372}
+ {:block/name "2022-06-16",
+  :block/created-at 1658207717372,
+  :block/updated-at 1658207717372}
+ {:block/name "2022-06-17",
+  :block/created-at 1658207717371,
+  :block/updated-at 1658207717371}
+ {:block/name "2022-06-18",
+  :block/created-at 1658207717371,
+  :block/updated-at 1658207717371}
+ {:block/name "2022-06-19",
+  :block/created-at 1658207717371,
+  :block/updated-at 1658207717371}
+ {:block/name "2022-06-20",
+  :block/created-at 1658207717370,
+  :block/updated-at 1658207717370}
+ {:block/name "2022-06-21",
+  :block/created-at 1658207717391,
+  :block/updated-at 1658207717391}
+ {:block/name "2022-06-22",
+  :block/created-at 1658207717370,
+  :block/updated-at 1658207717370}
+ {:block/name "2022-06-23",
+  :block/created-at 1658207717391,
+  :block/updated-at 1658207717391}
+ {:block/name "2022-06-24",
+  :block/created-at 1658207717392,
+  :block/updated-at 1658207717392}
+ {:block/name "2022-06-25",
+  :block/created-at 1658207717404,
+  :block/updated-at 1658207717404}
+ {:block/name "2022-06-26",
+  :block/created-at 1658207717406,
+  :block/updated-at 1658207717406}
+ {:block/name "2022-06-27",
+  :block/created-at 1658207717405,
+  :block/updated-at 1658207717405}
+ {:block/name "2022-06-28",
+  :block/created-at 1658207717405,
+  :block/updated-at 1658207717405}
+ {:block/name "2022-06-29",
+  :block/created-at 1658207717408,
+  :block/updated-at 1658207717408}
+ {:block/name "2022-06-30",
+  :block/created-at 1658207706782,
+  :block/updated-at 1658207706782}
+ {:block/name "2022-07-01",
+  :block/created-at 1658207715957,
+  :block/updated-at 1658207715957}
+ {:block/name "2022-07-03",
+  :block/created-at 1658207676693,
+  :block/updated-at 1658207676693}
+ {:block/name "2022-07-04",
+  :block/created-at 1658207756510,
+  :block/updated-at 1658207756510}
+ {:block/name "2022-07-05",
+  :block/created-at 1658207676688,
+  :block/updated-at 1658207676688}
+ {:block/name "2022-07-06",
+  :block/created-at 1658207676676,
+  :block/updated-at 1658207676676}
+ {:block/name "2022-07-07",
+  :block/created-at 1658207779941,
+  :block/updated-at 1658207779941}
+ {:block/name "2022-07-08",
+  :block/created-at 1658207662366,
+  :block/updated-at 1658207662366}
+ {:block/name "2022-07-09",
+  :block/created-at 1658207780049,
+  :block/updated-at 1658207780049}
+ {:block/name "2022-07-10",
+  :block/created-at 1658207780076,
+  :block/updated-at 1658207780076}
+ {:block/name "2022-07-11",
+  :block/created-at 1658207676675,
+  :block/updated-at 1658207676675}
+ {:block/name "2022-07-12",
+  :block/created-at 1658207780128,
+  :block/updated-at 1658207780128}
  {:block/name "2022-07-13",
   :block/created-at 1657651607037,
   :block/updated-at 1657651607037}
+ {:block/name "2022-07-14",
+  :block/created-at 1658207666280,
+  :block/updated-at 1658207666280}
+ {:block/name "2022-07-15",
+  :block/created-at 1658207662428,
+  :block/updated-at 1658207662428}
+ {:block/name "2022-07-16",
+  :block/created-at 1658207672954,
+  :block/updated-at 1658207672954}
+ {:block/name "2022-07-17",
+  :block/created-at 1658207673054,
+  :block/updated-at 1658207673054}
+ {:block/name "2022-07-18",
+  :block/created-at 1658207673129,
+  :block/updated-at 1658207673129}
+ {:block/name "2022-07-19",
+  :block/created-at 1658207650568,
+  :block/updated-at 1658207650568}
  {:block/name "2022-三月",
   :block/created-at 1655956771106,
   :block/updated-at 1655956771106}
@@ -236,9 +578,15 @@
  {:block/name "80%默认优先，20%深度定制",
   :block/created-at 1655957091980,
   :block/updated-at 1655957091980}
+ {:block/name "<% tp.date.now(\"yyyy-mm-dd\", 0) %>",
+  :block/created-at 1658207663083,
+  :block/updated-at 1658207663083}
  {:block/name "@andy matuschak",
   :block/created-at 1655956786811,
   :block/updated-at 1655956786811}
+ {:block/name "@johnny学",
+  :block/created-at 1658207664922,
+  :block/updated-at 1658207664922}
  {:block/name "@nick milo",
   :block/created-at 1655956775880,
   :block/updated-at 1655956775880}
@@ -260,6 +608,9 @@
  {:block/name "@李开复",
   :block/created-at 1657648209972,
   :block/updated-at 1657648209972}
+ {:block/name "@李雪琴",
+  :block/created-at 1658207770165,
+  :block/updated-at 1658207770165}
  {:block/name "@樊登",
   :block/created-at 1655956931160,
   :block/updated-at 1655956931160}
@@ -269,6 +620,12 @@
  {:block/name "@罗振宇",
   :block/created-at 1655956931162,
   :block/updated-at 1655956931162}
+ {:block/name "@罗翔",
+  :block/created-at 1658207770164,
+  :block/updated-at 1658207770164}
+ {:block/name "@落山鸡",
+  :block/created-at 1658207664926,
+  :block/updated-at 1658207664926}
  {:block/name "@费曼",
   :block/created-at 1655956770868,
   :block/updated-at 1655956770868}
@@ -384,9 +741,15 @@
  {:block/name "anki",
   :block/created-at 1655956888532,
   :block/updated-at 1655956888532}
+ {:block/name "anki-like",
+  :block/created-at 1658207673356,
+  :block/updated-at 1658207673356}
  {:block/name "anki和双链笔记",
   :block/created-at 1655956774293,
   :block/updated-at 1655956774293}
+ {:block/name "another quick switcher",
+  :block/created-at 1658207676670,
+  :block/updated-at 1658207676670}
  {:block/name "apifox",
   :block/created-at 1655957110968,
   :block/updated-at 1655957110968}
@@ -426,6 +789,21 @@
  {:block/name "article/todo",
   :block/created-at 1655984047509,
   :block/updated-at 1655984047509}
+ {:block/name "atlas",
+  :block/created-at 1658207755898,
+  :block/updated-at 1658207755898}
+ {:block/name "atlas/mocs",
+  :block/created-at 1658207755910,
+  :block/updated-at 1658207755910}
+ {:block/name "atlas/mocs/读书笔记.md",
+  :block/created-at 1658207755893,
+  :block/updated-at 1658207755893}
+ {:block/name "atlas/tocs",
+  :block/created-at 1658207755898,
+  :block/updated-at 1658207755898}
+ {:block/name "atlas/tocs/tocs.md",
+  :block/created-at 1658207755864,
+  :block/updated-at 1658207755864}
  {:block/name "auto-link-title",
   :block/created-at 1656678866429,
   :block/updated-at 1656678866429}
@@ -486,6 +864,9 @@
  {:block/name "building a second brain 读书笔记前言",
   :block/created-at 1657648208946,
   :block/updated-at 1657648208946}
+ {:block/name "building a second brain-tiago forte",
+  :block/created-at 1658207662433,
+  :block/updated-at 1658207662433}
  {:block/name "building homes moc",
   :block/created-at 1655956765634,
   :block/updated-at 1655956765634}
@@ -534,6 +915,15 @@
  {:block/name "cards",
   :block/created-at 1657648227664,
   :block/updated-at 1657648227664}
+ {:block/name "cards/原子知识库",
+  :block/created-at 1658207755904,
+  :block/updated-at 1658207755904}
+ {:block/name "cards/原子知识库/方法库",
+  :block/created-at 1658207755905,
+  :block/updated-at 1658207755905}
+ {:block/name "cards/原子知识库/方法库/ria阅读法.md",
+  :block/created-at 1658207755891,
+  :block/updated-at 1658207755891}
  {:block/name "cards/本库如何免费发布至web.md",
   :block/created-at 1657648227631,
   :block/updated-at 1657648227631}
@@ -552,12 +942,36 @@
  {:block/name "cards/永久笔记/obsidian开箱即用示例库.md",
   :block/created-at 1657648227637,
   :block/updated-at 1657648227637}
+ {:block/name "cards/永久笔记/安卓手机如何翻墙.md",
+  :block/created-at 1658207664141,
+  :block/updated-at 1658207664141}
  {:block/name "cards/永久笔记/常用命令行工具包.md",
   :block/created-at 1657648356034,
   :block/updated-at 1657648356034}
+ {:block/name "cards/永久笔记/思考的过程容器.md",
+  :block/created-at 1658207664142,
+  :block/updated-at 1658207664142}
+ {:block/name "cards/永久笔记/本库使用的主题及原因.md",
+  :block/created-at 1658207663678,
+  :block/updated-at 1658207663678}
+ {:block/name "cards/永久笔记/本库常用的快捷键及作用.md",
+  :block/created-at 1658207663678,
+  :block/updated-at 1658207663678}
+ {:block/name "cards/永久笔记/本库日常使用的工作流.md",
+  :block/created-at 1658207663677,
+  :block/updated-at 1658207663677}
+ {:block/name "cards/永久笔记/本库的设计哲学.md",
+  :block/created-at 1658207663673,
+  :block/updated-at 1658207663673}
+ {:block/name "cards/永久笔记/本库的需要单独配置的插件.md",
+  :block/created-at 1658207663673,
+  :block/updated-at 1658207663673}
  {:block/name "cc字幕",
   :block/created-at 1655957102025,
   :block/updated-at 1655957102025}
+ {:block/name "cdn",
+  :block/created-at 1658207673699,
+  :block/updated-at 1658207673699}
  {:block/name "cheat sheet",
   :block/created-at 1657648266774,
   :block/updated-at 1657648266774}
@@ -723,6 +1137,9 @@
  {:block/name "draw.io",
   :block/created-at 1655957110990,
   :block/updated-at 1655957110990}
+ {:block/name "drawnao",
+  :block/created-at 1658207663986,
+  :block/updated-at 1658207663986}
  {:block/name "e07e36);\">",
   :block/created-at 1657648216844,
   :block/updated-at 1657648216844}
@@ -756,9 +1173,18 @@
  {:block/name "excalibrain snapshot - ☘️ 花园导览 🍀_0",
   :block/created-at 1657648227705,
   :block/updated-at 1657648227705}
+ {:block/name "excalibrain snapshot - ☘️ 花园导览 🍀_0.excalidraw.svg",
+  :block/created-at 1658207676538,
+  :block/updated-at 1658207676538}
  {:block/name "excalibrain snapshot - ☘️ 花园导览 🍀_0/excalidraw",
   :block/created-at 1657648227698,
   :block/updated-at 1657648227698}
+ {:block/name "excalibrain snapshot - 🧰 本库使用指南",
+  :block/created-at 1658207663700,
+  :block/updated-at 1658207663700}
+ {:block/name "excalibrain snapshot - 🧰 本库使用指南/excalidraw",
+  :block/created-at 1658207663699,
+  :block/updated-at 1658207663699}
  {:block/name "excalidraw",
   :block/created-at 1655956775905,
   :block/updated-at 1655956775905}
@@ -782,6 +1208,9 @@
   "extras/draws/excalibrain snapshot - ☘️ 花园导览 🍀.excalidraw.svg",
   :block/created-at 1657648227647,
   :block/updated-at 1657648227647}
+ {:block/name "extras/draws/图 2022-07-14.md#^cg9qgnki|jjjj",
+  :block/created-at 1658207663989,
+  :block/updated-at 1658207663989}
  {:block/name "facebook",
   :block/created-at 1655957106578,
   :block/updated-at 1655957106578}
@@ -845,6 +1274,12 @@
  {:block/name "git hook",
   :block/created-at 1655956772930,
   :block/updated-at 1655956772930}
+ {:block/name "git push",
+  :block/created-at 1658207673695,
+  :block/updated-at 1658207673695}
+ {:block/name "git stash",
+  :block/created-at 1658207666168,
+  :block/updated-at 1658207666168}
  {:block/name "git submodule",
   :block/created-at 1655984039897,
   :block/updated-at 1655984039897}
@@ -929,6 +1364,9 @@
  {:block/name "hugo和jekyll对比",
   :block/created-at 1657648235105,
   :block/updated-at 1657648235105}
+ {:block/name "humble new tab page",
+  :block/created-at 1658207685974,
+  :block/updated-at 1658207685974}
  {:block/name "husky",
   :block/created-at 1655956779100,
   :block/updated-at 1655956779100}
@@ -1392,6 +1830,9 @@
  {:block/name "navicat",
   :block/created-at 1655957110924,
   :block/updated-at 1655957110924}
+ {:block/name "netlify",
+  :block/created-at 1658207664733,
+  :block/updated-at 1658207664733}
  {:block/name "newsletter",
   :block/created-at 1655957103210,
   :block/updated-at 1655957103210}
@@ -1458,6 +1899,9 @@
  {:block/name "obsidian 最优雅的多端同步插件livesync",
   :block/created-at 1657648268998,
   :block/updated-at 1657648268998}
+ {:block/name "obsidian 目前最完美的免费发布方案 - 渐进式教程",
+  :block/created-at 1658207651089,
+  :block/updated-at 1658207651089}
  {:block/name "obsidian与alfred联动",
   :block/created-at 1655957111488,
   :block/updated-at 1655957111488}
@@ -1470,6 +1914,9 @@
  {:block/name "obsidian入门到精通",
   :block/created-at 1655956877310,
   :block/updated-at 1655956877310}
+ {:block/name "obsidian入门路线及资源推荐",
+  :block/created-at 1658207664938,
+  :block/updated-at 1658207664938}
  {:block/name "obsidian如何做文章阅读笔记",
   :block/created-at 1657648206454,
   :block/updated-at 1657648206454}
@@ -1515,6 +1962,9 @@
  {:block/name "okr",
   :block/created-at 1655956792242,
   :block/updated-at 1655956792242}
+ {:block/name "omnisearch插件",
+  :block/created-at 1658207665252,
+  :block/updated-at 1658207665252}
  {:block/name "one switch",
   :block/created-at 1655957110965,
   :block/updated-at 1655957110965}
@@ -1794,9 +2244,66 @@
  {:block/name "snipaste",
   :block/created-at 1655957110974,
   :block/updated-at 1655957110974}
+ {:block/name "snippets",
+  :block/created-at 1658207673048,
+  :block/updated-at 1658207673048}
  {:block/name "sound sensory sensitivity",
   :block/created-at 1656678988988,
   :block/updated-at 1656678988988}
+ {:block/name "sources",
+  :block/created-at 1658207755899,
+  :block/updated-at 1658207755899}
+ {:block/name "sources/books",
+  :block/created-at 1658207755900,
+  :block/updated-at 1658207755900}
+ {:block/name "sources/books/读书笔记",
+  :block/created-at 1658207755900,
+  :block/updated-at 1658207755900}
+ {:block/name "sources/books/读书笔记/《史蒂夫·乔布斯传》.md",
+  :block/created-at 1658207755876,
+  :block/updated-at 1658207755876}
+ {:block/name "sources/books/读书笔记/《如何阅读一本书》.md",
+  :block/created-at 1658207755871,
+  :block/updated-at 1658207755871}
+ {:block/name "sources/books/读书笔记/《思考·快与慢》.md",
+  :block/created-at 1658207755870,
+  :block/updated-at 1658207755870}
+ {:block/name "sources/books/读书笔记/《拆掉思维里的强》.md",
+  :block/created-at 1658207755869,
+  :block/updated-at 1658207755869}
+ {:block/name "sources/books/读书笔记/《置身事内》.md",
+  :block/created-at 1658207755868,
+  :block/updated-at 1658207755868}
+ {:block/name "sources/books/读书笔记/《认知觉醒》.md",
+  :block/created-at 1658207755867,
+  :block/updated-at 1658207755867}
+ {:block/name "sources/books/读书笔记/《这样读书就够了》.md",
+  :block/created-at 1658207755866,
+  :block/updated-at 1658207755866}
+ {:block/name "sources/books/读书笔记/《金字塔原理》.md",
+  :block/created-at 1658207755866,
+  :block/updated-at 1658207755866}
+ {:block/name "sources/books/读书笔记/卡片笔记.md",
+  :block/created-at 1658207755865,
+  :block/updated-at 1658207755865}
+ {:block/name "sources/books/读书笔记/虚构类读物",
+  :block/created-at 1658207755902,
+  :block/updated-at 1658207755902}
+ {:block/name "sources/books/读书笔记/虚构类读物/《三体》.md",
+  :block/created-at 1658207755877,
+  :block/updated-at 1658207755877}
+ {:block/name "sources/books/读书笔记/虚构类读物/《三重门》.md",
+  :block/created-at 1658207755877,
+  :block/updated-at 1658207755877}
+ {:block/name "sources/books/读书笔记/虚构类读物/《围城》.md",
+  :block/created-at 1658207755875,
+  :block/updated-at 1658207755875}
+ {:block/name "sources/books/读书笔记/虚构类读物/《白夜行》.md",
+  :block/created-at 1658207755869,
+  :block/updated-at 1658207755869}
+ {:block/name "sources/books/读书笔记/虚构类读物/《解忧杂货店》.md",
+  :block/created-at 1658207755868,
+  :block/updated-at 1658207755868}
  {:block/name "spaced-repetition",
   :block/created-at 1655956767567,
   :block/updated-at 1655956767567}
@@ -1834,6 +2341,10 @@
   "spaces/life/projects/知识管理/obsidian学习笔记/obsidian入门到精通.md",
   :block/created-at 1657648227639,
   :block/updated-at 1657648227639}
+ {:block/name
+  "spaces/life/projects/知识管理/obsidian学习笔记/我使用obsidian的核心原则.md",
+  :block/created-at 1658207663679,
+  :block/updated-at 1658207663679}
  {:block/name "spaces/work",
   :block/created-at 1657648356115,
   :block/updated-at 1657648356115}
@@ -1888,6 +2399,10 @@
  {:block/name "spaces/第二大脑建设专题/building a second brain 翻译和读书笔记.md",
   :block/created-at 1657648227650,
   :block/updated-at 1657648227650}
+ {:block/name
+  "spaces/第二大脑建设专题/building your second brain读书笔记 - code方法.md",
+  :block/created-at 1658207755892,
+  :block/updated-at 1658207755892}
  {:block/name "spaces/计算机科学专题",
   :block/created-at 1657648356097,
   :block/updated-at 1657648356097}
@@ -2065,6 +2580,9 @@
  {:block/name "various complements",
   :block/created-at 1655956768706,
   :block/updated-at 1655956768706}
+ {:block/name "vercel",
+  :block/created-at 1658207664734,
+  :block/updated-at 1658207664734}
  {:block/name "vika",
   :block/created-at 1655956839751,
   :block/updated-at 1655956839751}
@@ -2708,6 +3226,9 @@
  {:block/name "从alfred迁移至raycast",
   :block/created-at 1655956772982,
   :block/updated-at 1655956772982}
+ {:block/name "从anki、onenote再到obsidian，一名小镇做题家的笔记进化史",
+  :block/created-at 1658207673357,
+  :block/updated-at 1658207673357}
  {:block/name "从浏览器输入一个网址到得到网站页面，中间发生了什么",
   :block/created-at 1655957100462,
   :block/updated-at 1655957100462}
@@ -2843,6 +3364,9 @@
  {:block/name "六顶思考帽模板",
   :block/created-at 1656678987216,
   :block/updated-at 1656678987216}
+ {:block/name "共享单车",
+  :block/created-at 1658207779542,
+  :block/updated-at 1658207779542}
  {:block/name "关系型数据库",
   :block/created-at 1655956939149,
   :block/updated-at 1655956939149}
@@ -2972,6 +3496,9 @@
  {:block/name "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯",
   :block/created-at 1655956860011,
   :block/updated-at 1655956860011}
+ {:block/name "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯#^11-2926-2992",
+  :block/created-at 1658207673053,
+  :block/updated-at 1658207673053}
  {:block/name "卧底间谍用摩斯码是真的吗",
   :block/created-at 1655956772711,
   :block/updated-at 1655956772711}
@@ -3095,6 +3622,9 @@
  {:block/name "君子性非异也，善假于物也。--荀子 《劝学》",
   :block/created-at 1655956804573,
   :block/updated-at 1655956804573}
+ {:block/name "听懂掌声",
+  :block/created-at 1658207673293,
+  :block/updated-at 1658207673293}
  {:block/name "听过很多大道理，依旧过不好这一生",
   :block/created-at 1655956804997,
   :block/updated-at 1655956804997}
@@ -3170,6 +3700,12 @@
  {:block/name "国外的各种社交app分析",
   :block/created-at 1655957106565,
   :block/updated-at 1655957106565}
+ {:block/name "图 2022-07-14",
+  :block/created-at 1658207664147,
+  :block/updated-at 1658207664147}
+ {:block/name "图 2022-07-14_0",
+  :block/created-at 1658207664272,
+  :block/updated-at 1658207664272}
  {:block/name "在线自习室",
   :block/created-at 1655957100745,
   :block/updated-at 1655957100745}
@@ -3710,6 +4246,9 @@
  {:block/name "我们不需要被教导，我们只需要被提醒",
   :block/created-at 1655956771072,
   :block/updated-at 1655956771072}
+ {:block/name "我使用obsidian的核心原则",
+  :block/created-at 1658207659518,
+  :block/updated-at 1658207659518}
  {:block/name "我对信息管理的定义",
   :block/created-at 1655956813967,
   :block/updated-at 1655956813967}
@@ -3920,6 +4459,9 @@
  {:block/name "数字花园建设",
   :block/created-at 1655956826023,
   :block/updated-at 1655956826023}
+ {:block/name "数字花园连通性检测",
+  :block/created-at 1658207674056,
+  :block/updated-at 1658207674056}
  {:block/name "数学公式识别 latex 问题",
   :block/created-at 1656678864899,
   :block/updated-at 1656678864899}
@@ -4034,6 +4576,9 @@
  {:block/name "暗度陈仓",
   :block/created-at 1655956794032,
   :block/updated-at 1655956794032}
+ {:block/name "更新日志模板",
+  :block/created-at 1658207663087,
+  :block/updated-at 1658207663087}
  {:block/name "月度季度年度计划与回顾",
   :block/created-at 1655956817278,
   :block/updated-at 1655956817278}
@@ -4067,6 +4612,9 @@
  {:block/name "未命名",
   :block/created-at 1655956817501,
   :block/updated-at 1655956817501}
+ {:block/name "本地优先的特点",
+  :block/created-at 1658207665622,
+  :block/updated-at 1658207665622}
  {:block/name "本地私有仓库搭建",
   :block/created-at 1655956940163,
   :block/updated-at 1655956940163}
@@ -4079,12 +4627,21 @@
  {:block/name "本库常用的快捷键及作用",
   :block/created-at 1657648205263,
   :block/updated-at 1657648205263}
+ {:block/name "本库日常使用的工作流",
+  :block/created-at 1658207666080,
+  :block/updated-at 1658207666080}
  {:block/name "本库最常用工作区及流程",
   :block/created-at 1657648205282,
   :block/updated-at 1657648205282}
+ {:block/name "本库最常用工作区及界面图标",
+  :block/created-at 1658207663676,
+  :block/updated-at 1658207663676}
  {:block/name "本库的设计哲学",
   :block/created-at 1657648205264,
   :block/updated-at 1657648205264}
+ {:block/name "本库的需要单独配置的插件",
+  :block/created-at 1658207666232,
+  :block/updated-at 1658207666232}
  {:block/name "本机启用ssh自动登陆",
   :block/created-at 1655957103623,
   :block/updated-at 1655957103623}
@@ -4562,6 +5119,9 @@
  {:block/name "第一性原理",
   :block/created-at 1655956772293,
   :block/updated-at 1655956772293}
+ {:block/name "第一次购买并备案域名的经验",
+  :block/created-at 1658207666282,
+  :block/updated-at 1658207666282}
  {:block/name "第一次逛窑子不知所措",
   :block/created-at 1655956841712,
   :block/updated-at 1655956841712}
@@ -5276,6 +5836,9 @@
  {:block/name "首因效应和近因效应",
   :block/created-at 1656678976712,
   :block/updated-at 1656678976712}
+ {:block/name "首屏加载速度",
+  :block/created-at 1658207673674,
+  :block/updated-at 1658207673674}
  {:block/name "马伯庸",
   :block/created-at 1655956918472,
   :block/updated-at 1655956918472}
@@ -5336,6 +5899,9 @@
  {:block/name "🗜 效率工具",
   :block/created-at 1657648204710,
   :block/updated-at 1657648204710}
+ {:block/name "🧀 知识管理",
+  :block/created-at 1658207651572,
+  :block/updated-at 1658207651572}
  {:block/name "🧰 本库使用指南",
   :block/created-at 1657648203257, 
   :block/updated-at 1657648203257}]
