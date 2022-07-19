@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "本库如何免费发布至web",
+      "path": "Cards/永久笔记/本库如何免费发布至web.md"
+    },
+    {
+      "basename": "🧀 知识管理",
+      "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
+    },
+    {
+      "basename": "@Nick Milo",
+      "path": "Cards/原子知识库/人物库/@Nick Milo.md"
+    },
+    {
+      "basename": "ACCESS 笔记组织法",
+      "path": "Cards/永久笔记/ACCESS 笔记组织法.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "《三体》",
+      "path": "Sources/Books/读书笔记/虚构类读物/《三体》.md"
+    },
+    {
+      "basename": "个人简历",
+      "path": "Sources/Books/读书笔记/虚构类读物/个人简历.md"
+    },
+    {
+      "basename": "2022-07-19",
+      "path": "Calendar/每日日志/2022-07-19.md"
+    },
+    {
       "basename": "王者荣耀",
       "path": "Spaces/Life/• MOCs/王者荣耀.md"
     },
@@ -17,10 +57,6 @@
       "path": "Calendar/每日日志/2022-07-18.md"
     },
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
       "basename": "PARA",
       "path": "Spaces/Life/Projects/知识管理/obsidian学习笔记/PARA.md"
     },
@@ -33,16 +69,8 @@
       "path": "AboutTheGarden.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "🧰 本库使用指南",
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
       "basename": "🏷 本库标签",
@@ -51,10 +79,6 @@
     {
       "basename": "🎥 我的PPT",
       "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
-    },
-    {
-      "basename": "🧀 知识管理",
-      "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
     },
     {
       "basename": "🗜 效率工具",
@@ -175,30 +199,6 @@
     {
       "basename": "从anki、onenote再到obsidian，一名小镇做题家的笔记进化史",
       "path": "Calendar/文章草稿/从anki、onenote再到obsidian，一名小镇做题家的笔记进化史.md"
-    },
-    {
-      "basename": "间歇式日记",
-      "path": "Calendar/每日日志/间歇式日记.md"
-    },
-    {
-      "basename": "2022-07-17",
-      "path": "Calendar/每日日志/2022-07-17.md"
-    },
-    {
-      "basename": "2022-07-16",
-      "path": "Calendar/每日日志/2022-07-16.md"
-    },
-    {
-      "basename": "2022-07-15",
-      "path": "Calendar/每日日志/2022-07-15.md"
-    },
-    {
-      "basename": "2022-07-14",
-      "path": "Calendar/每日日志/2022-07-14.md"
-    },
-    {
-      "basename": "2022-07-13",
-      "path": "Calendar/每日日志/2022-07-13.md"
     }
   ],
   "omittedPaths": [
