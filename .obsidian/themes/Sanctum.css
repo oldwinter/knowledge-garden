@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────────────────
-Sanctum for Obsidian v0.15.6
+Sanctum for Obsidian v0.15.7
 created by @jdanielmourao (Github)
 
 Sponsor my work:
@@ -50,6 +50,8 @@ body {
   --font-interface-theme: "IBM Plex Sans *", sans-serif;
 }
 :root {
+  --version: "You are currently using Sanctum for Obsidian v0.15.7 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
+  --version-empty-page: "Sanctum for Obsidian v0.15.7\a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
   --font-sans: "IBM Plex Sans *", sans-serif;
   --font-serif: "IBM Plex Serif", serif;
   --mermaid-font: var(--font-sans);
@@ -1469,7 +1471,7 @@ body:not(.is-mobile) .empty-state-action-list::after {
   padding-top: 8px;
   padding-left: 12px;
   white-space: pre-wrap;
-  content: "Sanctum for Obsidian v0.15.6\a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
+  content: var(--version-empty-page);
   font-size: var(--font-scale-000);
   font-family: var(--font-monospace);
   font-weight: var(--font-light);
@@ -2305,12 +2307,53 @@ textarea.sync-history-content {
   background-color: var(--background-primary);
   padding: 5px 24px;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list {
+body.is-mobile .theme-list .community-theme {
+  padding: 8px 8px 8px 8px;
+  margin: 8px 8px 8px 8px;
+  border: 1px solid transparent;
+}
+body.is-mobile .theme-list .community-theme:hover {
+  background-color: var(--color-hover);
+  border: 1px solid var(--color-primary-3);
+  border-radius: 8px;
+}
+body.is-mobile .theme-list .community-theme .community-theme-screenshot.mod-unavailable {
+  color: var(--text-muted);
+}
+body.is-mobile .theme-list .community-theme.is-selected {
+  background-color: rgba(var(--rgb-primary-0), 0.5);
+  border-radius: 8px;
+  border: 1px solid var(--color-accent);
+  color: var(--text-normal);
+}
+body.is-mobile .theme-list .community-theme.is-selected button {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+}
+body.is-mobile .theme-list .community-theme.is-selected .community-theme-info {
+  color: var(--text-normal);
+}
+body.is-mobile .theme-list .community-theme .modal-button-container button,
+body.is-mobile .theme-list .community-theme .modal-button-container button.mod-cta {
+  line-height: var(--leading-0);
+  border-radius: 4px;
+  margin: 0 2px;
+}
+body.is-mobile .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
+  padding: 7px 39px 7px 16px;
+  font-size: var(--font-scale-00);
+  font-weight: var(--font-regular);
+  font-family: var(--font-interface-theme);
+  background-color: var(--background-primary);
+  color: var(--text-accent);
+  border: 1px solid var(--color-accent);
+}
+body:not(.is-mobile) .theme-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0rem 0rem;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme {
+body:not(.is-mobile) .theme-list .community-theme {
   align-self: stretch;
   justify-self: center;
   max-width: 100%;
@@ -2320,15 +2363,17 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   border-radius: 4px;
   border: 2px solid transparent;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme .community-theme-title {
+body:not(.is-mobile) .theme-list .community-theme .community-theme-title {
   text-align: left;
   font-size: var(--font-settings);
+  color: var(--text-normal);
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme .u-center-text {
+body:not(.is-mobile) .theme-list .community-theme .u-center-text {
   text-align: left;
-  font-size: var(--font-adaptive-small);
+  font-size: var(--font-scale-000);
+  color: var(--text-normal);
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme-info {
+body:not(.is-mobile) .theme-list .community-theme-info {
   line-height: 1;
   flex-grow: 0;
   padding: 0 0 10px 0;
@@ -2336,10 +2381,10 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme-screenshot {
+body:not(.is-mobile) .theme-list .community-theme-screenshot {
   max-width: 100%;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme .community-theme-info + div {
+body:not(.is-mobile) .theme-list .community-theme .community-theme-info + div {
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -2347,7 +2392,7 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   flex-grow: 1;
   border-radius: 16px;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected {
+body:not(.is-mobile) .theme-list .community-theme.is-selected {
   grid-column: 1/4;
   grid-row: 1;
   max-width: 100%;
@@ -2357,7 +2402,7 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   border-radius: var(--radius-xl);
   border-color: transparent;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-title {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-title {
   grid-column: 1/3;
   grid-row: 1/2;
   text-align: left;
@@ -2366,19 +2411,19 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   margin: 0;
   line-height: 2rem;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 30px 50px 440px;
   margin: 0 40px 0 0;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info::after {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info::after {
   grid-column: 1/3;
   grid-row: 3/4;
   padding-top: 24px;
   align-self: flex-start;
   justify-self: flex-start;
-  content: "You are currently using Sanctum for Obsidian v0.15.6 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
+  content: var(--version);
   color: var(--text-normal);
   font-size: var(--font-scale-0);
   line-height: var(--leading-4);
@@ -2388,7 +2433,7 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   text-align: left;
   border: none;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info .clickable-icon {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info .clickable-icon {
   width: 100%;
   background-color: var(--background-primary);
   border: 1px solid var(--color-border-2);
@@ -2397,100 +2442,26 @@ body:not(.is-mobile) .modal-content .community-theme-container .theme-list .comm
   display: block;
   text-align: center;
   grid-column: 1/3;
-  padding: 7px 0;
+  padding: 6px 0;
   margin: 20px 0 0;
   height: 32px;
   border-radius: 4px;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info .clickable-icon::after {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info .clickable-icon::after {
   content: "Learn more";
   padding-left: 8px;
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info .clickable-icon:hover {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info .clickable-icon:hover {
   color: var(--color-accent);
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info .community-theme-downloads {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info .community-theme-downloads {
   text-align: right;
+  color: var(--text-normal);
 }
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info .community-theme-downloads .community-plugin-downloads-text {
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-info .community-theme-downloads .community-plugin-downloads-text {
   margin-left: 4px;
   position: relative;
   top: -1px;
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-remove-button {
-  bottom: 20px;
-  left: 0;
-  right: auto;
-  top: auto;
-  color: var(--text-faint);
-  display: flex;
-  align-items: center;
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-remove-button:after {
-  content: "Delete theme";
-  padding-left: 5px;
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-remove-button:hover {
-  color: var(--color-red-5);
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .modal-button-container {
-  grid-column: 2;
-  grid-row: 1/2;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: 0;
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .modal-button-container button:not(.mod-cta) {
-  display: none;
-}
-body:not(.is-mobile) .modal-content .community-theme-container .theme-list .community-theme.is-selected .modal-button-container button {
-  margin: 0;
-  width: 160px;
-  height: 36px;
-  cursor: pointer;
-  border: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme {
-  padding: 8px 8px 8px 8px;
-  margin: 8px 8px 8px 8px;
-  border: 1px solid transparent;
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme:hover {
-  background-color: var(--color-hover);
-  border: 1px solid var(--color-primary-3);
-  border-radius: 8px;
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme .community-theme-screenshot.mod-unavailable {
-  color: var(--text-muted);
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme.is-selected {
-  background-color: rgba(var(--rgb-primary-0), 0.5);
-  border-radius: 8px;
-  border: 1px solid var(--color-accent);
-  color: var(--text-normal);
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme.is-selected button {
-  background-color: var(--color-accent);
-  color: var(--color-black);
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info {
-  color: var(--text-normal);
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme .modal-button-container button,
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme .modal-button-container button.mod-cta {
-  line-height: var(--leading-0);
-  border-radius: 4px;
-  margin: 0 2px;
-}
-body.is-mobile .modal-content .community-theme-container .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
-  padding: 7px 39px 7px 16px;
-  font-size: var(--font-scale-00);
-  font-weight: var(--font-regular);
-  font-family: var(--font-interface-theme);
-  background-color: var(--background-primary);
-  color: var(--text-accent);
-  border: 1px solid var(--color-accent);
 }
 body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button {
   bottom: 20px;
@@ -2501,8 +2472,30 @@ body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-r
   display: flex;
   align-items: center;
 }
-.community-theme-remove-button.clickable-icon.u-muted {
-  background-color: transparent;
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button:after {
+  content: "Delete theme";
+  padding-left: 5px;
+}
+body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button:hover {
+  color: var(--color-red-5);
+}
+body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container {
+  grid-column: 2;
+  grid-row: 1/2;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: 0;
+}
+body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button:not(.mod-cta) {
+  display: none;
+}
+body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-container button {
+  margin: 0;
+  width: 160px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .modal.mod-image-lightbox {
   width: 40vw;
@@ -4034,19 +4027,17 @@ cite {
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   border-left: 1px solid var(--color-accent);
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2:not(.HyperMD-callout) {
   border-left: 1px solid var(--color-accent);
   color: var(--text-normal);
   font-style: normal;
+  float: none;
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 .cm-blockquote-border {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2:not(.HyperMD-callout) .cm-blockquote-border {
   border: none;
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 .cm-quote-2 {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2:not(.HyperMD-callout) .cm-quote-2 {
   color: var(--text-normal);
-}
-.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active):not(.HyperMD-callout) .cm-quote-2:not(.cm-hmd-callout) {
-  float: right;
 }
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3:not(.HyperMD-callout) {
   border: 1px solid transparent;
@@ -5407,26 +5398,68 @@ div.menu .menu-item:hover .menu-item-title {
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border-right: 1px solid var(--color-border-1);
 }
-*::-webkit-scrollbar-thumb {
+:root {
+  --scrollbar-size: 16px;
+  --scrollbar-thumb-border-hover: calc(var(--scrollbar-size) / 4);
+  --scrollbar-thumb-border-size: calc(var(--scrollbar-thumb-border-hover) + 2px);
+  --scrollbar-button-size: calc(var(--scrollbar-size) - 2px);
+}
+::-webkit-scrollbar {
   visibility: visible;
-  border: 3px solid var(--background-primary);
+  width: var(--scrollbar-size) !important;
+  height: var(--scrollbar-size) !important;
+  border-radius: 0;
+  background-color: transparent;
+  background-clip: border-box;
+}
+::-webkit-scrollbar-thumb {
+  visibility: visible;
+  border: var(--scrollbar-thumb-border-size) solid var(--background-primary);
   border-radius: 32px;
   background-color: var(--color-primary-2);
   --scrollbar-thumb-bg: var(--color-primary-2);
 }
-*::-webkit-scrollbar-thumb:hover {
-  border-width: 1px;
+::-webkit-scrollbar-thumb:hover {
+  border-width: var(--scrollbar-thumb-border-hover);
   transition: var(--duration-moderate-1) var(--motion-entrance-expressive);
 }
-*::-webkit-scrollbar {
-  visibility: visible;
-  width: 12px;
-  height: 12px;
-  border-radius: 0;
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-primary-3);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--background-primary);
+}
+::-webkit-scrollbar-corner {
   background-color: transparent;
 }
-*::-webkit-scrollbar-thumb:active {
-  background-color: var(--color-primary-3);
+.scrol-buttons ::-webkit-scrollbar-button:single-button {
+  background-color: var(--background-primary);
+  display: block;
+  background-size: var(--scrollbar-button-size);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: var(--scrollbar-button-size);
+  width: var(--scrollbar-button-size);
+  background-position: center center;
+}
+.theme-light.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg fill='rgba(8, 8, 8, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+.theme-dark.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg fill='rgb(254, 254, 254, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: var(--scrollbar-button-size);
+  width: var(--scrollbar-button-size);
+  background-position: center center;
+}
+.theme-light.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg fill='rgba(8, 8, 8, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M16 22 6 12l1.4-1.4 8.6 8.6 8.6-8.6L26 12z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+.theme-dark.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg fill='rgba(254, 254, 254, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M16 22 6 12l1.4-1.4 8.6 8.6 8.6-8.6L26 12z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 }
 code::-webkit-scrollbar-thumb {
   border-color: var(--color-primary-0);
@@ -5435,7 +5468,7 @@ code::-webkit-scrollbar-thumb {
 code::-webkit-scrollbar-thumb:active {
   background-color: var(--color-primary-3);
 }
-::-webkit-scrollbar {
+:not(.workspace-split.mod-right-split .workspace-tabs .workspace-leaf .workspace-leaf-content[data-type=outline]::-webkit-scrollbar) ::-webkit-scrollbar {
   display: none;
 }
 .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar,
@@ -5458,6 +5491,9 @@ code::-webkit-scrollbar-thumb:active {
   display: none;
 }
 .no-scrl-fx .workspace-tabs .nav-files-container::-webkit-scrollbar {
+  display: none;
+}
+.no-scrl-out .workspace-split.mod-right-split .workspace-tabs .workspace-leaf .workspace-leaf-content[data-type=outline] ::-webkit-scrollbar {
   display: none;
 }
 .search-result-file-title {
@@ -5670,16 +5706,16 @@ input[type=range i]:before {
   content: "min";
   display: block;
   font-size: var(--font-scale-000);
-  margin: auto;
   padding-right: 8px;
+  padding-top: 0.5px;
 }
 input[type=range i]:after {
   pointer-events: none;
   content: "max";
   display: block;
   font-size: var(--font-scale-000);
-  margin: auto;
   padding-left: 8px;
+  padding-top: 0.5px;
 }
 .graph-controls input[type=range]::-webkit-slider-runnable-track {
   margin-top: 0px;
@@ -5709,7 +5745,7 @@ input[type=range i]:after {
   width: 20px;
   height: 20px;
   margin: 0;
-  inset: 2px 0 0 -1px;
+  inset: 2px 0 0 -0.5px;
   border-radius: 50%;
   transition:
     transform var(--duration-fast-1) var(--motion-standard-expressive),
@@ -5726,7 +5762,7 @@ input[type=range i]:after {
   background: linear-gradient(0deg, var(--color-grey-1) 0%, var(--color-grey-3) 100%);
 }
 .checkbox-container.is-enabled:after {
-  transform: translateX(1.65rem);
+  transform: translateX(1.875em);
   width: 20px;
   transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 }
@@ -11149,7 +11185,7 @@ settings:
 	-
 				id: active-line-hl
 				title: Enable active line highlighting
-				description: Disables active line highlighting
+				description: Enables active line highlighting
 				type: class-toggle
 	-
 				id: accent-active-line
@@ -11412,29 +11448,57 @@ settings:
 			level: 3
 			collapsed: true
 	-	
-				id: no-scrl-search
-				title: No Scrollbar in Global Search
-				description: Disables Scrollbars when displaying Global Search Results.
+				id: scrol-buttons
+				title: Toggle Scrollbar buttons
+				description: Enables Arrow buttons in vertical scrollbars
 				type: class-toggle
 				default: false
+	-	
+				id: scrollbar-size
+				title: Scrollbar Size
+				description: Changes scrollbar width/height
+				type: variable-number-slider
+				default: 16
+				min: 14
+				max: 20
+				step: 2
+				format: 'px'
 	-		
-				id: no-scrl-note
-				title: No Scrollbar in Notes
-				description: Disables Scrollbars in Notes.
-				type: class-toggle
-				default: false
+				id: scrollbars-title-more
+				title: Disable Scrollbars
+				type: heading
+				level: 4
+				collapsed: true
+	-	
+					id: no-scrl-search
+					title: Global Search scrollbar
+					description: Disables Scrollbars when displaying Global Search Results.
+					type: class-toggle
+					default: false
 	-		
-				id: no-scrl-fx
-				title: No Scrollbar in File Explorer
-				description: Disables Scrollbars in File Explorer.
-				type: class-toggle
-				default: false
+					id: no-scrl-note
+					title: Notes scrollbars
+					description: Disables Scrollbars in Notes.
+					type: class-toggle
+					default: false
 	-		
-				id: no-scrl-modal
-				title: No Scrollbar in Modal
-				description: Disables Scrollbars in settings menus.
-				type: class-toggle
-				default: false
+					id: no-scrl-fx
+					title: File Explorer scrollbar
+					description: Disables Scrollbars in File Explorer.
+					type: class-toggle
+					default: false
+	-		
+					id: no-scrl-modal
+					title: Modal scrollbar
+					description: Disables Scrollbars in settings menus.
+					type: class-toggle
+					default: false
+	-		
+					id: no-scrl-out
+					title: Outline Pane scrollbar
+					description: Disables Scrollbars in the Outline Pane.
+					type: class-toggle
+					default: false
 	-
 		id: mobile
 		title: Mobile
