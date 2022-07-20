@@ -15,7 +15,7 @@ title: Text Elements
 # Text Elements
 [[Atlas/MOCs/读书笔记.md]] ^eaAzWesa
 
-[[Spaces/第二大脑建设专题/building your second brain读书笔记 - CODE方法.md]] ^KSkFq7Gg
+[[building your second brain读书笔记 - CODE方法]] ^KSkFq7Gg
 
 [[Cards/原子知识库/方法库/RIA阅读法.md]] ^8PiHYCBi
 

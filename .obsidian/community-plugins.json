@@ -19,7 +19,6 @@
   "mrj-text-expand",
   "omnisearch",
   "cm-chs-patch",
-  "obsidian-version-history-diff",
   "obsidian-linter",
   "periodic-notes",
   "templater-obsidian",
@@ -30,7 +29,7 @@
   "obsidian-bionic-reading-plugin",
   "pane-relief",
   "quick-explorer",
-  "excalibrain",
   "obsidian-another-quick-switcher",
-  "longform"
+  "obsidian-advanced-slides",
+  "obsidian-hover-editor"
 ]

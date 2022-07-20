@@ -1,7 +1,7 @@
 ---
 title: Chrome DevTools
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 overrides 特性可以替换 js，css 等文件，但不能替换 xhr 请求。

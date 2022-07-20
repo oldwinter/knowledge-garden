@@ -1,7 +1,7 @@
 ---
 title: ios系统如何翻墙
 date created: 2022-06-14
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 ios 系统翻墙的困难点在于，需要下载一个支持 v2ray 协议的 vpn 客户端，但是中国区的 [[appstore]] 又全部下架了。所以需要先安装一个支持 v2ray 的客户端。安装成功后，再执行其他终端一样的配置操作即可。

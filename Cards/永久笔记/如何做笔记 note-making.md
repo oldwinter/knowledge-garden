@@ -1,7 +1,7 @@
 ---
 title: 如何做笔记 note-making
 date created: 2022-06-20
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 ## 做笔记有 3 个内在含义

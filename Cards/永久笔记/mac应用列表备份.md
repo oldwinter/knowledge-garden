@@ -1,7 +1,7 @@
 ---
 title: mac应用列表备份
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 简单的导出，很多 app 都用不到了暂时没删除而已。

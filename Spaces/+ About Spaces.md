@@ -9,7 +9,7 @@ up:: [[ACCESS 笔记组织法]]
 
 ## 我的理解
 
-其实就是[[PARA]]，SPACES以项目action为目标，进行信息管理。但多了一个[[MOC]]，把信息串起来。
+其实就是[[PARA]]，SPACES以项目action为目标，进行信息管理。但多了一个[[MOC]]，把信息串起来。我直接将其改成PARA。moc先直接放到对应文件夹里面。
 
 # About Spaces
 

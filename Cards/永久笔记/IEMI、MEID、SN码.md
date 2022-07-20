@@ -1,7 +1,7 @@
 ---
 title: IEMI、MEID、SN码
 date created: 2022-06-15
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 ## 一、IMEI、MEID、SN 编号是什么？有何区别？

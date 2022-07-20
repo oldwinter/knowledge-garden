@@ -1,7 +1,7 @@
 ---
 title: LYT 笔记框架
 date created: 2022-06-19
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 [LYT Kit 6: Your starter kit to build your PKM system (+free download for your Obsidian app) - YouTube](https://www.youtube.com/watch?v=ftzQOkzGCLg)

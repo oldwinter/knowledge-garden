@@ -1,7 +1,7 @@
 ---
 title: linux必备软件
 date created: 2022-07-06
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 很少使用linux图形界面。

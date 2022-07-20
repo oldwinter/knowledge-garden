@@ -2,7 +2,7 @@
 title: SWOT
 aliases: 个人定位 公司定位
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 ## 个人理解

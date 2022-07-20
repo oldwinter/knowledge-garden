@@ -2,7 +2,7 @@
 title: MOC
 aliases: 什么是MOC笔记组织法, 索引笔记
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 什么是 MOC 笔记组织方式？ Map Of Content

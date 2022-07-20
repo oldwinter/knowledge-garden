@@ -75,7 +75,7 @@ tags: [excalidraw]
 
 [[☘️ 花园导览 🍀/🧰 本库使用指南.md]] ^y4YjeN3w
 
-[[Spaces/Life/Projects/知识管理/obsidian学习笔记/我使用Obsidian的核心原则.md]] ^2ebQL6v5
+[[我使用Obsidian的核心原则]] ^2ebQL6v5
 
 [[Cards/永久笔记/本库使用的主题及原因.md]] ^xAwY1Wjv
 

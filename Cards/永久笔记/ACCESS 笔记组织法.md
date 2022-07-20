@@ -1,7 +1,7 @@
 ---
 title: ACCESS 笔记组织法
 date created: 2022-06-22
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 [Folders or Links? The ACCESS Approach - YouTube](https://www.youtube.com/watch?v=p0zWJ-TLghw)

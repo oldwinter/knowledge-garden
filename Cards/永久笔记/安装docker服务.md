@@ -1,7 +1,7 @@
 ---
 title: 安装docker服务
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 ubuntu 系统下，执行：

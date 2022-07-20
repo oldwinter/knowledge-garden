@@ -6,7 +6,7 @@
     "隐藏LICENSE文件和logseq文件夹",
     "supercharged-links-gen"
   ],
-  "theme": "obsidian",
+  "theme": "system",
   "baseFontSize": 14,
   "baseFontSizeAction": false
 }

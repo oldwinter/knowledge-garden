@@ -1,7 +1,7 @@
 ---
 title: obsidian - shimmering 主题
 date created: 2022-06-11
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 [GitHub - chrisgrieser/shimmering-focus: A minimalistic Obsidian theme focused on readability and condensed information display](https://github.com/chrisgrieser/shimmering-focus)

@@ -1,7 +1,7 @@
 ---
 title: 看心情整理文件和MOC
 date created: 2022-07-05
-date modified: 2022-07-14
+date modified: 2022-07-20
 ---
 
 问：[[ACCESS 笔记组织法]]引入了这么多文件夹，真的有必要吗？

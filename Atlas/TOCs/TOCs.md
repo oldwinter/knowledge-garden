@@ -1,7 +1,7 @@
 ---
 title: TOCs
 date created: 2022-06-07
-date modified: 2022-07-14
+date modified: 2022-07-20
 mindmap-plugin: basic
 tags: TOC
 ---

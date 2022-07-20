@@ -55,7 +55,7 @@ README ^5JylsUbA
 
 [[☘️ 花园导览 🍀/☘️ 花园导览 🍀.md]] ^IXJJyxkh
 
-[[Spaces/第二大脑建设专题/Building a Second Brain 翻译和读书笔记.md]] ^0La41zXs
+[[Building a Second Brain 翻译和读书笔记]] ^0La41zXs
 
 [[Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.svg]] ^CkNBW8X4
 
@@ -63,17 +63,17 @@ README ^5JylsUbA
 
 [[Cards/永久笔记/linux必备软件.md]] ^sEkRQwNg
 
-[[Spaces/人+科技融合专题/必备软件/mac必备软件.md]] ^IR5934CW
+[[mac必备软件]] ^IR5934CW
 
 [[我使用Obsidian的核心原则]] ^wb5SEr2P
 
 [[Cards/永久笔记/obsidian开箱即用示例库.md]] ^v8Ov7EpF
 
-[[Spaces/人+科技融合专题/必备软件/windows必备软件.md]] ^DOGOnluU
+[[windows必备软件]] ^DOGOnluU
 
 [[如何通过obsidian打造自己的第二大脑]] ^JovBEsRG
 
-[[Spaces/人+科技融合专题/必备软件/安卓手机必备软件.md]] ^l28RcuOL
+[[安卓手机必备软件]] ^l28RcuOL
 
 [[本库如何免费发布至web]] ^58VSLvur
 
