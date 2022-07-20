@@ -1,5 +1,4 @@
 ---
-title: tpl-con-2-1-box
 date created: 2022-04-25
 date modified: 2022-07-14
 ---

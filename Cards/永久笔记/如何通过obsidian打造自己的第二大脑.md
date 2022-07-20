@@ -1,3 +1,7 @@
+---
+date created: 2022-07-20
+---
+
 [[Building a Second Brain-Tiago Forte]]中，将[[第二大脑]]的建设，概括为4个有机结合的阶段[[CODE 方法]]。Capture，Organize，Distill，Express
 
 [[@Nick Milo]]则在其[[LYT Kit]]中，将[[PKM]]的建设，概括为6个阶段[[ENCODE 方法]]。

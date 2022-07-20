@@ -1,5 +1,4 @@
 ---
-title: Building a Second Brain 翻译和读书笔记
 date created: 2022-07-01
 date modified: 2022-07-14
 tags: TOC

@@ -1,5 +1,4 @@
 ---
-title: '**1. Wie wichtig sind<br>Team-Meetings**'
 date created: 2022-07-03
 date modified: 2022-07-14
 height: 540

@@ -11,7 +11,7 @@
       "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
       "Date Created": true,
       "Date Created Key": "date created",
-      "Date Modified": true,
+      "Date Modified": false,
       "Date Modified Key": "date modified",
       "Format": "YYYY-MM-DD"
     },
@@ -32,7 +32,7 @@
     },
     "YAML Key Sort": {
       "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true,
-      "YAML Key Priority Sort Order": "title",
+      "YAML Key Priority Sort Order": "sr-due\nsr-interval\nsr-ease\n",
       "Priority Keys at Start of YAML": true,
       "YAML Sort Order for Other Keys": "Ascending Alphabetical"
     },

@@ -1,5 +1,4 @@
 ---
-title: 看心情整理文件和MOC
 date created: 2022-07-05
 date modified: 2022-07-20
 ---

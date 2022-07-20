@@ -1,5 +1,4 @@
 ---
-title: 红蓝双方地形及ban and pick - bp方法
 date created: 2022-06-09
 date modified: 2022-07-14
 ---

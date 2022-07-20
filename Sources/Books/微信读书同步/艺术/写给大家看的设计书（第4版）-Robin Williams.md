@@ -1,5 +1,4 @@
 ---
-title: 写给大家看的设计书（第4版）-Robin Williams
 author: Robin Williams
 bookId: '907758'
 category: 艺术-设计

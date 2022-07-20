@@ -1,5 +1,4 @@
 ---
-title: dict
 ---
 %% Callouts %%
 

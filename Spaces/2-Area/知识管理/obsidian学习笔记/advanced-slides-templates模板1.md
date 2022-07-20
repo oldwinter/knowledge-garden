@@ -1,5 +1,4 @@
 ---
-title: 'Minml<!-- element style="letter-spacing: 1.5rem;"-->'
 date created: 2022-07-03
 date modified: 2022-07-14
 height: 1200

@@ -1,8 +1,8 @@
 ---
-title: vscode代码编辑和obsidian文本编辑快捷键
 date created: 2022-06-15
 date modified: 2022-07-14
 ---
+
 | | [[VSCode]] |[[obsidian]] |
 | ---------------- | ------------------- | ------------ |
 | 删除当前行 | cmd + shift + k | cmd + d |

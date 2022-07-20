@@ -1,10 +1,9 @@
 ---
-title: obsidian插件
+sr-due: 2023-04-10
+sr-interval: 305
+sr-ease: 330
 date created: 2022-06-09
 date modified: 2022-07-14
-sr-due: 2023-04-10
-sr-ease: 330
-sr-interval: 305
 tags: review
 ---
 

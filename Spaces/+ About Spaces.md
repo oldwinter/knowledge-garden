@@ -1,5 +1,4 @@
 ---
-title: About Spaces
 date created: 2022-06-22
 date modified: 2022-07-17
 tags: readme说明
@@ -29,8 +28,9 @@ Here are other examples of when you can deploy a new space:
 - and whatever else demands its own space!
 
 ## maps
-1.  **MAPS**: Remember the tension between “folders vs links”? Here’s part of the solution: Use MOCs. It’s actually quite simple. For every space you have in your life, you just deploy the MAPS folder structure:
-    -   _**MOCs**_: Dashboards for your space.
-    -   _**Areas**_: subfolders containing relevant notes that are ongoing.
-    -   _**Projects**_: subfolders containing relevant notes with end dates.
-    -   _**Support notes**_: hold notes specific to that space!
+
+1. **MAPS**: Remember the tension between “folders vs links”? Here’s part of the solution: Use MOCs. It’s actually quite simple. For every space you have in your life, you just deploy the MAPS folder structure:
+    - _**MOCs**_: Dashboards for your space.
+    - _**Areas**_: subfolders containing relevant notes that are ongoing.
+    - _**Projects**_: subfolders containing relevant notes with end dates.
+    - _**Support notes**_: hold notes specific to that space!

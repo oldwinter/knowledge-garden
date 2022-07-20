@@ -1,5 +1,4 @@
 ---
-title: 一些snippet软件的对比
 date created: 2022-06-09
 date modified: 2022-07-14
 ---

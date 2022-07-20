@@ -1,5 +1,4 @@
 ---
-title: PKM 的指导性原则 from lyt
 date created: 2022-06-19
 date modified: 2022-07-14
 ---

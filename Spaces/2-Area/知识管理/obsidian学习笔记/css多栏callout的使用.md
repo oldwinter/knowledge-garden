@@ -1,5 +1,4 @@
 ---
-title: css多栏callout的使用
 cssClass: two-column-list
 date created: 2022-06-09
 date modified: 2022-07-14

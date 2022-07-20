@@ -1,5 +1,4 @@
 ---
-title: emoji
 date created: 2022-06-24
 date modified: 2022-07-14
 ---

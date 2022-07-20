@@ -1,5 +1,4 @@
 ---
-title: Introduction The Promise of a Second Brain - 介绍：第二大脑的远景
 date created: 2022-07-06
 date modified: 2022-07-14
 ---

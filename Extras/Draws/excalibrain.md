@@ -9,7 +9,6 @@ excalidraw-onload-script: "app.plugins.plugins[`excalibrain`].start(ea.targetVie
 
 tags: [excalidraw]
 
-title: Text Elements
 ---
 
 # Text Elements

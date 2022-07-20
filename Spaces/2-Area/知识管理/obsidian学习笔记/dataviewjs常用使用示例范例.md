@@ -1,5 +1,4 @@
 ---
-title: dataviewjs常用使用示例范例
 date created: 2022-06-21
 date modified: 2022-07-14
 ---
@@ -32,8 +31,7 @@ for(let i of m)
 type: line
 labels: [${n}]
 series:
-- title: 200-笔记
-  data: [${data}]
+-   data: [${data}]
 labelColors: true
 \`\`\``)
 }

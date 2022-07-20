@@ -1172,16 +1172,141 @@
     },
     "日常玩耍": {
       "main": {
-        "id": "2bfcd3c894c1b760",
+        "id": "3bbafcddc5676ca8",
         "type": "split",
         "children": [
           {
-            "id": "fb16dd8ac82dda20",
+            "id": "d6cf4bbe4dc5be61",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/原子知识库/单词库&概念库/工具理性与价值理性.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/如何完成复杂、艰难、令人痛苦的任务.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"scroll\":29.801662138404986}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/MOCs/MOCs.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/本库日常使用的工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":13},\"to\":{\"line\":8,\"ch\":13}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":48,\"ch\":10},\"to\":{\"line\":48,\"ch\":10}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":21,\"ch\":23},\"to\":{\"line\":21,\"ch\":23}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/每日日志/2022-07-20.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🆕 最近更新.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/每日日志/2022-07-20.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":41},\"to\":{\"line\":5,\"ch\":41}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/每日日志/2022-07-20.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{}"
+                },
+                {
+                  "leaf": "d6cf4bbe4dc5be61",
+                  "group": null,
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/+ Index for Atlases.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                }
+              ]
+            },
             "state": {
               "type": "markdown",
               "state": {
-                "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
+                "file": "Cards/原子知识库/单词库&概念库/工具理性与价值理性.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -1192,48 +1317,52 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "68643f2d05d42ccb",
+        "id": "e3dd4e8fbf886eda",
         "type": "split",
         "children": [
           {
-            "id": "1aa62d2c88de131c",
+            "id": "987dbc5670d8f4fa",
             "type": "tabs",
-            "dimension": 67.13286713286713,
+            "dimension": 63.92785571142284,
             "children": [
               {
-                "id": "13b30ded2994ad1d",
+                "id": "a4d1994dfc9f1870",
                 "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "file-explorer",
                   "state": {}
                 }
               },
               {
-                "id": "7e5f7fa72c4c158e",
+                "id": "ce044dedd57e8849",
                 "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#todo/今天",
+                    "query": "tag:#todo/持续迭代",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
-                    "sortOrder": "byModifiedTime"
+                    "sortOrder": "alphabetical"
                   }
                 }
               },
               {
-                "id": "7e31ac824c125918",
+                "id": "4ea8d6f6779182a1",
                 "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              },
-              {
-                "id": "e7c54063be87971a",
-                "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "tag",
                   "state": {
@@ -1243,8 +1372,12 @@
                 }
               },
               {
-                "id": "3bfefe284aa43f62",
+                "id": "f102bffb960773db",
                 "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "recent-files",
                   "state": {}
@@ -1253,47 +1386,63 @@
             ]
           },
           {
-            "id": "9d14df0afd7aca85",
+            "id": "92910ae8836a7b22",
             "type": "tabs",
-            "dimension": 32.86713286713287,
+            "dimension": 36.07214428857716,
             "children": [
               {
-                "id": "6ff7eb945647acf7",
+                "id": "e3c3bc13cb0131c1",
                 "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md"
+                    "file": "Cards/原子知识库/单词库&概念库/工具理性与价值理性.md"
                   }
                 }
               },
               {
-                "id": "7f334493f1c26400",
+                "id": "05ff45ee3dbeba26",
                 "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "853ef9e400d6f719",
+                "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
+                    "file": "Cards/原子知识库/单词库&概念库/工具理性与价值理性.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
                   }
                 }
               },
               {
-                "id": "8033acdab97b1e8d",
+                "id": "687dfb8cd0c53082",
                 "type": "leaf",
-                "state": {
-                  "type": "advanced-tables-toolbar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "ce26c6f1b284b418",
-                "type": "leaf",
+                "pane-relief:history-v1": {
+                  "pos": 0,
+                  "stack": []
+                },
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "☘️ 花园导览 🍀/🆕 最近更新.md",
+                    "file": "Cards/原子知识库/单词库&概念库/工具理性与价值理性.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -1309,64 +1458,20 @@
           }
         ],
         "direction": "horizontal",
-        "width": 222.5
+        "width": 178.5
       },
       "right": {
-        "id": "5eef786fb53f05d2",
+        "id": "c718ea3b78af998f",
         "type": "split",
-        "children": [
-          {
-            "id": "276035328998e775",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "8f479aa0a656d107",
-                "type": "leaf",
-                "state": {
-                  "type": "review-queue-list-view",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
+        "children": [],
         "direction": "horizontal",
-        "width": 298.5,
+        "width": 217.5,
         "collapsed": true
       },
-      "floating": {
-        "id": "7ce459c2bbbd9775",
-        "type": "floating",
-        "children": [
-          {
-            "id": "283a9d7e8c8ddf53",
-            "type": "window",
-            "children": [
-              {
-                "id": "0a93d35b07ceaafa",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Calendar/每日日志/2022-07-13.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "vertical",
-            "x": 898,
-            "y": 53,
-            "width": 617,
-            "height": 997,
-            "maximize": false,
-            "zoom": 0
-          }
-        ]
-      },
-      "active": "fb16dd8ac82dda20"
+      "active": "d6cf4bbe4dc5be61",
+      "ophidian:layout-settings": {
+        "pane-relief:focus-lock": true
+      }
     }
   },
   "active": "日常玩耍"

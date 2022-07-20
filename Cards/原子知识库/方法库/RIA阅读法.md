@@ -1,5 +1,4 @@
 ---
-title: RIA阅读法
 aliases: 功利主义阅读法, 快速拆解工具书, 教程类书的阅读方法
 date created: 2022-06-09
 date modified: 2022-07-20

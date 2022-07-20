@@ -1,5 +1,4 @@
 ---
-title: Where It All Started - 第二大脑之缘起
 date created: 2022-07-06
 date modified: 2022-07-14
 ---

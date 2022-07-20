@@ -1,5 +1,4 @@
 ---
-title: obsidian如何做英文阅读笔记
 date created: 2022-07-06
 date modified: 2022-07-20
 ---

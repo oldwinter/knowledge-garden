@@ -1,5 +1,4 @@
 ---
-title: 给xx的求职建议
 date created: 2022-05-11
 date modified: 2022-07-14
 ---

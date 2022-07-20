@@ -1,5 +1,4 @@
 ---
-title: 卡片盒笔记法 - Zettelkasten
 date created: 2022-06-09
 date modified: 2022-07-14
 ---

@@ -1,5 +1,4 @@
 ---
-title: 如何真正实现global的proxy代理
 date created: 2022-06-09
 date modified: 2022-07-20
 ---

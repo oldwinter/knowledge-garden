@@ -1,5 +1,4 @@
 ---
-title: advanced slides 的奇技淫巧
 date created: 2022-06-09
 date modified: 2022-07-14
 preloadIframes: true  

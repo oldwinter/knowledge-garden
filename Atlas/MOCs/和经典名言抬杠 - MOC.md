@@ -1,5 +1,4 @@
 ---
-title: 和经典名言抬杠 - MOC
 date created: 2022-06-09
 date modified: 2022-07-20
 tags: MOC 

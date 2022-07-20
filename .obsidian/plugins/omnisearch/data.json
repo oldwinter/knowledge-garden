@@ -1,8 +1,8 @@
 {
   "respectExcluded": true,
-  "ignoreDiacritics": false,
+  "ignoreDiacritics": true,
   "showIndexingNotices": true,
-  "showShortName": false,
+  "showShortName": true,
   "ribbonIcon": false,
   "weightBasename": 2,
   "weightH1": 1.5,

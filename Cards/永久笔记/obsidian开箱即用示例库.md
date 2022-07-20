@@ -1,5 +1,4 @@
 ---
-title: obsidian开箱即用示例库
 date created: 2022-06-29
 date modified: 2022-07-20
 ---

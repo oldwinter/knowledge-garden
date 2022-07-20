@@ -1,5 +1,4 @@
 ---
-title: 数学公式识别 LaTex 问题
 date created: 2022-06-27
 date modified: 2022-07-20
 ---

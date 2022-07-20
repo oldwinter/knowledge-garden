@@ -1,5 +1,4 @@
 ---
-title: linux命令行测速 - speedtest
 aliases: speedtest
 date created: 2022-06-09
 date modified: 2022-07-14
