@@ -4,11 +4,8 @@ date modified: 2022-07-14
 tags: article/todo
 ---
 
->本文是对 [[@Tiago Forte]] 的关于如何选择适合自己的笔记 app 的视频的文字翻译版本。
+[Build a Productivity System Designed for Your Job Type - YouTube](https://www.youtube.com/watch?v=fZi9kPCys7A) 根据工作类型打造适合自己的生产力系统。和图书馆员，园丁和建筑师的说法也可以映射起来。 #todo
 
-我是读研没能免修英语的渣渣，从没做过视频翻译，这是处女作♍。
-
-我尽量优先做到『信雅达』的达吧。
 
 ### 相关视频链接
 
