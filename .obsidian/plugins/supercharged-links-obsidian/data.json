@@ -1,17 +1,11 @@
 {
   "targetAttributes": [
-    "published",
-    "title"
+    "up",
+    "x"
   ],
   "targetTags": true,
-  "presetFields": [],
-  "displayFieldsInContextMenu": false,
-  "globallyIgnoredFields": [
-    ""
-  ],
-  "classFilesPath": "",
   "getFromInlineField": true,
-  "activateSnippet": false,
+  "activateSnippet": true,
   "enableEditor": true,
   "enableFileList": true,
   "enableBacklinks": true,
@@ -65,30 +59,6 @@
       "selectAppend": true,
       "selectPrepend": true,
       "selectBackground": true
-    },
-    {
-      "type": "tag",
-      "name": "cards",
-      "value": "评论",
-      "matchCaseSensitive": false,
-      "match": "exact",
-      "uid": "1162-7812",
-      "selectText": false,
-      "selectAppend": false,
-      "selectPrepend": false,
-      "selectBackground": false
-    },
-    {
-      "type": "tag",
-      "name": "cards",
-      "value": "对话",
-      "matchCaseSensitive": false,
-      "match": "exact",
-      "uid": "3c8a-1054",
-      "selectText": false,
-      "selectAppend": false,
-      "selectPrepend": false,
-      "selectBackground": false
     },
     {
       "type": "tag",
@@ -162,5 +132,11 @@
       "selectPrepend": true,
       "selectBackground": true
     }
-  ]
+  ],
+  "presetFields": [],
+  "displayFieldsInContextMenu": false,
+  "globallyIgnoredFields": [
+    ""
+  ],
+  "classFilesPath": ""
 }

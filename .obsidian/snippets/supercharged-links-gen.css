@@ -554,20 +554,6 @@ settings:
         format: hex
         default: '#ffffff'
     - 
-        id: 1162-7812
-        title: tag is 评论
-        description: Example note
-        type: heading
-        collapsed: true
-        level: 3
-    - 
-        id: 3c8a-1054
-        title: tag is 对话
-        description: Example note
-        type: heading
-        collapsed: true
-        level: 3
-    - 
         id: 8b14-901d
         title: tag is weread
         description: Example note
