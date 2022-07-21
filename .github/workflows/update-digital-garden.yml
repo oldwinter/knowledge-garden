@@ -26,7 +26,7 @@ jobs:
           user: oldwinter
           token: ${{ secrets.GH_TOKEN }}
           repo_owner: oldwinter
-          repo: https://github.com/oldwinter/dg
+          repo: dg
           committor_username: cdd
           committor_email: cdd2zju@gmail.com
           target_branch: master
