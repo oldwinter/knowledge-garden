@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "绕过网盘和谐的方法",
-      "path": "Calendar/每日日志/绕过网盘和谐的方法.md"
+      "basename": "先鉴定你的做笔记风格，再选一款app上车",
+      "path": "Calendar/文章草稿/先鉴定你的做笔记风格，再选一款app上车.md"
+    },
+    {
+      "basename": "从anki、onenote再到obsidian，一名小镇做题家的笔记进化史",
+      "path": "Calendar/文章草稿/从anki、onenote再到obsidian，一名小镇做题家的笔记进化史.md"
+    },
+    {
+      "basename": "笔记软件的选择",
+      "path": "Cards/永久笔记/笔记软件的选择.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "数字花园",
+      "path": "Spaces/2-Area/人+科技融合专题/个人效率系统打造/数字花园.md"
+    },
+    {
+      "basename": "MOCs",
+      "path": "Atlas/MOCs/MOCs.md"
+    },
+    {
+      "basename": "阅读、笔记与写作",
+      "path": "Cards/永久笔记/阅读、笔记与写作.md"
     },
     {
       "basename": "2022-07-21",
       "path": "Calendar/每日日志/2022-07-21.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "绕过网盘和谐的方法",
+      "path": "Calendar/每日日志/绕过网盘和谐的方法.md"
     },
     {
       "basename": "我的开源项目",
@@ -77,24 +117,12 @@
       "path": "Atlas/+ Index for Atlases.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "🏹 已发布长文",
       "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
     },
     {
       "basename": "🧰 本库使用指南",
       "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "Pasted image 20220721024553",
@@ -107,10 +135,6 @@
     {
       "basename": "🗜 效率工具",
       "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
     },
     {
       "basename": "我的标签使用",
@@ -169,36 +193,12 @@
       "path": "Sources/Courses/如何成为学习高手-高冷冷/如何完成复杂、艰难、令人痛苦的任务.md"
     },
     {
-      "basename": "MOCs",
-      "path": "Atlas/MOCs/MOCs.md"
-    },
-    {
       "basename": "本库日常使用的工作流",
       "path": "Cards/永久笔记/本库日常使用的工作流.md"
     },
     {
       "basename": "2022-07-20",
       "path": "Calendar/每日日志/2022-07-20.md"
-    },
-    {
-      "basename": "+ About Atlas",
-      "path": "Atlas/+ About Atlas.md"
-    },
-    {
-      "basename": "+ About Spaces",
-      "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "dataview",
-      "path": "Spaces/2-Area/知识管理/obsidian学习笔记/dataview.md"
-    },
-    {
-      "basename": "整个库的统计数据 - dataview",
-      "path": "Spaces/2-Area/知识管理/obsidian学习笔记/整个库的统计数据 - dataview.md"
-    },
-    {
-      "basename": "个人知识管理",
-      "path": "Spaces/2-Area/人+科技融合专题/个人效率系统打造/个人知识管理.md"
     }
   ],
   "omittedPaths": [

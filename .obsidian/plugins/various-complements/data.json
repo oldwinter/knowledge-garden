@@ -135,27 +135,11 @@
         }
       }
     },
-    "readme": {
-      "readme": {
-        "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1655959353285
-        }
-      }
-    },
     "article/done": {
       "article/done": {
         "frontMatter": {
           "count": 4,
           "lastUpdated": 1657741573847
-        }
-      }
-    },
-    "article/doing": {
-      "article/doing": {
-        "frontMatter": {
-          "count": 3,
-          "lastUpdated": 1655967892565
         }
       }
     },
@@ -760,6 +744,14 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1658376214822
+        }
+      }
+    },
+    "😣": {
+      "😣": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658391655542
         }
       }
     }

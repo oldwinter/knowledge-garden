@@ -1,7 +1,8 @@
 {
   "targetAttributes": [
     "up",
-    "x"
+    "x",
+    "title"
   ],
   "targetTags": true,
   "getFromInlineField": true,
@@ -123,9 +124,9 @@
     {
       "type": "attribute",
       "name": "title",
-      "value": "HOME",
+      "value": "HOMEPAGE",
       "matchCaseSensitive": false,
-      "match": "startswith",
+      "match": "exact",
       "uid": "f22f-8852",
       "selectText": true,
       "selectAppend": true,

@@ -153,5 +153,7 @@
   "shimmering-focus@@no-multi-color-highlights": true,
   "shimmering-focus@@no-pseudo-spoiler-tags": false,
   "obsidian-california-coast-theme@@cc-no-file-icons": true,
-  "obsidian-california-coast-theme@@cc-no-folder-icons": true
+  "obsidian-california-coast-theme@@cc-no-folder-icons": true,
+  "pane-relief@@pane-relief-pane-numbering": false,
+  "pane-relief@@pane-relief-disable-counts": false
 }
