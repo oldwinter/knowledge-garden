@@ -786,6 +786,14 @@
           "lastUpdated": 1658399665763
         }
       }
+    },
+    "supermemo": {
+      "supermemo": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658407107560
+        }
+      }
     }
   }
 }
