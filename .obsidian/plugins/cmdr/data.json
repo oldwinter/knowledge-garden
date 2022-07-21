@@ -1,0 +1,19 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "hide": {
+    "statusbar": [
+      "pane-relief"
+    ],
+    "leftRibbon": []
+  }
+}
