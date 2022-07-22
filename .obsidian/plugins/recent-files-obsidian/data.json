@@ -1,12 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "从anki、onenote到obsidian，一名小镇做题家的笔记进化史",
-      "path": "Calendar/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md"
+      "basename": "笔记的误区",
+      "path": "Sources/Articles/flomo101阅读笔记/笔记的误区.md"
+    },
+    {
+      "basename": "思维方式目录 - flomo101",
+      "path": "Sources/Articles/flomo101阅读笔记/思维方式目录 - flomo101.md"
+    },
+    {
+      "basename": "flomo101阅读笔记",
+      "path": "Sources/Articles/flomo101阅读笔记/flomo101阅读笔记.md"
+    },
+    {
+      "basename": "LATEST",
+      "path": "Atlas/Logs/LATEST.md"
+    },
+    {
+      "basename": "数字花园连通性检测",
+      "path": "Atlas/Logs/数字花园连通性检测.md"
+    },
+    {
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "+ About Cards",
+      "path": "Cards/+ About Cards.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "主动回顾",
+      "path": "Calendar/每日日志/主动回顾.md"
+    },
+    {
+      "basename": "从anki、onenote到obsidian，一名小镇做题家的笔记进化史",
+      "path": "Calendar/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md"
     },
     {
       "basename": "HOMEPAGE",
@@ -15,10 +51,6 @@
     {
       "basename": "+ About Spaces",
       "path": "Spaces/+ About Spaces.md"
-    },
-    {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
     },
     {
       "basename": "2022-07-17",
@@ -67,10 +99,6 @@
     {
       "basename": "+ Index for Sources",
       "path": "Sources/+ Index for Sources.md"
-    },
-    {
-      "basename": "数字花园连通性检测",
-      "path": "Atlas/Logs/数字花园连通性检测.md"
     },
     {
       "basename": "任务清单的得与失",
@@ -171,34 +199,6 @@
     {
       "basename": "绕过网盘和谐的方法",
       "path": "Calendar/每日日志/绕过网盘和谐的方法.md"
-    },
-    {
-      "basename": "我的开源项目",
-      "path": "Spaces/1-Project/我的开源项目/我的开源项目.md"
-    },
-    {
-      "basename": "一些学起来挺有意思的小知识点 - MOC",
-      "path": "Spaces/0-MOCs/一些学起来挺有意思的小知识点 - MOC.md"
-    },
-    {
-      "basename": "云计算与云原生",
-      "path": "Spaces/0-MOCs/云计算与云原生.md"
-    },
-    {
-      "basename": "云计算与个人",
-      "path": "Spaces/0-MOCs/云计算与个人.md"
-    },
-    {
-      "basename": "城市与旅行",
-      "path": "Spaces/0-MOCs/城市与旅行.md"
-    },
-    {
-      "basename": "小知识点",
-      "path": "Spaces/0-MOCs/小知识点.md"
-    },
-    {
-      "basename": "投资与理财",
-      "path": "Spaces/0-MOCs/投资与理财.md"
     }
   ],
   "omittedPaths": [
