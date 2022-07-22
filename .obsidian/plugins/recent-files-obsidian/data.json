@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-07-23",
+      "path": "Calendar/每日日志/2022-07-23.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
       "basename": "2022-07-22",
       "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "如何完成复杂、艰难、令人痛苦的任务",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何完成复杂、艰难、令人痛苦的任务.md"
+    },
+    {
+      "basename": "anki-like",
+      "path": "Cards/永久笔记/anki-like.md"
     },
     {
       "basename": "如何记读书笔记",
@@ -69,10 +89,6 @@
       "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "+ About Cards",
       "path": "Cards/+ About Cards.md"
     },
@@ -103,10 +119,6 @@
     {
       "basename": "🆕 最近更新",
       "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
     },
     {
       "basename": "☘️ 花园导览 🍀",
@@ -187,18 +199,6 @@
     {
       "basename": "2022年7月，obsidian 依然必装的 10 个插件",
       "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "Obsidian 最优雅的多端同步插件LiveSync",
-      "path": "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md"
-    },
-    {
-      "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
-      "path": "Calendar/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
     }
   ],
   "omittedPaths": [
