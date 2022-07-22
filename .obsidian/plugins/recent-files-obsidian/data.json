@@ -1,12 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "笔记的误区",
-      "path": "Sources/Articles/flomo101阅读笔记/笔记的误区.md"
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "如何记读书笔记",
+      "path": "Sources/Articles/flomo101阅读笔记/如何记读书笔记.md"
     },
     {
       "basename": "思维方式目录 - flomo101",
       "path": "Sources/Articles/flomo101阅读笔记/思维方式目录 - flomo101.md"
+    },
+    {
+      "basename": "输出究竟是什么",
+      "path": "Sources/Articles/flomo101阅读笔记/输出究竟是什么.md"
+    },
+    {
+      "basename": "输入驱动输出，输出倒逼输入",
+      "path": "Cards/永久笔记/输入驱动输出，输出倒逼输入.md"
+    },
+    {
+      "basename": "如何真正理解一个新概念",
+      "path": "Sources/Articles/flomo101阅读笔记/如何真正理解一个新概念.md"
+    },
+    {
+      "basename": "为何知识需要连接",
+      "path": "Sources/Articles/flomo101阅读笔记/为何知识需要连接.md"
+    },
+    {
+      "basename": "如何用 I.A.R.P 规划标签",
+      "path": "Sources/Articles/flomo101阅读笔记/如何用 I.A.R.P 规划标签.md"
+    },
+    {
+      "basename": "没有完美的分类",
+      "path": "Sources/Articles/flomo101阅读笔记/没有完美的分类.md"
+    },
+    {
+      "basename": "为何收藏无用",
+      "path": "Sources/Articles/flomo101阅读笔记/为何收藏无用.md"
+    },
+    {
+      "basename": "存储强度与提取强度 - 记忆",
+      "path": "Sources/Articles/flomo101阅读笔记/存储强度与提取强度 - 记忆.md"
+    },
+    {
+      "basename": "知识定义与管理",
+      "path": "Sources/Articles/flomo101阅读笔记/知识定义与管理.md"
+    },
+    {
+      "basename": "笔记的误区",
+      "path": "Sources/Articles/flomo101阅读笔记/笔记的误区.md"
     },
     {
       "basename": "flomo101阅读笔记",
@@ -31,10 +75,6 @@
     {
       "basename": "+ About Cards",
       "path": "Cards/+ About Cards.md"
-    },
-    {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
     },
     {
       "basename": "主动回顾",
@@ -159,46 +199,6 @@
     {
       "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
       "path": "Calendar/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
-    },
-    {
-      "basename": "2022-07-21",
-      "path": "Calendar/每日日志/2022-07-21.md"
-    },
-    {
-      "basename": "精力管理",
-      "path": "Cards/永久笔记/精力管理.md"
-    },
-    {
-      "basename": "anki-like",
-      "path": "Cards/永久笔记/anki-like.md"
-    },
-    {
-      "basename": "先鉴定你的做笔记风格和工作类型，再选一款app上车",
-      "path": "Calendar/文章草稿/先鉴定你的做笔记风格和工作类型，再选一款app上车.md"
-    },
-    {
-      "basename": "2022-06-21",
-      "path": "Calendar/每日日志/2022-06-21.md"
-    },
-    {
-      "basename": "笔记软件的选择",
-      "path": "Cards/永久笔记/笔记软件的选择.md"
-    },
-    {
-      "basename": "数字花园",
-      "path": "Spaces/2-Area/人+科技融合专题/个人效率系统打造/数字花园.md"
-    },
-    {
-      "basename": "MOCs",
-      "path": "Atlas/MOCs/MOCs.md"
-    },
-    {
-      "basename": "阅读、笔记与写作",
-      "path": "Cards/永久笔记/阅读、笔记与写作.md"
-    },
-    {
-      "basename": "绕过网盘和谐的方法",
-      "path": "Calendar/每日日志/绕过网盘和谐的方法.md"
     }
   ],
   "omittedPaths": [
