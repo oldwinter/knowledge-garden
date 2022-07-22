@@ -1,12 +1,6 @@
 {
   "enabledButtons": [
     {
-      "id": "workspace:split-vertical",
-      "icon": "vertical-split",
-      "name": "左右拆分",
-      "showButtons": "both"
-    },
-    {
       "id": "file-explorer:reveal-active-file",
       "icon": "navigate-glyph",
       "name": "文件列表: 在文件列表中显示当前文件",
@@ -17,42 +11,15 @@
       "icon": "code-glyph",
       "name": "切换实时阅览/源码模式",
       "showButtons": "both"
-    },
-    {
-      "id": "workspace:move-to-new-window",
-      "icon": "popup-open",
-      "name": "Move current pane to new window",
-      "showButtons": "both"
-    },
-    {
-      "id": "workspace:toggle-pin",
-      "icon": "filled-pin",
-      "name": "解锁/锁定",
-      "showButtons": "both"
     }
   ],
   "desktop": true,
   "titleLeft": [],
   "titleRight": [
     {
-      "id": "publish:view-changes",
-      "icon": "paper-plane-glyph",
-      "name": "发布: 发布更改"
-    },
-    {
       "id": "daily-notes",
-      "icon": "calendar-glyph",
+      "icon": "calendar-with-checkmark",
       "name": "日记: 打开/创建今天的日记"
-    },
-    {
-      "id": "remotely-save:start-sync",
-      "icon": "remotely-save-sync-wait",
-      "name": "Remotely Save: 开始同步（start sync）"
-    },
-    {
-      "id": "sliding-panes-obsidian:toggle-sliding-panes",
-      "icon": "indent-glyph",
-      "name": "Sliding Panes (Andy's Mode): Toggle Sliding Panes"
     },
     {
       "id": "workspace:undo-close-pane",
@@ -60,9 +27,14 @@
       "name": "重新打开上一个关闭的面板"
     },
     {
-      "id": "obsidian-weread-plugin:sync-weread-notes-command",
-      "icon": "sync",
-      "name": "Weread Plugin: Sync Weread command"
+      "id": "remotely-save:start-sync",
+      "icon": "remotely-save-sync-wait",
+      "name": "Remotely Save: 开始同步（start sync）"
+    },
+    {
+      "id": "publish:view-changes",
+      "icon": "paper-plane-glyph",
+      "name": "发布: 发布更改"
     }
   ],
   "titleCenter": [],

@@ -1,19 +1,39 @@
 {
   "confirmDeletion": false,
-  "showAddCommand": true,
+  "showAddCommand": false,
   "debug": false,
   "editorMenu": [],
   "fileMenu": [],
-  "leftRibbon": [],
-  "rightRibbon": [],
+  "leftRibbon": [
+    {
+      "id": "editor:focus-right",
+      "icon": "activity",
+      "name": "将焦点切换到右侧面板",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [
+    {
+      "id": "editor:focus-top",
+      "icon": "alarm-clock-off",
+      "name": "将焦点切换到上方面板",
+      "mode": "any"
+    }
+  ],
   "titleBar": [],
   "statusBar": [],
   "pageHeader": [],
   "macros": [],
   "hide": {
-    "statusbar": [
-      "pane-relief"
-    ],
-    "leftRibbon": []
+    "statusbar": [],
+    "leftRibbon": [
+      "复习卡片",
+      "新建 Excalidraw 绘图",
+      "Show Slide Preview",
+      "插入模板",
+      "Manage workspace layouts",
+      "BRAT",
+      "打开命令面板"
+    ]
   }
 }

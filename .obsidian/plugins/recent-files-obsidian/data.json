@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
+      "basename": "从anki、onenote到obsidian，一名小镇做题家的笔记进化史",
+      "path": "Calendar/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md"
     },
     {
       "basename": "README",
       "path": "README.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "2022-07-17",
+      "path": "Calendar/每日日志/2022-07-17.md"
+    },
+    {
+      "basename": "我使用Obsidian的核心原则",
+      "path": "Spaces/2-Area/知识管理/obsidian学习笔记/我使用Obsidian的核心原则.md"
+    },
+    {
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "☘️ 花园导览 🍀",
+      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
+    },
+    {
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+    },
+    {
+      "basename": "反向链接",
+      "path": "Cards/永久笔记/反向链接.md"
+    },
+    {
+      "basename": "小镇做题家",
+      "path": "Cards/原子知识库/单词库&概念库/小镇做题家.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "写在最后模板",
+      "path": "Extras/Templates/写在最后模板.md"
+    },
+    {
+      "basename": "obsidian 目前最完美的免费发布方案 - 渐进式教程",
+      "path": "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md"
     },
     {
       "basename": "+ Index for Sources",
@@ -29,10 +85,6 @@
       "path": "☘️ 花园导览 🍀/🏗 本库路线图.md"
     },
     {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
       "basename": "🗜 效率工具",
       "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
     },
@@ -41,28 +93,12 @@
       "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
     },
     {
-      "basename": "🧰 本库使用指南",
-      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
-    },
-    {
       "basename": "文章发布工作流梳理",
       "path": "Calendar/文章草稿/文章发布工作流梳理.md"
     },
     {
-      "basename": "从anki、onenote到obsidian，一名小镇做题家的笔记进化史",
-      "path": "Calendar/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md"
-    },
-    {
       "basename": "增援未来",
       "path": "Cards/永久笔记/增援未来.md"
-    },
-    {
-      "basename": "☘️ 花园导览 🍀",
-      "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
     {
       "basename": "本库的设计哲学",
@@ -93,10 +129,6 @@
       "path": "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md"
     },
     {
-      "basename": "obsidian 目前最完美的免费发布方案 - 渐进式教程",
-      "path": "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md"
-    },
-    {
       "basename": "这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源",
       "path": "Calendar/已发布文章/这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源.md"
     },
@@ -123,10 +155,6 @@
     {
       "basename": "笔记软件的选择",
       "path": "Cards/永久笔记/笔记软件的选择.md"
-    },
-    {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
     },
     {
       "basename": "数字花园",
@@ -171,34 +199,6 @@
     {
       "basename": "投资与理财",
       "path": "Spaces/0-MOCs/投资与理财.md"
-    },
-    {
-      "basename": "王者荣耀",
-      "path": "Spaces/0-MOCs/王者荣耀.md"
-    },
-    {
-      "basename": "+ About Sources",
-      "path": "Sources/+ About Sources.md"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
-    },
-    {
-      "basename": "+ Index for Extras",
-      "path": "Extras/+ Index for Extras.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/永久笔记/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "80%默认优先，20%深度定制",
-      "path": "Cards/永久笔记/80%默认优先，20%深度定制.md"
-    },
-    {
-      "basename": "读书笔记",
-      "path": "Atlas/MOCs/读书笔记.md"
     }
   ],
   "omittedPaths": [
