@@ -49,7 +49,7 @@
   "shimmering-focus@@show-titlebar-text": false,
   "shimmering-focus@@show-ribbons": false,
   "sanctum@@dark-mode-palette": "sanctum-dark",
-  "sanctum@@alt-link": false,
+  "sanctum@@alt-link": true,
   "sanctum@@no-blur": true,
   "sanctum@@no-sanctum-icons": false,
   "sanctum@@no-scrl-search": false,
@@ -80,7 +80,7 @@
   "shimmering-focus@@no-folder-icons": false,
   "shimmering-focus@@status-bar-mode": "permanently-show-statusbar",
   "shimmering-focus@@hide-backlinks-status-bar": false,
-  "shimmering-focus@@hide-signature": false,
+  "shimmering-focus@@hide-signature": true,
   "shimmering-focus@@hide-languagetool-status-bar": false,
   "shimmering-focus@@hide-trailing-whitespace": false,
   "shimmering-focus@@max-view-enabled": false,
@@ -151,11 +151,12 @@
   "obsidian-california-coast-theme@@cc-no-folder-icons": true,
   "pane-relief@@pane-relief-pane-numbering": false,
   "pane-relief@@pane-relief-disable-counts": false,
-  "shimmering-focus@@mac-native-scrollbar": true,
+  "shimmering-focus@@mac-native-scrollbar": false,
   "shimmering-focus@@sidebar-font-size": 0.85,
   "shimmering-focus@@status-bar-font-size": 0.85,
-  "shimmering-focus@@hide-pane-relief-focus-lock-status-bar": false,
+  "shimmering-focus@@hide-pane-relief-focus-lock-status-bar": true,
   "shimmering-focus@@code-block-tab-size": 2,
   "customizable-page-header-buttons@@page-header-spacing-mobile": 12,
-  "customizable-page-header-buttons@@page-header-spacing-desktop": 8
+  "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
+  "shimmering-focus@@primary-accent-light": "primary-accent-light-cyan"
 }

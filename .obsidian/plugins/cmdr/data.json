@@ -1,31 +1,59 @@
 {
   "confirmDeletion": false,
-  "showAddCommand": false,
+  "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
   "fileMenu": [],
-  "leftRibbon": [
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [
     {
-      "id": "editor:focus-right",
-      "icon": "activity",
-      "name": "将焦点切换到右侧面板",
+      "id": "workspace:undo-close-pane",
+      "icon": "undo-glyph",
+      "name": "重新打开上一个关闭的面板",
+      "mode": "any"
+    },
+    {
+      "id": "publish:view-changes",
+      "icon": "paper-plane-glyph",
+      "name": "发布: 发布更改",
+      "mode": "any"
+    },
+    {
+      "id": "remotely-save:start-sync",
+      "icon": "remotely-save-sync-wait",
+      "name": "Remotely Save: 开始同步（start sync）",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-weread-plugin:sync-weread-notes-command",
+      "icon": "book",
+      "name": "Weread Plugin: Sync Weread Notes",
       "mode": "any"
     }
   ],
-  "rightRibbon": [
-    {
-      "id": "editor:focus-top",
-      "icon": "alarm-clock-off",
-      "name": "将焦点切换到上方面板",
-      "mode": "any"
-    }
-  ],
-  "titleBar": [],
   "statusBar": [],
-  "pageHeader": [],
+  "pageHeader": [
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "navigate-glyph",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "mode": "any"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "code-glyph",
+      "name": "切换实时阅览/源码模式",
+      "mode": "any"
+    }
+  ],
   "macros": [],
   "hide": {
-    "statusbar": [],
+    "statusbar": [
+      "pane-relief",
+      "backlink",
+      "various-complements"
+    ],
     "leftRibbon": [
       "复习卡片",
       "新建 Excalidraw 绘图",
@@ -35,5 +63,6 @@
       "BRAT",
       "打开命令面板"
     ]
-  }
+  },
+  "spacing": "8"
 }

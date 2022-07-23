@@ -3,6 +3,8 @@ date created: 2022-06-19
 date modified: 2022-07-20
 ---
 
+down:: [[ACCESS 笔记组织法]]
+
 [LYT Kit 6: Your starter kit to build your PKM system (+free download for your Obsidian app) - YouTube](https://www.youtube.com/watch?v=ftzQOkzGCLg)
 
 ## 概括一下 LYT 笔记框架的核心内容

@@ -23,7 +23,7 @@ tags: article/done
 - [[auto-link-title]]
 	- 作用：自动获取url的title并粘贴为markdown格式。
 	- 评价：小小的功能，却为我节约无数的时间。
-- [[customizable-page-header-buttons]]
+- [[customizable-page-header-buttons]]，[[2022-07-23]]已被commander插件完美替代。
 	- 作用：为笔记页面头和软件标题栏创建常用功能按钮。
 	- 评价：它在视觉上达到的统一感，让我有时候宁愿点图标，而不是按快捷键。
 - [[sliding panes - andy mode]]
