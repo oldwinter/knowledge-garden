@@ -4,11 +4,14 @@ date modified: 2022-07-22
 home: true
 tags: readme说明
 ---
-
->访问此文的在线发布版本，获得更好的双链阅读体验：  
->主：[README - 🌲 oldwinterの数字花园](https://oldwinter.top/README)[^1]  
->备：[README - 🌱 oldwinterの数字花园](https://notes.oldwinter.top/README)[^2]  
->源代码: https://github.com/oldwinter/knowledge-garden
+<h1 align="center">oldwinterの数字花园</h1>
+<p align="center">
+    <a href="https://oldwinter.top/README">主发布站</a> | 
+    <a href="https://notes.oldwinter.top/README">备发布站</a> | 
+    <a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
+</p>
+<h5 align="center">📩 订阅Newsletter: <a href="https://oldwinter.zhubai.love/">黑咖啡☕️加奶茶🧋</a></h5>
+<br>
 
 ## 这是什么
 
@@ -46,9 +49,5 @@ tags: readme说明
 
 - cdd2zju@gmail.com
 - [[个人简介]]
-
-[^1]: obsidian官方的publish收费服务，20美元1个月。
-
-[^2]: 这是[[obsidian publish 发布]]的免费替换方案1，基于开源项目[[jekyll]]。
 
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法。

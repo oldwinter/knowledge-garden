@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
       "basename": "2022-07-24",
       "path": "Calendar/每日日志/2022-07-24.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "HOMEPAGE",
       "path": "HOMEPAGE.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "《三体》",
@@ -83,10 +87,6 @@
     {
       "basename": "5-如何构建笔记系统 - 实际操作篇",
       "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
     },
     {
       "basename": "zotero和obsidian的联动",
