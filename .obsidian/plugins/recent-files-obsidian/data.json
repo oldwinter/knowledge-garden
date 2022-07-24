@@ -1,52 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "HOMEPAGE",
-      "path": "HOMEPAGE.md"
+      "basename": "2022-07-24",
+      "path": "Calendar/每日日志/2022-07-24.md"
     },
     {
-      "basename": "5-如何构建笔记系统 - 实际操作篇",
-      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇.md"
+      "basename": "从anki、onenote到obsidian，一名小镇做题家的笔记进化史",
+      "path": "Calendar/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md"
     },
     {
-      "basename": "0-🌱 oldwinter の数字花园",
-      "path": "Sources/SimpRead/0-🌱 oldwinter の数字花园.md"
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
     },
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
+      "basename": "obsidian 目前最完美的免费发布方案 - 渐进式教程",
+      "path": "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md"
+    },
+    {
+      "basename": "2022年7月，obsidian 依然必装的 10 个插件",
+      "path": "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md"
     },
     {
       "basename": "README",
       "path": "README.md"
     },
     {
-      "basename": "5-如何构建笔记系统 - 实际操作篇@annote",
-      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇@annote.md"
+      "basename": "🧀 知识管理",
+      "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
+    },
+    {
+      "basename": "2022-05-27",
+      "path": "Calendar/每日日志/2022-05-27.md"
+    },
+    {
+      "basename": "台风天去舟山旅行",
+      "path": "Cards/永久笔记/台风天去舟山旅行.md"
+    },
+    {
+      "basename": "advanced-slides",
+      "path": "Spaces/2-Area/知识管理/obsidian学习笔记/advanced-slides.md"
+    },
+    {
+      "basename": "🏗 本库路线图",
+      "path": "☘️ 花园导览 🍀/🏗 本库路线图.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
     },
     {
       "basename": "4-如何构建自己的笔记系统？",
       "path": "Sources/SimpRead/4-如何构建自己的笔记系统？.md"
     },
     {
-      "basename": "1-上下文 — 🌱 oldwinter の数字花园@annote",
-      "path": "Sources/SimpRead/1-上下文 — 🌱 oldwinter の数字花园@annote.md"
+      "basename": "5-如何构建笔记系统 - 实际操作篇@annote",
+      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇@annote.md"
     },
     {
-      "basename": "2-Readme — 🌱 oldwinter の数字花园@annote",
-      "path": "Sources/SimpRead/2-Readme — 🌱 oldwinter の数字花园@annote.md"
+      "basename": "5-如何构建笔记系统 - 实际操作篇",
+      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇.md"
     },
     {
-      "basename": "3-个人信息管理系统 — 🌱 oldwinter の数字花园@annote",
-      "path": "Sources/SimpRead/3-个人信息管理系统 — 🌱 oldwinter の数字花园@annote.md"
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
     },
     {
       "basename": "zotero和obsidian的联动",
       "path": "Sources/Papers/zotero和obsidian的联动.md"
-    },
-    {
-      "basename": "2022-07-24",
-      "path": "Calendar/每日日志/2022-07-24.md"
     },
     {
       "basename": "如何克服表达的额啊等口条过多问题",
@@ -73,14 +93,6 @@
       "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
     },
     {
-      "basename": "🏹 已发布长文",
-      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
-    },
-    {
-      "basename": "🏗 本库路线图",
-      "path": "☘️ 花园导览 🍀/🏗 本库路线图.md"
-    },
-    {
       "basename": "☘️ 花园导览 🍀",
       "path": "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md"
     },
@@ -91,10 +103,6 @@
     {
       "basename": "Index for 已发布文章和草稿",
       "path": "Atlas/Scopes/Index for 已发布文章和草稿.md"
-    },
-    {
-      "basename": "🧀 知识管理",
-      "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
     },
     {
       "basename": "🧰 本库使用指南",
