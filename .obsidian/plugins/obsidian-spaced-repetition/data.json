@@ -1,5 +1,8 @@
 {
   "settings": {
+    "flashcardEasyText": "简单",
+    "flashcardGoodText": "记得",
+    "flashcardHardText": "较难",
     "flashcardTags": [
       "#cards"
     ],
@@ -23,7 +26,7 @@
     "noteFoldersToIgnore": [
       "☘️ 花园导览 🍀"
     ],
-    "openRandomNote": true,
+    "openRandomNote": false,
     "autoNextNote": true,
     "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
@@ -34,6 +37,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-07-04",
+  "buryDate": "2022-07-24",
   "buryList": []
 }

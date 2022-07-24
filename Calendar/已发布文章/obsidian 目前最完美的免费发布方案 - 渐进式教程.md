@@ -44,6 +44,7 @@ tags: article/done
 - zola方案，[GitHub - ppeetteerrs/obsidian-zola: A no-brainer solution to turning your Obsidian PKM into a Zola site.](https://github.com/ppeetteerrs/obsidian-zola)
 - perlite方案，[GitHub - secure-77/Perlite: A webbased markdown viewer optimized for Obsidian](https://github.com/secure-77/Perlite)
 - gatsby方案，支持[[横向卷动布局- andy mode]]，但构建时长小时级别，[GitHub - aravindballa/gatsby-theme-andy: A Gatsby theme to build Andy style websites. 📑](https://github.com/aravindballa/gatsby-theme-andy/)
+- [[2022-07-24]]新发现方案：[GitHub - mathieudutour/gatsby-digital-garden: 🌷 🌻 🌺 Create a digital garden with Gatsby](https://github.com/mathieudutour/gatsby-digital-garden/)
 
 总之，有钱就选官方服务准没错。其次，综合对比后，我选择了jekyll方案1，如何一步步实现，见下文。
 
