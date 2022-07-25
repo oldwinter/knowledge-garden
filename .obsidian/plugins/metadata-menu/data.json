@@ -1,0 +1,20 @@
+{
+  "presetFields": [
+    {
+      "name": "tags",
+      "values": {},
+      "id": "1",
+      "isCycle": false,
+      "isMulti": false,
+      "valuesListNotePath": "/"
+    }
+  ],
+  "displayFieldsInContextMenu": false,
+  "globallyIgnoredFields": [
+    ""
+  ],
+  "classFilesPath": "",
+  "getFromInlineField": true,
+  "isAutosuggestEnabled": true,
+  "fileClassAlias": "fileClass"
+}

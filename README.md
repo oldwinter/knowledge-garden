@@ -1,21 +1,20 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-22
+date modified: 2022-07-25
 home: true
 tags: readme说明
 ---
 <h1 align="center">oldwinterの数字花园</h1>
 <p align="center">
-    <a href="https://oldwinter.top/README">主发布站</a> | 
-    <a href="https://notes.oldwinter.top/README">备发布站</a> | 
+    <a href="https://oldwinter.top/README">主发布站</a> |
+    <a href="https://notes.oldwinter.top/README">备发布站</a> |
     <a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
 </p>
-<h5 align="center">📩 订阅Newsletter: <a href="https://oldwinter.zhubai.love/">黑咖啡☕️加奶茶🧋</a></h5>
-<br>
+<h5 align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></h5>
 
 ## 这是什么
 
-- 真实袒露的[[第二大脑]]。是个人每日阅读、笔记和写作的完整实时的过程与结果的全盘分享。大部分笔记是写给自己的，是希望能为自己将来所用的[[常青笔记]]。
+- 真实袒露的[[第二大脑]]。是个人每日[[阅读、笔记与写作]]的完整实时的过程与结果的全盘分享。大部分笔记是写给自己的，是希望能为自己将来所用的[[常青笔记]]。
 - 未经美化的[[数字花园]]。避免为了正式发表而过度修葺美化文章，保留了最真实完备的细节。小部分笔记是写给观众的，希望能使得你有序漫步，避免陷入云深不知处。
 
 ## 为什么要开源笔记

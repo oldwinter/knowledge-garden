@@ -24,3 +24,17 @@ from #article/done
 sort dates desc
 limit 99
 ```
+
+## 使用metadata menu插件管理frontdata
+
+```dataviewjs
+const {fieldWithMenu: _} = this.app.plugins.plugins["metadata-menu"].api // destruct metadata-menu api to use fieldWithMenu function and give an alias: "_"
+
+dv.table(["file", "tags"], dv.pages('#article')
+.limit(10)
+.map(p => [
+    p.file.link, 
+    _(dv, p, "tags") // pass dv (dataview api instance), p (the page), and the field name to fieldWithMenu (: "-")
+    ])
+)
+```

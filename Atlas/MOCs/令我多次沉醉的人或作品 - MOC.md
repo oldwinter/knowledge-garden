@@ -2,9 +2,7 @@
 aliases: 好书好作品好电影好喜剧好音乐
 date created: 2022-06-09
 date modified: 2022-07-20
-tags:
-  - MOC 
-  - todo/持续迭代 
+tags: [MOC, todo/持续迭代]
 ---
 
 ## 初衷
