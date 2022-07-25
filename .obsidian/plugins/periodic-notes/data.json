@@ -45,7 +45,7 @@
       "ctime": "2022-04-25T01:05:03+08:00"
     }
   ],
-  "enableTimelineComplication": true,
+  "enableTimelineComplication": false,
   "daily": {
     "format": "YYYY-MM-DD",
     "folder": "030 - 每日短记",

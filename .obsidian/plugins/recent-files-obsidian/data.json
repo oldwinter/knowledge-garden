@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "2022-07-26",
+      "path": "Calendar/每日日志/2022-07-26.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "本库如何免费发布至web",
       "path": "Cards/永久笔记/本库如何免费发布至web.md"
     },
@@ -37,14 +53,6 @@
       "path": "Calendar/每日日志/如何调试鼠标hover后才出现的界面元素.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
-    },
-    {
       "basename": "阅读、笔记与写作",
       "path": "Cards/永久笔记/阅读、笔记与写作.md"
     },
@@ -63,10 +71,6 @@
     {
       "basename": "《喜鹊谋杀案》",
       "path": "Sources/Movies + TV/电视剧笔记/《喜鹊谋杀案》.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
     },
     {
       "basename": "个人信息管理系统",
@@ -195,10 +199,6 @@
     {
       "basename": "平台+插件",
       "path": "Spaces/2-Area/人+科技融合专题/平台+插件.md"
-    },
-    {
-      "basename": "obsidian插件",
-      "path": "Spaces/2-Area/知识管理/obsidian学习笔记/obsidian插件.md"
     }
   ],
   "omittedPaths": [

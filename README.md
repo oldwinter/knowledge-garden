@@ -10,7 +10,7 @@ tags: readme说明
     <a href="https://notes.oldwinter.top/README">备发布站</a> |
     <a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
 </p>
-<h5 align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></h5>
+<p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
 
 ## 这是什么
 
