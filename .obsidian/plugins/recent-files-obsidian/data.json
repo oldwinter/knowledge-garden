@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
       "basename": "🏗 本库路线图",
       "path": "☘️ 花园导览 🍀/🏗 本库路线图.md"
     },
@@ -41,16 +49,8 @@
       "path": "Atlas/MOCs/令我多次沉醉的人或作品 - MOC.md"
     },
     {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
       "basename": "上下文",
       "path": "Cards/永久笔记/上下文.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "HOMEPAGE",
