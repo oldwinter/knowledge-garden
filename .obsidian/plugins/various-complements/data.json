@@ -11,8 +11,8 @@
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^。，：？『",
   "showMatchStrategy": false,
-  "showComplementAutomatically": false,
-  "showIndexingStatus": false,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": true,
   "descriptionOnSuggestion": "Short",
   "selectSuggestionKeys": "Tab",
   "additionalCycleThroughSuggestionsKeys": "None",
@@ -66,8 +66,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 3,
-          "lastUpdated": 1656861447562
+          "count": 4,
+          "lastUpdated": 1658849212035
         }
       }
     },
@@ -114,8 +114,8 @@
     "PARA": {
       "PARA": {
         "internalLink": {
-          "count": 5,
-          "lastUpdated": 1658303593909
+          "count": 6,
+          "lastUpdated": 1658850169450
         }
       }
     },
@@ -138,8 +138,8 @@
     "ACCESS 笔记组织法": {
       "ACCESS 笔记组织法": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1656954497816
+          "count": 3,
+          "lastUpdated": 1658850064991
         }
       }
     },
@@ -646,8 +646,8 @@
     "Resource": {
       "Resource": {
         "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658376214822
+          "count": 2,
+          "lastUpdated": 1658850177375
         }
       }
     },
@@ -784,6 +784,110 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1658661697124
+        }
+      }
+    },
+    "cubox": {
+      "cubox": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658848275449
+        }
+      }
+    },
+    "诗词": {
+      "诗词": {
+        "currentVault": {
+          "count": 3,
+          "lastUpdated": 1658848882827
+        }
+      }
+    },
+    "发展中国家": {
+      "发展中国家": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658848982489
+        }
+      }
+    },
+    "知识管理": {
+      "知识管理": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849134632
+        }
+      }
+    },
+    "🧀 知识管理": {
+      "🧀 知识管理": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849138207
+        }
+      }
+    },
+    "个人知识管理": {
+      "个人知识管理": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849142097
+        }
+      }
+    },
+    "ryooo的知识管理工作流": {
+      "ryooo的知识管理工作流": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849147950
+        }
+      }
+    },
+    "管理": {
+      "管理": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658849151421
+        }
+      }
+    },
+    "知识库": {
+      "知识库": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658849157528
+        }
+      }
+    },
+    "README": {
+      "README": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849371156
+        }
+      }
+    },
+    "newsletter": {
+      "newsletter": {
+        "internalLink": {
+          "count": 3,
+          "lastUpdated": 1658849793509
+        }
+      }
+    },
+    "得到": {
+      "得到": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1658849913993
+        }
+      }
+    },
+    "知识付费": {
+      "知识付费": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658849983964
         }
       }
     }
