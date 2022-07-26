@@ -1,10 +1,10 @@
 ---
 date created: 2022-06-06
-date modified: 2022-07-20
-tags: MOC
+date modified: 2022-07-27
+tags: MOC todo/持续迭代
 ---
 
-> 这个是一个大 [[MOC]] 或叫根 MOC，是本库的所有 MOC 的 MOC。
+> 这个是一个大 [[MOC]] 或叫根 MOC，是本库的所有 MOC 的 MOC。现在我还没想清楚，所以是边实践边改动。
 
 ## 初来乍到，随意走走
 

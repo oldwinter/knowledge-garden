@@ -1,9 +1,10 @@
 ---
 date created: 2022-06-07
-date modified: 2022-07-20
+date modified: 2022-07-27
 mindmap-plugin: basic
-tags: TOC
+tags: TOC todo/持续迭代
 ---
+> 尝试定期将笔记库局部内容结构化，结构化的过程中，会有新的体会。
 
 # TOCs
 

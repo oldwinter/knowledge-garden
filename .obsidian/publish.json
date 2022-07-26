@@ -2,9 +2,17 @@
   "siteId": "d8119a5a885e96c89dc22dbc94c9930d",
   "host": "publish-01.obsidian.md",
   "included": [
-    "/"
+    "/",
+    "Atlas",
+    "Calendar",
+    "Cards",
+    "Extras",
+    "Sources",
+    "Spaces",
+    "☘️ 花园导览 🍀"
   ],
   "excluded": [
-    "Spaces/Work/Areas/个人职业生涯"
+    "Spaces/Work/Areas/个人职业生涯",
+    "Spaces/2-Area/个人职业生涯"
   ]
 }
