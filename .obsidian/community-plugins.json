@@ -27,5 +27,6 @@
   "simpread",
   "metadata-menu",
   "obsidian-map-view",
-  "pane-relief"
+  "pane-relief",
+  "obsidian-local-rest-api"
 ]
