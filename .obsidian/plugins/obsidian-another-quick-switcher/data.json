@@ -1,5 +1,5 @@
 {
-  "searchFromHeaders": false,
+  "searchFromHeaders": true,
   "searchByLinks": false,
   "searchDelayMilliSeconds": 0,
   "showDirectory": true,
