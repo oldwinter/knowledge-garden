@@ -1,16 +1,80 @@
 {
   "recentFiles": [
     {
-      "basename": "gitignore 语法",
-      "path": "Calendar/每日日志/gitignore 语法.md"
+      "basename": "图片保存：图床or本地",
+      "path": "Extras/图片保存：图床or本地.md"
+    },
+    {
+      "basename": "2022-07-10",
+      "path": "Calendar/每日日志/2022-07-10.md"
+    },
+    {
+      "basename": "+ About Extras",
+      "path": "Extras/+ About Extras.md"
+    },
+    {
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "如何戒掉玩手机",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何戒掉玩手机.md"
+    },
+    {
+      "basename": "利用逆向思维，使自己成为一个真正自律的人",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md"
+    },
+    {
+      "basename": "所处物理环境对学习和工作效率影响极大",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/所处物理环境对学习和工作效率影响极大.md"
+    },
+    {
+      "basename": "如何克服拖延症",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何克服拖延症.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
     },
     {
       "basename": "11-.gitignore 文件语法和常见写法",
       "path": "Sources/SimpRead/11-.gitignore 文件语法和常见写法.md"
     },
     {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
+      "basename": "10-对钉钉的误解",
+      "path": "Sources/SimpRead/10-对钉钉的误解.md"
+    },
+    {
+      "basename": "10-对钉钉的误解@annote",
+      "path": "Sources/SimpRead/10-对钉钉的误解@annote.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "5-如何构建笔记系统 - 实际操作篇@annote",
+      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇@annote.md"
+    },
+    {
+      "basename": "5-如何构建笔记系统 - 实际操作篇",
+      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇.md"
+    },
+    {
+      "basename": "6-如何建立数字花园？ - Effie Blog",
+      "path": "Sources/SimpRead/6-如何建立数字花园？ - Effie Blog.md"
+    },
+    {
+      "basename": "8-爆肝 2 个月，写了一款组件库，欢迎体验👏@annote",
+      "path": "Sources/SimpRead/8-爆肝 2 个月，写了一款组件库，欢迎体验👏@annote.md"
+    },
+    {
+      "basename": "gitignore 语法",
+      "path": "Calendar/每日日志/gitignore 语法.md"
     },
     {
       "basename": "2022-07-27",
@@ -47,10 +111,6 @@
     {
       "basename": "👬🏻 别的数字花园收录",
       "path": "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md"
-    },
-    {
-      "basename": "+ About Extras",
-      "path": "Extras/+ About Extras.md"
     },
     {
       "basename": "文章发布工作流梳理",
@@ -139,66 +199,6 @@
     {
       "basename": "本库的设计哲学",
       "path": "Cards/永久笔记/本库的设计哲学.md"
-    },
-    {
-      "basename": "🏗 本库路线图",
-      "path": "☘️ 花园导览 🍀/🏗 本库路线图.md"
-    },
-    {
-      "basename": "📩 订阅newsletter",
-      "path": "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
-    },
-    {
-      "basename": "🏷 本库标签",
-      "path": "☘️ 花园导览 🍀/其他/🏷 本库标签.md"
-    },
-    {
-      "basename": "🎥 我的PPT",
-      "path": "☘️ 花园导览 🍀/其他/🎥 我的PPT.md"
-    },
-    {
-      "basename": "AboutTheGarden",
-      "path": "AboutTheGarden.md"
-    },
-    {
-      "basename": "《像我这样的人》",
-      "path": "Sources/Musics/《像我这样的人》.md"
-    },
-    {
-      "basename": "使用简悦对web文章进行渐进式总结",
-      "path": "Cards/永久笔记/使用简悦对web文章进行渐进式总结.md"
-    },
-    {
-      "basename": "obsidian如何做短课程笔记",
-      "path": "Cards/原子知识库/obsidian如何做短课程笔记.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "+ Index for Spaces",
-      "path": "Spaces/+ Index for Spaces.md"
-    },
-    {
-      "basename": "个人简介",
-      "path": "Cards/永久笔记/个人简介.md"
-    },
-    {
-      "basename": "ACCESS 笔记组织法",
-      "path": "Cards/永久笔记/ACCESS 笔记组织法.md"
-    },
-    {
-      "basename": "ACCESS文件夹索引的索引",
-      "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
-    },
-    {
-      "basename": "ACCESS文件夹说明的索引",
-      "path": "Atlas/Scopes/ACCESS文件夹说明的索引.md"
-    },
-    {
-      "basename": "混合笔记法",
-      "path": "Cards/永久笔记/混合笔记法.md"
     }
   ],
   "omittedPaths": [
