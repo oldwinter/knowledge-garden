@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "AboutTheGarden",
+      "path": "AboutTheGarden.md"
+    },
+    {
+      "basename": "HOMEPAGE",
+      "path": "HOMEPAGE.md"
+    },
+    {
       "basename": "图片保存：图床or本地",
       "path": "Extras/图片保存：图床or本地.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "obsidian publish 发布 主题定制",
       "path": "Cards/永久笔记/obsidian publish 发布 主题定制.md"
-    },
-    {
-      "basename": "obsidian入门路线及资源推荐",
-      "path": "Cards/永久笔记/obsidian入门路线及资源推荐.md"
-    },
-    {
-      "basename": "本库的设计哲学",
-      "path": "Cards/永久笔记/本库的设计哲学.md"
     }
   ],
   "omittedPaths": [
