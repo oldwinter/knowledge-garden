@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "🗜 效率工具",
+      "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
+    },
+    {
       "basename": "AboutTheGarden",
       "path": "AboutTheGarden.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "本库使用的主题及原因",
       "path": "Cards/永久笔记/本库使用的主题及原因.md"
-    },
-    {
-      "basename": "obsidian publish 发布 主题定制",
-      "path": "Cards/永久笔记/obsidian publish 发布 主题定制.md"
     }
   ],
   "omittedPaths": [
