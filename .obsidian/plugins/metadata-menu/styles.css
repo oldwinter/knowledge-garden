@@ -145,6 +145,37 @@
     margin-bottom: 20px;
 }
 
+.metadata-menu-setting-item-info-type{
+    border-radius: 12px;
+    padding: 1px 12px 3px 12px;
+    color: white;
+    margin-left: 6px;
+}
+
+.metadata-menu-setting-item-info-type.cycle{
+    background-color: #8ec07c;
+}
+
+.metadata-menu-setting-item-info-type.multi{
+    background-color: #d65d0e;
+}
+
+.metadata-menu-setting-item-info-type.boolean{
+    background-color: #076678;
+}
+
+.metadata-menu-setting-item-info-type.single{
+    background-color: #5e81ac;
+}
+
+.metadata-menu-setting-section-header{
+    margin-bottom: 0;
+}
+
+.metadata-menu-setting-section-desc{
+    margin-bottom: 1.33em;
+}
+
 /* dataview fields Styling */
 
 .metadata-menu-dv-field-button {
