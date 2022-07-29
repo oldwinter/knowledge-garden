@@ -30,6 +30,12 @@
       "icon": "book",
       "name": "Weread Plugin: Sync Weread Notes",
       "mode": "any"
+    },
+    {
+      "id": "daily-notes",
+      "icon": "calendar-glyph",
+      "name": "日记: 打开/创建今天的日记",
+      "mode": "any"
     }
   ],
   "statusBar": [],
