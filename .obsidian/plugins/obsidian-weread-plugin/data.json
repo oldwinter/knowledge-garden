@@ -6,19 +6,19 @@
     },
     {
       "name": "wr_vid",
-      "value": "10500316"
+      "value": ""
     },
     {
       "name": "wr_skey",
-      "value": "sGUQ30hH"
+      "value": ""
     },
     {
       "name": "wr_pf",
-      "value": "0"
+      "value": ""
     },
     {
       "name": "wr_rt",
-      "value": "web@OubpkKhIYMAX19e11JL_WL"
+      "value": ""
     },
     {
       "name": "wr_localvid",
@@ -42,7 +42,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1658508299023,
+  "lastCookieTime": 1659174365202,
   "isCookieValid": true,
   "user": "拉不动的冬不拉",
   "userVid": "10500316",
