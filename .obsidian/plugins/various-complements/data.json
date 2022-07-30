@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 35,
-          "lastUpdated": 1658302290965
+          "count": 37,
+          "lastUpdated": 1659169632861
         },
         "internalLink": {
           "count": 4,
@@ -95,14 +95,6 @@
         }
       }
     },
-    "frontdata": {
-      "frontdata": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1656597573471
-        }
-      }
-    },
     "excalidraw": {
       "excalidraw": {
         "internalLink": {
@@ -143,78 +135,6 @@
         }
       }
     },
-    "数字花园": {
-      "数字花园": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1656605611666
-        }
-      }
-    },
-    "播客": {
-      "播客": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1656431376842
-        }
-      }
-    },
-    "公众号": {
-      "公众号": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1656431387162
-        }
-      }
-    },
-    "维护": {
-      "维护": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1656432694909
-        }
-      }
-    },
-    "一般": {
-      "一般": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1656432735612
-        }
-      }
-    },
-    "路径依赖": {
-      "路径依赖": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656508438857
-        }
-      }
-    },
-    "co-lol": {
-      "co-lol": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1656577955822
-        }
-      }
-    },
-    "co-abstract": {
-      "co-abstract": {
-        "customDictionary": {
-          "count": 6,
-          "lastUpdated": 1656578434926
-        }
-      }
-    },
-    "个人知识笔记系统": {
-      "个人知识笔记系统": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656594539417
-        }
-      }
-    },
     "notion-like": {
       "notion-like": {
         "currentVault": {
@@ -228,30 +148,6 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1656864266636
-        }
-      }
-    },
-    "自下而上": {
-      "自下而上": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656597275849
-        }
-      }
-    },
-    "advanced-url": {
-      "advanced-url": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656607053906
-        }
-      }
-    },
-    "2022-07-01": {
-      "2022-07-01": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656607077230
         }
       }
     },
@@ -960,6 +856,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659103720114
+        }
+      }
+    },
+    "review": {
+      "review": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1659169350408
         }
       }
     }

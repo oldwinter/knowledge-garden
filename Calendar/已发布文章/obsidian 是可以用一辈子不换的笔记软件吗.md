@@ -3,12 +3,14 @@ aliases:
 content-type: notes
 date: 2022-06-10
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-07-30
 feed: show
 id: e0754685-caf5-429c-bc8c-b05cd5356ea4
 published: true
 tags: article/done
 ---
+
+>可以访问此文的双链版本，获得完整阅读体验：[obsidian 是可以用一辈子不换的笔记软件吗 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/obsidian+%E6%98%AF%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%B8%80%E8%BE%88%E5%AD%90%E4%B8%8D%E6%8D%A2%E7%9A%84%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E5%90%97)
 
 ## 我是哪根葱
 
@@ -134,6 +136,7 @@ tags: article/done
 	- [[人人在吹的思维导图到底有什么用？]]
 	- [[我那用 txt 做笔记的室友，成就却击败 99% 的人]]
 	- [[我那年薪百万的主管如何使用 notion]]
-	  
 
-	  notion 上的链接: [Obsidian 是可以用一辈子不换的笔记软件吗 (notion.site)](https://oldwinter.notion.site/Obsidian-f07ea05db87b4ac69829c7b0485aa0e4)
+## 写在最后
+
+我在践行obsidian笔记库全量开源的想法（代码能力不够，笔记来凑😂），欢迎捧场来赏赐1个star⭐️：[GitHub - oldwinter/knowledge-garden: 真实袒露的第二大脑 second brain，未经美化的数字花园 digital garden](https://github.com/oldwinter/knowledge-garden)
