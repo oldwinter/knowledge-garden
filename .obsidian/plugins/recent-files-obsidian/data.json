@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "个人简历",
+      "path": "Spaces/2-Area/个人职业生涯/个人简历.md"
+    },
+    {
+      "basename": "个人简介",
+      "path": "Cards/永久笔记/个人简介.md"
+    },
+    {
+      "basename": "城市与旅行",
+      "path": "Atlas/MOCs/城市与旅行.md"
+    },
+    {
+      "basename": "🏹 已发布长文",
+      "path": "☘️ 花园导览 🍀/🏹 已发布长文.md"
+    },
+    {
+      "basename": "我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新",
+      "path": "Calendar/已发布文章/我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新.md"
+    },
+    {
+      "basename": "我的标签使用",
+      "path": "Cards/永久笔记/我的标签使用.md"
+    },
+    {
+      "basename": "问题管理",
+      "path": "Cards/永久笔记/问题管理.md"
+    },
+    {
+      "basename": "电影笔记",
+      "path": "Atlas/MOCs/电影笔记.md"
+    },
+    {
+      "basename": "+ Index for Spaces",
+      "path": "Spaces/+ Index for Spaces.md"
+    },
+    {
+      "basename": "+ About Spaces",
+      "path": "Spaces/+ About Spaces.md"
+    },
+    {
+      "basename": "2022-03-11",
+      "path": "Calendar/每日日志/2022-03-11.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
       "basename": "2022-08-01",
       "path": "Calendar/每日日志/2022-08-01.md"
     },
@@ -9,196 +57,148 @@
       "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南.md"
     },
     {
-      "basename": "22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南@annote",
-      "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南@annote.md"
+      "basename": "22-简悦 +Logseq 个人知识库搭建 | 从零开始完全指南@annote",
+      "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 | 从零开始完全指南@annote.md"
     },
     {
-      "basename": "电视剧笔记模板",
-      "path": "Extras/Templates/知识学习模板/电视剧笔记模板.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
-      "basename": "电影笔记模板",
-      "path": "Extras/Templates/知识学习模板/电影笔记模板.md"
+      "basename": "🧰 本库使用指南",
+      "path": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
     },
     {
-      "basename": "视频笔记模板",
-      "path": "Extras/Templates/知识学习模板/视频笔记模板.md"
+      "basename": "🆕 最近更新",
+      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     },
     {
-      "basename": "康奈尔笔记法模板",
-      "path": "Extras/Templates/知识学习模板/康奈尔笔记法模板.md"
+      "basename": "+ Index for Cards",
+      "path": "Cards/+ Index for Cards.md"
     },
     {
-      "basename": "回村3天，二舅治好了我的精神内耗 - 视频笔记",
-      "path": "Sources/Videos/回村3天，二舅治好了我的精神内耗 - 视频笔记.md"
+      "basename": "+ Index for Extras",
+      "path": "Extras/+ Index for Extras.md"
     },
     {
-      "basename": "通过飞书妙记识别语音和视频的内容",
-      "path": "Sources/Videos/通过飞书妙记识别语音和视频的内容.md"
+      "basename": "+ About Extras",
+      "path": "Extras/+ About Extras.md"
     },
     {
-      "basename": "storytelling",
-      "path": "Sources/Videos/视频笔记/storytelling.md"
+      "basename": "+ Index for Sources",
+      "path": "Sources/+ Index for Sources.md"
     },
     {
-      "basename": "视频笔记-youtube",
-      "path": "Sources/Videos/视频笔记/视频笔记-youtube.md"
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
     },
     {
-      "basename": "视频笔记-【罗翔】我们为什么要读书？",
-      "path": "Sources/Videos/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
+      "basename": "+ About Calendar",
+      "path": "Calendar/+ About Calendar.md"
     },
     {
-      "basename": "6-如何建立数字花园？ - Effie Blog",
-      "path": "Sources/SimpRead/6-如何建立数字花园？ - Effie Blog.md"
+      "basename": "+ Index for Calendar",
+      "path": "Calendar/+ Index for Calendar.md"
     },
     {
-      "basename": "周记模板",
-      "path": "Extras/Templates/周记模板.md"
+      "basename": "+ Index for Atlases",
+      "path": "Atlas/+ Index for Atlases.md"
     },
     {
-      "basename": "tp_学习测试",
-      "path": "Extras/Templates/tp_学习测试.md"
+      "basename": "+ About Atlas",
+      "path": "Atlas/+ About Atlas.md"
     },
     {
-      "basename": "月度模板",
-      "path": "Extras/Templates/月度模板.md"
+      "basename": "EXTERNAL",
+      "path": "Atlas/Logs/EXTERNAL.md"
     },
     {
-      "basename": "日记模板",
-      "path": "Extras/Templates/日记模板.md"
+      "basename": "数字花园连通性检测",
+      "path": "Atlas/Logs/数字花园连通性检测.md"
     },
     {
-      "basename": "模板来源",
-      "path": "Extras/Templates/模板来源.md"
+      "basename": "每周写工作周报就精疲力尽，因此暂时不在个人笔记库做每周回顾",
+      "path": "Calendar/每周回顾/每周写工作周报就精疲力尽，因此暂时不在个人笔记库做每周回顾.md"
     },
     {
-      "basename": "领域入门模板",
-      "path": "Extras/Templates/领域入门模板.md"
+      "basename": "从一张卡片开始积累知识的复利",
+      "path": "Extras/PDF/从一张卡片开始积累知识的复利.pdf"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - 图",
+      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
+    },
+    {
+      "basename": "101_card_03.jpeg",
+      "path": "Extras/Media/Images/101_card_03.jpeg.jpg"
+    },
+    {
+      "basename": "发文章-前言模板",
+      "path": "Extras/Templates/发文章-前言模板.md"
+    },
+    {
+      "basename": "发文章-写在最后模板",
+      "path": "Extras/Templates/发文章-写在最后模板.md"
     },
     {
       "basename": "更新日志模板",
       "path": "Extras/Templates/更新日志模板.md"
     },
     {
-      "basename": "会议纪要模板",
-      "path": "Extras/Templates/会议相关模板/会议纪要模板.md"
+      "basename": "笔记系统的定义，目的和应用场景",
+      "path": "Cards/永久笔记/笔记系统的定义，目的和应用场景.md"
     },
     {
-      "basename": "六顶思考帽模板",
-      "path": "Extras/Templates/思维思考模板/六顶思考帽模板.md"
+      "basename": "+ About Cards",
+      "path": "Cards/+ About Cards.md"
     },
     {
-      "basename": "如何告别伪学霸和学酥状态",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+      "basename": "第一性原理",
+      "path": "Cards/永久笔记/第一性原理.md"
     },
     {
-      "basename": "道德许可效应",
-      "path": "Cards/永久笔记/道德许可效应.md"
+      "basename": "@东野圭吾",
+      "path": "Cards/永久笔记/@东野圭吾.md"
     },
     {
-      "basename": "为何要写卡片",
-      "path": "Sources/Articles/flomo101阅读笔记/为何要写卡片.md"
+      "basename": "给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》",
+      "path": "Cards/永久笔记/给岁月以文明，而不是给文明以岁月。--刘慈欣《三体》.md"
     },
     {
-      "basename": "19-年度征文 | 我的效率系统三原则",
-      "path": "Sources/SimpRead/19-年度征文 | 我的效率系统三原则.md"
+      "basename": "大五人格理论",
+      "path": "Cards/永久笔记/大五人格理论.md"
     },
     {
-      "basename": "19-年度征文 | 我的效率系统三原则@annote",
-      "path": "Sources/SimpRead/19-年度征文 | 我的效率系统三原则@annote.md"
+      "basename": "拔出萝卜带出泥",
+      "path": "Cards/永久笔记/拔出萝卜带出泥.md"
     },
     {
-      "basename": "20-两步打造适合自己的笔记系统，简单又高效@annote",
-      "path": "Sources/SimpRead/20-两步打造适合自己的笔记系统，简单又高效@annote.md"
+      "basename": "降维打击",
+      "path": "Cards/永久笔记/降维打击.md"
     },
     {
-      "basename": "20-两步打造适合自己的笔记系统，简单又高效",
-      "path": "Sources/SimpRead/20-两步打造适合自己的笔记系统，简单又高效.md"
+      "basename": "价值序列",
+      "path": "Cards/永久笔记/价值序列.md"
     },
     {
-      "basename": "21-作为读者，我们为什么还需要 Newsletter@annote",
-      "path": "Sources/SimpRead/21-作为读者，我们为什么还需要 Newsletter@annote.md"
+      "basename": "护城河",
+      "path": "Cards/永久笔记/护城河.md"
     },
     {
-      "basename": "21-作为读者，我们为什么还需要 Newsletter",
-      "path": "Sources/SimpRead/21-作为读者，我们为什么还需要 Newsletter.md"
+      "basename": "果盘先生",
+      "path": "Cards/永久笔记/果盘先生.md"
     },
     {
-      "basename": "18-项目笔记很重要，于是我用「链接」让它成为笔记系统中枢@annote",
-      "path": "Sources/SimpRead/18-项目笔记很重要，于是我用「链接」让它成为笔记系统中枢@annote.md"
+      "basename": "工具理性与价值理性",
+      "path": "Cards/永久笔记/工具理性与价值理性.md"
     },
     {
-      "basename": "笔记系统的几种笔记类型",
-      "path": "Calendar/每日日志/笔记系统的几种笔记类型.md"
+      "basename": "非虚构类，且非专业性",
+      "path": "Cards/永久笔记/非虚构类，且非专业性.md"
     },
     {
-      "basename": "2022-07-31",
-      "path": "Calendar/每日日志/2022-07-31.md"
-    },
-    {
-      "basename": "2022-07-25",
-      "path": "Calendar/每日日志/2022-07-25.md"
-    },
-    {
-      "basename": "如何调试鼠标hover后才出现的界面元素",
-      "path": "Calendar/每日日志/如何调试鼠标hover后才出现的界面元素.md"
-    },
-    {
-      "basename": "2022-07-24",
-      "path": "Calendar/每日日志/2022-07-24.md"
-    },
-    {
-      "basename": "2022-07-26",
-      "path": "Calendar/每日日志/2022-07-26.md"
-    },
-    {
-      "basename": "2022-07-27",
-      "path": "Calendar/每日日志/2022-07-27.md"
-    },
-    {
-      "basename": "2022-07-28",
-      "path": "Calendar/每日日志/2022-07-28.md"
-    },
-    {
-      "basename": "2022-07-29",
-      "path": "Calendar/每日日志/2022-07-29.md"
-    },
-    {
-      "basename": "2022-07-30",
-      "path": "Calendar/每日日志/2022-07-30.md"
-    },
-    {
-      "basename": "写作工具箱",
-      "path": "Calendar/每日日志/写作工具箱.md"
-    },
-    {
-      "basename": "内卷",
-      "path": "Cards/原子知识库/单词库&概念库/内卷.md"
-    },
-    {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
-    },
-    {
-      "basename": "Untitled",
-      "path": "Extras/Media/Untitled.jpg"
-    },
-    {
-      "basename": "Untitled",
-      "path": "Extras/Media/Untitled.png"
-    },
-    {
-      "basename": "Pasted image 20220723182628",
-      "path": "Extras/Media/Pasted image 20220723182628.png"
-    },
-    {
-      "basename": "Pasted Image 20220715040635_933",
-      "path": "Extras/Media/Pasted Image 20220715040635_933.jpg"
-    },
-    {
-      "basename": "luhmann",
-      "path": "Extras/Media/luhmann.png"
+      "basename": "MBTI性格分析",
+      "path": "Cards/永久笔记/MBTI性格分析.md"
     }
   ],
   "omittedPaths": [

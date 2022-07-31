@@ -1,0 +1,8 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "LICENSE",
+    "cedict_ts.u8",
+    "logseq"
+  ]
+}

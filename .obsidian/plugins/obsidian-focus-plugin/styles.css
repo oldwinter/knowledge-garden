@@ -1,0 +1,41 @@
+/* @settings
+
+name: Focus and Highlight
+id: focus-plugin-css-options
+settings:
+    - 
+        id: focus-plugin-opacity
+        title: Dim Opacity
+        type: variable-number-slider
+        default: 0.1
+        min: 0
+        max: 1
+        step: 0.01
+    - 
+        id: focus-plugin-speed
+        title: Dim Speed (sec)
+        type: variable-number
+        default: 0.5
+
+*/
+
+body.focus-plugin-enabled .focus-plugin-dimmed {
+    opacity: var(--focus-plugin-opacity, 0.1);
+}
+
+body.focus-plugin-enabled .focus-plugin-focus-animation {
+    animation: focus-plugin-keyframes calc(var(--focus-plugin-speed, 0.5) * 1s) both ease-in-out;
+}
+
+body.focus-plugin-enabled .focus-plugin-dim-animation {
+    animation: focus-plugin-keyframes calc(var(--focus-plugin-speed, 0.5) * 1s) reverse both ease-in-out;
+}
+
+@keyframes focus-plugin-keyframes {
+    0% {
+        opacity: var(--focus-plugin-opacity, 0.1);
+    }
+    100% {
+        opacity: 1;
+    }
+}

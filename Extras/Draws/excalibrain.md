@@ -16,7 +16,7 @@ tags: [excalidraw]
 
 [[building your second brain读书笔记 - CODE方法]] ^KSkFq7Gg
 
-[[Cards/原子知识库/方法库/RIA阅读法.md]] ^8PiHYCBi
+[[RIA阅读法]] ^8PiHYCBi
 
 [[Sources/Books/读书笔记/虚构类读物/《三体》.md]] ^E2wNv7P7
 
