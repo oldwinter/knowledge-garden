@@ -58,8 +58,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 8,
-          "lastUpdated": 1658836658511
+          "count": 9,
+          "lastUpdated": 1659201421380
         }
       }
     },
@@ -654,8 +654,8 @@
     "raycast": {
       "raycast": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658580773871
+          "count": 2,
+          "lastUpdated": 1659201325575
         }
       }
     },
@@ -872,6 +872,14 @@
         "currentVault": {
           "count": 2,
           "lastUpdated": 1659182942998
+        }
+      }
+    },
+    "notion": {
+      "notion": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659201430519
         }
       }
     }
