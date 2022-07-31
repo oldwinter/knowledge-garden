@@ -1,8 +1,148 @@
 {
   "recentFiles": [
     {
+      "basename": "2022-08-01",
+      "path": "Calendar/每日日志/2022-08-01.md"
+    },
+    {
+      "basename": "22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南",
+      "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南.md"
+    },
+    {
+      "basename": "22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南@annote",
+      "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 - 从零开始完全指南@annote.md"
+    },
+    {
+      "basename": "电视剧笔记模板",
+      "path": "Extras/Templates/知识学习模板/电视剧笔记模板.md"
+    },
+    {
+      "basename": "电影笔记模板",
+      "path": "Extras/Templates/知识学习模板/电影笔记模板.md"
+    },
+    {
+      "basename": "视频笔记模板",
+      "path": "Extras/Templates/知识学习模板/视频笔记模板.md"
+    },
+    {
+      "basename": "康奈尔笔记法模板",
+      "path": "Extras/Templates/知识学习模板/康奈尔笔记法模板.md"
+    },
+    {
+      "basename": "回村3天，二舅治好了我的精神内耗 - 视频笔记",
+      "path": "Sources/Videos/回村3天，二舅治好了我的精神内耗 - 视频笔记.md"
+    },
+    {
+      "basename": "通过飞书妙记识别语音和视频的内容",
+      "path": "Sources/Videos/通过飞书妙记识别语音和视频的内容.md"
+    },
+    {
+      "basename": "storytelling",
+      "path": "Sources/Videos/视频笔记/storytelling.md"
+    },
+    {
+      "basename": "视频笔记-youtube",
+      "path": "Sources/Videos/视频笔记/视频笔记-youtube.md"
+    },
+    {
+      "basename": "视频笔记-【罗翔】我们为什么要读书？",
+      "path": "Sources/Videos/视频笔记/视频笔记-【罗翔】我们为什么要读书？.md"
+    },
+    {
+      "basename": "6-如何建立数字花园？ - Effie Blog",
+      "path": "Sources/SimpRead/6-如何建立数字花园？ - Effie Blog.md"
+    },
+    {
+      "basename": "周记模板",
+      "path": "Extras/Templates/周记模板.md"
+    },
+    {
+      "basename": "tp_学习测试",
+      "path": "Extras/Templates/tp_学习测试.md"
+    },
+    {
+      "basename": "月度模板",
+      "path": "Extras/Templates/月度模板.md"
+    },
+    {
+      "basename": "日记模板",
+      "path": "Extras/Templates/日记模板.md"
+    },
+    {
+      "basename": "模板来源",
+      "path": "Extras/Templates/模板来源.md"
+    },
+    {
+      "basename": "领域入门模板",
+      "path": "Extras/Templates/领域入门模板.md"
+    },
+    {
+      "basename": "更新日志模板",
+      "path": "Extras/Templates/更新日志模板.md"
+    },
+    {
+      "basename": "会议纪要模板",
+      "path": "Extras/Templates/会议相关模板/会议纪要模板.md"
+    },
+    {
+      "basename": "六顶思考帽模板",
+      "path": "Extras/Templates/思维思考模板/六顶思考帽模板.md"
+    },
+    {
+      "basename": "如何告别伪学霸和学酥状态",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md"
+    },
+    {
+      "basename": "道德许可效应",
+      "path": "Cards/永久笔记/道德许可效应.md"
+    },
+    {
+      "basename": "为何要写卡片",
+      "path": "Sources/Articles/flomo101阅读笔记/为何要写卡片.md"
+    },
+    {
+      "basename": "19-年度征文 | 我的效率系统三原则",
+      "path": "Sources/SimpRead/19-年度征文 | 我的效率系统三原则.md"
+    },
+    {
+      "basename": "19-年度征文 | 我的效率系统三原则@annote",
+      "path": "Sources/SimpRead/19-年度征文 | 我的效率系统三原则@annote.md"
+    },
+    {
+      "basename": "20-两步打造适合自己的笔记系统，简单又高效@annote",
+      "path": "Sources/SimpRead/20-两步打造适合自己的笔记系统，简单又高效@annote.md"
+    },
+    {
+      "basename": "20-两步打造适合自己的笔记系统，简单又高效",
+      "path": "Sources/SimpRead/20-两步打造适合自己的笔记系统，简单又高效.md"
+    },
+    {
+      "basename": "21-作为读者，我们为什么还需要 Newsletter@annote",
+      "path": "Sources/SimpRead/21-作为读者，我们为什么还需要 Newsletter@annote.md"
+    },
+    {
+      "basename": "21-作为读者，我们为什么还需要 Newsletter",
+      "path": "Sources/SimpRead/21-作为读者，我们为什么还需要 Newsletter.md"
+    },
+    {
+      "basename": "18-项目笔记很重要，于是我用「链接」让它成为笔记系统中枢@annote",
+      "path": "Sources/SimpRead/18-项目笔记很重要，于是我用「链接」让它成为笔记系统中枢@annote.md"
+    },
+    {
+      "basename": "笔记系统的几种笔记类型",
+      "path": "Calendar/每日日志/笔记系统的几种笔记类型.md"
+    },
+    {
+      "basename": "2022-07-31",
+      "path": "Calendar/每日日志/2022-07-31.md"
+    },
+    {
       "basename": "2022-07-25",
       "path": "Calendar/每日日志/2022-07-25.md"
+    },
+    {
+      "basename": "如何调试鼠标hover后才出现的界面元素",
+      "path": "Calendar/每日日志/如何调试鼠标hover后才出现的界面元素.md"
     },
     {
       "basename": "2022-07-24",
@@ -27,10 +167,6 @@
     {
       "basename": "2022-07-30",
       "path": "Calendar/每日日志/2022-07-30.md"
-    },
-    {
-      "basename": "2022-07-31",
-      "path": "Calendar/每日日志/2022-07-31.md"
     },
     {
       "basename": "写作工具箱",
@@ -63,142 +199,6 @@
     {
       "basename": "luhmann",
       "path": "Extras/Media/luhmann.png"
-    },
-    {
-      "basename": "https!flomo-resource.oss-cn-shanghai.aliyuncs.com!101!image-65.png",
-      "path": "Extras/Media/https!flomo-resource.oss-cn-shanghai.aliyuncs.com!101!image-65.png.jpg"
-    },
-    {
-      "basename": "来源：EfratFurst",
-      "path": "Extras/Media/来源：EfratFurst.jpg"
-    },
-    {
-      "basename": "如何设计笔记的回顾机制",
-      "path": "Sources/Articles/flomo101阅读笔记/如何设计笔记的回顾机制.md"
-    },
-    {
-      "basename": "思维方式目录 - flomo101",
-      "path": "Sources/Articles/flomo101阅读笔记/思维方式目录 - flomo101.md"
-    },
-    {
-      "basename": "输出究竟是什么",
-      "path": "Sources/Articles/flomo101阅读笔记/输出究竟是什么.md"
-    },
-    {
-      "basename": "笔记的误区",
-      "path": "Sources/Articles/flomo101阅读笔记/笔记的误区.md"
-    },
-    {
-      "basename": "为何要写卡片",
-      "path": "Sources/Articles/flomo101阅读笔记/为何要写卡片.md"
-    },
-    {
-      "basename": "101_card_01",
-      "path": "Extras/Media/101_card_01.png"
-    },
-    {
-      "basename": "101_card_02.jpeg",
-      "path": "Extras/Media/101_card_02.jpeg.jpg"
-    },
-    {
-      "basename": "101_card_03.jpeg",
-      "path": "Extras/Media/101_card_03.jpeg.jpg"
-    },
-    {
-      "basename": "101_card_04.jpeg",
-      "path": "Extras/Media/101_card_04.jpeg.jpg"
-    },
-    {
-      "basename": "101_card_05.jpeg",
-      "path": "Extras/Media/101_card_05.jpeg.png"
-    },
-    {
-      "basename": "101_card_06.jpeg",
-      "path": "Extras/Media/101_card_06.jpeg.jpg"
-    },
-    {
-      "basename": "101_card_07.jpeg",
-      "path": "Extras/Media/101_card_07.jpeg.jpg"
-    },
-    {
-      "basename": "101_card_08.jpeg",
-      "path": "Extras/Media/101_card_08.jpeg.jpg"
-    },
-    {
-      "basename": "16-Github 个人主页 README",
-      "path": "Sources/SimpRead/16-Github 个人主页 README.md"
-    },
-    {
-      "basename": "《风起陇西》",
-      "path": "Sources/Movies + TV/电视剧笔记/《风起陇西》.md"
-    },
-    {
-      "basename": "🗜 效率工具",
-      "path": "☘️ 花园导览 🍀/🗜 效率工具.md"
-    },
-    {
-      "basename": "平台+插件",
-      "path": "Spaces/2-Area/人+科技融合专题/平台+插件.md"
-    },
-    {
-      "basename": "🧀 知识管理",
-      "path": "☘️ 花园导览 🍀/🧀 知识管理.md"
-    },
-    {
-      "basename": "5-如何构建笔记系统 - 实际操作篇",
-      "path": "Sources/SimpRead/5-如何构建笔记系统 - 实际操作篇.md"
-    },
-    {
-      "basename": "4-如何构建自己的笔记系统？",
-      "path": "Sources/SimpRead/4-如何构建自己的笔记系统？.md"
-    },
-    {
-      "basename": "6-如何建立数字花园？ - Effie Blog",
-      "path": "Sources/SimpRead/6-如何建立数字花园？ - Effie Blog.md"
-    },
-    {
-      "basename": "15-万门大学倒闭，我想借此聊聊在线课堂怎么才能做下去@annote",
-      "path": "Sources/SimpRead/15-万门大学倒闭，我想借此聊聊在线课堂怎么才能做下去@annote.md"
-    },
-    {
-      "basename": "14-从零开始配置高效 Mac 开发环境",
-      "path": "Sources/SimpRead/14-从零开始配置高效 Mac 开发环境.md"
-    },
-    {
-      "basename": "16-Github 个人主页 README@annote",
-      "path": "Sources/SimpRead/16-Github 个人主页 README@annote.md"
-    },
-    {
-      "basename": "15-万门大学倒闭，我想借此聊聊在线课堂怎么才能做下去",
-      "path": "Sources/SimpRead/15-万门大学倒闭，我想借此聊聊在线课堂怎么才能做下去.md"
-    },
-    {
-      "basename": "12-笔趣阁若被封，网文市场是否会迎来复兴？",
-      "path": "Sources/SimpRead/12-笔趣阁若被封，网文市场是否会迎来复兴？.md"
-    },
-    {
-      "basename": "中文博客排版指南",
-      "path": "Sources/Articles/中文博客排版指南.md"
-    },
-    {
-      "basename": "markdown",
-      "path": "Cards/永久笔记/markdown.md"
-    },
-    {
-      "basename": "GFM - GitHub Flavored Markdown",
-      "path": "Cards/永久笔记/GFM - GitHub Flavored Markdown.md"
-    },
-    {
-      "basename": "phases、snippets与templates",
-      "path": "Calendar/每日日志/phases、snippets与templates.md"
-    },
-    {
-      "basename": "obsidian 是可以用一辈子不换的笔记软件吗",
-      "path": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
-    },
-    {
-      "basename": "🆕 最近更新",
-      "path": "☘️ 花园导览 🍀/🆕 最近更新.md"
     }
   ],
   "omittedPaths": [
