@@ -2,6 +2,9 @@
 date created: 2022-07-22
 date modified: 2022-07-22
 tags: review
+sr-due: 2022-08-05
+sr-interval: 4
+sr-ease: 270
 ---
 up:: [[思维方式目录 - flomo101]]
 ## 我的理解

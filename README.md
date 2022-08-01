@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-25
+date modified: 2022-08-01
 home: true
 tags: readme说明
 ---
@@ -46,7 +46,7 @@ tags: readme说明
 
 ## 找我从诗词歌赋，谈到人生哲学
 
-- cdd2zju@gmail.com 
+- cdd2zju@gmail.com
 - [[个人简介]]
 
 [^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法。

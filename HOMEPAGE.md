@@ -32,4 +32,4 @@ title: HOMEPAGE
 | 看看发布了哪些文章，计划写哪些 | [滴答清单 - 写作计划](ticktick://v1/show?list=写作笔记) |
 | 看看在 obsidian 里还有哪些要迭代的 todo 页面 | [[LATEST#TODO 持续迭代不闭环]] |
 
-![[整个库的统计数据 - dataview]]
+![[整个库的宏观统计数据 - dataview]]
