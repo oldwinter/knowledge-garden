@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "图 2022-08-01",
+      "path": "Extras/Draws/图 2022-08-01.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "+ About Calendar",
+      "path": "Calendar/+ About Calendar.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "数字时代如何更好地工作与生活 - 图",
+      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
+    },
+    {
+      "basename": "ExcaliBrain Snapshot - 🧰 本库使用指南.excalidraw",
+      "path": "Extras/Draws/ExcaliBrain Snapshot - 🧰 本库使用指南.excalidraw.md"
+    },
+    {
       "basename": "个人简历",
       "path": "Spaces/2-Area/个人职业生涯/个人简历.md"
     },
@@ -45,10 +69,6 @@
       "path": "Calendar/每日日志/2022-03-11.md"
     },
     {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
-    },
-    {
       "basename": "2022-08-01",
       "path": "Calendar/每日日志/2022-08-01.md"
     },
@@ -59,10 +79,6 @@
     {
       "basename": "22-简悦 +Logseq 个人知识库搭建 | 从零开始完全指南@annote",
       "path": "Sources/SimpRead/22-简悦 +Logseq 个人知识库搭建 | 从零开始完全指南@annote.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "🧰 本库使用指南",
@@ -93,10 +109,6 @@
       "path": "Sources/+ About Sources.md"
     },
     {
-      "basename": "+ About Calendar",
-      "path": "Calendar/+ About Calendar.md"
-    },
-    {
       "basename": "+ Index for Calendar",
       "path": "Calendar/+ Index for Calendar.md"
     },
@@ -123,10 +135,6 @@
     {
       "basename": "从一张卡片开始积累知识的复利",
       "path": "Extras/PDF/从一张卡片开始积累知识的复利.pdf"
-    },
-    {
-      "basename": "数字时代如何更好地工作与生活 - 图",
-      "path": "Extras/Draws/数字时代如何更好地工作与生活 - 图.md"
     },
     {
       "basename": "101_card_03.jpeg",
@@ -187,18 +195,6 @@
     {
       "basename": "果盘先生",
       "path": "Cards/永久笔记/果盘先生.md"
-    },
-    {
-      "basename": "工具理性与价值理性",
-      "path": "Cards/永久笔记/工具理性与价值理性.md"
-    },
-    {
-      "basename": "非虚构类，且非专业性",
-      "path": "Cards/永久笔记/非虚构类，且非专业性.md"
-    },
-    {
-      "basename": "MBTI性格分析",
-      "path": "Cards/永久笔记/MBTI性格分析.md"
     }
   ],
   "omittedPaths": [
