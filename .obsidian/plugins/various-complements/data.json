@@ -1,6 +1,6 @@
 {
   "strategy": "chinese",
-  "matchStrategy": "partial",
+  "matchStrategy": "prefix",
   "maxNumberOfSuggestions": 35,
   "maxNumberOfWordsAsPhrase": 6,
   "minNumberOfCharactersTriggered": 2,
@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 37,
-          "lastUpdated": 1659169632861
+          "count": 38,
+          "lastUpdated": 1659443931966
         },
         "internalLink": {
           "count": 4,
@@ -132,14 +132,6 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1658816167356
-        }
-      }
-    },
-    "2022-07-04": {
-      "2022-07-04": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1656947466220
         }
       }
     },
@@ -486,8 +478,8 @@
     "@Tiago Forte": {
       "@Tiago Forte": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658571658707
+          "count": 3,
+          "lastUpdated": 1659444346439
         }
       }
     },

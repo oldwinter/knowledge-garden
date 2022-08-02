@@ -3,7 +3,7 @@ date created: 2022-06-09
 date modified: 2022-07-14
 ---
 
-[[Obs＃83] 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
+[Obs＃83 多欄式Callouts! 華麗變身成N欄區塊～ - YouTube](https://www.youtube.com/watch?v=sEogbW4UGYo)
 
 MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存庫**.obsidian/snippets**資料夾並在外觀裡啟用此 CSS 片段，就能以下列方法呈現更多變化：
 

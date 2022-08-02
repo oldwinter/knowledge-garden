@@ -7,7 +7,6 @@
   "recent-files-obsidian",
   "obsidian-style-settings",
   "obsidian-weread-plugin",
-  "various-complements",
   "tag-wrangler",
   "supercharged-links-obsidian",
   "obsidian-spaced-repetition",
@@ -32,5 +31,6 @@
   "quick-explorer",
   "obsidian-local-images",
   "obsidian-focus-plugin",
-  "find-unlinked-files"
+  "find-unlinked-files",
+  "various-complements"
 ]

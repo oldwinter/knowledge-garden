@@ -100,7 +100,7 @@ tags: TOC todo/持续迭代
 		 - [[跑步]]
 		 - [[饮食]]
 	  - [[知识管理]]
-		 - [[notion]]
+		 - [[Notion]]
 		 - [[obsidian]]
 		 - [[cubox]]
 	  - [[投资与理财]]

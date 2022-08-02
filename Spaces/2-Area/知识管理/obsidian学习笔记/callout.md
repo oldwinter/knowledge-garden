@@ -1,15 +1,30 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-02
 ---
-> [!PHONE]
-> JJ
 
-## 自带 callout
+## obsidian自带 callout
 
-[Fetching Title#qi59](https://help.obsidian.md/How+to/Use+callouts)
+[Use callouts - Obsidian Help](https://help.obsidian.md/How+to/Use+callouts)
 
 用 co- 前缀，通过 [[various complements]] 变量自动补全插件自动触发。
+
+目前全部的callout字段：
+
+- note
+- abstract, summary, tldr
+- info, todo
+- tip, hint, important
+- success, check, done
+- question, help, faq
+- warning, caution, attention
+- failure, fail, missing
+- danger, error
+- bug
+- example
+- quote, cite
+
+## shimmering主题自带的callout
 
 ### Custom Callouts
 
@@ -45,6 +60,9 @@ The Sidenote Callout width (宽度) and outdention is customizable (定制)
 ```
 > [!GOAL]
 ```
+
+> [!PHONE]
+> JJ
 
 ## 多栏扩展 callout
 
