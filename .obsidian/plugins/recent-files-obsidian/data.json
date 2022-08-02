@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "Roam Research",
+      "path": "Spaces/2-Area/知识管理/Roam Research.md"
+    },
+    {
+      "basename": "中文博客排版指南",
+      "path": "Sources/Articles/中文博客排版指南.md"
+    },
+    {
+      "basename": "2022-07-22",
+      "path": "Calendar/每日日志/2022-07-22.md"
+    },
+    {
+      "basename": "2022-03-12",
+      "path": "Calendar/每日日志/2022-03-12.md"
+    },
+    {
+      "basename": "2022-08-02",
+      "path": "Calendar/每日日志/2022-08-02.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "如何减少对学习的排斥和厌恶心理",
+      "path": "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md"
+    },
+    {
+      "basename": "常用icon",
+      "path": "Cards/永久笔记/常用icon.md"
+    },
+    {
+      "basename": "+ About Sources",
+      "path": "Sources/+ About Sources.md"
+    },
+    {
+      "basename": "remotely save",
+      "path": "Cards/永久笔记/remotely save.md"
+    },
+    {
       "basename": "AboutTheGarden",
       "path": "AboutTheGarden.md"
     },
@@ -11,14 +51,6 @@
     {
       "basename": "mac充电和键盘灯异常 - 重置SMC",
       "path": "Calendar/每日日志/mac充电和键盘灯异常 - 重置SMC.md"
-    },
-    {
-      "basename": "2022-08-02",
-      "path": "Calendar/每日日志/2022-08-02.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "obsidian 不可回避的缺点及其解决方案",
@@ -121,10 +153,6 @@
       "path": "Atlas/Scopes/Index for 已发布文章和草稿.md"
     },
     {
-      "basename": "2022-07-22",
-      "path": "Calendar/每日日志/2022-07-22.md"
-    },
-    {
       "basename": "ACCESS文件夹索引的索引",
       "path": "Atlas/Scopes/ACCESS文件夹索引的索引.md"
     },
@@ -167,38 +195,6 @@
     {
       "basename": "没有完美的分类",
       "path": "Sources/Articles/flomo101阅读笔记/没有完美的分类.md"
-    },
-    {
-      "basename": "如何用 I.A.R.P 规划标签",
-      "path": "Sources/Articles/flomo101阅读笔记/如何用 I.A.R.P 规划标签.md"
-    },
-    {
-      "basename": "输出究竟是什么",
-      "path": "Sources/Articles/flomo101阅读笔记/输出究竟是什么.md"
-    },
-    {
-      "basename": "该积累什么领域知识",
-      "path": "Sources/Articles/flomo101阅读笔记/该积累什么领域知识.md"
-    },
-    {
-      "basename": "学习过程中关于认知加工的双加工理论",
-      "path": "Sources/Courses/如何成为学习高手-高冷冷/学习过程中关于认知加工的双加工理论.md"
-    },
-    {
-      "basename": "为何收藏无用",
-      "path": "Sources/Articles/flomo101阅读笔记/为何收藏无用.md"
-    },
-    {
-      "basename": "笔记的误区",
-      "path": "Sources/Articles/flomo101阅读笔记/笔记的误区.md"
-    },
-    {
-      "basename": "为何知识需要连接",
-      "path": "Sources/Articles/flomo101阅读笔记/为何知识需要连接.md"
-    },
-    {
-      "basename": "为何要写卡片",
-      "path": "Sources/Articles/flomo101阅读笔记/为何要写卡片.md"
     }
   ],
   "omittedPaths": [
