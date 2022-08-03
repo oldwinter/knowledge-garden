@@ -4,7 +4,6 @@
   "table-editor-obsidian",
   "obsidian-auto-link-title",
   "dataview",
-  "recent-files-obsidian",
   "obsidian-style-settings",
   "obsidian-weread-plugin",
   "tag-wrangler",
@@ -20,17 +19,14 @@
   "obsidian-excalidraw-plugin",
   "obsidian-another-quick-switcher",
   "obsidian-advanced-slides",
-  "periodic-notes",
   "cmdr",
-  "obsidian42-brat",
-  "metadata-menu",
-  "obsidian-map-view",
   "pane-relief",
   "obsidian-local-rest-api",
-  "mrj-text-expand",
   "quick-explorer",
   "obsidian-local-images",
   "obsidian-focus-plugin",
   "find-unlinked-files",
-  "various-complements"
+  "various-complements",
+  "excalibrain",
+  "sliding-panes-obsidian"
 ]

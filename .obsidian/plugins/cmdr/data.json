@@ -1,8 +1,15 @@
 {
   "confirmDeletion": false,
-  "showAddCommand": true,
+  "showAddCommand": false,
   "debug": false,
-  "editorMenu": [],
+  "editorMenu": [
+    {
+      "id": "obsidian-linter:lint-file",
+      "icon": "lint-file",
+      "name": "Linter: Lint the current file",
+      "mode": "any"
+    }
+  ],
   "fileMenu": [],
   "leftRibbon": [],
   "rightRibbon": [],
@@ -36,6 +43,12 @@
       "icon": "calendar-glyph",
       "name": "日记: 打开/创建今天的日记",
       "mode": "any"
+    },
+    {
+      "id": "sliding-panes-obsidian:toggle-sliding-panes",
+      "icon": "sidebar",
+      "name": "Sliding Panes (Andy's Mode): Toggle Sliding Panes",
+      "mode": "any"
     }
   ],
   "statusBar": [],
@@ -51,14 +64,25 @@
       "icon": "code-glyph",
       "name": "切换实时阅览/源码模式",
       "mode": "any"
+    },
+    {
+      "id": "app:go-forward",
+      "icon": "right-arrow-with-tail",
+      "name": "前进",
+      "mode": "any"
+    },
+    {
+      "id": "app:go-back",
+      "icon": "left-arrow-with-tail",
+      "name": "返回",
+      "mode": "any"
     }
   ],
   "macros": [],
   "hide": {
     "statusbar": [
       "pane-relief",
-      "backlink",
-      "various-complements"
+      "backlink"
     ],
     "leftRibbon": [
       "复习卡片",

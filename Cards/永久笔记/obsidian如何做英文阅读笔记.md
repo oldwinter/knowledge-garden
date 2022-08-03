@@ -12,7 +12,7 @@ date modified: 2022-07-20
 
 体验过[[marginnote]]、[[books]]、[[微信读书]]和obsidian内置annotator插件。综合下来还是[[marginnote]]最符合需求。
 
-本次实践[[Building a Second Brain 翻译和读书笔记]]，就选用它进行。
+本次实践[[+ Building a Second Brain 翻译和读书笔记]]，就选用它进行。
 
 ## 实践过程记录
 

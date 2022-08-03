@@ -158,5 +158,6 @@
   "customizable-page-header-buttons@@page-header-spacing-mobile": 12,
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
   "shimmering-focus@@primary-accent-light": "primary-accent-light-cyan",
-  "quick-explorer@@qe-obsidian-title": "qe-title-hide"
+  "quick-explorer@@qe-obsidian-title": "qe-title-hide",
+  "focus-plugin-css-options@@focus-plugin-opacity": 0.15
 }

@@ -3,7 +3,7 @@ date created: 2022-07-06
 date modified: 2022-07-14
 ---
 
-up:: [[Building a Second Brain 翻译和读书笔记]]
+up:: [[+ Building a Second Brain 翻译和读书笔记]]
 
 你是否经常想记住一些重要的事情，却发现它不经意间从你的记忆中滑走了？
 

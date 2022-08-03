@@ -1,10 +1,14 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-03
 ---
 > 汇总单向引用了我的其他地方的资源的链接，执行 expand 命令刷新
 
 ## zotero 的资源引用
+
+```query
+zotero://
+```
 
 ```expander
 zotero://
@@ -64,5 +68,3 @@ github.com/oldwinter
 ```
 
 <-->
-
-[^1]: [[微信群公告]]。官方20美元1个月的发布服务地址（太贵了我随时可能不续费😂）：[https://github.com/oldwinter/knowledge-garden](https://github.com/oldwinter/knowledge-garden)

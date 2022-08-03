@@ -1,16 +1,16 @@
 {
   "strategy": "chinese",
   "matchStrategy": "prefix",
-  "maxNumberOfSuggestions": 35,
-  "maxNumberOfWordsAsPhrase": 6,
-  "minNumberOfCharactersTriggered": 2,
+  "maxNumberOfSuggestions": 24,
+  "maxNumberOfWordsAsPhrase": 5,
+  "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
   "complementAutomatically": true,
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^。，：？『",
-  "showMatchStrategy": false,
+  "showMatchStrategy": true,
   "showComplementAutomatically": true,
   "showIndexingStatus": true,
   "descriptionOnSuggestion": "Short",
@@ -848,6 +848,30 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1659364862653
+        }
+      }
+    },
+    "co-bug": {
+      "co-bug": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1659474035351
+        }
+      }
+    },
+    "index索引": {
+      "index索引": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1659495642617
+        }
+      }
+    },
+    "modified": {
+      "modified": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1659497495542
         }
       }
     }

@@ -68,5 +68,14 @@
       ],
       "key": "O"
     }
+  ],
+  "various-complements:show-suggestions": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": " "
+    }
   ]
 }

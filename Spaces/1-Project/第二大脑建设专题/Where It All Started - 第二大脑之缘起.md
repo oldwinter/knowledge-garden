@@ -3,7 +3,7 @@ date created: 2022-07-06
 date modified: 2022-07-14
 ---
 
-up:: [[Building a Second Brain 翻译和读书笔记]]
+up:: [[+ Building a Second Brain 翻译和读书笔记]]
 
 你的头脑是用来产生想法，而不是持有它们。 —David Allen, author of Getting Things Done
 

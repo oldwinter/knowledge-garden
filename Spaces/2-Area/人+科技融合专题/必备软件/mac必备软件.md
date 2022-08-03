@@ -93,6 +93,6 @@ date modified: 2022-07-14
 
 非图形化的必备软件：
 
-[[linux常用命令行]]
+[[+ linux常用命令行]]
 
 [[AppleScript]]

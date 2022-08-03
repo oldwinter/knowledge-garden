@@ -1,0 +1,8 @@
+
+/* 隐藏菜单栏返回和前进按钮，因为使用页面上方的按钮更符合逻辑 */
+.mod-back {
+    display: none;
+}
+.mod-forward {
+    display: none;
+}

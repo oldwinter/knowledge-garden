@@ -5,7 +5,8 @@
     "隐藏文件和文件夹",
     "图片放大",
     "supercharged-links-gen",
-    "隐藏LICENSE文件和logseq文件夹"
+    "隐藏LICENSE文件和logseq文件夹",
+    "菜单栏定制"
   ],
   "theme": "system",
   "baseFontSize": 16,
