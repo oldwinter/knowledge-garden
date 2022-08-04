@@ -12,7 +12,7 @@ tags: [excalidraw]
 ---
 
 # Text Elements
-[[Atlas/MOCs/读书笔记.md]] ^eaAzWesa
+[[+ 读书笔记]] ^eaAzWesa
 
 [[building your second brain读书笔记 - CODE方法]] ^KSkFq7Gg
 
@@ -36,7 +36,7 @@ tags: [excalidraw]
 
 [[Sources/Books/读书笔记/虚构类读物/《白夜行》.md]] ^m5EaaH2d
 
-[[Sources/Books/读书笔记/《置身事内》.md]] ^Um6DRYSw
+[[《置身事内》 - 热门批注]] ^Um6DRYSw
 
 [[Sources/Books/读书笔记/虚构类读物/《解忧杂货店》.md]] ^Ryg7FvpF
 

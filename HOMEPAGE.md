@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-04
 title: HOMEPAGE
 ---
 
@@ -8,9 +8,9 @@ title: HOMEPAGE
 主页其实也是一种 [[模板与套路]]，当我大脑放空，不知道接下来需要做什么的时候，不妨打开这里，找寻一点思路。待整理好[[如何通过obsidian打造自己的第二大脑]]，homepage要改造一下。
 %%
 
-[obsidian 每日笔记](obsidian://advanced-uri?daily=true&mode=append)
+![[+ ACCESS 的文件夹入口汇总]]
 
-[Anki 回顾笔记](obsidian://advanced-uri?vault=knowledge-garden&commandid=obsidian-spaced-repetition%253Asrs-note-review-open-note)
+## 其他场景 待整理 #todo/今天
 
 | 我想要…… | 打开其他软件干点事儿 |
 |:-------------------- |:----------------------------------------------------- |

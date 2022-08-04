@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 38,
-          "lastUpdated": 1659443931966
+          "count": 48,
+          "lastUpdated": 1659626097021
         },
         "internalLink": {
           "count": 4,
@@ -58,8 +58,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 9,
-          "lastUpdated": 1659201421380
+          "count": 10,
+          "lastUpdated": 1659621852139
         }
       }
     },
@@ -74,8 +74,8 @@
     "todo/持续迭代": {
       "todo/持续迭代": {
         "frontMatter": {
-          "count": 5,
-          "lastUpdated": 1658855222080
+          "count": 16,
+          "lastUpdated": 1659623531549
         }
       }
     },
@@ -122,8 +122,8 @@
     "ACCESS 笔记组织法": {
       "ACCESS 笔记组织法": {
         "internalLink": {
-          "count": 3,
-          "lastUpdated": 1658850064991
+          "count": 4,
+          "lastUpdated": 1659623024315
         }
       }
     },
@@ -162,8 +162,8 @@
     "excalibrain": {
       "excalibrain": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657549771328
+          "count": 2,
+          "lastUpdated": 1659626139267
         }
       }
     },
@@ -582,8 +582,8 @@
     "dailynote": {
       "dailynote": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658571881685
+          "count": 2,
+          "lastUpdated": 1659626872070
         }
       }
     },
@@ -806,8 +806,8 @@
     "review": {
       "review": {
         "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1659171030803
+          "count": 3,
+          "lastUpdated": 1659619200390
         }
       }
     },
@@ -904,6 +904,62 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659615653538
+        }
+      }
+    },
+    "TOC": {
+      "TOC": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1659619018740
+        }
+      }
+    },
+    "Sources": {
+      "Sources": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1659622882701
+        }
+      }
+    },
+    "微信读书": {
+      "微信读书": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659620177769
+        }
+      }
+    },
+    "weread plugin": {
+      "weread plugin": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659620192306
+        }
+      }
+    },
+    "zlibrary": {
+      "zlibrary": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659620412311
+        }
+      }
+    },
+    "zoter": {
+      "zoter": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1659621846342
+        }
+      }
+    },
+    "zotero": {
+      "zotero": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659621848677
         }
       }
     }

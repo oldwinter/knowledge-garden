@@ -9,7 +9,7 @@ tags: 视频笔记
 
 开篇问我们是否有听别人讲 ppt，或者自己讲 ppt，台下人瞌睡的经历。
 
-引导出 原因在于差了 [[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 讲故事这个环节。
+引导出 原因在于差了 [[storytelling]] 讲故事这个环节。
 
 [01:16](https://www.bilibili.com/video/BV1hF411t7Tu#t=76.546769)
 
@@ -19,7 +19,7 @@ storytelling 是非常大的概念，可以应用在很多场合。
 
 只讲 sotrytelling 在 presentation 方面的应用。
 
-### [[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 的 3 个方法
+### [[storytelling]] 的 3 个方法
 
 - 第一层次，演讲开始，用故事产生吸引力和画面感 -- 悬疑，数字，反常识等等
 	- [[SCQA]]：背景，冲突，问题，答案。 -- [[《金字塔原理》]]
@@ -47,7 +47,7 @@ storytelling 是非常大的概念，可以应用在很多场合。
 
 同时这一整个过程，也可以套用在我们想吸引别人的任何场合。
 
-[[pages/400 - RESOURCE/原子知识库/方法库/storytelling]] 的 3 个构造方法：
+[[storytelling]] 的 3 个构造方法：
 
 - 非虚构地，运用金字塔原理，把论据，答案放后面说，把背景和结论放前面说
 - 分享个人故事，这应该是最容易的方法了，但就是容易跑偏，太多地提及自己
