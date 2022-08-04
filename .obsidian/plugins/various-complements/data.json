@@ -874,6 +874,38 @@
           "lastUpdated": 1659497495542
         }
       }
+    },
+    "dataview": {
+      "dataview": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659615320038
+        }
+      }
+    },
+    "inline fields": {
+      "inline fields": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659615366418
+        }
+      }
+    },
+    "metadata": {
+      "metadata": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1659615510254
+        }
+      }
+    },
+    "kubernetes": {
+      "kubernetes": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659615653538
+        }
+      }
     }
   }
 }

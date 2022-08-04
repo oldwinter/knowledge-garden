@@ -21,6 +21,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: cpy logseq config file
+        run: cp -rf $GITHUB_WORKSPACE/.github/logseq $GITHUB_WORKSPACE/logseq
       - name: Logseq Publish 🚩
         uses: pengx17/logseq-publish@main
         with:
