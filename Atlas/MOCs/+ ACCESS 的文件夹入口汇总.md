@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-04
-date modified: 2022-08-04
+date modified: 2022-08-05
 tags: MOC, todo/持续迭代
 ---
 
@@ -34,6 +34,8 @@ x:: [[+ ACCESS 的工作流汇总]]
 
 ## Sources
 
+%%固定文件夹，非增长式，所以不用dataview%%
+
 - [[+ 文章笔记]]
 - [[+ 读书笔记]]
 - [[+ 课程笔记]]
@@ -46,6 +48,8 @@ x:: [[+ ACCESS 的工作流汇总]]
 ## Spaces
 
 Spaces下全部PARA内的MOC文件
+
+%%非固定文件夹，随着聚焦的项目和领域的变动而变动，所以用dataview来动态索引%%
 
 ```dataviewjs
 // 获取指定文件夹下的指定标签的文件
