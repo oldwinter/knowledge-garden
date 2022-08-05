@@ -77,13 +77,13 @@ README ^5JylsUbA
 
 [[本库如何免费发布至web]] ^58VSLvur
 
-[[☘️ 花园导览 🍀/🆕 最近更新.md]] ^fg06CtlY
+[[🆕 最近更新]] ^fg06CtlY
 
 [[☘️ 花园导览 🍀/其他/🎥 我的PPT.md]] ^1ICEOz3R
 
 [[🏗 本库路线图]] ^4VbbVyp8
 
-[[☘️ 花园导览 🍀/其他/🏷 本库标签.md]] ^amiZo4zz
+[[获取本库标签 - dataviewjs]] ^amiZo4zz
 
 [[☘️ 花园导览 🍀/🏹 已发布长文.md]] ^WWCoFJOW
 

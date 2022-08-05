@@ -17,7 +17,7 @@ date modified: 2022-07-14
 - notion
 - wolai
 - flowus
-- [[思源笔记]]
+- [[⚙思源笔记]]
 - anytype
 
 [[roam-like笔记软件]]

@@ -3,7 +3,7 @@ date created: 2022-06-15
 date modified: 2022-07-14
 ---
 
-| | [[VSCode]] |[[obsidian]] |
+| | [[⚙VSCode]] |[[obsidian]] |
 | ---------------- | ------------------- | ------------ |
 | 删除当前行 | cmd + shift + k | cmd + d |
 | 单行注释 | cmd + / | cmd + / |

@@ -17,14 +17,14 @@ date modified: 2022-07-14
 | ---------------------- | ---------------------------------------- | ---- | ---------------------------------- | ---------- | ---------- |
 | [[bartender]] | 菜单栏管理 | 5 | 手动 | y | |
 | [[obsidian]] | 写作 all in one | 5 | github 仓库 | | |
-| [[VSCode]] | 写代码 all in one | 5 | github 账号 | y | |
+| [[⚙VSCode]] | 写代码 all in one | 5 | github 账号 | y | |
 | [[istat menus]] | 系统硬件监测 | 5 | icloud 同步，手动导出 | y | |
 | [[iTerm]] | terminal 必备 | 5 | icloud 自动同步 | y | |
 | [[BetterTouchTool]] | 触摸板的高级手势 | 5 | icloud 自动同步不好使，手动导出预设 | y | |
 | [[alfred]] |[[搜索一切]] 的 hub | 5 | icloud 自动同步 | y | |
 | [[keyboard maestro]] | 自动化主动式，监听式控制 | 5 | icloud 自动同步 | y | |
 | [[V2rayU]] |[[翻墙]] 主力 | 5 | 手动 | y | |
-| [[onedrive]] | 私人数据同步盘 | 5 | 微软账号 | y | |
+| [[⚙onedrive]] | 私人数据同步盘 | 5 | 微软账号 | y | |
 | [[滴答清单]] |[[个人任务管理系统]] | 5 | 手机账号 | y | |
 | [[搜狗输入法]] | 词库同步 | 5 | 手机账号 | y | |
 | contexts | 替代 dock，达到 windows 的切换体验 | 5 | 不明，手动设置 | | |

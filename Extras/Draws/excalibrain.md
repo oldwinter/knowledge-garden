@@ -60,7 +60,7 @@ tags: [excalidraw]
 
 [[raycast插件]] ^fXxs6CaA
 
-[[个人简历]] ^NSnx5K7E
+[[+ 个人简历]] ^NSnx5K7E
 
 [[什么值得买]] ^AcYuBuqH
 

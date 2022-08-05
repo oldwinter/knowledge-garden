@@ -1,7 +1,10 @@
 ---
+aliases: + 类似中图法的分类
 date created: 2022-06-22
-date modified: 2022-07-20
+date modified: 2022-08-05
 ---
+
+现在的积累量远远不够，感觉分类耗时耗力没有意义，先放这以后再说。
 
 > [!NOTE]- Notes on this note
 > This is a sanitized version of my actual note.

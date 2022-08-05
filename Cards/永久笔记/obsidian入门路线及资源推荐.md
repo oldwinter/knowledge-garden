@@ -6,7 +6,7 @@ up:: [[🧰 本库使用指南]]
 
 ## 都2022年了，入门最快的方式是看视频
 
-- [[@Johnny学]]的入门课：[Johnny学的公开课 第一集 将近3小时的Obsidian小白入门课，都是基础知识，学会了就能上手OB，一个社区插件都没讲_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1i3411k7TQ?spm_id_from=333.337.search-card.all.click&vd_source=c16ee9cfb2023d2af8428dbfe604b72f)
+- [[🧑Johnny学]]的入门课：[Johnny学的公开课 第一集 将近3小时的Obsidian小白入门课，都是基础知识，学会了就能上手OB，一个社区插件都没讲_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1i3411k7TQ?spm_id_from=333.337.search-card.all.click&vd_source=c16ee9cfb2023d2af8428dbfe604b72f)
 	- 别傻傻的一集一集慢慢看，讲到会的或你不感兴趣的内容跳过即可。
 - [也许是B站最好的Obsidian新手教程！爆肝30天，一站式入门双向链接笔记软件_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18a411r7mt?spm_id_from=333.337.search-card.all.click)
 	- 看看这个视频，爽一爽，也许更能让你下定决心开始学习obsidian。爽归爽，我自己是只使用了视频中提到的20%不到的功能。
@@ -14,7 +14,7 @@ up:: [[🧰 本库使用指南]]
 ## 边看视频边动手实践，有问题在文档中搜关键词
 
 - 快速过一遍官方帮助文档：[Obsidian Help](https://help.obsidian.md/)
-- 实践过程中，遇到问题，可以先搜索一下[[@落山鸡]]的帮助文档，很全面：[Obsidian中文教程 - Obsidian Publish](https://publish.obsidian.md/chinesehelp)
+- 实践过程中，遇到问题，可以先搜索一下[[🧑落山鸡]]的帮助文档，很全面：[Obsidian中文教程 - Obsidian Publish](https://publish.obsidian.md/chinesehelp)
 - 其他各种文章，基本都能在落山鸡的帮助文档中搜到内容。再次用文字感谢这个🐔。
 
 ## 然后看看别人的示例库

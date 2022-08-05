@@ -8,4 +8,4 @@ date modified: 2022-08-04
 
 例如描述一本图书的相关信息：出版社、作者、出版时间、图书分类等信息，就是这本图书的metadata。
 
-例如用一个pod.yaml文件描述[[kubernetes]]的pod相关信息，则该文件中，会有一段metadata，来描述yaml文件本身，比如这个文件的创建时间，修改时间，别名等等信息。
+例如用一个pod.yaml文件描述[[⚙kubernetes]]的pod相关信息，则该文件中，会有一段metadata，来描述yaml文件本身，比如这个文件的创建时间，修改时间，别名等等信息。
