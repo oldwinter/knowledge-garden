@@ -22,7 +22,7 @@ sort file.ctime desc
 limit 999
 ```
 
-### TODO 持续迭代不闭环
+### TODO
 
 ```dataview
 table file.mtime as 修改时间, tags

@@ -13,27 +13,6 @@
         "a": 1,
         "rgb": 14048348
       }
-    },
-    {
-      "query": "tag:#weread",
-      "color": {
-        "a": 1,
-        "rgb": 14069084
-      }
-    },
-    {
-      "query": "tag:#review",
-      "color": {
-        "a": 1,
-        "rgb": 11392604
-      }
-    },
-    {
-      "query": "tag:#todo",
-      "color": {
-        "a": 1,
-        "rgb": 6084188
-      }
     }
   ],
   "collapse-display": false,
@@ -46,6 +25,6 @@
   "repelStrength": 12.119391025641,
   "linkStrength": 1,
   "linkDistance": 251,
-  "scale": 8,
+  "scale": 0.42823364340892156,
   "close": true
 }
