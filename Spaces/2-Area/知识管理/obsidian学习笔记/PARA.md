@@ -21,7 +21,7 @@ Tiago創造的PARA系統包含以下四個區塊：
 
 [年度征文｜构建数字大厦 - 少数派 (sspai.com)](https://sspai.com/post/71707)
 
-[[@Tiago Forte]] 首创
+[[🧑Tiago Forte]] 首创
 
 ## P.A.R.A 的含义与定义
 

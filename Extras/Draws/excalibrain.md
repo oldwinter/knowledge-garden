@@ -16,37 +16,37 @@ tags: [excalidraw]
 
 [[building your second brain读书笔记 - CODE方法]] ^KSkFq7Gg
 
-[[RIA阅读法]] ^8PiHYCBi
+[[🔡RIA]] ^8PiHYCBi
 
-[[Sources/Books/读书笔记/虚构类读物/《三体》.md]] ^E2wNv7P7
+[[📚三体 - 热门批注]] ^E2wNv7P7
 
-[[Sources/Books/读书笔记/虚构类读物/《三重门》.md]] ^ha9c9IRJ
+[[📚三重门]] ^ha9c9IRJ
 
-[[Sources/Books/读书笔记/《史蒂夫·乔布斯传》.md]] ^phU81hNQ
+[[📚史蒂夫·乔布斯传 - 热门批注]] ^phU81hNQ
 
-[[Sources/Books/读书笔记/虚构类读物/《围城》.md]] ^puO2NpHw
+[[📚围城 - 热门批注]] ^puO2NpHw
 
-[[Sources/Books/读书笔记/《如何阅读一本书》.md]] ^epBiYy1Y
+[[📚如何阅读一本书]] ^epBiYy1Y
 
 [[《学会提问》]] ^5MQuBGNS
 
-[[Sources/Books/读书笔记/《思考·快与慢》.md]] ^YyHFwmMt
+[[📚思考·快与慢]] ^YyHFwmMt
 
-[[Sources/Books/读书笔记/《拆掉思维里的强》.md]] ^S161v2At
+[[📚拆掉思维里的强 - 热门批注]] ^S161v2At
 
-[[Sources/Books/读书笔记/虚构类读物/《白夜行》.md]] ^m5EaaH2d
+[[📚白夜行]] ^m5EaaH2d
 
-[[《置身事内》 - 热门批注]] ^Um6DRYSw
+[[📚置身事内 - 热门批注]] ^Um6DRYSw
 
-[[Sources/Books/读书笔记/虚构类读物/《解忧杂货店》.md]] ^Ryg7FvpF
+[[📚解忧杂货店]] ^Ryg7FvpF
 
-[[Sources/Books/读书笔记/《认知觉醒》.md]] ^CtHQEtmK
+[[📚认知觉醒 - 热门批注]] ^CtHQEtmK
 
-[[Sources/Books/读书笔记/《这样读书就够了》.md]] ^9bf7kwRO
+[[📚这样读书就够了]] ^9bf7kwRO
 
-[[Sources/Books/读书笔记/《金字塔原理》.md]] ^Zgta4Tiu
+[[📚金字塔原理]] ^Zgta4Tiu
 
-[[Sources/Books/读书笔记/卡片笔记.md]] ^6KZvWi7f
+[[卡片笔记]] ^6KZvWi7f
 
 [[Atlas/TOCs/TOCs.md]] ^0sBZpvXT
 
