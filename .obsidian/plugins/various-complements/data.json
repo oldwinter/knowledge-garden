@@ -46,12 +46,12 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 48,
-          "lastUpdated": 1659626097021
+          "count": 49,
+          "lastUpdated": 1659638129468
         },
         "internalLink": {
-          "count": 4,
-          "lastUpdated": 1658060194597
+          "count": 5,
+          "lastUpdated": 1659646275064
         }
       }
     },
@@ -960,6 +960,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659621848677
+        }
+      }
+    },
+    "source": {
+      "source": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1659639566915
+        }
+      }
+    },
+    "-1": {
+      "-1": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1659639702480
         }
       }
     }
