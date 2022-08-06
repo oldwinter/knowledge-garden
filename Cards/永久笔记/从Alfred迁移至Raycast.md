@@ -55,7 +55,7 @@ date modified: 2022-07-20
 	- raycast 更强，几乎搜索仓库，issure，pull request 等操作全支持
 - 菜单栏操作搜索
 	- 平替。raycast 自带，alfred 需要插件增强
-- [[Notion]] 搜索
+- [[⚙notion]] 搜索
 	- 平替
 - 文件内搜索
 	- raycast 里需要给 file search 插件配置成搜索文件内容，才能实现。

@@ -14,7 +14,7 @@ date modified: 2022-07-14
 典型软件:
 
 - [[Roam Research]]
-- [[logseq]]
+- [[⚙logseq]]
 - [[obsidian]]
 - [[⚙思源笔记]]
 - 葫芦笔记
