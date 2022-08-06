@@ -35,4 +35,4 @@ let todoFiles = dv.pages("#todo")
 dv.paragraph(`总共有==anki卡片== **${ankiFiles.length}** 个，==待办文件== **${todoFiles.length}** 个`)
 ```
 
-todo： 统计还未创建出文件的正向链接有多少个。统计未与其他任何文件产生连接的文件有多少个。还未找到语法。
+#todo/某天  ： 统计还未创建出文件的正向链接有多少个。统计未与其他任何文件产生连接的文件有多少个。还未找到语法。如果需要看数据，先用[[Find orphaned files and broken links]]插件凑合。

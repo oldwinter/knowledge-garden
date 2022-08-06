@@ -2,7 +2,7 @@
   "closeWithBackspace": true,
   "fileSearchPrefix": "/",
   "tagSearchPrefix": "#",
-  "suggestionLimit": 500,
+  "suggestionLimit": 50,
   "recentAbovePinned": false,
   "hyperKeyOverride": false,
   "macros": [],

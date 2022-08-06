@@ -16,11 +16,11 @@
   "folder_templates": [
     {
       "folder": "Sources/Movies + TV/电视剧笔记",
-      "template": "Extras/Templates/知识学习模板/电视剧笔记模板.md"
+      "template": "Extras/Templates/Sources模板/电视剧笔记模板.md"
     },
     {
       "folder": "Sources/Movies + TV/电影笔记",
-      "template": "Extras/Templates/知识学习模板/电影笔记模板.md"
+      "template": "Extras/Templates/Sources模板/电影笔记模板.md"
     },
     {
       "folder": "Sources/Articles",
