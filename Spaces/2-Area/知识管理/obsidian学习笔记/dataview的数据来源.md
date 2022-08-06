@@ -3,7 +3,7 @@ date created: 2022-06-09
 date modified: 2022-07-14
 ---
 
-在 [[obsidian]] 中，
+在 [[⚙obsidian]] 中，
 
 dataview 有 3 种元数据获取方式：
 

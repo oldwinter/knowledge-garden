@@ -18,7 +18,7 @@ hello👋，我是oldwinter❄️，写过几万行代码，带过十几人团�
 - 尽量通过鼠标悬浮预览进行[[上下文]]不中断的阅读。
 - 尽量通过底部[[反向链接]]找回来时的路。
 
-这座数字花园使用[[obsidian]]写作和发布，且毫无保留地开源，这里是[[README]]，这里是项目地址：[GitHub - oldwinter/knowledge-garden](https://github.com/oldwinter/knowledge-garden)。
+这座数字花园使用[[⚙obsidian]]写作和发布，且毫无保留地开源，这里是[[README]]，这里是项目地址：[GitHub - oldwinter/knowledge-garden](https://github.com/oldwinter/knowledge-garden)。
 
 这座花园里，我挖了很多坑🕳，如果你想敦促我加速填坑，欢迎来提issue。如果方便的话，给个star⭐️呗。
 

@@ -15,6 +15,6 @@ date modified: 2022-07-14
 
 - [[Roam Research]]
 - [[⚙logseq]]
-- [[obsidian]]
+- [[⚙obsidian]]
 - [[⚙思源笔记]]
 - 葫芦笔记

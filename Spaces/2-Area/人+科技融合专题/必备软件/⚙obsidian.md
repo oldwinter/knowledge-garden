@@ -7,7 +7,7 @@ up:: [[笔记软件的选择]]
 
 down:: [[obsidian插件]]
 
-jumps:: [[⚙Notion]]
+jumps:: [[⚙notion]]
 
 [[我使用Obsidian的核心原则]]
 

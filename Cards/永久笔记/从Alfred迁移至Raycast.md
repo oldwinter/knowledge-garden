@@ -59,7 +59,7 @@ date modified: 2022-07-20
 	- 平替
 - 文件内搜索
 	- raycast 里需要给 file search 插件配置成搜索文件内容，才能实现。
-- [[obsidian]] 操作
+- [[⚙obsidian]] 操作
 	- alfred 的 shimming obsidian 插件功能强大，raycast 只有一个简陋的搜索的插件
 - terminal 和 finder 互相打开
 	- 平替

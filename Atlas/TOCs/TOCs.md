@@ -101,7 +101,7 @@ tags: TOC todo/持续迭代
 		 - [[饮食]]
 	  - [[+ 知识管理]]
 		 - [[⚙notion]]
-		 - [[obsidian]]
+		 - [[⚙obsidian]]
 		 - [[⚙cubox]]
 	  - [[+ 投资与理财]]
 		 - [[实业投资]]

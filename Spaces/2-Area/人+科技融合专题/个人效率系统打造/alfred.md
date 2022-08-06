@@ -27,7 +27,7 @@ date modified: 2022-07-14
 
 todo：[[⚙滴答清单]]
 
-个人创作： [[obsidian]]
+个人创作： [[⚙obsidian]]
 
 文件：本地文件
 
