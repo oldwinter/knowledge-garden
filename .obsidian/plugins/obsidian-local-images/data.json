@@ -1,5 +1,5 @@
 {
-  "realTimeUpdate": false,
+  "realTimeUpdate": true,
   "realTimeUpdateInterval": 1000,
   "realTimeAttemptsToProcess": 3,
   "cleanContent": true,

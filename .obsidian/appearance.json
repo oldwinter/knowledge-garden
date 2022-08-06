@@ -10,6 +10,6 @@
   ],
   "theme": "system",
   "baseFontSize": 16,
-  "baseFontSizeAction": false,
+  "baseFontSizeAction": true,
   "translucency": false
 }

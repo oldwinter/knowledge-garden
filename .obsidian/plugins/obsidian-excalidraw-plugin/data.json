@@ -1,8 +1,8 @@
 {
   "folder": "Extras/Draws",
   "embedUseExcalidrawFolder": true,
-  "templateFilePath": "draws/Template.excalidraw",
-  "scriptFolderPath": "Excalidraw/Scripts",
+  "templateFilePath": "Extras/Draws/Template.excalidraw",
+  "scriptFolderPath": "Extras/Draws/Scripts",
   "compress": true,
   "autosave": true,
   "autosaveInterval": 10000,

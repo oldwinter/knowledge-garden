@@ -97,7 +97,7 @@ README ^5JylsUbA
 
 [[AboutTheGarden.md]] ^nd2H2MM1
 
-[[README.md]] ^LuZWaUu3
+[[README]] ^LuZWaUu3
 
 [[Extras/Draws/ExcaliBrain Snapshot - ☘️ 花园导览 🍀.excalidraw.md]] ^G6G59L1j
 

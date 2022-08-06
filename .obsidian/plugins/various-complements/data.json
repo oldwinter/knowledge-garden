@@ -25,10 +25,10 @@
   "enableCurrentVaultComplement": true,
   "currentVaultMinNumberOfCharacters": 0,
   "includeCurrentVaultPathPrefixPatterns": "",
-  "excludeCurrentVaultPathPrefixPatterns": "Extras/Templates/dict/dict.md",
+  "excludeCurrentVaultPathPrefixPatterns": "Extras/Templates/其他/dict/dict.md",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "Extras/Templates/dict/dict.md",
+  "customDictionaryPaths": "Extras/Templates/其他/dict/dict.md",
   "columnDelimiter": "Pipe",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "+=",
@@ -37,7 +37,7 @@
   "displayedTextSuffix": " => ...",
   "enableInternalLinkComplement": true,
   "suggestInternalLinkWithAlias": true,
-  "excludeInternalLinkPathPrefixPatterns": "logseq/",
+  "excludeInternalLinkPathPrefixPatterns": "",
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": false,
@@ -294,8 +294,8 @@
     "重器轻用": {
       "重器轻用": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657961165552
+          "count": 2,
+          "lastUpdated": 1659762306813
         }
       }
     },
@@ -1152,6 +1152,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659703504358
+        }
+      }
+    },
+    "todo/本周": {
+      "todo/本周": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1659727330013
         }
       }
     }

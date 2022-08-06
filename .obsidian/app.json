@@ -3,16 +3,14 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
-  "userIgnoreFilters": [
-    "logseq/"
-  ],
+  "userIgnoreFilters": null,
   "readableLineLength": true,
   "strictLineBreaks": true,
   "emacsyKeys": false,
   "legacyEditor": false,
   "livePreview": true,
   "showLineNumber": false,
-  "communityPluginSortOrder": "release",
+  "communityPluginSortOrder": "download",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "Cards",
   "newLinkFormat": "shortest",
@@ -23,5 +21,8 @@
     "downscalePercent": 100
   },
   "spellcheck": false,
-  "vimMode": false
+  "vimMode": false,
+  "autoPairMarkdown": false,
+  "autoPairBrackets": false,
+  "smartIndentList": true
 }

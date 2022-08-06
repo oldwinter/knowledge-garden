@@ -6,7 +6,7 @@
     "flashcardTags": [
       "#cards"
     ],
-    "convertFoldersToDecks": false,
+    "convertFoldersToDecks": true,
     "cardCommentOnSameLine": true,
     "burySiblingCards": false,
     "showContextInCards": true,
@@ -37,6 +37,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-07-27",
+  "buryDate": "2022-08-05",
   "buryList": []
 }
