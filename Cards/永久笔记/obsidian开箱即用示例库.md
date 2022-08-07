@@ -1,7 +1,11 @@
 ---
 date created: 2022-06-29
-date modified: 2022-07-20
+date modified: 2022-08-07
 ---
+
+> [!INFO] 提示
+> 英文的示例库也有很多，这里只收编我看过的并学习过的中文的示例库。
+
 - [GitHub - cumany/Blue-topaz-examples: Blue topaz themes example vault for Obsidian](https://github.com/cumany/Blue-topaz-examples)
 	- 有非常多奇技淫巧，我个人建议可以将其作为大而全的词典，借鉴用法和代码，不推荐全盘照搬。
 - [GitHub - Rainbell129/Obsidian-Homepage: A dashboard for your obsidian vault.](https://github.com/Rainbell129/Obsidian-Homepage)

@@ -87,14 +87,6 @@
         }
       }
     },
-    "excalidraw": {
-      "excalidraw": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1657443348482
-        }
-      }
-    },
     "PARA": {
       "PARA": {
         "internalLink": {
@@ -918,8 +910,8 @@
     "Sources": {
       "Sources": {
         "currentVault": {
-          "count": 2,
-          "lastUpdated": 1659622882701
+          "count": 3,
+          "lastUpdated": 1659885692861
         }
       }
     },
@@ -1054,8 +1046,8 @@
     "supercharged-links": {
       "supercharged-links": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659693338391
+          "count": 2,
+          "lastUpdated": 1659874474959
         }
       }
     },
@@ -1198,8 +1190,8 @@
     "co-info": {
       "co-info": {
         "customDictionary": {
-          "count": 12,
-          "lastUpdated": 1659866874762
+          "count": 14,
+          "lastUpdated": 1659882149816
         }
       }
     },
@@ -1216,6 +1208,14 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1659866123029
+        }
+      }
+    },
+    "vim": {
+      "vim": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659882993379
         }
       }
     }

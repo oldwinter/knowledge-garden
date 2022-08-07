@@ -11,8 +11,8 @@ title: HOMEPAGE
 %% #todo 待整理好[[如何通过obsidian打造自己的第二大脑]]，homepage要改造一下。%%
 
 
-![[+ ACCESS 的文件夹入口汇总]]
+![[+ 本库 ACCESS 的文件夹入口汇总]]
 
-![[涉及外部app调用的其他场景]]
+![[本库涉及外部app调用的其他场景]]
 
-![[整个库的宏观统计数据 - dataview]]
+![[本库的宏观统计数据 - dataview]]

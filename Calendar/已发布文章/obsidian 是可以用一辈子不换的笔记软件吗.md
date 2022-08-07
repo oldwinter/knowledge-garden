@@ -37,7 +37,7 @@ tags: article/done
 	- 最戳 G 点的 3 个功能：
 		- 随时引用。随时随地双链，有种码代码的畅快感，能随时引用到曾经写过思考过的东西，很爽。这种爽感，倒逼出了创作激情。
 		- [[context 切换]]极快。基础文件都是 markdown，完全本地化，从而换文件阅读或编辑（[[context 切换]]）的速度极快，不像其他笔记软件，换个页面转圈圈等 3 秒，简直无法忍。notion，语雀别看了，说的就是你。
-		- [[平台+插件]] 玩法，和 chrome 与 vscode 类似，入门简单，开箱即用，又不失可玩性，且玩法上限极高，甚至无边界。
+		- [[+ 平台+插件]] 玩法，和 chrome 与 vscode 类似，入门简单，开箱即用，又不失可玩性，且玩法上限极高，甚至无边界。
 	- 甩一个看起来最屌的视频： [也许是 B 站最好的 Obsidian 新手教程！爆肝 30 天，一站式入门双向链接笔记软件_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18a411r7mt?spm_id_from=333.337.search-card.all.click)
 	- 甩一篇看起来最入门的文章： [Obsidian 是什么以及它能用来做什么 - 少数派 (sspai.com)](https://sspai.com/post/67399)
 

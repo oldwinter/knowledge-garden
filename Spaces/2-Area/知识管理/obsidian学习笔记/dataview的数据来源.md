@@ -3,7 +3,7 @@ date created: 2022-06-09
 date modified: 2022-07-14
 ---
 
-在 [[⚙obsidian]] 中，
+在 [[🤖obsidian]] 中，
 
 dataview 有 3 种元数据获取方式：
 
@@ -22,7 +22,7 @@ dataview 有 3 种元数据获取方式：
 
 ```
 
-2，是 Inline Fields。和 [[⚙logseq]] 的表示方式相同，但和 obsidian 的兼容性不是太好，比如 aliases 获取不到。`= this.basic-field` 就能获取到 Value
+2，是 Inline Fields。和 [[🤖logseq]] 的表示方式相同，但和 obsidian 的兼容性不是太好，比如 aliases 获取不到。`= this.basic-field` 就能获取到 Value
 
 ```
 		Basic Field:: Value

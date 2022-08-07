@@ -22,7 +22,7 @@ kanban-plugin: basic
 
 ## 🔭LONG TERM
 
-- [ ] [[++ 文章发布工作流]]
+- [ ] [[++ 本库文章发布工作流]]
 - [ ] [[EXTERNAL]]
 - [ ] [[将本库公开发布至github]]
 

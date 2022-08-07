@@ -65,7 +65,7 @@ README ^5JylsUbA
 
 [[mac必备软件]] ^IR5934CW
 
-[[我使用Obsidian的核心原则]] ^wb5SEr2P
+[[本库使用时的核心原则和价值]] ^wb5SEr2P
 
 [[Cards/永久笔记/obsidian开箱即用示例库.md]] ^v8Ov7EpF
 

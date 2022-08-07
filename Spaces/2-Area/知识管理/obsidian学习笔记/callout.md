@@ -1,13 +1,13 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-02
+date modified: 2022-08-07
 ---
 
 ## obsidian自带 callout
 
 [Use callouts - Obsidian Help](https://help.obsidian.md/How+to/Use+callouts)
 
-用 co- 前缀，通过 [[various complements]] 变量自动补全插件自动触发。
+用 co- 前缀，通过 [[various complements]] 变量自动补全插件自动触发。配置文件：[[dict]]。
 
 目前全部的callout字段：
 

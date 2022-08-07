@@ -1,9 +1,10 @@
 ---
 date created: 2022-06-07
-date modified: 2022-07-27
+date modified: 2022-08-07
 mindmap-plugin: basic
-tags: TOC todo/持续迭代
+tags: TOC, todo/持续迭代
 ---
+
 > 尝试定期将笔记库局部内容结构化，结构化的过程中，会有新的体会。
 
 # TOCs
@@ -41,7 +42,7 @@ tags: TOC todo/持续迭代
    - [[个人知识笔记系统]]
 	  - [[基于markdown的IDE - Obsidian]]
 	  - [[内容、工具与方法论]]
-	  - [[平台+插件]]
+	  - [[+ 平台+插件]]
    - [[个人输出发布系统]]
    - [[效率系统4大子系统联动与配合]]
    - [[个人工作流]]
@@ -49,7 +50,7 @@ tags: TOC todo/持续迭代
 
 ## JOURNALS | 每日笔记
 
-- [[以每日日志为入口]]
+- [[以Daily notes为入口]]
 - [[计划与回顾]]
    - [[模板与套路]]
    - [[每周计划与回顾]]
@@ -100,8 +101,8 @@ tags: TOC todo/持续迭代
 		 - [[跑步]]
 		 - [[饮食]]
 	  - [[+ 知识管理]]
-		 - [[⚙notion]]
-		 - [[⚙obsidian]]
+		 - [[🤖notion]]
+		 - [[🤖obsidian]]
 		 - [[🤖cubox]]
 	  - [[+ 投资与理财]]
 		 - [[实业投资]]
