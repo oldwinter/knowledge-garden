@@ -6,7 +6,7 @@ tags: MOC
 - 官方下载 pkg 安装
 	- [[nodejs]]
 	- [[Golang]]
-	- [[⚙docker]]
+	- [[🤖docker]]
 - [[docker compose]]
 - homebrew 安装
 	- [[fzf]]
@@ -19,7 +19,7 @@ tags: MOC
 	- [[homebrew]]
 	- [[zsh]]
 	- [[ohmyzsh]]
-	- [[⚙Git]]
+	- [[🤖Git]]
 	- [[curl]]
 	- [[wget]]
 	- [[z命令]]
@@ -28,6 +28,6 @@ tags: MOC
 	- [[sudo]]
 	- [[apt-get]]
 	- [[http-server]]
-	- [[⚙kubectl]]
+	- [[🤖kubectl]]
 	- [[kubectx]]
 	- [[mackup]]
