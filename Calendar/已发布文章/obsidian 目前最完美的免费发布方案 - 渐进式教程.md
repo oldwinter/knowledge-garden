@@ -12,11 +12,11 @@ tags: article/done
 
 先看最终方案的发布页面效果： [🌱 oldwinterの数字花园](https://notes.oldwinter.top/)
 
-![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202207140116095.png)
+![](Extras/Media/202207140116095.png)
 
 和obsidian的官方发布方案做个对比：[🌲 oldwinterの数字花园](https://oldwinter.top/)
 
-![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202207140246929.png)
+![](Extras/Media/202207140246929.png)
 
 功能点详细比对：
 

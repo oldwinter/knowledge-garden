@@ -30,9 +30,9 @@ tags: tutorial
 
 - [[ACCESS 笔记组织法]]
 
-![开箱即用库首页截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251428706.png)
+![开箱即用库首页截图](Extras/Media/开箱即用库首页截图.png)
 
-![开箱即用库暗色模式截图](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206251434534.png)
+![开箱即用库暗色模式截图](Extras/Media/开箱即用库暗色模式截图.png)
 
 ## 周边 app 的联动与配合
 

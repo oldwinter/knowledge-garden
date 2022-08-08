@@ -3,7 +3,7 @@ aliases:
 content-type: notes
 date: 2022-06-10
 date created: 2022-06-09
-date modified: 2022-07-31
+date modified: 2022-08-09
 feed: show
 id: e0754685-caf5-429c-bc8c-b05cd5356ea4
 published: true
@@ -57,7 +57,7 @@ tags: article/done
 		- 这个像黑魔法水晶一样的 logo，这种 qq 内衣般神秘感，让人产生了探索它的欲望。
 	- 另 1 个是有好看小姐姐封面的视频
 		- 那个封面好看的视频： [Obsidian 使用心得｜我是如何使用 Obsidian 写作的](https://www.bilibili.com/video/BV1P64y1q7ND?spm_id_from=333.999.0.0)
-		- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203302043711.png)
+		- ![[Pasted image 20220809014721.png]]
 		- 我觉得，流量时代，不管美丑，不出境，是不可能火的。谁有反例可以例举🌰一下？
 	- 看完以上 2 个视频，我的初印象是：什么鸡毛玩意儿！
 - 双链笔记，这不就是维基百科的跳转链接吗，我哪有这闲工夫去思考某个词语是不是应该给它一个链接？这不是增加了我的写作阻力吗？
@@ -74,8 +74,8 @@ tags: article/done
 ### 无法自拔地爱上：双链笔记，最大的优点是挖坑方便
 
 - 我继续在 b 站找了几个双链笔记横向测评视频研究，并最终锁定了 obsidian。接着找了点击量最高的视频，全面了解了现有的 obsidian。
-	- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203310341822.png)
-	- ![](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203302140547.png)
+	- ![[Pasted image 20220809014616.png]]
+	- ![[Pasted image 20220809014628.png]]
 	- 综合各方面的信息，我最终的决定，主用 obsidian，并将 logseq 当做备胎。
 - 确定好工具，剩下就是实际执行了。最开始的几天，是极为容易动摇的，各种功能残缺让我不得不去寻找插件，这令我对这个工具的成熟度都产生了质疑。
 - 但有一个最核心的，用 `[[` 符号快速新建或引用笔记挖坑的快感，令我完全沉醉，其他缺点，都是次要的了。更何况我发现，所有缺点，社区都有人用插件解决了。如果要描述这种挖坑的快感，我觉得最好的方式是拍个视频，但视频做出来如果没人看，这打击感可比文章没人读，要大得多。
@@ -121,9 +121,6 @@ tags: article/done
 	- 类 flomo 的插件，实现随时随地闪念笔记无摩擦输入。
 	- 类 anki 的插件，实现笔记和卡片的间隔重复复习。
 	- 偶尔翻一翻写过的东西，永远只看不写。
-	- ![a](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203302353006.png)
-	- ![b](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203302356576.jpg)
-	- ![c](https://raw.githubusercontent.com/oldwinter/my-pics/master/202203310013245.jpg)
 - 回答标题的问题，obsidian 肯定不是可以用一辈子的软件，但我已经决定下一个 3 年用它。
 
 ## 如果有人看，接下来的更新计划

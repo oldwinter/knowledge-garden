@@ -7,7 +7,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 ---
 如何建立数字花园？
 
-[![](https://static.effie.co/blog/2021/03/20210324020154471.jpeg)](https://blog.effie.co/author/yufugui/)
+[![](Extras/Media/20210324020154471.jpeg.jpg)](https://blog.effie.co/author/yufugui/)
 
 2021-11-122021-09-09
 
@@ -19,7 +19,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 当然，这样的定义并不能让读者直观地理解数字花园。
 
-![](https://static.effie.co/blog/2021/08/20210827141622566-992x1024.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827141622566-992x1024.png.webp)
 
 图片来源：https://maggieappleton.com/garden-history
 
@@ -37,7 +37,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 这些溪流（Stream）大量攫取了我们的注意力，我们阅读了大量的碎片化信息，但是最后真正所获寥寥无几。
 
-![](https://static.effie.co/blog/2021/08/20210827142636934.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827142636934.png.webp)
 
 在这个数字化的信息时代，考菲尔德提出以数字花园的形式解决信息流的弊端。花园 (Garden) 是我们将信息沉淀为知识的平衡器。随着时间的推移，将有用的信息流类似维基百科那样进行沉淀。
 
@@ -53,7 +53,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 由于博客基于时间流设计，博客一旦发表，博客内容便开始腐烂（被人们逐渐遗忘，查找也不方便）。而数字花园的内容则需要时常编辑和完善。
 
-![](https://static.effie.co/blog/2021/08/20210827141916910-1024x909.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827141916910-1024x909.png.webp)
 
 数字花园是反时间线设计的
 
@@ -71,7 +71,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 就像一个真正的花园一样，我们需要对花园中的内容进行持续护理，比如浇水、除草、修剪。葫芦不是一天长出来的。
 
-![](https://static.effie.co/blog/2021/08/20210827141835822-1024x682.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827141835822-1024x682.png.webp)
 
 我们的创作内容也不是直接一字千金，不可修改。只有通过反复地激发灵感、凝练语言、升华论点、添加素材等修改和润色，我们才可以产出更好的作品。
 
@@ -83,7 +83,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 同时，数字花园不像博客那样完全公开，以建立个人品牌作为内容发布的主要目的。
 
-![](https://static.effie.co/blog/2021/08/20210827141333598-1024x647.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827141333598-1024x647.png.webp)
 
 数字花园：介于私人笔记和公开发表作品之间
 
@@ -97,7 +97,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 我们根据自己的兴趣、偏好添加不同的内容。没有两座完全相同的数字花园。
 
-![](https://static.effie.co/blog/2021/08/20210827142148363-823x1024.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827142148363-823x1024.png.webp)
 
 另一方面，我们是数字花园的主人 / 园丁，而不是某个数字平台的数字劳工。
 
@@ -124,7 +124,7 @@ summary: 文章介绍了数字花园的历史、特征、流程及意义
 
 至于内容公开与否，根据自己意愿。**最重要的是围绕特定主题持续的收集灵感和资料、消化和输出内容** 。
 
-![](https://static.effie.co/blog/2021/08/20210827142742222.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827142742222.png.webp)
 
 Andy Matuschak 的数字花园：在常青笔记中我们已有介绍
 
@@ -140,7 +140,7 @@ Andy Matuschak 的数字花园：在常青笔记中我们已有介绍
 
 建议每日阅读一篇高质量的长文，或者翻阅几页略高于你阅读舒适区的著作。你阅读的内容质量越高，你才有可能拥有更好的输入。
 
-![](https://static.effie.co/blog/2021/08/20210827142947626.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827142947626.png.webp)
 
 Tom Critchlow 的数字花园
 
@@ -168,7 +168,7 @@ Tom Critchlow 的数字花园
 
 数字花园没有规定既定的写作路线，我们需要做的便是及时将自己的所想添加到你认为正确的地方。【关于非线性写作可回顾博文《[非线性写作的 4 条建议](https://blog.effie.co/%e9%9d%9e%e7%ba%bf%e6%80%a7%e5%86%99%e4%bd%9c%e7%9a%844%e6%9d%a1%e5%bb%ba%e8%ae%ae/)》】
 
-![](https://static.effie.co/blog/2021/08/20210827143241416.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827143241416.png.webp)
 
 ### 数字花园的理念改变了传统的创作理念
 
@@ -194,7 +194,7 @@ Tom Critchlow 的数字花园
 
 **第一，培育数字花园的过程便是内容不断丰富和提升的过程**。每天你都会看到自己的写作内容所有增长、有所提升，这将会成为重要的写作动力。
 
-![](https://static.effie.co/blog/2021/08/20210827142312106-1024x641.png?x-oss-process=image/auto-orient,1/quality,q_90/format,webp)
+![](Extras/Media/20210827142312106-1024x641.png.webp)
 
 **第二，数字花园的培育过程，本身便是我们记录我们如何思考的过程**。
 
@@ -212,4 +212,4 @@ Tom Critchlow 的数字花园
 
 这些外部反馈既成为了我们的写作激励，也会通过集思广益促进我们创作内容更上一层楼。
 
-![](https://blog.effie.co/wp-content/themes/effie-blog/images/end.png)
+![](Extras/Media/end.png)

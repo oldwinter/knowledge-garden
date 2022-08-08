@@ -15,7 +15,7 @@ tags: weread
 ## 元数据
 
 > [!abstract] Building a Second Brain
-> - ![ Building a Second Brain|200](https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover)
+> - ![ Building a Second Brain|200](Extras/Media/_Building_a_Second_Brain!200.jpg)
 > - 书名： Building a Second Brain
 > - 作者： Tiago Forte
 > - 简介：

@@ -5,7 +5,7 @@ date created: 2022-07-20
 
 Introducing
 
-![image of ENCODE](https://global-uploads.webflow.com/5f7f16adf0e1d240ab23c493/62893f1d136f61abb99c8421_linking-your-thinking-encode-image.png)
+![image of ENCODE](Extras/Media/image_of_ENCODE.png)
 
 ### UNLOCK THE WAY YOUR IDEAS EVOLVE.
 

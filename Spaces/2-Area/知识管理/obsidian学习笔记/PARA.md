@@ -25,7 +25,7 @@ Tiago創造的PARA系統包含以下四個區塊：
 
 ## P.A.R.A 的含义与定义
 
-![](https://cdn.sspai.com/2020/07/19/f4332cfd92d87d2926dfbdfa435a4626.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
+![](Extras/Media/f4332cfd92d87d2926dfbdfa435a4626.png)
 
 图片源自 fortelabs.co，汉化 @Isabella zhang
 

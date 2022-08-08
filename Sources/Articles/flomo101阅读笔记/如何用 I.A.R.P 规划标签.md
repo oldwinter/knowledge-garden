@@ -16,7 +16,7 @@ up:: [[flomo101 - 思维方式目录]]
 
 许多 flomo 用户纠结的点在于，要么把标签当做像文件夹一样的分类来用，要么当做内容补充来用，而忽略了标签的作用在于「方便我们索引」，谁说一个 MEMO 只能打一个标签呢？—— 毕竟我们的核心不在于一个完美的分类，而在于当我们想要提取的时候，能找到。
 
-![](https://flomo-resource.oss-cn-shanghai.aliyuncs.com/101/images-387.png)
+![](Extras/Media/images-387.png)
 
 在理解了标签的两种类型后（其实还有很多，这里不展开），我们着重讲下用以「导航」的标签用法。受 Tiago Forte 的 P.A.R.A 的思路启发，在 flomo 中我尝试用一种更简单的方式 i.A.R.P 来对内容进行「索引」。
 
@@ -40,7 +40,7 @@ I.A.R.P 是一组缩写，即：
 - Marketplace 是最重要研究的领域
 - Sheep、Books 是最重要的资源（Sheep 是指人物，即羔羊）
 
-![](https://flomo-resource.oss-cn-shanghai.aliyuncs.com/101/images-388.png)
+![](Extras/Media/images-388.png)
 
 而置顶标签之外，大量的标签都不再承载「导航」的功能，仅仅用来当做 MEMO 内容的补充。所以即使有几百个标签，也不会觉得难以管理。
 

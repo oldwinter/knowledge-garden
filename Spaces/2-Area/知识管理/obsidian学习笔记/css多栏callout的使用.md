@@ -26,7 +26,7 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 > 3. 欄位數由 2 到 N，只要螢幕寬度足夠，會自動分配欄寬  
 > 4. **可使用 Style Settings 外掛設定**
 
-![01](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685342.png)
+![01](Extras/Media/01.png)
 
 #### 1.1. 兩欄
 
@@ -66,7 +66,7 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 #### 1.3. 三欄
 
-![01|700](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685415.png)
+![01|700](Extras/Media/01!700-1.png)
 
 > [!multi-column]
 >
@@ -108,7 +108,7 @@ MCL Multi Column.css 是一個不到 8KB 大小的 CSS 檔，只要存入儲存�
 
 #### 1.4. 四欄
 
-![01|700](https://raw.githubusercontent.com/emisjerry/upgit/master/2022/04/upgit-20220423_1650685499.png)
+![01|700](Extras/Media/01!700.png)
 
 > [!multi-column]
 >

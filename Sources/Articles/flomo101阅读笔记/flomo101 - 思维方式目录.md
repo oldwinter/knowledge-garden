@@ -16,7 +16,7 @@ tags: TOC
 
 你可以微信扫码关注我们的服务号，第一时间收到更新提醒。
 
-![qrcode](https://flomo-resource.oss-cn-shanghai.aliyuncs.com/101/bannermp.jpeg)
+![qrcode](Extras/Media/qrcode.jpg)
 
 ## 思维方式
 

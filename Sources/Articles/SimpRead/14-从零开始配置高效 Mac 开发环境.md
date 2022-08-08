@@ -70,15 +70,15 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 系统经常会出现如下图所示的 Confirm 框，包含 “确定”、“取消” 两个选项：
 
-![](https://imageslr.com/media/15846066678989.jpg)
+![](Extras/Media/15846066678989.jpg)
 
-![](https://imageslr.com/media/15846132021180.jpg)
+![](Extras/Media/15846132021180.jpg)
 
 默认情况下，我们只能通过「回车」选择 “确定”，如果想选择 “取消”，必须通过鼠标点击。打开全键盘控制后，通过 `Tab` 键切换选项，聚焦到 “取消” 上，然后按下「空格」，就可以选择“取消”。
 
 在 “系统偏好设置 - 键盘 - 快捷键” 页面下方，打开全键盘控制：
 
-![](https://imageslr.com/media/15846068903987.jpg)
+![](Extras/Media/15846068903987.jpg)
 
 注意：无论焦点聚焦于哪个选项，按下「回车」都相当于是选择 “确定”。
 
@@ -102,7 +102,7 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 在浏览网页时，可以在触控板两指水平轻扫，控制页面的前进后退。
 
-![](https://imageslr.com/media/image-20210905113805315.png)
+![](Extras/Media/image-20210905113805315.png)
 
 图：在 Chrome 中两指右扫，会出现页面后退提示符
 
@@ -156,7 +156,7 @@ Homebrew 是 Mac 下的软件包管理工具，既可以用来安装开发环境
 
 **配置 “光标左 / 右移动一个单词”**：“Preferences-Profiles-Keys”，找到快捷键 `⌥←`，双击，弹出如下的对话框，Action 选择 “Send Escape Sequence”，`Esc+b` 表示向前移动。双击 `⌥→`，`Esc+` 后面填 `f` 表示向后移动。
 
-![](https://imageslr.com/media/15846289981455.jpg)
+![](Extras/Media/15846289981455.jpg)
 
 ### vim 语法高亮
 
@@ -233,7 +233,7 @@ source $ZSH/oh-my-zsh.sh
 1.  验证 autojump：首先执行 `cd ~/Downloads` 跳转到目录 `~/Downloads`，然后只需要输入目录的若干个字符：`j dow`，就可以自动跳转到 `~/Downloads`
 2.  验证 zsh-autosuggestions：输入之前执行过的命令的前几个字符，就会自动提示完整命令，按 `→` 可补全
 
-![](https://imageslr.com/media/15846317408700.jpg)
+![](Extras/Media/15846317408700.jpg)
 
 **同步 bash 配置：** 在 `~/.zshrc` 的开头加入这两行（有的文件可能不存在，自行删除对应行）：
 
@@ -268,7 +268,7 @@ git config --global user.name "Your Name"
 
 iStat Menus 可以在状态栏显示网速，有利于判断网络情况：
 
-![](https://imageslr.com/media/15846130800829.jpg)
+![](Extras/Media/15846130800829.jpg)
 
 ### 扩展预览程序：QuickLookPlugins
 
@@ -296,11 +296,11 @@ Moom 是一款收费软件。推荐功能类似的免费软件：[Rectangle](htt
 
 Moom 是 Mac 的一款窗口布局工具，可以快速缩放应用 / 移动位置，比如将应用布局成以下状态，只需分别点击三下，如果此时将桌面布局保存为一个快照，之后就可以一键恢复布局。
 
-![](https://imageslr.com/media/15846201525933.jpg)
+![](Extras/Media/15846201525933.jpg)
 
 默认情况下需要通过鼠标操作，配置全局快捷键后，只用键盘就可以完成全部操作，效率更高：
 
-![](https://imageslr.com/media/15846215057421.jpg)
+![](Extras/Media/15846215057421.jpg)
 
 我设置的全局快捷键是 `⌘+⇧+M`，`M` 取自 `Moom` 的首字母，方便记忆。
 
@@ -313,7 +313,7 @@ Moom 是 Mac 的一款窗口布局工具，可以快速缩放应用 / 移动位�
 5.  `回车`：恢复原始大小和位置
 6.  `数字键`：自定义布局，在 `Preferences-Custom` 中配置
 
-![](https://imageslr.com/media/15846215818236.jpg)
+![](Extras/Media/15846215818236.jpg)
 
 💡 Mac 系统也自带了简易的窗口布局功能：将鼠标悬浮到应用程序红绿灯的 “绿灯” 按钮上，然后按下 `Alt` 键，可以快速将应用程序调整至左、右半个屏幕。
 
@@ -365,13 +365,13 @@ Alfred 内置了许多搜索网站，如百度、Google 等。使用 Alfred 搜�
 2.  输入要搜索的内容
 3.  按下 `Command + 1`、`Command + 2` 等快捷键，选择一个搜索网站
 
-![](https://imageslr.com/media/image-20210824101522940.png)
+![](Extras/Media/image-20210824101522940.png)
 
 这会直接打开搜索结果页。相比于「打开浏览器 - 打开网站 - 聚焦到输入框 - 输入关键字 - 搜索」的过程，使用 Alfred 搜索效率更高。
 
 工作场景下，我会将公司内网搜索配置到 Alfred。配置方法：进入 Alfred 的 Preference 页面，按照下图 1、2、3、4 的步骤设置。
 
-![](https://imageslr.com/media/image-20210824103424554.png)
+![](Extras/Media/image-20210824103424554.png)
 
 其中，第 4 步是公司内网搜索结果页的 URL，形如：
 
@@ -393,11 +393,11 @@ SnippetsLab 可以用来分类整理各个代码片段，在写代码时随时�
 
 SnippetsLab 支持 iCloud 同步，这意味着当我们切换到新 Mac 后，可以在 1 秒内立刻恢复所有的代码片段：
 
-![](https://imageslr.com/media/15846156352773.jpg)
+![](Extras/Media/15846156352773.jpg)
 
 此外，通过 Alfred 插件，可以非常方便地搜索某个代码片段：
 
-![](https://imageslr.com/media/15846151958103.jpg)
+![](Extras/Media/15846151958103.jpg)
 
 点击查看 [Alfred 插件配置说明 / 使用方法 / 下载链接](https://www.renfei.org/snippets-lab/manual/mac/tips-and-tricks/alfred-integration.html)。使用方法：
 
@@ -416,7 +416,7 @@ SnippetsLab 支持 iCloud 同步，这意味着当我们切换到新 Mac 后，�
 
 Paste 也可以记录剪切板历史，支持 iCloud 同步。快捷键：`⌘ Command` + `⇧ Shift` + `V` 打开 Paste，`⌘ Command` + `数字` 快速复制某一条记录。
 
-![](https://imageslr.com/media/15846159741374.jpg)
+![](Extras/Media/15846159741374.jpg)
 
 ### 科学上网
 
@@ -445,7 +445,7 @@ Paste 也可以记录剪切板历史，支持 iCloud 同步。快捷键：`⌘ C
 
 [MWeb](https://zh.mweb.im/) 是一款非常优秀的 Markdown 笔记软件。在尝试过印象笔记、Typora、Bear、Ulysses 等多款软件后，个人认为没有一款软件可以替代 MWeb，后者对 Markdown 与 LaTex 的支持相当完善，同时保持了良好的使用体验。此外，MWeb 也有 iOS 应用，在不内购的情况下可以阅读、编辑笔记，无法新建笔记，足以满足日常需求。
 
-![](https://imageslr.com/media/15846229381899.jpg)
+![](Extras/Media/15846229381899.jpg)
 
 对我而言， MWeb 更重要的角色是**个人知识库**。MWeb 的笔记管理功能相当强大，支持任意层级的文件夹、标签等功能。日常使用中，我会配合 [mweb alfred workflow](https://github.com/tianhao/alfred-mweb-workflow) 插件，根据关键字，快速检索文档。
 
@@ -453,7 +453,7 @@ MWeb 是一个_开放的_ 笔记软件，这意味着我可以直接编辑其中
 
 MWeb 可以通过 iCloud 同步，只需要将文档库保存在 iCloud 云盘下。
 
-![](https://imageslr.com/media/15846233668366.jpg)
+![](Extras/Media/15846233668366.jpg)
 
 我制作的 MWeb、Typora 主题：
 
@@ -469,7 +469,7 @@ OmniFocus 是一个 GTD 工具，我使用它来安排我的待办事项。OmniF
 
 OmniOutliner 是一款简洁、专注的大纲制作软件，我使用它来安排我的每日计划。将 OmniOutliner 文件存储在 iCloud 云盘中，可以实现多端同步。
 
-![](https://imageslr.com/media/15846254446005.jpg)
+![](Extras/Media/15846254446005.jpg)
 
 ### 浏览器：Chrome
 

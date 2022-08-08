@@ -17,7 +17,7 @@ x:: [[mac充电和键盘灯异常 - 重置SMC]]
 
 将 Mac 关机，然后开机并立即同时按住以下四个按键：Option、Command、P 和 R。您可以在大约 20 秒后松开这些按键，在此期间您的 Mac 可能看似在重新启动。
 
-![](https://pic2.zhimg.com/v2-3825418c288d55b266bbd4d23f1c7d2d_r.jpg)
+![](Extras/Media/v2-3825418c288d55b266bbd4d23f1c7d2d_r.jpg)
 
 在会发出启动声的 Mac 电脑上，您可以在两次启动声之后松开这些按键。
 

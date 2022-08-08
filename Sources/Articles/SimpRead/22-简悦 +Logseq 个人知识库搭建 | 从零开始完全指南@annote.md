@@ -25,7 +25,7 @@ tag:
 
 
 > [📌](<http://localhost:7026/reading/22#id=1659284957295>) <mark style="background-color: #ffeb3b">Highlight</mark> 
-> ![](https://cdn.sspai.com/2022/03/13/15f31ce403527e0b615e72f7905da1f7.gif)
+> ![](Extras/Media/15f31ce403527e0b615e72f7905da1f7.gif)
 
 ^sran-1659284957295
 

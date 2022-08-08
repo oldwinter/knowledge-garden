@@ -31,7 +31,7 @@ tag:
 
 
 > [📌](<http://localhost:7026/reading/19#id=1659270520424>) <mark style="background-color: #ffeb3b">Highlight</mark> 
-> ![](https://cdn.sspai.com/2022/02/28/article/dd84f9633f1567c4f8e2c37d3b204221)
+> ![](Extras/Media/dd84f9633f1567c4f8e2c37d3b204221.png)
 
 ^sran-1659270520424
 

@@ -33,7 +33,7 @@ tag:
 
 
 > [📌](<http://localhost:7026/reading/17#id=1659269666404>) <mark style="background-color: #ffeb3b">Highlight</mark> 
-> ![](https://cdn.sspai.com/2022/02/03/article/cc4c5b88d49d8fa280cdcc4c34119c85)
+> ![](Extras/Media/cc4c5b88d49d8fa280cdcc4c34119c85.png)
 
 ^sran-1659269666404
 

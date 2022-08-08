@@ -22,7 +22,7 @@ width: 1920
 
 <grid drag="27 85" drop="0 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](https://picsum.photos/id/1005/500/400)
+![](Extras/Media/400.jpg)
 
 **Agenda 01**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -32,7 +32,7 @@ width: 1920
 
 <grid drag="27 85" drop="27 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](https://picsum.photos/id/1010/500/400)
+![](Extras/Media/400-3.jpg)
 
 **Agenda 02**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -42,7 +42,7 @@ width: 1920
 
 <grid drag="27 85" drop="54 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](https://picsum.photos/id/1025/500/400)
+![](Extras/Media/400-2.jpg)
 
 **Agenda 03**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -57,7 +57,7 @@ Presentation Agenda <!-- element drag="60 20" drop="57 48" rotate="90" style="fo
 
 ## The abnormal design agency<!-- element drag="30 35" drop="60 3" align="left"-->
 
-![](https://picsum.photos/id/110/600/400) <!-- element drag="30 35" drop="26 12"-->
+![](Extras/Media/400-1.jpg) <!-- element drag="30 35" drop="26 12"-->
 
 ###### Minimo Studio<!-- element drag="15 5" drop="11 55" align="left"-->
 
@@ -65,7 +65,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <!-- element style="font-size: 24px" drag="30 30" drop="11 58" align="justify"-->
 
-![](https://picsum.photos/id/112/500/400) <!-- element drag="30 45" drop="47 40"-->
+![](Extras/Media/400.jpg) <!-- element drag="30 45" drop="47 40"-->
 
 ---
 <!-- slide bg="white"-->
@@ -79,9 +79,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 </grid>
 
-![](https://picsum.photos/id/1068/600/400) <!-- element drag="32 40" drop="28 10"-->
+![](Extras/Media/400.jpg) <!-- element drag="32 40" drop="28 10"-->
 
-![](https://picsum.photos/id/113/600/400) <!-- element drag="32 40" drop="28 50"-->
+![](Extras/Media/400.jpg) <!-- element drag="32 40" drop="28 50"-->
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
@@ -106,7 +106,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <grid drag="35 70" drop="52 18" bg="#EEB73F"/>
 
-![](https://picsum.photos/id/21/450/400) <!-- element drag="25 60" drop="49 23"-->
+![](Extras/Media/400.jpg) <!-- element drag="25 60" drop="49 23"-->
 
 # Founder<!-- element drag="25 10" drop="68 48" rotate="90"-->
 
@@ -183,7 +183,7 @@ Branding Specialist <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](https://picsum.photos/id/1005/300/300) <!-- element drag="15 25" drop="-10 5"-->
+![](Extras/Media/300.jpg) <!-- element drag="15 25" drop="-10 5"-->
 
 <grid drag="15 10" drop="30 45" align="left">
 
@@ -193,7 +193,7 @@ Creative Director <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](https://picsum.photos/id/1010/300/300) <!-- element drag="15 25" drop="45 37"-->
+![](Extras/Media/300-3.jpg) <!-- element drag="15 25" drop="45 37"-->
 
 <grid drag="15 10" drop="60 -12" align="left" >
 
@@ -203,7 +203,7 @@ Marketing Expert <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](https://picsum.photos/id/1025/300/300) <!-- element drag="15 25" drop="-10 -5"-->
+![](Extras/Media/300-1.jpg) <!-- element drag="15 25" drop="-10 -5"-->
 
 ---
 <!-- slide bg="white"-->
@@ -223,7 +223,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 	
 </grid>
 
-![](https://picsum.photos/id/64/300/300) <!-- element drag="40 70" drop="-18 -18"-->
+![](Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="-18 -18"-->
 
 ### Editorial Designer<!-- element drag="28 10" drop="-1 25"-->
 
@@ -239,7 +239,7 @@ LoremIpsumLoremIpsum <!-- element style="font-size: 24px" -->
 
 </grid>
 
-![](https://picsum.photos/id/659/300/300) <!-- element drag="40 70" drop="20 -18"-->
+![](Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="20 -18"-->
 
 <grid drag="25 40" drop="65 20" align="justify">
 
@@ -308,11 +308,11 @@ We help you create, grow and foster connections with your customers. And we thin
 
 <grid drag="25 100" drop="25 0" justify-content="center">
 
-![](https://picsum.photos/id/756/400/300)
+![](Extras/Media/300-3.jpg)
 
-![](https://picsum.photos/id/76/400/300)
+![](Extras/Media/300-1.jpg)
 
-![](https://picsum.photos/id/760/400/300)
+![](Extras/Media/300-2.jpg)
 
 </grid>
 
@@ -372,7 +372,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- element style="font-size: 24px" -->
 </grid>
 
-![](https://picsum.photos/id/885/800/1220) <!-- element drag="40 80" drop="10 10" style="max-height: 100%;max-width:100%" -->
+![](Extras/Media/1220.jpg) <!-- element drag="40 80" drop="10 10" style="max-height: 100%;max-width:100%" -->
 
 <grid drag="27 40" drop="18 40" bg="white" opacity="0.5" pad="26px"/>
 
@@ -389,11 +389,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- slide bg="white"-->
 <grid drag="40 100" drop="left" bg="#EEB73F" justify-content="center" align="">
 
-![](https://picsum.photos/id/756/400/300)
+![](Extras/Media/300-3.jpg)
 
-![](https://picsum.photos/id/76/400/300)
+![](Extras/Media/300-2.jpg)
 
-![](https://picsum.photos/id/760/400/300)
+![](Extras/Media/300-2.jpg)
 
 </grid>
 
@@ -434,11 +434,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <grid drag="100 70" drop="0 30" bg="#EEB73F" flow="row" align="top" pad="0 160px">
 
-![](https://picsum.photos/id/978/450/700)
+![](Extras/Media/700-1.jpg)
 
-![](https://picsum.photos/id/996/450/700)
+![](Extras/Media/700.jpg)
 
-![](https://picsum.photos/id/1011/450/700)
+![](Extras/Media/700-1.jpg)
 
 </grid>
 
@@ -657,7 +657,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 *Keep the text simply* <!-- element drag="20 5" drop="10 18" align="left"-->
 
 <grid drag="60 40" drop="5 40">
-![](https://picsum.photos/id/183/1200/900)
+![](Extras/Media/900.jpg)
 </grid>
 
 # It's a break section

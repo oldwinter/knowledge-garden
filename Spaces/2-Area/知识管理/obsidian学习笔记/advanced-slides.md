@@ -275,11 +275,11 @@ note 之后，就是演讲者自己的笔记和注释
 
 <split even>
 
-![](https://picsum.photos/id/1005/250/250)
+![](Extras/Media/250-3.jpg)
 
-![](https://picsum.photos/id/1010/250/250)
+![](Extras/Media/250-1.jpg)
 
-![](https://picsum.photos/id/1025/250/250)
+![](Extras/Media/250-7.jpg)
 
 </split>
 
@@ -311,17 +311,17 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split wrap="4">
 
-![](https://picsum.photos/id/1010/250/250)
+![](Extras/Media/250-1.jpg)
 
-![](https://picsum.photos/id/1011/250/250)
+![](Extras/Media/250-4.jpg)
 
-![](https://picsum.photos/id/1012/250/250)
+![](Extras/Media/250.jpg)
 
-![](https://picsum.photos/id/1013/250/250)
+![](Extras/Media/250-3.jpg)
 
-![](https://picsum.photos/id/1014/250/250)
+![](Extras/Media/250-1.jpg)
 
-![](https://picsum.photos/id/1015/250/250)
+![](Extras/Media/250-2.jpg)
 
 </split>
 
@@ -329,21 +329,21 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split no-margin>
 
-![](https://picsum.photos/id/1001/250/250)
+![](Extras/Media/250-2.jpg)
 
-![](https://picsum.photos/id/1002/250/250)
+![](Extras/Media/250-3.jpg)
 
-![](https://picsum.photos/id/1003/250/250)
+![](Extras/Media/250-8.jpg)
 
-![](https://picsum.photos/id/1004/250/250)
+![](Extras/Media/250-5.jpg)
 
-![](https://picsum.photos/id/1005/250/250)
+![](Extras/Media/250-3.jpg)
 
-![](https://picsum.photos/id/1006/250/250)
+![](Extras/Media/250-6.jpg)
 
-![](https://picsum.photos/id/1009/250/250)
+![](Extras/Media/250-3.jpg)
 
-![](https://picsum.photos/id/1008/250/250)
+![](Extras/Media/250-3.jpg)
 
 </split>
 --

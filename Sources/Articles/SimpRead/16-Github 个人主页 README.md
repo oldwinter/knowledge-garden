@@ -13,7 +13,7 @@ hayschan/hayschan 是一个特殊的库。 它的 `README.md` 将出现在您的
 
 目前大部分人将此用作个人介绍：
 
-![](https://cdn.sspai.com/2020/10/17/7e11d89b1bd52994d09ee5568079dd05.png)
+![](Extras/Media/7e11d89b1bd52994d09ee5568079dd05.png)
 
 Spencer Woo 的 GitHub 主页
 
@@ -25,7 +25,7 @@ Spencer Woo 的 GitHub 主页
 
 有人使用 GitHub Actions 折腾出自动更新个人 `README.MD`，把动态的 Releases 和博客文章加到其中：
 
-![](https://cdn.sspai.com/2020/10/17/8b4cb428d3adb84f0d8ba1092789eda3.png)
+![](Extras/Media/8b4cb428d3adb84f0d8ba1092789eda3.png)
 
 汇聚 Releases、最新的博客文章
 
@@ -43,15 +43,15 @@ GitHub Readme Stats 动态地把 GitHub 数据展现在个人 `README.MD` 中，
 
 就能制作出花里花俏的 GitHub 数据卡片：
 
-![](https://cdn.sspai.com/2020/10/17/e05df3e7f2ae1d5f10a39225c6eb5639.png)
+![](Extras/Media/e05df3e7f2ae1d5f10a39225c6eb5639.png)
 
 各种风格的卡片（几乎每一个细节都能自定义）
 
 在链接里加入各种参数，更能定制字体、背景、主题、边框——功能强大。至少要个二十来分钟才能把文档页的可定制项看完。实际效果如下：
 
-![](https://res.cloudinary.com/practicaldev/image/fetch/s--4RwKACsa--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/z09wemeeut7m5ob4i6al.jpg)
+![](Extras/Media/z09wemeeut7m5ob4i6al.jpg.png)
 
-![](https://cdn.sspai.com/2020/10/17/c276e76f92280f5a0051a2809d367140.png)
+![](Extras/Media/c276e76f92280f5a0051a2809d367140.png)
 
 GitHub 卡片作者的 README
 
@@ -63,7 +63,7 @@ GitHub 卡片作者的 README
 
 第一步：**创建新的 Repository**，仓库名为自己的用户名，形如 `仓库名/用户名` -> `hayschan/hayschan`
 
-![](https://cdn.sspai.com/2020/10/17/b27bb9f84887a0b3e03185411b878a92.png)
+![](Extras/Media/b27bb9f84887a0b3e03185411b878a92.png)
 
 第二步：修改你的 `README.md`，可以简简单单介绍下自己，或者加上前文提到的花里花俏（这步使用 markdown 语言）
 
@@ -90,7 +90,7 @@ GitHub 卡片作者的 README
 
 放在 GitHub 的效果如图：
 
-![](https://cdn.sspai.com/2020/10/17/382e4a1168c91f7979395022f503fd3f.png)
+![](Extras/Media/382e4a1168c91f7979395022f503fd3f.png)
 
 ## 小结
 

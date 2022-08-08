@@ -11,7 +11,7 @@ date modified: 2022-07-20
 - structure 和 chaos 的对立
 注：原文的对立，用的词语是 tension，也有 [[张力]] 的意思。
 
-![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202206221733367.png)
+![](Extras/Media/202206221733367.png)
 
 | - | folders | links |
 | --------- | -------- | ------- |
