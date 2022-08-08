@@ -1,4 +1,6 @@
-.nav-folder-title[data-path='logseq'] {
+div[data-path='logseq'],
+div[data-path='logseq'] + div.nav-folder-children 
+{
     display: none;
 }
 

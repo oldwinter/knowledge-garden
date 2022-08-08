@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "projects": {},
+  "selectedDraftVaultPath": "Calendar/Daily notes/test.md",
+  "userScriptFolder": null,
+  "sessions": [
+    {
+      "start": "2022-08-07T18:14:49.076Z",
+      "total": 0,
+      "drafts": {
+        "Calendar/Daily notes/test.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Calendar/Daily notes/快快.md": {
+          "total": 0,
+          "scenes": {}
+        },
+        "Calendar/Daily notes/lll/Index.md": {
+          "total": 0,
+          "scenes": {
+            "亮亮": 0,
+            "快快": 0,
+            "撇皮": 0
+          }
+        }
+      }
+    }
+  ],
+  "showWordCountInStatusBar": false,
+  "startNewSessionEachDay": true,
+  "sessionGoal": 500,
+  "applyGoalTo": "all",
+  "notifyOnGoal": true,
+  "countDeletionsForGoal": false,
+  "keepSessionCount": 30,
+  "workflows": {
+    "Default Workflow": {
+      "name": "Default Workflow",
+      "description": "A starter workflow. Feel free to edit, rename, or delete it and create your own.",
+      "steps": [
+        {
+          "id": "strip-frontmatter",
+          "optionValues": {}
+        },
+        {
+          "id": "remove-links",
+          "optionValues": {
+            "remove-wikilinks": true,
+            "remove-external-links": true
+          }
+        },
+        {
+          "id": "prepend-title",
+          "optionValues": {
+            "format": "$3{#} $1",
+            "separator": "\n\n"
+          }
+        },
+        {
+          "id": "concatenate-text",
+          "optionValues": {
+            "separator": "\\n\\n---\\n\\n"
+          }
+        },
+        {
+          "id": "write-to-note",
+          "optionValues": {
+            "target": "manuscript.md",
+            "open-after": true
+          }
+        }
+      ]
+    }
+  },
+  "test": "2022-08-07T18:37:51.188Z"
+}

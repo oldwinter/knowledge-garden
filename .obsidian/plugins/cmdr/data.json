@@ -15,6 +15,12 @@
   "rightRibbon": [],
   "titleBar": [
     {
+      "id": "app:toggle-right-sidebar",
+      "icon": "align-right",
+      "name": "Toggle right sidebar",
+      "mode": "any"
+    },
+    {
       "id": "workspace:undo-close-pane",
       "icon": "undo-glyph",
       "name": "重新打开上一个关闭的面板",
@@ -36,18 +42,6 @@
       "id": "obsidian-weread-plugin:sync-weread-notes-command",
       "icon": "book-open",
       "name": "Weread Plugin: Sync Weread Notes",
-      "mode": "any"
-    },
-    {
-      "id": "daily-notes",
-      "icon": "calendar",
-      "name": "日记: 打开/创建今天的日记",
-      "mode": "any"
-    },
-    {
-      "id": "sliding-panes-obsidian:toggle-sliding-panes",
-      "icon": "sidebar",
-      "name": "Sliding Panes (Andy's Mode): Toggle Sliding Panes",
       "mode": "any"
     }
   ],

@@ -6,7 +6,7 @@
   "compress": true,
   "autosave": true,
   "autosaveInterval": 10000,
-  "drawingFilenamePrefix": "图 ",
+  "drawingFilenamePrefix": "白板 ",
   "drawingEmbedPrefixWithFilename": true,
   "drawingFilnameEmbedPostfix": " ",
   "drawingFilenameDateTime": "YYYY-MM-DD",

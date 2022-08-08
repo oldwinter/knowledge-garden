@@ -15,3 +15,5 @@ markdown发明人2004年发布1.0版本，此后没有更新过。[Daring Fireba
 此后的markdown，都是基于一些缺陷进行的改进和扩充，最有名最具共识的的应该就是[[GFM - GitHub Flavored Markdown]]。
 
 还有个CommonMark，试图统一markdown混乱的各自为政的局面，但是由于markdown发明人不认可，导致其市场认可度也不是很高。
+
+[[obsidian的markdown语法]]

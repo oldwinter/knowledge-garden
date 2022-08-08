@@ -61,6 +61,12 @@
           "count": 10,
           "lastUpdated": 1659621852139
         }
+      },
+      "🤖obsidian": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1659902730431
+        }
       }
     },
     "co-tip": {
@@ -82,8 +88,8 @@
     "roamresearch": {
       "roamresearch": {
         "currentVault": {
-          "count": 2,
-          "lastUpdated": 1657807867815
+          "count": 3,
+          "lastUpdated": 1659893781310
         }
       }
     },
@@ -190,8 +196,8 @@
     "frontmatter": {
       "frontmatter": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657733086257
+          "count": 2,
+          "lastUpdated": 1659899600737
         }
       }
     },
@@ -1216,6 +1222,30 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659882993379
+        }
+      }
+    },
+    "orphaned": {
+      "orphaned": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1659892541761
+        }
+      }
+    },
+    "logseq": {
+      "🤖logseq": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659893795923
+        }
+      }
+    },
+    "linter": {
+      "linter": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1659894029214
         }
       }
     }

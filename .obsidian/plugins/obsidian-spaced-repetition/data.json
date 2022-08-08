@@ -6,7 +6,7 @@
     "flashcardTags": [
       "#cards"
     ],
-    "convertFoldersToDecks": true,
+    "convertFoldersToDecks": false,
     "cardCommentOnSameLine": true,
     "burySiblingCards": false,
     "showContextInCards": true,
@@ -15,7 +15,7 @@
     "showFileNameInFileLink": true,
     "randomizeCardOrder": true,
     "convertHighlightsToClozes": true,
-    "convertBoldTextToClozes": false,
+    "convertBoldTextToClozes": true,
     "singlelineCardSeparator": "??",
     "singlelineReversedCardSeparator": "???",
     "multilineCardSeparator": "",
@@ -37,6 +37,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-08-05",
+  "buryDate": "2022-08-08",
   "buryList": []
 }
