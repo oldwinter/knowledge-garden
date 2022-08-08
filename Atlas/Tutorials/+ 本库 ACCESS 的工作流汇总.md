@@ -13,7 +13,7 @@ up: [[ACCESS 笔记组织法]]
 
 ## Calendar
 
-- [[以Daily notes为入口|Daily notes工作流]]
+- [[++ Daily notes工作流|Daily notes工作流]]
 - [[本库的计划与回顾工作流]]
 - [[++ 本库文章发布工作流]]
 

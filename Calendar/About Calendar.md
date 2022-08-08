@@ -6,7 +6,7 @@ tags: tutorial
 
 up:: [[ACCESS 笔记组织法]]
 
-[[以Daily notes为入口]]
+[[++ Daily notes工作流]]
 
 以时间和日期为依托的笔记都放Calendar文件夹下，以便将来回顾笔记时，有时间线索作为依据。可能包含如下日志笔记：
 

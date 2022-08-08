@@ -50,7 +50,7 @@ tags: TOC, todo/持续迭代
 
 ## JOURNALS | 每日笔记
 
-- [[以Daily notes为入口]]
+- [[++ Daily notes工作流]]
 - [[计划与回顾]]
    - [[模板与套路]]
    - [[每周计划与回顾]]

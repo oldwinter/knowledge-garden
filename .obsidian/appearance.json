@@ -10,7 +10,7 @@
     "图谱"
   ],
   "theme": "system",
-  "baseFontSize": 16,
+  "baseFontSize": 14,
   "baseFontSizeAction": true,
   "translucency": false
 }

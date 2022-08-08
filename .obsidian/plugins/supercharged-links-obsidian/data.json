@@ -100,7 +100,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "index",
+      "value": "dataview",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "0ba9-36fe",

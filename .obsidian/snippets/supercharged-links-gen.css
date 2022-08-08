@@ -240,13 +240,13 @@ div[data-id="2d72-a9bb"] div.setting-item-description::after,
 }
 
 div[data-id="0ba9-36fe"] div.setting-item-description,
-[data-link-tags*="index" i] {
+[data-link-tags*="dataview" i] {
     color: var(--0ba9-36fe-color) !important;
     font-weight: var(--0ba9-36fe-weight);
 }
 
 .c-0ba9-36fe-use-background div[data-id="0ba9-36fe"] div.setting-item-description,
-.c-0ba9-36fe-use-background .data-link-text[data-link-tags*="index" i] {
+.c-0ba9-36fe-use-background .data-link-text[data-link-tags*="dataview" i] {
     background-color: var(--0ba9-36fe-background-color) !important;
     border-radius: 5px;
     padding-left: 2px;
@@ -255,12 +255,12 @@ div[data-id="0ba9-36fe"] div.setting-item-description,
 }
 
 div[data-id="0ba9-36fe"] div.setting-item-description::before,
-.data-link-icon[data-link-tags*="index" i]::before {
+.data-link-icon[data-link-tags*="dataview" i]::before {
     content: var(--0ba9-36fe-before);
 }
 
 div[data-id="0ba9-36fe"] div.setting-item-description::after,
-.data-link-icon-after[data-link-tags*="index" i]::after {
+.data-link-icon-after[data-link-tags*="dataview" i]::after {
     content: var(--0ba9-36fe-after);
 }
 
@@ -732,7 +732,7 @@ settings:
         default: '#ffffff'
     - 
         id: 0ba9-36fe
-        title: tag is index
+        title: tag is dataview
         description: Example note
         type: heading
         collapsed: true
