@@ -91,7 +91,7 @@ README ^5JylsUbA
 
 [[☘️ 花园导览 🍀/其他/📩 订阅newsletter.md]] ^qsrqXpgN
 
-[[🗜 效率工具]] ^c04AnF0K
+[[🗜 效率工具使用]] ^c04AnF0K
 
 [[☘️ 花园导览 🍀/🧰 本库使用指南.md]] ^ogBYtLXK
 

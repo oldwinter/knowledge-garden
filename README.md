@@ -1,8 +1,6 @@
 ---
-uid: 26a40d22-8bd5-4dc7-9bc4-937fe279a000
 date created: 2022-06-09
-date modified: 2022-08-03
-home: true
+date modified: 2022-08-08
 tags: readme说明
 ---
 <h1 align="center">oldwinterの数字花园</h1>
