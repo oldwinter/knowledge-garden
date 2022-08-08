@@ -5,7 +5,7 @@
   "showAttachments": true,
   "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#MOC",
@@ -15,7 +15,7 @@
       }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -25,6 +25,6 @@
   "repelStrength": 12.119391025641,
   "linkStrength": 1,
   "linkDistance": 251,
-  "scale": 0.42823364340892156,
+  "scale": 0.8094208240327804,
   "close": true
 }

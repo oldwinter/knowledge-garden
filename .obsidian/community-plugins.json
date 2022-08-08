@@ -30,5 +30,7 @@
   "sliding-panes-obsidian",
   "obsidian-file-cooker",
   "obsidian-better-command-palette",
-  "longform"
+  "longform",
+  "obsidian-shellcommands",
+  "obsidian-outliner"
 ]

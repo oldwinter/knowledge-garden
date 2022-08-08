@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-05
 date modified: 2022-08-07
-tags: readme说明
+tags: tutorial
 ---
 
 ## 为什么要给文件名引入emoji

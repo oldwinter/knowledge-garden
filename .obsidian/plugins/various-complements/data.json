@@ -1084,8 +1084,8 @@
     "读书": {
       "读书": {
         "currentVault": {
-          "count": 1,
-          "lastUpdated": 1659693538434
+          "count": 2,
+          "lastUpdated": 1659947857435
         }
       }
     },
@@ -1196,8 +1196,8 @@
     "co-info": {
       "co-info": {
         "customDictionary": {
-          "count": 14,
-          "lastUpdated": 1659882149816
+          "count": 15,
+          "lastUpdated": 1659950856339
         }
       }
     },
@@ -1246,6 +1246,30 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1659894029214
+        }
+      }
+    },
+    "MacOS": {
+      "MacOS": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659950873119
+        }
+      }
+    },
+    "alfred": {
+      "alfred": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659952498856
+        }
+      }
+    },
+    "powershell": {
+      "powershell": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1659952980497
         }
       }
     }

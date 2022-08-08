@@ -1,5 +1,5 @@
 ---
-tags: readme说明
+tags: tutorial
 ---
 
 up:: [[ACCESS 笔记组织法]]

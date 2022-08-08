@@ -112,7 +112,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "readme",
+      "value": "tutorial",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "17d0-6ee6",

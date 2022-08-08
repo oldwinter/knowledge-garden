@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-07
-tags: readme说明
+tags: tutorial
 ---
 
 x:: [[PARA]], [[+ Building a Second Brain 翻译和读书笔记]]

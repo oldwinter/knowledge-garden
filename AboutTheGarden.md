@@ -1,7 +1,7 @@
 ---
 date created: 2022-07-06
 date modified: 2022-08-08
-tags: readme说明
+tags: tutorial
 ---
 
 hello👋，我是oldwinter❄️，写过几万行代码，带过十几人团队。

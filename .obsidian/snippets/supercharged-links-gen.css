@@ -265,13 +265,13 @@ div[data-id="0ba9-36fe"] div.setting-item-description::after,
 }
 
 div[data-id="17d0-6ee6"] div.setting-item-description,
-[data-link-tags*="readme" i] {
+[data-link-tags*="tutorial" i] {
     color: var(--17d0-6ee6-color) !important;
     font-weight: var(--17d0-6ee6-weight);
 }
 
 .c-17d0-6ee6-use-background div[data-id="17d0-6ee6"] div.setting-item-description,
-.c-17d0-6ee6-use-background .data-link-text[data-link-tags*="readme" i] {
+.c-17d0-6ee6-use-background .data-link-text[data-link-tags*="tutorial" i] {
     background-color: var(--17d0-6ee6-background-color) !important;
     border-radius: 5px;
     padding-left: 2px;
@@ -280,12 +280,12 @@ div[data-id="17d0-6ee6"] div.setting-item-description,
 }
 
 div[data-id="17d0-6ee6"] div.setting-item-description::before,
-.data-link-icon[data-link-tags*="readme" i]::before {
+.data-link-icon[data-link-tags*="tutorial" i]::before {
     content: var(--17d0-6ee6-before);
 }
 
 div[data-id="17d0-6ee6"] div.setting-item-description::after,
-.data-link-icon-after[data-link-tags*="readme" i]::after {
+.data-link-icon-after[data-link-tags*="tutorial" i]::after {
     content: var(--17d0-6ee6-after);
 }
 
@@ -791,7 +791,7 @@ settings:
         default: '#ffffff'
     - 
         id: 17d0-6ee6
-        title: tag is readme
+        title: tag is tutorial
         description: Example note
         type: heading
         collapsed: true
