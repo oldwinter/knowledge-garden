@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-04
-date modified: 2022-07-14
+date modified: 2022-08-09
 tags: article/done
 ---
 
@@ -12,7 +12,7 @@ tags: article/done
 
 其实有个最好用的插件，不仅能满足当前同步方案的基本效果，还能实现实时同步的效果，亲测完美，延时小于2s。官方的图如下：
 
-![https://forum-zh.obsidian.md/uploads/default/original/2X/e/e631ee36b7b2906e60edda58e5e43cdb57f9544b.gif](Extras/Media/https!forum-zh.obsidian.md!uploads!default!original!2X!e!e631ee36b7b2906e60edda58e5e43cdb57f9544b.gif)
+![](Extras/Media/https!forum-zh.obsidian.md!uploads!default!original!2X!e!e631ee36b7b2906e60edda58e5e43cdb57f9544b.gif)
 
 这个帖子已经完整讨论了LiveSync插件的使用方式。
 
