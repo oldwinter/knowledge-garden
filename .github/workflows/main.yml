@@ -29,6 +29,9 @@ jobs:
           version: master
       - name: add a nojekyll file
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
+      # 关闭vercel部署成功对于github的commit的自动留言，避免notification干扰。
+      - name: add a vercel config file
+        run: cp $GITHUB_WORKSPACE/.github/vercel/vercel.json .
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
