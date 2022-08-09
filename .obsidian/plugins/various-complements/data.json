@@ -580,8 +580,8 @@
     "dailynote": {
       "dailynote": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659626872070
+          "count": 3,
+          "lastUpdated": 1660030458478
         }
       }
     },
@@ -1278,6 +1278,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660019422824
+        }
+      }
+    },
+    "自上而下": {
+      "自上而下": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1660030204455
+        }
+      }
+    },
+    "自下而上": {
+      "自下而上": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660030208162
         }
       }
     }

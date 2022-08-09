@@ -22,7 +22,7 @@
   },
   "spellcheck": false,
   "vimMode": false,
-  "autoPairMarkdown": false,
-  "autoPairBrackets": false,
+  "autoPairMarkdown": true,
+  "autoPairBrackets": true,
   "smartIndentList": true
 }
