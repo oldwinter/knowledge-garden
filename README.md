@@ -46,7 +46,7 @@ tags: tutorial
 ## 贡献与交流
 
 - 非常抱歉目前这是我的私人笔记库，可能暂时没法儿接受其他人的笔记合入。
-- 如果您有相关的问题，请移步[discussion](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会第一时间回复。
+- 如果您有相关的问题，或希望我加速填坑，请移步[discussion](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。提问前，可以尝试搜索哦，也许我已经写过相关的笔记了。
 
 ## 找我从诗词歌赋，谈到人生哲学
 
