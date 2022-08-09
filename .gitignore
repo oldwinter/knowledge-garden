@@ -15,3 +15,6 @@ Spaces/2-Area/个人职业生涯/**
 .obsidian/plugins/simpread/data.json
 
 .obsidian/plugins/recent-files-obsidian/data.json
+
+# billfish配置文件忽略
+Extras/Media/.bf/**

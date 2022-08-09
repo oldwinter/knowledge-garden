@@ -1,0 +1,159 @@
+{
+  "excalibrainFilepath": "Extras/Draws/excalibrain.md",
+  "indexUpdateInterval": 120000,
+  "hierarchy": {
+    "exclusions": [
+      "excalidraw-border-color",
+      "excalidraw-css",
+      "excalidraw-default-mode",
+      "excalidraw-export-dark",
+      "excalidraw-export-pngscale",
+      "excalidraw-export-svgpadding",
+      "excalidraw-export-transparent",
+      "excalidraw-font",
+      "excalidraw-font-color",
+      "excalidraw-link-brackets",
+      "excalidraw-link-prefix",
+      "excalidraw-linkbutton-opacity",
+      "excalidraw-onload-script",
+      "excalidraw-plugin",
+      "excalidraw-url-prefix",
+      "kanban-plugin"
+    ],
+    "parents": [
+      "Parent",
+      "Parents",
+      "u",
+      "up"
+    ],
+    "children": [
+      "Child",
+      "Children",
+      "d",
+      "down"
+    ],
+    "friends": [
+      "Friend",
+      "Friends",
+      "j",
+      "Jump",
+      "Jumps",
+      "x"
+    ]
+  },
+  "inferAllLinksAsFriends": false,
+  "inverseInfer": false,
+  "renderAlias": true,
+  "nodeTitleScript": "",
+  "backgroundColor": "#0c3e6aff",
+  "excludeFilepaths": [],
+  "showInferredNodes": true,
+  "showAttachments": true,
+  "showVirtualNodes": true,
+  "showFolderNodes": false,
+  "showTagNodes": false,
+  "showPageNodes": true,
+  "showNeighborCount": true,
+  "showFullTagName": false,
+  "maxItemCount": 30,
+  "renderSiblings": true,
+  "baseNodeStyle": {
+    "prefix": "",
+    "backgroundColor": "#00000066",
+    "fillStyle": "solid",
+    "textColor": "#ffffffff",
+    "borderColor": "#00000000",
+    "fontSize": 20,
+    "fontFamily": 3,
+    "maxLabelLength": 30,
+    "roughness": 0,
+    "strokeShaprness": "round",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "padding": 10,
+    "gateRadius": 5,
+    "gateOffset": 15,
+    "gateStrokeColor": "#ffffffff",
+    "gateBackgroundColor": "#ffffffff",
+    "gateFillStyle": "solid"
+  },
+  "centralNodeStyle": {
+    "fontSize": 30,
+    "backgroundColor": "#C49A13FF",
+    "textColor": "#000000ff"
+  },
+  "inferredNodeStyle": {
+    "backgroundColor": "#000005b3",
+    "textColor": "#95c7f3ff"
+  },
+  "virtualNodeStyle": {
+    "backgroundColor": "#ff000066",
+    "fillStyle": "hachure",
+    "textColor": "#ffffffff"
+  },
+  "siblingNodeStyle": {
+    "fontSize": 15
+  },
+  "attachmentNodeStyle": {
+    "prefix": "📎 "
+  },
+  "folderNodeStyle": {
+    "prefix": "📂 ",
+    "strokeShaprness": "sharp",
+    "borderColor": "#ffd700ff",
+    "textColor": "#ffd700ff"
+  },
+  "tagNodeStyle": {
+    "prefix": "#",
+    "strokeShaprness": "sharp",
+    "borderColor": "#4682b4ff",
+    "textColor": "#4682b4ff"
+  },
+  "tagNodeStyles": {},
+  "tagStyleList": [],
+  "baseLinkStyle": {
+    "strokeColor": "#696969FF",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "roughness": 0,
+    "startArrowHead": "none",
+    "endArrowHead": "none",
+    "showLabel": false,
+    "fontSize": 10,
+    "fontFamily": 3,
+    "textColor": "#ffffffff"
+  },
+  "inferredLinkStyle": {
+    "strokeStyle": "dashed"
+  },
+  "folderLinkStyle": {
+    "strokeColor": "#ffd700ff"
+  },
+  "tagLinkStyle": {
+    "strokeColor": "#4682b4ff"
+  },
+  "hierarchyLinkStyles": {
+    "Parent": {},
+    "Parents": {},
+    "u": {},
+    "up": {},
+    "Child": {},
+    "Children": {},
+    "d": {},
+    "down": {},
+    "Friend": {},
+    "Friends": {},
+    "j": {},
+    "Jump": {},
+    "Jumps": {},
+    "x": {}
+  },
+  "navigationHistory": [],
+  "allowOntologySuggester": true,
+  "ontologySuggesterParentTrigger": "::p",
+  "ontologySuggesterChildTrigger": "::c",
+  "ontologySuggesterFriendTrigger": "::f",
+  "ontologySuggesterTrigger": ":::",
+  "ontologySuggesterMidSentenceTrigger": "(",
+  "boldFields": false
+}

@@ -1,0 +1,10 @@
+.unused-images-logs {
+    margin-bottom: 13px;
+    margin-top: 5px;
+}
+
+.unused-images-center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

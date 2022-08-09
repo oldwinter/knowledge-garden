@@ -6,19 +6,19 @@
     },
     {
       "name": "wr_vid",
-      "value": ""
+      "value": "10500316"
     },
     {
       "name": "wr_skey",
-      "value": ""
+      "value": "_uyiPRR9"
     },
     {
       "name": "wr_pf",
-      "value": ""
+      "value": "0"
     },
     {
       "name": "wr_rt",
-      "value": ""
+      "value": "web@BNgfVm4JCqpbNDRWcwa_WL"
     },
     {
       "name": "wr_localvid",
@@ -42,11 +42,11 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1659174365202,
+  "lastCookieTime": 1659987955559,
   "isCookieValid": true,
   "user": "拉不动的冬不拉",
   "userVid": "10500316",
-  "template": "---\ntags: weread\nisbn: {{metaData.isbn}}\ncategory: {{metaData.category}}\ncover: {{metaData.cover}}\nauthor: {{metaData.author}}\npublisher: {{metaData.publisher}}\n---\n## 元数据\n> [!abstract] {{metaData.title}}\n> - ![ {{metaData.title}}|200]({{metaData.cover}})\n> - 书名： {{metaData.title}}\n> - 作者： {{metaData.author}}\n> - 简介： {{metaData.intro}}\n> - 出版时间 {{metaData.publishTime}}\n> - ISBN： {{metaData.isbn}}\n> - 分类： {{metaData.category}}\n> - 出版社： {{metaData.publisher}}\n\n## 高亮划线\n{% for chapter in chapterHighlights %}\n### {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n- 📌 {{ highlight.markText |trim }} ^{{highlight.chapterUid}}-{{highlight.range}}\n    - ⏱ [[{{highlight.createTime.slice(0, 10)}}]] {{highlight.createTime.slice(10, 16)}}{% endif %} {% endfor %}{% endfor %}\n## 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n### {{chapter.chapterTitle}}\n{% if  chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n#### 章节评论 No.{{loop.index}}\n- {{chapterReview.content}} ^{{chapterReview.reviewId}}\n    - ⏱ [[{{chapterReview.createTime.slice(0, 10)}}]] {{chapterReview.createTime.slice(10, 16)}} {% endfor%}{%endif %}{% if chapter.reviews %}{%for review in chapter.reviews %}\n#### 划线评论\n- 📌 {{review.abstract |trim }}  ^{{review.reviewId}}\n    - 💭 {{review.content}}\n    - ⏱  [[{{review.createTime.slice(0, 10)}}]] {{review.createTime.slice(10, 16)}}\n{% endfor %} {%endif %} {% endif %} {% endfor %}\n## 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n### 书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ [[{{bookReview.createTime.slice(0, 10)}}]] {{bookReview.createTime.slice(10, 16)}}\n{% endfor%}{% endif %}",
+  "template": "---\nauthor: {{metaData.author}}\ncategory: {{metaData.category}}\ncover: {{metaData.cover}}\nisbn: {{metaData.isbn}}\nlastReadDate: {{metaData.lastReadDate}}\npublisher: {{metaData.publisher}}\ntags: weread\n---\n\n## 元数据\n\n> [!abstract] {{metaData.title}}\n> - ![ {{metaData.title}}|200]({{metaData.cover}})\n> - 书名： {{metaData.title}}\n> - 作者： {{metaData.author}}\n> - 简介： {{metaData.intro}}\n> - 出版时间 {{metaData.publishTime}}\n> - ISBN： {{metaData.isbn}}\n> - 分类： {{metaData.category}}\n> - 出版社： {{metaData.publisher}}\n\n## 高亮划线\n{% for chapter in chapterHighlights %}\n### {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n- 📌 {{ highlight.markText |trim }} ^{{highlight.chapterUid}}-{{highlight.range}}\n    - ⏱ [[{{highlight.createTime.slice(0, 10)}}]] {{highlight.createTime.slice(10, 16)}}{% endif %} {% endfor %}{% endfor %}\n## 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n### {{chapter.chapterTitle}}\n{% if chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n#### 章节评论 No.{{loop.index}}\n- {{chapterReview.content}} ^{{chapterReview.reviewId}}\n    - ⏱ [[{{chapterReview.createTime.slice(0, 10)}}]] {{chapterReview.createTime.slice(10, 16)}} {% endfor%}{%endif %}{% if chapter.reviews %}{%for review in chapter.reviews %}\n#### 划线评论\n- 📌 {{review.abstract |trim }} ^{{review.reviewId}}\n    - 💭 {{review.content}}\n    - ⏱ [[{{review.createTime.slice(0, 10)}}]] {{review.createTime.slice(10, 16)}}\n{% endfor %} {%endif %} {% endif %} {% endfor %}\n## 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n### 书评 No.{{loop.index}} {{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ [[{{bookReview.createTime.slice(0, 10)}}]] {{bookReview.createTime.slice(10, 16)}}\n{% endfor%}{% endif %}\n",
   "noteCountLimit": -1,
   "subFolderType": "category",
   "fileNameType": "BOOK_NAME-AUTHOR",

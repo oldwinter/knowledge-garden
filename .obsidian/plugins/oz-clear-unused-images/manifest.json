@@ -1,0 +1,10 @@
+{
+    "id": "oz-clear-unused-images",
+    "name": "Clear Unused Images",
+    "version": "1.0.6",
+    "minAppVersion": "0.11.13",
+    "description": "Clear the images that you are not using anymore in your markdown notes to save space.",
+    "author": "Ozan",
+    "authorUrl": "https://www.ozan.pl",
+    "isDesktopOnly": false
+}

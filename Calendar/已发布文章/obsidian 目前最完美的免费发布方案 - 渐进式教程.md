@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-14
-date modified: 2022-07-14
+date modified: 2022-08-09
 tags: article/done
 ---
 
@@ -85,6 +85,10 @@ tags: article/done
 	- 网站名修改。修改根目录的`_config.yaml`第一行title字段即可。
 	- 有能力的同学，自己根据jekyll官方文档，定制自己的界面和样式即可。
 	- 完整重复步骤3，看更改是否生效。
+- 5.⚠️重要注意事项
+	- 图片推荐使用[[图片保存：图床or本地|图床]]。若你未使用图床，而是使用本地图片。则需
+		- 在obsidian库中，引用本地图片不使用`![[xx.png]]`，而是使用`![](Extras/Media/xx.png)`格式。
+		- 在[[netlify]]的Build Setting的Build command设置中，将图片从obsidian的图片库移动至工程根目录，如`mv _notes/Extras . && jekyll build --trace`。
 - （可选）自定义自己的域名
 	- 在netlify界面按提示一步步操作即可，需要有自己的域名且已经备案。
 	- [[第一次购买并备案域名的经验]]

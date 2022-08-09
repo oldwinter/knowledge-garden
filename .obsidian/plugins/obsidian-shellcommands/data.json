@@ -70,6 +70,25 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {}
+    },
+    "3": {
+      "platform_specific_commands": {
+        "default": "open obsidian://advanced-uri?vault=knowledge-garden&commandid=obsidian-weread-plugin%253Async-weread-notes-command"
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {}
     }
   },
   "prompts": [
