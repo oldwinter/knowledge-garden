@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 58,
-          "lastUpdated": 1659860324967
+          "count": 59,
+          "lastUpdated": 1660056421385
         },
         "internalLink": {
           "count": 5,
@@ -133,30 +133,6 @@
         }
       }
     },
-    "地域": {
-      "地域": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657470972079
-        }
-      }
-    },
-    "2022-07-11": {
-      "2022-07-11": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657470983915
-        }
-      }
-    },
-    "remotely save": {
-      "remotely save": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657470998695
-        }
-      }
-    },
     "excalibrain": {
       "excalibrain": {
         "internalLink": {
@@ -196,8 +172,8 @@
     "frontmatter": {
       "frontmatter": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659899600737
+          "count": 3,
+          "lastUpdated": 1660052856955
         }
       }
     },
@@ -508,8 +484,8 @@
     "Roam Research": {
       "Roam Research": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658393787287
+          "count": 2,
+          "lastUpdated": 1660052738452
         }
       }
     },
@@ -836,8 +812,8 @@
     "local first": {
       "local first": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659357773563
+          "count": 3,
+          "lastUpdated": 1660051697430
         }
       }
     },
@@ -876,8 +852,8 @@
     "dataview": {
       "dataview": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659615320038
+          "count": 3,
+          "lastUpdated": 1660055366947
         }
       }
     },
@@ -1052,8 +1028,8 @@
     "supercharged-links": {
       "supercharged-links": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659874474959
+          "count": 3,
+          "lastUpdated": 1660051940110
         }
       }
     },
@@ -1244,8 +1220,12 @@
     "linter": {
       "linter": {
         "currentVault": {
+          "count": 2,
+          "lastUpdated": 1660055431977
+        },
+        "internalLink": {
           "count": 1,
-          "lastUpdated": 1659894029214
+          "lastUpdated": 1660055435921
         }
       }
     },
@@ -1294,6 +1274,78 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660030208162
+        }
+      }
+    },
+    "DailyNote": {
+      "DailyNote": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660051236424
+        }
+      }
+    },
+    "wikilink": {
+      "wikilink": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660051296383
+        }
+      }
+    },
+    "gatsby": {
+      "gatsby": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660051530507
+        }
+      }
+    },
+    "Calendar": {
+      "Calendar": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1660053078821
+        }
+      }
+    },
+    "periodic-notes": {
+      "periodic-notes": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660053086319
+        }
+      }
+    },
+    "remotely save": {
+      "remotely save": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660053432710
+        }
+      }
+    },
+    "zettelkasten": {
+      "zettelkasten": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660054647205
+        }
+      }
+    },
+    "2022-08-09": {
+      "2022-08-09": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660055217829
+        }
+      }
+    },
+    "another quick switcher": {
+      "another quick switcher": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660055309742
         }
       }
     }

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-22
-date modified: 2022-07-20
+date modified: 2022-08-09
 tags: tutorial
 ---
 
@@ -12,7 +12,7 @@ up:: [[ACCESS 笔记组织法]]
 
 这里的[[MOC]]是事后总结归纳，不强调完备性。
 
-
+一些临时的，pending的又不舍得删除的笔记先放到Pending文件夹里，等以后再处理。
 
 The cards folder is one of my favorite places because it has **umami**. Apparently umami is one of the five basic tastes. There are: Sweetness, Sourness, Saltiness, Bitterness, and that oddball Umami.
 

@@ -1,7 +1,7 @@
 ---
-aliases: Daily notes工作流
+aliases: 
 date created: 2022-06-09
-date modified: 2022-08-04
+date modified: 2022-08-09
 ---
 
 ## dailynote中写闪念笔记，生成的文件回顾整理时挪到永久笔记中

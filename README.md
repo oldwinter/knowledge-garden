@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-08
+date modified: 2022-08-10
 tags: tutorial
 ---
 <h1 align="center">oldwinterの数字花园</h1>
@@ -42,6 +42,11 @@ tags: tutorial
     - [[个人知识笔记系统]]。以[[🤖obsidian]]为中心。即本库。
     - [[个人输出发布系统]]。以[[🤖notion]]为中心。
 - 各个系统之间的联动与配合，参见[[效率系统4大子系统联动与配合]]。
+
+## 贡献与交流
+
+- 非常抱歉目前这是我的私人笔记库，可能暂时没法儿接受其他人的笔记合入。
+- 如果您有相关的问题，请移步[discussion](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会第一时间回复。
 
 ## 找我从诗词歌赋，谈到人生哲学
 
