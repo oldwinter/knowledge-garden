@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 59,
-          "lastUpdated": 1660056421385
+          "count": 60,
+          "lastUpdated": 1660103758023
         },
         "internalLink": {
           "count": 5,
@@ -854,6 +854,10 @@
         "internalLink": {
           "count": 3,
           "lastUpdated": 1660055366947
+        },
+        "frontMatter": {
+          "count": 2,
+          "lastUpdated": 1660102182290
         }
       }
     },
@@ -1288,8 +1292,8 @@
     "wikilink": {
       "wikilink": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660051296383
+          "count": 2,
+          "lastUpdated": 1660100047310
         }
       }
     },
