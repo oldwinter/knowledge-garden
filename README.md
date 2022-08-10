@@ -23,8 +23,8 @@ tags: tutorial
 
 ## 快速开始
 
-- 在线逛一逛。访问本库的在线发布版本，借助页面底部或右侧的[[反向链接]]面板随意漫游，感受[[双链笔记]]和[[卡片笔记]]的魅力。这里是地图：[[☘️ 花园导览 🍀]]。
-- 下来用一用。`git clone` 本库，并用 [[🤖obsidian]]、[[🤖logseq]]或[[🤖VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
+- 在线逛一逛。访问本库的[主发布站](https://oldwinter.top/README#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)[^备用]，借助页面底部或右侧的[[反向链接]]面板随意漫游，感受[[双链笔记]]和[[卡片笔记]]的魅力。这里是地图：[[☘️ 花园导览 🍀]]。
+- 下来用一用。`git clone` 或download本[源代码仓](https://github.com/oldwinter/knowledge-garden)，并用 [[🤖obsidian]]、[[🤖logseq]]或[[🤖VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
 
 ## 目录结构和本开箱即用库截图
 
@@ -46,7 +46,8 @@ tags: tutorial
 ## 贡献与交流
 
 - 如果您想参与贡献，非常抱歉目前这是我的个人笔记库，可能暂时没法儿接受其他人的笔记合入。
-- 如果您有相关问题，或希望我加速填坑，请移步[discussion](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
+- 如果您有相关问题，或希望我加速填坑，请移步[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
 - 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com 。
 
-[^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[` 语法。
+[^3]: vscode 需额外安装 foam 插件后，便支持 [[双链笔记]] 的 `[[]]` 语法。
+[^备用]: [备发布站](https://notes.oldwinter.top/readme#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)

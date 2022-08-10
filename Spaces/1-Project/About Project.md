@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
 date modified: 2022-07-20
+tags: tutorial
 ---
 
 [[项目笔记]] 的所在地。集中存放短中期聚焦的项目内容。

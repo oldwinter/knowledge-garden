@@ -50,7 +50,7 @@ tags: [excalidraw]
 
 [[Atlas/TOCs/TOCs.md]] ^0sBZpvXT
 
-[[AREA - 领域]] ^tQU9SIrf
+[[About Area]] ^tQU9SIrf
 
 [[GTD]] ^ZeBkT571
 

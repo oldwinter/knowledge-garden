@@ -74,10 +74,7 @@
   ],
   "macros": [],
   "hide": {
-    "statusbar": [
-      "pane-relief",
-      "backlink"
-    ],
+    "statusbar": [],
     "leftRibbon": [
       "复习卡片",
       "新建 Excalidraw 绘图",

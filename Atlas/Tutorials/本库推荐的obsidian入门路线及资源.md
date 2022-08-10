@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-14
-date modified: 2022-08-07
+date modified: 2022-08-10
 ---
 
 up:: [[🧰 本库使用指南]]
@@ -17,7 +17,8 @@ up:: [[🧰 本库使用指南]]
 
 - 快速过一遍官方帮助文档：[Obsidian Help](https://help.obsidian.md/)
 - 实践过程中，遇到问题，可以先搜索一下[[🧑落山鸡]]的帮助文档，很全面：[Obsidian中文教程 - Obsidian Publish](https://publish.obsidian.md/chinesehelp)
-- 其他各种文章，基本都能在落山鸡的帮助文档中搜到索引。再次用文字感谢这个🐔。
+	- 其他各种文章，基本都能在落山鸡的帮助文档中搜到索引。再次用文字感谢这个🐔。
+	- 这位小姐姐写的文章深入浅出，单拎出来推荐一下：[莉莉安Obsidian文章MOC - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/324)
 
 ## 然后看看别人的示例库
 

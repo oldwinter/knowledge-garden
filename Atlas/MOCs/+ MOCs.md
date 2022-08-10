@@ -28,10 +28,10 @@ tags: MOC, todo/持续迭代
 
 2 个笔记组织的方法：[[PARA]],[[MOC]]。我采用[[PARA和MOC联用组织笔记]]。实践了2个月后，我感到一些不足，于是切换到了[[ACCESS 笔记组织法]]。
 
-### [[PROJECT - 项目]]
+### [[About Project]]
 
-### [[AREA - 领域]]
+### [[About Area]]
 
-### [[RESOURCE - 资源]]
+### [[About Resource]]
 
-### [[ARCHIVE - 归档]]
+### [[About Archive]]

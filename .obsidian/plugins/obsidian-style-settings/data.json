@@ -152,7 +152,7 @@
   "shimmering-focus@@mac-native-scrollbar": false,
   "shimmering-focus@@sidebar-font-size": 0.85,
   "shimmering-focus@@status-bar-font-size": 0.7,
-  "shimmering-focus@@hide-pane-relief-focus-lock-status-bar": true,
+  "shimmering-focus@@hide-pane-relief-focus-lock-status-bar": false,
   "shimmering-focus@@code-block-tab-size": 2,
   "customizable-page-header-buttons@@page-header-spacing-mobile": 12,
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
