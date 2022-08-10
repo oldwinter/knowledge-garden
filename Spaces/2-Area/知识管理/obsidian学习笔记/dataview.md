@@ -36,6 +36,8 @@ dataview 的牛逼之处，在于它让我们成为自己笔记库的大数据�
 
 ## dataviewjs 的参考资料
 
+
+[[鸟姐的dataviewjs技巧]]
 [ObsidianDataview文档中文 - 知乎](https://www.zhihu.com/column/c_1504479637841866752)
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)

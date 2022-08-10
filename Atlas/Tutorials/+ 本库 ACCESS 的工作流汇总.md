@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-07
-tags: MOC, todo/本周
+tags: MOC, todo/持续迭代
 ---
 
 up: [[ACCESS 笔记组织法]]
@@ -14,7 +14,7 @@ up: [[ACCESS 笔记组织法]]
 ## Calendar
 
 - [[++ Daily notes工作流]]
-- [[本库的计划与回顾工作流]]
+- [[本库计划与回顾工作流]]
 - [[++ 本库文章发布工作流]]
 
 ## Cards

@@ -13,10 +13,10 @@ CALENDAR file.ctime
 FROM ""
 ```
 
-
+## DailyNote
 ```dataview
 list
-from "Calendar/每日日志" and -#MOC and -#readme说明 and -#index索引 
+from "Calendar/Daily notes" and -#MOC and -#readme说明 and -#index索引 
 sort dates desc
 limit 999
 ```

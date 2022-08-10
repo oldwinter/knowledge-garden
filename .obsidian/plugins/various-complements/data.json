@@ -64,8 +64,8 @@
       },
       "🤖obsidian": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659902730431
+          "count": 3,
+          "lastUpdated": 1660115850942
         }
       }
     },
@@ -120,8 +120,8 @@
     "ACCESS 笔记组织法": {
       "ACCESS 笔记组织法": {
         "internalLink": {
-          "count": 4,
-          "lastUpdated": 1659623024315
+          "count": 5,
+          "lastUpdated": 1660117117135
         }
       }
     },
@@ -556,8 +556,8 @@
     "dailynote": {
       "dailynote": {
         "internalLink": {
-          "count": 3,
-          "lastUpdated": 1660030458478
+          "count": 4,
+          "lastUpdated": 1660113193138
         }
       }
     },
@@ -798,6 +798,12 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1659201430519
+        }
+      },
+      "🤖notion": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660106532112
         }
       }
     },
@@ -1284,8 +1290,8 @@
     "DailyNote": {
       "DailyNote": {
         "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660051236424
+          "count": 2,
+          "lastUpdated": 1660113196080
         }
       }
     },
@@ -1358,6 +1364,30 @@
         "frontMatter": {
           "count": 4,
           "lastUpdated": 1660077593955
+        }
+      }
+    },
+    "本库推荐的obsidian入门路线及资源": {
+      "本库推荐的obsidian入门路线及资源": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660115633804
+        }
+      }
+    },
+    "原因": {
+      "原因": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660115649971
+        }
+      }
+    },
+    "本库的设计哲学": {
+      "本库的设计哲学": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660115737887
         }
       }
     }
