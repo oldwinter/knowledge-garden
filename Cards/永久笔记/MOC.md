@@ -1,8 +1,10 @@
 ---
 aliases: 什么是MOC笔记组织法, 索引笔记, Map Of Content
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-11
 ---
+
+Map Of Content，简单理解就是内容地图，是索引性质的笔记。往往带有很多链接，引导自己或读者跳转到其他笔记中。
 
 **笔记原子化，并通过 MOC 索引笔记将这些原子化的笔记串起来。**
 

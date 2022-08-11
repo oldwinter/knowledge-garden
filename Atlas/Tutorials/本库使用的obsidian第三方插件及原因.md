@@ -6,7 +6,7 @@ date modified: 2022-08-09
 up:: [[obsidian插件]]  
 x:: [[2022年7月，obsidian 依然必装的 10 个插件]]
 
-## [[2022-08-09]]确定的插件列表清单
+## [[2022-08-09]]确定使用的插件列表清单
 
 - [[advanced-slides]]
 - [[advanced Tables]]
