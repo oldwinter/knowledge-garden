@@ -2,6 +2,7 @@
 date created: 2022-06-30
 date modified: 2022-07-20
 ---
+x:: [[obsidian组织笔记的N个 xx first]]
 
 ## 5个要素，综合形成了obsidian独特的笔记组织方法
 

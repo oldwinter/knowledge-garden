@@ -1,0 +1,10 @@
+{
+	"id": "metadata-menu",
+	"name": "Metadata Menu",
+	"version": "0.1.9",
+	"minAppVersion": "0.15.3",
+	"description": "For data quality enthousiasts: access and manage the metadata of your notes in Obsidian.",
+	"author": "mdelobelle",
+	"authorUrl": "https://github.com/mdelobelle",
+	"isDesktopOnly": false
+}

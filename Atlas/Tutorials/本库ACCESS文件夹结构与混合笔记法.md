@@ -8,14 +8,10 @@ x:: [[混合笔记法]]
 - 从笔记本身的内容而言：
 	- 局部和整体。局部就是某个细分领域的知识点，整体就是全部自己感兴趣的内容。
 	- [[自上而下]]和[[自下而上]]。前者类似思维导图，一分二，二分四，先有骨架，后填内容。后者先散状积累孤立知识点，积累到一定程度形成局部聚合，先有内容，再画骨。
+- 
 - 从笔记组织角度而言：
-	- dailynote first
-	- link first
-	- material first
-	- topic first
-	- architect first
-	- action first
-	- folder first
+	- [[obsidian组织笔记的N个 xx first]]
+
 
 - Atalas
 	- 整体上，[[自上而下]]，俯瞰全局
