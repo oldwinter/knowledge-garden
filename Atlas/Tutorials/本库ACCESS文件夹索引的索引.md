@@ -6,6 +6,6 @@ tags: dataview
 
 ```dataview
 TABLE tags
-FROM [[ACCESS 笔记组织法]] AND #index索引
+FROM [[ACCESS 笔记组织法]] AND #dataview
 SORT file.name asc
 ```

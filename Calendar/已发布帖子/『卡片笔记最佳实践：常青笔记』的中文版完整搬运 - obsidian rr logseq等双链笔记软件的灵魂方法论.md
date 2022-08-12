@@ -9,7 +9,7 @@ Andy Matuschak之前是iOS系统UIkit的核心开发者，也是Mac著名框架S
 
 边阅读常青笔记，边学习如何做常青笔记，这大概叫做元学习吧😂？
 
-十分感谢知乎[[🧑叶俊峣]]团队的翻译和授权。
+十分感谢知乎[[🧑叶峻峣]]团队的翻译和授权。
 
 原文和译文截图：
 ![](https://my-public-pic.oss-cn-hangzhou.aliyuncs.com/202208120012174.png)

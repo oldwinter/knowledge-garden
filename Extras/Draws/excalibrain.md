@@ -48,7 +48,7 @@ tags: [excalidraw]
 
 [[卡片笔记]] ^6KZvWi7f
 
-[[Atlas/TOCs/TOCs.md]] ^0sBZpvXT
+[[§ TOCs]] ^0sBZpvXT
 
 [[About Area]] ^tQU9SIrf
 

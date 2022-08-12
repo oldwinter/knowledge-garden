@@ -14,7 +14,7 @@ x:: [[本库ACCESS文件夹结构与混合笔记法]]
 ## Atlas
 
 - [[+ MOCs]]
-- [[TOCs]]
+- [[§ TOCs]]
 
 ## Calendar
 

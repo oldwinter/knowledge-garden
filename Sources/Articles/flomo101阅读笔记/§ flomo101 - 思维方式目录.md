@@ -38,5 +38,3 @@ tags: TOC
 
 - bilibili 上的录播：[https://www.bilibili.com/video/BV1Vq4y1X7i8/(opens new window)](https://www.bilibili.com/video/BV1Vq4y1X7i8/)
 - PPT 下载：[https://www.aliyundrive.com/s/xFJxiiWMSfX](https://www.aliyundrive.com/s/xFJxiiWMSfX)
-
-原件：[[从一张卡片开始积累知识的复利.pdf]]
