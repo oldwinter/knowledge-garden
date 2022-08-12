@@ -18,14 +18,3 @@ ___
 ## 参考文献
 
 与迈克尔-尼尔森的对话，2019-12-16
-
-## 链接至本文（已汉化）
-
-- [常青笔记应该是原子化的](https://zhuanlan.zhihu.com/p/420726986)
-- [常青笔记应面向概念](https://zhuanlan.zhihu.com/p/421580357)
-- [笔记标题建议使用完整的句子，避免模糊主张](https://zhuanlan.zhihu.com/p/422262632)
-- [常青笔记和 Zettelkasten 卡片系统的异同点](https://zhuanlan.zhihu.com/p/436335609)
-- [概念抓手（来自 Alexander）](https://zhuanlan.zhihu.com/p/418158326)
-- [笔记类型体系](https://zhuanlan.zhihu.com/p/542384570)
-
-

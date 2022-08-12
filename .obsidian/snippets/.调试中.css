@@ -1,3 +1,15 @@
+/* 将常用的dataview放到侧边栏，需要订制样式，例如缩减栏宽等 */
+.sidebarDataview {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #e7e7e7;
+}
+
+
 
 /* 设置以=r.md结尾的文件背景色 */
 .block-language-dataview a[href$="=r.md"]{
@@ -143,4 +155,9 @@
 }
 .theme-dark .markdown-preview-view tr:last-child {
     border-bottom: 1px solid  #3d3d3d;
+}
+
+
+.workspace-tab-header-inner-icon {
+    
 }

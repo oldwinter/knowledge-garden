@@ -13,9 +13,9 @@ const currentFolder = dv.current().file.folder
 const groups =  dv.pages(`"${currentFolder}"`).groupBy(p => p.file.folder)
 for (let group of groups) {
 	dv.header(4, group.key);
-	dv.table(["Name","标签","入链", "创建日期", "修改日期"],
+	dv.table(["Name","标签","入链"],
 		group.rows
 			.sort(k => k.file.name, 'asc')
-			.map(k => [k.file.link,k.file.tags,k.file.inlinks, k.file.cday, k.file.mday]))
+			.map(k => [k.file.link,k.file.tags,k.file.inlinks]))
 }
 ```

@@ -1,8 +1,10 @@
 ---
-date created: 2022-07-06
-date modified: 2022-08-10
+date created: 2022-08-06
+date modified: 2022-08-12
 id: home
 layout: page
+link: https://oldwinter.notion.site/AboutTheGarden-022a04cbfd1c4db59377338d69e3a132
+notionID: 022a04cb-fd1c-4db5-9377-338d69e3a132
 permalink: /
 tags: tutorial
 title: Home
