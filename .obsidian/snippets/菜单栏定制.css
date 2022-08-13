@@ -6,3 +6,21 @@
 .mod-forward {
     display: none;
 }
+
+/* sidebarDataview内的embedded-backlinks不显示 */
+.sidebarDataview .embedded-backlinks{
+    display: none;
+}
+
+.sidebarDataview .frontmatter-container{
+    display: none;
+}
+
+.sidebarDataview+.markdown-reading-view .markdown-preview-view{
+    padding: 2px !important;
+}
+
+.sidebarDataview+.markdown-reading-view .markdown-preview-sizer{
+    padding-bottom: 0px !important;
+}
+

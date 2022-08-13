@@ -25,42 +25,6 @@
 
 
 
-/* 缩减查询结果停驻在侧边栏时的页边距 */
-.workspace-leaf-content  .markdown-preview-view .markdown-preview-section,
-.workspace-leaf-content  .markdown-preview-view{
-    padding: 0px;
-    /* padding: 0px !important; */
-}
-
-.workspace-leaf-content .markdown-preview-section .dataview{
-    margin: 0px;
-}
-.workspace-leaf-content .markdown-preview-section .dataview .table-view-thead{
-    display: none;
-}
-/* 隐藏查询表头 */
-.workspace-leaf-content .dataview .table-view-tbody td{
-    padding: 4px !important;
-    min-width: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-    /* background-color: #000; */
-}
-/* 目录页笔记下方不留空 */
-.workspace-leaf-content .markdown-preview-section{
-/* .element.style{ */
-    padding-bottom: 0px !important;
-    /* min-height: 725px; */
-}
-/* 隐藏yaml区 */
-.markdown-preview-section .workspace-leaf-content .language-yaml{
-    display: none;
-}
-/* 所有内链背景色为透明 */
-.dataview .internal-link{
-    background-color: #00000000 !important;
-}
 
 
 

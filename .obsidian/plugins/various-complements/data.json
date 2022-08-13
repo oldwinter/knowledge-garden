@@ -101,14 +101,6 @@
         }
       }
     },
-    "jekyll": {
-      "jekyll": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1657732744407
-        }
-      }
-    },
     "article/done": {
       "article/done": {
         "frontMatter": {
@@ -143,29 +135,9 @@
     },
     "netlify": {
       "netlify": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1657730417332
-        },
         "internalLink": {
           "count": 3,
           "lastUpdated": 1659986339736
-        }
-      }
-    },
-    "横向卷动布局- andy mode": {
-      "横向卷动布局- andy mode": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657731218414
-        }
-      }
-    },
-    "限制": {
-      "限制": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1657731677525
         }
       }
     },
@@ -174,94 +146,6 @@
         "internalLink": {
           "count": 3,
           "lastUpdated": 1660052856955
-        }
-      }
-    },
-    "稳定": {
-      "稳定": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657736719352
-        }
-      }
-    },
-    "影响": {
-      "影响": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657736748577
-        }
-      }
-    },
-    "支持": {
-      "支持": {
-        "currentVault": {
-          "count": 11,
-          "lastUpdated": 1657744288433
-        }
-      }
-    },
-    "语法": {
-      "语法": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657736929471
-        }
-      }
-    },
-    "价值": {
-      "价值": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657737025666
-        }
-      }
-    },
-    "ruby": {
-      "ruby": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657739096141
-        }
-      }
-    },
-    "vercel": {
-      "vercel": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657741067466
-        }
-      }
-    },
-    "搜索": {
-      "搜索": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657744274957
-        }
-      }
-    },
-    "2022-07-14": {
-      "2022-07-14": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657793101734
-        }
-      }
-    },
-    "alias": {
-      "alias": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657817828434
-        }
-      }
-    },
-    "aliases": {
-      "aliases": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657817835704
         }
       }
     },
@@ -1476,6 +1360,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660145899924
+        }
+      }
+    },
+    "sidebarDataview": {
+      "sidebarDataview": {
+        "frontMatter": {
+          "count": 3,
+          "lastUpdated": 1660334565710
         }
       }
     }
