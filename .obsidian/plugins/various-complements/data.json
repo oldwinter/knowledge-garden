@@ -46,8 +46,8 @@
     "MOC": {
       "MOC": {
         "frontMatter": {
-          "count": 60,
-          "lastUpdated": 1660103758023
+          "count": 62,
+          "lastUpdated": 1660386933497
         },
         "internalLink": {
           "count": 5,
@@ -162,38 +162,6 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1659364753851
-        }
-      }
-    },
-    "all in one": {
-      "all in one": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657962449737
-        }
-      }
-    },
-    "ikilink": {
-      "ikilink": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657962600753
-        }
-      }
-    },
-    "思维导图": {
-      "思维导图": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657963038344
-        }
-      }
-    },
-    "URL scheme": {
-      "URL scheme": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657963118068
         }
       }
     },
@@ -344,8 +312,8 @@
     "Resource": {
       "Resource": {
         "currentVault": {
-          "count": 2,
-          "lastUpdated": 1658850177375
+          "count": 3,
+          "lastUpdated": 1660384140165
         }
       }
     },
@@ -1368,6 +1336,22 @@
         "frontMatter": {
           "count": 3,
           "lastUpdated": 1660334565710
+        }
+      }
+    },
+    "Project": {
+      "Project": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660383866204
+        }
+      }
+    },
+    "少楠": {
+      "🧑少楠": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660399974291
         }
       }
     }

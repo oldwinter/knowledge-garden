@@ -8,7 +8,8 @@
     "隐藏LICENSE文件和logseq文件夹",
     "菜单栏定制",
     "图谱",
-    "侧边栏dataview样式定制"
+    "侧边栏dataview样式定制",
+    "菜单栏及侧边栏定制"
   ],
   "theme": "system",
   "baseFontSize": 14,

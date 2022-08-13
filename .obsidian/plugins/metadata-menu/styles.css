@@ -175,11 +175,21 @@
     margin-top: 1em;
 }
 
+.metadata-menu-setting-item{
+    display: flex;
+}
+
+.metadata-menu-setting-item-name{
+    font-weight: 500;
+}
+
 .metadata-menu-setting-item-info-type{
-    border-radius: 12px;
-    padding: 1px 12px 3px 12px;
+    border-radius: 0.8em;
+    padding: 0.1em 0.75em 0.25em 0.75em;
     color: white;
-    margin-left: 6px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 1.6em;
 }
 
 .metadata-menu-setting-item-info-type.cycle{

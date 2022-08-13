@@ -1,9 +1,7 @@
 ---
-date created: 2022-06-09T00:00:00.000Z
-date modified: 2022-08-10T00:00:00.000Z
+date created: 2022-08-06
+date modified: 2022-08-13
 tags: tutorial
-link: https://oldwinter.notion.site/README-682956b0c45c4adca34b175a98516594
-notionID: 682956b0-c45c-4adc-a34b-175a98516594
 ---
 <h1 align="center">oldwinterの数字花园</h1>
 <p align="center">
@@ -51,5 +49,6 @@ notionID: 682956b0-c45c-4adc-a34b-175a98516594
 - 如果您有相关问题，或希望我加速填坑，请移步[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
 - 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com 。
 
-[^3]: vscode需额外安装foam插件后，便支持[[双链笔记]]的[[wikilink]]语法。
 [^备用]: [备发布站](https://notes.oldwinter.top/readme#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
+
+[^3]: vscode需额外安装foam插件后，便支持[[双链笔记]]的[[wikilink]]语法。
