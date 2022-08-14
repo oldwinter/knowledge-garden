@@ -1,7 +1,7 @@
 {
-  "searchFromHeaders": true,
+  "searchFromHeaders": false,
   "searchByLinks": false,
-  "searchDelayMilliSeconds": 10,
+  "searchDelayMilliSeconds": 0,
   "showDirectory": true,
   "showDirectoryAtNewLine": true,
   "showFullPathOfDirectory": true,

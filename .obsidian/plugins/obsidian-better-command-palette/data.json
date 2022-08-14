@@ -1,5 +1,5 @@
 {
-  "closeWithBackspace": true,
+  "closeWithBackspace": false,
   "fileSearchPrefix": "/",
   "tagSearchPrefix": "#",
   "suggestionLimit": 50,
@@ -9,7 +9,9 @@
   "hotkeyStyle": "auto",
   "createNewFileMod": "Mod",
   "createNewPaneMod": "Shift",
-  "hiddenCommands": [],
+  "hiddenCommands": [
+    "editor:insert-link"
+  ],
   "hiddenFiles": [],
   "hiddenTags": []
 }

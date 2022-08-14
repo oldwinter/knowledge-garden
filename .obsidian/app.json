@@ -3,14 +3,16 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
-  "userIgnoreFilters": null,
+  "userIgnoreFilters": [
+    "Extras/"
+  ],
   "readableLineLength": true,
   "strictLineBreaks": true,
   "emacsyKeys": false,
   "legacyEditor": false,
   "livePreview": true,
   "showLineNumber": false,
-  "communityPluginSortOrder": "release",
+  "communityPluginSortOrder": "download",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "Cards",
   "newLinkFormat": "shortest",

@@ -45,7 +45,7 @@ date modified: 2022-07-20
 	- 平替
 - 浏览器 tabs 搜索，平替 [[chrome-omni插件]]
 	- raycast 更强，bookmark 和 history 都支持
-- [[devonthink]] 搜索
+- [[🤖devonthink]] 搜索
 	- raycast 暂无替代，直接打开 devonthink 的 Spotlight index 开关，就可以文件直接搜索到，曲线救国
 - 词典查找
 	- 平替

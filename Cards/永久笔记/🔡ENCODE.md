@@ -5,7 +5,7 @@ date created: 2022-07-20
 
 Introducing
 
-![image of ENCODE](Extras/Media/image_of_ENCODE.png)
+![image of ENCODE](🔡ENCODE_image_1.png)
 
 ### UNLOCK THE WAY YOUR IDEAS EVOLVE.
 
