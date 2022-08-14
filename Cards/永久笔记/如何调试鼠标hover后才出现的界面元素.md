@@ -2,6 +2,9 @@
 date created: 2022-07-25
 date modified: 2022-08-14
 tags: review
+sr-due: 2022-08-18
+sr-interval: 4
+sr-ease: 270
 ---
 
 [如何调试CSS Hover事件 - 董川民](https://www.dongchuanmin.com/xhtml/1642.html)

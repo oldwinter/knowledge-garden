@@ -3,6 +3,9 @@ aliases: 结构化表达
 date created: 2022-06-09
 date modified: 2022-08-14
 tags: review
+sr-due: 2022-08-18
+sr-interval: 4
+sr-ease: 270
 ---
 
 SCQA模型是一个“结构化表达”工具，是麦肯锡咨询顾问芭芭拉·明托在《金字塔原理》中提出的。

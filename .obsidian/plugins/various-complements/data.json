@@ -128,8 +128,8 @@
     "excalibrain": {
       "excalibrain": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659626139267
+          "count": 3,
+          "lastUpdated": 1660488934023
         }
       }
     },
@@ -162,22 +162,6 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1659364753851
-        }
-      }
-    },
-    "闪念笔记": {
-      "闪念笔记": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1657980455663
-        }
-      }
-    },
-    "snippets": {
-      "snippets": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1657989951625
         }
       }
     },
@@ -1376,6 +1360,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660421946867
+        }
+      }
+    },
+    "读书笔记模板": {
+      "读书笔记模板": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660480796538
+        }
+      }
+    },
+    "heptabase": {
+      "heptabase": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660489034145
         }
       }
     }

@@ -19,6 +19,7 @@ Spaces/2-Area/个人职业生涯/**
 .obsidian/plugins/recent-files-obsidian/data.json
 .obsidian/plugins/omnisearch/searchIndex.json
 .obsidian/plugins/omnisearch/notesCache.json
+.obsidian/plugins/obsidian-advanced-slides/**
 
 # billfish配置文件忽略
 Extras/Media/.bf/**

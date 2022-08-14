@@ -1,13 +1,13 @@
 ---
-date created: 2022-06-07
-date modified: 2022-08-07
+date created: 2022-08-14
+date modified: 2022-08-14
 mindmap-plugin: basic
-tags: TOC, todo/持续迭代
+tags:
+  - TOC
+  - todo/持续迭代
 ---
 
 > 尝试定期将笔记库局部内容结构化，结构化的过程中，会有新的体会。
-
-# TOCs
 
 ## [[README]] | 关于本库&本花园
 
@@ -67,13 +67,10 @@ tags: TOC, todo/持续迭代
 	   - [[个人效率系统工作流]]
 - [[开源、免费与流量]]
 
-
-
 ## [[ACCESS 笔记组织法|ACCESS]]| 我的知识库
+
 - Cards
-	- 
 - Sources
-	- 
 - Spaces
    - [[About Project]]
 	  - [[+ 个人职业生涯]]

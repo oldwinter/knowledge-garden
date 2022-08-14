@@ -24,5 +24,6 @@
   "vimMode": false,
   "autoPairMarkdown": true,
   "autoPairBrackets": true,
-  "smartIndentList": true
+  "smartIndentList": true,
+  "tabSize": 2
 }

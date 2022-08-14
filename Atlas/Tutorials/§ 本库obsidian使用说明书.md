@@ -3,6 +3,7 @@ date created: 2022-08-05
 date modified: 2022-08-07
 tags: TOC todo/本周
 ---
+x:: [[++ 本库使用说明编写工作流]]
 
 > 写给自己看，记录且演进
 - [[本库推荐的obsidian入门路线及资源]]
