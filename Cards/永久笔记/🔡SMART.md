@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-27
 date modified: 2022-07-20
+tags: review
 ---
 
 S=Specific、M=Measurable、A=Attainable、R=Relevant、T=Time-bound

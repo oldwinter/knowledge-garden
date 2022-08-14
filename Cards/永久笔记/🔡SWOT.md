@@ -1,7 +1,8 @@
 ---
 aliases: 个人定位 公司定位
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-14
+tags: review
 ---
 
 ## 个人理解

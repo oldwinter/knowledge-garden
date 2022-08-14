@@ -8,9 +8,19 @@
     "Format Tags in YAML": {
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
     },
+    "Format Yaml Array": {
+      "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": true,
+      "Yaml aliases section style": "multi-line",
+      "Format yaml aliases section": true,
+      "Yaml tags section style": "single string to multi-line",
+      "Default yaml array section style": "multi-line",
+      "Format yaml array sections": true,
+      "Force key values to be single-line arrays": "",
+      "Force key values to be multi-line arrays": ""
+    },
     "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
-      "Text to insert": ""
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
+      "Text to insert": "tags: review"
     },
     "Remove YAML Keys": {
       "Removes the YAML keys specified": false,
@@ -31,8 +41,9 @@
       "Format": "YYYY-MM-DD"
     },
     "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false,
-      "Title Key": "title"
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": false,
+      "Title Key": "title",
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false
     },
     "YAML Title Alias": {
       "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": false,
@@ -93,7 +104,7 @@
       "Style": "consistent"
     },
     "Two Spaces Between Lines with Content": {
-      "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": false
+      "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": true
     },
     "Compact YAML": {
       "Removes leading and trailing blank lines in the YAML front matter.": true,
@@ -110,12 +121,13 @@
       "Ensures that there is an empty line around code fences unless they start or end a document.": true
     },
     "Empty Line Around Tables": {
-      "Ensures that there is an empty line around github flavored tables unless they start or end a document.": false,
+      "Ensures that there is an empty line around github flavored tables unless they start or end a document.": true,
       "Ensures that there is an empty line around tables unless they start or end a document.": true
     },
     "Heading blank lines": {
       "All headings have a blank line both before and after (except where the heading is at the beginning or end of the document).": true,
-      "Bottom": true
+      "Bottom": true,
+      "Empty Line Between Yaml and Header": true
     },
     "Line Break at Document End": {
       "Ensures that there is exactly one line break at the end of a document.": true
@@ -127,7 +139,7 @@
       "There should not be any empty lines between list markers and checklists.": true
     },
     "Remove link spacing": {
-      "Removes spacing around link text.": false
+      "Removes spacing around link text.": true
     },
     "Remove Space around Fullwidth Characters": {
       "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab)": false
@@ -136,7 +148,7 @@
       "There should be a single space after list markers and checkboxes.": true
     },
     "Space between Chinese and English or numbers": {
-      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
+      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": true
     },
     "Trailing spaces": {
       "Removes extra spaces after every line.": true,

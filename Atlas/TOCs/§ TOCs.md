@@ -22,7 +22,7 @@ tags: TOC, todo/持续迭代
 	- [[PARA和MOC联用组织笔记]]
 	- [[LYT 笔记框架]]
 		- [[ACCESS 笔记组织法]]
-- [[+ 本库obsidian使用说明书]]
+- [[§ 本库obsidian使用说明书]]
 	- [[🤖obsidian]]
 		- [[本库推荐的obsidian入门路线及资源]]
 		- [[+ 本库obsidian基本配置及原因]]
