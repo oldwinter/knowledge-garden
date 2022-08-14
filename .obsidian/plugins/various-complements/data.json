@@ -120,8 +120,8 @@
     "S3 - 对象存储服务": {
       "S3 - 对象存储服务": {
         "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658816167356
+          "count": 3,
+          "lastUpdated": 1660510294544
         }
       }
     },
@@ -1376,6 +1376,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660489034145
+        }
+      }
+    },
+    "jsdelivr": {
+      "jsdelivr": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660510241031
         }
       }
     }
