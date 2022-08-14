@@ -9,4 +9,4 @@ date modified: 2022-08-11
 
 让鼠标焦点位于文件管理器里面，然后按cmd + f 唤出文件过滤器，接着批量选中后，右键选batch rename即可。接着在文件中用多光标进行批量编辑后保存，文件名就会被批量替换。
 
-![[vscode 文件批量重命名_image_1.png]]
+![](https://img.oldwinter.top/vscode%20文件批量重命名_image_1.png)

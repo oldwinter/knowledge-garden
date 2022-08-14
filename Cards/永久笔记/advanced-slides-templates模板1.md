@@ -22,7 +22,7 @@ width: 1920
 
 <grid drag="27 85" drop="0 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](advanced-slides-templates模板1_image_1.jpg)
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg)
 
 **Agenda 01**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -32,7 +32,7 @@ width: 1920
 
 <grid drag="27 85" drop="27 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](advanced-slides-templates模板1_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_2.jpg)
 
 **Agenda 02**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -42,7 +42,7 @@ width: 1920
 
 <grid drag="27 85" drop="54 15" bg="#EEB73F" pad="50px" align="justify">
 
-![](advanced-slides-templates模板1_image_3.jpg)
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_3.jpg)
 
 **Agenda 03**
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -57,7 +57,7 @@ Presentation Agenda <!-- element drag="60 20" drop="57 48" rotate="90" style="fo
 
 ## The abnormal design agency<!-- element drag="30 35" drop="60 3" align="left"-->
 
-![](advanced-slides-templates模板1_image_4.jpg) <!-- element drag="30 35" drop="26 12"-->
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_4.jpg) <!-- element drag="30 35" drop="26 12"-->
 
 ###### Minimo Studio<!-- element drag="15 5" drop="11 55" align="left"-->
 
@@ -65,7 +65,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <!-- element style="font-size: 24px" drag="30 30" drop="11 58" align="justify"-->
 
-![](advanced-slides-templates模板1_image_1.jpg) <!-- element drag="30 45" drop="47 40"-->
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg) <!-- element drag="30 45" drop="47 40"-->
 
 ---
 <!-- slide bg="white"-->
@@ -79,9 +79,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 </grid>
 
-![](advanced-slides-templates模板1_image_1.jpg) <!-- element drag="32 40" drop="28 10"-->
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg) <!-- element drag="32 40" drop="28 10"-->
 
-![](advanced-slides-templates模板1_image_1.jpg) <!-- element drag="32 40" drop="28 50"-->
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg) <!-- element drag="32 40" drop="28 50"-->
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
@@ -106,7 +106,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <grid drag="35 70" drop="52 18" bg="#EEB73F"/>
 
-![](advanced-slides-templates模板1_image_1.jpg) <!-- element drag="25 60" drop="49 23"-->
+![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg) <!-- element drag="25 60" drop="49 23"-->
 
 # Founder<!-- element drag="25 10" drop="68 48" rotate="90"-->
 
@@ -183,7 +183,7 @@ Branding Specialist <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](Extras/Media/300.jpg) <!-- element drag="15 25" drop="-10 5"-->
+![](https://img.oldwinter.top/Extras/Media/300.jpg) <!-- element drag="15 25" drop="-10 5"-->
 
 <grid drag="15 10" drop="30 45" align="left">
 
@@ -193,7 +193,7 @@ Creative Director <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](Extras/Media/300-3.jpg) <!-- element drag="15 25" drop="45 37"-->
+![](https://img.oldwinter.top/Extras/Media/300-3.jpg) <!-- element drag="15 25" drop="45 37"-->
 
 <grid drag="15 10" drop="60 -12" align="left" >
 
@@ -203,7 +203,7 @@ Marketing Expert <!-- element style="font-size: 24px"-->
 
 </grid>
 
-![](Extras/Media/300-1.jpg) <!-- element drag="15 25" drop="-10 -5"-->
+![](https://img.oldwinter.top/Extras/Media/300-1.jpg) <!-- element drag="15 25" drop="-10 -5"-->
 
 ---
 <!-- slide bg="white"-->
@@ -223,7 +223,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 	
 </grid>
 
-![](Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="-18 -18"-->
+![](https://img.oldwinter.top/Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="-18 -18"-->
 
 ### Editorial Designer<!-- element drag="28 10" drop="-1 25"-->
 
@@ -239,7 +239,7 @@ LoremIpsumLoremIpsum <!-- element style="font-size: 24px" -->
 
 </grid>
 
-![](Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="20 -18"-->
+![](https://img.oldwinter.top/Extras/Media/300-1.jpg) <!-- element drag="40 70" drop="20 -18"-->
 
 <grid drag="25 40" drop="65 20" align="justify">
 
@@ -308,11 +308,11 @@ We help you create, grow and foster connections with your customers. And we thin
 
 <grid drag="25 100" drop="25 0" justify-content="center">
 
-![](Extras/Media/300-3.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-3.jpg)
 
-![](Extras/Media/300-1.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-1.jpg)
 
-![](Extras/Media/300-2.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-2.jpg)
 
 </grid>
 
@@ -372,7 +372,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- element style="font-size: 24px" -->
 </grid>
 
-![](Extras/Media/1220.jpg) <!-- element drag="40 80" drop="10 10" style="max-height: 100%;max-width:100%" -->
+![](https://img.oldwinter.top/Extras/Media/1220.jpg) <!-- element drag="40 80" drop="10 10" style="max-height: 100%;max-width:100%" -->
 
 <grid drag="27 40" drop="18 40" bg="white" opacity="0.5" pad="26px"/>
 
@@ -389,11 +389,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- slide bg="white"-->
 <grid drag="40 100" drop="left" bg="#EEB73F" justify-content="center" align="">
 
-![](Extras/Media/300-3.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-3.jpg)
 
-![](Extras/Media/300-2.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-2.jpg)
 
-![](Extras/Media/300-2.jpg)
+![](https://img.oldwinter.top/Extras/Media/300-2.jpg)
 
 </grid>
 
@@ -434,11 +434,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 <grid drag="100 70" drop="0 30" bg="#EEB73F" flow="row" align="top" pad="0 160px">
 
-![](Extras/Media/700-1.jpg)
+![](https://img.oldwinter.top/Extras/Media/700-1.jpg)
 
-![](Extras/Media/700.jpg)
+![](https://img.oldwinter.top/Extras/Media/700.jpg)
 
-![](Extras/Media/700-1.jpg)
+![](https://img.oldwinter.top/Extras/Media/700-1.jpg)
 
 </grid>
 
@@ -657,7 +657,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 *Keep the text simply* <!-- element drag="20 5" drop="10 18" align="left"-->
 
 <grid drag="60 40" drop="5 40">
-![](Extras/Media/900.jpg)
+![](https://img.oldwinter.top/Extras/Media/900.jpg)
 </grid>
 
 # It's a break section

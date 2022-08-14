@@ -2,7 +2,7 @@ I spend 17 minutes per day on email, or 7.43% of my total work time over the pas
 
 The average knowledge worker, in contrast, spends [28%](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy) of their time reading, writing, and responding to email — nearly 4 times as much.
 
-![](One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_1.png)
+![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_1.png)
 
 The key to Inbox Zero, everyone knows, is to **“touch each email only once.”**
 
@@ -10,7 +10,7 @@ But what most do not appreciate is that this level of simplicity is the ultimate
 
 Imagine for a second a man checking his postal mailbox. He scans through the day’s mail, identifying bills to pay, magazines to browse, and letters to read. Then he stuffs everything right back into the mailbox, the overdue electricity bill right alongside the junk mail, the personalized postcard together with the tax forms. Each day he repeats this ritual, his mailbox overflowing and bursting at the seams with each passing day.
 
-![](One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_2.jpg)
+![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_2.jpg)
 
 Ridiculous, right?
 
@@ -67,7 +67,7 @@ _Settings_ > _Inbox_ tab > set _Inbox type:_ to _Default_ > uncheck all _Categor
 
 Every single one of these features is a maladaptive add-on to an outdated system; a short-term solution to a long-term problem.
 
-![](One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_3.gif)
+![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_3.gif)
 
 Stars, personal level indicators, system labels, categories, circles, labels, importance markers, filters — get rid of them all, and breathe a sigh of relief.
 
@@ -121,7 +121,7 @@ Every message is a piece of the puzzle keeping you sensitized to the full spectr
 
 This is as true of the Fedex notification telling you your package has arrived at home as it is for the scary Very Important Email that makes you jump out of your chair. Because the former will turn into the latter if not engaged with appropriately.
 
-![](One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_4.jpg)
+![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_4.jpg)
 
 This is the problem with “Inbox Zero crash courses” and weekend self-improvement seminars. They brag about helping people “clear out 5,ooo emails in a weekend!”, but ignore the day-to-day underlying habits, as if that state of affairs will maintain itself.
 
@@ -151,11 +151,11 @@ There are a lot of benefits to using a digital task manager, but for One-Touch p
 
 I personally use and recommend a task manager called [Things](https://culturedcode.com/things/) (Mac and iOS only), because it has the best implementation of this I’ve ever seen: a keyboard shortcut option (ctrl-opt-space) that instantly pops up a tiny semi-transparent window, with a link back to the original email automatically inserted, and the cursor ready for me to identify what the task actually is:
 
-![](One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_5.png)
+![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_5.png)
 
 A good non-Apple option is [Todoist](https://todoist.com/). They offer a Gmail extension that adds an \[Add Task\] button right on the Gmail toolbar. Clicking the button opens up a small window where you can write out the task, which becomes a link back to the original email:
 
-![](Extras/Media/1!W-MKk2UvUL9ZXlAfVgT7Xg.png)
+![](https://img.oldwinter.top/Extras/Media/1!W-MKk2UvUL9ZXlAfVgT7Xg.png)
 
 Critically, these links work regardless of where you move this email, so _you don’t need to do any further work labeling, categorizing, prioritizing, or flagging._ Just click the link in your task manager, and it will take you directly to the original message.
 
@@ -197,7 +197,7 @@ Instapaper, for example, will save anything you forward to a [designated email a
 
 > **11\. Download a Read Later app on all devices, and practice saving items to it from multiple locations**
 
-![](Extras/Media/1!KnO_ZI5DzP2SEG5CpBfsxw.jpeg.jpg)
+![](https://img.oldwinter.top/Extras/Media/1!KnO_ZI5DzP2SEG5CpBfsxw.jpeg.jpg)
 
 ## Fourth, streamline your workflow
 
@@ -213,7 +213,7 @@ But of course there’s a fresh batch of new messages waiting for you, so you ge
 
 Eventually, what started as an innocuous habit of “checking email before starting work” turns into the habit of beelining it straight to your inbox every time you have a free moment, where literally your only option is to react to something you find there — another press of the lever for another dopamine hit. You start thinking of your inbox as a to do list — that anyone anywhere can add items to at will. This habit becomes an addiction that grows to dominate your working life.
 
-![](Extras/Media/1!nAbLLcDVJv9tQPo7h8ytnw.jpeg.jpg)
+![](https://img.oldwinter.top/Extras/Media/1!nAbLLcDVJv9tQPo7h8ytnw.jpeg.jpg)
 
 What we have to do instead is think not only _systemically_ (in terms of systems, as above) but also _systematically_ (methodically). By processing our email according to a well-defined _method_, instead of haphazardly, we create the capability of **calibrating the time spent on email depending on the time available and other constraints**.
 
@@ -284,7 +284,7 @@ In the midst of daily battle, on the elevator or waiting in line, it’s fine to
 
 > **Decide what needs to be done about it, and take one of the 6 following actions:**
 > 
-> ![](Extras/Media/1!mwx6NBeBnL8BRq03yO1UdQ.jpeg.jpg)
+> ![](https://img.oldwinter.top/Extras/Media/1!mwx6NBeBnL8BRq03yO1UdQ.jpeg.jpg)
 
 **1\. Archive (“e” shortcut) immediately**
 

@@ -32,7 +32,7 @@ date modified: 2022-07-14
 
 ## 卡片要素
 
-![](Extras/Media/20220306231443.png)
+![](https://img.oldwinter.top/20220306231443.png)
 
  
 

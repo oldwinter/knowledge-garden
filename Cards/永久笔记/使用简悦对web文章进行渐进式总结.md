@@ -12,7 +12,7 @@ date modified: 2022-07-26
 
 简悦配置真tm麻烦，而且还一堆不生效的小bug。尤其不能使用同步助手去同步配置数据，会出现插件配置不生效的问题。
 
-![[Pasted image 20220726195428.png]]
+![](https://img.oldwinter.top/Pasted%20image%2020220726195428.png)
 
 此外有些文章如果含有|等特殊字符，会导致remotely save同步出问题，要手动处理。
 

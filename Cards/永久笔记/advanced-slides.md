@@ -273,11 +273,11 @@ note 之后，就是演讲者自己的笔记和注释
 
 <split even>
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
-![](advanced-slides_image_3.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_3.jpg)
 
-![](advanced-slides_image_4.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_4.jpg)
 
 </split>
 
@@ -309,17 +309,17 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split wrap="4">
 
-![](advanced-slides_image_3.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_3.jpg)
 
-![](Extras/Media/250-4.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-4.jpg)
 
-![](Extras/Media/250.jpg)
+![](https://img.oldwinter.top/Extras/Media/250.jpg)
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
-![](advanced-slides_image_3.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_3.jpg)
 
-![](Extras/Media/250-2.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-2.jpg)
 
 </split>
 
@@ -327,21 +327,21 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split no-margin>
 
-![](Extras/Media/250-2.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-2.jpg)
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
-![](Extras/Media/250-8.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-8.jpg)
 
-![](Extras/Media/250-5.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-5.jpg)
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
-![](Extras/Media/250-6.jpg)
+![](https://img.oldwinter.top/Extras/Media/250-6.jpg)
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
-![](advanced-slides_image_2.jpg)
+![](https://img.oldwinter.top/advanced-slides_image_2.jpg)
 
 </split>
 --

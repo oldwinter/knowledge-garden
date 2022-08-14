@@ -5,7 +5,7 @@ date created: 2022-07-20
 
 Introducing
 
-![image of ENCODE](🔡ENCODE_image_1.png)
+![image of ENCODE](https://img.oldwinter.top/🔡ENCODE_image_1.png)
 
 ### UNLOCK THE WAY YOUR IDEAS EVOLVE.
 
