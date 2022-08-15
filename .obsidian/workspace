@@ -4,29 +4,137 @@
     "type": "split",
     "children": [
       {
-        "id": "0515da6d1b8d4efb",
+        "id": "396079a1e3a07f34",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 0,
+          "pos": 1,
           "stack": [
             {
-              "leaf": "0515da6d1b8d4efb",
+              "leaf": "396079a1e3a07f34",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/gitignore 语法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🔡CODE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
-              "leaf": "0515da6d1b8d4efb",
+              "leaf": "396079a1e3a07f34",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":20.78575225943647}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":40,\"ch\":0},\"to\":{\"line\":40,\"ch\":0}},\"scroll\":12.393655864901872}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":18,\"ch\":0},\"to\":{\"line\":18,\"ch\":0}},\"scroll\":7.653364491581281}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/§ 本库obsidian使用说明书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":12},\"to\":{\"line\":13,\"ch\":12}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":0},\"to\":{\"line\":4,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":23,\"ch\":0},\"to\":{\"line\":23,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":0},\"to\":{\"line\":13,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/🎥 我的PPT.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":26,\"ch\":34},\"to\":{\"line\":26,\"ch\":34}},\"scroll\":1.7428139183055977}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":25},\"to\":{\"line\":6,\"ch\":25}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "396079a1e3a07f34",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/📩 订阅newsletter.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/gitignore 语法.md",
+            "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -60,6 +168,10 @@
           {
             "id": "4ea8d6f6779182a1",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "tag",
               "state": {
@@ -71,12 +183,16 @@
           {
             "id": "ce044dedd57e8849",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "search",
               "state": {
-                "query": "issu",
-                "matchingCase": false,
-                "explainSearch": false,
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime"
@@ -93,7 +209,7 @@
                   "leaf": "a40ba0e5367abc32",
                   "group": null,
                   "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/快速开始.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false},\"pinned\":true}",
-                  "eState": "{}"
+                  "eState": "{\"scroll\":0}"
                 }
               ]
             },
@@ -126,17 +242,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md"
+                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
               }
             }
           },
           {
             "id": "853ef9e400d6f719",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -145,10 +265,14 @@
           {
             "id": "fc8bc67bdab16945",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -187,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -198,8 +322,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -232,17 +355,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "0515da6d1b8d4efb",
+  "active": "396079a1e3a07f34",
   "lastOpenFiles": [
-    "Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md",
-    "Atlas/Tutorials/快速开始.md",
+    "Cards/永久笔记/🔡CODE.md",
     "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Calendar/Daily notes/2022-08-15.md",
-    "Cards/永久笔记/obsidian插件.md",
-    "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md",
-    "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
-    "README.md",
-    "Atlas/Dataviews/本库的宏观统计数据.md",
-    "HOMEPAGE.md"
+    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+    "Atlas/Tutorials/§ 本库obsidian使用说明书.md",
+    "Atlas/Tutorials/本库推荐的obsidian入门路线及资源.md",
+    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
+    "☘️ 花园导览 🍀/🏹 已发布长文.md",
+    "☘️ 花园导览 🍀/🧀 个人知识管理.md",
+    "AboutTheGarden.md",
+    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
   ]
 }

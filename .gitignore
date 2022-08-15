@@ -23,3 +23,5 @@ Spaces/2-Area/个人职业生涯/**
 # billfish配置文件忽略
 Extras/Media/.bf/**
 
+# workspace文件若不上传，会导致用户下载库以后，新打开的界面的布局信息丢失
+# .obsidian/workspace

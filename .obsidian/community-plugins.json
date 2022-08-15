@@ -9,7 +9,6 @@
   "obsidian-image-auto-upload-plugin",
   "obsidian-linter",
   "obsidian-local-rest-api",
-  "metadata-menu",
   "omnisearch",
   "pane-relief",
   "obsidian-outliner",
@@ -25,5 +24,6 @@
   "obsidian-weread-plugin",
   "cm-chs-patch",
   "obsidian-spaced-repetition",
-  "obsidian-file-cooker"
+  "obsidian-file-cooker",
+  "obsidian-advanced-slides"
 ]
