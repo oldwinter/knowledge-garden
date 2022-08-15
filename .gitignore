@@ -1,7 +1,6 @@
 # 无用状态文件屏蔽
 logseq/bak
 logseq/.recycle
-.obsidian/workspace
 .DS_Store
 .trash
 
