@@ -3,8 +3,6 @@ date created: 2022-06-09
 date modified: 2022-07-14
 ---
 
-## 放弃 roam 用 obsidian 的理由
-
 [Why I chose Obsidian over Roam (as a Roam investor) - YouTube](https://www.youtube.com/watch?v=AWUk8-6yG2g)
 
 ### 概要

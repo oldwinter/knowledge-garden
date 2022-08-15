@@ -1,10 +1,11 @@
 ---
-sr-due: 2023-04-10
+sr-due: [2023-04-10]
 sr-interval: 305
 sr-ease: 330
-date created: 2022-06-09
-date modified: 2022-07-14
-tags: review
+date created: 2022-08-15
+date modified: 2022-08-15
+tags:
+  - review
 ---
 
 ## 本仓库的已安装插件列表
@@ -16,16 +17,17 @@ tags: review
 
 ## 插件安装
 
-johnny整理且每周更新的插件列表，带一句话中文介绍：
+johnny整理且每周更新的插件列表，带一句话中文介绍：  
 [Airtable - OB社区插件汇总 - Johnny整理 - 每周更新 - B站 Johnny学](https://airtable.com/shrdmp10Lxmf5Wmgl/tblJqnWpcKURTjysX)
 
-老外做的插件列表，有源码，有更多数据
+老外做的插件列表，有源码，有更多数据  
 [Obsidian Plugin Stats](https://obsidian-plugin-stats.vercel.app/new)
-
 
 ## 玩过的插件分析
 
-[[2022-07-01]]更新：[[2022年7月，obsidian 依然必装的 10 个插件]]
+[[2022-07-01]]更新：[[2022年7月，obsidian 依然必装的 10 个插件]]  
+
+[[2022-08-15]]新增：[[File cooker]]插件，通过MOC和dataview等文件，针对文件进行批量移动和删除操作，贼好用，简直离不开。
 
 玩过的插件，即使卸载了，这里先不删除，没准儿以后有用到的时候的。[[主动插件和被动插件]]
 

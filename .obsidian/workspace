@@ -4,137 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "25d9187aa2b224fc",
+        "id": "0515da6d1b8d4efb",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "25d9187aa2b224fc",
+              "leaf": "0515da6d1b8d4efb",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/📹放弃roam用obsidian的理由.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":22},\"to\":{\"line\":2,\"ch\":22}}}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":18},\"to\":{\"line\":11,\"ch\":18}},\"scroll\":0}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/§ 本库obsidian使用说明书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":27,\"ch\":0},\"to\":{\"line\":27,\"ch\":0}}}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-07-07.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/本库工作区、界面划分逻辑及图标.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":39,\"ch\":0},\"to\":{\"line\":39,\"ch\":0}},\"scroll\":26.83649567070952}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":30,\"ch\":0},\"to\":{\"line\":30,\"ch\":0}},\"scroll\":1.0049586481547976}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/+ 常青笔记阅读笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":22.77117854489656}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/gitignore 语法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
-              "leaf": "25d9187aa2b224fc",
+              "leaf": "0515da6d1b8d4efb",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/Index for Spaces.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":18.167605430772927}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203200_352.png\"}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":20.78575225943647}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
+            "file": "Cards/永久笔记/gitignore 语法.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -168,10 +60,6 @@
           {
             "id": "4ea8d6f6779182a1",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "tag",
               "state": {
@@ -183,10 +71,6 @@
           {
             "id": "ce044dedd57e8849",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "search",
               "state": {
@@ -209,19 +93,7 @@
                   "leaf": "a40ba0e5367abc32",
                   "group": null,
                   "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/快速开始.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false},\"pinned\":true}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "a40ba0e5367abc32",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "leaf": "a40ba0e5367abc32",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                  "eState": "{}"
                 }
               ]
             },
@@ -254,21 +126,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md"
+                "file": "Cards/永久笔记/gitignore 语法.md"
               }
             }
           },
           {
             "id": "853ef9e400d6f719",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -277,14 +145,10 @@
           {
             "id": "fc8bc67bdab16945",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -323,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -350,31 +214,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1163be978cae7d50",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
-            "state": {
-              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
-              "state": {}
-            }
-          },
-          {
-            "id": "988ff60cfb063f48",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "05ff45ee3dbeba26",
+            "id": "7b538483993a77c6",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -385,28 +225,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "25d9187aa2b224fc",
-  "ophidian:layout-settings": {
-    "pane-relief:focus-lock": true
-  },
+  "active": "0515da6d1b8d4efb",
   "lastOpenFiles": [
-    "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
-    "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
-    "Calendar/Daily notes/2022-08-15.md",
-    "Calendar/Daily notes/产品形态是app还是网页版的取舍.md",
-    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
-    "Cards/永久笔记/工具的归工具，玩具的归玩具.md",
-    "Atlas/Tutorials/§ 本库obsidian使用说明书.md",
+    "Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md",
+    "Atlas/Tutorials/快速开始.md",
     "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+    "Calendar/Daily notes/2022-08-15.md",
+    "Cards/永久笔记/obsidian插件.md",
+    "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md",
+    "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
     "README.md",
-    "AboutTheGarden.md"
+    "Atlas/Dataviews/本库的宏观统计数据.md",
+    "HOMEPAGE.md"
   ]
 }

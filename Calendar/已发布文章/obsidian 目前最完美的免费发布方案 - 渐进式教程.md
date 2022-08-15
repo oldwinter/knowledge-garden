@@ -1,7 +1,8 @@
 ---
-date created: 2022-07-14
-date modified: 2022-08-09
-tags: article/done
+date created: 2022-08-15
+date modified: 2022-08-15
+tags:
+  - article/done
 ---
 
 > 可以访问此文的双链版本，获得完整阅读体验：[obsidian 目前最完美的免费发布方案 - 渐进式教程 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/obsidian+%E7%9B%AE%E5%89%8D%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%8F%91%E5%B8%83%E6%96%B9%E6%A1%88+-+%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%95%99%E7%A8%8B)
@@ -87,7 +88,7 @@ tags: article/done
 	- 完整重复步骤3，看更改是否生效。
 - 5.⚠️重要注意事项
 	- 图片推荐使用[[图片保存：图床or本地|图床]]。若你未使用图床，而是使用本地图片。则需
-		- 在obsidian库中，引用本地图片不使用`![[xx.png]]`，而是使用`![](https://img.oldwinter.top/Extras/Media/xx.png)`格式。
+		- 在obsidian库中，引用本地图片不使用`![[xx.png]]`，而是使用`![](xx.png)`格式。
 		- 在[[netlify]]的Build Setting的Build command设置中，将图片从obsidian的图片库移动至工程根目录，如`mv _notes/Extras . && jekyll build --trace`。
 - （可选）自定义自己的域名
 	- 在netlify界面按提示一步步操作即可，需要有自己的域名且已经备案。
@@ -97,5 +98,3 @@ tags: article/done
 ## 写在最后
 
 我在践行obsidian笔记库全量开源的想法（代码能力不够，笔记来凑😂），欢迎捧场来赏赐1个star⭐️：[GitHub - oldwinter/knowledge-garden: 真实袒露的第二大脑 second brain，未经美化的数字花园 digital garden](https://github.com/oldwinter/knowledge-garden)
-
-此外，如果你对『建设数字花园🌱，也就是公开发布自己的双链笔记』这件事儿感兴趣，欢迎加我微信：oldwinter2，我拉了个10+人小群，只交流这个事儿。而obsidian、logseq或其他笔记使用入门，请不要加我哈，这些有不少专门的新手讨论群，可以b站或百度搜一搜。

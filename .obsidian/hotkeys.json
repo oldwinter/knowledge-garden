@@ -95,5 +95,6 @@
       "key": "P"
     }
   ],
-  "pane-relief:go-6th": []
+  "pane-relief:go-6th": [],
+  "command-palette:open": []
 }

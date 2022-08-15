@@ -21,9 +21,9 @@
       "mode": "any"
     },
     {
-      "id": "workspace:undo-close-pane",
-      "icon": "undo-glyph",
-      "name": "重新打开上一个关闭的面板",
+      "id": "app:toggle-left-sidebar",
+      "icon": "align-left",
+      "name": "折叠/展开左侧边栏",
       "mode": "any"
     },
     {
