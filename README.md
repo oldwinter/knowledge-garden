@@ -24,7 +24,7 @@ tags: tutorial
 ## 快速开始
 
 - 在线逛一逛。访问本库的[主发布站](https://oldwinter.top/README#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)[^备用]，借助页面底部或右侧的[[反向链接]]面板随意漫游，感受[[双链笔记]]和[[卡片笔记]]的魅力。这里是地图：[[☘️ 花园导览 🍀]]。
-- 下来用一用。`git clone`或download本[源代码仓](https://github.com/oldwinter/knowledge-garden)，并用 [[🤖obsidian]]、[[🤖logseq]]或[[🤖VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
+- 下来用一用。`Use this template`或`Code -> Download ZIP`本[源代码仓](https://github.com/oldwinter/knowledge-garden)，并用 [[🤖obsidian]]、[[🤖logseq]][^现状]或[[🤖VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
 
 ## 目录结构和本开箱即用库截图
 
@@ -52,3 +52,5 @@ tags: tutorial
 [^备用]: [备发布站](https://notes.oldwinter.top/readme#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 
 [^3]: vscode需额外安装foam插件后，便支持[[双链笔记]]的[[wikilink]]语法。
+
+[^现状]: 目前我已经放弃logseq联用obsidian的方案，不过您依旧可以用logseq打开本库进行阅读。

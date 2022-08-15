@@ -12,8 +12,86 @@
             {
               "leaf": "25d9187aa2b224fc",
               "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/📹放弃roam用obsidian的理由.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":22},\"to\":{\"line\":2,\"ch\":22}}}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":18},\"to\":{\"line\":11,\"ch\":18}},\"scroll\":0}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/§ 本库obsidian使用说明书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":27,\"ch\":0},\"to\":{\"line\":27,\"ch\":0}}}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-07-07.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "25d9187aa2b224fc",
+              "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+              "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "25d9187aa2b224fc",
@@ -50,94 +128,16 @@
               "group": null,
               "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203200_352.png\"}}",
               "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203031_118.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203200_352.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted image 20220611151616.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320190802_762.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/Daily notes归档/2022-06-11.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":2},\"to\":{\"line\":13,\"ch\":2}},\"scroll\":0}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted image 20220611151616.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203200_352.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320203031_118.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320202845_759.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320202815_760.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320191818_566.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320191102_767.png\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "25d9187aa2b224fc",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220320190917_764.png\"}}",
-              "eState": "{}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calendar/Daily notes/2022-08-15.md",
+            "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
             "mode": "source",
             "backlinks": true,
-            "source": true
+            "source": false
           }
         }
       }
@@ -190,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#评论/少数派",
+                "query": "issu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -254,7 +254,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-15.md"
+                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md"
               }
             }
           },
@@ -268,7 +268,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-15.md",
+                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -284,7 +284,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-15.md",
+                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -323,7 +323,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-15.md",
+                "file": "Sources/Videos/📹放弃roam用obsidian的理由.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -398,15 +398,15 @@
     "pane-relief:focus-lock": true
   },
   "lastOpenFiles": [
-    "Atlas/Tutorials/本库工作区、界面划分逻辑及图标.md",
+    "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
+    "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
+    "Calendar/Daily notes/2022-08-15.md",
+    "Calendar/Daily notes/产品形态是app还是网页版的取舍.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
+    "Cards/永久笔记/工具的归工具，玩具的归玩具.md",
+    "Atlas/Tutorials/§ 本库obsidian使用说明书.md",
     "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Sources/Articles/常青笔记阅读笔记/+ 常青笔记阅读笔记.md",
-    "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
-    "Spaces/Index for Spaces.md",
-    "Extras/Media/Pasted Image 20220320203200_352.png",
-    "Extras/Media/Pasted Image 20220320203031_118.png",
-    "Atlas/Tutorials/快速开始.md",
-    "Extras/Media/Pasted image 20220611151616.png",
-    "Extras/Media/Pasted Image 20220320190802_762.png"
+    "README.md",
+    "AboutTheGarden.md"
   ]
 }

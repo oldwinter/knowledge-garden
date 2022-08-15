@@ -21,7 +21,7 @@ jumps:: [[🤖notion]]
 
 ## 其他
 
-[[放弃roam用obsidian的理由]]
+[[📹放弃roam用obsidian的理由]]
 
 - all same with you #评论/少数派
 	- 1，搞 it，希望工作流闭环
