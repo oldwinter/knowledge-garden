@@ -29,21 +29,3 @@ hello👋，我是oldwinter❄️，写过几万行代码，带过十几人团�
 这座花园里，我挖了很多坑🕳，如果你想敦促我加速填坑，或有一些建议和问题，欢迎来[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)。如果方便的话，给个star⭐️呗。
 
 最后，如果您发现了令人不适的内容，或我的个人隐私，请告知我，万分感谢🦀🦀: cdd2zju@gmail.com
-
----
-<div class="center">
-	<p id="counter"></p>
-	<div id="commentThread">
-	</div>
-</div>
-
----
-<div class="center">
-	<h3>评论：</h3>
-	<form id="formField">
-	<input type="hidden" id="threadID">
-	<input type="hidden" id="commenterName" placeholder="name">
-	<textarea id="commentBody" placeholder="Write here…"></textarea><br><br>
-	<input type="submit" value="Add">
-	</form>
-</div>
