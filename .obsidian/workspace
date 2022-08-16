@@ -4,35 +4,137 @@
     "type": "split",
     "children": [
       {
-        "id": "0ae84269eb6e4626",
+        "id": "10906253e0934cce",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "0ae84269eb6e4626",
+              "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "0ae84269eb6e4626",
+              "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Users/cdd/works/knowledge-garden/测试一下.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":25.783210035381153}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "0ae84269eb6e4626",
+              "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/vscode代码编辑和obsidian文本编辑快捷键.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":0},\"to\":{\"line\":4,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/快捷键、图标、命令行的对比与选择.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":25},\"to\":{\"line\":2,\"ch\":25}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/本库设计哲学及理念.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":22,\"ch\":11},\"to\":{\"line\":22,\"ch\":11}},\"scroll\":17.974481658692184}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布帖子/自荐obsidian开源库和发布站.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":62,\"ch\":7},\"to\":{\"line\":62,\"ch\":7}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":17,\"ch\":0},\"to\":{\"line\":17,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":32},\"to\":{\"line\":15,\"ch\":32}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨君子不立危墙之下.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":2},\"to\":{\"line\":6,\"ch\":2}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/汉隆剃刀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":38},\"to\":{\"line\":13,\"ch\":38}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/如何设计笔记的回顾机制.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":0},\"to\":{\"line\":8,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/如何学会考试.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":25},\"to\":{\"line\":5,\"ch\":25}},\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/间隔重复卡片通常是原子化的，而助记媒介为其赋予结构.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":36,\"ch\":0},\"to\":{\"line\":36,\"ch\":0}},\"scroll\":12.823763955342903}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/笔记标题建议使用完整的句子，避免模糊主张.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/我的晨间写作.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":9.059011164274322}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/创制环境极大程度受作者的动机塑造.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":19},\"to\":{\"line\":10,\"ch\":19}},\"scroll\":0}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calendar/Daily notes/2022-08-16.md",
+            "file": "Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -88,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#对话",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -122,21 +224,8 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "2d3917fcbccaf044",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -153,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-16.md"
+                "file": "Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md"
               }
             }
           },
@@ -167,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-16.md",
+                "file": "Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-16.md",
+                "file": "Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -222,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-08-16.md",
+                "file": "Sources/Books/微信读书同步/哲学宗教/金钱不能买什么-迈克尔·桑德尔.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -266,17 +355,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "0ae84269eb6e4626",
+  "active": "10906253e0934cce",
   "lastOpenFiles": [
-    "Atlas/Tutorials/快速开始.md",
-    "Users/cdd/works/knowledge-garden/测试一下.md",
     "Calendar/Daily notes/2022-08-16.md",
-    "Atlas/Tutorials/§ 本库obsidian使用说明书.md",
+    "Cards/永久笔记/obsidian 让我爱不释手的功能和细节.md",
     "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Atlas/Tutorials/++ 本库 PARA 笔记组织法工作流.md",
-    "Atlas/Tutorials/+ 本库 ACCESS 的工作流汇总.md",
-    "Sources/Videos/++ 视频笔记工作流.md",
-    "Sources/Courses/++ 课程笔记工作流.md",
-    "Sources/Books/读书笔记/++ 读书笔记工作流.md"
+    "Cards/永久笔记/vscode代码编辑和obsidian文本编辑快捷键.md",
+    "Cards/永久笔记/为什么表格的复制粘贴有时候表现诡异.md",
+    "Cards/永久笔记/vi常用快捷键.md",
+    "Cards/永久笔记/快捷键、图标、命令行的对比与选择.md",
+    "Atlas/Tutorials/本库设计哲学及理念.md",
+    "Cards/永久笔记/80%默认优先，20%深度定制.md",
+    "Calendar/已发布帖子/自荐obsidian开源库和发布站.md"
   ]
 }

@@ -69,15 +69,6 @@
       "key": "O"
     }
   ],
-  "various-complements:show-suggestions": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": " "
-    }
-  ],
   "templater-obsidian:insert-templater": [
     {
       "modifiers": [
@@ -103,6 +94,30 @@
         "Mod"
       ],
       "key": "R"
+    }
+  ],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "["
+    }
+  ],
+  "app:go-forward": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "]"
+    }
+  ],
+  "obsidian-another-quick-switcher:search-command_Recommended search": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
     }
   ]
 }

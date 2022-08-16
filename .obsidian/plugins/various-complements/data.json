@@ -58,8 +58,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 12,
-          "lastUpdated": 1660582746969
+          "count": 13,
+          "lastUpdated": 1660653730831
         }
       },
       "🤖obsidian": {
@@ -170,14 +170,6 @@
         "currentVault": {
           "count": 2,
           "lastUpdated": 1659364898112
-        }
-      }
-    },
-    "输入驱动输出，输出倒逼输入": {
-      "输入驱动输出，输出倒逼输入": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658200104511
         }
       }
     },
@@ -1398,6 +1390,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660589088416
+        }
+      }
+    },
+    "spaced-repetition": {
+      "spaced-repetition": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660653755551
         }
       }
     }

@@ -1,24 +1,133 @@
 {
-  "searchFromHeaders": false,
-  "searchByLinks": false,
   "searchDelayMilliSeconds": 0,
+  "maxNumberOfSuggestions": 64,
+  "normalizeAccentsAndDiacritics": false,
   "showDirectory": true,
   "showDirectoryAtNewLine": true,
   "showFullPathOfDirectory": true,
   "showAliasesOnTop": true,
   "showExistingFilesOnly": false,
-  "maxNumberOfSuggestions": 64,
-  "normalizeAccentsAndDiacritics": false,
   "hideGutterIcons": false,
+  "hideHotkeyGuides": false,
   "userAltInsteadOfModForQuickResultSelection": false,
-  "ignoreNormalPathPrefixPatterns": "",
-  "ignoreRecentPathPrefixPatterns": "",
-  "ignoreFilenameRecentPathPrefixPatterns": "",
-  "ignoreBackLinkPathPrefixPatterns": "",
+  "searchCommands": [
+    {
+      "name": "Recommended search",
+      "searchBy": {
+        "tag": true,
+        "link": true,
+        "header": true
+      },
+      "defaultInput": "",
+      "commandPrefix": "",
+      "sortPriorities": [
+        "Perfect word match",
+        "Prefix name match",
+        "Name match",
+        "Length",
+        "Tag match",
+        "Header match",
+        "Link match",
+        "Star",
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": false,
+      "isBacklinkSearch": false
+    },
+    {
+      "name": "Recent search",
+      "searchBy": {
+        "tag": true,
+        "link": true,
+        "header": true
+      },
+      "defaultInput": "",
+      "commandPrefix": ":r ",
+      "sortPriorities": [
+        "Name match",
+        "Tag match",
+        "Header match",
+        "Link match",
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": false,
+      "isBacklinkSearch": false
+    },
+    {
+      "name": "Title search",
+      "searchBy": {
+        "tag": false,
+        "link": false,
+        "header": false
+      },
+      "defaultInput": "",
+      "commandPrefix": ":t ",
+      "sortPriorities": [
+        "Perfect word match",
+        "Prefix name match",
+        "Name match",
+        "Length",
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": false,
+      "isBacklinkSearch": false
+    },
+    {
+      "name": "Star search",
+      "searchBy": {
+        "tag": true,
+        "link": false,
+        "header": false
+      },
+      "defaultInput": "",
+      "commandPrefix": ":s ",
+      "sortPriorities": [
+        "Star",
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": false,
+      "isBacklinkSearch": false
+    },
+    {
+      "name": "tags search",
+      "searchBy": {
+        "tag": true,
+        "link": false,
+        "header": false
+      },
+      "defaultInput": "",
+      "commandPrefix": ":e",
+      "sortPriorities": [],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": true,
+      "isBacklinkSearch": false
+    }
+  ],
+  "backLinkExcludePrefixPathPatterns": [],
   "headerSearchKeyBindArrowUpDown": "navigate",
   "headerSearchKeyBindTab": "move to next/previous hit",
   "headerSearchKeyBindVim": "navigate",
   "headerSearchKeyBindEmacs": "navigate",
-  "ignoreMoveFileToAnotherFolderPrefixPatterns": "",
-  "showLogAboutPerformanceInConsole": false
+  "moveFileExcludePrefixPathPatterns": [],
+  "showLogAboutPerformanceInConsole": false,
+  "searchFromHeaders": false,
+  "searchByLinks": false,
+  "ignoreNormalPathPrefixPatterns": "",
+  "ignoreRecentPathPrefixPatterns": "",
+  "ignoreFilenameRecentPathPrefixPatterns": "",
+  "ignoreBackLinkPathPrefixPatterns": "",
+  "ignoreMoveFileToAnotherFolderPrefixPatterns": ""
 }
