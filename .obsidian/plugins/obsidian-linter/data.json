@@ -19,7 +19,7 @@
       "Force key values to be multi-line arrays": ""
     },
     "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
       "Text to insert": "tags: "
     },
     "Remove YAML Keys": {

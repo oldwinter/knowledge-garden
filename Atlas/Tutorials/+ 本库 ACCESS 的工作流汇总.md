@@ -9,7 +9,7 @@ up: [[ACCESS 笔记组织法]]
 ## Atlas
 
 - [[++ 本库常用的dataview工作流]]
-- [[++ 本库使用说明编写工作流]]
+- [[++ 本库tutorial编写工作流]]
 
 ## Calendar
 

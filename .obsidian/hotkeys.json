@@ -96,5 +96,13 @@
     }
   ],
   "pane-relief:go-6th": [],
-  "command-palette:open": []
+  "command-palette:open": [],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ]
 }

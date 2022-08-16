@@ -58,8 +58,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 10,
-          "lastUpdated": 1659621852139
+          "count": 12,
+          "lastUpdated": 1660582746969
         }
       },
       "🤖obsidian": {
@@ -72,8 +72,8 @@
     "co-tip": {
       "co-tip": {
         "customDictionary": {
-          "count": 4,
-          "lastUpdated": 1658849212035
+          "count": 5,
+          "lastUpdated": 1660584987224
         }
       }
     },
@@ -370,6 +370,12 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1658855839629
+        }
+      },
+      "🤖cubox": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1660588389206
         }
       }
     },
@@ -1336,6 +1342,62 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1660575809318
+        }
+      }
+    },
+    "分类学": {
+      "分类学": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660582555526
+        }
+      }
+    },
+    "独立思考": {
+      "独立思考": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660584595907
+        }
+      }
+    },
+    "dataviewjs": {
+      "dataviewjs": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660586206505
+        }
+      }
+    },
+    "看心情整理文件和MOC": {
+      "看心情整理文件和MOC": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660587283417
+        }
+      }
+    },
+    "块引用": {
+      "块引用": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660588860095
+        }
+      }
+    },
+    "todo/今天": {
+      "todo/今天": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1660588940060
+        }
+      }
+    },
+    "飞书妙记": {
+      "飞书妙记": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660589088416
         }
       }
     }

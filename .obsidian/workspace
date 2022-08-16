@@ -4,137 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "396079a1e3a07f34",
+        "id": "0ae84269eb6e4626",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 1,
+          "pos": 0,
           "stack": [
             {
-              "leaf": "396079a1e3a07f34",
+              "leaf": "0ae84269eb6e4626",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🔡CODE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":40,\"ch\":0},\"to\":{\"line\":40,\"ch\":0}},\"scroll\":12.393655864901872}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "396079a1e3a07f34",
+              "leaf": "0ae84269eb6e4626",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Users/cdd/works/knowledge-garden/测试一下.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "396079a1e3a07f34",
+              "leaf": "0ae84269eb6e4626",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":18,\"ch\":0},\"to\":{\"line\":18,\"ch\":0}},\"scroll\":7.653364491581281}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/§ 本库obsidian使用说明书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":12},\"to\":{\"line\":13,\"ch\":12}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":0},\"to\":{\"line\":4,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":23,\"ch\":0},\"to\":{\"line\":23,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":0},\"to\":{\"line\":13,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/🎥 我的PPT.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":26,\"ch\":34},\"to\":{\"line\":26,\"ch\":34}},\"scroll\":1.7428139183055977}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":25},\"to\":{\"line\":6,\"ch\":25}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "396079a1e3a07f34",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/📩 订阅newsletter.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+            "file": "Calendar/Daily notes/2022-08-16.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -190,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#对话",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -224,8 +122,21 @@
               },
               "pinned": true
             }
+          },
+          {
+            "id": "2d3917fcbccaf044",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "92910ae8836a7b22",
@@ -242,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+                "file": "Calendar/Daily notes/2022-08-16.md"
               }
             }
           },
@@ -256,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Calendar/Daily notes/2022-08-16.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +183,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Calendar/Daily notes/2022-08-16.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -311,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Calendar/Daily notes/2022-08-16.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -355,17 +266,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "396079a1e3a07f34",
+  "active": "0ae84269eb6e4626",
   "lastOpenFiles": [
-    "Cards/永久笔记/🔡CODE.md",
-    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+    "Atlas/Tutorials/快速开始.md",
+    "Users/cdd/works/knowledge-garden/测试一下.md",
+    "Calendar/Daily notes/2022-08-16.md",
     "Atlas/Tutorials/§ 本库obsidian使用说明书.md",
-    "Atlas/Tutorials/本库推荐的obsidian入门路线及资源.md",
-    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
-    "☘️ 花园导览 🍀/🏹 已发布长文.md",
-    "☘️ 花园导览 🍀/🧀 个人知识管理.md",
-    "AboutTheGarden.md",
-    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
+    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+    "Atlas/Tutorials/++ 本库 PARA 笔记组织法工作流.md",
+    "Atlas/Tutorials/+ 本库 ACCESS 的工作流汇总.md",
+    "Sources/Videos/++ 视频笔记工作流.md",
+    "Sources/Courses/++ 课程笔记工作流.md",
+    "Sources/Books/读书笔记/++ 读书笔记工作流.md"
   ]
 }
