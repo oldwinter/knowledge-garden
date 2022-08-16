@@ -25,3 +25,7 @@ Extras/Media/.bf/**
 
 # workspace文件若不上传，会导致用户下载库以后，新打开的界面的布局信息丢失
 # .obsidian/workspace
+
+# obsidian发布用文件不需要上传
+publish.css
+publish.js

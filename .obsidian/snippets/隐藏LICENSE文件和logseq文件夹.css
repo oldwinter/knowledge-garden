@@ -11,3 +11,11 @@ div[data-path='logseq'] + div.nav-folder-children
 .nav-file-title[data-path='cedict_ts.u8'] {
     display: none;
 }
+
+.nav-file-title[data-path='publish.js'] {
+    display: none;
+}
+
+.nav-file-title[data-path='publish.css'] {
+    display: none;
+}

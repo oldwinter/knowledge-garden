@@ -47,4 +47,26 @@ for (const item of navOrderDsc.reverse()){
 }
 ```
 
+插入一段html到dom中的原生js方法
+```
+let text = `
+<script src="https://giscus.app/client.js"
+        data-repo="oldwinter/knowledge-garden"
+        data-repo-id="R_kgDOHT-NGQ"
+        data-category="主发布站的评论系统"
+        data-category-id="DIC_kwDOHT-NGc4CQ3PG"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>`
+element.insertAdjacentHTML('afterend', text);
+```
+
 [Minimal Documentation](https://minimal.guide/)
