@@ -10,6 +10,6 @@
   "weightH3": 1.1,
   "CtrlJK": false,
   "CtrlNP": false,
-  "storeIndexInFile": true,
+  "storeIndexInFile": false,
   "reindexInRealTime": false
 }

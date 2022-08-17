@@ -64,8 +64,8 @@
       },
       "🤖obsidian": {
         "internalLink": {
-          "count": 3,
-          "lastUpdated": 1660115850942
+          "count": 5,
+          "lastUpdated": 1660741953720
         }
       }
     },
@@ -1374,6 +1374,38 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1660653755551
+        }
+      }
+    },
+    "系统": {
+      "系统": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660735919556
+        }
+      }
+    },
+    "留言": {
+      "留言": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660735925515
+        }
+      }
+    },
+    "方案": {
+      "方案": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1660735957627
+        }
+      }
+    },
+    "问题": {
+      "问题": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1660735948777
         }
       }
     }
