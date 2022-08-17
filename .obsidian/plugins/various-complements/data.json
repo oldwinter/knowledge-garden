@@ -88,8 +88,8 @@
     "roamresearch": {
       "roamresearch": {
         "currentVault": {
-          "count": 3,
-          "lastUpdated": 1659893781310
+          "count": 4,
+          "lastUpdated": 1660711831234
         }
       }
     },
@@ -173,35 +173,11 @@
         }
       }
     },
-    "maps": {
-      "maps": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658246678003
-        }
-      }
-    },
     "@Nick Milo": {
       "@Nick Milo": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1658571653356
-        }
-      }
-    },
-    "Express": {
-      "Express": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658298514867
-        }
-      }
-    },
-    "flomo": {
-      "flomo": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658301781262
         }
       }
     },
@@ -656,8 +632,8 @@
     "TOC": {
       "TOC": {
         "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1659619018740
+          "count": 2,
+          "lastUpdated": 1660733739880
         }
       }
     },
