@@ -12,129 +12,129 @@
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":0},\"to\":{\"line\":15,\"ch\":0}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🐤Z世代.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":2.130105900151286}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑顾漫.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/最佳实践.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑凯文凯利.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑顾漫.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":12.020334928229666}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚三体 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":1.307110438729198}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚如何阅读一本书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":23.938243808298488}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚认知觉醒 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚刻意练习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚解忧杂货店.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/金字塔原理 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":8},\"to\":{\"line\":6,\"ch\":8}},\"scroll\":18.73285486443381}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/+ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":25,\"ch\":4},\"to\":{\"line\":25,\"ch\":4}},\"scroll\":13.881955612737215}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
               "leaf": "10906253e0934cce",
               "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/+ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":24},\"to\":{\"line\":33,\"ch\":24}},\"scroll\":12.543904792537793}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚史蒂夫·乔布斯传 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":88},\"to\":{\"line\":33,\"ch\":88}},\"scroll\":267.0951621477937}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "10906253e0934cce",
+              "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":39,\"ch\":0},\"to\":{\"line\":39,\"ch\":0}},\"scroll\":17.583407512907247}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-17.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/增援未来.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/📹【罗翔】我们为什么要读书？.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/在线课程MOOC/§ 目前知名的在线mooc.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/+ 课程笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":35,\"ch\":60},\"to\":{\"line\":35,\"ch\":60}},\"scroll\":0}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
+            "file": "Calendar/Daily notes/🐤Z世代.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -190,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#个人预测",
+                "query": "热门批注",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md"
+                "file": "Calendar/Daily notes/🐤Z世代.md"
               }
             }
           },
@@ -256,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
+                "file": "Calendar/Daily notes/🐤Z世代.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
+                "file": "Calendar/Daily notes/🐤Z世代.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -311,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/时刻提醒自己不要去参与那些人人都能说一嘴的话题.md",
+                "file": "Calendar/Daily notes/🐤Z世代.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -357,15 +357,15 @@
   },
   "active": "10906253e0934cce",
   "lastOpenFiles": [
-    "README.md",
-    "Cards/永久笔记/最佳实践.md",
-    "Sources/Articles/常青笔记阅读笔记/间隔重复记忆系统.md",
-    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Cards/永久笔记/第二大脑.md",
-    "☘️ 花园导览 🍀/🧀 个人知识管理.md",
-    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
-    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
-    "Calendar/Daily notes/2022-08-17.md",
-    "Cards/永久笔记/增援未来.md"
+    "Calendar/Daily notes/🧑顾漫.md",
+    "Calendar/Daily notes/🧑凯文凯利.md",
+    "Sources/Books/读书笔记/📚三体 - 热门批注.md",
+    "Sources/Books/读书笔记/📚如何阅读一本书.md",
+    "Sources/Books/读书笔记/📚认知觉醒 - 热门批注.md",
+    "Sources/Books/读书笔记/📚刻意练习.md",
+    "Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md",
+    "Sources/Books/读书笔记/📚金字塔原理.md",
+    "Sources/Books/读书笔记/📚解忧杂货店.md",
+    "Sources/Books/读书笔记/金字塔原理 - 热门批注.md"
   ]
 }

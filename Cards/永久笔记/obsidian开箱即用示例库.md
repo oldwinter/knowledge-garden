@@ -20,3 +20,8 @@ date modified: 2022-08-07
 
 - [GitHub - juestchaos/Obsidian-Plug-and-Play: 一个简单的Obsidian 库](https://github.com/juestchaos/Obsidian-Plug-and-Play)
 	- 关注文本和内容本身，值得学习。
+
+[[2022-08-18]]更新：
+
+- [GitHub - sheldonxxd/obsidian_vault_template_for_researcher: This is an vault template for researchers using obsidian.](https://github.com/sheldonxxd/obsidian_vault_template_for_researcher)
+	- 科研向的库，拒绝花里胡哨，符合我的胃口。

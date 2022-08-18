@@ -3,9 +3,9 @@ aliases: 个人定位 公司定位
 date created: 2022-06-09
 date modified: 2022-08-14
 tags: review
-sr-due: 2022-08-18
-sr-interval: 4
-sr-ease: 270
+sr-due: 2022-09-02
+sr-interval: 15
+sr-ease: 290
 ---
 
 ## 个人理解
