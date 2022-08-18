@@ -41,6 +41,12 @@
     color: red;
 }
 
+.metadata-menu-modal-value-error-field{
+    height: 2em;
+    color: red;
+    margin-left: 1em;
+}
+
 .metadata-menu-toggler {
     text-align: center;
 }
@@ -84,7 +90,15 @@
     margin-top: 1em
 }
 
+.metadata-menu-toggler-with-label{
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
 
+.metadata-menu-toggler-label{
+    margin-right: 0.5em;
+}
 
 
 
@@ -148,6 +162,24 @@
 .metadata-menu-date-parser-label{
     margin-right: 0.2em;
     font-size: x-large;
+}
+
+.metadata-menu-dateinput-with-picker{
+    display: flex
+}
+
+.metadata-menu-calendar-display-btn{
+    color: var(--text-normal);
+    background-color: var(--background-secondary-alt);
+    border-radius: 4px;
+    border: none;    
+    padding: 0.2em 0.7em 0 0.7em;
+    cursor: var(--cursor);
+    margin-left: 0.5em;
+    font-family: inherit;
+    outline: none;
+    user-select: none;
+    white-space: nowrap;
 }
 
 
@@ -220,6 +252,10 @@
     background-color: #928374;
 }
 
+.metadata-menu-setting-item-info-type.date{
+    background-color: #483699;
+}
+
 .metadata-menu-setting-section-header{
     margin-bottom: 0;
 }
@@ -239,6 +275,11 @@
     min-width: calc(var(--font-text-size) * 1.4);
     padding: 0 0.375em 0 0;
     margin-right: 0.375em;
+}
+
+.metadata-menu-dv-field-button.active {
+    background-color: #556b77;
+    border-radius: 0.375em;
 }
 
 .metadata-menu-dv-field-button.multi {

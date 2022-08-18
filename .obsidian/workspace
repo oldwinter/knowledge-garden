@@ -4,137 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "10906253e0934cce",
+        "id": "e26037fde3838a9c",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🐤Z世代.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/spaced-repetition.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑顾漫.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/助记媒介可以扩展到个人笔记上.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":34},\"to\":{\"line\":8,\"ch\":34}},\"scroll\":0}"
             },
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑凯文凯利.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/个人成长/当下的力量（珍藏版）-埃克哈特·托利.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":12},\"to\":{\"line\":8,\"ch\":12}},\"scroll\":0}"
             },
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🧑顾漫.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":24.90333806247825}"
             },
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚三体 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-19.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":8},\"to\":{\"line\":1,\"ch\":8}}}"
             },
             {
-              "leaf": "10906253e0934cce",
+              "leaf": "e26037fde3838a9c",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚如何阅读一本书.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚认知觉醒 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚刻意练习.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚解忧杂货店.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/金字塔原理 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":8},\"to\":{\"line\":6,\"ch\":8}},\"scroll\":18.73285486443381}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/+ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":25,\"ch\":4},\"to\":{\"line\":25,\"ch\":4}},\"scroll\":13.881955612737215}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/+ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":24},\"to\":{\"line\":33,\"ch\":24}},\"scroll\":12.543904792537793}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚金字塔原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚史蒂夫·乔布斯传 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":88},\"to\":{\"line\":33,\"ch\":88}},\"scroll\":267.0951621477937}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "10906253e0934cce",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":35,\"ch\":60},\"to\":{\"line\":35,\"ch\":60}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-18.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":40},\"to\":{\"line\":2,\"ch\":40}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calendar/Daily notes/🐤Z世代.md",
+            "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -190,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "热门批注",
+                "query": "tag:#todo",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -225,7 +141,8 @@
               "pinned": true
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "92910ae8836a7b22",
@@ -242,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/🐤Z世代.md"
+                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md"
               }
             }
           },
@@ -256,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/🐤Z世代.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +189,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/🐤Z世代.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -311,7 +228,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/🐤Z世代.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -355,17 +272,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "10906253e0934cce",
+  "active": "e26037fde3838a9c",
   "lastOpenFiles": [
-    "Calendar/Daily notes/🧑顾漫.md",
-    "Calendar/Daily notes/🧑凯文凯利.md",
-    "Sources/Books/读书笔记/📚三体 - 热门批注.md",
-    "Sources/Books/读书笔记/📚如何阅读一本书.md",
-    "Sources/Books/读书笔记/📚认知觉醒 - 热门批注.md",
-    "Sources/Books/读书笔记/📚刻意练习.md",
-    "Sources/Books/读书笔记/📚卡片笔记写作法 - 热门批注.md",
-    "Sources/Books/读书笔记/📚金字塔原理.md",
-    "Sources/Books/读书笔记/📚解忧杂货店.md",
-    "Sources/Books/读书笔记/金字塔原理 - 热门批注.md"
+    "Sources/Articles/常青笔记阅读笔记/助记媒介可以扩展到个人笔记上.md",
+    "Sources/Books/微信读书同步/个人成长/当下的力量（珍藏版）-埃克哈特·托利.md",
+    "Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md",
+    "Calendar/Daily notes/2022-08-19.md",
+    "Calendar/Daily notes/🐤TL;DR.md",
+    "Calendar/Daily notes/2022-08-18.md",
+    "Calendar/Daily notes/安卓使用terminal并使用git和github - termux.md",
+    "Atlas/Tutorials/快速开始.md",
+    "Sources/Books/读书笔记/📚金字塔原理 - 热门批注.md",
+    "Cards/永久笔记/obsidian组织笔记的5个要素.md"
   ]
 }

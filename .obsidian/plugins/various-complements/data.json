@@ -197,43 +197,11 @@
         }
       }
     },
-    "😣": {
-      "😣": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658391655542
-        }
-      }
-    },
-    "囚徒健身：用失传的技艺练就强大的生存实力-保罗·威德": {
-      "囚徒健身：用失传的技艺练就强大的生存实力-保罗·威德": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658392286864
-        }
-      }
-    },
     "Roam Research": {
       "Roam Research": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1660052738452
-        }
-      }
-    },
-    "anki-like": {
-      "anki-like": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658399478590
-        }
-      }
-    },
-    "小镇做题家": {
-      "小镇做题家": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658399665763
         }
       }
     },
@@ -1406,6 +1374,22 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1660735948777
+        }
+      }
+    },
+    "KOL": {
+      "KOL": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660821630777
+        }
+      }
+    },
+    "Andy Matuschak": {
+      "🧑Andy Matuschak": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1660840025682
         }
       }
     }

@@ -5,7 +5,16 @@
   "suggestionLimit": 50,
   "recentAbovePinned": false,
   "hyperKeyOverride": false,
-  "macros": [],
+  "macros": [
+    {
+      "name": "这几天的日记",
+      "commandIds": [
+        "daily-notes",
+        "daily-notes:goto-prev"
+      ],
+      "delay": 200
+    }
+  ],
   "hotkeyStyle": "auto",
   "createNewFileMod": "Mod",
   "createNewPaneMod": "Shift",
