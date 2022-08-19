@@ -41,7 +41,7 @@
       "Format": "YYYY-MM-DD"
     },
     "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": false,
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": true,
       "Title Key": "title",
       "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false
     },
@@ -159,7 +159,7 @@
   "lintOnSave": true,
   "displayChanged": true,
   "foldersToIgnore": [
-    ""
+    "Extras/Templates"
   ],
   "linterLocale": "zh-cn",
   "logLevel": 4

@@ -1,7 +1,7 @@
 {
   "token": "6879-OtsU3Bu6rmSsWt_qPKa_D7WyiF6QNu1T74EyNuYbx_Y",
   "user": "acct:cdd2here@hypothes.is",
-  "highlightsFolder": "Sources/Articles",
+  "highlightsFolder": "Sources/Articles/Hypothesis",
   "isConnected": true,
   "template": "{% if is_new_article %}\n# {{title}}\n\n## Metadata\n{% if author %}- Author: [{{author}}]({{authorUrl}}){% endif %}\n- Title: {{title}}\n{% if url %}- Reference: {{url}}{% endif %}\n- Category: #article\n{% endif %}\n\n{%- if is_new_article %}\n## Page Notes\n{% for highlight in page_notes -%}\n{{highlight.annotation}}\n{%- if highlight.tags | length %}\nTags: {% for tag in highlight.tags -%} #{{tag | replace(\" \", \"-\")+\" \"}}{%- endfor %}\n{% endif %}\n{% endfor %}\n{%- endif -%}\n\n{%- if is_new_article -%}\n## Highlights\n{% for highlight in highlights -%}\n- {{highlight.text}} — [Updated on {{highlight.updated}}]({{highlight.incontext}})\n{%- if 'Private' != highlight.group %} — Group: #{{highlight.group | replace(\" \", \"-\")}}{% endif %}\n{% if highlight.tags | length %}    - Tags: {% for tag in highlight.tags %} #{{tag | replace(\" \", \"-\")+\" \"}}{% endfor %}\n{% endif -%}\n{% if highlight.annotation %}    - Annotation: {{highlight.annotation}}{% endif %}\n{% endfor %}\n{% endif %}\n",
   "syncOnBoot": false,

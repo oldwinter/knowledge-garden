@@ -1,8 +1,7 @@
 ---
 date created: 2022-08-12
-date modified: 2022-08-12
-link: https://oldwinter.notion.site/obsidian-rr-logseq-2f94629cad704e98b9b2efe132b017e6
-notionID: 2f94629c-ad70-4e98-b9b2-efe132b017e6
+date modified: 2022-08-20
+title: 『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论
 ---
 
 ## 开门见山
