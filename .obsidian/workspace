@@ -4,53 +4,83 @@
     "type": "split",
     "children": [
       {
-        "id": "e26037fde3838a9c",
+        "id": "bed40d3e6f6d8e78",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "e26037fde3838a9c",
+              "leaf": "bed40d3e6f6d8e78",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/spaced-repetition.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/gitignore 语法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/About Extras.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/dataview.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/About Cards.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"pdf-annotator\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\"}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "e26037fde3838a9c",
+              "leaf": "bed40d3e6f6d8e78",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/助记媒介可以扩展到个人笔记上.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":34},\"to\":{\"line\":8,\"ch\":34}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "e26037fde3838a9c",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/个人成长/当下的力量（珍藏版）-埃克哈特·托利.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":12},\"to\":{\"line\":8,\"ch\":12}},\"scroll\":0}"
-            },
-            {
-              "leaf": "e26037fde3838a9c",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":24.90333806247825}"
-            },
-            {
-              "leaf": "e26037fde3838a9c",
+              "leaf": "bed40d3e6f6d8e78",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-19.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":8},\"to\":{\"line\":1,\"ch\":8}}}"
+              "eState": "{}"
             },
             {
-              "leaf": "e26037fde3838a9c",
+              "leaf": "bed40d3e6f6d8e78",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-18.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":40},\"to\":{\"line\":2,\"ch\":40}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"pdf-annotator\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\"}}",
+              "eState": "{}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
+            "file": "Cards/永久笔记/gitignore 语法.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -141,8 +171,7 @@
               "pinned": true
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -159,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md"
+                "file": "Cards/永久笔记/gitignore 语法.md"
               }
             }
           },
@@ -173,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +218,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -228,7 +257,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/spaced-repetition.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -243,7 +272,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.5
+    "width": 198.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -272,17 +301,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "e26037fde3838a9c",
+  "active": "bed40d3e6f6d8e78",
   "lastOpenFiles": [
-    "Sources/Articles/常青笔记阅读笔记/助记媒介可以扩展到个人笔记上.md",
-    "Sources/Books/微信读书同步/个人成长/当下的力量（珍藏版）-埃克哈特·托利.md",
-    "Sources/Books/微信读书同步/个人成长/把时间当作朋友（第3版）-李笑来.md",
+    "Extras/About Extras.md",
+    "Cards/永久笔记/dataview.md",
+    "Cards/About Cards.md",
+    "从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md",
+    "将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md",
     "Calendar/Daily notes/2022-08-19.md",
-    "Calendar/Daily notes/🐤TL;DR.md",
-    "Calendar/Daily notes/2022-08-18.md",
-    "Calendar/Daily notes/安卓使用terminal并使用git和github - termux.md",
     "Atlas/Tutorials/快速开始.md",
-    "Sources/Books/读书笔记/📚金字塔原理 - 热门批注.md",
-    "Cards/永久笔记/obsidian组织笔记的5个要素.md"
+    "Sources/Papers/@WoDeObsidianRuMenZhiLuErYaJiangFan.md",
+    "Sources/Papers/@chiacchioAgentbasedModelingImmune2014.md",
+    "Sources/Papers/@bliksteinNetlogoWhereWe2005.md"
   ]
 }

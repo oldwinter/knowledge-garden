@@ -2,9 +2,9 @@
 date created: 2022-06-27
 date modified: 2022-07-20
 tags: review
-sr-due: 2022-08-17
-sr-interval: 3
-sr-ease: 268
+sr-due: 2022-09-06
+sr-interval: 18
+sr-ease: 288
 ---
 
 S=Specific、M=Measurable、A=Attainable、R=Relevant、T=Time-bound

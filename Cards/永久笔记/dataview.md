@@ -4,6 +4,9 @@ date created: 2022-06-09
 date modified: 2022-07-17
 ---
 
+## 本质
+[[frontmatter]]本质就是表格的一列列属性。dataview的本质就是表格的filter筛选功能。
+
 ## 调试技巧
 
 打开调试控制台，在dataviewjs里面可以直接console.log，以查看所有变量。目前还没找到比较好的智能提示代码的方法。先这样将就用。如下，打开调试控制台，可以看到，打印出了obsidian系统api自带的全部方法和变量。
