@@ -7,19 +7,115 @@
         "id": "bed40d3e6f6d8e78",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 1,
+          "pos": 0,
           "stack": [
             {
               "leaf": "bed40d3e6f6d8e78",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🤖Git.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园建设.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":0},\"to\":{\"line\":14,\"ch\":0}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/用notion建设数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":37},\"to\":{\"line\":10,\"ch\":37}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园建设.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":0},\"to\":{\"line\":8,\"ch\":0}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/用语雀建设数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园建设.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":15},\"to\":{\"line\":7,\"ch\":15}},\"scroll\":0}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":7.659972615244181}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "bed40d3e6f6d8e78",
               "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":60.890625}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":14},\"to\":{\"line\":7,\"ch\":14}},\"scroll\":0}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":14},\"to\":{\"line\":8,\"ch\":14}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-15.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-16.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-17.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-18.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-19.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":11},\"to\":{\"line\":1,\"ch\":11}}}"
+            },
+            {
+              "leaf": "bed40d3e6f6d8e78",
+              "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/gitignore 语法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":20,\"ch\":33},\"to\":{\"line\":18,\"ch\":0}},\"scroll\":0}"
             },
             {
               "leaf": "bed40d3e6f6d8e78",
@@ -32,53 +128,29 @@
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/dataview.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
-            },
+            }
+          ]
+        },
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cards/永久笔记/数字花园建设.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "e1c1de13b20c9c8e",
+        "type": "leaf",
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
             {
-              "leaf": "bed40d3e6f6d8e78",
+              "leaf": "e1c1de13b20c9c8e",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/About Cards.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"pdf-annotator\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-19.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "bed40d3e6f6d8e78",
-              "group": null,
-              "state": "{\"type\":\"pdf-annotator\",\"state\":{\"file\":\"从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md\"}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/用语雀建设数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             }
           ]
@@ -86,7 +158,37 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/gitignore 语法.md",
+            "file": "Cards/永久笔记/用语雀建设数字花园.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "1115a29371a13f76",
+        "type": "leaf",
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
+            {
+              "leaf": "1115a29371a13f76",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/用notion建设数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "1115a29371a13f76",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园建设.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":12},\"to\":{\"line\":9,\"ch\":12}}}"
+            }
+          ]
+        },
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cards/永久笔记/用notion建设数字花园.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -142,8 +244,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#todo",
-                "matchingCase": true,
+                "query": "参见[[常青",
+                "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
@@ -194,7 +296,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md"
+                "file": "Cards/永久笔记/用notion建设数字花园.md"
               }
             }
           },
@@ -208,7 +310,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/用notion建设数字花园.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -224,7 +326,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/用notion建设数字花园.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -263,7 +365,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/用notion建设数字花园.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -307,17 +409,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "bed40d3e6f6d8e78",
+  "active": "1115a29371a13f76",
   "lastOpenFiles": [
-    "Cards/永久笔记/🤖Git.md",
-    "Cards/永久笔记/gitignore 语法.md",
-    "Extras/About Extras.md",
-    "Cards/永久笔记/dataview.md",
-    "Cards/About Cards.md",
-    "从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md",
-    "将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md",
-    "Calendar/Daily notes/2022-08-19.md",
+    "Cards/永久笔记/数字花园建设.md",
     "Atlas/Tutorials/快速开始.md",
-    "Sources/Papers/@WoDeObsidianRuMenZhiLuErYaJiangFan.md"
+    "Cards/永久笔记/用语雀建设数字花园.md",
+    "Cards/永久笔记/用notion建设数字花园.md",
+    "Cards/永久笔记/数字花园.md",
+    "将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md",
+    "从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md",
+    "AboutTheGarden.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
+    "Cards/永久笔记/图床方案的选择.md"
   ]
 }

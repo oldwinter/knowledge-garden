@@ -1,0 +1,14 @@
+{
+  "contextAwareMode": false,
+  "sourceSupport": true,
+  "codeHighlightSupport": true,
+  "inlineID": true,
+  "contextSeparator": " > ",
+  "deck": "obsidian-card",
+  "folderBasedDeck": true,
+  "flashcardsTag": "anki",
+  "inlineSeparator": "\\?\\?",
+  "inlineSeparatorReverse": "\\?\\?\\?",
+  "defaultAnkiTag": "",
+  "ankiConnectPermission": true
+}

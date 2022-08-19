@@ -277,6 +277,10 @@
     margin-right: 0.375em;
 }
 
+.metadata-menu-dv-field-button.isolated {
+    padding-left: 0.375em;
+}
+
 .metadata-menu-dv-field-button.active {
     background-color: #556b77;
     border-radius: 0.375em;

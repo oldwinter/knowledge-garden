@@ -1,7 +1,23 @@
 ---
 doc_type: hypothesis-highlights
 url: 'https://sspai.com/post/63879'
+cards-deck: obsidian-card
 ---
+
+aa::bb
+^1660903953351
+dd:: ddd
+^1660910393190
+
+ddd:::aaa
+^1660910393214
+fff::ee
+^1660910393219
+
+
+xx??aaa ^1660911414522
+
+ddd??? tretr ^1660911414528
 
 # 将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派
 
