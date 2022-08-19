@@ -4,27 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e9ebb1f386fc7e73",
+        "id": "0504fcd401e7c7bf",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "e9ebb1f386fc7e73",
+              "leaf": "0504fcd401e7c7bf",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/notion-like笔记软件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/sed命令+正则表达式批量替换.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
             },
             {
-              "leaf": "e9ebb1f386fc7e73",
+              "leaf": "0504fcd401e7c7bf",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布帖子/『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e9ebb1f386fc7e73",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/Pending/将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/git submodule.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             }
           ]
@@ -32,7 +26,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/notion-like笔记软件.md",
+            "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -140,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/notion-like笔记软件.md"
+                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md"
               }
             }
           },
@@ -154,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/notion-like笔记软件.md",
+                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +164,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/notion-like笔记软件.md",
+                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -209,7 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/notion-like笔记软件.md",
+                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -253,17 +247,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "e9ebb1f386fc7e73",
+  "active": "0504fcd401e7c7bf",
   "lastOpenFiles": [
+    "Cards/永久笔记/git submodule.md",
+    "Atlas/Tutorials/快速开始.md",
+    "Cards/永久笔记/notion-like笔记软件.md",
     "Calendar/已发布帖子/『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论.md",
     "Cards/Pending/将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md",
-    "Atlas/Tutorials/快速开始.md",
     "Sources/Articles/Markdownload/使用 Unsplash API 生成随机图片.md",
     "Sources/Articles/Markdownload/中文博客排版指南.md",
     "Cards/Pending/从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md",
     "Extras/Templates/微信读书同步模板.md",
-    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
-    "Cards/永久笔记/正则表达式.md",
-    "Cards/永久笔记/shell 常用命令行操作.md"
+    "Cards/永久笔记/sed命令+正则表达式批量替换.md"
   ]
 }

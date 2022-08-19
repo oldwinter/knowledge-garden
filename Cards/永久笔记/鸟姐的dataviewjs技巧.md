@@ -1,7 +1,9 @@
 ---
 date created: 2022-08-10
-date modified: 2022-08-10
+date modified: 2022-08-20
+title: 鸟姐的dataviewjs技巧
 ---
+
 ## 代码描述
 
 1. CTRL+SHIFT+I 是你的朋友：你可以使用 console.log(x) 和 object，然后查看它的内部结构，这样你就知道如何使用它了。

@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-05
-date modified: 2022-08-12
+date modified: 2022-08-20
 tags: tutorial
+title: ++ 本库笔记的emoji符号记录
 ---
 
 ## 为什么要给文件名引入emoji

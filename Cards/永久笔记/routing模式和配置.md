@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-15
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: routing模式和配置
 ---
 
 在 V2Ray 的安卓、苹果、Windows 等手机和电脑客户端中，路由设置的域名解析策略有三项选择，分别是 **“AsIs”、”IPIfNonMatch”、”IPOnDemand”**。

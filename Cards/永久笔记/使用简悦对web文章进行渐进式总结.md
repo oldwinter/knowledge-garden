@@ -1,7 +1,9 @@
 ---
 date created: 2022-07-26
-date modified: 2022-07-26
+date modified: 2022-08-20
+title: 使用简悦对web文章进行渐进式总结
 ---
+
 ## 整体效果
 
 - 剪藏和批注可以实时同步到obsidian中。

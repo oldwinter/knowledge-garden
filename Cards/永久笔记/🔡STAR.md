@@ -1,11 +1,13 @@
 ---
-aliases: 如何告诉对方自己值得这个价格
-date created: 2022-06-09
-date modified: 2022-08-14
-tags: review
 sr-due: 2022-08-18
 sr-interval: 4
 sr-ease: 270
+aliases:
+  - 如何告诉对方自己值得这个价格
+date created: 2022-06-09
+date modified: 2022-08-20
+tags: review
+title: 🔡STAR
 ---
 
 如何完成一个有效的面试——善用 STAR 法则 - 鑫鱻的文章 - 知乎 <<<<https://zhuanlan.zhihu.com/p/26558343>>>>

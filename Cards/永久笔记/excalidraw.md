@@ -1,7 +1,8 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
 tags: todo/某天
+title: excalidraw
 ---
 
 通过图 + 双链的形式，更容易描述清楚复杂系统，找机会尝试。

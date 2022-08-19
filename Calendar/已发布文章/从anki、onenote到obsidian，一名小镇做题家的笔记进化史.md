@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-18
-date modified: 2022-07-21
+date modified: 2022-08-20
 tags: article/done
+title: 从anki、onenote到obsidian，一名小镇做题家的笔记进化史
 ---
 
 >可以访问此文的发布版本，获得更好的双链阅读体验：[从anki、onenote到obsidian，一名小镇做题家的笔记进化史 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/%E4%BB%8Eanki%E3%80%81onenote%E5%88%B0obsidian%EF%BC%8C%E4%B8%80%E5%90%8D%E5%B0%8F%E9%95%87%E5%81%9A%E9%A2%98%E5%AE%B6%E7%9A%84%E7%AC%94%E8%AE%B0%E8%BF%9B%E5%8C%96%E5%8F%B2)

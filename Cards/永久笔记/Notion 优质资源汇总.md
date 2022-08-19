@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: Notion 优质资源汇总
 ---
 
 为了给刚入门有兴趣去学习 notion 的童鞋节省时间，我整理了一些东西，希望对你们有用。

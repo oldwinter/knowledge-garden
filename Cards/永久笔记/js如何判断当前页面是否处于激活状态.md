@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-11
-date modified: 2022-08-11
+date modified: 2022-08-20
+title: js如何判断当前页面是否处于激活状态
 ---
 
 反制方法：开发控制台中，在事件监听器界面，删除blur、focus和 visibilitychange事件，就可以避免有些网站通过检测这个的方式来判断用户考试是否离开了考试界面作弊了。

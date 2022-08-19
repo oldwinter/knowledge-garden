@@ -1,16 +1,18 @@
 ---
 author: 凯文·凯利
+bookId: '790470'
 category: 文学-经典作品
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/470/790470/t7_790470.jpg
+date created: 2022-08-16
+date modified: 2022-08-20
+doc_type: weread-highlights-reviews
 isbn: 9787121272394
 lastReadDate: 2022-08-16T00:00:00.000Z
-publisher: 中信出版社
-tags: weread
-doc_type: weread-highlights-reviews
-bookId: '790470'
-reviewCount: 1
 noteCount: 0
+publisher: 中信出版社
+reviewCount: 1
+tags: weread
+title: 必然（KK三部曲·展望）-凯文·凯利
 ---
 
 ## 元数据
@@ -32,6 +34,6 @@ noteCount: 0
 
 ## 本书评论
 
-### 书评 No.1  ^10500316-7ByTlowmH
-⏱ [[2022-08-16]]  23:06
+### 书评 No.1 ^10500316-7ByTlowmH
 
+⏱ [[2022-08-16]] 23:06

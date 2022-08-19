@@ -1,10 +1,11 @@
 ---
-date created: 2022-06-23
-date modified: 2022-07-20
-tags: review
 sr-due: 2022-08-18
 sr-interval: 4
 sr-ease: 274
+date created: 2022-06-23
+date modified: 2022-08-20
+tags: review
+title: 🔡DIKW
 ---
 
 ## 基础概念

@@ -1,8 +1,10 @@
 ---
 date created: 2022-08-05
-date modified: 2022-08-07
+date modified: 2022-08-20
 tags: TOC todo/本周
+title: § 本库obsidian使用说明书
 ---
+
 x:: [[++ 本库tutorial编写工作流]]
 
 整理出给读者看的[[🧰 本库使用指南]]。
@@ -32,13 +34,16 @@ x:: [[++ 本库tutorial编写工作流]]
 因为[[File cooker]]这个插件，计划重新思考Spaces文件夹的意义和用法。待刷新 #todo/今天
 
 ## obsidian和外部的联动。
+
 ### 外部调用obsidian：
+
 obsidian和alfred或raycast配合使用的场景
+
 - 不在obsidian中，但快速记录闪念至obsidian
 - star至raycast
+
 ### obsidian调用外部
+
 快速复制文本添加至滴答
 
 设计一个更方便的方式，引导读者不要踩到我挖了还没填的坑里面，避免他浪费时间。
-
-

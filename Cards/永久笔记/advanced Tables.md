@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: advanced Tables
 ---
 
 给 markdown 编辑简单的表格带来了极大的便利。也使得 md 写表格有了意义。不然 markdown 的表格功能其实很鸡肋，编辑不方便太耗时。

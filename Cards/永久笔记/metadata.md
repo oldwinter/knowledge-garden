@@ -1,7 +1,9 @@
 ---
-aliases: 元数据
+aliases:
+  - 元数据
 date created: 2022-08-04
-date modified: 2022-08-04
+date modified: 2022-08-20
+title: metadata
 ---
 
 元数据，是关于数据的组织、数据域和其关系的信息，是数据的数据。常见于json文件，yaml文件，md文件中。

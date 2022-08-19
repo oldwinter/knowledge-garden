@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: 🤖raindrop
 ---
 - 国内有 pinbox。相比于原生自带的书签管理，
 	- 核心优势是

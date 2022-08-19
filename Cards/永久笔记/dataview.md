@@ -1,10 +1,13 @@
 ---
-aliases: dataviewjs
+aliases:
+  - dataviewjs
 date created: 2022-06-09
-date modified: 2022-07-17
+date modified: 2022-08-20
+title: dataview
 ---
 
 ## 本质
+
 [[frontmatter]]本质就是表格的一列列属性。dataview的本质就是表格的filter筛选功能。
 
 ## 调试技巧
@@ -39,8 +42,7 @@ dataview 的牛逼之处，在于它让我们成为自己笔记库的大数据�
 
 ## dataviewjs 的参考资料
 
-
-[[鸟姐的dataviewjs技巧]]
+[[鸟姐的dataviewjs技巧]]  
 [ObsidianDataview文档中文 - 知乎](https://www.zhihu.com/column/c_1504479637841866752)
 
 [Obsidian 插件之 Dataview - 少数派 (sspai.com)](https://sspai.com/post/68183)

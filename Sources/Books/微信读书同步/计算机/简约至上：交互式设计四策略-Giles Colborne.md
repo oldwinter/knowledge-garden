@@ -1,16 +1,18 @@
 ---
 author: Giles Colborne
+bookId: '907772'
 category: 计算机-理论知识
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/772/907772/t7_907772.jpg
+date created: 2022-08-16
+date modified: 2022-08-20
+doc_type: weread-highlights-reviews
 isbn: 9787115243249
 lastReadDate: 2022-08-16T00:00:00.000Z
-publisher: 人民邮电出版社
-tags: weread
-doc_type: weread-highlights-reviews
-bookId: '907772'
-reviewCount: 1
 noteCount: 0
+publisher: 人民邮电出版社
+reviewCount: 1
+tags: weread
+title: 简约至上：交互式设计四策略-Giles Colborne
 ---
 
 ## 元数据
@@ -31,6 +33,6 @@ noteCount: 0
 
 ## 本书评论
 
-### 书评 No.1  ^10500316-7BySlZmQb
-⏱ [[2022-08-16]]  22:51
+### 书评 No.1 ^10500316-7BySlZmQb
 
+⏱ [[2022-08-16]] 22:51

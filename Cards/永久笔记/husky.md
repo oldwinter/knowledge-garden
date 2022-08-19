@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-17
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: husky
 ---
 
 [GitHub - typicode/husky: Git hooks made easy 🐶 woof!](https://github.com/typicode/husky)

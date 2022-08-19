@@ -1,3 +1,9 @@
+---
+date created: 2022-07-26
+date modified: 2022-08-20
+title: minimal主题的publish.js参考
+---
+
 ```JavaScript
 var plausible = document.createElement('script')
 plausible.defer = true
@@ -48,6 +54,7 @@ for (const item of navOrderDsc.reverse()){
 ```
 
 插入一段html到dom中的原生js方法
+
 ```
 let text = `
 <script src="https://giscus.app/client.js"

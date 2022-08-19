@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-11
-date modified: 2022-08-11
+date modified: 2022-08-20
+title: vscode 文件批量重命名
 ---
 
 用terminal里面的命令行工具批量命名，或选择另一个图形化的方式：

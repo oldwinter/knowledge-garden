@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: ryooo的知识管理工作流
 ---
 
 [Obsidian 中文社区-圆桌第二期 · 面向实战的知识管理工作流分享_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1QY4y147VR/?spm_id_from=333.788)

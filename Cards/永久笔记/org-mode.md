@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: org-mode
 ---
 
 甚至和 [[子弹笔记]] 那种通过各种标记来处理文本和事务的方法很类似。

@@ -1,16 +1,18 @@
 ---
 author: 顾森
+bookId: '22806977'
 category: 科学技术-科学科普
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/977/22806977/t7_22806977.jpg
+date created: 2022-08-16
+date modified: 2022-08-20
+doc_type: weread-highlights-reviews
 isbn: 9787115275868
 lastReadDate: 2022-08-16T00:00:00.000Z
-publisher: 人民邮电出版社
-tags: weread
-doc_type: weread-highlights-reviews
-bookId: '22806977'
-reviewCount: 1
 noteCount: 0
+publisher: 人民邮电出版社
+reviewCount: 1
+tags: weread
+title: 思考的乐趣：Matrix67数学笔记-顾森
 ---
 
 ## 元数据
@@ -31,6 +33,6 @@ noteCount: 0
 
 ## 本书评论
 
-### 书评 No.1  ^10500316-7ByTPH5e7
-⏱ [[2022-08-16]]  23:13
+### 书评 No.1 ^10500316-7ByTPH5e7
 
+⏱ [[2022-08-16]] 23:13

@@ -1,15 +1,15 @@
 ---
 date created: 2022-08-04
-date modified: 2022-08-09
-tags: MOC, todo/持续迭代
-
+date modified: 2022-08-20
+tags: MOC todo/持续迭代
+title: + 本库 ACCESS 的文件夹入口汇总
 ---
 
 up:: [[ACCESS 笔记组织法]]  
 x:: [[+ 本库 ACCESS 的工作流汇总]]  
 x:: [[本库ACCESS文件夹结构与混合笔记法]]  
 
-> [!INFO] 使用原则
+> [!INFO] 使用原则  
 >  应能通过下面的链接，点击进入某文件，直接在该文件下进行相关新的资源文件的创建，这样可以最大程度确保不创建出孤立的文件，使得笔记间产生至少1次链接。
 
 ## Atlas

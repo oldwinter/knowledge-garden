@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-24
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: emoji
 ---
 
 [[中文流行emoji及编码]]
@@ -14,6 +15,7 @@ date modified: 2022-07-14
 现在的方案，要么中文搜索弱，要么需要英文全字匹配。
 
 ## 输入方案
+
 1. 先用fn+e mac系统自带搜索表情。如果找不到，补用[[raycast]]的quicklink方案。
 2. 手机就用手机输入法自带选按即可。
 3. [[搜狗输入法+小鹤双拼如何快速输入emoji]]

@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-08
-date modified: 2022-08-08
+date modified: 2022-08-20
+title: obsidian的markdown语法
 ---
 
 [格式化你的笔记 - Obsidian 中文帮助 - Obsidian Publish](https://publish.obsidian.md/help-zh/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BD%A0%E7%9A%84%E7%AC%94%E8%AE%B0)

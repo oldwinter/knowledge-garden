@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-19
 date modified: 2022-08-20
+title: 用notion建设数字花园
 ---
 
 [Fruition - Build Your Next Website With Notion, For Free](https://fruitionsite.com/)  

@@ -1,10 +1,11 @@
 ---
-date created: 2022-08-11
-date modified: 2022-08-14
-tags: review
 sr-due: 2022-08-18
 sr-interval: 4
 sr-ease: 272
+date created: 2022-08-11
+date modified: 2022-08-20
+tags: review
+title: 常青笔记的标题就像 API
 ---
 
 %%我的理解:: 简直是卡片笔记的命名最佳实践。要养成这个习惯。 #todo/持续迭代 。反观自己，现在的一些笔记就是模棱两可的或大而全的笔记，要么会被疯狂调用，要么无人问津。%%

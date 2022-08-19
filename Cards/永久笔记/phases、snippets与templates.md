@@ -1,3 +1,9 @@
+---
+date created: 2022-08-06
+date modified: 2022-08-20
+title: phases、snippets与templates
+---
+
 从前到后，依次变复杂。
 
 手机号、邮箱号、日期等，使用自定义短语phases即可。snippet也行。

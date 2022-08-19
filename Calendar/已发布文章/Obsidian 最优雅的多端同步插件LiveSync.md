@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-04
-date modified: 2022-08-09
+date modified: 2022-08-20
 tags: article/done
+title: Obsidian 最优雅的多端同步插件LiveSync
 ---
 
 ## 目前各种同步方案的优缺点
@@ -57,10 +58,10 @@ tags: article/done
 ### 电脑端安装livesync插件作为client端，配置并连接至自己的server端 - 3到10分钟
 
 - 安装livesync插件，并打开配置项
-- 从上一步，找到自己申请的服务器的公网ip地址，比如121.111.173.186，按照如下填写，密码在上一步的命令行里面，默认是paasword。接着点击test，确认连通即可。
+- 从上一步，找到自己申请的服务器的公网ip地址，比如121.111.173.186，按照如下填写，密码在上一步的命令行里面，默认是paasword。接着点击test，确认连通即可。  
     ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041609451.png](https://img.oldwinter.top/Obsidian%20最优雅的多端同步插件LiveSync_image_2.png)
     
-- 接着配置一下同步策略，我的策略如下。livesync对于未限制后台的手机端而言，可能还是有点耗电，酌情使用。
+- 接着配置一下同步策略，我的策略如下。livesync对于未限制后台的手机端而言，可能还是有点耗电，酌情使用。  
     ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041613906.png](https://img.oldwinter.top/Obsidian%20最优雅的多端同步插件LiveSync_image_3.png)
     
 
@@ -72,11 +73,11 @@ tags: article/done
 
 ### 同步第三方插件及其配置 - 3到10分钟
 
-- 若要使用插件同步功能，则需要在电脑端按下图设置，将数据库加密存储
+- 若要使用插件同步功能，则需要在电脑端按下图设置，将数据库加密存储  
     ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041616069.png](https://img.oldwinter.top/Obsidian%20最优雅的多端同步插件LiveSync_image_4.png)
     
-- 接着打开同步插件的功能即可
-    ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041617016.png](https://img.oldwinter.top/Extras/Media/https!raw.githubusercontent.com!oldwinter!my-pics!master!202204041617016.png)
+- 接着打开同步插件的功能即可  
+    ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041617016.png](https://img.oldwinter.top/Extras/Media/https!raw.githubusercontent.com!oldwinter!my-pics!master!202204041617016.png)  
     ![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041638512.png](https://img.oldwinter.top/Extras/Media/https!raw.githubusercontent.com!oldwinter!my-pics!master!202204041638512.png)
     
 - 手机端同理，执行上面2步。不同之处如下：

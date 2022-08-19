@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: zotero
 ---
 
 还是要试试 zotora，因为很多主题，其实都有人写 paper 写过了，本身比各个平台搜到的论文更有价值

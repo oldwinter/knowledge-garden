@@ -1,6 +1,7 @@
 ---
 date created: 2022-07-11
-date modified: 2022-08-13
+date modified: 2022-08-20
+title: 本库如何免费发布至web
 ---
 
 将obsidian双链笔记公开发布到网上的实操方法：[[obsidian 目前最完美的免费发布方案 - 渐进式教程]]

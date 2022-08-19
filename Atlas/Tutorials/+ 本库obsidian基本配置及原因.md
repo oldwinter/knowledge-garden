@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-09
-date modified: 2022-08-11
+date modified: 2022-08-20
 tags: MOC
+title: + 本库obsidian基本配置及原因
 ---
 
 只选个人认为重要的配置项，说明原因。

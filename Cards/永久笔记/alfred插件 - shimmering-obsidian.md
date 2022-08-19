@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-07
-date modified: 2022-08-07
+date modified: 2022-08-20
+title: alfred插件 - shimmering-obsidian
 ---
 
 alfred能和obsidian产生联动的任何方式，这个插件都有，太tm顶了。

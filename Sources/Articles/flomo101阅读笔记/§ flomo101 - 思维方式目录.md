@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-20
-date modified: 2022-08-03
+date modified: 2022-08-20
 tags: TOC
+title: § flomo101 - 思维方式目录
 ---
 
 [🌱 思维方式目录 | flomo 101](https://help.flomoapp.com/thinking/start.html)

@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-30
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: building your second brain读书笔记 - CODE方法
 ---
 
 ## 构建第二大脑的CODE方法

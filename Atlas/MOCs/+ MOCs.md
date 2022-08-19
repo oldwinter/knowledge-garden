@@ -1,7 +1,8 @@
 ---
 date created: 2022-06-06
-date modified: 2022-08-07
-tags: MOC, todo/持续迭代
+date modified: 2022-08-20
+tags: MOC todo/持续迭代
+title: + MOCs
 ---
 
 > 这个是一个大 [[MOC]] 或叫根 MOC，是本库的所有 MOC 的 MOC。现在我还没想清楚，所以是边实践边改动。

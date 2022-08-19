@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-22
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: shell 常用命令行操作
 ---
 
 遍历文件夹，复制文件至根目录

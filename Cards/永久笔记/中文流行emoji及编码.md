@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-10
-date modified: 2022-08-10
+date modified: 2022-08-20
+title: 中文流行emoji及编码
 ---
 
 x:: [[搜狗输入法+小鹤双拼如何快速输入emoji]]

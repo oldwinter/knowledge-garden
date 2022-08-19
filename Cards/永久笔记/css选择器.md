@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-13
-date modified: 2022-08-13
+date modified: 2022-08-20
+title: css选择器
 ---
 
 [CSS 选择器 | 菜鸟教程](https://www.runoob.com/cssref/css-selectors.html)

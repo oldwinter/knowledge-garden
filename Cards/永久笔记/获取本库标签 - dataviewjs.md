@@ -1,6 +1,7 @@
 ---
 date created: 2022-07-03
-date modified: 2022-08-04
+date modified: 2022-08-20
+title: 获取本库标签 - dataviewjs
 ---
 
 ## 获取库的全部标签

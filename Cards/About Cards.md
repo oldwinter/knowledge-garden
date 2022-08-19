@@ -1,7 +1,8 @@
 ---
 date created: 2022-06-22
-date modified: 2022-08-09
+date modified: 2022-08-20
 tags: tutorial
+title: About Cards
 ---
 
 up:: [[ACCESS 笔记组织法]]

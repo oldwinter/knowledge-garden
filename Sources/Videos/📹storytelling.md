@@ -1,8 +1,10 @@
 ---
-aliases: storytelling
+aliases:
+  - storytelling
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
 tags: 视频笔记
+title: 📹storytelling
 ---
 
 ## 视频内容和感谢

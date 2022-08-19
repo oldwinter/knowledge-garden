@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-09
-date modified: 2022-08-09
+date modified: 2022-08-20
+title: 本库使用的obsidian第三方插件及原因
 ---
 
 up:: [[obsidian插件]]  

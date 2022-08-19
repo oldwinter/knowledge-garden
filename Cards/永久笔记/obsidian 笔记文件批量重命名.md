@@ -1,7 +1,8 @@
 ---
-uid: 7827f427-a9b4-4330-aae7-6905ff4286a7
 date created: 2022-08-11
-date modified: 2022-08-11
+date modified: 2022-08-20
+title: obsidian 笔记文件批量重命名
+uid: 7827f427-a9b4-4330-aae7-6905ff4286a7
 ---
 
 x:: [[vscode 文件批量重命名]]

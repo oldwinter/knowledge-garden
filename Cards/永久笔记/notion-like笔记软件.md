@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-18
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: notion-like笔记软件
 ---
 
 3 个重要特征:

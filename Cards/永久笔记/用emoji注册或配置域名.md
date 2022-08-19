@@ -1,7 +1,9 @@
 ---
 date created: 2022-07-27
-date modified: 2022-07-27
+date modified: 2022-08-20
+title: 用emoji注册或配置域名
 ---
+
 [与众不同的 Emoji 域名 | 冷知识+1 - 少数派](https://sspai.com/post/40131)
 
 直接输入emoji会配置失败。转换成[[punycode]]就行：

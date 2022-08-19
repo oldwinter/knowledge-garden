@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: mac系统重装
 ---
 
 ## 相关其他操作
@@ -28,6 +29,7 @@ date modified: 2022-07-20
 	  当然，自己的文档路径（~/Documents ），音频路径之类提前备份，这些都好弄。  
 	  如果你是程序员，还在意具体的什么配置项（ homebrew 啊，git-config，rvm 啊，nvm 啊，virtualenv 啊之类鬼），建议直接把整个 User （~/）目录备份下来，到时候缺啥补啥。
 	  ```
+	  
 
 ## 手动安装
 

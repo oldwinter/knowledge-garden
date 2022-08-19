@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-08
-date modified: 2022-08-08
+date modified: 2022-08-20
+title: mermaid
 ---
 
 mermaid 可视化编辑器

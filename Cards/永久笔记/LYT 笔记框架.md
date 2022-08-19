@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-19
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: LYT 笔记框架
 ---
 
 down:: [[ACCESS 笔记组织法]]

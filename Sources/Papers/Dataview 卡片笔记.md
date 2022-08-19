@@ -1,14 +1,18 @@
 ---
-searchText: 
-searchType: tags
-searchColor: All
-searchTag: 
+date created: 2022-08-19
+date modified: 2022-08-20
+metatable: true
 searchCodepro0: i
 searchCodepro1: a
 searchCodepro2: a
 searchCodepro3: t
-metatable: true
+searchColor: All
+searchTag: 
+searchText: 
+searchType: tags
+title: Dataview 卡片笔记
 ---
+
 ```dataviewjs
 let vaultpath = "";
 const metaeditEnabled = app.plugins.enabledPlugins.has("metaedit");

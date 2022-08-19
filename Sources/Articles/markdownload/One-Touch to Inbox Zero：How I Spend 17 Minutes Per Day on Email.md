@@ -1,3 +1,9 @@
+---
+date created: 2022-08-15
+date modified: 2022-08-20
+title: One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email
+---
+
 I spend 17 minutes per day on email, or 7.43% of my total work time over the past 12 months.
 
 The average knowledge worker, in contrast, spends [28%](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-social-economy) of their time reading, writing, and responding to email — nearly 4 times as much.
@@ -21,7 +27,6 @@ But this is exactly how most people handle their email every day. Just make the 
 Here is your annotated checklist for One-Touch Inbox Zero, in **5 EASY STEPS!**
 
 > _“I must create a system or be enslaved by another man’s”_ — William Blake
-
 
 ## First, the obvious stuff
 
@@ -245,12 +250,12 @@ _Settings_ > _Advanced_ > Set auto-advance to “Enable”
 
 Much of your time in email is spent performing a small handful of operations. Turn on keyboard shortcuts and you’ll be able to process a dozen emails at a time without touching your mouse, using only:
 
--   compose: c
--   reply: r
--   reply-all: a
--   forward: f
--   archive: e
--   send: cmd-enter
+- compose: c
+- reply: r
+- reply-all: a
+- forward: f
+- archive: e
+- send: cmd-enter
 
 _Settings > General_ \> Keyboard Shortcuts on
 
@@ -283,7 +288,7 @@ In the midst of daily battle, on the elevator or waiting in line, it’s fine to
 > **Open the oldest email in your inbox**
 
 > **Decide what needs to be done about it, and take one of the 6 following actions:**
-> 
+>
 > ![](https://img.oldwinter.top/Extras/Media/1!mwx6NBeBnL8BRq03yO1UdQ.jpeg.jpg)
 
 **1\. Archive (“e” shortcut) immediately**

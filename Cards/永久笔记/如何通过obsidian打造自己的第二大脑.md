@@ -1,5 +1,7 @@
 ---
 date created: 2022-07-20
+date modified: 2022-08-20
+title: 如何通过obsidian打造自己的第二大脑
 ---
 
 [[Building a Second Brain-Tiago Forte]]中，将[[第二大脑]]的建设，概括为4个有机结合的阶段[[🔡CODE]]。Capture，Organize，Distill，Express

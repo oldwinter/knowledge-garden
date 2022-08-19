@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-16
-date modified: 2022-08-16
+date modified: 2022-08-20
+title: obsidian初学过程中的感受
 ---
 
 - [[闪念笔记]]

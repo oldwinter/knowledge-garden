@@ -1,16 +1,18 @@
 ---
 author: 约翰·S·戈登
+bookId: '921790'
 category: 经济理财-财经
 cover: >-
-  https://wfqqreader-1252317822.image.myqcloud.com/cover/790/921790/t7_921790.jpg
+date created: 2022-08-16
+date modified: 2022-08-20
+doc_type: weread-highlights-reviews
 isbn: 9787508616773
 lastReadDate: 2022-08-16T00:00:00.000Z
-publisher: 中信出版社
-tags: weread
-doc_type: weread-highlights-reviews
-bookId: '921790'
-reviewCount: 1
 noteCount: 0
+publisher: 中信出版社
+reviewCount: 1
+tags: weread
+title: 伟大的博弈（珍藏版）-约翰·S·戈登
 ---
 
 ## 元数据
@@ -31,6 +33,6 @@ noteCount: 0
 
 ## 本书评论
 
-### 书评 No.1  ^10500316-7BySTceV4
-⏱ [[2022-08-16]]  22:59
+### 书评 No.1 ^10500316-7BySTceV4
 
+⏱ [[2022-08-16]] 22:59

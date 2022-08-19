@@ -1,6 +1,7 @@
 ---
 date created: 2022-07-27
-date modified: 2022-07-27
+date modified: 2022-08-20
+title: obsidian publish 发布 主题定制
 ---
 
 x:: [[minimal主题的publish.js参考]]

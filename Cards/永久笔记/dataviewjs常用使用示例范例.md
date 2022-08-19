@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-21
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: dataviewjs常用使用示例范例
 ---
 
 x:: [[dataview常用使用示例范例]]

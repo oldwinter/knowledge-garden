@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-02
-date modified: 2022-08-02
+date modified: 2022-08-20
+title: mac分辨率、启动磁盘吃啥问题 - 重置PRAM
 ---
 
 x:: [[mac充电和键盘灯异常 - 重置SMC]]

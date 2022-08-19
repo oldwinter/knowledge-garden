@@ -1,7 +1,9 @@
 ---
-aliases: 什么是PARA笔记组织法
+aliases:
+  - 什么是PARA笔记组织法
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: PARA
 ---
 
 [[2022-06-30]]读[[A Proven Method to Organize Your Digital Life and Unlock Your Creative Potential-Tiago Forte]]，恍然大悟。PARA应该是用来组织信息，而非组织笔记。不应该生搬硬套到我的[[个人知识笔记系统]]中，而是应该纳入[[个人信息管理系统]]。

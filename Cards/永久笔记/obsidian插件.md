@@ -3,9 +3,9 @@ sr-due: [2023-04-10]
 sr-interval: 305
 sr-ease: 330
 date created: 2022-08-15
-date modified: 2022-08-15
-tags:
-  - review
+date modified: 2022-08-20
+tags: review
+title: obsidian插件
 ---
 
 ## 本仓库的已安装插件列表

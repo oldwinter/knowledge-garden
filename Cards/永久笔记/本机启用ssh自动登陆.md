@@ -1,7 +1,9 @@
 ---
-aliases: vscode中启用ssh自动登陆
+aliases:
+  - vscode中启用ssh自动登陆
 date created: 2022-05-11
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: 本机启用ssh自动登陆
 ---
 
 1. 本地生成 RSA 密钥, 参考: [https://www.jianshu.com/p/09b81c07e03f](https://www.jianshu.com/p/09b81c07e03f)

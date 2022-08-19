@@ -1,6 +1,7 @@
 ---
 date created: 2022-07-06
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: Introduction The Promise of a Second Brain - 介绍：第二大脑的远景
 ---
 
 up:: [[+ Building a Second Brain 翻译和读书笔记]]

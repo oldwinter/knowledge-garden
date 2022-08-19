@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-08
-date modified: 2022-08-08
+date modified: 2022-08-20
+title: MacOS的terminal中快速打开app应用
 ---
 
 x:: [[Windows的terminal中快速打开app应用]]

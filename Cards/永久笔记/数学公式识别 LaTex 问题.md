@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-27
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: 数学公式识别 LaTex 问题
 ---
 
 直接使用微软数学手写公式，复制粘贴出来的就是latex格式。

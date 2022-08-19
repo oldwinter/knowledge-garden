@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-22
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: 🧑Nick Milo
 ---
 
 LYT, linking your thinking 网站的创始人。[[MOC]] 的发明人。

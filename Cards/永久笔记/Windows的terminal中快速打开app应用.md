@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-08
-date modified: 2022-08-08
+date modified: 2022-08-20
+title: Windows的terminal中快速打开app应用
 ---
 
 CMD和[[powershell]]程序中，支持start命令。  

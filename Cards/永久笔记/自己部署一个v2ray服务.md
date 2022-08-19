@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: 自己部署一个v2ray服务
 ---
 - 买一个区域位于海外的 server，预装 linux
 	- [[如何购买一台海外的服务器]]

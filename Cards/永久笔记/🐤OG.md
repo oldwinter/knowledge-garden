@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-13
-date modified: 2022-08-13
+date modified: 2022-08-20
+title: 🐤OG
 ---
 
 _OG_，是指Original gangster，也就是HipHop嘻哈界元老级、教父级的人物。或者可以理解为真正的黑帮的意思，就是形容一个人很牛。也意为大哥大，大佬，鼻祖等。

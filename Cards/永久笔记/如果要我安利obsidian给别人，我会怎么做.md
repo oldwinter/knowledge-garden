@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: 如果要我安利obsidian给别人，我会怎么做
 ---
 
 ## 如果要我安利 obsidian 给别人，我会怎么做

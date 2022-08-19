@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: § 目前知名的在线mooc
 ---
 
 国外课程
@@ -34,7 +35,7 @@ date modified: 2022-07-14
 
 - [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)
 - [YouTube](https://www.youtube.com/)
-- [小红书_标记我的生活](https://www.xiaohongshu.com/)
+- [小红书_标记我的生活](https://www.xiaohongshu.com/)  
 主打短课程，app 型课程
 - [得到APP - 知识就是力量，知识就在得到](https://www.dedao.cn/)
 - [极客时间-轻松学习，高效学习-极客邦](https://time.geekbang.org/)

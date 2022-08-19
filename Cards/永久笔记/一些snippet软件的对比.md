@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: 一些snippet软件的对比
 ---
 - 输入法自带的自定义短语
 - alfred，launchbar，rtools 等启动器软件自带的 snippet 功能

@@ -1,11 +1,13 @@
 ---
-aliases: 个人定位 公司定位
-date created: 2022-06-09
-date modified: 2022-08-14
-tags: review
 sr-due: 2022-09-02
 sr-interval: 15
 sr-ease: 290
+aliases:
+  - 个人定位 公司定位
+date created: 2022-06-09
+date modified: 2022-08-20
+tags: review
+title: 🔡SWOT
 ---
 
 ## 个人理解

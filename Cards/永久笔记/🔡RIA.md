@@ -1,11 +1,15 @@
 ---
-aliases: 功利主义阅读法, 快速拆解工具书, 教程类书的阅读方法
-date created: 2022-06-09
-date modified: 2022-07-20
-tags: review
 sr-due: 2022-09-02
 sr-interval: 15
 sr-ease: 290
+aliases:
+  - 功利主义阅读法
+  - 快速拆解工具书
+  - 教程类书的阅读方法
+date created: 2022-06-09
+date modified: 2022-08-20
+tags: review
+title: 🔡RIA
 ---
 
 ## 概念 (Reading)

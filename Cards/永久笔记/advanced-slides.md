@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: advanced-slides
 ---
 
 [[advanced-slides-templates模板1]]
@@ -13,6 +14,7 @@ date modified: 2022-07-14
 	page: 3
 }
 ```
+
 ```slide
 {
 	slide: [[advanced-slides-templates模板2]],
@@ -70,8 +72,9 @@ width: 960
 
 ## 插件简介 %% fold %%
 
-这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。
+这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。  
 官方文档 [Advanced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/getting-start/)
+
 > We follow the philosophy of `convention over configuration`, which means that in most cases it is sufficient to simply write a Slide in **Obsidian Markdown syntax**.
 
 %% 我用的目的，应该就是基于现有的结构化的文档，进行分钟级的低时间成本改造，立马就可以达到 ppt 效果。%%

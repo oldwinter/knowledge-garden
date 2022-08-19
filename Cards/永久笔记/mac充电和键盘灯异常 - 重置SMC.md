@@ -1,12 +1,14 @@
 ---
 date created: 2022-08-02
-date modified: 2022-08-02
+date modified: 2022-08-20
+title: mac充电和键盘灯异常 - 重置SMC
 ---
-x::  [[mac分辨率、启动磁盘吃啥问题 - 重置PRAM]]
+
+x:: [[mac分辨率、启动磁盘吃啥问题 - 重置PRAM]]
+
 ## 个人经验
 
 多次mac无法正常充电，都通过重置SMC解决了。甚至触摸板偶现自动光标漂移到最左上角的问题，也通过重置SMC解决了。
-
 
 ## SMC
 
@@ -45,6 +47,5 @@ SMC 负责管理与以下功能相关的行为：
 4.按住全部四个按键 10 秒钟。
 
 5.松开所有按键，然后按下电源按钮以将 Mac 开机。
-
 
 [如何重置 Mac 的 SMC - Apple 支持 (中国)](https://support.apple.com/zh-cn/HT201295)

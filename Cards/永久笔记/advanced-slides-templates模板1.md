@@ -1,8 +1,9 @@
 ---
 date created: 2022-07-03
-date modified: 2022-07-14
+date modified: 2022-08-20
 height: 1200
 margin: 0
+title: 'Minml<!-- element style="letter-spacing: 1.5rem;"-->'
 transition: slide
 width: 1920
 ---
@@ -24,7 +25,7 @@ width: 1920
 
 ![](https://img.oldwinter.top/advanced-slides-templates模板1_image_1.jpg)
 
-**Agenda 01**
+**Agenda 01**  
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
 <!-- element style="font-size: 24px"-->
@@ -34,7 +35,7 @@ width: 1920
 
 ![](https://img.oldwinter.top/advanced-slides-templates模板1_image_2.jpg)
 
-**Agenda 02**
+**Agenda 02**  
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
 <!-- element style="font-size: 24px"-->
@@ -44,7 +45,7 @@ width: 1920
 
 ![](https://img.oldwinter.top/advanced-slides-templates模板1_image_3.jpg)
 
-**Agenda 03**
+**Agenda 03**  
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
 <!-- element style="font-size: 24px"-->
@@ -95,7 +96,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- slide bg="white"-->
 <grid drag="30 50" drop="10 25" align="justify">
 
-**Stephanie Poetri**<!-- element style="font-size: 79px"-->
+**Stephanie Poetri**<!-- element style="font-size: 79px"-->  
 *Brand Consultant*
 
 <br><br>

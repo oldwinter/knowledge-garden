@@ -1,10 +1,11 @@
 ---
-date created: 2022-07-25
-date modified: 2022-08-14
-tags: review
 sr-due: 2022-08-18
 sr-interval: 4
 sr-ease: 270
+date created: 2022-07-25
+date modified: 2022-08-20
+tags: review
+title: 如何调试鼠标hover后才出现的界面元素
 ---
 
 [如何调试CSS Hover事件 - 董川民](https://www.dongchuanmin.com/xhtml/1642.html)

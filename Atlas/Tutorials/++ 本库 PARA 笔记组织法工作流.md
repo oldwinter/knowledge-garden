@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-04
-date modified: 2022-08-07
+date modified: 2022-08-20
 tags: tutorial
+title: ++ 本库 PARA 笔记组织法工作流
 ---
 
 x:: [[PARA]], [[+ Building a Second Brain 翻译和读书笔记]]

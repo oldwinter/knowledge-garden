@@ -1,10 +1,11 @@
 ---
-date created: 2022-07-12
-date modified: 2022-07-14
-tags: review
 sr-due: 2022-08-18
 sr-interval: 4
 sr-ease: 270
+date created: 2022-07-12
+date modified: 2022-08-20
+tags: review
+title: 🔡MECE
 ---
 
 ![](https://img.oldwinter.top/202207121622591.png)

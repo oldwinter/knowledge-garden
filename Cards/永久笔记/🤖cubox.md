@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-17
-date modified: 2022-07-20
+date modified: 2022-08-20
+title: 🤖cubox
 ---
 
 [[🤖cubox]]和[[🤖raindrop]] 的区别:

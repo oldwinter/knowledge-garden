@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-18
-date modified: 2022-08-19
+date modified: 2022-08-20
+title: 安卓使用terminal并使用git和github - termux
 ---
 
 [[Guide] Using Git to sync your Obsidian vault on Android devices - Share & showcase - Obsidian Forum](https://forum.obsidian.md/t/guide-using-git-to-sync-your-obsidian-vault-on-android-devices/41887)

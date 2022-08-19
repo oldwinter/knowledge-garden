@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-01
-date modified: 2022-07-14
+date modified: 2022-08-20
 tags: MOC
+title: + Building a Second Brain 翻译和读书笔记
 ---
 
 [[Building a second brain 读书笔记前言]]

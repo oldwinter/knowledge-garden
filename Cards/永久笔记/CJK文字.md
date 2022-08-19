@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-08
-date modified: 2022-08-08
+date modified: 2022-08-20
+title: CJK文字
 ---
 
 国际化中，CJK文字是中文、日文和韩文的统称，这些语言全部含有汉字及其变体，某些会与其他文字混合使用。

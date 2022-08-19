@@ -1,8 +1,8 @@
 ---
 date created: 2022-08-15
-date modified: 2022-08-17
-tags:
-  - article/done
+date modified: 2022-08-20
+tags: article/done
+title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 ---
 
 > 可以访问此文的双链版本，获得完整阅读体验：[obsidian 目前最完美的免费发布方案 - 渐进式教程 - 🌲 oldwinterの数字花园](https://oldwinter.top/Calendar/%E5%B7%B2%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/obsidian+%E7%9B%AE%E5%89%8D%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%8F%91%E5%B8%83%E6%96%B9%E6%A1%88+-+%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%95%99%E7%A8%8B)

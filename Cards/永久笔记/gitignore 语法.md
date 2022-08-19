@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-15
-date modified: 2022-08-15
+date modified: 2022-08-20
 tags: 
+title: gitignore 语法
 ---
 
 我的常用：  

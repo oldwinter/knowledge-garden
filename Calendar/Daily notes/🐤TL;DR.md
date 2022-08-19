@@ -1,6 +1,7 @@
 ---
 date created: 2022-08-19
-date modified: 2022-08-19
+date modified: 2022-08-20
+title: 🐤TL;DR
 ---
 
 too long，dont read。太长不看。也理解为极简版本的摘要。  

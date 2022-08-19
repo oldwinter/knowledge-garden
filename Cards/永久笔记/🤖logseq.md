@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: 🤖logseq
 ---
 
 gra- 可以和 obsidian 共同使用一个库，使用 2 者的基本语法即可。

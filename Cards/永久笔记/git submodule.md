@@ -1,6 +1,7 @@
 ---
 date created: 2022-06-23
-date modified: 2022-07-14
+date modified: 2022-08-20
+title: git submodule
 ---
 
 ## 添加子模块
@@ -9,6 +10,7 @@ date modified: 2022-07-14
 
 ```
  git submodule add git@github.com:oldwinter/knowledge-garden.git  _netes/
+ git submodule add https://github.com/oldwinter/knowledge-garden.git content/
 ```
 
 ⚠️添加ssh子模块，还会有认证鉴权问题，所以如果是public的，用https格式的.git链接最方便。

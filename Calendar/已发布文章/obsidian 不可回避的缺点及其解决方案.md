@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-01
-date modified: 2022-08-07
+date modified: 2022-08-20
 tags: article/done
+title: obsidian 不可回避的缺点及其解决方案
 up: [[🧰 本库使用指南]]
 ---
 

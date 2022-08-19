@@ -1,9 +1,13 @@
 ---
-searchYear: All
-searchMonth: All
-searchFinish: All
+date created: 2022-08-19
+date modified: 2022-08-20
 metatable: true
+searchFinish: All
+searchMonth: All
+searchYear: All
+title: Dataview 年月统计
 ---
+
 ```dataviewjs
 let vaultpath = "";
 const metaeditEnabled = app.plugins.enabledPlugins.has("metaedit");

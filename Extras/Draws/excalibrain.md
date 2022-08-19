@@ -1,17 +1,18 @@
 ---
-
-excalidraw-plugin: parsed
+date created: 2022-06-09
+date modified: 2022-08-20
 excalidraw-default-mode: view
 excalidraw-export-dark: false
 excalidraw-export-transparent: false
 excalidraw-linkbutton-opacity: 0.3
 excalidraw-onload-script: "app.plugins.plugins[`excalibrain`].start(ea.targetView.leaf);"
-
-tags: [excalidraw]
-
+excalidraw-plugin: parsed
+tags: excalidraw
+title: Text Elements
 ---
 
 # Text Elements
+
 [[+ 读书笔记]] ^eaAzWesa
 
 [[building your second brain读书笔记 - CODE方法]] ^KSkFq7Gg
@@ -111,7 +112,9 @@ tags: [excalidraw]
 [[饮食]] ^MqAKPdgr
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -2181,4 +2184,5 @@ z7ndFvS6wF97XNb2wJgRIA5wynIQrp7QUwAIAEOEVTlIHHSoUBm0GEEOAySTxAQA
 
 A===
 ```
+
 %%

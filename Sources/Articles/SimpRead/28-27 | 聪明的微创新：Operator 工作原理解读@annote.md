@@ -1,8 +1,10 @@
 ---
-title: "srAnnote@27 | 聪明的微创新：Operator 工作原理解读"
 alias: ["srAnnote@27 | 聪明的微创新：Operator 工作原理解读"]
-type: Simpread
+date created: 2022-08-19
+date modified: 2022-08-20
 tag: 
+title: 27 | 聪明的微创新：Operator 工作原理解读
+type: Simpread
 ---
 
 # 27 | 聪明的微创新：Operator 工作原理解读
@@ -18,17 +20,12 @@ tag:
 
 ## Annotations
 
-> [📌](<http://localhost:7026/reading/28#id=1660849454098>) <mark style="background-color: #ffeb3b">Highlight</mark> 
+> [📌](<http://localhost:7026/reading/28#id=1660849454098>) <mark style="background-color: #ffeb3b">Highlight</mark>  
 > es 中，管理 “有状态应用” 是一个比较复杂的过程，尤其是编写 Pod 模板的时候，总有一种 “在 YAML
 
 ^sran-1660849454098
 
-
-> [📌](<http://localhost:7026/reading/28#id=1660849473632>) <mark style="background-color: #ffeb3b">Highlight</mark> 
+> [📌](<http://localhost:7026/reading/28#id=1660849473632>) <mark style="background-color: #ffeb3b">Highlight</mark>  
 > Etcd Operator 创建 RBAC 规则。这是因为，Etcd Operator 需要访问 Kubernetes 的
 
 ^sran-1660849473632
-
-
-
-
