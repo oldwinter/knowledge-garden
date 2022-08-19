@@ -29,3 +29,8 @@ Extras/Media/.bf/**
 # obsidian发布用文件不需要上传
 publish.css
 publish.js
+
+# 不上传pdf,epub,mobi文件
+*.pdf
+*.epub
+*.mobi
