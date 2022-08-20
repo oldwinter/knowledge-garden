@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: 🏗 本库Roadmap
 ---
 
-up:: [[☘️ 花园导览 🍀]]  
+up:: [[☘️ 花园导览 🍀]]
 
 > [!INFO] 提示
 >此处只记录和obsidian相关、和本库如何使用相关的事项。
