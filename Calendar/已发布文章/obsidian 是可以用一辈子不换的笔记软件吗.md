@@ -1,6 +1,4 @@
 ---
-aliases:
-  - 
 content-type: notes
 date: 2022-06-10
 date created: 2022-06-09
