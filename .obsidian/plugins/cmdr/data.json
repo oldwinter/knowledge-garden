@@ -27,12 +27,6 @@
       "mode": "any"
     },
     {
-      "id": "publish:view-changes",
-      "icon": "paper-plane-glyph",
-      "name": "发布: 发布更改",
-      "mode": "any"
-    },
-    {
       "id": "remotely-save:start-sync",
       "icon": "remotely-save-sync-wait",
       "name": "Remotely Save: 开始同步（start sync）",
