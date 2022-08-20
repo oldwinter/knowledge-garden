@@ -4,140 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "b0bab526f8d4d5b8",
+        "id": "a66d012f3b350516",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "b0bab526f8d4d5b8",
+              "leaf": "a66d012f3b350516",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Papers/+ 论文笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
-              "leaf": "b0bab526f8d4d5b8",
+              "leaf": "a66d012f3b350516",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/📩 订阅newsletter.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":19},\"to\":{\"line\":6,\"ch\":19}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/+ 常青笔记阅读笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":36},\"to\":{\"line\":14,\"ch\":36}},\"scroll\":0}"
             },
             {
-              "leaf": "b0bab526f8d4d5b8",
+              "leaf": "a66d012f3b350516",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/🎥 我的PPT.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":1},\"to\":{\"line\":10,\"ch\":1}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":0},\"to\":{\"line\":8,\"ch\":0}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":19},\"to\":{\"line\":6,\"ch\":19}},\"scroll\":0}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":15},\"to\":{\"line\":7,\"ch\":15}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":12},\"to\":{\"line\":8,\"ch\":12}},\"scroll\":0}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":12},\"to\":{\"line\":8,\"ch\":12}},\"scroll\":1.4523449319213313}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/如何阅读由双链笔记组成的文章.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":10},\"to\":{\"line\":6,\"ch\":10}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "b0bab526f8d4d5b8",
+              "leaf": "a66d012f3b350516",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":3},\"to\":{\"line\":16,\"ch\":3}},\"scroll\":56.659175486926685}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/ACCESS 笔记组织法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":27},\"to\":{\"line\":12,\"ch\":27}},\"scroll\":0}"
+            },
+            {
+              "leaf": "a66d012f3b350516",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🔡MECE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":10.522592376573918}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Papers/+ 论文笔记.md",
+            "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
             "mode": "source",
             "backlinks": true,
-            "source": true
+            "source": false
           }
         }
       }
@@ -242,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Papers/+ 论文笔记.md"
+                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md"
               }
             }
           },
@@ -256,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Papers/+ 论文笔记.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,9 +182,9 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Papers/+ 论文笔记.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
@@ -283,7 +193,7 @@
                   "showTags": true,
                   "showAttachments": true,
                   "hideUnresolved": false,
-                  "collapse-color-groups": true,
+                  "collapse-color-groups": false,
                   "colorGroups": [],
                   "collapse-display": true,
                   "showArrow": true,
@@ -295,8 +205,8 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.3431214551109349,
-                  "close": false
+                  "scale": 0.5581582982401316,
+                  "close": true
                 }
               }
             }
@@ -311,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Papers/+ 论文笔记.md",
+                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -322,11 +232,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 198.5
+    "width": 227.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -355,17 +266,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "b0bab526f8d4d5b8",
+  "active": "fc8bc67bdab16945",
   "lastOpenFiles": [
-    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md",
-    "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
-    "☘️ 花园导览 🍀/其他/🎥 我的PPT.md",
-    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
-    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
-    "☘️ 花园导览 🍀/🏹 已发布长文.md",
-    "☘️ 花园导览 🍀/🗜 效率工具使用.md",
-    "☘️ 花园导览 🍀/🧀 个人知识管理.md",
-    "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Atlas/Tutorials/如何阅读由双链笔记组成的文章.md"
+    "Sources/Articles/常青笔记阅读笔记/+ 常青笔记阅读笔记.md",
+    "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
+    "Cards/永久笔记/ACCESS 笔记组织法.md",
+    "Cards/永久笔记/🔡MECE.md",
+    "Atlas/Tutorials/快速开始.md",
+    "Sources/Papers/Dataview 年月统计.md",
+    "Sources/Papers/Dataview 卡片笔记.md",
+    "Sources/Papers/++ 论文笔记工作流.md",
+    "Sources/Papers/+ 论文笔记.md",
+    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
   ]
 }
