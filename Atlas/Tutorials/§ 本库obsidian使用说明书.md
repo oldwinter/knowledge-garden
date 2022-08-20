@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-05
 date modified: 2022-08-20
-tags: TOC todo/本周
+tags: [TOC, todo/本周]
 title: § 本库obsidian使用说明书
 ---
 

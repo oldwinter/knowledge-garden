@@ -13,7 +13,7 @@
               "leaf": "de4f71a71fce02a7",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":3.049924357034796}"
+              "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "de4f71a71fce02a7",
@@ -225,8 +225,7 @@
               "pinned": true
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -356,7 +355,7 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "de4f71a71fce02a7",
+  "active": "a4d1994dfc9f1870",
   "lastOpenFiles": [
     "☘️ 花园导览 🍀/🧀 个人知识管理.md",
     "Cards/Pending/🆕 最近更新.md",
