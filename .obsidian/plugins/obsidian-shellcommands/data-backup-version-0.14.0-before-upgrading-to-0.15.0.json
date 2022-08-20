@@ -1,5 +1,5 @@
 {
-  "settings_version": "0.15.0",
+  "settings_version": "0.14.0",
   "debug": false,
   "obsidian_command_palette_prefix": "Execute: ",
   "preview_variables_in_command_palette": true,
@@ -13,8 +13,8 @@
   "enable_events": true,
   "approve_modals_by_pressing_enter_key": true,
   "max_visible_lines_in_shell_command_fields": false,
-  "shell_commands": [
-    {
+  "shell_commands": {
+    "0": {
       "platform_specific_commands": {
         "default": "open -a SimpRead\\ 简悦\\ ·\\ 稍后读.app"
       },
@@ -31,10 +31,9 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {},
-      "id": "0"
+      "variable_default_values": {}
     },
-    {
+    "1": {
       "platform_specific_commands": {
         "default": "open -a Gmail.app"
       },
@@ -51,10 +50,9 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {},
-      "id": "1"
+      "variable_default_values": {}
     },
-    {
+    "2": {
       "platform_specific_commands": {
         "default": "open -a 微信读书.app"
       },
@@ -71,10 +69,9 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {},
-      "id": "2"
+      "variable_default_values": {}
     },
-    {
+    "3": {
       "platform_specific_commands": {
         "default": "open obsidian://advanced-uri?vault=knowledge-garden&commandid=obsidian-weread-plugin%253Async-weread-notes-command"
       },
@@ -91,10 +88,9 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {},
-      "id": "3"
+      "variable_default_values": {}
     }
-  ],
+  },
   "prompts": [
     {
       "id": "4g8mr3yv8g",

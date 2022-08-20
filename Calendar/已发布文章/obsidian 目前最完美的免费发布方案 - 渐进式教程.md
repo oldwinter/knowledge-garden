@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-15
-date modified: 2022-08-20
+date modified: 2022-08-21
 tags: article/done
 title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 ---
@@ -50,6 +50,8 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 - [[2022-07-24]]新发现方案：[GitHub - mathieudutour/gatsby-digital-garden: 🌷 🌻 🌺 Create a digital garden with Gatsby](https://github.com/mathieudutour/gatsby-digital-garden/)
 
 总之，有钱就选官方服务准没错。其次，综合对比后，我选择了jekyll方案1，如何一步步实现，见下文。
+
+[[2022-08-21]]新增[[quartz]]方案，已经成熟很多，比jekyll方案性能更好，还支持搜索。
 
 ## 渐进式教程
 

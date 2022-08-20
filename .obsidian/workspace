@@ -12,8 +12,26 @@
             {
               "leaf": "a66d012f3b350516",
               "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
+            },
+            {
+              "leaf": "a66d012f3b350516",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-21.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "a66d012f3b350516",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":53,\"ch\":46},\"to\":{\"line\":53,\"ch\":46}},\"scroll\":58.96810207336523}"
+            },
+            {
+              "leaf": "a66d012f3b350516",
+              "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+              "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "a66d012f3b350516",
@@ -44,7 +62,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+            "file": "🍀 花园导览/🍀 花园导览.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -152,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md"
+                "file": "🍀 花园导览/🍀 花园导览.md"
               }
             }
           },
@@ -166,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+                "file": "🍀 花园导览/🍀 花园导览.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +200,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+                "file": "🍀 花园导览/🍀 花园导览.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -221,7 +239,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+                "file": "🍀 花园导览/🍀 花园导览.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -266,17 +284,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "fc8bc67bdab16945",
+  "active": "a66d012f3b350516",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2022-08-21.md",
+    "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
+    "Calendar/已发布文章/quartz.md",
+    "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
     "Sources/Articles/常青笔记阅读笔记/+ 常青笔记阅读笔记.md",
     "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
     "Cards/永久笔记/ACCESS 笔记组织法.md",
     "Cards/永久笔记/🔡MECE.md",
     "Atlas/Tutorials/快速开始.md",
-    "Sources/Papers/Dataview 年月统计.md",
-    "Sources/Papers/Dataview 卡片笔记.md",
-    "Sources/Papers/++ 论文笔记工作流.md",
-    "Sources/Papers/+ 论文笔记.md",
-    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md"
+    "Sources/Papers/Dataview 年月统计.md"
   ]
 }
