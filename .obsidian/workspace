@@ -4,29 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "0504fcd401e7c7bf",
+        "id": "a8aae285b2cebb54",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 0,
+          "pos": 1,
           "stack": [
             {
-              "leaf": "0504fcd401e7c7bf",
+              "leaf": "a8aae285b2cebb54",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/sed命令+正则表达式批量替换.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨如果你不看新闻，你会与世界脱节；但如果你看新闻，你会与事实脱节。--丹佐·华盛顿.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":48},\"to\":{\"line\":3,\"ch\":48}}}"
             },
             {
-              "leaf": "0504fcd401e7c7bf",
+              "leaf": "a8aae285b2cebb54",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/git submodule.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "a8aae285b2cebb54",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/shell 常用命令行操作.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
+            },
+            {
+              "leaf": "a8aae285b2cebb54",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/obsidian 笔记文件批量重命名.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "a8aae285b2cebb54",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/Templates/微信读书同步模板.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":30.892004341534008}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+            "file": "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -82,7 +100,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sed",
+                "query": "url:",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -134,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md"
+                "file": "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md"
               }
             }
           },
@@ -148,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+                "file": "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +182,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+                "file": "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -203,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+                "file": "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -247,17 +265,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "0504fcd401e7c7bf",
+  "active": "a8aae285b2cebb54",
   "lastOpenFiles": [
-    "Cards/永久笔记/git submodule.md",
-    "Atlas/Tutorials/快速开始.md",
-    "Cards/永久笔记/notion-like笔记软件.md",
-    "Calendar/已发布帖子/『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论.md",
-    "Cards/Pending/将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md",
-    "Sources/Articles/Markdownload/使用 Unsplash API 生成随机图片.md",
-    "Sources/Articles/Markdownload/中文博客排版指南.md",
-    "Cards/Pending/从一封钓鱼邮件聊起：针对普通人的钓鱼邮件设计 - 少数派.md",
+    "Cards/永久笔记/✨如果你不看新闻，你会与世界脱节；但如果你看新闻，你会与事实脱节。--丹佐·华盛顿.md",
+    "Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md",
+    "Cards/永久笔记/shell 常用命令行操作.md",
+    "Cards/永久笔记/obsidian 笔记文件批量重命名.md",
     "Extras/Templates/微信读书同步模板.md",
-    "Cards/永久笔记/sed命令+正则表达式批量替换.md"
+    "Atlas/Tutorials/快速开始.md",
+    "Cards/永久笔记/advanced-slides-templates模板1.md",
+    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+    "Sources/Articles/Markdownload/使用 Unsplash API 生成随机图片.md",
+    "Cards/Pending/将散落的标注收集在一处，Readwise 这样改善了我的信息输入 - 少数派.md"
   ]
 }
