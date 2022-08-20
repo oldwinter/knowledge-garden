@@ -12,8 +12,62 @@
             {
               "leaf": "b0bab526f8d4d5b8",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Papers/+ 论文笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/📩 订阅newsletter.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":19},\"to\":{\"line\":6,\"ch\":19}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/其他/🎥 我的PPT.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":2},\"to\":{\"line\":9,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":2},\"to\":{\"line\":10,\"ch\":2}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":1},\"to\":{\"line\":10,\"ch\":1}}}"
+            },
+            {
+              "leaf": "b0bab526f8d4d5b8",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{}"
             },
             {
               "leaf": "b0bab526f8d4d5b8",
@@ -74,49 +128,13 @@
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":3},\"to\":{\"line\":16,\"ch\":3}},\"scroll\":56.659175486926685}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":21},\"to\":{\"line\":6,\"ch\":21}},\"scroll\":0}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/微信读书同步/精品小说/浙大夜惊魂-紫金陈.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":3},\"to\":{\"line\":15,\"ch\":3}},\"scroll\":15.605143721633889}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":12},\"to\":{\"line\":9,\"ch\":12}}}"
-            },
-            {
-              "leaf": "b0bab526f8d4d5b8",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+            "file": "Sources/Papers/+ 论文笔记.md",
             "mode": "source",
             "backlinks": true,
             "source": true
@@ -224,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md"
+                "file": "Sources/Papers/+ 论文笔记.md"
               }
             }
           },
@@ -238,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Sources/Papers/+ 论文笔记.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -254,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Sources/Papers/+ 论文笔记.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -293,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "☘️ 花园导览 🍀/🧰 本库使用指南.md",
+                "file": "Sources/Papers/+ 论文笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -339,15 +357,15 @@
   },
   "active": "b0bab526f8d4d5b8",
   "lastOpenFiles": [
+    "☘️ 花园导览 🍀/其他/📩 订阅newsletter.md",
+    "☘️ 花园导览 🍀/其他/👬🏻 别的数字花园收录.md",
+    "☘️ 花园导览 🍀/其他/🎥 我的PPT.md",
+    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
+    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
+    "☘️ 花园导览 🍀/🏹 已发布长文.md",
+    "☘️ 花园导览 🍀/🗜 效率工具使用.md",
     "☘️ 花园导览 🍀/🧀 个人知识管理.md",
     "☘️ 花园导览 🍀/🧰 本库使用指南.md",
-    "Atlas/Tutorials/如何阅读由双链笔记组成的文章.md",
-    "☘️ 花园导览 🍀/🗜 效率工具使用.md",
-    "☘️ 花园导览 🍀/🏹 已发布长文.md",
-    "☘️ 花园导览 🍀/☘️ 花园导览 🍀.md",
-    "☘️ 花园导览 🍀/🏗 本库Roadmap.md",
-    "README.md",
-    "Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md",
-    "Sources/Books/微信读书同步/精品小说/浙大夜惊魂-紫金陈.md"
+    "Atlas/Tutorials/如何阅读由双链笔记组成的文章.md"
   ]
 }
