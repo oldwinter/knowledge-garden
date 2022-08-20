@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: obsidian开箱即用示例库
 ---
 
-> [!INFO] 提示  
+> [!INFO] 提示 
 > 英文的示例库也有很多，这里只收编我看过的并学习过的中文的示例库。
 
 - [GitHub - cumany/Blue-topaz-examples: Blue topaz themes example vault for Obsidian](https://github.com/cumany/Blue-topaz-examples)

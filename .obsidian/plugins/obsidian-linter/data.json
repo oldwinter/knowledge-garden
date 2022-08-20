@@ -12,7 +12,7 @@
       "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": true,
       "Yaml aliases section style": "multi-line",
       "Format yaml aliases section": true,
-      "Yaml tags section style": "single string space delimited",
+      "Yaml tags section style": "single string to single-line",
       "Default yaml array section style": "single-line",
       "Format yaml array sections": true,
       "Force key values to be single-line arrays": "data created\ndata modified",

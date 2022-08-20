@@ -4,122 +4,140 @@
     "type": "split",
     "children": [
       {
-        "id": "a8aae285b2cebb54",
+        "id": "de4f71a71fce02a7",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":3.049924357034796}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/+ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/翻译录入.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":11},\"to\":{\"line\":2,\"ch\":11}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/效率系统4大子系统联动与配合.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":11},\"to\":{\"line\":5,\"ch\":11}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/local first.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":5},\"to\":{\"line\":2,\"ch\":5}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/MOC.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/Pending/🆕 最近更新.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/+ 令我多次沉醉的人或作品.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/写你所读，以求内化.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":12},\"to\":{\"line\":6,\"ch\":12}}}"
             },
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/++ Daily notes工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/Templates/微信读书同步模板.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/+ 有意思的网络流行语.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{}"
             },
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/MOCs/Library.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/SimpRead/28-27 | 聪明的微创新：Operator 工作原理解读@annote.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。--史蒂芬·平克.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/shell 常用命令行操作.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "a8aae285b2cebb54",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/obsidian 笔记文件批量重命名.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/本库涉及外部app调用的工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "a8aae285b2cebb54",
+              "leaf": "de4f71a71fce02a7",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/Templates/微信读书同步模板.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":30.892004341534008}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/callout.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":1.670196671709531}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/obsidian开箱即用示例库.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":12},\"to\":{\"line\":6,\"ch\":12}},\"scroll\":0}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/callout.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":1.670196671709531}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/Pending/🆕 最近更新.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":12},\"to\":{\"line\":7,\"ch\":12}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/本库涉及外部app调用的工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":12},\"to\":{\"line\":6,\"ch\":12}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":14},\"to\":{\"line\":11,\"ch\":14}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/☘️ 花园导览 🍀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":25},\"to\":{\"line\":2,\"ch\":25}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🏹 已发布长文.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "de4f71a71fce02a7",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"☘️ 花园导览 🍀/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md",
+            "file": "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md",
             "mode": "source",
             "backlinks": true,
-            "source": false
+            "source": true
           }
         }
       }
@@ -172,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aliases:",
+                "query": "tag:#todo",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -225,7 +243,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md"
+                "file": "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md"
               }
             }
           },
@@ -239,7 +257,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md",
+                "file": "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -255,7 +273,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md",
+                "file": "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -294,7 +312,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/人文社科通识/心理学/常见心理学效应/皮格马利翁效应.md",
+                "file": "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -338,17 +356,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "a8aae285b2cebb54",
+  "active": "de4f71a71fce02a7",
   "lastOpenFiles": [
-    "Sources/Books/读书笔记/+ 读书笔记.md",
-    "Cards/永久笔记/翻译录入.md",
-    "Cards/永久笔记/效率系统4大子系统联动与配合.md",
-    "Cards/永久笔记/local first.md",
-    "Cards/永久笔记/MOC.md",
-    "Cards/永久笔记/+ 令我多次沉醉的人或作品.md",
-    "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
-    "Cards/永久笔记/++ Daily notes工作流.md",
-    "Extras/Templates/微信读书同步模板.md",
-    "Atlas/MOCs/Library.md"
+    "☘️ 花园导览 🍀/🧀 个人知识管理.md",
+    "Cards/Pending/🆕 最近更新.md",
+    "Sources/Articles/常青笔记阅读笔记/写你所读，以求内化.md",
+    "Cards/永久笔记/+ 有意思的网络流行语.md",
+    "Atlas/Tutorials/本库涉及外部app调用的工作流.md",
+    "Cards/永久笔记/callout.md",
+    "HOMEPAGE.md",
+    "Cards/永久笔记/obsidian开箱即用示例库.md",
+    "Atlas/Tutorials/+ 本库 ACCESS 的文件夹入口汇总.md",
+    "☘️ 花园导览 🍀/🏗 本库Roadmap.md"
   ]
 }
