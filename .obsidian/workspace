@@ -4,107 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "db7eaa93649d55c7",
-        "type": "leaf",
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":26},\"to\":{\"line\":6,\"ch\":26}},\"scroll\":0}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/ACCESS 笔记组织法.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":37},\"to\":{\"line\":12,\"ch\":37}},\"scroll\":0}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":26.60434496379197}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":20},\"to\":{\"line\":13,\"ch\":20}},\"scroll\":0}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":27,\"ch\":77},\"to\":{\"line\":27,\"ch\":77}},\"scroll\":16.897721764420748}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.svg\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.md\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":20,\"ch\":40},\"to\":{\"line\":20,\"ch\":40}},\"scroll\":0}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.svg\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.md\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.svg\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.md\"}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "db7eaa93649d55c7",
-              "group": null,
-              "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.svg\"}}",
-              "eState": "{}"
-            }
-          ]
-        },
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
-          }
-        }
-      },
-      {
         "id": "49034b69a7f64b94",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
+            {
+              "leaf": "49034b69a7f64b94",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/dataview.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
+            },
             {
               "leaf": "49034b69a7f64b94",
               "group": null,
@@ -152,7 +62,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Atlas/Tutorials/🌏 本库发布指南.md",
+            "file": "Cards/永久笔记/dataview.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -260,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md"
+                "file": "Cards/永久笔记/dataview.md"
               }
             }
           },
@@ -274,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
+                "file": "Cards/永久笔记/dataview.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -290,7 +200,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
+                "file": "Cards/永久笔记/dataview.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -329,7 +239,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
+                "file": "Cards/永久笔记/dataview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -374,57 +284,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "floating": {
-    "id": "6923e1f8fd506895",
-    "type": "floating",
-    "children": [
-      {
-        "id": "c11e92815321e100",
-        "type": "window",
-        "children": [
-          {
-            "id": "8c2f65c4515fd424",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "8c2f65c4515fd424",
-                  "group": null,
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"Extras/Media/Pasted Image 20220821140630_196.png\"}}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Extras/Media/Pasted Image 20220821140630_196.png"
-              }
-            }
-          }
-        ],
-        "direction": "vertical",
-        "x": 328,
-        "y": 69,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "db7eaa93649d55c7",
+  "active": "49034b69a7f64b94",
   "lastOpenFiles": [
     "Atlas/Tutorials/🌏 本库发布指南.md",
-    "Atlas/Tutorials/🍫 本库方法论指南.md",
-    "Atlas/Tutorials/本库常用的快捷键及作用.md",
-    "🍀 花园导览/🧰 本库使用指南.md",
-    "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
-    "Cards/永久笔记/ACCESS 笔记组织法.md",
+    "Extras/Draws/excalibrain.md",
     "README.md",
-    "🍀 花园导览/🍀 花园导览.md",
-    "Extras/Draws/README 2022-08-21.svg",
-    "Extras/Draws/README 2022-08-21.md"
+    "🍀 花园导览/其他/👬🏻 别的数字花园收录.md",
+    "Extras/Media/Pasted Image 20220821140630_196.png",
+    "AboutTheGarden.md",
+    "HOMEPAGE.md",
+    "Cards/永久笔记/最佳实践.md",
+    "Cards/永久笔记/PKM系统的不同侧重点-四象限图 by lyt.md",
+    "Atlas/Tutorials/🍫 本库方法论指南.md"
   ]
 }
