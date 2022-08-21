@@ -1,7 +1,7 @@
 ---
-sr-due: 2022-08-18
-sr-interval: 4
-sr-ease: 270
+sr-due: 2022-09-16
+sr-interval: 26
+sr-ease: 290
 aliases:
   - 结构化表达
 date created: 2022-06-09

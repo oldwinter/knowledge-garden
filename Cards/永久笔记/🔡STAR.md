@@ -1,7 +1,7 @@
 ---
-sr-due: 2022-08-18
-sr-interval: 4
-sr-ease: 270
+sr-due: 2022-09-18
+sr-interval: 28
+sr-ease: 290
 aliases:
   - 如何告诉对方自己值得这个价格
 date created: 2022-06-09
@@ -10,8 +10,12 @@ tags: review
 title: 🔡STAR
 ---
 
-如何完成一个有效的面试——善用 STAR 法则 - 鑫鱻的文章 - 知乎 <<<<https://zhuanlan.zhihu.com/p/26558343>>>>
+[[🔡STAR]]与[[🔡SCQA]]有异曲同工之妙，后者更注重理论分析，是一种结构化表达的模板工具，前者更注重实际行动。但其实差不多，都是能更清晰表达某件事情的可套用的[[模板与套路]]。
 
+---
+
+## 参考文献
+[如何完成一个有效的面试——善用STAR法则 - 知乎](https://zhuanlan.zhihu.com/p/26558343)
 ## 定义
 
 - Situation：事情是在什么情况下发生；

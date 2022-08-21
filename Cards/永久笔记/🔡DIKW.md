@@ -1,7 +1,7 @@
 ---
-sr-due: 2022-08-18
-sr-interval: 4
-sr-ease: 274
+sr-due: 2022-09-17
+sr-interval: 27
+sr-ease: 294
 date created: 2022-06-23
 date modified: 2022-08-20
 tags: review

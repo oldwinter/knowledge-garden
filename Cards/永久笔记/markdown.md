@@ -19,3 +19,10 @@ markdown发明人2004年发布1.0版本，此后没有更新过。[Daring Fireba
 还有个CommonMark，试图统一markdown混乱的各自为政的局面，但是由于markdown发明人不认可，导致其市场认可度也不是很高。
 
 [[obsidian的markdown语法]]
+
+
+---
+
+## 参考文献
+
+[纯粹的 Markdown - 链滴](https://ld246.com/article/1619080345258)

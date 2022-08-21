@@ -138,7 +138,11 @@ li[data-testid] {
 }
 
 .excalidraw-prompt-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.excalidraw-prompt-center button {
+  margin: 0 10px;
 }
 
 .excalidraw-prompt-center.filepath {
@@ -206,4 +210,17 @@ li[data-testid] {
 
 .excalidraw-release p>a>img {
   width: 100%
+}
+
+.excalidraw .context-menu-option {
+  box-shadow: none;
+}
+
+textarea.excalidraw-wysiwyg {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;  
 }
