@@ -228,6 +228,10 @@
     font-weight: 500;
 }
 
+.metadata-menu-setting-item span{
+    font-weight: 500;
+}
+
 .metadata-menu-setting-item-info-type{
     border-radius: 0.8em;
     padding: 0.1em 0.75em 0.25em 0.75em;
@@ -271,6 +275,14 @@
 
 .metadata-menu-setting-section-header{
     margin-bottom: 0;
+}
+
+.metadata-menu-setting-section-header-container{
+    display: flex;
+}
+
+.metadata-menu-setting-section-header-text-container{
+    width: 100%;
 }
 
 .metadata-menu-setting-section-desc{

@@ -1,5 +1,16 @@
 {
-  "presetFields": [],
+  "presetFields": [
+    {
+      "name": "tags",
+      "options": {
+        "template": "review"
+      },
+      "id": "1",
+      "valuesListNotePath": "",
+      "type": "Input"
+    }
+  ],
+  "fileClassQueries": [],
   "displayFieldsInContextMenu": false,
   "globallyIgnoredFields": [],
   "classFilesPath": "",

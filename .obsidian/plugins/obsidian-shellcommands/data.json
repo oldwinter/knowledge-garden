@@ -93,6 +93,46 @@
       "preactions": [],
       "variable_default_values": {},
       "id": "3"
+    },
+    {
+      "id": "vnphwuno3u",
+      "platform_specific_commands": {
+        "default": "sed -i \".bak\" '1a\\\ntags: review \n' {{file_path:absolute}}"
+      },
+      "shells": {},
+      "alias": "快速添加tags: review",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {}
+    },
+    {
+      "id": "fqidjftr47",
+      "platform_specific_commands": {
+        "default": ""
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {}
     }
   ],
   "prompts": [

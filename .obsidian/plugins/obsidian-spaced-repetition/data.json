@@ -28,7 +28,7 @@
     ],
     "openRandomNote": true,
     "autoNextNote": true,
-    "disableFileMenuReviewOptions": true,
+    "disableFileMenuReviewOptions": false,
     "maxNDaysNotesReviewQueue": 365,
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
@@ -37,6 +37,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-08-14",
+  "buryDate": "2022-08-22",
   "buryList": []
 }

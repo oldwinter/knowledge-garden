@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "cogscides/obsidian-keyboard-analyzer",
     "stefanopagliari/bibnotes"
   ],
   "pluginSubListFrozenVersion": [],

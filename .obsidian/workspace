@@ -4,138 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "49034b69a7f64b94",
+        "id": "0f36af6cb2f62c32",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 1,
           "stack": [
             {
-              "leaf": "49034b69a7f64b94",
+              "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-21.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/要多分享自己的思考成果.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":44.59285714285714}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/过程记录，持续迭代，兜底措施.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":0},\"to\":{\"line\":10,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/如何调试鼠标hover后才出现的界面元素.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/第一性原理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":19,\"ch\":0},\"to\":{\"line\":19,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/发展的眼光看问题.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":70},\"to\":{\"line\":16,\"ch\":70}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/为什么我反对图片承载文字的方式.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/如何表达能让人觉得你是专家.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/人人都是双标狗.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":99},\"to\":{\"line\":16,\"ch\":99}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":116},\"to\":{\"line\":10,\"ch\":116}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记工作流能降低改稿的情绪负担.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/实践出洞见.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/麦特卡夫定律.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记应面向概念.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/增援未来.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🔡MECE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":12},\"to\":{\"line\":6,\"ch\":12}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/软件界面经常将破坏性操作作为最终决定，而不是视情况而定的选择.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/为什么要做笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/人们似乎忘记了他们所读的大部分内容，而且他们大多没有注意到这一点.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "49034b69a7f64b94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/谨防自动导入阅读收件箱.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/过程记录，持续迭代，兜底措施.md",
-            "mode": "source",
+            "file": "Cards/永久笔记/数字花园.md",
+            "mode": "preview",
             "backlinks": true,
             "source": false
           }
@@ -242,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/过程记录，持续迭代，兜底措施.md"
+                "file": "Cards/永久笔记/数字花园.md"
               }
             }
           },
@@ -256,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/过程记录，持续迭代，兜底措施.md",
+                "file": "Cards/永久笔记/数字花园.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/过程记录，持续迭代，兜底措施.md",
+                "file": "Cards/永久笔记/数字花园.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -311,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/过程记录，持续迭代，兜底措施.md",
+                "file": "Cards/永久笔记/数字花园.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -356,17 +254,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "49034b69a7f64b94",
+  "active": "0f36af6cb2f62c32",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2022-08-21.md",
-    "Cards/永久笔记/过程记录，持续迭代，兜底措施.md",
-    "Sources/Articles/常青笔记阅读笔记/间隔重复系统可以用来编程注意力.md",
-    "Cards/永久笔记/如何调试鼠标hover后才出现的界面元素.md",
-    "Cards/永久笔记/第一性原理.md",
-    "Cards/永久笔记/发展的眼光看问题.md",
-    "Cards/永久笔记/为什么我反对图片承载文字的方式.md",
-    "Cards/永久笔记/如何表达能让人觉得你是专家.md",
-    "Cards/永久笔记/人人都是双标狗.md",
-    "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md"
+    "Cards/永久笔记/要多分享自己的思考成果.md",
+    "Cards/永久笔记/数字花园.md",
+    "README.md",
+    "Atlas/Tutorials/快速开始.md",
+    "Cards/永久笔记/卡片笔记.md",
+    "AboutTheGarden.md",
+    "Calendar/Daily notes/2022-08-22.md",
+    "Cards/永久笔记/效率系统4大子系统联动与配合.md",
+    "Cards/永久笔记/汉隆剃刀.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记和卡片盒笔记法的异同点.md"
   ]
 }
