@@ -7,19 +7,61 @@
         "id": "0f36af6cb2f62c32",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 1,
+          "pos": 0,
           "stack": [
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/要多分享自己的思考成果.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":21,\"ch\":11},\"to\":{\"line\":21,\"ch\":11}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":12},\"to\":{\"line\":5,\"ch\":12}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-22.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":11},\"to\":{\"line\":0,\"ch\":11}},\"scroll\":0}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/熟练的阅读一般都是非线性的.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":13.967741935483872}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":44.59285714285714}"
+              "eState": "{\"scroll\":41.64383561643836}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
@@ -32,8 +74,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/数字花园.md",
-            "mode": "preview",
+            "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
+            "mode": "source",
             "backlinks": true,
             "source": false
           }
@@ -140,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/数字花园.md"
+                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md"
               }
             }
           },
@@ -154,7 +196,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/数字花园.md",
+                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +212,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/数字花园.md",
+                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -209,7 +251,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/数字花园.md",
+                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -256,15 +298,15 @@
   },
   "active": "0f36af6cb2f62c32",
   "lastOpenFiles": [
-    "Cards/永久笔记/要多分享自己的思考成果.md",
-    "Cards/永久笔记/数字花园.md",
-    "README.md",
-    "Atlas/Tutorials/快速开始.md",
-    "Cards/永久笔记/卡片笔记.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md",
+    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
     "AboutTheGarden.md",
+    "README.md",
     "Calendar/Daily notes/2022-08-22.md",
-    "Cards/永久笔记/效率系统4大子系统联动与配合.md",
-    "Cards/永久笔记/汉隆剃刀.md",
-    "Sources/Articles/常青笔记阅读笔记/常青笔记和卡片盒笔记法的异同点.md"
+    "Sources/Articles/常青笔记阅读笔记/熟练的阅读一般都是非线性的.md",
+    "Cards/永久笔记/数字花园.md",
+    "Cards/永久笔记/要多分享自己的思考成果.md"
   ]
 }
