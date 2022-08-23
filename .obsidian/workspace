@@ -12,69 +12,225 @@
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":3},\"to\":{\"line\":5,\"ch\":3}},\"scroll\":0}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":21,\"ch\":11},\"to\":{\"line\":21,\"ch\":11}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":26.89064007719524}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/没有完美的分类.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":37.11342704798837}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":12},\"to\":{\"line\":5,\"ch\":12}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/该积累什么领域知识.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":51.624}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":23,\"ch\":8},\"to\":{\"line\":23,\"ch\":8}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/+ flomo101阅读笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-22.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":11},\"to\":{\"line\":0,\"ch\":11}},\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/该积累什么领域知识.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":2.081694402420575}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/熟练的阅读一般都是非线性的.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":13.967741935483872}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":9.78429471643238}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/+ 本库obsidian基本配置及原因.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":17,\"ch\":8},\"to\":{\"line\":17,\"ch\":8}},\"scroll\":8.452950558213717}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":41.64383561643836}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":25,\"ch\":21},\"to\":{\"line\":25,\"ch\":21}},\"scroll\":8.060365111561866}"
             },
             {
               "leaf": "0f36af6cb2f62c32",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":17.92251655629139}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Index for Atlases.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":22,\"ch\":0},\"to\":{\"line\":22,\"ch\":0}},\"scroll\":21.131072749115354}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/Index for 已发布文章和草稿.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":8},\"to\":{\"line\":13,\"ch\":0}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/LATEST.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/MOC文件汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/Daily notes汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":20,\"ch\":9},\"to\":{\"line\":17,\"ch\":0}},\"scroll\":10.694758780825559}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/微信读书清单.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/模板汇总.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":3},\"to\":{\"line\":6,\"ch\":3}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Dataviews/本库的宏观统计数据.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "0f36af6cb2f62c32",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":0},\"to\":{\"line\":7,\"ch\":0}},\"scroll\":0}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
+            "file": "Sources/Articles/常青笔记阅读笔记/§ 笔记写作系统.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "82e5a81cf2ab212a",
+        "type": "leaf",
+        "pane-relief:history-v1": {
+          "pos": 1,
+          "stack": [
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/obsidian 让我爱不释手的功能和细节.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":3},\"to\":{\"line\":9,\"ch\":3}},\"scroll\":0.9198184568835098}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":3},\"to\":{\"line\":4,\"ch\":3}},\"scroll\":0}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":21},\"to\":{\"line\":16,\"ch\":21}},\"scroll\":0}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":54,\"ch\":0},\"to\":{\"line\":54,\"ch\":0}},\"scroll\":28.81721854304636}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":18.96291866028708}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/效率系统4大子系统联动与配合.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/汉隆剃刀.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":32},\"to\":{\"line\":14,\"ch\":32}}}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记和卡片盒笔记法的异同点.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":15.079346092503988}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/在写作时创建推测性大纲.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "82e5a81cf2ab212a",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/常青笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":6.0030257186081695}"
+            }
+          ]
+        },
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -182,7 +338,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md"
+                "file": "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md"
               }
             }
           },
@@ -196,7 +352,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
+                "file": "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -212,7 +368,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
+                "file": "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -251,7 +407,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/如何成为学习高手-高冷冷/如果在家，如何反人性做到高度自律.md",
+                "file": "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -262,8 +418,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -296,17 +451,20 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "0f36af6cb2f62c32",
+  "active": "82e5a81cf2ab212a",
+  "ophidian:layout-settings": {
+    "pane-relief:focus-lock": true
+  },
   "lastOpenFiles": [
-    "Sources/Courses/如何成为学习高手-高冷冷/§ 如何成为学习高手 - 高冷冷.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何快速完成学习和工作任务.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何减少对学习的排斥和厌恶心理.md",
-    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
-    "AboutTheGarden.md",
-    "README.md",
-    "Calendar/Daily notes/2022-08-22.md",
-    "Sources/Articles/常青笔记阅读笔记/熟练的阅读一般都是非线性的.md",
-    "Cards/永久笔记/数字花园.md",
-    "Cards/永久笔记/要多分享自己的思考成果.md"
+    "Cards/永久笔记/obsidian 让我爱不释手的功能和细节.md",
+    "Atlas/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
+    "Atlas/Tutorials/🌏 本库发布指南.md",
+    "Atlas/Tutorials/本库数字花园如何嵌入访问统计系统.md",
+    "🍀 花园导览/🧰 本库使用指南.md",
+    "🍀 花园导览/🍀 花园导览.md",
+    "Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md",
+    "Cards/永久笔记/效率系统4大子系统联动与配合.md",
+    "Cards/永久笔记/汉隆剃刀.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记和卡片盒笔记法的异同点.md"
   ]
 }

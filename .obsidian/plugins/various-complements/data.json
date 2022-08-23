@@ -173,14 +173,6 @@
         }
       }
     },
-    "@Nick Milo": {
-      "@Nick Milo": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658571653356
-        }
-      }
-    },
     "@Tiago Forte": {
       "@Tiago Forte": {
         "internalLink": {
@@ -205,30 +197,6 @@
         }
       }
     },
-    "PKM": {
-      "PKM": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658571596893
-        }
-      }
-    },
-    "@zsolt": {
-      "@zsolt": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658571626041
-        }
-      }
-    },
-    "daily": {
-      "daily": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658571877544
-        }
-      }
-    },
     "dailynote": {
       "dailynote": {
         "internalLink": {
@@ -237,43 +205,11 @@
         }
       }
     },
-    "卡片笔记": {
-      "卡片笔记": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658571887453
-        }
-      }
-    },
     "raycast": {
       "raycast": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1659201325575
-        }
-      }
-    },
-    "CDN": {
-      "CDN": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658661621556
-        }
-      }
-    },
-    "GFW list": {
-      "GFW list": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658661690316
-        }
-      }
-    },
-    "DNS": {
-      "DNS": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658661697124
         }
       }
     },
@@ -1406,6 +1342,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1661094657026
+        }
+      }
+    },
+    "常青笔记": {
+      "常青笔记": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661269345558
         }
       }
     }
