@@ -12,8 +12,104 @@
             {
               "leaf": "9dc226aa5895d7be",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":50,\"ch\":0},\"to\":{\"line\":50,\"ch\":0}},\"scroll\":34.267549668874175}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":40,\"ch\":8},\"to\":{\"line\":40,\"ch\":8}},\"scroll\":40.407576449109996}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":52,\"ch\":0},\"to\":{\"line\":52,\"ch\":0}},\"scroll\":38.261393229166664}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/🤖VSCode.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9dc226aa5895d7be",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
             },
             {
               "leaf": "9dc226aa5895d7be",
@@ -32,109 +128,13 @@
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-24.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":17,\"ch\":15},\"to\":{\"line\":17,\"ch\":15}},\"scroll\":0}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":30,\"ch\":0},\"to\":{\"line\":30,\"ch\":0}},\"scroll\":20.600320455759302}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/» 本库笔记的emoji符号记录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/emoji.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/个人职业生涯/∑ 个人简历.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/个人职业生涯/∑ 个人简历.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":3},\"to\":{\"line\":7,\"ch\":3}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/沟通与表达专题/∑ 沟通与表达.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/个人职业生涯/∑ 个人职业生涯.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/计算机科学专题/∑ 计算机科学.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/golang入门与精通/∑ golang.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/3-Resource/投资与理财/∑ 投资与理财.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/3-Resource/城市与旅行/∑ 城市与旅行.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":3},\"to\":{\"line\":5,\"ch\":3}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/3-Resource/小知识点/∑ 小知识点.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":3},\"to\":{\"line\":5,\"ch\":3}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/∑ 文章笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/» 本库笔记的emoji符号记录.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "🍀 花园导览/🧰 本库使用指南.md",
+            "file": "🧰 本库指南/🌏 本库发布指南.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -208,7 +208,7 @@
                 {
                   "leaf": "a40ba0e5367abc32",
                   "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/Tutorials/快速开始.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false},\"pinned\":true}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/快速开始.md\",\"mode\":\"preview\",\"backlinks\":true,\"source\":false},\"pinned\":true}",
                   "eState": "{\"scroll\":0}"
                 }
               ]
@@ -217,7 +217,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Atlas/Tutorials/快速开始.md",
+                "file": "🧰 本库指南/Tutorials/快速开始.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🍀 花园导览/🧰 本库使用指南.md"
+                "file": "🧰 本库指南/🌏 本库发布指南.md"
               }
             }
           },
@@ -256,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🍀 花园导览/🧰 本库使用指南.md",
+                "file": "🧰 本库指南/🌏 本库发布指南.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🍀 花园导览/🧰 本库使用指南.md",
+                "file": "🧰 本库指南/🌏 本库发布指南.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -311,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🍀 花园导览/🧰 本库使用指南.md",
+                "file": "🧰 本库指南/🌏 本库发布指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -360,15 +360,15 @@
     "pane-relief:focus-lock": true
   },
   "lastOpenFiles": [
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "🧰 本库指南/🍫 本库方法论指南.md",
+    "🧰 本库指南/🌏 本库发布指南.md",
+    "🍀 花园导览/🍀 花园导览.md",
+    "🍀 花园导览/🧀 个人知识管理.md",
+    "Cards/永久笔记/🤖VSCode.md",
     "Cards/永久笔记/obsidian如何做短课程笔记.md",
     "Calendar/Daily notes/做笔记之前，先学会提问.md",
     "Calendar/Daily notes/2022-08-24.md",
-    "README.md",
-    "Atlas/Tutorials/» 本库笔记的emoji符号记录.md",
-    "Cards/永久笔记/emoji.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md",
-    "Spaces/2-Area/沟通与表达专题/∑ 沟通与表达.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人职业生涯.md"
+    "README.md"
   ]
 }
