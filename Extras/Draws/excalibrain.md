@@ -58,7 +58,7 @@ title: Text Elements
 
 [[raycast插件]] ^fXxs6CaA
 
-[[+ 个人简历]] ^NSnx5K7E
+[[∑ 个人简历]] ^NSnx5K7E
 
 [[什么值得买]] ^AcYuBuqH
 
@@ -2547,7 +2547,7 @@ title: Text Elements
 				}
 			],
 			"updated": 1657959270741,
-			"link": "\n[[+ 读书笔记]]",
+			"link": "\n[[∑ 读书笔记]]",
 			"locked": false
 		},
 		{
@@ -7716,7 +7716,7 @@ title: Text Elements
 				}
 			],
 			"updated": 1657959270839,
-			"link": "[[+ 个人简历]]",
+			"link": "[[∑ 个人简历]]",
 			"locked": false
 		},
 		{

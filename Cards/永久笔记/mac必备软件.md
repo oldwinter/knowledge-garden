@@ -94,6 +94,6 @@ title: mac必备软件
 
 非图形化的必备软件：
 
-[[+ linux常用命令行]]
+[[∑ linux常用命令行]]
 
 [[AppleScript]]

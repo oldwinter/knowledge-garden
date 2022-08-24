@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: Introduction The Promise of a Second Brain - 介绍：第二大脑的远景
 ---
 
-up:: [[+ Building a Second Brain 翻译和读书笔记]]
+up:: [[∑ Building a Second Brain 翻译和读书笔记]]
 
 你是否经常想记住一些重要的事情，却发现它不经意间从你的记忆中滑走了？
 

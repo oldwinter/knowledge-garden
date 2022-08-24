@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: Where It All Started - 第二大脑之缘起
 ---
 
-up:: [[+ Building a Second Brain 翻译和读书笔记]]
+up:: [[∑ Building a Second Brain 翻译和读书笔记]]
 
 你的头脑是用来产生想法，而不是持有它们。 —David Allen, author of Getting Things Done
 
