@@ -12,8 +12,20 @@
             {
               "leaf": "e33d4efd1513bd7b",
               "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Hypothesis/Ω 约束条件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":0},\"to\":{\"line\":7,\"ch\":0}}}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/∑ 金句库.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
+              "eState": "{}"
             },
             {
               "leaf": "e33d4efd1513bd7b",
@@ -116,25 +128,13 @@
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/∑ 视频笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/» 视频笔记工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Videos/📹放弃roam用obsidian的理由.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/∑ 金句库.md",
+            "file": "Sources/Articles/Hypothesis/Ω 约束条件.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/∑ 金句库.md"
+                "file": "Sources/Articles/Hypothesis/Ω 约束条件.md"
               }
             }
           },
@@ -256,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/∑ 金句库.md",
+                "file": "Sources/Articles/Hypothesis/Ω 约束条件.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/∑ 金句库.md",
+                "file": "Sources/Articles/Hypothesis/Ω 约束条件.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -311,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/∑ 金句库.md",
+                "file": "Sources/Articles/Hypothesis/Ω 约束条件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -360,6 +360,8 @@
     "pane-relief:focus-lock": true
   },
   "lastOpenFiles": [
+    "Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md",
+    "Cards/永久笔记/∑ 金句库.md",
     "🧰 本库指南/🧰 本库使用指南.md",
     "🧰 本库指南/🏗 本库Roadmap.md",
     "🧰 本库指南/🍫 本库方法论指南.md",
@@ -367,8 +369,6 @@
     "🍀 花园导览/🍀 花园导览.md",
     "🍀 花园导览/🗜 效率工具.md",
     "🍀 花园导览/🧀 知识管理.md",
-    "README.md",
-    "Sources/Videos/📹【何同学】我做了一个自己打字的键盘....md",
-    "Sources/Videos/∑ 视频笔记.md"
+    "README.md"
   ]
 }
