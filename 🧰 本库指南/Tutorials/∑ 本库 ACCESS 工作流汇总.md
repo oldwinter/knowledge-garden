@@ -1,11 +1,12 @@
 ---
 date created: 2022-08-04
-date modified: 2022-08-24
+date modified: 2022-08-25
 tags: [MOC, todo/持续迭代]
-title: ∑ 本库 ACCESS 的工作流汇总
+title: ∑ 本库 ACCESS 工作流汇总
 ---
 
 up: [[ACCESS 笔记组织法]]
+
 
 ## Atlas
 

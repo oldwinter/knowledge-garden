@@ -6,7 +6,7 @@ title: + 本库 ACCESS 的文件夹入口汇总
 ---
 
 up:: [[ACCESS 笔记组织法]]  
-x:: [[∑ 本库 ACCESS 的工作流汇总]]  
+x:: [[∑ 本库 ACCESS 工作流汇总]]  
 x:: [[本库ACCESS文件夹结构与混合笔记法]]  
 
 > [!INFO] 使用原则  

@@ -4,129 +4,129 @@
     "type": "split",
     "children": [
       {
-        "id": "9dc226aa5895d7be",
+        "id": "e33d4efd1513bd7b",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/markdown.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":3},\"to\":{\"line\":0,\"ch\":3}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/中文博客排版指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/请笑纳：我这28年的写作心法，全部都在这里了.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Markdownload/请笑纳：我这28年的写作心法，全部都在这里了.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":4},\"to\":{\"line\":11,\"ch\":4}},\"scroll\":0}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":35.35992189227028}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/» Daily notes工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🗜 效率工具使用.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ PKM.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":9},\"to\":{\"line\":8,\"ch\":9}},\"scroll\":0}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 个人知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库设计哲学及理念.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨真的猛士，敢于直面惨淡的人生。——鲁迅.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/快捷键、图标、命令行的对比与选择.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨写作之难，在于将网状的思想，通过树状的句法，用线性的文字展开。——史蒂芬·平克.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨我们塑造了工具，工具又塑造了我们。——麦克卢汉《理解媒介：论人的延伸》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨如果你不看新闻，你会与世界脱节；但如果你看新闻，你会与事实脱节。——丹佐·华盛顿.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨人真正的牛逼，不是有辉煌的舞台时，多么长袖善舞。而是低谷时，能直面苦难，有勇气面对并走出来。 ——罗翔.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨没有天生的好人，只有被约束的文明者。——杨蒙恩.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨君子性非异也，善假于物也。——荀子 《劝学》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "e33d4efd1513bd7b",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨君子不立危墙之下.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9dc226aa5895d7be",
+              "leaf": "e33d4efd1513bd7b",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":50,\"ch\":0},\"to\":{\"line\":50,\"ch\":0}},\"scroll\":34.267549668874175}"
-            },
-            {
-              "leaf": "9dc226aa5895d7be",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨工欲善其事，必先利其器。——《论语》.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             }
           ]
@@ -134,7 +134,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cards/永久笔记/markdown.md",
+            "file": "Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -190,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "+ ",
+                "query": "7655f8",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -242,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/markdown.md"
+                "file": "Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md"
               }
             }
           },
@@ -256,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/markdown.md",
+                "file": "Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/markdown.md",
+                "file": "Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -311,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/markdown.md",
+                "file": "Sources/Articles/Markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -355,20 +355,20 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "9dc226aa5895d7be",
+  "active": "e33d4efd1513bd7b",
   "ophidian:layout-settings": {
     "pane-relief:focus-lock": true
   },
   "lastOpenFiles": [
-    "🍀 花园导览/🧀 个人知识管理.md",
-    "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ PKM.md",
+    "Sources/Articles/Markdownload/中文博客排版指南.md",
+    "Sources/Articles/Markdownload/请笑纳：我这28年的写作心法，全部都在这里了.md",
+    "Sources/Articles/Markdownload/使用Unsplash API生成随机图片.md",
+    "Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md",
     "README.md",
-    "AboutTheGarden.md",
-    "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
-    "🍀 花园导览/🗜 效率工具使用.md",
-    "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
-    "Cards/永久笔记/快捷键、图标、命令行的对比与选择.md",
-    "🧰 本库指南/🌏 本库发布指南.md",
-    "🧰 本库指南/🧰 本库使用指南.md"
+    "🍀 花园导览/🧀 知识管理.md",
+    "Spaces/1-Project/第二大脑建设专题/∑ Building a Second Brain 翻译和读书笔记.md",
+    "HOMEPAGE.md",
+    "Cards/永久笔记/» Daily notes工作流.md",
+    "Cards/永久笔记/✨真的猛士，敢于直面惨淡的人生。——鲁迅.md"
   ]
 }

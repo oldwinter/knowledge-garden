@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
-title: ++ Daily notes工作流
+date modified: 2022-08-25
+title: » Daily notes工作流
 ---
 
 ## dailynote中写闪念笔记，生成的文件回顾整理时挪到永久笔记中
@@ -24,4 +24,4 @@ title: ++ Daily notes工作流
 
 它是 [[常青笔记]] 的一个回顾线索。
 
-## 文献笔记等，在其他文件夹新建文件
+## 文献笔记等，在其他文件夹的MOC文件中新建文件

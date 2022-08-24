@@ -4,12 +4,12 @@
   "highlightsFolder": "Sources/Articles/Hypothesis",
   "isConnected": true,
   "template": "{% if is_new_article %}\n# {{title}}\n\n## Metadata\n{% if author %}- Author: [{{author}}]({{authorUrl}}){% endif %}\n- Title: {{title}}\n{% if url %}- Reference: {{url}}{% endif %}\n- Category: #article\n{% endif %}\n\n{%- if is_new_article %}\n## Page Notes\n{% for highlight in page_notes -%}\n{{highlight.annotation}}\n{%- if highlight.tags | length %}\nTags: {% for tag in highlight.tags -%} #{{tag | replace(\" \", \"-\")+\" \"}}{%- endfor %}\n{% endif %}\n{% endfor %}\n{%- endif -%}\n\n{%- if is_new_article -%}\n## Highlights\n{% for highlight in highlights -%}\n- {{highlight.text}} — [Updated on {{highlight.updated}}]({{highlight.incontext}})\n{%- if 'Private' != highlight.group %} — Group: #{{highlight.group | replace(\" \", \"-\")}}{% endif %}\n{% if highlight.tags | length %}    - Tags: {% for tag in highlight.tags %} #{{tag | replace(\" \", \"-\")+\" \"}}{% endfor %}\n{% endif -%}\n{% if highlight.annotation %}    - Annotation: {{highlight.annotation}}{% endif %}\n{% endfor %}\n{% endif %}\n",
-  "syncOnBoot": false,
+  "syncOnBoot": true,
   "autoSyncInterval": 0,
-  "dateTimeFormat": "YYYY-MM-DD HH:mm:ss",
+  "dateTimeFormat": "YYYY-MM-DD",
   "history": {
     "totalArticles": 2,
-    "totalHighlights": 7
+    "totalHighlights": 14
   },
   "groups": [
     {
@@ -21,12 +21,12 @@
     },
     {
       "id": "i4YwBi1A",
-      "name": "myself",
+      "name": "webNote",
       "public": false,
       "type": "private",
       "selected": true
     }
   ],
   "useDomainFolders": false,
-  "lastSyncDate": "2022-08-18T19:50:55.262Z"
+  "lastSyncDate": "2022-08-24T17:20:14.536Z"
 }
