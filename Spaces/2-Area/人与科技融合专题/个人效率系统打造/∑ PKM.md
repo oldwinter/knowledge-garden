@@ -2,11 +2,11 @@
 aliases:
   - personal knowledge management
   - 『入不孵出』PKM系统
-  - PKM
+  - 个人知识管理
 date created: 2022-06-09
 date modified: 2022-08-24
 tags: MOC
-title: ∑ 个人知识管理
+title: ∑ PKM
 ---
 
 ## 我对pkm的定义
