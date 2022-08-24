@@ -7,3 +7,4 @@ title: 本库使用的markdown语法和绝大多web发布方案兼容
 
 为了能兼容传统博客或各大支持markdown语法的平台，我对obsidian的markdown语法使用，也是非常克制。总结而言，如非必要，坚决不引入html标签或css语法做排版增强，一共只用到了这些markdown通用的纯粹语法：
 
+#todo/今天 

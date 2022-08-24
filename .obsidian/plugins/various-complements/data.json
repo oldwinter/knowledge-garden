@@ -93,14 +93,6 @@
         }
       }
     },
-    "PARA": {
-      "PARA": {
-        "internalLink": {
-          "count": 6,
-          "lastUpdated": 1658850169450
-        }
-      }
-    },
     "article/done": {
       "article/done": {
         "frontMatter": {
@@ -214,176 +206,10 @@
       }
     },
     "cubox": {
-      "cubox": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658855839629
-        }
-      },
       "🤖cubox": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1660588389206
-        }
-      }
-    },
-    "诗词": {
-      "诗词": {
-        "currentVault": {
-          "count": 3,
-          "lastUpdated": 1658848882827
-        }
-      }
-    },
-    "发展中国家": {
-      "发展中国家": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658848982489
-        }
-      }
-    },
-    "知识管理": {
-      "知识管理": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849134632
-        }
-      }
-    },
-    "🧀 知识管理": {
-      "🧀 知识管理": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849138207
-        }
-      }
-    },
-    "个人知识管理": {
-      "个人知识管理": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849142097
-        }
-      }
-    },
-    "ryooo的知识管理工作流": {
-      "ryooo的知识管理工作流": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849147950
-        }
-      }
-    },
-    "管理": {
-      "管理": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658849151421
-        }
-      }
-    },
-    "知识库": {
-      "知识库": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658849157528
-        }
-      }
-    },
-    "README": {
-      "README": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849371156
-        }
-      }
-    },
-    "newsletter": {
-      "newsletter": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1658849793509
-        }
-      }
-    },
-    "得到": {
-      "得到": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658849913993
-        }
-      }
-    },
-    "知识付费": {
-      "知识付费": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658849983964
-        }
-      }
-    },
-    "简悦": {
-      "简悦": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1658855835453
-        }
-      }
-    },
-    "导出": {
-      "导出": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855877614
-        }
-      }
-    },
-    "模板": {
-      "模板": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855884469
-        }
-      }
-    },
-    "api": {
-      "api": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855898483
-        }
-      }
-    },
-    "门槛": {
-      "门槛": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855953296
-        }
-      }
-    },
-    "文档": {
-      "文档": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855965806
-        }
-      }
-    },
-    "费用": {
-      "费用": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855986984
-        }
-      }
-    },
-    "买断": {
-      "买断": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1658855990883
         }
       }
     },
@@ -1350,6 +1176,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1661269345558
+        }
+      }
+    },
+    "hugo": {
+      "hugo": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661328333088
         }
       }
     }
