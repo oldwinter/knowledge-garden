@@ -58,8 +58,8 @@
     "obsidian": {
       "obsidian": {
         "internalLink": {
-          "count": 13,
-          "lastUpdated": 1660653730831
+          "count": 14,
+          "lastUpdated": 1661390981937
         }
       },
       "🤖obsidian": {
@@ -155,6 +155,12 @@
           "count": 2,
           "lastUpdated": 1659364753851
         }
+      },
+      "🤖VSCode": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661390774436
+        }
       }
     },
     "longform": {
@@ -246,8 +252,8 @@
       },
       "🤖notion": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660106532112
+          "count": 2,
+          "lastUpdated": 1661392207279
         }
       }
     },
@@ -1196,6 +1202,62 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1661363506624
+        }
+      }
+    },
+    "少数派": {
+      "少数派": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661391909194
+        }
+      }
+    },
+    "书籍": {
+      "书籍": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1661391935922
+        }
+      }
+    },
+    "白嫖": {
+      "白嫖": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661391953082
+        }
+      }
+    },
+    "知乎": {
+      "知乎": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1661392055886
+        }
+      }
+    },
+    "公众号": {
+      "公众号": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1661392069861
+        }
+      }
+    },
+    "论坛": {
+      "论坛": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1661392097157
+        }
+      }
+    },
+    "飞书文档": {
+      "🤖飞书文档": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661392187744
         }
       }
     }
