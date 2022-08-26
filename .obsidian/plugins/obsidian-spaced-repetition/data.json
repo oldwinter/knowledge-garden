@@ -18,7 +18,7 @@
     "convertBoldTextToClozes": true,
     "singlelineCardSeparator": "??",
     "singlelineReversedCardSeparator": "???",
-    "multilineCardSeparator": "",
+    "multilineCardSeparator": "+++",
     "multilineReversedCardSeparator": "",
     "tagsToReview": [
       "#review"
@@ -37,6 +37,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-08-22",
+  "buryDate": "2022-08-25",
   "buryList": []
 }

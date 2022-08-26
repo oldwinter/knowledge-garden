@@ -4,129 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "e33d4efd1513bd7b",
+        "id": "97771d5d3c52e7ae",
         "type": "leaf",
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":23},\"to\":{\"line\":11,\"ch\":23}},\"scroll\":3.534039334341906}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":1.4523449319213313}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Atlas/About Atlas.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-25.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/Draws/∑ excalidraw 白板创建入口.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":0},\"to\":{\"line\":6,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"Extras/Draws/README 2022-08-21.md\"}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-26.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{}"
             },
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"excalidraw\",\"state\":{\"file\":\"Extras/Draws/数字时代如何更好地工作与生活 - 图.md\"}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-25.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{}"
             },
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Extras/Draws/∑ excalidraw 白板创建入口.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":11},\"to\":{\"line\":3,\"ch\":11}}}"
             },
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/✨生活中只有一种英雄主义，那就是在认清生活真相之后依然热爱生活。——罗曼罗兰.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Hypothesis/Ω 约束条件.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Articles/Hypothesis/年度征文  我的效率系统三原则.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/∑ 金句库.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🗜 效率工具.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "e33d4efd1513bd7b",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🧀 知识管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-25.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
               "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "e33d4efd1513bd7b",
+              "leaf": "97771d5d3c52e7ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":40,\"ch\":29},\"to\":{\"line\":40,\"ch\":29}},\"scroll\":11.097288676236044}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/好玩的github或gitee开源库搜集.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/数字花园.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":16.162280701754387}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-08-25.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/» 本库 PARA 笔记组织法工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Movies + TV/电视剧笔记/» 电视剧笔记工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":0},\"to\":{\"line\":8,\"ch\":0}}}"
+            },
+            {
+              "leaf": "97771d5d3c52e7ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/» 本库tutorial编写工作流.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             }
           ]
@@ -134,10 +86,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md",
+            "file": "Calendar/Daily notes/2022-08-25.md",
             "mode": "source",
             "backlinks": true,
-            "source": false
+            "source": true
           }
         }
       }
@@ -190,7 +142,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "7655f8",
+                "query": "++",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -242,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md"
+                "file": "Calendar/Daily notes/2022-08-25.md"
               }
             }
           },
@@ -256,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md",
+                "file": "Calendar/Daily notes/2022-08-25.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -272,7 +224,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md",
+                "file": "Calendar/Daily notes/2022-08-25.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -311,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/本库内容分发至主流媒体平台的实践探索.md",
+                "file": "Calendar/Daily notes/2022-08-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -355,20 +307,20 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "e33d4efd1513bd7b",
+  "active": "97771d5d3c52e7ae",
   "ophidian:layout-settings": {
     "pane-relief:focus-lock": true
   },
   "lastOpenFiles": [
-    "🧰 本库指南/🌏 本库发布指南.md",
-    "🧰 本库指南/本库如何自动每日发布至web.md",
-    "🧰 本库指南/本库如何自动每日同步至github.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "Atlas/About Atlas.md",
-    "Extras/Draws/∑ excalidraw 白板创建入口.md",
-    "Extras/Draws/README 2022-08-21.md",
-    "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
-    "Cards/永久笔记/✨生活中只有一种英雄主义，那就是在认清生活真相之后依然热爱生活。——罗曼罗兰.md",
-    "Cards/永久笔记/✨真的猛士，敢于直面惨淡的人生。——鲁迅.md"
+    "Calendar/Daily notes/2022-08-26.md",
+    "Calendar/Daily notes/2022-08-25.md",
+    "Calendar/Daily notes/我的硕士毕业论文致谢.md",
+    "Extras/Templates/∑ 模板文件创建入口.md",
+    "Extras/Templates/anki卡片模板.md",
+    "Cards/永久笔记/数字花园.md",
+    "Spaces/2-Area/人与科技融合专题/个人效率系统打造/∑ 快捷键.md",
+    "Cards/永久笔记/好玩的github或gitee开源库搜集.md",
+    "Calendar/Daily notes/本库数字花园如何嵌入评论系统.md",
+    "Calendar/Daily notes/对于notion迟迟不出中文版的猜想.md"
   ]
 }
