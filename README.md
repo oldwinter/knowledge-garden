@@ -14,6 +14,8 @@ title: README
 </p>
 <p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
 
+# 停止push源码2周，发现现在挖坑太多了，打算把坑填一填，发布一个完备的release版本。看到这句话的朋友们，敬请期待😋。
+
 ## 这是什么
 
 - 双链笔记的[[最佳实践]]。完整快照了我每天使用[[🤖obsidian]]写的笔记、用的插件和工作流。我将把obsidian从入门到精通的过程经验，渐进式地总结记录，也许你能跟我一起，从这个神器中发现更大的世界。
