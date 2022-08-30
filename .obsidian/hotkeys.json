@@ -127,5 +127,14 @@
   "pane-relief:go-1st": [],
   "pane-relief:go-7th": [],
   "pane-relief:go-8th": [],
-  "pane-relief:go-last": []
+  "pane-relief:go-last": [],
+  "obsidian-shellcommands:shell-command-vnphwuno3u": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
+    }
+  ]
 }

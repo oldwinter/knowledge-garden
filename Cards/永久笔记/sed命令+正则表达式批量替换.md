@@ -3,9 +3,9 @@ date created: 2022-08-22
 date modified: 2022-08-22
 tags: review
 title: sed命令+正则表达式批量替换
-sr-due: 2022-08-26
-sr-interval: 4
-sr-ease: 270
+sr-due: 2022-09-27
+sr-interval: 29
+sr-ease: 290
 ---
 
 [macOS grep + sed 批量替换多个文件的内容 - Dvel's Blog](https://dvel.me/posts/macos-replace-contents-multiple-files/)  

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2022-08-29
 title: mac启动台相关配置
 ---
 
@@ -33,7 +33,8 @@ killall Dock
 
 ## dock 栏完全隐藏
 
-！设置里还要同时设置自动隐藏
+1. ！设置里还要同时设置勾选『自动隐藏和显示程序坞』。
+2. 然后执行下列代码，就相当于dock栏完全隐藏了。
 
 ```applescript
 # defaults write com.apple.dock autohide-delay -int 0      ##（时间设为最短）

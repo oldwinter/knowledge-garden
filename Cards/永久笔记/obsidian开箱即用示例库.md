@@ -26,3 +26,7 @@ title: obsidian开箱即用示例库
 
 - [GitHub - sheldonxxd/obsidian_vault_template_for_researcher: This is an vault template for researchers using obsidian.](https://github.com/sheldonxxd/obsidian_vault_template_for_researcher)
 	- 科研向的库，拒绝花里胡哨，符合我的胃口。
+
+[[2022-08-29]]更新：
+- [GitHub - laozhou-in-germany/Chens_LMS_Public: The LMS (Life Management System) is a free tool for personal knowledge management and goal management based on Obsidian.md.](https://github.com/laozhou-in-germany/Chens_LMS_Public)
+	- 主打目标管理+dailynote+知识管理+回顾系统。配有各种丰富的模板。

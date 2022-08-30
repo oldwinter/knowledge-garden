@@ -96,8 +96,8 @@
     "article/done": {
       "article/done": {
         "frontMatter": {
-          "count": 5,
-          "lastUpdated": 1659764838852
+          "count": 7,
+          "lastUpdated": 1661780650759
         }
       }
     },
@@ -136,8 +136,8 @@
     "frontmatter": {
       "frontmatter": {
         "internalLink": {
-          "count": 4,
-          "lastUpdated": 1660883554344
+          "count": 5,
+          "lastUpdated": 1661777580287
         }
       }
     },
@@ -158,8 +158,8 @@
       },
       "🤖VSCode": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1661390774436
+          "count": 2,
+          "lastUpdated": 1661776150732
         }
       }
     },
@@ -203,27 +203,11 @@
         }
       }
     },
-    "raycast": {
-      "raycast": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659201325575
-        }
-      }
-    },
     "cubox": {
       "🤖cubox": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1660588389206
-        }
-      }
-    },
-    "费曼技巧": {
-      "费曼技巧": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659103720114
         }
       }
     },
@@ -235,21 +219,7 @@
         }
       }
     },
-    "收录": {
-      "收录": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1659182942998
-        }
-      }
-    },
     "notion": {
-      "notion": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659201430519
-        }
-      },
       "🤖notion": {
         "internalLink": {
           "count": 2,
@@ -680,8 +650,8 @@
     "linter": {
       "linter": {
         "currentVault": {
-          "count": 2,
-          "lastUpdated": 1660055431977
+          "count": 3,
+          "lastUpdated": 1661775359746
         },
         "internalLink": {
           "count": 1,
@@ -1084,8 +1054,8 @@
     "spaced-repetition": {
       "spaced-repetition": {
         "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660653755551
+          "count": 2,
+          "lastUpdated": 1661777369391
         }
       }
     },
@@ -1258,6 +1228,38 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1661392187744
+        }
+      }
+    },
+    "光明": {
+      "光明": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1661709081140
+        }
+      }
+    },
+    "various complements": {
+      "various complements": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661775399545
+        }
+      }
+    },
+    "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯": {
+      "卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661776440757
+        }
+      }
+    },
+    "spaced repetition": {
+      "spaced repetition": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661777373386
         }
       }
     }

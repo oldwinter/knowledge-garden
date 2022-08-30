@@ -27,15 +27,15 @@
       "mode": "any"
     },
     {
-      "id": "remotely-save:start-sync",
-      "icon": "remotely-save-sync-wait",
-      "name": "Remotely Save: 开始同步（start sync）",
-      "mode": "any"
-    },
-    {
       "id": "obsidian-weread-plugin:sync-weread-notes-command",
       "icon": "book-open",
       "name": "Weread Plugin: Sync Weread Notes",
+      "mode": "any"
+    },
+    {
+      "id": "remotely-save:start-sync",
+      "icon": "remotely-save-sync-wait",
+      "name": "Remotely Save: 开始同步（start sync）",
       "mode": "any"
     }
   ],

@@ -35,5 +35,8 @@
   "obsidian-annotator",
   "obsidian-smarter-md-hotkeys",
   "sliding-panes-obsidian",
-  "obsidian-keyboard-analyzer"
+  "obsidian-keyboard-analyzer",
+  "obsidian-bulk-rename-plugin",
+  "obsidian-query-control",
+  "obsidian-livesync"
 ]

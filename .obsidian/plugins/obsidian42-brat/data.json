@@ -1,5 +1,8 @@
 {
   "pluginList": [
+    "nothingislost/obsidian-query-control",
+    "Stardusten/ob-table-enhancer",
+    "OlegLustenko/obsidian-bulk-rename",
     "cogscides/obsidian-keyboard-analyzer",
     "stefanopagliari/bibnotes"
   ],

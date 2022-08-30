@@ -42,6 +42,7 @@
   "keepInSync": true,
   "autoexportSVG": true,
   "autoexportPNG": false,
+  "autoExportLightAndDark": false,
   "autoexportExcalidraw": false,
   "embedType": "excalidraw",
   "embedWikiLink": true,
@@ -91371,6 +91372,7 @@
   "defaultTrayMode": false,
   "previousRelease": "1.7.12",
   "showReleaseNotes": false,
+  "showNewVersionNotification": true,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
   "fieldSuggestor": true
 }

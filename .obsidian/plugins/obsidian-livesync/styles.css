@@ -1,0 +1,244 @@
+.added {
+    color: var(--text-on-accent);
+    background-color: var(--text-accent);
+}
+
+.normal {
+    color: var(--text-normal);
+}
+
+.deleted {
+    color: var(--text-on-accent);
+    background-color: var(--text-muted);
+}
+
+.op-scrollable {
+    overflow-y: scroll;
+    /* min-height: 280px; */
+    max-height: 280px;
+    user-select: text;
+}
+
+.op-pre {
+    white-space: pre-wrap;
+}
+
+.op-warn {
+    border: 1px solid salmon;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.op-warn::before {
+    content: "Warning";
+    font-weight: bold;
+    color: salmon;
+    position: relative;
+    display: block;
+}
+
+.op-warn-info {
+    border: 1px solid rgb(255, 209, 81);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.op-warn-info::before {
+    content: "Notice";
+    font-weight: bold;
+    color: rgb(255, 209, 81);
+    position: relative;
+    display: block;
+}
+
+.syncstatusbar {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.sls-plugins-wrap {
+    display: flex;
+    flex-grow: 1;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.sls-plugins-tbl {
+    border: 1px solid var(--background-modifier-border);
+    width: 100%;
+    max-height: 80%;
+}
+
+.divider th {
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* .sls-table-head{
+    width:50%;
+}
+.sls-table-tail{
+    width:50%;
+
+} */
+
+.sls-btn-left {
+    padding-right: 4px;
+}
+
+.sls-btn-right {
+    padding-left: 4px;
+}
+
+.sls-header-button {
+    margin-left: 2em;
+}
+
+.sls-hidden {
+    display: none;
+}
+
+:root {
+    --slsmessage: "";
+}
+
+.CodeMirror-wrap::before,
+.cm-s-obsidian>.cm-editor::before {
+    content: var(--slsmessage);
+    text-align: right;
+    white-space: pre-wrap;
+    position: absolute;
+    border-radius: 4px;
+    /* border:1px solid --background-modifier-border; */
+    display: inline-block;
+    top: 8px;
+    color: --text-normal;
+    opacity: 0.5;
+    font-size: 80%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.CodeMirror-wrap::before {
+    right: 0px;
+}
+
+.cm-s-obsidian>.cm-editor::before {
+    right: 16px;
+}
+
+.sls-setting-tab {
+    display: none;
+}
+
+div.sls-setting-menu-btn {
+    color: var(--text-normal);
+    background-color: var(--background-secondary-alt);
+    border-radius: 4px 4px 0 0;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 12px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    user-select: none;
+    flex-grow: 1;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.sls-setting-label.selected {
+    /* order: 1; */
+    flex-grow: 1;
+    /* width: 100%; */
+}
+
+.sls-setting-tab:hover~div.sls-setting-menu-btn,
+.sls-setting-tab:checked~div.sls-setting-menu-btn {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.sls-setting-menu {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+}
+
+.sls-setting-label {
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.setting-collapsed {
+    display: none;
+}
+
+.sls-plugins-tbl-buttons {
+    text-align: right;
+}
+
+.sls-plugins-tbl-buttons button {
+    flex-grow: 0;
+    padding: 6px 10px;
+}
+
+.sls-plugins-tbl-device-head {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-accent);
+}
+
+.op-flex {
+    display: flex;
+}
+
+.op-flex input {
+    display: inline-flex;
+    flex-grow: 1;
+    margin-bottom: 8px;
+}
+
+.op-info {
+    display: inline-flex;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--background-modifier-border);
+    width: 100%;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}
+
+.history-added {
+    color: var(--text-on-accent);
+    background-color: var(--text-accent);
+}
+
+.history-normal {
+    color: var(--text-normal);
+}
+
+.history-deleted {
+    color: var(--text-on-accent);
+    background-color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.ob-btn-config-fix label {
+    margin-right: 40px;
+}
+
+.ob-btn-config-info {
+    border: 1px solid salmon;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 4px;
+}
+
+.ob-btn-config-head {
+    padding: 2px;
+    margin: 1px;
+    border-radius: 4px;
+}
