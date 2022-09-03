@@ -4,6 +4,8 @@ date modified: 2022-08-25
 title: 本库如何自动每日同步至github
 ---
 
+[[本库如何指定笔记同步至github]]
+
 为什么不使用[[obsidian git]]插件？  
 因为它执行gti同步命令的时候，会让obsidian变得非常卡。而且本身我只需要用git定期备份只github，其他的git版本回退等功能，我都是使用[[🤖VSCode]]打开本库执行的，功能更全面，用起来也更得心应手。所以就采用了操作系统级的自动执行git命令的方案，而非obsidian内置git执行的方案。
 

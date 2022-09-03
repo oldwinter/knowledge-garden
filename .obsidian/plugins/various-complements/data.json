@@ -48,10 +48,6 @@
         "frontMatter": {
           "count": 64,
           "lastUpdated": 1661096807236
-        },
-        "internalLink": {
-          "count": 5,
-          "lastUpdated": 1659646275064
         }
       }
     },
@@ -74,14 +70,6 @@
         "customDictionary": {
           "count": 5,
           "lastUpdated": 1660584987224
-        }
-      }
-    },
-    "todo/持续迭代": {
-      "todo/持续迭代": {
-        "frontMatter": {
-          "count": 16,
-          "lastUpdated": 1659623531549
         }
       }
     },
@@ -150,32 +138,10 @@
       }
     },
     "VSCode": {
-      "VSCode": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1659364753851
-        }
-      },
       "🤖VSCode": {
         "internalLink": {
           "count": 2,
           "lastUpdated": 1661776150732
-        }
-      }
-    },
-    "longform": {
-      "longform": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1659364898112
-        }
-      }
-    },
-    "@Tiago Forte": {
-      "@Tiago Forte": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1659444346439
         }
       }
     },
@@ -227,51 +193,11 @@
         }
       }
     },
-    "价值序列": {
-      "价值序列": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659349330880
-        }
-      }
-    },
     "local first": {
       "local first": {
         "internalLink": {
           "count": 3,
           "lastUpdated": 1660051697430
-        }
-      }
-    },
-    "note-refactor": {
-      "note-refactor": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1659364862653
-        }
-      }
-    },
-    "co-bug": {
-      "co-bug": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1659474035351
-        }
-      }
-    },
-    "index索引": {
-      "index索引": {
-        "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1659495642617
-        }
-      }
-    },
-    "modified": {
-      "modified": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1659497495542
         }
       }
     },
@@ -284,30 +210,6 @@
         "frontMatter": {
           "count": 2,
           "lastUpdated": 1660102182290
-        }
-      }
-    },
-    "inline fields": {
-      "inline fields": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659615366418
-        }
-      }
-    },
-    "metadata": {
-      "metadata": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1659615510254
-        }
-      }
-    },
-    "kubernetes": {
-      "kubernetes": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659615653538
         }
       }
     },
@@ -324,62 +226,6 @@
         "currentVault": {
           "count": 3,
           "lastUpdated": 1659885692861
-        }
-      }
-    },
-    "微信读书": {
-      "微信读书": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659620177769
-        }
-      }
-    },
-    "weread plugin": {
-      "weread plugin": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659620192306
-        }
-      }
-    },
-    "zlibrary": {
-      "zlibrary": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659620412311
-        }
-      }
-    },
-    "zoter": {
-      "zoter": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1659621846342
-        }
-      }
-    },
-    "zotero": {
-      "zotero": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1659621848677
-        }
-      }
-    },
-    "source": {
-      "source": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1659639566915
-        }
-      }
-    },
-    "-1": {
-      "-1": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1659639702480
         }
       }
     },
@@ -662,8 +508,12 @@
     "MacOS": {
       "MacOS": {
         "internalLink": {
+          "count": 2,
+          "lastUpdated": 1662110514987
+        },
+        "currentVault": {
           "count": 1,
-          "lastUpdated": 1659950873119
+          "lastUpdated": 1662110518051
         }
       }
     },
@@ -1260,6 +1110,38 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1661777373386
+        }
+      }
+    },
+    "uBlock": {
+      "uBlock": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661937433075
+        }
+      }
+    },
+    "google analytics": {
+      "google analytics": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1661947184024
+        }
+      }
+    },
+    "obsidian publish 发布": {
+      "obsidian publish 发布": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1662036227455
+        }
+      }
+    },
+    "比较优势": {
+      "比较优势": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1662039649915
         }
       }
     }

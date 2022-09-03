@@ -33,7 +33,7 @@ title: README
 
 - [[ACCESS 笔记组织法]]
 
-![开箱即用库首页截图](https://img.oldwinter.top/README_image_1.png)
+![开箱即用库首页截图](https://img2.oldwinter.top/README_image_1.png)
 
 ![开箱即用库暗色模式截图](https://img.oldwinter.top/README_image_2.png)
 

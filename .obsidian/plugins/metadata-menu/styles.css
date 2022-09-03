@@ -255,21 +255,14 @@ button.metadata-menu-field-add-frontmatter-btn {
 /* dataview fields Styling */
 .metadata-menu-dv-field-button {
   min-width: calc(var(--font-text-size) * 1.4);
-  padding: 0 0.375em 0 0;
-  margin-right: 0.375em; }
+  padding: 0.6em 0em 0.9em 0em;
+  margin-right: 0.375em;
+  height: 1em; }
 
 .metadata-menu-dv-field-button svg {
   width: 12px;
   height: 12px;
-  margin: 0.3em 0.2em 0.2em 0.5em; }
-
-.metadata-menu-dv-field-button.isolated {
-  padding-left: 0.375em; }
-
-.metadata-menu-dv-field-button.isolated svg {
-  width: 12px;
-  height: 12px;
-  margin: 0.3em 0.2em 0.2em 0.2em; }
+  margin: 0.4em 0.2em 0.1em 0.2em; }
 
 .metadata-menu-dv-field-button.active {
   background-color: #556b77;
@@ -316,7 +309,8 @@ button.metadata-menu-field-add-frontmatter-btn {
   border-bottom-left-radius: 0em; }
 
 .metadata-menu-dv-select {
-  margin-right: 0.33em; }
+  margin-right: 0.33em;
+  height: 1.5em; }
 
 /* ---------------------------- */
 /*   Flatpick style             */

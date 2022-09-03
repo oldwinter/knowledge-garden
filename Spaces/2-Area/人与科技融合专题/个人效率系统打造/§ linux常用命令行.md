@@ -5,11 +5,12 @@ tags: MOC
 title: § linux常用命令行
 ---
 - 官方下载 pkg 安装
-	- [[nodejs]]
+	- [[nodejs]]，自带[[npm]]
 	- [[Golang]]
 	- [[🤖docker]]
 - [[docker compose]]
 - homebrew 安装
+	- [[npm]]
 	- [[fzf]]
 	- [[thefuck]]
 	- [[tldr]]
