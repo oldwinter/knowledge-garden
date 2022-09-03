@@ -6,7 +6,7 @@ title: 数学公式识别 LaTex 问题
 
 直接使用微软数学手写公式，复制粘贴出来的就是latex格式。
 
-![](https://img.oldwinter.top/202206270015108.jpg)
+![](https://img2.oldwinter.top/202206270015108.jpg)
 
 obsidian中插入输入math数学公式：
 

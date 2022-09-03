@@ -12,7 +12,7 @@ title: PKM系统的不同侧重点-四象限图 by lyt
 - structure 和 chaos 的对立  
 注：原文的对立，用的词语是 tension，也有 [[张力]] 的意思。
 
-![](https://img.oldwinter.top/PKM系统的不同侧重点-四象限图%20by%20lyt_image_1.png)
+![](https://img2.oldwinter.top/PKM系统的不同侧重点-四象限图%20by%20lyt_image_1.png)
 
 | - | folders | links |
 | --------- | -------- | ------- |

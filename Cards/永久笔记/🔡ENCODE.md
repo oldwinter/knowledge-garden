@@ -7,7 +7,7 @@ title: 🔡ENCODE
 
 Introducing
 
-![image of ENCODE](https://img.oldwinter.top/🔡ENCODE_image_1.png)
+![image of ENCODE](https://img2.oldwinter.top/🔡ENCODE_image_1.png)
 
 ### UNLOCK THE WAY YOUR IDEAS EVOLVE.
 

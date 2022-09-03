@@ -20,4 +20,4 @@ git push
 ```
 
 mac上常见的工具有：[[keyboard maestro]]、[[hazel]]等，我使用的前者。配置截图如下：
-![](https://img.oldwinter.top/202208250919001.png)
+![](https://img2.oldwinter.top/202208250919001.png)

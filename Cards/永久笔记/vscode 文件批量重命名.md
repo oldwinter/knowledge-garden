@@ -13,4 +13,4 @@ title: vscode 文件批量重命名
 
 接着批量选中后，右键选batch rename即可。接着在文件中用多光标进行批量编辑后保存，文件名就会被批量替换。
 
-![](https://img.oldwinter.top/vscode%20文件批量重命名_image_1.png)
+![](https://img2.oldwinter.top/vscode%20文件批量重命名_image_1.png)

@@ -13,11 +13,11 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 
 先看最终方案的发布页面效果： [🌱 oldwinterの数字花园](https://notes.oldwinter.top/)
 
-![](https://img.oldwinter.top/obsidian%20目前最完美的免费发布方案%20-%20渐进式教程_image_1.png)
+![](https://img2.oldwinter.top/obsidian%20目前最完美的免费发布方案%20-%20渐进式教程_image_1.png)
 
 和obsidian的官方发布方案做个对比：[🌲 oldwinterの数字花园](https://oldwinter.top/)
 
-![](https://img.oldwinter.top/obsidian%20目前最完美的免费发布方案%20-%20渐进式教程_image_2.png)
+![](https://img2.oldwinter.top/obsidian%20目前最完美的免费发布方案%20-%20渐进式教程_image_2.png)
 
 功能点详细比对：
 

@@ -26,7 +26,7 @@ SMC 负责管理与以下功能相关的行为：
 
 2.在内建键盘上，按住「键盘左侧的 Control +键盘左侧的 Option (Alt) +键盘右侧的 Shift」。
 
-![](https://img.oldwinter.top/mac充电和键盘灯异常%20-%20重置SMC_image_1.jpg)
+![](https://img2.oldwinter.top/mac充电和键盘灯异常%20-%20重置SMC_image_1.jpg)
 
 3.按住全部三个按键 7 秒钟，然后在不松开按键的情况下按住电源按钮。如果 Mac 处于开机状态，它将在您按住这些按键时关机。
 
@@ -40,7 +40,7 @@ SMC 负责管理与以下功能相关的行为：
 
 2.在内建键盘上，按住「键盘左侧的 Shift + 键盘左侧的 Control + 键盘左侧的 Option (Alt) 」。
 
-![](https://img.oldwinter.top/mac充电和键盘灯异常%20-%20重置SMC_image_2.jpg)
+![](https://img2.oldwinter.top/mac充电和键盘灯异常%20-%20重置SMC_image_2.jpg)
 
 3.在按住全部三个按键的情况下，按住电源按钮。
 

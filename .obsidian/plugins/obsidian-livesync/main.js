@@ -10862,7 +10862,7 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
     const containerInformationEl = containerEl.createDiv();
     const h3El = containerInformationEl.createEl("h3", { text: "Updates" });
     const informationDivEl = containerInformationEl.createEl("div", { text: "" });
-    const manifestVersion = "0.14.1";
+    const manifestVersion = "0.14.2";
     const updateInformation = "### 0.14.1\n- The target selecting filter was implemented.\n  Now we can set what files are synchronised by regular expression.\n- We can configure the size of chunks.\n  We can use larger chunks to improve performance.\n  (This feature can not be used with IBM Cloudant)\n-  Read chunks online.\n  Now we can synchronise only metadata and retrieve chunks on demand. It reduces local database size and time for replication.\n- Added this note.\n- Use local chunks in preference to remote them if present,\n\n#### Recommended configuration for Self-hosted CouchDB\n- Set chunk size to around 100 to 250 (10MB - 25MB per chunk)\n- Be sure to `Read chunks online` checked.\n\n\n### 0.13.0\n\n- The metadata of the deleted files will be kept on the database by default. If you want to delete this as the previous version, please turn on `Delete metadata of deleted files.`. And, if you have upgraded from the older version, please ensure every device has been upgraded.\n- Please turn on `Delete metadata of deleted files.` if you are using livesync-classroom or filesystem-livesync.\n- We can see the history of deleted files.\n- `Pick file to show` was renamed to `Pick a file to show.\n- Files in the `Pick a file to show` are now ordered by their modified date descent.\n- Update information became to be shown on the major upgrade.\n\n#### Minors\n- 0.13.1 Fixed on conflict resolution.\n- 0.13.2 Fixed file deletion failures.\n- 0.13.4\n  - Now, we can synchronise hidden files that conflicted on each devices.\n  - We can search for conflicting docs.\n  - Pending processes can now be run at any time.\n  - Performance improved on synchronising large numbers of files at once.\n";
     const lastVersion = ~~(versionNumberString2Number(manifestVersion) / 1e3);
     const tmpDiv = createSpan();
@@ -13380,8 +13380,8 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     return __async(this, null, function* () {
       setLogger(this.addLog.bind(this));
       Logger("loading plugin");
-      const manifestVersion = "0.14.1";
-      const packageVersion = "0.14.1";
+      const manifestVersion = "0.14.2";
+      const packageVersion = "0.14.2";
       Logger(`Self-hosted LiveSync v${manifestVersion} ${packageVersion} `);
       const lsname = "obsidian-live-sync-ver" + this.getVaultName();
       const last_version = localStorage.getItem(lsname);
@@ -15003,7 +15003,7 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
   pullFile(filename, fileList, force, rev, waitForReady = true) {
     return __async(this, null, function* () {
       const targetFile = this.app.vault.getAbstractFileByPath(id2path(filename));
-      if (!this.isTargetFile(targetFile))
+      if (!this.isTargetFile(id2path(filename)))
         return;
       if (targetFile == null) {
         const doc = yield this.localDatabase.getDBEntry(filename, rev ? { rev } : null, false, waitForReady);

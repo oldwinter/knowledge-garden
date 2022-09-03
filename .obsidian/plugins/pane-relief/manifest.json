@@ -1,7 +1,7 @@
 {
 	"id": "pane-relief",
 	"name": "Pane Relief",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"minAppVersion": "0.15.9",
 	"description": "Per-pane history, hotkeys for pane movement + navigation, and more",
 	"author": "PJ Eby",

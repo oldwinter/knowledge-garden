@@ -33,7 +33,7 @@ title: 卡片盒笔记法 - Zettelkasten
 
 ## 卡片要素
 
-![](https://img.oldwinter.top/20220306231443.png)
+![](https://img2.oldwinter.top/20220306231443.png)
 
  
 
