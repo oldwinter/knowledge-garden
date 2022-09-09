@@ -1893,7 +1893,7 @@ var replaceFilePath = (plugin, file) => {
   );
   return `${newPath}.${file.extension}`;
 };
-var renameFilesInObsidian = (app, plugin) => {
+var renameFilesInObsidian = async (app, plugin) => {
   const { replacePattern, existingSymbol } = plugin.settings;
   if (!existingSymbol) {
     new import_obsidian3.Notice("please fill Existing Symbol");
@@ -1909,7 +1909,7 @@ var renameFilesInObsidian = (app, plugin) => {
   }
   new import_obsidian3.Notice("renaming has been started");
   for (const fileName of plugin.settings.fileNames) {
-    app.fileManager.renameFile(fileName, replaceFilePath(plugin, fileName));
+    await app.fileManager.renameFile(fileName, replaceFilePath(plugin, fileName));
   }
   new import_obsidian3.Notice("successfully renamed all files");
 };
@@ -2066,7 +2066,7 @@ var BulkRenameSettingsTab = class extends import_obsidian4.PluginSettingTab {
       button.setButtonText("Rename");
       button.onClick(async () => {
         button.setDisabled(true);
-        renameFilesInObsidian(this.app, this.plugin);
+        await renameFilesInObsidian(this.app, this.plugin);
         this.display();
       });
     });

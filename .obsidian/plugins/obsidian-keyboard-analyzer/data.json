@@ -8,6 +8,17 @@
     "DisplayIDs": false
   },
   "featuredCommandIDs": [
-    "daily-notes"
+    "daily-notes",
+    "workspace:close",
+    "workspace:undo-close-pane",
+    "templater-obsidian:insert-templater",
+    "obsidian-spaced-repetition:srs-note-review-easy",
+    "obsidian-spaced-repetition:srs-note-review-hard",
+    "obsidian-spaced-repetition:srs-note-review-open-note",
+    "obsidian-shellcommands:shell-command-vnphwuno3u",
+    "omnisearch:show-modal",
+    "app:go-back",
+    "app:go-forward",
+    "obsidian-another-quick-switcher:search-command_Recommended search"
   ]
 }

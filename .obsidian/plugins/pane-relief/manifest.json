@@ -1,9 +1,9 @@
 {
 	"id": "pane-relief",
 	"name": "Pane Relief",
-	"version": "0.3.1",
+	"version": "0.3.5",
 	"minAppVersion": "0.15.9",
-	"description": "Per-pane history, hotkeys for pane movement + navigation, and more",
+	"description": "Per-tab history, hotkeys for pane/tab movement, navigation, sliding workspace, and more",
 	"author": "PJ Eby",
 	"authorUrl": "https://github.com/pjeby",
 	"isDesktopOnly": true

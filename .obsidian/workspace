@@ -4,131 +4,137 @@
     "type": "split",
     "children": [
       {
-        "id": "18fdb157d88015b9",
+        "id": "a1bfff15699aa6ae",
         "type": "leaf",
         "pane-relief:history-v1": {
-          "pos": 1,
+          "pos": 0,
           "stack": [
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库如何自动每日发布至web.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":33,\"ch\":34},\"to\":{\"line\":33,\"ch\":34}},\"scroll\":15.02591706539075}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/Pending/临时file cooker使用的dataview表达式.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-09-09.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Cards/永久笔记/Github Copilot.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/个人职业生涯/hxw的个人述职 - 批注.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Spaces/2-Area/个人职业生涯/∑ 个人职业生涯.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":15},\"to\":{\"line\":7,\"ch\":15}}}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-09-08.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":55.44249201277955}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":true}}",
-              "eState": "{\"scroll\":0.12102874432677761}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"HOMEPAGE.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":12.943174461596007}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/🐤我真的会谢.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-09-03.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":11},\"to\":{\"line\":0,\"ch\":11}},\"scroll\":0}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Sources/Books/读书笔记/∑ 读书笔记.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":4},\"to\":{\"line\":13,\"ch\":4}},\"scroll\":9.032695374800637}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":13},\"to\":{\"line\":12,\"ch\":13}}}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中搞美化和排版.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中做Iframe嵌入.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":9},\"to\":{\"line\":7,\"ch\":9}}}"
-            },
-            {
-              "leaf": "18fdb157d88015b9",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"AboutTheGarden.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库不建议在obsidian中做Iframe嵌入.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/Tutorials/本库使用时遵守的核心原则.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
               "eState": "{\"scroll\":0}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":32,\"ch\":29},\"to\":{\"line\":32,\"ch\":29}},\"scroll\":17.961080733354777}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":37,\"ch\":0},\"to\":{\"line\":37,\"ch\":0}},\"scroll\":30.473411154345005}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🌏 本库发布指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🆕 本库更新日志.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":31,\"ch\":42},\"to\":{\"line\":31,\"ch\":42}},\"scroll\":17.056618819776716}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🏗 本库Roadmap.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":31.444837568349953}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🧰 本库使用指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":18},\"to\":{\"line\":13,\"ch\":0}},\"scroll\":1.307110438729198}"
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "18fdb157d88015b9",
+              "leaf": "a1bfff15699aa6ae",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Calendar/Daily notes/2022-09-02.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🧰 本库指南/🍫 本库方法论指南.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "a1bfff15699aa6ae",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"🍀 花园导览/🍀 花园导览.md\",\"mode\":\"source\",\"backlinks\":true,\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "🧰 本库指南/🌏 本库发布指南.md",
+            "file": "Calendar/Daily notes/2022-09-09.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -184,7 +190,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#todo",
+                "query": "tag:#todo/今天",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -236,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/🌏 本库发布指南.md"
+                "file": "Calendar/Daily notes/2022-09-09.md"
               }
             }
           },
@@ -250,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/🌏 本库发布指南.md",
+                "file": "Calendar/Daily notes/2022-09-09.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -266,7 +272,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/🌏 本库发布指南.md",
+                "file": "Calendar/Daily notes/2022-09-09.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -305,7 +311,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/🌏 本库发布指南.md",
+                "file": "Calendar/Daily notes/2022-09-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -349,17 +355,17 @@
     "width": 246.67393493652344,
     "collapsed": true
   },
-  "active": "18fdb157d88015b9",
+  "active": "a1bfff15699aa6ae",
   "lastOpenFiles": [
-    "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md",
-    "🧰 本库指南/🌏 本库发布指南.md",
-    "🧰 本库指南/Tutorials/本库如何自动每日同步至github.md",
-    "🧰 本库指南/Tutorials/本库如何指定笔记同步至github.md",
-    "Cards/Pending/临时file cooker使用的dataview表达式.md",
     "README.md",
+    "🧰 本库指南/Tutorials/快速开始.md",
+    "Cards/永久笔记/Github Copilot.md",
+    "Calendar/Daily notes/2022-09-08.md",
+    "Spaces/2-Area/个人职业生涯/hxw的个人述职 - 批注.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人职业生涯.md",
+    "🧰 本库指南/🧰 本库使用指南.md",
     "HOMEPAGE.md",
-    "Calendar/Daily notes/🐤我真的会谢.md",
-    "Calendar/Daily notes/2022-09-03.md",
-    "Sources/Books/读书笔记/∑ 读书笔记.md"
+    "AboutTheGarden.md",
+    "🧰 本库指南/Tutorials/本库使用时遵守的核心原则.md"
   ]
 }

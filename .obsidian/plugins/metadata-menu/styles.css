@@ -312,6 +312,30 @@ button.metadata-menu-field-add-frontmatter-btn {
   margin-right: 0.33em;
   height: 1.5em; }
 
+/* Select Modal */
+.metadata-menu-value-suggester-actions {
+  display: flex; }
+
+.metadata-menu-value-suggester-actions-spacer {
+  width: 100%; }
+
+.metadata-menu-value-suggester-value-container {
+  display: flex;
+  white-space: nowrap; }
+
+.metadata-menu-value-suggester-value-container-spacer {
+  width: 100%; }
+
+.metadata-menu-value-selected {
+  background-color: var(--interactive-accent); }
+
+.metadata-menu-value-suggester-button {
+  margin: 12px 12px 12px 0; }
+
+.metadata-menu-value-suggester-button.danger {
+  background-color: var(--color-red);
+  color: var(--color-base-00); }
+
 /* ---------------------------- */
 /*   Flatpick style             */
 /* ---------------------------- */

@@ -1,18 +1,19 @@
 ---
 date created: 2022-08-06
-date modified: 2022-08-20
+date modified: 2022-09-07
 tags: tutorial
-title: README
+title: 'README'
 ---
 <h1 align="center">oldwinterの数字花园</h1>
 <img src="https://img2.oldwinter.top/202208211431065.svg">
 <p align="center">
     <a href="https://oldwinter.top/README">主发布站</a> |
-    <a href="https://notes.oldwinter.top/README">备发布站1</a> |
-    <a href="https://garden.oldwinter.top/README">备发布站2</a> |
+    <a href="https://notes.oldwinter.top/README">备发布站</a> |
     <a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
 </p>
 <p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
+
+# [[2022-09-07]]更新：release 版本等0.16的obsidian版本一起发布。
 
 # 停止push源码2周，发现现在挖坑太多了，打算把坑填一填，发布一个完备的release版本。看到这句话的朋友们，敬请期待😋。
 
@@ -21,7 +22,6 @@ title: README
 - 双链笔记的[[最佳实践]]。完整快照了我每天使用[[🤖obsidian]]写的笔记、用的插件和工作流。我将把obsidian从入门到精通的过程经验，渐进式地总结记录，也许你能跟我一起，从这个神器中发现更大的世界。
 - 真实袒露的[[第二大脑]]。是个人每日[[阅读、笔记与写作]]的完整实时的过程与结果的全盘分享。90%的笔记是写给自己的，是希望能为自己将来所用的[[常青笔记]]。
 - 未经美化的[[数字花园]]。避免为了正式发表而过度修葺美化文章，保留了最真实完备的细节。10%的笔记是写给观众的，但愿能使得你有序漫步，避免陷入云深不知处。
-
 
 ## 快速开始
 
@@ -42,6 +42,10 @@ title: README
 - 如果您想参与贡献，非常抱歉目前这是我的个人笔记库，可能暂时没法儿接受其他人的笔记合入。
 - 如果您有相关问题，或希望我加速填坑，请移步[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
 - 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com 。
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=oldwinter/knowledge-garden&type=Date)](https://star-history.com/#oldwinter/knowledge-garden&Date)
 
 [^1]: [备发布站1](https://notes.oldwinter.top/readme#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)，[备发布站2](https://garden.oldwinter.top/README#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 

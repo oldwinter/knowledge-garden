@@ -5,41 +5,11 @@ if you want to view the source, please visit the github repository of this plugi
 
 var __create = Object.create;
 var __defProp = Object.defineProperty;
-var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __propIsEnum = Object.prototype.propertyIsEnumerable;
-var __pow = Math.pow;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
-    if (__hasOwnProp.call(b, prop))
-      __defNormalProp(a, prop, b[prop]);
-  if (__getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(b)) {
-      if (__propIsEnum.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
-    }
-  return a;
-};
-var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
-var __objRest = (source, exclude) => {
-  var target = {};
-  for (var prop in source)
-    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-      target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-        target[prop] = source[prop];
-    }
-  return target;
-};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -58,26 +28,6 @@ var __reExport = (target, module2, desc) => {
 };
 var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
-};
-var __async = (__this, __arguments, generator) => {
-  return new Promise((resolve, reject) => {
-    var fulfilled = (value) => {
-      try {
-        step(generator.next(value));
-      } catch (e3) {
-        reject(e3);
-      }
-    };
-    var rejected = (value) => {
-      try {
-        step(generator.throw(value));
-      } catch (e3) {
-        reject(e3);
-      }
-    };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-    step((generator = generator.apply(__this, __arguments)).next());
-  });
 };
 
 // node_modules/diff-match-patch/index.js
@@ -1457,435 +1407,6 @@ var require_diff_match_patch = __commonJS({
   }
 });
 
-// node_modules/tslib/tslib.js
-var require_tslib = __commonJS({
-  "node_modules/tslib/tslib.js"(exports, module2) {
-    var __extends2;
-    var __assign2;
-    var __rest2;
-    var __decorate2;
-    var __param2;
-    var __metadata2;
-    var __awaiter2;
-    var __generator2;
-    var __exportStar2;
-    var __values2;
-    var __read2;
-    var __spread2;
-    var __spreadArrays2;
-    var __spreadArray2;
-    var __await2;
-    var __asyncGenerator2;
-    var __asyncDelegator2;
-    var __asyncValues2;
-    var __makeTemplateObject2;
-    var __importStar2;
-    var __importDefault2;
-    var __classPrivateFieldGet2;
-    var __classPrivateFieldSet2;
-    var __createBinding2;
-    (function(factory) {
-      var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
-      if (typeof define === "function" && define.amd) {
-        define("tslib", ["exports"], function(exports2) {
-          factory(createExporter(root, createExporter(exports2)));
-        });
-      } else if (typeof module2 === "object" && typeof module2.exports === "object") {
-        factory(createExporter(root, createExporter(module2.exports)));
-      } else {
-        factory(createExporter(root));
-      }
-      function createExporter(exports2, previous) {
-        if (exports2 !== root) {
-          if (typeof Object.create === "function") {
-            Object.defineProperty(exports2, "__esModule", { value: true });
-          } else {
-            exports2.__esModule = true;
-          }
-        }
-        return function(id, v) {
-          return exports2[id] = previous ? previous(id, v) : v;
-        };
-      }
-    })(function(exporter) {
-      var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d, b) {
-        d.__proto__ = b;
-      } || function(d, b) {
-        for (var p in b)
-          if (Object.prototype.hasOwnProperty.call(b, p))
-            d[p] = b[p];
-      };
-      __extends2 = function(d, b) {
-        if (typeof b !== "function" && b !== null)
-          throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() {
-          this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-      };
-      __assign2 = Object.assign || function(t3) {
-        for (var s, i2 = 1, n3 = arguments.length; i2 < n3; i2++) {
-          s = arguments[i2];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p))
-              t3[p] = s[p];
-        }
-        return t3;
-      };
-      __rest2 = function(s, e3) {
-        var t3 = {};
-        for (var p in s)
-          if (Object.prototype.hasOwnProperty.call(s, p) && e3.indexOf(p) < 0)
-            t3[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-          for (var i2 = 0, p = Object.getOwnPropertySymbols(s); i2 < p.length; i2++) {
-            if (e3.indexOf(p[i2]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i2]))
-              t3[p[i2]] = s[p[i2]];
-          }
-        return t3;
-      };
-      __decorate2 = function(decorators, target, key, desc) {
-        var c = arguments.length, r2 = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-          r2 = Reflect.decorate(decorators, target, key, desc);
-        else
-          for (var i2 = decorators.length - 1; i2 >= 0; i2--)
-            if (d = decorators[i2])
-              r2 = (c < 3 ? d(r2) : c > 3 ? d(target, key, r2) : d(target, key)) || r2;
-        return c > 3 && r2 && Object.defineProperty(target, key, r2), r2;
-      };
-      __param2 = function(paramIndex, decorator) {
-        return function(target, key) {
-          decorator(target, key, paramIndex);
-        };
-      };
-      __metadata2 = function(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-          return Reflect.metadata(metadataKey, metadataValue);
-      };
-      __awaiter2 = function(thisArg, _arguments, P, generator) {
-        function adopt(value) {
-          return value instanceof P ? value : new P(function(resolve) {
-            resolve(value);
-          });
-        }
-        return new (P || (P = Promise))(function(resolve, reject) {
-          function fulfilled(value) {
-            try {
-              step(generator.next(value));
-            } catch (e3) {
-              reject(e3);
-            }
-          }
-          function rejected(value) {
-            try {
-              step(generator["throw"](value));
-            } catch (e3) {
-              reject(e3);
-            }
-          }
-          function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-          }
-          step((generator = generator.apply(thisArg, _arguments || [])).next());
-        });
-      };
-      __generator2 = function(thisArg, body) {
-        var _ = { label: 0, sent: function() {
-          if (t3[0] & 1)
-            throw t3[1];
-          return t3[1];
-        }, trys: [], ops: [] }, f, y, t3, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-          return this;
-        }), g;
-        function verb(n3) {
-          return function(v) {
-            return step([n3, v]);
-          };
-        }
-        function step(op) {
-          if (f)
-            throw new TypeError("Generator is already executing.");
-          while (_)
-            try {
-              if (f = 1, y && (t3 = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t3 = y["return"]) && t3.call(y), 0) : y.next) && !(t3 = t3.call(y, op[1])).done)
-                return t3;
-              if (y = 0, t3)
-                op = [op[0] & 2, t3.value];
-              switch (op[0]) {
-                case 0:
-                case 1:
-                  t3 = op;
-                  break;
-                case 4:
-                  _.label++;
-                  return { value: op[1], done: false };
-                case 5:
-                  _.label++;
-                  y = op[1];
-                  op = [0];
-                  continue;
-                case 7:
-                  op = _.ops.pop();
-                  _.trys.pop();
-                  continue;
-                default:
-                  if (!(t3 = _.trys, t3 = t3.length > 0 && t3[t3.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                    _ = 0;
-                    continue;
-                  }
-                  if (op[0] === 3 && (!t3 || op[1] > t3[0] && op[1] < t3[3])) {
-                    _.label = op[1];
-                    break;
-                  }
-                  if (op[0] === 6 && _.label < t3[1]) {
-                    _.label = t3[1];
-                    t3 = op;
-                    break;
-                  }
-                  if (t3 && _.label < t3[2]) {
-                    _.label = t3[2];
-                    _.ops.push(op);
-                    break;
-                  }
-                  if (t3[2])
-                    _.ops.pop();
-                  _.trys.pop();
-                  continue;
-              }
-              op = body.call(thisArg, _);
-            } catch (e3) {
-              op = [6, e3];
-              y = 0;
-            } finally {
-              f = t3 = 0;
-            }
-          if (op[0] & 5)
-            throw op[1];
-          return { value: op[0] ? op[1] : void 0, done: true };
-        }
-      };
-      __exportStar2 = function(m, o) {
-        for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
-            __createBinding2(o, m, p);
-      };
-      __createBinding2 = Object.create ? function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        Object.defineProperty(o, k2, { enumerable: true, get: function() {
-          return m[k];
-        } });
-      } : function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        o[k2] = m[k];
-      };
-      __values2 = function(o) {
-        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i2 = 0;
-        if (m)
-          return m.call(o);
-        if (o && typeof o.length === "number")
-          return {
-            next: function() {
-              if (o && i2 >= o.length)
-                o = void 0;
-              return { value: o && o[i2++], done: !o };
-            }
-          };
-        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-      };
-      __read2 = function(o, n3) {
-        var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m)
-          return o;
-        var i2 = m.call(o), r2, ar = [], e3;
-        try {
-          while ((n3 === void 0 || n3-- > 0) && !(r2 = i2.next()).done)
-            ar.push(r2.value);
-        } catch (error) {
-          e3 = { error };
-        } finally {
-          try {
-            if (r2 && !r2.done && (m = i2["return"]))
-              m.call(i2);
-          } finally {
-            if (e3)
-              throw e3.error;
-          }
-        }
-        return ar;
-      };
-      __spread2 = function() {
-        for (var ar = [], i2 = 0; i2 < arguments.length; i2++)
-          ar = ar.concat(__read2(arguments[i2]));
-        return ar;
-      };
-      __spreadArrays2 = function() {
-        for (var s = 0, i2 = 0, il = arguments.length; i2 < il; i2++)
-          s += arguments[i2].length;
-        for (var r2 = Array(s), k = 0, i2 = 0; i2 < il; i2++)
-          for (var a = arguments[i2], j = 0, jl = a.length; j < jl; j++, k++)
-            r2[k] = a[j];
-        return r2;
-      };
-      __spreadArray2 = function(to, from, pack) {
-        if (pack || arguments.length === 2)
-          for (var i2 = 0, l = from.length, ar; i2 < l; i2++) {
-            if (ar || !(i2 in from)) {
-              if (!ar)
-                ar = Array.prototype.slice.call(from, 0, i2);
-              ar[i2] = from[i2];
-            }
-          }
-        return to.concat(ar || Array.prototype.slice.call(from));
-      };
-      __await2 = function(v) {
-        return this instanceof __await2 ? (this.v = v, this) : new __await2(v);
-      };
-      __asyncGenerator2 = function(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var g = generator.apply(thisArg, _arguments || []), i2, q = [];
-        return i2 = {}, verb("next"), verb("throw"), verb("return"), i2[Symbol.asyncIterator] = function() {
-          return this;
-        }, i2;
-        function verb(n3) {
-          if (g[n3])
-            i2[n3] = function(v) {
-              return new Promise(function(a, b) {
-                q.push([n3, v, a, b]) > 1 || resume(n3, v);
-              });
-            };
-        }
-        function resume(n3, v) {
-          try {
-            step(g[n3](v));
-          } catch (e3) {
-            settle(q[0][3], e3);
-          }
-        }
-        function step(r2) {
-          r2.value instanceof __await2 ? Promise.resolve(r2.value.v).then(fulfill, reject) : settle(q[0][2], r2);
-        }
-        function fulfill(value) {
-          resume("next", value);
-        }
-        function reject(value) {
-          resume("throw", value);
-        }
-        function settle(f, v) {
-          if (f(v), q.shift(), q.length)
-            resume(q[0][0], q[0][1]);
-        }
-      };
-      __asyncDelegator2 = function(o) {
-        var i2, p;
-        return i2 = {}, verb("next"), verb("throw", function(e3) {
-          throw e3;
-        }), verb("return"), i2[Symbol.iterator] = function() {
-          return this;
-        }, i2;
-        function verb(n3, f) {
-          i2[n3] = o[n3] ? function(v) {
-            return (p = !p) ? { value: __await2(o[n3](v)), done: n3 === "return" } : f ? f(v) : v;
-          } : f;
-        }
-      };
-      __asyncValues2 = function(o) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var m = o[Symbol.asyncIterator], i2;
-        return m ? m.call(o) : (o = typeof __values2 === "function" ? __values2(o) : o[Symbol.iterator](), i2 = {}, verb("next"), verb("throw"), verb("return"), i2[Symbol.asyncIterator] = function() {
-          return this;
-        }, i2);
-        function verb(n3) {
-          i2[n3] = o[n3] && function(v) {
-            return new Promise(function(resolve, reject) {
-              v = o[n3](v), settle(resolve, reject, v.done, v.value);
-            });
-          };
-        }
-        function settle(resolve, reject, d, v) {
-          Promise.resolve(v).then(function(v2) {
-            resolve({ value: v2, done: d });
-          }, reject);
-        }
-      };
-      __makeTemplateObject2 = function(cooked, raw) {
-        if (Object.defineProperty) {
-          Object.defineProperty(cooked, "raw", { value: raw });
-        } else {
-          cooked.raw = raw;
-        }
-        return cooked;
-      };
-      var __setModuleDefault = Object.create ? function(o, v) {
-        Object.defineProperty(o, "default", { enumerable: true, value: v });
-      } : function(o, v) {
-        o["default"] = v;
-      };
-      __importStar2 = function(mod) {
-        if (mod && mod.__esModule)
-          return mod;
-        var result = {};
-        if (mod != null) {
-          for (var k in mod)
-            if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-              __createBinding2(result, mod, k);
-        }
-        __setModuleDefault(result, mod);
-        return result;
-      };
-      __importDefault2 = function(mod) {
-        return mod && mod.__esModule ? mod : { "default": mod };
-      };
-      __classPrivateFieldGet2 = function(receiver, state, kind, f) {
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a getter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot read private member from an object whose class did not declare it");
-        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-      };
-      __classPrivateFieldSet2 = function(receiver, state, value, kind, f) {
-        if (kind === "m")
-          throw new TypeError("Private method is not writable");
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a setter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot write private member to an object whose class did not declare it");
-        return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-      };
-      exporter("__extends", __extends2);
-      exporter("__assign", __assign2);
-      exporter("__rest", __rest2);
-      exporter("__decorate", __decorate2);
-      exporter("__param", __param2);
-      exporter("__metadata", __metadata2);
-      exporter("__awaiter", __awaiter2);
-      exporter("__generator", __generator2);
-      exporter("__exportStar", __exportStar2);
-      exporter("__createBinding", __createBinding2);
-      exporter("__values", __values2);
-      exporter("__read", __read2);
-      exporter("__spread", __spread2);
-      exporter("__spreadArrays", __spreadArrays2);
-      exporter("__spreadArray", __spreadArray2);
-      exporter("__await", __await2);
-      exporter("__asyncGenerator", __asyncGenerator2);
-      exporter("__asyncDelegator", __asyncDelegator2);
-      exporter("__asyncValues", __asyncValues2);
-      exporter("__makeTemplateObject", __makeTemplateObject2);
-      exporter("__importStar", __importStar2);
-      exporter("__importDefault", __importDefault2);
-      exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
-      exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
-    });
-  }
-});
-
 // src/main.ts
 __export(exports, {
   default: () => ObsidianLiveSyncPlugin
@@ -1970,12 +1491,12 @@ var SYNCINFO_ID = "syncinfo";
 var PERIODIC_PLUGIN_SWEEP = 60;
 
 // src/lib/src/logger.ts
-var Logger = (message, _) => __async(void 0, null, function* () {
+var Logger = async (message, _) => {
   const timestamp = new Date().toLocaleString();
-  const messagecontent = typeof message == "string" ? message : message instanceof Error ? `${message.name}:${message.message}` : JSON.stringify(message, null, 2);
-  const newmessage = timestamp + "->" + messagecontent;
-  console.log(newmessage);
-});
+  const messageContent = typeof message == "string" ? message : message instanceof Error ? `${message.name}:${message.message}` : JSON.stringify(message, null, 2);
+  const newMessage = timestamp + "->" + messageContent;
+  console.log(newMessage);
+};
 function setLogger(loggerFun) {
   Logger = loggerFun;
 }
@@ -1994,73 +1515,69 @@ var decKeyBuffs = new Map();
 var KEY_RECYCLE_COUNT = 100;
 var semiStaticFieldBuffer;
 var nonceBuffer = new Uint32Array(1);
-function getKeyForEncrypt(passphrase) {
-  return __async(this, null, function* () {
-    const f = KeyBuffs.get(passphrase);
-    if (f) {
-      f.count--;
-      if (f.count > 0) {
-        return [f.key, f.salt];
-      }
-      f.count--;
+async function getKeyForEncrypt(passphrase) {
+  const f = KeyBuffs.get(passphrase);
+  if (f) {
+    f.count--;
+    if (f.count > 0) {
+      return [f.key, f.salt];
     }
-    const xpassphrase = new TextEncoder().encode(passphrase);
-    const digest = yield webcrypto.subtle.digest({ name: "SHA-256" }, xpassphrase);
-    const keyMaterial = yield webcrypto.subtle.importKey("raw", digest, { name: "PBKDF2" }, false, ["deriveKey"]);
-    const salt = webcrypto.getRandomValues(new Uint8Array(16));
-    const key = yield webcrypto.subtle.deriveKey({
-      name: "PBKDF2",
-      salt,
-      iterations: 1e5,
-      hash: "SHA-256"
-    }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt"]);
-    KeyBuffs.set(passphrase, {
-      key,
-      salt,
-      count: KEY_RECYCLE_COUNT
-    });
-    return [key, salt];
+    f.count--;
+  }
+  const passphraseBin = new TextEncoder().encode(passphrase);
+  const digest = await webcrypto.subtle.digest({ name: "SHA-256" }, passphraseBin);
+  const keyMaterial = await webcrypto.subtle.importKey("raw", digest, { name: "PBKDF2" }, false, ["deriveKey"]);
+  const salt = webcrypto.getRandomValues(new Uint8Array(16));
+  const key = await webcrypto.subtle.deriveKey({
+    name: "PBKDF2",
+    salt,
+    iterations: 1e5,
+    hash: "SHA-256"
+  }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt"]);
+  KeyBuffs.set(passphrase, {
+    key,
+    salt,
+    count: KEY_RECYCLE_COUNT
   });
+  return [key, salt];
 }
 var keyGCCount = KEY_RECYCLE_COUNT * 5;
 var decKeyIdx = 0;
 var decKeyMin = 0;
-function getKeyForDecryption(passphrase, salt) {
-  return __async(this, null, function* () {
-    keyGCCount--;
-    if (keyGCCount < 0) {
-      keyGCCount = KEY_RECYCLE_COUNT;
-      const threshold = (decKeyIdx - decKeyMin) / 2;
-      for (const [key2, buff] of decKeyBuffs) {
-        if (buff.count < threshold) {
-          decKeyBuffs.delete(key2);
-        }
-        decKeyMin = decKeyIdx;
+async function getKeyForDecryption(passphrase, salt) {
+  keyGCCount--;
+  if (keyGCCount < 0) {
+    keyGCCount = KEY_RECYCLE_COUNT;
+    const threshold = (decKeyIdx - decKeyMin) / 2;
+    for (const [key2, buff] of decKeyBuffs) {
+      if (buff.count < threshold) {
+        decKeyBuffs.delete(key2);
       }
+      decKeyMin = decKeyIdx;
     }
-    decKeyIdx++;
-    const bufKey = passphrase + uint8ArrayToHexString(salt);
-    const f = decKeyBuffs.get(bufKey);
-    if (f) {
-      f.count = decKeyIdx;
-      return [f.key, f.salt];
-    }
-    const xpassphrase = new TextEncoder().encode(passphrase);
-    const digest = yield webcrypto.subtle.digest({ name: "SHA-256" }, xpassphrase);
-    const keyMaterial = yield webcrypto.subtle.importKey("raw", digest, { name: "PBKDF2" }, false, ["deriveKey"]);
-    const key = yield webcrypto.subtle.deriveKey({
-      name: "PBKDF2",
-      salt,
-      iterations: 1e5,
-      hash: "SHA-256"
-    }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
-    decKeyBuffs.set(bufKey, {
-      key,
-      salt,
-      count: 0
-    });
-    return [key, salt];
+  }
+  decKeyIdx++;
+  const bufKey = passphrase + uint8ArrayToHexString(salt);
+  const f = decKeyBuffs.get(bufKey);
+  if (f) {
+    f.count = decKeyIdx;
+    return [f.key, f.salt];
+  }
+  const passphraseBin = new TextEncoder().encode(passphrase);
+  const digest = await webcrypto.subtle.digest({ name: "SHA-256" }, passphraseBin);
+  const keyMaterial = await webcrypto.subtle.importKey("raw", digest, { name: "PBKDF2" }, false, ["deriveKey"]);
+  const key = await webcrypto.subtle.deriveKey({
+    name: "PBKDF2",
+    salt,
+    iterations: 1e5,
+    hash: "SHA-256"
+  }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  decKeyBuffs.set(bufKey, {
+    key,
+    salt,
+    count: 0
   });
+  return [key, salt];
 }
 function getSemiStaticField(reset) {
   if (semiStaticFieldBuffer != null && !reset) {
@@ -2084,22 +1601,22 @@ function atob_node(src) {
 }
 var btoa2 = typeof window !== "undefined" ? window.btoa : btoa_node;
 var atob2 = typeof window !== "undefined" ? window.atob : atob_node;
-var revmap = {};
-var nummap = {};
+var revMap = {};
+var numMap = {};
 for (let i2 = 0; i2 < 256; i2++) {
-  revmap[`00${i2.toString(16)}`.slice(-2)] = i2;
-  nummap[i2] = `00${i2.toString(16)}`.slice(-2);
+  revMap[`00${i2.toString(16)}`.slice(-2)] = i2;
+  numMap[i2] = `00${i2.toString(16)}`.slice(-2);
 }
 function hexStringToUint8Array(src) {
   const len = src.length / 2;
   const ret = new Uint8Array(len);
   for (let i2 = 0; i2 < len; i2++) {
-    ret[i2] = revmap[src[i2 * 2] + src[i2 * 2 + 1]];
+    ret[i2] = revMap[src[i2 * 2] + src[i2 * 2 + 1]];
   }
   return ret;
 }
 function uint8ArrayToHexString(src) {
-  return [...src].map((e3) => nummap[e3]).join("");
+  return [...src].map((e3) => numMap[e3]).join("");
 }
 var QUANTUM = 32768;
 var writeString = (string) => {
@@ -2136,8 +1653,8 @@ var readString = (buffer) => {
   let string = "";
   while (index < end) {
     const chunk = [];
-    const cend = Math.min(index + QUANTUM, end);
-    while (index < cend) {
+    const cEnd = Math.min(index + QUANTUM, end);
+    while (index < cEnd) {
       const chr = buffer[index++];
       if (chr < 128) {
         chunk.push(chr);
@@ -2159,7 +1676,7 @@ var readString = (buffer) => {
   }
   return string;
 };
-function binaryTobinaryString(src) {
+function binaryToBinaryString(src) {
   const len = src.length;
   if (len < QUANTUM)
     return String.fromCharCode(...src);
@@ -2169,60 +1686,54 @@ function binaryTobinaryString(src) {
   }
   return ret;
 }
-function encrypt(input, passphrase) {
-  return __async(this, null, function* () {
-    const [key, salt] = yield getKeyForEncrypt(passphrase);
-    const fixedPart = getSemiStaticField();
-    const invocationPart = getNonce();
-    const iv = new Uint8Array([...fixedPart, ...new Uint8Array(invocationPart.buffer)]);
-    const plainStringified = JSON.stringify(input);
-    const plainStringBuffer = writeString(plainStringified);
-    const encryptedDataArrayBuffer = yield webcrypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plainStringBuffer);
-    const encryptedData2 = btoa2(binaryTobinaryString(new Uint8Array(encryptedDataArrayBuffer)));
-    const ret = `["${encryptedData2}","${uint8ArrayToHexString(iv)}","${uint8ArrayToHexString(salt)}"]`;
-    return ret;
-  });
+async function encrypt(input, passphrase) {
+  const [key, salt] = await getKeyForEncrypt(passphrase);
+  const fixedPart = getSemiStaticField();
+  const invocationPart = getNonce();
+  const iv = new Uint8Array([...fixedPart, ...new Uint8Array(invocationPart.buffer)]);
+  const plainStringified = JSON.stringify(input);
+  const plainStringBuffer = writeString(plainStringified);
+  const encryptedDataArrayBuffer = await webcrypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plainStringBuffer);
+  const encryptedData2 = btoa2(binaryToBinaryString(new Uint8Array(encryptedDataArrayBuffer)));
+  const ret = `["${encryptedData2}","${uint8ArrayToHexString(iv)}","${uint8ArrayToHexString(salt)}"]`;
+  return ret;
 }
-function decrypt(encryptedResult, passphrase) {
-  return __async(this, null, function* () {
-    try {
-      if (!encryptedResult.startsWith("[") || !encryptedResult.endsWith("]")) {
-        throw new Error("Encrypted data corrupted!");
-      }
-      const w = encryptedResult.substring(1, encryptedResult.length - 1).split(",").map((e3) => e3[0] == '"' ? e3.substring(1, e3.length - 1) : e3);
-      const [encryptedData, ivString, salt] = w;
-      const [key] = yield getKeyForDecryption(passphrase, hexStringToUint8Array(salt));
-      const iv = hexStringToUint8Array(ivString);
-      const encryptedDataBin = atob2(encryptedData);
-      const len = encryptedDataBin.length;
-      const encryptedDataArrayBuffer = new Uint8Array(len);
-      for (let i2 = 0; i2 < len; i2++) {
-        encryptedDataArrayBuffer[i2] = encryptedDataBin.charCodeAt(i2);
-      }
-      const plainStringBuffer = yield webcrypto.subtle.decrypt({ name: "AES-GCM", iv }, key, encryptedDataArrayBuffer);
-      const plainStringified = readString(new Uint8Array(plainStringBuffer));
-      const plain = JSON.parse(plainStringified);
-      return plain;
-    } catch (ex) {
-      Logger("Couldn't decode! You should wrong the passphrases", LOG_LEVEL.VERBOSE);
-      Logger(ex, LOG_LEVEL.VERBOSE);
-      throw ex;
+async function decrypt(encryptedResult, passphrase) {
+  try {
+    if (!encryptedResult.startsWith("[") || !encryptedResult.endsWith("]")) {
+      throw new Error("Encrypted data corrupted!");
     }
-  });
+    const w = encryptedResult.substring(1, encryptedResult.length - 1).split(",").map((e3) => e3[0] == '"' ? e3.substring(1, e3.length - 1) : e3);
+    const [encryptedData, ivString, salt] = w;
+    const [key] = await getKeyForDecryption(passphrase, hexStringToUint8Array(salt));
+    const iv = hexStringToUint8Array(ivString);
+    const encryptedDataBin = atob2(encryptedData);
+    const len = encryptedDataBin.length;
+    const encryptedDataArrayBuffer = new Uint8Array(len);
+    for (let i2 = 0; i2 < len; i2++) {
+      encryptedDataArrayBuffer[i2] = encryptedDataBin.charCodeAt(i2);
+    }
+    const plainStringBuffer = await webcrypto.subtle.decrypt({ name: "AES-GCM", iv }, key, encryptedDataArrayBuffer);
+    const plainStringified = readString(new Uint8Array(plainStringBuffer));
+    const plain = JSON.parse(plainStringified);
+    return plain;
+  } catch (ex) {
+    Logger("Couldn't decode! You should wrong the passphrases", LOG_LEVEL.VERBOSE);
+    Logger(ex, LOG_LEVEL.VERBOSE);
+    throw ex;
+  }
 }
-function testCrypt() {
-  return __async(this, null, function* () {
-    const src = "supercalifragilisticexpialidocious";
-    const encoded = yield encrypt(src, "passwordTest");
-    const decrypted = yield decrypt(encoded, "passwordTest");
-    if (src != decrypted) {
-      Logger("WARNING! Your device would not support encryption.", LOG_LEVEL.VERBOSE);
-      return false;
-    } else {
-      Logger("CRYPT LOGIC OK", LOG_LEVEL.VERBOSE);
-      return true;
-    }
-  });
+async function testCrypt() {
+  const src = "supercalifragilisticexpialidocious";
+  const encoded = await encrypt(src, "passwordTest");
+  const decrypted = await decrypt(encoded, "passwordTest");
+  if (src != decrypted) {
+    Logger("WARNING! Your device would not support encryption.", LOG_LEVEL.VERBOSE);
+    return false;
+  } else {
+    Logger("CRYPT LOGIC OK", LOG_LEVEL.VERBOSE);
+    return true;
+  }
 }
 
 // src/lib/src/utils.ts
@@ -2231,8 +1742,8 @@ function arrayBufferToBase64(buffer) {
     const blob = new Blob([buffer], { type: "application/octet-binary" });
     const reader = new FileReader();
     reader.onload = function(evt) {
-      const dataurl = evt.target.result.toString();
-      res(dataurl.substr(dataurl.indexOf(",") + 1));
+      const dataURI = evt.target.result.toString();
+      res(dataURI.substr(dataURI.indexOf(",") + 1));
     };
     reader.readAsDataURL(blob);
   });
@@ -2303,7 +1814,7 @@ function shouldBeIgnored(filename) {
   return false;
 }
 function versionNumberString2Number(version) {
-  return version.split(".").reverse().map((e3, i2) => e3 / 1 * __pow(1e3, i2)).reduce((prev, current) => prev + current, 0);
+  return version.split(".").reverse().map((e3, i2) => e3 / 1 * 1e3 ** i2).reduce((prev, current) => prev + current, 0);
 }
 var delay = (ms) => {
   return new Promise((res) => {
@@ -2323,17 +1834,8 @@ function id2path_base(filename) {
 }
 var externalNotifier = () => {
 };
-var notifyTimer = null;
 function setLockNotifier(fn) {
   externalNotifier = fn;
-}
-function notifyLock() {
-  if (notifyTimer != null) {
-    clearTimeout(notifyTimer);
-  }
-  notifyTimer = setTimeout(() => {
-    externalNotifier();
-  }, 100);
 }
 function splitPieces2(data, pieceSize, plainSplit, minimumChunkSize, longLineThreshold) {
   return function* pieces() {
@@ -2362,62 +1864,6 @@ function splitPieces2(data, pieceSize, plainSplit, minimumChunkSize, longLineThr
       } while (leftData != "");
     }
   };
-}
-var LOCK_WAITING = 0;
-var LOCK_RUNNING = 1;
-var LOCK_DONE = 2;
-var locks = [];
-function getLocks() {
-  return {
-    pending: locks.filter((e3) => e3.status == LOCK_WAITING).map((e3) => e3.key),
-    running: locks.filter((e3) => e3.status == LOCK_RUNNING).map((e3) => e3.key)
-  };
-}
-function getProcessingCounts() {
-  return locks.length;
-}
-function lockRunner(key) {
-  return __async(this, null, function* () {
-    let procs = locks.filter((e3) => e3.key == key && e3.status == LOCK_WAITING);
-    while (procs.length != 0) {
-      const w = procs.shift();
-      if (!w)
-        break;
-      w.status = LOCK_RUNNING;
-      notifyLock();
-      try {
-        yield w.proc();
-      } catch (ex) {
-        Logger(`Lock:${key}:rejected `, LOG_LEVEL.VERBOSE);
-        Logger(ex, LOG_LEVEL.VERBOSE);
-      } finally {
-        w.status = LOCK_DONE;
-        notifyLock();
-      }
-      procs = locks.filter((e3) => e3.key == key && e3.status == LOCK_WAITING);
-    }
-    locks = locks.filter((e3) => e3.status != LOCK_DONE);
-  });
-}
-var nextProc = (key) => {
-  if (!locks.some((e3) => e3.key == key && (e3.status == LOCK_RUNNING || e3.status == LOCK_DONE))) {
-    lockRunner(key);
-  }
-};
-function runWithLock(key, ignoreWhenRunning, proc) {
-  if (ignoreWhenRunning && locks.some((e3) => e3.key == key && e3.status == LOCK_RUNNING)) {
-    return null;
-  }
-  return new Promise((pres, prej) => {
-    const wrappedTask = () => proc().then(pres).catch(prej).finally(() => {
-      procObj.status = LOCK_DONE;
-      nextProc(key);
-    });
-    const procObj = { key, proc: wrappedTask, status: LOCK_WAITING };
-    locks.push(procObj);
-    notifyLock();
-    nextProc(key);
-  });
 }
 var WrappedNotice = class {
   constructor(message, timeout) {
@@ -2474,19 +1920,16 @@ function shouldSplitAsPlainText(filename) {
   if (filename.endsWith(".txt"))
     return true;
 }
-var Parallels = (ps = new Set()) => ({
-  add: (p) => ps.add(!!p.then(() => ps.delete(p)).catch(() => ps.delete(p)) && p),
-  wait: (limit) => ps.size >= limit && Promise.race(ps),
-  all: () => Promise.all(ps)
-});
 var enableEncryption = (db, passphrase, migrationDecrypt) => {
   const decrypted = new Map();
   db.transform({
-    incoming: (doc) => __async(void 0, null, function* () {
-      const saveDoc = __spreadValues({}, doc);
+    incoming: async (doc) => {
+      const saveDoc = {
+        ...doc
+      };
       if (saveDoc._id.startsWith("h:+") || saveDoc._id == SYNCINFO_ID) {
         try {
-          saveDoc.data = yield encrypt(saveDoc.data, passphrase);
+          saveDoc.data = await encrypt(saveDoc.data, passphrase);
         } catch (ex) {
           Logger("Encryption failed.", LOG_LEVEL.NOTICE);
           Logger(ex);
@@ -2494,15 +1937,17 @@ var enableEncryption = (db, passphrase, migrationDecrypt) => {
         }
       }
       return saveDoc;
-    }),
-    outgoing: (doc) => __async(void 0, null, function* () {
-      const loadDoc = __spreadValues({}, doc);
+    },
+    outgoing: async (doc) => {
+      const loadDoc = {
+        ...doc
+      };
       if (loadDoc._id.startsWith("h:+") || loadDoc._id == SYNCINFO_ID) {
         if (migrationDecrypt && decrypted.has(loadDoc._id)) {
           return loadDoc;
         }
         try {
-          loadDoc.data = yield decrypt(loadDoc.data, passphrase);
+          loadDoc.data = await decrypt(loadDoc.data, passphrase);
           if (migrationDecrypt) {
             decrypted.set(loadDoc._id, true);
           }
@@ -2516,12 +1961,1764 @@ var enableEncryption = (db, passphrase, migrationDecrypt) => {
         }
       }
       return loadDoc;
-    })
+    }
   });
 };
+function makeUniqueString() {
+  const randomStrSrc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const temp = [...Array(30)].map(() => Math.floor(Math.random() * randomStrSrc.length)).map((e3) => randomStrSrc[e3]).join("");
+  return `${Date.now()}-${temp}`;
+}
+function Semaphore(limit, onRelease) {
+  const _limit = limit;
+  let currentProcesses = 0;
+  let queue = [];
+  function execProcess() {
+    queue = queue.filter((e3) => e3.state != "DONE");
+    for (const queueItem of queue) {
+      if (queueItem.state != "NONE")
+        continue;
+      if (queueItem.quantity + currentProcesses > _limit) {
+        break;
+      }
+      queueItem.state = "RUNNING";
+      currentProcesses += queueItem.quantity;
+      if (queueItem == null ? void 0 : queueItem.timer) {
+        clearTimeout(queueItem.timer);
+      }
+      queueItem.notify(true);
+    }
+  }
+  function release(key) {
+    const finishedTask = queue.find((e3) => e3.key == key);
+    if (!finishedTask) {
+      throw new Error("Missing locked semaphore!");
+    }
+    if (finishedTask.state == "RUNNING") {
+      currentProcesses -= finishedTask.quantity;
+    }
+    finishedTask.state = "DONE";
+    if (onRelease)
+      onRelease(queue.filter((e3) => e3.state != "DONE"));
+    execProcess();
+  }
+  return {
+    _acquire(quantity, memo, timeout) {
+      const key = makeUniqueString();
+      if (_limit < quantity) {
+        throw Error("Too big quantity");
+      }
+      let notify = (_) => {
+      };
+      const semaphoreStopper = new Promise((res) => {
+        notify = (result) => {
+          if (result) {
+            res(() => {
+              release(key);
+            });
+          } else {
+            res(false);
+          }
+        };
+      });
+      const notifier = {
+        key,
+        notify,
+        semaphoreStopper,
+        quantity,
+        memo,
+        state: "NONE"
+      };
+      if (timeout)
+        notifier.timer = setTimeout(() => {
+          release(key);
+          notify(false);
+        }, timeout);
+      queue.push(notifier);
+      execProcess();
+      return semaphoreStopper;
+    },
+    acquire(quantity = 1, memo) {
+      return this._acquire(quantity, memo != null ? memo : "", 0);
+    },
+    tryAcquire(quantity = 1, timeout, memo) {
+      return this._acquire(quantity, memo != null ? memo : "", timeout);
+    },
+    peekQueues() {
+      return queue;
+    }
+  };
+}
+var Mutexes = {};
+function getLocks() {
+  const allLocks = [...Object.values(Mutexes).map((e3) => e3.peekQueues())].flat();
+  return {
+    pending: allLocks.filter((e3) => e3.state == "NONE").map((e3) => e3.memo),
+    running: allLocks.filter((e3) => e3.state == "RUNNING").map((e3) => e3.memo)
+  };
+}
+function getProcessingCounts() {
+  return [...Object.values(Mutexes).map((e3) => e3.peekQueues())].flat().length;
+}
+var semaphoreReleasedCount = 0;
+async function runWithLock(key, ignoreWhenRunning, proc) {
+  if (semaphoreReleasedCount > 200) {
+    const deleteKeys = [];
+    for (const key2 in Mutexes) {
+      if (Mutexes[key2].peekQueues().length == 0) {
+        deleteKeys.push(key2);
+      }
+    }
+    for (const key2 of deleteKeys) {
+      delete Mutexes[key2];
+    }
+    semaphoreReleasedCount = 0;
+  }
+  if (!(key in Mutexes)) {
+    Mutexes[key] = Semaphore(1, (queue) => {
+      if (queue.length == 0)
+        semaphoreReleasedCount++;
+    });
+  }
+  const timeout = ignoreWhenRunning ? 1 : 0;
+  const releaser = await Mutexes[key].tryAcquire(1, timeout, key);
+  if (!releaser)
+    return null;
+  try {
+    await proc();
+  } finally {
+    releaser();
+  }
+}
 
-// pouchdb-browser-webpack/dist/pouchdb-browser.js
-var e = { 105: (e3) => {
+// src/LocalPouchDB.ts
+var import_obsidian2 = __toModule(require("obsidian"));
+
+// node_modules/idb/build/wrap-idb-value.js
+var instanceOfAny = (object, constructors) => constructors.some((c) => object instanceof c);
+var idbProxyableTypes;
+var cursorAdvanceMethods;
+function getIdbProxyableTypes() {
+  return idbProxyableTypes || (idbProxyableTypes = [
+    IDBDatabase,
+    IDBObjectStore,
+    IDBIndex,
+    IDBCursor,
+    IDBTransaction
+  ]);
+}
+function getCursorAdvanceMethods() {
+  return cursorAdvanceMethods || (cursorAdvanceMethods = [
+    IDBCursor.prototype.advance,
+    IDBCursor.prototype.continue,
+    IDBCursor.prototype.continuePrimaryKey
+  ]);
+}
+var cursorRequestMap = new WeakMap();
+var transactionDoneMap = new WeakMap();
+var transactionStoreNamesMap = new WeakMap();
+var transformCache = new WeakMap();
+var reverseTransformCache = new WeakMap();
+function promisifyRequest(request) {
+  const promise = new Promise((resolve, reject) => {
+    const unlisten = () => {
+      request.removeEventListener("success", success);
+      request.removeEventListener("error", error);
+    };
+    const success = () => {
+      resolve(wrap(request.result));
+      unlisten();
+    };
+    const error = () => {
+      reject(request.error);
+      unlisten();
+    };
+    request.addEventListener("success", success);
+    request.addEventListener("error", error);
+  });
+  promise.then((value) => {
+    if (value instanceof IDBCursor) {
+      cursorRequestMap.set(value, request);
+    }
+  }).catch(() => {
+  });
+  reverseTransformCache.set(promise, request);
+  return promise;
+}
+function cacheDonePromiseForTransaction(tx) {
+  if (transactionDoneMap.has(tx))
+    return;
+  const done = new Promise((resolve, reject) => {
+    const unlisten = () => {
+      tx.removeEventListener("complete", complete);
+      tx.removeEventListener("error", error);
+      tx.removeEventListener("abort", error);
+    };
+    const complete = () => {
+      resolve();
+      unlisten();
+    };
+    const error = () => {
+      reject(tx.error || new DOMException("AbortError", "AbortError"));
+      unlisten();
+    };
+    tx.addEventListener("complete", complete);
+    tx.addEventListener("error", error);
+    tx.addEventListener("abort", error);
+  });
+  transactionDoneMap.set(tx, done);
+}
+var idbProxyTraps = {
+  get(target, prop, receiver) {
+    if (target instanceof IDBTransaction) {
+      if (prop === "done")
+        return transactionDoneMap.get(target);
+      if (prop === "objectStoreNames") {
+        return target.objectStoreNames || transactionStoreNamesMap.get(target);
+      }
+      if (prop === "store") {
+        return receiver.objectStoreNames[1] ? void 0 : receiver.objectStore(receiver.objectStoreNames[0]);
+      }
+    }
+    return wrap(target[prop]);
+  },
+  set(target, prop, value) {
+    target[prop] = value;
+    return true;
+  },
+  has(target, prop) {
+    if (target instanceof IDBTransaction && (prop === "done" || prop === "store")) {
+      return true;
+    }
+    return prop in target;
+  }
+};
+function replaceTraps(callback) {
+  idbProxyTraps = callback(idbProxyTraps);
+}
+function wrapFunction(func) {
+  if (func === IDBDatabase.prototype.transaction && !("objectStoreNames" in IDBTransaction.prototype)) {
+    return function(storeNames, ...args) {
+      const tx = func.call(unwrap(this), storeNames, ...args);
+      transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
+      return wrap(tx);
+    };
+  }
+  if (getCursorAdvanceMethods().includes(func)) {
+    return function(...args) {
+      func.apply(unwrap(this), args);
+      return wrap(cursorRequestMap.get(this));
+    };
+  }
+  return function(...args) {
+    return wrap(func.apply(unwrap(this), args));
+  };
+}
+function transformCachableValue(value) {
+  if (typeof value === "function")
+    return wrapFunction(value);
+  if (value instanceof IDBTransaction)
+    cacheDonePromiseForTransaction(value);
+  if (instanceOfAny(value, getIdbProxyableTypes()))
+    return new Proxy(value, idbProxyTraps);
+  return value;
+}
+function wrap(value) {
+  if (value instanceof IDBRequest)
+    return promisifyRequest(value);
+  if (transformCache.has(value))
+    return transformCache.get(value);
+  const newValue = transformCachableValue(value);
+  if (newValue !== value) {
+    transformCache.set(value, newValue);
+    reverseTransformCache.set(newValue, value);
+  }
+  return newValue;
+}
+var unwrap = (value) => reverseTransformCache.get(value);
+
+// node_modules/idb/build/index.js
+function openDB(name, version, { blocked, upgrade, blocking, terminated } = {}) {
+  const request = indexedDB.open(name, version);
+  const openPromise = wrap(request);
+  if (upgrade) {
+    request.addEventListener("upgradeneeded", (event) => {
+      upgrade(wrap(request.result), event.oldVersion, event.newVersion, wrap(request.transaction));
+    });
+  }
+  if (blocked)
+    request.addEventListener("blocked", () => blocked());
+  openPromise.then((db) => {
+    if (terminated)
+      db.addEventListener("close", () => terminated());
+    if (blocking)
+      db.addEventListener("versionchange", () => blocking());
+  }).catch(() => {
+  });
+  return openPromise;
+}
+function deleteDB(name, { blocked } = {}) {
+  const request = indexedDB.deleteDatabase(name);
+  if (blocked)
+    request.addEventListener("blocked", () => blocked());
+  return wrap(request).then(() => void 0);
+}
+var readMethods = ["get", "getKey", "getAll", "getAllKeys", "count"];
+var writeMethods = ["put", "add", "delete", "clear"];
+var cachedMethods = new Map();
+function getMethod(target, prop) {
+  if (!(target instanceof IDBDatabase && !(prop in target) && typeof prop === "string")) {
+    return;
+  }
+  if (cachedMethods.get(prop))
+    return cachedMethods.get(prop);
+  const targetFuncName = prop.replace(/FromIndex$/, "");
+  const useIndex = prop !== targetFuncName;
+  const isWrite = writeMethods.includes(targetFuncName);
+  if (!(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) || !(isWrite || readMethods.includes(targetFuncName))) {
+    return;
+  }
+  const method = async function(storeName, ...args) {
+    const tx = this.transaction(storeName, isWrite ? "readwrite" : "readonly");
+    let target2 = tx.store;
+    if (useIndex)
+      target2 = target2.index(args.shift());
+    return (await Promise.all([
+      target2[targetFuncName](...args),
+      isWrite && tx.done
+    ]))[0];
+  };
+  cachedMethods.set(prop, method);
+  return method;
+}
+replaceTraps((oldTraps) => ({
+  ...oldTraps,
+  get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
+  has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop)
+}));
+
+// src/KeyValueDB.ts
+var databaseCache = {};
+var OpenKeyValueDatabase = async (dbKey) => {
+  if (dbKey in databaseCache) {
+    databaseCache[dbKey].close();
+    delete databaseCache[dbKey];
+  }
+  const storeKey = dbKey;
+  const dbPromise = openDB(dbKey, 1, {
+    upgrade(db2) {
+      db2.createObjectStore(storeKey);
+    }
+  });
+  let db = null;
+  db = await dbPromise;
+  databaseCache[dbKey] = db;
+  return {
+    get(key) {
+      return db.get(storeKey, key);
+    },
+    set(key, value) {
+      return db.put(storeKey, value, key);
+    },
+    del(key) {
+      return db.delete(storeKey, key);
+    },
+    clear() {
+      return db.clear(storeKey);
+    },
+    keys(query, count) {
+      return db.getAllKeys(storeKey, query, count);
+    },
+    close() {
+      delete databaseCache[dbKey];
+      return db.close();
+    },
+    async destroy() {
+      delete databaseCache[dbKey];
+      db.close();
+      await deleteDB(dbKey);
+    }
+  };
+};
+
+// node_modules/xxhash-wasm/esm/xxhash-wasm.js
+var t = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 13, 2, 96, 2, 127, 127, 0, 96, 3, 127, 127, 127, 1, 127, 3, 3, 2, 1, 0, 5, 3, 1, 0, 1, 7, 23, 3, 3, 109, 101, 109, 2, 0, 5, 120, 120, 104, 51, 50, 0, 0, 5, 120, 120, 104, 54, 52, 0, 1, 10, 152, 9, 2, 242, 2, 1, 4, 127, 32, 0, 32, 1, 106, 33, 3, 32, 1, 32, 1, 65, 16, 79, 4, 127, 32, 3, 65, 16, 107, 33, 6, 32, 2, 65, 168, 136, 141, 161, 2, 106, 33, 1, 32, 2, 65, 137, 235, 208, 208, 7, 107, 33, 4, 32, 2, 65, 207, 140, 162, 142, 6, 106, 33, 5, 3, 64, 32, 1, 32, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 1, 32, 4, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 4, 32, 2, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 2, 32, 5, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 5, 32, 6, 32, 0, 65, 4, 106, 34, 0, 79, 13, 0, 11, 32, 2, 65, 12, 119, 32, 5, 65, 18, 119, 106, 32, 4, 65, 7, 119, 106, 32, 1, 65, 1, 119, 106, 5, 32, 2, 65, 177, 207, 217, 178, 1, 106, 11, 106, 33, 2, 3, 64, 32, 3, 32, 0, 65, 4, 106, 79, 4, 64, 32, 2, 32, 0, 40, 2, 0, 65, 189, 220, 202, 149, 124, 108, 106, 65, 17, 119, 65, 175, 214, 211, 190, 2, 108, 33, 2, 32, 0, 65, 4, 106, 33, 0, 12, 1, 11, 11, 3, 64, 32, 0, 32, 3, 73, 4, 64, 32, 2, 32, 0, 45, 0, 0, 65, 177, 207, 217, 178, 1, 108, 106, 65, 11, 119, 65, 177, 243, 221, 241, 121, 108, 33, 2, 32, 0, 65, 1, 106, 33, 0, 12, 1, 11, 11, 32, 2, 32, 2, 65, 15, 118, 115, 65, 247, 148, 175, 175, 120, 108, 34, 0, 65, 13, 118, 32, 0, 115, 65, 189, 220, 202, 149, 124, 108, 34, 0, 65, 16, 118, 32, 0, 115, 11, 161, 6, 2, 4, 126, 3, 127, 32, 0, 65, 4, 106, 53, 2, 0, 32, 0, 53, 2, 0, 66, 32, 134, 132, 33, 2, 32, 1, 32, 0, 65, 8, 106, 34, 6, 106, 33, 7, 32, 1, 65, 32, 79, 4, 126, 32, 7, 65, 32, 107, 33, 8, 32, 2, 66, 214, 235, 130, 238, 234, 253, 137, 245, 224, 0, 124, 33, 3, 32, 2, 66, 177, 169, 172, 193, 173, 184, 212, 166, 61, 125, 33, 4, 32, 2, 66, 249, 234, 208, 208, 231, 201, 161, 228, 225, 0, 124, 33, 5, 3, 64, 32, 3, 32, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 3, 32, 4, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 4, 32, 2, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 2, 32, 5, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 5, 32, 8, 32, 6, 65, 8, 106, 34, 6, 79, 13, 0, 11, 32, 2, 66, 12, 137, 32, 5, 66, 18, 137, 124, 32, 4, 66, 7, 137, 124, 32, 3, 66, 1, 137, 124, 32, 3, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 4, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 2, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 5, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 5, 32, 2, 66, 197, 207, 217, 178, 241, 229, 186, 234, 39, 124, 11, 32, 1, 173, 124, 33, 2, 3, 64, 32, 7, 32, 6, 65, 8, 106, 79, 4, 64, 32, 2, 32, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 27, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 33, 2, 32, 6, 65, 8, 106, 33, 6, 12, 1, 11, 11, 32, 6, 65, 4, 106, 32, 7, 77, 4, 64, 32, 2, 32, 6, 53, 2, 0, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 23, 137, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 249, 243, 221, 241, 153, 246, 153, 171, 22, 124, 33, 2, 32, 6, 65, 4, 106, 33, 6, 11, 3, 64, 32, 6, 32, 7, 73, 4, 64, 32, 2, 32, 6, 49, 0, 0, 66, 197, 207, 217, 178, 241, 229, 186, 234, 39, 126, 133, 66, 11, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 2, 32, 6, 65, 1, 106, 33, 6, 12, 1, 11, 11, 32, 0, 32, 2, 32, 2, 66, 33, 136, 133, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 34, 2, 66, 29, 136, 32, 2, 133, 66, 249, 243, 221, 241, 153, 246, 153, 171, 22, 126, 34, 2, 66, 32, 136, 32, 2, 133, 34, 2, 66, 32, 136, 62, 2, 0, 32, 0, 65, 4, 106, 32, 2, 62, 2, 0, 11]);
+var e;
+function n(t3, e3, n3) {
+  if (e3.buffer.byteLength < t3.byteLength + n3) {
+    const i2 = Math.ceil((t3.byteLength + n3 - e3.buffer.byteLength) / 65536);
+    e3.grow(i2);
+  }
+  new Uint8Array(e3.buffer, n3).set(t3);
+}
+async function xxhash_wasm_default() {
+  const { instance: { exports: { mem: i2, xxh32: o, xxh64: r2 } } } = await WebAssembly.instantiate(t);
+  function h(t3) {
+    let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+    return n(t3, i2, 0), o(0, t3.byteLength, e3) >>> 0;
+  }
+  function c(t3) {
+    let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, o2 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+    n(t3, i2, 8);
+    const h2 = new DataView(i2.buffer);
+    return h2.setUint32(0, e3, true), h2.setUint32(4, o2, true), r2(0, t3.byteLength), h2;
+  }
+  return { h32: function(t3) {
+    let n3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+    e || (e = new TextEncoder());
+    const i3 = e.encode(t3);
+    return h(i3, n3).toString(16);
+  }, h32Raw: h, h64: function(t3) {
+    let n3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, i3 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+    e || (e = new TextEncoder());
+    const o2 = e.encode(t3), r3 = c(o2, n3, i3), h2 = r3.getUint32(0, true).toString(16) + r3.getUint32(4, true).toString(16);
+    return h2;
+  }, h64Raw: function(t3) {
+    let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, n3 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+    return new Uint8Array(c(t3, e3, n3).buffer, 0, 8);
+  } };
+}
+
+// src/lib/src/utils_couchdb.ts
+var isValidRemoteCouchDBURI = (uri) => {
+  if (uri.startsWith("https://"))
+    return true;
+  if (uri.startsWith("http://"))
+    return true;
+  return false;
+};
+var checkRemoteVersion = async (db, migrate, barrier = VER) => {
+  try {
+    const versionInfo = await db.get(VERSIONINFO_DOCID);
+    if (versionInfo.type != "versioninfo") {
+      return false;
+    }
+    const version = versionInfo.version;
+    if (version < barrier) {
+      const versionUpResult = await migrate(version, barrier);
+      if (versionUpResult) {
+        await bumpRemoteVersion(db);
+        return true;
+      }
+    }
+    if (version == barrier)
+      return true;
+    return false;
+  } catch (ex) {
+    if (ex.status && ex.status == 404) {
+      if (await bumpRemoteVersion(db)) {
+        return true;
+      }
+      return false;
+    }
+    throw ex;
+  }
+};
+var bumpRemoteVersion = async (db, barrier = VER) => {
+  const vi = {
+    _id: VERSIONINFO_DOCID,
+    version: barrier,
+    type: "versioninfo"
+  };
+  const versionInfo = await resolveWithIgnoreKnownError(db.get(VERSIONINFO_DOCID), vi);
+  if (versionInfo.type != "versioninfo") {
+    return false;
+  }
+  vi._rev = versionInfo._rev;
+  await db.put(vi);
+  return true;
+};
+var checkSyncInfo = async (db) => {
+  try {
+    const syncinfo = await db.get(SYNCINFO_ID);
+    console.log(syncinfo);
+    return true;
+  } catch (ex) {
+    if (ex.status && ex.status == 404) {
+      const randomStrSrc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const temp = [...Array(30)].map((e3) => Math.floor(Math.random() * randomStrSrc.length)).map((e3) => randomStrSrc[e3]).join("");
+      const newSyncInfo = {
+        _id: SYNCINFO_ID,
+        type: "syncinfo",
+        data: temp
+      };
+      if (await db.put(newSyncInfo)) {
+        return true;
+      }
+      return false;
+    } else {
+      console.dir(ex);
+      return false;
+    }
+  }
+};
+async function putDesignDocuments(db) {
+  const design = {
+    "_id": "_design/replicate",
+    "_rev": void 0,
+    "ver": 2,
+    "filters": {
+      "default": function(doc, req) {
+        return !("remote" in doc && doc.remote);
+      }.toString(),
+      "push": function(doc, req) {
+        return true;
+      }.toString(),
+      "pull": function(doc, req) {
+        return !(doc.type && doc.type == "leaf");
+      }.toString()
+    }
+  };
+  try {
+    const w = await db.get(design._id);
+    if (w.ver < design.ver) {
+      design._rev = w._rev;
+      await db.put(design);
+      return true;
+    }
+  } catch (ex) {
+    if (ex.status && ex.status == 404) {
+      delete design._rev;
+      await db.put(design);
+      return true;
+    } else {
+      Logger("Could not make design documents", LOG_LEVEL.INFO);
+    }
+  }
+  return false;
+}
+
+// src/lib/src/LRUCache.ts
+var LRUCache = class {
+  constructor() {
+    this.cache = new Map([]);
+    this.revCache = new Map([]);
+    this.maxCache = 100;
+  }
+  get(key) {
+    const v = this.cache.get(key);
+    if (v) {
+      this.cache.delete(key);
+      this.revCache.delete(v);
+      this.cache.set(key, v);
+      this.revCache.set(v, key);
+    }
+    return v;
+  }
+  revGet(value) {
+    const key = this.revCache.get(value);
+    if (value) {
+      this.cache.delete(key);
+      this.revCache.delete(value);
+      this.cache.set(key, value);
+      this.revCache.set(value, key);
+    }
+    return key;
+  }
+  set(key, value) {
+    this.cache.set(key, value);
+    this.revCache.set(value, key);
+    if (this.cache.size > this.maxCache) {
+      for (const kv of this.cache) {
+        this.revCache.delete(kv[1]);
+        this.cache.delete(kv[0]);
+        if (this.cache.size <= this.maxCache)
+          break;
+      }
+    }
+  }
+};
+
+// src/lib/src/LocalPouchDBBase.ts
+var currentVersionRange = {
+  min: 0,
+  max: 2,
+  current: 2
+};
+var LocalPouchDBBase = class {
+  constructor(settings, dbname, isMobile) {
+    this.nodeid = "";
+    this.isReady = false;
+    this.hashCaches = new LRUCache();
+    this.corruptedEntries = {};
+    this.remoteLocked = false;
+    this.remoteLockedAndDeviceNotAccepted = false;
+    this.changeHandler = null;
+    this.syncHandler = null;
+    this.leafArrivedCallbacks = {};
+    this.syncStatus = "NOT_CONNECTED";
+    this.docArrived = 0;
+    this.docSent = 0;
+    this.docSeq = "";
+    this.isMobile = false;
+    this.chunkVersion = -1;
+    this.maxChunkVersion = -1;
+    this.minChunkVersion = -1;
+    this.needScanning = false;
+    this.updateInfo = () => {
+      console.log("Update Info default implement");
+    };
+    this.originalSetting = null;
+    this.auth = {
+      username: "",
+      password: ""
+    };
+    this.dbname = dbname;
+    this.settings = settings;
+    this.cancelHandler = this.cancelHandler.bind(this);
+    this.isMobile = isMobile;
+  }
+  cancelHandler(handler) {
+    if (handler != null) {
+      handler.removeAllListeners();
+      handler.cancel();
+      handler = null;
+    }
+    return null;
+  }
+  onunload() {
+    this.beforeOnUnload();
+    this.leafArrivedCallbacks;
+    this.changeHandler = this.cancelHandler(this.changeHandler);
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+    this.localDatabase.removeAllListeners();
+  }
+  close() {
+    Logger("Database closed (by close)");
+    this.isReady = false;
+    this.changeHandler = this.cancelHandler(this.changeHandler);
+    if (this.localDatabase != null) {
+      this.localDatabase.close();
+    }
+    this.onClose();
+  }
+  async isOldDatabaseExists() {
+    const db = this.CreatePouchDBInstance(this.dbname + "-livesync", {
+      auto_compaction: this.settings.useHistory ? false : true,
+      revs_limit: 20,
+      deterministic_revs: true,
+      skip_setup: true
+    });
+    try {
+      const info = await db.info();
+      Logger(info, LOG_LEVEL.VERBOSE);
+      return db;
+    } catch (ex) {
+      return false;
+    }
+  }
+  async initializeDatabase() {
+    await this.prepareHashFunctions();
+    if (this.localDatabase != null)
+      this.localDatabase.close();
+    this.changeHandler = this.cancelHandler(this.changeHandler);
+    this.localDatabase = null;
+    this.localDatabase = this.CreatePouchDBInstance(this.dbname + "-livesync-v2", {
+      auto_compaction: this.settings.useHistory ? false : true,
+      revs_limit: 100,
+      deterministic_revs: true
+    });
+    await this.onInitializeDatabase();
+    Logger("Database info", LOG_LEVEL.VERBOSE);
+    Logger(await this.localDatabase.info(), LOG_LEVEL.VERBOSE);
+    Logger("Open Database...");
+    const nextSeq = async () => {
+      Logger("Database Info");
+      Logger(await this.localDatabase.info(), LOG_LEVEL.VERBOSE);
+      const nodeinfo = await resolveWithIgnoreKnownError(this.localDatabase.get(NODEINFO_DOCID), {
+        _id: NODEINFO_DOCID,
+        type: "nodeinfo",
+        nodeid: "",
+        v20220607: true
+      });
+      if (nodeinfo.nodeid == "") {
+        nodeinfo.nodeid = Math.random().toString(36).slice(-10);
+        await this.localDatabase.put(nodeinfo);
+      }
+      this.localDatabase.on("close", () => {
+        Logger("Database closed.");
+        this.isReady = false;
+        this.localDatabase.removeAllListeners();
+      });
+      this.nodeid = nodeinfo.nodeid;
+      await putDesignDocuments(this.localDatabase);
+      const changes = this.localDatabase.changes({
+        since: "now",
+        live: true,
+        filter: (doc) => doc.type == "leaf"
+      }).on("change", (e3) => {
+        if (e3.deleted)
+          return;
+        this.leafArrived(e3.id);
+        this.docSeq = `${e3.seq}`;
+      });
+      this.changeHandler = changes;
+      this.isReady = true;
+      Logger("Database is now ready.");
+      return true;
+    };
+    Logger("Checking old database", LOG_LEVEL.VERBOSE);
+    const old = await this.isOldDatabaseExists();
+    if (old) {
+      const oi = await old.info();
+      if (oi.doc_count == 0) {
+        Logger("Old database is empty, proceed to next step", LOG_LEVEL.VERBOSE);
+        return nextSeq();
+      }
+      Logger("We have to upgrade database..", LOG_LEVEL.NOTICE, "conv");
+      try {
+        const newDbStatus = await this.localDatabase.info();
+        Logger("New database is initialized");
+        Logger(newDbStatus);
+        if (this.settings.encrypt) {
+          enableEncryption(old, this.settings.passphrase, true);
+        }
+        const rep = old.replicate.to(this.localDatabase, { batch_size: 25, batches_limit: 10 });
+        rep.on("change", (e3) => {
+          Logger(`Converting ${e3.docs_written} docs...`, LOG_LEVEL.NOTICE, "conv");
+        });
+        const w = await rep;
+        if (w.ok) {
+          Logger("Conversion completed!", LOG_LEVEL.NOTICE, "conv");
+          old.destroy();
+          this.isReady = true;
+          return await nextSeq();
+        } else {
+          throw new Error("Conversion failed!");
+        }
+      } catch (ex) {
+        Logger("Conversion failed!, If you are fully synchronized, please drop the old database in the Hatch pane in setting dialog. or please make an issue on Github.", LOG_LEVEL.NOTICE, "conv");
+        Logger(ex);
+        this.isReady = false;
+        return false;
+      }
+    } else {
+      return await nextSeq();
+    }
+  }
+  async prepareHashFunctions() {
+    if (this.h32 != null)
+      return;
+    const { h32, h32Raw } = await xxhash_wasm_default();
+    this.h32 = h32;
+    this.h32Raw = h32Raw;
+  }
+  leafArrived(id) {
+    if (typeof this.leafArrivedCallbacks[id] !== "undefined") {
+      for (const func of this.leafArrivedCallbacks[id]) {
+        func();
+      }
+      delete this.leafArrivedCallbacks[id];
+    }
+  }
+  waitForLeafReady(id) {
+    return new Promise((res, rej) => {
+      const timer = setTimeout(() => rej(new Error(`Chunk reading timed out:${id}`)), LEAF_WAIT_TIMEOUT);
+      if (typeof this.leafArrivedCallbacks[id] == "undefined") {
+        this.leafArrivedCallbacks[id] = [];
+      }
+      this.leafArrivedCallbacks[id].push(() => {
+        clearTimeout(timer);
+        res(true);
+      });
+    });
+  }
+  async getDBLeaf(id, waitForReady) {
+    const leaf = this.hashCaches.revGet(id);
+    if (leaf) {
+      return leaf;
+    }
+    try {
+      const w = await this.localDatabase.get(id);
+      if (w.type == "leaf") {
+        this.hashCaches.set(id, w.data);
+        return w.data;
+      }
+      throw new Error(`Corrupted chunk detected: ${id}`);
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        if (waitForReady) {
+          if (await this.waitForLeafReady(id) === false) {
+            throw new Error(`time out (waiting chunk)`);
+          }
+          return this.getDBLeaf(id, false);
+        } else {
+          throw new Error(`Chunk was not found: ${id}`);
+        }
+      } else {
+        Logger(`Something went wrong while retrieving chunks`);
+        throw ex;
+      }
+    }
+  }
+  async getDBEntryMeta(path, opt, includeDeleted = false) {
+    if (!this.isTargetFile(path)) {
+      return false;
+    }
+    const id = this.path2id(path);
+    try {
+      let obj = null;
+      if (opt) {
+        obj = await this.localDatabase.get(id, opt);
+      } else {
+        obj = await this.localDatabase.get(id);
+      }
+      const deleted = "deleted" in obj ? obj.deleted : void 0;
+      if (!includeDeleted && deleted)
+        return false;
+      if (obj.type && obj.type == "leaf") {
+        return false;
+      }
+      if (!obj.type || obj.type && obj.type == "notes" || obj.type == "newnote" || obj.type == "plain") {
+        const note = obj;
+        let children2 = [];
+        let type = "plain";
+        if (obj.type == "newnote" || obj.type == "plain") {
+          children2 = obj.children;
+          type = obj.type;
+        }
+        const doc = {
+          data: "",
+          _id: note._id,
+          ctime: note.ctime,
+          mtime: note.mtime,
+          size: note.size,
+          _rev: obj._rev,
+          _conflicts: obj._conflicts,
+          children: children2,
+          datatype: type,
+          deleted,
+          type
+        };
+        return doc;
+      }
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        return false;
+      }
+      throw ex;
+    }
+    return false;
+  }
+  async getDBEntry(path, opt, dump = false, waitForReady = true, includeDeleted = false) {
+    if (!this.isTargetFile(path)) {
+      return false;
+    }
+    const id = this.path2id(path);
+    try {
+      let obj = null;
+      if (opt) {
+        obj = await this.localDatabase.get(id, opt);
+      } else {
+        obj = await this.localDatabase.get(id);
+      }
+      const deleted = "deleted" in obj ? obj.deleted : void 0;
+      if (!includeDeleted && deleted)
+        return false;
+      if (obj.type && obj.type == "leaf") {
+        return false;
+      }
+      if (!obj.type || obj.type && obj.type == "notes") {
+        const note = obj;
+        const doc = {
+          data: note.data,
+          _id: note._id,
+          ctime: note.ctime,
+          mtime: note.mtime,
+          size: note.size,
+          _rev: obj._rev,
+          _conflicts: obj._conflicts,
+          children: [],
+          datatype: "newnote",
+          deleted,
+          type: "newnote"
+        };
+        if (typeof this.corruptedEntries[doc._id] != "undefined") {
+          delete this.corruptedEntries[doc._id];
+        }
+        if (dump) {
+          Logger(`Simple doc`);
+          Logger(doc);
+        }
+        return doc;
+      }
+      if (obj.type == "newnote" || obj.type == "plain") {
+        try {
+          if (dump) {
+            Logger(`Enhanced doc`);
+            Logger(obj);
+          }
+          let children2 = [];
+          if (this.settings.readChunksOnline) {
+            const items = await this.CollectChunks(obj.children);
+            if (items) {
+              for (const v of items) {
+                if (v && v.type == "leaf") {
+                  children2.push(v.data);
+                } else {
+                  if (!opt) {
+                    Logger(`Chunks of ${obj._id} are not valid.`, LOG_LEVEL.NOTICE);
+                    this.needScanning = true;
+                    this.corruptedEntries[obj._id] = obj;
+                  }
+                  return false;
+                }
+              }
+            } else {
+              if (opt) {
+                Logger(`Could not retrieve chunks of ${obj._id}. we have to `, LOG_LEVEL.NOTICE);
+                this.needScanning = true;
+              }
+              return false;
+            }
+          } else {
+            try {
+              children2 = await Promise.all(obj.children.map((e3) => this.getDBLeaf(e3, waitForReady)));
+              if (dump) {
+                Logger(`Chunks:`);
+                Logger(children2);
+              }
+            } catch (ex) {
+              Logger(`Something went wrong on reading chunks of ${obj._id} from database, see verbose info for detail.`, LOG_LEVEL.NOTICE);
+              Logger(ex, LOG_LEVEL.VERBOSE);
+              this.corruptedEntries[obj._id] = obj;
+              return false;
+            }
+          }
+          const data = children2.join("");
+          const doc = {
+            data,
+            _id: obj._id,
+            ctime: obj.ctime,
+            mtime: obj.mtime,
+            size: obj.size,
+            _rev: obj._rev,
+            children: obj.children,
+            datatype: obj.type,
+            _conflicts: obj._conflicts,
+            deleted,
+            type: obj.type
+          };
+          if (dump) {
+            Logger(`therefore:`);
+            Logger(doc);
+          }
+          if (typeof this.corruptedEntries[doc._id] != "undefined") {
+            delete this.corruptedEntries[doc._id];
+          }
+          return doc;
+        } catch (ex) {
+          if (ex.status && ex.status == 404) {
+            Logger(`Missing document content!, could not read ${obj._id} from database.`, LOG_LEVEL.NOTICE);
+            return false;
+          }
+          Logger(`Something went wrong on reading ${obj._id} from database:`, LOG_LEVEL.NOTICE);
+          Logger(ex);
+        }
+      }
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        return false;
+      }
+      throw ex;
+    }
+    return false;
+  }
+  async deleteDBEntry(path, opt) {
+    if (!this.isTargetFile(path)) {
+      return false;
+    }
+    const id = this.path2id(path);
+    try {
+      let obj = null;
+      return await runWithLock("file:" + id, false, async () => {
+        if (opt) {
+          obj = await this.localDatabase.get(id, opt);
+        } else {
+          obj = await this.localDatabase.get(id);
+        }
+        const revDeletion = opt && ("rev" in opt ? opt.rev : "") != "";
+        if (obj.type && obj.type == "leaf") {
+          return false;
+        }
+        if (!obj.type || obj.type && obj.type == "notes") {
+          obj._deleted = true;
+          const r2 = await this.localDatabase.put(obj);
+          Logger(`entry removed:${obj._id}-${r2.rev}`);
+          if (typeof this.corruptedEntries[obj._id] != "undefined") {
+            delete this.corruptedEntries[obj._id];
+          }
+          return true;
+        }
+        if (obj.type == "newnote" || obj.type == "plain") {
+          if (revDeletion) {
+            obj._deleted = true;
+          } else {
+            obj.deleted = true;
+            obj.mtime = Date.now();
+            if (this.settings.deleteMetadataOfDeletedFiles) {
+              obj._deleted = true;
+            }
+          }
+          const r2 = await this.localDatabase.put(obj);
+          Logger(`entry removed:${obj._id}-${r2.rev}`);
+          if (typeof this.corruptedEntries[obj._id] != "undefined") {
+            delete this.corruptedEntries[obj._id];
+          }
+          return true;
+        } else {
+          return false;
+        }
+      });
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        return false;
+      }
+      throw ex;
+    }
+  }
+  async deleteDBEntryPrefix(prefixSrc) {
+    let c = 0;
+    let readCount = 0;
+    const delDocs = [];
+    const prefix = this.path2id(prefixSrc);
+    do {
+      const result = await this.localDatabase.allDocs({ include_docs: false, skip: c, limit: 100, conflicts: true });
+      readCount = result.rows.length;
+      if (readCount > 0) {
+        for (const v of result.rows) {
+          if (v.id.startsWith(prefix) || v.id.startsWith("/" + prefix)) {
+            if (this.isTargetFile(this.id2path(v.id)))
+              delDocs.push(v.id);
+          } else {
+            if (!v.id.startsWith("h:")) {
+            }
+          }
+        }
+      }
+      c += readCount;
+    } while (readCount != 0);
+    let deleteCount = 0;
+    let notfound = 0;
+    for (const v of delDocs) {
+      try {
+        await runWithLock("file:" + v, false, async () => {
+          const item = await this.localDatabase.get(v);
+          if (item.type == "newnote" || item.type == "plain") {
+            item.deleted = true;
+            if (this.settings.deleteMetadataOfDeletedFiles) {
+              item._deleted = true;
+            }
+            item.mtime = Date.now();
+          } else {
+            item._deleted = true;
+          }
+          await this.localDatabase.put(item);
+        });
+        deleteCount++;
+      } catch (ex) {
+        if (ex.status && ex.status == 404) {
+          notfound++;
+        } else {
+          throw ex;
+        }
+      }
+    }
+    Logger(`deleteDBEntryPrefix:deleted ${deleteCount} items, skipped ${notfound}`);
+    return true;
+  }
+  async putDBEntry(note, saveAsBigChunk) {
+    if (!this.isTargetFile(this.id2path(note._id))) {
+      return;
+    }
+    const savedNotes = [];
+    let processed = 0;
+    let made = 0;
+    let skipped = 0;
+    const maxChunkSize = MAX_DOC_SIZE_BIN * Math.max(this.settings.customChunkSize, 1);
+    let pieceSize = maxChunkSize;
+    let plainSplit = false;
+    let cacheUsed = 0;
+    const userPasswordHash = this.h32Raw(new TextEncoder().encode(this.settings.passphrase));
+    if (!saveAsBigChunk && shouldSplitAsPlainText(note._id)) {
+      pieceSize = MAX_DOC_SIZE;
+      plainSplit = true;
+    }
+    const minimumChunkSize = Math.min(Math.max(40, ~~(note.data.length / 100)), maxChunkSize);
+    if (pieceSize < minimumChunkSize)
+      pieceSize = minimumChunkSize;
+    const newLeafs = [];
+    const pieces = splitPieces2(note.data, pieceSize, plainSplit, minimumChunkSize, 0);
+    for (const piece of pieces()) {
+      processed++;
+      let leafId = "";
+      let hashedPiece = "";
+      let hashQ = 0;
+      let tryNextHash = false;
+      let needMake = true;
+      const cache = this.hashCaches.get(piece);
+      if (cache) {
+        hashedPiece = "";
+        leafId = cache;
+        needMake = false;
+        skipped++;
+        cacheUsed++;
+      } else {
+        if (this.settings.encrypt) {
+          hashedPiece = "+" + (this.h32Raw(new TextEncoder().encode(piece)) ^ userPasswordHash).toString(16);
+        } else {
+          hashedPiece = this.h32(piece);
+        }
+        leafId = "h:" + hashedPiece;
+        do {
+          let newLeafId = leafId;
+          try {
+            newLeafId = `${leafId}${hashQ}`;
+            const pieceData = await this.localDatabase.get(newLeafId);
+            if (pieceData.type == "leaf" && pieceData.data == piece) {
+              leafId = newLeafId;
+              needMake = false;
+              tryNextHash = false;
+              this.hashCaches.set(piece, leafId);
+            } else if (pieceData.type == "leaf") {
+              Logger("hash:collision!!");
+              hashQ++;
+              tryNextHash = true;
+            } else {
+              leafId = newLeafId;
+              tryNextHash = false;
+            }
+          } catch (ex) {
+            if (ex.status && ex.status == 404) {
+              leafId = newLeafId;
+              needMake = true;
+              tryNextHash = false;
+            } else {
+              needMake = false;
+              tryNextHash = false;
+              throw ex;
+            }
+          }
+        } while (tryNextHash);
+        if (needMake) {
+          const savePiece = piece;
+          const d = {
+            _id: leafId,
+            data: savePiece,
+            type: "leaf"
+          };
+          newLeafs.push(d);
+          this.hashCaches.set(piece, leafId);
+          made++;
+        } else {
+          skipped++;
+        }
+      }
+      savedNotes.push(leafId);
+    }
+    let saved = true;
+    if (newLeafs.length > 0) {
+      try {
+        const result = await this.localDatabase.bulkDocs(newLeafs);
+        for (const item of result) {
+          if (!item.ok) {
+            if (item.status && item.status == 409) {
+            } else {
+              Logger(`Save failed:id:${item.id} rev:${item.rev}`, LOG_LEVEL.NOTICE);
+              Logger(item);
+              saved = false;
+            }
+          }
+        }
+      } catch (ex) {
+        Logger("Chunk save failed:", LOG_LEVEL.NOTICE);
+        Logger(ex, LOG_LEVEL.NOTICE);
+        saved = false;
+      }
+    }
+    if (saved) {
+      Logger(`Content saved:${note._id} ,pieces:${processed} (new:${made}, skip:${skipped}, cache:${cacheUsed})`);
+      const newDoc = {
+        children: savedNotes,
+        _id: note._id,
+        ctime: note.ctime,
+        mtime: note.mtime,
+        size: note.size,
+        type: note.datatype
+      };
+      await runWithLock("file:" + newDoc._id, false, async () => {
+        try {
+          const old = await this.localDatabase.get(newDoc._id);
+          if (!old.type || old.type == "notes" || old.type == "newnote" || old.type == "plain") {
+            newDoc._rev = old._rev;
+          }
+        } catch (ex) {
+          if (ex.status && ex.status == 404) {
+          } else {
+            throw ex;
+          }
+        }
+        const r2 = await this.localDatabase.put(newDoc, { force: true });
+        if (typeof this.corruptedEntries[note._id] != "undefined") {
+          delete this.corruptedEntries[note._id];
+        }
+        if (this.settings.checkIntegrityOnSave) {
+          if (!this.sanCheck(await this.localDatabase.get(r2.id))) {
+            Logger("note save failed!", LOG_LEVEL.NOTICE);
+          } else {
+            Logger(`note has been surely saved:${newDoc._id}:${r2.rev}`);
+          }
+        } else {
+          Logger(`note saved:${newDoc._id}:${r2.rev}`);
+        }
+      });
+    } else {
+      Logger(`note could not saved:${note._id}`);
+    }
+  }
+  async migrate(from, to) {
+    Logger(`Database updated from ${from} to ${to}`, LOG_LEVEL.NOTICE);
+    return true;
+  }
+  replicateAllToServer(setting, showingNotice) {
+    return new Promise((res, rej) => {
+      this.openOneshotReplication(setting, showingNotice, async (e3) => {
+      }, false, (e3) => {
+        if (e3 === true)
+          res(e3);
+        rej(e3);
+      }, "pushOnly");
+    });
+  }
+  async checkReplicationConnectivity(setting, keepAlive, skipCheck, showResult) {
+    if (!this.isReady) {
+      Logger("Database is not ready.");
+      return false;
+    }
+    if (setting.versionUpFlash != "") {
+      Logger("Open settings and check message, please.", LOG_LEVEL.NOTICE);
+      return false;
+    }
+    const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
+    if (this.syncHandler != null) {
+      Logger("Another replication running.");
+      return false;
+    }
+    const dbRet = await this.connectRemoteCouchDBWithSetting(setting, this.isMobile);
+    if (typeof dbRet === "string") {
+      Logger(`could not connect to ${uri}: ${dbRet}`, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
+      return false;
+    }
+    if (!skipCheck) {
+      await putDesignDocuments(dbRet.db);
+      if (!await checkRemoteVersion(dbRet.db, this.migrate.bind(this), VER)) {
+        Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
+        return false;
+      }
+      const defMilestonePoint = {
+        _id: MILSTONE_DOCID,
+        type: "milestoneinfo",
+        created: new Date() / 1,
+        locked: false,
+        accepted_nodes: [this.nodeid],
+        node_chunk_info: { [this.nodeid]: currentVersionRange }
+      };
+      const remoteMilestone = { ...defMilestonePoint, ...await resolveWithIgnoreKnownError(dbRet.db.get(MILSTONE_DOCID), defMilestonePoint) };
+      remoteMilestone.node_chunk_info = { ...defMilestonePoint.node_chunk_info, ...remoteMilestone.node_chunk_info };
+      this.remoteLocked = remoteMilestone.locked;
+      this.remoteLockedAndDeviceNotAccepted = remoteMilestone.locked && remoteMilestone.accepted_nodes.indexOf(this.nodeid) == -1;
+      const writeMilestone = remoteMilestone.node_chunk_info[this.nodeid].min != currentVersionRange.min || remoteMilestone.node_chunk_info[this.nodeid].max != currentVersionRange.max || typeof remoteMilestone._rev == "undefined";
+      if (writeMilestone) {
+        remoteMilestone.node_chunk_info[this.nodeid].min = currentVersionRange.min;
+        remoteMilestone.node_chunk_info[this.nodeid].max = currentVersionRange.max;
+        await dbRet.db.put(remoteMilestone);
+      }
+      let globalMin = currentVersionRange.min;
+      let globalMax = currentVersionRange.max;
+      for (const nodeid of remoteMilestone.accepted_nodes) {
+        if (nodeid == this.nodeid)
+          continue;
+        if (nodeid in remoteMilestone.node_chunk_info) {
+          const nodeinfo = remoteMilestone.node_chunk_info[nodeid];
+          globalMin = Math.max(nodeinfo.min, globalMin);
+          globalMax = Math.min(nodeinfo.max, globalMax);
+        } else {
+          globalMin = 0;
+          globalMax = 0;
+        }
+      }
+      this.maxChunkVersion = globalMax;
+      this.minChunkVersion = globalMin;
+      if (this.chunkVersion >= 0 && (globalMin > this.chunkVersion || globalMax < this.chunkVersion)) {
+        if (!setting.ignoreVersionCheck) {
+          Logger("The remote database has no compatibility with the running version. Please upgrade the plugin.", LOG_LEVEL.NOTICE);
+          return false;
+        }
+      }
+      if (remoteMilestone.locked && remoteMilestone.accepted_nodes.indexOf(this.nodeid) == -1) {
+        Logger("The remote database has been rebuilt or corrupted since we have synchronized last time. Fetch rebuilt DB or explicit unlocking is required. See the settings dialog.", LOG_LEVEL.NOTICE);
+        return false;
+      }
+    }
+    const syncOptionBase = {
+      batches_limit: setting.batches_limit,
+      batch_size: setting.batch_size
+    };
+    if (setting.readChunksOnline) {
+      syncOptionBase.push = { filter: "replicate/push" };
+      syncOptionBase.pull = { filter: "replicate/pull" };
+    }
+    const syncOption = keepAlive ? { live: true, retry: true, heartbeat: 3e4, ...syncOptionBase } : { ...syncOptionBase };
+    return { db: dbRet.db, info: dbRet.info, syncOptionBase, syncOption };
+  }
+  openReplication(setting, keepAlive, showResult, callback) {
+    if (keepAlive) {
+      this.openContinuousReplication(setting, showResult, callback, false);
+    } else {
+      this.openOneshotReplication(setting, showResult, callback, false, null, "sync");
+    }
+  }
+  replicationActivated(showResult) {
+    this.syncStatus = "CONNECTED";
+    this.updateInfo();
+    Logger("Replication activated", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
+  }
+  async replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback) {
+    try {
+      if (e3.direction == "pull") {
+        await callback(e3.change.docs);
+        this.docArrived += e3.change.docs.length;
+      } else {
+        this.docSent += e3.change.docs.length;
+      }
+      if (showResult) {
+        Logger(`\u2191${this.docSent - docSentOnStart} \u2193${this.docArrived - docArrivedOnStart}`, LOG_LEVEL.NOTICE, "sync");
+      }
+      this.updateInfo();
+    } catch (ex) {
+      Logger("Replication callback error", LOG_LEVEL.NOTICE, "sync");
+      Logger(ex, LOG_LEVEL.NOTICE);
+    }
+  }
+  replicationCompleted(showResult) {
+    this.syncStatus = "COMPLETED";
+    this.updateInfo();
+    Logger("Replication completed", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, showResult ? "sync" : "");
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+  }
+  replicationDenied(e3) {
+    this.syncStatus = "ERRORED";
+    this.updateInfo();
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+    Logger("Replication denied", LOG_LEVEL.NOTICE, "sync");
+    Logger(e3);
+  }
+  replicationErrored(e3) {
+    this.syncStatus = "ERRORED";
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+    this.updateInfo();
+    Logger("Replication error", LOG_LEVEL.NOTICE, "sync");
+    Logger(e3);
+  }
+  replicationPaused() {
+    this.syncStatus = "PAUSED";
+    this.updateInfo();
+    Logger("replication paused", LOG_LEVEL.VERBOSE, "sync");
+  }
+  async openOneshotReplication(setting, showResult, callback, retrying, callbackDone, syncMode) {
+    if (this.syncHandler != null) {
+      Logger("Replication is already in progress.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
+      return;
+    }
+    Logger(`Oneshot Sync begin... (${syncMode})`);
+    let thisCallback = callbackDone;
+    const ret = await this.checkReplicationConnectivity(setting, true, retrying, showResult);
+    if (ret === false) {
+      Logger("Could not connect to server.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
+      return;
+    }
+    if (showResult) {
+      Logger("Looking for the point last synchronized point.", LOG_LEVEL.NOTICE, "sync");
+    }
+    const { db, syncOptionBase } = ret;
+    this.syncStatus = "STARTED";
+    this.updateInfo();
+    const docArrivedOnStart = this.docArrived;
+    const docSentOnStart = this.docSent;
+    if (!retrying) {
+      this.originalSetting = setting;
+    }
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+    if (syncMode == "sync") {
+      this.syncHandler = this.localDatabase.sync(db, { checkpoint: "target", ...syncOptionBase });
+      this.syncHandler.on("change", async (e3) => {
+        await this.replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback);
+        if (retrying) {
+          if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
+            Logger("Back into original settings once.");
+            this.syncHandler = this.cancelHandler(this.syncHandler);
+            this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncMode);
+          }
+        }
+      }).on("complete", (e3) => {
+        this.replicationCompleted(showResult);
+        if (thisCallback != null) {
+          thisCallback(true);
+        }
+      });
+    } else if (syncMode == "pullOnly") {
+      this.syncHandler = this.localDatabase.replicate.from(db, { checkpoint: "target", ...syncOptionBase, ...this.settings.readChunksOnline ? { filter: "replicate/pull" } : {} });
+      this.syncHandler.on("change", async (e3) => {
+        await this.replicationChangeDetected({ direction: "pull", change: e3 }, showResult, docSentOnStart, docArrivedOnStart, callback);
+        if (retrying) {
+          if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
+            Logger("Back into original settings once.");
+            this.syncHandler = this.cancelHandler(this.syncHandler);
+            this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncMode);
+          }
+        }
+      }).on("complete", (e3) => {
+        this.replicationCompleted(showResult);
+        if (thisCallback != null) {
+          thisCallback(true);
+        }
+      });
+    } else if (syncMode == "pushOnly") {
+      this.syncHandler = this.localDatabase.replicate.to(db, { checkpoint: "target", ...syncOptionBase, ...this.settings.readChunksOnline ? { filter: "replicate/push" } : {} });
+      this.syncHandler.on("change", async (e3) => {
+        await this.replicationChangeDetected({ direction: "push", change: e3 }, showResult, docSentOnStart, docArrivedOnStart, callback);
+        if (retrying) {
+          if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
+            Logger("Back into original settings once.");
+            this.syncHandler = this.cancelHandler(this.syncHandler);
+            this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncMode);
+          }
+        }
+      });
+      this.syncHandler.on("complete", (e3) => {
+        this.replicationCompleted(showResult);
+        if (thisCallback != null) {
+          thisCallback(true);
+        }
+      });
+    }
+    this.syncHandler.on("active", () => this.replicationActivated(showResult)).on("denied", (e3) => {
+      this.replicationDenied(e3);
+      if (thisCallback != null) {
+        thisCallback(e3);
+      }
+    }).on("error", (e3) => {
+      this.replicationErrored(e3);
+      Logger("Replication stopped.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
+      if (this.getLastPostFailedBySize()) {
+        const tempSetting = JSON.parse(JSON.stringify(setting));
+        tempSetting.batch_size = Math.ceil(tempSetting.batch_size / 2) + 2;
+        tempSetting.batches_limit = Math.ceil(tempSetting.batches_limit / 2) + 2;
+        if (tempSetting.batch_size <= 5 && tempSetting.batches_limit <= 5) {
+          Logger("We can't replicate more lower value.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
+        } else {
+          Logger(`Retry with lower batch size:${tempSetting.batch_size}/${tempSetting.batches_limit}`, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
+          thisCallback = null;
+          this.openOneshotReplication(tempSetting, showResult, callback, true, callbackDone, syncMode);
+        }
+      } else {
+        Logger("Replication error", LOG_LEVEL.NOTICE, "sync");
+        Logger(e3);
+      }
+      if (thisCallback != null) {
+        thisCallback(e3);
+      }
+    }).on("paused", (e3) => this.replicationPaused());
+    await this.syncHandler;
+  }
+  openContinuousReplication(setting, showResult, callback, retrying) {
+    if (this.syncHandler != null) {
+      Logger("Replication is already in progress.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
+      return;
+    }
+    Logger("Before LiveSync, start OneShot once...");
+    this.openOneshotReplication(setting, showResult, callback, false, async () => {
+      Logger("LiveSync begin...");
+      const ret = await this.checkReplicationConnectivity(setting, true, true, showResult);
+      if (ret === false) {
+        Logger("Could not connect to server.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
+        return;
+      }
+      if (showResult) {
+        Logger("Looking for the point last synchronized point.", LOG_LEVEL.NOTICE, "sync");
+      }
+      const { db, syncOption } = ret;
+      this.syncStatus = "STARTED";
+      this.updateInfo();
+      const docArrivedOnStart = this.docArrived;
+      const docSentOnStart = this.docSent;
+      if (!retrying) {
+        this.originalSetting = setting;
+      }
+      this.syncHandler = this.cancelHandler(this.syncHandler);
+      this.syncHandler = this.localDatabase.sync(db, {
+        ...syncOption,
+        pull: {
+          checkpoint: "target"
+        },
+        push: {
+          checkpoint: "source"
+        }
+      });
+      this.syncHandler.on("active", () => this.replicationActivated(showResult)).on("change", async (e3) => {
+        await this.replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback);
+        if (retrying) {
+          if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
+            Logger("Back into original settings once.");
+            this.syncHandler = this.cancelHandler(this.syncHandler);
+            this.openContinuousReplication(this.originalSetting, showResult, callback, false);
+          }
+        }
+      }).on("complete", (e3) => this.replicationCompleted(showResult)).on("denied", (e3) => this.replicationDenied(e3)).on("error", (e3) => {
+        this.replicationErrored(e3);
+        Logger("Replication stopped.", LOG_LEVEL.NOTICE, "sync");
+      }).on("paused", (e3) => this.replicationPaused());
+    }, "pullOnly");
+  }
+  closeReplication() {
+    this.syncStatus = "CLOSED";
+    this.updateInfo();
+    this.syncHandler = this.cancelHandler(this.syncHandler);
+    Logger("Replication closed");
+  }
+  async resetLocalOldDatabase() {
+    const oldDB = await this.isOldDatabaseExists();
+    if (oldDB) {
+      oldDB.destroy();
+      Logger("Deleted! Please re-launch obsidian.", LOG_LEVEL.NOTICE);
+    } else {
+      Logger("Old database is not exist.", LOG_LEVEL.NOTICE);
+    }
+  }
+  async resetDatabase() {
+    this.changeHandler = this.cancelHandler(this.changeHandler);
+    this.closeReplication();
+    Logger("Database closed for reset Database.");
+    this.isReady = false;
+    await this.localDatabase.destroy();
+    this.onResetDatabase();
+    this.localDatabase = null;
+    await this.initializeDatabase();
+    Logger("Local Database Reset", LOG_LEVEL.NOTICE);
+  }
+  async tryResetRemoteDatabase(setting) {
+    this.closeReplication();
+    const con = await this.connectRemoteCouchDBWithSetting(setting, this.isMobile);
+    if (typeof con == "string")
+      return;
+    try {
+      await con.db.destroy();
+      Logger("Remote Database Destroyed", LOG_LEVEL.NOTICE);
+      await this.tryCreateRemoteDatabase(setting);
+    } catch (ex) {
+      Logger("Something happened on Remote Database Destroy:", LOG_LEVEL.NOTICE);
+      Logger(ex, LOG_LEVEL.NOTICE);
+    }
+  }
+  async tryCreateRemoteDatabase(setting) {
+    this.closeReplication();
+    const con2 = await this.connectRemoteCouchDBWithSetting(setting, this.isMobile);
+    if (typeof con2 === "string")
+      return;
+    Logger("Remote Database Created or Connected", LOG_LEVEL.NOTICE);
+  }
+  async markRemoteLocked(setting, locked) {
+    const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
+    const dbRet = await this.connectRemoteCouchDBWithSetting(setting, this.isMobile);
+    if (typeof dbRet === "string") {
+      Logger(`could not connect to ${uri}:${dbRet}`, LOG_LEVEL.NOTICE);
+      return;
+    }
+    if (!await checkRemoteVersion(dbRet.db, this.migrate.bind(this), VER)) {
+      Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
+      return;
+    }
+    const defInitPoint = {
+      _id: MILSTONE_DOCID,
+      type: "milestoneinfo",
+      created: new Date() / 1,
+      locked,
+      accepted_nodes: [this.nodeid],
+      node_chunk_info: { [this.nodeid]: currentVersionRange }
+    };
+    const remoteMilestone = { ...defInitPoint, ...await resolveWithIgnoreKnownError(dbRet.db.get(MILSTONE_DOCID), defInitPoint) };
+    remoteMilestone.node_chunk_info = { ...defInitPoint.node_chunk_info, ...remoteMilestone.node_chunk_info };
+    remoteMilestone.accepted_nodes = [this.nodeid];
+    remoteMilestone.locked = locked;
+    if (locked) {
+      Logger("Lock remote database to prevent data corruption", LOG_LEVEL.NOTICE);
+    } else {
+      Logger("Unlock remote database to prevent data corruption", LOG_LEVEL.NOTICE);
+    }
+    await dbRet.db.put(remoteMilestone);
+  }
+  async markRemoteResolved(setting) {
+    const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
+    const dbRet = await this.connectRemoteCouchDBWithSetting(setting, this.isMobile);
+    if (typeof dbRet === "string") {
+      Logger(`could not connect to ${uri}:${dbRet}`, LOG_LEVEL.NOTICE);
+      return;
+    }
+    if (!await checkRemoteVersion(dbRet.db, this.migrate.bind(this), VER)) {
+      Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
+      return;
+    }
+    const defInitPoint = {
+      _id: MILSTONE_DOCID,
+      type: "milestoneinfo",
+      created: new Date() / 1,
+      locked: false,
+      accepted_nodes: [this.nodeid],
+      node_chunk_info: { [this.nodeid]: currentVersionRange }
+    };
+    const remoteMilestone = { ...defInitPoint, ...await resolveWithIgnoreKnownError(dbRet.db.get(MILSTONE_DOCID), defInitPoint) };
+    remoteMilestone.node_chunk_info = { ...defInitPoint.node_chunk_info, ...remoteMilestone.node_chunk_info };
+    remoteMilestone.accepted_nodes = Array.from(new Set([...remoteMilestone.accepted_nodes, this.nodeid]));
+    Logger("Mark this device as 'resolved'.", LOG_LEVEL.NOTICE);
+    await dbRet.db.put(remoteMilestone);
+  }
+  async sanCheck(entry) {
+    if (entry.type == "plain" || entry.type == "newnote") {
+      const children2 = entry.children;
+      Logger(`sancheck:checking:${entry._id} : ${children2.length}`, LOG_LEVEL.VERBOSE);
+      try {
+        const dc = await this.localDatabase.allDocs({ keys: [...children2] });
+        if (dc.rows.some((e3) => "error" in e3)) {
+          this.corruptedEntries[entry._id] = entry;
+          Logger(`sancheck:corrupted:${entry._id} : ${children2.length}`, LOG_LEVEL.VERBOSE);
+          return false;
+        }
+        return true;
+      } catch (ex) {
+        Logger(ex);
+      }
+    }
+    return false;
+  }
+  garbageCheck() {
+    Logger(`Checking garbages`, LOG_LEVEL.NOTICE, "gc");
+    let docNum = 0;
+    const chunks = new Map();
+    this.localDatabase.changes({
+      since: 0,
+      include_docs: true,
+      return_docs: false,
+      style: "all_docs"
+    }).on("change", (e3) => {
+      if (e3.id.startsWith("h:")) {
+        const chunk = e3.id;
+        let c = chunks.get(chunk);
+        if (c == null)
+          c = new Set();
+        chunks.set(chunk, c);
+      } else if ("children" in e3.doc) {
+        docNum++;
+        if (docNum % 100 == 0)
+          Logger(`Processing ${docNum}`, LOG_LEVEL.NOTICE, "gc");
+        if (!e3.deleted) {
+          for (const chunk of e3.doc.children) {
+            let c = chunks.get(chunk);
+            if (c == null)
+              c = new Set();
+            c.add(e3.id);
+            chunks.set(chunk, c);
+          }
+        } else {
+          for (const chunk of e3.doc.children) {
+            let c = chunks.get(chunk);
+            if (c == null)
+              c = new Set();
+            c.delete(e3.id);
+            chunks.set(chunk, c);
+          }
+        }
+      }
+    }).on("complete", (v) => {
+      let alive = 0;
+      let unreachable = 0;
+      for (const chunk of chunks) {
+        const items = chunk[1];
+        if (items.size == 0) {
+          unreachable++;
+        } else {
+          alive++;
+        }
+      }
+      Logger(`Garbage checking completed, documents:${docNum}. Used chunks:${alive}, Retained chunks:${unreachable}. Retained chunks will be reused, but you can rebuild database if you feel there are too much.`, LOG_LEVEL.NOTICE, "gc");
+    });
+    return;
+  }
+  isVersionUpgradable(ver) {
+    if (this.maxChunkVersion < 0)
+      return false;
+    if (this.minChunkVersion < 0)
+      return false;
+    if (this.maxChunkVersion > 0 && this.maxChunkVersion < ver)
+      return false;
+    if (this.minChunkVersion > 0 && this.minChunkVersion > ver)
+      return false;
+    return true;
+  }
+  isTargetFile(file) {
+    if (file.includes(":"))
+      return true;
+    if (this.settings.syncOnlyRegEx) {
+      const syncOnly = new RegExp(this.settings.syncOnlyRegEx);
+      if (!file.match(syncOnly))
+        return false;
+    }
+    if (this.settings.syncIgnoreRegEx) {
+      const syncIgnore = new RegExp(this.settings.syncIgnoreRegEx);
+      if (file.match(syncIgnore))
+        return false;
+    }
+    return true;
+  }
+  async CollectChunks(ids, showResult = false) {
+    const localChunks = await this.localDatabase.allDocs({ keys: ids, include_docs: true });
+    const missingChunks = localChunks.rows.filter((e3) => "error" in e3).map((e3) => e3.key);
+    if (missingChunks.length == 0) {
+      return localChunks.rows.map((e3) => e3.doc);
+    }
+    const ret = await this.connectRemoteCouchDBWithSetting(this.settings, this.isMobile);
+    if (typeof ret === "string") {
+      Logger(`Could not connect to server.${ret} `, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "fetch");
+      return false;
+    }
+    const remoteChunks = await ret.db.allDocs({ keys: missingChunks, include_docs: true });
+    if (remoteChunks.rows.some((e3) => "error" in e3)) {
+      return false;
+    }
+    const remoteChunkItems = remoteChunks.rows.map((e3) => e3.doc);
+    const max = remoteChunkItems.length;
+    let last = 0;
+    function findChunk(key) {
+      const offset = last;
+      for (let i2 = 0; i2 < max; i2++) {
+        const idx = (offset + i2) % max;
+        last = i2;
+        if (remoteChunkItems[idx]._id == key)
+          return remoteChunkItems[idx];
+      }
+      throw Error("Chunk collecting error");
+    }
+    return localChunks.rows.map((e3) => "error" in e3 ? findChunk(e3.key) : e3.doc);
+  }
+  connectRemoteCouchDBWithSetting(settings, isMobile) {
+    return this.connectRemoteCouchDB(settings.couchDB_URI + (settings.couchDB_DBNAME == "" ? "" : "/" + settings.couchDB_DBNAME), {
+      username: settings.couchDB_USER,
+      password: settings.couchDB_PASSWORD
+    }, settings.disableRequestURI || isMobile, settings.encrypt ? settings.passphrase : settings.encrypt);
+  }
+};
+
+// src/lib/pouchdb-browser-webpack/dist/pouchdb-browser.js
+var e2 = { 105: (e3) => {
   e3.exports = function(e4) {
     return function() {
       var t3 = arguments.length;
@@ -8632,65 +9829,47 @@ var e = { 105: (e3) => {
       return !o(t5) && e4.incoming ? e4.incoming(t5) : t5;
     }, n4 = function(t5) {
       return !o(t5) && e4.outgoing ? e4.outgoing(t5) : t5;
-    }, i3 = { get(e5, ...t5) {
-      return __async(this, null, function* () {
-        const r3 = yield e5(...t5);
-        return Array.isArray(r3) ? (yield Promise.all(r3.map((e6) => __async(this, null, function* () {
-          e6.ok && (e6.ok = yield n4(e6.ok));
-        }))), r3) : n4(r3);
-      });
-    }, bulkDocs: (e5, n5, ...r3) => __async(this, null, function* () {
-      return n5.docs ? n5.docs = yield Promise.all(n5.docs.map(t4)) : n5 = yield Promise.all(n5.map(t4)), e5(n5, ...r3);
-    }), allDocs(e5, ...t5) {
-      return __async(this, null, function* () {
-        const r3 = yield e5(...t5);
-        return yield Promise.all(r3.rows.map((e6) => __async(this, null, function* () {
-          e6.doc && (e6.doc = yield n4(e6.doc));
-        }))), r3;
-      });
-    }, bulkGet(e5, ...t5) {
-      return __async(this, null, function* () {
-        const r3 = (e6) => __async(this, null, function* () {
-          return e6.ok ? { ok: yield n4(e6.ok) } : e6;
-        });
-        let _a = yield e5(...t5), { results: i4 } = _a, o2 = __objRest(_a, ["results"]);
-        return i4 = yield Promise.all(i4.map((e6) => __async(this, null, function* () {
-          const { id: t6, docs: n5 } = e6;
-          return t6 && n5 && Array.isArray(n5) ? { id: t6, docs: yield Promise.all(n5.map(r3)) } : e6;
-        }))), __spreadValues({ results: i4 }, o2);
-      });
+    }, i3 = { async get(e5, ...t5) {
+      const r3 = await e5(...t5);
+      return Array.isArray(r3) ? (await Promise.all(r3.map(async (e6) => {
+        e6.ok && (e6.ok = await n4(e6.ok));
+      })), r3) : n4(r3);
+    }, bulkDocs: async (e5, n5, ...r3) => (n5.docs ? n5.docs = await Promise.all(n5.docs.map(t4)) : n5 = await Promise.all(n5.map(t4)), e5(n5, ...r3)), async allDocs(e5, ...t5) {
+      const r3 = await e5(...t5);
+      return await Promise.all(r3.rows.map(async (e6) => {
+        e6.doc && (e6.doc = await n4(e6.doc));
+      })), r3;
+    }, async bulkGet(e5, ...t5) {
+      const r3 = async (e6) => e6.ok ? { ok: await n4(e6.ok) } : e6;
+      let { results: i4, ...o2 } = await e5(...t5);
+      return i4 = await Promise.all(i4.map(async (e6) => {
+        const { id: t6, docs: n5 } = e6;
+        return t6 && n5 && Array.isArray(n5) ? { id: t6, docs: await Promise.all(n5.map(r3)) } : e6;
+      })), { results: i4, ...o2 };
     }, changes(e5, ...t5) {
-      function r3(e6) {
-        return __async(this, null, function* () {
-          return e6.doc ? (e6.doc = yield n4(e6.doc), e6) : e6;
-        });
+      async function r3(e6) {
+        return e6.doc ? (e6.doc = await n4(e6.doc), e6) : e6;
       }
-      function i4(e6) {
-        return __async(this, null, function* () {
-          return e6.results ? (e6.results = yield Promise.all(e6.results.map(r3)), e6) : e6;
-        });
+      async function i4(e6) {
+        return e6.results ? (e6.results = await Promise.all(e6.results.map(r3)), e6) : e6;
       }
       const o2 = e5(...t5), { on: s2, then: a } = o2;
       return Object.assign(o2, { on(e6, t6) {
         const n5 = t6;
-        return e6 === "change" ? t6 = (e7) => __async(this, null, function* () {
-          n5(yield r3(e7));
-        }) : e6 === "complete" && (t6 = (e7) => __async(this, null, function* () {
-          n5(yield i4(e7));
-        })), s2.call(o2, e6, t6);
+        return e6 === "change" ? t6 = async (e7) => {
+          n5(await r3(e7));
+        } : e6 === "complete" && (t6 = async (e7) => {
+          n5(await i4(e7));
+        }), s2.call(o2, e6, t6);
       }, then: (e6, t6) => a.call(o2, i4).then(e6, t6) });
     } };
-    this.type() === "http" && (i3.put = function(e5, n5, ...r3) {
-      return __async(this, null, function* () {
-        return e5(n5 = yield t4(n5), ...r3);
-      });
-    }, i3.query = function(e5, ...t5) {
-      return __async(this, null, function* () {
-        const r3 = yield e5(...t5);
-        return yield Promise.all(r3.rows.map((e6) => __async(this, null, function* () {
-          e6.doc && (e6.doc = yield n4(e6.doc));
-        }))), r3;
-      });
+    this.type() === "http" && (i3.put = async function(e5, n5, ...r3) {
+      return e5(n5 = await t4(n5), ...r3);
+    }, i3.query = async function(e5, ...t5) {
+      const r3 = await e5(...t5);
+      return await Promise.all(r3.rows.map(async (e6) => {
+        e6.doc && (e6.doc = await n4(e6.doc));
+      })), r3;
     }), r2.install(this, i3);
   }
   e3.exports = { transform: s, filter: s }, typeof window != "undefined" && window.PouchDB && window.PouchDB.plugin(t3);
@@ -8813,21 +9992,21 @@ var e = { 105: (e3) => {
   };
 }, 525: () => {
 } };
-var t = {};
-function n(r2) {
-  var i2 = t[r2];
+var t2 = {};
+function n2(r2) {
+  var i2 = t2[r2];
   if (i2 !== void 0)
     return i2.exports;
-  var o = t[r2] = { exports: {} };
-  return e[r2](o, o.exports, n), o.exports;
+  var o = t2[r2] = { exports: {} };
+  return e2[r2](o, o.exports, n2), o.exports;
 }
-n.n = (e3) => {
+n2.n = (e3) => {
   var t3 = e3 && e3.__esModule ? () => e3.default : () => e3;
-  return n.d(t3, { a: t3 }), t3;
-}, n.d = (e3, t3) => {
+  return n2.d(t3, { a: t3 }), t3;
+}, n2.d = (e3, t3) => {
   for (var r2 in t3)
-    n.o(t3, r2) && !n.o(e3, r2) && Object.defineProperty(e3, r2, { enumerable: true, get: t3[r2] });
-}, n.g = function() {
+    n2.o(t3, r2) && !n2.o(e3, r2) && Object.defineProperty(e3, r2, { enumerable: true, get: t3[r2] });
+}, n2.g = function() {
   if (typeof globalThis == "object")
     return globalThis;
   try {
@@ -8836,56 +10015,16 @@ n.n = (e3) => {
     if (typeof window == "object")
       return window;
   }
-}(), n.o = (e3, t3) => Object.prototype.hasOwnProperty.call(e3, t3);
+}(), n2.o = (e3, t3) => Object.prototype.hasOwnProperty.call(e3, t3);
 var r = {};
 (() => {
-  n.d(r, { o: () => o });
-  const e3 = n(198).Z, t3 = n(614).Z, i2 = n(380), o = e3.plugin(t3).plugin(i2);
+  n2.d(r, { o: () => o });
+  const e3 = n2(198).Z, t3 = n2(614).Z, i2 = n2(380), o = e3.plugin(t3).plugin(i2);
 })();
 var i = r.o;
 
-// src/pouchdb-browser.ts
+// src/lib/src/pouchdb-browser.ts
 var Pouch = i;
-
-// node_modules/xxhash-wasm/esm/xxhash-wasm.js
-var t2 = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 13, 2, 96, 2, 127, 127, 0, 96, 3, 127, 127, 127, 1, 127, 3, 3, 2, 1, 0, 5, 3, 1, 0, 1, 7, 23, 3, 3, 109, 101, 109, 2, 0, 5, 120, 120, 104, 51, 50, 0, 0, 5, 120, 120, 104, 54, 52, 0, 1, 10, 152, 9, 2, 242, 2, 1, 4, 127, 32, 0, 32, 1, 106, 33, 3, 32, 1, 32, 1, 65, 16, 79, 4, 127, 32, 3, 65, 16, 107, 33, 6, 32, 2, 65, 168, 136, 141, 161, 2, 106, 33, 1, 32, 2, 65, 137, 235, 208, 208, 7, 107, 33, 4, 32, 2, 65, 207, 140, 162, 142, 6, 106, 33, 5, 3, 64, 32, 1, 32, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 1, 32, 4, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 4, 32, 2, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 2, 32, 5, 32, 0, 65, 4, 106, 34, 0, 40, 2, 0, 65, 247, 148, 175, 175, 120, 108, 106, 65, 13, 119, 65, 177, 243, 221, 241, 121, 108, 33, 5, 32, 6, 32, 0, 65, 4, 106, 34, 0, 79, 13, 0, 11, 32, 2, 65, 12, 119, 32, 5, 65, 18, 119, 106, 32, 4, 65, 7, 119, 106, 32, 1, 65, 1, 119, 106, 5, 32, 2, 65, 177, 207, 217, 178, 1, 106, 11, 106, 33, 2, 3, 64, 32, 3, 32, 0, 65, 4, 106, 79, 4, 64, 32, 2, 32, 0, 40, 2, 0, 65, 189, 220, 202, 149, 124, 108, 106, 65, 17, 119, 65, 175, 214, 211, 190, 2, 108, 33, 2, 32, 0, 65, 4, 106, 33, 0, 12, 1, 11, 11, 3, 64, 32, 0, 32, 3, 73, 4, 64, 32, 2, 32, 0, 45, 0, 0, 65, 177, 207, 217, 178, 1, 108, 106, 65, 11, 119, 65, 177, 243, 221, 241, 121, 108, 33, 2, 32, 0, 65, 1, 106, 33, 0, 12, 1, 11, 11, 32, 2, 32, 2, 65, 15, 118, 115, 65, 247, 148, 175, 175, 120, 108, 34, 0, 65, 13, 118, 32, 0, 115, 65, 189, 220, 202, 149, 124, 108, 34, 0, 65, 16, 118, 32, 0, 115, 11, 161, 6, 2, 4, 126, 3, 127, 32, 0, 65, 4, 106, 53, 2, 0, 32, 0, 53, 2, 0, 66, 32, 134, 132, 33, 2, 32, 1, 32, 0, 65, 8, 106, 34, 6, 106, 33, 7, 32, 1, 65, 32, 79, 4, 126, 32, 7, 65, 32, 107, 33, 8, 32, 2, 66, 214, 235, 130, 238, 234, 253, 137, 245, 224, 0, 124, 33, 3, 32, 2, 66, 177, 169, 172, 193, 173, 184, 212, 166, 61, 125, 33, 4, 32, 2, 66, 249, 234, 208, 208, 231, 201, 161, 228, 225, 0, 124, 33, 5, 3, 64, 32, 3, 32, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 3, 32, 4, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 4, 32, 2, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 2, 32, 5, 32, 6, 65, 8, 106, 34, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 124, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 5, 32, 8, 32, 6, 65, 8, 106, 34, 6, 79, 13, 0, 11, 32, 2, 66, 12, 137, 32, 5, 66, 18, 137, 124, 32, 4, 66, 7, 137, 124, 32, 3, 66, 1, 137, 124, 32, 3, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 4, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 2, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 32, 5, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 5, 32, 2, 66, 197, 207, 217, 178, 241, 229, 186, 234, 39, 124, 11, 32, 1, 173, 124, 33, 2, 3, 64, 32, 7, 32, 6, 65, 8, 106, 79, 4, 64, 32, 2, 32, 6, 41, 3, 0, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 31, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 27, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 66, 157, 163, 181, 234, 131, 177, 141, 138, 250, 0, 125, 33, 2, 32, 6, 65, 8, 106, 33, 6, 12, 1, 11, 11, 32, 6, 65, 4, 106, 32, 7, 77, 4, 64, 32, 2, 32, 6, 53, 2, 0, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 133, 66, 23, 137, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 66, 249, 243, 221, 241, 153, 246, 153, 171, 22, 124, 33, 2, 32, 6, 65, 4, 106, 33, 6, 11, 3, 64, 32, 6, 32, 7, 73, 4, 64, 32, 2, 32, 6, 49, 0, 0, 66, 197, 207, 217, 178, 241, 229, 186, 234, 39, 126, 133, 66, 11, 137, 66, 135, 149, 175, 175, 152, 182, 222, 155, 158, 127, 126, 33, 2, 32, 6, 65, 1, 106, 33, 6, 12, 1, 11, 11, 32, 0, 32, 2, 32, 2, 66, 33, 136, 133, 66, 207, 214, 211, 190, 210, 199, 171, 217, 66, 126, 34, 2, 66, 29, 136, 32, 2, 133, 66, 249, 243, 221, 241, 153, 246, 153, 171, 22, 126, 34, 2, 66, 32, 136, 32, 2, 133, 34, 2, 66, 32, 136, 62, 2, 0, 32, 0, 65, 4, 106, 32, 2, 62, 2, 0, 11]);
-var e2;
-function n2(t3, e3, n3) {
-  if (e3.buffer.byteLength < t3.byteLength + n3) {
-    const i2 = Math.ceil((t3.byteLength + n3 - e3.buffer.byteLength) / 65536);
-    e3.grow(i2);
-  }
-  new Uint8Array(e3.buffer, n3).set(t3);
-}
-function xxhash_wasm_default() {
-  return __async(this, null, function* () {
-    const { instance: { exports: { mem: i2, xxh32: o, xxh64: r2 } } } = yield WebAssembly.instantiate(t2);
-    function h(t3) {
-      let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      return n2(t3, i2, 0), o(0, t3.byteLength, e3) >>> 0;
-    }
-    function c(t3) {
-      let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, o2 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
-      n2(t3, i2, 8);
-      const h2 = new DataView(i2.buffer);
-      return h2.setUint32(0, e3, true), h2.setUint32(4, o2, true), r2(0, t3.byteLength), h2;
-    }
-    return { h32: function(t3) {
-      let n3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-      e2 || (e2 = new TextEncoder());
-      const i3 = e2.encode(t3);
-      return h(i3, n3).toString(16);
-    }, h32Raw: h, h64: function(t3) {
-      let n3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, i3 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
-      e2 || (e2 = new TextEncoder());
-      const o2 = e2.encode(t3), r3 = c(o2, n3, i3), h2 = r3.getUint32(0, true).toString(16) + r3.getUint32(4, true).toString(16);
-      return h2;
-    }, h64Raw: function(t3) {
-      let e3 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0, n3 = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
-      return new Uint8Array(c(t3, e3, n3).buffer, 0, 8);
-    } };
-  });
-}
 
 // src/utils.ts
 var import_obsidian = __toModule(require("obsidian"));
@@ -8899,10 +10038,10 @@ function id2path(filename) {
 var triggers = {};
 function setTrigger(key, timeout, proc) {
   clearTrigger(key);
-  triggers[key] = setTimeout(() => __async(this, null, function* () {
+  triggers[key] = setTimeout(async () => {
     delete triggers[key];
-    yield proc();
-  }), timeout);
+    await proc();
+  }, timeout);
 }
 function clearTrigger(key) {
   if (key in triggers) {
@@ -8925,17 +10064,15 @@ function memoObject(key, obj) {
   memos[key] = obj;
   return memos[key];
 }
-function memoIfNotExist(key, func) {
-  return __async(this, null, function* () {
-    if (!(key in memos)) {
-      const w = func();
-      const v = w instanceof Promise ? yield w : w;
-      memos[key] = v;
-    }
-    return memos[key];
-  });
+async function memoIfNotExist(key, func) {
+  if (!(key in memos)) {
+    const w = func();
+    const v = w instanceof Promise ? await w : w;
+    memos[key] = v;
+  }
+  return memos[key];
 }
-function retriveMemoObject(key) {
+function retrieveMemoObject(key) {
   if (key in memos) {
     return memos[key];
   } else {
@@ -8946,57 +10083,69 @@ function disposeMemoObject(key) {
   delete memos[key];
 }
 
-// src/utils_couchdb.ts
-var import_obsidian2 = __toModule(require("obsidian"));
-var isValidRemoteCouchDBURI = (uri) => {
-  if (uri.startsWith("https://"))
-    return true;
-  if (uri.startsWith("http://"))
-    return true;
-  return false;
-};
-var last_post_successed = false;
-var getLastPostFailedBySize = () => {
-  return !last_post_successed;
-};
-var fetchByAPI = (request) => __async(void 0, null, function* () {
-  var _a, _b;
-  const ret = yield (0, import_obsidian2.requestUrl)(request);
-  if (ret.status - ret.status % 100 !== 200) {
-    const er = new Error(`Request Error:${ret.status}`);
-    if (ret.json) {
-      er.message = ret.json.reason;
-      er.name = `${(_a = ret.json.error) != null ? _a : ""}:${(_b = ret.json.message) != null ? _b : ""}`;
+// src/LocalPouchDB.ts
+var LocalPouchDB = class extends LocalPouchDBBase {
+  constructor() {
+    super(...arguments);
+    this.last_successful_post = false;
+  }
+  id2path(filename) {
+    return id2path(filename);
+  }
+  path2id(filename) {
+    return path2id(filename);
+  }
+  CreatePouchDBInstance(name, options) {
+    return new Pouch(name, options);
+  }
+  beforeOnUnload() {
+    this.kvDB.close();
+  }
+  onClose() {
+    this.kvDB.close();
+  }
+  async onInitializeDatabase() {
+    this.kvDB = await OpenKeyValueDatabase(this.dbname + "-livesync-kv");
+  }
+  async onResetDatabase() {
+    await this.kvDB.destroy();
+  }
+  getLastPostFailedBySize() {
+    return this.last_successful_post;
+  }
+  async fetchByAPI(request) {
+    var _a, _b;
+    const ret = await (0, import_obsidian2.requestUrl)(request);
+    if (ret.status - ret.status % 100 !== 200) {
+      const er = new Error(`Request Error:${ret.status}`);
+      if (ret.json) {
+        er.message = ret.json.reason;
+        er.name = `${(_a = ret.json.error) != null ? _a : ""}:${(_b = ret.json.message) != null ? _b : ""}`;
+      }
+      er.status = ret.status;
+      throw er;
     }
-    er.status = ret.status;
-    throw er;
+    return ret;
   }
-  return ret;
-});
-var connectRemoteCouchDBWithSetting = (settings, isMobile) => connectRemoteCouchDB(settings.couchDB_URI + (settings.couchDB_DBNAME == "" ? "" : "/" + settings.couchDB_DBNAME), {
-  username: settings.couchDB_USER,
-  password: settings.couchDB_PASSWORD
-}, settings.disableRequestURI || isMobile, settings.encrypt ? settings.passphrase : settings.encrypt);
-var connectRemoteCouchDB = (uri, auth, disableRequestURI, passphrase) => __async(void 0, null, function* () {
-  if (!isValidRemoteCouchDBURI(uri))
-    return "Remote URI is not valid";
-  if (uri.toLowerCase() != uri)
-    return "Remote URI and database name could not contain capital letters.";
-  if (uri.indexOf(" ") !== -1)
-    return "Remote URI and database name could not contain spaces.";
-  let authHeader = "";
-  if (auth.username && auth.password) {
-    const utf8str = String.fromCharCode.apply(null, new TextEncoder().encode(`${auth.username}:${auth.password}`));
-    const encoded = window.btoa(utf8str);
-    authHeader = "Basic " + encoded;
-  } else {
-    authHeader = "";
-  }
-  const conf = {
-    adapter: "http",
-    auth,
-    fetch: function(url, opts) {
-      return __async(this, null, function* () {
+  async connectRemoteCouchDB(uri, auth, disableRequestURI, passphrase) {
+    if (!isValidRemoteCouchDBURI(uri))
+      return "Remote URI is not valid";
+    if (uri.toLowerCase() != uri)
+      return "Remote URI and database name could not contain capital letters.";
+    if (uri.indexOf(" ") !== -1)
+      return "Remote URI and database name could not contain spaces.";
+    let authHeader = "";
+    if (auth.username && auth.password) {
+      const utf8str = String.fromCharCode.apply(null, new TextEncoder().encode(`${auth.username}:${auth.password}`));
+      const encoded = window.btoa(utf8str);
+      authHeader = "Basic " + encoded;
+    } else {
+      authHeader = "";
+    }
+    const conf = {
+      adapter: "http",
+      auth,
+      fetch: async (url, opts) => {
         var _a, _b;
         let size = "";
         const localURL = url.toString().substring(uri.length);
@@ -9005,7 +10154,7 @@ var connectRemoteCouchDB = (uri, auth, disableRequestURI, passphrase) => __async
           const opts_length = opts.body.toString().length;
           if (opts_length > 1024 * 1024 * 10) {
             if (uri.contains(".cloudantnosqldb.")) {
-              last_post_successed = false;
+              this.last_successful_post = false;
               Logger("This request should fail on IBM Cloudant.", LOG_LEVEL.VERBOSE);
               throw new Error("This request should fail on IBM Cloudant.");
             }
@@ -9014,7 +10163,7 @@ var connectRemoteCouchDB = (uri, auth, disableRequestURI, passphrase) => __async
         }
         if (!disableRequestURI && typeof url == "string" && typeof ((_b = opts.body) != null ? _b : "") == "string") {
           const body = opts.body;
-          const transformedHeaders = __spreadValues({}, opts.headers);
+          const transformedHeaders = { ...opts.headers };
           if (authHeader != "")
             transformedHeaders["authorization"] = authHeader;
           delete transformedHeaders["host"];
@@ -9029,11 +10178,11 @@ var connectRemoteCouchDB = (uri, auth, disableRequestURI, passphrase) => __async
             contentType: "application/json"
           };
           try {
-            const r2 = yield fetchByAPI(requestParam);
+            const r2 = await this.fetchByAPI(requestParam);
             if (method == "POST" || method == "PUT") {
-              last_post_successed = r2.status - r2.status % 100 == 200;
+              this.last_successful_post = r2.status - r2.status % 100 == 200;
             } else {
-              last_post_successed = true;
+              this.last_successful_post = true;
             }
             Logger(`HTTP:${method}${size} to:${localURL} -> ${r2.status}`, LOG_LEVEL.DEBUG);
             return new Response(r2.arrayBuffer, {
@@ -9044,1652 +10193,46 @@ var connectRemoteCouchDB = (uri, auth, disableRequestURI, passphrase) => __async
           } catch (ex) {
             Logger(`HTTP:${method}${size} to:${localURL} -> failed`, LOG_LEVEL.VERBOSE);
             if (url.toString().indexOf("_bulk_docs") !== -1) {
-              last_post_successed = false;
+              this.last_successful_post = false;
             }
             Logger(ex);
             throw ex;
           }
         }
         try {
-          const responce = yield fetch(url, opts);
+          const response = await fetch(url, opts);
           if (method == "POST" || method == "PUT") {
-            last_post_successed = responce.ok;
+            this.last_successful_post = response.ok;
           } else {
-            last_post_successed = true;
+            this.last_successful_post = true;
           }
-          Logger(`HTTP:${method}${size} to:${localURL} -> ${responce.status}`, LOG_LEVEL.DEBUG);
-          return responce;
+          Logger(`HTTP:${method}${size} to:${localURL} -> ${response.status}`, LOG_LEVEL.DEBUG);
+          return response;
         } catch (ex) {
           Logger(`HTTP:${method}${size} to:${localURL} -> failed`, LOG_LEVEL.VERBOSE);
           if (url.toString().indexOf("_bulk_docs") !== -1) {
-            last_post_successed = false;
+            this.last_successful_post = false;
           }
           Logger(ex);
           throw ex;
         }
-      });
-    }
-  };
-  const db = new Pouch(uri, conf);
-  if (passphrase && typeof passphrase === "string") {
-    enableEncryption(db, passphrase);
-  }
-  try {
-    const info = yield db.info();
-    return { db, info };
-  } catch (ex) {
-    let msg = `${ex.name}:${ex.message}`;
-    if (ex.name == "TypeError" && ex.message == "Failed to fetch") {
-      msg += "\n**Note** This error caused by many reasons. The only sure thing is you didn't touch the server.\nTo check details, open inspector.";
-    }
-    Logger(ex, LOG_LEVEL.VERBOSE);
-    return msg;
-  }
-});
-var checkRemoteVersion = (_0, _1, ..._2) => __async(void 0, [_0, _1, ..._2], function* (db, migrate, barrier = VER) {
-  try {
-    const versionInfo = yield db.get(VERSIONINFO_DOCID);
-    if (versionInfo.type != "versioninfo") {
-      return false;
-    }
-    const version = versionInfo.version;
-    if (version < barrier) {
-      const versionUpResult = yield migrate(version, barrier);
-      if (versionUpResult) {
-        yield bumpRemoteVersion(db);
-        return true;
-      }
-    }
-    if (version == barrier)
-      return true;
-    return false;
-  } catch (ex) {
-    if (ex.status && ex.status == 404) {
-      if (yield bumpRemoteVersion(db)) {
-        return true;
-      }
-      return false;
-    }
-    throw ex;
-  }
-});
-var bumpRemoteVersion = (_0, ..._1) => __async(void 0, [_0, ..._1], function* (db, barrier = VER) {
-  const vi = {
-    _id: VERSIONINFO_DOCID,
-    version: barrier,
-    type: "versioninfo"
-  };
-  const versionInfo = yield resolveWithIgnoreKnownError(db.get(VERSIONINFO_DOCID), vi);
-  if (versionInfo.type != "versioninfo") {
-    return false;
-  }
-  vi._rev = versionInfo._rev;
-  yield db.put(vi);
-  return true;
-});
-var checkSyncInfo = (db) => __async(void 0, null, function* () {
-  try {
-    const syncinfo = yield db.get(SYNCINFO_ID);
-    console.log(syncinfo);
-    return true;
-  } catch (ex) {
-    if (ex.status && ex.status == 404) {
-      const randomStrSrc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const temp = [...Array(30)].map((e3) => Math.floor(Math.random() * randomStrSrc.length)).map((e3) => randomStrSrc[e3]).join("");
-      const newSyncInfo = {
-        _id: SYNCINFO_ID,
-        type: "syncinfo",
-        data: temp
-      };
-      if (yield db.put(newSyncInfo)) {
-        return true;
-      }
-      return false;
-    } else {
-      console.dir(ex);
-      return false;
-    }
-  }
-});
-function putDesignDocuments(db) {
-  return __async(this, null, function* () {
-    const design = {
-      "_id": "_design/replicate",
-      "_rev": void 0,
-      "ver": 2,
-      "filters": {
-        "default": function(doc, req) {
-          return !("remote" in doc && doc.remote);
-        }.toString(),
-        "push": function(doc, req) {
-          return true;
-        }.toString(),
-        "pull": function(doc, req) {
-          return !(doc.type && doc.type == "leaf");
-        }.toString()
       }
     };
+    const db = new Pouch(uri, conf);
+    if (passphrase && typeof passphrase === "string") {
+      enableEncryption(db, passphrase);
+    }
     try {
-      const w = yield db.get(design._id);
-      if (w.ver < design.ver) {
-        design._rev = w._rev;
-        yield db.put(design);
-        return true;
-      }
+      const info = await db.info();
+      return { db, info };
     } catch (ex) {
-      if (ex.status && ex.status == 404) {
-        delete design._rev;
-        yield db.put(design);
-        return true;
-      } else {
-        Logger("Could not make design documents", LOG_LEVEL.INFO);
+      let msg = `${ex.name}:${ex.message}`;
+      if (ex.name == "TypeError" && ex.message == "Failed to fetch") {
+        msg += "\n**Note** This error caused by many reasons. The only sure thing is you didn't touch the server.\nTo check details, open inspector.";
       }
+      Logger(ex, LOG_LEVEL.VERBOSE);
+      return msg;
     }
-    return false;
-  });
-}
-
-// node_modules/idb/build/wrap-idb-value.js
-var instanceOfAny = (object, constructors) => constructors.some((c) => object instanceof c);
-var idbProxyableTypes;
-var cursorAdvanceMethods;
-function getIdbProxyableTypes() {
-  return idbProxyableTypes || (idbProxyableTypes = [
-    IDBDatabase,
-    IDBObjectStore,
-    IDBIndex,
-    IDBCursor,
-    IDBTransaction
-  ]);
-}
-function getCursorAdvanceMethods() {
-  return cursorAdvanceMethods || (cursorAdvanceMethods = [
-    IDBCursor.prototype.advance,
-    IDBCursor.prototype.continue,
-    IDBCursor.prototype.continuePrimaryKey
-  ]);
-}
-var cursorRequestMap = new WeakMap();
-var transactionDoneMap = new WeakMap();
-var transactionStoreNamesMap = new WeakMap();
-var transformCache = new WeakMap();
-var reverseTransformCache = new WeakMap();
-function promisifyRequest(request) {
-  const promise = new Promise((resolve, reject) => {
-    const unlisten = () => {
-      request.removeEventListener("success", success);
-      request.removeEventListener("error", error);
-    };
-    const success = () => {
-      resolve(wrap(request.result));
-      unlisten();
-    };
-    const error = () => {
-      reject(request.error);
-      unlisten();
-    };
-    request.addEventListener("success", success);
-    request.addEventListener("error", error);
-  });
-  promise.then((value) => {
-    if (value instanceof IDBCursor) {
-      cursorRequestMap.set(value, request);
-    }
-  }).catch(() => {
-  });
-  reverseTransformCache.set(promise, request);
-  return promise;
-}
-function cacheDonePromiseForTransaction(tx) {
-  if (transactionDoneMap.has(tx))
-    return;
-  const done = new Promise((resolve, reject) => {
-    const unlisten = () => {
-      tx.removeEventListener("complete", complete);
-      tx.removeEventListener("error", error);
-      tx.removeEventListener("abort", error);
-    };
-    const complete = () => {
-      resolve();
-      unlisten();
-    };
-    const error = () => {
-      reject(tx.error || new DOMException("AbortError", "AbortError"));
-      unlisten();
-    };
-    tx.addEventListener("complete", complete);
-    tx.addEventListener("error", error);
-    tx.addEventListener("abort", error);
-  });
-  transactionDoneMap.set(tx, done);
-}
-var idbProxyTraps = {
-  get(target, prop, receiver) {
-    if (target instanceof IDBTransaction) {
-      if (prop === "done")
-        return transactionDoneMap.get(target);
-      if (prop === "objectStoreNames") {
-        return target.objectStoreNames || transactionStoreNamesMap.get(target);
-      }
-      if (prop === "store") {
-        return receiver.objectStoreNames[1] ? void 0 : receiver.objectStore(receiver.objectStoreNames[0]);
-      }
-    }
-    return wrap(target[prop]);
-  },
-  set(target, prop, value) {
-    target[prop] = value;
-    return true;
-  },
-  has(target, prop) {
-    if (target instanceof IDBTransaction && (prop === "done" || prop === "store")) {
-      return true;
-    }
-    return prop in target;
-  }
-};
-function replaceTraps(callback) {
-  idbProxyTraps = callback(idbProxyTraps);
-}
-function wrapFunction(func) {
-  if (func === IDBDatabase.prototype.transaction && !("objectStoreNames" in IDBTransaction.prototype)) {
-    return function(storeNames, ...args) {
-      const tx = func.call(unwrap(this), storeNames, ...args);
-      transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
-      return wrap(tx);
-    };
-  }
-  if (getCursorAdvanceMethods().includes(func)) {
-    return function(...args) {
-      func.apply(unwrap(this), args);
-      return wrap(cursorRequestMap.get(this));
-    };
-  }
-  return function(...args) {
-    return wrap(func.apply(unwrap(this), args));
-  };
-}
-function transformCachableValue(value) {
-  if (typeof value === "function")
-    return wrapFunction(value);
-  if (value instanceof IDBTransaction)
-    cacheDonePromiseForTransaction(value);
-  if (instanceOfAny(value, getIdbProxyableTypes()))
-    return new Proxy(value, idbProxyTraps);
-  return value;
-}
-function wrap(value) {
-  if (value instanceof IDBRequest)
-    return promisifyRequest(value);
-  if (transformCache.has(value))
-    return transformCache.get(value);
-  const newValue = transformCachableValue(value);
-  if (newValue !== value) {
-    transformCache.set(value, newValue);
-    reverseTransformCache.set(newValue, value);
-  }
-  return newValue;
-}
-var unwrap = (value) => reverseTransformCache.get(value);
-
-// node_modules/idb/build/index.js
-function openDB(name, version, { blocked, upgrade, blocking, terminated } = {}) {
-  const request = indexedDB.open(name, version);
-  const openPromise = wrap(request);
-  if (upgrade) {
-    request.addEventListener("upgradeneeded", (event) => {
-      upgrade(wrap(request.result), event.oldVersion, event.newVersion, wrap(request.transaction));
-    });
-  }
-  if (blocked)
-    request.addEventListener("blocked", () => blocked());
-  openPromise.then((db) => {
-    if (terminated)
-      db.addEventListener("close", () => terminated());
-    if (blocking)
-      db.addEventListener("versionchange", () => blocking());
-  }).catch(() => {
-  });
-  return openPromise;
-}
-function deleteDB(name, { blocked } = {}) {
-  const request = indexedDB.deleteDatabase(name);
-  if (blocked)
-    request.addEventListener("blocked", () => blocked());
-  return wrap(request).then(() => void 0);
-}
-var readMethods = ["get", "getKey", "getAll", "getAllKeys", "count"];
-var writeMethods = ["put", "add", "delete", "clear"];
-var cachedMethods = new Map();
-function getMethod(target, prop) {
-  if (!(target instanceof IDBDatabase && !(prop in target) && typeof prop === "string")) {
-    return;
-  }
-  if (cachedMethods.get(prop))
-    return cachedMethods.get(prop);
-  const targetFuncName = prop.replace(/FromIndex$/, "");
-  const useIndex = prop !== targetFuncName;
-  const isWrite = writeMethods.includes(targetFuncName);
-  if (!(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) || !(isWrite || readMethods.includes(targetFuncName))) {
-    return;
-  }
-  const method = function(storeName, ...args) {
-    return __async(this, null, function* () {
-      const tx = this.transaction(storeName, isWrite ? "readwrite" : "readonly");
-      let target2 = tx.store;
-      if (useIndex)
-        target2 = target2.index(args.shift());
-      return (yield Promise.all([
-        target2[targetFuncName](...args),
-        isWrite && tx.done
-      ]))[0];
-    });
-  };
-  cachedMethods.set(prop, method);
-  return method;
-}
-replaceTraps((oldTraps) => __spreadProps(__spreadValues({}, oldTraps), {
-  get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
-  has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop)
-}));
-
-// src/KeyValueDB.ts
-var databaseCache = {};
-var OpenKeyValueDatabase = (dbKey) => __async(void 0, null, function* () {
-  if (dbKey in databaseCache) {
-    databaseCache[dbKey].close();
-    delete databaseCache[dbKey];
-  }
-  const storeKey = dbKey;
-  const dbPromise = openDB(dbKey, 1, {
-    upgrade(db2) {
-      db2.createObjectStore(storeKey);
-    }
-  });
-  let db = null;
-  db = yield dbPromise;
-  databaseCache[dbKey] = db;
-  return {
-    get(key) {
-      return db.get(storeKey, key);
-    },
-    set(key, value) {
-      return db.put(storeKey, value, key);
-    },
-    del(key) {
-      return db.delete(storeKey, key);
-    },
-    clear() {
-      return db.clear(storeKey);
-    },
-    keys(query, count) {
-      return db.getAllKeys(storeKey, query, count);
-    },
-    close() {
-      delete databaseCache[dbKey];
-      return db.close();
-    },
-    destroy() {
-      return __async(this, null, function* () {
-        delete databaseCache[dbKey];
-        db.close();
-        yield deleteDB(dbKey);
-      });
-    }
-  };
-});
-
-// src/lib/src/LRUCache.ts
-var LRUCache = class {
-  constructor() {
-    this.cache = new Map([]);
-    this.revCache = new Map([]);
-    this.maxCache = 100;
-  }
-  get(key) {
-    const v = this.cache.get(key);
-    if (v) {
-      this.cache.delete(key);
-      this.revCache.delete(v);
-      this.cache.set(key, v);
-      this.revCache.set(v, key);
-    }
-    return v;
-  }
-  revGet(value) {
-    const key = this.revCache.get(value);
-    if (value) {
-      this.cache.delete(key);
-      this.revCache.delete(value);
-      this.cache.set(key, value);
-      this.revCache.set(value, key);
-    }
-    return key;
-  }
-  set(key, value) {
-    this.cache.set(key, value);
-    this.revCache.set(value, key);
-    if (this.cache.size > this.maxCache) {
-      for (const kv of this.cache) {
-        this.revCache.delete(kv[1]);
-        this.cache.delete(kv[0]);
-        if (this.cache.size <= this.maxCache)
-          break;
-      }
-    }
-  }
-};
-
-// src/LocalPouchDB.ts
-var currentVersionRange = {
-  min: 0,
-  max: 2,
-  current: 2
-};
-var LocalPouchDB = class {
-  constructor(settings, dbname, isMobile) {
-    this.nodeid = "";
-    this.isReady = false;
-    this.hashCaches = new LRUCache();
-    this.corruptedEntries = {};
-    this.remoteLocked = false;
-    this.remoteLockedAndDeviceNotAccepted = false;
-    this.changeHandler = null;
-    this.syncHandler = null;
-    this.leafArrivedCallbacks = {};
-    this.syncStatus = "NOT_CONNECTED";
-    this.docArrived = 0;
-    this.docSent = 0;
-    this.docSeq = "";
-    this.isMobile = false;
-    this.chunkVersion = -1;
-    this.maxChunkVersion = -1;
-    this.minChunkVersion = -1;
-    this.needScanning = false;
-    this.updateInfo = () => {
-      console.log("default updinfo");
-    };
-    this.originalSetting = null;
-    this.auth = {
-      username: "",
-      password: ""
-    };
-    this.dbname = dbname;
-    this.settings = settings;
-    this.cancelHandler = this.cancelHandler.bind(this);
-    this.isMobile = isMobile;
-  }
-  cancelHandler(handler) {
-    if (handler != null) {
-      handler.removeAllListeners();
-      handler.cancel();
-      handler = null;
-    }
-    return null;
-  }
-  onunload() {
-    this.kvDB.close();
-    this.leafArrivedCallbacks;
-    this.changeHandler = this.cancelHandler(this.changeHandler);
-    this.syncHandler = this.cancelHandler(this.syncHandler);
-    this.localDatabase.removeAllListeners();
-  }
-  close() {
-    Logger("Database closed (by close)");
-    this.isReady = false;
-    this.changeHandler = this.cancelHandler(this.changeHandler);
-    if (this.localDatabase != null) {
-      this.localDatabase.close();
-    }
-    this.kvDB.close();
-  }
-  isOldDatabaseExists() {
-    return __async(this, null, function* () {
-      const db = new Pouch(this.dbname + "-livesync", {
-        auto_compaction: this.settings.useHistory ? false : true,
-        revs_limit: 20,
-        deterministic_revs: true,
-        skip_setup: true
-      });
-      try {
-        const info = yield db.info();
-        Logger(info, LOG_LEVEL.VERBOSE);
-        return db;
-      } catch (ex) {
-        return false;
-      }
-    });
-  }
-  initializeDatabase() {
-    return __async(this, null, function* () {
-      yield this.prepareHashFunctions();
-      if (this.localDatabase != null)
-        this.localDatabase.close();
-      this.changeHandler = this.cancelHandler(this.changeHandler);
-      this.localDatabase = null;
-      this.localDatabase = new Pouch(this.dbname + "-livesync-v2", {
-        auto_compaction: this.settings.useHistory ? false : true,
-        revs_limit: 100,
-        deterministic_revs: true
-      });
-      this.kvDB = yield OpenKeyValueDatabase(this.dbname + "-livesync-kv");
-      Logger("Database info", LOG_LEVEL.VERBOSE);
-      Logger(yield this.localDatabase.info(), LOG_LEVEL.VERBOSE);
-      Logger("Open Database...");
-      const nextSeq = () => __async(this, null, function* () {
-        Logger("Database Info");
-        Logger(yield this.localDatabase.info(), LOG_LEVEL.VERBOSE);
-        const nodeinfo = yield resolveWithIgnoreKnownError(this.localDatabase.get(NODEINFO_DOCID), {
-          _id: NODEINFO_DOCID,
-          type: "nodeinfo",
-          nodeid: "",
-          v20220607: true
-        });
-        if (nodeinfo.nodeid == "") {
-          nodeinfo.nodeid = Math.random().toString(36).slice(-10);
-          yield this.localDatabase.put(nodeinfo);
-        }
-        this.localDatabase.on("close", () => {
-          Logger("Database closed.");
-          this.isReady = false;
-          this.localDatabase.removeAllListeners();
-        });
-        this.nodeid = nodeinfo.nodeid;
-        yield putDesignDocuments(this.localDatabase);
-        const changes = this.localDatabase.changes({
-          since: "now",
-          live: true,
-          filter: (doc) => doc.type == "leaf"
-        }).on("change", (e3) => {
-          if (e3.deleted)
-            return;
-          this.leafArrived(e3.id);
-          this.docSeq = `${e3.seq}`;
-        });
-        this.changeHandler = changes;
-        this.isReady = true;
-        Logger("Database is now ready.");
-        return true;
-      });
-      Logger("Checking old database", LOG_LEVEL.VERBOSE);
-      const old = yield this.isOldDatabaseExists();
-      if (old) {
-        const oi = yield old.info();
-        if (oi.doc_count == 0) {
-          Logger("Old database is empty, proceed to next step", LOG_LEVEL.VERBOSE);
-          return nextSeq();
-        }
-        Logger("We have to upgrade database..", LOG_LEVEL.NOTICE, "conv");
-        try {
-          const newDbStatus = yield this.localDatabase.info();
-          Logger("New database is initialized");
-          Logger(newDbStatus);
-          if (this.settings.encrypt) {
-            enableEncryption(old, this.settings.passphrase, true);
-          }
-          const rep = old.replicate.to(this.localDatabase, { batch_size: 25, batches_limit: 10 });
-          rep.on("change", (e3) => {
-            Logger(`Converting ${e3.docs_written} docs...`, LOG_LEVEL.NOTICE, "conv");
-          });
-          const w = yield rep;
-          if (w.ok) {
-            Logger("Conversion completed!", LOG_LEVEL.NOTICE, "conv");
-            old.destroy();
-            this.isReady = true;
-            return yield nextSeq();
-          } else {
-            throw new Error("Conversion failed!");
-          }
-        } catch (ex) {
-          Logger("Conversion failed!, If you are fully synchronized, please drop the old database in the Hatch pane in setting dialog. or please make an issue on Github.", LOG_LEVEL.NOTICE, "conv");
-          Logger(ex);
-          this.isReady = false;
-          return false;
-        }
-      } else {
-        return yield nextSeq();
-      }
-    });
-  }
-  prepareHashFunctions() {
-    return __async(this, null, function* () {
-      if (this.h32 != null)
-        return;
-      const { h32, h32Raw } = yield xxhash_wasm_default();
-      this.h32 = h32;
-      this.h32Raw = h32Raw;
-    });
-  }
-  leafArrived(id) {
-    if (typeof this.leafArrivedCallbacks[id] !== "undefined") {
-      for (const func of this.leafArrivedCallbacks[id]) {
-        func();
-      }
-      delete this.leafArrivedCallbacks[id];
-    }
-  }
-  waitForLeafReady(id) {
-    return new Promise((res, rej) => {
-      const timer = setTimeout(() => rej(new Error(`Chunk reading timed out:${id}`)), LEAF_WAIT_TIMEOUT);
-      if (typeof this.leafArrivedCallbacks[id] == "undefined") {
-        this.leafArrivedCallbacks[id] = [];
-      }
-      this.leafArrivedCallbacks[id].push(() => {
-        clearTimeout(timer);
-        res(true);
-      });
-    });
-  }
-  getDBLeaf(id, waitForReady) {
-    return __async(this, null, function* () {
-      const leaf = this.hashCaches.revGet(id);
-      if (leaf) {
-        return leaf;
-      }
-      try {
-        const w = yield this.localDatabase.get(id);
-        if (w.type == "leaf") {
-          this.hashCaches.set(id, w.data);
-          return w.data;
-        }
-        throw new Error(`Corrupted chunk detected: ${id}`);
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          if (waitForReady) {
-            if ((yield this.waitForLeafReady(id)) === false) {
-              throw new Error(`time out (waiting chunk)`);
-            }
-            return this.getDBLeaf(id, false);
-          } else {
-            throw new Error(`Chunk was not found: ${id}`);
-          }
-        } else {
-          Logger(`Something went wrong on retriving chunk`);
-          throw ex;
-        }
-      }
-    });
-  }
-  getDBEntryMeta(path, opt, includeDeleted = false) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(path)) {
-        return false;
-      }
-      const id = path2id(path);
-      try {
-        let obj = null;
-        if (opt) {
-          obj = yield this.localDatabase.get(id, opt);
-        } else {
-          obj = yield this.localDatabase.get(id);
-        }
-        const deleted = "deleted" in obj ? obj.deleted : void 0;
-        if (!includeDeleted && deleted)
-          return false;
-        if (obj.type && obj.type == "leaf") {
-          return false;
-        }
-        if (!obj.type || obj.type && obj.type == "notes" || obj.type == "newnote" || obj.type == "plain") {
-          const note = obj;
-          let children2 = [];
-          let type = "plain";
-          if (obj.type == "newnote" || obj.type == "plain") {
-            children2 = obj.children;
-            type = obj.type;
-          }
-          const doc = {
-            data: "",
-            _id: note._id,
-            ctime: note.ctime,
-            mtime: note.mtime,
-            size: note.size,
-            _rev: obj._rev,
-            _conflicts: obj._conflicts,
-            children: children2,
-            datatype: type,
-            deleted,
-            type
-          };
-          return doc;
-        }
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          return false;
-        }
-        throw ex;
-      }
-      return false;
-    });
-  }
-  getDBEntry(path, opt, dump = false, waitForReady = true, includeDeleted = false) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(path)) {
-        return false;
-      }
-      const id = path2id(path);
-      try {
-        let obj = null;
-        if (opt) {
-          obj = yield this.localDatabase.get(id, opt);
-        } else {
-          obj = yield this.localDatabase.get(id);
-        }
-        const deleted = "deleted" in obj ? obj.deleted : void 0;
-        if (!includeDeleted && deleted)
-          return false;
-        if (obj.type && obj.type == "leaf") {
-          return false;
-        }
-        if (!obj.type || obj.type && obj.type == "notes") {
-          const note = obj;
-          const doc = {
-            data: note.data,
-            _id: note._id,
-            ctime: note.ctime,
-            mtime: note.mtime,
-            size: note.size,
-            _rev: obj._rev,
-            _conflicts: obj._conflicts,
-            children: [],
-            datatype: "newnote",
-            deleted,
-            type: "newnote"
-          };
-          if (typeof this.corruptedEntries[doc._id] != "undefined") {
-            delete this.corruptedEntries[doc._id];
-          }
-          if (dump) {
-            Logger(`Simple doc`);
-            Logger(doc);
-          }
-          return doc;
-        }
-        if (obj.type == "newnote" || obj.type == "plain") {
-          try {
-            if (dump) {
-              Logger(`Enhanced doc`);
-              Logger(obj);
-            }
-            let children2 = [];
-            if (this.settings.readChunksOnline) {
-              const items = yield this.CollectChunks(obj.children);
-              if (items) {
-                for (const v of items) {
-                  if (v && v.type == "leaf") {
-                    children2.push(v.data);
-                  } else {
-                    if (!opt) {
-                      Logger(`Chunks of ${obj._id} are not valid.`, LOG_LEVEL.NOTICE);
-                      this.needScanning = true;
-                      this.corruptedEntries[obj._id] = obj;
-                    }
-                    return false;
-                  }
-                }
-              } else {
-                if (opt) {
-                  Logger(`Could not retrieve chunks of ${obj._id}. we have to `, LOG_LEVEL.NOTICE);
-                  this.needScanning = true;
-                }
-                return false;
-              }
-            } else {
-              try {
-                children2 = yield Promise.all(obj.children.map((e3) => this.getDBLeaf(e3, waitForReady)));
-                if (dump) {
-                  Logger(`Chunks:`);
-                  Logger(children2);
-                }
-              } catch (ex) {
-                Logger(`Something went wrong on reading chunks of ${obj._id} from database, see verbose info for detail.`, LOG_LEVEL.NOTICE);
-                Logger(ex, LOG_LEVEL.VERBOSE);
-                this.corruptedEntries[obj._id] = obj;
-                return false;
-              }
-            }
-            const data = children2.join("");
-            const doc = {
-              data,
-              _id: obj._id,
-              ctime: obj.ctime,
-              mtime: obj.mtime,
-              size: obj.size,
-              _rev: obj._rev,
-              children: obj.children,
-              datatype: obj.type,
-              _conflicts: obj._conflicts,
-              deleted,
-              type: obj.type
-            };
-            if (dump) {
-              Logger(`therefore:`);
-              Logger(doc);
-            }
-            if (typeof this.corruptedEntries[doc._id] != "undefined") {
-              delete this.corruptedEntries[doc._id];
-            }
-            return doc;
-          } catch (ex) {
-            if (ex.status && ex.status == 404) {
-              Logger(`Missing document content!, could not read ${obj._id} from database.`, LOG_LEVEL.NOTICE);
-              return false;
-            }
-            Logger(`Something went wrong on reading ${obj._id} from database:`, LOG_LEVEL.NOTICE);
-            Logger(ex);
-          }
-        }
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          return false;
-        }
-        throw ex;
-      }
-      return false;
-    });
-  }
-  deleteDBEntry(path, opt) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(path)) {
-        return false;
-      }
-      const id = path2id(path);
-      try {
-        let obj = null;
-        return yield runWithLock("file:" + id, false, () => __async(this, null, function* () {
-          if (opt) {
-            obj = yield this.localDatabase.get(id, opt);
-          } else {
-            obj = yield this.localDatabase.get(id);
-          }
-          const revDeletion = opt && ("rev" in opt ? opt.rev : "") != "";
-          if (obj.type && obj.type == "leaf") {
-            return false;
-          }
-          if (!obj.type || obj.type && obj.type == "notes") {
-            obj._deleted = true;
-            const r2 = yield this.localDatabase.put(obj);
-            Logger(`entry removed:${obj._id}-${r2.rev}`);
-            if (typeof this.corruptedEntries[obj._id] != "undefined") {
-              delete this.corruptedEntries[obj._id];
-            }
-            return true;
-          }
-          if (obj.type == "newnote" || obj.type == "plain") {
-            if (revDeletion) {
-              obj._deleted = true;
-            } else {
-              obj.deleted = true;
-              obj.mtime = Date.now();
-              if (this.settings.deleteMetadataOfDeletedFiles) {
-                obj._deleted = true;
-              }
-            }
-            const r2 = yield this.localDatabase.put(obj);
-            Logger(`entry removed:${obj._id}-${r2.rev}`);
-            if (typeof this.corruptedEntries[obj._id] != "undefined") {
-              delete this.corruptedEntries[obj._id];
-            }
-            return true;
-          } else {
-            return false;
-          }
-        }));
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          return false;
-        }
-        throw ex;
-      }
-    });
-  }
-  deleteDBEntryPrefix(prefixSrc) {
-    return __async(this, null, function* () {
-      let c = 0;
-      let readCount = 0;
-      const delDocs = [];
-      const prefix = path2id(prefixSrc);
-      do {
-        const result = yield this.localDatabase.allDocs({ include_docs: false, skip: c, limit: 100, conflicts: true });
-        readCount = result.rows.length;
-        if (readCount > 0) {
-          for (const v of result.rows) {
-            if (v.id.startsWith(prefix) || v.id.startsWith("/" + prefix)) {
-              if (this.isTargetFile(id2path(v.id)))
-                delDocs.push(v.id);
-            } else {
-              if (!v.id.startsWith("h:")) {
-              }
-            }
-          }
-        }
-        c += readCount;
-      } while (readCount != 0);
-      let deleteCount = 0;
-      let notfound = 0;
-      for (const v of delDocs) {
-        try {
-          yield runWithLock("file:" + v, false, () => __async(this, null, function* () {
-            const item = yield this.localDatabase.get(v);
-            if (item.type == "newnote" || item.type == "plain") {
-              item.deleted = true;
-              if (this.settings.deleteMetadataOfDeletedFiles) {
-                item._deleted = true;
-              }
-              item.mtime = Date.now();
-            } else {
-              item._deleted = true;
-            }
-            yield this.localDatabase.put(item);
-          }));
-          deleteCount++;
-        } catch (ex) {
-          if (ex.status && ex.status == 404) {
-            notfound++;
-          } else {
-            throw ex;
-          }
-        }
-      }
-      Logger(`deleteDBEntryPrefix:deleted ${deleteCount} items, skipped ${notfound}`);
-      return true;
-    });
-  }
-  putDBEntry(note, saveAsBigChunk) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(id2path(note._id))) {
-        return;
-      }
-      const savenNotes = [];
-      let processed = 0;
-      let made = 0;
-      let skiped = 0;
-      let pieceSize = MAX_DOC_SIZE_BIN * Math.max(this.settings.customChunkSize, 1);
-      let plainSplit = false;
-      let cacheUsed = 0;
-      const userpasswordHash = this.h32Raw(new TextEncoder().encode(this.settings.passphrase));
-      if (!saveAsBigChunk && shouldSplitAsPlainText(note._id)) {
-        pieceSize = MAX_DOC_SIZE;
-        plainSplit = true;
-      }
-      const newLeafs = [];
-      let minimumChunkSize = this.settings.minimumChunkSize;
-      if (minimumChunkSize < 10)
-        minimumChunkSize = 10;
-      let longLineThreshold = this.settings.longLineThreshold;
-      if (longLineThreshold < 100)
-        longLineThreshold = 100;
-      const pieces = splitPieces2(note.data, pieceSize, plainSplit, minimumChunkSize, longLineThreshold);
-      for (const piece of pieces()) {
-        processed++;
-        let leafid = "";
-        let hashedPiece = "";
-        let hashQ = 0;
-        let tryNextHash = false;
-        let needMake = true;
-        const cache = this.hashCaches.get(piece);
-        if (cache) {
-          hashedPiece = "";
-          leafid = cache;
-          needMake = false;
-          skiped++;
-          cacheUsed++;
-        } else {
-          if (this.settings.encrypt) {
-            hashedPiece = "+" + (this.h32Raw(new TextEncoder().encode(piece)) ^ userpasswordHash).toString(16);
-          } else {
-            hashedPiece = this.h32(piece);
-          }
-          leafid = "h:" + hashedPiece;
-          do {
-            let nleafid = leafid;
-            try {
-              nleafid = `${leafid}${hashQ}`;
-              const pieceData = yield this.localDatabase.get(nleafid);
-              if (pieceData.type == "leaf" && pieceData.data == piece) {
-                leafid = nleafid;
-                needMake = false;
-                tryNextHash = false;
-                this.hashCaches.set(piece, leafid);
-              } else if (pieceData.type == "leaf") {
-                Logger("hash:collision!!");
-                hashQ++;
-                tryNextHash = true;
-              } else {
-                leafid = nleafid;
-                tryNextHash = false;
-              }
-            } catch (ex) {
-              if (ex.status && ex.status == 404) {
-                leafid = nleafid;
-                needMake = true;
-                tryNextHash = false;
-              } else {
-                needMake = false;
-                tryNextHash = false;
-                throw ex;
-              }
-            }
-          } while (tryNextHash);
-          if (needMake) {
-            const savePiece = piece;
-            const d = {
-              _id: leafid,
-              data: savePiece,
-              type: "leaf"
-            };
-            newLeafs.push(d);
-            this.hashCaches.set(piece, leafid);
-            made++;
-          } else {
-            skiped++;
-          }
-        }
-        savenNotes.push(leafid);
-      }
-      let saved = true;
-      if (newLeafs.length > 0) {
-        try {
-          const result = yield this.localDatabase.bulkDocs(newLeafs);
-          for (const item of result) {
-            if (!item.ok) {
-              if (item.status && item.status == 409) {
-              } else {
-                Logger(`Save failed:id:${item.id} rev:${item.rev}`, LOG_LEVEL.NOTICE);
-                Logger(item);
-                saved = false;
-              }
-            }
-          }
-        } catch (ex) {
-          Logger("Chunk save failed:", LOG_LEVEL.NOTICE);
-          Logger(ex, LOG_LEVEL.NOTICE);
-          saved = false;
-        }
-      }
-      if (saved) {
-        Logger(`Content saved:${note._id} ,pieces:${processed} (new:${made}, skip:${skiped}, cache:${cacheUsed})`);
-        const newDoc = {
-          children: savenNotes,
-          _id: note._id,
-          ctime: note.ctime,
-          mtime: note.mtime,
-          size: note.size,
-          type: note.datatype
-        };
-        yield runWithLock("file:" + newDoc._id, false, () => __async(this, null, function* () {
-          try {
-            const old = yield this.localDatabase.get(newDoc._id);
-            if (!old.type || old.type == "notes" || old.type == "newnote" || old.type == "plain") {
-              newDoc._rev = old._rev;
-            }
-          } catch (ex) {
-            if (ex.status && ex.status == 404) {
-            } else {
-              throw ex;
-            }
-          }
-          const r2 = yield this.localDatabase.put(newDoc, { force: true });
-          if (typeof this.corruptedEntries[note._id] != "undefined") {
-            delete this.corruptedEntries[note._id];
-          }
-          if (this.settings.checkIntegrityOnSave) {
-            if (!this.sanCheck(yield this.localDatabase.get(r2.id))) {
-              Logger("note save failed!", LOG_LEVEL.NOTICE);
-            } else {
-              Logger(`note has been surely saved:${newDoc._id}:${r2.rev}`);
-            }
-          } else {
-            Logger(`note saved:${newDoc._id}:${r2.rev}`);
-          }
-        }));
-      } else {
-        Logger(`note could not saved:${note._id}`);
-      }
-    });
-  }
-  migrate(from, to) {
-    return __async(this, null, function* () {
-      Logger(`Database updated from ${from} to ${to}`, LOG_LEVEL.NOTICE);
-      return true;
-    });
-  }
-  replicateAllToServer(setting, showingNotice) {
-    return new Promise((res, rej) => {
-      this.openOneshotReplication(setting, showingNotice, (e3) => __async(this, null, function* () {
-      }), false, (e3) => {
-        if (e3 === true)
-          res(e3);
-        rej(e3);
-      }, "pushOnly");
-    });
-  }
-  checkReplicationConnectivity(setting, keepAlive, skipCheck, showResult) {
-    return __async(this, null, function* () {
-      if (!this.isReady) {
-        Logger("Database is not ready.");
-        return false;
-      }
-      if (setting.versionUpFlash != "") {
-        Logger("Open settings and check message, please.", LOG_LEVEL.NOTICE);
-        return false;
-      }
-      const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
-      if (this.syncHandler != null) {
-        Logger("Another replication running.");
-        return false;
-      }
-      const dbret = yield connectRemoteCouchDBWithSetting(setting, this.isMobile);
-      if (typeof dbret === "string") {
-        Logger(`could not connect to ${uri}: ${dbret}`, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
-        return false;
-      }
-      if (!skipCheck) {
-        yield putDesignDocuments(dbret.db);
-        if (!(yield checkRemoteVersion(dbret.db, this.migrate.bind(this), VER))) {
-          Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
-          return false;
-        }
-        const defMilestonePoint = {
-          _id: MILSTONE_DOCID,
-          type: "milestoneinfo",
-          created: new Date() / 1,
-          locked: false,
-          accepted_nodes: [this.nodeid],
-          node_chunk_info: { [this.nodeid]: currentVersionRange }
-        };
-        const remoteMilestone = __spreadValues(__spreadValues({}, defMilestonePoint), yield resolveWithIgnoreKnownError(dbret.db.get(MILSTONE_DOCID), defMilestonePoint));
-        remoteMilestone.node_chunk_info = __spreadValues(__spreadValues({}, defMilestonePoint.node_chunk_info), remoteMilestone.node_chunk_info);
-        this.remoteLocked = remoteMilestone.locked;
-        this.remoteLockedAndDeviceNotAccepted = remoteMilestone.locked && remoteMilestone.accepted_nodes.indexOf(this.nodeid) == -1;
-        const writeMilestone = remoteMilestone.node_chunk_info[this.nodeid].min != currentVersionRange.min || remoteMilestone.node_chunk_info[this.nodeid].max != currentVersionRange.max || typeof remoteMilestone._rev == "undefined";
-        if (writeMilestone) {
-          remoteMilestone.node_chunk_info[this.nodeid].min = currentVersionRange.min;
-          remoteMilestone.node_chunk_info[this.nodeid].max = currentVersionRange.max;
-          yield dbret.db.put(remoteMilestone);
-        }
-        let globalMin = currentVersionRange.min;
-        let globalMax = currentVersionRange.max;
-        for (const nodeid of remoteMilestone.accepted_nodes) {
-          if (nodeid == this.nodeid)
-            continue;
-          if (nodeid in remoteMilestone.node_chunk_info) {
-            const nodeinfo = remoteMilestone.node_chunk_info[nodeid];
-            globalMin = Math.max(nodeinfo.min, globalMin);
-            globalMax = Math.min(nodeinfo.max, globalMax);
-          } else {
-            globalMin = 0;
-            globalMax = 0;
-          }
-        }
-        this.maxChunkVersion = globalMax;
-        this.minChunkVersion = globalMin;
-        if (this.chunkVersion >= 0 && (globalMin > this.chunkVersion || globalMax < this.chunkVersion)) {
-          if (!setting.ignoreVersionCheck) {
-            Logger("The remote database has no compatibility with the running version. Please upgrade the plugin.", LOG_LEVEL.NOTICE);
-            return false;
-          }
-        }
-        if (remoteMilestone.locked && remoteMilestone.accepted_nodes.indexOf(this.nodeid) == -1) {
-          Logger("The remote database has been rebuilt or corrupted since we have synchronized last time. Fetch rebuilt DB or explicit unlocking is required. See the settings dialog.", LOG_LEVEL.NOTICE);
-          return false;
-        }
-      }
-      const syncOptionBase = {
-        batches_limit: setting.batches_limit,
-        batch_size: setting.batch_size
-      };
-      if (setting.readChunksOnline) {
-        syncOptionBase.push = { filter: "replicate/push" };
-        syncOptionBase.pull = { filter: "replicate/pull" };
-      }
-      const syncOption = keepAlive ? __spreadValues({ live: true, retry: true, heartbeat: 3e4 }, syncOptionBase) : __spreadValues({}, syncOptionBase);
-      return { db: dbret.db, info: dbret.info, syncOptionBase, syncOption };
-    });
-  }
-  openReplication(setting, keepAlive, showResult, callback) {
-    if (keepAlive) {
-      this.openContinuousReplication(setting, showResult, callback, false);
-    } else {
-      this.openOneshotReplication(setting, showResult, callback, false, null, "sync");
-    }
-  }
-  replicationActivated(showResult) {
-    this.syncStatus = "CONNECTED";
-    this.updateInfo();
-    Logger("Replication activated", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
-  }
-  replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback) {
-    return __async(this, null, function* () {
-      try {
-        if (e3.direction == "pull") {
-          yield callback(e3.change.docs);
-          this.docArrived += e3.change.docs.length;
-        } else {
-          this.docSent += e3.change.docs.length;
-        }
-        if (showResult) {
-          Logger(`\u2191${this.docSent - docSentOnStart} \u2193${this.docArrived - docArrivedOnStart}`, LOG_LEVEL.NOTICE, "sync");
-        }
-        this.updateInfo();
-      } catch (ex) {
-        Logger("Replication callback error", LOG_LEVEL.NOTICE, "sync");
-        Logger(ex, LOG_LEVEL.NOTICE);
-      }
-    });
-  }
-  replicationCompleted(showResult) {
-    this.syncStatus = "COMPLETED";
-    this.updateInfo();
-    Logger("Replication completed", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, showResult ? "sync" : "");
-    this.syncHandler = this.cancelHandler(this.syncHandler);
-  }
-  replicationDeniend(e3) {
-    this.syncStatus = "ERRORED";
-    this.updateInfo();
-    this.syncHandler = this.cancelHandler(this.syncHandler);
-    Logger("Replication denied", LOG_LEVEL.NOTICE, "sync");
-    Logger(e3);
-  }
-  replicationErrored(e3) {
-    this.syncStatus = "ERRORED";
-    this.syncHandler = this.cancelHandler(this.syncHandler);
-    this.updateInfo();
-    Logger("Replication error", LOG_LEVEL.NOTICE, "sync");
-    Logger(e3);
-  }
-  replicationPaused() {
-    this.syncStatus = "PAUSED";
-    this.updateInfo();
-    Logger("replication paused", LOG_LEVEL.VERBOSE, "sync");
-  }
-  openOneshotReplication(setting, showResult, callback, retrying, callbackDone, syncmode) {
-    return __async(this, null, function* () {
-      if (this.syncHandler != null) {
-        Logger("Replication is already in progress.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
-        return;
-      }
-      Logger(`Oneshot Sync begin... (${syncmode})`);
-      let thisCallback = callbackDone;
-      const ret = yield this.checkReplicationConnectivity(setting, true, retrying, showResult);
-      if (ret === false) {
-        Logger("Could not connect to server.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
-        return;
-      }
-      if (showResult) {
-        Logger("Looking for the point last synchronized point.", LOG_LEVEL.NOTICE, "sync");
-      }
-      const { db, syncOptionBase } = ret;
-      this.syncStatus = "STARTED";
-      this.updateInfo();
-      const docArrivedOnStart = this.docArrived;
-      const docSentOnStart = this.docSent;
-      if (!retrying) {
-        this.originalSetting = setting;
-      }
-      this.syncHandler = this.cancelHandler(this.syncHandler);
-      if (syncmode == "sync") {
-        this.syncHandler = this.localDatabase.sync(db, __spreadValues({ checkpoint: "target" }, syncOptionBase));
-        this.syncHandler.on("change", (e3) => __async(this, null, function* () {
-          yield this.replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback);
-          if (retrying) {
-            if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
-              Logger("Back into original settings once.");
-              this.syncHandler = this.cancelHandler(this.syncHandler);
-              this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncmode);
-            }
-          }
-        })).on("complete", (e3) => {
-          this.replicationCompleted(showResult);
-          if (thisCallback != null) {
-            thisCallback(true);
-          }
-        });
-      } else if (syncmode == "pullOnly") {
-        this.syncHandler = this.localDatabase.replicate.from(db, __spreadValues(__spreadValues({ checkpoint: "target" }, syncOptionBase), this.settings.readChunksOnline ? { filter: "replicate/pull" } : {}));
-        this.syncHandler.on("change", (e3) => __async(this, null, function* () {
-          yield this.replicationChangeDetected({ direction: "pull", change: e3 }, showResult, docSentOnStart, docArrivedOnStart, callback);
-          if (retrying) {
-            if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
-              Logger("Back into original settings once.");
-              this.syncHandler = this.cancelHandler(this.syncHandler);
-              this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncmode);
-            }
-          }
-        })).on("complete", (e3) => {
-          this.replicationCompleted(showResult);
-          if (thisCallback != null) {
-            thisCallback(true);
-          }
-        });
-      } else if (syncmode == "pushOnly") {
-        this.syncHandler = this.localDatabase.replicate.to(db, __spreadValues(__spreadValues({ checkpoint: "target" }, syncOptionBase), this.settings.readChunksOnline ? { filter: "replicate/push" } : {}));
-        this.syncHandler.on("change", (e3) => __async(this, null, function* () {
-          yield this.replicationChangeDetected({ direction: "push", change: e3 }, showResult, docSentOnStart, docArrivedOnStart, callback);
-          if (retrying) {
-            if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
-              Logger("Back into original settings once.");
-              this.syncHandler = this.cancelHandler(this.syncHandler);
-              this.openOneshotReplication(this.originalSetting, showResult, callback, false, callbackDone, syncmode);
-            }
-          }
-        }));
-        this.syncHandler.on("complete", (e3) => {
-          this.replicationCompleted(showResult);
-          if (thisCallback != null) {
-            thisCallback(true);
-          }
-        });
-      }
-      this.syncHandler.on("active", () => this.replicationActivated(showResult)).on("denied", (e3) => {
-        this.replicationDeniend(e3);
-        if (thisCallback != null) {
-          thisCallback(e3);
-        }
-      }).on("error", (e3) => {
-        this.replicationErrored(e3);
-        Logger("Replication stopped.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "sync");
-        if (getLastPostFailedBySize()) {
-          const xsetting = JSON.parse(JSON.stringify(setting));
-          xsetting.batch_size = Math.ceil(xsetting.batch_size / 2) + 2;
-          xsetting.batches_limit = Math.ceil(xsetting.batches_limit / 2) + 2;
-          if (xsetting.batch_size <= 5 && xsetting.batches_limit <= 5) {
-            Logger("We can't replicate more lower value.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
-          } else {
-            Logger(`Retry with lower batch size:${xsetting.batch_size}/${xsetting.batches_limit}`, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
-            thisCallback = null;
-            this.openOneshotReplication(xsetting, showResult, callback, true, callbackDone, syncmode);
-          }
-        } else {
-          Logger("Replication error", LOG_LEVEL.NOTICE, "sync");
-          Logger(e3);
-        }
-        if (thisCallback != null) {
-          thisCallback(e3);
-        }
-      }).on("paused", (e3) => this.replicationPaused());
-      yield this.syncHandler;
-    });
-  }
-  openContinuousReplication(setting, showResult, callback, retrying) {
-    if (this.syncHandler != null) {
-      Logger("Replication is already in progress.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
-      return;
-    }
-    Logger("Before LiveSync, start OneShot once...");
-    this.openOneshotReplication(setting, showResult, callback, false, () => __async(this, null, function* () {
-      Logger("LiveSync begin...");
-      const ret = yield this.checkReplicationConnectivity(setting, true, true, showResult);
-      if (ret === false) {
-        Logger("Could not connect to server.", showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO);
-        return;
-      }
-      if (showResult) {
-        Logger("Looking for the point last synchronized point.", LOG_LEVEL.NOTICE, "sync");
-      }
-      const { db, syncOption } = ret;
-      this.syncStatus = "STARTED";
-      this.updateInfo();
-      const docArrivedOnStart = this.docArrived;
-      const docSentOnStart = this.docSent;
-      if (!retrying) {
-        this.originalSetting = setting;
-      }
-      this.syncHandler = this.cancelHandler(this.syncHandler);
-      this.syncHandler = this.localDatabase.sync(db, __spreadProps(__spreadValues({}, syncOption), {
-        pull: {
-          checkpoint: "target"
-        },
-        push: {
-          checkpoint: "source"
-        }
-      }));
-      this.syncHandler.on("active", () => this.replicationActivated(showResult)).on("change", (e3) => __async(this, null, function* () {
-        yield this.replicationChangeDetected(e3, showResult, docSentOnStart, docArrivedOnStart, callback);
-        if (retrying) {
-          if (this.docSent - docSentOnStart + (this.docArrived - docArrivedOnStart) > this.originalSetting.batch_size * 2) {
-            Logger("Back into original settings once.");
-            this.syncHandler = this.cancelHandler(this.syncHandler);
-            this.openContinuousReplication(this.originalSetting, showResult, callback, false);
-          }
-        }
-      })).on("complete", (e3) => this.replicationCompleted(showResult)).on("denied", (e3) => this.replicationDeniend(e3)).on("error", (e3) => {
-        this.replicationErrored(e3);
-        Logger("Replication stopped.", LOG_LEVEL.NOTICE, "sync");
-      }).on("paused", (e3) => this.replicationPaused());
-    }), "pullOnly");
-  }
-  closeReplication() {
-    this.syncStatus = "CLOSED";
-    this.updateInfo();
-    this.syncHandler = this.cancelHandler(this.syncHandler);
-    Logger("Replication closed");
-  }
-  resetLocalOldDatabase() {
-    return __async(this, null, function* () {
-      const oldDB = yield this.isOldDatabaseExists();
-      if (oldDB) {
-        oldDB.destroy();
-        Logger("Deleted! Please re-launch obsidian.", LOG_LEVEL.NOTICE);
-      } else {
-        Logger("Old database is not exist.", LOG_LEVEL.NOTICE);
-      }
-    });
-  }
-  resetDatabase() {
-    return __async(this, null, function* () {
-      this.changeHandler = this.cancelHandler(this.changeHandler);
-      this.closeReplication();
-      Logger("Database closed for reset Database.");
-      this.isReady = false;
-      yield this.localDatabase.destroy();
-      yield this.kvDB.destroy();
-      this.localDatabase = null;
-      yield this.initializeDatabase();
-      Logger("Local Database Reset", LOG_LEVEL.NOTICE);
-    });
-  }
-  tryResetRemoteDatabase(setting) {
-    return __async(this, null, function* () {
-      this.closeReplication();
-      const con = yield connectRemoteCouchDBWithSetting(setting, this.isMobile);
-      if (typeof con == "string")
-        return;
-      try {
-        yield con.db.destroy();
-        Logger("Remote Database Destroyed", LOG_LEVEL.NOTICE);
-        yield this.tryCreateRemoteDatabase(setting);
-      } catch (ex) {
-        Logger("Something happened on Remote Database Destory:", LOG_LEVEL.NOTICE);
-        Logger(ex, LOG_LEVEL.NOTICE);
-      }
-    });
-  }
-  tryCreateRemoteDatabase(setting) {
-    return __async(this, null, function* () {
-      this.closeReplication();
-      const con2 = yield connectRemoteCouchDBWithSetting(setting, this.isMobile);
-      if (typeof con2 === "string")
-        return;
-      Logger("Remote Database Created or Connected", LOG_LEVEL.NOTICE);
-    });
-  }
-  markRemoteLocked(setting, locked) {
-    return __async(this, null, function* () {
-      const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
-      const dbret = yield connectRemoteCouchDBWithSetting(setting, this.isMobile);
-      if (typeof dbret === "string") {
-        Logger(`could not connect to ${uri}:${dbret}`, LOG_LEVEL.NOTICE);
-        return;
-      }
-      if (!(yield checkRemoteVersion(dbret.db, this.migrate.bind(this), VER))) {
-        Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
-        return;
-      }
-      const defInitPoint = {
-        _id: MILSTONE_DOCID,
-        type: "milestoneinfo",
-        created: new Date() / 1,
-        locked,
-        accepted_nodes: [this.nodeid],
-        node_chunk_info: { [this.nodeid]: currentVersionRange }
-      };
-      const remoteMilestone = __spreadValues(__spreadValues({}, defInitPoint), yield resolveWithIgnoreKnownError(dbret.db.get(MILSTONE_DOCID), defInitPoint));
-      remoteMilestone.node_chunk_info = __spreadValues(__spreadValues({}, defInitPoint.node_chunk_info), remoteMilestone.node_chunk_info);
-      remoteMilestone.accepted_nodes = [this.nodeid];
-      remoteMilestone.locked = locked;
-      if (locked) {
-        Logger("Lock remote database to prevent data corruption", LOG_LEVEL.NOTICE);
-      } else {
-        Logger("Unlock remote database to prevent data corruption", LOG_LEVEL.NOTICE);
-      }
-      yield dbret.db.put(remoteMilestone);
-    });
-  }
-  markRemoteResolved(setting) {
-    return __async(this, null, function* () {
-      const uri = setting.couchDB_URI + (setting.couchDB_DBNAME == "" ? "" : "/" + setting.couchDB_DBNAME);
-      const dbret = yield connectRemoteCouchDBWithSetting(setting, this.isMobile);
-      if (typeof dbret === "string") {
-        Logger(`could not connect to ${uri}:${dbret}`, LOG_LEVEL.NOTICE);
-        return;
-      }
-      if (!(yield checkRemoteVersion(dbret.db, this.migrate.bind(this), VER))) {
-        Logger("Remote database is newer or corrupted, make sure to latest version of self-hosted-livesync installed", LOG_LEVEL.NOTICE);
-        return;
-      }
-      const defInitPoint = {
-        _id: MILSTONE_DOCID,
-        type: "milestoneinfo",
-        created: new Date() / 1,
-        locked: false,
-        accepted_nodes: [this.nodeid],
-        node_chunk_info: { [this.nodeid]: currentVersionRange }
-      };
-      const remoteMilestone = __spreadValues(__spreadValues({}, defInitPoint), yield resolveWithIgnoreKnownError(dbret.db.get(MILSTONE_DOCID), defInitPoint));
-      remoteMilestone.node_chunk_info = __spreadValues(__spreadValues({}, defInitPoint.node_chunk_info), remoteMilestone.node_chunk_info);
-      remoteMilestone.accepted_nodes = Array.from(new Set([...remoteMilestone.accepted_nodes, this.nodeid]));
-      Logger("Mark this device as 'resolved'.", LOG_LEVEL.NOTICE);
-      yield dbret.db.put(remoteMilestone);
-    });
-  }
-  sanCheck(entry) {
-    return __async(this, null, function* () {
-      if (entry.type == "plain" || entry.type == "newnote") {
-        const children2 = entry.children;
-        Logger(`sancheck:checking:${entry._id} : ${children2.length}`, LOG_LEVEL.VERBOSE);
-        try {
-          const dc = yield this.localDatabase.allDocs({ keys: [...children2] });
-          if (dc.rows.some((e3) => "error" in e3)) {
-            this.corruptedEntries[entry._id] = entry;
-            Logger(`sancheck:corrupted:${entry._id} : ${children2.length}`, LOG_LEVEL.VERBOSE);
-            return false;
-          }
-          return true;
-        } catch (ex) {
-          Logger(ex);
-        }
-      }
-      return false;
-    });
-  }
-  garbageCheck() {
-    Logger(`Checking garbages`, LOG_LEVEL.NOTICE, "gc");
-    let docNum = 0;
-    const chunks = new Map();
-    this.localDatabase.changes({
-      since: 0,
-      include_docs: true,
-      return_docs: false,
-      style: "all_docs"
-    }).on("change", (e3) => {
-      if (e3.id.startsWith("h:")) {
-        const chunk = e3.id;
-        let c = chunks.get(chunk);
-        if (c == null)
-          c = new Set();
-        chunks.set(chunk, c);
-      } else if ("children" in e3.doc) {
-        docNum++;
-        if (docNum % 100 == 0)
-          Logger(`Processing ${docNum}`, LOG_LEVEL.NOTICE, "gc");
-        if (!e3.deleted) {
-          for (const chunk of e3.doc.children) {
-            let c = chunks.get(chunk);
-            if (c == null)
-              c = new Set();
-            c.add(e3.id);
-            chunks.set(chunk, c);
-          }
-        } else {
-          for (const chunk of e3.doc.children) {
-            let c = chunks.get(chunk);
-            if (c == null)
-              c = new Set();
-            c.delete(e3.id);
-            chunks.set(chunk, c);
-          }
-        }
-      }
-    }).on("complete", (v) => {
-      let alive = 0;
-      let nonref = 0;
-      for (const chunk of chunks) {
-        const items = chunk[1];
-        if (items.size == 0) {
-          nonref++;
-        } else {
-          alive++;
-        }
-      }
-      Logger(`Garbage checking completed, documents:${docNum}. Used chunks:${alive}, Retained chunks:${nonref}. Retained chunks will be reused, but you can rebuild database if you feel there are too much.`, LOG_LEVEL.NOTICE, "gc");
-    });
-    return;
-  }
-  isVersionUpgradable(ver) {
-    if (this.maxChunkVersion < 0)
-      return false;
-    if (this.minChunkVersion < 0)
-      return false;
-    if (this.maxChunkVersion > 0 && this.maxChunkVersion < ver)
-      return false;
-    if (this.minChunkVersion > 0 && this.minChunkVersion > ver)
-      return false;
-    return true;
-  }
-  isTargetFile(file) {
-    if (file.includes(":"))
-      return true;
-    if (this.settings.syncOnlyRegEx) {
-      const syncOnly = new RegExp(this.settings.syncOnlyRegEx);
-      if (!file.match(syncOnly))
-        return false;
-    }
-    if (this.settings.syncIgnoreRegEx) {
-      const syncIgnore = new RegExp(this.settings.syncIgnoreRegEx);
-      if (file.match(syncIgnore))
-        return false;
-    }
-    return true;
-  }
-  CollectChunks(ids, showResult = false) {
-    return __async(this, null, function* () {
-      const localChunks = yield this.localDatabase.allDocs({ keys: ids, include_docs: true });
-      const missingChunks = localChunks.rows.filter((e3) => "error" in e3).map((e3) => e3.key);
-      if (missingChunks.length == 0) {
-        return localChunks.rows.map((e3) => e3.doc);
-      }
-      const ret = yield connectRemoteCouchDBWithSetting(this.settings, this.isMobile);
-      if (typeof ret === "string") {
-        Logger(`Could not connect to server.${ret} `, showResult ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO, "fetch");
-        return false;
-      }
-      const remoteChunks = yield ret.db.allDocs({ keys: missingChunks, include_docs: true });
-      if (remoteChunks.rows.some((e3) => "error" in e3)) {
-        return false;
-      }
-      const chunkMap = remoteChunks.rows.reduce((p, c) => __spreadProps(__spreadValues({}, p), { [c.key]: c.doc }), {});
-      return localChunks.rows.map((e3) => "error" in e3 ? chunkMap[e3.key] : e3.doc);
-    });
   }
 };
 
@@ -10762,25 +10305,25 @@ var ConflictResolveModal = class extends import_obsidian4.Modal {
 <span class='deleted'>A:${date1}</span><br /><span class='added'>B:${date2}</span><br> 
         `;
     contentEl.createEl("button", { text: "Keep A" }, (e3) => {
-      e3.addEventListener("click", () => __async(this, null, function* () {
-        yield this.callback(this.result.right.rev);
+      e3.addEventListener("click", async () => {
+        await this.callback(this.result.right.rev);
         this.callback = null;
         this.close();
-      }));
+      });
     });
     contentEl.createEl("button", { text: "Keep B" }, (e3) => {
-      e3.addEventListener("click", () => __async(this, null, function* () {
-        yield this.callback(this.result.left.rev);
+      e3.addEventListener("click", async () => {
+        await this.callback(this.result.left.rev);
         this.callback = null;
         this.close();
-      }));
+      });
     });
     contentEl.createEl("button", { text: "Concat both" }, (e3) => {
-      e3.addEventListener("click", () => __async(this, null, function* () {
-        yield this.callback("");
+      e3.addEventListener("click", async () => {
+        await this.callback("");
         this.callback = null;
         this.close();
-      }));
+      });
     });
     contentEl.createEl("button", { text: "Not now" }, (e3) => {
       e3.addEventListener("click", () => {
@@ -10804,16 +10347,14 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
     super(app2, plugin);
     this.plugin = plugin;
   }
-  testConnection() {
-    return __async(this, null, function* () {
-      const db = yield connectRemoteCouchDBWithSetting(this.plugin.settings, this.plugin.localDatabase.isMobile);
-      if (typeof db === "string") {
-        this.plugin.addLog(`could not connect to ${this.plugin.settings.couchDB_URI} : ${this.plugin.settings.couchDB_DBNAME} 
+  async testConnection() {
+    const db = await this.plugin.localDatabase.connectRemoteCouchDBWithSetting(this.plugin.settings, this.plugin.localDatabase.isMobile);
+    if (typeof db === "string") {
+      this.plugin.addLog(`could not connect to ${this.plugin.settings.couchDB_URI} : ${this.plugin.settings.couchDB_DBNAME} 
 (${db})`, LOG_LEVEL.NOTICE);
-        return;
-      }
-      this.plugin.addLog(`Connected to ${db.info.db_name}`, LOG_LEVEL.NOTICE);
-    });
+      return;
+    }
+    this.plugin.addLog(`Connected to ${db.info.db_name}`, LOG_LEVEL.NOTICE);
   }
   display() {
     const { containerEl } = this;
@@ -10839,7 +10380,7 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
 <label class='sls-setting-label'><input type='radio' name='disp' value='60' class='sls-setting-tab' ><div class='sls-setting-menu-btn'>\u{1F50C}</div></label>
 <label class='sls-setting-label'><input type='radio' name='disp' value='70' class='sls-setting-tab' ><div class='sls-setting-menu-btn'>\u{1F691}</div></label>
         `;
-    const menutabs = w.querySelectorAll(".sls-setting-label");
+    const menuTabs = w.querySelectorAll(".sls-setting-label");
     const changeDisplay = (screen) => {
       for (const k in screenElements) {
         if (k == screen) {
@@ -10849,12 +10390,12 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         }
       }
     };
-    menutabs.forEach((element2) => {
+    menuTabs.forEach((element2) => {
       const e3 = element2.querySelector(".sls-setting-tab");
       if (!e3)
         return;
       e3.addEventListener("change", (event) => {
-        menutabs.forEach((element3) => element3.removeClass("selected"));
+        menuTabs.forEach((element3) => element3.removeClass("selected"));
         changeDisplay(event.currentTarget.value);
         element2.addClass("selected");
       });
@@ -10862,19 +10403,19 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
     const containerInformationEl = containerEl.createDiv();
     const h3El = containerInformationEl.createEl("h3", { text: "Updates" });
     const informationDivEl = containerInformationEl.createEl("div", { text: "" });
-    const manifestVersion = "0.14.2";
-    const updateInformation = "### 0.14.1\n- The target selecting filter was implemented.\n  Now we can set what files are synchronised by regular expression.\n- We can configure the size of chunks.\n  We can use larger chunks to improve performance.\n  (This feature can not be used with IBM Cloudant)\n-  Read chunks online.\n  Now we can synchronise only metadata and retrieve chunks on demand. It reduces local database size and time for replication.\n- Added this note.\n- Use local chunks in preference to remote them if present,\n\n#### Recommended configuration for Self-hosted CouchDB\n- Set chunk size to around 100 to 250 (10MB - 25MB per chunk)\n- Be sure to `Read chunks online` checked.\n\n\n### 0.13.0\n\n- The metadata of the deleted files will be kept on the database by default. If you want to delete this as the previous version, please turn on `Delete metadata of deleted files.`. And, if you have upgraded from the older version, please ensure every device has been upgraded.\n- Please turn on `Delete metadata of deleted files.` if you are using livesync-classroom or filesystem-livesync.\n- We can see the history of deleted files.\n- `Pick file to show` was renamed to `Pick a file to show.\n- Files in the `Pick a file to show` are now ordered by their modified date descent.\n- Update information became to be shown on the major upgrade.\n\n#### Minors\n- 0.13.1 Fixed on conflict resolution.\n- 0.13.2 Fixed file deletion failures.\n- 0.13.4\n  - Now, we can synchronise hidden files that conflicted on each devices.\n  - We can search for conflicting docs.\n  - Pending processes can now be run at any time.\n  - Performance improved on synchronising large numbers of files at once.\n";
+    const manifestVersion = "0.14.8";
+    const updateInformation = "### 0.14.1\n- The target selecting filter was implemented.\n  Now we can set what files are synchronised by regular expression.\n- We can configure the size of chunks.\n  We can use larger chunks to improve performance.\n  (This feature can not be used with IBM Cloudant)\n-  Read chunks online.\n  Now we can synchronise only metadata and retrieve chunks on demand. It reduces local database size and time for replication.\n- Added this note.\n- Use local chunks in preference to remote them if present,\n\n#### Recommended configuration for Self-hosted CouchDB\n- Set chunk size to around 100 to 250 (10MB - 25MB per chunk)\n- *Set batch size to 100 and batch limit to 20 (0.14.2)*\n- Be sure to `Read chunks online` checked.\n\n#### Minors\n- 0.14.2 Fixed issue about retrieving files if synchronisation has been interrupted or failed\n- 0.14.3 New test items have been added to `Check database configuration`.\n- 0.14.4 Fixed issue of importing configurations.\n- 0.14.5 Auto chunk size adjusting implemented.\n- 0.14.6 Change Target to ES2018\n- 0.14.7 Refactor and fix typos.\n- 0.14.8 Refactored again. There should be no change in behaviour, but please let me know if there is any.\n### 0.13.0\n\n- The metadata of the deleted files will be kept on the database by default. If you want to delete this as the previous version, please turn on `Delete metadata of deleted files.`. And, if you have upgraded from the older version, please ensure every device has been upgraded.\n- Please turn on `Delete metadata of deleted files.` if you are using livesync-classroom or filesystem-livesync.\n- We can see the history of deleted files.\n- `Pick file to show` was renamed to `Pick a file to show.\n- Files in the `Pick a file to show` are now ordered by their modified date descent.\n- Update information became to be shown on the major upgrade.\n\n#### Minors\n- 0.13.1 Fixed on conflict resolution.\n- 0.13.2 Fixed file deletion failures.\n- 0.13.4\n  - Now, we can synchronise hidden files that conflicted on each devices.\n  - We can search for conflicting docs.\n  - Pending processes can now be run at any time.\n  - Performance improved on synchronising large numbers of files at once.\n";
     const lastVersion = ~~(versionNumberString2Number(manifestVersion) / 1e3);
     const tmpDiv = createSpan();
     tmpDiv.addClass("sls-header-button");
     tmpDiv.innerHTML = `<button> OK, I read all. </button>`;
     if (lastVersion > this.plugin.settings.lastReadUpdates) {
       const informationButtonDiv = h3El.appendChild(tmpDiv);
-      informationButtonDiv.querySelector("button").addEventListener("click", () => __async(this, null, function* () {
+      informationButtonDiv.querySelector("button").addEventListener("click", async () => {
         this.plugin.settings.lastReadUpdates = lastVersion;
-        yield this.plugin.saveSettings();
+        await this.plugin.saveSettings();
         informationButtonDiv.remove();
-      }));
+      });
     }
     import_obsidian5.MarkdownRenderer.renderMarkdown(updateInformation, informationDivEl, "/", null);
     addScreenElement("100", containerInformationEl);
@@ -10936,64 +10477,65 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
       }
     };
     const dbSettings = [];
-    dbSettings.push(new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("URI").addText((text2) => text2.setPlaceholder("https://........").setValue(this.plugin.settings.couchDB_URI).onChange((value) => __async(this, null, function* () {
+    dbSettings.push(new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("URI").addText((text2) => text2.setPlaceholder("https://........").setValue(this.plugin.settings.couchDB_URI).onChange(async (value) => {
       this.plugin.settings.couchDB_URI = value;
-      yield this.plugin.saveSettings();
-    }))), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Username").setDesc("username").addText((text2) => text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_USER).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    })), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Username").setDesc("username").addText((text2) => text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_USER).onChange(async (value) => {
       this.plugin.settings.couchDB_USER = value;
-      yield this.plugin.saveSettings();
-    }))), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Password").setDesc("password").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_PASSWORD).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    })), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Password").setDesc("password").addText((text2) => {
+      text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_PASSWORD).onChange(async (value) => {
         this.plugin.settings.couchDB_PASSWORD = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "password");
-    }), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Database name").addText((text2) => text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_DBNAME).onChange((value) => __async(this, null, function* () {
+    }), new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Database name").addText((text2) => text2.setPlaceholder("").setValue(this.plugin.settings.couchDB_DBNAME).onChange(async (value) => {
       this.plugin.settings.couchDB_DBNAME = value;
-      yield this.plugin.saveSettings();
-    }))));
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("End to End Encryption").setDesc("Encrypt contents on the remote database. If you use the plugin's synchronization feature, enabling this is recommend.").addToggle((toggle) => toggle.setValue(this.plugin.settings.workingEncrypt).onChange((value) => __async(this, null, function* () {
-      this.plugin.settings.workingEncrypt = value;
-      phasspharase.setDisabled(!value);
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
     })));
-    const phasspharase = new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Passphrase").setDesc("Encrypting passphrase. If you change the passphrase of a existing database, overwriting the remote database is strongly recommended.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.workingPassphrase).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("End to End Encryption").setDesc("Encrypt contents on the remote database. If you use the plugin's synchronization feature, enabling this is recommend.").addToggle((toggle) => toggle.setValue(this.plugin.settings.workingEncrypt).onChange(async (value) => {
+      this.plugin.settings.workingEncrypt = value;
+      passphrase.setDisabled(!value);
+      await this.plugin.saveSettings();
+    }));
+    const passphrase = new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Passphrase").setDesc("Encrypting passphrase. If you change the passphrase of a existing database, overwriting the remote database is strongly recommended.").addText((text2) => {
+      text2.setPlaceholder("").setValue(this.plugin.settings.workingPassphrase).onChange(async (value) => {
         this.plugin.settings.workingPassphrase = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "password");
     });
-    phasspharase.setDisabled(!this.plugin.settings.workingEncrypt);
-    const checkWorkingPassphrase = () => __async(this, null, function* () {
-      const settingForCheck = __spreadProps(__spreadValues({}, this.plugin.settings), {
+    passphrase.setDisabled(!this.plugin.settings.workingEncrypt);
+    const checkWorkingPassphrase = async () => {
+      const settingForCheck = {
+        ...this.plugin.settings,
         encrypt: this.plugin.settings.workingEncrypt,
         passphrase: this.plugin.settings.workingPassphrase
-      });
+      };
       console.dir(settingForCheck);
-      const db = yield connectRemoteCouchDBWithSetting(settingForCheck, this.plugin.localDatabase.isMobile);
+      const db = await this.plugin.localDatabase.connectRemoteCouchDBWithSetting(settingForCheck, this.plugin.localDatabase.isMobile);
       if (typeof db === "string") {
         Logger("Could not connect to the database.", LOG_LEVEL.NOTICE);
         return false;
       } else {
-        if (yield checkSyncInfo(db.db)) {
+        if (await checkSyncInfo(db.db)) {
           return true;
         } else {
           Logger("Failed to read remote database", LOG_LEVEL.NOTICE);
           return false;
         }
       }
-    });
-    const applyEncryption = (sendToServer) => __async(this, null, function* () {
+    };
+    const applyEncryption = async (sendToServer) => {
       if (this.plugin.settings.workingEncrypt && this.plugin.settings.workingPassphrase == "") {
         Logger("If you enable encryption, you have to set the passphrase", LOG_LEVEL.NOTICE);
         return;
       }
-      if (this.plugin.settings.workingEncrypt && !(yield testCrypt())) {
+      if (this.plugin.settings.workingEncrypt && !await testCrypt()) {
         Logger("WARNING! Your device would not support encryption.", LOG_LEVEL.NOTICE);
         return;
       }
-      if (!(yield checkWorkingPassphrase())) {
+      if (!await checkWorkingPassphrase()) {
         return;
       }
       if (!this.plugin.settings.workingEncrypt) {
@@ -11006,64 +10548,64 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
       this.plugin.settings.syncOnFileOpen = false;
       this.plugin.settings.encrypt = this.plugin.settings.workingEncrypt;
       this.plugin.settings.passphrase = this.plugin.settings.workingPassphrase;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       if (sendToServer) {
-        yield this.plugin.initializeDatabase(true);
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.tryResetRemoteDatabase();
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.replicateAllToServer(true);
+        await this.plugin.initializeDatabase(true);
+        await this.plugin.markRemoteLocked();
+        await this.plugin.tryResetRemoteDatabase();
+        await this.plugin.markRemoteLocked();
+        await this.plugin.replicateAllToServer(true);
       } else {
-        yield this.plugin.markRemoteResolved();
-        yield this.plugin.replicate(true);
+        await this.plugin.markRemoteResolved();
+        await this.plugin.replicate(true);
       }
-    });
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Apply").setDesc("Apply encryption settings").addButton((button) => button.setButtonText("Apply").setWarning().setDisabled(false).setClass("sls-btn-right").onClick(() => __async(this, null, function* () {
-      yield applyEncryption(false);
-    })));
-    const rebuildDB = (method) => __async(this, null, function* () {
+    };
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Apply").setDesc("Apply encryption settings").addButton((button) => button.setButtonText("Apply").setWarning().setDisabled(false).setClass("sls-btn-right").onClick(async () => {
+      await applyEncryption(false);
+    }));
+    const rebuildDB = async (method) => {
       this.plugin.settings.liveSync = false;
       this.plugin.settings.periodicReplication = false;
       this.plugin.settings.syncOnSave = false;
       this.plugin.settings.syncOnStart = false;
       this.plugin.settings.syncOnFileOpen = false;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-      yield delay(2e3);
+      await delay(2e3);
       if (method == "localOnly") {
-        yield this.plugin.resetLocalDatabase();
-        yield this.plugin.markRemoteResolved();
-        yield this.plugin.replicate(true);
+        await this.plugin.resetLocalDatabase();
+        await this.plugin.markRemoteResolved();
+        await this.plugin.replicate(true);
       }
       if (method == "remoteOnly") {
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.tryResetRemoteDatabase();
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.replicateAllToServer(true);
+        await this.plugin.markRemoteLocked();
+        await this.plugin.tryResetRemoteDatabase();
+        await this.plugin.markRemoteLocked();
+        await this.plugin.replicateAllToServer(true);
       }
       if (method == "rebuildBothByThisDevice") {
-        yield this.plugin.resetLocalDatabase();
-        yield this.plugin.initializeDatabase(true);
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.tryResetRemoteDatabase();
-        yield this.plugin.markRemoteLocked();
-        yield this.plugin.replicateAllToServer(true);
+        await this.plugin.resetLocalDatabase();
+        await this.plugin.initializeDatabase(true);
+        await this.plugin.markRemoteLocked();
+        await this.plugin.tryResetRemoteDatabase();
+        await this.plugin.markRemoteLocked();
+        await this.plugin.replicateAllToServer(true);
       }
-    });
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Overwrite remote database").setDesc("Overwrite remote database with local DB and passphrase.").addButton((button) => button.setButtonText("Send").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(() => __async(this, null, function* () {
-      yield rebuildDB("remoteOnly");
-    })));
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Rebuild everything").setDesc("Rebuild local and remote database with local files.").addButton((button) => button.setButtonText("Rebuild").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(() => __async(this, null, function* () {
-      yield rebuildDB("rebuildBothByThisDevice");
-    })));
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Test Database Connection").setDesc("Open database connection. If the remote database is not found and you have the privilege to create a database, the database will be created.").addButton((button) => button.setButtonText("Test").setDisabled(false).onClick(() => __async(this, null, function* () {
-      yield this.testConnection();
-    })));
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Check database configuration").addButton((button) => button.setButtonText("Check").setDisabled(false).onClick(() => __async(this, null, function* () {
-      const checkConfig = () => __async(this, null, function* () {
-        var _a, _b, _c, _d, _e, _f, _g;
+    };
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Overwrite remote database").setDesc("Overwrite remote database with local DB and passphrase.").addButton((button) => button.setButtonText("Send").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(async () => {
+      await rebuildDB("remoteOnly");
+    }));
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Rebuild everything").setDesc("Rebuild local and remote database with local files.").addButton((button) => button.setButtonText("Rebuild").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(async () => {
+      await rebuildDB("rebuildBothByThisDevice");
+    }));
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Test Database Connection").setDesc("Open database connection. If the remote database is not found and you have the privilege to create a database, the database will be created.").addButton((button) => button.setButtonText("Test").setDisabled(false).onClick(async () => {
+      await this.testConnection();
+    }));
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Check database configuration").addButton((button) => button.setButtonText("Check").setDisabled(false).onClick(async () => {
+      const checkConfig = async () => {
+        var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k;
         try {
-          const requestToCouchDB = (baseUri, username, password, origin2, key, body) => __async(this, null, function* () {
+          const requestToCouchDB = async (baseUri, username, password, origin2, key, body) => {
             const utf8str = String.fromCharCode.apply(null, new TextEncoder().encode(`${username}:${password}`));
             const encoded = window.btoa(utf8str);
             const authHeader = "Basic " + encoded;
@@ -11076,9 +10618,9 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
               contentType: "application/json",
               body: body ? JSON.stringify(body) : void 0
             };
-            return yield (0, import_obsidian5.requestUrl)(requestParam);
-          });
-          const r2 = yield requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, window.origin);
+            return await (0, import_obsidian5.requestUrl)(requestParam);
+          };
+          const r2 = await requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, window.origin);
           Logger(JSON.stringify(r2.json, null, 2));
           const responseConfig = r2.json;
           const emptyDiv = createDiv();
@@ -11098,19 +10640,19 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
             tmpDiv2.addClass("ob-btn-config-fix");
             tmpDiv2.innerHTML = `<label>${title}</label><button>Fix</button>`;
             const x = checkResultDiv.appendChild(tmpDiv2);
-            x.querySelector("button").addEventListener("click", () => __async(this, null, function* () {
+            x.querySelector("button").addEventListener("click", async () => {
               console.dir({ key, value });
-              const res = yield requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, void 0, key, value);
+              const res = await requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, void 0, key, value);
               console.dir(res);
               if (res.status == 200) {
-                Logger(`${title} successfly updated`, LOG_LEVEL.NOTICE);
+                Logger(`${title} successfully updated`, LOG_LEVEL.NOTICE);
                 checkResultDiv.removeChild(x);
                 checkConfig();
               } else {
                 Logger(`${title} failed`, LOG_LEVEL.NOTICE);
                 Logger(res.text);
               }
-            }));
+            });
           };
           addResult("---Notice---", ["ob-btn-config-head"]);
           addResult("If the server configuration is not persistent (e.g., running on docker), the values set from here will also be volatile. Once you are able to connect, please reflect the settings in the server's local.ini.", ["ob-btn-config-info"]);
@@ -11145,14 +10687,28 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
           } else {
             addResult("\u2714 httpd.enable_cors is ok.");
           }
-          if (((_d = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _d.credentials) != "true") {
+          if (!this.plugin.settings.couchDB_URI.contains(".cloudantnosqldb.")) {
+            if (Number((_e = (_d = responseConfig == null ? void 0 : responseConfig.chttpd) == null ? void 0 : _d.max_http_request_size) != null ? _e : 0) < 4294967296) {
+              addResult("\u2757 chttpd.max_http_request_size is low)");
+              addConfigFixButton("Set chttpd.max_http_request_size", "chttpd/max_http_request_size", "4294967296");
+            } else {
+              addResult("\u2714 chttpd.max_http_request_size is ok.");
+            }
+            if (Number((_g = (_f = responseConfig == null ? void 0 : responseConfig.couchdb) == null ? void 0 : _f.max_document_size) != null ? _g : 0) < 5e7) {
+              addResult("\u2757 couchdb.max_document_size is low)");
+              addConfigFixButton("Set couchdb.max_document_size", "couchdb/max_document_size", "50000000");
+            } else {
+              addResult("\u2714 couchdb.max_document_size is ok.");
+            }
+          }
+          if (((_h = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _h.credentials) != "true") {
             addResult("\u2757 cors.credentials is wrong");
             addConfigFixButton("Set cors.credentials", "cors/credentials", "true");
           } else {
             addResult("\u2714 cors.credentials is ok.");
           }
-          const ConfiguredOrigins = (((_f = (_e = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _e.origins) != null ? _f : "") + "").split(",");
-          if (((_g = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _g.origins) == "*" || ConfiguredOrigins.indexOf("app://obsidian.md") !== -1 && ConfiguredOrigins.indexOf("capacitor://localhost") !== -1 && ConfiguredOrigins.indexOf("http://localhost") !== -1) {
+          const ConfiguredOrigins = (((_j = (_i = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _i.origins) != null ? _j : "") + "").split(",");
+          if (((_k = responseConfig == null ? void 0 : responseConfig.cors) == null ? void 0 : _k.origins) == "*" || ConfiguredOrigins.indexOf("app://obsidian.md") !== -1 && ConfiguredOrigins.indexOf("capacitor://localhost") !== -1 && ConfiguredOrigins.indexOf("http://localhost") !== -1) {
             addResult("\u2714 cors.origins is ok.");
           } else {
             addResult("\u2757 cors.origins is wrong");
@@ -11162,7 +10718,7 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
           addResult(`Current origin:${window.location.origin}`);
           const origins = ["app://obsidian.md", "capacitor://localhost", "http://localhost"];
           for (const org of origins) {
-            const rr = yield requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, org);
+            const rr = await requestToCouchDB(this.plugin.settings.couchDB_URI, this.plugin.settings.couchDB_USER, this.plugin.settings.couchDB_PASSWORD, org);
             const responseHeaders = Object.entries(rr.headers).map((e3) => {
               e3[0] = (e3[0] + "").toLowerCase();
               return e3;
@@ -11182,98 +10738,72 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
               addResult("\u2714 CORS origin OK");
             }
           }
-          addResult("--Done--", ["ob-btn-config-haed"]);
+          addResult("--Done--", ["ob-btn-config-head"]);
           addResult("If you have some trouble with Connection-check even though all Config-check has been passed, Please check your reverse proxy's configuration.", ["ob-btn-config-info"]);
         } catch (ex) {
-          Logger(`Checking configration failed`);
+          Logger(`Checking configuration failed`);
           Logger(ex);
         }
-      });
-      yield checkConfig();
-    })));
+      };
+      await checkConfig();
+    }));
     const checkResultDiv = containerRemoteDatabaseEl.createEl("div", {
       text: ""
     });
-    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Lock remote database").setDesc("Lock remote database to prevent synchronization with other devices.").addButton((button) => button.setButtonText("Lock").setDisabled(false).setWarning().onClick(() => __async(this, null, function* () {
-      yield this.plugin.markRemoteLocked();
-    })));
+    new import_obsidian5.Setting(containerRemoteDatabaseEl).setName("Lock remote database").setDesc("Lock remote database to prevent synchronization with other devices.").addButton((button) => button.setButtonText("Lock").setDisabled(false).setWarning().onClick(async () => {
+      await this.plugin.markRemoteLocked();
+    }));
     addScreenElement("0", containerRemoteDatabaseEl);
     const containerLocalDatabaseEl = containerEl.createDiv();
     containerLocalDatabaseEl.createEl("h3", { text: "Local Database configuration" });
-    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Batch database update").setDesc("Delay all changes, save once before replication or opening another file.").addToggle((toggle) => toggle.setValue(this.plugin.settings.batchSave).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Batch database update").setDesc("Delay all changes, save once before replication or opening another file.").addToggle((toggle) => toggle.setValue(this.plugin.settings.batchSave).onChange(async (value) => {
       if (value && this.plugin.settings.liveSync) {
         Logger("LiveSync and Batch database update cannot be used at the same time.", LOG_LEVEL.NOTICE);
         toggle.setValue(false);
         return;
       }
       this.plugin.settings.batchSave = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Garbage check").addButton((button) => button.setButtonText("Check now").setDisabled(false).onClick(() => __async(this, null, function* () {
-      yield this.plugin.garbageCheck();
-    })));
-    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Fetch rebuilt DB").setDesc("Restore or reconstruct local database from remote database.").addButton((button) => button.setButtonText("Fetch").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(() => __async(this, null, function* () {
-      yield rebuildDB("localOnly");
-    })));
-    containerLocalDatabaseEl.createEl("div", {
-      text: (0, import_obsidian5.sanitizeHTMLToDom)(`Advanced settings<br>
-                Configuration of how LiveSync makes chunks from the file.`)
-    });
-    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Minimum chunk size").setDesc("(letters), minimum chunk size.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.minimumChunkSize + "").onChange((value) => __async(this, null, function* () {
-        let v = Number(value);
-        if (isNaN(v) || v < 10 || v > 1e3) {
-          v = 10;
-        }
-        this.plugin.settings.minimumChunkSize = v;
-        yield this.plugin.saveSettings();
-      }));
-      text2.inputEl.setAttribute("type", "number");
-    });
-    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("LongLine Threshold").setDesc("(letters), If the line is longer than this, make the line to chunk").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.longLineThreshold + "").onChange((value) => __async(this, null, function* () {
-        let v = Number(value);
-        if (isNaN(v) || v < 10 || v > 1e3) {
-          v = 10;
-        }
-        this.plugin.settings.longLineThreshold = v;
-        yield this.plugin.saveSettings();
-      }));
-      text2.inputEl.setAttribute("type", "number");
-    });
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Garbage check").addButton((button) => button.setButtonText("Check now").setDisabled(false).onClick(async () => {
+      await this.plugin.garbageCheck();
+    }));
+    new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Fetch rebuilt DB").setDesc("Restore or reconstruct local database from remote database.").addButton((button) => button.setButtonText("Fetch").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(async () => {
+      await rebuildDB("localOnly");
+    }));
     let newDatabaseName = this.plugin.settings.additionalSuffixOfDatabaseName + "";
     new import_obsidian5.Setting(containerLocalDatabaseEl).setName("Database suffix").setDesc("Set unique name for using same vault name on different directory.").addText((text2) => {
       text2.setPlaceholder("").setValue(newDatabaseName).onChange((value) => {
         newDatabaseName = value;
       });
     }).addButton((button) => {
-      button.setButtonText("Change").onClick(() => __async(this, null, function* () {
+      button.setButtonText("Change").onClick(async () => {
         if (this.plugin.settings.additionalSuffixOfDatabaseName == newDatabaseName) {
           Logger("Suffix was not changed.", LOG_LEVEL.NOTICE);
           return;
         }
         this.plugin.settings.additionalSuffixOfDatabaseName = newDatabaseName;
-        yield this.plugin.saveSettings();
+        await this.plugin.saveSettings();
         Logger("Suffix has been changed. Reopening database...", LOG_LEVEL.NOTICE);
-        yield this.plugin.initializeDatabase();
-      }));
+        await this.plugin.initializeDatabase();
+      });
     });
     addScreenElement("10", containerLocalDatabaseEl);
     const containerGeneralSettingsEl = containerEl.createDiv();
     containerGeneralSettingsEl.createEl("h3", { text: "General Settings" });
-    new import_obsidian5.Setting(containerGeneralSettingsEl).setName("Do not show low-priority Log").setDesc("Reduce log information").addToggle((toggle) => toggle.setValue(this.plugin.settings.lessInformationInLog).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerGeneralSettingsEl).setName("Do not show low-priority Log").setDesc("Reduce log information").addToggle((toggle) => toggle.setValue(this.plugin.settings.lessInformationInLog).onChange(async (value) => {
       this.plugin.settings.lessInformationInLog = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerGeneralSettingsEl).setName("Verbose Log").setDesc("Show verbose log").addToggle((toggle) => toggle.setValue(this.plugin.settings.showVerboseLog).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerGeneralSettingsEl).setName("Verbose Log").setDesc("Show verbose log").addToggle((toggle) => toggle.setValue(this.plugin.settings.showVerboseLog).onChange(async (value) => {
       this.plugin.settings.showVerboseLog = value;
-      yield this.plugin.saveSettings();
-    })));
+      await this.plugin.saveSettings();
+    }));
     new import_obsidian5.Setting(containerGeneralSettingsEl).setName("Delete metadata of deleted files.").addToggle((toggle) => {
-      toggle.setValue(this.plugin.settings.deleteMetadataOfDeletedFiles).onChange((value) => __async(this, null, function* () {
+      toggle.setValue(this.plugin.settings.deleteMetadataOfDeletedFiles).onChange(async (value) => {
         this.plugin.settings.deleteMetadataOfDeletedFiles = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
     });
     addScreenElement("20", containerGeneralSettingsEl);
     const containerSyncSettingEl = containerEl.createDiv();
@@ -11282,133 +10812,133 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
       const c = containerSyncSettingEl.createEl("div", { text: this.plugin.settings.versionUpFlash });
       c.createEl("button", { text: "I got it and updated." }, (e3) => {
         e3.addClass("mod-cta");
-        e3.addEventListener("click", () => __async(this, null, function* () {
+        e3.addEventListener("click", async () => {
           this.plugin.settings.versionUpFlash = "";
-          yield this.plugin.saveSettings();
+          await this.plugin.saveSettings();
           applyDisplayEnabled();
           c.remove();
-        }));
+        });
       });
       c.addClass("op-warn");
     }
     const syncLive = [];
     const syncNonLive = [];
-    syncLive.push(new import_obsidian5.Setting(containerSyncSettingEl).setName("LiveSync").setDesc("Sync realtime").addToggle((toggle) => toggle.setValue(this.plugin.settings.liveSync).onChange((value) => __async(this, null, function* () {
+    syncLive.push(new import_obsidian5.Setting(containerSyncSettingEl).setName("LiveSync").setDesc("Sync realtime").addToggle((toggle) => toggle.setValue(this.plugin.settings.liveSync).onChange(async (value) => {
       if (value && this.plugin.settings.batchSave) {
         Logger("LiveSync and Batch database update cannot be used at the same time.", LOG_LEVEL.NOTICE);
         toggle.setValue(false);
         return;
       }
       this.plugin.settings.liveSync = value;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-      yield this.plugin.realizeSettingSyncMode();
-    }))));
-    syncNonLive.push(new import_obsidian5.Setting(containerSyncSettingEl).setName("Periodic Sync").setDesc("Sync periodically").addToggle((toggle) => toggle.setValue(this.plugin.settings.periodicReplication).onChange((value) => __async(this, null, function* () {
+      await this.plugin.realizeSettingSyncMode();
+    })));
+    syncNonLive.push(new import_obsidian5.Setting(containerSyncSettingEl).setName("Periodic Sync").setDesc("Sync periodically").addToggle((toggle) => toggle.setValue(this.plugin.settings.periodicReplication).onChange(async (value) => {
       this.plugin.settings.periodicReplication = value;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-    }))), new import_obsidian5.Setting(containerSyncSettingEl).setName("Periodic Sync interval").setDesc("Interval (sec)").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.periodicReplicationInterval + "").onChange((value) => __async(this, null, function* () {
+    })), new import_obsidian5.Setting(containerSyncSettingEl).setName("Periodic Sync interval").setDesc("Interval (sec)").addText((text2) => {
+      text2.setPlaceholder("").setValue(this.plugin.settings.periodicReplicationInterval + "").onChange(async (value) => {
         let v = Number(value);
         if (isNaN(v) || v > 5e3) {
           v = 0;
         }
         this.plugin.settings.periodicReplicationInterval = v;
-        yield this.plugin.saveSettings();
+        await this.plugin.saveSettings();
         applyDisplayEnabled();
-      }));
+      });
       text2.inputEl.setAttribute("type", "number");
-    }), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on Save").setDesc("When you save file, sync automatically").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnSave).onChange((value) => __async(this, null, function* () {
+    }), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on Save").setDesc("When you save file, sync automatically").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnSave).onChange(async (value) => {
       this.plugin.settings.syncOnSave = value;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-    }))), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on File Open").setDesc("When you open file, sync automatically").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnFileOpen).onChange((value) => __async(this, null, function* () {
+    })), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on File Open").setDesc("When you open file, sync automatically").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnFileOpen).onChange(async (value) => {
       this.plugin.settings.syncOnFileOpen = value;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-    }))), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on Start").setDesc("Start synchronization after launching Obsidian.").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnStart).onChange((value) => __async(this, null, function* () {
+    })), new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync on Start").setDesc("Start synchronization after launching Obsidian.").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnStart).onChange(async (value) => {
       this.plugin.settings.syncOnStart = value;
-      yield this.plugin.saveSettings();
+      await this.plugin.saveSettings();
       applyDisplayEnabled();
-    }))));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Use Trash for deleted files").setDesc("Do not delete files that are deleted in remote, just move to trash.").addToggle((toggle) => toggle.setValue(this.plugin.settings.trashInsteadDelete).onChange((value) => __async(this, null, function* () {
+    })));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Use Trash for deleted files").setDesc("Do not delete files that are deleted in remote, just move to trash.").addToggle((toggle) => toggle.setValue(this.plugin.settings.trashInsteadDelete).onChange(async (value) => {
       this.plugin.settings.trashInsteadDelete = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Do not delete empty folder").setDesc("Normally, a folder is deleted when it becomes empty after a replication. Enabling this will prevent it from getting deleted").addToggle((toggle) => toggle.setValue(this.plugin.settings.doNotDeleteFolder).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Do not delete empty folder").setDesc("Normally, a folder is deleted when it becomes empty after a replication. Enabling this will prevent it from getting deleted").addToggle((toggle) => toggle.setValue(this.plugin.settings.doNotDeleteFolder).onChange(async (value) => {
       this.plugin.settings.doNotDeleteFolder = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Use newer file if conflicted (beta)").setDesc("Resolve conflicts by newer files automatically.").addToggle((toggle) => toggle.setValue(this.plugin.settings.resolveConflictsByNewerFile).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Use newer file if conflicted (beta)").setDesc("Resolve conflicts by newer files automatically.").addToggle((toggle) => toggle.setValue(this.plugin.settings.resolveConflictsByNewerFile).onChange(async (value) => {
       this.plugin.settings.resolveConflictsByNewerFile = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Check conflict only on opened files").setDesc("Do not check conflict for replication").addToggle((toggle) => toggle.setValue(this.plugin.settings.checkConflictOnlyOnOpen).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Check conflict only on opened files").setDesc("Do not check conflict for replication").addToggle((toggle) => toggle.setValue(this.plugin.settings.checkConflictOnlyOnOpen).onChange(async (value) => {
       this.plugin.settings.checkConflictOnlyOnOpen = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync hidden files").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncInternalFiles).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Sync hidden files").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncInternalFiles).onChange(async (value) => {
       this.plugin.settings.syncInternalFiles = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Scan for hidden files before replication").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncInternalFilesBeforeReplication).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Scan for hidden files before replication").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncInternalFilesBeforeReplication).onChange(async (value) => {
       this.plugin.settings.syncInternalFilesBeforeReplication = value;
-      yield this.plugin.saveSettings();
-    })));
+      await this.plugin.saveSettings();
+    }));
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Scan hidden files periodically").setDesc("Seconds, 0 to disable.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.syncInternalFilesInterval + "").onChange((value) => __async(this, null, function* () {
+      text2.setPlaceholder("").setValue(this.plugin.settings.syncInternalFilesInterval + "").onChange(async (value) => {
         let v = Number(value);
         if (isNaN(v) || v < 10) {
           v = 10;
         }
         this.plugin.settings.syncInternalFilesInterval = v;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "number");
     });
     let skipPatternTextArea = null;
     const defaultSkipPattern = "\\/node_modules\\/, \\/\\.git\\/, \\/obsidian-livesync\\/";
     const defaultSkipPatternXPlat = defaultSkipPattern + ",\\/workspace$";
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Skip patterns").setDesc("Regular expression, If you use hidden file sync between desktop and mobile, adding `workspace$` is recommended.").addTextArea((text2) => {
-      text2.setValue(this.plugin.settings.syncInternalFilesIgnorePatterns).setPlaceholder("\\/node_modules\\/, \\/\\.git\\/").onChange((value) => __async(this, null, function* () {
+      text2.setValue(this.plugin.settings.syncInternalFilesIgnorePatterns).setPlaceholder("\\/node_modules\\/, \\/\\.git\\/").onChange(async (value) => {
         this.plugin.settings.syncInternalFilesIgnorePatterns = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       skipPatternTextArea = text2;
       return text2;
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Skip patterns defaults").addButton((button) => {
-      button.setButtonText("Default").onClick(() => __async(this, null, function* () {
+      button.setButtonText("Default").onClick(async () => {
         skipPatternTextArea.setValue(defaultSkipPattern);
         this.plugin.settings.syncInternalFilesIgnorePatterns = defaultSkipPattern;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
     }).addButton((button) => {
-      button.setButtonText("Cross-platform").onClick(() => __async(this, null, function* () {
+      button.setButtonText("Cross-platform").onClick(async () => {
         skipPatternTextArea.setValue(defaultSkipPatternXPlat);
         this.plugin.settings.syncInternalFilesIgnorePatterns = defaultSkipPatternXPlat;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
     });
-    new import_obsidian5.Setting(containerSyncSettingEl).setName("Touch hidden files").setDesc("Update the modified time of all hidden files to the current time.").addButton((button) => button.setButtonText("Touch").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(() => __async(this, null, function* () {
-      const filesAll = yield this.plugin.scanInternalFiles();
-      const targetFiles = yield this.plugin.filterTargetFiles(filesAll);
+    new import_obsidian5.Setting(containerSyncSettingEl).setName("Touch hidden files").setDesc("Update the modified time of all hidden files to the current time.").addButton((button) => button.setButtonText("Touch").setWarning().setDisabled(false).setClass("sls-btn-left").onClick(async () => {
+      const filesAll = await this.plugin.scanInternalFiles();
+      const targetFiles = await this.plugin.filterTargetFiles(filesAll);
       const now = Date.now();
-      const newFiles = targetFiles.map((e3) => __spreadProps(__spreadValues({}, e3), { mtime: now }));
+      const newFiles = targetFiles.map((e3) => ({ ...e3, mtime: now }));
       let i2 = 0;
       const maxFiles = newFiles.length;
       for (const file of newFiles) {
         i2++;
         Logger(`Touched:${file.path} (${i2}/${maxFiles})`, LOG_LEVEL.NOTICE, "touch-files");
-        yield this.plugin.applyMTimeToFile(file);
+        await this.plugin.applyMTimeToFile(file);
       }
-    })));
+    }));
     containerSyncSettingEl.createEl("h3", {
       text: (0, import_obsidian5.sanitizeHTMLToDom)(`Experimental`)
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Regular expression to ignore files").setDesc("If this is set, any changes to local and remote files that match this will be skipped.").addTextArea((text2) => {
-      text2.setValue(this.plugin.settings.syncIgnoreRegEx).setPlaceholder("\\.pdf$").onChange((value) => __async(this, null, function* () {
+      text2.setValue(this.plugin.settings.syncIgnoreRegEx).setPlaceholder("\\.pdf$").onChange(async (value) => {
         let isValidRegExp = false;
         try {
           new RegExp(value);
@@ -11417,13 +10947,13 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         }
         if (isValidRegExp || value.trim() == "") {
           this.plugin.settings.syncIgnoreRegEx = value;
-          yield this.plugin.saveSettings();
+          await this.plugin.saveSettings();
         }
-      }));
+      });
       return text2;
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Regular expression for restricting synchronization targets").setDesc("If this is set, changes to local and remote files that only match this will be processed.").addTextArea((text2) => {
-      text2.setValue(this.plugin.settings.syncOnlyRegEx).setPlaceholder("\\.md$|\\.txt").onChange((value) => __async(this, null, function* () {
+      text2.setValue(this.plugin.settings.syncOnlyRegEx).setPlaceholder("\\.md$|\\.txt").onChange(async (value) => {
         let isValidRegExp = false;
         try {
           new RegExp(value);
@@ -11432,27 +10962,27 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         }
         if (isValidRegExp || value.trim() == "") {
           this.plugin.settings.syncOnlyRegEx = value;
-          yield this.plugin.saveSettings();
+          await this.plugin.saveSettings();
         }
-      }));
+      });
       return text2;
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Chunk size").setDesc("Customize chunk size for binary files (0.1MBytes). This cannot be increased when using IBM Cloudant.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.customChunkSize + "").onChange((value) => __async(this, null, function* () {
+      text2.setPlaceholder("").setValue(this.plugin.settings.customChunkSize + "").onChange(async (value) => {
         let v = Number(value);
         if (isNaN(v) || v < 100) {
           v = 100;
         }
         this.plugin.settings.customChunkSize = v;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "number");
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Read chunks online.").setDesc("If this option is enabled, LiveSync reads chunks online directly instead of replicating them locally. Increasing Custom chunk size is recommended.").addToggle((toggle) => {
-      toggle.setValue(this.plugin.settings.readChunksOnline).onChange((value) => __async(this, null, function* () {
+      toggle.setValue(this.plugin.settings.readChunksOnline).onChange(async (value) => {
         this.plugin.settings.readChunksOnline = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       return toggle;
     });
     containerSyncSettingEl.createEl("h3", {
@@ -11462,40 +10992,40 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
       text: `If you reached the payload size limit when using IBM Cloudant, please decrease batch size and batch limit to a lower value.`
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Batch size").setDesc("Number of change feed items to process at a time. Defaults to 250.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.batch_size + "").onChange((value) => __async(this, null, function* () {
+      text2.setPlaceholder("").setValue(this.plugin.settings.batch_size + "").onChange(async (value) => {
         let v = Number(value);
         if (isNaN(v) || v < 10) {
           v = 10;
         }
         this.plugin.settings.batch_size = v;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "number");
     });
     new import_obsidian5.Setting(containerSyncSettingEl).setName("Batch limit").setDesc("Number of batches to process at a time. Defaults to 40. This along with batch size controls how many docs are kept in memory at a time.").addText((text2) => {
-      text2.setPlaceholder("").setValue(this.plugin.settings.batches_limit + "").onChange((value) => __async(this, null, function* () {
+      text2.setPlaceholder("").setValue(this.plugin.settings.batches_limit + "").onChange(async (value) => {
         let v = Number(value);
         if (isNaN(v) || v < 10) {
           v = 10;
         }
         this.plugin.settings.batches_limit = v;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
       text2.inputEl.setAttribute("type", "number");
     });
     addScreenElement("30", containerSyncSettingEl);
     const containerMiscellaneousEl = containerEl.createDiv();
     containerMiscellaneousEl.createEl("h3", { text: "Miscellaneous" });
-    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Show status inside editor").setDesc("").addToggle((toggle) => toggle.setValue(this.plugin.settings.showStatusOnEditor).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Show status inside editor").setDesc("").addToggle((toggle) => toggle.setValue(this.plugin.settings.showStatusOnEditor).onChange(async (value) => {
       this.plugin.settings.showStatusOnEditor = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Check integrity on saving").setDesc("Check database integrity on saving to database").addToggle((toggle) => toggle.setValue(this.plugin.settings.checkIntegrityOnSave).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Check integrity on saving").setDesc("Check database integrity on saving to database").addToggle((toggle) => toggle.setValue(this.plugin.settings.checkIntegrityOnSave).onChange(async (value) => {
       this.plugin.settings.checkIntegrityOnSave = value;
-      yield this.plugin.saveSettings();
-    })));
+      await this.plugin.saveSettings();
+    }));
     let currentPrest = "NONE";
-    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Presets").setDesc("Apply preset configuration").addDropdown((dropdown) => dropdown.addOptions({ NONE: "", LIVESYNC: "LiveSync", PERIODIC: "Periodic w/ batch", DISABLE: "Disable all sync" }).setValue(currentPrest).onChange((value) => currentPrest = value)).addButton((button) => button.setButtonText("Apply").setDisabled(false).setCta().onClick(() => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerMiscellaneousEl).setName("Presets").setDesc("Apply preset configuration").addDropdown((dropdown) => dropdown.addOptions({ NONE: "", LIVESYNC: "LiveSync", PERIODIC: "Periodic w/ batch", DISABLE: "Disable all sync" }).setValue(currentPrest).onChange((value) => currentPrest = value)).addButton((button) => button.setButtonText("Apply").setDisabled(false).setCta().onClick(async () => {
       if (currentPrest == "") {
         Logger("Select any preset.", LOG_LEVEL.NOTICE);
         return;
@@ -11520,8 +11050,8 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         Logger("All synchronization disabled.", LOG_LEVEL.NOTICE);
       }
       this.plugin.saveSettings();
-      yield this.plugin.realizeSettingSyncMode();
-    })));
+      await this.plugin.realizeSettingSyncMode();
+    }));
     addScreenElement("40", containerMiscellaneousEl);
     const containerHatchEl = containerEl.createDiv();
     containerHatchEl.createEl("h3", { text: "Hatch" });
@@ -11531,10 +11061,10 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
       });
       c.createEl("button", { text: "I'm ready, mark this device 'resolved'" }, (e3) => {
         e3.addClass("mod-warning");
-        e3.addEventListener("click", () => __async(this, null, function* () {
-          yield this.plugin.markRemoteResolved();
+        e3.addEventListener("click", async () => {
+          await this.plugin.markRemoteResolved();
           c.remove();
-        }));
+        });
       });
       c.addClass("op-warn");
     } else {
@@ -11544,17 +11074,17 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         });
         c.createEl("button", { text: "I'm ready, unlock the database" }, (e3) => {
           e3.addClass("mod-warning");
-          e3.addEventListener("click", () => __async(this, null, function* () {
-            yield this.plugin.markRemoteUnlocked();
+          e3.addEventListener("click", async () => {
+            await this.plugin.markRemoteUnlocked();
             c.remove();
-          }));
+          });
         });
         c.addClass("op-warn");
       }
     }
-    const hatchWarn = containerHatchEl.createEl("div", { text: `To stop the bootup sequence for fixing problems on databases, you can put redflag.md on top of your vault (Rebooting obsidian is required).` });
+    const hatchWarn = containerHatchEl.createEl("div", { text: `To stop the boot up sequence for fixing problems on databases, you can put redflag.md on top of your vault (Rebooting obsidian is required).` });
     hatchWarn.addClass("op-warn-info");
-    new import_obsidian5.Setting(containerHatchEl).setName("Verify and repair all files").setDesc("Verify and repair all files and update database without restoring").addButton((button) => button.setButtonText("Verify and repair").setDisabled(false).setWarning().onClick(() => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerHatchEl).setName("Verify and repair all files").setDesc("Verify and repair all files and update database without restoring").addButton((button) => button.setButtonText("Verify and repair").setDisabled(false).setWarning().onClick(async () => {
       const files = this.app.vault.getFiles();
       Logger("Verify and repair all files started", LOG_LEVEL.NOTICE, "verify");
       let i2 = 0;
@@ -11564,55 +11094,55 @@ var ObsidianLiveSyncSettingTab = class extends import_obsidian5.PluginSettingTab
         Logger(`${i2}/${files.length}
 ${file.path}`, LOG_LEVEL.NOTICE, "verify");
         try {
-          yield this.plugin.updateIntoDB(file);
+          await this.plugin.updateIntoDB(file);
         } catch (ex) {
           Logger("could not update:");
           Logger(ex);
         }
       }
       Logger("done", LOG_LEVEL.NOTICE, "verify");
-    })));
-    new import_obsidian5.Setting(containerHatchEl).setName("Sanity check").setDesc("Verify").addButton((button) => button.setButtonText("Sanity check").setDisabled(false).setWarning().onClick(() => __async(this, null, function* () {
+    }));
+    new import_obsidian5.Setting(containerHatchEl).setName("Sanity check").setDesc("Verify").addButton((button) => button.setButtonText("Sanity check").setDisabled(false).setWarning().onClick(async () => {
       Logger(`Begin sanity check`, LOG_LEVEL.NOTICE, "sancheck");
-      yield runWithLock("sancheck", true, () => __async(this, null, function* () {
+      await runWithLock("sancheck", true, async () => {
         const db = this.plugin.localDatabase.localDatabase;
-        const wf = yield db.allDocs();
+        const wf = await db.allDocs();
         const filesDatabase = wf.rows.filter((e3) => !e3.id.startsWith("h:") && !e3.id.startsWith("ps:") && e3.id != "obsydian_livesync_version").map((e3) => e3.id);
         let count = 0;
         for (const id of filesDatabase) {
           count++;
           Logger(`${count}/${filesDatabase.length}
 ${id2path(id)}`, LOG_LEVEL.NOTICE, "sancheck");
-          const w2 = yield db.get(id);
-          if (!(yield this.plugin.localDatabase.sanCheck(w2))) {
+          const w2 = await db.get(id);
+          if (!await this.plugin.localDatabase.sanCheck(w2)) {
             Logger(`The file ${id2path(id)} missing child(ren)`, LOG_LEVEL.NOTICE);
           }
         }
-      }));
+      });
       Logger(`Done`, LOG_LEVEL.NOTICE, "sancheck");
-    })));
-    new import_obsidian5.Setting(containerHatchEl).setName("Suspend file watching").setDesc("Stop watching for file change.").addToggle((toggle) => toggle.setValue(this.plugin.settings.suspendFileWatching).onChange((value) => __async(this, null, function* () {
+    }));
+    new import_obsidian5.Setting(containerHatchEl).setName("Suspend file watching").setDesc("Stop watching for file change.").addToggle((toggle) => toggle.setValue(this.plugin.settings.suspendFileWatching).onChange(async (value) => {
       this.plugin.settings.suspendFileWatching = value;
-      yield this.plugin.saveSettings();
-    })));
+      await this.plugin.saveSettings();
+    }));
     containerHatchEl.createEl("div", {
       text: (0, import_obsidian5.sanitizeHTMLToDom)(`Advanced buttons<br>
                 These buttons could break your database easily.`)
     });
-    new import_obsidian5.Setting(containerHatchEl).setName("Reset remote database").setDesc("Reset remote database, this affects only database. If you replicate again, remote database will restored by local database.").addButton((button) => button.setButtonText("Reset").setDisabled(false).setWarning().onClick(() => __async(this, null, function* () {
-      yield this.plugin.tryResetRemoteDatabase();
-    })));
-    new import_obsidian5.Setting(containerHatchEl).setName("Reset local database").setDesc("Reset local database, this affects only database. If you replicate again, local database will restored by remote database.").addButton((button) => button.setButtonText("Reset").setDisabled(false).setWarning().onClick(() => __async(this, null, function* () {
-      yield this.plugin.resetLocalDatabase();
-    })));
-    new import_obsidian5.Setting(containerHatchEl).setName("Initialize local database again").setDesc("WARNING: Reset local database and reconstruct by storage data. It affects local database, but if you replicate remote as is, remote data will be merged or corrupted.").addButton((button) => button.setButtonText("INITIALIZE").setWarning().setDisabled(false).onClick(() => __async(this, null, function* () {
-      yield this.plugin.resetLocalDatabase();
-      yield this.plugin.initializeDatabase();
-    })));
-    new import_obsidian5.Setting(containerHatchEl).setName("Drop old encrypted database").setDesc("WARNING: Please use this button only when you have failed on converting old-style localdatabase at v0.10.0.").addButton((button) => button.setButtonText("Drop").setWarning().setDisabled(false).onClick(() => __async(this, null, function* () {
-      yield this.plugin.resetLocalOldDatabase();
-      yield this.plugin.initializeDatabase();
-    })));
+    new import_obsidian5.Setting(containerHatchEl).setName("Reset remote database").setDesc("Reset remote database, this affects only database. If you replicate again, remote database will restored by local database.").addButton((button) => button.setButtonText("Reset").setDisabled(false).setWarning().onClick(async () => {
+      await this.plugin.tryResetRemoteDatabase();
+    }));
+    new import_obsidian5.Setting(containerHatchEl).setName("Reset local database").setDesc("Reset local database, this affects only database. If you replicate again, local database will restored by remote database.").addButton((button) => button.setButtonText("Reset").setDisabled(false).setWarning().onClick(async () => {
+      await this.plugin.resetLocalDatabase();
+    }));
+    new import_obsidian5.Setting(containerHatchEl).setName("Initialize local database again").setDesc("WARNING: Reset local database and reconstruct by storage data. It affects local database, but if you replicate remote as is, remote data will be merged or corrupted.").addButton((button) => button.setButtonText("INITIALIZE").setWarning().setDisabled(false).onClick(async () => {
+      await this.plugin.resetLocalDatabase();
+      await this.plugin.initializeDatabase();
+    }));
+    new import_obsidian5.Setting(containerHatchEl).setName("Drop old encrypted database").setDesc("WARNING: Please use this button only when you have failed on converting old-style local database at v0.10.0.").addButton((button) => button.setButtonText("Drop").setWarning().setDisabled(false).onClick(async () => {
+      await this.plugin.resetLocalOldDatabase();
+      await this.plugin.initializeDatabase();
+    }));
     addScreenElement("50", containerHatchEl);
     const containerPluginSettings = containerEl.createDiv();
     containerPluginSettings.createEl("h3", { text: "Plugins and settings (beta)" });
@@ -11620,29 +11150,29 @@ ${id2path(id)}`, LOG_LEVEL.NOTICE, "sancheck");
       vaultName.setDisabled(this.plugin.settings.autoSweepPlugins || this.plugin.settings.autoSweepPluginsPeriodic);
       vaultName.setTooltip(this.plugin.settings.autoSweepPlugins || this.plugin.settings.autoSweepPluginsPeriodic ? "You could not change when you enabling auto scan." : "");
     };
-    new import_obsidian5.Setting(containerPluginSettings).setName("Enable plugin synchronization").addToggle((toggle) => toggle.setValue(this.plugin.settings.usePluginSync).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(containerPluginSettings).setName("Enable plugin synchronization").addToggle((toggle) => toggle.setValue(this.plugin.settings.usePluginSync).onChange(async (value) => {
       this.plugin.settings.usePluginSync = value;
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerPluginSettings).setName("Scan plugins automatically").setDesc("Scan plugins before replicating.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoSweepPlugins).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerPluginSettings).setName("Scan plugins automatically").setDesc("Scan plugins before replicating.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoSweepPlugins).onChange(async (value) => {
       this.plugin.settings.autoSweepPlugins = value;
       updateDisabledOfDeviceAndVaultName();
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerPluginSettings).setName("Scan plugins periodically").setDesc("Scan plugins every 1 minute.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoSweepPluginsPeriodic).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerPluginSettings).setName("Scan plugins periodically").setDesc("Scan plugins every 1 minute.").addToggle((toggle) => toggle.setValue(this.plugin.settings.autoSweepPluginsPeriodic).onChange(async (value) => {
       this.plugin.settings.autoSweepPluginsPeriodic = value;
       updateDisabledOfDeviceAndVaultName();
-      yield this.plugin.saveSettings();
-    })));
-    new import_obsidian5.Setting(containerPluginSettings).setName("Notify updates").setDesc("Notify when any device has a newer plugin or its setting.").addToggle((toggle) => toggle.setValue(this.plugin.settings.notifyPluginOrSettingUpdated).onChange((value) => __async(this, null, function* () {
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian5.Setting(containerPluginSettings).setName("Notify updates").setDesc("Notify when any device has a newer plugin or its setting.").addToggle((toggle) => toggle.setValue(this.plugin.settings.notifyPluginOrSettingUpdated).onChange(async (value) => {
       this.plugin.settings.notifyPluginOrSettingUpdated = value;
-      yield this.plugin.saveSettings();
-    })));
+      await this.plugin.saveSettings();
+    }));
     const vaultName = new import_obsidian5.Setting(containerPluginSettings).setName("Device and Vault name").setDesc("").addText((text2) => {
-      text2.setPlaceholder("desktop-main").setValue(this.plugin.deviceAndVaultName).onChange((value) => __async(this, null, function* () {
+      text2.setPlaceholder("desktop-main").setValue(this.plugin.deviceAndVaultName).onChange(async (value) => {
         this.plugin.deviceAndVaultName = value;
-        yield this.plugin.saveSettings();
-      }));
+        await this.plugin.saveSettings();
+      });
     });
     new import_obsidian5.Setting(containerPluginSettings).setName("Open").setDesc("Open the plugin dialog").addButton((button) => {
       button.setButtonText("Open").setDisabled(false).onClick(() => {
@@ -11659,22 +11189,22 @@ ${id2path(id)}`, LOG_LEVEL.NOTICE, "sancheck");
       for (const k in this.plugin.localDatabase.corruptedEntries) {
         const xx = cx.createEl("div", { text: `${k}` });
         const ba = xx.createEl("button", { text: `Delete this` }, (e3) => {
-          e3.addEventListener("click", () => __async(this, null, function* () {
-            yield this.plugin.localDatabase.deleteDBEntry(k);
+          e3.addEventListener("click", async () => {
+            await this.plugin.localDatabase.deleteDBEntry(k);
             xx.remove();
-          }));
+          });
         });
         ba.addClass("mod-warning");
         xx.createEl("button", { text: `Restore from file` }, (e3) => {
-          e3.addEventListener("click", () => __async(this, null, function* () {
-            const f = yield this.app.vault.getFiles().filter((e4) => path2id(e4.path) == k);
+          e3.addEventListener("click", async () => {
+            const f = await this.app.vault.getFiles().filter((e4) => path2id(e4.path) == k);
             if (f.length == 0) {
               Logger("Not found in vault", LOG_LEVEL.NOTICE);
               return;
             }
-            yield this.plugin.updateIntoDB(f[0]);
+            await this.plugin.updateIntoDB(f[0]);
             xx.remove();
-          }));
+          });
         });
         xx.addClass("mod-warning");
       }
@@ -11690,22 +11220,22 @@ ${id2path(id)}`, LOG_LEVEL.NOTICE, "sancheck");
       for (const k of files) {
         const xx = cx.createEl("div", { text: `${id2path(k)}` });
         const ba = xx.createEl("button", { text: `Delete this` }, (e3) => {
-          e3.addEventListener("click", () => __async(this, null, function* () {
-            yield this.plugin.localDatabase.deleteDBEntry(k);
+          e3.addEventListener("click", async () => {
+            await this.plugin.localDatabase.deleteDBEntry(k);
             xx.remove();
-          }));
+          });
         });
         ba.addClass("mod-warning");
         xx.createEl("button", { text: `Restore from file` }, (e3) => {
-          e3.addEventListener("click", () => __async(this, null, function* () {
-            const f = yield this.app.vault.getFiles().filter((e4) => path2id(e4.path) == k);
+          e3.addEventListener("click", async () => {
+            const f = await this.app.vault.getFiles().filter((e4) => path2id(e4.path) == k);
             if (f.length == 0) {
               Logger("Not found in vault", LOG_LEVEL.NOTICE);
               return;
             }
-            yield this.plugin.updateIntoDB(f[0]);
+            await this.plugin.updateIntoDB(f[0]);
             xx.remove();
-          }));
+          });
         });
         xx.addClass("mod-warning");
       }
@@ -11738,82 +11268,78 @@ var DocumentHistoryModal = class extends import_obsidian6.Modal {
       this.showDiff = true;
     }
   }
-  loadFile() {
-    return __async(this, null, function* () {
-      const db = this.plugin.localDatabase;
-      try {
-        const w = yield db.localDatabase.get(path2id(this.file), { revs_info: true });
-        this.revs_info = w._revs_info.filter((e3) => e3.status == "available");
-        this.range.max = `${this.revs_info.length - 1}`;
-        this.range.value = this.range.max;
-        this.fileInfo.setText(`${this.file} / ${this.revs_info.length} revisions`);
-        yield this.loadRevs();
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          this.range.max = "0";
-          this.range.value = "";
-          this.range.disabled = true;
-          this.showDiff;
-          this.contentView.setText(`History of this file was not recorded.`);
-        }
+  async loadFile() {
+    const db = this.plugin.localDatabase;
+    try {
+      const w = await db.localDatabase.get(path2id(this.file), { revs_info: true });
+      this.revs_info = w._revs_info.filter((e3) => e3.status == "available");
+      this.range.max = `${this.revs_info.length - 1}`;
+      this.range.value = this.range.max;
+      this.fileInfo.setText(`${this.file} / ${this.revs_info.length} revisions`);
+      await this.loadRevs();
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        this.range.max = "0";
+        this.range.value = "";
+        this.range.disabled = true;
+        this.showDiff;
+        this.contentView.setText(`History of this file was not recorded.`);
       }
-    });
+    }
   }
-  loadRevs() {
-    return __async(this, null, function* () {
-      if (this.revs_info.length == 0)
-        return;
-      const db = this.plugin.localDatabase;
-      const index = this.revs_info.length - 1 - this.range.value / 1;
-      const rev = this.revs_info[index];
-      const w = yield db.getDBEntry(path2id(this.file), { rev: rev.rev }, false, false, true);
-      this.currentText = "";
-      this.currentDeleted = false;
-      if (w === false) {
-        this.currentDeleted = true;
-        this.info.innerHTML = "";
-        this.contentView.innerHTML = `Could not read this revision<br>(${rev.rev})`;
-      } else {
-        this.currentDoc = w;
-        this.info.innerHTML = `Modified:${new Date(w.mtime).toLocaleString()}`;
-        let result = "";
-        const w1data = w.datatype == "plain" ? w.data : base64ToString(w.data);
-        this.currentDeleted = w.deleted;
-        this.currentText = w1data;
-        if (this.showDiff) {
-          const prevRevIdx = this.revs_info.length - 1 - (this.range.value / 1 - 1);
-          if (prevRevIdx >= 0 && prevRevIdx < this.revs_info.length) {
-            const oldRev = this.revs_info[prevRevIdx].rev;
-            const w2 = yield db.getDBEntry(path2id(this.file), { rev: oldRev }, false, false, true);
-            if (w2 != false) {
-              const dmp = new import_diff_match_patch2.diff_match_patch();
-              const w2data = w2.datatype == "plain" ? w2.data : base64ToString(w2.data);
-              const diff = dmp.diff_main(w2data, w1data);
-              dmp.diff_cleanupSemantic(diff);
-              for (const v of diff) {
-                const x1 = v[0];
-                const x2 = v[1];
-                if (x1 == import_diff_match_patch2.DIFF_DELETE) {
-                  result += "<span class='history-deleted'>" + escapeStringToHTML(x2) + "</span>";
-                } else if (x1 == import_diff_match_patch2.DIFF_EQUAL) {
-                  result += "<span class='history-normal'>" + escapeStringToHTML(x2) + "</span>";
-                } else if (x1 == import_diff_match_patch2.DIFF_INSERT) {
-                  result += "<span class='history-added'>" + escapeStringToHTML(x2) + "</span>";
-                }
+  async loadRevs() {
+    if (this.revs_info.length == 0)
+      return;
+    const db = this.plugin.localDatabase;
+    const index = this.revs_info.length - 1 - this.range.value / 1;
+    const rev = this.revs_info[index];
+    const w = await db.getDBEntry(path2id(this.file), { rev: rev.rev }, false, false, true);
+    this.currentText = "";
+    this.currentDeleted = false;
+    if (w === false) {
+      this.currentDeleted = true;
+      this.info.innerHTML = "";
+      this.contentView.innerHTML = `Could not read this revision<br>(${rev.rev})`;
+    } else {
+      this.currentDoc = w;
+      this.info.innerHTML = `Modified:${new Date(w.mtime).toLocaleString()}`;
+      let result = "";
+      const w1data = w.datatype == "plain" ? w.data : base64ToString(w.data);
+      this.currentDeleted = w.deleted;
+      this.currentText = w1data;
+      if (this.showDiff) {
+        const prevRevIdx = this.revs_info.length - 1 - (this.range.value / 1 - 1);
+        if (prevRevIdx >= 0 && prevRevIdx < this.revs_info.length) {
+          const oldRev = this.revs_info[prevRevIdx].rev;
+          const w2 = await db.getDBEntry(path2id(this.file), { rev: oldRev }, false, false, true);
+          if (w2 != false) {
+            const dmp = new import_diff_match_patch2.diff_match_patch();
+            const w2data = w2.datatype == "plain" ? w2.data : base64ToString(w2.data);
+            const diff = dmp.diff_main(w2data, w1data);
+            dmp.diff_cleanupSemantic(diff);
+            for (const v of diff) {
+              const x1 = v[0];
+              const x2 = v[1];
+              if (x1 == import_diff_match_patch2.DIFF_DELETE) {
+                result += "<span class='history-deleted'>" + escapeStringToHTML(x2) + "</span>";
+              } else if (x1 == import_diff_match_patch2.DIFF_EQUAL) {
+                result += "<span class='history-normal'>" + escapeStringToHTML(x2) + "</span>";
+              } else if (x1 == import_diff_match_patch2.DIFF_INSERT) {
+                result += "<span class='history-added'>" + escapeStringToHTML(x2) + "</span>";
               }
-              result = result.replace(/\n/g, "<br>");
-            } else {
-              result = escapeStringToHTML(w1data);
             }
+            result = result.replace(/\n/g, "<br>");
           } else {
             result = escapeStringToHTML(w1data);
           }
         } else {
           result = escapeStringToHTML(w1data);
         }
-        this.contentView.innerHTML = (this.currentDeleted ? "(At this revision, the file has been deleted)\n" : "") + result;
+      } else {
+        result = escapeStringToHTML(w1data);
       }
-    });
+      this.contentView.innerHTML = (this.currentDeleted ? "(At this revision, the file has been deleted)\n" : "") + result;
+    }
   }
   onOpen() {
     const { contentEl } = this;
@@ -11857,42 +11383,40 @@ var DocumentHistoryModal = class extends import_obsidian6.Modal {
     const buttons = contentEl.createDiv("");
     buttons.createEl("button", { text: "Copy to clipboard" }, (e3) => {
       e3.addClass("mod-cta");
-      e3.addEventListener("click", () => __async(this, null, function* () {
-        yield navigator.clipboard.writeText(this.currentText);
+      e3.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(this.currentText);
         Logger(`Old content copied to clipboard`, LOG_LEVEL.NOTICE);
-      }));
-    });
-    function focusFile(path) {
-      return __async(this, null, function* () {
-        const targetFile = app.vault.getFiles().find((f) => f.path === path);
-        if (targetFile) {
-          const leaf = app.workspace.getLeaf(false);
-          yield leaf.openFile(targetFile);
-        } else {
-          Logger("The file cound not view on the editor", LOG_LEVEL.NOTICE);
-        }
       });
+    });
+    async function focusFile(path) {
+      const targetFile = app.vault.getFiles().find((f) => f.path === path);
+      if (targetFile) {
+        const leaf = app.workspace.getLeaf(false);
+        await leaf.openFile(targetFile);
+      } else {
+        Logger("The file could not view on the editor", LOG_LEVEL.NOTICE);
+      }
     }
     buttons.createEl("button", { text: "Back to this revision" }, (e3) => {
       e3.addClass("mod-cta");
-      e3.addEventListener("click", () => __async(this, null, function* () {
+      e3.addEventListener("click", async () => {
         var _a, _b;
         const pathToWrite = this.file.startsWith("i:") ? this.file.substring("i:".length) : this.file;
         if (!isValidPath(pathToWrite)) {
-          Logger("Path is not vaild to write content.", LOG_LEVEL.INFO);
+          Logger("Path is not valid to write content.", LOG_LEVEL.INFO);
         }
         if (((_a = this.currentDoc) == null ? void 0 : _a.datatype) == "plain") {
-          yield this.app.vault.adapter.write(pathToWrite, this.currentDoc.data);
-          yield focusFile(pathToWrite);
+          await this.app.vault.adapter.write(pathToWrite, this.currentDoc.data);
+          await focusFile(pathToWrite);
           this.close();
         } else if (((_b = this.currentDoc) == null ? void 0 : _b.datatype) == "newnote") {
-          yield this.app.vault.adapter.writeBinary(pathToWrite, base64ToArrayBuffer(this.currentDoc.data));
-          yield focusFile(pathToWrite);
+          await this.app.vault.adapter.writeBinary(pathToWrite, base64ToArrayBuffer(this.currentDoc.data));
+          await focusFile(pathToWrite);
           this.close();
         } else {
           Logger(`Could not parse entry`, LOG_LEVEL.NOTICE);
         }
-      }));
+      });
     });
   }
   onClose() {
@@ -12264,35 +11788,6 @@ var SvelteComponent = class {
     }
   }
 };
-
-// node_modules/tslib/modules/index.js
-var import_tslib = __toModule(require_tslib());
-var {
-  __extends,
-  __assign,
-  __rest,
-  __decorate,
-  __param,
-  __metadata,
-  __awaiter,
-  __generator,
-  __exportStar,
-  __createBinding,
-  __values,
-  __read,
-  __spread,
-  __spreadArrays,
-  __spreadArray,
-  __await,
-  __asyncGenerator,
-  __asyncDelegator,
-  __asyncValues,
-  __makeTemplateObject,
-  __importStar,
-  __importDefault,
-  __classPrivateFieldGet,
-  __classPrivateFieldSet
-} = import_tslib.default;
 
 // src/PluginPane.svelte
 function add_css(target) {
@@ -12921,26 +12416,24 @@ function instance($$self, $$props, $$invalidate) {
   function clearSelection() {
     $$invalidate(3, targetList = {});
   }
-  function updateList() {
-    return __awaiter(this, void 0, void 0, function* () {
-      let x = yield plugin.getPluginList();
-      $$invalidate(18, ownPlugins = x.thisDevicePlugins);
-      $$invalidate(16, plugins = Object.values(x.allPlugins));
-      let targetListItems = Array.from(new Set(plugins.map((e3) => e3.deviceVaultName + "---" + e3.manifest.id)));
-      let newTargetList = {};
-      for (const id of targetListItems) {
-        for (const tag of ["---plugin", "---setting"]) {
-          newTargetList[id + tag] = id + tag in targetList && targetList[id + tag];
-        }
+  async function updateList() {
+    let x = await plugin.getPluginList();
+    $$invalidate(18, ownPlugins = x.thisDevicePlugins);
+    $$invalidate(16, plugins = Object.values(x.allPlugins));
+    let targetListItems = Array.from(new Set(plugins.map((e3) => e3.deviceVaultName + "---" + e3.manifest.id)));
+    let newTargetList = {};
+    for (const id of targetListItems) {
+      for (const tag of ["---plugin", "---setting"]) {
+        newTargetList[id + tag] = id + tag in targetList && targetList[id + tag];
       }
-      $$invalidate(3, targetList = newTargetList);
-      saveTargetList();
-    });
+    }
+    $$invalidate(3, targetList = newTargetList);
+    saveTargetList();
   }
-  onMount(() => __awaiter(void 0, void 0, void 0, function* () {
+  onMount(async () => {
     loadTargetList();
-    yield updateList();
-  }));
+    await updateList();
+  });
   function toggleShowOwnPlugins() {
     $$invalidate(1, showOwnPlugins = !showOwnPlugins);
   }
@@ -12955,47 +12448,39 @@ function instance($$self, $$props, $$invalidate) {
       }
     }
   }
-  function sweepPlugins() {
-    return __awaiter(this, void 0, void 0, function* () {
-      yield plugin.app.plugins.loadManifests();
-      yield plugin.sweepPlugin(true);
-      updateList();
-    });
+  async function sweepPlugins() {
+    await plugin.app.plugins.loadManifests();
+    await plugin.sweepPlugin(true);
+    updateList();
   }
-  function applyPlugins() {
-    return __awaiter(this, void 0, void 0, function* () {
-      for (const c in targetList) {
-        if (targetList[c] == true) {
-          const [deviceAndVault, id, opt] = c.split("---");
-          if (deviceAndVault in deviceAndPlugins) {
-            const entry = deviceAndPlugins[deviceAndVault].find((e3) => e3.manifest.id == id);
-            if (entry) {
-              if (opt == "plugin") {
-                if (entry.versionFlag != "EVEN")
-                  yield plugin.applyPlugin(entry);
-              } else if (opt == "setting") {
-                if (entry.mtimeFlag != "EVEN")
-                  yield plugin.applyPluginData(entry);
-              }
+  async function applyPlugins() {
+    for (const c in targetList) {
+      if (targetList[c] == true) {
+        const [deviceAndVault, id, opt] = c.split("---");
+        if (deviceAndVault in deviceAndPlugins) {
+          const entry = deviceAndPlugins[deviceAndVault].find((e3) => e3.manifest.id == id);
+          if (entry) {
+            if (opt == "plugin") {
+              if (entry.versionFlag != "EVEN")
+                await plugin.applyPlugin(entry);
+            } else if (opt == "setting") {
+              if (entry.mtimeFlag != "EVEN")
+                await plugin.applyPluginData(entry);
             }
           }
         }
       }
-      yield plugin.app.plugins.loadManifests();
-      yield plugin.sweepPlugin(true);
-      updateList();
-    });
+    }
+    await plugin.app.plugins.loadManifests();
+    await plugin.sweepPlugin(true);
+    updateList();
   }
-  function checkUpdates() {
-    return __awaiter(this, void 0, void 0, function* () {
-      yield plugin.checkPluginUpdate();
-    });
+  async function checkUpdates() {
+    await plugin.checkPluginUpdate();
   }
-  function replicateAndRefresh() {
-    return __awaiter(this, void 0, void 0, function* () {
-      yield plugin.replicate(true);
-      updateList();
-    });
+  async function replicateAndRefresh() {
+    await plugin.replicate(true);
+    updateList();
   }
   const click_handler = (deviceName) => toggleAll(deviceName);
   const click_handler_1 = (plugin2) => toggleTarget(plugin2.deviceVaultName + "---" + plugin2.manifest.id + "---plugin");
@@ -13015,12 +12500,13 @@ function instance($$self, $$props, $$invalidate) {
           if (!(p.deviceVaultName in deviceAndPlugins)) {
             $$invalidate(17, deviceAndPlugins[p.deviceVaultName] = [], deviceAndPlugins);
           }
-          let dispInfo = Object.assign(Object.assign({}, p), {
+          let dispInfo = {
+            ...p,
             versionInfo: "",
             mtimeInfo: "",
             versionFlag: "",
             mtimeFlag: ""
-          });
+          };
           dispInfo.versionInfo = p.manifest.version;
           let x = new Date().getTime() / 1e3;
           let mtime = p.mtime / 1e3;
@@ -13305,391 +12791,386 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
       new DocumentHistoryModal(this.app, this, file).open();
     }
   }
-  fileHistory() {
-    return __async(this, null, function* () {
-      const pageLimit = 1e3;
-      let nextKey = "";
-      const notes = [];
-      do {
-        const docs = yield this.localDatabase.localDatabase.allDocs({ limit: pageLimit, startkey: nextKey, include_docs: true });
-        nextKey = "";
-        for (const row of docs.rows) {
-          const doc = row.doc;
-          nextKey = `${row.id}\u{10FFFF}`;
-          if (!("type" in doc))
-            continue;
-          if (doc.type == "newnote" || doc.type == "plain") {
-            notes.push({ path: id2path(doc._id), mtime: doc.mtime });
-          }
-          if (isChunk(nextKey)) {
-            nextKey = CHeaderEnd;
-          }
+  async fileHistory() {
+    const pageLimit = 1e3;
+    let nextKey = "";
+    const notes = [];
+    do {
+      const docs = await this.localDatabase.localDatabase.allDocs({ limit: pageLimit, startkey: nextKey, include_docs: true });
+      nextKey = "";
+      for (const row of docs.rows) {
+        const doc = row.doc;
+        nextKey = `${row.id}\u{10FFFF}`;
+        if (!("type" in doc))
+          continue;
+        if (doc.type == "newnote" || doc.type == "plain") {
+          notes.push({ path: id2path(doc._id), mtime: doc.mtime });
         }
-      } while (nextKey != "");
-      notes.sort((a, b) => b.mtime - a.mtime);
-      const notesList = notes.map((e3) => e3.path);
-      const target = yield askSelectString(this.app, "File to view History", notesList);
-      if (target) {
-        this.showHistory(target);
+        if (isChunk(nextKey)) {
+          nextKey = CHeaderEnd;
+        }
       }
-    });
+    } while (nextKey != "");
+    notes.sort((a, b) => b.mtime - a.mtime);
+    const notesList = notes.map((e3) => e3.path);
+    const target = await askSelectString(this.app, "File to view History", notesList);
+    if (target) {
+      this.showHistory(target);
+    }
   }
-  pickFileForResolve() {
-    return __async(this, null, function* () {
-      const pageLimit = 1e3;
-      let nextKey = "";
-      const notes = [];
-      do {
-        const docs = yield this.localDatabase.localDatabase.allDocs({ limit: pageLimit, startkey: nextKey, conflicts: true, include_docs: true });
-        nextKey = "";
-        for (const row of docs.rows) {
-          const doc = row.doc;
-          nextKey = `${row.id}\u{10FFFF}`;
-          if (!("_conflicts" in doc))
-            continue;
-          if (isInternalChunk(row.id))
-            continue;
-          if (doc._deleted)
-            continue;
-          if ("deleted" in doc && doc.deleted)
-            continue;
-          if (doc.type == "newnote" || doc.type == "plain") {
-            notes.push({ path: id2path(doc._id), mtime: doc.mtime });
-          }
-          if (isChunk(nextKey)) {
-            nextKey = CHeaderEnd;
-          }
+  async pickFileForResolve() {
+    const pageLimit = 1e3;
+    let nextKey = "";
+    const notes = [];
+    do {
+      const docs = await this.localDatabase.localDatabase.allDocs({ limit: pageLimit, startkey: nextKey, conflicts: true, include_docs: true });
+      nextKey = "";
+      for (const row of docs.rows) {
+        const doc = row.doc;
+        nextKey = `${row.id}\u{10FFFF}`;
+        if (!("_conflicts" in doc))
+          continue;
+        if (isInternalChunk(row.id))
+          continue;
+        if (doc._deleted)
+          continue;
+        if ("deleted" in doc && doc.deleted)
+          continue;
+        if (doc.type == "newnote" || doc.type == "plain") {
+          notes.push({ path: id2path(doc._id), mtime: doc.mtime });
         }
-      } while (nextKey != "");
-      notes.sort((a, b) => b.mtime - a.mtime);
-      const notesList = notes.map((e3) => e3.path);
-      if (notesList.length == 0) {
-        Logger("There are no conflicted documents", LOG_LEVEL.NOTICE);
-        return;
-      }
-      const target = yield askSelectString(this.app, "File to view History", notesList);
-      if (target) {
-        if (isInternalChunk(target)) {
-        } else {
-          yield this.showIfConflicted(this.app.vault.getAbstractFileByPath(target));
+        if (isChunk(nextKey)) {
+          nextKey = CHeaderEnd;
         }
       }
-    });
+    } while (nextKey != "");
+    notes.sort((a, b) => b.mtime - a.mtime);
+    const notesList = notes.map((e3) => e3.path);
+    if (notesList.length == 0) {
+      Logger("There are no conflicted documents", LOG_LEVEL.NOTICE);
+      return;
+    }
+    const target = await askSelectString(this.app, "File to view History", notesList);
+    if (target) {
+      if (isInternalChunk(target)) {
+      } else {
+        await this.showIfConflicted(this.app.vault.getAbstractFileByPath(target));
+      }
+    }
   }
-  onload() {
-    return __async(this, null, function* () {
-      setLogger(this.addLog.bind(this));
-      Logger("loading plugin");
-      const manifestVersion = "0.14.2";
-      const packageVersion = "0.14.2";
-      Logger(`Self-hosted LiveSync v${manifestVersion} ${packageVersion} `);
-      const lsname = "obsidian-live-sync-ver" + this.getVaultName();
-      const last_version = localStorage.getItem(lsname);
-      yield this.loadSettings();
-      const lastVersion = ~~(versionNumberString2Number(manifestVersion) / 1e3);
-      if (lastVersion > this.settings.lastReadUpdates) {
-        Logger("Self-hosted LiveSync has undergone a major upgrade. Please open the setting dialog, and check the information pane.", LOG_LEVEL.NOTICE);
-      }
-      if (this.app.isMobile) {
-        this.isMobile = true;
-        this.settings.disableRequestURI = true;
-      }
-      if (last_version && Number(last_version) < VER) {
-        this.settings.liveSync = false;
-        this.settings.syncOnSave = false;
-        this.settings.syncOnStart = false;
-        this.settings.syncOnFileOpen = false;
-        this.settings.periodicReplication = false;
-        this.settings.versionUpFlash = "Self-hosted LiveSync has been upgraded and some behaviors have changed incompatibly. All automatic synchronization is now disabled temporary. Ensure that other devices are also upgraded, and enable synchronization again.";
-        this.saveSettings();
-      }
-      localStorage.setItem(lsname, `${VER}`);
-      yield this.openDatabase();
-      (0, import_obsidian8.addIcon)("replicate", `<g transform="matrix(1.15 0 0 1.15 -8.31 -9.52)" fill="currentColor" fill-rule="evenodd">
+  async onload() {
+    setLogger(this.addLog.bind(this));
+    Logger("loading plugin");
+    const manifestVersion = "0.14.8";
+    const packageVersion = "0.14.8";
+    Logger(`Self-hosted LiveSync v${manifestVersion} ${packageVersion} `);
+    const lsKey = "obsidian-live-sync-ver" + this.getVaultName();
+    const last_version = localStorage.getItem(lsKey);
+    await this.loadSettings();
+    const lastVersion = ~~(versionNumberString2Number(manifestVersion) / 1e3);
+    if (lastVersion > this.settings.lastReadUpdates) {
+      Logger("Self-hosted LiveSync has undergone a major upgrade. Please open the setting dialog, and check the information pane.", LOG_LEVEL.NOTICE);
+    }
+    if (this.app.isMobile) {
+      this.isMobile = true;
+      this.settings.disableRequestURI = true;
+    }
+    if (last_version && Number(last_version) < VER) {
+      this.settings.liveSync = false;
+      this.settings.syncOnSave = false;
+      this.settings.syncOnStart = false;
+      this.settings.syncOnFileOpen = false;
+      this.settings.periodicReplication = false;
+      this.settings.versionUpFlash = "Self-hosted LiveSync has been upgraded and some behaviors have changed incompatibly. All automatic synchronization is now disabled temporary. Ensure that other devices are also upgraded, and enable synchronization again.";
+      this.saveSettings();
+    }
+    localStorage.setItem(lsKey, `${VER}`);
+    await this.openDatabase();
+    (0, import_obsidian8.addIcon)("replicate", `<g transform="matrix(1.15 0 0 1.15 -8.31 -9.52)" fill="currentColor" fill-rule="evenodd">
             <path d="m85 22.2c-0.799-4.74-4.99-8.37-9.88-8.37-0.499 0-1.1 0.101-1.6 0.101-2.4-3.03-6.09-4.94-10.3-4.94-6.09 0-11.2 4.14-12.8 9.79-5.59 1.11-9.78 6.05-9.78 12 0 6.76 5.39 12.2 12 12.2h29.9c5.79 0 10.1-4.74 10.1-10.6 0-4.84-3.29-8.88-7.68-10.2zm-2.99 14.7h-29.5c-2.3-0.202-4.29-1.51-5.29-3.53-0.899-2.12-0.699-4.54 0.698-6.46 1.2-1.61 2.99-2.52 4.89-2.52 0.299 0 0.698 0 0.998 0.101l1.8 0.303v-2.02c0-3.63 2.4-6.76 5.89-7.57 0.599-0.101 1.2-0.202 1.8-0.202 2.89 0 5.49 1.62 6.79 4.24l0.598 1.21 1.3-0.504c0.599-0.202 1.3-0.303 2-0.303 1.3 0 2.5 0.404 3.59 1.11 1.6 1.21 2.6 3.13 2.6 5.15v1.61h2c2.6 0 4.69 2.12 4.69 4.74-0.099 2.52-2.2 4.64-4.79 4.64z"/>
             <path d="m53.2 49.2h-41.6c-1.8 0-3.2 1.4-3.2 3.2v28.6c0 1.8 1.4 3.2 3.2 3.2h15.8v4h-7v6h24v-6h-7v-4h15.8c1.8 0 3.2-1.4 3.2-3.2v-28.6c0-1.8-1.4-3.2-3.2-3.2zm-2.8 29h-36v-23h36z"/>
             <path d="m73 49.2c1.02 1.29 1.53 2.97 1.53 4.56 0 2.97-1.74 5.65-4.39 7.04v-4.06l-7.46 7.33 7.46 7.14v-4.06c7.66-1.98 12.2-9.61 10-17-0.102-0.297-0.205-0.595-0.307-0.892z"/>
             <path d="m24.1 43c-0.817-0.991-1.53-2.97-1.53-4.56 0-2.97 1.74-5.65 4.39-7.04v4.06l7.46-7.33-7.46-7.14v4.06c-7.66 1.98-12.2 9.61-10 17 0.102 0.297 0.205 0.595 0.307 0.892z"/>
            </g>`);
-      (0, import_obsidian8.addIcon)("view-log", `<g transform="matrix(1.28 0 0 1.28 -131 -411)" fill="currentColor" fill-rule="evenodd">
+    (0, import_obsidian8.addIcon)("view-log", `<g transform="matrix(1.28 0 0 1.28 -131 -411)" fill="currentColor" fill-rule="evenodd">
         <path d="m103 330h76v12h-76z"/>
         <path d="m106 346v44h70v-44zm45 16h-20v-8h20z"/>
        </g>`);
-      this.addRibbonIcon("replicate", "Replicate", () => __async(this, null, function* () {
-        yield this.replicate(true);
-      }));
-      this.addRibbonIcon("view-log", "Show log", () => {
-        new LogDisplayModal(this.app, this).open();
-      });
-      this.statusBar = this.addStatusBarItem();
-      this.statusBar.addClass("syncstatusbar");
-      this.refreshStatusText = this.refreshStatusText.bind(this);
-      this.statusBar2 = this.addStatusBarItem();
-      this.watchVaultChange = this.watchVaultChange.bind(this);
-      this.watchVaultCreate = this.watchVaultCreate.bind(this);
-      this.watchVaultDelete = this.watchVaultDelete.bind(this);
-      this.watchVaultRename = this.watchVaultRename.bind(this);
-      this.watchWorkspaceOpen = (0, import_obsidian8.debounce)(this.watchWorkspaceOpen.bind(this), 1e3, false);
-      this.watchWindowVisibility = (0, import_obsidian8.debounce)(this.watchWindowVisibility.bind(this), 1e3, false);
-      this.watchOnline = (0, import_obsidian8.debounce)(this.watchOnline.bind(this), 500, false);
-      this.parseReplicationResult = this.parseReplicationResult.bind(this);
-      this.periodicSync = this.periodicSync.bind(this);
-      this.setPeriodicSync = this.setPeriodicSync.bind(this);
-      this.getPluginList = this.getPluginList.bind(this);
-      this.addSettingTab(new ObsidianLiveSyncSettingTab(this.app, this));
-      this.app.workspace.onLayoutReady(() => __async(this, null, function* () {
-        if (this.localDatabase.isReady)
-          try {
-            if (this.isRedFlagRaised()) {
-              this.settings.batchSave = false;
-              this.settings.liveSync = false;
-              this.settings.periodicReplication = false;
-              this.settings.syncOnSave = false;
-              this.settings.syncOnStart = false;
-              this.settings.syncOnFileOpen = false;
-              this.settings.autoSweepPlugins = false;
-              this.settings.usePluginSync = false;
-              this.settings.suspendFileWatching = true;
-              this.settings.syncInternalFiles = false;
-              yield this.saveSettings();
-              yield this.openDatabase();
-              const warningMessage = "The red flag is raised! The whole initialize steps are skipped, and any file changes are not captured.";
-              Logger(warningMessage, LOG_LEVEL.NOTICE);
-              this.setStatusBarText(warningMessage);
-            } else {
-              if (this.settings.suspendFileWatching) {
-                Logger("'Suspend file watching' turned on. Are you sure this is what you intended? Every modification on the vault will be ignored.", LOG_LEVEL.NOTICE);
-              }
-              const isInitialized = yield this.initializeDatabase();
-              if (!isInitialized) {
-                return false;
-              }
-            }
-            yield this.realizeSettingSyncMode();
-            this.registerWatchEvents();
-            if (this.settings.syncOnStart) {
-              this.localDatabase.openReplication(this.settings, false, false, this.parseReplicationResult);
-            }
-          } catch (ex) {
-            Logger("Error while loading Self-hosted LiveSync", LOG_LEVEL.NOTICE);
-            Logger(ex, LOG_LEVEL.VERBOSE);
-          }
-      }));
-      const configURIBase = "obsidian://setuplivesync?settings=";
-      this.addCommand({
-        id: "livesync-copysetupuri",
-        name: "Copy setup URI (beta)",
-        callback: () => __async(this, null, function* () {
-          const encryptingPassphrase = yield askString(this.app, "Encrypt your settings", "Passphrase", "");
-          if (encryptingPassphrase === false)
-            return;
-          const encryptedSetting = encodeURIComponent(yield encrypt(JSON.stringify(this.settings), encryptingPassphrase));
-          const uri = `${configURIBase}${encryptedSetting}`;
-          yield navigator.clipboard.writeText(uri);
-          Logger("Setup URI copied to clipboard", LOG_LEVEL.NOTICE);
-        })
-      });
-      this.addCommand({
-        id: "livesync-opensetupuri",
-        name: "Open setup URI (beta)",
-        callback: () => __async(this, null, function* () {
-          const setupURI = yield askString(this.app, "Set up manually", "Set up URI", `${configURIBase}aaaaa`);
-          if (setupURI === false)
-            return;
-          if (!setupURI.startsWith(`${configURIBase}`)) {
-            Logger("Set up URI looks wrong.", LOG_LEVEL.NOTICE);
-            return;
-          }
-          const config = decodeURIComponent(setupURI.substring(configURIBase.length));
-          console.dir(config);
-          yield setupWizard(config);
-        })
-      });
-      const setupWizard = (confString) => __async(this, null, function* () {
+    this.addRibbonIcon("replicate", "Replicate", async () => {
+      await this.replicate(true);
+    });
+    this.addRibbonIcon("view-log", "Show log", () => {
+      new LogDisplayModal(this.app, this).open();
+    });
+    this.statusBar = this.addStatusBarItem();
+    this.statusBar.addClass("syncstatusbar");
+    this.refreshStatusText = this.refreshStatusText.bind(this);
+    this.statusBar2 = this.addStatusBarItem();
+    this.watchVaultChange = this.watchVaultChange.bind(this);
+    this.watchVaultCreate = this.watchVaultCreate.bind(this);
+    this.watchVaultDelete = this.watchVaultDelete.bind(this);
+    this.watchVaultRename = this.watchVaultRename.bind(this);
+    this.watchWorkspaceOpen = (0, import_obsidian8.debounce)(this.watchWorkspaceOpen.bind(this), 1e3, false);
+    this.watchWindowVisibility = (0, import_obsidian8.debounce)(this.watchWindowVisibility.bind(this), 1e3, false);
+    this.watchOnline = (0, import_obsidian8.debounce)(this.watchOnline.bind(this), 500, false);
+    this.parseReplicationResult = this.parseReplicationResult.bind(this);
+    this.periodicSync = this.periodicSync.bind(this);
+    this.setPeriodicSync = this.setPeriodicSync.bind(this);
+    this.getPluginList = this.getPluginList.bind(this);
+    this.addSettingTab(new ObsidianLiveSyncSettingTab(this.app, this));
+    this.app.workspace.onLayoutReady(async () => {
+      if (this.localDatabase.isReady)
         try {
-          const oldConf = JSON.parse(JSON.stringify(this.settings));
-          const encryptingPassphrase = yield askString(this.app, "Passphrase", "Passphrase for your settings", "");
-          if (encryptingPassphrase === false)
-            return;
-          const newConf = yield JSON.parse(yield decrypt(confString, encryptingPassphrase));
-          if (newConf) {
-            const result = yield askYesNo(this.app, "Importing LiveSync's conf, OK?");
-            if (result == "yes") {
-              const newSettingW = Object.assign({}, this.settings, newConf);
-              this.localDatabase.closeReplication();
-              this.settings.suspendFileWatching = true;
-              console.dir(newSettingW);
-              const keepLocalDB = yield askYesNo(this.app, "Keep local DB?");
-              const keepRemoteDB = yield askYesNo(this.app, "Keep remote DB?");
-              if (keepLocalDB == "yes" && keepRemoteDB == "yes") {
-                this.settings = newSettingW;
-                yield this.saveSettings();
-                const replicate = yield askYesNo(this.app, "Unlock and replicate?");
-                if (replicate == "yes") {
-                  yield this.replicate(true);
-                  yield this.markRemoteUnlocked();
-                }
-                Logger("Configuration loaded.", LOG_LEVEL.NOTICE);
-                return;
-              }
-              if (keepLocalDB == "no" && keepRemoteDB == "no") {
-                const reset = yield askYesNo(this.app, "Drop everything?");
-                if (reset != "yes") {
-                  Logger("Cancelled", LOG_LEVEL.NOTICE);
-                  this.settings = oldConf;
-                  return;
-                }
-              }
-              let initDB;
-              yield this.saveSettings();
-              if (keepLocalDB == "no") {
-                this.resetLocalOldDatabase();
-                this.resetLocalDatabase();
-                this.localDatabase.initializeDatabase();
-                const rebuild = yield askYesNo(this.app, "Rebuild the database?");
-                if (rebuild == "yes") {
-                  initDB = this.initializeDatabase(true);
-                } else {
-                  this.markRemoteResolved();
-                }
-              }
-              if (keepRemoteDB == "no") {
-                yield this.tryResetRemoteDatabase();
-                yield this.markRemoteLocked();
-              }
-              if (keepLocalDB == "no" || keepRemoteDB == "no") {
-                const replicate = yield askYesNo(this.app, "Replicate once?");
-                if (replicate == "yes") {
-                  if (initDB != null) {
-                    yield initDB;
-                  }
-                  yield this.replicate(true);
-                }
-              }
-            }
-            Logger("Configuration loaded.", LOG_LEVEL.NOTICE);
+          if (this.isRedFlagRaised()) {
+            this.settings.batchSave = false;
+            this.settings.liveSync = false;
+            this.settings.periodicReplication = false;
+            this.settings.syncOnSave = false;
+            this.settings.syncOnStart = false;
+            this.settings.syncOnFileOpen = false;
+            this.settings.autoSweepPlugins = false;
+            this.settings.usePluginSync = false;
+            this.settings.suspendFileWatching = true;
+            this.settings.syncInternalFiles = false;
+            await this.saveSettings();
+            await this.openDatabase();
+            const warningMessage = "The red flag is raised! The whole initialize steps are skipped, and any file changes are not captured.";
+            Logger(warningMessage, LOG_LEVEL.NOTICE);
+            this.setStatusBarText(warningMessage);
           } else {
-            Logger("Cancelled.", LOG_LEVEL.NOTICE);
+            if (this.settings.suspendFileWatching) {
+              Logger("'Suspend file watching' turned on. Are you sure this is what you intended? Every modification on the vault will be ignored.", LOG_LEVEL.NOTICE);
+            }
+            const isInitialized = await this.initializeDatabase();
+            if (!isInitialized) {
+              return false;
+            }
+          }
+          await this.realizeSettingSyncMode();
+          this.registerWatchEvents();
+          if (this.settings.syncOnStart) {
+            this.localDatabase.openReplication(this.settings, false, false, this.parseReplicationResult);
           }
         } catch (ex) {
-          Logger("Couldn't parse or decrypt configuration uri.", LOG_LEVEL.NOTICE);
+          Logger("Error while loading Self-hosted LiveSync", LOG_LEVEL.NOTICE);
+          Logger(ex, LOG_LEVEL.VERBOSE);
         }
-      });
-      this.registerObsidianProtocolHandler("setuplivesync", (conf) => __async(this, null, function* () {
-        yield setupWizard(conf.settings);
-      }));
-      this.addCommand({
-        id: "livesync-replicate",
-        name: "Replicate now",
-        callback: () => __async(this, null, function* () {
-          yield this.replicate();
-        })
-      });
-      this.addCommand({
-        id: "livesync-dump",
-        name: "Dump information of this doc ",
-        editorCallback: (editor, view) => {
-          this.localDatabase.getDBEntry(view.file.path, {}, true, false);
+    });
+    const configURIBase = "obsidian://setuplivesync?settings=";
+    this.addCommand({
+      id: "livesync-copysetupuri",
+      name: "Copy setup URI (beta)",
+      callback: async () => {
+        const encryptingPassphrase = await askString(this.app, "Encrypt your settings", "Passphrase", "");
+        if (encryptingPassphrase === false)
+          return;
+        const encryptedSetting = encodeURIComponent(await encrypt(JSON.stringify(this.settings), encryptingPassphrase));
+        const uri = `${configURIBase}${encryptedSetting}`;
+        await navigator.clipboard.writeText(uri);
+        Logger("Setup URI copied to clipboard", LOG_LEVEL.NOTICE);
+      }
+    });
+    this.addCommand({
+      id: "livesync-opensetupuri",
+      name: "Open setup URI (beta)",
+      callback: async () => {
+        const setupURI = await askString(this.app, "Set up manually", "Set up URI", `${configURIBase}aaaaa`);
+        if (setupURI === false)
+          return;
+        if (!setupURI.startsWith(`${configURIBase}`)) {
+          Logger("Set up URI looks wrong.", LOG_LEVEL.NOTICE);
+          return;
         }
-      });
-      this.addCommand({
-        id: "livesync-checkdoc-conflicted",
-        name: "Resolve if conflicted.",
-        editorCallback: (editor, view) => __async(this, null, function* () {
-          yield this.showIfConflicted(view.file);
-        })
-      });
-      this.addCommand({
-        id: "livesync-gc",
-        name: "Check garbages now",
-        callback: () => {
-          this.garbageCheck();
-        }
-      });
-      this.addCommand({
-        id: "livesync-toggle",
-        name: "Toggle LiveSync",
-        callback: () => __async(this, null, function* () {
-          if (this.settings.liveSync) {
-            this.settings.liveSync = false;
-            Logger("LiveSync Disabled.", LOG_LEVEL.NOTICE);
-          } else {
-            this.settings.liveSync = true;
-            Logger("LiveSync Enabled.", LOG_LEVEL.NOTICE);
+        const config = decodeURIComponent(setupURI.substring(configURIBase.length));
+        console.dir(config);
+        await setupWizard(config);
+      }
+    });
+    const setupWizard = async (confString) => {
+      try {
+        const oldConf = JSON.parse(JSON.stringify(this.settings));
+        const encryptingPassphrase = await askString(this.app, "Passphrase", "Passphrase for your settings", "");
+        if (encryptingPassphrase === false)
+          return;
+        const newConf = await JSON.parse(await decrypt(confString, encryptingPassphrase));
+        if (newConf) {
+          const result = await askYesNo(this.app, "Importing LiveSync's conf, OK?");
+          if (result == "yes") {
+            const newSettingW = Object.assign({}, this.settings, newConf);
+            this.localDatabase.closeReplication();
+            this.settings.suspendFileWatching = true;
+            console.dir(newSettingW);
+            const keepLocalDB = await askYesNo(this.app, "Keep local DB?");
+            const keepRemoteDB = await askYesNo(this.app, "Keep remote DB?");
+            if (keepLocalDB == "yes" && keepRemoteDB == "yes") {
+              this.settings = newSettingW;
+              await this.saveSettings();
+              const replicate = await askYesNo(this.app, "Unlock and replicate?");
+              if (replicate == "yes") {
+                await this.replicate(true);
+                await this.markRemoteUnlocked();
+              }
+              Logger("Configuration loaded.", LOG_LEVEL.NOTICE);
+              return;
+            }
+            if (keepLocalDB == "no" && keepRemoteDB == "no") {
+              const reset = await askYesNo(this.app, "Drop everything?");
+              if (reset != "yes") {
+                Logger("Cancelled", LOG_LEVEL.NOTICE);
+                this.settings = oldConf;
+                return;
+              }
+            }
+            let initDB;
+            this.settings = newSettingW;
+            await this.saveSettings();
+            if (keepLocalDB == "no") {
+              this.resetLocalOldDatabase();
+              this.resetLocalDatabase();
+              this.localDatabase.initializeDatabase();
+              const rebuild = await askYesNo(this.app, "Rebuild the database?");
+              if (rebuild == "yes") {
+                initDB = this.initializeDatabase(true);
+              } else {
+                this.markRemoteResolved();
+              }
+            }
+            if (keepRemoteDB == "no") {
+              await this.tryResetRemoteDatabase();
+              await this.markRemoteLocked();
+            }
+            if (keepLocalDB == "no" || keepRemoteDB == "no") {
+              const replicate = await askYesNo(this.app, "Replicate once?");
+              if (replicate == "yes") {
+                if (initDB != null) {
+                  await initDB;
+                }
+                await this.replicate(true);
+              }
+            }
           }
-          yield this.realizeSettingSyncMode();
-          this.saveSettings();
-        })
-      });
-      this.addCommand({
-        id: "livesync-suspendall",
-        name: "Toggle All Sync.",
-        callback: () => __async(this, null, function* () {
-          if (this.suspended) {
-            this.suspended = false;
-            Logger("Self-hosted LiveSync resumed", LOG_LEVEL.NOTICE);
-          } else {
-            this.suspended = true;
-            Logger("Self-hosted LiveSync suspended", LOG_LEVEL.NOTICE);
-          }
-          yield this.realizeSettingSyncMode();
-          this.saveSettings();
-        })
-      });
-      this.addCommand({
-        id: "livesync-history",
-        name: "Show history",
-        editorCallback: (editor, view) => {
-          this.showHistory(view.file);
+          Logger("Configuration loaded.", LOG_LEVEL.NOTICE);
+        } else {
+          Logger("Cancelled.", LOG_LEVEL.NOTICE);
         }
-      });
-      this.addCommand({
-        id: "livesync-scan-files",
-        name: "Scan storage and database again",
-        callback: () => __async(this, null, function* () {
-          yield this.syncAllFiles(true);
-        })
-      });
-      this.triggerRealizeSettingSyncMode = (0, import_obsidian8.debounce)(this.triggerRealizeSettingSyncMode.bind(this), 1e3);
-      this.triggerCheckPluginUpdate = (0, import_obsidian8.debounce)(this.triggerCheckPluginUpdate.bind(this), 3e3);
-      setLockNotifier(() => {
-        this.refreshStatusText();
-      });
-      this.addCommand({
-        id: "livesync-plugin-dialog",
-        name: "Show Plugins and their settings",
-        callback: () => {
-          this.showPluginSyncModal();
+      } catch (ex) {
+        Logger("Couldn't parse or decrypt configuration uri.", LOG_LEVEL.NOTICE);
+      }
+    };
+    this.registerObsidianProtocolHandler("setuplivesync", async (conf) => {
+      await setupWizard(conf.settings);
+    });
+    this.addCommand({
+      id: "livesync-replicate",
+      name: "Replicate now",
+      callback: async () => {
+        await this.replicate();
+      }
+    });
+    this.addCommand({
+      id: "livesync-dump",
+      name: "Dump information of this doc ",
+      editorCallback: (editor, view) => {
+        this.localDatabase.getDBEntry(view.file.path, {}, true, false);
+      }
+    });
+    this.addCommand({
+      id: "livesync-checkdoc-conflicted",
+      name: "Resolve if conflicted.",
+      editorCallback: async (editor, view) => {
+        await this.showIfConflicted(view.file);
+      }
+    });
+    this.addCommand({
+      id: "livesync-gc",
+      name: "Check garbages now",
+      callback: () => {
+        this.garbageCheck();
+      }
+    });
+    this.addCommand({
+      id: "livesync-toggle",
+      name: "Toggle LiveSync",
+      callback: async () => {
+        if (this.settings.liveSync) {
+          this.settings.liveSync = false;
+          Logger("LiveSync Disabled.", LOG_LEVEL.NOTICE);
+        } else {
+          this.settings.liveSync = true;
+          Logger("LiveSync Enabled.", LOG_LEVEL.NOTICE);
         }
-      });
-      this.addCommand({
-        id: "livesync-scaninternal",
-        name: "Sync hidden files",
-        callback: () => {
-          this.syncInternalFilesAndDatabase("safe", true);
+        await this.realizeSettingSyncMode();
+        this.saveSettings();
+      }
+    });
+    this.addCommand({
+      id: "livesync-suspendall",
+      name: "Toggle All Sync.",
+      callback: async () => {
+        if (this.suspended) {
+          this.suspended = false;
+          Logger("Self-hosted LiveSync resumed", LOG_LEVEL.NOTICE);
+        } else {
+          this.suspended = true;
+          Logger("Self-hosted LiveSync suspended", LOG_LEVEL.NOTICE);
         }
-      });
-      this.addCommand({
-        id: "livesync-filehistory",
-        name: "Pick a file to show history",
-        callback: () => {
-          this.fileHistory();
-        }
-      });
-      this.addCommand({
-        id: "livesync-conflictcheck",
-        name: "Pick a file to resolve conflict",
-        callback: () => {
-          this.pickFileForResolve();
-        }
-      });
-      this.addCommand({
-        id: "livesync-runbatch",
-        name: "Run pended batch processes",
-        callback: () => __async(this, null, function* () {
-          yield this.applyBatchChange();
-        })
-      });
+        await this.realizeSettingSyncMode();
+        this.saveSettings();
+      }
+    });
+    this.addCommand({
+      id: "livesync-history",
+      name: "Show history",
+      editorCallback: (editor, view) => {
+        this.showHistory(view.file);
+      }
+    });
+    this.addCommand({
+      id: "livesync-scan-files",
+      name: "Scan storage and database again",
+      callback: async () => {
+        await this.syncAllFiles(true);
+      }
+    });
+    this.triggerRealizeSettingSyncMode = (0, import_obsidian8.debounce)(this.triggerRealizeSettingSyncMode.bind(this), 1e3);
+    this.triggerCheckPluginUpdate = (0, import_obsidian8.debounce)(this.triggerCheckPluginUpdate.bind(this), 3e3);
+    setLockNotifier(() => {
+      this.refreshStatusText();
+    });
+    this.addCommand({
+      id: "livesync-plugin-dialog",
+      name: "Show Plugins and their settings",
+      callback: () => {
+        this.showPluginSyncModal();
+      }
+    });
+    this.addCommand({
+      id: "livesync-scaninternal",
+      name: "Sync hidden files",
+      callback: () => {
+        this.syncInternalFilesAndDatabase("safe", true);
+      }
+    });
+    this.addCommand({
+      id: "livesync-filehistory",
+      name: "Pick a file to show history",
+      callback: () => {
+        this.fileHistory();
+      }
+    });
+    this.addCommand({
+      id: "livesync-conflictcheck",
+      name: "Pick a file to resolve conflict",
+      callback: () => {
+        this.pickFileForResolve();
+      }
+    });
+    this.addCommand({
+      id: "livesync-runbatch",
+      name: "Run pended batch processes",
+      callback: async () => {
+        await this.applyBatchChange();
+      }
     });
   }
   showPluginSyncModal() {
@@ -13728,58 +13209,48 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     window.removeEventListener("online", this.watchOnline);
     Logger("unloading plugin");
   }
-  openDatabase() {
-    return __async(this, null, function* () {
-      if (this.localDatabase != null) {
-        this.localDatabase.close();
-      }
-      const vaultName = this.getVaultName();
-      Logger("Open Database...");
-      const isMobile = this.app.isMobile;
-      this.localDatabase = new LocalPouchDB(this.settings, vaultName, isMobile);
-      this.localDatabase.updateInfo = () => {
-        this.refreshStatusText();
-      };
-      return yield this.localDatabase.initializeDatabase();
-    });
+  async openDatabase() {
+    if (this.localDatabase != null) {
+      this.localDatabase.close();
+    }
+    const vaultName = this.getVaultName();
+    Logger("Open Database...");
+    const isMobile = this.app.isMobile;
+    this.localDatabase = new LocalPouchDB(this.settings, vaultName, isMobile);
+    this.localDatabase.updateInfo = () => {
+      this.refreshStatusText();
+    };
+    return await this.localDatabase.initializeDatabase();
   }
-  garbageCheck() {
-    return __async(this, null, function* () {
-      yield this.localDatabase.garbageCheck();
-    });
+  async garbageCheck() {
+    await this.localDatabase.garbageCheck();
   }
-  loadSettings() {
-    return __async(this, null, function* () {
-      this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
-      this.settings.workingEncrypt = this.settings.encrypt;
-      this.settings.workingPassphrase = this.settings.passphrase;
-      this.settings.disableRequestURI = true;
-      this.settings.gcDelay = 0;
-      this.settings.useHistory = true;
-      const lsname = "obsidian-live-sync-vaultanddevicename-" + this.getVaultName();
-      if (this.settings.deviceAndVaultName != "") {
-        if (!localStorage.getItem(lsname)) {
-          this.deviceAndVaultName = this.settings.deviceAndVaultName;
-          localStorage.setItem(lsname, this.deviceAndVaultName);
-          this.settings.deviceAndVaultName = "";
-        }
+  async loadSettings() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this.settings.workingEncrypt = this.settings.encrypt;
+    this.settings.workingPassphrase = this.settings.passphrase;
+    this.settings.disableRequestURI = true;
+    this.settings.gcDelay = 0;
+    this.settings.useHistory = true;
+    const lsKey = "obsidian-live-sync-vaultanddevicename-" + this.getVaultName();
+    if (this.settings.deviceAndVaultName != "") {
+      if (!localStorage.getItem(lsKey)) {
+        this.deviceAndVaultName = this.settings.deviceAndVaultName;
+        localStorage.setItem(lsKey, this.deviceAndVaultName);
+        this.settings.deviceAndVaultName = "";
       }
-      this.deviceAndVaultName = localStorage.getItem(lsname) || "";
-    });
+    }
+    this.deviceAndVaultName = localStorage.getItem(lsKey) || "";
   }
   triggerRealizeSettingSyncMode() {
-    (() => __async(this, null, function* () {
-      return yield this.realizeSettingSyncMode();
-    }))();
+    (async () => await this.realizeSettingSyncMode())();
   }
-  saveSettings() {
-    return __async(this, null, function* () {
-      const lsname = "obsidian-live-sync-vaultanddevicename-" + this.getVaultName();
-      localStorage.setItem(lsname, this.deviceAndVaultName || "");
-      yield this.saveData(this.settings);
-      this.localDatabase.settings = this.settings;
-      this.triggerRealizeSettingSyncMode();
-    });
+  async saveSettings() {
+    const lsKey = "obsidian-live-sync-vaultanddevicename-" + this.getVaultName();
+    localStorage.setItem(lsKey, this.deviceAndVaultName || "");
+    await this.saveData(this.settings);
+    this.localDatabase.settings = this.settings;
+    this.triggerRealizeSettingSyncMode();
   }
   gcHook() {
     if (this.settings.gcDelay == 0)
@@ -13808,62 +13279,56 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
   watchOnline() {
     this.watchOnlineAsync();
   }
-  watchOnlineAsync() {
-    return __async(this, null, function* () {
-      if (navigator.onLine && this.localDatabase.needScanning) {
-        this.localDatabase.needScanning = false;
-        yield this.syncAllFiles();
-      }
-    });
+  async watchOnlineAsync() {
+    if (navigator.onLine && this.localDatabase.needScanning) {
+      this.localDatabase.needScanning = false;
+      await this.syncAllFiles();
+    }
   }
   watchWindowVisibility() {
     this.watchWindowVisibilityAsync();
   }
-  watchWindowVisibilityAsync() {
-    return __async(this, null, function* () {
-      if (this.settings.suspendFileWatching)
+  async watchWindowVisibilityAsync() {
+    if (this.settings.suspendFileWatching)
+      return;
+    const isHidden = document.hidden;
+    await this.applyBatchChange();
+    if (isHidden) {
+      this.localDatabase.closeReplication();
+      this.clearPeriodicSync();
+    } else {
+      if (this.suspended)
         return;
-      const isHidden = document.hidden;
-      yield this.applyBatchChange();
-      if (isHidden) {
-        this.localDatabase.closeReplication();
-        this.clearPeriodicSync();
-      } else {
-        if (this.suspended)
-          return;
-        if (this.settings.autoSweepPlugins) {
-          yield this.sweepPlugin(false);
-        }
-        if (this.settings.liveSync) {
-          this.localDatabase.openReplication(this.settings, true, false, this.parseReplicationResult);
-        }
-        if (this.settings.syncOnStart) {
-          this.localDatabase.openReplication(this.settings, false, false, this.parseReplicationResult);
-        }
-        if (this.settings.periodicReplication) {
-          this.setPeriodicSync();
-        }
+      if (this.settings.autoSweepPlugins) {
+        await this.sweepPlugin(false);
       }
-      this.gcHook();
-    });
+      if (this.settings.liveSync) {
+        this.localDatabase.openReplication(this.settings, true, false, this.parseReplicationResult);
+      }
+      if (this.settings.syncOnStart) {
+        this.localDatabase.openReplication(this.settings, false, false, this.parseReplicationResult);
+      }
+      if (this.settings.periodicReplication) {
+        this.setPeriodicSync();
+      }
+    }
+    this.gcHook();
   }
   watchWorkspaceOpen(file) {
     if (this.settings.suspendFileWatching)
       return;
     this.watchWorkspaceOpenAsync(file);
   }
-  watchWorkspaceOpenAsync(file) {
-    return __async(this, null, function* () {
-      yield this.applyBatchChange();
-      if (file == null) {
-        return;
-      }
-      if (this.settings.syncOnFileOpen && !this.suspended) {
-        yield this.replicate();
-      }
-      yield this.showIfConflicted(file);
-      this.gcHook();
-    });
+  async watchWorkspaceOpenAsync(file) {
+    await this.applyBatchChange();
+    if (file == null) {
+      return;
+    }
+    if (this.settings.syncOnFileOpen && !this.suspended) {
+      await this.replicate();
+    }
+    await this.showIfConflicted(file);
+    this.gcHook();
   }
   watchVaultCreate(file, ...args) {
     if (!this.isTargetFile(file))
@@ -13887,8 +13352,8 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     if (this.settings.suspendFileWatching)
       return;
     if (this.settings.batchSave) {
-      ~(() => __async(this, null, function* () {
-        const meta = yield this.localDatabase.getDBEntryMeta(file.path);
+      ~(async () => {
+        const meta = await this.localDatabase.getDBEntryMeta(file.path);
         if (meta != false) {
           const localMtime = ~~(file.stat.mtime / 1e3);
           const docMtime = ~~(meta.mtime / 1e3);
@@ -13897,54 +13362,47 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
             this.refreshStatusText();
           }
         }
-      }))();
+      })();
       return;
     }
     this.watchVaultChangeAsync(file, ...args);
   }
-  applyBatchChange() {
-    return __async(this, null, function* () {
-      if (!this.settings.batchSave || this.batchFileChange.length == 0) {
-        return;
-      }
-      return yield runWithLock("batchSave", false, () => __async(this, null, function* () {
-        const batchItems = JSON.parse(JSON.stringify(this.batchFileChange));
-        this.batchFileChange = [];
-        const limit = 3;
-        const p = Parallels();
-        for (const e3 of batchItems) {
-          const w = (() => __async(this, null, function* () {
-            try {
-              const f = this.app.vault.getAbstractFileByPath((0, import_obsidian8.normalizePath)(e3));
-              if (f && f instanceof import_obsidian8.TFile) {
-                yield this.updateIntoDB(f);
-                Logger(`Batch save:${e3}`);
-              }
-            } catch (ex) {
-              Logger(`Batch save error:${e3}`, LOG_LEVEL.NOTICE);
-              Logger(ex, LOG_LEVEL.VERBOSE);
-            }
-          }))();
-          p.add(w);
-          yield p.wait(limit);
+  async applyBatchChange() {
+    if (!this.settings.batchSave || this.batchFileChange.length == 0) {
+      return;
+    }
+    return await runWithLock("batchSave", false, async () => {
+      const batchItems = JSON.parse(JSON.stringify(this.batchFileChange));
+      this.batchFileChange = [];
+      const semaphore = Semaphore(3);
+      const batchProcesses = batchItems.map((e3) => (async (e4) => {
+        const releaser = await semaphore.acquire(1, "batch");
+        try {
+          const f = this.app.vault.getAbstractFileByPath((0, import_obsidian8.normalizePath)(e4));
+          if (f && f instanceof import_obsidian8.TFile) {
+            await this.updateIntoDB(f);
+            Logger(`Batch save:${e4}`);
+          }
+        } catch (ex) {
+          Logger(`Batch save error:${e4}`, LOG_LEVEL.NOTICE);
+          Logger(ex, LOG_LEVEL.VERBOSE);
+        } finally {
+          releaser();
         }
-        this.refreshStatusText();
-        yield p.all();
-        this.refreshStatusText();
-        return;
-      }));
+      })(e3));
+      await Promise.all(batchProcesses);
+      this.refreshStatusText();
+      return;
     });
   }
-  watchVaultChangeAsync(file, ...args) {
-    return __async(this, null, function* () {
-      if (file instanceof import_obsidian8.TFile) {
-        if (recentlyTouched(file)) {
-          return;
-        }
-        yield this.updateIntoDB(file);
-        this.gcHook();
+  async watchVaultChangeAsync(file, ...args) {
+    if (file instanceof import_obsidian8.TFile) {
+      if (recentlyTouched(file)) {
+        return;
       }
-    });
+      await this.updateIntoDB(file);
+      this.gcHook();
+    }
   }
   watchVaultDelete(file) {
     if (!this.isTargetFile(file))
@@ -13955,15 +13413,13 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     this.watchVaultDeleteAsync(file).then(() => {
     });
   }
-  watchVaultDeleteAsync(file) {
-    return __async(this, null, function* () {
-      if (file instanceof import_obsidian8.TFile) {
-        yield this.deleteFromDB(file);
-      } else if (file instanceof import_obsidian8.TFolder) {
-        yield this.deleteFolderOnDB(file);
-      }
-      this.gcHook();
-    });
+  async watchVaultDeleteAsync(file) {
+    if (file instanceof import_obsidian8.TFile) {
+      await this.deleteFromDB(file);
+    } else if (file instanceof import_obsidian8.TFolder) {
+      await this.deleteFolderOnDB(file);
+    }
+    this.gcHook();
   }
   GetAllFilesRecursively(file) {
     if (file instanceof import_obsidian8.TFile) {
@@ -13998,164 +13454,137 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     }
     return this.getFilePath(file.parent) + "/" + file.name;
   }
-  watchVaultRenameAsync(file, oldFile) {
-    return __async(this, null, function* () {
-      Logger(`${oldFile} renamed to ${file.path}`, LOG_LEVEL.VERBOSE);
-      try {
-        yield this.applyBatchChange();
-      } catch (ex) {
-        Logger(ex);
-      }
-      if (file instanceof import_obsidian8.TFolder) {
-        const newFiles = this.GetAllFilesRecursively(file);
-        for (const i2 of newFiles) {
-          try {
-            const newFilePath = (0, import_obsidian8.normalizePath)(this.getFilePath(i2));
-            const newFile = this.app.vault.getAbstractFileByPath(newFilePath);
-            if (newFile instanceof import_obsidian8.TFile) {
-              Logger(`save ${newFile.path} into db`);
-              yield this.updateIntoDB(newFile);
-            }
-          } catch (ex) {
-            Logger(ex);
-          }
-        }
-        Logger(`delete below ${oldFile} from db`);
-        yield this.deleteFromDBbyPath(oldFile);
-      } else if (file instanceof import_obsidian8.TFile) {
+  async watchVaultRenameAsync(file, oldFile) {
+    Logger(`${oldFile} renamed to ${file.path}`, LOG_LEVEL.VERBOSE);
+    try {
+      await this.applyBatchChange();
+    } catch (ex) {
+      Logger(ex);
+    }
+    if (file instanceof import_obsidian8.TFolder) {
+      const newFiles = this.GetAllFilesRecursively(file);
+      for (const i2 of newFiles) {
         try {
-          Logger(`file save ${file.path} into db`);
-          yield this.updateIntoDB(file);
-          Logger(`deleted ${oldFile} from db`);
-          yield this.deleteFromDBbyPath(oldFile);
+          const newFilePath = (0, import_obsidian8.normalizePath)(this.getFilePath(i2));
+          const newFile = this.app.vault.getAbstractFileByPath(newFilePath);
+          if (newFile instanceof import_obsidian8.TFile) {
+            Logger(`save ${newFile.path} into db`);
+            await this.updateIntoDB(newFile);
+          }
         } catch (ex) {
           Logger(ex);
         }
       }
-      this.gcHook();
-    });
+      Logger(`delete below ${oldFile} from db`);
+      await this.deleteFromDBbyPath(oldFile);
+    } else if (file instanceof import_obsidian8.TFile) {
+      try {
+        Logger(`file save ${file.path} into db`);
+        await this.updateIntoDB(file);
+        Logger(`deleted ${oldFile} from db`);
+        await this.deleteFromDBbyPath(oldFile);
+      } catch (ex) {
+        Logger(ex);
+      }
+    }
+    this.gcHook();
   }
-  addLog(_0) {
-    return __async(this, arguments, function* (message, level = LOG_LEVEL.INFO, key = "") {
-      var _a;
-      if (level == LOG_LEVEL.DEBUG && !isDebug) {
-        return;
-      }
-      if (level < LOG_LEVEL.INFO && this.settings && this.settings.lessInformationInLog) {
-        return;
-      }
-      if (this.settings && !this.settings.showVerboseLog && level == LOG_LEVEL.VERBOSE) {
-        return;
-      }
-      const vaultName = this.getVaultName();
-      const timestamp = new Date().toLocaleString();
-      const messageContent = typeof message == "string" ? message : message instanceof Error ? `${message.name}:${message.message}` : JSON.stringify(message, null, 2);
-      const newMessage = timestamp + "->" + messageContent;
-      this.logMessage = [].concat(this.logMessage).concat([newMessage]).slice(-100);
-      console.log(vaultName + ":" + newMessage);
-      this.setStatusBarText(null, messageContent.substring(0, 30));
-      if (level >= LOG_LEVEL.NOTICE) {
-        if (!key)
-          key = messageContent;
-        if (key in this.notifies) {
-          const isShown = (_a = this.notifies[key].notice.noticeEl) == null ? void 0 : _a.isShown();
-          if (!isShown) {
-            this.notifies[key].notice = new import_obsidian8.Notice(messageContent, 0);
-          }
-          clearTimeout(this.notifies[key].timer);
-          if (key == messageContent) {
-            this.notifies[key].count++;
-            this.notifies[key].notice.setMessage(`(${this.notifies[key].count}):${messageContent}`);
-          } else {
-            this.notifies[key].notice.setMessage(`${messageContent}`);
-          }
-          this.notifies[key].timer = setTimeout(() => {
-            const notify = this.notifies[key].notice;
-            delete this.notifies[key];
-            try {
-              notify.hide();
-            } catch (ex) {
-            }
-          }, 5e3);
+  async addLog(message, level = LOG_LEVEL.INFO, key = "") {
+    var _a;
+    if (level == LOG_LEVEL.DEBUG && !isDebug) {
+      return;
+    }
+    if (level < LOG_LEVEL.INFO && this.settings && this.settings.lessInformationInLog) {
+      return;
+    }
+    if (this.settings && !this.settings.showVerboseLog && level == LOG_LEVEL.VERBOSE) {
+      return;
+    }
+    const vaultName = this.getVaultName();
+    const timestamp = new Date().toLocaleString();
+    const messageContent = typeof message == "string" ? message : message instanceof Error ? `${message.name}:${message.message}` : JSON.stringify(message, null, 2);
+    const newMessage = timestamp + "->" + messageContent;
+    this.logMessage = [].concat(this.logMessage).concat([newMessage]).slice(-100);
+    console.log(vaultName + ":" + newMessage);
+    this.setStatusBarText(null, messageContent.substring(0, 30));
+    if (level >= LOG_LEVEL.NOTICE) {
+      if (!key)
+        key = messageContent;
+      if (key in this.notifies) {
+        const isShown = (_a = this.notifies[key].notice.noticeEl) == null ? void 0 : _a.isShown();
+        if (!isShown) {
+          this.notifies[key].notice = new import_obsidian8.Notice(messageContent, 0);
+        }
+        clearTimeout(this.notifies[key].timer);
+        if (key == messageContent) {
+          this.notifies[key].count++;
+          this.notifies[key].notice.setMessage(`(${this.notifies[key].count}):${messageContent}`);
         } else {
-          const notify = new import_obsidian8.Notice(messageContent, 0);
-          this.notifies[key] = {
-            count: 0,
-            notice: notify,
-            timer: setTimeout(() => {
-              delete this.notifies[key];
-              notify.hide();
-            }, 5e3)
-          };
+          this.notifies[key].notice.setMessage(`${messageContent}`);
         }
-      }
-      if (this.addLogHook != null)
-        this.addLogHook();
-    });
-  }
-  ensureDirectory(fullPath) {
-    return __async(this, null, function* () {
-      const pathElements = fullPath.split("/");
-      pathElements.pop();
-      let c = "";
-      for (const v of pathElements) {
-        c += v;
-        try {
-          yield this.app.vault.createFolder(c);
-        } catch (ex) {
-          if (ex.message && ex.message == "Folder already exists.") {
-          } else {
-            Logger("Folder Create Error");
-            Logger(ex);
-          }
-        }
-        c += "/";
-      }
-    });
-  }
-  doc2storage_create(docEntry, force) {
-    return __async(this, null, function* () {
-      const pathSrc = id2path(docEntry._id);
-      if (shouldBeIgnored(pathSrc)) {
-        return;
-      }
-      if (!this.isTargetFile(pathSrc))
-        return;
-      const doc = yield this.localDatabase.getDBEntry(pathSrc, { rev: docEntry._rev });
-      if (doc === false)
-        return;
-      const msg = `DB -> STORAGE (create${force ? ",force" : ""},${doc.datatype}) `;
-      const path = id2path(doc._id);
-      if (doc.datatype == "newnote") {
-        const bin = base64ToArrayBuffer(doc.data);
-        if (bin != null) {
-          if (!isValidPath(path)) {
-            Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
-            return;
-          }
-          yield this.ensureDirectory(path);
+        this.notifies[key].timer = setTimeout(() => {
+          const notify = this.notifies[key].notice;
+          delete this.notifies[key];
           try {
-            const newFile = yield this.app.vault.createBinary((0, import_obsidian8.normalizePath)(path), bin, {
-              ctime: doc.ctime,
-              mtime: doc.mtime
-            });
-            this.batchFileChange = this.batchFileChange.filter((e3) => e3 != newFile.path);
-            Logger(msg + path);
-            touch(newFile);
-            this.app.vault.trigger("create", newFile);
+            notify.hide();
           } catch (ex) {
-            Logger(msg + "ERROR, Could not write: " + path, LOG_LEVEL.NOTICE);
-            Logger(ex, LOG_LEVEL.VERBOSE);
           }
+        }, 5e3);
+      } else {
+        const notify = new import_obsidian8.Notice(messageContent, 0);
+        this.notifies[key] = {
+          count: 0,
+          notice: notify,
+          timer: setTimeout(() => {
+            delete this.notifies[key];
+            notify.hide();
+          }, 5e3)
+        };
+      }
+    }
+    if (this.addLogHook != null)
+      this.addLogHook();
+  }
+  async ensureDirectory(fullPath) {
+    const pathElements = fullPath.split("/");
+    pathElements.pop();
+    let c = "";
+    for (const v of pathElements) {
+      c += v;
+      try {
+        await this.app.vault.createFolder(c);
+      } catch (ex) {
+        if (ex.message && ex.message == "Folder already exists.") {
+        } else {
+          Logger("Folder Create Error");
+          Logger(ex);
         }
-      } else if (doc.datatype == "plain") {
+      }
+      c += "/";
+    }
+  }
+  async doc2storage_create(docEntry, force) {
+    const pathSrc = id2path(docEntry._id);
+    if (shouldBeIgnored(pathSrc)) {
+      return;
+    }
+    if (!this.isTargetFile(pathSrc))
+      return;
+    const doc = await this.localDatabase.getDBEntry(pathSrc, { rev: docEntry._rev });
+    if (doc === false)
+      return;
+    const msg = `DB -> STORAGE (create${force ? ",force" : ""},${doc.datatype}) `;
+    const path = id2path(doc._id);
+    if (doc.datatype == "newnote") {
+      const bin = base64ToArrayBuffer(doc.data);
+      if (bin != null) {
         if (!isValidPath(path)) {
           Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
           return;
         }
-        yield this.ensureDirectory(path);
+        await this.ensureDirectory(path);
         try {
-          const newFile = yield this.app.vault.create((0, import_obsidian8.normalizePath)(path), doc.data, {
+          const newFile = await this.app.vault.createBinary((0, import_obsidian8.normalizePath)(path), bin, {
             ctime: doc.ctime,
             mtime: doc.mtime
           });
@@ -14164,102 +13593,117 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
           touch(newFile);
           this.app.vault.trigger("create", newFile);
         } catch (ex) {
-          Logger(msg + "ERROR, Could not parse: " + path + "(" + doc.datatype + ")", LOG_LEVEL.NOTICE);
+          Logger(msg + "ERROR, Could not write: " + path, LOG_LEVEL.NOTICE);
           Logger(ex, LOG_LEVEL.VERBOSE);
         }
-      } else {
+      }
+    } else if (doc.datatype == "plain") {
+      if (!isValidPath(path)) {
+        Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
+        return;
+      }
+      await this.ensureDirectory(path);
+      try {
+        const newFile = await this.app.vault.create((0, import_obsidian8.normalizePath)(path), doc.data, {
+          ctime: doc.ctime,
+          mtime: doc.mtime
+        });
+        this.batchFileChange = this.batchFileChange.filter((e3) => e3 != newFile.path);
+        Logger(msg + path);
+        touch(newFile);
+        this.app.vault.trigger("create", newFile);
+      } catch (ex) {
         Logger(msg + "ERROR, Could not parse: " + path + "(" + doc.datatype + ")", LOG_LEVEL.NOTICE);
+        Logger(ex, LOG_LEVEL.VERBOSE);
       }
-    });
+    } else {
+      Logger(msg + "ERROR, Could not parse: " + path + "(" + doc.datatype + ")", LOG_LEVEL.NOTICE);
+    }
   }
-  deleteVaultItem(file) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(file))
-        return;
-      const dir = file.parent;
-      if (this.settings.trashInsteadDelete) {
-        yield this.app.vault.trash(file, false);
+  async deleteVaultItem(file) {
+    if (!this.isTargetFile(file))
+      return;
+    const dir = file.parent;
+    if (this.settings.trashInsteadDelete) {
+      await this.app.vault.trash(file, false);
+    } else {
+      await this.app.vault.delete(file);
+    }
+    Logger(`deleted:${file.path}`);
+    Logger(`other items:${dir.children.length}`);
+    if (dir.children.length == 0) {
+      if (!this.settings.doNotDeleteFolder) {
+        Logger(`all files deleted by replication, so delete dir`);
+        await this.deleteVaultItem(dir);
+      }
+    }
+  }
+  async doc2storage_modify(docEntry, file, force) {
+    const pathSrc = id2path(docEntry._id);
+    if (shouldBeIgnored(pathSrc)) {
+      return;
+    }
+    if (!this.isTargetFile(pathSrc))
+      return;
+    if (docEntry._deleted || docEntry.deleted) {
+      const lastDocs = await this.localDatabase.getDBEntry(pathSrc);
+      if (lastDocs === false) {
+        await this.deleteVaultItem(file);
       } else {
-        yield this.app.vault.delete(file);
+        await this.pullFile(pathSrc, null, true);
+        Logger(`delete skipped:${lastDocs._id}`, LOG_LEVEL.VERBOSE);
       }
-      Logger(`deleted:${file.path}`);
-      Logger(`other items:${dir.children.length}`);
-      if (dir.children.length == 0) {
-        if (!this.settings.doNotDeleteFolder) {
-          Logger(`all files deleted by replication, so delete dir`);
-          yield this.deleteVaultItem(dir);
-        }
-      }
-    });
-  }
-  doc2storage_modify(docEntry, file, force) {
-    return __async(this, null, function* () {
-      const pathSrc = id2path(docEntry._id);
-      if (shouldBeIgnored(pathSrc)) {
+      return;
+    }
+    const localMtime = ~~(file.stat.mtime / 1e3);
+    const docMtime = ~~(docEntry.mtime / 1e3);
+    if (localMtime < docMtime || force) {
+      const doc = await this.localDatabase.getDBEntry(pathSrc);
+      if (doc === false)
         return;
-      }
-      if (!this.isTargetFile(pathSrc))
-        return;
-      if (docEntry._deleted || docEntry.deleted) {
-        const lastDocs = yield this.localDatabase.getDBEntry(pathSrc);
-        if (lastDocs === false) {
-          yield this.deleteVaultItem(file);
-        } else {
-          yield this.pullFile(pathSrc, null, true);
-          Logger(`delete skipped:${lastDocs._id}`, LOG_LEVEL.VERBOSE);
-        }
-        return;
-      }
-      const localMtime = ~~(file.stat.mtime / 1e3);
-      const docMtime = ~~(docEntry.mtime / 1e3);
-      if (localMtime < docMtime || force) {
-        const doc = yield this.localDatabase.getDBEntry(pathSrc);
-        if (doc === false)
-          return;
-        const msg = `DB -> STORAGE (modify${force ? ",force" : ""},${doc.datatype}) `;
-        const path = id2path(doc._id);
-        if (doc.datatype == "newnote") {
-          const bin = base64ToArrayBuffer(doc.data);
-          if (bin != null) {
-            if (!isValidPath(path)) {
-              Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
-              return;
-            }
-            yield this.ensureDirectory(path);
-            try {
-              yield this.app.vault.modifyBinary(file, bin, { ctime: doc.ctime, mtime: doc.mtime });
-              this.batchFileChange = this.batchFileChange.filter((e3) => e3 != file.path);
-              Logger(msg + path);
-              const xf = this.app.vault.getAbstractFileByPath(file.path);
-              touch(xf);
-              this.app.vault.trigger("modify", xf);
-            } catch (ex) {
-              Logger(msg + "ERROR, Could not write: " + path, LOG_LEVEL.NOTICE);
-            }
-          }
-        } else if (doc.datatype == "plain") {
+      const msg = `DB -> STORAGE (modify${force ? ",force" : ""},${doc.datatype}) `;
+      const path = id2path(doc._id);
+      if (doc.datatype == "newnote") {
+        const bin = base64ToArrayBuffer(doc.data);
+        if (bin != null) {
           if (!isValidPath(path)) {
             Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
             return;
           }
-          yield this.ensureDirectory(path);
+          await this.ensureDirectory(path);
           try {
-            yield this.app.vault.modify(file, doc.data, { ctime: doc.ctime, mtime: doc.mtime });
-            Logger(msg + path);
+            await this.app.vault.modifyBinary(file, bin, { ctime: doc.ctime, mtime: doc.mtime });
             this.batchFileChange = this.batchFileChange.filter((e3) => e3 != file.path);
+            Logger(msg + path);
             const xf = this.app.vault.getAbstractFileByPath(file.path);
             touch(xf);
             this.app.vault.trigger("modify", xf);
           } catch (ex) {
             Logger(msg + "ERROR, Could not write: " + path, LOG_LEVEL.NOTICE);
           }
-        } else {
-          Logger(msg + "ERROR, Could not parse: " + path + "(" + doc.datatype + ")", LOG_LEVEL.NOTICE);
         }
-      } else if (localMtime > docMtime) {
+      } else if (doc.datatype == "plain") {
+        if (!isValidPath(path)) {
+          Logger(msg + "ERROR, invalid path: " + path, LOG_LEVEL.NOTICE);
+          return;
+        }
+        await this.ensureDirectory(path);
+        try {
+          await this.app.vault.modify(file, doc.data, { ctime: doc.ctime, mtime: doc.mtime });
+          Logger(msg + path);
+          this.batchFileChange = this.batchFileChange.filter((e3) => e3 != file.path);
+          const xf = this.app.vault.getAbstractFileByPath(file.path);
+          touch(xf);
+          this.app.vault.trigger("modify", xf);
+        } catch (ex) {
+          Logger(msg + "ERROR, Could not write: " + path, LOG_LEVEL.NOTICE);
+        }
       } else {
+        Logger(msg + "ERROR, Could not parse: " + path + "(" + doc.datatype + ")", LOG_LEVEL.NOTICE);
       }
-    });
+    } else if (localMtime > docMtime) {
+    } else {
+    }
   }
   handleDBChanged(change) {
     this.queuedEntries.remove(this.queuedEntries.find((e3) => e3._id == change._id));
@@ -14274,79 +13718,71 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     }
     setTrigger("dbchanged", 500, () => this.execDBchanged());
   }
-  execDBchanged() {
-    return __async(this, null, function* () {
-      yield runWithLock("dbchanged", false, () => __async(this, null, function* () {
-        const w = [...this.queuedEntries];
-        this.queuedEntries = [];
-        Logger(`Applying ${w.length} files`);
-        for (const entry of w) {
-          Logger(`Applying ${entry._id} (${entry._rev}) change...`, LOG_LEVEL.VERBOSE);
-          yield this.handleDBChangedAsync(entry);
-          Logger(`Applied ${entry._id} (${entry._rev}) change...`);
-        }
-      }));
-    });
-  }
-  handleDBChangedAsync(change) {
-    return __async(this, null, function* () {
-      const targetFile = this.app.vault.getAbstractFileByPath(id2path(change._id));
-      if (targetFile == null) {
-        if (change._deleted || change.deleted) {
-          return;
-        }
-        const doc = change;
-        yield this.doc2storage_create(doc);
-      } else if (targetFile instanceof import_obsidian8.TFile) {
-        const doc = change;
-        const file = targetFile;
-        yield this.doc2storage_modify(doc, file);
-        if (!this.settings.checkConflictOnlyOnOpen) {
-          this.queueConflictedCheck(file);
-        } else {
-          const af = app.workspace.getActiveFile();
-          if (af && af.path == file.path) {
-            this.queueConflictedCheck(file);
-          }
-        }
-      } else {
-        Logger(`${id2path(change._id)} is already exist as the folder`);
+  async execDBchanged() {
+    await runWithLock("dbchanged", false, async () => {
+      const w = [...this.queuedEntries];
+      this.queuedEntries = [];
+      Logger(`Applying ${w.length} files`);
+      for (const entry of w) {
+        Logger(`Applying ${entry._id} (${entry._rev}) change...`, LOG_LEVEL.VERBOSE);
+        await this.handleDBChangedAsync(entry);
+        Logger(`Applied ${entry._id} (${entry._rev}) change...`);
       }
     });
+  }
+  async handleDBChangedAsync(change) {
+    const targetFile = this.app.vault.getAbstractFileByPath(id2path(change._id));
+    if (targetFile == null) {
+      if (change._deleted || change.deleted) {
+        return;
+      }
+      const doc = change;
+      await this.doc2storage_create(doc);
+    } else if (targetFile instanceof import_obsidian8.TFile) {
+      const doc = change;
+      const file = targetFile;
+      await this.doc2storage_modify(doc, file);
+      if (!this.settings.checkConflictOnlyOnOpen) {
+        this.queueConflictedCheck(file);
+      } else {
+        const af = app.workspace.getActiveFile();
+        if (af && af.path == file.path) {
+          this.queueConflictedCheck(file);
+        }
+      }
+    } else {
+      Logger(`${id2path(change._id)} is already exist as the folder`);
+    }
   }
   saveQueuedFiles() {
     const saveData = JSON.stringify(this.queuedFiles.filter((e3) => !e3.done).map((e3) => e3.entry._id));
-    const lsname = "obsidian-livesync-queuefiles-" + this.getVaultName();
-    localStorage.setItem(lsname, saveData);
+    const lsKey = "obsidian-livesync-queuefiles-" + this.getVaultName();
+    localStorage.setItem(lsKey, saveData);
   }
-  loadQueuedFiles() {
-    return __async(this, null, function* () {
-      const lsname = "obsidian-livesync-queuefiles-" + this.getVaultName();
-      const ids = JSON.parse(localStorage.getItem(lsname) || "[]");
-      const ret = yield this.localDatabase.localDatabase.allDocs({ keys: ids, include_docs: true });
-      for (const doc of ret.rows) {
-        if (doc.doc && !this.queuedFiles.some((e3) => e3.entry._id == doc.doc._id)) {
-          yield this.parseIncomingDoc(doc.doc);
-        }
+  async loadQueuedFiles() {
+    const lsKey = "obsidian-livesync-queuefiles-" + this.getVaultName();
+    const ids = JSON.parse(localStorage.getItem(lsKey) || "[]");
+    const ret = await this.localDatabase.localDatabase.allDocs({ keys: ids, include_docs: true });
+    for (const doc of ret.rows) {
+      if (doc.doc && !this.queuedFiles.some((e3) => e3.entry._id == doc.doc._id)) {
+        await this.parseIncomingDoc(doc.doc);
       }
-    });
+    }
   }
-  execInternalFile() {
-    return __async(this, null, function* () {
-      yield runWithLock("execinternal", false, () => __async(this, null, function* () {
-        const w = [...this.procInternalFiles];
-        this.procInternalFiles = [];
-        Logger(`Applying hidden ${w.length} files change...`);
-        yield this.syncInternalFilesAndDatabase("pull", false, false, w);
-        Logger(`Applying hidden ${w.length} files changed`);
-      }));
+  async execInternalFile() {
+    await runWithLock("execinternal", false, async () => {
+      const w = [...this.procInternalFiles];
+      this.procInternalFiles = [];
+      Logger(`Applying hidden ${w.length} files change...`);
+      await this.syncInternalFilesAndDatabase("pull", false, false, w);
+      Logger(`Applying hidden ${w.length} files changed`);
     });
   }
   procInternalFile(filename) {
     this.procInternalFiles.push(filename);
-    setTrigger("procInternal", 500, () => __async(this, null, function* () {
-      yield this.execInternalFile();
-    }));
+    setTrigger("procInternal", 500, async () => {
+      await this.execInternalFile();
+    });
   }
   procQueuedFiles() {
     this.saveQueuedFiles();
@@ -14395,112 +13831,104 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     if (isNewFileCompleted)
       this.procQueuedFiles();
   }
-  parseIncomingDoc(doc) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(id2path(doc._id)))
-        return;
-      const skipOldFile = this.settings.skipOlderFilesOnSync && false;
-      if (!isInternalChunk(doc._id) && skipOldFile) {
-        const info = this.app.vault.getAbstractFileByPath(id2path(doc._id));
-        if (info && info instanceof import_obsidian8.TFile) {
-          const localMtime = ~~(info.stat.mtime / 1e3);
-          const docMtime = ~~(doc.mtime / 1e3);
-          if (localMtime >= docMtime) {
-            Logger(`${doc._id} Skipped, older than storage.`, LOG_LEVEL.VERBOSE);
-            return;
-          }
+  async parseIncomingDoc(doc) {
+    if (!this.isTargetFile(id2path(doc._id)))
+      return;
+    const skipOldFile = this.settings.skipOlderFilesOnSync && false;
+    if (!isInternalChunk(doc._id) && skipOldFile) {
+      const info = this.app.vault.getAbstractFileByPath(id2path(doc._id));
+      if (info && info instanceof import_obsidian8.TFile) {
+        const localMtime = ~~(info.stat.mtime / 1e3);
+        const docMtime = ~~(doc.mtime / 1e3);
+        if (localMtime >= docMtime) {
+          Logger(`${doc._id} Skipped, older than storage.`, LOG_LEVEL.VERBOSE);
+          return;
         }
       }
-      const now = new Date().getTime();
-      const newQueue = {
-        entry: doc,
-        missingChildren: [],
-        timeout: now + this.chunkWaitTimeout
-      };
-      if (!this.settings.readChunksOnline && "children" in doc) {
-        const c = yield this.localDatabase.localDatabase.allDocs({ keys: doc.children, include_docs: false });
-        const missing = c.rows.filter((e3) => "error" in e3).map((e3) => e3.key);
-        if (missing.length > 0)
-          Logger(`${doc._id}(${doc._rev}) Queued (waiting ${missing.length} items)`, LOG_LEVEL.VERBOSE);
-        newQueue.missingChildren = missing;
-        this.queuedFiles.push(newQueue);
-      } else {
-        this.queuedFiles.push(newQueue);
-      }
-      this.saveQueuedFiles();
-      this.procQueuedFiles();
-    });
+    }
+    const now = new Date().getTime();
+    const newQueue = {
+      entry: doc,
+      missingChildren: [],
+      timeout: now + this.chunkWaitTimeout
+    };
+    if (!this.settings.readChunksOnline && "children" in doc) {
+      const c = await this.localDatabase.localDatabase.allDocs({ keys: doc.children, include_docs: false });
+      const missing = c.rows.filter((e3) => "error" in e3).map((e3) => e3.key);
+      if (missing.length > 0)
+        Logger(`${doc._id}(${doc._rev}) Queued (waiting ${missing.length} items)`, LOG_LEVEL.VERBOSE);
+      newQueue.missingChildren = missing;
+      this.queuedFiles.push(newQueue);
+    } else {
+      this.queuedFiles.push(newQueue);
+    }
+    this.saveQueuedFiles();
+    this.procQueuedFiles();
   }
-  parseReplicationResult(docs) {
-    return __async(this, null, function* () {
-      this.refreshStatusText();
-      for (const change of docs) {
-        if (isPluginChunk(change._id)) {
-          if (this.settings.notifyPluginOrSettingUpdated) {
-            this.triggerCheckPluginUpdate();
-          }
-          continue;
+  async parseReplicationResult(docs) {
+    this.refreshStatusText();
+    for (const change of docs) {
+      if (isPluginChunk(change._id)) {
+        if (this.settings.notifyPluginOrSettingUpdated) {
+          this.triggerCheckPluginUpdate();
         }
-        if (isChunk(change._id)) {
-          yield this.parseIncomingChunk(change);
-          continue;
-        }
-        if (change._id == SYNCINFO_ID) {
-          continue;
-        }
-        if (change.type != "leaf" && change.type != "versioninfo" && change.type != "milestoneinfo" && change.type != "nodeinfo") {
-          yield this.parseIncomingDoc(change);
-          continue;
-        }
-        if (change.type == "versioninfo") {
-          if (change.version > VER) {
-            this.localDatabase.closeReplication();
-            Logger(`Remote database updated to incompatible version. update your self-hosted-livesync plugin.`, LOG_LEVEL.NOTICE);
-          }
-        }
-        this.gcHook();
+        continue;
       }
-    });
+      if (isChunk(change._id)) {
+        await this.parseIncomingChunk(change);
+        continue;
+      }
+      if (change._id == SYNCINFO_ID) {
+        continue;
+      }
+      if (change.type != "leaf" && change.type != "versioninfo" && change.type != "milestoneinfo" && change.type != "nodeinfo") {
+        await this.parseIncomingDoc(change);
+        continue;
+      }
+      if (change.type == "versioninfo") {
+        if (change.version > VER) {
+          this.localDatabase.closeReplication();
+          Logger(`Remote database updated to incompatible version. update your self-hosted-livesync plugin.`, LOG_LEVEL.NOTICE);
+        }
+      }
+      this.gcHook();
+    }
   }
   triggerCheckPluginUpdate() {
-    (() => __async(this, null, function* () {
-      return yield this.checkPluginUpdate();
-    }))();
+    (async () => await this.checkPluginUpdate())();
   }
-  checkPluginUpdate() {
-    return __async(this, null, function* () {
-      var _a, _b;
-      if (!this.settings.usePluginSync)
-        return;
-      yield this.sweepPlugin(false);
-      const { allPlugins, thisDevicePlugins } = yield this.getPluginList();
-      const arrPlugins = Object.values(allPlugins);
-      let updateFound = false;
-      for (const plugin of arrPlugins) {
-        const ownPlugin = thisDevicePlugins[plugin.manifest.id];
-        if (ownPlugin) {
-          const remoteVersion = versionNumberString2Number(plugin.manifest.version);
-          const ownVersion = versionNumberString2Number(ownPlugin.manifest.version);
-          if (remoteVersion > ownVersion) {
-            updateFound = true;
-          }
-          if ((plugin.mtime / 1e3 | 0) > (ownPlugin.mtime / 1e3 | 0) && ((_a = plugin.dataJson) != null ? _a : "") != ((_b = ownPlugin.dataJson) != null ? _b : "")) {
-            updateFound = true;
-          }
+  async checkPluginUpdate() {
+    var _a, _b;
+    if (!this.settings.usePluginSync)
+      return;
+    await this.sweepPlugin(false);
+    const { allPlugins, thisDevicePlugins } = await this.getPluginList();
+    const arrPlugins = Object.values(allPlugins);
+    let updateFound = false;
+    for (const plugin of arrPlugins) {
+      const ownPlugin = thisDevicePlugins[plugin.manifest.id];
+      if (ownPlugin) {
+        const remoteVersion = versionNumberString2Number(plugin.manifest.version);
+        const ownVersion = versionNumberString2Number(ownPlugin.manifest.version);
+        if (remoteVersion > ownVersion) {
+          updateFound = true;
+        }
+        if ((plugin.mtime / 1e3 | 0) > (ownPlugin.mtime / 1e3 | 0) && ((_a = plugin.dataJson) != null ? _a : "") != ((_b = ownPlugin.dataJson) != null ? _b : "")) {
+          updateFound = true;
         }
       }
-      if (updateFound) {
-        const fragment = createFragment((doc) => {
-          doc.createEl("a", null, (a) => {
-            a.text = "There're some new plugins or their settings";
-            a.addEventListener("click", () => this.showPluginSyncModal());
-          });
+    }
+    if (updateFound) {
+      const fragment = createFragment((doc) => {
+        doc.createEl("a", null, (a) => {
+          a.text = "There're some new plugins or their settings";
+          a.addEventListener("click", () => this.showPluginSyncModal());
         });
-        NewNotice(fragment, 1e4);
-      } else {
-        Logger("Everything is up to date.", LOG_LEVEL.NOTICE);
-      }
-    });
+      });
+      NewNotice(fragment, 1e4);
+    } else {
+      Logger("Everything is up to date.", LOG_LEVEL.NOTICE);
+    }
   }
   clearPeriodicSync() {
     if (this.periodicSyncHandler != null) {
@@ -14511,15 +13939,11 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
   setPeriodicSync() {
     if (this.settings.periodicReplication && this.settings.periodicReplicationInterval > 0) {
       this.clearPeriodicSync();
-      this.periodicSyncHandler = this.setInterval(() => __async(this, null, function* () {
-        return yield this.periodicSync();
-      }), Math.max(this.settings.periodicReplicationInterval, 30) * 1e3);
+      this.periodicSyncHandler = this.setInterval(async () => await this.periodicSync(), Math.max(this.settings.periodicReplicationInterval, 30) * 1e3);
     }
   }
-  periodicSync() {
-    return __async(this, null, function* () {
-      yield this.replicate();
-    });
+  async periodicSync() {
+    await this.replicate();
   }
   clearPluginSweep() {
     if (this.periodicPluginSweepHandler != null) {
@@ -14530,39 +13954,33 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
   setPluginSweep() {
     if (this.settings.autoSweepPluginsPeriodic) {
       this.clearPluginSweep();
-      this.periodicPluginSweepHandler = this.setInterval(() => __async(this, null, function* () {
-        return yield this.periodicPluginSweep();
-      }), PERIODIC_PLUGIN_SWEEP * 1e3);
+      this.periodicPluginSweepHandler = this.setInterval(async () => await this.periodicPluginSweep(), PERIODIC_PLUGIN_SWEEP * 1e3);
     }
   }
-  periodicPluginSweep() {
-    return __async(this, null, function* () {
-      yield this.sweepPlugin(false);
-    });
+  async periodicPluginSweep() {
+    await this.sweepPlugin(false);
   }
-  realizeSettingSyncMode() {
-    return __async(this, null, function* () {
-      this.localDatabase.closeReplication();
-      this.clearPeriodicSync();
-      this.clearPluginSweep();
-      this.clearInternalFileScan();
-      yield this.applyBatchChange();
-      if (this.suspended)
-        return;
-      if (this.settings.autoSweepPlugins) {
-        yield this.sweepPlugin(false);
-      }
-      if (this.settings.liveSync) {
-        this.localDatabase.openReplication(this.settings, true, false, this.parseReplicationResult);
-        this.refreshStatusText();
-      }
-      if (this.settings.syncInternalFiles) {
-        yield this.syncInternalFilesAndDatabase("safe", false);
-      }
-      this.setPeriodicSync();
-      this.setPluginSweep();
-      this.setPeriodicInternalFileScan();
-    });
+  async realizeSettingSyncMode() {
+    this.localDatabase.closeReplication();
+    this.clearPeriodicSync();
+    this.clearPluginSweep();
+    this.clearInternalFileScan();
+    await this.applyBatchChange();
+    if (this.suspended)
+      return;
+    if (this.settings.autoSweepPlugins) {
+      await this.sweepPlugin(false);
+    }
+    if (this.settings.liveSync) {
+      this.localDatabase.openReplication(this.settings, true, false, this.parseReplicationResult);
+      this.refreshStatusText();
+    }
+    if (this.settings.syncInternalFiles) {
+      await this.syncInternalFilesAndDatabase("safe", false);
+    }
+    this.setPeriodicSync();
+    this.setPluginSweep();
+    this.setPeriodicInternalFileScan();
   }
   refreshStatusText() {
     const sent = this.localDatabase.docSent;
@@ -14602,17 +14020,17 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
       const pieces = queue.map((e3) => e3[1].missingChildren).reduce((prev, cur) => prev + cur.length, 0);
       queued = ` \u{1F9E9} ${queuedCount} (${pieces})`;
     }
-    const procs = getProcessingCounts();
-    const procsDisp = procs == 0 ? "" : ` \u23F3${procs}`;
-    const message = `Sync: ${w} \u2191${sent} \u2193${arrived}${waiting}${procsDisp}${queued}`;
-    const locks2 = getLocks();
-    const pendingTask = locks2.pending.length ? "\nPending: " + Object.entries(locks2.pending.reduce((p, c) => {
+    const processes = getProcessingCounts();
+    const processesDisp = processes == 0 ? "" : ` \u23F3${processes}`;
+    const message = `Sync: ${w} \u2191${sent} \u2193${arrived}${waiting}${processesDisp}${queued}`;
+    const locks = getLocks();
+    const pendingTask = locks.pending.length ? "\nPending: " + Object.entries(locks.pending.reduce((p, c) => {
       var _a;
-      return __spreadProps(__spreadValues({}, p), { [c]: ((_a = p[c]) != null ? _a : 0) + 1 });
+      return { ...p, [c]: ((_a = p[c]) != null ? _a : 0) + 1 };
     }, {})).map((e3) => `${e3[0]}${e3[1] == 1 ? "" : `(${e3[1]})`}`).join(", ") : "";
-    const runningTask = locks2.running.length ? "\nRunning: " + Object.entries(locks2.running.reduce((p, c) => {
+    const runningTask = locks.running.length ? "\nRunning: " + Object.entries(locks.running.reduce((p, c) => {
       var _a;
-      return __spreadProps(__spreadValues({}, p), { [c]: ((_a = p[c]) != null ? _a : 0) + 1 });
+      return { ...p, [c]: ((_a = p[c]) != null ? _a : 0) + 1 };
     }, {})).map((e3) => `${e3[0]}${e3[1] == 1 ? "" : `(${e3[1]})`}`).join(", ") : "";
     this.setStatusBarText(message + pendingTask + runningTask);
   }
@@ -14640,292 +14058,272 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
   }
   updateStatusBarText() {
   }
-  replicate(showMessage) {
-    return __async(this, null, function* () {
-      if (this.settings.versionUpFlash != "") {
-        Logger("Open settings and check message, please.", LOG_LEVEL.NOTICE);
-        return;
-      }
-      yield this.applyBatchChange();
-      if (this.settings.autoSweepPlugins) {
-        yield this.sweepPlugin(false);
-      }
-      yield this.loadQueuedFiles();
-      if (this.settings.syncInternalFiles && this.settings.syncInternalFilesBeforeReplication) {
-        yield this.syncInternalFilesAndDatabase("push", showMessage);
-      }
-      this.localDatabase.openReplication(this.settings, false, showMessage, this.parseReplicationResult);
-    });
+  async replicate(showMessage) {
+    if (this.settings.versionUpFlash != "") {
+      Logger("Open settings and check message, please.", LOG_LEVEL.NOTICE);
+      return;
+    }
+    await this.applyBatchChange();
+    if (this.settings.autoSweepPlugins) {
+      await this.sweepPlugin(false);
+    }
+    await this.loadQueuedFiles();
+    if (this.settings.syncInternalFiles && this.settings.syncInternalFilesBeforeReplication) {
+      await this.syncInternalFilesAndDatabase("push", showMessage);
+    }
+    this.localDatabase.openReplication(this.settings, false, showMessage, this.parseReplicationResult);
   }
-  initializeDatabase(showingNotice) {
-    return __async(this, null, function* () {
-      if (yield this.openDatabase()) {
-        if (this.localDatabase.isReady) {
-          yield this.syncAllFiles(showingNotice);
-        }
-        return true;
-      } else {
-        return false;
+  async initializeDatabase(showingNotice) {
+    if (await this.openDatabase()) {
+      if (this.localDatabase.isReady) {
+        await this.syncAllFiles(showingNotice);
       }
-    });
-  }
-  replicateAllToServer(showingNotice) {
-    return __async(this, null, function* () {
-      if (this.settings.autoSweepPlugins) {
-        yield this.sweepPlugin(showingNotice);
-      }
-      return yield this.localDatabase.replicateAllToServer(this.settings, showingNotice);
-    });
-  }
-  markRemoteLocked() {
-    return __async(this, null, function* () {
-      return yield this.localDatabase.markRemoteLocked(this.settings, true);
-    });
-  }
-  markRemoteUnlocked() {
-    return __async(this, null, function* () {
-      return yield this.localDatabase.markRemoteLocked(this.settings, false);
-    });
-  }
-  markRemoteResolved() {
-    return __async(this, null, function* () {
-      return yield this.localDatabase.markRemoteResolved(this.settings);
-    });
-  }
-  syncAllFiles(showingNotice) {
-    return __async(this, null, function* () {
-      let initialScan = false;
-      if (showingNotice) {
-        Logger("Initializing", LOG_LEVEL.NOTICE, "syncAll");
-      }
-      const filesStorage = this.app.vault.getFiles().filter((e3) => this.isTargetFile(e3));
-      const filesStorageName = filesStorage.map((e3) => e3.path);
-      const wf = yield this.localDatabase.localDatabase.allDocs();
-      const filesDatabase = wf.rows.filter((e3) => !isChunk(e3.id) && !isPluginChunk(e3.id) && e3.id != "obsydian_livesync_version").filter((e3) => isValidPath(e3.id)).map((e3) => id2path(e3.id)).filter((e3) => this.isTargetFile(e3));
-      const isInitialized = (yield this.localDatabase.kvDB.get("initialized")) || false;
-      if (filesDatabase.length == 0 && !isInitialized) {
-        initialScan = true;
-        Logger("Database looks empty, save files as initial sync data");
-      }
-      const onlyInStorage = filesStorage.filter((e3) => filesDatabase.indexOf(e3.path) == -1);
-      const onlyInDatabase = filesDatabase.filter((e3) => filesStorageName.indexOf(e3) == -1);
-      const onlyInStorageNames = onlyInStorage.map((e3) => e3.path);
-      const syncFiles = filesStorage.filter((e3) => onlyInStorageNames.indexOf(e3.path) == -1);
-      Logger("Initialize and checking database files");
-      Logger("Updating database by new files");
-      this.setStatusBarText(`UPDATE DATABASE`);
-      const runAll = (procedurename, objects, callback) => __async(this, null, function* () {
-        const count = objects.length;
-        Logger(procedurename);
-        let i2 = 0;
-        const p = Parallels();
-        const limit = 10;
-        Logger(`${procedurename} exec.`);
-        for (const v of objects) {
-          if (!this.localDatabase.isReady)
-            throw Error("Database is not ready!");
-          p.add(callback(v).then(() => {
-            i2++;
-            if (i2 % 100 == 0) {
-              const notify = `${procedurename} : ${i2}/${count}`;
-              if (showingNotice) {
-                Logger(notify, LOG_LEVEL.NOTICE, "syncAll");
-              } else {
-                Logger(notify);
-              }
-              this.setStatusBarText(notify);
-            }
-          }).catch((ex) => {
-            Logger(`Error while ${procedurename}`, LOG_LEVEL.NOTICE);
-            Logger(ex);
-          }).finally(() => {
-          }));
-          yield p.wait(limit);
-        }
-        yield p.all();
-        Logger(`${procedurename} done.`);
-      });
-      yield runAll("UPDATE DATABASE", onlyInStorage, (e3) => __async(this, null, function* () {
-        Logger(`Update into ${e3.path}`);
-        yield this.updateIntoDB(e3, initialScan);
-      }));
-      if (!initialScan) {
-        yield runAll("UPDATE STORAGE", onlyInDatabase, (e3) => __async(this, null, function* () {
-          Logger(`Check or pull from db:${e3}`);
-          yield this.pullFile(e3, filesStorage, false, null, false);
-        }));
-      }
-      if (!initialScan) {
-        let caches = {};
-        caches = (yield this.localDatabase.kvDB.get("diff-caches")) || {};
-        const docsCount = syncFiles.length;
-        do {
-          const syncFilesX = syncFiles.splice(0, 100);
-          const docs = yield this.localDatabase.localDatabase.allDocs({ keys: syncFilesX.map((e3) => path2id(e3.path)), include_docs: true });
-          const syncFilesToSync = syncFilesX.map((e3) => ({ file: e3, doc: docs.rows.find((ee) => ee.id == path2id(e3.path)).doc }));
-          yield runAll(`CHECK FILE STATUS:${syncFiles.length}/${docsCount}`, syncFilesToSync, (e3) => __async(this, null, function* () {
-            caches = yield this.syncFileBetweenDBandStorage(e3.file, e3.doc, initialScan, caches);
-          }));
-        } while (syncFiles.length > 0);
-        yield this.localDatabase.kvDB.set("diff-caches", caches);
-      }
-      this.setStatusBarText(`NOW TRACKING!`);
-      Logger("Initialized, NOW TRACKING!");
-      if (!isInitialized) {
-        yield this.localDatabase.kvDB.set("initialized", true);
-      }
-      if (showingNotice) {
-        Logger("Initialize done!", LOG_LEVEL.NOTICE, "syncAll");
-      }
-    });
-  }
-  deleteFolderOnDB(folder) {
-    return __async(this, null, function* () {
-      Logger(`delete folder:${folder.path}`);
-      yield this.localDatabase.deleteDBEntryPrefix(folder.path + "/");
-      for (const v of folder.children) {
-        const entry = v;
-        Logger(`->entry:${entry.path}`, LOG_LEVEL.VERBOSE);
-        if (entry.children) {
-          Logger(`->is dir`, LOG_LEVEL.VERBOSE);
-          yield this.deleteFolderOnDB(entry);
-          try {
-            if (this.settings.trashInsteadDelete) {
-              yield this.app.vault.trash(entry, false);
-            } else {
-              yield this.app.vault.delete(entry);
-            }
-          } catch (ex) {
-            if (ex.code && ex.code == "ENOENT") {
-            } else {
-              Logger(`error while delete folder:${entry.path}`, LOG_LEVEL.NOTICE);
-              Logger(ex);
-            }
-          }
-        } else {
-          Logger(`->is file`, LOG_LEVEL.VERBOSE);
-          yield this.deleteFromDB(entry);
-        }
-      }
-      try {
-        if (this.settings.trashInsteadDelete) {
-          yield this.app.vault.trash(folder, false);
-        } else {
-          yield this.app.vault.delete(folder);
-        }
-      } catch (ex) {
-        if (ex.code && ex.code == "ENOENT") {
-        } else {
-          Logger(`error while delete folder:${folder.path}`, LOG_LEVEL.NOTICE);
-          Logger(ex);
-        }
-      }
-    });
-  }
-  renameFolder(folder, oldFile) {
-    return __async(this, null, function* () {
-      for (const v of folder.children) {
-        const entry = v;
-        if (entry.children) {
-          yield this.deleteFolderOnDB(entry);
-          if (this.settings.trashInsteadDelete) {
-            yield this.app.vault.trash(entry, false);
-          } else {
-            yield this.app.vault.delete(entry);
-          }
-        } else {
-          yield this.deleteFromDB(entry);
-        }
-      }
-    });
-  }
-  getConflictedDoc(path, rev) {
-    return __async(this, null, function* () {
-      try {
-        const doc = yield this.localDatabase.getDBEntry(path, { rev }, false, false);
-        if (doc === false)
-          return false;
-        let data = doc.data;
-        if (doc.datatype == "newnote") {
-          data = base64ToString(doc.data);
-        } else if (doc.datatype == "plain") {
-          data = doc.data;
-        }
-        return {
-          ctime: doc.ctime,
-          mtime: doc.mtime,
-          rev,
-          data
-        };
-      } catch (ex) {
-        if (ex.status && ex.status == 404) {
-          return false;
-        }
-      }
+      return true;
+    } else {
       return false;
-    });
+    }
   }
-  getConflictedStatus(path) {
-    return __async(this, null, function* () {
-      const test = yield this.localDatabase.getDBEntry(path, { conflicts: true }, false, false);
-      if (test === false)
-        return false;
-      if (test == null)
-        return false;
-      if (!test._conflicts)
-        return false;
-      if (test._conflicts.length == 0)
-        return false;
-      const leftLeaf = yield this.getConflictedDoc(path, test._rev);
-      const rightLeaf = yield this.getConflictedDoc(path, test._conflicts[0]);
-      if (leftLeaf == false) {
-        Logger(`could not get current revisions:${path}`, LOG_LEVEL.NOTICE);
-        return false;
-      }
-      if (rightLeaf == false) {
-        yield this.localDatabase.deleteDBEntry(path, { rev: test._conflicts[0] });
-        yield this.pullFile(path, null, true);
-        Logger(`could not get old revisions, automaticaly used newer one:${path}`, LOG_LEVEL.NOTICE);
-        return true;
-      }
-      if (leftLeaf.data == rightLeaf.data) {
-        let leaf = leftLeaf;
-        if (leftLeaf.mtime > rightLeaf.mtime) {
-          leaf = rightLeaf;
+  async replicateAllToServer(showingNotice) {
+    if (this.settings.autoSweepPlugins) {
+      await this.sweepPlugin(showingNotice);
+    }
+    return await this.localDatabase.replicateAllToServer(this.settings, showingNotice);
+  }
+  async markRemoteLocked() {
+    return await this.localDatabase.markRemoteLocked(this.settings, true);
+  }
+  async markRemoteUnlocked() {
+    return await this.localDatabase.markRemoteLocked(this.settings, false);
+  }
+  async markRemoteResolved() {
+    return await this.localDatabase.markRemoteResolved(this.settings);
+  }
+  async syncAllFiles(showingNotice) {
+    let initialScan = false;
+    if (showingNotice) {
+      Logger("Initializing", LOG_LEVEL.NOTICE, "syncAll");
+    }
+    const filesStorage = this.app.vault.getFiles().filter((e3) => this.isTargetFile(e3));
+    const filesStorageName = filesStorage.map((e3) => e3.path);
+    const wf = await this.localDatabase.localDatabase.allDocs();
+    const filesDatabase = wf.rows.filter((e3) => !isChunk(e3.id) && !isPluginChunk(e3.id) && e3.id != "obsydian_livesync_version").filter((e3) => isValidPath(e3.id)).map((e3) => id2path(e3.id)).filter((e3) => this.isTargetFile(e3));
+    const isInitialized = await this.localDatabase.kvDB.get("initialized") || false;
+    if (filesDatabase.length == 0 && !isInitialized) {
+      initialScan = true;
+      Logger("Database looks empty, save files as initial sync data");
+    }
+    const onlyInStorage = filesStorage.filter((e3) => filesDatabase.indexOf(e3.path) == -1);
+    const onlyInDatabase = filesDatabase.filter((e3) => filesStorageName.indexOf(e3) == -1);
+    const onlyInStorageNames = onlyInStorage.map((e3) => e3.path);
+    const syncFiles = filesStorage.filter((e3) => onlyInStorageNames.indexOf(e3.path) == -1);
+    Logger("Initialize and checking database files");
+    Logger("Updating database by new files");
+    this.setStatusBarText(`UPDATE DATABASE`);
+    const runAll = async (procedureName, objects, callback) => {
+      const count = objects.length;
+      Logger(procedureName);
+      let i2 = 0;
+      const semaphore = Semaphore(10);
+      Logger(`${procedureName} exec.`);
+      if (!this.localDatabase.isReady)
+        throw Error("Database is not ready!");
+      const processes = objects.map((e3) => (async (v) => {
+        const releaser = await semaphore.acquire(1, procedureName);
+        try {
+          await callback(v);
+          i2++;
+          if (i2 % 50 == 0) {
+            const notify = `${procedureName} : ${i2}/${count}`;
+            if (showingNotice) {
+              Logger(notify, LOG_LEVEL.NOTICE, "syncAll");
+            } else {
+              Logger(notify);
+            }
+            this.setStatusBarText(notify);
+          }
+        } catch (ex) {
+          Logger(`Error while ${procedureName}`, LOG_LEVEL.NOTICE);
+          Logger(ex);
+        } finally {
+          releaser();
         }
-        yield this.localDatabase.deleteDBEntry(path, { rev: leaf.rev });
-        yield this.pullFile(path, null, true);
-        Logger(`automaticaly merged:${path}`);
-        return true;
-      }
-      if (this.settings.resolveConflictsByNewerFile) {
-        const lmtime = ~~(leftLeaf.mtime / 1e3);
-        const rmtime = ~~(rightLeaf.mtime / 1e3);
-        let loser = leftLeaf;
-        if (lmtime > rmtime) {
-          loser = rightLeaf;
-        }
-        yield this.localDatabase.deleteDBEntry(path, { rev: loser.rev });
-        yield this.pullFile(path, null, true);
-        Logger(`Automaticaly merged (newerFileResolve) :${path}`, LOG_LEVEL.NOTICE);
-        return true;
-      }
-      const dmp = new import_diff_match_patch3.diff_match_patch();
-      const diff = dmp.diff_main(leftLeaf.data, rightLeaf.data);
-      dmp.diff_cleanupSemantic(diff);
-      Logger(`conflict(s) found:${path}`);
-      return {
-        left: leftLeaf,
-        right: rightLeaf,
-        diff
-      };
+      })(e3));
+      await Promise.all(processes);
+      Logger(`${procedureName} done.`);
+    };
+    await runAll("UPDATE DATABASE", onlyInStorage, async (e3) => {
+      Logger(`Update into ${e3.path}`);
+      await this.updateIntoDB(e3, initialScan);
     });
+    if (!initialScan) {
+      await runAll("UPDATE STORAGE", onlyInDatabase, async (e3) => {
+        Logger(`Check or pull from db:${e3}`);
+        await this.pullFile(e3, filesStorage, false, null, false);
+        Logger(`Check or pull from db:${e3} OK`);
+      });
+    }
+    if (!initialScan) {
+      let caches = {};
+      caches = await this.localDatabase.kvDB.get("diff-caches") || {};
+      const docsCount = syncFiles.length;
+      do {
+        const syncFilesX = syncFiles.splice(0, 100);
+        const docs = await this.localDatabase.localDatabase.allDocs({ keys: syncFilesX.map((e3) => path2id(e3.path)), include_docs: true });
+        const syncFilesToSync = syncFilesX.map((e3) => ({ file: e3, doc: docs.rows.find((ee) => ee.id == path2id(e3.path)).doc }));
+        await runAll(`CHECK FILE STATUS:${syncFiles.length}/${docsCount}`, syncFilesToSync, async (e3) => {
+          caches = await this.syncFileBetweenDBandStorage(e3.file, e3.doc, initialScan, caches);
+        });
+      } while (syncFiles.length > 0);
+      await this.localDatabase.kvDB.set("diff-caches", caches);
+    }
+    this.setStatusBarText(`NOW TRACKING!`);
+    Logger("Initialized, NOW TRACKING!");
+    if (!isInitialized) {
+      await this.localDatabase.kvDB.set("initialized", true);
+    }
+    if (showingNotice) {
+      Logger("Initialize done!", LOG_LEVEL.NOTICE, "syncAll");
+    }
+  }
+  async deleteFolderOnDB(folder) {
+    Logger(`delete folder:${folder.path}`);
+    await this.localDatabase.deleteDBEntryPrefix(folder.path + "/");
+    for (const v of folder.children) {
+      const entry = v;
+      Logger(`->entry:${entry.path}`, LOG_LEVEL.VERBOSE);
+      if (entry.children) {
+        Logger(`->is dir`, LOG_LEVEL.VERBOSE);
+        await this.deleteFolderOnDB(entry);
+        try {
+          if (this.settings.trashInsteadDelete) {
+            await this.app.vault.trash(entry, false);
+          } else {
+            await this.app.vault.delete(entry);
+          }
+        } catch (ex) {
+          if (ex.code && ex.code == "ENOENT") {
+          } else {
+            Logger(`error while delete folder:${entry.path}`, LOG_LEVEL.NOTICE);
+            Logger(ex);
+          }
+        }
+      } else {
+        Logger(`->is file`, LOG_LEVEL.VERBOSE);
+        await this.deleteFromDB(entry);
+      }
+    }
+    try {
+      if (this.settings.trashInsteadDelete) {
+        await this.app.vault.trash(folder, false);
+      } else {
+        await this.app.vault.delete(folder);
+      }
+    } catch (ex) {
+      if (ex.code && ex.code == "ENOENT") {
+      } else {
+        Logger(`error while delete folder:${folder.path}`, LOG_LEVEL.NOTICE);
+        Logger(ex);
+      }
+    }
+  }
+  async renameFolder(folder, oldFile) {
+    for (const v of folder.children) {
+      const entry = v;
+      if (entry.children) {
+        await this.deleteFolderOnDB(entry);
+        if (this.settings.trashInsteadDelete) {
+          await this.app.vault.trash(entry, false);
+        } else {
+          await this.app.vault.delete(entry);
+        }
+      } else {
+        await this.deleteFromDB(entry);
+      }
+    }
+  }
+  async getConflictedDoc(path, rev) {
+    try {
+      const doc = await this.localDatabase.getDBEntry(path, { rev }, false, false);
+      if (doc === false)
+        return false;
+      let data = doc.data;
+      if (doc.datatype == "newnote") {
+        data = base64ToString(doc.data);
+      } else if (doc.datatype == "plain") {
+        data = doc.data;
+      }
+      return {
+        ctime: doc.ctime,
+        mtime: doc.mtime,
+        rev,
+        data
+      };
+    } catch (ex) {
+      if (ex.status && ex.status == 404) {
+        return false;
+      }
+    }
+    return false;
+  }
+  async getConflictedStatus(path) {
+    const test = await this.localDatabase.getDBEntry(path, { conflicts: true }, false, false);
+    if (test === false)
+      return false;
+    if (test == null)
+      return false;
+    if (!test._conflicts)
+      return false;
+    if (test._conflicts.length == 0)
+      return false;
+    const leftLeaf = await this.getConflictedDoc(path, test._rev);
+    const rightLeaf = await this.getConflictedDoc(path, test._conflicts[0]);
+    if (leftLeaf == false) {
+      Logger(`could not get current revisions:${path}`, LOG_LEVEL.NOTICE);
+      return false;
+    }
+    if (rightLeaf == false) {
+      await this.localDatabase.deleteDBEntry(path, { rev: test._conflicts[0] });
+      await this.pullFile(path, null, true);
+      Logger(`could not get old revisions, automatically used newer one:${path}`, LOG_LEVEL.NOTICE);
+      return true;
+    }
+    if (leftLeaf.data == rightLeaf.data) {
+      let leaf = leftLeaf;
+      if (leftLeaf.mtime > rightLeaf.mtime) {
+        leaf = rightLeaf;
+      }
+      await this.localDatabase.deleteDBEntry(path, { rev: leaf.rev });
+      await this.pullFile(path, null, true);
+      Logger(`automatically merged:${path}`);
+      return true;
+    }
+    if (this.settings.resolveConflictsByNewerFile) {
+      const lMtime = ~~(leftLeaf.mtime / 1e3);
+      const rMtime = ~~(rightLeaf.mtime / 1e3);
+      let loser = leftLeaf;
+      if (lMtime > rMtime) {
+        loser = rightLeaf;
+      }
+      await this.localDatabase.deleteDBEntry(path, { rev: loser.rev });
+      await this.pullFile(path, null, true);
+      Logger(`Automatically merged (newerFileResolve) :${path}`, LOG_LEVEL.NOTICE);
+      return true;
+    }
+    const dmp = new import_diff_match_patch3.diff_match_patch();
+    const diff = dmp.diff_main(leftLeaf.data, rightLeaf.data);
+    dmp.diff_cleanupSemantic(diff);
+    Logger(`conflict(s) found:${path}`);
+    return {
+      left: leftLeaf,
+      right: rightLeaf,
+      diff
+    };
   }
   showMergeDialog(file, conflictCheckResult) {
     return new Promise((res, rej) => {
       Logger("open conflict dialog", LOG_LEVEL.VERBOSE);
-      new ConflictResolveModal(this.app, conflictCheckResult, (selected) => __async(this, null, function* () {
-        const testDoc = yield this.localDatabase.getDBEntry(file.path, { conflicts: true });
+      new ConflictResolveModal(this.app, conflictCheckResult, async (selected) => {
+        const testDoc = await this.localDatabase.getDBEntry(file.path, { conflicts: true });
         if (testDoc === false) {
           Logger("Missing file..", LOG_LEVEL.VERBOSE);
           return res(true);
@@ -14938,11 +14336,11 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
         const toKeep = conflictCheckResult.left.rev != toDelete ? conflictCheckResult.left.rev : conflictCheckResult.right.rev;
         if (toDelete == "") {
           const p = conflictCheckResult.diff.map((e3) => e3[1]).join("");
-          yield this.localDatabase.deleteDBEntry(file.path, { rev: conflictCheckResult.left.rev });
-          yield this.localDatabase.deleteDBEntry(file.path, { rev: conflictCheckResult.right.rev });
-          yield this.app.vault.modify(file, p);
-          yield this.updateIntoDB(file);
-          yield this.pullFile(file.path);
+          await this.localDatabase.deleteDBEntry(file.path, { rev: conflictCheckResult.left.rev });
+          await this.localDatabase.deleteDBEntry(file.path, { rev: conflictCheckResult.right.rev });
+          await this.app.vault.modify(file, p);
+          await this.updateIntoDB(file);
+          await this.pullFile(file.path);
           Logger("concat both file");
           setTimeout(() => {
             this.showIfConflicted(file);
@@ -14951,14 +14349,14 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
           Logger("Leave it still conflicted");
         } else {
           Logger(`Conflict resolved:${file.path}`);
-          yield this.localDatabase.deleteDBEntry(file.path, { rev: toDelete });
-          yield this.pullFile(file.path, null, true, toKeep);
+          await this.localDatabase.deleteDBEntry(file.path, { rev: toDelete });
+          await this.pullFile(file.path, null, true, toKeep);
           setTimeout(() => {
             this.showIfConflicted(file);
           }, 500);
         }
         return res(true);
-      })).open();
+      }).open();
     });
   }
   queueConflictedCheck(file) {
@@ -14967,361 +14365,331 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     if (this.conflictedCheckTimer != null) {
       window.clearTimeout(this.conflictedCheckTimer);
     }
-    this.conflictedCheckTimer = window.setTimeout(() => __async(this, null, function* () {
+    this.conflictedCheckTimer = window.setTimeout(async () => {
       this.conflictedCheckTimer = null;
       const checkFiles = JSON.parse(JSON.stringify(this.conflictedCheckFiles));
       for (const filename of checkFiles) {
         try {
           const file2 = this.app.vault.getAbstractFileByPath(filename);
           if (file2 != null && file2 instanceof import_obsidian8.TFile) {
-            yield this.showIfConflicted(file2);
+            await this.showIfConflicted(file2);
           }
         } catch (ex) {
           Logger(ex);
         }
       }
-    }), 1e3);
+    }, 1e3);
   }
-  showIfConflicted(file) {
-    return __async(this, null, function* () {
-      yield runWithLock("conflicted", false, () => __async(this, null, function* () {
-        const conflictCheckResult = yield this.getConflictedStatus(file.path);
-        if (conflictCheckResult === false) {
-          return;
-        }
-        if (conflictCheckResult === true) {
-          Logger("conflict:Automatically merged, but we have to check it again");
-          setTimeout(() => {
-            this.showIfConflicted(file);
-          }, 500);
-          return;
-        }
-        yield this.showMergeDialog(file, conflictCheckResult);
-      }));
-    });
-  }
-  pullFile(filename, fileList, force, rev, waitForReady = true) {
-    return __async(this, null, function* () {
-      const targetFile = this.app.vault.getAbstractFileByPath(id2path(filename));
-      if (!this.isTargetFile(id2path(filename)))
+  async showIfConflicted(file) {
+    await runWithLock("conflicted", false, async () => {
+      const conflictCheckResult = await this.getConflictedStatus(file.path);
+      if (conflictCheckResult === false) {
         return;
-      if (targetFile == null) {
-        const doc = yield this.localDatabase.getDBEntry(filename, rev ? { rev } : null, false, waitForReady);
-        if (doc === false) {
-          Logger(`${filename} Skipped`);
-          return;
-        }
-        yield this.doc2storage_create(doc, force);
-      } else if (targetFile instanceof import_obsidian8.TFile) {
-        const file = targetFile;
-        const doc = yield this.localDatabase.getDBEntry(filename, rev ? { rev } : null, false, waitForReady);
-        if (doc === false) {
-          Logger(`${filename} Skipped`);
-          return;
-        }
-        yield this.doc2storage_modify(doc, file, force);
-      } else {
-        Logger(`target files:${filename} is exists as the folder`);
       }
+      if (conflictCheckResult === true) {
+        Logger("conflict:Automatically merged, but we have to check it again");
+        setTimeout(() => {
+          this.showIfConflicted(file);
+        }, 500);
+        return;
+      }
+      await this.showMergeDialog(file, conflictCheckResult);
     });
   }
-  syncFileBetweenDBandStorage(file, doc, initialScan, caches) {
-    return __async(this, null, function* () {
-      if (!doc) {
-        throw new Error(`Missing doc:${file.path}`);
+  async pullFile(filename, fileList, force, rev, waitForReady = true) {
+    const targetFile = this.app.vault.getAbstractFileByPath(id2path(filename));
+    if (!this.isTargetFile(id2path(filename)))
+      return;
+    if (targetFile == null) {
+      const doc = await this.localDatabase.getDBEntry(filename, rev ? { rev } : null, false, waitForReady);
+      if (doc === false) {
+        Logger(`${filename} Skipped`);
+        return;
       }
-      if (!(file instanceof import_obsidian8.TFile) && "path" in file) {
-        const w = this.app.vault.getAbstractFileByPath(file.path);
-        if (w instanceof import_obsidian8.TFile) {
-          file = w;
-        } else {
-          throw new Error(`Missing file:${file.path}`);
-        }
+      await this.doc2storage_create(doc, force);
+    } else if (targetFile instanceof import_obsidian8.TFile) {
+      const file = targetFile;
+      const doc = await this.localDatabase.getDBEntry(filename, rev ? { rev } : null, false, waitForReady);
+      if (doc === false) {
+        Logger(`${filename} Skipped`);
+        return;
       }
-      const storageMtime = ~~(file.stat.mtime / 1e3);
-      const docMtime = ~~(doc.mtime / 1e3);
-      const dK = `${file.path}-diff`;
-      const isLastDiff = dK in caches ? caches[dK] : { storageMtime: 0, docMtime: 0 };
-      if (isLastDiff.docMtime == docMtime && isLastDiff.storageMtime == storageMtime) {
-        caches[dK] = { storageMtime, docMtime };
-        return caches;
-      }
-      if (storageMtime > docMtime) {
-        Logger("STORAGE -> DB :" + file.path);
-        Logger(`${storageMtime} > ${docMtime}`);
-        yield this.updateIntoDB(file, initialScan);
-        caches[dK] = { storageMtime, docMtime };
-        return caches;
-      } else if (storageMtime < docMtime) {
-        Logger("STORAGE <- DB :" + file.path);
-        Logger(`${storageMtime} < ${docMtime}`);
-        const docx = yield this.localDatabase.getDBEntry(file.path, null, false, false);
-        if (docx != false) {
-          yield this.doc2storage_modify(docx, file);
-        } else {
-          Logger("STORAGE <- DB :" + file.path + " Skipped");
-        }
-        caches[dK] = { storageMtime, docMtime };
-        return caches;
+      await this.doc2storage_modify(doc, file, force);
+    } else {
+      Logger(`target files:${filename} is exists as the folder`);
+    }
+  }
+  async syncFileBetweenDBandStorage(file, doc, initialScan, caches) {
+    if (!doc) {
+      throw new Error(`Missing doc:${file.path}`);
+    }
+    if (!(file instanceof import_obsidian8.TFile) && "path" in file) {
+      const w = this.app.vault.getAbstractFileByPath(file.path);
+      if (w instanceof import_obsidian8.TFile) {
+        file = w;
       } else {
+        throw new Error(`Missing file:${file.path}`);
+      }
+    }
+    const storageMtime = ~~(file.stat.mtime / 1e3);
+    const docMtime = ~~(doc.mtime / 1e3);
+    const dK = `${file.path}-diff`;
+    const isLastDiff = dK in caches ? caches[dK] : { storageMtime: 0, docMtime: 0 };
+    if (isLastDiff.docMtime == docMtime && isLastDiff.storageMtime == storageMtime) {
+      caches[dK] = { storageMtime, docMtime };
+      return caches;
+    }
+    if (storageMtime > docMtime) {
+      Logger("STORAGE -> DB :" + file.path);
+      Logger(`${storageMtime} > ${docMtime}`);
+      await this.updateIntoDB(file, initialScan);
+      caches[dK] = { storageMtime, docMtime };
+      return caches;
+    } else if (storageMtime < docMtime) {
+      Logger("STORAGE <- DB :" + file.path);
+      Logger(`${storageMtime} < ${docMtime}`);
+      const docx = await this.localDatabase.getDBEntry(file.path, null, false, false);
+      if (docx != false) {
+        await this.doc2storage_modify(docx, file);
+      } else {
+        Logger("STORAGE <- DB :" + file.path + " Skipped");
       }
       caches[dK] = { storageMtime, docMtime };
       return caches;
-    });
+    } else {
+    }
+    caches[dK] = { storageMtime, docMtime };
+    return caches;
   }
-  updateIntoDB(file, initialScan) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(file))
-        return;
-      if (shouldBeIgnored(file.path)) {
-        return;
+  async updateIntoDB(file, initialScan) {
+    if (!this.isTargetFile(file))
+      return;
+    if (shouldBeIgnored(file.path)) {
+      return;
+    }
+    let content = "";
+    let datatype = "newnote";
+    if (!isPlainText(file.name)) {
+      const contentBin = await this.app.vault.readBinary(file);
+      content = await arrayBufferToBase64(contentBin);
+      datatype = "newnote";
+    } else {
+      content = await this.app.vault.read(file);
+      datatype = "plain";
+    }
+    const fullPath = path2id(file.path);
+    const d = {
+      _id: fullPath,
+      data: content,
+      ctime: file.stat.ctime,
+      mtime: file.stat.mtime,
+      size: file.stat.size,
+      children: [],
+      datatype,
+      type: datatype
+    };
+    const msg = `DB <- STORAGE (${datatype}) `;
+    const isNotChanged = await runWithLock("file:" + fullPath, false, async () => {
+      if (recentlyTouched(file)) {
+        return true;
       }
-      let content = "";
-      let datatype = "newnote";
-      if (!isPlainText(file.name)) {
-        const contentBin = yield this.app.vault.readBinary(file);
-        content = yield arrayBufferToBase64(contentBin);
-        datatype = "newnote";
-      } else {
-        content = yield this.app.vault.read(file);
-        datatype = "plain";
-      }
-      const fullpath = path2id(file.path);
-      const d = {
-        _id: fullpath,
-        data: content,
-        ctime: file.stat.ctime,
-        mtime: file.stat.mtime,
-        size: file.stat.size,
-        children: [],
-        datatype,
-        type: datatype
-      };
-      const msg = `DB <- STORAGE (${datatype}) `;
-      const isNotChanged = yield runWithLock("file:" + fullpath, false, () => __async(this, null, function* () {
-        if (recentlyTouched(file)) {
+      const old = await this.localDatabase.getDBEntry(fullPath, null, false, false);
+      if (old !== false) {
+        const oldData = { data: old.data, deleted: old._deleted || old.deleted };
+        const newData = { data: d.data, deleted: d._deleted || d.deleted };
+        if (JSON.stringify(oldData) == JSON.stringify(newData)) {
+          Logger(msg + "Skipped (not changed) " + fullPath + (d._deleted || d.deleted ? " (deleted)" : ""), LOG_LEVEL.VERBOSE);
           return true;
         }
-        const old = yield this.localDatabase.getDBEntry(fullpath, null, false, false);
-        if (old !== false) {
-          const oldData = { data: old.data, deleted: old._deleted || old.deleted };
-          const newData = { data: d.data, deleted: d._deleted || d.deleted };
-          if (JSON.stringify(oldData) == JSON.stringify(newData)) {
-            Logger(msg + "Skipped (not changed) " + fullpath + (d._deleted || d.deleted ? " (deleted)" : ""), LOG_LEVEL.VERBOSE);
-            return true;
-          }
-        }
-        return false;
-      }));
-      if (isNotChanged)
+      }
+      return false;
+    });
+    if (isNotChanged)
+      return;
+    await this.localDatabase.putDBEntry(d, initialScan);
+    this.queuedFiles = this.queuedFiles.map((e3) => ({ ...e3, ...e3.entry._id == d._id ? { done: true } : {} }));
+    Logger(msg + fullPath);
+    if (this.settings.syncOnSave && !this.suspended) {
+      await this.replicate();
+    }
+  }
+  async deleteFromDB(file) {
+    if (!this.isTargetFile(file))
+      return;
+    const fullPath = file.path;
+    Logger(`deleteDB By path:${fullPath}`);
+    await this.deleteFromDBbyPath(fullPath);
+    if (this.settings.syncOnSave && !this.suspended) {
+      await this.replicate();
+    }
+  }
+  async deleteFromDBbyPath(fullPath) {
+    await this.localDatabase.deleteDBEntry(fullPath);
+    if (this.settings.syncOnSave && !this.suspended) {
+      await this.replicate();
+    }
+  }
+  async resetLocalDatabase() {
+    clearTouched();
+    await this.localDatabase.resetDatabase();
+  }
+  async resetLocalOldDatabase() {
+    clearTouched();
+    await this.localDatabase.resetLocalOldDatabase();
+  }
+  async tryResetRemoteDatabase() {
+    await this.localDatabase.tryResetRemoteDatabase(this.settings);
+  }
+  async tryCreateRemoteDatabase() {
+    await this.localDatabase.tryCreateRemoteDatabase(this.settings);
+  }
+  async getPluginList() {
+    const db = this.localDatabase.localDatabase;
+    const docList = await db.allDocs({ startkey: PSCHeader, endkey: PSCHeaderEnd, include_docs: false });
+    const oldDocs = (await Promise.all(docList.rows.map(async (e3) => await this.localDatabase.getDBEntry(e3.id)))).filter((e3) => e3 !== false).map((e3) => JSON.parse(e3.data));
+    const plugins = {};
+    const allPlugins = {};
+    const thisDevicePlugins = {};
+    for (const v of oldDocs) {
+      if (typeof plugins[v.deviceVaultName] === "undefined") {
+        plugins[v.deviceVaultName] = [];
+      }
+      plugins[v.deviceVaultName].push(v);
+      allPlugins[v._id] = v;
+      if (v.deviceVaultName == this.deviceAndVaultName) {
+        thisDevicePlugins[v.manifest.id] = v;
+      }
+    }
+    return { plugins, allPlugins, thisDevicePlugins };
+  }
+  async sweepPlugin(showMessage = false) {
+    if (!this.settings.usePluginSync)
+      return;
+    if (!this.localDatabase.isReady)
+      return;
+    await runWithLock("sweepplugin", true, async () => {
+      const logLevel = showMessage ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO;
+      if (!this.deviceAndVaultName) {
+        Logger("You have to set your device and vault name.", LOG_LEVEL.NOTICE);
         return;
-      yield this.localDatabase.putDBEntry(d, initialScan);
-      this.queuedFiles = this.queuedFiles.map((e3) => __spreadValues(__spreadValues({}, e3), e3.entry._id == d._id ? { done: true } : {}));
-      Logger(msg + fullpath);
-      if (this.settings.syncOnSave && !this.suspended) {
-        yield this.replicate();
       }
-    });
-  }
-  deleteFromDB(file) {
-    return __async(this, null, function* () {
-      if (!this.isTargetFile(file))
-        return;
-      const fullpath = file.path;
-      Logger(`deleteDB By path:${fullpath}`);
-      yield this.deleteFromDBbyPath(fullpath);
-      if (this.settings.syncOnSave && !this.suspended) {
-        yield this.replicate();
-      }
-    });
-  }
-  deleteFromDBbyPath(fullpath) {
-    return __async(this, null, function* () {
-      yield this.localDatabase.deleteDBEntry(fullpath);
-      if (this.settings.syncOnSave && !this.suspended) {
-        yield this.replicate();
-      }
-    });
-  }
-  resetLocalDatabase() {
-    return __async(this, null, function* () {
-      clearTouched();
-      yield this.localDatabase.resetDatabase();
-    });
-  }
-  resetLocalOldDatabase() {
-    return __async(this, null, function* () {
-      clearTouched();
-      yield this.localDatabase.resetLocalOldDatabase();
-    });
-  }
-  tryResetRemoteDatabase() {
-    return __async(this, null, function* () {
-      yield this.localDatabase.tryResetRemoteDatabase(this.settings);
-    });
-  }
-  tryCreateRemoteDatabase() {
-    return __async(this, null, function* () {
-      yield this.localDatabase.tryCreateRemoteDatabase(this.settings);
-    });
-  }
-  getPluginList() {
-    return __async(this, null, function* () {
+      Logger("Scanning plugins", logLevel);
       const db = this.localDatabase.localDatabase;
-      const docList = yield db.allDocs({ startkey: PSCHeader, endkey: PSCHeaderEnd, include_docs: false });
-      const oldDocs = (yield Promise.all(docList.rows.map((e3) => __async(this, null, function* () {
-        return yield this.localDatabase.getDBEntry(e3.id);
-      })))).filter((e3) => e3 !== false).map((e3) => JSON.parse(e3.data));
-      const plugins = {};
-      const allPlugins = {};
-      const thisDevicePlugins = {};
-      for (const v of oldDocs) {
-        if (typeof plugins[v.deviceVaultName] === "undefined") {
-          plugins[v.deviceVaultName] = [];
+      const oldDocs = await db.allDocs({
+        startkey: `ps:${this.deviceAndVaultName}-`,
+        endkey: `ps:${this.deviceAndVaultName}.`,
+        include_docs: true
+      });
+      const pl = this.app.plugins;
+      const manifests = Object.values(pl.manifests);
+      for (const m of manifests) {
+        Logger(`Reading plugin:${m.name}(${m.id})`, LOG_LEVEL.VERBOSE);
+        const path = (0, import_obsidian8.normalizePath)(m.dir) + "/";
+        const adapter = this.app.vault.adapter;
+        const files = ["manifest.json", "main.js", "styles.css", "data.json"];
+        const pluginData = {};
+        for (const file of files) {
+          const thePath = path + file;
+          if (await adapter.exists(thePath)) {
+            pluginData[file] = await adapter.read(thePath);
+          }
         }
-        plugins[v.deviceVaultName].push(v);
-        allPlugins[v._id] = v;
-        if (v.deviceVaultName == this.deviceAndVaultName) {
-          thisDevicePlugins[v.manifest.id] = v;
+        let mtime = 0;
+        if (await adapter.exists(path + "/data.json")) {
+          mtime = (await adapter.stat(path + "/data.json")).mtime;
         }
-      }
-      return { plugins, allPlugins, thisDevicePlugins };
-    });
-  }
-  sweepPlugin(showMessage = false) {
-    return __async(this, null, function* () {
-      if (!this.settings.usePluginSync)
-        return;
-      if (!this.localDatabase.isReady)
-        return;
-      yield runWithLock("sweepplugin", true, () => __async(this, null, function* () {
-        const logLevel = showMessage ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO;
-        if (!this.deviceAndVaultName) {
-          Logger("You have to set your device and vault name.", LOG_LEVEL.NOTICE);
-          return;
-        }
-        Logger("Scanning plugins", logLevel);
-        const db = this.localDatabase.localDatabase;
-        const oldDocs = yield db.allDocs({
-          startkey: `ps:${this.deviceAndVaultName}-`,
-          endkey: `ps:${this.deviceAndVaultName}.`,
-          include_docs: true
+        const p = {
+          _id: `ps:${this.deviceAndVaultName}-${m.id}`,
+          dataJson: pluginData["data.json"],
+          deviceVaultName: this.deviceAndVaultName,
+          mainJs: pluginData["main.js"],
+          styleCss: pluginData["styles.css"],
+          manifest: m,
+          manifestJson: pluginData["manifest.json"],
+          mtime,
+          type: "plugin"
+        };
+        const d = {
+          _id: p._id,
+          data: JSON.stringify(p),
+          ctime: mtime,
+          mtime,
+          size: 0,
+          children: [],
+          datatype: "plain",
+          type: "plain"
+        };
+        Logger(`check diff:${m.name}(${m.id})`, LOG_LEVEL.VERBOSE);
+        await runWithLock("plugin-" + m.id, false, async () => {
+          const old = await this.localDatabase.getDBEntry(p._id, null, false, false);
+          if (old !== false) {
+            const oldData = { data: old.data, deleted: old._deleted };
+            const newData = { data: d.data, deleted: d._deleted };
+            if (JSON.stringify(oldData) == JSON.stringify(newData)) {
+              oldDocs.rows = oldDocs.rows.filter((e3) => e3.id != d._id);
+              Logger(`Nothing changed:${m.name}`);
+              return;
+            }
+          }
+          await this.localDatabase.putDBEntry(d);
+          oldDocs.rows = oldDocs.rows.filter((e3) => e3.id != d._id);
+          Logger(`Plugin saved:${m.name}`, logLevel);
         });
-        const pl = this.app.plugins;
-        const manifests = Object.values(pl.manifests);
-        for (const m of manifests) {
-          Logger(`Reading plugin:${m.name}(${m.id})`, LOG_LEVEL.VERBOSE);
-          const path = (0, import_obsidian8.normalizePath)(m.dir) + "/";
-          const adapter = this.app.vault.adapter;
-          const files = ["manifest.json", "main.js", "styles.css", "data.json"];
-          const pluginData = {};
-          for (const file of files) {
-            const thePath = path + file;
-            if (yield adapter.exists(thePath)) {
-              pluginData[file] = yield adapter.read(thePath);
-            }
-          }
-          let mtime = 0;
-          if (yield adapter.exists(path + "/data.json")) {
-            mtime = (yield adapter.stat(path + "/data.json")).mtime;
-          }
-          const p = {
-            _id: `ps:${this.deviceAndVaultName}-${m.id}`,
-            dataJson: pluginData["data.json"],
-            deviceVaultName: this.deviceAndVaultName,
-            mainJs: pluginData["main.js"],
-            styleCss: pluginData["styles.css"],
-            manifest: m,
-            manifestJson: pluginData["manifest.json"],
-            mtime,
-            type: "plugin"
-          };
-          const d = {
-            _id: p._id,
-            data: JSON.stringify(p),
-            ctime: mtime,
-            mtime,
-            size: 0,
-            children: [],
-            datatype: "plain",
-            type: "plain"
-          };
-          Logger(`check diff:${m.name}(${m.id})`, LOG_LEVEL.VERBOSE);
-          yield runWithLock("plugin-" + m.id, false, () => __async(this, null, function* () {
-            const old = yield this.localDatabase.getDBEntry(p._id, null, false, false);
-            if (old !== false) {
-              const oldData = { data: old.data, deleted: old._deleted };
-              const newData = { data: d.data, deleted: d._deleted };
-              if (JSON.stringify(oldData) == JSON.stringify(newData)) {
-                oldDocs.rows = oldDocs.rows.filter((e3) => e3.id != d._id);
-                Logger(`Nothing changed:${m.name}`);
-                return;
-              }
-            }
-            yield this.localDatabase.putDBEntry(d);
-            oldDocs.rows = oldDocs.rows.filter((e3) => e3.id != d._id);
-            Logger(`Plugin saved:${m.name}`, logLevel);
-          }));
-        }
-        Logger(`Deleting old plugins`, LOG_LEVEL.VERBOSE);
-        const delDocs = oldDocs.rows.map((e3) => {
-          if (e3.doc.type == "newnote" || e3.doc.type == "plain") {
-            e3.doc.deleted = true;
-            if (this.settings.deleteMetadataOfDeletedFiles) {
-              e3.doc._deleted = true;
-            }
-          } else {
+      }
+      Logger(`Deleting old plugins`, LOG_LEVEL.VERBOSE);
+      const delDocs = oldDocs.rows.map((e3) => {
+        if (e3.doc.type == "newnote" || e3.doc.type == "plain") {
+          e3.doc.deleted = true;
+          if (this.settings.deleteMetadataOfDeletedFiles) {
             e3.doc._deleted = true;
           }
-          return e3.doc;
-        });
-        yield db.bulkDocs(delDocs);
-        Logger(`Scan plugin done.`, logLevel);
-      }));
+        } else {
+          e3.doc._deleted = true;
+        }
+        return e3.doc;
+      });
+      await db.bulkDocs(delDocs);
+      Logger(`Scan plugin done.`, logLevel);
     });
   }
-  applyPluginData(plugin) {
-    return __async(this, null, function* () {
-      yield runWithLock("plugin-" + plugin.manifest.id, false, () => __async(this, null, function* () {
-        const pluginTargetFolderPath = (0, import_obsidian8.normalizePath)(plugin.manifest.dir) + "/";
-        const adapter = this.app.vault.adapter;
-        const stat = this.app.plugins.enabledPlugins.has(plugin.manifest.id) == true;
-        if (stat) {
-          yield this.app.plugins.unloadPlugin(plugin.manifest.id);
-          Logger(`Unload plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
-        }
-        if (plugin.dataJson)
-          yield adapter.write(pluginTargetFolderPath + "data.json", plugin.dataJson);
-        Logger("wrote:" + pluginTargetFolderPath + "data.json", LOG_LEVEL.NOTICE);
-        if (stat) {
-          yield this.app.plugins.loadPlugin(plugin.manifest.id);
-          Logger(`Load plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
-        }
-      }));
+  async applyPluginData(plugin) {
+    await runWithLock("plugin-" + plugin.manifest.id, false, async () => {
+      const pluginTargetFolderPath = (0, import_obsidian8.normalizePath)(plugin.manifest.dir) + "/";
+      const adapter = this.app.vault.adapter;
+      const stat = this.app.plugins.enabledPlugins.has(plugin.manifest.id) == true;
+      if (stat) {
+        await this.app.plugins.unloadPlugin(plugin.manifest.id);
+        Logger(`Unload plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
+      }
+      if (plugin.dataJson)
+        await adapter.write(pluginTargetFolderPath + "data.json", plugin.dataJson);
+      Logger("wrote:" + pluginTargetFolderPath + "data.json", LOG_LEVEL.NOTICE);
+      if (stat) {
+        await this.app.plugins.loadPlugin(plugin.manifest.id);
+        Logger(`Load plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
+      }
     });
   }
-  applyPlugin(plugin) {
-    return __async(this, null, function* () {
-      yield runWithLock("plugin-" + plugin.manifest.id, false, () => __async(this, null, function* () {
-        const stat = this.app.plugins.enabledPlugins.has(plugin.manifest.id) == true;
-        if (stat) {
-          yield this.app.plugins.unloadPlugin(plugin.manifest.id);
-          Logger(`Unload plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
-        }
-        const pluginTargetFolderPath = (0, import_obsidian8.normalizePath)(plugin.manifest.dir) + "/";
-        const adapter = this.app.vault.adapter;
-        if ((yield adapter.exists(pluginTargetFolderPath)) === false) {
-          yield adapter.mkdir(pluginTargetFolderPath);
-        }
-        yield adapter.write(pluginTargetFolderPath + "main.js", plugin.mainJs);
-        yield adapter.write(pluginTargetFolderPath + "manifest.json", plugin.manifestJson);
-        if (plugin.styleCss)
-          yield adapter.write(pluginTargetFolderPath + "styles.css", plugin.styleCss);
-        if (stat) {
-          yield this.app.plugins.loadPlugin(plugin.manifest.id);
-          Logger(`Load plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
-        }
-      }));
+  async applyPlugin(plugin) {
+    await runWithLock("plugin-" + plugin.manifest.id, false, async () => {
+      const stat = this.app.plugins.enabledPlugins.has(plugin.manifest.id) == true;
+      if (stat) {
+        await this.app.plugins.unloadPlugin(plugin.manifest.id);
+        Logger(`Unload plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
+      }
+      const pluginTargetFolderPath = (0, import_obsidian8.normalizePath)(plugin.manifest.dir) + "/";
+      const adapter = this.app.vault.adapter;
+      if (await adapter.exists(pluginTargetFolderPath) === false) {
+        await adapter.mkdir(pluginTargetFolderPath);
+      }
+      await adapter.write(pluginTargetFolderPath + "main.js", plugin.mainJs);
+      await adapter.write(pluginTargetFolderPath + "manifest.json", plugin.manifestJson);
+      if (plugin.styleCss)
+        await adapter.write(pluginTargetFolderPath + "styles.css", plugin.styleCss);
+      if (stat) {
+        await this.app.plugins.loadPlugin(plugin.manifest.id);
+        Logger(`Load plugin:${plugin.manifest.id}`, LOG_LEVEL.NOTICE);
+      }
     });
   }
   clearInternalFileScan() {
@@ -15335,412 +14703,400 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
       this.clearInternalFileScan();
     }
     if (this.settings.syncInternalFiles && this.settings.syncInternalFilesInterval > 0) {
-      this.periodicPluginSweepHandler = this.setInterval(() => __async(this, null, function* () {
-        return yield this.periodicInternalFileScan();
-      }), this.settings.syncInternalFilesInterval * 1e3);
+      this.periodicPluginSweepHandler = this.setInterval(async () => await this.periodicInternalFileScan(), this.settings.syncInternalFilesInterval * 1e3);
     }
   }
-  periodicInternalFileScan() {
-    return __async(this, null, function* () {
-      yield this.syncInternalFilesAndDatabase("push", false);
-    });
+  async periodicInternalFileScan() {
+    await this.syncInternalFilesAndDatabase("push", false);
   }
-  getFiles(path, ignoreList, filter, ignoreFilter) {
-    return __async(this, null, function* () {
-      const w = yield this.app.vault.adapter.list(path);
-      let files = [
-        ...w.files.filter((e3) => !ignoreList.some((ee) => e3.endsWith(ee))).filter((e3) => !filter || filter.some((ee) => e3.match(ee))).filter((e3) => !ignoreFilter || ignoreFilter.every((ee) => !e3.match(ee)))
-      ];
-      L1:
-        for (const v of w.folders) {
-          for (const ignore of ignoreList) {
-            if (v.endsWith(ignore)) {
-              continue L1;
-            }
-          }
-          if (ignoreFilter && ignoreFilter.some((e3) => v.match(e3))) {
+  async getFiles(path, ignoreList, filter, ignoreFilter) {
+    const w = await this.app.vault.adapter.list(path);
+    let files = [
+      ...w.files.filter((e3) => !ignoreList.some((ee) => e3.endsWith(ee))).filter((e3) => !filter || filter.some((ee) => e3.match(ee))).filter((e3) => !ignoreFilter || ignoreFilter.every((ee) => !e3.match(ee)))
+    ];
+    L1:
+      for (const v of w.folders) {
+        for (const ignore of ignoreList) {
+          if (v.endsWith(ignore)) {
             continue L1;
           }
-          files = files.concat(yield this.getFiles(v, ignoreList, filter, ignoreFilter));
         }
-      return files;
-    });
+        if (ignoreFilter && ignoreFilter.some((e3) => v.match(e3))) {
+          continue L1;
+        }
+        files = files.concat(await this.getFiles(v, ignoreList, filter, ignoreFilter));
+      }
+    return files;
   }
-  scanInternalFiles() {
-    return __async(this, null, function* () {
-      const ignoreFilter = this.settings.syncInternalFilesIgnorePatterns.toLocaleLowerCase().replace(/\n| /g, "").split(",").filter((e3) => e3).map((e3) => new RegExp(e3));
-      const root = this.app.vault.getRoot();
-      const findRoot = root.path;
-      const filenames = (yield this.getFiles(findRoot, [], null, ignoreFilter)).filter((e3) => e3.startsWith(".")).filter((e3) => !e3.startsWith(".trash"));
-      const files = filenames.map((e3) => __async(this, null, function* () {
-        return {
-          path: e3,
-          stat: yield this.app.vault.adapter.stat(e3)
+  async scanInternalFiles() {
+    const ignoreFilter = this.settings.syncInternalFilesIgnorePatterns.toLocaleLowerCase().replace(/\n| /g, "").split(",").filter((e3) => e3).map((e3) => new RegExp(e3));
+    const root = this.app.vault.getRoot();
+    const findRoot = root.path;
+    const filenames = (await this.getFiles(findRoot, [], null, ignoreFilter)).filter((e3) => e3.startsWith(".")).filter((e3) => !e3.startsWith(".trash"));
+    const files = filenames.map(async (e3) => {
+      return {
+        path: e3,
+        stat: await this.app.vault.adapter.stat(e3)
+      };
+    });
+    const result = [];
+    for (const f of files) {
+      const w = await f;
+      result.push({
+        ...w,
+        ...w.stat
+      });
+    }
+    return result;
+  }
+  async storeInternalFileToDatabase(file, forceWrite = false) {
+    const id = filename2idInternalChunk(path2id(file.path));
+    const contentBin = await this.app.vault.adapter.readBinary(file.path);
+    const content = await arrayBufferToBase64(contentBin);
+    const mtime = file.mtime;
+    await runWithLock("file-" + id, false, async () => {
+      const old = await this.localDatabase.getDBEntry(id, null, false, false);
+      let saveData;
+      if (old === false) {
+        saveData = {
+          _id: id,
+          data: content,
+          mtime,
+          ctime: mtime,
+          datatype: "newnote",
+          size: file.size,
+          children: [],
+          deleted: false,
+          type: "newnote"
         };
-      }));
-      const result = [];
-      for (const f of files) {
-        const w = yield f;
-        result.push(__spreadValues(__spreadValues({}, w), w.stat));
+      } else {
+        if (old.data == content && !forceWrite) {
+          return;
+        }
+        saveData = {
+          ...old,
+          data: content,
+          mtime,
+          size: file.size,
+          datatype: "newnote",
+          children: [],
+          deleted: false,
+          type: "newnote"
+        };
       }
-      return result;
+      await this.localDatabase.putDBEntry(saveData, true);
+      Logger(`STORAGE --> DB:${file.path}: (hidden) Done`);
     });
   }
-  storeInternalFileToDatabase(file, forceWrite = false) {
-    return __async(this, null, function* () {
-      const id = filename2idInternalChunk(path2id(file.path));
-      const contentBin = yield this.app.vault.adapter.readBinary(file.path);
-      const content = yield arrayBufferToBase64(contentBin);
-      const mtime = file.mtime;
-      yield runWithLock("file-" + id, false, () => __async(this, null, function* () {
-        const old = yield this.localDatabase.getDBEntry(id, null, false, false);
-        let saveData;
-        if (old === false) {
-          saveData = {
-            _id: id,
-            data: content,
-            mtime,
-            ctime: mtime,
-            datatype: "newnote",
-            size: file.size,
-            children: [],
-            deleted: false,
-            type: "newnote"
-          };
-        } else {
-          if (old.data == content && !forceWrite) {
-            return;
-          }
-          saveData = __spreadProps(__spreadValues({}, old), {
-            data: content,
-            mtime,
-            size: file.size,
-            datatype: "newnote",
-            children: [],
-            deleted: false,
-            type: "newnote"
-          });
+  async deleteInternalFileOnDatabase(filename, forceWrite = false) {
+    const id = filename2idInternalChunk(path2id(filename));
+    const mtime = new Date().getTime();
+    await runWithLock("file-" + id, false, async () => {
+      const old = await this.localDatabase.getDBEntry(id, null, false, false);
+      let saveData;
+      if (old === false) {
+        saveData = {
+          _id: id,
+          mtime,
+          ctime: mtime,
+          size: 0,
+          children: [],
+          deleted: true,
+          type: "newnote"
+        };
+      } else {
+        if (old.deleted) {
+          Logger(`STORAGE -x> DB:${filename}: (hidden) already deleted`);
+          return;
         }
-        yield this.localDatabase.putDBEntry(saveData, true);
-        Logger(`STORAGE --> DB:${file.path}: (hidden) Done`);
-      }));
-    });
-  }
-  deleteInternalFileOnDatabase(filename, forceWrite = false) {
-    return __async(this, null, function* () {
-      const id = filename2idInternalChunk(path2id(filename));
-      const mtime = new Date().getTime();
-      yield runWithLock("file-" + id, false, () => __async(this, null, function* () {
-        const old = yield this.localDatabase.getDBEntry(id, null, false, false);
-        let saveData;
-        if (old === false) {
-          saveData = {
-            _id: id,
-            mtime,
-            ctime: mtime,
-            size: 0,
-            children: [],
-            deleted: true,
-            type: "newnote"
-          };
-        } else {
-          if (old.deleted) {
-            Logger(`STORAGE -x> DB:${filename}: (hidden) already deleted`);
-            return;
-          }
-          saveData = __spreadProps(__spreadValues({}, old), {
-            mtime,
-            size: 0,
-            children: [],
-            deleted: true,
-            type: "newnote"
-          });
-        }
-        yield this.localDatabase.localDatabase.put(saveData);
-        Logger(`STORAGE -x> DB:${filename}: (hidden) Done`);
-      }));
-    });
-  }
-  ensureDirectoryEx(fullpath) {
-    return __async(this, null, function* () {
-      const pathElements = fullpath.split("/");
-      pathElements.pop();
-      let c = "";
-      for (const v of pathElements) {
-        c += v;
-        try {
-          yield this.app.vault.adapter.mkdir(c);
-        } catch (ex) {
-          if (ex.message && ex.message == "Folder already exists.") {
-          } else {
-            Logger("Folder Create Error");
-            Logger(ex);
-          }
-        }
-        c += "/";
+        saveData = {
+          ...old,
+          mtime,
+          size: 0,
+          children: [],
+          deleted: true,
+          type: "newnote"
+        };
       }
+      await this.localDatabase.localDatabase.put(saveData);
+      Logger(`STORAGE -x> DB:${filename}: (hidden) Done`);
     });
   }
-  extractInternalFileFromDatabase(filename, force = false) {
-    return __async(this, null, function* () {
-      const isExists = yield this.app.vault.adapter.exists(filename);
-      const id = filename2idInternalChunk(path2id(filename));
-      return yield runWithLock("file-" + id, false, () => __async(this, null, function* () {
-        const fileOnDB = yield this.localDatabase.getDBEntry(id, null, false, false);
-        if (fileOnDB === false)
-          throw new Error(`File not found on database.:${id}`);
-        const deleted = "deleted" in fileOnDB ? fileOnDB.deleted : false;
-        if (deleted) {
-          if (!isExists) {
-            Logger(`STORAGE <x- DB:${filename}: deleted (hidden) Deleted on DB, but the file is  already not found on storage.`);
-          } else {
-            Logger(`STORAGE <x- DB:${filename}: deleted (hidden).`);
-            yield this.app.vault.adapter.remove(filename);
-          }
-          return true;
+  async ensureDirectoryEx(fullPath) {
+    const pathElements = fullPath.split("/");
+    pathElements.pop();
+    let c = "";
+    for (const v of pathElements) {
+      c += v;
+      try {
+        await this.app.vault.adapter.mkdir(c);
+      } catch (ex) {
+        if (ex.message && ex.message == "Folder already exists.") {
+        } else {
+          Logger("Folder Create Error");
+          Logger(ex);
         }
+      }
+      c += "/";
+    }
+  }
+  async extractInternalFileFromDatabase(filename, force = false) {
+    const isExists = await this.app.vault.adapter.exists(filename);
+    const id = filename2idInternalChunk(path2id(filename));
+    return await runWithLock("file-" + id, false, async () => {
+      const fileOnDB = await this.localDatabase.getDBEntry(id, null, false, false);
+      if (fileOnDB === false)
+        throw new Error(`File not found on database.:${id}`);
+      const deleted = "deleted" in fileOnDB ? fileOnDB.deleted : false;
+      if (deleted) {
         if (!isExists) {
-          yield this.ensureDirectoryEx(filename);
-          yield this.app.vault.adapter.writeBinary(filename, base64ToArrayBuffer(fileOnDB.data), { mtime: fileOnDB.mtime, ctime: fileOnDB.ctime });
-          Logger(`STORAGE <-- DB:${filename}: written (hidden,new${force ? ", force" : ""})`);
-          return true;
+          Logger(`STORAGE <x- DB:${filename}: deleted (hidden) Deleted on DB, but the file is  already not found on storage.`);
         } else {
-          try {
-            const contentBin = yield this.app.vault.adapter.readBinary(filename);
-            const content = yield arrayBufferToBase64(contentBin);
-            if (content == fileOnDB.data && !force) {
-              return true;
-            }
-            yield this.app.vault.adapter.writeBinary(filename, base64ToArrayBuffer(fileOnDB.data), { mtime: fileOnDB.mtime, ctime: fileOnDB.ctime });
-            Logger(`STORAGE <-- DB:${filename}: written (hidden, overwrite${force ? ", force" : ""})`);
-            return true;
-          } catch (ex) {
-            Logger(ex);
-            return false;
-          }
+          Logger(`STORAGE <x- DB:${filename}: deleted (hidden).`);
+          await this.app.vault.adapter.remove(filename);
         }
-      }));
+        return true;
+      }
+      if (!isExists) {
+        await this.ensureDirectoryEx(filename);
+        await this.app.vault.adapter.writeBinary(filename, base64ToArrayBuffer(fileOnDB.data), { mtime: fileOnDB.mtime, ctime: fileOnDB.ctime });
+        Logger(`STORAGE <-- DB:${filename}: written (hidden,new${force ? ", force" : ""})`);
+        return true;
+      } else {
+        try {
+          const contentBin = await this.app.vault.adapter.readBinary(filename);
+          const content = await arrayBufferToBase64(contentBin);
+          if (content == fileOnDB.data && !force) {
+            return true;
+          }
+          await this.app.vault.adapter.writeBinary(filename, base64ToArrayBuffer(fileOnDB.data), { mtime: fileOnDB.mtime, ctime: fileOnDB.ctime });
+          Logger(`STORAGE <-- DB:${filename}: written (hidden, overwrite${force ? ", force" : ""})`);
+          return true;
+        } catch (ex) {
+          Logger(ex);
+          return false;
+        }
+      }
     });
   }
   filterTargetFiles(files, targetFiles = false) {
     const ignorePatterns = this.settings.syncInternalFilesIgnorePatterns.toLocaleLowerCase().replace(/\n| /g, "").split(",").filter((e3) => e3).map((e3) => new RegExp(e3));
     return files.filter((file) => !ignorePatterns.some((e3) => file.path.match(e3))).filter((file) => !targetFiles || targetFiles && targetFiles.indexOf(file.path) !== -1);
   }
-  applyMTimeToFile(file) {
-    return __async(this, null, function* () {
-      yield this.app.vault.adapter.append(file.path, "", { ctime: file.ctime, mtime: file.mtime });
-    });
+  async applyMTimeToFile(file) {
+    await this.app.vault.adapter.append(file.path, "", { ctime: file.ctime, mtime: file.mtime });
   }
-  resolveConflictOnInternalFiles() {
-    return __async(this, null, function* () {
-      const docs = yield this.localDatabase.localDatabase.allDocs({ startkey: ICHeader, endkey: ICHeaderEnd, conflicts: true, include_docs: true });
-      for (const row of docs.rows) {
-        const doc = row.doc;
-        if (!("_conflicts" in doc))
-          continue;
-        if (isInternalChunk(row.id)) {
-          yield this.resolveConflictOnInternalFile(row.id);
-        }
-      }
-    });
-  }
-  resolveConflictOnInternalFile(id) {
-    return __async(this, null, function* () {
-      const doc = yield this.localDatabase.localDatabase.get(id, { conflicts: true });
+  async resolveConflictOnInternalFiles() {
+    const docs = await this.localDatabase.localDatabase.allDocs({ startkey: ICHeader, endkey: ICHeaderEnd, conflicts: true, include_docs: true });
+    for (const row of docs.rows) {
+      const doc = row.doc;
       if (!("_conflicts" in doc))
-        return false;
-      if (doc._conflicts.length == 0)
-        return false;
-      Logger(`Hidden file conflicetd:${id2filenameInternalChunk(id)}`);
-      const revA = doc._rev;
-      const revB = doc._conflicts[0];
-      const revBdoc = yield this.localDatabase.localDatabase.get(id, { rev: revB });
-      const mtimeA = "mtime" in doc && doc.mtime || 0;
-      const mtimeB = "mtime" in revBdoc && revBdoc.mtime || 0;
-      const delRev = mtimeA < mtimeB ? revA : revB;
-      yield this.localDatabase.localDatabase.remove(id, delRev);
-      Logger(`Older one has been deleted:${id2filenameInternalChunk(id)}`);
-      return this.resolveConflictOnInternalFile(id);
-    });
-  }
-  syncInternalFilesAndDatabase(direction, showMessage, files = false, targetFiles = false) {
-    return __async(this, null, function* () {
-      yield this.resolveConflictOnInternalFiles();
-      const logLevel = showMessage ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO;
-      Logger("Scanning hidden files.", logLevel, "sync_internal");
-      const ignorePatterns = this.settings.syncInternalFilesIgnorePatterns.toLocaleLowerCase().replace(/\n| /g, "").split(",").filter((e3) => e3).map((e3) => new RegExp(e3));
-      if (!files)
-        files = yield this.scanInternalFiles();
-      const filesOnDB = (yield this.localDatabase.localDatabase.allDocs({ startkey: ICHeader, endkey: ICHeaderEnd, include_docs: true })).rows.map((e3) => e3.doc).filter((e3) => !e3.deleted);
-      const allFileNamesSrc = [...new Set([...files.map((e3) => (0, import_obsidian8.normalizePath)(e3.path)), ...filesOnDB.map((e3) => (0, import_obsidian8.normalizePath)(id2path(id2filenameInternalChunk(e3._id))))])];
-      const allFileNames = allFileNamesSrc.filter((filename) => !targetFiles || targetFiles && targetFiles.indexOf(filename) !== -1);
-      function compareMTime(a, b) {
-        const wa = ~~(a / 1e3);
-        const wb = ~~(b / 1e3);
-        const diff = wa - wb;
-        return diff;
+        continue;
+      if (isInternalChunk(row.id)) {
+        await this.resolveConflictOnInternalFile(row.id);
       }
-      const fileCount = allFileNames.length;
-      let processed = 0;
-      let filesChanged = 0;
-      const p = Parallels();
-      const limit = 10;
-      const updatedFolders = {};
-      const countUpdatedFolder = (path) => {
-        const pieces = path.split("/");
-        let c = pieces.shift();
-        let pathPieces = "";
-        filesChanged++;
-        while (c) {
-          pathPieces += (pathPieces != "" ? "/" : "") + c;
-          pathPieces = (0, import_obsidian8.normalizePath)(pathPieces);
-          if (!(pathPieces in updatedFolders)) {
-            updatedFolders[pathPieces] = 0;
-          }
-          updatedFolders[pathPieces]++;
-          c = pieces.shift();
+    }
+  }
+  async resolveConflictOnInternalFile(id) {
+    const doc = await this.localDatabase.localDatabase.get(id, { conflicts: true });
+    if (!("_conflicts" in doc))
+      return false;
+    if (doc._conflicts.length == 0)
+      return false;
+    Logger(`Hidden file conflicted:${id2filenameInternalChunk(id)}`);
+    const revA = doc._rev;
+    const revB = doc._conflicts[0];
+    const revBDoc = await this.localDatabase.localDatabase.get(id, { rev: revB });
+    const mtimeA = "mtime" in doc && doc.mtime || 0;
+    const mtimeB = "mtime" in revBDoc && revBDoc.mtime || 0;
+    const delRev = mtimeA < mtimeB ? revA : revB;
+    await this.localDatabase.localDatabase.remove(id, delRev);
+    Logger(`Older one has been deleted:${id2filenameInternalChunk(id)}`);
+    return this.resolveConflictOnInternalFile(id);
+  }
+  async syncInternalFilesAndDatabase(direction, showMessage, files = false, targetFiles = false) {
+    await this.resolveConflictOnInternalFiles();
+    const logLevel = showMessage ? LOG_LEVEL.NOTICE : LOG_LEVEL.INFO;
+    Logger("Scanning hidden files.", logLevel, "sync_internal");
+    const ignorePatterns = this.settings.syncInternalFilesIgnorePatterns.toLocaleLowerCase().replace(/\n| /g, "").split(",").filter((e3) => e3).map((e3) => new RegExp(e3));
+    if (!files)
+      files = await this.scanInternalFiles();
+    const filesOnDB = (await this.localDatabase.localDatabase.allDocs({ startkey: ICHeader, endkey: ICHeaderEnd, include_docs: true })).rows.map((e3) => e3.doc).filter((e3) => !e3.deleted);
+    const allFileNamesSrc = [...new Set([...files.map((e3) => (0, import_obsidian8.normalizePath)(e3.path)), ...filesOnDB.map((e3) => (0, import_obsidian8.normalizePath)(id2path(id2filenameInternalChunk(e3._id))))])];
+    const allFileNames = allFileNamesSrc.filter((filename) => !targetFiles || targetFiles && targetFiles.indexOf(filename) !== -1);
+    function compareMTime(a, b) {
+      const wa = ~~(a / 1e3);
+      const wb = ~~(b / 1e3);
+      const diff = wa - wb;
+      return diff;
+    }
+    const fileCount = allFileNames.length;
+    let processed = 0;
+    let filesChanged = 0;
+    const updatedFolders = {};
+    const countUpdatedFolder = (path) => {
+      const pieces = path.split("/");
+      let c = pieces.shift();
+      let pathPieces = "";
+      filesChanged++;
+      while (c) {
+        pathPieces += (pathPieces != "" ? "/" : "") + c;
+        pathPieces = (0, import_obsidian8.normalizePath)(pathPieces);
+        if (!(pathPieces in updatedFolders)) {
+          updatedFolders[pathPieces] = 0;
+        }
+        updatedFolders[pathPieces]++;
+        c = pieces.shift();
+      }
+    };
+    const p = [];
+    const semaphore = Semaphore(15);
+    let caches = {};
+    caches = await this.localDatabase.kvDB.get("diff-caches-internal") || {};
+    for (const filename of allFileNames) {
+      processed++;
+      if (processed % 100 == 0)
+        Logger(`Hidden file: ${processed}/${fileCount}`, logLevel, "sync_internal");
+      if (ignorePatterns.some((e3) => filename.match(e3)))
+        continue;
+      const fileOnStorage = files.find((e3) => e3.path == filename);
+      const fileOnDatabase = filesOnDB.find((e3) => e3._id == filename2idInternalChunk(id2path(filename)));
+      const addProc = async (p2) => {
+        const releaser = await semaphore.acquire(1);
+        try {
+          return p2();
+        } catch (ex) {
+          Logger("Some process failed", logLevel);
+          Logger(ex);
+        } finally {
+          releaser();
         }
       };
-      let caches = {};
-      caches = (yield this.localDatabase.kvDB.get("diff-caches-internal")) || {};
-      for (const filename of allFileNames) {
-        processed++;
-        if (processed % 100 == 0)
-          Logger(`Hidden file: ${processed}/${fileCount}`, logLevel, "sync_internal");
-        if (ignorePatterns.some((e3) => filename.match(e3)))
-          continue;
-        const fileOnStorage = files.find((e3) => e3.path == filename);
-        const fileOnDatabase = filesOnDB.find((e3) => e3._id == filename2idInternalChunk(id2path(filename)));
-        const addProc = (p2) => {
-          return p2();
-        };
-        const cache = filename in caches ? caches[filename] : { storageMtime: 0, docMtime: 0 };
-        p.add(addProc(() => __async(this, null, function* () {
-          if (fileOnStorage && fileOnDatabase) {
-            if (fileOnDatabase.mtime == cache.docMtime && fileOnStorage.mtime == cache.storageMtime) {
+      const cache = filename in caches ? caches[filename] : { storageMtime: 0, docMtime: 0 };
+      p.push(addProc(async () => {
+        if (fileOnStorage && fileOnDatabase) {
+          if (fileOnDatabase.mtime == cache.docMtime && fileOnStorage.mtime == cache.storageMtime) {
+            return;
+          }
+          const nw = compareMTime(fileOnStorage.mtime, fileOnDatabase.mtime);
+          if (nw > 0) {
+            await this.storeInternalFileToDatabase(fileOnStorage);
+          }
+          if (nw < 0) {
+            if (!await this.extractInternalFileFromDatabase(filename))
               return;
-            }
-            const nw = compareMTime(fileOnStorage.mtime, fileOnDatabase.mtime);
-            if (nw > 0) {
-              yield this.storeInternalFileToDatabase(fileOnStorage);
-            }
-            if (nw < 0) {
-              if (!(yield this.extractInternalFileFromDatabase(filename)))
-                return;
-            }
-            cache.docMtime = fileOnDatabase.mtime;
-            cache.storageMtime = fileOnStorage.mtime;
-            caches[filename] = cache;
-            countUpdatedFolder(filename);
-          } else if (!fileOnStorage && fileOnDatabase) {
-            if (direction == "push") {
-              if (fileOnDatabase.deleted)
-                return;
-              yield this.deleteInternalFileOnDatabase(filename);
-            } else if (direction == "pull") {
-              if (yield this.extractInternalFileFromDatabase(filename)) {
-                countUpdatedFolder(filename);
-              }
-            } else if (direction == "safe") {
-              if (fileOnDatabase.deleted)
-                return;
-              if (yield this.extractInternalFileFromDatabase(filename)) {
-                countUpdatedFolder(filename);
-              }
-            }
-          } else if (fileOnStorage && !fileOnDatabase) {
-            yield this.storeInternalFileToDatabase(fileOnStorage);
-          } else {
-            throw new Error("Invalid state on hidden file sync");
           }
-        })));
-        yield p.wait(limit);
-      }
-      yield p.all();
-      yield this.localDatabase.kvDB.set("diff-caches-internal", caches);
-      if (direction == "pull" && filesChanged != 0) {
-        const configDir = (0, import_obsidian8.normalizePath)(this.app.vault.configDir);
-        if (configDir in updatedFolders) {
-          let updatedCount = updatedFolders[configDir];
-          try {
-            const manifests = Object.values(this.app.plugins.manifests);
-            const enabledPlugins = this.app.plugins.enabledPlugins;
-            const enabledPluginManifests = manifests.filter((e3) => enabledPlugins.has(e3.id));
-            for (const manifest of enabledPluginManifests) {
-              if (manifest.dir in updatedFolders) {
-                updatedCount -= updatedFolders[manifest.dir];
-                const updatePluginId = manifest.id;
-                const updatePluginName = manifest.name;
-                const fragment = createFragment((doc) => {
-                  doc.createEl("span", null, (a) => {
-                    a.appendText(`Files in ${updatePluginName} has been updated, Press `);
-                    a.appendChild(a.createEl("a", null, (anchor) => {
-                      anchor.text = "HERE";
-                      anchor.addEventListener("click", () => __async(this, null, function* () {
-                        Logger(`Unloading plugin: ${updatePluginName}`, LOG_LEVEL.NOTICE, "pluin-reload-" + updatePluginId);
-                        yield this.app.plugins.unloadPlugin(updatePluginId);
-                        yield this.app.plugins.loadPlugin(updatePluginId);
-                        Logger(`Plugin reloaded: ${updatePluginName}`, LOG_LEVEL.NOTICE, "pluin-reload-" + updatePluginId);
-                      }));
-                    }));
-                    a.appendText(` to reload ${updatePluginName}, or press elsewhere to dismiss this message.`);
-                  });
+          cache.docMtime = fileOnDatabase.mtime;
+          cache.storageMtime = fileOnStorage.mtime;
+          caches[filename] = cache;
+          countUpdatedFolder(filename);
+        } else if (!fileOnStorage && fileOnDatabase) {
+          if (direction == "push") {
+            if (fileOnDatabase.deleted)
+              return;
+            await this.deleteInternalFileOnDatabase(filename);
+          } else if (direction == "pull") {
+            if (await this.extractInternalFileFromDatabase(filename)) {
+              countUpdatedFolder(filename);
+            }
+          } else if (direction == "safe") {
+            if (fileOnDatabase.deleted)
+              return;
+            if (await this.extractInternalFileFromDatabase(filename)) {
+              countUpdatedFolder(filename);
+            }
+          }
+        } else if (fileOnStorage && !fileOnDatabase) {
+          await this.storeInternalFileToDatabase(fileOnStorage);
+        } else {
+          throw new Error("Invalid state on hidden file sync");
+        }
+      }));
+    }
+    await Promise.all(p);
+    await this.localDatabase.kvDB.set("diff-caches-internal", caches);
+    if (direction == "pull" && filesChanged != 0) {
+      const configDir = (0, import_obsidian8.normalizePath)(this.app.vault.configDir);
+      if (configDir in updatedFolders) {
+        let updatedCount = updatedFolders[configDir];
+        try {
+          const manifests = Object.values(this.app.plugins.manifests);
+          const enabledPlugins = this.app.plugins.enabledPlugins;
+          const enabledPluginManifests = manifests.filter((e3) => enabledPlugins.has(e3.id));
+          for (const manifest of enabledPluginManifests) {
+            if (manifest.dir in updatedFolders) {
+              updatedCount -= updatedFolders[manifest.dir];
+              const updatePluginId = manifest.id;
+              const updatePluginName = manifest.name;
+              const fragment = createFragment((doc) => {
+                doc.createEl("span", null, (a) => {
+                  a.appendText(`Files in ${updatePluginName} has been updated, Press `);
+                  a.appendChild(a.createEl("a", null, (anchor) => {
+                    anchor.text = "HERE";
+                    anchor.addEventListener("click", async () => {
+                      Logger(`Unloading plugin: ${updatePluginName}`, LOG_LEVEL.NOTICE, "plugin-reload-" + updatePluginId);
+                      await this.app.plugins.unloadPlugin(updatePluginId);
+                      await this.app.plugins.loadPlugin(updatePluginId);
+                      Logger(`Plugin reloaded: ${updatePluginName}`, LOG_LEVEL.NOTICE, "plugin-reload-" + updatePluginId);
+                    });
+                  }));
+                  a.appendText(` to reload ${updatePluginName}, or press elsewhere to dismiss this message.`);
                 });
-                const updatedPluginKey = "popupUpdated-" + updatePluginId;
-                setTrigger(updatedPluginKey, 1e3, () => __async(this, null, function* () {
-                  var _a;
-                  const popup = yield memoIfNotExist(updatedPluginKey, () => new import_obsidian8.Notice(fragment, 0));
-                  const isShown = (_a = popup == null ? void 0 : popup.noticeEl) == null ? void 0 : _a.isShown();
-                  if (!isShown) {
-                    memoObject(updatedPluginKey, new import_obsidian8.Notice(fragment, 0));
+              });
+              const updatedPluginKey = "popupUpdated-" + updatePluginId;
+              setTrigger(updatedPluginKey, 1e3, async () => {
+                var _a;
+                const popup = await memoIfNotExist(updatedPluginKey, () => new import_obsidian8.Notice(fragment, 0));
+                const isShown = (_a = popup == null ? void 0 : popup.noticeEl) == null ? void 0 : _a.isShown();
+                if (!isShown) {
+                  memoObject(updatedPluginKey, new import_obsidian8.Notice(fragment, 0));
+                }
+                setTrigger(updatedPluginKey + "-close", 2e4, () => {
+                  var _a2;
+                  const popup2 = retrieveMemoObject(updatedPluginKey);
+                  if (!popup2)
+                    return;
+                  if ((_a2 = popup2 == null ? void 0 : popup2.noticeEl) == null ? void 0 : _a2.isShown()) {
+                    popup2.hide();
                   }
-                  setTrigger(updatedPluginKey + "-close", 2e4, () => {
-                    var _a2;
-                    const popup2 = retriveMemoObject(updatedPluginKey);
-                    if (!popup2)
-                      return;
-                    if ((_a2 = popup2 == null ? void 0 : popup2.noticeEl) == null ? void 0 : _a2.isShown()) {
-                      popup2.hide();
-                    }
-                    disposeMemoObject(updatedPluginKey);
-                  });
-                }));
-              }
+                  disposeMemoObject(updatedPluginKey);
+                });
+              });
             }
-          } catch (ex) {
-            Logger("Error on checking plugin status.");
-            Logger(ex, LOG_LEVEL.VERBOSE);
           }
-          if (updatedCount != 0) {
-            const fragment = createFragment((doc) => {
-              doc.createEl("span", null, (a) => {
-                a.appendText(`Hidden files have been synchronized, Press `);
-                a.appendChild(a.createEl("a", null, (anchor) => {
-                  anchor.text = "HERE";
-                  anchor.addEventListener("click", () => {
-                    this.app.commands.executeCommandById("app:reload");
-                  });
-                }));
-                a.appendText(` to reload obsidian, or press elsewhere to dismiss this message.`);
-              });
+        } catch (ex) {
+          Logger("Error on checking plugin status.");
+          Logger(ex, LOG_LEVEL.VERBOSE);
+        }
+        if (updatedCount != 0) {
+          const fragment = createFragment((doc) => {
+            doc.createEl("span", null, (a) => {
+              a.appendText(`Hidden files have been synchronized, Press `);
+              a.appendChild(a.createEl("a", null, (anchor) => {
+                anchor.text = "HERE";
+                anchor.addEventListener("click", () => {
+                  this.app.commands.executeCommandById("app:reload");
+                });
+              }));
+              a.appendText(` to reload obsidian, or press elsewhere to dismiss this message.`);
             });
-            setTrigger("popupUpdated-" + configDir, 1e3, () => {
-              var _a, _b;
-              const isShown = (_b = (_a = this.confirmPopup) == null ? void 0 : _a.noticeEl) == null ? void 0 : _b.isShown();
-              if (!isShown) {
-                this.confirmPopup = new import_obsidian8.Notice(fragment, 0);
-              }
-              setTrigger("popupClose" + configDir, 2e4, () => {
-                var _a2;
-                (_a2 = this.confirmPopup) == null ? void 0 : _a2.hide();
-                this.confirmPopup = null;
-              });
+          });
+          setTrigger("popupUpdated-" + configDir, 1e3, () => {
+            var _a, _b;
+            const isShown = (_b = (_a = this.confirmPopup) == null ? void 0 : _a.noticeEl) == null ? void 0 : _b.isShown();
+            if (!isShown) {
+              this.confirmPopup = new import_obsidian8.Notice(fragment, 0);
+            }
+            setTrigger("popupClose" + configDir, 2e4, () => {
+              var _a2;
+              (_a2 = this.confirmPopup) == null ? void 0 : _a2.hide();
+              this.confirmPopup = null;
             });
-          }
+          });
         }
       }
-      Logger(`Hidden files scanned: ${filesChanged} files had been modified`, logLevel, "sync_internal");
-    });
+    }
+    Logger(`Hidden files scanned: ${filesChanged} files had been modified`, logLevel, "sync_internal");
   }
   isTargetFile(file) {
     if (file instanceof import_obsidian8.TFile) {
@@ -15750,17 +15106,3 @@ var ObsidianLiveSyncPlugin = class extends import_obsidian8.Plugin {
     }
   }
 };
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */

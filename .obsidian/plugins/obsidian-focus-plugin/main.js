@@ -48,72 +48,294 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian = require("obsidian");
-var DEFAULT_SETTINGS = {
-  clearMethod: "click-again"
+
+// utils/log.ts
+var FocusPluginLogger = class {
+  static log(level, message) {
+    console.log(`focus-plugin: [${level}] ${message}`);
+  }
 };
-var FocusPlugin = class extends import_obsidian.Plugin {
+
+// utils/info.ts
+function isHeaderFocusInfo(info) {
+  return !!info && info.type.startsWith("H");
+}
+function isListFocusInfo(info) {
+  return !!info && info.type === "LI";
+}
+function isIntermediateFocusInfo(info) {
+  return !!info && info.type === "UNKNOWN";
+}
+function getFocusInfo(el) {
+  var _a;
+  let focusType = null;
+  let focusBlock = null;
+  let focusTarget = null;
+  let cursor = el;
+  while (cursor !== null && !cursor.hasClass("markdown-preview-section")) {
+    if (cursor.tagName.match(/^H[1-6]$/)) {
+      focusType = cursor.tagName;
+    } else if (cursor.tagName === "LI") {
+      focusType = "LI";
+      focusTarget = cursor;
+    }
+    if ((_a = cursor.parentElement) == null ? void 0 : _a.hasClass("markdown-preview-section")) {
+      focusBlock = cursor;
+      break;
+    }
+    cursor = cursor.parentElement;
+  }
+  if (focusBlock === null)
+    return null;
+  if (focusType === null)
+    return {
+      before: /* @__PURE__ */ new Set(),
+      after: /* @__PURE__ */ new Set(),
+      block: focusBlock,
+      type: "UNKNOWN",
+      metadata: null,
+      level: null
+    };
+  else if (focusType.match(/^H[1-6]$/))
+    return {
+      block: focusBlock,
+      type: focusType,
+      body: /* @__PURE__ */ new Set()
+    };
+  else if (focusType === "LI")
+    return {
+      block: focusBlock,
+      type: focusType,
+      target: focusTarget,
+      body: /* @__PURE__ */ new Set()
+    };
+  else
+    FocusPluginLogger.log("Error", `Unexpected focus type: ${focusType}`);
+  return null;
+}
+
+// utils/focusManager.ts
+var FocusManager = class {
   constructor() {
-    super(...arguments);
+    this.paneInfo = /* @__PURE__ */ new WeakMap();
     this.classes = {
       "enabled": "focus-plugin-enabled",
       "dimmed": "focus-plugin-dimmed",
       "focus-animation": "focus-plugin-focus-animation",
       "dim-animation": "focus-plugin-dim-animation"
     };
-    this.paneInfo = /* @__PURE__ */ new WeakMap();
-    this.order = ["H1", "H2", "H3", "H4", "H5", "H6"];
-    this.observeHead = null;
+    this.includeBody = true;
+    this.observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length > 0) {
+          const pane = mutation.target;
+          const info = this.paneInfo.get(pane);
+          if (!info) {
+            this.clear(pane);
+            return;
+          }
+          if (isIntermediateFocusInfo(info))
+            this.processIntermediate(pane, info, false);
+          else
+            this.process(pane, info, false);
+        }
+      });
+    });
+    document.body.classList.add(this.classes["enabled"]);
   }
-  findContents(headNode, startNode) {
-    var _a, _b;
-    let contents = [];
-    let nextNode = startNode;
-    let headTag = (_a = headNode.firstElementChild) == null ? void 0 : _a.tagName;
-    if (!headTag || !this.order.includes(headTag))
-      return contents;
-    while (nextNode) {
-      let currentTag = (_b = nextNode.firstElementChild) == null ? void 0 : _b.tagName;
-      if (currentTag && this.order.includes(currentTag) && this.order.indexOf(currentTag) <= this.order.indexOf(headTag))
-        break;
-      contents.push(nextNode);
-      nextNode = nextNode.nextElementSibling;
-    }
-    return contents;
-  }
-  dim_node(node, animation) {
+  dim(elements, animation) {
     if (animation) {
-      node.addEventListener("animationend", () => {
-        node.classList.remove(this.classes["dim-animation"]);
-      }, { once: true });
-      node.classList.add(this.classes["dim-animation"]);
+      elements.forEach((element) => {
+        if (!element.classList.contains(this.classes["dimmed"])) {
+          element.addEventListener("animationend", () => {
+            element.classList.remove(this.classes["dim-animation"]);
+          }, { once: true });
+          element.classList.add(this.classes["dim-animation"]);
+        }
+      });
     }
-    node.classList.add(this.classes["dimmed"]);
+    elements.forEach((element) => element.classList.add(this.classes["dimmed"]));
   }
-  undim_node(node, animation) {
+  undim(elements, animation, children = true) {
+    let dimmed_elements = [];
+    elements.forEach((element) => {
+      if (element.classList.contains(this.classes["dimmed"]))
+        dimmed_elements.push(element);
+      if (children)
+        dimmed_elements.push(...Array.from(element.querySelectorAll(`.${this.classes["dimmed"]}`)));
+    });
     if (animation) {
-      node.addEventListener("animationend", () => {
-        node.classList.remove(this.classes["focus-animation"]);
-      }, { once: true });
-      node.classList.add(this.classes["focus-animation"]);
+      dimmed_elements.forEach((element) => {
+        if (element.classList.contains(this.classes["dimmed"])) {
+          element.addEventListener("animationend", () => {
+            element.classList.remove(this.classes["focus-animation"]);
+          }, { once: true });
+          element.classList.add(this.classes["focus-animation"]);
+        }
+      });
     }
-    node.classList.remove(this.classes["dimmed"]);
+    dimmed_elements.forEach((element) => element.classList.remove(this.classes["dimmed"]));
   }
-  clear(target, animation) {
-    if (!target) {
-      document.querySelectorAll(`.${this.classes["dimmed"]}`).forEach((node) => this.undim_node(node, animation));
-      this.paneInfo = /* @__PURE__ */ new WeakMap();
+  process(pane, info, animation) {
+    var _a;
+    if (isHeaderFocusInfo(info)) {
+      this.undim([info.block], animation);
+    } else if (isListFocusInfo(info)) {
+      this.undim([info.block], animation, false);
+    } else {
+      FocusPluginLogger.log("Error", "Unknown focus info type");
+    }
+    if (isHeaderFocusInfo(info)) {
+      [info.block, ...info.body].forEach((element) => {
+        var _a2;
+        let cursor = element.nextElementSibling;
+        let cursorTag;
+        while (cursor !== null) {
+          cursorTag = (_a2 = cursor.firstElementChild) == null ? void 0 : _a2.tagName;
+          if (cursorTag && (cursorTag.match(/^H[1-6]$/) || cursorTag === "LI")) {
+            if (!this.includeBody || cursorTag.match(/^H[1-6]$/) && cursorTag <= info.type)
+              break;
+          }
+          info.body.add(cursor);
+          cursor = cursor.nextElementSibling;
+        }
+      });
+      this.undim(Array.from(info.body), animation);
+      this.dim(Array.from(pane.children || []).filter((element) => element !== info.block && !info.body.has(element)), animation);
+    } else if (isListFocusInfo(info)) {
+      this.undim([info.target], animation);
+      this.dim(Array.from(((_a = info.target.parentElement) == null ? void 0 : _a.children) || []).filter((element) => element !== info.target), animation);
+      this.dim(Array.from(pane.children || []).filter((element) => element !== info.block), animation);
+    }
+  }
+  processIntermediate(pane, info, animation = true) {
+    [info.block, ...info.after].forEach((element) => {
+      var _a, _b;
+      if (element.nextElementSibling !== null) {
+        let cursor = element;
+        while (cursor !== null) {
+          if ((_a = cursor.firstElementChild) == null ? void 0 : _a.tagName.match(/^H[1-6]$/)) {
+            let headings = ((_b = info.metadata) == null ? void 0 : _b.headings) || [];
+            let headingIndex = headings.map((heading) => heading.heading).indexOf(cursor.firstElementChild.getAttribute("data-heading"));
+            if (headingIndex === -1)
+              FocusPluginLogger.log("Error", "Heading not found in metadata");
+            if (info.level === null) {
+              if (headingIndex === 0)
+                info.level = 0;
+              else {
+                let prevHeading = headings[headingIndex - 1];
+                info.level = prevHeading.level;
+              }
+            }
+            if (headings[headingIndex].level >= info.level) {
+              break;
+            }
+            info.after.add(info.block);
+            break;
+          }
+          info.after.add(cursor);
+          this.undim([cursor], animation);
+          cursor = cursor.nextElementSibling;
+        }
+      }
+    });
+    [info.block, ...info.before].forEach((element) => {
+      var _a;
+      if (element.previousElementSibling !== null) {
+        let cursor = element.previousElementSibling;
+        while (cursor !== null) {
+          if ((_a = cursor.firstElementChild) == null ? void 0 : _a.hasAttribute("data-heading")) {
+            let focusInfo = {
+              type: cursor.firstElementChild.tagName,
+              block: cursor,
+              body: /* @__PURE__ */ new Set()
+            };
+            console.log(focusInfo);
+            this.focus(pane, focusInfo);
+            break;
+          }
+          info.before.add(cursor);
+          this.undim([cursor], animation);
+          cursor = cursor.previousElementSibling;
+        }
+      }
+    });
+    if (isIntermediateFocusInfo(this.paneInfo.get(pane)))
+      this.dim(Array.from(pane.children || []).filter((element) => element !== info.block && !info.before.has(element) && !info.after.has(element)), animation);
+  }
+  isSameFocus(info1, info2) {
+    if (info1.type != info2.type)
+      return false;
+    else if (isHeaderFocusInfo(info1) && isHeaderFocusInfo(info2))
+      return info1.block === info2.block;
+    else if (isListFocusInfo(info1) && isListFocusInfo(info2))
+      return info1.target === info2.target;
+    else if (isIntermediateFocusInfo(info1) && isIntermediateFocusInfo(info2)) {
+      return info1.block === info2.block || info1.before.has(info2.block) || info1.after.has(info2.block) || info2.block === info1.block || info2.before.has(info1.block) || info2.after.has(info1.block);
+    } else
+      return false;
+  }
+  focus(pane, info) {
+    var _a;
+    if (isIntermediateFocusInfo(info)) {
+      if (info.metadata === null) {
+        this.undim([info.block], true);
+        this.dim(Array.from(((_a = info.block.parentElement) == null ? void 0 : _a.children) || []).filter((element) => element !== info.block), true);
+        this.paneInfo.set(pane, info);
+      } else {
+        this.processIntermediate(pane, info);
+        this.paneInfo.set(pane, info);
+      }
+    } else {
+      this.process(pane, info, true);
+      this.paneInfo.set(pane, info);
+    }
+    this.observer.observe(pane, { childList: true });
+  }
+  changePane(pane) {
+    if (!this.paneInfo.has(pane))
       return;
-    }
-    target.querySelectorAll(`.${this.classes["dimmed"]}`).forEach((node) => this.undim_node(node, animation));
-    this.paneInfo.delete(target);
+    this.observer.observe(pane, { childList: true });
   }
-  observe() {
-    const view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
-    if (view && view.getMode() === "preview") {
-      this.observeHead = view.contentEl.querySelector(".markdown-preview-section");
-      this.observer.observe(this.observeHead, { childList: true });
-      console.log("focus-plugin: observing");
-    }
+  getFocus(pane) {
+    return this.paneInfo.get(pane);
+  }
+  clear(pane) {
+    this.undim(Array.from(pane.querySelectorAll(`.${this.classes["dimmed"]}`)), true);
+    this.paneInfo.delete(pane);
+  }
+  clearAll() {
+    this.undim(Array.from(document.querySelectorAll(`.${this.classes["dimmed"]}`)), true);
+    this.paneInfo = /* @__PURE__ */ new WeakMap();
+  }
+  destroy() {
+    this.clearAll();
+    document.body.classList.remove(this.classes["enabled"]);
+  }
+};
+
+// main.ts
+var DEFAULT_SETTINGS = {
+  clearMethod: "click-again",
+  contentBehavior: "none",
+  focusScope: "content",
+  enableList: false,
+  focusSensitivity: 1600
+};
+var FocusPlugin = class extends import_obsidian.Plugin {
+  constructor() {
+    super(...arguments);
+    this.focusManager = new FocusManager();
+    this.lastClick = 0;
+  }
+  getPaneState() {
+    let view = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
+    if (!view)
+      return null;
+    return {
+      mode: view.getMode(),
+      head: view.contentEl.querySelector(".markdown-preview-section")
+    };
   }
   onload() {
     return __async(this, null, function* () {
@@ -122,103 +344,88 @@ var FocusPlugin = class extends import_obsidian.Plugin {
         id: "clear-focus",
         name: "Clear Focus",
         callback: () => {
-          this.clear(null, false);
+          this.focusManager.clearAll();
         }
       });
       this.addSettingTab(new FocusPluginSettingTab(this.app, this));
-      document.body.classList.add(this.classes["enabled"]);
-      this.observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          const observeHead = mutation.target;
-          if (!this.paneInfo.has(observeHead)) {
-            this.clear(observeHead, false);
-            return;
-          }
-          const focusInfo = this.paneInfo.get(observeHead);
-          if (mutation.addedNodes.length > 0) {
-            [focusInfo.focusHead, ...focusInfo.focusBody].forEach((content) => {
-              let nextNode = content.nextElementSibling;
-              if (nextNode) {
-                let newNodes = this.findContents(focusInfo.focusHead, nextNode);
-                newNodes.forEach((node) => {
-                  this.undim_node(node, false);
-                  focusInfo.focusBody.add(node);
-                });
-              }
-            });
-          }
-          const allNodes = Array.from(observeHead.children);
-          allNodes.forEach((node) => {
-            if (!focusInfo.focusBody.has(node) && node !== focusInfo.focusHead)
-              this.dim_node(node, false);
-          });
-        });
-      });
       this.registerEvent(this.app.workspace.on("layout-change", () => {
-        this.observe();
-        this.clear(this.observeHead, false);
+        let paneState = this.getPaneState();
+        if (!paneState || paneState.mode !== "preview")
+          return;
+        this.focusManager.clear(paneState.head);
       }));
       this.registerEvent(this.app.workspace.on("active-leaf-change", () => {
-        this.observe();
-      }));
-      this.registerDomEvent(document, "click", (evt) => __async(this, null, function* () {
-        const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
-        if (!markdownView || markdownView.getMode() !== "preview" || !(evt.target instanceof Element) || !this.observeHead)
+        let paneState = this.getPaneState();
+        if (!paneState || paneState.mode !== "preview")
           return;
-        const element = evt.target.hasAttribute("data-heading") ? evt.target : evt.target.parentElement || evt.target;
-        const block = element.parentElement;
-        if (this.paneInfo.has(this.observeHead)) {
-          const focusInfo2 = this.paneInfo.get(this.observeHead);
+        this.focusManager.changePane(paneState.head);
+      }));
+      this.registerDomEvent(document, "pointerdown", (evt) => {
+        this.lastClick = evt.timeStamp;
+      });
+      this.registerDomEvent(document, "pointerup", (evt) => {
+        if (evt.timeStamp - this.lastClick > this.settings.focusSensitivity)
+          return;
+        if (!(evt.target instanceof Element))
+          return;
+        let paneState = this.getPaneState();
+        if (!paneState || paneState.mode !== "preview")
+          return;
+        let focusInfo = getFocusInfo(evt.target);
+        let currentFocus = this.focusManager.getFocus(paneState.head);
+        if (currentFocus !== void 0) {
           switch (this.settings.clearMethod) {
             case "click-again":
-              if (block && focusInfo2.focusHead && block === focusInfo2.focusHead) {
-                this.clear(this.observeHead, true);
+              if (focusInfo && this.focusManager.isSameFocus(focusInfo, currentFocus)) {
+                this.focusManager.clear(paneState.head);
                 return;
               }
               break;
             case "click-outside":
-              if (element.classList.contains("markdown-reading-view")) {
-                this.clear(this.observeHead, true);
+              if (evt.target.classList.contains("markdown-preview-view")) {
+                this.focusManager.clear(paneState.head);
                 return;
               }
               break;
           }
         }
-        if (!block || !element.hasAttribute("data-heading"))
-          return;
-        let focusInfo = { focusHead: block, focusBody: /* @__PURE__ */ new Set() };
-        let contents = [];
-        if (block.nextElementSibling)
-          contents = this.findContents(block, block.nextElementSibling);
-        [block, ...contents].forEach((node) => {
-          if (node.classList.contains(this.classes["dimmed"]))
-            this.undim_node(node, true);
-        });
-        contents.forEach((content) => focusInfo.focusBody.add(content));
-        const allNodes = Array.from(this.observeHead.children);
-        allNodes.forEach((node) => {
-          if (!focusInfo.focusBody.has(node) && node !== focusInfo.focusHead) {
-            if (!node.classList.contains(this.classes["dimmed"]))
-              this.dim_node(node, true);
+        if (isIntermediateFocusInfo(focusInfo)) {
+          let activeFile = this.app.workspace.getActiveFile();
+          let metadata = activeFile !== null ? this.app.metadataCache.getFileCache(activeFile) : null;
+          if (metadata) {
+            switch (this.settings.contentBehavior) {
+              case "content":
+                focusInfo.metadata = metadata;
+              case "element":
+                this.focusManager.focus(paneState.head, focusInfo);
+                break;
+              default:
+                break;
+            }
+          } else {
+            FocusPluginLogger.log("Error", "No metadata found for active file");
           }
-        });
-        this.paneInfo.set(this.observeHead, focusInfo);
-      }));
-      this.observe();
+        } else if (isHeaderFocusInfo(focusInfo))
+          this.focusManager.focus(paneState.head, focusInfo);
+        else if (isListFocusInfo(focusInfo) && this.settings.enableList)
+          this.focusManager.focus(paneState.head, focusInfo);
+      });
     });
   }
   onunload() {
-    document.body.classList.remove(this.classes["enabled"]);
-    this.clear(null, false);
+    this.focusManager.destroy();
   }
   loadSettings() {
     return __async(this, null, function* () {
       this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
+      this.focusManager.includeBody = this.settings.focusScope === "content";
     });
   }
   saveSettings() {
     return __async(this, null, function* () {
       yield this.saveData(this.settings);
+      this.focusManager.includeBody = this.settings.focusScope === "content";
+      this.focusManager.clearAll();
     });
   }
 };
@@ -237,7 +444,34 @@ var FocusPluginSettingTab = class extends import_obsidian.PluginSettingTab {
     }).setValue(this.plugin.settings.clearMethod).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.clearMethod = value;
       yield this.plugin.saveSettings();
-      console.log("focus-plugin: clear method changed to " + value);
+      FocusPluginLogger.log("Debug", "clear method changed to " + value);
+    })));
+    new import_obsidian.Setting(containerEl).setName("Focus Scope").setDesc("What to focus when clicking").addDropdown((dropdown) => dropdown.addOptions({
+      "block": "Only one block",
+      "content": "Also the content"
+    }).setValue(this.plugin.settings.focusScope).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.focusScope = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "focus scope changed to " + value);
+    })));
+    new import_obsidian.Setting(containerEl).setName("Content Behavior").setDesc("What to do when clicking on the content elements, e.g. pure text, callout block").addDropdown((dropdown) => dropdown.addOptions({
+      "element": "Only focus on the element",
+      "content": "Focus related contents",
+      "none": "Do nothing"
+    }).setValue(this.plugin.settings.contentBehavior).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.contentBehavior = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "content behavior changed to " + value);
+    })));
+    new import_obsidian.Setting(containerEl).setName("Enable List").setDesc("Focus on the list item (experimental, only works on the first level list)").addToggle((toggle) => toggle.setValue(this.plugin.settings.enableList).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.enableList = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "enable list changed to " + value);
+    })));
+    new import_obsidian.Setting(containerEl).setName("Focus Sensitivity").setDesc("Focus only when the mouse is 'not' still for a while (larger means longer)").addSlider((slider) => slider.setLimits(100, 10100, 500).setValue(this.plugin.settings.focusSensitivity).onChange((value) => __async(this, null, function* () {
+      this.plugin.settings.focusSensitivity = value;
+      yield this.plugin.saveSettings();
+      FocusPluginLogger.log("Debug", "focus delay changed to " + value);
     })));
   }
 };
