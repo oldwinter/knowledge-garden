@@ -24,7 +24,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // main.ts
 var main_exports = {};
 __export(main_exports, {
-  default: () => MyPlugin
+  default: () => TableEnhancer
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian5 = require("obsidian");
@@ -247,7 +247,8 @@ var TableEditor = class {
       const newLine = TableEditor.rowCells2rowString(table2.cells[rowIndex]);
       if (editor.getLine(rowLineNumber).length == newLine.length)
         setLineWithoutScroll(editor, rowLineNumber, newLine + " ");
-      setLineWithoutScroll(editor, rowLineNumber, newLine);
+      else
+        setLineWithoutScroll(editor, rowLineNumber, newLine);
       await markdownView.save();
     }
   }
@@ -266,7 +267,8 @@ var TableEditor = class {
       const newLine = TableEditor.rowCells2rowString(table2.cells[0]);
       if (editor.getLine(rowLineNumber).length == newLine.length)
         setLineWithoutScroll(editor, rowLineNumber, newLine + " ");
-      setLineWithoutScroll(editor, rowLineNumber, newLine);
+      else
+        setLineWithoutScroll(editor, rowLineNumber, newLine);
       await markdownView.save();
     }
   }
@@ -992,7 +994,7 @@ var ObTableEnhancerSettingTab = class extends import_obsidian4.PluginSettingTab 
 var DEFAULT_SETTINGS = {
   enableFloatingToolBar: false
 };
-var MyPlugin = class extends import_obsidian5.Plugin {
+var TableEnhancer = class extends import_obsidian5.Plugin {
   async onload() {
     await this.loadSettings();
     this.addSettingTab(new ObTableEnhancerSettingTab(this.app, this));
@@ -1003,14 +1005,6 @@ var MyPlugin = class extends import_obsidian5.Plugin {
       this.suggestPopper = new ReferenceSuggestionPopper(this);
       if (this.settings.enableFloatingToolBar)
         this.toolBar = new ToolBar(this);
-      const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
-      if (markdownView instanceof import_obsidian5.MarkdownView) {
-        const cm = markdownView.editor.cm;
-        this.registerDomEvent(cm.scrollDOM, "scroll", (e) => {
-          e.preventDefault();
-          e.stopImmediatePropagation();
-        }, true);
-      }
       this.registerDomEvent(activeDocument, "keydown", async (e) => {
         if (!this.editingCell)
           return;
@@ -1176,10 +1170,12 @@ var MyPlugin = class extends import_obsidian5.Plugin {
         const tableId = this.getIdentifier(table);
         table.classList.add("ob-table-enhancer");
         table.setAttr("id", tableId);
-        table.onmouseenter = (e) => {
+        table.addEventListener("mouseenter", () => {
           this.hoverTableId = tableId;
-        };
-        table.onclick = (e) => e.preventDefault();
+        });
+        table.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
         for (let j = 0; j < table.rows.length; j++) {
           const row = table.rows[j];
           for (let k = 0; k < row.cells.length; k++) {
@@ -1208,7 +1204,7 @@ var MyPlugin = class extends import_obsidian5.Plugin {
                 console.error(err);
               }
             }
-            cellEl.onmouseenter = (e) => {
+            cellEl.addEventListener("mouseenter", (e) => {
               var _a2;
               this.hoverCell = {
                 tableId,
@@ -1217,14 +1213,16 @@ var MyPlugin = class extends import_obsidian5.Plugin {
                 cellEl
               };
               (_a2 = this.toolBar) == null ? void 0 : _a2.tryShowFor(this.hoverCell);
-            };
-            cellEl.onmouseout = (e) => {
+            });
+            cellEl.addEventListener("mouseout", (e) => {
               var _a2;
               this.hoverCell = null;
               (_a2 = this.toolBar) == null ? void 0 : _a2.tryHide(200);
-            };
-            cellEl.onclick = async (e) => {
+            });
+            cellEl.addEventListener("click", async (e) => {
               var _a2;
+              if (e.targetNode != cellEl)
+                return;
               e.preventDefault();
               e.stopPropagation();
               if (this.ctrl || inReadingView())
@@ -1254,7 +1252,7 @@ var MyPlugin = class extends import_obsidian5.Plugin {
               cellEl.classList.add("is-editing");
               this.editingCell = { tableId: this.hoverTableId, rowIndex: j, colIndex: k, cellEl };
               (_a2 = this.suggestPopper) == null ? void 0 : _a2.bindOuterEl(cellEl);
-            };
+            });
           }
         }
       });
@@ -1331,13 +1329,23 @@ var MyPlugin = class extends import_obsidian5.Plugin {
     const { tableId: tableId2, rowIndex, colIndex, cellEl: cellElem } = cell;
     if (!this.hoverTableId)
       return;
-    cellElem.setAttr("contenteditable", false);
-    await this.tableEditor.update(this.hoverTableId, rowIndex, colIndex, cellElem.innerText.trim());
     const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
-    if (markdownView instanceof import_obsidian5.MarkdownView) {
-      const editor = markdownView.editor;
+    if (!(markdownView instanceof import_obsidian5.MarkdownView))
+      return;
+    cellElem.setAttr("contenteditable", false);
+    const editor = markdownView.editor;
+    const cm = editor.cm;
+    const scrollDom = cm.scrollDOM;
+    const x = scrollDom.scrollLeft;
+    const y = scrollDom.scrollTop;
+    const resetScroll = () => {
+      scrollDom.scrollTo(x, y);
       editor.blur();
-    }
+    };
+    scrollDom.addEventListener("scroll", resetScroll, true);
+    await this.tableEditor.update(this.hoverTableId, rowIndex, colIndex, cellElem.innerText.trim());
+    scrollDom.removeEventListener("scroll", resetScroll, true);
+    editor.blur();
     await this.tableEditor.parseActiveFile();
     cellElem.classList.remove("is-editing");
     if (this.suggestPopper)
@@ -1370,10 +1378,13 @@ var MyPlugin = class extends import_obsidian5.Plugin {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
   }
   async saveSettings() {
+    var _a;
     await this.saveData(this.settings);
-    if (!this.settings.enableFloatingToolBar)
+    if (!this.settings.enableFloatingToolBar) {
+      (_a = this.toolBar) == null ? void 0 : _a.onUnload();
       this.toolBar = null;
-    else
+    } else {
       this.toolBar = new ToolBar(this);
+    }
   }
 };

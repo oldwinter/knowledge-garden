@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
 date modified: 2022-08-20
-tags: article/done
+tags: 文章/已完成
 title: 2022年7月，obsidian 依然必装的 10 个插件
 ---
 

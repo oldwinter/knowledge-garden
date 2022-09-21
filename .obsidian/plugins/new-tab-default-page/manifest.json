@@ -1,0 +1,10 @@
+{
+	"id": "new-tab-default-page",
+	"name": "Default New Tab Page",
+	"version": "0.5.0",
+	"minAppVersion": "0.16.0",
+	"description": "Open a note of your choice when creating a new tab, like in the browser.",
+	"author": "pseudometa",
+	"authorUrl": "https://chris-grieser.de/",
+	"isDesktopOnly": true
+}

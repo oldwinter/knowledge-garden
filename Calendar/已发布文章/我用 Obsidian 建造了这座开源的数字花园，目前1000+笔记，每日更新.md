@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-25
 date modified: 2022-08-20
-tags: article/done
+tags: 文章/已完成
 title: 我用 Obsidian 建造了这座开源的数字花园，目前1000+笔记，每日更新
 ---
 

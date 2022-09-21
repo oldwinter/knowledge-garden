@@ -11,7 +11,7 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 人民邮电出版社
 reviewCount: 1
-tags: weread
+tags: 微信读书笔记
 title: 简约至上：交互式设计四策略-Giles Colborne
 ---
 

@@ -34,12 +34,12 @@ If your plugin does not need CSS, delete this file.
 	height: fit-content;
 	padding: 0 2px;
 	margin: 0;
-	filter: brightness(0.5);
+	opacity: 0.5;
 	transition: all 200ms ease-in-out;
 }
 
 .ob-table-enhancer-row-bar-button:hover, .ob-table-enhancer-col-bar-button:hover {
-	filter: brightness(1);
+	opacity: 1.0;
 }
 
 .ob-table-enhancer-col-bar-button {
@@ -48,7 +48,7 @@ If your plugin does not need CSS, delete this file.
 	height: fit-content;
 	padding: 5px 2px 0 0;
 	margin: 0;
-	filter: brightness(0.5);
+	opacity: 0.5;
 	transition: all 200ms ease-in-out;
 }
 

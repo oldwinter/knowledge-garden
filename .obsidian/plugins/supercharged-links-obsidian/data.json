@@ -6,6 +6,7 @@
   ],
   "targetTags": true,
   "getFromInlineField": true,
+  "enableTabHeader": true,
   "activateSnippet": true,
   "enableEditor": true,
   "enableFileList": true,
@@ -16,7 +17,7 @@
     {
       "type": "tag",
       "name": "flashcards",
-      "value": "review",
+      "value": "待复习回顾",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "b19c-8ca5",
@@ -40,7 +41,7 @@
     {
       "type": "tag",
       "name": "flashcards",
-      "value": "todo",
+      "value": "待办",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "75fc-e339",
@@ -52,7 +53,7 @@
     {
       "type": "tag",
       "name": "flashcards",
-      "value": "MOC",
+      "value": "索引型笔记",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "7c4c-9ddb",
@@ -64,7 +65,7 @@
     {
       "type": "tag",
       "name": "cards",
-      "value": "weread",
+      "value": "微信读书笔记",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "8b14-901d",
@@ -76,7 +77,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "done",
+      "value": "已完成",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "01f9-c3f3",
@@ -88,7 +89,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "TOC",
+      "value": "目录型笔记",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "2d72-a9bb",
@@ -112,7 +113,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "tutorial",
+      "value": "教程",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "17d0-6ee6",

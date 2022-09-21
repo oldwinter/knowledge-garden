@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-20
-tags: [MOC, todo/持续迭代]
+tags: [索引型笔记, 待办/持续迭代]
 title: + 本库 ACCESS 的文件夹入口汇总
 ---
 
@@ -20,7 +20,7 @@ x:: [[本库ACCESS文件夹结构与混合笔记法]]
 ## Calendar
 
 - [obsidian 每日笔记](obsidian://advanced-uri?daily=true&mode=append)
-- #todo/今天 #todo/本周
+- #待办/今天 #待办/本周
 - [Anki 回顾笔记](obsidian://advanced-uri?vault=knowledge-garden&commandid=obsidian-spaced-repetition%253Asrs-note-review-open-note)
 
 ## Cards

@@ -11,7 +11,7 @@ lastReadDate: 2022-06-12T00:00:00.000Z
 noteCount: 0
 publisher: 人民邮电出版社
 reviewCount: 1
-tags: weread
+tags: 微信读书笔记
 title: 写给大家看的设计书（第4版）-Robin Williams
 ---
 

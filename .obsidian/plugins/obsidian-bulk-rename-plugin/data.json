@@ -2,5 +2,11 @@
   "folderName": "Atlas",
   "fileNames": [],
   "existingSymbol": "",
-  "replacePattern": ""
+  "replacePattern": "",
+  "regExpState": {
+    "regExp": "",
+    "flags": []
+  },
+  "tags": [],
+  "viewType": "regexp"
 }

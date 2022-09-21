@@ -9,7 +9,7 @@ category: 个人成长-认知思维
 isbn: 9787515819792
 lastReadDate: 2022-09-08
 publisher: 中华工商联合出版社
-tags: weread
+tags: 微信读书笔记
 ---
 
 ## 元数据

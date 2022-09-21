@@ -11,7 +11,7 @@ lastReadDate: 2022-06-12T00:00:00.000Z
 noteCount: 0
 publisher: 中信出版社
 reviewCount: 1
-tags: weread
+tags: 微信读书笔记
 title: 贪婪的多巴胺-丹尼尔·利伯曼 迈克尔·E.朗
 ---
 

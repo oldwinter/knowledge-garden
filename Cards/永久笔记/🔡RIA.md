@@ -1,14 +1,14 @@
 ---
-sr-due: 2022-09-02
-sr-interval: 15
-sr-ease: 290
+sr-due: 2022-12-12
+sr-interval: 93
+sr-ease: 310
 aliases:
   - 功利主义阅读法
   - 快速拆解工具书拆书法
   - 教程类书的阅读方法
 date created: 2022-06-09
 date modified: 2022-08-20
-tags: review
+tags: 待复习回顾
 title: 🔡RIA
 ---
 

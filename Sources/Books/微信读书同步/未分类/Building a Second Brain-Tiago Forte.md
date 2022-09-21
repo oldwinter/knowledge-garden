@@ -11,7 +11,7 @@ lastReadDate: 2022-08-07T00:00:00.000Z
 noteCount: 1
 publisher: Profile
 reviewCount: 42
-tags: weread
+tags: 微信读书笔记
 title: Building a Second Brain-Tiago Forte
 ---
 

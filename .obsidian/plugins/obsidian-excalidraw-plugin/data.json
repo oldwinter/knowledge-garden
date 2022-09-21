@@ -5,7 +5,7 @@
   "scriptFolderPath": "Extras/Draws/Scripts",
   "compress": true,
   "autosave": true,
-  "autosaveInterval": 10000,
+  "autosaveInterval": 15000,
   "drawingFilenamePrefix": "白板 ",
   "drawingEmbedPrefixWithFilename": true,
   "drawingFilnameEmbedPostfix": " ",

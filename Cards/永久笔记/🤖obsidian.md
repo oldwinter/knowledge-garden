@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-29
+date modified: 2022-09-11
 title: 🤖obsidian
 ---
 
@@ -18,7 +18,7 @@ jumps:: [[🤖notion]]
 
 [[obsidian与alfred联动]]
 
-[[obsidian的中括号`[[`搜索的技巧]]
+[[obsidian的中括号搜索的技巧]]
 
 ## 其他
 

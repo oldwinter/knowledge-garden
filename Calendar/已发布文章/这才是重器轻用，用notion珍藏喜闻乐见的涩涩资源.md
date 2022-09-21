@@ -3,7 +3,7 @@ date created: 2022-06-23
 date modified: 2022-08-20
 id: 77655f77-5bcc-48dd-a1e0-6d3c7829d788
 published: true
-tags: article/done
+tags: 文章/已完成
 title: 这才是重器轻用，用notion珍藏喜闻乐见的涩涩资源
 ---
 

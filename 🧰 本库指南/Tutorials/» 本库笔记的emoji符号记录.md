@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-05
 date modified: 2022-08-24
-tags: tutorial
+tags: 本库教程
 title: » 本库笔记的emoji符号记录
 ---
 

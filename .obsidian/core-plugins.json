@@ -1,6 +1,7 @@
 [
   "file-explorer",
   "global-search",
+  "switcher",
   "graph",
   "backlink",
   "outgoing-link",
@@ -8,6 +9,7 @@
   "page-preview",
   "daily-notes",
   "note-composer",
+  "command-palette",
   "outline",
   "word-count",
   "workspaces",

@@ -11,7 +11,7 @@ lastReadDate: 2022-08-13T00:00:00.000Z
 noteCount: 0
 publisher: 南海出版公司
 reviewCount: 1
-tags: weread
+tags: 微信读书笔记
 title: 嫌疑人X的献身-东野圭吾
 ---
 

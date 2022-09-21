@@ -35,23 +35,6 @@
       "key": "2"
     }
   ],
-  "omnisearch:show-modal": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
-  "omnisearch:show-modal-infile": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "L"
-    }
-  ],
   "obsidian-spaced-repetition:srs-note-review-open-note": [
     {
       "modifiers": [
@@ -78,24 +61,7 @@
       "key": "E"
     }
   ],
-  "obsidian-better-command-palette:open-better-commmand-palette": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
   "pane-relief:go-6th": [],
-  "command-palette:open": [],
-  "editor:toggle-source": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "R"
-    }
-  ],
   "app:go-back": [
     {
       "modifiers": [
@@ -110,14 +76,6 @@
         "Mod"
       ],
       "key": "]"
-    }
-  ],
-  "obsidian-another-quick-switcher:search-command_Recommended search": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "O"
     }
   ],
   "pane-relief:go-5th": [],
@@ -135,6 +93,49 @@
         "Shift"
       ],
       "key": "S"
+    }
+  ],
+  "obsidian-better-command-palette:open-better-commmand-palette": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
+  ],
+  "obsidian-another-quick-switcher:search-command_Recommended search": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:open-search-replace": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "H"
     }
   ]
 }

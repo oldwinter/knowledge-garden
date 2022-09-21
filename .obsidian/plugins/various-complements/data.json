@@ -9,7 +9,7 @@
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^。，：？『",
+  "firstCharactersDisableSuggestions": ":/^-+,'\"!@#$%^&* 。，：？『",
   "showMatchStrategy": false,
   "showComplementAutomatically": false,
   "showIndexingStatus": false,
@@ -41,43 +41,17 @@
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "MOC": {
-      "MOC": {
-        "frontMatter": {
-          "count": 64,
-          "lastUpdated": 1661096807236
-        }
-      }
-    },
     "obsidian": {
       "obsidian": {
         "internalLink": {
           "count": 14,
           "lastUpdated": 1661390981937
-        }
-      },
-      "🤖obsidian": {
-        "internalLink": {
-          "count": 5,
-          "lastUpdated": 1660741953720
-        }
-      }
-    },
-    "co-tip": {
-      "co-tip": {
-        "customDictionary": {
-          "count": 5,
-          "lastUpdated": 1660584987224
-        }
-      }
-    },
-    "roamresearch": {
-      "roamresearch": {
-        "currentVault": {
-          "count": 4,
-          "lastUpdated": 1660711831234
         }
       }
     },
@@ -86,30 +60,6 @@
         "frontMatter": {
           "count": 7,
           "lastUpdated": 1661780650759
-        }
-      }
-    },
-    "ACCESS 笔记组织法": {
-      "ACCESS 笔记组织法": {
-        "internalLink": {
-          "count": 5,
-          "lastUpdated": 1660117117135
-        }
-      }
-    },
-    "S3 - 对象存储服务": {
-      "S3 - 对象存储服务": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1660510294544
-        }
-      }
-    },
-    "excalibrain": {
-      "excalibrain": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1660488934023
         }
       }
     },
@@ -129,35 +79,11 @@
         }
       }
     },
-    "Resource": {
-      "Resource": {
-        "currentVault": {
-          "count": 3,
-          "lastUpdated": 1660384140165
-        }
-      }
-    },
-    "dailynote": {
-      "dailynote": {
-        "internalLink": {
-          "count": 4,
-          "lastUpdated": 1660113193138
-        }
-      }
-    },
-    "cubox": {
-      "🤖cubox": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1660588389206
-        }
-      }
-    },
     "review": {
       "review": {
         "frontMatter": {
-          "count": 12,
-          "lastUpdated": 1661092901432
+          "count": 13,
+          "lastUpdated": 1663405389755
         }
       }
     },
@@ -166,30 +92,6 @@
         "internalLink": {
           "count": 2,
           "lastUpdated": 1661392207279
-        }
-      }
-    },
-    "dataview": {
-      "dataview": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1660102182290
-        }
-      }
-    },
-    "TOC": {
-      "TOC": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1660733739880
-        }
-      }
-    },
-    "todo/本周": {
-      "todo/本周": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1661096811742
         }
       }
     },
@@ -213,291 +115,11 @@
         }
       }
     },
-    "DailyNote": {
-      "DailyNote": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1660113196080
-        }
-      }
-    },
-    "wikilink": {
-      "wikilink": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1661022314975
-        }
-      }
-    },
-    "tutorial": {
-      "tutorial": {
-        "frontMatter": {
-          "count": 4,
-          "lastUpdated": 1660077593955
-        }
-      }
-    },
-    "本库推荐的obsidian入门路线及资源": {
-      "本库推荐的obsidian入门路线及资源": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660115633804
-        }
-      }
-    },
-    "原因": {
-      "原因": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660115649971
-        }
-      }
-    },
-    "本库的设计哲学": {
-      "本库的设计哲学": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660115737887
-        }
-      }
-    },
-    "比个心心的手势": {
-      "比个心心的手势": {
-        "customDictionary": {
-          "count": 2,
-          "lastUpdated": 1660136279744
-        }
-      }
-    },
-    "比个心": {
-      "比个心": {
-        "customDictionary": {
-          "count": 2,
-          "lastUpdated": 1660136373392
-        }
-      }
-    },
-    "EMO了": {
-      "🐤EMO了": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660136664584
-        }
-      }
-    },
-    "😂": {
-      "😂": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660136957775
-        }
-      }
-    },
-    "❤️": {
-      "❤️": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660136976145
-        }
-      }
-    },
-    "👍": {
-      "👍": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660137025796
-        }
-      }
-    },
-    "😭": {
-      "😭": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660137034211
-        }
-      }
-    },
-    "🙏": {
-      "🙏": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660137044046
-        }
-      }
-    },
-    "😅": {
-      "😅": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660137664225
-        }
-      }
-    },
-    "卢曼": {
-      "🧑卢曼": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660145429669
-        }
-      }
-    },
-    "收藏家谬误": {
-      "收藏家谬误": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660145899924
-        }
-      }
-    },
-    "sidebarDataview": {
-      "sidebarDataview": {
-        "frontMatter": {
-          "count": 3,
-          "lastUpdated": 1660334565710
-        }
-      }
-    },
-    "Project": {
-      "Project": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660383866204
-        }
-      }
-    },
-    "少楠": {
-      "🧑少楠": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660399974291
-        }
-      }
-    },
-    "OG": {
-      "🐤OG": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660420757256
-        }
-      }
-    },
-    "间隔重复": {
-      "间隔重复": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660421632199
-        }
-      }
-    },
-    "常青笔记应面向概念": {
-      "常青笔记应面向概念": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660421946867
-        }
-      }
-    },
-    "读书笔记模板": {
-      "读书笔记模板": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660480796538
-        }
-      }
-    },
-    "heptabase": {
-      "heptabase": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660489034145
-        }
-      }
-    },
-    "jsdelivr": {
-      "jsdelivr": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660510241031
-        }
-      }
-    },
-    "于是": {
-      "于是": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660537937386
-        }
-      }
-    },
-    "2022-08-15": {
-      "2022-08-15": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660563882689
-        }
-      }
-    },
-    "File cooker": {
-      "File cooker": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660575809318
-        }
-      }
-    },
-    "分类学": {
-      "分类学": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660582555526
-        }
-      }
-    },
-    "独立思考": {
-      "独立思考": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660584595907
-        }
-      }
-    },
-    "dataviewjs": {
-      "dataviewjs": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660586206505
-        }
-      }
-    },
-    "看心情整理文件和MOC": {
-      "看心情整理文件和MOC": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660587283417
-        }
-      }
-    },
-    "块引用": {
-      "块引用": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660588860095
-        }
-      }
-    },
     "todo/今天": {
       "todo/今天": {
         "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1660588940060
-        }
-      }
-    },
-    "飞书妙记": {
-      "飞书妙记": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660589088416
+          "count": 2,
+          "lastUpdated": 1663241126957
         }
       }
     },
@@ -506,94 +128,6 @@
         "currentVault": {
           "count": 2,
           "lastUpdated": 1661777369391
-        }
-      }
-    },
-    "系统": {
-      "系统": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660735919556
-        }
-      }
-    },
-    "留言": {
-      "留言": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660735925515
-        }
-      }
-    },
-    "方案": {
-      "方案": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1660735957627
-        }
-      }
-    },
-    "问题": {
-      "问题": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1660735948777
-        }
-      }
-    },
-    "KOL": {
-      "KOL": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660821630777
-        }
-      }
-    },
-    "Andy Matuschak": {
-      "🧑Andy Matuschak": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660840025682
-        }
-      }
-    },
-    "CloudFlare": {
-      "🔗CloudFlare": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1660903480720
-        }
-      }
-    },
-    "刑法学讲义（法律男神罗翔的刑法普及课）-罗翔": {
-      "刑法学讲义（法律男神罗翔的刑法普及课）-罗翔": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1661091868453
-        }
-      }
-    },
-    "KG笔记法": {
-      "KG笔记法": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1661092132105
-        }
-      }
-    },
-    "结构化表达": {
-      "结构化表达": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1661094618280
-        }
-      }
-    },
-    "模板与套路": {
-      "模板与套路": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1661094657026
         }
       }
     },
@@ -766,6 +300,78 @@
         "currentVault": {
           "count": 1,
           "lastUpdated": 1662539753113
+        }
+      }
+    },
+    "水平": {
+      "水平": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1663051393620
+        }
+      }
+    },
+    "习惯养成": {
+      "习惯养成": {
+        "frontMatter": {
+          "count": 3,
+          "lastUpdated": 1663241896669
+        }
+      }
+    },
+    "流动式框架": {
+      "流动式框架": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663379738896
+        }
+      }
+    },
+    "卡片盒笔记法 - Zettelkasten": {
+      "卡片盒笔记法 - Zettelkasten": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663379981270
+        }
+      }
+    },
+    "咖啡因": {
+      "咖啡因": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663402660453
+        }
+      }
+    },
+    "乳清蛋白粉": {
+      "乳清蛋白粉": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663403930024
+        }
+      }
+    },
+    "notion-like": {
+      "notion-like": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1663405289980
+        }
+      }
+    },
+    "co-info": {
+      "co-info": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1663475788227
+        }
+      }
+    },
+    "co-tip": {
+      "co-tip": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1663693249311
         }
       }
     }

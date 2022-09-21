@@ -1,0 +1,76 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+.janitor-modal-footer {
+	/* float: right; */
+	padding: 10pt;
+	display: flex;
+}
+
+.janitor-modal-footer button {}
+
+.janitor-modal-footer .janitor-footer-buttons {
+	flex: 1;
+	justify-content: flex-end;
+	display: flex;
+}
+
+.janitor-scan-section-title {
+	font-size: larger;
+	margin-bottom: 5pt;
+	font-weight: 600;
+}
+
+.janitor-modal-title {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 10px;
+}
+
+.janitor-file {
+	margin-left: 1em;
+}
+
+.janitor-file:focus {
+	outline: auto;
+}
+
+.janitor-scan-results {
+	overflow-y: auto;
+	max-height:250px;
+}
+
+.janitor-files-wrapper {
+	/* overflow-y: auto; */
+	/* max-height: 180px; */
+	/* border: 1px solid; */
+	padding: 5px;
+}
+
+.janitor-date-picker {
+	padding: 5px;;
+}
+
+.janitor-date-picker label span {
+	margin-right: 1em;;
+}
+
+
+.janitor-date-picker-buttons {
+	float: right;
+}
+
+.janitor-date-shortcuts {
+	white-space: nowrap;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.janitor-date-shortcuts .janitor-date-picker-buttons {
+	display: inline-block;
+}

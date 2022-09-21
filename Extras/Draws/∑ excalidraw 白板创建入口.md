@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-25
-tags: MOC
+tags: 索引型笔记
 title: ∑ excalidraw 白板创建入口
 ---
 

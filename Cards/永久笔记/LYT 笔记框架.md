@@ -1,29 +1,32 @@
 ---
+aliases:
+  - lyt kit
 date created: 2022-06-19
-date modified: 2022-08-20
+date modified: 2022-09-17
 title: LYT 笔记框架
 ---
 
 down:: [[ACCESS 笔记组织法]]
 
-[LYT Kit 6: Your starter kit to build your PKM system (+free download for your Obsidian app) - YouTube](https://www.youtube.com/watch?v=ftzQOkzGCLg)
+[LYT Kit 6: Your starter kit to build your PKM system (+free download for your Obsidian app) - YouTube](https://www.youtube.com/watch?v=ftzQOkzGCLg)  
+[[2022-09-17]]，已经更新到最新，结构精简了非常多，重新整理理解一下。
 
 ## 概括一下 LYT 笔记框架的核心内容
 
 与 roamresearch 和 logseq 这种纯大纲，并且所有笔记文件只放在同一个文件夹下面不同，obsidian 有文件夹系统。那么 LYT 主张，文件夹分类和 MOC 结合使用的方式来组织笔记，并且借用 dataview 的强大 query 能力，将搜索结果保存下来。这几种方法相结合使用，让原子化笔记兼具结构性和流动性，更能实现常青笔记强调的，可被检索，可为未来服务的目的。综合来说就是教你如何通过 obsidian 构建自己的 PKM 系统。
 
-## LYT 笔记框架概览
+## LYT 笔记框架是什么
 
-- 什么是 LTY 笔记框架
-	- LTY 笔记框架的优势
-	- LTY 笔记框架适合我吗？
-- 什么是一条笔记
-	- 什么是更高阶的笔记
-- [[MOC]] 概览
-	- MOC 推荐灵活的且非破坏性的思考
-- 什么是 [[流动式框架]]
-	- 为什么说给你的笔记分类是个好主意
-	- 流动式分类学
+linking your thinking的缩写。核心就是link。这个框架虽然强调文件夹、标签的作用，但第一公民依然是link链接，与其他双链笔记方法论一样，比如[[卡片盒笔记法 - Zettelkasten]]。
+
+包含3个部分：
+
+- [[HOMEPAGE]]。即主页Home笔记。启动页屡见不鲜，电脑手机的开机界面，浏览器的启动页等等。此处作为自己的笔记库的一个启动入口。
+- 各个[[MOC]]页面。其实就是一堆围绕某个特定主题的笔记的链接，放到同一则笔记里，并配上额外的文字说明提醒自己把这些笔记的内在逻辑串起来。
+- 其他的[[流动式框架]]。给笔记加限定的结构，越发地被证明是一个很难坚持且无效的方式。但是如果我们创造一个框架，可以让这些限定的结构产生流动性，不是一成不变的，那么我们将兼得2个优势：秩序和混沌；结构化和灵活性，等等。
+
+## LYT笔记框架如何组织笔记
+
 - 什么是 [[ACCESS 笔记组织法]]
 
 ## 最佳实践

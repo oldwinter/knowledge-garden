@@ -91,7 +91,7 @@
 }
 
 #keyboard-component .setting-item-name span.suggestion-prefix {
-  color: var(--text-muted);
+  color: var(--text-accent);
   font-size: 90%;
   font-style: italic;
   text-transform: uppercase;
@@ -249,7 +249,7 @@ kbd.modifier:hover {
 }
 
 .keyboard-icon.pulse {
-  color: var(--text-accent);
+  color: var(--text-error);
 }
 
 /* .meta-search-indicator .inner-circle {
@@ -601,12 +601,20 @@ button#hotkey-refresh-button:hover {
   grid-template-rows: 1fr;
   gap: 0px 10px;
   grid-template-areas: 'main other num';
-  background-color: var(--background-secondary);
-  border-radius: 14px;
+  background-color: var(--background-modifier-border);
+  border-radius: 0px 0px 12px 12px;
   border: 1px solid var(--indentation-guide);
-  max-width: 900px;
+  min-width: 720px;
   height: 280px;
+  /* margin-top: 16px; */
   padding: 24px;
+}
+
+.sm #keyboard-layout,
+.xs #keyboard-layout {
+  min-width: 100%;
+  border-radius: 0px;
+  margin-top: 0px;
 }
 
 #keyboard-layout .main {

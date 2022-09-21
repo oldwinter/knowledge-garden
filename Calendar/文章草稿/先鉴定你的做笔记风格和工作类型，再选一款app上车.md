@@ -1,11 +1,11 @@
 ---
 date created: 2022-06-09
 date modified: 2022-08-20
-tags: article/todo
+tags: 文章/待写
 title: 先鉴定你的做笔记风格和工作类型，再选一款app上车
 ---
 
-[Build a Productivity System Designed for Your Job Type - YouTube](https://www.youtube.com/watch?v=fZi9kPCys7A) 根据工作类型打造适合自己的生产力系统。和图书馆员，园丁和建筑师的说法也可以映射起来。 #todo
+[Build a Productivity System Designed for Your Job Type - YouTube](https://www.youtube.com/watch?v=fZi9kPCys7A) 根据工作类型打造适合自己的生产力系统。和图书馆员，园丁和建筑师的说法也可以映射起来。 #待办
 
 ### 相关视频链接
 

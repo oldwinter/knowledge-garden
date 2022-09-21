@@ -4,7 +4,7 @@ sr-interval: 305
 sr-ease: 330
 date created: 2022-08-15
 date modified: 2022-08-20
-tags: review
+tags: 待复习回顾
 title: obsidian插件
 ---
 

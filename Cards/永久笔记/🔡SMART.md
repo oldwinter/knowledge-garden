@@ -1,10 +1,10 @@
 ---
-sr-due: 2022-09-06
-sr-interval: 18
-sr-ease: 288
+sr-due: 2022-12-04
+sr-interval: 85
+sr-ease: 308
 date created: 2022-06-27
 date modified: 2022-08-20
-tags: review
+tags: 待复习回顾
 title: 🔡SMART
 ---
 

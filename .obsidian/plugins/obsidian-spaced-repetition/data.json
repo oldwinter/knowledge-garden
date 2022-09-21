@@ -21,14 +21,18 @@
     "multilineCardSeparator": "+++",
     "multilineReversedCardSeparator": "",
     "tagsToReview": [
-      "#review"
+      "#review",
+      "#important",
+      "#习惯养成",
+      "#待复习回顾"
     ],
     "noteFoldersToIgnore": [
-      "☘️ 花园导览 🍀"
+      "🍀 花园导览",
+      "🧰 本库指南"
     ],
     "openRandomNote": true,
     "autoNextNote": true,
-    "disableFileMenuReviewOptions": false,
+    "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
@@ -37,6 +41,6 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2022-08-25",
+  "buryDate": "2022-09-21",
   "buryList": []
 }

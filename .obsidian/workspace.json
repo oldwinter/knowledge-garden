@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "3bbafcddc5676ca8",
+    "type": "split",
+    "children": [
+      {
+        "id": "86793593f29f7ab6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b44a79cae874034",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HOMEPAGE.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06dfedc265aeb56f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e3dd4e8fbf886eda",
+    "type": "split",
+    "children": [
+      {
+        "id": "987dbc5670d8f4fa",
+        "type": "tabs",
+        "dimension": 74.3664717348928,
+        "children": [
+          {
+            "id": "a4d1994dfc9f1870",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ce044dedd57e8849",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4ea8d6f6779182a1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "92910ae8836a7b22",
+        "type": "tabs",
+        "dimension": 25.633528265107213,
+        "children": [
+          {
+            "id": "e3c3bc13cb0131c1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spaces/About Spaces.md"
+              }
+            }
+          },
+          {
+            "id": "853ef9e400d6f719",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "169f404814f0079a",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "687dfb8cd0c53082",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 268.5
+  },
+  "right": {
+    "id": "c718ea3b78af998f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e4aad8a243418e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f830cfd05a50f08",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "3dc25d52ff9b3cf3",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 217.5
+  },
+  "active": "06dfedc265aeb56f",
+  "lastOpenFiles": [
+    "README.md",
+    "Cards/永久笔记/我的硕士毕业论文致谢.md",
+    "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md",
+    "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
+    "Extras/Templates/其他/微信读书同步模板.md",
+    "Sources/Books/微信读书同步/生活百科/4分钟极速减脂-刘洹.md",
+    "Cards/永久笔记/没有完美的方法论和工具，找到一个后，大量练习和实践才是关键.md",
+    "Cards/永久笔记/但当涉猎，不求甚解.md",
+    "Calendar/Daily notes/2022-08-13.md",
+    "Calendar/Daily notes/2022-07-22.md"
+  ]
+}

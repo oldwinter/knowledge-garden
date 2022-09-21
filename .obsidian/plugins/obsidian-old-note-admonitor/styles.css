@@ -1,0 +1,27 @@
+.old-note-admonitor__old-note-container:before {
+    content: "";
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPiA8cGF0aCBkPSJNMTQuNSAySDZhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWNy41TDE0LjUgMnoiPjwvcGF0aD4gPHBhdGggZD0iTTEyIDl2NCI+PC9wYXRoPiA8cGF0aCBkPSJNMTIgMTdoLjAxIj48L3BhdGg+IDwvc3ZnPg==");
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    padding-right: 0.3rem;
+}
+.old-note-admonitor__old-note-container {
+    background-color: rgba(255, 140, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.old-note-admonitor__settings__message_template,
+.old-note-admonitor__settings__group_capture_patterns {
+    width: 300px;
+}

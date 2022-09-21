@@ -3,7 +3,8 @@
     "Escape YAML Special Characters": {
       "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
       "Default Escape Character": "\"",
-      "Try to Escape Single Line Arrays": true
+      "Try to Escape Single Line Arrays": true,
+      "Force Yaml Escape on Keys": "title"
     },
     "Format Tags in YAML": {
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
@@ -13,6 +14,7 @@
       "Yaml aliases section style": "multi-line",
       "Format yaml aliases section": true,
       "Yaml tags section style": "single string to single-line",
+      "Format yaml tags section": true,
       "Default yaml array section style": "single-line",
       "Format yaml array sections": true,
       "Force key values to be single-line arrays": "data created\ndata modified",
@@ -22,15 +24,21 @@
       "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
       "Text to insert": "tags: "
     },
+    "Move Tags to Yaml": {
+      "Move all tags to Yaml frontmatter of the document.": true,
+      "Yaml tags section style": "single-line",
+      "Remove the hashtag from tags in content body": false
+    },
     "Remove YAML Keys": {
       "Removes the YAML keys specified": false,
       "YAML Keys to Remove": ""
     },
     "YAML Key Sort": {
-      "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true,
+      "Sorts the YAML keys based on the order and priority specified. Note: may remove blank lines as well.": false,
       "YAML Key Priority Sort Order": "sr-due\nsr-interval\nsr-ease\n",
       "Priority Keys at Start of YAML": true,
-      "YAML Sort Order for Other Keys": "Ascending Alphabetical"
+      "YAML Sort Order for Other Keys": "Ascending Alphabetical",
+      "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true
     },
     "YAML Timestamp": {
       "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
@@ -49,7 +57,8 @@
       "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": false,
       "YAML aliases section style": "Multi-line array",
       "Preserve existing aliases section style": true,
-      "Keep alias that matches the filename": false
+      "Keep alias that matches the filename": false,
+      "Use the YAML key `linter-yaml-title-alias` to help with filename and heading changes": true
     },
     "Capitalize Headings": {
       "Headings should be formatted with capitalization": false,
@@ -83,6 +92,11 @@
     },
     "No Bare URLs": {
       "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
+    },
+    "Ordered List Style": {
+      "Makes sure that ordered lists follow the style specified.": false,
+      "Number Style": "ascending",
+      "Ordered List Indicator End Style": "."
     },
     "Proper Ellipsis": {
       "Replaces three consecutive dots with an ellipsis.": true
@@ -149,6 +163,7 @@
       "There should be a single space after list markers and checkboxes.": true
     },
     "Space between Chinese and English or numbers": {
+      "Ensures that Chinese and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false,
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
     },
     "Trailing spaces": {
@@ -162,5 +177,6 @@
     "Extras/Templates"
   ],
   "linterLocale": "zh-cn",
-  "logLevel": 4
+  "logLevel": 4,
+  "lintCommands": []
 }

@@ -1,18 +1,20 @@
 {
-  "cssTheme": "Shimmering Focus",
+  "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "多栏callout样式",
     "隐藏文件和文件夹",
     "图片放大",
-    "supercharged-links-gen",
-    "隐藏LICENSE文件和logseq文件夹",
     "菜单栏定制",
     "图谱",
     "侧边栏dataview样式定制",
-    "菜单栏及侧边栏定制"
+    "supercharged-links-gen",
+    "隐藏LICENSE文件和logseq文件夹"
   ],
-  "theme": "system",
+  "theme": "obsidian",
   "baseFontSize": 14,
   "baseFontSizeAction": true,
-  "translucency": false
+  "translucency": false,
+  "accentColor": "",
+  "showViewHeader": true,
+  "nativeMenus": false
 }

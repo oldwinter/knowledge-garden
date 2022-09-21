@@ -9,7 +9,7 @@ category: 计算机-计算机综合
 isbn: 9787115351531
 lastReadDate: 2022-09-06
 publisher: 人民邮电出版社
-tags: weread
+tags: 微信读书笔记
 ---
 
 ## 元数据

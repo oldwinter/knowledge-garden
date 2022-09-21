@@ -1,7 +1,9 @@
 {
   "renderNullAs": "\\-",
   "taskCompletionTracking": true,
+  "taskCompletionUseEmojiShorthand": true,
   "taskCompletionText": "completion",
+  "taskCompletionDateFormat": "yyyy-MM-dd",
   "warnOnEmptyResult": true,
   "refreshEnabled": false,
   "refreshInterval": 250,

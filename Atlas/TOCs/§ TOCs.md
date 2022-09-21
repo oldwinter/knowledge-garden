@@ -2,7 +2,7 @@
 date created: 2022-08-14
 date modified: 2022-08-20
 mindmap-plugin: basic
-tags: [TOC, todo/持续迭代]
+tags: [目录型笔记, 待办/持续迭代]
 title: § TOCs
 ---
 

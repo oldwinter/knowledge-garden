@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-25
-tags: tutorial
+tags: 本库教程
 title: » 本库 PARA 笔记组织法工作流
 ---
 
