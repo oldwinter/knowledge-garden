@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-05
 date modified: 2022-08-20
-tags: [目录型笔记, 待办/本周]
+tags: [目录笔记, 待办/本周]
 title: § 本库obsidian使用说明书
 ---
 

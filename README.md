@@ -3,9 +3,6 @@ date created: 2022-08-06
 date modified: 2022-09-21
 tags: 本库教程
 title: README
-sr-due: 2022-09-25
-sr-interval: 4
-sr-ease: 270
 ---
 <h1 align="center">oldwinterの数字花园</h1>
 <img src="https://img2.oldwinter.top/202208211431065.svg">

@@ -4,7 +4,7 @@
     "flashcardGoodText": "记得",
     "flashcardHardText": "较难",
     "flashcardTags": [
-      "#cards"
+      "#记忆闪卡"
     ],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": true,
@@ -21,10 +21,9 @@
     "multilineCardSeparator": "+++",
     "multilineReversedCardSeparator": "",
     "tagsToReview": [
-      "#review",
-      "#important",
-      "#习惯养成",
-      "#待复习回顾"
+      "#复习回顾/常青笔记",
+      "#复习回顾",
+      "#习惯养成"
     ],
     "noteFoldersToIgnore": [
       "🍀 花园导览",

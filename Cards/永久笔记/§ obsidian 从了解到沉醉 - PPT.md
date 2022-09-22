@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-21
 date modified: 2022-08-20
-tags: 目录型笔记
+tags: 目录笔记
 title: § obsidian 从了解到沉醉 - PPT
 ---
 - 演示：

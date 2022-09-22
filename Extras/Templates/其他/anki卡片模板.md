@@ -1,7 +1,6 @@
 ---
 date created: 2022-08-25
 date modified: 2022-08-25
-tags: cards
 title: anki卡片模板
 ---
 

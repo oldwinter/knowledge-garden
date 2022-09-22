@@ -9,7 +9,7 @@
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^-+,'\"!@#$%^&* 。，：？『",
+  "firstCharactersDisableSuggestions": ":/^-",
   "showMatchStrategy": false,
   "showComplementAutomatically": false,
   "showIndexingStatus": false,

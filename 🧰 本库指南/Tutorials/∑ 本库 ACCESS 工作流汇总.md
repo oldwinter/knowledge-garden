@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
 date modified: 2022-08-29
-tags: [索引型笔记, 待办/持续迭代]
+tags: [索引笔记, 待办/持续迭代]
 title: ∑ 本库 ACCESS 工作流汇总
 ---
 

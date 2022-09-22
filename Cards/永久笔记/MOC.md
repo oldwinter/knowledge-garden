@@ -30,3 +30,11 @@ MOC 和传统目录最大的不同，应该是它是我们根据自己的思维�
 		[[🤖obsidian]]  
 	obsidian 中如何践行卡片笔记写作法？  
 		[[工具和方法论]]
+		[[obsidian组织笔记的5个要素]]
+
+
+---
+## 参考文献
+
+
+[Nick Milo：如何在笔记之间形成有效的关联？ - 知乎](https://zhuanlan.zhihu.com/p/373862260?utm_id=0)

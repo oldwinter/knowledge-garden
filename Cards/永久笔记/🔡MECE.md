@@ -4,7 +4,7 @@ sr-interval: 100
 sr-ease: 310
 date created: 2022-07-12
 date modified: 2022-09-15
-tags: [待复习回顾, 习惯养成]
+tags: [复习回顾, 习惯养成]
 title: 🔡MECE
 ---
 

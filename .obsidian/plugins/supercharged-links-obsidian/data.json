@@ -17,7 +17,7 @@
     {
       "type": "tag",
       "name": "flashcards",
-      "value": "待复习回顾",
+      "value": "复习回顾",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "b19c-8ca5",
@@ -53,7 +53,7 @@
     {
       "type": "tag",
       "name": "flashcards",
-      "value": "索引型笔记",
+      "value": "索引笔记",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "7c4c-9ddb",
@@ -89,7 +89,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "目录型笔记",
+      "value": "目录笔记",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "2d72-a9bb",
@@ -113,7 +113,7 @@
     {
       "type": "tag",
       "name": "published",
-      "value": "教程",
+      "value": "本库教程",
       "matchCaseSensitive": false,
       "match": "exact",
       "uid": "17d0-6ee6",

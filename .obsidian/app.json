@@ -3,9 +3,7 @@
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Extras/Media",
-  "userIgnoreFilters": [
-    "Extras/"
-  ],
+  "userIgnoreFilters": null,
   "readableLineLength": true,
   "strictLineBreaks": true,
   "emacsyKeys": false,

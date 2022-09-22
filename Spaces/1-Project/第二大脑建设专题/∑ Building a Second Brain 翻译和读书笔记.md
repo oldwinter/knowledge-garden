@@ -1,7 +1,7 @@
 ---
 date created: 2022-07-01
 date modified: 2022-08-20
-tags: 索引型笔记
+tags: 索引笔记
 title: + Building a Second Brain 翻译和读书笔记
 ---
 

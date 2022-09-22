@@ -1,5 +1,5 @@
 {
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "enabledCssSnippets": [
     "多栏callout样式",
     "隐藏文件和文件夹",
@@ -10,8 +10,8 @@
     "supercharged-links-gen",
     "隐藏LICENSE文件和logseq文件夹"
   ],
-  "theme": "obsidian",
-  "baseFontSize": 14,
+  "theme": "system",
+  "baseFontSize": 16,
   "baseFontSizeAction": true,
   "translucency": false,
   "accentColor": "",
