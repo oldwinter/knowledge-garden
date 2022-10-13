@@ -1,9 +1,9 @@
 ---
-sr-due: [2023-04-10]
-sr-interval: 305
-sr-ease: 330
+sr-due: 2023-02-25
+sr-interval: 153
+sr-ease: 310
 date created: 2022-08-15
-date modified: 2022-08-20
+date modified: 2022-09-25
 tags: 复习回顾
 title: obsidian插件
 ---
@@ -14,6 +14,12 @@ title: obsidian插件
 .obsidian/community-plugins.json
 .obsidian/core-plugins.json
 ```
+
+## 插件idea
+
+- 定位卡顿问题的插件
+- 自动引用阿里云盘的文件
+- 插件idea：抓取b站和youtube收藏信息，自动新建页面
 
 ## 插件安装
 

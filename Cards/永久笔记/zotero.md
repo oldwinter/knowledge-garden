@@ -32,3 +32,8 @@ title: zotero
 - 自动根据 DOI 下载 pdf
 	- [Sci-Hub:](https://sci-hub.ru/)
 - 自动输出标准化格式的引文
+
+---
+## 参考文献
+
+[如何高效管理文献？ - 知乎](https://www.zhihu.com/question/26857521/answer/2662236762?utm_campaign=&utm_medium=social&utm_oi=627815471005831168&utm_psn=1550819489482289152&utm_source=cn.ticktick.task)

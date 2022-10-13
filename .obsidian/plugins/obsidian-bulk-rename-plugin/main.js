@@ -8550,24 +8550,45 @@ var buyMeACoffee = `
 
 // src/services/file.service.ts
 var import_obsidian3 = require("obsidian");
-var getFilesNamesInDirectory = (plugin) => {
-  const { fileNames } = plugin.settings;
-  return getFilesAsString(fileNames);
+
+// src/services/settings.service.ts
+var isViewTypeFolder = (settings) => {
+  return settings.viewType === "folder";
 };
-var getFilesAsString = (fileNames) => {
+var isViewTypeTags = (settings) => {
+  return settings.viewType === "tags";
+};
+var isViewTypeRegExp = (settings) => {
+  return settings.viewType === "regexp";
+};
+
+// src/constants/folders.ts
+var ROOT_FOLDER_NAME = "/";
+
+// src/services/file.service.ts
+var getFilesNamesInDirectory = (plugin) => {
+  return getFilesAsString(plugin.settings);
+};
+var getFilesAsString = (settings) => {
   let value = "";
+  const { fileNames, folderName } = settings;
+  const shouldPrependSlash = isViewTypeFolder(settings) && folderName === ROOT_FOLDER_NAME;
   fileNames.forEach((fileName, index) => {
     const isLast = index + 1 === fileNames.length;
+    const filePath = shouldPrependSlash ? "/" + fileName.path : fileName.path;
     if (isLast) {
-      return value += fileName.path;
+      return value += filePath;
     }
-    value += fileName.path + "\r\n";
+    value += filePath + "\r\n";
   });
   return value;
 };
 var getRenderedFileNamesReplaced = (plugin) => {
   const newFiles = selectFilenamesWithReplacedPath(plugin);
-  return getFilesAsString(newFiles);
+  return getFilesAsString({
+    ...plugin.settings,
+    fileNames: newFiles
+  });
 };
 var selectFilenamesWithReplacedPath = (plugin) => {
   const { fileNames } = plugin.settings;
@@ -8579,8 +8600,12 @@ var selectFilenamesWithReplacedPath = (plugin) => {
   });
 };
 var replaceFilePath = (plugin, file) => {
-  const { replacePattern, existingSymbol } = plugin.settings;
   const pathWithoutExtension = file.path.split(".").slice(0, -1).join(".");
+  const { replacePattern, existingSymbol } = plugin.settings;
+  if (isRootFilesSelected(plugin)) {
+    const newPath2 = replacePattern + pathWithoutExtension;
+    return `${newPath2}.${file.extension}`;
+  }
   const convertedToRegExpString = escapeRegExp(existingSymbol);
   const regExpSymbol = new RegExp(convertedToRegExpString, "g");
   const newPath = pathWithoutExtension == null ? void 0 : pathWithoutExtension.replace(regExpSymbol, replacePattern);
@@ -8597,19 +8622,36 @@ var renameFilesInObsidian = async (app, plugin) => {
     return;
   }
   new import_obsidian3.Notice("renaming has been started");
+  let success = true;
   for (const fileName of fileNames) {
-    await app.fileManager.renameFile(
-      fileName,
-      replaceFilePath(plugin, fileName)
-    );
+    try {
+      await app.fileManager.renameFile(
+        fileName,
+        replaceFilePath(plugin, fileName)
+      );
+    } catch (e) {
+      if (e.code === "ENOENT") {
+        new import_obsidian3.Notice("FILES NOT RENAMED!");
+        new import_obsidian3.Notice(
+          "WARNING: YOU MUST CREATE FOLDER BEFORE MOVING INTO IT",
+          7e3
+        );
+        success = false;
+        break;
+      }
+    }
   }
-  new import_obsidian3.Notice("successfully renamed all files");
+  success && new import_obsidian3.Notice("successfully renamed all files");
 };
 var reRegExpChar = /[\\^$.*+?()[\]{}]/g;
 var reHasRegExpChar = RegExp(reRegExpChar.source);
 function escapeRegExp(s) {
   return s && reHasRegExpChar.test(s) ? s.replace(reRegExpChar, "\\$&") : s;
 }
+var isRootFilesSelected = (plugin) => {
+  const { existingSymbol, folderName } = plugin.settings;
+  return existingSymbol === ROOT_FOLDER_NAME && folderName === ROOT_FOLDER_NAME && isViewTypeFolder(plugin.settings);
+};
 
 // src/components/PreviewElement.ts
 var createPreviewElement = (textContent = "=> => => =>") => {
@@ -8626,7 +8668,7 @@ var getObsidianFilesByFolderName = (app, plugin) => {
   const { folderName } = plugin.settings;
   const abstractFiles = app.vault.getAllLoadedFiles();
   const files = abstractFiles.filter(
-    (file) => file instanceof import_obsidian4.TFile && file.parent.name.includes(folderName)
+    (file) => file instanceof import_obsidian4.TFile && file.parent.path.includes(folderName)
   );
   const filesSortedByName = sortFilesByName(files);
   return filesSortedByName;
@@ -8781,15 +8823,6 @@ var DEFAULT_SETTINGS = {
   tags: [],
   viewType: "folder"
 };
-var isViewTypeFolder = ({ settings }) => {
-  return settings.viewType === "folder";
-};
-var isViewTypeTags = ({ settings }) => {
-  return settings.viewType === "tags";
-};
-var isViewTypeRegExp = ({ settings }) => {
-  return settings.viewType === "regexp";
-};
 var BulkRenamePlugin = class extends import_obsidian5.Plugin {
   async onload() {
     await this.loadSettings();
@@ -8854,7 +8887,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
   renderTabs() {
     new import_obsidian5.Setting(this.containerEl).setName("UI will be changed when you click those buttons").addButton((button) => {
       button.setButtonText("Search by folder");
-      if (isViewTypeFolder(this.plugin)) {
+      if (isViewTypeFolder(this.plugin.settings)) {
         button.setCta();
       }
       button.onClick(async () => {
@@ -8864,7 +8897,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
       });
     }).addButton((button) => {
       button.setButtonText("Search By Tags");
-      if (isViewTypeTags(this.plugin)) {
+      if (isViewTypeTags(this.plugin.settings)) {
         button.setCta();
       }
       button.onClick(async () => {
@@ -8874,7 +8907,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
       });
     }).addButton((button) => {
       button.setButtonText("Search by RegExp");
-      if (isViewTypeRegExp(this.plugin)) {
+      if (isViewTypeRegExp(this.plugin.settings)) {
         button.setCta();
       }
       button.onClick(async () => {
@@ -8885,7 +8918,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
     });
   }
   renderFileLocation() {
-    if (!isViewTypeFolder(this.plugin)) {
+    if (!isViewTypeFolder(this.plugin.settings)) {
       return;
     }
     new import_obsidian5.Setting(this.containerEl).setName("Folder location").setDesc("Find files within the folder").addSearch((cb) => {
@@ -8901,7 +8934,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
     });
   }
   renderTagNames() {
-    if (!isViewTypeTags(this.plugin)) {
+    if (!isViewTypeTags(this.plugin.settings)) {
       return;
     }
     new import_obsidian5.Setting(this.containerEl).setName("Tag names ").setDesc("all files with the tags will be found").addSearch((cb) => {
@@ -8924,7 +8957,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
     });
   }
   renderRegExpInput() {
-    if (!isViewTypeRegExp(this.plugin)) {
+    if (!isViewTypeRegExp(this.plugin.settings)) {
       return;
     }
     const desc = document.createDocumentFragment();
@@ -9041,11 +9074,11 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
     renderDonateButton(this.containerEl);
   }
   calculateFileNames() {
-    if (isViewTypeTags(this.plugin)) {
+    if (isViewTypeTags(this.plugin.settings)) {
       this.getFilesByTags();
       return;
     }
-    if (isViewTypeRegExp(this.plugin)) {
+    if (isViewTypeRegExp(this.plugin.settings)) {
       this.getFilesByRegExp();
       return;
     }

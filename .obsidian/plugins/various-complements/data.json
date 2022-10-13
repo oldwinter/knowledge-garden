@@ -42,7 +42,7 @@
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": false,
   "intelligentSuggestionPrioritization": {
-    "maxDaysToKeepHistory": 30,
+    "maxDaysToKeepHistory": 0,
     "maxNumberOfHistoryToKeep": 0
   },
   "showLogAboutPerformanceInConsole": false,
@@ -66,8 +66,8 @@
     "frontmatter": {
       "frontmatter": {
         "internalLink": {
-          "count": 5,
-          "lastUpdated": 1661777580287
+          "count": 6,
+          "lastUpdated": 1665058336023
         }
       }
     },
@@ -170,8 +170,8 @@
     "书籍": {
       "书籍": {
         "currentVault": {
-          "count": 1,
-          "lastUpdated": 1661391935922
+          "count": 2,
+          "lastUpdated": 1665318085222
         }
       }
     },
@@ -338,8 +338,8 @@
     "咖啡因": {
       "咖啡因": {
         "internalLink": {
-          "count": 1,
-          "lastUpdated": 1663402660453
+          "count": 2,
+          "lastUpdated": 1664633534953
         }
       }
     },
@@ -372,6 +372,70 @@
         "customDictionary": {
           "count": 2,
           "lastUpdated": 1663693249311
+        }
+      }
+    },
+    "HIIT": {
+      "HIIT": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663859036576
+        }
+      }
+    },
+    "牛磺酸": {
+      "牛磺酸": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1663932214562
+        }
+      }
+    },
+    "applies": {
+      "applies": {
+        "currentVault": {
+          "count": 2,
+          "lastUpdated": 1664362369035
+        }
+      }
+    },
+    "日常基础饮食": {
+      "日常基础饮食": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1664463084906
+        }
+      }
+    },
+    "基础代谢估算": {
+      "基础代谢估算": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1664463476197
+        }
+      }
+    },
+    "肌酸": {
+      "肌酸": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1664633493869
+        }
+      }
+    },
+    "BCAA": {
+      "BCAA": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1664721248632
+        }
+      }
+    },
+    "168轻断食": {
+      "168轻断食": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1665663572979
         }
       }
     }

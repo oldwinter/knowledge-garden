@@ -3,6 +3,7 @@ date created: 2022-09-04
 date modified: 2022-09-04
 title: EPOC
 ---
+x:: [[艾宾浩斯记忆曲线]]
 
 Excess post-exercise oxygen consumption
 

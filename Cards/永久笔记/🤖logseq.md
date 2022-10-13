@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: 🤖logseq
 ---
 
-gra- 可以和 obsidian 共同使用一个库，使用 2 者的基本语法即可。
+可以和 obsidian 共同使用一个库，使用 2 者的基本语法即可。
 
   现在有一个功能是 obsidian 不支持的，就是导出为 html，然后用一个静态服务器发布到 web 上。以及 logseq 服务自己部署。[https://github.com/logseq/publish](https://github.com/logseq/publish)
 

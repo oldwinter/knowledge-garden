@@ -34,6 +34,28 @@ If your plugin does not need CSS, delete this file.
 
 .janitor-file {
 	margin-left: 1em;
+	position: relative;
+}
+
+.janitor-file:hover {
+	background-color: var(--background-primary);
+}
+
+
+.janitor-file .openFileIcon {
+    right: 0px;
+	position: absolute;
+    /* cursor: pointer; */
+	visibility: hidden;
+}
+
+.janitor-file label {
+	width: 100%;
+	/* cursor: pointer; */
+}
+
+.janitor-file:hover .openFileIcon {
+	visibility: visible;
 }
 
 .janitor-file:focus {

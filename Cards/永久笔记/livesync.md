@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2022-09-22
 id: 7384af7a-8b51-4e01-b3ef-8fbe2c161c0a
 title: livesync
 ---
@@ -11,7 +11,7 @@ title: livesync
 
 除了官方的收费同步服务，目前社区的多端同步方案，均以使用 icloud，onedrive，坚果盘等云盘为主，缺点就是同步延时性较大，达到分钟级。甚至如果是安卓系统，还得多装一个非常耗电的 foldersync 服务。
 
-这几天 Remote-Save 的插件的讨论也比较多，除了云盘，还支持使用云服务商的对象存储服务的桶进行同步。但对象存储服务，很可能会产生过多的网络下载费用，导致最后一年要花几百块，费用不可控，不太划算。
+这几天 [[remotely save]]的插件的讨论也比较多，除了云盘，还支持使用云服务商的对象存储服务的桶进行同步。但对象存储服务，很可能会产生过多的网络下载费用，导致最后一年要花几百块，费用不可控，不太划算。[[2022-09-22]]更新：只要不是太多视频和图片，同步费用非常低，一个月可能就几毛钱。这个方案目前是对普通用户来说，效果最好，折腾最少的方案。
 
 其实有个最好用的插件，不仅能满足当前同步方案的基本效果，还能实现实时同步的效果，亲测完美，延时小于 2s。官方的图如下：
 
@@ -74,11 +74,9 @@ title: livesync
 - 若要使用插件同步功能，则需要在电脑端按下图设置，将数据库加密存储
 - ![](https://img2.oldwinter.top/livesync_image_4.png)
 - 接着打开同步插件的功能即可
-- ![](https://img2.oldwinter.top/Extras/Media/202204041617016.png)
+- ![](https://img2.oldwinter.top/202204041617016.png)
 - ![](https://img2.oldwinter.top/Extras/Media/202204041638512.png)
 - 手机端同理，执行上面 2 步。不同之处如下：
 	- 手机端选择 apply and receive，而不是 apply and send
 	- 手机端的设备和仓库名，取一个和电脑端能区分开的名字即可。
 	- 手机端在第 2 步打开插件同步窗口后，选择性地从电脑端同步手机必要的插件和配置即可。
-
-[notion上的发布链接](https://oldwinter.notion.site/Obsidian-LiveSync-5ec825bd678f4f42ac9d19f52a4acef5)

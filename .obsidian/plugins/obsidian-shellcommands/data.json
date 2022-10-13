@@ -1,5 +1,5 @@
 {
-  "settings_version": "0.15.0",
+  "settings_version": "0.16.0",
   "debug": false,
   "obsidian_command_palette_prefix": "Execute: ",
   "preview_variables_in_command_palette": true,
@@ -9,6 +9,7 @@
   "environment_variable_path_augmentations": {},
   "error_message_duration": 20,
   "notification_message_duration": 10,
+  "execution_notification_mode": "disabled",
   "output_channel_clipboard_also_outputs_to_notification": true,
   "enable_events": true,
   "approve_modals_by_pressing_enter_key": true,
@@ -32,7 +33,11 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {},
-      "id": "0"
+      "id": "0",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -52,7 +57,11 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {},
-      "id": "1"
+      "id": "1",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -72,7 +81,11 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {},
-      "id": "2"
+      "id": "2",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -92,12 +105,16 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {},
-      "id": "3"
+      "id": "3",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     },
     {
       "id": "vnphwuno3u",
       "platform_specific_commands": {
-        "default": "sed -i \".bak\" '1a\\\ntags: review \n' {{file_path:absolute}}"
+        "default": "sed -i \"\" '1a\\\ntags: review \n' {{file_path:absolute}}"
       },
       "shells": {},
       "alias": "快速添加tags: review",
@@ -112,7 +129,11 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {}
+      "variable_default_values": {},
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     },
     {
       "id": "fqidjftr47",
@@ -132,7 +153,11 @@
       "events": {},
       "command_palette_availability": "enabled",
       "preactions": [],
-      "variable_default_values": {}
+      "variable_default_values": {},
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      }
     }
   ],
   "prompts": [
@@ -145,5 +170,6 @@
       "execute_button_text": "Execute"
     }
   ],
-  "custom_variables": []
+  "custom_variables": [],
+  "output_wrappers": []
 }

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "445af226661ab9e2",
+        "id": "b3e37fb697807a9f",
         "type": "tabs",
         "children": [
           {
-            "id": "c818b2b3bdae691c",
+            "id": "d8b6e1ba540abba4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Calendar/Daily notes/2022-10-13.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,20 +21,41 @@
             }
           },
           {
-            "id": "ee4cdcf4169d7150",
+            "id": "a3b3fc66af0a5828",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Calendar/Daily notes/2022-10-13.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "4cce92a4ca08b9d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73e3dd1ff3b0e5f9",
+            "type": "leaf",
+            "state": {
+              "type": "repeating-notes-due-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -64,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#对话",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HOMEPAGE.md"
+                "file": "README.md"
               }
             }
           },
@@ -107,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -154,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,34 +186,25 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 209.50247192382812
+    "width": 206.5
   },
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
     "children": [
       {
-        "id": "7e4aad8a243418e5",
+        "id": "bcb314fa61d85e57",
         "type": "tabs",
         "children": [
           {
-            "id": "3dc25d52ff9b3cf3",
+            "id": "1b24f298b0fc332a",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "6f830cfd05a50f08",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
               "state": {}
             }
           }
@@ -200,19 +212,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 263.5,
+    "collapsed": true
   },
-  "active": "ee4cdcf4169d7150",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "4cce92a4ca08b9d7",
   "lastOpenFiles": [
-    "AboutTheGarden.md",
-    "HOMEPAGE.md",
-    "Sources/Books/读书笔记/📚思考·快与慢.md",
-    "Cards/永久笔记/模板与套路.md",
-    "Sources/Articles/Hypothesis/Ω 约束条件.md",
-    "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
-    "Calendar/Daily notes/2022-09-22.md",
-    "README.md",
-    "🧰 本库指南/🆕 本库更新日志.md",
-    "Cards/永久笔记/MOC.md"
+    "Calendar/Daily notes/2022-10-13.md",
+    "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md",
+    "Spaces/2-Area/运动与健康/轻断食.md",
+    "Spaces/2-Area/运动与健康/合理断食不会过分掉肌肉.md",
+    "Spaces/2-Area/运动与健康/自然健身与科技健身.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/大小肌群划分.md",
+    "Spaces/2-Area/运动与健康/多关节运动和单关节运动.md",
+    "Spaces/2-Area/运动与健康/自然健身增加维度在于做组力量提升.md",
+    "README.md"
   ]
 }

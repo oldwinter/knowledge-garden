@@ -7,7 +7,7 @@ title: 如果要我安利obsidian给别人，我会怎么做
 ## 如果要我安利 obsidian 给别人，我会怎么做
 
 - 如果是纯文字
-	- ![[obsidian入门#obsidian的使用快感]]
+	- ![[obsidian入门#obsidian 的使用快感]]
 	- 甩一个看起来最屌的视频：[也许是B站最好的Obsidian新手教程！爆肝30天，一站式入门双向链接笔记软件_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18a411r7mt?spm_id_from=333.337.search-card.all.click)
 	- 甩一篇看起来最入门的文章：[Obsidian是什么以及它能用来做什么 - 少数派 (sspai.com)](https://sspai.com/post/67399)
 - 如果有演示的机会，或者做视频表达

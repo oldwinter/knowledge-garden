@@ -1,0 +1,56 @@
+.repeat-message {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.repeat-buttons {
+  text-align: center;
+  /* Space buttons same distance from top as the content is from the buttons. */
+  margin-top: 24px;
+}
+
+.repeat-buttons > button {
+  margin-top: 15px;
+}
+
+/* Make buttons legible on mobile. */
+@media (max-width: 450px) {
+  .repeat-buttons > button {
+    width: 100%;
+  }
+}
+
+.repeat-embedded_note {
+  padding: 15px 30px;
+}
+
+.repeat-markdown_embed_title {
+  text-overflow: inherit;
+  white-space: normal;
+}
+
+.repeat-setup_modal {
+  margin-top: 24px;
+}
+
+/* Transferred from Obsidian's input[] styles. */
+.repeat-date_picker {
+  background: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+  font-family: inherit;
+  padding: 5px 14px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  height: 39px;  /* Deduced experimentally. */
+}
+.repeat-date_picker:hover {
+  background-color: var(--background-modifier-form-field-highlighted);
+}
+.repeat-date_picker:focus {
+  border-color: var(--interactive-accent);
+}
+.repeat-date_picker:::placeholder {
+  color: var(--text-faint);
+}

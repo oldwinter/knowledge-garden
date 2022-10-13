@@ -29,23 +29,25 @@
   "statusBar": [],
   "pageHeader": [
     {
-      "id": "file-explorer:reveal-active-file",
-      "icon": "navigate-glyph",
-      "name": "文件列表: 在文件列表中显示当前文件",
-      "mode": "any"
-    },
-    {
       "id": "editor:toggle-source",
       "icon": "code-glyph",
       "name": "切换实时阅览/源码模式",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "navigate-glyph",
+      "name": "文件列表: 在文件列表中显示当前文件",
       "mode": "any"
     }
   ],
   "macros": [],
   "hide": {
     "statusbar": [
-      "backlink",
-      "word-count"
+      "janitor",
+      "obsidian-keyboard-analyzer",
+      "word-count",
+      "backlink"
     ],
     "leftRibbon": [
       "复习卡片",

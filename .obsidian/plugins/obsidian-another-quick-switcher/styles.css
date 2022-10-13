@@ -211,6 +211,10 @@
     margin-right: 5px;
 }
 
+.another-quick-switcher__item__description__link__dimmed {
+    opacity: 0.5;
+}
+
 .another-quick-switcher__item__description__header {
     display: inline-flex;
     align-items: center;
@@ -234,6 +238,11 @@
     width: 300px;
 }
 
+.another-quick-switcher__settings__danger .setting-item-name {
+    color: red;
+    font-weight: bold;
+}
+
 .another-quick-switcher__settings__warning {
     color: darkorange;
     text-align: right;
@@ -241,6 +250,16 @@
 
 .another-quick-switcher__settings__nested {
     padding-left: 30px;
+}
+
+.another-quick-switcher__settings__dialog-hotkey {
+    padding: 1rem 0;
+    /*noinspection CssUnresolvedCustomProperty*/
+    border-top: 1px solid var(--background-modifier-border)
+}
+
+.another-quick-switcher__settings__dialog-hotkey-item {
+    padding-left: 2rem;
 }
 
 .another-quick-switcher__settings__search-command {
@@ -286,18 +305,23 @@
    height: 240px;
 }
 
-.another-quick-switcher__create_button {
-    /*noinspection CssUnresolvedCustomProperty*/
-    background-color: var(--interactive-accent);
-    /*noinspection CssUnresolvedCustomProperty*/
-    color: var(--text-on-accent);
-    width: 150px !important;
-    margin: 0 calc((100% - 150px) / 2) !important;
+.another-quick-switcher__command_buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px calc((100% - 300px) / 2) !important;
 }
 
-.another-quick-switcher__create_button:hover {
+.another-quick-switcher__command_button {
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--interactive-accent);
+    width: 150px !important;
+}
+
+.another-quick-switcher__command_button:hover {
     /*noinspection CssUnresolvedCustomProperty*/
     background-color: var(--interactive-accent-hover);
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--text-on-accent);
 }
 
 

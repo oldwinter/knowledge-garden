@@ -1,7 +1,7 @@
 ---
-sr-due: 2022-10-04
-sr-interval: 51
-sr-ease: 290
+sr-due: 2023-05-03
+sr-interval: 210
+sr-ease: 310
 date created: 2022-07-22
 date modified: 2022-08-25
 tags: 复习回顾

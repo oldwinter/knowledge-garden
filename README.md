@@ -14,7 +14,7 @@ title: README
 <p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
 
 > [!TIP] 重大更新💡  
-> 迎接全新的obsidian 0.16版本，本库也正式发布v1.0.0版本，请到release中下载。
+> 迎接全新的obsidian 1.0版本，本库也正式发布v1.0版本，请到release中下载。
 
 ## 这是什么
 

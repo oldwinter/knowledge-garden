@@ -12,7 +12,7 @@
   ],
   "theme": "system",
   "baseFontSize": 16,
-  "baseFontSizeAction": true,
+  "baseFontSizeAction": false,
   "translucency": false,
   "accentColor": "",
   "showViewHeader": true,

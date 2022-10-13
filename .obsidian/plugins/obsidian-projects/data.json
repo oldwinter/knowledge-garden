@@ -1,0 +1,63 @@
+{
+  "projects": [
+    {
+      "id": "5b2e982b-3384-43c2-94d8-4ac66a05d8d5",
+      "name": "本库指南",
+      "path": "🧰 本库指南",
+      "recursive": true,
+      "defaultName": "",
+      "templates": [],
+      "views": [
+        {
+          "id": "69c79ea8-8601-4906-b81a-69bcccc14d77",
+          "name": "Table",
+          "type": "table",
+          "config": {
+            "sortField": "date created",
+            "sortAsc": true,
+            "fieldConfig": {
+              "title": {
+                "hide": true
+              }
+            }
+          }
+        },
+        {
+          "id": "49aaddd6-5e6e-4f0d-8149-bc9b14503403",
+          "name": "Board",
+          "type": "board",
+          "config": {}
+        },
+        {
+          "id": "41c93621-b188-4f7f-8b62-998b5d006fe1",
+          "name": "Calendar",
+          "type": "calendar",
+          "config": {
+            "interval": "month",
+            "dateField": "date modified"
+          }
+        }
+      ],
+      "dataview": false
+    },
+    {
+      "id": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
+      "name": "运动与健康",
+      "path": "Spaces/2-Area/运动与健康",
+      "recursive": false,
+      "defaultName": "",
+      "templates": [],
+      "views": [
+        {
+          "id": "275d5593-0fdb-4993-9f99-10b2a74ae332",
+          "name": "Table",
+          "type": "table",
+          "config": {}
+        }
+      ]
+    }
+  ],
+  "version": 1,
+  "lastProjectId": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
+  "lastViewId": "275d5593-0fdb-4993-9f99-10b2a74ae332"
+}
