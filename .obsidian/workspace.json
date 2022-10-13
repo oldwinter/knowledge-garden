@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "🧰 本库指南/🆕 本库更新日志.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "🧰 本库指南/🆕 本库更新日志.md"
               }
             }
           },
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "🧰 本库指南/🆕 本库更新日志.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "🧰 本库指南/🆕 本库更新日志.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "🧰 本库指南/🆕 本库更新日志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -220,6 +220,7 @@
   },
   "active": "4cce92a4ca08b9d7",
   "lastOpenFiles": [
+    "README.md",
     "Calendar/Daily notes/2022-10-13.md",
     "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md",
     "Spaces/2-Area/运动与健康/轻断食.md",
@@ -228,7 +229,6 @@
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "Spaces/2-Area/运动与健康/大小肌群划分.md",
     "Spaces/2-Area/运动与健康/多关节运动和单关节运动.md",
-    "Spaces/2-Area/运动与健康/自然健身增加维度在于做组力量提升.md",
-    "README.md"
+    "Spaces/2-Area/运动与健康/自然健身增加维度在于做组力量提升.md"
   ]
 }
