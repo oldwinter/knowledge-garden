@@ -37,12 +37,25 @@
             "id": "cc9a9c3614530e56",
             "type": "leaf",
             "state": {
-              "type": "obsidian-projects",
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b55a7d66960f65ff",
+            "type": "leaf",
+            "state": {
+              "type": "repeating-notes-due-view",
               "state": {}
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -104,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -113,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,6 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,6 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -200,12 +218,12 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cc9a9c3614530e56",
+  "active": "a4d1994dfc9f1870",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2022-10-14.md",
-    "README.md",
-    "HOMEPAGE.md",
     "AboutTheGarden.md",
+    "HOMEPAGE.md",
+    "README.md",
+    "Calendar/Daily notes/2022-10-14.md",
     "Calendar/Daily notes/2022-10-13.md",
     "🧰 本库指南/🆕 本库更新日志.md",
     "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md",
