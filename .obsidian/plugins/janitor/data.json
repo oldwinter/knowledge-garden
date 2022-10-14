@@ -1,6 +1,6 @@
 {
   "runAtStartup": false,
-  "addRibbonIcon": false,
+  "addRibbonIcon": true,
   "promptUser": true,
   "promptForBigFiles": true,
   "attachmentsExtensions": ".jpg|.jpeg|.png|.gif|.svg|.pdf",
@@ -11,5 +11,7 @@
   "processOrphans": true,
   "processEmpty": true,
   "processExpired": true,
-  "processBig": true
+  "processBig": true,
+  "honorObsidianExcludedFiles": true,
+  "excludedFilesFilters": []
 }

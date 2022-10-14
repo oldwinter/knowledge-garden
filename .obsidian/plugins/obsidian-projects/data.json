@@ -53,11 +53,26 @@
           "name": "Table",
           "type": "table",
           "config": {}
+        },
+        {
+          "id": "ba8d510a-4132-4144-b78e-06828bd9449c",
+          "name": "Board",
+          "type": "board",
+          "config": {}
+        },
+        {
+          "id": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d",
+          "name": "Calendar",
+          "type": "calendar",
+          "config": {
+            "dateField": "date created",
+            "interval": "month"
+          }
         }
       ]
     }
   ],
   "version": 1,
   "lastProjectId": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
-  "lastViewId": "275d5593-0fdb-4993-9f99-10b2a74ae332"
+  "lastViewId": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d"
 }

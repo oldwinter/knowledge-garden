@@ -36,5 +36,7 @@
   "obsidian-excalidraw-plugin",
   "obsidian-keyboard-analyzer",
   "cm-chs-patch",
-  "obsidian-repeat-plugin"
+  "obsidian-repeat-plugin",
+  "obsidian-stille",
+  "keyboard-analyzer"
 ]

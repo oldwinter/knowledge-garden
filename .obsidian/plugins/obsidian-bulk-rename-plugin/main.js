@@ -8482,7 +8482,7 @@ var FolderSuggest = class extends TextInputSuggest {
 
 // src/components/DonateButton.ts
 var renderDonateButton = (containerEl) => {
-  containerEl.createEl("h3", { text: "Support development" });
+  containerEl.createEl("h2", { text: "Support development" });
   const donateText = containerEl.createEl("p");
   donateText.appendChild(
     createEl("span", {
@@ -8723,7 +8723,8 @@ var renderPreviewFiles = (setting, plugin, state) => {
     text.setValue(value);
     const previewLabel = createPreviewElement();
     text.inputEl.insertAdjacentElement("afterend", previewLabel);
-    text.inputEl.addClass("templater_cmd");
+    text.inputEl.addClass("bulk_preview_textarea");
+    text.inputEl.wrap = "soft";
   }).addTextArea((text) => {
     text.setPlaceholder(
       "How filenames will looks like after replacement(click preview first)"
@@ -8732,7 +8733,8 @@ var renderPreviewFiles = (setting, plugin, state) => {
     replacedPreviewTextArea = text.inputEl;
     const value = getRenderedFileNamesReplaced(plugin);
     text.setValue(value);
-    text.inputEl.addClass("templater_cmd");
+    text.inputEl.addClass("bulk_preview_textarea");
+    text.inputEl.wrap = "soft";
   }).then((setting2) => {
     syncScrolls(existingFilesTextArea, replacedPreviewTextArea, state);
   });
@@ -8868,7 +8870,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Bulk Rename - Settings" });
+    containerEl.createEl("h1", { text: "Bulk Rename - Settings" });
     containerEl.addEventListener("keyup", (event) => {
       if (event.key !== "Enter") {
         return;
@@ -8885,8 +8887,8 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
     this.renderSupportDevelopment();
   }
   renderTabs() {
-    new import_obsidian5.Setting(this.containerEl).setName("UI will be changed when you click those buttons").addButton((button) => {
-      button.setButtonText("Search by folder");
+    new import_obsidian5.Setting(this.containerEl).setName("Search by: ").addButton((button) => {
+      button.setButtonText("Folder");
       if (isViewTypeFolder(this.plugin.settings)) {
         button.setCta();
       }
@@ -8896,7 +8898,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
         this.display();
       });
     }).addButton((button) => {
-      button.setButtonText("Search By Tags");
+      button.setButtonText("Tags");
       if (isViewTypeTags(this.plugin.settings)) {
         button.setCta();
       }
@@ -8906,7 +8908,7 @@ var BulkRenameSettingsTab = class extends import_obsidian5.PluginSettingTab {
         this.display();
       });
     }).addButton((button) => {
-      button.setButtonText("Search by RegExp");
+      button.setButtonText("RegExp");
       if (isViewTypeRegExp(this.plugin.settings)) {
         button.setCta();
       }

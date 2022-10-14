@@ -85,14 +85,14 @@ var require_lib = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     require("obsidian");
-    var getAPI2 = (app3) => {
+    var getAPI2 = (app2) => {
       var _a;
-      if (app3)
-        return (_a = app3.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
+      if (app2)
+        return (_a = app2.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
       else
         return window.DataviewAPI;
     };
-    var isPluginEnabled3 = (app3) => app3.plugins.enabledPlugins.has("dataview");
+    var isPluginEnabled3 = (app2) => app2.plugins.enabledPlugins.has("dataview");
     exports.getAPI = getAPI2;
     exports.isPluginEnabled = isPluginEnabled3;
   }
@@ -6174,7 +6174,7 @@ var require_internal = __commonJS({
       }
       component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
     }
-    function init3(component, options, instance89, create_fragment89, not_equal2, props, append_styles3, dirty = [-1]) {
+    function init3(component, options, instance88, create_fragment88, not_equal2, props, append_styles3, dirty = [-1]) {
       const parent_component = exports.current_component;
       set_current_component2(component);
       const $$ = component.$$ = {
@@ -6197,7 +6197,7 @@ var require_internal = __commonJS({
       };
       append_styles3 && append_styles3($$.root);
       let ready = false;
-      $$.ctx = instance89 ? instance89(component, options.props || {}, (i2, ret, ...rest) => {
+      $$.ctx = instance88 ? instance88(component, options.props || {}, (i2, ret, ...rest) => {
         const value = rest.length ? rest[0] : ret;
         if ($$.ctx && not_equal2($$.ctx[i2], $$.ctx[i2] = value)) {
           if (!$$.skip_bound && $$.bound[i2])
@@ -6210,7 +6210,7 @@ var require_internal = __commonJS({
       $$.update();
       ready = true;
       run_all2($$.before_update);
-      $$.fragment = create_fragment89 ? create_fragment89($$.ctx) : false;
+      $$.fragment = create_fragment88 ? create_fragment88($$.ctx) : false;
       if (options.target) {
         if (options.hydrate) {
           start_hydrating2();
@@ -7420,7 +7420,7 @@ function make_dirty(component, i2) {
   }
   component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
 }
-function init(component, options, instance89, create_fragment89, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance88, create_fragment88, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -7443,7 +7443,7 @@ function init(component, options, instance89, create_fragment89, not_equal, prop
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance89 ? instance89(component, options.props || {}, (i2, ret, ...rest) => {
+  $$.ctx = instance88 ? instance88(component, options.props || {}, (i2, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i2], $$.ctx[i2] = value)) {
       if (!$$.skip_bound && $$.bound[i2])
@@ -7456,7 +7456,7 @@ function init(component, options, instance89, create_fragment89, not_equal, prop
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment89 ? create_fragment89($$.ctx) : false;
+  $$.fragment = create_fragment88 ? create_fragment88($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -7627,14 +7627,14 @@ function derived(stores, fn3, initial_value) {
 }
 
 // src/main.ts
-var import_obsidian43 = __toModule(require("obsidian"));
+var import_obsidian44 = __toModule(require("obsidian"));
 var import_obsidian_dataview4 = __toModule(require_lib());
 var import_dayjs7 = __toModule(require_dayjs_min());
 var import_isoWeek = __toModule(require_isoWeek());
 var import_localizedFormat = __toModule(require_localizedFormat());
 
 // src/view.ts
-var import_obsidian40 = __toModule(require("obsidian"));
+var import_obsidian41 = __toModule(require("obsidian"));
 
 // node_modules/tslib/modules/index.js
 var import_tslib = __toModule(require_tslib());
@@ -7987,9 +7987,10 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(9, inputRef);
   }
   const focus_handler = () => $$invalidate(1, open = true);
-  const blur_handler = () => {
+  const blur_handler = (event) => {
     $$invalidate(1, open = false);
     dispatch("change", value);
+    dispatch("blur", event);
   };
   const input_handler = () => $$invalidate(1, open = true);
   const keydown_handler = (event) => {
@@ -7999,18 +8000,16 @@ function instance($$self, $$props, $$invalidate) {
         case "ArrowUp":
           const prev = selected - 1;
           $$invalidate(8, selected = prev < 0 ? filteredOptions.length - 1 : prev);
-          event.preventDefault();
+          event.stopPropagation();
           break;
         case "ArrowDown":
           const next = selected + 1;
           $$invalidate(8, selected = next > filteredOptions.length - 1 ? 0 : next);
-          event.preventDefault();
+          event.stopPropagation();
           break;
         case "Enter":
           $$invalidate(0, value = (_b = (_a = filteredOptions[selected]) == null ? void 0 : _a.label) != null ? _b : value);
           $$invalidate(7, willClose = true);
-          dispatch("change", value);
-          event.preventDefault();
           break;
       }
     }
@@ -8049,10 +8048,6 @@ function instance($$self, $$props, $$invalidate) {
     if ($$self.$$.dirty & 12289) {
       $:
         $$invalidate(10, filteredOptions = options.filter((option) => !value || option.label.toLocaleLowerCase().contains(value.toLocaleLowerCase())).slice(0, Math.min(maxItems, options.length)));
-    }
-    if ($$self.$$.dirty & 1) {
-      $:
-        dispatch("change", value);
     }
     if ($$self.$$.dirty & 128) {
       $:
@@ -8142,6 +8137,7 @@ function create_fragment2(ctx) {
   binding_callbacks.push(() => bind(autocomplete, "value", autocomplete_value_binding));
   binding_callbacks.push(() => bind(autocomplete, "options", autocomplete_options_binding));
   autocomplete.$on("change", ctx[12]);
+  autocomplete.$on("blur", ctx[13]);
   return {
     c() {
       create_component(autocomplete.$$.fragment);
@@ -8211,6 +8207,9 @@ function instance2($$self, $$props, $$invalidate) {
   function change_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function blur_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
       $$invalidate(0, value = $$props2.value);
@@ -8253,7 +8252,8 @@ function instance2($$self, $$props, $$invalidate) {
     getDescription,
     autocomplete_value_binding,
     autocomplete_options_binding,
-    change_handler
+    change_handler,
+    blur_handler
   ];
 }
 var FileAutocomplete = class extends SvelteComponent {
@@ -9925,26 +9925,26 @@ var passive = {
   passive: true
 };
 function effect3(_ref) {
-  var state = _ref.state, instance89 = _ref.instance, options = _ref.options;
+  var state = _ref.state, instance88 = _ref.instance, options = _ref.options;
   var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
     scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance89.update, passive);
+      scrollParent.addEventListener("scroll", instance88.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance89.update, passive);
+    window2.addEventListener("resize", instance88.update, passive);
   }
   return function() {
     if (scroll) {
       scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance89.update, passive);
+        scrollParent.removeEventListener("scroll", instance88.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance89.update, passive);
+      window2.removeEventListener("resize", instance88.update, passive);
     }
   };
 }
@@ -10826,7 +10826,7 @@ function popperGenerator(generatorOptions) {
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
-    var instance89 = {
+    var instance88 = {
       state,
       setOptions: function setOptions(setOptionsAction) {
         var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
@@ -10863,7 +10863,7 @@ function popperGenerator(generatorOptions) {
           }
         }
         runModifierEffects();
-        return instance89.update();
+        return instance88.update();
       },
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
@@ -10905,14 +10905,14 @@ function popperGenerator(generatorOptions) {
               state,
               options: _options,
               name,
-              instance: instance89
+              instance: instance88
             }) || state;
           }
         }
       },
       update: debounce(function() {
         return new Promise(function(resolve) {
-          instance89.forceUpdate();
+          instance88.forceUpdate();
           resolve(state);
         });
       }),
@@ -10925,9 +10925,9 @@ function popperGenerator(generatorOptions) {
       if (true) {
         console.error(INVALID_ELEMENT_ERROR);
       }
-      return instance89;
+      return instance88;
     }
-    instance89.setOptions(options).then(function(state2) {
+    instance88.setOptions(options).then(function(state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
@@ -10939,7 +10939,7 @@ function popperGenerator(generatorOptions) {
           var cleanupFn = effect4({
             state,
             name,
-            instance: instance89,
+            instance: instance88,
             options: options2
           });
           var noopFn = function noopFn2() {
@@ -10954,7 +10954,7 @@ function popperGenerator(generatorOptions) {
       });
       effectCleanupFns = [];
     }
-    return instance89;
+    return instance88;
   };
 }
 
@@ -12728,7 +12728,7 @@ var TextArea_default = TextArea;
 
 // ../obsidian-svelte/src/components/Input/Input.svelte
 function add_css12(target) {
-  append_styles(target, "svelte-r7ifv5", ".embed.svelte-r7ifv5{border:none;background:none;font-size:inherit;padding:0}.embed.svelte-r7ifv5:focus{box-shadow:none}.error.svelte-r7ifv5{border-color:var(--background-modifier-error)}.error.svelte-r7ifv5:hover{border-color:var(--background-modifier-error-hover)}.error.svelte-r7ifv5:focus{box-shadow:0 0 0 2px var(--background-modifier-error);border-color:var(--background-modifier-error)}small.svelte-r7ifv5{margin-top:var(--size-4-1);font-size:var(--font-ui-smaller);color:var(--text-muted);display:block}.errorText.svelte-r7ifv5{color:var(--text-error)}");
+  append_styles(target, "svelte-1ienphw", ".embed.svelte-1ienphw{all:unset;background-color:var(--background-primary);box-sizing:border-box;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal)}.embed.svelte-1ienphw:focus{box-shadow:none}.error.svelte-1ienphw{border-color:var(--background-modifier-error)}.error.svelte-1ienphw:hover{border-color:var(--background-modifier-error-hover)}.error.svelte-1ienphw:focus{box-shadow:0 0 0 2px var(--background-modifier-error);border-color:var(--background-modifier-error)}small.svelte-1ienphw{margin-top:var(--size-4-1);font-size:var(--font-ui-smaller);color:var(--text-muted);display:block}.errorText.svelte-1ienphw{color:var(--text-error)}");
 }
 function create_if_block5(ctx) {
   let small;
@@ -12737,7 +12737,7 @@ function create_if_block5(ctx) {
     c() {
       small = element("small");
       t3 = text(ctx[8]);
-      attr(small, "class", "svelte-r7ifv5");
+      attr(small, "class", "svelte-1ienphw");
       toggle_class(small, "errorText", ctx[6]);
     },
     m(target, anchor) {
@@ -12778,7 +12778,7 @@ function create_fragment30(ctx) {
       attr(input, "placeholder", ctx[4]);
       input.readOnly = ctx[3];
       attr(input, "style", input_style_value = `width: ${ctx[5]}`);
-      attr(input, "class", "svelte-r7ifv5");
+      attr(input, "class", "svelte-1ienphw");
       toggle_class(input, "error", ctx[6]);
       toggle_class(input, "embed", ctx[7]);
       attr(div, "style", div_style_value = `width: ${ctx[5]}`);
@@ -14000,7 +14000,7 @@ function migrate(v0) {
 }
 
 // src/lib/stores/obsidian.ts
-var app2 = writable();
+var app = writable();
 var view = writable();
 var plugin = writable();
 
@@ -14075,8 +14075,8 @@ function _typeof(obj) {
 }
 
 // ../node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-function _classCallCheck(instance89, Constructor) {
-  if (!(instance89 instanceof Constructor)) {
+function _classCallCheck(instance88, Constructor) {
+  if (!(instance88 instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
@@ -17403,7 +17403,7 @@ function uniquify(name, exists2) {
 }
 function nextUniqueFileName(path3, name) {
   return uniquify(name, (name2) => {
-    return get_store_value(app2).vault.getAbstractFileByPath((0, import_obsidian2.normalizePath)(path3 + "/" + name2 + ".md")) instanceof import_obsidian2.TFile;
+    return get_store_value(app).vault.getAbstractFileByPath((0, import_obsidian2.normalizePath)(path3 + "/" + name2 + ".md")) instanceof import_obsidian2.TFile;
   });
 }
 function nextUniqueProjectName(projects, name) {
@@ -17419,8 +17419,8 @@ function nextUniqueViewName(views, name) {
 
 // src/lib/api.ts
 var DataApi = class {
-  constructor(app3) {
-    this.app = app3;
+  constructor(app2) {
+    this.app = app2;
   }
   updateRecord(fields, record) {
     return __async(this, null, function* () {
@@ -17553,7 +17553,7 @@ function createDataRecord(name, project, values) {
 }
 
 // src/lib/stores/api.ts
-var api = derived(app2, ($app) => new DataApi($app));
+var api = derived(app, ($app) => new DataApi($app));
 
 // src/lib/stores/dataframe.ts
 var dataSource = writable();
@@ -17654,7 +17654,7 @@ var import_moment2 = __toModule(require_moment());
 
 // src/lib/stores/capabilities.ts
 var import_obsidian_dataview = __toModule(require_lib());
-var capabilities = derived(app2, ($app) => {
+var capabilities = derived(app, ($app) => {
   return {
     dataview: (0, import_obsidian_dataview.isPluginEnabled)($app)
   };
@@ -17666,9 +17666,9 @@ var import_os = __toModule(require("os"));
 function isTFile(value) {
   return value instanceof import_obsidian7.TFile;
 }
-function filesFromRecords(app3, records) {
+function filesFromRecords(app2, records) {
   return records.map((record) => record.id).map((path3) => {
-    return app3.vault.getAbstractFileByPath(path3);
+    return app2.vault.getAbstractFileByPath(path3);
   }).filter(isTFile);
 }
 function getFilesInFolder(folder) {
@@ -17887,7 +17887,7 @@ function create_fragment34(ctx) {
 var func = (file) => file.path;
 function instance34($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(2, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(2, $app = $$value));
   let { paths } = $$props;
   let { onPathsChange } = $$props;
   const change_handler = (i2, { detail: value }) => {
@@ -18905,7 +18905,7 @@ function instance35($$self, $$props, $$invalidate) {
   component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
   component_subscribe($$self, settings, ($$value) => $$invalidate(11, $settings = $$value));
   component_subscribe($$self, capabilities, ($$value) => $$invalidate(7, $capabilities = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(8, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
   var _a;
   let { title } = $$props;
   let { cta } = $$props;
@@ -19001,8 +19001,8 @@ var CreateProject_default = CreateProject;
 
 // src/modals/create-project-modal.ts
 var CreateProjectModal = class extends import_obsidian12.Modal {
-  constructor(app3, title, cta, onSave, defaults) {
-    super(app3);
+  constructor(app2, title, cta, onSave, defaults) {
+    super(app2);
     this.title = title;
     this.cta = cta;
     this.onSave = onSave;
@@ -19567,8 +19567,8 @@ var AddView_default = AddView;
 
 // src/modals/add-view-modal.ts
 var AddViewModal = class extends import_obsidian13.Modal {
-  constructor(app3, project, onSave) {
-    super(app3);
+  constructor(app2, project, onSave) {
+    super(app2);
     this.project = project;
     this.onSave = onSave;
   }
@@ -19915,8 +19915,8 @@ var ConfirmDialog_default = ConfirmDialog;
 
 // src/modals/confirm-dialog.ts
 var ConfirmDialogModal = class extends import_obsidian14.Modal {
-  constructor(app3, title, message, cta, onConfirm) {
-    super(app3);
+  constructor(app2, title, message, cta, onConfirm) {
+    super(app2);
     this.title = title;
     this.message = message;
     this.cta = cta;
@@ -20517,7 +20517,7 @@ function instance38($$self, $$props, $$invalidate) {
   let $app;
   let $settings;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(5, $i18n = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(11, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(11, $app = $$value));
   component_subscribe($$self, settings, ($$value) => $$invalidate(6, $settings = $$value));
   let { name } = $$props;
   let { project } = $$props;
@@ -20585,8 +20585,8 @@ var CreateNote_default = CreateNote;
 
 // src/modals/create-note-modal.ts
 var CreateNoteModal = class extends import_obsidian18.Modal {
-  constructor(app3, project, onSave) {
-    super(app3);
+  constructor(app2, project, onSave) {
+    super(app2);
     this.onSave = onSave;
     this.project = project;
   }
@@ -21550,7 +21550,7 @@ function instance41($$self, $$props, $$invalidate) {
   component_subscribe($$self, customViews, ($$value) => $$invalidate(19, $customViews = $$value));
   component_subscribe($$self, customViewsV2, ($$value) => $$invalidate(20, $customViewsV2 = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(7, $i18n = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(8, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(9, $api = $$value));
   var _a;
   let { projects } = $$props;
@@ -21716,16 +21716,34 @@ var import_obsidian_dataview2 = __toModule(require_lib());
 
 // src/lib/datasources/dataview/dataview-helpers.ts
 var import_dayjs2 = __toModule(require_dayjs_min());
-function standardizeValues(values) {
+var import_obsidian21 = __toModule(require("obsidian"));
+function standardizeValues(app2, values) {
   const res = {};
   Object.keys(values).forEach((field) => {
+    var _a, _b;
     const value = values[field];
     if (!value) {
       return;
     }
     if (typeof value === "object") {
-      if ("path" in value) {
-        res[field] = value.path;
+      if ("path" in value && "display" in value) {
+        const file = app2.vault.getAbstractFileByPath(value.path);
+        if (file instanceof import_obsidian21.TFile) {
+          const linkText = app2.metadataCache.fileToLinktext(file, "", true);
+          res[field] = {
+            displayName: (_a = value.display) != null ? _a : linkText,
+            fullPath: value.path,
+            linkText,
+            sourcePath: ""
+          };
+        } else {
+          res[field] = {
+            displayName: (_b = value.display) != null ? _b : value.path,
+            fullPath: value.path,
+            linkText: value.path,
+            sourcePath: ""
+          };
+        }
       }
       if ("ts" in value) {
         res[field] = (0, import_dayjs2.default)(value.ts).format("YYYY-MM-DD");
@@ -21859,7 +21877,11 @@ var UnsupportedCapability = class extends Error {
   }
 };
 var DataviewDataSource = class extends DataSource {
-  queryOne(_24) {
+  constructor(app2, project) {
+    super(project);
+    this.app = app2;
+  }
+  queryOne() {
     return __async(this, null, function* () {
       return this.queryAll();
     });
@@ -21867,7 +21889,7 @@ var DataviewDataSource = class extends DataSource {
   queryAll() {
     return __async(this, null, function* () {
       var _a;
-      const api2 = getDataviewAPI();
+      const api2 = this.getDataviewAPI();
       const result = yield api2 == null ? void 0 : api2.query((_a = this.project.query) != null ? _a : "", void 0, {
         forceId: true
       });
@@ -21875,9 +21897,9 @@ var DataviewDataSource = class extends DataSource {
         throw new Error("dataview query failed");
       }
       const rows = parseTableResult(result.value);
-      let records = standardizeRecords(rows);
-      const fields = detectSchema(records);
-      records = parseRecords(records, fields);
+      const standardizedRecords = this.standardizeRecords(rows);
+      const fields = detectSchema(standardizedRecords);
+      const records = parseRecords(standardizedRecords, fields);
       return { fields, records };
     });
   }
@@ -21886,6 +21908,24 @@ var DataviewDataSource = class extends DataSource {
   }
   readonly() {
     return true;
+  }
+  getDataviewAPI() {
+    if ((0, import_obsidian_dataview2.isPluginEnabled)(this.app)) {
+      return (0, import_obsidian_dataview2.getAPI)(this.app);
+    } else {
+      throw new UnsupportedCapability(get_store_value(i18n).t("errors.missingDataview.message"));
+    }
+  }
+  standardizeRecords(rows) {
+    const records = [];
+    rows.forEach((row) => {
+      const values = standardizeValues(this.app, row);
+      const id = values["File"];
+      if (id && isLink2(id) && id.fullPath) {
+        records.push({ id: id.fullPath, values });
+      }
+    });
+    return records;
   }
 };
 function parseTableResult(value) {
@@ -21901,26 +21941,8 @@ function parseTableResult(value) {
   });
   return rows;
 }
-function standardizeRecords(rows) {
-  const records = [];
-  rows.forEach((row) => {
-    const values = standardizeValues(row);
-    const id = values["File"];
-    if (id && isString(id)) {
-      records.push({ id, values });
-    }
-  });
-  return records;
-}
 function detectSchema(records) {
   return detectFields(records).map((field) => __spreadProps(__spreadValues({}, field), { derived: true })).map((field) => field.name === "File" ? __spreadProps(__spreadValues({}, field), { identifier: true }) : field);
-}
-function getDataviewAPI() {
-  if ((0, import_obsidian_dataview2.isPluginEnabled)(app)) {
-    return (0, import_obsidian_dataview2.getAPI)(app);
-  } else {
-    throw new UnsupportedCapability(get_store_value(i18n).t("errors.missingDataview.message"));
-  }
 }
 
 // src/lib/datasources/frontmatter/frontmatter-helpers.ts
@@ -21940,13 +21962,20 @@ function standardizeRecord(id, values) {
   };
 }
 function parseRawLink(rawLink, sourcePath) {
+  var _a;
   if (rawLink[0]) {
-    const linkText = rawLink[0][0];
-    if (linkText) {
-      return {
+    const text2 = rawLink[0][0];
+    if (text2) {
+      const split = text2.split("|");
+      const linkText = (_a = split[0]) != null ? _a : "";
+      const link = {
         linkText,
         sourcePath
       };
+      if (split[1]) {
+        link.displayName = split[1];
+      }
+      return link;
     }
   }
   return void 0;
@@ -21954,13 +21983,13 @@ function parseRawLink(rawLink, sourcePath) {
 
 // src/lib/datasources/frontmatter/frontmatter.ts
 var FrontMatterDataSource = class extends DataSource {
-  constructor(app3, project) {
+  constructor(app2, project) {
     super(project);
-    this.app = app3;
+    this.app = app2;
   }
-  queryOne(file) {
+  queryOne(file, fields) {
     return __async(this, null, function* () {
-      return this.queryFiles([file]);
+      return this.queryFiles([file], fields);
     });
   }
   queryAll() {
@@ -21969,11 +21998,19 @@ var FrontMatterDataSource = class extends DataSource {
       return this.queryFiles(files);
     });
   }
-  queryFiles(files) {
+  queryFiles(files, predefinedFields) {
     return __async(this, null, function* () {
-      let records = standardizeRecords2(files, this.app.metadataCache);
-      const fields = detectSchema2(records);
-      records = parseRecords(records, fields);
+      const standardizedRecords = standardizeRecords(files, this.app.metadataCache);
+      let fields = detectSchema2(standardizedRecords);
+      for (let predefinedField of predefinedFields != null ? predefinedFields : []) {
+        const currentFieldIdx = fields.findIndex((field) => field.name === predefinedField.name);
+        if (currentFieldIdx >= 0) {
+          if (fields[currentFieldIdx]) {
+            fields[currentFieldIdx].type = predefinedField.type;
+          }
+        }
+      }
+      const records = parseRecords(standardizedRecords, fields);
       return { fields, records };
     });
   }
@@ -21990,7 +22027,7 @@ var FrontMatterDataSource = class extends DataSource {
     return true;
   }
 };
-function standardizeRecords2(files, metadataCache) {
+function standardizeRecords(files, metadataCache) {
   var _a;
   const records = [];
   for (let file of files) {
@@ -23192,10 +23229,10 @@ function fieldToSelectableValue(field) {
 }
 
 // src/modals/edit-note-modal.ts
-var import_obsidian23 = __toModule(require("obsidian"));
+var import_obsidian24 = __toModule(require("obsidian"));
 
 // src/modals/input-dialog.ts
-var import_obsidian21 = __toModule(require("obsidian"));
+var import_obsidian22 = __toModule(require("obsidian"));
 
 // src/modals/components/InputDialog.svelte
 function add_css23(target) {
@@ -23511,9 +23548,9 @@ var InputDialog = class extends SvelteComponent {
 var InputDialog_default = InputDialog;
 
 // src/modals/input-dialog.ts
-var InputDialogModal = class extends import_obsidian21.Modal {
-  constructor(app3, message, cta, onSubmit, value) {
-    super(app3);
+var InputDialogModal = class extends import_obsidian22.Modal {
+  constructor(app2, message, cta, onSubmit, value) {
+    super(app2);
     this.message = message;
     this.cta = cta;
     this.onSubmit = onSubmit;
@@ -23928,7 +23965,7 @@ function create_fragment47(ctx) {
 }
 function instance47($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(3, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
   let { values } = $$props;
   let { edit } = $$props;
   let { onChange = () => {
@@ -24815,9 +24852,9 @@ var EditNote = class extends SvelteComponent {
 var EditNote_default = EditNote;
 
 // src/modals/edit-note-modal.ts
-var EditNoteModal = class extends import_obsidian23.Modal {
-  constructor(app3, fields, onSave, defaults) {
-    super(app3);
+var EditNoteModal = class extends import_obsidian24.Modal {
+  constructor(app2, fields, onSave, defaults) {
+    super(app2);
     this.defaults = defaults;
     this.fields = fields;
     this.onSave = onSave;
@@ -25435,7 +25472,7 @@ function instance53($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(9, $i18n = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(21, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(21, $app = $$value));
   let { project } = $$props;
   let { frame } = $$props;
   let { readonly } = $$props;
@@ -26279,7 +26316,7 @@ var CalendarEntry_default = CalendarEntry;
 
 // src/views/Calendar/CalendarDay.svelte
 var import_path2 = __toModule(require("path"));
-var import_obsidian25 = __toModule(require("obsidian"));
+var import_obsidian26 = __toModule(require("obsidian"));
 function add_css34(target) {
   append_styles(target, "svelte-qx13xl", "div.svelte-qx13xl{padding:4px;height:100%;display:flex;flex-direction:column;gap:4px;align-items:start;overflow:scroll}.weekend.svelte-qx13xl{background-color:var(--background-secondary)}");
 }
@@ -26560,7 +26597,7 @@ function instance62($$self, $$props, $$invalidate) {
   const dblclick_handler = () => onEntryAdd();
   const mousedown_handler = (event) => {
     if (event.button === 2) {
-      const menu = new import_obsidian25.Menu();
+      const menu = new import_obsidian26.Menu();
       menu.addItem((item) => {
         item.setTitle($i18n.t("views.calendar.new-note")).setIcon("file").onClick(onEntryAdd);
       });
@@ -27767,7 +27804,7 @@ function instance64($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(10, $i18n = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(17, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(17, $app = $$value));
   var _a, _b;
   let { project } = $$props;
   let { frame } = $$props;
@@ -27797,7 +27834,7 @@ function instance64($$self, $$props, $$invalidate) {
     api2.updateRecord(record, fields);
   };
   const func_4 = (id) => {
-    new EditNoteModal(get_store_value(app2), fields, (record) => {
+    new EditNoteModal(get_store_value(app), fields, (record) => {
       api2.updateRecord(record, fields);
     }, records[id]).open();
   };
@@ -27937,7 +27974,7 @@ var CalendarView = class extends SvelteComponent {
 var CalendarView_default = CalendarView;
 
 // src/views/Table/components/DataGrid/DataGrid.svelte
-var import_obsidian33 = __toModule(require("obsidian"));
+var import_obsidian34 = __toModule(require("obsidian"));
 
 // src/views/Table/components/DataGrid/GridCell/Resizer.svelte
 function add_css37(target) {
@@ -28101,7 +28138,7 @@ var Resizer_default = Resizer;
 
 // src/views/Table/components/DataGrid/GridCell/GridCell.svelte
 function add_css38(target) {
-  append_styles(target, "svelte-n8fxfn", "div.svelte-n8fxfn{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);box-sizing:border-box;vertical-align:middle;width:100%;min-height:30px}.selected.svelte-n8fxfn{box-shadow:0 0 0 3px var(--interactive-accent);z-index:9;padding:0}.columnHeader.svelte-n8fxfn{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-n8fxfn{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-n8fxfn{left:0px;justify-content:center;z-index:1}");
+  append_styles(target, "svelte-1gf3h2u", "div.svelte-1gf3h2u{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);box-sizing:border-box;vertical-align:middle;width:100%;min-height:30px}.selected.svelte-1gf3h2u{box-shadow:0 0 0 3px var(--interactive-accent);z-index:9;padding:0}.columnHeader.svelte-1gf3h2u{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-1gf3h2u{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-1gf3h2u{left:0px;justify-content:center;z-index:1;background-color:var(--background-secondary);font-weight:500;text-align:center;padding:0 4px}");
 }
 var get_read_slot_changes_1 = (dirty) => ({});
 var get_read_slot_context_1 = (ctx) => ({});
@@ -28115,8 +28152,8 @@ var get_edit_slot_changes = (dirty) => ({});
 var get_edit_slot_context = (ctx) => ({});
 function create_else_block_1(ctx) {
   let current;
-  const read_slot_template = ctx[20].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[19], get_read_slot_context_1);
+  const read_slot_template = ctx[23].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context_1);
   return {
     c() {
       if (read_slot)
@@ -28130,8 +28167,8 @@ function create_else_block_1(ctx) {
     },
     p(ctx2, dirty) {
       if (read_slot) {
-        if (read_slot.p && (!current || dirty & 524288)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[19], !current ? get_all_dirty_from_scope(ctx2[19]) : get_slot_changes(read_slot_template, ctx2[19], dirty, get_read_slot_changes_1), get_read_slot_context_1);
+        if (read_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes_1), get_read_slot_context_1);
         }
       }
     },
@@ -28153,8 +28190,8 @@ function create_else_block_1(ctx) {
 }
 function create_if_block_42(ctx) {
   let current;
-  const hover_slot_template = ctx[20].hover;
-  const hover_slot = create_slot(hover_slot_template, ctx, ctx[19], get_hover_slot_context);
+  const hover_slot_template = ctx[23].hover;
+  const hover_slot = create_slot(hover_slot_template, ctx, ctx[22], get_hover_slot_context);
   return {
     c() {
       if (hover_slot)
@@ -28168,8 +28205,8 @@ function create_if_block_42(ctx) {
     },
     p(ctx2, dirty) {
       if (hover_slot) {
-        if (hover_slot.p && (!current || dirty & 524288)) {
-          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[19], !current ? get_all_dirty_from_scope(ctx2[19]) : get_slot_changes(hover_slot_template, ctx2[19], dirty, get_hover_slot_changes), get_hover_slot_context);
+        if (hover_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(hover_slot_template, ctx2[22], dirty, get_hover_slot_changes), get_hover_slot_context);
         }
       }
     },
@@ -28191,8 +28228,8 @@ function create_if_block_42(ctx) {
 }
 function create_if_block_34(ctx) {
   let current;
-  const selected_slot_template = ctx[20].selected;
-  const selected_slot = create_slot(selected_slot_template, ctx, ctx[19], get_selected_slot_context);
+  const selected_slot_template = ctx[23].selected;
+  const selected_slot = create_slot(selected_slot_template, ctx, ctx[22], get_selected_slot_context);
   return {
     c() {
       if (selected_slot)
@@ -28206,8 +28243,8 @@ function create_if_block_34(ctx) {
     },
     p(ctx2, dirty) {
       if (selected_slot) {
-        if (selected_slot.p && (!current || dirty & 524288)) {
-          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[19], !current ? get_all_dirty_from_scope(ctx2[19]) : get_slot_changes(selected_slot_template, ctx2[19], dirty, get_selected_slot_changes), get_selected_slot_context);
+        if (selected_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(selected_slot_template, ctx2[22], dirty, get_selected_slot_changes), get_selected_slot_context);
         }
       }
     },
@@ -28292,8 +28329,8 @@ function create_if_block_110(ctx) {
 }
 function create_else_block6(ctx) {
   let current;
-  const read_slot_template = ctx[20].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[19], get_read_slot_context);
+  const read_slot_template = ctx[23].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context);
   return {
     c() {
       if (read_slot)
@@ -28307,8 +28344,8 @@ function create_else_block6(ctx) {
     },
     p(ctx2, dirty) {
       if (read_slot) {
-        if (read_slot.p && (!current || dirty & 524288)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[19], !current ? get_all_dirty_from_scope(ctx2[19]) : get_slot_changes(read_slot_template, ctx2[19], dirty, get_read_slot_changes), get_read_slot_context);
+        if (read_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes), get_read_slot_context);
         }
       }
     },
@@ -28330,8 +28367,8 @@ function create_else_block6(ctx) {
 }
 function create_if_block_25(ctx) {
   let current;
-  const edit_slot_template = ctx[20].edit;
-  const edit_slot = create_slot(edit_slot_template, ctx, ctx[19], get_edit_slot_context);
+  const edit_slot_template = ctx[23].edit;
+  const edit_slot = create_slot(edit_slot_template, ctx, ctx[22], get_edit_slot_context);
   return {
     c() {
       if (edit_slot)
@@ -28345,8 +28382,8 @@ function create_if_block_25(ctx) {
     },
     p(ctx2, dirty) {
       if (edit_slot) {
-        if (edit_slot.p && (!current || dirty & 524288)) {
-          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[19], !current ? get_all_dirty_from_scope(ctx2[19]) : get_slot_changes(edit_slot_template, ctx2[19], dirty, get_edit_slot_changes), get_edit_slot_context);
+        if (edit_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(edit_slot_template, ctx2[22], dirty, get_edit_slot_changes), get_edit_slot_context);
         }
       }
     },
@@ -28417,6 +28454,8 @@ function create_fragment66(ctx) {
   let current_block_type_index;
   let if_block0;
   let t3;
+  let div_role_value;
+  let div_aria_selected_value;
   let div_style_value;
   let div_tabindex_value;
   let useClickOutside_action;
@@ -28426,11 +28465,11 @@ function create_fragment66(ctx) {
   const if_block_creators = [create_if_block_110, create_if_block_34, create_if_block_42, create_else_block_1];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[15].edit && ctx2[1])
+    if (ctx2[17].edit && ctx2[1])
       return 0;
-    if (ctx2[15].selected && ctx2[0])
+    if (ctx2[17].selected && ctx2[0])
       return 1;
-    if (ctx2[15].hover && ctx2[9])
+    if (ctx2[17].hover && ctx2[11])
       return 2;
     return 3;
   }
@@ -28444,13 +28483,16 @@ function create_fragment66(ctx) {
       t3 = space();
       if (if_block1)
         if_block1.c();
+      attr(div, "role", div_role_value = ctx[16]());
+      attr(div, "aria-selected", div_aria_selected_value = ctx[8] || ctx[7] ? void 0 : ctx[0]);
+      attr(div, "aria-colindex", ctx[6]);
       attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
-      attr(div, "tabindex", div_tabindex_value = !ctx[6] && !ctx[7] ? 1 : void 0);
-      attr(div, "class", "svelte-n8fxfn");
-      toggle_class(div, "columnHeader", ctx[6]);
+      attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
+      attr(div, "class", "svelte-1gf3h2u");
+      toggle_class(div, "columnHeader", ctx[7]);
       toggle_class(div, "header", ctx[5].header);
       toggle_class(div, "selected", ctx[0]);
-      toggle_class(div, "rowHeader", ctx[7]);
+      toggle_class(div, "rowHeader", ctx[8]);
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -28458,19 +28500,19 @@ function create_fragment66(ctx) {
       append(div, t3);
       if (if_block1)
         if_block1.m(div, null);
-      ctx[22](div);
+      ctx[25](div);
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "click", ctx[11]),
-          listen(div, "dblclick", ctx[12]),
-          listen(div, "mousedown", ctx[21]),
-          listen(div, "mouseenter", ctx[23]),
-          listen(div, "mouseleave", ctx[24]),
-          listen(div, "focus", ctx[25]),
-          listen(div, "blur", ctx[14]),
-          listen(div, "keydown", ctx[13]),
-          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[26]))
+          listen(div, "click", ctx[12]),
+          listen(div, "dblclick", ctx[13]),
+          listen(div, "mousedown", ctx[24]),
+          listen(div, "mouseenter", ctx[26]),
+          listen(div, "mouseleave", ctx[27]),
+          listen(div, "focus", ctx[28]),
+          listen(div, "blur", ctx[15]),
+          listen(div, "keydown", ctx[14]),
+          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[29]))
         ];
         mounted = true;
       }
@@ -28515,16 +28557,22 @@ function create_fragment66(ctx) {
         });
         check_outros();
       }
+      if (!current || dirty & 385 && div_aria_selected_value !== (div_aria_selected_value = ctx2[8] || ctx2[7] ? void 0 : ctx2[0])) {
+        attr(div, "aria-selected", div_aria_selected_value);
+      }
+      if (!current || dirty & 64) {
+        attr(div, "aria-colindex", ctx2[6]);
+      }
       if (!current || dirty & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
         attr(div, "style", div_style_value);
       }
-      if (!current || dirty & 192 && div_tabindex_value !== (div_tabindex_value = !ctx2[6] && !ctx2[7] ? 1 : void 0)) {
+      if (!current || dirty & 384 && div_tabindex_value !== (div_tabindex_value = !ctx2[7] && !ctx2[8] ? 1 : void 0)) {
         attr(div, "tabindex", div_tabindex_value);
       }
-      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 257)
-        useClickOutside_action.update.call(null, ctx2[26]);
-      if (!current || dirty & 64) {
-        toggle_class(div, "columnHeader", ctx2[6]);
+      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 513)
+        useClickOutside_action.update.call(null, ctx2[29]);
+      if (!current || dirty & 128) {
+        toggle_class(div, "columnHeader", ctx2[7]);
       }
       if (!current || dirty & 32) {
         toggle_class(div, "header", ctx2[5].header);
@@ -28532,8 +28580,8 @@ function create_fragment66(ctx) {
       if (!current || dirty & 1) {
         toggle_class(div, "selected", ctx2[0]);
       }
-      if (!current || dirty & 128) {
-        toggle_class(div, "rowHeader", ctx2[7]);
+      if (!current || dirty & 256) {
+        toggle_class(div, "rowHeader", ctx2[8]);
       }
     },
     i(local) {
@@ -28554,7 +28602,7 @@ function create_fragment66(ctx) {
       if_blocks[current_block_type_index].d();
       if (if_block1)
         if_block1.d();
-      ctx[22](null);
+      ctx[25](null);
       mounted = false;
       run_all(dispose);
     }
@@ -28571,6 +28619,8 @@ function instance66($$self, $$props, $$invalidate) {
   let { onFinalizeResize = () => {
   } } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
   let { columnHeader = false } = $$props;
   let { rowHeader = false } = $$props;
   let { onEditChange = (value) => {
@@ -28582,6 +28632,7 @@ function instance66($$self, $$props, $$invalidate) {
   } } = $$props;
   let { onPaste = () => {
   } } = $$props;
+  const dispatch = createEventDispatcher();
   let hover = false;
   let ref;
   function handleClick(event) {
@@ -28594,7 +28645,7 @@ function instance66($$self, $$props, $$invalidate) {
       onEditChange(true);
     }
   }
-  function handleKeyPress(event) {
+  function handleKeyDown(event) {
     if (event.metaKey || event.ctrlKey) {
       switch (event.key) {
         case "c":
@@ -28621,15 +28672,47 @@ function instance66($$self, $$props, $$invalidate) {
         onEditChange(false);
         ref.focus();
         break;
+      case "ArrowLeft":
+        dispatch("navigate", [colindex - 1, rowindex]);
+        event.preventDefault();
+        break;
+      case "ArrowRight":
+        dispatch("navigate", [colindex + 1, rowindex]);
+        event.preventDefault();
+        break;
+      case "ArrowUp":
+        dispatch("navigate", [colindex, rowindex - 1]);
+        event.preventDefault();
+        break;
+      case "ArrowDown":
+        dispatch("navigate", [colindex, rowindex + 1]);
+        event.preventDefault();
+        break;
+      case "Tab":
+        if (event.shiftKey) {
+          dispatch("navigate", [colindex - 1, rowindex]);
+        } else {
+          dispatch("navigate", [colindex + 1, rowindex]);
+        }
+        event.preventDefault();
+        break;
     }
   }
   function handleBlur(event) {
-    $$invalidate(9, hover = false);
-    if (event.currentTarget instanceof HTMLDivElement && event.relatedTarget instanceof HTMLElement && event.currentTarget.contains(event.relatedTarget)) {
-      return;
+    $$invalidate(11, hover = false);
+    if (event.currentTarget instanceof HTMLDivElement && event.relatedTarget instanceof HTMLElement && !event.currentTarget.contains(event.relatedTarget)) {
+      $$invalidate(0, selected = false);
+      onEditChange(false);
     }
-    onEditChange(false);
-    $$invalidate(0, selected = false);
+  }
+  function role() {
+    if (columnHeader) {
+      return "columnheader";
+    } else if (rowHeader) {
+      return "rowheader";
+    } else {
+      return "gridcell";
+    }
   }
   function mousedown_handler(event) {
     bubble.call(this, $$self, event);
@@ -28640,10 +28723,10 @@ function instance66($$self, $$props, $$invalidate) {
       $$invalidate(10, ref);
     });
   }
-  const mouseenter_handler = () => $$invalidate(9, hover = true);
-  const mouseleave_handler = () => $$invalidate(9, hover = false);
+  const mouseenter_handler = () => $$invalidate(11, hover = true);
+  const mouseleave_handler = () => $$invalidate(11, hover = false);
   const focus_handler = () => {
-    $$invalidate(9, hover = true);
+    $$invalidate(11, hover = true);
     $$invalidate(0, selected = true);
   };
   const useClickOutside_function = () => {
@@ -28663,20 +28746,33 @@ function instance66($$self, $$props, $$invalidate) {
       $$invalidate(4, onFinalizeResize = $$props2.onFinalizeResize);
     if ("column" in $$props2)
       $$invalidate(5, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(18, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(6, colindex = $$props2.colindex);
     if ("columnHeader" in $$props2)
-      $$invalidate(6, columnHeader = $$props2.columnHeader);
+      $$invalidate(7, columnHeader = $$props2.columnHeader);
     if ("rowHeader" in $$props2)
-      $$invalidate(7, rowHeader = $$props2.rowHeader);
+      $$invalidate(8, rowHeader = $$props2.rowHeader);
     if ("onEditChange" in $$props2)
-      $$invalidate(8, onEditChange = $$props2.onEditChange);
+      $$invalidate(9, onEditChange = $$props2.onEditChange);
     if ("onCopy" in $$props2)
-      $$invalidate(16, onCopy = $$props2.onCopy);
+      $$invalidate(19, onCopy = $$props2.onCopy);
     if ("onCut" in $$props2)
-      $$invalidate(17, onCut = $$props2.onCut);
+      $$invalidate(20, onCut = $$props2.onCut);
     if ("onPaste" in $$props2)
-      $$invalidate(18, onPaste = $$props2.onPaste);
+      $$invalidate(21, onPaste = $$props2.onPaste);
     if ("$$scope" in $$props2)
-      $$invalidate(19, $$scope = $$props2.$$scope);
+      $$invalidate(22, $$scope = $$props2.$$scope);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 1025) {
+      $:
+        if (selected && ref) {
+          ref.focus();
+          ref.scrollIntoView({ block: "nearest", inline: "nearest" });
+        }
+    }
   };
   return [
     selected,
@@ -28685,16 +28781,19 @@ function instance66($$self, $$props, $$invalidate) {
     onResize,
     onFinalizeResize,
     column,
+    colindex,
     columnHeader,
     rowHeader,
     onEditChange,
-    hover,
     ref,
+    hover,
     handleClick,
     handleDoubleClick,
-    handleKeyPress,
+    handleKeyDown,
     handleBlur,
+    role,
     $$slots,
+    rowindex,
     onCopy,
     onCut,
     onPaste,
@@ -28718,12 +28817,14 @@ var GridCell = class extends SvelteComponent {
       onResize: 3,
       onFinalizeResize: 4,
       column: 5,
-      columnHeader: 6,
-      rowHeader: 7,
-      onEditChange: 8,
-      onCopy: 16,
-      onCut: 17,
-      onPaste: 18
+      rowindex: 18,
+      colindex: 6,
+      columnHeader: 7,
+      rowHeader: 8,
+      onEditChange: 9,
+      onCopy: 19,
+      onCut: 20,
+      onPaste: 21
     }, add_css38);
   }
 };
@@ -28739,7 +28840,7 @@ function create_if_block18(ctx) {
       disabled: !ctx[2].editable
     }
   });
-  switch_1.$on("check", ctx[4]);
+  switch_1.$on("check", ctx[7]);
   return {
     c() {
       create_component(switch_1.$$.fragment);
@@ -28839,7 +28940,7 @@ function create_edit_slot(ctx) {
       checked: (_a = ctx[0]) != null ? _a : false
     }
   });
-  switch_1.$on("check", ctx[3]);
+  switch_1.$on("check", ctx[6]);
   return {
     c() {
       create_component(switch_1.$$.fragment);
@@ -28875,6 +28976,9 @@ function create_fragment67(ctx) {
   let current;
   gridcell = new GridCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       column: ctx[2],
       $$slots: {
         edit: [create_edit_slot],
@@ -28883,7 +28987,8 @@ function create_fragment67(ctx) {
       $$scope: { ctx }
     }
   });
-  gridcell.$on("mousedown", ctx[5]);
+  gridcell.$on("mousedown", ctx[8]);
+  gridcell.$on("navigate", ctx[9]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -28894,9 +28999,15 @@ function create_fragment67(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
       if (dirty & 4)
         gridcell_changes.column = ctx2[2];
-      if (dirty & 71) {
+      if (dirty & 1031) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcell.$set(gridcell_changes);
@@ -28920,9 +29031,15 @@ function instance67($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   const check_handler = ({ detail: checked }) => onChange(checked);
   const check_handler_1 = ({ detail: checked }) => onChange(checked);
   function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
@@ -28932,13 +29049,37 @@ function instance67($$self, $$props, $$invalidate) {
       $$invalidate(1, onChange = $$props2.onChange);
     if ("column" in $$props2)
       $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
   };
-  return [value, onChange, column, check_handler, check_handler_1, mousedown_handler];
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    check_handler,
+    check_handler_1,
+    mousedown_handler,
+    navigate_handler
+  ];
 }
 var GridBooleanCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance67, create_fragment67, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance67, create_fragment67, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
   }
 };
 var GridBooleanCell_default = GridBooleanCell;
@@ -29046,7 +29187,7 @@ function create_edit_slot2(ctx) {
       embed: true
     }
   });
-  dateinput.$on("change", ctx[4]);
+  dateinput.$on("change", ctx[7]);
   return {
     c() {
       create_component(dateinput.$$.fragment);
@@ -29082,10 +29223,13 @@ function create_fragment68(ctx) {
   let current;
   gridcell = new GridCell_default({
     props: {
-      edit: ctx[3],
-      onEditChange: ctx[5],
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      edit: ctx[6],
+      onEditChange: ctx[8],
       column: ctx[2],
-      onCopy: ctx[6],
+      onCopy: ctx[9],
       $$slots: {
         edit: [create_edit_slot2],
         read: [create_read_slot2]
@@ -29093,7 +29237,8 @@ function create_fragment68(ctx) {
       $$scope: { ctx }
     }
   });
-  gridcell.$on("mousedown", ctx[7]);
+  gridcell.$on("mousedown", ctx[10]);
+  gridcell.$on("navigate", ctx[11]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -29104,15 +29249,21 @@ function create_fragment68(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
       if (dirty & 8)
-        gridcell_changes.edit = ctx2[3];
-      if (dirty & 8)
-        gridcell_changes.onEditChange = ctx2[5];
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 64)
+        gridcell_changes.edit = ctx2[6];
+      if (dirty & 64)
+        gridcell_changes.onEditChange = ctx2[8];
       if (dirty & 4)
         gridcell_changes.column = ctx2[2];
       if (dirty & 1)
-        gridcell_changes.onCopy = ctx2[6];
-      if (dirty & 267) {
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 4163) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcell.$set(gridcell_changes);
@@ -29136,13 +29287,16 @@ function instance68($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   let edit = false;
   const change_handler = ({ detail: value2 }) => {
-    $$invalidate(3, edit = false);
+    $$invalidate(6, edit = false);
     onChange(value2);
   };
   const func7 = (mode) => {
-    $$invalidate(3, edit = mode);
+    $$invalidate(6, edit = mode);
   };
   const func_14 = () => {
     if (value) {
@@ -29152,6 +29306,9 @@ function instance68($$self, $$props, $$invalidate) {
   function mousedown_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
       $$invalidate(0, value = $$props2.value);
@@ -29159,13 +29316,39 @@ function instance68($$self, $$props, $$invalidate) {
       $$invalidate(1, onChange = $$props2.onChange);
     if ("column" in $$props2)
       $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
   };
-  return [value, onChange, column, edit, change_handler, func7, func_14, mousedown_handler];
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    edit,
+    change_handler,
+    func7,
+    func_14,
+    mousedown_handler,
+    navigate_handler
+  ];
 }
 var GridDateCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance68, create_fragment68, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance68, create_fragment68, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
   }
 };
 var GridDateCell_default = GridDateCell;
@@ -29308,7 +29491,7 @@ var NumberInput_default2 = NumberInput2;
 function create_if_block20(ctx) {
   let numberlabel;
   let current;
-  numberlabel = new NumberLabel_default({ props: { value: ctx[0] } });
+  numberlabel = new NumberLabel_default({ props: { value: ctx[1] } });
   return {
     c() {
       create_component(numberlabel.$$.fragment);
@@ -29319,8 +29502,8 @@ function create_if_block20(ctx) {
     },
     p(ctx2, dirty) {
       const numberlabel_changes = {};
-      if (dirty & 1)
-        numberlabel_changes.value = ctx2[0];
+      if (dirty & 2)
+        numberlabel_changes.value = ctx2[1];
       numberlabel.$set(numberlabel_changes);
     },
     i(local) {
@@ -29339,7 +29522,7 @@ function create_if_block20(ctx) {
   };
 }
 function create_read_slot3(ctx) {
-  let show_if = isNumber(ctx[0]);
+  let show_if = isNumber(ctx[1]);
   let if_block_anchor;
   let current;
   let if_block = show_if && create_if_block20(ctx);
@@ -29356,12 +29539,12 @@ function create_read_slot3(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 1)
-        show_if = isNumber(ctx2[0]);
+      if (dirty & 2)
+        show_if = isNumber(ctx2[1]);
       if (show_if) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 1) {
+          if (dirty & 2) {
             transition_in(if_block, 1);
           }
         } else {
@@ -29403,11 +29586,11 @@ function create_edit_slot3(ctx) {
   numberinput = new NumberInput_default2({
     props: {
       slot: "edit",
-      value: (_a = ctx[0]) != null ? _a : 0,
-      onChange: ctx[5]
+      value: (_a = ctx[1]) != null ? _a : 0,
+      onChange: ctx[7]
     }
   });
-  numberinput.$on("blur", ctx[6]);
+  numberinput.$on("blur", ctx[8]);
   return {
     c() {
       create_component(numberinput.$$.fragment);
@@ -29419,10 +29602,10 @@ function create_edit_slot3(ctx) {
     p(ctx2, dirty) {
       var _a2;
       const numberinput_changes = {};
-      if (dirty & 1)
-        numberinput_changes.value = (_a2 = ctx2[0]) != null ? _a2 : 0;
       if (dirty & 2)
-        numberinput_changes.onChange = ctx2[5];
+        numberinput_changes.value = (_a2 = ctx2[1]) != null ? _a2 : 0;
+      if (dirty & 4)
+        numberinput_changes.onChange = ctx2[7];
       numberinput.$set(numberinput_changes);
     },
     i(local) {
@@ -29446,32 +29629,35 @@ function create_fragment71(ctx) {
   let updating_selected;
   let current;
   function gridcell_edit_binding(value) {
-    ctx[10](value);
+    ctx[12](value);
   }
   function gridcell_selected_binding(value) {
-    ctx[11](value);
+    ctx[13](value);
   }
   let gridcell_props = {
-    column: ctx[2],
-    onCopy: ctx[7],
-    onCut: ctx[8],
-    onPaste: ctx[9],
+    column: ctx[3],
+    rowindex: ctx[4],
+    colindex: ctx[5],
+    onCopy: ctx[9],
+    onCut: ctx[10],
+    onPaste: ctx[11],
     $$slots: {
       edit: [create_edit_slot3],
       read: [create_read_slot3]
     },
     $$scope: { ctx }
   };
-  if (ctx[3] !== void 0) {
-    gridcell_props.edit = ctx[3];
+  if (ctx[6] !== void 0) {
+    gridcell_props.edit = ctx[6];
   }
-  if (ctx[4] !== void 0) {
-    gridcell_props.selected = ctx[4];
+  if (ctx[0] !== void 0) {
+    gridcell_props.selected = ctx[0];
   }
   gridcell = new GridCell_default({ props: gridcell_props });
   binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
   binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
-  gridcell.$on("mousedown", ctx[12]);
+  gridcell.$on("mousedown", ctx[14]);
+  gridcell.$on("navigate", ctx[15]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -29482,25 +29668,29 @@ function create_fragment71(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      if (dirty & 1)
-        gridcell_changes.onCopy = ctx2[7];
-      if (dirty & 3)
-        gridcell_changes.onCut = ctx2[8];
+      if (dirty & 8)
+        gridcell_changes.column = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.rowindex = ctx2[4];
+      if (dirty & 32)
+        gridcell_changes.colindex = ctx2[5];
       if (dirty & 2)
-        gridcell_changes.onPaste = ctx2[9];
-      if (dirty & 8219) {
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 6)
+        gridcell_changes.onCut = ctx2[10];
+      if (dirty & 4)
+        gridcell_changes.onPaste = ctx2[11];
+      if (dirty & 65607) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      if (!updating_edit && dirty & 8) {
+      if (!updating_edit && dirty & 64) {
         updating_edit = true;
-        gridcell_changes.edit = ctx2[3];
+        gridcell_changes.edit = ctx2[6];
         add_flush_callback(() => updating_edit = false);
       }
-      if (!updating_selected && dirty & 16) {
+      if (!updating_selected && dirty & 1) {
         updating_selected = true;
-        gridcell_changes.selected = ctx2[4];
+        gridcell_changes.selected = ctx2[0];
         add_flush_callback(() => updating_selected = false);
       }
       gridcell.$set(gridcell_changes);
@@ -29524,15 +29714,17 @@ function instance71($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   let edit = false;
-  let selected = false;
   const func7 = (value2) => {
     onChange(value2);
   };
   const blur_handler = (event) => {
     if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
-      $$invalidate(4, selected = false);
-      $$invalidate(3, edit = false);
+      $$invalidate(0, selected = false);
+      $$invalidate(6, edit = false);
     }
   };
   const func_14 = () => {
@@ -29549,29 +29741,40 @@ function instance71($$self, $$props, $$invalidate) {
   });
   function gridcell_edit_binding(value2) {
     edit = value2;
-    $$invalidate(3, edit);
+    $$invalidate(6, edit);
   }
   function gridcell_selected_binding(value2) {
     selected = value2;
-    $$invalidate(4, selected);
+    $$invalidate(0, selected);
   }
   function mousedown_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
+      $$invalidate(1, value = $$props2.value);
     if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
+      $$invalidate(2, onChange = $$props2.onChange);
     if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
+      $$invalidate(3, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(4, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(5, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(0, selected = $$props2.selected);
   };
   return [
+    selected,
     value,
     onChange,
     column,
+    rowindex,
+    colindex,
     edit,
-    selected,
     func7,
     blur_handler,
     func_14,
@@ -29579,104 +29782,30 @@ function instance71($$self, $$props, $$invalidate) {
     func_3,
     gridcell_edit_binding,
     gridcell_selected_binding,
-    mousedown_handler
+    mousedown_handler,
+    navigate_handler
   ];
 }
 var GridNumberCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance71, create_fragment71, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance71, create_fragment71, safe_not_equal, {
+      value: 1,
+      onChange: 2,
+      column: 3,
+      rowindex: 4,
+      colindex: 5,
+      selected: 0
+    });
   }
 };
 var GridNumberCell_default = GridNumberCell;
 
-// src/views/Table/components/DataGrid/GridCell/GridTextCell/TextInput.svelte
-function add_css41(target) {
-  append_styles(target, "svelte-16fewam", "input.svelte-16fewam{all:unset;background-color:var(--background-primary);box-sizing:border-box;width:100%;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal)}input.svelte-16fewam:focus{box-shadow:none}input.svelte-16fewam:hover{background-color:transparent}");
-}
-function create_fragment72(ctx) {
-  let input;
-  let input_tabindex_value;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      input = element("input");
-      attr(input, "tabindex", input_tabindex_value = -1);
-      attr(input, "type", "text");
-      input.value = ctx[0];
-      attr(input, "class", "svelte-16fewam");
-    },
-    m(target, anchor) {
-      insert(target, input, anchor);
-      ctx[5](input);
-      if (!mounted) {
-        dispose = [
-          listen(input, "change", ctx[2]),
-          listen(input, "blur", ctx[4])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 1 && input.value !== ctx2[0]) {
-        input.value = ctx2[0];
-      }
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(input);
-      ctx[5](null);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance72($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let ref;
-  function handleInput(event) {
-    if (event.currentTarget instanceof HTMLInputElement) {
-      $$invalidate(0, value = event.currentTarget.value);
-      onChange(value);
-    }
-  }
-  onMount(() => {
-    ref.focus();
-  });
-  function blur_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function input_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      ref = $$value;
-      $$invalidate(1, ref);
-    });
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(3, onChange = $$props2.onChange);
-  };
-  return [value, ref, handleInput, onChange, blur_handler, input_binding];
-}
-var TextInput2 = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance72, create_fragment72, safe_not_equal, { value: 0, onChange: 3 }, add_css41);
-  }
-};
-var TextInput_default2 = TextInput2;
-
 // src/views/Table/components/DataGrid/GridCell/GridTextCell/TextLabel.svelte
-function add_css42(target) {
+function add_css41(target) {
   append_styles(target, "svelte-mdpwqc", "div.svelte-mdpwqc{padding:6px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}");
 }
-function create_fragment73(ctx) {
+function create_fragment72(ctx) {
   let div;
   let t3;
   return {
@@ -29701,7 +29830,7 @@ function create_fragment73(ctx) {
     }
   };
 }
-function instance73($$self, $$props, $$invalidate) {
+function instance72($$self, $$props, $$invalidate) {
   let { value } = $$props;
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
@@ -29712,7 +29841,7 @@ function instance73($$self, $$props, $$invalidate) {
 var TextLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance73, create_fragment73, safe_not_equal, { value: 0 }, add_css42);
+    init(this, options, instance72, create_fragment72, safe_not_equal, { value: 0 }, add_css41);
   }
 };
 var TextLabel_default = TextLabel;
@@ -29759,14 +29888,17 @@ function create_read_slot4(ctx) {
 function create_edit_slot4(ctx) {
   let textinput;
   let current;
-  textinput = new TextInput_default2({
+  textinput = new TextInput_default({
     props: {
+      autoFocus: true,
       slot: "edit",
       value: ctx[0] || "",
-      onChange: ctx[1]
+      embed: true,
+      width: "100%"
     }
   });
-  textinput.$on("blur", ctx[5]);
+  textinput.$on("input", ctx[7]);
+  textinput.$on("blur", ctx[8]);
   return {
     c() {
       create_component(textinput.$$.fragment);
@@ -29779,8 +29911,6 @@ function create_edit_slot4(ctx) {
       const textinput_changes = {};
       if (dirty & 1)
         textinput_changes.value = ctx2[0] || "";
-      if (dirty & 2)
-        textinput_changes.onChange = ctx2[1];
       textinput.$set(textinput_changes);
     },
     i(local) {
@@ -29798,38 +29928,41 @@ function create_edit_slot4(ctx) {
     }
   };
 }
-function create_fragment74(ctx) {
+function create_fragment73(ctx) {
   let gridcell;
   let updating_edit;
   let updating_selected;
   let current;
   function gridcell_edit_binding(value) {
-    ctx[9](value);
+    ctx[12](value);
   }
   function gridcell_selected_binding(value) {
-    ctx[10](value);
+    ctx[13](value);
   }
   let gridcell_props = {
-    column: ctx[2],
-    onCopy: ctx[6],
-    onCut: ctx[7],
-    onPaste: ctx[8],
+    column: ctx[3],
+    rowindex: ctx[4],
+    colindex: ctx[5],
+    onCopy: ctx[9],
+    onCut: ctx[10],
+    onPaste: ctx[11],
     $$slots: {
       edit: [create_edit_slot4],
       read: [create_read_slot4]
     },
     $$scope: { ctx }
   };
-  if (ctx[3] !== void 0) {
-    gridcell_props.edit = ctx[3];
+  if (ctx[6] !== void 0) {
+    gridcell_props.edit = ctx[6];
   }
-  if (ctx[4] !== void 0) {
-    gridcell_props.selected = ctx[4];
+  if (ctx[1] !== void 0) {
+    gridcell_props.selected = ctx[1];
   }
   gridcell = new GridCell_default({ props: gridcell_props });
   binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
   binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
-  gridcell.$on("mousedown", ctx[11]);
+  gridcell.$on("mousedown", ctx[14]);
+  gridcell.$on("navigate", ctx[15]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -29840,25 +29973,29 @@ function create_fragment74(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
+      if (dirty & 8)
+        gridcell_changes.column = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.rowindex = ctx2[4];
+      if (dirty & 32)
+        gridcell_changes.colindex = ctx2[5];
       if (dirty & 1)
-        gridcell_changes.onCopy = ctx2[6];
-      if (dirty & 3)
-        gridcell_changes.onCut = ctx2[7];
-      if (dirty & 2)
-        gridcell_changes.onPaste = ctx2[8];
-      if (dirty & 4123) {
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 5)
+        gridcell_changes.onCut = ctx2[10];
+      if (dirty & 4)
+        gridcell_changes.onPaste = ctx2[11];
+      if (dirty & 65607) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      if (!updating_edit && dirty & 8) {
+      if (!updating_edit && dirty & 64) {
         updating_edit = true;
-        gridcell_changes.edit = ctx2[3];
+        gridcell_changes.edit = ctx2[6];
         add_flush_callback(() => updating_edit = false);
       }
-      if (!updating_selected && dirty & 16) {
+      if (!updating_selected && dirty & 2) {
         updating_selected = true;
-        gridcell_changes.selected = ctx2[4];
+        gridcell_changes.selected = ctx2[1];
         add_flush_callback(() => updating_selected = false);
       }
       gridcell.$set(gridcell_changes);
@@ -29878,17 +30015,21 @@ function create_fragment74(ctx) {
     }
   };
 }
-function instance74($$self, $$props, $$invalidate) {
+function instance73($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   let edit = false;
-  let selected = false;
+  const input_handler = ({ detail }) => $$invalidate(0, value = detail);
   const blur_handler = (event) => {
     if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
-      $$invalidate(4, selected = false);
-      $$invalidate(3, edit = false);
+      $$invalidate(1, selected = false);
+      $$invalidate(6, edit = false);
     }
+    onChange(value);
   };
   const func7 = () => {
     var _a;
@@ -29904,51 +30045,71 @@ function instance74($$self, $$props, $$invalidate) {
   });
   function gridcell_edit_binding(value2) {
     edit = value2;
-    $$invalidate(3, edit);
+    $$invalidate(6, edit);
   }
   function gridcell_selected_binding(value2) {
     selected = value2;
-    $$invalidate(4, selected);
+    $$invalidate(1, selected);
   }
   function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
       $$invalidate(0, value = $$props2.value);
     if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
+      $$invalidate(2, onChange = $$props2.onChange);
     if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
+      $$invalidate(3, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(4, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(5, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(1, selected = $$props2.selected);
   };
   return [
     value,
+    selected,
     onChange,
     column,
+    rowindex,
+    colindex,
     edit,
-    selected,
+    input_handler,
     blur_handler,
     func7,
     func_14,
     func_2,
     gridcell_edit_binding,
     gridcell_selected_binding,
-    mousedown_handler
+    mousedown_handler,
+    navigate_handler
   ];
 }
 var GridTextCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance74, create_fragment74, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance73, create_fragment73, safe_not_equal, {
+      value: 0,
+      onChange: 2,
+      column: 3,
+      rowindex: 4,
+      colindex: 5,
+      selected: 1
+    });
   }
 };
 var GridTextCell_default = GridTextCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
-var import_obsidian28 = __toModule(require("obsidian"));
+var import_obsidian29 = __toModule(require("obsidian"));
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/LinkLabel.svelte
-function add_css43(target) {
+function add_css42(target) {
   append_styles(target, "svelte-1r2cjw9", "div.svelte-1r2cjw9{padding:6px;width:100%}");
 }
 function create_if_block21(ctx) {
@@ -30001,7 +30162,8 @@ function create_if_block21(ctx) {
   };
 }
 function create_default_slot20(ctx) {
-  let t_value = ctx[0].linkText + "";
+  var _a;
+  let t_value = ((_a = ctx[0].displayName) != null ? _a : ctx[0].linkText) + "";
   let t3;
   return {
     c() {
@@ -30011,7 +30173,8 @@ function create_default_slot20(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 1 && t_value !== (t_value = ctx2[0].linkText + ""))
+      var _a2;
+      if (dirty & 1 && t_value !== (t_value = ((_a2 = ctx2[0].displayName) != null ? _a2 : ctx2[0].linkText) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -30020,7 +30183,7 @@ function create_default_slot20(ctx) {
     }
   };
 }
-function create_fragment75(ctx) {
+function create_fragment74(ctx) {
   let div;
   let current;
   let if_block = ctx[0] && create_if_block21(ctx);
@@ -30076,9 +30239,9 @@ function create_fragment75(ctx) {
     }
   };
 }
-function instance75($$self, $$props, $$invalidate) {
+function instance74($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(1, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(1, $app = $$value));
   let { value } = $$props;
   const open_handler = ({ detail: { linkText, sourcePath, newLeaf } }) => {
     $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
@@ -30092,7 +30255,7 @@ function instance75($$self, $$props, $$invalidate) {
 var LinkLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance75, create_fragment75, safe_not_equal, { value: 0 }, add_css43);
+    init(this, options, instance74, create_fragment74, safe_not_equal, { value: 0 }, add_css42);
   }
 };
 var LinkLabel_default = LinkLabel;
@@ -30195,15 +30358,17 @@ function create_if_block22(ctx) {
   let current;
   fileautocomplete = new FileAutocomplete_default({
     props: {
-      files: getNotesInFolder(ctx[4].vault.getRoot()),
-      embed: true,
+      files: getNotesInFolder(ctx[7].vault.getRoot()),
       value: (_b = (_a = ctx[0]) == null ? void 0 : _a.linkText) != null ? _b : "",
+      embed: true,
       autoFocus: true,
-      getLabel: ctx[6],
+      width: "100%",
+      getLabel: ctx[9],
       getDescription: func_12
     }
   });
-  fileautocomplete.$on("change", ctx[7]);
+  fileautocomplete.$on("blur", ctx[10]);
+  fileautocomplete.$on("change", ctx[11]);
   return {
     c() {
       create_component(fileautocomplete.$$.fragment);
@@ -30215,8 +30380,8 @@ function create_if_block22(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2;
       const fileautocomplete_changes = {};
-      if (dirty & 16)
-        fileautocomplete_changes.files = getNotesInFolder(ctx2[4].vault.getRoot());
+      if (dirty & 128)
+        fileautocomplete_changes.files = getNotesInFolder(ctx2[7].vault.getRoot());
       if (dirty & 1)
         fileautocomplete_changes.value = (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.linkText) != null ? _b2 : "";
       fileautocomplete.$set(fileautocomplete_changes);
@@ -30294,13 +30459,16 @@ function create_edit_slot5(ctx) {
     }
   };
 }
-function create_fragment76(ctx) {
+function create_fragment75(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
     props: {
-      edit: ctx[3],
-      onEditChange: ctx[8],
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      edit: ctx[6],
+      onEditChange: ctx[12],
       column: ctx[2],
       $$slots: {
         edit: [create_edit_slot5],
@@ -30309,7 +30477,8 @@ function create_fragment76(ctx) {
       $$scope: { ctx }
     }
   });
-  gridcell.$on("mousedown", ctx[9]);
+  gridcell.$on("mousedown", ctx[13]);
+  gridcell.$on("navigate", ctx[14]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -30320,13 +30489,19 @@ function create_fragment76(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
       if (dirty & 8)
-        gridcell_changes.edit = ctx2[3];
-      if (dirty & 8)
-        gridcell_changes.onEditChange = ctx2[8];
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 64)
+        gridcell_changes.edit = ctx2[6];
+      if (dirty & 64)
+        gridcell_changes.onEditChange = ctx2[12];
       if (dirty & 4)
         gridcell_changes.column = ctx2[2];
-      if (dirty & 1043) {
+      if (dirty & 32963) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcell.$set(gridcell_changes);
@@ -30347,20 +30522,29 @@ function create_fragment76(ctx) {
   };
 }
 var func_12 = (file) => file.path.split("/").slice(0, -1).join("/");
-function instance76($$self, $$props, $$invalidate) {
+function instance75($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(4, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   const sourcePath = getContext("sourcePath");
   let edit = false;
-  const func7 = (file) => file instanceof import_obsidian28.TFile ? file.basename : "";
+  const func7 = (file) => file instanceof import_obsidian29.TFile ? file.basename : "";
+  const blur_handler = () => {
+    $$invalidate(6, edit = false);
+  };
   const change_handler = ({ detail: linkText }) => {
     onChange(linkText ? { linkText, sourcePath } : void 0);
   };
-  const func_2 = (value2) => $$invalidate(3, edit = value2);
+  const func_2 = (value2) => $$invalidate(6, edit = value2);
   function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
@@ -30370,24 +30554,42 @@ function instance76($$self, $$props, $$invalidate) {
       $$invalidate(1, onChange = $$props2.onChange);
     if ("column" in $$props2)
       $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
   };
   return [
     value,
     onChange,
     column,
+    rowindex,
+    colindex,
+    selected,
     edit,
     $app,
     sourcePath,
     func7,
+    blur_handler,
     change_handler,
     func_2,
-    mousedown_handler
+    mousedown_handler,
+    navigate_handler
   ];
 }
 var GridLinkCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance76, create_fragment76, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance75, create_fragment75, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
   }
 };
 var GridLinkCell_default = GridLinkCell;
@@ -30478,11 +30680,14 @@ function create_edit_slot6(ctx) {
     }
   };
 }
-function create_fragment77(ctx) {
+function create_fragment76(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       column: ctx[2],
       $$slots: {
         edit: [create_edit_slot6],
@@ -30491,7 +30696,8 @@ function create_fragment77(ctx) {
       $$scope: { ctx }
     }
   });
-  gridcell.$on("mousedown", ctx[3]);
+  gridcell.$on("mousedown", ctx[6]);
+  gridcell.$on("navigate", ctx[7]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -30502,9 +30708,15 @@ function create_fragment77(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
       if (dirty & 4)
         gridcell_changes.column = ctx2[2];
-      if (dirty & 19) {
+      if (dirty & 259) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcell.$set(gridcell_changes);
@@ -30524,11 +30736,17 @@ function create_fragment77(ctx) {
     }
   };
 }
-function instance77($$self, $$props, $$invalidate) {
+function instance76($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
@@ -30538,13 +30756,35 @@ function instance77($$self, $$props, $$invalidate) {
       $$invalidate(1, onChange = $$props2.onChange);
     if ("column" in $$props2)
       $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
   };
-  return [value, onChange, column, mousedown_handler];
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    mousedown_handler,
+    navigate_handler
+  ];
 }
 var GridListCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance77, create_fragment77, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance76, create_fragment76, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
   }
 };
 var GridListCell_default = GridListCell;
@@ -30553,8 +30793,16 @@ var GridListCell_default = GridListCell;
 function create_else_block7(ctx) {
   let gridcell;
   let current;
-  gridcell = new GridCell_default({ props: { column: ctx[2] } });
-  gridcell.$on("mousedown", ctx[9]);
+  gridcell = new GridCell_default({
+    props: {
+      rowindex: ctx[3],
+      selected: ctx[5],
+      colindex: ctx[4],
+      column: ctx[2]
+    }
+  });
+  gridcell.$on("mousedown", ctx[18]);
+  gridcell.$on("navigate", ctx[19]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -30565,6 +30813,12 @@ function create_else_block7(ctx) {
     },
     p(ctx2, dirty) {
       const gridcell_changes = {};
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
       if (dirty & 4)
         gridcell_changes.column = ctx2[2];
       gridcell.$set(gridcell_changes);
@@ -30589,12 +30843,16 @@ function create_if_block_52(ctx) {
   let current;
   gridlistcell = new GridListCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  gridlistcell.$on("mousedown", ctx[8]);
+  gridlistcell.$on("mousedown", ctx[16]);
+  gridlistcell.$on("navigate", ctx[17]);
   return {
     c() {
       create_component(gridlistcell.$$.fragment);
@@ -30605,6 +30863,12 @@ function create_if_block_52(ctx) {
     },
     p(ctx2, dirty) {
       const gridlistcell_changes = {};
+      if (dirty & 32)
+        gridlistcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridlistcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridlistcell_changes.colindex = ctx2[4];
       if (dirty & 1)
         gridlistcell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30633,12 +30897,16 @@ function create_if_block_43(ctx) {
   let current;
   gridlinkcell = new GridLinkCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  gridlinkcell.$on("mousedown", ctx[7]);
+  gridlinkcell.$on("mousedown", ctx[14]);
+  gridlinkcell.$on("navigate", ctx[15]);
   return {
     c() {
       create_component(gridlinkcell.$$.fragment);
@@ -30649,6 +30917,12 @@ function create_if_block_43(ctx) {
     },
     p(ctx2, dirty) {
       const gridlinkcell_changes = {};
+      if (dirty & 32)
+        gridlinkcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridlinkcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridlinkcell_changes.colindex = ctx2[4];
       if (dirty & 1)
         gridlinkcell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30677,12 +30951,16 @@ function create_if_block_35(ctx) {
   let current;
   griddatecell = new GridDateCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  griddatecell.$on("mousedown", ctx[6]);
+  griddatecell.$on("mousedown", ctx[12]);
+  griddatecell.$on("navigate", ctx[13]);
   return {
     c() {
       create_component(griddatecell.$$.fragment);
@@ -30693,6 +30971,12 @@ function create_if_block_35(ctx) {
     },
     p(ctx2, dirty) {
       const griddatecell_changes = {};
+      if (dirty & 32)
+        griddatecell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        griddatecell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        griddatecell_changes.colindex = ctx2[4];
       if (dirty & 1)
         griddatecell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30721,12 +31005,16 @@ function create_if_block_26(ctx) {
   let current;
   gridnumbercell = new GridNumberCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  gridnumbercell.$on("mousedown", ctx[5]);
+  gridnumbercell.$on("mousedown", ctx[10]);
+  gridnumbercell.$on("navigate", ctx[11]);
   return {
     c() {
       create_component(gridnumbercell.$$.fragment);
@@ -30737,6 +31025,12 @@ function create_if_block_26(ctx) {
     },
     p(ctx2, dirty) {
       const gridnumbercell_changes = {};
+      if (dirty & 32)
+        gridnumbercell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridnumbercell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridnumbercell_changes.colindex = ctx2[4];
       if (dirty & 1)
         gridnumbercell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30765,12 +31059,16 @@ function create_if_block_112(ctx) {
   let current;
   gridbooleancell = new GridBooleanCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  gridbooleancell.$on("mousedown", ctx[4]);
+  gridbooleancell.$on("mousedown", ctx[8]);
+  gridbooleancell.$on("navigate", ctx[9]);
   return {
     c() {
       create_component(gridbooleancell.$$.fragment);
@@ -30781,6 +31079,12 @@ function create_if_block_112(ctx) {
     },
     p(ctx2, dirty) {
       const gridbooleancell_changes = {};
+      if (dirty & 32)
+        gridbooleancell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridbooleancell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridbooleancell_changes.colindex = ctx2[4];
       if (dirty & 1)
         gridbooleancell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30809,12 +31113,16 @@ function create_if_block23(ctx) {
   let current;
   gridtextcell = new GridTextCell_default({
     props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
       value: ctx[0],
       onChange: ctx[1],
       column: ctx[2]
     }
   });
-  gridtextcell.$on("mousedown", ctx[3]);
+  gridtextcell.$on("mousedown", ctx[6]);
+  gridtextcell.$on("navigate", ctx[7]);
   return {
     c() {
       create_component(gridtextcell.$$.fragment);
@@ -30825,6 +31133,12 @@ function create_if_block23(ctx) {
     },
     p(ctx2, dirty) {
       const gridtextcell_changes = {};
+      if (dirty & 32)
+        gridtextcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridtextcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridtextcell_changes.colindex = ctx2[4];
       if (dirty & 1)
         gridtextcell_changes.value = ctx2[0];
       if (dirty & 2)
@@ -30848,7 +31162,7 @@ function create_if_block23(ctx) {
     }
   };
 }
-function create_fragment78(ctx) {
+function create_fragment77(ctx) {
   let show_if;
   let show_if_1;
   let show_if_2;
@@ -30959,29 +31273,53 @@ function create_fragment78(ctx) {
     }
   };
 }
-function instance78($$self, $$props, $$invalidate) {
+function instance77($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
   function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
     bubble.call(this, $$self, event);
   }
   function mousedown_handler_1(event) {
     bubble.call(this, $$self, event);
   }
+  function navigate_handler_1(event) {
+    bubble.call(this, $$self, event);
+  }
   function mousedown_handler_2(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_2(event) {
     bubble.call(this, $$self, event);
   }
   function mousedown_handler_3(event) {
     bubble.call(this, $$self, event);
   }
+  function navigate_handler_3(event) {
+    bubble.call(this, $$self, event);
+  }
   function mousedown_handler_4(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_4(event) {
     bubble.call(this, $$self, event);
   }
   function mousedown_handler_5(event) {
     bubble.call(this, $$self, event);
   }
+  function navigate_handler_5(event) {
+    bubble.call(this, $$self, event);
+  }
   function mousedown_handler_6(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_6(event) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
@@ -30991,24 +31329,47 @@ function instance78($$self, $$props, $$invalidate) {
       $$invalidate(1, onChange = $$props2.onChange);
     if ("column" in $$props2)
       $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
   };
   return [
     value,
     onChange,
     column,
+    rowindex,
+    colindex,
+    selected,
     mousedown_handler,
+    navigate_handler,
     mousedown_handler_1,
+    navigate_handler_1,
     mousedown_handler_2,
+    navigate_handler_2,
     mousedown_handler_3,
+    navigate_handler_3,
     mousedown_handler_4,
+    navigate_handler_4,
     mousedown_handler_5,
-    mousedown_handler_6
+    navigate_handler_5,
+    mousedown_handler_6,
+    navigate_handler_6
   ];
 }
 var GridTypedCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance78, create_fragment78, safe_not_equal, { value: 0, onChange: 1, column: 2 });
+    init(this, options, instance77, create_fragment77, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
   }
 };
 var GridTypedCell_default = GridTypedCell;
@@ -31087,23 +31448,25 @@ function menuOnContextMenu(event, menu) {
 }
 
 // src/views/Table/components/DataGrid/GridCellGroup.svelte
-function add_css44(target) {
+function add_css43(target) {
   append_styles(target, "svelte-18nxcii", "div.svelte-18nxcii{display:flex}.header.svelte-18nxcii{position:sticky;top:0}");
 }
-function create_fragment79(ctx) {
+function create_fragment78(ctx) {
   let div;
   let current;
   let mounted;
   let dispose;
-  const default_slot_template = ctx[2].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[1], null);
+  const default_slot_template = ctx[3].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
   return {
     c() {
       div = element("div");
       if (default_slot)
         default_slot.c();
+      attr(div, "role", "row");
+      attr(div, "aria-rowindex", ctx[0]);
       attr(div, "class", "svelte-18nxcii");
-      toggle_class(div, "header", ctx[0]);
+      toggle_class(div, "header", ctx[1]);
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -31113,20 +31476,23 @@ function create_fragment79(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "mouseover", ctx[3]),
-          listen(div, "focus", ctx[4])
+          listen(div, "mouseover", ctx[4]),
+          listen(div, "focus", ctx[5])
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 2)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[1], !current ? get_all_dirty_from_scope(ctx2[1]) : get_slot_changes(default_slot_template, ctx2[1], dirty, null), null);
+        if (default_slot.p && (!current || dirty & 4)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
         }
       }
       if (!current || dirty & 1) {
-        toggle_class(div, "header", ctx2[0]);
+        attr(div, "aria-rowindex", ctx2[0]);
+      }
+      if (!current || dirty & 2) {
+        toggle_class(div, "header", ctx2[1]);
       }
     },
     i(local) {
@@ -31149,8 +31515,9 @@ function create_fragment79(ctx) {
     }
   };
 }
-function instance79($$self, $$props, $$invalidate) {
+function instance78($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
+  let { index } = $$props;
   let { header = false } = $$props;
   function mouseover_handler(event) {
     bubble.call(this, $$self, event);
@@ -31159,17 +31526,19 @@ function instance79($$self, $$props, $$invalidate) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
+    if ("index" in $$props2)
+      $$invalidate(0, index = $$props2.index);
     if ("header" in $$props2)
-      $$invalidate(0, header = $$props2.header);
+      $$invalidate(1, header = $$props2.header);
     if ("$$scope" in $$props2)
-      $$invalidate(1, $$scope = $$props2.$$scope);
+      $$invalidate(2, $$scope = $$props2.$$scope);
   };
-  return [header, $$scope, slots, mouseover_handler, focus_handler];
+  return [index, header, $$scope, slots, mouseover_handler, focus_handler];
 }
 var GridCellGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance79, create_fragment79, safe_not_equal, { header: 0 }, add_css44);
+    init(this, options, instance78, create_fragment78, safe_not_equal, { index: 0, header: 1 }, add_css43);
   }
 };
 var GridCellGroup_default = GridCellGroup;
@@ -31178,6 +31547,7 @@ var GridCellGroup_default = GridCellGroup;
 function get_each_context11(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[8] = list[i2];
+  child_ctx[10] = i2;
   return child_ctx;
 }
 function create_read_slot7(ctx) {
@@ -31275,6 +31645,8 @@ function create_each_block11(ctx) {
   }
   gridcell = new GridCell_default({
     props: {
+      colindex: ctx[10] + 2,
+      rowindex: 1,
       column: ctx[8],
       resizable: true,
       onResize: func7,
@@ -31332,6 +31704,8 @@ function create_default_slot21(ctx) {
   let current;
   gridcell = new GridCell_default({
     props: {
+      colindex: 1,
+      rowindex: 1,
       column: {
         field: "",
         width: 60,
@@ -31418,11 +31792,12 @@ function create_default_slot21(ctx) {
     }
   };
 }
-function create_fragment80(ctx) {
+function create_fragment79(ctx) {
   let gridcellgroup;
   let current;
   gridcellgroup = new GridCellGroup_default({
     props: {
+      index: 1,
       header: true,
       $$slots: { default: [create_default_slot21] },
       $$scope: { ctx }
@@ -31458,7 +31833,7 @@ function create_fragment80(ctx) {
     }
   };
 }
-function instance80($$self, $$props, $$invalidate) {
+function instance79($$self, $$props, $$invalidate) {
   let { columns } = $$props;
   let { onResize } = $$props;
   let { onFinalizeResize } = $$props;
@@ -31505,7 +31880,7 @@ function instance80($$self, $$props, $$invalidate) {
 var GridHeader = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance80, create_fragment80, safe_not_equal, {
+    init(this, options, instance79, create_fragment79, safe_not_equal, {
       columns: 0,
       onResize: 1,
       onFinalizeResize: 2,
@@ -31516,10 +31891,11 @@ var GridHeader = class extends SvelteComponent {
 var GridHeader_default = GridHeader;
 
 // src/views/Table/components/DataGrid/GridRow.svelte
-var import_obsidian31 = __toModule(require("obsidian"));
+var import_obsidian32 = __toModule(require("obsidian"));
 function get_each_context12(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[13] = list[i2];
+  child_ctx[15] = list[i2];
+  child_ctx[17] = i2;
   return child_ctx;
 }
 function create_read_slot8(ctx) {
@@ -31528,7 +31904,7 @@ function create_read_slot8(ctx) {
   textlabel = new TextLabel_default({
     props: {
       slot: "read",
-      value: ctx[1].toString()
+      value: (ctx[1] - 1).toString()
     }
   });
   return {
@@ -31542,7 +31918,7 @@ function create_read_slot8(ctx) {
     p(ctx2, dirty) {
       const textlabel_changes = {};
       if (dirty & 2)
-        textlabel_changes.value = ctx2[1].toString();
+        textlabel_changes.value = (ctx2[1] - 1).toString();
       textlabel.$set(textlabel_changes);
     },
     i(local) {
@@ -31567,8 +31943,8 @@ function create_hover_slot(ctx) {
     props: { slot: "hover", icon: "link", size: "sm" }
   });
   iconbutton.$on("click", function() {
-    if (is_function(ctx[5]))
-      ctx[5].apply(this, arguments);
+    if (is_function(ctx[6]))
+      ctx[6].apply(this, arguments);
   });
   return {
     c() {
@@ -31600,19 +31976,23 @@ function create_each_block12(ctx) {
   let gridtypedcell;
   let current;
   function func7(...args) {
-    return ctx[11](ctx[13], ...args);
+    return ctx[12](ctx[15], ...args);
   }
   gridtypedcell = new GridTypedCell_default({
     props: {
-      value: ctx[2][ctx[13].field],
-      column: ctx[13],
+      selected: ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2,
+      rowindex: ctx[1] + 2,
+      colindex: ctx[17] + 2,
+      value: ctx[2][ctx[15].field],
+      column: ctx[15],
       onChange: func7
     }
   });
   gridtypedcell.$on("mousedown", function() {
-    if (is_function(ctx[7](ctx[13], ctx[2][ctx[13].field])))
-      ctx[7](ctx[13], ctx[2][ctx[13].field]).apply(this, arguments);
+    if (is_function(ctx[8](ctx[15], ctx[2][ctx[15].field])))
+      ctx[8](ctx[15], ctx[2][ctx[15].field]).apply(this, arguments);
   });
+  gridtypedcell.$on("navigate", ctx[13]);
   return {
     c() {
       create_component(gridtypedcell.$$.fragment);
@@ -31624,11 +32004,15 @@ function create_each_block12(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const gridtypedcell_changes = {};
+      if (dirty & 18)
+        gridtypedcell_changes.selected = ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2;
+      if (dirty & 2)
+        gridtypedcell_changes.rowindex = ctx[1] + 2;
       if (dirty & 12)
-        gridtypedcell_changes.value = ctx[2][ctx[13].field];
+        gridtypedcell_changes.value = ctx[2][ctx[15].field];
       if (dirty & 8)
-        gridtypedcell_changes.column = ctx[13];
-      if (dirty & 29)
+        gridtypedcell_changes.column = ctx[15];
+      if (dirty & 45)
         gridtypedcell_changes.onChange = func7;
       gridtypedcell.$set(gridtypedcell_changes);
     },
@@ -31654,13 +32038,14 @@ function create_default_slot22(ctx) {
   let current;
   gridcell = new GridCell_default({
     props: {
+      rowindex: 1,
+      colindex: 1,
       column: {
         field: "",
         header: true,
         width: 60,
         editable: false
       },
-      columnHeader: true,
       rowHeader: true,
       $$slots: {
         hover: [create_hover_slot],
@@ -31669,7 +32054,7 @@ function create_default_slot22(ctx) {
       $$scope: { ctx }
     }
   });
-  gridcell.$on("mousedown", ctx[6]());
+  gridcell.$on("mousedown", ctx[7]());
   let each_value = ctx[3];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
@@ -31698,11 +32083,11 @@ function create_default_slot22(ctx) {
     },
     p(ctx2, dirty) {
       const gridcell_changes = {};
-      if (dirty & 65570) {
+      if (dirty & 262210) {
         gridcell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcell.$set(gridcell_changes);
-      if (dirty & 157) {
+      if (dirty & 319) {
         each_value = ctx2[3];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
@@ -31751,16 +32136,17 @@ function create_default_slot22(ctx) {
     }
   };
 }
-function create_fragment81(ctx) {
+function create_fragment80(ctx) {
   let gridcellgroup;
   let current;
   gridcellgroup = new GridCellGroup_default({
     props: {
+      index: ctx[1],
       $$slots: { default: [create_default_slot22] },
       $$scope: { ctx }
     }
   });
-  gridcellgroup.$on("mouseover", ctx[8]);
+  gridcellgroup.$on("mouseover", ctx[9]);
   return {
     c() {
       create_component(gridcellgroup.$$.fragment);
@@ -31771,7 +32157,9 @@ function create_fragment81(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcellgroup_changes = {};
-      if (dirty & 65599) {
+      if (dirty & 2)
+        gridcellgroup_changes.index = ctx2[1];
+      if (dirty & 262271) {
         gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcellgroup.$set(gridcellgroup_changes);
@@ -31791,13 +32179,14 @@ function create_fragment81(ctx) {
     }
   };
 }
-function instance81($$self, $$props, $$invalidate) {
+function instance80($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(12, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
   let { rowId } = $$props;
   let { index } = $$props;
   let { row } = $$props;
   let { columns } = $$props;
+  let { activeCell } = $$props;
   setContext("sourcePath", row["path"]);
   let { onRowChange } = $$props;
   let { onRowMenu } = $$props;
@@ -31830,7 +32219,7 @@ function instance81($$self, $$props, $$invalidate) {
     const targetEl = event.target;
     if (targetEl instanceof HTMLDivElement) {
       const file = $app.vault.getAbstractFileByPath(rowId);
-      if (file instanceof import_obsidian31.TFile) {
+      if (file instanceof import_obsidian32.TFile) {
         $app.workspace.trigger("hover-link", {
           event,
           source: "obsidian-projects-table-view",
@@ -31848,6 +32237,9 @@ function instance81($$self, $$props, $$invalidate) {
       return draft;
     }));
   };
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("rowId" in $$props2)
       $$invalidate(0, rowId = $$props2.rowId);
@@ -31857,20 +32249,23 @@ function instance81($$self, $$props, $$invalidate) {
       $$invalidate(2, row = $$props2.row);
     if ("columns" in $$props2)
       $$invalidate(3, columns = $$props2.columns);
+    if ("activeCell" in $$props2)
+      $$invalidate(4, activeCell = $$props2.activeCell);
     if ("onRowChange" in $$props2)
-      $$invalidate(4, onRowChange = $$props2.onRowChange);
+      $$invalidate(5, onRowChange = $$props2.onRowChange);
     if ("onRowMenu" in $$props2)
-      $$invalidate(9, onRowMenu = $$props2.onRowMenu);
+      $$invalidate(10, onRowMenu = $$props2.onRowMenu);
     if ("onCellMenu" in $$props2)
-      $$invalidate(10, onCellMenu = $$props2.onCellMenu);
+      $$invalidate(11, onCellMenu = $$props2.onCellMenu);
     if ("onNavigate" in $$props2)
-      $$invalidate(5, onNavigate = $$props2.onNavigate);
+      $$invalidate(6, onNavigate = $$props2.onNavigate);
   };
   return [
     rowId,
     index,
     row,
     columns,
+    activeCell,
     onRowChange,
     onNavigate,
     handleHeaderClick,
@@ -31878,58 +32273,62 @@ function instance81($$self, $$props, $$invalidate) {
     handleHoverLink,
     onRowMenu,
     onCellMenu,
-    func7
+    func7,
+    navigate_handler
   ];
 }
 var GridRow = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance81, create_fragment81, safe_not_equal, {
+    init(this, options, instance80, create_fragment80, safe_not_equal, {
       rowId: 0,
       index: 1,
       row: 2,
       columns: 3,
-      onRowChange: 4,
-      onRowMenu: 9,
-      onCellMenu: 10,
-      onNavigate: 5
+      activeCell: 4,
+      onRowChange: 5,
+      onRowMenu: 10,
+      onCellMenu: 11,
+      onNavigate: 6
     });
   }
 };
 var GridRow_default = GridRow;
 
 // src/views/Table/components/DataGrid/DataGrid.svelte
-function add_css45(target) {
+function add_css44(target) {
   append_styles(target, "svelte-w5i4x9", "div.svelte-w5i4x9{display:inline-block}span.svelte-w5i4x9{padding:4px;position:sticky;left:0}");
 }
 function get_each_context13(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[29] = list[i2].rowId;
-  child_ctx[30] = list[i2].row;
-  child_ctx[32] = i2;
+  child_ctx[32] = list[i2].rowId;
+  child_ctx[33] = list[i2].row;
+  child_ctx[35] = i2;
   return child_ctx;
 }
 function create_each_block13(ctx) {
   let gridrow;
   let current;
   function func_4(...args) {
-    return ctx[26](ctx[30], ...args);
+    return ctx[28](ctx[33], ...args);
   }
   function func_5(...args) {
-    return ctx[27](ctx[29], ctx[30], ...args);
+    return ctx[29](ctx[32], ctx[33], ...args);
   }
   gridrow = new GridRow_default({
     props: {
-      columns: ctx[8],
-      index: ctx[32] + 1,
-      rowId: ctx[29],
-      row: ctx[30],
+      columns: ctx[9],
+      index: ctx[35] + 2,
+      rowId: ctx[32],
+      row: ctx[33],
+      activeCell: ctx[6],
       onRowChange: ctx[4],
-      onRowMenu: ctx[25],
+      onRowMenu: ctx[27],
       onCellMenu: func_4,
       onNavigate: func_5
     }
   });
+  gridrow.$on("navigate", ctx[30]);
   return {
     c() {
       create_component(gridrow.$$.fragment);
@@ -31941,17 +32340,19 @@ function create_each_block13(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const gridrow_changes = {};
+      if (dirty[0] & 512)
+        gridrow_changes.columns = ctx[9];
       if (dirty[0] & 256)
-        gridrow_changes.columns = ctx[8];
-      if (dirty[0] & 128)
-        gridrow_changes.rowId = ctx[29];
-      if (dirty[0] & 128)
-        gridrow_changes.row = ctx[30];
+        gridrow_changes.rowId = ctx[32];
+      if (dirty[0] & 256)
+        gridrow_changes.row = ctx[33];
+      if (dirty[0] & 64)
+        gridrow_changes.activeCell = ctx[6];
       if (dirty[0] & 16)
         gridrow_changes.onRowChange = ctx[4];
-      if (dirty[0] & 128)
+      if (dirty[0] & 256)
         gridrow_changes.onCellMenu = func_4;
-      if (dirty[0] & 160)
+      if (dirty[0] & 288)
         gridrow_changes.onNavigate = func_5;
       gridrow.$set(gridrow_changes);
     },
@@ -31980,7 +32381,7 @@ function create_if_block24(ctx) {
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[28]);
+  button.$on("click", ctx[31]);
   return {
     c() {
       create_component(button.$$.fragment);
@@ -31991,7 +32392,7 @@ function create_if_block24(ctx) {
     },
     p(ctx2, dirty) {
       const button_changes = {};
-      if (dirty[0] & 64 | dirty[1] & 4) {
+      if (dirty[0] & 128 | dirty[1] & 32) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -32014,7 +32415,7 @@ function create_if_block24(ctx) {
 function create_default_slot_112(ctx) {
   let icon;
   let t0;
-  let t1_value = ctx[6]("components.data-grid.row.add") + "";
+  let t1_value = ctx[7]("components.data-grid.row.add") + "";
   let t1;
   let current;
   icon = new Icon_default({ props: { name: "plus" } });
@@ -32031,7 +32432,7 @@ function create_default_slot_112(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if ((!current || dirty[0] & 64) && t1_value !== (t1_value = ctx2[6]("components.data-grid.row.add") + ""))
+      if ((!current || dirty[0] & 128) && t1_value !== (t1_value = ctx2[7]("components.data-grid.row.add") + ""))
         set_data(t1, t1_value);
     },
     i(local) {
@@ -32064,7 +32465,7 @@ function create_default_slot23(ctx) {
       span = element("span");
       if (if_block)
         if_block.c();
-      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[8][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
+      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
       attr(span, "class", "svelte-w5i4x9");
     },
     m(target, anchor) {
@@ -32094,7 +32495,7 @@ function create_default_slot23(ctx) {
         });
         check_outros();
       }
-      if (!current || dirty[0] & 256 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[8][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
+      if (!current || dirty[0] & 512 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
         attr(span, "style", span_style_value);
       }
     },
@@ -32116,22 +32517,24 @@ function create_default_slot23(ctx) {
     }
   };
 }
-function create_fragment82(ctx) {
+function create_fragment81(ctx) {
   let div;
   let gridheader;
   let t0;
   let t1;
   let gridcellgroup;
+  let div_aria_colcount_value;
+  let div_aria_rowcount_value;
   let current;
   gridheader = new GridHeader_default({
     props: {
-      columns: ctx[8],
-      onResize: ctx[22],
-      onFinalizeResize: ctx[23],
-      onColumnMenu: ctx[24]
+      columns: ctx[9],
+      onResize: ctx[24],
+      onFinalizeResize: ctx[25],
+      onColumnMenu: ctx[26]
     }
   });
-  let each_value = ctx[7];
+  let each_value = ctx[8];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     each_blocks[i2] = create_each_block13(get_each_context13(ctx, each_value, i2));
@@ -32141,6 +32544,7 @@ function create_fragment82(ctx) {
   });
   gridcellgroup = new GridCellGroup_default({
     props: {
+      index: ctx[8].length + 2,
       $$slots: { default: [create_default_slot23] },
       $$scope: { ctx }
     }
@@ -32155,6 +32559,9 @@ function create_fragment82(ctx) {
       }
       t1 = space();
       create_component(gridcellgroup.$$.fragment);
+      attr(div, "role", "grid");
+      attr(div, "aria-colcount", div_aria_colcount_value = ctx[9].length + 1);
+      attr(div, "aria-rowcount", div_aria_rowcount_value = ctx[8].length + 2);
       attr(div, "class", "svelte-w5i4x9");
     },
     m(target, anchor) {
@@ -32170,15 +32577,15 @@ function create_fragment82(ctx) {
     },
     p(ctx2, dirty) {
       const gridheader_changes = {};
-      if (dirty[0] & 256)
-        gridheader_changes.columns = ctx2[8];
+      if (dirty[0] & 512)
+        gridheader_changes.columns = ctx2[9];
       if (dirty[0] & 1)
-        gridheader_changes.onResize = ctx2[22];
+        gridheader_changes.onResize = ctx2[24];
       if (dirty[0] & 4)
-        gridheader_changes.onFinalizeResize = ctx2[23];
+        gridheader_changes.onFinalizeResize = ctx2[25];
       gridheader.$set(gridheader_changes);
-      if (dirty[0] & 3504) {
-        each_value = ctx2[7];
+      if (dirty[0] & 15216) {
+        each_value = ctx2[8];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
           const child_ctx = get_each_context13(ctx2, each_value, i2);
@@ -32199,10 +32606,18 @@ function create_fragment82(ctx) {
         check_outros();
       }
       const gridcellgroup_changes = {};
-      if (dirty[0] & 330 | dirty[1] & 4) {
+      if (dirty[0] & 256)
+        gridcellgroup_changes.index = ctx2[8].length + 2;
+      if (dirty[0] & 650 | dirty[1] & 32) {
         gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcellgroup.$set(gridcellgroup_changes);
+      if (!current || dirty[0] & 512 && div_aria_colcount_value !== (div_aria_colcount_value = ctx2[9].length + 1)) {
+        attr(div, "aria-colcount", div_aria_colcount_value);
+      }
+      if (!current || dirty[0] & 256 && div_aria_rowcount_value !== (div_aria_rowcount_value = ctx2[8].length + 2)) {
+        attr(div, "aria-rowcount", div_aria_rowcount_value);
+      }
     },
     i(local) {
       if (current)
@@ -32232,13 +32647,13 @@ function create_fragment82(ctx) {
     }
   };
 }
-function instance82($$self, $$props, $$invalidate) {
+function instance81($$self, $$props, $$invalidate) {
   let t3;
   let visibleColumns;
   let sortedColumns;
   let sortedRows;
   let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(21, $i18n = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(23, $i18n = $$value));
   let { columns } = $$props;
   let { rows } = $$props;
   let { sortModel } = $$props;
@@ -32253,8 +32668,9 @@ function instance82($$self, $$props, $$invalidate) {
   let { onColumnHide } = $$props;
   let { onRowDelete } = $$props;
   let { onRowEdit } = $$props;
+  let activeCell = [3, 3];
   function createColumnMenu(column) {
-    const menu = new import_obsidian33.Menu();
+    const menu = new import_obsidian34.Menu();
     if (column.editable && !readonly) {
       menu.addItem((item) => {
         item.setTitle(t3("components.data-grid.column.rename")).setIcon("edit").onClick(() => onColumnRename(column.field));
@@ -32279,7 +32695,7 @@ function instance82($$self, $$props, $$invalidate) {
     return menu;
   }
   function createRowMenu(rowId, row) {
-    const menu = new import_obsidian33.Menu();
+    const menu = new import_obsidian34.Menu();
     menu.addItem((item) => {
       item.setTitle(t3("components.data-grid.row.edit")).setIcon("edit").onClick(() => onRowEdit(rowId, row));
     });
@@ -32292,7 +32708,7 @@ function instance82($$self, $$props, $$invalidate) {
     return menu;
   }
   function createCellMenu(rowId, row, column, value) {
-    const menu = new import_obsidian33.Menu();
+    const menu = new import_obsidian34.Menu();
     if (column.editable) {
       menu.addItem((item) => {
         item.setTitle(t3("components.data-grid.cell.clear")).setIcon("x").onClick(() => {
@@ -32305,6 +32721,7 @@ function instance82($$self, $$props, $$invalidate) {
     }
     return menu;
   }
+  const clamp = (num, min2, max2) => Math.min(Math.max(num, min2), max2);
   const func7 = (name, width) => {
     $$invalidate(0, columns = columns.map((column) => column.field === name ? __spreadProps(__spreadValues({}, column), { width }) : column));
   };
@@ -32315,18 +32732,24 @@ function instance82($$self, $$props, $$invalidate) {
   const func_3 = (rowId, row) => createRowMenu(rowId, row);
   const func_4 = (row, rowId, column, value) => createCellMenu(rowId, row, column, value);
   const func_5 = (rowId, row, event) => onRowNavigate(rowId, row, event.ctrlKey || event.metaKey);
+  const navigate_handler = ({ detail: cell }) => {
+    $$invalidate(6, activeCell = [
+      clamp(cell[0], 2, sortedColumns.length + 1),
+      clamp(cell[1], 4, sortedRows.length + 3)
+    ]);
+  };
   const click_handler = () => onRowAdd();
   $$self.$$set = ($$props2) => {
     if ("columns" in $$props2)
       $$invalidate(0, columns = $$props2.columns);
     if ("rows" in $$props2)
-      $$invalidate(12, rows = $$props2.rows);
+      $$invalidate(14, rows = $$props2.rows);
     if ("sortModel" in $$props2)
-      $$invalidate(13, sortModel = $$props2.sortModel);
+      $$invalidate(15, sortModel = $$props2.sortModel);
     if ("readonly" in $$props2)
       $$invalidate(1, readonly = $$props2.readonly);
     if ("onSortModelChange" in $$props2)
-      $$invalidate(14, onSortModelChange = $$props2.onSortModelChange);
+      $$invalidate(16, onSortModelChange = $$props2.onSortModelChange);
     if ("onColumnResize" in $$props2)
       $$invalidate(2, onColumnResize = $$props2.onColumnResize);
     if ("onRowAdd" in $$props2)
@@ -32336,32 +32759,32 @@ function instance82($$self, $$props, $$invalidate) {
     if ("onRowNavigate" in $$props2)
       $$invalidate(5, onRowNavigate = $$props2.onRowNavigate);
     if ("onColumnRename" in $$props2)
-      $$invalidate(15, onColumnRename = $$props2.onColumnRename);
+      $$invalidate(17, onColumnRename = $$props2.onColumnRename);
     if ("onColumnDelete" in $$props2)
-      $$invalidate(16, onColumnDelete = $$props2.onColumnDelete);
+      $$invalidate(18, onColumnDelete = $$props2.onColumnDelete);
     if ("onColumnHide" in $$props2)
-      $$invalidate(17, onColumnHide = $$props2.onColumnHide);
+      $$invalidate(19, onColumnHide = $$props2.onColumnHide);
     if ("onRowDelete" in $$props2)
-      $$invalidate(18, onRowDelete = $$props2.onRowDelete);
+      $$invalidate(20, onRowDelete = $$props2.onRowDelete);
     if ("onRowEdit" in $$props2)
-      $$invalidate(19, onRowEdit = $$props2.onRowEdit);
+      $$invalidate(21, onRowEdit = $$props2.onRowEdit);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty[0] & 2097152) {
+    if ($$self.$$.dirty[0] & 8388608) {
       $:
-        $$invalidate(6, t3 = $i18n.t);
+        $$invalidate(7, t3 = $i18n.t);
     }
     if ($$self.$$.dirty[0] & 1) {
       $:
-        $$invalidate(20, visibleColumns = columns.filter((column) => !column.hide));
+        $$invalidate(22, visibleColumns = columns.filter((column) => !column.hide));
     }
-    if ($$self.$$.dirty[0] & 1048576) {
+    if ($$self.$$.dirty[0] & 4194304) {
       $:
-        $$invalidate(8, sortedColumns = sortColumns(visibleColumns));
+        $$invalidate(9, sortedColumns = sortColumns(visibleColumns));
     }
-    if ($$self.$$.dirty[0] & 12288) {
+    if ($$self.$$.dirty[0] & 49152) {
       $:
-        $$invalidate(7, sortedRows = sortRows(rows, sortModel));
+        $$invalidate(8, sortedRows = sortRows(rows, sortModel));
     }
   };
   return [
@@ -32371,12 +32794,14 @@ function instance82($$self, $$props, $$invalidate) {
     onRowAdd,
     onRowChange,
     onRowNavigate,
+    activeCell,
     t3,
     sortedRows,
     sortedColumns,
     createColumnMenu,
     createRowMenu,
     createCellMenu,
+    clamp,
     rows,
     sortModel,
     onSortModelChange,
@@ -32393,34 +32818,35 @@ function instance82($$self, $$props, $$invalidate) {
     func_3,
     func_4,
     func_5,
+    navigate_handler,
     click_handler
   ];
 }
 var DataGrid = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance82, create_fragment82, safe_not_equal, {
+    init(this, options, instance81, create_fragment81, safe_not_equal, {
       columns: 0,
-      rows: 12,
-      sortModel: 13,
+      rows: 14,
+      sortModel: 15,
       readonly: 1,
-      onSortModelChange: 14,
+      onSortModelChange: 16,
       onColumnResize: 2,
       onRowAdd: 3,
       onRowChange: 4,
       onRowNavigate: 5,
-      onColumnRename: 15,
-      onColumnDelete: 16,
-      onColumnHide: 17,
-      onRowDelete: 18,
-      onRowEdit: 19
-    }, add_css45, [-1, -1]);
+      onColumnRename: 17,
+      onColumnDelete: 18,
+      onColumnHide: 19,
+      onRowDelete: 20,
+      onRowEdit: 21
+    }, add_css44, [-1, -1]);
   }
 };
 var DataGrid_default = DataGrid;
 
 // src/views/Table/components/SwitchSelect/SwitchSelect.svelte
-function add_css46(target) {
+function add_css45(target) {
   append_styles(target, "svelte-mhc3z6", "div.svelte-mhc3z6{align-items:center;display:inline-flex;text-align:start}");
 }
 function get_each_context14(ctx, list, i2) {
@@ -32545,7 +32971,7 @@ function create_default_slot24(ctx) {
     }
   };
 }
-function create_fragment83(ctx) {
+function create_fragment82(ctx) {
   let div;
   let t0;
   let t1;
@@ -32617,7 +33043,7 @@ function create_fragment83(ctx) {
     }
   };
 }
-function instance83($$self, $$props, $$invalidate) {
+function instance82($$self, $$props, $$invalidate) {
   let { items } = $$props;
   let { label } = $$props;
   let { onChange } = $$props;
@@ -32655,13 +33081,13 @@ function instance83($$self, $$props, $$invalidate) {
 var SwitchSelect = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance83, create_fragment83, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css46);
+    init(this, options, instance82, create_fragment82, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css45);
   }
 };
 var SwitchSelect_default = SwitchSelect;
 
 // src/views/Table/TableView.svelte
-function add_css47(target) {
+function add_css46(target) {
   append_styles(target, "svelte-16qlac6", "div.svelte-16qlac6{overflow:auto}");
 }
 function create_default_slot_113(ctx) {
@@ -32754,7 +33180,7 @@ function create_default_slot25(ctx) {
     }
   };
 }
-function create_fragment84(ctx) {
+function create_fragment83(ctx) {
   var _a, _b, _c;
   let toolbar;
   let t3;
@@ -32879,7 +33305,7 @@ var func6 = (column) => ({
   value: column.field,
   enabled: !column.hide
 });
-function instance84($$self, $$props, $$invalidate) {
+function instance83($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let fieldConfig;
@@ -32888,7 +33314,7 @@ function instance84($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(9, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(9, $app = $$value));
   var _a;
   let { project } = $$props;
   let { frame } = $$props;
@@ -32928,7 +33354,9 @@ function instance84($$self, $$props, $$invalidate) {
     }, field).open();
   };
   const func_6 = (field) => api2.deleteField(field);
-  const func_7 = (rowId, row) => api2.updateRecord({ id: rowId, values: row }, fields);
+  const func_7 = (rowId, row) => {
+    api2.updateRecord({ id: rowId, values: row }, fields);
+  };
   const func_8 = (rowId, row, openNew) => $app.workspace.openLinkText(rowId, "", openNew);
   const func_9 = (field, sort) => {
     onConfigChange(__spreadProps(__spreadValues({}, config), {
@@ -33013,23 +33441,23 @@ function instance84($$self, $$props, $$invalidate) {
 var TableView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance84, create_fragment84, safe_not_equal, {
+    init(this, options, instance83, create_fragment83, safe_not_equal, {
       project: 0,
       frame: 12,
       readonly: 1,
       api: 2,
       config: 3,
       onConfigChange: 4
-    }, add_css47);
+    }, add_css46);
   }
 };
 var TableView_default = TableView;
 
 // src/views/Custom/CustomView.svelte
-function add_css48(target) {
+function add_css47(target) {
   append_styles(target, "svelte-18l8rqt", "div.svelte-18l8rqt{width:100%;height:100%;padding:var(--size-4-3)}.noPadding.svelte-18l8rqt{padding:0}");
 }
-function create_fragment85(ctx) {
+function create_fragment84(ctx) {
   let div;
   let useCustomView_action;
   let mounted;
@@ -33070,7 +33498,7 @@ function create_fragment85(ctx) {
     }
   };
 }
-function instance85($$self, $$props, $$invalidate) {
+function instance84($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let createView;
@@ -33156,14 +33584,14 @@ function instance85($$self, $$props, $$invalidate) {
 var CustomView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance85, create_fragment85, safe_not_equal, { type: 4, frame: 5 }, add_css48);
+    init(this, options, instance84, create_fragment84, safe_not_equal, { type: 4, frame: 5 }, add_css47);
   }
 };
 var CustomView_default = CustomView;
 
 // src/views/Developer/DeveloperView.svelte
-var import_obsidian35 = __toModule(require("obsidian"));
-function add_css49(target) {
+var import_obsidian36 = __toModule(require("obsidian"));
+function add_css48(target) {
   append_styles(target, "svelte-qi93d1", "button.svelte-qi93d1{display:inline;width:auto}.container.svelte-qi93d1{padding:0 20%;overflow:auto}");
 }
 function create_default_slot_51(ctx) {
@@ -35338,7 +35766,7 @@ function create_default_slot26(ctx) {
     }
   };
 }
-function create_fragment86(ctx) {
+function create_fragment85(ctx) {
   let div;
   let typography0;
   let t0;
@@ -35647,9 +36075,9 @@ function create_fragment86(ctx) {
   };
 }
 var func_13 = (file) => file.path.split("/").slice(0, -1).join("/");
-function instance86($$self, $$props, $$invalidate) {
+function instance85($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app2, ($$value) => $$invalidate(8, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
   let btn1;
   let btn1Open = false;
   let btn2;
@@ -35666,9 +36094,9 @@ function instance86($$self, $$props, $$invalidate) {
     numberValue = value;
     $$invalidate(7, numberValue);
   }
-  const change_handler = ({ detail }) => new import_obsidian35.Notice(`Autocomplete changed: ${detail}`);
-  const func7 = (file) => file instanceof import_obsidian35.TFile ? file.basename : file.name;
-  const change_handler_1 = ({ detail }) => new import_obsidian35.Notice(`FileAutocomplete changed: ${detail}`);
+  const change_handler = ({ detail }) => new import_obsidian36.Notice(`Autocomplete changed: ${detail}`);
+  const func7 = (file) => file instanceof import_obsidian36.TFile ? file.basename : file.name;
+  const change_handler_1 = ({ detail }) => new import_obsidian36.Notice(`FileAutocomplete changed: ${detail}`);
   function button0_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       btn1 = $$value;
@@ -35724,13 +36152,13 @@ function instance86($$self, $$props, $$invalidate) {
 var DeveloperView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance86, create_fragment86, safe_not_equal, {}, add_css49);
+    init(this, options, instance85, create_fragment85, safe_not_equal, {}, add_css48);
   }
 };
 var DeveloperView_default = DeveloperView;
 
 // src/app/View.svelte
-function create_fragment87(ctx) {
+function create_fragment86(ctx) {
   let switch_instance;
   let switch_instance_anchor;
   let current;
@@ -35821,7 +36249,7 @@ function create_fragment87(ctx) {
     }
   };
 }
-function instance87($$self, $$props, $$invalidate) {
+function instance86($$self, $$props, $$invalidate) {
   let viewComponent;
   let $customViews;
   let $customViewsV2;
@@ -35874,7 +36302,7 @@ function instance87($$self, $$props, $$invalidate) {
 var View = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance87, create_fragment87, safe_not_equal, {
+    init(this, options, instance86, create_fragment86, safe_not_equal, {
       project: 0,
       view: 1,
       frame: 2,
@@ -35888,8 +36316,8 @@ var View_default = View;
 
 // src/app/view-api.ts
 var ViewApi = class {
-  constructor(app3, dataSource2, dataApi) {
-    this.app = app3;
+  constructor(app2, dataSource2, dataApi) {
+    this.app = app2;
     this.dataSource = dataSource2;
     this.dataApi = dataApi;
   }
@@ -35922,7 +36350,7 @@ var ViewApi = class {
 };
 
 // src/app/App.svelte
-function add_css50(target) {
+function add_css49(target) {
   append_styles(target, "svelte-2ssdmk", "*{box-sizing:border-box}.projects-container.svelte-2ssdmk{display:flex;flex-direction:column;height:100%}.projects-main.svelte-2ssdmk{flex:1;display:flex;flex-direction:column;min-height:0}");
 }
 function create_catch_block(ctx) {
@@ -36171,7 +36599,7 @@ function create_pending_block(ctx) {
     }
   };
 }
-function create_fragment88(ctx) {
+function create_fragment87(ctx) {
   var _a, _b;
   let div;
   let toolbar;
@@ -36258,7 +36686,7 @@ function create_fragment88(ctx) {
     }
   };
 }
-function instance88($$self, $$props, $$invalidate) {
+function instance87($$self, $$props, $$invalidate) {
   let projects;
   let selectedProject;
   let views;
@@ -36271,7 +36699,7 @@ function instance88($$self, $$props, $$invalidate) {
   let $dataFrame;
   component_subscribe($$self, dataSource, ($$value) => $$invalidate(3, $dataSource = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(11, $api = $$value));
-  component_subscribe($$self, app2, ($$value) => $$invalidate(12, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(12, $app = $$value));
   component_subscribe($$self, settings, ($$value) => $$invalidate(13, $settings = $$value));
   component_subscribe($$self, dataFrame, ($$value) => $$invalidate(6, $dataFrame = $$value));
   let querying;
@@ -36303,11 +36731,11 @@ function instance88($$self, $$props, $$invalidate) {
       settings.updateViewConfig(selectedProject.id, selectedView.id, config);
     }
   }
-  function resolveDataSource(project, app3) {
+  function resolveDataSource(project, app2) {
     if (project.dataview) {
-      return new DataviewDataSource(project);
+      return new DataviewDataSource(app2, project);
     }
-    return new FrontMatterDataSource(app3, project);
+    return new FrontMatterDataSource(app2, project);
   }
   const func7 = (projectId) => handleProjectChange(projectId);
   const func_14 = (viewId) => handleViewChange(viewId);
@@ -36372,17 +36800,17 @@ function instance88($$self, $$props, $$invalidate) {
     func_14
   ];
 }
-var App8 = class extends SvelteComponent {
+var App9 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance88, create_fragment88, safe_not_equal, {}, add_css50);
+    init(this, options, instance87, create_fragment87, safe_not_equal, {}, add_css49);
   }
 };
-var App_default = App8;
+var App_default = App9;
 
 // src/view.ts
 var VIEW_TYPE_PROJECTS = "obsidian-projects";
-var ProjectsView = class extends import_obsidian40.ItemView {
+var ProjectsView = class extends import_obsidian41.ItemView {
   constructor(leaf, plugin2) {
     super(leaf);
     this.plugin = plugin2;
@@ -36449,26 +36877,26 @@ var ProjectsView = class extends import_obsidian40.ItemView {
 };
 
 // src/events.ts
-var import_obsidian42 = __toModule(require("obsidian"));
+var import_obsidian43 = __toModule(require("obsidian"));
 var import_obsidian_dataview3 = __toModule(require_lib());
 function registerFileEvents(plugin2) {
   if (get_store_value(capabilities).dataview) {
     plugin2.registerEvent(plugin2.app.metadataCache.on("dataview:index-ready", () => {
     }));
     plugin2.registerEvent(plugin2.app.metadataCache.on("dataview:metadata-change", (type, file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian42.TFile) {
+      if (file instanceof import_obsidian43.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           switch (type) {
             case "update":
-              dataFrame.merge(yield source.queryOne(file));
+              dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
               break;
             case "delete":
               dataFrame.deleteRecord(file.path);
               break;
             case "rename":
               dataFrame.deleteRecord(oldPath);
-              dataFrame.merge(yield source.queryOne(file));
+              dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
               break;
           }
         }
@@ -36476,24 +36904,24 @@ function registerFileEvents(plugin2) {
     })));
   } else {
     plugin2.registerEvent(plugin2.app.vault.on("create", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian42.TFile) {
+      if (file instanceof import_obsidian43.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
-          dataFrame.merge(yield source.queryOne(file));
+          dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
         }
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("rename", (file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian42.TFile) {
+      if (file instanceof import_obsidian43.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(oldPath);
-          dataFrame.merge(yield source.queryOne(file));
+          dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
         }
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("delete", (file) => {
-      if (file instanceof import_obsidian42.TFile) {
+      if (file instanceof import_obsidian43.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(file.path);
@@ -36501,10 +36929,10 @@ function registerFileEvents(plugin2) {
       }
     }));
     plugin2.registerEvent(plugin2.app.metadataCache.on("changed", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian42.TFile) {
+      if (file instanceof import_obsidian43.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
-          dataFrame.merge(yield source.queryOne(file));
+          dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
         }
       }
     })));
@@ -36517,13 +36945,13 @@ import_dayjs7.default.extend(import_localizedFormat.default);
 var DEFAULT_SETTINGS = {
   projects: []
 };
-var ProjectsPlugin = class extends import_obsidian43.Plugin {
+var ProjectsPlugin = class extends import_obsidian44.Plugin {
   onload() {
     return __async(this, null, function* () {
       const t3 = get_store_value(i18n).t;
       this.registerView(VIEW_TYPE_PROJECTS, (leaf) => new ProjectsView(leaf, this));
       this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
-        if (file instanceof import_obsidian43.TFolder) {
+        if (file instanceof import_obsidian44.TFolder) {
           menu.addItem((item) => {
             item.setTitle(t3("menus.project.create.title")).setIcon("folder-plus").onClick(() => __async(this, null, function* () {
               const project = createProject();
@@ -36569,8 +36997,8 @@ var ProjectsPlugin = class extends import_obsidian43.Plugin {
       this.addRibbonIcon("layout", "Open projects", () => {
         this.activateView();
       });
-      (0, import_obsidian43.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
-      app2.set(this.app);
+      (0, import_obsidian44.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
+      app.set(this.app);
       plugin.set(this);
       settings.set(migrateAny(yield this.loadData()));
       registerFileEvents(this);

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e4a9ce046dc09b83",
+        "id": "a23b965bde93484d",
         "type": "tabs",
         "children": [
           {
-            "id": "be6d808b33d2766b",
+            "id": "cbdaadd55ab3b443",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-10-13.md",
+                "file": "Spaces/2-Area/运动与健康/氮泵.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,41 +21,15 @@
             }
           },
           {
-            "id": "83ffb4e0dffbef1a",
+            "id": "6f3ca8ce73515aec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2022-10-14.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc9a9c3614530e56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b55a7d66960f65ff",
-            "type": "leaf",
-            "state": {
-              "type": "repeating-notes-due-view",
+              "type": "keyboard-shortcuts-visualization",
               "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,9 +91,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           },
           {
@@ -128,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +111,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +145,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -218,17 +187,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "a4d1994dfc9f1870",
+  "active": "6f3ca8ce73515aec",
   "lastOpenFiles": [
-    "AboutTheGarden.md",
-    "HOMEPAGE.md",
     "README.md",
     "Calendar/Daily notes/2022-10-14.md",
+    "HOMEPAGE.md",
+    "AboutTheGarden.md",
+    "Spaces/2-Area/运动与健康/氮泵.md",
+    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md",
+    "Cards/永久笔记/mac必备软件.md",
     "Calendar/Daily notes/2022-10-13.md",
     "🧰 本库指南/🆕 本库更新日志.md",
-    "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md",
-    "Spaces/2-Area/运动与健康/轻断食.md",
-    "Spaces/2-Area/运动与健康/合理断食不会过分掉肌肉.md",
-    "Spaces/2-Area/运动与健康/自然健身与科技健身.md"
+    "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md"
   ]
 }

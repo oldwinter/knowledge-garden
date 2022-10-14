@@ -27,5 +27,6 @@
   "smartIndentList": true,
   "tabSize": 4,
   "showInlineTitle": false,
-  "showIndentGuide": true
+  "showIndentGuide": true,
+  "showFrontmatter": false
 }

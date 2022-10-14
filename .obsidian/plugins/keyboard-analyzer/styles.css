@@ -1,0 +1,725 @@
+/* Sets all the text color to red! */
+/* #KB-view {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+} */
+.status-bar-item.plugin-keyboard-analyzer span.icon {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.status-bar-item.plugin-keyboard-analyzer {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* // Extra Small devices (landscape phones, 576px and up) */
+#keyboard-component.xs {
+  /* background-color: #f5f5f5; */
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+#keyboard-component.sm {
+  /* background-color: aqua; */
+}
+
+/* // Medium devices (tablets, 768px and up) */
+#keyboard-component.md {
+  /* background-color: blueviolet; */
+}
+
+/* // Large devices (desktops, 992px and up) */
+#keyboard-component.lg {
+  /* background-color: chartreuse; */
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+#keyboard-component.xl {
+  /* background-color: darkcyan; */
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+#keyboard-component.xxl {
+  /* background-color: darkgoldenrod; */
+}
+
+#keyboard-component {
+  height: 100%;
+}
+
+.keyboard-wrapper {
+  max-width: 700px;
+}
+
+#KB-view {
+  padding: 0px !important;
+  overflow-y: scroll;
+}
+
+/* #keyboard-component .hotkey-setting-container {
+  display: flex;
+  overflow: unset;
+  flex-direction: column;
+  padding-bottom: 60px;
+  height: fit-content;
+} */
+
+#keyboard-component .hotkey-settings-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  overflow: visible;
+  position: relative;
+}
+
+#keyboard-component .setting-item-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#keyboard-component .setting-item-name .command-name {
+  padding-right: 8px;
+}
+
+#keyboard-component .setting-item-name span.suggestion-prefix {
+  color: var(--text-accent);
+  font-size: 90%;
+  font-style: italic;
+  text-transform: uppercase;
+  padding-right: 6px;
+}
+
+#keyboard-component .setting-item-name span.suggestion-prefix:hover {
+  cursor: pointer;
+}
+
+#keyboard-component .setting-item .star-icon {
+  display: none;
+}
+
+#keyboard-component .setting-item:hover .star-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#keyboard-component .setting-item .star-icon:hover {
+  color: var(--text-accent);
+}
+
+#keyboard-component .setting-item.is-starred .star-icon {
+  color: var(--text-accent);
+  display: flex;
+}
+
+.shortcuts-wrapper {
+  max-width: 768px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0px auto;
+}
+
+/* .hotkey-search-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+} */
+
+#keyboard-component .hotkey-search-container {
+  display: block;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  flex-grow: 2;
+}
+
+/* #keyboard-component.xs .hotkey-search-container { */
+/* max-width: unset;
+  flex-grow: 2;
+  flex-basis: 100%; */
+/* } */
+
+.search-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: var(--background-modifier-form-field); */
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  color: var(--text-normal);
+  border-radius: 4px;
+  padding: 8px 14px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.search-wrapper.is-focused {
+  /* background: var(--color-d-blacker); */
+  border: 1px solid var(--interactive-accent);
+  box-shadow: 0px 0px 0px 3px var(--color-d-gray-60);
+}
+
+.meta-search-wrapper {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 8px;
+  position: absolute;
+}
+
+.modifiers-wrapper {
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  align-items: center;
+}
+
+kbd.modifier {
+  padding: 2px 6px;
+  margin-right: 4px;
+  border: 1px solid var(--indentation-guide);
+  background-color: var(--background-secondary-alt);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+kbd.modifier:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.modifiers-wrapper kbd.modifier:last-child {
+  margin-right: 12px;
+}
+
+#keyboard-component .hotkey-search-container input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: unset;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  /* padding-bottom: 2px; */
+  padding-right: 48px;
+  border: none !important;
+  border-radius: unset;
+  background: unset;
+  color: var(--text-normal);
+  box-shadow: unset;
+}
+
+#keyboard-component .hotkey-search-container div.icon {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.keyboard-icon {
+  cursor: pointer;
+  color: var(--text-faint);
+  opacity: var(--icon-muted);
+  border-radius: 50%;
+  right: 9px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 1px 1px #c415151a;
+  position: absolute;
+}
+
+.keyboard-icon:hover {
+  border-color: var(--interactive-accent);
+  opacity: 1;
+}
+
+.keyboard-icon:pressed {
+  border-color: var(--interactive-accent);
+  opacity: 1;
+}
+
+.keyboard-icon.pulse {
+  color: var(--text-error);
+}
+
+/* .meta-search-indicator .inner-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: var(--interactive-accent);
+  width: 7px;
+  border-radius: 50%;
+  height: 7px;
+} */
+
+.pulse {
+  animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(10, 228, 112, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(183, 38, 38, 0);
+  }
+}
+
+#keyboard-component .hotkey-search-container .search-input-clear-button {
+  position: absolute;
+  right: 0px;
+  top: -50% !important;
+  transform: translate(-50%, -50%);
+  top: 18px;
+  color: var(--text-faint);
+  cursor: var(--cursor);
+  background-color: transparent;
+}
+
+.clear-icon {
+  color: var(--text-faint);
+  cursor: var(--cursor);
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.clear-icon:hover {
+  color: var(--text-error);
+}
+
+/* #keyboard-component .hotkey-search-container .search-input-clear-button:hover {
+  color: var(--text-error);
+} */
+
+/* #keyboard-component .hotkey-search-container .search-input-clear-button:before {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  content: '\D7';
+} */
+
+#hotkey-filter-button {
+  width: fit-content;
+  margin-top: 0px;
+  margin-right: 8px;
+  margin-bottom: 0px;
+  height: 32px;
+}
+
+#hotkey-filter-button:hover {
+  cursor: pointer;
+}
+
+#hotkey-filter-button.is-active {
+  color: var(--text-primary);
+  background-color: var(--interactive-accent);
+}
+
+.hotkey-search-container button {
+  /* height: 40px; */
+  height: fit-content;
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+.popup-filter-menu-container:not(.is-open) {
+  display: none;
+}
+
+.popup-filter-menu-container {
+  position: absolute;
+  background-color: var(--background-primary-alt);
+  top: 128px;
+  outline: 2px solid var(--background-modifier-form-field-highlighted);
+  width: fit-content;
+  z-index: 150000;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  padding-left: 24px;
+  padding-top: 24px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  box-shadow: 0px 45px 18px rgba(5, 5, 5, 0.01),
+    0px 25px 15px rgba(5, 5, 5, 0.03), 0px 11px 11px rgba(5, 5, 5, 0.04),
+    0px 3px 6px rgba(5, 5, 5, 0.05), 0px 0px 0px rgba(5, 5, 5, 0.05);
+}
+
+/* .is-mobile .popup-filter-menu-container { */
+/* left: 20px;
+  width: calc(100% - 40px); */
+/* } */
+
+/* .is-mobile .popup-filter-menu-background {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-primary-alt);
+  opacity: 0.5;
+  z-index: -1;
+} */
+
+#keyboard-component .community-plugin-search-summary.u-muted {
+  padding-left: 0px;
+  padding-right: 0px;
+  /* width: 100%; */
+  flex-grow: 1;
+  padding-bottom: 0px;
+  border-bottom: none;
+  flex-shrink: 2;
+}
+#keyboard-component .community-plugin-search-summary.u-muted span {
+  text-align: center;
+}
+
+button#hotkey-refresh-button {
+  background-color: transparent;
+  border: none;
+  margin-right: unset;
+  width: fit-content;
+  box-shadow: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+button#hotkey-refresh-button.animation-is-active .lucide-refresh-cw {
+  animation-name: rotation;
+  animation-duration: 0.8s;
+  /* ease-in animation timing */
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: both;
+}
+
+button#hotkey-refresh-button:hover {
+  cursor: pointer;
+  color: var(--text-accent);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search-results {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 8px;
+  border-bottom: none;
+}
+
+#keyboard-component .hotkey-list-container {
+  user-select: text;
+  padding: 0px 0px 64px 0px;
+  width: 100%;
+  overflow: unset;
+}
+
+/* .KB-view > .setting-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0 12px 0;
+  border-top: 1px solid var(--background-modifier-border);
+} */
+
+/* -------------------------------------------------------------- */
+/* SETTING ITEMS                                                  */
+/* -------------------------------------------------------------- */
+
+#keyboard-component .hotkey-list-container .setting-item {
+  background-color: var(--background-primary);
+  padding-left: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#keyboard-component .hotkey-list-container .setting-item.is-starred {
+  /* background-color: var(--background-secondary, --color-d-gray-60); */
+  border-left: 3px solid var(--interactive-accent);
+  padding-left: 12px;
+}
+
+/* #keyboard-component .hotkey-list-container .setting-item:hover {
+  background-color: var(--background-secondary, --color-d-gray-60);
+} */
+
+#keyboard-component.is-mobile .setting-item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#keyboard-component .setting-item-info small {
+  color: var(--text-muted);
+  font-size: small;
+}
+
+#keyboard-component .hotkey-list-container .setting-item:first-child {
+  padding-top: 18px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+#keyboard-component .hotkey-list-container .setting-item:last-child {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+#keyboard-component.is-mobile .popup-filter-menu-container .setting-item {
+  flex-direction: row;
+}
+
+.kbanalizer-setting-item {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--background-modifier-border);
+  padding: 18px 0px 18px 0px;
+}
+
+.kbanalizer-setting-item-control {
+  flex: 1 0 auto !important;
+  flex-shrink: 0 !important;
+}
+
+.KB-view > .setting-command-hotkeys {
+  flex-shrink: 0 !important;
+  flex: 1 0 auto !important;
+}
+
+.kbanalizer-setting-hotkey {
+  min-height: 24px !important;
+  position: relative;
+  font-size: 14px;
+  background-color: var(--background-secondary-alt);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  min-height: 24px;
+  align-self: flex-end;
+  position: relative;
+  transition: background-color, color 0.5s ease;
+}
+
+.kbanalizer-setting-hotkey.is-customized {
+  /* background-color: var(--background-secondary-alt); */
+  /* color: var(--text-accent); */
+  border: 1px solid var(--interactive-accent);
+}
+
+.kbanalizer-setting-hotkey.is-duplicate {
+  cursor: pointer;
+  color: var(--text-normal);
+  background-color: var(--background-modifier-error);
+}
+
+.kb-analizer-hotkey-list-container {
+  padding-right: 0px !important;
+}
+
+/* ----------- */
+/* -------     */
+/* -------Keyboard Layout */
+/* -------     */
+/* ----------- */
+
+.svelte-keyboard {
+  width: 100%;
+  height: 100%;
+  /* transform: scale(0.5); */
+}
+
+/* :global(.svelte-keyboard:nth-last-child(1)) {
+  display: none;
+} */
+
+.svelte-keyboard button.key-- {
+  background: transparent !important;
+  background-color: transparent;
+  user-select: none;
+  background-color: unset !important;
+  color: unset !important;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.svelte-keyboard button.key--.active {
+  background: transparent;
+}
+
+.svelte-keyboard button.key {
+  padding: 4px 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-normal);
+  margin: 0px 2px;
+  background-color: var(--background-secondary-alt);
+}
+.svelte-keyboard button.key:hover {
+  background-color: var(--interactive-accent);
+}
+.svelte-keyboard button.key:active {
+  background-color: red;
+}
+
+#keyboard {
+  width: 100%;
+}
+
+/* -------------------------------------------------------------- */
+/* KEYBOARD LAYOUT                                                 */
+/* -------------------------------------------------------------- */
+
+#keyboard-preview-view {
+  display: flex;
+  justify-content: center;
+}
+
+/* grid-template-columns: 3.75fr 0.75fr 1fr; */
+#keyboard-layout {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr;
+  gap: 0px 10px;
+  grid-template-areas: 'main other num';
+  background-color: var(--background-modifier-border);
+  border-radius: 0px 0px 12px 12px;
+  border: 1px solid var(--indentation-guide);
+  min-width: 720px;
+  height: 280px;
+  /* margin-top: 16px; */
+  padding: 24px;
+}
+
+.sm #keyboard-layout,
+.xs #keyboard-layout {
+  min-width: 100%;
+  border-radius: 0px;
+  margin-top: 0px;
+}
+
+#keyboard-layout .main {
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: 0.75fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas:
+    '. . . . . . . . . . . . . .'
+    '. . . . . . . . . . . . . .'
+    '. . . . . . . . . . . . . .'
+    '. . . . . . . . . . . . . .'
+    '. . . . . . . . . . . . . .'
+    '. . . . . . . . . . . . . .';
+  grid-area: main;
+  height: auto;
+}
+
+#keyboard-layout .other {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 0.75fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .'
+    '. . .';
+  grid-area: other;
+}
+
+#keyboard-layout .num {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 0.75fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas:
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . .';
+  grid-area: num;
+}
+
+:root {
+  --font-scale-0: 12px;
+  --font-scale-0-5: 14px;
+  --font-scale-1: 16px;
+  --font-scale-2: 18px;
+  --font-scale-3: 20px;
+}
+
+.kb-layout-key {
+  border: 1px solid var(--indentation-guide);
+  font-size: var(--font-scale-0);
+  line-height: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+}
+
+.kb-layout-key.small-text {
+  font-size: 10px;
+}
+
+/* key heatmap by weight */
+.kb-layout-key[data-weight='1'] {
+  background-color: #f0bca469;
+}
+.kb-layout-key[data-weight='2'] {
+  background-color: #e694846f;
+}
+.kb-layout-key[data-weight='3'] {
+  background-color: #d96f6f84;
+}
+.kb-layout-key[data-weight='4'] {
+  background-color: #c94f4f81;
+}
+.kb-layout-key[data-weight='5'] {
+  background-color: #b932328e;
+}
+
+.kb-layout-key.is-active {
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+}
+
+.kb-layout-key.is-active:hover {
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent-hover);
+}
+
+.kb-layout-key:hover {
+  background-color: var(--background-primary-alt);
+}
+
+.kb-layout-key.empty {
+  border: none;
+  background-color: transparent;
+}
