@@ -2954,7 +2954,7 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
     const buttonClass = "another-quick-switcher__settings__search-command__search-by-button";
     const buttonEnabledClass = "another-quick-switcher__settings__search-command__search-by-button_enabled";
     const buttonDisabledClass = "another-quick-switcher__settings__search-command__search-by-button_disabled";
-    new import_obsidian8.Setting(div).setName("Search by").addButton((bc) => {
+    new import_obsidian8.Setting(div).setName("Search by").setDesc("Click the button to enable/disable the search target").addButton((bc) => {
       const coloring = () => {
         bc.buttonEl.removeClass(buttonEnabledClass, buttonDisabledClass);
         bc.buttonEl.addClass(

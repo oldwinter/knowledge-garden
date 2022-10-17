@@ -21,11 +21,16 @@
             }
           },
           {
-            "id": "6f3ca8ce73515aec",
+            "id": "ce2129657ea18b93",
             "type": "leaf",
             "state": {
-              "type": "keyboard-shortcuts-visualization",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
@@ -91,7 +96,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md"
+              }
             }
           },
           {
@@ -100,6 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,6 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -145,6 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,17 +197,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "6f3ca8ce73515aec",
+  "active": "ce2129657ea18b93",
   "lastOpenFiles": [
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/常见代糖.md",
+    "Calendar/Daily notes/2022-10-16.md",
+    "HOMEPAGE.md",
+    "Calendar/Daily notes/2022-10-15.md",
+    "Spaces/2-Area/运动与健康/氮泵.md",
     "README.md",
     "Calendar/Daily notes/2022-10-14.md",
-    "HOMEPAGE.md",
     "AboutTheGarden.md",
-    "Spaces/2-Area/运动与健康/氮泵.md",
-    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md",
-    "Cards/永久笔记/mac必备软件.md",
-    "Calendar/Daily notes/2022-10-13.md",
-    "🧰 本库指南/🆕 本库更新日志.md",
-    "Spaces/2-Area/运动与健康/少食多餐和168轻断食的背后原理其实不冲突.md"
+    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md"
   ]
 }

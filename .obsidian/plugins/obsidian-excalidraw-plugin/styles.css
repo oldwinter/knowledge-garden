@@ -217,6 +217,14 @@ li[data-testid] {
 }
 
 textarea.excalidraw-wysiwyg {
-  border-color: transparent !important;
-  border-radius: 0 !important;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;  
+}
+
+.is-tablet .excalidraw button {
+  padding: initial;
 }
