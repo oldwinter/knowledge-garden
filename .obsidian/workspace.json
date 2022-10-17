@@ -8,33 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cbdaadd55ab3b443",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ce2129657ea18b93",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
+                "file": "Calendar/Daily notes/🐔科技与狠活.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md"
+                "file": "Calendar/Daily notes/🐔科技与狠活.md"
               }
             }
           },
@@ -107,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
+                "file": "Calendar/Daily notes/🐔科技与狠活.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
+                "file": "Calendar/Daily notes/🐔科技与狠活.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -154,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
+                "file": "Calendar/Daily notes/🐔科技与狠活.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,15 +185,15 @@
   },
   "active": "ce2129657ea18b93",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/2-Area/运动与健康/常见代糖.md",
-    "Calendar/Daily notes/2022-10-16.md",
-    "HOMEPAGE.md",
-    "Calendar/Daily notes/2022-10-15.md",
+    "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
     "Spaces/2-Area/运动与健康/氮泵.md",
-    "README.md",
-    "Calendar/Daily notes/2022-10-14.md",
-    "AboutTheGarden.md",
-    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md"
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/配料表、营养成分表和执行标准.md",
+    "Spaces/2-Area/运动与健康/食物的生熟重量换算方法.md",
+    "Spaces/2-Area/运动与健康/杂豆.md",
+    "Spaces/2-Area/运动与健康/全谷物.md",
+    "Spaces/2-Area/运动与健康/运动心率的依据和选择.md",
+    "Spaces/2-Area/运动与健康/RPE.md",
+    "Spaces/2-Area/运动与健康/减脂需要一以贯之的好习惯.md"
   ]
 }
