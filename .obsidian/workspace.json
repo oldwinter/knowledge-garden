@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/🐔科技与狠活.md",
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a9d06de42b0f9274",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AboutTheGarden.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/🐔科技与狠活.md"
+                "file": "AboutTheGarden.md"
               }
             }
           },
@@ -93,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/🐔科技与狠活.md",
+                "file": "AboutTheGarden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/🐔科技与狠活.md",
+                "file": "AboutTheGarden.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/🐔科技与狠活.md",
+                "file": "AboutTheGarden.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,17 +197,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ce2129657ea18b93",
+  "active": "a9d06de42b0f9274",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
-    "Spaces/2-Area/运动与健康/氮泵.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/2-Area/运动与健康/配料表、营养成分表和执行标准.md",
-    "Spaces/2-Area/运动与健康/食物的生熟重量换算方法.md",
-    "Spaces/2-Area/运动与健康/杂豆.md",
-    "Spaces/2-Area/运动与健康/全谷物.md",
-    "Spaces/2-Area/运动与健康/运动心率的依据和选择.md",
-    "Spaces/2-Area/运动与健康/RPE.md",
-    "Spaces/2-Area/运动与健康/减脂需要一以贯之的好习惯.md"
+    "README.md",
+    "Cards/永久笔记/卡片笔记.md",
+    "AboutTheGarden.md",
+    "HOMEPAGE.md",
+    "Calendar/Daily notes/2022-10-18.md",
+    "Spaces/2-Area/运动与健康/168轻断食.md",
+    "Spaces/2-Area/运动与健康/减慢代谢并不能延长寿命-生命速率理论.md",
+    "Spaces/2-Area/运动与健康/减肥的N重境界.md",
+    "Spaces/2-Area/运动与健康/健身中避免二元对立思维.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md"
   ]
 }
