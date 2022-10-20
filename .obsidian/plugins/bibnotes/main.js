@@ -1829,6 +1829,10 @@ var fuzzySelectEntryFromJson = class extends import_obsidian2.FuzzySuggestModal 
         this.focusInput();
       }
       this.plugin.checkSQLite();
+      const jsonPath = this.app.vault.adapter.getBasePath() + "/" + this.plugin.settings.bibPath;
+      if (!fs.existsSync(jsonPath)) {
+        new import_obsidian2.Notice("No BetterBibTex Json file found at " + jsonPath);
+      }
       const rawdata = fs.readFileSync(this.app.vault.adapter.getBasePath() + "/" + this.plugin.settings.bibPath);
       const data = JSON.parse(rawdata.toString());
       const bibtexArray = [];
@@ -1862,6 +1866,10 @@ var fuzzySelectEntryFromJson = class extends import_obsidian2.FuzzySuggestModal 
         dateModified: "",
         itemKey: "",
         title: "",
+        citationFull: "",
+        citationInLine: "",
+        citationShort: "",
+        localLibraryLink: "",
         creators: [],
         itemID: 0,
         file: "",
@@ -1917,6 +1925,10 @@ var updateLibrary = class extends import_obsidian2.Modal {
   }
   onOpen() {
     console.log("Updating Zotero library");
+    const jsonPath = this.app.vault.adapter.getBasePath() + "/" + this.plugin.settings.bibPath;
+    if (!fs.existsSync(jsonPath)) {
+      new import_obsidian2.Notice("No BetterBibTex Json file found at " + jsonPath);
+    }
     const rawdata = fs.readFileSync(this.app.vault.adapter.getBasePath() + "/" + this.plugin.settings.bibPath);
     const data = JSON.parse(rawdata.toString());
     const bibtexArray = [];
@@ -2108,33 +2120,52 @@ var max = Math.max;
 var min = Math.min;
 var round = Math.round;
 
+// node_modules/@popperjs/core/lib/utils/userAgent.js
+function getUAString() {
+  var uaData = navigator.userAgentData;
+  if (uaData != null && uaData.brands) {
+    return uaData.brands.map(function(item) {
+      return item.brand + "/" + item.version;
+    }).join(" ");
+  }
+  return navigator.userAgent;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+function isLayoutViewport() {
+  return !/^((?!chrome|android).)*safari/i.test(getUAString());
+}
+
 // node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
-function getBoundingClientRect(element, includeScale) {
+function getBoundingClientRect(element, includeScale, isFixedStrategy) {
   if (includeScale === void 0) {
     includeScale = false;
   }
-  var rect = element.getBoundingClientRect();
+  if (isFixedStrategy === void 0) {
+    isFixedStrategy = false;
+  }
+  var clientRect = element.getBoundingClientRect();
   var scaleX = 1;
   var scaleY = 1;
-  if (isHTMLElement(element) && includeScale) {
-    var offsetHeight = element.offsetHeight;
-    var offsetWidth = element.offsetWidth;
-    if (offsetWidth > 0) {
-      scaleX = round(rect.width) / offsetWidth || 1;
-    }
-    if (offsetHeight > 0) {
-      scaleY = round(rect.height) / offsetHeight || 1;
-    }
+  if (includeScale && isHTMLElement(element)) {
+    scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+    scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
   }
+  var _ref = isElement(element) ? getWindow(element) : window, visualViewport = _ref.visualViewport;
+  var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
+  var x = (clientRect.left + (addVisualOffsets && visualViewport ? visualViewport.offsetLeft : 0)) / scaleX;
+  var y = (clientRect.top + (addVisualOffsets && visualViewport ? visualViewport.offsetTop : 0)) / scaleY;
+  var width = clientRect.width / scaleX;
+  var height = clientRect.height / scaleY;
   return {
-    width: rect.width / scaleX,
-    height: rect.height / scaleY,
-    top: rect.top / scaleY,
-    right: rect.right / scaleX,
-    bottom: rect.bottom / scaleY,
-    left: rect.left / scaleX,
-    x: rect.left / scaleX,
-    y: rect.top / scaleY
+    width,
+    height,
+    top: y,
+    right: x + width,
+    bottom: y + height,
+    left: x,
+    x,
+    y
   };
 }
 
@@ -2205,8 +2236,8 @@ function getTrueOffsetParent(element) {
   return element.offsetParent;
 }
 function getContainingBlock(element) {
-  var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") !== -1;
-  var isIE = navigator.userAgent.indexOf("Trident") !== -1;
+  var isFirefox = /firefox/i.test(getUAString());
+  var isIE = /Trident/i.test(getUAString());
   if (isIE && isHTMLElement(element)) {
     var elementCss = getComputedStyle(element);
     if (elementCss.position === "fixed") {
@@ -2554,7 +2585,7 @@ function getWindowScrollBarX(element) {
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
-function getViewportRect(element) {
+function getViewportRect(element, strategy) {
   var win = getWindow(element);
   var html = getDocumentElement(element);
   var visualViewport = win.visualViewport;
@@ -2565,7 +2596,8 @@ function getViewportRect(element) {
   if (visualViewport) {
     width = visualViewport.width;
     height = visualViewport.height;
-    if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    var layoutViewport = isLayoutViewport();
+    if (layoutViewport || !layoutViewport && strategy === "fixed") {
       x = visualViewport.offsetLeft;
       y = visualViewport.offsetTop;
     }
@@ -2641,8 +2673,8 @@ function rectToClientRect(rect) {
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
-function getInnerBoundingClientRect(element) {
-  var rect = getBoundingClientRect(element);
+function getInnerBoundingClientRect(element, strategy) {
+  var rect = getBoundingClientRect(element, false, strategy === "fixed");
   rect.top = rect.top + element.clientTop;
   rect.left = rect.left + element.clientLeft;
   rect.bottom = rect.top + element.clientHeight;
@@ -2653,8 +2685,8 @@ function getInnerBoundingClientRect(element) {
   rect.y = rect.top;
   return rect;
 }
-function getClientRectFromMixedType(element, clippingParent) {
-  return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+function getClientRectFromMixedType(element, clippingParent, strategy) {
+  return clippingParent === viewport ? rectToClientRect(getViewportRect(element, strategy)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent, strategy) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
 }
 function getClippingParents(element) {
   var clippingParents2 = listScrollParents(getParentNode(element));
@@ -2667,18 +2699,18 @@ function getClippingParents(element) {
     return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== "body";
   });
 }
-function getClippingRect(element, boundary, rootBoundary) {
+function getClippingRect(element, boundary, rootBoundary, strategy) {
   var mainClippingParents = boundary === "clippingParents" ? getClippingParents(element) : [].concat(boundary);
   var clippingParents2 = [].concat(mainClippingParents, [rootBoundary]);
   var firstClippingParent = clippingParents2[0];
   var clippingRect = clippingParents2.reduce(function(accRect, clippingParent) {
-    var rect = getClientRectFromMixedType(element, clippingParent);
+    var rect = getClientRectFromMixedType(element, clippingParent, strategy);
     accRect.top = max(rect.top, accRect.top);
     accRect.right = min(rect.right, accRect.right);
     accRect.bottom = min(rect.bottom, accRect.bottom);
     accRect.left = max(rect.left, accRect.left);
     return accRect;
-  }, getClientRectFromMixedType(element, firstClippingParent));
+  }, getClientRectFromMixedType(element, firstClippingParent, strategy));
   clippingRect.width = clippingRect.right - clippingRect.left;
   clippingRect.height = clippingRect.bottom - clippingRect.top;
   clippingRect.x = clippingRect.left;
@@ -2746,12 +2778,12 @@ function detectOverflow(state, options) {
   if (options === void 0) {
     options = {};
   }
-  var _options = options, _options$placement = _options.placement, placement = _options$placement === void 0 ? state.placement : _options$placement, _options$boundary = _options.boundary, boundary = _options$boundary === void 0 ? clippingParents : _options$boundary, _options$rootBoundary = _options.rootBoundary, rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary, _options$elementConte = _options.elementContext, elementContext = _options$elementConte === void 0 ? popper : _options$elementConte, _options$altBoundary = _options.altBoundary, altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary, _options$padding = _options.padding, padding = _options$padding === void 0 ? 0 : _options$padding;
+  var _options = options, _options$placement = _options.placement, placement = _options$placement === void 0 ? state.placement : _options$placement, _options$strategy = _options.strategy, strategy = _options$strategy === void 0 ? state.strategy : _options$strategy, _options$boundary = _options.boundary, boundary = _options$boundary === void 0 ? clippingParents : _options$boundary, _options$rootBoundary = _options.rootBoundary, rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary, _options$elementConte = _options.elementContext, elementContext = _options$elementConte === void 0 ? popper : _options$elementConte, _options$altBoundary = _options.altBoundary, altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary, _options$padding = _options.padding, padding = _options$padding === void 0 ? 0 : _options$padding;
   var paddingObject = mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
   var altContext = elementContext === popper ? reference : popper;
   var popperRect = state.rects.popper;
   var element = state.elements[altBoundary ? altContext : elementContext];
-  var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary);
+  var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary, strategy);
   var referenceClientRect = getBoundingClientRect(state.elements.reference);
   var popperOffsets2 = computeOffsets({
     reference: referenceClientRect,
@@ -3158,7 +3190,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
   var isOffsetParentAnElement = isHTMLElement(offsetParent);
   var offsetParentIsScaled = isHTMLElement(offsetParent) && isElementScaled(offsetParent);
   var documentElement = getDocumentElement(offsetParent);
-  var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled);
+  var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled, isFixed);
   var scroll = {
     scrollLeft: 0,
     scrollTop: 0
@@ -3688,7 +3720,7 @@ var SettingTab = class extends import_obsidian5.PluginSettingTab {
     const importLibrary = containerEl.createEl("details");
     importLibrary.setAttribute("open", "");
     importLibrary.createEl("summary", { text: "" });
-    new import_obsidian5.Setting(importLibrary).setName("Bibtex File").setDesc("Add Path to the *BetterBibTex Json* file to be imported").addText((text) => text.setPlaceholder("/path/to/BetterBibTex.json").setValue(settings.bibPath).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(importLibrary).setName("BetterBibTex Json File").setDesc("Add relative path from the vault folder to the *BetterBibTex Json* file to be imported. For instance, add `library.json` if the file (library.json) is in the root folder. Instead, if the file is in a subfolder, specify first the subfolder followed by the name of the file (e.g. 'zotero/library.json' if the json file is located in a subfolder of your vault called 'zotero') ").addText((text) => text.setPlaceholder("/path/to/BetterBibTex.json").setValue(settings.bibPath).onChange((value) => __async(this, null, function* () {
       console.log("Path Bib: " + value);
       settings.bibPath = value;
       yield plugin.saveSettings();
@@ -4320,6 +4352,16 @@ var MyPlugin = class extends import_obsidian6.Plugin {
       selectedEntry.itemType = "Book";
     }
     selectedEntry.itemType = selectedEntry.itemType.charAt(0).toUpperCase() + selectedEntry.itemType.slice(1);
+    selectedEntry.citationInLine = createAuthorKey(selectedEntry.creators) + " (" + selectedEntry.year + ")";
+    selectedEntry.citationInLine = selectedEntry.citationInLine.replace("()", "");
+    if (selectedEntry.itemType == "Journal Article") {
+      selectedEntry.citationShort = selectedEntry.citationInLine + " '" + selectedEntry.title + "'";
+      selectedEntry.citationFull = selectedEntry.citationShort + ", *" + selectedEntry.publicationTitle + "*, " + selectedEntry.volume + "(" + selectedEntry.issue + "), pp. " + selectedEntry.pages + ".";
+      selectedEntry.citationFull = selectedEntry.citationFull.replace("() ", "");
+      selectedEntry.citationShort = selectedEntry.citationShort.replace("** ", "");
+      selectedEntry.citationFull = selectedEntry.citationFull.replace("** ", "");
+      selectedEntry.citationFull = selectedEntry.citationFull.replace("pp. ", "");
+    }
     selectedEntry.file = createLocalFileLink(selectedEntry);
     const entriesArray = Object.keys(selectedEntry);
     note = replaceAllTemplates(entriesArray, note, selectedEntry);
