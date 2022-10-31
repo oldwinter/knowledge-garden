@@ -1,7 +1,7 @@
 {
 	"id": "janitor",
 	"name": "Janitor",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"minAppVersion": "0.15.0",
 	"description": "Performs cleanup tasks on the Obsidian vault",
 	"author": "Gabriele Cannata",

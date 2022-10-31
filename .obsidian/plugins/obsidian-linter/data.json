@@ -2,18 +2,14 @@
   "ruleConfigs": {
     "Escape YAML Special Characters": {
       "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
-      "Default Escape Character": "\"",
-      "Try to Escape Single Line Arrays": true,
-      "Force Yaml Escape on Keys": "title"
+      "Try to Escape Single Line Arrays": true
     },
     "Format Tags in YAML": {
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
     },
     "Format Yaml Array": {
       "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": true,
-      "Yaml aliases section style": "multi-line",
       "Format yaml aliases section": true,
-      "Yaml tags section style": "single string to single-line",
       "Format yaml tags section": true,
       "Default yaml array section style": "single-line",
       "Format yaml array sections": true,
@@ -26,8 +22,7 @@
     },
     "Move Tags to Yaml": {
       "Move all tags to Yaml frontmatter of the document.": true,
-      "Yaml tags section style": "single-line",
-      "Remove the hashtag from tags in content body": false
+      "Body tag operation": "Nothing"
     },
     "Remove YAML Keys": {
       "Removes the YAML keys specified": false,
@@ -55,7 +50,6 @@
     },
     "YAML Title Alias": {
       "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": false,
-      "YAML aliases section style": "Multi-line array",
       "Preserve existing aliases section style": true,
       "Keep alias that matches the filename": false,
       "Use the YAML key `linter-yaml-title-alias` to help with filename and heading changes": true
@@ -178,5 +172,11 @@
   ],
   "linterLocale": "zh-cn",
   "logLevel": 4,
-  "lintCommands": []
+  "lintCommands": [],
+  "commonStyles": {
+    "aliasArrayStyle": "multi-line",
+    "tagArrayStyle": "single-line",
+    "minimumNumberOfDollarSignsToBeAMathBlock": 2,
+    "escapeCharacter": "\""
+  }
 }

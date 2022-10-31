@@ -1,10 +1,5 @@
 {
   "pluginList": [
-    "czottmann/obsidian-actions-uri",
-    "prncc/obsidian-repeat-plugin",
-    "marcusolsson/obsidian-projects",
-    "OlegLustenko/obsidian-bulk-rename",
-    "cogscides/obsidian-keyboard-analyzer",
     "stefanopagliari/bibnotes"
   ],
   "pluginSubListFrozenVersion": [],

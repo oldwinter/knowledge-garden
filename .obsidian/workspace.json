@@ -13,7 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md",
+                "file": "Spaces/2-Area/运动与健康/胰岛素抵抗.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d926167f7e5a32ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2022-10-25.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6279aa448e8710b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -46,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -109,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md"
+                "file": "index.md"
               }
             }
           },
@@ -119,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +158,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -166,7 +193,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/氮泵.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,20 +233,17 @@
     "width": 263.5,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "ce2129657ea18b93",
+  "active": "6279aa448e8710b6",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/减脂不用过份关注食物的GI升糖指数.md",
+    "README.md",
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/减脂不用过份关注食物的GI升糖指数.md",
+    "Spaces/2-Area/运动与健康/氮泵.md",
+    "Spaces/2-Area/运动与健康/精氨酸.md",
     "Spaces/2-Area/运动与健康/∑ 健身补剂选择.md",
     "Spaces/2-Area/运动与健康/鱼油.md",
     "Spaces/2-Area/运动与健康/减脂饮食也要尽量遵循中国居民膳食指南.md",
     "Spaces/2-Area/运动与健康/空腹有氧.md",
-    "Spaces/2-Area/运动与健康/氮泵.md",
-    "Spaces/2-Area/运动与健康/β-丙氨酸.md",
-    "Spaces/2-Area/运动与健康/皮质醇.md",
-    "Spaces/2-Area/运动与健康/健身中避免二元对立思维.md"
+    "Spaces/2-Area/运动与健康/β-丙氨酸.md"
   ]
 }

@@ -17131,6 +17131,25 @@ var require_main = __commonJS({
   }
 });
 
+// node_modules/obsidian-dataview/lib/index.js
+var require_lib2 = __commonJS({
+  "node_modules/obsidian-dataview/lib/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    require("obsidian");
+    var getAPI = (app) => {
+      var _a;
+      if (app)
+        return (_a = app.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
+      else
+        return window.DataviewAPI;
+    };
+    var isPluginEnabled = (app) => app.plugins.enabledPlugins.has("dataview");
+    exports2.getAPI = getAPI;
+    exports2.isPluginEnabled = isPluginEnabled;
+  }
+});
+
 // node_modules/depd/lib/compat/callsite-tostring.js
 var require_callsite_tostring = __commonJS({
   "node_modules/depd/lib/compat/callsite-tostring.js"(exports2, module2) {
@@ -21976,7 +21995,7 @@ var require_extend_node = __commonJS({
 });
 
 // node_modules/iconv-lite/lib/index.js
-var require_lib2 = __commonJS({
+var require_lib3 = __commonJS({
   "node_modules/iconv-lite/lib/index.js"(exports2, module2) {
     "use strict";
     var Buffer2 = require_safer().Buffer;
@@ -22122,7 +22141,7 @@ var require_raw_body = __commonJS({
     "use strict";
     var bytes = require_bytes();
     var createError = require_http_errors();
-    var iconv = require_lib2();
+    var iconv = require_lib3();
     var unpipe = require_unpipe();
     module2.exports = getRawBody;
     var ICONV_ENCODING_MESSAGE_REGEXP = /^Encoding not recognized: /;
@@ -22290,7 +22309,7 @@ var require_read = __commonJS({
     "use strict";
     var createError = require_http_errors();
     var getBody = require_raw_body();
-    var iconv = require_lib2();
+    var iconv = require_lib3();
     var onFinished = require_on_finished();
     var zlib = require("zlib");
     module2.exports = read;
@@ -32113,7 +32132,7 @@ var require_parse = __commonJS({
 });
 
 // node_modules/qs/lib/index.js
-var require_lib3 = __commonJS({
+var require_lib4 = __commonJS({
   "node_modules/qs/lib/index.js"(exports2, module2) {
     "use strict";
     var stringify = require_stringify();
@@ -32246,7 +32265,7 @@ var require_urlencoded = __commonJS({
       }
       switch (name) {
         case "qs":
-          mod = require_lib3();
+          mod = require_lib4();
           break;
         case "querystring":
           mod = require("querystring");
@@ -34660,7 +34679,7 @@ var require_utils2 = __commonJS({
     var etag = require_etag();
     var mime2 = require_mime_types();
     var proxyaddr = require_proxy_addr();
-    var qs = require_lib3();
+    var qs = require_lib4();
     var querystring = require("querystring");
     exports2.etag = createETagGenerator({ weak: false });
     exports2.wetag = createETagGenerator({ weak: true });
@@ -38519,7 +38538,7 @@ var require_object_assign = __commonJS({
 });
 
 // node_modules/cors/lib/index.js
-var require_lib4 = __commonJS({
+var require_lib5 = __commonJS({
   "node_modules/cors/lib/index.js"(exports2, module2) {
     (function() {
       "use strict";
@@ -39769,9 +39788,10 @@ var import_node_forge = __toModule(require_lib());
 // src/requestHandler.ts
 var import_obsidian = __toModule(require("obsidian"));
 var import_obsidian_daily_notes_interface = __toModule(require_main());
+var import_obsidian_dataview = __toModule(require_lib2());
 var import_express = __toModule(require_express2());
 var import_http = __toModule(require("http"));
-var import_cors = __toModule(require_lib4());
+var import_cors = __toModule(require_lib5());
 var import_mime_types = __toModule(require_mime_types());
 var import_body_parser = __toModule(require_body_parser());
 var import_json_logic_js = __toModule(require_logic());
@@ -39854,6 +39874,7 @@ var ContentTypes;
   ContentTypes2["markdown"] = "text/markdown";
   ContentTypes2["olrapiNoteJson"] = "application/vnd.olrapi.note+json";
   ContentTypes2["jsonLogic"] = "application/vnd.olrapi.jsonlogic+json";
+  ContentTypes2["dataviewDql"] = "application/vnd.olrapi.dataview.dql+txt";
 })(ContentTypes || (ContentTypes = {}));
 
 // src/requestHandler.ts
@@ -40402,7 +40423,7 @@ var RequestHandler = class {
       res.json(results);
     });
   }
-  valueIsEmpty(value) {
+  valueIsSaneTruthy(value) {
     if (value === void 0 || value === null) {
       return false;
     } else if (Array.isArray(value)) {
@@ -40414,8 +40435,50 @@ var RequestHandler = class {
   }
   searchQueryPost(req, res) {
     return __async(this, null, function* () {
+      const dataviewApi = (0, import_obsidian_dataview.getAPI)();
       const handlers = {
-        [ContentTypes.jsonLogic]: import_json_logic_js.default.apply
+        [ContentTypes.dataviewDql]: () => __async(this, null, function* () {
+          const results = [];
+          const dataviewResults = yield dataviewApi.tryQuery(req.body);
+          const fileColumn = dataviewApi.evaluationContext.settings.tableIdColumnName;
+          if (dataviewResults.type !== "table") {
+            throw new Error("Only TABLE dataview queries are supported.");
+          }
+          if (!dataviewResults.headers.includes(fileColumn)) {
+            throw new Error("TABLE WITHOUT ID queries are not supported.");
+          }
+          for (const dataviewResult of dataviewResults.values) {
+            const fieldValues = {};
+            dataviewResults.headers.forEach((value, index) => {
+              if (value !== fileColumn) {
+                fieldValues[value] = dataviewResult[index];
+              }
+            });
+            results.push({
+              filename: dataviewResult[0].path,
+              result: fieldValues
+            });
+          }
+          return results;
+        }),
+        [ContentTypes.jsonLogic]: () => __async(this, null, function* () {
+          const results = [];
+          for (const file of this.app.vault.getMarkdownFiles()) {
+            const fileContext = yield this.getFileMetadataObject(file);
+            try {
+              const fileResult = import_json_logic_js.default.apply(req.body, fileContext);
+              if (this.valueIsSaneTruthy(fileResult)) {
+                results.push({
+                  filename: file.path,
+                  result: fileResult
+                });
+              }
+            } catch (e) {
+              throw new Error(`${e.message} (while processing ${file.path})`);
+            }
+          }
+          return results;
+        })
       };
       const contentType = req.headers["content-type"];
       if (!handlers[contentType]) {
@@ -40424,26 +40487,16 @@ var RequestHandler = class {
         });
         return;
       }
-      const results = [];
-      for (const file of this.app.vault.getMarkdownFiles()) {
-        const fileContext = yield this.getFileMetadataObject(file);
-        try {
-          const output = handlers[contentType](req.body, fileContext);
-          if (this.valueIsEmpty(output)) {
-            results.push({
-              filename: file.path,
-              result: output
-            });
-          }
-        } catch (e) {
-          this.returnCannedResponse(res, {
-            errorCode: ErrorCode.InvalidFilterQuery,
-            message: `${e.message} (while processing ${file.path})`
-          });
-          return;
-        }
+      try {
+        const results = yield handlers[contentType]();
+        res.json(results);
+      } catch (e) {
+        this.returnCannedResponse(res, {
+          errorCode: ErrorCode.InvalidFilterQuery,
+          message: `${e.message}`
+        });
+        return;
       }
-      res.json(results);
     });
   }
   openPost(req, res) {
@@ -40491,6 +40544,7 @@ var RequestHandler = class {
     this.api.use((0, import_cors.default)());
     this.api.use(this.authenticationMiddleware.bind(this));
     this.api.use(import_body_parser.default.text({ type: "text/*" }));
+    this.api.use(import_body_parser.default.text({ type: ContentTypes.dataviewDql }));
     this.api.use(import_body_parser.default.json({ type: ContentTypes.json }));
     this.api.use(import_body_parser.default.json({ type: ContentTypes.olrapiNoteJson }));
     this.api.use(import_body_parser.default.json({ type: ContentTypes.jsonLogic }));

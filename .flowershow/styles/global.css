@@ -1,0 +1,54 @@
+/* mathjax */
+.math-inline {
+  display: flex;
+  align-items: center;
+}
+
+/* smooth scrolling in modern browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* hide anchor link with # icon  */
+.unstyled :is(h1, h2, h3, h4, h5, h6) > a {
+  visibility: hidden;
+}
+
+.docs :is(h1, h2, h3, h4, h5, h6) {
+  margin-left: -2rem !important;
+  padding-left: 2rem !important;
+  position: relative;
+}
+
+.docs :is(h1, h2, h3, h4, h5, h6) > a {
+  padding: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto 0;
+  border-radius: 5px;
+  background: #1e293b;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.light .docs :is(h1, h2, h3, h4, h5, h6) > a {
+  /* border: 1px solid #ab2b65; */
+  /* background: none; */
+  background: #e2e8f0;
+}
+
+.docs :is(h1, h2, h3, h4, h5, h6):hover > a {
+  opacity: 100;
+}
+
+.docs :is(h1, h2, h3, h4, h5, h6) > a > svg {
+  transform: scale(0.75);
+}
+
+@media screen and (max-width: 640px) {
+  .docs :is(h1, h2, h3, h4, h5, h6) > a {
+    visibility: hidden;
+  }
+}

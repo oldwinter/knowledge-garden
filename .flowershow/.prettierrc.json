@@ -1,0 +1,13 @@
+{
+  "bracketSameLine": true,
+  "tabWidth": 2,
+  "semi": true,
+  "printWidth": 80,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "useTabs": false,
+  "importOrder": ["^components/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

@@ -52,9 +52,11 @@ __export(exports, {
   default: () => StillePlugin
 });
 var import_obsidian = __toModule(require("obsidian"));
+var nameOfApplication = `Stille`;
 var DEFAULT_SETTINGS = {
   unfocusedLevel: 0.3,
   statusBarLabel: true,
+  statusBarLabelText: `${nameOfApplication} on`,
   unfocusTitle: false
 };
 var moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M195 125c0-26.3 5.3-51.3 14.9-74.1C118.7 73 51 155.1 51 253c0 114.8 93.2 208 208 208 97.9 0 180-67.7 202.1-158.9-22.8 9.6-47.9 14.9-74.1 14.9-106 0-192-86-192-192z"/></svg>`;
@@ -71,8 +73,8 @@ var StillePlugin = class extends import_obsidian.Plugin {
         this.toggleStille();
       });
       this.statusBar = this.addStatusBarItem();
-      this.statusBar.setText("Stille on");
-      this.toggleLabelDisplay(this.settings.statusBarLabel);
+      this.statusBar.setText(this.settings.statusBarLabelText);
+      this.toggleLabelDisplay(this.settings.statusBarLabel, true);
       this.toggleDimTitle(this.settings.unfocusTitle);
       this.addCommand({
         id: "toggleStille",
@@ -110,10 +112,12 @@ var StillePlugin = class extends import_obsidian.Plugin {
       this.stilleStatus = !this.stilleStatus;
       if (this.stilleStatus) {
         this.addStyleToView();
-        this.statusBar.setText("Stille on");
+        this.settings.statusBarLabelText = `${nameOfApplication} on`;
+        this.statusBar.setText(this.settings.statusBarLabelText);
       } else {
         this.removeStyleFromView();
-        this.statusBar.setText("Stille off");
+        this.settings.statusBarLabelText = `${nameOfApplication} off`;
+        this.statusBar.setText(this.settings.statusBarLabelText);
       }
     });
   }
@@ -132,7 +136,6 @@ var StillePlugin = class extends import_obsidian.Plugin {
     if (this.styleElement) {
       this.styleElement.remove();
       document.body.removeClass("StilleStyle");
-      document.body.removeClass("StilleHideStatus");
       document.body.removeClass("StilleUnfocusTitle");
     }
   }
@@ -141,11 +144,13 @@ var StillePlugin = class extends import_obsidian.Plugin {
 																			--unfocusedLevel: ${this.settings.unfocusedLevel};
 																		}`;
   }
-  toggleLabelDisplay(value) {
-    if (value) {
-      document.body.classList.remove("StilleHideStatus");
-    } else {
-      document.body.classList.add("StilleHideStatus");
+  toggleLabelDisplay(value, pluginOnLoad) {
+    if (!value) {
+      this.statusBar.remove();
+    }
+    if (value && !pluginOnLoad) {
+      this.statusBar = this.addStatusBarItem();
+      this.statusBar.setText(this.settings.statusBarLabelText);
     }
   }
   toggleDimTitle(value) {
@@ -182,21 +187,23 @@ var StilleSettingTab = class extends import_obsidian.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h3", { text: "Stille \u2014 Focus on your writing." });
+    containerEl.createEl("h3", { text: `${nameOfApplication} \u2014 Focus on your writing.` });
     containerEl.createEl("h4", { text: "v" + this.plugin.manifest.version });
-    containerEl.createEl("a", { text: "Learn more about Stille", href: "https://michaelsoolee.com/obsidian-focus-plugin-stille/" });
+    containerEl.createEl("a", { text: `Learn more about ${nameOfApplication}`, href: "https://michaelsoolee.com/obsidian-focus-plugin-stille/" });
     containerEl.createEl("br");
-    containerEl.createEl("span", { text: "If Stille has helped you focus, consider buying me a slice of pizza \u{1F355} " });
+    containerEl.createEl("span", { text: `If ${nameOfApplication} has helped you focus, consider buying me a slice of pizza \u{1F355} ` });
     containerEl.createEl("a", { text: "Buy Michael, a slice of pizza", href: "https://michaellee.gumroad.com/l/buy-michael-pizza" });
+    containerEl.createEl("br");
+    containerEl.createEl("br");
     new import_obsidian.Setting(containerEl).setName("Opacity level for unfocused text").setDesc("This is the opacity level for text that is unfocused. This value should be a decimal value from 0.0 to 1.0.").addText((text) => text.setPlaceholder("A value from 0.0 to 1.0").setValue(this.plugin.settings.unfocusedLevel + "").onChange((value) => __async(this, null, function* () {
       this.plugin.settings.unfocusedLevel = Number(value);
       yield this.plugin.saveSettings();
       this.plugin.refresh();
     })));
-    new import_obsidian.Setting(containerEl).setName("Toggle status bar label").setDesc("Use this to toggle the visibility of the status bar label for Stille.").addToggle((barStatus) => barStatus.setValue(this.plugin.settings.statusBarLabel).onChange(() => __async(this, null, function* () {
+    new import_obsidian.Setting(containerEl).setName("Toggle status bar label").setDesc(`Use this to toggle the visibility of the status bar label for ${nameOfApplication}.`).addToggle((barStatus) => barStatus.setValue(this.plugin.settings.statusBarLabel).onChange(() => __async(this, null, function* () {
       yield this.plugin.toggleLabel(!this.plugin.settings.statusBarLabel);
     })));
-    new import_obsidian.Setting(containerEl).setName("Dim title").setDesc("Dim the title of the note when Stille is on.").addToggle((title) => title.setValue(this.plugin.settings.unfocusTitle).onChange(() => __async(this, null, function* () {
+    new import_obsidian.Setting(containerEl).setName("Dim title").setDesc(`Dim the title of the note when ${nameOfApplication} is on.`).addToggle((title) => title.setValue(this.plugin.settings.unfocusTitle).onChange(() => __async(this, null, function* () {
       yield this.plugin.toggleTitle(!this.plugin.settings.unfocusTitle);
     })));
   }

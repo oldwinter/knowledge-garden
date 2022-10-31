@@ -795,2299 +795,6 @@ var require_tslib = __commonJS({
   }
 });
 
-// node_modules/svelte/internal/index.js
-var require_internal = __commonJS({
-  "node_modules/svelte/internal/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    function noop3() {
-    }
-    var identity = (x2) => x2;
-    function assign2(tar, src) {
-      for (const k2 in src)
-        tar[k2] = src[k2];
-      return tar;
-    }
-    function is_promise2(value) {
-      return value && typeof value === "object" && typeof value.then === "function";
-    }
-    function add_location(element3, file, line, column, char) {
-      element3.__svelte_meta = {
-        loc: { file, line, column, char }
-      };
-    }
-    function run2(fn3) {
-      return fn3();
-    }
-    function blank_object2() {
-      return Object.create(null);
-    }
-    function run_all2(fns) {
-      fns.forEach(run2);
-    }
-    function is_function2(thing) {
-      return typeof thing === "function";
-    }
-    function safe_not_equal2(a2, b2) {
-      return a2 != a2 ? b2 == b2 : a2 !== b2 || (a2 && typeof a2 === "object" || typeof a2 === "function");
-    }
-    var src_url_equal_anchor;
-    function src_url_equal(element_src, url) {
-      if (!src_url_equal_anchor) {
-        src_url_equal_anchor = document.createElement("a");
-      }
-      src_url_equal_anchor.href = url;
-      return element_src === src_url_equal_anchor.href;
-    }
-    function not_equal(a2, b2) {
-      return a2 != a2 ? b2 == b2 : a2 !== b2;
-    }
-    function is_empty2(obj) {
-      return Object.keys(obj).length === 0;
-    }
-    function validate_store(store, name) {
-      if (store != null && typeof store.subscribe !== "function") {
-        throw new Error(`'${name}' is not a store with a 'subscribe' method`);
-      }
-    }
-    function subscribe2(store, ...callbacks) {
-      if (store == null) {
-        return noop3;
-      }
-      const unsub = store.subscribe(...callbacks);
-      return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-    }
-    function get_store_value2(store) {
-      let value;
-      subscribe2(store, (_24) => value = _24)();
-      return value;
-    }
-    function component_subscribe2(component, store, callback) {
-      component.$$.on_destroy.push(subscribe2(store, callback));
-    }
-    function create_slot2(definition, ctx, $$scope, fn3) {
-      if (definition) {
-        const slot_ctx = get_slot_context2(definition, ctx, $$scope, fn3);
-        return definition[0](slot_ctx);
-      }
-    }
-    function get_slot_context2(definition, ctx, $$scope, fn3) {
-      return definition[1] && fn3 ? assign2($$scope.ctx.slice(), definition[1](fn3(ctx))) : $$scope.ctx;
-    }
-    function get_slot_changes2(definition, $$scope, dirty, fn3) {
-      if (definition[2] && fn3) {
-        const lets = definition[2](fn3(dirty));
-        if ($$scope.dirty === void 0) {
-          return lets;
-        }
-        if (typeof lets === "object") {
-          const merged = [];
-          const len = Math.max($$scope.dirty.length, lets.length);
-          for (let i2 = 0; i2 < len; i2 += 1) {
-            merged[i2] = $$scope.dirty[i2] | lets[i2];
-          }
-          return merged;
-        }
-        return $$scope.dirty | lets;
-      }
-      return $$scope.dirty;
-    }
-    function update_slot_base2(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn) {
-      if (slot_changes) {
-        const slot_context = get_slot_context2(slot_definition, ctx, $$scope, get_slot_context_fn);
-        slot.p(slot_context, slot_changes);
-      }
-    }
-    function update_slot(slot, slot_definition, ctx, $$scope, dirty, get_slot_changes_fn, get_slot_context_fn) {
-      const slot_changes = get_slot_changes2(slot_definition, $$scope, dirty, get_slot_changes_fn);
-      update_slot_base2(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn);
-    }
-    function get_all_dirty_from_scope2($$scope) {
-      if ($$scope.ctx.length > 32) {
-        const dirty = [];
-        const length = $$scope.ctx.length / 32;
-        for (let i2 = 0; i2 < length; i2++) {
-          dirty[i2] = -1;
-        }
-        return dirty;
-      }
-      return -1;
-    }
-    function exclude_internal_props(props) {
-      const result = {};
-      for (const k2 in props)
-        if (k2[0] !== "$")
-          result[k2] = props[k2];
-      return result;
-    }
-    function compute_rest_props(props, keys) {
-      const rest = {};
-      keys = new Set(keys);
-      for (const k2 in props)
-        if (!keys.has(k2) && k2[0] !== "$")
-          rest[k2] = props[k2];
-      return rest;
-    }
-    function compute_slots2(slots) {
-      const result = {};
-      for (const key in slots) {
-        result[key] = true;
-      }
-      return result;
-    }
-    function once(fn3) {
-      let ran = false;
-      return function(...args) {
-        if (ran)
-          return;
-        ran = true;
-        fn3.call(this, ...args);
-      };
-    }
-    function null_to_empty2(value) {
-      return value == null ? "" : value;
-    }
-    function set_store_value(store, ret, value) {
-      store.set(value);
-      return ret;
-    }
-    var has_prop = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
-    function action_destroyer2(action_result) {
-      return action_result && is_function2(action_result.destroy) ? action_result.destroy : noop3;
-    }
-    var is_client = typeof window !== "undefined";
-    exports.now = is_client ? () => window.performance.now() : () => Date.now();
-    exports.raf = is_client ? (cb) => requestAnimationFrame(cb) : noop3;
-    function set_now(fn3) {
-      exports.now = fn3;
-    }
-    function set_raf(fn3) {
-      exports.raf = fn3;
-    }
-    var tasks2 = new Set();
-    function run_tasks(now) {
-      tasks2.forEach((task) => {
-        if (!task.c(now)) {
-          tasks2.delete(task);
-          task.f();
-        }
-      });
-      if (tasks2.size !== 0)
-        exports.raf(run_tasks);
-    }
-    function clear_loops() {
-      tasks2.clear();
-    }
-    function loop(callback) {
-      let task;
-      if (tasks2.size === 0)
-        exports.raf(run_tasks);
-      return {
-        promise: new Promise((fulfill) => {
-          tasks2.add(task = { c: callback, f: fulfill });
-        }),
-        abort() {
-          tasks2.delete(task);
-        }
-      };
-    }
-    var is_hydrating2 = false;
-    function start_hydrating2() {
-      is_hydrating2 = true;
-    }
-    function end_hydrating2() {
-      is_hydrating2 = false;
-    }
-    function upper_bound(low, high, key, value) {
-      while (low < high) {
-        const mid = low + (high - low >> 1);
-        if (key(mid) <= value) {
-          low = mid + 1;
-        } else {
-          high = mid;
-        }
-      }
-      return low;
-    }
-    function init_hydrate(target) {
-      if (target.hydrate_init)
-        return;
-      target.hydrate_init = true;
-      let children3 = target.childNodes;
-      if (target.nodeName === "HEAD") {
-        const myChildren = [];
-        for (let i2 = 0; i2 < children3.length; i2++) {
-          const node = children3[i2];
-          if (node.claim_order !== void 0) {
-            myChildren.push(node);
-          }
-        }
-        children3 = myChildren;
-      }
-      const m = new Int32Array(children3.length + 1);
-      const p2 = new Int32Array(children3.length);
-      m[0] = -1;
-      let longest = 0;
-      for (let i2 = 0; i2 < children3.length; i2++) {
-        const current = children3[i2].claim_order;
-        const seqLen = (longest > 0 && children3[m[longest]].claim_order <= current ? longest + 1 : upper_bound(1, longest, (idx) => children3[m[idx]].claim_order, current)) - 1;
-        p2[i2] = m[seqLen] + 1;
-        const newLen = seqLen + 1;
-        m[newLen] = i2;
-        longest = Math.max(newLen, longest);
-      }
-      const lis = [];
-      const toMove = [];
-      let last = children3.length - 1;
-      for (let cur = m[longest] + 1; cur != 0; cur = p2[cur - 1]) {
-        lis.push(children3[cur - 1]);
-        for (; last >= cur; last--) {
-          toMove.push(children3[last]);
-        }
-        last--;
-      }
-      for (; last >= 0; last--) {
-        toMove.push(children3[last]);
-      }
-      lis.reverse();
-      toMove.sort((a2, b2) => a2.claim_order - b2.claim_order);
-      for (let i2 = 0, j2 = 0; i2 < toMove.length; i2++) {
-        while (j2 < lis.length && toMove[i2].claim_order >= lis[j2].claim_order) {
-          j2++;
-        }
-        const anchor = j2 < lis.length ? lis[j2] : null;
-        target.insertBefore(toMove[i2], anchor);
-      }
-    }
-    function append2(target, node) {
-      target.appendChild(node);
-    }
-    function append_styles2(target, style_sheet_id, styles) {
-      const append_styles_to = get_root_for_style2(target);
-      if (!append_styles_to.getElementById(style_sheet_id)) {
-        const style = element2("style");
-        style.id = style_sheet_id;
-        style.textContent = styles;
-        append_stylesheet2(append_styles_to, style);
-      }
-    }
-    function get_root_for_style2(node) {
-      if (!node)
-        return document;
-      const root = node.getRootNode ? node.getRootNode() : node.ownerDocument;
-      if (root && root.host) {
-        return root;
-      }
-      return node.ownerDocument;
-    }
-    function append_empty_stylesheet(node) {
-      const style_element = element2("style");
-      append_stylesheet2(get_root_for_style2(node), style_element);
-      return style_element.sheet;
-    }
-    function append_stylesheet2(node, style) {
-      append2(node.head || node, style);
-      return style.sheet;
-    }
-    function append_hydration(target, node) {
-      if (is_hydrating2) {
-        init_hydrate(target);
-        if (target.actual_end_child === void 0 || target.actual_end_child !== null && target.actual_end_child.parentNode !== target) {
-          target.actual_end_child = target.firstChild;
-        }
-        while (target.actual_end_child !== null && target.actual_end_child.claim_order === void 0) {
-          target.actual_end_child = target.actual_end_child.nextSibling;
-        }
-        if (node !== target.actual_end_child) {
-          if (node.claim_order !== void 0 || node.parentNode !== target) {
-            target.insertBefore(node, target.actual_end_child);
-          }
-        } else {
-          target.actual_end_child = node.nextSibling;
-        }
-      } else if (node.parentNode !== target || node.nextSibling !== null) {
-        target.appendChild(node);
-      }
-    }
-    function insert2(target, node, anchor) {
-      target.insertBefore(node, anchor || null);
-    }
-    function insert_hydration(target, node, anchor) {
-      if (is_hydrating2 && !anchor) {
-        append_hydration(target, node);
-      } else if (node.parentNode !== target || node.nextSibling != anchor) {
-        target.insertBefore(node, anchor || null);
-      }
-    }
-    function detach2(node) {
-      node.parentNode.removeChild(node);
-    }
-    function destroy_each2(iterations, detaching) {
-      for (let i2 = 0; i2 < iterations.length; i2 += 1) {
-        if (iterations[i2])
-          iterations[i2].d(detaching);
-      }
-    }
-    function element2(name) {
-      return document.createElement(name);
-    }
-    function element_is(name, is) {
-      return document.createElement(name, { is });
-    }
-    function object_without_properties(obj, exclude) {
-      const target = {};
-      for (const k2 in obj) {
-        if (has_prop(obj, k2) && exclude.indexOf(k2) === -1) {
-          target[k2] = obj[k2];
-        }
-      }
-      return target;
-    }
-    function svg_element(name) {
-      return document.createElementNS("http://www.w3.org/2000/svg", name);
-    }
-    function text2(data) {
-      return document.createTextNode(data);
-    }
-    function space2() {
-      return text2(" ");
-    }
-    function empty2() {
-      return text2("");
-    }
-    function listen2(node, event, handler, options) {
-      node.addEventListener(event, handler, options);
-      return () => node.removeEventListener(event, handler, options);
-    }
-    function prevent_default(fn3) {
-      return function(event) {
-        event.preventDefault();
-        return fn3.call(this, event);
-      };
-    }
-    function stop_propagation2(fn3) {
-      return function(event) {
-        event.stopPropagation();
-        return fn3.call(this, event);
-      };
-    }
-    function self2(fn3) {
-      return function(event) {
-        if (event.target === this)
-          fn3.call(this, event);
-      };
-    }
-    function trusted(fn3) {
-      return function(event) {
-        if (event.isTrusted)
-          fn3.call(this, event);
-      };
-    }
-    function attr2(node, attribute, value) {
-      if (value == null)
-        node.removeAttribute(attribute);
-      else if (node.getAttribute(attribute) !== value)
-        node.setAttribute(attribute, value);
-    }
-    function set_attributes2(node, attributes) {
-      const descriptors = Object.getOwnPropertyDescriptors(node.__proto__);
-      for (const key in attributes) {
-        if (attributes[key] == null) {
-          node.removeAttribute(key);
-        } else if (key === "style") {
-          node.style.cssText = attributes[key];
-        } else if (key === "__value") {
-          node.value = node[key] = attributes[key];
-        } else if (descriptors[key] && descriptors[key].set) {
-          node[key] = attributes[key];
-        } else {
-          attr2(node, key, attributes[key]);
-        }
-      }
-    }
-    function set_svg_attributes(node, attributes) {
-      for (const key in attributes) {
-        attr2(node, key, attributes[key]);
-      }
-    }
-    function set_custom_element_data(node, prop, value) {
-      if (prop in node) {
-        node[prop] = typeof node[prop] === "boolean" && value === "" ? true : value;
-      } else {
-        attr2(node, prop, value);
-      }
-    }
-    function xlink_attr(node, attribute, value) {
-      node.setAttributeNS("http://www.w3.org/1999/xlink", attribute, value);
-    }
-    function get_binding_group_value(group, __value, checked) {
-      const value = new Set();
-      for (let i2 = 0; i2 < group.length; i2 += 1) {
-        if (group[i2].checked)
-          value.add(group[i2].__value);
-      }
-      if (!checked) {
-        value.delete(__value);
-      }
-      return Array.from(value);
-    }
-    function to_number2(value) {
-      return value === "" ? null : +value;
-    }
-    function time_ranges_to_array(ranges) {
-      const array = [];
-      for (let i2 = 0; i2 < ranges.length; i2 += 1) {
-        array.push({ start: ranges.start(i2), end: ranges.end(i2) });
-      }
-      return array;
-    }
-    function children2(element3) {
-      return Array.from(element3.childNodes);
-    }
-    function init_claim_info(nodes) {
-      if (nodes.claim_info === void 0) {
-        nodes.claim_info = { last_index: 0, total_claimed: 0 };
-      }
-    }
-    function claim_node(nodes, predicate, processNode, createNode, dontUpdateLastIndex = false) {
-      init_claim_info(nodes);
-      const resultNode = (() => {
-        for (let i2 = nodes.claim_info.last_index; i2 < nodes.length; i2++) {
-          const node = nodes[i2];
-          if (predicate(node)) {
-            const replacement = processNode(node);
-            if (replacement === void 0) {
-              nodes.splice(i2, 1);
-            } else {
-              nodes[i2] = replacement;
-            }
-            if (!dontUpdateLastIndex) {
-              nodes.claim_info.last_index = i2;
-            }
-            return node;
-          }
-        }
-        for (let i2 = nodes.claim_info.last_index - 1; i2 >= 0; i2--) {
-          const node = nodes[i2];
-          if (predicate(node)) {
-            const replacement = processNode(node);
-            if (replacement === void 0) {
-              nodes.splice(i2, 1);
-            } else {
-              nodes[i2] = replacement;
-            }
-            if (!dontUpdateLastIndex) {
-              nodes.claim_info.last_index = i2;
-            } else if (replacement === void 0) {
-              nodes.claim_info.last_index--;
-            }
-            return node;
-          }
-        }
-        return createNode();
-      })();
-      resultNode.claim_order = nodes.claim_info.total_claimed;
-      nodes.claim_info.total_claimed += 1;
-      return resultNode;
-    }
-    function claim_element_base(nodes, name, attributes, create_element) {
-      return claim_node(nodes, (node) => node.nodeName === name, (node) => {
-        const remove = [];
-        for (let j2 = 0; j2 < node.attributes.length; j2++) {
-          const attribute = node.attributes[j2];
-          if (!attributes[attribute.name]) {
-            remove.push(attribute.name);
-          }
-        }
-        remove.forEach((v2) => node.removeAttribute(v2));
-        return void 0;
-      }, () => create_element(name));
-    }
-    function claim_element(nodes, name, attributes) {
-      return claim_element_base(nodes, name, attributes, element2);
-    }
-    function claim_svg_element(nodes, name, attributes) {
-      return claim_element_base(nodes, name, attributes, svg_element);
-    }
-    function claim_text(nodes, data) {
-      return claim_node(nodes, (node) => node.nodeType === 3, (node) => {
-        const dataStr = "" + data;
-        if (node.data.startsWith(dataStr)) {
-          if (node.data.length !== dataStr.length) {
-            return node.splitText(dataStr.length);
-          }
-        } else {
-          node.data = dataStr;
-        }
-      }, () => text2(data), true);
-    }
-    function claim_space(nodes) {
-      return claim_text(nodes, " ");
-    }
-    function find_comment(nodes, text3, start2) {
-      for (let i2 = start2; i2 < nodes.length; i2 += 1) {
-        const node = nodes[i2];
-        if (node.nodeType === 8 && node.textContent.trim() === text3) {
-          return i2;
-        }
-      }
-      return nodes.length;
-    }
-    function claim_html_tag(nodes, is_svg) {
-      const start_index = find_comment(nodes, "HTML_TAG_START", 0);
-      const end_index = find_comment(nodes, "HTML_TAG_END", start_index);
-      if (start_index === end_index) {
-        return new HtmlTagHydration(void 0, is_svg);
-      }
-      init_claim_info(nodes);
-      const html_tag_nodes = nodes.splice(start_index, end_index - start_index + 1);
-      detach2(html_tag_nodes[0]);
-      detach2(html_tag_nodes[html_tag_nodes.length - 1]);
-      const claimed_nodes = html_tag_nodes.slice(1, html_tag_nodes.length - 1);
-      for (const n2 of claimed_nodes) {
-        n2.claim_order = nodes.claim_info.total_claimed;
-        nodes.claim_info.total_claimed += 1;
-      }
-      return new HtmlTagHydration(claimed_nodes, is_svg);
-    }
-    function set_data2(text3, data) {
-      data = "" + data;
-      if (text3.wholeText !== data)
-        text3.data = data;
-    }
-    function set_input_value2(input, value) {
-      input.value = value == null ? "" : value;
-    }
-    function set_input_type(input, type) {
-      try {
-        input.type = type;
-      } catch (e) {
-      }
-    }
-    function set_style2(node, key, value, important) {
-      if (value === null) {
-        node.style.removeProperty(key);
-      } else {
-        node.style.setProperty(key, value, important ? "important" : "");
-      }
-    }
-    function select_option2(select, value) {
-      for (let i2 = 0; i2 < select.options.length; i2 += 1) {
-        const option = select.options[i2];
-        if (option.__value === value) {
-          option.selected = true;
-          return;
-        }
-      }
-      select.selectedIndex = -1;
-    }
-    function select_options(select, value) {
-      for (let i2 = 0; i2 < select.options.length; i2 += 1) {
-        const option = select.options[i2];
-        option.selected = ~value.indexOf(option.__value);
-      }
-    }
-    function select_value(select) {
-      const selected_option = select.querySelector(":checked") || select.options[0];
-      return selected_option && selected_option.__value;
-    }
-    function select_multiple_value(select) {
-      return [].map.call(select.querySelectorAll(":checked"), (option) => option.__value);
-    }
-    var crossorigin;
-    function is_crossorigin() {
-      if (crossorigin === void 0) {
-        crossorigin = false;
-        try {
-          if (typeof window !== "undefined" && window.parent) {
-            void window.parent.document;
-          }
-        } catch (error2) {
-          crossorigin = true;
-        }
-      }
-      return crossorigin;
-    }
-    function add_resize_listener(node, fn3) {
-      const computed_style = getComputedStyle(node);
-      if (computed_style.position === "static") {
-        node.style.position = "relative";
-      }
-      const iframe = element2("iframe");
-      iframe.setAttribute("style", "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; border: 0; opacity: 0; pointer-events: none; z-index: -1;");
-      iframe.setAttribute("aria-hidden", "true");
-      iframe.tabIndex = -1;
-      const crossorigin2 = is_crossorigin();
-      let unsubscribe;
-      if (crossorigin2) {
-        iframe.src = "data:text/html,<script>onresize=function(){parent.postMessage(0,'*')}<\/script>";
-        unsubscribe = listen2(window, "message", (event) => {
-          if (event.source === iframe.contentWindow)
-            fn3();
-        });
-      } else {
-        iframe.src = "about:blank";
-        iframe.onload = () => {
-          unsubscribe = listen2(iframe.contentWindow, "resize", fn3);
-        };
-      }
-      append2(node, iframe);
-      return () => {
-        if (crossorigin2) {
-          unsubscribe();
-        } else if (unsubscribe && iframe.contentWindow) {
-          unsubscribe();
-        }
-        detach2(iframe);
-      };
-    }
-    function toggle_class2(element3, name, toggle) {
-      element3.classList[toggle ? "add" : "remove"](name);
-    }
-    function custom_event2(type, detail, { bubbles = false, cancelable = false } = {}) {
-      const e = document.createEvent("CustomEvent");
-      e.initCustomEvent(type, bubbles, cancelable, detail);
-      return e;
-    }
-    function query_selector_all(selector, parent = document.body) {
-      return Array.from(parent.querySelectorAll(selector));
-    }
-    var HtmlTag = class {
-      constructor(is_svg = false) {
-        this.is_svg = false;
-        this.is_svg = is_svg;
-        this.e = this.n = null;
-      }
-      c(html) {
-        this.h(html);
-      }
-      m(html, target, anchor = null) {
-        if (!this.e) {
-          if (this.is_svg)
-            this.e = svg_element(target.nodeName);
-          else
-            this.e = element2(target.nodeName);
-          this.t = target;
-          this.c(html);
-        }
-        this.i(anchor);
-      }
-      h(html) {
-        this.e.innerHTML = html;
-        this.n = Array.from(this.e.childNodes);
-      }
-      i(anchor) {
-        for (let i2 = 0; i2 < this.n.length; i2 += 1) {
-          insert2(this.t, this.n[i2], anchor);
-        }
-      }
-      p(html) {
-        this.d();
-        this.h(html);
-        this.i(this.a);
-      }
-      d() {
-        this.n.forEach(detach2);
-      }
-    };
-    var HtmlTagHydration = class extends HtmlTag {
-      constructor(claimed_nodes, is_svg = false) {
-        super(is_svg);
-        this.e = this.n = null;
-        this.l = claimed_nodes;
-      }
-      c(html) {
-        if (this.l) {
-          this.n = this.l;
-        } else {
-          super.c(html);
-        }
-      }
-      i(anchor) {
-        for (let i2 = 0; i2 < this.n.length; i2 += 1) {
-          insert_hydration(this.t, this.n[i2], anchor);
-        }
-      }
-    };
-    function attribute_to_object(attributes) {
-      const result = {};
-      for (const attribute of attributes) {
-        result[attribute.name] = attribute.value;
-      }
-      return result;
-    }
-    function get_custom_elements_slots(element3) {
-      const result = {};
-      element3.childNodes.forEach((node) => {
-        result[node.slot || "default"] = true;
-      });
-      return result;
-    }
-    var managed_styles2 = new Map();
-    var active = 0;
-    function hash3(str) {
-      let hash4 = 5381;
-      let i2 = str.length;
-      while (i2--)
-        hash4 = (hash4 << 5) - hash4 ^ str.charCodeAt(i2);
-      return hash4 >>> 0;
-    }
-    function create_style_information(doc, node) {
-      const info = { stylesheet: append_empty_stylesheet(node), rules: {} };
-      managed_styles2.set(doc, info);
-      return info;
-    }
-    function create_rule(node, a2, b2, duration, delay, ease, fn3, uid = 0) {
-      const step = 16.666 / duration;
-      let keyframes = "{\n";
-      for (let p2 = 0; p2 <= 1; p2 += step) {
-        const t3 = a2 + (b2 - a2) * ease(p2);
-        keyframes += p2 * 100 + `%{${fn3(t3, 1 - t3)}}
-`;
-      }
-      const rule = keyframes + `100% {${fn3(b2, 1 - b2)}}
-}`;
-      const name = `__svelte_${hash3(rule)}_${uid}`;
-      const doc = get_root_for_style2(node);
-      const { stylesheet, rules } = managed_styles2.get(doc) || create_style_information(doc, node);
-      if (!rules[name]) {
-        rules[name] = true;
-        stylesheet.insertRule(`@keyframes ${name} ${rule}`, stylesheet.cssRules.length);
-      }
-      const animation = node.style.animation || "";
-      node.style.animation = `${animation ? `${animation}, ` : ""}${name} ${duration}ms linear ${delay}ms 1 both`;
-      active += 1;
-      return name;
-    }
-    function delete_rule(node, name) {
-      const previous = (node.style.animation || "").split(", ");
-      const next = previous.filter(name ? (anim) => anim.indexOf(name) < 0 : (anim) => anim.indexOf("__svelte") === -1);
-      const deleted = previous.length - next.length;
-      if (deleted) {
-        node.style.animation = next.join(", ");
-        active -= deleted;
-        if (!active)
-          clear_rules();
-      }
-    }
-    function clear_rules() {
-      exports.raf(() => {
-        if (active)
-          return;
-        managed_styles2.forEach((info) => {
-          const { ownerNode } = info.stylesheet;
-          if (ownerNode)
-            detach2(ownerNode);
-        });
-        managed_styles2.clear();
-      });
-    }
-    function create_animation(node, from, fn3, params) {
-      if (!from)
-        return noop3;
-      const to = node.getBoundingClientRect();
-      if (from.left === to.left && from.right === to.right && from.top === to.top && from.bottom === to.bottom)
-        return noop3;
-      const {
-        delay = 0,
-        duration = 300,
-        easing = identity,
-        start: start_time = exports.now() + delay,
-        end: end2 = start_time + duration,
-        tick: tick3 = noop3,
-        css
-      } = fn3(node, { from, to }, params);
-      let running = true;
-      let started = false;
-      let name;
-      function start2() {
-        if (css) {
-          name = create_rule(node, 0, 1, duration, delay, easing, css);
-        }
-        if (!delay) {
-          started = true;
-        }
-      }
-      function stop() {
-        if (css)
-          delete_rule(node, name);
-        running = false;
-      }
-      loop((now) => {
-        if (!started && now >= start_time) {
-          started = true;
-        }
-        if (started && now >= end2) {
-          tick3(1, 0);
-          stop();
-        }
-        if (!running) {
-          return false;
-        }
-        if (started) {
-          const p2 = now - start_time;
-          const t3 = 0 + 1 * easing(p2 / duration);
-          tick3(t3, 1 - t3);
-        }
-        return true;
-      });
-      start2();
-      tick3(0, 1);
-      return stop;
-    }
-    function fix_position(node) {
-      const style = getComputedStyle(node);
-      if (style.position !== "absolute" && style.position !== "fixed") {
-        const { width, height } = style;
-        const a2 = node.getBoundingClientRect();
-        node.style.position = "absolute";
-        node.style.width = width;
-        node.style.height = height;
-        add_transform(node, a2);
-      }
-    }
-    function add_transform(node, a2) {
-      const b2 = node.getBoundingClientRect();
-      if (a2.left !== b2.left || a2.top !== b2.top) {
-        const style = getComputedStyle(node);
-        const transform = style.transform === "none" ? "" : style.transform;
-        node.style.transform = `${transform} translate(${a2.left - b2.left}px, ${a2.top - b2.top}px)`;
-      }
-    }
-    function set_current_component2(component) {
-      exports.current_component = component;
-    }
-    function get_current_component2() {
-      if (!exports.current_component)
-        throw new Error("Function called outside component initialization");
-      return exports.current_component;
-    }
-    function beforeUpdate2(fn3) {
-      get_current_component2().$$.before_update.push(fn3);
-    }
-    function onMount2(fn3) {
-      get_current_component2().$$.on_mount.push(fn3);
-    }
-    function afterUpdate2(fn3) {
-      get_current_component2().$$.after_update.push(fn3);
-    }
-    function onDestroy2(fn3) {
-      get_current_component2().$$.on_destroy.push(fn3);
-    }
-    function createEventDispatcher2() {
-      const component = get_current_component2();
-      return (type, detail, { cancelable = false } = {}) => {
-        const callbacks = component.$$.callbacks[type];
-        if (callbacks) {
-          const event = custom_event2(type, detail, { cancelable });
-          callbacks.slice().forEach((fn3) => {
-            fn3.call(component, event);
-          });
-          return !event.defaultPrevented;
-        }
-        return true;
-      };
-    }
-    function setContext2(key, context) {
-      get_current_component2().$$.context.set(key, context);
-      return context;
-    }
-    function getContext2(key) {
-      return get_current_component2().$$.context.get(key);
-    }
-    function getAllContexts2() {
-      return get_current_component2().$$.context;
-    }
-    function hasContext2(key) {
-      return get_current_component2().$$.context.has(key);
-    }
-    function bubble2(component, event) {
-      const callbacks = component.$$.callbacks[event.type];
-      if (callbacks) {
-        callbacks.slice().forEach((fn3) => fn3.call(this, event));
-      }
-    }
-    var dirty_components2 = [];
-    var intros = { enabled: false };
-    var binding_callbacks2 = [];
-    var render_callbacks2 = [];
-    var flush_callbacks2 = [];
-    var resolved_promise2 = Promise.resolve();
-    var update_scheduled2 = false;
-    function schedule_update2() {
-      if (!update_scheduled2) {
-        update_scheduled2 = true;
-        resolved_promise2.then(flush2);
-      }
-    }
-    function tick2() {
-      schedule_update2();
-      return resolved_promise2;
-    }
-    function add_render_callback2(fn3) {
-      render_callbacks2.push(fn3);
-    }
-    function add_flush_callback2(fn3) {
-      flush_callbacks2.push(fn3);
-    }
-    var seen_callbacks2 = new Set();
-    var flushidx2 = 0;
-    function flush2() {
-      const saved_component = exports.current_component;
-      do {
-        while (flushidx2 < dirty_components2.length) {
-          const component = dirty_components2[flushidx2];
-          flushidx2++;
-          set_current_component2(component);
-          update2(component.$$);
-        }
-        set_current_component2(null);
-        dirty_components2.length = 0;
-        flushidx2 = 0;
-        while (binding_callbacks2.length)
-          binding_callbacks2.pop()();
-        for (let i2 = 0; i2 < render_callbacks2.length; i2 += 1) {
-          const callback = render_callbacks2[i2];
-          if (!seen_callbacks2.has(callback)) {
-            seen_callbacks2.add(callback);
-            callback();
-          }
-        }
-        render_callbacks2.length = 0;
-      } while (dirty_components2.length);
-      while (flush_callbacks2.length) {
-        flush_callbacks2.pop()();
-      }
-      update_scheduled2 = false;
-      seen_callbacks2.clear();
-      set_current_component2(saved_component);
-    }
-    function update2($$) {
-      if ($$.fragment !== null) {
-        $$.update();
-        run_all2($$.before_update);
-        const dirty = $$.dirty;
-        $$.dirty = [-1];
-        $$.fragment && $$.fragment.p($$.ctx, dirty);
-        $$.after_update.forEach(add_render_callback2);
-      }
-    }
-    var promise;
-    function wait() {
-      if (!promise) {
-        promise = Promise.resolve();
-        promise.then(() => {
-          promise = null;
-        });
-      }
-      return promise;
-    }
-    function dispatch(node, direction, kind) {
-      node.dispatchEvent(custom_event2(`${direction ? "intro" : "outro"}${kind}`));
-    }
-    var outroing2 = new Set();
-    var outros2;
-    function group_outros2() {
-      outros2 = {
-        r: 0,
-        c: [],
-        p: outros2
-      };
-    }
-    function check_outros2() {
-      if (!outros2.r) {
-        run_all2(outros2.c);
-      }
-      outros2 = outros2.p;
-    }
-    function transition_in2(block, local) {
-      if (block && block.i) {
-        outroing2.delete(block);
-        block.i(local);
-      }
-    }
-    function transition_out2(block, local, detach3, callback) {
-      if (block && block.o) {
-        if (outroing2.has(block))
-          return;
-        outroing2.add(block);
-        outros2.c.push(() => {
-          outroing2.delete(block);
-          if (callback) {
-            if (detach3)
-              block.d(1);
-            callback();
-          }
-        });
-        block.o(local);
-      } else if (callback) {
-        callback();
-      }
-    }
-    var null_transition = { duration: 0 };
-    function create_in_transition(node, fn3, params) {
-      let config = fn3(node, params);
-      let running = false;
-      let animation_name;
-      let task;
-      let uid = 0;
-      function cleanup() {
-        if (animation_name)
-          delete_rule(node, animation_name);
-      }
-      function go() {
-        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
-        if (css)
-          animation_name = create_rule(node, 0, 1, duration, delay, easing, css, uid++);
-        tick3(0, 1);
-        const start_time = exports.now() + delay;
-        const end_time = start_time + duration;
-        if (task)
-          task.abort();
-        running = true;
-        add_render_callback2(() => dispatch(node, true, "start"));
-        task = loop((now) => {
-          if (running) {
-            if (now >= end_time) {
-              tick3(1, 0);
-              dispatch(node, true, "end");
-              cleanup();
-              return running = false;
-            }
-            if (now >= start_time) {
-              const t3 = easing((now - start_time) / duration);
-              tick3(t3, 1 - t3);
-            }
-          }
-          return running;
-        });
-      }
-      let started = false;
-      return {
-        start() {
-          if (started)
-            return;
-          started = true;
-          delete_rule(node);
-          if (is_function2(config)) {
-            config = config();
-            wait().then(go);
-          } else {
-            go();
-          }
-        },
-        invalidate() {
-          started = false;
-        },
-        end() {
-          if (running) {
-            cleanup();
-            running = false;
-          }
-        }
-      };
-    }
-    function create_out_transition(node, fn3, params) {
-      let config = fn3(node, params);
-      let running = true;
-      let animation_name;
-      const group = outros2;
-      group.r += 1;
-      function go() {
-        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
-        if (css)
-          animation_name = create_rule(node, 1, 0, duration, delay, easing, css);
-        const start_time = exports.now() + delay;
-        const end_time = start_time + duration;
-        add_render_callback2(() => dispatch(node, false, "start"));
-        loop((now) => {
-          if (running) {
-            if (now >= end_time) {
-              tick3(0, 1);
-              dispatch(node, false, "end");
-              if (!--group.r) {
-                run_all2(group.c);
-              }
-              return false;
-            }
-            if (now >= start_time) {
-              const t3 = easing((now - start_time) / duration);
-              tick3(1 - t3, t3);
-            }
-          }
-          return running;
-        });
-      }
-      if (is_function2(config)) {
-        wait().then(() => {
-          config = config();
-          go();
-        });
-      } else {
-        go();
-      }
-      return {
-        end(reset) {
-          if (reset && config.tick) {
-            config.tick(1, 0);
-          }
-          if (running) {
-            if (animation_name)
-              delete_rule(node, animation_name);
-            running = false;
-          }
-        }
-      };
-    }
-    function create_bidirectional_transition(node, fn3, params, intro) {
-      let config = fn3(node, params);
-      let t3 = intro ? 0 : 1;
-      let running_program = null;
-      let pending_program = null;
-      let animation_name = null;
-      function clear_animation() {
-        if (animation_name)
-          delete_rule(node, animation_name);
-      }
-      function init4(program, duration) {
-        const d2 = program.b - t3;
-        duration *= Math.abs(d2);
-        return {
-          a: t3,
-          b: program.b,
-          d: d2,
-          duration,
-          start: program.start,
-          end: program.start + duration,
-          group: program.group
-        };
-      }
-      function go(b2) {
-        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
-        const program = {
-          start: exports.now() + delay,
-          b: b2
-        };
-        if (!b2) {
-          program.group = outros2;
-          outros2.r += 1;
-        }
-        if (running_program || pending_program) {
-          pending_program = program;
-        } else {
-          if (css) {
-            clear_animation();
-            animation_name = create_rule(node, t3, b2, duration, delay, easing, css);
-          }
-          if (b2)
-            tick3(0, 1);
-          running_program = init4(program, duration);
-          add_render_callback2(() => dispatch(node, b2, "start"));
-          loop((now) => {
-            if (pending_program && now > pending_program.start) {
-              running_program = init4(pending_program, duration);
-              pending_program = null;
-              dispatch(node, running_program.b, "start");
-              if (css) {
-                clear_animation();
-                animation_name = create_rule(node, t3, running_program.b, running_program.duration, 0, easing, config.css);
-              }
-            }
-            if (running_program) {
-              if (now >= running_program.end) {
-                tick3(t3 = running_program.b, 1 - t3);
-                dispatch(node, running_program.b, "end");
-                if (!pending_program) {
-                  if (running_program.b) {
-                    clear_animation();
-                  } else {
-                    if (!--running_program.group.r)
-                      run_all2(running_program.group.c);
-                  }
-                }
-                running_program = null;
-              } else if (now >= running_program.start) {
-                const p2 = now - running_program.start;
-                t3 = running_program.a + running_program.d * easing(p2 / running_program.duration);
-                tick3(t3, 1 - t3);
-              }
-            }
-            return !!(running_program || pending_program);
-          });
-        }
-      }
-      return {
-        run(b2) {
-          if (is_function2(config)) {
-            wait().then(() => {
-              config = config();
-              go(b2);
-            });
-          } else {
-            go(b2);
-          }
-        },
-        end() {
-          clear_animation();
-          running_program = pending_program = null;
-        }
-      };
-    }
-    function handle_promise2(promise2, info) {
-      const token = info.token = {};
-      function update3(type, index, key, value) {
-        if (info.token !== token)
-          return;
-        info.resolved = value;
-        let child_ctx = info.ctx;
-        if (key !== void 0) {
-          child_ctx = child_ctx.slice();
-          child_ctx[key] = value;
-        }
-        const block = type && (info.current = type)(child_ctx);
-        let needs_flush = false;
-        if (info.block) {
-          if (info.blocks) {
-            info.blocks.forEach((block2, i2) => {
-              if (i2 !== index && block2) {
-                group_outros2();
-                transition_out2(block2, 1, 1, () => {
-                  if (info.blocks[i2] === block2) {
-                    info.blocks[i2] = null;
-                  }
-                });
-                check_outros2();
-              }
-            });
-          } else {
-            info.block.d(1);
-          }
-          block.c();
-          transition_in2(block, 1);
-          block.m(info.mount(), info.anchor);
-          needs_flush = true;
-        }
-        info.block = block;
-        if (info.blocks)
-          info.blocks[index] = block;
-        if (needs_flush) {
-          flush2();
-        }
-      }
-      if (is_promise2(promise2)) {
-        const current_component2 = get_current_component2();
-        promise2.then((value) => {
-          set_current_component2(current_component2);
-          update3(info.then, 1, info.value, value);
-          set_current_component2(null);
-        }, (error2) => {
-          set_current_component2(current_component2);
-          update3(info.catch, 2, info.error, error2);
-          set_current_component2(null);
-          if (!info.hasCatch) {
-            throw error2;
-          }
-        });
-        if (info.current !== info.pending) {
-          update3(info.pending, 0);
-          return true;
-        }
-      } else {
-        if (info.current !== info.then) {
-          update3(info.then, 1, info.value, promise2);
-          return true;
-        }
-        info.resolved = promise2;
-      }
-    }
-    function update_await_block_branch2(info, ctx, dirty) {
-      const child_ctx = ctx.slice();
-      const { resolved } = info;
-      if (info.current === info.then) {
-        child_ctx[info.value] = resolved;
-      }
-      if (info.current === info.catch) {
-        child_ctx[info.error] = resolved;
-      }
-      info.block.p(child_ctx, dirty);
-    }
-    var globals2 = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : global;
-    function destroy_block(block, lookup) {
-      block.d(1);
-      lookup.delete(block.key);
-    }
-    function outro_and_destroy_block2(block, lookup) {
-      transition_out2(block, 1, 1, () => {
-        lookup.delete(block.key);
-      });
-    }
-    function fix_and_destroy_block(block, lookup) {
-      block.f();
-      destroy_block(block, lookup);
-    }
-    function fix_and_outro_and_destroy_block(block, lookup) {
-      block.f();
-      outro_and_destroy_block2(block, lookup);
-    }
-    function update_keyed_each2(old_blocks, dirty, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block16, next, get_context) {
-      let o2 = old_blocks.length;
-      let n2 = list.length;
-      let i2 = o2;
-      const old_indexes = {};
-      while (i2--)
-        old_indexes[old_blocks[i2].key] = i2;
-      const new_blocks = [];
-      const new_lookup = new Map();
-      const deltas = new Map();
-      i2 = n2;
-      while (i2--) {
-        const child_ctx = get_context(ctx, list, i2);
-        const key = get_key(child_ctx);
-        let block = lookup.get(key);
-        if (!block) {
-          block = create_each_block16(key, child_ctx);
-          block.c();
-        } else if (dynamic) {
-          block.p(child_ctx, dirty);
-        }
-        new_lookup.set(key, new_blocks[i2] = block);
-        if (key in old_indexes)
-          deltas.set(key, Math.abs(i2 - old_indexes[key]));
-      }
-      const will_move = new Set();
-      const did_move = new Set();
-      function insert3(block) {
-        transition_in2(block, 1);
-        block.m(node, next);
-        lookup.set(block.key, block);
-        next = block.first;
-        n2--;
-      }
-      while (o2 && n2) {
-        const new_block = new_blocks[n2 - 1];
-        const old_block = old_blocks[o2 - 1];
-        const new_key = new_block.key;
-        const old_key = old_block.key;
-        if (new_block === old_block) {
-          next = new_block.first;
-          o2--;
-          n2--;
-        } else if (!new_lookup.has(old_key)) {
-          destroy(old_block, lookup);
-          o2--;
-        } else if (!lookup.has(new_key) || will_move.has(new_key)) {
-          insert3(new_block);
-        } else if (did_move.has(old_key)) {
-          o2--;
-        } else if (deltas.get(new_key) > deltas.get(old_key)) {
-          did_move.add(new_key);
-          insert3(new_block);
-        } else {
-          will_move.add(old_key);
-          o2--;
-        }
-      }
-      while (o2--) {
-        const old_block = old_blocks[o2];
-        if (!new_lookup.has(old_block.key))
-          destroy(old_block, lookup);
-      }
-      while (n2)
-        insert3(new_blocks[n2 - 1]);
-      return new_blocks;
-    }
-    function validate_each_keys(ctx, list, get_context, get_key) {
-      const keys = new Set();
-      for (let i2 = 0; i2 < list.length; i2++) {
-        const key = get_key(get_context(ctx, list, i2));
-        if (keys.has(key)) {
-          throw new Error("Cannot have duplicate keys in a keyed each");
-        }
-        keys.add(key);
-      }
-    }
-    function get_spread_update2(levels, updates) {
-      const update3 = {};
-      const to_null_out = {};
-      const accounted_for = { $$scope: 1 };
-      let i2 = levels.length;
-      while (i2--) {
-        const o2 = levels[i2];
-        const n2 = updates[i2];
-        if (n2) {
-          for (const key in o2) {
-            if (!(key in n2))
-              to_null_out[key] = 1;
-          }
-          for (const key in n2) {
-            if (!accounted_for[key]) {
-              update3[key] = n2[key];
-              accounted_for[key] = 1;
-            }
-          }
-          levels[i2] = n2;
-        } else {
-          for (const key in o2) {
-            accounted_for[key] = 1;
-          }
-        }
-      }
-      for (const key in to_null_out) {
-        if (!(key in update3))
-          update3[key] = void 0;
-      }
-      return update3;
-    }
-    function get_spread_object(spread_props) {
-      return typeof spread_props === "object" && spread_props !== null ? spread_props : {};
-    }
-    var boolean_attributes2 = new Set([
-      "allowfullscreen",
-      "allowpaymentrequest",
-      "async",
-      "autofocus",
-      "autoplay",
-      "checked",
-      "controls",
-      "default",
-      "defer",
-      "disabled",
-      "formnovalidate",
-      "hidden",
-      "ismap",
-      "loop",
-      "multiple",
-      "muted",
-      "nomodule",
-      "novalidate",
-      "open",
-      "playsinline",
-      "readonly",
-      "required",
-      "reversed",
-      "selected"
-    ]);
-    var void_element_names = /^(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)$/;
-    function is_void(name) {
-      return void_element_names.test(name) || name.toLowerCase() === "!doctype";
-    }
-    var invalid_attribute_name_character = /[\s'">/=\u{FDD0}-\u{FDEF}\u{FFFE}\u{FFFF}\u{1FFFE}\u{1FFFF}\u{2FFFE}\u{2FFFF}\u{3FFFE}\u{3FFFF}\u{4FFFE}\u{4FFFF}\u{5FFFE}\u{5FFFF}\u{6FFFE}\u{6FFFF}\u{7FFFE}\u{7FFFF}\u{8FFFE}\u{8FFFF}\u{9FFFE}\u{9FFFF}\u{AFFFE}\u{AFFFF}\u{BFFFE}\u{BFFFF}\u{CFFFE}\u{CFFFF}\u{DFFFE}\u{DFFFF}\u{EFFFE}\u{EFFFF}\u{FFFFE}\u{FFFFF}\u{10FFFE}\u{10FFFF}]/u;
-    function spread(args, attrs_to_add) {
-      const attributes = Object.assign({}, ...args);
-      if (attrs_to_add) {
-        const classes_to_add = attrs_to_add.classes;
-        const styles_to_add = attrs_to_add.styles;
-        if (classes_to_add) {
-          if (attributes.class == null) {
-            attributes.class = classes_to_add;
-          } else {
-            attributes.class += " " + classes_to_add;
-          }
-        }
-        if (styles_to_add) {
-          if (attributes.style == null) {
-            attributes.style = style_object_to_string(styles_to_add);
-          } else {
-            attributes.style = style_object_to_string(merge_ssr_styles(attributes.style, styles_to_add));
-          }
-        }
-      }
-      let str = "";
-      Object.keys(attributes).forEach((name) => {
-        if (invalid_attribute_name_character.test(name))
-          return;
-        const value = attributes[name];
-        if (value === true)
-          str += " " + name;
-        else if (boolean_attributes2.has(name.toLowerCase())) {
-          if (value)
-            str += " " + name;
-        } else if (value != null) {
-          str += ` ${name}="${value}"`;
-        }
-      });
-      return str;
-    }
-    function merge_ssr_styles(style_attribute, style_directive) {
-      const style_object = {};
-      for (const individual_style of style_attribute.split(";")) {
-        const colon_index = individual_style.indexOf(":");
-        const name = individual_style.slice(0, colon_index).trim();
-        const value = individual_style.slice(colon_index + 1).trim();
-        if (!name)
-          continue;
-        style_object[name] = value;
-      }
-      for (const name in style_directive) {
-        const value = style_directive[name];
-        if (value) {
-          style_object[name] = value;
-        } else {
-          delete style_object[name];
-        }
-      }
-      return style_object;
-    }
-    var ATTR_REGEX = /[&"]/g;
-    var CONTENT_REGEX = /[&<]/g;
-    function escape2(value, is_attr = false) {
-      const str = String(value);
-      const pattern = is_attr ? ATTR_REGEX : CONTENT_REGEX;
-      pattern.lastIndex = 0;
-      let escaped = "";
-      let last = 0;
-      while (pattern.test(str)) {
-        const i2 = pattern.lastIndex - 1;
-        const ch = str[i2];
-        escaped += str.substring(last, i2) + (ch === "&" ? "&amp;" : ch === '"' ? "&quot;" : "&lt;");
-        last = i2 + 1;
-      }
-      return escaped + str.substring(last);
-    }
-    function escape_attribute_value(value) {
-      const should_escape = typeof value === "string" || value && typeof value === "object";
-      return should_escape ? escape2(value, true) : value;
-    }
-    function escape_object(obj) {
-      const result = {};
-      for (const key in obj) {
-        result[key] = escape_attribute_value(obj[key]);
-      }
-      return result;
-    }
-    function each(items, fn3) {
-      let str = "";
-      for (let i2 = 0; i2 < items.length; i2 += 1) {
-        str += fn3(items[i2], i2);
-      }
-      return str;
-    }
-    var missing_component = {
-      $$render: () => ""
-    };
-    function validate_component(component, name) {
-      if (!component || !component.$$render) {
-        if (name === "svelte:component")
-          name += " this={...}";
-        throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules`);
-      }
-      return component;
-    }
-    function debug(file, line, column, values) {
-      console.log(`{@debug} ${file ? file + " " : ""}(${line}:${column})`);
-      console.log(values);
-      return "";
-    }
-    var on_destroy;
-    function create_ssr_component(fn3) {
-      function $$render(result, props, bindings, slots, context) {
-        const parent_component = exports.current_component;
-        const $$ = {
-          on_destroy,
-          context: new Map(context || (parent_component ? parent_component.$$.context : [])),
-          on_mount: [],
-          before_update: [],
-          after_update: [],
-          callbacks: blank_object2()
-        };
-        set_current_component2({ $$ });
-        const html = fn3(result, props, bindings, slots);
-        set_current_component2(parent_component);
-        return html;
-      }
-      return {
-        render: (props = {}, { $$slots = {}, context = new Map() } = {}) => {
-          on_destroy = [];
-          const result = { title: "", head: "", css: new Set() };
-          const html = $$render(result, props, {}, $$slots, context);
-          run_all2(on_destroy);
-          return {
-            html,
-            css: {
-              code: Array.from(result.css).map((css) => css.code).join("\n"),
-              map: null
-            },
-            head: result.title + result.head
-          };
-        },
-        $$render
-      };
-    }
-    function add_attribute(name, value, boolean) {
-      if (value == null || boolean && !value)
-        return "";
-      const assignment = boolean && value === true ? "" : `="${escape2(value, true)}"`;
-      return ` ${name}${assignment}`;
-    }
-    function add_classes(classes) {
-      return classes ? ` class="${classes}"` : "";
-    }
-    function style_object_to_string(style_object) {
-      return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
-    }
-    function add_styles(style_object) {
-      const styles = style_object_to_string(style_object);
-      return styles ? ` style="${styles}"` : "";
-    }
-    function bind2(component, name, callback) {
-      const index = component.$$.props[name];
-      if (index !== void 0) {
-        component.$$.bound[index] = callback;
-        callback(component.$$.ctx[index]);
-      }
-    }
-    function create_component2(block) {
-      block && block.c();
-    }
-    function claim_component(block, parent_nodes) {
-      block && block.l(parent_nodes);
-    }
-    function mount_component2(component, target, anchor, customElement) {
-      const { fragment, on_mount, on_destroy: on_destroy2, after_update } = component.$$;
-      fragment && fragment.m(target, anchor);
-      if (!customElement) {
-        add_render_callback2(() => {
-          const new_on_destroy = on_mount.map(run2).filter(is_function2);
-          if (on_destroy2) {
-            on_destroy2.push(...new_on_destroy);
-          } else {
-            run_all2(new_on_destroy);
-          }
-          component.$$.on_mount = [];
-        });
-      }
-      after_update.forEach(add_render_callback2);
-    }
-    function destroy_component2(component, detaching) {
-      const $$ = component.$$;
-      if ($$.fragment !== null) {
-        run_all2($$.on_destroy);
-        $$.fragment && $$.fragment.d(detaching);
-        $$.on_destroy = $$.fragment = null;
-        $$.ctx = [];
-      }
-    }
-    function make_dirty2(component, i2) {
-      if (component.$$.dirty[0] === -1) {
-        dirty_components2.push(component);
-        schedule_update2();
-        component.$$.dirty.fill(0);
-      }
-      component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
-    }
-    function init3(component, options, instance90, create_fragment90, not_equal2, props, append_styles3, dirty = [-1]) {
-      const parent_component = exports.current_component;
-      set_current_component2(component);
-      const $$ = component.$$ = {
-        fragment: null,
-        ctx: null,
-        props,
-        update: noop3,
-        not_equal: not_equal2,
-        bound: blank_object2(),
-        on_mount: [],
-        on_destroy: [],
-        on_disconnect: [],
-        before_update: [],
-        after_update: [],
-        context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
-        callbacks: blank_object2(),
-        dirty,
-        skip_bound: false,
-        root: options.target || parent_component.$$.root
-      };
-      append_styles3 && append_styles3($$.root);
-      let ready = false;
-      $$.ctx = instance90 ? instance90(component, options.props || {}, (i2, ret, ...rest) => {
-        const value = rest.length ? rest[0] : ret;
-        if ($$.ctx && not_equal2($$.ctx[i2], $$.ctx[i2] = value)) {
-          if (!$$.skip_bound && $$.bound[i2])
-            $$.bound[i2](value);
-          if (ready)
-            make_dirty2(component, i2);
-        }
-        return ret;
-      }) : [];
-      $$.update();
-      ready = true;
-      run_all2($$.before_update);
-      $$.fragment = create_fragment90 ? create_fragment90($$.ctx) : false;
-      if (options.target) {
-        if (options.hydrate) {
-          start_hydrating2();
-          const nodes = children2(options.target);
-          $$.fragment && $$.fragment.l(nodes);
-          nodes.forEach(detach2);
-        } else {
-          $$.fragment && $$.fragment.c();
-        }
-        if (options.intro)
-          transition_in2(component.$$.fragment);
-        mount_component2(component, options.target, options.anchor, options.customElement);
-        end_hydrating2();
-        flush2();
-      }
-      set_current_component2(parent_component);
-    }
-    if (typeof HTMLElement === "function") {
-      exports.SvelteElement = class extends HTMLElement {
-        constructor() {
-          super();
-          this.attachShadow({ mode: "open" });
-        }
-        connectedCallback() {
-          const { on_mount } = this.$$;
-          this.$$.on_disconnect = on_mount.map(run2).filter(is_function2);
-          for (const key in this.$$.slotted) {
-            this.appendChild(this.$$.slotted[key]);
-          }
-        }
-        attributeChangedCallback(attr3, _oldValue, newValue) {
-          this[attr3] = newValue;
-        }
-        disconnectedCallback() {
-          run_all2(this.$$.on_disconnect);
-        }
-        $destroy() {
-          destroy_component2(this, 1);
-          this.$destroy = noop3;
-        }
-        $on(type, callback) {
-          const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
-          callbacks.push(callback);
-          return () => {
-            const index = callbacks.indexOf(callback);
-            if (index !== -1)
-              callbacks.splice(index, 1);
-          };
-        }
-        $set($$props) {
-          if (this.$$set && !is_empty2($$props)) {
-            this.$$.skip_bound = true;
-            this.$$set($$props);
-            this.$$.skip_bound = false;
-          }
-        }
-      };
-    }
-    var SvelteComponent2 = class {
-      $destroy() {
-        destroy_component2(this, 1);
-        this.$destroy = noop3;
-      }
-      $on(type, callback) {
-        const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
-        callbacks.push(callback);
-        return () => {
-          const index = callbacks.indexOf(callback);
-          if (index !== -1)
-            callbacks.splice(index, 1);
-        };
-      }
-      $set($$props) {
-        if (this.$$set && !is_empty2($$props)) {
-          this.$$.skip_bound = true;
-          this.$$set($$props);
-          this.$$.skip_bound = false;
-        }
-      }
-    };
-    function dispatch_dev(type, detail) {
-      document.dispatchEvent(custom_event2(type, Object.assign({ version: "3.50.1" }, detail), { bubbles: true }));
-    }
-    function append_dev(target, node) {
-      dispatch_dev("SvelteDOMInsert", { target, node });
-      append2(target, node);
-    }
-    function append_hydration_dev(target, node) {
-      dispatch_dev("SvelteDOMInsert", { target, node });
-      append_hydration(target, node);
-    }
-    function insert_dev(target, node, anchor) {
-      dispatch_dev("SvelteDOMInsert", { target, node, anchor });
-      insert2(target, node, anchor);
-    }
-    function insert_hydration_dev(target, node, anchor) {
-      dispatch_dev("SvelteDOMInsert", { target, node, anchor });
-      insert_hydration(target, node, anchor);
-    }
-    function detach_dev(node) {
-      dispatch_dev("SvelteDOMRemove", { node });
-      detach2(node);
-    }
-    function detach_between_dev(before, after) {
-      while (before.nextSibling && before.nextSibling !== after) {
-        detach_dev(before.nextSibling);
-      }
-    }
-    function detach_before_dev(after) {
-      while (after.previousSibling) {
-        detach_dev(after.previousSibling);
-      }
-    }
-    function detach_after_dev(before) {
-      while (before.nextSibling) {
-        detach_dev(before.nextSibling);
-      }
-    }
-    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
-      const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
-      if (has_prevent_default)
-        modifiers.push("preventDefault");
-      if (has_stop_propagation)
-        modifiers.push("stopPropagation");
-      dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
-      const dispose = listen2(node, event, handler, options);
-      return () => {
-        dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
-        dispose();
-      };
-    }
-    function attr_dev(node, attribute, value) {
-      attr2(node, attribute, value);
-      if (value == null)
-        dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
-      else
-        dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
-    }
-    function prop_dev(node, property, value) {
-      node[property] = value;
-      dispatch_dev("SvelteDOMSetProperty", { node, property, value });
-    }
-    function dataset_dev(node, property, value) {
-      node.dataset[property] = value;
-      dispatch_dev("SvelteDOMSetDataset", { node, property, value });
-    }
-    function set_data_dev(text3, data) {
-      data = "" + data;
-      if (text3.wholeText === data)
-        return;
-      dispatch_dev("SvelteDOMSetData", { node: text3, data });
-      text3.data = data;
-    }
-    function validate_each_argument(arg) {
-      if (typeof arg !== "string" && !(arg && typeof arg === "object" && "length" in arg)) {
-        let msg = "{#each} only iterates over array-like objects.";
-        if (typeof Symbol === "function" && arg && Symbol.iterator in arg) {
-          msg += " You can use a spread to convert this iterable into an array.";
-        }
-        throw new Error(msg);
-      }
-    }
-    function validate_slots(name, slot, keys) {
-      for (const slot_key of Object.keys(slot)) {
-        if (!~keys.indexOf(slot_key)) {
-          console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
-        }
-      }
-    }
-    function validate_dynamic_element(tag) {
-      const is_string = typeof tag === "string";
-      if (tag && !is_string) {
-        throw new Error('<svelte:element> expects "this" attribute to be a string.');
-      }
-    }
-    function validate_void_dynamic_element(tag) {
-      if (tag && is_void(tag)) {
-        throw new Error(`<svelte:element this="${tag}"> is self-closing and cannot have content.`);
-      }
-    }
-    var SvelteComponentDev2 = class extends SvelteComponent2 {
-      constructor(options) {
-        if (!options || !options.target && !options.$$inline) {
-          throw new Error("'target' is a required option");
-        }
-        super();
-      }
-      $destroy() {
-        super.$destroy();
-        this.$destroy = () => {
-          console.warn("Component was already destroyed");
-        };
-      }
-      $capture_state() {
-      }
-      $inject_state() {
-      }
-    };
-    var SvelteComponentTyped2 = class extends SvelteComponentDev2 {
-      constructor(options) {
-        super(options);
-      }
-    };
-    function loop_guard(timeout) {
-      const start2 = Date.now();
-      return () => {
-        if (Date.now() - start2 > timeout) {
-          throw new Error("Infinite loop detected");
-        }
-      };
-    }
-    exports.HtmlTag = HtmlTag;
-    exports.HtmlTagHydration = HtmlTagHydration;
-    exports.SvelteComponent = SvelteComponent2;
-    exports.SvelteComponentDev = SvelteComponentDev2;
-    exports.SvelteComponentTyped = SvelteComponentTyped2;
-    exports.action_destroyer = action_destroyer2;
-    exports.add_attribute = add_attribute;
-    exports.add_classes = add_classes;
-    exports.add_flush_callback = add_flush_callback2;
-    exports.add_location = add_location;
-    exports.add_render_callback = add_render_callback2;
-    exports.add_resize_listener = add_resize_listener;
-    exports.add_styles = add_styles;
-    exports.add_transform = add_transform;
-    exports.afterUpdate = afterUpdate2;
-    exports.append = append2;
-    exports.append_dev = append_dev;
-    exports.append_empty_stylesheet = append_empty_stylesheet;
-    exports.append_hydration = append_hydration;
-    exports.append_hydration_dev = append_hydration_dev;
-    exports.append_styles = append_styles2;
-    exports.assign = assign2;
-    exports.attr = attr2;
-    exports.attr_dev = attr_dev;
-    exports.attribute_to_object = attribute_to_object;
-    exports.beforeUpdate = beforeUpdate2;
-    exports.bind = bind2;
-    exports.binding_callbacks = binding_callbacks2;
-    exports.blank_object = blank_object2;
-    exports.bubble = bubble2;
-    exports.check_outros = check_outros2;
-    exports.children = children2;
-    exports.claim_component = claim_component;
-    exports.claim_element = claim_element;
-    exports.claim_html_tag = claim_html_tag;
-    exports.claim_space = claim_space;
-    exports.claim_svg_element = claim_svg_element;
-    exports.claim_text = claim_text;
-    exports.clear_loops = clear_loops;
-    exports.component_subscribe = component_subscribe2;
-    exports.compute_rest_props = compute_rest_props;
-    exports.compute_slots = compute_slots2;
-    exports.createEventDispatcher = createEventDispatcher2;
-    exports.create_animation = create_animation;
-    exports.create_bidirectional_transition = create_bidirectional_transition;
-    exports.create_component = create_component2;
-    exports.create_in_transition = create_in_transition;
-    exports.create_out_transition = create_out_transition;
-    exports.create_slot = create_slot2;
-    exports.create_ssr_component = create_ssr_component;
-    exports.custom_event = custom_event2;
-    exports.dataset_dev = dataset_dev;
-    exports.debug = debug;
-    exports.destroy_block = destroy_block;
-    exports.destroy_component = destroy_component2;
-    exports.destroy_each = destroy_each2;
-    exports.detach = detach2;
-    exports.detach_after_dev = detach_after_dev;
-    exports.detach_before_dev = detach_before_dev;
-    exports.detach_between_dev = detach_between_dev;
-    exports.detach_dev = detach_dev;
-    exports.dirty_components = dirty_components2;
-    exports.dispatch_dev = dispatch_dev;
-    exports.each = each;
-    exports.element = element2;
-    exports.element_is = element_is;
-    exports.empty = empty2;
-    exports.end_hydrating = end_hydrating2;
-    exports.escape = escape2;
-    exports.escape_attribute_value = escape_attribute_value;
-    exports.escape_object = escape_object;
-    exports.exclude_internal_props = exclude_internal_props;
-    exports.fix_and_destroy_block = fix_and_destroy_block;
-    exports.fix_and_outro_and_destroy_block = fix_and_outro_and_destroy_block;
-    exports.fix_position = fix_position;
-    exports.flush = flush2;
-    exports.getAllContexts = getAllContexts2;
-    exports.getContext = getContext2;
-    exports.get_all_dirty_from_scope = get_all_dirty_from_scope2;
-    exports.get_binding_group_value = get_binding_group_value;
-    exports.get_current_component = get_current_component2;
-    exports.get_custom_elements_slots = get_custom_elements_slots;
-    exports.get_root_for_style = get_root_for_style2;
-    exports.get_slot_changes = get_slot_changes2;
-    exports.get_spread_object = get_spread_object;
-    exports.get_spread_update = get_spread_update2;
-    exports.get_store_value = get_store_value2;
-    exports.globals = globals2;
-    exports.group_outros = group_outros2;
-    exports.handle_promise = handle_promise2;
-    exports.hasContext = hasContext2;
-    exports.has_prop = has_prop;
-    exports.identity = identity;
-    exports.init = init3;
-    exports.insert = insert2;
-    exports.insert_dev = insert_dev;
-    exports.insert_hydration = insert_hydration;
-    exports.insert_hydration_dev = insert_hydration_dev;
-    exports.intros = intros;
-    exports.invalid_attribute_name_character = invalid_attribute_name_character;
-    exports.is_client = is_client;
-    exports.is_crossorigin = is_crossorigin;
-    exports.is_empty = is_empty2;
-    exports.is_function = is_function2;
-    exports.is_promise = is_promise2;
-    exports.is_void = is_void;
-    exports.listen = listen2;
-    exports.listen_dev = listen_dev;
-    exports.loop = loop;
-    exports.loop_guard = loop_guard;
-    exports.merge_ssr_styles = merge_ssr_styles;
-    exports.missing_component = missing_component;
-    exports.mount_component = mount_component2;
-    exports.noop = noop3;
-    exports.not_equal = not_equal;
-    exports.null_to_empty = null_to_empty2;
-    exports.object_without_properties = object_without_properties;
-    exports.onDestroy = onDestroy2;
-    exports.onMount = onMount2;
-    exports.once = once;
-    exports.outro_and_destroy_block = outro_and_destroy_block2;
-    exports.prevent_default = prevent_default;
-    exports.prop_dev = prop_dev;
-    exports.query_selector_all = query_selector_all;
-    exports.run = run2;
-    exports.run_all = run_all2;
-    exports.safe_not_equal = safe_not_equal2;
-    exports.schedule_update = schedule_update2;
-    exports.select_multiple_value = select_multiple_value;
-    exports.select_option = select_option2;
-    exports.select_options = select_options;
-    exports.select_value = select_value;
-    exports.self = self2;
-    exports.setContext = setContext2;
-    exports.set_attributes = set_attributes2;
-    exports.set_current_component = set_current_component2;
-    exports.set_custom_element_data = set_custom_element_data;
-    exports.set_data = set_data2;
-    exports.set_data_dev = set_data_dev;
-    exports.set_input_type = set_input_type;
-    exports.set_input_value = set_input_value2;
-    exports.set_now = set_now;
-    exports.set_raf = set_raf;
-    exports.set_store_value = set_store_value;
-    exports.set_style = set_style2;
-    exports.set_svg_attributes = set_svg_attributes;
-    exports.space = space2;
-    exports.spread = spread;
-    exports.src_url_equal = src_url_equal;
-    exports.start_hydrating = start_hydrating2;
-    exports.stop_propagation = stop_propagation2;
-    exports.subscribe = subscribe2;
-    exports.svg_element = svg_element;
-    exports.text = text2;
-    exports.tick = tick2;
-    exports.time_ranges_to_array = time_ranges_to_array;
-    exports.to_number = to_number2;
-    exports.toggle_class = toggle_class2;
-    exports.transition_in = transition_in2;
-    exports.transition_out = transition_out2;
-    exports.trusted = trusted;
-    exports.update_await_block_branch = update_await_block_branch2;
-    exports.update_keyed_each = update_keyed_each2;
-    exports.update_slot = update_slot;
-    exports.update_slot_base = update_slot_base2;
-    exports.validate_component = validate_component;
-    exports.validate_dynamic_element = validate_dynamic_element;
-    exports.validate_each_argument = validate_each_argument;
-    exports.validate_each_keys = validate_each_keys;
-    exports.validate_slots = validate_slots;
-    exports.validate_store = validate_store;
-    exports.validate_void_dynamic_element = validate_void_dynamic_element;
-    exports.xlink_attr = xlink_attr;
-  }
-});
-
-// node_modules/svelte/store/index.js
-var require_store = __commonJS({
-  "node_modules/svelte/store/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var internal = require_internal();
-    var subscriber_queue2 = [];
-    function readable2(value, start2) {
-      return {
-        subscribe: writable2(value, start2).subscribe
-      };
-    }
-    function writable2(value, start2 = internal.noop) {
-      let stop;
-      const subscribers = new Set();
-      function set(new_value) {
-        if (internal.safe_not_equal(value, new_value)) {
-          value = new_value;
-          if (stop) {
-            const run_queue = !subscriber_queue2.length;
-            for (const subscriber of subscribers) {
-              subscriber[1]();
-              subscriber_queue2.push(subscriber, value);
-            }
-            if (run_queue) {
-              for (let i2 = 0; i2 < subscriber_queue2.length; i2 += 2) {
-                subscriber_queue2[i2][0](subscriber_queue2[i2 + 1]);
-              }
-              subscriber_queue2.length = 0;
-            }
-          }
-        }
-      }
-      function update2(fn3) {
-        set(fn3(value));
-      }
-      function subscribe2(run2, invalidate = internal.noop) {
-        const subscriber = [run2, invalidate];
-        subscribers.add(subscriber);
-        if (subscribers.size === 1) {
-          stop = start2(set) || internal.noop;
-        }
-        run2(value);
-        return () => {
-          subscribers.delete(subscriber);
-          if (subscribers.size === 0) {
-            stop();
-            stop = null;
-          }
-        };
-      }
-      return { set, update: update2, subscribe: subscribe2 };
-    }
-    function derived2(stores, fn3, initial_value) {
-      const single = !Array.isArray(stores);
-      const stores_array = single ? [stores] : stores;
-      const auto2 = fn3.length < 2;
-      return readable2(initial_value, (set) => {
-        let inited = false;
-        const values = [];
-        let pending = 0;
-        let cleanup = internal.noop;
-        const sync = () => {
-          if (pending) {
-            return;
-          }
-          cleanup();
-          const result = fn3(single ? values[0] : values, set);
-          if (auto2) {
-            set(result);
-          } else {
-            cleanup = internal.is_function(result) ? result : internal.noop;
-          }
-        };
-        const unsubscribers = stores_array.map((store, i2) => internal.subscribe(store, (value) => {
-          values[i2] = value;
-          pending &= ~(1 << i2);
-          if (inited) {
-            sync();
-          }
-        }, () => {
-          pending |= 1 << i2;
-        }));
-        inited = true;
-        sync();
-        return function stop() {
-          internal.run_all(unsubscribers);
-          cleanup();
-        };
-      });
-    }
-    Object.defineProperty(exports, "get", {
-      enumerable: true,
-      get: function() {
-        return internal.get_store_value;
-      }
-    });
-    exports.derived = derived2;
-    exports.readable = readable2;
-    exports.writable = writable2;
-  }
-});
-
-// node_modules/svelte-i18next/translation-store.js
-var require_translation_store = __commonJS({
-  "node_modules/svelte-i18next/translation-store.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.I18NextTranslationStore = exports.isLoading = void 0;
-    var store_1 = require_store();
-    exports.isLoading = (0, store_1.writable)(true);
-    var I18NextTranslationStore = class {
-      constructor(i18n2) {
-        this.i18n = this.createInstance(i18n2);
-        this.isLoading = this.createLoadingInstance(i18n2);
-      }
-      createInstance(i18n2) {
-        const i18nWritable = (0, store_1.writable)(i18n2);
-        i18n2.on("initialized", () => {
-          i18nWritable.set(i18n2);
-        });
-        i18n2.on("loaded", () => {
-          i18nWritable.set(i18n2);
-        });
-        i18n2.on("added", () => i18nWritable.set(i18n2));
-        i18n2.on("languageChanged", () => {
-          i18nWritable.set(i18n2);
-        });
-        return i18nWritable;
-      }
-      createLoadingInstance(i18n2) {
-        i18n2.on("loaded", (resources) => {
-          Object.keys(resources).length !== 0 && exports.isLoading.set(false);
-        });
-        i18n2.on("failedLoading", () => {
-          exports.isLoading.set(true);
-        });
-        return exports.isLoading;
-      }
-    };
-    exports.I18NextTranslationStore = I18NextTranslationStore;
-  }
-});
-
-// node_modules/svelte-i18next/i18n.js
-var require_i18n = __commonJS({
-  "node_modules/svelte-i18next/i18n.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.createI18nStore = void 0;
-    var translation_store_1 = require_translation_store();
-    var createI18nStore2 = (i18n2) => {
-      const i18nStore = new translation_store_1.I18NextTranslationStore(i18n2);
-      return i18nStore.i18n;
-    };
-    exports.createI18nStore = createI18nStore2;
-  }
-});
-
-// node_modules/svelte-i18next/index.js
-var require_svelte_i18next = __commonJS({
-  "node_modules/svelte-i18next/index.js"(exports) {
-    "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m, k2, k22) {
-      if (k22 === void 0)
-        k22 = k2;
-      var desc = Object.getOwnPropertyDescriptor(m, k2);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: function() {
-          return m[k2];
-        } };
-      }
-      Object.defineProperty(o2, k22, desc);
-    } : function(o2, m, k2, k22) {
-      if (k22 === void 0)
-        k22 = k2;
-      o2[k22] = m[k2];
-    });
-    var __exportStar2 = exports && exports.__exportStar || function(m, exports2) {
-      for (var p2 in m)
-        if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2))
-          __createBinding2(exports2, m, p2);
-    };
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar2(require_i18n(), exports);
-    __exportStar2(require_translation_store(), exports);
-  }
-});
-
 // node_modules/moment/moment.js
 var require_moment = __commonJS({
   "node_modules/moment/moment.js"(exports, module2) {
@@ -6787,6 +4494,2299 @@ var require_moment = __commonJS({
   }
 });
 
+// node_modules/svelte/internal/index.js
+var require_internal = __commonJS({
+  "node_modules/svelte/internal/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    function noop3() {
+    }
+    var identity = (x2) => x2;
+    function assign2(tar, src) {
+      for (const k2 in src)
+        tar[k2] = src[k2];
+      return tar;
+    }
+    function is_promise2(value) {
+      return value && typeof value === "object" && typeof value.then === "function";
+    }
+    function add_location(element3, file, line, column, char) {
+      element3.__svelte_meta = {
+        loc: { file, line, column, char }
+      };
+    }
+    function run2(fn3) {
+      return fn3();
+    }
+    function blank_object2() {
+      return Object.create(null);
+    }
+    function run_all2(fns) {
+      fns.forEach(run2);
+    }
+    function is_function2(thing) {
+      return typeof thing === "function";
+    }
+    function safe_not_equal2(a2, b2) {
+      return a2 != a2 ? b2 == b2 : a2 !== b2 || (a2 && typeof a2 === "object" || typeof a2 === "function");
+    }
+    var src_url_equal_anchor2;
+    function src_url_equal2(element_src, url) {
+      if (!src_url_equal_anchor2) {
+        src_url_equal_anchor2 = document.createElement("a");
+      }
+      src_url_equal_anchor2.href = url;
+      return element_src === src_url_equal_anchor2.href;
+    }
+    function not_equal(a2, b2) {
+      return a2 != a2 ? b2 == b2 : a2 !== b2;
+    }
+    function is_empty2(obj) {
+      return Object.keys(obj).length === 0;
+    }
+    function validate_store(store, name) {
+      if (store != null && typeof store.subscribe !== "function") {
+        throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+      }
+    }
+    function subscribe2(store, ...callbacks) {
+      if (store == null) {
+        return noop3;
+      }
+      const unsub = store.subscribe(...callbacks);
+      return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function get_store_value2(store) {
+      let value;
+      subscribe2(store, (_24) => value = _24)();
+      return value;
+    }
+    function component_subscribe2(component, store, callback) {
+      component.$$.on_destroy.push(subscribe2(store, callback));
+    }
+    function create_slot2(definition, ctx, $$scope, fn3) {
+      if (definition) {
+        const slot_ctx = get_slot_context2(definition, ctx, $$scope, fn3);
+        return definition[0](slot_ctx);
+      }
+    }
+    function get_slot_context2(definition, ctx, $$scope, fn3) {
+      return definition[1] && fn3 ? assign2($$scope.ctx.slice(), definition[1](fn3(ctx))) : $$scope.ctx;
+    }
+    function get_slot_changes2(definition, $$scope, dirty, fn3) {
+      if (definition[2] && fn3) {
+        const lets = definition[2](fn3(dirty));
+        if ($$scope.dirty === void 0) {
+          return lets;
+        }
+        if (typeof lets === "object") {
+          const merged = [];
+          const len = Math.max($$scope.dirty.length, lets.length);
+          for (let i2 = 0; i2 < len; i2 += 1) {
+            merged[i2] = $$scope.dirty[i2] | lets[i2];
+          }
+          return merged;
+        }
+        return $$scope.dirty | lets;
+      }
+      return $$scope.dirty;
+    }
+    function update_slot_base2(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn) {
+      if (slot_changes) {
+        const slot_context = get_slot_context2(slot_definition, ctx, $$scope, get_slot_context_fn);
+        slot.p(slot_context, slot_changes);
+      }
+    }
+    function update_slot(slot, slot_definition, ctx, $$scope, dirty, get_slot_changes_fn, get_slot_context_fn) {
+      const slot_changes = get_slot_changes2(slot_definition, $$scope, dirty, get_slot_changes_fn);
+      update_slot_base2(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn);
+    }
+    function get_all_dirty_from_scope2($$scope) {
+      if ($$scope.ctx.length > 32) {
+        const dirty = [];
+        const length = $$scope.ctx.length / 32;
+        for (let i2 = 0; i2 < length; i2++) {
+          dirty[i2] = -1;
+        }
+        return dirty;
+      }
+      return -1;
+    }
+    function exclude_internal_props(props) {
+      const result = {};
+      for (const k2 in props)
+        if (k2[0] !== "$")
+          result[k2] = props[k2];
+      return result;
+    }
+    function compute_rest_props(props, keys) {
+      const rest = {};
+      keys = new Set(keys);
+      for (const k2 in props)
+        if (!keys.has(k2) && k2[0] !== "$")
+          rest[k2] = props[k2];
+      return rest;
+    }
+    function compute_slots2(slots) {
+      const result = {};
+      for (const key in slots) {
+        result[key] = true;
+      }
+      return result;
+    }
+    function once(fn3) {
+      let ran = false;
+      return function(...args) {
+        if (ran)
+          return;
+        ran = true;
+        fn3.call(this, ...args);
+      };
+    }
+    function null_to_empty2(value) {
+      return value == null ? "" : value;
+    }
+    function set_store_value(store, ret, value) {
+      store.set(value);
+      return ret;
+    }
+    var has_prop = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
+    function action_destroyer2(action_result) {
+      return action_result && is_function2(action_result.destroy) ? action_result.destroy : noop3;
+    }
+    var is_client = typeof window !== "undefined";
+    exports.now = is_client ? () => window.performance.now() : () => Date.now();
+    exports.raf = is_client ? (cb) => requestAnimationFrame(cb) : noop3;
+    function set_now(fn3) {
+      exports.now = fn3;
+    }
+    function set_raf(fn3) {
+      exports.raf = fn3;
+    }
+    var tasks2 = new Set();
+    function run_tasks(now) {
+      tasks2.forEach((task) => {
+        if (!task.c(now)) {
+          tasks2.delete(task);
+          task.f();
+        }
+      });
+      if (tasks2.size !== 0)
+        exports.raf(run_tasks);
+    }
+    function clear_loops() {
+      tasks2.clear();
+    }
+    function loop(callback) {
+      let task;
+      if (tasks2.size === 0)
+        exports.raf(run_tasks);
+      return {
+        promise: new Promise((fulfill) => {
+          tasks2.add(task = { c: callback, f: fulfill });
+        }),
+        abort() {
+          tasks2.delete(task);
+        }
+      };
+    }
+    var is_hydrating2 = false;
+    function start_hydrating2() {
+      is_hydrating2 = true;
+    }
+    function end_hydrating2() {
+      is_hydrating2 = false;
+    }
+    function upper_bound(low, high, key, value) {
+      while (low < high) {
+        const mid = low + (high - low >> 1);
+        if (key(mid) <= value) {
+          low = mid + 1;
+        } else {
+          high = mid;
+        }
+      }
+      return low;
+    }
+    function init_hydrate(target) {
+      if (target.hydrate_init)
+        return;
+      target.hydrate_init = true;
+      let children3 = target.childNodes;
+      if (target.nodeName === "HEAD") {
+        const myChildren = [];
+        for (let i2 = 0; i2 < children3.length; i2++) {
+          const node = children3[i2];
+          if (node.claim_order !== void 0) {
+            myChildren.push(node);
+          }
+        }
+        children3 = myChildren;
+      }
+      const m = new Int32Array(children3.length + 1);
+      const p2 = new Int32Array(children3.length);
+      m[0] = -1;
+      let longest = 0;
+      for (let i2 = 0; i2 < children3.length; i2++) {
+        const current = children3[i2].claim_order;
+        const seqLen = (longest > 0 && children3[m[longest]].claim_order <= current ? longest + 1 : upper_bound(1, longest, (idx) => children3[m[idx]].claim_order, current)) - 1;
+        p2[i2] = m[seqLen] + 1;
+        const newLen = seqLen + 1;
+        m[newLen] = i2;
+        longest = Math.max(newLen, longest);
+      }
+      const lis = [];
+      const toMove = [];
+      let last = children3.length - 1;
+      for (let cur = m[longest] + 1; cur != 0; cur = p2[cur - 1]) {
+        lis.push(children3[cur - 1]);
+        for (; last >= cur; last--) {
+          toMove.push(children3[last]);
+        }
+        last--;
+      }
+      for (; last >= 0; last--) {
+        toMove.push(children3[last]);
+      }
+      lis.reverse();
+      toMove.sort((a2, b2) => a2.claim_order - b2.claim_order);
+      for (let i2 = 0, j2 = 0; i2 < toMove.length; i2++) {
+        while (j2 < lis.length && toMove[i2].claim_order >= lis[j2].claim_order) {
+          j2++;
+        }
+        const anchor = j2 < lis.length ? lis[j2] : null;
+        target.insertBefore(toMove[i2], anchor);
+      }
+    }
+    function append2(target, node) {
+      target.appendChild(node);
+    }
+    function append_styles2(target, style_sheet_id, styles) {
+      const append_styles_to = get_root_for_style2(target);
+      if (!append_styles_to.getElementById(style_sheet_id)) {
+        const style = element2("style");
+        style.id = style_sheet_id;
+        style.textContent = styles;
+        append_stylesheet2(append_styles_to, style);
+      }
+    }
+    function get_root_for_style2(node) {
+      if (!node)
+        return document;
+      const root = node.getRootNode ? node.getRootNode() : node.ownerDocument;
+      if (root && root.host) {
+        return root;
+      }
+      return node.ownerDocument;
+    }
+    function append_empty_stylesheet(node) {
+      const style_element = element2("style");
+      append_stylesheet2(get_root_for_style2(node), style_element);
+      return style_element.sheet;
+    }
+    function append_stylesheet2(node, style) {
+      append2(node.head || node, style);
+      return style.sheet;
+    }
+    function append_hydration(target, node) {
+      if (is_hydrating2) {
+        init_hydrate(target);
+        if (target.actual_end_child === void 0 || target.actual_end_child !== null && target.actual_end_child.parentNode !== target) {
+          target.actual_end_child = target.firstChild;
+        }
+        while (target.actual_end_child !== null && target.actual_end_child.claim_order === void 0) {
+          target.actual_end_child = target.actual_end_child.nextSibling;
+        }
+        if (node !== target.actual_end_child) {
+          if (node.claim_order !== void 0 || node.parentNode !== target) {
+            target.insertBefore(node, target.actual_end_child);
+          }
+        } else {
+          target.actual_end_child = node.nextSibling;
+        }
+      } else if (node.parentNode !== target || node.nextSibling !== null) {
+        target.appendChild(node);
+      }
+    }
+    function insert2(target, node, anchor) {
+      target.insertBefore(node, anchor || null);
+    }
+    function insert_hydration(target, node, anchor) {
+      if (is_hydrating2 && !anchor) {
+        append_hydration(target, node);
+      } else if (node.parentNode !== target || node.nextSibling != anchor) {
+        target.insertBefore(node, anchor || null);
+      }
+    }
+    function detach2(node) {
+      node.parentNode.removeChild(node);
+    }
+    function destroy_each2(iterations, detaching) {
+      for (let i2 = 0; i2 < iterations.length; i2 += 1) {
+        if (iterations[i2])
+          iterations[i2].d(detaching);
+      }
+    }
+    function element2(name) {
+      return document.createElement(name);
+    }
+    function element_is(name, is) {
+      return document.createElement(name, { is });
+    }
+    function object_without_properties(obj, exclude) {
+      const target = {};
+      for (const k2 in obj) {
+        if (has_prop(obj, k2) && exclude.indexOf(k2) === -1) {
+          target[k2] = obj[k2];
+        }
+      }
+      return target;
+    }
+    function svg_element(name) {
+      return document.createElementNS("http://www.w3.org/2000/svg", name);
+    }
+    function text2(data) {
+      return document.createTextNode(data);
+    }
+    function space2() {
+      return text2(" ");
+    }
+    function empty2() {
+      return text2("");
+    }
+    function listen2(node, event, handler, options) {
+      node.addEventListener(event, handler, options);
+      return () => node.removeEventListener(event, handler, options);
+    }
+    function prevent_default(fn3) {
+      return function(event) {
+        event.preventDefault();
+        return fn3.call(this, event);
+      };
+    }
+    function stop_propagation2(fn3) {
+      return function(event) {
+        event.stopPropagation();
+        return fn3.call(this, event);
+      };
+    }
+    function self2(fn3) {
+      return function(event) {
+        if (event.target === this)
+          fn3.call(this, event);
+      };
+    }
+    function trusted(fn3) {
+      return function(event) {
+        if (event.isTrusted)
+          fn3.call(this, event);
+      };
+    }
+    function attr2(node, attribute, value) {
+      if (value == null)
+        node.removeAttribute(attribute);
+      else if (node.getAttribute(attribute) !== value)
+        node.setAttribute(attribute, value);
+    }
+    function set_attributes2(node, attributes) {
+      const descriptors = Object.getOwnPropertyDescriptors(node.__proto__);
+      for (const key in attributes) {
+        if (attributes[key] == null) {
+          node.removeAttribute(key);
+        } else if (key === "style") {
+          node.style.cssText = attributes[key];
+        } else if (key === "__value") {
+          node.value = node[key] = attributes[key];
+        } else if (descriptors[key] && descriptors[key].set) {
+          node[key] = attributes[key];
+        } else {
+          attr2(node, key, attributes[key]);
+        }
+      }
+    }
+    function set_svg_attributes(node, attributes) {
+      for (const key in attributes) {
+        attr2(node, key, attributes[key]);
+      }
+    }
+    function set_custom_element_data(node, prop, value) {
+      if (prop in node) {
+        node[prop] = typeof node[prop] === "boolean" && value === "" ? true : value;
+      } else {
+        attr2(node, prop, value);
+      }
+    }
+    function xlink_attr(node, attribute, value) {
+      node.setAttributeNS("http://www.w3.org/1999/xlink", attribute, value);
+    }
+    function get_binding_group_value(group, __value, checked) {
+      const value = new Set();
+      for (let i2 = 0; i2 < group.length; i2 += 1) {
+        if (group[i2].checked)
+          value.add(group[i2].__value);
+      }
+      if (!checked) {
+        value.delete(__value);
+      }
+      return Array.from(value);
+    }
+    function to_number2(value) {
+      return value === "" ? null : +value;
+    }
+    function time_ranges_to_array(ranges) {
+      const array = [];
+      for (let i2 = 0; i2 < ranges.length; i2 += 1) {
+        array.push({ start: ranges.start(i2), end: ranges.end(i2) });
+      }
+      return array;
+    }
+    function children2(element3) {
+      return Array.from(element3.childNodes);
+    }
+    function init_claim_info(nodes) {
+      if (nodes.claim_info === void 0) {
+        nodes.claim_info = { last_index: 0, total_claimed: 0 };
+      }
+    }
+    function claim_node(nodes, predicate, processNode, createNode, dontUpdateLastIndex = false) {
+      init_claim_info(nodes);
+      const resultNode = (() => {
+        for (let i2 = nodes.claim_info.last_index; i2 < nodes.length; i2++) {
+          const node = nodes[i2];
+          if (predicate(node)) {
+            const replacement = processNode(node);
+            if (replacement === void 0) {
+              nodes.splice(i2, 1);
+            } else {
+              nodes[i2] = replacement;
+            }
+            if (!dontUpdateLastIndex) {
+              nodes.claim_info.last_index = i2;
+            }
+            return node;
+          }
+        }
+        for (let i2 = nodes.claim_info.last_index - 1; i2 >= 0; i2--) {
+          const node = nodes[i2];
+          if (predicate(node)) {
+            const replacement = processNode(node);
+            if (replacement === void 0) {
+              nodes.splice(i2, 1);
+            } else {
+              nodes[i2] = replacement;
+            }
+            if (!dontUpdateLastIndex) {
+              nodes.claim_info.last_index = i2;
+            } else if (replacement === void 0) {
+              nodes.claim_info.last_index--;
+            }
+            return node;
+          }
+        }
+        return createNode();
+      })();
+      resultNode.claim_order = nodes.claim_info.total_claimed;
+      nodes.claim_info.total_claimed += 1;
+      return resultNode;
+    }
+    function claim_element_base(nodes, name, attributes, create_element) {
+      return claim_node(nodes, (node) => node.nodeName === name, (node) => {
+        const remove = [];
+        for (let j2 = 0; j2 < node.attributes.length; j2++) {
+          const attribute = node.attributes[j2];
+          if (!attributes[attribute.name]) {
+            remove.push(attribute.name);
+          }
+        }
+        remove.forEach((v2) => node.removeAttribute(v2));
+        return void 0;
+      }, () => create_element(name));
+    }
+    function claim_element(nodes, name, attributes) {
+      return claim_element_base(nodes, name, attributes, element2);
+    }
+    function claim_svg_element(nodes, name, attributes) {
+      return claim_element_base(nodes, name, attributes, svg_element);
+    }
+    function claim_text(nodes, data) {
+      return claim_node(nodes, (node) => node.nodeType === 3, (node) => {
+        const dataStr = "" + data;
+        if (node.data.startsWith(dataStr)) {
+          if (node.data.length !== dataStr.length) {
+            return node.splitText(dataStr.length);
+          }
+        } else {
+          node.data = dataStr;
+        }
+      }, () => text2(data), true);
+    }
+    function claim_space(nodes) {
+      return claim_text(nodes, " ");
+    }
+    function find_comment(nodes, text3, start2) {
+      for (let i2 = start2; i2 < nodes.length; i2 += 1) {
+        const node = nodes[i2];
+        if (node.nodeType === 8 && node.textContent.trim() === text3) {
+          return i2;
+        }
+      }
+      return nodes.length;
+    }
+    function claim_html_tag(nodes, is_svg) {
+      const start_index = find_comment(nodes, "HTML_TAG_START", 0);
+      const end_index = find_comment(nodes, "HTML_TAG_END", start_index);
+      if (start_index === end_index) {
+        return new HtmlTagHydration(void 0, is_svg);
+      }
+      init_claim_info(nodes);
+      const html_tag_nodes = nodes.splice(start_index, end_index - start_index + 1);
+      detach2(html_tag_nodes[0]);
+      detach2(html_tag_nodes[html_tag_nodes.length - 1]);
+      const claimed_nodes = html_tag_nodes.slice(1, html_tag_nodes.length - 1);
+      for (const n2 of claimed_nodes) {
+        n2.claim_order = nodes.claim_info.total_claimed;
+        nodes.claim_info.total_claimed += 1;
+      }
+      return new HtmlTagHydration(claimed_nodes, is_svg);
+    }
+    function set_data2(text3, data) {
+      data = "" + data;
+      if (text3.wholeText !== data)
+        text3.data = data;
+    }
+    function set_input_value2(input, value) {
+      input.value = value == null ? "" : value;
+    }
+    function set_input_type(input, type) {
+      try {
+        input.type = type;
+      } catch (e) {
+      }
+    }
+    function set_style2(node, key, value, important) {
+      if (value === null) {
+        node.style.removeProperty(key);
+      } else {
+        node.style.setProperty(key, value, important ? "important" : "");
+      }
+    }
+    function select_option2(select, value) {
+      for (let i2 = 0; i2 < select.options.length; i2 += 1) {
+        const option = select.options[i2];
+        if (option.__value === value) {
+          option.selected = true;
+          return;
+        }
+      }
+      select.selectedIndex = -1;
+    }
+    function select_options(select, value) {
+      for (let i2 = 0; i2 < select.options.length; i2 += 1) {
+        const option = select.options[i2];
+        option.selected = ~value.indexOf(option.__value);
+      }
+    }
+    function select_value(select) {
+      const selected_option = select.querySelector(":checked") || select.options[0];
+      return selected_option && selected_option.__value;
+    }
+    function select_multiple_value(select) {
+      return [].map.call(select.querySelectorAll(":checked"), (option) => option.__value);
+    }
+    var crossorigin;
+    function is_crossorigin() {
+      if (crossorigin === void 0) {
+        crossorigin = false;
+        try {
+          if (typeof window !== "undefined" && window.parent) {
+            void window.parent.document;
+          }
+        } catch (error2) {
+          crossorigin = true;
+        }
+      }
+      return crossorigin;
+    }
+    function add_resize_listener(node, fn3) {
+      const computed_style = getComputedStyle(node);
+      if (computed_style.position === "static") {
+        node.style.position = "relative";
+      }
+      const iframe = element2("iframe");
+      iframe.setAttribute("style", "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; border: 0; opacity: 0; pointer-events: none; z-index: -1;");
+      iframe.setAttribute("aria-hidden", "true");
+      iframe.tabIndex = -1;
+      const crossorigin2 = is_crossorigin();
+      let unsubscribe;
+      if (crossorigin2) {
+        iframe.src = "data:text/html,<script>onresize=function(){parent.postMessage(0,'*')}<\/script>";
+        unsubscribe = listen2(window, "message", (event) => {
+          if (event.source === iframe.contentWindow)
+            fn3();
+        });
+      } else {
+        iframe.src = "about:blank";
+        iframe.onload = () => {
+          unsubscribe = listen2(iframe.contentWindow, "resize", fn3);
+        };
+      }
+      append2(node, iframe);
+      return () => {
+        if (crossorigin2) {
+          unsubscribe();
+        } else if (unsubscribe && iframe.contentWindow) {
+          unsubscribe();
+        }
+        detach2(iframe);
+      };
+    }
+    function toggle_class2(element3, name, toggle) {
+      element3.classList[toggle ? "add" : "remove"](name);
+    }
+    function custom_event2(type, detail, { bubbles = false, cancelable = false } = {}) {
+      const e = document.createEvent("CustomEvent");
+      e.initCustomEvent(type, bubbles, cancelable, detail);
+      return e;
+    }
+    function query_selector_all(selector, parent = document.body) {
+      return Array.from(parent.querySelectorAll(selector));
+    }
+    var HtmlTag = class {
+      constructor(is_svg = false) {
+        this.is_svg = false;
+        this.is_svg = is_svg;
+        this.e = this.n = null;
+      }
+      c(html) {
+        this.h(html);
+      }
+      m(html, target, anchor = null) {
+        if (!this.e) {
+          if (this.is_svg)
+            this.e = svg_element(target.nodeName);
+          else
+            this.e = element2(target.nodeName);
+          this.t = target;
+          this.c(html);
+        }
+        this.i(anchor);
+      }
+      h(html) {
+        this.e.innerHTML = html;
+        this.n = Array.from(this.e.childNodes);
+      }
+      i(anchor) {
+        for (let i2 = 0; i2 < this.n.length; i2 += 1) {
+          insert2(this.t, this.n[i2], anchor);
+        }
+      }
+      p(html) {
+        this.d();
+        this.h(html);
+        this.i(this.a);
+      }
+      d() {
+        this.n.forEach(detach2);
+      }
+    };
+    var HtmlTagHydration = class extends HtmlTag {
+      constructor(claimed_nodes, is_svg = false) {
+        super(is_svg);
+        this.e = this.n = null;
+        this.l = claimed_nodes;
+      }
+      c(html) {
+        if (this.l) {
+          this.n = this.l;
+        } else {
+          super.c(html);
+        }
+      }
+      i(anchor) {
+        for (let i2 = 0; i2 < this.n.length; i2 += 1) {
+          insert_hydration(this.t, this.n[i2], anchor);
+        }
+      }
+    };
+    function attribute_to_object(attributes) {
+      const result = {};
+      for (const attribute of attributes) {
+        result[attribute.name] = attribute.value;
+      }
+      return result;
+    }
+    function get_custom_elements_slots(element3) {
+      const result = {};
+      element3.childNodes.forEach((node) => {
+        result[node.slot || "default"] = true;
+      });
+      return result;
+    }
+    var managed_styles2 = new Map();
+    var active = 0;
+    function hash3(str) {
+      let hash4 = 5381;
+      let i2 = str.length;
+      while (i2--)
+        hash4 = (hash4 << 5) - hash4 ^ str.charCodeAt(i2);
+      return hash4 >>> 0;
+    }
+    function create_style_information(doc, node) {
+      const info = { stylesheet: append_empty_stylesheet(node), rules: {} };
+      managed_styles2.set(doc, info);
+      return info;
+    }
+    function create_rule(node, a2, b2, duration, delay, ease, fn3, uid = 0) {
+      const step = 16.666 / duration;
+      let keyframes = "{\n";
+      for (let p2 = 0; p2 <= 1; p2 += step) {
+        const t3 = a2 + (b2 - a2) * ease(p2);
+        keyframes += p2 * 100 + `%{${fn3(t3, 1 - t3)}}
+`;
+      }
+      const rule = keyframes + `100% {${fn3(b2, 1 - b2)}}
+}`;
+      const name = `__svelte_${hash3(rule)}_${uid}`;
+      const doc = get_root_for_style2(node);
+      const { stylesheet, rules } = managed_styles2.get(doc) || create_style_information(doc, node);
+      if (!rules[name]) {
+        rules[name] = true;
+        stylesheet.insertRule(`@keyframes ${name} ${rule}`, stylesheet.cssRules.length);
+      }
+      const animation = node.style.animation || "";
+      node.style.animation = `${animation ? `${animation}, ` : ""}${name} ${duration}ms linear ${delay}ms 1 both`;
+      active += 1;
+      return name;
+    }
+    function delete_rule(node, name) {
+      const previous = (node.style.animation || "").split(", ");
+      const next = previous.filter(name ? (anim) => anim.indexOf(name) < 0 : (anim) => anim.indexOf("__svelte") === -1);
+      const deleted = previous.length - next.length;
+      if (deleted) {
+        node.style.animation = next.join(", ");
+        active -= deleted;
+        if (!active)
+          clear_rules();
+      }
+    }
+    function clear_rules() {
+      exports.raf(() => {
+        if (active)
+          return;
+        managed_styles2.forEach((info) => {
+          const { ownerNode } = info.stylesheet;
+          if (ownerNode)
+            detach2(ownerNode);
+        });
+        managed_styles2.clear();
+      });
+    }
+    function create_animation(node, from, fn3, params) {
+      if (!from)
+        return noop3;
+      const to = node.getBoundingClientRect();
+      if (from.left === to.left && from.right === to.right && from.top === to.top && from.bottom === to.bottom)
+        return noop3;
+      const {
+        delay = 0,
+        duration = 300,
+        easing = identity,
+        start: start_time = exports.now() + delay,
+        end: end2 = start_time + duration,
+        tick: tick3 = noop3,
+        css
+      } = fn3(node, { from, to }, params);
+      let running = true;
+      let started = false;
+      let name;
+      function start2() {
+        if (css) {
+          name = create_rule(node, 0, 1, duration, delay, easing, css);
+        }
+        if (!delay) {
+          started = true;
+        }
+      }
+      function stop() {
+        if (css)
+          delete_rule(node, name);
+        running = false;
+      }
+      loop((now) => {
+        if (!started && now >= start_time) {
+          started = true;
+        }
+        if (started && now >= end2) {
+          tick3(1, 0);
+          stop();
+        }
+        if (!running) {
+          return false;
+        }
+        if (started) {
+          const p2 = now - start_time;
+          const t3 = 0 + 1 * easing(p2 / duration);
+          tick3(t3, 1 - t3);
+        }
+        return true;
+      });
+      start2();
+      tick3(0, 1);
+      return stop;
+    }
+    function fix_position(node) {
+      const style = getComputedStyle(node);
+      if (style.position !== "absolute" && style.position !== "fixed") {
+        const { width, height } = style;
+        const a2 = node.getBoundingClientRect();
+        node.style.position = "absolute";
+        node.style.width = width;
+        node.style.height = height;
+        add_transform(node, a2);
+      }
+    }
+    function add_transform(node, a2) {
+      const b2 = node.getBoundingClientRect();
+      if (a2.left !== b2.left || a2.top !== b2.top) {
+        const style = getComputedStyle(node);
+        const transform = style.transform === "none" ? "" : style.transform;
+        node.style.transform = `${transform} translate(${a2.left - b2.left}px, ${a2.top - b2.top}px)`;
+      }
+    }
+    function set_current_component2(component) {
+      exports.current_component = component;
+    }
+    function get_current_component2() {
+      if (!exports.current_component)
+        throw new Error("Function called outside component initialization");
+      return exports.current_component;
+    }
+    function beforeUpdate2(fn3) {
+      get_current_component2().$$.before_update.push(fn3);
+    }
+    function onMount2(fn3) {
+      get_current_component2().$$.on_mount.push(fn3);
+    }
+    function afterUpdate2(fn3) {
+      get_current_component2().$$.after_update.push(fn3);
+    }
+    function onDestroy2(fn3) {
+      get_current_component2().$$.on_destroy.push(fn3);
+    }
+    function createEventDispatcher2() {
+      const component = get_current_component2();
+      return (type, detail, { cancelable = false } = {}) => {
+        const callbacks = component.$$.callbacks[type];
+        if (callbacks) {
+          const event = custom_event2(type, detail, { cancelable });
+          callbacks.slice().forEach((fn3) => {
+            fn3.call(component, event);
+          });
+          return !event.defaultPrevented;
+        }
+        return true;
+      };
+    }
+    function setContext2(key, context) {
+      get_current_component2().$$.context.set(key, context);
+      return context;
+    }
+    function getContext2(key) {
+      return get_current_component2().$$.context.get(key);
+    }
+    function getAllContexts2() {
+      return get_current_component2().$$.context;
+    }
+    function hasContext2(key) {
+      return get_current_component2().$$.context.has(key);
+    }
+    function bubble2(component, event) {
+      const callbacks = component.$$.callbacks[event.type];
+      if (callbacks) {
+        callbacks.slice().forEach((fn3) => fn3.call(this, event));
+      }
+    }
+    var dirty_components2 = [];
+    var intros = { enabled: false };
+    var binding_callbacks2 = [];
+    var render_callbacks2 = [];
+    var flush_callbacks2 = [];
+    var resolved_promise2 = Promise.resolve();
+    var update_scheduled2 = false;
+    function schedule_update2() {
+      if (!update_scheduled2) {
+        update_scheduled2 = true;
+        resolved_promise2.then(flush2);
+      }
+    }
+    function tick2() {
+      schedule_update2();
+      return resolved_promise2;
+    }
+    function add_render_callback2(fn3) {
+      render_callbacks2.push(fn3);
+    }
+    function add_flush_callback2(fn3) {
+      flush_callbacks2.push(fn3);
+    }
+    var seen_callbacks2 = new Set();
+    var flushidx2 = 0;
+    function flush2() {
+      const saved_component = exports.current_component;
+      do {
+        while (flushidx2 < dirty_components2.length) {
+          const component = dirty_components2[flushidx2];
+          flushidx2++;
+          set_current_component2(component);
+          update2(component.$$);
+        }
+        set_current_component2(null);
+        dirty_components2.length = 0;
+        flushidx2 = 0;
+        while (binding_callbacks2.length)
+          binding_callbacks2.pop()();
+        for (let i2 = 0; i2 < render_callbacks2.length; i2 += 1) {
+          const callback = render_callbacks2[i2];
+          if (!seen_callbacks2.has(callback)) {
+            seen_callbacks2.add(callback);
+            callback();
+          }
+        }
+        render_callbacks2.length = 0;
+      } while (dirty_components2.length);
+      while (flush_callbacks2.length) {
+        flush_callbacks2.pop()();
+      }
+      update_scheduled2 = false;
+      seen_callbacks2.clear();
+      set_current_component2(saved_component);
+    }
+    function update2($$) {
+      if ($$.fragment !== null) {
+        $$.update();
+        run_all2($$.before_update);
+        const dirty = $$.dirty;
+        $$.dirty = [-1];
+        $$.fragment && $$.fragment.p($$.ctx, dirty);
+        $$.after_update.forEach(add_render_callback2);
+      }
+    }
+    var promise;
+    function wait() {
+      if (!promise) {
+        promise = Promise.resolve();
+        promise.then(() => {
+          promise = null;
+        });
+      }
+      return promise;
+    }
+    function dispatch(node, direction, kind) {
+      node.dispatchEvent(custom_event2(`${direction ? "intro" : "outro"}${kind}`));
+    }
+    var outroing2 = new Set();
+    var outros2;
+    function group_outros2() {
+      outros2 = {
+        r: 0,
+        c: [],
+        p: outros2
+      };
+    }
+    function check_outros2() {
+      if (!outros2.r) {
+        run_all2(outros2.c);
+      }
+      outros2 = outros2.p;
+    }
+    function transition_in2(block, local) {
+      if (block && block.i) {
+        outroing2.delete(block);
+        block.i(local);
+      }
+    }
+    function transition_out2(block, local, detach3, callback) {
+      if (block && block.o) {
+        if (outroing2.has(block))
+          return;
+        outroing2.add(block);
+        outros2.c.push(() => {
+          outroing2.delete(block);
+          if (callback) {
+            if (detach3)
+              block.d(1);
+            callback();
+          }
+        });
+        block.o(local);
+      } else if (callback) {
+        callback();
+      }
+    }
+    var null_transition = { duration: 0 };
+    function create_in_transition(node, fn3, params) {
+      let config = fn3(node, params);
+      let running = false;
+      let animation_name;
+      let task;
+      let uid = 0;
+      function cleanup() {
+        if (animation_name)
+          delete_rule(node, animation_name);
+      }
+      function go() {
+        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
+        if (css)
+          animation_name = create_rule(node, 0, 1, duration, delay, easing, css, uid++);
+        tick3(0, 1);
+        const start_time = exports.now() + delay;
+        const end_time = start_time + duration;
+        if (task)
+          task.abort();
+        running = true;
+        add_render_callback2(() => dispatch(node, true, "start"));
+        task = loop((now) => {
+          if (running) {
+            if (now >= end_time) {
+              tick3(1, 0);
+              dispatch(node, true, "end");
+              cleanup();
+              return running = false;
+            }
+            if (now >= start_time) {
+              const t3 = easing((now - start_time) / duration);
+              tick3(t3, 1 - t3);
+            }
+          }
+          return running;
+        });
+      }
+      let started = false;
+      return {
+        start() {
+          if (started)
+            return;
+          started = true;
+          delete_rule(node);
+          if (is_function2(config)) {
+            config = config();
+            wait().then(go);
+          } else {
+            go();
+          }
+        },
+        invalidate() {
+          started = false;
+        },
+        end() {
+          if (running) {
+            cleanup();
+            running = false;
+          }
+        }
+      };
+    }
+    function create_out_transition(node, fn3, params) {
+      let config = fn3(node, params);
+      let running = true;
+      let animation_name;
+      const group = outros2;
+      group.r += 1;
+      function go() {
+        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
+        if (css)
+          animation_name = create_rule(node, 1, 0, duration, delay, easing, css);
+        const start_time = exports.now() + delay;
+        const end_time = start_time + duration;
+        add_render_callback2(() => dispatch(node, false, "start"));
+        loop((now) => {
+          if (running) {
+            if (now >= end_time) {
+              tick3(0, 1);
+              dispatch(node, false, "end");
+              if (!--group.r) {
+                run_all2(group.c);
+              }
+              return false;
+            }
+            if (now >= start_time) {
+              const t3 = easing((now - start_time) / duration);
+              tick3(1 - t3, t3);
+            }
+          }
+          return running;
+        });
+      }
+      if (is_function2(config)) {
+        wait().then(() => {
+          config = config();
+          go();
+        });
+      } else {
+        go();
+      }
+      return {
+        end(reset) {
+          if (reset && config.tick) {
+            config.tick(1, 0);
+          }
+          if (running) {
+            if (animation_name)
+              delete_rule(node, animation_name);
+            running = false;
+          }
+        }
+      };
+    }
+    function create_bidirectional_transition(node, fn3, params, intro) {
+      let config = fn3(node, params);
+      let t3 = intro ? 0 : 1;
+      let running_program = null;
+      let pending_program = null;
+      let animation_name = null;
+      function clear_animation() {
+        if (animation_name)
+          delete_rule(node, animation_name);
+      }
+      function init4(program, duration) {
+        const d2 = program.b - t3;
+        duration *= Math.abs(d2);
+        return {
+          a: t3,
+          b: program.b,
+          d: d2,
+          duration,
+          start: program.start,
+          end: program.start + duration,
+          group: program.group
+        };
+      }
+      function go(b2) {
+        const { delay = 0, duration = 300, easing = identity, tick: tick3 = noop3, css } = config || null_transition;
+        const program = {
+          start: exports.now() + delay,
+          b: b2
+        };
+        if (!b2) {
+          program.group = outros2;
+          outros2.r += 1;
+        }
+        if (running_program || pending_program) {
+          pending_program = program;
+        } else {
+          if (css) {
+            clear_animation();
+            animation_name = create_rule(node, t3, b2, duration, delay, easing, css);
+          }
+          if (b2)
+            tick3(0, 1);
+          running_program = init4(program, duration);
+          add_render_callback2(() => dispatch(node, b2, "start"));
+          loop((now) => {
+            if (pending_program && now > pending_program.start) {
+              running_program = init4(pending_program, duration);
+              pending_program = null;
+              dispatch(node, running_program.b, "start");
+              if (css) {
+                clear_animation();
+                animation_name = create_rule(node, t3, running_program.b, running_program.duration, 0, easing, config.css);
+              }
+            }
+            if (running_program) {
+              if (now >= running_program.end) {
+                tick3(t3 = running_program.b, 1 - t3);
+                dispatch(node, running_program.b, "end");
+                if (!pending_program) {
+                  if (running_program.b) {
+                    clear_animation();
+                  } else {
+                    if (!--running_program.group.r)
+                      run_all2(running_program.group.c);
+                  }
+                }
+                running_program = null;
+              } else if (now >= running_program.start) {
+                const p2 = now - running_program.start;
+                t3 = running_program.a + running_program.d * easing(p2 / running_program.duration);
+                tick3(t3, 1 - t3);
+              }
+            }
+            return !!(running_program || pending_program);
+          });
+        }
+      }
+      return {
+        run(b2) {
+          if (is_function2(config)) {
+            wait().then(() => {
+              config = config();
+              go(b2);
+            });
+          } else {
+            go(b2);
+          }
+        },
+        end() {
+          clear_animation();
+          running_program = pending_program = null;
+        }
+      };
+    }
+    function handle_promise2(promise2, info) {
+      const token = info.token = {};
+      function update3(type, index, key, value) {
+        if (info.token !== token)
+          return;
+        info.resolved = value;
+        let child_ctx = info.ctx;
+        if (key !== void 0) {
+          child_ctx = child_ctx.slice();
+          child_ctx[key] = value;
+        }
+        const block = type && (info.current = type)(child_ctx);
+        let needs_flush = false;
+        if (info.block) {
+          if (info.blocks) {
+            info.blocks.forEach((block2, i2) => {
+              if (i2 !== index && block2) {
+                group_outros2();
+                transition_out2(block2, 1, 1, () => {
+                  if (info.blocks[i2] === block2) {
+                    info.blocks[i2] = null;
+                  }
+                });
+                check_outros2();
+              }
+            });
+          } else {
+            info.block.d(1);
+          }
+          block.c();
+          transition_in2(block, 1);
+          block.m(info.mount(), info.anchor);
+          needs_flush = true;
+        }
+        info.block = block;
+        if (info.blocks)
+          info.blocks[index] = block;
+        if (needs_flush) {
+          flush2();
+        }
+      }
+      if (is_promise2(promise2)) {
+        const current_component2 = get_current_component2();
+        promise2.then((value) => {
+          set_current_component2(current_component2);
+          update3(info.then, 1, info.value, value);
+          set_current_component2(null);
+        }, (error2) => {
+          set_current_component2(current_component2);
+          update3(info.catch, 2, info.error, error2);
+          set_current_component2(null);
+          if (!info.hasCatch) {
+            throw error2;
+          }
+        });
+        if (info.current !== info.pending) {
+          update3(info.pending, 0);
+          return true;
+        }
+      } else {
+        if (info.current !== info.then) {
+          update3(info.then, 1, info.value, promise2);
+          return true;
+        }
+        info.resolved = promise2;
+      }
+    }
+    function update_await_block_branch2(info, ctx, dirty) {
+      const child_ctx = ctx.slice();
+      const { resolved } = info;
+      if (info.current === info.then) {
+        child_ctx[info.value] = resolved;
+      }
+      if (info.current === info.catch) {
+        child_ctx[info.error] = resolved;
+      }
+      info.block.p(child_ctx, dirty);
+    }
+    var globals2 = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : global;
+    function destroy_block(block, lookup) {
+      block.d(1);
+      lookup.delete(block.key);
+    }
+    function outro_and_destroy_block2(block, lookup) {
+      transition_out2(block, 1, 1, () => {
+        lookup.delete(block.key);
+      });
+    }
+    function fix_and_destroy_block(block, lookup) {
+      block.f();
+      destroy_block(block, lookup);
+    }
+    function fix_and_outro_and_destroy_block(block, lookup) {
+      block.f();
+      outro_and_destroy_block2(block, lookup);
+    }
+    function update_keyed_each2(old_blocks, dirty, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block17, next, get_context2) {
+      let o2 = old_blocks.length;
+      let n2 = list.length;
+      let i2 = o2;
+      const old_indexes = {};
+      while (i2--)
+        old_indexes[old_blocks[i2].key] = i2;
+      const new_blocks = [];
+      const new_lookup = new Map();
+      const deltas = new Map();
+      i2 = n2;
+      while (i2--) {
+        const child_ctx = get_context2(ctx, list, i2);
+        const key = get_key(child_ctx);
+        let block = lookup.get(key);
+        if (!block) {
+          block = create_each_block17(key, child_ctx);
+          block.c();
+        } else if (dynamic) {
+          block.p(child_ctx, dirty);
+        }
+        new_lookup.set(key, new_blocks[i2] = block);
+        if (key in old_indexes)
+          deltas.set(key, Math.abs(i2 - old_indexes[key]));
+      }
+      const will_move = new Set();
+      const did_move = new Set();
+      function insert3(block) {
+        transition_in2(block, 1);
+        block.m(node, next);
+        lookup.set(block.key, block);
+        next = block.first;
+        n2--;
+      }
+      while (o2 && n2) {
+        const new_block = new_blocks[n2 - 1];
+        const old_block = old_blocks[o2 - 1];
+        const new_key = new_block.key;
+        const old_key = old_block.key;
+        if (new_block === old_block) {
+          next = new_block.first;
+          o2--;
+          n2--;
+        } else if (!new_lookup.has(old_key)) {
+          destroy(old_block, lookup);
+          o2--;
+        } else if (!lookup.has(new_key) || will_move.has(new_key)) {
+          insert3(new_block);
+        } else if (did_move.has(old_key)) {
+          o2--;
+        } else if (deltas.get(new_key) > deltas.get(old_key)) {
+          did_move.add(new_key);
+          insert3(new_block);
+        } else {
+          will_move.add(old_key);
+          o2--;
+        }
+      }
+      while (o2--) {
+        const old_block = old_blocks[o2];
+        if (!new_lookup.has(old_block.key))
+          destroy(old_block, lookup);
+      }
+      while (n2)
+        insert3(new_blocks[n2 - 1]);
+      return new_blocks;
+    }
+    function validate_each_keys(ctx, list, get_context2, get_key) {
+      const keys = new Set();
+      for (let i2 = 0; i2 < list.length; i2++) {
+        const key = get_key(get_context2(ctx, list, i2));
+        if (keys.has(key)) {
+          throw new Error("Cannot have duplicate keys in a keyed each");
+        }
+        keys.add(key);
+      }
+    }
+    function get_spread_update2(levels, updates) {
+      const update3 = {};
+      const to_null_out = {};
+      const accounted_for = { $$scope: 1 };
+      let i2 = levels.length;
+      while (i2--) {
+        const o2 = levels[i2];
+        const n2 = updates[i2];
+        if (n2) {
+          for (const key in o2) {
+            if (!(key in n2))
+              to_null_out[key] = 1;
+          }
+          for (const key in n2) {
+            if (!accounted_for[key]) {
+              update3[key] = n2[key];
+              accounted_for[key] = 1;
+            }
+          }
+          levels[i2] = n2;
+        } else {
+          for (const key in o2) {
+            accounted_for[key] = 1;
+          }
+        }
+      }
+      for (const key in to_null_out) {
+        if (!(key in update3))
+          update3[key] = void 0;
+      }
+      return update3;
+    }
+    function get_spread_object(spread_props) {
+      return typeof spread_props === "object" && spread_props !== null ? spread_props : {};
+    }
+    var boolean_attributes2 = new Set([
+      "allowfullscreen",
+      "allowpaymentrequest",
+      "async",
+      "autofocus",
+      "autoplay",
+      "checked",
+      "controls",
+      "default",
+      "defer",
+      "disabled",
+      "formnovalidate",
+      "hidden",
+      "ismap",
+      "loop",
+      "multiple",
+      "muted",
+      "nomodule",
+      "novalidate",
+      "open",
+      "playsinline",
+      "readonly",
+      "required",
+      "reversed",
+      "selected"
+    ]);
+    var void_element_names = /^(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)$/;
+    function is_void(name) {
+      return void_element_names.test(name) || name.toLowerCase() === "!doctype";
+    }
+    var invalid_attribute_name_character = /[\s'">/=\u{FDD0}-\u{FDEF}\u{FFFE}\u{FFFF}\u{1FFFE}\u{1FFFF}\u{2FFFE}\u{2FFFF}\u{3FFFE}\u{3FFFF}\u{4FFFE}\u{4FFFF}\u{5FFFE}\u{5FFFF}\u{6FFFE}\u{6FFFF}\u{7FFFE}\u{7FFFF}\u{8FFFE}\u{8FFFF}\u{9FFFE}\u{9FFFF}\u{AFFFE}\u{AFFFF}\u{BFFFE}\u{BFFFF}\u{CFFFE}\u{CFFFF}\u{DFFFE}\u{DFFFF}\u{EFFFE}\u{EFFFF}\u{FFFFE}\u{FFFFF}\u{10FFFE}\u{10FFFF}]/u;
+    function spread(args, attrs_to_add) {
+      const attributes = Object.assign({}, ...args);
+      if (attrs_to_add) {
+        const classes_to_add = attrs_to_add.classes;
+        const styles_to_add = attrs_to_add.styles;
+        if (classes_to_add) {
+          if (attributes.class == null) {
+            attributes.class = classes_to_add;
+          } else {
+            attributes.class += " " + classes_to_add;
+          }
+        }
+        if (styles_to_add) {
+          if (attributes.style == null) {
+            attributes.style = style_object_to_string(styles_to_add);
+          } else {
+            attributes.style = style_object_to_string(merge_ssr_styles(attributes.style, styles_to_add));
+          }
+        }
+      }
+      let str = "";
+      Object.keys(attributes).forEach((name) => {
+        if (invalid_attribute_name_character.test(name))
+          return;
+        const value = attributes[name];
+        if (value === true)
+          str += " " + name;
+        else if (boolean_attributes2.has(name.toLowerCase())) {
+          if (value)
+            str += " " + name;
+        } else if (value != null) {
+          str += ` ${name}="${value}"`;
+        }
+      });
+      return str;
+    }
+    function merge_ssr_styles(style_attribute, style_directive) {
+      const style_object = {};
+      for (const individual_style of style_attribute.split(";")) {
+        const colon_index = individual_style.indexOf(":");
+        const name = individual_style.slice(0, colon_index).trim();
+        const value = individual_style.slice(colon_index + 1).trim();
+        if (!name)
+          continue;
+        style_object[name] = value;
+      }
+      for (const name in style_directive) {
+        const value = style_directive[name];
+        if (value) {
+          style_object[name] = value;
+        } else {
+          delete style_object[name];
+        }
+      }
+      return style_object;
+    }
+    var ATTR_REGEX = /[&"]/g;
+    var CONTENT_REGEX = /[&<]/g;
+    function escape2(value, is_attr = false) {
+      const str = String(value);
+      const pattern = is_attr ? ATTR_REGEX : CONTENT_REGEX;
+      pattern.lastIndex = 0;
+      let escaped = "";
+      let last = 0;
+      while (pattern.test(str)) {
+        const i2 = pattern.lastIndex - 1;
+        const ch = str[i2];
+        escaped += str.substring(last, i2) + (ch === "&" ? "&amp;" : ch === '"' ? "&quot;" : "&lt;");
+        last = i2 + 1;
+      }
+      return escaped + str.substring(last);
+    }
+    function escape_attribute_value(value) {
+      const should_escape = typeof value === "string" || value && typeof value === "object";
+      return should_escape ? escape2(value, true) : value;
+    }
+    function escape_object(obj) {
+      const result = {};
+      for (const key in obj) {
+        result[key] = escape_attribute_value(obj[key]);
+      }
+      return result;
+    }
+    function each(items, fn3) {
+      let str = "";
+      for (let i2 = 0; i2 < items.length; i2 += 1) {
+        str += fn3(items[i2], i2);
+      }
+      return str;
+    }
+    var missing_component = {
+      $$render: () => ""
+    };
+    function validate_component(component, name) {
+      if (!component || !component.$$render) {
+        if (name === "svelte:component")
+          name += " this={...}";
+        throw new Error(`<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules`);
+      }
+      return component;
+    }
+    function debug(file, line, column, values) {
+      console.log(`{@debug} ${file ? file + " " : ""}(${line}:${column})`);
+      console.log(values);
+      return "";
+    }
+    var on_destroy;
+    function create_ssr_component(fn3) {
+      function $$render(result, props, bindings, slots, context) {
+        const parent_component = exports.current_component;
+        const $$ = {
+          on_destroy,
+          context: new Map(context || (parent_component ? parent_component.$$.context : [])),
+          on_mount: [],
+          before_update: [],
+          after_update: [],
+          callbacks: blank_object2()
+        };
+        set_current_component2({ $$ });
+        const html = fn3(result, props, bindings, slots);
+        set_current_component2(parent_component);
+        return html;
+      }
+      return {
+        render: (props = {}, { $$slots = {}, context = new Map() } = {}) => {
+          on_destroy = [];
+          const result = { title: "", head: "", css: new Set() };
+          const html = $$render(result, props, {}, $$slots, context);
+          run_all2(on_destroy);
+          return {
+            html,
+            css: {
+              code: Array.from(result.css).map((css) => css.code).join("\n"),
+              map: null
+            },
+            head: result.title + result.head
+          };
+        },
+        $$render
+      };
+    }
+    function add_attribute(name, value, boolean) {
+      if (value == null || boolean && !value)
+        return "";
+      const assignment = boolean && value === true ? "" : `="${escape2(value, true)}"`;
+      return ` ${name}${assignment}`;
+    }
+    function add_classes(classes) {
+      return classes ? ` class="${classes}"` : "";
+    }
+    function style_object_to_string(style_object) {
+      return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
+    }
+    function add_styles(style_object) {
+      const styles = style_object_to_string(style_object);
+      return styles ? ` style="${styles}"` : "";
+    }
+    function bind2(component, name, callback) {
+      const index = component.$$.props[name];
+      if (index !== void 0) {
+        component.$$.bound[index] = callback;
+        callback(component.$$.ctx[index]);
+      }
+    }
+    function create_component2(block) {
+      block && block.c();
+    }
+    function claim_component(block, parent_nodes) {
+      block && block.l(parent_nodes);
+    }
+    function mount_component2(component, target, anchor, customElement) {
+      const { fragment, on_mount, on_destroy: on_destroy2, after_update } = component.$$;
+      fragment && fragment.m(target, anchor);
+      if (!customElement) {
+        add_render_callback2(() => {
+          const new_on_destroy = on_mount.map(run2).filter(is_function2);
+          if (on_destroy2) {
+            on_destroy2.push(...new_on_destroy);
+          } else {
+            run_all2(new_on_destroy);
+          }
+          component.$$.on_mount = [];
+        });
+      }
+      after_update.forEach(add_render_callback2);
+    }
+    function destroy_component2(component, detaching) {
+      const $$ = component.$$;
+      if ($$.fragment !== null) {
+        run_all2($$.on_destroy);
+        $$.fragment && $$.fragment.d(detaching);
+        $$.on_destroy = $$.fragment = null;
+        $$.ctx = [];
+      }
+    }
+    function make_dirty2(component, i2) {
+      if (component.$$.dirty[0] === -1) {
+        dirty_components2.push(component);
+        schedule_update2();
+        component.$$.dirty.fill(0);
+      }
+      component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
+    }
+    function init3(component, options, instance101, create_fragment101, not_equal2, props, append_styles3, dirty = [-1]) {
+      const parent_component = exports.current_component;
+      set_current_component2(component);
+      const $$ = component.$$ = {
+        fragment: null,
+        ctx: null,
+        props,
+        update: noop3,
+        not_equal: not_equal2,
+        bound: blank_object2(),
+        on_mount: [],
+        on_destroy: [],
+        on_disconnect: [],
+        before_update: [],
+        after_update: [],
+        context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+        callbacks: blank_object2(),
+        dirty,
+        skip_bound: false,
+        root: options.target || parent_component.$$.root
+      };
+      append_styles3 && append_styles3($$.root);
+      let ready = false;
+      $$.ctx = instance101 ? instance101(component, options.props || {}, (i2, ret, ...rest) => {
+        const value = rest.length ? rest[0] : ret;
+        if ($$.ctx && not_equal2($$.ctx[i2], $$.ctx[i2] = value)) {
+          if (!$$.skip_bound && $$.bound[i2])
+            $$.bound[i2](value);
+          if (ready)
+            make_dirty2(component, i2);
+        }
+        return ret;
+      }) : [];
+      $$.update();
+      ready = true;
+      run_all2($$.before_update);
+      $$.fragment = create_fragment101 ? create_fragment101($$.ctx) : false;
+      if (options.target) {
+        if (options.hydrate) {
+          start_hydrating2();
+          const nodes = children2(options.target);
+          $$.fragment && $$.fragment.l(nodes);
+          nodes.forEach(detach2);
+        } else {
+          $$.fragment && $$.fragment.c();
+        }
+        if (options.intro)
+          transition_in2(component.$$.fragment);
+        mount_component2(component, options.target, options.anchor, options.customElement);
+        end_hydrating2();
+        flush2();
+      }
+      set_current_component2(parent_component);
+    }
+    if (typeof HTMLElement === "function") {
+      exports.SvelteElement = class extends HTMLElement {
+        constructor() {
+          super();
+          this.attachShadow({ mode: "open" });
+        }
+        connectedCallback() {
+          const { on_mount } = this.$$;
+          this.$$.on_disconnect = on_mount.map(run2).filter(is_function2);
+          for (const key in this.$$.slotted) {
+            this.appendChild(this.$$.slotted[key]);
+          }
+        }
+        attributeChangedCallback(attr3, _oldValue, newValue) {
+          this[attr3] = newValue;
+        }
+        disconnectedCallback() {
+          run_all2(this.$$.on_disconnect);
+        }
+        $destroy() {
+          destroy_component2(this, 1);
+          this.$destroy = noop3;
+        }
+        $on(type, callback) {
+          const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
+          callbacks.push(callback);
+          return () => {
+            const index = callbacks.indexOf(callback);
+            if (index !== -1)
+              callbacks.splice(index, 1);
+          };
+        }
+        $set($$props) {
+          if (this.$$set && !is_empty2($$props)) {
+            this.$$.skip_bound = true;
+            this.$$set($$props);
+            this.$$.skip_bound = false;
+          }
+        }
+      };
+    }
+    var SvelteComponent2 = class {
+      $destroy() {
+        destroy_component2(this, 1);
+        this.$destroy = noop3;
+      }
+      $on(type, callback) {
+        const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
+        callbacks.push(callback);
+        return () => {
+          const index = callbacks.indexOf(callback);
+          if (index !== -1)
+            callbacks.splice(index, 1);
+        };
+      }
+      $set($$props) {
+        if (this.$$set && !is_empty2($$props)) {
+          this.$$.skip_bound = true;
+          this.$$set($$props);
+          this.$$.skip_bound = false;
+        }
+      }
+    };
+    function dispatch_dev(type, detail) {
+      document.dispatchEvent(custom_event2(type, Object.assign({ version: "3.50.1" }, detail), { bubbles: true }));
+    }
+    function append_dev(target, node) {
+      dispatch_dev("SvelteDOMInsert", { target, node });
+      append2(target, node);
+    }
+    function append_hydration_dev(target, node) {
+      dispatch_dev("SvelteDOMInsert", { target, node });
+      append_hydration(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+      dispatch_dev("SvelteDOMInsert", { target, node, anchor });
+      insert2(target, node, anchor);
+    }
+    function insert_hydration_dev(target, node, anchor) {
+      dispatch_dev("SvelteDOMInsert", { target, node, anchor });
+      insert_hydration(target, node, anchor);
+    }
+    function detach_dev(node) {
+      dispatch_dev("SvelteDOMRemove", { node });
+      detach2(node);
+    }
+    function detach_between_dev(before, after) {
+      while (before.nextSibling && before.nextSibling !== after) {
+        detach_dev(before.nextSibling);
+      }
+    }
+    function detach_before_dev(after) {
+      while (after.previousSibling) {
+        detach_dev(after.previousSibling);
+      }
+    }
+    function detach_after_dev(before) {
+      while (before.nextSibling) {
+        detach_dev(before.nextSibling);
+      }
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+      const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
+      if (has_prevent_default)
+        modifiers.push("preventDefault");
+      if (has_stop_propagation)
+        modifiers.push("stopPropagation");
+      dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
+      const dispose = listen2(node, event, handler, options);
+      return () => {
+        dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
+        dispose();
+      };
+    }
+    function attr_dev(node, attribute, value) {
+      attr2(node, attribute, value);
+      if (value == null)
+        dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
+      else
+        dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
+    }
+    function prop_dev(node, property, value) {
+      node[property] = value;
+      dispatch_dev("SvelteDOMSetProperty", { node, property, value });
+    }
+    function dataset_dev(node, property, value) {
+      node.dataset[property] = value;
+      dispatch_dev("SvelteDOMSetDataset", { node, property, value });
+    }
+    function set_data_dev(text3, data) {
+      data = "" + data;
+      if (text3.wholeText === data)
+        return;
+      dispatch_dev("SvelteDOMSetData", { node: text3, data });
+      text3.data = data;
+    }
+    function validate_each_argument(arg) {
+      if (typeof arg !== "string" && !(arg && typeof arg === "object" && "length" in arg)) {
+        let msg = "{#each} only iterates over array-like objects.";
+        if (typeof Symbol === "function" && arg && Symbol.iterator in arg) {
+          msg += " You can use a spread to convert this iterable into an array.";
+        }
+        throw new Error(msg);
+      }
+    }
+    function validate_slots(name, slot, keys) {
+      for (const slot_key of Object.keys(slot)) {
+        if (!~keys.indexOf(slot_key)) {
+          console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+        }
+      }
+    }
+    function validate_dynamic_element(tag) {
+      const is_string = typeof tag === "string";
+      if (tag && !is_string) {
+        throw new Error('<svelte:element> expects "this" attribute to be a string.');
+      }
+    }
+    function validate_void_dynamic_element(tag) {
+      if (tag && is_void(tag)) {
+        throw new Error(`<svelte:element this="${tag}"> is self-closing and cannot have content.`);
+      }
+    }
+    var SvelteComponentDev2 = class extends SvelteComponent2 {
+      constructor(options) {
+        if (!options || !options.target && !options.$$inline) {
+          throw new Error("'target' is a required option");
+        }
+        super();
+      }
+      $destroy() {
+        super.$destroy();
+        this.$destroy = () => {
+          console.warn("Component was already destroyed");
+        };
+      }
+      $capture_state() {
+      }
+      $inject_state() {
+      }
+    };
+    var SvelteComponentTyped2 = class extends SvelteComponentDev2 {
+      constructor(options) {
+        super(options);
+      }
+    };
+    function loop_guard(timeout) {
+      const start2 = Date.now();
+      return () => {
+        if (Date.now() - start2 > timeout) {
+          throw new Error("Infinite loop detected");
+        }
+      };
+    }
+    exports.HtmlTag = HtmlTag;
+    exports.HtmlTagHydration = HtmlTagHydration;
+    exports.SvelteComponent = SvelteComponent2;
+    exports.SvelteComponentDev = SvelteComponentDev2;
+    exports.SvelteComponentTyped = SvelteComponentTyped2;
+    exports.action_destroyer = action_destroyer2;
+    exports.add_attribute = add_attribute;
+    exports.add_classes = add_classes;
+    exports.add_flush_callback = add_flush_callback2;
+    exports.add_location = add_location;
+    exports.add_render_callback = add_render_callback2;
+    exports.add_resize_listener = add_resize_listener;
+    exports.add_styles = add_styles;
+    exports.add_transform = add_transform;
+    exports.afterUpdate = afterUpdate2;
+    exports.append = append2;
+    exports.append_dev = append_dev;
+    exports.append_empty_stylesheet = append_empty_stylesheet;
+    exports.append_hydration = append_hydration;
+    exports.append_hydration_dev = append_hydration_dev;
+    exports.append_styles = append_styles2;
+    exports.assign = assign2;
+    exports.attr = attr2;
+    exports.attr_dev = attr_dev;
+    exports.attribute_to_object = attribute_to_object;
+    exports.beforeUpdate = beforeUpdate2;
+    exports.bind = bind2;
+    exports.binding_callbacks = binding_callbacks2;
+    exports.blank_object = blank_object2;
+    exports.bubble = bubble2;
+    exports.check_outros = check_outros2;
+    exports.children = children2;
+    exports.claim_component = claim_component;
+    exports.claim_element = claim_element;
+    exports.claim_html_tag = claim_html_tag;
+    exports.claim_space = claim_space;
+    exports.claim_svg_element = claim_svg_element;
+    exports.claim_text = claim_text;
+    exports.clear_loops = clear_loops;
+    exports.component_subscribe = component_subscribe2;
+    exports.compute_rest_props = compute_rest_props;
+    exports.compute_slots = compute_slots2;
+    exports.createEventDispatcher = createEventDispatcher2;
+    exports.create_animation = create_animation;
+    exports.create_bidirectional_transition = create_bidirectional_transition;
+    exports.create_component = create_component2;
+    exports.create_in_transition = create_in_transition;
+    exports.create_out_transition = create_out_transition;
+    exports.create_slot = create_slot2;
+    exports.create_ssr_component = create_ssr_component;
+    exports.custom_event = custom_event2;
+    exports.dataset_dev = dataset_dev;
+    exports.debug = debug;
+    exports.destroy_block = destroy_block;
+    exports.destroy_component = destroy_component2;
+    exports.destroy_each = destroy_each2;
+    exports.detach = detach2;
+    exports.detach_after_dev = detach_after_dev;
+    exports.detach_before_dev = detach_before_dev;
+    exports.detach_between_dev = detach_between_dev;
+    exports.detach_dev = detach_dev;
+    exports.dirty_components = dirty_components2;
+    exports.dispatch_dev = dispatch_dev;
+    exports.each = each;
+    exports.element = element2;
+    exports.element_is = element_is;
+    exports.empty = empty2;
+    exports.end_hydrating = end_hydrating2;
+    exports.escape = escape2;
+    exports.escape_attribute_value = escape_attribute_value;
+    exports.escape_object = escape_object;
+    exports.exclude_internal_props = exclude_internal_props;
+    exports.fix_and_destroy_block = fix_and_destroy_block;
+    exports.fix_and_outro_and_destroy_block = fix_and_outro_and_destroy_block;
+    exports.fix_position = fix_position;
+    exports.flush = flush2;
+    exports.getAllContexts = getAllContexts2;
+    exports.getContext = getContext2;
+    exports.get_all_dirty_from_scope = get_all_dirty_from_scope2;
+    exports.get_binding_group_value = get_binding_group_value;
+    exports.get_current_component = get_current_component2;
+    exports.get_custom_elements_slots = get_custom_elements_slots;
+    exports.get_root_for_style = get_root_for_style2;
+    exports.get_slot_changes = get_slot_changes2;
+    exports.get_spread_object = get_spread_object;
+    exports.get_spread_update = get_spread_update2;
+    exports.get_store_value = get_store_value2;
+    exports.globals = globals2;
+    exports.group_outros = group_outros2;
+    exports.handle_promise = handle_promise2;
+    exports.hasContext = hasContext2;
+    exports.has_prop = has_prop;
+    exports.identity = identity;
+    exports.init = init3;
+    exports.insert = insert2;
+    exports.insert_dev = insert_dev;
+    exports.insert_hydration = insert_hydration;
+    exports.insert_hydration_dev = insert_hydration_dev;
+    exports.intros = intros;
+    exports.invalid_attribute_name_character = invalid_attribute_name_character;
+    exports.is_client = is_client;
+    exports.is_crossorigin = is_crossorigin;
+    exports.is_empty = is_empty2;
+    exports.is_function = is_function2;
+    exports.is_promise = is_promise2;
+    exports.is_void = is_void;
+    exports.listen = listen2;
+    exports.listen_dev = listen_dev;
+    exports.loop = loop;
+    exports.loop_guard = loop_guard;
+    exports.merge_ssr_styles = merge_ssr_styles;
+    exports.missing_component = missing_component;
+    exports.mount_component = mount_component2;
+    exports.noop = noop3;
+    exports.not_equal = not_equal;
+    exports.null_to_empty = null_to_empty2;
+    exports.object_without_properties = object_without_properties;
+    exports.onDestroy = onDestroy2;
+    exports.onMount = onMount2;
+    exports.once = once;
+    exports.outro_and_destroy_block = outro_and_destroy_block2;
+    exports.prevent_default = prevent_default;
+    exports.prop_dev = prop_dev;
+    exports.query_selector_all = query_selector_all;
+    exports.run = run2;
+    exports.run_all = run_all2;
+    exports.safe_not_equal = safe_not_equal2;
+    exports.schedule_update = schedule_update2;
+    exports.select_multiple_value = select_multiple_value;
+    exports.select_option = select_option2;
+    exports.select_options = select_options;
+    exports.select_value = select_value;
+    exports.self = self2;
+    exports.setContext = setContext2;
+    exports.set_attributes = set_attributes2;
+    exports.set_current_component = set_current_component2;
+    exports.set_custom_element_data = set_custom_element_data;
+    exports.set_data = set_data2;
+    exports.set_data_dev = set_data_dev;
+    exports.set_input_type = set_input_type;
+    exports.set_input_value = set_input_value2;
+    exports.set_now = set_now;
+    exports.set_raf = set_raf;
+    exports.set_store_value = set_store_value;
+    exports.set_style = set_style2;
+    exports.set_svg_attributes = set_svg_attributes;
+    exports.space = space2;
+    exports.spread = spread;
+    exports.src_url_equal = src_url_equal2;
+    exports.start_hydrating = start_hydrating2;
+    exports.stop_propagation = stop_propagation2;
+    exports.subscribe = subscribe2;
+    exports.svg_element = svg_element;
+    exports.text = text2;
+    exports.tick = tick2;
+    exports.time_ranges_to_array = time_ranges_to_array;
+    exports.to_number = to_number2;
+    exports.toggle_class = toggle_class2;
+    exports.transition_in = transition_in2;
+    exports.transition_out = transition_out2;
+    exports.trusted = trusted;
+    exports.update_await_block_branch = update_await_block_branch2;
+    exports.update_keyed_each = update_keyed_each2;
+    exports.update_slot = update_slot;
+    exports.update_slot_base = update_slot_base2;
+    exports.validate_component = validate_component;
+    exports.validate_dynamic_element = validate_dynamic_element;
+    exports.validate_each_argument = validate_each_argument;
+    exports.validate_each_keys = validate_each_keys;
+    exports.validate_slots = validate_slots;
+    exports.validate_store = validate_store;
+    exports.validate_void_dynamic_element = validate_void_dynamic_element;
+    exports.xlink_attr = xlink_attr;
+  }
+});
+
+// node_modules/svelte/store/index.js
+var require_store = __commonJS({
+  "node_modules/svelte/store/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var internal = require_internal();
+    var subscriber_queue2 = [];
+    function readable2(value, start2) {
+      return {
+        subscribe: writable2(value, start2).subscribe
+      };
+    }
+    function writable2(value, start2 = internal.noop) {
+      let stop;
+      const subscribers = new Set();
+      function set(new_value) {
+        if (internal.safe_not_equal(value, new_value)) {
+          value = new_value;
+          if (stop) {
+            const run_queue = !subscriber_queue2.length;
+            for (const subscriber of subscribers) {
+              subscriber[1]();
+              subscriber_queue2.push(subscriber, value);
+            }
+            if (run_queue) {
+              for (let i2 = 0; i2 < subscriber_queue2.length; i2 += 2) {
+                subscriber_queue2[i2][0](subscriber_queue2[i2 + 1]);
+              }
+              subscriber_queue2.length = 0;
+            }
+          }
+        }
+      }
+      function update2(fn3) {
+        set(fn3(value));
+      }
+      function subscribe2(run2, invalidate = internal.noop) {
+        const subscriber = [run2, invalidate];
+        subscribers.add(subscriber);
+        if (subscribers.size === 1) {
+          stop = start2(set) || internal.noop;
+        }
+        run2(value);
+        return () => {
+          subscribers.delete(subscriber);
+          if (subscribers.size === 0) {
+            stop();
+            stop = null;
+          }
+        };
+      }
+      return { set, update: update2, subscribe: subscribe2 };
+    }
+    function derived2(stores, fn3, initial_value) {
+      const single = !Array.isArray(stores);
+      const stores_array = single ? [stores] : stores;
+      const auto2 = fn3.length < 2;
+      return readable2(initial_value, (set) => {
+        let inited = false;
+        const values = [];
+        let pending = 0;
+        let cleanup = internal.noop;
+        const sync = () => {
+          if (pending) {
+            return;
+          }
+          cleanup();
+          const result = fn3(single ? values[0] : values, set);
+          if (auto2) {
+            set(result);
+          } else {
+            cleanup = internal.is_function(result) ? result : internal.noop;
+          }
+        };
+        const unsubscribers = stores_array.map((store, i2) => internal.subscribe(store, (value) => {
+          values[i2] = value;
+          pending &= ~(1 << i2);
+          if (inited) {
+            sync();
+          }
+        }, () => {
+          pending |= 1 << i2;
+        }));
+        inited = true;
+        sync();
+        return function stop() {
+          internal.run_all(unsubscribers);
+          cleanup();
+        };
+      });
+    }
+    Object.defineProperty(exports, "get", {
+      enumerable: true,
+      get: function() {
+        return internal.get_store_value;
+      }
+    });
+    exports.derived = derived2;
+    exports.readable = readable2;
+    exports.writable = writable2;
+  }
+});
+
+// node_modules/svelte-i18next/translation-store.js
+var require_translation_store = __commonJS({
+  "node_modules/svelte-i18next/translation-store.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.I18NextTranslationStore = exports.isLoading = void 0;
+    var store_1 = require_store();
+    exports.isLoading = (0, store_1.writable)(true);
+    var I18NextTranslationStore = class {
+      constructor(i18n2) {
+        this.i18n = this.createInstance(i18n2);
+        this.isLoading = this.createLoadingInstance(i18n2);
+      }
+      createInstance(i18n2) {
+        const i18nWritable = (0, store_1.writable)(i18n2);
+        i18n2.on("initialized", () => {
+          i18nWritable.set(i18n2);
+        });
+        i18n2.on("loaded", () => {
+          i18nWritable.set(i18n2);
+        });
+        i18n2.on("added", () => i18nWritable.set(i18n2));
+        i18n2.on("languageChanged", () => {
+          i18nWritable.set(i18n2);
+        });
+        return i18nWritable;
+      }
+      createLoadingInstance(i18n2) {
+        i18n2.on("loaded", (resources) => {
+          Object.keys(resources).length !== 0 && exports.isLoading.set(false);
+        });
+        i18n2.on("failedLoading", () => {
+          exports.isLoading.set(true);
+        });
+        return exports.isLoading;
+      }
+    };
+    exports.I18NextTranslationStore = I18NextTranslationStore;
+  }
+});
+
+// node_modules/svelte-i18next/i18n.js
+var require_i18n = __commonJS({
+  "node_modules/svelte-i18next/i18n.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.createI18nStore = void 0;
+    var translation_store_1 = require_translation_store();
+    var createI18nStore2 = (i18n2) => {
+      const i18nStore = new translation_store_1.I18NextTranslationStore(i18n2);
+      return i18nStore.i18n;
+    };
+    exports.createI18nStore = createI18nStore2;
+  }
+});
+
+// node_modules/svelte-i18next/index.js
+var require_svelte_i18next = __commonJS({
+  "node_modules/svelte-i18next/index.js"(exports) {
+    "use strict";
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      var desc = Object.getOwnPropertyDescriptor(m, k2);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k2];
+        } };
+      }
+      Object.defineProperty(o2, k22, desc);
+    } : function(o2, m, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      o2[k22] = m[k2];
+    });
+    var __exportStar2 = exports && exports.__exportStar || function(m, exports2) {
+      for (var p2 in m)
+        if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2))
+          __createBinding2(exports2, m, p2);
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    __exportStar2(require_i18n(), exports);
+    __exportStar2(require_translation_store(), exports);
+  }
+});
+
 // src/main.ts
 __export(exports, {
   DEFAULT_SETTINGS: () => DEFAULT_SETTINGS,
@@ -6818,6 +6818,14 @@ function is_function(thing) {
 }
 function safe_not_equal(a2, b2) {
   return a2 != a2 ? b2 == b2 : a2 !== b2 || (a2 && typeof a2 === "object" || typeof a2 === "function");
+}
+var src_url_equal_anchor;
+function src_url_equal(element_src, url) {
+  if (!src_url_equal_anchor) {
+    src_url_equal_anchor = document.createElement("a");
+  }
+  src_url_equal_anchor.href = url;
+  return element_src === src_url_equal_anchor.href;
 }
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
@@ -7252,7 +7260,7 @@ function outro_and_destroy_block(block, lookup) {
     lookup.delete(block.key);
   });
 }
-function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block16, next, get_context) {
+function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block17, next, get_context2) {
   let o2 = old_blocks.length;
   let n2 = list.length;
   let i2 = o2;
@@ -7264,11 +7272,11 @@ function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, looku
   const deltas = new Map();
   i2 = n2;
   while (i2--) {
-    const child_ctx = get_context(ctx, list, i2);
+    const child_ctx = get_context2(ctx, list, i2);
     const key = get_key(child_ctx);
     let block = lookup.get(key);
     if (!block) {
-      block = create_each_block16(key, child_ctx);
+      block = create_each_block17(key, child_ctx);
       block.c();
     } else if (dynamic) {
       block.p(child_ctx, dirty);
@@ -7420,7 +7428,7 @@ function make_dirty(component, i2) {
   }
   component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
 }
-function init(component, options, instance90, create_fragment90, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance101, create_fragment101, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -7443,7 +7451,7 @@ function init(component, options, instance90, create_fragment90, not_equal, prop
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance90 ? instance90(component, options.props || {}, (i2, ret, ...rest) => {
+  $$.ctx = instance101 ? instance101(component, options.props || {}, (i2, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i2], $$.ctx[i2] = value)) {
       if (!$$.skip_bound && $$.bound[i2])
@@ -7456,7 +7464,7 @@ function init(component, options, instance90, create_fragment90, not_equal, prop
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment90 ? create_fragment90($$.ctx) : false;
+  $$.fragment = create_fragment101 ? create_fragment101($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -7627,14 +7635,14 @@ function derived(stores, fn3, initial_value) {
 }
 
 // src/main.ts
-var import_obsidian48 = __toModule(require("obsidian"));
+var import_obsidian53 = __toModule(require("obsidian"));
 var import_obsidian_dataview4 = __toModule(require_lib());
 var import_dayjs8 = __toModule(require_dayjs_min());
 var import_isoWeek = __toModule(require_isoWeek());
 var import_localizedFormat = __toModule(require_localizedFormat());
 
 // src/view.ts
-var import_obsidian45 = __toModule(require("obsidian"));
+var import_obsidian50 = __toModule(require("obsidian"));
 
 // node_modules/tslib/modules/index.js
 var import_tslib = __toModule(require_tslib());
@@ -8198,26 +8206,26 @@ var passive = {
   passive: true
 };
 function effect3(_ref) {
-  var state = _ref.state, instance90 = _ref.instance, options = _ref.options;
+  var state = _ref.state, instance101 = _ref.instance, options = _ref.options;
   var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
     scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance90.update, passive);
+      scrollParent.addEventListener("scroll", instance101.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance90.update, passive);
+    window2.addEventListener("resize", instance101.update, passive);
   }
   return function() {
     if (scroll) {
       scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance90.update, passive);
+        scrollParent.removeEventListener("scroll", instance101.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance90.update, passive);
+      window2.removeEventListener("resize", instance101.update, passive);
     }
   };
 }
@@ -9099,7 +9107,7 @@ function popperGenerator(generatorOptions) {
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
-    var instance90 = {
+    var instance101 = {
       state,
       setOptions: function setOptions(setOptionsAction) {
         var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
@@ -9136,7 +9144,7 @@ function popperGenerator(generatorOptions) {
           }
         }
         runModifierEffects();
-        return instance90.update();
+        return instance101.update();
       },
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
@@ -9178,14 +9186,14 @@ function popperGenerator(generatorOptions) {
               state,
               options: _options,
               name,
-              instance: instance90
+              instance: instance101
             }) || state;
           }
         }
       },
       update: debounce(function() {
         return new Promise(function(resolve) {
-          instance90.forceUpdate();
+          instance101.forceUpdate();
           resolve(state);
         });
       }),
@@ -9198,9 +9206,9 @@ function popperGenerator(generatorOptions) {
       if (true) {
         console.error(INVALID_ELEMENT_ERROR);
       }
-      return instance90;
+      return instance101;
     }
-    instance90.setOptions(options).then(function(state2) {
+    instance101.setOptions(options).then(function(state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
@@ -9212,7 +9220,7 @@ function popperGenerator(generatorOptions) {
           var cleanupFn = effect4({
             state,
             name,
-            instance: instance90,
+            instance: instance101,
             options: options2
           });
           var noopFn = function noopFn2() {
@@ -9227,7 +9235,7 @@ function popperGenerator(generatorOptions) {
       });
       effectCleanupFns = [];
     }
-    return instance90;
+    return instance101;
   };
 }
 
@@ -9537,7 +9545,8 @@ function instance2($$self, $$props, $$invalidate) {
   let { anchorEl } = $$props;
   let { open } = $$props;
   let { className = "popover layer" } = $$props;
-  let { onClose } = $$props;
+  let { onClose = () => {
+  } } = $$props;
   let { placement = "bottom-start" } = $$props;
   let popperEl;
   let popper2 = null;
@@ -9713,7 +9722,8 @@ function instance3($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { anchorEl } = $$props;
   let { open } = $$props;
-  let { onClose } = $$props;
+  let { onClose = () => {
+  } } = $$props;
   let { placement = "bottom-start" } = $$props;
   $$self.$$set = ($$props2) => {
     if ("anchorEl" in $$props2)
@@ -10360,7 +10370,8 @@ function instance8($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { anchorEl } = $$props;
   let { open } = $$props;
-  let { onClose } = $$props;
+  let { onClose = () => {
+  } } = $$props;
   let { placement = "bottom-start" } = $$props;
   $$self.$$set = ($$props2) => {
     if ("anchorEl" in $$props2)
@@ -13552,6 +13563,9 @@ function useClickOutside2(element2, callbackFunction) {
   };
 }
 
+// src/lib/data-api.ts
+var import_dayjs = __toModule(require_dayjs_min());
+
 // node_modules/immer/dist/immer.esm.mjs
 function n(n2) {
   for (var r2 = arguments.length, t3 = Array(r2 > 1 ? r2 - 1 : 0), e = 1; e < r2; e++)
@@ -13935,140 +13949,64 @@ var ln = an.createDraft.bind(an);
 var dn = an.finishDraft.bind(an);
 var immer_esm_default = fn2;
 
-// src/lib/stores/settings.ts
-function createSettings() {
-  const { set, update: update2, subscribe: subscribe2 } = writable({
-    version: 1,
-    projects: []
-  });
-  return {
-    set,
-    subscribe: subscribe2,
-    saveLayout(projectId, viewId) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.lastProjectId = projectId, draft.lastViewId = viewId;
-          return draft;
-        });
-      });
-    },
-    addProject(project) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.projects.push(project);
-          return draft;
-        });
-      });
-    },
-    updateProject(project) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.projects = draft.projects.map((w2) => w2.id === project.id ? project : w2);
-          return draft;
-        });
-      });
-    },
-    deleteProject(projectId) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.projects = draft.projects.filter((w2) => w2.id !== projectId);
-          return draft;
-        });
-      });
-    },
-    addView(projectId, view2) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          const idx = draft.projects.findIndex((ws) => ws.id === projectId);
-          if (idx >= 0) {
-            const ws = draft.projects[idx];
-            if (ws) {
-              draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, ws), {
-                views: [...ws.views, view2]
-              }));
-            }
-          }
-          return draft;
-        });
-      });
-    },
-    renameView(projectId, viewId, name) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          const idx = draft.projects.findIndex((p2) => p2.id === projectId);
-          if (idx >= 0) {
-            const p2 = draft.projects[idx];
-            if (p2) {
-              draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, p2), {
-                views: p2.views.map((view2) => view2.id === viewId ? __spreadProps(__spreadValues({}, view2), { name }) : view2)
-              }));
-            }
-          }
-          return draft;
-        });
-      });
-    },
-    deleteView(projectId, viewId) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          const idx = draft.projects.findIndex((ws) => ws.id === projectId);
-          if (idx >= 0) {
-            const ws = draft.projects[idx];
-            if (ws) {
-              draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, ws), {
-                views: ws.views.filter((view2) => view2.id !== viewId)
-              }));
-            }
-          }
-          return draft;
-        });
-      });
-    },
-    updateViewConfig(projectId, viewId, config) {
-      update2((state) => immer_esm_default(state, (draft) => {
-        draft.projects = draft.projects.map((project) => {
-          if (project.id === projectId) {
-            return __spreadProps(__spreadValues({}, project), {
-              views: project.views.map((view2) => {
-                if (view2.id === viewId) {
-                  return __spreadProps(__spreadValues({}, view2), {
-                    config
-                  });
-                }
-                return view2;
-              })
-            });
-          }
-          return project;
-        });
-        return draft;
-      }));
+// src/lib/data-api.ts
+var import_moment = __toModule(require_moment());
+var import_obsidian4 = __toModule(require("obsidian"));
+
+// node_modules/uuid/dist/esm-browser/rng.js
+var getRandomValues;
+var rnds8 = new Uint8Array(16);
+function rng() {
+  if (!getRandomValues) {
+    getRandomValues = typeof crypto !== "undefined" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== "undefined" && typeof msCrypto.getRandomValues === "function" && msCrypto.getRandomValues.bind(msCrypto);
+    if (!getRandomValues) {
+      throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
     }
-  };
-}
-var settings = createSettings();
-function migrateAny(settings2) {
-  if (!settings2) {
-    return { version: 1, projects: [] };
   }
-  if ("version" in settings2) {
-    return Object.assign({}, DEFAULT_SETTINGS, settings2);
-  }
-  return migrate(settings2);
-}
-function migrate(v0) {
-  return {
-    version: 1,
-    lastProjectId: v0.lastWorkspaceId,
-    lastViewId: v0.lastViewId,
-    projects: v0.workspaces
-  };
+  return getRandomValues(rnds8);
 }
 
-// src/lib/stores/obsidian.ts
-var app = writable();
-var view = writable();
-var plugin = writable();
+// node_modules/uuid/dist/esm-browser/regex.js
+var regex_default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
+
+// node_modules/uuid/dist/esm-browser/validate.js
+function validate(uuid) {
+  return typeof uuid === "string" && regex_default.test(uuid);
+}
+var validate_default = validate;
+
+// node_modules/uuid/dist/esm-browser/stringify.js
+var byteToHex = [];
+for (i2 = 0; i2 < 256; ++i2) {
+  byteToHex.push((i2 + 256).toString(16).substr(1));
+}
+var i2;
+function stringify(arr) {
+  var offset2 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
+  var uuid = (byteToHex[arr[offset2 + 0]] + byteToHex[arr[offset2 + 1]] + byteToHex[arr[offset2 + 2]] + byteToHex[arr[offset2 + 3]] + "-" + byteToHex[arr[offset2 + 4]] + byteToHex[arr[offset2 + 5]] + "-" + byteToHex[arr[offset2 + 6]] + byteToHex[arr[offset2 + 7]] + "-" + byteToHex[arr[offset2 + 8]] + byteToHex[arr[offset2 + 9]] + "-" + byteToHex[arr[offset2 + 10]] + byteToHex[arr[offset2 + 11]] + byteToHex[arr[offset2 + 12]] + byteToHex[arr[offset2 + 13]] + byteToHex[arr[offset2 + 14]] + byteToHex[arr[offset2 + 15]]).toLowerCase();
+  if (!validate_default(uuid)) {
+    throw TypeError("Stringified UUID is invalid");
+  }
+  return uuid;
+}
+var stringify_default = stringify;
+
+// node_modules/uuid/dist/esm-browser/v4.js
+function v4(options, buf, offset2) {
+  options = options || {};
+  var rnds = options.random || (options.rng || rng)();
+  rnds[6] = rnds[6] & 15 | 64;
+  rnds[8] = rnds[8] & 63 | 128;
+  if (buf) {
+    offset2 = offset2 || 0;
+    for (var i2 = 0; i2 < 16; ++i2) {
+      buf[offset2 + i2] = rnds[i2];
+    }
+    return buf;
+  }
+  return stringify_default(rnds);
+}
+var v4_default = v4;
 
 // node_modules/@babel/runtime/helpers/esm/typeof.js
 function _typeof(obj) {
@@ -14081,8 +14019,8 @@ function _typeof(obj) {
 }
 
 // node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-function _classCallCheck(instance90, Constructor) {
-  if (!(instance90 instanceof Constructor)) {
+function _classCallCheck(instance101, Constructor) {
+  if (!(instance101 instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
@@ -14423,14 +14361,14 @@ function copy(a2, s2, t3) {
       t3[m] = s2[m];
   });
 }
-function getLastOfPath(object, path3, Empty) {
+function getLastOfPath(object, path4, Empty) {
   function cleanKey(key2) {
     return key2 && key2.indexOf("###") > -1 ? key2.replace(/###/g, ".") : key2;
   }
   function canNotTraverseDeeper() {
     return !object || typeof object === "string";
   }
-  var stack = typeof path3 !== "string" ? [].concat(path3) : path3.split(".");
+  var stack = typeof path4 !== "string" ? [].concat(path4) : path4.split(".");
   while (stack.length > 1) {
     if (canNotTraverseDeeper())
       return {};
@@ -14450,20 +14388,20 @@ function getLastOfPath(object, path3, Empty) {
     k: cleanKey(stack.shift())
   };
 }
-function setPath(object, path3, newValue) {
-  var _getLastOfPath = getLastOfPath(object, path3, Object), obj = _getLastOfPath.obj, k2 = _getLastOfPath.k;
+function setPath(object, path4, newValue) {
+  var _getLastOfPath = getLastOfPath(object, path4, Object), obj = _getLastOfPath.obj, k2 = _getLastOfPath.k;
   obj[k2] = newValue;
 }
-function pushPath(object, path3, newValue, concat) {
-  var _getLastOfPath2 = getLastOfPath(object, path3, Object), obj = _getLastOfPath2.obj, k2 = _getLastOfPath2.k;
+function pushPath(object, path4, newValue, concat) {
+  var _getLastOfPath2 = getLastOfPath(object, path4, Object), obj = _getLastOfPath2.obj, k2 = _getLastOfPath2.k;
   obj[k2] = obj[k2] || [];
   if (concat)
     obj[k2] = obj[k2].concat(newValue);
   if (!concat)
     obj[k2].push(newValue);
 }
-function getPath(object, path3) {
-  var _getLastOfPath3 = getLastOfPath(object, path3), obj = _getLastOfPath3.obj, k2 = _getLastOfPath3.k;
+function getPath(object, path4) {
+  var _getLastOfPath3 = getLastOfPath(object, path4), obj = _getLastOfPath3.obj, k2 = _getLastOfPath3.k;
   if (!obj)
     return void 0;
   return obj[k2];
@@ -14591,13 +14529,13 @@ function _isNativeReflectConstruct() {
     return false;
   }
 }
-function deepFind(obj, path3) {
+function deepFind(obj, path4) {
   var keySeparator = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : ".";
   if (!obj)
     return void 0;
-  if (obj[path3])
-    return obj[path3];
-  var paths = path3.split(keySeparator);
+  if (obj[path4])
+    return obj[path4];
+  var paths = path4.split(keySeparator);
   var current = obj;
   for (var i2 = 0; i2 < paths.length; ++i2) {
     if (!current)
@@ -14618,7 +14556,7 @@ function deepFind(obj, path3) {
         return void 0;
       if (mix === null)
         return null;
-      if (path3.endsWith(p2)) {
+      if (path4.endsWith(p2)) {
         if (typeof mix === "string")
           return mix;
         if (p2 && typeof mix[p2] === "string")
@@ -14678,15 +14616,15 @@ var ResourceStore = function(_EventEmitter) {
       var options = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {};
       var keySeparator = options.keySeparator !== void 0 ? options.keySeparator : this.options.keySeparator;
       var ignoreJSONStructure = options.ignoreJSONStructure !== void 0 ? options.ignoreJSONStructure : this.options.ignoreJSONStructure;
-      var path3 = [lng, ns];
+      var path4 = [lng, ns];
       if (key && typeof key !== "string")
-        path3 = path3.concat(key);
+        path4 = path4.concat(key);
       if (key && typeof key === "string")
-        path3 = path3.concat(keySeparator ? key.split(keySeparator) : key);
+        path4 = path4.concat(keySeparator ? key.split(keySeparator) : key);
       if (lng.indexOf(".") > -1) {
-        path3 = lng.split(".");
+        path4 = lng.split(".");
       }
-      var result = getPath(this.data, path3);
+      var result = getPath(this.data, path4);
       if (result || !ignoreJSONStructure || typeof key !== "string")
         return result;
       return deepFind(this.data && this.data[lng] && this.data[lng][ns], key, keySeparator);
@@ -14700,16 +14638,16 @@ var ResourceStore = function(_EventEmitter) {
       var keySeparator = this.options.keySeparator;
       if (keySeparator === void 0)
         keySeparator = ".";
-      var path3 = [lng, ns];
+      var path4 = [lng, ns];
       if (key)
-        path3 = path3.concat(keySeparator ? key.split(keySeparator) : key);
+        path4 = path4.concat(keySeparator ? key.split(keySeparator) : key);
       if (lng.indexOf(".") > -1) {
-        path3 = lng.split(".");
+        path4 = lng.split(".");
         value = ns;
-        ns = path3[1];
+        ns = path4[1];
       }
       this.addNamespaces(ns);
-      setPath(this.data, path3, value);
+      setPath(this.data, path4, value);
       if (!options.silent)
         this.emit("added", lng, ns, key, value);
     }
@@ -14734,21 +14672,21 @@ var ResourceStore = function(_EventEmitter) {
       var options = arguments.length > 5 && arguments[5] !== void 0 ? arguments[5] : {
         silent: false
       };
-      var path3 = [lng, ns];
+      var path4 = [lng, ns];
       if (lng.indexOf(".") > -1) {
-        path3 = lng.split(".");
+        path4 = lng.split(".");
         deep = resources;
         resources = ns;
-        ns = path3[1];
+        ns = path4[1];
       }
       this.addNamespaces(ns);
-      var pack = getPath(this.data, path3) || {};
+      var pack = getPath(this.data, path4) || {};
       if (deep) {
         deepExtend(pack, resources, overwrite);
       } else {
         pack = _objectSpread$1(_objectSpread$1({}, pack), resources);
       }
-      setPath(this.data, path3, pack);
+      setPath(this.data, path4, pack);
       if (!options.silent)
         this.emit("added", lng, ns, resources);
     }
@@ -15806,10 +15744,10 @@ var Interpolator = function() {
       }
       var handleFormat = function handleFormat2(key) {
         if (key.indexOf(_this.formatSeparator) < 0) {
-          var path3 = getPathWithDefaults(data, defaultData, key);
-          return _this.alwaysFormat ? _this.format(path3, void 0, lng, _objectSpread$3(_objectSpread$3(_objectSpread$3({}, options), data), {}, {
+          var path4 = getPathWithDefaults(data, defaultData, key);
+          return _this.alwaysFormat ? _this.format(path4, void 0, lng, _objectSpread$3(_objectSpread$3(_objectSpread$3({}, options), data), {}, {
             interpolationkey: key
-          })) : path3;
+          })) : path4;
         }
         var p2 = key.split(_this.formatSeparator);
         var k2 = p2.shift().trim();
@@ -17266,6 +17204,14 @@ i18next_default.init({
               dayWithCount_one: "{{count}} day",
               dayWithCount_other: "{{count}} days"
             }
+          },
+          gallery: {
+            name: "Gallery",
+            fields: {
+              cover: "Cover",
+              none: "None"
+            },
+            empty: "This view is empty."
           }
         },
         components: {
@@ -17313,65 +17259,132 @@ i18next_default.init({
 });
 var i18n = (0, import_svelte_i18next.createI18nStore)(i18next_default);
 
-// src/lib/api.ts
-var import_dayjs = __toModule(require_dayjs_min());
-var import_moment = __toModule(require_moment());
-var import_obsidian4 = __toModule(require("obsidian"));
-
-// node_modules/uuid/dist/esm-browser/rng.js
-var getRandomValues;
-var rnds8 = new Uint8Array(16);
-function rng() {
-  if (!getRandomValues) {
-    getRandomValues = typeof crypto !== "undefined" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto !== "undefined" && typeof msCrypto.getRandomValues === "function" && msCrypto.getRandomValues.bind(msCrypto);
-    if (!getRandomValues) {
-      throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
+// src/lib/stores/settings.ts
+function createSettings() {
+  const { set, update: update2, subscribe: subscribe2 } = writable({
+    version: 1,
+    projects: []
+  });
+  return {
+    set,
+    subscribe: subscribe2,
+    saveLayout(projectId, viewId) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.lastProjectId = projectId;
+        draft.lastViewId = viewId;
+      }));
+    },
+    addProject(project) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.projects.push(project);
+      }));
+    },
+    updateProject(project) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.projects = draft.projects.map((w2) => w2.id === project.id ? project : w2);
+      }));
+    },
+    deleteProject(projectId) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.projects = draft.projects.filter((w2) => w2.id !== projectId);
+      }));
+    },
+    addView(projectId, view2) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        const idx = draft.projects.findIndex((ws) => ws.id === projectId);
+        if (idx >= 0) {
+          const ws = draft.projects[idx];
+          if (ws) {
+            draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, ws), {
+              views: [...ws.views, view2]
+            }));
+          }
+        }
+        return draft;
+      }));
+    },
+    renameView(projectId, viewId, name) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        const idx = draft.projects.findIndex((p2) => p2.id === projectId);
+        if (idx >= 0) {
+          const p2 = draft.projects[idx];
+          if (p2) {
+            draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, p2), {
+              views: p2.views.map((view2) => view2.id === viewId ? __spreadProps(__spreadValues({}, view2), { name }) : view2)
+            }));
+          }
+        }
+      }));
+    },
+    deleteView(projectId, viewId) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        const idx = draft.projects.findIndex((ws) => ws.id === projectId);
+        if (idx >= 0) {
+          const ws = draft.projects[idx];
+          if (ws) {
+            draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, ws), {
+              views: ws.views.filter((view2) => view2.id !== viewId)
+            }));
+          }
+        }
+      }));
+    },
+    updateView(projectId, updatedView) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.projects = draft.projects.map((project) => {
+          if (project.id === projectId) {
+            return __spreadProps(__spreadValues({}, project), {
+              views: project.views.map((view2) => {
+                if (view2.id === updatedView.id) {
+                  return updatedView;
+                }
+                return view2;
+              })
+            });
+          }
+          return project;
+        });
+      }));
+    },
+    updateViewConfig(projectId, viewId, config) {
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.projects = draft.projects.map((project) => {
+          if (project.id === projectId) {
+            return __spreadProps(__spreadValues({}, project), {
+              views: project.views.map((view2) => {
+                if (view2.id === viewId) {
+                  return __spreadProps(__spreadValues({}, view2), {
+                    config
+                  });
+                }
+                return view2;
+              })
+            });
+          }
+          return project;
+        });
+      }));
     }
+  };
+}
+var settings = createSettings();
+function migrateAny(settings2) {
+  if (!settings2) {
+    return { version: 1, projects: [] };
   }
-  return getRandomValues(rnds8);
-}
-
-// node_modules/uuid/dist/esm-browser/regex.js
-var regex_default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
-
-// node_modules/uuid/dist/esm-browser/validate.js
-function validate(uuid) {
-  return typeof uuid === "string" && regex_default.test(uuid);
-}
-var validate_default = validate;
-
-// node_modules/uuid/dist/esm-browser/stringify.js
-var byteToHex = [];
-for (i2 = 0; i2 < 256; ++i2) {
-  byteToHex.push((i2 + 256).toString(16).substr(1));
-}
-var i2;
-function stringify(arr) {
-  var offset2 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
-  var uuid = (byteToHex[arr[offset2 + 0]] + byteToHex[arr[offset2 + 1]] + byteToHex[arr[offset2 + 2]] + byteToHex[arr[offset2 + 3]] + "-" + byteToHex[arr[offset2 + 4]] + byteToHex[arr[offset2 + 5]] + "-" + byteToHex[arr[offset2 + 6]] + byteToHex[arr[offset2 + 7]] + "-" + byteToHex[arr[offset2 + 8]] + byteToHex[arr[offset2 + 9]] + "-" + byteToHex[arr[offset2 + 10]] + byteToHex[arr[offset2 + 11]] + byteToHex[arr[offset2 + 12]] + byteToHex[arr[offset2 + 13]] + byteToHex[arr[offset2 + 14]] + byteToHex[arr[offset2 + 15]]).toLowerCase();
-  if (!validate_default(uuid)) {
-    throw TypeError("Stringified UUID is invalid");
+  if ("version" in settings2) {
+    return Object.assign({}, DEFAULT_SETTINGS, settings2);
   }
-  return uuid;
+  return migrate(settings2);
 }
-var stringify_default = stringify;
-
-// node_modules/uuid/dist/esm-browser/v4.js
-function v4(options, buf, offset2) {
-  options = options || {};
-  var rnds = options.random || (options.rng || rng)();
-  rnds[6] = rnds[6] & 15 | 64;
-  rnds[8] = rnds[8] & 63 | 128;
-  if (buf) {
-    offset2 = offset2 || 0;
-    for (var i2 = 0; i2 < 16; ++i2) {
-      buf[offset2 + i2] = rnds[i2];
-    }
-    return buf;
-  }
-  return stringify_default(rnds);
+function migrate(v0) {
+  return {
+    version: 1,
+    lastProjectId: v0.lastWorkspaceId,
+    lastViewId: v0.lastViewId,
+    projects: v0.workspaces
+  };
 }
-var v4_default = v4;
 
 // src/lib/templates/index.ts
 function interpolateTemplate(template, data) {
@@ -17454,6 +17467,13 @@ function isRawLink(value) {
 
 // src/lib/helpers.ts
 var import_obsidian2 = __toModule(require("obsidian"));
+
+// src/lib/stores/obsidian.ts
+var app = writable();
+var view = writable();
+var plugin = writable();
+
+// src/lib/helpers.ts
 function notEmpty(value) {
   return value !== null && value !== void 0;
 }
@@ -17467,9 +17487,9 @@ function uniquify(name, exists2) {
   }
   return name + " " + num;
 }
-function nextUniqueFileName(path3, name) {
+function nextUniqueFileName(path4, name) {
   return uniquify(name, (name2) => {
-    return get_store_value(app).vault.getAbstractFileByPath((0, import_obsidian2.normalizePath)(path3 + "/" + name2 + ".md")) instanceof import_obsidian2.TFile;
+    return get_store_value(app).vault.getAbstractFileByPath((0, import_obsidian2.normalizePath)(path4 + "/" + name2 + ".md")) instanceof import_obsidian2.TFile;
   });
 }
 function nextUniqueProjectName(projects, name) {
@@ -17483,7 +17503,7 @@ function nextUniqueViewName(views, name) {
   });
 }
 
-// src/lib/api.ts
+// src/lib/data-api.ts
 var DataApi = class {
   constructor(app2) {
     this.app = app2;
@@ -17498,14 +17518,14 @@ var DataApi = class {
   }
   renameField(files, from, to) {
     return __async(this, null, function* () {
-      for (let file of files) {
+      for (const file of files) {
         this.updateFile(file, (data) => doRenameField(data, from, to));
       }
     });
   }
   deleteField(files, name) {
     return __async(this, null, function* () {
-      for (let file of files) {
+      for (const file of files) {
         this.updateFile(file, (data) => doDeleteField(data, name));
       }
     });
@@ -17538,9 +17558,9 @@ var DataApi = class {
       yield this.app.vault.modify(file, cb(data));
     });
   }
-  deleteRecord(path3) {
+  deleteRecord(path4) {
     return __async(this, null, function* () {
-      const file = this.app.vault.getAbstractFileByPath(path3);
+      const file = this.app.vault.getAbstractFileByPath(path4);
       if (file) {
         this.app.vault.trash(file, true);
       }
@@ -17555,7 +17575,7 @@ function doUpdateRecord(data, fields, record) {
     draft[1] = `[[${draft[1].linkText}]]`;
   }) : entry).filter((entry) => !fields.find((field) => field.name === entry[0] && field.derived)).filter((entry) => entry[1] !== void 0).filter((entry) => entry[1] !== null));
   const encoded = encodeFrontMatter(data, updated);
-  return encoded.replace(/\"\[\[(.*)\]\]\"/, (_24, p1) => {
+  return encoded.replace(/"\[\[(.*)\]\]"/, (_24, p1) => {
     return `[[${p1}]]`;
   });
 }
@@ -17574,18 +17594,18 @@ function doRenameField(data, from, to) {
 }
 function decodeFrontMatter(data) {
   const delim = "---";
-  var startPosition = data.indexOf(delim) + delim.length;
+  const startPosition = data.indexOf(delim) + delim.length;
   const isStart = data.slice(0, startPosition).trim() === delim;
-  var endPosition = data.slice(startPosition).indexOf(delim) + startPosition;
+  const endPosition = data.slice(startPosition).indexOf(delim) + startPosition;
   const hasFrontMatter = isStart && endPosition > startPosition;
   const _a = hasFrontMatter ? (0, import_obsidian4.parseYaml)(data.slice(startPosition, endPosition)) : {}, { position } = _a, cache = __objRest(_a, ["position"]);
   return cache;
 }
 function encodeFrontMatter(data, frontmatter) {
   const delim = "---";
-  var startPosition = data.indexOf(delim) + delim.length;
+  const startPosition = data.indexOf(delim) + delim.length;
   const isStart = data.slice(0, startPosition).trim() === delim;
-  var endPosition = data.slice(startPosition).indexOf(delim) + startPosition;
+  const endPosition = data.slice(startPosition).indexOf(delim) + startPosition;
   const hasFrontMatter = isStart && endPosition > startPosition;
   if (Object.entries(frontmatter).length) {
     const res = hasFrontMatter ? data.slice(0, startPosition + 1) + (0, import_obsidian4.stringifyYaml)(frontmatter) + data.slice(endPosition) : delim + "\n" + (0, import_obsidian4.stringifyYaml)(frontmatter) + delim + "\n\n" + data;
@@ -17633,84 +17653,56 @@ function createDataFrame() {
     set,
     subscribe: subscribe2,
     addRecord(record) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.records.push(record);
-          return draft;
-        });
-      });
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.records.push(record);
+      }));
     },
     updateRecord(record) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.records = draft.records.map((r2) => {
-            if (r2.id === record.id) {
-              return record;
-            }
-            return r2;
-          });
-          return draft;
-        });
-      });
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.records = draft.records.map((r2) => r2.id === record.id ? record : r2);
+      }));
     },
     deleteRecord(id) {
-      update2((state) => {
-        const res = immer_esm_default(state, (draft) => {
-          draft.records = draft.records.filter((record) => record.id !== id);
-          return draft;
-        });
-        return res;
-      });
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.records = draft.records.filter((record) => record.id !== id);
+      }));
     },
     renameField(from, to) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.fields = draft.fields.map((field) => field.name === from ? __spreadProps(__spreadValues({}, field), {
-            name: to
-          }) : field);
-          return draft;
-        });
-      });
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.fields = draft.fields.map((field) => field.name === from ? __spreadProps(__spreadValues({}, field), {
+          name: to
+        }) : field);
+      }));
     },
     deleteField(fieldName) {
-      update2((state) => {
-        return immer_esm_default(state, (draft) => {
-          draft.fields = draft.fields.filter((field) => field.name !== fieldName);
-          return draft;
-        });
-      });
+      update2((state) => immer_esm_default(state, (draft) => {
+        draft.fields = draft.fields.filter((field) => field.name !== fieldName);
+      }));
     },
     merge(frame) {
-      update2((existing) => {
-        const frame2 = immer_esm_default(existing, (draft) => {
-          const recordSet = Object.fromEntries(existing.records.map((record) => [record.id, record]));
-          frame.records.forEach((record) => {
-            recordSet[record.id] = record;
-          });
-          draft.records = Object.values(recordSet);
-          frame.fields.forEach((newField) => {
-            const existingField = existing.fields.find((f2) => f2.name === newField.name);
-            if (existingField) {
-              if (existingField.type !== newField.type) {
-                const existingFieldIndex = existing.fields.findIndex((field) => field.name === newField.name);
-                draft.fields[existingFieldIndex] = __spreadProps(__spreadValues({}, newField), {
-                  type: DataFieldType.String
-                });
-              }
-            } else {
-              draft.fields.push(newField);
-            }
-          });
-          return draft;
+      update2((existing) => immer_esm_default(existing, (draft) => {
+        const recordSet = Object.fromEntries(existing.records.map((record) => [record.id, record]));
+        frame.records.forEach((record) => {
+          recordSet[record.id] = record;
         });
-        return frame2;
-      });
+        draft.records = Object.values(recordSet);
+        frame.fields.forEach((newField) => {
+          const existingField = existing.fields.find((f2) => f2.name === newField.name);
+          if (existingField) {
+            if (existingField.type !== newField.type) {
+              const existingFieldIndex = existing.fields.findIndex((field) => field.name === newField.name);
+              draft.fields[existingFieldIndex] = __spreadProps(__spreadValues({}, newField), {
+                type: DataFieldType.String
+              });
+            }
+          } else {
+            draft.fields.push(newField);
+          }
+        });
+      }));
     }
   };
 }
-
-// src/app/Toolbar.svelte
-var import_obsidian19 = __toModule(require("obsidian"));
 
 // src/modals/create-project-modal.ts
 var import_obsidian12 = __toModule(require("obsidian"));
@@ -17733,8 +17725,8 @@ function isTFile(value) {
   return value instanceof import_obsidian7.TFile;
 }
 function filesFromRecords(app2, records) {
-  return records.map((record) => record.id).map((path3) => {
-    return app2.vault.getAbstractFileByPath(path3);
+  return records.map((record) => record.id).map((path4) => {
+    return app2.vault.getAbstractFileByPath(path4);
   }).filter(isTFile);
 }
 function getFilesInFolder(folder) {
@@ -17758,7 +17750,7 @@ function getFoldersInFolder(folder) {
   });
   return result;
 }
-function isValidPath(path3) {
+function isValidPath(path4) {
   const illegalCharacters = {
     darwin: /[\\\/\|\#\^\[\]]/,
     win32: /[\\\/\|\:\<\>\*\"\?]/
@@ -17767,12 +17759,12 @@ function isValidPath(path3) {
   if (!expr) {
     return true;
   }
-  return !expr.test(path3);
+  return !expr.test(path4);
 }
 
 // src/components/FileListInput/FileListInput.svelte
 function add_css14(target) {
-  append_styles(target, "svelte-123vkct", "div.svelte-123vkct{display:flex;align-items:center;justify-content:space-between;gap:4px;padding-bottom:4px;width:100%}div.svelte-123vkct:first-child{flex:1}");
+  append_styles(target, "svelte-biiywl", "div.svelte-biiywl{display:flex;align-items:center;justify-content:space-between;gap:4px;padding-bottom:4px;width:100%}div.svelte-biiywl:first-child{flex:1}");
 }
 function get_each_context3(ctx, list, i2) {
   const child_ctx = ctx.slice();
@@ -17809,7 +17801,7 @@ function create_each_block3(ctx) {
       create_component(fileautocomplete.$$.fragment);
       t3 = space();
       create_component(iconbutton.$$.fragment);
-      attr(div, "class", "svelte-123vkct");
+      attr(div, "class", "svelte-biiywl");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -17986,7 +17978,7 @@ var FileListInput_default = FileListInput;
 
 // src/modals/components/CreateProject.svelte
 function add_css15(target) {
-  append_styles(target, "svelte-jbo0mz", "small.svelte-jbo0mz{font-size:var(--font-ui-smaller);color:var(--text-accent);font-weight:var(--font-semibold)}.error.svelte-jbo0mz{color:var(--text-error)}");
+  append_styles(target, "svelte-6mkdkz", "small.svelte-6mkdkz{font-size:var(--font-ui-smaller);color:var(--text-accent);font-weight:var(--font-semibold)}.error.svelte-6mkdkz{color:var(--text-error)}");
 }
 function create_default_slot_11(ctx) {
   let textinput;
@@ -18433,7 +18425,7 @@ function create_if_block6(ctx) {
     c() {
       small = element("small");
       t3 = text(t_value);
-      attr(small, "class", "error svelte-jbo0mz");
+      attr(small, "class", "error svelte-6mkdkz");
     },
     m(target, anchor) {
       insert(target, small, anchor);
@@ -18477,7 +18469,7 @@ function create_default_slot_5(ctx) {
       if (if_block)
         if_block.c();
       if_block_anchor = empty();
-      attr(small, "class", "svelte-jbo0mz");
+      attr(small, "class", "svelte-6mkdkz");
     },
     m(target, anchor) {
       mount_component(textinput, target, anchor);
@@ -18993,7 +18985,7 @@ function instance35($$self, $$props, $$invalidate) {
   const input_handler = ({ detail: name2 }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { name: name2 }));
   const check_handler = ({ detail: dataview }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { dataview }));
   const input_handler_1 = ({ detail: query }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { query }));
-  const change_handler = ({ detail: path3 }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { path: path3 }));
+  const change_handler = ({ detail: path4 }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { path: path4 }));
   const check_handler_1 = ({ detail: recursive }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { recursive }));
   const input_handler_2 = ({ detail: defaultName2 }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { defaultName: defaultName2 }));
   const func_14 = (templates) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { templates }));
@@ -19095,8 +19087,1085 @@ var CreateProjectModal = class extends import_obsidian12.Modal {
   }
 };
 
-// src/modals/add-view-modal.ts
+// src/app/onboarding/demo-project.ts
+var import_dayjs2 = __toModule(require_dayjs_min());
 var import_obsidian13 = __toModule(require("obsidian"));
+function createDemoProject(vault) {
+  return __async(this, null, function* () {
+    const demoFolder = "Projects - Demo Project";
+    yield vault.createFolder(demoFolder);
+    const startDate = (0, import_dayjs2.default)();
+    const files = {
+      "The Best Notes You'll Ever Make": {
+        status: "Done",
+        due: startDate.subtract(2, "weeks").format("YYYY-MM-DD"),
+        published: true,
+        weight: 1,
+        tags: ["note-taking"],
+        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+      },
+      "The Easiest Way to Start Taking Notes": {
+        status: "Done",
+        due: startDate.subtract(1, "weeks").format("YYYY-MM-DD"),
+        published: true,
+        weight: 2,
+        tags: ["note-taking", "obsidian"],
+        image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+      },
+      "Why You Should Be Taking More Notes": {
+        status: "Doing",
+        due: startDate.format("YYYY-MM-DD"),
+        published: false,
+        weight: 3,
+        tags: ["note-taking", "pkm"],
+        image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+      },
+      "What I Learned From Taking 15,000 Notes": {
+        status: "Backlog",
+        due: startDate.add(1, "weeks").format("YYYY-MM-DD"),
+        published: false,
+        weight: 4,
+        tags: ["pkm", "obsidian"],
+        image: "https://images.unsplash.com/photo-1550592704-6c76defa9985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+      },
+      "5 Mistake I Made When I Started Using Obsidian": {
+        status: "Backlog",
+        due: startDate.add(2, "weeks").format("YYYY-MM-DD"),
+        published: false,
+        tags: ["obsidian"],
+        image: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80"
+      }
+    };
+    for (const [linkText, data] of Object.entries(files)) {
+      const content = "---\n" + (0, import_obsidian13.stringifyYaml)(data) + "---\n\n# " + linkText;
+      yield vault.create((0, import_obsidian13.normalizePath)(demoFolder + "/" + linkText + ".md"), content);
+    }
+    const tableConfig = {
+      fieldConfig: {
+        name: {
+          width: 360
+        },
+        path: {
+          hide: true
+        }
+      }
+    };
+    const boardConfig = {
+      groupByField: "status",
+      priorityField: "weight"
+    };
+    const calendarConfig = {
+      interval: "month",
+      dateField: "due",
+      checkField: "published"
+    };
+    const galleryConfig = {
+      coverField: "image"
+    };
+    settings.addProject({
+      name: "Demo project",
+      id: v4_default(),
+      path: demoFolder,
+      recursive: false,
+      views: [
+        { name: "Table", id: v4_default(), type: "table", config: tableConfig },
+        { name: "Board", id: v4_default(), type: "board", config: boardConfig },
+        {
+          name: "Calendar",
+          id: v4_default(),
+          type: "calendar",
+          config: calendarConfig
+        },
+        {
+          name: "Gallery",
+          id: v4_default(),
+          type: "gallery",
+          config: galleryConfig
+        }
+      ]
+    });
+  });
+}
+
+// src/app/onboarding/onboarding-modal.ts
+var import_obsidian14 = __toModule(require("obsidian"));
+
+// src/app/onboarding/TabContainer.svelte
+function add_css16(target) {
+  append_styles(target, "svelte-1es105s", ".nomargin.svelte-1es105s{margin:0;padding:8px}.header.svelte-1es105s{display:flex;gap:4px;margin-bottom:4px}");
+}
+var get_default_slot_changes = (dirty) => ({ selected: dirty & 2 });
+var get_default_slot_context = (ctx) => ({ selected: ctx[1] });
+function get_each_context4(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[6] = list[i2];
+  return child_ctx;
+}
+function create_each_block4(ctx) {
+  let div;
+  let t0_value = ctx[6] + "";
+  let t0;
+  let t1;
+  let mounted;
+  let dispose;
+  function click_handler() {
+    return ctx[4](ctx[6]);
+  }
+  return {
+    c() {
+      div = element("div");
+      t0 = text(t0_value);
+      t1 = space();
+      attr(div, "class", "clickable-icon");
+      toggle_class(div, "is-active", ctx[6] === ctx[1]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      append(div, t0);
+      append(div, t1);
+      if (!mounted) {
+        dispose = listen(div, "click", click_handler);
+        mounted = true;
+      }
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if (dirty & 1 && t0_value !== (t0_value = ctx[6] + ""))
+        set_data(t0, t0_value);
+      if (dirty & 3) {
+        toggle_class(div, "is-active", ctx[6] === ctx[1]);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_fragment36(ctx) {
+  let div2;
+  let div0;
+  let t3;
+  let div1;
+  let current;
+  let each_value = ctx[0];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block4(get_each_context4(ctx, each_value, i2));
+  }
+  const default_slot_template = ctx[3].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[2], get_default_slot_context);
+  return {
+    c() {
+      div2 = element("div");
+      div0 = element("div");
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      t3 = space();
+      div1 = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div0, "class", "header svelte-1es105s");
+      attr(div1, "class", "card nomargin svelte-1es105s");
+    },
+    m(target, anchor) {
+      insert(target, div2, anchor);
+      append(div2, div0);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(div0, null);
+      }
+      append(div2, t3);
+      append(div2, div1);
+      if (default_slot) {
+        default_slot.m(div1, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 3) {
+        each_value = ctx2[0];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context4(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+          } else {
+            each_blocks[i2] = create_each_block4(child_ctx);
+            each_blocks[i2].c();
+            each_blocks[i2].m(div0, null);
+          }
+        }
+        for (; i2 < each_blocks.length; i2 += 1) {
+          each_blocks[i2].d(1);
+        }
+        each_blocks.length = each_value.length;
+      }
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 6)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, get_default_slot_changes), get_default_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div2);
+      destroy_each(each_blocks, detaching);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance36($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  var _a;
+  let { options } = $$props;
+  let selected = (_a = options[0]) !== null && _a !== void 0 ? _a : "";
+  const click_handler = (option) => {
+    $$invalidate(1, selected = option);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("options" in $$props2)
+      $$invalidate(0, options = $$props2.options);
+    if ("$$scope" in $$props2)
+      $$invalidate(2, $$scope = $$props2.$$scope);
+  };
+  return [options, selected, $$scope, slots, click_handler];
+}
+var TabContainer = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance36, create_fragment36, safe_not_equal, { options: 0 }, add_css16);
+  }
+};
+var TabContainer_default = TabContainer;
+
+// src/app/onboarding/Onboarding.svelte
+function add_css17(target) {
+  append_styles(target, "svelte-a9juqy", "pre.svelte-a9juqy{background-color:var(--background-secondary);border-radius:var(--radius-s);padding:8px}ol.svelte-a9juqy{margin:0;padding:0 22px}");
+}
+function create_default_slot_62(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text("Get started with Projects");
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_52(ctx) {
+  let t0;
+  let a2;
+  let t22;
+  return {
+    c() {
+      t0 = text("Projects lets you manage groups of related notes using\n    ");
+      a2 = element("a");
+      a2.textContent = "front matter";
+      t22 = text(". For example, a folder with the blog posts you're working on.");
+      attr(a2, "href", "https://help.obsidian.md/Advanced+topics/YAML+front+matter");
+    },
+    m(target, anchor) {
+      insert(target, t0, anchor);
+      insert(target, a2, anchor);
+      insert(target, t22, anchor);
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(t0);
+      if (detaching)
+        detach(a2);
+      if (detaching)
+        detach(t22);
+    }
+  };
+}
+function create_default_slot_42(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text("Start from scratch, or explore a demo project \u{1F447}");
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_32(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text("Create new project");
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_22(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text("Try a demo project");
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_12(ctx) {
+  let button0;
+  let t3;
+  let button1;
+  let current;
+  button0 = new Button_default({
+    props: {
+      variant: "primary",
+      $$slots: { default: [create_default_slot_32] },
+      $$scope: { ctx }
+    }
+  });
+  button0.$on("click", ctx[2]);
+  button1 = new Button_default({
+    props: {
+      variant: "default",
+      tooltip: "Creates a new folder at the root of your vault with example notes.",
+      $$slots: { default: [create_default_slot_22] },
+      $$scope: { ctx }
+    }
+  });
+  button1.$on("click", ctx[3]);
+  return {
+    c() {
+      create_component(button0.$$.fragment);
+      t3 = space();
+      create_component(button1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button0, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(button1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button0_changes = {};
+      if (dirty & 32) {
+        button0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button0.$set(button0_changes);
+      const button1_changes = {};
+      if (dirty & 32) {
+        button1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button1.$set(button1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button0.$$.fragment, local);
+      transition_in(button1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button0.$$.fragment, local);
+      transition_out(button1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button0, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(button1, detaching);
+    }
+  };
+}
+function create_else_block2(ctx) {
+  let ol;
+  return {
+    c() {
+      ol = element("ol");
+      ol.innerHTML = `<li>In the top-right corner of the <strong>Projects</strong>
+          view, click
+          <strong>New</strong>.</li> 
+        <li>Click <strong>New project</strong>.</li>`;
+      attr(ol, "class", "svelte-a9juqy");
+    },
+    m(target, anchor) {
+      insert(target, ol, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(ol);
+    }
+  };
+}
+function create_if_block_14(ctx) {
+  let ol;
+  return {
+    c() {
+      ol = element("ol");
+      ol.innerHTML = `<li>Open the <strong>Command palette</strong>.</li> 
+        <li>Search for <strong>Create new project</strong></li> 
+        <li>Press <strong>Enter</strong>.</li>`;
+      attr(ol, "class", "svelte-a9juqy");
+    },
+    m(target, anchor) {
+      insert(target, ol, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(ol);
+    }
+  };
+}
+function create_if_block7(ctx) {
+  let ol;
+  return {
+    c() {
+      ol = element("ol");
+      ol.innerHTML = `<li>Right-click a folder in <strong>File explorer</strong>.</li> 
+        <li>Click <strong>Create project in folder</strong>.</li>`;
+      attr(ol, "class", "svelte-a9juqy");
+    },
+    m(target, anchor) {
+      insert(target, ol, anchor);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(ol);
+    }
+  };
+}
+function create_default_slot7(ctx) {
+  let if_block_anchor;
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[4] === "File explorer")
+      return create_if_block7;
+    if (ctx2[4] === "Command palette")
+      return create_if_block_14;
+    return create_else_block2;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+    },
+    p(ctx2, dirty) {
+      if (current_block_type !== (current_block_type = select_block_type(ctx2, dirty))) {
+        if_block.d(1);
+        if_block = current_block_type(ctx2);
+        if (if_block) {
+          if_block.c();
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      }
+    },
+    d(detaching) {
+      if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_fragment37(ctx) {
+  let div;
+  let typography0;
+  let t0;
+  let typography1;
+  let t1;
+  let pre;
+  let t3;
+  let typography2;
+  let t4;
+  let modalbuttongroup;
+  let t5;
+  let p2;
+  let p_style_value;
+  let t8;
+  let tabcontainer;
+  let current;
+  typography0 = new Typography_default({
+    props: {
+      variant: "h1",
+      $$slots: { default: [create_default_slot_62] },
+      $$scope: { ctx }
+    }
+  });
+  typography1 = new Typography_default({
+    props: {
+      variant: "body",
+      $$slots: { default: [create_default_slot_52] },
+      $$scope: { ctx }
+    }
+  });
+  typography2 = new Typography_default({
+    props: {
+      variant: "body",
+      $$slots: { default: [create_default_slot_42] },
+      $$scope: { ctx }
+    }
+  });
+  modalbuttongroup = new ModalButtonGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_12] },
+      $$scope: { ctx }
+    }
+  });
+  tabcontainer = new TabContainer_default({
+    props: {
+      options: ["Projects view", "Command palette", "File explorer"],
+      $$slots: {
+        default: [
+          create_default_slot7,
+          ({ selected }) => ({ 4: selected }),
+          ({ selected }) => selected ? 16 : 0
+        ]
+      },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(typography0.$$.fragment);
+      t0 = space();
+      create_component(typography1.$$.fragment);
+      t1 = space();
+      pre = element("pre");
+      pre.innerHTML = `<code>---
+status: Backlog
+due: 2023-01-01
+published: false
+---
+
+# My blog post</code>`;
+      t3 = space();
+      create_component(typography2.$$.fragment);
+      t4 = space();
+      create_component(modalbuttongroup.$$.fragment);
+      t5 = space();
+      p2 = element("p");
+      p2.innerHTML = `<strong>Psst! \u{1F44B}</strong> Next time you can create your projects using any of
+    the following ways:`;
+      t8 = space();
+      create_component(tabcontainer.$$.fragment);
+      attr(pre, "class", "svelte-a9juqy");
+      attr(p2, "style", p_style_value = "color: var(--text-muted); margin-top: 45px; font-size: var(--font-ui-smaller);");
+      attr(div, "class", "center");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(typography0, div, null);
+      append(div, t0);
+      mount_component(typography1, div, null);
+      append(div, t1);
+      append(div, pre);
+      append(div, t3);
+      mount_component(typography2, div, null);
+      append(div, t4);
+      mount_component(modalbuttongroup, div, null);
+      append(div, t5);
+      append(div, p2);
+      append(div, t8);
+      mount_component(tabcontainer, div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const typography0_changes = {};
+      if (dirty & 32) {
+        typography0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography0.$set(typography0_changes);
+      const typography1_changes = {};
+      if (dirty & 32) {
+        typography1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography1.$set(typography1_changes);
+      const typography2_changes = {};
+      if (dirty & 32) {
+        typography2_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography2.$set(typography2_changes);
+      const modalbuttongroup_changes = {};
+      if (dirty & 35) {
+        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalbuttongroup.$set(modalbuttongroup_changes);
+      const tabcontainer_changes = {};
+      if (dirty & 48) {
+        tabcontainer_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      tabcontainer.$set(tabcontainer_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(typography0.$$.fragment, local);
+      transition_in(typography1.$$.fragment, local);
+      transition_in(typography2.$$.fragment, local);
+      transition_in(modalbuttongroup.$$.fragment, local);
+      transition_in(tabcontainer.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(typography0.$$.fragment, local);
+      transition_out(typography1.$$.fragment, local);
+      transition_out(typography2.$$.fragment, local);
+      transition_out(modalbuttongroup.$$.fragment, local);
+      transition_out(tabcontainer.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(typography0);
+      destroy_component(typography1);
+      destroy_component(typography2);
+      destroy_component(modalbuttongroup);
+      destroy_component(tabcontainer);
+    }
+  };
+}
+function instance37($$self, $$props, $$invalidate) {
+  let { onCreate } = $$props;
+  let { onTry } = $$props;
+  const click_handler = () => onCreate();
+  const click_handler_1 = () => onTry();
+  $$self.$$set = ($$props2) => {
+    if ("onCreate" in $$props2)
+      $$invalidate(0, onCreate = $$props2.onCreate);
+    if ("onTry" in $$props2)
+      $$invalidate(1, onTry = $$props2.onTry);
+  };
+  return [onCreate, onTry, click_handler, click_handler_1];
+}
+var Onboarding = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance37, create_fragment37, safe_not_equal, { onCreate: 0, onTry: 1 }, add_css17);
+  }
+};
+var Onboarding_default = Onboarding;
+
+// src/app/onboarding/onboarding-modal.ts
+var OnboardingModal = class extends import_obsidian14.Modal {
+  constructor(app2, onCreate, onTry) {
+    super(app2);
+    this.onCreate = onCreate;
+    this.onTry = onTry;
+  }
+  onOpen() {
+    this.component = new Onboarding_default({
+      target: this.contentEl,
+      props: {
+        onCreate: () => {
+          this.onCreate();
+          this.close();
+        },
+        onTry: () => {
+          this.onTry();
+          this.close();
+        }
+      }
+    });
+  }
+};
+
+// src/lib/view-api.ts
+var ViewApi = class {
+  constructor(app2, dataSource2, dataApi) {
+    this.app = app2;
+    this.dataSource = dataSource2;
+    this.dataApi = dataApi;
+  }
+  addRecord(record, templatePath) {
+    if (this.dataSource.includes(record.id)) {
+      dataFrame.addRecord(record);
+    }
+    this.dataApi.createNote(record, templatePath);
+  }
+  updateRecord(record, fields) {
+    if (this.dataSource.includes(record.id)) {
+      dataFrame.updateRecord(record);
+    }
+    this.dataApi.updateRecord(fields, record);
+  }
+  deleteRecord(recordId) {
+    if (this.dataSource.includes(recordId)) {
+      dataFrame.deleteRecord(recordId);
+    }
+    this.dataApi.deleteRecord(recordId);
+  }
+  renameField(from, to) {
+    dataFrame.renameField(from, to);
+    this.dataApi.renameField(filesFromRecords(this.app, get_store_value(dataFrame).records), from, to);
+  }
+  deleteField(field) {
+    dataFrame.deleteField(field);
+    this.dataApi.deleteField(filesFromRecords(this.app, get_store_value(dataFrame).records), field);
+  }
+};
+
+// src/lib/datasources/dataview/dataview.ts
+var import_obsidian_dataview2 = __toModule(require_lib());
+
+// src/lib/datasources/dataview/dataview-helpers.ts
+var import_dayjs3 = __toModule(require_dayjs_min());
+var import_obsidian16 = __toModule(require("obsidian"));
+function standardizeValues(app2, values) {
+  const res = {};
+  Object.keys(values).forEach((field) => {
+    var _a, _b;
+    const value = values[field];
+    if (!value) {
+      return;
+    }
+    if (typeof value === "object") {
+      if ("path" in value && "display" in value) {
+        const file = app2.vault.getAbstractFileByPath(value.path);
+        if (file instanceof import_obsidian16.TFile) {
+          const linkText = app2.metadataCache.fileToLinktext(file, "", true);
+          res[field] = {
+            displayName: (_a = value.display) != null ? _a : linkText,
+            fullPath: value.path,
+            linkText,
+            sourcePath: ""
+          };
+        } else {
+          res[field] = {
+            displayName: (_b = value.display) != null ? _b : value.path,
+            fullPath: value.path,
+            linkText: value.path,
+            sourcePath: ""
+          };
+        }
+      }
+      if ("ts" in value) {
+        res[field] = (0, import_dayjs3.default)(value.ts).format("YYYY-MM-DD");
+      }
+    } else {
+      res[field] = value;
+    }
+  });
+  return res;
+}
+
+// src/lib/datasources/helpers.ts
+var import_dayjs4 = __toModule(require_dayjs_min());
+function parseRecords(records, fields) {
+  for (const field of fields) {
+    for (const record of records) {
+      const value = record.values[field.name];
+      switch (field.type) {
+        case DataFieldType.Date:
+          if (typeof value === "string") {
+            record.values[field.name] = (0, import_dayjs4.default)(value).toDate();
+          }
+          break;
+        case DataFieldType.List:
+          if (typeof value === "string") {
+            record.values[field.name] = [value];
+          }
+          break;
+        case DataFieldType.Number:
+          if (typeof value === "string") {
+            record.values[field.name] = parseFloat(value);
+          }
+          break;
+        case DataFieldType.Boolean:
+          if (typeof value === "string") {
+            record.values[field.name] = stringToBoolean(value);
+          }
+          break;
+        case DataFieldType.String:
+          if (typeof value !== "object") {
+            record.values[field.name] = value == null ? void 0 : value.toLocaleString();
+          }
+          break;
+      }
+    }
+  }
+  return records;
+}
+function detectFields(records) {
+  const valuesByField = {};
+  records.forEach((record) => {
+    Object.entries(record.values).forEach(([field, value]) => {
+      var _a;
+      valuesByField[field] = [...(_a = valuesByField[field]) != null ? _a : [], value];
+    });
+  });
+  return Object.entries(valuesByField).map(([field, values]) => ({
+    name: field,
+    type: typeFromValues(values),
+    identifier: false,
+    derived: false
+  }));
+}
+function typeFromValues(values) {
+  const types = values.map((value) => detectCellType(value));
+  const result = {};
+  for (const type of types) {
+    if (!result[type]) {
+      result[type] = 0;
+    }
+    result[type]++;
+  }
+  const detectedTypes = Object.keys(result).filter((type) => type !== DataFieldType.Unknown);
+  if (detectedTypes.length === 1) {
+    return detectedTypes[0];
+  } else if (detectedTypes.length > 1) {
+    return DataFieldType.String;
+  } else {
+    return DataFieldType.Unknown;
+  }
+}
+function detectCellType(value) {
+  if (typeof value === "string") {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      return DataFieldType.Date;
+    }
+    return DataFieldType.String;
+  } else if (typeof value === "number") {
+    return DataFieldType.Number;
+  } else if (typeof value === "boolean") {
+    return DataFieldType.Boolean;
+  }
+  if (isLink2(value)) {
+    return DataFieldType.Link;
+  } else if (Array.isArray(value)) {
+    return DataFieldType.List;
+  }
+  return DataFieldType.Unknown;
+}
+function isLink2(value) {
+  if (value && typeof value === "object") {
+    return "linkText" in value && "sourcePath" in value;
+  }
+  return false;
+}
+function stringToBoolean(stringValue) {
+  var _a;
+  switch ((_a = stringValue == null ? void 0 : stringValue.toLowerCase()) == null ? void 0 : _a.trim()) {
+    case "true":
+    case "yes":
+    case "1":
+      return true;
+    case "false":
+    case "no":
+    case "0":
+    case null:
+    case void 0:
+      return false;
+    default:
+      return !!stringValue;
+  }
+}
+
+// src/lib/datasources/dataview/dataview.ts
+var UnsupportedCapability = class extends Error {
+  constructor(message) {
+    super(message);
+    this.name = get_store_value(i18n).t("errors.missingDataview.title");
+  }
+};
+var DataviewDataSource = class extends DataSource {
+  constructor(app2, project) {
+    super(project);
+    this.app = app2;
+  }
+  queryOne() {
+    return __async(this, null, function* () {
+      return this.queryAll();
+    });
+  }
+  queryAll() {
+    return __async(this, null, function* () {
+      var _a;
+      const api2 = this.getDataviewAPI();
+      const result = yield api2 == null ? void 0 : api2.query((_a = this.project.query) != null ? _a : "", void 0, {
+        forceId: true
+      });
+      if (!(result == null ? void 0 : result.successful) || result.value.type !== "table") {
+        throw new Error("dataview query failed");
+      }
+      const rows = parseTableResult(result.value);
+      const standardizedRecords = this.standardizeRecords(rows);
+      const fields = detectSchema(standardizedRecords);
+      const records = parseRecords(standardizedRecords, fields);
+      return { fields, records };
+    });
+  }
+  includes(_24) {
+    return true;
+  }
+  readonly() {
+    return true;
+  }
+  getDataviewAPI() {
+    if ((0, import_obsidian_dataview2.isPluginEnabled)(this.app)) {
+      return (0, import_obsidian_dataview2.getAPI)(this.app);
+    } else {
+      throw new UnsupportedCapability(get_store_value(i18n).t("errors.missingDataview.message"));
+    }
+  }
+  standardizeRecords(rows) {
+    const records = [];
+    rows.forEach((row) => {
+      const values = standardizeValues(this.app, row);
+      const id = values["File"];
+      if (id && isLink2(id) && id.fullPath) {
+        records.push({ id: id.fullPath, values });
+      }
+    });
+    return records;
+  }
+};
+function parseTableResult(value) {
+  const headers = value.headers;
+  const rows = [];
+  value.values.forEach((row) => {
+    const values = {};
+    headers.forEach((header, index) => {
+      const value2 = row[index];
+      values[header] = value2;
+    });
+    rows.push(values);
+  });
+  return rows;
+}
+function detectSchema(records) {
+  return detectFields(records).map((field) => __spreadProps(__spreadValues({}, field), { derived: true })).map((field) => field.name === "File" ? __spreadProps(__spreadValues({}, field), { identifier: true }) : field);
+}
+
+// src/lib/datasources/frontmatter/frontmatter-helpers.ts
+function standardizeRecord(id, values) {
+  return {
+    id,
+    values: Object.fromEntries(Object.entries(values).map(([field, value]) => {
+      return [field, isRawLink(value) ? parseRawLink(value, "") : value];
+    }))
+  };
+}
+function parseRawLink(rawLink, sourcePath) {
+  var _a;
+  if (rawLink[0]) {
+    const text2 = rawLink[0][0];
+    if (text2) {
+      const split = text2.split("|");
+      const linkText = (_a = split[0]) != null ? _a : "";
+      const link = {
+        linkText,
+        sourcePath
+      };
+      return split[1] ? __spreadProps(__spreadValues({}, link), { displayName: split[1] }) : link;
+    }
+  }
+  return void 0;
+}
+
+// src/lib/datasources/frontmatter/frontmatter.ts
+var FrontMatterDataSource = class extends DataSource {
+  constructor(app2, project) {
+    super(project);
+    this.app = app2;
+  }
+  queryOne(file, fields) {
+    return __async(this, null, function* () {
+      return this.queryFiles([file], fields);
+    });
+  }
+  queryAll() {
+    return __async(this, null, function* () {
+      const files = this.app.vault.getMarkdownFiles().filter((file) => this.includes(file.path));
+      return this.queryFiles(files);
+    });
+  }
+  queryFiles(files, predefinedFields) {
+    return __async(this, null, function* () {
+      const standardizedRecords = standardizeRecords(files, this.app.metadataCache);
+      let fields = detectSchema2(standardizedRecords);
+      for (const predefinedField of predefinedFields != null ? predefinedFields : []) {
+        fields = fields.map((field) => field.name !== predefinedField.name ? field : __spreadProps(__spreadValues({}, field), { type: predefinedField.type }));
+      }
+      const records = parseRecords(standardizedRecords, fields);
+      return { fields, records };
+    });
+  }
+  includes(path4) {
+    const trimmedPath = this.project.path.startsWith("/") ? this.project.path.slice(1) : this.project.path;
+    if (!path4.startsWith(trimmedPath)) {
+      return false;
+    }
+    if (!this.project.recursive) {
+      const pathElements = path4.split("/").slice(0, -1);
+      const projectPathElements = trimmedPath.split("/").filter((el) => el);
+      return pathElements.join("/") === projectPathElements.join("/");
+    }
+    return true;
+  }
+};
+function standardizeRecords(files, metadataCache) {
+  var _a;
+  const records = [];
+  for (const file of files) {
+    const cache = metadataCache.getFileCache(file);
+    if (cache) {
+      const _b = (_a = cache.frontmatter) != null ? _a : {}, { position } = _b, values = __objRest(_b, ["position"]);
+      const filteredValues = Object.fromEntries(Object.entries(values).filter(([_24, value]) => notEmpty(value)));
+      filteredValues["path"] = file.path;
+      filteredValues["name"] = file.basename;
+      records.push(standardizeRecord(file.path, filteredValues));
+    }
+  }
+  return records;
+}
+function detectSchema2(records) {
+  return detectFields(records).map((field) => field.name === "name" || field.name === "path" ? __spreadProps(__spreadValues({}, field), { derived: true }) : field).map((field) => field.name === "path" ? __spreadProps(__spreadValues({}, field), { identifier: true }) : field);
+}
+
+// src/app/toolbar/Toolbar.svelte
+var import_obsidian25 = __toModule(require("obsidian"));
+
+// src/modals/add-view-modal.ts
+var import_obsidian17 = __toModule(require("obsidian"));
 
 // src/lib/stores/custom-views.ts
 var customViews = writable({});
@@ -19104,8 +20173,6 @@ var customViewsV2 = writable({});
 
 // src/builder.ts
 var Builder = class {
-  constructor() {
-  }
   setTitle(title) {
     this.title = title;
     return this;
@@ -19125,7 +20192,7 @@ var Builder = class {
 };
 
 // src/modals/components/AddView.svelte
-function create_default_slot_62(ctx) {
+function create_default_slot_63(ctx) {
   let select;
   let current;
   select = new Select_default({
@@ -19164,7 +20231,7 @@ function create_default_slot_62(ctx) {
     }
   };
 }
-function create_default_slot_52(ctx) {
+function create_default_slot_53(ctx) {
   var _a;
   let textinput;
   let current;
@@ -19213,7 +20280,7 @@ function create_default_slot_52(ctx) {
     }
   };
 }
-function create_default_slot_42(ctx) {
+function create_default_slot_43(ctx) {
   let select;
   let current;
   select = new Select_default({
@@ -19254,7 +20321,7 @@ function create_default_slot_42(ctx) {
     }
   };
 }
-function create_default_slot_32(ctx) {
+function create_default_slot_33(ctx) {
   var _a, _b, _c;
   let settingitem0;
   let t0;
@@ -19266,7 +20333,7 @@ function create_default_slot_32(ctx) {
     props: {
       name: ctx[6].t("modals.view.create.type.name"),
       description: (_a = ctx[6].t("modals.view.create.type.description")) != null ? _a : "",
-      $$slots: { default: [create_default_slot_62] },
+      $$slots: { default: [create_default_slot_63] },
       $$scope: { ctx }
     }
   });
@@ -19274,7 +20341,7 @@ function create_default_slot_32(ctx) {
     props: {
       name: ctx[6].t("modals.view.create.name.name"),
       description: (_b = ctx[6].t("modals.view.create.name.description")) != null ? _b : "",
-      $$slots: { default: [create_default_slot_52] },
+      $$slots: { default: [create_default_slot_53] },
       $$scope: { ctx }
     }
   });
@@ -19282,7 +20349,7 @@ function create_default_slot_32(ctx) {
     props: {
       name: ctx[6].t("modals.note.create.project.name"),
       description: (_c = ctx[6].t("modals.note.create.project.description")) != null ? _c : "",
-      $$slots: { default: [create_default_slot_42] },
+      $$slots: { default: [create_default_slot_43] },
       $$scope: { ctx }
     }
   });
@@ -19357,7 +20424,7 @@ function create_default_slot_32(ctx) {
     }
   };
 }
-function create_default_slot_22(ctx) {
+function create_default_slot_23(ctx) {
   let t_value = ctx[6].t("modals.view.create.cta") + "";
   let t3;
   return {
@@ -19377,13 +20444,13 @@ function create_default_slot_22(ctx) {
     }
   };
 }
-function create_default_slot_12(ctx) {
+function create_default_slot_13(ctx) {
   let button;
   let current;
   button = new Button_default({
     props: {
       variant: "primary",
-      $$slots: { default: [create_default_slot_22] },
+      $$slots: { default: [create_default_slot_23] },
       $$scope: { ctx }
     }
   });
@@ -19418,20 +20485,20 @@ function create_default_slot_12(ctx) {
     }
   };
 }
-function create_default_slot7(ctx) {
+function create_default_slot8(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
   let current;
   modalcontent = new ModalContent_default({
     props: {
-      $$slots: { default: [create_default_slot_32] },
+      $$slots: { default: [create_default_slot_33] },
       $$scope: { ctx }
     }
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_12] },
+      $$slots: { default: [create_default_slot_13] },
       $$scope: { ctx }
     }
   });
@@ -19479,13 +20546,13 @@ function create_default_slot7(ctx) {
     }
   };
 }
-function create_fragment36(ctx) {
+function create_fragment38(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[6].t("modals.view.create.title"),
-      $$slots: { default: [create_default_slot7] },
+      $$slots: { default: [create_default_slot8] },
       $$scope: { ctx }
     }
   });
@@ -19522,7 +20589,7 @@ function create_fragment36(ctx) {
   };
 }
 var func3 = (project) => ({ label: project.name, value: project.id });
-function instance36($$self, $$props, $$invalidate) {
+function instance38($$self, $$props, $$invalidate) {
   let selectedOption;
   let nameError;
   let $i18n;
@@ -19563,6 +20630,10 @@ function instance36($$self, $$props, $$invalidate) {
     {
       label: $i18n.t("views.calendar.name"),
       value: "calendar"
+    },
+    {
+      label: $i18n.t("views.gallery.name"),
+      value: "gallery"
     },
     ...selectableCustomViews
   ];
@@ -19626,13 +20697,13 @@ function instance36($$self, $$props, $$invalidate) {
 var AddView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance36, create_fragment36, safe_not_equal, { onSave: 1, project: 0 });
+    init(this, options, instance38, create_fragment38, safe_not_equal, { onSave: 1, project: 0 });
   }
 };
 var AddView_default = AddView;
 
 // src/modals/add-view-modal.ts
-var AddViewModal = class extends import_obsidian13.Modal {
+var AddViewModal = class extends import_obsidian17.Modal {
   constructor(app2, project, onSave) {
     super(app2);
     this.project = project;
@@ -19657,367 +20728,12 @@ var AddViewModal = class extends import_obsidian13.Modal {
   }
 };
 
-// src/modals/confirm-dialog.ts
-var import_obsidian14 = __toModule(require("obsidian"));
-
-// src/modals/components/ConfirmDialog.svelte
-function create_default_slot_53(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text(ctx[1]);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 2)
-        set_data(t3, ctx2[1]);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_43(ctx) {
-  let typography;
-  let current;
-  typography = new Typography_default({
-    props: {
-      variant: "body",
-      $$slots: { default: [create_default_slot_53] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(typography.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(typography, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const typography_changes = {};
-      if (dirty & 258) {
-        typography_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      typography.$set(typography_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(typography.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(typography.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(typography, detaching);
-    }
-  };
-}
-function create_default_slot_33(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text(ctx[2]);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 4)
-        set_data(t3, ctx2[2]);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_23(ctx) {
-  let t_value = ctx[5].t("modals.confirm.cancel") + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 32 && t_value !== (t_value = ctx2[5].t("modals.confirm.cancel") + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_13(ctx) {
-  let button0;
-  let t3;
-  let button1;
-  let current;
-  button0 = new Button_default({
-    props: {
-      variant: ctx[2] === ctx[5].t("modals.confirm.delete") ? "destructive" : "primary",
-      $$slots: { default: [create_default_slot_33] },
-      $$scope: { ctx }
-    }
-  });
-  button0.$on("click", ctx[6]);
-  button1 = new Button_default({
-    props: {
-      $$slots: { default: [create_default_slot_23] },
-      $$scope: { ctx }
-    }
-  });
-  button1.$on("click", ctx[7]);
-  return {
-    c() {
-      create_component(button0.$$.fragment);
-      t3 = space();
-      create_component(button1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(button0, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(button1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const button0_changes = {};
-      if (dirty & 36)
-        button0_changes.variant = ctx2[2] === ctx2[5].t("modals.confirm.delete") ? "destructive" : "primary";
-      if (dirty & 260) {
-        button0_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button0.$set(button0_changes);
-      const button1_changes = {};
-      if (dirty & 288) {
-        button1_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button1.$set(button1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(button0.$$.fragment, local);
-      transition_in(button1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(button0.$$.fragment, local);
-      transition_out(button1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(button0, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(button1, detaching);
-    }
-  };
-}
-function create_default_slot8(ctx) {
-  let modalcontent;
-  let t3;
-  let modalbuttongroup;
-  let current;
-  modalcontent = new ModalContent_default({
-    props: {
-      $$slots: { default: [create_default_slot_43] },
-      $$scope: { ctx }
-    }
-  });
-  modalbuttongroup = new ModalButtonGroup_default({
-    props: {
-      $$slots: { default: [create_default_slot_13] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modalcontent.$$.fragment);
-      t3 = space();
-      create_component(modalbuttongroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modalcontent, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(modalbuttongroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const modalcontent_changes = {};
-      if (dirty & 258) {
-        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalcontent.$set(modalcontent_changes);
-      const modalbuttongroup_changes = {};
-      if (dirty & 316) {
-        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalbuttongroup.$set(modalbuttongroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modalcontent.$$.fragment, local);
-      transition_in(modalbuttongroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modalcontent.$$.fragment, local);
-      transition_out(modalbuttongroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modalcontent, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(modalbuttongroup, detaching);
-    }
-  };
-}
-function create_fragment37(ctx) {
-  let modallayout;
-  let current;
-  modallayout = new ModalLayout_default({
-    props: {
-      title: ctx[0],
-      $$slots: { default: [create_default_slot8] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modallayout.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modallayout, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const modallayout_changes = {};
-      if (dirty & 1)
-        modallayout_changes.title = ctx2[0];
-      if (dirty & 318) {
-        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modallayout.$set(modallayout_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modallayout.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modallayout.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modallayout, detaching);
-    }
-  };
-}
-function instance37($$self, $$props, $$invalidate) {
-  let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(5, $i18n = $$value));
-  let { title } = $$props;
-  let { message } = $$props;
-  let { cta } = $$props;
-  let { onConfirm } = $$props;
-  let { onCancel } = $$props;
-  const click_handler = () => {
-    onConfirm();
-  };
-  const click_handler_1 = () => {
-    onCancel();
-  };
-  $$self.$$set = ($$props2) => {
-    if ("title" in $$props2)
-      $$invalidate(0, title = $$props2.title);
-    if ("message" in $$props2)
-      $$invalidate(1, message = $$props2.message);
-    if ("cta" in $$props2)
-      $$invalidate(2, cta = $$props2.cta);
-    if ("onConfirm" in $$props2)
-      $$invalidate(3, onConfirm = $$props2.onConfirm);
-    if ("onCancel" in $$props2)
-      $$invalidate(4, onCancel = $$props2.onCancel);
-  };
-  return [
-    title,
-    message,
-    cta,
-    onConfirm,
-    onCancel,
-    $i18n,
-    click_handler,
-    click_handler_1
-  ];
-}
-var ConfirmDialog = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance37, create_fragment37, safe_not_equal, {
-      title: 0,
-      message: 1,
-      cta: 2,
-      onConfirm: 3,
-      onCancel: 4
-    });
-  }
-};
-var ConfirmDialog_default = ConfirmDialog;
-
-// src/modals/confirm-dialog.ts
-var ConfirmDialogModal = class extends import_obsidian14.Modal {
-  constructor(app2, title, message, cta, onConfirm) {
-    super(app2);
-    this.title = title;
-    this.message = message;
-    this.cta = cta;
-    this.onConfirm = onConfirm;
-  }
-  onOpen() {
-    this.component = new ConfirmDialog_default({
-      target: this.contentEl,
-      props: {
-        title: this.title,
-        message: this.message,
-        cta: this.cta,
-        onConfirm: () => {
-          this.onConfirm();
-          this.close();
-        },
-        onCancel: () => {
-          this.close();
-        }
-      }
-    });
-  }
-  onClose() {
-    if (this.component) {
-      this.component.$destroy();
-    }
-  }
-};
-
 // src/modals/create-note-modal.ts
 var import_moment3 = __toModule(require_moment());
-var import_obsidian18 = __toModule(require("obsidian"));
+var import_obsidian21 = __toModule(require("obsidian"));
 
 // src/modals/components/CreateNote.svelte
-var import_obsidian15 = __toModule(require("obsidian"));
+var import_obsidian18 = __toModule(require("obsidian"));
 function create_default_slot_72(ctx) {
   let textinput;
   let current;
@@ -20063,7 +20779,7 @@ function create_default_slot_72(ctx) {
     }
   };
 }
-function create_default_slot_63(ctx) {
+function create_default_slot_64(ctx) {
   let select;
   let current;
   select = new Select_default({
@@ -20104,7 +20820,7 @@ function create_default_slot_63(ctx) {
     }
   };
 }
-function create_if_block_14(ctx) {
+function create_if_block_15(ctx) {
   var _a;
   let settingitem;
   let current;
@@ -20198,7 +20914,7 @@ function create_default_slot_54(ctx) {
     }
   };
 }
-function create_if_block7(ctx) {
+function create_if_block8(ctx) {
   let callout;
   let current;
   callout = new Callout_default({
@@ -20283,12 +20999,12 @@ function create_default_slot_34(ctx) {
     props: {
       name: ctx[5].t("modals.note.create.project.name"),
       description: (_b = ctx[5].t("modals.note.create.project.description")) != null ? _b : "",
-      $$slots: { default: [create_default_slot_63] },
+      $$slots: { default: [create_default_slot_64] },
       $$scope: { ctx }
     }
   });
-  let if_block0 = ((_c = ctx[1].templates) == null ? void 0 : _c.length) && create_if_block_14(ctx);
-  let if_block1 = ctx[1].dataview && create_if_block7(ctx);
+  let if_block0 = ((_c = ctx[1].templates) == null ? void 0 : _c.length) && create_if_block_15(ctx);
+  let if_block1 = ctx[1].dataview && create_if_block8(ctx);
   return {
     c() {
       create_component(settingitem0.$$.fragment);
@@ -20342,7 +21058,7 @@ function create_default_slot_34(ctx) {
             transition_in(if_block0, 1);
           }
         } else {
-          if_block0 = create_if_block_14(ctx2);
+          if_block0 = create_if_block_15(ctx2);
           if_block0.c();
           transition_in(if_block0, 1);
           if_block0.m(t22.parentNode, t22);
@@ -20361,7 +21077,7 @@ function create_default_slot_34(ctx) {
             transition_in(if_block1, 1);
           }
         } else {
-          if_block1 = create_if_block7(ctx2);
+          if_block1 = create_if_block8(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
           if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -20533,7 +21249,7 @@ function create_default_slot9(ctx) {
     }
   };
 }
-function create_fragment38(ctx) {
+function create_fragment39(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
@@ -20576,8 +21292,8 @@ function create_fragment38(ctx) {
   };
 }
 var func4 = (project) => ({ label: project.name, value: project.id });
-var func_1 = (path3) => ({ label: path3, value: path3 });
-function instance38($$self, $$props, $$invalidate) {
+var func_1 = (path4) => ({ label: path4, value: path4 });
+function instance39($$self, $$props, $$invalidate) {
   let nameError;
   let $i18n;
   let $app;
@@ -20593,8 +21309,8 @@ function instance38($$self, $$props, $$invalidate) {
     if (name2 === "") {
       return $i18n.t("modals.note.create.empty-name-error");
     }
-    const existingFile = $app.vault.getAbstractFileByPath((0, import_obsidian15.normalizePath)(project.path + "/" + name2 + ".md"));
-    if (existingFile instanceof import_obsidian15.TFile) {
+    const existingFile = $app.vault.getAbstractFileByPath((0, import_obsidian18.normalizePath)(project.path + "/" + name2 + ".md"));
+    if (existingFile instanceof import_obsidian18.TFile) {
       return $i18n.t("modals.note.create.name-taken-error");
     }
     if (!isValidPath(name2)) {
@@ -20644,17 +21360,17 @@ function instance38($$self, $$props, $$invalidate) {
 var CreateNote = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance38, create_fragment38, safe_not_equal, { name: 0, project: 1, onSave: 2 });
+    init(this, options, instance39, create_fragment39, safe_not_equal, { name: 0, project: 1, onSave: 2 });
   }
 };
 var CreateNote_default = CreateNote;
 
 // src/modals/create-note-modal.ts
-var CreateNoteModal = class extends import_obsidian18.Modal {
+var CreateNoteModal = class extends import_obsidian21.Modal {
   constructor(app2, project, onSave) {
     super(app2);
-    this.onSave = onSave;
     this.project = project;
+    this.onSave = onSave;
   }
   onOpen() {
     var _a;
@@ -20680,11 +21396,553 @@ var CreateNoteModal = class extends import_obsidian18.Modal {
   }
 };
 
-// src/app/ViewItemList.svelte
-function add_css16(target) {
-  append_styles(target, "svelte-1x3xokk", "div.svelte-1x3xokk{display:flex;justify-content:center;gap:var(--size-4-1);min-width:min-content}section.svelte-1x3xokk{flex:1;overflow-x:auto}section.svelte-1x3xokk::-webkit-scrollbar{display:none}");
+// src/modals/confirm-dialog.ts
+var import_obsidian22 = __toModule(require("obsidian"));
+
+// src/modals/components/ConfirmDialog.svelte
+function create_default_slot_55(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text(ctx[1]);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 2)
+        set_data(t3, ctx2[1]);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
 }
-function create_fragment39(ctx) {
+function create_default_slot_45(ctx) {
+  let typography;
+  let current;
+  typography = new Typography_default({
+    props: {
+      variant: "body",
+      $$slots: { default: [create_default_slot_55] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(typography.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(typography, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const typography_changes = {};
+      if (dirty & 258) {
+        typography_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography.$set(typography_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(typography.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(typography.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(typography, detaching);
+    }
+  };
+}
+function create_default_slot_35(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text(ctx[2]);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 4)
+        set_data(t3, ctx2[2]);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_25(ctx) {
+  let t_value = ctx[5].t("modals.confirm.cancel") + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 32 && t_value !== (t_value = ctx2[5].t("modals.confirm.cancel") + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_15(ctx) {
+  let button0;
+  let t3;
+  let button1;
+  let current;
+  button0 = new Button_default({
+    props: {
+      variant: ctx[2] === ctx[5].t("modals.confirm.delete") ? "destructive" : "primary",
+      $$slots: { default: [create_default_slot_35] },
+      $$scope: { ctx }
+    }
+  });
+  button0.$on("click", ctx[6]);
+  button1 = new Button_default({
+    props: {
+      $$slots: { default: [create_default_slot_25] },
+      $$scope: { ctx }
+    }
+  });
+  button1.$on("click", ctx[7]);
+  return {
+    c() {
+      create_component(button0.$$.fragment);
+      t3 = space();
+      create_component(button1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button0, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(button1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button0_changes = {};
+      if (dirty & 36)
+        button0_changes.variant = ctx2[2] === ctx2[5].t("modals.confirm.delete") ? "destructive" : "primary";
+      if (dirty & 260) {
+        button0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button0.$set(button0_changes);
+      const button1_changes = {};
+      if (dirty & 288) {
+        button1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button1.$set(button1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button0.$$.fragment, local);
+      transition_in(button1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button0.$$.fragment, local);
+      transition_out(button1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button0, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(button1, detaching);
+    }
+  };
+}
+function create_default_slot10(ctx) {
+  let modalcontent;
+  let t3;
+  let modalbuttongroup;
+  let current;
+  modalcontent = new ModalContent_default({
+    props: {
+      $$slots: { default: [create_default_slot_45] },
+      $$scope: { ctx }
+    }
+  });
+  modalbuttongroup = new ModalButtonGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_15] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modalcontent.$$.fragment);
+      t3 = space();
+      create_component(modalbuttongroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modalcontent, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(modalbuttongroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const modalcontent_changes = {};
+      if (dirty & 258) {
+        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalcontent.$set(modalcontent_changes);
+      const modalbuttongroup_changes = {};
+      if (dirty & 316) {
+        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalbuttongroup.$set(modalbuttongroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modalcontent.$$.fragment, local);
+      transition_in(modalbuttongroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modalcontent.$$.fragment, local);
+      transition_out(modalbuttongroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modalcontent, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(modalbuttongroup, detaching);
+    }
+  };
+}
+function create_fragment40(ctx) {
+  let modallayout;
+  let current;
+  modallayout = new ModalLayout_default({
+    props: {
+      title: ctx[0],
+      $$slots: { default: [create_default_slot10] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modallayout.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modallayout, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const modallayout_changes = {};
+      if (dirty & 1)
+        modallayout_changes.title = ctx2[0];
+      if (dirty & 318) {
+        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modallayout.$set(modallayout_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modallayout.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modallayout.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modallayout, detaching);
+    }
+  };
+}
+function instance40($$self, $$props, $$invalidate) {
+  let $i18n;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(5, $i18n = $$value));
+  let { title } = $$props;
+  let { message } = $$props;
+  let { cta } = $$props;
+  let { onConfirm } = $$props;
+  let { onCancel } = $$props;
+  const click_handler = () => {
+    onConfirm();
+  };
+  const click_handler_1 = () => {
+    onCancel();
+  };
+  $$self.$$set = ($$props2) => {
+    if ("title" in $$props2)
+      $$invalidate(0, title = $$props2.title);
+    if ("message" in $$props2)
+      $$invalidate(1, message = $$props2.message);
+    if ("cta" in $$props2)
+      $$invalidate(2, cta = $$props2.cta);
+    if ("onConfirm" in $$props2)
+      $$invalidate(3, onConfirm = $$props2.onConfirm);
+    if ("onCancel" in $$props2)
+      $$invalidate(4, onCancel = $$props2.onCancel);
+  };
+  return [
+    title,
+    message,
+    cta,
+    onConfirm,
+    onCancel,
+    $i18n,
+    click_handler,
+    click_handler_1
+  ];
+}
+var ConfirmDialog = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance40, create_fragment40, safe_not_equal, {
+      title: 0,
+      message: 1,
+      cta: 2,
+      onConfirm: 3,
+      onCancel: 4
+    });
+  }
+};
+var ConfirmDialog_default = ConfirmDialog;
+
+// src/modals/confirm-dialog.ts
+var ConfirmDialogModal = class extends import_obsidian22.Modal {
+  constructor(app2, title, message, cta, onConfirm) {
+    super(app2);
+    this.title = title;
+    this.message = message;
+    this.cta = cta;
+    this.onConfirm = onConfirm;
+  }
+  onOpen() {
+    this.component = new ConfirmDialog_default({
+      target: this.contentEl,
+      props: {
+        title: this.title,
+        message: this.message,
+        cta: this.cta,
+        onConfirm: () => {
+          this.onConfirm();
+          this.close();
+        },
+        onCancel: () => {
+          this.close();
+        }
+      }
+    });
+  }
+  onClose() {
+    if (this.component) {
+      this.component.$destroy();
+    }
+  }
+};
+
+// src/app/toolbar/ProjectSelect.svelte
+var import_obsidian23 = __toModule(require("obsidian"));
+function add_css18(target) {
+  append_styles(target, "svelte-h4e1e6", "span.svelte-h4e1e6{display:flex;align-items:center;gap:4px}");
+}
+function create_if_block9(ctx) {
+  let iconbutton;
+  let current;
+  iconbutton = new IconButton_default({
+    props: { icon: "more-vertical", size: "sm" }
+  });
+  iconbutton.$on("click", ctx[7]);
+  return {
+    c() {
+      create_component(iconbutton.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(iconbutton, target, anchor);
+      current = true;
+    },
+    p: noop,
+    i(local) {
+      if (current)
+        return;
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(iconbutton, detaching);
+    }
+  };
+}
+function create_fragment41(ctx) {
+  var _a, _b;
+  let span;
+  let select;
+  let t3;
+  let current;
+  select = new Select_default({
+    props: {
+      value: (_a = ctx[0]) != null ? _a : "",
+      options: ctx[1].map(func5),
+      placeholder: (_b = ctx[4].t("toolbar.projects.none")) != null ? _b : ""
+    }
+  });
+  select.$on("change", ctx[6]);
+  let if_block = ctx[1].length && create_if_block9(ctx);
+  return {
+    c() {
+      span = element("span");
+      create_component(select.$$.fragment);
+      t3 = space();
+      if (if_block)
+        if_block.c();
+      attr(span, "class", "svelte-h4e1e6");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      mount_component(select, span, null);
+      append(span, t3);
+      if (if_block)
+        if_block.m(span, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      var _a2, _b2;
+      const select_changes = {};
+      if (dirty & 1)
+        select_changes.value = (_a2 = ctx2[0]) != null ? _a2 : "";
+      if (dirty & 2)
+        select_changes.options = ctx2[1].map(func5);
+      if (dirty & 16)
+        select_changes.placeholder = (_b2 = ctx2[4].t("toolbar.projects.none")) != null ? _b2 : "";
+      select.$set(select_changes);
+      if (ctx2[1].length) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 2) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block9(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(span, null);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(select.$$.fragment, local);
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(select.$$.fragment, local);
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+      destroy_component(select);
+      if (if_block)
+        if_block.d();
+    }
+  };
+}
+var func5 = (project) => ({ label: project.name, value: project.id });
+function instance41($$self, $$props, $$invalidate) {
+  let project;
+  let $i18n;
+  let $app;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(4, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
+  let { projectId } = $$props;
+  let { projects } = $$props;
+  let { onProjectChange } = $$props;
+  const change_handler = ({ detail: value }) => onProjectChange(value);
+  const click_handler = (event) => {
+    const menu = new import_obsidian23.Menu();
+    menu.addItem((item) => {
+      item.setTitle($i18n.t("modals.project.edit.short-title")).setIcon("edit").onClick(() => {
+        if (project) {
+          new CreateProjectModal($app, $i18n.t("modals.project.edit.title"), $i18n.t("modals.project.edit.cta"), settings.updateProject, project).open();
+        }
+      });
+    });
+    menu.addItem((item) => {
+      item.setTitle($i18n.t("modals.project.delete.short-title")).setIcon("trash").onClick(() => {
+        new ConfirmDialogModal($app, $i18n.t("modals.project.delete.title"), $i18n.t("modals.project.delete.message"), $i18n.t("modals.project.delete.cta"), () => {
+          if (projectId) {
+            settings.deleteProject(projectId);
+          }
+        }).open();
+      });
+    });
+    menu.showAtMouseEvent(event);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("projectId" in $$props2)
+      $$invalidate(0, projectId = $$props2.projectId);
+    if ("projects" in $$props2)
+      $$invalidate(1, projects = $$props2.projects);
+    if ("onProjectChange" in $$props2)
+      $$invalidate(2, onProjectChange = $$props2.onProjectChange);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 3) {
+      $:
+        $$invalidate(3, project = projects.find((project2) => project2.id === projectId));
+    }
+  };
+  return [
+    projectId,
+    projects,
+    onProjectChange,
+    project,
+    $i18n,
+    $app,
+    change_handler,
+    click_handler
+  ];
+}
+var ProjectSelect = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance41, create_fragment41, safe_not_equal, {
+      projectId: 0,
+      projects: 1,
+      onProjectChange: 2
+    }, add_css18);
+  }
+};
+var ProjectSelect_default = ProjectSelect;
+
+// src/app/toolbar/ViewItemList.svelte
+function add_css19(target) {
+  append_styles(target, "svelte-1ow449f", "div.svelte-1ow449f{display:flex;justify-content:center;gap:var(--size-4-1);min-width:min-content}section.svelte-1ow449f{flex:1;overflow-x:auto}section.svelte-1ow449f::-webkit-scrollbar{display:none}");
+}
+function create_fragment42(ctx) {
   let section;
   let div;
   let current;
@@ -20696,8 +21954,8 @@ function create_fragment39(ctx) {
       div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-1x3xokk");
-      attr(section, "class", "svelte-1x3xokk");
+      attr(div, "class", "svelte-1ow449f");
+      attr(section, "class", "svelte-1ow449f");
     },
     m(target, anchor) {
       insert(target, section, anchor);
@@ -20732,7 +21990,7 @@ function create_fragment39(ctx) {
     }
   };
 }
-function instance39($$self, $$props, $$invalidate) {
+function instance42($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -20743,14 +22001,14 @@ function instance39($$self, $$props, $$invalidate) {
 var ViewItemList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance39, create_fragment39, safe_not_equal, {}, add_css16);
+    init(this, options, instance42, create_fragment42, safe_not_equal, {}, add_css19);
   }
 };
 var ViewItemList_default = ViewItemList;
 
-// src/app/ViewItem.svelte
-function add_css17(target) {
-  append_styles(target, "svelte-eliwod", "div.svelte-eliwod{display:inline-flex;align-items:center;gap:4px;height:1.8rem;padding:0 8px;min-width:min-content;font-size:var(--font-ui-small);border-radius:var(--radius-s);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid transparent}div.svelte-eliwod:hover{background-color:var(--background-modifier-hover)}.active.svelte-eliwod{background-color:var(--background-modifier-hover)}.error.svelte-eliwod{border:1px solid var(--background-modifier-error)}");
+// src/app/toolbar/ViewItem.svelte
+function add_css20(target) {
+  append_styles(target, "svelte-3t9vh7", "div.svelte-3t9vh7{display:inline-flex;align-items:center;gap:4px;height:1.8rem;padding:0 8px;min-width:min-content;font-size:var(--font-ui-small);border-radius:var(--radius-s);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid transparent}div.svelte-3t9vh7:hover{background-color:var(--background-modifier-hover)}.active.svelte-3t9vh7{background-color:var(--background-modifier-hover)}.error.svelte-3t9vh7{border:1px solid var(--background-modifier-error)}");
 }
 function create_if_block_22(ctx) {
   let icon_1;
@@ -20785,7 +22043,7 @@ function create_if_block_22(ctx) {
     }
   };
 }
-function create_else_block2(ctx) {
+function create_else_block3(ctx) {
   let t3;
   return {
     c() {
@@ -20806,7 +22064,7 @@ function create_else_block2(ctx) {
     }
   };
 }
-function create_if_block_15(ctx) {
+function create_if_block_16(ctx) {
   let textinput;
   let updating_ref;
   let updating_value;
@@ -20871,7 +22129,7 @@ function create_if_block_15(ctx) {
     }
   };
 }
-function create_if_block8(ctx) {
+function create_if_block10(ctx) {
   let iconbutton;
   let current;
   iconbutton = new IconButton_default({
@@ -20906,7 +22164,7 @@ function create_if_block8(ctx) {
     }
   };
 }
-function create_fragment40(ctx) {
+function create_fragment43(ctx) {
   let div;
   let t0;
   let current_block_type_index;
@@ -20917,7 +22175,7 @@ function create_fragment40(ctx) {
   let mounted;
   let dispose;
   let if_block0 = ctx[2] && create_if_block_22(ctx);
-  const if_block_creators = [create_if_block_15, create_else_block2];
+  const if_block_creators = [create_if_block_16, create_else_block3];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[3])
@@ -20926,7 +22184,7 @@ function create_fragment40(ctx) {
   }
   current_block_type_index = select_block_type(ctx, -1);
   if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block2 = ctx[6] && ctx[1] && create_if_block8(ctx);
+  let if_block2 = ctx[6] && ctx[1] && create_if_block10(ctx);
   return {
     c() {
       div = element("div");
@@ -20937,7 +22195,7 @@ function create_fragment40(ctx) {
       t1 = space();
       if (if_block2)
         if_block2.c();
-      attr(div, "class", "svelte-eliwod");
+      attr(div, "class", "svelte-3t9vh7");
       toggle_class(div, "active", ctx[1]);
       toggle_class(div, "error", ctx[7]);
     },
@@ -21011,7 +22269,7 @@ function create_fragment40(ctx) {
             transition_in(if_block2, 1);
           }
         } else {
-          if_block2 = create_if_block8(ctx2);
+          if_block2 = create_if_block10(ctx2);
           if_block2.c();
           transition_in(if_block2, 1);
           if_block2.m(div, null);
@@ -21059,7 +22317,7 @@ function create_fragment40(ctx) {
     }
   };
 }
-function instance40($$self, $$props, $$invalidate) {
+function instance43($$self, $$props, $$invalidate) {
   let error2;
   let { label } = $$props;
   let { active = false } = $$props;
@@ -21160,119 +22418,46 @@ function instance40($$self, $$props, $$invalidate) {
 var ViewItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance40, create_fragment40, safe_not_equal, {
+    init(this, options, instance43, create_fragment43, safe_not_equal, {
       label: 0,
       active: 1,
       icon: 2,
       onValidate: 10
-    }, add_css17);
+    }, add_css20);
   }
 };
 var ViewItem_default = ViewItem;
 
-// src/app/Toolbar.svelte
-function add_css18(target) {
-  append_styles(target, "svelte-11yom9n", "div.svelte-11yom9n{background-color:var(--tab-background-active);display:flex;align-items:center;padding:var(--size-4-2);gap:8px;border-bottom:1px solid var(--background-modifier-border);justify-content:space-between}span.svelte-11yom9n{display:flex;align-items:center;gap:4px}");
-}
-function get_each_context4(ctx, list, i2) {
+// src/app/toolbar/ViewSelect.svelte
+function get_each_context5(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[21] = list[i2];
+  child_ctx[13] = list[i2];
   return child_ctx;
 }
-function create_if_block_16(ctx) {
-  let iconbutton;
-  let current;
-  iconbutton = new IconButton_default({
-    props: { icon: "more-vertical", size: "sm" }
-  });
-  iconbutton.$on("click", ctx[13]);
-  return {
-    c() {
-      create_component(iconbutton.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(iconbutton, target, anchor);
-      current = true;
-    },
-    p: noop,
-    i(local) {
-      if (current)
-        return;
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(iconbutton, detaching);
-    }
-  };
-}
-function create_if_block9(ctx) {
-  let viewitemlist;
-  let current;
-  viewitemlist = new ViewItemList_default({
-    props: {
-      $$slots: { default: [create_default_slot_15] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(viewitemlist.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(viewitemlist, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const viewitemlist_changes = {};
-      if (dirty & 16777722) {
-        viewitemlist_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      viewitemlist.$set(viewitemlist_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(viewitemlist.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(viewitemlist.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(viewitemlist, detaching);
-    }
-  };
-}
-function create_each_block4(ctx) {
+function create_each_block5(ctx) {
   let viewitem;
   let current;
-  function func_14(...args) {
-    return ctx[14](ctx[21], ...args);
+  function func7(...args) {
+    return ctx[7](ctx[13], ...args);
   }
-  function click_handler_1() {
-    return ctx[15](ctx[21]);
+  function click_handler() {
+    return ctx[8](ctx[13]);
   }
   function rename_handler(...args) {
-    return ctx[16](ctx[21], ...args);
+    return ctx[9](ctx[13], ...args);
   }
   function delete_handler() {
-    return ctx[17](ctx[21]);
+    return ctx[10](ctx[13]);
   }
   viewitem = new ViewItem_default({
     props: {
-      active: ctx[3] === ctx[21].id,
-      label: ctx[21].name,
-      icon: ctx[10](ctx[21].type),
-      onValidate: func_14
+      active: ctx[0] === ctx[13].id,
+      label: ctx[13].name,
+      icon: ctx[6](ctx[13].type),
+      onValidate: func7
     }
   });
-  viewitem.$on("click", click_handler_1);
+  viewitem.$on("click", click_handler);
   viewitem.$on("rename", rename_handler);
   viewitem.$on("delete", delete_handler);
   return {
@@ -21286,14 +22471,14 @@ function create_each_block4(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const viewitem_changes = {};
-      if (dirty & 72)
-        viewitem_changes.active = ctx[3] === ctx[21].id;
-      if (dirty & 64)
-        viewitem_changes.label = ctx[21].name;
-      if (dirty & 64)
-        viewitem_changes.icon = ctx[10](ctx[21].type);
-      if (dirty & 96)
-        viewitem_changes.onValidate = func_14;
+      if (dirty & 3)
+        viewitem_changes.active = ctx[0] === ctx[13].id;
+      if (dirty & 2)
+        viewitem_changes.label = ctx[13].name;
+      if (dirty & 2)
+        viewitem_changes.icon = ctx[6](ctx[13].type);
+      if (dirty & 34)
+        viewitem_changes.onValidate = func7;
       viewitem.$set(viewitem_changes);
     },
     i(local) {
@@ -21314,10 +22499,10 @@ function create_each_block4(ctx) {
 function create_key_block(ctx) {
   let each_1_anchor;
   let current;
-  let each_value = ctx[6];
+  let each_value = ctx[1];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block4(get_each_context4(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block5(get_each_context5(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -21337,16 +22522,16 @@ function create_key_block(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 1530) {
-        each_value = ctx2[6];
+      if (dirty & 127) {
+        each_value = ctx2[1];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context4(ctx2, each_value, i2);
+          const child_ctx = get_each_context5(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block4(child_ctx);
+            each_blocks[i2] = create_each_block5(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -21381,8 +22566,8 @@ function create_key_block(ctx) {
     }
   };
 }
-function create_default_slot_15(ctx) {
-  let previous_key = ctx[6];
+function create_default_slot11(ctx) {
+  let previous_key = ctx[1];
   let key_block_anchor;
   let current;
   let key_block = create_key_block(ctx);
@@ -21397,7 +22582,7 @@ function create_default_slot_15(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 64 && safe_not_equal(previous_key, previous_key = ctx2[6])) {
+      if (dirty & 2 && safe_not_equal(previous_key, previous_key = ctx2[1])) {
         group_outros();
         transition_out(key_block, 1, 1, noop);
         check_outros();
@@ -21426,9 +22611,200 @@ function create_default_slot_15(ctx) {
     }
   };
 }
-function create_default_slot10(ctx) {
-  let t_value = ctx[7].t("toolbar.new") + "";
-  let t3;
+function create_fragment44(ctx) {
+  let viewitemlist;
+  let current;
+  viewitemlist = new ViewItemList_default({
+    props: {
+      $$slots: { default: [create_default_slot11] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(viewitemlist.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(viewitemlist, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const viewitemlist_changes = {};
+      if (dirty & 65599) {
+        viewitemlist_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      viewitemlist.$set(viewitemlist_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(viewitemlist.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(viewitemlist.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(viewitemlist, detaching);
+    }
+  };
+}
+function instance44($$self, $$props, $$invalidate) {
+  let $customViews;
+  let $customViewsV2;
+  component_subscribe($$self, customViews, ($$value) => $$invalidate(11, $customViews = $$value));
+  component_subscribe($$self, customViewsV2, ($$value) => $$invalidate(12, $customViewsV2 = $$value));
+  let { viewId } = $$props;
+  let { views } = $$props;
+  let { onViewChange } = $$props;
+  let { onViewDelete } = $$props;
+  let { onViewRename } = $$props;
+  let { viewExists } = $$props;
+  function iconFromViewType(type) {
+    var _a;
+    switch (type) {
+      case "table":
+        return "table";
+      case "board":
+        return "columns";
+      case "calendar":
+        return "calendar";
+      case "developer":
+        return "wrench";
+      case "gallery":
+        return "grid";
+      default:
+        const createView = $customViewsV2[type];
+        if (createView) {
+          const view2 = createView();
+          return view2.getIcon();
+        }
+        const builder = $customViews[type];
+        if (builder) {
+          const view2 = new Builder();
+          builder(view2);
+          return (_a = view2.icon) !== null && _a !== void 0 ? _a : "";
+        }
+        return "";
+    }
+  }
+  const func7 = (v2, name) => {
+    if (name === v2.name) {
+      return true;
+    }
+    return name !== "" && !viewExists(name);
+  };
+  const click_handler = (v2) => onViewChange(v2.id);
+  const rename_handler = (v2, { detail: name }) => {
+    onViewRename(v2.id, name);
+  };
+  const delete_handler = (v2) => {
+    onViewDelete(v2.id);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("viewId" in $$props2)
+      $$invalidate(0, viewId = $$props2.viewId);
+    if ("views" in $$props2)
+      $$invalidate(1, views = $$props2.views);
+    if ("onViewChange" in $$props2)
+      $$invalidate(2, onViewChange = $$props2.onViewChange);
+    if ("onViewDelete" in $$props2)
+      $$invalidate(3, onViewDelete = $$props2.onViewDelete);
+    if ("onViewRename" in $$props2)
+      $$invalidate(4, onViewRename = $$props2.onViewRename);
+    if ("viewExists" in $$props2)
+      $$invalidate(5, viewExists = $$props2.viewExists);
+  };
+  return [
+    viewId,
+    views,
+    onViewChange,
+    onViewDelete,
+    onViewRename,
+    viewExists,
+    iconFromViewType,
+    func7,
+    click_handler,
+    rename_handler,
+    delete_handler
+  ];
+}
+var ViewSelect = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance44, create_fragment44, safe_not_equal, {
+      viewId: 0,
+      views: 1,
+      onViewChange: 2,
+      onViewDelete: 3,
+      onViewRename: 4,
+      viewExists: 5
+    });
+  }
+};
+var ViewSelect_default = ViewSelect;
+
+// src/app/toolbar/Toolbar.svelte
+function add_css21(target) {
+  append_styles(target, "svelte-odv2ec", "div.svelte-odv2ec{background-color:var(--tab-background-active);display:flex;align-items:center;padding:var(--size-4-2);gap:8px;border-bottom:1px solid var(--background-modifier-border);justify-content:space-between}");
+}
+function create_if_block11(ctx) {
+  let viewselect;
+  let current;
+  viewselect = new ViewSelect_default({
+    props: {
+      viewId: ctx[3],
+      views: ctx[6],
+      viewExists: ctx[11],
+      onViewRename: ctx[12],
+      onViewChange: ctx[4],
+      onViewDelete: ctx[13]
+    }
+  });
+  return {
+    c() {
+      create_component(viewselect.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(viewselect, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const viewselect_changes = {};
+      if (dirty & 8)
+        viewselect_changes.viewId = ctx2[3];
+      if (dirty & 64)
+        viewselect_changes.views = ctx2[6];
+      if (dirty & 32)
+        viewselect_changes.viewExists = ctx2[11];
+      if (dirty & 2)
+        viewselect_changes.onViewRename = ctx2[12];
+      if (dirty & 16)
+        viewselect_changes.onViewChange = ctx2[4];
+      if (dirty & 386)
+        viewselect_changes.onViewDelete = ctx2[13];
+      viewselect.$set(viewselect_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(viewselect.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(viewselect.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(viewselect, detaching);
+    }
+  };
+}
+function create_default_slot12(ctx) {
+  let t0_value = ctx[8].t("toolbar.new") + "";
+  let t0;
+  let t1;
   let icon;
   let current;
   icon = new Icon_default({
@@ -21436,17 +22812,19 @@ function create_default_slot10(ctx) {
   });
   return {
     c() {
-      t3 = text(t_value);
+      t0 = text(t0_value);
+      t1 = space();
       create_component(icon.$$.fragment);
     },
     m(target, anchor) {
-      insert(target, t3, anchor);
+      insert(target, t0, anchor);
+      insert(target, t1, anchor);
       mount_component(icon, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      if ((!current || dirty & 128) && t_value !== (t_value = ctx2[7].t("toolbar.new") + ""))
-        set_data(t3, t_value);
+      if ((!current || dirty & 256) && t0_value !== (t0_value = ctx2[8].t("toolbar.new") + ""))
+        set_data(t0, t0_value);
     },
     i(local) {
       if (current)
@@ -21460,119 +22838,87 @@ function create_default_slot10(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(t3);
+        detach(t0);
+      if (detaching)
+        detach(t1);
       destroy_component(icon, detaching);
     }
   };
 }
-function create_fragment41(ctx) {
-  var _a, _b;
+function create_fragment45(ctx) {
   let div;
-  let span;
-  let select;
+  let projectselect;
   let t0;
   let t1;
-  let t22;
   let button;
   let current;
-  select = new Select_default({
+  projectselect = new ProjectSelect_default({
     props: {
-      value: (_a = ctx[1]) != null ? _a : "",
-      options: ctx[0].map(func5),
-      placeholder: (_b = ctx[7].t("toolbar.projects.none")) != null ? _b : ""
+      projectId: ctx[1],
+      projects: ctx[0],
+      onProjectChange: ctx[2]
     }
   });
-  select.$on("change", ctx[12]);
-  let if_block0 = ctx[0].length && create_if_block_16(ctx);
-  let if_block1 = ctx[5] && create_if_block9(ctx);
+  let if_block = ctx[5] && create_if_block11(ctx);
   button = new Button_default({
     props: {
       variant: "primary",
-      $$slots: { default: [create_default_slot10] },
+      $$slots: { default: [create_default_slot12] },
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[18]);
+  button.$on("click", ctx[14]);
   return {
     c() {
       div = element("div");
-      span = element("span");
-      create_component(select.$$.fragment);
+      create_component(projectselect.$$.fragment);
       t0 = space();
-      if (if_block0)
-        if_block0.c();
+      if (if_block)
+        if_block.c();
       t1 = space();
-      if (if_block1)
-        if_block1.c();
-      t22 = space();
       create_component(button.$$.fragment);
-      attr(span, "class", "svelte-11yom9n");
-      attr(div, "class", "svelte-11yom9n");
+      attr(div, "class", "svelte-odv2ec");
     },
     m(target, anchor) {
       insert(target, div, anchor);
-      append(div, span);
-      mount_component(select, span, null);
-      append(span, t0);
-      if (if_block0)
-        if_block0.m(span, null);
+      mount_component(projectselect, div, null);
+      append(div, t0);
+      if (if_block)
+        if_block.m(div, null);
       append(div, t1);
-      if (if_block1)
-        if_block1.m(div, null);
-      append(div, t22);
       mount_component(button, div, null);
       current = true;
     },
     p(ctx2, [dirty]) {
-      var _a2, _b2;
-      const select_changes = {};
+      const projectselect_changes = {};
       if (dirty & 2)
-        select_changes.value = (_a2 = ctx2[1]) != null ? _a2 : "";
+        projectselect_changes.projectId = ctx2[1];
       if (dirty & 1)
-        select_changes.options = ctx2[0].map(func5);
-      if (dirty & 128)
-        select_changes.placeholder = (_b2 = ctx2[7].t("toolbar.projects.none")) != null ? _b2 : "";
-      select.$set(select_changes);
-      if (ctx2[0].length) {
-        if (if_block0) {
-          if_block0.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block0, 1);
-          }
-        } else {
-          if_block0 = create_if_block_16(ctx2);
-          if_block0.c();
-          transition_in(if_block0, 1);
-          if_block0.m(span, null);
-        }
-      } else if (if_block0) {
-        group_outros();
-        transition_out(if_block0, 1, 1, () => {
-          if_block0 = null;
-        });
-        check_outros();
-      }
+        projectselect_changes.projects = ctx2[0];
+      if (dirty & 4)
+        projectselect_changes.onProjectChange = ctx2[2];
+      projectselect.$set(projectselect_changes);
       if (ctx2[5]) {
-        if (if_block1) {
-          if_block1.p(ctx2, dirty);
+        if (if_block) {
+          if_block.p(ctx2, dirty);
           if (dirty & 32) {
-            transition_in(if_block1, 1);
+            transition_in(if_block, 1);
           }
         } else {
-          if_block1 = create_if_block9(ctx2);
-          if_block1.c();
-          transition_in(if_block1, 1);
-          if_block1.m(div, t22);
+          if_block = create_if_block11(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(div, t1);
         }
-      } else if (if_block1) {
+      } else if (if_block) {
         group_outros();
-        transition_out(if_block1, 1, 1, () => {
-          if_block1 = null;
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
         });
         check_outros();
       }
       const button_changes = {};
-      if (dirty & 16777344) {
+      if (dirty & 33024) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -21580,138 +22926,80 @@ function create_fragment41(ctx) {
     i(local) {
       if (current)
         return;
-      transition_in(select.$$.fragment, local);
-      transition_in(if_block0);
-      transition_in(if_block1);
+      transition_in(projectselect.$$.fragment, local);
+      transition_in(if_block);
       transition_in(button.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(select.$$.fragment, local);
-      transition_out(if_block0);
-      transition_out(if_block1);
+      transition_out(projectselect.$$.fragment, local);
+      transition_out(if_block);
       transition_out(button.$$.fragment, local);
       current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div);
-      destroy_component(select);
-      if (if_block0)
-        if_block0.d();
-      if (if_block1)
-        if_block1.d();
+      destroy_component(projectselect);
+      if (if_block)
+        if_block.d();
       destroy_component(button);
     }
   };
 }
-var func5 = (project) => ({ label: project.name, value: project.id });
-function instance41($$self, $$props, $$invalidate) {
-  let projectDefinition;
+function instance45($$self, $$props, $$invalidate) {
+  let project;
   let views;
-  let $customViews;
-  let $customViewsV2;
-  let $i18n;
   let $app;
+  let $i18n;
   let $api;
-  component_subscribe($$self, customViews, ($$value) => $$invalidate(19, $customViews = $$value));
-  component_subscribe($$self, customViewsV2, ($$value) => $$invalidate(20, $customViewsV2 = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(7, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(9, $api = $$value));
   var _a;
   let { projects } = $$props;
-  let { project } = $$props;
+  let { projectId } = $$props;
   let { onProjectChange } = $$props;
-  let { view: view2 } = $$props;
+  let { viewId } = $$props;
   let { onViewChange } = $$props;
-  function iconFromViewType(type) {
-    var _a2;
-    switch (type) {
-      case "table":
-        return "table";
-      case "board":
-        return "columns";
-      case "calendar":
-        return "calendar";
-      case "developer":
-        return "wrench";
-      default:
-        const createView = $customViewsV2[type];
-        if (createView) {
-          const view3 = createView();
-          return view3.getIcon();
-        }
-        const builder = $customViews[type];
-        if (builder) {
-          const view3 = new Builder();
-          builder(view3);
-          return (_a2 = view3.icon) !== null && _a2 !== void 0 ? _a2 : "";
-        }
-        return "";
-    }
-  }
-  const change_handler = ({ detail: value }) => onProjectChange(value);
-  const click_handler = (event) => {
-    const menu = new import_obsidian19.Menu();
-    menu.addItem((item) => {
-      item.setTitle($i18n.t("modals.project.edit.short-title")).setIcon("edit").onClick(() => {
-        if (projectDefinition) {
-          new CreateProjectModal($app, $i18n.t("modals.project.edit.title"), $i18n.t("modals.project.edit.cta"), settings.updateProject, projectDefinition).open();
-        }
-      });
-    });
-    menu.addItem((item) => {
-      item.setTitle($i18n.t("modals.project.delete.short-title")).setIcon("trash").onClick(() => {
-        new ConfirmDialogModal($app, $i18n.t("modals.project.delete.title"), $i18n.t("modals.project.delete.message"), $i18n.t("modals.project.delete.cta"), () => {
-          if (project) {
-            settings.deleteProject(project);
-          }
-        }).open();
-      });
-    });
-    menu.showAtMouseEvent(event);
-  };
-  const func_14 = (v2, name) => {
-    if (name === v2.name) {
-      return true;
-    }
-    return name !== "" && !(projectDefinition == null ? void 0 : projectDefinition.views.find((view3) => view3.name === name));
-  };
-  const click_handler_1 = (v2) => onViewChange(v2.id);
-  const rename_handler = (v2, { detail: name }) => {
-    if (project) {
-      settings.renameView(project, v2.id, name);
+  const func7 = (name) => !!(project == null ? void 0 : project.views.find((view2) => view2.name === name));
+  const func_14 = (viewId2, name) => {
+    if (projectId) {
+      settings.renameView(projectId, viewId2, name);
     }
   };
-  const delete_handler = (v2) => {
+  const func_22 = (viewId2) => {
     new ConfirmDialogModal($app, $i18n.t("modals.view.delete.title"), $i18n.t("modals.view.delete.message"), $i18n.t("modals.view.delete.cta"), () => {
-      if (project) {
-        settings.deleteView(project, v2.id);
+      if (projectId) {
+        settings.deleteView(projectId, viewId2);
       }
     }).open();
   };
-  const click_handler_2 = (event) => {
-    const menu = new import_obsidian19.Menu();
+  const click_handler = (event) => {
+    const menu = new import_obsidian25.Menu();
     menu.addItem((item) => {
       item.setTitle($i18n.t("modals.project.create.short-title")).setIcon("folder").onClick(() => {
-        new CreateProjectModal($app, $i18n.t("modals.project.create.title"), $i18n.t("modals.project.create.cta"), settings.addProject, createProject()).open();
+        new CreateProjectModal($app, $i18n.t("modals.project.create.title"), $i18n.t("modals.project.create.cta"), (project2) => {
+          settings.addProject(project2);
+          onProjectChange(project2.id);
+        }, createProject()).open();
       });
     });
-    if (projectDefinition) {
+    if (project) {
       menu.addItem((item) => {
         item.setTitle($i18n.t("modals.view.create.short-title")).setIcon("table").onClick(() => {
-          if (projectDefinition) {
-            new AddViewModal($app, projectDefinition, (projectId, view3) => {
-              settings.addView(projectId, view3);
+          if (project) {
+            new AddViewModal($app, project, (projectId2, view2) => {
+              settings.addView(projectId2, view2);
+              onViewChange(view2.id);
             }).open();
           }
         });
       });
       menu.addItem((item) => {
         item.setTitle($i18n.t("modals.note.create.short-title")).setIcon("file").onClick(() => {
-          if (projectDefinition) {
-            new CreateNoteModal($app, projectDefinition, (name, templatePath, project2) => {
+          if (project) {
+            new CreateNoteModal($app, project, (name, templatePath, project2) => {
               $api.createNote(createDataRecord(name, project2), templatePath);
             }).open();
           }
@@ -21723,404 +23011,2404 @@ function instance41($$self, $$props, $$invalidate) {
   $$self.$$set = ($$props2) => {
     if ("projects" in $$props2)
       $$invalidate(0, projects = $$props2.projects);
-    if ("project" in $$props2)
-      $$invalidate(1, project = $$props2.project);
+    if ("projectId" in $$props2)
+      $$invalidate(1, projectId = $$props2.projectId);
     if ("onProjectChange" in $$props2)
       $$invalidate(2, onProjectChange = $$props2.onProjectChange);
-    if ("view" in $$props2)
-      $$invalidate(3, view2 = $$props2.view);
+    if ("viewId" in $$props2)
+      $$invalidate(3, viewId = $$props2.viewId);
     if ("onViewChange" in $$props2)
       $$invalidate(4, onViewChange = $$props2.onViewChange);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 3) {
       $:
-        $$invalidate(5, projectDefinition = projects.find((w2) => w2.id === project));
+        $$invalidate(5, project = projects.find((project2) => project2.id === projectId));
     }
-    if ($$self.$$.dirty & 2080) {
+    if ($$self.$$.dirty & 1056) {
       $:
-        $$invalidate(6, views = $$invalidate(11, _a = projectDefinition === null || projectDefinition === void 0 ? void 0 : projectDefinition.views) !== null && _a !== void 0 ? _a : []);
+        $$invalidate(6, views = $$invalidate(10, _a = project === null || project === void 0 ? void 0 : project.views) !== null && _a !== void 0 ? _a : []);
     }
   };
   return [
     projects,
-    project,
+    projectId,
     onProjectChange,
-    view2,
+    viewId,
     onViewChange,
-    projectDefinition,
+    project,
     views,
-    $i18n,
     $app,
+    $i18n,
     $api,
-    iconFromViewType,
     _a,
-    change_handler,
-    click_handler,
+    func7,
     func_14,
-    click_handler_1,
-    rename_handler,
-    delete_handler,
-    click_handler_2
+    func_22,
+    click_handler
   ];
 }
 var Toolbar = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance41, create_fragment41, safe_not_equal, {
+    init(this, options, instance45, create_fragment45, safe_not_equal, {
       projects: 0,
-      project: 1,
+      projectId: 1,
       onProjectChange: 2,
-      view: 3,
+      viewId: 3,
       onViewChange: 4
-    }, add_css18);
+    }, add_css21);
   }
 };
 var Toolbar_default = Toolbar;
 
-// src/lib/datasources/dataview/dataview.ts
-var import_obsidian_dataview2 = __toModule(require_lib());
-
-// src/lib/datasources/dataview/dataview-helpers.ts
-var import_dayjs2 = __toModule(require_dayjs_min());
-var import_obsidian21 = __toModule(require("obsidian"));
-function standardizeValues(app2, values) {
-  const res = {};
-  Object.keys(values).forEach((field) => {
-    var _a, _b;
-    const value = values[field];
-    if (!value) {
-      return;
+// src/app/AppContainer.svelte
+function add_css22(target) {
+  append_styles(target, "svelte-gr1f73", ".projects-container.svelte-gr1f73{display:flex;flex-direction:column;height:100%}.projects-main.svelte-gr1f73{flex:1;display:flex;flex-direction:column;min-height:0}");
+}
+var get_default_slot_changes2 = (dirty) => ({
+  project: dirty & 8,
+  view: dirty & 16
+});
+var get_default_slot_context2 = (ctx) => ({
+  project: ctx[3],
+  view: ctx[4]
+});
+function create_fragment46(ctx) {
+  var _a, _b;
+  let div1;
+  let toolbar;
+  let t3;
+  let div0;
+  let current;
+  toolbar = new Toolbar_default({
+    props: {
+      projects: ctx[2],
+      projectId: (_a = ctx[3]) == null ? void 0 : _a.id,
+      onProjectChange: ctx[9],
+      viewId: (_b = ctx[4]) == null ? void 0 : _b.id,
+      onViewChange: ctx[10]
     }
-    if (typeof value === "object") {
-      if ("path" in value && "display" in value) {
-        const file = app2.vault.getAbstractFileByPath(value.path);
-        if (file instanceof import_obsidian21.TFile) {
-          const linkText = app2.metadataCache.fileToLinktext(file, "", true);
-          res[field] = {
-            displayName: (_a = value.display) != null ? _a : linkText,
-            fullPath: value.path,
-            linkText,
-            sourcePath: ""
-          };
-        } else {
-          res[field] = {
-            displayName: (_b = value.display) != null ? _b : value.path,
-            fullPath: value.path,
-            linkText: value.path,
-            sourcePath: ""
-          };
+  });
+  const default_slot_template = ctx[8].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[7], get_default_slot_context2);
+  return {
+    c() {
+      div1 = element("div");
+      create_component(toolbar.$$.fragment);
+      t3 = space();
+      div0 = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div0, "class", "projects-main svelte-gr1f73");
+      attr(div1, "class", "projects-container svelte-gr1f73");
+    },
+    m(target, anchor) {
+      insert(target, div1, anchor);
+      mount_component(toolbar, div1, null);
+      append(div1, t3);
+      append(div1, div0);
+      if (default_slot) {
+        default_slot.m(div0, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      var _a2, _b2;
+      const toolbar_changes = {};
+      if (dirty & 4)
+        toolbar_changes.projects = ctx2[2];
+      if (dirty & 8)
+        toolbar_changes.projectId = (_a2 = ctx2[3]) == null ? void 0 : _a2.id;
+      if (dirty & 1)
+        toolbar_changes.onProjectChange = ctx2[9];
+      if (dirty & 16)
+        toolbar_changes.viewId = (_b2 = ctx2[4]) == null ? void 0 : _b2.id;
+      if (dirty & 2)
+        toolbar_changes.onViewChange = ctx2[10];
+      toolbar.$set(toolbar_changes);
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 152)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[7], !current ? get_all_dirty_from_scope(ctx2[7]) : get_slot_changes(default_slot_template, ctx2[7], dirty, get_default_slot_changes2), get_default_slot_context2);
         }
       }
-      if ("ts" in value) {
-        res[field] = (0, import_dayjs2.default)(value.ts).format("YYYY-MM-DD");
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(toolbar.$$.fragment, local);
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(toolbar.$$.fragment, local);
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+      destroy_component(toolbar);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance46($$self, $$props, $$invalidate) {
+  let selectedProject;
+  let views;
+  let selectedView;
+  let $app;
+  component_subscribe($$self, app, ($$value) => $$invalidate(6, $app = $$value));
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { projects } = $$props;
+  let { projectId } = $$props;
+  let { viewId } = $$props;
+  function resolveDataSource(project, app2) {
+    return project.dataview ? new DataviewDataSource(app2, project) : new FrontMatterDataSource(app2, project);
+  }
+  const func7 = (id) => $$invalidate(0, projectId = id);
+  const func_14 = (id) => $$invalidate(1, viewId = id);
+  $$self.$$set = ($$props2) => {
+    if ("projects" in $$props2)
+      $$invalidate(2, projects = $$props2.projects);
+    if ("projectId" in $$props2)
+      $$invalidate(0, projectId = $$props2.projectId);
+    if ("viewId" in $$props2)
+      $$invalidate(1, viewId = $$props2.viewId);
+    if ("$$scope" in $$props2)
+      $$invalidate(7, $$scope = $$props2.$$scope);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 5) {
+      $:
+        $$invalidate(3, selectedProject = projects.find((project) => projectId === project.id) || projects[0]);
+    }
+    if ($$self.$$.dirty & 8) {
+      $:
+        $$invalidate(5, views = (selectedProject === null || selectedProject === void 0 ? void 0 : selectedProject.views) || []);
+    }
+    if ($$self.$$.dirty & 34) {
+      $:
+        $$invalidate(4, selectedView = views.find((view2) => viewId === view2.id) || views[0]);
+    }
+    if ($$self.$$.dirty & 72) {
+      $: {
+        if (selectedProject) {
+          dataSource.set(resolveDataSource(selectedProject, $app));
+        }
       }
-    } else {
-      res[field] = value;
     }
-  });
-  return res;
+  };
+  return [
+    projectId,
+    viewId,
+    projects,
+    selectedProject,
+    selectedView,
+    views,
+    $app,
+    $$scope,
+    slots,
+    func7,
+    func_14
+  ];
 }
-
-// src/lib/datasources/helpers.ts
-var import_dayjs3 = __toModule(require_dayjs_min());
-function parseRecords(records, fields) {
-  for (let field of fields) {
-    for (let record of records) {
-      const value = record.values[field.name];
-      switch (field.type) {
-        case DataFieldType.Date:
-          if (typeof value === "string") {
-            record.values[field.name] = (0, import_dayjs3.default)(value).toDate();
-          }
-          break;
-        case DataFieldType.List:
-          if (typeof value === "string") {
-            record.values[field.name] = [value];
-          }
-          break;
-        case DataFieldType.Number:
-          if (typeof value === "string") {
-            record.values[field.name] = parseFloat(value);
-          }
-          break;
-        case DataFieldType.Boolean:
-          if (typeof value === "string") {
-            record.values[field.name] = stringToBoolean(value);
-          }
-          break;
-        case DataFieldType.String:
-          if (typeof value !== "object") {
-            record.values[field.name] = value == null ? void 0 : value.toLocaleString();
-          }
-          break;
-      }
-    }
-  }
-  return records;
-}
-function detectFields(records) {
-  const valuesByField = {};
-  records.forEach((record) => {
-    Object.entries(record.values).forEach(([field, value]) => {
-      var _a;
-      valuesByField[field] = [...(_a = valuesByField[field]) != null ? _a : [], value];
-    });
-  });
-  return Object.entries(valuesByField).map(([field, values]) => {
-    return {
-      name: field,
-      type: typeFromValues(values),
-      identifier: false,
-      derived: false
-    };
-  });
-}
-function typeFromValues(values) {
-  const types = values.map((value) => detectCellType(value));
-  const result = {};
-  for (let type of types) {
-    if (!result[type]) {
-      result[type] = 0;
-    }
-    result[type]++;
-  }
-  const detectedTypes = Object.keys(result).filter((type) => type !== DataFieldType.Unknown);
-  if (detectedTypes.length === 1) {
-    return detectedTypes[0];
-  } else if (detectedTypes.length > 1) {
-    return DataFieldType.String;
-  } else {
-    return DataFieldType.Unknown;
-  }
-}
-function detectCellType(value) {
-  if (typeof value === "string") {
-    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-      return DataFieldType.Date;
-    }
-    return DataFieldType.String;
-  } else if (typeof value === "number") {
-    return DataFieldType.Number;
-  } else if (typeof value === "boolean") {
-    return DataFieldType.Boolean;
-  }
-  if (isLink2(value)) {
-    return DataFieldType.Link;
-  } else if (Array.isArray(value)) {
-    return DataFieldType.List;
-  }
-  return DataFieldType.Unknown;
-}
-function isLink2(value) {
-  if (value && typeof value === "object") {
-    return "linkText" in value && "sourcePath" in value;
-  }
-  return false;
-}
-function stringToBoolean(stringValue) {
-  var _a;
-  switch ((_a = stringValue == null ? void 0 : stringValue.toLowerCase()) == null ? void 0 : _a.trim()) {
-    case "true":
-    case "yes":
-    case "1":
-      return true;
-    case "false":
-    case "no":
-    case "0":
-    case null:
-    case void 0:
-      return false;
-    default:
-      return !!stringValue;
-  }
-}
-
-// src/lib/datasources/dataview/dataview.ts
-var UnsupportedCapability = class extends Error {
-  constructor(message) {
-    super(message);
-    this.name = get_store_value(i18n).t("errors.missingDataview.title");
+var AppContainer = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance46, create_fragment46, safe_not_equal, { projects: 2, projectId: 0, viewId: 1 }, add_css22);
   }
 };
-var DataviewDataSource = class extends DataSource {
-  constructor(app2, project) {
-    super(project);
-    this.app = app2;
-  }
-  queryOne() {
-    return __async(this, null, function* () {
-      return this.queryAll();
-    });
-  }
-  queryAll() {
-    return __async(this, null, function* () {
-      var _a;
-      const api2 = this.getDataviewAPI();
-      const result = yield api2 == null ? void 0 : api2.query((_a = this.project.query) != null ? _a : "", void 0, {
-        forceId: true
-      });
-      if (!(result == null ? void 0 : result.successful) || result.value.type !== "table") {
-        throw new Error("dataview query failed");
-      }
-      const rows = parseTableResult(result.value);
-      const standardizedRecords = this.standardizeRecords(rows);
-      const fields = detectSchema(standardizedRecords);
-      const records = parseRecords(standardizedRecords, fields);
-      return { fields, records };
-    });
-  }
-  includes(_24) {
-    return true;
-  }
-  readonly() {
-    return true;
-  }
-  getDataviewAPI() {
-    if ((0, import_obsidian_dataview2.isPluginEnabled)(this.app)) {
-      return (0, import_obsidian_dataview2.getAPI)(this.app);
-    } else {
-      throw new UnsupportedCapability(get_store_value(i18n).t("errors.missingDataview.message"));
+var AppContainer_default = AppContainer;
+
+// src/components/Field/Field.svelte
+function add_css23(target) {
+  append_styles(target, "svelte-uhe0sw", "div.svelte-uhe0sw{display:flex;align-items:center;justify-content:flex-end;gap:var(--spacing-md)}");
+}
+function create_default_slot13(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text(ctx[0]);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1)
+        set_data(t3, ctx2[0]);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
     }
-  }
-  standardizeRecords(rows) {
-    const records = [];
-    rows.forEach((row) => {
-      const values = standardizeValues(this.app, row);
-      const id = values["File"];
-      if (id && isLink2(id) && id.fullPath) {
-        records.push({ id: id.fullPath, values });
+  };
+}
+function create_fragment47(ctx) {
+  let div;
+  let typography;
+  let t3;
+  let current;
+  typography = new Typography_default({
+    props: {
+      variant: "label",
+      nomargin: true,
+      $$slots: { default: [create_default_slot13] },
+      $$scope: { ctx }
+    }
+  });
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
+  return {
+    c() {
+      div = element("div");
+      create_component(typography.$$.fragment);
+      t3 = space();
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-uhe0sw");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(typography, div, null);
+      append(div, t3);
+      if (default_slot) {
+        default_slot.m(div, null);
       }
-    });
-    return records;
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const typography_changes = {};
+      if (dirty & 5) {
+        typography_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography.$set(typography_changes);
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 4)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(typography.$$.fragment, local);
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(typography.$$.fragment, local);
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(typography);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance47($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { name } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("name" in $$props2)
+      $$invalidate(0, name = $$props2.name);
+    if ("$$scope" in $$props2)
+      $$invalidate(2, $$scope = $$props2.$$scope);
+  };
+  return [name, slots, $$scope];
+}
+var Field = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance47, create_fragment47, safe_not_equal, { name: 0 }, add_css23);
   }
 };
-function parseTableResult(value) {
-  const headers = value.headers;
-  const rows = [];
-  value.values.forEach((row) => {
-    const values = {};
-    headers.forEach((header, index) => {
-      const value2 = row[index];
-      values[header] = value2;
-    });
-    rows.push(values);
-  });
-  return rows;
-}
-function detectSchema(records) {
-  return detectFields(records).map((field) => __spreadProps(__spreadValues({}, field), { derived: true })).map((field) => field.name === "File" ? __spreadProps(__spreadValues({}, field), { identifier: true }) : field);
-}
+var Field_default = Field;
 
-// src/lib/datasources/frontmatter/frontmatter-helpers.ts
-function standardizeRecord(id, values) {
-  const res = {};
-  Object.keys(values).forEach((field) => {
-    const value = values[field];
-    if (isRawLink(value)) {
-      res[field] = parseRawLink(value, "");
-    } else {
-      res[field] = value;
+// src/components/HorizontalGroup/HorizontalGroup.svelte
+function add_css24(target) {
+  append_styles(target, "svelte-j9o14g", "div.svelte-j9o14g{display:flex;gap:8px}.padding.svelte-j9o14g{padding:8px}.fullWidth.svelte-j9o14g{width:100%;justify-content:space-between}");
+}
+function create_fragment48(ctx) {
+  let div;
+  let div_style_value;
+  let current;
+  const default_slot_template = ctx[4].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[3], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "style", div_style_value = `align-items: ${ctx[1]}`);
+      attr(div, "class", "svelte-j9o14g");
+      toggle_class(div, "padding", ctx[2]);
+      toggle_class(div, "fullWidth", ctx[0]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 8)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[3], !current ? get_all_dirty_from_scope(ctx2[3]) : get_slot_changes(default_slot_template, ctx2[3], dirty, null), null);
+        }
+      }
+      if (!current || dirty & 2 && div_style_value !== (div_style_value = `align-items: ${ctx2[1]}`)) {
+        attr(div, "style", div_style_value);
+      }
+      if (!current || dirty & 4) {
+        toggle_class(div, "padding", ctx2[2]);
+      }
+      if (!current || dirty & 1) {
+        toggle_class(div, "fullWidth", ctx2[0]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance48($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { fullWidth = false } = $$props;
+  let { alignItems = "center" } = $$props;
+  let { padding = false } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("fullWidth" in $$props2)
+      $$invalidate(0, fullWidth = $$props2.fullWidth);
+    if ("alignItems" in $$props2)
+      $$invalidate(1, alignItems = $$props2.alignItems);
+    if ("padding" in $$props2)
+      $$invalidate(2, padding = $$props2.padding);
+    if ("$$scope" in $$props2)
+      $$invalidate(3, $$scope = $$props2.$$scope);
+  };
+  return [fullWidth, alignItems, padding, $$scope, slots];
+}
+var HorizontalGroup = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance48, create_fragment48, safe_not_equal, { fullWidth: 0, alignItems: 1, padding: 2 }, add_css24);
+  }
+};
+var HorizontalGroup_default = HorizontalGroup;
+
+// src/components/ToolBar/ToolBar.svelte
+function add_css25(target) {
+  append_styles(target, "svelte-s13j7l", "div.svelte-s13j7l{display:flex;align-items:center;padding:var(--spacing-md);background-color:var(--background-secondary);border-bottom:1px solid var(--background-modifier-border);justify-content:space-between}");
+}
+function create_fragment49(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-s13j7l");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance49($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var ToolBar = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance49, create_fragment49, safe_not_equal, {}, add_css25);
+  }
+};
+var ToolBar_default = ToolBar;
+
+// src/modals/edit-note-modal.ts
+var import_obsidian30 = __toModule(require("obsidian"));
+
+// src/modals/input-dialog.ts
+var import_obsidian28 = __toModule(require("obsidian"));
+
+// src/modals/components/InputDialog.svelte
+function add_css26(target) {
+  append_styles(target, "svelte-gwqplq", "input.svelte-gwqplq{width:100%}");
+}
+function create_default_slot_46(ctx) {
+  let input;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      input = element("input");
+      attr(input, "type", "text");
+      attr(input, "class", "svelte-gwqplq");
+    },
+    m(target, anchor) {
+      insert(target, input, anchor);
+      ctx[7](input);
+      set_input_value(input, ctx[0]);
+      if (!mounted) {
+        dispose = [
+          listen(input, "input", ctx[8]),
+          listen(input, "focus", ctx[9])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1 && input.value !== ctx2[0]) {
+        set_input_value(input, ctx2[0]);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(input);
+      ctx[7](null);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function create_default_slot_36(ctx) {
+  let t3;
+  return {
+    c() {
+      t3 = text(ctx[2]);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 4)
+        set_data(t3, ctx2[2]);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_26(ctx) {
+  let t_value = ctx[6].t("modals.input.cancel") + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 64 && t_value !== (t_value = ctx2[6].t("modals.input.cancel") + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_16(ctx) {
+  let button0;
+  let t3;
+  let button1;
+  let current;
+  button0 = new Button_default({
+    props: {
+      variant: "primary",
+      $$slots: { default: [create_default_slot_36] },
+      $$scope: { ctx }
+    }
+  });
+  button0.$on("click", ctx[10]);
+  button1 = new Button_default({
+    props: {
+      $$slots: { default: [create_default_slot_26] },
+      $$scope: { ctx }
+    }
+  });
+  button1.$on("click", ctx[11]);
+  return {
+    c() {
+      create_component(button0.$$.fragment);
+      t3 = space();
+      create_component(button1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button0, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(button1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button0_changes = {};
+      if (dirty & 4100) {
+        button0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button0.$set(button0_changes);
+      const button1_changes = {};
+      if (dirty & 4160) {
+        button1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button1.$set(button1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button0.$$.fragment, local);
+      transition_in(button1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button0.$$.fragment, local);
+      transition_out(button1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button0, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(button1, detaching);
+    }
+  };
+}
+function create_default_slot14(ctx) {
+  let modalcontent;
+  let t3;
+  let modalbuttongroup;
+  let current;
+  modalcontent = new ModalContent_default({
+    props: {
+      $$slots: { default: [create_default_slot_46] },
+      $$scope: { ctx }
+    }
+  });
+  modalbuttongroup = new ModalButtonGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_16] },
+      $$scope: { ctx }
     }
   });
   return {
-    id,
-    values: res
+    c() {
+      create_component(modalcontent.$$.fragment);
+      t3 = space();
+      create_component(modalbuttongroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modalcontent, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(modalbuttongroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const modalcontent_changes = {};
+      if (dirty & 4129) {
+        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalcontent.$set(modalcontent_changes);
+      const modalbuttongroup_changes = {};
+      if (dirty & 4189) {
+        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalbuttongroup.$set(modalbuttongroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modalcontent.$$.fragment, local);
+      transition_in(modalbuttongroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modalcontent.$$.fragment, local);
+      transition_out(modalbuttongroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modalcontent, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(modalbuttongroup, detaching);
+    }
   };
 }
-function parseRawLink(rawLink, sourcePath) {
-  var _a;
-  if (rawLink[0]) {
-    const text2 = rawLink[0][0];
-    if (text2) {
-      const split = text2.split("|");
-      const linkText = (_a = split[0]) != null ? _a : "";
-      const link = {
-        linkText,
-        sourcePath
-      };
-      if (split[1]) {
-        link.displayName = split[1];
-      }
-      return link;
+function create_fragment50(ctx) {
+  let modallayout;
+  let current;
+  modallayout = new ModalLayout_default({
+    props: {
+      title: ctx[1],
+      $$slots: { default: [create_default_slot14] },
+      $$scope: { ctx }
     }
-  }
-  return void 0;
+  });
+  return {
+    c() {
+      create_component(modallayout.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modallayout, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const modallayout_changes = {};
+      if (dirty & 2)
+        modallayout_changes.title = ctx2[1];
+      if (dirty & 4221) {
+        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modallayout.$set(modallayout_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modallayout.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modallayout.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modallayout, detaching);
+    }
+  };
 }
-
-// src/lib/datasources/frontmatter/frontmatter.ts
-var FrontMatterDataSource = class extends DataSource {
-  constructor(app2, project) {
-    super(project);
-    this.app = app2;
-  }
-  queryOne(file, fields) {
-    return __async(this, null, function* () {
-      return this.queryFiles([file], fields);
+function instance50($$self, $$props, $$invalidate) {
+  let $i18n;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
+  let { value } = $$props;
+  let { message } = $$props;
+  let { cta } = $$props;
+  let { onSubmit } = $$props;
+  let { onCancel } = $$props;
+  let ref;
+  function input_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      ref = $$value;
+      $$invalidate(5, ref);
     });
   }
-  queryAll() {
-    return __async(this, null, function* () {
-      const files = this.app.vault.getMarkdownFiles().filter((file) => this.includes(file.path));
-      return this.queryFiles(files);
-    });
+  function input_input_handler() {
+    value = this.value;
+    $$invalidate(0, value);
   }
-  queryFiles(files, predefinedFields) {
-    return __async(this, null, function* () {
-      const standardizedRecords = standardizeRecords(files, this.app.metadataCache);
-      let fields = detectSchema2(standardizedRecords);
-      for (let predefinedField of predefinedFields != null ? predefinedFields : []) {
-        const currentFieldIdx = fields.findIndex((field) => field.name === predefinedField.name);
-        if (currentFieldIdx >= 0) {
-          if (fields[currentFieldIdx]) {
-            fields[currentFieldIdx].type = predefinedField.type;
-          }
-        }
-      }
-      const records = parseRecords(standardizedRecords, fields);
-      return { fields, records };
-    });
-  }
-  includes(path3) {
-    const trimmedPath = this.project.path.startsWith("/") ? this.project.path.slice(1) : this.project.path;
-    if (!path3.startsWith(trimmedPath)) {
-      return false;
-    }
-    if (!this.project.recursive) {
-      const pathElements = path3.split("/").slice(0, -1);
-      const projectPathElements = trimmedPath.split("/").filter((el) => el);
-      return pathElements.join("/") === projectPathElements.join("/");
-    }
-    return true;
+  const focus_handler = () => ref.select();
+  const click_handler = () => {
+    onSubmit(value);
+  };
+  const click_handler_1 = () => {
+    onCancel();
+  };
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("message" in $$props2)
+      $$invalidate(1, message = $$props2.message);
+    if ("cta" in $$props2)
+      $$invalidate(2, cta = $$props2.cta);
+    if ("onSubmit" in $$props2)
+      $$invalidate(3, onSubmit = $$props2.onSubmit);
+    if ("onCancel" in $$props2)
+      $$invalidate(4, onCancel = $$props2.onCancel);
+  };
+  return [
+    value,
+    message,
+    cta,
+    onSubmit,
+    onCancel,
+    ref,
+    $i18n,
+    input_binding,
+    input_input_handler,
+    focus_handler,
+    click_handler,
+    click_handler_1
+  ];
+}
+var InputDialog = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance50, create_fragment50, safe_not_equal, {
+      value: 0,
+      message: 1,
+      cta: 2,
+      onSubmit: 3,
+      onCancel: 4
+    }, add_css26);
   }
 };
-function standardizeRecords(files, metadataCache) {
-  var _a;
-  const records = [];
-  for (let file of files) {
-    const cache = metadataCache.getFileCache(file);
-    if (cache) {
-      const _b = (_a = cache.frontmatter) != null ? _a : {}, { position } = _b, values = __objRest(_b, ["position"]);
-      const filteredValues = Object.fromEntries(Object.entries(values).filter(([_24, value]) => notEmpty(value)));
-      filteredValues["path"] = file.path;
-      filteredValues["name"] = file.basename;
-      records.push(standardizeRecord(file.path, filteredValues));
+var InputDialog_default = InputDialog;
+
+// src/modals/input-dialog.ts
+var InputDialogModal = class extends import_obsidian28.Modal {
+  constructor(app2, message, cta, onSubmit, value) {
+    super(app2);
+    this.message = message;
+    this.cta = cta;
+    this.onSubmit = onSubmit;
+    this.value = value;
+  }
+  onOpen() {
+    var _a;
+    this.component = new InputDialog_default({
+      target: this.contentEl,
+      props: {
+        message: this.message,
+        cta: this.cta,
+        value: (_a = this.value) != null ? _a : "",
+        onSubmit: (value) => {
+          this.onSubmit(value);
+          this.close();
+        },
+        onCancel: () => {
+          this.close();
+        }
+      }
+    });
+  }
+  onClose() {
+    if (this.component) {
+      this.component.$destroy();
     }
   }
-  return records;
+};
+
+// src/components/TagList/TagList.svelte
+function add_css27(target) {
+  append_styles(target, "svelte-8h9y9", "div.svelte-8h9y9{display:flex;align-items:center;gap:4px;overflow:hidden;padding:4px}.edit.svelte-8h9y9{flex-wrap:wrap}");
 }
-function detectSchema2(records) {
-  return detectFields(records).map((field) => field.name === "name" || field.name === "path" ? __spreadProps(__spreadValues({}, field), { derived: true }) : field).map((field) => field.name === "path" ? __spreadProps(__spreadValues({}, field), { identifier: true }) : field);
+function get_each_context_1(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[6] = list[i2];
+  return child_ctx;
+}
+function get_each_context6(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[6] = list[i2];
+  child_ctx[8] = i2;
+  return child_ctx;
+}
+function create_else_block4(ctx) {
+  let each_1_anchor;
+  let current;
+  let each_value_1 = ctx[0];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
+    each_blocks[i2] = create_each_block_1(get_each_context_1(ctx, each_value_1, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1) {
+        each_value_1 = ctx2[0];
+        let i2;
+        for (i2 = 0; i2 < each_value_1.length; i2 += 1) {
+          const child_ctx = get_each_context_1(ctx2, each_value_1, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block_1(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value_1.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_if_block12(ctx) {
+  let t3;
+  let iconbutton;
+  let current;
+  let each_value = ctx[0];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block6(get_each_context6(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  iconbutton = new IconButton_default({ props: { icon: "plus", nopadding: true } });
+  iconbutton.$on("click", ctx[5]);
+  return {
+    c() {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      t3 = space();
+      create_component(iconbutton.$$.fragment);
+    },
+    m(target, anchor) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, t3, anchor);
+      mount_component(iconbutton, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 5) {
+        each_value = ctx2[0];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context6(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block6(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(t3.parentNode, t3);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(iconbutton, detaching);
+    }
+  };
+}
+function create_default_slot_17(ctx) {
+  let t_value = ctx[6] + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1 && t_value !== (t_value = ctx2[6] + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_each_block_1(ctx) {
+  let tag;
+  let current;
+  tag = new Tag_default({
+    props: {
+      $$slots: { default: [create_default_slot_17] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(tag.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(tag, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const tag_changes = {};
+      if (dirty & 2049) {
+        tag_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      tag.$set(tag_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(tag.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(tag.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(tag, detaching);
+    }
+  };
+}
+function create_default_slot15(ctx) {
+  let t0_value = ctx[6] + "";
+  let t0;
+  let t1;
+  let iconbutton;
+  let current;
+  function click_handler() {
+    return ctx[4](ctx[8]);
+  }
+  iconbutton = new IconButton_default({
+    props: {
+      icon: "cross",
+      size: "xs",
+      nopadding: true
+    }
+  });
+  iconbutton.$on("click", click_handler);
+  return {
+    c() {
+      t0 = text(t0_value);
+      t1 = space();
+      create_component(iconbutton.$$.fragment);
+    },
+    m(target, anchor) {
+      insert(target, t0, anchor);
+      insert(target, t1, anchor);
+      mount_component(iconbutton, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[6] + ""))
+        set_data(t0, t0_value);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t0);
+      if (detaching)
+        detach(t1);
+      destroy_component(iconbutton, detaching);
+    }
+  };
+}
+function create_each_block6(ctx) {
+  let tag;
+  let current;
+  tag = new Tag_default({
+    props: {
+      $$slots: { default: [create_default_slot15] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(tag.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(tag, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const tag_changes = {};
+      if (dirty & 2053) {
+        tag_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      tag.$set(tag_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(tag.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(tag.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(tag, detaching);
+    }
+  };
+}
+function create_fragment51(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block;
+  let current;
+  const if_block_creators = [create_if_block12, create_else_block4];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[1])
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block.c();
+      attr(div, "class", "svelte-8h9y9");
+      toggle_class(div, "edit", ctx[1]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(div, null);
+      }
+      if (!current || dirty & 2) {
+        toggle_class(div, "edit", ctx2[1]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if_blocks[current_block_type_index].d();
+    }
+  };
+}
+function instance51($$self, $$props, $$invalidate) {
+  let $app;
+  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
+  let { values } = $$props;
+  let { edit } = $$props;
+  let { onChange = () => {
+  } } = $$props;
+  const click_handler = (i2) => {
+    onChange(values.filter((_24, j2) => i2 !== j2));
+  };
+  const click_handler_1 = () => {
+    new InputDialogModal($app, "Add list item", "Add", (value) => {
+      onChange([...values, value]);
+    }).open();
+  };
+  $$self.$$set = ($$props2) => {
+    if ("values" in $$props2)
+      $$invalidate(0, values = $$props2.values);
+    if ("edit" in $$props2)
+      $$invalidate(1, edit = $$props2.edit);
+    if ("onChange" in $$props2)
+      $$invalidate(2, onChange = $$props2.onChange);
+  };
+  return [values, edit, onChange, $app, click_handler, click_handler_1];
+}
+var TagList = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance51, create_fragment51, safe_not_equal, { values: 0, edit: 1, onChange: 2 }, add_css27);
+  }
+};
+var TagList_default = TagList;
+
+// src/components/FieldControl/FieldControl.svelte
+function create_if_block_5(ctx) {
+  let textinput;
+  let current;
+  textinput = new TextInput_default({
+    props: {
+      value: isLink(ctx[1]) ? ctx[1].linkText : ""
+    }
+  });
+  textinput.$on("input", ctx[8]);
+  return {
+    c() {
+      create_component(textinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textinput_changes = {};
+      if (dirty & 2)
+        textinput_changes.value = isLink(ctx2[1]) ? ctx2[1].linkText : "";
+      textinput.$set(textinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textinput, detaching);
+    }
+  };
+}
+function create_if_block_4(ctx) {
+  var _a;
+  let taglist;
+  let current;
+  taglist = new TagList_default({
+    props: {
+      edit: true,
+      values: (_a = ctx[1]) != null ? _a : [],
+      onChange: ctx[2]
+    }
+  });
+  return {
+    c() {
+      create_component(taglist.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(taglist, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const taglist_changes = {};
+      if (dirty & 2)
+        taglist_changes.values = (_a2 = ctx2[1]) != null ? _a2 : [];
+      if (dirty & 4)
+        taglist_changes.onChange = ctx2[2];
+      taglist.$set(taglist_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(taglist.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(taglist.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(taglist, detaching);
+    }
+  };
+}
+function create_if_block_32(ctx) {
+  let dateinput;
+  let current;
+  dateinput = new DateInput_default({
+    props: {
+      value: isDate(ctx[1]) ? ctx[1] : null
+    }
+  });
+  dateinput.$on("change", ctx[7]);
+  return {
+    c() {
+      create_component(dateinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(dateinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const dateinput_changes = {};
+      if (dirty & 2)
+        dateinput_changes.value = isDate(ctx2[1]) ? ctx2[1] : null;
+      dateinput.$set(dateinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(dateinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(dateinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(dateinput, detaching);
+    }
+  };
+}
+function create_if_block_23(ctx) {
+  let numberinput;
+  let current;
+  numberinput = new NumberInput_default({
+    props: {
+      value: isNumber(ctx[1]) ? ctx[1] : null
+    }
+  });
+  numberinput.$on("input", ctx[6]);
+  return {
+    c() {
+      create_component(numberinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(numberinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const numberinput_changes = {};
+      if (dirty & 2)
+        numberinput_changes.value = isNumber(ctx2[1]) ? ctx2[1] : null;
+      numberinput.$set(numberinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(numberinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(numberinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(numberinput, detaching);
+    }
+  };
+}
+function create_if_block_17(ctx) {
+  let textinput;
+  let current;
+  textinput = new TextInput_default({
+    props: {
+      value: isString(ctx[1]) ? ctx[1] : "",
+      readonly: ctx[3]
+    }
+  });
+  textinput.$on("input", ctx[5]);
+  return {
+    c() {
+      create_component(textinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textinput_changes = {};
+      if (dirty & 2)
+        textinput_changes.value = isString(ctx2[1]) ? ctx2[1] : "";
+      if (dirty & 8)
+        textinput_changes.readonly = ctx2[3];
+      textinput.$set(textinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textinput, detaching);
+    }
+  };
+}
+function create_if_block13(ctx) {
+  let switch_1;
+  let current;
+  switch_1 = new Switch_default({
+    props: {
+      checked: isBoolean(ctx[1]) ? ctx[1] : false
+    }
+  });
+  switch_1.$on("check", ctx[4]);
+  return {
+    c() {
+      create_component(switch_1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(switch_1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const switch_1_changes = {};
+      if (dirty & 2)
+        switch_1_changes.checked = isBoolean(ctx2[1]) ? ctx2[1] : false;
+      switch_1.$set(switch_1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(switch_1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(switch_1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(switch_1, detaching);
+    }
+  };
+}
+function create_fragment52(ctx) {
+  let show_if;
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [
+    create_if_block13,
+    create_if_block_17,
+    create_if_block_23,
+    create_if_block_32,
+    create_if_block_4,
+    create_if_block_5
+  ];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (dirty & 3)
+      show_if = null;
+    if (ctx2[0] === DataFieldType.Boolean)
+      return 0;
+    if (ctx2[0] === DataFieldType.String)
+      return 1;
+    if (ctx2[0] === DataFieldType.Number)
+      return 2;
+    if (ctx2[0] === DataFieldType.Date)
+      return 3;
+    if (show_if == null)
+      show_if = !!(ctx2[0] === DataFieldType.List && isOptionalList(ctx2[1]));
+    if (show_if)
+      return 4;
+    if (ctx2[0] === DataFieldType.Link)
+      return 5;
+    return -1;
+  }
+  if (~(current_block_type_index = select_block_type(ctx, -1))) {
+    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  }
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].m(target, anchor);
+      }
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if (~current_block_type_index) {
+          if_blocks[current_block_type_index].p(ctx2, dirty);
+        }
+      } else {
+        if (if_block) {
+          group_outros();
+          transition_out(if_blocks[previous_block_index], 1, 1, () => {
+            if_blocks[previous_block_index] = null;
+          });
+          check_outros();
+        }
+        if (~current_block_type_index) {
+          if_block = if_blocks[current_block_type_index];
+          if (!if_block) {
+            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+            if_block.c();
+          } else {
+            if_block.p(ctx2, dirty);
+          }
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        } else {
+          if_block = null;
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].d(detaching);
+      }
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function instance52($$self, $$props, $$invalidate) {
+  let { type } = $$props;
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { readonly = false } = $$props;
+  const check_handler = ({ detail }) => onChange(detail);
+  const input_handler = ({ detail: value2 }) => onChange(value2);
+  const input_handler_1 = ({ detail: value2 }) => onChange(value2 !== null ? value2 : void 0);
+  const change_handler = ({ detail: value2 }) => onChange(value2);
+  const input_handler_2 = ({ detail: val }) => {
+    if (isLink(value)) {
+      onChange(__spreadProps(__spreadValues({}, value), { linkText: val }));
+    }
+  };
+  $$self.$$set = ($$props2) => {
+    if ("type" in $$props2)
+      $$invalidate(0, type = $$props2.type);
+    if ("value" in $$props2)
+      $$invalidate(1, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(2, onChange = $$props2.onChange);
+    if ("readonly" in $$props2)
+      $$invalidate(3, readonly = $$props2.readonly);
+  };
+  return [
+    type,
+    value,
+    onChange,
+    readonly,
+    check_handler,
+    input_handler,
+    input_handler_1,
+    change_handler,
+    input_handler_2
+  ];
+}
+var FieldControl = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance52, create_fragment52, safe_not_equal, {
+      type: 0,
+      value: 1,
+      onChange: 2,
+      readonly: 3
+    });
+  }
+};
+var FieldControl_default = FieldControl;
+
+// src/modals/components/EditNote.svelte
+function get_each_context7(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[7] = list[i2];
+  return child_ctx;
+}
+function create_if_block14(ctx) {
+  let callout;
+  let current;
+  callout = new Callout_default({
+    props: {
+      title: ctx[3].t("modals.note.edit.no-editable-fields.title"),
+      icon: "info",
+      variant: "info",
+      $$slots: { default: [create_default_slot_56] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(callout.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(callout, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const callout_changes = {};
+      if (dirty & 8)
+        callout_changes.title = ctx2[3].t("modals.note.edit.no-editable-fields.title");
+      if (dirty & 1032) {
+        callout_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      callout.$set(callout_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(callout.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(callout.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(callout, detaching);
+    }
+  };
+}
+function create_default_slot_56(ctx) {
+  let t_value = ctx[3].t("modals.note.edit.no-editable-fields.message") + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 8 && t_value !== (t_value = ctx2[3].t("modals.note.edit.no-editable-fields.message") + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_47(ctx) {
+  let fieldcontrol;
+  let t3;
+  let current;
+  function func7(...args) {
+    return ctx[5](ctx[7], ...args);
+  }
+  fieldcontrol = new FieldControl_default({
+    props: {
+      value: ctx[0].values[ctx[7].name],
+      onChange: func7,
+      type: ctx[7].type
+    }
+  });
+  return {
+    c() {
+      create_component(fieldcontrol.$$.fragment);
+      t3 = space();
+    },
+    m(target, anchor) {
+      mount_component(fieldcontrol, target, anchor);
+      insert(target, t3, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const fieldcontrol_changes = {};
+      if (dirty & 5)
+        fieldcontrol_changes.value = ctx[0].values[ctx[7].name];
+      if (dirty & 5)
+        fieldcontrol_changes.onChange = func7;
+      if (dirty & 4)
+        fieldcontrol_changes.type = ctx[7].type;
+      fieldcontrol.$set(fieldcontrol_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(fieldcontrol.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(fieldcontrol.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(fieldcontrol, detaching);
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_each_block7(ctx) {
+  let settingitem;
+  let current;
+  settingitem = new SettingItem_default({
+    props: {
+      name: ctx[7].name,
+      $$slots: { default: [create_default_slot_47] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(settingitem.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(settingitem, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const settingitem_changes = {};
+      if (dirty & 4)
+        settingitem_changes.name = ctx2[7].name;
+      if (dirty & 1029) {
+        settingitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem.$set(settingitem_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(settingitem.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(settingitem.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(settingitem, detaching);
+    }
+  };
+}
+function create_default_slot_37(ctx) {
+  let t3;
+  let each_1_anchor;
+  let current;
+  let if_block = !ctx[2].length && create_if_block14(ctx);
+  let each_value = ctx[2];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block7(get_each_context7(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      t3 = space();
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, t3, anchor);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (!ctx2[2].length) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 4) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block14(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(t3.parentNode, t3);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+      if (dirty & 5) {
+        each_value = ctx2[2];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context7(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block7(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(t3);
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_default_slot_27(ctx) {
+  let t_value = ctx[3].t("modals.note.edit.save") + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 8 && t_value !== (t_value = ctx2[3].t("modals.note.edit.save") + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_18(ctx) {
+  let button;
+  let current;
+  button = new Button_default({
+    props: {
+      variant: "primary",
+      $$slots: { default: [create_default_slot_27] },
+      $$scope: { ctx }
+    }
+  });
+  button.$on("click", ctx[6]);
+  return {
+    c() {
+      create_component(button.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button_changes = {};
+      if (dirty & 1032) {
+        button_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button.$set(button_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button, detaching);
+    }
+  };
+}
+function create_default_slot16(ctx) {
+  let modalcontent;
+  let t3;
+  let modalbuttongroup;
+  let current;
+  modalcontent = new ModalContent_default({
+    props: {
+      $$slots: { default: [create_default_slot_37] },
+      $$scope: { ctx }
+    }
+  });
+  modalbuttongroup = new ModalButtonGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_18] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modalcontent.$$.fragment);
+      t3 = space();
+      create_component(modalbuttongroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modalcontent, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(modalbuttongroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const modalcontent_changes = {};
+      if (dirty & 1037) {
+        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalcontent.$set(modalcontent_changes);
+      const modalbuttongroup_changes = {};
+      if (dirty & 1035) {
+        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalbuttongroup.$set(modalbuttongroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modalcontent.$$.fragment, local);
+      transition_in(modalbuttongroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modalcontent.$$.fragment, local);
+      transition_out(modalbuttongroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modalcontent, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(modalbuttongroup, detaching);
+    }
+  };
+}
+function create_fragment53(ctx) {
+  let modallayout;
+  let current;
+  modallayout = new ModalLayout_default({
+    props: {
+      title: ctx[3].t("modals.note.edit.title"),
+      $$slots: { default: [create_default_slot16] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modallayout.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modallayout, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const modallayout_changes = {};
+      if (dirty & 8)
+        modallayout_changes.title = ctx2[3].t("modals.note.edit.title");
+      if (dirty & 1039) {
+        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modallayout.$set(modallayout_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modallayout.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modallayout.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modallayout, detaching);
+    }
+  };
+}
+function instance53($$self, $$props, $$invalidate) {
+  let editableFields;
+  let $i18n;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(3, $i18n = $$value));
+  let { fields } = $$props;
+  let { record } = $$props;
+  let { onSave } = $$props;
+  const func7 = (field, value) => {
+    $$invalidate(0, record = immer_esm_default(record, (draft) => {
+      draft.values[field.name] = value;
+    }));
+  };
+  const click_handler = () => {
+    onSave(record);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("fields" in $$props2)
+      $$invalidate(4, fields = $$props2.fields);
+    if ("record" in $$props2)
+      $$invalidate(0, record = $$props2.record);
+    if ("onSave" in $$props2)
+      $$invalidate(1, onSave = $$props2.onSave);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 16) {
+      $:
+        $$invalidate(2, editableFields = fields.filter((field) => !field.derived));
+    }
+  };
+  return [record, onSave, editableFields, $i18n, fields, func7, click_handler];
+}
+var EditNote = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance53, create_fragment53, safe_not_equal, { fields: 4, record: 0, onSave: 1 });
+  }
+};
+var EditNote_default = EditNote;
+
+// src/modals/edit-note-modal.ts
+var EditNoteModal = class extends import_obsidian30.Modal {
+  constructor(app2, fields, onSave, defaults) {
+    super(app2);
+    this.fields = fields;
+    this.onSave = onSave;
+    this.defaults = defaults;
+  }
+  onOpen() {
+    this.component = new EditNote_default({
+      target: this.contentEl,
+      props: {
+        record: this.defaults,
+        fields: this.fields,
+        onSave: (record) => {
+          this.onSave(record);
+          this.close();
+        }
+      }
+    });
+  }
+  onClose() {
+    if (this.component) {
+      this.component.$destroy();
+    }
+  }
+};
+
+// src/views/helpers.ts
+function fieldToSelectableValue(field) {
+  return {
+    label: field.name,
+    value: field.name
+  };
 }
 
-// src/views/Board/BoardColumn.svelte
+// src/views/Board/board.ts
+function unique(records, fieldName) {
+  const keys = records.map((record) => record.values[fieldName]).map((value) => value && isString(value) ? value : null).filter(notEmpty);
+  const set = new Set(keys);
+  return [...set];
+}
+function groupRecordsByField(records, fieldName) {
+  var _a;
+  const noStatus = get_store_value(i18n).t("views.board.no-status");
+  if (!fieldName) {
+    return { [noStatus]: records };
+  }
+  const keys = unique(records, fieldName);
+  const res = {
+    [noStatus]: []
+  };
+  for (const key of keys) {
+    res[key] = [];
+  }
+  records.forEach((record) => {
+    var _a2, _b;
+    const value = record.values[fieldName];
+    if (value && isString(value)) {
+      (_a2 = res[value]) == null ? void 0 : _a2.push(record);
+    } else {
+      (_b = res[noStatus]) == null ? void 0 : _b.push(record);
+    }
+  });
+  if (!((_a = res[noStatus]) == null ? void 0 : _a.length)) {
+    delete res[noStatus];
+  }
+  return res;
+}
+
+// src/views/Board/settings/settings-modal.ts
+var import_obsidian31 = __toModule(require("obsidian"));
+
+// src/views/Board/settings/BoardSettings.svelte
+function create_default_slot_28(ctx) {
+  let numberinput;
+  let updating_value;
+  let current;
+  function numberinput_value_binding(value) {
+    ctx[3](value);
+  }
+  let numberinput_props = { placeholder: "270" };
+  if (ctx[2] !== void 0) {
+    numberinput_props.value = ctx[2];
+  }
+  numberinput = new NumberInput_default({ props: numberinput_props });
+  binding_callbacks.push(() => bind(numberinput, "value", numberinput_value_binding));
+  numberinput.$on("blur", ctx[4]);
+  return {
+    c() {
+      create_component(numberinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(numberinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const numberinput_changes = {};
+      if (!updating_value && dirty & 4) {
+        updating_value = true;
+        numberinput_changes.value = ctx2[2];
+        add_flush_callback(() => updating_value = false);
+      }
+      numberinput.$set(numberinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(numberinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(numberinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(numberinput, detaching);
+    }
+  };
+}
+function create_default_slot_19(ctx) {
+  let settingitem;
+  let current;
+  settingitem = new SettingItem_default({
+    props: {
+      name: "Column width",
+      description: "Width of each column in pixels.",
+      $$slots: { default: [create_default_slot_28] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(settingitem.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(settingitem, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const settingitem_changes = {};
+      if (dirty & 71) {
+        settingitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem.$set(settingitem_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(settingitem.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(settingitem.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(settingitem, detaching);
+    }
+  };
+}
+function create_default_slot17(ctx) {
+  let modalcontent;
+  let current;
+  modalcontent = new ModalContent_default({
+    props: {
+      $$slots: { default: [create_default_slot_19] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modalcontent.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modalcontent, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const modalcontent_changes = {};
+      if (dirty & 71) {
+        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modalcontent.$set(modalcontent_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modalcontent.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modalcontent.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modalcontent, detaching);
+    }
+  };
+}
+function create_fragment54(ctx) {
+  let modallayout;
+  let current;
+  modallayout = new ModalLayout_default({
+    props: {
+      title: "Board settings",
+      $$slots: { default: [create_default_slot17] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(modallayout.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(modallayout, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const modallayout_changes = {};
+      if (dirty & 71) {
+        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      modallayout.$set(modallayout_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(modallayout.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(modallayout.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(modallayout, detaching);
+    }
+  };
+}
+function instance54($$self, $$props, $$invalidate) {
+  var _a;
+  let { config } = $$props;
+  let { onSave } = $$props;
+  let columnWidthValue = (_a = config.columnWidth) !== null && _a !== void 0 ? _a : null;
+  function numberinput_value_binding(value) {
+    columnWidthValue = value;
+    $$invalidate(2, columnWidthValue);
+  }
+  const blur_handler = () => onSave(immer_esm_default(config, (draft) => {
+    const _a2 = draft, { columnWidth } = _a2, rest = __objRest(_a2, ["columnWidth"]);
+    if (!columnWidthValue) {
+      return rest;
+    }
+    return __spreadProps(__spreadValues({}, rest), { columnWidth: columnWidthValue });
+  }));
+  $$self.$$set = ($$props2) => {
+    if ("config" in $$props2)
+      $$invalidate(0, config = $$props2.config);
+    if ("onSave" in $$props2)
+      $$invalidate(1, onSave = $$props2.onSave);
+  };
+  return [config, onSave, columnWidthValue, numberinput_value_binding, blur_handler];
+}
+var BoardSettings = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance54, create_fragment54, safe_not_equal, { config: 0, onSave: 1 });
+  }
+};
+var BoardSettings_default = BoardSettings;
+
+// src/views/Board/settings/settings-modal.ts
+var BoardSettingsModal = class extends import_obsidian31.Modal {
+  constructor(app2, config, onSave) {
+    super(app2);
+    this.config = config;
+    this.onSave = onSave;
+  }
+  onOpen() {
+    const { contentEl } = this;
+    this.component = new BoardSettings_default({
+      target: contentEl,
+      props: {
+        config: this.config,
+        onSave: (config) => {
+          this.onSave(config);
+        }
+      }
+    });
+  }
+  onClose() {
+    if (this.component) {
+      this.component.$destroy();
+    }
+  }
+};
+
+// src/views/Board/components/Board/BoardColumn.svelte
 var import_path = __toModule(require("path"));
 
-// src/views/Board/Card.svelte
-function add_css19(target) {
-  append_styles(target, "svelte-1lmhy7z", "div.svelte-1lmhy7z{background-color:var(--background-primary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:var(--size-4-2)}div.svelte-1lmhy7z:hover{border:1px solid var(--background-modifier-border-hover)}");
+// src/views/Board/components/Card/Card.svelte
+function add_css28(target) {
+  append_styles(target, "svelte-aji0dr", "div.svelte-aji0dr{background-color:var(--background-primary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:var(--size-4-2)}div.svelte-aji0dr:hover{border:1px solid var(--background-modifier-border-hover)}");
 }
-function create_fragment42(ctx) {
+function create_fragment55(ctx) {
   let div;
   let current;
   let mounted;
@@ -22132,7 +25420,7 @@ function create_fragment42(ctx) {
       div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-1lmhy7z");
+      attr(div, "class", "svelte-aji0dr");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -22172,7 +25460,7 @@ function create_fragment42(ctx) {
     }
   };
 }
-function instance42($$self, $$props, $$invalidate) {
+function instance55($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   function click_handler(event) {
     bubble.call(this, $$self, event);
@@ -22186,16 +25474,16 @@ function instance42($$self, $$props, $$invalidate) {
 var Card2 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance42, create_fragment42, safe_not_equal, {}, add_css19);
+    init(this, options, instance55, create_fragment55, safe_not_equal, {}, add_css28);
   }
 };
 var Card_default2 = Card2;
 
-// src/views/Board/CardList.svelte
-function add_css20(target) {
-  append_styles(target, "svelte-1l2cceo", "div.svelte-1l2cceo{display:flex;flex-direction:column;gap:var(--size-4-2)}");
+// src/views/Board/components/Card/CardList.svelte
+function add_css29(target) {
+  append_styles(target, "svelte-2czsfa", "div.svelte-2czsfa{display:flex;flex-direction:column;gap:var(--size-4-2)}");
 }
-function create_fragment43(ctx) {
+function create_fragment56(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -22205,7 +25493,7 @@ function create_fragment43(ctx) {
       div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-1l2cceo");
+      attr(div, "class", "svelte-2czsfa");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -22239,7 +25527,7 @@ function create_fragment43(ctx) {
     }
   };
 }
-function instance43($$self, $$props, $$invalidate) {
+function instance56($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -22250,26 +25538,26 @@ function instance43($$self, $$props, $$invalidate) {
 var CardList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance43, create_fragment43, safe_not_equal, {}, add_css20);
+    init(this, options, instance56, create_fragment56, safe_not_equal, {}, add_css29);
   }
 };
 var CardList_default = CardList;
 
-// src/views/Board/BoardColumn.svelte
-function add_css21(target) {
-  append_styles(target, "svelte-4s9cev", ".column.svelte-4s9cev{min-width:350px;border:1px solid var(--background-modifier-border);border-radius:var(--radius-m);background-color:var(--background-secondary);display:flex;flex-direction:column}.column-section.svelte-4s9cev{padding:var(--size-4-2);display:flex;flex-direction:column}.unprio.svelte-4s9cev{border-top:1px solid var(--background-modifier-border)}p.svelte-4s9cev{font-weight:500;margin:0;margin-bottom:4px;color:var(--text-faint);font-size:var(--font-smaller)}");
+// src/views/Board/components/Board/BoardColumn.svelte
+function add_css30(target) {
+  append_styles(target, "svelte-epk499", ".column.svelte-epk499{border:1px solid var(--background-modifier-border);border-radius:var(--radius-m);background-color:var(--background-secondary);display:flex;flex-direction:column}.column-section.svelte-epk499{padding:var(--size-4-2);display:flex;flex-direction:column}.unprio.svelte-epk499{border-top:1px solid var(--background-modifier-border)}p.svelte-epk499{font-weight:500;margin:0;margin-bottom:4px;color:var(--text-faint);font-size:var(--font-smaller)}");
 }
 function get_each_context_2(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[20] = list[i2];
   return child_ctx;
 }
-function get_each_context5(ctx, list, i2) {
+function get_each_context8(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[20] = list[i2];
   return child_ctx;
 }
-function get_each_context_1(ctx, list, i2) {
+function get_each_context_12(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[20] = list[i2];
   return child_ctx;
@@ -22293,7 +25581,7 @@ function create_default_slot_102(ctx) {
     }
   };
 }
-function create_else_block3(ctx) {
+function create_else_block5(ctx) {
   let div;
   let cardlist;
   let current;
@@ -22307,7 +25595,7 @@ function create_else_block3(ctx) {
     c() {
       div = element("div");
       create_component(cardlist.$$.fragment);
-      attr(div, "class", "column-section svelte-4s9cev");
+      attr(div, "class", "column-section svelte-epk499");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -22338,12 +25626,12 @@ function create_else_block3(ctx) {
     }
   };
 }
-function create_if_block_17(ctx) {
+function create_if_block_18(ctx) {
   let t3;
   let if_block1_anchor;
   let current;
-  let if_block0 = ctx[7].length && create_if_block_32(ctx);
-  let if_block1 = ctx[6].length && create_if_block_23(ctx);
+  let if_block0 = ctx[7].length && create_if_block_33(ctx);
+  let if_block1 = ctx[6].length && create_if_block_24(ctx);
   return {
     c() {
       if (if_block0)
@@ -22370,7 +25658,7 @@ function create_if_block_17(ctx) {
             transition_in(if_block0, 1);
           }
         } else {
-          if_block0 = create_if_block_32(ctx2);
+          if_block0 = create_if_block_33(ctx2);
           if_block0.c();
           transition_in(if_block0, 1);
           if_block0.m(t3.parentNode, t3);
@@ -22389,7 +25677,7 @@ function create_if_block_17(ctx) {
             transition_in(if_block1, 1);
           }
         } else {
-          if_block1 = create_if_block_23(ctx2);
+          if_block1 = create_if_block_24(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
           if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -22614,13 +25902,13 @@ function create_default_slot_73(ctx) {
     }
   };
 }
-function create_if_block_32(ctx) {
+function create_if_block_33(ctx) {
   let div;
   let cardlist;
   let current;
   cardlist = new CardList_default({
     props: {
-      $$slots: { default: [create_default_slot_45] },
+      $$slots: { default: [create_default_slot_48] },
       $$scope: { ctx }
     }
   });
@@ -22628,7 +25916,7 @@ function create_if_block_32(ctx) {
     c() {
       div = element("div");
       create_component(cardlist.$$.fragment);
-      attr(div, "class", "column-section svelte-4s9cev");
+      attr(div, "class", "column-section svelte-epk499");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -22659,7 +25947,7 @@ function create_if_block_32(ctx) {
     }
   };
 }
-function create_default_slot_64(ctx) {
+function create_default_slot_65(ctx) {
   let t_value = ctx[10](ctx[20]) + "";
   let t3;
   return {
@@ -22679,7 +25967,7 @@ function create_default_slot_64(ctx) {
     }
   };
 }
-function create_default_slot_55(ctx) {
+function create_default_slot_57(ctx) {
   let internallink;
   let t3;
   let current;
@@ -22691,7 +25979,7 @@ function create_default_slot_55(ctx) {
       linkText: ctx[20].id,
       sourcePath: "",
       resolved: true,
-      $$slots: { default: [create_default_slot_64] },
+      $$slots: { default: [create_default_slot_65] },
       $$scope: { ctx }
     }
   });
@@ -22733,7 +26021,7 @@ function create_default_slot_55(ctx) {
     }
   };
 }
-function create_each_block_1(ctx) {
+function create_each_block_12(ctx) {
   let card;
   let current;
   function click_handler() {
@@ -22741,7 +26029,7 @@ function create_each_block_1(ctx) {
   }
   card = new Card_default2({
     props: {
-      $$slots: { default: [create_default_slot_55] },
+      $$slots: { default: [create_default_slot_57] },
       $$scope: { ctx }
     }
   });
@@ -22777,13 +26065,13 @@ function create_each_block_1(ctx) {
     }
   };
 }
-function create_default_slot_45(ctx) {
+function create_default_slot_48(ctx) {
   let each_1_anchor;
   let current;
   let each_value_1 = ctx[7];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
-    each_blocks[i2] = create_each_block_1(get_each_context_1(ctx, each_value_1, i2));
+    each_blocks[i2] = create_each_block_12(get_each_context_12(ctx, each_value_1, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -22807,12 +26095,12 @@ function create_default_slot_45(ctx) {
         each_value_1 = ctx2[7];
         let i2;
         for (i2 = 0; i2 < each_value_1.length; i2 += 1) {
-          const child_ctx = get_each_context_1(ctx2, each_value_1, i2);
+          const child_ctx = get_each_context_12(ctx2, each_value_1, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block_1(child_ctx);
+            each_blocks[i2] = create_each_block_12(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -22847,7 +26135,7 @@ function create_default_slot_45(ctx) {
     }
   };
 }
-function create_if_block_23(ctx) {
+function create_if_block_24(ctx) {
   let div;
   let p2;
   let t0_value = ctx[9].t("views.board.unprioritized") + "";
@@ -22857,7 +26145,7 @@ function create_if_block_23(ctx) {
   let current;
   cardlist = new CardList_default({
     props: {
-      $$slots: { default: [create_default_slot_16] },
+      $$slots: { default: [create_default_slot_110] },
       $$scope: { ctx }
     }
   });
@@ -22868,8 +26156,8 @@ function create_if_block_23(ctx) {
       t0 = text(t0_value);
       t1 = space();
       create_component(cardlist.$$.fragment);
-      attr(p2, "class", "svelte-4s9cev");
-      attr(div, "class", "column-section unprio svelte-4s9cev");
+      attr(p2, "class", "svelte-epk499");
+      attr(div, "class", "column-section unprio svelte-epk499");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -22905,7 +26193,7 @@ function create_if_block_23(ctx) {
     }
   };
 }
-function create_default_slot_35(ctx) {
+function create_default_slot_38(ctx) {
   let t_value = ctx[10](ctx[20]) + "";
   let t3;
   return {
@@ -22925,7 +26213,7 @@ function create_default_slot_35(ctx) {
     }
   };
 }
-function create_default_slot_25(ctx) {
+function create_default_slot_29(ctx) {
   let internallink;
   let t3;
   let current;
@@ -22937,7 +26225,7 @@ function create_default_slot_25(ctx) {
       linkText: ctx[20].id,
       sourcePath: "",
       resolved: true,
-      $$slots: { default: [create_default_slot_35] },
+      $$slots: { default: [create_default_slot_38] },
       $$scope: { ctx }
     }
   });
@@ -22979,7 +26267,7 @@ function create_default_slot_25(ctx) {
     }
   };
 }
-function create_each_block5(ctx) {
+function create_each_block8(ctx) {
   let card;
   let current;
   function click_handler_1() {
@@ -22987,7 +26275,7 @@ function create_each_block5(ctx) {
   }
   card = new Card_default2({
     props: {
-      $$slots: { default: [create_default_slot_25] },
+      $$slots: { default: [create_default_slot_29] },
       $$scope: { ctx }
     }
   });
@@ -23023,13 +26311,13 @@ function create_each_block5(ctx) {
     }
   };
 }
-function create_default_slot_16(ctx) {
+function create_default_slot_110(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[6];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block5(get_each_context5(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block8(get_each_context8(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -23053,12 +26341,12 @@ function create_default_slot_16(ctx) {
         each_value = ctx2[6];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context5(ctx2, each_value, i2);
+          const child_ctx = get_each_context8(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block5(child_ctx);
+            each_blocks[i2] = create_each_block8(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -23093,14 +26381,14 @@ function create_default_slot_16(ctx) {
     }
   };
 }
-function create_if_block10(ctx) {
+function create_if_block15(ctx) {
   let div;
   let button;
   let current;
   button = new Button_default({
     props: {
       variant: "plain",
-      $$slots: { default: [create_default_slot11] },
+      $$slots: { default: [create_default_slot18] },
       $$scope: { ctx }
     }
   });
@@ -23109,7 +26397,7 @@ function create_if_block10(ctx) {
     c() {
       div = element("div");
       create_component(button.$$.fragment);
-      attr(div, "class", "column-section svelte-4s9cev");
+      attr(div, "class", "column-section svelte-epk499");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -23140,7 +26428,7 @@ function create_if_block10(ctx) {
     }
   };
 }
-function create_default_slot11(ctx) {
+function create_default_slot18(ctx) {
   let t_value = ctx[9].t("views.board.note.add") + "";
   let t3;
   return {
@@ -23160,7 +26448,7 @@ function create_default_slot11(ctx) {
     }
   };
 }
-function create_fragment44(ctx) {
+function create_fragment57(ctx) {
   let div1;
   let div0;
   let typography;
@@ -23177,7 +26465,7 @@ function create_fragment44(ctx) {
       $$scope: { ctx }
     }
   });
-  const if_block_creators = [create_if_block_17, create_else_block3];
+  const if_block_creators = [create_if_block_18, create_else_block5];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[2])
@@ -23186,7 +26474,7 @@ function create_fragment44(ctx) {
   }
   current_block_type_index = select_block_type(ctx, -1);
   if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block1 = !ctx[3] && create_if_block10(ctx);
+  let if_block1 = !ctx[3] && create_if_block15(ctx);
   return {
     c() {
       div1 = element("div");
@@ -23197,8 +26485,8 @@ function create_fragment44(ctx) {
       t1 = space();
       if (if_block1)
         if_block1.c();
-      attr(div0, "class", "column-section svelte-4s9cev");
-      attr(div1, "class", "column svelte-4s9cev");
+      attr(div0, "class", "column-section svelte-epk499");
+      attr(div1, "class", "column svelte-epk499");
     },
     m(target, anchor) {
       insert(target, div1, anchor);
@@ -23244,7 +26532,7 @@ function create_fragment44(ctx) {
             transition_in(if_block1, 1);
           }
         } else {
-          if_block1 = create_if_block10(ctx2);
+          if_block1 = create_if_block15(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
           if_block1.m(div1, null);
@@ -23281,7 +26569,7 @@ function create_fragment44(ctx) {
     }
   };
 }
-function instance44($$self, $$props, $$invalidate) {
+function instance57($$self, $$props, $$invalidate) {
   let prioritized;
   let unprioritized;
   let $app;
@@ -23383,39 +26671,39 @@ function instance44($$self, $$props, $$invalidate) {
 var BoardColumn = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance44, create_fragment44, safe_not_equal, {
+    init(this, options, instance57, create_fragment57, safe_not_equal, {
       name: 0,
       records: 1,
       groupByPriority: 2,
       readonly: 3,
       onRecordClick: 4,
       onRecordAdd: 5
-    }, add_css21);
+    }, add_css30);
   }
 };
 var BoardColumn_default = BoardColumn;
 
-// src/views/Board/Board.svelte
-function add_css22(target) {
-  append_styles(target, "svelte-khd6k2", "div.svelte-khd6k2{display:flex;align-items:flex-start;gap:8px;padding:8px}");
+// src/views/Board/components/Board/Board.svelte
+function add_css31(target) {
+  append_styles(target, "svelte-pei0r2", "div.svelte-pei0r2{display:grid;column-gap:8px;align-items:flex-start}");
 }
-function get_each_context6(ctx, list, i2) {
+function get_each_context9(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
+  child_ctx[7] = list[i2];
   return child_ctx;
 }
-function create_each_block6(key_1, ctx) {
+function create_each_block9(key_1, ctx) {
   let first;
   let boardcolumn;
   let current;
   function func7() {
-    return ctx[5](ctx[6]);
+    return ctx[6](ctx[7]);
   }
   boardcolumn = new BoardColumn_default({
     props: {
       readonly: ctx[2],
-      name: ctx[6].name,
-      records: ctx[6].records,
+      name: ctx[7].name,
+      records: ctx[7].records,
       groupByPriority: ctx[1],
       onRecordClick: ctx[3],
       onRecordAdd: func7
@@ -23440,9 +26728,9 @@ function create_each_block6(key_1, ctx) {
       if (dirty & 4)
         boardcolumn_changes.readonly = ctx[2];
       if (dirty & 1)
-        boardcolumn_changes.name = ctx[6].name;
+        boardcolumn_changes.name = ctx[7].name;
       if (dirty & 1)
-        boardcolumn_changes.records = ctx[6].records;
+        boardcolumn_changes.records = ctx[7].records;
       if (dirty & 2)
         boardcolumn_changes.groupByPriority = ctx[1];
       if (dirty & 8)
@@ -23468,17 +26756,18 @@ function create_each_block6(key_1, ctx) {
     }
   };
 }
-function create_fragment45(ctx) {
+function create_fragment58(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = new Map();
+  let div_style_value;
   let current;
   let each_value = ctx[0];
-  const get_key = (ctx2) => ctx2[6].name;
+  const get_key = (ctx2) => ctx2[7].name;
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    let child_ctx = get_each_context6(ctx, each_value, i2);
+    let child_ctx = get_each_context9(ctx, each_value, i2);
     let key = get_key(child_ctx);
-    each_1_lookup.set(key, each_blocks[i2] = create_each_block6(key, child_ctx));
+    each_1_lookup.set(key, each_blocks[i2] = create_each_block9(key, child_ctx));
   }
   return {
     c() {
@@ -23486,7 +26775,8 @@ function create_fragment45(ctx) {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      attr(div, "class", "svelte-khd6k2");
+      attr(div, "style", div_style_value = `grid-template-columns: repeat(${ctx[0].length}, ${ctx[5]}px);`);
+      attr(div, "class", "svelte-pei0r2");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -23499,8 +26789,11 @@ function create_fragment45(ctx) {
       if (dirty & 31) {
         each_value = ctx2[0];
         group_outros();
-        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block6, null, get_each_context6);
+        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block9, null, get_each_context9);
         check_outros();
+      }
+      if (!current || dirty & 33 && div_style_value !== (div_style_value = `grid-template-columns: repeat(${ctx2[0].length}, ${ctx2[5]}px);`)) {
+        attr(div, "style", div_style_value);
       }
     },
     i(local) {
@@ -23526,12 +26819,13 @@ function create_fragment45(ctx) {
     }
   };
 }
-function instance45($$self, $$props, $$invalidate) {
+function instance58($$self, $$props, $$invalidate) {
   let { columns } = $$props;
   let { groupByPriority } = $$props;
   let { readonly } = $$props;
   let { onRecordClick } = $$props;
   let { onRecordAdd } = $$props;
+  let { columnWidth } = $$props;
   const func7 = (column) => onRecordAdd(column.name);
   $$self.$$set = ($$props2) => {
     if ("columns" in $$props2)
@@ -23544,1979 +26838,39 @@ function instance45($$self, $$props, $$invalidate) {
       $$invalidate(3, onRecordClick = $$props2.onRecordClick);
     if ("onRecordAdd" in $$props2)
       $$invalidate(4, onRecordAdd = $$props2.onRecordAdd);
+    if ("columnWidth" in $$props2)
+      $$invalidate(5, columnWidth = $$props2.columnWidth);
   };
-  return [columns, groupByPriority, readonly, onRecordClick, onRecordAdd, func7];
+  return [
+    columns,
+    groupByPriority,
+    readonly,
+    onRecordClick,
+    onRecordAdd,
+    columnWidth,
+    func7
+  ];
 }
 var Board = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance45, create_fragment45, safe_not_equal, {
+    init(this, options, instance58, create_fragment58, safe_not_equal, {
       columns: 0,
       groupByPriority: 1,
       readonly: 2,
       onRecordClick: 3,
-      onRecordAdd: 4
-    }, add_css22);
+      onRecordAdd: 4,
+      columnWidth: 5
+    }, add_css31);
   }
 };
 var Board_default = Board;
 
-// src/views/helpers.ts
-function fieldToSelectableValue(field) {
-  return {
-    label: field.name,
-    value: field.name
-  };
-}
-
-// src/modals/edit-note-modal.ts
-var import_obsidian25 = __toModule(require("obsidian"));
-
-// src/modals/input-dialog.ts
-var import_obsidian23 = __toModule(require("obsidian"));
-
-// src/modals/components/InputDialog.svelte
-function add_css23(target) {
-  append_styles(target, "svelte-unwbto", "input.svelte-unwbto{width:100%}");
-}
-function create_default_slot_46(ctx) {
-  let input;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      input = element("input");
-      attr(input, "type", "text");
-      attr(input, "class", "svelte-unwbto");
-    },
-    m(target, anchor) {
-      insert(target, input, anchor);
-      ctx[7](input);
-      set_input_value(input, ctx[0]);
-      if (!mounted) {
-        dispose = [
-          listen(input, "input", ctx[8]),
-          listen(input, "focus", ctx[9])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1 && input.value !== ctx2[0]) {
-        set_input_value(input, ctx2[0]);
-      }
-    },
-    d(detaching) {
-      if (detaching)
-        detach(input);
-      ctx[7](null);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function create_default_slot_36(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text(ctx[2]);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 4)
-        set_data(t3, ctx2[2]);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_26(ctx) {
-  let t_value = ctx[6].t("modals.input.cancel") + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 64 && t_value !== (t_value = ctx2[6].t("modals.input.cancel") + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_17(ctx) {
-  let button0;
-  let t3;
-  let button1;
-  let current;
-  button0 = new Button_default({
-    props: {
-      variant: "primary",
-      $$slots: { default: [create_default_slot_36] },
-      $$scope: { ctx }
-    }
-  });
-  button0.$on("click", ctx[10]);
-  button1 = new Button_default({
-    props: {
-      $$slots: { default: [create_default_slot_26] },
-      $$scope: { ctx }
-    }
-  });
-  button1.$on("click", ctx[11]);
-  return {
-    c() {
-      create_component(button0.$$.fragment);
-      t3 = space();
-      create_component(button1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(button0, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(button1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const button0_changes = {};
-      if (dirty & 4100) {
-        button0_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button0.$set(button0_changes);
-      const button1_changes = {};
-      if (dirty & 4160) {
-        button1_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button1.$set(button1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(button0.$$.fragment, local);
-      transition_in(button1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(button0.$$.fragment, local);
-      transition_out(button1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(button0, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(button1, detaching);
-    }
-  };
-}
-function create_default_slot12(ctx) {
-  let modalcontent;
-  let t3;
-  let modalbuttongroup;
-  let current;
-  modalcontent = new ModalContent_default({
-    props: {
-      $$slots: { default: [create_default_slot_46] },
-      $$scope: { ctx }
-    }
-  });
-  modalbuttongroup = new ModalButtonGroup_default({
-    props: {
-      $$slots: { default: [create_default_slot_17] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modalcontent.$$.fragment);
-      t3 = space();
-      create_component(modalbuttongroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modalcontent, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(modalbuttongroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const modalcontent_changes = {};
-      if (dirty & 4129) {
-        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalcontent.$set(modalcontent_changes);
-      const modalbuttongroup_changes = {};
-      if (dirty & 4189) {
-        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalbuttongroup.$set(modalbuttongroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modalcontent.$$.fragment, local);
-      transition_in(modalbuttongroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modalcontent.$$.fragment, local);
-      transition_out(modalbuttongroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modalcontent, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(modalbuttongroup, detaching);
-    }
-  };
-}
-function create_fragment46(ctx) {
-  let modallayout;
-  let current;
-  modallayout = new ModalLayout_default({
-    props: {
-      title: ctx[1],
-      $$slots: { default: [create_default_slot12] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modallayout.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modallayout, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const modallayout_changes = {};
-      if (dirty & 2)
-        modallayout_changes.title = ctx2[1];
-      if (dirty & 4221) {
-        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modallayout.$set(modallayout_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modallayout.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modallayout.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modallayout, detaching);
-    }
-  };
-}
-function instance46($$self, $$props, $$invalidate) {
-  let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
-  let { value } = $$props;
-  let { message } = $$props;
-  let { cta } = $$props;
-  let { onSubmit } = $$props;
-  let { onCancel } = $$props;
-  let ref;
-  function input_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      ref = $$value;
-      $$invalidate(5, ref);
-    });
-  }
-  function input_input_handler() {
-    value = this.value;
-    $$invalidate(0, value);
-  }
-  const focus_handler = () => ref.select();
-  const click_handler = () => {
-    onSubmit(value);
-  };
-  const click_handler_1 = () => {
-    onCancel();
-  };
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("message" in $$props2)
-      $$invalidate(1, message = $$props2.message);
-    if ("cta" in $$props2)
-      $$invalidate(2, cta = $$props2.cta);
-    if ("onSubmit" in $$props2)
-      $$invalidate(3, onSubmit = $$props2.onSubmit);
-    if ("onCancel" in $$props2)
-      $$invalidate(4, onCancel = $$props2.onCancel);
-  };
-  return [
-    value,
-    message,
-    cta,
-    onSubmit,
-    onCancel,
-    ref,
-    $i18n,
-    input_binding,
-    input_input_handler,
-    focus_handler,
-    click_handler,
-    click_handler_1
-  ];
-}
-var InputDialog = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance46, create_fragment46, safe_not_equal, {
-      value: 0,
-      message: 1,
-      cta: 2,
-      onSubmit: 3,
-      onCancel: 4
-    }, add_css23);
-  }
-};
-var InputDialog_default = InputDialog;
-
-// src/modals/input-dialog.ts
-var InputDialogModal = class extends import_obsidian23.Modal {
-  constructor(app2, message, cta, onSubmit, value) {
-    super(app2);
-    this.message = message;
-    this.cta = cta;
-    this.onSubmit = onSubmit;
-    this.value = value;
-  }
-  onOpen() {
-    var _a;
-    this.component = new InputDialog_default({
-      target: this.contentEl,
-      props: {
-        message: this.message,
-        cta: this.cta,
-        value: (_a = this.value) != null ? _a : "",
-        onSubmit: (value) => {
-          this.onSubmit(value);
-          this.close();
-        },
-        onCancel: () => {
-          this.close();
-        }
-      }
-    });
-  }
-  onClose() {
-    if (this.component) {
-      this.component.$destroy();
-    }
-  }
-};
-
-// src/components/TagList/TagList.svelte
-function add_css24(target) {
-  append_styles(target, "svelte-u0ab2z", "div.svelte-u0ab2z{display:flex;align-items:center;gap:4px;overflow:hidden;padding:4px}.edit.svelte-u0ab2z{flex-wrap:wrap}");
-}
-function get_each_context_12(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
-  return child_ctx;
-}
-function get_each_context7(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
-  child_ctx[8] = i2;
-  return child_ctx;
-}
-function create_else_block4(ctx) {
-  let each_1_anchor;
-  let current;
-  let each_value_1 = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
-    each_blocks[i2] = create_each_block_12(get_each_context_12(ctx, each_value_1, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1) {
-        each_value_1 = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value_1.length; i2 += 1) {
-          const child_ctx = get_each_context_12(ctx2, each_value_1, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block_12(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value_1.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_if_block11(ctx) {
-  let t3;
-  let iconbutton;
-  let current;
-  let each_value = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block7(get_each_context7(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  iconbutton = new IconButton_default({ props: { icon: "plus", nopadding: true } });
-  iconbutton.$on("click", ctx[5]);
-  return {
-    c() {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      t3 = space();
-      create_component(iconbutton.$$.fragment);
-    },
-    m(target, anchor) {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, t3, anchor);
-      mount_component(iconbutton, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 5) {
-        each_value = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context7(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block7(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(t3.parentNode, t3);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(iconbutton, detaching);
-    }
-  };
-}
-function create_default_slot_18(ctx) {
-  let t_value = ctx[6] + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1 && t_value !== (t_value = ctx2[6] + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_each_block_12(ctx) {
-  let tag;
-  let current;
-  tag = new Tag_default({
-    props: {
-      $$slots: { default: [create_default_slot_18] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(tag.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(tag, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const tag_changes = {};
-      if (dirty & 2049) {
-        tag_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tag.$set(tag_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(tag.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(tag.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(tag, detaching);
-    }
-  };
-}
-function create_default_slot13(ctx) {
-  let t0_value = ctx[6] + "";
-  let t0;
-  let t1;
-  let iconbutton;
-  let current;
-  function click_handler() {
-    return ctx[4](ctx[8]);
-  }
-  iconbutton = new IconButton_default({
-    props: {
-      icon: "cross",
-      size: "xs",
-      nopadding: true
-    }
-  });
-  iconbutton.$on("click", click_handler);
-  return {
-    c() {
-      t0 = text(t0_value);
-      t1 = space();
-      create_component(iconbutton.$$.fragment);
-    },
-    m(target, anchor) {
-      insert(target, t0, anchor);
-      insert(target, t1, anchor);
-      mount_component(iconbutton, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[6] + ""))
-        set_data(t0, t0_value);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t0);
-      if (detaching)
-        detach(t1);
-      destroy_component(iconbutton, detaching);
-    }
-  };
-}
-function create_each_block7(ctx) {
-  let tag;
-  let current;
-  tag = new Tag_default({
-    props: {
-      $$slots: { default: [create_default_slot13] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(tag.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(tag, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const tag_changes = {};
-      if (dirty & 2053) {
-        tag_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tag.$set(tag_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(tag.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(tag.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(tag, detaching);
-    }
-  };
-}
-function create_fragment47(ctx) {
-  let div;
-  let current_block_type_index;
-  let if_block;
-  let current;
-  const if_block_creators = [create_if_block11, create_else_block4];
-  const if_blocks = [];
-  function select_block_type(ctx2, dirty) {
-    if (ctx2[1])
-      return 0;
-    return 1;
-  }
-  current_block_type_index = select_block_type(ctx, -1);
-  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  return {
-    c() {
-      div = element("div");
-      if_block.c();
-      attr(div, "class", "svelte-u0ab2z");
-      toggle_class(div, "edit", ctx[1]);
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if_blocks[current_block_type_index].m(div, null);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type(ctx2, dirty);
-      if (current_block_type_index === previous_block_index) {
-        if_blocks[current_block_type_index].p(ctx2, dirty);
-      } else {
-        group_outros();
-        transition_out(if_blocks[previous_block_index], 1, 1, () => {
-          if_blocks[previous_block_index] = null;
-        });
-        check_outros();
-        if_block = if_blocks[current_block_type_index];
-        if (!if_block) {
-          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-          if_block.c();
-        } else {
-          if_block.p(ctx2, dirty);
-        }
-        transition_in(if_block, 1);
-        if_block.m(div, null);
-      }
-      if (!current || dirty & 2) {
-        toggle_class(div, "edit", ctx2[1]);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if_blocks[current_block_type_index].d();
-    }
-  };
-}
-function instance47($$self, $$props, $$invalidate) {
-  let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
-  let { values } = $$props;
-  let { edit } = $$props;
-  let { onChange = () => {
-  } } = $$props;
-  const click_handler = (i2) => {
-    onChange(values.filter((_24, j2) => i2 !== j2));
-  };
-  const click_handler_1 = () => {
-    new InputDialogModal($app, "Add list item", "Add", (value) => {
-      onChange([...values, value]);
-    }).open();
-  };
-  $$self.$$set = ($$props2) => {
-    if ("values" in $$props2)
-      $$invalidate(0, values = $$props2.values);
-    if ("edit" in $$props2)
-      $$invalidate(1, edit = $$props2.edit);
-    if ("onChange" in $$props2)
-      $$invalidate(2, onChange = $$props2.onChange);
-  };
-  return [values, edit, onChange, $app, click_handler, click_handler_1];
-}
-var TagList = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance47, create_fragment47, safe_not_equal, { values: 0, edit: 1, onChange: 2 }, add_css24);
-  }
-};
-var TagList_default = TagList;
-
-// src/components/FieldControl/FieldControl.svelte
-function create_if_block_5(ctx) {
-  let textinput;
-  let current;
-  textinput = new TextInput_default({
-    props: {
-      value: isLink(ctx[1]) ? ctx[1].linkText : ""
-    }
-  });
-  textinput.$on("input", ctx[8]);
-  return {
-    c() {
-      create_component(textinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textinput_changes = {};
-      if (dirty & 2)
-        textinput_changes.value = isLink(ctx2[1]) ? ctx2[1].linkText : "";
-      textinput.$set(textinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textinput, detaching);
-    }
-  };
-}
-function create_if_block_4(ctx) {
-  var _a;
-  let taglist;
-  let current;
-  taglist = new TagList_default({
-    props: {
-      edit: true,
-      values: (_a = ctx[1]) != null ? _a : [],
-      onChange: ctx[2]
-    }
-  });
-  return {
-    c() {
-      create_component(taglist.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(taglist, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const taglist_changes = {};
-      if (dirty & 2)
-        taglist_changes.values = (_a2 = ctx2[1]) != null ? _a2 : [];
-      if (dirty & 4)
-        taglist_changes.onChange = ctx2[2];
-      taglist.$set(taglist_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(taglist.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(taglist.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(taglist, detaching);
-    }
-  };
-}
-function create_if_block_33(ctx) {
-  let dateinput;
-  let current;
-  dateinput = new DateInput_default({
-    props: {
-      value: isDate(ctx[1]) ? ctx[1] : null
-    }
-  });
-  dateinput.$on("change", ctx[7]);
-  return {
-    c() {
-      create_component(dateinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(dateinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const dateinput_changes = {};
-      if (dirty & 2)
-        dateinput_changes.value = isDate(ctx2[1]) ? ctx2[1] : null;
-      dateinput.$set(dateinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(dateinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(dateinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(dateinput, detaching);
-    }
-  };
-}
-function create_if_block_24(ctx) {
-  let numberinput;
-  let current;
-  numberinput = new NumberInput_default({
-    props: {
-      value: isNumber(ctx[1]) ? ctx[1] : null
-    }
-  });
-  numberinput.$on("input", ctx[6]);
-  return {
-    c() {
-      create_component(numberinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(numberinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const numberinput_changes = {};
-      if (dirty & 2)
-        numberinput_changes.value = isNumber(ctx2[1]) ? ctx2[1] : null;
-      numberinput.$set(numberinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(numberinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(numberinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(numberinput, detaching);
-    }
-  };
-}
-function create_if_block_18(ctx) {
-  let textinput;
-  let current;
-  textinput = new TextInput_default({
-    props: {
-      value: isString(ctx[1]) ? ctx[1] : "",
-      readonly: ctx[3]
-    }
-  });
-  textinput.$on("input", ctx[5]);
-  return {
-    c() {
-      create_component(textinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textinput_changes = {};
-      if (dirty & 2)
-        textinput_changes.value = isString(ctx2[1]) ? ctx2[1] : "";
-      if (dirty & 8)
-        textinput_changes.readonly = ctx2[3];
-      textinput.$set(textinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textinput, detaching);
-    }
-  };
-}
-function create_if_block12(ctx) {
-  let switch_1;
-  let current;
-  switch_1 = new Switch_default({
-    props: {
-      checked: isBoolean(ctx[1]) ? ctx[1] : false
-    }
-  });
-  switch_1.$on("check", ctx[4]);
-  return {
-    c() {
-      create_component(switch_1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(switch_1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const switch_1_changes = {};
-      if (dirty & 2)
-        switch_1_changes.checked = isBoolean(ctx2[1]) ? ctx2[1] : false;
-      switch_1.$set(switch_1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(switch_1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(switch_1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(switch_1, detaching);
-    }
-  };
-}
-function create_fragment48(ctx) {
-  let show_if;
-  let current_block_type_index;
-  let if_block;
-  let if_block_anchor;
-  let current;
-  const if_block_creators = [
-    create_if_block12,
-    create_if_block_18,
-    create_if_block_24,
-    create_if_block_33,
-    create_if_block_4,
-    create_if_block_5
-  ];
-  const if_blocks = [];
-  function select_block_type(ctx2, dirty) {
-    if (dirty & 3)
-      show_if = null;
-    if (ctx2[0] === DataFieldType.Boolean)
-      return 0;
-    if (ctx2[0] === DataFieldType.String)
-      return 1;
-    if (ctx2[0] === DataFieldType.Number)
-      return 2;
-    if (ctx2[0] === DataFieldType.Date)
-      return 3;
-    if (show_if == null)
-      show_if = !!(ctx2[0] === DataFieldType.List && isOptionalList(ctx2[1]));
-    if (show_if)
-      return 4;
-    if (ctx2[0] === DataFieldType.Link)
-      return 5;
-    return -1;
-  }
-  if (~(current_block_type_index = select_block_type(ctx, -1))) {
-    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  }
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (~current_block_type_index) {
-        if_blocks[current_block_type_index].m(target, anchor);
-      }
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type(ctx2, dirty);
-      if (current_block_type_index === previous_block_index) {
-        if (~current_block_type_index) {
-          if_blocks[current_block_type_index].p(ctx2, dirty);
-        }
-      } else {
-        if (if_block) {
-          group_outros();
-          transition_out(if_blocks[previous_block_index], 1, 1, () => {
-            if_blocks[previous_block_index] = null;
-          });
-          check_outros();
-        }
-        if (~current_block_type_index) {
-          if_block = if_blocks[current_block_type_index];
-          if (!if_block) {
-            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-            if_block.c();
-          } else {
-            if_block.p(ctx2, dirty);
-          }
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        } else {
-          if_block = null;
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (~current_block_type_index) {
-        if_blocks[current_block_type_index].d(detaching);
-      }
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function instance48($$self, $$props, $$invalidate) {
-  let { type } = $$props;
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { readonly = false } = $$props;
-  const check_handler = ({ detail }) => onChange(detail);
-  const input_handler = ({ detail: value2 }) => onChange(value2);
-  const input_handler_1 = ({ detail: value2 }) => onChange(value2 !== null ? value2 : void 0);
-  const change_handler = ({ detail: value2 }) => onChange(value2);
-  const input_handler_2 = ({ detail: val }) => {
-    if (isLink(value)) {
-      onChange(__spreadProps(__spreadValues({}, value), { linkText: val }));
-    }
-  };
-  $$self.$$set = ($$props2) => {
-    if ("type" in $$props2)
-      $$invalidate(0, type = $$props2.type);
-    if ("value" in $$props2)
-      $$invalidate(1, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(2, onChange = $$props2.onChange);
-    if ("readonly" in $$props2)
-      $$invalidate(3, readonly = $$props2.readonly);
-  };
-  return [
-    type,
-    value,
-    onChange,
-    readonly,
-    check_handler,
-    input_handler,
-    input_handler_1,
-    change_handler,
-    input_handler_2
-  ];
-}
-var FieldControl = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance48, create_fragment48, safe_not_equal, {
-      type: 0,
-      value: 1,
-      onChange: 2,
-      readonly: 3
-    });
-  }
-};
-var FieldControl_default = FieldControl;
-
-// src/modals/components/EditNote.svelte
-function get_each_context8(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[7] = list[i2];
-  return child_ctx;
-}
-function create_if_block13(ctx) {
-  let callout;
-  let current;
-  callout = new Callout_default({
-    props: {
-      title: ctx[3].t("modals.note.edit.no-editable-fields.title"),
-      icon: "info",
-      variant: "info",
-      $$slots: { default: [create_default_slot_56] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(callout.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(callout, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const callout_changes = {};
-      if (dirty & 8)
-        callout_changes.title = ctx2[3].t("modals.note.edit.no-editable-fields.title");
-      if (dirty & 1032) {
-        callout_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      callout.$set(callout_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(callout.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(callout.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(callout, detaching);
-    }
-  };
-}
-function create_default_slot_56(ctx) {
-  let t_value = ctx[3].t("modals.note.edit.no-editable-fields.message") + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 8 && t_value !== (t_value = ctx2[3].t("modals.note.edit.no-editable-fields.message") + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_47(ctx) {
-  let fieldcontrol;
-  let t3;
-  let current;
-  function func7(...args) {
-    return ctx[5](ctx[7], ...args);
-  }
-  fieldcontrol = new FieldControl_default({
-    props: {
-      value: ctx[0].values[ctx[7].name],
-      onChange: func7,
-      type: ctx[7].type
-    }
-  });
-  return {
-    c() {
-      create_component(fieldcontrol.$$.fragment);
-      t3 = space();
-    },
-    m(target, anchor) {
-      mount_component(fieldcontrol, target, anchor);
-      insert(target, t3, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const fieldcontrol_changes = {};
-      if (dirty & 5)
-        fieldcontrol_changes.value = ctx[0].values[ctx[7].name];
-      if (dirty & 5)
-        fieldcontrol_changes.onChange = func7;
-      if (dirty & 4)
-        fieldcontrol_changes.type = ctx[7].type;
-      fieldcontrol.$set(fieldcontrol_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(fieldcontrol.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(fieldcontrol.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(fieldcontrol, detaching);
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_each_block8(ctx) {
-  let settingitem;
-  let current;
-  settingitem = new SettingItem_default({
-    props: {
-      name: ctx[7].name,
-      $$slots: { default: [create_default_slot_47] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(settingitem.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(settingitem, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const settingitem_changes = {};
-      if (dirty & 4)
-        settingitem_changes.name = ctx2[7].name;
-      if (dirty & 1029) {
-        settingitem_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      settingitem.$set(settingitem_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(settingitem.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(settingitem.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(settingitem, detaching);
-    }
-  };
-}
-function create_default_slot_37(ctx) {
-  let t3;
-  let each_1_anchor;
-  let current;
-  let if_block = !ctx[2].length && create_if_block13(ctx);
-  let each_value = ctx[2];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block8(get_each_context8(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      t3 = space();
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, t3, anchor);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (!ctx2[2].length) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 4) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block13(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(t3.parentNode, t3);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-      if (dirty & 5) {
-        each_value = ctx2[2];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context8(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block8(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(t3);
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_default_slot_27(ctx) {
-  let t_value = ctx[3].t("modals.note.edit.save") + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 8 && t_value !== (t_value = ctx2[3].t("modals.note.edit.save") + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_19(ctx) {
-  let button;
-  let current;
-  button = new Button_default({
-    props: {
-      variant: "primary",
-      $$slots: { default: [create_default_slot_27] },
-      $$scope: { ctx }
-    }
-  });
-  button.$on("click", ctx[6]);
-  return {
-    c() {
-      create_component(button.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(button, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const button_changes = {};
-      if (dirty & 1032) {
-        button_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button.$set(button_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(button.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(button.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(button, detaching);
-    }
-  };
-}
-function create_default_slot14(ctx) {
-  let modalcontent;
-  let t3;
-  let modalbuttongroup;
-  let current;
-  modalcontent = new ModalContent_default({
-    props: {
-      $$slots: { default: [create_default_slot_37] },
-      $$scope: { ctx }
-    }
-  });
-  modalbuttongroup = new ModalButtonGroup_default({
-    props: {
-      $$slots: { default: [create_default_slot_19] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modalcontent.$$.fragment);
-      t3 = space();
-      create_component(modalbuttongroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modalcontent, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(modalbuttongroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const modalcontent_changes = {};
-      if (dirty & 1037) {
-        modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalcontent.$set(modalcontent_changes);
-      const modalbuttongroup_changes = {};
-      if (dirty & 1035) {
-        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalbuttongroup.$set(modalbuttongroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modalcontent.$$.fragment, local);
-      transition_in(modalbuttongroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modalcontent.$$.fragment, local);
-      transition_out(modalbuttongroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modalcontent, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(modalbuttongroup, detaching);
-    }
-  };
-}
-function create_fragment49(ctx) {
-  let modallayout;
-  let current;
-  modallayout = new ModalLayout_default({
-    props: {
-      title: ctx[3].t("modals.note.edit.title"),
-      $$slots: { default: [create_default_slot14] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(modallayout.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(modallayout, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const modallayout_changes = {};
-      if (dirty & 8)
-        modallayout_changes.title = ctx2[3].t("modals.note.edit.title");
-      if (dirty & 1039) {
-        modallayout_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modallayout.$set(modallayout_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(modallayout.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(modallayout.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(modallayout, detaching);
-    }
-  };
-}
-function instance49($$self, $$props, $$invalidate) {
-  let editableFields;
-  let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(3, $i18n = $$value));
-  let { fields } = $$props;
-  let { record } = $$props;
-  let { onSave } = $$props;
-  const func7 = (field, value) => {
-    $$invalidate(0, record = immer_esm_default(record, (draft) => {
-      draft.values[field.name] = value;
-    }));
-  };
-  const click_handler = () => {
-    onSave(record);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("fields" in $$props2)
-      $$invalidate(4, fields = $$props2.fields);
-    if ("record" in $$props2)
-      $$invalidate(0, record = $$props2.record);
-    if ("onSave" in $$props2)
-      $$invalidate(1, onSave = $$props2.onSave);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 16) {
-      $:
-        $$invalidate(2, editableFields = fields.filter((field) => !field.derived));
-    }
-  };
-  return [record, onSave, editableFields, $i18n, fields, func7, click_handler];
-}
-var EditNote = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance49, create_fragment49, safe_not_equal, { fields: 4, record: 0, onSave: 1 });
-  }
-};
-var EditNote_default = EditNote;
-
-// src/modals/edit-note-modal.ts
-var EditNoteModal = class extends import_obsidian25.Modal {
-  constructor(app2, fields, onSave, defaults) {
-    super(app2);
-    this.defaults = defaults;
-    this.fields = fields;
-    this.onSave = onSave;
-  }
-  onOpen() {
-    this.component = new EditNote_default({
-      target: this.contentEl,
-      props: {
-        record: this.defaults,
-        fields: this.fields,
-        onSave: (record) => {
-          this.onSave(record);
-          this.close();
-        }
-      }
-    });
-  }
-  onClose() {
-    if (this.component) {
-      this.component.$destroy();
-    }
-  }
-};
-
-// src/views/Board/board.ts
-function unique(records, fieldName) {
-  const keys = records.map((record) => record.values[fieldName]).map((value) => value && isString(value) ? value : null).filter(notEmpty);
-  const set = new Set(keys);
-  return [...set];
-}
-function groupRecordsByField(records, fieldName) {
-  var _a;
-  const noStatus = get_store_value(i18n).t("views.board.no-status");
-  if (!fieldName) {
-    return { [noStatus]: records };
-  }
-  const keys = unique(records, fieldName);
-  const res = {
-    [noStatus]: []
-  };
-  for (let key of keys) {
-    res[key] = [];
-  }
-  records.forEach((record, id) => {
-    var _a2, _b;
-    const value = record.values[fieldName];
-    if (value && isString(value)) {
-      (_a2 = res[value]) == null ? void 0 : _a2.push(record);
-    } else {
-      (_b = res[noStatus]) == null ? void 0 : _b.push(record);
-    }
-  });
-  if (!((_a = res[noStatus]) == null ? void 0 : _a.length)) {
-    delete res[noStatus];
-  }
-  return res;
-}
-
-// src/components/HorizontalGroup/HorizontalGroup.svelte
-function add_css25(target) {
-  append_styles(target, "svelte-1xeg6vs", "div.svelte-1xeg6vs{display:flex;gap:8px}.padding.svelte-1xeg6vs{padding:8px}.fullWidth.svelte-1xeg6vs{width:100%;justify-content:space-between}");
-}
-function create_fragment50(ctx) {
-  let div;
-  let div_style_value;
-  let current;
-  const default_slot_template = ctx[4].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[3], null);
-  return {
-    c() {
-      div = element("div");
-      if (default_slot)
-        default_slot.c();
-      attr(div, "style", div_style_value = `align-items: ${ctx[1]}`);
-      attr(div, "class", "svelte-1xeg6vs");
-      toggle_class(div, "padding", ctx[2]);
-      toggle_class(div, "fullWidth", ctx[0]);
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if (default_slot) {
-        default_slot.m(div, null);
-      }
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 8)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[3], !current ? get_all_dirty_from_scope(ctx2[3]) : get_slot_changes(default_slot_template, ctx2[3], dirty, null), null);
-        }
-      }
-      if (!current || dirty & 2 && div_style_value !== (div_style_value = `align-items: ${ctx2[1]}`)) {
-        attr(div, "style", div_style_value);
-      }
-      if (!current || dirty & 4) {
-        toggle_class(div, "padding", ctx2[2]);
-      }
-      if (!current || dirty & 1) {
-        toggle_class(div, "fullWidth", ctx2[0]);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function instance50($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  let { fullWidth = false } = $$props;
-  let { alignItems = "center" } = $$props;
-  let { padding = false } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("fullWidth" in $$props2)
-      $$invalidate(0, fullWidth = $$props2.fullWidth);
-    if ("alignItems" in $$props2)
-      $$invalidate(1, alignItems = $$props2.alignItems);
-    if ("padding" in $$props2)
-      $$invalidate(2, padding = $$props2.padding);
-    if ("$$scope" in $$props2)
-      $$invalidate(3, $$scope = $$props2.$$scope);
-  };
-  return [fullWidth, alignItems, padding, $$scope, slots];
-}
-var HorizontalGroup = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance50, create_fragment50, safe_not_equal, { fullWidth: 0, alignItems: 1, padding: 2 }, add_css25);
-  }
-};
-var HorizontalGroup_default = HorizontalGroup;
-
-// src/components/Field/Field.svelte
-function add_css26(target) {
-  append_styles(target, "svelte-10n0s0w", "div.svelte-10n0s0w{display:flex;align-items:center;justify-content:flex-end;gap:var(--spacing-md)}");
-}
-function create_default_slot15(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text(ctx[0]);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1)
-        set_data(t3, ctx2[0]);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_fragment51(ctx) {
-  let div;
-  let typography;
-  let t3;
-  let current;
-  typography = new Typography_default({
-    props: {
-      variant: "label",
-      nomargin: true,
-      $$slots: { default: [create_default_slot15] },
-      $$scope: { ctx }
-    }
-  });
-  const default_slot_template = ctx[1].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
-  return {
-    c() {
-      div = element("div");
-      create_component(typography.$$.fragment);
-      t3 = space();
-      if (default_slot)
-        default_slot.c();
-      attr(div, "class", "svelte-10n0s0w");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      mount_component(typography, div, null);
-      append(div, t3);
-      if (default_slot) {
-        default_slot.m(div, null);
-      }
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const typography_changes = {};
-      if (dirty & 5) {
-        typography_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      typography.$set(typography_changes);
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 4)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(typography.$$.fragment, local);
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(typography.$$.fragment, local);
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      destroy_component(typography);
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function instance51($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  let { name } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("name" in $$props2)
-      $$invalidate(0, name = $$props2.name);
-    if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
-  };
-  return [name, slots, $$scope];
-}
-var Field = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance51, create_fragment51, safe_not_equal, { name: 0 }, add_css26);
-  }
-};
-var Field_default = Field;
-
-// src/components/ToolBar/ToolBar.svelte
-function add_css27(target) {
-  append_styles(target, "svelte-lcf3nr", "div.svelte-lcf3nr{display:flex;align-items:center;padding:var(--spacing-md);background-color:var(--background-secondary);border-bottom:1px solid var(--background-modifier-border);justify-content:space-between}");
-}
-function create_fragment52(ctx) {
-  let div;
-  let current;
-  const default_slot_template = ctx[1].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
-  return {
-    c() {
-      div = element("div");
-      if (default_slot)
-        default_slot.c();
-      attr(div, "class", "svelte-lcf3nr");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if (default_slot) {
-        default_slot.m(div, null);
-      }
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 1)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function instance52($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("$$scope" in $$props2)
-      $$invalidate(0, $$scope = $$props2.$$scope);
-  };
-  return [$$scope, slots];
-}
-var ToolBar = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance52, create_fragment52, safe_not_equal, {}, add_css27);
-  }
-};
-var ToolBar_default = ToolBar;
-
 // src/views/Board/BoardView.svelte
-function add_css28(target) {
-  append_styles(target, "svelte-5tbm7y", "div.svelte-5tbm7y{background-color:var(--background-primary);overflow:auto}");
+function add_css32(target) {
+  append_styles(target, "svelte-17wav3a", "div.svelte-17wav3a{background-color:var(--background-primary);overflow:auto;padding:8px}");
 }
-function create_default_slot_38(ctx) {
+function create_default_slot_39(ctx) {
   var _a, _b, _c;
   let select;
   let current;
@@ -25528,7 +26882,7 @@ function create_default_slot_38(ctx) {
       allowEmpty: true
     }
   });
-  select.$on("change", ctx[17]);
+  select.$on("change", ctx[18]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -25563,7 +26917,7 @@ function create_default_slot_38(ctx) {
     }
   };
 }
-function create_default_slot_28(ctx) {
+function create_default_slot_210(ctx) {
   var _a, _b, _c;
   let select;
   let current;
@@ -25575,7 +26929,7 @@ function create_default_slot_28(ctx) {
       allowEmpty: true
     }
   });
-  select.$on("change", ctx[18]);
+  select.$on("change", ctx[19]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -25610,49 +26964,57 @@ function create_default_slot_28(ctx) {
     }
   };
 }
-function create_default_slot_110(ctx) {
+function create_default_slot_111(ctx) {
   let field0;
-  let t3;
+  let t0;
   let field1;
+  let t1;
+  let iconbutton;
   let current;
   field0 = new Field_default({
     props: {
       name: ctx[9].t("views.board.fields.status"),
-      $$slots: { default: [create_default_slot_38] },
+      $$slots: { default: [create_default_slot_39] },
       $$scope: { ctx }
     }
   });
   field1 = new Field_default({
     props: {
       name: ctx[9].t("views.board.fields.priority"),
-      $$slots: { default: [create_default_slot_28] },
+      $$slots: { default: [create_default_slot_210] },
       $$scope: { ctx }
     }
   });
+  iconbutton = new IconButton_default({ props: { icon: "settings" } });
+  iconbutton.$on("click", ctx[20]);
   return {
     c() {
       create_component(field0.$$.fragment);
-      t3 = space();
+      t0 = space();
       create_component(field1.$$.fragment);
+      t1 = space();
+      create_component(iconbutton.$$.fragment);
     },
     m(target, anchor) {
       mount_component(field0, target, anchor);
-      insert(target, t3, anchor);
+      insert(target, t0, anchor);
       mount_component(field1, target, anchor);
+      insert(target, t1, anchor);
+      mount_component(iconbutton, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
       const field0_changes = {};
       if (dirty & 512)
         field0_changes.name = ctx2[9].t("views.board.fields.status");
-      if (dirty & 4195086) {
+      if (dirty & 8389389) {
         field0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field0.$set(field0_changes);
       const field1_changes = {};
       if (dirty & 512)
         field1_changes.name = ctx2[9].t("views.board.fields.priority");
-      if (dirty & 4195014) {
+      if (dirty & 8389317) {
         field1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field1.$set(field1_changes);
@@ -25662,29 +27024,34 @@ function create_default_slot_110(ctx) {
         return;
       transition_in(field0.$$.fragment, local);
       transition_in(field1.$$.fragment, local);
+      transition_in(iconbutton.$$.fragment, local);
       current = true;
     },
     o(local) {
       transition_out(field0.$$.fragment, local);
       transition_out(field1.$$.fragment, local);
+      transition_out(iconbutton.$$.fragment, local);
       current = false;
     },
     d(detaching) {
       destroy_component(field0, detaching);
       if (detaching)
-        detach(t3);
+        detach(t0);
       destroy_component(field1, detaching);
+      if (detaching)
+        detach(t1);
+      destroy_component(iconbutton, detaching);
     }
   };
 }
-function create_default_slot16(ctx) {
+function create_default_slot19(ctx) {
   let p2;
   let t3;
   let horizontalgroup;
   let current;
   horizontalgroup = new HorizontalGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_110] },
+      $$slots: { default: [create_default_slot_111] },
       $$scope: { ctx }
     }
   });
@@ -25702,7 +27069,7 @@ function create_default_slot16(ctx) {
     },
     p(ctx2, dirty) {
       const horizontalgroup_changes = {};
-      if (dirty & 4195278) {
+      if (dirty & 8390605) {
         horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       horizontalgroup.$set(horizontalgroup_changes);
@@ -25726,8 +27093,8 @@ function create_default_slot16(ctx) {
     }
   };
 }
-function create_fragment53(ctx) {
-  var _a;
+function create_fragment59(ctx) {
+  var _a, _b, _c;
   let toolbar;
   let t3;
   let div;
@@ -25735,17 +27102,18 @@ function create_fragment53(ctx) {
   let current;
   toolbar = new ToolBar_default({
     props: {
-      $$slots: { default: [create_default_slot16] },
+      $$slots: { default: [create_default_slot19] },
       $$scope: { ctx }
     }
   });
   board = new Board_default({
     props: {
-      readonly: ctx[0],
-      columns: ctx[5].sort(ctx[19]).map(ctx[20]),
+      readonly: ctx[1],
+      columns: ctx[5].sort(ctx[21]).map(ctx[22]),
       groupByPriority: (_a = ctx[6]) == null ? void 0 : _a.name,
-      onRecordClick: ctx[10],
-      onRecordAdd: ctx[11]
+      onRecordClick: ctx[11],
+      onRecordAdd: ctx[12],
+      columnWidth: (_c = (_b = ctx[0]) == null ? void 0 : _b.columnWidth) != null ? _c : 270
     }
   });
   return {
@@ -25754,7 +27122,7 @@ function create_fragment53(ctx) {
       t3 = space();
       div = element("div");
       create_component(board.$$.fragment);
-      attr(div, "class", "svelte-5tbm7y");
+      attr(div, "class", "svelte-17wav3a");
     },
     m(target, anchor) {
       mount_component(toolbar, target, anchor);
@@ -25764,19 +27132,21 @@ function create_fragment53(ctx) {
       current = true;
     },
     p(ctx2, [dirty]) {
-      var _a2;
+      var _a2, _b2, _c2;
       const toolbar_changes = {};
-      if (dirty & 4195278) {
+      if (dirty & 8390605) {
         toolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       toolbar.$set(toolbar_changes);
       const board_changes = {};
-      if (dirty & 1)
-        board_changes.readonly = ctx2[0];
+      if (dirty & 2)
+        board_changes.readonly = ctx2[1];
       if (dirty & 560)
-        board_changes.columns = ctx2[5].sort(ctx2[19]).map(ctx2[20]);
+        board_changes.columns = ctx2[5].sort(ctx2[21]).map(ctx2[22]);
       if (dirty & 64)
         board_changes.groupByPriority = (_a2 = ctx2[6]) == null ? void 0 : _a2.name;
+      if (dirty & 1)
+        board_changes.columnWidth = (_c2 = (_b2 = ctx2[0]) == null ? void 0 : _b2.columnWidth) != null ? _c2 : 270;
       board.$set(board_changes);
     },
     i(local) {
@@ -25801,7 +27171,7 @@ function create_fragment53(ctx) {
     }
   };
 }
-function instance53($$self, $$props, $$invalidate) {
+function instance59($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let textFields;
@@ -25813,7 +27183,7 @@ function instance53($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(9, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(21, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(10, $app = $$value));
   let { project } = $$props;
   let { frame } = $$props;
   let { readonly } = $$props;
@@ -25836,6 +27206,12 @@ function instance53($$self, $$props, $$invalidate) {
   const change_handler_1 = ({ detail: value }) => {
     onConfigChange(__spreadProps(__spreadValues({}, config), { priorityField: value }));
   };
+  const click_handler = () => {
+    new BoardSettingsModal($app, config != null ? config : {}, (value) => {
+      $$invalidate(0, config = value);
+      onConfigChange(value);
+    }).open();
+  };
   const func7 = (a2, b2) => {
     if (a2 === $i18n.t("views.board.no-status"))
       return -1;
@@ -25855,40 +27231,40 @@ function instance53($$self, $$props, $$invalidate) {
   };
   $$self.$$set = ($$props2) => {
     if ("project" in $$props2)
-      $$invalidate(12, project = $$props2.project);
+      $$invalidate(13, project = $$props2.project);
     if ("frame" in $$props2)
-      $$invalidate(13, frame = $$props2.frame);
+      $$invalidate(14, frame = $$props2.frame);
     if ("readonly" in $$props2)
-      $$invalidate(0, readonly = $$props2.readonly);
+      $$invalidate(1, readonly = $$props2.readonly);
     if ("api" in $$props2)
-      $$invalidate(14, api2 = $$props2.api);
+      $$invalidate(15, api2 = $$props2.api);
     if ("config" in $$props2)
-      $$invalidate(1, config = $$props2.config);
+      $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
       $$invalidate(2, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 8192) {
+    if ($$self.$$.dirty & 16384) {
       $:
-        $$invalidate(15, { fields, records } = frame, fields, ($$invalidate(16, records), $$invalidate(13, frame)));
+        $$invalidate(16, { fields, records } = frame, fields, ($$invalidate(17, records), $$invalidate(14, frame)));
     }
-    if ($$self.$$.dirty & 32768) {
+    if ($$self.$$.dirty & 65536) {
       $:
         $$invalidate(8, textFields = fields.filter((field) => field.type === DataFieldType.String));
     }
-    if ($$self.$$.dirty & 32770) {
+    if ($$self.$$.dirty & 65537) {
       $:
         $$invalidate(3, groupByField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.groupByField) === field.name));
     }
-    if ($$self.$$.dirty & 32768) {
+    if ($$self.$$.dirty & 65536) {
       $:
         $$invalidate(7, numberFields = fields.filter((field) => field.type === DataFieldType.Number));
     }
-    if ($$self.$$.dirty & 32770) {
+    if ($$self.$$.dirty & 65537) {
       $:
         $$invalidate(6, priorityField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.priorityField) === field.name));
     }
-    if ($$self.$$.dirty & 65544) {
+    if ($$self.$$.dirty & 131080) {
       $:
         $$invalidate(4, groupedRecords = groupRecordsByField(records, groupByField === null || groupByField === void 0 ? void 0 : groupByField.name));
     }
@@ -25898,8 +27274,8 @@ function instance53($$self, $$props, $$invalidate) {
     }
   };
   return [
-    readonly,
     config,
+    readonly,
     onConfigChange,
     groupByField,
     groupedRecords,
@@ -25908,6 +27284,7 @@ function instance53($$self, $$props, $$invalidate) {
     numberFields,
     textFields,
     $i18n,
+    $app,
     handleRecordClick,
     handleRecordAdd,
     project,
@@ -25917,6 +27294,7 @@ function instance53($$self, $$props, $$invalidate) {
     records,
     change_handler,
     change_handler_1,
+    click_handler,
     func7,
     func_14
   ];
@@ -25924,26 +27302,30 @@ function instance53($$self, $$props, $$invalidate) {
 var BoardView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance53, create_fragment53, safe_not_equal, {
-      project: 12,
-      frame: 13,
-      readonly: 0,
-      api: 14,
-      config: 1,
+    init(this, options, instance59, create_fragment59, safe_not_equal, {
+      project: 13,
+      frame: 14,
+      readonly: 1,
+      api: 15,
+      config: 0,
       onConfigChange: 2
-    }, add_css28);
+    }, add_css32);
   }
 };
 var BoardView_default = BoardView;
 
 // src/views/Calendar/CalendarView.svelte
-var import_dayjs6 = __toModule(require_dayjs_min());
+var import_dayjs7 = __toModule(require_dayjs_min());
+
+// src/views/Calendar/components/CalendarDay/CalendarDay.svelte
+var import_path2 = __toModule(require("path"));
+var import_obsidian34 = __toModule(require("obsidian"));
 
 // src/views/Calendar/components/Table/Table.svelte
-function add_css29(target) {
-  append_styles(target, "svelte-1o9zltv", "table.svelte-1o9zltv{border-collapse:collapse;border-spacing:0;table-layout:fixed;overflow:auto}.grow.svelte-1o9zltv{height:100%}");
+function add_css33(target) {
+  append_styles(target, "svelte-dafndf", "table.svelte-dafndf{border-collapse:collapse;border-spacing:0;table-layout:fixed;overflow:auto}.grow.svelte-dafndf{height:100%}");
 }
-function create_fragment54(ctx) {
+function create_fragment60(ctx) {
   let table;
   let current;
   const default_slot_template = ctx[2].default;
@@ -25953,7 +27335,7 @@ function create_fragment54(ctx) {
       table = element("table");
       if (default_slot)
         default_slot.c();
-      attr(table, "class", "svelte-1o9zltv");
+      attr(table, "class", "svelte-dafndf");
       toggle_class(table, "grow", ctx[0]);
     },
     m(target, anchor) {
@@ -25991,7 +27373,7 @@ function create_fragment54(ctx) {
     }
   };
 }
-function instance54($$self, $$props, $$invalidate) {
+function instance60($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { grow = false } = $$props;
   $$self.$$set = ($$props2) => {
@@ -26005,13 +27387,13 @@ function instance54($$self, $$props, $$invalidate) {
 var Table = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance54, create_fragment54, safe_not_equal, { grow: 0 }, add_css29);
+    init(this, options, instance60, create_fragment60, safe_not_equal, { grow: 0 }, add_css33);
   }
 };
 var Table_default = Table;
 
 // src/views/Calendar/components/Table/TableBody.svelte
-function create_fragment55(ctx) {
+function create_fragment61(ctx) {
   let tbody;
   let current;
   const default_slot_template = ctx[1].default;
@@ -26054,7 +27436,7 @@ function create_fragment55(ctx) {
     }
   };
 }
-function instance55($$self, $$props, $$invalidate) {
+function instance61($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -26065,16 +27447,16 @@ function instance55($$self, $$props, $$invalidate) {
 var TableBody = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance55, create_fragment55, safe_not_equal, {});
+    init(this, options, instance61, create_fragment61, safe_not_equal, {});
   }
 };
 var TableBody_default = TableBody;
 
 // src/views/Calendar/components/Table/TableCell.svelte
-function add_css30(target) {
-  append_styles(target, "svelte-wqxtg1", "td.svelte-wqxtg1{vertical-align:top;box-sizing:border-box;padding:0;border:1px solid var(--background-modifier-border);height:calc(100% / 5)}td.svelte-wqxtg1:first-of-type{border-left:1px solid var(--background-modifier-border)}td.svelte-wqxtg1:last-of-type{border-right:1px solid var(--background-modifier-border)}");
+function add_css34(target) {
+  append_styles(target, "svelte-1u8ro2d", "td.svelte-1u8ro2d{vertical-align:top;box-sizing:border-box;padding:0;border:1px solid var(--background-modifier-border);height:calc(100% / 5)}td.svelte-1u8ro2d:first-of-type{border-left:1px solid var(--background-modifier-border)}td.svelte-1u8ro2d:last-of-type{border-right:1px solid var(--background-modifier-border)}");
 }
-function create_fragment56(ctx) {
+function create_fragment62(ctx) {
   let td;
   let td_style_value;
   let current;
@@ -26089,7 +27471,7 @@ function create_fragment56(ctx) {
         default_slot.c();
       attr(td, "colspan", ctx[0]);
       attr(td, "style", td_style_value = `width: ${ctx[1]}`);
-      attr(td, "class", "svelte-wqxtg1");
+      attr(td, "class", "svelte-1u8ro2d");
     },
     m(target, anchor) {
       insert(target, td, anchor);
@@ -26138,7 +27520,7 @@ function create_fragment56(ctx) {
     }
   };
 }
-function instance56($$self, $$props, $$invalidate) {
+function instance62($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { colspan = null } = $$props;
   let { width } = $$props;
@@ -26161,16 +27543,16 @@ function instance56($$self, $$props, $$invalidate) {
 var TableCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance56, create_fragment56, safe_not_equal, { colspan: 0, width: 1 }, add_css30);
+    init(this, options, instance62, create_fragment62, safe_not_equal, { colspan: 0, width: 1 }, add_css34);
   }
 };
 var TableCell_default = TableCell;
 
 // src/views/Calendar/components/Table/TableColumnHeaderCell.svelte
-function add_css31(target) {
-  append_styles(target, "svelte-1eo1o1v", "div.svelte-1eo1o1v{display:flex;align-items:center;width:100%;justify-content:space-between;gap:1rem}th.svelte-1eo1o1v{background:var(--background-secondary);border:1px solid var(--background-modifier-border);border-top:0;border-left:0;text-align:center;font-weight:500;min-width:100px;vertical-align:top;position:sticky !important;top:0;padding:0.3em}th.svelte-1eo1o1v:first-child{min-width:5ch}.nopadding.svelte-1eo1o1v{padding:0}");
+function add_css35(target) {
+  append_styles(target, "svelte-fwcz0t", "div.svelte-fwcz0t{display:flex;align-items:center;width:100%;justify-content:space-between;gap:1rem}th.svelte-fwcz0t{background:var(--background-secondary);border:1px solid var(--background-modifier-border);border-top:0;border-left:0;text-align:center;font-weight:500;min-width:100px;vertical-align:top;position:sticky !important;top:0;padding:0.3em}th.svelte-fwcz0t:first-child{min-width:5ch}.nopadding.svelte-fwcz0t{padding:0}");
 }
-function create_fragment57(ctx) {
+function create_fragment63(ctx) {
   let th;
   let div;
   let current;
@@ -26184,9 +27566,9 @@ function create_fragment57(ctx) {
       div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-1eo1o1v");
+      attr(div, "class", "svelte-fwcz0t");
       attr(th, "scope", "col");
-      attr(th, "class", "svelte-1eo1o1v");
+      attr(th, "class", "svelte-fwcz0t");
       toggle_class(th, "nopadding", ctx[0]);
     },
     m(target, anchor) {
@@ -26231,7 +27613,7 @@ function create_fragment57(ctx) {
     }
   };
 }
-function instance57($$self, $$props, $$invalidate) {
+function instance63($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { nopadding = false } = $$props;
   function mousedown_handler(event) {
@@ -26248,13 +27630,13 @@ function instance57($$self, $$props, $$invalidate) {
 var TableColumnHeaderCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance57, create_fragment57, safe_not_equal, { nopadding: 0 }, add_css31);
+    init(this, options, instance63, create_fragment63, safe_not_equal, { nopadding: 0 }, add_css35);
   }
 };
 var TableColumnHeaderCell_default = TableColumnHeaderCell;
 
 // src/views/Calendar/components/Table/TableHead.svelte
-function create_fragment58(ctx) {
+function create_fragment64(ctx) {
   let thead;
   let current;
   const default_slot_template = ctx[1].default;
@@ -26297,7 +27679,7 @@ function create_fragment58(ctx) {
     }
   };
 }
-function instance58($$self, $$props, $$invalidate) {
+function instance64($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -26308,13 +27690,13 @@ function instance58($$self, $$props, $$invalidate) {
 var TableHead = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance58, create_fragment58, safe_not_equal, {});
+    init(this, options, instance64, create_fragment64, safe_not_equal, {});
   }
 };
 var TableHead_default = TableHead;
 
 // src/views/Calendar/components/Table/TableRow.svelte
-function create_fragment59(ctx) {
+function create_fragment65(ctx) {
   let tr;
   let current;
   const default_slot_template = ctx[1].default;
@@ -26357,7 +27739,7 @@ function create_fragment59(ctx) {
     }
   };
 }
-function instance59($$self, $$props, $$invalidate) {
+function instance65($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -26368,17 +27750,17 @@ function instance59($$self, $$props, $$invalidate) {
 var TableRow = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance59, create_fragment59, safe_not_equal, {});
+    init(this, options, instance65, create_fragment65, safe_not_equal, {});
   }
 };
 var TableRow_default = TableRow;
 
-// src/views/Calendar/CalendarDate.svelte
-var import_dayjs4 = __toModule(require_dayjs_min());
-function add_css32(target) {
-  append_styles(target, "svelte-1xloh8w", "span.svelte-1xloh8w{padding:0.2em 0.4em;border-radius:4px}.today.svelte-1xloh8w{background:var(--interactive-accent);display:inline-block;color:var(--text-on-accent)}");
+// src/views/Calendar/components/CalendarDay/CalendarDate.svelte
+var import_dayjs5 = __toModule(require_dayjs_min());
+function add_css36(target) {
+  append_styles(target, "svelte-vn6kio", "span.svelte-vn6kio{padding:0.2em 0.4em;border-radius:4px}.today.svelte-vn6kio{background:var(--interactive-accent);display:inline-block;color:var(--text-on-accent)}");
 }
-function create_fragment60(ctx) {
+function create_fragment66(ctx) {
   let span;
   let t_value = ctx[0].date() + "";
   let t3;
@@ -26386,7 +27768,7 @@ function create_fragment60(ctx) {
     c() {
       span = element("span");
       t3 = text(t_value);
-      attr(span, "class", "svelte-1xloh8w");
+      attr(span, "class", "svelte-vn6kio");
       toggle_class(span, "today", ctx[1]);
     },
     m(target, anchor) {
@@ -26408,7 +27790,7 @@ function create_fragment60(ctx) {
     }
   };
 }
-function instance60($$self, $$props, $$invalidate) {
+function instance66($$self, $$props, $$invalidate) {
   let today;
   let { date } = $$props;
   $$self.$$set = ($$props2) => {
@@ -26418,7 +27800,7 @@ function instance60($$self, $$props, $$invalidate) {
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 1) {
       $:
-        $$invalidate(1, today = date.startOf("day").isSame((0, import_dayjs4.default)().startOf("day")));
+        $$invalidate(1, today = date.startOf("day").isSame((0, import_dayjs5.default)().startOf("day")));
     }
   };
   return [date, today];
@@ -26426,14 +27808,14 @@ function instance60($$self, $$props, $$invalidate) {
 var CalendarDate = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance60, create_fragment60, safe_not_equal, { date: 0 }, add_css32);
+    init(this, options, instance66, create_fragment66, safe_not_equal, { date: 0 }, add_css36);
   }
 };
 var CalendarDate_default = CalendarDate;
 
-// src/views/Calendar/CalendarEntry.svelte
-function add_css33(target) {
-  append_styles(target, "svelte-1t0v41n", "div.svelte-1t0v41n{border-radius:4px;border:1px solid var(--background-modifier-border);background-color:var(--background-secondary);padding:0.2em 0.4em;font-size:var(--font-ui-small);width:100%;display:grid;grid-template-columns:auto 1fr}div.svelte-1t0v41n:hover{border:1px solid var(--background-modifier-border-hover)}span.svelte-1t0v41n{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
+// src/views/Calendar/components/CalendarDay/CalendarEntry.svelte
+function add_css37(target) {
+  append_styles(target, "svelte-91gd83", "div.svelte-91gd83{border-radius:4px;border:1px solid var(--background-modifier-border);background-color:var(--background-secondary);padding:0.2em 0.4em;font-size:var(--font-ui-small);width:100%;display:grid;grid-template-columns:auto 1fr}div.svelte-91gd83:hover{border:1px solid var(--background-modifier-border-hover)}span.svelte-91gd83{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
 }
 function create_if_block_19(ctx) {
   let checkbox;
@@ -26464,7 +27846,7 @@ function create_if_block_19(ctx) {
     }
   };
 }
-function create_if_block14(ctx) {
+function create_if_block16(ctx) {
   let checkbox;
   let updating_checked;
   let current;
@@ -26510,7 +27892,7 @@ function create_if_block14(ctx) {
     }
   };
 }
-function create_fragment61(ctx) {
+function create_fragment67(ctx) {
   let div;
   let current_block_type_index;
   let if_block;
@@ -26519,7 +27901,7 @@ function create_fragment61(ctx) {
   let current;
   let mounted;
   let dispose;
-  const if_block_creators = [create_if_block14, create_if_block_19];
+  const if_block_creators = [create_if_block16, create_if_block_19];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[0] !== void 0 && ctx2[0] !== null)
@@ -26542,8 +27924,8 @@ function create_fragment61(ctx) {
       span = element("span");
       if (default_slot)
         default_slot.c();
-      attr(span, "class", "svelte-1t0v41n");
-      attr(div, "class", "svelte-1t0v41n");
+      attr(span, "class", "svelte-91gd83");
+      attr(div, "class", "svelte-91gd83");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -26625,7 +28007,7 @@ function create_fragment61(ctx) {
     }
   };
 }
-function instance61($$self, $$props, $$invalidate) {
+function instance67($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { checked = void 0 } = $$props;
   let hover = false;
@@ -26666,23 +28048,21 @@ function instance61($$self, $$props, $$invalidate) {
 var CalendarEntry = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance61, create_fragment61, safe_not_equal, { checked: 0 }, add_css33);
+    init(this, options, instance67, create_fragment67, safe_not_equal, { checked: 0 }, add_css37);
   }
 };
 var CalendarEntry_default = CalendarEntry;
 
-// src/views/Calendar/CalendarDay.svelte
-var import_path2 = __toModule(require("path"));
-var import_obsidian28 = __toModule(require("obsidian"));
-function add_css34(target) {
-  append_styles(target, "svelte-qx13xl", "div.svelte-qx13xl{padding:4px;height:100%;display:flex;flex-direction:column;gap:4px;align-items:start;overflow:scroll}.weekend.svelte-qx13xl{background-color:var(--background-secondary)}");
+// src/views/Calendar/components/CalendarDay/CalendarDay.svelte
+function add_css38(target) {
+  append_styles(target, "svelte-3iqnfr", "div.svelte-3iqnfr{padding:4px;height:100%;display:flex;flex-direction:column;gap:4px;align-items:start;overflow:scroll}.weekend.svelte-3iqnfr{background-color:var(--background-secondary)}");
 }
-function get_each_context9(ctx, list, i2) {
+function get_each_context10(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[14] = list[i2];
   return child_ctx;
 }
-function create_if_block15(ctx) {
+function create_if_block17(ctx) {
   let calendarentry;
   let current;
   function check_handler(...args) {
@@ -26694,7 +28074,7 @@ function create_if_block15(ctx) {
   calendarentry = new CalendarEntry_default({
     props: {
       checked: ctx[2] !== void 0 ? asOptionalBoolean(ctx[14][1].values[ctx[2]]) : void 0,
-      $$slots: { default: [create_default_slot_111] },
+      $$slots: { default: [create_default_slot_112] },
       $$scope: { ctx }
     }
   });
@@ -26733,7 +28113,7 @@ function create_if_block15(ctx) {
     }
   };
 }
-function create_default_slot_29(ctx) {
+function create_default_slot_211(ctx) {
   let t_value = ctx[8](ctx[14][1]) + "";
   let t3;
   return {
@@ -26753,7 +28133,7 @@ function create_default_slot_29(ctx) {
     }
   };
 }
-function create_default_slot_111(ctx) {
+function create_default_slot_112(ctx) {
   let internallink;
   let t3;
   let current;
@@ -26765,7 +28145,7 @@ function create_default_slot_111(ctx) {
       linkText: ctx[14][1].id,
       sourcePath: "",
       resolved: true,
-      $$slots: { default: [create_default_slot_29] },
+      $$slots: { default: [create_default_slot_211] },
       $$scope: { ctx }
     }
   });
@@ -26807,11 +28187,11 @@ function create_default_slot_111(ctx) {
     }
   };
 }
-function create_each_block9(ctx) {
+function create_each_block10(ctx) {
   let show_if = ctx[8](ctx[14][1]);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block15(ctx);
+  let if_block = show_if && create_if_block17(ctx);
   return {
     c() {
       if (if_block)
@@ -26834,7 +28214,7 @@ function create_each_block9(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block15(ctx2);
+          if_block = create_if_block17(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -26865,7 +28245,7 @@ function create_each_block9(ctx) {
     }
   };
 }
-function create_default_slot17(ctx) {
+function create_default_slot20(ctx) {
   let div;
   let calendardate;
   let t3;
@@ -26874,7 +28254,7 @@ function create_default_slot17(ctx) {
   let each_value = ctx[1];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block9(get_each_context9(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block10(get_each_context10(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -26887,7 +28267,7 @@ function create_default_slot17(ctx) {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      attr(div, "class", "svelte-qx13xl");
+      attr(div, "class", "svelte-3iqnfr");
       toggle_class(div, "weekend", ctx[0].day() === 0 || ctx[0].day() === 6);
     },
     m(target, anchor) {
@@ -26908,12 +28288,12 @@ function create_default_slot17(ctx) {
         each_value = ctx2[1];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context9(ctx2, each_value, i2);
+          const child_ctx = get_each_context10(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block9(child_ctx);
+            each_blocks[i2] = create_each_block10(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(div, null);
@@ -26954,13 +28334,13 @@ function create_default_slot17(ctx) {
     }
   };
 }
-function create_fragment62(ctx) {
+function create_fragment68(ctx) {
   let tablecell;
   let current;
   tablecell = new TableCell_default({
     props: {
       width: "calc(100% / 7)",
-      $$slots: { default: [create_default_slot17] },
+      $$slots: { default: [create_default_slot20] },
       $$scope: { ctx }
     }
   });
@@ -27002,7 +28382,7 @@ function asOptionalBoolean(value) {
   }
   return null;
 }
-function instance62($$self, $$props, $$invalidate) {
+function instance68($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
@@ -27039,7 +28419,7 @@ function instance62($$self, $$props, $$invalidate) {
   const dblclick_handler = () => onEntryAdd();
   const mousedown_handler = (event) => {
     if (event.button === 2) {
-      const menu = new import_obsidian28.Menu();
+      const menu = new import_obsidian34.Menu();
       menu.addItem((item) => {
         item.setTitle($i18n.t("views.calendar.new-note")).setIcon("file").onClick(onEntryAdd);
       });
@@ -27080,23 +28460,23 @@ function instance62($$self, $$props, $$invalidate) {
 var CalendarDay = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance62, create_fragment62, safe_not_equal, {
+    init(this, options, instance68, create_fragment68, safe_not_equal, {
       date: 0,
       records: 1,
       checkField: 2,
       onEntryClick: 3,
       onEntryAdd: 4,
       onRecordUpdate: 5
-    }, add_css34);
+    }, add_css38);
   }
 };
 var CalendarDay_default = CalendarDay;
 
-// src/views/Calendar/Navigation.svelte
-function add_css35(target) {
-  append_styles(target, "svelte-4mop69", "div.svelte-4mop69{display:flex;gap:4px;align-items:center}");
+// src/views/Calendar/components/Navigation/Navigation.svelte
+function add_css39(target) {
+  append_styles(target, "svelte-1u5a4vj", "div.svelte-1u5a4vj{display:flex;gap:4px;align-items:center}");
 }
-function create_default_slot18(ctx) {
+function create_default_slot21(ctx) {
   let t_value = ctx[3].t("views.calendar.today") + "";
   let t3;
   return {
@@ -27116,7 +28496,7 @@ function create_default_slot18(ctx) {
     }
   };
 }
-function create_fragment63(ctx) {
+function create_fragment69(ctx) {
   let div;
   let iconbutton0;
   let t0;
@@ -27131,7 +28511,7 @@ function create_fragment63(ctx) {
   });
   button = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot18] },
+      $$slots: { default: [create_default_slot21] },
       $$scope: { ctx }
     }
   });
@@ -27152,7 +28532,7 @@ function create_fragment63(ctx) {
       create_component(button.$$.fragment);
       t1 = space();
       create_component(iconbutton1.$$.fragment);
-      attr(div, "class", "svelte-4mop69");
+      attr(div, "class", "svelte-1u5a4vj");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -27194,7 +28574,7 @@ function create_fragment63(ctx) {
     }
   };
 }
-function instance63($$self, $$props, $$invalidate) {
+function instance69($$self, $$props, $$invalidate) {
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(3, $i18n = $$value));
   let { onNext } = $$props;
@@ -27213,13 +28593,13 @@ function instance63($$self, $$props, $$invalidate) {
 var Navigation = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance63, create_fragment63, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css35);
+    init(this, options, instance69, create_fragment69, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css39);
   }
 };
 var Navigation_default = Navigation;
 
 // src/views/Calendar/calendar.ts
-var import_dayjs5 = __toModule(require_dayjs_min());
+var import_dayjs6 = __toModule(require_dayjs_min());
 function isCalendarInterval(value) {
   switch (value) {
     case "month":
@@ -27265,7 +28645,7 @@ function groupRecordsByField2(records, field) {
   records.forEach((record, i2) => {
     var _a;
     const dateValue = record.values[field];
-    const start2 = dateValue ? isDate(dateValue) ? (0, import_dayjs5.default)(dateValue) : null : null;
+    const start2 = dateValue ? isDate(dateValue) ? (0, import_dayjs6.default)(dateValue) : null : null;
     if (start2) {
       const dateStr = start2.format("YYYY-MM-DD");
       if (!(dateStr in res)) {
@@ -27344,10 +28724,10 @@ function take(arr, num) {
 }
 
 // src/views/Calendar/CalendarView.svelte
-function add_css36(target) {
-  append_styles(target, "svelte-lvsxvy", "div.svelte-lvsxvy{display:flex;flex-direction:column;height:100%}div.svelte-lvsxvy:last-child{flex:2}");
+function add_css40(target) {
+  append_styles(target, "svelte-1frn4ka", "div.svelte-1frn4ka{display:flex;flex-direction:column;height:100%}div.svelte-1frn4ka:last-child{flex:2}");
 }
-function get_each_context10(ctx, list, i2) {
+function get_each_context11(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[37] = list[i2];
   return child_ctx;
@@ -27609,7 +28989,7 @@ function create_default_slot_74(ctx) {
     }
   };
 }
-function create_default_slot_65(ctx) {
+function create_default_slot_66(ctx) {
   let navigation;
   let t0;
   let typography;
@@ -27698,7 +29078,7 @@ function create_default_slot_65(ctx) {
     }
   };
 }
-function create_default_slot_57(ctx) {
+function create_default_slot_58(ctx) {
   let t_value = ctx[43] + "";
   let t3;
   return {
@@ -27723,7 +29103,7 @@ function create_each_block_22(ctx) {
   let current;
   tablecolumnheadercell = new TableColumnHeaderCell_default({
     props: {
-      $$slots: { default: [create_default_slot_57] },
+      $$slots: { default: [create_default_slot_58] },
       $$scope: { ctx }
     }
   });
@@ -27757,7 +29137,7 @@ function create_each_block_22(ctx) {
     }
   };
 }
-function create_default_slot_48(ctx) {
+function create_default_slot_49(ctx) {
   let each_1_anchor;
   let current;
   let each_value_2 = ctx[11];
@@ -27827,12 +29207,12 @@ function create_default_slot_48(ctx) {
     }
   };
 }
-function create_default_slot_39(ctx) {
+function create_default_slot_310(ctx) {
   let tablerow;
   let current;
   tablerow = new TableRow_default({
     props: {
-      $$slots: { default: [create_default_slot_48] },
+      $$slots: { default: [create_default_slot_49] },
       $$scope: { ctx }
     }
   });
@@ -27924,7 +29304,7 @@ function create_each_block_13(ctx) {
     }
   };
 }
-function create_default_slot_210(ctx) {
+function create_default_slot_212(ctx) {
   let t3;
   let current;
   let each_value_1 = ctx[37];
@@ -27994,12 +29374,12 @@ function create_default_slot_210(ctx) {
     }
   };
 }
-function create_each_block10(ctx) {
+function create_each_block11(ctx) {
   let tablerow;
   let current;
   tablerow = new TableRow_default({
     props: {
-      $$slots: { default: [create_default_slot_210] },
+      $$slots: { default: [create_default_slot_212] },
       $$scope: { ctx }
     }
   });
@@ -28033,13 +29413,13 @@ function create_each_block10(ctx) {
     }
   };
 }
-function create_default_slot_112(ctx) {
+function create_default_slot_113(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[12];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block10(get_each_context10(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block11(get_each_context11(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -28063,12 +29443,12 @@ function create_default_slot_112(ctx) {
         each_value = ctx2[12];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context10(ctx2, each_value, i2);
+          const child_ctx = get_each_context11(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block10(child_ctx);
+            each_blocks[i2] = create_each_block11(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -28103,20 +29483,20 @@ function create_default_slot_112(ctx) {
     }
   };
 }
-function create_default_slot19(ctx) {
+function create_default_slot22(ctx) {
   let tablehead;
   let t3;
   let tablebody;
   let current;
   tablehead = new TableHead_default({
     props: {
-      $$slots: { default: [create_default_slot_39] },
+      $$slots: { default: [create_default_slot_310] },
       $$scope: { ctx }
     }
   });
   tablebody = new TableBody_default({
     props: {
-      $$slots: { default: [create_default_slot_112] },
+      $$slots: { default: [create_default_slot_113] },
       $$scope: { ctx }
     }
   });
@@ -28164,7 +29544,7 @@ function create_default_slot19(ctx) {
     }
   };
 }
-function create_fragment64(ctx) {
+function create_fragment70(ctx) {
   let div;
   let toolbar;
   let t3;
@@ -28172,14 +29552,14 @@ function create_fragment64(ctx) {
   let current;
   toolbar = new ToolBar_default({
     props: {
-      $$slots: { default: [create_default_slot_65] },
+      $$slots: { default: [create_default_slot_66] },
       $$scope: { ctx }
     }
   });
   table = new Table_default({
     props: {
       grow: true,
-      $$slots: { default: [create_default_slot19] },
+      $$slots: { default: [create_default_slot22] },
       $$scope: { ctx }
     }
   });
@@ -28189,7 +29569,7 @@ function create_fragment64(ctx) {
       create_component(toolbar.$$.fragment);
       t3 = space();
       create_component(table.$$.fragment);
-      attr(div, "class", "svelte-lvsxvy");
+      attr(div, "class", "svelte-1frn4ka");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -28230,7 +29610,7 @@ function create_fragment64(ctx) {
     }
   };
 }
-function instance64($$self, $$props, $$invalidate) {
+function instance70($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let dateFields;
@@ -28256,7 +29636,7 @@ function instance64($$self, $$props, $$invalidate) {
   let { api: api2 } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
-  let anchorDate = (0, import_dayjs6.default)();
+  let anchorDate = (0, import_dayjs7.default)();
   function handleIntervalChange(interval2) {
     if (isCalendarInterval(interval2)) {
       onConfigChange(Object.assign(Object.assign({}, config), { interval: interval2 }));
@@ -28270,7 +29650,7 @@ function instance64($$self, $$props, $$invalidate) {
   }
   const func7 = () => $$invalidate(4, anchorDate = addInterval(anchorDate, interval));
   const func_14 = () => $$invalidate(4, anchorDate = subtractInterval(anchorDate, interval));
-  const func_2 = () => $$invalidate(4, anchorDate = (0, import_dayjs6.default)());
+  const func_22 = () => $$invalidate(4, anchorDate = (0, import_dayjs7.default)());
   const change_handler = ({ detail }) => handleDateFieldChange(detail);
   const change_handler_1 = ({ detail }) => handleCheckFieldChange(detail);
   const change_handler_2 = ({ detail }) => handleIntervalChange(detail);
@@ -28393,7 +29773,7 @@ function instance64($$self, $$props, $$invalidate) {
     dateInterval,
     func7,
     func_14,
-    func_2,
+    func_22,
     change_handler,
     change_handler_1,
     change_handler_2,
@@ -28405,5505 +29785,23 @@ function instance64($$self, $$props, $$invalidate) {
 var CalendarView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance64, create_fragment64, safe_not_equal, {
+    init(this, options, instance70, create_fragment70, safe_not_equal, {
       project: 0,
       frame: 21,
       readonly: 1,
       api: 2,
       config: 3,
       onConfigChange: 22
-    }, add_css36, [-1, -1]);
+    }, add_css40, [-1, -1]);
   }
 };
 var CalendarView_default = CalendarView;
 
-// src/views/Table/components/DataGrid/DataGrid.svelte
-var import_obsidian36 = __toModule(require("obsidian"));
-
-// src/views/Table/components/DataGrid/GridCell/Resizer.svelte
-function add_css37(target) {
-  append_styles(target, "svelte-1desyj5", ".handle.svelte-1desyj5{position:relative;left:7.5px;width:6px;min-width:6px;height:100%;border-radius:1px}.handle.svelte-1desyj5:hover{background-color:var(--interactive-accent);cursor:ew-resize}.visible.svelte-1desyj5{background-color:var(--interactive-accent);cursor:ew-resize}");
-}
-function create_else_block5(ctx) {
-  let span;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      span = element("span");
-      attr(span, "class", "handle svelte-1desyj5");
-    },
-    m(target, anchor) {
-      insert(target, span, anchor);
-      if (!mounted) {
-        dispose = listen(span, "mousedown", ctx[1]);
-        mounted = true;
-      }
-    },
-    p: noop,
-    d(detaching) {
-      if (detaching)
-        detach(span);
-      mounted = false;
-      dispose();
-    }
-  };
-}
-function create_if_block16(ctx) {
-  let span;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      span = element("span");
-      attr(span, "class", "handle visible svelte-1desyj5");
-    },
-    m(target, anchor) {
-      insert(target, span, anchor);
-      if (!mounted) {
-        dispose = listen(span, "mousedown", ctx[1]);
-        mounted = true;
-      }
-    },
-    p: noop,
-    d(detaching) {
-      if (detaching)
-        detach(span);
-      mounted = false;
-      dispose();
-    }
-  };
-}
-function create_fragment65(ctx) {
-  let if_block_anchor;
-  let mounted;
-  let dispose;
-  function select_block_type(ctx2, dirty) {
-    if (ctx2[0])
-      return create_if_block16;
-    return create_else_block5;
-  }
-  let current_block_type = select_block_type(ctx, -1);
-  let if_block = current_block_type(ctx);
-  return {
-    c() {
-      if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      if (!mounted) {
-        dispose = [
-          listen(window, "mouseup", ctx[2]),
-          listen(window, "mousemove", ctx[3])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (current_block_type === (current_block_type = select_block_type(ctx2, dirty)) && if_block) {
-        if_block.p(ctx2, dirty);
-      } else {
-        if_block.d(1);
-        if_block = current_block_type(ctx2);
-        if (if_block) {
-          if_block.c();
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      }
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance65($$self, $$props, $$invalidate) {
-  let { width } = $$props;
-  let { onChange } = $$props;
-  let { onFinalize } = $$props;
-  let { min: min2 } = $$props;
-  let start2;
-  let initial;
-  function startResize(event) {
-    $$invalidate(0, start2 = event.pageX);
-    initial = width;
-  }
-  function stopResize(event) {
-    if (start2 && initial) {
-      const delta = event.pageX - start2;
-      const newWidth = initial + delta;
-      if (newWidth >= min2) {
-        onFinalize(width);
-      }
-    }
-    $$invalidate(0, start2 = null);
-    initial = null;
-  }
-  function resize(event) {
-    if (start2 && initial) {
-      const delta = event.pageX - start2;
-      const newWidth = initial + delta;
-      if (newWidth >= min2) {
-        onChange(newWidth);
-      }
-    }
-  }
-  $$self.$$set = ($$props2) => {
-    if ("width" in $$props2)
-      $$invalidate(4, width = $$props2.width);
-    if ("onChange" in $$props2)
-      $$invalidate(5, onChange = $$props2.onChange);
-    if ("onFinalize" in $$props2)
-      $$invalidate(6, onFinalize = $$props2.onFinalize);
-    if ("min" in $$props2)
-      $$invalidate(7, min2 = $$props2.min);
-  };
-  return [start2, startResize, stopResize, resize, width, onChange, onFinalize, min2];
-}
-var Resizer = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance65, create_fragment65, safe_not_equal, {
-      width: 4,
-      onChange: 5,
-      onFinalize: 6,
-      min: 7
-    }, add_css37);
-  }
-};
-var Resizer_default = Resizer;
-
-// src/views/Table/components/DataGrid/GridCell/GridCell.svelte
-function add_css38(target) {
-  append_styles(target, "svelte-1sroa00", "div.svelte-1sroa00{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);box-sizing:border-box;vertical-align:middle;width:100%;min-height:30px}.selected.svelte-1sroa00{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-1sroa00{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-1sroa00{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-1sroa00{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;text-align:center;padding:0 4px}");
-}
-var get_read_slot_changes_1 = (dirty) => ({});
-var get_read_slot_context_1 = (ctx) => ({});
-var get_hover_slot_changes = (dirty) => ({});
-var get_hover_slot_context = (ctx) => ({});
-var get_selected_slot_changes = (dirty) => ({});
-var get_selected_slot_context = (ctx) => ({});
-var get_read_slot_changes = (dirty) => ({});
-var get_read_slot_context = (ctx) => ({});
-var get_edit_slot_changes = (dirty) => ({});
-var get_edit_slot_context = (ctx) => ({});
-function create_else_block_1(ctx) {
-  let current;
-  const read_slot_template = ctx[23].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context_1);
-  return {
-    c() {
-      if (read_slot)
-        read_slot.c();
-    },
-    m(target, anchor) {
-      if (read_slot) {
-        read_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (read_slot) {
-        if (read_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes_1), get_read_slot_context_1);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(read_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(read_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (read_slot)
-        read_slot.d(detaching);
-    }
-  };
-}
-function create_if_block_42(ctx) {
-  let current;
-  const hover_slot_template = ctx[23].hover;
-  const hover_slot = create_slot(hover_slot_template, ctx, ctx[22], get_hover_slot_context);
-  return {
-    c() {
-      if (hover_slot)
-        hover_slot.c();
-    },
-    m(target, anchor) {
-      if (hover_slot) {
-        hover_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (hover_slot) {
-        if (hover_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(hover_slot_template, ctx2[22], dirty, get_hover_slot_changes), get_hover_slot_context);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(hover_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(hover_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (hover_slot)
-        hover_slot.d(detaching);
-    }
-  };
-}
-function create_if_block_34(ctx) {
-  let current;
-  const selected_slot_template = ctx[23].selected;
-  const selected_slot = create_slot(selected_slot_template, ctx, ctx[22], get_selected_slot_context);
-  return {
-    c() {
-      if (selected_slot)
-        selected_slot.c();
-    },
-    m(target, anchor) {
-      if (selected_slot) {
-        selected_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (selected_slot) {
-        if (selected_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(selected_slot_template, ctx2[22], dirty, get_selected_slot_changes), get_selected_slot_context);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(selected_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(selected_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (selected_slot)
-        selected_slot.d(detaching);
-    }
-  };
-}
-function create_if_block_110(ctx) {
-  let current_block_type_index;
-  let if_block;
-  let if_block_anchor;
-  let current;
-  const if_block_creators = [create_if_block_25, create_else_block6];
-  const if_blocks = [];
-  function select_block_type_1(ctx2, dirty) {
-    if (ctx2[5].editable)
-      return 0;
-    return 1;
-  }
-  current_block_type_index = select_block_type_1(ctx, -1);
-  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  return {
-    c() {
-      if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if_blocks[current_block_type_index].m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type_1(ctx2, dirty);
-      if (current_block_type_index === previous_block_index) {
-        if_blocks[current_block_type_index].p(ctx2, dirty);
-      } else {
-        group_outros();
-        transition_out(if_blocks[previous_block_index], 1, 1, () => {
-          if_blocks[previous_block_index] = null;
-        });
-        check_outros();
-        if_block = if_blocks[current_block_type_index];
-        if (!if_block) {
-          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-          if_block.c();
-        } else {
-          if_block.p(ctx2, dirty);
-        }
-        transition_in(if_block, 1);
-        if_block.m(if_block_anchor.parentNode, if_block_anchor);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if_blocks[current_block_type_index].d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_else_block6(ctx) {
-  let current;
-  const read_slot_template = ctx[23].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context);
-  return {
-    c() {
-      if (read_slot)
-        read_slot.c();
-    },
-    m(target, anchor) {
-      if (read_slot) {
-        read_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (read_slot) {
-        if (read_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes), get_read_slot_context);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(read_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(read_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (read_slot)
-        read_slot.d(detaching);
-    }
-  };
-}
-function create_if_block_25(ctx) {
-  let current;
-  const edit_slot_template = ctx[23].edit;
-  const edit_slot = create_slot(edit_slot_template, ctx, ctx[22], get_edit_slot_context);
-  return {
-    c() {
-      if (edit_slot)
-        edit_slot.c();
-    },
-    m(target, anchor) {
-      if (edit_slot) {
-        edit_slot.m(target, anchor);
-      }
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (edit_slot) {
-        if (edit_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(edit_slot_template, ctx2[22], dirty, get_edit_slot_changes), get_edit_slot_context);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(edit_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(edit_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (edit_slot)
-        edit_slot.d(detaching);
-    }
-  };
-}
-function create_if_block17(ctx) {
-  var _a;
-  let resizer;
-  let current;
-  resizer = new Resizer_default({
-    props: {
-      width: (_a = ctx[5].width) != null ? _a : 180,
-      min: 100,
-      onChange: ctx[3],
-      onFinalize: ctx[4]
-    }
-  });
-  return {
-    c() {
-      create_component(resizer.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(resizer, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const resizer_changes = {};
-      if (dirty & 32)
-        resizer_changes.width = (_a2 = ctx2[5].width) != null ? _a2 : 180;
-      if (dirty & 8)
-        resizer_changes.onChange = ctx2[3];
-      if (dirty & 16)
-        resizer_changes.onFinalize = ctx2[4];
-      resizer.$set(resizer_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(resizer.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(resizer.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(resizer, detaching);
-    }
-  };
-}
-function create_fragment66(ctx) {
-  let div;
-  let current_block_type_index;
-  let if_block0;
-  let t3;
-  let div_role_value;
-  let div_aria_selected_value;
-  let div_style_value;
-  let div_tabindex_value;
-  let useClickOutside_action;
-  let current;
-  let mounted;
-  let dispose;
-  const if_block_creators = [create_if_block_110, create_if_block_34, create_if_block_42, create_else_block_1];
-  const if_blocks = [];
-  function select_block_type(ctx2, dirty) {
-    if (ctx2[17].edit && ctx2[1])
-      return 0;
-    if (ctx2[17].selected && ctx2[0])
-      return 1;
-    if (ctx2[17].hover && ctx2[11])
-      return 2;
-    return 3;
-  }
-  current_block_type_index = select_block_type(ctx, -1);
-  if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block1 = ctx[2] && create_if_block17(ctx);
-  return {
-    c() {
-      div = element("div");
-      if_block0.c();
-      t3 = space();
-      if (if_block1)
-        if_block1.c();
-      attr(div, "role", div_role_value = ctx[16]());
-      attr(div, "aria-selected", div_aria_selected_value = ctx[8] || ctx[7] ? void 0 : ctx[0]);
-      attr(div, "aria-colindex", ctx[6]);
-      attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
-      attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
-      attr(div, "class", "svelte-1sroa00");
-      toggle_class(div, "columnHeader", ctx[7]);
-      toggle_class(div, "header", ctx[5].header);
-      toggle_class(div, "selected", ctx[0]);
-      toggle_class(div, "rowHeader", ctx[8]);
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if_blocks[current_block_type_index].m(div, null);
-      append(div, t3);
-      if (if_block1)
-        if_block1.m(div, null);
-      ctx[25](div);
-      current = true;
-      if (!mounted) {
-        dispose = [
-          listen(div, "click", ctx[12]),
-          listen(div, "dblclick", ctx[13]),
-          listen(div, "mousedown", ctx[24]),
-          listen(div, "mouseenter", ctx[26]),
-          listen(div, "mouseleave", ctx[27]),
-          listen(div, "focus", ctx[28]),
-          listen(div, "blur", ctx[15]),
-          listen(div, "keydown", ctx[14]),
-          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[29]))
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type(ctx2, dirty);
-      if (current_block_type_index === previous_block_index) {
-        if_blocks[current_block_type_index].p(ctx2, dirty);
-      } else {
-        group_outros();
-        transition_out(if_blocks[previous_block_index], 1, 1, () => {
-          if_blocks[previous_block_index] = null;
-        });
-        check_outros();
-        if_block0 = if_blocks[current_block_type_index];
-        if (!if_block0) {
-          if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-          if_block0.c();
-        } else {
-          if_block0.p(ctx2, dirty);
-        }
-        transition_in(if_block0, 1);
-        if_block0.m(div, t3);
-      }
-      if (ctx2[2]) {
-        if (if_block1) {
-          if_block1.p(ctx2, dirty);
-          if (dirty & 4) {
-            transition_in(if_block1, 1);
-          }
-        } else {
-          if_block1 = create_if_block17(ctx2);
-          if_block1.c();
-          transition_in(if_block1, 1);
-          if_block1.m(div, null);
-        }
-      } else if (if_block1) {
-        group_outros();
-        transition_out(if_block1, 1, 1, () => {
-          if_block1 = null;
-        });
-        check_outros();
-      }
-      if (!current || dirty & 385 && div_aria_selected_value !== (div_aria_selected_value = ctx2[8] || ctx2[7] ? void 0 : ctx2[0])) {
-        attr(div, "aria-selected", div_aria_selected_value);
-      }
-      if (!current || dirty & 64) {
-        attr(div, "aria-colindex", ctx2[6]);
-      }
-      if (!current || dirty & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
-        attr(div, "style", div_style_value);
-      }
-      if (!current || dirty & 384 && div_tabindex_value !== (div_tabindex_value = !ctx2[7] && !ctx2[8] ? 1 : void 0)) {
-        attr(div, "tabindex", div_tabindex_value);
-      }
-      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 513)
-        useClickOutside_action.update.call(null, ctx2[29]);
-      if (!current || dirty & 128) {
-        toggle_class(div, "columnHeader", ctx2[7]);
-      }
-      if (!current || dirty & 32) {
-        toggle_class(div, "header", ctx2[5].header);
-      }
-      if (!current || dirty & 1) {
-        toggle_class(div, "selected", ctx2[0]);
-      }
-      if (!current || dirty & 256) {
-        toggle_class(div, "rowHeader", ctx2[8]);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block0);
-      transition_in(if_block1);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block0);
-      transition_out(if_block1);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if_blocks[current_block_type_index].d();
-      if (if_block1)
-        if_block1.d();
-      ctx[25](null);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance66($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  const $$slots = compute_slots(slots);
-  let { selected = false } = $$props;
-  let { edit = false } = $$props;
-  let { resizable = false } = $$props;
-  let { onResize = () => {
-  } } = $$props;
-  let { onFinalizeResize = () => {
-  } } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { columnHeader = false } = $$props;
-  let { rowHeader = false } = $$props;
-  let { onEditChange = (value) => {
-    $$invalidate(1, edit = value);
-  } } = $$props;
-  let { onCopy = () => {
-  } } = $$props;
-  let { onCut = () => {
-  } } = $$props;
-  let { onPaste = () => {
-  } } = $$props;
-  const dispatch = createEventDispatcher();
-  let hover = false;
-  let ref;
-  function handleClick() {
-    if (!column.header && !columnHeader && !rowHeader) {
-      $$invalidate(0, selected = true);
-    }
-  }
-  function handleDoubleClick() {
-    if (!column.header && !columnHeader && !rowHeader) {
-      onEditChange(true);
-    }
-  }
-  function handleKeyDown(event) {
-    if (event.metaKey || event.ctrlKey) {
-      switch (event.key) {
-        case "c":
-          onCopy();
-          break;
-        case "x":
-          onCut();
-          break;
-        case "v":
-          onPaste();
-          break;
-      }
-    }
-    switch (event.key) {
-      case "Enter":
-        if (edit) {
-          onEditChange(false);
-          ref.focus();
-        } else {
-          onEditChange(true);
-        }
-        break;
-      case "Escape":
-        onEditChange(false);
-        ref.focus();
-        break;
-      case "ArrowLeft":
-        dispatch("navigate", [colindex - 1, rowindex]);
-        event.preventDefault();
-        break;
-      case "ArrowRight":
-        dispatch("navigate", [colindex + 1, rowindex]);
-        event.preventDefault();
-        break;
-      case "ArrowUp":
-        dispatch("navigate", [colindex, rowindex - 1]);
-        event.preventDefault();
-        break;
-      case "ArrowDown":
-        dispatch("navigate", [colindex, rowindex + 1]);
-        event.preventDefault();
-        break;
-      case "Tab":
-        if (event.shiftKey) {
-          dispatch("navigate", [colindex - 1, rowindex]);
-        } else {
-          dispatch("navigate", [colindex + 1, rowindex]);
-        }
-        event.preventDefault();
-        break;
-    }
-  }
-  function handleBlur(event) {
-    $$invalidate(11, hover = false);
-    if (event.currentTarget instanceof HTMLDivElement && event.relatedTarget instanceof HTMLElement && !event.currentTarget.contains(event.relatedTarget)) {
-      $$invalidate(0, selected = false);
-      onEditChange(false);
-    }
-  }
-  function role() {
-    if (columnHeader) {
-      return "columnheader";
-    } else if (rowHeader) {
-      return "rowheader";
-    } else {
-      return "gridcell";
-    }
-  }
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function div_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      ref = $$value;
-      $$invalidate(10, ref);
-    });
-  }
-  const mouseenter_handler = () => $$invalidate(11, hover = true);
-  const mouseleave_handler = () => $$invalidate(11, hover = false);
-  const focus_handler = () => {
-    $$invalidate(11, hover = true);
-    $$invalidate(0, selected = true);
-  };
-  const useClickOutside_function = () => {
-    onEditChange(false);
-    $$invalidate(0, selected = false);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("selected" in $$props2)
-      $$invalidate(0, selected = $$props2.selected);
-    if ("edit" in $$props2)
-      $$invalidate(1, edit = $$props2.edit);
-    if ("resizable" in $$props2)
-      $$invalidate(2, resizable = $$props2.resizable);
-    if ("onResize" in $$props2)
-      $$invalidate(3, onResize = $$props2.onResize);
-    if ("onFinalizeResize" in $$props2)
-      $$invalidate(4, onFinalizeResize = $$props2.onFinalizeResize);
-    if ("column" in $$props2)
-      $$invalidate(5, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(18, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(6, colindex = $$props2.colindex);
-    if ("columnHeader" in $$props2)
-      $$invalidate(7, columnHeader = $$props2.columnHeader);
-    if ("rowHeader" in $$props2)
-      $$invalidate(8, rowHeader = $$props2.rowHeader);
-    if ("onEditChange" in $$props2)
-      $$invalidate(9, onEditChange = $$props2.onEditChange);
-    if ("onCopy" in $$props2)
-      $$invalidate(19, onCopy = $$props2.onCopy);
-    if ("onCut" in $$props2)
-      $$invalidate(20, onCut = $$props2.onCut);
-    if ("onPaste" in $$props2)
-      $$invalidate(21, onPaste = $$props2.onPaste);
-    if ("$$scope" in $$props2)
-      $$invalidate(22, $$scope = $$props2.$$scope);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 1025) {
-      $:
-        if (selected && ref) {
-          ref.focus();
-          ref.scrollIntoView({ block: "nearest", inline: "nearest" });
-        }
-    }
-  };
-  return [
-    selected,
-    edit,
-    resizable,
-    onResize,
-    onFinalizeResize,
-    column,
-    colindex,
-    columnHeader,
-    rowHeader,
-    onEditChange,
-    ref,
-    hover,
-    handleClick,
-    handleDoubleClick,
-    handleKeyDown,
-    handleBlur,
-    role,
-    $$slots,
-    rowindex,
-    onCopy,
-    onCut,
-    onPaste,
-    $$scope,
-    slots,
-    mousedown_handler,
-    div_binding,
-    mouseenter_handler,
-    mouseleave_handler,
-    focus_handler,
-    useClickOutside_function
-  ];
-}
-var GridCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance66, create_fragment66, safe_not_equal, {
-      selected: 0,
-      edit: 1,
-      resizable: 2,
-      onResize: 3,
-      onFinalizeResize: 4,
-      column: 5,
-      rowindex: 18,
-      colindex: 6,
-      columnHeader: 7,
-      rowHeader: 8,
-      onEditChange: 9,
-      onCopy: 19,
-      onCut: 20,
-      onPaste: 21
-    }, add_css38);
-  }
-};
-var GridCell_default = GridCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridBooleanCell/GridBooleanCell.svelte
-function create_if_block18(ctx) {
-  let switch_1;
-  let current;
-  switch_1 = new Switch_default({
-    props: {
-      checked: ctx[0],
-      disabled: !ctx[2].editable
-    }
-  });
-  switch_1.$on("check", ctx[7]);
-  return {
-    c() {
-      create_component(switch_1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(switch_1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const switch_1_changes = {};
-      if (dirty & 1)
-        switch_1_changes.checked = ctx2[0];
-      if (dirty & 4)
-        switch_1_changes.disabled = !ctx2[2].editable;
-      switch_1.$set(switch_1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(switch_1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(switch_1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(switch_1, detaching);
-    }
-  };
-}
-function create_read_slot(ctx) {
-  let show_if = isBoolean(ctx[0]);
-  let if_block_anchor;
-  let current;
-  let if_block = show_if && create_if_block18(ctx);
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1)
-        show_if = isBoolean(ctx2[0]);
-      if (show_if) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block18(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_edit_slot(ctx) {
-  var _a;
-  let switch_1;
-  let current;
-  switch_1 = new Switch_default({
-    props: {
-      slot: "edit",
-      checked: (_a = ctx[0]) != null ? _a : false
-    }
-  });
-  switch_1.$on("check", ctx[6]);
-  return {
-    c() {
-      create_component(switch_1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(switch_1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const switch_1_changes = {};
-      if (dirty & 1)
-        switch_1_changes.checked = (_a2 = ctx2[0]) != null ? _a2 : false;
-      switch_1.$set(switch_1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(switch_1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(switch_1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(switch_1, detaching);
-    }
-  };
-}
-function create_fragment67(ctx) {
-  let gridcell;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      column: ctx[2],
-      $$slots: {
-        edit: [create_edit_slot],
-        read: [create_read_slot]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[8]);
-  gridcell.$on("navigate", ctx[9]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 32)
-        gridcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.colindex = ctx2[4];
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      if (dirty & 1031) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function instance67($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  const check_handler = ({ detail: checked }) => onChange(checked);
-  const check_handler_1 = ({ detail: checked }) => onChange(checked);
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(3, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(4, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(5, selected = $$props2.selected);
-  };
-  return [
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    selected,
-    check_handler,
-    check_handler_1,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridBooleanCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance67, create_fragment67, safe_not_equal, {
-      value: 0,
-      onChange: 1,
-      column: 2,
-      rowindex: 3,
-      colindex: 4,
-      selected: 5
-    });
-  }
-};
-var GridBooleanCell_default = GridBooleanCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridDateCell/GridDateCell.svelte
-function create_if_block19(ctx) {
-  let textlabel;
-  let current;
-  textlabel = new TextLabel_default({
-    props: {
-      value: ctx[0].toLocaleDateString()
-    }
-  });
-  return {
-    c() {
-      create_component(textlabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textlabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textlabel_changes = {};
-      if (dirty & 1)
-        textlabel_changes.value = ctx2[0].toLocaleDateString();
-      textlabel.$set(textlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textlabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textlabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textlabel, detaching);
-    }
-  };
-}
-function create_read_slot2(ctx) {
-  let if_block_anchor;
-  let current;
-  let if_block = ctx[0] && create_if_block19(ctx);
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (ctx2[0]) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block19(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_edit_slot2(ctx) {
-  var _a;
-  let dateinput;
-  let current;
-  dateinput = new DateInput_default({
-    props: {
-      value: (_a = ctx[0]) != null ? _a : null,
-      embed: true
-    }
-  });
-  dateinput.$on("change", ctx[7]);
-  return {
-    c() {
-      create_component(dateinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(dateinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const dateinput_changes = {};
-      if (dirty & 1)
-        dateinput_changes.value = (_a2 = ctx2[0]) != null ? _a2 : null;
-      dateinput.$set(dateinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(dateinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(dateinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(dateinput, detaching);
-    }
-  };
-}
-function create_fragment68(ctx) {
-  let gridcell;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      edit: ctx[6],
-      onEditChange: ctx[8],
-      column: ctx[2],
-      onCopy: ctx[9],
-      $$slots: {
-        edit: [create_edit_slot2],
-        read: [create_read_slot2]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[10]);
-  gridcell.$on("navigate", ctx[11]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 32)
-        gridcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.colindex = ctx2[4];
-      if (dirty & 64)
-        gridcell_changes.edit = ctx2[6];
-      if (dirty & 64)
-        gridcell_changes.onEditChange = ctx2[8];
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      if (dirty & 1)
-        gridcell_changes.onCopy = ctx2[9];
-      if (dirty & 4163) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function instance68($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  let edit = false;
-  const change_handler = ({ detail: value2 }) => {
-    $$invalidate(6, edit = false);
-    onChange(value2);
-  };
-  const func7 = (mode) => {
-    $$invalidate(6, edit = mode);
-  };
-  const func_14 = () => {
-    if (value) {
-      navigator.clipboard.writeText(value.toLocaleDateString());
-    }
-  };
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(3, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(4, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(5, selected = $$props2.selected);
-  };
-  return [
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    selected,
-    edit,
-    change_handler,
-    func7,
-    func_14,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridDateCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance68, create_fragment68, safe_not_equal, {
-      value: 0,
-      onChange: 1,
-      column: 2,
-      rowindex: 3,
-      colindex: 4,
-      selected: 5
-    });
-  }
-};
-var GridDateCell_default = GridDateCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberLabel.svelte
-function add_css39(target) {
-  append_styles(target, "svelte-1xccag5", "div.svelte-1xccag5{width:100%;padding:6px;text-align:right}");
-}
-function create_fragment69(ctx) {
-  let div;
-  let t_value = new Intl.NumberFormat().format(ctx[0]) + "";
-  let t3;
-  return {
-    c() {
-      div = element("div");
-      t3 = text(t_value);
-      attr(div, "class", "svelte-1xccag5");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      append(div, t3);
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 1 && t_value !== (t_value = new Intl.NumberFormat().format(ctx2[0]) + ""))
-        set_data(t3, t_value);
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(div);
-    }
-  };
-}
-function instance69($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-  };
-  return [value];
-}
-var NumberLabel = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance69, create_fragment69, safe_not_equal, { value: 0 }, add_css39);
-  }
-};
-var NumberLabel_default = NumberLabel;
-
-// src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberInput.svelte
-function add_css40(target) {
-  append_styles(target, "svelte-1ncoulf", "input.svelte-1ncoulf{all:unset;background-color:var(--background-primary);box-sizing:border-box;width:100%;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal);text-align:right}input.svelte-1ncoulf:focus{box-shadow:none !important}input.svelte-1ncoulf:hover{background-color:transparent}");
-}
-function create_fragment70(ctx) {
-  let input;
-  let input_tabindex_value;
-  let mounted;
-  let dispose;
-  return {
-    c() {
-      input = element("input");
-      attr(input, "tabindex", input_tabindex_value = -1);
-      attr(input, "type", "number");
-      input.value = ctx[0];
-      attr(input, "class", "svelte-1ncoulf");
-    },
-    m(target, anchor) {
-      insert(target, input, anchor);
-      ctx[6](input);
-      if (!mounted) {
-        dispose = [
-          listen(input, "input", ctx[2]),
-          listen(input, "keypress", ctx[3]),
-          listen(input, "blur", ctx[5])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 1 && input.value !== ctx2[0]) {
-        input.value = ctx2[0];
-      }
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(input);
-      ctx[6](null);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance70($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let ref;
-  function handleInput(event) {
-    if (event.currentTarget instanceof HTMLInputElement) {
-      $$invalidate(0, value = event.currentTarget.valueAsNumber);
-      onChange(value);
-    }
-  }
-  function handleKeyup(event) {
-    if (event.currentTarget instanceof HTMLInputElement) {
-      $$invalidate(0, value = event.currentTarget.valueAsNumber);
-    }
-  }
-  onMount(() => {
-    ref.focus();
-  });
-  function blur_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function input_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      ref = $$value;
-      $$invalidate(1, ref);
-    });
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(4, onChange = $$props2.onChange);
-  };
-  return [value, ref, handleInput, handleKeyup, onChange, blur_handler, input_binding];
-}
-var NumberInput2 = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance70, create_fragment70, safe_not_equal, { value: 0, onChange: 4 }, add_css40);
-  }
-};
-var NumberInput_default2 = NumberInput2;
-
-// src/views/Table/components/DataGrid/GridCell/GridNumberCell/GridNumberCell.svelte
-function create_if_block20(ctx) {
-  let numberlabel;
-  let current;
-  numberlabel = new NumberLabel_default({ props: { value: ctx[1] } });
-  return {
-    c() {
-      create_component(numberlabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(numberlabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const numberlabel_changes = {};
-      if (dirty & 2)
-        numberlabel_changes.value = ctx2[1];
-      numberlabel.$set(numberlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(numberlabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(numberlabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(numberlabel, detaching);
-    }
-  };
-}
-function create_read_slot3(ctx) {
-  let show_if = isNumber(ctx[1]);
-  let if_block_anchor;
-  let current;
-  let if_block = show_if && create_if_block20(ctx);
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 2)
-        show_if = isNumber(ctx2[1]);
-      if (show_if) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 2) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block20(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_edit_slot3(ctx) {
-  var _a;
-  let numberinput;
-  let current;
-  numberinput = new NumberInput_default2({
-    props: {
-      slot: "edit",
-      value: (_a = ctx[1]) != null ? _a : 0,
-      onChange: ctx[7]
-    }
-  });
-  numberinput.$on("blur", ctx[8]);
-  return {
-    c() {
-      create_component(numberinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(numberinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const numberinput_changes = {};
-      if (dirty & 2)
-        numberinput_changes.value = (_a2 = ctx2[1]) != null ? _a2 : 0;
-      if (dirty & 4)
-        numberinput_changes.onChange = ctx2[7];
-      numberinput.$set(numberinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(numberinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(numberinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(numberinput, detaching);
-    }
-  };
+// src/views/Custom/CustomView.svelte
+function add_css41(target) {
+  append_styles(target, "svelte-vc0aet", "div.svelte-vc0aet{width:100%;height:100%;padding:var(--size-4-3)}.noPadding.svelte-vc0aet{padding:0}");
 }
 function create_fragment71(ctx) {
-  let gridcell;
-  let updating_edit;
-  let updating_selected;
-  let current;
-  function gridcell_edit_binding(value) {
-    ctx[12](value);
-  }
-  function gridcell_selected_binding(value) {
-    ctx[13](value);
-  }
-  let gridcell_props = {
-    column: ctx[3],
-    rowindex: ctx[4],
-    colindex: ctx[5],
-    onCopy: ctx[9],
-    onCut: ctx[10],
-    onPaste: ctx[11],
-    $$slots: {
-      edit: [create_edit_slot3],
-      read: [create_read_slot3]
-    },
-    $$scope: { ctx }
-  };
-  if (ctx[6] !== void 0) {
-    gridcell_props.edit = ctx[6];
-  }
-  if (ctx[0] !== void 0) {
-    gridcell_props.selected = ctx[0];
-  }
-  gridcell = new GridCell_default({ props: gridcell_props });
-  binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
-  binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
-  gridcell.$on("mousedown", ctx[14]);
-  gridcell.$on("navigate", ctx[15]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 8)
-        gridcell_changes.column = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.rowindex = ctx2[4];
-      if (dirty & 32)
-        gridcell_changes.colindex = ctx2[5];
-      if (dirty & 2)
-        gridcell_changes.onCopy = ctx2[9];
-      if (dirty & 6)
-        gridcell_changes.onCut = ctx2[10];
-      if (dirty & 4)
-        gridcell_changes.onPaste = ctx2[11];
-      if (dirty & 65607) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      if (!updating_edit && dirty & 64) {
-        updating_edit = true;
-        gridcell_changes.edit = ctx2[6];
-        add_flush_callback(() => updating_edit = false);
-      }
-      if (!updating_selected && dirty & 1) {
-        updating_selected = true;
-        gridcell_changes.selected = ctx2[0];
-        add_flush_callback(() => updating_selected = false);
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function instance71($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  let edit = false;
-  const func7 = (value2) => {
-    onChange(value2);
-  };
-  const blur_handler = (event) => {
-    if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
-      $$invalidate(0, selected = false);
-      $$invalidate(6, edit = false);
-    }
-  };
-  const func_14 = () => {
-    var _a;
-    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
-  };
-  const func_2 = () => {
-    var _a;
-    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
-    onChange(void 0);
-  };
-  const func_3 = () => __async(this, null, function* () {
-    onChange(parseFloat(yield navigator.clipboard.readText()));
-  });
-  function gridcell_edit_binding(value2) {
-    edit = value2;
-    $$invalidate(6, edit);
-  }
-  function gridcell_selected_binding(value2) {
-    selected = value2;
-    $$invalidate(0, selected);
-  }
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(1, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(2, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(3, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(4, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(5, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(0, selected = $$props2.selected);
-  };
-  return [
-    selected,
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    edit,
-    func7,
-    blur_handler,
-    func_14,
-    func_2,
-    func_3,
-    gridcell_edit_binding,
-    gridcell_selected_binding,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridNumberCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance71, create_fragment71, safe_not_equal, {
-      value: 1,
-      onChange: 2,
-      column: 3,
-      rowindex: 4,
-      colindex: 5,
-      selected: 0
-    });
-  }
-};
-var GridNumberCell_default = GridNumberCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridTextCell/TextLabel.svelte
-function add_css41(target) {
-  append_styles(target, "svelte-mdpwqc", "div.svelte-mdpwqc{padding:6px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}");
-}
-function create_fragment72(ctx) {
-  let div;
-  let t3;
-  return {
-    c() {
-      div = element("div");
-      t3 = text(ctx[0]);
-      attr(div, "class", "svelte-mdpwqc");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      append(div, t3);
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 1)
-        set_data(t3, ctx2[0]);
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(div);
-    }
-  };
-}
-function instance72($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-  };
-  return [value];
-}
-var TextLabel = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance72, create_fragment72, safe_not_equal, { value: 0 }, add_css41);
-  }
-};
-var TextLabel_default = TextLabel;
-
-// src/views/Table/components/DataGrid/GridCell/GridTextCell/GridTextCell.svelte
-function create_read_slot4(ctx) {
-  let textlabel;
-  let current;
-  textlabel = new TextLabel_default({
-    props: {
-      slot: "read",
-      value: ctx[0] || ""
-    }
-  });
-  return {
-    c() {
-      create_component(textlabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textlabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textlabel_changes = {};
-      if (dirty & 1)
-        textlabel_changes.value = ctx2[0] || "";
-      textlabel.$set(textlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textlabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textlabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textlabel, detaching);
-    }
-  };
-}
-function create_edit_slot4(ctx) {
-  let textinput;
-  let current;
-  textinput = new TextInput_default({
-    props: {
-      autoFocus: true,
-      slot: "edit",
-      value: ctx[0] || "",
-      embed: true,
-      width: "100%"
-    }
-  });
-  textinput.$on("input", ctx[7]);
-  textinput.$on("blur", ctx[8]);
-  return {
-    c() {
-      create_component(textinput.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textinput, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textinput_changes = {};
-      if (dirty & 1)
-        textinput_changes.value = ctx2[0] || "";
-      textinput.$set(textinput_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textinput.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textinput.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textinput, detaching);
-    }
-  };
-}
-function create_fragment73(ctx) {
-  let gridcell;
-  let updating_edit;
-  let updating_selected;
-  let current;
-  function gridcell_edit_binding(value) {
-    ctx[12](value);
-  }
-  function gridcell_selected_binding(value) {
-    ctx[13](value);
-  }
-  let gridcell_props = {
-    column: ctx[3],
-    rowindex: ctx[4],
-    colindex: ctx[5],
-    onCopy: ctx[9],
-    onCut: ctx[10],
-    onPaste: ctx[11],
-    $$slots: {
-      edit: [create_edit_slot4],
-      read: [create_read_slot4]
-    },
-    $$scope: { ctx }
-  };
-  if (ctx[6] !== void 0) {
-    gridcell_props.edit = ctx[6];
-  }
-  if (ctx[1] !== void 0) {
-    gridcell_props.selected = ctx[1];
-  }
-  gridcell = new GridCell_default({ props: gridcell_props });
-  binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
-  binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
-  gridcell.$on("mousedown", ctx[14]);
-  gridcell.$on("navigate", ctx[15]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 8)
-        gridcell_changes.column = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.rowindex = ctx2[4];
-      if (dirty & 32)
-        gridcell_changes.colindex = ctx2[5];
-      if (dirty & 1)
-        gridcell_changes.onCopy = ctx2[9];
-      if (dirty & 5)
-        gridcell_changes.onCut = ctx2[10];
-      if (dirty & 4)
-        gridcell_changes.onPaste = ctx2[11];
-      if (dirty & 65607) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      if (!updating_edit && dirty & 64) {
-        updating_edit = true;
-        gridcell_changes.edit = ctx2[6];
-        add_flush_callback(() => updating_edit = false);
-      }
-      if (!updating_selected && dirty & 2) {
-        updating_selected = true;
-        gridcell_changes.selected = ctx2[1];
-        add_flush_callback(() => updating_selected = false);
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function instance73($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  let edit = false;
-  const input_handler = ({ detail }) => $$invalidate(0, value = detail);
-  const blur_handler = (event) => {
-    if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
-      $$invalidate(1, selected = false);
-      $$invalidate(6, edit = false);
-    }
-    onChange(value);
-  };
-  const func7 = () => {
-    var _a;
-    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
-  };
-  const func_14 = () => {
-    var _a;
-    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
-    onChange(void 0);
-  };
-  const func_2 = () => __async(this, null, function* () {
-    onChange(yield navigator.clipboard.readText());
-  });
-  function gridcell_edit_binding(value2) {
-    edit = value2;
-    $$invalidate(6, edit);
-  }
-  function gridcell_selected_binding(value2) {
-    selected = value2;
-    $$invalidate(1, selected);
-  }
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(2, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(3, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(4, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(5, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(1, selected = $$props2.selected);
-  };
-  return [
-    value,
-    selected,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    edit,
-    input_handler,
-    blur_handler,
-    func7,
-    func_14,
-    func_2,
-    gridcell_edit_binding,
-    gridcell_selected_binding,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridTextCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance73, create_fragment73, safe_not_equal, {
-      value: 0,
-      onChange: 2,
-      column: 3,
-      rowindex: 4,
-      colindex: 5,
-      selected: 1
-    });
-  }
-};
-var GridTextCell_default = GridTextCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
-var import_obsidian31 = __toModule(require("obsidian"));
-
-// src/views/Table/components/DataGrid/GridCell/GridLinkCell/LinkLabel.svelte
-function add_css42(target) {
-  append_styles(target, "svelte-1r2cjw9", "div.svelte-1r2cjw9{padding:6px;width:100%}");
-}
-function create_if_block21(ctx) {
-  let internallink;
-  let current;
-  internallink = new InternalLink_default({
-    props: {
-      linkText: ctx[0].linkText,
-      sourcePath: ctx[0].sourcePath,
-      resolved: !!ctx[1].metadataCache.getFirstLinkpathDest(ctx[0].linkText, ctx[0].sourcePath),
-      $$slots: { default: [create_default_slot20] },
-      $$scope: { ctx }
-    }
-  });
-  internallink.$on("open", ctx[2]);
-  return {
-    c() {
-      create_component(internallink.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(internallink, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const internallink_changes = {};
-      if (dirty & 1)
-        internallink_changes.linkText = ctx2[0].linkText;
-      if (dirty & 1)
-        internallink_changes.sourcePath = ctx2[0].sourcePath;
-      if (dirty & 3)
-        internallink_changes.resolved = !!ctx2[1].metadataCache.getFirstLinkpathDest(ctx2[0].linkText, ctx2[0].sourcePath);
-      if (dirty & 9) {
-        internallink_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      internallink.$set(internallink_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(internallink.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(internallink.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(internallink, detaching);
-    }
-  };
-}
-function create_default_slot20(ctx) {
-  var _a;
-  let t_value = ((_a = ctx[0].displayName) != null ? _a : ctx[0].linkText) + "";
-  let t3;
-  return {
-    c() {
-      t3 = text(t_value);
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      if (dirty & 1 && t_value !== (t_value = ((_a2 = ctx2[0].displayName) != null ? _a2 : ctx2[0].linkText) + ""))
-        set_data(t3, t_value);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_fragment74(ctx) {
-  let div;
-  let current;
-  let if_block = ctx[0] && create_if_block21(ctx);
-  return {
-    c() {
-      div = element("div");
-      if (if_block)
-        if_block.c();
-      attr(div, "class", "svelte-1r2cjw9");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if (if_block)
-        if_block.m(div, null);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      if (ctx2[0]) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block21(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(div, null);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if (if_block)
-        if_block.d();
-    }
-  };
-}
-function instance74($$self, $$props, $$invalidate) {
-  let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(1, $app = $$value));
-  let { value } = $$props;
-  const open_handler = ({ detail: { linkText, sourcePath, newLeaf } }) => {
-    $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-  };
-  return [value, $app, open_handler];
-}
-var LinkLabel = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance74, create_fragment74, safe_not_equal, { value: 0 }, add_css42);
-  }
-};
-var LinkLabel_default = LinkLabel;
-
-// src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
-function create_if_block_111(ctx) {
-  let linklabel;
-  let current;
-  linklabel = new LinkLabel_default({ props: { value: ctx[0] } });
-  return {
-    c() {
-      create_component(linklabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(linklabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const linklabel_changes = {};
-      if (dirty & 1)
-        linklabel_changes.value = ctx2[0];
-      linklabel.$set(linklabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(linklabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(linklabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(linklabel, detaching);
-    }
-  };
-}
-function create_read_slot5(ctx) {
-  let show_if = isOptionalLink(ctx[0]);
-  let if_block_anchor;
-  let current;
-  let if_block = show_if && create_if_block_111(ctx);
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1)
-        show_if = isOptionalLink(ctx2[0]);
-      if (show_if) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block_111(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_if_block22(ctx) {
-  var _a, _b;
-  let fileautocomplete;
-  let current;
-  fileautocomplete = new FileAutocomplete_default({
-    props: {
-      files: getNotesInFolder(ctx[7].vault.getRoot()),
-      value: (_b = (_a = ctx[0]) == null ? void 0 : _a.linkText) != null ? _b : "",
-      embed: true,
-      autoFocus: true,
-      width: "100%",
-      getLabel: ctx[9],
-      getDescription: func_12
-    }
-  });
-  fileautocomplete.$on("blur", ctx[10]);
-  fileautocomplete.$on("change", ctx[11]);
-  return {
-    c() {
-      create_component(fileautocomplete.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(fileautocomplete, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2, _b2;
-      const fileautocomplete_changes = {};
-      if (dirty & 128)
-        fileautocomplete_changes.files = getNotesInFolder(ctx2[7].vault.getRoot());
-      if (dirty & 1)
-        fileautocomplete_changes.value = (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.linkText) != null ? _b2 : "";
-      fileautocomplete.$set(fileautocomplete_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(fileautocomplete.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(fileautocomplete.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(fileautocomplete, detaching);
-    }
-  };
-}
-function create_edit_slot5(ctx) {
-  let show_if = isOptionalLink(ctx[0]);
-  let if_block_anchor;
-  let current;
-  let if_block = show_if && create_if_block22(ctx);
-  return {
-    c() {
-      if (if_block)
-        if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if (if_block)
-        if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 1)
-        show_if = isOptionalLink(ctx2[0]);
-      if (show_if) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty & 1) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block22(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (if_block)
-        if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_fragment75(ctx) {
-  let gridcell;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      edit: ctx[6],
-      onEditChange: ctx[12],
-      column: ctx[2],
-      $$slots: {
-        edit: [create_edit_slot5],
-        read: [create_read_slot5]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[13]);
-  gridcell.$on("navigate", ctx[14]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 32)
-        gridcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.colindex = ctx2[4];
-      if (dirty & 64)
-        gridcell_changes.edit = ctx2[6];
-      if (dirty & 64)
-        gridcell_changes.onEditChange = ctx2[12];
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      if (dirty & 32963) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-var func_12 = (file) => file.path.split("/").slice(0, -1).join("/");
-function instance75($$self, $$props, $$invalidate) {
-  let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  const sourcePath = getContext("sourcePath");
-  let edit = false;
-  const func7 = (file) => file instanceof import_obsidian31.TFile ? file.basename : "";
-  const blur_handler = () => {
-    $$invalidate(6, edit = false);
-  };
-  const change_handler = ({ detail: linkText }) => {
-    onChange(linkText ? { linkText, sourcePath } : void 0);
-  };
-  const func_2 = (value2) => $$invalidate(6, edit = value2);
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(3, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(4, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(5, selected = $$props2.selected);
-  };
-  return [
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    selected,
-    edit,
-    $app,
-    sourcePath,
-    func7,
-    blur_handler,
-    change_handler,
-    func_2,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridLinkCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance75, create_fragment75, safe_not_equal, {
-      value: 0,
-      onChange: 1,
-      column: 2,
-      rowindex: 3,
-      colindex: 4,
-      selected: 5
-    });
-  }
-};
-var GridLinkCell_default = GridLinkCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridListCell/GridListCell.svelte
-function create_read_slot6(ctx) {
-  var _a;
-  let taglist;
-  let current;
-  taglist = new TagList_default({
-    props: {
-      slot: "read",
-      edit: false,
-      values: (_a = ctx[0]) != null ? _a : []
-    }
-  });
-  return {
-    c() {
-      create_component(taglist.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(taglist, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const taglist_changes = {};
-      if (dirty & 1)
-        taglist_changes.values = (_a2 = ctx2[0]) != null ? _a2 : [];
-      taglist.$set(taglist_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(taglist.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(taglist.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(taglist, detaching);
-    }
-  };
-}
-function create_edit_slot6(ctx) {
-  var _a;
-  let taglist;
-  let current;
-  taglist = new TagList_default({
-    props: {
-      slot: "edit",
-      edit: true,
-      values: (_a = ctx[0]) != null ? _a : [],
-      onChange: ctx[1]
-    }
-  });
-  return {
-    c() {
-      create_component(taglist.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(taglist, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a2;
-      const taglist_changes = {};
-      if (dirty & 1)
-        taglist_changes.values = (_a2 = ctx2[0]) != null ? _a2 : [];
-      if (dirty & 2)
-        taglist_changes.onChange = ctx2[1];
-      taglist.$set(taglist_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(taglist.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(taglist.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(taglist, detaching);
-    }
-  };
-}
-function create_fragment76(ctx) {
-  let gridcell;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      column: ctx[2],
-      $$slots: {
-        edit: [create_edit_slot6],
-        read: [create_read_slot6]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[6]);
-  gridcell.$on("navigate", ctx[7]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcell_changes = {};
-      if (dirty & 32)
-        gridcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridcell_changes.colindex = ctx2[4];
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      if (dirty & 259) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function instance76($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(3, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(4, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(5, selected = $$props2.selected);
-  };
-  return [
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    selected,
-    mousedown_handler,
-    navigate_handler
-  ];
-}
-var GridListCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance76, create_fragment76, safe_not_equal, {
-      value: 0,
-      onChange: 1,
-      column: 2,
-      rowindex: 3,
-      colindex: 4,
-      selected: 5
-    });
-  }
-};
-var GridListCell_default = GridListCell;
-
-// src/views/Table/components/DataGrid/GridCell/GridTypedCell.svelte
-function create_else_block7(ctx) {
-  let gridcell;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      rowindex: ctx[3],
-      selected: ctx[5],
-      colindex: ctx[4],
-      column: ctx[2]
-    }
-  });
-  gridcell.$on("mousedown", ctx[18]);
-  gridcell.$on("navigate", ctx[19]);
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridcell_changes = {};
-      if (dirty & 8)
-        gridcell_changes.rowindex = ctx2[3];
-      if (dirty & 32)
-        gridcell_changes.selected = ctx2[5];
-      if (dirty & 16)
-        gridcell_changes.colindex = ctx2[4];
-      if (dirty & 4)
-        gridcell_changes.column = ctx2[2];
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function create_if_block_52(ctx) {
-  let gridlistcell;
-  let current;
-  gridlistcell = new GridListCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  gridlistcell.$on("mousedown", ctx[16]);
-  gridlistcell.$on("navigate", ctx[17]);
-  return {
-    c() {
-      create_component(gridlistcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridlistcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridlistcell_changes = {};
-      if (dirty & 32)
-        gridlistcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridlistcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridlistcell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        gridlistcell_changes.value = ctx2[0];
-      if (dirty & 2)
-        gridlistcell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        gridlistcell_changes.column = ctx2[2];
-      gridlistcell.$set(gridlistcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridlistcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridlistcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridlistcell, detaching);
-    }
-  };
-}
-function create_if_block_43(ctx) {
-  let gridlinkcell;
-  let current;
-  gridlinkcell = new GridLinkCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  gridlinkcell.$on("mousedown", ctx[14]);
-  gridlinkcell.$on("navigate", ctx[15]);
-  return {
-    c() {
-      create_component(gridlinkcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridlinkcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridlinkcell_changes = {};
-      if (dirty & 32)
-        gridlinkcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridlinkcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridlinkcell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        gridlinkcell_changes.value = ctx2[0];
-      if (dirty & 2)
-        gridlinkcell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        gridlinkcell_changes.column = ctx2[2];
-      gridlinkcell.$set(gridlinkcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridlinkcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridlinkcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridlinkcell, detaching);
-    }
-  };
-}
-function create_if_block_35(ctx) {
-  let griddatecell;
-  let current;
-  griddatecell = new GridDateCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  griddatecell.$on("mousedown", ctx[12]);
-  griddatecell.$on("navigate", ctx[13]);
-  return {
-    c() {
-      create_component(griddatecell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(griddatecell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const griddatecell_changes = {};
-      if (dirty & 32)
-        griddatecell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        griddatecell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        griddatecell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        griddatecell_changes.value = ctx2[0];
-      if (dirty & 2)
-        griddatecell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        griddatecell_changes.column = ctx2[2];
-      griddatecell.$set(griddatecell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(griddatecell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(griddatecell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(griddatecell, detaching);
-    }
-  };
-}
-function create_if_block_26(ctx) {
-  let gridnumbercell;
-  let current;
-  gridnumbercell = new GridNumberCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  gridnumbercell.$on("mousedown", ctx[10]);
-  gridnumbercell.$on("navigate", ctx[11]);
-  return {
-    c() {
-      create_component(gridnumbercell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridnumbercell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridnumbercell_changes = {};
-      if (dirty & 32)
-        gridnumbercell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridnumbercell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridnumbercell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        gridnumbercell_changes.value = ctx2[0];
-      if (dirty & 2)
-        gridnumbercell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        gridnumbercell_changes.column = ctx2[2];
-      gridnumbercell.$set(gridnumbercell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridnumbercell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridnumbercell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridnumbercell, detaching);
-    }
-  };
-}
-function create_if_block_112(ctx) {
-  let gridbooleancell;
-  let current;
-  gridbooleancell = new GridBooleanCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  gridbooleancell.$on("mousedown", ctx[8]);
-  gridbooleancell.$on("navigate", ctx[9]);
-  return {
-    c() {
-      create_component(gridbooleancell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridbooleancell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridbooleancell_changes = {};
-      if (dirty & 32)
-        gridbooleancell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridbooleancell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridbooleancell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        gridbooleancell_changes.value = ctx2[0];
-      if (dirty & 2)
-        gridbooleancell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        gridbooleancell_changes.column = ctx2[2];
-      gridbooleancell.$set(gridbooleancell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridbooleancell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridbooleancell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridbooleancell, detaching);
-    }
-  };
-}
-function create_if_block23(ctx) {
-  let gridtextcell;
-  let current;
-  gridtextcell = new GridTextCell_default({
-    props: {
-      selected: ctx[5],
-      rowindex: ctx[3],
-      colindex: ctx[4],
-      value: ctx[0],
-      onChange: ctx[1],
-      column: ctx[2]
-    }
-  });
-  gridtextcell.$on("mousedown", ctx[6]);
-  gridtextcell.$on("navigate", ctx[7]);
-  return {
-    c() {
-      create_component(gridtextcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridtextcell, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridtextcell_changes = {};
-      if (dirty & 32)
-        gridtextcell_changes.selected = ctx2[5];
-      if (dirty & 8)
-        gridtextcell_changes.rowindex = ctx2[3];
-      if (dirty & 16)
-        gridtextcell_changes.colindex = ctx2[4];
-      if (dirty & 1)
-        gridtextcell_changes.value = ctx2[0];
-      if (dirty & 2)
-        gridtextcell_changes.onChange = ctx2[1];
-      if (dirty & 4)
-        gridtextcell_changes.column = ctx2[2];
-      gridtextcell.$set(gridtextcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridtextcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridtextcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridtextcell, detaching);
-    }
-  };
-}
-function create_fragment77(ctx) {
-  let show_if;
-  let show_if_1;
-  let show_if_2;
-  let show_if_3;
-  let show_if_4;
-  let show_if_5;
-  let current_block_type_index;
-  let if_block;
-  let if_block_anchor;
-  let current;
-  const if_block_creators = [
-    create_if_block23,
-    create_if_block_112,
-    create_if_block_26,
-    create_if_block_35,
-    create_if_block_43,
-    create_if_block_52,
-    create_else_block7
-  ];
-  const if_blocks = [];
-  function select_block_type(ctx2, dirty) {
-    if (dirty & 5)
-      show_if = null;
-    if (dirty & 5)
-      show_if_1 = null;
-    if (dirty & 5)
-      show_if_2 = null;
-    if (dirty & 5)
-      show_if_3 = null;
-    if (dirty & 5)
-      show_if_4 = null;
-    if (dirty & 5)
-      show_if_5 = null;
-    if (show_if == null)
-      show_if = !!(ctx2[2].type === "string" && isOptionalString(ctx2[0]));
-    if (show_if)
-      return 0;
-    if (show_if_1 == null)
-      show_if_1 = !!(ctx2[2].type === "boolean" && isOptionalBoolean(ctx2[0]));
-    if (show_if_1)
-      return 1;
-    if (show_if_2 == null)
-      show_if_2 = !!(ctx2[2].type === "number" && isOptionalNumber(ctx2[0]));
-    if (show_if_2)
-      return 2;
-    if (show_if_3 == null)
-      show_if_3 = !!(ctx2[2].type === "date" && isOptionalDate(ctx2[0]));
-    if (show_if_3)
-      return 3;
-    if (show_if_4 == null)
-      show_if_4 = !!(ctx2[2].type === "link" && isOptionalLink(ctx2[0]));
-    if (show_if_4)
-      return 4;
-    if (show_if_5 == null)
-      show_if_5 = !!(ctx2[2].type === "list" && isOptionalList(ctx2[0]));
-    if (show_if_5)
-      return 5;
-    return 6;
-  }
-  current_block_type_index = select_block_type(ctx, -1);
-  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  return {
-    c() {
-      if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if_blocks[current_block_type_index].m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type(ctx2, dirty);
-      if (current_block_type_index === previous_block_index) {
-        if_blocks[current_block_type_index].p(ctx2, dirty);
-      } else {
-        group_outros();
-        transition_out(if_blocks[previous_block_index], 1, 1, () => {
-          if_blocks[previous_block_index] = null;
-        });
-        check_outros();
-        if_block = if_blocks[current_block_type_index];
-        if (!if_block) {
-          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-          if_block.c();
-        } else {
-          if_block.p(ctx2, dirty);
-        }
-        transition_in(if_block, 1);
-        if_block.m(if_block_anchor.parentNode, if_block_anchor);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if_blocks[current_block_type_index].d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function instance77($$self, $$props, $$invalidate) {
-  let { value } = $$props;
-  let { onChange } = $$props;
-  let { column } = $$props;
-  let { rowindex } = $$props;
-  let { colindex } = $$props;
-  let { selected } = $$props;
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_1(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_1(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_2(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_2(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_3(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_3(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_4(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_4(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_5(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_5(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler_6(event) {
-    bubble.call(this, $$self, event);
-  }
-  function navigate_handler_6(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("value" in $$props2)
-      $$invalidate(0, value = $$props2.value);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-    if ("column" in $$props2)
-      $$invalidate(2, column = $$props2.column);
-    if ("rowindex" in $$props2)
-      $$invalidate(3, rowindex = $$props2.rowindex);
-    if ("colindex" in $$props2)
-      $$invalidate(4, colindex = $$props2.colindex);
-    if ("selected" in $$props2)
-      $$invalidate(5, selected = $$props2.selected);
-  };
-  return [
-    value,
-    onChange,
-    column,
-    rowindex,
-    colindex,
-    selected,
-    mousedown_handler,
-    navigate_handler,
-    mousedown_handler_1,
-    navigate_handler_1,
-    mousedown_handler_2,
-    navigate_handler_2,
-    mousedown_handler_3,
-    navigate_handler_3,
-    mousedown_handler_4,
-    navigate_handler_4,
-    mousedown_handler_5,
-    navigate_handler_5,
-    mousedown_handler_6,
-    navigate_handler_6
-  ];
-}
-var GridTypedCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance77, create_fragment77, safe_not_equal, {
-      value: 0,
-      onChange: 1,
-      column: 2,
-      rowindex: 3,
-      colindex: 4,
-      selected: 5
-    });
-  }
-};
-var GridTypedCell_default = GridTypedCell;
-
-// src/views/Table/components/DataGrid/data-grid.ts
-function fieldIcon(field) {
-  switch (field) {
-    case DataFieldType.String:
-      return "text";
-    case DataFieldType.Number:
-      return "hash";
-    case DataFieldType.Boolean:
-      return "check";
-    case DataFieldType.Date:
-      return "calendar-days";
-    case DataFieldType.Link:
-      return "link";
-    case DataFieldType.List:
-      return "list";
-  }
-  return "alert-triangle";
-}
-function sortRows(rows, sortModel) {
-  return rows.sort((a2, b2) => {
-    let aval = a2.row[sortModel.field];
-    let bval = b2.row[sortModel.field];
-    const isAsc = sortModel.sort === "asc";
-    if (!aval && bval)
-      return isAsc ? 1 : -1;
-    if (aval && !bval)
-      return isAsc ? -1 : 1;
-    if (!aval && !bval)
-      return 0;
-    if (isNumber(aval) && isNumber(bval)) {
-      if (aval < bval) {
-        return isAsc ? -1 : 1;
-      } else if (aval > bval) {
-        return isAsc ? 1 : -1;
-      } else {
-        return 0;
-      }
-    }
-    aval = aval.toString().toLocaleLowerCase();
-    bval = bval.toString().toLocaleLowerCase();
-    if (aval < bval) {
-      return isAsc ? -1 : 1;
-    } else if (aval > bval) {
-      return isAsc ? 1 : -1;
-    } else {
-      return 0;
-    }
-  });
-}
-function sortColumns(columns) {
-  return columns.sort((a2, b2) => {
-    var _a, _b;
-    let left2 = (_a = a2.weight) != null ? _a : 9999;
-    let right2 = (_b = b2.weight) != null ? _b : 9999;
-    if (left2 < right2) {
-      return -1;
-    } else if (left2 > right2) {
-      return 1;
-    } else {
-      return 0;
-    }
-  });
-}
-function menuOnContextMenu(event, menu) {
-  const contextMenuFunc = (event2) => {
-    window.removeEventListener("contextmenu", contextMenuFunc);
-    event2.preventDefault();
-    event2.stopPropagation();
-    menu.showAtMouseEvent(event2);
-  };
-  window.addEventListener("contextmenu", contextMenuFunc, false);
-}
-
-// src/views/Table/components/DataGrid/GridCellGroup.svelte
-function add_css43(target) {
-  append_styles(target, "svelte-11yy4d1", "div.svelte-11yy4d1{display:flex}.header.svelte-11yy4d1{position:sticky;top:0;z-index:10}");
-}
-function create_fragment78(ctx) {
-  let div;
-  let current;
-  let mounted;
-  let dispose;
-  const default_slot_template = ctx[3].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
-  return {
-    c() {
-      div = element("div");
-      if (default_slot)
-        default_slot.c();
-      attr(div, "role", "row");
-      attr(div, "aria-rowindex", ctx[0]);
-      attr(div, "class", "svelte-11yy4d1");
-      toggle_class(div, "header", ctx[1]);
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      if (default_slot) {
-        default_slot.m(div, null);
-      }
-      current = true;
-      if (!mounted) {
-        dispose = [
-          listen(div, "mouseover", ctx[4]),
-          listen(div, "focus", ctx[5])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 4)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
-        }
-      }
-      if (!current || dirty & 1) {
-        attr(div, "aria-rowindex", ctx2[0]);
-      }
-      if (!current || dirty & 2) {
-        toggle_class(div, "header", ctx2[1]);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      if (default_slot)
-        default_slot.d(detaching);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance78($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  let { index } = $$props;
-  let { header = false } = $$props;
-  function mouseover_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function focus_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("index" in $$props2)
-      $$invalidate(0, index = $$props2.index);
-    if ("header" in $$props2)
-      $$invalidate(1, header = $$props2.header);
-    if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
-  };
-  return [index, header, $$scope, slots, mouseover_handler, focus_handler];
-}
-var GridCellGroup = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance78, create_fragment78, safe_not_equal, { index: 0, header: 1 }, add_css43);
-  }
-};
-var GridCellGroup_default = GridCellGroup;
-
-// src/views/Table/components/DataGrid/GridHeader.svelte
-function get_each_context11(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[8] = list[i2];
-  child_ctx[10] = i2;
-  return child_ctx;
-}
-function create_read_slot7(ctx) {
-  var _a, _b;
-  let icon;
-  let t0;
-  let textlabel;
-  let t1;
-  let iconbutton;
-  let t22;
-  let current;
-  icon = new Icon_default({
-    props: {
-      name: fieldIcon((_a = ctx[8].type) != null ? _a : DataFieldType.Unknown),
-      tooltip: (_b = get_store_value(i18n).t(`data-types.${ctx[8].type}`)) != null ? _b : ""
-    }
-  });
-  textlabel = new TextLabel_default({
-    props: { value: ctx[8].field }
-  });
-  iconbutton = new IconButton_default({
-    props: { size: "sm", icon: "vertical-three-dots" }
-  });
-  iconbutton.$on("click", function() {
-    if (is_function(ctx[4](ctx[8])))
-      ctx[4](ctx[8]).apply(this, arguments);
-  });
-  return {
-    c() {
-      create_component(icon.$$.fragment);
-      t0 = space();
-      create_component(textlabel.$$.fragment);
-      t1 = space();
-      create_component(iconbutton.$$.fragment);
-      t22 = space();
-    },
-    m(target, anchor) {
-      mount_component(icon, target, anchor);
-      insert(target, t0, anchor);
-      mount_component(textlabel, target, anchor);
-      insert(target, t1, anchor);
-      mount_component(iconbutton, target, anchor);
-      insert(target, t22, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      var _a2, _b2;
-      ctx = new_ctx;
-      const icon_changes = {};
-      if (dirty & 1)
-        icon_changes.name = fieldIcon((_a2 = ctx[8].type) != null ? _a2 : DataFieldType.Unknown);
-      if (dirty & 1)
-        icon_changes.tooltip = (_b2 = get_store_value(i18n).t(`data-types.${ctx[8].type}`)) != null ? _b2 : "";
-      icon.$set(icon_changes);
-      const textlabel_changes = {};
-      if (dirty & 1)
-        textlabel_changes.value = ctx[8].field;
-      textlabel.$set(textlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(icon.$$.fragment, local);
-      transition_in(textlabel.$$.fragment, local);
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(icon.$$.fragment, local);
-      transition_out(textlabel.$$.fragment, local);
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(icon, detaching);
-      if (detaching)
-        detach(t0);
-      destroy_component(textlabel, detaching);
-      if (detaching)
-        detach(t1);
-      destroy_component(iconbutton, detaching);
-      if (detaching)
-        detach(t22);
-    }
-  };
-}
-function create_each_block11(ctx) {
-  let gridcell;
-  let current;
-  function func7(...args) {
-    return ctx[6](ctx[8], ...args);
-  }
-  function func_14(...args) {
-    return ctx[7](ctx[8], ...args);
-  }
-  gridcell = new GridCell_default({
-    props: {
-      colindex: ctx[10] + 2,
-      rowindex: 1,
-      column: ctx[8],
-      resizable: true,
-      onResize: func7,
-      onFinalizeResize: func_14,
-      columnHeader: true,
-      $$slots: { read: [create_read_slot7] },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", function() {
-    if (is_function(ctx[3](ctx[8])))
-      ctx[3](ctx[8]).apply(this, arguments);
-  });
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const gridcell_changes = {};
-      if (dirty & 1)
-        gridcell_changes.column = ctx[8];
-      if (dirty & 3)
-        gridcell_changes.onResize = func7;
-      if (dirty & 5)
-        gridcell_changes.onFinalizeResize = func_14;
-      if (dirty & 2049) {
-        gridcell_changes.$$scope = { dirty, ctx };
-      }
-      gridcell.$set(gridcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-    }
-  };
-}
-function create_default_slot21(ctx) {
-  let gridcell;
-  let t3;
-  let each_1_anchor;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      colindex: 1,
-      rowindex: 1,
-      column: {
-        field: "",
-        width: 60,
-        header: true,
-        editable: false
-      },
-      columnHeader: true,
-      rowHeader: true
-    }
-  });
-  let each_value = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block11(get_each_context11(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-      t3 = space();
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      insert(target, t3, anchor);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 31) {
-        each_value = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context11(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block11(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_fragment79(ctx) {
-  let gridcellgroup;
-  let current;
-  gridcellgroup = new GridCellGroup_default({
-    props: {
-      index: 1,
-      header: true,
-      $$slots: { default: [create_default_slot21] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(gridcellgroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcellgroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcellgroup_changes = {};
-      if (dirty & 2055) {
-        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcellgroup.$set(gridcellgroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcellgroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcellgroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcellgroup, detaching);
-    }
-  };
-}
-function instance79($$self, $$props, $$invalidate) {
-  let { columns } = $$props;
-  let { onResize } = $$props;
-  let { onFinalizeResize } = $$props;
-  let { onColumnMenu } = $$props;
-  function handleColumnHeaderClick(column) {
-    return (event) => {
-      if (event.button === 2) {
-        menuOnContextMenu(event, onColumnMenu(column));
-      }
-    };
-  }
-  function handleFieldClick(column) {
-    return (event) => {
-      onColumnMenu(column).showAtMouseEvent(event);
-    };
-  }
-  const func7 = (column, width) => {
-    onResize(column.field, width);
-  };
-  const func_14 = (column, width) => {
-    onFinalizeResize(column.field, width);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("columns" in $$props2)
-      $$invalidate(0, columns = $$props2.columns);
-    if ("onResize" in $$props2)
-      $$invalidate(1, onResize = $$props2.onResize);
-    if ("onFinalizeResize" in $$props2)
-      $$invalidate(2, onFinalizeResize = $$props2.onFinalizeResize);
-    if ("onColumnMenu" in $$props2)
-      $$invalidate(5, onColumnMenu = $$props2.onColumnMenu);
-  };
-  return [
-    columns,
-    onResize,
-    onFinalizeResize,
-    handleColumnHeaderClick,
-    handleFieldClick,
-    onColumnMenu,
-    func7,
-    func_14
-  ];
-}
-var GridHeader = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance79, create_fragment79, safe_not_equal, {
-      columns: 0,
-      onResize: 1,
-      onFinalizeResize: 2,
-      onColumnMenu: 5
-    });
-  }
-};
-var GridHeader_default = GridHeader;
-
-// src/views/Table/components/DataGrid/GridRow.svelte
-var import_obsidian34 = __toModule(require("obsidian"));
-function get_each_context12(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[15] = list[i2];
-  child_ctx[17] = i2;
-  return child_ctx;
-}
-function create_read_slot8(ctx) {
-  let textlabel;
-  let current;
-  textlabel = new TextLabel_default({
-    props: {
-      slot: "read",
-      value: (ctx[1] - 1).toString()
-    }
-  });
-  return {
-    c() {
-      create_component(textlabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textlabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textlabel_changes = {};
-      if (dirty & 2)
-        textlabel_changes.value = (ctx2[1] - 1).toString();
-      textlabel.$set(textlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textlabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textlabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textlabel, detaching);
-    }
-  };
-}
-function create_hover_slot(ctx) {
-  let iconbutton;
-  let current;
-  iconbutton = new IconButton_default({
-    props: { slot: "hover", icon: "link", size: "sm" }
-  });
-  iconbutton.$on("click", function() {
-    if (is_function(ctx[6]))
-      ctx[6].apply(this, arguments);
-  });
-  return {
-    c() {
-      create_component(iconbutton.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(iconbutton, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(iconbutton, detaching);
-    }
-  };
-}
-function create_each_block12(ctx) {
-  let gridtypedcell;
-  let current;
-  function func7(...args) {
-    return ctx[12](ctx[15], ...args);
-  }
-  gridtypedcell = new GridTypedCell_default({
-    props: {
-      selected: ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2,
-      rowindex: ctx[1] + 2,
-      colindex: ctx[17] + 2,
-      value: ctx[2][ctx[15].field],
-      column: ctx[15],
-      onChange: func7
-    }
-  });
-  gridtypedcell.$on("mousedown", function() {
-    if (is_function(ctx[8](ctx[15], ctx[2][ctx[15].field])))
-      ctx[8](ctx[15], ctx[2][ctx[15].field]).apply(this, arguments);
-  });
-  gridtypedcell.$on("navigate", ctx[13]);
-  return {
-    c() {
-      create_component(gridtypedcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridtypedcell, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const gridtypedcell_changes = {};
-      if (dirty & 18)
-        gridtypedcell_changes.selected = ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2;
-      if (dirty & 2)
-        gridtypedcell_changes.rowindex = ctx[1] + 2;
-      if (dirty & 12)
-        gridtypedcell_changes.value = ctx[2][ctx[15].field];
-      if (dirty & 8)
-        gridtypedcell_changes.column = ctx[15];
-      if (dirty & 45)
-        gridtypedcell_changes.onChange = func7;
-      gridtypedcell.$set(gridtypedcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridtypedcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridtypedcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridtypedcell, detaching);
-    }
-  };
-}
-function create_default_slot22(ctx) {
-  let gridcell;
-  let t3;
-  let each_1_anchor;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      rowindex: 1,
-      colindex: 1,
-      column: {
-        field: "",
-        header: true,
-        width: 60,
-        editable: false
-      },
-      rowHeader: true,
-      $$slots: {
-        hover: [create_hover_slot],
-        read: [create_read_slot8]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[7]());
-  let each_value = ctx[3];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block12(get_each_context12(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-      t3 = space();
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      insert(target, t3, anchor);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridcell_changes = {};
-      if (dirty & 262210) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-      if (dirty & 319) {
-        each_value = ctx2[3];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context12(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block12(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_fragment80(ctx) {
-  let gridcellgroup;
-  let current;
-  gridcellgroup = new GridCellGroup_default({
-    props: {
-      index: ctx[1],
-      $$slots: { default: [create_default_slot22] },
-      $$scope: { ctx }
-    }
-  });
-  gridcellgroup.$on("mouseover", ctx[9]);
-  return {
-    c() {
-      create_component(gridcellgroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcellgroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcellgroup_changes = {};
-      if (dirty & 2)
-        gridcellgroup_changes.index = ctx2[1];
-      if (dirty & 262271) {
-        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcellgroup.$set(gridcellgroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcellgroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcellgroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcellgroup, detaching);
-    }
-  };
-}
-function instance80($$self, $$props, $$invalidate) {
-  let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
-  let { rowId } = $$props;
-  let { index } = $$props;
-  let { row } = $$props;
-  let { columns } = $$props;
-  let { activeCell } = $$props;
-  setContext("sourcePath", row["path"]);
-  let { onRowChange } = $$props;
-  let { onRowMenu } = $$props;
-  let { onCellMenu } = $$props;
-  let { onNavigate } = $$props;
-  function handleHeaderClick() {
-    return (event) => {
-      if (event.button === 2) {
-        menuOnContextMenu(event, onRowMenu(rowId, row));
-      }
-    };
-  }
-  function handleCellClick(column, value) {
-    return (event) => {
-      if (event.button === 2) {
-        menuOnContextMenu(event, onCellMenu(rowId, column, value));
-      }
-      if (event.target instanceof HTMLTableCellElement) {
-        if (event.target.firstChild instanceof HTMLInputElement) {
-          event.target.firstChild.focus();
-          event.preventDefault();
-        }
-      }
-    };
-  }
-  function handleHoverLink(event) {
-    if (!event.ctrlKey && !event.metaKey) {
-      return;
-    }
-    const targetEl = event.target;
-    if (targetEl instanceof HTMLDivElement) {
-      const file = $app.vault.getAbstractFileByPath(rowId);
-      if (file instanceof import_obsidian34.TFile) {
-        $app.workspace.trigger("hover-link", {
-          event,
-          source: "obsidian-projects-table-view",
-          hoverParent: targetEl.parentElement,
-          targetEl,
-          linktext: file.name,
-          sourcePath: file.path
-        });
-      }
-    }
-  }
-  const func7 = (column, value) => {
-    onRowChange(rowId, immer_esm_default(row, (draft) => {
-      draft[column.field] = value;
-      return draft;
-    }));
-  };
-  function navigate_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("rowId" in $$props2)
-      $$invalidate(0, rowId = $$props2.rowId);
-    if ("index" in $$props2)
-      $$invalidate(1, index = $$props2.index);
-    if ("row" in $$props2)
-      $$invalidate(2, row = $$props2.row);
-    if ("columns" in $$props2)
-      $$invalidate(3, columns = $$props2.columns);
-    if ("activeCell" in $$props2)
-      $$invalidate(4, activeCell = $$props2.activeCell);
-    if ("onRowChange" in $$props2)
-      $$invalidate(5, onRowChange = $$props2.onRowChange);
-    if ("onRowMenu" in $$props2)
-      $$invalidate(10, onRowMenu = $$props2.onRowMenu);
-    if ("onCellMenu" in $$props2)
-      $$invalidate(11, onCellMenu = $$props2.onCellMenu);
-    if ("onNavigate" in $$props2)
-      $$invalidate(6, onNavigate = $$props2.onNavigate);
-  };
-  return [
-    rowId,
-    index,
-    row,
-    columns,
-    activeCell,
-    onRowChange,
-    onNavigate,
-    handleHeaderClick,
-    handleCellClick,
-    handleHoverLink,
-    onRowMenu,
-    onCellMenu,
-    func7,
-    navigate_handler
-  ];
-}
-var GridRow = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance80, create_fragment80, safe_not_equal, {
-      rowId: 0,
-      index: 1,
-      row: 2,
-      columns: 3,
-      activeCell: 4,
-      onRowChange: 5,
-      onRowMenu: 10,
-      onCellMenu: 11,
-      onNavigate: 6
-    });
-  }
-};
-var GridRow_default = GridRow;
-
-// src/views/Table/components/DataGrid/DataGrid.svelte
-function add_css44(target) {
-  append_styles(target, "svelte-w5i4x9", "div.svelte-w5i4x9{display:inline-block}span.svelte-w5i4x9{padding:4px;position:sticky;left:0}");
-}
-function get_each_context13(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[32] = list[i2].rowId;
-  child_ctx[33] = list[i2].row;
-  child_ctx[35] = i2;
-  return child_ctx;
-}
-function create_each_block13(ctx) {
-  let gridrow;
-  let current;
-  function func_4(...args) {
-    return ctx[28](ctx[33], ...args);
-  }
-  function func_5(...args) {
-    return ctx[29](ctx[32], ...args);
-  }
-  gridrow = new GridRow_default({
-    props: {
-      columns: ctx[9],
-      index: ctx[35] + 2,
-      rowId: ctx[32],
-      row: ctx[33],
-      activeCell: ctx[6],
-      onRowChange: ctx[4],
-      onRowMenu: ctx[27],
-      onCellMenu: func_4,
-      onNavigate: func_5
-    }
-  });
-  gridrow.$on("navigate", ctx[30]);
-  return {
-    c() {
-      create_component(gridrow.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridrow, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const gridrow_changes = {};
-      if (dirty[0] & 512)
-        gridrow_changes.columns = ctx[9];
-      if (dirty[0] & 256)
-        gridrow_changes.rowId = ctx[32];
-      if (dirty[0] & 256)
-        gridrow_changes.row = ctx[33];
-      if (dirty[0] & 64)
-        gridrow_changes.activeCell = ctx[6];
-      if (dirty[0] & 16)
-        gridrow_changes.onRowChange = ctx[4];
-      if (dirty[0] & 256)
-        gridrow_changes.onCellMenu = func_4;
-      if (dirty[0] & 288)
-        gridrow_changes.onNavigate = func_5;
-      gridrow.$set(gridrow_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridrow.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridrow.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridrow, detaching);
-    }
-  };
-}
-function create_if_block24(ctx) {
-  let button;
-  let current;
-  button = new Button_default({
-    props: {
-      variant: "plain",
-      $$slots: { default: [create_default_slot_113] },
-      $$scope: { ctx }
-    }
-  });
-  button.$on("click", ctx[31]);
-  return {
-    c() {
-      create_component(button.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(button, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const button_changes = {};
-      if (dirty[0] & 128 | dirty[1] & 32) {
-        button_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button.$set(button_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(button.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(button.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(button, detaching);
-    }
-  };
-}
-function create_default_slot_113(ctx) {
-  let icon;
-  let t0;
-  let t1_value = ctx[7]("components.data-grid.row.add") + "";
-  let t1;
-  let current;
-  icon = new Icon_default({ props: { name: "plus" } });
-  return {
-    c() {
-      create_component(icon.$$.fragment);
-      t0 = space();
-      t1 = text(t1_value);
-    },
-    m(target, anchor) {
-      mount_component(icon, target, anchor);
-      insert(target, t0, anchor);
-      insert(target, t1, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if ((!current || dirty[0] & 128) && t1_value !== (t1_value = ctx2[7]("components.data-grid.row.add") + ""))
-        set_data(t1, t1_value);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(icon.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(icon.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(icon, detaching);
-      if (detaching)
-        detach(t0);
-      if (detaching)
-        detach(t1);
-    }
-  };
-}
-function create_default_slot23(ctx) {
-  let span;
-  let span_style_value;
-  let current;
-  let if_block = !ctx[1] && create_if_block24(ctx);
-  return {
-    c() {
-      var _a, _b;
-      span = element("span");
-      if (if_block)
-        if_block.c();
-      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
-      attr(span, "class", "svelte-w5i4x9");
-    },
-    m(target, anchor) {
-      insert(target, span, anchor);
-      if (if_block)
-        if_block.m(span, null);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      var _a, _b;
-      if (!ctx2[1]) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
-          if (dirty[0] & 2) {
-            transition_in(if_block, 1);
-          }
-        } else {
-          if_block = create_if_block24(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(span, null);
-        }
-      } else if (if_block) {
-        group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
-        });
-        check_outros();
-      }
-      if (!current || dirty[0] & 512 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
-        attr(span, "style", span_style_value);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(if_block);
-      current = true;
-    },
-    o(local) {
-      transition_out(if_block);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(span);
-      if (if_block)
-        if_block.d();
-    }
-  };
-}
-function create_fragment81(ctx) {
-  let div;
-  let gridheader;
-  let t0;
-  let t1;
-  let gridcellgroup;
-  let div_aria_colcount_value;
-  let div_aria_rowcount_value;
-  let current;
-  gridheader = new GridHeader_default({
-    props: {
-      columns: ctx[9],
-      onResize: ctx[24],
-      onFinalizeResize: ctx[25],
-      onColumnMenu: ctx[26]
-    }
-  });
-  let each_value = ctx[8];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block13(get_each_context13(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  gridcellgroup = new GridCellGroup_default({
-    props: {
-      index: ctx[8].length + 2,
-      $$slots: { default: [create_default_slot23] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      div = element("div");
-      create_component(gridheader.$$.fragment);
-      t0 = space();
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      t1 = space();
-      create_component(gridcellgroup.$$.fragment);
-      attr(div, "role", "grid");
-      attr(div, "aria-colcount", div_aria_colcount_value = ctx[9].length + 1);
-      attr(div, "aria-rowcount", div_aria_rowcount_value = ctx[8].length + 2);
-      attr(div, "class", "svelte-w5i4x9");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      mount_component(gridheader, div, null);
-      append(div, t0);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(div, null);
-      }
-      append(div, t1);
-      mount_component(gridcellgroup, div, null);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const gridheader_changes = {};
-      if (dirty[0] & 512)
-        gridheader_changes.columns = ctx2[9];
-      if (dirty[0] & 1)
-        gridheader_changes.onResize = ctx2[24];
-      if (dirty[0] & 4)
-        gridheader_changes.onFinalizeResize = ctx2[25];
-      gridheader.$set(gridheader_changes);
-      if (dirty[0] & 15216) {
-        each_value = ctx2[8];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context13(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block13(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(div, t1);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-      const gridcellgroup_changes = {};
-      if (dirty[0] & 256)
-        gridcellgroup_changes.index = ctx2[8].length + 2;
-      if (dirty[0] & 650 | dirty[1] & 32) {
-        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcellgroup.$set(gridcellgroup_changes);
-      if (!current || dirty[0] & 512 && div_aria_colcount_value !== (div_aria_colcount_value = ctx2[9].length + 1)) {
-        attr(div, "aria-colcount", div_aria_colcount_value);
-      }
-      if (!current || dirty[0] & 256 && div_aria_rowcount_value !== (div_aria_rowcount_value = ctx2[8].length + 2)) {
-        attr(div, "aria-rowcount", div_aria_rowcount_value);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridheader.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      transition_in(gridcellgroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridheader.$$.fragment, local);
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      transition_out(gridcellgroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      destroy_component(gridheader);
-      destroy_each(each_blocks, detaching);
-      destroy_component(gridcellgroup);
-    }
-  };
-}
-function instance81($$self, $$props, $$invalidate) {
-  let t3;
-  let visibleColumns;
-  let sortedColumns;
-  let sortedRows;
-  let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(23, $i18n = $$value));
-  let { columns } = $$props;
-  let { rows } = $$props;
-  let { sortModel } = $$props;
-  let { readonly } = $$props;
-  let { onSortModelChange } = $$props;
-  let { onColumnResize } = $$props;
-  let { onRowAdd } = $$props;
-  let { onRowChange } = $$props;
-  let { onRowNavigate } = $$props;
-  let { onColumnRename } = $$props;
-  let { onColumnDelete } = $$props;
-  let { onColumnHide } = $$props;
-  let { onRowDelete } = $$props;
-  let { onRowEdit } = $$props;
-  let activeCell = [3, 3];
-  function createColumnMenu(column) {
-    const menu = new import_obsidian36.Menu();
-    if (column.editable && !readonly) {
-      menu.addItem((item) => {
-        item.setTitle(t3("components.data-grid.column.rename")).setIcon("edit").onClick(() => onColumnRename(column.field));
-      });
-      menu.addItem((item) => {
-        item.setTitle(t3("components.data-grid.column.delete")).setIcon("trash").onClick(() => onColumnDelete(column.field));
-      });
-      menu.addSeparator();
-    }
-    menu.addItem((item) => {
-      item.setTitle(t3("components.data-grid.sort.asc")).setIcon("sort-asc").onClick(() => onSortModelChange(column.field, "asc"));
-    });
-    menu.addItem((item) => {
-      item.setTitle(t3("components.data-grid.sort.desc")).setIcon("sort-desc").onClick(() => onSortModelChange(column.field, "desc"));
-    });
-    menu.addSeparator();
-    menu.addItem((item) => {
-      item.setTitle(t3("components.data-grid.column.hide")).setIcon("eye-off").onClick(() => {
-        onColumnHide(column);
-      });
-    });
-    return menu;
-  }
-  function createRowMenu(rowId, row) {
-    const menu = new import_obsidian36.Menu();
-    menu.addItem((item) => {
-      item.setTitle(t3("components.data-grid.row.edit")).setIcon("edit").onClick(() => onRowEdit(rowId, row));
-    });
-    if (!readonly) {
-      menu.addSeparator();
-      menu.addItem((item) => {
-        item.setTitle(t3("components.data-grid.row.delete")).setIcon("trash").onClick(() => onRowDelete(rowId));
-      });
-    }
-    return menu;
-  }
-  function createCellMenu(rowId, row, column) {
-    const menu = new import_obsidian36.Menu();
-    if (column.editable) {
-      menu.addItem((item) => {
-        item.setTitle(t3("components.data-grid.cell.clear")).setIcon("x").onClick(() => {
-          onRowChange(rowId, immer_esm_default(row, (draft) => {
-            draft[column.field] = null;
-            return draft;
-          }));
-        });
-      });
-    }
-    return menu;
-  }
-  const clamp = (num, min2, max2) => Math.min(Math.max(num, min2), max2);
-  const func7 = (name, width) => {
-    $$invalidate(0, columns = columns.map((column) => column.field === name ? __spreadProps(__spreadValues({}, column), { width }) : column));
-  };
-  const func_14 = (name, width) => {
-    onColumnResize(name, width);
-  };
-  const func_2 = (field) => createColumnMenu(field);
-  const func_3 = (rowId, row) => createRowMenu(rowId, row);
-  const func_4 = (row, rowId, column) => createCellMenu(rowId, row, column);
-  const func_5 = (rowId, event) => onRowNavigate(rowId, event.ctrlKey || event.metaKey);
-  const navigate_handler = ({ detail: cell }) => {
-    $$invalidate(6, activeCell = [
-      clamp(cell[0], 2, sortedColumns.length + 1),
-      clamp(cell[1], 4, sortedRows.length + 3)
-    ]);
-  };
-  const click_handler = () => onRowAdd();
-  $$self.$$set = ($$props2) => {
-    if ("columns" in $$props2)
-      $$invalidate(0, columns = $$props2.columns);
-    if ("rows" in $$props2)
-      $$invalidate(14, rows = $$props2.rows);
-    if ("sortModel" in $$props2)
-      $$invalidate(15, sortModel = $$props2.sortModel);
-    if ("readonly" in $$props2)
-      $$invalidate(1, readonly = $$props2.readonly);
-    if ("onSortModelChange" in $$props2)
-      $$invalidate(16, onSortModelChange = $$props2.onSortModelChange);
-    if ("onColumnResize" in $$props2)
-      $$invalidate(2, onColumnResize = $$props2.onColumnResize);
-    if ("onRowAdd" in $$props2)
-      $$invalidate(3, onRowAdd = $$props2.onRowAdd);
-    if ("onRowChange" in $$props2)
-      $$invalidate(4, onRowChange = $$props2.onRowChange);
-    if ("onRowNavigate" in $$props2)
-      $$invalidate(5, onRowNavigate = $$props2.onRowNavigate);
-    if ("onColumnRename" in $$props2)
-      $$invalidate(17, onColumnRename = $$props2.onColumnRename);
-    if ("onColumnDelete" in $$props2)
-      $$invalidate(18, onColumnDelete = $$props2.onColumnDelete);
-    if ("onColumnHide" in $$props2)
-      $$invalidate(19, onColumnHide = $$props2.onColumnHide);
-    if ("onRowDelete" in $$props2)
-      $$invalidate(20, onRowDelete = $$props2.onRowDelete);
-    if ("onRowEdit" in $$props2)
-      $$invalidate(21, onRowEdit = $$props2.onRowEdit);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty[0] & 8388608) {
-      $:
-        $$invalidate(7, t3 = $i18n.t);
-    }
-    if ($$self.$$.dirty[0] & 1) {
-      $:
-        $$invalidate(22, visibleColumns = columns.filter((column) => !column.hide));
-    }
-    if ($$self.$$.dirty[0] & 4194304) {
-      $:
-        $$invalidate(9, sortedColumns = sortColumns(visibleColumns));
-    }
-    if ($$self.$$.dirty[0] & 49152) {
-      $:
-        $$invalidate(8, sortedRows = sortRows(rows, sortModel));
-    }
-  };
-  return [
-    columns,
-    readonly,
-    onColumnResize,
-    onRowAdd,
-    onRowChange,
-    onRowNavigate,
-    activeCell,
-    t3,
-    sortedRows,
-    sortedColumns,
-    createColumnMenu,
-    createRowMenu,
-    createCellMenu,
-    clamp,
-    rows,
-    sortModel,
-    onSortModelChange,
-    onColumnRename,
-    onColumnDelete,
-    onColumnHide,
-    onRowDelete,
-    onRowEdit,
-    visibleColumns,
-    $i18n,
-    func7,
-    func_14,
-    func_2,
-    func_3,
-    func_4,
-    func_5,
-    navigate_handler,
-    click_handler
-  ];
-}
-var DataGrid = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance81, create_fragment81, safe_not_equal, {
-      columns: 0,
-      rows: 14,
-      sortModel: 15,
-      readonly: 1,
-      onSortModelChange: 16,
-      onColumnResize: 2,
-      onRowAdd: 3,
-      onRowChange: 4,
-      onRowNavigate: 5,
-      onColumnRename: 17,
-      onColumnDelete: 18,
-      onColumnHide: 19,
-      onRowDelete: 20,
-      onRowEdit: 21
-    }, add_css44, [-1, -1]);
-  }
-};
-var DataGrid_default = DataGrid;
-
-// src/views/Table/components/SwitchSelect/SwitchSelect.svelte
-function add_css45(target) {
-  append_styles(target, "svelte-mhc3z6", "div.svelte-mhc3z6{align-items:center;display:inline-flex;text-align:start}");
-}
-function get_each_context14(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[2] = list[i2].label;
-  child_ctx[9] = list[i2].value;
-  child_ctx[10] = list[i2].enabled;
-  return child_ctx;
-}
-function create_each_block14(ctx) {
-  let menuitem;
-  let current;
-  function check_handler(...args) {
-    return ctx[7](ctx[9], ...args);
-  }
-  menuitem = new MenuItem_default({
-    props: {
-      label: ctx[2],
-      checked: ctx[10]
-    }
-  });
-  menuitem.$on("check", check_handler);
-  return {
-    c() {
-      create_component(menuitem.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(menuitem, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const menuitem_changes = {};
-      if (dirty & 1)
-        menuitem_changes.label = ctx[2];
-      if (dirty & 1)
-        menuitem_changes.checked = ctx[10];
-      menuitem.$set(menuitem_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(menuitem.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(menuitem.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(menuitem, detaching);
-    }
-  };
-}
-function create_default_slot24(ctx) {
-  let each_1_anchor;
-  let current;
-  let each_value = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 3) {
-        each_value = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context14(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block14(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_fragment82(ctx) {
-  let div;
-  let t0;
-  let t1;
-  let menu;
-  let current;
-  let mounted;
-  let dispose;
-  menu = new Menu_default({
-    props: {
-      anchorEl: ctx[3],
-      open: ctx[4],
-      onClose: ctx[8],
-      $$slots: { default: [create_default_slot24] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      div = element("div");
-      t0 = text(ctx[2]);
-      t1 = space();
-      create_component(menu.$$.fragment);
-      attr(div, "class", "dropdown svelte-mhc3z6");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      append(div, t0);
-      ctx[5](div);
-      insert(target, t1, anchor);
-      mount_component(menu, target, anchor);
-      current = true;
-      if (!mounted) {
-        dispose = listen(div, "click", ctx[6]);
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (!current || dirty & 4)
-        set_data(t0, ctx2[2]);
-      const menu_changes = {};
-      if (dirty & 8)
-        menu_changes.anchorEl = ctx2[3];
-      if (dirty & 16)
-        menu_changes.open = ctx2[4];
-      if (dirty & 16)
-        menu_changes.onClose = ctx2[8];
-      if (dirty & 8195) {
-        menu_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      menu.$set(menu_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(menu.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(menu.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      ctx[5](null);
-      if (detaching)
-        detach(t1);
-      destroy_component(menu, detaching);
-      mounted = false;
-      dispose();
-    }
-  };
-}
-function instance82($$self, $$props, $$invalidate) {
-  let { items } = $$props;
-  let { label } = $$props;
-  let { onChange } = $$props;
-  let ref;
-  let isOpen = false;
-  function div_binding($$value) {
-    binding_callbacks[$$value ? "unshift" : "push"](() => {
-      ref = $$value;
-      $$invalidate(3, ref);
-    });
-  }
-  const click_handler = () => $$invalidate(4, isOpen = true);
-  const check_handler = (value, { detail: checked }) => onChange(value, checked);
-  const func7 = () => $$invalidate(4, isOpen = false);
-  $$self.$$set = ($$props2) => {
-    if ("items" in $$props2)
-      $$invalidate(0, items = $$props2.items);
-    if ("label" in $$props2)
-      $$invalidate(2, label = $$props2.label);
-    if ("onChange" in $$props2)
-      $$invalidate(1, onChange = $$props2.onChange);
-  };
-  return [
-    items,
-    onChange,
-    label,
-    ref,
-    isOpen,
-    div_binding,
-    click_handler,
-    check_handler,
-    func7
-  ];
-}
-var SwitchSelect = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance82, create_fragment82, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css45);
-  }
-};
-var SwitchSelect_default = SwitchSelect;
-
-// src/views/Table/TableView.svelte
-function add_css46(target) {
-  append_styles(target, "svelte-16qlac6", "div.svelte-16qlac6{overflow:auto}");
-}
-function create_default_slot_114(ctx) {
-  let switchselect;
-  let current;
-  switchselect = new SwitchSelect_default({
-    props: {
-      label: ctx[8].t("views.table.hide-fields"),
-      items: ctx[7].map(func6),
-      onChange: ctx[10]
-    }
-  });
-  return {
-    c() {
-      create_component(switchselect.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(switchselect, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const switchselect_changes = {};
-      if (dirty & 256)
-        switchselect_changes.label = ctx2[8].t("views.table.hide-fields");
-      if (dirty & 128)
-        switchselect_changes.items = ctx2[7].map(func6);
-      switchselect.$set(switchselect_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(switchselect.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(switchselect.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(switchselect, detaching);
-    }
-  };
-}
-function create_default_slot25(ctx) {
-  let p2;
-  let t3;
-  let horizontalgroup;
-  let current;
-  horizontalgroup = new HorizontalGroup_default({
-    props: {
-      $$slots: { default: [create_default_slot_114] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      p2 = element("p");
-      t3 = space();
-      create_component(horizontalgroup.$$.fragment);
-    },
-    m(target, anchor) {
-      insert(target, p2, anchor);
-      insert(target, t3, anchor);
-      mount_component(horizontalgroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const horizontalgroup_changes = {};
-      if (dirty & 33554816) {
-        horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      horizontalgroup.$set(horizontalgroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(horizontalgroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(horizontalgroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(p2);
-      if (detaching)
-        detach(t3);
-      destroy_component(horizontalgroup, detaching);
-    }
-  };
-}
-function create_fragment83(ctx) {
-  var _a, _b, _c;
-  let toolbar;
-  let t3;
-  let div;
-  let datagrid;
-  let current;
-  toolbar = new ToolBar_default({
-    props: {
-      $$slots: { default: [create_default_slot25] },
-      $$scope: { ctx }
-    }
-  });
-  datagrid = new DataGrid_default({
-    props: {
-      columns: ctx[7],
-      rows: ctx[6],
-      readonly: ctx[1],
-      onRowAdd: ctx[16],
-      onRowEdit: ctx[17],
-      onRowDelete: ctx[18],
-      onColumnHide: ctx[19],
-      onColumnRename: ctx[20],
-      onColumnDelete: ctx[21],
-      onRowChange: ctx[22],
-      onColumnResize: ctx[11],
-      onRowNavigate: ctx[23],
-      sortModel: {
-        field: (_b = (_a = ctx[3]) == null ? void 0 : _a.sortField) != null ? _b : "name",
-        sort: ((_c = ctx[3]) == null ? void 0 : _c.sortAsc) ? "asc" : "desc"
-      },
-      onSortModelChange: ctx[24]
-    }
-  });
-  return {
-    c() {
-      create_component(toolbar.$$.fragment);
-      t3 = space();
-      div = element("div");
-      create_component(datagrid.$$.fragment);
-      attr(div, "class", "svelte-16qlac6");
-    },
-    m(target, anchor) {
-      mount_component(toolbar, target, anchor);
-      insert(target, t3, anchor);
-      insert(target, div, anchor);
-      mount_component(datagrid, div, null);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      var _a2, _b2, _c2;
-      const toolbar_changes = {};
-      if (dirty & 33554816) {
-        toolbar_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      toolbar.$set(toolbar_changes);
-      const datagrid_changes = {};
-      if (dirty & 128)
-        datagrid_changes.columns = ctx2[7];
-      if (dirty & 64)
-        datagrid_changes.rows = ctx2[6];
-      if (dirty & 2)
-        datagrid_changes.readonly = ctx2[1];
-      if (dirty & 517)
-        datagrid_changes.onRowAdd = ctx2[16];
-      if (dirty & 548)
-        datagrid_changes.onRowEdit = ctx2[17];
-      if (dirty & 4)
-        datagrid_changes.onRowDelete = ctx2[18];
-      if (dirty & 772)
-        datagrid_changes.onColumnRename = ctx2[20];
-      if (dirty & 4)
-        datagrid_changes.onColumnDelete = ctx2[21];
-      if (dirty & 36)
-        datagrid_changes.onRowChange = ctx2[22];
-      if (dirty & 512)
-        datagrid_changes.onRowNavigate = ctx2[23];
-      if (dirty & 8)
-        datagrid_changes.sortModel = {
-          field: (_b2 = (_a2 = ctx2[3]) == null ? void 0 : _a2.sortField) != null ? _b2 : "name",
-          sort: ((_c2 = ctx2[3]) == null ? void 0 : _c2.sortAsc) ? "asc" : "desc"
-        };
-      if (dirty & 24)
-        datagrid_changes.onSortModelChange = ctx2[24];
-      datagrid.$set(datagrid_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(toolbar.$$.fragment, local);
-      transition_in(datagrid.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(toolbar.$$.fragment, local);
-      transition_out(datagrid.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(toolbar, detaching);
-      if (detaching)
-        detach(t3);
-      if (detaching)
-        detach(div);
-      destroy_component(datagrid);
-    }
-  };
-}
-function defaultWeight(field) {
-  switch (field) {
-    case "name":
-      return 1;
-    case "path":
-      return 2;
-    case "Field":
-      return 1;
-    default:
-      return void 0;
-  }
-}
-var func6 = (column) => ({
-  label: column.field,
-  value: column.field,
-  enabled: !column.hide
-});
-function instance83($$self, $$props, $$invalidate) {
-  let fields;
-  let records;
-  let fieldConfig;
-  let columns;
-  let rows;
-  let $i18n;
-  let $app;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(9, $app = $$value));
-  var _a;
-  let { project } = $$props;
-  let { frame } = $$props;
-  let { readonly } = $$props;
-  let { api: api2 } = $$props;
-  let { config } = $$props;
-  let { onConfigChange } = $$props;
-  function handleVisibilityChange(field, enabled) {
-    onConfigChange(Object.assign(Object.assign({}, config), {
-      fieldConfig: Object.assign(Object.assign({}, fieldConfig), {
-        [field]: Object.assign(Object.assign({}, fieldConfig[field]), { hide: !enabled })
-      })
-    }));
-  }
-  function handleWidthChange(field, width) {
-    onConfigChange(Object.assign(Object.assign({}, config), {
-      fieldConfig: Object.assign(Object.assign({}, fieldConfig), {
-        [field]: Object.assign(Object.assign({}, fieldConfig[field]), { width })
-      })
-    }));
-  }
-  const func_14 = () => {
-    new CreateNoteModal($app, project, (name, templatePath, project2) => {
-      api2.addRecord(createDataRecord(name, project2), templatePath);
-    }).open();
-  };
-  const func_2 = (id, values) => {
-    new EditNoteModal($app, fields, (record) => {
-      api2.updateRecord(record, fields);
-    }, { id, values }).open();
-  };
-  const func_3 = (id) => api2.deleteRecord(id);
-  const func_4 = (column) => handleVisibilityChange(column.field, false);
-  const func_5 = (field) => {
-    new InputDialogModal($app, $i18n.t("views.table.rename-field"), $i18n.t("views.table.rename"), (value) => {
-      api2.renameField(field, value);
-    }, field).open();
-  };
-  const func_6 = (field) => api2.deleteField(field);
-  const func_7 = (rowId, row) => {
-    api2.updateRecord({ id: rowId, values: row }, fields);
-  };
-  const func_8 = (rowId, openNew) => $app.workspace.openLinkText(rowId, "", openNew);
-  const func_9 = (field, sort) => {
-    onConfigChange(__spreadProps(__spreadValues({}, config), {
-      sortField: field,
-      sortAsc: sort === "asc"
-    }));
-  };
-  $$self.$$set = ($$props2) => {
-    if ("project" in $$props2)
-      $$invalidate(0, project = $$props2.project);
-    if ("frame" in $$props2)
-      $$invalidate(12, frame = $$props2.frame);
-    if ("readonly" in $$props2)
-      $$invalidate(1, readonly = $$props2.readonly);
-    if ("api" in $$props2)
-      $$invalidate(2, api2 = $$props2.api);
-    if ("config" in $$props2)
-      $$invalidate(3, config = $$props2.config);
-    if ("onConfigChange" in $$props2)
-      $$invalidate(4, onConfigChange = $$props2.onConfigChange);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 4096) {
-      $:
-        $$invalidate(5, { fields, records } = frame, fields, ($$invalidate(15, records), $$invalidate(12, frame)));
-    }
-    if ($$self.$$.dirty & 8200) {
-      $:
-        $$invalidate(14, fieldConfig = $$invalidate(13, _a = config === null || config === void 0 ? void 0 : config.fieldConfig) !== null && _a !== void 0 ? _a : {});
-    }
-    if ($$self.$$.dirty & 16416) {
-      $:
-        $$invalidate(7, columns = fields.map((field) => {
-          var _a2, _b, _c, _d;
-          const colDef = {
-            field: field.name,
-            type: field.type,
-            width: (_b = (_a2 = fieldConfig[field.name]) === null || _a2 === void 0 ? void 0 : _a2.width) !== null && _b !== void 0 ? _b : 180,
-            hide: (_d = (_c = fieldConfig[field.name]) === null || _c === void 0 ? void 0 : _c.hide) !== null && _d !== void 0 ? _d : false,
-            editable: !field.derived
-          };
-          const weight = defaultWeight(field.name);
-          if (weight) {
-            colDef.weight = weight;
-          }
-          return colDef;
-        }));
-    }
-    if ($$self.$$.dirty & 32768) {
-      $:
-        $$invalidate(6, rows = records.map(({ id, values }) => ({ rowId: id, row: values })));
-    }
-  };
-  return [
-    project,
-    readonly,
-    api2,
-    config,
-    onConfigChange,
-    fields,
-    rows,
-    columns,
-    $i18n,
-    $app,
-    handleVisibilityChange,
-    handleWidthChange,
-    frame,
-    _a,
-    fieldConfig,
-    records,
-    func_14,
-    func_2,
-    func_3,
-    func_4,
-    func_5,
-    func_6,
-    func_7,
-    func_8,
-    func_9
-  ];
-}
-var TableView = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance83, create_fragment83, safe_not_equal, {
-      project: 0,
-      frame: 12,
-      readonly: 1,
-      api: 2,
-      config: 3,
-      onConfigChange: 4
-    }, add_css46);
-  }
-};
-var TableView_default = TableView;
-
-// src/views/Custom/CustomView.svelte
-function add_css47(target) {
-  append_styles(target, "svelte-18l8rqt", "div.svelte-18l8rqt{width:100%;height:100%;padding:var(--size-4-3)}.noPadding.svelte-18l8rqt{padding:0}");
-}
-function create_fragment84(ctx) {
   let div;
   let useCustomView_action;
   let mounted;
@@ -33911,7 +29809,7 @@ function create_fragment84(ctx) {
   return {
     c() {
       div = element("div");
-      attr(div, "class", "svelte-18l8rqt");
+      attr(div, "class", "svelte-vc0aet");
       toggle_class(div, "noPadding", ctx[0].noPadding);
     },
     m(target, anchor) {
@@ -33944,7 +29842,7 @@ function create_fragment84(ctx) {
     }
   };
 }
-function instance84($$self, $$props, $$invalidate) {
+function instance71($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let createView;
@@ -34030,15 +29928,15 @@ function instance84($$self, $$props, $$invalidate) {
 var CustomView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance84, create_fragment84, safe_not_equal, { type: 4, frame: 5 }, add_css47);
+    init(this, options, instance71, create_fragment71, safe_not_equal, { type: 4, frame: 5 }, add_css41);
   }
 };
 var CustomView_default = CustomView;
 
 // src/views/Developer/DeveloperView.svelte
-var import_obsidian38 = __toModule(require("obsidian"));
-function add_css48(target) {
-  append_styles(target, "svelte-qi93d1", "button.svelte-qi93d1{display:inline;width:auto}.container.svelte-qi93d1{padding:0 20%;overflow:auto}");
+var import_obsidian37 = __toModule(require("obsidian"));
+function add_css42(target) {
+  append_styles(target, "svelte-11o1e1p", "button.svelte-11o1e1p{display:inline;width:auto}.container.svelte-11o1e1p{padding:0 20%;overflow:auto}");
 }
 function create_default_slot_51(ctx) {
   let t3;
@@ -34070,7 +29968,7 @@ function create_default_slot_50(ctx) {
     }
   };
 }
-function create_default_slot_49(ctx) {
+function create_default_slot_492(ctx) {
   let t3;
   return {
     c() {
@@ -34151,7 +30049,7 @@ function create_default_slot_452(ctx) {
   });
   button0 = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot_49] },
+      $$slots: { default: [create_default_slot_492] },
       $$scope: { ctx }
     }
   });
@@ -34904,7 +30802,7 @@ function create_default_slot_292(ctx) {
       value: "",
       files: getNotesInFolder(ctx[8].vault.getRoot()),
       getLabel: ctx[12],
-      getDescription: func_13
+      getDescription: func_12
     }
   });
   fileautocomplete.$on("change", ctx[13]);
@@ -35342,6 +31240,7 @@ function create_default_slot_182(ctx) {
       anchorEl: ctx[0],
       open: ctx[1],
       placement: "auto",
+      onClose: func_2,
       $$slots: { default: [create_default_slot_21] },
       $$scope: { ctx }
     }
@@ -35380,9 +31279,9 @@ function create_default_slot_182(ctx) {
       button2.textContent = "Suggestions";
       t7 = space();
       create_component(suggestion.$$.fragment);
-      attr(button0, "class", "svelte-qi93d1");
-      attr(button1, "class", "svelte-qi93d1");
-      attr(button2, "class", "svelte-qi93d1");
+      attr(button0, "class", "svelte-11o1e1p");
+      attr(button1, "class", "svelte-11o1e1p");
+      attr(button2, "class", "svelte-11o1e1p");
     },
     m(target, anchor) {
       insert(target, button0, anchor);
@@ -35786,7 +31685,7 @@ function create_default_slot_122(ctx) {
     }
   };
 }
-function create_default_slot_115(ctx) {
+function create_default_slot_114(ctx) {
   let t3;
   return {
     c() {
@@ -35872,7 +31771,7 @@ function create_default_slot_75(ctx) {
   link0 = new Link_default({
     props: {
       href: "image.png",
-      $$slots: { default: [create_default_slot_115] },
+      $$slots: { default: [create_default_slot_114] },
       $$scope: { ctx }
     }
   });
@@ -35995,7 +31894,7 @@ function create_default_slot_75(ctx) {
     }
   };
 }
-function create_default_slot_66(ctx) {
+function create_default_slot_67(ctx) {
   let t3;
   return {
     c() {
@@ -36010,7 +31909,7 @@ function create_default_slot_66(ctx) {
     }
   };
 }
-function create_default_slot_58(ctx) {
+function create_default_slot_59(ctx) {
   let t3;
   return {
     c() {
@@ -36033,7 +31932,7 @@ function create_default_slot_410(ctx) {
   typography = new Typography_default({
     props: {
       variant: "h3",
-      $$slots: { default: [create_default_slot_58] },
+      $$slots: { default: [create_default_slot_59] },
       $$scope: { ctx }
     }
   });
@@ -36077,7 +31976,7 @@ function create_default_slot_410(ctx) {
     }
   };
 }
-function create_default_slot_310(ctx) {
+function create_default_slot_311(ctx) {
   let t3;
   return {
     c() {
@@ -36092,7 +31991,7 @@ function create_default_slot_310(ctx) {
     }
   };
 }
-function create_default_slot_211(ctx) {
+function create_default_slot_213(ctx) {
   let t3;
   return {
     c() {
@@ -36107,7 +32006,7 @@ function create_default_slot_211(ctx) {
     }
   };
 }
-function create_default_slot_116(ctx) {
+function create_default_slot_115(ctx) {
   let t3;
   return {
     c() {
@@ -36122,7 +32021,7 @@ function create_default_slot_116(ctx) {
     }
   };
 }
-function create_default_slot26(ctx) {
+function create_default_slot23(ctx) {
   let typography;
   let t0;
   let callout0;
@@ -36132,7 +32031,7 @@ function create_default_slot26(ctx) {
   typography = new Typography_default({
     props: {
       variant: "h3",
-      $$slots: { default: [create_default_slot_310] },
+      $$slots: { default: [create_default_slot_311] },
       $$scope: { ctx }
     }
   });
@@ -36141,7 +32040,7 @@ function create_default_slot26(ctx) {
       title: "Info",
       icon: "star",
       variant: "info",
-      $$slots: { default: [create_default_slot_211] },
+      $$slots: { default: [create_default_slot_213] },
       $$scope: { ctx }
     }
   });
@@ -36150,7 +32049,7 @@ function create_default_slot26(ctx) {
       title: "Danger",
       icon: "alert-circle",
       variant: "danger",
-      $$slots: { default: [create_default_slot_116] },
+      $$slots: { default: [create_default_slot_115] },
       $$scope: { ctx }
     }
   });
@@ -36212,7 +32111,7 @@ function create_default_slot26(ctx) {
     }
   };
 }
-function create_fragment85(ctx) {
+function create_fragment72(ctx) {
   let div;
   let typography0;
   let t0;
@@ -36313,7 +32212,7 @@ function create_fragment85(ctx) {
   typography2 = new Typography_default({
     props: {
       variant: "h2",
-      $$slots: { default: [create_default_slot_66] },
+      $$slots: { default: [create_default_slot_67] },
       $$scope: { ctx }
     }
   });
@@ -36325,7 +32224,7 @@ function create_fragment85(ctx) {
   });
   card10 = new Card_default({
     props: {
-      $$slots: { default: [create_default_slot26] },
+      $$slots: { default: [create_default_slot23] },
       $$scope: { ctx }
     }
   });
@@ -36359,7 +32258,7 @@ function create_fragment85(ctx) {
       create_component(card9.$$.fragment);
       t12 = space();
       create_component(card10.$$.fragment);
-      attr(div, "class", "container svelte-qi93d1");
+      attr(div, "class", "container svelte-11o1e1p");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -36520,8 +32419,10 @@ function create_fragment85(ctx) {
     }
   };
 }
-var func_13 = (file) => file.path.split("/").slice(0, -1).join("/");
-function instance85($$self, $$props, $$invalidate) {
+var func_12 = (file) => file.path.split("/").slice(0, -1).join("/");
+var func_2 = () => {
+};
+function instance72($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
   let btn1;
@@ -36540,9 +32441,9 @@ function instance85($$self, $$props, $$invalidate) {
     numberValue = value;
     $$invalidate(7, numberValue);
   }
-  const change_handler = ({ detail }) => new import_obsidian38.Notice(`Autocomplete changed: ${detail}`);
-  const func7 = (file) => file instanceof import_obsidian38.TFile ? file.basename : file.name;
-  const change_handler_1 = ({ detail }) => new import_obsidian38.Notice(`FileAutocomplete changed: ${detail}`);
+  const change_handler = ({ detail }) => new import_obsidian37.Notice(`Autocomplete changed: ${detail}`);
+  const func7 = (file) => file instanceof import_obsidian37.TFile ? file.basename : file.name;
+  const change_handler_1 = ({ detail }) => new import_obsidian37.Notice(`FileAutocomplete changed: ${detail}`);
   function button0_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       btn1 = $$value;
@@ -36598,17 +32499,6786 @@ function instance85($$self, $$props, $$invalidate) {
 var DeveloperView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance85, create_fragment85, safe_not_equal, {}, add_css48);
+    init(this, options, instance72, create_fragment72, safe_not_equal, {}, add_css42);
   }
 };
 var DeveloperView_default = DeveloperView;
 
-// src/app/View.svelte
+// src/views/Table/components/DataGrid/DataGrid.svelte
+var import_obsidian46 = __toModule(require("obsidian"));
+
+// src/views/Table/components/DataGrid/GridCell/Resizer.svelte
+function add_css43(target) {
+  append_styles(target, "svelte-ke01nl", ".handle.svelte-ke01nl{position:relative;left:7.5px;width:6px;min-width:6px;height:100%;border-radius:1px}.handle.svelte-ke01nl:hover{background-color:var(--interactive-accent);cursor:ew-resize}.visible.svelte-ke01nl{background-color:var(--interactive-accent);cursor:ew-resize}");
+}
+function create_else_block6(ctx) {
+  let span;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      span = element("span");
+      attr(span, "class", "handle svelte-ke01nl");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      if (!mounted) {
+        dispose = listen(span, "mousedown", ctx[1]);
+        mounted = true;
+      }
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(span);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_if_block18(ctx) {
+  let span;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      span = element("span");
+      attr(span, "class", "handle visible svelte-ke01nl");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      if (!mounted) {
+        dispose = listen(span, "mousedown", ctx[1]);
+        mounted = true;
+      }
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(span);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_fragment73(ctx) {
+  let if_block_anchor;
+  let mounted;
+  let dispose;
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[0])
+      return create_if_block18;
+    return create_else_block6;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      if (!mounted) {
+        dispose = [
+          listen(window, "mouseup", ctx[2]),
+          listen(window, "mousemove", ctx[3])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (current_block_type === (current_block_type = select_block_type(ctx2, dirty)) && if_block) {
+        if_block.p(ctx2, dirty);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx2);
+        if (if_block) {
+          if_block.c();
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance73($$self, $$props, $$invalidate) {
+  let { width } = $$props;
+  let { onChange } = $$props;
+  let { onFinalize } = $$props;
+  let { min: min2 } = $$props;
+  let start2;
+  let initial;
+  function startResize(event) {
+    $$invalidate(0, start2 = event.pageX);
+    initial = width;
+  }
+  function stopResize(event) {
+    if (start2 && initial) {
+      const delta = event.pageX - start2;
+      const newWidth = initial + delta;
+      if (newWidth >= min2) {
+        onFinalize(width);
+      }
+    }
+    $$invalidate(0, start2 = null);
+    initial = null;
+  }
+  function resize(event) {
+    if (start2 && initial) {
+      const delta = event.pageX - start2;
+      const newWidth = initial + delta;
+      if (newWidth >= min2) {
+        onChange(newWidth);
+      }
+    }
+  }
+  $$self.$$set = ($$props2) => {
+    if ("width" in $$props2)
+      $$invalidate(4, width = $$props2.width);
+    if ("onChange" in $$props2)
+      $$invalidate(5, onChange = $$props2.onChange);
+    if ("onFinalize" in $$props2)
+      $$invalidate(6, onFinalize = $$props2.onFinalize);
+    if ("min" in $$props2)
+      $$invalidate(7, min2 = $$props2.min);
+  };
+  return [start2, startResize, stopResize, resize, width, onChange, onFinalize, min2];
+}
+var Resizer = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance73, create_fragment73, safe_not_equal, {
+      width: 4,
+      onChange: 5,
+      onFinalize: 6,
+      min: 7
+    }, add_css43);
+  }
+};
+var Resizer_default = Resizer;
+
+// src/views/Table/components/DataGrid/GridCell/GridCell.svelte
+function add_css44(target) {
+  append_styles(target, "svelte-njsjbi", "div.svelte-njsjbi{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);box-sizing:border-box;vertical-align:middle;width:100%;min-height:30px}.selected.svelte-njsjbi{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-njsjbi{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-njsjbi{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-njsjbi{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;text-align:center;padding:0 4px}");
+}
+var get_read_slot_changes_1 = (dirty) => ({});
+var get_read_slot_context_1 = (ctx) => ({});
+var get_hover_slot_changes = (dirty) => ({});
+var get_hover_slot_context = (ctx) => ({});
+var get_selected_slot_changes = (dirty) => ({});
+var get_selected_slot_context = (ctx) => ({});
+var get_read_slot_changes = (dirty) => ({});
+var get_read_slot_context = (ctx) => ({});
+var get_edit_slot_changes = (dirty) => ({});
+var get_edit_slot_context = (ctx) => ({});
+function create_else_block_1(ctx) {
+  let current;
+  const read_slot_template = ctx[23].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context_1);
+  return {
+    c() {
+      if (read_slot)
+        read_slot.c();
+    },
+    m(target, anchor) {
+      if (read_slot) {
+        read_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (read_slot) {
+        if (read_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes_1), get_read_slot_context_1);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(read_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(read_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (read_slot)
+        read_slot.d(detaching);
+    }
+  };
+}
+function create_if_block_42(ctx) {
+  let current;
+  const hover_slot_template = ctx[23].hover;
+  const hover_slot = create_slot(hover_slot_template, ctx, ctx[22], get_hover_slot_context);
+  return {
+    c() {
+      if (hover_slot)
+        hover_slot.c();
+    },
+    m(target, anchor) {
+      if (hover_slot) {
+        hover_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (hover_slot) {
+        if (hover_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(hover_slot_template, ctx2[22], dirty, get_hover_slot_changes), get_hover_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(hover_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(hover_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (hover_slot)
+        hover_slot.d(detaching);
+    }
+  };
+}
+function create_if_block_34(ctx) {
+  let current;
+  const selected_slot_template = ctx[23].selected;
+  const selected_slot = create_slot(selected_slot_template, ctx, ctx[22], get_selected_slot_context);
+  return {
+    c() {
+      if (selected_slot)
+        selected_slot.c();
+    },
+    m(target, anchor) {
+      if (selected_slot) {
+        selected_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (selected_slot) {
+        if (selected_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(selected_slot_template, ctx2[22], dirty, get_selected_slot_changes), get_selected_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(selected_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(selected_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (selected_slot)
+        selected_slot.d(detaching);
+    }
+  };
+}
+function create_if_block_110(ctx) {
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block_25, create_else_block7];
+  const if_blocks = [];
+  function select_block_type_1(ctx2, dirty) {
+    if (ctx2[5].editable)
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type_1(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_1(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if_blocks[current_block_type_index].d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_else_block7(ctx) {
+  let current;
+  const read_slot_template = ctx[23].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context);
+  return {
+    c() {
+      if (read_slot)
+        read_slot.c();
+    },
+    m(target, anchor) {
+      if (read_slot) {
+        read_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (read_slot) {
+        if (read_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes), get_read_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(read_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(read_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (read_slot)
+        read_slot.d(detaching);
+    }
+  };
+}
+function create_if_block_25(ctx) {
+  let current;
+  const edit_slot_template = ctx[23].edit;
+  const edit_slot = create_slot(edit_slot_template, ctx, ctx[22], get_edit_slot_context);
+  return {
+    c() {
+      if (edit_slot)
+        edit_slot.c();
+    },
+    m(target, anchor) {
+      if (edit_slot) {
+        edit_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (edit_slot) {
+        if (edit_slot.p && (!current || dirty & 4194304)) {
+          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(edit_slot_template, ctx2[22], dirty, get_edit_slot_changes), get_edit_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(edit_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(edit_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (edit_slot)
+        edit_slot.d(detaching);
+    }
+  };
+}
+function create_if_block19(ctx) {
+  var _a;
+  let resizer;
+  let current;
+  resizer = new Resizer_default({
+    props: {
+      width: (_a = ctx[5].width) != null ? _a : 180,
+      min: 100,
+      onChange: ctx[3],
+      onFinalize: ctx[4]
+    }
+  });
+  return {
+    c() {
+      create_component(resizer.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(resizer, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const resizer_changes = {};
+      if (dirty & 32)
+        resizer_changes.width = (_a2 = ctx2[5].width) != null ? _a2 : 180;
+      if (dirty & 8)
+        resizer_changes.onChange = ctx2[3];
+      if (dirty & 16)
+        resizer_changes.onFinalize = ctx2[4];
+      resizer.$set(resizer_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(resizer.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(resizer.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(resizer, detaching);
+    }
+  };
+}
+function create_fragment74(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block0;
+  let t3;
+  let div_role_value;
+  let div_aria_selected_value;
+  let div_style_value;
+  let div_tabindex_value;
+  let useClickOutside_action;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_110, create_if_block_34, create_if_block_42, create_else_block_1];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[17].edit && ctx2[1])
+      return 0;
+    if (ctx2[17].selected && ctx2[0])
+      return 1;
+    if (ctx2[17].hover && ctx2[11])
+      return 2;
+    return 3;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  let if_block1 = ctx[2] && create_if_block19(ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block0.c();
+      t3 = space();
+      if (if_block1)
+        if_block1.c();
+      attr(div, "role", div_role_value = ctx[16]());
+      attr(div, "aria-selected", div_aria_selected_value = ctx[8] || ctx[7] ? void 0 : ctx[0]);
+      attr(div, "aria-colindex", ctx[6]);
+      attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
+      attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
+      attr(div, "class", "svelte-njsjbi");
+      toggle_class(div, "columnHeader", ctx[7]);
+      toggle_class(div, "header", ctx[5].header);
+      toggle_class(div, "selected", ctx[0]);
+      toggle_class(div, "rowHeader", ctx[8]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      append(div, t3);
+      if (if_block1)
+        if_block1.m(div, null);
+      ctx[25](div);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(div, "click", ctx[12]),
+          listen(div, "dblclick", ctx[13]),
+          listen(div, "mousedown", ctx[24]),
+          listen(div, "mouseenter", ctx[26]),
+          listen(div, "mouseleave", ctx[27]),
+          listen(div, "focus", ctx[28]),
+          listen(div, "blur", ctx[15]),
+          listen(div, "keydown", ctx[14]),
+          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[29]))
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block0 = if_blocks[current_block_type_index];
+        if (!if_block0) {
+          if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block0.c();
+        } else {
+          if_block0.p(ctx2, dirty);
+        }
+        transition_in(if_block0, 1);
+        if_block0.m(div, t3);
+      }
+      if (ctx2[2]) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+          if (dirty & 4) {
+            transition_in(if_block1, 1);
+          }
+        } else {
+          if_block1 = create_if_block19(ctx2);
+          if_block1.c();
+          transition_in(if_block1, 1);
+          if_block1.m(div, null);
+        }
+      } else if (if_block1) {
+        group_outros();
+        transition_out(if_block1, 1, 1, () => {
+          if_block1 = null;
+        });
+        check_outros();
+      }
+      if (!current || dirty & 385 && div_aria_selected_value !== (div_aria_selected_value = ctx2[8] || ctx2[7] ? void 0 : ctx2[0])) {
+        attr(div, "aria-selected", div_aria_selected_value);
+      }
+      if (!current || dirty & 64) {
+        attr(div, "aria-colindex", ctx2[6]);
+      }
+      if (!current || dirty & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
+        attr(div, "style", div_style_value);
+      }
+      if (!current || dirty & 384 && div_tabindex_value !== (div_tabindex_value = !ctx2[7] && !ctx2[8] ? 1 : void 0)) {
+        attr(div, "tabindex", div_tabindex_value);
+      }
+      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 513)
+        useClickOutside_action.update.call(null, ctx2[29]);
+      if (!current || dirty & 128) {
+        toggle_class(div, "columnHeader", ctx2[7]);
+      }
+      if (!current || dirty & 32) {
+        toggle_class(div, "header", ctx2[5].header);
+      }
+      if (!current || dirty & 1) {
+        toggle_class(div, "selected", ctx2[0]);
+      }
+      if (!current || dirty & 256) {
+        toggle_class(div, "rowHeader", ctx2[8]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block0);
+      transition_in(if_block1);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block0);
+      transition_out(if_block1);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if_blocks[current_block_type_index].d();
+      if (if_block1)
+        if_block1.d();
+      ctx[25](null);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance74($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  const $$slots = compute_slots(slots);
+  let { selected = false } = $$props;
+  let { edit = false } = $$props;
+  let { resizable = false } = $$props;
+  let { onResize = () => {
+  } } = $$props;
+  let { onFinalizeResize = () => {
+  } } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { columnHeader = false } = $$props;
+  let { rowHeader = false } = $$props;
+  let { onEditChange = (value) => {
+    $$invalidate(1, edit = value);
+  } } = $$props;
+  let { onCopy = () => {
+  } } = $$props;
+  let { onCut = () => {
+  } } = $$props;
+  let { onPaste = () => {
+  } } = $$props;
+  const dispatch = createEventDispatcher();
+  let hover = false;
+  let ref;
+  function handleClick() {
+    if (!column.header && !columnHeader && !rowHeader) {
+      $$invalidate(0, selected = true);
+    }
+  }
+  function handleDoubleClick() {
+    if (!column.header && !columnHeader && !rowHeader) {
+      onEditChange(true);
+    }
+  }
+  function handleKeyDown(event) {
+    if (event.metaKey || event.ctrlKey) {
+      switch (event.key) {
+        case "c":
+          onCopy();
+          break;
+        case "x":
+          onCut();
+          break;
+        case "v":
+          onPaste();
+          break;
+      }
+    }
+    switch (event.key) {
+      case "Enter":
+        if (edit) {
+          onEditChange(false);
+          ref.focus();
+        } else {
+          onEditChange(true);
+        }
+        break;
+      case "Escape":
+        onEditChange(false);
+        ref.focus();
+        break;
+      case "ArrowLeft":
+        dispatch("navigate", [colindex - 1, rowindex]);
+        event.preventDefault();
+        break;
+      case "ArrowRight":
+        dispatch("navigate", [colindex + 1, rowindex]);
+        event.preventDefault();
+        break;
+      case "ArrowUp":
+        dispatch("navigate", [colindex, rowindex - 1]);
+        event.preventDefault();
+        break;
+      case "ArrowDown":
+        dispatch("navigate", [colindex, rowindex + 1]);
+        event.preventDefault();
+        break;
+      case "Tab":
+        if (event.shiftKey) {
+          dispatch("navigate", [colindex - 1, rowindex]);
+        } else {
+          dispatch("navigate", [colindex + 1, rowindex]);
+        }
+        event.preventDefault();
+        break;
+    }
+  }
+  function handleBlur(event) {
+    $$invalidate(11, hover = false);
+    if (event.currentTarget instanceof HTMLDivElement && event.relatedTarget instanceof HTMLElement && !event.currentTarget.contains(event.relatedTarget)) {
+      $$invalidate(0, selected = false);
+      onEditChange(false);
+    }
+  }
+  function role() {
+    if (columnHeader) {
+      return "columnheader";
+    } else if (rowHeader) {
+      return "rowheader";
+    } else {
+      return "gridcell";
+    }
+  }
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      ref = $$value;
+      $$invalidate(10, ref);
+    });
+  }
+  const mouseenter_handler = () => $$invalidate(11, hover = true);
+  const mouseleave_handler = () => $$invalidate(11, hover = false);
+  const focus_handler = () => {
+    $$invalidate(11, hover = true);
+    $$invalidate(0, selected = true);
+  };
+  const useClickOutside_function = () => {
+    onEditChange(false);
+    $$invalidate(0, selected = false);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("selected" in $$props2)
+      $$invalidate(0, selected = $$props2.selected);
+    if ("edit" in $$props2)
+      $$invalidate(1, edit = $$props2.edit);
+    if ("resizable" in $$props2)
+      $$invalidate(2, resizable = $$props2.resizable);
+    if ("onResize" in $$props2)
+      $$invalidate(3, onResize = $$props2.onResize);
+    if ("onFinalizeResize" in $$props2)
+      $$invalidate(4, onFinalizeResize = $$props2.onFinalizeResize);
+    if ("column" in $$props2)
+      $$invalidate(5, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(18, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(6, colindex = $$props2.colindex);
+    if ("columnHeader" in $$props2)
+      $$invalidate(7, columnHeader = $$props2.columnHeader);
+    if ("rowHeader" in $$props2)
+      $$invalidate(8, rowHeader = $$props2.rowHeader);
+    if ("onEditChange" in $$props2)
+      $$invalidate(9, onEditChange = $$props2.onEditChange);
+    if ("onCopy" in $$props2)
+      $$invalidate(19, onCopy = $$props2.onCopy);
+    if ("onCut" in $$props2)
+      $$invalidate(20, onCut = $$props2.onCut);
+    if ("onPaste" in $$props2)
+      $$invalidate(21, onPaste = $$props2.onPaste);
+    if ("$$scope" in $$props2)
+      $$invalidate(22, $$scope = $$props2.$$scope);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 1025) {
+      $:
+        if (selected && ref) {
+          ref.focus();
+          ref.scrollIntoView({ block: "nearest", inline: "nearest" });
+        }
+    }
+  };
+  return [
+    selected,
+    edit,
+    resizable,
+    onResize,
+    onFinalizeResize,
+    column,
+    colindex,
+    columnHeader,
+    rowHeader,
+    onEditChange,
+    ref,
+    hover,
+    handleClick,
+    handleDoubleClick,
+    handleKeyDown,
+    handleBlur,
+    role,
+    $$slots,
+    rowindex,
+    onCopy,
+    onCut,
+    onPaste,
+    $$scope,
+    slots,
+    mousedown_handler,
+    div_binding,
+    mouseenter_handler,
+    mouseleave_handler,
+    focus_handler,
+    useClickOutside_function
+  ];
+}
+var GridCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance74, create_fragment74, safe_not_equal, {
+      selected: 0,
+      edit: 1,
+      resizable: 2,
+      onResize: 3,
+      onFinalizeResize: 4,
+      column: 5,
+      rowindex: 18,
+      colindex: 6,
+      columnHeader: 7,
+      rowHeader: 8,
+      onEditChange: 9,
+      onCopy: 19,
+      onCut: 20,
+      onPaste: 21
+    }, add_css44);
+  }
+};
+var GridCell_default = GridCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridBooleanCell/GridBooleanCell.svelte
+function create_if_block20(ctx) {
+  let switch_1;
+  let current;
+  switch_1 = new Switch_default({
+    props: {
+      checked: ctx[0],
+      disabled: !ctx[2].editable
+    }
+  });
+  switch_1.$on("check", ctx[7]);
+  return {
+    c() {
+      create_component(switch_1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(switch_1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const switch_1_changes = {};
+      if (dirty & 1)
+        switch_1_changes.checked = ctx2[0];
+      if (dirty & 4)
+        switch_1_changes.disabled = !ctx2[2].editable;
+      switch_1.$set(switch_1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(switch_1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(switch_1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(switch_1, detaching);
+    }
+  };
+}
+function create_read_slot(ctx) {
+  let show_if = isBoolean(ctx[0]);
+  let if_block_anchor;
+  let current;
+  let if_block = show_if && create_if_block20(ctx);
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1)
+        show_if = isBoolean(ctx2[0]);
+      if (show_if) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block20(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_edit_slot(ctx) {
+  var _a;
+  let switch_1;
+  let current;
+  switch_1 = new Switch_default({
+    props: {
+      slot: "edit",
+      checked: (_a = ctx[0]) != null ? _a : false
+    }
+  });
+  switch_1.$on("check", ctx[6]);
+  return {
+    c() {
+      create_component(switch_1.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(switch_1, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const switch_1_changes = {};
+      if (dirty & 1)
+        switch_1_changes.checked = (_a2 = ctx2[0]) != null ? _a2 : false;
+      switch_1.$set(switch_1_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(switch_1.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(switch_1.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(switch_1, detaching);
+    }
+  };
+}
+function create_fragment75(ctx) {
+  let gridcell;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      column: ctx[2],
+      $$slots: {
+        edit: [create_edit_slot],
+        read: [create_read_slot]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[8]);
+  gridcell.$on("navigate", ctx[9]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 4)
+        gridcell_changes.column = ctx2[2];
+      if (dirty & 1031) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function instance75($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  const check_handler = ({ detail: checked }) => onChange(checked);
+  const check_handler_1 = ({ detail: checked }) => onChange(checked);
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
+  };
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    check_handler,
+    check_handler_1,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridBooleanCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance75, create_fragment75, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
+  }
+};
+var GridBooleanCell_default = GridBooleanCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridDateCell/GridDateCell.svelte
+function create_if_block21(ctx) {
+  let textlabel;
+  let current;
+  textlabel = new TextLabel_default({
+    props: {
+      value: ctx[0].toLocaleDateString()
+    }
+  });
+  return {
+    c() {
+      create_component(textlabel.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textlabel, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textlabel_changes = {};
+      if (dirty & 1)
+        textlabel_changes.value = ctx2[0].toLocaleDateString();
+      textlabel.$set(textlabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textlabel.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textlabel.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textlabel, detaching);
+    }
+  };
+}
+function create_read_slot2(ctx) {
+  let if_block_anchor;
+  let current;
+  let if_block = ctx[0] && create_if_block21(ctx);
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (ctx2[0]) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block21(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_edit_slot2(ctx) {
+  var _a;
+  let dateinput;
+  let current;
+  dateinput = new DateInput_default({
+    props: {
+      value: (_a = ctx[0]) != null ? _a : null,
+      embed: true
+    }
+  });
+  dateinput.$on("change", ctx[7]);
+  return {
+    c() {
+      create_component(dateinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(dateinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const dateinput_changes = {};
+      if (dirty & 1)
+        dateinput_changes.value = (_a2 = ctx2[0]) != null ? _a2 : null;
+      dateinput.$set(dateinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(dateinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(dateinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(dateinput, detaching);
+    }
+  };
+}
+function create_fragment76(ctx) {
+  let gridcell;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      edit: ctx[6],
+      onEditChange: ctx[8],
+      column: ctx[2],
+      onCopy: ctx[9],
+      $$slots: {
+        edit: [create_edit_slot2],
+        read: [create_read_slot2]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[10]);
+  gridcell.$on("navigate", ctx[11]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 64)
+        gridcell_changes.edit = ctx2[6];
+      if (dirty & 64)
+        gridcell_changes.onEditChange = ctx2[8];
+      if (dirty & 4)
+        gridcell_changes.column = ctx2[2];
+      if (dirty & 1)
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 4163) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function instance76($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  let edit = false;
+  const change_handler = ({ detail: value2 }) => {
+    $$invalidate(6, edit = false);
+    onChange(value2);
+  };
+  const func7 = (mode) => {
+    $$invalidate(6, edit = mode);
+  };
+  const func_14 = () => {
+    if (value) {
+      navigator.clipboard.writeText(value.toLocaleDateString());
+    }
+  };
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
+  };
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    edit,
+    change_handler,
+    func7,
+    func_14,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridDateCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance76, create_fragment76, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
+  }
+};
+var GridDateCell_default = GridDateCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberLabel.svelte
+function add_css45(target) {
+  append_styles(target, "svelte-1636x3v", "div.svelte-1636x3v{width:100%;padding:6px;text-align:right}");
+}
+function create_fragment77(ctx) {
+  let div;
+  let t_value = new Intl.NumberFormat().format(ctx[0]) + "";
+  let t3;
+  return {
+    c() {
+      div = element("div");
+      t3 = text(t_value);
+      attr(div, "class", "svelte-1636x3v");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      append(div, t3);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1 && t_value !== (t_value = new Intl.NumberFormat().format(ctx2[0]) + ""))
+        set_data(t3, t_value);
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function instance77($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+  };
+  return [value];
+}
+var NumberLabel = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance77, create_fragment77, safe_not_equal, { value: 0 }, add_css45);
+  }
+};
+var NumberLabel_default = NumberLabel;
+
+// src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberInput.svelte
+function add_css46(target) {
+  append_styles(target, "svelte-1uq2i75", "input.svelte-1uq2i75{all:unset;background-color:var(--background-primary);box-sizing:border-box;width:100%;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal);text-align:right}input.svelte-1uq2i75:focus{box-shadow:none !important}input.svelte-1uq2i75:hover{background-color:transparent}");
+}
+function create_fragment78(ctx) {
+  let input;
+  let input_tabindex_value;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      input = element("input");
+      attr(input, "tabindex", input_tabindex_value = -1);
+      attr(input, "type", "number");
+      input.value = ctx[0];
+      attr(input, "class", "svelte-1uq2i75");
+    },
+    m(target, anchor) {
+      insert(target, input, anchor);
+      ctx[6](input);
+      if (!mounted) {
+        dispose = [
+          listen(input, "input", ctx[2]),
+          listen(input, "keypress", ctx[3]),
+          listen(input, "blur", ctx[5])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1 && input.value !== ctx2[0]) {
+        input.value = ctx2[0];
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(input);
+      ctx[6](null);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance78($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let ref;
+  function handleInput(event) {
+    if (event.currentTarget instanceof HTMLInputElement) {
+      $$invalidate(0, value = event.currentTarget.valueAsNumber);
+      onChange(value);
+    }
+  }
+  function handleKeyup(event) {
+    if (event.currentTarget instanceof HTMLInputElement) {
+      $$invalidate(0, value = event.currentTarget.valueAsNumber);
+    }
+  }
+  onMount(() => {
+    ref.focus();
+  });
+  function blur_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function input_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      ref = $$value;
+      $$invalidate(1, ref);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(4, onChange = $$props2.onChange);
+  };
+  return [value, ref, handleInput, handleKeyup, onChange, blur_handler, input_binding];
+}
+var NumberInput2 = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance78, create_fragment78, safe_not_equal, { value: 0, onChange: 4 }, add_css46);
+  }
+};
+var NumberInput_default2 = NumberInput2;
+
+// src/views/Table/components/DataGrid/GridCell/GridNumberCell/GridNumberCell.svelte
+function create_if_block22(ctx) {
+  let numberlabel;
+  let current;
+  numberlabel = new NumberLabel_default({ props: { value: ctx[1] } });
+  return {
+    c() {
+      create_component(numberlabel.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(numberlabel, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const numberlabel_changes = {};
+      if (dirty & 2)
+        numberlabel_changes.value = ctx2[1];
+      numberlabel.$set(numberlabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(numberlabel.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(numberlabel.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(numberlabel, detaching);
+    }
+  };
+}
+function create_read_slot3(ctx) {
+  let show_if = isNumber(ctx[1]);
+  let if_block_anchor;
+  let current;
+  let if_block = show_if && create_if_block22(ctx);
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 2)
+        show_if = isNumber(ctx2[1]);
+      if (show_if) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 2) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block22(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_edit_slot3(ctx) {
+  var _a;
+  let numberinput;
+  let current;
+  numberinput = new NumberInput_default2({
+    props: {
+      slot: "edit",
+      value: (_a = ctx[1]) != null ? _a : 0,
+      onChange: ctx[7]
+    }
+  });
+  numberinput.$on("blur", ctx[8]);
+  return {
+    c() {
+      create_component(numberinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(numberinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const numberinput_changes = {};
+      if (dirty & 2)
+        numberinput_changes.value = (_a2 = ctx2[1]) != null ? _a2 : 0;
+      if (dirty & 4)
+        numberinput_changes.onChange = ctx2[7];
+      numberinput.$set(numberinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(numberinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(numberinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(numberinput, detaching);
+    }
+  };
+}
+function create_fragment79(ctx) {
+  let gridcell;
+  let updating_edit;
+  let updating_selected;
+  let current;
+  function gridcell_edit_binding(value) {
+    ctx[12](value);
+  }
+  function gridcell_selected_binding(value) {
+    ctx[13](value);
+  }
+  let gridcell_props = {
+    column: ctx[3],
+    rowindex: ctx[4],
+    colindex: ctx[5],
+    onCopy: ctx[9],
+    onCut: ctx[10],
+    onPaste: ctx[11],
+    $$slots: {
+      edit: [create_edit_slot3],
+      read: [create_read_slot3]
+    },
+    $$scope: { ctx }
+  };
+  if (ctx[6] !== void 0) {
+    gridcell_props.edit = ctx[6];
+  }
+  if (ctx[0] !== void 0) {
+    gridcell_props.selected = ctx[0];
+  }
+  gridcell = new GridCell_default({ props: gridcell_props });
+  binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
+  binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
+  gridcell.$on("mousedown", ctx[14]);
+  gridcell.$on("navigate", ctx[15]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 8)
+        gridcell_changes.column = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.rowindex = ctx2[4];
+      if (dirty & 32)
+        gridcell_changes.colindex = ctx2[5];
+      if (dirty & 2)
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 6)
+        gridcell_changes.onCut = ctx2[10];
+      if (dirty & 4)
+        gridcell_changes.onPaste = ctx2[11];
+      if (dirty & 65607) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      if (!updating_edit && dirty & 64) {
+        updating_edit = true;
+        gridcell_changes.edit = ctx2[6];
+        add_flush_callback(() => updating_edit = false);
+      }
+      if (!updating_selected && dirty & 1) {
+        updating_selected = true;
+        gridcell_changes.selected = ctx2[0];
+        add_flush_callback(() => updating_selected = false);
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function instance79($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  let edit = false;
+  const func7 = (value2) => {
+    onChange(value2);
+  };
+  const blur_handler = (event) => {
+    if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
+      $$invalidate(0, selected = false);
+      $$invalidate(6, edit = false);
+    }
+  };
+  const func_14 = () => {
+    var _a;
+    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
+  };
+  const func_22 = () => {
+    var _a;
+    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
+    onChange(void 0);
+  };
+  const func_3 = () => __async(this, null, function* () {
+    onChange(parseFloat(yield navigator.clipboard.readText()));
+  });
+  function gridcell_edit_binding(value2) {
+    edit = value2;
+    $$invalidate(6, edit);
+  }
+  function gridcell_selected_binding(value2) {
+    selected = value2;
+    $$invalidate(0, selected);
+  }
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(1, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(2, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(3, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(4, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(5, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(0, selected = $$props2.selected);
+  };
+  return [
+    selected,
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    edit,
+    func7,
+    blur_handler,
+    func_14,
+    func_22,
+    func_3,
+    gridcell_edit_binding,
+    gridcell_selected_binding,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridNumberCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance79, create_fragment79, safe_not_equal, {
+      value: 1,
+      onChange: 2,
+      column: 3,
+      rowindex: 4,
+      colindex: 5,
+      selected: 0
+    });
+  }
+};
+var GridNumberCell_default = GridNumberCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridTextCell/TextLabel.svelte
+function add_css47(target) {
+  append_styles(target, "svelte-q1s3im", "div.svelte-q1s3im{padding:6px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}");
+}
+function create_fragment80(ctx) {
+  let div;
+  let t3;
+  return {
+    c() {
+      div = element("div");
+      t3 = text(ctx[0]);
+      attr(div, "class", "svelte-q1s3im");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      append(div, t3);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1)
+        set_data(t3, ctx2[0]);
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function instance80($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+  };
+  return [value];
+}
+var TextLabel = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance80, create_fragment80, safe_not_equal, { value: 0 }, add_css47);
+  }
+};
+var TextLabel_default = TextLabel;
+
+// src/views/Table/components/DataGrid/GridCell/GridTextCell/GridTextCell.svelte
+function create_read_slot4(ctx) {
+  let textlabel;
+  let current;
+  textlabel = new TextLabel_default({
+    props: {
+      slot: "read",
+      value: ctx[0] || ""
+    }
+  });
+  return {
+    c() {
+      create_component(textlabel.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textlabel, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textlabel_changes = {};
+      if (dirty & 1)
+        textlabel_changes.value = ctx2[0] || "";
+      textlabel.$set(textlabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textlabel.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textlabel.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textlabel, detaching);
+    }
+  };
+}
+function create_edit_slot4(ctx) {
+  let textinput;
+  let current;
+  textinput = new TextInput_default({
+    props: {
+      autoFocus: true,
+      slot: "edit",
+      value: ctx[0] || "",
+      embed: true,
+      width: "100%"
+    }
+  });
+  textinput.$on("input", ctx[7]);
+  textinput.$on("blur", ctx[8]);
+  return {
+    c() {
+      create_component(textinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textinput_changes = {};
+      if (dirty & 1)
+        textinput_changes.value = ctx2[0] || "";
+      textinput.$set(textinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textinput, detaching);
+    }
+  };
+}
+function create_fragment81(ctx) {
+  let gridcell;
+  let updating_edit;
+  let updating_selected;
+  let current;
+  function gridcell_edit_binding(value) {
+    ctx[12](value);
+  }
+  function gridcell_selected_binding(value) {
+    ctx[13](value);
+  }
+  let gridcell_props = {
+    column: ctx[3],
+    rowindex: ctx[4],
+    colindex: ctx[5],
+    onCopy: ctx[9],
+    onCut: ctx[10],
+    onPaste: ctx[11],
+    $$slots: {
+      edit: [create_edit_slot4],
+      read: [create_read_slot4]
+    },
+    $$scope: { ctx }
+  };
+  if (ctx[6] !== void 0) {
+    gridcell_props.edit = ctx[6];
+  }
+  if (ctx[1] !== void 0) {
+    gridcell_props.selected = ctx[1];
+  }
+  gridcell = new GridCell_default({ props: gridcell_props });
+  binding_callbacks.push(() => bind(gridcell, "edit", gridcell_edit_binding));
+  binding_callbacks.push(() => bind(gridcell, "selected", gridcell_selected_binding));
+  gridcell.$on("mousedown", ctx[14]);
+  gridcell.$on("navigate", ctx[15]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 8)
+        gridcell_changes.column = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.rowindex = ctx2[4];
+      if (dirty & 32)
+        gridcell_changes.colindex = ctx2[5];
+      if (dirty & 1)
+        gridcell_changes.onCopy = ctx2[9];
+      if (dirty & 5)
+        gridcell_changes.onCut = ctx2[10];
+      if (dirty & 4)
+        gridcell_changes.onPaste = ctx2[11];
+      if (dirty & 65607) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      if (!updating_edit && dirty & 64) {
+        updating_edit = true;
+        gridcell_changes.edit = ctx2[6];
+        add_flush_callback(() => updating_edit = false);
+      }
+      if (!updating_selected && dirty & 2) {
+        updating_selected = true;
+        gridcell_changes.selected = ctx2[1];
+        add_flush_callback(() => updating_selected = false);
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function instance81($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  let edit = false;
+  const input_handler = ({ detail }) => $$invalidate(0, value = detail);
+  const blur_handler = (event) => {
+    if (event.currentTarget instanceof HTMLInputElement && event.relatedTarget instanceof HTMLDivElement && !event.relatedTarget.contains(event.currentTarget)) {
+      $$invalidate(1, selected = false);
+      $$invalidate(6, edit = false);
+    }
+    onChange(value);
+  };
+  const func7 = () => {
+    var _a;
+    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
+  };
+  const func_14 = () => {
+    var _a;
+    navigator.clipboard.writeText((_a = value == null ? void 0 : value.toString()) != null ? _a : "");
+    onChange(void 0);
+  };
+  const func_22 = () => __async(this, null, function* () {
+    onChange(yield navigator.clipboard.readText());
+  });
+  function gridcell_edit_binding(value2) {
+    edit = value2;
+    $$invalidate(6, edit);
+  }
+  function gridcell_selected_binding(value2) {
+    selected = value2;
+    $$invalidate(1, selected);
+  }
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(2, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(3, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(4, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(5, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(1, selected = $$props2.selected);
+  };
+  return [
+    value,
+    selected,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    edit,
+    input_handler,
+    blur_handler,
+    func7,
+    func_14,
+    func_22,
+    gridcell_edit_binding,
+    gridcell_selected_binding,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridTextCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance81, create_fragment81, safe_not_equal, {
+      value: 0,
+      onChange: 2,
+      column: 3,
+      rowindex: 4,
+      colindex: 5,
+      selected: 1
+    });
+  }
+};
+var GridTextCell_default = GridTextCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
+var import_obsidian41 = __toModule(require("obsidian"));
+
+// src/views/Table/components/DataGrid/GridCell/GridLinkCell/LinkLabel.svelte
+function add_css48(target) {
+  append_styles(target, "svelte-1ip22jj", "div.svelte-1ip22jj{padding:6px;width:100%}");
+}
+function create_if_block23(ctx) {
+  let internallink;
+  let current;
+  internallink = new InternalLink_default({
+    props: {
+      linkText: ctx[0].linkText,
+      sourcePath: ctx[0].sourcePath,
+      resolved: !!ctx[1].metadataCache.getFirstLinkpathDest(ctx[0].linkText, ctx[0].sourcePath),
+      $$slots: { default: [create_default_slot24] },
+      $$scope: { ctx }
+    }
+  });
+  internallink.$on("open", ctx[2]);
+  return {
+    c() {
+      create_component(internallink.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(internallink, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const internallink_changes = {};
+      if (dirty & 1)
+        internallink_changes.linkText = ctx2[0].linkText;
+      if (dirty & 1)
+        internallink_changes.sourcePath = ctx2[0].sourcePath;
+      if (dirty & 3)
+        internallink_changes.resolved = !!ctx2[1].metadataCache.getFirstLinkpathDest(ctx2[0].linkText, ctx2[0].sourcePath);
+      if (dirty & 9) {
+        internallink_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      internallink.$set(internallink_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(internallink.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(internallink.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(internallink, detaching);
+    }
+  };
+}
+function create_default_slot24(ctx) {
+  var _a;
+  let t_value = ((_a = ctx[0].displayName) != null ? _a : ctx[0].linkText) + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      if (dirty & 1 && t_value !== (t_value = ((_a2 = ctx2[0].displayName) != null ? _a2 : ctx2[0].linkText) + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_fragment82(ctx) {
+  let div;
+  let current;
+  let if_block = ctx[0] && create_if_block23(ctx);
+  return {
+    c() {
+      div = element("div");
+      if (if_block)
+        if_block.c();
+      attr(div, "class", "svelte-1ip22jj");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (if_block)
+        if_block.m(div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (ctx2[0]) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block23(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(div, null);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (if_block)
+        if_block.d();
+    }
+  };
+}
+function instance82($$self, $$props, $$invalidate) {
+  let $app;
+  component_subscribe($$self, app, ($$value) => $$invalidate(1, $app = $$value));
+  let { value } = $$props;
+  const open_handler = ({ detail: { linkText, sourcePath, newLeaf } }) => {
+    $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+  };
+  return [value, $app, open_handler];
+}
+var LinkLabel = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance82, create_fragment82, safe_not_equal, { value: 0 }, add_css48);
+  }
+};
+var LinkLabel_default = LinkLabel;
+
+// src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
+function create_if_block_111(ctx) {
+  let linklabel;
+  let current;
+  linklabel = new LinkLabel_default({ props: { value: ctx[0] } });
+  return {
+    c() {
+      create_component(linklabel.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(linklabel, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const linklabel_changes = {};
+      if (dirty & 1)
+        linklabel_changes.value = ctx2[0];
+      linklabel.$set(linklabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(linklabel.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(linklabel.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(linklabel, detaching);
+    }
+  };
+}
+function create_read_slot5(ctx) {
+  let show_if = isOptionalLink(ctx[0]);
+  let if_block_anchor;
+  let current;
+  let if_block = show_if && create_if_block_111(ctx);
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1)
+        show_if = isOptionalLink(ctx2[0]);
+      if (show_if) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block_111(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_if_block24(ctx) {
+  var _a, _b;
+  let fileautocomplete;
+  let current;
+  fileautocomplete = new FileAutocomplete_default({
+    props: {
+      files: getNotesInFolder(ctx[7].vault.getRoot()),
+      value: (_b = (_a = ctx[0]) == null ? void 0 : _a.linkText) != null ? _b : "",
+      embed: true,
+      autoFocus: true,
+      width: "100%",
+      getLabel: ctx[9],
+      getDescription: func_13
+    }
+  });
+  fileautocomplete.$on("blur", ctx[10]);
+  fileautocomplete.$on("change", ctx[11]);
+  return {
+    c() {
+      create_component(fileautocomplete.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(fileautocomplete, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2;
+      const fileautocomplete_changes = {};
+      if (dirty & 128)
+        fileautocomplete_changes.files = getNotesInFolder(ctx2[7].vault.getRoot());
+      if (dirty & 1)
+        fileautocomplete_changes.value = (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.linkText) != null ? _b2 : "";
+      fileautocomplete.$set(fileautocomplete_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(fileautocomplete.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(fileautocomplete.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(fileautocomplete, detaching);
+    }
+  };
+}
+function create_edit_slot5(ctx) {
+  let show_if = isOptionalLink(ctx[0]);
+  let if_block_anchor;
+  let current;
+  let if_block = show_if && create_if_block24(ctx);
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1)
+        show_if = isOptionalLink(ctx2[0]);
+      if (show_if) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block24(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_fragment83(ctx) {
+  let gridcell;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      edit: ctx[6],
+      onEditChange: ctx[12],
+      column: ctx[2],
+      $$slots: {
+        edit: [create_edit_slot5],
+        read: [create_read_slot5]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[13]);
+  gridcell.$on("navigate", ctx[14]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 64)
+        gridcell_changes.edit = ctx2[6];
+      if (dirty & 64)
+        gridcell_changes.onEditChange = ctx2[12];
+      if (dirty & 4)
+        gridcell_changes.column = ctx2[2];
+      if (dirty & 32963) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+var func_13 = (file) => file.path.split("/").slice(0, -1).join("/");
+function instance83($$self, $$props, $$invalidate) {
+  let $app;
+  component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  const sourcePath = getContext("sourcePath");
+  let edit = false;
+  const func7 = (file) => file instanceof import_obsidian41.TFile ? file.basename : "";
+  const blur_handler = () => {
+    $$invalidate(6, edit = false);
+  };
+  const change_handler = ({ detail: linkText }) => {
+    onChange(linkText ? { linkText, sourcePath } : void 0);
+  };
+  const func_22 = (value2) => $$invalidate(6, edit = value2);
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
+  };
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    edit,
+    $app,
+    sourcePath,
+    func7,
+    blur_handler,
+    change_handler,
+    func_22,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridLinkCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance83, create_fragment83, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
+  }
+};
+var GridLinkCell_default = GridLinkCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridListCell/GridListCell.svelte
+function create_read_slot6(ctx) {
+  var _a;
+  let taglist;
+  let current;
+  taglist = new TagList_default({
+    props: {
+      slot: "read",
+      edit: false,
+      values: (_a = ctx[0]) != null ? _a : []
+    }
+  });
+  return {
+    c() {
+      create_component(taglist.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(taglist, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const taglist_changes = {};
+      if (dirty & 1)
+        taglist_changes.values = (_a2 = ctx2[0]) != null ? _a2 : [];
+      taglist.$set(taglist_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(taglist.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(taglist.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(taglist, detaching);
+    }
+  };
+}
+function create_edit_slot6(ctx) {
+  var _a;
+  let taglist;
+  let current;
+  taglist = new TagList_default({
+    props: {
+      slot: "edit",
+      edit: true,
+      values: (_a = ctx[0]) != null ? _a : [],
+      onChange: ctx[1]
+    }
+  });
+  return {
+    c() {
+      create_component(taglist.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(taglist, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const taglist_changes = {};
+      if (dirty & 1)
+        taglist_changes.values = (_a2 = ctx2[0]) != null ? _a2 : [];
+      if (dirty & 2)
+        taglist_changes.onChange = ctx2[1];
+      taglist.$set(taglist_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(taglist.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(taglist.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(taglist, detaching);
+    }
+  };
+}
+function create_fragment84(ctx) {
+  let gridcell;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      column: ctx[2],
+      $$slots: {
+        edit: [create_edit_slot6],
+        read: [create_read_slot6]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[6]);
+  gridcell.$on("navigate", ctx[7]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 4)
+        gridcell_changes.column = ctx2[2];
+      if (dirty & 259) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function instance84($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
+  };
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    mousedown_handler,
+    navigate_handler
+  ];
+}
+var GridListCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance84, create_fragment84, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
+  }
+};
+var GridListCell_default = GridListCell;
+
+// src/views/Table/components/DataGrid/GridCell/GridTypedCell.svelte
+function create_else_block8(ctx) {
+  let gridcell;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      rowindex: ctx[3],
+      selected: ctx[5],
+      colindex: ctx[4],
+      column: ctx[2]
+    }
+  });
+  gridcell.$on("mousedown", ctx[18]);
+  gridcell.$on("navigate", ctx[19]);
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridcell_changes = {};
+      if (dirty & 8)
+        gridcell_changes.rowindex = ctx2[3];
+      if (dirty & 32)
+        gridcell_changes.selected = ctx2[5];
+      if (dirty & 16)
+        gridcell_changes.colindex = ctx2[4];
+      if (dirty & 4)
+        gridcell_changes.column = ctx2[2];
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function create_if_block_52(ctx) {
+  let gridlistcell;
+  let current;
+  gridlistcell = new GridListCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  gridlistcell.$on("mousedown", ctx[16]);
+  gridlistcell.$on("navigate", ctx[17]);
+  return {
+    c() {
+      create_component(gridlistcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridlistcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridlistcell_changes = {};
+      if (dirty & 32)
+        gridlistcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridlistcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridlistcell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        gridlistcell_changes.value = ctx2[0];
+      if (dirty & 2)
+        gridlistcell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        gridlistcell_changes.column = ctx2[2];
+      gridlistcell.$set(gridlistcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridlistcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridlistcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridlistcell, detaching);
+    }
+  };
+}
+function create_if_block_43(ctx) {
+  let gridlinkcell;
+  let current;
+  gridlinkcell = new GridLinkCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  gridlinkcell.$on("mousedown", ctx[14]);
+  gridlinkcell.$on("navigate", ctx[15]);
+  return {
+    c() {
+      create_component(gridlinkcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridlinkcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridlinkcell_changes = {};
+      if (dirty & 32)
+        gridlinkcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridlinkcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridlinkcell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        gridlinkcell_changes.value = ctx2[0];
+      if (dirty & 2)
+        gridlinkcell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        gridlinkcell_changes.column = ctx2[2];
+      gridlinkcell.$set(gridlinkcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridlinkcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridlinkcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridlinkcell, detaching);
+    }
+  };
+}
+function create_if_block_35(ctx) {
+  let griddatecell;
+  let current;
+  griddatecell = new GridDateCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  griddatecell.$on("mousedown", ctx[12]);
+  griddatecell.$on("navigate", ctx[13]);
+  return {
+    c() {
+      create_component(griddatecell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(griddatecell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const griddatecell_changes = {};
+      if (dirty & 32)
+        griddatecell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        griddatecell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        griddatecell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        griddatecell_changes.value = ctx2[0];
+      if (dirty & 2)
+        griddatecell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        griddatecell_changes.column = ctx2[2];
+      griddatecell.$set(griddatecell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(griddatecell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(griddatecell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(griddatecell, detaching);
+    }
+  };
+}
+function create_if_block_26(ctx) {
+  let gridnumbercell;
+  let current;
+  gridnumbercell = new GridNumberCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  gridnumbercell.$on("mousedown", ctx[10]);
+  gridnumbercell.$on("navigate", ctx[11]);
+  return {
+    c() {
+      create_component(gridnumbercell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridnumbercell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridnumbercell_changes = {};
+      if (dirty & 32)
+        gridnumbercell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridnumbercell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridnumbercell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        gridnumbercell_changes.value = ctx2[0];
+      if (dirty & 2)
+        gridnumbercell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        gridnumbercell_changes.column = ctx2[2];
+      gridnumbercell.$set(gridnumbercell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridnumbercell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridnumbercell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridnumbercell, detaching);
+    }
+  };
+}
+function create_if_block_112(ctx) {
+  let gridbooleancell;
+  let current;
+  gridbooleancell = new GridBooleanCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  gridbooleancell.$on("mousedown", ctx[8]);
+  gridbooleancell.$on("navigate", ctx[9]);
+  return {
+    c() {
+      create_component(gridbooleancell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridbooleancell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridbooleancell_changes = {};
+      if (dirty & 32)
+        gridbooleancell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridbooleancell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridbooleancell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        gridbooleancell_changes.value = ctx2[0];
+      if (dirty & 2)
+        gridbooleancell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        gridbooleancell_changes.column = ctx2[2];
+      gridbooleancell.$set(gridbooleancell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridbooleancell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridbooleancell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridbooleancell, detaching);
+    }
+  };
+}
+function create_if_block25(ctx) {
+  let gridtextcell;
+  let current;
+  gridtextcell = new GridTextCell_default({
+    props: {
+      selected: ctx[5],
+      rowindex: ctx[3],
+      colindex: ctx[4],
+      value: ctx[0],
+      onChange: ctx[1],
+      column: ctx[2]
+    }
+  });
+  gridtextcell.$on("mousedown", ctx[6]);
+  gridtextcell.$on("navigate", ctx[7]);
+  return {
+    c() {
+      create_component(gridtextcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridtextcell, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridtextcell_changes = {};
+      if (dirty & 32)
+        gridtextcell_changes.selected = ctx2[5];
+      if (dirty & 8)
+        gridtextcell_changes.rowindex = ctx2[3];
+      if (dirty & 16)
+        gridtextcell_changes.colindex = ctx2[4];
+      if (dirty & 1)
+        gridtextcell_changes.value = ctx2[0];
+      if (dirty & 2)
+        gridtextcell_changes.onChange = ctx2[1];
+      if (dirty & 4)
+        gridtextcell_changes.column = ctx2[2];
+      gridtextcell.$set(gridtextcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridtextcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridtextcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridtextcell, detaching);
+    }
+  };
+}
+function create_fragment85(ctx) {
+  let show_if;
+  let show_if_1;
+  let show_if_2;
+  let show_if_3;
+  let show_if_4;
+  let show_if_5;
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [
+    create_if_block25,
+    create_if_block_112,
+    create_if_block_26,
+    create_if_block_35,
+    create_if_block_43,
+    create_if_block_52,
+    create_else_block8
+  ];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (dirty & 5)
+      show_if = null;
+    if (dirty & 5)
+      show_if_1 = null;
+    if (dirty & 5)
+      show_if_2 = null;
+    if (dirty & 5)
+      show_if_3 = null;
+    if (dirty & 5)
+      show_if_4 = null;
+    if (dirty & 5)
+      show_if_5 = null;
+    if (show_if == null)
+      show_if = !!(ctx2[2].type === "string" && isOptionalString(ctx2[0]));
+    if (show_if)
+      return 0;
+    if (show_if_1 == null)
+      show_if_1 = !!(ctx2[2].type === "boolean" && isOptionalBoolean(ctx2[0]));
+    if (show_if_1)
+      return 1;
+    if (show_if_2 == null)
+      show_if_2 = !!(ctx2[2].type === "number" && isOptionalNumber(ctx2[0]));
+    if (show_if_2)
+      return 2;
+    if (show_if_3 == null)
+      show_if_3 = !!(ctx2[2].type === "date" && isOptionalDate(ctx2[0]));
+    if (show_if_3)
+      return 3;
+    if (show_if_4 == null)
+      show_if_4 = !!(ctx2[2].type === "link" && isOptionalLink(ctx2[0]));
+    if (show_if_4)
+      return 4;
+    if (show_if_5 == null)
+      show_if_5 = !!(ctx2[2].type === "list" && isOptionalList(ctx2[0]));
+    if (show_if_5)
+      return 5;
+    return 6;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if_blocks[current_block_type_index].d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function instance85($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  let { onChange } = $$props;
+  let { column } = $$props;
+  let { rowindex } = $$props;
+  let { colindex } = $$props;
+  let { selected } = $$props;
+  function mousedown_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_1(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_1(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_2(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_2(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_3(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_3(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_4(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_4(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_5(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_5(event) {
+    bubble.call(this, $$self, event);
+  }
+  function mousedown_handler_6(event) {
+    bubble.call(this, $$self, event);
+  }
+  function navigate_handler_6(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+    if ("column" in $$props2)
+      $$invalidate(2, column = $$props2.column);
+    if ("rowindex" in $$props2)
+      $$invalidate(3, rowindex = $$props2.rowindex);
+    if ("colindex" in $$props2)
+      $$invalidate(4, colindex = $$props2.colindex);
+    if ("selected" in $$props2)
+      $$invalidate(5, selected = $$props2.selected);
+  };
+  return [
+    value,
+    onChange,
+    column,
+    rowindex,
+    colindex,
+    selected,
+    mousedown_handler,
+    navigate_handler,
+    mousedown_handler_1,
+    navigate_handler_1,
+    mousedown_handler_2,
+    navigate_handler_2,
+    mousedown_handler_3,
+    navigate_handler_3,
+    mousedown_handler_4,
+    navigate_handler_4,
+    mousedown_handler_5,
+    navigate_handler_5,
+    mousedown_handler_6,
+    navigate_handler_6
+  ];
+}
+var GridTypedCell = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance85, create_fragment85, safe_not_equal, {
+      value: 0,
+      onChange: 1,
+      column: 2,
+      rowindex: 3,
+      colindex: 4,
+      selected: 5
+    });
+  }
+};
+var GridTypedCell_default = GridTypedCell;
+
+// src/views/Table/components/DataGrid/data-grid.ts
+function fieldIcon(field) {
+  switch (field) {
+    case DataFieldType.String:
+      return "text";
+    case DataFieldType.Number:
+      return "hash";
+    case DataFieldType.Boolean:
+      return "check";
+    case DataFieldType.Date:
+      return "calendar-days";
+    case DataFieldType.Link:
+      return "link";
+    case DataFieldType.List:
+      return "list";
+  }
+  return "alert-triangle";
+}
+function sortRows(rows, sortModel) {
+  return rows.sort((a2, b2) => {
+    let aval = a2.row[sortModel.field];
+    let bval = b2.row[sortModel.field];
+    const isAsc = sortModel.sort === "asc";
+    if (!aval && bval)
+      return isAsc ? 1 : -1;
+    if (aval && !bval)
+      return isAsc ? -1 : 1;
+    if (!aval && !bval)
+      return 0;
+    if (isNumber(aval) && isNumber(bval)) {
+      if (aval < bval) {
+        return isAsc ? -1 : 1;
+      } else if (aval > bval) {
+        return isAsc ? 1 : -1;
+      } else {
+        return 0;
+      }
+    }
+    aval = aval.toString().toLocaleLowerCase();
+    bval = bval.toString().toLocaleLowerCase();
+    if (aval < bval) {
+      return isAsc ? -1 : 1;
+    } else if (aval > bval) {
+      return isAsc ? 1 : -1;
+    } else {
+      return 0;
+    }
+  });
+}
+function sortColumns(columns) {
+  return columns.sort((a2, b2) => {
+    var _a, _b;
+    const left2 = (_a = a2.weight) != null ? _a : 9999;
+    const right2 = (_b = b2.weight) != null ? _b : 9999;
+    if (left2 < right2) {
+      return -1;
+    } else if (left2 > right2) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+}
+function menuOnContextMenu(event, menu) {
+  const contextMenuFunc = (event2) => {
+    window.removeEventListener("contextmenu", contextMenuFunc);
+    event2.preventDefault();
+    event2.stopPropagation();
+    menu.showAtMouseEvent(event2);
+  };
+  window.addEventListener("contextmenu", contextMenuFunc, false);
+}
+
+// src/views/Table/components/DataGrid/GridCellGroup.svelte
+function add_css49(target) {
+  append_styles(target, "svelte-1jrmech", "div.svelte-1jrmech{display:flex}.header.svelte-1jrmech{position:sticky;top:0;z-index:10}");
+}
 function create_fragment86(ctx) {
+  let div;
+  let current;
+  let mounted;
+  let dispose;
+  const default_slot_template = ctx[3].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "role", "row");
+      attr(div, "aria-rowindex", ctx[0]);
+      attr(div, "class", "svelte-1jrmech");
+      toggle_class(div, "header", ctx[1]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(div, "mouseover", ctx[4]),
+          listen(div, "focus", ctx[5])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 4)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
+        }
+      }
+      if (!current || dirty & 1) {
+        attr(div, "aria-rowindex", ctx2[0]);
+      }
+      if (!current || dirty & 2) {
+        toggle_class(div, "header", ctx2[1]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance86($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { index } = $$props;
+  let { header = false } = $$props;
+  function mouseover_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function focus_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("index" in $$props2)
+      $$invalidate(0, index = $$props2.index);
+    if ("header" in $$props2)
+      $$invalidate(1, header = $$props2.header);
+    if ("$$scope" in $$props2)
+      $$invalidate(2, $$scope = $$props2.$$scope);
+  };
+  return [index, header, $$scope, slots, mouseover_handler, focus_handler];
+}
+var GridCellGroup = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance86, create_fragment86, safe_not_equal, { index: 0, header: 1 }, add_css49);
+  }
+};
+var GridCellGroup_default = GridCellGroup;
+
+// src/views/Table/components/DataGrid/GridHeader.svelte
+function get_each_context12(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[8] = list[i2];
+  child_ctx[10] = i2;
+  return child_ctx;
+}
+function create_read_slot7(ctx) {
+  var _a, _b;
+  let icon;
+  let t0;
+  let textlabel;
+  let t1;
+  let iconbutton;
+  let t22;
+  let current;
+  icon = new Icon_default({
+    props: {
+      name: fieldIcon((_a = ctx[8].type) != null ? _a : DataFieldType.Unknown),
+      tooltip: (_b = get_store_value(i18n).t(`data-types.${ctx[8].type}`)) != null ? _b : ""
+    }
+  });
+  textlabel = new TextLabel_default({
+    props: { value: ctx[8].field }
+  });
+  iconbutton = new IconButton_default({
+    props: { size: "sm", icon: "vertical-three-dots" }
+  });
+  iconbutton.$on("click", function() {
+    if (is_function(ctx[4](ctx[8])))
+      ctx[4](ctx[8]).apply(this, arguments);
+  });
+  return {
+    c() {
+      create_component(icon.$$.fragment);
+      t0 = space();
+      create_component(textlabel.$$.fragment);
+      t1 = space();
+      create_component(iconbutton.$$.fragment);
+      t22 = space();
+    },
+    m(target, anchor) {
+      mount_component(icon, target, anchor);
+      insert(target, t0, anchor);
+      mount_component(textlabel, target, anchor);
+      insert(target, t1, anchor);
+      mount_component(iconbutton, target, anchor);
+      insert(target, t22, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      var _a2, _b2;
+      ctx = new_ctx;
+      const icon_changes = {};
+      if (dirty & 1)
+        icon_changes.name = fieldIcon((_a2 = ctx[8].type) != null ? _a2 : DataFieldType.Unknown);
+      if (dirty & 1)
+        icon_changes.tooltip = (_b2 = get_store_value(i18n).t(`data-types.${ctx[8].type}`)) != null ? _b2 : "";
+      icon.$set(icon_changes);
+      const textlabel_changes = {};
+      if (dirty & 1)
+        textlabel_changes.value = ctx[8].field;
+      textlabel.$set(textlabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      transition_in(textlabel.$$.fragment, local);
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      transition_out(textlabel.$$.fragment, local);
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(icon, detaching);
+      if (detaching)
+        detach(t0);
+      destroy_component(textlabel, detaching);
+      if (detaching)
+        detach(t1);
+      destroy_component(iconbutton, detaching);
+      if (detaching)
+        detach(t22);
+    }
+  };
+}
+function create_each_block12(ctx) {
+  let gridcell;
+  let current;
+  function func7(...args) {
+    return ctx[6](ctx[8], ...args);
+  }
+  function func_14(...args) {
+    return ctx[7](ctx[8], ...args);
+  }
+  gridcell = new GridCell_default({
+    props: {
+      colindex: ctx[10] + 2,
+      rowindex: 1,
+      column: ctx[8],
+      resizable: true,
+      onResize: func7,
+      onFinalizeResize: func_14,
+      columnHeader: true,
+      $$slots: { read: [create_read_slot7] },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", function() {
+    if (is_function(ctx[3](ctx[8])))
+      ctx[3](ctx[8]).apply(this, arguments);
+  });
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const gridcell_changes = {};
+      if (dirty & 1)
+        gridcell_changes.column = ctx[8];
+      if (dirty & 3)
+        gridcell_changes.onResize = func7;
+      if (dirty & 5)
+        gridcell_changes.onFinalizeResize = func_14;
+      if (dirty & 2049) {
+        gridcell_changes.$$scope = { dirty, ctx };
+      }
+      gridcell.$set(gridcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+    }
+  };
+}
+function create_default_slot25(ctx) {
+  let gridcell;
+  let t3;
+  let each_1_anchor;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      colindex: 1,
+      rowindex: 1,
+      column: {
+        field: "",
+        width: 60,
+        header: true,
+        editable: false
+      },
+      columnHeader: true,
+      rowHeader: true
+    }
+  });
+  let each_value = ctx[0];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block12(get_each_context12(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+      t3 = space();
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      insert(target, t3, anchor);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 31) {
+        each_value = ctx2[0];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context12(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block12(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_fragment87(ctx) {
+  let gridcellgroup;
+  let current;
+  gridcellgroup = new GridCellGroup_default({
+    props: {
+      index: 1,
+      header: true,
+      $$slots: { default: [create_default_slot25] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(gridcellgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcellgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcellgroup_changes = {};
+      if (dirty & 2055) {
+        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcellgroup.$set(gridcellgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcellgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcellgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcellgroup, detaching);
+    }
+  };
+}
+function instance87($$self, $$props, $$invalidate) {
+  let { columns } = $$props;
+  let { onResize } = $$props;
+  let { onFinalizeResize } = $$props;
+  let { onColumnMenu } = $$props;
+  function handleColumnHeaderClick(column) {
+    return (event) => {
+      if (event.button === 2) {
+        menuOnContextMenu(event, onColumnMenu(column));
+      }
+    };
+  }
+  function handleFieldClick(column) {
+    return (event) => {
+      onColumnMenu(column).showAtMouseEvent(event);
+    };
+  }
+  const func7 = (column, width) => {
+    onResize(column.field, width);
+  };
+  const func_14 = (column, width) => {
+    onFinalizeResize(column.field, width);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("columns" in $$props2)
+      $$invalidate(0, columns = $$props2.columns);
+    if ("onResize" in $$props2)
+      $$invalidate(1, onResize = $$props2.onResize);
+    if ("onFinalizeResize" in $$props2)
+      $$invalidate(2, onFinalizeResize = $$props2.onFinalizeResize);
+    if ("onColumnMenu" in $$props2)
+      $$invalidate(5, onColumnMenu = $$props2.onColumnMenu);
+  };
+  return [
+    columns,
+    onResize,
+    onFinalizeResize,
+    handleColumnHeaderClick,
+    handleFieldClick,
+    onColumnMenu,
+    func7,
+    func_14
+  ];
+}
+var GridHeader = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance87, create_fragment87, safe_not_equal, {
+      columns: 0,
+      onResize: 1,
+      onFinalizeResize: 2,
+      onColumnMenu: 5
+    });
+  }
+};
+var GridHeader_default = GridHeader;
+
+// src/views/Table/components/DataGrid/GridRow.svelte
+var import_obsidian44 = __toModule(require("obsidian"));
+function get_each_context13(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[15] = list[i2];
+  child_ctx[17] = i2;
+  return child_ctx;
+}
+function create_read_slot8(ctx) {
+  let textlabel;
+  let current;
+  textlabel = new TextLabel_default({
+    props: {
+      slot: "read",
+      value: (ctx[1] - 1).toString()
+    }
+  });
+  return {
+    c() {
+      create_component(textlabel.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textlabel, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const textlabel_changes = {};
+      if (dirty & 2)
+        textlabel_changes.value = (ctx2[1] - 1).toString();
+      textlabel.$set(textlabel_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textlabel.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textlabel.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textlabel, detaching);
+    }
+  };
+}
+function create_hover_slot(ctx) {
+  let iconbutton;
+  let current;
+  iconbutton = new IconButton_default({
+    props: { slot: "hover", icon: "link", size: "sm" }
+  });
+  iconbutton.$on("click", function() {
+    if (is_function(ctx[6]))
+      ctx[6].apply(this, arguments);
+  });
+  return {
+    c() {
+      create_component(iconbutton.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(iconbutton, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(iconbutton, detaching);
+    }
+  };
+}
+function create_each_block13(ctx) {
+  let gridtypedcell;
+  let current;
+  function func7(...args) {
+    return ctx[12](ctx[15], ...args);
+  }
+  gridtypedcell = new GridTypedCell_default({
+    props: {
+      selected: ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2,
+      rowindex: ctx[1] + 2,
+      colindex: ctx[17] + 2,
+      value: ctx[2][ctx[15].field],
+      column: ctx[15],
+      onChange: func7
+    }
+  });
+  gridtypedcell.$on("mousedown", function() {
+    if (is_function(ctx[8](ctx[15], ctx[2][ctx[15].field])))
+      ctx[8](ctx[15], ctx[2][ctx[15].field]).apply(this, arguments);
+  });
+  gridtypedcell.$on("navigate", ctx[13]);
+  return {
+    c() {
+      create_component(gridtypedcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridtypedcell, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const gridtypedcell_changes = {};
+      if (dirty & 18)
+        gridtypedcell_changes.selected = ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2;
+      if (dirty & 2)
+        gridtypedcell_changes.rowindex = ctx[1] + 2;
+      if (dirty & 12)
+        gridtypedcell_changes.value = ctx[2][ctx[15].field];
+      if (dirty & 8)
+        gridtypedcell_changes.column = ctx[15];
+      if (dirty & 45)
+        gridtypedcell_changes.onChange = func7;
+      gridtypedcell.$set(gridtypedcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridtypedcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridtypedcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridtypedcell, detaching);
+    }
+  };
+}
+function create_default_slot26(ctx) {
+  let gridcell;
+  let t3;
+  let each_1_anchor;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      rowindex: 1,
+      colindex: 1,
+      column: {
+        field: "",
+        header: true,
+        width: 60,
+        editable: false
+      },
+      rowHeader: true,
+      $$slots: {
+        hover: [create_hover_slot],
+        read: [create_read_slot8]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[7]());
+  let each_value = ctx[3];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block13(get_each_context13(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+      t3 = space();
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      insert(target, t3, anchor);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridcell_changes = {};
+      if (dirty & 262210) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+      if (dirty & 319) {
+        each_value = ctx2[3];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context13(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block13(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_fragment88(ctx) {
+  let gridcellgroup;
+  let current;
+  gridcellgroup = new GridCellGroup_default({
+    props: {
+      index: ctx[1],
+      $$slots: { default: [create_default_slot26] },
+      $$scope: { ctx }
+    }
+  });
+  gridcellgroup.$on("mouseover", ctx[9]);
+  return {
+    c() {
+      create_component(gridcellgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcellgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcellgroup_changes = {};
+      if (dirty & 2)
+        gridcellgroup_changes.index = ctx2[1];
+      if (dirty & 262271) {
+        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcellgroup.$set(gridcellgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcellgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcellgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcellgroup, detaching);
+    }
+  };
+}
+function instance88($$self, $$props, $$invalidate) {
+  let $app;
+  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
+  let { rowId } = $$props;
+  let { index } = $$props;
+  let { row } = $$props;
+  let { columns } = $$props;
+  let { activeCell } = $$props;
+  setContext("sourcePath", row["path"]);
+  let { onRowChange } = $$props;
+  let { onRowMenu } = $$props;
+  let { onCellMenu } = $$props;
+  let { onNavigate } = $$props;
+  function handleHeaderClick() {
+    return (event) => {
+      if (event.button === 2) {
+        menuOnContextMenu(event, onRowMenu(rowId, row));
+      }
+    };
+  }
+  function handleCellClick(column, value) {
+    return (event) => {
+      if (event.button === 2) {
+        menuOnContextMenu(event, onCellMenu(rowId, column, value));
+      }
+      if (event.target instanceof HTMLTableCellElement) {
+        if (event.target.firstChild instanceof HTMLInputElement) {
+          event.target.firstChild.focus();
+          event.preventDefault();
+        }
+      }
+    };
+  }
+  function handleHoverLink(event) {
+    if (!event.ctrlKey && !event.metaKey) {
+      return;
+    }
+    const targetEl = event.target;
+    if (targetEl instanceof HTMLDivElement) {
+      const file = $app.vault.getAbstractFileByPath(rowId);
+      if (file instanceof import_obsidian44.TFile) {
+        $app.workspace.trigger("hover-link", {
+          event,
+          source: "obsidian-projects-table-view",
+          hoverParent: targetEl.parentElement,
+          targetEl,
+          linktext: file.name,
+          sourcePath: file.path
+        });
+      }
+    }
+  }
+  const func7 = (column, value) => {
+    onRowChange(rowId, immer_esm_default(row, (draft) => {
+      draft[column.field] = value;
+      return draft;
+    }));
+  };
+  function navigate_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("rowId" in $$props2)
+      $$invalidate(0, rowId = $$props2.rowId);
+    if ("index" in $$props2)
+      $$invalidate(1, index = $$props2.index);
+    if ("row" in $$props2)
+      $$invalidate(2, row = $$props2.row);
+    if ("columns" in $$props2)
+      $$invalidate(3, columns = $$props2.columns);
+    if ("activeCell" in $$props2)
+      $$invalidate(4, activeCell = $$props2.activeCell);
+    if ("onRowChange" in $$props2)
+      $$invalidate(5, onRowChange = $$props2.onRowChange);
+    if ("onRowMenu" in $$props2)
+      $$invalidate(10, onRowMenu = $$props2.onRowMenu);
+    if ("onCellMenu" in $$props2)
+      $$invalidate(11, onCellMenu = $$props2.onCellMenu);
+    if ("onNavigate" in $$props2)
+      $$invalidate(6, onNavigate = $$props2.onNavigate);
+  };
+  return [
+    rowId,
+    index,
+    row,
+    columns,
+    activeCell,
+    onRowChange,
+    onNavigate,
+    handleHeaderClick,
+    handleCellClick,
+    handleHoverLink,
+    onRowMenu,
+    onCellMenu,
+    func7,
+    navigate_handler
+  ];
+}
+var GridRow = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance88, create_fragment88, safe_not_equal, {
+      rowId: 0,
+      index: 1,
+      row: 2,
+      columns: 3,
+      activeCell: 4,
+      onRowChange: 5,
+      onRowMenu: 10,
+      onCellMenu: 11,
+      onNavigate: 6
+    });
+  }
+};
+var GridRow_default = GridRow;
+
+// src/views/Table/components/DataGrid/DataGrid.svelte
+function add_css50(target) {
+  append_styles(target, "svelte-8irtc3", "div.svelte-8irtc3{display:inline-block}span.svelte-8irtc3{padding:4px;position:sticky;left:0}");
+}
+function get_each_context14(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[32] = list[i2].rowId;
+  child_ctx[33] = list[i2].row;
+  child_ctx[35] = i2;
+  return child_ctx;
+}
+function create_each_block14(ctx) {
+  let gridrow;
+  let current;
+  function func_4(...args) {
+    return ctx[28](ctx[33], ...args);
+  }
+  function func_5(...args) {
+    return ctx[29](ctx[32], ...args);
+  }
+  gridrow = new GridRow_default({
+    props: {
+      columns: ctx[9],
+      index: ctx[35] + 2,
+      rowId: ctx[32],
+      row: ctx[33],
+      activeCell: ctx[6],
+      onRowChange: ctx[4],
+      onRowMenu: ctx[27],
+      onCellMenu: func_4,
+      onNavigate: func_5
+    }
+  });
+  gridrow.$on("navigate", ctx[30]);
+  return {
+    c() {
+      create_component(gridrow.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridrow, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const gridrow_changes = {};
+      if (dirty[0] & 512)
+        gridrow_changes.columns = ctx[9];
+      if (dirty[0] & 256)
+        gridrow_changes.rowId = ctx[32];
+      if (dirty[0] & 256)
+        gridrow_changes.row = ctx[33];
+      if (dirty[0] & 64)
+        gridrow_changes.activeCell = ctx[6];
+      if (dirty[0] & 16)
+        gridrow_changes.onRowChange = ctx[4];
+      if (dirty[0] & 256)
+        gridrow_changes.onCellMenu = func_4;
+      if (dirty[0] & 288)
+        gridrow_changes.onNavigate = func_5;
+      gridrow.$set(gridrow_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridrow.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridrow.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridrow, detaching);
+    }
+  };
+}
+function create_if_block26(ctx) {
+  let button;
+  let current;
+  button = new Button_default({
+    props: {
+      variant: "plain",
+      $$slots: { default: [create_default_slot_116] },
+      $$scope: { ctx }
+    }
+  });
+  button.$on("click", ctx[31]);
+  return {
+    c() {
+      create_component(button.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button_changes = {};
+      if (dirty[0] & 128 | dirty[1] & 32) {
+        button_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button.$set(button_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button, detaching);
+    }
+  };
+}
+function create_default_slot_116(ctx) {
+  let icon;
+  let t0;
+  let t1_value = ctx[7]("components.data-grid.row.add") + "";
+  let t1;
+  let current;
+  icon = new Icon_default({ props: { name: "plus" } });
+  return {
+    c() {
+      create_component(icon.$$.fragment);
+      t0 = space();
+      t1 = text(t1_value);
+    },
+    m(target, anchor) {
+      mount_component(icon, target, anchor);
+      insert(target, t0, anchor);
+      insert(target, t1, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if ((!current || dirty[0] & 128) && t1_value !== (t1_value = ctx2[7]("components.data-grid.row.add") + ""))
+        set_data(t1, t1_value);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(icon, detaching);
+      if (detaching)
+        detach(t0);
+      if (detaching)
+        detach(t1);
+    }
+  };
+}
+function create_default_slot27(ctx) {
+  let span;
+  let span_style_value;
+  let current;
+  let if_block = !ctx[1] && create_if_block26(ctx);
+  return {
+    c() {
+      var _a, _b;
+      span = element("span");
+      if (if_block)
+        if_block.c();
+      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
+      attr(span, "class", "svelte-8irtc3");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+      if (if_block)
+        if_block.m(span, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a, _b;
+      if (!ctx2[1]) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty[0] & 2) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block26(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(span, null);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+      if (!current || dirty[0] & 512 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
+        attr(span, "style", span_style_value);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+      if (if_block)
+        if_block.d();
+    }
+  };
+}
+function create_fragment89(ctx) {
+  let div;
+  let gridheader;
+  let t0;
+  let t1;
+  let gridcellgroup;
+  let div_aria_colcount_value;
+  let div_aria_rowcount_value;
+  let current;
+  gridheader = new GridHeader_default({
+    props: {
+      columns: ctx[9],
+      onResize: ctx[24],
+      onFinalizeResize: ctx[25],
+      onColumnMenu: ctx[26]
+    }
+  });
+  let each_value = ctx[8];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  gridcellgroup = new GridCellGroup_default({
+    props: {
+      index: ctx[8].length + 2,
+      $$slots: { default: [create_default_slot27] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(gridheader.$$.fragment);
+      t0 = space();
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      t1 = space();
+      create_component(gridcellgroup.$$.fragment);
+      attr(div, "role", "grid");
+      attr(div, "aria-colcount", div_aria_colcount_value = ctx[9].length + 1);
+      attr(div, "aria-rowcount", div_aria_rowcount_value = ctx[8].length + 2);
+      attr(div, "class", "svelte-8irtc3");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(gridheader, div, null);
+      append(div, t0);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(div, null);
+      }
+      append(div, t1);
+      mount_component(gridcellgroup, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridheader_changes = {};
+      if (dirty[0] & 512)
+        gridheader_changes.columns = ctx2[9];
+      if (dirty[0] & 1)
+        gridheader_changes.onResize = ctx2[24];
+      if (dirty[0] & 4)
+        gridheader_changes.onFinalizeResize = ctx2[25];
+      gridheader.$set(gridheader_changes);
+      if (dirty[0] & 15216) {
+        each_value = ctx2[8];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context14(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block14(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(div, t1);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+      const gridcellgroup_changes = {};
+      if (dirty[0] & 256)
+        gridcellgroup_changes.index = ctx2[8].length + 2;
+      if (dirty[0] & 650 | dirty[1] & 32) {
+        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcellgroup.$set(gridcellgroup_changes);
+      if (!current || dirty[0] & 512 && div_aria_colcount_value !== (div_aria_colcount_value = ctx2[9].length + 1)) {
+        attr(div, "aria-colcount", div_aria_colcount_value);
+      }
+      if (!current || dirty[0] & 256 && div_aria_rowcount_value !== (div_aria_rowcount_value = ctx2[8].length + 2)) {
+        attr(div, "aria-rowcount", div_aria_rowcount_value);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridheader.$$.fragment, local);
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      transition_in(gridcellgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridheader.$$.fragment, local);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      transition_out(gridcellgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(gridheader);
+      destroy_each(each_blocks, detaching);
+      destroy_component(gridcellgroup);
+    }
+  };
+}
+function instance89($$self, $$props, $$invalidate) {
+  let t3;
+  let visibleColumns;
+  let sortedColumns;
+  let sortedRows;
+  let $i18n;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(23, $i18n = $$value));
+  let { columns } = $$props;
+  let { rows } = $$props;
+  let { sortModel } = $$props;
+  let { readonly } = $$props;
+  let { onSortModelChange } = $$props;
+  let { onColumnResize } = $$props;
+  let { onRowAdd } = $$props;
+  let { onRowChange } = $$props;
+  let { onRowNavigate } = $$props;
+  let { onColumnRename } = $$props;
+  let { onColumnDelete } = $$props;
+  let { onColumnHide } = $$props;
+  let { onRowDelete } = $$props;
+  let { onRowEdit } = $$props;
+  let activeCell = [3, 3];
+  function createColumnMenu(column) {
+    const menu = new import_obsidian46.Menu();
+    if (column.editable && !readonly) {
+      menu.addItem((item) => {
+        item.setTitle(t3("components.data-grid.column.rename")).setIcon("edit").onClick(() => onColumnRename(column.field));
+      });
+      menu.addItem((item) => {
+        item.setTitle(t3("components.data-grid.column.delete")).setIcon("trash").onClick(() => onColumnDelete(column.field));
+      });
+      menu.addSeparator();
+    }
+    menu.addItem((item) => {
+      item.setTitle(t3("components.data-grid.sort.asc")).setIcon("sort-asc").onClick(() => onSortModelChange(column.field, "asc"));
+    });
+    menu.addItem((item) => {
+      item.setTitle(t3("components.data-grid.sort.desc")).setIcon("sort-desc").onClick(() => onSortModelChange(column.field, "desc"));
+    });
+    menu.addSeparator();
+    menu.addItem((item) => {
+      item.setTitle(t3("components.data-grid.column.hide")).setIcon("eye-off").onClick(() => {
+        onColumnHide(column);
+      });
+    });
+    return menu;
+  }
+  function createRowMenu(rowId, row) {
+    const menu = new import_obsidian46.Menu();
+    menu.addItem((item) => {
+      item.setTitle(t3("components.data-grid.row.edit")).setIcon("edit").onClick(() => onRowEdit(rowId, row));
+    });
+    if (!readonly) {
+      menu.addSeparator();
+      menu.addItem((item) => {
+        item.setTitle(t3("components.data-grid.row.delete")).setIcon("trash").onClick(() => onRowDelete(rowId));
+      });
+    }
+    return menu;
+  }
+  function createCellMenu(rowId, row, column) {
+    const menu = new import_obsidian46.Menu();
+    if (column.editable) {
+      menu.addItem((item) => {
+        item.setTitle(t3("components.data-grid.cell.clear")).setIcon("x").onClick(() => {
+          onRowChange(rowId, immer_esm_default(row, (draft) => {
+            draft[column.field] = null;
+            return draft;
+          }));
+        });
+      });
+    }
+    return menu;
+  }
+  const clamp = (num, min2, max2) => Math.min(Math.max(num, min2), max2);
+  const func7 = (name, width) => {
+    $$invalidate(0, columns = columns.map((column) => column.field === name ? __spreadProps(__spreadValues({}, column), { width }) : column));
+  };
+  const func_14 = (name, width) => {
+    onColumnResize(name, width);
+  };
+  const func_22 = (field) => createColumnMenu(field);
+  const func_3 = (rowId, row) => createRowMenu(rowId, row);
+  const func_4 = (row, rowId, column) => createCellMenu(rowId, row, column);
+  const func_5 = (rowId, event) => onRowNavigate(rowId, event.ctrlKey || event.metaKey);
+  const navigate_handler = ({ detail: cell }) => {
+    $$invalidate(6, activeCell = [
+      clamp(cell[0], 2, sortedColumns.length + 1),
+      clamp(cell[1], 4, sortedRows.length + 3)
+    ]);
+  };
+  const click_handler = () => onRowAdd();
+  $$self.$$set = ($$props2) => {
+    if ("columns" in $$props2)
+      $$invalidate(0, columns = $$props2.columns);
+    if ("rows" in $$props2)
+      $$invalidate(14, rows = $$props2.rows);
+    if ("sortModel" in $$props2)
+      $$invalidate(15, sortModel = $$props2.sortModel);
+    if ("readonly" in $$props2)
+      $$invalidate(1, readonly = $$props2.readonly);
+    if ("onSortModelChange" in $$props2)
+      $$invalidate(16, onSortModelChange = $$props2.onSortModelChange);
+    if ("onColumnResize" in $$props2)
+      $$invalidate(2, onColumnResize = $$props2.onColumnResize);
+    if ("onRowAdd" in $$props2)
+      $$invalidate(3, onRowAdd = $$props2.onRowAdd);
+    if ("onRowChange" in $$props2)
+      $$invalidate(4, onRowChange = $$props2.onRowChange);
+    if ("onRowNavigate" in $$props2)
+      $$invalidate(5, onRowNavigate = $$props2.onRowNavigate);
+    if ("onColumnRename" in $$props2)
+      $$invalidate(17, onColumnRename = $$props2.onColumnRename);
+    if ("onColumnDelete" in $$props2)
+      $$invalidate(18, onColumnDelete = $$props2.onColumnDelete);
+    if ("onColumnHide" in $$props2)
+      $$invalidate(19, onColumnHide = $$props2.onColumnHide);
+    if ("onRowDelete" in $$props2)
+      $$invalidate(20, onRowDelete = $$props2.onRowDelete);
+    if ("onRowEdit" in $$props2)
+      $$invalidate(21, onRowEdit = $$props2.onRowEdit);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty[0] & 8388608) {
+      $:
+        $$invalidate(7, t3 = $i18n.t);
+    }
+    if ($$self.$$.dirty[0] & 1) {
+      $:
+        $$invalidate(22, visibleColumns = columns.filter((column) => !column.hide));
+    }
+    if ($$self.$$.dirty[0] & 4194304) {
+      $:
+        $$invalidate(9, sortedColumns = sortColumns(visibleColumns));
+    }
+    if ($$self.$$.dirty[0] & 49152) {
+      $:
+        $$invalidate(8, sortedRows = sortRows(rows, sortModel));
+    }
+  };
+  return [
+    columns,
+    readonly,
+    onColumnResize,
+    onRowAdd,
+    onRowChange,
+    onRowNavigate,
+    activeCell,
+    t3,
+    sortedRows,
+    sortedColumns,
+    createColumnMenu,
+    createRowMenu,
+    createCellMenu,
+    clamp,
+    rows,
+    sortModel,
+    onSortModelChange,
+    onColumnRename,
+    onColumnDelete,
+    onColumnHide,
+    onRowDelete,
+    onRowEdit,
+    visibleColumns,
+    $i18n,
+    func7,
+    func_14,
+    func_22,
+    func_3,
+    func_4,
+    func_5,
+    navigate_handler,
+    click_handler
+  ];
+}
+var DataGrid = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance89, create_fragment89, safe_not_equal, {
+      columns: 0,
+      rows: 14,
+      sortModel: 15,
+      readonly: 1,
+      onSortModelChange: 16,
+      onColumnResize: 2,
+      onRowAdd: 3,
+      onRowChange: 4,
+      onRowNavigate: 5,
+      onColumnRename: 17,
+      onColumnDelete: 18,
+      onColumnHide: 19,
+      onRowDelete: 20,
+      onRowEdit: 21
+    }, add_css50, [-1, -1]);
+  }
+};
+var DataGrid_default = DataGrid;
+
+// src/views/Table/components/SwitchSelect/SwitchSelect.svelte
+function add_css51(target) {
+  append_styles(target, "svelte-zdcf2i", "div.svelte-zdcf2i{align-items:center;display:inline-flex;text-align:start}");
+}
+function get_each_context15(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[2] = list[i2].label;
+  child_ctx[9] = list[i2].value;
+  child_ctx[10] = list[i2].enabled;
+  return child_ctx;
+}
+function create_each_block15(ctx) {
+  let menuitem;
+  let current;
+  function check_handler(...args) {
+    return ctx[7](ctx[9], ...args);
+  }
+  menuitem = new MenuItem_default({
+    props: {
+      label: ctx[2],
+      checked: ctx[10]
+    }
+  });
+  menuitem.$on("check", check_handler);
+  return {
+    c() {
+      create_component(menuitem.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(menuitem, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const menuitem_changes = {};
+      if (dirty & 1)
+        menuitem_changes.label = ctx[2];
+      if (dirty & 1)
+        menuitem_changes.checked = ctx[10];
+      menuitem.$set(menuitem_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(menuitem.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(menuitem.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(menuitem, detaching);
+    }
+  };
+}
+function create_default_slot28(ctx) {
+  let each_1_anchor;
+  let current;
+  let each_value = ctx[0];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block15(get_each_context15(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 3) {
+        each_value = ctx2[0];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context15(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block15(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_fragment90(ctx) {
+  let div;
+  let t0;
+  let t1;
+  let menu;
+  let current;
+  let mounted;
+  let dispose;
+  menu = new Menu_default({
+    props: {
+      anchorEl: ctx[3],
+      open: ctx[4],
+      onClose: ctx[8],
+      $$slots: { default: [create_default_slot28] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      div = element("div");
+      t0 = text(ctx[2]);
+      t1 = space();
+      create_component(menu.$$.fragment);
+      attr(div, "class", "dropdown svelte-zdcf2i");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      append(div, t0);
+      ctx[5](div);
+      insert(target, t1, anchor);
+      mount_component(menu, target, anchor);
+      current = true;
+      if (!mounted) {
+        dispose = listen(div, "click", ctx[6]);
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (!current || dirty & 4)
+        set_data(t0, ctx2[2]);
+      const menu_changes = {};
+      if (dirty & 8)
+        menu_changes.anchorEl = ctx2[3];
+      if (dirty & 16)
+        menu_changes.open = ctx2[4];
+      if (dirty & 16)
+        menu_changes.onClose = ctx2[8];
+      if (dirty & 8195) {
+        menu_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      menu.$set(menu_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(menu.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(menu.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      ctx[5](null);
+      if (detaching)
+        detach(t1);
+      destroy_component(menu, detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function instance90($$self, $$props, $$invalidate) {
+  let { items } = $$props;
+  let { label } = $$props;
+  let { onChange } = $$props;
+  let ref;
+  let isOpen = false;
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      ref = $$value;
+      $$invalidate(3, ref);
+    });
+  }
+  const click_handler = () => $$invalidate(4, isOpen = true);
+  const check_handler = (value, { detail: checked }) => onChange(value, checked);
+  const func7 = () => $$invalidate(4, isOpen = false);
+  $$self.$$set = ($$props2) => {
+    if ("items" in $$props2)
+      $$invalidate(0, items = $$props2.items);
+    if ("label" in $$props2)
+      $$invalidate(2, label = $$props2.label);
+    if ("onChange" in $$props2)
+      $$invalidate(1, onChange = $$props2.onChange);
+  };
+  return [
+    items,
+    onChange,
+    label,
+    ref,
+    isOpen,
+    div_binding,
+    click_handler,
+    check_handler,
+    func7
+  ];
+}
+var SwitchSelect = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance90, create_fragment90, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css51);
+  }
+};
+var SwitchSelect_default = SwitchSelect;
+
+// src/views/Table/TableView.svelte
+function add_css52(target) {
+  append_styles(target, "svelte-15cnmpm", "div.svelte-15cnmpm{overflow:auto}");
+}
+function create_default_slot_117(ctx) {
+  let switchselect;
+  let current;
+  switchselect = new SwitchSelect_default({
+    props: {
+      label: ctx[8].t("views.table.hide-fields"),
+      items: ctx[7].map(func6),
+      onChange: ctx[10]
+    }
+  });
+  return {
+    c() {
+      create_component(switchselect.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(switchselect, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const switchselect_changes = {};
+      if (dirty & 256)
+        switchselect_changes.label = ctx2[8].t("views.table.hide-fields");
+      if (dirty & 128)
+        switchselect_changes.items = ctx2[7].map(func6);
+      switchselect.$set(switchselect_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(switchselect.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(switchselect.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(switchselect, detaching);
+    }
+  };
+}
+function create_default_slot29(ctx) {
+  let p2;
+  let t3;
+  let horizontalgroup;
+  let current;
+  horizontalgroup = new HorizontalGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_117] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      p2 = element("p");
+      t3 = space();
+      create_component(horizontalgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      insert(target, p2, anchor);
+      insert(target, t3, anchor);
+      mount_component(horizontalgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const horizontalgroup_changes = {};
+      if (dirty & 33554816) {
+        horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      horizontalgroup.$set(horizontalgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(horizontalgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(horizontalgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(p2);
+      if (detaching)
+        detach(t3);
+      destroy_component(horizontalgroup, detaching);
+    }
+  };
+}
+function create_fragment91(ctx) {
+  var _a, _b, _c;
+  let toolbar;
+  let t3;
+  let div;
+  let datagrid;
+  let current;
+  toolbar = new ToolBar_default({
+    props: {
+      $$slots: { default: [create_default_slot29] },
+      $$scope: { ctx }
+    }
+  });
+  datagrid = new DataGrid_default({
+    props: {
+      columns: ctx[7],
+      rows: ctx[6],
+      readonly: ctx[2],
+      onRowAdd: ctx[16],
+      onRowEdit: ctx[17],
+      onRowDelete: ctx[18],
+      onColumnHide: ctx[19],
+      onColumnRename: ctx[20],
+      onColumnDelete: ctx[21],
+      onRowChange: ctx[22],
+      onColumnResize: ctx[11],
+      onRowNavigate: ctx[23],
+      sortModel: {
+        field: (_b = (_a = ctx[0]) == null ? void 0 : _a.sortField) != null ? _b : "name",
+        sort: ((_c = ctx[0]) == null ? void 0 : _c.sortAsc) ? "asc" : "desc"
+      },
+      onSortModelChange: ctx[24]
+    }
+  });
+  return {
+    c() {
+      create_component(toolbar.$$.fragment);
+      t3 = space();
+      div = element("div");
+      create_component(datagrid.$$.fragment);
+      attr(div, "class", "svelte-15cnmpm");
+    },
+    m(target, anchor) {
+      mount_component(toolbar, target, anchor);
+      insert(target, t3, anchor);
+      insert(target, div, anchor);
+      mount_component(datagrid, div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      var _a2, _b2, _c2;
+      const toolbar_changes = {};
+      if (dirty & 33554816) {
+        toolbar_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      toolbar.$set(toolbar_changes);
+      const datagrid_changes = {};
+      if (dirty & 128)
+        datagrid_changes.columns = ctx2[7];
+      if (dirty & 64)
+        datagrid_changes.rows = ctx2[6];
+      if (dirty & 4)
+        datagrid_changes.readonly = ctx2[2];
+      if (dirty & 522)
+        datagrid_changes.onRowAdd = ctx2[16];
+      if (dirty & 552)
+        datagrid_changes.onRowEdit = ctx2[17];
+      if (dirty & 8)
+        datagrid_changes.onRowDelete = ctx2[18];
+      if (dirty & 776)
+        datagrid_changes.onColumnRename = ctx2[20];
+      if (dirty & 8)
+        datagrid_changes.onColumnDelete = ctx2[21];
+      if (dirty & 40)
+        datagrid_changes.onRowChange = ctx2[22];
+      if (dirty & 512)
+        datagrid_changes.onRowNavigate = ctx2[23];
+      if (dirty & 1)
+        datagrid_changes.sortModel = {
+          field: (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.sortField) != null ? _b2 : "name",
+          sort: ((_c2 = ctx2[0]) == null ? void 0 : _c2.sortAsc) ? "asc" : "desc"
+        };
+      if (dirty & 17)
+        datagrid_changes.onSortModelChange = ctx2[24];
+      datagrid.$set(datagrid_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(toolbar.$$.fragment, local);
+      transition_in(datagrid.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(toolbar.$$.fragment, local);
+      transition_out(datagrid.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(toolbar, detaching);
+      if (detaching)
+        detach(t3);
+      if (detaching)
+        detach(div);
+      destroy_component(datagrid);
+    }
+  };
+}
+function defaultWeight(field) {
+  switch (field) {
+    case "name":
+      return 1;
+    case "path":
+      return 2;
+    case "Field":
+      return 1;
+    default:
+      return void 0;
+  }
+}
+var func6 = (column) => ({
+  label: column.field,
+  value: column.field,
+  enabled: !column.hide
+});
+function instance91($$self, $$props, $$invalidate) {
+  let fields;
+  let records;
+  let fieldConfig;
+  let columns;
+  let rows;
+  let $i18n;
+  let $app;
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(9, $app = $$value));
+  var _a;
+  let { project } = $$props;
+  let { frame } = $$props;
+  let { readonly } = $$props;
+  let { api: api2 } = $$props;
+  let { config } = $$props;
+  let { onConfigChange } = $$props;
+  function handleVisibilityChange(field, enabled) {
+    $$invalidate(0, config = Object.assign(Object.assign({}, config), {
+      fieldConfig: Object.assign(Object.assign({}, fieldConfig), {
+        [field]: Object.assign(Object.assign({}, fieldConfig[field]), { hide: !enabled })
+      })
+    }));
+    onConfigChange(config);
+  }
+  function handleWidthChange(field, width) {
+    $$invalidate(0, config = Object.assign(Object.assign({}, config), {
+      fieldConfig: Object.assign(Object.assign({}, fieldConfig), {
+        [field]: Object.assign(Object.assign({}, fieldConfig[field]), { width })
+      })
+    }));
+    onConfigChange(config);
+  }
+  const func_14 = () => {
+    new CreateNoteModal($app, project, (name, templatePath, project2) => {
+      api2.addRecord(createDataRecord(name, project2), templatePath);
+    }).open();
+  };
+  const func_22 = (id, values) => {
+    new EditNoteModal($app, fields, (record) => {
+      api2.updateRecord(record, fields);
+    }, { id, values }).open();
+  };
+  const func_3 = (id) => api2.deleteRecord(id);
+  const func_4 = (column) => handleVisibilityChange(column.field, false);
+  const func_5 = (field) => {
+    new InputDialogModal($app, $i18n.t("views.table.rename-field"), $i18n.t("views.table.rename"), (value) => {
+      api2.renameField(field, value);
+    }, field).open();
+  };
+  const func_6 = (field) => api2.deleteField(field);
+  const func_7 = (rowId, row) => {
+    api2.updateRecord({ id: rowId, values: row }, fields);
+  };
+  const func_8 = (rowId, openNew) => $app.workspace.openLinkText(rowId, "", openNew);
+  const func_9 = (field, sort) => {
+    onConfigChange(__spreadProps(__spreadValues({}, config), {
+      sortField: field,
+      sortAsc: sort === "asc"
+    }));
+  };
+  $$self.$$set = ($$props2) => {
+    if ("project" in $$props2)
+      $$invalidate(1, project = $$props2.project);
+    if ("frame" in $$props2)
+      $$invalidate(12, frame = $$props2.frame);
+    if ("readonly" in $$props2)
+      $$invalidate(2, readonly = $$props2.readonly);
+    if ("api" in $$props2)
+      $$invalidate(3, api2 = $$props2.api);
+    if ("config" in $$props2)
+      $$invalidate(0, config = $$props2.config);
+    if ("onConfigChange" in $$props2)
+      $$invalidate(4, onConfigChange = $$props2.onConfigChange);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 4096) {
+      $:
+        $$invalidate(5, { fields, records } = frame, fields, ($$invalidate(15, records), $$invalidate(12, frame)));
+    }
+    if ($$self.$$.dirty & 8193) {
+      $:
+        $$invalidate(14, fieldConfig = $$invalidate(13, _a = config === null || config === void 0 ? void 0 : config.fieldConfig) !== null && _a !== void 0 ? _a : {});
+    }
+    if ($$self.$$.dirty & 16416) {
+      $:
+        $$invalidate(7, columns = fields.map((field) => {
+          var _a2, _b, _c, _d;
+          const colDef = {
+            field: field.name,
+            type: field.type,
+            width: (_b = (_a2 = fieldConfig[field.name]) === null || _a2 === void 0 ? void 0 : _a2.width) !== null && _b !== void 0 ? _b : 180,
+            hide: (_d = (_c = fieldConfig[field.name]) === null || _c === void 0 ? void 0 : _c.hide) !== null && _d !== void 0 ? _d : false,
+            editable: !field.derived
+          };
+          const weight = defaultWeight(field.name);
+          return weight ? Object.assign(Object.assign({}, colDef), { weight }) : colDef;
+        }));
+    }
+    if ($$self.$$.dirty & 32768) {
+      $:
+        $$invalidate(6, rows = records.map(({ id, values }) => ({ rowId: id, row: values })));
+    }
+  };
+  return [
+    config,
+    project,
+    readonly,
+    api2,
+    onConfigChange,
+    fields,
+    rows,
+    columns,
+    $i18n,
+    $app,
+    handleVisibilityChange,
+    handleWidthChange,
+    frame,
+    _a,
+    fieldConfig,
+    records,
+    func_14,
+    func_22,
+    func_3,
+    func_4,
+    func_5,
+    func_6,
+    func_7,
+    func_8,
+    func_9
+  ];
+}
+var TableView = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance91, create_fragment91, safe_not_equal, {
+      project: 1,
+      frame: 12,
+      readonly: 2,
+      api: 3,
+      config: 0,
+      onConfigChange: 4
+    }, add_css52);
+  }
+};
+var TableView_default = TableView;
+
+// src/views/Gallery/GalleryView.svelte
+var import_path3 = __toModule(require("path"));
+
+// src/modals/components/CenterBox.svelte
+function add_css53(target) {
+  append_styles(target, "svelte-8ezeao", "div.svelte-8ezeao{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex:1}");
+}
+function create_fragment92(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-8ezeao");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance92($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var CenterBox = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance92, create_fragment92, safe_not_equal, {}, add_css53);
+  }
+};
+var CenterBox_default = CenterBox;
+
+// src/views/Gallery/components/Card/Card.svelte
+function add_css54(target) {
+  append_styles(target, "svelte-xq218h", "div.svelte-xq218h{background-color:var(--background-secondary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:0;margin:0}div.svelte-xq218h:hover{border:1px solid var(--background-modifier-border-hover)}");
+}
+function create_fragment93(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-xq218h");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance93($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var Card3 = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance93, create_fragment93, safe_not_equal, {}, add_css54);
+  }
+};
+var Card_default3 = Card3;
+
+// src/views/Gallery/components/Card/CardContent.svelte
+function add_css55(target) {
+  append_styles(target, "svelte-1rhoaa0", "div.svelte-1rhoaa0{padding:8px}");
+}
+function create_fragment94(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-1rhoaa0");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance94($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var CardContent = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance94, create_fragment94, safe_not_equal, {}, add_css55);
+  }
+};
+var CardContent_default = CardContent;
+
+// src/views/Gallery/components/Card/CardMedia.svelte
+function add_css56(target) {
+  append_styles(target, "svelte-1ur9trs", "div.svelte-1ur9trs{height:180px;border-top-left-radius:4px;border-top-right-radius:4px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--background-modifier-border)}");
+}
+function create_fragment95(ctx) {
+  let div;
+  let current;
+  let mounted;
+  let dispose;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-1ur9trs");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+      if (!mounted) {
+        dispose = listen(div, "click", ctx[2]);
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function instance95($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  function click_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots, click_handler];
+}
+var CardMedia = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance95, create_fragment95, safe_not_equal, {}, add_css56);
+  }
+};
+var CardMedia_default = CardMedia;
+
+// src/views/Gallery/components/Grid/Grid.svelte
+function add_css57(target) {
+  append_styles(target, "svelte-29f12s", "div.svelte-29f12s{display:grid;gap:24px;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr))}");
+}
+function create_fragment96(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-29f12s");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance96($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var Grid = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance96, create_fragment96, safe_not_equal, {}, add_css57);
+  }
+};
+var Grid_default = Grid;
+
+// src/views/Gallery/components/Image/Image.svelte
+function add_css58(target) {
+  append_styles(target, "svelte-ol6m5s", "img.svelte-ol6m5s{width:100%;height:100%;border-top-left-radius:4px;border-top-right-radius:4px}");
+}
+function create_fragment97(ctx) {
+  let img;
+  let img_src_value;
+  return {
+    c() {
+      img = element("img");
+      attr(img, "alt", ctx[0]);
+      if (!src_url_equal(img.src, img_src_value = ctx[1]))
+        attr(img, "src", img_src_value);
+      attr(img, "class", "svelte-ol6m5s");
+      set_style(img, "object-fit", ctx[2], false);
+    },
+    m(target, anchor) {
+      insert(target, img, anchor);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1) {
+        attr(img, "alt", ctx2[0]);
+      }
+      if (dirty & 2 && !src_url_equal(img.src, img_src_value = ctx2[1])) {
+        attr(img, "src", img_src_value);
+      }
+      if (dirty & 4) {
+        set_style(img, "object-fit", ctx2[2], false);
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(img);
+    }
+  };
+}
+function instance97($$self, $$props, $$invalidate) {
+  let { alt } = $$props;
+  let { src } = $$props;
+  let { fit } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("alt" in $$props2)
+      $$invalidate(0, alt = $$props2.alt);
+    if ("src" in $$props2)
+      $$invalidate(1, src = $$props2.src);
+    if ("fit" in $$props2)
+      $$invalidate(2, fit = $$props2.fit);
+  };
+  return [alt, src, fit];
+}
+var Image = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance97, create_fragment97, safe_not_equal, { alt: 0, src: 1, fit: 2 }, add_css58);
+  }
+};
+var Image_default = Image;
+
+// src/views/Gallery/GalleryView.svelte
+function add_css59(target) {
+  append_styles(target, "svelte-1mtu2f2", "div.svelte-1mtu2f2{padding:24px;overflow:auto}");
+}
+function get_each_context16(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[17] = list[i2];
+  return child_ctx;
+}
+function get_context(ctx) {
+  const constants_0 = ctx[5](ctx[17]);
+  ctx[20] = constants_0;
+}
+function create_default_slot_95(ctx) {
+  var _a, _b, _c;
+  let select;
+  let current;
+  select = new Select_default({
+    props: {
+      allowEmpty: true,
+      value: (_b = (_a = ctx[1]) == null ? void 0 : _a.name) != null ? _b : "",
+      options: ctx[0].map(fieldToSelectableValue),
+      placeholder: (_c = ctx[4].t("views.gallery.fields.none")) != null ? _c : ""
+    }
+  });
+  select.$on("change", ctx[14]);
+  return {
+    c() {
+      create_component(select.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(select, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2, _c2;
+      const select_changes = {};
+      if (dirty & 2)
+        select_changes.value = (_b2 = (_a2 = ctx2[1]) == null ? void 0 : _a2.name) != null ? _b2 : "";
+      if (dirty & 1)
+        select_changes.options = ctx2[0].map(fieldToSelectableValue);
+      if (dirty & 16)
+        select_changes.placeholder = (_c2 = ctx2[4].t("views.gallery.fields.none")) != null ? _c2 : "";
+      select.$set(select_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(select.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(select.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(select, detaching);
+    }
+  };
+}
+function create_default_slot_85(ctx) {
+  let field;
+  let current;
+  field = new Field_default({
+    props: {
+      name: ctx[4].t("views.gallery.fields.cover"),
+      $$slots: { default: [create_default_slot_95] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(field.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(field, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const field_changes = {};
+      if (dirty & 16)
+        field_changes.name = ctx2[4].t("views.gallery.fields.cover");
+      if (dirty & 2097171) {
+        field_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      field.$set(field_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(field.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(field.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(field, detaching);
+    }
+  };
+}
+function create_default_slot_76(ctx) {
+  let p2;
+  let t3;
+  let horizontalgroup;
+  let current;
+  horizontalgroup = new HorizontalGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_85] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      p2 = element("p");
+      t3 = space();
+      create_component(horizontalgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      insert(target, p2, anchor);
+      insert(target, t3, anchor);
+      mount_component(horizontalgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const horizontalgroup_changes = {};
+      if (dirty & 2097171) {
+        horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      horizontalgroup.$set(horizontalgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(horizontalgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(horizontalgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(p2);
+      if (detaching)
+        detach(t3);
+      destroy_component(horizontalgroup, detaching);
+    }
+  };
+}
+function create_else_block_12(ctx) {
+  let centerbox;
+  let current;
+  centerbox = new CenterBox_default({
+    props: {
+      $$slots: { default: [create_default_slot_510] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(centerbox.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(centerbox, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const centerbox_changes = {};
+      if (dirty & 2097168) {
+        centerbox_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      centerbox.$set(centerbox_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(centerbox.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(centerbox.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(centerbox, detaching);
+    }
+  };
+}
+function create_if_block27(ctx) {
+  let div;
+  let grid;
+  let current;
+  grid = new Grid_default({
+    props: {
+      $$slots: { default: [create_default_slot30] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(grid.$$.fragment);
+      attr(div, "class", "svelte-1mtu2f2");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(grid, div, null);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const grid_changes = {};
+      if (dirty & 2097164) {
+        grid_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      grid.$set(grid_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(grid.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(grid.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(grid);
+    }
+  };
+}
+function create_default_slot_68(ctx) {
+  let t_value = ctx[4].t("views.gallery.empty") + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 16 && t_value !== (t_value = ctx2[4].t("views.gallery.empty") + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_510(ctx) {
+  let typography;
+  let current;
+  typography = new Typography_default({
+    props: {
+      variant: "h5",
+      $$slots: { default: [create_default_slot_68] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(typography.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(typography, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const typography_changes = {};
+      if (dirty & 2097168) {
+        typography_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      typography.$set(typography_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(typography.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(typography.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(typography, detaching);
+    }
+  };
+}
+function create_else_block9(ctx) {
+  let icon;
+  let current;
+  icon = new Icon_default({ props: { name: "image", size: "lg" } });
+  return {
+    c() {
+      create_component(icon.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(icon, target, anchor);
+      current = true;
+    },
+    p: noop,
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(icon, detaching);
+    }
+  };
+}
+function create_if_block_113(ctx) {
+  let image;
+  let current;
+  image = new Image_default({
+    props: {
+      alt: "Title",
+      src: ctx[20],
+      fit: "cover"
+    }
+  });
+  return {
+    c() {
+      create_component(image.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(image, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const image_changes = {};
+      if (dirty & 4)
+        image_changes.src = ctx2[20];
+      image.$set(image_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(image.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(image.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(image, detaching);
+    }
+  };
+}
+function create_default_slot_411(ctx) {
+  get_context(ctx);
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block_113, create_else_block9];
+  const if_blocks = [];
+  function select_block_type_1(ctx2, dirty) {
+    if (ctx2[20])
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type_1(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      get_context(ctx2);
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_1(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if_blocks[current_block_type_index].d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_default_slot_312(ctx) {
+  let t_value = ctx[6](ctx[17]) + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 4 && t_value !== (t_value = ctx2[6](ctx2[17]) + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_214(ctx) {
+  let internallink;
+  let current;
+  function open_handler(...args) {
+    return ctx[16](ctx[17], ...args);
+  }
+  internallink = new InternalLink_default({
+    props: {
+      linkText: ctx[17].id,
+      sourcePath: "",
+      resolved: true,
+      $$slots: { default: [create_default_slot_312] },
+      $$scope: { ctx }
+    }
+  });
+  internallink.$on("open", open_handler);
+  return {
+    c() {
+      create_component(internallink.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(internallink, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const internallink_changes = {};
+      if (dirty & 4)
+        internallink_changes.linkText = ctx[17].id;
+      if (dirty & 2097156) {
+        internallink_changes.$$scope = { dirty, ctx };
+      }
+      internallink.$set(internallink_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(internallink.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(internallink.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(internallink, detaching);
+    }
+  };
+}
+function create_default_slot_118(ctx) {
+  let cardmedia;
+  let t0;
+  let cardcontent;
+  let t1;
+  let current;
+  function click_handler(...args) {
+    return ctx[15](ctx[17], ...args);
+  }
+  cardmedia = new CardMedia_default({
+    props: {
+      $$slots: { default: [create_default_slot_411] },
+      $$scope: { ctx }
+    }
+  });
+  cardmedia.$on("click", click_handler);
+  cardcontent = new CardContent_default({
+    props: {
+      $$slots: { default: [create_default_slot_214] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(cardmedia.$$.fragment);
+      t0 = space();
+      create_component(cardcontent.$$.fragment);
+      t1 = space();
+    },
+    m(target, anchor) {
+      mount_component(cardmedia, target, anchor);
+      insert(target, t0, anchor);
+      mount_component(cardcontent, target, anchor);
+      insert(target, t1, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const cardmedia_changes = {};
+      if (dirty & 2097156) {
+        cardmedia_changes.$$scope = { dirty, ctx };
+      }
+      cardmedia.$set(cardmedia_changes);
+      const cardcontent_changes = {};
+      if (dirty & 2097164) {
+        cardcontent_changes.$$scope = { dirty, ctx };
+      }
+      cardcontent.$set(cardcontent_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(cardmedia.$$.fragment, local);
+      transition_in(cardcontent.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(cardmedia.$$.fragment, local);
+      transition_out(cardcontent.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(cardmedia, detaching);
+      if (detaching)
+        detach(t0);
+      destroy_component(cardcontent, detaching);
+      if (detaching)
+        detach(t1);
+    }
+  };
+}
+function create_each_block16(ctx) {
+  let card;
+  let current;
+  card = new Card_default3({
+    props: {
+      $$slots: { default: [create_default_slot_118] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(card.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(card, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const card_changes = {};
+      if (dirty & 2097164) {
+        card_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      card.$set(card_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(card.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(card.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(card, detaching);
+    }
+  };
+}
+function create_default_slot30(ctx) {
+  let each_1_anchor;
+  let current;
+  let each_value = ctx[2];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block16(get_each_context16(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (dirty & 364) {
+        each_value = ctx2[2];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context16(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block16(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_fragment98(ctx) {
+  let toolbar;
+  let t3;
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  toolbar = new ToolBar_default({
+    props: {
+      $$slots: { default: [create_default_slot_76] },
+      $$scope: { ctx }
+    }
+  });
+  const if_block_creators = [create_if_block27, create_else_block_12];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[2].length)
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      create_component(toolbar.$$.fragment);
+      t3 = space();
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      mount_component(toolbar, target, anchor);
+      insert(target, t3, anchor);
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const toolbar_changes = {};
+      if (dirty & 2097171) {
+        toolbar_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      toolbar.$set(toolbar_changes);
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(toolbar.$$.fragment, local);
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(toolbar.$$.fragment, local);
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(toolbar, detaching);
+      if (detaching)
+        detach(t3);
+      if_blocks[current_block_type_index].d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function instance98($$self, $$props, $$invalidate) {
+  let fields;
+  let records;
+  let textFields;
+  let coverField;
+  let $app;
+  let $i18n;
+  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(4, $i18n = $$value));
+  let { frame } = $$props;
+  let { config } = $$props;
+  let { onConfigChange } = $$props;
+  let { api: api2 } = $$props;
+  function getCoverRealPath(record) {
+    if (!coverField) {
+      return null;
+    }
+    const coverPath = record.values[coverField.name];
+    if (!coverPath || !isString(coverPath)) {
+      return null;
+    }
+    if (coverPath.startsWith("http://") || coverPath.startsWith("https://")) {
+      return coverPath;
+    }
+    const file = $app.metadataCache.getFirstLinkpathDest(coverPath, "");
+    if (file) {
+      if (["png", "jpg", "jpeg", "gif", "bmp", "svg"].includes(file.extension)) {
+        return $app.vault.getResourcePath(file);
+      }
+    }
+    return null;
+  }
+  function getDisplayName(record) {
+    const basename = import_path3.default.basename(record.id);
+    return basename.slice(0, basename.lastIndexOf("."));
+  }
+  function handleCoverFieldChange(coverField2) {
+    onConfigChange(Object.assign(Object.assign({}, config), { coverField: coverField2 }));
+  }
+  function handleRecordClick(record) {
+    new EditNoteModal($app, fields, (record2) => api2.updateRecord(record2, fields), record).open();
+  }
+  const change_handler = ({ detail }) => handleCoverFieldChange(detail);
+  const click_handler = (record, event) => {
+    if (event.metaKey || event.ctrlKey) {
+      $app.workspace.openLinkText(record.id, "", true);
+    } else {
+      handleRecordClick(record);
+    }
+  };
+  const open_handler = (record, { detail: { linkText, sourcePath, newLeaf } }) => {
+    if (newLeaf) {
+      $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
+    } else {
+      handleRecordClick(record);
+    }
+  };
+  $$self.$$set = ($$props2) => {
+    if ("frame" in $$props2)
+      $$invalidate(9, frame = $$props2.frame);
+    if ("config" in $$props2)
+      $$invalidate(10, config = $$props2.config);
+    if ("onConfigChange" in $$props2)
+      $$invalidate(11, onConfigChange = $$props2.onConfigChange);
+    if ("api" in $$props2)
+      $$invalidate(12, api2 = $$props2.api);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 512) {
+      $:
+        $$invalidate(13, { fields, records } = frame, fields, ($$invalidate(2, records), $$invalidate(9, frame)));
+    }
+    if ($$self.$$.dirty & 8192) {
+      $:
+        $$invalidate(0, textFields = fields.filter((field) => field.type === DataFieldType.String));
+    }
+    if ($$self.$$.dirty & 1025) {
+      $:
+        $$invalidate(1, coverField = textFields.find((field) => (config === null || config === void 0 ? void 0 : config.coverField) === field.name));
+    }
+  };
+  return [
+    textFields,
+    coverField,
+    records,
+    $app,
+    $i18n,
+    getCoverRealPath,
+    getDisplayName,
+    handleCoverFieldChange,
+    handleRecordClick,
+    frame,
+    config,
+    onConfigChange,
+    api2,
+    fields,
+    change_handler,
+    click_handler,
+    open_handler
+  ];
+}
+var GalleryView = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance98, create_fragment98, safe_not_equal, {
+      frame: 9,
+      config: 10,
+      onConfigChange: 11,
+      api: 12
+    }, add_css59);
+  }
+};
+var GalleryView_default = GalleryView;
+
+// src/views/View/view.ts
+function getViewComponent(type) {
+  const standardViewComponents = {
+    table: TableView_default,
+    board: BoardView_default,
+    calendar: CalendarView_default,
+    developer: DeveloperView_default,
+    gallery: GalleryView_default
+  };
+  const standardComponent = standardViewComponents[type];
+  if (standardComponent) {
+    return standardComponent;
+  }
+  if (get_store_value(customViewsV2)[type] || get_store_value(customViews)[type]) {
+    return CustomView_default;
+  }
+  return null;
+}
+
+// src/views/View/View.svelte
+function create_fragment99(ctx) {
   let switch_instance;
   let switch_instance_anchor;
   let current;
-  var switch_value = ctx[6];
+  var switch_value = ctx[5];
   function switch_props(ctx2) {
     return {
       props: {
@@ -36618,7 +39288,7 @@ function create_fragment86(ctx) {
         config: ctx2[1].config,
         readonly: ctx2[3],
         api: ctx2[4],
-        onConfigChange: ctx2[5]
+        onConfigChange: ctx2[6]
       }
     };
   }
@@ -36652,9 +39322,7 @@ function create_fragment86(ctx) {
         switch_instance_changes.readonly = ctx2[3];
       if (dirty & 16)
         switch_instance_changes.api = ctx2[4];
-      if (dirty & 32)
-        switch_instance_changes.onConfigChange = ctx2[5];
-      if (switch_value !== (switch_value = ctx2[6])) {
+      if (switch_value !== (switch_value = ctx2[5])) {
         if (switch_instance) {
           group_outros();
           const old_component = switch_instance;
@@ -36695,33 +39363,16 @@ function create_fragment86(ctx) {
     }
   };
 }
-function instance86($$self, $$props, $$invalidate) {
+function instance99($$self, $$props, $$invalidate) {
   let viewComponent;
-  let $customViews;
-  let $customViewsV2;
-  component_subscribe($$self, customViews, ($$value) => $$invalidate(7, $customViews = $$value));
-  component_subscribe($$self, customViewsV2, ($$value) => $$invalidate(8, $customViewsV2 = $$value));
   let { project } = $$props;
   let { view: view2 } = $$props;
   let { frame } = $$props;
   let { readonly } = $$props;
   let { api: api2 } = $$props;
   let { onConfigChange } = $$props;
-  function getViewComponent(type) {
-    const standardViewComponents = {
-      table: TableView_default,
-      board: BoardView_default,
-      calendar: CalendarView_default,
-      developer: DeveloperView_default
-    };
-    const standardComponent = standardViewComponents[type];
-    if (standardComponent) {
-      return standardComponent;
-    }
-    if ($customViewsV2[type] || $customViews[type]) {
-      return CustomView_default;
-    }
-    return null;
+  function handleConfigChange(config) {
+    onConfigChange(project.id, view2.id, config);
   }
   $$self.$$set = ($$props2) => {
     if ("project" in $$props2)
@@ -36735,787 +39386,51 @@ function instance86($$self, $$props, $$invalidate) {
     if ("api" in $$props2)
       $$invalidate(4, api2 = $$props2.api);
     if ("onConfigChange" in $$props2)
-      $$invalidate(5, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(7, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 2) {
       $:
-        $$invalidate(6, viewComponent = view2 ? getViewComponent(view2.type) : null);
+        $$invalidate(5, viewComponent = view2 ? getViewComponent(view2.type) : null);
     }
   };
-  return [project, view2, frame, readonly, api2, onConfigChange, viewComponent];
+  return [
+    project,
+    view2,
+    frame,
+    readonly,
+    api2,
+    viewComponent,
+    handleConfigChange,
+    onConfigChange
+  ];
 }
 var View = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance86, create_fragment86, safe_not_equal, {
+    init(this, options, instance99, create_fragment99, safe_not_equal, {
       project: 0,
       view: 1,
       frame: 2,
       readonly: 3,
       api: 4,
-      onConfigChange: 5
+      onConfigChange: 7
     });
   }
 };
 var View_default = View;
 
-// src/app/view-api.ts
-var ViewApi = class {
-  constructor(app2, dataSource2, dataApi) {
-    this.app = app2;
-    this.dataSource = dataSource2;
-    this.dataApi = dataApi;
-  }
-  addRecord(record, templatePath) {
-    if (this.dataSource.includes(record.id)) {
-      dataFrame.addRecord(record);
-    }
-    this.dataApi.createNote(record, templatePath);
-  }
-  updateRecord(record, fields) {
-    if (this.dataSource.includes(record.id)) {
-      dataFrame.updateRecord(record);
-    }
-    this.dataApi.updateRecord(fields, record);
-  }
-  deleteRecord(recordId) {
-    if (this.dataSource.includes(recordId)) {
-      dataFrame.deleteRecord(recordId);
-    }
-    this.dataApi.deleteRecord(recordId);
-  }
-  renameField(from, to) {
-    dataFrame.renameField(from, to);
-    this.dataApi.renameField(filesFromRecords(this.app, get_store_value(dataFrame).records), from, to);
-  }
-  deleteField(field) {
-    dataFrame.deleteField(field);
-    this.dataApi.deleteField(filesFromRecords(this.app, get_store_value(dataFrame).records), field);
-  }
-};
-
-// src/app/onboarding/onboarding-modal.ts
-var import_obsidian42 = __toModule(require("obsidian"));
-
-// src/app/onboarding/TabContainer.svelte
-function add_css49(target) {
-  append_styles(target, "svelte-1bexdx8", ".nomargin.svelte-1bexdx8{margin:0;padding:8px}.header.svelte-1bexdx8{display:flex;gap:4px;margin-bottom:4px}");
-}
-var get_default_slot_changes = (dirty) => ({ selected: dirty & 2 });
-var get_default_slot_context = (ctx) => ({ selected: ctx[1] });
-function get_each_context15(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
-  return child_ctx;
-}
-function create_each_block15(ctx) {
-  let div;
-  let t0_value = ctx[6] + "";
-  let t0;
-  let t1;
-  let mounted;
-  let dispose;
-  function click_handler() {
-    return ctx[4](ctx[6]);
-  }
-  return {
-    c() {
-      div = element("div");
-      t0 = text(t0_value);
-      t1 = space();
-      attr(div, "class", "clickable-icon");
-      toggle_class(div, "is-active", ctx[6] === ctx[1]);
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      append(div, t0);
-      append(div, t1);
-      if (!mounted) {
-        dispose = listen(div, "click", click_handler);
-        mounted = true;
-      }
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      if (dirty & 1 && t0_value !== (t0_value = ctx[6] + ""))
-        set_data(t0, t0_value);
-      if (dirty & 3) {
-        toggle_class(div, "is-active", ctx[6] === ctx[1]);
-      }
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      mounted = false;
-      dispose();
-    }
-  };
-}
-function create_fragment87(ctx) {
-  let div2;
-  let div0;
-  let t3;
-  let div1;
-  let current;
-  let each_value = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block15(get_each_context15(ctx, each_value, i2));
-  }
-  const default_slot_template = ctx[3].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[2], get_default_slot_context);
-  return {
-    c() {
-      div2 = element("div");
-      div0 = element("div");
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      t3 = space();
-      div1 = element("div");
-      if (default_slot)
-        default_slot.c();
-      attr(div0, "class", "header svelte-1bexdx8");
-      attr(div1, "class", "card nomargin svelte-1bexdx8");
-    },
-    m(target, anchor) {
-      insert(target, div2, anchor);
-      append(div2, div0);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(div0, null);
-      }
-      append(div2, t3);
-      append(div2, div1);
-      if (default_slot) {
-        default_slot.m(div1, null);
-      }
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 3) {
-        each_value = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context15(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-          } else {
-            each_blocks[i2] = create_each_block15(child_ctx);
-            each_blocks[i2].c();
-            each_blocks[i2].m(div0, null);
-          }
-        }
-        for (; i2 < each_blocks.length; i2 += 1) {
-          each_blocks[i2].d(1);
-        }
-        each_blocks.length = each_value.length;
-      }
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 6)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, get_default_slot_changes), get_default_slot_context);
-        }
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div2);
-      destroy_each(each_blocks, detaching);
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function instance87($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  var _a;
-  let { options } = $$props;
-  let selected = (_a = options[0]) !== null && _a !== void 0 ? _a : "";
-  const click_handler = (option) => {
-    $$invalidate(1, selected = option);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("options" in $$props2)
-      $$invalidate(0, options = $$props2.options);
-    if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
-  };
-  return [options, selected, $$scope, slots, click_handler];
-}
-var TabContainer = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance87, create_fragment87, safe_not_equal, { options: 0 }, add_css49);
-  }
-};
-var TabContainer_default = TabContainer;
-
-// src/app/onboarding/Onboarding.svelte
-function add_css50(target) {
-  append_styles(target, "svelte-10e8th2", "pre.svelte-10e8th2{background-color:var(--background-secondary);border-radius:var(--radius-s);padding:8px}ol.svelte-10e8th2{margin:0;padding:0 22px}");
-}
-function create_default_slot_67(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text("Get started with Projects");
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_59(ctx) {
-  let t0;
-  let a2;
-  let t22;
-  return {
-    c() {
-      t0 = text("Projects lets you manage groups of related notes using\n		");
-      a2 = element("a");
-      a2.textContent = "front matter\n		";
-      t22 = text(". For example, a folder with the blog posts you're working on.");
-      attr(a2, "href", "https://help.obsidian.md/Advanced+topics/YAML+front+matter");
-    },
-    m(target, anchor) {
-      insert(target, t0, anchor);
-      insert(target, a2, anchor);
-      insert(target, t22, anchor);
-    },
-    p: noop,
-    d(detaching) {
-      if (detaching)
-        detach(t0);
-      if (detaching)
-        detach(a2);
-      if (detaching)
-        detach(t22);
-    }
-  };
-}
-function create_default_slot_411(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text("Start from scratch, or explore a demo project \u{1F447}");
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_311(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text("Create new project");
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_212(ctx) {
-  let t3;
-  return {
-    c() {
-      t3 = text("Try a demo project");
-    },
-    m(target, anchor) {
-      insert(target, t3, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(t3);
-    }
-  };
-}
-function create_default_slot_117(ctx) {
-  let button0;
-  let t3;
-  let button1;
-  let current;
-  button0 = new Button_default({
-    props: {
-      variant: "primary",
-      $$slots: { default: [create_default_slot_311] },
-      $$scope: { ctx }
-    }
-  });
-  button0.$on("click", ctx[2]);
-  button1 = new Button_default({
-    props: {
-      variant: "default",
-      tooltip: "Creates a new folder at the root of your vault with example notes.",
-      $$slots: { default: [create_default_slot_212] },
-      $$scope: { ctx }
-    }
-  });
-  button1.$on("click", ctx[3]);
-  return {
-    c() {
-      create_component(button0.$$.fragment);
-      t3 = space();
-      create_component(button1.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(button0, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(button1, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const button0_changes = {};
-      if (dirty & 32) {
-        button0_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button0.$set(button0_changes);
-      const button1_changes = {};
-      if (dirty & 32) {
-        button1_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      button1.$set(button1_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(button0.$$.fragment, local);
-      transition_in(button1.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(button0.$$.fragment, local);
-      transition_out(button1.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(button0, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(button1, detaching);
-    }
-  };
-}
-function create_else_block8(ctx) {
-  let ol;
-  return {
-    c() {
-      ol = element("ol");
-      ol.innerHTML = `<li>In the top-right corner of the <strong>Projects</strong>
-					view, click
-					<strong>New</strong>.</li> 
-				<li>Click <strong>New project</strong>.</li>`;
-      attr(ol, "class", "svelte-10e8th2");
-    },
-    m(target, anchor) {
-      insert(target, ol, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(ol);
-    }
-  };
-}
-function create_if_block_113(ctx) {
-  let ol;
-  return {
-    c() {
-      ol = element("ol");
-      ol.innerHTML = `<li>Open the <strong>Command palette</strong>.</li> 
-				<li>Search for <strong>Create new project</strong></li> 
-				<li>Press <strong>Enter</strong>.</li>`;
-      attr(ol, "class", "svelte-10e8th2");
-    },
-    m(target, anchor) {
-      insert(target, ol, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(ol);
-    }
-  };
-}
-function create_if_block25(ctx) {
-  let ol;
-  return {
-    c() {
-      ol = element("ol");
-      ol.innerHTML = `<li>Right-click a folder in <strong>File explorer</strong>.</li> 
-				<li>Click <strong>Create project in folder</strong>.</li>`;
-      attr(ol, "class", "svelte-10e8th2");
-    },
-    m(target, anchor) {
-      insert(target, ol, anchor);
-    },
-    d(detaching) {
-      if (detaching)
-        detach(ol);
-    }
-  };
-}
-function create_default_slot27(ctx) {
-  let if_block_anchor;
-  function select_block_type(ctx2, dirty) {
-    if (ctx2[4] === "File explorer")
-      return create_if_block25;
-    if (ctx2[4] === "Command palette")
-      return create_if_block_113;
-    return create_else_block8;
-  }
-  let current_block_type = select_block_type(ctx, -1);
-  let if_block = current_block_type(ctx);
-  return {
-    c() {
-      if_block.c();
-      if_block_anchor = empty();
-    },
-    m(target, anchor) {
-      if_block.m(target, anchor);
-      insert(target, if_block_anchor, anchor);
-    },
-    p(ctx2, dirty) {
-      if (current_block_type !== (current_block_type = select_block_type(ctx2, dirty))) {
-        if_block.d(1);
-        if_block = current_block_type(ctx2);
-        if (if_block) {
-          if_block.c();
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      }
-    },
-    d(detaching) {
-      if_block.d(detaching);
-      if (detaching)
-        detach(if_block_anchor);
-    }
-  };
-}
-function create_fragment88(ctx) {
-  let div;
-  let typography0;
-  let t0;
-  let typography1;
-  let t1;
-  let pre;
-  let t3;
-  let typography2;
-  let t4;
-  let modalbuttongroup;
-  let t5;
-  let p2;
-  let p_style_value;
-  let t8;
-  let tabcontainer;
-  let current;
-  typography0 = new Typography_default({
-    props: {
-      variant: "h1",
-      $$slots: { default: [create_default_slot_67] },
-      $$scope: { ctx }
-    }
-  });
-  typography1 = new Typography_default({
-    props: {
-      variant: "body",
-      $$slots: { default: [create_default_slot_59] },
-      $$scope: { ctx }
-    }
-  });
-  typography2 = new Typography_default({
-    props: {
-      variant: "body",
-      $$slots: { default: [create_default_slot_411] },
-      $$scope: { ctx }
-    }
-  });
-  modalbuttongroup = new ModalButtonGroup_default({
-    props: {
-      $$slots: { default: [create_default_slot_117] },
-      $$scope: { ctx }
-    }
-  });
-  tabcontainer = new TabContainer_default({
-    props: {
-      options: ["Projects view", "Command palette", "File explorer"],
-      $$slots: {
-        default: [
-          create_default_slot27,
-          ({ selected }) => ({ 4: selected }),
-          ({ selected }) => selected ? 16 : 0
-        ]
-      },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      div = element("div");
-      create_component(typography0.$$.fragment);
-      t0 = space();
-      create_component(typography1.$$.fragment);
-      t1 = space();
-      pre = element("pre");
-      pre.innerHTML = `<code>---
-status: Backlog
-due: 2023-01-01
-published: false
----
-
-# My blog post</code>`;
-      t3 = space();
-      create_component(typography2.$$.fragment);
-      t4 = space();
-      create_component(modalbuttongroup.$$.fragment);
-      t5 = space();
-      p2 = element("p");
-      p2.innerHTML = `<strong>Psst! \u{1F44B}</strong> Next time you can create your projects using any
-		of the following ways:`;
-      t8 = space();
-      create_component(tabcontainer.$$.fragment);
-      attr(pre, "class", "svelte-10e8th2");
-      attr(p2, "style", p_style_value = "color: var(--text-muted); margin-top: 45px; font-size: var(--font-ui-smaller);");
-      attr(div, "class", "center");
-    },
-    m(target, anchor) {
-      insert(target, div, anchor);
-      mount_component(typography0, div, null);
-      append(div, t0);
-      mount_component(typography1, div, null);
-      append(div, t1);
-      append(div, pre);
-      append(div, t3);
-      mount_component(typography2, div, null);
-      append(div, t4);
-      mount_component(modalbuttongroup, div, null);
-      append(div, t5);
-      append(div, p2);
-      append(div, t8);
-      mount_component(tabcontainer, div, null);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const typography0_changes = {};
-      if (dirty & 32) {
-        typography0_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      typography0.$set(typography0_changes);
-      const typography1_changes = {};
-      if (dirty & 32) {
-        typography1_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      typography1.$set(typography1_changes);
-      const typography2_changes = {};
-      if (dirty & 32) {
-        typography2_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      typography2.$set(typography2_changes);
-      const modalbuttongroup_changes = {};
-      if (dirty & 35) {
-        modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      modalbuttongroup.$set(modalbuttongroup_changes);
-      const tabcontainer_changes = {};
-      if (dirty & 48) {
-        tabcontainer_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tabcontainer.$set(tabcontainer_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(typography0.$$.fragment, local);
-      transition_in(typography1.$$.fragment, local);
-      transition_in(typography2.$$.fragment, local);
-      transition_in(modalbuttongroup.$$.fragment, local);
-      transition_in(tabcontainer.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(typography0.$$.fragment, local);
-      transition_out(typography1.$$.fragment, local);
-      transition_out(typography2.$$.fragment, local);
-      transition_out(modalbuttongroup.$$.fragment, local);
-      transition_out(tabcontainer.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(div);
-      destroy_component(typography0);
-      destroy_component(typography1);
-      destroy_component(typography2);
-      destroy_component(modalbuttongroup);
-      destroy_component(tabcontainer);
-    }
-  };
-}
-function instance88($$self, $$props, $$invalidate) {
-  let { onCreate } = $$props;
-  let { onTry } = $$props;
-  const click_handler = () => onCreate();
-  const click_handler_1 = () => onTry();
-  $$self.$$set = ($$props2) => {
-    if ("onCreate" in $$props2)
-      $$invalidate(0, onCreate = $$props2.onCreate);
-    if ("onTry" in $$props2)
-      $$invalidate(1, onTry = $$props2.onTry);
-  };
-  return [onCreate, onTry, click_handler, click_handler_1];
-}
-var Onboarding = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance88, create_fragment88, safe_not_equal, { onCreate: 0, onTry: 1 }, add_css50);
-  }
-};
-var Onboarding_default = Onboarding;
-
-// src/app/onboarding/onboarding-modal.ts
-var OnboardingModal = class extends import_obsidian42.Modal {
-  constructor(app2, onCreate, onTry) {
-    super(app2);
-    this.onCreate = onCreate;
-    this.onTry = onTry;
-  }
-  onOpen() {
-    this.component = new Onboarding_default({
-      target: this.contentEl,
-      props: {
-        onCreate: () => {
-          this.onCreate();
-          this.close();
-        },
-        onTry: () => {
-          this.onTry();
-          this.close();
-        }
-      }
-    });
-  }
-};
-
-// src/app/onboarding/demo-project.ts
-var import_dayjs7 = __toModule(require_dayjs_min());
-var import_obsidian43 = __toModule(require("obsidian"));
-function createDemoProject(vault) {
-  return __async(this, null, function* () {
-    const demoFolder = "Projects - Demo Project";
-    yield vault.createFolder(demoFolder);
-    const startDate = (0, import_dayjs7.default)();
-    const files = {
-      "The Best Notes You'll Ever Make": {
-        status: "Done",
-        due: startDate.subtract(2, "weeks").format("YYYY-MM-DD"),
-        published: true,
-        weight: 1,
-        tags: ["note-taking"]
-      },
-      "The Easiest Way to Start Taking Notes": {
-        status: "Done",
-        due: startDate.subtract(1, "weeks").format("YYYY-MM-DD"),
-        published: true,
-        weight: 2,
-        tags: ["note-taking", "obsidian"]
-      },
-      "Why You Should Be Taking More Notes": {
-        status: "Doing",
-        due: startDate.format("YYYY-MM-DD"),
-        published: false,
-        weight: 3,
-        tags: ["note-taking", "pkm"]
-      },
-      "What I Learned From Taking 15,000 Notes": {
-        status: "Backlog",
-        due: startDate.add(1, "weeks").format("YYYY-MM-DD"),
-        published: false,
-        weight: 4,
-        tags: ["pkm", "obsidian"]
-      },
-      "5 Mistake I Made When I Started Using Obsidian": {
-        status: "Backlog",
-        due: startDate.add(2, "weeks").format("YYYY-MM-DD"),
-        published: false,
-        tags: ["obsidian"]
-      }
-    };
-    for (let [linkText, data] of Object.entries(files)) {
-      const content = "---\n" + (0, import_obsidian43.stringifyYaml)(data) + "---\n\n# " + linkText;
-      yield vault.create((0, import_obsidian43.normalizePath)(demoFolder + "/" + linkText + ".md"), content);
-    }
-    const tableConfig = {
-      fieldConfig: {
-        name: {
-          width: 360
-        },
-        path: {
-          hide: true
-        }
-      }
-    };
-    const boardConfig = {
-      groupByField: "status",
-      priorityField: "weight"
-    };
-    const calendarConfig = {
-      interval: "month",
-      dateField: "due",
-      checkField: "published"
-    };
-    settings.addProject({
-      name: "Demo project",
-      id: v4_default(),
-      path: demoFolder,
-      recursive: false,
-      views: [
-        { name: "Table", id: v4_default(), type: "table", config: tableConfig },
-        { name: "Board", id: v4_default(), type: "board", config: boardConfig },
-        {
-          name: "Calendar",
-          id: v4_default(),
-          type: "calendar",
-          config: calendarConfig
-        }
-      ]
-    });
-  });
-}
-
 // src/app/App.svelte
-function add_css51(target) {
-  append_styles(target, "svelte-2ssdmk", "*{box-sizing:border-box}.projects-container.svelte-2ssdmk{display:flex;flex-direction:column;height:100%}.projects-main.svelte-2ssdmk{flex:1;display:flex;flex-direction:column;min-height:0}");
-}
 function create_catch_block(ctx) {
   let div;
   let callout;
   let current;
   callout = new Callout_default({
     props: {
-      title: ctx[18].name,
+      title: ctx[14].name,
       icon: "zap",
       variant: "danger",
-      $$slots: { default: [create_default_slot28] },
+      $$slots: { default: [create_default_slot_119] },
       $$scope: { ctx }
     }
   });
@@ -37532,9 +39447,9 @@ function create_catch_block(ctx) {
     },
     p(ctx2, dirty) {
       const callout_changes = {};
-      if (dirty & 16)
-        callout_changes.title = ctx2[18].name;
-      if (dirty & 524304) {
+      if (dirty & 8)
+        callout_changes.title = ctx2[14].name;
+      if (dirty & 32776) {
         callout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       callout.$set(callout_changes);
@@ -37556,8 +39471,8 @@ function create_catch_block(ctx) {
     }
   };
 }
-function create_default_slot_118(ctx) {
-  let t_value = ctx[18].message + "";
+function create_default_slot_215(ctx) {
+  let t_value = ctx[14].message + "";
   let t3;
   return {
     c() {
@@ -37567,7 +39482,7 @@ function create_default_slot_118(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 16 && t_value !== (t_value = ctx2[18].message + ""))
+      if (dirty & 8 && t_value !== (t_value = ctx2[14].message + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -37576,13 +39491,13 @@ function create_default_slot_118(ctx) {
     }
   };
 }
-function create_default_slot28(ctx) {
+function create_default_slot_119(ctx) {
   let typography;
   let current;
   typography = new Typography_default({
     props: {
       variant: "body",
-      $$slots: { default: [create_default_slot_118] },
+      $$slots: { default: [create_default_slot_215] },
       $$scope: { ctx }
     }
   });
@@ -37596,7 +39511,7 @@ function create_default_slot28(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty & 524304) {
+      if (dirty & 32776) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -37617,34 +39532,33 @@ function create_default_slot28(ctx) {
   };
 }
 function create_then_block(ctx) {
-  let div;
+  let if_block_anchor;
   let current;
-  let if_block = ctx[1] && ctx[0] && ctx[5] && create_if_block26(ctx);
+  let if_block = ctx[12] && ctx[13] && ctx[0] && create_if_block28(ctx);
   return {
     c() {
-      div = element("div");
       if (if_block)
         if_block.c();
-      attr(div, "class", "projects-main svelte-2ssdmk");
+      if_block_anchor = empty();
     },
     m(target, anchor) {
-      insert(target, div, anchor);
       if (if_block)
-        if_block.m(div, null);
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      if (ctx2[1] && ctx2[0] && ctx2[5]) {
+      if (ctx2[12] && ctx2[13] && ctx2[0]) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 35) {
+          if (dirty & 12289) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block26(ctx2);
+          if_block = create_if_block28(ctx2);
           if_block.c();
           transition_in(if_block, 1);
-          if_block.m(div, null);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
         }
       } else if (if_block) {
         group_outros();
@@ -37665,25 +39579,24 @@ function create_then_block(ctx) {
       current = false;
     },
     d(detaching) {
-      if (detaching)
-        detach(div);
       if (if_block)
-        if_block.d();
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
     }
   };
 }
-function create_if_block26(ctx) {
-  var _a, _b;
+function create_if_block28(ctx) {
   let view2;
   let current;
   view2 = new View_default({
     props: {
-      project: ctx[1],
-      view: ctx[0],
-      readonly: (_b = (_a = ctx[3]) == null ? void 0 : _a.readonly()) != null ? _b : true,
-      api: ctx[5],
-      onConfigChange: ctx[9],
-      frame: ctx[6]
+      project: ctx[12],
+      view: ctx[13],
+      readonly: ctx[0].readonly(),
+      api: new ViewApi(ctx[5], ctx[0], ctx[6]),
+      onConfigChange: settings.updateViewConfig,
+      frame: ctx[7]
     }
   });
   return {
@@ -37695,18 +39608,17 @@ function create_if_block26(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      var _a2, _b2;
       const view_changes = {};
-      if (dirty & 2)
-        view_changes.project = ctx2[1];
+      if (dirty & 4096)
+        view_changes.project = ctx2[12];
+      if (dirty & 8192)
+        view_changes.view = ctx2[13];
       if (dirty & 1)
-        view_changes.view = ctx2[0];
-      if (dirty & 8)
-        view_changes.readonly = (_b2 = (_a2 = ctx2[3]) == null ? void 0 : _a2.readonly()) != null ? _b2 : true;
-      if (dirty & 32)
-        view_changes.api = ctx2[5];
-      if (dirty & 64)
-        view_changes.frame = ctx2[6];
+        view_changes.readonly = ctx2[0].readonly();
+      if (dirty & 97)
+        view_changes.api = new ViewApi(ctx2[5], ctx2[0], ctx2[6]);
+      if (dirty & 128)
+        view_changes.frame = ctx2[7];
       view2.$set(view_changes);
     },
     i(local) {
@@ -37752,22 +39664,10 @@ function create_pending_block(ctx) {
     }
   };
 }
-function create_fragment89(ctx) {
-  var _a, _b;
-  let div;
-  let toolbar;
-  let t3;
+function create_default_slot31(ctx) {
+  let await_block_anchor;
   let promise;
   let current;
-  toolbar = new Toolbar_default({
-    props: {
-      projects: ctx[2],
-      project: (_a = ctx[1]) == null ? void 0 : _a.id,
-      onProjectChange: ctx[14],
-      view: (_b = ctx[0]) == null ? void 0 : _b.id,
-      onViewChange: ctx[15]
-    }
-  });
   let info = {
     ctx,
     current: null,
@@ -37776,40 +39676,26 @@ function create_fragment89(ctx) {
     pending: create_pending_block,
     then: create_then_block,
     catch: create_catch_block,
-    error: 18,
+    error: 14,
     blocks: [, , ,]
   };
-  handle_promise(promise = ctx[4], info);
+  handle_promise(promise = ctx[3], info);
   return {
     c() {
-      div = element("div");
-      create_component(toolbar.$$.fragment);
-      t3 = space();
+      await_block_anchor = empty();
       info.block.c();
-      attr(div, "class", "projects-container svelte-2ssdmk");
     },
     m(target, anchor) {
-      insert(target, div, anchor);
-      mount_component(toolbar, div, null);
-      append(div, t3);
-      info.block.m(div, info.anchor = null);
-      info.mount = () => div;
-      info.anchor = null;
+      insert(target, await_block_anchor, anchor);
+      info.block.m(target, info.anchor = anchor);
+      info.mount = () => await_block_anchor.parentNode;
+      info.anchor = await_block_anchor;
       current = true;
     },
-    p(new_ctx, [dirty]) {
-      var _a2, _b2;
+    p(new_ctx, dirty) {
       ctx = new_ctx;
-      const toolbar_changes = {};
-      if (dirty & 4)
-        toolbar_changes.projects = ctx[2];
-      if (dirty & 2)
-        toolbar_changes.project = (_a2 = ctx[1]) == null ? void 0 : _a2.id;
-      if (dirty & 1)
-        toolbar_changes.view = (_b2 = ctx[0]) == null ? void 0 : _b2.id;
-      toolbar.$set(toolbar_changes);
       info.ctx = ctx;
-      if (dirty & 16 && promise !== (promise = ctx[4]) && handle_promise(promise, info)) {
+      if (dirty & 8 && promise !== (promise = ctx[3]) && handle_promise(promise, info)) {
       } else {
         update_await_block_branch(info, ctx, dirty);
       }
@@ -37817,12 +39703,10 @@ function create_fragment89(ctx) {
     i(local) {
       if (current)
         return;
-      transition_in(toolbar.$$.fragment, local);
       transition_in(info.block);
       current = true;
     },
     o(local) {
-      transition_out(toolbar.$$.fragment, local);
       for (let i2 = 0; i2 < 3; i2 += 1) {
         const block = info.blocks[i2];
         transition_out(block);
@@ -37831,32 +39715,103 @@ function create_fragment89(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(div);
-      destroy_component(toolbar);
-      info.block.d();
+        detach(await_block_anchor);
+      info.block.d(detaching);
       info.token = null;
       info = null;
     }
   };
 }
-function instance89($$self, $$props, $$invalidate) {
+function create_fragment100(ctx) {
+  let appcontainer;
+  let updating_projectId;
+  let updating_viewId;
+  let current;
+  function appcontainer_projectId_binding(value) {
+    ctx[9](value);
+  }
+  function appcontainer_viewId_binding(value) {
+    ctx[10](value);
+  }
+  let appcontainer_props = {
+    projects: ctx[4],
+    $$slots: {
+      default: [
+        create_default_slot31,
+        ({ project, view: view2 }) => ({ 12: project, 13: view2 }),
+        ({ project, view: view2 }) => (project ? 4096 : 0) | (view2 ? 8192 : 0)
+      ]
+    },
+    $$scope: { ctx }
+  };
+  if (ctx[1] !== void 0) {
+    appcontainer_props.projectId = ctx[1];
+  }
+  if (ctx[2] !== void 0) {
+    appcontainer_props.viewId = ctx[2];
+  }
+  appcontainer = new AppContainer_default({ props: appcontainer_props });
+  binding_callbacks.push(() => bind(appcontainer, "projectId", appcontainer_projectId_binding));
+  binding_callbacks.push(() => bind(appcontainer, "viewId", appcontainer_viewId_binding));
+  return {
+    c() {
+      create_component(appcontainer.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(appcontainer, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const appcontainer_changes = {};
+      if (dirty & 16)
+        appcontainer_changes.projects = ctx2[4];
+      if (dirty & 45289) {
+        appcontainer_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      if (!updating_projectId && dirty & 2) {
+        updating_projectId = true;
+        appcontainer_changes.projectId = ctx2[1];
+        add_flush_callback(() => updating_projectId = false);
+      }
+      if (!updating_viewId && dirty & 4) {
+        updating_viewId = true;
+        appcontainer_changes.viewId = ctx2[2];
+        add_flush_callback(() => updating_viewId = false);
+      }
+      appcontainer.$set(appcontainer_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(appcontainer.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(appcontainer.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(appcontainer, detaching);
+    }
+  };
+}
+function instance100($$self, $$props, $$invalidate) {
   let projects;
-  let selectedProject;
-  let views;
-  let selectedView;
-  let viewApi;
-  let $dataSource;
   let $app;
   let $i18n;
-  let $api;
+  let $dataSource;
   let $settings;
+  let $api;
   let $dataFrame;
-  component_subscribe($$self, dataSource, ($$value) => $$invalidate(3, $dataSource = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(11, $app = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(16, $i18n = $$value));
-  component_subscribe($$self, api, ($$value) => $$invalidate(12, $api = $$value));
-  component_subscribe($$self, settings, ($$value) => $$invalidate(13, $settings = $$value));
-  component_subscribe($$self, dataFrame, ($$value) => $$invalidate(6, $dataFrame = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
+  component_subscribe($$self, dataSource, ($$value) => $$invalidate(0, $dataSource = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(8, $settings = $$value));
+  component_subscribe($$self, api, ($$value) => $$invalidate(6, $api = $$value));
+  component_subscribe($$self, dataFrame, ($$value) => $$invalidate(7, $dataFrame = $$value));
+  let projectId;
+  let viewId;
+  let querying;
   onMount(() => {
     if (!projects.length) {
       new OnboardingModal($app, () => {
@@ -37866,115 +39821,54 @@ function instance89($$self, $$props, $$invalidate) {
       }).open();
     }
   });
-  let querying;
-  function handleProjectChange(projectId) {
-    if (!projects.length) {
-      $$invalidate(1, selectedProject = null);
-      $$invalidate(0, selectedView = null);
-      return;
-    }
-    $$invalidate(1, selectedProject = projects.find((project) => project.id === projectId) || projects[0]);
-    if (selectedProject) {
-      if (!selectedProject.views.length) {
-        $$invalidate(0, selectedView = null);
-        return;
-      }
-      $$invalidate(0, selectedView = selectedProject.views[0]);
-    }
+  function appcontainer_projectId_binding(value) {
+    projectId = value;
+    $$invalidate(1, projectId);
   }
-  function handleViewChange(viewId) {
-    var _a;
-    if (!selectedProject || !selectedProject.views.length) {
-      $$invalidate(0, selectedView = null);
-      return;
-    }
-    $$invalidate(0, selectedView = (_a = selectedProject.views.find((v2) => v2.id === viewId)) !== null && _a !== void 0 ? _a : selectedProject.views[0]);
+  function appcontainer_viewId_binding(value) {
+    viewId = value;
+    $$invalidate(2, viewId);
   }
-  function handleViewConfigChange(config) {
-    if ((selectedProject === null || selectedProject === void 0 ? void 0 : selectedProject.id) && (selectedView === null || selectedView === void 0 ? void 0 : selectedView.id)) {
-      settings.updateViewConfig(selectedProject.id, selectedView.id, config);
-    }
-  }
-  function resolveDataSource(project, app2) {
-    if (project.dataview) {
-      return new DataviewDataSource(app2, project);
-    }
-    return new FrontMatterDataSource(app2, project);
-  }
-  const func7 = (projectId) => handleProjectChange(projectId);
-  const func_14 = (viewId) => handleViewChange(viewId);
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 8192) {
+    if ($$self.$$.dirty & 256) {
       $:
-        $$invalidate(2, projects = $settings.projects);
+        $$invalidate(4, { projects } = $settings, projects);
     }
-    if ($$self.$$.dirty & 8196) {
-      $:
-        $$invalidate(1, selectedProject = (projects === null || projects === void 0 ? void 0 : projects.length) ? projects.find((project) => project.id === $settings.lastProjectId) || projects[0] : null);
-    }
-    if ($$self.$$.dirty & 2) {
-      $:
-        $$invalidate(10, views = selectedProject === null || selectedProject === void 0 ? void 0 : selectedProject.views);
-    }
-    if ($$self.$$.dirty & 9216) {
-      $:
-        $$invalidate(0, selectedView = (views === null || views === void 0 ? void 0 : views.length) ? views.find((view2) => view2.id === $settings.lastViewId) || views[0] : null);
-    }
-    if ($$self.$$.dirty & 2050) {
+    if ($$self.$$.dirty & 1) {
       $: {
-        if (selectedProject) {
-          dataSource.set(resolveDataSource(selectedProject, $app));
-        }
-      }
-    }
-    if ($$self.$$.dirty & 6152) {
-      $:
-        $$invalidate(5, viewApi = $dataSource ? new ViewApi($app, $dataSource, $api) : null);
-    }
-    if ($$self.$$.dirty & 8) {
-      $: {
-        $$invalidate(4, querying = (() => __awaiter(void 0, void 0, void 0, function* () {
+        $$invalidate(3, querying = (() => __awaiter(void 0, void 0, void 0, function* () {
           if ($dataSource) {
             dataFrame.set(yield $dataSource.queryAll());
           }
         }))());
       }
     }
-    if ($$self.$$.dirty & 3) {
-      $:
-        settings.saveLayout(selectedProject === null || selectedProject === void 0 ? void 0 : selectedProject.id, selectedView === null || selectedView === void 0 ? void 0 : selectedView.id);
-    }
   };
   return [
-    selectedView,
-    selectedProject,
-    projects,
     $dataSource,
+    projectId,
+    viewId,
     querying,
-    viewApi,
-    $dataFrame,
-    handleProjectChange,
-    handleViewChange,
-    handleViewConfigChange,
-    views,
+    projects,
     $app,
     $api,
+    $dataFrame,
     $settings,
-    func7,
-    func_14
+    appcontainer_projectId_binding,
+    appcontainer_viewId_binding
   ];
 }
-var App10 = class extends SvelteComponent {
+var App11 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance89, create_fragment89, safe_not_equal, {}, add_css51);
+    init(this, options, instance100, create_fragment100, safe_not_equal, {});
   }
 };
-var App_default = App10;
+var App_default = App11;
 
 // src/view.ts
 var VIEW_TYPE_PROJECTS = "obsidian-projects";
-var ProjectsView = class extends import_obsidian45.ItemView {
+var ProjectsView = class extends import_obsidian50.ItemView {
   constructor(leaf, plugin2) {
     super(leaf);
     this.plugin = plugin2;
@@ -37994,8 +39888,6 @@ var ProjectsView = class extends import_obsidian45.ItemView {
       view.set(this);
     });
   }
-  onunload() {
-  }
   onOpen() {
     return __async(this, null, function* () {
       customViews.set(this.getViews());
@@ -38014,7 +39906,7 @@ var ProjectsView = class extends import_obsidian45.ItemView {
   }
   getViewsV2() {
     const views = {};
-    for (let pluginId in this.app.plugins.plugins) {
+    for (const pluginId in this.app.plugins.plugins) {
       if (this.app.plugins.enabledPlugins.has(pluginId)) {
         const plugin2 = this.app.plugins.plugins[pluginId];
         const registerView = plugin2 == null ? void 0 : plugin2.onRegisterProjectViewV2;
@@ -38027,7 +39919,7 @@ var ProjectsView = class extends import_obsidian45.ItemView {
   }
   getViews() {
     const views = {};
-    for (let pluginId in this.app.plugins.plugins) {
+    for (const pluginId in this.app.plugins.plugins) {
       if (this.app.plugins.enabledPlugins.has(pluginId)) {
         const plugin2 = this.app.plugins.plugins[pluginId];
         const registerView = plugin2 == null ? void 0 : plugin2.onRegisterProjectView;
@@ -38041,14 +39933,12 @@ var ProjectsView = class extends import_obsidian45.ItemView {
 };
 
 // src/events.ts
-var import_obsidian47 = __toModule(require("obsidian"));
+var import_obsidian52 = __toModule(require("obsidian"));
 var import_obsidian_dataview3 = __toModule(require_lib());
 function registerFileEvents(plugin2) {
   if (get_store_value(capabilities).dataview) {
-    plugin2.registerEvent(plugin2.app.metadataCache.on("dataview:index-ready", () => {
-    }));
     plugin2.registerEvent(plugin2.app.metadataCache.on("dataview:metadata-change", (type, file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian47.TFile) {
+      if (file instanceof import_obsidian52.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           switch (type) {
@@ -38068,7 +39958,7 @@ function registerFileEvents(plugin2) {
     })));
   } else {
     plugin2.registerEvent(plugin2.app.vault.on("create", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian47.TFile) {
+      if (file instanceof import_obsidian52.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
@@ -38076,7 +39966,7 @@ function registerFileEvents(plugin2) {
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("rename", (file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian47.TFile) {
+      if (file instanceof import_obsidian52.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(oldPath);
@@ -38085,7 +39975,7 @@ function registerFileEvents(plugin2) {
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("delete", (file) => {
-      if (file instanceof import_obsidian47.TFile) {
+      if (file instanceof import_obsidian52.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(file.path);
@@ -38093,7 +39983,7 @@ function registerFileEvents(plugin2) {
       }
     }));
     plugin2.registerEvent(plugin2.app.metadataCache.on("changed", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian47.TFile) {
+      if (file instanceof import_obsidian52.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
@@ -38109,13 +39999,13 @@ import_dayjs8.default.extend(import_localizedFormat.default);
 var DEFAULT_SETTINGS = {
   projects: []
 };
-var ProjectsPlugin = class extends import_obsidian48.Plugin {
+var ProjectsPlugin = class extends import_obsidian53.Plugin {
   onload() {
     return __async(this, null, function* () {
       const t3 = get_store_value(i18n).t;
       this.registerView(VIEW_TYPE_PROJECTS, (leaf) => new ProjectsView(leaf, this));
       this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
-        if (file instanceof import_obsidian48.TFolder) {
+        if (file instanceof import_obsidian53.TFolder) {
           menu.addItem((item) => {
             item.setTitle(t3("menus.project.create.title")).setIcon("folder-plus").onClick(() => __async(this, null, function* () {
               const project = createProject();
@@ -38161,7 +40051,7 @@ var ProjectsPlugin = class extends import_obsidian48.Plugin {
       this.addRibbonIcon("layout", "Open projects", () => {
         this.activateView();
       });
-      (0, import_obsidian48.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
+      (0, import_obsidian53.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
       app.set(this.app);
       plugin.set(this);
       settings.set(migrateAny(yield this.loadData()));
@@ -38179,15 +40069,20 @@ var ProjectsPlugin = class extends import_obsidian48.Plugin {
   }
   activateView() {
     return __async(this, null, function* () {
-      this.app.workspace.detachLeavesOfType(VIEW_TYPE_PROJECTS);
-      yield this.app.workspace.getLeaf(true).setViewState({
-        type: VIEW_TYPE_PROJECTS,
-        active: true
-      });
-      const leaves = this.app.workspace.getLeavesOfType(VIEW_TYPE_PROJECTS);
-      if (leaves[0]) {
-        this.app.workspace.revealLeaf(leaves[0]);
+      this.app.workspace.revealLeaf(yield this.getOrCreateLeaf());
+    });
+  }
+  getOrCreateLeaf() {
+    return __async(this, null, function* () {
+      const existingLeaves = this.app.workspace.getLeavesOfType(VIEW_TYPE_PROJECTS);
+      if (existingLeaves[0]) {
+        return existingLeaves[0];
       }
+      const leaf = this.app.workspace.getLeaf(true);
+      yield leaf.setViewState({
+        type: VIEW_TYPE_PROJECTS
+      });
+      return leaf;
     });
   }
 };
