@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-mtg",
+	"name": "Obsidian MtG",
+	"version": "1.0.4",
+	"minAppVersion": "0.15.0",
+	"description": "A plugin for managing Magic: The Gathering decks and card lists as Obsidian notes",
+	"author": "Omar Delarosa",
+	"authorUrl": "https://github.com/omardelarosa",
+	"isDesktopOnly": false
+}

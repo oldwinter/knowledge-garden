@@ -1,21 +1,34 @@
 .obsidian_douban_settings_area {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 14px;
     width: 100%;
 }
 
 .obsidian_douban_settings_textField {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 14px;
     width: 100%;
+}
+
+.obsidian_douban_settings_text {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.obsidian_douban_settings_input {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.obsidian_douban_settings_button {
+	margin: auto;
+	vertical-align: bottom;
+
 }
 
 .obsidian_douban_search_input {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 14px;
     width: 90%;
 }
 
@@ -23,5 +36,15 @@
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 14px;
 }
+
+.obsidian_douban_settings_desc.has_error {
+	color: #fb464c;
+}
+
+.obsidian_douban_settings_input.has-error {
+	color: #fb464c;
+	border-color: #fb464c;
+}
+
+

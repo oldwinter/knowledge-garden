@@ -1,0 +1,220 @@
+body {
+    --snw-counter-opacity: 0.4;
+    --snw-icon-opacity: 0.4;
+}
+
+.snw-reference {
+    display: inline;
+    font-size: var(--font-ui-smaller);
+    border-radius: var(--radius-s);
+    border: var(--border-width) dotted;
+    vertical-align: top;
+    opacity: var(--snw-counter-opacity);
+    min-width: 10px;
+    padding-left: 3px;
+    padding-right: 3px !important;
+    margin-left: 3px !important;
+    margin-right: 2px;
+}
+
+.is-mobile .snw-reference {
+    font-size: var(--font-ui-smaller);
+}
+
+/* CM Live Preview */
+.cm-content .snw-reference {
+    padding-right: 2px;
+}
+
+/* Preview mode */
+.markdown-preview-view .snw-reference {
+    padding-right: 3px;
+}
+
+.snw-block  {
+    padding-left: 2px;
+    margin-left: 2px;
+}
+
+
+.snw-heading {
+    margin-left: 2px;
+    font-size: var(--font-ui-smaller);
+}
+
+.snw-embed {
+    margin-top: 1px;
+}
+
+.snw-embed-preview {
+    top: 2px;
+}
+
+.snw-link {
+    margin-left: 3px;
+}
+
+/* Hover container */
+.snw-popover-container {
+    border-radius: var(--radius-l);
+    border: var(--border-width) solid var(--modal-border-color);
+    box-shadow: var(--shadow-s);
+    background-color: var(--background-primary) !important;
+    min-height: 100px;
+    width: 300px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+/* Shared reference area CSS */
+
+.snw-ref-area {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 300px !important;
+    color: var(--text-normal);
+}
+
+.snw-sidepane-container > div > .snw-ref-area {
+    max-height: 100% !important; 
+    margin-bottom: 10px; 
+}
+
+.snw-ref-area::-webkit-scrollbar {
+    display: none;
+} 
+
+.snw-ref-title-popover {
+    color: var(--text-normal);
+    padding-top: 5px; 
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: var(--border-width) solid var(--modal-border-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.snw-ref-title-popover-open-sidepane-icon {
+    width: 25px;
+    opacity: var(--snw-icon-opacity);
+}
+
+.snw-ref-title-popover-label {
+    width: 100%;
+}
+
+.snw-ref-title-side-pane { 
+    color: var(--tab-text-color-active);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-radius: var(--radius-s);
+    background-color: var(--titlebar-background-focused);
+    border: var(--border-width) solid var(--modal-border-color);
+}
+
+.snw-ref-item-container { 
+    margin-bottom: 10px;
+}
+
+.snw-ref-item-file {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.snw-ref-item-collection-items {
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px !important;
+}
+
+
+[uic="uic"] > * {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    max-height: 230px !important;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.snw-ref-item-info a {
+    text-decoration: none;
+    color: var(--text-normal) !important;
+    cursor: default;
+}
+
+
+/* Sidepane */
+
+.snw-sidepane-container {
+    height: 100%;
+}
+
+.snw-header-count-wrapper {
+    position: absolute;  
+    border: var(--border-width) dotted;
+    font-size: var(--font-ui-smallest);
+    border-radius: var(--radius-s);
+    min-width:  18px;
+    min-height: 18px;
+    right: 20px;
+    opacity: var(--snw-counter-opacity);
+    padding: 3px;
+    z-index: 1000;
+}
+
+.snw-header-count {
+    text-align: center;
+}
+
+
+.snw-sidepane-container {
+    padding: 10px;
+    overflow: scroll;
+}
+
+.snw-sidepane-header {
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.snw-sidepane-header-references-header {
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.snw-sidepane-references {
+    margin-top: 0px;
+    padding-left: 20px;
+}
+
+.snw-sidepane-reference-item {
+    padding-bottom: 5px;
+    line-height: normal;
+}
+ 
+.snw-sidepane-loading {
+    color: var(--text-muted);
+    margin-top:  15px;
+    margin-left: 20px;
+}
+
+.snw-sidepane-loading-subtext {
+    color: var(--text-faint);
+    font-style: italic;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.snw-gutter-ref {
+   /* margin-right: 6px; */
+}

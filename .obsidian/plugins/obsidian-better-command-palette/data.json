@@ -1,5 +1,5 @@
 {
-  "closeWithBackspace": false,
+  "closeWithBackspace": true,
   "fileSearchPrefix": "/",
   "tagSearchPrefix": "#",
   "suggestionLimit": 50,
@@ -19,8 +19,10 @@
   "createNewFileMod": "Mod",
   "createNewPaneMod": "Shift",
   "hiddenCommands": [
-    "editor:insert-link"
+    "editor:insert-link",
+    "app:open-help"
   ],
   "hiddenFiles": [],
-  "hiddenTags": []
+  "hiddenTags": [],
+  "showPluginName": true
 }

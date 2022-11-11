@@ -1,5 +1,5 @@
 {
-  "cssTheme": "",
+  "cssTheme": "Things",
   "enabledCssSnippets": [
     "多栏callout样式",
     "隐藏文件和文件夹",
@@ -11,7 +11,7 @@
     "隐藏LICENSE文件和logseq文件夹"
   ],
   "theme": "system",
-  "baseFontSize": 16,
+  "baseFontSize": 14,
   "baseFontSizeAction": false,
   "translucency": false,
   "accentColor": "",

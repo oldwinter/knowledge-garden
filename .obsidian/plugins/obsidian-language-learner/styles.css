@@ -1,0 +1,170 @@
+/* Input your styles */
+#langr-reading {
+    user-select: none;
+    line-height: 1.8em;
+    font-family: 'Times New Roman';
+}
+
+#langr-reading span.word {
+    user-select: text;    
+    border: 1px solid transparent;
+    cursor:pointer;
+    border-radius: 4px;
+}
+
+#langr-reading .phrase {
+    background-color: transparent;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#langr-reading span.word:hover,
+#langr-reading span.phrase:hover{
+    border: 1px solid deepskyblue;
+}
+
+#langr-reading span.new {
+    background-color:#add8e644;
+}
+#langr-reading span.learning {
+    background-color: #ff980055;
+}
+
+#langr-reading span.familiar {
+    background-color: #ffeb3c55;
+}
+
+#langr-reading span.known {
+    background-color: #9eda5855;
+}
+
+#langr-reading span.learned {
+    background-color: #4cb05155;
+}
+
+
+#langr-reading span.stns {
+    border: 1px solid transparent;
+}
+
+#langr-reading .select {
+    background-color: #90ee9060;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#langr-reading .select:hover {
+    border: 1px solid green;
+}
+
+
+
+/* 查词面板*/
+
+.langr-search {
+    font-size: 0.8em;
+    user-select: text;
+}
+
+.langr-search h1,
+.langr-search h2,
+.langr-search h3,
+.langr-search h4 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+
+.langr-search p {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.langr-search ul {
+    padding-left: 20px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.langr-search ul,
+.langr-search ol,
+.langr-search li {
+    list-style: none;
+}
+
+.langr-search .collins h4 span,
+.langr-search .collins h4 em {
+    margin-right: 5px;
+}
+
+.theme-light .langr-search .collins .collinsMajorTrans,
+.theme-light .langr-search .diff .wt-container {
+    background-color: #c7e2ef;
+}
+
+.theme-dark .langr-search .collins .collinsMajorTrans,
+.theme-dark .langr-search .diff .wt-container {
+    background-color: #282a36;
+}
+
+.langr-search .collins .collinsMajorTrans .additional {
+    color: lightsalmon;
+}
+
+.langr-search .collins .exampleLists {
+    margin: 5px 0 5px 0px;
+    padding-left: 20px;
+    border-left: 1px solid #d9d9d9
+}
+
+.langr-search .collins .collinsOrder {
+    float: left;
+    margin-left: -15px;
+}
+
+.langr-search button {
+    margin-right: 5px;
+}
+
+/* 同义词辨析 */
+.langr-search .diff .title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.langr-search .diff .wordGroup {
+    margin-left: 10px;
+}
+.langr-search .diff .wt-container {
+    margin-top: 0.5em;
+}
+
+
+
+/* 发音 */
+.langr-search .pron {
+    margin-right: 15px;
+    color: deeppink;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/*新词面板*/
+
+
+
+
+
+/* 复习卡片中的发音 */
+#sr-flashcard-view h4 {
+    cursor: pointer;
+}
+#sr-flashcard-view h4:hover {
+    color: deeppink;
+    transition: color 0.3s ease;
+}

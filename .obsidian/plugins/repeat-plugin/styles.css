@@ -23,6 +23,9 @@
 
 .repeat-embedded_note {
   padding: 15px 30px;
+  max-width: var(--file-line-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .repeat-markdown_embed_title {

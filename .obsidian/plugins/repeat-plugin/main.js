@@ -47,10 +47,10 @@ __export(main_exports, {
   default: () => RepeatPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian4 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
 // src/repeat/obsidian/RepeatView.tsx
-var import_obsidian2 = require("obsidian");
+var import_obsidian3 = require("obsidian");
 var import_obsidian_dataview = __toESM(require_lib());
 
 // src/frontmatter.ts
@@ -4218,7 +4218,11 @@ function getPeriodicRepeatChoices(repetition, now2) {
   }];
 }
 function getSpacedRepeatChoices(repetition, now2) {
-  let { repeatPeriod } = repetition;
+  const {
+    repeatPeriod,
+    repeatPeriodUnit,
+    repeatTimeOfDay
+  } = repetition;
   const { repeatDueAt } = repetition;
   if (repeatDueAt > now2 || !repeatDueAt) {
     return [{
@@ -4226,15 +4230,23 @@ function getSpacedRepeatChoices(repetition, now2) {
       nextRepetition: null
     }];
   }
-  if (repetition.repeatPeriodUnit !== "HOUR") {
-    repeatPeriod = 1;
-  }
-  const getNewSpacedPeriod = (multiplier) => Math.max(Math.round(multiplier * repeatPeriod), 1);
   const multiplierChoices = [0.5, 1, 1.5, 2].map((multiplier) => {
-    const hours = getNewSpacedPeriod(multiplier);
-    const nextRepeatDueAt = now2.plus({
-      hours
+    let nextRepeatDueAt = now2.plus({
+      [repeatPeriodUnit]: multiplier * repeatPeriod
     });
+    if (nextRepeatDueAt.minus({ days: 7 }) >= now2) {
+      nextRepeatDueAt = nextRepeatDueAt.set({
+        hour: repeatTimeOfDay === "AM" ? AM_REVIEW_TIME : PM_REVIEW_TIME,
+        minute: 0,
+        second: 0,
+        millisecond: 0
+      });
+    }
+    let { hours } = nextRepeatDueAt.diff(now2, "hours").values || {};
+    if (!hours || hours < 1) {
+      hours = 1;
+    }
+    hours = Math.round(hours);
     return {
       text: `${summarizeDueAt(nextRepeatDueAt, now2)} (x${multiplier})`,
       nextRepetition: {
@@ -4277,6 +4289,7 @@ function getRepeatChoices(repetition) {
 }
 
 // src/repeat/parsers.ts
+var import_obsidian = require("obsidian");
 var joinedUnits = "hour|day|week|month|year";
 function parseRepeatPeriodUnit(unitDescription) {
   var _a;
@@ -4362,6 +4375,16 @@ function parseRepetitionFields(repeat, repeatDueAt, referenceDateTime) {
     repeatDueAt: parseRepeatDueAt(repeatDueAt, parsedRepeat, referenceDateTime || DateTime.now())
   };
 }
+function parseRepetitionFromMarkdown(markdown) {
+  const bounds = determineFrontmatterBounds(markdown);
+  if (bounds) {
+    const { repeat, due_at } = (0, import_obsidian.parseYaml)(markdown.slice(...bounds)) || {};
+    if (repeat) {
+      return parseRepetitionFields(repeat, due_at || void 0);
+    }
+  }
+  return void 0;
+}
 
 // src/repeat/queries.ts
 function getNotesDue(dv) {
@@ -4392,12 +4415,6 @@ function getNextDueNote(dv) {
 }
 
 // src/repeat/serializers.ts
-function getRepeatTimeOfDayParts(repeatTimeOfDay, repeatStrategy) {
-  if (repeatTimeOfDay === "AM" || repeatStrategy === "SPACED") {
-    return [];
-  }
-  return ["in the evening"];
-}
 function serializeRepeatPeriodUnit(repeatPeriodUnit, repeatPeriod) {
   const suffix = repeatPeriod === 1 ? "" : "s";
   return `${repeatPeriodUnit.toLowerCase()}${suffix}`;
@@ -4427,7 +4444,7 @@ function serializeRepeat({
     "every",
     ...repeatPeriod === 1 ? [] : [`${repeatPeriod}`],
     serializeRepeatPeriodUnit(repeatPeriodUnit, repeatPeriod),
-    ...getRepeatTimeOfDayParts(repeatTimeOfDay, repeatStrategy)
+    ...repeatTimeOfDay === "AM" ? [] : ["in the evening"]
   ].join(" ");
 }
 function serializeRepetition(repetition) {
@@ -4438,7 +4455,7 @@ function serializeRepetition(repetition) {
 }
 
 // src/markdown.ts
-var import_obsidian = require("obsidian");
+var import_obsidian2 = require("obsidian");
 var EmbedType = /* @__PURE__ */ ((EmbedType2) => {
   EmbedType2["Image"] = "Image";
   EmbedType2["Audio"] = "Audio";
@@ -4462,19 +4479,54 @@ Object.keys(embedTypeToAcceptedExtensions).forEach((key) => {
     ").*"
   ].join(""), "i");
 });
-function getFirstMatchingFilePath(vault, pathSuffix) {
+function getClosestMatchingFilePath(vault, mediaSrc, containingNotePath) {
+  const containingDir = (() => {
+    const parts = containingNotePath.split("/");
+    parts.pop();
+    return parts.join("/");
+  })();
+  let normalizedPathSuffix = mediaSrc;
+  if (mediaSrc.startsWith(".")) {
+    const resourcePathParts = containingNotePath.split("/");
+    resourcePathParts.pop();
+    for (const suffixPart of mediaSrc.split("/")) {
+      if (suffixPart === "..") {
+        resourcePathParts.pop();
+      } else if (suffixPart === ".") {
+        continue;
+      } else {
+        resourcePathParts.push(suffixPart);
+      }
+    }
+    normalizedPathSuffix = resourcePathParts.join("/");
+  }
+  const allMatches = [];
   for (const file of vault.getFiles()) {
-    if (file.path.endsWith(pathSuffix)) {
-      return file.path;
+    if (file.path.endsWith(normalizedPathSuffix)) {
+      if (file.path === normalizedPathSuffix) {
+        return file.path;
+      }
+      allMatches.push(file.path);
     }
   }
-  return pathSuffix;
+  allMatches.sort((left, right) => {
+    if (left.startsWith(containingDir) && !right.startsWith(containingDir)) {
+      return -1;
+    }
+    if (right.startsWith(containingDir) && !left.startsWith(containingDir)) {
+      return 1;
+    }
+    return left <= right ? -1 : 1;
+  });
+  if (allMatches) {
+    return allMatches[0];
+  }
+  return mediaSrc;
 }
-var getMediaUri = (vault, mediaSrc) => [
-  "app://local",
-  vault.adapter.basePath,
-  mediaSrc
-].join("/");
+var getMediaUri = (vault, mediaSrc, containingNotePath) => {
+  const matchingPath = getClosestMatchingFilePath(vault, mediaSrc, containingNotePath);
+  return vault.adapter.getResourcePath(matchingPath);
+};
 var getNoteUri = (vault, noteHref) => [
   "obsidian://open?vault=",
   encodeURIComponent(vault.getName()),
@@ -4494,30 +4546,34 @@ function determineEmbedType(node) {
   return "Note" /* Note */;
 }
 async function renderMarkdown(markdown, containerEl, sourcePath, lifecycleComponent, vault) {
-  await import_obsidian.MarkdownPreviewView.renderMarkdown(markdown, containerEl, sourcePath, lifecycleComponent);
+  await import_obsidian2.MarkdownPreviewView.renderMarkdown(markdown, containerEl, sourcePath, lifecycleComponent);
   const nodes = containerEl.querySelectorAll("span.internal-embed");
   nodes.forEach((node) => {
     const embedType = determineEmbedType(node);
     if (embedType === "Image" /* Image */) {
       const img = createEl("img");
-      img.src = getMediaUri(vault, getFirstMatchingFilePath(vault, node.getAttribute("src")));
+      img.src = getMediaUri(vault, node.getAttribute("src"), sourcePath);
       node.empty();
       node.appendChild(img);
     } else if (embedType === "Audio" /* Audio */) {
       const audio = createEl("audio");
       audio.controls = true;
-      audio.src = getMediaUri(vault, getFirstMatchingFilePath(vault, node.getAttribute("src")));
+      audio.src = getMediaUri(vault, node.getAttribute("src"), sourcePath);
       node.empty();
       node.appendChild(audio);
     } else if (embedType === "Video" /* Video */) {
       const video = createEl("video");
       video.controls = true;
-      video.src = getMediaUri(vault, getFirstMatchingFilePath(vault, node.getAttribute("src")));
+      video.src = getMediaUri(vault, node.getAttribute("src"), sourcePath);
       node.empty();
       node.appendChild(video);
     } else if (embedType === "PDF" /* PDF */) {
+      if (!import_obsidian2.Platform.isDesktop) {
+        console.error("Repeat Plugin: Embedded PDFs are only supported on the desktop.");
+        return;
+      }
       const iframe = createEl("iframe");
-      iframe.src = getMediaUri(vault, getFirstMatchingFilePath(vault, node.getAttribute("src")));
+      iframe.src = getMediaUri(vault, node.getAttribute("src"), sourcePath);
       iframe.width = "100%";
       iframe.height = "800px";
       node.empty();
@@ -4545,14 +4601,14 @@ async function renderTitleElement(container, file, vault) {
   embedTitle.setText(file.basename);
   const embedLink = createEl("a", { cls: "markdown-embed-link" });
   embedLink.href = getNoteUri(vault, file.path);
-  (0, import_obsidian.setIcon)(embedLink, "link", 20);
+  (0, import_obsidian2.setIcon)(embedLink, "link", 20);
   container.appendChild(embedTitle);
   container.appendChild(embedLink);
 }
 
 // src/repeat/obsidian/RepeatView.tsx
 var REPEATING_NOTES_DUE_VIEW = "repeating-notes-due-view";
-var RepeatView = class extends import_obsidian2.ItemView {
+var RepeatView = class extends import_obsidian3.ItemView {
   constructor(leaf) {
     super(leaf);
     this.icon = "clock";
@@ -4560,7 +4616,7 @@ var RepeatView = class extends import_obsidian2.ItemView {
     this.setMessage = this.setMessage.bind(this);
     this.setPage = this.setPage.bind(this);
     this.resetContainers = this.resetContainers.bind(this);
-    this.component = new import_obsidian2.Component();
+    this.component = new import_obsidian3.Component();
     this.dv = (0, import_obsidian_dataview.getAPI)(this.app);
     this.root = this.containerEl.children[1];
     this.indexPromise = new Promise((resolve, reject) => {
@@ -4660,25 +4716,27 @@ var RepeatView = class extends import_obsidian2.ItemView {
 var RepeatView_default = RepeatView;
 
 // src/repeat/obsidian/RepeatNoteSetupModal.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian4 = require("obsidian");
 var formatDateTimeForPicker = (dt) => [
   dt.toFormat("yyyy-MM-dd"),
   "T",
   dt.toFormat("HH:mm")
 ].join("");
-var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
+var RepeatNoteSetupModal = class extends import_obsidian4.Modal {
   constructor(app, onSubmit, initialValue) {
     super(app);
     this.onSubmit = onSubmit;
     this.updateResult = this.updateResult.bind(this);
     this.result = initialValue != null ? initialValue : {
-      repeatStrategy: "PERIODIC",
+      repeatStrategy: "SPACED",
       repeatPeriod: 1,
       repeatPeriodUnit: "DAY",
       repeatTimeOfDay: "AM",
       repeatDueAt: void 0
     };
-    this.updateResult("repeatPeriod", 1);
+    if (!this.result.repeatDueAt) {
+      this.updateResult("repeatPeriod", this.result.repeatPeriod);
+    }
     this.datetimePickerEl;
   }
   updateResult(key, value) {
@@ -4692,15 +4750,15 @@ var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
     const { contentEl } = this;
     contentEl.empty();
     contentEl.addClass("repeat-setup_modal");
-    new import_obsidian3.Setting(contentEl).setName("Repeat type").addDropdown((dropdown) => {
-      dropdown.setValue(this.result.repeatStrategy);
+    new import_obsidian4.Setting(contentEl).setName("Repeat type").addDropdown((dropdown) => {
       dropdown.addOption("PERIODIC", "Periodic");
       dropdown.addOption("SPACED", "Spaced");
+      dropdown.setValue(this.result.repeatStrategy);
       dropdown.onChange((value) => {
         this.updateResult("repeatStrategy", value);
       });
     });
-    const frequencyEl = new import_obsidian3.Setting(contentEl).setName("Repeat in").addText((text) => {
+    const frequencyEl = new import_obsidian4.Setting(contentEl).setName("Repeat in").addText((text) => {
       text.inputEl.type = "number";
       text.inputEl.style.width = "150px";
       text.inputEl.style.marginRight = "5px";
@@ -4710,11 +4768,12 @@ var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
         this.updateResult("repeatPeriod", repeatPeriod);
       });
     }).addDropdown((dropdown) => {
-      dropdown.setValue(this.result.repeatPeriodUnit);
+      dropdown.addOption("HOUR", "hour(s)");
       dropdown.addOption("DAY", "day(s)");
       dropdown.addOption("WEEK", "week(s)");
       dropdown.addOption("MONTH", "month(s)");
       dropdown.addOption("YEAR", "year(s)");
+      dropdown.setValue(this.result.repeatPeriodUnit);
       dropdown.onChange((value) => {
         this.updateResult("repeatPeriodUnit", value);
       });
@@ -4724,10 +4783,10 @@ var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
     } catch (e) {
       console.error(e);
     }
-    const timeOfDayEl = new import_obsidian3.Setting(contentEl).addDropdown((dropdown) => {
-      dropdown.setValue(this.result.repeatTimeOfDay);
+    const timeOfDayEl = new import_obsidian4.Setting(contentEl).addDropdown((dropdown) => {
       dropdown.addOption("AM", `at ${AM_REVIEW_TIME} AM in the morning`);
       dropdown.addOption("PM", `at ${PM_REVIEW_TIME % 12} PM in the evening`);
+      dropdown.setValue(this.result.repeatTimeOfDay);
       dropdown.onChange((value) => {
         this.updateResult("repeatTimeOfDay", value);
       });
@@ -4739,7 +4798,7 @@ var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
       console.error("Repeat Plugin: Could not set time of day HTML element styles:");
       console.error(e);
     }
-    new import_obsidian3.Setting(contentEl).setName("Next repeat").setDesc(`in ${summarizeDueAt(this.result.repeatDueAt)}`).addText((datetimePicker) => {
+    new import_obsidian4.Setting(contentEl).setName("Next repeat").setDesc(`in ${summarizeDueAt(this.result.repeatDueAt)}`).addText((datetimePicker) => {
       datetimePicker.inputEl.type = "datetime-local";
       datetimePicker.inputEl.addClass("repeat-date_picker");
       const pickerValue = formatDateTimeForPicker(this.result.repeatDueAt);
@@ -4754,7 +4813,7 @@ var RepeatNoteSetupModal = class extends import_obsidian3.Modal {
         this.result.repeatDueAt = parsedValue;
       });
     });
-    new import_obsidian3.Setting(contentEl).addButton((btn) => btn.setButtonText("Set Up Repetition").setCta().onClick(() => {
+    new import_obsidian4.Setting(contentEl).addButton((btn) => btn.setButtonText("Set Up Repetition").setCta().onClick(() => {
       this.close();
       this.onSubmit(this.result);
     }));
@@ -4774,7 +4833,7 @@ var DEFAULT_SETTINGS = {
 
 // src/main.ts
 var import_obsidian_dataview2 = __toESM(require_lib());
-var RepeatPlugin = class extends import_obsidian4.Plugin {
+var RepeatPlugin = class extends import_obsidian5.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     this.updateNotesDueCount = this.updateNotesDueCount.bind(this);
@@ -4839,7 +4898,7 @@ var RepeatPlugin = class extends import_obsidian4.Plugin {
       id: "setup-repeat-note",
       name: "Repeat this note...",
       checkCallback: (checking) => {
-        const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+        const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
         const onSubmit = (result) => {
           if (!markdownView) {
             return;
@@ -4851,7 +4910,13 @@ var RepeatPlugin = class extends import_obsidian4.Plugin {
         };
         if (markdownView) {
           if (!checking) {
-            new RepeatNoteSetupModal_default(this.app, onSubmit).open();
+            let repetition;
+            if (markdownView) {
+              const { editor } = markdownView;
+              const content = editor.getValue();
+              repetition = parseRepetitionFromMarkdown(content);
+            }
+            new RepeatNoteSetupModal_default(this.app, onSubmit, repetition).open();
           }
           return true;
         }
@@ -4870,7 +4935,7 @@ var RepeatPlugin = class extends import_obsidian4.Plugin {
         id: `repeat-every-${unit}`,
         name: `Repeat this note every ${unit}`,
         checkCallback: (checking) => {
-          const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian4.MarkdownView);
+          const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian5.MarkdownView);
           if (markdownView) {
             if (!checking) {
               const { editor } = markdownView;
@@ -4910,7 +4975,7 @@ var RepeatPlugin = class extends import_obsidian4.Plugin {
     this.app.workspace.detachLeavesOfType(REPEATING_NOTES_DUE_VIEW);
   }
 };
-var RepeatPluginSettingTab = class extends import_obsidian4.PluginSettingTab {
+var RepeatPluginSettingTab = class extends import_obsidian5.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -4919,11 +4984,11 @@ var RepeatPluginSettingTab = class extends import_obsidian4.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Repeat Plugin Settings" });
-    new import_obsidian4.Setting(containerEl).setName("Show due count in status bar").setDesc("Whether to display how many notes are due in Obsidian's status bar.").addToggle((component) => component.setValue(this.plugin.settings.showDueCountInStatusBar).onChange(async (value) => {
+    new import_obsidian5.Setting(containerEl).setName("Show due count in status bar").setDesc("Whether to display how many notes are due in Obsidian's status bar.").addToggle((component) => component.setValue(this.plugin.settings.showDueCountInStatusBar).onChange(async (value) => {
       this.plugin.settings.showDueCountInStatusBar = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian4.Setting(containerEl).setName("Show ribbon icon").setDesc("Whether to display the ribbon icon that opens the Repeat pane.").addToggle((component) => component.setValue(this.plugin.settings.showRibbonIcon).onChange(async (value) => {
+    new import_obsidian5.Setting(containerEl).setName("Show ribbon icon").setDesc("Whether to display the ribbon icon that opens the Repeat pane.").addToggle((component) => component.setValue(this.plugin.settings.showRibbonIcon).onChange(async (value) => {
       this.plugin.settings.showRibbonIcon = value;
       await this.plugin.saveSettings();
     }));

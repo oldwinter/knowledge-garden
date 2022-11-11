@@ -2,7 +2,20 @@
   "confirmDeletion": false,
   "showAddCommand": false,
   "debug": false,
-  "editorMenu": [],
+  "editorMenu": [
+    {
+      "id": "obsidian-spaced-repetition:srs-note-review-easy",
+      "icon": "chevrons-right",
+      "name": "Spaced Repetition: 标记为“简单”",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-spaced-repetition:srs-note-review-hard",
+      "icon": "shield-close",
+      "name": "Spaced Repetition: 标记为“较难”",
+      "mode": "any"
+    }
+  ],
   "fileMenu": [],
   "leftRibbon": [],
   "rightRibbon": [],
@@ -47,17 +60,16 @@
     "statusbar": [
       "janitor",
       "obsidian-keyboard-analyzer",
-      "word-count",
-      "backlink"
+      "word-count"
     ],
     "leftRibbon": [
-      "复习卡片",
       "新建 Excalidraw 绘图",
       "Show Slide Preview",
       "插入模板",
       "BRAT",
       "打开命令面板",
-      "打开快速切换"
+      "打开快速切换",
+      "复习卡片"
     ]
   },
   "spacing": "8",
@@ -66,9 +78,18 @@
     "rowCount": 2,
     "spacing": 0,
     "buttonWidth": 48,
-    "columnLayout": false,
-    "mappedIcons": [],
+    "columnLayout": true,
+    "mappedIcons": [
+      {
+        "commandID": "obsidian-spaced-repetition:srs-note-review-easy",
+        "iconID": "check"
+      },
+      {
+        "commandID": "obsidian-spaced-repetition:srs-note-review-hard",
+        "iconID": "alert-triangle"
+      }
+    ],
     "tooltips": false,
-    "heightOffset": 0
+    "heightOffset": 21
   }
 }

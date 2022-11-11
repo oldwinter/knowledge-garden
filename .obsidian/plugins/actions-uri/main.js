@@ -660,15 +660,10 @@ var STRINGS = {
   unable_to_write_note: "Can't write note file",
   daily_note: {
     create_note_already_exists: "Daily note already exists",
-    create_note_failed: "Can't write daily note",
-    create_note_no_content: "Daily note couldn't be overwritten, no content specified",
-    current_note_not_found: "No current daily note found",
-    most_recent_note_not_found: "No current daily note found",
-    unable_to_update_note: "Can't update daily note"
+    create_note_no_content: "Daily note couldn't be overwritten, no content specified"
   },
   open: {
-    note_opened: "Note opened",
-    note_focussed: "Note already open, focussed it"
+    note_opened: "Note opened"
   }
 };
 var XCALLBACK_RESULT_PREFIX = "result";
@@ -3608,7 +3603,8 @@ function parseStringIntoRegex(search) {
   if (!search.startsWith("/")) {
     return {
       isSuccess: false,
-      error: STRINGS.search_pattern_invalid
+      errorCode: 422,
+      errorMessage: STRINGS.search_pattern_invalid
     };
   }
   let re = search.slice(1);
@@ -3616,7 +3612,8 @@ function parseStringIntoRegex(search) {
   if (lastSlashIdx === 0) {
     return {
       isSuccess: false,
-      error: STRINGS.search_pattern_empty
+      errorCode: 406,
+      errorMessage: STRINGS.search_pattern_empty
     };
   }
   let searchPattern;
@@ -3627,7 +3624,8 @@ function parseStringIntoRegex(search) {
   } catch (e) {
     return {
       isSuccess: false,
-      error: STRINGS.search_pattern_unparseable
+      errorCode: 422,
+      errorMessage: STRINGS.search_pattern_unparseable
     };
   }
   return {
@@ -3658,7 +3656,7 @@ function toKebabCase(text) {
 // src/utils/file-handling.ts
 async function createNote(filepath, content) {
   filepath = sanitizeFilePath(filepath);
-  const { vault } = global.app;
+  const { vault } = window.app;
   let file = vault.getAbstractFileByPath(filepath);
   let doesFileExist = file instanceof import_obsidian.TFile;
   if (doesFileExist) {
@@ -3674,14 +3672,18 @@ async function createNote(filepath, content) {
   await createFolderIfNecessary(dirname(filepath));
   await vault.create(filepath, content);
   const newFile = vault.getAbstractFileByPath(filepath);
-  return newFile instanceof import_obsidian.TFile ? { isSuccess: true, result: newFile } : {
+  return newFile instanceof import_obsidian.TFile ? {
+    isSuccess: true,
+    result: newFile
+  } : {
     isSuccess: false,
-    error: STRINGS.unable_to_write_note
+    errorCode: 400,
+    errorMessage: STRINGS.unable_to_write_note
   };
 }
 async function createOrOverwriteNote(filepath, content) {
   filepath = sanitizeFilePath(filepath);
-  const { vault } = global.app;
+  const { vault } = window.app;
   const file = vault.getAbstractFileByPath(filepath);
   if (file instanceof import_obsidian.TFile) {
     await vault.modify(file, content);
@@ -3693,19 +3695,24 @@ async function createOrOverwriteNote(filepath, content) {
   await createFolderIfNecessary(dirname(filepath));
   await vault.create(filepath, content);
   const newFile = vault.getAbstractFileByPath(filepath);
-  return newFile instanceof import_obsidian.TFile ? { isSuccess: true, result: newFile } : {
+  return newFile instanceof import_obsidian.TFile ? {
+    isSuccess: true,
+    result: newFile
+  } : {
     isSuccess: false,
-    error: STRINGS.unable_to_write_note
+    errorCode: 400,
+    errorMessage: STRINGS.unable_to_write_note
   };
 }
 async function getNoteContent(filepath) {
-  const { vault } = global.app;
+  const { vault } = window.app;
   const file = vault.getAbstractFileByPath(sanitizeFilePath(filepath));
   const doesFileExist = file instanceof import_obsidian.TFile;
   if (!doesFileExist) {
     return {
       isSuccess: false,
-      error: STRINGS.note_not_found
+      errorCode: 404,
+      errorMessage: STRINGS.note_not_found
     };
   }
   const noteContent = await vault.read(file);
@@ -3714,7 +3721,8 @@ async function getNoteContent(filepath) {
     result: noteContent
   } : {
     isSuccess: false,
-    error: STRINGS.unable_to_read_note
+    errorCode: 400,
+    errorMessage: STRINGS.unable_to_read_note
   };
 }
 function sanitizeFilePath(filename) {
@@ -3725,7 +3733,7 @@ function sanitizeFilePath(filename) {
 async function searchAndReplaceInNote(filepath, searchTerm, replacement) {
   const res = await getNoteContent(filepath);
   if (!res.isSuccess) {
-    return { isSuccess: false, error: res.error };
+    return res;
   }
   const noteContent = res.result;
   const newContent = noteContent.replace(searchTerm, replacement);
@@ -3736,37 +3744,27 @@ async function searchAndReplaceInNote(filepath, searchTerm, replacement) {
     };
   }
   const resFile = await createOrOverwriteNote(filepath, newContent);
-  return resFile.isSuccess ? { isSuccess: true, result: STRINGS.replacement_done } : {
-    isSuccess: false,
-    error: STRINGS.unable_to_write_note
-  };
+  return resFile.isSuccess ? { isSuccess: true, result: STRINGS.replacement_done } : resFile;
 }
 async function appendNote(filepath, textToAppend, shouldEnsureNewline = false) {
   const res = await getNoteContent(filepath);
   if (!res.isSuccess) {
-    return {
-      isSuccess: false,
-      error: res.error
-    };
+    return res;
   }
   const newContent = res.result + (shouldEnsureNewline ? ensureNewline(textToAppend) : textToAppend);
   const resFile = await createOrOverwriteNote(filepath, newContent);
-  return resFile.isSuccess ? {
-    isSuccess: true,
-    result: STRINGS.append_done
-  } : {
-    isSuccess: false,
-    error: STRINGS.unable_to_write_note
-  };
+  if (resFile.isSuccess) {
+    return {
+      isSuccess: true,
+      result: STRINGS.append_done
+    };
+  }
+  return resFile;
 }
 async function prependNote(filepath, textToPrepend, shouldEnsureNewline = false, shouldIgnoreFrontMatter = false) {
-  const { vault } = global.app;
   const res = await getNoteContent(filepath);
   if (!res.isSuccess) {
-    return {
-      isSuccess: false,
-      error: res.error
-    };
+    return res;
   }
   const noteContent = res.result;
   let newContent;
@@ -3780,13 +3778,7 @@ async function prependNote(filepath, textToPrepend, shouldEnsureNewline = false,
     newContent = frontMatter + textToPrepend + body;
   }
   const resFile = await createOrOverwriteNote(filepath, newContent);
-  return resFile.isSuccess ? {
-    isSuccess: true,
-    result: STRINGS.prepend_done
-  } : {
-    isSuccess: false,
-    error: STRINGS.unable_to_write_note
-  };
+  return resFile.isSuccess ? { isSuccess: true, result: STRINGS.prepend_done } : resFile;
 }
 function getCurrentDailyNote() {
   return (0, import_obsidian_daily_notes_interface.getDailyNote)(window.moment(), (0, import_obsidian_daily_notes_interface.getAllDailyNotes)());
@@ -3795,22 +3787,34 @@ function getDailyNotePathIfPluginIsAvailable() {
   if (!(0, import_obsidian_daily_notes_interface.appHasDailyNotesPluginLoaded)()) {
     return {
       isSuccess: false,
-      error: STRINGS.daily_notes_feature_not_available
+      errorCode: 412,
+      errorMessage: STRINGS.daily_notes_feature_not_available
     };
   }
   const dailyNote = getCurrentDailyNote();
-  return dailyNote ? { isSuccess: true, result: dailyNote.path } : {
+  return dailyNote ? {
+    isSuccess: true,
+    result: dailyNote.path
+  } : {
     isSuccess: false,
-    error: STRINGS.daily_note.current_note_not_found
+    errorCode: 404,
+    errorMessage: STRINGS.note_not_found
   };
 }
 async function getNoteFile(filepath) {
-  const { vault } = global.app;
+  const { vault } = window.app;
   const file = vault.getAbstractFileByPath(sanitizeFilePath(filepath));
-  return file instanceof import_obsidian.TFile ? { isSuccess: true, result: file } : { isSuccess: false, error: STRINGS.note_not_found };
+  return file instanceof import_obsidian.TFile ? {
+    isSuccess: true,
+    result: file
+  } : {
+    isSuccess: false,
+    errorCode: 404,
+    errorMessage: STRINGS.note_not_found
+  };
 }
 async function createFolderIfNecessary(folder) {
-  const { vault } = global.app;
+  const { vault } = window.app;
   if (folder === "" || folder === ".")
     return;
   if (vault.getAbstractFileByPath(folder) instanceof import_obsidian.TFolder)
@@ -3839,7 +3843,6 @@ var zodAlwaysFalse = mod.preprocess((param) => false, mod.boolean().optional());
 var incomingBaseParams = mod.object({
   action: mod.string(),
   vault: mod.string().min(1, { message: "can't be empty" }),
-  "call-id": mod.string().optional(),
   "debug-mode": zodOptionalBoolean,
   "x-error": mod.string().url().optional(),
   "x-success": mod.string().url().optional()
@@ -3858,7 +3861,7 @@ function logErrorToConsole(...data) {
   console.error("[Actions URI]", ...data);
 }
 function focusLeafWithFile(filepath) {
-  const { workspace } = global.app;
+  const { workspace } = window.app;
   const leaf = workspace.getLeavesOfType("markdown").find((leaf2) => {
     var _a;
     return ((_a = leaf2.view.file) == null ? void 0 : _a.path) === filepath;
@@ -3866,7 +3869,8 @@ function focusLeafWithFile(filepath) {
   if (!leaf) {
     return {
       isSuccess: false,
-      error: "File currently not open"
+      errorCode: 405,
+      errorMessage: "File currently not open"
     };
   }
   if (import_obsidian2.apiVersion < "0.16.0") {
@@ -3884,7 +3888,7 @@ function focusOrOpenNote(filepath) {
   if (res.isSuccess) {
     return res;
   }
-  window.open("obsidian://open?vault=" + encodeURIComponent(global.app.vault.getName()) + "&file=" + encodeURIComponent(filepath));
+  window.open("obsidian://open?vault=" + encodeURIComponent(window.app.vault.getName()) + "&file=" + encodeURIComponent(filepath));
   return {
     isSuccess: true,
     result: "File was opened"
@@ -3897,10 +3901,7 @@ function helloRoute(path = "/") {
 }
 async function handleHello(data) {
   showBrandedNotice("\u2026 is ready for action \u{1F680}");
-  return {
-    isSuccess: true,
-    result: { message: "" }
-  };
+  return { isSuccess: true, result: { message: "" } };
 }
 
 // src/routes/daily-note.ts
@@ -3961,37 +3962,32 @@ var routePath = {
 async function handleGetCurrent(incomingParams) {
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resDNP.error
-    };
+    return resDNP;
   }
   const filepath = resDNP.result;
   const res = await getNoteContent(filepath);
-  if (res.isSuccess) {
-    const content = res.result;
-    const { body, frontMatter } = extractNoteContentParts(content);
-    return {
-      isSuccess: true,
-      result: {
-        filepath,
-        content,
-        body,
-        "front-matter": unwrapFrontMatter(frontMatter)
-      },
-      processedFilepath: filepath
-    };
+  if (!res.isSuccess) {
+    return res;
   }
+  const content = res.result;
+  const { body, frontMatter } = extractNoteContentParts(content);
   return {
-    isSuccess: false,
-    error: STRINGS.daily_note.current_note_not_found
+    isSuccess: true,
+    result: {
+      filepath,
+      content,
+      body,
+      "front-matter": unwrapFrontMatter(frontMatter)
+    },
+    processedFilepath: filepath
   };
 }
 async function handleGetMostRecent(incomingParams) {
   if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
     return {
       isSuccess: false,
-      error: STRINGS.daily_notes_feature_not_available
+      errorCode: 412,
+      errorMessage: STRINGS.daily_notes_feature_not_available
     };
   }
   const notes = (0, import_obsidian_daily_notes_interface2.getAllDailyNotes)();
@@ -3999,28 +3995,26 @@ async function handleGetMostRecent(incomingParams) {
   if (!mostRecentKey) {
     return {
       isSuccess: false,
-      error: STRINGS.daily_note.most_recent_note_not_found
+      errorCode: 404,
+      errorMessage: STRINGS.note_not_found
     };
   }
   const dailyNote = notes[mostRecentKey];
   const res = await getNoteContent(dailyNote.path);
-  if (res.isSuccess) {
-    const content = res.result;
-    const { body, frontMatter } = extractNoteContentParts(content);
-    return {
-      isSuccess: true,
-      result: {
-        filepath: dailyNote.path,
-        content,
-        body,
-        "front-matter": unwrapFrontMatter(frontMatter)
-      },
-      processedFilepath: dailyNote.path
-    };
+  if (!res.isSuccess) {
+    return res;
   }
+  const content = res.result;
+  const { body, frontMatter } = extractNoteContentParts(content);
   return {
-    isSuccess: false,
-    error: STRINGS.daily_note.most_recent_note_not_found
+    isSuccess: true,
+    result: {
+      filepath: dailyNote.path,
+      content,
+      body,
+      "front-matter": unwrapFrontMatter(frontMatter)
+    },
+    processedFilepath: dailyNote.path
   };
 }
 async function handleCreate(incomingParams) {
@@ -4028,7 +4022,8 @@ async function handleCreate(incomingParams) {
   if (!(0, import_obsidian_daily_notes_interface2.appHasDailyNotesPluginLoaded)()) {
     return {
       isSuccess: false,
-      error: STRINGS.daily_notes_feature_not_available
+      errorCode: 412,
+      errorMessage: STRINGS.daily_notes_feature_not_available
     };
   }
   const { content } = params;
@@ -4037,58 +4032,51 @@ async function handleCreate(incomingParams) {
     if (!params.overwrite) {
       return {
         isSuccess: false,
-        error: STRINGS.daily_note.create_note_already_exists
+        errorCode: 405,
+        errorMessage: STRINGS.daily_note.create_note_already_exists
       };
     }
     if (typeof content !== "string") {
       return {
         isSuccess: false,
-        error: STRINGS.daily_note.create_note_no_content
+        errorCode: 406,
+        errorMessage: STRINGS.daily_note.create_note_no_content
       };
     }
-    const resFile = await createOrOverwriteNote(dailyNote.path, content);
-    return resFile.isSuccess ? {
+    const resFile2 = await createOrOverwriteNote(dailyNote.path, content);
+    return resFile2.isSuccess ? {
       isSuccess: true,
       result: { content, filepath: dailyNote.path },
       processedFilepath: dailyNote.path
-    } : {
+    } : resFile2;
+  }
+  const newNote = await (0, import_obsidian_daily_notes_interface2.createDailyNote)(window.moment());
+  if (!(newNote instanceof import_obsidian4.TFile)) {
+    return {
       isSuccess: false,
-      error: STRINGS.daily_note.create_note_failed
-    };
-  } else {
-    const newNote = await (0, import_obsidian_daily_notes_interface2.createDailyNote)(window.moment());
-    if (!(newNote instanceof import_obsidian4.TFile)) {
-      ({
-        isSuccess: false,
-        error: STRINGS.unable_to_write_note
-      });
-    }
-    if (typeof content !== "string" || content === "") {
-      return {
-        isSuccess: true,
-        result: { content: "", filepath: newNote.path },
-        processedFilepath: newNote.path
-      };
-    }
-    const resFile = await createOrOverwriteNote(newNote.path, content);
-    return resFile.isSuccess ? {
-      isSuccess: true,
-      result: { content, filepath: newNote.path },
-      processedFilepath: newNote.path
-    } : {
-      isSuccess: false,
-      error: STRINGS.daily_note.unable_to_update_note
+      errorCode: 400,
+      errorMessage: STRINGS.unable_to_write_note
     };
   }
+  if (typeof content !== "string" || content === "") {
+    return {
+      isSuccess: true,
+      result: { content: "", filepath: newNote.path },
+      processedFilepath: newNote.path
+    };
+  }
+  const resFile = await createOrOverwriteNote(newNote.path, content);
+  return resFile.isSuccess ? {
+    isSuccess: true,
+    result: { content, filepath: newNote.path },
+    processedFilepath: newNote.path
+  } : resFile;
 }
 async function handleAppend(incomingParams) {
   const params = incomingParams;
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resDNP.error
-    };
+    return resDNP;
   }
   const filepath = resDNP.result;
   const res = await appendNote(filepath, params.content, params["ensure-newline"]);
@@ -4096,19 +4084,13 @@ async function handleAppend(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: filepath
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handlePrepend(incomingParams) {
   const params = incomingParams;
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resDNP.error
-    };
+    return resDNP;
   }
   const filepath = resDNP.result;
   const res = await prependNote(filepath, params.content, params["ensure-newline"], params["ignore-front-matter"]);
@@ -4116,19 +4098,13 @@ async function handlePrepend(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: filepath
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleSearchStringAndReplace(incomingParams) {
   const params = incomingParams;
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resDNP.error
-    };
+    return resDNP;
   }
   const filepath = resDNP.result;
   const regex = new RegExp(params.search, "g");
@@ -4137,26 +4113,17 @@ async function handleSearchStringAndReplace(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: filepath
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleSearchRegexAndReplace(incomingParams) {
   const params = incomingParams;
   const resDNP = getDailyNotePathIfPluginIsAvailable();
   if (!resDNP.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resDNP.error
-    };
+    return resDNP;
   }
   const resSir = parseStringIntoRegex(params.search);
   if (!resSir.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resSir.error
-    };
+    return resSir;
   }
   const filepath = resDNP.result;
   const res = await searchAndReplaceInNote(filepath, resSir.result, params.replace);
@@ -4164,10 +4131,7 @@ async function handleSearchRegexAndReplace(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: filepath
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 
 // src/routes/info.ts
@@ -4175,8 +4139,8 @@ var import_obsidian5 = require("obsidian");
 
 // src/plugin-info.ts
 var PLUGIN_INFO = {
-  "pluginVersion": "0.10.6",
-  "pluginReleasedAt": "2022-10-12T20:56:12+0200"
+  "pluginVersion": "0.11.0",
+  "pluginReleasedAt": "2022-11-07T12:46:22+0100"
 };
 
 // src/routes/info.ts
@@ -4285,27 +4249,18 @@ async function handleGet(incomingParams) {
       processedFilepath: file
     };
   }
-  return {
-    isSuccess: false,
-    error: res.error
-  };
+  return res;
 }
 async function handleCreate2(incomingParams) {
   const params = incomingParams;
   const { file, content, overwrite } = params;
   const res = overwrite ? await createOrOverwriteNote(file, content || "") : await createNote(file, content || "");
   if (!res.isSuccess) {
-    return {
-      isSuccess: false,
-      error: STRINGS.unable_to_write_note
-    };
+    return res;
   }
   const newNoteRes = await getNoteContent(file);
   if (!newNoteRes.isSuccess) {
-    return {
-      isSuccess: false,
-      error: STRINGS.unable_to_read_note
-    };
+    return newNoteRes;
   }
   return {
     isSuccess: true,
@@ -4325,10 +4280,7 @@ async function handleAppend2(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: file
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handlePrepend2(incomingParams) {
   const params = incomingParams;
@@ -4338,10 +4290,7 @@ async function handlePrepend2(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: file
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleSearchStringAndReplace2(incomingParams) {
   const params = incomingParams;
@@ -4352,30 +4301,21 @@ async function handleSearchStringAndReplace2(incomingParams) {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: file
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleSearchRegexAndReplace2(incomingParams) {
   const params = incomingParams;
   const { search, file, replace } = params;
   const resSir = parseStringIntoRegex(search);
   if (!resSir.isSuccess) {
-    return {
-      isSuccess: false,
-      error: resSir.error
-    };
+    return resSir;
   }
   const res = await searchAndReplaceInNote(file, resSir.result, replace);
   return res.isSuccess ? {
     isSuccess: true,
     result: { message: res.result },
     processedFilepath: file
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 
 // src/routes/open.ts
@@ -4405,10 +4345,7 @@ async function handleDailyNote(incomingParams) {
     isSuccess: true,
     result: { message: STRINGS.open.note_opened },
     processedFilepath: res.result
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleNote(incomingParams) {
   const params = incomingParams;
@@ -4417,14 +4354,11 @@ async function handleNote(incomingParams) {
     isSuccess: true,
     result: { message: STRINGS.open.note_opened },
     processedFilepath: res.result.path
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 async function handleSearch(incomingParams) {
   const params = incomingParams;
-  window.open("obsidian://search?vault=" + encodeURIComponent(global.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim()));
+  window.open("obsidian://search?vault=" + encodeURIComponent(window.app.vault.getName()) + "&query=" + encodeURIComponent(params.query.trim()));
   return {
     isSuccess: true,
     result: { message: "Opened search" }
@@ -4446,7 +4380,8 @@ async function doSearch(query) {
   if (!searchPlugin.enabled) {
     return {
       isSuccess: false,
-      error: STRINGS.global_search_feature_not_available
+      errorCode: 412,
+      errorMessage: STRINGS.global_search_feature_not_available
     };
   }
   searchPlugin.instance.openGlobalSearch(query);
@@ -4456,9 +4391,7 @@ async function doSearch(query) {
   const hits = Array.from(rawSearchResult.keys()).map((tfile) => tfile.path);
   return {
     isSuccess: true,
-    result: {
-      hits
-    }
+    result: { hits }
   };
 }
 
@@ -4480,10 +4413,7 @@ async function handleSearch2(incomingParams) {
   return res.isSuccess ? {
     isSuccess: true,
     result: res.result
-  } : {
-    isSuccess: false,
-    error: res.error
-  };
+  } : res;
 }
 
 // src/routes.ts
@@ -4533,14 +4463,17 @@ function sendUrlCallback(baseURL, handlerRes, params) {
   if (handlerRes.isSuccess) {
     addObjectToUrlSearchParams(handlerRes.result, url);
   } else {
-    url.searchParams.set("error", handlerRes.error);
+    const { errorCode, errorMessage } = handlerRes;
+    url.searchParams.set("errorCode", errorCode.toString());
+    url.searchParams.set("errorMessage", errorMessage);
   }
-  const returnParams = params["debug-mode"] ? excludeKeys(params, ["debug-mode", "x-success", "x-error"]) : includeKeys(params, ["call-id"]);
+  const returnParams = params["debug-mode"] ? excludeKeys(params, ["debug-mode", "x-success", "x-error"]) : {};
   addObjectToUrlSearchParams(returnParams, url, "input");
-  window.open(url.toString());
+  const callbackURL = url.toString().replace(/\+/g, "%20");
+  window.open(callbackURL);
   return {
     isSuccess: true,
-    result: url.toString()
+    result: callbackURL
   };
 }
 function addObjectToUrlSearchParams(obj, url, prefix = XCALLBACK_RESULT_PREFIX) {

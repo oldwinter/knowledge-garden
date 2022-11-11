@@ -128,13 +128,13 @@ var require_parse = __commonJS({
         return 1;
       }
       function readNumber() {
-        var start = idx;
+        var start2 = idx;
         var value = 0;
         while (idx < formula.length && formula.charCodeAt(idx) >= ZERO && formula.charCodeAt(idx) <= NINE) {
           value = value * 10 + (formula.charCodeAt(idx) - ZERO);
           idx++;
         }
-        return idx === start ? null : value;
+        return idx === start2 ? null : value;
       }
       function skipWhitespace() {
         while (idx < formula.length && whitespace.has(formula.charCodeAt(idx))) {
@@ -544,9 +544,9 @@ var require_turndown = __commonJS({
         var prefix = options.bulletListMarker + "   ";
         var parent2 = node.parentNode;
         if (parent2.nodeName === "OL") {
-          var start = parent2.getAttribute("start");
+          var start2 = parent2.getAttribute("start");
           var index2 = Array.prototype.indexOf.call(parent2.children, node);
-          prefix = (start ? Number(start) + index2 : index2 + 1) + ".  ";
+          prefix = (start2 ? Number(start2) + index2 : index2 + 1) + ".  ";
         }
         return prefix + content + (node.nextSibling && !/\n$/.test(content) ? "\n" : "");
       }
@@ -593,22 +593,22 @@ var require_turndown = __commonJS({
         var href = node.getAttribute("href");
         var title = node.title ? ' "' + node.title + '"' : "";
         var replacement;
-        var reference;
+        var reference2;
         switch (options.linkReferenceStyle) {
           case "collapsed":
             replacement = "[" + content + "][]";
-            reference = "[" + content + "]: " + href + title;
+            reference2 = "[" + content + "]: " + href + title;
             break;
           case "shortcut":
             replacement = "[" + content + "]";
-            reference = "[" + content + "]: " + href + title;
+            reference2 = "[" + content + "]: " + href + title;
             break;
           default:
             var id = this.references.length + 1;
             replacement = "[" + content + "][" + id + "]";
-            reference = "[" + id + "]: " + href + title;
+            reference2 = "[" + id + "]: " + href + title;
         }
-        this.references.push(reference);
+        this.references.push(reference2);
         return replacement;
       },
       references: [],
@@ -716,9 +716,9 @@ var require_turndown = __commonJS({
           return rule;
         return this.defaultRule;
       },
-      forEach: function(fn) {
+      forEach: function(fn2) {
         for (var i = 0; i < this.array.length; i++)
-          fn(this.array[i], i);
+          fn2(this.array[i], i);
       }
     };
     function findRule(rules2, node, options) {
@@ -927,7 +927,7 @@ var require_turndown = __commonJS({
         }
         if (input === "")
           return "";
-        var output = process.call(this, new RootNode(input, this.options));
+        var output = process2.call(this, new RootNode(input, this.options));
         return postProcess.call(this, output);
       },
       use: function(plugin) {
@@ -959,7 +959,7 @@ var require_turndown = __commonJS({
         }, string);
       }
     };
-    function process(parentNode) {
+    function process2(parentNode) {
       var self = this;
       return reduce.call(parentNode.childNodes, function(output, node) {
         node = new Node2(node);
@@ -983,7 +983,7 @@ var require_turndown = __commonJS({
     }
     function replacementForNode(node) {
       var rule = this.rules.forNode(node);
-      var content = process.call(this, node);
+      var content = process2.call(this, node);
       var whitespace = node.flankingWhitespace;
       if (whitespace.leading || whitespace.trailing)
         content = content.trim();
@@ -1193,9 +1193,9 @@ ${str}
       service.addRule("media-enex", {
         filter: (node) => node.nodeName === "DIV" && node.getAttribute("node") === "EN-MEDIA" && !!node.getAttribute("hash") && !!node.getAttribute("type"),
         replacement: (str, ele) => {
-          const hash = ele.getAttribute("hash");
+          const hash3 = ele.getAttribute("hash");
           const type = ele.getAttribute("type") || "";
-          const filename = `${hash}${mime_1.default.getExtension(type)}`;
+          const filename = `${hash3}${mime_1.default.getExtension(type)}`;
           const isImage = mime_1.default.isImage(type);
           if (isImage) {
             return `<img src="@attachment/${filename}" />`;
@@ -1285,6 +1285,38 @@ ${str}
 __export(exports, {
   default: () => DoubanPlugin
 });
+var import_obsidian17 = __toModule(require("obsidian"));
+
+// src/douban/data/search/DoubanSearchFuzzySuggestModal.ts
+var import_obsidian2 = __toModule(require("obsidian"));
+
+// src/utils/Logutil.ts
+var import_obsidian = __toModule(require("obsidian"));
+var Logger = class {
+  error(e) {
+    new import_obsidian.Notice(e);
+    console.log(`Douban Plugin error: ${e}`);
+    return e;
+  }
+  warn(e) {
+    new import_obsidian.Notice(e);
+    console.log(`Douban Plugin error: ${e}`);
+    return e;
+  }
+  info(e) {
+    console.log(`Douban Plugin info:${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+  trace(e) {
+    console.log(`Douban Plugin trace:${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+  traceN(notion, e) {
+    console.log(`${notion} ${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+};
+var log = new Logger();
 
 // src/lang/locale/en.ts
 var en_default = {
@@ -1294,6 +1326,9 @@ var en_default = {
   "110004": `Search`,
   "110005": `Cancel`,
   "110006": `sync douban broadcast ot Obsidian`,
+  "110101": "search douban and create file",
+  "110201": `{0} already exists`,
+  "110202": `{0} template can not read`,
   "1201": `Obsidian Douban`,
   "120001": `Douban Search Url`,
   "120002": `Douban search page request address. `,
@@ -1301,41 +1336,62 @@ var en_default = {
   "120004": `Don't enter anything in the search input box, just click Search,`,
   "120005": `The redirected web page address is the search address,`,
   "120006": `Just copy the web address to the current input box.`,
-  "120101": `Movie Content Template`,
-  "120102": `Set markdown Movie template for extract to be inserted.`,
+  "100101": `Login Douban`,
+  "1210": `Basic Setting`,
+  "1203": `Template Setting`,
+  "1220": `Output Setting`,
+  "1230": `Usable Variables`,
+  "1204": `Set template file path. If keep empty, it will use the default template file to create file. All the usable variables at the end.\u{1F447}`,
+  "1205": `\u{1F9E1}Tip: You can click the 'Copy' button to copy default template content, then create and paste to your own template file. After that, back to select the file. `,
+  "1240": `Custom Variable`,
+  "1241": `To use the custom variables, you need to wrap them in double curly brackets. For example, {{myType}} will be replaced with the your custom type value. `,
+  "1242": `Add custom variable, so that you can use it in the template file or file name. `,
+  "124101": `Add`,
+  "124108": `Add a new variable`,
+  "124102": `Name:`,
+  "124103": `Input custom variable name`,
+  "124104": `Value:`,
+  "124105": `Input custom variable value`,
+  "124106": `Active type`,
+  "124107": `Delete custom variable`,
+  "120101": `Movie Template File`,
+  "120102": `This template will be used when creating new notes for Movie from Obsidian-Douban.`,
   "120103": `Available template variables are :`,
   "120104": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "120105": `{{url}}, {{desc}}, {{datePublished}}, {{genre}}, `,
   "120106": `{{originalTitle}},{{director}}, {{author}},`,
   "120107": ` {{actor}}`,
-  "120201": `Book Content Template`,
-  "120202": `Set markdown Book template for extract to be inserted.`,
+  "120110": `Movie Template File`,
+  "120201": `Book Template File`,
+  "120202": `This template will be used when creating new notes for Movie from Obsidian-Douban. `,
   "120203": `Available Book template variables are :`,
   "120204": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "120205": `{{url}}, {{desc}}, {{datePublished}}, {{publisher}}`,
   "120206": `{{originalTitle}}, {{subTitle}}, {{author}},`,
   "120207": `{{translator}}, {{isbn}}, {{price}}, {{totalPage}}`,
   "120208": `{{series}}, {{binding}}, {{menu}}`,
-  "120301": `Music Content Template`,
-  "120302": `Set markdown Music template for extract to be inserted.`,
+  "120301": `Music Template File`,
+  "120302": `This template will be used when creating new notes for Music from Obsidian-Douban.`,
   "120303": `Available Music template variables are :`,
   "120304": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "120305": `{{url}}, {{desc}}, {{datePublished}}, {{genre}},`,
   "120306": `{{actor}}, {{medium}}, {{albumType}},`,
-  "120307": `{{barcode}}, {{numberOfRecords}}`,
-  "120401": `Article Content Template`,
-  "120402": `Set markdown Article template for extract to be inserted.`,
+  "120307": `{{barcode}}, {{records}}`,
+  "120401": `Article Template File`,
+  "120402": `This template will be used when creating new notes for Article from Obsidian-Douban.`,
   "120403": `Available Article template variables are :`,
   "120404": `{{id}}, {{title}}, {{type}}, {{image}},`,
   "120405": `{{url}}, {{desc}}, {{datePublished}}`,
   "120406": `{{author}}, {{authorUrl}}, {{content}}`,
   "120407": `{{timePublished}}`,
-  "121301": `Game Content Template`,
-  "121302": `Set markdown Game template for extract to be inserted.`,
+  "121301": `Game Template File`,
+  "121302": `This template will be used when creating new notes for Game from Obsidian-Douban.`,
   "121303": `Available Game template variables are :`,
   "121304": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "121305": `{{url}}, {{desc}}, {{publisher}}, {{datePublished}}`,
   "121306": `{{genre}}, {{aliases}}, {{developer}}, {{platform}}`,
+  "121801": `Teleplay Template File`,
+  "121802": `This template will be used when creating new notes for Teleplay from Obsidian-Douban.`,
   "120501": `Date Format`,
   "120502": `Time Format`,
   "120503": `This format will be used when available template variables contain date.`,
@@ -1358,9 +1414,19 @@ var en_default = {
   "121206": `Chinese Name`,
   "121207": `English Name`,
   "121208": `Chinese And English Name`,
+  "121401": `Status Bar`,
+  "121402": `Display status bar when import data ?`,
+  "121501": `Note folder`,
+  "121502": `Nodes created from Obsidian-Douban will be placed in this folder, If blank, they will be placed in the default location for this vault. `,
+  "121503": `Default Folder`,
+  "121601": `Note Name`,
+  "121602": `Nodes created from Obsidian-Douban will use this fileName as template(also support filePath),
+	 If blank, they will be created by default name. support all basic template variables. example: {{type}}/{{title}}`,
+  "121701": `Search Template File`,
+  "121703": `Default`,
+  "121901": `Copy default template content to clipboard`,
+  "121902": `Reset to default value`,
   "130101": `Fetch Data Error, You can go to Github add Issues`,
-  "130201": `Obsidian Douban Plugin Error: `,
-  "130301": `Obsidian Douban Plugin Warn: `,
   "140101": `Not support for current type. You can add Issues at Github:Wanxp/obsidian-douban`,
   "140201": `[Obsidian Douban]: searching '{0}'...`,
   "140202": `[Obsidian Douban]: result {0} rows`,
@@ -1369,17 +1435,182 @@ var en_default = {
   "140205": `[Obsidian Douban]: complete '{0}'`,
   "140206": `[Obsidian Douban]: occur error '{0}'`,
   "150101": `Choose an item...`,
-  "200101": `. `
+  "200101": `. `,
+  "210101": `Default`,
+  "210201": `Search...`,
+  "122001": `Basic Variables`,
+  "122002": `Extra Variables`,
+  "122003": `Basic Variables must has value, Extra Variables can be empty`,
+  "122004": `To use the template variables, you need to wrap them in double curly brackets. For example, {{title}} will be replaced with the title of the note.`,
+  "410101": `Unknown`,
+  "300101": `\u53C2\u6570`,
+  "300102": `\u4E66\u7C4D`,
+  "300103": `\u7535\u5F71`,
+  "300104": `\u7535\u89C6\u5267`,
+  "300105": `\u97F3\u4E50`,
+  "300106": `\u65E5\u8BB0`,
+  "300107": `\u6E38\u620F`,
+  "300108": `\u5E7F\u64AD`,
+  "310101": `\u8C46\u74E3ID`,
+  "310102": `\u4E66\u540D`,
+  "310103": `\u7C7B\u578B`,
+  "310104": `\u8BC4\u5206`,
+  "310105": `\u5C01\u9762URL`,
+  "310106": `\u8C46\u74E3\u7F51\u5740`,
+  "310107": `\u5185\u5BB9\u7B80\u4ECB`,
+  "310108": `\u51FA\u7248\u793E`,
+  "310109": `\u51FA\u7248\u65F6\u95F4`,
+  "310110": `\u5176\u4ED6`,
+  "310111": `author:\u539F\u4F5C\u8005`,
+  "310112": `translator:\u8BD1\u8005`,
+  "310113": `isbn:isbn`,
+  "310114": `originalTitle:\u539F\u4F5C\u540D`,
+  "310115": `subTitle:\u526F\u6807\u9898`,
+  "310116": `totalPage:\u9875\u6570`,
+  "310117": `binding:\u88C5\u5E27`,
+  "310118": `producer:\u51FA\u54C1\u65B9`,
+  "310201": `\u8C46\u74E3ID`,
+  "310202": `\u7535\u5F71\u540D\u79F0`,
+  "310203": `\u7C7B\u578B`,
+  "310204": `\u8BC4\u5206`,
+  "310205": `\u5C01\u9762`,
+  "310206": `\u8C46\u74E3\u7F51\u5740`,
+  "310207": `\u7B80\u4ECB`,
+  "310208": `(\u672A\u77E5)`,
+  "310209": `\u4E0A\u6620\u65E5\u671F`,
+  "310210": `\u7C7B\u578B`,
+  "310211": `director:\u5BFC\u6F14`,
+  "310212": `author:\u7F16\u5267`,
+  "310213": `actor:\u4E3B\u6F14`,
+  "310214": `originalTitle:\u539F\u4F5C\u540D`,
+  "310215": `-`,
+  "310216": `-`,
+  "310217": `-`,
+  "310218": `-`,
+  "310301": `\u8C46\u74E3ID`,
+  "310302": `\u7535\u89C6\u5267\u540D\u79F0`,
+  "310303": `\u7C7B\u578B`,
+  "310304": `\u8BC4\u5206`,
+  "310305": `\u5C01\u9762`,
+  "310306": `\u8C46\u74E3\u7F51\u5740`,
+  "310307": `\u7B80\u4ECB`,
+  "310308": `(\u672A\u77E5)`,
+  "310309": `\u4E0A\u6620\u65E5\u671F`,
+  "310310": `\u7C7B\u578B`,
+  "310311": `director:\u5BFC\u6F14`,
+  "310312": `author:\u7F16\u5267`,
+  "310313": `actor:\u4E3B\u6F14`,
+  "310314": `originalTitle:\u539F\u4F5C\u540D`,
+  "310315": `-`,
+  "310316": `-`,
+  "310317": `-`,
+  "310318": `-`,
+  "310401": `\u8C46\u74E3ID`,
+  "310402": `\u97F3\u4E50\u540D`,
+  "310403": `\u7C7B\u578B`,
+  "310404": `\u8BC4\u5206`,
+  "310405": `\u5C01\u9762`,
+  "310406": `\u8C46\u74E3\u7F51\u5740`,
+  "310407": `\u7B80\u4ECB`,
+  "310408": `\u51FA\u7248\u8005`,
+  "310409": `\u53D1\u884C\u65F6\u95F4`,
+  "310410": `\u6D41\u6D3E`,
+  "310411": `actor: \u8868\u6F14\u8005`,
+  "310412": `albumType:\u4E13\u8F91\u7C7B\u578B`,
+  "310413": `medium:\u4ECB\u8D28`,
+  "310414": `records:\u5531\u7247\u6570`,
+  "310415": `barcode:\u6761\u5F62\u7801`,
+  "310416": `-`,
+  "310417": `-`,
+  "310418": `-`,
+  "310501": `\u8C46\u74E3ID`,
+  "310502": `\u65E5\u8BB0\u6807\u9898`,
+  "310503": `\u7C7B\u578B`,
+  "310504": `\u8BC4\u5206`,
+  "310505": `\u56FE\u7247`,
+  "310506": `\u8C46\u74E3\u7F51\u5740`,
+  "310507": `\u7B80\u4ECB`,
+  "310508": `\u53D1\u5E03\u8005`,
+  "310509": `\u53D1\u5E03\u65F6\u95F4`,
+  "310510": `(\u5176\u5B83)`,
+  "310511": `author:\u4F5C\u8005`,
+  "310512": `(\u5176\u5B83)`,
+  "310513": `authorUrl:\u4F5C\u8005\u7F51\u5740`,
+  "310514": `content:\u65E5\u8BB0\u5185\u5BB9`,
+  "310515": `-`,
+  "310516": `-`,
+  "310517": `-`,
+  "310518": `-`,
+  "310601": `\u8C46\u74E3ID`,
+  "310602": `\u6E38\u620F\u540D\u79F0`,
+  "310603": `\u7C7B\u578B`,
+  "310604": `\u8BC4\u5206`,
+  "310605": `\u5C01\u9762`,
+  "310606": `\u8C46\u74E3\u7F51\u5740`,
+  "310607": `\u7B80\u4ECB`,
+  "310608": `\u53D1\u884C\u5546`,
+  "310609": `\u53D1\u884C\u65E5\u671F`,
+  "310610": `\u7C7B\u578B`,
+  "310611": `aliases:\u522B\u540D`,
+  "310612": `developer:\u5F00\u53D1\u5546`,
+  "310613": `platform:\u5E73\u53F0`,
+  "310614": `-`,
+  "310615": `-`,
+  "310616": `-`,
+  "310617": `-`,
+  "310618": `-`,
+  "310701": `\u5F85\u5F00\u53D1`,
+  "310702": `\u5F85\u5F00\u53D1`,
+  "310703": `\u5F85\u5F00\u53D1`,
+  "310704": `\u5F85\u5F00\u53D1`,
+  "310705": `\u5F85\u5F00\u53D1`,
+  "310706": `\u5F85\u5F00\u53D1`,
+  "310707": `\u5F85\u5F00\u53D1`,
+  "310708": `\u5F85\u5F00\u53D1`,
+  "310709": `\u5F85\u5F00\u53D1`,
+  "310710": `\u5F85\u5F00\u53D1`,
+  "310711": `-`,
+  "310712": `-`,
+  "310713": `-`,
+  "310714": `-`,
+  "310715": `-`,
+  "310716": `-`,
+  "310717": `-`,
+  "310718": `-`,
+  "320101": `\u6269\u5C551`,
+  "320102": `\u6269\u5C552`,
+  "320103": `\u6269\u5C553`,
+  "320104": `\u6269\u5C554`,
+  "320105": `\u6269\u5C555`,
+  "320106": `\u6269\u5C556`,
+  "320107": `\u6269\u5C557`,
+  "320108": `\u6269\u5C558`,
+  "320109": `\u6269\u5C559`,
+  "320110": `\u6269\u5C5510`,
+  "320111": `\u6269\u5C5511`,
+  "330101": `\u4ECA\u65E5\u65E5\u671F`,
+  "330102": `\u5F53\u524D\u65F6\u95F4`,
+  "ALL": `all`,
+  "MOVIE": `movie`,
+  "BOOK": `book`,
+  "MUSIC": `music`,
+  "NOTE": `note`,
+  "GAME": `game`,
+  "TELEPLAY": `teleplay`
 };
 
 // src/lang/locale/zh-cn.ts
 var zh_cn_default = {
-  "110001": "\u7528\u5F53\u524D\u6587\u6863\u540D\u641C\u7D22\u8C46\u74E3\u5E76\u5199\u5165\u5F53\u524D\u6587\u6863",
-  "110002": "\u5728\u8C46\u74E3\u641C\u7D22\u5E76\u5199\u5165\u5230\u5F53\u524D\u6587\u6863",
+  "110001": "\u641C\u7D22\u8C46\u74E3\u5F53\u524D\u6587\u6863\u540D\u5E76\u5199\u5165",
+  "110002": "\u641C\u7D22\u8C46\u74E3\u5E76\u5199\u5165\u5F53\u524D\u6587\u6863",
   "110003": `\u8F93\u5165\u641C\u7D22\u5185\u5BB9:`,
   "110004": `\u641C\u7D22`,
   "110005": `\u53D6\u6D88`,
   "110006": `\u540C\u6B65\u8C46\u74E3\u5E7F\u64AD\u81F3Obsidian`,
+  "110101": "\u641C\u7D22\u8C46\u74E3\u5E76\u521B\u5EFA\u6587\u6863",
+  "110201": `{0} \u6587\u4EF6\u5DF2\u7ECF\u5B58\u5728.`,
+  "110202": `{0} \u6A21\u677F\u6587\u4EF6\u65E0\u6CD5\u8BFB\u53D6`,
+  "100101": `\u767B\u5F55\u8C46\u74E3`,
   "1201": `Obsidian-\u8C46\u74E3`,
   "120001": `\u8C46\u74E3\u641C\u7D22\u5730\u5740`,
   "120002": `\u8C46\u74E3\u641C\u7D22\u9875\u9762\u8BF7\u6C42\u5730\u5740, \u901A\u5E38\u662F\u7F51\u9875\u641C\u7D22\u7684\u5730\u5740. `,
@@ -1387,45 +1618,64 @@ var zh_cn_default = {
   "120004": `\u7136\u540E\u5728\u641C\u7D22\u8F93\u5165\u6846\u4E0D\u8F93\u5165\u4EFB\u4F55\u5185\u5BB9,\u76F4\u63A5\u70B9\u51FB\u641C\u7D22,`,
   "120005": `\u6240\u8DF3\u8F6C\u7684\u7F51\u9875\u5730\u5740\u5373\u662F\u641C\u7D22\u5730\u5740,`,
   "120006": `\u5C06\u7F51\u9875\u5730\u5740\u590D\u5236\u5230\u5F53\u524D\u8F93\u5165\u6846\u5373\u53EF,`,
-  "120101": `\u7535\u5F71\u6587\u672C\u6A21\u677F`,
-  "120102": `\u8BBE\u7F6E\u9009\u62E9\u7535\u5F71\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F,`,
+  "1210": `\u57FA\u7840\u914D\u7F6E`,
+  "1203": `\u6A21\u677F\u914D\u7F6E`,
+  "1220": `\u8F93\u51FA\u914D\u7F6E`,
+  "1230": `\u53EF\u7528\u53C2\u6570`,
+  "1204": `\u914D\u7F6E\u5BF9\u5E94\u7C7B\u578B\u7684\u6A21\u677F\u6587\u4EF6, \u5982\u679C\u4E3A\u7A7A\u5219\u4F7F\u7528\u9ED8\u8BA4\u7684\u6587\u4EF6\u6A21\u677F. \u6A21\u677F\u53EF\u4F7F\u7528\u7684\u53C2\u6570\u5217\u4E3E\u5728\u6700\u4E0B\u9762.\u{1F447} `,
+  "1205": `\u{1F9E1}\u63D0\u793A: \u5EFA\u8BAE\u70B9\u51FB\u53F3\u4FA7'\u590D\u5236'\u9ED8\u8BA4\u6A21\u677F\u6309\u94AE, \u7136\u540E\u5728\u65B0\u5EFA\u7684\u6587\u4EF6\u4E2D\u7C98\u8D34\u4FEE\u6539\u6A21\u677F, \u6700\u540E\u56DE\u5230\u6B64\u5904\u9009\u62E9\u5BF9\u5E94\u6A21\u677F. `,
+  "1240": `\u81EA\u5B9A\u4E49\u5C5E\u6027`,
+  "1241": `\u81EA\u5B9A\u4E49\u53C2\u6570\u4F7F\u7528\u65F6\u8BF7\u7528'{{}}'\u5305\u88F9, \u4E3E\u4F8B: \u53C2\u6570myType, \u5219\u4F7F\u7528\u65F6\u4E3A{{myType}}. `,
+  "1242": `\u6DFB\u52A0\u81EA\u5B9A\u4E49\u53C2\u6570, \u53C2\u6570\u53EF\u7528\u4E8E\u6A21\u677F\u4E2D\u6216\u8005\u6587\u4EF6\u540D\u4E2D. `,
+  "124101": `\u65B0\u589E`,
+  "124108": `\u65B0\u589E\u4E00\u4E2A\u81EA\u5B9A\u4E49\u53C2\u6570`,
+  "124102": `\u53C2\u6570\u540D\u79F0:`,
+  "124103": `\u81EA\u5B9A\u4E49\u53C2\u6570\u540D\u79F0`,
+  "124104": `\u53C2\u6570\u503C:`,
+  "124105": `\u81EA\u5B9A\u4E49\u53C2\u503C`,
+  "124106": `\u751F\u6548\u7C7B\u578B`,
+  "124107": `\u5220\u9664\u81EA\u5B9A\u4E49\u53C2\u6570`,
+  "120101": `\u7535\u5F71\u6A21\u677F\u6587\u4EF6`,
+  "120102": `\u8BBE\u7F6E\u9009\u62E9\u7535\u5F71\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F\u6587\u4EF6. `,
   "120103": `\u652F\u6301\u4EE5\u4E0B\u53C2\u6570\u540D\u79F0 :`,
   "120104": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "120105": `{{url}}, {{desc}}, {{datePublished}}, {{genre}}, `,
   "120106": `{{originalTitle}},{{director}}, {{author}},`,
   "120107": ` {{actor}}`,
-  "120201": `\u4E66\u7C4D\u6587\u672C\u6A21\u677F`,
-  "120202": `\u8BBE\u7F6E\u9009\u62E9\u4E66\u7C4D\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F,`,
+  "120201": `\u4E66\u7C4D\u6A21\u677F\u6587\u4EF6`,
+  "120202": `\u9009\u62E9\u4E66\u7C4D\u540E\u5BFC\u5165\u5185\u5BB9\u7684\u6A21\u677F\u6587\u4EF6. `,
   "120203": `\u652F\u6301\u4EE5\u4E0B\u53C2\u6570\u540D\u79F0 :`,
   "120204": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "120205": `{{url}}, {{desc}}, {{datePublished}}, {{publisher}}`,
   "120206": `{{originalTitle}}, {{subTitle}}, {{author}},`,
   "120207": `{{translator}}, {{isbn}}, {{price}}, {{totalPage}}`,
   "120208": `{{series}}, {{binding}}, {{menu}}`,
-  "120301": `\u97F3\u4E50\u6587\u672C\u6A21\u677F`,
-  "120302": `\u8BBE\u7F6E\u9009\u62E9\u97F3\u4E50\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F,`,
+  "120301": `\u97F3\u4E50\u6A21\u677F\u6587\u4EF6`,
+  "120302": `\u9009\u62E9\u97F3\u4E50\u540E\u5BFC\u5165\u5185\u5BB9\u7684\u6A21\u677F\u6587\u4EF6. `,
   "120303": `\u652F\u6301\u4EE5\u4E0B\u53C2\u6570\u540D\u79F0 :`,
   "120304": `{{id}}, {{title}}, {{type}}, {{image}},`,
   "120305": `{{url}}, {{desc}}, {{datePublished}}`,
   "120306": `{{genre}}, {{actor}}, {{medium}}, {{albumType}},`,
-  "120307": `{{barcode}}, {{numberOfRecords}}`,
-  "120401": `\u65E5\u8BB0\u6587\u672C\u6A21\u677F`,
-  "120402": `\u8BBE\u7F6E\u9009\u62E9\u65E5\u8BB0\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F,`,
+  "120307": `{{barcode}}, {{records}}`,
+  "120401": `\u65E5\u8BB0\u6A21\u677F\u6587\u4EF6`,
+  "120402": `\u8BBE\u7F6E\u9009\u62E9\u7535\u5F71\u540E\u5BFC\u5165\u5185\u5BB9\u7684\u6A21\u677F\u6587\u4EF6. `,
   "120403": `\u652F\u6301\u4EE5\u4E0B\u53C2\u6570\u540D\u79F0 :`,
   "120404": `{{id}}, {{title}}, {{type}}, {{image}},`,
   "120405": `{{url}}, {{desc}}, {{datePublished}}`,
   "120406": `{{author}}, {{authorUrl}}, {{content}}`,
   "120407": `{{timePublished}}`,
-  "121301": `\u6E38\u620F\u6587\u672C\u6A21\u677F`,
-  "121302": `\u8BBE\u7F6E\u9009\u62E9\u6E38\u620F\u540E\u5BFC\u5165\u7684\u6587\u672C\u5185\u5BB9\u6A21\u677F,`,
+  "121301": `\u6E38\u620F\u6A21\u677F\u6587\u4EF6`,
+  "121302": `\u9009\u62E9\u7535\u5F71\u540E\u5BFC\u5165\u5185\u5BB9\u7684\u6A21\u677F\u6587\u4EF6. `,
   "121303": `\u652F\u6301\u4EE5\u4E0B\u53C2\u6570\u540D\u79F0 :`,
   "121304": `{{id}}, {{title}}, {{type}}, {{score}}, {{image}},`,
   "121305": `{{url}}, {{desc}}, {{publisher}}, {{datePublished}}`,
   "121306": `{{genre}}, {{aliases}}, {{developer}}, {{platform}}`,
+  "121801": `\u7535\u89C6\u5267\u6A21\u677F\u6587\u4EF6`,
+  "121802": `\u9009\u62E9\u7535\u89C6\u5267\u540E\u5BFC\u5165\u5185\u5BB9\u7684\u6A21\u677F\u6587\u4EF6. `,
   "120501": `\u65E5\u671F\u683C\u5F0F`,
-  "120503": `\u8FD9\u4E2A\u683C\u5F0F\u662F\u7ED9\u4E0A\u9762\u83B7\u53D6\u5230\u7684\u53C2\u6570\u8FDB\u884C\u683C\u5F0F\u5316\u65E5\u671F\u65F6\u663E\u793A\u7684\u5185\u5BB9 .`,
+  "120503": `\u8FD9\u4E2A\u683C\u5F0F\u662F\u7ED9\u4E0B\u9762\u83B7\u53D6\u5230\u7684\u53C2\u6570\u8FDB\u884C\u683C\u5F0F\u5316\u65E5\u671F\u65F6\u663E\u793A\u7684\u5185\u5BB9 .`,
   "120502": `\u65F6\u95F4\u683C\u5F0F`,
-  "120504": `\u8FD9\u4E2A\u683C\u5F0F\u662F\u7ED9\u4E0A\u9762\u83B7\u53D6\u5230\u7684\u53C2\u6570\u8FDB\u884C\u683C\u5F0F\u5316\u65F6\u95F4\u65F6\u663E\u793A\u7684\u5185\u5BB9 .`,
+  "120504": `\u8FD9\u4E2A\u683C\u5F0F\u662F\u7ED9\u4E0B\u9762\u83B7\u53D6\u5230\u7684\u53C2\u6570\u8FDB\u884C\u683C\u5F0F\u5316\u65F6\u95F4\u65F6\u663E\u793A\u7684\u5185\u5BB9 .`,
   "120506": `\u8BE6\u7EC6\u4ECB\u7ECD\u8BF7\u53C2\u8003`,
   "120507": `\u65F6\u95F4\u53C2\u6570\u65F6\u95F4\u683C\u5F0F\u9884\u89C8`,
   "120508": `\u683C\u5F0F\u53C2\u8003`,
@@ -1450,6 +1700,14 @@ var zh_cn_default = {
   "121206": `\u4E2D\u6587\u540D`,
   "121207": `\u82F1\u6587\u540D`,
   "121208": `\u4E2D\u6587\u540D\u548C\u82F1\u6587\u540D`,
+  "121401": `\u72B6\u6001\u680F`,
+  "121402": `\u5F53\u5728\u5BFC\u5165\u6570\u636E\u65F6, \u662F\u5426\u9700\u8981\u5728\u72B6\u6001\u680F\u663E\u793A\u5904\u7406\u72B6\u6001? `,
+  "121501": `\u7B14\u8BB0\u5B58\u653E\u4F4D\u7F6E`,
+  "121502": `\u521B\u5EFA\u7684\u7B14\u8BB0\u5C06\u4F1A\u5B58\u653E\u5BFC\u8BE5\u6587\u4EF6\u5939\u4E2D. \u5982\u679C\u4E3A\u7A7A, \u7B14\u8BB0\u5C06\u4F1A\u5B58\u653E\u5230Obsidian\u7684\u9ED8\u8BA4\u4F4D\u7F6E`,
+  "121601": `\u7B14\u8BB0\u540D\u79F0`,
+  "121602": `\u521B\u5EFA\u7684\u7B14\u8BB0\u5C06\u4F1A\u4F7F\u7528\u6B64\u540D\u79F0\u4F5C\u4E3A\u6A21\u677F, \u652F\u6301\u6240\u6709'\u901A\u7528'\u7684\u53C2\u6570\u4F5C\u4E3A\u540D\u79F0(\u5982:{{type}}/{{title}}), \u4E14\u652F\u6301\u8DEF\u5F84, \u6BD4\u5982: 'MyData/{{title}}'. \u5982\u679C\u4E3A\u7A7A, \u7B14\u8BB0\u5C06\u4F1A\u4F7F\u7528\u9ED8\u8BA4\u540D\u79F0. `,
+  "121701": `\u9009\u62E9\u6A21\u677F\u6587\u4EF6`,
+  "121901": `\u590D\u5236'\u9ED8\u8BA4'\u6A21\u677F\u5185\u5BB9`,
   "130101": `\u83B7\u53D6\u6570\u636E\u5931\u8D25,\u60A8\u5982\u6709\u9700\u8981\u8BF7\u81F3Github\u63D0\u4EA4Issues`,
   "130102": `Obsidian Douban\u63D2\u4EF6\u9519\u8BEF\u63D0\u793A:`,
   "130103": `Obsidian Douban\u63D2\u4EF6\u5F02\u5E38\u63D0\u793A:`,
@@ -1461,29 +1719,168 @@ var zh_cn_default = {
   "140205": `[Obsidian Douban]: \u5904\u7406\u5B8C\u6210'{0}'`,
   "140206": `[Obsidian Douban]: \u51FA\u73B0\u9519\u8BEF'{0}'`,
   "150101": `\u9009\u62E9\u4E00\u9879\u5185\u5BB9...`,
+  "121902": `\u91CD\u7F6E\u4E3A\u9ED8\u8BA4\u503C`,
   "200101": `\u3002`,
-  "book": {
-    id: { desc: `\u8C46\u74E3ID`, example: `25982198` },
-    title: { desc: `\u4E66\u540D`, example: `\u793E\u4F1A\u5FC3\u7406\u5B66\uFF08\u7B2C11\u7248\uFF0C\u7CBE\u88C5\u5F69\u5370\uFF09` },
-    type: { desc: `\u7C7B\u578B`, example: `Book` },
-    score: { desc: `\u8BC4\u5206`, example: `9.4` },
-    image: { desc: `\u56FE\u7247URL`, example: `https://img1.doubanio.com/view/subject/l/public/s28261247.jpg` },
-    url: { desc: `\u8C46\u74E3URL`, example: `https://book.douban.com/subject/25982198/` },
-    desc: {
-      desc: `\u7B80\u8FF0`,
-      example: `\u6234\u7EF4\xB7\u8FC8\u5C14\u65AF\u7684\u300A\u793E\u4F1A\u5FC3\u7406\u5B66\u300B\u662F\u7F8E\u56FD700 \u591A\u6240\u5927\u4E13\u9662\u6821\u793E\u4F1A\u5FC3\u7406\u5B66\u6559\u5B66\u6240\u91C7\u7528\u7684\u6559\u6750\uFF0C\u81EA\u51FA\u7248\u4EE5\u6765\u6DF1\u53D7\u5E7F\u5927\u5E08\u751F\u548C\u793E\u4F1A\u5FC3\u7406\u5B66\u7231\u597D\u8005\u7684\u559C\u7231\uFF0C\u5E76\u88AB\u7FFB\u8BD1\u6210\u591A\u79CD\u8BED\u8A00\uFF0C\u6709\u7740\u5E7F\u6CDB\u7684\u5F71\u54CD\u529B\u3002\u672C\u4E66\u8BD1\u81EA\u7B2C11 \u7248\u3002\u5168\u4E66\u5171\u5206\u56DB...`
-    },
-    publisher: { desc: `\u51FA\u7248\u793E`, example: `\u4EBA\u6C11\u90AE\u7535\u51FA\u7248\u793E` },
-    datePublished: { desc: `\u51FA\u7248\u65F6\u95F4`, example: `2014-10-1` },
-    genre: { desc: `\u7C7B\u578B`, example: `\u793E\u4F1A\u79D1\u5B66` },
-    author: { desc: `\u4F5C\u8005`, example: `\u6234\u7EF4\xB7\u8FC8\u5C14\u65AF` },
-    translator: { desc: `\u8BD1\u8005`, example: `\u4FAF\u7389\u6CE2 / \u4E50\u56FD\u5B89 / \u5F20\u5FD7\u52C7` },
-    isbn: { desc: `ISBN`, example: `9787115369840` },
-    originTitle: { desc: `\u539F\u4F5C\u540D`, example: `Social Psychology (11th)` },
-    subTitle: { desc: `\u526F\u6807\u9898`, example: `\u793E\u4F1A\u5FC3\u7406\u5B66` },
-    binding: { desc: `\u88C5\u5E27`, example: `\u7CBE\u88C5` },
-    totalPages: { desc: `\u9875\u6570`, example: `707` }
-  }
+  "122001": `\u901A\u7528\u53C2\u6570`,
+  "122002": `\u6269\u5C55\u53C2\u6570`,
+  "122003": `\u901A\u7528\u53C2\u6570\u4E00\u5B9A\u6709\u503C\u4E0D\u4E3A\u7A7A, \u6269\u5C55\u53C2\u6570\u53EF\u80FD\u4E3A\u7A7A`,
+  "122004": `\u4EE5\u4E0B\u53C2\u6570\u4F7F\u7528\u65F6\u8BF7\u7528'{{}}'\u5305\u88F9, \u4E3E\u4F8B: \u53C2\u6570title, \u5219\u4F7F\u7528\u65F6\u4E3A{{title}}. `,
+  "410101": `\u5176\u4ED6`,
+  "410102": `\u672A\u77E5`,
+  "300101": `\u53C2\u6570`,
+  "300102": `\u4E66\u7C4D`,
+  "300103": `\u7535\u5F71`,
+  "300104": `\u7535\u89C6\u5267`,
+  "300105": `\u97F3\u4E50`,
+  "300106": `\u65E5\u8BB0`,
+  "300107": `\u6E38\u620F`,
+  "300108": `\u5E7F\u64AD`,
+  "310101": `\u8C46\u74E3ID`,
+  "310102": `\u4E66\u540D`,
+  "310103": `\u7C7B\u578B`,
+  "310104": `\u8BC4\u5206`,
+  "310105": `\u5C01\u9762URL`,
+  "310106": `\u8C46\u74E3\u7F51\u5740`,
+  "310107": `\u5185\u5BB9\u7B80\u4ECB`,
+  "310108": `\u51FA\u7248\u793E`,
+  "310109": `\u51FA\u7248\u65F6\u95F4`,
+  "310110": `(\u56FA\u5B9A\u503C:\u5176\u4ED6)`,
+  "310111": `author:\u539F\u4F5C\u8005`,
+  "310112": `translator:\u8BD1\u8005`,
+  "310113": `isbn:isbn`,
+  "310114": `originalTitle:\u539F\u4F5C\u540D`,
+  "310115": `subTitle:\u526F\u6807\u9898`,
+  "310116": `totalPage:\u9875\u6570`,
+  "310117": `binding:\u88C5\u5E27`,
+  "310118": `producer:\u51FA\u54C1\u65B9`,
+  "310201": `\u8C46\u74E3ID`,
+  "310202": `\u7535\u5F71\u540D\u79F0`,
+  "310203": `\u7C7B\u578B`,
+  "310204": `\u8BC4\u5206`,
+  "310205": `\u5C01\u9762`,
+  "310206": `\u8C46\u74E3\u7F51\u5740`,
+  "310207": `\u7B80\u4ECB`,
+  "310208": `(\u56FA\u5B9A\u503C:\u672A\u77E5)`,
+  "310209": `\u4E0A\u6620\u65E5\u671F`,
+  "310210": `\u7C7B\u578B`,
+  "310211": `director:\u5BFC\u6F14`,
+  "310212": `author:\u7F16\u5267`,
+  "310213": `actor:\u4E3B\u6F14`,
+  "310214": `originalTitle:\u539F\u4F5C\u540D`,
+  "310215": `-`,
+  "310216": `-`,
+  "310217": `-`,
+  "310218": `-`,
+  "310301": `\u8C46\u74E3ID`,
+  "310302": `\u7535\u89C6\u5267\u540D\u79F0`,
+  "310303": `\u7C7B\u578B`,
+  "310304": `\u8BC4\u5206`,
+  "310305": `\u5C01\u9762`,
+  "310306": `\u8C46\u74E3\u7F51\u5740`,
+  "310307": `\u7B80\u4ECB`,
+  "310308": `(\u56FA\u5B9A\u503C:\u672A\u77E5)`,
+  "310309": `\u4E0A\u6620\u65E5\u671F`,
+  "310310": `\u7C7B\u578B`,
+  "310311": `director:\u5BFC\u6F14`,
+  "310312": `author:\u7F16\u5267`,
+  "310313": `actor:\u4E3B\u6F14`,
+  "310314": `originalTitle:\u539F\u4F5C\u540D`,
+  "310315": `-`,
+  "310316": `-`,
+  "310317": `-`,
+  "310318": `-`,
+  "310401": `\u8C46\u74E3ID`,
+  "310402": `\u97F3\u4E50\u540D`,
+  "310403": `\u7C7B\u578B`,
+  "310404": `\u8BC4\u5206`,
+  "310405": `\u5C01\u9762`,
+  "310406": `\u8C46\u74E3\u7F51\u5740`,
+  "310407": `\u7B80\u4ECB`,
+  "310408": `\u51FA\u7248\u8005`,
+  "310409": `\u53D1\u884C\u65F6\u95F4`,
+  "310410": `\u6D41\u6D3E`,
+  "310411": `actor: \u8868\u6F14\u8005`,
+  "310412": `albumType:\u4E13\u8F91\u7C7B\u578B`,
+  "310413": `medium:\u4ECB\u8D28`,
+  "310414": `records:\u5531\u7247\u6570`,
+  "310415": `barcode:\u6761\u5F62\u7801`,
+  "310416": `-`,
+  "310417": `-`,
+  "310418": `-`,
+  "310501": `\u8C46\u74E3ID`,
+  "310502": `\u65E5\u8BB0\u6807\u9898`,
+  "310503": `\u7C7B\u578B`,
+  "310504": `\u8BC4\u5206`,
+  "310505": `\u56FE\u7247`,
+  "310506": `\u8C46\u74E3\u7F51\u5740`,
+  "310507": `\u7B80\u4ECB`,
+  "310508": `\u53D1\u5E03\u8005`,
+  "310509": `\u53D1\u5E03\u65F6\u95F4`,
+  "310510": `(\u56FA\u5B9A\u503C:\u5176\u5B83)`,
+  "310511": `author:\u4F5C\u8005`,
+  "310512": `authorUrl:\u4F5C\u8005\u7F51\u5740`,
+  "310513": `content:\u65E5\u8BB0\u5185\u5BB9`,
+  "310514": `-`,
+  "310515": `-`,
+  "310516": `-`,
+  "310517": `-`,
+  "310518": `-`,
+  "310601": `\u8C46\u74E3ID`,
+  "310602": `\u6E38\u620F\u540D\u79F0`,
+  "310603": `\u7C7B\u578B`,
+  "310604": `\u8BC4\u5206`,
+  "310605": `\u5C01\u9762`,
+  "310606": `\u8C46\u74E3\u7F51\u5740`,
+  "310607": `\u7B80\u4ECB`,
+  "310608": `\u53D1\u884C\u5546`,
+  "310609": `\u53D1\u884C\u65E5\u671F`,
+  "310610": `\u7C7B\u578B`,
+  "310611": `aliases:\u522B\u540D`,
+  "310612": `developer:\u5F00\u53D1\u5546`,
+  "310613": `platform:\u5E73\u53F0`,
+  "310614": `-`,
+  "310615": `-`,
+  "310616": `-`,
+  "310617": `-`,
+  "310618": `-`,
+  "310701": `\u5F85\u5F00\u53D1`,
+  "310702": `\u5F85\u5F00\u53D1`,
+  "310703": `\u5F85\u5F00\u53D1`,
+  "310704": `\u5F85\u5F00\u53D1`,
+  "310705": `\u5F85\u5F00\u53D1`,
+  "310706": `\u5F85\u5F00\u53D1`,
+  "310707": `\u5F85\u5F00\u53D1`,
+  "310708": `\u5F85\u5F00\u53D1`,
+  "310709": `\u5F85\u5F00\u53D1`,
+  "310710": `\u5F85\u5F00\u53D1`,
+  "310711": `-`,
+  "310712": `-`,
+  "310713": `-`,
+  "310714": `-`,
+  "310715": `-`,
+  "310716": `-`,
+  "310717": `-`,
+  "310718": `-`,
+  "320101": `\u6269\u5C551`,
+  "320102": `\u6269\u5C552`,
+  "320103": `\u6269\u5C553`,
+  "320104": `\u6269\u5C554`,
+  "320105": `\u6269\u5C555`,
+  "320106": `\u6269\u5C556`,
+  "320107": `\u6269\u5C557`,
+  "320108": `\u6269\u5C558`,
+  "320109": `\u6269\u5C559`,
+  "320110": `\u6269\u5C5510`,
+  "320111": `\u6269\u5C5511`,
+  "330101": `\u4ECA\u65E5\u65E5\u671F`,
+  "330102": `\u5F53\u524D\u65F6\u95F4`,
+  "ALL": `\u5168\u90E8\u7C7B\u578B`,
+  "MOVIE": `\u7535\u5F71`,
+  "BOOK": `\u4E66\u7C4D`,
+  "MUSIC": `\u97F3\u4E50`,
+  "NOTE": `\u7B14\u8BB0`,
+  "GAME": `\u6E38\u620F`,
+  "TELEPLAY": `\u7535\u89C6\u5267`
 };
 
 // src/lang/helper.ts
@@ -1503,175 +1900,12 @@ var I18nHelper = class {
 };
 var i18nHelper = new I18nHelper();
 
-// src/constant/Constsant.ts
-var BasicConst = {
-  YAML_FRONT_MATTER_SYMBOL: "---",
-  CLEAN_STATUS_BAR_DELAY: 5e3
-};
-var TemplateTextMode;
-(function(TemplateTextMode2) {
-  TemplateTextMode2[TemplateTextMode2["NORMAL"] = 0] = "NORMAL";
-  TemplateTextMode2[TemplateTextMode2["YAML"] = 1] = "YAML";
-})(TemplateTextMode || (TemplateTextMode = {}));
-var PersonNameMode;
-(function(PersonNameMode2) {
-  PersonNameMode2["CH_NAME"] = "CH";
-  PersonNameMode2["EN_NAME"] = "EN";
-  PersonNameMode2["CH_EN_NAME"] = "CH_EN";
-})(PersonNameMode || (PersonNameMode = {}));
-var PersonNameModeRecords = {
-  [PersonNameMode.CH_NAME]: i18nHelper.getMessage("121206"),
-  [PersonNameMode.EN_NAME]: i18nHelper.getMessage("121207"),
-  [PersonNameMode.CH_EN_NAME]: i18nHelper.getMessage("121208")
-};
-
-// src/douban/Douban.ts
-var doubanHeaders = {
-  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
-  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
-};
-var DEFAULT_SETTINGS = {
-  movieTemplate: `---
-doubanId: {{id}}
-title: {{title}}
-type: {{type}}
-score: {{score}}
-originalTitle: {{originalTitle}}
-genre: {{genre}}
-datePublished: {{datePublished}}
-director: {{director}}
-actor: {{actor}}
-author: {{author}}
-tags: {{type}}
-url: {{url}}
-desc: {{desc}}
----
-
-![image]({{image}})
-`,
-  bookTemplate: `---
-doubanId: {{id}}
-title: {{title}}
-subTitle: {{subTitle}}
-originalTitle: {{originalTitle}}
-series: {{series}}
-type: {{type}}
-author: {{author}}
-score: {{score}}
-datePublished: {{datePublished}}
-translator: {{translator}}
-publisher: {{publisher}}
-isbn: {{isbn}}
-url: {{url}}
-totalPage: {{totalPage}}
-price: {{price}}
-tags: Book
-binding: {{binding}}
-desc: {{desc}}
----
-
-![image|150]({{image}})
-
-{{menu}}
-`,
-  musicTemplate: `---
-doubanId: {{id}}
-title: {{title}}
-type: {{type}}
-actor: {{actor}}
-score: {{score}}
-genre: {{genre}}
-medium: {{medium}}
-albumType: {{albumType}}
-datePublished: {{datePublished}}
-publisher: {{publisher}}
-barcode: {{barcode}}
-url: {{url}}
-numberOfRecords: {{numberOfRecords}}
-tags: Music
-desc: {{desc}}
----
-
-![image|150]({{image}})
-`,
-  noteTemplate: `---
-doubanId: {{id}}
-title: {{title}}
-type: {{type}}  
-author: {{author}}
-authorUrl: {{authorUrl}}
-dateTimePublished: {{datePublished}} {{timePublished}}
-url: {{url}}
-tags: Article
-desc: {{desc}}
----
-
-{{content}}
-`,
-  gameTemplate: `---
-doubanId: {{id}}
-title: {{title}}
-aliases: {{aliases}}
-type: {{type}}  
-score: {{score}}
-dateTimePublished: {{datePublished}}
-publisher: {{publisher}}
-genre: {{genre}}
-developer: {{developer}}
-platform: {{platform}}
-url: {{url}}
-tags: Game
-desc: {{desc}}
----
-
-![image]({{image}})	
-`,
-  searchUrl: "https://www.douban.com/search?q=",
-  searchHeaders: JSON.stringify(doubanHeaders),
-  dateFormat: "yyyy-MM-DD",
-  timeFormat: "HH:mm:ss",
-  arraySpilt: ", ",
-  personNameMode: PersonNameMode.CH_NAME
-};
-
-// main.ts
-var import_obsidian7 = __toModule(require("obsidian"));
-
-// src/douban/data/search/DoubanSearchFuzzySuggestModal.ts
-var import_obsidian2 = __toModule(require("obsidian"));
-
-// src/utils/Logutil.ts
-var import_obsidian = __toModule(require("obsidian"));
-var Logger = class {
-  error(e) {
-    new import_obsidian.Notice(i18nHelper.getMessage("130201") + e);
-    return e;
-  }
-  warn(e) {
-    new import_obsidian.Notice(i18nHelper.getMessage("130301") + e);
-    return e;
-  }
-  info(e) {
-    return e;
-  }
-  trace(e) {
-    console.log(`Douban Plugin trace:${typeof e == "string" ? e : JSON.stringify(e)}`);
-    return e;
-  }
-  traceN(notion, e) {
-    console.log(`${notion} ${typeof e == "string" ? e : JSON.stringify(e)}`);
-    return e;
-  }
-};
-var log = new Logger();
-
 // src/douban/data/search/DoubanSearchFuzzySuggestModal.ts
 var DoubanFuzzySuggester = class extends import_obsidian2.FuzzySuggestModal {
-  constructor(plugin, editor) {
+  constructor(plugin, context) {
     super(app);
-    this.editor = editor;
     this.plugin = plugin;
+    this.context = context;
     this.setPlaceholder(i18nHelper.getMessage("150101"));
   }
   getItems() {
@@ -1683,7 +1917,7 @@ var DoubanFuzzySuggester = class extends import_obsidian2.FuzzySuggestModal {
   }
   onChooseItem(item, evt) {
     this.plugin.showStatus("140204", item.title);
-    this.plugin.doubanExtractHandler.handle(item, this.editor);
+    this.plugin.doubanExtractHandler.handle(item, this.context);
   }
   showSearchList(doubanSearchResultExtractList) {
     this.doubanSearchResultExtract = doubanSearchResultExtractList;
@@ -1713,7 +1947,9 @@ var DoubanParameter = {
   PUBLISHER: "{{publisher}}",
   DATE_PUBLISHED: "{{datePublished}}",
   TIME_PUBLISHED: "{{timePublished}}",
-  GENRE: "{{genre}}"
+  GENRE: "{{genre}}",
+  CURRENT_DATE: "{{currentDate}}",
+  CURRENT_TIME: "{{currentTime}}"
 };
 
 // src/douban/data/handler/DoubanAbstractLoadHandler.ts
@@ -1925,7 +2161,7 @@ var Document = class extends NodeWithChildren {
     return 9;
   }
 };
-var Element = class extends NodeWithChildren {
+var Element2 = class extends NodeWithChildren {
   constructor(name, attribs, children2 = [], type = name === "script" ? ElementType.Script : name === "style" ? ElementType.Style : ElementType.Tag) {
     super(children2);
     this.name = name;
@@ -1982,7 +2218,7 @@ function cloneNode(node, recursive = false) {
     result = new Comment2(node.data);
   } else if (isTag2(node)) {
     const children2 = recursive ? cloneChildren(node.children) : [];
-    const clone2 = new Element(node.name, __spreadValues({}, node.attribs), children2);
+    const clone2 = new Element2(node.name, __spreadValues({}, node.attribs), children2);
     children2.forEach((child) => child.parent = clone2);
     if (node.namespace != null) {
       clone2.namespace = node.namespace;
@@ -2092,7 +2328,7 @@ var DomHandler = class {
   }
   onopentag(name, attribs) {
     const type = this.options.xmlMode ? ElementType.Tag : void 0;
-    const element = new Element(name, attribs, void 0, type);
+    const element = new Element2(name, attribs, void 0, type);
     this.addNode(element);
     this.tagStack.push(element);
   }
@@ -2248,19 +2484,19 @@ function getDecoder(decodeTree) {
       lastIdx = strIdx;
       strIdx += 1;
       if (str.charCodeAt(strIdx) === CharCodes.NUM) {
-        let start = strIdx + 1;
+        let start2 = strIdx + 1;
         let base = 10;
-        let cp = str.charCodeAt(start);
+        let cp = str.charCodeAt(start2);
         if ((cp | CharCodes.To_LOWER_BIT) === CharCodes.LOWER_X) {
           base = 16;
           strIdx += 1;
-          start += 1;
+          start2 += 1;
         }
         do
           cp = str.charCodeAt(++strIdx);
         while (cp >= CharCodes.ZERO && cp <= CharCodes.NINE || base === 16 && (cp | CharCodes.To_LOWER_BIT) >= CharCodes.LOWER_A && (cp | CharCodes.To_LOWER_BIT) <= CharCodes.LOWER_F);
-        if (start !== strIdx) {
-          const entity = str.substring(start, strIdx);
+        if (start2 !== strIdx) {
+          const entity = str.substring(start2, strIdx);
           const parsed = parseInt(entity, base);
           if (str.charCodeAt(strIdx) === CharCodes.SEMI) {
             strIdx += 1;
@@ -3249,10 +3485,10 @@ function camelCase(str) {
 function cssCase(str) {
   return str.replace(/[A-Z]/g, "-$&").toLowerCase();
 }
-function domEach(array, fn) {
+function domEach(array, fn2) {
   const len = array.length;
   for (let i = 0; i < len; i++)
-    fn(array[i], i);
+    fn2(array[i], i);
   return array;
 }
 function cloneDom(dom) {
@@ -3544,8 +3780,8 @@ function hasClass(className) {
     let idx = -1;
     if (clazz && className.length) {
       while ((idx = clazz.indexOf(className, idx + 1)) > -1) {
-        const end2 = idx + className.length;
-        if ((idx === 0 || rspace.test(clazz[idx - 1])) && (end2 === clazz.length || rspace.test(clazz[end2]))) {
+        const end3 = idx + className.length;
+        if ((idx === 0 || rspace.test(clazz[idx - 1])) && (end3 === clazz.length || rspace.test(clazz[end3]))) {
           return true;
         }
       }
@@ -3770,24 +4006,24 @@ function parse(selector) {
 }
 function parseSelector(subselects2, selector, selectorIndex) {
   let tokens = [];
-  function getName2(offset) {
-    const match = selector.slice(selectorIndex + offset).match(reName);
+  function getName2(offset2) {
+    const match = selector.slice(selectorIndex + offset2).match(reName);
     if (!match) {
       throw new Error(`Expected name, found ${selector.slice(selectorIndex)}`);
     }
     const [name] = match;
-    selectorIndex += offset + name.length;
+    selectorIndex += offset2 + name.length;
     return unescapeCSS(name);
   }
-  function stripWhitespace(offset) {
-    selectorIndex += offset;
+  function stripWhitespace(offset2) {
+    selectorIndex += offset2;
     while (selectorIndex < selector.length && isWhitespace(selector.charCodeAt(selectorIndex))) {
       selectorIndex++;
     }
   }
   function readValueWithParenthesis() {
     selectorIndex += 1;
-    const start = selectorIndex;
+    const start2 = selectorIndex;
     let counter = 1;
     for (; counter > 0 && selectorIndex < selector.length; selectorIndex++) {
       if (selector.charCodeAt(selectorIndex) === 40 && !isEscaped(selectorIndex)) {
@@ -3799,7 +4035,7 @@ function parseSelector(subselects2, selector, selectorIndex) {
     if (counter) {
       throw new Error("Parenthesis not matched");
     }
-    return unescapeCSS(selector.slice(start, selectorIndex - 1));
+    return unescapeCSS(selector.slice(start2, selectorIndex - 1));
   }
   function isEscaped(pos) {
     let slashCount = 0;
@@ -4306,7 +4542,7 @@ function getChildFunc(next2, adapter2) {
 }
 var filters = {
   contains(next2, text3, { adapter: adapter2 }) {
-    return function contains2(elem) {
+    return function contains3(elem) {
       return next2(elem) && adapter2.getText(elem).includes(text3);
     };
   },
@@ -5124,29 +5360,29 @@ function find3(selectorOrHaystack) {
   return this._make(select(selectorOrHaystack, elems, options));
 }
 function _getMatcher(matchMap) {
-  return function(fn, ...postFns) {
+  return function(fn2, ...postFns) {
     return function(selector) {
       var _a2;
-      let matched = matchMap(fn, this);
+      let matched = matchMap(fn2, this);
       if (selector) {
         matched = filterArray(matched, selector, this.options.xmlMode, (_a2 = this._root) === null || _a2 === void 0 ? void 0 : _a2[0]);
       }
-      return this._make(this.length > 1 && matched.length > 1 ? postFns.reduce((elems, fn2) => fn2(elems), matched) : matched);
+      return this._make(this.length > 1 && matched.length > 1 ? postFns.reduce((elems, fn3) => fn3(elems), matched) : matched);
     };
   };
 }
-var _matcher = _getMatcher((fn, elems) => {
+var _matcher = _getMatcher((fn2, elems) => {
   const ret = [];
   for (let i = 0; i < elems.length; i++) {
-    const value = fn(elems[i]);
+    const value = fn2(elems[i]);
     ret.push(value);
   }
   return new Array().concat(...ret);
 });
-var _singleMatcher = _getMatcher((fn, elems) => {
+var _singleMatcher = _getMatcher((fn2, elems) => {
   const ret = [];
   for (let i = 0; i < elems.length; i++) {
-    const value = fn(elems[i]);
+    const value = fn2(elems[i]);
     if (value !== null) {
       ret.push(value);
     }
@@ -5238,18 +5474,18 @@ function contents() {
   const elems = this.toArray().reduce((newElems, elem) => hasChildren(elem) ? newElems.concat(elem.children) : newElems, []);
   return this._make(elems);
 }
-function each(fn) {
+function each(fn2) {
   let i = 0;
   const len = this.length;
-  while (i < len && fn.call(this[i], i, this[i]) !== false)
+  while (i < len && fn2.call(this[i], i, this[i]) !== false)
     ++i;
   return this;
 }
-function map(fn) {
+function map(fn2) {
   let elems = [];
   for (let i = 0; i < this.length; i++) {
     const el = this[i];
-    const val2 = fn.call(el, i, el);
+    const val2 = fn2.call(el, i, el);
     if (val2 != null) {
       elems = elems.concat(val2);
     }
@@ -5331,8 +5567,8 @@ function index(selectorOrNeedle) {
   }
   return Array.prototype.indexOf.call($haystack, needle);
 }
-function slice(start, end2) {
-  return this._make(Array.prototype.slice.call(this, start, end2));
+function slice(start2, end3) {
+  return this._make(Array.prototype.slice.call(this, start2, end3));
 }
 function end() {
   var _a2;
@@ -6091,15 +6327,15 @@ var Preprocessor = class {
     return this.droppedBufferSize + this.pos;
   }
   getError(code) {
-    const { line, col, offset } = this;
+    const { line, col, offset: offset2 } = this;
     return {
       code,
       startLine: line,
       endLine: line,
       startCol: col,
       endCol: col,
-      startOffset: offset,
-      endOffset: offset
+      startOffset: offset2,
+      endOffset: offset2
     };
   }
   _err(code) {
@@ -6169,8 +6405,8 @@ var Preprocessor = class {
     }
     return true;
   }
-  peek(offset) {
-    const pos = this.pos + offset;
+  peek(offset2) {
+    const pos = this.pos + offset2;
     if (pos >= this.html.length) {
       this.endOfChunkHit = !this.lastChunkWritten;
       return CODE_POINTS.EOF;
@@ -6962,14 +7198,14 @@ var Tokenizer = class {
     var _a2, _b;
     (_b = (_a2 = this.handler).onParseError) === null || _b === void 0 ? void 0 : _b.call(_a2, this.preprocessor.getError(code));
   }
-  getCurrentLocation(offset) {
+  getCurrentLocation(offset2) {
     if (!this.options.sourceCodeLocationInfo) {
       return null;
     }
     return {
       startLine: this.preprocessor.line,
-      startCol: this.preprocessor.col - offset,
-      startOffset: this.preprocessor.offset - offset,
+      startCol: this.preprocessor.col - offset2,
+      startOffset: this.preprocessor.offset - offset2,
       endLine: -1,
       endCol: -1,
       endOffset: -1
@@ -7071,11 +7307,11 @@ var Tokenizer = class {
       location: this.getCurrentLocation(2)
     };
   }
-  _createCommentToken(offset) {
+  _createCommentToken(offset2) {
     this.currentToken = {
       type: TokenType.COMMENT,
       data: "",
-      location: this.getCurrentLocation(offset)
+      location: this.getCurrentLocation(offset2)
     };
   }
   _createDoctypeToken(initialName) {
@@ -13288,7 +13524,7 @@ var adapter = {
       attribsNamespace[attrName] = attrs[i].namespace;
       attribsPrefix[attrName] = attrs[i].prefix;
     }
-    const node = new Element(tagName, attribs, []);
+    const node = new Element2(tagName, attribs, []);
     node.namespace = namespaceURI;
     node["x-attribsNamespace"] = attribsNamespace;
     node["x-attribsPrefix"] = attribsPrefix;
@@ -13715,10 +13951,10 @@ var Tokenizer2 = class {
   isTagStartChar(c) {
     return this.xmlMode ? !isEndOfTagSection(c) : isASCIIAlpha(c);
   }
-  startSpecial(sequence, offset) {
+  startSpecial(sequence, offset2) {
     this.isSpecial = true;
     this.currentSequence = sequence;
-    this.sequenceIndex = offset;
+    this.sequenceIndex = offset2;
     this.state = State2.SpecialStartSequence;
   }
   stateBeforeTagName(c) {
@@ -14141,11 +14377,11 @@ var Tokenizer2 = class {
       this.cbs.ontext(this.sectionStart, endIndex);
     }
   }
-  emitPartial(start, endIndex) {
+  emitPartial(start2, endIndex) {
     if (this.baseState !== State2.Text && this.baseState !== State2.InSpecialTag) {
-      this.cbs.onattribdata(start, endIndex);
+      this.cbs.onattribdata(start2, endIndex);
     } else {
-      this.cbs.ontext(start, endIndex);
+      this.cbs.ontext(start2, endIndex);
     }
   }
   emitCodePoint(cp) {
@@ -14277,9 +14513,9 @@ var Parser2 = class {
     this.tokenizer = new ((_c = options.Tokenizer) !== null && _c !== void 0 ? _c : Tokenizer2)(this.options, this);
     (_e = (_d = this.cbs).onparserinit) === null || _e === void 0 ? void 0 : _e.call(_d, this);
   }
-  ontext(start, endIndex) {
+  ontext(start2, endIndex) {
     var _a2, _b;
-    const data2 = this.getSlice(start, endIndex);
+    const data2 = this.getSlice(start2, endIndex);
     this.endIndex = endIndex - 1;
     (_b = (_a2 = this.cbs).ontext) === null || _b === void 0 ? void 0 : _b.call(_a2, data2);
     this.startIndex = endIndex;
@@ -14294,9 +14530,9 @@ var Parser2 = class {
   isVoidElement(name) {
     return !this.options.xmlMode && voidElements.has(name);
   }
-  onopentagname(start, endIndex) {
+  onopentagname(start2, endIndex) {
     this.endIndex = endIndex;
-    let name = this.getSlice(start, endIndex);
+    let name = this.getSlice(start2, endIndex);
     if (this.lowerCaseTagNames) {
       name = name.toLowerCase();
     }
@@ -14342,10 +14578,10 @@ var Parser2 = class {
     this.endOpenTag(false);
     this.startIndex = endIndex + 1;
   }
-  onclosetag(start, endIndex) {
+  onclosetag(start2, endIndex) {
     var _a2, _b, _c, _d, _e, _f;
     this.endIndex = endIndex;
-    let name = this.getSlice(start, endIndex);
+    let name = this.getSlice(start2, endIndex);
     if (this.lowerCaseTagNames) {
       name = name.toLowerCase();
     }
@@ -14391,13 +14627,13 @@ var Parser2 = class {
       this.stack.pop();
     }
   }
-  onattribname(start, endIndex) {
-    this.startIndex = start;
-    const name = this.getSlice(start, endIndex);
+  onattribname(start2, endIndex) {
+    this.startIndex = start2;
+    const name = this.getSlice(start2, endIndex);
     this.attribname = this.lowerCaseAttributeNames ? name.toLowerCase() : name;
   }
-  onattribdata(start, endIndex) {
-    this.attribvalue += this.getSlice(start, endIndex);
+  onattribdata(start2, endIndex) {
+    this.attribvalue += this.getSlice(start2, endIndex);
   }
   onattribentity(cp) {
     this.attribvalue += fromCodePoint(cp);
@@ -14419,35 +14655,35 @@ var Parser2 = class {
     }
     return name;
   }
-  ondeclaration(start, endIndex) {
+  ondeclaration(start2, endIndex) {
     this.endIndex = endIndex;
-    const value = this.getSlice(start, endIndex);
+    const value = this.getSlice(start2, endIndex);
     if (this.cbs.onprocessinginstruction) {
       const name = this.getInstructionName(value);
       this.cbs.onprocessinginstruction(`!${name}`, `!${value}`);
     }
     this.startIndex = endIndex + 1;
   }
-  onprocessinginstruction(start, endIndex) {
+  onprocessinginstruction(start2, endIndex) {
     this.endIndex = endIndex;
-    const value = this.getSlice(start, endIndex);
+    const value = this.getSlice(start2, endIndex);
     if (this.cbs.onprocessinginstruction) {
       const name = this.getInstructionName(value);
       this.cbs.onprocessinginstruction(`?${name}`, `?${value}`);
     }
     this.startIndex = endIndex + 1;
   }
-  oncomment(start, endIndex, offset) {
+  oncomment(start2, endIndex, offset2) {
     var _a2, _b, _c, _d;
     this.endIndex = endIndex;
-    (_b = (_a2 = this.cbs).oncomment) === null || _b === void 0 ? void 0 : _b.call(_a2, this.getSlice(start, endIndex - offset));
+    (_b = (_a2 = this.cbs).oncomment) === null || _b === void 0 ? void 0 : _b.call(_a2, this.getSlice(start2, endIndex - offset2));
     (_d = (_c = this.cbs).oncommentend) === null || _d === void 0 ? void 0 : _d.call(_c);
     this.startIndex = endIndex + 1;
   }
-  oncdata(start, endIndex, offset) {
+  oncdata(start2, endIndex, offset2) {
     var _a2, _b, _c, _d, _e, _f, _g, _h, _j, _k;
     this.endIndex = endIndex;
-    const value = this.getSlice(start, endIndex - offset);
+    const value = this.getSlice(start2, endIndex - offset2);
     if (this.options.xmlMode || this.options.recognizeCDATA) {
       (_b = (_a2 = this.cbs).oncdatastart) === null || _b === void 0 ? void 0 : _b.call(_a2);
       (_d = (_c = this.cbs).ontext) === null || _d === void 0 ? void 0 : _d.call(_c, value);
@@ -14487,14 +14723,14 @@ var Parser2 = class {
     this.reset();
     this.end(data2);
   }
-  getSlice(start, end2) {
-    while (start - this.bufferOffset >= this.buffers[0].length) {
+  getSlice(start2, end3) {
+    while (start2 - this.bufferOffset >= this.buffers[0].length) {
       this.shiftBuffer();
     }
-    let str = this.buffers[0].slice(start - this.bufferOffset, end2 - this.bufferOffset);
-    while (end2 - this.bufferOffset > this.buffers[0].length) {
+    let str = this.buffers[0].slice(start2 - this.bufferOffset, end3 - this.bufferOffset);
+    while (end3 - this.bufferOffset > this.buffers[0].length) {
       this.shiftBuffer();
-      str += this.buffers[0].slice(0, end2 - this.bufferOffset);
+      str += this.buffers[0].slice(0, end3 - this.bufferOffset);
     }
     return str;
   }
@@ -14566,7 +14802,7 @@ var YamlUtil = class {
     return '"' + text3 + '"';
   }
   static handleText(text3) {
-    return YamlUtil.hasSpecialChar(text3) ? YamlUtil.handleSpecialChar(text3).replace(/[\n]{1,}/, "\u3002").replace("\u3002\u3002", "\u3002") : text3;
+    return YamlUtil.hasSpecialChar(text3) ? YamlUtil.handleSpecialChar(text3).replaceAll("\n", "\u3002").replaceAll("\u3002\u3002", "\u3002") : text3;
   }
 };
 var SPECIAL_CHAR_REG = /[{}\[\]&*#?|\-<>=!%@:`,\n]/;
@@ -14574,35 +14810,265 @@ var SPECIAL_CHAR_REG_REPLACE = new Map([
   ["{", "\\{"]
 ]);
 
+// src/constant/Constsant.ts
+var BasicConst = {
+  YAML_FRONT_MATTER_SYMBOL: "---",
+  CLEAN_STATUS_BAR_DELAY: 5e3
+};
+var TemplateTextMode;
+(function(TemplateTextMode3) {
+  TemplateTextMode3[TemplateTextMode3["NORMAL"] = 0] = "NORMAL";
+  TemplateTextMode3[TemplateTextMode3["YAML"] = 1] = "YAML";
+})(TemplateTextMode || (TemplateTextMode = {}));
+var SearchHandleMode;
+(function(SearchHandleMode2) {
+  SearchHandleMode2[SearchHandleMode2["FOR_REPLACE"] = 0] = "FOR_REPLACE";
+  SearchHandleMode2[SearchHandleMode2["FOR_CREATE"] = 1] = "FOR_CREATE";
+})(SearchHandleMode || (SearchHandleMode = {}));
+var PersonNameMode;
+(function(PersonNameMode2) {
+  PersonNameMode2["CH_NAME"] = "CH";
+  PersonNameMode2["EN_NAME"] = "EN";
+  PersonNameMode2["CH_EN_NAME"] = "CH_EN";
+})(PersonNameMode || (PersonNameMode = {}));
+var TemplateKey;
+(function(TemplateKey8) {
+  TemplateKey8["movieTemplateFile"] = "movieTemplateFile";
+  TemplateKey8["bookTemplateFile"] = "bookTemplateFile";
+  TemplateKey8["musicTemplateFile"] = "musicTemplateFile";
+  TemplateKey8["noteTemplateFile"] = "noteTemplateFile";
+  TemplateKey8["gameTemplateFile"] = "gameTemplateFile";
+  TemplateKey8["teleplayTemplateFile"] = "teleplayTemplateFile";
+})(TemplateKey || (TemplateKey = {}));
+var SupportType;
+(function(SupportType2) {
+  SupportType2["ALL"] = "ALL";
+  SupportType2["MOVIE"] = "MOVIE";
+  SupportType2["BOOK"] = "BOOK";
+  SupportType2["MUSIC"] = "MUSIC";
+  SupportType2["NOTE"] = "NOTE";
+  SupportType2["GAME"] = "GAME";
+  SupportType2["TELEPLAY"] = "TELEPLAY";
+})(SupportType || (SupportType = {}));
+var PersonNameModeRecords = {
+  [PersonNameMode.CH_NAME]: i18nHelper.getMessage("121206"),
+  [PersonNameMode.EN_NAME]: i18nHelper.getMessage("121207"),
+  [PersonNameMode.CH_EN_NAME]: i18nHelper.getMessage("121208")
+};
+
+// src/constant/DefaultTemplateContent.ts
+var DEFAULT_TEMPLATE_CONTENT = {
+  movieTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+type: {{type}}
+score: {{score}}
+originalTitle: {{originalTitle}}
+genre: {{genre}}
+datePublished: {{datePublished}}
+director: {{director}}
+actor: {{actor}}
+author: {{author}}
+tags: {{type}}
+url: {{url}}
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+![image]({{image}})
+`,
+  bookTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+subTitle: {{subTitle}}
+originalTitle: {{originalTitle}}
+series: {{series}}
+type: {{type}}
+author: {{author}}
+score: {{score}}
+datePublished: {{datePublished}}
+translator: {{translator}}
+publisher: {{publisher}}
+producer: {{producer}}
+isbn: {{isbn}}
+url: {{url}}
+totalPage: {{totalPage}}
+price: {{price}}
+tags: Book
+binding: {{binding}}
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+![image|150]({{image}})
+
+{{menu}}
+`,
+  musicTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+type: {{type}}
+actor: {{actor}}
+score: {{score}}
+genre: {{genre}}
+medium: {{medium}}
+albumType: {{albumType}}
+datePublished: {{datePublished}}
+publisher: {{publisher}}
+barcode: {{barcode}}
+url: {{url}}
+records: {{records}}
+tags: Music
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+![image|150]({{image}})
+`,
+  noteTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+type: {{type}}  
+author: {{author}}
+authorUrl: {{authorUrl}}
+dateTimePublished: {{datePublished}} {{timePublished}}
+url: {{url}}
+tags: Article
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+{{content}}
+`,
+  gameTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+aliases: {{aliases}}
+type: {{type}}  
+score: {{score}}
+dateTimePublished: {{datePublished}}
+publisher: {{publisher}}
+genre: {{genre}}
+developer: {{developer}}
+platform: {{platform}}
+url: {{url}}
+tags: Game
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+![image]({{image}})	
+`,
+  teleplayTemplateFileContent: `---
+doubanId: {{id}}
+title: {{title}}
+type: {{type}}
+score: {{score}}
+originalTitle: {{originalTitle}}
+genre: {{genre}}
+datePublished: {{datePublished}}
+director: {{director}}
+actor: {{actor}}
+author: {{author}}
+tags: {{type}}
+url: {{url}}
+createTime: {{currentDate}} {{currentTime}}
+desc: {{desc}}
+---
+
+![image]({{image}})
+`
+};
+function getDefaultTemplateContent(key) {
+  return DEFAULT_TEMPLATE_CONTENT[key + "Content"];
+}
+
+// src/utils/StringUtil.ts
+var StringUtil = class {
+  static isBlank(str) {
+    return str == null || str.trim().length == 0;
+  }
+  static defaultIfBlank(str, defaultStr) {
+    return StringUtil.isBlank(str) ? defaultStr : str;
+  }
+};
+
+// src/constant/Douban.ts
+var doubanHeaders = {
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
+};
+
+// src/constant/DefaultSettings.ts
+var DEFAULT_SETTINGS = {
+  movieTemplateFile: ``,
+  bookTemplateFile: ``,
+  musicTemplateFile: ``,
+  noteTemplateFile: ``,
+  gameTemplateFile: ``,
+  teleplayTemplateFile: ``,
+  searchUrl: "https://www.douban.com/search?q=",
+  searchHeaders: JSON.stringify(doubanHeaders),
+  dateFormat: "yyyy-MM-DD",
+  timeFormat: "HH:mm:ss",
+  arraySpilt: ", ",
+  personNameMode: PersonNameMode.CH_NAME,
+  dataFilePath: "",
+  dataFileNamePath: "/{{type}}/{{title}}",
+  statusBar: true,
+  customProperties: [
+    { name: "myType", value: "movie", field: SupportType.MOVIE },
+    { name: "myType", value: "book", field: SupportType.BOOK },
+    { name: "myType", value: "music", field: SupportType.MUSIC },
+    { name: "myType", value: "note", field: SupportType.NOTE },
+    { name: "myType", value: "game", field: SupportType.GAME },
+    { name: "myType", value: "teleplay", field: SupportType.TELEPLAY }
+  ],
+  loginCookiesContent: ""
+};
+
 // src/douban/data/handler/DoubanAbstractLoadHandler.ts
 var DoubanAbstractLoadHandler = class {
   constructor(doubanPlugin) {
     this.doubanPlugin = doubanPlugin;
   }
-  parse(extract, settings) {
-    let template = this.getTemplate(settings);
-    let frontMatterStart = template.indexOf(BasicConst.YAML_FRONT_MATTER_SYMBOL, 0);
-    let frontMatterEnd = template.indexOf(BasicConst.YAML_FRONT_MATTER_SYMBOL, frontMatterStart + 1);
-    let frontMatter = "";
-    let frontMatterBefore = "";
-    let frontMatterAfter = "";
-    if (frontMatterStart > -1 && frontMatterEnd > -1) {
-      frontMatterBefore = template.substring(0, frontMatterStart);
-      frontMatter = template.substring(frontMatterStart, frontMatterEnd + 3);
-      frontMatterAfter = template.substring(frontMatterEnd + 3);
-      if (frontMatterBefore.length > 0) {
-        frontMatterBefore = this.parsePartText(frontMatterBefore, extract, settings);
+  parse(extract, context) {
+    return __async(this, null, function* () {
+      let template = yield this.getTemplate(context);
+      let frontMatterStart = template.indexOf(BasicConst.YAML_FRONT_MATTER_SYMBOL, 0);
+      let frontMatterEnd = template.indexOf(BasicConst.YAML_FRONT_MATTER_SYMBOL, frontMatterStart + 1);
+      let frontMatter = "";
+      let frontMatterBefore = "";
+      let frontMatterAfter = "";
+      let result = "";
+      if (frontMatterStart > -1 && frontMatterEnd > -1) {
+        frontMatterBefore = template.substring(0, frontMatterStart);
+        frontMatter = template.substring(frontMatterStart, frontMatterEnd + 3);
+        frontMatterAfter = template.substring(frontMatterEnd + 3);
+        if (frontMatterBefore.length > 0) {
+          frontMatterBefore = this.parsePartText(frontMatterBefore, extract, context);
+        }
+        if (frontMatterAfter.length > 0) {
+          frontMatterAfter = this.parsePartText(frontMatterAfter, extract, context);
+        }
+        if (frontMatter.length > 0) {
+          frontMatter = this.parsePartText(frontMatter, extract, context, TemplateTextMode.YAML);
+        }
+        result = frontMatterBefore + frontMatter + frontMatterAfter;
+      } else {
+        result = this.parsePartText(template, extract, context);
       }
-      if (frontMatterAfter.length > 0) {
-        frontMatterAfter = this.parsePartText(frontMatterAfter, extract, settings);
+      let fileName = "";
+      if (SearchHandleMode.FOR_CREATE == context.mode) {
+        fileName = this.parsePartText(this.getFileName(context), extract, context);
       }
-      if (frontMatter.length > 0) {
-        frontMatter = this.parsePartText(frontMatter, extract, settings, TemplateTextMode.YAML);
-      }
-      return frontMatterBefore + frontMatter + frontMatterAfter;
-    } else {
-      return this.parsePartText(template, extract, settings);
-    }
+      return { content: result, fileName };
+    });
+  }
+  getFileName(context) {
+    const { dataFileNamePath } = context.settings;
+    return dataFileNamePath ? dataFileNamePath : DEFAULT_SETTINGS.dataFileNamePath;
   }
   handleSpecialText(text3, textMode) {
     let result = text3;
@@ -14613,54 +15079,60 @@ var DoubanAbstractLoadHandler = class {
     }
     return result;
   }
-  handleContentArray(array, settings, textMode) {
+  handleContentArray(array, context, textMode) {
     let result;
     switch (textMode) {
       case TemplateTextMode.YAML:
         result = array.map(YamlUtil.handleText).join(", ");
         break;
       default:
-        result = array.join(settings.arraySpilt);
+        result = array.join(context.settings.arraySpilt);
     }
     return result;
   }
-  handleSpecialContent(value, textMode = TemplateTextMode.NORMAL, settings = null) {
+  handleSpecialContent(value, textMode = TemplateTextMode.NORMAL, context = null) {
     let result;
+    if (!value) {
+      return i18nHelper.getMessage("410101");
+    }
     if (value instanceof Array) {
-      result = this.handleContentArray(value, settings, textMode);
+      result = this.handleContentArray(value, context, textMode);
     } else if (value instanceof Number) {
-      result = value ? value.toString() : "";
+      result = value.toString();
     } else {
       result = this.handleSpecialText(value, textMode);
     }
     return result;
   }
-  handle(url, editor) {
+  handle(url, context) {
     const requestUrlParam = {
       url,
       method: "GET",
       headers: JSON.parse(this.doubanPlugin.settings.searchHeaders),
       throw: true
     };
-    (0, import_obsidian3.request)(requestUrlParam).then(load).then(this.parseSubjectFromHtml).then((content) => this.toEditor(editor, content)).catch((e) => log.error(i18nHelper.getMessage("130101")));
+    (0, import_obsidian3.request)(requestUrlParam).then(load).then(this.parseSubjectFromHtml).then((content) => this.toEditor(context, content)).catch((e) => log.error(i18nHelper.getMessage("130101")));
   }
-  toEditor(editor, extract) {
-    this.doubanPlugin.putToEditor(editor, extract);
+  toEditor(context, extract) {
+    this.doubanPlugin.putToObsidian(context, extract);
     return extract;
   }
-  getPersonName(name, settings) {
-    if (!name || !settings || !settings.personNameMode) {
+  getPersonName(name, context) {
+    return this.getPersonNameByMode(name, context.settings.personNameMode);
+  }
+  getPersonNameByMode(name, personNameMode) {
+    if (!name || !personNameMode) {
       return "";
     }
     let resultName;
     let regValue;
-    switch (settings.personNameMode) {
+    switch (personNameMode) {
       case PersonNameMode.CH_NAME:
-        regValue = /[\u4e00-\u9fa5]{2,20}/g.exec(name);
+        regValue = /[\u4e00-\u9fa50-9\. \:\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]{2,20}/g.exec(name);
         resultName = regValue ? regValue[0] : name;
         break;
       case PersonNameMode.EN_NAME:
-        regValue = /[a-zA-Z.\s-]{2,50}/g.exec(name);
+        regValue = /[0-9a-zA-Z.\s-]{2,50}/g.exec(name);
         resultName = regValue ? regValue[0] : name;
         break;
       default:
@@ -14681,9 +15153,64 @@ var DoubanAbstractLoadHandler = class {
     s = s.replace(/<br\/>/g, "\n");
     return s;
   }
-  parsePartText(template, extract, settings, textMode = TemplateTextMode.NORMAL) {
-    const resultContent = template.replaceAll(DoubanParameter.ID, extract.id).replaceAll(DoubanParameter.TITLE, this.handleSpecialContent(extract.title, textMode)).replaceAll(DoubanParameter.TYPE, extract.type).replaceAll(DoubanParameter.SCORE, this.handleSpecialContent(extract.score)).replaceAll(DoubanParameter.IMAGE, extract.image).replaceAll(DoubanParameter.URL, extract.url).replaceAll(DoubanParameter.DESC, this.handleSpecialContent(extract.desc, textMode)).replaceAll(DoubanParameter.PUBLISHER, extract.publisher).replaceAll(DoubanParameter.DATE_PUBLISHED, extract.datePublished ? (0, import_obsidian3.moment)(extract.datePublished).format(settings.dateFormat) : "").replaceAll(DoubanParameter.TIME_PUBLISHED, extract.datePublished ? (0, import_obsidian3.moment)(extract.datePublished).format(settings.timeFormat) : "").replaceAll(DoubanParameter.GENRE, this.handleSpecialContent(extract.genre, textMode, settings));
-    return this.parseText(resultContent, extract, settings, textMode);
+  parsePartText(template, extract, context, textMode = TemplateTextMode.NORMAL) {
+    let resultContent = this.handleCustomVariable(template, context);
+    resultContent = resultContent.replaceAll(DoubanParameter.ID, extract.id).replaceAll(DoubanParameter.TITLE, this.handleSpecialContent(this.getPersonName(extract.title, context), textMode)).replaceAll(DoubanParameter.TYPE, extract.type).replaceAll(DoubanParameter.SCORE, this.handleSpecialContent(extract.score)).replaceAll(DoubanParameter.IMAGE, extract.image).replaceAll(DoubanParameter.URL, extract.url).replaceAll(DoubanParameter.DESC, this.handleSpecialContent(extract.desc, textMode)).replaceAll(DoubanParameter.PUBLISHER, extract.publisher).replaceAll(DoubanParameter.DATE_PUBLISHED, extract.datePublished ? (0, import_obsidian3.moment)(extract.datePublished).format(context.settings.dateFormat) : "").replaceAll(DoubanParameter.TIME_PUBLISHED, extract.datePublished ? (0, import_obsidian3.moment)(extract.datePublished).format(context.settings.timeFormat) : "").replaceAll(DoubanParameter.CURRENT_DATE, (0, import_obsidian3.moment)(new Date()).format(context.settings.dateFormat)).replaceAll(DoubanParameter.CURRENT_TIME, (0, import_obsidian3.moment)(new Date()).format(context.settings.timeFormat)).replaceAll(DoubanParameter.GENRE, this.handleSpecialContent(extract.genre, textMode, context));
+    return this.parseText(resultContent, extract, context, textMode);
+  }
+  handleCustomVariable(template, context) {
+    let customProperties = context.settings.customProperties;
+    let resultContent = template;
+    if (!customProperties) {
+      return resultContent;
+    }
+    customProperties.filter((customProperty) => customProperty.name && customProperty.field && (customProperty.field == SupportType.ALL || customProperty.field == this.getSupportType())).forEach((customProperty) => {
+      resultContent = resultContent.replaceAll(`{{${customProperty.name}}}`, customProperty.value);
+    });
+    return resultContent;
+  }
+  getTemplateKey() {
+    let templateKey;
+    switch (this.getSupportType()) {
+      case SupportType.MOVIE:
+        templateKey = TemplateKey.movieTemplateFile;
+        break;
+      case SupportType.BOOK:
+        templateKey = TemplateKey.bookTemplateFile;
+        break;
+      case SupportType.MUSIC:
+        templateKey = TemplateKey.musicTemplateFile;
+        break;
+      case SupportType.TELEPLAY:
+        templateKey = TemplateKey.teleplayTemplateFile;
+        break;
+      case SupportType.GAME:
+        templateKey = TemplateKey.gameTemplateFile;
+        break;
+      case SupportType.NOTE:
+        templateKey = TemplateKey.noteTemplateFile;
+        break;
+      default:
+        templateKey = null;
+    }
+    return templateKey;
+  }
+  getTemplate(context) {
+    return __async(this, null, function* () {
+      const tempKey = this.getTemplateKey();
+      const templatePath = context.settings[tempKey];
+      if (!templatePath || StringUtil.isBlank(templatePath)) {
+        return getDefaultTemplateContent(tempKey);
+      }
+      const defaultContent = getDefaultTemplateContent(tempKey);
+      let firstLinkpathDest = this.doubanPlugin.app.metadataCache.getFirstLinkpathDest(templatePath, "");
+      if (!firstLinkpathDest) {
+        return defaultContent;
+      } else {
+        const val2 = yield this.doubanPlugin.fileHandler.getFileContent(firstLinkpathDest.path);
+        return val2 ? val2 : defaultContent;
+      }
+    });
   }
 };
 
@@ -14698,7 +15225,8 @@ var DoubanBookParameter = {
   series: "{{series}}",
   menu: "{{menu}}",
   price: "{{price}}",
-  binding: "{{binding}}"
+  binding: "{{binding}}",
+  producer: "{{producer}}"
 };
 
 // src/douban/data/handler/DoubanBookLoadHandler.ts
@@ -14706,11 +15234,11 @@ var DoubanBookLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.bookTemplate;
+  getSupportType() {
+    return SupportType.BOOK;
   }
-  parseText(beforeContent, extract, settings, textMode) {
-    return beforeContent.replaceAll(DoubanBookParameter.author, super.handleSpecialContent(extract.author.map(this.handleSpecialAuthorName), textMode, settings)).replaceAll(DoubanBookParameter.translator, super.handleSpecialContent(extract.translator, textMode, settings)).replaceAll(DoubanBookParameter.isbn, extract.isbn).replaceAll(DoubanBookParameter.originalTitle, super.handleSpecialContent(extract.originalTitle, textMode)).replaceAll(DoubanBookParameter.subTitle, super.handleSpecialContent(extract.subTitle, textMode)).replaceAll(DoubanBookParameter.totalPage, super.handleSpecialContent(extract.totalPage, textMode)).replaceAll(DoubanBookParameter.menu, extract.menu.join("\n")).replaceAll(DoubanBookParameter.price, super.handleSpecialContent(extract.price, textMode)).replaceAll(DoubanBookParameter.series, super.handleSpecialContent(extract.series, textMode)).replaceAll(DoubanBookParameter.binding, super.handleSpecialContent(extract.binding, textMode));
+  parseText(beforeContent, extract, context, textMode) {
+    return beforeContent.replaceAll(DoubanBookParameter.author, super.handleSpecialContent(extract.author.map(this.handleSpecialAuthorName), textMode, context)).replaceAll(DoubanBookParameter.translator, super.handleSpecialContent(extract.translator, textMode, context)).replaceAll(DoubanBookParameter.isbn, extract.isbn).replaceAll(DoubanBookParameter.originalTitle, super.handleSpecialContent(extract.originalTitle, textMode)).replaceAll(DoubanBookParameter.subTitle, super.handleSpecialContent(extract.subTitle, textMode)).replaceAll(DoubanBookParameter.totalPage, super.handleSpecialContent(extract.totalPage, textMode)).replaceAll(DoubanBookParameter.menu, extract.menu.join("\n")).replaceAll(DoubanBookParameter.price, super.handleSpecialContent(extract.price, textMode)).replaceAll(DoubanBookParameter.series, super.handleSpecialContent(extract.series, textMode)).replaceAll(DoubanBookParameter.binding, super.handleSpecialContent(extract.binding, textMode)).replaceAll(DoubanBookParameter.producer, super.handleSpecialContent(extract.producer, textMode));
   }
   support(extract) {
     return extract && extract.type && (extract.type.contains("\u4E66\u7C4D") || extract.type.contains("Book") || extract.type.contains("book"));
@@ -14740,7 +15268,7 @@ var DoubanBookLoadHandler = class extends DoubanAbstractLoadHandler {
         html3(info.parent).find("a").map((index3, a) => {
           value.push(html3(a).text().trim());
         });
-      } else if (key.indexOf("\u4F5C\u8005") >= 0 || key.indexOf("\u4E1B\u4E66") >= 0 || key.indexOf("\u51FA\u7248\u793E") >= 0) {
+      } else if (key.indexOf("\u4F5C\u8005") >= 0 || key.indexOf("\u4E1B\u4E66") >= 0 || key.indexOf("\u51FA\u7248\u793E") >= 0 || key.indexOf("\u51FA\u54C1\u65B9") >= 0) {
         value = html3(info.next.next).text().trim();
       } else {
         value = html3(info.next).text().trim();
@@ -14773,7 +15301,8 @@ var DoubanBookLoadHandler = class extends DoubanAbstractLoadHandler {
       desc,
       url,
       genre: [],
-      binding: valueMap.has("binding") ? valueMap.get("binding") : ""
+      binding: valueMap.has("binding") ? valueMap.get("binding") : "",
+      producer: valueMap.has("producer") ? valueMap.get("producer") : ""
     };
     return result;
   }
@@ -14789,7 +15318,8 @@ var BookKeyValueMap = new Map([
   ["\u4E1B\u4E66:", "series"],
   ["ISBN:", "isbn"],
   ["\u8BD1\u8005", "translator"],
-  ["\u526F\u6807\u9898:", "subTitle"]
+  ["\u526F\u6807\u9898:", "subTitle"],
+  ["\u51FA\u54C1\u65B9:", "producer"]
 ]);
 
 // src/utils/SchemaOrg.ts
@@ -14815,27 +15345,27 @@ var DoubanMovieLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.movieTemplate;
+  getSupportType() {
+    return SupportType.MOVIE;
   }
-  parseText(beforeContent, extract, settings) {
-    return beforeContent.replaceAll("{{originalTitle}}", extract.originalTitle ? extract.originalTitle : "").replaceAll("{{director}}", extract.director ? extract.director.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{actor}}", extract.actor ? extract.actor.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{author}}", extract.author ? extract.author.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "");
+  parseText(beforeContent, extract, context) {
+    const { settings } = context;
+    return beforeContent.replaceAll("{{originalTitle}}", extract.originalTitle ? extract.originalTitle : "").replaceAll("{{director}}", extract.director ? extract.director.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{actor}}", extract.actor ? extract.actor.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{author}}", extract.author ? extract.author.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "");
   }
   support(extract) {
     return extract && extract.type && (extract.type.contains("\u7535\u5F71") || extract.type.contains("Movie") || extract.type.contains("movie"));
   }
   parseSubjectFromHtml(data2) {
     return data2("script").get().filter((scd) => data2(scd).attr("type") == "application/ld+json").map((i) => {
+      var _a2, _b;
       let item = data2(i).text();
       item = super.html_decode(item);
       let obj = JSON.parse(item.replace(/[\r\n\s+]/g, ""));
       let idPattern = /(\d){5,10}/g;
       let id = idPattern.exec(obj.url);
       let name = obj.name;
-      let titleExec = /[\u4e00-\u9fa5]{2,20}/g.exec(name);
-      let title = titleExec ? titleExec[0] : name;
-      let originalTitleExec = /[a-zA-Z.\s\-]{2,50}/g.exec(name);
-      let originalTitle = originalTitleExec ? originalTitleExec[0] : name;
+      let title = (_a2 = super.getPersonNameByMode(name, PersonNameMode.CH_NAME)) != null ? _a2 : name;
+      let originalTitle = (_b = super.getPersonNameByMode(name, PersonNameMode.EN_NAME)) != null ? _b : name;
       const result = {
         id: id ? id[0] : "",
         title,
@@ -14863,11 +15393,12 @@ var DoubanMusicLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.musicTemplate;
+  getSupportType() {
+    return SupportType.MUSIC;
   }
-  parseText(beforeContent, extract, settings) {
-    return beforeContent.replaceAll("{{actor}}", extract.actor ? extract.actor.join(settings.arraySpilt) : "").replaceAll("{{barcode}}", extract.barcode ? extract.barcode : "").replaceAll("{{medium}}", extract.medium ? extract.medium : "").replaceAll("{{albumType}}", extract.albumType ? extract.albumType : "").replaceAll("{{numberOfRecords}}", extract.numberOfRecords ? extract.numberOfRecords + "" : "");
+  parseText(beforeContent, extract, context) {
+    const { settings } = context;
+    return beforeContent.replaceAll("{{actor}}", extract.actor ? extract.actor.join(settings.arraySpilt) : "").replaceAll("{{barcode}}", extract.barcode ? extract.barcode : "").replaceAll("{{medium}}", extract.medium ? extract.medium : "").replaceAll("{{albumType}}", extract.albumType ? extract.albumType : "").replaceAll("{{records}}", extract.records ? extract.records + "" : "");
   }
   support(extract) {
     return extract && extract.type && (extract.type.contains("\u97F3\u4E50") || extract.type.contains("Music") || extract.type.contains("music"));
@@ -14900,7 +15431,7 @@ var DoubanMusicLoadHandler = class extends DoubanAbstractLoadHandler {
       datePublished: valueMap.has("datePublished") ? new Date(valueMap.get("datePublished")) : void 0,
       publisher: valueMap.has("publisher") ? valueMap.get("publisher") : "",
       score: Number(score),
-      numberOfRecords: valueMap.has("numberOfRecords") ? Number(valueMap.get("numberOfRecords")) : null,
+      records: valueMap.has("records") ? Number(valueMap.get("records")) : null,
       id: id ? id[0] : "",
       type: "Music",
       title,
@@ -14922,7 +15453,7 @@ var MusicKeyValueMap = new Map([
   ["\u4E13\u8F91\u7C7B\u578B:", "albumType"],
   ["\u4ECB\u8D28:", "medium"],
   ["\u51FA\u7248\u8005:", "publisher"],
-  ["\u5531\u7247\u6570:", "numberOfRecords"],
+  ["\u5531\u7247\u6570:", "records"],
   ["\u6761\u5F62\u7801:", "barcode"]
 ]);
 
@@ -14932,10 +15463,10 @@ var DoubanNoteLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.noteTemplate;
+  getSupportType() {
+    return SupportType.NOTE;
   }
-  parseText(beforeContent, extract, settings) {
+  parseText(beforeContent, extract, context) {
     return beforeContent.replaceAll("{{authorUrl}}", extract.authorUrl ? extract.authorUrl : "").replaceAll("{{content}}", extract.content ? extract.content : "").replaceAll("{{author}}", extract.author ? extract.author : "");
   }
   support(extract) {
@@ -14973,10 +15504,10 @@ var DoubanNoteLoadHandler = class extends DoubanAbstractLoadHandler {
 
 // src/douban/data/handler/DoubanOtherLoadHandler.ts
 var DoubanOtherLoadHandler = class extends DoubanAbstractLoadHandler {
-  getTemplate(settings) {
-    return "";
+  getSupportType() {
+    return SupportType.ALL;
   }
-  parseText(beforeContent, extract, settings) {
+  parseText(beforeContent, extract, context) {
     log.warn(i18nHelper.getMessage("140101"));
     return "";
   }
@@ -14993,11 +15524,12 @@ var DoubanTeleplayLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.movieTemplate;
+  getSupportType() {
+    return SupportType.TELEPLAY;
   }
-  parseText(beforeContent, extract, settings) {
-    return beforeContent.replaceAll("{{originalTitle}}", extract.originalTitle ? extract.originalTitle : "").replaceAll("{{director}}", extract.director ? extract.director.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{actor}}", extract.actor ? extract.actor.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{author}}", extract.author ? extract.author.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, settings)).filter((c) => c).join(settings.arraySpilt) : "");
+  parseText(beforeContent, extract, context) {
+    const { settings } = context;
+    return beforeContent.replaceAll("{{originalTitle}}", extract.originalTitle ? extract.originalTitle : "").replaceAll("{{director}}", extract.director ? extract.director.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{actor}}", extract.actor ? extract.actor.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "").replaceAll("{{author}}", extract.author ? extract.author.map(SchemaOrg.getPersonName).map((name) => super.getPersonName(name, context)).filter((c) => c).join(settings.arraySpilt) : "");
   }
   support(extract) {
     return extract && extract.type && (extract.type.contains("\u7535\u89C6\u5267") || extract.type.contains("Teleplay") || extract.type.contains("teleplay"));
@@ -15041,10 +15573,11 @@ var DoubanGameLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
   }
-  getTemplate(settings) {
-    return settings.gameTemplate;
+  getSupportType() {
+    return SupportType.GAME;
   }
-  parseText(beforeContent, extract, settings) {
+  parseText(beforeContent, extract, context) {
+    const { settings } = context;
     return beforeContent.replaceAll("{{platform}}", extract.platform ? extract.platform.join(settings.arraySpilt) : "").replaceAll("{{aliases}}", extract.aliases ? extract.aliases.join(settings.arraySpilt) : "").replaceAll("{{developer}}", extract.developer ? extract.developer : "");
   }
   support(extract) {
@@ -15122,42 +15655,42 @@ var DoubanSearchChooseItemHandler = class {
       this._doubanSubjectHandlerDefault
     ];
   }
-  handle(searchExtract, editor) {
+  handle(searchExtract, context) {
     if (!searchExtract) {
       return;
     }
     let doubanSubjectHandlers = this._doubanSubjectHandlers.filter((h) => h.support(searchExtract));
     if (doubanSubjectHandlers && doubanSubjectHandlers.length > 0) {
-      doubanSubjectHandlers[0].handle(searchExtract.url, editor);
+      doubanSubjectHandlers[0].handle(searchExtract.url, context);
     } else {
-      this._doubanSubjectHandlerDefault.handle(searchExtract.url, editor);
+      this._doubanSubjectHandlerDefault.handle(searchExtract.url, context);
     }
   }
-  parseText(extract, settings) {
-    if (!settings) {
-      return "";
-    }
-    let doubanSubjectHandlers = this._doubanSubjectHandlers.filter((h) => h.support(extract));
-    if (doubanSubjectHandlers && doubanSubjectHandlers.length > 0) {
-      let result = doubanSubjectHandlers.map((h) => h.parse(extract, settings));
-      if (result && result.length > 0) {
-        return result[0];
+  parseText(extract, context) {
+    return __async(this, null, function* () {
+      let doubanSubjectHandlers = this._doubanSubjectHandlers.filter((h) => h.support(extract));
+      let result = "";
+      if (doubanSubjectHandlers && doubanSubjectHandlers.length > 0) {
+        let result2 = yield doubanSubjectHandlers.map((h) => h.parse(extract, context));
+        if (result2 && result2.length > 0) {
+          return result2[0];
+        } else {
+          return { content: "" };
+        }
       } else {
-        return "";
+        return this._doubanSubjectHandlerDefault.parse(extract, context);
       }
-    } else {
-      return this._doubanSubjectHandlerDefault.parse(extract, settings);
-    }
+    });
   }
 };
 
 // src/douban/data/search/DoubanSearchModal.ts
 var import_obsidian4 = __toModule(require("obsidian"));
 var DoubanSearchModal = class extends import_obsidian4.Modal {
-  constructor(app2, plugin, editor) {
+  constructor(app2, plugin, context) {
     super(app2);
     this.plugin = plugin;
-    this.editor = editor;
+    this.context = context;
   }
   onOpen() {
     let { contentEl } = this;
@@ -15192,247 +15725,2309 @@ var DoubanSearchModal = class extends import_obsidian4.Modal {
       let { contentEl } = this;
       contentEl.empty();
       if (this.searchTerm) {
-        yield this.plugin.search(this.searchTerm, this.editor);
+        yield this.plugin.search(this.searchTerm, this.context);
       }
     });
   }
 };
 
-// src/douban/DoubanSettingTab.ts
+// src/douban/setting/DoubanSettingTab.ts
+var import_obsidian13 = __toModule(require("obsidian"));
+
+// src/douban/setting/SettingsManager.ts
+var SettingsManager = class {
+  constructor(app2, plugin) {
+    this.cleanupFns = [];
+    this.app = app2;
+    this.plugin = plugin;
+    this.settings = plugin.settings;
+  }
+  getSettingWithDefault(key) {
+    return [this.settings[key], DEFAULT_SETTINGS[key]];
+  }
+  getSetting(key) {
+    return this.settings[key];
+  }
+  updateSetting(key, value) {
+    return __async(this, null, function* () {
+      this.settings[key] = value;
+      yield this.plugin.saveSettings();
+    });
+  }
+};
+
+// src/douban/setting/OutputSettingsHelper.ts
+var import_obsidian9 = __toModule(require("obsidian"));
+
+// src/douban/setting/model/FileSuggest.ts
+var import_obsidian6 = __toModule(require("obsidian"));
+
+// src/douban/setting/model/TextInputSuggest.ts
 var import_obsidian5 = __toModule(require("obsidian"));
-var DoubanSettingTab = class extends import_obsidian5.PluginSettingTab {
+
+// src/douban/setting/model/Suggest.ts
+var wrapAround = (value, size) => {
+  return (value % size + size) % size;
+};
+var Suggest = class {
+  constructor(owner, containerEl, scope) {
+    this.owner = owner;
+    this.containerEl = containerEl;
+    containerEl.on("click", ".suggestion-item", this.onSuggestionClick.bind(this));
+    containerEl.on("mousemove", ".suggestion-item", this.onSuggestionMouseover.bind(this));
+    scope.register([], "ArrowUp", (event) => {
+      if (!event.isComposing) {
+        this.setSelectedItem(this.selectedItem - 1, true);
+        return false;
+      }
+    });
+    scope.register([], "ArrowDown", (event) => {
+      if (!event.isComposing) {
+        this.setSelectedItem(this.selectedItem + 1, true);
+        return false;
+      }
+    });
+    scope.register([], "Enter", (event) => {
+      if (!event.isComposing) {
+        this.useSelectedItem(event);
+        return false;
+      }
+    });
+  }
+  onSuggestionClick(event, el) {
+    event.preventDefault();
+    const item = this.suggestions.indexOf(el);
+    this.setSelectedItem(item, false);
+    this.useSelectedItem(event);
+  }
+  onSuggestionMouseover(_event, el) {
+    const item = this.suggestions.indexOf(el);
+    this.setSelectedItem(item, false);
+  }
+  setSuggestions(values) {
+    this.containerEl.empty();
+    const suggestionEls = [];
+    values.forEach((value) => {
+      const suggestionEl = this.containerEl.createDiv("suggestion-item");
+      this.owner.renderSuggestion(value, suggestionEl);
+      suggestionEls.push(suggestionEl);
+    });
+    this.values = values;
+    this.suggestions = suggestionEls;
+    this.setSelectedItem(0, false);
+  }
+  useSelectedItem(event) {
+    const currentValue = this.values[this.selectedItem];
+    if (currentValue) {
+      this.owner.selectSuggestion(currentValue, event);
+    }
+  }
+  setSelectedItem(selectedIndex, scrollIntoView) {
+    const normalizedIndex = wrapAround(selectedIndex, this.suggestions.length);
+    const prevSelectedSuggestion = this.suggestions[this.selectedItem];
+    const selectedSuggestion = this.suggestions[normalizedIndex];
+    prevSelectedSuggestion == null ? void 0 : prevSelectedSuggestion.removeClass("is-selected");
+    selectedSuggestion == null ? void 0 : selectedSuggestion.addClass("is-selected");
+    this.selectedItem = normalizedIndex;
+    if (scrollIntoView) {
+      selectedSuggestion.scrollIntoView(false);
+    }
+  }
+};
+
+// node_modules/@popperjs/core/lib/enums.js
+var top = "top";
+var bottom = "bottom";
+var right = "right";
+var left = "left";
+var auto = "auto";
+var basePlacements = [top, bottom, right, left];
+var start = "start";
+var end2 = "end";
+var clippingParents = "clippingParents";
+var viewport = "viewport";
+var popper = "popper";
+var reference = "reference";
+var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function(acc, placement) {
+  return acc.concat([placement + "-" + start, placement + "-" + end2]);
+}, []);
+var placements = /* @__PURE__ */ [].concat(basePlacements, [auto]).reduce(function(acc, placement) {
+  return acc.concat([placement, placement + "-" + start, placement + "-" + end2]);
+}, []);
+var beforeRead = "beforeRead";
+var read = "read";
+var afterRead = "afterRead";
+var beforeMain = "beforeMain";
+var main = "main";
+var afterMain = "afterMain";
+var beforeWrite = "beforeWrite";
+var write = "write";
+var afterWrite = "afterWrite";
+var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
+
+// node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
+function getNodeName(element) {
+  return element ? (element.nodeName || "").toLowerCase() : null;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindow.js
+function getWindow(node) {
+  if (node == null) {
+    return window;
+  }
+  if (node.toString() !== "[object Window]") {
+    var ownerDocument = node.ownerDocument;
+    return ownerDocument ? ownerDocument.defaultView || window : window;
+  }
+  return node;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
+function isElement(node) {
+  var OwnElement = getWindow(node).Element;
+  return node instanceof OwnElement || node instanceof Element;
+}
+function isHTMLElement(node) {
+  var OwnElement = getWindow(node).HTMLElement;
+  return node instanceof OwnElement || node instanceof HTMLElement;
+}
+function isShadowRoot(node) {
+  if (typeof ShadowRoot === "undefined") {
+    return false;
+  }
+  var OwnElement = getWindow(node).ShadowRoot;
+  return node instanceof OwnElement || node instanceof ShadowRoot;
+}
+
+// node_modules/@popperjs/core/lib/modifiers/applyStyles.js
+function applyStyles(_ref) {
+  var state = _ref.state;
+  Object.keys(state.elements).forEach(function(name) {
+    var style = state.styles[name] || {};
+    var attributes2 = state.attributes[name] || {};
+    var element = state.elements[name];
+    if (!isHTMLElement(element) || !getNodeName(element)) {
+      return;
+    }
+    Object.assign(element.style, style);
+    Object.keys(attributes2).forEach(function(name2) {
+      var value = attributes2[name2];
+      if (value === false) {
+        element.removeAttribute(name2);
+      } else {
+        element.setAttribute(name2, value === true ? "" : value);
+      }
+    });
+  });
+}
+function effect(_ref2) {
+  var state = _ref2.state;
+  var initialStyles = {
+    popper: {
+      position: state.options.strategy,
+      left: "0",
+      top: "0",
+      margin: "0"
+    },
+    arrow: {
+      position: "absolute"
+    },
+    reference: {}
+  };
+  Object.assign(state.elements.popper.style, initialStyles.popper);
+  state.styles = initialStyles;
+  if (state.elements.arrow) {
+    Object.assign(state.elements.arrow.style, initialStyles.arrow);
+  }
+  return function() {
+    Object.keys(state.elements).forEach(function(name) {
+      var element = state.elements[name];
+      var attributes2 = state.attributes[name] || {};
+      var styleProperties = Object.keys(state.styles.hasOwnProperty(name) ? state.styles[name] : initialStyles[name]);
+      var style = styleProperties.reduce(function(style2, property) {
+        style2[property] = "";
+        return style2;
+      }, {});
+      if (!isHTMLElement(element) || !getNodeName(element)) {
+        return;
+      }
+      Object.assign(element.style, style);
+      Object.keys(attributes2).forEach(function(attribute) {
+        element.removeAttribute(attribute);
+      });
+    });
+  };
+}
+var applyStyles_default = {
+  name: "applyStyles",
+  enabled: true,
+  phase: "write",
+  fn: applyStyles,
+  effect,
+  requires: ["computeStyles"]
+};
+
+// node_modules/@popperjs/core/lib/utils/getBasePlacement.js
+function getBasePlacement(placement) {
+  return placement.split("-")[0];
+}
+
+// node_modules/@popperjs/core/lib/utils/math.js
+var max = Math.max;
+var min = Math.min;
+var round = Math.round;
+
+// node_modules/@popperjs/core/lib/utils/userAgent.js
+function getUAString() {
+  var uaData = navigator.userAgentData;
+  if (uaData != null && uaData.brands) {
+    return uaData.brands.map(function(item) {
+      return item.brand + "/" + item.version;
+    }).join(" ");
+  }
+  return navigator.userAgent;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+function isLayoutViewport() {
+  return !/^((?!chrome|android).)*safari/i.test(getUAString());
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
+function getBoundingClientRect(element, includeScale, isFixedStrategy) {
+  if (includeScale === void 0) {
+    includeScale = false;
+  }
+  if (isFixedStrategy === void 0) {
+    isFixedStrategy = false;
+  }
+  var clientRect = element.getBoundingClientRect();
+  var scaleX = 1;
+  var scaleY = 1;
+  if (includeScale && isHTMLElement(element)) {
+    scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+    scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
+  }
+  var _ref = isElement(element) ? getWindow(element) : window, visualViewport = _ref.visualViewport;
+  var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
+  var x = (clientRect.left + (addVisualOffsets && visualViewport ? visualViewport.offsetLeft : 0)) / scaleX;
+  var y = (clientRect.top + (addVisualOffsets && visualViewport ? visualViewport.offsetTop : 0)) / scaleY;
+  var width = clientRect.width / scaleX;
+  var height = clientRect.height / scaleY;
+  return {
+    width,
+    height,
+    top: y,
+    right: x + width,
+    bottom: y + height,
+    left: x,
+    x,
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
+function getLayoutRect(element) {
+  var clientRect = getBoundingClientRect(element);
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
+  if (Math.abs(clientRect.width - width) <= 1) {
+    width = clientRect.width;
+  }
+  if (Math.abs(clientRect.height - height) <= 1) {
+    height = clientRect.height;
+  }
+  return {
+    x: element.offsetLeft,
+    y: element.offsetTop,
+    width,
+    height
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/contains.js
+function contains2(parent2, child) {
+  var rootNode = child.getRootNode && child.getRootNode();
+  if (parent2.contains(child)) {
+    return true;
+  } else if (rootNode && isShadowRoot(rootNode)) {
+    var next2 = child;
+    do {
+      if (next2 && parent2.isSameNode(next2)) {
+        return true;
+      }
+      next2 = next2.parentNode || next2.host;
+    } while (next2);
+  }
+  return false;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
+function getComputedStyle(element) {
+  return getWindow(element).getComputedStyle(element);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
+function isTableElement(element) {
+  return ["table", "td", "th"].indexOf(getNodeName(element)) >= 0;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
+function getDocumentElement(element) {
+  return ((isElement(element) ? element.ownerDocument : element.document) || window.document).documentElement;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
+function getParentNode(element) {
+  if (getNodeName(element) === "html") {
+    return element;
+  }
+  return element.assignedSlot || element.parentNode || (isShadowRoot(element) ? element.host : null) || getDocumentElement(element);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
+function getTrueOffsetParent(element) {
+  if (!isHTMLElement(element) || getComputedStyle(element).position === "fixed") {
+    return null;
+  }
+  return element.offsetParent;
+}
+function getContainingBlock(element) {
+  var isFirefox = /firefox/i.test(getUAString());
+  var isIE = /Trident/i.test(getUAString());
+  if (isIE && isHTMLElement(element)) {
+    var elementCss = getComputedStyle(element);
+    if (elementCss.position === "fixed") {
+      return null;
+    }
+  }
+  var currentNode = getParentNode(element);
+  if (isShadowRoot(currentNode)) {
+    currentNode = currentNode.host;
+  }
+  while (isHTMLElement(currentNode) && ["html", "body"].indexOf(getNodeName(currentNode)) < 0) {
+    var css2 = getComputedStyle(currentNode);
+    if (css2.transform !== "none" || css2.perspective !== "none" || css2.contain === "paint" || ["transform", "perspective"].indexOf(css2.willChange) !== -1 || isFirefox && css2.willChange === "filter" || isFirefox && css2.filter && css2.filter !== "none") {
+      return currentNode;
+    } else {
+      currentNode = currentNode.parentNode;
+    }
+  }
+  return null;
+}
+function getOffsetParent(element) {
+  var window2 = getWindow(element);
+  var offsetParent = getTrueOffsetParent(element);
+  while (offsetParent && isTableElement(offsetParent) && getComputedStyle(offsetParent).position === "static") {
+    offsetParent = getTrueOffsetParent(offsetParent);
+  }
+  if (offsetParent && (getNodeName(offsetParent) === "html" || getNodeName(offsetParent) === "body" && getComputedStyle(offsetParent).position === "static")) {
+    return window2;
+  }
+  return offsetParent || getContainingBlock(element) || window2;
+}
+
+// node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
+function getMainAxisFromPlacement(placement) {
+  return ["top", "bottom"].indexOf(placement) >= 0 ? "x" : "y";
+}
+
+// node_modules/@popperjs/core/lib/utils/within.js
+function within(min2, value, max2) {
+  return max(min2, min(value, max2));
+}
+function withinMaxClamp(min2, value, max2) {
+  var v = within(min2, value, max2);
+  return v > max2 ? max2 : v;
+}
+
+// node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
+function getFreshSideObject() {
+  return {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
+function mergePaddingObject(paddingObject) {
+  return Object.assign({}, getFreshSideObject(), paddingObject);
+}
+
+// node_modules/@popperjs/core/lib/utils/expandToHashMap.js
+function expandToHashMap(value, keys) {
+  return keys.reduce(function(hashMap, key) {
+    hashMap[key] = value;
+    return hashMap;
+  }, {});
+}
+
+// node_modules/@popperjs/core/lib/modifiers/arrow.js
+var toPaddingObject = function toPaddingObject2(padding, state) {
+  padding = typeof padding === "function" ? padding(Object.assign({}, state.rects, {
+    placement: state.placement
+  })) : padding;
+  return mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+};
+function arrow(_ref) {
+  var _state$modifiersData$;
+  var state = _ref.state, name = _ref.name, options = _ref.options;
+  var arrowElement = state.elements.arrow;
+  var popperOffsets2 = state.modifiersData.popperOffsets;
+  var basePlacement = getBasePlacement(state.placement);
+  var axis = getMainAxisFromPlacement(basePlacement);
+  var isVertical = [left, right].indexOf(basePlacement) >= 0;
+  var len = isVertical ? "height" : "width";
+  if (!arrowElement || !popperOffsets2) {
+    return;
+  }
+  var paddingObject = toPaddingObject(options.padding, state);
+  var arrowRect = getLayoutRect(arrowElement);
+  var minProp = axis === "y" ? top : left;
+  var maxProp = axis === "y" ? bottom : right;
+  var endDiff = state.rects.reference[len] + state.rects.reference[axis] - popperOffsets2[axis] - state.rects.popper[len];
+  var startDiff = popperOffsets2[axis] - state.rects.reference[axis];
+  var arrowOffsetParent = getOffsetParent(arrowElement);
+  var clientSize = arrowOffsetParent ? axis === "y" ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
+  var centerToReference = endDiff / 2 - startDiff / 2;
+  var min2 = paddingObject[minProp];
+  var max2 = clientSize - arrowRect[len] - paddingObject[maxProp];
+  var center = clientSize / 2 - arrowRect[len] / 2 + centerToReference;
+  var offset2 = within(min2, center, max2);
+  var axisProp = axis;
+  state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset2, _state$modifiersData$.centerOffset = offset2 - center, _state$modifiersData$);
+}
+function effect2(_ref2) {
+  var state = _ref2.state, options = _ref2.options;
+  var _options$element = options.element, arrowElement = _options$element === void 0 ? "[data-popper-arrow]" : _options$element;
+  if (arrowElement == null) {
+    return;
+  }
+  if (typeof arrowElement === "string") {
+    arrowElement = state.elements.popper.querySelector(arrowElement);
+    if (!arrowElement) {
+      return;
+    }
+  }
+  if (true) {
+    if (!isHTMLElement(arrowElement)) {
+      console.error(['Popper: "arrow" element must be an HTMLElement (not an SVGElement).', "To use an SVG arrow, wrap it in an HTMLElement that will be used as", "the arrow."].join(" "));
+    }
+  }
+  if (!contains2(state.elements.popper, arrowElement)) {
+    if (true) {
+      console.error(['Popper: "arrow" modifier\'s `element` must be a child of the popper', "element."].join(" "));
+    }
+    return;
+  }
+  state.elements.arrow = arrowElement;
+}
+var arrow_default = {
+  name: "arrow",
+  enabled: true,
+  phase: "main",
+  fn: arrow,
+  effect: effect2,
+  requires: ["popperOffsets"],
+  requiresIfExists: ["preventOverflow"]
+};
+
+// node_modules/@popperjs/core/lib/utils/getVariation.js
+function getVariation(placement) {
+  return placement.split("-")[1];
+}
+
+// node_modules/@popperjs/core/lib/modifiers/computeStyles.js
+var unsetSides = {
+  top: "auto",
+  right: "auto",
+  bottom: "auto",
+  left: "auto"
+};
+function roundOffsetsByDPR(_ref) {
+  var x = _ref.x, y = _ref.y;
+  var win = window;
+  var dpr = win.devicePixelRatio || 1;
+  return {
+    x: round(x * dpr) / dpr || 0,
+    y: round(y * dpr) / dpr || 0
+  };
+}
+function mapToStyles(_ref2) {
+  var _Object$assign2;
+  var popper2 = _ref2.popper, popperRect = _ref2.popperRect, placement = _ref2.placement, variation = _ref2.variation, offsets = _ref2.offsets, position = _ref2.position, gpuAcceleration = _ref2.gpuAcceleration, adaptive = _ref2.adaptive, roundOffsets = _ref2.roundOffsets, isFixed = _ref2.isFixed;
+  var _offsets$x = offsets.x, x = _offsets$x === void 0 ? 0 : _offsets$x, _offsets$y = offsets.y, y = _offsets$y === void 0 ? 0 : _offsets$y;
+  var _ref3 = typeof roundOffsets === "function" ? roundOffsets({
+    x,
+    y
+  }) : {
+    x,
+    y
+  };
+  x = _ref3.x;
+  y = _ref3.y;
+  var hasX = offsets.hasOwnProperty("x");
+  var hasY = offsets.hasOwnProperty("y");
+  var sideX = left;
+  var sideY = top;
+  var win = window;
+  if (adaptive) {
+    var offsetParent = getOffsetParent(popper2);
+    var heightProp = "clientHeight";
+    var widthProp = "clientWidth";
+    if (offsetParent === getWindow(popper2)) {
+      offsetParent = getDocumentElement(popper2);
+      if (getComputedStyle(offsetParent).position !== "static" && position === "absolute") {
+        heightProp = "scrollHeight";
+        widthProp = "scrollWidth";
+      }
+    }
+    offsetParent = offsetParent;
+    if (placement === top || (placement === left || placement === right) && variation === end2) {
+      sideY = bottom;
+      var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
+      y -= offsetY - popperRect.height;
+      y *= gpuAcceleration ? 1 : -1;
+    }
+    if (placement === left || (placement === top || placement === bottom) && variation === end2) {
+      sideX = right;
+      var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
+      x -= offsetX - popperRect.width;
+      x *= gpuAcceleration ? 1 : -1;
+    }
+  }
+  var commonStyles = Object.assign({
+    position
+  }, adaptive && unsetSides);
+  var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
+    x,
+    y
+  }) : {
+    x,
+    y
+  };
+  x = _ref4.x;
+  y = _ref4.y;
+  if (gpuAcceleration) {
+    var _Object$assign;
+    return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? "0" : "", _Object$assign[sideX] = hasX ? "0" : "", _Object$assign.transform = (win.devicePixelRatio || 1) <= 1 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
+  }
+  return Object.assign({}, commonStyles, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : "", _Object$assign2[sideX] = hasX ? x + "px" : "", _Object$assign2.transform = "", _Object$assign2));
+}
+function computeStyles(_ref5) {
+  var state = _ref5.state, options = _ref5.options;
+  var _options$gpuAccelerat = options.gpuAcceleration, gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat, _options$adaptive = options.adaptive, adaptive = _options$adaptive === void 0 ? true : _options$adaptive, _options$roundOffsets = options.roundOffsets, roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
+  if (true) {
+    var transitionProperty = getComputedStyle(state.elements.popper).transitionProperty || "";
+    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function(property) {
+      return transitionProperty.indexOf(property) >= 0;
+    })) {
+      console.warn(["Popper: Detected CSS transitions on at least one of the following", 'CSS properties: "transform", "top", "right", "bottom", "left".', "\n\n", 'Disable the "computeStyles" modifier\'s `adaptive` option to allow', "for smooth transitions, or remove these properties from the CSS", "transition declaration on the popper element if only transitioning", "opacity or background-color for example.", "\n\n", "We recommend using the popper element as a wrapper around an inner", "element that can have any CSS property transitioned for animations."].join(" "));
+    }
+  }
+  var commonStyles = {
+    placement: getBasePlacement(state.placement),
+    variation: getVariation(state.placement),
+    popper: state.elements.popper,
+    popperRect: state.rects.popper,
+    gpuAcceleration,
+    isFixed: state.options.strategy === "fixed"
+  };
+  if (state.modifiersData.popperOffsets != null) {
+    state.styles.popper = Object.assign({}, state.styles.popper, mapToStyles(Object.assign({}, commonStyles, {
+      offsets: state.modifiersData.popperOffsets,
+      position: state.options.strategy,
+      adaptive,
+      roundOffsets
+    })));
+  }
+  if (state.modifiersData.arrow != null) {
+    state.styles.arrow = Object.assign({}, state.styles.arrow, mapToStyles(Object.assign({}, commonStyles, {
+      offsets: state.modifiersData.arrow,
+      position: "absolute",
+      adaptive: false,
+      roundOffsets
+    })));
+  }
+  state.attributes.popper = Object.assign({}, state.attributes.popper, {
+    "data-popper-placement": state.placement
+  });
+}
+var computeStyles_default = {
+  name: "computeStyles",
+  enabled: true,
+  phase: "beforeWrite",
+  fn: computeStyles,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/modifiers/eventListeners.js
+var passive = {
+  passive: true
+};
+function effect3(_ref) {
+  var state = _ref.state, instance = _ref.instance, options = _ref.options;
+  var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
+  var window2 = getWindow(state.elements.popper);
+  var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
+  if (scroll) {
+    scrollParents.forEach(function(scrollParent) {
+      scrollParent.addEventListener("scroll", instance.update, passive);
+    });
+  }
+  if (resize) {
+    window2.addEventListener("resize", instance.update, passive);
+  }
+  return function() {
+    if (scroll) {
+      scrollParents.forEach(function(scrollParent) {
+        scrollParent.removeEventListener("scroll", instance.update, passive);
+      });
+    }
+    if (resize) {
+      window2.removeEventListener("resize", instance.update, passive);
+    }
+  };
+}
+var eventListeners_default = {
+  name: "eventListeners",
+  enabled: true,
+  phase: "write",
+  fn: function fn() {
+  },
+  effect: effect3,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
+var hash = {
+  left: "right",
+  right: "left",
+  bottom: "top",
+  top: "bottom"
+};
+function getOppositePlacement(placement) {
+  return placement.replace(/left|right|bottom|top/g, function(matched) {
+    return hash[matched];
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
+var hash2 = {
+  start: "end",
+  end: "start"
+};
+function getOppositeVariationPlacement(placement) {
+  return placement.replace(/start|end/g, function(matched) {
+    return hash2[matched];
+  });
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
+function getWindowScroll(node) {
+  var win = getWindow(node);
+  var scrollLeft = win.pageXOffset;
+  var scrollTop = win.pageYOffset;
+  return {
+    scrollLeft,
+    scrollTop
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
+function getWindowScrollBarX(element) {
+  return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
+function getViewportRect(element, strategy) {
+  var win = getWindow(element);
+  var html3 = getDocumentElement(element);
+  var visualViewport = win.visualViewport;
+  var width = html3.clientWidth;
+  var height = html3.clientHeight;
+  var x = 0;
+  var y = 0;
+  if (visualViewport) {
+    width = visualViewport.width;
+    height = visualViewport.height;
+    var layoutViewport = isLayoutViewport();
+    if (layoutViewport || !layoutViewport && strategy === "fixed") {
+      x = visualViewport.offsetLeft;
+      y = visualViewport.offsetTop;
+    }
+  }
+  return {
+    width,
+    height,
+    x: x + getWindowScrollBarX(element),
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
+function getDocumentRect(element) {
+  var _element$ownerDocumen;
+  var html3 = getDocumentElement(element);
+  var winScroll = getWindowScroll(element);
+  var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
+  var width = max(html3.scrollWidth, html3.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
+  var height = max(html3.scrollHeight, html3.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
+  var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
+  var y = -winScroll.scrollTop;
+  if (getComputedStyle(body || html3).direction === "rtl") {
+    x += max(html3.clientWidth, body ? body.clientWidth : 0) - width;
+  }
+  return {
+    width,
+    height,
+    x,
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
+function isScrollParent(element) {
+  var _getComputedStyle = getComputedStyle(element), overflow = _getComputedStyle.overflow, overflowX = _getComputedStyle.overflowX, overflowY = _getComputedStyle.overflowY;
+  return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
+function getScrollParent(node) {
+  if (["html", "body", "#document"].indexOf(getNodeName(node)) >= 0) {
+    return node.ownerDocument.body;
+  }
+  if (isHTMLElement(node) && isScrollParent(node)) {
+    return node;
+  }
+  return getScrollParent(getParentNode(node));
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
+function listScrollParents(element, list) {
+  var _element$ownerDocumen;
+  if (list === void 0) {
+    list = [];
+  }
+  var scrollParent = getScrollParent(element);
+  var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body);
+  var win = getWindow(scrollParent);
+  var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
+  var updatedList = list.concat(target);
+  return isBody ? updatedList : updatedList.concat(listScrollParents(getParentNode(target)));
+}
+
+// node_modules/@popperjs/core/lib/utils/rectToClientRect.js
+function rectToClientRect(rect) {
+  return Object.assign({}, rect, {
+    left: rect.x,
+    top: rect.y,
+    right: rect.x + rect.width,
+    bottom: rect.y + rect.height
+  });
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
+function getInnerBoundingClientRect(element, strategy) {
+  var rect = getBoundingClientRect(element, false, strategy === "fixed");
+  rect.top = rect.top + element.clientTop;
+  rect.left = rect.left + element.clientLeft;
+  rect.bottom = rect.top + element.clientHeight;
+  rect.right = rect.left + element.clientWidth;
+  rect.width = element.clientWidth;
+  rect.height = element.clientHeight;
+  rect.x = rect.left;
+  rect.y = rect.top;
+  return rect;
+}
+function getClientRectFromMixedType(element, clippingParent, strategy) {
+  return clippingParent === viewport ? rectToClientRect(getViewportRect(element, strategy)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent, strategy) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+}
+function getClippingParents(element) {
+  var clippingParents2 = listScrollParents(getParentNode(element));
+  var canEscapeClipping = ["absolute", "fixed"].indexOf(getComputedStyle(element).position) >= 0;
+  var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
+  if (!isElement(clipperElement)) {
+    return [];
+  }
+  return clippingParents2.filter(function(clippingParent) {
+    return isElement(clippingParent) && contains2(clippingParent, clipperElement) && getNodeName(clippingParent) !== "body";
+  });
+}
+function getClippingRect(element, boundary, rootBoundary, strategy) {
+  var mainClippingParents = boundary === "clippingParents" ? getClippingParents(element) : [].concat(boundary);
+  var clippingParents2 = [].concat(mainClippingParents, [rootBoundary]);
+  var firstClippingParent = clippingParents2[0];
+  var clippingRect = clippingParents2.reduce(function(accRect, clippingParent) {
+    var rect = getClientRectFromMixedType(element, clippingParent, strategy);
+    accRect.top = max(rect.top, accRect.top);
+    accRect.right = min(rect.right, accRect.right);
+    accRect.bottom = min(rect.bottom, accRect.bottom);
+    accRect.left = max(rect.left, accRect.left);
+    return accRect;
+  }, getClientRectFromMixedType(element, firstClippingParent, strategy));
+  clippingRect.width = clippingRect.right - clippingRect.left;
+  clippingRect.height = clippingRect.bottom - clippingRect.top;
+  clippingRect.x = clippingRect.left;
+  clippingRect.y = clippingRect.top;
+  return clippingRect;
+}
+
+// node_modules/@popperjs/core/lib/utils/computeOffsets.js
+function computeOffsets(_ref) {
+  var reference2 = _ref.reference, element = _ref.element, placement = _ref.placement;
+  var basePlacement = placement ? getBasePlacement(placement) : null;
+  var variation = placement ? getVariation(placement) : null;
+  var commonX = reference2.x + reference2.width / 2 - element.width / 2;
+  var commonY = reference2.y + reference2.height / 2 - element.height / 2;
+  var offsets;
+  switch (basePlacement) {
+    case top:
+      offsets = {
+        x: commonX,
+        y: reference2.y - element.height
+      };
+      break;
+    case bottom:
+      offsets = {
+        x: commonX,
+        y: reference2.y + reference2.height
+      };
+      break;
+    case right:
+      offsets = {
+        x: reference2.x + reference2.width,
+        y: commonY
+      };
+      break;
+    case left:
+      offsets = {
+        x: reference2.x - element.width,
+        y: commonY
+      };
+      break;
+    default:
+      offsets = {
+        x: reference2.x,
+        y: reference2.y
+      };
+  }
+  var mainAxis = basePlacement ? getMainAxisFromPlacement(basePlacement) : null;
+  if (mainAxis != null) {
+    var len = mainAxis === "y" ? "height" : "width";
+    switch (variation) {
+      case start:
+        offsets[mainAxis] = offsets[mainAxis] - (reference2[len] / 2 - element[len] / 2);
+        break;
+      case end2:
+        offsets[mainAxis] = offsets[mainAxis] + (reference2[len] / 2 - element[len] / 2);
+        break;
+      default:
+    }
+  }
+  return offsets;
+}
+
+// node_modules/@popperjs/core/lib/utils/detectOverflow.js
+function detectOverflow(state, options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options = options, _options$placement = _options.placement, placement = _options$placement === void 0 ? state.placement : _options$placement, _options$strategy = _options.strategy, strategy = _options$strategy === void 0 ? state.strategy : _options$strategy, _options$boundary = _options.boundary, boundary = _options$boundary === void 0 ? clippingParents : _options$boundary, _options$rootBoundary = _options.rootBoundary, rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary, _options$elementConte = _options.elementContext, elementContext = _options$elementConte === void 0 ? popper : _options$elementConte, _options$altBoundary = _options.altBoundary, altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary, _options$padding = _options.padding, padding = _options$padding === void 0 ? 0 : _options$padding;
+  var paddingObject = mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+  var altContext = elementContext === popper ? reference : popper;
+  var popperRect = state.rects.popper;
+  var element = state.elements[altBoundary ? altContext : elementContext];
+  var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary, strategy);
+  var referenceClientRect = getBoundingClientRect(state.elements.reference);
+  var popperOffsets2 = computeOffsets({
+    reference: referenceClientRect,
+    element: popperRect,
+    strategy: "absolute",
+    placement
+  });
+  var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets2));
+  var elementClientRect = elementContext === popper ? popperClientRect : referenceClientRect;
+  var overflowOffsets = {
+    top: clippingClientRect.top - elementClientRect.top + paddingObject.top,
+    bottom: elementClientRect.bottom - clippingClientRect.bottom + paddingObject.bottom,
+    left: clippingClientRect.left - elementClientRect.left + paddingObject.left,
+    right: elementClientRect.right - clippingClientRect.right + paddingObject.right
+  };
+  var offsetData = state.modifiersData.offset;
+  if (elementContext === popper && offsetData) {
+    var offset2 = offsetData[placement];
+    Object.keys(overflowOffsets).forEach(function(key) {
+      var multiply = [right, bottom].indexOf(key) >= 0 ? 1 : -1;
+      var axis = [top, bottom].indexOf(key) >= 0 ? "y" : "x";
+      overflowOffsets[key] += offset2[axis] * multiply;
+    });
+  }
+  return overflowOffsets;
+}
+
+// node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
+function computeAutoPlacement(state, options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options = options, placement = _options.placement, boundary = _options.boundary, rootBoundary = _options.rootBoundary, padding = _options.padding, flipVariations = _options.flipVariations, _options$allowedAutoP = _options.allowedAutoPlacements, allowedAutoPlacements = _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
+  var variation = getVariation(placement);
+  var placements2 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function(placement2) {
+    return getVariation(placement2) === variation;
+  }) : basePlacements;
+  var allowedPlacements = placements2.filter(function(placement2) {
+    return allowedAutoPlacements.indexOf(placement2) >= 0;
+  });
+  if (allowedPlacements.length === 0) {
+    allowedPlacements = placements2;
+    if (true) {
+      console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" "));
+    }
+  }
+  var overflows = allowedPlacements.reduce(function(acc, placement2) {
+    acc[placement2] = detectOverflow(state, {
+      placement: placement2,
+      boundary,
+      rootBoundary,
+      padding
+    })[getBasePlacement(placement2)];
+    return acc;
+  }, {});
+  return Object.keys(overflows).sort(function(a, b) {
+    return overflows[a] - overflows[b];
+  });
+}
+
+// node_modules/@popperjs/core/lib/modifiers/flip.js
+function getExpandedFallbackPlacements(placement) {
+  if (getBasePlacement(placement) === auto) {
+    return [];
+  }
+  var oppositePlacement = getOppositePlacement(placement);
+  return [getOppositeVariationPlacement(placement), oppositePlacement, getOppositeVariationPlacement(oppositePlacement)];
+}
+function flip(_ref) {
+  var state = _ref.state, options = _ref.options, name = _ref.name;
+  if (state.modifiersData[name]._skip) {
+    return;
+  }
+  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis, specifiedFallbackPlacements = options.fallbackPlacements, padding = options.padding, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, _options$flipVariatio = options.flipVariations, flipVariations = _options$flipVariatio === void 0 ? true : _options$flipVariatio, allowedAutoPlacements = options.allowedAutoPlacements;
+  var preferredPlacement = state.options.placement;
+  var basePlacement = getBasePlacement(preferredPlacement);
+  var isBasePlacement = basePlacement === preferredPlacement;
+  var fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipVariations ? [getOppositePlacement(preferredPlacement)] : getExpandedFallbackPlacements(preferredPlacement));
+  var placements2 = [preferredPlacement].concat(fallbackPlacements).reduce(function(acc, placement2) {
+    return acc.concat(getBasePlacement(placement2) === auto ? computeAutoPlacement(state, {
+      placement: placement2,
+      boundary,
+      rootBoundary,
+      padding,
+      flipVariations,
+      allowedAutoPlacements
+    }) : placement2);
+  }, []);
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var checksMap = new Map();
+  var makeFallbackChecks = true;
+  var firstFittingPlacement = placements2[0];
+  for (var i = 0; i < placements2.length; i++) {
+    var placement = placements2[i];
+    var _basePlacement = getBasePlacement(placement);
+    var isStartVariation = getVariation(placement) === start;
+    var isVertical = [top, bottom].indexOf(_basePlacement) >= 0;
+    var len = isVertical ? "width" : "height";
+    var overflow = detectOverflow(state, {
+      placement,
+      boundary,
+      rootBoundary,
+      altBoundary,
+      padding
+    });
+    var mainVariationSide = isVertical ? isStartVariation ? right : left : isStartVariation ? bottom : top;
+    if (referenceRect[len] > popperRect[len]) {
+      mainVariationSide = getOppositePlacement(mainVariationSide);
+    }
+    var altVariationSide = getOppositePlacement(mainVariationSide);
+    var checks = [];
+    if (checkMainAxis) {
+      checks.push(overflow[_basePlacement] <= 0);
+    }
+    if (checkAltAxis) {
+      checks.push(overflow[mainVariationSide] <= 0, overflow[altVariationSide] <= 0);
+    }
+    if (checks.every(function(check) {
+      return check;
+    })) {
+      firstFittingPlacement = placement;
+      makeFallbackChecks = false;
+      break;
+    }
+    checksMap.set(placement, checks);
+  }
+  if (makeFallbackChecks) {
+    var numberOfChecks = flipVariations ? 3 : 1;
+    var _loop = function _loop2(_i2) {
+      var fittingPlacement = placements2.find(function(placement2) {
+        var checks2 = checksMap.get(placement2);
+        if (checks2) {
+          return checks2.slice(0, _i2).every(function(check) {
+            return check;
+          });
+        }
+      });
+      if (fittingPlacement) {
+        firstFittingPlacement = fittingPlacement;
+        return "break";
+      }
+    };
+    for (var _i = numberOfChecks; _i > 0; _i--) {
+      var _ret = _loop(_i);
+      if (_ret === "break")
+        break;
+    }
+  }
+  if (state.placement !== firstFittingPlacement) {
+    state.modifiersData[name]._skip = true;
+    state.placement = firstFittingPlacement;
+    state.reset = true;
+  }
+}
+var flip_default = {
+  name: "flip",
+  enabled: true,
+  phase: "main",
+  fn: flip,
+  requiresIfExists: ["offset"],
+  data: {
+    _skip: false
+  }
+};
+
+// node_modules/@popperjs/core/lib/modifiers/hide.js
+function getSideOffsets(overflow, rect, preventedOffsets) {
+  if (preventedOffsets === void 0) {
+    preventedOffsets = {
+      x: 0,
+      y: 0
+    };
+  }
+  return {
+    top: overflow.top - rect.height - preventedOffsets.y,
+    right: overflow.right - rect.width + preventedOffsets.x,
+    bottom: overflow.bottom - rect.height + preventedOffsets.y,
+    left: overflow.left - rect.width - preventedOffsets.x
+  };
+}
+function isAnySideFullyClipped(overflow) {
+  return [top, right, bottom, left].some(function(side) {
+    return overflow[side] >= 0;
+  });
+}
+function hide(_ref) {
+  var state = _ref.state, name = _ref.name;
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var preventedOffsets = state.modifiersData.preventOverflow;
+  var referenceOverflow = detectOverflow(state, {
+    elementContext: "reference"
+  });
+  var popperAltOverflow = detectOverflow(state, {
+    altBoundary: true
+  });
+  var referenceClippingOffsets = getSideOffsets(referenceOverflow, referenceRect);
+  var popperEscapeOffsets = getSideOffsets(popperAltOverflow, popperRect, preventedOffsets);
+  var isReferenceHidden = isAnySideFullyClipped(referenceClippingOffsets);
+  var hasPopperEscaped = isAnySideFullyClipped(popperEscapeOffsets);
+  state.modifiersData[name] = {
+    referenceClippingOffsets,
+    popperEscapeOffsets,
+    isReferenceHidden,
+    hasPopperEscaped
+  };
+  state.attributes.popper = Object.assign({}, state.attributes.popper, {
+    "data-popper-reference-hidden": isReferenceHidden,
+    "data-popper-escaped": hasPopperEscaped
+  });
+}
+var hide_default = {
+  name: "hide",
+  enabled: true,
+  phase: "main",
+  requiresIfExists: ["preventOverflow"],
+  fn: hide
+};
+
+// node_modules/@popperjs/core/lib/modifiers/offset.js
+function distanceAndSkiddingToXY(placement, rects, offset2) {
+  var basePlacement = getBasePlacement(placement);
+  var invertDistance = [left, top].indexOf(basePlacement) >= 0 ? -1 : 1;
+  var _ref = typeof offset2 === "function" ? offset2(Object.assign({}, rects, {
+    placement
+  })) : offset2, skidding = _ref[0], distance = _ref[1];
+  skidding = skidding || 0;
+  distance = (distance || 0) * invertDistance;
+  return [left, right].indexOf(basePlacement) >= 0 ? {
+    x: distance,
+    y: skidding
+  } : {
+    x: skidding,
+    y: distance
+  };
+}
+function offset(_ref2) {
+  var state = _ref2.state, options = _ref2.options, name = _ref2.name;
+  var _options$offset = options.offset, offset2 = _options$offset === void 0 ? [0, 0] : _options$offset;
+  var data2 = placements.reduce(function(acc, placement) {
+    acc[placement] = distanceAndSkiddingToXY(placement, state.rects, offset2);
+    return acc;
+  }, {});
+  var _data$state$placement = data2[state.placement], x = _data$state$placement.x, y = _data$state$placement.y;
+  if (state.modifiersData.popperOffsets != null) {
+    state.modifiersData.popperOffsets.x += x;
+    state.modifiersData.popperOffsets.y += y;
+  }
+  state.modifiersData[name] = data2;
+}
+var offset_default = {
+  name: "offset",
+  enabled: true,
+  phase: "main",
+  requires: ["popperOffsets"],
+  fn: offset
+};
+
+// node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
+function popperOffsets(_ref) {
+  var state = _ref.state, name = _ref.name;
+  state.modifiersData[name] = computeOffsets({
+    reference: state.rects.reference,
+    element: state.rects.popper,
+    strategy: "absolute",
+    placement: state.placement
+  });
+}
+var popperOffsets_default = {
+  name: "popperOffsets",
+  enabled: true,
+  phase: "read",
+  fn: popperOffsets,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/utils/getAltAxis.js
+function getAltAxis(axis) {
+  return axis === "x" ? "y" : "x";
+}
+
+// node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
+function preventOverflow(_ref) {
+  var state = _ref.state, options = _ref.options, name = _ref.name;
+  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, padding = options.padding, _options$tether = options.tether, tether = _options$tether === void 0 ? true : _options$tether, _options$tetherOffset = options.tetherOffset, tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
+  var overflow = detectOverflow(state, {
+    boundary,
+    rootBoundary,
+    padding,
+    altBoundary
+  });
+  var basePlacement = getBasePlacement(state.placement);
+  var variation = getVariation(state.placement);
+  var isBasePlacement = !variation;
+  var mainAxis = getMainAxisFromPlacement(basePlacement);
+  var altAxis = getAltAxis(mainAxis);
+  var popperOffsets2 = state.modifiersData.popperOffsets;
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var tetherOffsetValue = typeof tetherOffset === "function" ? tetherOffset(Object.assign({}, state.rects, {
+    placement: state.placement
+  })) : tetherOffset;
+  var normalizedTetherOffsetValue = typeof tetherOffsetValue === "number" ? {
+    mainAxis: tetherOffsetValue,
+    altAxis: tetherOffsetValue
+  } : Object.assign({
+    mainAxis: 0,
+    altAxis: 0
+  }, tetherOffsetValue);
+  var offsetModifierState = state.modifiersData.offset ? state.modifiersData.offset[state.placement] : null;
+  var data2 = {
+    x: 0,
+    y: 0
+  };
+  if (!popperOffsets2) {
+    return;
+  }
+  if (checkMainAxis) {
+    var _offsetModifierState$;
+    var mainSide = mainAxis === "y" ? top : left;
+    var altSide = mainAxis === "y" ? bottom : right;
+    var len = mainAxis === "y" ? "height" : "width";
+    var offset2 = popperOffsets2[mainAxis];
+    var min2 = offset2 + overflow[mainSide];
+    var max2 = offset2 - overflow[altSide];
+    var additive = tether ? -popperRect[len] / 2 : 0;
+    var minLen = variation === start ? referenceRect[len] : popperRect[len];
+    var maxLen = variation === start ? -popperRect[len] : -referenceRect[len];
+    var arrowElement = state.elements.arrow;
+    var arrowRect = tether && arrowElement ? getLayoutRect(arrowElement) : {
+      width: 0,
+      height: 0
+    };
+    var arrowPaddingObject = state.modifiersData["arrow#persistent"] ? state.modifiersData["arrow#persistent"].padding : getFreshSideObject();
+    var arrowPaddingMin = arrowPaddingObject[mainSide];
+    var arrowPaddingMax = arrowPaddingObject[altSide];
+    var arrowLen = within(0, referenceRect[len], arrowRect[len]);
+    var minOffset = isBasePlacement ? referenceRect[len] / 2 - additive - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis : minLen - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis;
+    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis : maxLen + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis;
+    var arrowOffsetParent = state.elements.arrow && getOffsetParent(state.elements.arrow);
+    var clientOffset = arrowOffsetParent ? mainAxis === "y" ? arrowOffsetParent.clientTop || 0 : arrowOffsetParent.clientLeft || 0 : 0;
+    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
+    var tetherMin = offset2 + minOffset - offsetModifierValue - clientOffset;
+    var tetherMax = offset2 + maxOffset - offsetModifierValue;
+    var preventedOffset = within(tether ? min(min2, tetherMin) : min2, offset2, tether ? max(max2, tetherMax) : max2);
+    popperOffsets2[mainAxis] = preventedOffset;
+    data2[mainAxis] = preventedOffset - offset2;
+  }
+  if (checkAltAxis) {
+    var _offsetModifierState$2;
+    var _mainSide = mainAxis === "x" ? top : left;
+    var _altSide = mainAxis === "x" ? bottom : right;
+    var _offset = popperOffsets2[altAxis];
+    var _len = altAxis === "y" ? "height" : "width";
+    var _min = _offset + overflow[_mainSide];
+    var _max = _offset - overflow[_altSide];
+    var isOriginSide = [top, left].indexOf(basePlacement) !== -1;
+    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
+    var _tetherMin = isOriginSide ? _min : _offset - referenceRect[_len] - popperRect[_len] - _offsetModifierValue + normalizedTetherOffsetValue.altAxis;
+    var _tetherMax = isOriginSide ? _offset + referenceRect[_len] + popperRect[_len] - _offsetModifierValue - normalizedTetherOffsetValue.altAxis : _max;
+    var _preventedOffset = tether && isOriginSide ? withinMaxClamp(_tetherMin, _offset, _tetherMax) : within(tether ? _tetherMin : _min, _offset, tether ? _tetherMax : _max);
+    popperOffsets2[altAxis] = _preventedOffset;
+    data2[altAxis] = _preventedOffset - _offset;
+  }
+  state.modifiersData[name] = data2;
+}
+var preventOverflow_default = {
+  name: "preventOverflow",
+  enabled: true,
+  phase: "main",
+  fn: preventOverflow,
+  requiresIfExists: ["offset"]
+};
+
+// node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
+function getHTMLElementScroll(element) {
+  return {
+    scrollLeft: element.scrollLeft,
+    scrollTop: element.scrollTop
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
+function getNodeScroll(node) {
+  if (node === getWindow(node) || !isHTMLElement(node)) {
+    return getWindowScroll(node);
+  } else {
+    return getHTMLElementScroll(node);
+  }
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
+function isElementScaled(element) {
+  var rect = element.getBoundingClientRect();
+  var scaleX = round(rect.width) / element.offsetWidth || 1;
+  var scaleY = round(rect.height) / element.offsetHeight || 1;
+  return scaleX !== 1 || scaleY !== 1;
+}
+function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
+  if (isFixed === void 0) {
+    isFixed = false;
+  }
+  var isOffsetParentAnElement = isHTMLElement(offsetParent);
+  var offsetParentIsScaled = isHTMLElement(offsetParent) && isElementScaled(offsetParent);
+  var documentElement = getDocumentElement(offsetParent);
+  var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled, isFixed);
+  var scroll = {
+    scrollLeft: 0,
+    scrollTop: 0
+  };
+  var offsets = {
+    x: 0,
+    y: 0
+  };
+  if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
+    if (getNodeName(offsetParent) !== "body" || isScrollParent(documentElement)) {
+      scroll = getNodeScroll(offsetParent);
+    }
+    if (isHTMLElement(offsetParent)) {
+      offsets = getBoundingClientRect(offsetParent, true);
+      offsets.x += offsetParent.clientLeft;
+      offsets.y += offsetParent.clientTop;
+    } else if (documentElement) {
+      offsets.x = getWindowScrollBarX(documentElement);
+    }
+  }
+  return {
+    x: rect.left + scroll.scrollLeft - offsets.x,
+    y: rect.top + scroll.scrollTop - offsets.y,
+    width: rect.width,
+    height: rect.height
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/orderModifiers.js
+function order(modifiers) {
+  var map2 = new Map();
+  var visited = new Set();
+  var result = [];
+  modifiers.forEach(function(modifier) {
+    map2.set(modifier.name, modifier);
+  });
+  function sort(modifier) {
+    visited.add(modifier.name);
+    var requires = [].concat(modifier.requires || [], modifier.requiresIfExists || []);
+    requires.forEach(function(dep) {
+      if (!visited.has(dep)) {
+        var depModifier = map2.get(dep);
+        if (depModifier) {
+          sort(depModifier);
+        }
+      }
+    });
+    result.push(modifier);
+  }
+  modifiers.forEach(function(modifier) {
+    if (!visited.has(modifier.name)) {
+      sort(modifier);
+    }
+  });
+  return result;
+}
+function orderModifiers(modifiers) {
+  var orderedModifiers = order(modifiers);
+  return modifierPhases.reduce(function(acc, phase) {
+    return acc.concat(orderedModifiers.filter(function(modifier) {
+      return modifier.phase === phase;
+    }));
+  }, []);
+}
+
+// node_modules/@popperjs/core/lib/utils/debounce.js
+function debounce(fn2) {
+  var pending;
+  return function() {
+    if (!pending) {
+      pending = new Promise(function(resolve) {
+        Promise.resolve().then(function() {
+          pending = void 0;
+          resolve(fn2());
+        });
+      });
+    }
+    return pending;
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/format.js
+function format(str) {
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+  return [].concat(args).reduce(function(p, c) {
+    return p.replace(/%s/, c);
+  }, str);
+}
+
+// node_modules/@popperjs/core/lib/utils/validateModifiers.js
+var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
+var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
+var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
+function validateModifiers(modifiers) {
+  modifiers.forEach(function(modifier) {
+    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index2, self) {
+      return self.indexOf(value) === index2;
+    }).forEach(function(key) {
+      switch (key) {
+        case "name":
+          if (typeof modifier.name !== "string") {
+            console.error(format(INVALID_MODIFIER_ERROR, String(modifier.name), '"name"', '"string"', '"' + String(modifier.name) + '"'));
+          }
+          break;
+        case "enabled":
+          if (typeof modifier.enabled !== "boolean") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"enabled"', '"boolean"', '"' + String(modifier.enabled) + '"'));
+          }
+          break;
+        case "phase":
+          if (modifierPhases.indexOf(modifier.phase) < 0) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"phase"', "either " + modifierPhases.join(", "), '"' + String(modifier.phase) + '"'));
+          }
+          break;
+        case "fn":
+          if (typeof modifier.fn !== "function") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"fn"', '"function"', '"' + String(modifier.fn) + '"'));
+          }
+          break;
+        case "effect":
+          if (modifier.effect != null && typeof modifier.effect !== "function") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"effect"', '"function"', '"' + String(modifier.fn) + '"'));
+          }
+          break;
+        case "requires":
+          if (modifier.requires != null && !Array.isArray(modifier.requires)) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requires"', '"array"', '"' + String(modifier.requires) + '"'));
+          }
+          break;
+        case "requiresIfExists":
+          if (!Array.isArray(modifier.requiresIfExists)) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requiresIfExists"', '"array"', '"' + String(modifier.requiresIfExists) + '"'));
+          }
+          break;
+        case "options":
+        case "data":
+          break;
+        default:
+          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function(s) {
+            return '"' + s + '"';
+          }).join(", ") + '; but "' + key + '" was provided.');
+      }
+      modifier.requires && modifier.requires.forEach(function(requirement) {
+        if (modifiers.find(function(mod) {
+          return mod.name === requirement;
+        }) == null) {
+          console.error(format(MISSING_DEPENDENCY_ERROR, String(modifier.name), requirement, requirement));
+        }
+      });
+    });
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/uniqueBy.js
+function uniqueBy(arr, fn2) {
+  var identifiers = new Set();
+  return arr.filter(function(item) {
+    var identifier = fn2(item);
+    if (!identifiers.has(identifier)) {
+      identifiers.add(identifier);
+      return true;
+    }
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/mergeByName.js
+function mergeByName(modifiers) {
+  var merged = modifiers.reduce(function(merged2, current) {
+    var existing = merged2[current.name];
+    merged2[current.name] = existing ? Object.assign({}, existing, current, {
+      options: Object.assign({}, existing.options, current.options),
+      data: Object.assign({}, existing.data, current.data)
+    }) : current;
+    return merged2;
+  }, {});
+  return Object.keys(merged).map(function(key) {
+    return merged[key];
+  });
+}
+
+// node_modules/@popperjs/core/lib/createPopper.js
+var INVALID_ELEMENT_ERROR = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.";
+var INFINITE_LOOP_ERROR = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.";
+var DEFAULT_OPTIONS = {
+  placement: "bottom",
+  modifiers: [],
+  strategy: "absolute"
+};
+function areValidElements() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+  return !args.some(function(element) {
+    return !(element && typeof element.getBoundingClientRect === "function");
+  });
+}
+function popperGenerator(generatorOptions) {
+  if (generatorOptions === void 0) {
+    generatorOptions = {};
+  }
+  var _generatorOptions = generatorOptions, _generatorOptions$def = _generatorOptions.defaultModifiers, defaultModifiers2 = _generatorOptions$def === void 0 ? [] : _generatorOptions$def, _generatorOptions$def2 = _generatorOptions.defaultOptions, defaultOptions2 = _generatorOptions$def2 === void 0 ? DEFAULT_OPTIONS : _generatorOptions$def2;
+  return function createPopper2(reference2, popper2, options) {
+    if (options === void 0) {
+      options = defaultOptions2;
+    }
+    var state = {
+      placement: "bottom",
+      orderedModifiers: [],
+      options: Object.assign({}, DEFAULT_OPTIONS, defaultOptions2),
+      modifiersData: {},
+      elements: {
+        reference: reference2,
+        popper: popper2
+      },
+      attributes: {},
+      styles: {}
+    };
+    var effectCleanupFns = [];
+    var isDestroyed = false;
+    var instance = {
+      state,
+      setOptions: function setOptions(setOptionsAction) {
+        var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
+        cleanupModifierEffects();
+        state.options = Object.assign({}, defaultOptions2, state.options, options2);
+        state.scrollParents = {
+          reference: isElement(reference2) ? listScrollParents(reference2) : reference2.contextElement ? listScrollParents(reference2.contextElement) : [],
+          popper: listScrollParents(popper2)
+        };
+        var orderedModifiers = orderModifiers(mergeByName([].concat(defaultModifiers2, state.options.modifiers)));
+        state.orderedModifiers = orderedModifiers.filter(function(m) {
+          return m.enabled;
+        });
+        if (true) {
+          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function(_ref) {
+            var name = _ref.name;
+            return name;
+          });
+          validateModifiers(modifiers);
+          if (getBasePlacement(state.options.placement) === auto) {
+            var flipModifier = state.orderedModifiers.find(function(_ref2) {
+              var name = _ref2.name;
+              return name === "flip";
+            });
+            if (!flipModifier) {
+              console.error(['Popper: "auto" placements require the "flip" modifier be', "present and enabled to work."].join(" "));
+            }
+          }
+          var _getComputedStyle = getComputedStyle(popper2), marginTop = _getComputedStyle.marginTop, marginRight = _getComputedStyle.marginRight, marginBottom = _getComputedStyle.marginBottom, marginLeft = _getComputedStyle.marginLeft;
+          if ([marginTop, marginRight, marginBottom, marginLeft].some(function(margin) {
+            return parseFloat(margin);
+          })) {
+            console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
+          }
+        }
+        runModifierEffects();
+        return instance.update();
+      },
+      forceUpdate: function forceUpdate() {
+        if (isDestroyed) {
+          return;
+        }
+        var _state$elements = state.elements, reference3 = _state$elements.reference, popper3 = _state$elements.popper;
+        if (!areValidElements(reference3, popper3)) {
+          if (true) {
+            console.error(INVALID_ELEMENT_ERROR);
+          }
+          return;
+        }
+        state.rects = {
+          reference: getCompositeRect(reference3, getOffsetParent(popper3), state.options.strategy === "fixed"),
+          popper: getLayoutRect(popper3)
+        };
+        state.reset = false;
+        state.placement = state.options.placement;
+        state.orderedModifiers.forEach(function(modifier) {
+          return state.modifiersData[modifier.name] = Object.assign({}, modifier.data);
+        });
+        var __debug_loops__ = 0;
+        for (var index2 = 0; index2 < state.orderedModifiers.length; index2++) {
+          if (true) {
+            __debug_loops__ += 1;
+            if (__debug_loops__ > 100) {
+              console.error(INFINITE_LOOP_ERROR);
+              break;
+            }
+          }
+          if (state.reset === true) {
+            state.reset = false;
+            index2 = -1;
+            continue;
+          }
+          var _state$orderedModifie = state.orderedModifiers[index2], fn2 = _state$orderedModifie.fn, _state$orderedModifie2 = _state$orderedModifie.options, _options = _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2, name = _state$orderedModifie.name;
+          if (typeof fn2 === "function") {
+            state = fn2({
+              state,
+              options: _options,
+              name,
+              instance
+            }) || state;
+          }
+        }
+      },
+      update: debounce(function() {
+        return new Promise(function(resolve) {
+          instance.forceUpdate();
+          resolve(state);
+        });
+      }),
+      destroy: function destroy() {
+        cleanupModifierEffects();
+        isDestroyed = true;
+      }
+    };
+    if (!areValidElements(reference2, popper2)) {
+      if (true) {
+        console.error(INVALID_ELEMENT_ERROR);
+      }
+      return instance;
+    }
+    instance.setOptions(options).then(function(state2) {
+      if (!isDestroyed && options.onFirstUpdate) {
+        options.onFirstUpdate(state2);
+      }
+    });
+    function runModifierEffects() {
+      state.orderedModifiers.forEach(function(_ref3) {
+        var name = _ref3.name, _ref3$options = _ref3.options, options2 = _ref3$options === void 0 ? {} : _ref3$options, effect4 = _ref3.effect;
+        if (typeof effect4 === "function") {
+          var cleanupFn = effect4({
+            state,
+            name,
+            instance,
+            options: options2
+          });
+          var noopFn = function noopFn2() {
+          };
+          effectCleanupFns.push(cleanupFn || noopFn);
+        }
+      });
+    }
+    function cleanupModifierEffects() {
+      effectCleanupFns.forEach(function(fn2) {
+        return fn2();
+      });
+      effectCleanupFns = [];
+    }
+    return instance;
+  };
+}
+
+// node_modules/@popperjs/core/lib/popper.js
+var defaultModifiers = [eventListeners_default, popperOffsets_default, computeStyles_default, applyStyles_default, offset_default, flip_default, preventOverflow_default, arrow_default, hide_default];
+var createPopper = /* @__PURE__ */ popperGenerator({
+  defaultModifiers
+});
+
+// src/douban/setting/model/TextInputSuggest.ts
+var TextInputSuggest = class {
+  constructor(app2, inputEl) {
+    this.app = app2;
+    this.inputEl = inputEl;
+    this.scope = new import_obsidian5.Scope();
+    this.suggestEl = createDiv("suggestion-container");
+    const suggestion = this.suggestEl.createDiv("suggestion");
+    this.suggest = new Suggest(this, suggestion, this.scope);
+    this.scope.register([], "Escape", this.close.bind(this));
+    this.inputEl.addEventListener("input", this.onInputChanged.bind(this));
+    this.inputEl.addEventListener("focus", this.onInputChanged.bind(this));
+    this.inputEl.addEventListener("blur", this.close.bind(this));
+    this.suggestEl.on("mousedown", ".suggestion-container", (event) => {
+      event.preventDefault();
+    });
+  }
+  onInputChanged() {
+    const inputStr = this.inputEl.value;
+    const suggestions = this.getSuggestions(inputStr);
+    if (suggestions.length > 0) {
+      this.suggest.setSuggestions(suggestions);
+      this.open(this.app.dom.appContainerEl, this.inputEl);
+    }
+  }
+  open(container, inputEl) {
+    this.app.keymap.pushScope(this.scope);
+    container.appendChild(this.suggestEl);
+    this.popper = createPopper(inputEl, this.suggestEl, {
+      placement: "bottom-start",
+      modifiers: [
+        {
+          name: "sameWidth",
+          enabled: true,
+          fn: ({ state, instance }) => {
+            const targetWidth = `${state.rects.reference.width}px`;
+            if (state.styles.popper.width === targetWidth) {
+              return;
+            }
+            state.styles.popper.width = targetWidth;
+            instance.update();
+          },
+          phase: "beforeWrite",
+          requires: ["computeStyles"]
+        }
+      ]
+    });
+  }
+  close() {
+    this.app.keymap.popScope(this.scope);
+    this.suggest.setSuggestions([]);
+    this.popper.destroy();
+    this.suggestEl.detach();
+  }
+};
+
+// src/douban/setting/model/FileSuggest.ts
+var FileSuggest = class extends TextInputSuggest {
+  getSuggestions(inputStr) {
+    const abstractFiles = this.app.vault.getAllLoadedFiles();
+    const files = [];
+    const lowerCaseInputStr = inputStr.toLowerCase();
+    abstractFiles.forEach((file) => {
+      if (file instanceof import_obsidian6.TFile && file.extension === "md" && file.path.toLowerCase().contains(lowerCaseInputStr)) {
+        files.push(file);
+      }
+    });
+    return files;
+  }
+  renderSuggestion(file, el) {
+    el.setText(file.path);
+  }
+  selectSuggestion(file) {
+    this.inputEl.value = file.path;
+    this.inputEl.trigger("input");
+    this.close();
+  }
+};
+
+// src/douban/setting/TemplateSettingHelper.ts
+var import_obsidian8 = __toModule(require("obsidian"));
+
+// src/douban/setting/model/FolderSuggest.ts
+var import_obsidian7 = __toModule(require("obsidian"));
+var FolderSuggest = class extends TextInputSuggest {
+  getSuggestions(inputStr) {
+    const abstractFiles = this.app.vault.getAllLoadedFiles();
+    const folders = [];
+    const lowerCaseInputStr = inputStr.toLowerCase();
+    abstractFiles.forEach((folder) => {
+      if (folder instanceof import_obsidian7.TFolder && folder.path.toLowerCase().contains(lowerCaseInputStr)) {
+        folders.push(folder);
+      }
+    });
+    return folders;
+  }
+  renderSuggestion(file, el) {
+    el.setText(file.path);
+  }
+  selectSuggestion(file) {
+    this.inputEl.value = file.path;
+    this.inputEl.trigger("input");
+    this.close();
+  }
+};
+
+// src/douban/setting/TemplateSettingHelper.ts
+function constructTemplateUI(containerEl, manager) {
+  containerEl.createEl("h3", { text: i18nHelper.getMessage("1203") });
+  containerEl.createEl("p", { text: i18nHelper.getMessage("1204") });
+  new import_obsidian8.Setting(containerEl).setDesc(i18nHelper.getMessage("1205"));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "120101", desc: "120102", placeholder: "121701", key: "movieTemplateFile", manager }));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "120201", desc: "120202", placeholder: "121701", key: "bookTemplateFile", manager }));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "120301", desc: "120302", placeholder: "121701", key: "musicTemplateFile", manager }));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "120401", desc: "120402", placeholder: "121701", key: "noteTemplateFile", manager }));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "121301", desc: "121302", placeholder: "121701", key: "gameTemplateFile", manager }));
+  new import_obsidian8.Setting(containerEl).then(createFileSelectionSetting({ name: "121801", desc: "121802", placeholder: "121701", key: "teleplayTemplateFile", manager }));
+}
+function createFileSelectionSetting({
+  name,
+  desc,
+  placeholder,
+  key,
+  manager
+}) {
+  return (setting) => {
+    setting.setName(i18nHelper.getMessage(name));
+    setting.setDesc(i18nHelper.getMessage(desc));
+    setting.addSearch((search) => __async(this, null, function* () {
+      const [oldValue, defaultVal] = manager.getSettingWithDefault(key);
+      let v = defaultVal;
+      if (oldValue) {
+        v = oldValue;
+      }
+      new FileSuggest(manager.app, search.inputEl);
+      search.setValue(v);
+      search.setPlaceholder(i18nHelper.getMessage(placeholder));
+      search.onChange((value) => __async(this, null, function* () {
+        manager.updateSetting(key, value);
+      }));
+    }));
+    setting.addExtraButton((button) => {
+      button.setIcon("copy").setTooltip(i18nHelper.getMessage("121901")).onClick(() => __async(this, null, function* () {
+        navigator.clipboard.writeText(getDefaultTemplateContent(key));
+      }));
+    });
+  };
+}
+function createFolderSelectionSetting({
+  name,
+  desc,
+  placeholder,
+  key,
+  manager
+}) {
+  return (setting) => {
+    setting.setName(i18nHelper.getMessage(name));
+    setting.setDesc(i18nHelper.getMessage(desc));
+    setting.addSearch((search) => __async(this, null, function* () {
+      const [oldValue, defaultVal] = manager.getSettingWithDefault(key);
+      let v = defaultVal;
+      if (oldValue) {
+        v = oldValue;
+      }
+      new FolderSuggest(manager.app, search.inputEl);
+      search.setValue(v).setPlaceholder(i18nHelper.getMessage(placeholder)).onChange((value) => __async(this, null, function* () {
+        manager.updateSetting(key, value);
+      }));
+    }));
+  };
+}
+
+// src/douban/setting/OutputSettingsHelper.ts
+function constructOutUI(containerEl, manager) {
+  containerEl.createEl("h3", { text: i18nHelper.getMessage("1220") });
+  new import_obsidian9.Setting(containerEl).then(createFolderSelectionSetting({ name: "121501", desc: "121502", placeholder: "121503", key: "dataFilePath", manager }));
+  let outfolder = containerEl.createDiv({ cls: "settings-item" });
+  constructOutFolderUI(outfolder, manager);
+  new import_obsidian9.Setting(containerEl).setName(i18nHelper.getMessage("120601")).setDesc(i18nHelper.getMessage("120602")).addText((textField) => {
+    textField.setPlaceholder(DEFAULT_SETTINGS.arraySpilt).setValue(manager.plugin.settings.arraySpilt).onChange((value) => __async(this, null, function* () {
+      manager.plugin.settings.arraySpilt = value;
+      yield manager.plugin.saveSettings();
+    }));
+  });
+  new import_obsidian9.Setting(containerEl).setName(i18nHelper.getMessage("121201")).then((setting) => {
+    setting.addDropdown((dropdwon) => {
+      setting.descEl.appendChild(createFragment((frag) => {
+        frag.appendText(i18nHelper.getMessage("121202"));
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("121203"));
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("121204"));
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("121205"));
+        frag.createEl("br");
+      }));
+      dropdwon.addOption(PersonNameMode.CH_NAME, PersonNameModeRecords.CH);
+      dropdwon.addOption(PersonNameMode.EN_NAME, PersonNameModeRecords.EN);
+      dropdwon.addOption(PersonNameMode.CH_EN_NAME, PersonNameModeRecords.CH_EN);
+      dropdwon.setValue(manager.plugin.settings.personNameMode).onChange((value) => __async(this, null, function* () {
+        manager.plugin.settings.personNameMode = value;
+        yield manager.plugin.saveSettings();
+      }));
+    });
+  });
+}
+function constructOutFolderUI(containerEl, manager) {
+  containerEl.empty();
+  const dataFilePathSetting = new import_obsidian9.Setting(containerEl).setName(i18nHelper.getMessage("121601")).setDesc(i18nHelper.getMessage("121602")).addText((textField) => {
+    textField.setPlaceholder(DEFAULT_SETTINGS.dataFileNamePath).setValue(manager.plugin.settings.dataFileNamePath).onChange((value) => __async(this, null, function* () {
+      manager.plugin.settings.dataFileNamePath = value;
+      yield manager.plugin.saveSettings();
+    }));
+  });
+  dataFilePathSetting.addExtraButton((button) => {
+    button.setIcon("reset").setTooltip(i18nHelper.getMessage("121902")).onClick(() => __async(this, null, function* () {
+      manager.plugin.settings.dataFileNamePath = DEFAULT_SETTINGS.dataFileNamePath;
+      yield manager.plugin.saveSettings();
+      constructOutFolderUI(containerEl, manager);
+    }));
+  });
+}
+
+// src/douban/setting/BasicSettingsHelper.ts
+var import_obsidian10 = __toModule(require("obsidian"));
+function constructBasicUI(containerEl, manager) {
+  containerEl.createEl("h3", { text: i18nHelper.getMessage("1210") });
+  new import_obsidian10.Setting(containerEl).setName(i18nHelper.getMessage("120501")).then((setting) => {
+    setting.addMomentFormat((mf) => {
+      setting.descEl.appendChild(createFragment((frag) => {
+        frag.appendText(i18nHelper.getMessage("120503"));
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("120506") + " ");
+        frag.createEl("a", {
+          text: i18nHelper.getMessage("120508"),
+          href: "https://momentjs.com/docs/#/displaying/format/"
+        }, (a) => {
+          a.setAttr("target", "_blank");
+        });
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("120507") + ": ");
+        mf.setSampleEl(frag.createEl("b", { cls: "u-pop" }));
+        frag.createEl("br");
+      }));
+      mf.setPlaceholder(DEFAULT_SETTINGS.dateFormat);
+      mf.setValue(manager.plugin.settings.dateFormat);
+      mf.onChange((value) => __async(this, null, function* () {
+        manager.plugin.settings.dateFormat = value;
+        yield manager.plugin.saveSettings();
+      }));
+    });
+  });
+  new import_obsidian10.Setting(containerEl).setName(i18nHelper.getMessage("120502")).then((setting) => {
+    setting.addMomentFormat((mf) => {
+      setting.descEl.appendChild(createFragment((frag) => {
+        frag.appendText(i18nHelper.getMessage("120504"));
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("120506") + " ");
+        frag.createEl("a", {
+          text: i18nHelper.getMessage("120508"),
+          href: "https://momentjs.com/docs/#/displaying/format/"
+        }, (a) => {
+          a.setAttr("target", "_blank");
+        });
+        frag.createEl("br");
+        frag.appendText(i18nHelper.getMessage("120507") + ": ");
+        mf.setSampleEl(frag.createEl("b", { cls: "u-pop" }));
+        frag.createEl("br");
+      }));
+      mf.setPlaceholder(DEFAULT_SETTINGS.timeFormat);
+      mf.setValue(manager.plugin.settings.timeFormat);
+      mf.onChange((value) => __async(this, null, function* () {
+        manager.plugin.settings.timeFormat = value;
+        yield manager.plugin.saveSettings();
+      }));
+    });
+  });
+  new import_obsidian10.Setting(containerEl).setName(i18nHelper.getMessage("121401")).setDesc(i18nHelper.getMessage("121402")).addToggle((toggleComponent) => {
+    toggleComponent.setValue(manager.plugin.settings.statusBar).onChange((value) => __async(this, null, function* () {
+      manager.plugin.settings.statusBar = value;
+      yield manager.plugin.saveSettings();
+    }));
+  });
+}
+
+// src/douban/setting/TemplateVariableSettingsHelper.ts
+var import_obsidian11 = __toModule(require("obsidian"));
+function constructTemplateVariablesUI(containerEl, manager) {
+  containerEl.createEl("h3", { text: i18nHelper.getMessage("1230") });
+  containerEl.createEl("p", { text: i18nHelper.getMessage("122003") });
+  const basicVariablesTable = new DocumentFragment();
+  basicVariablesTable.createDiv().innerHTML = `
+${i18nHelper.getMessage("122004")}
+<br>
+<br>
+<table border="1">
+	<tr>
+		<th>${i18nHelper.getMessage("300101")}</th>
+		<th>${i18nHelper.getMessage("300102")}</th>
+		<th>${i18nHelper.getMessage("300103")}</th>
+		<th>${i18nHelper.getMessage("300104")}</th>
+		<th>${i18nHelper.getMessage("300105")}</th>
+		<th>${i18nHelper.getMessage("300106")}</th>
+		<th>${i18nHelper.getMessage("300107")}</th>
+		<th>${i18nHelper.getMessage("300108")}</th>
+	</tr>
+	<tr>
+		<td>id</td>
+		<td>${i18nHelper.getMessage("310101")}</td>
+		<td>${i18nHelper.getMessage("310201")}</td>
+		<td>${i18nHelper.getMessage("310301")}</td>
+		<td>${i18nHelper.getMessage("310401")}</td>
+		<td>${i18nHelper.getMessage("310501")}</td>
+		<td>${i18nHelper.getMessage("310601")}</td>
+		<td>${i18nHelper.getMessage("310701")}</td>
+	</tr>
+	<tr>
+		<td>title</td>
+		<td>${i18nHelper.getMessage("310102")}</td>
+		<td>${i18nHelper.getMessage("310202")}</td>
+		<td>${i18nHelper.getMessage("310302")}</td>
+		<td>${i18nHelper.getMessage("310402")}</td>
+		<td>${i18nHelper.getMessage("310502")}</td>
+		<td>${i18nHelper.getMessage("310602")}</td>
+		<td>${i18nHelper.getMessage("310702")}</td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>${i18nHelper.getMessage("310103")}</td>
+		<td>${i18nHelper.getMessage("310203")}</td>
+		<td>${i18nHelper.getMessage("310303")}</td>
+		<td>${i18nHelper.getMessage("310403")}</td>
+		<td>${i18nHelper.getMessage("310503")}</td>
+		<td>${i18nHelper.getMessage("310603")}</td>
+		<td>${i18nHelper.getMessage("310703")}</td>
+	</tr>
+	<tr>
+		<td>score</td>
+		<td>${i18nHelper.getMessage("310104")}</td>
+		<td>${i18nHelper.getMessage("310204")}</td>
+		<td>${i18nHelper.getMessage("310304")}</td>
+		<td>${i18nHelper.getMessage("310404")}</td>
+		<td>${i18nHelper.getMessage("310504")}</td>
+		<td>${i18nHelper.getMessage("310604")}</td>
+		<td>${i18nHelper.getMessage("310704")}</td>
+	</tr>
+	<tr>
+		<td>image</td>
+		<td>${i18nHelper.getMessage("310105")}</td>
+		<td>${i18nHelper.getMessage("310205")}</td>
+		<td>${i18nHelper.getMessage("310305")}</td>
+		<td>${i18nHelper.getMessage("310405")}</td>
+		<td>${i18nHelper.getMessage("310505")}</td>
+		<td>${i18nHelper.getMessage("310605")}</td>
+		<td>${i18nHelper.getMessage("310705")}</td>
+	</tr>
+	<tr>
+		<td>url</td>
+		<td>${i18nHelper.getMessage("310106")}</td>
+		<td>${i18nHelper.getMessage("310206")}</td>
+		<td>${i18nHelper.getMessage("310306")}</td>
+		<td>${i18nHelper.getMessage("310406")}</td>
+		<td>${i18nHelper.getMessage("310506")}</td>
+		<td>${i18nHelper.getMessage("310606")}</td>
+		<td>${i18nHelper.getMessage("310706")}</td>
+	</tr>
+	<tr>
+		<td>desc</td>
+		<td>${i18nHelper.getMessage("310107")}</td>
+		<td>${i18nHelper.getMessage("310207")}</td>
+		<td>${i18nHelper.getMessage("310307")}</td>
+		<td>${i18nHelper.getMessage("310407")}</td>
+		<td>${i18nHelper.getMessage("310507")}</td>
+		<td>${i18nHelper.getMessage("310607")}</td>
+		<td>${i18nHelper.getMessage("310707")}</td>
+		
+	</tr>
+	<tr>
+		<td>publisher</td>
+		<td>${i18nHelper.getMessage("310108")}</td>
+		<td>${i18nHelper.getMessage("310208")}</td>
+		<td>${i18nHelper.getMessage("310308")}</td>
+		<td>${i18nHelper.getMessage("310408")}</td>
+		<td>${i18nHelper.getMessage("310508")}</td>
+		<td>${i18nHelper.getMessage("310608")}</td>
+		<td>${i18nHelper.getMessage("310708")}</td>
+	</tr>
+	<tr>
+		<td>datePublished</td>
+		<td>${i18nHelper.getMessage("310109")}</td>
+		<td>${i18nHelper.getMessage("310209")}</td>
+		<td>${i18nHelper.getMessage("310309")}</td>
+		<td>${i18nHelper.getMessage("310409")}</td>
+		<td>${i18nHelper.getMessage("310509")}</td>
+		<td>${i18nHelper.getMessage("310609")}</td>
+		<td>${i18nHelper.getMessage("310709")}</td>
+	</tr>
+	<tr>
+		<td>genre</td>
+		<td>${i18nHelper.getMessage("310110")}</td>
+		<td>${i18nHelper.getMessage("310210")}</td>
+		<td>${i18nHelper.getMessage("310310")}</td>
+		<td>${i18nHelper.getMessage("310410")}</td>
+		<td>${i18nHelper.getMessage("310510")}</td>
+		<td>${i18nHelper.getMessage("310610")}</td>
+		<td>${i18nHelper.getMessage("310710")}</td>
+	</tr>
+	<tr>
+		<td>currentDate</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+		<td>${i18nHelper.getMessage("330101")}</td>
+	</tr>
+	<tr>
+		<td>currentTime</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+		<td>${i18nHelper.getMessage("330102")}</td>
+	</tr>
+</table>`;
+  new import_obsidian11.Setting(containerEl).setName(i18nHelper.getMessage("122001")).setDesc(basicVariablesTable);
+  const extraVariablesTable = new DocumentFragment();
+  extraVariablesTable.createDiv().innerHTML = `
+${i18nHelper.getMessage("122004")}
+<br>
+<br>
+<table border="1">
+	<tr>
+		<th>${i18nHelper.getMessage("300101")}</th>
+		<th>${i18nHelper.getMessage("300102")}</th>
+		<th>${i18nHelper.getMessage("300103")}</th>
+		<th>${i18nHelper.getMessage("300104")}</th>
+		<th>${i18nHelper.getMessage("300105")}</th>
+		<th>${i18nHelper.getMessage("300106")}</th>
+		<th>${i18nHelper.getMessage("300107")}</th>
+		<th>${i18nHelper.getMessage("300108")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320101")}</th>
+		<td>${i18nHelper.getMessage("310111")}</th>
+		<td>${i18nHelper.getMessage("310211")}</th>
+		<td>${i18nHelper.getMessage("310311")}</th>
+		<td>${i18nHelper.getMessage("310411")}</th>
+		<td>${i18nHelper.getMessage("310511")}</th>
+		<td>${i18nHelper.getMessage("310611")}</th>
+		<td>${i18nHelper.getMessage("310711")}</th>
+	</tr>
+		<td>${i18nHelper.getMessage("320102")}</th>
+		<td>${i18nHelper.getMessage("310112")}</th>
+		<td>${i18nHelper.getMessage("310212")}</th>
+		<td>${i18nHelper.getMessage("310312")}</th>
+		<td>${i18nHelper.getMessage("310412")}</th>
+		<td>${i18nHelper.getMessage("310512")}</th>
+		<td>${i18nHelper.getMessage("310612")}</th>
+		<td>${i18nHelper.getMessage("310712")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320103")}</th>
+		<td>${i18nHelper.getMessage("310113")}</th>
+		<td>${i18nHelper.getMessage("310213")}</th>
+		<td>${i18nHelper.getMessage("310313")}</th>
+		<td>${i18nHelper.getMessage("310413")}</th>
+		<td>${i18nHelper.getMessage("310513")}</th>
+		<td>${i18nHelper.getMessage("310613")}</th>
+		<td>${i18nHelper.getMessage("310713")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320104")}</th>
+		<td>${i18nHelper.getMessage("310114")}</th>
+		<td>${i18nHelper.getMessage("310214")}</th>
+		<td>${i18nHelper.getMessage("310314")}</th>
+		<td>${i18nHelper.getMessage("310414")}</th>
+		<td>${i18nHelper.getMessage("310514")}</th>
+		<td>${i18nHelper.getMessage("310614")}</th>
+		<td>${i18nHelper.getMessage("310714")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320105")}</th>
+		<td>${i18nHelper.getMessage("310115")}</th>
+		<td>${i18nHelper.getMessage("310215")}</th>
+		<td>${i18nHelper.getMessage("310315")}</th>
+		<td>${i18nHelper.getMessage("310415")}</th>
+		<td>${i18nHelper.getMessage("310515")}</th>
+		<td>${i18nHelper.getMessage("310615")}</th>
+		<td>${i18nHelper.getMessage("310715")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320106")}</th>
+		<td>${i18nHelper.getMessage("310116")}</th>
+		<td>${i18nHelper.getMessage("310216")}</th>
+		<td>${i18nHelper.getMessage("310316")}</th>
+		<td>${i18nHelper.getMessage("310416")}</th>
+		<td>${i18nHelper.getMessage("310516")}</th>
+		<td>${i18nHelper.getMessage("310616")}</th>
+		<td>${i18nHelper.getMessage("310716")}</th>
+	</tr>
+	<tr>
+		<td>${i18nHelper.getMessage("320107")}</th>
+		<td>${i18nHelper.getMessage("310117")}</th>
+		<td>${i18nHelper.getMessage("310217")}</th>
+		<td>${i18nHelper.getMessage("310317")}</th>
+		<td>${i18nHelper.getMessage("310417")}</th>
+		<td>${i18nHelper.getMessage("310517")}</th>
+		<td>${i18nHelper.getMessage("310617")}</th>
+		<td>${i18nHelper.getMessage("310717")}</th>
+	</tr>
+	
+	<tr>
+		<td>${i18nHelper.getMessage("320108")}</th>
+		<td>${i18nHelper.getMessage("310118")}</th>
+		<td>${i18nHelper.getMessage("310218")}</th>
+		<td>${i18nHelper.getMessage("310318")}</th>
+		<td>${i18nHelper.getMessage("310418")}</th>
+		<td>${i18nHelper.getMessage("310518")}</th>
+		<td>${i18nHelper.getMessage("310618")}</th>
+		<td>${i18nHelper.getMessage("310718")}</th>
+	</tr>
+</table>`;
+  new import_obsidian11.Setting(containerEl).setName(i18nHelper.getMessage("122002")).setDesc(extraVariablesTable);
+}
+
+// src/douban/setting/CustomPropertySettingsHelper.ts
+var import_obsidian12 = __toModule(require("obsidian"));
+function constructCustomPropertySettingsUI(containerEl, manager) {
+  containerEl.createEl("h3", { text: i18nHelper.getMessage("1240") });
+  containerEl.createEl("p", { text: i18nHelper.getMessage("1242") });
+  const customProperties = manager.plugin.settings.customProperties;
+  new import_obsidian12.Setting(containerEl).setDesc(i18nHelper.getMessage("1241")).addButton((button) => {
+    button.setButtonText(i18nHelper.getMessage("124101"));
+    button.setTooltip(i18nHelper.getMessage("124101"));
+    button.setIcon("plus");
+    button.onClick(() => __async(this, null, function* () {
+      customProperties.push({ name: "", value: "", field: SupportType.ALL });
+      constructCustomPropertyUI(list, customProperties, manager);
+    }));
+  });
+  const list = containerEl.createDiv("custom-property-list");
+  constructCustomPropertyUI(list, customProperties, manager);
+}
+function constructCustomPropertyUI(containerEl, customProperties, manager) {
+  containerEl.empty();
+  for (let i = 0; i < customProperties.length; i++) {
+    addFilterInput(customProperties[i], containerEl, customProperties, manager, i);
+  }
+}
+function addFilterInput(data2, el, customProperties, manager, idx) {
+  const item = el.createEl("li");
+  item.createEl("span", { text: i18nHelper.getMessage("124102") });
+  const nameField = new import_obsidian12.TextComponent(el);
+  nameField.setPlaceholder(i18nHelper.getMessage("124103")).setValue(data2.name).onChange((value) => __async(this, null, function* () {
+    if (!value) {
+      return;
+    }
+    customProperties[idx].name = value;
+    yield manager.plugin.saveSettings();
+  }));
+  let nameEl = nameField.inputEl;
+  nameEl.addClass("obsidian_douban_settings_input");
+  item.appendChild(nameEl);
+  item.createEl("span", { text: i18nHelper.getMessage("124104") });
+  const valueField = new import_obsidian12.TextComponent(el);
+  valueField.setPlaceholder(i18nHelper.getMessage("124105")).setValue(data2.value).onChange((value) => __async(this, null, function* () {
+    if (!value) {
+      return;
+    }
+    customProperties[idx].value = value;
+    yield manager.plugin.saveSettings();
+  }));
+  const valueEl = valueField.inputEl;
+  valueEl.addClass("obsidian_douban_settings_input");
+  item.appendChild(valueEl);
+  const fieldsDropdown = new import_obsidian12.DropdownComponent(el);
+  for (const fieldSelect in SupportType) {
+    fieldsDropdown.addOption(fieldSelect, i18nHelper.getMessage(fieldSelect));
+  }
+  item.createEl("span", { text: i18nHelper.getMessage("124106") });
+  fieldsDropdown.setValue(data2.field).onChange((value) => __async(this, null, function* () {
+    customProperties[idx].field = value;
+    yield manager.plugin.saveSettings();
+  }));
+  const fieldSelectEl = fieldsDropdown.selectEl;
+  fieldSelectEl.addClass("obsidian_douban_settings_input");
+  item.appendChild(fieldSelectEl);
+  const extractButton = new import_obsidian12.ButtonComponent(el);
+  extractButton.setIcon("minus-with-circle");
+  extractButton.setTooltip(i18nHelper.getMessage("124107"));
+  extractButton.onClick(() => __async(this, null, function* () {
+    customProperties.splice(idx, 1);
+    constructCustomPropertyUI(el, customProperties, manager);
+    yield manager.plugin.saveSettings();
+  }));
+  const extractButtonEl = extractButton.buttonEl;
+  extractButtonEl.addClass("obsidian_douban_settings_button");
+  item.appendChild(extractButtonEl);
+}
+
+// src/douban/setting/DoubanSettingTab.ts
+var DoubanSettingTab = class extends import_obsidian13.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
+    this.settingsManager = new SettingsManager(app2, plugin);
   }
   display() {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Obsidian Douban" });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120001")).then((setting) => {
-      setting.addText((textField) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120002"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120003"));
-          frag.createEl("a", {
-            text: i18nHelper.getMessage("120901"),
-            href: "https://www.douban.com"
-          }, (a) => {
-            a.setAttr("target", "_blank");
-          });
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120004"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120005"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120006"));
-          frag.createEl("br");
-        }));
-        textField.inputEl.addClass("obsidian_douban_settings_textField");
-        textField.setPlaceholder(DEFAULT_SETTINGS.searchUrl).setValue(this.plugin.settings.searchUrl).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.searchUrl = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120101")).then((setting) => {
-      setting.addTextArea((textarea) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120102"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120103"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120104"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120105"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120106"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120107"));
-          frag.createEl("br");
-        }));
-        textarea.inputEl.addClass("obsidian_douban_settings_area");
-        textarea.inputEl.setAttr("rows", 20);
-        textarea.setPlaceholder(DEFAULT_SETTINGS.movieTemplate).setValue(this.plugin.settings.movieTemplate).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.movieTemplate = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120201")).then((setting) => {
-      setting.addTextArea((textarea) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120202"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120203"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120204"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120205"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120206"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120207"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120208"));
-          frag.createEl("br");
-        }));
-        textarea.inputEl.addClass("obsidian_douban_settings_area");
-        textarea.inputEl.setAttr("rows", 20);
-        textarea.setPlaceholder(DEFAULT_SETTINGS.bookTemplate).setValue(this.plugin.settings.bookTemplate).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.bookTemplate = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120301")).then((setting) => {
-      setting.addTextArea((textarea) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120302"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120303"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120304"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120305"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120306"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120307"));
-          frag.createEl("br");
-        }));
-        textarea.inputEl.addClass("obsidian_douban_settings_area");
-        textarea.inputEl.setAttr("rows", 20);
-        textarea.setPlaceholder(DEFAULT_SETTINGS.musicTemplate).setValue(this.plugin.settings.musicTemplate).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.musicTemplate = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120401")).then((setting) => {
-      setting.addTextArea((textarea) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120402"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120403"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120404"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120405"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120406"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120407"));
-          frag.createEl("br");
-        }));
-        textarea.inputEl.addClass("obsidian_douban_settings_area");
-        textarea.inputEl.setAttr("rows", 20);
-        textarea.setPlaceholder(DEFAULT_SETTINGS.noteTemplate).setValue(this.plugin.settings.noteTemplate).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.noteTemplate = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("121301")).then((setting) => {
-      setting.addTextArea((textarea) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("121302"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121303"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121304"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121305"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121306"));
-          frag.createEl("br");
-        }));
-        textarea.inputEl.addClass("obsidian_douban_settings_area");
-        textarea.inputEl.setAttr("rows", 20);
-        textarea.setPlaceholder(DEFAULT_SETTINGS.gameTemplate).setValue(this.plugin.settings.gameTemplate).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.gameTemplate = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("121201")).then((setting) => {
-      setting.addDropdown((dropdwon) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("121202"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121203"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121204"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("121205"));
-          frag.createEl("br");
-        }));
-        dropdwon.addOption(PersonNameMode.CH_NAME, PersonNameModeRecords.CH);
-        dropdwon.addOption(PersonNameMode.EN_NAME, PersonNameModeRecords.EN);
-        dropdwon.addOption(PersonNameMode.CH_EN_NAME, PersonNameModeRecords.CH_EN);
-        dropdwon.setValue(this.plugin.settings.personNameMode).onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.personNameMode = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120501")).then((setting) => {
-      setting.addMomentFormat((mf) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120503"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120506") + " ");
-          frag.createEl("a", {
-            text: i18nHelper.getMessage("120508"),
-            href: "https://momentjs.com/docs/#/displaying/format/"
-          }, (a) => {
-            a.setAttr("target", "_blank");
-          });
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120507") + ": ");
-          mf.setSampleEl(frag.createEl("b", { cls: "u-pop" }));
-          frag.createEl("br");
-        }));
-        mf.setPlaceholder(DEFAULT_SETTINGS.dateFormat);
-        mf.setValue(this.plugin.settings.dateFormat);
-        mf.onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.dateFormat = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120502")).then((setting) => {
-      setting.addMomentFormat((mf) => {
-        setting.descEl.appendChild(createFragment((frag) => {
-          frag.appendText(i18nHelper.getMessage("120504"));
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120506") + " ");
-          frag.createEl("a", {
-            text: i18nHelper.getMessage("120508"),
-            href: "https://momentjs.com/docs/#/displaying/format/"
-          }, (a) => {
-            a.setAttr("target", "_blank");
-          });
-          frag.createEl("br");
-          frag.appendText(i18nHelper.getMessage("120507") + ": ");
-          mf.setSampleEl(frag.createEl("b", { cls: "u-pop" }));
-          frag.createEl("br");
-        }));
-        mf.setPlaceholder(DEFAULT_SETTINGS.timeFormat);
-        mf.setValue(this.plugin.settings.timeFormat);
-        mf.onChange((value) => __async(this, null, function* () {
-          this.plugin.settings.timeFormat = value;
-          yield this.plugin.saveSettings();
-        }));
-      });
-    });
-    new import_obsidian5.Setting(containerEl).setName(i18nHelper.getMessage("120601")).setDesc(i18nHelper.getMessage("120602")).addText((textField) => {
-      textField.setPlaceholder(DEFAULT_SETTINGS.arraySpilt).setValue(this.plugin.settings.arraySpilt).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.arraySpilt = value;
-        yield this.plugin.saveSettings();
-      }));
-    });
+    new import_obsidian13.Setting(containerEl);
+    constructBasicUI(containerEl, this.settingsManager);
+    constructTemplateUI(containerEl, this.settingsManager);
+    constructOutUI(containerEl, this.settingsManager);
+    constructCustomPropertySettingsUI(containerEl, this.settingsManager);
+    constructTemplateVariablesUI(containerEl, this.settingsManager);
   }
 };
 
@@ -15470,84 +18065,217 @@ var SearchParserHandler = class {
 };
 
 // src/douban/data/search/Search.ts
-var import_obsidian6 = __toModule(require("obsidian"));
+var import_obsidian14 = __toModule(require("obsidian"));
 var Searcher = class {
   static search(searchItem, doubanSettings) {
     let requestUrlParam = {
-      url: doubanSettings.searchUrl + searchItem,
+      url: DEFAULT_SETTINGS.searchUrl + searchItem,
       method: "GET",
       headers: JSON.parse(doubanSettings.searchHeaders),
       throw: true
     };
-    return (0, import_obsidian6.request)(requestUrlParam).then(load).then(SearchParserHandler.parseSearch).catch((e) => log.error(i18nHelper.getMessage("130101")));
+    return (0, import_obsidian14.request)(requestUrlParam).then(load).then(SearchParserHandler.parseSearch).catch((e) => log.error(i18nHelper.getMessage("130101")));
+  }
+};
+
+// src/file/FileHandler.ts
+var import_obsidian16 = __toModule(require("obsidian"));
+
+// src/utils/FileUtil.ts
+var import_obsidian15 = __toModule(require("obsidian"));
+var FileUtil = {
+  parse(pathString) {
+    const regex = /(?<dir>([^/\\]+[/\\])*)(?<name>[^/\\]*$)/;
+    const match = String(pathString).match(regex);
+    const { dir, name } = match && match.groups;
+    const nameWithoutSpChar = this.replaceSpecialCharactersForFileName(name);
+    return { dir, name: nameWithoutSpChar || "Untitled_" + new Date().getTime(), extension: "md" };
+  },
+  join(...strings) {
+    const parts = strings.map((s) => String(s).trim()).filter((s) => s != null);
+    return (0, import_obsidian15.normalizePath)(parts.join("/"));
+  },
+  replaceSpecialCharactersForFileName(fileName) {
+    return fileName.replaceAll(/[\\/:*?"<>|]/g, "_");
+  }
+};
+
+// src/file/FileHandler.ts
+var FileHandler = class {
+  constructor(app2) {
+    this._app = app2;
+  }
+  createDirectory(dir) {
+    return __async(this, null, function* () {
+      const { vault } = this._app;
+      const { adapter: adapter2 } = vault;
+      const root2 = vault.getRoot().path;
+      const directoryPath = FileUtil.join(dir);
+      const directoryExists = yield adapter2.exists(directoryPath);
+      if (!import_obsidian16.Platform.isIosApp) {
+        if (!directoryExists) {
+          return adapter2.mkdir((0, import_obsidian16.normalizePath)(directoryPath));
+        }
+      }
+      const subPaths = (0, import_obsidian16.normalizePath)(directoryPath).split("/").filter((part) => part.trim() !== "").map((_, index2, arr) => arr.slice(0, index2 + 1).join("/"));
+      for (const subPath of subPaths) {
+        const directoryExists2 = yield adapter2.exists(FileUtil.join(root2, subPath));
+        if (!directoryExists2) {
+          yield adapter2.mkdir(FileUtil.join(root2, subPath));
+        }
+      }
+    });
+  }
+  createNewNote(originalFilePath) {
+    return __async(this, null, function* () {
+      this.createNewNoteWithData(originalFilePath, "");
+    });
+  }
+  createNewNoteWithData(originalFilePath, data2) {
+    return __async(this, null, function* () {
+      const { vault } = this._app;
+      const { adapter: adapter2 } = vault;
+      const prependDirInput = FileUtil.join("", originalFilePath);
+      const { dir, name } = FileUtil.parse(prependDirInput);
+      const filePath = FileUtil.join(dir, `${name}.md`);
+      try {
+        const fileExists = yield adapter2.exists(filePath);
+        if (fileExists) {
+          throw new Error(i18nHelper.getMessage("110201").replace("{0}", filePath != null ? filePath : ""));
+        }
+        if (dir !== "") {
+          yield this.createDirectory(dir);
+        }
+        const File = yield vault.create(filePath, data2);
+        const leaf = this._app.workspace.splitLeafOrActive();
+        yield leaf.openFile(File);
+      } catch (error) {
+        log.error(error.toString());
+      }
+    });
+  }
+  getFileContent(filePath) {
+    return __async(this, null, function* () {
+      const { metadataCache, vault } = this._app;
+      const normalizedTemplatePath = (0, import_obsidian16.normalizePath)(filePath != null ? filePath : "");
+      if (filePath === "/") {
+        return Promise.resolve("");
+      }
+      try {
+        const file = metadataCache.getFirstLinkpathDest(normalizedTemplatePath, "");
+        return file ? vault.cachedRead(file) : "";
+      } catch (err) {
+        console.error(`Failed to read the daily note template '${normalizedTemplatePath}'`, err);
+        log.error(i18nHelper.getMessage("110202").replace("{0}", normalizedTemplatePath != null ? normalizedTemplatePath : ""));
+        return "";
+      }
+    });
   }
 };
 
 // main.ts
-var DoubanPlugin = class extends import_obsidian7.Plugin {
-  putToEditor(editor, extract) {
+var DoubanPlugin = class extends import_obsidian17.Plugin {
+  putToObsidian(context, extract) {
     return __async(this, null, function* () {
       try {
-        if (!editor || !extract) {
+        if (!extract) {
           log.warn(i18nHelper.getMessage("140101"));
           return;
         }
         this.showStatus("140204", extract.title);
-        let content = this.doubanExtractHandler.parseText(extract, this.settings);
-        if (content) {
-          editor.replaceSelection(content);
+        const result = yield this.doubanExtractHandler.parseText(extract, context);
+        if (result) {
+          this.putContentToObsidian(context, result);
         }
         this.showStatus("140205", extract.title);
       } catch (e) {
         this.showStatus("140206", e.message);
       } finally {
-        setTimeout(() => this.doubanStatusBar.empty(), BasicConst.CLEAN_STATUS_BAR_DELAY);
+        this.clearStatusBarDelay();
       }
     });
   }
-  search(searchTerm, editor) {
+  putContentToObsidian(context, result) {
+    return __async(this, null, function* () {
+      const { mode } = context;
+      switch (mode) {
+        case SearchHandleMode.FOR_CREATE:
+          this.createFile(context, result);
+          break;
+        case SearchHandleMode.FOR_REPLACE:
+          this.putToEditor(context.editor, result.content);
+          break;
+      }
+    });
+  }
+  putToEditor(editor, content) {
+    return __async(this, null, function* () {
+      editor.replaceSelection(content);
+    });
+  }
+  createFile(context, result) {
+    return __async(this, null, function* () {
+      let filePath = this.settings.dataFilePath;
+      filePath = filePath ? filePath : DEFAULT_SETTINGS.dataFilePath;
+      filePath = FileUtil.join(filePath, result.fileName);
+      this.fileHandler.createNewNoteWithData(filePath, result.content);
+    });
+  }
+  search(searchTerm, context) {
     return __async(this, null, function* () {
       try {
         this.showStatus("140201", searchTerm);
         const resultList = yield Searcher.search(searchTerm, this.settings);
         this.showStatus("140202", resultList.length.toString());
-        new DoubanFuzzySuggester(this, editor).showSearchList(resultList);
+        new DoubanFuzzySuggester(this, context).showSearchList(resultList);
       } catch (e) {
         this.showStatus("140206", e.message);
       } finally {
-        setTimeout(() => this.doubanStatusBar.empty(), BasicConst.CLEAN_STATUS_BAR_DELAY);
+        this.clearStatusBarDelay();
       }
     });
   }
-  getDoubanTextForActiveFile(editor) {
+  getDoubanTextForActiveFile(context) {
     return __async(this, null, function* () {
       const activeFile = yield this.app.workspace.getActiveFile();
       if (activeFile) {
         const searchTerm = activeFile.basename;
         if (searchTerm) {
-          yield this.search(searchTerm, editor);
+          yield this.search(searchTerm, context);
         }
       }
     });
   }
-  getDoubanTextForSearchTerm(editor) {
+  getDoubanTextForCreateNewNote(context) {
     return __async(this, null, function* () {
-      new DoubanSearchModal(this.app, this, editor).open();
+      new DoubanSearchModal(this.app, this, context).open();
+    });
+  }
+  getDoubanTextForSearchTerm(context) {
+    return __async(this, null, function* () {
+      new DoubanSearchModal(this.app, this, context).open();
     });
   }
   onload() {
     return __async(this, null, function* () {
       yield this.loadSettings();
-      this.doubanStatusBar = this.addStatusBarItem();
+      if (this.settings.statusBar) {
+        this.doubanStatusBar = this.addStatusBarItem();
+      }
+      this.addCommand({
+        id: "search-douban-import-and-create-file",
+        name: i18nHelper.getMessage("110101"),
+        callback: () => this.getDoubanTextForCreateNewNote({ mode: SearchHandleMode.FOR_CREATE, settings: this.settings })
+      });
       this.addCommand({
         id: "search-douban-by-current-file-name",
         name: i18nHelper.getMessage("110001"),
-        editorCallback: (editor) => this.getDoubanTextForActiveFile(editor)
+        editorCallback: (editor) => this.getDoubanTextForActiveFile({ mode: SearchHandleMode.FOR_REPLACE, settings: this.settings, editor })
       });
       this.addCommand({
         id: "search-douban-and-input-current-file",
         name: i18nHelper.getMessage("110002"),
-        editorCallback: (editor) => this.getDoubanTextForSearchTerm(editor)
+        editorCallback: (editor) => this.getDoubanTextForSearchTerm({ mode: SearchHandleMode.FOR_REPLACE, settings: this.settings, editor })
       });
       this.addSettingTab(new DoubanSettingTab(this.app, this));
     });
@@ -15556,6 +18284,7 @@ var DoubanPlugin = class extends import_obsidian7.Plugin {
     return __async(this, null, function* () {
       this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
       this.doubanExtractHandler = new DoubanSearchChooseItemHandler(this.app, this);
+      this.fileHandler = new FileHandler(this.app);
     });
   }
   saveSettings() {
@@ -15564,7 +18293,16 @@ var DoubanPlugin = class extends import_obsidian7.Plugin {
     });
   }
   showStatus(origin, message) {
+    if (!this.settings.statusBar || !this.doubanStatusBar) {
+      return;
+    }
     this.doubanStatusBar.empty();
     this.doubanStatusBar.setText(i18nHelper.getMessage(origin).replace("{0}", message));
+  }
+  clearStatusBarDelay() {
+    if (!this.settings.statusBar || !this.doubanStatusBar) {
+      return;
+    }
+    setTimeout(() => this.doubanStatusBar.empty(), BasicConst.CLEAN_STATUS_BAR_DELAY);
   }
 };

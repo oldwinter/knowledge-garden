@@ -1,0 +1,18 @@
+:root {
+  --longform-explorer-font-size: var(--font-ui-medium);
+}
+
+.longform-settings-user-steps {
+  padding-inline-start: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.longform-settings-user-step-name {
+  color: var(--text-normal);
+}
+
+.longform-settings-user-step-id {
+  margin-left: var(--size-4-2);
+  color: var(--text-muted);
+}

@@ -211,6 +211,9 @@ function dirname(path) {
   var _a, _b;
   return (_b = (_a = path.match(/(.+)[\\/].+$/)) == null ? void 0 : _a[1]) != null ? _b : ".";
 }
+function normalizePath(path) {
+  return path.replace(/\\/g, "/").replace(/\/+/g, "/");
+}
 function normalizeRelativePath(path, base) {
   const sep = /[\\/]/;
   let es = [];
@@ -228,7 +231,8 @@ function normalizeRelativePath(path, base) {
     }
     es = [...es, x];
   });
-  return es.filter((x) => x !== "").join("/");
+  const r = es.filter((x) => x !== "").join("/");
+  return base[0] === "/" ? "/" + r : r;
 }
 
 // src/errors.ts
@@ -2168,7 +2172,7 @@ var GrepModal = class extends import_obsidian6.SuggestModal {
   constructor(app2, settings) {
     super(app2);
     this.suggestions = globalInternalStorage.items;
-    this.vaultRootPath = (0, import_obsidian6.normalizePath)(
+    this.vaultRootPath = normalizePath(
       this.app.vault.adapter.basePath
     );
     this.appHelper = new AppHelper(app2);
@@ -2302,7 +2306,7 @@ var GrepModal = class extends import_obsidian6.SuggestModal {
       return {
         order,
         file: this.appHelper.getMarkdownFileByPath(
-          (0, import_obsidian6.normalizePath)(x.data.path.text).replace(
+          normalizePath(x.data.path.text).replace(
             this.vaultRootPath + "/",
             ""
           )

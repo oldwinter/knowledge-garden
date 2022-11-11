@@ -163,6 +163,47 @@
     "Trailing spaces": {
       "Removes extra spaces after every line.": true,
       "Two Space Linebreak": true
+    },
+    "Force YAML Escape": {
+      "Escapes the values for the specified YAML keys.": false,
+      "Force YAML Escape on Keys": ""
+    },
+    "Unordered List Style": {
+      "Makes sure that unordered lists follow the style specified.": false,
+      "List item style": "consistent"
+    },
+    "Empty Line Around Blockquotes": {
+      "Ensures that there is an empty line around blockquotes unless they start or end a document. **Note that an empty line is either one less level of nesting for blockquotes or a newline character.**": false
+    },
+    "Empty Line Around Math Blocks": {
+      "Ensures that there is an empty line around math blocks using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": false
+    },
+    "Move Math Block Indicators to Their Own Line": {
+      "Move all starting and ending math block indicators to their own lines using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": false
+    },
+    "Add Blockquote Indentation on Paste": {
+      "Adds blockquotes to all but the first line, when the cursor is in a blockquote/callout line during pasting": false
+    },
+    "Prevent Double Checklist Indicator on Paste": {
+      "Removes starting checklist indicator from the text to paste if the line the cursor is on in the file has a checklist indicator": false
+    },
+    "Prevent Double List Item Indicator on Paste": {
+      "Removes starting list indicator from the text to paste if the line the cursor is on in the file has a list indicator": false
+    },
+    "Proper Ellipsis on Paste": {
+      "Replaces three consecutive dots with an ellipsis even if they have a space between them in the text to paste": false
+    },
+    "Remove Hyphens on Paste": {
+      "Removes hyphens from the text to paste": false
+    },
+    "Remove Leading or Trailing Whitespace on Paste": {
+      "Removes any leading non-tab whitespace and all trailing whitespace for the text to paste": false
+    },
+    "Remove Leftover Footnotes from Quote on Paste": {
+      "Removes any leftover footnote references for the text to paste": false
+    },
+    "Remove Multiple Blank Lines on Paste": {
+      "Condenses multiple blank lines down into one blank line for the text to paste": false
     }
   },
   "lintOnSave": true,

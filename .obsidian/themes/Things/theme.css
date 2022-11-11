@@ -1,0 +1,898 @@
+/*───────────────────────────────────────────────────────
+THINGS
+Version 2.0.1
+Created by @colineckert
+
+Readme:
+https://github.com/colineckert/obsidian-things
+
+Support my work:
+https://www.buymeacoffee.com/colineckert
+────────────────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────────── */
+/* Main Theme Styling */
+/* ─────────────────────────────────────────────────── */
+
+@charset "UTF-8";
+body {
+  /* Colors */
+  --base-h: 212; /* Base hue */
+  --base-s: 15%; /* Base saturation */
+  --base-d: 13%; /* Base lightness Dark Mode  - 0 is black */
+  --base-l: 97%; /* Base lightness Light Mode  - 100 is white */
+  --accent-h: 215; /* Accent hue */
+  --accent-s: 75%; /* Accent saturation */
+  --accent-d: 70%; /* Accent lightness Dark Mode */
+  --accent-l: 60%; /* Accent lightness Light Mode */
+
+  --blue: #2e80f2;
+  --pink: #ff82b2;
+  --green: #3eb4bf;
+  --yellow: #e5b567;
+  --orange: #e87d3e;
+  --red: #e83e3e;
+  --purple: #9e86c8;
+
+  --h1-color: var(--text-normal);
+  --h2-color: var(--blue);
+  --h3-color: var(--blue);
+  --h4-color: var(--yellow);
+  --h5-color: var(--red);
+  --h6-color: var(--text-muted);
+
+  --strong-color: var(--pink);
+  --em-color: var(--pink);
+  --quote-color: var(--green);
+
+  --tag-background-color-l: #bde1d3;
+  --tag-font-color-l: #1d694b;
+  --tag-background-color-d: #1d694b;
+  --tag-font-color-d: #ffffff;
+
+  /* Font families */
+  --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Inter, Ubuntu, sans-serif;
+  --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Inter, Ubuntu, sans-serif;
+  --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular,
+    Consolas, 'Roboto Mono', monospace;
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Inter, Ubuntu, sans-serif;
+  --font-editor: var(--font-editor-override), var(--font-text-override),
+    var(--font-editor-theme);
+
+  /* Misc */
+  --checkbox-radius: 30%;
+  --link-external-decoration: underline;
+  --link-decoration: underline;
+}
+
+/* COLOR SCHEMES
+────────────────────────────────────────────────────── */
+
+.theme-light {
+  color-scheme: light;
+  --highlight-mix-blend-mode: darken;
+  --mono-rgb-0: 255, 255, 255;
+  --mono-rgb-100: 0, 0, 0;
+  --color-red-rgb: 228, 55, 75;
+  --color-red: #e4374b;
+  --color-green-rgb: 12, 181, 79;
+  --color-green: #0cb54f;
+  --color-orange: #d96c00;
+  --color-yellow: #bd8e37;
+  --color-cyan: #2db7b5;
+  --color-blue: #086ddd;
+  --color-purple: #876be0;
+  --color-pink: #c32b74;
+  --color-base-00: #ffffff;
+  --color-base-05: #fcfcfc;
+  --color-base-10: #f6f7f8; /* code blocks */
+  --color-base-20: #f6f7f8;
+  --color-base-25: #e3e3e3;
+  --color-base-30: #ebedf0; /* soften dividing lines */
+  --color-base-35: #d4d4d4;
+  --color-base-40: #bdbdbd;
+  --color-base-50: #ababab;
+  --color-base-60: #707070;
+  --color-base-70: #5a5a5a;
+  --color-base-100: #222222;
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 2.5%)
+  );
+  --color-accent-2: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 5%)
+  );
+  --background-modifier-hover: #e2e5e9;
+  --background-secondary-alt: var(--color-base-05);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-cover: rgba(220, 220, 220, 0.4);
+  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+    0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
+    0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
+    0px 3.4px 6.7px rgba(0, 0, 0, 0.042), 0px 15px 30px rgba(0, 0, 0, 0.07);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+    0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+
+  --tag-background: var(--tag-background-color-l);
+  --tag-color: var(--tag-font-color-l);
+
+  /* --text-normal: hsl(var(--base-h), var(--base-s), calc(var(--base-l) - 80%)); */
+  --text-muted: hsl(
+    var(--base-h),
+    calc(var(--base-s) - 5%),
+    calc(var(--base-l) - 60%)
+  );
+  --text-faint: hsl(
+    var(--base-h),
+    calc(var(--base-s) - 5%),
+    calc(var(--base-l) - 30%)
+  );
+
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --text-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 10%)
+  );
+
+  --atom-gray-1: #383a42;
+  --atom-gray-2: #383a42;
+  --atom-red: #e75545;
+  --atom-green: #4ea24c;
+  --atom-blue: #3d74f6;
+  --atom-purple: #a625a4;
+  --atom-aqua: #0084bc;
+  --atom-yellow: #e35649;
+  --atom-orange: #986800;
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --highlight-mix-blend-mode: lighten;
+  --mono-rgb-0: 0, 0, 0;
+  --mono-rgb-100: 255, 255, 255;
+  --color-red-rgb: 251, 70, 76;
+  --color-red: #fb464c;
+  --color-green-rgb: 68, 207, 110;
+  --color-green: #44cf6e;
+  --color-orange: #e9973f;
+  --color-yellow: #e0de71;
+  --color-cyan: #53dfdd;
+  --color-blue: #027aff;
+  --color-purple: #a882ff;
+  --color-pink: #fa99cd;
+  --color-base-00: #1c2127; /* main editor window */
+  --color-base-10: #282c34; /* code blocks */
+  --color-base-20: #181c20; /* top unselected unfocused nav */
+  --color-base-25: #181c20;
+  --color-base-30: #252b32; /* dividing lines */
+  --color-base-35: #3f3f3f;
+  --color-base-40: #555;
+  --color-base-50: #666; /* unfocused text -- good */
+  --color-base-60: #999;
+  --color-base-70: #bababa;
+  --color-base-100: #dadada;
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 3.8%)
+  );
+  --color-accent-2: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 3.8%)
+  );
+  --background-modifier-form-field: var(--color-base-25);
+  --background-secondary-alt: var(--color-base-30);
+  --interactive-normal: var(--color-base-30);
+  --interactive-hover: var(--color-base-35);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+  --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+    0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1.5px 0 rgba(0, 0, 0, 0.2),
+    0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121),
+    0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+    0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+
+  --tag-background: var(--tag-background-color-d);
+  --tag-color: var(--tag-font-color-d);
+
+  --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
+  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
+  --text-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-d) + 12%)
+  );
+
+  --atom-gray-1: #5c6370;
+  --atom-gray-2: #abb2bf;
+  --atom-red: #e06c75;
+  --atom-orange: #d19a66;
+  --atom-green: #98c379;
+  --atom-aqua: #56b6c2;
+  --atom-purple: #c678dd;
+  --atom-blue: #61afef;
+  --atom-yellow: #e5c07b;
+}
+/* Make exported PDFs render correctly */ 
+@media print {
+  .theme-dark {
+    --highlight-mix-blend-mode: darken;
+    --color-base-30: #ebedf0;
+    --h1-color: var(--color-base-00);
+  }
+}
+
+/* H2 styling */
+h2,
+.HyperMD-header.HyperMD-header-2.cm-line {
+  border-bottom: 2px solid var(--background-modifier-border);
+  width: 100%;
+  padding-bottom: 2px;
+}
+
+/* Hashtags font */
+.markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta,
+.markdown-source-view.mod-cm5 .cm-hashtag.cm-meta {
+  font-family: var(--font-text-theme);
+}
+
+/* Blockquote */
+body:not(.default-font-color) .markdown-preview-view blockquote,
+body:not(.default-font-color) span.cm-quote.cm-quote-1 {
+  font-style: italic;
+  color: var(--quote-color);
+}
+
+/* Bold font */
+body:not(.default-font-color) strong,
+body:not(.default-font-color) .cm-strong {
+  color: var(--strong-color);
+}
+
+/* Italics */
+body:not(.default-font-color) em,
+body:not(.default-font-color) .cm-em {
+  color: var(--em-color);
+}
+
+/* Markdown formatting */
+.cm-formatting-strong,
+.cm-formatting-em,
+.cm-formatting.cm-formatting-quote {
+  color: var(--text-faint) !important;
+  font-weight: var(--normal-weight);
+  opacity: 0.8;
+  letter-spacing: -0.02em;
+}
+
+/* Completed checkboxes */
+.markdown-preview-view ul > li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
+  text-decoration: none;
+  color: var(--text-faint);
+}
+
+/* Image card */
+img {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.theme-dark .modal-container .suggestion-item.is-selected {
+  background: var(--blue);
+}
+
+/* ------------------- */
+/* One Dark Syntax Coloring */
+/* Source: https://github.com/AGMStudio/prism-theme-one-dark */
+/* ------------------- */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--atom-gray-1);
+}
+.token.punctuation,
+.cm-hmd-codeblock,
+.cm-bracket {
+  color: var(--atom-gray-2);
+}
+code[class*='language-'],
+.token.selector,
+.token.tag,
+.token.parameter,
+.token.property-access,
+.cm-def,
+.cm-property,
+.cm-qualifier {
+  color: var(--atom-red);
+}
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.attr-name,
+.token.deleted,
+.cm-number,
+.cm-property.cm-string {
+  color: var(--atom-orange) !important;
+}
+.token.string,
+.token.char,
+.token.attr-value,
+.token.builtin,
+.token.inserted,
+.cm-hmd-codeblock.cm-string {
+  color: var(--atom-green);
+}
+.token.operator,
+.cm-operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--atom-aqua);
+}
+.token.atrule,
+.token.keyword,
+.cm-keyword {
+  color: var(--atom-purple);
+}
+.token.function,
+.token.macro.property,
+.cm-variable {
+  color: var(--atom-blue);
+}
+.token.class-name,
+.token.property,
+.cm-atom,
+code .cm-tag,
+.theme-dark .cm-variable-2,
+.cm-type {
+  color: var(--atom-yellow);
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--atom-purple);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+
+/* --------------------- */
+/* Mobile toolbar button */
+/* --------------------- */
+
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar)
+  .view-action:nth-last-of-type(5),
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar)
+  .view-action:nth-last-of-type(4) {
+  color: white;
+  background-color: var(--blue);
+  opacity: 1;
+  top: calc(90vh - 110px);
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  left: 86vw;
+  transform: translate(-40%, 5%);
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50% !important;
+  box-shadow: 1.1px 0.3px 2.2px rgba(0, 0, 0, 0.02),
+    2.7px 0.7px 5.3px rgba(0, 0, 0, 0.028), 5px 1.3px 10px rgba(0, 0, 0, 0.035),
+    8.9px 2.2px 17.9px rgba(0, 0, 0, 0.042),
+    16.7px 4.2px 33.4px rgba(0, 0, 0, 0.05), 40px 10px 80px rgba(0, 0, 0, 0.07);
+}
+
+body.is-mobile:not(.floating-button-off).advanced-toolbar
+  .view-action:nth-last-of-type(5),
+body.is-mobile:not(.floating-button-off).advanced-toolbar
+  .view-action:nth-last-of-type(4) {
+  color: white;
+  background-color: var(--blue);
+  opacity: 1;
+  position: fixed;
+  top: calc(100vh - 138px);
+  display: flex;
+  padding: 5px;
+  left: 86vw;
+  transform: translate(-40%, -115%);
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50% !important;
+  box-shadow: 1.1px 0.3px 2.2px rgba(0, 0, 0, 0.02),
+    2.7px 0.7px 5.3px rgba(0, 0, 0, 0.028), 5px 1.3px 10px rgba(0, 0, 0, 0.035),
+    8.9px 2.2px 17.9px rgba(0, 0, 0, 0.042),
+    16.7px 4.2px 33.4px rgba(0, 0, 0, 0.05), 40px 10px 80px rgba(0, 0, 0, 0.07);
+}
+
+/* --------------- */
+/* Todoist */
+/* --------------- */
+
+.todoist-p1 > input[type='checkbox'] {
+  border: 1px solid #ff757f !important;
+  background-color: rgba(255, 117, 127, 0.25) !important;
+}
+.todoist-p1 > input[type='checkbox']:hover {
+  background-color: rgba(255, 117, 127, 0.5) !important;
+}
+.todoist-p2 > input[type='checkbox'] {
+  border: 1px solid #ffc777 !important;
+  background-color: rgba(255, 199, 119, 0.25) !important;
+}
+.todoist-p2 > input[type='checkbox']:hover {
+  background-color: rgba(255, 199, 119, 0.5) !important;
+}
+.todoist-p3 > input[type='checkbox'] {
+  border: 1px solid #65bcff !important;
+  background-color: rgba(101, 188, 255, 0.25) !important;
+}
+.todoist-p3 > input[type='checkbox']:hover {
+  background-color: rgba(101, 188, 255, 0.5) !important;
+}
+.todoist-p4 > input[type='checkbox'] {
+  border: 1px solid #b4c2f0 !important;
+  background-color: rgba(180, 194, 240, 0.25) !important;
+}
+.todoist-p4 > input[type='checkbox']:hover {
+  background-color: rgba(180, 194, 240, 0.5) !important;
+}
+.task-metadata {
+  font-size: var(--font-todoist-metadata-size);
+  color: #7a88cf;
+  margin-left: unset;
+}
+.task-metadata > * {
+  margin-right: 30px;
+}
+.task-date.task-overdue {
+  color: rgba(255, 152, 164, 0.75) !important;
+}
+.task-calendar-icon,
+.task-project-icon,
+.task-labels-icon {
+  vertical-align: middle;
+  height: 17px;
+  width: 17px;
+}
+.todoist-project .todoist-project {
+  margin-left: 20px;
+}
+.todoist-section {
+  margin-left: 20px;
+}
+.todoist-project .todoist-project-title {
+  font-weight: 700;
+  margin-block-end: 0px;
+}
+.todoist-section .todoist-section-title {
+  font-size: var(--font-todoist-title-size);
+  color: #7a88cf;
+  font-weight: 700;
+  margin-block-end: 0px;
+}
+.todoist-error {
+  border: 1px solid #ff98a4;
+  background-color: rgba(255, 152, 164, 0.05);
+  padding: 1em 1em;
+  margin: 1em 0px;
+}
+.todoist-error p {
+  margin: 0 0 1em 0;
+  font-weight: 600;
+}
+.todoist-error code {
+  background-color: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+}
+.todoist-success {
+  border: 1px solid #c3e88d !important;
+  background-color: rgba(195, 232, 141, 0.05);
+  padding: 1em 1em !important;
+  margin: 1em 0px;
+}
+.todoist-success p {
+  margin: 0;
+  font-weight: 600;
+}
+/* .priority-container .priority-1 {
+  color: #ff98a4;
+}
+.priority-container .priority-2 {
+  color: #ffc777;
+}
+.priority-container .priority-3 {
+  color: #65bcff;
+}
+.priority-container .priority-4 {
+  color: #b4c2f0;
+} */
+
+/* ---------------  */
+/* Checklist */
+/* --------------- */
+
+.checklist-plugin-main .title {
+  font-size: var(--nav-item-size);
+}
+
+.checklist-plugin-main .container input.search {
+  font-size: var(--font-ui-small);
+}
+
+.checklist-plugin-main .group-header button.collapse,
+.checklist-plugin-main button.toggle {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.checklist-plugin-main .classic .content > p {
+  font-size: var(--font-ui-smaller);
+}
+
+.checklist-plugin-main .toggle .checkbox {
+  border-radius: var(--checkbox-radius) !important;
+}
+
+/* ─────────────────────────────────────────────────── */
+/* Styles Settings */
+/* ─────────────────────────────────────────────────── */
+
+/* @settings
+name: Things Theme
+id: things-style
+settings:
+    -
+        id: features
+        title: Features
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        title: Disable mobile floating-action button
+        description: Revert placement of edit/preview button to default in header (mobile)
+        id: floating-button-off
+        type: class-toggle
+        default: false
+    -
+        id: link-decoration
+        title: Underline internal links
+        description: Show underlines on internal links
+        type: variable-select
+        default: Underline
+        options:
+          - Underline
+          - None
+    -
+        id: link-external-decoration
+        title: Underline external links
+        description: Show underlines on external links
+        type: variable-select
+        default: Underline
+        options:
+          - Underline
+          - None
+	-
+        id: custom-fonts
+        title: Typography
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: default-font-color
+        title: Default font colors
+        description: Use the default font color styling for bold, italics, and quotes
+        type: class-toggle
+        default:  false
+    - 
+        id: strong-color
+        title: Bold font color
+        type: variable-color
+        format: hex
+        default: '#FF82B2' 
+    - 
+        id: em-color
+        title: Italics font color
+        type: variable-color
+        format: hex
+        default: '#FF82B2' 
+    - 
+        id: quote-color
+        title: Blockquotes font color
+        type: variable-color
+        format: hex
+        default: '#3EB4BF' 
+    -
+        id: code-normal
+        title: Inline code blocks font color (Light mode)
+        type: variable-color
+        format: hex
+        default: '#5C5C5C'
+    -
+        id: code-color-d
+        title: Inline code blocks font color (Dark mode)
+        type: variable-color
+        format: hex
+        default: '#A6A6A6'
+    - 
+        id: tag-background-color-l
+        title: Tag background color (Light mode)
+        type: variable-color
+        format: hex
+        default: '#BDE1D3' 
+    - 
+        id: tag-font-color-l
+        title: Tag font color (Light mode)
+        type: variable-color
+        format: hex
+        default: '#1D694B' 
+    - 
+        id: tag-background-color-d
+        title: Tag background color (Dark mode)
+        type: variable-color
+        format: hex
+        default: '#1D694B' 
+    - 
+        id: tag-font-color-d
+        title: Tag font color (Dark mode)
+        type: variable-color
+        format: hex
+        default: '#FFFFFF' 
+    - 
+        id: headings
+        title: Headings
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: level-1-headings
+        title: Level 1 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h1-size
+        title: H1 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 2em
+    - 
+        id: h1-weight
+        title: H1 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 700
+    -
+        id: h1-color
+        title: H1 color
+        type: variable-color
+        format: hex
+        default: '#'
+    - 
+        id: level-2-headings
+        title: Level 2 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h2-size
+        title: H2 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.5em
+    - 
+        id: h2-weight
+        title: H2 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 700
+    - 
+        id: h2-color
+        title: H2 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
+    - 
+        id: level-3-headings
+        title: Level 3 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h3-size
+        title: H3 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.3em
+    - 
+        id: h3-weight
+        title: H3 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 600
+    -
+        id: h3-color
+        title: H3 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
+    - 
+        id: level-4-headings
+        title: Level 4 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h4-size
+        title: H4 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.2em
+    - 
+        id: h4-weight
+        title: H4 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    - 
+        id: h4-color
+        title: H4 color
+        type: variable-color
+        format: hex
+        default: '#E5B567'
+    -
+        id: h4-transform
+        title: H4 transform
+        description: Transform the H4 heading text
+        type: variable-select
+        default: uppercase
+        options:
+            -
+                label: Uppercase
+                value: uppercase
+            -
+                label: None
+                value: none
+    - 
+        id: level-5-headings
+        title: Level 5 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h5-size
+        title: H5 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: h5-weight
+        title: H5 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 500
+    - 
+        id: h5-color
+        title: H5 color
+        type: variable-color
+        format: hex
+        default: '#E83E3E'
+    - 
+        id: level-6-headings
+        title: Level 6 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: h6-size
+        title: H6 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    - 
+        id: h6-weight
+        title: H6 font weight
+        description: Accepts numbers representing the CSS font-weight
+        type: variable-number
+        default: 400
+    -
+        id: h6-color
+        title: H6 color
+        type: variable-color
+        format: hex
+        default: '#'
+    -
+        id: credits
+        title: Credits
+        type: heading
+        description: Created with ❤︎ by @colineckert. Support @colineckert at buymeacoffee.com/colineckert
+        level: 2
+        collapsed: true
+
+*/
+
+/* ─────────────────────────────────────────────────── */
+/* Plugin Compatibility info for the Obsidian Hub */
+/* ─────────────────────────────────────────────────── */
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- file-explorer
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- starred
+- switcher
+- tag-pane
+- file-recovery
+- daily-notes
+- random-note
+- publish
+- sync
+- word-count
+community:
+- sliding-panes-obsidian
+- obsidian-codemirror-options
+- obsidian-kanban
+- dataview
+- obsidian-hider
+- calendar
+- mysnippets-plugin
+- cmenu-plugin
+- obsidian-outliner
+- readwise-official
+- tag-wrangler
+- todoist-sync-plugin
+- templater-obsidian
+- obsidian-system-dark-mode
+- obsidian-style-settings
+*/
