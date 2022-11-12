@@ -58,9 +58,8 @@
   "explorer": [],
   "hide": {
     "statusbar": [
-      "janitor",
-      "obsidian-keyboard-analyzer",
-      "word-count"
+      "word-count",
+      "backlink"
     ],
     "leftRibbon": [
       "新建 Excalidraw 绘图",
@@ -69,7 +68,8 @@
       "BRAT",
       "打开命令面板",
       "打开快速切换",
-      "复习卡片"
+      "复习卡片",
+      "Create a new database table"
     ]
   },
   "spacing": "8",

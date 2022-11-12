@@ -6,7 +6,7 @@
   "backgroundProcesses": 3,
   "showIndexingNotices": true,
   "showShortName": true,
-  "ribbonIcon": false,
+  "ribbonIcon": true,
   "showExcerpt": true,
   "showCreateButton": false,
   "showPreviousQueryResults": true,

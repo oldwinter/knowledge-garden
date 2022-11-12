@@ -7637,7 +7637,7 @@ function derived(stores, fn3, initial_value) {
 // src/main.ts
 var import_obsidian50 = __toModule(require("obsidian"));
 var import_obsidian_dataview4 = __toModule(require_lib());
-var import_dayjs11 = __toModule(require_dayjs_min());
+var import_dayjs10 = __toModule(require_dayjs_min());
 var import_isoWeek = __toModule(require_isoWeek());
 var import_localizedFormat = __toModule(require_localizedFormat());
 
@@ -12063,7 +12063,7 @@ function create_fragment18(ctx) {
     c() {
       input = element("input");
       attr(input, "type", "date");
-      input.value = input_value_value = ctx[0] ? ctx[0].format("YYYY-MM-DD") : null;
+      input.value = input_value_value = ctx[0] ? (0, import_dayjs.default)(ctx[0]).format("YYYY-MM-DD") : null;
       attr(input, "class", "svelte-2qn54x");
       toggle_class(input, "embed", ctx[1]);
     },
@@ -12075,7 +12075,7 @@ function create_fragment18(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 1 && input_value_value !== (input_value_value = ctx2[0] ? ctx2[0].format("YYYY-MM-DD") : null)) {
+      if (dirty & 1 && input_value_value !== (input_value_value = ctx2[0] ? (0, import_dayjs.default)(ctx2[0]).format("YYYY-MM-DD") : null)) {
         input.value = input_value_value;
       }
       if (dirty & 2) {
@@ -12098,7 +12098,7 @@ function instance18($$self, $$props, $$invalidate) {
   const dispatch = createEventDispatcher();
   function handleChange(event) {
     if (event.currentTarget instanceof HTMLInputElement) {
-      $$invalidate(0, value = event.currentTarget.value ? (0, import_dayjs.default)(event.currentTarget.value) : null);
+      dispatch("change", event.currentTarget.value ? (0, import_dayjs.default)(event.currentTarget.value).toDate() : null);
     }
   }
   $$self.$$set = ($$props2) => {
@@ -12106,12 +12106,6 @@ function instance18($$self, $$props, $$invalidate) {
       $$invalidate(0, value = $$props2.value);
     if ("embed" in $$props2)
       $$invalidate(1, embed = $$props2.embed);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 1) {
-      $:
-        dispatch("change", value);
-    }
   };
   return [value, embed, handleChange];
 }
@@ -23106,7 +23100,7 @@ function encodeFrontMatter(data, frontmatter) {
   return hasFrontMatter ? data.slice(0, startPosition - delim.length) + data.slice(endPosition + delim.length + 1) : data;
 }
 function stringifyYaml(value) {
-  return postprocessYaml(stringify4(value));
+  return postprocessYaml(stringify4(value, { lineWidth: 0 }));
 }
 function postprocessYaml(value) {
   const quotedProperties = /^(.*):\s*"(.*)"$/gm;
@@ -32775,7 +32769,6 @@ var TagList = class extends SvelteComponent {
 var TagList_default = TagList;
 
 // src/components/FieldControl/FieldControl.svelte
-var import_dayjs6 = __toModule(require_dayjs_min());
 function create_if_block_5(ctx) {
   let textinput;
   let current;
@@ -32862,7 +32855,7 @@ function create_if_block_32(ctx) {
   let current;
   dateinput = new DateInput_default({
     props: {
-      value: isDate(ctx[1]) ? (0, import_dayjs6.default)(ctx[1]) : null
+      value: isDate(ctx[1]) ? ctx[1] : null
     }
   });
   dateinput.$on("change", ctx[7]);
@@ -32877,7 +32870,7 @@ function create_if_block_32(ctx) {
     p(ctx2, dirty) {
       const dateinput_changes = {};
       if (dirty & 2)
-        dateinput_changes.value = isDate(ctx2[1]) ? (0, import_dayjs6.default)(ctx2[1]) : null;
+        dateinput_changes.value = isDate(ctx2[1]) ? ctx2[1] : null;
       dateinput.$set(dateinput_changes);
     },
     i(local) {
@@ -33119,7 +33112,7 @@ function instance52($$self, $$props, $$invalidate) {
   const check_handler = ({ detail }) => onChange(detail);
   const input_handler = ({ detail: value2 }) => onChange(value2);
   const input_handler_1 = ({ detail: value2 }) => onChange(value2 !== null ? value2 : void 0);
-  const change_handler = ({ detail: value2 }) => onChange(value2 == null ? void 0 : value2.toDate());
+  const change_handler = ({ detail: value2 }) => onChange(value2 != null ? value2 : void 0);
   const input_handler_2 = ({ detail: val }) => {
     if (isLink(value)) {
       onChange(__spreadProps(__spreadValues({}, value), { linkText: val }));
@@ -34919,7 +34912,7 @@ var GalleryView2 = class extends ProjectView {
 };
 
 // src/views/Calendar/CalendarView.svelte
-var import_dayjs9 = __toModule(require_dayjs_min());
+var import_dayjs8 = __toModule(require_dayjs_min());
 
 // src/views/Calendar/components/CalendarDay/CalendarDay.svelte
 var import_path2 = __toModule(require("path"));
@@ -35360,7 +35353,7 @@ var TableRow = class extends SvelteComponent {
 var TableRow_default = TableRow;
 
 // src/views/Calendar/components/CalendarDay/CalendarDate.svelte
-var import_dayjs7 = __toModule(require_dayjs_min());
+var import_dayjs6 = __toModule(require_dayjs_min());
 function add_css38(target) {
   append_styles(target, "svelte-vn6kio", "span.svelte-vn6kio{padding:0.2em 0.4em;border-radius:4px}.today.svelte-vn6kio{background:var(--interactive-accent);display:inline-block;color:var(--text-on-accent)}");
 }
@@ -35404,7 +35397,7 @@ function instance66($$self, $$props, $$invalidate) {
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 1) {
       $:
-        $$invalidate(1, today = date.startOf("day").isSame((0, import_dayjs7.default)().startOf("day")));
+        $$invalidate(1, today = date.startOf("day").isSame((0, import_dayjs6.default)().startOf("day")));
     }
   };
   return [date, today];
@@ -36206,7 +36199,7 @@ var Navigation = class extends SvelteComponent {
 var Navigation_default = Navigation;
 
 // src/views/Calendar/calendar.ts
-var import_dayjs8 = __toModule(require_dayjs_min());
+var import_dayjs7 = __toModule(require_dayjs_min());
 function isCalendarInterval(value) {
   switch (value) {
     case "month":
@@ -36252,7 +36245,7 @@ function groupRecordsByField(records, field) {
   records.forEach((record, i2) => {
     var _a;
     const dateValue = record.values[field];
-    const start2 = dateValue ? isDate(dateValue) ? (0, import_dayjs8.default)(dateValue) : null : null;
+    const start2 = dateValue ? isDate(dateValue) ? (0, import_dayjs7.default)(dateValue) : null : null;
     if (start2) {
       const dateStr = start2.format("YYYY-MM-DD");
       if (!(dateStr in res)) {
@@ -37243,7 +37236,7 @@ function instance70($$self, $$props, $$invalidate) {
   let { api: api2 } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
-  let anchorDate = (0, import_dayjs9.default)();
+  let anchorDate = (0, import_dayjs8.default)();
   function handleIntervalChange(interval2) {
     if (isCalendarInterval(interval2)) {
       onConfigChange(Object.assign(Object.assign({}, config), { interval: interval2 }));
@@ -37257,7 +37250,7 @@ function instance70($$self, $$props, $$invalidate) {
   }
   const func7 = () => $$invalidate(4, anchorDate = addInterval(anchorDate, interval));
   const func_13 = () => $$invalidate(4, anchorDate = subtractInterval(anchorDate, interval));
-  const func_2 = () => $$invalidate(4, anchorDate = (0, import_dayjs9.default)());
+  const func_2 = () => $$invalidate(4, anchorDate = (0, import_dayjs8.default)());
   const change_handler = ({ detail }) => handleDateFieldChange(detail);
   const change_handler_1 = ({ detail }) => handleCheckFieldChange(detail);
   const change_handler_2 = ({ detail }) => handleIntervalChange(detail);
@@ -37265,9 +37258,12 @@ function instance70($$self, $$props, $$invalidate) {
     api2.updateRecord(record, fields);
   };
   const func_4 = (id) => {
-    new EditNoteModal(get_store_value(app), fields, (record) => {
-      api2.updateRecord(record, fields);
-    }, records[id]).open();
+    const rec = records[id];
+    if (rec) {
+      new EditNoteModal(get_store_value(app), fields, (record) => {
+        api2.updateRecord(record, fields);
+      }, rec).open();
+    }
   };
   const func_5 = (date) => {
     if (dateField && !readonly) {
@@ -40826,11 +40822,14 @@ var GridBooleanCell = class extends SvelteComponent {
 var GridBooleanCell_default = GridBooleanCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridDateCell/GridDateCell.svelte
+var import_dayjs9 = __toModule(require_dayjs_min());
 function create_if_block23(ctx) {
   let textlabel;
   let current;
   textlabel = new TextLabel_default({
-    props: { value: ctx[0].format("L") }
+    props: {
+      value: (0, import_dayjs9.default)(ctx[0]).format("L")
+    }
   });
   return {
     c() {
@@ -40843,7 +40842,7 @@ function create_if_block23(ctx) {
     p(ctx2, dirty) {
       const textlabel_changes = {};
       if (dirty & 1)
-        textlabel_changes.value = ctx2[0].format("L");
+        textlabel_changes.value = (0, import_dayjs9.default)(ctx2[0]).format("L");
       textlabel.$set(textlabel_changes);
     },
     i(local) {
@@ -40917,12 +40916,11 @@ function create_read_slot2(ctx) {
   };
 }
 function create_edit_slot2(ctx) {
-  var _a;
   let dateinput;
   let current;
   dateinput = new DateInput_default({
     props: {
-      value: (_a = ctx[0]) != null ? _a : null,
+      value: ctx[0] != void 0 ? ctx[0] : null,
       embed: true
     }
   });
@@ -40936,10 +40934,9 @@ function create_edit_slot2(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      var _a2;
       const dateinput_changes = {};
       if (dirty & 1)
-        dateinput_changes.value = (_a2 = ctx2[0]) != null ? _a2 : null;
+        dateinput_changes.value = ctx2[0] != void 0 ? ctx2[0] : null;
       dateinput.$set(dateinput_changes);
     },
     i(local) {
@@ -41039,7 +41036,7 @@ function instance80($$self, $$props, $$invalidate) {
   };
   const func_13 = () => {
     if (value) {
-      navigator.clipboard.writeText(value.format("L"));
+      navigator.clipboard.writeText((0, import_dayjs9.default)(value).format("L"));
     }
   };
   function mousedown_handler(event) {
@@ -42529,7 +42526,6 @@ var GridListCell = class extends SvelteComponent {
 var GridListCell_default = GridListCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridTypedCell.svelte
-var import_dayjs10 = __toModule(require_dayjs_min());
 function create_else_block9(ctx) {
   let gridcell;
   let current;
@@ -42541,8 +42537,8 @@ function create_else_block9(ctx) {
       column: ctx[2]
     }
   });
-  gridcell.$on("mousedown", ctx[19]);
-  gridcell.$on("navigate", ctx[20]);
+  gridcell.$on("mousedown", ctx[18]);
+  gridcell.$on("navigate", ctx[19]);
   return {
     c() {
       create_component(gridcell.$$.fragment);
@@ -42591,8 +42587,8 @@ function create_if_block_52(ctx) {
       column: ctx[2]
     }
   });
-  gridlistcell.$on("mousedown", ctx[17]);
-  gridlistcell.$on("navigate", ctx[18]);
+  gridlistcell.$on("mousedown", ctx[16]);
+  gridlistcell.$on("navigate", ctx[17]);
   return {
     c() {
       create_component(gridlistcell.$$.fragment);
@@ -42645,8 +42641,8 @@ function create_if_block_43(ctx) {
       column: ctx[2]
     }
   });
-  gridlinkcell.$on("mousedown", ctx[15]);
-  gridlinkcell.$on("navigate", ctx[16]);
+  gridlinkcell.$on("mousedown", ctx[14]);
+  gridlinkcell.$on("navigate", ctx[15]);
   return {
     c() {
       create_component(gridlinkcell.$$.fragment);
@@ -42694,13 +42690,13 @@ function create_if_block_35(ctx) {
       selected: ctx[5],
       rowindex: ctx[3],
       colindex: ctx[4],
-      value: ctx[0] ? (0, import_dayjs10.default)(ctx[0]) : void 0,
-      onChange: ctx[12],
+      value: ctx[0],
+      onChange: ctx[1],
       column: ctx[2]
     }
   });
-  griddatecell.$on("mousedown", ctx[13]);
-  griddatecell.$on("navigate", ctx[14]);
+  griddatecell.$on("mousedown", ctx[12]);
+  griddatecell.$on("navigate", ctx[13]);
   return {
     c() {
       create_component(griddatecell.$$.fragment);
@@ -42718,9 +42714,9 @@ function create_if_block_35(ctx) {
       if (dirty & 16)
         griddatecell_changes.colindex = ctx2[4];
       if (dirty & 1)
-        griddatecell_changes.value = ctx2[0] ? (0, import_dayjs10.default)(ctx2[0]) : void 0;
+        griddatecell_changes.value = ctx2[0];
       if (dirty & 2)
-        griddatecell_changes.onChange = ctx2[12];
+        griddatecell_changes.onChange = ctx2[1];
       if (dirty & 4)
         griddatecell_changes.column = ctx2[2];
       griddatecell.$set(griddatecell_changes);
@@ -43038,7 +43034,6 @@ function instance89($$self, $$props, $$invalidate) {
   function navigate_handler_2(event) {
     bubble.call(this, $$self, event);
   }
-  const func7 = (value2) => onChange(value2 ? value2.toDate() : void 0);
   function mousedown_handler_3(event) {
     bubble.call(this, $$self, event);
   }
@@ -43090,7 +43085,6 @@ function instance89($$self, $$props, $$invalidate) {
     navigate_handler_1,
     mousedown_handler_2,
     navigate_handler_2,
-    func7,
     mousedown_handler_3,
     navigate_handler_3,
     mousedown_handler_4,
@@ -45358,8 +45352,8 @@ function registerFileEvents(plugin2) {
 }
 
 // src/main.ts
-import_dayjs11.default.extend(import_isoWeek.default);
-import_dayjs11.default.extend(import_localizedFormat.default);
+import_dayjs10.default.extend(import_isoWeek.default);
+import_dayjs10.default.extend(import_localizedFormat.default);
 var DEFAULT_SETTINGS = {
   projects: []
 };

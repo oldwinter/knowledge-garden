@@ -75,6 +75,14 @@
         }
       ],
       "open in popup": [],
+      "open in new tab in background": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "o"
+        }
+      ],
       "open all in new tabs": [
         {
           "modifiers": [
@@ -235,6 +243,22 @@
           "key": "d"
         }
       ],
+      "clear path": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "d"
+        }
+      ],
+      "set ./ to path": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "c"
+        }
+      ],
       "open in new tab": [
         {
           "modifiers": [
@@ -389,6 +413,7 @@
       "isBacklinkSearch": false
     }
   ],
+  "ripgrepCommand": "rg",
   "moveFileExcludePrefixPathPatterns": [],
   "showLogAboutPerformanceInConsole": false,
   "backLinkExcludePrefixPathPatterns": [],

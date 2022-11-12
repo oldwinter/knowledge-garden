@@ -1,5 +1,6 @@
 {
   "closeWithBackspace": true,
+  "showPluginName": true,
   "fileSearchPrefix": "/",
   "tagSearchPrefix": "#",
   "suggestionLimit": 50,
@@ -7,7 +8,7 @@
   "hyperKeyOverride": false,
   "macros": [
     {
-      "name": "进入/退出聚焦模式",
+      "name": "自定义-进入/退出聚焦模式",
       "commandIds": [
         "app:toggle-left-sidebar",
         "app:toggle-right-sidebar"
@@ -18,11 +19,7 @@
   "hotkeyStyle": "auto",
   "createNewFileMod": "Mod",
   "createNewPaneMod": "Shift",
-  "hiddenCommands": [
-    "editor:insert-link",
-    "app:open-help"
-  ],
+  "hiddenCommands": [],
   "hiddenFiles": [],
-  "hiddenTags": [],
-  "showPluginName": true
+  "hiddenTags": []
 }

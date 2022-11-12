@@ -25,6 +25,9 @@
   "zoomToFitMaxLevel": 2,
   "linkPrefix": "📍",
   "urlPrefix": "🌐",
+  "parseTODO": false,
+  "todo": "☐",
+  "done": "🗹",
   "hoverPreviewWithoutCTRL": true,
   "linkOpacity": 1,
   "openInAdjacentPane": true,
@@ -34,6 +37,7 @@
   "forceWrap": false,
   "pageTransclusionCharLimit": 1600,
   "wordWrappingDefault": 0,
+  "removeTransclusionQuoteSigns": true,
   "iframelyAllowed": true,
   "pngExportScale": 1,
   "exportWithTheme": true,
@@ -91374,9 +91378,5 @@
   "showReleaseNotes": false,
   "showNewVersionNotification": true,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",
-  "fieldSuggestor": true,
-  "parseTODO": false,
-  "todo": "☐",
-  "done": "🗹",
-  "removeTransclusionQuoteSigns": true
+  "fieldSuggestor": true
 }

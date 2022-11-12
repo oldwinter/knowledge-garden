@@ -18,6 +18,9 @@
             "fieldConfig": {
               "title": {
                 "hide": true
+              },
+              "path": {
+                "hide": true
               }
             }
           }
@@ -41,7 +44,7 @@
       "dataview": false
     },
     {
-      "id": "c9db9eda-3c8b-4206-b576-b5fc38b3d169",
+      "id": "bea5c9cd-0dc3-4de7-8905-3a133b5cb198",
       "name": "运动与健康",
       "path": "Spaces/2-Area/运动与健康",
       "recursive": false,
@@ -49,25 +52,40 @@
       "templates": [],
       "views": [
         {
-          "id": "275d5593-0fdb-4993-9f99-10b2a74ae332",
+          "id": "545e2139-bd60-4c9d-9ead-3e11988332d0",
+          "name": "Table",
+          "type": "table",
+          "config": {
+            "sortField": "name",
+            "sortAsc": true,
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              }
+            }
+          }
+        },
+        {
+          "id": "f8de02b9-2620-4bb4-8f6d-faef2843ccba",
+          "name": "Gallery",
+          "type": "gallery",
+          "config": {}
+        }
+      ]
+    },
+    {
+      "id": "e20e8961-c1b7-44ba-974b-46c2ac839a29",
+      "name": "微信读书",
+      "path": "Sources/Books/微信读书同步",
+      "recursive": true,
+      "defaultName": "",
+      "templates": [],
+      "views": [
+        {
+          "id": "aa893129-fed6-4db8-aec7-d159ffe31d66",
           "name": "Table",
           "type": "table",
           "config": {}
-        },
-        {
-          "id": "ba8d510a-4132-4144-b78e-06828bd9449c",
-          "name": "Board",
-          "type": "board",
-          "config": {}
-        },
-        {
-          "id": "6351aa3a-e3c6-4f62-aa3e-9387bcaa8f5d",
-          "name": "Calendar",
-          "type": "calendar",
-          "config": {
-            "dateField": "date created",
-            "interval": "month"
-          }
         }
       ]
     }

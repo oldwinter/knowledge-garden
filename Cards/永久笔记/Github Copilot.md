@@ -13,6 +13,9 @@ title: Github Copilot
 - 个人profile里面的名字也是用英文拼音和课表里面对应上，
 - 也添加了edu邮箱接收信息
 
+![](https://img.oldwinter.top/github学生包申请成功截图.jpeg)
+
+
 毕竟有家属属于老师，却申请失败，我以此说服自己，我不是纯白嫖github。
 
 领取的github学生包里面，有真实优惠的，也有半广告嫌疑的，按需采用。

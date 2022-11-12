@@ -4,16 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "a23b965bde93484d",
+        "id": "4b3d298f00d0133e",
         "type": "tabs",
         "children": [
           {
-            "id": "ce2129657ea18b93",
+            "id": "8fd6c39e5e8854fb",
+            "type": "leaf",
+            "state": {
+              "type": "database-plugin",
+              "state": {
+                "file": "啊啊.md"
+              }
+            }
+          },
+          {
+            "id": "510d5b116c63b6a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/胰岛素抵抗.md",
+                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,46 +31,12 @@
             }
           },
           {
-            "id": "d926167f7e5a32ab",
+            "id": "7a5a6467d41341a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-10-25.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6279aa448e8710b6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "a9d06de42b0f9274",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/3-Resource/王者荣耀/防御塔保护.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7250380c8b51b9f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/运动与健康/最大摄氧量.md",
+                "file": "HOMEPAGE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -68,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,6 +93,22 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "c42d42c3701278f3",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "1caa72e7d0e86316",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ]
       },
@@ -131,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/防御塔保护.md"
+                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md"
               }
             }
           },
@@ -141,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/防御塔保护.md",
+                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +145,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/防御塔保护.md",
+                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -188,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/防御塔保护.md",
+                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -198,12 +190,20 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "8362bd5a8eb52d74",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 276.50312423706055
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -220,25 +220,49 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "20661a83a7ace6bc",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "54b9686bb5398d2a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "bc5f2dcb9f293dfc",
+            "type": "leaf",
+            "state": {
+              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 263.5,
+    "width": 200,
     "collapsed": true
   },
-  "active": "a9d06de42b0f9274",
+  "active": "510d5b116c63b6a4",
   "lastOpenFiles": [
-    "Spaces/3-Resource/王者荣耀/节奏与关键时间点.md",
-    "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
-    "Spaces/3-Resource/王者荣耀/兵线、防御塔及经济.md",
-    "Spaces/2-Area/运动与健康/倒蹬机.md",
-    "Spaces/2-Area/运动与健康/力量训练必学的动作-深蹲、卧推、硬拉等.md",
-    "Spaces/2-Area/运动与健康/杠铃提拉.md",
-    "Spaces/2-Area/运动与健康/深蹲.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Calendar/Daily notes/2022-11-11.md",
-    "Spaces/2-Area/运动与健康/氮泵.md"
+    "Spaces/3-Resource/About Resource.md",
+    "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
+    "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
+    "Spaces/2-Area/运动与健康/跳操团课.md",
+    "HOMEPAGE.md",
+    "Spaces/2-Area/运动与健康/功能性训练.md",
+    "Spaces/2-Area/运动与健康/EAA.md",
+    "Spaces/2-Area/运动与健康/支链氨基酸.md",
+    "Spaces/2-Area/运动与健康/瓦式呼吸法.md",
+    "啊啊.md"
   ]
 }
