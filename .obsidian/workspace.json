@@ -8,26 +8,11 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8fd6c39e5e8854fb",
+            "id": "a639b855333b9ba6",
             "type": "leaf",
             "state": {
-              "type": "database-plugin",
-              "state": {
-                "file": "啊啊.md"
-              }
-            }
-          },
-          {
-            "id": "510d5b116c63b6a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "obsidian-projects",
+              "state": {}
             }
           },
           {
@@ -43,8 +28,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,9 +106,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md"
-              }
+              "state": {}
             }
           },
           {
@@ -133,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +126,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -168,7 +148,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1,
+                  "scale": 0.9667757057270663,
                   "close": true
                 }
               }
@@ -180,7 +160,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,33 +215,26 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "bc5f2dcb9f293dfc",
-            "type": "leaf",
-            "state": {
-              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 200,
     "collapsed": true
   },
-  "active": "510d5b116c63b6a4",
+  "active": "a639b855333b9ba6",
   "lastOpenFiles": [
-    "Spaces/3-Resource/About Resource.md",
-    "Spaces/1-Project/软件项目管理/∑ 软件项目管理.md",
-    "Spaces/1-Project/我的开源项目/∑ 我的开源项目.md",
-    "Spaces/2-Area/运动与健康/跳操团课.md",
-    "HOMEPAGE.md",
-    "Spaces/2-Area/运动与健康/功能性训练.md",
-    "Spaces/2-Area/运动与健康/EAA.md",
-    "Spaces/2-Area/运动与健康/支链氨基酸.md",
-    "Spaces/2-Area/运动与健康/瓦式呼吸法.md",
-    "啊啊.md"
+    "🍀 花园导览/👓 学习方法.md",
+    "🍀 花园导览/🏋 增肌减脂.md",
+    "🧰 本库指南/Tutorials/本库需要单独配置的插件.md",
+    "Cards/永久笔记/remotely save.md",
+    "Calendar/Daily notes/2022-11-13.md",
+    "README.md",
+    "啊啊.md",
+    "Atlas/Dataviews/∑ 本库Dataview汇总.md",
+    "Atlas/Dataviews/Index for Extras.md",
+    "Atlas/Dataviews/Index for Atlas.md"
   ]
 }

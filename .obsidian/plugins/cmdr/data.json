@@ -69,7 +69,12 @@
       "打开命令面板",
       "打开快速切换",
       "复习卡片",
-      "Create a new database table"
+      "Create a new database table",
+      "Omnisearch",
+      "Toggle Stille",
+      "管理工作区布局",
+      "Templater",
+      "Advanced Tables Toolbar"
     ]
   },
   "spacing": "8",

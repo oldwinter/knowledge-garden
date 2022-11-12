@@ -1,12 +1,14 @@
 {
   "folderName": "/",
   "fileNames": [],
-  "existingSymbol": "",
-  "replacePattern": "",
+  "existingSymbol": "人文社科",
+  "replacePattern": "通识",
   "regExpState": {
     "regExp": "",
     "flags": []
   },
-  "tags": [],
-  "viewType": "regexp"
+  "tags": [
+    "#待办"
+  ],
+  "viewType": "tags"
 }
