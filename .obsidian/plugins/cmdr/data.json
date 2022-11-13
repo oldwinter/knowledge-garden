@@ -80,7 +80,7 @@
   "spacing": "8",
   "advancedToolbar": {
     "rowHeight": 48,
-    "rowCount": 2,
+    "rowCount": 3,
     "spacing": 0,
     "buttonWidth": 48,
     "columnLayout": true,
@@ -95,6 +95,6 @@
       }
     ],
     "tooltips": false,
-    "heightOffset": 21
+    "heightOffset": 0
   }
 }

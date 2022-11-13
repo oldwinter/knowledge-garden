@@ -10,7 +10,6 @@
   "obsidian-hypothesis-plugin",
   "obsidian-bulk-rename-plugin",
   "obsidian-better-command-palette",
-  "cmdr",
   "dataview",
   "obsidian-advanced-uri",
   "obsidian-another-quick-switcher",
@@ -29,10 +28,8 @@
   "table-editor-obsidian",
   "obsidian-projects",
   "cm-chs-patch",
-  "chronology",
-  "obsidian42-strange-new-worlds",
   "keyboard-analyzer",
-  "obsidian-query-control",
   "recent-files-obsidian",
-  "obsidian-advanced-slides"
+  "obsidian-query-control",
+  "cmdr"
 ]

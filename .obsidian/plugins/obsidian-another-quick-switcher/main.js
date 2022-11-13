@@ -193,6 +193,15 @@ function mirrorMap(collection, toValue) {
 function mirror(collection) {
   return mirrorMap(collection, (x) => x);
 }
+function omitBy(obj, shouldOmit) {
+  const cloned = { ...obj };
+  Object.entries(cloned).forEach(([k, v]) => {
+    if (shouldOmit(k, v)) {
+      delete cloned[k];
+    }
+  });
+  return cloned;
+}
 
 // src/app-helper.ts
 var import_obsidian = require("obsidian");
@@ -944,6 +953,7 @@ var SEARCH = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" vie
 var FILTER = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
 </svg>`;
+var FRONT_MATTER = `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20"><g fill="none"><path d="M10.32 2.013A4 4 0 0 0 6.162 7.13l-3.987 3.986a.6.6 0 0 0-.176.424V14.4a.6.6 0 0 0 .6.6h2.8a.6.6 0 0 0 .6-.6V13h1.9a.6.6 0 0 0 .6-.6v-1.693l.735-.735a5.51 5.51 0 0 1-.569-.846l-.99.991a.6.6 0 0 0-.176.424V12H5.6a.6.6 0 0 0-.6.6V14H3v-2.293l4.32-4.32l-.118-.303a3.001 3.001 0 0 1 1.96-3.965c.33-.423.72-.796 1.157-1.106zM13.5 6.25a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5zM9 6.5a4.5 4.5 0 1 1 7 3.742v2.05l.783.784a.6.6 0 0 1 0 .848L15.707 15l1.068 1.067a.6.6 0 0 1-.05.893l-2.35 1.88a.6.6 0 0 1-.75 0l-2.4-1.92a.6.6 0 0 1-.225-.468v-6.21A4.496 4.496 0 0 1 9 6.5zM13.5 3a3.5 3.5 0 0 0-1.75 6.532a.5.5 0 0 1 .25.433v6.295l2 1.6l1.751-1.401l-1.034-1.035a.6.6 0 0 1 0-.848l1.076-1.076l-.617-.617a.6.6 0 0 1-.176-.424V9.965a.5.5 0 0 1 .25-.433A3.5 3.5 0 0 0 13.5 3z" fill="currentColor"></path></g></svg>`;
 
 // src/ui/suggestion-factory.ts
 function createItemDiv(item, aliases, options) {
@@ -987,7 +997,39 @@ function createItemDiv(item, aliases, options) {
   itemDiv.appendChild(entryDiv);
   return itemDiv;
 }
-function createDescriptionDiv(item, aliases, tags, countByLink, countByHeader, linkResultsNum, headerResultsNum, options) {
+function createMetaDiv(args) {
+  const { frontMatter, options } = args;
+  const metaDiv = createDiv({
+    cls: "another-quick-switcher__item__metas"
+  });
+  if (options.showFrontMatter && Object.keys(frontMatter).length > 0) {
+    const frontMatterDiv = createDiv({
+      cls: "another-quick-switcher__item__meta"
+    });
+    Object.entries(frontMatter).forEach(([key, value]) => {
+      const frontMatterSpan = createSpan({
+        cls: "another-quick-switcher__item__meta__front_matter",
+        title: `${key}: ${value}`
+      });
+      frontMatterSpan.insertAdjacentHTML("beforeend", FRONT_MATTER);
+      frontMatterSpan.appendText(`${key}: ${value}`);
+      frontMatterDiv.appendChild(frontMatterSpan);
+    });
+    metaDiv.appendChild(frontMatterDiv);
+  }
+  return metaDiv;
+}
+function createDescriptionDiv(args) {
+  const {
+    item,
+    aliases,
+    tags,
+    countByLink,
+    countByHeader,
+    linkResultsNum,
+    headerResultsNum,
+    options
+  } = args;
   const descriptionDiv = createDiv({
     cls: "another-quick-switcher__item__descriptions"
   });
@@ -1061,25 +1103,32 @@ function createDescriptionDiv(item, aliases, tags, countByLink, countByHeader, l
   return descriptionDiv;
 }
 function createElements(item, options) {
+  var _a;
   const aliases = uniqFlatMap(
     item.matchResults.filter((res) => res.alias),
     (x) => {
-      var _a;
-      return (_a = x.meta) != null ? _a : [];
+      var _a2;
+      return (_a2 = x.meta) != null ? _a2 : [];
     }
   );
+  const itemDiv = createItemDiv(item, aliases, options);
+  const frontMatter = omitBy(
+    (_a = item.frontMatter) != null ? _a : {},
+    (key, value) => options.excludeFrontMatterKeys.includes(key) || value == null
+  );
+  const metaDiv = Object.keys(frontMatter).length > 0 ? createMetaDiv({ frontMatter, options }) : void 0;
   const tags = uniqFlatMap(
     item.matchResults.filter((res) => res.type === "tag"),
     (x) => {
-      var _a;
-      return (_a = x.meta) != null ? _a : [];
+      var _a2;
+      return (_a2 = x.meta) != null ? _a2 : [];
     }
   );
   const linkResults = item.matchResults.filter((res) => res.type === "link");
   const linkResultsNum = linkResults.length;
   const countByLink = count(linkResults.flatMap((xs) => {
-    var _a;
-    return uniq((_a = xs.meta) != null ? _a : []);
+    var _a2;
+    return uniq((_a2 = xs.meta) != null ? _a2 : []);
   }));
   const headerResults = item.matchResults.filter(
     (res) => res.type === "header"
@@ -1087,15 +1136,11 @@ function createElements(item, options) {
   const headerResultsNum = headerResults.length;
   const countByHeader = count(
     headerResults.flatMap((xs) => {
-      var _a;
-      return uniq((_a = xs.meta) != null ? _a : []);
+      var _a2;
+      return uniq((_a2 = xs.meta) != null ? _a2 : []);
     })
   );
-  const itemDiv = createItemDiv(item, aliases, options);
-  if (aliases.length === 0 && tags.length === 0 && Object.keys(countByLink).length == 0 && Object.keys(countByHeader).length == 0) {
-    return { itemDiv };
-  }
-  const descriptionDiv = createDescriptionDiv(
+  const descriptionDiv = aliases.length !== 0 || tags.length !== 0 || Object.keys(countByLink).length !== 0 || Object.keys(countByHeader).length !== 0 ? createDescriptionDiv({
     item,
     aliases,
     tags,
@@ -1104,9 +1149,10 @@ function createElements(item, options) {
     linkResultsNum,
     headerResultsNum,
     options
-  );
+  }) : void 0;
   return {
     itemDiv,
+    metaDiv,
     descriptionDiv
   };
 }
@@ -1427,6 +1473,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
           var _a3;
           return (_a3 = x2.displayText) != null ? _a3 : "";
         })) != null ? _f : []) : [],
+        frontMatter: this.command.showFrontMatter && cache.frontmatter ? omitBy(cache.frontmatter, (key, _) => key === "position") : void 0,
         phantom: false,
         starred: x.path in starredPathMap,
         matchResults: [],
@@ -1577,13 +1624,18 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
     }
   }
   renderSuggestion(item, el) {
-    const { itemDiv, descriptionDiv } = createElements(item, {
+    const { itemDiv, metaDiv, descriptionDiv } = createElements(item, {
+      showFrontMatter: this.command.showFrontMatter,
+      excludeFrontMatterKeys: this.command.excludeFrontMatterKeys,
       showDirectory: this.settings.showDirectory,
       showDirectoryAtNewLine: this.settings.showDirectoryAtNewLine,
       showFullPathOfDirectory: this.settings.showFullPathOfDirectory,
       showAliasesOnTop: this.settings.showAliasesOnTop,
       hideGutterIcons: this.settings.hideGutterIcons
     });
+    if (metaDiv == null ? void 0 : metaDiv.hasChildNodes()) {
+      itemDiv.appendChild(metaDiv);
+    }
     if (descriptionDiv == null ? void 0 : descriptionDiv.hasChildNodes()) {
       itemDiv.appendChild(descriptionDiv);
     }
@@ -2655,6 +2707,14 @@ var createDefaultHotkeys = () => ({
     preview: [{ modifiers: ["Mod"], key: "," }]
   }
 });
+var createDefaultExcludeFrontMatterKeys = () => [
+  "aliases",
+  "alias",
+  "tag",
+  "tags",
+  "cssclass",
+  "publish"
+];
 var createDefaultSearchCommand = () => ({
   name: "",
   searchBy: {
@@ -2663,6 +2723,8 @@ var createDefaultSearchCommand = () => ({
     header: false
   },
   searchTarget: "markdown",
+  showFrontMatter: false,
+  excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
   defaultInput: "",
   commandPrefix: "",
   sortPriorities: [],
@@ -2679,6 +2741,8 @@ var createPreSettingSearchCommands = () => [
       link: false
     },
     searchTarget: "markdown",
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
     commandPrefix: ":e ",
     sortPriorities: ["Name match", "Last opened", "Last modified"],
@@ -2694,6 +2758,8 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "markdown",
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
     commandPrefix: ":f ",
     sortPriorities: [
@@ -2714,6 +2780,8 @@ var createPreSettingSearchCommands = () => [
       header: true
     },
     searchTarget: "markdown",
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
     commandPrefix: ":l ",
     sortPriorities: [
@@ -2737,6 +2805,8 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "markdown",
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
     commandPrefix: ":s ",
     sortPriorities: ["Star", "Last opened", "Last modified"],
@@ -2752,6 +2822,8 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "backlink",
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
     commandPrefix: "",
     sortPriorities: ["Last opened", "Last modified"],
@@ -3110,6 +3182,21 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         command.searchTarget = value;
       });
     });
+    new import_obsidian8.Setting(div).setName("Show front matter").addToggle((cb) => {
+      cb.setValue(command.showFrontMatter).onChange(async (value) => {
+        command.showFrontMatter = value;
+        this.display();
+      });
+    });
+    if (command.showFrontMatter) {
+      new import_obsidian8.Setting(div).setName("Exclude front matter keys").setDesc("It can set multi patterns by line breaks.").addTextArea((tc) => {
+        const el = tc.setValue(command.excludeFrontMatterKeys.join("\n")).onChange(async (value) => {
+          command.excludeFrontMatterKeys = smartLineBreakSplit(value);
+        });
+        el.inputEl.className = "another-quick-switcher__settings__exclude_front_matter_keys";
+        return el;
+      });
+    }
     new import_obsidian8.Setting(div).setName("Default input").setDesc("Default input strings when it opens the dialog").addText(
       (tc) => tc.setValue(command.defaultInput).setPlaceholder("(ex: #todo )").onChange(async (value) => {
         command.defaultInput = value;
