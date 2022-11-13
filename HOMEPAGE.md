@@ -2,8 +2,6 @@
 date created: 2022-06-09
 date modified: 2022-08-20
 title: HOMEPAGE
-repeat: daily
-due_at: 2022-10-14T16:19:04.981+08:00
 ---
 
 > [!INFO]

@@ -4,23 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "20bfeb8fc98d6ac9",
+        "id": "90ce139d098ef9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "dc75841107853cb7",
+            "id": "7001bc64cb8c5e69",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Calendar/Daily notes/2022-11-14.md",
                 "mode": "source",
-                "backlinks": false,
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d227f91db5527192",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HOMEPAGE.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1505294c8531acde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -32,7 +59,7 @@
       {
         "id": "987dbc5670d8f4fa",
         "type": "tabs",
-        "dimension": 74.3664717348928,
+        "dimension": 52.6829268292683,
         "children": [
           {
             "id": "a4d1994dfc9f1870",
@@ -91,7 +118,7 @@
       {
         "id": "92910ae8836a7b22",
         "type": "tabs",
-        "dimension": 25.633528265107213,
+        "dimension": 47.3170731707317,
         "children": [
           {
             "id": "e3c3bc13cb0131c1",
@@ -99,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AboutTheGarden.md"
+                "file": "Spaces/About Spaces.md"
               }
             }
           },
@@ -109,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Spaces/About Spaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +148,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Spaces/About Spaces.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,9 +176,25 @@
                 }
               }
             }
+          },
+          {
+            "id": "f75fd3617390ebbf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spaces/About Spaces.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,41 +231,26 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "f75fd3617390ebbf",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 234.5,
     "collapsed": true
   },
-  "active": "dc75841107853cb7",
+  "active": "1505294c8531acde",
   "lastOpenFiles": [
-    "README.md",
-    "AboutTheGarden.md",
     "HOMEPAGE.md",
-    "Sources/Articles/常青笔记阅读笔记/自主思考.md",
-    "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
-    "Sources/Articles/markdownload/中文博客排版指南.md",
-    "Sources/Articles/markdownload/One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email.md",
-    "Sources/Articles/markdownload/使用Unsplash API生成随机图片.md",
-    "Sources/Articles/markdownload/请笑纳：我这28年的写作心法，全部都在这里了.md",
-    "Sources/Articles/Hypothesis/Ω 约束条件.md"
+    "Cards/永久笔记/LYT 笔记框架.md",
+    "Cards/永久笔记/模板与套路.md",
+    "Sources/Books/微信读书同步/历史/长安的荔枝-马伯庸.md",
+    "Sources/Books/读书笔记/📚思考·快与慢.md",
+    "Calendar/Daily notes/2022-11-14.md",
+    "AboutTheGarden.md",
+    "Cards/永久笔记/ACCESS 笔记组织法.md",
+    "Spaces/About Spaces.md",
+    "Cards/永久笔记/但当涉猎，不求甚解.md"
   ]
 }

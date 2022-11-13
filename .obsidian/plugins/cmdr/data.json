@@ -55,7 +55,14 @@
     }
   ],
   "macros": [],
-  "explorer": [],
+  "explorer": [
+    {
+      "id": "daily-notes",
+      "icon": "lucide-calendar-days",
+      "name": "日记: 打开/创建今天的日记",
+      "mode": "any"
+    }
+  ],
   "hide": {
     "statusbar": [
       "word-count",
