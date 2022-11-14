@@ -21,33 +21,15 @@
             }
           },
           {
-            "id": "d227f91db5527192",
+            "id": "f7e4bbeaa8ed5a08",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HOMEPAGE.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1505294c8531acde",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/About Spaces.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "obsidian-projects",
+              "state": {}
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/About Spaces.md"
+                "file": "Calendar/Daily notes/2022-11-14.md"
               }
             }
           },
@@ -136,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/About Spaces.md",
+                "file": "Calendar/Daily notes/2022-11-14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +130,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/About Spaces.md",
+                "file": "Calendar/Daily notes/2022-11-14.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -183,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/About Spaces.md",
+                "file": "Calendar/Daily notes/2022-11-14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -240,17 +222,55 @@
     "width": 234.5,
     "collapsed": true
   },
-  "active": "1505294c8531acde",
+  "floating": {
+    "id": "7d71fff512828bfd",
+    "type": "floating",
+    "children": [
+      {
+        "id": "934436bf4c3b6d86",
+        "type": "window",
+        "children": [
+          {
+            "id": "903dc893bfaecf1d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d227f91db5527192",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "HOMEPAGE.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 69,
+        "y": 314,
+        "width": 687,
+        "height": 712,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "7001bc64cb8c5e69",
   "lastOpenFiles": [
     "HOMEPAGE.md",
+    "README.md",
+    "Cards/About Cards.md",
+    "Atlas/About Atlas.md",
+    "AboutTheGarden.md",
+    "Cards/永久笔记/PARA.md",
+    "Spaces/About Spaces.md",
     "Cards/永久笔记/LYT 笔记框架.md",
     "Cards/永久笔记/模板与套路.md",
-    "Sources/Books/微信读书同步/历史/长安的荔枝-马伯庸.md",
-    "Sources/Books/读书笔记/📚思考·快与慢.md",
-    "Calendar/Daily notes/2022-11-14.md",
-    "AboutTheGarden.md",
-    "Cards/永久笔记/ACCESS 笔记组织法.md",
-    "Spaces/About Spaces.md",
-    "Cards/永久笔记/但当涉猎，不求甚解.md"
+    "Sources/Books/微信读书同步/历史/长安的荔枝-马伯庸.md"
   ]
 }
