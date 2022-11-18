@@ -7635,14 +7635,14 @@ function derived(stores, fn3, initial_value) {
 }
 
 // src/main.ts
-var import_obsidian50 = __toModule(require("obsidian"));
+var import_obsidian51 = __toModule(require("obsidian"));
 var import_obsidian_dataview4 = __toModule(require_lib());
 var import_dayjs10 = __toModule(require_dayjs_min());
 var import_isoWeek = __toModule(require_isoWeek());
 var import_localizedFormat = __toModule(require_localizedFormat());
 
 // src/view.ts
-var import_obsidian47 = __toModule(require("obsidian"));
+var import_obsidian48 = __toModule(require("obsidian"));
 
 // node_modules/tslib/modules/index.js
 var import_tslib = __toModule(require_tslib());
@@ -16773,6 +16773,9 @@ i18next_default.init({
               title: "Edit project",
               cta: "Save"
             },
+            duplicate: {
+              title: "Duplicate project"
+            },
             delete: {
               "short-title": "Delete project",
               title: "Delete project",
@@ -16806,6 +16809,10 @@ i18next_default.init({
             templates: {
               name: "Templates",
               description: "Templates to choose from when you create new notes."
+            },
+            exclude: {
+              name: "Excluded notes",
+              description: "Notes to exclude even if they would otherwise be part of the project."
             },
             defaultName: {
               name: "Default name",
@@ -17047,6 +17054,20 @@ function createSettings() {
         draft.projects = draft.projects.map((w2) => w2.id === project.id ? project : w2);
       }));
     },
+    duplicateProject(projectId) {
+      const newId = v4_default();
+      update2((state) => immer_esm_default(state, (draft) => {
+        const project = draft.projects.find((p2) => p2.id === projectId);
+        if (project) {
+          draft.projects.push(__spreadProps(__spreadValues({}, project), {
+            id: newId,
+            name: project.name + " Copy",
+            views: project.views.map((v2) => __spreadProps(__spreadValues({}, v2), { id: v4_default() }))
+          }));
+        }
+      }));
+      return newId;
+    },
     deleteProject(projectId) {
       update2((state) => immer_esm_default(state, (draft) => {
         draft.projects = draft.projects.filter((w2) => w2.id !== projectId);
@@ -17085,6 +17106,31 @@ function createSettings() {
           }
         }
       }));
+    },
+    duplicateView(projectId, viewId) {
+      const newId = v4_default();
+      update2((state) => immer_esm_default(state, (draft) => {
+        const idx = draft.projects.findIndex((ws) => ws.id === projectId);
+        if (idx >= 0) {
+          const p2 = draft.projects[idx];
+          if (p2) {
+            const view2 = p2.views.find((v2) => v2.id === viewId);
+            if (view2) {
+              draft.projects.splice(idx, 1, __spreadProps(__spreadValues({}, p2), {
+                views: [
+                  ...p2.views,
+                  __spreadProps(__spreadValues({}, view2), {
+                    id: newId,
+                    name: view2.name + " Copy"
+                  })
+                ]
+              }));
+            }
+          }
+        }
+        return draft;
+      }));
+      return newId;
     },
     deleteView(projectId, viewId) {
       update2((state) => immer_esm_default(state, (draft) => {
@@ -23374,8 +23420,8 @@ function add_css13(target) {
 }
 function get_each_context3(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[6] = list[i2];
-  child_ctx[8] = i2;
+  child_ctx[7] = list[i2];
+  child_ctx[9] = i2;
   return child_ctx;
 }
 function create_each_block3(ctx) {
@@ -23385,19 +23431,19 @@ function create_each_block3(ctx) {
   let iconbutton;
   let current;
   function change_handler(...args) {
-    return ctx[3](ctx[8], ...args);
+    return ctx[4](ctx[9], ...args);
   }
   fileautocomplete = new FileAutocomplete_default({
     props: {
-      value: ctx[6],
-      files: getFilesInFolder(ctx[2].vault.getRoot()),
+      value: ctx[7],
+      files: getFilesInFolder(ctx[3].vault.getRoot()),
       getLabel: func,
       width: "100%"
     }
   });
   fileautocomplete.$on("change", change_handler);
   function click_handler() {
-    return ctx[4](ctx[8]);
+    return ctx[5](ctx[9]);
   }
   iconbutton = new IconButton_default({ props: { icon: "x" } });
   iconbutton.$on("click", click_handler);
@@ -23420,9 +23466,9 @@ function create_each_block3(ctx) {
       ctx = new_ctx;
       const fileautocomplete_changes = {};
       if (dirty & 1)
-        fileautocomplete_changes.value = ctx[6];
-      if (dirty & 4)
-        fileautocomplete_changes.files = getFilesInFolder(ctx[2].vault.getRoot());
+        fileautocomplete_changes.value = ctx[7];
+      if (dirty & 8)
+        fileautocomplete_changes.files = getFilesInFolder(ctx[3].vault.getRoot());
       fileautocomplete.$set(fileautocomplete_changes);
     },
     i(local) {
@@ -23449,10 +23495,14 @@ function create_default_slot5(ctx) {
   let t3;
   return {
     c() {
-      t3 = text("Add template");
+      t3 = text(ctx[2]);
     },
     m(target, anchor) {
       insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 4)
+        set_data(t3, ctx2[2]);
     },
     d(detaching) {
       if (detaching)
@@ -23478,7 +23528,7 @@ function create_fragment30(ctx) {
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[5]);
+  button.$on("click", ctx[6]);
   return {
     c() {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
@@ -23496,7 +23546,7 @@ function create_fragment30(ctx) {
       current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & 7) {
+      if (dirty & 11) {
         each_value = ctx2[0];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
@@ -23518,7 +23568,7 @@ function create_fragment30(ctx) {
         check_outros();
       }
       const button_changes = {};
-      if (dirty & 512) {
+      if (dirty & 1028) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -23551,9 +23601,10 @@ function create_fragment30(ctx) {
 var func = (file) => file.path;
 function instance30($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(2, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
   let { paths } = $$props;
   let { onPathsChange } = $$props;
+  let { buttonText } = $$props;
   const change_handler = (i2, { detail: value }) => {
     onPathsChange(immer_esm_default(paths, (draft) => {
       draft[i2] = value;
@@ -23571,13 +23622,27 @@ function instance30($$self, $$props, $$invalidate) {
       $$invalidate(0, paths = $$props2.paths);
     if ("onPathsChange" in $$props2)
       $$invalidate(1, onPathsChange = $$props2.onPathsChange);
+    if ("buttonText" in $$props2)
+      $$invalidate(2, buttonText = $$props2.buttonText);
   };
-  return [paths, onPathsChange, $app, change_handler, click_handler, click_handler_1];
+  return [
+    paths,
+    onPathsChange,
+    buttonText,
+    $app,
+    change_handler,
+    click_handler,
+    click_handler_1
+  ];
 }
 var FileListInput = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance30, create_fragment30, safe_not_equal, { paths: 0, onPathsChange: 1 }, add_css13);
+    init(this, options, instance30, create_fragment30, safe_not_equal, {
+      paths: 0,
+      onPathsChange: 1,
+      buttonText: 2
+    }, add_css13);
   }
 };
 var FileListInput_default = FileListInput;
@@ -23586,7 +23651,7 @@ var FileListInput_default = FileListInput;
 function add_css14(target) {
   append_styles(target, "svelte-6mkdkz", "small.svelte-6mkdkz{font-size:var(--font-ui-smaller);color:var(--text-accent);font-weight:var(--font-semibold)}.error.svelte-6mkdkz{color:var(--text-error)}");
 }
-function create_default_slot_11(ctx) {
+function create_default_slot_12(ctx) {
   let textinput;
   let current;
   textinput = new TextInput_default({
@@ -23639,7 +23704,7 @@ function create_if_block_3(ctx) {
     props: {
       name: ctx[6].t("modals.project.dataview.name"),
       description: (_a = ctx[6].t("modals.project.dataview.description")) != null ? _a : "",
-      $$slots: { default: [create_default_slot_10] },
+      $$slots: { default: [create_default_slot_11] },
       $$scope: { ctx }
     }
   });
@@ -23658,7 +23723,7 @@ function create_if_block_3(ctx) {
         settingitem_changes.name = ctx2[6].t("modals.project.dataview.name");
       if (dirty & 64)
         settingitem_changes.description = (_a2 = ctx2[6].t("modals.project.dataview.description")) != null ? _a2 : "";
-      if (dirty & 8388609) {
+      if (dirty & 16777217) {
         settingitem_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem.$set(settingitem_changes);
@@ -23678,7 +23743,7 @@ function create_if_block_3(ctx) {
     }
   };
 }
-function create_default_slot_10(ctx) {
+function create_default_slot_11(ctx) {
   let switch_1;
   let current;
   switch_1 = new Switch_default({
@@ -23722,7 +23787,7 @@ function create_if_block_2(ctx) {
       title: ctx[6].t("modals.project.dataview.error.title"),
       icon: "zap",
       variant: "danger",
-      $$slots: { default: [create_default_slot_9] },
+      $$slots: { default: [create_default_slot_10] },
       $$scope: { ctx }
     }
   });
@@ -23738,7 +23803,7 @@ function create_if_block_2(ctx) {
       const callout_changes = {};
       if (dirty & 64)
         callout_changes.title = ctx2[6].t("modals.project.dataview.error.title");
-      if (dirty & 8388672) {
+      if (dirty & 16777280) {
         callout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       callout.$set(callout_changes);
@@ -23758,7 +23823,7 @@ function create_if_block_2(ctx) {
     }
   };
 }
-function create_default_slot_9(ctx) {
+function create_default_slot_10(ctx) {
   let t_value = ctx[6].t("modals.project.dataview.error.message") + "";
   let t3;
   return {
@@ -23789,7 +23854,7 @@ function create_else_block(ctx) {
       name: ctx[6].t("modals.project.path.name"),
       description: (_a = ctx[6].t("modals.project.path.description")) != null ? _a : "",
       vertical: true,
-      $$slots: { default: [create_default_slot_8] },
+      $$slots: { default: [create_default_slot_9] },
       $$scope: { ctx }
     }
   });
@@ -23797,7 +23862,7 @@ function create_else_block(ctx) {
     props: {
       name: ctx[6].t("modals.project.recursive.name"),
       description: (_b = ctx[6].t("modals.project.recursive.description")) != null ? _b : "",
-      $$slots: { default: [create_default_slot_7] },
+      $$slots: { default: [create_default_slot_8] },
       $$scope: { ctx }
     }
   });
@@ -23820,7 +23885,7 @@ function create_else_block(ctx) {
         settingitem0_changes.name = ctx2[6].t("modals.project.path.name");
       if (dirty & 64)
         settingitem0_changes.description = (_a2 = ctx2[6].t("modals.project.path.description")) != null ? _a2 : "";
-      if (dirty & 8388865) {
+      if (dirty & 16777473) {
         settingitem0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem0.$set(settingitem0_changes);
@@ -23829,7 +23894,7 @@ function create_else_block(ctx) {
         settingitem1_changes.name = ctx2[6].t("modals.project.recursive.name");
       if (dirty & 64)
         settingitem1_changes.description = (_b2 = ctx2[6].t("modals.project.recursive.description")) != null ? _b2 : "";
-      if (dirty & 8388609) {
+      if (dirty & 16777217) {
         settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem1.$set(settingitem1_changes);
@@ -23863,7 +23928,7 @@ function create_if_block_13(ctx) {
       name: ctx[6].t("modals.project.query.name"),
       description: (_a = ctx[6].t("modals.project.query.description")) != null ? _a : "",
       vertical: true,
-      $$slots: { default: [create_default_slot_6] },
+      $$slots: { default: [create_default_slot_7] },
       $$scope: { ctx }
     }
   });
@@ -23882,7 +23947,7 @@ function create_if_block_13(ctx) {
         settingitem_changes.name = ctx2[6].t("modals.project.query.name");
       if (dirty & 64)
         settingitem_changes.description = (_a2 = ctx2[6].t("modals.project.query.description")) != null ? _a2 : "";
-      if (dirty & 8388609) {
+      if (dirty & 16777217) {
         settingitem_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem.$set(settingitem_changes);
@@ -23902,7 +23967,7 @@ function create_if_block_13(ctx) {
     }
   };
 }
-function create_default_slot_8(ctx) {
+function create_default_slot_9(ctx) {
   let fileautocomplete;
   let current;
   fileautocomplete = new FileAutocomplete_default({
@@ -23945,7 +24010,7 @@ function create_default_slot_8(ctx) {
     }
   };
 }
-function create_default_slot_7(ctx) {
+function create_default_slot_8(ctx) {
   let switch_1;
   let current;
   switch_1 = new Switch_default({
@@ -23981,7 +24046,7 @@ function create_default_slot_7(ctx) {
     }
   };
 }
-function create_default_slot_6(ctx) {
+function create_default_slot_7(ctx) {
   var _a;
   let textarea;
   let current;
@@ -24048,7 +24113,7 @@ function create_if_block6(ctx) {
     }
   };
 }
-function create_default_slot_5(ctx) {
+function create_default_slot_6(ctx) {
   var _a;
   let textinput;
   let t0;
@@ -24137,12 +24202,13 @@ function create_default_slot_5(ctx) {
     }
   };
 }
-function create_default_slot_4(ctx) {
+function create_default_slot_5(ctx) {
   var _a;
   let filelistinput;
   let current;
   filelistinput = new FileListInput_default({
     props: {
+      buttonText: "Add template",
       paths: (_a = ctx[0].templates) != null ? _a : [],
       onPathsChange: ctx[18]
     }
@@ -24179,8 +24245,51 @@ function create_default_slot_4(ctx) {
     }
   };
 }
+function create_default_slot_4(ctx) {
+  var _a;
+  let filelistinput;
+  let current;
+  filelistinput = new FileListInput_default({
+    props: {
+      buttonText: "Add note",
+      paths: (_a = ctx[0].excludedNotes) != null ? _a : [],
+      onPathsChange: ctx[19]
+    }
+  });
+  return {
+    c() {
+      create_component(filelistinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(filelistinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const filelistinput_changes = {};
+      if (dirty & 1)
+        filelistinput_changes.paths = (_a2 = ctx2[0].excludedNotes) != null ? _a2 : [];
+      if (dirty & 1)
+        filelistinput_changes.onPathsChange = ctx2[19];
+      filelistinput.$set(filelistinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(filelistinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(filelistinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(filelistinput, detaching);
+    }
+  };
+}
 function create_default_slot_3(ctx) {
-  var _a, _b, _c;
+  var _a, _b, _c, _d;
   let settingitem0;
   let t0;
   let t1;
@@ -24191,12 +24300,14 @@ function create_default_slot_3(ctx) {
   let settingitem1;
   let t4;
   let settingitem2;
+  let t5;
+  let settingitem3;
   let current;
   settingitem0 = new SettingItem_default({
     props: {
       name: ctx[6].t("modals.project.name.name"),
       description: (_a = ctx[6].t("modals.project.name.description")) != null ? _a : "",
-      $$slots: { default: [create_default_slot_11] },
+      $$slots: { default: [create_default_slot_12] },
       $$scope: { ctx }
     }
   });
@@ -24216,7 +24327,7 @@ function create_default_slot_3(ctx) {
       name: ctx[6].t("modals.project.defaultName.name"),
       description: (_b = ctx[6].t("modals.project.defaultName.description")) != null ? _b : "",
       vertical: true,
-      $$slots: { default: [create_default_slot_5] },
+      $$slots: { default: [create_default_slot_6] },
       $$scope: { ctx }
     }
   });
@@ -24224,6 +24335,15 @@ function create_default_slot_3(ctx) {
     props: {
       name: ctx[6].t("modals.project.templates.name"),
       description: (_c = ctx[6].t("modals.project.templates.description")) != null ? _c : "",
+      vertical: true,
+      $$slots: { default: [create_default_slot_5] },
+      $$scope: { ctx }
+    }
+  });
+  settingitem3 = new SettingItem_default({
+    props: {
+      name: ctx[6].t("modals.project.exclude.name"),
+      description: (_d = ctx[6].t("modals.project.exclude.description")) != null ? _d : "",
       vertical: true,
       $$slots: { default: [create_default_slot_4] },
       $$scope: { ctx }
@@ -24244,6 +24364,8 @@ function create_default_slot_3(ctx) {
       create_component(settingitem1.$$.fragment);
       t4 = space();
       create_component(settingitem2.$$.fragment);
+      t5 = space();
+      create_component(settingitem3.$$.fragment);
     },
     m(target, anchor) {
       mount_component(settingitem0, target, anchor);
@@ -24259,16 +24381,18 @@ function create_default_slot_3(ctx) {
       mount_component(settingitem1, target, anchor);
       insert(target, t4, anchor);
       mount_component(settingitem2, target, anchor);
+      insert(target, t5, anchor);
+      mount_component(settingitem3, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      var _a2, _b2, _c2;
+      var _a2, _b2, _c2, _d2;
       const settingitem0_changes = {};
       if (dirty & 64)
         settingitem0_changes.name = ctx2[6].t("modals.project.name.name");
       if (dirty & 64)
         settingitem0_changes.description = (_a2 = ctx2[6].t("modals.project.name.description")) != null ? _a2 : "";
-      if (dirty & 8388625) {
+      if (dirty & 16777233) {
         settingitem0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem0.$set(settingitem0_changes);
@@ -24335,7 +24459,7 @@ function create_default_slot_3(ctx) {
         settingitem1_changes.name = ctx2[6].t("modals.project.defaultName.name");
       if (dirty & 64)
         settingitem1_changes.description = (_b2 = ctx2[6].t("modals.project.defaultName.description")) != null ? _b2 : "";
-      if (dirty & 8388705) {
+      if (dirty & 16777313) {
         settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem1.$set(settingitem1_changes);
@@ -24344,10 +24468,19 @@ function create_default_slot_3(ctx) {
         settingitem2_changes.name = ctx2[6].t("modals.project.templates.name");
       if (dirty & 64)
         settingitem2_changes.description = (_c2 = ctx2[6].t("modals.project.templates.description")) != null ? _c2 : "";
-      if (dirty & 8388609) {
+      if (dirty & 16777217) {
         settingitem2_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem2.$set(settingitem2_changes);
+      const settingitem3_changes = {};
+      if (dirty & 64)
+        settingitem3_changes.name = ctx2[6].t("modals.project.exclude.name");
+      if (dirty & 64)
+        settingitem3_changes.description = (_d2 = ctx2[6].t("modals.project.exclude.description")) != null ? _d2 : "";
+      if (dirty & 16777217) {
+        settingitem3_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      settingitem3.$set(settingitem3_changes);
     },
     i(local) {
       if (current)
@@ -24358,6 +24491,7 @@ function create_default_slot_3(ctx) {
       transition_in(if_block2);
       transition_in(settingitem1.$$.fragment, local);
       transition_in(settingitem2.$$.fragment, local);
+      transition_in(settingitem3.$$.fragment, local);
       current = true;
     },
     o(local) {
@@ -24367,6 +24501,7 @@ function create_default_slot_3(ctx) {
       transition_out(if_block2);
       transition_out(settingitem1.$$.fragment, local);
       transition_out(settingitem2.$$.fragment, local);
+      transition_out(settingitem3.$$.fragment, local);
       current = false;
     },
     d(detaching) {
@@ -24388,6 +24523,9 @@ function create_default_slot_3(ctx) {
       if (detaching)
         detach(t4);
       destroy_component(settingitem2, detaching);
+      if (detaching)
+        detach(t5);
+      destroy_component(settingitem3, detaching);
     }
   };
 }
@@ -24421,7 +24559,7 @@ function create_default_slot_1(ctx) {
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[19]);
+  button.$on("click", ctx[20]);
   return {
     c() {
       create_component(button.$$.fragment);
@@ -24434,7 +24572,7 @@ function create_default_slot_1(ctx) {
       const button_changes = {};
       if (dirty & 16)
         button_changes.disabled = !!ctx2[4];
-      if (dirty & 8388612) {
+      if (dirty & 16777220) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -24485,12 +24623,12 @@ function create_default_slot6(ctx) {
     },
     p(ctx2, dirty) {
       const modalcontent_changes = {};
-      if (dirty & 8389105) {
+      if (dirty & 16777713) {
         modalcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       modalcontent.$set(modalcontent_changes);
       const modalbuttongroup_changes = {};
-      if (dirty & 8388637) {
+      if (dirty & 16777245) {
         modalbuttongroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       modalbuttongroup.$set(modalbuttongroup_changes);
@@ -24537,7 +24675,7 @@ function create_fragment31(ctx) {
       const modallayout_changes = {};
       if (dirty & 2)
         modallayout_changes.title = ctx2[1];
-      if (dirty & 8389117) {
+      if (dirty & 16777725) {
         modallayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       modallayout.$set(modallayout_changes);
@@ -24596,6 +24734,7 @@ function instance31($$self, $$props, $$invalidate) {
   const check_handler_1 = ({ detail: recursive }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { recursive }));
   const input_handler_2 = ({ detail: defaultName2 }) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { defaultName: defaultName2 }));
   const func_13 = (templates) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { templates }));
+  const func_2 = (excludedNotes) => $$invalidate(0, project = __spreadProps(__spreadValues({}, project), { excludedNotes }));
   const click_handler = () => {
     var _a2, _b;
     onSave(__spreadProps(__spreadValues({}, project), {
@@ -24653,6 +24792,7 @@ function instance31($$self, $$props, $$invalidate) {
     check_handler_1,
     input_handler_2,
     func_13,
+    func_2,
     click_handler
   ];
 }
@@ -25051,7 +25191,7 @@ function create_default_slot_22(ctx) {
     }
   };
 }
-function create_default_slot_12(ctx) {
+function create_default_slot_13(ctx) {
   let button0;
   let t3;
   let button1;
@@ -25251,7 +25391,7 @@ function create_fragment33(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_12] },
+      $$slots: { default: [create_default_slot_13] },
       $$scope: { ctx }
     }
   });
@@ -25640,8 +25780,9 @@ var DataviewDataSource = class extends DataSource {
       return { fields, records };
     });
   }
-  includes(_24) {
-    return true;
+  includes(path4) {
+    var _a;
+    return !((_a = this.project.excludedNotes) == null ? void 0 : _a.includes(path4));
   }
   readonly() {
     return true;
@@ -25734,6 +25875,10 @@ var FrontMatterDataSource = class extends DataSource {
     });
   }
   includes(path4) {
+    var _a;
+    if ((_a = this.project.excludedNotes) == null ? void 0 : _a.includes(path4)) {
+      return false;
+    }
     const trimmedPath = this.project.path.startsWith("/") ? this.project.path.slice(1) : this.project.path;
     if (!path4.startsWith(trimmedPath)) {
       return false;
@@ -25762,7 +25907,7 @@ function detectSchema2(records) {
 }
 
 // src/app/toolbar/Toolbar.svelte
-var import_obsidian25 = __toModule(require("obsidian"));
+var import_obsidian26 = __toModule(require("obsidian"));
 
 // src/modals/add-view-modal.ts
 var import_obsidian17 = __toModule(require("obsidian"));
@@ -26023,7 +26168,7 @@ function create_default_slot_23(ctx) {
     }
   };
 }
-function create_default_slot_13(ctx) {
+function create_default_slot_14(ctx) {
   let button;
   let current;
   button = new Button_default({
@@ -26077,7 +26222,7 @@ function create_default_slot8(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_13] },
+      $$slots: { default: [create_default_slot_14] },
       $$scope: { ctx }
     }
   });
@@ -26694,7 +26839,7 @@ function create_default_slot_24(ctx) {
     }
   };
 }
-function create_default_slot_14(ctx) {
+function create_default_slot_15(ctx) {
   let button;
   let current;
   button = new Button_default({
@@ -26751,7 +26896,7 @@ function create_default_slot9(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_14] },
+      $$slots: { default: [create_default_slot_15] },
       $$scope: { ctx }
     }
   });
@@ -27048,7 +27193,7 @@ function create_default_slot_25(ctx) {
     }
   };
 }
-function create_default_slot_15(ctx) {
+function create_default_slot_16(ctx) {
   let button0;
   let t3;
   let button1;
@@ -27127,7 +27272,7 @@ function create_default_slot10(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_15] },
+      $$slots: { default: [create_default_slot_16] },
       $$scope: { ctx }
     }
   });
@@ -27437,6 +27582,14 @@ function instance37($$self, $$props, $$invalidate) {
       item.setTitle($i18n.t("modals.project.edit.short-title")).setIcon("edit").onClick(() => {
         if (project) {
           new CreateProjectModal($app, $i18n.t("modals.project.edit.title"), $i18n.t("modals.project.edit.cta"), settings.updateProject, project).open();
+        }
+      });
+    });
+    menu.addItem((item) => {
+      item.setTitle($i18n.t("modals.project.duplicate.title")).setIcon("copy").onClick(() => {
+        if (projectId) {
+          const id = settings.duplicateProject(projectId);
+          onProjectChange(id);
         }
       });
     });
@@ -29731,6 +29884,7 @@ function instance38($$self, $$props, $$invalidate) {
       direction: () => "horizontal",
       animation: 100,
       dataIdAttr: "data-id",
+      forceFallback: true,
       onSort: () => onSort(sortable.toArray())
     });
   });
@@ -29760,6 +29914,7 @@ var ViewItemList = class extends SvelteComponent {
 var ViewItemList_default = ViewItemList;
 
 // src/app/toolbar/ViewItem.svelte
+var import_obsidian25 = __toModule(require("obsidian"));
 function add_css19(target) {
   append_styles(target, "svelte-3t9vh7", "div.svelte-3t9vh7{display:inline-flex;align-items:center;gap:4px;height:1.8rem;padding:0 8px;min-width:min-content;font-size:var(--font-ui-small);border-radius:var(--radius-s);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid transparent}div.svelte-3t9vh7:hover{background-color:var(--background-modifier-hover)}.active.svelte-3t9vh7{background-color:var(--background-modifier-hover)}.error.svelte-3t9vh7{border:1px solid var(--background-modifier-error)}");
 }
@@ -29823,10 +29978,10 @@ function create_if_block_16(ctx) {
   let updating_value;
   let current;
   function textinput_ref_binding(value) {
-    ctx[13](value);
+    ctx[12](value);
   }
   function textinput_value_binding(value) {
-    ctx[14](value);
+    ctx[13](value);
   }
   let textinput_props = {
     noPadding: true,
@@ -29842,7 +29997,7 @@ function create_if_block_16(ctx) {
   textinput = new TextInput_default({ props: textinput_props });
   binding_callbacks.push(() => bind(textinput, "ref", textinput_ref_binding));
   binding_callbacks.push(() => bind(textinput, "value", textinput_value_binding));
-  textinput.$on("keydown", ctx[15]);
+  textinput.$on("keydown", ctx[14]);
   return {
     c() {
       create_component(textinput.$$.fragment);
@@ -29887,12 +30042,12 @@ function create_if_block10(ctx) {
   let current;
   iconbutton = new IconButton_default({
     props: {
-      icon: "cross",
+      icon: "chevron-down",
       size: "sm",
       nopadding: true
     }
   });
-  iconbutton.$on("click", ctx[16]);
+  iconbutton.$on("click", ctx[15]);
   return {
     c() {
       create_component(iconbutton.$$.fragment);
@@ -29937,7 +30092,7 @@ function create_fragment39(ctx) {
   }
   current_block_type_index = select_block_type(ctx, -1);
   if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block2 = ctx[7] && ctx[2] && create_if_block10(ctx);
+  let if_block2 = ctx[2] && create_if_block10(ctx);
   return {
     c() {
       div = element("div");
@@ -29951,7 +30106,7 @@ function create_fragment39(ctx) {
       attr(div, "data-id", ctx[1]);
       attr(div, "class", "svelte-3t9vh7");
       toggle_class(div, "active", ctx[2]);
-      toggle_class(div, "error", ctx[8]);
+      toggle_class(div, "error", ctx[7]);
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -29965,13 +30120,10 @@ function create_fragment39(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "mouseenter", ctx[17]),
-          listen(div, "mouseleave", ctx[18]),
-          listen(div, "focus", ctx[19]),
-          listen(div, "blur", ctx[20]),
-          listen(div, "dblclick", ctx[21]),
-          listen(div, "mousedown", ctx[12]),
-          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[22]))
+          listen(div, "blur", ctx[16]),
+          listen(div, "dblclick", ctx[17]),
+          listen(div, "mousedown", ctx[11]),
+          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[18]))
         ];
         mounted = true;
       }
@@ -30016,10 +30168,10 @@ function create_fragment39(ctx) {
         transition_in(if_block1, 1);
         if_block1.m(div, t1);
       }
-      if (ctx2[7] && ctx2[2]) {
+      if (ctx2[2]) {
         if (if_block2) {
           if_block2.p(ctx2, dirty);
-          if (dirty & 132) {
+          if (dirty & 4) {
             transition_in(if_block2, 1);
           }
         } else {
@@ -30039,12 +30191,12 @@ function create_fragment39(ctx) {
         attr(div, "data-id", ctx2[1]);
       }
       if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 16)
-        useClickOutside_action.update.call(null, ctx2[22]);
+        useClickOutside_action.update.call(null, ctx2[18]);
       if (!current || dirty & 4) {
         toggle_class(div, "active", ctx2[2]);
       }
-      if (!current || dirty & 256) {
-        toggle_class(div, "error", ctx2[8]);
+      if (!current || dirty & 128) {
+        toggle_class(div, "error", ctx2[7]);
       }
     },
     i(local) {
@@ -30085,7 +30237,6 @@ function instance39($$self, $$props, $$invalidate) {
   function rollback() {
     $$invalidate(0, label = fallback);
   }
-  let hovering = false;
   let editing = false;
   let inputRef;
   const dispatch = createEventDispatcher();
@@ -30111,12 +30262,25 @@ function instance39($$self, $$props, $$invalidate) {
       }
     }
   };
-  const click_handler = () => dispatch("delete");
-  const mouseenter_handler = () => $$invalidate(7, hovering = true);
-  const mouseleave_handler = () => $$invalidate(7, hovering = false);
-  const focus_handler = () => $$invalidate(7, hovering = true);
+  const click_handler = (event) => {
+    const menu = new import_obsidian25.Menu();
+    menu.addItem((item) => {
+      item.setTitle("Duplicate view");
+      item.setIcon("copy");
+      item.onClick(() => {
+        dispatch("duplicate");
+      });
+    });
+    menu.addItem((item) => {
+      item.setTitle("Delete view");
+      item.setIcon("trash");
+      item.onClick(() => {
+        dispatch("delete");
+      });
+    });
+    menu.showAtMouseEvent(event);
+  };
   const blur_handler = () => {
-    $$invalidate(7, hovering = false);
     $$invalidate(4, editing = false);
     rollback();
   };
@@ -30135,7 +30299,7 @@ function instance39($$self, $$props, $$invalidate) {
     if ("icon" in $$props2)
       $$invalidate(3, icon = $$props2.icon);
     if ("onValidate" in $$props2)
-      $$invalidate(11, onValidate = $$props2.onValidate);
+      $$invalidate(10, onValidate = $$props2.onValidate);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 48) {
@@ -30145,9 +30309,9 @@ function instance39($$self, $$props, $$invalidate) {
           inputRef.select();
         }
     }
-    if ($$self.$$.dirty & 2049) {
+    if ($$self.$$.dirty & 1025) {
       $:
-        $$invalidate(8, error2 = !onValidate(label));
+        $$invalidate(7, error2 = !onValidate(label));
     }
   };
   return [
@@ -30158,7 +30322,6 @@ function instance39($$self, $$props, $$invalidate) {
     editing,
     inputRef,
     fallback,
-    hovering,
     error2,
     rollback,
     dispatch,
@@ -30168,9 +30331,6 @@ function instance39($$self, $$props, $$invalidate) {
     textinput_value_binding,
     keydown_handler,
     click_handler,
-    mouseenter_handler,
-    mouseleave_handler,
-    focus_handler,
     blur_handler,
     dblclick_handler,
     useClickOutside_function
@@ -30184,7 +30344,7 @@ var ViewItem = class extends SvelteComponent {
       id: 1,
       active: 2,
       icon: 3,
-      onValidate: 11
+      onValidate: 10
     }, add_css19);
   }
 };
@@ -30193,36 +30353,40 @@ var ViewItem_default = ViewItem;
 // src/app/toolbar/ViewSelect.svelte
 function get_each_context5(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[13] = list[i2];
+  child_ctx[15] = list[i2];
   return child_ctx;
 }
 function create_each_block5(ctx) {
   let viewitem;
   let current;
   function func7(...args) {
-    return ctx[8](ctx[13], ...args);
+    return ctx[9](ctx[15], ...args);
   }
   function mousedown_handler() {
-    return ctx[9](ctx[13]);
+    return ctx[10](ctx[15]);
   }
   function rename_handler(...args) {
-    return ctx[10](ctx[13], ...args);
+    return ctx[11](ctx[15], ...args);
   }
   function delete_handler() {
-    return ctx[11](ctx[13]);
+    return ctx[12](ctx[15]);
+  }
+  function duplicate_handler() {
+    return ctx[13](ctx[15]);
   }
   viewitem = new ViewItem_default({
     props: {
-      id: ctx[13].id,
-      active: ctx[0] === ctx[13].id,
-      label: ctx[13].name,
-      icon: ctx[7](ctx[13].type),
+      id: ctx[15].id,
+      active: ctx[0] === ctx[15].id,
+      label: ctx[15].name,
+      icon: ctx[8](ctx[15].type),
       onValidate: func7
     }
   });
   viewitem.$on("mousedown", mousedown_handler);
   viewitem.$on("rename", rename_handler);
   viewitem.$on("delete", delete_handler);
+  viewitem.$on("duplicate", duplicate_handler);
   return {
     c() {
       create_component(viewitem.$$.fragment);
@@ -30235,14 +30399,14 @@ function create_each_block5(ctx) {
       ctx = new_ctx;
       const viewitem_changes = {};
       if (dirty & 2)
-        viewitem_changes.id = ctx[13].id;
+        viewitem_changes.id = ctx[15].id;
       if (dirty & 3)
-        viewitem_changes.active = ctx[0] === ctx[13].id;
+        viewitem_changes.active = ctx[0] === ctx[15].id;
       if (dirty & 2)
-        viewitem_changes.label = ctx[13].name;
+        viewitem_changes.label = ctx[15].name;
       if (dirty & 2)
-        viewitem_changes.icon = ctx[7](ctx[13].type);
-      if (dirty & 66)
+        viewitem_changes.icon = ctx[8](ctx[15].type);
+      if (dirty & 130)
         viewitem_changes.onValidate = func7;
       viewitem.$set(viewitem_changes);
     },
@@ -30287,7 +30451,7 @@ function create_key_block(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 223) {
+      if (dirty & 447) {
         each_value = ctx2[1];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
@@ -30381,7 +30545,7 @@ function create_fragment40(ctx) {
   let current;
   viewitemlist = new ViewItemList_default({
     props: {
-      onSort: ctx[5],
+      onSort: ctx[6],
       $$slots: { default: [create_default_slot11] },
       $$scope: { ctx }
     }
@@ -30396,9 +30560,9 @@ function create_fragment40(ctx) {
     },
     p(ctx2, [dirty]) {
       const viewitemlist_changes = {};
-      if (dirty & 32)
-        viewitemlist_changes.onSort = ctx2[5];
-      if (dirty & 65631) {
+      if (dirty & 64)
+        viewitemlist_changes.onSort = ctx2[6];
+      if (dirty & 262335) {
         viewitemlist_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewitemlist.$set(viewitemlist_changes);
@@ -30420,11 +30584,12 @@ function create_fragment40(ctx) {
 }
 function instance40($$self, $$props, $$invalidate) {
   let $customViews;
-  component_subscribe($$self, customViews, ($$value) => $$invalidate(12, $customViews = $$value));
+  component_subscribe($$self, customViews, ($$value) => $$invalidate(14, $customViews = $$value));
   let { viewId } = $$props;
   let { views } = $$props;
   let { onViewChange } = $$props;
   let { onViewDelete } = $$props;
+  let { onViewDuplicate } = $$props;
   let { onViewRename } = $$props;
   let { onViewSort } = $$props;
   let { viewExists } = $$props;
@@ -30445,6 +30610,9 @@ function instance40($$self, $$props, $$invalidate) {
   const delete_handler = (v2) => {
     onViewDelete(v2.id);
   };
+  const duplicate_handler = (v2) => {
+    onViewDuplicate(v2.id);
+  };
   $$self.$$set = ($$props2) => {
     if ("viewId" in $$props2)
       $$invalidate(0, viewId = $$props2.viewId);
@@ -30454,18 +30622,21 @@ function instance40($$self, $$props, $$invalidate) {
       $$invalidate(2, onViewChange = $$props2.onViewChange);
     if ("onViewDelete" in $$props2)
       $$invalidate(3, onViewDelete = $$props2.onViewDelete);
+    if ("onViewDuplicate" in $$props2)
+      $$invalidate(4, onViewDuplicate = $$props2.onViewDuplicate);
     if ("onViewRename" in $$props2)
-      $$invalidate(4, onViewRename = $$props2.onViewRename);
+      $$invalidate(5, onViewRename = $$props2.onViewRename);
     if ("onViewSort" in $$props2)
-      $$invalidate(5, onViewSort = $$props2.onViewSort);
+      $$invalidate(6, onViewSort = $$props2.onViewSort);
     if ("viewExists" in $$props2)
-      $$invalidate(6, viewExists = $$props2.viewExists);
+      $$invalidate(7, viewExists = $$props2.viewExists);
   };
   return [
     viewId,
     views,
     onViewChange,
     onViewDelete,
+    onViewDuplicate,
     onViewRename,
     onViewSort,
     viewExists,
@@ -30473,7 +30644,8 @@ function instance40($$self, $$props, $$invalidate) {
     func7,
     mousedown_handler,
     rename_handler,
-    delete_handler
+    delete_handler,
+    duplicate_handler
   ];
 }
 var ViewSelect = class extends SvelteComponent {
@@ -30484,9 +30656,10 @@ var ViewSelect = class extends SvelteComponent {
       views: 1,
       onViewChange: 2,
       onViewDelete: 3,
-      onViewRename: 4,
-      onViewSort: 5,
-      viewExists: 6
+      onViewDuplicate: 4,
+      onViewRename: 5,
+      onViewSort: 6,
+      viewExists: 7
     });
   }
 };
@@ -30507,7 +30680,8 @@ function create_if_block11(ctx) {
       onViewSort: ctx[12],
       onViewRename: ctx[13],
       onViewChange: ctx[4],
-      onViewDelete: ctx[14]
+      onViewDuplicate: ctx[14],
+      onViewDelete: ctx[15]
     }
   });
   return {
@@ -30532,8 +30706,10 @@ function create_if_block11(ctx) {
         viewselect_changes.onViewRename = ctx2[13];
       if (dirty & 16)
         viewselect_changes.onViewChange = ctx2[4];
+      if (dirty & 18)
+        viewselect_changes.onViewDuplicate = ctx2[14];
       if (dirty & 386)
-        viewselect_changes.onViewDelete = ctx2[14];
+        viewselect_changes.onViewDelete = ctx2[15];
       viewselect.$set(viewselect_changes);
     },
     i(local) {
@@ -30617,7 +30793,7 @@ function create_fragment41(ctx) {
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[15]);
+  button.$on("click", ctx[16]);
   return {
     c() {
       div = element("div");
@@ -30668,7 +30844,7 @@ function create_fragment41(ctx) {
         check_outros();
       }
       const button_changes = {};
-      if (dirty & 65792) {
+      if (dirty & 131328) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -30724,6 +30900,12 @@ function instance41($$self, $$props, $$invalidate) {
     }
   };
   const func_3 = (viewId2) => {
+    if (projectId) {
+      const id = settings.duplicateView(projectId, viewId2);
+      onViewChange(id);
+    }
+  };
+  const func_4 = (viewId2) => {
     new ConfirmDialogModal($app, $i18n.t("modals.view.delete.title"), $i18n.t("modals.view.delete.message"), $i18n.t("modals.view.delete.cta"), () => {
       if (projectId) {
         settings.deleteView(projectId, viewId2);
@@ -30731,7 +30913,7 @@ function instance41($$self, $$props, $$invalidate) {
     }).open();
   };
   const click_handler = (event) => {
-    const menu = new import_obsidian25.Menu();
+    const menu = new import_obsidian26.Menu();
     menu.addItem((item) => {
       item.setTitle($i18n.t("modals.project.create.short-title")).setIcon("folder").onClick(() => {
         new CreateProjectModal($app, $i18n.t("modals.project.create.title"), $i18n.t("modals.project.create.cta"), (project2) => {
@@ -30801,6 +30983,7 @@ function instance41($$self, $$props, $$invalidate) {
     func_13,
     func_2,
     func_3,
+    func_4,
     click_handler
   ];
 }
@@ -31214,16 +31397,16 @@ var View = class extends SvelteComponent {
 var View_default = View;
 
 // src/app/App.svelte
-function create_catch_block(ctx) {
+function create_catch_block_1(ctx) {
   let div;
   let callout;
   let current;
   callout = new Callout_default({
     props: {
-      title: ctx[14].name,
+      title: ctx[15].name,
       icon: "zap",
       variant: "danger",
-      $$slots: { default: [create_default_slot_16] },
+      $$slots: { default: [create_default_slot_17] },
       $$scope: { ctx }
     }
   });
@@ -31241,8 +31424,8 @@ function create_catch_block(ctx) {
     p(ctx2, dirty) {
       const callout_changes = {};
       if (dirty & 8)
-        callout_changes.title = ctx2[14].name;
-      if (dirty & 32776) {
+        callout_changes.title = ctx2[15].name;
+      if (dirty & 65544) {
         callout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       callout.$set(callout_changes);
@@ -31265,7 +31448,7 @@ function create_catch_block(ctx) {
   };
 }
 function create_default_slot_26(ctx) {
-  let t_value = ctx[14].message + "";
+  let t_value = ctx[15].message + "";
   let t3;
   return {
     c() {
@@ -31275,7 +31458,7 @@ function create_default_slot_26(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 8 && t_value !== (t_value = ctx2[14].message + ""))
+      if (dirty & 8 && t_value !== (t_value = ctx2[15].message + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -31284,7 +31467,7 @@ function create_default_slot_26(ctx) {
     }
   };
 }
-function create_default_slot_16(ctx) {
+function create_default_slot_17(ctx) {
   let typography;
   let current;
   typography = new Typography_default({
@@ -31304,7 +31487,7 @@ function create_default_slot_16(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty & 32776) {
+      if (dirty & 65544) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -31324,10 +31507,10 @@ function create_default_slot_16(ctx) {
     }
   };
 }
-function create_then_block(ctx) {
+function create_then_block_1(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[12] && ctx[13] && ctx[0] && create_if_block12(ctx);
+  let if_block = ctx[13] && ctx[14] && ctx[0] && create_if_block12(ctx);
   return {
     c() {
       if (if_block)
@@ -31341,10 +31524,10 @@ function create_then_block(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (ctx2[12] && ctx2[13] && ctx2[0]) {
+      if (ctx2[13] && ctx2[14] && ctx2[0]) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 12289) {
+          if (dirty & 24577) {
             transition_in(if_block, 1);
           }
         } else {
@@ -31384,8 +31567,8 @@ function create_if_block12(ctx) {
   let current;
   view2 = new View_default({
     props: {
-      project: ctx[12],
-      view: ctx[13],
+      project: ctx[13],
+      view: ctx[14],
       readonly: ctx[0].readonly(),
       api: new ViewApi(ctx[5], ctx[0], ctx[6]),
       onConfigChange: settings.updateViewConfig,
@@ -31402,10 +31585,10 @@ function create_if_block12(ctx) {
     },
     p(ctx2, dirty) {
       const view_changes = {};
-      if (dirty & 4096)
-        view_changes.project = ctx2[12];
       if (dirty & 8192)
-        view_changes.view = ctx2[13];
+        view_changes.project = ctx2[13];
+      if (dirty & 16384)
+        view_changes.view = ctx2[14];
       if (dirty & 1)
         view_changes.readonly = ctx2[0].readonly();
       if (dirty & 97)
@@ -31430,6 +31613,67 @@ function create_if_block12(ctx) {
   };
 }
 function create_pending_block(ctx) {
+  let await_block_anchor;
+  let promise;
+  let current;
+  let info = {
+    ctx,
+    current: null,
+    token: null,
+    hasCatch: false,
+    pending: create_pending_block_1,
+    then: create_then_block,
+    catch: create_catch_block,
+    blocks: [, , ,]
+  };
+  handle_promise(promise = ctx[8](), info);
+  return {
+    c() {
+      await_block_anchor = empty();
+      info.block.c();
+    },
+    m(target, anchor) {
+      insert(target, await_block_anchor, anchor);
+      info.block.m(target, info.anchor = anchor);
+      info.mount = () => await_block_anchor.parentNode;
+      info.anchor = await_block_anchor;
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(info.block);
+      current = true;
+    },
+    o(local) {
+      for (let i2 = 0; i2 < 3; i2 += 1) {
+        const block = info.blocks[i2];
+        transition_out(block);
+      }
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(await_block_anchor);
+      info.block.d(detaching);
+      info.token = null;
+      info = null;
+    }
+  };
+}
+function create_catch_block(ctx) {
+  return {
+    c: noop,
+    m: noop,
+    i: noop,
+    o: noop,
+    d: noop
+  };
+}
+function create_then_block(ctx) {
   let loading;
   let current;
   loading = new Loading_default({});
@@ -31441,7 +31685,6 @@ function create_pending_block(ctx) {
       mount_component(loading, target, anchor);
       current = true;
     },
-    p: noop,
     i(local) {
       if (current)
         return;
@@ -31457,6 +31700,15 @@ function create_pending_block(ctx) {
     }
   };
 }
+function create_pending_block_1(ctx) {
+  return {
+    c: noop,
+    m: noop,
+    i: noop,
+    o: noop,
+    d: noop
+  };
+}
 function create_default_slot13(ctx) {
   let await_block_anchor;
   let promise;
@@ -31467,9 +31719,9 @@ function create_default_slot13(ctx) {
     token: null,
     hasCatch: true,
     pending: create_pending_block,
-    then: create_then_block,
-    catch: create_catch_block,
-    error: 14,
+    then: create_then_block_1,
+    catch: create_catch_block_1,
+    error: 15,
     blocks: [, , ,]
   };
   handle_promise(promise = ctx[3], info);
@@ -31521,18 +31773,18 @@ function create_fragment45(ctx) {
   let updating_viewId;
   let current;
   function appcontainer_projectId_binding(value) {
-    ctx[9](value);
+    ctx[10](value);
   }
   function appcontainer_viewId_binding(value) {
-    ctx[10](value);
+    ctx[11](value);
   }
   let appcontainer_props = {
     projects: ctx[4],
     $$slots: {
       default: [
         create_default_slot13,
-        ({ project, view: view2 }) => ({ 12: project, 13: view2 }),
-        ({ project, view: view2 }) => (project ? 4096 : 0) | (view2 ? 8192 : 0)
+        ({ project, view: view2 }) => ({ 13: project, 14: view2 }),
+        ({ project, view: view2 }) => (project ? 8192 : 0) | (view2 ? 16384 : 0)
       ]
     },
     $$scope: { ctx }
@@ -31558,7 +31810,7 @@ function create_fragment45(ctx) {
       const appcontainer_changes = {};
       if (dirty & 16)
         appcontainer_changes.projects = ctx2[4];
-      if (dirty & 45289) {
+      if (dirty & 90345) {
         appcontainer_changes.$$scope = { dirty, ctx: ctx2 };
       }
       if (!updating_projectId && dirty & 2) {
@@ -31597,9 +31849,9 @@ function instance45($$self, $$props, $$invalidate) {
   let $api;
   let $dataFrame;
   component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(12, $i18n = $$value));
   component_subscribe($$self, dataSource, ($$value) => $$invalidate(0, $dataSource = $$value));
-  component_subscribe($$self, settings, ($$value) => $$invalidate(8, $settings = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(9, $settings = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(6, $api = $$value));
   component_subscribe($$self, dataFrame, ($$value) => $$invalidate(7, $dataFrame = $$value));
   let projectId;
@@ -31614,6 +31866,7 @@ function instance45($$self, $$props, $$invalidate) {
       }).open();
     }
   });
+  const wait = () => new Promise((res) => setTimeout(res, 500));
   function appcontainer_projectId_binding(value) {
     projectId = value;
     $$invalidate(1, projectId);
@@ -31623,7 +31876,7 @@ function instance45($$self, $$props, $$invalidate) {
     $$invalidate(2, viewId);
   }
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 256) {
+    if ($$self.$$.dirty & 512) {
       $:
         $$invalidate(4, { projects } = $settings, projects);
     }
@@ -31646,6 +31899,7 @@ function instance45($$self, $$props, $$invalidate) {
     $app,
     $api,
     $dataFrame,
+    wait,
     $settings,
     appcontainer_projectId_binding,
     appcontainer_viewId_binding
@@ -32001,10 +32255,10 @@ var CenterBox = class extends SvelteComponent {
 var CenterBox_default = CenterBox;
 
 // src/modals/edit-note-modal.ts
-var import_obsidian31 = __toModule(require("obsidian"));
+var import_obsidian32 = __toModule(require("obsidian"));
 
 // src/modals/input-dialog.ts
-var import_obsidian29 = __toModule(require("obsidian"));
+var import_obsidian30 = __toModule(require("obsidian"));
 
 // src/modals/components/InputDialog.svelte
 function add_css27(target) {
@@ -32085,7 +32339,7 @@ function create_default_slot_27(ctx) {
     }
   };
 }
-function create_default_slot_17(ctx) {
+function create_default_slot_18(ctx) {
   let button0;
   let t3;
   let button1;
@@ -32162,7 +32416,7 @@ function create_default_slot15(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_17] },
+      $$slots: { default: [create_default_slot_18] },
       $$scope: { ctx }
     }
   });
@@ -32320,7 +32574,7 @@ var InputDialog = class extends SvelteComponent {
 var InputDialog_default = InputDialog;
 
 // src/modals/input-dialog.ts
-var InputDialogModal = class extends import_obsidian29.Modal {
+var InputDialogModal = class extends import_obsidian30.Modal {
   constructor(app2, message, cta, onSubmit, value) {
     super(app2);
     this.message = message;
@@ -32516,7 +32770,7 @@ function create_if_block13(ctx) {
     }
   };
 }
-function create_default_slot_18(ctx) {
+function create_default_slot_19(ctx) {
   let t_value = ctx[6] + "";
   let t3;
   return {
@@ -32541,7 +32795,7 @@ function create_each_block_1(ctx) {
   let current;
   tag = new Tag_default({
     props: {
-      $$slots: { default: [create_default_slot_18] },
+      $$slots: { default: [create_default_slot_19] },
       $$scope: { ctx }
     }
   });
@@ -33440,7 +33694,7 @@ function create_default_slot_28(ctx) {
     }
   };
 }
-function create_default_slot_19(ctx) {
+function create_default_slot_110(ctx) {
   let button;
   let current;
   button = new Button_default({
@@ -33494,7 +33748,7 @@ function create_default_slot17(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_19] },
+      $$slots: { default: [create_default_slot_110] },
       $$scope: { ctx }
     }
   });
@@ -33624,7 +33878,7 @@ var EditNote = class extends SvelteComponent {
 var EditNote_default = EditNote;
 
 // src/modals/edit-note-modal.ts
-var EditNoteModal = class extends import_obsidian31.Modal {
+var EditNoteModal = class extends import_obsidian32.Modal {
   constructor(app2, fields, onSave, defaults2) {
     super(app2);
     this.fields = fields;
@@ -34482,7 +34736,7 @@ function create_default_slot_29(ctx) {
     }
   };
 }
-function create_default_slot_110(ctx) {
+function create_default_slot_111(ctx) {
   let cardmedia;
   let t0;
   let cardcontent;
@@ -34558,7 +34812,7 @@ function create_each_block8(ctx) {
   let current;
   card = new Card_default2({
     props: {
-      $$slots: { default: [create_default_slot_110] },
+      $$slots: { default: [create_default_slot_111] },
       $$scope: { ctx }
     }
   });
@@ -34916,7 +35170,7 @@ var import_dayjs8 = __toModule(require_dayjs_min());
 
 // src/views/Calendar/components/CalendarDay/CalendarDay.svelte
 var import_path2 = __toModule(require("path"));
-var import_obsidian33 = __toModule(require("obsidian"));
+var import_obsidian34 = __toModule(require("obsidian"));
 
 // src/views/Calendar/components/Table/Table.svelte
 function add_css35(target) {
@@ -35671,7 +35925,7 @@ function create_if_block18(ctx) {
   calendarentry = new CalendarEntry_default({
     props: {
       checked: ctx[2] !== void 0 ? asOptionalBoolean(ctx[14][1].values[ctx[2]]) : void 0,
-      $$slots: { default: [create_default_slot_111] },
+      $$slots: { default: [create_default_slot_112] },
       $$scope: { ctx }
     }
   });
@@ -35730,7 +35984,7 @@ function create_default_slot_210(ctx) {
     }
   };
 }
-function create_default_slot_111(ctx) {
+function create_default_slot_112(ctx) {
   let internallink;
   let t3;
   let current;
@@ -36019,7 +36273,7 @@ function instance68($$self, $$props, $$invalidate) {
   const dblclick_handler = () => onEntryAdd();
   const mousedown_handler = (event) => {
     if (event.button === 2) {
-      const menu = new import_obsidian33.Menu();
+      const menu = new import_obsidian34.Menu();
       menu.addItem((item) => {
         item.setTitle($i18n.t("views.calendar.new-note")).setIcon("file").onClick(onEntryAdd);
       });
@@ -37013,7 +37267,7 @@ function create_each_block10(ctx) {
     }
   };
 }
-function create_default_slot_112(ctx) {
+function create_default_slot_113(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[12];
@@ -37096,7 +37350,7 @@ function create_default_slot21(ctx) {
   });
   tablebody = new TableBody_default({
     props: {
-      $$slots: { default: [create_default_slot_112] },
+      $$slots: { default: [create_default_slot_113] },
       $$scope: { ctx }
     }
   });
@@ -37443,7 +37697,7 @@ var CalendarView2 = class extends ProjectView {
 
 // src/views/Board/board.ts
 function unique(records, fieldName) {
-  const keys = records.map((record) => record.values[fieldName]).map((value) => value && isString(value) ? value : null).filter(notEmpty);
+  const keys = records.map((record) => record.values[fieldName]).map((value) => value && isNumber(value) ? value.toLocaleString() : value).map((value) => value && isString(value) ? value : null).filter(notEmpty);
   const set2 = new Set(keys);
   return [...set2];
 }
@@ -37461,12 +37715,14 @@ function groupRecordsByField2(records, fieldName) {
     res[key] = [];
   }
   records.forEach((record) => {
-    var _a2, _b;
+    var _a2, _b, _c;
     const value = record.values[fieldName];
     if (value && isString(value)) {
       (_a2 = res[value]) == null ? void 0 : _a2.push(record);
+    } else if (value && isNumber(value)) {
+      (_b = res[value.toLocaleString()]) == null ? void 0 : _b.push(record);
     } else {
-      (_b = res[noStatus]) == null ? void 0 : _b.push(record);
+      (_c = res[noStatus]) == null ? void 0 : _c.push(record);
     }
   });
   if (!((_a = res[noStatus]) == null ? void 0 : _a.length)) {
@@ -37476,7 +37732,7 @@ function groupRecordsByField2(records, fieldName) {
 }
 
 // src/views/Board/settings/settings-modal.ts
-var import_obsidian36 = __toModule(require("obsidian"));
+var import_obsidian37 = __toModule(require("obsidian"));
 
 // src/views/Board/settings/BoardSettings.svelte
 function create_default_slot_212(ctx) {
@@ -37525,7 +37781,7 @@ function create_default_slot_212(ctx) {
     }
   };
 }
-function create_default_slot_113(ctx) {
+function create_default_slot_114(ctx) {
   let settingitem;
   let current;
   settingitem = new SettingItem_default({
@@ -37571,7 +37827,7 @@ function create_default_slot22(ctx) {
   let current;
   modalcontent = new ModalContent_default({
     props: {
-      $$slots: { default: [create_default_slot_113] },
+      $$slots: { default: [create_default_slot_114] },
       $$scope: { ctx }
     }
   });
@@ -37678,7 +37934,7 @@ var BoardSettings = class extends SvelteComponent {
 var BoardSettings_default = BoardSettings;
 
 // src/views/Board/settings/settings-modal.ts
-var BoardSettingsModal = class extends import_obsidian36.Modal {
+var BoardSettingsModal = class extends import_obsidian37.Modal {
   constructor(app2, config, onSave) {
     super(app2);
     this.config = config;
@@ -38447,7 +38703,7 @@ function create_if_block_24(ctx) {
   let current;
   cardlist = new CardList_default({
     props: {
-      $$slots: { default: [create_default_slot_114] },
+      $$slots: { default: [create_default_slot_115] },
       $$scope: { ctx }
     }
   });
@@ -38613,7 +38869,7 @@ function create_each_block11(ctx) {
     }
   };
 }
-function create_default_slot_114(ctx) {
+function create_default_slot_115(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[6];
@@ -39139,9 +39395,10 @@ function instance75($$self, $$props, $$invalidate) {
   let sortable;
   onMount(() => {
     sortable = sortable_esm_default.create(ref, {
-      animation: 150,
+      animation: 100,
       direction: "horizontal",
       dataIdAttr: "data-id",
+      forceFallback: true,
       store: {
         get() {
           return columns.map((column) => column.id);
@@ -39305,7 +39562,7 @@ function create_default_slot_214(ctx) {
     }
   };
 }
-function create_default_slot_115(ctx) {
+function create_default_slot_116(ctx) {
   let field0;
   let t0;
   let field1;
@@ -39392,7 +39649,7 @@ function create_default_slot24(ctx) {
   let current;
   horizontalgroup = new HorizontalGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_115] },
+      $$slots: { default: [create_default_slot_116] },
       $$scope: { ctx }
     }
   });
@@ -39604,7 +39861,7 @@ function instance76($$self, $$props, $$invalidate) {
     }
     if ($$self.$$.dirty & 65536) {
       $:
-        $$invalidate(8, textFields = fields.filter((field) => field.type === DataFieldType.String));
+        $$invalidate(8, textFields = fields.filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Number));
     }
     if ($$self.$$.dirty & 65537) {
       $:
@@ -39711,7 +39968,7 @@ var BoardView2 = class extends ProjectView {
 };
 
 // src/views/Table/components/DataGrid/DataGrid.svelte
-var import_obsidian45 = __toModule(require("obsidian"));
+var import_obsidian46 = __toModule(require("obsidian"));
 
 // src/views/Table/components/DataGrid/GridCell/Resizer.svelte
 function add_css48(target) {
@@ -41842,7 +42099,7 @@ var GridTextCell = class extends SvelteComponent {
 var GridTextCell_default = GridTextCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
-var import_obsidian40 = __toModule(require("obsidian"));
+var import_obsidian41 = __toModule(require("obsidian"));
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/LinkLabel.svelte
 function add_css53(target) {
@@ -42269,7 +42526,7 @@ function instance87($$self, $$props, $$invalidate) {
   let { selected } = $$props;
   const sourcePath = getContext("sourcePath");
   let edit = false;
-  const func7 = (file) => file instanceof import_obsidian40.TFile ? file.basename : "";
+  const func7 = (file) => file instanceof import_obsidian41.TFile ? file.basename : "";
   const blur_handler = () => {
     $$invalidate(6, edit = false);
   };
@@ -43627,7 +43884,7 @@ var GridHeader = class extends SvelteComponent {
 var GridHeader_default = GridHeader;
 
 // src/views/Table/components/DataGrid/GridRow.svelte
-var import_obsidian43 = __toModule(require("obsidian"));
+var import_obsidian44 = __toModule(require("obsidian"));
 function get_each_context14(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[15] = list[i2];
@@ -43955,7 +44212,7 @@ function instance92($$self, $$props, $$invalidate) {
     const targetEl = event.target;
     if (targetEl instanceof HTMLDivElement) {
       const file = $app.vault.getAbstractFileByPath(rowId);
-      if (file instanceof import_obsidian43.TFile) {
+      if (file instanceof import_obsidian44.TFile) {
         $app.workspace.trigger("hover-link", {
           event,
           source: "obsidian-projects-table-view",
@@ -44113,7 +44370,7 @@ function create_if_block28(ctx) {
   button = new Button_default({
     props: {
       variant: "plain",
-      $$slots: { default: [create_default_slot_116] },
+      $$slots: { default: [create_default_slot_117] },
       $$scope: { ctx }
     }
   });
@@ -44148,7 +44405,7 @@ function create_if_block28(ctx) {
     }
   };
 }
-function create_default_slot_116(ctx) {
+function create_default_slot_117(ctx) {
   let icon;
   let t0;
   let t1_value = ctx[7]("components.data-grid.row.add") + "";
@@ -44406,7 +44663,7 @@ function instance93($$self, $$props, $$invalidate) {
   let { onRowEdit } = $$props;
   let activeCell = [3, 3];
   function createColumnMenu(column) {
-    const menu = new import_obsidian45.Menu();
+    const menu = new import_obsidian46.Menu();
     if (column.editable && !readonly) {
       menu.addItem((item) => {
         item.setTitle(t3("components.data-grid.column.rename")).setIcon("edit").onClick(() => onColumnRename(column.field));
@@ -44431,7 +44688,7 @@ function instance93($$self, $$props, $$invalidate) {
     return menu;
   }
   function createRowMenu(rowId, row) {
-    const menu = new import_obsidian45.Menu();
+    const menu = new import_obsidian46.Menu();
     menu.addItem((item) => {
       item.setTitle(t3("components.data-grid.row.edit")).setIcon("edit").onClick(() => onRowEdit(rowId, row));
     });
@@ -44444,7 +44701,7 @@ function instance93($$self, $$props, $$invalidate) {
     return menu;
   }
   function createCellMenu(rowId, row, column) {
-    const menu = new import_obsidian45.Menu();
+    const menu = new import_obsidian46.Menu();
     if (column.editable) {
       menu.addItem((item) => {
         item.setTitle(t3("components.data-grid.cell.clear")).setIcon("x").onClick(() => {
@@ -44828,7 +45085,7 @@ var SwitchSelect_default = SwitchSelect;
 function add_css57(target) {
   append_styles(target, "svelte-15cnmpm", "div.svelte-15cnmpm{overflow:auto}");
 }
-function create_default_slot_117(ctx) {
+function create_default_slot_118(ctx) {
   let switchselect;
   let current;
   switchselect = new SwitchSelect_default({
@@ -44876,7 +45133,7 @@ function create_default_slot30(ctx) {
   let current;
   horizontalgroup = new HorizontalGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_117] },
+      $$slots: { default: [create_default_slot_118] },
       $$scope: { ctx }
     }
   });
@@ -45233,7 +45490,7 @@ var TableView2 = class extends ProjectView {
 
 // src/view.ts
 var VIEW_TYPE_PROJECTS = "obsidian-projects";
-var ProjectsView = class extends import_obsidian47.ItemView {
+var ProjectsView = class extends import_obsidian48.ItemView {
   constructor(leaf, plugin2) {
     super(leaf);
     this.plugin = plugin2;
@@ -45291,12 +45548,12 @@ var ProjectsView = class extends import_obsidian47.ItemView {
 };
 
 // src/events.ts
-var import_obsidian49 = __toModule(require("obsidian"));
+var import_obsidian50 = __toModule(require("obsidian"));
 var import_obsidian_dataview3 = __toModule(require_lib());
 function registerFileEvents(plugin2) {
   if (get_store_value(capabilities).dataview) {
     plugin2.registerEvent(plugin2.app.metadataCache.on("dataview:metadata-change", (type, file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian49.TFile) {
+      if (file instanceof import_obsidian50.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           switch (type) {
@@ -45316,7 +45573,7 @@ function registerFileEvents(plugin2) {
     })));
   } else {
     plugin2.registerEvent(plugin2.app.vault.on("create", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian49.TFile) {
+      if (file instanceof import_obsidian50.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
@@ -45324,7 +45581,7 @@ function registerFileEvents(plugin2) {
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("rename", (file, oldPath) => __async(this, null, function* () {
-      if (file instanceof import_obsidian49.TFile) {
+      if (file instanceof import_obsidian50.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(oldPath);
@@ -45333,7 +45590,7 @@ function registerFileEvents(plugin2) {
       }
     })));
     plugin2.registerEvent(plugin2.app.vault.on("delete", (file) => {
-      if (file instanceof import_obsidian49.TFile) {
+      if (file instanceof import_obsidian50.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.deleteRecord(file.path);
@@ -45341,7 +45598,7 @@ function registerFileEvents(plugin2) {
       }
     }));
     plugin2.registerEvent(plugin2.app.metadataCache.on("changed", (file) => __async(this, null, function* () {
-      if (file instanceof import_obsidian49.TFile) {
+      if (file instanceof import_obsidian50.TFile) {
         const source = get_store_value(dataSource);
         if (source == null ? void 0 : source.includes(file.path)) {
           dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
@@ -45357,13 +45614,13 @@ import_dayjs10.default.extend(import_localizedFormat.default);
 var DEFAULT_SETTINGS = {
   projects: []
 };
-var ProjectsPlugin = class extends import_obsidian50.Plugin {
+var ProjectsPlugin = class extends import_obsidian51.Plugin {
   onload() {
     return __async(this, null, function* () {
       const t3 = get_store_value(i18n).t;
       this.registerView(VIEW_TYPE_PROJECTS, (leaf) => new ProjectsView(leaf, this));
       this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
-        if (file instanceof import_obsidian50.TFolder) {
+        if (file instanceof import_obsidian51.TFolder) {
           menu.addItem((item) => {
             item.setTitle(t3("menus.project.create.title")).setIcon("folder-plus").onClick(() => __async(this, null, function* () {
               const project = createProject();
@@ -45409,7 +45666,7 @@ var ProjectsPlugin = class extends import_obsidian50.Plugin {
       this.addRibbonIcon("layout", "Open projects", () => {
         this.activateView();
       });
-      (0, import_obsidian50.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
+      (0, import_obsidian51.addIcon)("text", `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`);
       app.set(this.app);
       plugin.set(this);
       settings.set(migrateAny(yield this.loadData()));

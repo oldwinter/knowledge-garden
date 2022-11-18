@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "Make-md/makemd",
     "TfTHacker/obsidian42-strange-new-worlds"
   ],
   "pluginSubListFrozenVersion": [],

@@ -4,32 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "90ce139d098ef9c4",
+        "id": "26b123cef852192e",
         "type": "tabs",
         "children": [
           {
-            "id": "7001bc64cb8c5e69",
+            "id": "a583da2b1f880607",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-14.md",
+                "file": "AboutTheGarden.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
-          },
-          {
-            "id": "f7e4bbeaa8ed5a08",
-            "type": "leaf",
-            "state": {
-              "type": "obsidian-projects",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-14.md"
+                "file": "AboutTheGarden.md"
               }
             }
           },
@@ -118,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-14.md",
+                "file": "AboutTheGarden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-14.md",
+                "file": "AboutTheGarden.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -165,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-14.md",
+                "file": "AboutTheGarden.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.50312423706055
+    "width": 443.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -190,14 +181,6 @@
         "id": "bcb314fa61d85e57",
         "type": "tabs",
         "children": [
-          {
-            "id": "1b24f298b0fc332a",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
           {
             "id": "20661a83a7ace6bc",
             "type": "leaf",
@@ -213,64 +196,34 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "01890c5326de1878",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 234.5,
     "collapsed": true
   },
-  "floating": {
-    "id": "7d71fff512828bfd",
-    "type": "floating",
-    "children": [
-      {
-        "id": "934436bf4c3b6d86",
-        "type": "window",
-        "children": [
-          {
-            "id": "903dc893bfaecf1d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d227f91db5527192",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "HOMEPAGE.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 69,
-        "y": 314,
-        "width": 687,
-        "height": 712,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "7001bc64cb8c5e69",
+  "active": "a583da2b1f880607",
   "lastOpenFiles": [
-    "HOMEPAGE.md",
     "README.md",
-    "Cards/About Cards.md",
     "Atlas/About Atlas.md",
-    "AboutTheGarden.md",
-    "Cards/永久笔记/PARA.md",
-    "Spaces/About Spaces.md",
-    "Cards/永久笔记/LYT 笔记框架.md",
-    "Cards/永久笔记/模板与套路.md",
-    "Sources/Books/微信读书同步/历史/长安的荔枝-马伯庸.md"
+    "Note Name.md",
+    "Atlas/Dataviews/Index for 已发布文章和草稿.md",
+    "Calendar/Daily notes/2022-11-18.md",
+    "🧰 本库指南/🆕 本库更新日志.md",
+    "Calendar/Daily notes/2022-11-14.md",
+    "HOMEPAGE.md",
+    "Cards/About Cards.md",
+    "AboutTheGarden.md"
   ]
 }

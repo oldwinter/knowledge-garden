@@ -218,3 +218,7 @@ body {
 .snw-gutter-ref {
    /* margin-right: 6px; */
 }
+
+.cm-gutters {
+    z-index: 0 !important;
+}

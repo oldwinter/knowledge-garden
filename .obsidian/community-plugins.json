@@ -20,7 +20,6 @@
   "obsidian-shellcommands",
   "obsidian-sortable",
   "obsidian-style-settings",
-  "omnisearch",
   "supercharged-links-obsidian",
   "janitor",
   "new-tab-default-page",
@@ -30,7 +29,8 @@
   "cm-chs-patch",
   "keyboard-analyzer",
   "recent-files-obsidian",
-  "obsidian-query-control",
   "cmdr",
-  "chronology"
+  "chronology",
+  "omnisearch",
+  "obsidian-query-control"
 ]
