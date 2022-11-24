@@ -4,23 +4,32 @@
     "type": "split",
     "children": [
       {
-        "id": "26b123cef852192e",
+        "id": "94408dbc5f94eba2",
         "type": "tabs",
         "children": [
           {
-            "id": "a583da2b1f880607",
+            "id": "d2703af4ecccac95",
+            "type": "leaf",
+            "state": {
+              "type": "swar8080/AVAILABLE_PLUGIN_UPDATES",
+              "state": {}
+            }
+          },
+          {
+            "id": "69235f8ce24223f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "HOMEPAGE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,7 +59,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#test",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AboutTheGarden.md"
+                "file": "HOMEPAGE.md"
               }
             }
           },
@@ -109,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "HOMEPAGE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +130,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "HOMEPAGE.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "HOMEPAGE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 443.5
+    "width": 276.50312423706055
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -204,6 +213,14 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "b8ca91d2924ae721",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
@@ -213,17 +230,17 @@
     "width": 234.5,
     "collapsed": true
   },
-  "active": "a583da2b1f880607",
+  "active": "69235f8ce24223f6",
   "lastOpenFiles": [
-    "README.md",
-    "Atlas/About Atlas.md",
-    "Note Name.md",
-    "Atlas/Dataviews/Index for 已发布文章和草稿.md",
-    "Calendar/Daily notes/2022-11-18.md",
-    "🧰 本库指南/🆕 本库更新日志.md",
-    "Calendar/Daily notes/2022-11-14.md",
+    "Calendar/Daily notes/2022-11-24.md",
+    "Spaces/3-Resource/王者荣耀/王者对局鲜有人知但很有用的知识点.md",
+    "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
+    "Calendar/Daily notes/2022-11-21.md",
     "HOMEPAGE.md",
-    "Cards/About Cards.md",
-    "AboutTheGarden.md"
+    "Atlas/MOCs/∑ MOCs.md",
+    "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
+    "Calendar/已发布帖子/『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论.md",
+    "Cards/永久笔记/🧑叶峻峣.md",
+    "Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md"
   ]
 }

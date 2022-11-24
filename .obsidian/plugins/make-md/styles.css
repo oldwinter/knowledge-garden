@@ -1,4 +1,4 @@
-/* src/flow-editor/FlowEditor.module.css */
+/* src/css/FlowEditor.css */
 .mk-floweditor .workspace-leaf {
   all: unset;
 }
@@ -19,6 +19,9 @@
 .mk-floweditor .cm-content {
   padding: 0 !important;
 }
+.markdown-source-view.mod-cm6 .cm-content > .internal-embed {
+  contain: unset !important;
+}
 .mk-toggle-on {
   color: var(--interactive-accent);
 }
@@ -29,7 +32,7 @@
   padding: 0 !important;
 }
 .mk-floweditor-placeholder {
-  border: thin solid var(--color-base-20);
+  border: thin solid var(--divider-color);
 }
 .mk-floweditor .mk-floweditor-title-container {
   display: flex;
@@ -70,7 +73,7 @@
 .mk-flow-seamless .mk-floweditor-container:not(.mk-floweditor-fix) > .mk-floweditor {
   padding: 8px;
   border-radius: 4px;
-  border: thin solid var(--color-base-20);
+  border: thin solid var(--divider-color);
 }
 .mk-flow-seamless .markdown-embed-title {
   display: none;
@@ -182,7 +185,7 @@
   background: var(--background-secondary-alt);
 }
 
-/* src/components/FlowView/FlowComponent.module.css */
+/* src/css/FlowComponent.css */
 .mk-folder-scroller {
   display: flex !important;
   align-items: flex-start !important;
@@ -267,17 +270,21 @@
   padding: 0;
   margin-left: 8px;
 }
+.mk-flowspace-title .mk-flowspace-date {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
 .mk-flowspace-title {
   display: flex;
   align-items: center;
   padding: 8px 12px;
-  border-top: 1px solid var(--color-base-20);
+  border-top: 1px solid var(--divider-color);
 }
 .mk-flowspace-editor {
   padding: 0px 12px;
 }
 .mk-flowspace-editor .mk-floweditor {
-  border-top: 1px solid var(--color-base-10);
+  border-top: 1px solid var(--divider-color);
   padding: 12px 0px;
 }
 .mk-flowspace-container {
@@ -288,6 +295,7 @@
 .mk-flowspace-title button {
   padding: 8px;
   margin-left: 8px;
+  width: unset;
 }
 .mk-flowspace-title button.mk-open {
   background: var(--icon-color-active);
@@ -305,7 +313,7 @@
   font-style: italic;
 }
 
-/* src/components/Sidebar/TreeView/FolderTreeView.module.css */
+/* src/css/FolderTreeView.css */
 .mk-tree-wrapper {
   box-sizing: border-box;
   margin-bottom: 1px;
@@ -313,6 +321,10 @@
   align-items: center;
   padding-right: 12px;
   position: relative;
+}
+.is-mobile .mk-tree-wrapper {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .mk-tree-wrapper > div {
   display: flex;
@@ -381,27 +393,42 @@
   width: 24px;
   padding: 0;
 }
-.mk-tree-wrapper button:hover {
+.is-mobile .mk-tree-wrapper .mk-folder-buttons button {
+  margin-left: 8px;
+}
+body:not(.is-mobile) .mk-tree-wrapper button:hover {
   background: var(--nav-item-background-hover);
 }
 .mk-file-icon {
   width: 24px;
   height: 24px;
 }
-.mk-tree-wrapper .mk-folder-buttons {
+.is-mobile .mk-file-icon {
+  width: unset;
+}
+body:not(.is-mobile) .mk-tree-wrapper .mk-folder-buttons {
   display: none;
 }
-.mk-tree-wrapper:hover .mk-folder-buttons {
+body:not(.is-mobile) .mk-tree-wrapper:hover .mk-folder-buttons {
   display: flex;
-  margin-right: 4px;
 }
 .mk-tree-wrapper svg {
   width: 16px;
   height: 16px;
   color: var(--text-muted);
 }
+.is-mobile .mk-tree-wrapper svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-faint);
+}
+.is-mobile .mk-tree-wrapper .mk-file-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-faint);
+}
 .mk-tree-text {
-  padding: 0.15rem 0.5rem;
+  padding: 0.15rem 4px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -433,7 +460,7 @@
   color: var(--nav-item-color-active);
   background: var(--nav-item-background-active);
 }
-.mk-tree-wrapper:not(.mk-section-wrapper):not(.mk-disable-interaction):hover {
+body:not(.is-mobile) .mk-tree-wrapper:not(.mk-section-wrapper):not(.mk-disable-interaction):hover {
   background: var(--nav-item-background-hover);
 }
 .mk-icon-menu {
@@ -452,18 +479,18 @@
   color: var(--text-faint);
 }
 
-/* src/components/Sidebar/TreeView/SectionView.module.css */
+/* src/css/SectionView.css */
 .mk-section {
   display: flex;
-  padding: 2px 0px;
-  margin-top: 1px;
+  padding: 4px 0px;
   padding-left: 12px;
+  margin-top: 12px;
   color: var(--text-muted);
   font-size: var(--font-ui-smaller);
   width: 100%;
   justify-content: space-between;
 }
-.mk-section .mk-section-title:hover {
+body:not(.is-mobile) .mk-section .mk-section-title:hover {
   background: var(--nav-item-background-hover);
 }
 .mk-section .mk-section-title {
@@ -476,13 +503,13 @@
 .mk-section .mk-tree-text {
   padding: 0.25rem 0rem 0.3rem 0.25rem;
 }
-.mk-section .mk-collapse {
+body:not(.is-mobile) .mk-section .mk-collapse {
   display: none;
 }
-.mk-sction .mk-collapse.mk-collapsed {
-  display: block;
+.mk-section .mk-collapse {
+  display: flex;
 }
-.mk-section:hover .mk-collapse {
+body:not(.is-mobile) .mk-section:hover .mk-collapse {
   display: flex;
 }
 .mk-section .mk-collapse svg {
@@ -491,9 +518,12 @@
   height: 10px;
 }
 
-/* src/components/Sidebar/NewNote.module.css */
+/* src/css/NewNote.css */
 .mk-flow-bar {
   display: flex;
+}
+.is-mobile .mk-flow-bar {
+  border-top: thin solid var(--divider-color);
 }
 .mk-new-note {
   flex-grow: 1;
@@ -502,6 +532,9 @@
   margin: 4px 12px;
   display: flex;
   align-items: center;
+}
+.is-mobile .mk-new-note {
+  margin: 8px 12px;
 }
 .mk-new-note p {
   margin: 0;
@@ -523,36 +556,73 @@
   height: 16px;
 }
 
-/* src/components/Sidebar/FileTree.module.css */
-.mk-hide-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+/* src/css/FileTree.css */
+.mk-hide-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window):not(.is-mobile) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
 }
-.mk-hide-ribbon .workspace-ribbon.mod-left {
+.mk-hide-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
   display: none;
 }
-.mk-hide-ribbon .workspace-ribbon.mod-right {
+.mk-hide-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
   visibility: hidden;
   position: absolute;
 }
-.mk-hide-ribbon .workspace-split.mod-right-split {
+.mk-hide-ribbon:not(.is-mobile) .workspace-split.mod-right-split {
   margin-right: 0;
 }
 .mk-hide-tabs .mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
   visibility: hidden;
+}
+.mk-hide-ribbon.is-mobile .workspace-drawer.mod-left .workspace-drawer-inner {
+  padding-left: 0 !important;
+}
+.is-mobile .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-header {
+  padding-left: 0 !important;
+}
+.mk-hide-ribbon.is-mobile .workspace-drawer.mod-left .workspace-drawer-ribbon {
+  display: none;
+}
+.is-mobile .workspace-drawer.mod-left .workspace-drawer-active-tab-header {
+  display: none;
+}
+.is-mobile .workspace-drawer.mod-left .workspace-drawer-header-left {
+}
+.is-mobile .mk-sidebar button:not(.clickable-icon) {
+  padding: unset;
+}
+.is-mobile .mk-sidebar .mk-file-icon button {
+  font-size: 16px;
+}
+body.is-mobile .sidebar-toggle-button {
+  display: flex !important;
+}
+.is-mobile .workspace-drawer.mod-left .workspace-drawer-header-icon {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  z-index: 100;
+}
+.is-phone .workspace-drawer.mod-left .workspace-drawer-header-icon {
+  top: 20px;
+}
+.is-mobile .workspace-drawer.mod-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .mk-sidebar {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+.is-mobile .mk-sidebar {
+  flex-direction: column-reverse;
+}
 .mk-file-tree {
   flex: 1;
-  overflow-y: auto;
-  overscroll-behavior-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
-/* src/components/Sidebar/MainMenu.module.css */
+/* src/css/MainMenu.css */
 .mk-main-menu-container {
   display: flex;
   padding: 12px 8px;
@@ -563,13 +633,20 @@
   border-radius: 4px;
   align-items: center;
   display: flex;
-  width: 100%;
+  width: calc(100% - 50px);
+}
+.is-mobile .mk-main-menu-button {
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-medium);
+}
+.mk-main-menu-button > div {
+  display: flex;
 }
 .mk-main-menu-button svg {
   height: 16px;
   width: 16px;
 }
-.mk-main-menu-button:hover {
+body:not(.is-mobile) .mk-main-menu-button:hover {
   background: var(--nav-item-background-hover);
 }
 .mk-main-menu {
@@ -600,7 +677,7 @@
   background: var(--nav-item-background-hover);
 }
 
-/* src/components/Editor/MakeMenu/MakeMenu.module.css */
+/* src/css/MakeMenu.css */
 .mk-slash-item {
   display: flex;
   align-items: center;
@@ -619,7 +696,7 @@
   position: absolute;
 }
 
-/* src/components/Editor/StickerMenu/StickerMenu.module.css */
+/* src/css/StickerMenu.css */
 .mk-sticker-menu .suggestion {
   width: 240px;
   height: 240px;
@@ -627,6 +704,10 @@
   flex-wrap: wrap;
   align-content: flex-start;
   flex-direction: row;
+}
+.mk-sticker-modal {
+  display: flex;
+  flex-wrap: wrap;
 }
 .mk-sticker-menu .suggestion-item {
   width: 30px;
@@ -650,26 +731,24 @@
 }
 
 /* src/css/makerMode.css */
-.mk-maker-mode .cm-s-obsidian span.cm-hmd-escape-backslash,
-.mk-maker-mode .cm-s-obsidian .HyperMD-header:not(.mk-reset) span.cm-formatting-header {
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
+  margin-bottom: 4px;
+}
+.mk-mark-sans .cm-s-obsidian span.cm-hmd-escape-backslash,
+.mk-mark-sans .cm-s-obsidian .HyperMD-header:not(.mk-reset) span.cm-formatting-header {
   display: inline;
   position: absolute;
   right: 100%;
   white-space: nowrap;
   color: transparent;
 }
-.mk-maker-mode .markdown-source-view.mod-cm6 .cm-formatting-list-ul {
-}
-.mk-maker-mode .markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox {
-  margin-bottom: 4px;
-}
-.mk-maker-mode .cm-s-obsidian .HyperMD-header.mk-reset span.cm-formatting-header {
+.mk-mark-sans .cm-s-obsidian .HyperMD-header.mk-reset span.cm-formatting-header {
   color: unset;
 }
-.mk-maker-mode .mk-reset .cm-fold-indicator {
+.mk-mark-sans .mk-reset .cm-fold-indicator {
   display: none !important;
 }
-.mk-maker-mode div[class*=HyperMD-header-].mk-reset {
+.mk-mark-sans div[class*=HyperMD-header-].mk-reset {
   font-variant: unset;
   letter-spacing: unset;
   line-height: unset;
@@ -679,22 +758,29 @@
   font-style: unset;
   font-family: unset;
 }
-.mk-maker-mode .HyperMD-quote-lazy:before {
+.mk-mark-sans .HyperMD-quote-lazy:before {
   content: none !important;
 }
-.mk-maker-mode .cm-s-obsidian span.cm-formatting-quote:not(.cm-hmd-callout) {
+.mk-mark-sans .cm-s-obsidian span.cm-formatting-quote:not(.cm-hmd-callout) {
   color: transparent;
 }
-.mk-maker-mode .cm-s-obsidian span.cm-hmd-escape-backslash::selection,
-.mk-maker-mode .cm-s-obsidian span.cm-formatting-header::selection {
+.mk-mark-sans .cm-s-obsidian span.cm-hmd-escape-backslash::selection,
+.mk-mark-sans .cm-s-obsidian span.cm-formatting-header::selection {
   background: transparent;
 }
 .mk-flow-replace .mk-new-file {
   background: var(--color-base-10);
   border-bottom: thin solid #333;
 }
-.mk-maker-mode .markdown-source-view.mod-cm6 .HyperMD-quote:not(.HyperMD-callout):before,
-.mk-maker-mode .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+.mk-flow-replace .mk-new-file:hover {
+  background: var(--color-base-10);
+  border-bottom: thin solid #333;
+}
+.mobile-toolbar-options-container {
+  border-top: var(--divider-width) solid var(--divider-color);
+}
+.mk-mark-sans .markdown-source-view.mod-cm6 .HyperMD-quote:not(.HyperMD-callout):before,
+.mk-mark-sans .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
   left: 0;
   content: "\200b";
   display: block;
@@ -706,12 +792,28 @@
   bottom: 0;
 }
 
-/* src/cm-extensions/inlineStylerView/InlineMenu.module.css */
+/* src/css/InlineMenu.css */
+body:not(.is-mobile) .mk-style-menu {
+  margin-left: -80px;
+}
 .mk-style-menu {
   display: flex;
   padding: 0;
   margin-top: -44px;
-  margin-left: -80px;
+}
+.is-mobile .mk-style-menu svg {
+  width: 32px;
+  height: 32px;
+}
+.is-mobile .mk-style-menu {
+  --mobile-toolbar-height: 48px;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 0;
+  overflow-x: auto;
+  justify-content: center;
+  height: var(--mobile-toolbar-height);
+  border-top: var(--divider-width) solid var(--divider-color);
 }
 .mk-style-menu .mk-mark {
   margin: 4px;

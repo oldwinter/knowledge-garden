@@ -1,0 +1,146 @@
+/* @settings
+name: Scroll to Top Plugin
+id: obsidian-scroll-to-top-plugin
+settings:
+    - 
+        id: scroll-to-top-bottom
+        title: Scroll to top bottom position placement
+        type: variable-number
+        default: 2.65
+        format: em
+    - 
+        id: scroll-to-top-left
+        title: Scroll to top right position placement
+        type: variable-number
+        default: 2.05
+        format: em
+    - 
+        id: scroll-to-bottom-bottom
+        title: Scroll to bottom bottom position placement
+        type: variable-number
+        default: 5.75
+        format: em
+    -
+        id: scroll-to-bottom-left
+        title: Scroll to bottom right position placement
+        type: variable-number
+        default: 2.05
+        format: em 
+	-
+        id: scroll-to-top-width
+        title: Scroll to top button width
+        type: variable-number
+        default: 1.875
+        format: em
+	-
+        id: scroll-to-top-height
+        title: Scroll to top button height
+        type: variable-number
+        default: 1.875
+        format: em
+	-
+		id: scroll-to-bottom-width
+		title: Scroll to bottom button width
+		type: variable-number
+		default: 1.875
+		format: em
+	-
+		id: scroll-to-bottom-height
+		title: Scroll to bottom button height
+		type: variable-number
+		default: 1.875
+		format: em
+*/
+
+/* 	In case not using the style settings plugin */
+:root {
+	--scroll-to-bottom-bottom: 2.65em;
+	--scroll-to-bottom-left: 2.05em;
+	--scroll-to-top-bottom: 5.75em;
+	--scroll-to-top-left: 2.05em;
+	--scroll-input-width: 1.875em;
+	--scroll-to-top-width: var(--scroll-input-width);
+	--scroll-to-top-height: var(--scroll-input-width);
+	--scroll-to-bottom-width: var(--scroll-input-width);
+	--scroll-to-bottom-height: var(--scroll-input-width);
+}
+
+.div-scrollToTop {
+	position: absolute;
+	bottom: var(--scroll-to-top-bottom);
+	right: var(--scroll-to-top-left);
+	z-index: 99;
+}
+
+.div-scrollToBottom {
+	position: absolute;
+	bottom: var(--scroll-to-bottom-bottom);
+	right: var(--scroll-to-bottom-left);
+	z-index: 99;
+}
+
+#__C_scrollToTop {
+	width: auto;
+	height: auto;
+	padding: 3px;
+	display: grid;
+	user-select: none;
+	border-radius: 6px;
+	transition: 200ms ease;
+	min-width: fit-content;
+	justify-content: space-around;
+	z-index: var(--layer-status-bar);
+	box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+	border: 1px solid var(--background-modifier-border);
+}
+#__C_scrollToTop .buttonItem {
+	margin: 2px;
+	border: none;
+	cursor: pointer;
+	padding: 5px 6px;
+	box-shadow: none;
+	margin-left: 3px;
+	margin-right: 3px;
+	border-radius: 3px;
+	width: var(--scroll-to-top-width);
+	height: var(--scroll-to-top-height);
+	font-size: initial !important;
+	background-color: var(--background-primary-alt);
+}
+
+#__C_scrollToTop button.buttonItem:hover {
+	background-color: var(--background-secondary);
+}
+
+#__C_scrollToBottom {
+	width: auto;
+	height: auto;
+	padding: 3px;
+	display: grid;
+	user-select: none;
+	border-radius: 6px;
+	transition: 200ms ease;
+	min-width: fit-content;
+	justify-content: space-around;
+	z-index: var(--layer-status-bar);
+	box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+	border: 1px solid var(--background-modifier-border);
+}
+#__C_scrollToBottom .buttonItem {
+	margin: 2px;
+	border: none;
+	cursor: pointer;
+	padding: 5px 6px;
+	box-shadow: none;
+	margin-left: 3px;
+	margin-right: 3px;
+	width: var(--scroll-to-bottom-width);
+	height: var(--scroll-to-bottom-height);
+	border-radius: 3px;
+	font-size: initial !important;
+	background-color: var(--background-primary-alt);
+}
+
+#__C_scrollToBottom button.buttonItem:hover {
+	background-color: var(--background-secondary);
+}

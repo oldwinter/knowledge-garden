@@ -268,7 +268,7 @@ textarea.excalidraw-wysiwyg {
 }
 
 .excalidraw .ToolIcon__keybinding {
-  font-size: 0.5rem;
+  font-size: 0.45rem !important;
 }
 
 .Island > .Stack > .Stack {
@@ -284,4 +284,8 @@ label.color-input-container > input {
   top: 10px !important;
   right: 10px !important;
   bottom: 10px !important;
+}
+
+.excalidraw-hidden {
+  display: none !important;
 }

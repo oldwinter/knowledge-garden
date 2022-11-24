@@ -144,9 +144,16 @@ var import_obsidian9 = require("obsidian");
 var import_obsidian3 = require("obsidian");
 
 // src/utils/collection-helper.ts
+var mapValues = (obj, to) => Object.fromEntries(
+  Object.entries(obj).map(([key, value]) => [key, to(value)])
+);
 var sorter = (toOrdered, order = "asc") => {
   return (a, b) => order === "asc" ? toOrdered(a) > toOrdered(b) ? 1 : toOrdered(b) > toOrdered(a) ? -1 : 0 : toOrdered(a) < toOrdered(b) ? 1 : toOrdered(b) < toOrdered(a) ? -1 : 0;
 };
+var groupBy = (values, toKey) => values.reduce(
+  (prev, cur, _1, _2, k = toKey(cur)) => ((prev[k] || (prev[k] = [])).push(cur), prev),
+  {}
+);
 var keyBy = (values, toKey) => values.reduce(
   (prev, cur, _1, _2, k = toKey(cur)) => (prev[k] = cur, prev),
   {}
@@ -338,6 +345,19 @@ var AppHelper = class {
     }
     return backLinksMap;
   }
+  createActiveFileLinkMap() {
+    var _a, _b;
+    return mapValues(
+      groupBy(
+        (_b = (_a = this.unsafeApp.metadataCache.getFileCache(this.getActiveFile())) == null ? void 0 : _a.links) != null ? _b : [],
+        (x) => {
+          var _a2;
+          return (_a2 = this.linkText2Path(x.link)) != null ? _a2 : this.getPathToBeCreated(x.link);
+        }
+      ),
+      (caches) => caches[0]
+    );
+  }
   async moveTo(to, editor) {
     var _a;
     const isToOffset = typeof to === "number";
@@ -514,6 +534,17 @@ var AppHelper = class {
       default:
         return `/${linkPath}`;
     }
+  }
+  linkText2Path(linkText) {
+    var _a, _b;
+    const activeFile = this.getActiveFile();
+    if (!activeFile) {
+      return null;
+    }
+    return (_b = (_a = this.unsafeApp.metadataCache.getFirstLinkpathDest(
+      linkText,
+      activeFile.path
+    )) == null ? void 0 : _a.path) != null ? _b : null;
   }
   createPhantomFile(linkText) {
     const linkPath = this.getPathToBeCreated(linkText);
@@ -1502,16 +1533,28 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
   prefilterItems(command) {
     const filterItems = (includePatterns, excludePatterns) => {
       let items = this.originItems;
-      if (command.searchTarget === "backlink") {
-        const backlinksMap = this.appHelper.createBacklinksMap();
-        items = items.filter(
-          (x) => {
-            var _a, _b, _c;
-            return (_c = backlinksMap[(_b = (_a = this.appHelper.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : ""]) == null ? void 0 : _c.has(
-              x.file.path
-            );
-          }
-        );
+      switch (command.searchTarget) {
+        case "markdown":
+          break;
+        case "backlink":
+          const backlinksMap = this.appHelper.createBacklinksMap();
+          items = items.filter(
+            (x) => {
+              var _a, _b, _c;
+              return (_c = backlinksMap[(_b = (_a = this.appHelper.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : ""]) == null ? void 0 : _c.has(
+                x.file.path
+              );
+            }
+          );
+          break;
+        case "link":
+          const activeFileLinkMap = this.appHelper.createActiveFileLinkMap();
+          items = items.filter((x) => activeFileLinkMap[x.file.path]).sort(
+            sorter(
+              (x) => activeFileLinkMap[x.file.path].position.start.offset
+            )
+          );
+          break;
       }
       if (includePatterns.length > 0) {
         items = includeItems(items, includePatterns, (x) => x.file.path);
@@ -2658,7 +2701,7 @@ function createCommands(app2, settings) {
 
 // src/settings.ts
 var import_obsidian8 = require("obsidian");
-var searchTargetList = ["markdown", "backlink"];
+var searchTargetList = ["markdown", "backlink", "link"];
 var createDefaultHotkeys = () => ({
   main: {
     up: [{ modifiers: ["Mod"], key: "p" }],

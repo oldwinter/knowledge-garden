@@ -399,6 +399,37 @@ var import_obsidian6 = require("obsidian");
 // src/ui/AutoCompleteSuggest.ts
 var import_obsidian3 = require("obsidian");
 
+// src/util/collection-helper.ts
+var groupBy = (values, toKey) => values.reduce(
+  (prev, cur, _1, _2, k = toKey(cur)) => ((prev[k] || (prev[k] = [])).push(cur), prev),
+  {}
+);
+function uniq(values) {
+  return [...new Set(values)];
+}
+function uniqBy(values, fn) {
+  const m = /* @__PURE__ */ new Map();
+  values.forEach((x) => {
+    const k = fn(x);
+    if (!m.has(k)) {
+      m.set(k, x);
+    }
+  });
+  return Array.from(m.values());
+}
+function uniqWith(arr, fn) {
+  return arr.filter(
+    (element2, index) => arr.findIndex((step) => fn(element2, step)) === index
+  );
+}
+function mirrorMap(collection, toValue) {
+  return collection.reduce((p, c) => ({ ...p, [toValue(c)]: toValue(c) }), {});
+}
+function max(collection, emptyValue) {
+  const select = (a, b) => a >= b ? a : b;
+  return collection.reduce(select, emptyValue);
+}
+
 // src/util/strings.ts
 var regEmoji = new RegExp(
   /[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF]|[\uFE0E-\uFE0F]/,
@@ -437,6 +468,18 @@ function* splitRaw(text2, regexp) {
   if (previousIndex !== text2.length) {
     yield text2.slice(previousIndex, text2.length);
   }
+}
+function findCommonPrefix(strs) {
+  if (strs.length === 0) {
+    return null;
+  }
+  const min = Math.min(...strs.map((x) => x.length));
+  for (let i = 0; i < min; i++) {
+    if (uniq(strs.map((x) => x[i].toLowerCase())).length > 1) {
+      return strs[0].substring(0, i);
+    }
+  }
+  return strs[0].substring(0, min);
 }
 
 // src/tokenizer/tokenizers/DefaultTokenizer.ts
@@ -2318,37 +2361,6 @@ var AppHelper = class {
 // src/provider/CustomDictionaryWordProvider.ts
 var import_obsidian2 = require("obsidian");
 
-// src/util/collection-helper.ts
-var groupBy = (values, toKey) => values.reduce(
-  (prev, cur, _1, _2, k = toKey(cur)) => ((prev[k] || (prev[k] = [])).push(cur), prev),
-  {}
-);
-function uniq(values) {
-  return [...new Set(values)];
-}
-function uniqBy(values, fn) {
-  const m = /* @__PURE__ */ new Map();
-  values.forEach((x) => {
-    const k = fn(x);
-    if (!m.has(k)) {
-      m.set(k, x);
-    }
-  });
-  return Array.from(m.values());
-}
-function uniqWith(arr, fn) {
-  return arr.filter(
-    (element2, index) => arr.findIndex((step) => fn(element2, step)) === index
-  );
-}
-function mirrorMap(collection, toValue) {
-  return collection.reduce((p, c) => ({ ...p, [toValue(c)]: toValue(c) }), {});
-}
-function max(collection, emptyValue) {
-  const select = (a, b) => a >= b ? a : b;
-  return collection.reduce(select, emptyValue);
-}
-
 // src/model/Word.ts
 var _WordTypeMeta = class {
   constructor(type, priority, group) {
@@ -3740,6 +3752,47 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
         )
       );
     }
+    if (this.settings.useCommonPrefixCompletionOfSuggestion) {
+      this.scope.unregister(
+        this.scope.keys.find((x) => x.modifiers === "" && x.key === "Tab")
+      );
+      this.keymapEventHandler.push(
+        this.scope.register([], "Tab", () => {
+          if (!this.context) {
+            return;
+          }
+          const editor = this.context.editor;
+          const currentPhrase = editor.getRange(
+            {
+              ...this.context.start,
+              ch: this.contextStartCh
+            },
+            this.context.end
+          );
+          const tokens = this.tokenizer.recursiveTokenize(currentPhrase);
+          const commonPrefixWithToken = tokens.map((t) => ({
+            token: t,
+            commonPrefix: findCommonPrefix(
+              this.suggestions.values.map((x) => excludeEmoji(x.value)).filter(
+                (x) => x.toLowerCase().startsWith(t.word.toLowerCase())
+              )
+            )
+          })).find((x) => x.commonPrefix != null);
+          if (!commonPrefixWithToken || currentPhrase === commonPrefixWithToken.commonPrefix) {
+            return false;
+          }
+          editor.replaceRange(
+            commonPrefixWithToken.commonPrefix,
+            {
+              ...this.context.start,
+              ch: this.contextStartCh + commonPrefixWithToken.token.offset
+            },
+            this.context.end
+          );
+          return true;
+        })
+      );
+    }
   }
   async refreshCurrentFileTokens() {
     const start = performance.now();
@@ -4137,6 +4190,7 @@ var DEFAULT_SETTINGS = {
   disableSuggestionsDuringImeOn: false,
   insertAfterCompletion: true,
   firstCharactersDisableSuggestions: ":/^",
+  useCommonPrefixCompletionOfSuggestion: false,
   showMatchStrategy: true,
   showComplementAutomatically: true,
   showIndexingStatus: true,
@@ -4294,6 +4348,14 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         this.plugin.settings.firstCharactersDisableSuggestions
       ).onChange(async (value) => {
         this.plugin.settings.firstCharactersDisableSuggestions = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian4.Setting(containerEl).setName("(Experimental) Use common prefix completion of suggestion").setDesc("Hotkey is <TAB>").addToggle((tc) => {
+      tc.setValue(
+        this.plugin.settings.useCommonPrefixCompletionOfSuggestion
+      ).onChange(async (value) => {
+        this.plugin.settings.useCommonPrefixCompletionOfSuggestion = value;
         await this.plugin.saveSettings();
       });
     });

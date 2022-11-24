@@ -1,13 +1,16 @@
 {
   "filePreviewOnHover": false,
-  "makerMode": true,
+  "markSans": true,
+  "makeMenuPlaceholder": true,
+  "mobileMakeBar": true,
   "inlineStyler": true,
+  "inlineStylerColors": false,
   "editorFlow": true,
-  "editorFlowStyle": "classic",
-  "sidebar": false,
-  "sidebarPerformance": false,
-  "sidebarStickers": false,
-  "sidebarRibbon": false,
+  "editorFlowStyle": "seamless",
+  "spacesEnabled": false,
+  "spacesPerformance": false,
+  "spacesStickers": false,
+  "sidebarRibbon": true,
   "sidebarTabs": true,
   "deleteFileOption": "trash",
   "folderRank": {
@@ -9299,11 +9302,6 @@
           }
         ],
         "isFolder": true
-      },
-      {
-        "node": "Note Name.md",
-        "children": [],
-        "isFolder": false
       }
     ],
     "isFolder": true
@@ -9321,5 +9319,9 @@
   ],
   "vaultCollapsed": false,
   "menuTriggerChar": "/",
-  "emojiTriggerChar": ":"
+  "emojiTriggerChar": ":",
+  "makerMode": true,
+  "sidebar": false,
+  "sidebarPerformance": false,
+  "sidebarStickers": false
 }
