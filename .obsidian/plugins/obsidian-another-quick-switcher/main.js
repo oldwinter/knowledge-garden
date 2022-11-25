@@ -1637,7 +1637,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
     return items.slice(0, this.settings.maxNumberOfSuggestions).map((x, order) => ({ ...x, order }));
   }
   renderInputComponent() {
-    var _a, _b, _c, _d;
+    var _a, _b, _c;
     (_a = this.searchCommandEl) == null ? void 0 : _a.remove();
     (_b = this.defaultInputEl) == null ? void 0 : _b.remove();
     (_c = this.countInputEl) == null ? void 0 : _c.remove();
@@ -1655,7 +1655,10 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
     if (this.command.searchBy.link) {
       this.searchCommandEl.insertAdjacentHTML("beforeend", LINK);
     }
-    (_d = this.inputEl.parentElement) == null ? void 0 : _d.setAttr("style", "display: initial");
+    const promptInputContainer = this.modalEl.find(".prompt-input-container");
+    if (promptInputContainer) {
+      promptInputContainer.setAttr("style", "display: initial");
+    }
     this.inputEl.before(this.searchCommandEl);
     if (this.command.defaultInput) {
       this.defaultInputEl = createDiv({

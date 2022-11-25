@@ -156,10 +156,6 @@
     "Space after list markers": {
       "There should be a single space after list markers and checkboxes.": true
     },
-    "Space between Chinese and English or numbers": {
-      "Ensures that Chinese and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false,
-      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
-    },
     "Trailing spaces": {
       "Removes extra spaces after every line.": true,
       "Two Space Linebreak": true
@@ -204,6 +200,9 @@
     },
     "Remove Multiple Blank Lines on Paste": {
       "Condenses multiple blank lines down into one blank line for the text to paste": false
+    },
+    "Space between Chinese Japanese or Korean and English or numbers": {
+      "Ensures that Chinese, Japanese, or Korean and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
     }
   },
   "lintOnSave": true,
@@ -214,6 +213,7 @@
   "linterLocale": "zh-cn",
   "logLevel": 4,
   "lintCommands": [],
+  "customRegexes": [],
   "commonStyles": {
     "aliasArrayStyle": "multi-line",
     "tagArrayStyle": "single-line",
