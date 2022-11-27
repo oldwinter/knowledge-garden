@@ -6852,7 +6852,11 @@ var T4 = class {
         },
         commandPalette: {
           enable: "Enable",
-          disabled: "Disable"
+          disabled: "Disable",
+          openFlow: "Open Flow Editors in Selection",
+          closeFlow: "Close Flow Editors in Selection",
+          toggleBold: "Toggle Bold",
+          toggleItalics: "Toggle Italics"
         },
         menu: {
           openFilePane: "Open in a new pane",
@@ -6877,13 +6881,14 @@ var T4 = class {
           moreOptions: "More Options",
           newNote: "New Note",
           changeIcon: "Change Sticker",
+          removeIcon: "Remove Sticker",
           rename: "Change Name",
           createFolder: "New Folder",
           createNote: "New Note",
           createSection: "New Space",
           cancel: "Cancel",
           search: "Search",
-          toggleFlow: "Hide Flow",
+          toggleFlow: "Toggle Flow",
           openFlow: "Open Flow",
           hideFlow: "Hide Flow",
           openLink: "Open Link"
@@ -6913,6 +6918,7 @@ var T4 = class {
           sectionSidebar: "Spaces",
           sectionEditor: "Maker Mode",
           sectionFlow: "Flow Editor",
+          sectionAdvanced: "Advanced",
           spaces: {
             name: "Spaces",
             desc: `Spaces gives you control over how you organize your files`
@@ -6920,6 +6926,10 @@ var T4 = class {
           spacesStickers: {
             name: "Stickers",
             desc: `Use Emojis to make it easier to find your notes`
+          },
+          spacesFileExplorerDual: {
+            name: "Use Spaces Alongside File Explorer",
+            desc: "This will allow plugins that uses the File Explorer to work while using Spaces"
           },
           spacesDeleteOption: {
             name: "Delete File Option",
@@ -8611,7 +8621,7 @@ var hideLine = import_state4.StateField.define({
     let builder = new import_state4.RangeSetBuilder();
     if (((_a2 = tr.state.field(selectiveLinesFacet)) == null ? void 0 : _a2[0]) != void 0) {
       builder.add(tr.state.doc.line(1).from, tr.state.doc.line(tr.state.field(selectiveLinesFacet)[0]).from, hiddenLine);
-      builder.add(tr.state.doc.line(tr.state.field(selectiveLinesFacet)[1]).to, tr.state.doc.line(tr.newDoc.lines).to, hiddenLine);
+      builder.add(tr.state.doc.line(Math.min(tr.newDoc.lines, tr.state.field(selectiveLinesFacet)[1])).to, tr.state.doc.line(tr.newDoc.lines).to, hiddenLine);
     }
     const dec = builder.finish();
     return dec;
@@ -8633,7 +8643,7 @@ var selectiveLinesFacet = import_state4.StateField.define({
 var lineRangeToPosRange = (state, range) => {
   return {
     from: state.doc.line(range[0]).from,
-    to: state.doc.line(range[1] + 1).from
+    to: state.doc.line(Math.min(state.doc.lines, range[1])).to
   };
 };
 var smartDelete = import_state4.EditorState.transactionFilter.of((tr) => {
@@ -8645,10 +8655,12 @@ var smartDelete = import_state4.EditorState.transactionFilter.of((tr) => {
     }));
     if (initialSelections.length > 0 && ((_a2 = tr.startState.field(selectiveLinesFacet)) == null ? void 0 : _a2[0])) {
       const posRange = lineRangeToPosRange(tr.startState, tr.startState.field(selectiveLinesFacet));
+      const minFrom = Math.max(posRange.from, initialSelections[0].from);
+      const minTo = Math.min(posRange.to, initialSelections[0].to);
       tr.startState.update({
         changes: {
-          from: Math.max(posRange.from, initialSelections[0].from),
-          to: Math.min(posRange.to, initialSelections[0].to)
+          from: Math.min(minFrom, minTo),
+          to: Math.max(minFrom, minTo)
         },
         annotations: import_state4.Transaction.userEvent.of(`${tr.annotation(import_state4.Transaction.userEvent)}.smart`)
       });
@@ -8758,10 +8770,11 @@ var getLineRangeFromRef = (file, ref, app2) => {
     const index = headings.findIndex((f4) => f4.heading == heading.heading);
     const level = (_a2 = headings[index]) == null ? void 0 : _a2.level;
     const nextIndex2 = headings.findIndex((f4, i3) => i3 > index && f4.level <= level);
+    const start2 = window.make.settings.editorFlowStyle == "classic" ? heading.position.start.line + 1 : heading.position.start.line + 2;
     if (index < headings.length - 1 && nextIndex2 != -1) {
-      return [heading.position.start.line + 2, headings[nextIndex2].position.end.line];
+      return [start2, headings[nextIndex2].position.end.line];
     }
-    return [heading.position.start.line + 2, sections2[sections2.length - 1].position.end.line + 1];
+    return [start2, sections2[sections2.length - 1].position.end.line + 1];
   }
   return [void 0, void 0];
 };
@@ -15396,6 +15409,7 @@ var TreeItem = k3(({
     plugin.saveSettings();
   };
   const triggerStickerMenu = (e3) => {
+    e3.stopPropagation();
     let vaultChangeModal = new StickerModal(plugin.app, (emoji) => saveFileIcon(emoji));
     vaultChangeModal.open();
   };
@@ -15449,6 +15463,24 @@ var TreeItem = k3(({
         });
       });
     });
+    if (plugin.settings.spacesStickers) {
+      fileMenu.addSeparator();
+      fileMenu.addItem((menuItem) => {
+        menuItem.setTitle(i18n_default.buttons.changeIcon);
+        menuItem.setIcon("lucide-sticker");
+        menuItem.onClick((ev) => {
+          let vaultChangeModal = new StickerModal(plugin.app, (emoji) => saveFileIcon(emoji));
+          vaultChangeModal.open();
+        });
+      });
+      fileMenu.addItem((menuItem) => {
+        menuItem.setTitle(i18n_default.buttons.removeIcon);
+        menuItem.setIcon("lucide-file-minus");
+        menuItem.onClick((ev) => {
+          removeFileIcon();
+        });
+      });
+    }
     fileMenu.addSeparator();
     fileMenu.addItem((menuItem) => {
       menuItem.setTitle(i18n_default.menu.rename);
@@ -15511,6 +15543,11 @@ var TreeItem = k3(({
   const fileIcon = fileIcons2.find(([path, icon]) => path == data.path);
   const saveFileIcon = (icon) => {
     const newFileIcons = [...fileIcons2.filter((f4) => f4[0] != data.path), [data.path, icon]];
+    plugin.settings.fileIcons = newFileIcons;
+    plugin.saveSettings();
+  };
+  const removeFileIcon = () => {
+    const newFileIcons = [...fileIcons2.filter((f4) => f4[0] != data.path)];
     plugin.settings.fileIcons = newFileIcons;
     plugin.saveSettings();
   };
@@ -16588,6 +16625,7 @@ var FileExplorerComponent = (props) => {
   const [activeFile2, setActiveFile] = Recoil_index_14(activeFile);
   const [sections2, setSections] = Recoil_index_14(sections);
   const [_folderTree, setFolderTree] = Recoil_index_14(folderTree);
+  const [selectedFiles, setSelectedFiles] = p2([]);
   const [offsetLeft, setOffsetLeft] = p2(0);
   const listRef = _2();
   const forceUpdate = useForceUpdate();
@@ -16599,14 +16637,24 @@ var FileExplorerComponent = (props) => {
     window.addEventListener(eventTypes.activeFileChange, changeActiveFile);
     window.addEventListener(eventTypes.refreshView, forceUpdate);
     window.addEventListener(eventTypes.settingsChanged, settingsChanged);
+    window.addEventListener(eventTypes.revealFile, handleRevealFileEvent);
     return () => {
       window.removeEventListener(eventTypes.vaultChange, vaultChangeEvent);
       window.removeEventListener(eventTypes.activeFileChange, changeActiveFile);
       window.removeEventListener(eventTypes.refreshView, forceUpdate);
       window.removeEventListener(eventTypes.settingsChanged, settingsChanged);
+      window.removeEventListener(eventTypes.revealFile, handleRevealFileEvent);
     };
   }, []);
   const handleRevealFileEvent = (evt) => {
+    if (evt.detail) {
+      setSelectedFiles([evt.detail.file]);
+      const folders = evt.detail.file.path.split("/");
+      const openPaths = folders.reduce((p3, c3) => [...p3, `${p3}/${c3}`], ["/"]).slice(0, -1);
+      const newOpenFolders = [...openFolders2.filter((f4) => !openPaths.find((g4) => g4 == f4)), ...openPaths];
+      plugin.settings.openFolders = newOpenFolders;
+      plugin.saveSettings();
+    }
   };
   const vaultChangeEvent = (evt) => {
     if (evt.detail) {
@@ -17052,16 +17100,21 @@ var MainMenu = (props) => {
 // src/components/Spaces/FileTreeView.tsx
 var FILE_TREE_VIEW_TYPE = "mk-file-view";
 var VIEW_DISPLAY_TEXT = "Spaces";
-var ICON = "sheets-in-box";
+var ICON = "layout-grid";
 var FileTreeView = class extends import_obsidian10.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.navigation = false;
     this.plugin = plugin;
   }
-  revealInFolder(folder) {
-    this.plugin.app.workspace.activeLeaf.setViewState({ type: FOLDER_VIEW_TYPE, state: { folder: folder.path } });
-    this.plugin.app.workspace.requestSaveLayout();
+  revealInFolder(file) {
+    if (file instanceof import_obsidian10.TFolder) {
+      this.plugin.app.workspace.activeLeaf.setViewState({ type: FOLDER_VIEW_TYPE, state: { folder: file.path } });
+      this.plugin.app.workspace.requestSaveLayout();
+    } else {
+      let evt = new CustomEvent(eventTypes.revealFile, { detail: { file } });
+      window.dispatchEvent(evt);
+    }
   }
   getViewType() {
     return FILE_TREE_VIEW_TYPE;
@@ -17118,6 +17171,7 @@ var DEFAULT_SETTINGS = {
   spacesEnabled: true,
   spacesPerformance: false,
   spacesStickers: true,
+  spacesDisablePatch: false,
   sidebarRibbon: false,
   sidebarTabs: false,
   deleteFileOption: "trash",
@@ -17161,30 +17215,6 @@ var MakeMDPluginSettingsTab = class extends import_obsidian11.PluginSettingTab {
       this.plugin.saveSettings();
       this.refreshView();
     }));
-    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.sidebarRibbon.name).setDesc(i18n_default.settings.sidebarRibbon.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.sidebarRibbon).onChange((value) => {
-      this.plugin.settings.sidebarRibbon = value;
-      this.plugin.saveSettings();
-      document.body.classList.toggle("mk-hide-ribbon", !value);
-    }));
-    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.sidebarTabs.name).setDesc(i18n_default.settings.sidebarTabs.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.sidebarTabs).onChange((value) => {
-      this.plugin.settings.sidebarTabs = value;
-      this.plugin.saveSettings();
-      document.body.classList.toggle("mk-hide-tabs", !value);
-    }));
-    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.spacesPerformance.name).setDesc(i18n_default.settings.spacesPerformance.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.spacesPerformance).onChange((value) => {
-      this.plugin.settings.spacesPerformance = value;
-      this.plugin.saveSettings();
-    }));
-    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.spacesDeleteOption.name).setDesc(i18n_default.settings.spacesDeleteOption.desc).addDropdown((dropdown) => {
-      dropdown.addOption("permanent", i18n_default.settings.spacesDeleteOptions.permanant);
-      dropdown.addOption("trash", i18n_default.settings.spacesDeleteOptions.trash);
-      dropdown.addOption("system-trash", i18n_default.settings.spacesDeleteOptions["system-trash"]);
-      dropdown.setValue(this.plugin.settings.deleteFileOption);
-      dropdown.onChange((option) => {
-        this.plugin.settings.deleteFileOption = option;
-        this.plugin.saveSettings();
-      });
-    });
     containerEl.createEl("h2", { text: i18n_default.settings.sectionFlow });
     new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.editorFlowReplace.name).setDesc(i18n_default.settings.editorFlowReplace.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.editorFlow).onChange((value) => {
       this.plugin.settings.editorFlow = value;
@@ -17235,6 +17265,35 @@ var MakeMDPluginSettingsTab = class extends import_obsidian11.PluginSettingTab {
       this.plugin.saveSettings();
       this.refreshView();
     }));
+    containerEl.createEl("h2", { text: i18n_default.settings.sectionAdvanced });
+    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.sidebarRibbon.name).setDesc(i18n_default.settings.sidebarRibbon.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.sidebarRibbon).onChange((value) => {
+      this.plugin.settings.sidebarRibbon = value;
+      this.plugin.saveSettings();
+      document.body.classList.toggle("mk-hide-ribbon", !value);
+    }));
+    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.sidebarTabs.name).setDesc(i18n_default.settings.sidebarTabs.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.sidebarTabs).onChange((value) => {
+      this.plugin.settings.sidebarTabs = value;
+      this.plugin.saveSettings();
+      document.body.classList.toggle("mk-hide-tabs", !value);
+    }));
+    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.spacesFileExplorerDual.name).setDesc(i18n_default.settings.spacesFileExplorerDual.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.spacesDisablePatch).onChange((value) => {
+      this.plugin.settings.spacesDisablePatch = value;
+      this.plugin.saveSettings();
+    }));
+    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.spacesPerformance.name).setDesc(i18n_default.settings.spacesPerformance.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.spacesPerformance).onChange((value) => {
+      this.plugin.settings.spacesPerformance = value;
+      this.plugin.saveSettings();
+    }));
+    new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.spacesDeleteOption.name).setDesc(i18n_default.settings.spacesDeleteOption.desc).addDropdown((dropdown) => {
+      dropdown.addOption("permanent", i18n_default.settings.spacesDeleteOptions.permanant);
+      dropdown.addOption("trash", i18n_default.settings.spacesDeleteOptions.trash);
+      dropdown.addOption("system-trash", i18n_default.settings.spacesDeleteOptions["system-trash"]);
+      dropdown.setValue(this.plugin.settings.deleteFileOption);
+      dropdown.onChange((option) => {
+        this.plugin.settings.deleteFileOption = option;
+        this.plugin.saveSettings();
+      });
+    });
     new import_obsidian11.Setting(containerEl).setName(i18n_default.settings.inlineStylerColor.name).setDesc(i18n_default.settings.inlineStylerColor.desc).addToggle((toggle) => toggle.setValue(this.plugin.settings.inlineStylerColors).onChange((value) => {
       this.plugin.settings.inlineStylerColors = value;
       this.plugin.saveSettings();
@@ -17313,7 +17372,7 @@ var default_default = [
 \`\`\`
 Type/Paste Your Code
 \`\`\``,
-    offset: [-3, 3],
+    offset: [-4, 5],
     icon: "mk-make-codeblock"
   },
   {
@@ -17362,12 +17421,13 @@ var MakeMenu = class extends import_obsidian12.EditorSuggest {
   }
   onTrigger(cursor, editor, _file) {
     const currentLine = editor.getLine(cursor.line).slice(0, cursor.ch);
-    if (!this.inCmd && currentLine[0] !== this.plugin.settings.menuTriggerChar) {
+    const triggerCharLength = this.plugin.settings.menuTriggerChar.length;
+    if (!this.inCmd && currentLine.slice(0, triggerCharLength) !== this.plugin.settings.menuTriggerChar && currentLine.slice(-2 - triggerCharLength) !== "- " + this.plugin.settings.menuTriggerChar) {
       this.resetInfos();
       return null;
     }
     if (!this.inCmd) {
-      this.cmdStartCh = currentLine.length - 1;
+      this.cmdStartCh = currentLine.length - triggerCharLength;
       this.inCmd = true;
     }
     const currentCmd = currentLine.slice(this.cmdStartCh, cursor.ch);
@@ -17375,7 +17435,7 @@ var MakeMenu = class extends import_obsidian12.EditorSuggest {
       this.resetInfos();
       return null;
     }
-    return { start: cursor, end: cursor, query: currentCmd.slice(1) };
+    return { start: cursor, end: cursor, query: currentCmd.slice(triggerCharLength) };
   }
   getSuggestions(context) {
     const suggestions = resolveCommands(this.plugin).filter(({ label }) => label.toLowerCase().includes(context.query.toLowerCase()) || i18n_default.commands[label] && i18n_default.commands[label].toLowerCase().includes(context.query.toLowerCase()));
@@ -17393,7 +17453,7 @@ var MakeMenu = class extends import_obsidian12.EditorSuggest {
       return;
     this.context.editor.replaceRange(cmd.value, { ...this.context.start, ch: this.cmdStartCh }, this.context.end);
     if (cmd.offset) {
-      this.context.editor.setSelection({ ...this.context.start, ch: cmd.offset[1] }, { ...this.context.end, ch: cmd.value.length + cmd.offset[0] });
+      this.context.editor.setSelection({ ...this.context.start, ch: this.cmdStartCh + cmd.offset[1] }, { ...this.context.end, ch: this.cmdStartCh + cmd.value.length + cmd.offset[0] });
     }
     this.resetInfos();
     this.close();
@@ -18382,6 +18442,34 @@ var MakeMDPlugin = class extends import_obsidian15.Plugin {
       this.openFileTreeLeaf(true);
     };
   }
+  openFlow() {
+    const cm = getActiveCM();
+    if (cm) {
+      const value = cm.state.field(flowEditorInfo, false);
+      const currPosition = cm.state.selection.main;
+      for (let flowEditor of value) {
+        if (flowEditor.from < currPosition.to && flowEditor.to > currPosition.from) {
+          cm.dispatch({
+            annotations: toggleFlowEditor.of([flowEditor.id, 2])
+          });
+        }
+      }
+    }
+  }
+  closeFlow() {
+    const cm = getActiveCM();
+    if (cm) {
+      const value = cm.state.field(flowEditorInfo, false);
+      const currPosition = cm.state.selection.main;
+      for (let flowEditor of value) {
+        if (flowEditor.from < currPosition.to && flowEditor.to > currPosition.from) {
+          cm.dispatch({
+            annotations: toggleFlowEditor.of([flowEditor.id, 0])
+          });
+        }
+      }
+    }
+  }
   toggleBold() {
     const cm = getActiveCM();
     if (cm) {
@@ -18407,7 +18495,8 @@ var MakeMDPlugin = class extends import_obsidian15.Plugin {
       return new FlowView(leaf, this);
     });
     if (this.settings.spacesEnabled) {
-      patchFileExplorer(this);
+      if (!this.settings.spacesDisablePatch)
+        patchFileExplorer(this);
       this.registerView(FILE_TREE_VIEW_TYPE, (leaf) => {
         return new FileTreeView(leaf, this);
       });
@@ -18422,6 +18511,16 @@ var MakeMDPlugin = class extends import_obsidian15.Plugin {
   loadFlowEditor() {
     document.body.classList.toggle("mk-flow-replace", this.settings.editorFlow);
     document.body.classList.toggle("mk-flow-" + this.settings.editorFlowStyle, true);
+    this.addCommand({
+      id: "mk-open-flow",
+      name: i18n_default.commandPalette.openFlow,
+      callback: () => this.openFlow()
+    });
+    this.addCommand({
+      id: "mk-close-flow",
+      name: i18n_default.commandPalette.closeFlow,
+      callback: () => this.closeFlow()
+    });
     if (this.settings.editorFlow) {
       this.registerMarkdownPostProcessor((element, context) => {
         const removeAllFlowMarks = (el) => {
@@ -18444,7 +18543,7 @@ var MakeMDPlugin = class extends import_obsidian15.Plugin {
     document.body.classList.toggle("mk-mark-sans", this.settings.markSans);
     this.addCommand({
       id: "mk-toggle-bold",
-      name: "Toggle Bold",
+      name: i18n_default.commandPalette.toggleBold,
       callback: () => this.toggleBold(),
       hotkeys: [
         {
@@ -18455,7 +18554,7 @@ var MakeMDPlugin = class extends import_obsidian15.Plugin {
     });
     this.addCommand({
       id: "mk-toggle-italics",
-      name: "Toggle Italics",
+      name: i18n_default.commandPalette.toggleItalics,
       callback: () => this.toggleEm(),
       hotkeys: [
         {

@@ -1,10 +1,1 @@
-{
-    "id": "obsidian-advanced-uri",
-    "name": "Advanced URI",
-    "description": "Advanced modes for Obsidian URI",
-    "isDesktopOnly": false,
-    "js": "main.js",
-    "version": "1.30.0",
-    "author": "Vinzent",
-    "authorUrl": "https://github.com/Vinzent03"
-}
+{"id":"obsidian-advanced-uri","name":"Advanced URI","description":"Advanced modes for Obsidian URI","isDesktopOnly":false,"js":"main.js","version":"1.31.1","author":"Vinzent","authorUrl":"https://github.com/Vinzent03"}

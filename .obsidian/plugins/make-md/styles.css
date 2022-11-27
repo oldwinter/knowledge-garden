@@ -799,7 +799,7 @@ body:not(.is-mobile) .mk-style-menu {
 .mk-style-menu {
   display: flex;
   padding: 0;
-  margin-top: -44px;
+  margin-top: -50px;
 }
 .is-mobile .mk-style-menu svg {
   width: 32px;

@@ -49,6 +49,6 @@ title: README
 
 [^1]: [备发布站](https://notes.oldwinter.top/readme#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 
-[^2]: 目前我已经放弃logseq联用obsidian的方案，不过您依旧可以用logseq打开本库进行阅读。
+[^2]: 目前我已经放弃logseq联用obsidian的方案，不过您依旧可以用logseq打开本库进行阅读。尝试过将本库导入remnote、craft，也都是完美支持的哦，这就是obsidian原生md语法的魅力所在。
 
 [^3]: vscode需额外安装foam插件后，便支持[[双链笔记]]的[[wikilink]]语法。

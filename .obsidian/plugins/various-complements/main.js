@@ -456,6 +456,9 @@ function capitalizeFirstLetter(str) {
 function startsSmallLetterOnlyFirst(str) {
   return Boolean(str.match(/^[A-Z][^A-Z]+$/));
 }
+function smartLineBreakSplit(text2) {
+  return text2.split("\n").filter((x) => x);
+}
 function* splitRaw(text2, regexp) {
   let previousIndex = 0;
   for (let r of text2.matchAll(regexp)) {
@@ -2129,7 +2132,7 @@ var ChineseTokenizer = class {
 };
 
 // src/tokenizer/tokenizer.ts
-async function createTokenizer(strategy, app) {
+async function createTokenizer(strategy, app, settings) {
   switch (strategy.name) {
     case "default":
       return new DefaultTokenizer();
@@ -2140,13 +2143,13 @@ async function createTokenizer(strategy, app) {
     case "japanese":
       return new JapaneseTokenizer();
     case "chinese":
-      const hasCedict = await app.vault.adapter.exists("./cedict_ts.u8");
+      const hasCedict = await app.vault.adapter.exists(settings.cedictPath);
       if (!hasCedict) {
         return Promise.reject(
-          new Error("cedict_ts.U8 doesn't exist in your vault root.")
+          new Error(`cedict_ts.U8 doesn't exist in ${settings.cedictPath}.`)
         );
       }
-      const dict = await app.vault.adapter.read("./cedict_ts.u8");
+      const dict = await app.vault.adapter.read(settings.cedictPath);
       return ChineseTokenizer.create(dict);
   }
 }
@@ -3581,7 +3584,11 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       this.settings.complementAutomatically
     );
     try {
-      this.tokenizer = await createTokenizer(this.tokenizerStrategy, this.app);
+      this.tokenizer = await createTokenizer(
+        this.tokenizerStrategy,
+        this.app,
+        this.settings
+      );
     } catch (e) {
       new import_obsidian3.Notice(e.message, 0);
     }
@@ -3991,9 +3998,12 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       );
       return null;
     }
-    if (currentLineUntilCursor.startsWith("~~~") || currentLineUntilCursor.startsWith("```")) {
+    const suppressedPattern = this.settings.patternsToSuppressTrigger.find(
+      (p) => new RegExp(p).test(currentLineUntilCursor)
+    );
+    if (suppressedPattern) {
       onReturnNull(
-        "Don't show suggestions because it supposes front code block"
+        `Don't show suggestions because it is the ignored pattern: ${suppressedPattern}`
       );
       return null;
     }
@@ -4180,6 +4190,7 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
 var import_obsidian4 = require("obsidian");
 var DEFAULT_SETTINGS = {
   strategy: "default",
+  cedictPath: "./cedict_ts.u8",
   matchStrategy: "prefix",
   maxNumberOfSuggestions: 5,
   maxNumberOfWordsAsPhrase: 3,
@@ -4191,6 +4202,7 @@ var DEFAULT_SETTINGS = {
   insertAfterCompletion: true,
   firstCharactersDisableSuggestions: ":/^",
   useCommonPrefixCompletionOfSuggestion: false,
+  patternsToSuppressTrigger: ["^~~~.*", "^```.*"],
   showMatchStrategy: true,
   showComplementAutomatically: true,
   showIndexingStatus: true,
@@ -4265,15 +4277,23 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
       const el = containerEl.createEl("div", {
         cls: "various-complements__settings__warning"
       });
-      el.createSpan({
-        text: "\u26A0 You need to download `cedict_ts.u8` from"
-      });
-      el.createEl("a", {
-        href: "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
-        text: " the site "
-      });
-      el.createSpan({
-        text: "and store it in vault root."
+      const df = document.createDocumentFragment();
+      df.append(
+        createSpan({
+          text: "The path to `cedict_ts.u8`. You can download it from "
+        }),
+        createEl("a", {
+          href: "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
+          text: " the site "
+        })
+      );
+      new import_obsidian4.Setting(containerEl).setName("CC-CEDICT path").setDesc(df).setClass("various-complements__settings__nested").addText((cb) => {
+        cb.setValue(this.plugin.settings.cedictPath).onChange(
+          async (value) => {
+            this.plugin.settings.cedictPath = value;
+            await this.plugin.saveSettings();
+          }
+        );
       });
     }
     new import_obsidian4.Setting(containerEl).setName("Match strategy").addDropdown(
@@ -4359,6 +4379,14 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         await this.plugin.saveSettings();
       });
     });
+    new import_obsidian4.Setting(containerEl).setName("Patterns to suppress trigger").setDesc(
+      "RegExp line patterns until the cursor, which suppresses the auto-completion trigger. It can set multi patterns by line breaks."
+    ).addTextArea(
+      (tc) => tc.setValue(this.plugin.settings.patternsToSuppressTrigger.join("\n")).onChange(async (value) => {
+        this.plugin.settings.patternsToSuppressTrigger = smartLineBreakSplit(value);
+        await this.plugin.saveSettings();
+      })
+    );
   }
   addAppearanceSettings(containerEl) {
     containerEl.createEl("h3", { text: "Appearance" });
@@ -4998,7 +5026,6 @@ function get_root_for_style(node) {
 }
 function append_stylesheet(node, style) {
   append(node.head || node, style);
-  return style.sheet;
 }
 function insert(target, node, anchor) {
   target.insertBefore(node, anchor || null);
@@ -5225,13 +5252,13 @@ function create_component(block) {
   block && block.c();
 }
 function mount_component(component, target, anchor, customElement) {
-  const { fragment, after_update } = component.$$;
+  const { fragment, on_mount, on_destroy, after_update } = component.$$;
   fragment && fragment.m(target, anchor);
   if (!customElement) {
     add_render_callback(() => {
-      const new_on_destroy = component.$$.on_mount.map(run).filter(is_function);
-      if (component.$$.on_destroy) {
-        component.$$.on_destroy.push(...new_on_destroy);
+      const new_on_destroy = on_mount.map(run).filter(is_function);
+      if (on_destroy) {
+        on_destroy.push(...new_on_destroy);
       } else {
         run_all(new_on_destroy);
       }
@@ -5262,7 +5289,7 @@ function init(component, options, instance5, create_fragment5, not_equal, props,
   set_current_component(component);
   const $$ = component.$$ = {
     fragment: null,
-    ctx: [],
+    ctx: null,
     props,
     update: noop,
     not_equal,
@@ -5336,9 +5363,6 @@ if (typeof HTMLElement === "function") {
       this.$destroy = noop;
     }
     $on(type, callback) {
-      if (!is_function(callback)) {
-        return noop;
-      }
       const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
       callbacks.push(callback);
       return () => {
@@ -5362,9 +5386,6 @@ var SvelteComponent = class {
     this.$destroy = noop;
   }
   $on(type, callback) {
-    if (!is_function(callback)) {
-      return noop;
-    }
     const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
     callbacks.push(callback);
     return () => {
@@ -5429,7 +5450,7 @@ function create_fragment(ctx) {
       if (!current || dirty & 2) {
         button.disabled = ctx2[1];
       }
-      if (!current || dirty & 2) {
+      if (dirty & 2) {
         toggle_class(button, "mod-cta", !ctx2[1]);
       }
     },

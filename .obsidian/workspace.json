@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6bc0fa2838f1934d",
+        "id": "884aefeca7ff4e56",
         "type": "tabs",
         "children": [
           {
-            "id": "c2b5f6422c675e0a",
+            "id": "66c69ff95ba2965b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+                "file": "Calendar/Daily notes/2022-11-27.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -77,9 +77,16 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "ac8c0479dc777ea8",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -92,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md"
+                "file": "Calendar/Daily notes/2022-11-27.md"
               }
             }
           },
@@ -102,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+                "file": "Calendar/Daily notes/2022-11-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+                "file": "Calendar/Daily notes/2022-11-27.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+                "file": "Calendar/Daily notes/2022-11-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,17 +221,17 @@
     "width": 234.5,
     "collapsed": true
   },
-  "active": "c2b5f6422c675e0a",
+  "active": "66c69ff95ba2965b",
   "lastOpenFiles": [
+    "AboutTheGarden.md",
+    "README.md",
     "HOMEPAGE.md",
+    "Calendar/Daily notes/2022-11-27.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "Calendar/Daily notes/2022-11-25.md",
     "Calendar/Daily notes/2022-11-24.md",
     "Spaces/2-Area/运动与健康/力量训练后是否应该继续做有氧运动.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "Cards/永久笔记/无氧运动.md",
-    "Spaces/2-Area/运动与健康/减脂应该选择少吃500大卡还是运动多消耗500大卡.md",
-    "Spaces/2-Area/运动与健康/减脂是否应该计算自己的基础代谢和每日饮食摄入热量.md",
-    "Spaces/2-Area/运动与健康/地中海饮食法.md",
-    "Spaces/2-Area/运动与健康/211饮食配比.md"
+    "Spaces/2-Area/运动与健康/减脂应该选择少吃500大卡还是运动多消耗500大卡.md"
   ]
 }
