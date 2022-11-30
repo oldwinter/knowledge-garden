@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "884aefeca7ff4e56",
+        "id": "f38360f79717faf9",
         "type": "tabs",
         "children": [
           {
-            "id": "66c69ff95ba2965b",
+            "id": "3a62af21ebfd316c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-27.md",
+                "file": "HOMEPAGE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-27.md"
+                "file": "HOMEPAGE.md"
               }
             }
           },
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-27.md",
+                "file": "HOMEPAGE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-27.md",
+                "file": "HOMEPAGE.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-11-27.md",
+                "file": "HOMEPAGE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -221,17 +221,17 @@
     "width": 234.5,
     "collapsed": true
   },
-  "active": "66c69ff95ba2965b",
+  "active": "3a62af21ebfd316c",
   "lastOpenFiles": [
-    "AboutTheGarden.md",
+    "Calendar/Daily notes/2022-11-30.md",
+    "Cards/永久笔记/最佳实践.md",
     "README.md",
+    "🧰 本库指南/Tutorials/∑ 本库 ACCESS 的文件夹入口汇总.md",
     "HOMEPAGE.md",
-    "Calendar/Daily notes/2022-11-27.md",
+    "Calendar/Daily notes/2022-11-29.md",
+    "Spaces/2-Area/运动与健康/男生如何简易护肤.md",
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Calendar/Daily notes/2022-11-25.md",
-    "Calendar/Daily notes/2022-11-24.md",
-    "Spaces/2-Area/运动与健康/力量训练后是否应该继续做有氧运动.md",
-    "Cards/永久笔记/无氧运动.md",
-    "Spaces/2-Area/运动与健康/减脂应该选择少吃500大卡还是运动多消耗500大卡.md"
+    "Spaces/2-Area/运动与健康/饱和脂肪，不饱和脂肪，反式脂肪.md",
+    "Spaces/2-Area/运动与健康/常见含有反式脂肪的添加剂.md"
   ]
 }

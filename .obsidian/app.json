@@ -54,5 +54,5 @@
     "editor:toggle-keyboard",
     "editor:configure-toolbar"
   ],
-  "mobilePullAction": "obsidian-better-command-palette:open-better-commmand-palette"
+  "mobilePullAction": "command-palette:open"
 }

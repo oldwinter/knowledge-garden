@@ -1,7 +1,6 @@
 [
   "tag-wrangler",
   "templater-obsidian",
-  "various-complements",
   "obsidian-weread-plugin",
   "obsidian-spaced-repetition",
   "note-refactor-obsidian",
@@ -30,7 +29,6 @@
   "keyboard-analyzer",
   "recent-files-obsidian",
   "cmdr",
-  "chronology",
   "omnisearch",
   "obsidian-query-control",
   "obsidian-scroll-to-top-plugin",
@@ -39,5 +37,5 @@
   "obsidian-advanced-slides",
   "quickadd",
   "obsidian-outliner",
-  "make-md"
+  "various-complements"
 ]

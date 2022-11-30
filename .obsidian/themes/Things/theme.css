@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.0.1
+Version 2.0.2
 Created by @colineckert
 
 Readme:
@@ -179,7 +179,7 @@ body {
   --color-base-10: #282c34; /* code blocks */
   --color-base-20: #181c20; /* top unselected unfocused nav */
   --color-base-25: #181c20;
-  --color-base-30: #252b32; /* dividing lines */
+  --color-base-30: #35393e;
   --color-base-35: #3f3f3f;
   --color-base-40: #555;
   --color-base-50: #666; /* unfocused text -- good */
@@ -241,7 +241,7 @@ body {
   --atom-blue: #61afef;
   --atom-yellow: #e5c07b;
 }
-/* Make exported PDFs render correctly */ 
+/* Make exported PDFs render correctly */
 @media print {
   .theme-dark {
     --highlight-mix-blend-mode: darken;

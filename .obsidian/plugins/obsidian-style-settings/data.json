@@ -58,7 +58,7 @@
   "shimmering-focus@@no-tabbar-header-hybrid": true,
   "shimmering-focus@@normal-header-bar": true,
   "shimmering-focus@@show-sidebar-header-buttons": true,
-  "shimmering-focus@@show-ribbon": true,
+  "shimmering-focus@@show-ribbon": false,
   "shimmering-focus@@show-new-tab-button": true,
   "shimmering-focus@@show-tab-list-button": true,
   "shimmering-focus@@show-close-buttons": true,
@@ -96,5 +96,6 @@
   "minimal-style@@sidebar-lines-off": false,
   "minimal-advanced@@cursor": "pointer",
   "shimmering-focus@@tab-width": 200,
-  "shimmering-focus@@hide-attachment-folders": false
+  "shimmering-focus@@hide-attachment-folders": false,
+  "shimmering-focus@@mac-os-native": false
 }
