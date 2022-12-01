@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Calendar/Daily notes/2022-12-01.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HOMEPAGE.md"
+                "file": "Calendar/Daily notes/2022-12-01.md"
               }
             }
           },
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Calendar/Daily notes/2022-12-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Calendar/Daily notes/2022-12-01.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Calendar/Daily notes/2022-12-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,11 +223,11 @@
   },
   "active": "3a62af21ebfd316c",
   "lastOpenFiles": [
+    "HOMEPAGE.md",
     "Calendar/Daily notes/2022-11-30.md",
     "Cards/永久笔记/最佳实践.md",
     "README.md",
     "🧰 本库指南/Tutorials/∑ 本库 ACCESS 的文件夹入口汇总.md",
-    "HOMEPAGE.md",
     "Calendar/Daily notes/2022-11-29.md",
     "Spaces/2-Area/运动与健康/男生如何简易护肤.md",
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
