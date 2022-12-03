@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.0.2
+Version 2.0.3
 Created by @colineckert
 
 Readme:
@@ -71,7 +71,8 @@ body {
 /* COLOR SCHEMES
 ────────────────────────────────────────────────────── */
 
-.theme-light {
+.theme-light,
+body.theme-light.is-mobile {
   color-scheme: light;
   --highlight-mix-blend-mode: darken;
   --mono-rgb-0: 255, 255, 255;
@@ -160,7 +161,8 @@ body {
   --atom-orange: #986800;
 }
 
-.theme-dark {
+.theme-dark,
+body.theme-dark.is-mobile {
   color-scheme: dark;
   --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: 0, 0, 0;
@@ -182,7 +184,7 @@ body {
   --color-base-30: #35393e;
   --color-base-35: #3f3f3f;
   --color-base-40: #555;
-  --color-base-50: #666; /* unfocused text -- good */
+  --color-base-50: #666; /* unfocused text */
   --color-base-60: #999;
   --color-base-70: #bababa;
   --color-base-100: #dadada;
@@ -241,6 +243,11 @@ body {
   --atom-blue: #61afef;
   --atom-yellow: #e5c07b;
 }
+
+body.is-mobile.theme-dark.mobile-black-background {
+  --color-base-00: black;
+}
+
 /* Make exported PDFs render correctly */
 @media print {
   .theme-dark {
@@ -273,8 +280,11 @@ body:not(.default-font-color) span.cm-quote.cm-quote-1 {
 
 /* Bold font */
 body:not(.default-font-color) strong,
-body:not(.default-font-color) .cm-strong {
+body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
   color: var(--strong-color);
+}
+body:not(.default-font-color) mark > strong {
+  color: var(--text-normal);
 }
 
 /* Italics */
@@ -311,12 +321,24 @@ img {
   background: var(--blue);
 }
 
+/* Highlight styles */
+span.cm-highlight,
+.markdown-preview-view mark,
+span.search-result-file-matched-text {
+  padding: 0.05em 0.15em;
+  border-radius: 0.2em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 /* ------------------- */
 /* One Dark Syntax Coloring */
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
 /* ------------------- */
-
-.token.comment,
+.theme-light .token.comment {
+  color: #ababab;
+}
+.theme-dark .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
@@ -593,6 +615,12 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        title: Black mobile background
+        description: Change mobile editor background to default theme black
+        id: mobile-black-background
+        type: class-toggle
+        default: false
     -
         title: Disable mobile floating-action button
         description: Revert placement of edit/preview button to default in header (mobile)
