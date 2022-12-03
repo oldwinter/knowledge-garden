@@ -1,5 +1,6 @@
 {
   "strategy": "chinese",
+  "cedictPath": "./cedict_ts.u8",
   "matchStrategy": "prefix",
   "maxNumberOfSuggestions": 24,
   "maxNumberOfWordsAsPhrase": 5,
@@ -10,6 +11,11 @@
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
   "firstCharactersDisableSuggestions": ":/^-",
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
   "showMatchStrategy": false,
   "showComplementAutomatically": false,
   "showIndexingStatus": false,
@@ -476,6 +482,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1668958374917
+        }
+      }
+    },
+    "渐进式超负荷": {
+      "渐进式超负荷": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670069400183
+        }
+      }
+    },
+    "功能性训练": {
+      "功能性训练": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670069910759
         }
       }
     }
