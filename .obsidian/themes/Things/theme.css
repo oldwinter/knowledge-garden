@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.0.3
+Version 2.0.4
 Created by @colineckert
 
 Readme:
@@ -345,9 +345,8 @@ span.search-result-file-matched-text {
   color: var(--atom-gray-1);
 }
 .token.punctuation,
-.cm-hmd-codeblock,
-.cm-bracket {
-  color: var(--atom-gray-2);
+.cm-hmd-codeblock.cm-bracket {
+  color: var(--atom-gray-2) !important;
 }
 code[class*='language-'],
 .token.selector,
@@ -355,6 +354,7 @@ code[class*='language-'],
 .token.parameter,
 .token.property-access,
 .cm-def,
+.cm-hmd-codeblock.cm-tag,
 .cm-property,
 .cm-qualifier {
   color: var(--atom-red);
@@ -365,6 +365,7 @@ code[class*='language-'],
 .token.symbol,
 .token.attr-name,
 .token.deleted,
+.cm-attribute,
 .cm-number,
 .cm-property.cm-string {
   color: var(--atom-orange) !important;
