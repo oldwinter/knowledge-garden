@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/热量单位简单换算.md",
+                "file": "Calendar/Daily notes/OpenAL- chatGPT注册使用.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -85,6 +85,14 @@
               "type": "recent-files",
               "state": {}
             }
+          },
+          {
+            "id": "27fc40e1c7f10ab4",
+            "type": "leaf",
+            "state": {
+              "type": "mk-file-view",
+              "state": {}
+            }
           }
         ]
       },
@@ -107,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/热量单位简单换算.md",
+                "file": "Calendar/Daily notes/OpenAL- chatGPT注册使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/热量单位简单换算.md",
+                "file": "Calendar/Daily notes/OpenAL- chatGPT注册使用.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -154,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/热量单位简单换算.md",
+                "file": "Calendar/Daily notes/OpenAL- chatGPT注册使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,25 +202,60 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "2670ea042885c564",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Calendar/Daily notes/OpenAL- chatGPT注册使用.md"
+              }
+            }
           }
         ],
         "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": false,
+      "obsidian-weread-plugin:Weread": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
+      "janitor:Janitor: scan vault": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-projects:Open projects": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "daily-notes-editor:Open Daily Note Editor": false,
+      "dbfolder:Create a new database table": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+    }
   },
   "active": "7a417ddbf6eb523a",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2022-12-06.md",
+    "🍀 花园导览/🧩花园导览-示意图.canvas",
+    "🧰 本库指南/🌏 本库发布指南.md",
+    "Spaces/2-Area/运动与健康/热量单位简单换算.md",
+    "🧰 本库指南/🍫 本库方法论指南.md",
+    "Spaces/2-Area/运动与健康/运动强度的判断依据.md",
     "Spaces/2-Area/运动与健康/减脂是否应该计算自己的基础代谢和每日饮食摄入热量.md",
     "Spaces/2-Area/运动与健康/基础代谢估算.md",
     "Spaces/2-Area/运动与健康/不运动的减肥方法-NEAT.md",
-    "Spaces/2-Area/运动与健康/减肥的N重境界.md",
-    "Spaces/2-Area/运动与健康/增肌力量训练计划的关键要素：计划分化、训练频率、动作选择、重量选择、训练个数、训练组数、组间间隔、肌肉收缩方式、动作速度.md",
-    "Spaces/2-Area/运动与健康/不同运动方式的减脂效果及优缺点分析.md",
-    "Sources/Books/读书笔记/EPOC.md",
-    "运动强度的判断依据.md",
-    "Spaces/2-Area/运动与健康/最大摄氧量.md",
-    "Spaces/2-Area/运动与健康/运动心率的依据和选择.md"
+    "Spaces/2-Area/运动与健康/减肥的N重境界.md"
   ]
 }
