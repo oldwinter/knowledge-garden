@@ -97,7 +97,7 @@
   "minimal-advanced@@cursor": "pointer",
   "shimmering-focus@@tab-width": 200,
   "shimmering-focus@@hide-attachment-folders": false,
-  "shimmering-focus@@mac-os-native": false,
+  "shimmering-focus@@mac-os-native": true,
   "things-style@@default-font-color": false,
   "quick-explorer@@qe-hide-breadcrumbs": true
 }

@@ -15,5 +15,7 @@
     "includeChildren": false,
     "includeMentions": false
   },
-  "models": {}
+  "models": {},
+  "packages": [],
+  "installedPackages": []
 }

@@ -5,7 +5,7 @@
   "mobileMakeBar": true,
   "inlineStyler": true,
   "inlineStylerColors": false,
-  "editorFlow": false,
+  "editorFlow": true,
   "editorFlowStyle": "seamless",
   "spacesEnabled": false,
   "spacesPerformance": false,
@@ -9302,11 +9302,6 @@
             "isFolder": false
           }
         ],
-        "isFolder": true
-      },
-      {
-        "node": "textgenerator",
-        "children": [],
         "isFolder": true
       }
     ],

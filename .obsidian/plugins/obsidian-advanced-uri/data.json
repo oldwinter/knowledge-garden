@@ -5,5 +5,12 @@
   "openFileWithoutWriteInNewPane": true,
   "idField": "uid",
   "useUID": true,
-  "addFilepathWhenUsingUID": false
+  "addFilepathWhenUsingUID": false,
+  "regex": {},
+  "lineRegex": {},
+  "linkRegex": {},
+  "linkLineRegex": {},
+  "imageRegex": {},
+  "shouldReplaceSelection": false,
+  "enhanceDefaultPaste": true
 }

@@ -49,5 +49,6 @@
   ],
   "syntax_highlighting": true,
   "enabled_templates_hotkeys": [],
-  "startup_templates": []
+  "startup_templates": [],
+  "enable_ribbon_icon": true
 }

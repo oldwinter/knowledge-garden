@@ -12,6 +12,37 @@
           "includeUndated": true,
           "title": "test"
         }
+      },
+      {
+        "tag": "tagBoardConfig",
+        "data": {
+          "columns": [
+            {
+              "tag": "待办/今天",
+              "displayTitle": "今日"
+            },
+            {
+              "tag": "待办/本周",
+              "displayTitle": "本周"
+            },
+            {
+              "tag": "待办/某天",
+              "displayTitle": "某天"
+            },
+            {
+              "tag": "待办/持续迭代",
+              "displayTitle": "持续迭代"
+            }
+          ],
+          "showColumnTags": false,
+          "completedCount": 10,
+          "filters": [],
+          "filterPolarity": "Allow",
+          "showFilteredTags": true,
+          "includeOthers": false,
+          "includeUntagged": false,
+          "title": "tag"
+        }
       }
     ],
     "globalSettings": {

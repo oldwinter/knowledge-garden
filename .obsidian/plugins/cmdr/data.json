@@ -66,11 +66,12 @@
   "hide": {
     "statusbar": [
       "word-count",
+      "backlink",
       "janitor",
       "keyboard-analyzer",
-      "backlink",
       "various-complements",
-      "obsidian-textgenerator-plugin"
+      "obsidian-textgenerator-plugin",
+      "obsidian-focus-plugin"
     ],
     "leftRibbon": [
       "新建 Excalidraw 绘图",
