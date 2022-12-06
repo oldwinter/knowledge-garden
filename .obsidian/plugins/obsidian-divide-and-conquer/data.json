@@ -1,6 +1,5 @@
 {
   "pluginFilterRegexes": [
-    "hot-reload",
     "obsidian-divide-and-conquer"
   ],
   "snippetFilterRegexes": [],

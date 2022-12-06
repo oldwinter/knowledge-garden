@@ -1,0 +1,30 @@
+{
+  "version": "0.7.0",
+  "data": {
+    "boardConfigs": [
+      {
+        "tag": "dateBoardConfig",
+        "data": {
+          "completedCount": 10,
+          "filters": [],
+          "filterPolarity": "Allow",
+          "showFilteredTags": true,
+          "includeUndated": true,
+          "title": "test"
+        }
+      }
+    ],
+    "globalSettings": {
+      "taskCompletionFormat": "ObsidianCardBoard",
+      "columnNames": {
+        "today": "",
+        "tomorrow": "",
+        "future": "",
+        "undated": "",
+        "others": "",
+        "untagged": "",
+        "completed": ""
+      }
+    }
+  }
+}

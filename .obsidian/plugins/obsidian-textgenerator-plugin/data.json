@@ -1,7 +1,7 @@
 {
-  "api_key": "",
+  "api_key": "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",
   "engine": "text-davinci-003",
-  "max_tokens": 160,
+  "max_tokens": 960,
   "temperature": 0.7,
   "frequency_penalty": 0.5,
   "prompt": "",

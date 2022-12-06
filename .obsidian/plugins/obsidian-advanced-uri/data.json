@@ -4,5 +4,6 @@
   "openFileOnWriteInNewPane": true,
   "openFileWithoutWriteInNewPane": true,
   "idField": "uid",
-  "useUID": true
+  "useUID": true,
+  "addFilepathWhenUsingUID": false
 }
