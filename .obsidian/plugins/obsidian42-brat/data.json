@@ -1,7 +1,6 @@
 {
   "pluginList": [
-    "Make-md/makemd",
-    "TfTHacker/obsidian42-strange-new-worlds"
+    "Make-md/makemd"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],

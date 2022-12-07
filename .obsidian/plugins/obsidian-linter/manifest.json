@@ -1,34 +1,4 @@
 {
-  "0": "tag-wrangler",
-  "1": "templater-obsidian",
-  "2": "various-complements",
-  "3": "obsidian-weread-plugin",
-  "4": "cm-chs-patch",
-  "5": "obsidian-spaced-repetition",
-  "6": "note-refactor-obsidian",
-  "7": "obsidian-focus-plugin",
-  "8": "obsidian42-brat",
-  "9": "obsidian-hypothesis-plugin",
-  "10": "obsidian-keyboard-analyzer",
-  "11": "obsidian-bulk-rename-plugin",
-  "12": "obsidian-better-command-palette",
-  "13": "cmdr",
-  "14": "dataview",
-  "15": "obsidian-advanced-uri",
-  "16": "obsidian-another-quick-switcher",
-  "17": "obsidian-auto-link-title",
-  "18": "obsidian-image-auto-upload-plugin",
-  "19": "obsidian-linter",
-  "20": "obsidian-local-rest-api",
-  "21": "obsidian-shellcommands",
-  "22": "obsidian-sortable",
-  "23": "obsidian-style-settings",
-  "24": "omnisearch",
-  "25": "supercharged-links-obsidian",
-  "26": "janitor",
-  "27": "new-tab-default-page",
-  "28": "obsidian-file-cooker",
-  "29": "obsidian-minimal-settings",
   "id": "obsidian-linter",
   "name": "Linter",
   "version": "1.9.0",
@@ -36,35 +6,5 @@
   "description": "Formats and styles your notes. It can be used to format YAML tags, aliases, arrays, and metadata; footnotes; headings; spacing; math blocks; regular markdown contents like list, italics, and bold styles; and more with the use of custom rule options as well.",
   "author": "Victor Tao",
   "authorUrl": "https://github.com/platers",
-  "isDesktopOnly": false,
-  "token": "6879-OtsU3Bu6rmSsWt_qPKa_D7WyiF6QNu1T74EyNuYbx_Y",
-  "user": "acct:cdd2here@hypothes.is",
-  "highlightsFolder": "Sources/Articles/Hypothesis",
-  "isConnected": true,
-  "template": "{% if is_new_article %}\n# {{title}}\n\n## Metadata\n{% if author %}- Author: [{{author}}]({{authorUrl}}){% endif %}\n- Title: {{title}}\n{% if url %}- Reference: {{url}}{% endif %}\n{% endif %}\n\n{%- if is_new_article %}\n## Page Notes\n{% for highlight in page_notes -%}\n{{highlight.annotation}}\n{%- if highlight.tags | length %}\nTags: {% for tag in highlight.tags -%} #{{tag | replace(\" \", \"-\")+\" \"}}{%- endfor %}\n{% endif %}\n{% endfor %}\n{%- endif -%}\n\n{%- if is_new_article -%}\n## Highlights\n{% for highlight in highlights -%}\n- {{highlight.text}} — [Updated on {{highlight.updated}}]({{highlight.incontext}})\n{%- if 'Private' != highlight.group %} — Group: #{{highlight.group | replace(\" \", \"-\")}}{% endif %}\n{% if highlight.tags | length %}    - Tags: {% for tag in highlight.tags %} #{{tag | replace(\" \", \"-\")+\" \"}}{% endfor %}\n{% endif -%}\n{% if highlight.annotation %}    - Annotation: {{highlight.annotation}}{% endif %}\n{% endfor %}\n{% endif %}\n",
-  "syncOnBoot": true,
-  "autoSyncInterval": 0,
-  "dateTimeFormat": "YYYY-MM-DD",
-  "history": {
-    "totalArticles": 2,
-    "totalHighlights": 14
-  },
-  "groups": [
-    {
-      "id": "__world__",
-      "name": "Public",
-      "public": true,
-      "type": "open",
-      "selected": false
-    },
-    {
-      "id": "i4YwBi1A",
-      "name": "webNote",
-      "public": false,
-      "type": "private",
-      "selected": true
-    }
-  ],
-  "useDomainFolders": false,
-  "lastSyncDate": "2022-11-25T11:50:58.236Z"
+  "isDesktopOnly": false
 }

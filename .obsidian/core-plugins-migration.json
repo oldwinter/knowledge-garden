@@ -13,7 +13,7 @@
   "command-palette": true,
   "slash-command": false,
   "editor-status": false,
-  "starred": true,
+  "starred": false,
   "markdown-importer": false,
   "zk-prefixer": false,
   "random-note": false,

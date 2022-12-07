@@ -10,7 +10,6 @@
   "spacesEnabled": false,
   "spacesPerformance": false,
   "spacesStickers": false,
-  "spacesDisablePatch": false,
   "sidebarRibbon": true,
   "sidebarTabs": true,
   "deleteFileOption": "trash",
@@ -9324,5 +9323,6 @@
   "makerMode": true,
   "sidebar": false,
   "sidebarPerformance": false,
-  "sidebarStickers": false
+  "sidebarStickers": false,
+  "spacesDisablePatch": false
 }

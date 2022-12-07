@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "a9c7f9c8b74fe28b",
+        "id": "9a0b84023e62090f",
         "type": "tabs",
         "children": [
           {
-            "id": "f59c2d61b5807e81",
+            "id": "2c335130da11c5aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/3-Resource/小知识点/∑ 小知识点.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f03c5aef57df8506",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
+                "file": "Calendar/Daily notes/2022-12-08.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,22 +69,6 @@
                 "useHierarchy": true
               }
             }
-          },
-          {
-            "id": "f102bffb960773db",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
-          {
-            "id": "55154e7fb12599d3",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
           }
         ]
       },
@@ -113,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Calendar/Daily notes/2022-12-08.md"
               }
             }
           },
@@ -123,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Calendar/Daily notes/2022-12-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "Calendar/Daily notes/2022-12-08.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -170,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Calendar/Daily notes/2022-12-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,11 +162,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2f03db81d6f09cc5",
+        "id": "e0ca5f2ea8f2eeda",
         "type": "tabs",
         "children": [
           {
-            "id": "05ff45ee3dbeba26",
+            "id": "68c9ab019d828f87",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -212,39 +182,34 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "templater-obsidian:Templater": false,
+      "omnisearch:Omnisearch": true,
+      "obsidian-projects:Open projects": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": true,
+      "command-palette:打开命令面板": true,
+      "workspaces:管理工作区布局": true,
+      "canvas:Create new canvas": false,
       "obsidian-weread-plugin:Weread": false,
+      "templater-obsidian:Templater": true,
       "obsidian-spaced-repetition:复习卡片": true,
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "janitor:Janitor: scan vault": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": true,
-      "omnisearch:Omnisearch": true,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": true,
-      "canvas:Create new canvas": false,
-      "command-palette:打开命令面板": true,
-      "workspaces:管理工作区布局": true,
-      "obsidian-textgenerator-plugin:Generate Text!": true,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": true,
-      "card-board:CardBoard": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true
     }
   },
-  "active": "f03c5aef57df8506",
+  "active": "2c335130da11c5aa",
   "lastOpenFiles": [
-    "HOMEPAGE.md",
+    "Calendar/Daily notes/2022-12-08.md",
+    "Calendar/Daily notes/未命名 2.canvas",
     "Calendar/Daily notes/2022-12-07.md",
-    "Spaces/3-Resource/小知识点/∑ 小知识点.md",
-    "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
-    "🧰 本库指南/Tutorials/» 本库非md的资源文件管理工作流.md",
-    "🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md",
-    "Calendar/Daily notes/2022-10-18.md",
     "README.md",
-    "AboutTheGarden.md",
-    "Calendar/Daily notes/未命名.canvas"
+    "Calendar/Daily notes/未命名 1.canvas",
+    "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
+    "HOMEPAGE.md",
+    "Spaces/3-Resource/小知识点/∑ 小知识点.md",
+    "🧰 本库指南/Tutorials/» 本库非md的资源文件管理工作流.md",
+    "🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md"
   ]
 }

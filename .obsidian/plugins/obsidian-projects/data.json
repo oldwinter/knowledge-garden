@@ -1,101 +1,88 @@
 {
   "projects": [
     {
-      "id": "0a9c22b7-1979-410f-822e-7101beaa792d",
-      "name": "🍀 花园导览",
-      "path": "🍀 花园导览",
-      "recursive": true,
-      "defaultName": "",
-      "templates": [],
-      "views": [
-        {
-          "id": "9c3618d3-3c32-488b-b8d0-375e558fafc2",
-          "name": "Table",
-          "type": "table",
-          "config": {}
-        }
-      ]
-    },
-    {
-      "id": "5e5b2209-57a3-41fd-8b2e-be6d856cdc6c",
-      "name": "🧰 本库指南",
+      "id": "5b2e982b-3384-43c2-94d8-4ac66a05d8d5",
+      "name": "本库指南",
       "path": "🧰 本库指南",
       "recursive": true,
       "defaultName": "",
       "templates": [],
       "views": [
         {
-          "id": "c4937ffc-b21b-435a-ad4c-ac304e9855f9",
-          "name": "Table",
-          "type": "table",
-          "config": {}
-        }
-      ]
-    },
-    {
-      "id": "efac424b-af59-4a4d-ba60-0dd408a5b862",
-      "name": "Calendar",
-      "path": "Calendar",
-      "recursive": true,
-      "defaultName": "",
-      "templates": [],
-      "views": [
-        {
-          "id": "4ad8f39d-81eb-40d6-af02-45aed4f6caf8",
+          "id": "69c79ea8-8601-4906-b81a-69bcccc14d77",
           "name": "Table",
           "type": "table",
           "config": {
+            "sortField": "date created",
+            "sortAsc": true,
             "fieldConfig": {
+              "title": {
+                "hide": true
+              },
               "path": {
-                "width": 358
+                "hide": true
               }
             }
           }
+        },
+        {
+          "id": "49aaddd6-5e6e-4f0d-8149-bc9b14503403",
+          "name": "Board",
+          "type": "board",
+          "config": {}
+        },
+        {
+          "id": "41c93621-b188-4f7f-8b62-998b5d006fe1",
+          "name": "Calendar",
+          "type": "calendar",
+          "config": {
+            "interval": "month",
+            "dateField": "date modified"
+          }
         }
-      ]
+      ],
+      "dataview": false
     },
     {
-      "id": "fbc0a0d2-c63f-4ba7-b7a8-b8b8c115f68a",
-      "name": "Sources",
-      "path": "Sources",
-      "recursive": true,
+      "id": "bea5c9cd-0dc3-4de7-8905-3a133b5cb198",
+      "name": "运动与健康",
+      "path": "Spaces/2-Area/运动与健康",
+      "recursive": false,
       "defaultName": "",
       "templates": [],
       "views": [
         {
-          "id": "14a316a8-54e5-4de2-a8b9-82695e2c8b2e",
+          "id": "545e2139-bd60-4c9d-9ead-3e11988332d0",
           "name": "Table",
           "type": "table",
+          "config": {
+            "sortField": "name",
+            "sortAsc": true,
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              }
+            }
+          }
+        },
+        {
+          "id": "f8de02b9-2620-4bb4-8f6d-faef2843ccba",
+          "name": "Gallery",
+          "type": "gallery",
           "config": {}
         }
       ]
     },
     {
-      "id": "5f554719-e4cf-4152-9c2e-1c0cd85c94ec",
-      "name": "Spaces",
-      "path": "Spaces",
+      "id": "e20e8961-c1b7-44ba-974b-46c2ac839a29",
+      "name": "微信读书",
+      "path": "Sources/Books/微信读书同步",
       "recursive": true,
       "defaultName": "",
       "templates": [],
       "views": [
         {
-          "id": "8ab9ce60-dec1-488f-b65d-6442fc9678ee",
-          "name": "Table",
-          "type": "table",
-          "config": {}
-        }
-      ]
-    },
-    {
-      "id": "f032c0df-09c0-43f0-a21e-fe155d4a43e1",
-      "name": "Cards",
-      "path": "Cards",
-      "recursive": true,
-      "defaultName": "",
-      "templates": [],
-      "views": [
-        {
-          "id": "f959c083-e5a7-45b6-b8ed-bd8ef2c0ec88",
+          "id": "aa893129-fed6-4db8-aec7-d159ffe31d66",
           "name": "Table",
           "type": "table",
           "config": {}
