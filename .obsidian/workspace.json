@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-08.md",
+                "file": "Cards/永久笔记/科学上网.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -83,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-08.md"
+                "file": "Cards/永久笔记/科学上网.md"
               }
             }
           },
@@ -93,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-08.md",
+                "file": "Cards/永久笔记/科学上网.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-08.md",
+                "file": "Cards/永久笔记/科学上网.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-08.md",
+                "file": "Cards/永久笔记/科学上网.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,11 +196,13 @@
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
   "active": "2c335130da11c5aa",
   "lastOpenFiles": [
+    "Cards/永久笔记/MacOS系统如何翻墙.md",
+    "Cards/永久笔记/科学上网.md",
     "Calendar/Daily notes/2022-12-08.md",
     "Calendar/Daily notes/未命名 2.canvas",
     "Calendar/Daily notes/2022-12-07.md",
@@ -208,8 +210,6 @@
     "Calendar/Daily notes/未命名 1.canvas",
     "Sources/Courses/人文社科通识/∑ 人文社科通识.md",
     "HOMEPAGE.md",
-    "Spaces/3-Resource/小知识点/∑ 小知识点.md",
-    "🧰 本库指南/Tutorials/» 本库非md的资源文件管理工作流.md",
-    "🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md"
+    "Spaces/3-Resource/小知识点/∑ 小知识点.md"
   ]
 }

@@ -245,3 +245,12 @@
   @keyframes spin10 { to { transform: translateY(-15.0em); } }
   @keyframes spin11 { to { transform: translateY(-16.5em); } }
   @keyframes spin12 { to { transform: translateY(-18.0em); } }
+
+  .tgmenu {
+    display: flex;
+    gap:5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  }

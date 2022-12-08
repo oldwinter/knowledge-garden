@@ -516,6 +516,14 @@
           "lastUpdated": 1670164662352
         }
       }
+    },
+    "GFW": {
+      "GFW": {
+        "currentVault": {
+          "count": 5,
+          "lastUpdated": 1670501582077
+        }
+      }
     }
   },
   "ruleConfigs": {
