@@ -10,7 +10,7 @@
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^-",
+  "firstCharactersDisableSuggestions": ":/^-，。、：；",
   "useCommonPrefixCompletionOfSuggestion": false,
   "patternsToSuppressTrigger": [
     "^~~~.*",
@@ -594,6 +594,62 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1670583617954
+        }
+      }
+    },
+    "云计算": {
+      "云计算": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1670591093629
+        }
+      }
+    },
+    "IAAS": {
+      "IAAS": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670591102560
+        }
+      }
+    },
+    "虚拟机": {
+      "虚拟机": {
+        "currentVault": {
+          "count": 1,
+          "lastUpdated": 1670591226937
+        }
+      }
+    },
+    "∑ 科学上网": {
+      "∑ 科学上网": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670595753331
+        }
+      }
+    },
+    "云硬盘": {
+      "云硬盘": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670596194859
+        }
+      }
+    },
+    "虚拟私有网络": {
+      "虚拟私有网络": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670596211641
+        }
+      }
+    },
+    "S3 - 对象存储服务": {
+      "S3 - 对象存储服务": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1670597080016
         }
       }
     }

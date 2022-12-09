@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md"
+                "file": "Spaces/2-Area/云计算与云原生/PAAS.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,20 +209,20 @@
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true
     }
   },
   "active": "520e6b4ded09506a",
   "lastOpenFiles": [
-    "Spaces/2-Area/个人职业生涯/常用数据结构和算法.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "README.md",
-    "HOMEPAGE.md",
-    "Atlas/Dataviews/本库的宏观统计数据.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "🍀 花园导览/🧩白板canvas-示意图.canvas",
-    "Spaces/2-Area/运动与健康/训练动作模式宏观概括.md",
-    "Sources/Books/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md",
-    "🧰 本库指南/🍫 本库方法论指南.md"
+    "Spaces/2-Area/云计算与云原生/运维监控服务.md",
+    "Spaces/2-Area/云计算与云原生/ELK.md",
+    "Spaces/2-Area/云计算与云原生/PAAS.md",
+    "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md",
+    "Spaces/2-Area/云计算与云原生/IAAS.md",
+    "Spaces/2-Area/云计算与云原生/IAAS层面的云端运维和管理.md",
+    "Spaces/2-Area/云计算与云原生/灾备、冗余和弹性伸缩.md",
+    "Spaces/2-Area/云计算与云原生/VPC.md",
+    "Spaces/2-Area/云计算与云原生/云硬盘.md",
+    "Spaces/2-Area/云计算与云原生/按需和包周期计费.md"
   ]
 }
