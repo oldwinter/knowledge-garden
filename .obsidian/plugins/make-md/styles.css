@@ -557,30 +557,11 @@ body:not(.is-mobile) .mk-section:hover .mk-collapse {
 }
 
 /* src/css/FileTree.css */
-.mk-hide-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window):not(.is-mobile) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
-  padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
-}
-.mk-hide-ribbon:not(.is-mobile) .workspace-ribbon.mod-left {
-  display: none;
-}
-.mk-hide-ribbon:not(.is-mobile) .workspace-ribbon.mod-right {
-  visibility: hidden;
-  position: absolute;
-}
-.mk-hide-ribbon:not(.is-mobile) .workspace-split.mod-right-split {
-  margin-right: 0;
-}
 .mk-hide-tabs .mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
   visibility: hidden;
 }
-.mk-hide-ribbon.is-mobile .workspace-drawer.mod-left .workspace-drawer-inner {
-  padding-left: 0 !important;
-}
 .is-mobile .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-header {
   padding-left: 0 !important;
-}
-.mk-hide-ribbon.is-mobile .workspace-drawer.mod-left .workspace-drawer-ribbon {
-  display: none;
 }
 .is-mobile .workspace-drawer.mod-left .workspace-drawer-active-tab-header {
   display: none;

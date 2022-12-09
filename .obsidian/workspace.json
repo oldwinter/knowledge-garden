@@ -4,16 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "9a0b84023e62090f",
+        "id": "ba5e90d8ec28257b",
         "type": "tabs",
         "children": [
           {
-            "id": "2c335130da11c5aa",
+            "id": "520e6b4ded09506a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f3a925feec66805b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/训练动作模式宏观概括.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -83,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md"
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md"
               }
             }
           },
@@ -93,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,17 +212,17 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "2c335130da11c5aa",
+  "active": "520e6b4ded09506a",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/∑ 健身补剂选择.md",
-    "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
-    "Spaces/2-Area/运动与健康/茶的分类.md",
+    "Spaces/2-Area/个人职业生涯/常用数据结构和算法.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "README.md",
+    "HOMEPAGE.md",
+    "Atlas/Dataviews/本库的宏观统计数据.md",
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/2-Area/运动与健康/体脂率对增肌效果的影响.md",
-    "Spaces/2-Area/运动与健康/男性健康且符合大众审美的体脂率.md",
-    "Cards/永久笔记/∑ 科学上网.md",
-    "Calendar/Daily notes/macOS禁用SIP教程.md",
-    "Calendar/Daily notes/2022-12-08.md",
-    "Spaces/2-Area/运动与健康/局部减脂的可行性.md"
+    "🍀 花园导览/🧩白板canvas-示意图.canvas",
+    "Spaces/2-Area/运动与健康/训练动作模式宏观概括.md",
+    "Sources/Books/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md",
+    "🧰 本库指南/🍫 本库方法论指南.md"
   ]
 }

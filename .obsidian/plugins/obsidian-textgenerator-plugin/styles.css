@@ -250,7 +250,12 @@
     padding: 10px;
   }
 
+  .cm-embed-block:hover > .tgmenu {
+    opacity: 1;
+    }
+
   .tgmenu {
+    opacity: 0;
     display: flex;
     gap:5px;
     position: absolute;
