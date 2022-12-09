@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.0.4
+Version 2.0.6
 Created by @colineckert
 
 Readme:
@@ -258,8 +258,8 @@ body.is-mobile.theme-dark.mobile-black-background {
 }
 
 /* H2 styling */
-h2,
-.HyperMD-header.HyperMD-header-2.cm-line {
+body.h2-underline h2,
+body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
   border-bottom: 2px solid var(--background-modifier-border);
   width: 100%;
   padding-bottom: 2px;
@@ -345,24 +345,28 @@ span.search-result-file-matched-text {
   color: var(--atom-gray-1);
 }
 .token.punctuation,
+.token.plain-text,
+.token.parameter,
+.token.dom.variable,
 .cm-hmd-codeblock.cm-bracket {
   color: var(--atom-gray-2) !important;
 }
 code[class*='language-'],
 .token.selector,
 .token.tag,
-.token.parameter,
+.token.property,
 .token.property-access,
-.cm-def,
+.token.dom.variable,
 .cm-hmd-codeblock.cm-tag,
+.cm-variable,
 .cm-property,
 .cm-qualifier {
   color: var(--atom-red);
 }
 .token.boolean,
 .token.number,
-.token.constant,
 .token.symbol,
+.token.builtin,
 .token.attr-name,
 .token.deleted,
 .cm-attribute,
@@ -373,9 +377,9 @@ code[class*='language-'],
 .token.string,
 .token.char,
 .token.attr-value,
-.token.builtin,
 .token.inserted,
-.cm-hmd-codeblock.cm-string {
+.cm-hmd-codeblock.cm-string,
+.cm-hmd-codeblock.cm-string-2 {
   color: var(--atom-green);
 }
 .token.operator,
@@ -392,15 +396,15 @@ code[class*='language-'],
   color: var(--atom-purple);
 }
 .token.function,
-.token.macro.property,
-.cm-variable {
+.token.method,
+.token.macro.property {
   color: var(--atom-blue);
 }
 .token.class-name,
-.token.property,
+.token.constant,
 .cm-atom,
 code .cm-tag,
-.theme-dark .cm-variable-2,
+.cm-variable-2,
 .cm-type {
   color: var(--atom-yellow);
 }
@@ -681,13 +685,13 @@ settings:
         title: Inline code blocks font color (Light mode)
         type: variable-color
         format: hex
-        default: '#5C5C5C'
+        default: '#BEC6CF'
     -
         id: code-color-d
         title: Inline code blocks font color (Dark mode)
         type: variable-color
         format: hex
-        default: '#A6A6A6'
+        default: '#555E68'
     - 
         id: tag-background-color-l
         title: Tag background color (Light mode)
@@ -767,6 +771,12 @@ settings:
         format: hex
         default: '#2E80F2'
     - 
+        id: h2-underline
+        title: H2 underline
+        description: Toggle H2 underline (border-bottom)
+        type: class-toggle
+        default: true
+    -
         id: level-3-headings
         title: Level 3 Headings
         type: heading

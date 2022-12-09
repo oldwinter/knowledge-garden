@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/云计算与云原生/PAAS.md"
+                "file": "Cards/永久笔记/gitignore 语法.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/云计算与云原生/PAAS.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,9 +214,9 @@
   },
   "active": "520e6b4ded09506a",
   "lastOpenFiles": [
+    "Spaces/2-Area/云计算与云原生/PAAS.md",
     "Spaces/2-Area/云计算与云原生/运维监控服务.md",
     "Spaces/2-Area/云计算与云原生/ELK.md",
-    "Spaces/2-Area/云计算与云原生/PAAS.md",
     "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md",
     "Spaces/2-Area/云计算与云原生/IAAS.md",
     "Spaces/2-Area/云计算与云原生/IAAS层面的云端运维和管理.md",
