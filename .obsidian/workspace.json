@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-10.md",
+                "file": "AboutTheGarden.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-10.md"
+                "file": "AboutTheGarden.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-10.md",
+                "file": "AboutTheGarden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-10.md",
+                "file": "AboutTheGarden.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-10.md",
+                "file": "AboutTheGarden.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,20 +209,21 @@
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true,
+      "digitalgarden:Digital Garden Publication Center": false
     }
   },
   "active": "520e6b4ded09506a",
   "lastOpenFiles": [
-    "🧰 本库指南/Tutorials/∑ 本库 ACCESS 工作流汇总.md",
-    "🧰 本库指南/Tutorials/obsidian中如何找到以前写过的笔记.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "🧰 本库指南/🍫 本库方法论指南.md",
-    "🍀 花园导览/🧀 知识管理.md",
-    "Spaces/2-Area/云计算与云原生/PAAS.md",
-    "Cards/永久笔记/gitignore 语法.md",
-    "Spaces/2-Area/云计算与云原生/运维监控服务.md",
-    "Spaces/2-Area/云计算与云原生/ELK.md",
-    "Spaces/2-Area/云计算与云原生/∑ 云计算与云原生.md"
+    "HOMEPAGE.md",
+    "README.md",
+    "Calendar/Daily notes/2022-12-10.md",
+    "🍀 花园导览/其他/🎥 我的PPT.md",
+    "Spaces/About Spaces.md",
+    "🍀 花园导览/🍀 花园导览.md",
+    "AboutTheGarden.md",
+    "🍀 花园导览/🏋 增肌减脂.md",
+    "🍀 花园导览/🧩白板canvas-示意图.canvas",
+    "Spaces/3-Resource/王者荣耀/未命名.canvas"
   ]
 }

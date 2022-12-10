@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-06
-date modified: 2022-09-21
-tags: 本库教程
+date modified: 2022-12-10
+tags: [本库教程]
 title: README
 ---
 <h1 align="center">oldwinterの数字花园</h1>
@@ -35,7 +35,6 @@ title: README
 ![](https://img.oldwinter.top/白.png)
 
 ![](https://img.oldwinter.top/黑.png)
-
 
 ## 贡献与交流
 

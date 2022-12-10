@@ -1,0 +1,22 @@
+{
+  "githubRepo": "digitalgarden",
+  "githubToken": "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",
+  "githubUserName": "oldwinter",
+  "gardenBaseUrl": "",
+  "prHistory": [],
+  "theme": "{\"name\":\"Yin and Yang\",\"author\":\"Chetachi E.\",\"repo\":\"chetachiezikeuzor/Yin-and-Yang-Theme\",\"screenshot\":\"assets/screenshot.png\",\"modes\":[\"dark\",\"light\"],\"legacy\":true,\"cssUrl\":\"https://raw.githubusercontent.com/chetachiezikeuzor/Yin-and-Yang-Theme/HEAD/obsidian.css\"}",
+  "baseTheme": "dark",
+  "faviconPath": "",
+  "showRibbonIcon": true,
+  "noteSettingsIsInitialized": true,
+  "siteName": "Digital Garden",
+  "defaultNoteSettings": {
+    "dgHomeLink": true,
+    "dgPassFrontmatter": false,
+    "dgShowBacklinks": true,
+    "dgShowLocalGraph": true,
+    "dgShowInlineTitle": true,
+    "dgShowFileTree": true,
+    "dgEnableSearch": true
+  }
+}
