@@ -13,10 +13,10 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Extras/Canvas/王者荣耀.canvas",
+                "file": "Extras/Canvas/🧩王者荣耀.canvas",
                 "viewState": {
-                  "x": 50.219999999999864,
-                  "y": 107.87999999999992,
+                  "x": -358.9799999999987,
+                  "y": -241.8000000000006,
                   "zoom": 0,
                   "snapToGrid": false
                 }
@@ -24,38 +24,12 @@
             }
           },
           {
-            "id": "13776b8b464d70d8",
+            "id": "b82b57513aa095b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/需求管理.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "86da125128800d01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3ef9de6d5b98b3b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/飞书妙记.md",
+                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -76,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/飞书妙记.md"
+                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md"
               }
             }
           },
@@ -149,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/飞书妙记.md",
+                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/飞书妙记.md",
+                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -196,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/飞书妙记.md",
+                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -256,17 +230,17 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "3ef9de6d5b98b3b8",
+  "active": "b82b57513aa095b0",
   "lastOpenFiles": [
-    "🍀 花园导览/🗜 效率工具.md",
-    "Cards/永久笔记/🤖滴答清单.md",
-    "Cards/永久笔记/滴答清单.md",
-    "Cards/永久笔记/番茄工作法.md",
-    "Spaces/2-Area/个人职业生涯/GTD.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Spaces/2-Area/个人职业生涯/DevOps.md",
-    "Spaces/2-Area/个人职业生涯/私有云.md",
-    "Spaces/2-Area/云计算与云原生/公有云.md",
-    "Cards/永久笔记/云原生.md"
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中做Iframe嵌入.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞美化和排版.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md",
+    "🧰 本库指南/Tutorials/本库推荐的obsidian入门路线及资源.md",
+    "🧰 本库指南/Tutorials/众多双链笔记中我选obsidian的核心原因.md",
+    "Cards/永久笔记/obsidian 让我爱不释手的功能和细节.md",
+    "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md"
   ]
 }

@@ -29,7 +29,7 @@ title: + Building a Second Brain 翻译和读书笔记
 
 ### 第二大脑是什么
 
-[[What Is a Second Brain? - 第二大脑是什么？]] #待办/今天
+[[What Is a Second Brain？ - 第二大脑是什么？]] #待办/今天
 
 ### 第二大脑如何生效
 
