@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AboutTheGarden.md"
+                "file": "README.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -215,13 +215,13 @@
   },
   "active": "520e6b4ded09506a",
   "lastOpenFiles": [
+    "AboutTheGarden.md",
     "HOMEPAGE.md",
     "README.md",
     "Calendar/Daily notes/2022-12-10.md",
     "🍀 花园导览/其他/🎥 我的PPT.md",
     "Spaces/About Spaces.md",
     "🍀 花园导览/🍀 花园导览.md",
-    "AboutTheGarden.md",
     "🍀 花园导览/🏋 增肌减脂.md",
     "🍀 花园导览/🧩白板canvas-示意图.canvas",
     "Spaces/3-Resource/王者荣耀/未命名.canvas"
