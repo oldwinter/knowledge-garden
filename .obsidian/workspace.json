@@ -4,16 +4,32 @@
     "type": "split",
     "children": [
       {
-        "id": "ba5e90d8ec28257b",
+        "id": "cdd4385c184a44d4",
         "type": "tabs",
         "children": [
           {
-            "id": "520e6b4ded09506a",
+            "id": "0ad237f83c050ab9",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Extras/Canvas/王者荣耀.canvas",
+                "viewState": {
+                  "x": 50.219999999999864,
+                  "y": 107.87999999999992,
+                  "zoom": 0,
+                  "snapToGrid": false
+                }
+              }
+            }
+          },
+          {
+            "id": "13776b8b464d70d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md",
+                "file": "Cards/永久笔记/需求管理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,19 +37,46 @@
             }
           },
           {
-            "id": "f3a925feec66805b",
+            "id": "86da125128800d01",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/训练动作模式宏观概括.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3ef9de6d5b98b3b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/飞书妙记.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4334274705bcb5d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/Books/读书笔记/📚三体.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -96,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md"
+                "file": "Cards/永久笔记/飞书妙记.md"
               }
             }
           },
@@ -106,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md",
+                "file": "Cards/永久笔记/飞书妙记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +161,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md",
+                "file": "Cards/永久笔记/飞书妙记.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +196,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md",
+                "file": "Cards/永久笔记/飞书妙记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +211,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239.5
+    "width": 200
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -213,17 +256,17 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "520e6b4ded09506a",
+  "active": "3ef9de6d5b98b3b8",
   "lastOpenFiles": [
-    "Cards/永久笔记/本库如何免费发布至web.md",
-    "Spaces/2-Area/运动与健康/不运动的减肥方法-NEAT.md",
-    "Spaces/2-Area/运动与健康/减脂应该选择少吃500大卡还是运动多消耗500大卡.md",
-    "Spaces/2-Area/运动与健康/减脂是否应该计算自己的基础代谢和每日饮食摄入热量.md",
-    "Spaces/2-Area/运动与健康/合理减脂速度的热量缺口为每天200-500千卡.md",
-    "Spaces/2-Area/运动与健康/靠谱的运动健身领域博主.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/2-Area/运动与健康/仰望尾迹云.md",
-    "Spaces/2-Area/运动与健康/帅soserious.md",
-    "Spaces/2-Area/运动与健康/Gandy.md"
+    "🍀 花园导览/🗜 效率工具.md",
+    "Cards/永久笔记/🤖滴答清单.md",
+    "Cards/永久笔记/滴答清单.md",
+    "Cards/永久笔记/番茄工作法.md",
+    "Spaces/2-Area/个人职业生涯/GTD.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Spaces/2-Area/个人职业生涯/DevOps.md",
+    "Spaces/2-Area/个人职业生涯/私有云.md",
+    "Spaces/2-Area/云计算与云原生/公有云.md",
+    "Cards/永久笔记/云原生.md"
   ]
 }

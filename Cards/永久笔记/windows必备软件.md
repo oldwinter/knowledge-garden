@@ -9,3 +9,15 @@ title: windows必备软件
 [[utools]]
 
 [[AutoHotkey]]
+
+- [[vscode]]
+- [[xshell]]
+- [[notepad++]]
+- [[tortoiseGit]]
+- [[xmind]]
+- [[goland]]
+- [[ManicTime]]
+- [[Listary]]
+- [[snipaste]]
+- [[navicat]]
+- [[🤖burp suite]]

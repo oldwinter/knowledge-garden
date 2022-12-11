@@ -4,6 +4,10 @@ date modified: 2022-08-20
 title: 🤖kubernetes
 ---
 
+基础概念：
+- [[命名空间 - namespace]]
+- [[🤖kubectl]]
+
 ## 小型化测试
 
 - minikube 用国内镜像源安装：  

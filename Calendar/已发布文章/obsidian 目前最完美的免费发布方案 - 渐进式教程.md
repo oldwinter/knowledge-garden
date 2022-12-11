@@ -59,7 +59,7 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 
 ### 总的来说：
 
-通过基于[[jekyll]]开源的静态blog模板，通过[[git push]]自动触发[[netlify]]进行构建操作，将md文件转换成静态服务器可以识别的html文件。
+通过基于[[jekyll]]开源的静态blog模板，通过[[git push]]自动触发[[🔗netlify]]进行构建操作，将md文件转换成静态服务器可以识别的html文件。
 
 ### 一步步来说：
 
@@ -76,14 +76,14 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 		- linter插件支持一键对全库进行markdown格式美化，强烈推荐。⚠️执行前请先备份。
 		- 有能力的朋友，可以直接将obsidian笔记库添加为[[git submodule]]。
 	- ctrl + c 停止`bundle exec jekyll serve`命令，并重新执行。接着浏览器打开`http://localhost:4000/笔记名`。例如我的obsidian笔记库里面有`数字花园`这条笔记，则访问`http://localhost:4000/数字花园`即可看到笔记。
-- 2.[[netlify]]配置自动构建。
+- 2.[[🔗netlify]]配置自动构建。
 	- 按照这个教程[手把手教你使用Netlify部署博客及部署自动化 - 知乎](https://zhuanlan.zhihu.com/p/55252024)，界面一步步点，都按默认配置来，从而将上一步fork的自己仓库，通过netlify构建和发布。
-		- 主流的免费的还有[[github pages]]和[[vercel]]服务，前者缺少[[CDN]]导致国内访问很慢，后者存在非html后缀的链接报404错误的问题。
+		- 主流的免费的还有[[github pages]]和[[🔗vercel]]服务，前者缺少[[CDN]]导致国内访问很慢，后者存在非html后缀的链接报404错误的问题。
 	- 完成上一步后，应该能得到一个`https://master--zippy-dango-d43c8d.netlify.app/`类似格式的网址，打开后正常显示原仓库的页面即可。
 - 3.将本地全部文件push至github。
 	- 本地仓库的根目录执行git三件套：`git add .` `git commit -m "first commit"` `git push`
 		- 有能力的朋友，可以将这个步骤，用效率工具，包装成一个定时执行或一键执行的命令。
-	- 回到[[netlify]]页面，应该能看到它开始被push操作触发了构建动作，等几分钟后，打开得到的新网址，看是否已经包含了obsidian笔记库内容，链接为`域名/笔记名`。例如我的obsidian笔记库里面有`数字花园`这条笔记，则访问`https://master--zippy-dango-d43c8d.netlify.app/数字花园`即可看到笔记。
+	- 回到[[🔗netlify]]页面，应该能看到它开始被push操作触发了构建动作，等几分钟后，打开得到的新网址，看是否已经包含了obsidian笔记库内容，链接为`域名/笔记名`。例如我的obsidian笔记库里面有`数字花园`这条笔记，则访问`https://master--zippy-dango-d43c8d.netlify.app/数字花园`即可看到笔记。
 - 4.定制自己的首页、网站名和样式
 	- 首页修改。修改`_pages`文件夹下的`index.md`即可，可直接参考[dg/index.md at master · oldwinter/dg · GitHub](https://github.com/oldwinter/dg/blob/master/_pages/index.md)
 	- 网站名修改。修改根目录的`_config.yaml`第一行title字段即可。
@@ -92,7 +92,7 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 - 5.⚠️重要注意事项
 	- 图片推荐使用[[图片保存：图床or本地|图床]]。若你未使用图床，而是使用本地图片。则需
 		- 在obsidian库中，引用本地图片不使用`![[xx.png]]`，而是使用`![](xx.png)`格式。
-		- 在[[netlify]]的Build Setting的Build command设置中，将图片从obsidian的图片库移动至工程根目录，如`mv _notes/Extras . && jekyll build --trace`。
+		- 在[[🔗netlify]]的Build Setting的Build command设置中，将图片从obsidian的图片库移动至工程根目录，如`mv _notes/Extras . && jekyll build --trace`。
 - （可选）自定义自己的域名
 	- 在netlify界面按提示一步步操作即可，需要有自己的域名且已经备案。
 	- [[第一次购买并备案域名的经验]]
