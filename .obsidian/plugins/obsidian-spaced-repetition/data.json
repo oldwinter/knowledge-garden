@@ -16,10 +16,12 @@
     "randomizeCardOrder": true,
     "convertHighlightsToClozes": true,
     "convertBoldTextToClozes": true,
-    "singlelineCardSeparator": "??",
-    "singlelineReversedCardSeparator": "???",
+    "convertCurlyBracketsToClozes": false,
+    "singleLineCardSeparator": "::",
+    "singleLineReversedCardSeparator": ":::",
     "multilineCardSeparator": "+++",
     "multilineReversedCardSeparator": "",
+    "enableNoteReviewPaneOnStartup": true,
     "tagsToReview": [
       "#复习回顾/常青笔记",
       "#复习回顾",
@@ -29,17 +31,21 @@
       "🍀 花园导览",
       "🧰 本库指南"
     ],
-    "openRandomNote": true,
+    "openRandomNote": false,
     "autoNextNote": true,
     "disableFileMenuReviewOptions": true,
     "maxNDaysNotesReviewQueue": 365,
+    "initiallyExpandAllSubdecksInTree": false,
     "baseEase": 250,
     "lapsesIntervalChange": 0.5,
     "easyBonus": 1.3,
     "maximumInterval": 36525,
     "maxLinkFactor": 1,
-    "showDebugMessages": false
+    "showDebugMessages": false,
+    "singlelineCardSeparator": "??",
+    "singlelineReversedCardSeparator": "???"
   },
-  "buryDate": "2022-09-21",
-  "buryList": []
+  "buryDate": "2022-12-13",
+  "buryList": [],
+  "historyDeck": null
 }
