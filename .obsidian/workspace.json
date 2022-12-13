@@ -4,32 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cdd4385c184a44d4",
+        "id": "afecad5152fa1d10",
         "type": "tabs",
         "children": [
           {
-            "id": "0ad237f83c050ab9",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Extras/Canvas/🧩王者荣耀.canvas",
-                "viewState": {
-                  "x": -358.9799999999987,
-                  "y": -241.8000000000006,
-                  "zoom": 0,
-                  "snapToGrid": false
-                }
-              }
-            }
-          },
-          {
-            "id": "b82b57513aa095b0",
+            "id": "0434a6076fd97760",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+                "file": "Calendar/Daily notes/2022-12-13.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -37,20 +21,40 @@
             }
           },
           {
-            "id": "4334274705bcb5d5",
+            "id": "fdf3073b47c337e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Books/读书笔记/📚三体.md",
+                "file": "Calendar/Daily notes/2022-12-13.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
+            }
+          },
+          {
+            "id": "f25a58b27d6a376f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2022-12-13.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4e65b4f76d9bd13c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md"
+                "file": "Calendar/Daily notes/2022-12-13.md"
               }
             }
           },
@@ -123,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+                "file": "Calendar/Daily notes/2022-12-13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+                "file": "Calendar/Daily notes/2022-12-13.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -170,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+                "file": "Calendar/Daily notes/2022-12-13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,7 +185,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -196,14 +201,23 @@
         "type": "tabs",
         "children": [
           {
-            "id": "68c9ab019d828f87",
+            "id": "73b644d0a3567fa6",
+            "type": "leaf",
+            "state": {
+              "type": "online.louis01.ava",
+              "state": {}
+            }
+          },
+          {
+            "id": "1f81e2916745870f",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -212,7 +226,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "omnisearch:Omnisearch": true,
       "obsidian-projects:Open projects": false,
       "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": true,
@@ -222,25 +235,26 @@
       "canvas:Create new canvas": false,
       "obsidian-weread-plugin:Weread": false,
       "templater-obsidian:Templater": true,
-      "obsidian-spaced-repetition:复习卡片": true,
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true,
-      "digitalgarden:Digital Garden Publication Center": false
+      "digitalgarden:Digital Garden Publication Center": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "b82b57513aa095b0",
+  "active": "0434a6076fd97760",
   "lastOpenFiles": [
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中做Iframe嵌入.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞美化和排版.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md",
-    "🧰 本库指南/Tutorials/本库推荐的obsidian入门路线及资源.md",
-    "🧰 本库指南/Tutorials/众多双链笔记中我选obsidian的核心原因.md",
-    "Cards/永久笔记/obsidian 让我爱不释手的功能和细节.md",
-    "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md"
+    "Calendar/Daily notes/AI加持的服务和助手.md",
+    "Calendar/Daily notes/2022-12-13.md",
+    "Calendar/Daily notes/AI科研助手-scispace.md",
+    "Calendar/Daily notes/2022-12-06.md",
+    "Calendar/Daily notes/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
+    "Spaces/2-Area/运动与健康/传统健美与健体.md",
+    "Extras/Canvas/🧩白板canvas-示意图.canvas",
+    "Sources/Courses/如何成为学习高手-高冷冷/所处物理环境对学习和工作效率影响极大.md",
+    "Sources/Articles/常青笔记阅读笔记/对话涵盖多个讨论者的常青笔记可能会促进协作意义构建.md",
+    "README.md"
   ]
 }

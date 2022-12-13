@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.1.0
+Version 2.1.2
 Created by @colineckert
 
 Readme:
@@ -91,7 +91,7 @@ body.theme-light.is-mobile {
   --color-base-05: #fcfcfc;
   --color-base-10: #f6f7f8; /* code blocks */
   --color-base-20: #f6f7f8;
-  --color-base-25: #e3e3e3;
+  --color-base-25: #f0f0f0;
   --color-base-30: #ebedf0; /* soften dividing lines */
   --color-base-35: #d4d4d4;
   --color-base-40: #bdbdbd;
@@ -180,7 +180,7 @@ body.theme-dark.is-mobile {
   --color-base-00: #1c2127; /* main editor window */
   --color-base-10: #282c34; /* code blocks */
   --color-base-20: #181c20; /* top unselected unfocused nav */
-  --color-base-25: #181c20;
+  --color-base-25: #2c313c;
   --color-base-30: #35393e;
   --color-base-35: #3f3f3f;
   --color-base-40: #555;
@@ -331,6 +331,11 @@ span.search-result-file-matched-text {
   box-decoration-break: clone;
 }
 
+/* Highlight active line */
+body.active-line .cm-active {
+  background-color: var(--color-base-25);
+}
+
 /* ------------------- */
 /* One Dark Syntax Coloring */
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
@@ -351,7 +356,6 @@ span.search-result-file-matched-text {
 .cm-hmd-codeblock.cm-bracket {
   color: var(--atom-gray-2) !important;
 }
-code[class*='language-'],
 .token.selector,
 .token.tag,
 .token.property,
@@ -884,6 +888,12 @@ settings:
         title: Disable mobile floating-action button
         description: Revert placement of edit/preview button to default in header (mobile)
         id: floating-button-off
+        type: class-toggle
+        default: false
+    -
+        title: Highlight active line
+        description: Change background color of current working line
+        id: active-line
         type: class-toggle
         default: false
     -

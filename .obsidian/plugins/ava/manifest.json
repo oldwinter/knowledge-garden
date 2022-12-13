@@ -1,10 +1,1 @@
-{
-	"id": "ava",
-	"name": "AVA - Personal Learning Assistant",
-	"version": "2.3.1",
-	"minAppVersion": "0.12.0",
-	"description": "AI-Assited Learning in Obsidian",
-	"author": "louis030195",
-	"authorUrl": "https://louis030195.com",
-	"isDesktopOnly": true
-}
+{"id":"ava","name":"AVA - Personal Learning Assistant","version":"2.3.3","minAppVersion":"0.12.0","description":"AI-Assited Learning in Obsidian","author":"louis030195","authorUrl":"https://louis030195.com","isDesktopOnly":true}
