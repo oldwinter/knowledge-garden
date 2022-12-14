@@ -13,11 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "🍀 花园导览/🏋 增肌减脂.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
+            }
+          },
+          {
+            "id": "76e417b1629af5ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f8ae1297ac5ba567",
+            "type": "leaf",
+            "state": {
+              "type": "swar8080/AVAILABLE_PLUGIN_UPDATES",
+              "state": {}
             }
           },
           {
@@ -54,7 +75,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md"
+                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md"
               }
             }
           },
@@ -127,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +161,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -174,7 +196,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,8 +207,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -239,22 +260,21 @@
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true,
-      "digitalgarden:Digital Garden Publication Center": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "0434a6076fd97760",
+  "active": "76e417b1629af5ea",
   "lastOpenFiles": [
+    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/发展技术领导力.md",
+    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/∑ 左耳听风-陈皓（左耳朵耗子）.md",
+    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/程序员如何用技术变现-心法篇.md",
+    "🍀 花园导览/🏋 增肌减脂.md",
+    "README.md",
+    "🍀 花园导览/🧀 知识管理.md",
     "Calendar/Daily notes/2022-12-13.md",
     "Cards/永久笔记/祛魅.md",
     "Calendar/Daily notes/AI加持的服务和助手.md",
-    "Calendar/Daily notes/AI科研助手-scispace.md",
-    "Calendar/Daily notes/2022-12-06.md",
-    "Calendar/Daily notes/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
-    "Spaces/2-Area/运动与健康/传统健美与健体.md",
-    "Extras/Canvas/🧩白板canvas-示意图.canvas",
-    "Sources/Courses/如何成为学习高手-高冷冷/所处物理环境对学习和工作效率影响极大.md",
-    "Sources/Articles/常青笔记阅读笔记/对话涵盖多个讨论者的常青笔记可能会促进协作意义构建.md"
+    "Calendar/Daily notes/AI科研助手-scispace.md"
   ]
 }
