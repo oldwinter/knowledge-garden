@@ -35,3 +35,9 @@ publish.js
 *.pdf
 *.epub
 *.mobi
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.doc
+*.docx

@@ -3,16 +3,20 @@ date created: 2022-06-09
 date modified: 2022-08-20
 title: z命令
 ---
-
-[mkdir ~/code  
+```
+mkdir ~/code  
 
 cd ~/code  
 
-git clone <<<<https://github.com/rupa/z.git>>>>  
+git clone https://github.com/rupa/z.git  
 
 echo 'source ~/code/z/z.sh' >> ~/.zshrc  
 
-source ~/.zshrc](<z 是一个相当实用的 cd 命令增强脚本，目前支持 bash
+source ~/.zshrc
+```
+
+
+z 是一个相当实用的 cd 命令增强脚本，目前支持 bash
 
 和 zsh。使用 z，我们能够在 Linux 命令行实现更加快速的导航。
 

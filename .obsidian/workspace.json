@@ -13,70 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/🏋 增肌减脂.md",
+                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
-          },
-          {
-            "id": "76e417b1629af5ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f8ae1297ac5ba567",
-            "type": "leaf",
-            "state": {
-              "type": "swar8080/AVAILABLE_PLUGIN_UPDATES",
-              "state": {}
-            }
-          },
-          {
-            "id": "fdf3073b47c337e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2022-12-13.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f25a58b27d6a376f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2022-12-13.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4e65b4f76d9bd13c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md"
+                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md"
               }
             }
           },
@@ -149,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
+                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
+                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -196,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/华为的编程基础能力要求大纲.md",
+                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -258,23 +202,23 @@
       "templater-obsidian:Templater": true,
       "obsidian42-brat:BRAT": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": true,
       "obsidian-spaced-repetition:复习卡片": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "76e417b1629af5ea",
+  "active": "0434a6076fd97760",
   "lastOpenFiles": [
-    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/发展技术领导力.md",
-    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/∑ 左耳听风-陈皓（左耳朵耗子）.md",
-    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/程序员如何用技术变现-心法篇.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/传统健美、古典健美和健体的区别.md",
+    "Spaces/2-Area/运动与健康/健体.md",
+    "Spaces/2-Area/运动与健康/古典健美.md",
+    "Spaces/2-Area/运动与健康/传统健美与健体.md",
+    "Calendar/Daily notes/2022-12-16.md",
     "🍀 花园导览/🏋 增肌减脂.md",
-    "README.md",
-    "🍀 花园导览/🧀 知识管理.md",
-    "Calendar/Daily notes/2022-12-13.md",
-    "Cards/永久笔记/祛魅.md",
-    "Calendar/Daily notes/AI加持的服务和助手.md",
-    "Calendar/Daily notes/AI科研助手-scispace.md"
+    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/∑ 左耳听风-陈皓（左耳朵耗子）.md",
+    "Sources/Courses/∑ 课程笔记.md",
+    "Spaces/2-Area/个人职业生涯/DevOps.md"
   ]
 }
