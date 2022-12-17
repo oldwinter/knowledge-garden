@@ -1,4 +1,5 @@
 {
+  "debug": false,
   "openai": {
     "promptLines": 5,
     "automatic": false,

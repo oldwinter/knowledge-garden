@@ -4733,6 +4733,7 @@ ${key}=${defaultNoteSettings[key]}`;
         "src/site/_data/filetree.js",
         "src/site/img/outgoing.svg",
         "src/helpers/constants.js",
+        "src/helpers/utils.js",
         "netlify/functions/search/search.js"
       ];
       for (const file of filesToModify) {
@@ -4860,6 +4861,13 @@ var SettingView = class {
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
+      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show local graph for notes (dg-show-local-graph)").setDesc("When turned on, notes will show its local graph on desktop. It will not be shown on mobile devices.").addToggle((t) => {
+        t.setValue(this.settings.defaultNoteSettings.dgShowLocalGraph);
+        t.onChange((val) => {
+          this.settings.defaultNoteSettings.dgShowLocalGraph = val;
+          this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
+        });
+      });
       new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show backlinks for notes (dg-show-backlinks)").setDesc("When turned on, notes will show backlinks in a sidebar on desktop and at the bottom of the page on mobile.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowBacklinks);
         t.onChange((val) => {
@@ -4867,10 +4875,10 @@ var SettingView = class {
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show local graph for notes (dg-show-local-graph)").setDesc("When turned on, notes will show its local graph on desktop. It will not be shown on mobile devices.").addToggle((t) => {
-        t.setValue(this.settings.defaultNoteSettings.dgShowLocalGraph);
+      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show a table of content for notes (dg-show-toc)").setDesc("When turned on, notes will show all headers as a table of content in a sidebar on desktop. It will not be shown on mobile devices.").addToggle((t) => {
+        t.setValue(this.settings.defaultNoteSettings.dgShowToc);
         t.onChange((val) => {
-          this.settings.defaultNoteSettings.dgShowLocalGraph = val;
+          this.settings.defaultNoteSettings.dgShowToc = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
@@ -5444,7 +5452,8 @@ var DEFAULT_SETTINGS = {
     dgShowLocalGraph: false,
     dgShowInlineTitle: false,
     dgShowFileTree: false,
-    dgEnableSearch: false
+    dgEnableSearch: false,
+    dgShowToc: false
   }
 };
 var DigitalGarden = class extends import_obsidian5.Plugin {

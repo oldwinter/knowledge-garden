@@ -11,12 +11,31 @@
             "id": "0434a6076fd97760",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "da3cfd31697115ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e23ce98c98d12306",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+                "viewState": {
+                  "x": 327.24,
+                  "y": -109.7400000000001,
+                  "zoom": 0,
+                  "snapToGrid": false
+                }
               }
             }
           }
@@ -83,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md"
+                "file": "Cards/永久笔记/个人知识笔记系统.md"
               }
             }
           },
@@ -93,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
+                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
+                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/设立健身成果的一些阶段性挑战来激励自己.md",
+                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +210,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-projects:Open projects": false,
       "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": true,
       "graph:查看关系图谱": true,
@@ -205,20 +223,21 @@
       "obsidian-spaced-repetition:复习卡片": false,
       "omnisearch:Omnisearch": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "0434a6076fd97760",
+  "active": "e23ce98c98d12306",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/2-Area/运动与健康/传统健美、古典健美和健体的区别.md",
-    "Spaces/2-Area/运动与健康/健体.md",
-    "Spaces/2-Area/运动与健康/古典健美.md",
-    "Spaces/2-Area/运动与健康/传统健美与健体.md",
-    "Calendar/Daily notes/2022-12-16.md",
-    "🍀 花园导览/🏋 增肌减脂.md",
-    "Sources/Courses/左耳听风-陈皓（左耳朵耗子）/∑ 左耳听风-陈皓（左耳朵耗子）.md",
-    "Sources/Courses/∑ 课程笔记.md",
-    "Spaces/2-Area/个人职业生涯/DevOps.md"
+    "Cards/永久笔记/raycast.md",
+    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+    "Cards/永久笔记/搜索一切.md",
+    "Extras/Canvas/∑ Canvas创建入口.md",
+    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas.md",
+    "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
+    "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
+    "Cards/永久笔记/个人信息管理系统.md",
+    "Calendar/Daily notes/2022-12-17.md",
+    "Extras/Canvas/🧩白板canvas-示意图.canvas"
   ]
 }

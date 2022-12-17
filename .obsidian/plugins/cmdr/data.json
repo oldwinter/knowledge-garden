@@ -72,21 +72,6 @@
       "various-complements",
       "obsidian-textgenerator-plugin",
       "obsidian-focus-plugin"
-    ],
-    "leftRibbon": [
-      "新建 Excalidraw 绘图",
-      "Show Slide Preview",
-      "插入模板",
-      "BRAT",
-      "打开命令面板",
-      "打开快速切换",
-      "复习卡片",
-      "Create a new database table",
-      "Omnisearch",
-      "Toggle Stille",
-      "管理工作区布局",
-      "Templater",
-      "Advanced Tables Toolbar"
     ]
   },
   "spacing": "8",

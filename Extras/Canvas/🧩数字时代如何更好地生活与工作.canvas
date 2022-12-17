@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"1c7ce8d4ba1748db","x":-205,"y":10,"width":400,"height":140,"type":"file","file":"Cards/永久笔记/raycast.md"},
+		{"id":"690b2e86d8ab7432","x":-205,"y":251,"width":400,"height":113,"type":"file","file":"Cards/永久笔记/搜索一切.md"},
+		{"id":"53885c8675befb1f","x":-472,"y":-540,"width":236,"height":244,"type":"file","file":"Cards/永久笔记/个人信息管理系统.md"},
+		{"id":"f3c55e88bdd6d008","x":-205,"y":-540,"width":400,"height":244,"type":"file","file":"Cards/永久笔记/个人高效学习系统.md"},
+		{"id":"0c31f2337bd29637","x":-205,"y":-246,"width":400,"height":190,"type":"file","file":"Cards/永久笔记/个人任务管理系统.md"},
+		{"id":"aa078520ae03d297","x":314,"y":-246,"width":400,"height":400,"type":"file","file":"Cards/永久笔记/个人知识笔记系统.md"}
+	],
+	"edges":[
+		{"id":"d27480385cd9c584","fromNode":"690b2e86d8ab7432","fromSide":"top","toNode":"1c7ce8d4ba1748db","toSide":"bottom"}
+	]
+}
