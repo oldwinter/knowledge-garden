@@ -4,39 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "afecad5152fa1d10",
+        "id": "2d53a5bbcf5477dd",
         "type": "tabs",
         "children": [
           {
-            "id": "0434a6076fd97760",
+            "id": "ddfa01c9a8e18e45",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "da3cfd31697115ff",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e23ce98c98d12306",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
-                "viewState": {
-                  "x": 327.24,
-                  "y": -109.7400000000001,
-                  "zoom": 0,
-                  "snapToGrid": false
-                }
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -89,7 +65,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "92910ae8836a7b22",
@@ -101,9 +78,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cards/永久笔记/个人知识笔记系统.md"
-              }
+              "state": {}
             }
           },
           {
@@ -112,7 +87,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +98,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -159,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/个人知识笔记系统.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -227,17 +199,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "e23ce98c98d12306",
+  "active": "ddfa01c9a8e18e45",
   "lastOpenFiles": [
-    "Cards/永久笔记/raycast.md",
-    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
-    "Cards/永久笔记/搜索一切.md",
-    "Extras/Canvas/∑ Canvas创建入口.md",
-    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas.md",
-    "Extras/Draws/数字时代如何更好地工作与生活 - 图.svg",
-    "Extras/Draws/数字时代如何更好地工作与生活 - 图.md",
-    "Cards/永久笔记/个人信息管理系统.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
     "Calendar/Daily notes/2022-12-17.md",
-    "Extras/Canvas/🧩白板canvas-示意图.canvas"
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/个人资源管理系统.md",
+    "Calendar/Daily notes/2022-12-18.md",
+    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+    "Cards/永久笔记/个人查找搜索系统.md",
+    "Cards/永久笔记/pkm 的定义.md",
+    "Cards/永久笔记/搜索一切.md",
+    "Cards/永久笔记/个人信息管理系统.md"
   ]
 }

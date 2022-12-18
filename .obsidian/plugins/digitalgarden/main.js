@@ -3989,13 +3989,15 @@ function arrayBufferToBase64(buffer) {
 function extractBaseUrl(url) {
   return url && url.replace("https://", "").replace("http://", "").replace(/\/$/, "");
 }
-function generateUrlPath(filePath) {
+function generateUrlPath(filePath, slugifyPath = true) {
   if (!filePath) {
     return filePath;
   }
-  const extensionLess = filePath.substring(0, filePath.lastIndexOf("."));
-  const noteUrlPath = extensionLess.split("/").map((x) => (0, import_slugify.default)(x)).join("/") + "/";
-  return noteUrlPath;
+  const extensionLessPath = filePath.substring(0, filePath.lastIndexOf("."));
+  if (!slugifyPath) {
+    return extensionLessPath + "/";
+  }
+  return extensionLessPath.split("/").map((x) => (0, import_slugify.default)(x)).join("/") + "/";
 }
 function generateBlobHash(content) {
   const byteLength = new TextEncoder().encode(content).byteLength;
@@ -4263,7 +4265,7 @@ ${frontMatterString}
         publishedFrontMatter["permalink"] = "/" + publishedFrontMatter["permalink"];
       }
     } else {
-      const noteUrlPath = generateUrlPath(filePath);
+      const noteUrlPath = generateUrlPath(filePath, this.settings.slugifyEnabled);
       publishedFrontMatter["permalink"] = "/" + noteUrlPath;
     }
     return publishedFrontMatter;
@@ -4558,7 +4560,7 @@ var DigitalGardenSiteManager = class {
       const baseTheme = this.settings.baseTheme;
       const siteName = this.settings.siteName;
       let gardenBaseUrl = "";
-      if (this.settings.gardenBaseUrl && !this.settings.gardenBaseUrl.startsWith("ghp_") && this.settings.gardenBaseUrl.contains(".")) {
+      if (this.settings.gardenBaseUrl && !this.settings.gardenBaseUrl.startsWith("ghp_") && !this.settings.gardenBaseUrl.startsWith("github_pat") && this.settings.gardenBaseUrl.contains(".")) {
         gardenBaseUrl = this.settings.gardenBaseUrl;
       }
       let envSettings = "";
@@ -4599,7 +4601,7 @@ ${key}=${defaultNoteSettings[key]}`;
   }
   getNoteUrl(file) {
     const baseUrl = this.settings.gardenBaseUrl ? `https://${extractBaseUrl(this.settings.gardenBaseUrl)}` : `https://${this.settings.githubRepo}.netlify.app`;
-    const noteUrlPath = generateUrlPath(file.path);
+    const noteUrlPath = generateUrlPath(file.path, this.settings.slugifyEnabled);
     let urlPath = `/${noteUrlPath}`;
     const frontMatter = this.metadataCache.getCache(file.path).frontmatter;
     if (frontMatter && frontMatter["dg-home"] === true) {
@@ -4838,9 +4840,10 @@ var SettingView = class {
       this.initializeGitHubUserNameSetting();
       this.initializeGitHubTokenSetting();
       this.initializeGitHubBaseURLSetting();
-      this.initializeRibbonIconSetting();
       this.initializeDefaultNoteSettings();
       this.initializeThemesSettings();
+      this.initializeSlugifySetting();
+      this.initializeRibbonIconSetting();
       prModal.titleEl.createEl("h1", "Site template settings");
     });
   }
@@ -5069,7 +5072,7 @@ var SettingView = class {
   }
   initializeGitHubBaseURLSetting() {
     new import_obsidian3.Setting(this.settingsRootElement).setName("Base URL").setDesc(`
-            This is optional. It is used for the "Copy Note URL" command, and for generating a sitemap.xml for better SEO. 
+            This is optional. It is used for the "Copy Garden URL" command, and for generating a sitemap.xml for better SEO. 
             `).addText((text) => text.setPlaceholder("https://my-garden.netlify.app").setValue(this.settings.gardenBaseUrl).onChange((value) => __async(this, null, function* () {
       this.settings.gardenBaseUrl = value;
       this.debouncedSaveAndUpdate(this.app.metadataCache, this.settings, this.saveSettings);
@@ -5078,6 +5081,12 @@ var SettingView = class {
   initializeRibbonIconSetting() {
     new import_obsidian3.Setting(this.settingsRootElement).setName("Show ribbon icon").setDesc("Show ribbon icon in the Obsidian sidebar. You need to reload Obsdian for changes to take effect.").addToggle((toggle) => toggle.setValue(this.settings.showRibbonIcon).onChange((value) => __async(this, null, function* () {
       this.settings.showRibbonIcon = value;
+      yield this.saveSettings();
+    })));
+  }
+  initializeSlugifySetting() {
+    new import_obsidian3.Setting(this.settingsRootElement).setName("Slugify Note URL").setDesc('Transform the URL from "/My Folder/My Note/" to "/my-folder/my-note". If your note titles contains non-English characters, this should be turned off.').addToggle((toggle) => toggle.setValue(this.settings.slugifyEnabled).onChange((value) => __async(this, null, function* () {
+      this.settings.slugifyEnabled = value;
       yield this.saveSettings();
     })));
   }
@@ -5445,6 +5454,7 @@ var DEFAULT_SETTINGS = {
   showRibbonIcon: true,
   noteSettingsIsInitialized: false,
   siteName: "Digital Garden",
+  slugifyEnabled: true,
   defaultNoteSettings: {
     dgHomeLink: true,
     dgPassFrontmatter: false,

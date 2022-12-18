@@ -3,7 +3,7 @@
   "openai": {
     "promptLines": 5,
     "automatic": false,
-    "key": "",
+    "key": "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",
     "completionsConfig": {
       "model": "code-davinci-002",
       "stop": [
