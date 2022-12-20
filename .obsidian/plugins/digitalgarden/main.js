@@ -4720,6 +4720,7 @@ ${key}=${defaultNoteSettings[key]}`;
         "src/site/_includes/layouts/versionednote.njk",
         "src/site/_includes/components/notegrowthhistory.njk",
         "src/site/_includes/components/pageheader.njk",
+        "src/site/_includes/components/linkPreview.njk",
         "src/site/_includes/components/sidebar.njk",
         "src/site/_includes/components/graphScript.njk",
         "src/site/_includes/components/filetree.njk",
@@ -4903,6 +4904,13 @@ var SettingView = class {
         t.setValue(this.settings.defaultNoteSettings.dgEnableSearch);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgEnableSearch = val;
+          this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
+        });
+      });
+      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Enable link preview (dg-link-preview)").setDesc("When turned on, hovering over links to notes in your garden shows a scrollable preview.").addToggle((t) => {
+        t.setValue(this.settings.defaultNoteSettings.dgLinkPreview);
+        t.onChange((val) => {
+          this.settings.defaultNoteSettings.dgLinkPreview = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
@@ -5463,7 +5471,8 @@ var DEFAULT_SETTINGS = {
     dgShowInlineTitle: false,
     dgShowFileTree: false,
     dgEnableSearch: false,
-    dgShowToc: false
+    dgShowToc: false,
+    dgLinkPreview: false
   }
 };
 var DigitalGarden = class extends import_obsidian5.Plugin {
