@@ -1,1 +1,11 @@
-{"id":"obsidian-projects","name":"Projects","version":"1.4.0","minAppVersion":"1.0.0","description":"Project management for Obsidian.","author":"Marcus Olsson","authorUrl":"https://marcus.se.net","donation":"https://www.buymeacoffee.com/marcusolsson","isDesktopOnly":false}
+{
+  "id": "obsidian-projects",
+  "name": "Projects",
+  "version": "1.5.0",
+  "minAppVersion": "1.0.0",
+  "description": "Project management for Obsidian.",
+  "author": "Marcus Olsson",
+  "authorUrl": "https://marcus.se.net",
+  "donation": "https://www.buymeacoffee.com/marcusolsson",
+  "isDesktopOnly": false
+}

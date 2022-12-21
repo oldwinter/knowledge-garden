@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "169903f2a79d15ee",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,9 +93,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Calendar/Daily notes/2022-12-20.md"
-              }
+              "state": {}
             }
           },
           {
@@ -93,7 +102,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +113,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-20.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +147,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +180,7 @@
             }
           },
           {
-            "id": "1f81e2916745870f",
+            "id": "177f4f02a91c161a",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -191,25 +197,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
-      "switcher:打开快速切换": true,
-      "graph:查看关系图谱": true,
-      "command-palette:打开命令面板": true,
-      "workspaces:管理工作区布局": true,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
       "canvas:Create new canvas": false,
+      "templater-obsidian:Templater": false,
       "obsidian-weread-plugin:Weread": false,
-      "templater-obsidian:Templater": true,
-      "obsidian42-brat:BRAT": true,
-      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-projects:Open projects": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "ddfa01c9a8e18e45",
+  "active": "169903f2a79d15ee",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2022-12-20.md",
     "Calendar/Daily notes/2022-12-18.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
     "Calendar/Daily notes/2022-12-17.md",
@@ -218,7 +223,6 @@
     "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
     "Cards/永久笔记/个人查找搜索系统.md",
     "Cards/永久笔记/pkm 的定义.md",
-    "Cards/永久笔记/搜索一切.md",
-    "Cards/永久笔记/个人信息管理系统.md"
+    "Cards/永久笔记/搜索一切.md"
   ]
 }

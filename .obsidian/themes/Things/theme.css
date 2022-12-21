@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.1.2
+Version 2.1.3
 Created by @colineckert
 
 Readme:
@@ -115,7 +115,8 @@ body.theme-light.is-mobile {
   --background-secondary-alt: var(--color-base-05);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-l: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg: var(--text-highlight-bg-l);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
     0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
@@ -204,9 +205,8 @@ body.theme-dark.is-mobile {
   --background-secondary-alt: var(--color-base-30);
   --interactive-normal: var(--color-base-30);
   --interactive-hover: var(--color-base-35);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-cover: rgba(10, 10, 10, 0.4);
-  --text-highlight-bg: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg-d: rgba(255, 208, 0, 0.4);
+  --text-highlight-bg: var(--text-highlight-bg-d);
   --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
   --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
@@ -283,14 +283,17 @@ body:not(.default-font-color) strong,
 body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
   color: var(--strong-color);
 }
-body:not(.default-font-color) mark > strong {
-  color: var(--text-normal);
-}
 
 /* Italics */
 body:not(.default-font-color) em,
-body:not(.default-font-color) .cm-em {
+body:not(.default-font-color) span:not(.cm-highlight).cm-em {
   color: var(--em-color);
+}
+
+/* Styled highlights */
+body:not(.default-font-color) mark strong,
+body:not(.default-font-color) mark em {
+  color: var(--text-normal);
 }
 
 /* Markdown formatting */
@@ -926,6 +929,18 @@ settings:
         description: Use the default font color styling for bold, italics, and quotes
         type: class-toggle
         default:  false
+    - 
+        id: text-highlight-bg-l
+        title: Highlight color (light)
+        type: variable-color
+        format: rgb
+        default: 'rgba(255, 208, 0, 0.4)'
+    - 
+        id: text-highlight-bg-d
+        title: Highlight color (dark)
+        type: variable-color
+        format: rgb
+        default: 'rgba(255, 208, 0, 0.4)'
     - 
         id: strong-color
         title: Bold font color

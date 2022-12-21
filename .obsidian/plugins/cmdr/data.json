@@ -55,14 +55,7 @@
     }
   ],
   "macros": [],
-  "explorer": [
-    {
-      "id": "daily-notes",
-      "icon": "lucide-calendar-days",
-      "name": "日记: 打开/创建今天的日记",
-      "mode": "any"
-    }
-  ],
+  "explorer": [],
   "hide": {
     "statusbar": [
       "word-count",
@@ -72,7 +65,8 @@
       "various-complements",
       "obsidian-textgenerator-plugin",
       "obsidian-focus-plugin"
-    ]
+    ],
+    "leftRibbon": []
   },
   "spacing": "8",
   "advancedToolbar": {
