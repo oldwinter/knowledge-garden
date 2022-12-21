@@ -39029,21 +39029,23 @@ var ConfirmDialogModal = class extends import_obsidian22.Modal {
 
 // src/app/toolbar/Flair.svelte
 function add_css17(target) {
-  append_styles(target, "svelte-snz7qf", "span.svelte-snz7qf{background-color:var(--background-modifier-error);color:var(--text-on-accent)}");
+  append_styles(target, "svelte-1ydakjn", "span.svelte-1ydakjn{color:var(--text-on-accent)}.error.svelte-1ydakjn{background-color:var(--background-modifier-error)}");
 }
 function create_fragment38(ctx) {
   let span;
   let current;
   let mounted;
   let dispose;
-  const default_slot_template = ctx[1].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  const default_slot_template = ctx[2].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[1], null);
   return {
     c() {
       span = element("span");
       if (default_slot)
         default_slot.c();
-      attr(span, "class", "flair svelte-snz7qf");
+      attr(span, "class", "flair svelte-1ydakjn");
+      toggle_class(span, "mod-pop", ctx[0] === "primary");
+      toggle_class(span, "error", ctx[0] === "error");
     },
     m(target, anchor) {
       insert(target, span, anchor);
@@ -39053,17 +39055,23 @@ function create_fragment38(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(span, "click", ctx[2]),
-          listen(span, "keypress", ctx[3])
+          listen(span, "click", ctx[3]),
+          listen(span, "keypress", ctx[4])
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 1)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[0], !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null), null);
+        if (default_slot.p && (!current || dirty & 2)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[1], !current ? get_all_dirty_from_scope(ctx2[1]) : get_slot_changes(default_slot_template, ctx2[1], dirty, null), null);
         }
+      }
+      if (!current || dirty & 1) {
+        toggle_class(span, "mod-pop", ctx2[0] === "primary");
+      }
+      if (!current || dirty & 1) {
+        toggle_class(span, "error", ctx2[0] === "error");
       }
     },
     i(local) {
@@ -39088,6 +39096,7 @@ function create_fragment38(ctx) {
 }
 function instance38($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
+  let { variant } = $$props;
   function click_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -39095,15 +39104,17 @@ function instance38($$self, $$props, $$invalidate) {
     bubble.call(this, $$self, event);
   }
   $$self.$$set = ($$props2) => {
+    if ("variant" in $$props2)
+      $$invalidate(0, variant = $$props2.variant);
     if ("$$scope" in $$props2)
-      $$invalidate(0, $$scope = $$props2.$$scope);
+      $$invalidate(1, $$scope = $$props2.$$scope);
   };
-  return [$$scope, slots, click_handler, keypress_handler];
+  return [variant, $$scope, slots, click_handler, keypress_handler];
 }
 var Flair = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance38, create_fragment38, safe_not_equal, {}, add_css17);
+    init(this, options, instance38, create_fragment38, safe_not_equal, { variant: 0 }, add_css17);
   }
 };
 var Flair_default = Flair;
@@ -42738,6 +42749,7 @@ function create_header_slot(ctx) {
   let current;
   flair = new Flair_default({
     props: {
+      variant: "error",
       $$slots: { default: [create_default_slot_55] },
       $$scope: { ctx }
     }
@@ -43214,12 +43226,13 @@ function get_if_ctx(ctx) {
   child_ctx[27] = constants_0;
   return child_ctx;
 }
-function create_if_block_24(ctx) {
+function create_if_block_32(ctx) {
   let flair;
   let current;
   flair = new Flair_default({
     props: {
-      $$slots: { default: [create_default_slot_36] },
+      variant: "error",
+      $$slots: { default: [create_default_slot_46] },
       $$scope: { ctx }
     }
   });
@@ -43254,7 +43267,7 @@ function create_if_block_24(ctx) {
     }
   };
 }
-function create_default_slot_36(ctx) {
+function create_default_slot_46(ctx) {
   let t_value = `${ctx[9].length} ${ctx[9].length === 1 ? "error" : "errors"}`;
   let t3;
   return {
@@ -43277,7 +43290,7 @@ function create_default_slot_36(ctx) {
 function create_info_slot(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[9].length && create_if_block_24(ctx);
+  let if_block = ctx[9].length && create_if_block_32(ctx);
   return {
     c() {
       if (if_block)
@@ -43298,7 +43311,7 @@ function create_info_slot(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_24(ctx2);
+          if_block = create_if_block_32(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -43373,7 +43386,7 @@ function create_left_slot(ctx) {
     }
   };
 }
-function create_if_block_17(ctx) {
+function create_if_block_24(ctx) {
   let viewselect;
   let current;
   viewselect = new ViewSelect_default({
@@ -43434,7 +43447,7 @@ function create_if_block_17(ctx) {
 function create_middle_slot(ctx) {
   let div;
   let current;
-  let if_block = ctx[5] && create_if_block_17(ctx);
+  let if_block = ctx[5] && create_if_block_24(ctx);
   return {
     c() {
       div = element("div");
@@ -43456,7 +43469,7 @@ function create_middle_slot(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_17(ctx2);
+          if_block = create_if_block_24(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(div, null);
@@ -43570,42 +43583,134 @@ function create_if_block12(ctx) {
     }
   };
 }
+function create_if_block_17(ctx) {
+  let flair;
+  let current;
+  flair = new Flair_default({
+    props: {
+      variant: "primary",
+      $$slots: { default: [create_default_slot_36] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(flair.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(flair, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const flair_changes = {};
+      if (dirty & 268435467) {
+        flair_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      flair.$set(flair_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(flair.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(flair.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(flair, detaching);
+    }
+  };
+}
+function create_default_slot_36(ctx) {
+  var _a, _b;
+  let t_value = ((_b = (_a = ctx[27]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2;
+      if (dirty & 11 && t_value !== (t_value = ((_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
 function create_default_slot_27(ctx) {
   var _a, _b;
   let icon;
-  let t_value = (((_b = (_a = ctx[27]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) ? `Filter (${ctx[27].filter.conditions.length})` : "Filter") + "";
   let t3;
+  let if_block_anchor;
   let current;
   icon = new Icon_default({ props: { name: "filter" } });
+  let if_block = ((_b = (_a = ctx[27]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) && create_if_block_17(ctx);
   return {
     c() {
       create_component(icon.$$.fragment);
-      t3 = text(t_value);
+      t3 = text("\n        Filter\n        ");
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
     },
     m(target, anchor) {
       mount_component(icon, target, anchor);
       insert(target, t3, anchor);
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
       current = true;
     },
     p(ctx2, dirty) {
       var _a2, _b2;
-      if ((!current || dirty & 11) && t_value !== (t_value = (((_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) ? `Filter (${ctx2[27].filter.conditions.length})` : "Filter") + ""))
-        set_data(t3, t_value);
+      if ((_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 11) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block_17(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
     },
     i(local) {
       if (current)
         return;
       transition_in(icon.$$.fragment, local);
+      transition_in(if_block);
       current = true;
     },
     o(local) {
       transition_out(icon.$$.fragment, local);
+      transition_out(if_block);
       current = false;
     },
     d(detaching) {
       destroy_component(icon, detaching);
       if (detaching)
         detach(t3);
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
     }
   };
 }
@@ -44495,7 +44600,7 @@ function create_default_slot_56(ctx) {
     }
   };
 }
-function create_default_slot_46(ctx) {
+function create_default_slot_47(ctx) {
   let t3;
   return {
     c() {
@@ -44734,7 +44839,7 @@ function create_fragment49(ctx) {
   typography2 = new Typography_default({
     props: {
       variant: "body",
-      $$slots: { default: [create_default_slot_46] },
+      $$slots: { default: [create_default_slot_47] },
       $$scope: { ctx }
     }
   });
@@ -45974,7 +46079,7 @@ var import_obsidian34 = __toModule(require("obsidian"));
 function add_css30(target) {
   append_styles(target, "svelte-gwqplq", "input.svelte-gwqplq{width:100%}");
 }
-function create_default_slot_47(ctx) {
+function create_default_slot_48(ctx) {
   let input;
   let mounted;
   let dispose;
@@ -46120,7 +46225,7 @@ function create_default_slot17(ctx) {
   let current;
   modalcontent = new ModalContent_default({
     props: {
-      $$slots: { default: [create_default_slot_47] },
+      $$slots: { default: [create_default_slot_48] },
       $$scope: { ctx }
     }
   });
@@ -46816,7 +46921,7 @@ function create_if_block_4(ctx) {
     }
   };
 }
-function create_if_block_32(ctx) {
+function create_if_block_33(ctx) {
   let numberinput;
   let current;
   numberinput = new NumberInput_default({
@@ -46986,7 +47091,7 @@ function create_fragment58(ctx) {
     create_if_block16,
     create_if_block_19,
     create_if_block_25,
-    create_if_block_32,
+    create_if_block_33,
     create_if_block_4,
     create_if_block_5
   ];
@@ -47194,7 +47299,7 @@ function create_default_slot_57(ctx) {
     }
   };
 }
-function create_default_slot_48(ctx) {
+function create_default_slot_49(ctx) {
   let fieldcontrol;
   let t3;
   let current;
@@ -47252,7 +47357,7 @@ function create_each_block9(ctx) {
   settingitem = new SettingItem_default({
     props: {
       name: ctx[7].name,
-      $$slots: { default: [create_default_slot_48] },
+      $$slots: { default: [create_default_slot_49] },
       $$scope: { ctx }
     }
   });
@@ -50819,7 +50924,7 @@ var BoardSettingsModal = class extends import_obsidian38.Modal {
 function add_css35(target) {
   append_styles(target, "svelte-kq39qk", "div.svelte-kq39qk{background-color:var(--background-primary);padding:8px}");
 }
-function create_default_slot_49(ctx) {
+function create_default_slot_410(ctx) {
   var _a, _b, _c;
   let select;
   let current;
@@ -50957,7 +51062,7 @@ function create_right_slot2(ctx) {
   field0 = new Field_default({
     props: {
       name: ctx[9].t("views.board.fields.status"),
-      $$slots: { default: [create_default_slot_49] },
+      $$slots: { default: [create_default_slot_410] },
       $$scope: { ctx }
     }
   });
@@ -53626,7 +53731,7 @@ function create_each_block_12(ctx) {
     }
   };
 }
-function create_default_slot_410(ctx) {
+function create_default_slot_411(ctx) {
   let t3;
   let current;
   let each_value_1 = ctx[37];
@@ -53701,7 +53806,7 @@ function create_each_block13(ctx) {
   let current;
   tablerow = new TableRow_default({
     props: {
-      $$slots: { default: [create_default_slot_410] },
+      $$slots: { default: [create_default_slot_411] },
       $$scope: { ctx }
     }
   });
@@ -54645,12 +54750,12 @@ function add_css50(target) {
 }
 function get_each_context14(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[17] = list[i2];
+  child_ctx[21] = list[i2];
   return child_ctx;
 }
 function get_context(ctx) {
-  const constants_0 = ctx[5](ctx[17]);
-  ctx[20] = constants_0;
+  const constants_0 = ctx[7](ctx[21]);
+  ctx[24] = constants_0;
 }
 function create_default_slot_103(ctx) {
   var _a, _b, _c;
@@ -54659,12 +54764,12 @@ function create_default_slot_103(ctx) {
   select = new Select_default({
     props: {
       allowEmpty: true,
-      value: (_b = (_a = ctx[1]) == null ? void 0 : _a.name) != null ? _b : "",
-      options: ctx[0].map(fieldToSelectableValue),
-      placeholder: (_c = ctx[4].t("views.gallery.fields.none")) != null ? _c : ""
+      value: (_b = (_a = ctx[2]) == null ? void 0 : _a.name) != null ? _b : "",
+      options: ctx[1].map(fieldToSelectableValue),
+      placeholder: (_c = ctx[6].t("views.gallery.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[13]);
+  select.$on("change", ctx[16]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -54676,12 +54781,12 @@ function create_default_slot_103(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2, _c2;
       const select_changes = {};
+      if (dirty & 4)
+        select_changes.value = (_b2 = (_a2 = ctx2[2]) == null ? void 0 : _a2.name) != null ? _b2 : "";
       if (dirty & 2)
-        select_changes.value = (_b2 = (_a2 = ctx2[1]) == null ? void 0 : _a2.name) != null ? _b2 : "";
-      if (dirty & 1)
-        select_changes.options = ctx2[0].map(fieldToSelectableValue);
-      if (dirty & 16)
-        select_changes.placeholder = (_c2 = ctx2[4].t("views.gallery.fields.none")) != null ? _c2 : "";
+        select_changes.options = ctx2[1].map(fieldToSelectableValue);
+      if (dirty & 64)
+        select_changes.placeholder = (_c2 = ctx2[6].t("views.gallery.fields.none")) != null ? _c2 : "";
       select.$set(select_changes);
     },
     i(local) {
@@ -54700,44 +54805,71 @@ function create_default_slot_103(ctx) {
   };
 }
 function create_right_slot4(ctx) {
+  var _a, _b;
   let field;
+  let t3;
+  let select;
   let current;
   field = new Field_default({
     props: {
-      name: ctx[4].t("views.gallery.fields.cover"),
+      name: ctx[6].t("views.gallery.fields.cover"),
       $$slots: { default: [create_default_slot_103] },
       $$scope: { ctx }
     }
   });
+  select = new Select_default({
+    props: {
+      value: (_b = (_a = ctx[0]) == null ? void 0 : _a.fitStyle) != null ? _b : "cover",
+      options: [
+        { label: "Fill image", value: "cover" },
+        { label: "Fit image", value: "contain" }
+      ]
+    }
+  });
+  select.$on("change", ctx[17]);
   return {
     c() {
       create_component(field.$$.fragment);
+      t3 = space();
+      create_component(select.$$.fragment);
     },
     m(target, anchor) {
       mount_component(field, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(select, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
+      var _a2, _b2;
       const field_changes = {};
-      if (dirty & 16)
-        field_changes.name = ctx2[4].t("views.gallery.fields.cover");
-      if (dirty & 2097171) {
+      if (dirty & 64)
+        field_changes.name = ctx2[6].t("views.gallery.fields.cover");
+      if (dirty & 33554502) {
         field_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field.$set(field_changes);
+      const select_changes = {};
+      if (dirty & 1)
+        select_changes.value = (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.fitStyle) != null ? _b2 : "cover";
+      select.$set(select_changes);
     },
     i(local) {
       if (current)
         return;
       transition_in(field.$$.fragment, local);
+      transition_in(select.$$.fragment, local);
       current = true;
     },
     o(local) {
       transition_out(field.$$.fragment, local);
+      transition_out(select.$$.fragment, local);
       current = false;
     },
     d(detaching) {
       destroy_component(field, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(select, detaching);
     }
   };
 }
@@ -54761,7 +54893,7 @@ function create_default_slot_93(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty & 2097171) {
+      if (dirty & 33554503) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -54800,7 +54932,7 @@ function create_else_block_1(ctx) {
     },
     p(ctx2, dirty) {
       const centerbox_changes = {};
-      if (dirty & 2097168) {
+      if (dirty & 33554496) {
         centerbox_changes.$$scope = { dirty, ctx: ctx2 };
       }
       centerbox.$set(centerbox_changes);
@@ -54843,7 +54975,7 @@ function create_if_block22(ctx) {
     },
     p(ctx2, dirty) {
       const grid_changes = {};
-      if (dirty & 2097164) {
+      if (dirty & 33554488) {
         grid_changes.$$scope = { dirty, ctx: ctx2 };
       }
       grid.$set(grid_changes);
@@ -54866,7 +54998,7 @@ function create_if_block22(ctx) {
   };
 }
 function create_default_slot_83(ctx) {
-  let t_value = ctx[4].t("views.gallery.empty") + "";
+  let t_value = ctx[6].t("views.gallery.empty") + "";
   let t3;
   return {
     c() {
@@ -54876,7 +55008,7 @@ function create_default_slot_83(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 16 && t_value !== (t_value = ctx2[4].t("views.gallery.empty") + ""))
+      if (dirty & 64 && t_value !== (t_value = ctx2[6].t("views.gallery.empty") + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -54905,7 +55037,7 @@ function create_default_slot_74(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty & 2097168) {
+      if (dirty & 33554496) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -54959,8 +55091,8 @@ function create_if_block_112(ctx) {
   image = new Image_default({
     props: {
       alt: "Title",
-      src: ctx[20],
-      fit: "cover"
+      src: ctx[24],
+      fit: ctx[3]
     }
   });
   return {
@@ -54973,8 +55105,10 @@ function create_if_block_112(ctx) {
     },
     p(ctx2, dirty) {
       const image_changes = {};
-      if (dirty & 4)
-        image_changes.src = ctx2[20];
+      if (dirty & 16)
+        image_changes.src = ctx2[24];
+      if (dirty & 8)
+        image_changes.fit = ctx2[3];
       image.$set(image_changes);
     },
     i(local) {
@@ -55001,7 +55135,7 @@ function create_default_slot_67(ctx) {
   const if_block_creators = [create_if_block_112, create_else_block6];
   const if_blocks = [];
   function select_block_type_1(ctx2, dirty) {
-    if (ctx2[20])
+    if (ctx2[24])
       return 0;
     return 1;
   }
@@ -55058,7 +55192,7 @@ function create_default_slot_67(ctx) {
   };
 }
 function create_default_slot_59(ctx) {
-  let t_value = getDisplayName(ctx[17].id) + "";
+  let t_value = getDisplayName(ctx[21].id) + "";
   let t3;
   return {
     c() {
@@ -55068,7 +55202,7 @@ function create_default_slot_59(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 4 && t_value !== (t_value = getDisplayName(ctx2[17].id) + ""))
+      if (dirty & 16 && t_value !== (t_value = getDisplayName(ctx2[21].id) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -55077,15 +55211,15 @@ function create_default_slot_59(ctx) {
     }
   };
 }
-function create_default_slot_411(ctx) {
+function create_default_slot_412(ctx) {
   let internallink;
   let current;
   function open_handler(...args) {
-    return ctx[15](ctx[17], ...args);
+    return ctx[19](ctx[21], ...args);
   }
   internallink = new InternalLink_default({
     props: {
-      linkText: ctx[17].id,
+      linkText: ctx[21].id,
       sourcePath: "",
       resolved: true,
       $$slots: { default: [create_default_slot_59] },
@@ -55104,9 +55238,9 @@ function create_default_slot_411(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const internallink_changes = {};
-      if (dirty & 4)
-        internallink_changes.linkText = ctx[17].id;
-      if (dirty & 2097156) {
+      if (dirty & 16)
+        internallink_changes.linkText = ctx[21].id;
+      if (dirty & 33554448) {
         internallink_changes.$$scope = { dirty, ctx };
       }
       internallink.$set(internallink_changes);
@@ -55133,7 +55267,7 @@ function create_default_slot_312(ctx) {
   let t1;
   let current;
   function click_handler(...args) {
-    return ctx[14](ctx[17], ...args);
+    return ctx[18](ctx[21], ...args);
   }
   cardmedia = new CardMedia_default({
     props: {
@@ -55144,7 +55278,7 @@ function create_default_slot_312(ctx) {
   cardmedia.$on("click", click_handler);
   cardcontent = new CardContent_default({
     props: {
-      $$slots: { default: [create_default_slot_411] },
+      $$slots: { default: [create_default_slot_412] },
       $$scope: { ctx }
     }
   });
@@ -55165,12 +55299,12 @@ function create_default_slot_312(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const cardmedia_changes = {};
-      if (dirty & 2097156) {
+      if (dirty & 33554456) {
         cardmedia_changes.$$scope = { dirty, ctx };
       }
       cardmedia.$set(cardmedia_changes);
       const cardcontent_changes = {};
-      if (dirty & 2097164) {
+      if (dirty & 33554480) {
         cardcontent_changes.$$scope = { dirty, ctx };
       }
       cardcontent.$set(cardcontent_changes);
@@ -55216,7 +55350,7 @@ function create_each_block14(ctx) {
     },
     p(ctx2, dirty) {
       const card_changes = {};
-      if (dirty & 2097164) {
+      if (dirty & 33554488) {
         card_changes.$$scope = { dirty, ctx: ctx2 };
       }
       card.$set(card_changes);
@@ -55239,7 +55373,7 @@ function create_each_block14(ctx) {
 function create_default_slot_215(ctx) {
   let each_1_anchor;
   let current;
-  let each_value = ctx[2];
+  let each_value = ctx[4];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
@@ -55262,8 +55396,8 @@ function create_default_slot_215(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 172) {
-        each_value = ctx2[2];
+      if (dirty & 1208) {
+        each_value = ctx2[4];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
           const child_ctx = get_each_context14(ctx2, each_value, i2);
@@ -55314,7 +55448,7 @@ function create_default_slot_121(ctx) {
   const if_block_creators = [create_if_block22, create_else_block_1];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[2].length)
+    if (ctx2[4].length)
       return 0;
     return 1;
   }
@@ -55400,12 +55534,12 @@ function create_default_slot28(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty & 2097171) {
+      if (dirty & 33554503) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty & 2097180) {
+      if (dirty & 33554552) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -55449,7 +55583,7 @@ function create_fragment83(ctx) {
     },
     p(ctx2, [dirty]) {
       const viewlayout_changes = {};
-      if (dirty & 2097183) {
+      if (dirty & 33554559) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -55474,10 +55608,12 @@ function instance83($$self, $$props, $$invalidate) {
   let records;
   let textFields;
   let coverField;
+  let fitStyle;
   let $app;
   let $i18n;
-  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(4, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
+  var _a;
   let { frame } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
@@ -55513,10 +55649,14 @@ function instance83($$self, $$props, $$invalidate) {
   function handleCoverFieldChange(coverField2) {
     onConfigChange(Object.assign(Object.assign({}, config), { coverField: coverField2 }));
   }
+  function handleFitStyleChange(fitStyle2) {
+    onConfigChange(Object.assign(Object.assign({}, config), { fitStyle: fitStyle2 }));
+  }
   function handleRecordClick(record) {
     new EditNoteModal($app, fields, (record2) => api2.updateRecord(record2, fields), record).open();
   }
   const change_handler = ({ detail }) => handleCoverFieldChange(detail);
+  const change_handler_1 = ({ detail }) => handleFitStyleChange(detail);
   const click_handler = (record, event) => {
     if (event.metaKey || event.ctrlKey) {
       $app.workspace.openLinkText(record.id, "", true);
@@ -55533,43 +55673,51 @@ function instance83($$self, $$props, $$invalidate) {
   };
   $$self.$$set = ($$props2) => {
     if ("frame" in $$props2)
-      $$invalidate(8, frame = $$props2.frame);
+      $$invalidate(11, frame = $$props2.frame);
     if ("config" in $$props2)
-      $$invalidate(9, config = $$props2.config);
+      $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
-      $$invalidate(10, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(12, onConfigChange = $$props2.onConfigChange);
     if ("api" in $$props2)
-      $$invalidate(11, api2 = $$props2.api);
+      $$invalidate(13, api2 = $$props2.api);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 256) {
+    if ($$self.$$.dirty & 2048) {
       $:
-        $$invalidate(12, { fields, records } = frame, fields, ($$invalidate(2, records), $$invalidate(8, frame)));
+        $$invalidate(15, { fields, records } = frame, fields, ($$invalidate(4, records), $$invalidate(11, frame)));
     }
-    if ($$self.$$.dirty & 4096) {
+    if ($$self.$$.dirty & 32768) {
       $:
-        $$invalidate(0, textFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Link));
+        $$invalidate(1, textFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Link));
     }
-    if ($$self.$$.dirty & 513) {
+    if ($$self.$$.dirty & 3) {
       $:
-        $$invalidate(1, coverField = textFields.find((field) => (config === null || config === void 0 ? void 0 : config.coverField) === field.name));
+        $$invalidate(2, coverField = textFields.find((field) => (config === null || config === void 0 ? void 0 : config.coverField) === field.name));
+    }
+    if ($$self.$$.dirty & 16385) {
+      $:
+        $$invalidate(3, fitStyle = $$invalidate(14, _a = config === null || config === void 0 ? void 0 : config.fitStyle) !== null && _a !== void 0 ? _a : "cover");
     }
   };
   return [
+    config,
     textFields,
     coverField,
+    fitStyle,
     records,
     $app,
     $i18n,
     getCoverRealPath,
     handleCoverFieldChange,
+    handleFitStyleChange,
     handleRecordClick,
     frame,
-    config,
     onConfigChange,
     api2,
+    _a,
     fields,
     change_handler,
+    change_handler_1,
     click_handler,
     open_handler
   ];
@@ -55578,10 +55726,10 @@ var GalleryView = class extends SvelteComponent {
   constructor(options) {
     super();
     init(this, options, instance83, create_fragment83, safe_not_equal, {
-      frame: 8,
-      config: 9,
-      onConfigChange: 10,
-      api: 11
+      frame: 11,
+      config: 0,
+      onConfigChange: 12,
+      api: 13
     }, add_css50);
   }
 };
@@ -55879,7 +56027,7 @@ function create_if_block_42(ctx) {
     }
   };
 }
-function create_if_block_33(ctx) {
+function create_if_block_34(ctx) {
   let current;
   const selected_slot_template = ctx[23].selected;
   const selected_slot = create_slot(selected_slot_template, ctx, ctx[22], get_selected_slot_context);
@@ -56115,7 +56263,7 @@ function create_fragment85(ctx) {
   let current;
   let mounted;
   let dispose;
-  const if_block_creators = [create_if_block_113, create_if_block_33, create_if_block_42, create_else_block_12];
+  const if_block_creators = [create_if_block_113, create_if_block_34, create_if_block_42, create_else_block_12];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[17].edit && ctx2[1])
@@ -58589,7 +58737,7 @@ function create_if_block_43(ctx) {
     }
   };
 }
-function create_if_block_34(ctx) {
+function create_if_block_35(ctx) {
   let gridnumbercell;
   let current;
   gridnumbercell = new GridNumberCell_default({
@@ -58820,7 +58968,7 @@ function create_fragment96(ctx) {
     create_if_block30,
     create_if_block_115,
     create_if_block_27,
-    create_if_block_34,
+    create_if_block_35,
     create_if_block_43,
     create_if_block_52,
     create_else_block9

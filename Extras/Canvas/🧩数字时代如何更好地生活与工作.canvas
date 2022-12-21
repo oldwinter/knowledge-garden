@@ -1,15 +1,15 @@
 {
 	"nodes":[
-		{"id":"53885c8675befb1f","x":-441,"y":-820,"width":400,"height":244,"type":"file","file":"Cards/永久笔记/个人信息管理系统.md"},
-		{"id":"af9a63341b87dcfb","x":-461,"y":-840,"width":440,"height":1234,"type":"group","label":"Untitled group"},
-		{"id":"aa078520ae03d297","x":-441,"y":-493,"width":400,"height":400,"type":"file","file":"Cards/永久笔记/个人知识笔记系统.md"},
-		{"id":"e937fa6d9e9ffd2e","x":-441,"y":-52,"width":400,"height":400,"type":"file","file":"Cards/永久笔记/个人输出发布系统.md"},
-		{"id":"7a3fbadad264a675","x":-1256,"y":-398,"width":247,"height":105,"type":"file","file":"Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md"},
-		{"id":"582475c6cd586262","x":442,"y":-557,"width":1297,"height":669,"type":"group","label":"Untitled group"},
-		{"id":"f3c55e88bdd6d008","x":462,"y":-489,"width":400,"height":244,"type":"file","file":"Cards/永久笔记/个人高效学习系统.md"},
-		{"id":"8e27e7a1f7f563b8","x":482,"y":-194,"width":400,"height":185,"type":"file","file":"Spaces/1-Project/人与科技融合专题/个人效率系统打造/个人资源管理系统.md"},
-		{"id":"3fa1a0c0493272c9","x":930,"y":-357,"width":400,"height":116,"type":"file","file":"Cards/永久笔记/个人查找搜索系统.md"},
-		{"id":"0c31f2337bd29637","x":1302,"y":-489,"width":400,"height":190,"type":"file","file":"Cards/永久笔记/个人任务管理系统.md"}
+		{"id":"7a3fbadad264a675","x":-1423,"y":-729,"width":414,"height":633,"type":"file","file":"Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md"},
+		{"id":"582475c6cd586262","x":3489,"y":-1371,"width":1311,"height":2152,"type":"group","label":"Untitled group"},
+		{"id":"f3c55e88bdd6d008","x":3509,"y":-1303,"width":1240,"height":480,"type":"file","file":"Cards/永久笔记/个人高效学习系统.md"},
+		{"id":"8e27e7a1f7f563b8","x":3509,"y":-783,"width":1240,"height":480,"type":"file","file":"Spaces/1-Project/人与科技融合专题/个人效率系统打造/个人资源管理系统.md"},
+		{"id":"3fa1a0c0493272c9","x":3509,"y":-263,"width":1240,"height":480,"type":"file","file":"Cards/永久笔记/个人查找搜索系统.md"},
+		{"id":"0c31f2337bd29637","x":3509,"y":257,"width":1240,"height":480,"type":"file","file":"Cards/永久笔记/个人任务管理系统.md"},
+		{"id":"af9a63341b87dcfb","x":600,"y":-2209,"width":1160,"height":3829,"type":"group","label":"Untitled group"},
+		{"id":"53885c8675befb1f","x":717,"y":-2189,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人信息管理系统.md"},
+		{"id":"aa078520ae03d297","x":717,"y":-905,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人知识笔记系统.md"},
+		{"id":"e937fa6d9e9ffd2e","x":717,"y":379,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人输出发布系统.md"}
 	],
 	"edges":[
 		{"id":"aab6f6e77125492d","fromNode":"7a3fbadad264a675","fromSide":"right","toNode":"53885c8675befb1f","toSide":"left","label":"Capture 信息输入"},

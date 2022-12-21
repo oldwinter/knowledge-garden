@@ -11,9 +11,25 @@
             "id": "ddfa01c9a8e18e45",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+                "viewState": {
+                  "x": 1688.5,
+                  "y": -294.5,
+                  "zoom": -2.0997494572260766,
+                  "snapToGrid": true
+                }
+              }
+            }
+          },
+          {
+            "id": "2c4e921fcf966f40",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-20.md",
+                "file": "Spaces/2-Area/运动与健康/疫情期间健身如何提高免疫力.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,17 +37,20 @@
             }
           },
           {
-            "id": "169903f2a79d15ee",
+            "id": "a0f95f3265fbd78b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.1.8"
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,7 +112,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md"
+              }
             }
           },
           {
@@ -102,6 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,6 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -147,6 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,14 +210,21 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "07846572d074515c",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 217.5,
-    "collapsed": true
+    "width": 217.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,17 +243,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "169903f2a79d15ee",
+  "active": "a0f95f3265fbd78b",
   "lastOpenFiles": [
+    "Spaces/2-Area/运动与健康/疫情期间健身如何提高免疫力.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
+    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+    "Extras/Canvas/🧩王者荣耀.canvas",
+    "Extras/Canvas/∑ Canvas创建入口.md",
+    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas.md",
     "Calendar/Daily notes/2022-12-20.md",
     "Calendar/Daily notes/2022-12-18.md",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
     "Calendar/Daily notes/2022-12-17.md",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/个人资源管理系统.md",
-    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
-    "Cards/永久笔记/个人查找搜索系统.md",
-    "Cards/永久笔记/pkm 的定义.md",
-    "Cards/永久笔记/搜索一切.md"
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md"
   ]
 }
