@@ -7,9 +7,9 @@
 		{"id":"3fa1a0c0493272c9","x":3509,"y":-263,"width":1240,"height":480,"type":"file","file":"Cards/永久笔记/个人查找搜索系统.md"},
 		{"id":"0c31f2337bd29637","x":3509,"y":257,"width":1240,"height":480,"type":"file","file":"Cards/永久笔记/个人任务管理系统.md"},
 		{"id":"af9a63341b87dcfb","x":600,"y":-2209,"width":1160,"height":3829,"type":"group","label":"Untitled group"},
-		{"id":"53885c8675befb1f","x":717,"y":-2189,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人信息管理系统.md"},
-		{"id":"aa078520ae03d297","x":717,"y":-905,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人知识笔记系统.md"},
-		{"id":"e937fa6d9e9ffd2e","x":717,"y":379,"width":928,"height":1204,"type":"file","file":"Cards/永久笔记/个人输出发布系统.md"}
+		{"id":"53885c8675befb1f","x":717,"y":-2189,"width":928,"height":1190,"type":"file","file":"Cards/永久笔记/个人信息管理系统.md"},
+		{"id":"aa078520ae03d297","x":717,"y":-905,"width":928,"height":634,"type":"file","file":"Cards/永久笔记/个人知识笔记系统.md"},
+		{"id":"e937fa6d9e9ffd2e","x":717,"y":379,"width":928,"height":462,"type":"file","file":"Cards/永久笔记/个人输出发布系统.md"}
 	],
 	"edges":[
 		{"id":"aab6f6e77125492d","fromNode":"7a3fbadad264a675","fromSide":"right","toNode":"53885c8675befb1f","toSide":"left","label":"Capture 信息输入"},

@@ -8,10 +8,24 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#MOC",
+      "query": "tag:#索引笔记",
       "color": {
         "a": 1,
         "rgb": 14048348
+      }
+    },
+    {
+      "query": "tag:#本库教程",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    },
+    {
+      "query": "tag:#待办",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
       }
     }
   ],
@@ -25,6 +39,6 @@
   "repelStrength": 12.119391025641,
   "linkStrength": 1,
   "linkDistance": 251,
-  "scale": 0.14836629892541817,
+  "scale": 0.11951431453428155,
   "close": true
 }
