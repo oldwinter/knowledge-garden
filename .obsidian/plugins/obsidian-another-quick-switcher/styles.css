@@ -1,3 +1,12 @@
+.another-quick-switcher__floating-prompt {
+    width: 33vw;
+    right: 30px;
+}
+
+.another-quick-switcher__floating-prompt .suggestion-item {
+    font-size: 90%;
+}
+
 .another-quick-switcher__item {
     display: flex;
     flex-direction: column;

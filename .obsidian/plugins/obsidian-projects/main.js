@@ -431,10 +431,10 @@ var require_lib = __commonJS({
           var a2 = [null];
           a2.push.apply(a2, args2);
           var Constructor = Function.bind.apply(Parent2, a2);
-          var instance103 = new Constructor();
+          var instance105 = new Constructor();
           if (Class2)
-            _setPrototypeOf2(instance103, Class2.prototype);
-          return instance103;
+            _setPrototypeOf2(instance105, Class2.prototype);
+          return instance105;
         };
       }
       return _construct.apply(null, arguments);
@@ -1642,7 +1642,7 @@ var require_lib = __commonJS({
     var singleton2 = null;
     var FixedOffsetZone = /* @__PURE__ */ function(_Zone) {
       _inheritsLoose(FixedOffsetZone2, _Zone);
-      FixedOffsetZone2.instance = function instance103(offset3) {
+      FixedOffsetZone2.instance = function instance105(offset3) {
         return offset3 === 0 ? FixedOffsetZone2.utcInstance : new FixedOffsetZone2(offset3);
       };
       FixedOffsetZone2.parseSpecifier = function parseSpecifier(s3) {
@@ -12026,7 +12026,7 @@ var require_internal = __commonJS({
       block.f();
       outro_and_destroy_block2(block, lookup3);
     }
-    function update_keyed_each2(old_blocks, dirty, get_key, dynamic, ctx, list, lookup3, node, destroy2, create_each_block19, next2, get_context2) {
+    function update_keyed_each2(old_blocks, dirty, get_key, dynamic, ctx, list, lookup3, node, destroy2, create_each_block20, next2, get_context2) {
       let o2 = old_blocks.length;
       let n2 = list.length;
       let i2 = o2;
@@ -12042,7 +12042,7 @@ var require_internal = __commonJS({
         const key = get_key(child_ctx);
         let block = lookup3.get(key);
         if (!block) {
-          block = create_each_block19(key, child_ctx);
+          block = create_each_block20(key, child_ctx);
           block.c();
         } else if (dynamic) {
           block.p(child_ctx, dirty);
@@ -12376,7 +12376,7 @@ var require_internal = __commonJS({
       }
       component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
     }
-    function init6(component, options, instance103, create_fragment103, not_equal2, props, append_styles3, dirty = [-1]) {
+    function init6(component, options, instance105, create_fragment105, not_equal2, props, append_styles3, dirty = [-1]) {
       const parent_component = exports.current_component;
       set_current_component2(component);
       const $$ = component.$$ = {
@@ -12399,7 +12399,7 @@ var require_internal = __commonJS({
       };
       append_styles3 && append_styles3($$.root);
       let ready = false;
-      $$.ctx = instance103 ? instance103(component, options.props || {}, (i2, ret, ...rest) => {
+      $$.ctx = instance105 ? instance105(component, options.props || {}, (i2, ret, ...rest) => {
         const value = rest.length ? rest[0] : ret;
         if ($$.ctx && not_equal2($$.ctx[i2], $$.ctx[i2] = value)) {
           if (!$$.skip_bound && $$.bound[i2])
@@ -12412,7 +12412,7 @@ var require_internal = __commonJS({
       $$.update();
       ready = true;
       run_all2($$.before_update);
-      $$.fragment = create_fragment103 ? create_fragment103($$.ctx) : false;
+      $$.fragment = create_fragment105 ? create_fragment105($$.ctx) : false;
       if (options.target) {
         if (options.hydrate) {
           start_hydrating2();
@@ -12602,11 +12602,11 @@ var require_internal = __commonJS({
     function construct_svelte_component_dev(component, props) {
       const error_message = "this={...} of <svelte:component> should specify a Svelte component.";
       try {
-        const instance103 = new component(props);
-        if (!instance103.$$ || !instance103.$set || !instance103.$on || !instance103.$destroy) {
+        const instance105 = new component(props);
+        if (!instance105.$$ || !instance105.$set || !instance105.$on || !instance105.$destroy) {
           throw new Error(error_message);
         }
-        return instance103;
+        return instance105;
       } catch (err) {
         const { message } = err;
         if (typeof message === "string" && message.indexOf("is not a constructor") !== -1) {
@@ -14256,7 +14256,7 @@ function fix_and_outro_and_destroy_block(block, lookup3) {
   block.f();
   outro_and_destroy_block(block, lookup3);
 }
-function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, lookup3, node, destroy2, create_each_block19, next2, get_context2) {
+function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, lookup3, node, destroy2, create_each_block20, next2, get_context2) {
   let o2 = old_blocks.length;
   let n2 = list.length;
   let i2 = o2;
@@ -14272,7 +14272,7 @@ function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, looku
     const key = get_key(child_ctx);
     let block = lookup3.get(key);
     if (!block) {
-      block = create_each_block19(key, child_ctx);
+      block = create_each_block20(key, child_ctx);
       block.c();
     } else if (dynamic) {
       block.p(child_ctx, dirty);
@@ -14428,7 +14428,7 @@ function make_dirty(component, i2) {
   }
   component.$$.dirty[i2 / 31 | 0] |= 1 << i2 % 31;
 }
-function init(component, options, instance103, create_fragment103, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance105, create_fragment105, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -14451,7 +14451,7 @@ function init(component, options, instance103, create_fragment103, not_equal, pr
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance103 ? instance103(component, options.props || {}, (i2, ret, ...rest) => {
+  $$.ctx = instance105 ? instance105(component, options.props || {}, (i2, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i2], $$.ctx[i2] = value)) {
       if (!$$.skip_bound && $$.bound[i2])
@@ -14464,7 +14464,7 @@ function init(component, options, instance103, create_fragment103, not_equal, pr
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment103 ? create_fragment103($$.ctx) : false;
+  $$.fragment = create_fragment105 ? create_fragment105($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -25203,8 +25203,8 @@ function _typeof(obj) {
 }
 
 // node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-function _classCallCheck(instance103, Constructor) {
-  if (!(instance103 instanceof Constructor)) {
+function _classCallCheck(instance105, Constructor) {
+  if (!(instance105 instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
@@ -29364,26 +29364,26 @@ var passive = {
   passive: true
 };
 function effect3(_ref) {
-  var state = _ref.state, instance103 = _ref.instance, options = _ref.options;
+  var state = _ref.state, instance105 = _ref.instance, options = _ref.options;
   var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
     scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance103.update, passive);
+      scrollParent.addEventListener("scroll", instance105.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance103.update, passive);
+    window2.addEventListener("resize", instance105.update, passive);
   }
   return function() {
     if (scroll) {
       scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance103.update, passive);
+        scrollParent.removeEventListener("scroll", instance105.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance103.update, passive);
+      window2.removeEventListener("resize", instance105.update, passive);
     }
   };
 }
@@ -30265,7 +30265,7 @@ function popperGenerator(generatorOptions) {
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
-    var instance103 = {
+    var instance105 = {
       state,
       setOptions: function setOptions(setOptionsAction) {
         var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
@@ -30302,7 +30302,7 @@ function popperGenerator(generatorOptions) {
           }
         }
         runModifierEffects();
-        return instance103.update();
+        return instance105.update();
       },
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
@@ -30344,14 +30344,14 @@ function popperGenerator(generatorOptions) {
               state,
               options: _options,
               name,
-              instance: instance103
+              instance: instance105
             }) || state;
           }
         }
       },
       update: debounce(function() {
         return new Promise(function(resolve) {
-          instance103.forceUpdate();
+          instance105.forceUpdate();
           resolve(state);
         });
       }),
@@ -30364,9 +30364,9 @@ function popperGenerator(generatorOptions) {
       if (true) {
         console.error(INVALID_ELEMENT_ERROR);
       }
-      return instance103;
+      return instance105;
     }
-    instance103.setOptions(options).then(function(state2) {
+    instance105.setOptions(options).then(function(state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
@@ -30378,7 +30378,7 @@ function popperGenerator(generatorOptions) {
           var cleanupFn = effect4({
             state,
             name,
-            instance: instance103,
+            instance: instance105,
             options: options2
           });
           var noopFn = function noopFn2() {
@@ -30393,7 +30393,7 @@ function popperGenerator(generatorOptions) {
       });
       effectCleanupFns = [];
     }
-    return instance103;
+    return instance105;
   };
 }
 
@@ -33223,12 +33223,75 @@ var Checkbox = class extends SvelteComponent {
 };
 var Checkbox_default = Checkbox;
 
+// node_modules/obsidian-svelte/ColorInput/ColorInput.svelte
+function create_fragment18(ctx) {
+  let input;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      input = element("input");
+      attr(input, "type", "color");
+    },
+    m(target, anchor) {
+      insert(target, input, anchor);
+      set_input_value(input, ctx[0]);
+      if (!mounted) {
+        dispose = [
+          listen(input, "input", ctx[3]),
+          listen(input, "input", ctx[1]),
+          listen(input, "change", ctx[2])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1) {
+        set_input_value(input, ctx2[0]);
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(input);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance19($$self, $$props, $$invalidate) {
+  let { value } = $$props;
+  function input_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function change_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function input_input_handler() {
+    value = this.value;
+    $$invalidate(0, value);
+  }
+  $$self.$$set = ($$props2) => {
+    if ("value" in $$props2)
+      $$invalidate(0, value = $$props2.value);
+  };
+  return [value, input_handler, change_handler, input_input_handler];
+}
+var ColorInput = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance19, create_fragment18, safe_not_equal, { value: 0 });
+  }
+};
+var ColorInput_default = ColorInput;
+
 // node_modules/obsidian-svelte/DateInput/DateInput.svelte
 var import_dayjs2 = __toModule(require_dayjs_min());
 function add_css7(target) {
   append_styles(target, "svelte-2qn54x", "input.svelte-2qn54x{border-radius:9999px;border:0;background-color:var(--background-modifier-hover);font-family:var(--font-default);padding:0.1em 0.6em}.embed.svelte-2qn54x{margin:0 8px}");
 }
-function create_fragment18(ctx) {
+function create_fragment19(ctx) {
   let input;
   let input_value_value;
   let mounted;
@@ -33266,7 +33329,7 @@ function create_fragment18(ctx) {
     }
   };
 }
-function instance19($$self, $$props, $$invalidate) {
+function instance20($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { embed = false } = $$props;
   const dispatch2 = createEventDispatcher();
@@ -33286,7 +33349,7 @@ function instance19($$self, $$props, $$invalidate) {
 var DateInput = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance19, create_fragment18, safe_not_equal, { value: 0, embed: 1 }, add_css7);
+    init(this, options, instance20, create_fragment19, safe_not_equal, { value: 0, embed: 1 }, add_css7);
   }
 };
 var DateInput_default = DateInput;
@@ -33295,7 +33358,7 @@ var DateInput_default = DateInput;
 function add_css8(target) {
   append_styles(target, "svelte-u3bamg", ".is-unresolved.svelte-u3bamg{opacity:0.5}");
 }
-function create_fragment19(ctx) {
+function create_fragment20(ctx) {
   let a2;
   let a_class_value;
   let current;
@@ -33372,7 +33435,7 @@ function create_fragment19(ctx) {
     }
   };
 }
-function instance20($$self, $$props, $$invalidate) {
+function instance21($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { linkText } = $$props;
   let { sourcePath } = $$props;
@@ -33421,7 +33484,7 @@ function instance20($$self, $$props, $$invalidate) {
 var InternalLink = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance20, create_fragment19, safe_not_equal, {
+    init(this, options, instance21, create_fragment20, safe_not_equal, {
       linkText: 0,
       sourcePath: 1,
       tooltip: 5,
@@ -33432,7 +33495,7 @@ var InternalLink = class extends SvelteComponent {
 var InternalLink_default = InternalLink;
 
 // node_modules/obsidian-svelte/Loading/Loading.svelte
-function create_fragment20(ctx) {
+function create_fragment21(ctx) {
   let div9;
   return {
     c() {
@@ -33463,13 +33526,13 @@ function create_fragment20(ctx) {
 var Loading = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, null, create_fragment20, safe_not_equal, {});
+    init(this, options, null, create_fragment21, safe_not_equal, {});
   }
 };
 var Loading_default = Loading;
 
 // node_modules/obsidian-svelte/Modal/ModalButtonGroup.svelte
-function create_fragment21(ctx) {
+function create_fragment22(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -33513,7 +33576,7 @@ function create_fragment21(ctx) {
     }
   };
 }
-function instance21($$self, $$props, $$invalidate) {
+function instance22($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -33524,13 +33587,13 @@ function instance21($$self, $$props, $$invalidate) {
 var ModalButtonGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance21, create_fragment21, safe_not_equal, {});
+    init(this, options, instance22, create_fragment22, safe_not_equal, {});
   }
 };
 var ModalButtonGroup_default = ModalButtonGroup;
 
 // node_modules/obsidian-svelte/Modal/ModalContent.svelte
-function create_fragment22(ctx) {
+function create_fragment23(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -33574,7 +33637,7 @@ function create_fragment22(ctx) {
     }
   };
 }
-function instance22($$self, $$props, $$invalidate) {
+function instance23($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -33585,13 +33648,13 @@ function instance22($$self, $$props, $$invalidate) {
 var ModalContent = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance22, create_fragment22, safe_not_equal, {});
+    init(this, options, instance23, create_fragment23, safe_not_equal, {});
   }
 };
 var ModalContent_default = ModalContent;
 
 // node_modules/obsidian-svelte/Modal/ModalLayout.svelte
-function create_fragment23(ctx) {
+function create_fragment24(ctx) {
   let div;
   let t0;
   let t1;
@@ -33645,7 +33708,7 @@ function create_fragment23(ctx) {
     }
   };
 }
-function instance23($$self, $$props, $$invalidate) {
+function instance24($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { title } = $$props;
   $$self.$$set = ($$props2) => {
@@ -33659,13 +33722,13 @@ function instance23($$self, $$props, $$invalidate) {
 var ModalLayout = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance23, create_fragment23, safe_not_equal, { title: 0 });
+    init(this, options, instance24, create_fragment24, safe_not_equal, { title: 0 });
   }
 };
 var ModalLayout_default = ModalLayout;
 
 // node_modules/obsidian-svelte/Select/SelectItem.svelte
-function create_fragment24(ctx) {
+function create_fragment25(ctx) {
   let option2;
   let t_value = (ctx[0] || ctx[1]) + "";
   let t3;
@@ -33700,7 +33763,7 @@ function create_fragment24(ctx) {
     }
   };
 }
-function instance24($$self, $$props, $$invalidate) {
+function instance25($$self, $$props, $$invalidate) {
   let { text: text2 } = $$props;
   let { value } = $$props;
   let { disabled = false } = $$props;
@@ -33717,7 +33780,7 @@ function instance24($$self, $$props, $$invalidate) {
 var SelectItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance24, create_fragment24, safe_not_equal, { text: 0, value: 1, disabled: 2 });
+    init(this, options, instance25, create_fragment25, safe_not_equal, { text: 0, value: 1, disabled: 2 });
   }
 };
 var SelectItem_default = SelectItem;
@@ -33842,7 +33905,7 @@ function create_each_block2(ctx) {
     }
   };
 }
-function create_fragment25(ctx) {
+function create_fragment26(ctx) {
   let select;
   let if_block0_anchor;
   let if_block1_anchor;
@@ -33992,7 +34055,7 @@ function create_fragment25(ctx) {
     }
   };
 }
-function instance25($$self, $$props, $$invalidate) {
+function instance26($$self, $$props, $$invalidate) {
   let { options } = $$props;
   let { value } = $$props;
   let { placeholder = "" } = $$props;
@@ -34018,7 +34081,7 @@ function instance25($$self, $$props, $$invalidate) {
 var Select = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance25, create_fragment25, safe_not_equal, {
+    init(this, options, instance26, create_fragment26, safe_not_equal, {
       options: 0,
       value: 1,
       placeholder: 2,
@@ -34032,7 +34095,7 @@ var Select_default = Select;
 function add_css9(target) {
   append_styles(target, "svelte-17mpvkc", ".vertical.svelte-17mpvkc{flex-direction:column;align-items:flex-start;gap:var(--size-4-1)}.vertical-control.svelte-17mpvkc{flex-direction:column;align-items:flex-start;gap:var(--size-4-1);width:100%}");
 }
-function create_fragment26(ctx) {
+function create_fragment27(ctx) {
   var _a, _b;
   let div4;
   let div2;
@@ -34120,7 +34183,7 @@ function create_fragment26(ctx) {
     }
   };
 }
-function instance26($$self, $$props, $$invalidate) {
+function instance27($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { name = void 0 } = $$props;
   let { description = void 0 } = $$props;
@@ -34140,7 +34203,7 @@ function instance26($$self, $$props, $$invalidate) {
 var SettingItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance26, create_fragment26, safe_not_equal, { name: 0, description: 1, vertical: 2 }, add_css9);
+    init(this, options, instance27, create_fragment27, safe_not_equal, { name: 0, description: 1, vertical: 2 }, add_css9);
   }
 };
 var SettingItem_default = SettingItem;
@@ -34149,7 +34212,7 @@ var SettingItem_default = SettingItem;
 function add_css10(target) {
   append_styles(target, "svelte-ehq9e", "div.svelte-ehq9e{background-color:var(--tag-background);border:var(--tag-border-width) solid var(--tag-border-color);border-radius:var(--tag-radius);color:var(--tag-color);font-size:var(--tag-size);text-decoration:var(--tag-decoration);padding:var(--tag-padding-y) var(--tag-padding-x);line-height:1;display:inline-flex;align-items:center;gap:var(--size-4-1)}");
 }
-function create_fragment27(ctx) {
+function create_fragment28(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -34193,7 +34256,7 @@ function create_fragment27(ctx) {
     }
   };
 }
-function instance27($$self, $$props, $$invalidate) {
+function instance28($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -34204,7 +34267,7 @@ function instance27($$self, $$props, $$invalidate) {
 var Tag = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance27, create_fragment27, safe_not_equal, {}, add_css10);
+    init(this, options, instance28, create_fragment28, safe_not_equal, {}, add_css10);
   }
 };
 var Tag_default = Tag;
@@ -34213,7 +34276,7 @@ var Tag_default = Tag;
 function add_css11(target) {
   append_styles(target, "svelte-1yhxf9x", "textarea.svelte-1yhxf9x{font-family:var(--font-monospace-default)}");
 }
-function create_fragment28(ctx) {
+function create_fragment29(ctx) {
   let textarea;
   let textarea_style_value;
   let mounted;
@@ -34258,7 +34321,7 @@ function create_fragment28(ctx) {
     }
   };
 }
-function instance28($$self, $$props, $$invalidate) {
+function instance29($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { rows } = $$props;
   let { width = "auto" } = $$props;
@@ -34289,7 +34352,7 @@ function instance28($$self, $$props, $$invalidate) {
 var TextArea = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance28, create_fragment28, safe_not_equal, {
+    init(this, options, instance29, create_fragment29, safe_not_equal, {
       value: 0,
       rows: 1,
       width: 2,
@@ -34366,7 +34429,7 @@ function create_dynamic_element(ctx) {
     }
   };
 }
-function create_fragment29(ctx) {
+function create_fragment30(ctx) {
   let previous_tag = ctx[2][ctx[0]];
   let svelte_element_anchor;
   let current;
@@ -34421,7 +34484,7 @@ function create_fragment29(ctx) {
     }
   };
 }
-function instance29($$self, $$props, $$invalidate) {
+function instance30($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { variant } = $$props;
   let { nomargin = false } = $$props;
@@ -34448,7 +34511,7 @@ function instance29($$self, $$props, $$invalidate) {
 var Typography = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance29, create_fragment29, safe_not_equal, { variant: 0, nomargin: 1 }, add_css12);
+    init(this, options, instance30, create_fragment30, safe_not_equal, { variant: 0, nomargin: 1 }, add_css12);
   }
 };
 var Typography_default = Typography;
@@ -35034,7 +35097,7 @@ function create_default_slot5(ctx) {
     }
   };
 }
-function create_fragment30(ctx) {
+function create_fragment31(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
@@ -35078,7 +35141,7 @@ function create_fragment30(ctx) {
 }
 var func = (project) => ({ label: project.name, value: project.id });
 var func_1 = (path) => ({ label: path, value: path });
-function instance30($$self, $$props, $$invalidate) {
+function instance31($$self, $$props, $$invalidate) {
   let nameError;
   let $i18n;
   let $app;
@@ -35145,7 +35208,7 @@ function instance30($$self, $$props, $$invalidate) {
 var CreateNote = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance30, create_fragment30, safe_not_equal, { name: 0, project: 1, onSave: 2 });
+    init(this, options, instance31, create_fragment31, safe_not_equal, { name: 0, project: 1, onSave: 2 });
   }
 };
 var CreateNote_default = CreateNote;
@@ -35283,7 +35346,7 @@ function create_default_slot6(ctx) {
     }
   };
 }
-function create_fragment31(ctx) {
+function create_fragment32(ctx) {
   let t3;
   let button;
   let current;
@@ -35372,7 +35435,7 @@ function create_fragment31(ctx) {
   };
 }
 var func2 = (file) => file.path;
-function instance31($$self, $$props, $$invalidate) {
+function instance32($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
   let { paths } = $$props;
@@ -35411,7 +35474,7 @@ function instance31($$self, $$props, $$invalidate) {
 var FileListInput = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance31, create_fragment31, safe_not_equal, {
+    init(this, options, instance32, create_fragment32, safe_not_equal, {
       paths: 0,
       onPathsChange: 1,
       buttonText: 2
@@ -36502,7 +36565,7 @@ function create_default_slot7(ctx) {
     }
   };
 }
-function create_fragment32(ctx) {
+function create_fragment33(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
@@ -36545,7 +36608,7 @@ function create_fragment32(ctx) {
   };
 }
 var func3 = (file) => file.path;
-function instance32($$self, $$props, $$invalidate) {
+function instance33($$self, $$props, $$invalidate) {
   let projects;
   let defaultName;
   let name;
@@ -36650,7 +36713,7 @@ function instance32($$self, $$props, $$invalidate) {
 var CreateProject = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance32, create_fragment32, safe_not_equal, { title: 1, cta: 2, onSave: 3, project: 0 }, add_css14);
+    init(this, options, instance33, create_fragment33, safe_not_equal, { title: 1, cta: 2, onSave: 3, project: 0 }, add_css14);
   }
 };
 var CreateProject_default = CreateProject;
@@ -37230,7 +37293,7 @@ var get_info_slot_changes = (dirty) => ({});
 var get_info_slot_context = (ctx) => ({});
 var get_left_slot_changes = (dirty) => ({});
 var get_left_slot_context = (ctx) => ({});
-function create_fragment33(ctx) {
+function create_fragment34(ctx) {
   let div3;
   let div0;
   let t0;
@@ -37378,7 +37441,7 @@ function create_fragment33(ctx) {
     }
   };
 }
-function instance33($$self, $$props, $$invalidate) {
+function instance34($$self, $$props, $$invalidate) {
   let isMobile;
   let { $$slots: slots = {}, $$scope } = $$props;
   let { variant } = $$props;
@@ -37404,7 +37467,7 @@ function instance33($$self, $$props, $$invalidate) {
 var ViewToolbar = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance33, create_fragment33, safe_not_equal, { variant: 0 }, add_css15);
+    init(this, options, instance34, create_fragment34, safe_not_equal, { variant: 0 }, add_css15);
   }
 };
 var ViewToolbar_default = ViewToolbar;
@@ -37413,7 +37476,7 @@ var ViewToolbar_default = ViewToolbar;
 function add_css16(target) {
   append_styles(target, "svelte-j9o14g", "div.svelte-j9o14g{display:flex;gap:8px}.padding.svelte-j9o14g{padding:8px}.fullWidth.svelte-j9o14g{width:100%;justify-content:space-between}");
 }
-function create_fragment34(ctx) {
+function create_fragment35(ctx) {
   let div;
   let div_style_value;
   let current;
@@ -37470,7 +37533,7 @@ function create_fragment34(ctx) {
     }
   };
 }
-function instance34($$self, $$props, $$invalidate) {
+function instance35($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { fullWidth = false } = $$props;
   let { alignItems = "center" } = $$props;
@@ -37490,7 +37553,7 @@ function instance34($$self, $$props, $$invalidate) {
 var HorizontalGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance34, create_fragment34, safe_not_equal, { fullWidth: 0, alignItems: 1, padding: 2 }, add_css16);
+    init(this, options, instance35, create_fragment35, safe_not_equal, { fullWidth: 0, alignItems: 1, padding: 2 }, add_css16);
   }
 };
 var HorizontalGroup_default = HorizontalGroup;
@@ -37938,7 +38001,7 @@ function create_default_slot8(ctx) {
     }
   };
 }
-function create_fragment35(ctx) {
+function create_fragment36(ctx) {
   let div;
   let t3;
   let horizontalgroup;
@@ -38031,7 +38094,7 @@ function create_fragment35(ctx) {
     }
   };
 }
-function instance35($$self, $$props, $$invalidate) {
+function instance36($$self, $$props, $$invalidate) {
   let fieldOptions;
   let { filter: filter3 } = $$props;
   let { fields } = $$props;
@@ -38079,11 +38142,11 @@ function instance35($$self, $$props, $$invalidate) {
   }
   function getOperatorsByField(field) {
     const baseOperators = [
-      { label: "is empty", value: "is-empty" },
       {
         label: "is not empty",
         value: "is-not-empty"
-      }
+      },
+      { label: "is empty", value: "is-empty" }
     ];
     if (field.repeated) {
       return baseOperators;
@@ -38153,10 +38216,687 @@ function instance35($$self, $$props, $$invalidate) {
 var FilterSettings = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance35, create_fragment35, safe_not_equal, { filter: 0, fields: 9, onFilterChange: 10 });
+    init(this, options, instance36, create_fragment36, safe_not_equal, { filter: 0, fields: 9, onFilterChange: 10 });
   }
 };
 var FilterSettings_default = FilterSettings;
+
+// src/components/FilterSettings/ColorFilterSettings.svelte
+function get_each_context5(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[12] = list[i2];
+  child_ctx[15] = i2;
+  const constants_0 = child_ctx[8](child_ctx[12].condition.field);
+  child_ctx[13] = constants_0;
+  return child_ctx;
+}
+function create_if_block9(ctx) {
+  let show_if;
+  let show_if_1;
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block_16, create_if_block_23];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (dirty & 1)
+      show_if = null;
+    if (dirty & 1)
+      show_if_1 = null;
+    if (show_if == null)
+      show_if = !!isStringFilterOperator(ctx2[12].condition.operator);
+    if (show_if)
+      return 0;
+    if (show_if_1 == null)
+      show_if_1 = !!isNumberFilterOperator(ctx2[12].condition.operator);
+    if (show_if_1)
+      return 1;
+    return -1;
+  }
+  if (~(current_block_type_index = select_block_type(ctx, -1))) {
+    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  }
+  return {
+    c() {
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].m(target, anchor);
+      }
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if (~current_block_type_index) {
+          if_blocks[current_block_type_index].p(ctx2, dirty);
+        }
+      } else {
+        if (if_block) {
+          group_outros();
+          transition_out(if_blocks[previous_block_index], 1, 1, () => {
+            if_blocks[previous_block_index] = null;
+          });
+          check_outros();
+        }
+        if (~current_block_type_index) {
+          if_block = if_blocks[current_block_type_index];
+          if (!if_block) {
+            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+            if_block.c();
+          } else {
+            if_block.p(ctx2, dirty);
+          }
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        } else {
+          if_block = null;
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].d(detaching);
+      }
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_if_block_23(ctx) {
+  var _a;
+  let numberinput;
+  let current;
+  numberinput = new NumberInput_default({
+    props: {
+      value: parseFloat((_a = ctx[12].condition.value) != null ? _a : "")
+    }
+  });
+  numberinput.$on("blur", ctx[5](ctx[15]));
+  return {
+    c() {
+      create_component(numberinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(numberinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const numberinput_changes = {};
+      if (dirty & 1)
+        numberinput_changes.value = parseFloat((_a2 = ctx2[12].condition.value) != null ? _a2 : "");
+      numberinput.$set(numberinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(numberinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(numberinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(numberinput, detaching);
+    }
+  };
+}
+function create_if_block_16(ctx) {
+  var _a;
+  let textinput;
+  let current;
+  textinput = new TextInput_default({
+    props: {
+      value: (_a = ctx[12].condition.value) != null ? _a : ""
+    }
+  });
+  textinput.$on("blur", ctx[5](ctx[15]));
+  return {
+    c() {
+      create_component(textinput.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(textinput, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2;
+      const textinput_changes = {};
+      if (dirty & 1)
+        textinput_changes.value = (_a2 = ctx2[12].condition.value) != null ? _a2 : "";
+      textinput.$set(textinput_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(textinput.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(textinput.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(textinput, detaching);
+    }
+  };
+}
+function create_default_slot_24(ctx) {
+  let colorinput;
+  let t0;
+  let div;
+  let t22;
+  let select0;
+  let t3;
+  let select1;
+  let t4;
+  let t5;
+  let iconbutton;
+  let current;
+  colorinput = new ColorInput_default({
+    props: { value: ctx[12].color }
+  });
+  colorinput.$on("change", ctx[2](ctx[15]));
+  select0 = new Select_default({
+    props: {
+      value: ctx[12].condition.field,
+      options: ctx[1]
+    }
+  });
+  select0.$on("change", ctx[3](ctx[15]));
+  select1 = new Select_default({
+    props: {
+      value: ctx[12].condition.operator,
+      options: ctx[13] ? ctx[9](ctx[13]) : []
+    }
+  });
+  select1.$on("change", ctx[4](ctx[15]));
+  let if_block = filterOperatorTypes[ctx[12].condition.operator] === "binary" && create_if_block9(ctx);
+  iconbutton = new IconButton_default({ props: { icon: "trash" } });
+  iconbutton.$on("click", ctx[6](ctx[15]));
+  return {
+    c() {
+      create_component(colorinput.$$.fragment);
+      t0 = space();
+      div = element("div");
+      div.textContent = "Where";
+      t22 = space();
+      create_component(select0.$$.fragment);
+      t3 = space();
+      create_component(select1.$$.fragment);
+      t4 = space();
+      if (if_block)
+        if_block.c();
+      t5 = space();
+      create_component(iconbutton.$$.fragment);
+      attr(div, "class", "setting-item-name");
+      set_style(div, "width", "5ch");
+    },
+    m(target, anchor) {
+      mount_component(colorinput, target, anchor);
+      insert(target, t0, anchor);
+      insert(target, div, anchor);
+      insert(target, t22, anchor);
+      mount_component(select0, target, anchor);
+      insert(target, t3, anchor);
+      mount_component(select1, target, anchor);
+      insert(target, t4, anchor);
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, t5, anchor);
+      mount_component(iconbutton, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const colorinput_changes = {};
+      if (dirty & 1)
+        colorinput_changes.value = ctx2[12].color;
+      colorinput.$set(colorinput_changes);
+      const select0_changes = {};
+      if (dirty & 1)
+        select0_changes.value = ctx2[12].condition.field;
+      if (dirty & 2)
+        select0_changes.options = ctx2[1];
+      select0.$set(select0_changes);
+      const select1_changes = {};
+      if (dirty & 1)
+        select1_changes.value = ctx2[12].condition.operator;
+      if (dirty & 1)
+        select1_changes.options = ctx2[13] ? ctx2[9](ctx2[13]) : [];
+      select1.$set(select1_changes);
+      if (filterOperatorTypes[ctx2[12].condition.operator] === "binary") {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & 1) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block9(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(t5.parentNode, t5);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(colorinput.$$.fragment, local);
+      transition_in(select0.$$.fragment, local);
+      transition_in(select1.$$.fragment, local);
+      transition_in(if_block);
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(colorinput.$$.fragment, local);
+      transition_out(select0.$$.fragment, local);
+      transition_out(select1.$$.fragment, local);
+      transition_out(if_block);
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(colorinput, detaching);
+      if (detaching)
+        detach(t0);
+      if (detaching)
+        detach(div);
+      if (detaching)
+        detach(t22);
+      destroy_component(select0, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_component(select1, detaching);
+      if (detaching)
+        detach(t4);
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(t5);
+      destroy_component(iconbutton, detaching);
+    }
+  };
+}
+function create_each_block5(ctx) {
+  let horizontalgroup;
+  let current;
+  horizontalgroup = new HorizontalGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot_24] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(horizontalgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(horizontalgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const horizontalgroup_changes = {};
+      if (dirty & 65539) {
+        horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      horizontalgroup.$set(horizontalgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(horizontalgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(horizontalgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(horizontalgroup, detaching);
+    }
+  };
+}
+function create_default_slot_16(ctx) {
+  let icon;
+  let t3;
+  let current;
+  icon = new Icon_default({ props: { name: "plus" } });
+  return {
+    c() {
+      create_component(icon.$$.fragment);
+      t3 = text("Add color");
+    },
+    m(target, anchor) {
+      mount_component(icon, target, anchor);
+      insert(target, t3, anchor);
+      current = true;
+    },
+    p: noop,
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(icon, detaching);
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot9(ctx) {
+  let button;
+  let current;
+  button = new Button_default({
+    props: {
+      variant: "plain",
+      $$slots: { default: [create_default_slot_16] },
+      $$scope: { ctx }
+    }
+  });
+  button.$on("click", ctx[7]);
+  return {
+    c() {
+      create_component(button.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(button, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const button_changes = {};
+      if (dirty & 65536) {
+        button_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      button.$set(button_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(button.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(button.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(button, detaching);
+    }
+  };
+}
+function create_fragment37(ctx) {
+  let div;
+  let t3;
+  let horizontalgroup;
+  let current;
+  let each_value = ctx[0].conditions;
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block5(get_each_context5(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  horizontalgroup = new HorizontalGroup_default({
+    props: {
+      $$slots: { default: [create_default_slot9] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      div = element("div");
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      t3 = space();
+      create_component(horizontalgroup.$$.fragment);
+      set_style(div, "display", "flex");
+      set_style(div, "flex-direction", "column");
+      set_style(div, "gap", "8px");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(div, null);
+      }
+      append(div, t3);
+      mount_component(horizontalgroup, div, null);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 895) {
+        each_value = ctx2[0].conditions;
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context5(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block5(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(div, t3);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+      const horizontalgroup_changes = {};
+      if (dirty & 65536) {
+        horizontalgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      horizontalgroup.$set(horizontalgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      transition_in(horizontalgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      transition_out(horizontalgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_each(each_blocks, detaching);
+      destroy_component(horizontalgroup);
+    }
+  };
+}
+function instance37($$self, $$props, $$invalidate) {
+  let fieldOptions;
+  let { filter: filter3 } = $$props;
+  let { fields } = $$props;
+  let { onFilterChange } = $$props;
+  const handleColorChange = (i2) => (event) => {
+    if (event.currentTarget instanceof HTMLInputElement) {
+      const inputValue = event.currentTarget.value;
+      $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+        draft.conditions = draft.conditions.map((cond, idx) => idx !== i2 ? cond : Object.assign(Object.assign({}, cond), { color: inputValue }));
+      }));
+      onFilterChange(filter3);
+    }
+  };
+  const handleFieldChange = (i2) => ({ detail }) => {
+    $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+      draft.conditions = draft.conditions.map((cond, idx) => idx !== i2 ? cond : Object.assign(Object.assign({}, cond), {
+        condition: { field: detail, operator: "is-empty" }
+      }));
+    }));
+    onFilterChange(filter3);
+  };
+  const handleOperatorChange = (i2) => ({ detail }) => {
+    $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+      draft.conditions = draft.conditions.map((cond, idx) => idx !== i2 ? cond : Object.assign(Object.assign({}, cond), {
+        condition: Object.assign(Object.assign({}, cond.condition), { operator: detail })
+      }));
+    }));
+    onFilterChange(filter3);
+  };
+  const handleValueChange = (i2) => (event) => {
+    if (event.currentTarget instanceof HTMLInputElement) {
+      const inputValue = event.currentTarget.value;
+      $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+        draft.conditions = draft.conditions.map((cond, idx) => idx !== i2 ? cond : Object.assign(Object.assign({}, cond), {
+          condition: Object.assign(Object.assign({}, cond.condition), { value: inputValue })
+        }));
+      }));
+      onFilterChange(filter3);
+    }
+  };
+  const handleConditionRemove = (i2) => (event) => {
+    event.stopPropagation();
+    $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+      draft.conditions.splice(i2, 1);
+    }));
+    onFilterChange(filter3);
+  };
+  function handleConditionAdd() {
+    $$invalidate(0, filter3 = immer_esm_default(filter3, (draft) => {
+      var _a, _b;
+      draft.conditions.push({
+        color: "#a882ff",
+        condition: {
+          field: (_b = (_a = fields.at(0)) === null || _a === void 0 ? void 0 : _a.name) !== null && _b !== void 0 ? _b : "",
+          operator: "is-not-empty"
+        }
+      });
+    }));
+    onFilterChange(filter3);
+  }
+  function getFieldByName(fieldName) {
+    return fields.find((field) => field.name === fieldName);
+  }
+  function getOperatorsByField(field) {
+    const baseOperators = [
+      {
+        label: "is not empty",
+        value: "is-not-empty"
+      },
+      { label: "is empty", value: "is-empty" }
+    ];
+    if (field.repeated) {
+      return baseOperators;
+    }
+    switch (field.type) {
+      case DataFieldType.String:
+        const stringOps = [
+          { label: "is", value: "is" },
+          { label: "is not", value: "is-not" },
+          { label: "contains", value: "contains" },
+          {
+            label: "does not contain",
+            value: "not-contains"
+          }
+        ];
+        return [...baseOperators, ...stringOps];
+      case DataFieldType.Boolean:
+        const booleanOps = [
+          { label: "is checked", value: "is-checked" },
+          {
+            label: "is not checked",
+            value: "is-not-checked"
+          }
+        ];
+        return [...baseOperators, ...booleanOps];
+      case DataFieldType.Number:
+        const numberOps = [
+          { label: "=", value: "eq" },
+          { label: "\u2260", value: "neq" },
+          { label: "<", value: "lt" },
+          { label: ">", value: "gt" },
+          { label: "\u2264", value: "lte" },
+          { label: "\u2265", value: "gte" }
+        ];
+        return [...baseOperators, ...numberOps];
+    }
+    return baseOperators;
+  }
+  $$self.$$set = ($$props2) => {
+    if ("filter" in $$props2)
+      $$invalidate(0, filter3 = $$props2.filter);
+    if ("fields" in $$props2)
+      $$invalidate(10, fields = $$props2.fields);
+    if ("onFilterChange" in $$props2)
+      $$invalidate(11, onFilterChange = $$props2.onFilterChange);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 1024) {
+      $:
+        $$invalidate(1, fieldOptions = fields.map((field) => ({ label: field.name, value: field.name })));
+    }
+  };
+  return [
+    filter3,
+    fieldOptions,
+    handleColorChange,
+    handleFieldChange,
+    handleOperatorChange,
+    handleValueChange,
+    handleConditionRemove,
+    handleConditionAdd,
+    getFieldByName,
+    getOperatorsByField,
+    fields,
+    onFilterChange
+  ];
+}
+var ColorFilterSettings = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance37, create_fragment37, safe_not_equal, {
+      filter: 0,
+      fields: 10,
+      onFilterChange: 11
+    });
+  }
+};
+var ColorFilterSettings_default = ColorFilterSettings;
 
 // src/modals/add-view-modal.ts
 var import_obsidian21 = __toModule(require("obsidian"));
@@ -38397,7 +39137,7 @@ function create_default_slot_33(ctx) {
     }
   };
 }
-function create_default_slot_24(ctx) {
+function create_default_slot_25(ctx) {
   let t_value = ctx[6].t("modals.view.create.cta") + "";
   let t3;
   return {
@@ -38417,13 +39157,13 @@ function create_default_slot_24(ctx) {
     }
   };
 }
-function create_default_slot_16(ctx) {
+function create_default_slot_17(ctx) {
   let button;
   let current;
   button = new Button_default({
     props: {
       variant: "primary",
-      $$slots: { default: [create_default_slot_24] },
+      $$slots: { default: [create_default_slot_25] },
       $$scope: { ctx }
     }
   });
@@ -38458,7 +39198,7 @@ function create_default_slot_16(ctx) {
     }
   };
 }
-function create_default_slot9(ctx) {
+function create_default_slot10(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -38471,7 +39211,7 @@ function create_default_slot9(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_16] },
+      $$slots: { default: [create_default_slot_17] },
       $$scope: { ctx }
     }
   });
@@ -38519,13 +39259,13 @@ function create_default_slot9(ctx) {
     }
   };
 }
-function create_fragment36(ctx) {
+function create_fragment38(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[6].t("modals.view.create.title"),
-      $$slots: { default: [create_default_slot9] },
+      $$slots: { default: [create_default_slot10] },
       $$scope: { ctx }
     }
   });
@@ -38562,7 +39302,7 @@ function create_fragment36(ctx) {
   };
 }
 var func4 = (project) => ({ label: project.name, value: project.id });
-function instance36($$self, $$props, $$invalidate) {
+function instance38($$self, $$props, $$invalidate) {
   let selectedOption;
   let nameError;
   let $i18n;
@@ -38641,7 +39381,7 @@ function instance36($$self, $$props, $$invalidate) {
 var AddView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance36, create_fragment36, safe_not_equal, { onSave: 1, project: 0 });
+    init(this, options, instance38, create_fragment38, safe_not_equal, { onSave: 1, project: 0 });
   }
 };
 var AddView_default = AddView;
@@ -38754,7 +39494,7 @@ function create_default_slot_34(ctx) {
     }
   };
 }
-function create_default_slot_25(ctx) {
+function create_default_slot_26(ctx) {
   let t_value = ctx[5].t("modals.confirm.cancel") + "";
   let t3;
   return {
@@ -38774,7 +39514,7 @@ function create_default_slot_25(ctx) {
     }
   };
 }
-function create_default_slot_17(ctx) {
+function create_default_slot_18(ctx) {
   let button0;
   let t3;
   let button1;
@@ -38789,7 +39529,7 @@ function create_default_slot_17(ctx) {
   button0.$on("click", ctx[6]);
   button1 = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot_25] },
+      $$slots: { default: [create_default_slot_26] },
       $$scope: { ctx }
     }
   });
@@ -38840,7 +39580,7 @@ function create_default_slot_17(ctx) {
     }
   };
 }
-function create_default_slot10(ctx) {
+function create_default_slot11(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -38853,7 +39593,7 @@ function create_default_slot10(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_17] },
+      $$slots: { default: [create_default_slot_18] },
       $$scope: { ctx }
     }
   });
@@ -38901,13 +39641,13 @@ function create_default_slot10(ctx) {
     }
   };
 }
-function create_fragment37(ctx) {
+function create_fragment39(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[0],
-      $$slots: { default: [create_default_slot10] },
+      $$slots: { default: [create_default_slot11] },
       $$scope: { ctx }
     }
   });
@@ -38943,7 +39683,7 @@ function create_fragment37(ctx) {
     }
   };
 }
-function instance37($$self, $$props, $$invalidate) {
+function instance39($$self, $$props, $$invalidate) {
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(5, $i18n = $$value));
   let { title } = $$props;
@@ -38983,7 +39723,7 @@ function instance37($$self, $$props, $$invalidate) {
 var ConfirmDialog = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance37, create_fragment37, safe_not_equal, {
+    init(this, options, instance39, create_fragment39, safe_not_equal, {
       title: 0,
       message: 1,
       cta: 2,
@@ -39031,7 +39771,7 @@ var ConfirmDialogModal = class extends import_obsidian22.Modal {
 function add_css17(target) {
   append_styles(target, "svelte-1ydakjn", "span.svelte-1ydakjn{color:var(--text-on-accent)}.error.svelte-1ydakjn{background-color:var(--background-modifier-error)}");
 }
-function create_fragment38(ctx) {
+function create_fragment40(ctx) {
   let span;
   let current;
   let mounted;
@@ -39094,7 +39834,7 @@ function create_fragment38(ctx) {
     }
   };
 }
-function instance38($$self, $$props, $$invalidate) {
+function instance40($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { variant } = $$props;
   function click_handler(event) {
@@ -39114,7 +39854,7 @@ function instance38($$self, $$props, $$invalidate) {
 var Flair = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance38, create_fragment38, safe_not_equal, { variant: 0 }, add_css17);
+    init(this, options, instance40, create_fragment40, safe_not_equal, { variant: 0 }, add_css17);
   }
 };
 var Flair_default = Flair;
@@ -39124,7 +39864,7 @@ var import_obsidian23 = __toModule(require("obsidian"));
 function add_css18(target) {
   append_styles(target, "svelte-h4e1e6", "span.svelte-h4e1e6{display:flex;align-items:center;gap:4px}");
 }
-function create_if_block9(ctx) {
+function create_if_block10(ctx) {
   let iconbutton;
   let current;
   iconbutton = new IconButton_default({
@@ -39155,7 +39895,7 @@ function create_if_block9(ctx) {
     }
   };
 }
-function create_fragment39(ctx) {
+function create_fragment41(ctx) {
   var _a, _b;
   let span;
   let select;
@@ -39169,7 +39909,7 @@ function create_fragment39(ctx) {
     }
   });
   select.$on("change", ctx[6]);
-  let if_block = ctx[1].length && create_if_block9(ctx);
+  let if_block = ctx[1].length && create_if_block10(ctx);
   return {
     c() {
       span = element("span");
@@ -39204,7 +39944,7 @@ function create_fragment39(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block9(ctx2);
+          if_block = create_if_block10(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(span, null);
@@ -39242,7 +39982,7 @@ var func5 = (project) => ({ label: project.name, value: project.id });
 var func_12 = (draft) => {
   draft.sort((a2, b2) => a2.label.localeCompare(b2.label));
 };
-function instance39($$self, $$props, $$invalidate) {
+function instance41($$self, $$props, $$invalidate) {
   let project;
   let $i18n;
   let $app;
@@ -39308,7 +40048,7 @@ function instance39($$self, $$props, $$invalidate) {
 var ProjectSelect = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance39, create_fragment39, safe_not_equal, {
+    init(this, options, instance41, create_fragment41, safe_not_equal, {
       projectId: 0,
       projects: 1,
       onProjectChange: 2
@@ -39322,7 +40062,7 @@ var import_obsidian25 = __toModule(require("obsidian"));
 function add_css19(target) {
   append_styles(target, "svelte-3t9vh7", "div.svelte-3t9vh7{display:inline-flex;align-items:center;gap:4px;height:1.8rem;padding:0 8px;min-width:min-content;font-size:var(--font-ui-small);border-radius:var(--radius-s);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;border:1px solid transparent}div.svelte-3t9vh7:hover{background-color:var(--background-modifier-hover)}.active.svelte-3t9vh7{background-color:var(--background-modifier-hover)}.error.svelte-3t9vh7{border:1px solid var(--background-modifier-error)}");
 }
-function create_if_block_23(ctx) {
+function create_if_block_24(ctx) {
   let icon_1;
   let current;
   icon_1 = new Icon_default({ props: { name: ctx[3] } });
@@ -39376,7 +40116,7 @@ function create_else_block2(ctx) {
     }
   };
 }
-function create_if_block_16(ctx) {
+function create_if_block_17(ctx) {
   let textinput;
   let updating_ref;
   let updating_value;
@@ -39441,7 +40181,7 @@ function create_if_block_16(ctx) {
     }
   };
 }
-function create_if_block10(ctx) {
+function create_if_block11(ctx) {
   let iconbutton;
   let current;
   iconbutton = new IconButton_default({
@@ -39476,7 +40216,7 @@ function create_if_block10(ctx) {
     }
   };
 }
-function create_fragment40(ctx) {
+function create_fragment42(ctx) {
   let div;
   let t0;
   let current_block_type_index;
@@ -39486,8 +40226,8 @@ function create_fragment40(ctx) {
   let current;
   let mounted;
   let dispose;
-  let if_block0 = ctx[3] && create_if_block_23(ctx);
-  const if_block_creators = [create_if_block_16, create_else_block2];
+  let if_block0 = ctx[3] && create_if_block_24(ctx);
+  const if_block_creators = [create_if_block_17, create_else_block2];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[4])
@@ -39496,7 +40236,7 @@ function create_fragment40(ctx) {
   }
   current_block_type_index = select_block_type(ctx, -1);
   if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block2 = ctx[2] && create_if_block10(ctx);
+  let if_block2 = ctx[2] && create_if_block11(ctx);
   return {
     c() {
       div = element("div");
@@ -39540,7 +40280,7 @@ function create_fragment40(ctx) {
             transition_in(if_block0, 1);
           }
         } else {
-          if_block0 = create_if_block_23(ctx2);
+          if_block0 = create_if_block_24(ctx2);
           if_block0.c();
           transition_in(if_block0, 1);
           if_block0.m(div, t0);
@@ -39579,7 +40319,7 @@ function create_fragment40(ctx) {
             transition_in(if_block2, 1);
           }
         } else {
-          if_block2 = create_if_block10(ctx2);
+          if_block2 = create_if_block11(ctx2);
           if_block2.c();
           transition_in(if_block2, 1);
           if_block2.m(div, null);
@@ -39630,7 +40370,7 @@ function create_fragment40(ctx) {
     }
   };
 }
-function instance40($$self, $$props, $$invalidate) {
+function instance42($$self, $$props, $$invalidate) {
   let error2;
   let { label } = $$props;
   let { id } = $$props;
@@ -39743,7 +40483,7 @@ function instance40($$self, $$props, $$invalidate) {
 var ViewItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance40, create_fragment40, safe_not_equal, {
+    init(this, options, instance42, create_fragment42, safe_not_equal, {
       label: 0,
       id: 1,
       active: 2,
@@ -41937,7 +42677,7 @@ var sortable_esm_default = Sortable;
 function add_css20(target) {
   append_styles(target, "svelte-1msv9tc", "div.svelte-1msv9tc{display:flex;justify-content:center;gap:var(--size-4-1);min-width:min-content}section.svelte-1msv9tc{overflow-x:auto}section.svelte-1msv9tc::-webkit-scrollbar{display:none}");
 }
-function create_fragment41(ctx) {
+function create_fragment43(ctx) {
   let section;
   let div;
   let current;
@@ -41987,7 +42727,7 @@ function create_fragment41(ctx) {
     }
   };
 }
-function instance41($$self, $$props, $$invalidate) {
+function instance43($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { onSort } = $$props;
   let ref;
@@ -42021,18 +42761,18 @@ function instance41($$self, $$props, $$invalidate) {
 var ViewItemList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance41, create_fragment41, safe_not_equal, { onSort: 1 }, add_css20);
+    init(this, options, instance43, create_fragment43, safe_not_equal, { onSort: 1 }, add_css20);
   }
 };
 var ViewItemList_default = ViewItemList;
 
 // src/app/toolbar/ViewSelect.svelte
-function get_each_context5(ctx, list, i2) {
+function get_each_context6(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[15] = list[i2];
   return child_ctx;
 }
-function create_each_block5(ctx) {
+function create_each_block6(ctx) {
   let viewitem;
   let current;
   function func7(...args) {
@@ -42107,7 +42847,7 @@ function create_key_block(ctx) {
   let each_value = ctx[1];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block5(get_each_context5(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block6(get_each_context6(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -42131,12 +42871,12 @@ function create_key_block(ctx) {
         each_value = ctx2[1];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context5(ctx2, each_value, i2);
+          const child_ctx = get_each_context6(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block5(child_ctx);
+            each_blocks[i2] = create_each_block6(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -42171,7 +42911,7 @@ function create_key_block(ctx) {
     }
   };
 }
-function create_default_slot11(ctx) {
+function create_default_slot12(ctx) {
   let previous_key = ctx[1];
   let key_block_anchor;
   let current;
@@ -42216,13 +42956,13 @@ function create_default_slot11(ctx) {
     }
   };
 }
-function create_fragment42(ctx) {
+function create_fragment44(ctx) {
   let viewitemlist;
   let current;
   viewitemlist = new ViewItemList_default({
     props: {
       onSort: ctx[6],
-      $$slots: { default: [create_default_slot11] },
+      $$slots: { default: [create_default_slot12] },
       $$scope: { ctx }
     }
   });
@@ -42258,7 +42998,7 @@ function create_fragment42(ctx) {
     }
   };
 }
-function instance42($$self, $$props, $$invalidate) {
+function instance44($$self, $$props, $$invalidate) {
   let $customViews;
   component_subscribe($$self, customViews, ($$value) => $$invalidate(14, $customViews = $$value));
   let { viewId } = $$props;
@@ -42327,7 +43067,7 @@ function instance42($$self, $$props, $$invalidate) {
 var ViewSelect = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance42, create_fragment42, safe_not_equal, {
+    init(this, options, instance44, create_fragment44, safe_not_equal, {
       viewId: 0,
       views: 1,
       onViewChange: 2,
@@ -42345,7 +43085,7 @@ var ViewSelect_default = ViewSelect;
 var import_obsidian27 = __toModule(require("obsidian"));
 
 // src/components/Accordion/Accordion.svelte
-function create_fragment43(ctx) {
+function create_fragment45(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -42388,7 +43128,7 @@ function create_fragment43(ctx) {
     }
   };
 }
-function instance43($$self, $$props, $$invalidate) {
+function instance45($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -42399,7 +43139,7 @@ function instance43($$self, $$props, $$invalidate) {
 var Accordion = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance43, create_fragment43, safe_not_equal, {});
+    init(this, options, instance45, create_fragment45, safe_not_equal, {});
   }
 };
 var Accordion_default = Accordion;
@@ -42435,7 +43175,7 @@ function add_css21(target) {
 }
 var get_header_slot_changes = (dirty) => ({});
 var get_header_slot_context = (ctx) => ({});
-function create_if_block11(ctx) {
+function create_if_block12(ctx) {
   let div;
   let div_transition;
   let current;
@@ -42490,7 +43230,7 @@ function create_if_block11(ctx) {
     }
   };
 }
-function create_fragment44(ctx) {
+function create_fragment46(ctx) {
   let section;
   let header;
   let t0;
@@ -42506,7 +43246,7 @@ function create_fragment44(ctx) {
       name: ctx[0] ? "chevron-up" : "chevron-down"
     }
   });
-  let if_block = ctx[0] && create_if_block11(ctx);
+  let if_block = ctx[0] && create_if_block12(ctx);
   return {
     c() {
       section = element("section");
@@ -42558,7 +43298,7 @@ function create_fragment44(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block11(ctx2);
+          if_block = create_if_block12(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(section, null);
@@ -42598,7 +43338,7 @@ function create_fragment44(ctx) {
     }
   };
 }
-function instance44($$self, $$props, $$invalidate) {
+function instance46($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let open = false;
   function keypress_handler(event) {
@@ -42614,7 +43354,7 @@ function instance44($$self, $$props, $$invalidate) {
 var AccordionItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance44, create_fragment44, safe_not_equal, {}, add_css21);
+    init(this, options, instance46, create_fragment46, safe_not_equal, {}, add_css21);
   }
 };
 var AccordionItem_default = AccordionItem;
@@ -42682,7 +43422,7 @@ function getBasename(str) {
 function add_css22(target) {
   append_styles(target, "svelte-1lhlmf3", "pre.svelte-1lhlmf3{overflow:scroll}span.svelte-1lhlmf3{display:flex;gap:8px;align-items:center}");
 }
-function get_each_context6(ctx, list, i2) {
+function get_each_context7(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i2];
   return child_ctx;
@@ -42826,7 +43566,7 @@ function create_header_slot(ctx) {
     }
   };
 }
-function create_each_block6(ctx) {
+function create_each_block7(ctx) {
   let accordionitem;
   let current;
   accordionitem = new AccordionItem_default({
@@ -42874,7 +43614,7 @@ function create_default_slot_45(ctx) {
   let each_value = ctx[1];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block6(get_each_context6(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block7(get_each_context7(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -42898,12 +43638,12 @@ function create_default_slot_45(ctx) {
         each_value = ctx2[1];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context6(ctx2, each_value, i2);
+          const child_ctx = get_each_context7(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block6(child_ctx);
+            each_blocks[i2] = create_each_block7(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -42988,7 +43728,7 @@ function create_default_slot_35(ctx) {
     }
   };
 }
-function create_default_slot_26(ctx) {
+function create_default_slot_27(ctx) {
   let t_value = ctx[4].t("modals.input.cancel") + "";
   let t3;
   return {
@@ -43008,12 +43748,12 @@ function create_default_slot_26(ctx) {
     }
   };
 }
-function create_default_slot_18(ctx) {
+function create_default_slot_19(ctx) {
   let button;
   let current;
   button = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot_26] },
+      $$slots: { default: [create_default_slot_27] },
       $$scope: { ctx }
     }
   });
@@ -43048,7 +43788,7 @@ function create_default_slot_18(ctx) {
     }
   };
 }
-function create_default_slot12(ctx) {
+function create_default_slot13(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -43061,7 +43801,7 @@ function create_default_slot12(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_18] },
+      $$slots: { default: [create_default_slot_19] },
       $$scope: { ctx }
     }
   });
@@ -43109,13 +43849,13 @@ function create_default_slot12(ctx) {
     }
   };
 }
-function create_fragment45(ctx) {
+function create_fragment47(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[0],
-      $$slots: { default: [create_default_slot12] },
+      $$slots: { default: [create_default_slot13] },
       $$scope: { ctx }
     }
   });
@@ -43158,7 +43898,7 @@ function getFolder(recordId) {
   }
   return recordId.slice(0, idx);
 }
-function instance45($$self, $$props, $$invalidate) {
+function instance47($$self, $$props, $$invalidate) {
   let $app;
   let $i18n;
   component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
@@ -43187,7 +43927,7 @@ function instance45($$self, $$props, $$invalidate) {
 var Inspector = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance45, create_fragment45, safe_not_equal, { title: 0, errors: 1, onCancel: 2 }, add_css22);
+    init(this, options, instance47, create_fragment47, safe_not_equal, { title: 0, errors: 1, onCancel: 2 }, add_css22);
   }
 };
 var Inspector_default = Inspector;
@@ -43223,20 +43963,20 @@ function get_if_ctx(ctx) {
   var _a, _b;
   const child_ctx = ctx.slice();
   const constants_0 = (_b = (_a = child_ctx[1].find((project) => project.id === child_ctx[0])) == null ? void 0 : _a.views) == null ? void 0 : _b.find((view2) => view2.id === child_ctx[3]);
-  child_ctx[27] = constants_0;
+  child_ctx[33] = constants_0;
   return child_ctx;
 }
-function create_if_block_32(ctx) {
+function create_if_block_4(ctx) {
   let flair;
   let current;
   flair = new Flair_default({
     props: {
       variant: "error",
-      $$slots: { default: [create_default_slot_46] },
+      $$slots: { default: [create_default_slot_73] },
       $$scope: { ctx }
     }
   });
-  flair.$on("click", ctx[26]);
+  flair.$on("click", ctx[32]);
   return {
     c() {
       create_component(flair.$$.fragment);
@@ -43247,7 +43987,7 @@ function create_if_block_32(ctx) {
     },
     p(ctx2, dirty) {
       const flair_changes = {};
-      if (dirty & 268435968) {
+      if (dirty[0] & 2048 | dirty[1] & 8) {
         flair_changes.$$scope = { dirty, ctx: ctx2 };
       }
       flair.$set(flair_changes);
@@ -43267,8 +44007,8 @@ function create_if_block_32(ctx) {
     }
   };
 }
-function create_default_slot_46(ctx) {
-  let t_value = `${ctx[9].length} ${ctx[9].length === 1 ? "error" : "errors"}`;
+function create_default_slot_73(ctx) {
+  let t_value = `${ctx[11].length} ${ctx[11].length === 1 ? "error" : "errors"}`;
   let t3;
   return {
     c() {
@@ -43278,7 +44018,7 @@ function create_default_slot_46(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 512 && t_value !== (t_value = `${ctx2[9].length} ${ctx2[9].length === 1 ? "error" : "errors"}`))
+      if (dirty[0] & 2048 && t_value !== (t_value = `${ctx2[11].length} ${ctx2[11].length === 1 ? "error" : "errors"}`))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -43290,7 +44030,7 @@ function create_default_slot_46(ctx) {
 function create_info_slot(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[9].length && create_if_block_32(ctx);
+  let if_block = ctx[11].length && create_if_block_4(ctx);
   return {
     c() {
       if (if_block)
@@ -43304,14 +44044,14 @@ function create_info_slot(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (ctx2[9].length) {
+      if (ctx2[11].length) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 512) {
+          if (dirty[0] & 2048) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_32(ctx2);
+          if_block = create_if_block_4(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -43363,11 +44103,11 @@ function create_left_slot(ctx) {
     },
     p(ctx2, dirty) {
       const projectselect_changes = {};
-      if (dirty & 1)
+      if (dirty[0] & 1)
         projectselect_changes.projectId = ctx2[0];
-      if (dirty & 2)
+      if (dirty[0] & 2)
         projectselect_changes.projects = ctx2[1];
-      if (dirty & 4)
+      if (dirty[0] & 4)
         projectselect_changes.onProjectChange = ctx2[2];
       projectselect.$set(projectselect_changes);
     },
@@ -43386,19 +44126,19 @@ function create_left_slot(ctx) {
     }
   };
 }
-function create_if_block_24(ctx) {
+function create_if_block_32(ctx) {
   let viewselect;
   let current;
   viewselect = new ViewSelect_default({
     props: {
       viewId: ctx[3],
-      views: ctx[10],
-      viewExists: ctx[21],
-      onViewSort: ctx[22],
-      onViewRename: ctx[23],
+      views: ctx[12],
+      viewExists: ctx[27],
+      onViewSort: ctx[28],
+      onViewRename: ctx[29],
       onViewChange: ctx[4],
-      onViewDuplicate: ctx[24],
-      onViewDelete: ctx[25]
+      onViewDuplicate: ctx[30],
+      onViewDelete: ctx[31]
     }
   });
   return {
@@ -43411,22 +44151,22 @@ function create_if_block_24(ctx) {
     },
     p(ctx2, dirty) {
       const viewselect_changes = {};
-      if (dirty & 8)
+      if (dirty[0] & 8)
         viewselect_changes.viewId = ctx2[3];
-      if (dirty & 1024)
-        viewselect_changes.views = ctx2[10];
-      if (dirty & 32)
-        viewselect_changes.viewExists = ctx2[21];
-      if (dirty & 1)
-        viewselect_changes.onViewSort = ctx2[22];
-      if (dirty & 1)
-        viewselect_changes.onViewRename = ctx2[23];
-      if (dirty & 16)
+      if (dirty[0] & 4096)
+        viewselect_changes.views = ctx2[12];
+      if (dirty[0] & 32)
+        viewselect_changes.viewExists = ctx2[27];
+      if (dirty[0] & 1)
+        viewselect_changes.onViewSort = ctx2[28];
+      if (dirty[0] & 1)
+        viewselect_changes.onViewRename = ctx2[29];
+      if (dirty[0] & 16)
         viewselect_changes.onViewChange = ctx2[4];
-      if (dirty & 17)
-        viewselect_changes.onViewDuplicate = ctx2[24];
-      if (dirty & 6145)
-        viewselect_changes.onViewDelete = ctx2[25];
+      if (dirty[0] & 17)
+        viewselect_changes.onViewDuplicate = ctx2[30];
+      if (dirty[0] & 24577)
+        viewselect_changes.onViewDelete = ctx2[31];
       viewselect.$set(viewselect_changes);
     },
     i(local) {
@@ -43447,7 +44187,7 @@ function create_if_block_24(ctx) {
 function create_middle_slot(ctx) {
   let div;
   let current;
-  let if_block = ctx[5] && create_if_block_24(ctx);
+  let if_block = ctx[5] && create_if_block_32(ctx);
   return {
     c() {
       div = element("div");
@@ -43465,11 +44205,11 @@ function create_middle_slot(ctx) {
       if (ctx2[5]) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 32) {
+          if (dirty[0] & 32) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_24(ctx2);
+          if_block = create_if_block_32(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(div, null);
@@ -43500,96 +44240,162 @@ function create_middle_slot(ctx) {
     }
   };
 }
-function create_if_block12(ctx) {
-  let button;
+function create_if_block13(ctx) {
+  let button0;
   let updating_ref;
-  let t3;
-  let popover;
+  let t0;
+  let popover0;
+  let t1;
+  let button1;
+  let updating_ref_1;
+  let t22;
+  let popover1;
   let current;
-  function button_ref_binding(value) {
-    ctx[17](value);
+  function button0_ref_binding(value) {
+    ctx[19](value);
   }
-  let button_props = {
-    $$slots: { default: [create_default_slot_27] },
+  let button0_props = {
+    $$slots: { default: [create_default_slot_56] },
+    $$scope: { ctx }
+  };
+  if (ctx[9] !== void 0) {
+    button0_props.ref = ctx[9];
+  }
+  button0 = new Button_default({ props: button0_props });
+  binding_callbacks.push(() => bind(button0, "ref", button0_ref_binding, ctx[9]));
+  button0.$on("click", ctx[20]);
+  popover0 = new Popover_default({
+    props: {
+      anchorEl: ctx[9],
+      open: ctx[10],
+      onClose: ctx[22],
+      $$slots: { default: [create_default_slot_46] },
+      $$scope: { ctx }
+    }
+  });
+  function button1_ref_binding(value) {
+    ctx[23](value);
+  }
+  let button1_props = {
+    $$slots: { default: [create_default_slot_28] },
     $$scope: { ctx }
   };
   if (ctx[7] !== void 0) {
-    button_props.ref = ctx[7];
+    button1_props.ref = ctx[7];
   }
-  button = new Button_default({ props: button_props });
-  binding_callbacks.push(() => bind(button, "ref", button_ref_binding, ctx[7]));
-  button.$on("click", ctx[18]);
-  popover = new Popover_default({
+  button1 = new Button_default({ props: button1_props });
+  binding_callbacks.push(() => bind(button1, "ref", button1_ref_binding, ctx[7]));
+  button1.$on("click", ctx[24]);
+  popover1 = new Popover_default({
     props: {
       anchorEl: ctx[7],
       open: ctx[8],
-      onClose: ctx[20],
-      $$slots: { default: [create_default_slot_19] },
+      onClose: ctx[26],
+      $$slots: { default: [create_default_slot_110] },
       $$scope: { ctx }
     }
   });
   return {
     c() {
-      create_component(button.$$.fragment);
-      t3 = space();
-      create_component(popover.$$.fragment);
+      create_component(button0.$$.fragment);
+      t0 = space();
+      create_component(popover0.$$.fragment);
+      t1 = space();
+      create_component(button1.$$.fragment);
+      t22 = space();
+      create_component(popover1.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(button, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(popover, target, anchor);
+      mount_component(button0, target, anchor);
+      insert(target, t0, anchor);
+      mount_component(popover0, target, anchor);
+      insert(target, t1, anchor);
+      mount_component(button1, target, anchor);
+      insert(target, t22, anchor);
+      mount_component(popover1, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      const button_changes = {};
-      if (dirty & 268435467) {
-        button_changes.$$scope = { dirty, ctx: ctx2 };
+      const button0_changes = {};
+      if (dirty[0] & 11 | dirty[1] & 8) {
+        button0_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      if (!updating_ref && dirty & 128) {
+      if (!updating_ref && dirty[0] & 512) {
         updating_ref = true;
-        button_changes.ref = ctx2[7];
+        button0_changes.ref = ctx2[9];
         add_flush_callback(() => updating_ref = false);
       }
-      button.$set(button_changes);
-      const popover_changes = {};
-      if (dirty & 128)
-        popover_changes.anchorEl = ctx2[7];
-      if (dirty & 256)
-        popover_changes.open = ctx2[8];
-      if (dirty & 256)
-        popover_changes.onClose = ctx2[20];
-      if (dirty & 268435531) {
-        popover_changes.$$scope = { dirty, ctx: ctx2 };
+      button0.$set(button0_changes);
+      const popover0_changes = {};
+      if (dirty[0] & 512)
+        popover0_changes.anchorEl = ctx2[9];
+      if (dirty[0] & 1024)
+        popover0_changes.open = ctx2[10];
+      if (dirty[0] & 1024)
+        popover0_changes.onClose = ctx2[22];
+      if (dirty[0] & 75 | dirty[1] & 8) {
+        popover0_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      popover.$set(popover_changes);
+      popover0.$set(popover0_changes);
+      const button1_changes = {};
+      if (dirty[0] & 11 | dirty[1] & 8) {
+        button1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      if (!updating_ref_1 && dirty[0] & 128) {
+        updating_ref_1 = true;
+        button1_changes.ref = ctx2[7];
+        add_flush_callback(() => updating_ref_1 = false);
+      }
+      button1.$set(button1_changes);
+      const popover1_changes = {};
+      if (dirty[0] & 128)
+        popover1_changes.anchorEl = ctx2[7];
+      if (dirty[0] & 256)
+        popover1_changes.open = ctx2[8];
+      if (dirty[0] & 256)
+        popover1_changes.onClose = ctx2[26];
+      if (dirty[0] & 75 | dirty[1] & 8) {
+        popover1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      popover1.$set(popover1_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(button.$$.fragment, local);
-      transition_in(popover.$$.fragment, local);
+      transition_in(button0.$$.fragment, local);
+      transition_in(popover0.$$.fragment, local);
+      transition_in(button1.$$.fragment, local);
+      transition_in(popover1.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(button.$$.fragment, local);
-      transition_out(popover.$$.fragment, local);
+      transition_out(button0.$$.fragment, local);
+      transition_out(popover0.$$.fragment, local);
+      transition_out(button1.$$.fragment, local);
+      transition_out(popover1.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(button, detaching);
+      destroy_component(button0, detaching);
       if (detaching)
-        detach(t3);
-      destroy_component(popover, detaching);
+        detach(t0);
+      destroy_component(popover0, detaching);
+      if (detaching)
+        detach(t1);
+      destroy_component(button1, detaching);
+      if (detaching)
+        detach(t22);
+      destroy_component(popover1, detaching);
     }
   };
 }
-function create_if_block_17(ctx) {
+function create_if_block_25(ctx) {
   let flair;
   let current;
   flair = new Flair_default({
     props: {
       variant: "primary",
-      $$slots: { default: [create_default_slot_36] },
+      $$slots: { default: [create_default_slot_65] },
       $$scope: { ctx }
     }
   });
@@ -43603,7 +44409,7 @@ function create_if_block_17(ctx) {
     },
     p(ctx2, dirty) {
       const flair_changes = {};
-      if (dirty & 268435467) {
+      if (dirty[0] & 11 | dirty[1] & 8) {
         flair_changes.$$scope = { dirty, ctx: ctx2 };
       }
       flair.$set(flair_changes);
@@ -43623,9 +44429,9 @@ function create_if_block_17(ctx) {
     }
   };
 }
-function create_default_slot_36(ctx) {
+function create_default_slot_65(ctx) {
   var _a, _b;
-  let t_value = ((_b = (_a = ctx[27]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) + "";
+  let t_value = ((_b = (_a = ctx[33]) == null ? void 0 : _a.colors) == null ? void 0 : _b.conditions.length) + "";
   let t3;
   return {
     c() {
@@ -43636,7 +44442,7 @@ function create_default_slot_36(ctx) {
     },
     p(ctx2, dirty) {
       var _a2, _b2;
-      if (dirty & 11 && t_value !== (t_value = ((_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) + ""))
+      if (dirty[0] & 11 && t_value !== (t_value = ((_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.colors) == null ? void 0 : _b2.conditions.length) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -43645,18 +44451,18 @@ function create_default_slot_36(ctx) {
     }
   };
 }
-function create_default_slot_27(ctx) {
+function create_default_slot_56(ctx) {
   var _a, _b;
   let icon;
   let t3;
   let if_block_anchor;
   let current;
-  icon = new Icon_default({ props: { name: "filter" } });
-  let if_block = ((_b = (_a = ctx[27]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) && create_if_block_17(ctx);
+  icon = new Icon_default({ props: { name: "palette" } });
+  let if_block = ((_b = (_a = ctx[33]) == null ? void 0 : _a.colors) == null ? void 0 : _b.conditions.length) && create_if_block_25(ctx);
   return {
     c() {
       create_component(icon.$$.fragment);
-      t3 = text("\n        Filter\n        ");
+      t3 = text("\n        Color\n        ");
       if (if_block)
         if_block.c();
       if_block_anchor = empty();
@@ -43671,14 +44477,14 @@ function create_default_slot_27(ctx) {
     },
     p(ctx2, dirty) {
       var _a2, _b2;
-      if ((_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) {
+      if ((_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.colors) == null ? void 0 : _b2.conditions.length) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 11) {
+          if (dirty[0] & 11) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_17(ctx2);
+          if_block = create_if_block_25(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -43714,14 +44520,190 @@ function create_default_slot_27(ctx) {
     }
   };
 }
-function create_default_slot_19(ctx) {
+function create_default_slot_46(ctx) {
+  var _a, _b;
+  let colorfiltersettings;
+  let current;
+  colorfiltersettings = new ColorFilterSettings_default({
+    props: {
+      filter: (_b = (_a = ctx[33]) == null ? void 0 : _a.colors) != null ? _b : { conditions: [] },
+      onFilterChange: ctx[21],
+      fields: ctx[6].fields
+    }
+  });
+  return {
+    c() {
+      create_component(colorfiltersettings.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(colorfiltersettings, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2;
+      const colorfiltersettings_changes = {};
+      if (dirty[0] & 11)
+        colorfiltersettings_changes.filter = (_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.colors) != null ? _b2 : { conditions: [] };
+      if (dirty[0] & 11)
+        colorfiltersettings_changes.onFilterChange = ctx2[21];
+      if (dirty[0] & 64)
+        colorfiltersettings_changes.fields = ctx2[6].fields;
+      colorfiltersettings.$set(colorfiltersettings_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(colorfiltersettings.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(colorfiltersettings.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(colorfiltersettings, detaching);
+    }
+  };
+}
+function create_if_block_18(ctx) {
+  let flair;
+  let current;
+  flair = new Flair_default({
+    props: {
+      variant: "primary",
+      $$slots: { default: [create_default_slot_36] },
+      $$scope: { ctx }
+    }
+  });
+  return {
+    c() {
+      create_component(flair.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(flair, target, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const flair_changes = {};
+      if (dirty[0] & 11 | dirty[1] & 8) {
+        flair_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      flair.$set(flair_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(flair.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(flair.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(flair, detaching);
+    }
+  };
+}
+function create_default_slot_36(ctx) {
+  var _a, _b;
+  let t_value = ((_b = (_a = ctx[33]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) + "";
+  let t3;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2;
+      if (dirty[0] & 11 && t_value !== (t_value = ((_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_default_slot_28(ctx) {
+  var _a, _b;
+  let icon;
+  let t3;
+  let if_block_anchor;
+  let current;
+  icon = new Icon_default({ props: { name: "filter" } });
+  let if_block = ((_b = (_a = ctx[33]) == null ? void 0 : _a.filter) == null ? void 0 : _b.conditions.length) && create_if_block_18(ctx);
+  return {
+    c() {
+      create_component(icon.$$.fragment);
+      t3 = text("\n        Filter\n        ");
+      if (if_block)
+        if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      mount_component(icon, target, anchor);
+      insert(target, t3, anchor);
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      var _a2, _b2;
+      if ((_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.filter) == null ? void 0 : _b2.conditions.length) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty[0] & 11) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block_18(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(icon, detaching);
+      if (detaching)
+        detach(t3);
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(if_block_anchor);
+    }
+  };
+}
+function create_default_slot_110(ctx) {
   var _a, _b;
   let filtersettings;
   let current;
   filtersettings = new FilterSettings_default({
     props: {
-      filter: (_b = (_a = ctx[27]) == null ? void 0 : _a.filter) != null ? _b : { conditions: [] },
-      onFilterChange: ctx[19],
+      filter: (_b = (_a = ctx[33]) == null ? void 0 : _a.filter) != null ? _b : { conditions: [] },
+      onFilterChange: ctx[25],
       fields: ctx[6].fields
     }
   });
@@ -43736,11 +44718,11 @@ function create_default_slot_19(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2;
       const filtersettings_changes = {};
-      if (dirty & 11)
-        filtersettings_changes.filter = (_b2 = (_a2 = ctx2[27]) == null ? void 0 : _a2.filter) != null ? _b2 : { conditions: [] };
-      if (dirty & 11)
-        filtersettings_changes.onFilterChange = ctx2[19];
-      if (dirty & 64)
+      if (dirty[0] & 11)
+        filtersettings_changes.filter = (_b2 = (_a2 = ctx2[33]) == null ? void 0 : _a2.filter) != null ? _b2 : { conditions: [] };
+      if (dirty[0] & 11)
+        filtersettings_changes.onFilterChange = ctx2[25];
+      if (dirty[0] & 64)
         filtersettings_changes.fields = ctx2[6].fields;
       filtersettings.$set(filtersettings_changes);
     },
@@ -43762,7 +44744,7 @@ function create_default_slot_19(ctx) {
 function create_view_options_slot(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[3] && create_if_block12(get_if_ctx(ctx));
+  let if_block = ctx[3] && create_if_block13(get_if_ctx(ctx));
   return {
     c() {
       if (if_block)
@@ -43779,11 +44761,11 @@ function create_view_options_slot(ctx) {
       if (ctx2[3]) {
         if (if_block) {
           if_block.p(get_if_ctx(ctx2), dirty);
-          if (dirty & 8) {
+          if (dirty[0] & 8) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block12(get_if_ctx(ctx2));
+          if_block = create_if_block13(get_if_ctx(ctx2));
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -43814,8 +44796,8 @@ function create_view_options_slot(ctx) {
     }
   };
 }
-function create_default_slot13(ctx) {
-  let t0_value = ctx[11].t("toolbar.new") + "";
+function create_default_slot14(ctx) {
+  let t0_value = ctx[13].t("toolbar.new") + "";
   let t0;
   let t1;
   let icon;
@@ -43836,7 +44818,7 @@ function create_default_slot13(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if ((!current || dirty & 2048) && t0_value !== (t0_value = ctx2[11].t("toolbar.new") + ""))
+      if ((!current || dirty[0] & 8192) && t0_value !== (t0_value = ctx2[13].t("toolbar.new") + ""))
         set_data(t0, t0_value);
     },
     i(local) {
@@ -43865,11 +44847,11 @@ function create_right_slot(ctx) {
     props: {
       slot: "right",
       variant: "primary",
-      $$slots: { default: [create_default_slot13] },
+      $$slots: { default: [create_default_slot14] },
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[16]);
+  button.$on("click", ctx[18]);
   return {
     c() {
       create_component(button.$$.fragment);
@@ -43880,7 +44862,7 @@ function create_right_slot(ctx) {
     },
     p(ctx2, dirty) {
       const button_changes = {};
-      if (dirty & 268437504) {
+      if (dirty[0] & 8192 | dirty[1] & 8) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -43900,7 +44882,7 @@ function create_right_slot(ctx) {
     }
   };
 }
-function create_fragment46(ctx) {
+function create_fragment48(ctx) {
   let viewtoolbar;
   let current;
   viewtoolbar = new ViewToolbar_default({
@@ -43924,9 +44906,9 @@ function create_fragment46(ctx) {
       mount_component(viewtoolbar, target, anchor);
       current = true;
     },
-    p(ctx2, [dirty]) {
+    p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty & 268451839) {
+      if (dirty[0] & 65535 | dirty[1] & 8) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -43946,7 +44928,7 @@ function create_fragment46(ctx) {
     }
   };
 }
-function instance46($$self, $$props, $$invalidate) {
+function instance48($$self, $$props, $$invalidate) {
   let project;
   let views;
   let errors;
@@ -43955,9 +44937,9 @@ function instance46($$self, $$props, $$invalidate) {
   let $app;
   let $api;
   component_subscribe($$self, dataFrame, ($$value) => $$invalidate(6, $dataFrame = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(12, $app = $$value));
-  component_subscribe($$self, api, ($$value) => $$invalidate(13, $api = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(13, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
+  component_subscribe($$self, api, ($$value) => $$invalidate(15, $api = $$value));
   var _a, _b;
   let { projects } = $$props;
   let { projectId } = $$props;
@@ -43966,6 +44948,8 @@ function instance46($$self, $$props, $$invalidate) {
   let { onViewChange } = $$props;
   let filterRef;
   let filterOpen = false;
+  let colorRef;
+  let colorOpen = false;
   const click_handler = (event) => {
     const menu = new import_obsidian28.Menu();
     menu.addItem((item) => {
@@ -44000,14 +44984,33 @@ function instance46($$self, $$props, $$invalidate) {
     }
     menu.showAtMouseEvent(event);
   };
-  function button_ref_binding(value) {
+  function button0_ref_binding(value) {
+    colorRef = value;
+    $$invalidate(9, colorRef);
+  }
+  const click_handler_1 = () => {
+    $$invalidate(10, colorOpen = !colorOpen);
+  };
+  const func_2 = (filter3) => {
+    var _a2, _b2;
+    const view2 = (_b2 = (_a2 = projects.find((project2) => project2.id === projectId)) == null ? void 0 : _a2.views) == null ? void 0 : _b2.find((view3) => view3.id === viewId);
+    if (projectId && view2) {
+      settings.updateView(projectId, immer_esm_default(view2, (draft) => {
+        draft.colors = filter3;
+      }));
+    }
+  };
+  const func_3 = () => {
+    $$invalidate(10, colorOpen = false);
+  };
+  function button1_ref_binding(value) {
     filterRef = value;
     $$invalidate(7, filterRef);
   }
-  const click_handler_1 = () => {
+  const click_handler_2 = () => {
     $$invalidate(8, filterOpen = !filterOpen);
   };
-  const func_2 = (filter3) => {
+  const func_4 = (filter3) => {
     var _a2, _b2;
     const view2 = (_b2 = (_a2 = projects.find((project2) => project2.id === projectId)) == null ? void 0 : _a2.views) == null ? void 0 : _b2.find((view3) => view3.id === viewId);
     if (projectId && view2) {
@@ -44016,34 +45019,34 @@ function instance46($$self, $$props, $$invalidate) {
       }));
     }
   };
-  const func_3 = () => {
+  const func_5 = () => {
     $$invalidate(8, filterOpen = false);
   };
-  const func_4 = (name) => !!(project == null ? void 0 : project.views.find((view2) => view2.name === name));
-  const func_5 = (viewIds) => {
+  const func_6 = (name) => !!(project == null ? void 0 : project.views.find((view2) => view2.name === name));
+  const func_7 = (viewIds) => {
     if (projectId) {
       settings.sortViews(projectId, viewIds);
     }
   };
-  const func_6 = (viewId2, name) => {
+  const func_8 = (viewId2, name) => {
     if (projectId) {
       settings.renameView(projectId, viewId2, name);
     }
   };
-  const func_7 = (viewId2) => {
+  const func_9 = (viewId2) => {
     if (projectId) {
       const id = settings.duplicateView(projectId, viewId2);
       onViewChange(id);
     }
   };
-  const func_8 = (viewId2) => {
+  const func_10 = (viewId2) => {
     new ConfirmDialogModal($app, $i18n.t("modals.view.delete.title"), $i18n.t("modals.view.delete.message"), $i18n.t("modals.view.delete.cta"), () => {
       if (projectId) {
         settings.deleteView(projectId, viewId2);
       }
     }).open();
   };
-  const click_handler_2 = () => {
+  const click_handler_3 = () => {
     new InspectorModal($app, "Project inspector", errors).open();
   };
   $$self.$$set = ($$props2) => {
@@ -44059,17 +45062,17 @@ function instance46($$self, $$props, $$invalidate) {
       $$invalidate(4, onViewChange = $$props2.onViewChange);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 3) {
+    if ($$self.$$.dirty[0] & 3) {
       $:
         $$invalidate(5, project = projects.find((project2) => project2.id === projectId));
     }
-    if ($$self.$$.dirty & 16416) {
+    if ($$self.$$.dirty[0] & 65568) {
       $:
-        $$invalidate(10, views = $$invalidate(14, _a = project === null || project === void 0 ? void 0 : project.views) !== null && _a !== void 0 ? _a : []);
+        $$invalidate(12, views = $$invalidate(16, _a = project === null || project === void 0 ? void 0 : project.views) !== null && _a !== void 0 ? _a : []);
     }
-    if ($$self.$$.dirty & 32832) {
+    if ($$self.$$.dirty[0] & 131136) {
       $:
-        $$invalidate(9, errors = $$invalidate(15, _b = $dataFrame.errors) !== null && _b !== void 0 ? _b : []);
+        $$invalidate(11, errors = $$invalidate(17, _b = $dataFrame.errors) !== null && _b !== void 0 ? _b : []);
     }
   };
   return [
@@ -44082,6 +45085,8 @@ function instance46($$self, $$props, $$invalidate) {
     $dataFrame,
     filterRef,
     filterOpen,
+    colorRef,
+    colorOpen,
     errors,
     views,
     $i18n,
@@ -44090,28 +45095,32 @@ function instance46($$self, $$props, $$invalidate) {
     _a,
     _b,
     click_handler,
-    button_ref_binding,
+    button0_ref_binding,
     click_handler_1,
     func_2,
     func_3,
+    button1_ref_binding,
+    click_handler_2,
     func_4,
     func_5,
     func_6,
     func_7,
     func_8,
-    click_handler_2
+    func_9,
+    func_10,
+    click_handler_3
   ];
 }
 var Toolbar = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance46, create_fragment46, safe_not_equal, {
+    init(this, options, instance48, create_fragment48, safe_not_equal, {
       projects: 1,
       projectId: 0,
       onProjectChange: 2,
       viewId: 3,
       onViewChange: 4
-    });
+    }, null, [-1, -1]);
   }
 };
 var Toolbar_default = Toolbar;
@@ -44128,7 +45137,7 @@ var get_default_slot_context = (ctx) => ({
   project: ctx[3],
   view: ctx[4]
 });
-function create_fragment47(ctx) {
+function create_fragment49(ctx) {
   var _a, _b;
   let div1;
   let toolbar;
@@ -44208,7 +45217,7 @@ function create_fragment47(ctx) {
     }
   };
 }
-function instance47($$self, $$props, $$invalidate) {
+function instance49($$self, $$props, $$invalidate) {
   let defaultProject;
   let selectedProject;
   let views;
@@ -44277,7 +45286,7 @@ function instance47($$self, $$props, $$invalidate) {
 var AppContainer = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance47, create_fragment47, safe_not_equal, { projects: 2, projectId: 0, viewId: 1 }, add_css23);
+    init(this, options, instance49, create_fragment49, safe_not_equal, { projects: 2, projectId: 0, viewId: 1 }, add_css23);
   }
 };
 var AppContainer_default = AppContainer;
@@ -44391,12 +45400,12 @@ function add_css24(target) {
 }
 var get_default_slot_changes2 = (dirty) => ({ selected: dirty & 2 });
 var get_default_slot_context2 = (ctx) => ({ selected: ctx[1] });
-function get_each_context7(ctx, list, i2) {
+function get_each_context8(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i2];
   return child_ctx;
 }
-function create_each_block7(ctx) {
+function create_each_block8(ctx) {
   let div;
   let t0_value = ctx[7] + "";
   let t0;
@@ -44442,7 +45451,7 @@ function create_each_block7(ctx) {
     }
   };
 }
-function create_fragment48(ctx) {
+function create_fragment50(ctx) {
   let div2;
   let div0;
   let t3;
@@ -44451,7 +45460,7 @@ function create_fragment48(ctx) {
   let each_value = ctx[0];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block7(get_each_context7(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block8(get_each_context8(ctx, each_value, i2));
   }
   const default_slot_template = ctx[3].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[2], get_default_slot_context2);
@@ -44487,11 +45496,11 @@ function create_fragment48(ctx) {
         each_value = ctx2[0];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context7(ctx2, each_value, i2);
+          const child_ctx = get_each_context8(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
           } else {
-            each_blocks[i2] = create_each_block7(child_ctx);
+            each_blocks[i2] = create_each_block8(child_ctx);
             each_blocks[i2].c();
             each_blocks[i2].m(div0, null);
           }
@@ -44526,7 +45535,7 @@ function create_fragment48(ctx) {
     }
   };
 }
-function instance48($$self, $$props, $$invalidate) {
+function instance50($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   var _a;
   let { options } = $$props;
@@ -44548,7 +45557,7 @@ function instance48($$self, $$props, $$invalidate) {
 var TabContainer = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance48, create_fragment48, safe_not_equal, { options: 0 }, add_css24);
+    init(this, options, instance50, create_fragment50, safe_not_equal, { options: 0 }, add_css24);
   }
 };
 var TabContainer_default = TabContainer;
@@ -44557,7 +45566,7 @@ var TabContainer_default = TabContainer;
 function add_css25(target) {
   append_styles(target, "svelte-a9juqy", "pre.svelte-a9juqy{background-color:var(--background-secondary);border-radius:var(--radius-s);padding:8px}ol.svelte-a9juqy{margin:0;padding:0 22px}");
 }
-function create_default_slot_65(ctx) {
+function create_default_slot_66(ctx) {
   let t3;
   return {
     c() {
@@ -44572,7 +45581,7 @@ function create_default_slot_65(ctx) {
     }
   };
 }
-function create_default_slot_56(ctx) {
+function create_default_slot_57(ctx) {
   let t0;
   let a2;
   let t22;
@@ -44630,7 +45639,7 @@ function create_default_slot_37(ctx) {
     }
   };
 }
-function create_default_slot_28(ctx) {
+function create_default_slot_29(ctx) {
   let t3;
   return {
     c() {
@@ -44645,7 +45654,7 @@ function create_default_slot_28(ctx) {
     }
   };
 }
-function create_default_slot_110(ctx) {
+function create_default_slot_111(ctx) {
   let button0;
   let t3;
   let button1;
@@ -44662,7 +45671,7 @@ function create_default_slot_110(ctx) {
     props: {
       variant: "default",
       tooltip: "Creates a new folder at the root of your vault with example notes.",
-      $$slots: { default: [create_default_slot_28] },
+      $$slots: { default: [create_default_slot_29] },
       $$scope: { ctx }
     }
   });
@@ -44731,7 +45740,7 @@ function create_else_block3(ctx) {
     }
   };
 }
-function create_if_block_18(ctx) {
+function create_if_block_19(ctx) {
   let ol;
   return {
     c() {
@@ -44750,7 +45759,7 @@ function create_if_block_18(ctx) {
     }
   };
 }
-function create_if_block13(ctx) {
+function create_if_block14(ctx) {
   let ol;
   return {
     c() {
@@ -44768,13 +45777,13 @@ function create_if_block13(ctx) {
     }
   };
 }
-function create_default_slot14(ctx) {
+function create_default_slot15(ctx) {
   let if_block_anchor;
   function select_block_type(ctx2, dirty) {
     if (ctx2[4] === "File explorer")
-      return create_if_block13;
+      return create_if_block14;
     if (ctx2[4] === "Command palette")
-      return create_if_block_18;
+      return create_if_block_19;
     return create_else_block3;
   }
   let current_block_type = select_block_type(ctx, -1);
@@ -44805,7 +45814,7 @@ function create_default_slot14(ctx) {
     }
   };
 }
-function create_fragment49(ctx) {
+function create_fragment51(ctx) {
   let div;
   let typography0;
   let t0;
@@ -44825,14 +45834,14 @@ function create_fragment49(ctx) {
   typography0 = new Typography_default({
     props: {
       variant: "h1",
-      $$slots: { default: [create_default_slot_65] },
+      $$slots: { default: [create_default_slot_66] },
       $$scope: { ctx }
     }
   });
   typography1 = new Typography_default({
     props: {
       variant: "body",
-      $$slots: { default: [create_default_slot_56] },
+      $$slots: { default: [create_default_slot_57] },
       $$scope: { ctx }
     }
   });
@@ -44845,7 +45854,7 @@ function create_fragment49(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_110] },
+      $$slots: { default: [create_default_slot_111] },
       $$scope: { ctx }
     }
   });
@@ -44854,7 +45863,7 @@ function create_fragment49(ctx) {
       options: ["Projects view", "Command palette", "File explorer"],
       $$slots: {
         default: [
-          create_default_slot14,
+          create_default_slot15,
           ({ selected }) => ({ 4: selected }),
           ({ selected }) => selected ? 16 : 0
         ]
@@ -44964,7 +45973,7 @@ published: false
     }
   };
 }
-function instance49($$self, $$props, $$invalidate) {
+function instance51($$self, $$props, $$invalidate) {
   let { onCreate } = $$props;
   let { onTry } = $$props;
   const click_handler = () => onCreate();
@@ -44980,7 +45989,7 @@ function instance49($$self, $$props, $$invalidate) {
 var Onboarding = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance49, create_fragment49, safe_not_equal, { onCreate: 0, onTry: 1 }, add_css25);
+    init(this, options, instance51, create_fragment51, safe_not_equal, { onCreate: 0, onTry: 1 }, add_css25);
   }
 };
 var Onboarding_default = Onboarding;
@@ -45078,7 +46087,8 @@ function useView(node, props) {
       config: props.config,
       saveConfig: props.onConfigChange,
       viewApi: props.viewApi,
-      readonly: props.readonly
+      readonly: props.readonly,
+      getRecordColor: props.getRecordColor
     });
     projectView.onData(props.dataProps);
   }
@@ -45097,7 +46107,8 @@ function useView(node, props) {
             viewApi: newprops.viewApi,
             readonly: newprops.readonly,
             config: newprops.config,
-            saveConfig: newprops.onConfigChange
+            saveConfig: newprops.onConfigChange,
+            getRecordColor: newprops.getRecordColor
           });
           projectView.onData(newprops.dataProps);
         }
@@ -45116,7 +46127,7 @@ function useView(node, props) {
 function add_css26(target) {
   append_styles(target, "svelte-1kuj9kb", "div.svelte-1kuj9kb{width:100%;height:100%}");
 }
-function create_fragment50(ctx) {
+function create_fragment52(ctx) {
   let div;
   let useView_action;
   let mounted;
@@ -45136,7 +46147,8 @@ function create_fragment50(ctx) {
           project: ctx[0],
           readonly: ctx[2],
           config: ctx[1].config,
-          onConfigChange: ctx[5]
+          onConfigChange: ctx[5],
+          getRecordColor: ctx[6]
         }));
         mounted = true;
       }
@@ -45150,7 +46162,8 @@ function create_fragment50(ctx) {
           project: ctx2[0],
           readonly: ctx2[2],
           config: ctx2[1].config,
-          onConfigChange: ctx2[5]
+          onConfigChange: ctx2[5],
+          getRecordColor: ctx2[6]
         });
     },
     i: noop,
@@ -45163,7 +46176,7 @@ function create_fragment50(ctx) {
     }
   };
 }
-function instance50($$self, $$props, $$invalidate) {
+function instance52($$self, $$props, $$invalidate) {
   let viewFilter;
   let filteredFrame;
   var _a;
@@ -45176,26 +46189,36 @@ function instance50($$self, $$props, $$invalidate) {
   function handleConfigChange(config) {
     onConfigChange(project.id, view2.id, config);
   }
+  function getRecordColor(record) {
+    var _a2;
+    const colorFilter = (_a2 = view2.colors) !== null && _a2 !== void 0 ? _a2 : { conditions: [] };
+    for (const cond of colorFilter.conditions) {
+      if (matchesCondition(cond.condition, record)) {
+        return cond.color;
+      }
+    }
+    return null;
+  }
   $$self.$$set = ($$props2) => {
     if ("project" in $$props2)
       $$invalidate(0, project = $$props2.project);
     if ("view" in $$props2)
       $$invalidate(1, view2 = $$props2.view);
     if ("frame" in $$props2)
-      $$invalidate(6, frame = $$props2.frame);
+      $$invalidate(7, frame = $$props2.frame);
     if ("readonly" in $$props2)
       $$invalidate(2, readonly = $$props2.readonly);
     if ("api" in $$props2)
       $$invalidate(3, api2 = $$props2.api);
     if ("onConfigChange" in $$props2)
-      $$invalidate(7, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(8, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 258) {
+    if ($$self.$$.dirty & 514) {
       $:
-        $$invalidate(9, viewFilter = $$invalidate(8, _a = view2.filter) !== null && _a !== void 0 ? _a : { conditions: [] });
+        $$invalidate(10, viewFilter = $$invalidate(9, _a = view2.filter) !== null && _a !== void 0 ? _a : { conditions: [] });
     }
-    if ($$self.$$.dirty & 579) {
+    if ($$self.$$.dirty & 1155) {
       $: {
         const fieldNames = frame.fields.map((field) => field.name);
         if (viewFilter.conditions.length !== viewFilter.conditions.filter((cond) => fieldNames.includes(cond.field)).length) {
@@ -45207,7 +46230,7 @@ function instance50($$self, $$props, $$invalidate) {
         }
       }
     }
-    if ($$self.$$.dirty & 576) {
+    if ($$self.$$.dirty & 1152) {
       $:
         $$invalidate(4, filteredFrame = applyFilter(frame, viewFilter));
     }
@@ -45219,6 +46242,7 @@ function instance50($$self, $$props, $$invalidate) {
     api2,
     filteredFrame,
     handleConfigChange,
+    getRecordColor,
     frame,
     onConfigChange,
     _a,
@@ -45228,13 +46252,13 @@ function instance50($$self, $$props, $$invalidate) {
 var View = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance50, create_fragment50, safe_not_equal, {
+    init(this, options, instance52, create_fragment52, safe_not_equal, {
       project: 0,
       view: 1,
-      frame: 6,
+      frame: 7,
       readonly: 2,
       api: 3,
-      onConfigChange: 7
+      onConfigChange: 8
     }, add_css26);
   }
 };
@@ -45250,7 +46274,7 @@ function create_catch_block_1(ctx) {
       title: ctx[15].name,
       icon: "zap",
       variant: "danger",
-      $$slots: { default: [create_default_slot_111] },
+      $$slots: { default: [create_default_slot_112] },
       $$scope: { ctx }
     }
   });
@@ -45291,7 +46315,7 @@ function create_catch_block_1(ctx) {
     }
   };
 }
-function create_default_slot_29(ctx) {
+function create_default_slot_210(ctx) {
   let t_value = ctx[15].message + "";
   let t3;
   return {
@@ -45311,13 +46335,13 @@ function create_default_slot_29(ctx) {
     }
   };
 }
-function create_default_slot_111(ctx) {
+function create_default_slot_112(ctx) {
   let typography;
   let current;
   typography = new Typography_default({
     props: {
       variant: "body",
-      $$slots: { default: [create_default_slot_29] },
+      $$slots: { default: [create_default_slot_210] },
       $$scope: { ctx }
     }
   });
@@ -45354,7 +46378,7 @@ function create_default_slot_111(ctx) {
 function create_then_block_1(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[13] && ctx[14] && ctx[0] && create_if_block14(ctx);
+  let if_block = ctx[13] && ctx[14] && ctx[0] && create_if_block15(ctx);
   return {
     c() {
       if (if_block)
@@ -45375,7 +46399,7 @@ function create_then_block_1(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block14(ctx2);
+          if_block = create_if_block15(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -45406,7 +46430,7 @@ function create_then_block_1(ctx) {
     }
   };
 }
-function create_if_block14(ctx) {
+function create_if_block15(ctx) {
   let view2;
   let current;
   view2 = new View_default({
@@ -45553,7 +46577,7 @@ function create_pending_block_1(ctx) {
     d: noop
   };
 }
-function create_default_slot15(ctx) {
+function create_default_slot16(ctx) {
   let await_block_anchor;
   let promise2;
   let current;
@@ -45611,7 +46635,7 @@ function create_default_slot15(ctx) {
     }
   };
 }
-function create_fragment51(ctx) {
+function create_fragment53(ctx) {
   let appcontainer;
   let updating_projectId;
   let updating_viewId;
@@ -45626,7 +46650,7 @@ function create_fragment51(ctx) {
     projects: ctx[4],
     $$slots: {
       default: [
-        create_default_slot15,
+        create_default_slot16,
         ({ project, view: view2 }) => ({ 13: project, 14: view2 }),
         ({ project, view: view2 }) => (project ? 8192 : 0) | (view2 ? 16384 : 0)
       ]
@@ -45684,7 +46708,7 @@ function create_fragment51(ctx) {
     }
   };
 }
-function instance51($$self, $$props, $$invalidate) {
+function instance53($$self, $$props, $$invalidate) {
   let projects;
   let $app;
   let $i18n;
@@ -45752,7 +46776,7 @@ function instance51($$self, $$props, $$invalidate) {
 var App9 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance51, create_fragment51, safe_not_equal, {});
+    init(this, options, instance53, create_fragment53, safe_not_equal, {});
   }
 };
 var App_default = App9;
@@ -45777,7 +46801,7 @@ var ProjectView = class {
 function add_css27(target) {
   append_styles(target, "svelte-gtpy0j", "div.svelte-gtpy0j{display:flex;align-items:center;justify-content:flex-end;gap:8px}");
 }
-function create_default_slot16(ctx) {
+function create_default_slot17(ctx) {
   let t3;
   return {
     c() {
@@ -45796,7 +46820,7 @@ function create_default_slot16(ctx) {
     }
   };
 }
-function create_fragment52(ctx) {
+function create_fragment54(ctx) {
   let div;
   let typography;
   let t3;
@@ -45805,7 +46829,7 @@ function create_fragment52(ctx) {
     props: {
       variant: "label",
       nomargin: true,
-      $$slots: { default: [create_default_slot16] },
+      $$slots: { default: [create_default_slot17] },
       $$scope: { ctx }
     }
   });
@@ -45862,7 +46886,7 @@ function create_fragment52(ctx) {
     }
   };
 }
-function instance52($$self, $$props, $$invalidate) {
+function instance54($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { name } = $$props;
   $$self.$$set = ($$props2) => {
@@ -45876,7 +46900,7 @@ function instance52($$self, $$props, $$invalidate) {
 var Field2 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance52, create_fragment52, safe_not_equal, { name: 0 }, add_css27);
+    init(this, options, instance54, create_fragment54, safe_not_equal, { name: 0 }, add_css27);
   }
 };
 var Field_default = Field2;
@@ -45885,7 +46909,7 @@ var Field_default = Field2;
 function add_css28(target) {
   append_styles(target, "svelte-ldfkf", "div.svelte-ldfkf{flex:1;overflow:auto}");
 }
-function create_fragment53(ctx) {
+function create_fragment55(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -45929,7 +46953,7 @@ function create_fragment53(ctx) {
     }
   };
 }
-function instance53($$self, $$props, $$invalidate) {
+function instance55($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -45940,13 +46964,13 @@ function instance53($$self, $$props, $$invalidate) {
 var ViewContent = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance53, create_fragment53, safe_not_equal, {}, add_css28);
+    init(this, options, instance55, create_fragment55, safe_not_equal, {}, add_css28);
   }
 };
 var ViewContent_default = ViewContent;
 
 // src/components/Layout/ViewHeader.svelte
-function create_fragment54(ctx) {
+function create_fragment56(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -45989,7 +47013,7 @@ function create_fragment54(ctx) {
     }
   };
 }
-function instance54($$self, $$props, $$invalidate) {
+function instance56($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -46000,7 +47024,7 @@ function instance54($$self, $$props, $$invalidate) {
 var ViewHeader = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance54, create_fragment54, safe_not_equal, {});
+    init(this, options, instance56, create_fragment56, safe_not_equal, {});
   }
 };
 var ViewHeader_default = ViewHeader;
@@ -46009,7 +47033,7 @@ var ViewHeader_default = ViewHeader;
 function add_css29(target) {
   append_styles(target, "svelte-vsdhnm", "div.svelte-vsdhnm{height:100%;display:flex;flex-direction:column}");
 }
-function create_fragment55(ctx) {
+function create_fragment57(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -46053,7 +47077,7 @@ function create_fragment55(ctx) {
     }
   };
 }
-function instance55($$self, $$props, $$invalidate) {
+function instance57($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -46064,7 +47088,7 @@ function instance55($$self, $$props, $$invalidate) {
 var ViewLayout = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance55, create_fragment55, safe_not_equal, {}, add_css29);
+    init(this, options, instance57, create_fragment57, safe_not_equal, {}, add_css29);
   }
 };
 var ViewLayout_default = ViewLayout;
@@ -46134,7 +47158,7 @@ function create_default_slot_38(ctx) {
     }
   };
 }
-function create_default_slot_210(ctx) {
+function create_default_slot_211(ctx) {
   let t_value = ctx[6].t("modals.input.cancel") + "";
   let t3;
   return {
@@ -46154,7 +47178,7 @@ function create_default_slot_210(ctx) {
     }
   };
 }
-function create_default_slot_112(ctx) {
+function create_default_slot_113(ctx) {
   let button0;
   let t3;
   let button1;
@@ -46169,7 +47193,7 @@ function create_default_slot_112(ctx) {
   button0.$on("click", ctx[10]);
   button1 = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot_210] },
+      $$slots: { default: [create_default_slot_211] },
       $$scope: { ctx }
     }
   });
@@ -46218,7 +47242,7 @@ function create_default_slot_112(ctx) {
     }
   };
 }
-function create_default_slot17(ctx) {
+function create_default_slot18(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -46231,7 +47255,7 @@ function create_default_slot17(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_112] },
+      $$slots: { default: [create_default_slot_113] },
       $$scope: { ctx }
     }
   });
@@ -46279,13 +47303,13 @@ function create_default_slot17(ctx) {
     }
   };
 }
-function create_fragment56(ctx) {
+function create_fragment58(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[1],
-      $$slots: { default: [create_default_slot17] },
+      $$slots: { default: [create_default_slot18] },
       $$scope: { ctx }
     }
   });
@@ -46321,7 +47345,7 @@ function create_fragment56(ctx) {
     }
   };
 }
-function instance56($$self, $$props, $$invalidate) {
+function instance58($$self, $$props, $$invalidate) {
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
   let { value } = $$props;
@@ -46377,7 +47401,7 @@ function instance56($$self, $$props, $$invalidate) {
 var InputDialog = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance56, create_fragment56, safe_not_equal, {
+    init(this, options, instance58, create_fragment58, safe_not_equal, {
       value: 0,
       message: 1,
       cta: 2,
@@ -46431,7 +47455,7 @@ function get_each_context_1(ctx, list, i2) {
   child_ctx[7] = list[i2];
   return child_ctx;
 }
-function get_each_context8(ctx, list, i2) {
+function get_each_context9(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i2];
   child_ctx[9] = i2;
@@ -46507,14 +47531,14 @@ function create_else_block4(ctx) {
     }
   };
 }
-function create_if_block15(ctx) {
+function create_if_block16(ctx) {
   let t3;
   let iconbutton;
   let current;
   let each_value = ctx[3];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block8(get_each_context8(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block9(get_each_context9(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -46542,12 +47566,12 @@ function create_if_block15(ctx) {
         each_value = ctx2[3];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context8(ctx2, each_value, i2);
+          const child_ctx = get_each_context9(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block8(child_ctx);
+            each_blocks[i2] = create_each_block9(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(t3.parentNode, t3);
@@ -46585,7 +47609,7 @@ function create_if_block15(ctx) {
     }
   };
 }
-function create_default_slot_113(ctx) {
+function create_default_slot_114(ctx) {
   let t_value = ctx[7] + "";
   let t3;
   return {
@@ -46610,7 +47634,7 @@ function create_each_block_1(ctx) {
   let current;
   tag = new Tag_default({
     props: {
-      $$slots: { default: [create_default_slot_113] },
+      $$slots: { default: [create_default_slot_114] },
       $$scope: { ctx }
     }
   });
@@ -46644,7 +47668,7 @@ function create_each_block_1(ctx) {
     }
   };
 }
-function create_default_slot18(ctx) {
+function create_default_slot19(ctx) {
   let t0_value = ctx[7] + "";
   let t0;
   let t1;
@@ -46697,12 +47721,12 @@ function create_default_slot18(ctx) {
     }
   };
 }
-function create_each_block8(ctx) {
+function create_each_block9(ctx) {
   let tag;
   let current;
   tag = new Tag_default({
     props: {
-      $$slots: { default: [create_default_slot18] },
+      $$slots: { default: [create_default_slot19] },
       $$scope: { ctx }
     }
   });
@@ -46736,12 +47760,12 @@ function create_each_block8(ctx) {
     }
   };
 }
-function create_fragment57(ctx) {
+function create_fragment59(ctx) {
   let div;
   let current_block_type_index;
   let if_block;
   let current;
-  const if_block_creators = [create_if_block15, create_else_block4];
+  const if_block_creators = [create_if_block16, create_else_block4];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[1])
@@ -46804,7 +47828,7 @@ function create_fragment57(ctx) {
     }
   };
 }
-function instance57($$self, $$props, $$invalidate) {
+function instance59($$self, $$props, $$invalidate) {
   let stringValues;
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
@@ -46839,7 +47863,7 @@ function instance57($$self, $$props, $$invalidate) {
 var TagList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance57, create_fragment57, safe_not_equal, { values: 0, edit: 1, onChange: 2 }, add_css31);
+    init(this, options, instance59, create_fragment59, safe_not_equal, { values: 0, edit: 1, onChange: 2 }, add_css31);
   }
 };
 var TagList_default = TagList;
@@ -46883,7 +47907,7 @@ function create_if_block_5(ctx) {
     }
   };
 }
-function create_if_block_4(ctx) {
+function create_if_block_42(ctx) {
   let dateinput;
   let current;
   dateinput = new DateInput_default({
@@ -46959,7 +47983,7 @@ function create_if_block_33(ctx) {
     }
   };
 }
-function create_if_block_25(ctx) {
+function create_if_block_26(ctx) {
   let textinput;
   let current;
   textinput = new TextInput_default({
@@ -47000,7 +48024,7 @@ function create_if_block_25(ctx) {
     }
   };
 }
-function create_if_block_19(ctx) {
+function create_if_block_110(ctx) {
   var _a;
   let taglist;
   let current;
@@ -47043,7 +48067,7 @@ function create_if_block_19(ctx) {
     }
   };
 }
-function create_if_block16(ctx) {
+function create_if_block17(ctx) {
   let switch_1;
   let current;
   switch_1 = new Switch_default({
@@ -47081,18 +48105,18 @@ function create_if_block16(ctx) {
     }
   };
 }
-function create_fragment58(ctx) {
+function create_fragment60(ctx) {
   let show_if;
   let current_block_type_index;
   let if_block;
   let if_block_anchor;
   let current;
   const if_block_creators = [
-    create_if_block16,
-    create_if_block_19,
-    create_if_block_25,
+    create_if_block17,
+    create_if_block_110,
+    create_if_block_26,
     create_if_block_33,
-    create_if_block_4,
+    create_if_block_42,
     create_if_block_5
   ];
   const if_blocks = [];
@@ -47180,7 +48204,7 @@ function create_fragment58(ctx) {
     }
   };
 }
-function instance58($$self, $$props, $$invalidate) {
+function instance60($$self, $$props, $$invalidate) {
   let { field } = $$props;
   let { value } = $$props;
   let { onChange } = $$props;
@@ -47219,7 +48243,7 @@ function instance58($$self, $$props, $$invalidate) {
 var FieldControl = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance58, create_fragment58, safe_not_equal, {
+    init(this, options, instance60, create_fragment60, safe_not_equal, {
       field: 0,
       value: 1,
       onChange: 2,
@@ -47230,12 +48254,12 @@ var FieldControl = class extends SvelteComponent {
 var FieldControl_default = FieldControl;
 
 // src/modals/components/EditNote.svelte
-function get_each_context9(ctx, list, i2) {
+function get_each_context10(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[7] = list[i2];
   return child_ctx;
 }
-function create_if_block17(ctx) {
+function create_if_block18(ctx) {
   let callout;
   let current;
   callout = new Callout_default({
@@ -47243,7 +48267,7 @@ function create_if_block17(ctx) {
       title: ctx[3].t("modals.note.edit.no-editable-fields.title"),
       icon: "info",
       variant: "info",
-      $$slots: { default: [create_default_slot_57] },
+      $$slots: { default: [create_default_slot_58] },
       $$scope: { ctx }
     }
   });
@@ -47279,7 +48303,7 @@ function create_if_block17(ctx) {
     }
   };
 }
-function create_default_slot_57(ctx) {
+function create_default_slot_58(ctx) {
   let t_value = ctx[3].t("modals.note.edit.no-editable-fields.message") + "";
   let t3;
   return {
@@ -47351,7 +48375,7 @@ function create_default_slot_49(ctx) {
     }
   };
 }
-function create_each_block9(ctx) {
+function create_each_block10(ctx) {
   let settingitem;
   let current;
   settingitem = new SettingItem_default({
@@ -47397,11 +48421,11 @@ function create_default_slot_39(ctx) {
   let t3;
   let each_1_anchor;
   let current;
-  let if_block = !ctx[2].length && create_if_block17(ctx);
+  let if_block = !ctx[2].length && create_if_block18(ctx);
   let each_value = ctx[2];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block9(get_each_context9(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block10(get_each_context10(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -47434,7 +48458,7 @@ function create_default_slot_39(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block17(ctx2);
+          if_block = create_if_block18(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(t3.parentNode, t3);
@@ -47450,12 +48474,12 @@ function create_default_slot_39(ctx) {
         each_value = ctx2[2];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context9(ctx2, each_value, i2);
+          const child_ctx = get_each_context10(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block9(child_ctx);
+            each_blocks[i2] = create_each_block10(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -47496,7 +48520,7 @@ function create_default_slot_39(ctx) {
     }
   };
 }
-function create_default_slot_211(ctx) {
+function create_default_slot_212(ctx) {
   let t_value = ctx[3].t("modals.note.edit.save") + "";
   let t3;
   return {
@@ -47516,13 +48540,13 @@ function create_default_slot_211(ctx) {
     }
   };
 }
-function create_default_slot_114(ctx) {
+function create_default_slot_115(ctx) {
   let button;
   let current;
   button = new Button_default({
     props: {
       variant: "primary",
-      $$slots: { default: [create_default_slot_211] },
+      $$slots: { default: [create_default_slot_212] },
       $$scope: { ctx }
     }
   });
@@ -47557,7 +48581,7 @@ function create_default_slot_114(ctx) {
     }
   };
 }
-function create_default_slot19(ctx) {
+function create_default_slot20(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -47570,7 +48594,7 @@ function create_default_slot19(ctx) {
   });
   modalbuttongroup = new ModalButtonGroup_default({
     props: {
-      $$slots: { default: [create_default_slot_114] },
+      $$slots: { default: [create_default_slot_115] },
       $$scope: { ctx }
     }
   });
@@ -47618,13 +48642,13 @@ function create_default_slot19(ctx) {
     }
   };
 }
-function create_fragment59(ctx) {
+function create_fragment61(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[3].t("modals.note.edit.title"),
-      $$slots: { default: [create_default_slot19] },
+      $$slots: { default: [create_default_slot20] },
       $$scope: { ctx }
     }
   });
@@ -47660,7 +48684,7 @@ function create_fragment59(ctx) {
     }
   };
 }
-function instance59($$self, $$props, $$invalidate) {
+function instance61($$self, $$props, $$invalidate) {
   let editableFields;
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(3, $i18n = $$value));
@@ -47694,7 +48718,7 @@ function instance59($$self, $$props, $$invalidate) {
 var EditNote = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance59, create_fragment59, safe_not_equal, { fields: 4, record: 0, onSave: 1 });
+    init(this, options, instance61, create_fragment61, safe_not_equal, { fields: 4, record: 0, onSave: 1 });
   }
 };
 var EditNote_default = EditNote;
@@ -47733,6 +48757,13 @@ function fieldToSelectableValue(field) {
     label: field.name,
     value: field.name
   };
+}
+var getRecordColorKey = Symbol();
+function getRecordColorContext() {
+  return getContext(getRecordColorKey);
+}
+function setRecordColorContext(fn3) {
+  setContext(getRecordColorKey, fn3);
 }
 
 // src/views/Board/board.ts
@@ -49715,15 +50746,41 @@ function flip3(node, { from, to }, params = {}) {
 
 // src/views/Board/components/Board/CardGroup.svelte
 function add_css32(target) {
-  append_styles(target, "svelte-1oa4ncb", ".lst.svelte-1oa4ncb{display:flex;flex-direction:column;gap:var(--size-4-2);min-height:35px}.crd.svelte-1oa4ncb{background-color:var(--background-primary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:var(--size-4-2)}.crd.svelte-1oa4ncb:hover{border:1px solid var(--background-modifier-border-hover)}");
+  append_styles(target, "svelte-1k53191", ".lst.svelte-1k53191{display:flex;flex-direction:column;gap:var(--size-4-2);min-height:35px}.crd.svelte-1k53191{background-color:var(--background-primary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:var(--size-4-2);display:flex}.crd.svelte-1k53191:hover{border:1px solid var(--background-modifier-border-hover)}");
 }
-function get_each_context10(ctx, list, i2) {
+function get_each_context11(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[10] = list[i2];
+  child_ctx[11] = list[i2];
+  const constants_0 = child_ctx[6](child_ctx[11]);
+  child_ctx[12] = constants_0;
   return child_ctx;
 }
-function create_default_slot20(ctx) {
-  let t_value = getDisplayName(ctx[10].id) + "";
+function create_if_block19(ctx) {
+  let span;
+  return {
+    c() {
+      span = element("span");
+      set_style(span, "margin-right", "8px");
+      set_style(span, "background-color", ctx[12]);
+      set_style(span, "width", "5px");
+      set_style(span, "border-radius", "9999px");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1) {
+        set_style(span, "background-color", ctx2[12]);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+    }
+  };
+}
+function create_default_slot21(ctx) {
+  let t_value = getDisplayName(ctx[11].id) + "";
   let t3;
   return {
     c() {
@@ -49733,7 +50790,7 @@ function create_default_slot20(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 1 && t_value !== (t_value = getDisplayName(ctx2[10].id) + ""))
+      if (dirty & 1 && t_value !== (t_value = getDisplayName(ctx2[11].id) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -49742,49 +50799,57 @@ function create_default_slot20(ctx) {
     }
   };
 }
-function create_each_block10(key_1, ctx) {
+function create_each_block11(key_1, ctx) {
   let div;
+  let t0;
   let internallink;
-  let t3;
+  let t1;
   let rect;
   let stop_animation = noop;
   let current;
   let mounted;
   let dispose;
+  let if_block = ctx[12] && create_if_block19(ctx);
   function open_handler(...args) {
-    return ctx[8](ctx[10], ...args);
+    return ctx[9](ctx[11], ...args);
   }
   internallink = new InternalLink_default({
     props: {
-      linkText: ctx[10].id,
+      linkText: ctx[11].id,
       sourcePath: "",
       resolved: true,
-      $$slots: { default: [create_default_slot20] },
+      $$slots: { default: [create_default_slot21] },
       $$scope: { ctx }
     }
   });
   internallink.$on("open", open_handler);
   function click_handler() {
-    return ctx[9](ctx[10]);
+    return ctx[10](ctx[11]);
   }
   return {
     key: key_1,
     first: null,
     c() {
       div = element("div");
+      if (if_block)
+        if_block.c();
+      t0 = space();
       create_component(internallink.$$.fragment);
-      t3 = space();
-      attr(div, "class", "crd svelte-1oa4ncb");
+      t1 = space();
+      attr(div, "class", "crd svelte-1k53191");
       this.first = div;
     },
     m(target, anchor) {
       insert(target, div, anchor);
+      if (if_block)
+        if_block.m(div, null);
+      append(div, t0);
       mount_component(internallink, div, null);
-      append(div, t3);
+      append(div, t1);
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "keypress", ctx[7]),
+          listen(div, "keypress", ctx[8]),
           listen(div, "click", click_handler)
         ];
         mounted = true;
@@ -49792,10 +50857,22 @@ function create_each_block10(key_1, ctx) {
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
+      if (ctx[12]) {
+        if (if_block) {
+          if_block.p(ctx, dirty);
+        } else {
+          if_block = create_if_block19(ctx);
+          if_block.c();
+          if_block.m(div, t0);
+        }
+      } else if (if_block) {
+        if_block.d(1);
+        if_block = null;
+      }
       const internallink_changes = {};
       if (dirty & 1)
-        internallink_changes.linkText = ctx[10].id;
-      if (dirty & 8193) {
+        internallink_changes.linkText = ctx[11].id;
+      if (dirty & 32769) {
         internallink_changes.$$scope = { dirty, ctx };
       }
       internallink.$set(internallink_changes);
@@ -49824,13 +50901,15 @@ function create_each_block10(key_1, ctx) {
     d(detaching) {
       if (detaching)
         detach(div);
+      if (if_block)
+        if_block.d();
       destroy_component(internallink);
       mounted = false;
       run_all(dispose);
     }
   };
 }
-function create_fragment60(ctx) {
+function create_fragment62(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = new Map();
@@ -49839,11 +50918,11 @@ function create_fragment60(ctx) {
   let mounted;
   let dispose;
   let each_value = ctx[0];
-  const get_key = (ctx2) => ctx2[10].id;
+  const get_key = (ctx2) => ctx2[11].id;
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    let child_ctx = get_each_context10(ctx, each_value, i2);
+    let child_ctx = get_each_context11(ctx, each_value, i2);
     let key = get_key(child_ctx);
-    each_1_lookup.set(key, each_blocks[i2] = create_each_block10(key, child_ctx));
+    each_1_lookup.set(key, each_blocks[i2] = create_each_block11(key, child_ctx));
   }
   return {
     c() {
@@ -49851,7 +50930,7 @@ function create_fragment60(ctx) {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      attr(div, "class", "lst svelte-1oa4ncb");
+      attr(div, "class", "lst svelte-1k53191");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -49879,12 +50958,12 @@ function create_fragment60(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 11) {
+      if (dirty & 75) {
         each_value = ctx2[0];
         group_outros();
         for (let i2 = 0; i2 < each_blocks.length; i2 += 1)
           each_blocks[i2].r();
-        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, fix_and_outro_and_destroy_block, create_each_block10, null, get_each_context10);
+        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, fix_and_outro_and_destroy_block, create_each_block11, null, get_each_context11);
         for (let i2 = 0; i2 < each_blocks.length; i2 += 1)
           each_blocks[i2].a();
         check_outros();
@@ -49928,7 +51007,7 @@ function create_fragment60(ctx) {
   };
 }
 var flipDurationMs = 200;
-function instance60($$self, $$props, $$invalidate) {
+function instance62($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
   let { items } = $$props;
@@ -49945,6 +51024,7 @@ function instance60($$self, $$props, $$invalidate) {
       onDrop(e.detail.items);
     }
   }
+  const getRecordColor = getRecordColorContext();
   function keypress_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -49962,7 +51042,7 @@ function instance60($$self, $$props, $$invalidate) {
     if ("onRecordClick" in $$props2)
       $$invalidate(1, onRecordClick = $$props2.onRecordClick);
     if ("onDrop" in $$props2)
-      $$invalidate(6, onDrop = $$props2.onDrop);
+      $$invalidate(7, onDrop = $$props2.onDrop);
     if ("dragDisabled" in $$props2)
       $$invalidate(2, dragDisabled = $$props2.dragDisabled);
   };
@@ -49973,6 +51053,7 @@ function instance60($$self, $$props, $$invalidate) {
     $app,
     handleDndConsider,
     handleDndFinalize,
+    getRecordColor,
     onDrop,
     keypress_handler,
     open_handler,
@@ -49982,10 +51063,10 @@ function instance60($$self, $$props, $$invalidate) {
 var CardGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance60, create_fragment60, safe_not_equal, {
+    init(this, options, instance62, create_fragment62, safe_not_equal, {
       items: 0,
       onRecordClick: 1,
-      onDrop: 6,
+      onDrop: 7,
       dragDisabled: 2
     }, add_css32);
   }
@@ -49996,7 +51077,7 @@ var CardGroup_default = CardGroup;
 function add_css33(target) {
   append_styles(target, "svelte-epk499", ".column.svelte-epk499{border:1px solid var(--background-modifier-border);border-radius:var(--radius-m);background-color:var(--background-secondary);display:flex;flex-direction:column}.column-section.svelte-epk499{padding:var(--size-4-2);display:flex;flex-direction:column}.unprio.svelte-epk499{border-top:1px solid var(--background-modifier-border)}p.svelte-epk499{font-weight:500;margin:0;margin-bottom:4px;color:var(--text-faint);font-size:var(--font-smaller)}");
 }
-function create_default_slot_115(ctx) {
+function create_default_slot_116(ctx) {
   let t3;
   return {
     c() {
@@ -50062,7 +51143,7 @@ function create_else_block5(ctx) {
     }
   };
 }
-function create_if_block_110(ctx) {
+function create_if_block_111(ctx) {
   let div0;
   let cardgroup0;
   let t0;
@@ -50158,14 +51239,14 @@ function create_if_block_110(ctx) {
     }
   };
 }
-function create_if_block18(ctx) {
+function create_if_block20(ctx) {
   let div;
   let button;
   let current;
   button = new Button_default({
     props: {
       variant: "plain",
-      $$slots: { default: [create_default_slot21] },
+      $$slots: { default: [create_default_slot22] },
       $$scope: { ctx }
     }
   });
@@ -50205,7 +51286,7 @@ function create_if_block18(ctx) {
     }
   };
 }
-function create_default_slot21(ctx) {
+function create_default_slot22(ctx) {
   let t_value = ctx[9].t("views.board.note.add") + "";
   let t3;
   return {
@@ -50225,7 +51306,7 @@ function create_default_slot21(ctx) {
     }
   };
 }
-function create_fragment61(ctx) {
+function create_fragment63(ctx) {
   let div1;
   let div0;
   let typography;
@@ -50238,11 +51319,11 @@ function create_fragment61(ctx) {
     props: {
       variant: "label",
       nomargin: true,
-      $$slots: { default: [create_default_slot_115] },
+      $$slots: { default: [create_default_slot_116] },
       $$scope: { ctx }
     }
   });
-  const if_block_creators = [create_if_block_110, create_else_block5];
+  const if_block_creators = [create_if_block_111, create_else_block5];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[2])
@@ -50251,7 +51332,7 @@ function create_fragment61(ctx) {
   }
   current_block_type_index = select_block_type(ctx, -1);
   if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block1 = !ctx[3] && create_if_block18(ctx);
+  let if_block1 = !ctx[3] && create_if_block20(ctx);
   return {
     c() {
       div1 = element("div");
@@ -50310,7 +51391,7 @@ function create_fragment61(ctx) {
             transition_in(if_block1, 1);
           }
         } else {
-          if_block1 = create_if_block18(ctx2);
+          if_block1 = create_if_block20(ctx2);
           if_block1.c();
           transition_in(if_block1, 1);
           if_block1.m(div1, null);
@@ -50350,7 +51431,7 @@ function create_fragment61(ctx) {
     }
   };
 }
-function instance61($$self, $$props, $$invalidate) {
+function instance63($$self, $$props, $$invalidate) {
   let prioritized;
   let unprioritized;
   let $i18n;
@@ -50434,7 +51515,7 @@ function instance61($$self, $$props, $$invalidate) {
 var BoardColumn = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance61, create_fragment61, safe_not_equal, {
+    init(this, options, instance63, create_fragment63, safe_not_equal, {
       name: 0,
       records: 1,
       groupByPriority: 2,
@@ -50452,12 +51533,12 @@ var BoardColumn_default = BoardColumn;
 function add_css34(target) {
   append_styles(target, "svelte-pei0r2", "div.svelte-pei0r2{display:grid;column-gap:8px;align-items:flex-start}");
 }
-function get_each_context11(ctx, list, i2) {
+function get_each_context12(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[13] = list[i2];
   return child_ctx;
 }
-function create_each_block11(key_1, ctx) {
+function create_each_block12(key_1, ctx) {
   let first;
   let boardcolumn;
   let current;
@@ -50530,7 +51611,7 @@ function create_each_block11(key_1, ctx) {
     }
   };
 }
-function create_fragment62(ctx) {
+function create_fragment64(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = new Map();
@@ -50542,9 +51623,9 @@ function create_fragment62(ctx) {
   let each_value = ctx[0];
   const get_key = (ctx2) => ctx2[13].id;
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    let child_ctx = get_each_context11(ctx, each_value, i2);
+    let child_ctx = get_each_context12(ctx, each_value, i2);
     let key = get_key(child_ctx);
-    each_1_lookup.set(key, each_blocks[i2] = create_each_block11(key, child_ctx));
+    each_1_lookup.set(key, each_blocks[i2] = create_each_block12(key, child_ctx));
   }
   return {
     c() {
@@ -50579,7 +51660,7 @@ function create_fragment62(ctx) {
       if (dirty & 191) {
         each_value = ctx2[0];
         group_outros();
-        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block11, null, get_each_context11);
+        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block12, null, get_each_context12);
         check_outros();
       }
       if (!current || dirty & 65 && div_style_value !== (div_style_value = `grid-template-columns: repeat(${ctx2[0].length}, ${ctx2[6]}px);`)) {
@@ -50619,7 +51700,7 @@ function create_fragment62(ctx) {
   };
 }
 var flipDurationMs2 = 200;
-function instance62($$self, $$props, $$invalidate) {
+function instance64($$self, $$props, $$invalidate) {
   let { columns } = $$props;
   let { groupByPriority } = $$props;
   let { readonly } = $$props;
@@ -50677,7 +51758,7 @@ function instance62($$self, $$props, $$invalidate) {
 var Board = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance62, create_fragment62, safe_not_equal, {
+    init(this, options, instance64, create_fragment64, safe_not_equal, {
       columns: 0,
       groupByPriority: 1,
       readonly: 2,
@@ -50696,7 +51777,7 @@ var Board_default = Board;
 var import_obsidian38 = __toModule(require("obsidian"));
 
 // src/views/Board/settings/BoardSettings.svelte
-function create_default_slot_212(ctx) {
+function create_default_slot_213(ctx) {
   let numberinput;
   let updating_value;
   let current;
@@ -50742,14 +51823,14 @@ function create_default_slot_212(ctx) {
     }
   };
 }
-function create_default_slot_116(ctx) {
+function create_default_slot_117(ctx) {
   let settingitem;
   let current;
   settingitem = new SettingItem_default({
     props: {
       name: "Column width",
       description: "Width of each column in pixels.",
-      $$slots: { default: [create_default_slot_212] },
+      $$slots: { default: [create_default_slot_213] },
       $$scope: { ctx }
     }
   });
@@ -50783,12 +51864,12 @@ function create_default_slot_116(ctx) {
     }
   };
 }
-function create_default_slot22(ctx) {
+function create_default_slot23(ctx) {
   let modalcontent;
   let current;
   modalcontent = new ModalContent_default({
     props: {
-      $$slots: { default: [create_default_slot_116] },
+      $$slots: { default: [create_default_slot_117] },
       $$scope: { ctx }
     }
   });
@@ -50822,13 +51903,13 @@ function create_default_slot22(ctx) {
     }
   };
 }
-function create_fragment63(ctx) {
+function create_fragment65(ctx) {
   let modallayout;
   let current;
   modallayout = new ModalLayout_default({
     props: {
       title: "Board settings",
-      $$slots: { default: [create_default_slot22] },
+      $$slots: { default: [create_default_slot23] },
       $$scope: { ctx }
     }
   });
@@ -50862,7 +51943,7 @@ function create_fragment63(ctx) {
     }
   };
 }
-function instance63($$self, $$props, $$invalidate) {
+function instance65($$self, $$props, $$invalidate) {
   var _a;
   let { config } = $$props;
   let { onSave } = $$props;
@@ -50889,7 +51970,7 @@ function instance63($$self, $$props, $$invalidate) {
 var BoardSettings = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance63, create_fragment63, safe_not_equal, { config: 0, onSave: 1 });
+    init(this, options, instance65, create_fragment65, safe_not_equal, { config: 0, onSave: 1 });
   }
 };
 var BoardSettings_default = BoardSettings;
@@ -50936,7 +52017,7 @@ function create_default_slot_410(ctx) {
       allowEmpty: true
     }
   });
-  select.$on("change", ctx[19]);
+  select.$on("change", ctx[20]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -50983,7 +52064,7 @@ function create_default_slot_310(ctx) {
       allowEmpty: true
     }
   });
-  select.$on("change", ctx[20]);
+  select.$on("change", ctx[21]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -51018,7 +52099,7 @@ function create_default_slot_310(ctx) {
     }
   };
 }
-function create_if_block19(ctx) {
+function create_if_block21(ctx) {
   let icon;
   let current;
   icon = new Icon_default({
@@ -51073,9 +52154,9 @@ function create_right_slot2(ctx) {
       $$scope: { ctx }
     }
   });
-  let if_block = ((_a = ctx[6]) == null ? void 0 : _a.type) === DataFieldType.Date && create_if_block19(ctx);
+  let if_block = ((_a = ctx[6]) == null ? void 0 : _a.type) === DataFieldType.Date && create_if_block21(ctx);
   iconbutton = new IconButton_default({ props: { icon: "settings" } });
-  iconbutton.$on("click", ctx[21]);
+  iconbutton.$on("click", ctx[22]);
   return {
     c() {
       create_component(field0.$$.fragment);
@@ -51103,14 +52184,14 @@ function create_right_slot2(ctx) {
       const field0_changes = {};
       if (dirty & 512)
         field0_changes.name = ctx2[9].t("views.board.fields.status");
-      if (dirty & 33555213) {
+      if (dirty & 67109645) {
         field0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field0.$set(field0_changes);
       const field1_changes = {};
       if (dirty & 512)
         field1_changes.name = ctx2[9].t("views.board.fields.priority");
-      if (dirty & 33555141) {
+      if (dirty & 67109573) {
         field1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field1.$set(field1_changes);
@@ -51120,7 +52201,7 @@ function create_right_slot2(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block19(ctx2);
+          if_block = create_if_block21(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(t22.parentNode, t22);
@@ -51164,7 +52245,7 @@ function create_right_slot2(ctx) {
     }
   };
 }
-function create_default_slot_213(ctx) {
+function create_default_slot_214(ctx) {
   let viewtoolbar;
   let current;
   viewtoolbar = new ViewToolbar_default({
@@ -51184,7 +52265,7 @@ function create_default_slot_213(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty & 33556429) {
+      if (dirty & 67110861) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -51204,7 +52285,7 @@ function create_default_slot_213(ctx) {
     }
   };
 }
-function create_default_slot_117(ctx) {
+function create_default_slot_118(ctx) {
   var _a, _b;
   let div;
   let board;
@@ -51213,9 +52294,9 @@ function create_default_slot_117(ctx) {
     props: {
       onRecordUpdate: ctx[12],
       dragDisabled: !ctx[6],
-      onSortColumns: ctx[22],
+      onSortColumns: ctx[23],
       readonly: ctx[1],
-      columns: ctx[5].sort(ctx[23]).map(ctx[24]),
+      columns: ctx[5].sort(ctx[24]).map(ctx[25]),
       groupByPriority: ctx[6],
       onRecordClick: ctx[11],
       onRecordAdd: ctx[13],
@@ -51239,11 +52320,11 @@ function create_default_slot_117(ctx) {
       if (dirty & 64)
         board_changes.dragDisabled = !ctx2[6];
       if (dirty & 5)
-        board_changes.onSortColumns = ctx2[22];
+        board_changes.onSortColumns = ctx2[23];
       if (dirty & 2)
         board_changes.readonly = ctx2[1];
       if (dirty & 49)
-        board_changes.columns = ctx2[5].sort(ctx2[23]).map(ctx2[24]);
+        board_changes.columns = ctx2[5].sort(ctx2[24]).map(ctx2[25]);
       if (dirty & 64)
         board_changes.groupByPriority = ctx2[6];
       if (dirty & 1)
@@ -51267,20 +52348,20 @@ function create_default_slot_117(ctx) {
     }
   };
 }
-function create_default_slot23(ctx) {
+function create_default_slot24(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
   let current;
   viewheader = new ViewHeader_default({
     props: {
-      $$slots: { default: [create_default_slot_213] },
+      $$slots: { default: [create_default_slot_214] },
       $$scope: { ctx }
     }
   });
   viewcontent = new ViewContent_default({
     props: {
-      $$slots: { default: [create_default_slot_117] },
+      $$slots: { default: [create_default_slot_118] },
       $$scope: { ctx }
     }
   });
@@ -51298,12 +52379,12 @@ function create_default_slot23(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty & 33556429) {
+      if (dirty & 67110861) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty & 33554551) {
+      if (dirty & 67108983) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -51328,12 +52409,12 @@ function create_default_slot23(ctx) {
     }
   };
 }
-function create_fragment64(ctx) {
+function create_fragment66(ctx) {
   let viewlayout;
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot23] },
+      $$slots: { default: [create_default_slot24] },
       $$scope: { ctx }
     }
   });
@@ -51347,7 +52428,7 @@ function create_fragment64(ctx) {
     },
     p(ctx2, [dirty]) {
       const viewlayout_changes = {};
-      if (dirty & 33556479) {
+      if (dirty & 67110911) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -51367,7 +52448,7 @@ function create_fragment64(ctx) {
     }
   };
 }
-function instance64($$self, $$props, $$invalidate) {
+function instance66($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let textFields;
@@ -51384,6 +52465,7 @@ function instance64($$self, $$props, $$invalidate) {
   let { frame } = $$props;
   let { readonly } = $$props;
   let { api: api2 } = $$props;
+  let { getRecordColor } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
   function handleRecordClick(record) {
@@ -51405,6 +52487,7 @@ function instance64($$self, $$props, $$invalidate) {
       }
     }).open();
   }
+  setRecordColorContext(getRecordColor);
   const change_handler = ({ detail: value }) => onConfigChange(__spreadProps(__spreadValues({}, config), { groupByField: value }));
   const change_handler_1 = ({ detail: value }) => {
     onConfigChange(__spreadProps(__spreadValues({}, config), { priorityField: value }));
@@ -51450,6 +52533,8 @@ function instance64($$self, $$props, $$invalidate) {
       $$invalidate(1, readonly = $$props2.readonly);
     if ("api" in $$props2)
       $$invalidate(16, api2 = $$props2.api);
+    if ("getRecordColor" in $$props2)
+      $$invalidate(17, getRecordColor = $$props2.getRecordColor);
     if ("config" in $$props2)
       $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
@@ -51458,25 +52543,25 @@ function instance64($$self, $$props, $$invalidate) {
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 32768) {
       $:
-        $$invalidate(17, { fields, records } = frame, fields, ($$invalidate(18, records), $$invalidate(15, frame)));
+        $$invalidate(18, { fields, records } = frame, fields, ($$invalidate(19, records), $$invalidate(15, frame)));
     }
-    if ($$self.$$.dirty & 131072) {
+    if ($$self.$$.dirty & 262144) {
       $:
         $$invalidate(8, textFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Number));
     }
-    if ($$self.$$.dirty & 131073) {
+    if ($$self.$$.dirty & 262145) {
       $:
         $$invalidate(3, groupByField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.groupByField) === field.name));
     }
-    if ($$self.$$.dirty & 131072) {
+    if ($$self.$$.dirty & 262144) {
       $:
         $$invalidate(7, priorityFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.Number || field.type === DataFieldType.Date));
     }
-    if ($$self.$$.dirty & 131073) {
+    if ($$self.$$.dirty & 262145) {
       $:
         $$invalidate(6, priorityField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.priorityField) === field.name));
     }
-    if ($$self.$$.dirty & 262152) {
+    if ($$self.$$.dirty & 524296) {
       $:
         $$invalidate(4, groupedRecords = groupRecordsByField(records, groupByField === null || groupByField === void 0 ? void 0 : groupByField.name));
     }
@@ -51503,6 +52588,7 @@ function instance64($$self, $$props, $$invalidate) {
     project,
     frame,
     api2,
+    getRecordColor,
     fields,
     records,
     change_handler,
@@ -51516,11 +52602,12 @@ function instance64($$self, $$props, $$invalidate) {
 var BoardView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance64, create_fragment64, safe_not_equal, {
+    init(this, options, instance66, create_fragment66, safe_not_equal, {
       project: 14,
       frame: 15,
       readonly: 1,
       api: 16,
+      getRecordColor: 17,
       config: 0,
       onConfigChange: 2
     }, add_css35);
@@ -51555,7 +52642,8 @@ var BoardView2 = class extends ProjectView {
           project: props.project,
           readonly: props.readonly,
           config: props.config,
-          onConfigChange: props.saveConfig
+          onConfigChange: props.saveConfig,
+          getRecordColor: props.getRecordColor
         }
       });
     });
@@ -51704,7 +52792,7 @@ var import_obsidian41 = __toModule(require("obsidian"));
 function add_css36(target) {
   append_styles(target, "svelte-xhhztu", "table.svelte-xhhztu{border-collapse:collapse;border-spacing:0;table-layout:fixed;overflow:auto}.grow.svelte-xhhztu{height:100%;width:100%}");
 }
-function create_fragment65(ctx) {
+function create_fragment67(ctx) {
   let table;
   let current;
   const default_slot_template = ctx[2].default;
@@ -51752,7 +52840,7 @@ function create_fragment65(ctx) {
     }
   };
 }
-function instance65($$self, $$props, $$invalidate) {
+function instance67($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { grow = false } = $$props;
   $$self.$$set = ($$props2) => {
@@ -51766,13 +52854,13 @@ function instance65($$self, $$props, $$invalidate) {
 var Table = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance65, create_fragment65, safe_not_equal, { grow: 0 }, add_css36);
+    init(this, options, instance67, create_fragment67, safe_not_equal, { grow: 0 }, add_css36);
   }
 };
 var Table_default = Table;
 
 // src/views/Calendar/components/Table/TableBody.svelte
-function create_fragment66(ctx) {
+function create_fragment68(ctx) {
   let tbody;
   let current;
   const default_slot_template = ctx[1].default;
@@ -51815,7 +52903,7 @@ function create_fragment66(ctx) {
     }
   };
 }
-function instance66($$self, $$props, $$invalidate) {
+function instance68($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -51826,7 +52914,7 @@ function instance66($$self, $$props, $$invalidate) {
 var TableBody = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance66, create_fragment66, safe_not_equal, {});
+    init(this, options, instance68, create_fragment68, safe_not_equal, {});
   }
 };
 var TableBody_default = TableBody;
@@ -51835,7 +52923,7 @@ var TableBody_default = TableBody;
 function add_css37(target) {
   append_styles(target, "svelte-1u8ro2d", "td.svelte-1u8ro2d{vertical-align:top;box-sizing:border-box;padding:0;border:1px solid var(--background-modifier-border);height:calc(100% / 5)}td.svelte-1u8ro2d:first-of-type{border-left:1px solid var(--background-modifier-border)}td.svelte-1u8ro2d:last-of-type{border-right:1px solid var(--background-modifier-border)}");
 }
-function create_fragment67(ctx) {
+function create_fragment69(ctx) {
   let td;
   let td_style_value;
   let current;
@@ -51899,7 +52987,7 @@ function create_fragment67(ctx) {
     }
   };
 }
-function instance67($$self, $$props, $$invalidate) {
+function instance69($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { colspan = null } = $$props;
   let { width } = $$props;
@@ -51922,7 +53010,7 @@ function instance67($$self, $$props, $$invalidate) {
 var TableCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance67, create_fragment67, safe_not_equal, { colspan: 0, width: 1 }, add_css37);
+    init(this, options, instance69, create_fragment69, safe_not_equal, { colspan: 0, width: 1 }, add_css37);
   }
 };
 var TableCell_default = TableCell;
@@ -51931,7 +53019,7 @@ var TableCell_default = TableCell;
 function add_css38(target) {
   append_styles(target, "svelte-fwcz0t", "div.svelte-fwcz0t{display:flex;align-items:center;width:100%;justify-content:space-between;gap:1rem}th.svelte-fwcz0t{background:var(--background-secondary);border:1px solid var(--background-modifier-border);border-top:0;border-left:0;text-align:center;font-weight:500;min-width:100px;vertical-align:top;position:sticky !important;top:0;padding:0.3em}th.svelte-fwcz0t:first-child{min-width:5ch}.nopadding.svelte-fwcz0t{padding:0}");
 }
-function create_fragment68(ctx) {
+function create_fragment70(ctx) {
   let th;
   let div;
   let current;
@@ -51992,7 +53080,7 @@ function create_fragment68(ctx) {
     }
   };
 }
-function instance68($$self, $$props, $$invalidate) {
+function instance70($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { nopadding = false } = $$props;
   function mousedown_handler(event) {
@@ -52009,13 +53097,13 @@ function instance68($$self, $$props, $$invalidate) {
 var TableColumnHeaderCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance68, create_fragment68, safe_not_equal, { nopadding: 0 }, add_css38);
+    init(this, options, instance70, create_fragment70, safe_not_equal, { nopadding: 0 }, add_css38);
   }
 };
 var TableColumnHeaderCell_default = TableColumnHeaderCell;
 
 // src/views/Calendar/components/Table/TableHead.svelte
-function create_fragment69(ctx) {
+function create_fragment71(ctx) {
   let thead;
   let current;
   const default_slot_template = ctx[1].default;
@@ -52058,7 +53146,7 @@ function create_fragment69(ctx) {
     }
   };
 }
-function instance69($$self, $$props, $$invalidate) {
+function instance71($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -52069,13 +53157,13 @@ function instance69($$self, $$props, $$invalidate) {
 var TableHead = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance69, create_fragment69, safe_not_equal, {});
+    init(this, options, instance71, create_fragment71, safe_not_equal, {});
   }
 };
 var TableHead_default = TableHead;
 
 // src/views/Calendar/components/Table/TableRow.svelte
-function create_fragment70(ctx) {
+function create_fragment72(ctx) {
   let tr;
   let current;
   const default_slot_template = ctx[1].default;
@@ -52118,7 +53206,7 @@ function create_fragment70(ctx) {
     }
   };
 }
-function instance70($$self, $$props, $$invalidate) {
+function instance72($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -52129,7 +53217,7 @@ function instance70($$self, $$props, $$invalidate) {
 var TableRow = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance70, create_fragment70, safe_not_equal, {});
+    init(this, options, instance72, create_fragment72, safe_not_equal, {});
   }
 };
 var TableRow_default = TableRow;
@@ -52139,7 +53227,7 @@ var import_dayjs7 = __toModule(require_dayjs_min());
 function add_css39(target) {
   append_styles(target, "svelte-vn6kio", "span.svelte-vn6kio{padding:0.2em 0.4em;border-radius:4px}.today.svelte-vn6kio{background:var(--interactive-accent);display:inline-block;color:var(--text-on-accent)}");
 }
-function create_fragment71(ctx) {
+function create_fragment73(ctx) {
   let span;
   let t_value = ctx[0].date() + "";
   let t3;
@@ -52169,7 +53257,7 @@ function create_fragment71(ctx) {
     }
   };
 }
-function instance71($$self, $$props, $$invalidate) {
+function instance73($$self, $$props, $$invalidate) {
   let today;
   let { date } = $$props;
   $$self.$$set = ($$props2) => {
@@ -52187,20 +53275,45 @@ function instance71($$self, $$props, $$invalidate) {
 var CalendarDate = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance71, create_fragment71, safe_not_equal, { date: 0 }, add_css39);
+    init(this, options, instance73, create_fragment73, safe_not_equal, { date: 0 }, add_css39);
   }
 };
 var CalendarDate_default = CalendarDate;
 
 // src/views/Calendar/components/CalendarDay/CalendarEntry.svelte
 function add_css40(target) {
-  append_styles(target, "svelte-1x9h6ni", "div.svelte-1x9h6ni{border-radius:2px;background-color:hsla(var(--interactive-accent-hsl), 0.1);padding:0.2em 0.4em;font-size:var(--font-ui-smaller);width:100%;display:grid;grid-template-columns:auto 1fr;border-left:3px solid hsla(var(--interactive-accent-hsl), 0.5)}span.svelte-1x9h6ni{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
+  append_styles(target, "svelte-ijaicr", "div.svelte-ijaicr{border-radius:var(--radius-s);padding:0.2em 0.4em;font-size:var(--font-ui-smaller);width:100%;display:grid;grid-template-columns:min-content min-content auto;border:1px solid var(--background-modifier-border);background-color:var(--background-primary);align-items:center;gap:4px}.unchecked.svelte-ijaicr{grid-template-columns:min-content auto}span.svelte-ijaicr{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
 }
-function create_if_block_111(ctx) {
+function create_if_block_27(ctx) {
+  let span;
+  return {
+    c() {
+      span = element("span");
+      set_style(span, "background-color", ctx[1]);
+      set_style(span, "height", "100%");
+      set_style(span, "width", "5px");
+      set_style(span, "border-radius", "9999px");
+      attr(span, "class", "svelte-ijaicr");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 2) {
+        set_style(span, "background-color", ctx2[1]);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+    }
+  };
+}
+function create_if_block_112(ctx) {
   let checkbox;
   let current;
   checkbox = new Checkbox_default({ props: { checked: false } });
-  checkbox.$on("check", ctx[8]);
+  checkbox.$on("check", ctx[9]);
   return {
     c() {
       create_component(checkbox.$$.fragment);
@@ -52225,12 +53338,12 @@ function create_if_block_111(ctx) {
     }
   };
 }
-function create_if_block20(ctx) {
+function create_if_block22(ctx) {
   let checkbox;
   let updating_checked;
   let current;
   function checkbox_checked_binding(value) {
-    ctx[6](value);
+    ctx[7](value);
   }
   let checkbox_props = {};
   if (ctx[0] !== void 0) {
@@ -52238,7 +53351,7 @@ function create_if_block20(ctx) {
   }
   checkbox = new Checkbox_default({ props: checkbox_props });
   binding_callbacks.push(() => bind(checkbox, "checked", checkbox_checked_binding, ctx[0]));
-  checkbox.$on("check", ctx[7]);
+  checkbox.$on("check", ctx[8]);
   return {
     c() {
       create_component(checkbox.$$.fragment);
@@ -52271,47 +53384,56 @@ function create_if_block20(ctx) {
     }
   };
 }
-function create_fragment72(ctx) {
+function create_fragment74(ctx) {
   let div;
+  let t0;
   let current_block_type_index;
-  let if_block;
-  let t3;
+  let if_block1;
+  let t1;
   let span;
   let current;
   let mounted;
   let dispose;
-  const if_block_creators = [create_if_block20, create_if_block_111];
+  let if_block0 = ctx[1] && create_if_block_27(ctx);
+  const if_block_creators = [create_if_block22, create_if_block_112];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[0] !== void 0 && ctx2[0] !== null)
       return 0;
-    if (ctx2[0] === null && ctx2[1])
+    if (ctx2[0] === null && ctx2[2])
       return 1;
     return -1;
   }
   if (~(current_block_type_index = select_block_type(ctx, -1))) {
-    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
   }
-  const default_slot_template = ctx[3].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
+  const default_slot_template = ctx[4].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[3], null);
   return {
     c() {
       div = element("div");
-      if (if_block)
-        if_block.c();
-      t3 = space();
+      if (if_block0)
+        if_block0.c();
+      t0 = space();
+      if (if_block1)
+        if_block1.c();
+      t1 = space();
       span = element("span");
       if (default_slot)
         default_slot.c();
-      attr(span, "class", "svelte-1x9h6ni");
-      attr(div, "class", "svelte-1x9h6ni");
+      attr(span, "class", "svelte-ijaicr");
+      attr(div, "class", "svelte-ijaicr");
+      toggle_class(div, "unchecked", ctx[0] === void 0);
     },
     m(target, anchor) {
       insert(target, div, anchor);
+      if (if_block0)
+        if_block0.m(div, null);
+      append(div, t0);
       if (~current_block_type_index) {
         if_blocks[current_block_type_index].m(div, null);
       }
-      append(div, t3);
+      append(div, t1);
       append(div, span);
       if (default_slot) {
         default_slot.m(span, null);
@@ -52319,15 +53441,27 @@ function create_fragment72(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "keypress", ctx[4]),
-          listen(div, "click", ctx[5]),
-          listen(div, "mouseenter", ctx[9]),
-          listen(div, "mouseleave", ctx[10])
+          listen(div, "keypress", ctx[5]),
+          listen(div, "click", ctx[6]),
+          listen(div, "mouseenter", ctx[10]),
+          listen(div, "mouseleave", ctx[11])
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
+      if (ctx2[1]) {
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
+        } else {
+          if_block0 = create_if_block_27(ctx2);
+          if_block0.c();
+          if_block0.m(div, t0);
+        }
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
+      }
       let previous_block_index = current_block_type_index;
       current_block_type_index = select_block_type(ctx2, dirty);
       if (current_block_type_index === previous_block_index) {
@@ -52335,7 +53469,7 @@ function create_fragment72(ctx) {
           if_blocks[current_block_type_index].p(ctx2, dirty);
         }
       } else {
-        if (if_block) {
+        if (if_block1) {
           group_outros();
           transition_out(if_blocks[previous_block_index], 1, 1, () => {
             if_blocks[previous_block_index] = null;
@@ -52343,40 +53477,45 @@ function create_fragment72(ctx) {
           check_outros();
         }
         if (~current_block_type_index) {
-          if_block = if_blocks[current_block_type_index];
-          if (!if_block) {
-            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-            if_block.c();
+          if_block1 = if_blocks[current_block_type_index];
+          if (!if_block1) {
+            if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+            if_block1.c();
           } else {
-            if_block.p(ctx2, dirty);
+            if_block1.p(ctx2, dirty);
           }
-          transition_in(if_block, 1);
-          if_block.m(div, t3);
+          transition_in(if_block1, 1);
+          if_block1.m(div, t1);
         } else {
-          if_block = null;
+          if_block1 = null;
         }
       }
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 4)) {
-          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[2], !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null), null);
+        if (default_slot.p && (!current || dirty & 8)) {
+          update_slot_base(default_slot, default_slot_template, ctx2, ctx2[3], !current ? get_all_dirty_from_scope(ctx2[3]) : get_slot_changes(default_slot_template, ctx2[3], dirty, null), null);
         }
+      }
+      if (!current || dirty & 1) {
+        toggle_class(div, "unchecked", ctx2[0] === void 0);
       }
     },
     i(local) {
       if (current)
         return;
-      transition_in(if_block);
+      transition_in(if_block1);
       transition_in(default_slot, local);
       current = true;
     },
     o(local) {
-      transition_out(if_block);
+      transition_out(if_block1);
       transition_out(default_slot, local);
       current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div);
+      if (if_block0)
+        if_block0.d();
       if (~current_block_type_index) {
         if_blocks[current_block_type_index].d();
       }
@@ -52387,9 +53526,10 @@ function create_fragment72(ctx) {
     }
   };
 }
-function instance72($$self, $$props, $$invalidate) {
+function instance74($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { checked = void 0 } = $$props;
+  let { color } = $$props;
   let hover = false;
   function keypress_handler(event) {
     bubble.call(this, $$self, event);
@@ -52407,16 +53547,19 @@ function instance72($$self, $$props, $$invalidate) {
   function check_handler_1(event) {
     bubble.call(this, $$self, event);
   }
-  const mouseenter_handler = () => $$invalidate(1, hover = true);
-  const mouseleave_handler = () => $$invalidate(1, hover = false);
+  const mouseenter_handler = () => $$invalidate(2, hover = true);
+  const mouseleave_handler = () => $$invalidate(2, hover = false);
   $$self.$$set = ($$props2) => {
     if ("checked" in $$props2)
       $$invalidate(0, checked = $$props2.checked);
+    if ("color" in $$props2)
+      $$invalidate(1, color = $$props2.color);
     if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
+      $$invalidate(3, $$scope = $$props2.$$scope);
   };
   return [
     checked,
+    color,
     hover,
     $$scope,
     slots,
@@ -52432,7 +53575,7 @@ function instance72($$self, $$props, $$invalidate) {
 var CalendarEntry = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance72, create_fragment72, safe_not_equal, { checked: 0 }, add_css40);
+    init(this, options, instance74, create_fragment74, safe_not_equal, { checked: 0, color: 1 }, add_css40);
   }
 };
 var CalendarEntry_default = CalendarEntry;
@@ -52441,24 +53584,25 @@ var CalendarEntry_default = CalendarEntry;
 function add_css41(target) {
   append_styles(target, "svelte-1aboi1f", "div.svelte-1aboi1f{height:100%;width:100%}");
 }
-function get_each_context12(ctx, list, i2) {
+function get_each_context13(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[10] = list[i2];
+  child_ctx[11] = list[i2];
   return child_ctx;
 }
-function create_if_block21(ctx) {
+function create_if_block23(ctx) {
   let calendarentry;
   let current;
   function check_handler(...args) {
-    return ctx[8](ctx[10], ...args);
+    return ctx[9](ctx[11], ...args);
   }
   function click_handler() {
-    return ctx[9](ctx[10]);
+    return ctx[10](ctx[11]);
   }
   calendarentry = new CalendarEntry_default({
     props: {
-      checked: ctx[1] !== void 0 ? asOptionalBoolean(ctx[10].values[ctx[1]]) : void 0,
-      $$slots: { default: [create_default_slot24] },
+      color: ctx[7](ctx[11]),
+      checked: ctx[1] !== void 0 ? asOptionalBoolean(ctx[11].values[ctx[1]]) : void 0,
+      $$slots: { default: [create_default_slot25] },
       $$scope: { ctx }
     }
   });
@@ -52475,9 +53619,11 @@ function create_if_block21(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const calendarentry_changes = {};
+      if (dirty & 1)
+        calendarentry_changes.color = ctx[7](ctx[11]);
       if (dirty & 3)
-        calendarentry_changes.checked = ctx[1] !== void 0 ? asOptionalBoolean(ctx[10].values[ctx[1]]) : void 0;
-      if (dirty & 8213) {
+        calendarentry_changes.checked = ctx[1] !== void 0 ? asOptionalBoolean(ctx[11].values[ctx[1]]) : void 0;
+      if (dirty & 16405) {
         calendarentry_changes.$$scope = { dirty, ctx };
       }
       calendarentry.$set(calendarentry_changes);
@@ -52497,8 +53643,8 @@ function create_if_block21(ctx) {
     }
   };
 }
-function create_default_slot_118(ctx) {
-  let t_value = getDisplayName(ctx[10].id) + "";
+function create_default_slot_119(ctx) {
+  let t_value = getDisplayName(ctx[11].id) + "";
   let t3;
   return {
     c() {
@@ -52508,7 +53654,7 @@ function create_default_slot_118(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 1 && t_value !== (t_value = getDisplayName(ctx2[10].id) + ""))
+      if (dirty & 1 && t_value !== (t_value = getDisplayName(ctx2[11].id) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -52517,20 +53663,20 @@ function create_default_slot_118(ctx) {
     }
   };
 }
-function create_default_slot24(ctx) {
+function create_default_slot25(ctx) {
   let internallink;
   let t3;
   let current;
   function open_handler(...args) {
-    return ctx[7](ctx[10], ...args);
+    return ctx[8](ctx[11], ...args);
   }
   internallink = new InternalLink_default({
     props: {
-      linkText: ctx[10].id,
+      linkText: ctx[11].id,
       sourcePath: "",
       resolved: true,
-      tooltip: getDisplayName(ctx[10].id),
-      $$slots: { default: [create_default_slot_118] },
+      tooltip: getDisplayName(ctx[11].id),
+      $$slots: { default: [create_default_slot_119] },
       $$scope: { ctx }
     }
   });
@@ -52549,10 +53695,10 @@ function create_default_slot24(ctx) {
       ctx = new_ctx;
       const internallink_changes = {};
       if (dirty & 1)
-        internallink_changes.linkText = ctx[10].id;
+        internallink_changes.linkText = ctx[11].id;
       if (dirty & 1)
-        internallink_changes.tooltip = getDisplayName(ctx[10].id);
-      if (dirty & 8193) {
+        internallink_changes.tooltip = getDisplayName(ctx[11].id);
+      if (dirty & 16385) {
         internallink_changes.$$scope = { dirty, ctx };
       }
       internallink.$set(internallink_changes);
@@ -52574,12 +53720,12 @@ function create_default_slot24(ctx) {
     }
   };
 }
-function create_each_block12(key_1, ctx) {
+function create_each_block13(key_1, ctx) {
   let first;
-  let show_if = getDisplayName(ctx[10].id);
+  let show_if = getDisplayName(ctx[11].id);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block21(ctx);
+  let if_block = show_if && create_if_block23(ctx);
   return {
     key: key_1,
     first: null,
@@ -52600,7 +53746,7 @@ function create_each_block12(key_1, ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty & 1)
-        show_if = getDisplayName(ctx[10].id);
+        show_if = getDisplayName(ctx[11].id);
       if (show_if) {
         if (if_block) {
           if_block.p(ctx, dirty);
@@ -52608,7 +53754,7 @@ function create_each_block12(key_1, ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block21(ctx);
+          if_block = create_if_block23(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -52641,7 +53787,7 @@ function create_each_block12(key_1, ctx) {
     }
   };
 }
-function create_fragment73(ctx) {
+function create_fragment75(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = new Map();
@@ -52650,11 +53796,11 @@ function create_fragment73(ctx) {
   let mounted;
   let dispose;
   let each_value = ctx[0];
-  const get_key = (ctx2) => ctx2[10].id;
+  const get_key = (ctx2) => ctx2[11].id;
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    let child_ctx = get_each_context12(ctx, each_value, i2);
+    let child_ctx = get_each_context13(ctx, each_value, i2);
     let key = get_key(child_ctx);
-    each_1_lookup.set(key, each_blocks[i2] = create_each_block12(key, child_ctx));
+    each_1_lookup.set(key, each_blocks[i2] = create_each_block13(key, child_ctx));
   }
   return {
     c() {
@@ -52689,10 +53835,10 @@ function create_fragment73(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 31) {
+      if (dirty & 159) {
         each_value = ctx2[0];
         group_outros();
-        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block12, null, get_each_context12);
+        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block13, null, get_each_context13);
         check_outros();
       }
       if (dndzone_action && is_function(dndzone_action.update) && dirty & 1)
@@ -52739,7 +53885,7 @@ function asOptionalBoolean(value) {
   }
   return null;
 }
-function instance73($$self, $$props, $$invalidate) {
+function instance75($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
   let { records } = $$props;
@@ -52753,6 +53899,7 @@ function instance73($$self, $$props, $$invalidate) {
     $$invalidate(0, records = e.detail.items);
     records.forEach((item) => onRecordUpdate(item));
   }
+  const getRecordColor = getRecordColorContext();
   const open_handler = (record, { detail: { linkText, sourcePath, newLeaf } }) => {
     if (newLeaf) {
       $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
@@ -52788,6 +53935,7 @@ function instance73($$self, $$props, $$invalidate) {
     $app,
     handleDndConsider,
     handleDndFinalize,
+    getRecordColor,
     open_handler,
     check_handler,
     click_handler
@@ -52796,7 +53944,7 @@ function instance73($$self, $$props, $$invalidate) {
 var CalendarEntryList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance73, create_fragment73, safe_not_equal, {
+    init(this, options, instance75, create_fragment75, safe_not_equal, {
       records: 0,
       checkField: 1,
       onEntryClick: 2,
@@ -52810,7 +53958,7 @@ var CalendarEntryList_default = CalendarEntryList;
 function add_css42(target) {
   append_styles(target, "svelte-pe597k", "div.svelte-pe597k{padding:4px;height:100%;display:flex;flex-direction:column;gap:2px;align-items:start;overflow:scroll;min-height:6rem}.weekend.svelte-pe597k{background-color:var(--background-secondary)}");
 }
-function create_default_slot25(ctx) {
+function create_default_slot26(ctx) {
   let div;
   let calendardate;
   let t3;
@@ -52880,13 +54028,13 @@ function create_default_slot25(ctx) {
     }
   };
 }
-function create_fragment74(ctx) {
+function create_fragment76(ctx) {
   let tablecell;
   let current;
   tablecell = new TableCell_default({
     props: {
       width: "calc(100% / 7)",
-      $$slots: { default: [create_default_slot25] },
+      $$slots: { default: [create_default_slot26] },
       $$scope: { ctx }
     }
   });
@@ -52922,7 +54070,7 @@ function create_fragment74(ctx) {
     }
   };
 }
-function instance74($$self, $$props, $$invalidate) {
+function instance76($$self, $$props, $$invalidate) {
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
   let { date } = $$props;
@@ -52974,7 +54122,7 @@ function instance74($$self, $$props, $$invalidate) {
 var CalendarDay = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance74, create_fragment74, safe_not_equal, {
+    init(this, options, instance76, create_fragment76, safe_not_equal, {
       date: 0,
       records: 1,
       checkField: 2,
@@ -52990,7 +54138,7 @@ var CalendarDay_default = CalendarDay;
 function add_css43(target) {
   append_styles(target, "svelte-1u5a4vj", "div.svelte-1u5a4vj{display:flex;gap:4px;align-items:center}");
 }
-function create_default_slot26(ctx) {
+function create_default_slot27(ctx) {
   let t_value = ctx[3].t("views.calendar.today") + "";
   let t3;
   return {
@@ -53010,7 +54158,7 @@ function create_default_slot26(ctx) {
     }
   };
 }
-function create_fragment75(ctx) {
+function create_fragment77(ctx) {
   let div;
   let iconbutton0;
   let t0;
@@ -53025,7 +54173,7 @@ function create_fragment75(ctx) {
   });
   button = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot26] },
+      $$slots: { default: [create_default_slot27] },
       $$scope: { ctx }
     }
   });
@@ -53088,7 +54236,7 @@ function create_fragment75(ctx) {
     }
   };
 }
-function instance75($$self, $$props, $$invalidate) {
+function instance77($$self, $$props, $$invalidate) {
   let $i18n;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(3, $i18n = $$value));
   let { onNext } = $$props;
@@ -53107,25 +54255,25 @@ function instance75($$self, $$props, $$invalidate) {
 var Navigation = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance75, create_fragment75, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css43);
+    init(this, options, instance77, create_fragment77, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css43);
   }
 };
 var Navigation_default = Navigation;
 
 // src/views/Calendar/CalendarView.svelte
-function get_each_context13(ctx, list, i2) {
+function get_each_context14(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[37] = list[i2];
+  child_ctx[38] = list[i2];
   return child_ctx;
 }
 function get_each_context_12(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[40] = list[i2];
+  child_ctx[41] = list[i2];
   return child_ctx;
 }
 function get_each_context_2(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[43] = list[i2];
+  child_ctx[44] = list[i2];
   return child_ctx;
 }
 function create_left_slot2(ctx) {
@@ -53134,9 +54282,9 @@ function create_left_slot2(ctx) {
   navigation = new Navigation_default({
     props: {
       slot: "left",
-      onNext: ctx[31],
-      onPrevious: ctx[32],
-      onToday: ctx[33]
+      onNext: ctx[32],
+      onPrevious: ctx[33],
+      onToday: ctx[34]
     }
   });
   return {
@@ -53150,11 +54298,11 @@ function create_left_slot2(ctx) {
     p(ctx2, dirty) {
       const navigation_changes = {};
       if (dirty[0] & 80)
-        navigation_changes.onNext = ctx2[31];
+        navigation_changes.onNext = ctx2[32];
       if (dirty[0] & 80)
-        navigation_changes.onPrevious = ctx2[32];
+        navigation_changes.onPrevious = ctx2[33];
       if (dirty[0] & 16)
-        navigation_changes.onToday = ctx2[33];
+        navigation_changes.onToday = ctx2[34];
       navigation.$set(navigation_changes);
     },
     i(local) {
@@ -53172,7 +54320,7 @@ function create_left_slot2(ctx) {
     }
   };
 }
-function create_default_slot_119(ctx) {
+function create_default_slot_1110(ctx) {
   let t3;
   return {
     c() {
@@ -53199,7 +54347,7 @@ function create_middle_slot2(ctx) {
       slot: "middle",
       variant: "h2",
       nomargin: true,
-      $$slots: { default: [create_default_slot_119] },
+      $$slots: { default: [create_default_slot_1110] },
       $$scope: { ctx }
     }
   });
@@ -53213,7 +54361,7 @@ function create_middle_slot2(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty[0] & 4096 | dirty[1] & 32768) {
+      if (dirty[0] & 4096 | dirty[1] & 65536) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -53244,7 +54392,7 @@ function create_default_slot_102(ctx) {
       placeholder: (_c = ctx[9].t("views.calendar.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[28]);
+  select.$on("change", ctx[29]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -53291,7 +54439,7 @@ function create_default_slot_92(ctx) {
       placeholder: (_c = ctx[9].t("views.calendar.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[29]);
+  select.$on("change", ctx[30]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -53375,7 +54523,7 @@ function create_right_slot3(ctx) {
       ]
     }
   });
-  select.$on("change", ctx[30]);
+  select.$on("change", ctx[31]);
   return {
     c() {
       create_component(field0.$$.fragment);
@@ -53397,14 +54545,14 @@ function create_right_slot3(ctx) {
       const field0_changes = {};
       if (dirty[0] & 512)
         field0_changes.name = ctx2[9].t("views.calendar.fields.date");
-      if (dirty[0] & 800 | dirty[1] & 32768) {
+      if (dirty[0] & 800 | dirty[1] & 65536) {
         field0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field0.$set(field0_changes);
       const field1_changes = {};
       if (dirty[0] & 512)
         field1_changes.name = ctx2[9].t("views.calendar.fields.check");
-      if (dirty[0] & 49664 | dirty[1] & 32768) {
+      if (dirty[0] & 49664 | dirty[1] & 65536) {
         field1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field1.$set(field1_changes);
@@ -53485,7 +54633,7 @@ function create_default_slot_82(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty[0] & 54136 | dirty[1] & 32768) {
+      if (dirty[0] & 54136 | dirty[1] & 65536) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -53505,8 +54653,8 @@ function create_default_slot_82(ctx) {
     }
   };
 }
-function create_default_slot_73(ctx) {
-  let t_value = ctx[43] + "";
+function create_default_slot_74(ctx) {
+  let t_value = ctx[44] + "";
   let t3;
   return {
     c() {
@@ -53516,7 +54664,7 @@ function create_default_slot_73(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 1024 && t_value !== (t_value = ctx2[43] + ""))
+      if (dirty[0] & 1024 && t_value !== (t_value = ctx2[44] + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -53530,7 +54678,7 @@ function create_each_block_2(ctx) {
   let current;
   tablecolumnheadercell = new TableColumnHeaderCell_default({
     props: {
-      $$slots: { default: [create_default_slot_73] },
+      $$slots: { default: [create_default_slot_74] },
       $$scope: { ctx }
     }
   });
@@ -53544,7 +54692,7 @@ function create_each_block_2(ctx) {
     },
     p(ctx2, dirty) {
       const tablecolumnheadercell_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 32768) {
+      if (dirty[0] & 1024 | dirty[1] & 65536) {
         tablecolumnheadercell_changes.$$scope = { dirty, ctx: ctx2 };
       }
       tablecolumnheadercell.$set(tablecolumnheadercell_changes);
@@ -53564,7 +54712,7 @@ function create_each_block_2(ctx) {
     }
   };
 }
-function create_default_slot_66(ctx) {
+function create_default_slot_67(ctx) {
   let each_1_anchor;
   let current;
   let each_value_2 = ctx[10];
@@ -53634,12 +54782,12 @@ function create_default_slot_66(ctx) {
     }
   };
 }
-function create_default_slot_58(ctx) {
+function create_default_slot_59(ctx) {
   let tablerow;
   let current;
   tablerow = new TableRow_default({
     props: {
-      $$slots: { default: [create_default_slot_66] },
+      $$slots: { default: [create_default_slot_67] },
       $$scope: { ctx }
     }
   });
@@ -53653,7 +54801,7 @@ function create_default_slot_58(ctx) {
     },
     p(ctx2, dirty) {
       const tablerow_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 32768) {
+      if (dirty[0] & 1024 | dirty[1] & 65536) {
         tablerow_changes.$$scope = { dirty, ctx: ctx2 };
       }
       tablerow.$set(tablerow_changes);
@@ -53678,15 +54826,15 @@ function create_each_block_12(ctx) {
   let calendarday;
   let current;
   function func_5() {
-    return ctx[36](ctx[40]);
+    return ctx[37](ctx[41]);
   }
   calendarday = new CalendarDay_default({
     props: {
-      date: ctx[40],
+      date: ctx[41],
       checkField: (_a = ctx[14]) == null ? void 0 : _a.name,
-      onRecordUpdate: ctx[34],
-      records: ctx[13][ctx[40].format("YYYY-MM-DD")] || [],
-      onEntryClick: ctx[35],
+      onRecordUpdate: ctx[35],
+      records: ctx[13][ctx[41].format("YYYY-MM-DD")] || [],
+      onEntryClick: ctx[36],
       onEntryAdd: func_5
     }
   });
@@ -53703,15 +54851,15 @@ function create_each_block_12(ctx) {
       ctx = new_ctx;
       const calendarday_changes = {};
       if (dirty[0] & 2048)
-        calendarday_changes.date = ctx[40];
+        calendarday_changes.date = ctx[41];
       if (dirty[0] & 16384)
         calendarday_changes.checkField = (_a2 = ctx[14]) == null ? void 0 : _a2.name;
       if (dirty[0] & 164)
-        calendarday_changes.onRecordUpdate = ctx[34];
+        calendarday_changes.onRecordUpdate = ctx[35];
       if (dirty[0] & 10240)
-        calendarday_changes.records = ctx[13][ctx[40].format("YYYY-MM-DD")] || [];
+        calendarday_changes.records = ctx[13][ctx[41].format("YYYY-MM-DD")] || [];
       if (dirty[0] & 132)
-        calendarday_changes.onEntryClick = ctx[35];
+        calendarday_changes.onEntryClick = ctx[36];
       if (dirty[0] & 67623)
         calendarday_changes.onEntryAdd = func_5;
       calendarday.$set(calendarday_changes);
@@ -53734,7 +54882,7 @@ function create_each_block_12(ctx) {
 function create_default_slot_411(ctx) {
   let t3;
   let current;
-  let each_value_1 = ctx[37];
+  let each_value_1 = ctx[38];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
     each_blocks[i2] = create_each_block_12(get_each_context_12(ctx, each_value_1, i2));
@@ -53758,7 +54906,7 @@ function create_default_slot_411(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty[0] & 92327) {
-        each_value_1 = ctx2[37];
+        each_value_1 = ctx2[38];
         let i2;
         for (i2 = 0; i2 < each_value_1.length; i2 += 1) {
           const child_ctx = get_each_context_12(ctx2, each_value_1, i2);
@@ -53801,7 +54949,7 @@ function create_default_slot_411(ctx) {
     }
   };
 }
-function create_each_block13(ctx) {
+function create_each_block14(ctx) {
   let tablerow;
   let current;
   tablerow = new TableRow_default({
@@ -53820,7 +54968,7 @@ function create_each_block13(ctx) {
     },
     p(ctx2, dirty) {
       const tablerow_changes = {};
-      if (dirty[0] & 92327 | dirty[1] & 32768) {
+      if (dirty[0] & 92327 | dirty[1] & 65536) {
         tablerow_changes.$$scope = { dirty, ctx: ctx2 };
       }
       tablerow.$set(tablerow_changes);
@@ -53846,7 +54994,7 @@ function create_default_slot_311(ctx) {
   let each_value = ctx[11];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block13(get_each_context13(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -53870,12 +55018,12 @@ function create_default_slot_311(ctx) {
         each_value = ctx2[11];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context13(ctx2, each_value, i2);
+          const child_ctx = get_each_context14(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block13(child_ctx);
+            each_blocks[i2] = create_each_block14(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -53910,14 +55058,14 @@ function create_default_slot_311(ctx) {
     }
   };
 }
-function create_default_slot_214(ctx) {
+function create_default_slot_215(ctx) {
   let tablehead;
   let t3;
   let tablebody;
   let current;
   tablehead = new TableHead_default({
     props: {
-      $$slots: { default: [create_default_slot_58] },
+      $$slots: { default: [create_default_slot_59] },
       $$scope: { ctx }
     }
   });
@@ -53941,12 +55089,12 @@ function create_default_slot_214(ctx) {
     },
     p(ctx2, dirty) {
       const tablehead_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 32768) {
+      if (dirty[0] & 1024 | dirty[1] & 65536) {
         tablehead_changes.$$scope = { dirty, ctx: ctx2 };
       }
       tablehead.$set(tablehead_changes);
       const tablebody_changes = {};
-      if (dirty[0] & 92327 | dirty[1] & 32768) {
+      if (dirty[0] & 92327 | dirty[1] & 65536) {
         tablebody_changes.$$scope = { dirty, ctx: ctx2 };
       }
       tablebody.$set(tablebody_changes);
@@ -53977,7 +55125,7 @@ function create_default_slot_120(ctx) {
   table = new Table_default({
     props: {
       grow: true,
-      $$slots: { default: [create_default_slot_214] },
+      $$slots: { default: [create_default_slot_215] },
       $$scope: { ctx }
     }
   });
@@ -53991,7 +55139,7 @@ function create_default_slot_120(ctx) {
     },
     p(ctx2, dirty) {
       const table_changes = {};
-      if (dirty[0] & 93351 | dirty[1] & 32768) {
+      if (dirty[0] & 93351 | dirty[1] & 65536) {
         table_changes.$$scope = { dirty, ctx: ctx2 };
       }
       table.$set(table_changes);
@@ -54011,7 +55159,7 @@ function create_default_slot_120(ctx) {
     }
   };
 }
-function create_default_slot27(ctx) {
+function create_default_slot28(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
@@ -54042,12 +55190,12 @@ function create_default_slot27(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty[0] & 54136 | dirty[1] & 32768) {
+      if (dirty[0] & 54136 | dirty[1] & 65536) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty[0] & 93351 | dirty[1] & 32768) {
+      if (dirty[0] & 93351 | dirty[1] & 65536) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -54072,12 +55220,12 @@ function create_default_slot27(ctx) {
     }
   };
 }
-function create_fragment76(ctx) {
+function create_fragment78(ctx) {
   let viewlayout;
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot27] },
+      $$slots: { default: [create_default_slot28] },
       $$scope: { ctx }
     }
   });
@@ -54091,7 +55239,7 @@ function create_fragment76(ctx) {
     },
     p(ctx2, dirty) {
       const viewlayout_changes = {};
-      if (dirty[0] & 131071 | dirty[1] & 32768) {
+      if (dirty[0] & 131071 | dirty[1] & 65536) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -54111,7 +55259,7 @@ function create_fragment76(ctx) {
     }
   };
 }
-function instance76($$self, $$props, $$invalidate) {
+function instance78($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let dateFields;
@@ -54135,6 +55283,7 @@ function instance76($$self, $$props, $$invalidate) {
   let { frame } = $$props;
   let { readonly } = $$props;
   let { api: api2 } = $$props;
+  let { getRecordColor } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
   let anchorDate = (0, import_dayjs8.default)();
@@ -54149,6 +55298,7 @@ function instance76($$self, $$props, $$invalidate) {
   function handleCheckFieldChange(checkField) {
     onConfigChange(Object.assign(Object.assign({}, config), { checkField }));
   }
+  setRecordColorContext(getRecordColor);
   const change_handler = ({ detail }) => handleDateFieldChange(detail);
   const change_handler_1 = ({ detail }) => handleCheckFieldChange(detail);
   const change_handler_2 = ({ detail }) => handleIntervalChange(detail);
@@ -54189,23 +55339,25 @@ function instance76($$self, $$props, $$invalidate) {
       $$invalidate(1, readonly = $$props2.readonly);
     if ("api" in $$props2)
       $$invalidate(2, api2 = $$props2.api);
+    if ("getRecordColor" in $$props2)
+      $$invalidate(21, getRecordColor = $$props2.getRecordColor);
     if ("config" in $$props2)
       $$invalidate(3, config = $$props2.config);
     if ("onConfigChange" in $$props2)
-      $$invalidate(21, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(22, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty[0] & 1048576) {
       $:
-        $$invalidate(7, { fields, records } = frame, fields, ($$invalidate(27, records), $$invalidate(20, frame)));
+        $$invalidate(7, { fields, records } = frame, fields, ($$invalidate(28, records), $$invalidate(20, frame)));
     }
     if ($$self.$$.dirty[0] & 128) {
       $:
         $$invalidate(8, dateFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.Date));
     }
-    if ($$self.$$.dirty[0] & 4194568) {
+    if ($$self.$$.dirty[0] & 8388872) {
       $:
-        $$invalidate(5, dateField = $$invalidate(22, _a = dateFields.find((field) => (config === null || config === void 0 ? void 0 : config.dateField) === field.name)) !== null && _a !== void 0 ? _a : dateFields[0]);
+        $$invalidate(5, dateField = $$invalidate(23, _a = dateFields.find((field) => (config === null || config === void 0 ? void 0 : config.dateField) === field.name)) !== null && _a !== void 0 ? _a : dateFields[0]);
     }
     if ($$self.$$.dirty[0] & 128) {
       $:
@@ -54215,35 +55367,35 @@ function instance76($$self, $$props, $$invalidate) {
       $:
         $$invalidate(14, booleanField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.checkField) === field.name));
     }
-    if ($$self.$$.dirty[0] & 8388616) {
+    if ($$self.$$.dirty[0] & 16777224) {
       $:
-        $$invalidate(6, interval = $$invalidate(23, _b = config === null || config === void 0 ? void 0 : config.interval) !== null && _b !== void 0 ? _b : "week");
+        $$invalidate(6, interval = $$invalidate(24, _b = config === null || config === void 0 ? void 0 : config.interval) !== null && _b !== void 0 ? _b : "week");
     }
     if ($$self.$$.dirty[0] & 80) {
       $:
-        $$invalidate(26, dateInterval = computeDateInterval(anchorDate, interval));
+        $$invalidate(27, dateInterval = computeDateInterval(anchorDate, interval));
     }
-    if ($$self.$$.dirty[0] & 134217760) {
+    if ($$self.$$.dirty[0] & 268435488) {
       $:
         $$invalidate(13, groupedRecords = dateField ? groupRecordsByField2(records, dateField.name) : {});
     }
-    if ($$self.$$.dirty[0] & 67108864) {
+    if ($$self.$$.dirty[0] & 134217728) {
       $:
         $$invalidate(12, title = dateInterval ? generateTitle(dateInterval) : "");
     }
+    if ($$self.$$.dirty[0] & 134217728) {
+      $:
+        $$invalidate(26, dates = dateInterval ? generateDates(dateInterval) : []);
+    }
     if ($$self.$$.dirty[0] & 67108864) {
       $:
-        $$invalidate(25, dates = dateInterval ? generateDates(dateInterval) : []);
+        $$invalidate(25, numColumns = Math.min(dates.length, 7));
     }
-    if ($$self.$$.dirty[0] & 33554432) {
-      $:
-        $$invalidate(24, numColumns = Math.min(dates.length, 7));
-    }
-    if ($$self.$$.dirty[0] & 50331648) {
+    if ($$self.$$.dirty[0] & 100663296) {
       $:
         $$invalidate(11, weeks = chunkDates(dates, numColumns));
     }
-    if ($$self.$$.dirty[0] & 50332160) {
+    if ($$self.$$.dirty[0] & 100663808) {
       $:
         $$invalidate(10, weekDays = dates.slice(0, numColumns).map((date) => $i18n.t("views.calendar.weekday", {
           value: date.toDate(),
@@ -54273,6 +55425,7 @@ function instance76($$self, $$props, $$invalidate) {
     handleDateFieldChange,
     handleCheckFieldChange,
     frame,
+    getRecordColor,
     onConfigChange,
     _a,
     _b,
@@ -54294,13 +55447,14 @@ function instance76($$self, $$props, $$invalidate) {
 var CalendarView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance76, create_fragment76, safe_not_equal, {
+    init(this, options, instance78, create_fragment78, safe_not_equal, {
       project: 0,
       frame: 20,
       readonly: 1,
       api: 2,
+      getRecordColor: 21,
       config: 3,
-      onConfigChange: 21
+      onConfigChange: 22
     }, null, [-1, -1]);
   }
 };
@@ -54333,7 +55487,8 @@ var CalendarView2 = class extends ProjectView {
           project: props.project,
           readonly: props.readonly,
           config: props.config,
-          onConfigChange: props.saveConfig
+          onConfigChange: props.saveConfig,
+          getRecordColor: props.getRecordColor
         }
       });
     });
@@ -54351,7 +55506,7 @@ var CalendarView2 = class extends ProjectView {
 function add_css44(target) {
   append_styles(target, "svelte-8ezeao", "div.svelte-8ezeao{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex:1}");
 }
-function create_fragment77(ctx) {
+function create_fragment79(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -54395,7 +55550,7 @@ function create_fragment77(ctx) {
     }
   };
 }
-function instance77($$self, $$props, $$invalidate) {
+function instance79($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -54406,7 +55561,7 @@ function instance77($$self, $$props, $$invalidate) {
 var CenterBox = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance77, create_fragment77, safe_not_equal, {}, add_css44);
+    init(this, options, instance79, create_fragment79, safe_not_equal, {}, add_css44);
   }
 };
 var CenterBox_default = CenterBox;
@@ -54415,7 +55570,7 @@ var CenterBox_default = CenterBox;
 function add_css45(target) {
   append_styles(target, "svelte-xq218h", "div.svelte-xq218h{background-color:var(--background-secondary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:0;margin:0}div.svelte-xq218h:hover{border:1px solid var(--background-modifier-border-hover)}");
 }
-function create_fragment78(ctx) {
+function create_fragment80(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -54459,7 +55614,7 @@ function create_fragment78(ctx) {
     }
   };
 }
-function instance78($$self, $$props, $$invalidate) {
+function instance80($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -54470,16 +55625,16 @@ function instance78($$self, $$props, $$invalidate) {
 var Card = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance78, create_fragment78, safe_not_equal, {}, add_css45);
+    init(this, options, instance80, create_fragment80, safe_not_equal, {}, add_css45);
   }
 };
 var Card_default2 = Card;
 
 // src/views/Gallery/components/Card/CardContent.svelte
 function add_css46(target) {
-  append_styles(target, "svelte-1rhoaa0", "div.svelte-1rhoaa0{padding:8px}");
+  append_styles(target, "svelte-1gcw78i", "div.svelte-1gcw78i{padding:8px;display:flex}");
 }
-function create_fragment79(ctx) {
+function create_fragment81(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -54489,7 +55644,7 @@ function create_fragment79(ctx) {
       div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-1rhoaa0");
+      attr(div, "class", "svelte-1gcw78i");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -54523,7 +55678,7 @@ function create_fragment79(ctx) {
     }
   };
 }
-function instance79($$self, $$props, $$invalidate) {
+function instance81($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -54534,7 +55689,7 @@ function instance79($$self, $$props, $$invalidate) {
 var CardContent = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance79, create_fragment79, safe_not_equal, {}, add_css46);
+    init(this, options, instance81, create_fragment81, safe_not_equal, {}, add_css46);
   }
 };
 var CardContent_default = CardContent;
@@ -54543,7 +55698,7 @@ var CardContent_default = CardContent;
 function add_css47(target) {
   append_styles(target, "svelte-1ur9trs", "div.svelte-1ur9trs{height:180px;border-top-left-radius:4px;border-top-right-radius:4px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--background-modifier-border)}");
 }
-function create_fragment80(ctx) {
+function create_fragment82(ctx) {
   let div;
   let current;
   let mounted;
@@ -54598,7 +55753,7 @@ function create_fragment80(ctx) {
     }
   };
 }
-function instance80($$self, $$props, $$invalidate) {
+function instance82($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   function keypress_handler(event) {
     bubble.call(this, $$self, event);
@@ -54615,7 +55770,7 @@ function instance80($$self, $$props, $$invalidate) {
 var CardMedia = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance80, create_fragment80, safe_not_equal, {}, add_css47);
+    init(this, options, instance82, create_fragment82, safe_not_equal, {}, add_css47);
   }
 };
 var CardMedia_default = CardMedia;
@@ -54624,7 +55779,7 @@ var CardMedia_default = CardMedia;
 function add_css48(target) {
   append_styles(target, "svelte-29f12s", "div.svelte-29f12s{display:grid;gap:24px;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr))}");
 }
-function create_fragment81(ctx) {
+function create_fragment83(ctx) {
   let div;
   let current;
   const default_slot_template = ctx[1].default;
@@ -54668,7 +55823,7 @@ function create_fragment81(ctx) {
     }
   };
 }
-function instance81($$self, $$props, $$invalidate) {
+function instance83($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
@@ -54679,7 +55834,7 @@ function instance81($$self, $$props, $$invalidate) {
 var Grid = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance81, create_fragment81, safe_not_equal, {}, add_css48);
+    init(this, options, instance83, create_fragment83, safe_not_equal, {}, add_css48);
   }
 };
 var Grid_default = Grid;
@@ -54688,7 +55843,7 @@ var Grid_default = Grid;
 function add_css49(target) {
   append_styles(target, "svelte-ol6m5s", "img.svelte-ol6m5s{width:100%;height:100%;border-top-left-radius:4px;border-top-right-radius:4px}");
 }
-function create_fragment82(ctx) {
+function create_fragment84(ctx) {
   let img;
   let img_src_value;
   return {
@@ -54722,7 +55877,7 @@ function create_fragment82(ctx) {
     }
   };
 }
-function instance82($$self, $$props, $$invalidate) {
+function instance84($$self, $$props, $$invalidate) {
   let { alt: alt5 } = $$props;
   let { src } = $$props;
   let { fit } = $$props;
@@ -54739,7 +55894,7 @@ function instance82($$self, $$props, $$invalidate) {
 var Image = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance82, create_fragment82, safe_not_equal, { alt: 0, src: 1, fit: 2 }, add_css49);
+    init(this, options, instance84, create_fragment84, safe_not_equal, { alt: 0, src: 1, fit: 2 }, add_css49);
   }
 };
 var Image_default = Image;
@@ -54748,14 +55903,16 @@ var Image_default = Image;
 function add_css50(target) {
   append_styles(target, "svelte-3pi9m0", "div.svelte-3pi9m0{padding:24px}");
 }
-function get_each_context14(ctx, list, i2) {
+function get_each_context15(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[21] = list[i2];
+  child_ctx[22] = list[i2];
+  const constants_0 = child_ctx[1](child_ctx[22]);
+  child_ctx[23] = constants_0;
   return child_ctx;
 }
 function get_context(ctx) {
-  const constants_0 = ctx[7](ctx[21]);
-  ctx[24] = constants_0;
+  const constants_0 = ctx[8](ctx[22]);
+  ctx[26] = constants_0;
 }
 function create_default_slot_103(ctx) {
   var _a, _b, _c;
@@ -54764,12 +55921,12 @@ function create_default_slot_103(ctx) {
   select = new Select_default({
     props: {
       allowEmpty: true,
-      value: (_b = (_a = ctx[2]) == null ? void 0 : _a.name) != null ? _b : "",
-      options: ctx[1].map(fieldToSelectableValue),
-      placeholder: (_c = ctx[6].t("views.gallery.fields.none")) != null ? _c : ""
+      value: (_b = (_a = ctx[3]) == null ? void 0 : _a.name) != null ? _b : "",
+      options: ctx[2].map(fieldToSelectableValue),
+      placeholder: (_c = ctx[7].t("views.gallery.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[16]);
+  select.$on("change", ctx[17]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -54781,12 +55938,12 @@ function create_default_slot_103(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2, _c2;
       const select_changes = {};
+      if (dirty & 8)
+        select_changes.value = (_b2 = (_a2 = ctx2[3]) == null ? void 0 : _a2.name) != null ? _b2 : "";
       if (dirty & 4)
-        select_changes.value = (_b2 = (_a2 = ctx2[2]) == null ? void 0 : _a2.name) != null ? _b2 : "";
-      if (dirty & 2)
-        select_changes.options = ctx2[1].map(fieldToSelectableValue);
-      if (dirty & 64)
-        select_changes.placeholder = (_c2 = ctx2[6].t("views.gallery.fields.none")) != null ? _c2 : "";
+        select_changes.options = ctx2[2].map(fieldToSelectableValue);
+      if (dirty & 128)
+        select_changes.placeholder = (_c2 = ctx2[7].t("views.gallery.fields.none")) != null ? _c2 : "";
       select.$set(select_changes);
     },
     i(local) {
@@ -54812,7 +55969,7 @@ function create_right_slot4(ctx) {
   let current;
   field = new Field_default({
     props: {
-      name: ctx[6].t("views.gallery.fields.cover"),
+      name: ctx[7].t("views.gallery.fields.cover"),
       $$slots: { default: [create_default_slot_103] },
       $$scope: { ctx }
     }
@@ -54826,7 +55983,7 @@ function create_right_slot4(ctx) {
       ]
     }
   });
-  select.$on("change", ctx[17]);
+  select.$on("change", ctx[18]);
   return {
     c() {
       create_component(field.$$.fragment);
@@ -54842,9 +55999,9 @@ function create_right_slot4(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2;
       const field_changes = {};
-      if (dirty & 64)
-        field_changes.name = ctx2[6].t("views.gallery.fields.cover");
-      if (dirty & 33554502) {
+      if (dirty & 128)
+        field_changes.name = ctx2[7].t("views.gallery.fields.cover");
+      if (dirty & 134217868) {
         field_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field.$set(field_changes);
@@ -54893,7 +56050,7 @@ function create_default_slot_93(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty & 33554503) {
+      if (dirty & 134217869) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -54918,7 +56075,7 @@ function create_else_block_1(ctx) {
   let current;
   centerbox = new CenterBox_default({
     props: {
-      $$slots: { default: [create_default_slot_74] },
+      $$slots: { default: [create_default_slot_75] },
       $$scope: { ctx }
     }
   });
@@ -54932,7 +56089,7 @@ function create_else_block_1(ctx) {
     },
     p(ctx2, dirty) {
       const centerbox_changes = {};
-      if (dirty & 33554496) {
+      if (dirty & 134217856) {
         centerbox_changes.$$scope = { dirty, ctx: ctx2 };
       }
       centerbox.$set(centerbox_changes);
@@ -54952,13 +56109,13 @@ function create_else_block_1(ctx) {
     }
   };
 }
-function create_if_block22(ctx) {
+function create_if_block24(ctx) {
   let div;
   let grid;
   let current;
   grid = new Grid_default({
     props: {
-      $$slots: { default: [create_default_slot_215] },
+      $$slots: { default: [create_default_slot_216] },
       $$scope: { ctx }
     }
   });
@@ -54975,7 +56132,7 @@ function create_if_block22(ctx) {
     },
     p(ctx2, dirty) {
       const grid_changes = {};
-      if (dirty & 33554488) {
+      if (dirty & 134217842) {
         grid_changes.$$scope = { dirty, ctx: ctx2 };
       }
       grid.$set(grid_changes);
@@ -54998,7 +56155,7 @@ function create_if_block22(ctx) {
   };
 }
 function create_default_slot_83(ctx) {
-  let t_value = ctx[6].t("views.gallery.empty") + "";
+  let t_value = ctx[7].t("views.gallery.empty") + "";
   let t3;
   return {
     c() {
@@ -55008,7 +56165,7 @@ function create_default_slot_83(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 64 && t_value !== (t_value = ctx2[6].t("views.gallery.empty") + ""))
+      if (dirty & 128 && t_value !== (t_value = ctx2[7].t("views.gallery.empty") + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -55017,7 +56174,7 @@ function create_default_slot_83(ctx) {
     }
   };
 }
-function create_default_slot_74(ctx) {
+function create_default_slot_75(ctx) {
   let typography;
   let current;
   typography = new Typography_default({
@@ -55037,7 +56194,7 @@ function create_default_slot_74(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty & 33554496) {
+      if (dirty & 134217856) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -55085,14 +56242,14 @@ function create_else_block6(ctx) {
     }
   };
 }
-function create_if_block_112(ctx) {
+function create_if_block_28(ctx) {
   let image;
   let current;
   image = new Image_default({
     props: {
       alt: "Title",
-      src: ctx[24],
-      fit: ctx[3]
+      src: ctx[26],
+      fit: ctx[4]
     }
   });
   return {
@@ -55105,10 +56262,10 @@ function create_if_block_112(ctx) {
     },
     p(ctx2, dirty) {
       const image_changes = {};
+      if (dirty & 32)
+        image_changes.src = ctx2[26];
       if (dirty & 16)
-        image_changes.src = ctx2[24];
-      if (dirty & 8)
-        image_changes.fit = ctx2[3];
+        image_changes.fit = ctx2[4];
       image.$set(image_changes);
     },
     i(local) {
@@ -55126,16 +56283,16 @@ function create_if_block_112(ctx) {
     }
   };
 }
-function create_default_slot_67(ctx) {
+function create_default_slot_68(ctx) {
   get_context(ctx);
   let current_block_type_index;
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block_112, create_else_block6];
+  const if_block_creators = [create_if_block_28, create_else_block6];
   const if_blocks = [];
   function select_block_type_1(ctx2, dirty) {
-    if (ctx2[24])
+    if (ctx2[26])
       return 0;
     return 1;
   }
@@ -55191,8 +56348,32 @@ function create_default_slot_67(ctx) {
     }
   };
 }
-function create_default_slot_59(ctx) {
-  let t_value = getDisplayName(ctx[21].id) + "";
+function create_if_block_113(ctx) {
+  let span;
+  return {
+    c() {
+      span = element("span");
+      set_style(span, "margin-right", "8px");
+      set_style(span, "background-color", ctx[23]);
+      set_style(span, "width", "5px");
+      set_style(span, "border-radius", "9999px");
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 34) {
+        set_style(span, "background-color", ctx2[23]);
+      }
+    },
+    d(detaching) {
+      if (detaching)
+        detach(span);
+    }
+  };
+}
+function create_default_slot_510(ctx) {
+  let t_value = getDisplayName(ctx[22].id) + "";
   let t3;
   return {
     c() {
@@ -55202,7 +56383,7 @@ function create_default_slot_59(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 16 && t_value !== (t_value = getDisplayName(ctx2[21].id) + ""))
+      if (dirty & 32 && t_value !== (t_value = getDisplayName(ctx2[22].id) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -55212,35 +56393,55 @@ function create_default_slot_59(ctx) {
   };
 }
 function create_default_slot_412(ctx) {
+  let t3;
   let internallink;
   let current;
+  let if_block = ctx[23] && create_if_block_113(ctx);
   function open_handler(...args) {
-    return ctx[19](ctx[21], ...args);
+    return ctx[20](ctx[22], ...args);
   }
   internallink = new InternalLink_default({
     props: {
-      linkText: ctx[21].id,
+      linkText: ctx[22].id,
       sourcePath: "",
       resolved: true,
-      $$slots: { default: [create_default_slot_59] },
+      $$slots: { default: [create_default_slot_510] },
       $$scope: { ctx }
     }
   });
   internallink.$on("open", open_handler);
   return {
     c() {
+      if (if_block)
+        if_block.c();
+      t3 = space();
       create_component(internallink.$$.fragment);
     },
     m(target, anchor) {
+      if (if_block)
+        if_block.m(target, anchor);
+      insert(target, t3, anchor);
       mount_component(internallink, target, anchor);
       current = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
+      if (ctx[23]) {
+        if (if_block) {
+          if_block.p(ctx, dirty);
+        } else {
+          if_block = create_if_block_113(ctx);
+          if_block.c();
+          if_block.m(t3.parentNode, t3);
+        }
+      } else if (if_block) {
+        if_block.d(1);
+        if_block = null;
+      }
       const internallink_changes = {};
-      if (dirty & 16)
-        internallink_changes.linkText = ctx[21].id;
-      if (dirty & 33554448) {
+      if (dirty & 32)
+        internallink_changes.linkText = ctx[22].id;
+      if (dirty & 134217760) {
         internallink_changes.$$scope = { dirty, ctx };
       }
       internallink.$set(internallink_changes);
@@ -55256,6 +56457,10 @@ function create_default_slot_412(ctx) {
       current = false;
     },
     d(detaching) {
+      if (if_block)
+        if_block.d(detaching);
+      if (detaching)
+        detach(t3);
       destroy_component(internallink, detaching);
     }
   };
@@ -55267,11 +56472,11 @@ function create_default_slot_312(ctx) {
   let t1;
   let current;
   function click_handler(...args) {
-    return ctx[18](ctx[21], ...args);
+    return ctx[19](ctx[22], ...args);
   }
   cardmedia = new CardMedia_default({
     props: {
-      $$slots: { default: [create_default_slot_67] },
+      $$slots: { default: [create_default_slot_68] },
       $$scope: { ctx }
     }
   });
@@ -55299,12 +56504,12 @@ function create_default_slot_312(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const cardmedia_changes = {};
-      if (dirty & 33554456) {
+      if (dirty & 134217776) {
         cardmedia_changes.$$scope = { dirty, ctx };
       }
       cardmedia.$set(cardmedia_changes);
       const cardcontent_changes = {};
-      if (dirty & 33554480) {
+      if (dirty & 134217826) {
         cardcontent_changes.$$scope = { dirty, ctx };
       }
       cardcontent.$set(cardcontent_changes);
@@ -55331,7 +56536,7 @@ function create_default_slot_312(ctx) {
     }
   };
 }
-function create_each_block14(ctx) {
+function create_each_block15(ctx) {
   let card;
   let current;
   card = new Card_default2({
@@ -55350,7 +56555,7 @@ function create_each_block14(ctx) {
     },
     p(ctx2, dirty) {
       const card_changes = {};
-      if (dirty & 33554488) {
+      if (dirty & 134217842) {
         card_changes.$$scope = { dirty, ctx: ctx2 };
       }
       card.$set(card_changes);
@@ -55370,13 +56575,13 @@ function create_each_block14(ctx) {
     }
   };
 }
-function create_default_slot_215(ctx) {
+function create_default_slot_216(ctx) {
   let each_1_anchor;
   let current;
-  let each_value = ctx[4];
+  let each_value = ctx[5];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block15(get_each_context15(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -55396,16 +56601,16 @@ function create_default_slot_215(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 1208) {
-        each_value = ctx2[4];
+      if (dirty & 2418) {
+        each_value = ctx2[5];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context14(ctx2, each_value, i2);
+          const child_ctx = get_each_context15(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block14(child_ctx);
+            each_blocks[i2] = create_each_block15(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -55445,10 +56650,10 @@ function create_default_slot_121(ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block22, create_else_block_1];
+  const if_block_creators = [create_if_block24, create_else_block_1];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[4].length)
+    if (ctx2[5].length)
       return 0;
     return 1;
   }
@@ -55503,7 +56708,7 @@ function create_default_slot_121(ctx) {
     }
   };
 }
-function create_default_slot28(ctx) {
+function create_default_slot29(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
@@ -55534,12 +56739,12 @@ function create_default_slot28(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty & 33554503) {
+      if (dirty & 134217869) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty & 33554552) {
+      if (dirty & 134217970) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -55564,12 +56769,12 @@ function create_default_slot28(ctx) {
     }
   };
 }
-function create_fragment83(ctx) {
+function create_fragment85(ctx) {
   let viewlayout;
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot28] },
+      $$slots: { default: [create_default_slot29] },
       $$scope: { ctx }
     }
   });
@@ -55583,7 +56788,7 @@ function create_fragment83(ctx) {
     },
     p(ctx2, [dirty]) {
       const viewlayout_changes = {};
-      if (dirty & 33554559) {
+      if (dirty & 134217983) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -55603,7 +56808,7 @@ function create_fragment83(ctx) {
     }
   };
 }
-function instance83($$self, $$props, $$invalidate) {
+function instance85($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let textFields;
@@ -55611,13 +56816,14 @@ function instance83($$self, $$props, $$invalidate) {
   let fitStyle;
   let $app;
   let $i18n;
-  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(6, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(7, $i18n = $$value));
   var _a;
   let { frame } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
   let { api: api2 } = $$props;
+  let { getRecordColor } = $$props;
   function getCoverRealPath(record) {
     if (!coverField) {
       return null;
@@ -55673,34 +56879,37 @@ function instance83($$self, $$props, $$invalidate) {
   };
   $$self.$$set = ($$props2) => {
     if ("frame" in $$props2)
-      $$invalidate(11, frame = $$props2.frame);
+      $$invalidate(12, frame = $$props2.frame);
     if ("config" in $$props2)
       $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
-      $$invalidate(12, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(13, onConfigChange = $$props2.onConfigChange);
     if ("api" in $$props2)
-      $$invalidate(13, api2 = $$props2.api);
+      $$invalidate(14, api2 = $$props2.api);
+    if ("getRecordColor" in $$props2)
+      $$invalidate(1, getRecordColor = $$props2.getRecordColor);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 2048) {
+    if ($$self.$$.dirty & 4096) {
       $:
-        $$invalidate(15, { fields, records } = frame, fields, ($$invalidate(4, records), $$invalidate(11, frame)));
+        $$invalidate(16, { fields, records } = frame, fields, ($$invalidate(5, records), $$invalidate(12, frame)));
     }
-    if ($$self.$$.dirty & 32768) {
+    if ($$self.$$.dirty & 65536) {
       $:
-        $$invalidate(1, textFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Link));
+        $$invalidate(2, textFields = fields.filter((field) => !field.repeated).filter((field) => field.type === DataFieldType.String || field.type === DataFieldType.Link));
     }
-    if ($$self.$$.dirty & 3) {
+    if ($$self.$$.dirty & 5) {
       $:
-        $$invalidate(2, coverField = textFields.find((field) => (config === null || config === void 0 ? void 0 : config.coverField) === field.name));
+        $$invalidate(3, coverField = textFields.find((field) => (config === null || config === void 0 ? void 0 : config.coverField) === field.name));
     }
-    if ($$self.$$.dirty & 16385) {
+    if ($$self.$$.dirty & 32769) {
       $:
-        $$invalidate(3, fitStyle = $$invalidate(14, _a = config === null || config === void 0 ? void 0 : config.fitStyle) !== null && _a !== void 0 ? _a : "cover");
+        $$invalidate(4, fitStyle = $$invalidate(15, _a = config === null || config === void 0 ? void 0 : config.fitStyle) !== null && _a !== void 0 ? _a : "cover");
     }
   };
   return [
     config,
+    getRecordColor,
     textFields,
     coverField,
     fitStyle,
@@ -55725,11 +56934,12 @@ function instance83($$self, $$props, $$invalidate) {
 var GalleryView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance83, create_fragment83, safe_not_equal, {
-      frame: 11,
+    init(this, options, instance85, create_fragment85, safe_not_equal, {
+      frame: 12,
       config: 0,
-      onConfigChange: 12,
-      api: 13
+      onConfigChange: 13,
+      api: 14,
+      getRecordColor: 1
     }, add_css50);
   }
 };
@@ -55760,7 +56970,8 @@ var GalleryView2 = class extends ProjectView {
           frame: { fields: [], records: [] },
           api: props.viewApi,
           config: props.config,
-          onConfigChange: props.saveConfig
+          onConfigChange: props.saveConfig,
+          getRecordColor: props.getRecordColor
         }
       });
     });
@@ -55806,7 +57017,7 @@ function create_else_block7(ctx) {
     }
   };
 }
-function create_if_block23(ctx) {
+function create_if_block25(ctx) {
   let span;
   let mounted;
   let dispose;
@@ -55831,13 +57042,13 @@ function create_if_block23(ctx) {
     }
   };
 }
-function create_fragment84(ctx) {
+function create_fragment86(ctx) {
   let if_block_anchor;
   let mounted;
   let dispose;
   function select_block_type(ctx2, dirty) {
     if (ctx2[0])
-      return create_if_block23;
+      return create_if_block25;
     return create_else_block7;
   }
   let current_block_type = select_block_type(ctx, -1);
@@ -55881,7 +57092,7 @@ function create_fragment84(ctx) {
     }
   };
 }
-function instance84($$self, $$props, $$invalidate) {
+function instance86($$self, $$props, $$invalidate) {
   let { width } = $$props;
   let { onChange } = $$props;
   let { onFinalize } = $$props;
@@ -55927,7 +57138,7 @@ function instance84($$self, $$props, $$invalidate) {
 var Resizer = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance84, create_fragment84, safe_not_equal, {
+    init(this, options, instance86, create_fragment86, safe_not_equal, {
       width: 4,
       onChange: 5,
       onFinalize: 6,
@@ -55939,22 +57150,289 @@ var Resizer_default = Resizer;
 
 // src/views/Table/components/DataGrid/GridCell/GridCell.svelte
 function add_css52(target) {
-  append_styles(target, "svelte-njsjbi", "div.svelte-njsjbi{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);box-sizing:border-box;vertical-align:middle;width:100%;min-height:30px}.selected.svelte-njsjbi{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-njsjbi{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-njsjbi{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-njsjbi{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;text-align:center;padding:0 4px}");
+  append_styles(target, "svelte-1glbfw2", "div.svelte-1glbfw2{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);width:100%;min-height:30px}.selected.svelte-1glbfw2{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-1glbfw2{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-1glbfw2{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-1glbfw2{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;padding:3px;gap:4px;position:relative}");
 }
-var get_read_slot_changes_1 = (dirty) => ({});
-var get_read_slot_context_1 = (ctx) => ({});
-var get_hover_slot_changes = (dirty) => ({});
-var get_hover_slot_context = (ctx) => ({});
+var get_read_slot_changes_2 = (dirty) => ({});
+var get_read_slot_context_2 = (ctx) => ({});
+var get_hover_slot_changes_1 = (dirty) => ({});
+var get_hover_slot_context_1 = (ctx) => ({});
 var get_selected_slot_changes = (dirty) => ({});
 var get_selected_slot_context = (ctx) => ({});
-var get_read_slot_changes = (dirty) => ({});
-var get_read_slot_context = (ctx) => ({});
+var get_read_slot_changes_1 = (dirty) => ({});
+var get_read_slot_context_1 = (ctx) => ({});
 var get_edit_slot_changes = (dirty) => ({});
 var get_edit_slot_context = (ctx) => ({});
+var get_read_slot_changes = (dirty) => ({});
+var get_read_slot_context = (ctx) => ({});
+var get_hover_slot_changes = (dirty) => ({});
+var get_hover_slot_context = (ctx) => ({});
 function create_else_block_12(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block0;
+  let t3;
+  let div_role_value;
+  let div_aria_selected_value;
+  let div_style_value;
+  let div_tabindex_value;
+  let useClickOutside_action;
   let current;
-  const read_slot_template = ctx[23].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context_1);
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_34, create_if_block_52, create_if_block_6, create_else_block_3];
+  const if_blocks = [];
+  function select_block_type_2(ctx2, dirty) {
+    if (ctx2[18].edit && ctx2[1])
+      return 0;
+    if (ctx2[18].selected && ctx2[0])
+      return 1;
+    if (ctx2[18].hover && ctx2[12])
+      return 2;
+    return 3;
+  }
+  current_block_type_index = select_block_type_2(ctx, [-1, -1]);
+  if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  let if_block1 = ctx[2] && create_if_block_29(ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block0.c();
+      t3 = space();
+      if (if_block1)
+        if_block1.c();
+      attr(div, "role", div_role_value = ctx[17]());
+      attr(div, "aria-selected", div_aria_selected_value = ctx[8] || ctx[7] ? void 0 : ctx[0]);
+      attr(div, "aria-colindex", ctx[6]);
+      attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
+      attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
+      attr(div, "class", "svelte-1glbfw2");
+      toggle_class(div, "header", ctx[5].header);
+      toggle_class(div, "selected", ctx[0]);
+      toggle_class(div, "rowHeader", ctx[8]);
+      toggle_class(div, "columnHeader", ctx[7]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      append(div, t3);
+      if (if_block1)
+        if_block1.m(div, null);
+      ctx[30](div);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(div, "click", ctx[13]),
+          listen(div, "dblclick", ctx[14]),
+          listen(div, "mousedown", ctx[26]),
+          listen(div, "mouseenter", ctx[31]),
+          listen(div, "mouseleave", ctx[32]),
+          listen(div, "focus", ctx[33]),
+          listen(div, "blur", ctx[16]),
+          listen(div, "keydown", ctx[15]),
+          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[34]))
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_2(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block0 = if_blocks[current_block_type_index];
+        if (!if_block0) {
+          if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block0.c();
+        } else {
+          if_block0.p(ctx2, dirty);
+        }
+        transition_in(if_block0, 1);
+        if_block0.m(div, t3);
+      }
+      if (ctx2[2]) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+          if (dirty[0] & 4) {
+            transition_in(if_block1, 1);
+          }
+        } else {
+          if_block1 = create_if_block_29(ctx2);
+          if_block1.c();
+          transition_in(if_block1, 1);
+          if_block1.m(div, null);
+        }
+      } else if (if_block1) {
+        group_outros();
+        transition_out(if_block1, 1, 1, () => {
+          if_block1 = null;
+        });
+        check_outros();
+      }
+      if (!current || dirty[0] & 385 && div_aria_selected_value !== (div_aria_selected_value = ctx2[8] || ctx2[7] ? void 0 : ctx2[0])) {
+        attr(div, "aria-selected", div_aria_selected_value);
+      }
+      if (!current || dirty[0] & 64) {
+        attr(div, "aria-colindex", ctx2[6]);
+      }
+      if (!current || dirty[0] & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
+        attr(div, "style", div_style_value);
+      }
+      if (!current || dirty[0] & 384 && div_tabindex_value !== (div_tabindex_value = !ctx2[7] && !ctx2[8] ? 1 : void 0)) {
+        attr(div, "tabindex", div_tabindex_value);
+      }
+      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty[0] & 513)
+        useClickOutside_action.update.call(null, ctx2[34]);
+      if (!current || dirty[0] & 32) {
+        toggle_class(div, "header", ctx2[5].header);
+      }
+      if (!current || dirty[0] & 1) {
+        toggle_class(div, "selected", ctx2[0]);
+      }
+      if (!current || dirty[0] & 256) {
+        toggle_class(div, "rowHeader", ctx2[8]);
+      }
+      if (!current || dirty[0] & 128) {
+        toggle_class(div, "columnHeader", ctx2[7]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block0);
+      transition_in(if_block1);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block0);
+      transition_out(if_block1);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if_blocks[current_block_type_index].d();
+      if (if_block1)
+        if_block1.d();
+      ctx[30](null);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function create_if_block26(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block;
+  let t3;
+  let span;
+  let div_role_value;
+  let div_style_value;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_114, create_else_block8];
+  const if_blocks = [];
+  function select_block_type_1(ctx2, dirty) {
+    if (ctx2[18].hover && ctx2[12])
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type_1(ctx, [-1, -1]);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      div = element("div");
+      if_block.c();
+      t3 = space();
+      span = element("span");
+      set_style(span, "background-color", ctx[10] ? ctx[10] : "transparent");
+      set_style(span, "width", "5px");
+      set_style(span, "border-radius", "9999px");
+      set_style(span, "position", "absolute");
+      set_style(span, "right", "4px");
+      set_style(span, "height", "calc(100% - 8px)");
+      attr(div, "role", div_role_value = ctx[17]());
+      attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
+      attr(div, "class", "svelte-1glbfw2");
+      toggle_class(div, "rowHeader", ctx[8]);
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      append(div, t3);
+      append(div, span);
+      ctx[27](div);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(div, "mouseenter", ctx[28]),
+          listen(div, "mouseleave", ctx[29]),
+          listen(div, "mousedown", ctx[25])
+        ];
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_1(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(div, t3);
+      }
+      if (!current || dirty[0] & 1024) {
+        set_style(span, "background-color", ctx2[10] ? ctx2[10] : "transparent");
+      }
+      if (!current || dirty[0] & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
+        attr(div, "style", div_style_value);
+      }
+      if (!current || dirty[0] & 256) {
+        toggle_class(div, "rowHeader", ctx2[8]);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(if_block);
+      current = true;
+    },
+    o(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if_blocks[current_block_type_index].d();
+      ctx[27](null);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function create_else_block_3(ctx) {
+  let current;
+  const read_slot_template = ctx[24].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[23], get_read_slot_context_2);
   return {
     c() {
       if (read_slot)
@@ -55968,8 +57446,8 @@ function create_else_block_12(ctx) {
     },
     p(ctx2, dirty) {
       if (read_slot) {
-        if (read_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes_1), get_read_slot_context_1);
+        if (read_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(read_slot_template, ctx2[23], dirty, get_read_slot_changes_2), get_read_slot_context_2);
         }
       }
     },
@@ -55989,10 +57467,10 @@ function create_else_block_12(ctx) {
     }
   };
 }
-function create_if_block_42(ctx) {
+function create_if_block_6(ctx) {
   let current;
-  const hover_slot_template = ctx[23].hover;
-  const hover_slot = create_slot(hover_slot_template, ctx, ctx[22], get_hover_slot_context);
+  const hover_slot_template = ctx[24].hover;
+  const hover_slot = create_slot(hover_slot_template, ctx, ctx[23], get_hover_slot_context_1);
   return {
     c() {
       if (hover_slot)
@@ -56006,8 +57484,8 @@ function create_if_block_42(ctx) {
     },
     p(ctx2, dirty) {
       if (hover_slot) {
-        if (hover_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(hover_slot_template, ctx2[22], dirty, get_hover_slot_changes), get_hover_slot_context);
+        if (hover_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(hover_slot_template, ctx2[23], dirty, get_hover_slot_changes_1), get_hover_slot_context_1);
         }
       }
     },
@@ -56027,10 +57505,10 @@ function create_if_block_42(ctx) {
     }
   };
 }
-function create_if_block_34(ctx) {
+function create_if_block_52(ctx) {
   let current;
-  const selected_slot_template = ctx[23].selected;
-  const selected_slot = create_slot(selected_slot_template, ctx, ctx[22], get_selected_slot_context);
+  const selected_slot_template = ctx[24].selected;
+  const selected_slot = create_slot(selected_slot_template, ctx, ctx[23], get_selected_slot_context);
   return {
     c() {
       if (selected_slot)
@@ -56044,8 +57522,8 @@ function create_if_block_34(ctx) {
     },
     p(ctx2, dirty) {
       if (selected_slot) {
-        if (selected_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(selected_slot_template, ctx2[22], dirty, get_selected_slot_changes), get_selected_slot_context);
+        if (selected_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(selected_slot, selected_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(selected_slot_template, ctx2[23], dirty, get_selected_slot_changes), get_selected_slot_context);
         }
       }
     },
@@ -56065,19 +57543,19 @@ function create_if_block_34(ctx) {
     }
   };
 }
-function create_if_block_113(ctx) {
+function create_if_block_34(ctx) {
   let current_block_type_index;
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block_26, create_else_block8];
+  const if_block_creators = [create_if_block_43, create_else_block_2];
   const if_blocks = [];
-  function select_block_type_1(ctx2, dirty) {
+  function select_block_type_3(ctx2, dirty) {
     if (ctx2[5].editable)
       return 0;
     return 1;
   }
-  current_block_type_index = select_block_type_1(ctx, -1);
+  current_block_type_index = select_block_type_3(ctx, [-1, -1]);
   if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
   return {
     c() {
@@ -56091,7 +57569,7 @@ function create_if_block_113(ctx) {
     },
     p(ctx2, dirty) {
       let previous_block_index = current_block_type_index;
-      current_block_type_index = select_block_type_1(ctx2, dirty);
+      current_block_type_index = select_block_type_3(ctx2, dirty);
       if (current_block_type_index === previous_block_index) {
         if_blocks[current_block_type_index].p(ctx2, dirty);
       } else {
@@ -56128,10 +57606,10 @@ function create_if_block_113(ctx) {
     }
   };
 }
-function create_else_block8(ctx) {
+function create_else_block_2(ctx) {
   let current;
-  const read_slot_template = ctx[23].read;
-  const read_slot = create_slot(read_slot_template, ctx, ctx[22], get_read_slot_context);
+  const read_slot_template = ctx[24].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[23], get_read_slot_context_1);
   return {
     c() {
       if (read_slot)
@@ -56145,8 +57623,8 @@ function create_else_block8(ctx) {
     },
     p(ctx2, dirty) {
       if (read_slot) {
-        if (read_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(read_slot_template, ctx2[22], dirty, get_read_slot_changes), get_read_slot_context);
+        if (read_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(read_slot_template, ctx2[23], dirty, get_read_slot_changes_1), get_read_slot_context_1);
         }
       }
     },
@@ -56166,10 +57644,10 @@ function create_else_block8(ctx) {
     }
   };
 }
-function create_if_block_26(ctx) {
+function create_if_block_43(ctx) {
   let current;
-  const edit_slot_template = ctx[23].edit;
-  const edit_slot = create_slot(edit_slot_template, ctx, ctx[22], get_edit_slot_context);
+  const edit_slot_template = ctx[24].edit;
+  const edit_slot = create_slot(edit_slot_template, ctx, ctx[23], get_edit_slot_context);
   return {
     c() {
       if (edit_slot)
@@ -56183,8 +57661,8 @@ function create_if_block_26(ctx) {
     },
     p(ctx2, dirty) {
       if (edit_slot) {
-        if (edit_slot.p && (!current || dirty & 4194304)) {
-          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[22], !current ? get_all_dirty_from_scope(ctx2[22]) : get_slot_changes(edit_slot_template, ctx2[22], dirty, get_edit_slot_changes), get_edit_slot_context);
+        if (edit_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(edit_slot, edit_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(edit_slot_template, ctx2[23], dirty, get_edit_slot_changes), get_edit_slot_context);
         }
       }
     },
@@ -56204,7 +57682,7 @@ function create_if_block_26(ctx) {
     }
   };
 }
-function create_if_block24(ctx) {
+function create_if_block_29(ctx) {
   var _a;
   let resizer;
   let current;
@@ -56227,11 +57705,11 @@ function create_if_block24(ctx) {
     p(ctx2, dirty) {
       var _a2;
       const resizer_changes = {};
-      if (dirty & 32)
+      if (dirty[0] & 32)
         resizer_changes.width = (_a2 = ctx2[5].width) != null ? _a2 : 180;
-      if (dirty & 8)
+      if (dirty[0] & 8)
         resizer_changes.onChange = ctx2[3];
-      if (dirty & 16)
+      if (dirty[0] & 16)
         resizer_changes.onFinalize = ctx2[4];
       resizer.$set(resizer_changes);
     },
@@ -56250,75 +57728,107 @@ function create_if_block24(ctx) {
     }
   };
 }
-function create_fragment85(ctx) {
-  let div;
-  let current_block_type_index;
-  let if_block0;
-  let t3;
-  let div_role_value;
-  let div_aria_selected_value;
-  let div_style_value;
-  let div_tabindex_value;
-  let useClickOutside_action;
+function create_else_block8(ctx) {
   let current;
-  let mounted;
-  let dispose;
-  const if_block_creators = [create_if_block_113, create_if_block_34, create_if_block_42, create_else_block_12];
-  const if_blocks = [];
-  function select_block_type(ctx2, dirty) {
-    if (ctx2[17].edit && ctx2[1])
-      return 0;
-    if (ctx2[17].selected && ctx2[0])
-      return 1;
-    if (ctx2[17].hover && ctx2[11])
-      return 2;
-    return 3;
-  }
-  current_block_type_index = select_block_type(ctx, -1);
-  if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-  let if_block1 = ctx[2] && create_if_block24(ctx);
+  const read_slot_template = ctx[24].read;
+  const read_slot = create_slot(read_slot_template, ctx, ctx[23], get_read_slot_context);
   return {
     c() {
-      div = element("div");
-      if_block0.c();
-      t3 = space();
-      if (if_block1)
-        if_block1.c();
-      attr(div, "role", div_role_value = ctx[16]());
-      attr(div, "aria-selected", div_aria_selected_value = ctx[8] || ctx[7] ? void 0 : ctx[0]);
-      attr(div, "aria-colindex", ctx[6]);
-      attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
-      attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
-      attr(div, "class", "svelte-njsjbi");
-      toggle_class(div, "columnHeader", ctx[7]);
-      toggle_class(div, "header", ctx[5].header);
-      toggle_class(div, "selected", ctx[0]);
-      toggle_class(div, "rowHeader", ctx[8]);
+      if (read_slot)
+        read_slot.c();
     },
     m(target, anchor) {
-      insert(target, div, anchor);
-      if_blocks[current_block_type_index].m(div, null);
-      append(div, t3);
-      if (if_block1)
-        if_block1.m(div, null);
-      ctx[25](div);
+      if (read_slot) {
+        read_slot.m(target, anchor);
+      }
       current = true;
-      if (!mounted) {
-        dispose = [
-          listen(div, "click", ctx[12]),
-          listen(div, "dblclick", ctx[13]),
-          listen(div, "mousedown", ctx[24]),
-          listen(div, "mouseenter", ctx[26]),
-          listen(div, "mouseleave", ctx[27]),
-          listen(div, "focus", ctx[28]),
-          listen(div, "blur", ctx[15]),
-          listen(div, "keydown", ctx[14]),
-          action_destroyer(useClickOutside_action = useClickOutside2.call(null, div, ctx[29]))
-        ];
-        mounted = true;
+    },
+    p(ctx2, dirty) {
+      if (read_slot) {
+        if (read_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(read_slot, read_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(read_slot_template, ctx2[23], dirty, get_read_slot_changes), get_read_slot_context);
+        }
       }
     },
-    p(ctx2, [dirty]) {
+    i(local) {
+      if (current)
+        return;
+      transition_in(read_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(read_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (read_slot)
+        read_slot.d(detaching);
+    }
+  };
+}
+function create_if_block_114(ctx) {
+  let current;
+  const hover_slot_template = ctx[24].hover;
+  const hover_slot = create_slot(hover_slot_template, ctx, ctx[23], get_hover_slot_context);
+  return {
+    c() {
+      if (hover_slot)
+        hover_slot.c();
+    },
+    m(target, anchor) {
+      if (hover_slot) {
+        hover_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (hover_slot) {
+        if (hover_slot.p && (!current || dirty[0] & 8388608)) {
+          update_slot_base(hover_slot, hover_slot_template, ctx2, ctx2[23], !current ? get_all_dirty_from_scope(ctx2[23]) : get_slot_changes(hover_slot_template, ctx2[23], dirty, get_hover_slot_changes), get_hover_slot_context);
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(hover_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(hover_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (hover_slot)
+        hover_slot.d(detaching);
+    }
+  };
+}
+function create_fragment87(ctx) {
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block26, create_else_block_12];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (ctx2[8])
+      return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, [-1, -1]);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  return {
+    c() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    m(target, anchor) {
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
       let previous_block_index = current_block_type_index;
       current_block_type_index = select_block_type(ctx2, dirty);
       if (current_block_type_index === previous_block_index) {
@@ -56329,87 +57839,35 @@ function create_fragment85(ctx) {
           if_blocks[previous_block_index] = null;
         });
         check_outros();
-        if_block0 = if_blocks[current_block_type_index];
-        if (!if_block0) {
-          if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-          if_block0.c();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
         } else {
-          if_block0.p(ctx2, dirty);
+          if_block.p(ctx2, dirty);
         }
-        transition_in(if_block0, 1);
-        if_block0.m(div, t3);
-      }
-      if (ctx2[2]) {
-        if (if_block1) {
-          if_block1.p(ctx2, dirty);
-          if (dirty & 4) {
-            transition_in(if_block1, 1);
-          }
-        } else {
-          if_block1 = create_if_block24(ctx2);
-          if_block1.c();
-          transition_in(if_block1, 1);
-          if_block1.m(div, null);
-        }
-      } else if (if_block1) {
-        group_outros();
-        transition_out(if_block1, 1, 1, () => {
-          if_block1 = null;
-        });
-        check_outros();
-      }
-      if (!current || dirty & 385 && div_aria_selected_value !== (div_aria_selected_value = ctx2[8] || ctx2[7] ? void 0 : ctx2[0])) {
-        attr(div, "aria-selected", div_aria_selected_value);
-      }
-      if (!current || dirty & 64) {
-        attr(div, "aria-colindex", ctx2[6]);
-      }
-      if (!current || dirty & 32 && div_style_value !== (div_style_value = `width: ${ctx2[5].width}px`)) {
-        attr(div, "style", div_style_value);
-      }
-      if (!current || dirty & 384 && div_tabindex_value !== (div_tabindex_value = !ctx2[7] && !ctx2[8] ? 1 : void 0)) {
-        attr(div, "tabindex", div_tabindex_value);
-      }
-      if (useClickOutside_action && is_function(useClickOutside_action.update) && dirty & 513)
-        useClickOutside_action.update.call(null, ctx2[29]);
-      if (!current || dirty & 128) {
-        toggle_class(div, "columnHeader", ctx2[7]);
-      }
-      if (!current || dirty & 32) {
-        toggle_class(div, "header", ctx2[5].header);
-      }
-      if (!current || dirty & 1) {
-        toggle_class(div, "selected", ctx2[0]);
-      }
-      if (!current || dirty & 256) {
-        toggle_class(div, "rowHeader", ctx2[8]);
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
       }
     },
     i(local) {
       if (current)
         return;
-      transition_in(if_block0);
-      transition_in(if_block1);
+      transition_in(if_block);
       current = true;
     },
     o(local) {
-      transition_out(if_block0);
-      transition_out(if_block1);
+      transition_out(if_block);
       current = false;
     },
     d(detaching) {
+      if_blocks[current_block_type_index].d(detaching);
       if (detaching)
-        detach(div);
-      if_blocks[current_block_type_index].d();
-      if (if_block1)
-        if_block1.d();
-      ctx[25](null);
-      mounted = false;
-      run_all(dispose);
+        detach(if_block_anchor);
     }
   };
 }
-function instance85($$self, $$props, $$invalidate) {
+function instance87($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   const $$slots = compute_slots(slots);
   let { selected = false } = $$props;
@@ -56427,6 +57885,7 @@ function instance85($$self, $$props, $$invalidate) {
   let { onEditChange = (value) => {
     $$invalidate(1, edit = value);
   } } = $$props;
+  let { color = null } = $$props;
   let { onCopy = () => {
   } } = $$props;
   let { onCut = () => {
@@ -56500,7 +57959,7 @@ function instance85($$self, $$props, $$invalidate) {
     }
   }
   function handleBlur(event) {
-    $$invalidate(11, hover = false);
+    $$invalidate(12, hover = false);
     if (event.currentTarget instanceof HTMLDivElement && event.relatedTarget instanceof HTMLElement && !event.currentTarget.contains(event.relatedTarget)) {
       $$invalidate(0, selected = false);
       onEditChange(false);
@@ -56518,16 +57977,27 @@ function instance85($$self, $$props, $$invalidate) {
   function mousedown_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function mousedown_handler_1(event) {
+    bubble.call(this, $$self, event);
+  }
   function div_binding($$value) {
     binding_callbacks[$$value ? "unshift" : "push"](() => {
       ref = $$value;
-      $$invalidate(10, ref);
+      $$invalidate(11, ref);
     });
   }
-  const mouseenter_handler = () => $$invalidate(11, hover = true);
-  const mouseleave_handler = () => $$invalidate(11, hover = false);
+  const mouseenter_handler = () => $$invalidate(12, hover = true);
+  const mouseleave_handler = () => $$invalidate(12, hover = false);
+  function div_binding_1($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      ref = $$value;
+      $$invalidate(11, ref);
+    });
+  }
+  const mouseenter_handler_1 = () => $$invalidate(12, hover = true);
+  const mouseleave_handler_1 = () => $$invalidate(12, hover = false);
   const focus_handler = () => {
-    $$invalidate(11, hover = true);
+    $$invalidate(12, hover = true);
     $$invalidate(0, selected = true);
   };
   const useClickOutside_function = () => {
@@ -56548,7 +58018,7 @@ function instance85($$self, $$props, $$invalidate) {
     if ("column" in $$props2)
       $$invalidate(5, column = $$props2.column);
     if ("rowindex" in $$props2)
-      $$invalidate(18, rowindex = $$props2.rowindex);
+      $$invalidate(19, rowindex = $$props2.rowindex);
     if ("colindex" in $$props2)
       $$invalidate(6, colindex = $$props2.colindex);
     if ("columnHeader" in $$props2)
@@ -56557,17 +58027,19 @@ function instance85($$self, $$props, $$invalidate) {
       $$invalidate(8, rowHeader = $$props2.rowHeader);
     if ("onEditChange" in $$props2)
       $$invalidate(9, onEditChange = $$props2.onEditChange);
+    if ("color" in $$props2)
+      $$invalidate(10, color = $$props2.color);
     if ("onCopy" in $$props2)
-      $$invalidate(19, onCopy = $$props2.onCopy);
+      $$invalidate(20, onCopy = $$props2.onCopy);
     if ("onCut" in $$props2)
-      $$invalidate(20, onCut = $$props2.onCut);
+      $$invalidate(21, onCut = $$props2.onCut);
     if ("onPaste" in $$props2)
-      $$invalidate(21, onPaste = $$props2.onPaste);
+      $$invalidate(22, onPaste = $$props2.onPaste);
     if ("$$scope" in $$props2)
-      $$invalidate(22, $$scope = $$props2.$$scope);
+      $$invalidate(23, $$scope = $$props2.$$scope);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 1025) {
+    if ($$self.$$.dirty[0] & 2049) {
       $:
         if (selected && ref) {
           ref.focus();
@@ -56586,6 +58058,7 @@ function instance85($$self, $$props, $$invalidate) {
     columnHeader,
     rowHeader,
     onEditChange,
+    color,
     ref,
     hover,
     handleClick,
@@ -56601,9 +58074,13 @@ function instance85($$self, $$props, $$invalidate) {
     $$scope,
     slots,
     mousedown_handler,
+    mousedown_handler_1,
     div_binding,
     mouseenter_handler,
     mouseleave_handler,
+    div_binding_1,
+    mouseenter_handler_1,
+    mouseleave_handler_1,
     focus_handler,
     useClickOutside_function
   ];
@@ -56611,28 +58088,29 @@ function instance85($$self, $$props, $$invalidate) {
 var GridCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance85, create_fragment85, safe_not_equal, {
+    init(this, options, instance87, create_fragment87, safe_not_equal, {
       selected: 0,
       edit: 1,
       resizable: 2,
       onResize: 3,
       onFinalizeResize: 4,
       column: 5,
-      rowindex: 18,
+      rowindex: 19,
       colindex: 6,
       columnHeader: 7,
       rowHeader: 8,
       onEditChange: 9,
-      onCopy: 19,
-      onCut: 20,
-      onPaste: 21
-    }, add_css52);
+      color: 10,
+      onCopy: 20,
+      onCut: 21,
+      onPaste: 22
+    }, add_css52, [-1, -1]);
   }
 };
 var GridCell_default = GridCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridBooleanCell/GridBooleanCell.svelte
-function create_if_block25(ctx) {
+function create_if_block27(ctx) {
   let switch_1;
   let current;
   switch_1 = new Switch_default({
@@ -56677,7 +58155,7 @@ function create_read_slot(ctx) {
   let show_if = isBoolean(ctx[0]);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block25(ctx);
+  let if_block = show_if && create_if_block27(ctx);
   return {
     c() {
       if (if_block)
@@ -56700,7 +58178,7 @@ function create_read_slot(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block25(ctx2);
+          if_block = create_if_block27(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -56772,7 +58250,7 @@ function create_edit_slot(ctx) {
     }
   };
 }
-function create_fragment86(ctx) {
+function create_fragment88(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
@@ -56828,7 +58306,7 @@ function create_fragment86(ctx) {
     }
   };
 }
-function instance86($$self, $$props, $$invalidate) {
+function instance88($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -56873,7 +58351,7 @@ function instance86($$self, $$props, $$invalidate) {
 var GridBooleanCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance86, create_fragment86, safe_not_equal, {
+    init(this, options, instance88, create_fragment88, safe_not_equal, {
       value: 0,
       onChange: 1,
       column: 2,
@@ -56886,7 +58364,7 @@ var GridBooleanCell = class extends SvelteComponent {
 var GridBooleanCell_default = GridBooleanCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridDateCell/GridDateCell.svelte
-function create_if_block26(ctx) {
+function create_if_block28(ctx) {
   let textlabel;
   let current;
   textlabel = new TextLabel_default({
@@ -56926,7 +58404,7 @@ function create_if_block26(ctx) {
 function create_read_slot2(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[0] && create_if_block26(ctx);
+  let if_block = ctx[0] && create_if_block28(ctx);
   return {
     c() {
       if (if_block)
@@ -56947,7 +58425,7 @@ function create_read_slot2(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block26(ctx2);
+          if_block = create_if_block28(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -57017,7 +58495,7 @@ function create_edit_slot2(ctx) {
     }
   };
 }
-function create_fragment87(ctx) {
+function create_fragment89(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
@@ -57082,7 +58560,7 @@ function create_fragment87(ctx) {
     }
   };
 }
-function instance87($$self, $$props, $$invalidate) {
+function instance89($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -57140,7 +58618,7 @@ function instance87($$self, $$props, $$invalidate) {
 var GridDateCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance87, create_fragment87, safe_not_equal, {
+    init(this, options, instance89, create_fragment89, safe_not_equal, {
       value: 0,
       onChange: 1,
       column: 2,
@@ -57156,7 +58634,7 @@ var GridDateCell_default = GridDateCell;
 function add_css53(target) {
   append_styles(target, "svelte-1636x3v", "div.svelte-1636x3v{width:100%;padding:6px;text-align:right}");
 }
-function create_fragment88(ctx) {
+function create_fragment90(ctx) {
   let div;
   let t_value = new Intl.NumberFormat().format(ctx[0]) + "";
   let t3;
@@ -57182,7 +58660,7 @@ function create_fragment88(ctx) {
     }
   };
 }
-function instance88($$self, $$props, $$invalidate) {
+function instance90($$self, $$props, $$invalidate) {
   let { value } = $$props;
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
@@ -57193,7 +58671,7 @@ function instance88($$self, $$props, $$invalidate) {
 var NumberLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance88, create_fragment88, safe_not_equal, { value: 0 }, add_css53);
+    init(this, options, instance90, create_fragment90, safe_not_equal, { value: 0 }, add_css53);
   }
 };
 var NumberLabel_default = NumberLabel;
@@ -57202,7 +58680,7 @@ var NumberLabel_default = NumberLabel;
 function add_css54(target) {
   append_styles(target, "svelte-1uq2i75", "input.svelte-1uq2i75{all:unset;background-color:var(--background-primary);box-sizing:border-box;width:100%;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal);text-align:right}input.svelte-1uq2i75:focus{box-shadow:none !important}input.svelte-1uq2i75:hover{background-color:transparent}");
 }
-function create_fragment89(ctx) {
+function create_fragment91(ctx) {
   let input;
   let input_tabindex_value;
   let mounted;
@@ -57243,7 +58721,7 @@ function create_fragment89(ctx) {
     }
   };
 }
-function instance89($$self, $$props, $$invalidate) {
+function instance91($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let ref;
@@ -57281,13 +58759,13 @@ function instance89($$self, $$props, $$invalidate) {
 var NumberInput2 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance89, create_fragment89, safe_not_equal, { value: 0, onChange: 4 }, add_css54);
+    init(this, options, instance91, create_fragment91, safe_not_equal, { value: 0, onChange: 4 }, add_css54);
   }
 };
 var NumberInput_default2 = NumberInput2;
 
 // src/views/Table/components/DataGrid/GridCell/GridNumberCell/GridNumberCell.svelte
-function create_if_block27(ctx) {
+function create_if_block29(ctx) {
   let numberlabel;
   let current;
   numberlabel = new NumberLabel_default({ props: { value: ctx[1] } });
@@ -57324,7 +58802,7 @@ function create_read_slot3(ctx) {
   let show_if = isNumber(ctx[1]);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block27(ctx);
+  let if_block = show_if && create_if_block29(ctx);
   return {
     c() {
       if (if_block)
@@ -57347,7 +58825,7 @@ function create_read_slot3(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block27(ctx2);
+          if_block = create_if_block29(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -57422,7 +58900,7 @@ function create_edit_slot3(ctx) {
     }
   };
 }
-function create_fragment90(ctx) {
+function create_fragment92(ctx) {
   let gridcell;
   let updating_edit;
   let updating_selected;
@@ -57509,7 +58987,7 @@ function create_fragment90(ctx) {
     }
   };
 }
-function instance90($$self, $$props, $$invalidate) {
+function instance92($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -57586,7 +59064,7 @@ function instance90($$self, $$props, $$invalidate) {
 var GridNumberCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance90, create_fragment90, safe_not_equal, {
+    init(this, options, instance92, create_fragment92, safe_not_equal, {
       value: 1,
       onChange: 2,
       column: 3,
@@ -57602,7 +59080,7 @@ var GridNumberCell_default = GridNumberCell;
 function add_css55(target) {
   append_styles(target, "svelte-q1s3im", "div.svelte-q1s3im{padding:6px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}");
 }
-function create_fragment91(ctx) {
+function create_fragment93(ctx) {
   let div;
   let t3;
   return {
@@ -57627,7 +59105,7 @@ function create_fragment91(ctx) {
     }
   };
 }
-function instance91($$self, $$props, $$invalidate) {
+function instance93($$self, $$props, $$invalidate) {
   let { value } = $$props;
   $$self.$$set = ($$props2) => {
     if ("value" in $$props2)
@@ -57638,7 +59116,7 @@ function instance91($$self, $$props, $$invalidate) {
 var TextLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance91, create_fragment91, safe_not_equal, { value: 0 }, add_css55);
+    init(this, options, instance93, create_fragment93, safe_not_equal, { value: 0 }, add_css55);
   }
 };
 var TextLabel_default = TextLabel;
@@ -57725,7 +59203,7 @@ function create_edit_slot4(ctx) {
     }
   };
 }
-function create_fragment92(ctx) {
+function create_fragment94(ctx) {
   let gridcell;
   let updating_edit;
   let updating_selected;
@@ -57812,7 +59290,7 @@ function create_fragment92(ctx) {
     }
   };
 }
-function instance92($$self, $$props, $$invalidate) {
+function instance94($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -57888,7 +59366,7 @@ function instance92($$self, $$props, $$invalidate) {
 var GridTextCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance92, create_fragment92, safe_not_equal, {
+    init(this, options, instance94, create_fragment94, safe_not_equal, {
       value: 0,
       onChange: 2,
       column: 3,
@@ -57907,7 +59385,7 @@ var import_obsidian45 = __toModule(require("obsidian"));
 function add_css56(target) {
   append_styles(target, "svelte-1ip22jj", "div.svelte-1ip22jj{padding:6px;width:100%}");
 }
-function create_if_block28(ctx) {
+function create_if_block30(ctx) {
   let internallink;
   let current;
   internallink = new InternalLink_default({
@@ -57915,7 +59393,7 @@ function create_if_block28(ctx) {
       linkText: ctx[0].linkText,
       sourcePath: ctx[0].sourcePath,
       resolved: !!ctx[1].metadataCache.getFirstLinkpathDest(ctx[0].linkText, ctx[0].sourcePath),
-      $$slots: { default: [create_default_slot29] },
+      $$slots: { default: [create_default_slot30] },
       $$scope: { ctx }
     }
   });
@@ -57956,7 +59434,7 @@ function create_if_block28(ctx) {
     }
   };
 }
-function create_default_slot29(ctx) {
+function create_default_slot30(ctx) {
   var _a;
   let t_value = ((_a = ctx[0].displayName) != null ? _a : ctx[0].linkText) + "";
   let t3;
@@ -57978,10 +59456,10 @@ function create_default_slot29(ctx) {
     }
   };
 }
-function create_fragment93(ctx) {
+function create_fragment95(ctx) {
   let div;
   let current;
-  let if_block = ctx[0] && create_if_block28(ctx);
+  let if_block = ctx[0] && create_if_block30(ctx);
   return {
     c() {
       div = element("div");
@@ -58003,7 +59481,7 @@ function create_fragment93(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block28(ctx2);
+          if_block = create_if_block30(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(div, null);
@@ -58034,7 +59512,7 @@ function create_fragment93(ctx) {
     }
   };
 }
-function instance93($$self, $$props, $$invalidate) {
+function instance95($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(1, $app = $$value));
   let { value } = $$props;
@@ -58050,13 +59528,13 @@ function instance93($$self, $$props, $$invalidate) {
 var LinkLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance93, create_fragment93, safe_not_equal, { value: 0 }, add_css56);
+    init(this, options, instance95, create_fragment95, safe_not_equal, { value: 0 }, add_css56);
   }
 };
 var LinkLabel_default = LinkLabel;
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/GridLinkCell.svelte
-function create_if_block_114(ctx) {
+function create_if_block_115(ctx) {
   let linklabel;
   let current;
   linklabel = new LinkLabel_default({ props: { value: ctx[0] } });
@@ -58093,7 +59571,7 @@ function create_read_slot5(ctx) {
   let show_if = isOptionalLink(ctx[0]);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block_114(ctx);
+  let if_block = show_if && create_if_block_115(ctx);
   return {
     c() {
       if (if_block)
@@ -58116,7 +59594,7 @@ function create_read_slot5(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_114(ctx2);
+          if_block = create_if_block_115(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -58147,7 +59625,7 @@ function create_read_slot5(ctx) {
     }
   };
 }
-function create_if_block29(ctx) {
+function create_if_block31(ctx) {
   var _a, _b;
   let fileautocomplete;
   let current;
@@ -58200,7 +59678,7 @@ function create_edit_slot5(ctx) {
   let show_if = isOptionalLink(ctx[0]);
   let if_block_anchor;
   let current;
-  let if_block = show_if && create_if_block29(ctx);
+  let if_block = show_if && create_if_block31(ctx);
   return {
     c() {
       if (if_block)
@@ -58223,7 +59701,7 @@ function create_edit_slot5(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block29(ctx2);
+          if_block = create_if_block31(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -58254,7 +59732,7 @@ function create_edit_slot5(ctx) {
     }
   };
 }
-function create_fragment94(ctx) {
+function create_fragment96(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
@@ -58317,7 +59795,7 @@ function create_fragment94(ctx) {
   };
 }
 var func_13 = (file) => file.path.split("/").slice(0, -1).join("/");
-function instance94($$self, $$props, $$invalidate) {
+function instance96($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
   let { value } = $$props;
@@ -58377,7 +59855,7 @@ function instance94($$self, $$props, $$invalidate) {
 var GridLinkCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance94, create_fragment94, safe_not_equal, {
+    init(this, options, instance96, create_fragment96, safe_not_equal, {
       value: 0,
       onChange: 1,
       column: 2,
@@ -58471,7 +59949,7 @@ function create_edit_slot6(ctx) {
     }
   };
 }
-function create_fragment95(ctx) {
+function create_fragment97(ctx) {
   let gridcell;
   let current;
   gridcell = new GridCell_default({
@@ -58527,7 +60005,7 @@ function create_fragment95(ctx) {
     }
   };
 }
-function instance95($$self, $$props, $$invalidate) {
+function instance97($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -58568,7 +60046,7 @@ function instance95($$self, $$props, $$invalidate) {
 var GridListCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance95, create_fragment95, safe_not_equal, {
+    init(this, options, instance97, create_fragment97, safe_not_equal, {
       value: 0,
       onChange: 1,
       column: 2,
@@ -58629,7 +60107,7 @@ function create_else_block9(ctx) {
     }
   };
 }
-function create_if_block_52(ctx) {
+function create_if_block_53(ctx) {
   let gridlinkcell;
   let current;
   gridlinkcell = new GridLinkCell_default({
@@ -58683,7 +60161,7 @@ function create_if_block_52(ctx) {
     }
   };
 }
-function create_if_block_43(ctx) {
+function create_if_block_44(ctx) {
   let griddatecell;
   let current;
   griddatecell = new GridDateCell_default({
@@ -58791,7 +60269,7 @@ function create_if_block_35(ctx) {
     }
   };
 }
-function create_if_block_27(ctx) {
+function create_if_block_210(ctx) {
   let gridbooleancell;
   let current;
   gridbooleancell = new GridBooleanCell_default({
@@ -58845,7 +60323,7 @@ function create_if_block_27(ctx) {
     }
   };
 }
-function create_if_block_115(ctx) {
+function create_if_block_116(ctx) {
   let gridtextcell;
   let current;
   gridtextcell = new GridTextCell_default({
@@ -58899,7 +60377,7 @@ function create_if_block_115(ctx) {
     }
   };
 }
-function create_if_block30(ctx) {
+function create_if_block32(ctx) {
   let gridlistcell;
   let current;
   gridlistcell = new GridListCell_default({
@@ -58953,7 +60431,7 @@ function create_if_block30(ctx) {
     }
   };
 }
-function create_fragment96(ctx) {
+function create_fragment98(ctx) {
   let show_if;
   let show_if_1;
   let show_if_2;
@@ -58965,12 +60443,12 @@ function create_fragment96(ctx) {
   let if_block_anchor;
   let current;
   const if_block_creators = [
-    create_if_block30,
-    create_if_block_115,
-    create_if_block_27,
+    create_if_block32,
+    create_if_block_116,
+    create_if_block_210,
     create_if_block_35,
-    create_if_block_43,
-    create_if_block_52,
+    create_if_block_44,
+    create_if_block_53,
     create_else_block9
   ];
   const if_blocks = [];
@@ -59064,7 +60542,7 @@ function create_fragment96(ctx) {
     }
   };
 }
-function instance96($$self, $$props, $$invalidate) {
+function instance98($$self, $$props, $$invalidate) {
   let { value } = $$props;
   let { onChange } = $$props;
   let { column } = $$props;
@@ -59153,7 +60631,7 @@ function instance96($$self, $$props, $$invalidate) {
 var GridTypedCell = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance96, create_fragment96, safe_not_equal, {
+    init(this, options, instance98, create_fragment98, safe_not_equal, {
       value: 0,
       onChange: 1,
       column: 2,
@@ -59166,7 +60644,7 @@ var GridTypedCell = class extends SvelteComponent {
 var GridTypedCell_default = GridTypedCell;
 
 // src/views/Table/components/DataGrid/data-grid.ts
-var import_types3 = __toModule(require("util/types"));
+var import_types4 = __toModule(require("util/types"));
 function fieldIcon(field) {
   switch (field) {
     case DataFieldType.String:
@@ -59202,7 +60680,7 @@ function sortRows(rows, sortModel) {
         return 0;
       }
     }
-    if ((0, import_types3.isDate)(aval) && (0, import_types3.isDate)(bval)) {
+    if ((0, import_types4.isDate)(aval) && (0, import_types4.isDate)(bval)) {
       if (aval.getTime() < bval.getTime())
         return isAsc ? -1 : 1;
       if (aval.getTime() > bval.getTime())
@@ -59248,7 +60726,7 @@ function menuOnContextMenu(event, menu) {
 function add_css57(target) {
   append_styles(target, "svelte-1jrmech", "div.svelte-1jrmech{display:flex}.header.svelte-1jrmech{position:sticky;top:0;z-index:10}");
 }
-function create_fragment97(ctx) {
+function create_fragment99(ctx) {
   let div;
   let current;
   let mounted;
@@ -59312,7 +60790,7 @@ function create_fragment97(ctx) {
     }
   };
 }
-function instance97($$self, $$props, $$invalidate) {
+function instance99($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { index: index2 } = $$props;
   let { header = false } = $$props;
@@ -59335,13 +60813,13 @@ function instance97($$self, $$props, $$invalidate) {
 var GridCellGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance97, create_fragment97, safe_not_equal, { index: 0, header: 1 }, add_css57);
+    init(this, options, instance99, create_fragment99, safe_not_equal, { index: 0, header: 1 }, add_css57);
   }
 };
 var GridCellGroup_default = GridCellGroup;
 
 // src/views/Table/components/DataGrid/GridHeader.svelte
-function get_each_context15(ctx, list, i2) {
+function get_each_context16(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[8] = list[i2];
   child_ctx[10] = i2;
@@ -59389,7 +60867,7 @@ function create_else_block10(ctx) {
     }
   };
 }
-function create_if_block31(ctx) {
+function create_if_block33(ctx) {
   var _a;
   let icon;
   let current;
@@ -59432,7 +60910,7 @@ function create_read_slot7(ctx) {
   let iconbutton;
   let t22;
   let current;
-  const if_block_creators = [create_if_block31, create_else_block10];
+  const if_block_creators = [create_if_block33, create_else_block10];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[8].repeated)
@@ -59523,7 +61001,7 @@ function create_read_slot7(ctx) {
     }
   };
 }
-function create_each_block15(ctx) {
+function create_each_block16(ctx) {
   let gridcell;
   let current;
   function func7(...args) {
@@ -59586,7 +61064,7 @@ function create_each_block15(ctx) {
     }
   };
 }
-function create_default_slot30(ctx) {
+function create_default_slot31(ctx) {
   let gridcell;
   let t3;
   let each_1_anchor;
@@ -59606,345 +61084,6 @@ function create_default_slot30(ctx) {
     }
   });
   let each_value = ctx[0];
-  let each_blocks = [];
-  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block15(get_each_context15(ctx, each_value, i2));
-  }
-  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
-    each_blocks[i2] = null;
-  });
-  return {
-    c() {
-      create_component(gridcell.$$.fragment);
-      t3 = space();
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].c();
-      }
-      each_1_anchor = empty();
-    },
-    m(target, anchor) {
-      mount_component(gridcell, target, anchor);
-      insert(target, t3, anchor);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        each_blocks[i2].m(target, anchor);
-      }
-      insert(target, each_1_anchor, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      if (dirty & 31) {
-        each_value = ctx2[0];
-        let i2;
-        for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context15(ctx2, each_value, i2);
-          if (each_blocks[i2]) {
-            each_blocks[i2].p(child_ctx, dirty);
-            transition_in(each_blocks[i2], 1);
-          } else {
-            each_blocks[i2] = create_each_block15(child_ctx);
-            each_blocks[i2].c();
-            transition_in(each_blocks[i2], 1);
-            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
-          }
-        }
-        group_outros();
-        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
-          out(i2);
-        }
-        check_outros();
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcell.$$.fragment, local);
-      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-        transition_in(each_blocks[i2]);
-      }
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcell.$$.fragment, local);
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
-        transition_out(each_blocks[i2]);
-      }
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcell, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_each(each_blocks, detaching);
-      if (detaching)
-        detach(each_1_anchor);
-    }
-  };
-}
-function create_fragment98(ctx) {
-  let gridcellgroup;
-  let current;
-  gridcellgroup = new GridCellGroup_default({
-    props: {
-      index: 1,
-      header: true,
-      $$slots: { default: [create_default_slot30] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(gridcellgroup.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridcellgroup, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const gridcellgroup_changes = {};
-      if (dirty & 2055) {
-        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcellgroup.$set(gridcellgroup_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridcellgroup.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridcellgroup.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridcellgroup, detaching);
-    }
-  };
-}
-function instance98($$self, $$props, $$invalidate) {
-  let { columns } = $$props;
-  let { onResize } = $$props;
-  let { onFinalizeResize } = $$props;
-  let { onColumnMenu } = $$props;
-  function handleColumnHeaderClick(column) {
-    return (event) => {
-      if (event.button === 2) {
-        menuOnContextMenu(event, onColumnMenu(column));
-      }
-    };
-  }
-  function handleFieldClick(column) {
-    return (event) => {
-      onColumnMenu(column).showAtMouseEvent(event);
-    };
-  }
-  const func7 = (column, width) => {
-    onResize(column.field, width);
-  };
-  const func_14 = (column, width) => {
-    onFinalizeResize(column.field, width);
-  };
-  $$self.$$set = ($$props2) => {
-    if ("columns" in $$props2)
-      $$invalidate(0, columns = $$props2.columns);
-    if ("onResize" in $$props2)
-      $$invalidate(1, onResize = $$props2.onResize);
-    if ("onFinalizeResize" in $$props2)
-      $$invalidate(2, onFinalizeResize = $$props2.onFinalizeResize);
-    if ("onColumnMenu" in $$props2)
-      $$invalidate(5, onColumnMenu = $$props2.onColumnMenu);
-  };
-  return [
-    columns,
-    onResize,
-    onFinalizeResize,
-    handleColumnHeaderClick,
-    handleFieldClick,
-    onColumnMenu,
-    func7,
-    func_14
-  ];
-}
-var GridHeader = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance98, create_fragment98, safe_not_equal, {
-      columns: 0,
-      onResize: 1,
-      onFinalizeResize: 2,
-      onColumnMenu: 5
-    });
-  }
-};
-var GridHeader_default = GridHeader;
-
-// src/views/Table/components/DataGrid/GridRow.svelte
-var import_obsidian48 = __toModule(require("obsidian"));
-function get_each_context16(ctx, list, i2) {
-  const child_ctx = ctx.slice();
-  child_ctx[15] = list[i2];
-  child_ctx[17] = i2;
-  return child_ctx;
-}
-function create_read_slot8(ctx) {
-  let textlabel;
-  let current;
-  textlabel = new TextLabel_default({
-    props: {
-      slot: "read",
-      value: (ctx[1] - 1).toString()
-    }
-  });
-  return {
-    c() {
-      create_component(textlabel.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(textlabel, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const textlabel_changes = {};
-      if (dirty & 2)
-        textlabel_changes.value = (ctx2[1] - 1).toString();
-      textlabel.$set(textlabel_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(textlabel.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(textlabel.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(textlabel, detaching);
-    }
-  };
-}
-function create_hover_slot(ctx) {
-  let iconbutton;
-  let current;
-  iconbutton = new IconButton_default({
-    props: { slot: "hover", icon: "link", size: "sm" }
-  });
-  iconbutton.$on("click", function() {
-    if (is_function(ctx[6]))
-      ctx[6].apply(this, arguments);
-  });
-  return {
-    c() {
-      create_component(iconbutton.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(iconbutton, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(iconbutton.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(iconbutton.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(iconbutton, detaching);
-    }
-  };
-}
-function create_each_block16(ctx) {
-  let gridtypedcell;
-  let current;
-  function func7(...args) {
-    return ctx[12](ctx[15], ...args);
-  }
-  gridtypedcell = new GridTypedCell_default({
-    props: {
-      selected: ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2,
-      rowindex: ctx[1] + 2,
-      colindex: ctx[17] + 2,
-      value: ctx[2][ctx[15].field],
-      column: ctx[15],
-      onChange: func7
-    }
-  });
-  gridtypedcell.$on("mousedown", function() {
-    if (is_function(ctx[8](ctx[15], ctx[2][ctx[15].field])))
-      ctx[8](ctx[15], ctx[2][ctx[15].field]).apply(this, arguments);
-  });
-  gridtypedcell.$on("navigate", ctx[13]);
-  return {
-    c() {
-      create_component(gridtypedcell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(gridtypedcell, target, anchor);
-      current = true;
-    },
-    p(new_ctx, dirty) {
-      ctx = new_ctx;
-      const gridtypedcell_changes = {};
-      if (dirty & 18)
-        gridtypedcell_changes.selected = ctx[4][0] === ctx[17] + 2 && ctx[4][1] === ctx[1] + 2;
-      if (dirty & 2)
-        gridtypedcell_changes.rowindex = ctx[1] + 2;
-      if (dirty & 12)
-        gridtypedcell_changes.value = ctx[2][ctx[15].field];
-      if (dirty & 8)
-        gridtypedcell_changes.column = ctx[15];
-      if (dirty & 45)
-        gridtypedcell_changes.onChange = func7;
-      gridtypedcell.$set(gridtypedcell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(gridtypedcell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(gridtypedcell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(gridtypedcell, detaching);
-    }
-  };
-}
-function create_default_slot31(ctx) {
-  let gridcell;
-  let t3;
-  let each_1_anchor;
-  let current;
-  gridcell = new GridCell_default({
-    props: {
-      rowindex: 1,
-      colindex: 1,
-      column: {
-        field: "",
-        header: true,
-        width: 60,
-        editable: false
-      },
-      rowHeader: true,
-      $$slots: {
-        hover: [create_hover_slot],
-        read: [create_read_slot8]
-      },
-      $$scope: { ctx }
-    }
-  });
-  gridcell.$on("mousedown", ctx[7]());
-  let each_value = ctx[3];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     each_blocks[i2] = create_each_block16(get_each_context16(ctx, each_value, i2));
@@ -59971,13 +61110,8 @@ function create_default_slot31(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      const gridcell_changes = {};
-      if (dirty & 262210) {
-        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      gridcell.$set(gridcell_changes);
-      if (dirty & 319) {
-        each_value = ctx2[3];
+      if (dirty & 31) {
+        each_value = ctx2[0];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
           const child_ctx = get_each_context16(ctx2, each_value, i2);
@@ -60025,17 +61159,17 @@ function create_default_slot31(ctx) {
     }
   };
 }
-function create_fragment99(ctx) {
+function create_fragment100(ctx) {
   let gridcellgroup;
   let current;
   gridcellgroup = new GridCellGroup_default({
     props: {
-      index: ctx[1],
+      index: 1,
+      header: true,
       $$slots: { default: [create_default_slot31] },
       $$scope: { ctx }
     }
   });
-  gridcellgroup.$on("mouseover", ctx[9]);
   return {
     c() {
       create_component(gridcellgroup.$$.fragment);
@@ -60046,9 +61180,7 @@ function create_fragment99(ctx) {
     },
     p(ctx2, [dirty]) {
       const gridcellgroup_changes = {};
-      if (dirty & 2)
-        gridcellgroup_changes.index = ctx2[1];
-      if (dirty & 262271) {
+      if (dirty & 2055) {
         gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcellgroup.$set(gridcellgroup_changes);
@@ -60068,14 +61200,356 @@ function create_fragment99(ctx) {
     }
   };
 }
-function instance99($$self, $$props, $$invalidate) {
+function instance100($$self, $$props, $$invalidate) {
+  let { columns } = $$props;
+  let { onResize } = $$props;
+  let { onFinalizeResize } = $$props;
+  let { onColumnMenu } = $$props;
+  function handleColumnHeaderClick(column) {
+    return (event) => {
+      if (event.button === 2) {
+        menuOnContextMenu(event, onColumnMenu(column));
+      }
+    };
+  }
+  function handleFieldClick(column) {
+    return (event) => {
+      onColumnMenu(column).showAtMouseEvent(event);
+    };
+  }
+  const func7 = (column, width) => {
+    onResize(column.field, width);
+  };
+  const func_14 = (column, width) => {
+    onFinalizeResize(column.field, width);
+  };
+  $$self.$$set = ($$props2) => {
+    if ("columns" in $$props2)
+      $$invalidate(0, columns = $$props2.columns);
+    if ("onResize" in $$props2)
+      $$invalidate(1, onResize = $$props2.onResize);
+    if ("onFinalizeResize" in $$props2)
+      $$invalidate(2, onFinalizeResize = $$props2.onFinalizeResize);
+    if ("onColumnMenu" in $$props2)
+      $$invalidate(5, onColumnMenu = $$props2.onColumnMenu);
+  };
+  return [
+    columns,
+    onResize,
+    onFinalizeResize,
+    handleColumnHeaderClick,
+    handleFieldClick,
+    onColumnMenu,
+    func7,
+    func_14
+  ];
+}
+var GridHeader = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance100, create_fragment100, safe_not_equal, {
+      columns: 0,
+      onResize: 1,
+      onFinalizeResize: 2,
+      onColumnMenu: 5
+    });
+  }
+};
+var GridHeader_default = GridHeader;
+
+// src/views/Table/components/DataGrid/GridRow.svelte
+var import_obsidian48 = __toModule(require("obsidian"));
+function get_each_context17(ctx, list, i2) {
+  const child_ctx = ctx.slice();
+  child_ctx[16] = list[i2];
+  child_ctx[18] = i2;
+  return child_ctx;
+}
+function create_read_slot8(ctx) {
+  let div;
+  let t_value = (ctx[1] - 1).toString() + "";
+  let t3;
+  return {
+    c() {
+      div = element("div");
+      t3 = text(t_value);
+      attr(div, "slot", "read");
+      set_style(div, "text-align", "center");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      append(div, t3);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 2 && t_value !== (t_value = (ctx2[1] - 1).toString() + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+    }
+  };
+}
+function create_hover_slot(ctx) {
+  let div;
+  let iconbutton;
+  let current;
+  iconbutton = new IconButton_default({ props: { icon: "link", size: "sm" } });
+  iconbutton.$on("click", function() {
+    if (is_function(ctx[7]))
+      ctx[7].apply(this, arguments);
+  });
+  return {
+    c() {
+      div = element("div");
+      create_component(iconbutton.$$.fragment);
+      attr(div, "slot", "hover");
+      set_style(div, "text-align", "center");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(iconbutton, div, null);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(iconbutton.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(iconbutton.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(iconbutton);
+    }
+  };
+}
+function create_each_block17(ctx) {
+  let gridtypedcell;
+  let current;
+  function func7(...args) {
+    return ctx[13](ctx[16], ...args);
+  }
+  gridtypedcell = new GridTypedCell_default({
+    props: {
+      selected: ctx[4][0] === ctx[18] + 2 && ctx[4][1] === ctx[1] + 2,
+      rowindex: ctx[1] + 2,
+      colindex: ctx[18] + 2,
+      value: ctx[2][ctx[16].field],
+      column: ctx[16],
+      onChange: func7
+    }
+  });
+  gridtypedcell.$on("mousedown", function() {
+    if (is_function(ctx[9](ctx[16], ctx[2][ctx[16].field])))
+      ctx[9](ctx[16], ctx[2][ctx[16].field]).apply(this, arguments);
+  });
+  gridtypedcell.$on("navigate", ctx[14]);
+  return {
+    c() {
+      create_component(gridtypedcell.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridtypedcell, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const gridtypedcell_changes = {};
+      if (dirty & 18)
+        gridtypedcell_changes.selected = ctx[4][0] === ctx[18] + 2 && ctx[4][1] === ctx[1] + 2;
+      if (dirty & 2)
+        gridtypedcell_changes.rowindex = ctx[1] + 2;
+      if (dirty & 12)
+        gridtypedcell_changes.value = ctx[2][ctx[16].field];
+      if (dirty & 8)
+        gridtypedcell_changes.column = ctx[16];
+      if (dirty & 77)
+        gridtypedcell_changes.onChange = func7;
+      gridtypedcell.$set(gridtypedcell_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridtypedcell.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridtypedcell.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridtypedcell, detaching);
+    }
+  };
+}
+function create_default_slot32(ctx) {
+  let gridcell;
+  let t3;
+  let each_1_anchor;
+  let current;
+  gridcell = new GridCell_default({
+    props: {
+      rowindex: 1,
+      colindex: 1,
+      column: {
+        field: "",
+        header: true,
+        width: 60,
+        editable: false
+      },
+      rowHeader: true,
+      color: ctx[5],
+      $$slots: {
+        hover: [create_hover_slot],
+        read: [create_read_slot8]
+      },
+      $$scope: { ctx }
+    }
+  });
+  gridcell.$on("mousedown", ctx[8]());
+  let each_value = ctx[3];
+  let each_blocks = [];
+  for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+    each_blocks[i2] = create_each_block17(get_each_context17(ctx, each_value, i2));
+  }
+  const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
+    each_blocks[i2] = null;
+  });
+  return {
+    c() {
+      create_component(gridcell.$$.fragment);
+      t3 = space();
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].c();
+      }
+      each_1_anchor = empty();
+    },
+    m(target, anchor) {
+      mount_component(gridcell, target, anchor);
+      insert(target, t3, anchor);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        each_blocks[i2].m(target, anchor);
+      }
+      insert(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p(ctx2, dirty) {
+      const gridcell_changes = {};
+      if (dirty & 32)
+        gridcell_changes.color = ctx2[5];
+      if (dirty & 524418) {
+        gridcell_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcell.$set(gridcell_changes);
+      if (dirty & 607) {
+        each_value = ctx2[3];
+        let i2;
+        for (i2 = 0; i2 < each_value.length; i2 += 1) {
+          const child_ctx = get_each_context17(ctx2, each_value, i2);
+          if (each_blocks[i2]) {
+            each_blocks[i2].p(child_ctx, dirty);
+            transition_in(each_blocks[i2], 1);
+          } else {
+            each_blocks[i2] = create_each_block17(child_ctx);
+            each_blocks[i2].c();
+            transition_in(each_blocks[i2], 1);
+            each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i2 = each_value.length; i2 < each_blocks.length; i2 += 1) {
+          out(i2);
+        }
+        check_outros();
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcell.$$.fragment, local);
+      for (let i2 = 0; i2 < each_value.length; i2 += 1) {
+        transition_in(each_blocks[i2]);
+      }
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcell.$$.fragment, local);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
+        transition_out(each_blocks[i2]);
+      }
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcell, detaching);
+      if (detaching)
+        detach(t3);
+      destroy_each(each_blocks, detaching);
+      if (detaching)
+        detach(each_1_anchor);
+    }
+  };
+}
+function create_fragment101(ctx) {
+  let gridcellgroup;
+  let current;
+  gridcellgroup = new GridCellGroup_default({
+    props: {
+      index: ctx[1],
+      $$slots: { default: [create_default_slot32] },
+      $$scope: { ctx }
+    }
+  });
+  gridcellgroup.$on("mouseover", ctx[10]);
+  return {
+    c() {
+      create_component(gridcellgroup.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(gridcellgroup, target, anchor);
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      const gridcellgroup_changes = {};
+      if (dirty & 2)
+        gridcellgroup_changes.index = ctx2[1];
+      if (dirty & 524543) {
+        gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      gridcellgroup.$set(gridcellgroup_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(gridcellgroup.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(gridcellgroup.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(gridcellgroup, detaching);
+    }
+  };
+}
+function instance101($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(15, $app = $$value));
   let { rowId } = $$props;
   let { index: index2 } = $$props;
   let { row } = $$props;
   let { columns } = $$props;
   let { activeCell } = $$props;
+  let { color } = $$props;
   setContext("sourcePath", row["path"]);
   let { onRowChange } = $$props;
   let { onRowMenu } = $$props;
@@ -60140,14 +61614,16 @@ function instance99($$self, $$props, $$invalidate) {
       $$invalidate(3, columns = $$props2.columns);
     if ("activeCell" in $$props2)
       $$invalidate(4, activeCell = $$props2.activeCell);
+    if ("color" in $$props2)
+      $$invalidate(5, color = $$props2.color);
     if ("onRowChange" in $$props2)
-      $$invalidate(5, onRowChange = $$props2.onRowChange);
+      $$invalidate(6, onRowChange = $$props2.onRowChange);
     if ("onRowMenu" in $$props2)
-      $$invalidate(10, onRowMenu = $$props2.onRowMenu);
+      $$invalidate(11, onRowMenu = $$props2.onRowMenu);
     if ("onCellMenu" in $$props2)
-      $$invalidate(11, onCellMenu = $$props2.onCellMenu);
+      $$invalidate(12, onCellMenu = $$props2.onCellMenu);
     if ("onNavigate" in $$props2)
-      $$invalidate(6, onNavigate = $$props2.onNavigate);
+      $$invalidate(7, onNavigate = $$props2.onNavigate);
   };
   return [
     rowId,
@@ -60155,6 +61631,7 @@ function instance99($$self, $$props, $$invalidate) {
     row,
     columns,
     activeCell,
+    color,
     onRowChange,
     onNavigate,
     handleHeaderClick,
@@ -60169,16 +61646,17 @@ function instance99($$self, $$props, $$invalidate) {
 var GridRow = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance99, create_fragment99, safe_not_equal, {
+    init(this, options, instance101, create_fragment101, safe_not_equal, {
       rowId: 0,
       index: 1,
       row: 2,
       columns: 3,
       activeCell: 4,
-      onRowChange: 5,
-      onRowMenu: 10,
-      onCellMenu: 11,
-      onNavigate: 6
+      color: 5,
+      onRowChange: 6,
+      onRowMenu: 11,
+      onCellMenu: 12,
+      onNavigate: 7
     });
   }
 };
@@ -60188,36 +61666,37 @@ var GridRow_default = GridRow;
 function add_css58(target) {
   append_styles(target, "svelte-8irtc3", "div.svelte-8irtc3{display:inline-block}span.svelte-8irtc3{padding:4px;position:sticky;left:0}");
 }
-function get_each_context17(ctx, list, i2) {
+function get_each_context18(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[32] = list[i2].rowId;
-  child_ctx[33] = list[i2].row;
-  child_ctx[35] = i2;
+  child_ctx[33] = list[i2].rowId;
+  child_ctx[34] = list[i2].row;
+  child_ctx[36] = i2;
   return child_ctx;
 }
-function create_each_block17(ctx) {
+function create_each_block18(ctx) {
   let gridrow;
   let current;
   function func_4(...args) {
-    return ctx[28](ctx[33], ...args);
+    return ctx[29](ctx[34], ...args);
   }
   function func_5(...args) {
-    return ctx[29](ctx[32], ...args);
+    return ctx[30](ctx[33], ...args);
   }
   gridrow = new GridRow_default({
     props: {
-      columns: ctx[9],
-      index: ctx[35] + 2,
-      rowId: ctx[32],
-      row: ctx[33],
-      activeCell: ctx[6],
-      onRowChange: ctx[4],
-      onRowMenu: ctx[27],
+      columns: ctx[10],
+      index: ctx[36] + 2,
+      rowId: ctx[33],
+      row: ctx[34],
+      activeCell: ctx[7],
+      onRowChange: ctx[5],
+      color: ctx[1](ctx[33]),
+      onRowMenu: ctx[28],
       onCellMenu: func_4,
       onNavigate: func_5
     }
   });
-  gridrow.$on("navigate", ctx[30]);
+  gridrow.$on("navigate", ctx[31]);
   return {
     c() {
       create_component(gridrow.$$.fragment);
@@ -60229,19 +61708,21 @@ function create_each_block17(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const gridrow_changes = {};
+      if (dirty[0] & 1024)
+        gridrow_changes.columns = ctx[10];
       if (dirty[0] & 512)
-        gridrow_changes.columns = ctx[9];
-      if (dirty[0] & 256)
-        gridrow_changes.rowId = ctx[32];
-      if (dirty[0] & 256)
-        gridrow_changes.row = ctx[33];
-      if (dirty[0] & 64)
-        gridrow_changes.activeCell = ctx[6];
-      if (dirty[0] & 16)
-        gridrow_changes.onRowChange = ctx[4];
-      if (dirty[0] & 256)
+        gridrow_changes.rowId = ctx[33];
+      if (dirty[0] & 512)
+        gridrow_changes.row = ctx[34];
+      if (dirty[0] & 128)
+        gridrow_changes.activeCell = ctx[7];
+      if (dirty[0] & 32)
+        gridrow_changes.onRowChange = ctx[5];
+      if (dirty[0] & 514)
+        gridrow_changes.color = ctx[1](ctx[33]);
+      if (dirty[0] & 512)
         gridrow_changes.onCellMenu = func_4;
-      if (dirty[0] & 288)
+      if (dirty[0] & 576)
         gridrow_changes.onNavigate = func_5;
       gridrow.$set(gridrow_changes);
     },
@@ -60260,7 +61741,7 @@ function create_each_block17(ctx) {
     }
   };
 }
-function create_if_block32(ctx) {
+function create_if_block34(ctx) {
   let button;
   let current;
   button = new Button_default({
@@ -60270,7 +61751,7 @@ function create_if_block32(ctx) {
       $$scope: { ctx }
     }
   });
-  button.$on("click", ctx[31]);
+  button.$on("click", ctx[32]);
   return {
     c() {
       create_component(button.$$.fragment);
@@ -60281,7 +61762,7 @@ function create_if_block32(ctx) {
     },
     p(ctx2, dirty) {
       const button_changes = {};
-      if (dirty[0] & 128 | dirty[1] & 32) {
+      if (dirty[0] & 256 | dirty[1] & 64) {
         button_changes.$$scope = { dirty, ctx: ctx2 };
       }
       button.$set(button_changes);
@@ -60304,7 +61785,7 @@ function create_if_block32(ctx) {
 function create_default_slot_122(ctx) {
   let icon;
   let t0;
-  let t1_value = ctx[7]("components.data-grid.row.add") + "";
+  let t1_value = ctx[8]("components.data-grid.row.add") + "";
   let t1;
   let current;
   icon = new Icon_default({ props: { name: "plus" } });
@@ -60321,7 +61802,7 @@ function create_default_slot_122(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if ((!current || dirty[0] & 128) && t1_value !== (t1_value = ctx2[7]("components.data-grid.row.add") + ""))
+      if ((!current || dirty[0] & 256) && t1_value !== (t1_value = ctx2[8]("components.data-grid.row.add") + ""))
         set_data(t1, t1_value);
     },
     i(local) {
@@ -60343,18 +61824,18 @@ function create_default_slot_122(ctx) {
     }
   };
 }
-function create_default_slot32(ctx) {
+function create_default_slot33(ctx) {
   let span;
   let span_style_value;
   let current;
-  let if_block = !ctx[1] && create_if_block32(ctx);
+  let if_block = !ctx[2] && create_if_block34(ctx);
   return {
     c() {
       var _a, _b;
       span = element("span");
       if (if_block)
         if_block.c();
-      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
+      attr(span, "style", span_style_value = `width: ${60 + ((_b = (_a = ctx[10][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`);
       attr(span, "class", "svelte-8irtc3");
     },
     m(target, anchor) {
@@ -60365,14 +61846,14 @@ function create_default_slot32(ctx) {
     },
     p(ctx2, dirty) {
       var _a, _b;
-      if (!ctx2[1]) {
+      if (!ctx2[2]) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty[0] & 2) {
+          if (dirty[0] & 4) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block32(ctx2);
+          if_block = create_if_block34(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(span, null);
@@ -60384,7 +61865,7 @@ function create_default_slot32(ctx) {
         });
         check_outros();
       }
-      if (!current || dirty[0] & 512 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[9][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
+      if (!current || dirty[0] & 1024 && span_style_value !== (span_style_value = `width: ${60 + ((_b = (_a = ctx2[10][0]) == null ? void 0 : _a.width) != null ? _b : 0)}`)) {
         attr(span, "style", span_style_value);
       }
     },
@@ -60406,7 +61887,7 @@ function create_default_slot32(ctx) {
     }
   };
 }
-function create_fragment100(ctx) {
+function create_fragment102(ctx) {
   let div;
   let gridheader;
   let t0;
@@ -60417,24 +61898,24 @@ function create_fragment100(ctx) {
   let current;
   gridheader = new GridHeader_default({
     props: {
-      columns: ctx[9],
-      onResize: ctx[24],
-      onFinalizeResize: ctx[25],
-      onColumnMenu: ctx[26]
+      columns: ctx[10],
+      onResize: ctx[25],
+      onFinalizeResize: ctx[26],
+      onColumnMenu: ctx[27]
     }
   });
-  let each_value = ctx[8];
+  let each_value = ctx[9];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block17(get_each_context17(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block18(get_each_context18(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
   });
   gridcellgroup = new GridCellGroup_default({
     props: {
-      index: ctx[8].length + 2,
-      $$slots: { default: [create_default_slot32] },
+      index: ctx[9].length + 2,
+      $$slots: { default: [create_default_slot33] },
       $$scope: { ctx }
     }
   });
@@ -60449,8 +61930,8 @@ function create_fragment100(ctx) {
       t1 = space();
       create_component(gridcellgroup.$$.fragment);
       attr(div, "role", "grid");
-      attr(div, "aria-colcount", div_aria_colcount_value = ctx[9].length + 1);
-      attr(div, "aria-rowcount", div_aria_rowcount_value = ctx[8].length + 2);
+      attr(div, "aria-colcount", div_aria_colcount_value = ctx[10].length + 1);
+      attr(div, "aria-rowcount", div_aria_rowcount_value = ctx[9].length + 2);
       attr(div, "class", "svelte-8irtc3");
     },
     m(target, anchor) {
@@ -60466,23 +61947,23 @@ function create_fragment100(ctx) {
     },
     p(ctx2, dirty) {
       const gridheader_changes = {};
-      if (dirty[0] & 512)
-        gridheader_changes.columns = ctx2[9];
+      if (dirty[0] & 1024)
+        gridheader_changes.columns = ctx2[10];
       if (dirty[0] & 1)
-        gridheader_changes.onResize = ctx2[24];
-      if (dirty[0] & 4)
-        gridheader_changes.onFinalizeResize = ctx2[25];
+        gridheader_changes.onResize = ctx2[25];
+      if (dirty[0] & 8)
+        gridheader_changes.onFinalizeResize = ctx2[26];
       gridheader.$set(gridheader_changes);
-      if (dirty[0] & 15216) {
-        each_value = ctx2[8];
+      if (dirty[0] & 30434) {
+        each_value = ctx2[9];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context17(ctx2, each_value, i2);
+          const child_ctx = get_each_context18(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block17(child_ctx);
+            each_blocks[i2] = create_each_block18(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(div, t1);
@@ -60495,16 +61976,16 @@ function create_fragment100(ctx) {
         check_outros();
       }
       const gridcellgroup_changes = {};
-      if (dirty[0] & 256)
-        gridcellgroup_changes.index = ctx2[8].length + 2;
-      if (dirty[0] & 650 | dirty[1] & 32) {
+      if (dirty[0] & 512)
+        gridcellgroup_changes.index = ctx2[9].length + 2;
+      if (dirty[0] & 1300 | dirty[1] & 64) {
         gridcellgroup_changes.$$scope = { dirty, ctx: ctx2 };
       }
       gridcellgroup.$set(gridcellgroup_changes);
-      if (!current || dirty[0] & 512 && div_aria_colcount_value !== (div_aria_colcount_value = ctx2[9].length + 1)) {
+      if (!current || dirty[0] & 1024 && div_aria_colcount_value !== (div_aria_colcount_value = ctx2[10].length + 1)) {
         attr(div, "aria-colcount", div_aria_colcount_value);
       }
-      if (!current || dirty[0] & 256 && div_aria_rowcount_value !== (div_aria_rowcount_value = ctx2[8].length + 2)) {
+      if (!current || dirty[0] & 512 && div_aria_rowcount_value !== (div_aria_rowcount_value = ctx2[9].length + 2)) {
         attr(div, "aria-rowcount", div_aria_rowcount_value);
       }
     },
@@ -60536,16 +62017,17 @@ function create_fragment100(ctx) {
     }
   };
 }
-function instance100($$self, $$props, $$invalidate) {
+function instance102($$self, $$props, $$invalidate) {
   let t3;
   let visibleColumns;
   let sortedColumns;
   let sortedRows;
   let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(23, $i18n = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(24, $i18n = $$value));
   let { columns } = $$props;
   let { rows } = $$props;
   let { sortModel } = $$props;
+  let { colorModel } = $$props;
   let { readonly } = $$props;
   let { onSortModelChange } = $$props;
   let { onColumnResize } = $$props;
@@ -60623,7 +62105,7 @@ function instance100($$self, $$props, $$invalidate) {
   const func_4 = (row, rowId, column) => createCellMenu(rowId, row, column);
   const func_5 = (rowId, event) => onRowNavigate(rowId, event.ctrlKey || event.metaKey);
   const navigate_handler = ({ detail: cell }) => {
-    $$invalidate(6, activeCell = [
+    $$invalidate(7, activeCell = [
       clamp(cell[0], 2, sortedColumns.length + 1),
       clamp(cell[1], 4, sortedRows.length + 3)
     ]);
@@ -60633,52 +62115,55 @@ function instance100($$self, $$props, $$invalidate) {
     if ("columns" in $$props2)
       $$invalidate(0, columns = $$props2.columns);
     if ("rows" in $$props2)
-      $$invalidate(14, rows = $$props2.rows);
+      $$invalidate(15, rows = $$props2.rows);
     if ("sortModel" in $$props2)
-      $$invalidate(15, sortModel = $$props2.sortModel);
+      $$invalidate(16, sortModel = $$props2.sortModel);
+    if ("colorModel" in $$props2)
+      $$invalidate(1, colorModel = $$props2.colorModel);
     if ("readonly" in $$props2)
-      $$invalidate(1, readonly = $$props2.readonly);
+      $$invalidate(2, readonly = $$props2.readonly);
     if ("onSortModelChange" in $$props2)
-      $$invalidate(16, onSortModelChange = $$props2.onSortModelChange);
+      $$invalidate(17, onSortModelChange = $$props2.onSortModelChange);
     if ("onColumnResize" in $$props2)
-      $$invalidate(2, onColumnResize = $$props2.onColumnResize);
+      $$invalidate(3, onColumnResize = $$props2.onColumnResize);
     if ("onRowAdd" in $$props2)
-      $$invalidate(3, onRowAdd = $$props2.onRowAdd);
+      $$invalidate(4, onRowAdd = $$props2.onRowAdd);
     if ("onRowChange" in $$props2)
-      $$invalidate(4, onRowChange = $$props2.onRowChange);
+      $$invalidate(5, onRowChange = $$props2.onRowChange);
     if ("onRowNavigate" in $$props2)
-      $$invalidate(5, onRowNavigate = $$props2.onRowNavigate);
+      $$invalidate(6, onRowNavigate = $$props2.onRowNavigate);
     if ("onColumnRename" in $$props2)
-      $$invalidate(17, onColumnRename = $$props2.onColumnRename);
+      $$invalidate(18, onColumnRename = $$props2.onColumnRename);
     if ("onColumnDelete" in $$props2)
-      $$invalidate(18, onColumnDelete = $$props2.onColumnDelete);
+      $$invalidate(19, onColumnDelete = $$props2.onColumnDelete);
     if ("onColumnHide" in $$props2)
-      $$invalidate(19, onColumnHide = $$props2.onColumnHide);
+      $$invalidate(20, onColumnHide = $$props2.onColumnHide);
     if ("onRowDelete" in $$props2)
-      $$invalidate(20, onRowDelete = $$props2.onRowDelete);
+      $$invalidate(21, onRowDelete = $$props2.onRowDelete);
     if ("onRowEdit" in $$props2)
-      $$invalidate(21, onRowEdit = $$props2.onRowEdit);
+      $$invalidate(22, onRowEdit = $$props2.onRowEdit);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty[0] & 8388608) {
+    if ($$self.$$.dirty[0] & 16777216) {
       $:
-        $$invalidate(7, t3 = $i18n.t);
+        $$invalidate(8, t3 = $i18n.t);
     }
     if ($$self.$$.dirty[0] & 1) {
       $:
-        $$invalidate(22, visibleColumns = columns.filter((column) => !column.hide));
+        $$invalidate(23, visibleColumns = columns.filter((column) => !column.hide));
     }
-    if ($$self.$$.dirty[0] & 4194304) {
+    if ($$self.$$.dirty[0] & 8388608) {
       $:
-        $$invalidate(9, sortedColumns = sortColumns(visibleColumns));
+        $$invalidate(10, sortedColumns = sortColumns(visibleColumns));
     }
-    if ($$self.$$.dirty[0] & 49152) {
+    if ($$self.$$.dirty[0] & 98304) {
       $:
-        $$invalidate(8, sortedRows = sortRows(rows, sortModel));
+        $$invalidate(9, sortedRows = sortRows(rows, sortModel));
     }
   };
   return [
     columns,
+    colorModel,
     readonly,
     onColumnResize,
     onRowAdd,
@@ -60715,21 +62200,22 @@ function instance100($$self, $$props, $$invalidate) {
 var DataGrid = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance100, create_fragment100, safe_not_equal, {
+    init(this, options, instance102, create_fragment102, safe_not_equal, {
       columns: 0,
-      rows: 14,
-      sortModel: 15,
-      readonly: 1,
-      onSortModelChange: 16,
-      onColumnResize: 2,
-      onRowAdd: 3,
-      onRowChange: 4,
-      onRowNavigate: 5,
-      onColumnRename: 17,
-      onColumnDelete: 18,
-      onColumnHide: 19,
-      onRowDelete: 20,
-      onRowEdit: 21
+      rows: 15,
+      sortModel: 16,
+      colorModel: 1,
+      readonly: 2,
+      onSortModelChange: 17,
+      onColumnResize: 3,
+      onRowAdd: 4,
+      onRowChange: 5,
+      onRowNavigate: 6,
+      onColumnRename: 18,
+      onColumnDelete: 19,
+      onColumnHide: 20,
+      onRowDelete: 21,
+      onRowEdit: 22
     }, add_css58, [-1, -1]);
   }
 };
@@ -60739,14 +62225,14 @@ var DataGrid_default = DataGrid;
 function add_css59(target) {
   append_styles(target, "svelte-zdcf2i", "div.svelte-zdcf2i{align-items:center;display:inline-flex;text-align:start}");
 }
-function get_each_context18(ctx, list, i2) {
+function get_each_context19(ctx, list, i2) {
   const child_ctx = ctx.slice();
   child_ctx[2] = list[i2].label;
   child_ctx[10] = list[i2].value;
   child_ctx[11] = list[i2].enabled;
   return child_ctx;
 }
-function create_each_block18(ctx) {
+function create_each_block19(ctx) {
   let menuitem;
   let current;
   function check_handler(...args) {
@@ -60791,13 +62277,13 @@ function create_each_block18(ctx) {
     }
   };
 }
-function create_default_slot33(ctx) {
+function create_default_slot34(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[0];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
-    each_blocks[i2] = create_each_block18(get_each_context18(ctx, each_value, i2));
+    each_blocks[i2] = create_each_block19(get_each_context19(ctx, each_value, i2));
   }
   const out = (i2) => transition_out(each_blocks[i2], 1, 1, () => {
     each_blocks[i2] = null;
@@ -60821,12 +62307,12 @@ function create_default_slot33(ctx) {
         each_value = ctx2[0];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
-          const child_ctx = get_each_context18(ctx2, each_value, i2);
+          const child_ctx = get_each_context19(ctx2, each_value, i2);
           if (each_blocks[i2]) {
             each_blocks[i2].p(child_ctx, dirty);
             transition_in(each_blocks[i2], 1);
           } else {
-            each_blocks[i2] = create_each_block18(child_ctx);
+            each_blocks[i2] = create_each_block19(child_ctx);
             each_blocks[i2].c();
             transition_in(each_blocks[i2], 1);
             each_blocks[i2].m(each_1_anchor.parentNode, each_1_anchor);
@@ -60861,7 +62347,7 @@ function create_default_slot33(ctx) {
     }
   };
 }
-function create_fragment101(ctx) {
+function create_fragment103(ctx) {
   let div;
   let t0;
   let t1;
@@ -60874,7 +62360,7 @@ function create_fragment101(ctx) {
       anchorEl: ctx[3],
       open: ctx[4],
       onClose: ctx[9],
-      $$slots: { default: [create_default_slot33] },
+      $$slots: { default: [create_default_slot34] },
       $$scope: { ctx }
     }
   });
@@ -60938,7 +62424,7 @@ function create_fragment101(ctx) {
     }
   };
 }
-function instance101($$self, $$props, $$invalidate) {
+function instance103($$self, $$props, $$invalidate) {
   let { items } = $$props;
   let { label } = $$props;
   let { onChange } = $$props;
@@ -60980,7 +62466,7 @@ function instance101($$self, $$props, $$invalidate) {
 var SwitchSelect = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance101, create_fragment101, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css59);
+    init(this, options, instance103, create_fragment103, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css59);
   }
 };
 var SwitchSelect_default = SwitchSelect;
@@ -60991,9 +62477,9 @@ function create_right_slot5(ctx) {
   let current;
   switchselect = new SwitchSelect_default({
     props: {
-      label: ctx[8].t("views.table.hide-fields"),
-      items: ctx[7].map(func6),
-      onChange: ctx[10]
+      label: ctx[10].t("views.table.hide-fields"),
+      items: ctx[9].map(func6),
+      onChange: ctx[12]
     }
   });
   return {
@@ -61006,10 +62492,10 @@ function create_right_slot5(ctx) {
     },
     p(ctx2, dirty) {
       const switchselect_changes = {};
-      if (dirty & 256)
-        switchselect_changes.label = ctx2[8].t("views.table.hide-fields");
-      if (dirty & 128)
-        switchselect_changes.items = ctx2[7].map(func6);
+      if (dirty & 1024)
+        switchselect_changes.label = ctx2[10].t("views.table.hide-fields");
+      if (dirty & 512)
+        switchselect_changes.items = ctx2[9].map(func6);
       switchselect.$set(switchselect_changes);
     },
     i(local) {
@@ -61027,7 +62513,7 @@ function create_right_slot5(ctx) {
     }
   };
 }
-function create_default_slot_216(ctx) {
+function create_default_slot_217(ctx) {
   let viewtoolbar;
   let current;
   viewtoolbar = new ViewToolbar_default({
@@ -61047,7 +62533,7 @@ function create_default_slot_216(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty & 33554816) {
+      if (dirty & 134219264) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -61073,23 +62559,24 @@ function create_default_slot_123(ctx) {
   let current;
   datagrid = new DataGrid_default({
     props: {
-      columns: ctx[7],
-      rows: ctx[6],
-      readonly: ctx[2],
-      onRowAdd: ctx[16],
-      onRowEdit: ctx[17],
-      onRowDelete: ctx[18],
-      onColumnHide: ctx[19],
-      onColumnRename: ctx[20],
-      onColumnDelete: ctx[21],
-      onRowChange: ctx[22],
-      onColumnResize: ctx[11],
-      onRowNavigate: ctx[23],
+      columns: ctx[9],
+      rows: ctx[8],
+      readonly: ctx[3],
+      colorModel: ctx[17],
+      onRowAdd: ctx[18],
+      onRowEdit: ctx[19],
+      onRowDelete: ctx[20],
+      onColumnHide: ctx[21],
+      onColumnRename: ctx[22],
+      onColumnDelete: ctx[23],
+      onRowChange: ctx[24],
+      onColumnResize: ctx[13],
+      onRowNavigate: ctx[25],
       sortModel: {
         field: (_b = (_a = ctx[0]) == null ? void 0 : _a.sortField) != null ? _b : "name",
         sort: ((_c = ctx[0]) == null ? void 0 : _c.sortAsc) ? "asc" : "desc"
       },
-      onSortModelChange: ctx[24]
+      onSortModelChange: ctx[26]
     }
   });
   return {
@@ -61103,33 +62590,35 @@ function create_default_slot_123(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2, _c2;
       const datagrid_changes = {};
-      if (dirty & 128)
-        datagrid_changes.columns = ctx2[7];
-      if (dirty & 64)
-        datagrid_changes.rows = ctx2[6];
-      if (dirty & 4)
-        datagrid_changes.readonly = ctx2[2];
-      if (dirty & 522)
-        datagrid_changes.onRowAdd = ctx2[16];
-      if (dirty & 552)
-        datagrid_changes.onRowEdit = ctx2[17];
-      if (dirty & 8)
-        datagrid_changes.onRowDelete = ctx2[18];
-      if (dirty & 776)
-        datagrid_changes.onColumnRename = ctx2[20];
-      if (dirty & 8)
-        datagrid_changes.onColumnDelete = ctx2[21];
-      if (dirty & 40)
-        datagrid_changes.onRowChange = ctx2[22];
       if (dirty & 512)
-        datagrid_changes.onRowNavigate = ctx2[23];
+        datagrid_changes.columns = ctx2[9];
+      if (dirty & 256)
+        datagrid_changes.rows = ctx2[8];
+      if (dirty & 8)
+        datagrid_changes.readonly = ctx2[3];
+      if (dirty & 36)
+        datagrid_changes.colorModel = ctx2[17];
+      if (dirty & 2066)
+        datagrid_changes.onRowAdd = ctx2[18];
+      if (dirty & 2192)
+        datagrid_changes.onRowEdit = ctx2[19];
+      if (dirty & 16)
+        datagrid_changes.onRowDelete = ctx2[20];
+      if (dirty & 3088)
+        datagrid_changes.onColumnRename = ctx2[22];
+      if (dirty & 16)
+        datagrid_changes.onColumnDelete = ctx2[23];
+      if (dirty & 144)
+        datagrid_changes.onRowChange = ctx2[24];
+      if (dirty & 2048)
+        datagrid_changes.onRowNavigate = ctx2[25];
       if (dirty & 1)
         datagrid_changes.sortModel = {
           field: (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.sortField) != null ? _b2 : "name",
           sort: ((_c2 = ctx2[0]) == null ? void 0 : _c2.sortAsc) ? "asc" : "desc"
         };
-      if (dirty & 17)
-        datagrid_changes.onSortModelChange = ctx2[24];
+      if (dirty & 65)
+        datagrid_changes.onSortModelChange = ctx2[26];
       datagrid.$set(datagrid_changes);
     },
     i(local) {
@@ -61147,14 +62636,14 @@ function create_default_slot_123(ctx) {
     }
   };
 }
-function create_default_slot34(ctx) {
+function create_default_slot35(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
   let current;
   viewheader = new ViewHeader_default({
     props: {
-      $$slots: { default: [create_default_slot_216] },
+      $$slots: { default: [create_default_slot_217] },
       $$scope: { ctx }
     }
   });
@@ -61178,12 +62667,12 @@ function create_default_slot34(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty & 33554816) {
+      if (dirty & 134219264) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty & 33555455) {
+      if (dirty & 134221823) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -61208,12 +62697,12 @@ function create_default_slot34(ctx) {
     }
   };
 }
-function create_fragment102(ctx) {
+function create_fragment104(ctx) {
   let viewlayout;
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot34] },
+      $$slots: { default: [create_default_slot35] },
       $$scope: { ctx }
     }
   });
@@ -61227,7 +62716,7 @@ function create_fragment102(ctx) {
     },
     p(ctx2, [dirty]) {
       const viewlayout_changes = {};
-      if (dirty & 33555455) {
+      if (dirty & 134221823) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -61264,7 +62753,7 @@ var func6 = (column) => ({
   value: column.field,
   enabled: !column.hide
 });
-function instance102($$self, $$props, $$invalidate) {
+function instance104($$self, $$props, $$invalidate) {
   let fields;
   let records;
   let fieldConfig;
@@ -61272,13 +62761,14 @@ function instance102($$self, $$props, $$invalidate) {
   let rows;
   let $i18n;
   let $app;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(9, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(10, $i18n = $$value));
+  component_subscribe($$self, app, ($$value) => $$invalidate(11, $app = $$value));
   var _a;
   let { project } = $$props;
   let { frame } = $$props;
   let { readonly } = $$props;
   let { api: api2 } = $$props;
+  let { getRecordColor } = $$props;
   let { config } = $$props;
   let { onConfigChange } = $$props;
   function handleVisibilityChange(field, enabled) {
@@ -61297,29 +62787,36 @@ function instance102($$self, $$props, $$invalidate) {
     }));
     onConfigChange(config);
   }
-  const func_14 = () => {
+  const func_14 = (rowId) => {
+    const record = frame.records.find((record2) => record2.id === rowId);
+    if (record) {
+      return getRecordColor(record);
+    }
+    return null;
+  };
+  const func_2 = () => {
     new CreateNoteModal($app, project, (name, templatePath, project2) => {
       api2.addRecord(createDataRecord(name, project2), templatePath);
     }).open();
   };
-  const func_2 = (id, values) => {
+  const func_3 = (id, values) => {
     new EditNoteModal($app, fields, (record) => {
       api2.updateRecord(record, fields);
     }, { id, values }).open();
   };
-  const func_3 = (id) => api2.deleteRecord(id);
-  const func_4 = (column) => handleVisibilityChange(column.field, false);
-  const func_5 = (field) => {
+  const func_4 = (id) => api2.deleteRecord(id);
+  const func_5 = (column) => handleVisibilityChange(column.field, false);
+  const func_6 = (field) => {
     new InputDialogModal($app, $i18n.t("views.table.rename-field"), $i18n.t("views.table.rename"), (value) => {
       api2.renameField(field, value);
     }, field).open();
   };
-  const func_6 = (field) => api2.deleteField(field);
-  const func_7 = (rowId, row) => {
+  const func_7 = (field) => api2.deleteField(field);
+  const func_8 = (rowId, row) => {
     api2.updateRecord({ id: rowId, values: row }, fields);
   };
-  const func_8 = (rowId, openNew) => $app.workspace.openLinkText(rowId, "", openNew);
-  const func_9 = (field, sort4) => {
+  const func_9 = (rowId, openNew) => $app.workspace.openLinkText(rowId, "", openNew);
+  const func_10 = (field, sort4) => {
     onConfigChange(__spreadProps(__spreadValues({}, config), {
       sortField: field,
       sortAsc: sort4 === "asc"
@@ -61329,28 +62826,30 @@ function instance102($$self, $$props, $$invalidate) {
     if ("project" in $$props2)
       $$invalidate(1, project = $$props2.project);
     if ("frame" in $$props2)
-      $$invalidate(12, frame = $$props2.frame);
+      $$invalidate(2, frame = $$props2.frame);
     if ("readonly" in $$props2)
-      $$invalidate(2, readonly = $$props2.readonly);
+      $$invalidate(3, readonly = $$props2.readonly);
     if ("api" in $$props2)
-      $$invalidate(3, api2 = $$props2.api);
+      $$invalidate(4, api2 = $$props2.api);
+    if ("getRecordColor" in $$props2)
+      $$invalidate(5, getRecordColor = $$props2.getRecordColor);
     if ("config" in $$props2)
       $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
-      $$invalidate(4, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(6, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 4096) {
+    if ($$self.$$.dirty & 4) {
       $:
-        $$invalidate(5, { fields, records } = frame, fields, ($$invalidate(15, records), $$invalidate(12, frame)));
+        $$invalidate(7, { fields, records } = frame, fields, ($$invalidate(16, records), $$invalidate(2, frame)));
     }
-    if ($$self.$$.dirty & 8193) {
+    if ($$self.$$.dirty & 16385) {
       $:
-        $$invalidate(14, fieldConfig = $$invalidate(13, _a = config === null || config === void 0 ? void 0 : config.fieldConfig) !== null && _a !== void 0 ? _a : {});
+        $$invalidate(15, fieldConfig = $$invalidate(14, _a = config === null || config === void 0 ? void 0 : config.fieldConfig) !== null && _a !== void 0 ? _a : {});
     }
-    if ($$self.$$.dirty & 16416) {
+    if ($$self.$$.dirty & 32896) {
       $:
-        $$invalidate(7, columns = fields.filter((field) => {
+        $$invalidate(9, columns = fields.filter((field) => {
           if (field.repeated) {
             return field.type === DataFieldType.String;
           }
@@ -61369,16 +62868,18 @@ function instance102($$self, $$props, $$invalidate) {
           return weight ? Object.assign(Object.assign({}, colDef), { weight }) : colDef;
         }));
     }
-    if ($$self.$$.dirty & 32768) {
+    if ($$self.$$.dirty & 65536) {
       $:
-        $$invalidate(6, rows = records.map(({ id, values }) => ({ rowId: id, row: values })));
+        $$invalidate(8, rows = records.map(({ id, values }) => ({ rowId: id, row: values })));
     }
   };
   return [
     config,
     project,
+    frame,
     readonly,
     api2,
+    getRecordColor,
     onConfigChange,
     fields,
     rows,
@@ -61387,7 +62888,6 @@ function instance102($$self, $$props, $$invalidate) {
     $app,
     handleVisibilityChange,
     handleWidthChange,
-    frame,
     _a,
     fieldConfig,
     records,
@@ -61399,19 +62899,21 @@ function instance102($$self, $$props, $$invalidate) {
     func_6,
     func_7,
     func_8,
-    func_9
+    func_9,
+    func_10
   ];
 }
 var TableView = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance102, create_fragment102, safe_not_equal, {
+    init(this, options, instance104, create_fragment104, safe_not_equal, {
       project: 1,
-      frame: 12,
-      readonly: 2,
-      api: 3,
+      frame: 2,
+      readonly: 3,
+      api: 4,
+      getRecordColor: 5,
       config: 0,
-      onConfigChange: 4
+      onConfigChange: 6
     });
   }
 };
@@ -61444,7 +62946,8 @@ var TableView2 = class extends ProjectView {
           project: props.project,
           readonly: props.readonly,
           config: props.config,
-          onConfigChange: props.saveConfig
+          onConfigChange: props.saveConfig,
+          getRecordColor: props.getRecordColor
         }
       });
     });
@@ -61504,8 +63007,8 @@ var ProjectsView = class extends import_obsidian52.ItemView {
         const registerView = plugin2 == null ? void 0 : plugin2.onRegisterProjectView;
         if (registerView) {
           const create = registerView.bind(plugin2);
-          const instance103 = create();
-          views[instance103.getViewType()] = instance103;
+          const instance105 = create();
+          views[instance105.getViewType()] = instance105;
         }
       }
     }

@@ -91,8 +91,8 @@ If your plugin does not need CSS, delete this file.
 }
 
 
-.chronology-cell-other-months {
-    color: var(--text-faint);
+.chronology-other-month {
+    color: var(--text-muted);
 }
 
 
@@ -192,6 +192,26 @@ If your plugin does not need CSS, delete this file.
 
 .commented-chrono-temp-note:hover:before {
     display: block;
+}
+
+
+.chronology-noteslist-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
+   
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.chronology-noteslist-container .chronology-noteslist-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.chronology-noteslist-container .chronology-noteslist-wrapper .chrono-temp-note {
+    margin-top: 3px;
 }
 
 .chrono-temp-note:hover {

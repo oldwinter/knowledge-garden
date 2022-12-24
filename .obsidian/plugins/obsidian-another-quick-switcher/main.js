@@ -1457,6 +1457,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
     this.settings = settings;
     this.initialCommand = command;
     this.command = command;
+    this.originFile = this.appHelper.getActiveFile();
     this.limit = this.settings.maxNumberOfSuggestions;
     this.setHotkeys();
     this.phantomItems = this.settings.showExistingFilesOnly ? [] : this.appHelper.searchPhantomFiles().map((x) => ({
@@ -1479,16 +1480,44 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
       true
     );
   }
+  onOpen() {
+    var _a;
+    super.onOpen();
+    if (this.command.floating) {
+      (_a = activeWindow.activeDocument.querySelector(".modal-bg")) == null ? void 0 : _a.addClass("another-quick-switcher__floating-modal-bg");
+      const promptEl = activeWindow.activeDocument.querySelector(".prompt");
+      promptEl == null ? void 0 : promptEl.addClass("another-quick-switcher__floating-prompt");
+      const markdownView = this.appHelper.getMarkdownViewInActiveLeaf();
+      if (markdownView) {
+        const windowWidth = activeWindow.innerWidth;
+        const windowHeight = activeWindow.innerHeight;
+        const modalWidth = this.modalEl.offsetWidth;
+        const modalHeight = this.modalEl.offsetHeight;
+        const {
+          x: leafX,
+          y: leafY,
+          width: leafWidth
+        } = markdownView.containerEl.getBoundingClientRect();
+        const { y: promptY } = promptEl.getBoundingClientRect();
+        const left = Math.min(
+          windowWidth - modalWidth - 30,
+          leafX + leafWidth / 1.5
+        );
+        const top = Math.min(windowHeight - modalHeight - 10, leafY + promptY);
+        promptEl == null ? void 0 : promptEl.setAttribute("style", `left: ${left}px; top: ${top}px`);
+      }
+    }
+  }
   indexingItems() {
     var _a;
     const starredPathMap = keyBy(
       this.appHelper.getStarredFilePaths(),
       (x) => x
     );
-    const activeFilePath = (_a = app.workspace.getActiveFile()) == null ? void 0 : _a.path;
+    const originFilePath = (_a = this.originFile) == null ? void 0 : _a.path;
     const start = performance.now();
     const markdownItems = app.vault.getMarkdownFiles().filter(
-      (x) => x.path !== activeFilePath && app.metadataCache.getFileCache(x)
+      (x) => x.path !== originFilePath && app.metadataCache.getFileCache(x)
     ).map((x) => {
       var _a2, _b, _c, _d, _e, _f;
       const cache = app.metadataCache.getFileCache(x);
@@ -1541,17 +1570,15 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
           items = items.filter(
             (x) => {
               var _a, _b, _c;
-              return (_c = backlinksMap[(_b = (_a = this.appHelper.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : ""]) == null ? void 0 : _c.has(
-                x.file.path
-              );
+              return (_c = backlinksMap[(_b = (_a = this.originFile) == null ? void 0 : _a.path) != null ? _b : ""]) == null ? void 0 : _c.has(x.file.path);
             }
           );
           break;
         case "link":
-          const activeFileLinkMap = this.appHelper.createActiveFileLinkMap();
-          items = items.filter((x) => activeFileLinkMap[x.file.path]).sort(
+          const originFileLinkMap = this.appHelper.createActiveFileLinkMap();
+          items = items.filter((x) => originFileLinkMap[x.file.path]).sort(
             sorter(
-              (x) => activeFileLinkMap[x.file.path].position.start.offset
+              (x) => originFileLinkMap[x.file.path].position.start.offset
             )
           );
           break;
@@ -1722,10 +1749,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
     if (item.phantom) {
       fileToOpened = await this.app.vault.create(item.file.path, "");
     }
-    const offset = this.command.searchTarget === "backlink" ? this.appHelper.findFirstLinkOffset(
-      item.file,
-      this.app.workspace.getActiveFile()
-    ) : void 0;
+    const offset = this.command.searchTarget === "backlink" ? this.appHelper.findFirstLinkOffset(item.file, this.originFile) : void 0;
     if (!option.keepOpen) {
       this.close();
     }
@@ -1781,23 +1805,25 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
         this.inputEl.dispatchEvent(new Event("input"));
       }
     });
-    this.registerKeys("open in new tab", () => {
-      this.chooseCurrentSuggestion("new-tab");
+    this.registerKeys("open in new tab", async () => {
+      await this.chooseCurrentSuggestion("new-tab");
     });
-    this.registerKeys("open in new pane (horizontal)", () => {
-      this.chooseCurrentSuggestion("new-pane-horizontal");
+    this.registerKeys("open in new pane (horizontal)", async () => {
+      await this.chooseCurrentSuggestion("new-pane-horizontal");
     });
-    this.registerKeys("open in new pane (vertical)", () => {
-      this.chooseCurrentSuggestion("new-pane-vertical");
+    this.registerKeys("open in new pane (vertical)", async () => {
+      await this.chooseCurrentSuggestion("new-pane-vertical");
     });
-    this.registerKeys("open in new window", () => {
-      this.chooseCurrentSuggestion("new-window");
+    this.registerKeys("open in new window", async () => {
+      await this.chooseCurrentSuggestion("new-window");
     });
-    this.registerKeys("open in popup", () => {
-      this.chooseCurrentSuggestion("popup");
+    this.registerKeys("open in popup", async () => {
+      await this.chooseCurrentSuggestion("popup");
     });
-    this.registerKeys("open in new tab in background", () => {
-      this.chooseCurrentSuggestion("new-tab-background", { keepOpen: true });
+    this.registerKeys("open in new tab in background", async () => {
+      await this.chooseCurrentSuggestion("new-tab-background", {
+        keepOpen: true
+      });
     });
     this.registerKeys("open all in new tabs", () => {
       this.close();
@@ -1810,17 +1836,20 @@ var AnotherQuickSwitcherModal = class extends import_obsidian3.SuggestModal {
         })
       );
     });
-    this.registerKeys("create", () => {
-      this.handleCreateNew(this.searchQuery, "same-tab");
+    this.registerKeys("preview", async () => {
+      await this.chooseCurrentSuggestion("same-tab", { keepOpen: true });
     });
-    this.registerKeys("create in new tab", () => {
-      this.handleCreateNew(this.searchQuery, "new-tab");
+    this.registerKeys("create", async () => {
+      await this.handleCreateNew(this.searchQuery, "same-tab");
     });
-    this.registerKeys("create in new window", () => {
-      this.handleCreateNew(this.searchQuery, "new-window");
+    this.registerKeys("create in new tab", async () => {
+      await this.handleCreateNew(this.searchQuery, "new-tab");
     });
-    this.registerKeys("create in new popup", () => {
-      this.handleCreateNew(this.searchQuery, "popup");
+    this.registerKeys("create in new window", async () => {
+      await this.handleCreateNew(this.searchQuery, "new-window");
+    });
+    this.registerKeys("create in new popup", async () => {
+      await this.handleCreateNew(this.searchQuery, "popup");
     });
     this.registerKeys("open in google", () => {
       activeWindow.open(`https://www.google.com/search?q=${this.searchQuery}`);
@@ -2718,6 +2747,7 @@ var createDefaultHotkeys = () => ({
     "open in popup": [],
     "open in new tab in background": [{ modifiers: ["Alt"], key: "o" }],
     "open all in new tabs": [{ modifiers: ["Mod", "Shift", "Alt"], key: "o" }],
+    preview: [{ modifiers: ["Mod"], key: "," }],
     create: [{ modifiers: ["Shift"], key: "Enter" }],
     "create in new tab": [{ modifiers: ["Mod", "Shift"], key: "Enter" }],
     "create in new window": [{ modifiers: ["Mod", "Shift"], key: "o" }],
@@ -2769,6 +2799,7 @@ var createDefaultSearchCommand = () => ({
     header: false
   },
   searchTarget: "markdown",
+  floating: false,
   showFrontMatter: false,
   excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
   defaultInput: "",
@@ -2787,6 +2818,7 @@ var createPreSettingSearchCommands = () => [
       link: false
     },
     searchTarget: "markdown",
+    floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
@@ -2804,6 +2836,7 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "markdown",
+    floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
@@ -2826,6 +2859,7 @@ var createPreSettingSearchCommands = () => [
       header: true
     },
     searchTarget: "markdown",
+    floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
@@ -2851,6 +2885,7 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "markdown",
+    floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
@@ -2868,6 +2903,7 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "backlink",
+    floating: false,
     showFrontMatter: false,
     excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
     defaultInput: "",
@@ -3226,6 +3262,12 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
     new import_obsidian8.Setting(div).setName("Search target").addDropdown((dc) => {
       dc.addOptions(mirror([...searchTargetList])).setValue(command.searchTarget).onChange(async (value) => {
         command.searchTarget = value;
+      });
+    });
+    new import_obsidian8.Setting(div).setName("Floating").addToggle((cb) => {
+      cb.setValue(command.floating).onChange(async (value) => {
+        command.floating = value;
+        this.display();
       });
     });
     new import_obsidian8.Setting(div).setName("Show front matter").addToggle((cb) => {

@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "221a75a6ec9cfb73",
+        "id": "d2a0a751d1be3ce3",
         "type": "tabs",
         "children": [
           {
-            "id": "598acdad04ddbf5d",
+            "id": "c98a862b47fd0a9c",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
-            }
-          },
-          {
-            "id": "c9139ddeeabb35b8",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Extras/Canvas/🧩白板canvas-示意图.canvas",
-                "viewState": {
-                  "x": 402.0126315789473,
-                  "y": 588.3004631578948,
-                  "zoom": -1.2271573695051972,
-                  "snapToGrid": true
-                }
-              }
             }
           }
         ]
@@ -186,6 +170,14 @@
               "type": "chronology-calendar-view",
               "state": {}
             }
+          },
+          {
+            "id": "b12eeafcaf534158",
+            "type": "leaf",
+            "state": {
+              "type": "online.louis01.ava",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
@@ -209,20 +201,22 @@
       "obsidian42-brat:BRAT": false,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "omnisearch:Omnisearch": true,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "598acdad04ddbf5d",
+  "active": "c98a862b47fd0a9c",
   "lastOpenFiles": [
     "Extras/Canvas/🧩白板canvas-示意图.canvas",
+    "Calendar/Daily notes/2022-12-23.md",
+    "Calendar/Daily notes/2022-12-24.md",
+    "Cards/永久笔记/人人都是双标狗.md",
     "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
     "Calendar/Daily notes/2022-12-21.md",
     "Spaces/2-Area/运动与健康/酒精摄入指标.md",
     "Spaces/2-Area/运动与健康/传统健美无差别 Mr Olympia.md",
     "🧰 本库指南/Tutorials/∑ 人+科技融合.md",
-    "Spaces/2-Area/运动与健康/疫情期间健身如何提高免疫力.md",
-    "🧰 本库指南/Tutorials/∑ 本库 ACCESS 工作流汇总.md",
-    "Calendar/Daily notes/2022-12-20.md",
-    "Atlas/TOCs/§ TOCs.md"
+    "Spaces/2-Area/运动与健康/疫情期间健身如何提高免疫力.md"
   ]
 }

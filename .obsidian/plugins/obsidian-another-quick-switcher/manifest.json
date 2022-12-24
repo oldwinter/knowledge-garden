@@ -1,10 +1,1 @@
-{
-  "id": "obsidian-another-quick-switcher",
-  "name": "Another Quick Switcher",
-  "version": "7.5.2",
-  "minAppVersion": "0.16.0",
-  "description": "This is an Obsidian plugin which is another choice of Quick switcher.",
-  "author": "tadashi-aikawa",
-  "authorUrl": "https://github.com/tadashi-aikawa",
-  "isDesktopOnly": false
-}
+{"id":"obsidian-another-quick-switcher","name":"Another Quick Switcher","version":"7.6.0","minAppVersion":"0.16.0","description":"This is an Obsidian plugin which is another choice of Quick switcher.","author":"tadashi-aikawa","authorUrl":"https://github.com/tadashi-aikawa","isDesktopOnly":false}
