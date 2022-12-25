@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-23.md",
+                "file": "Cards/永久笔记/个人信息管理系统.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#待办",
+                "query": "阿古朵",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md"
+                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md"
               }
             }
           },
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🍀 花园导览/🧀 知识管理.md",
+                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 277.5024719238281
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -187,14 +187,6 @@
             }
           },
           {
-            "id": "b12eeafcaf534158",
-            "type": "leaf",
-            "state": {
-              "type": "online.louis01.ava",
-              "state": {}
-            }
-          },
-          {
             "id": "fbf20229279daad7",
             "type": "leaf",
             "state": {
@@ -203,7 +195,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -230,15 +222,15 @@
   },
   "active": "c98a862b47fd0a9c",
   "lastOpenFiles": [
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "🧰 本库指南/🆕 本库更新日志.md",
-    "AboutTheGarden.md",
-    "HOMEPAGE.md",
-    "README.md",
-    "Extras/Canvas/🧩王者荣耀.canvas",
+    "Sources/Articles/Hypothesis/使用Hypothesis的约束条件.md",
+    "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
+    "Calendar/Daily notes/2022-12-13.md",
+    "Calendar/Daily notes/AI加持的服务和助手.md",
+    "Calendar/Daily notes/2022-12-16.md",
+    "Extras/Canvas/🧩白板canvas-示意图.canvas",
     "Calendar/Daily notes/2022-12-23.md",
     "Calendar/Daily notes/2022-12-25.md",
-    "Calendar/Daily notes/2022-12-16.md",
-    "Calendar/Daily notes/2022-12-24.md"
+    "Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md",
+    "Cards/永久笔记/个人信息管理系统.md"
   ]
 }

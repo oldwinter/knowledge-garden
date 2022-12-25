@@ -1,5 +1,6 @@
 .another-quick-switcher__floating-prompt {
     width: 33vw;
+    min-width: 500px;
     right: 30px;
 }
 
@@ -53,6 +54,18 @@
 .another-quick-switcher__item__title {
     flex: 1;
     padding-right: 1rem;
+}
+
+.another-quick-switcher__item__extension {
+    display: inline-block;
+    text-align: center;
+    min-width: 2rem;
+    border-radius: 8px;
+    font-size: 80%;
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--background-modifier-hover);
+    margin-left: 5px;
+    padding: 1px 5px;
 }
 
 .another-quick-switcher__item__hot-key-guide::before {
@@ -168,6 +181,7 @@
 
 .another-quick-switcher__grep__floating-prompt {
     width: 33vw;
+    min-width: 500px;
     right: 30px;
 }
 
