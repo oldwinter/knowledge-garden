@@ -1,0 +1,41 @@
+{
+  "initialSearchType": "backward",
+  "offset": 7,
+  "onset": "2020-03-30",
+  "duration": 14,
+  "showElements": {
+    "heading": true,
+    "link": true,
+    "tag": true,
+    "listItems": true
+  },
+  "headingLevel": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "allRootItems": true,
+  "displayFileInfo": "lines",
+  "wordsToIgnore": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  },
+  "inlinePreview": true,
+  "tooltipPreview": true,
+  "tooltipPreviewDirection": "left",
+  "primeElement": "none",
+  "includeOnly": "none",
+  "wordsToInclude": [],
+  "includeBeginning": true,
+  "wordsToExclude": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  }
+}

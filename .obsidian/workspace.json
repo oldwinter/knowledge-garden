@@ -11,15 +11,12 @@
             "id": "c98a862b47fd0a9c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Extras/Canvas/🧩王者荣耀.canvas",
-                "viewState": {
-                  "x": -222.65103448275863,
-                  "y": -144.55724137931048,
-                  "zoom": -0.1388847541482956,
-                  "snapToGrid": true
-                }
+                "file": "🍀 花园导览/🧀 知识管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           },
@@ -29,15 +26,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Calendar/Daily notes/2022-12-23.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "🍀 花园导览/🧀 知识管理.md"
               }
             }
           },
@@ -110,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "🍀 花园导览/🧀 知识管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +118,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "README.md",
+                "file": "🍀 花园导览/🧀 知识管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -157,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "🍀 花园导览/🧀 知识管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,28 +187,27 @@
             }
           },
           {
-            "id": "718947607c1265dd",
-            "type": "leaf",
-            "state": {
-              "type": "chronology-calendar-view",
-              "state": {}
-            }
-          },
-          {
             "id": "b12eeafcaf534158",
             "type": "leaf",
             "state": {
               "type": "online.louis01.ava",
               "state": {}
             }
+          },
+          {
+            "id": "fbf20229279daad7",
+            "type": "leaf",
+            "state": {
+              "type": "daily-note-outline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 318.5,
-    "collapsed": true
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,17 +228,17 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "1127ac870582a824",
+  "active": "c98a862b47fd0a9c",
   "lastOpenFiles": [
-    "Extras/Canvas/🧩王者荣耀.canvas",
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "🧰 本库指南/🆕 本库更新日志.md",
+    "AboutTheGarden.md",
+    "HOMEPAGE.md",
     "README.md",
-    "Extras/Canvas/🧩白板canvas-示意图.canvas",
+    "Extras/Canvas/🧩王者荣耀.canvas",
     "Calendar/Daily notes/2022-12-23.md",
-    "Calendar/Daily notes/2022-12-24.md",
-    "Cards/永久笔记/人人都是双标狗.md",
-    "Extras/Canvas/🧩数字时代如何更好地生活与工作.canvas",
-    "Calendar/Daily notes/2022-12-21.md",
-    "Spaces/2-Area/运动与健康/酒精摄入指标.md",
-    "Spaces/2-Area/运动与健康/传统健美无差别 Mr Olympia.md"
+    "Calendar/Daily notes/2022-12-25.md",
+    "Calendar/Daily notes/2022-12-16.md",
+    "Calendar/Daily notes/2022-12-24.md"
   ]
 }
