@@ -4,16 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "d2a0a751d1be3ce3",
+        "id": "16539e34e8a0bf57",
         "type": "tabs",
+        "dimension": 53.8866930171278,
         "children": [
           {
-            "id": "c98a862b47fd0a9c",
+            "id": "1127ac870582a824",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Extras/Canvas/🧩白板canvas-示意图.canvas",
+                "viewState": {
+                  "x": 67.1358160919537,
+                  "y": 610.2849655172416,
+                  "zoom": -1.2285385999035578,
+                  "snapToGrid": true
+                }
+              }
+            }
+          },
+          {
+            "id": "5a3466209325e0a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
+                "file": "Calendar/Daily notes/2022-12-29.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,19 +38,63 @@
             }
           },
           {
-            "id": "1127ac870582a824",
+            "id": "8229cc61be47cd17",
+            "type": "leaf",
+            "state": {
+              "type": "obsidian-projects",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "40985238e40c3cdb",
+        "type": "tabs",
+        "dimension": 46.113306982872196,
+        "children": [
+          {
+            "id": "ca88289f535635d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md",
+                "file": "README.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad1f9a6291744b78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Atlas/About Atlas.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f373fbf19b62c195",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HOMEPAGE.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -63,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "阿古朵",
+                "query": "tag:#视频笔记",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,9 +156,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md"
-              }
+              "state": {}
             }
           },
           {
@@ -106,7 +165,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +176,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -153,7 +210,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +255,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 318.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,25 +269,24 @@
       "templater-obsidian:Templater": true,
       "obsidian-weread-plugin:Weread": false,
       "obsidian-spaced-repetition:复习卡片": true,
-      "obsidian42-brat:BRAT": false,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "omnisearch:Omnisearch": true,
-      "obsidian-projects:Open projects": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "c98a862b47fd0a9c",
+  "active": "8229cc61be47cd17",
   "lastOpenFiles": [
-    "Sources/Articles/Hypothesis/使用Hypothesis的约束条件.md",
-    "Sources/Articles/Hypothesis/年度征文 - 我的效率系统三原则.md",
-    "Calendar/Daily notes/2022-12-13.md",
-    "Calendar/Daily notes/AI加持的服务和助手.md",
-    "Calendar/Daily notes/2022-12-16.md",
-    "Extras/Canvas/🧩白板canvas-示意图.canvas",
-    "Calendar/Daily notes/2022-12-23.md",
-    "Calendar/Daily notes/2022-12-25.md",
-    "Sources/Articles/常青笔记阅读笔记/用手机收集和分流，而不是（通常）阅读.md",
-    "Cards/永久笔记/个人信息管理系统.md"
+    "Calendar/Daily notes/2022-12-29.md",
+    "Calendar/Daily notes/[.md",
+    "Calendar/Daily notes/2022年度网络流行语.md",
+    "Calendar/Daily notes/🐤雪糕刺客.md",
+    "Cards/永久笔记/🐤PUA.md",
+    "Cards/永久笔记/🐤我真的会谢.md",
+    "Calendar/Daily notes/2022-12-28.md",
+    "Sources/Articles/常青笔记阅读笔记/使用笔记在内容中建立联想的优缺点.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记的维护近似于间隔重复.md",
+    "Cards/永久笔记/第二大脑与数字花园.md"
   ]
 }

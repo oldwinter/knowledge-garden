@@ -1,0 +1,47 @@
+:root {
+	--vignette-opacity: 1;
+	--fadeIn-duration: "2s";
+	--vignette-scale-linear: 20%;
+	--vignette-scale-radial: 50%;
+}
+
+.noscroll ::-webkit-scrollbar-thumb{
+	visibility: hidden;
+}
+
+.vignette-linear {
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, var(--vignette-opacity)) 0%,
+		rgba(0, 0, 0, 0) var(--vignette-scale-linear),
+		rgba(0, 0, 0, 0) calc(100% - var(--vignette-scale-linear)),
+		rgba(0, 0, 0, var(--vignette-opacity)) 100%
+	);
+}
+
+.vignette-radial {
+	background: radial-gradient(
+		circle,
+		rgba(0, 0, 0, 0) calc(100% - var(--vignette-scale-radial)),
+		rgba(0, 0, 0, var(--vignette-opacity)) 100%
+	);
+}
+
+.animate {
+	animation: fadeIn var(--fadeIn-duration);
+}
+
+.hide {
+	display: none !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(1.05);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

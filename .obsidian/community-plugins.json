@@ -4,8 +4,6 @@
   "obsidian-weread-plugin",
   "obsidian-spaced-repetition",
   "note-refactor-obsidian",
-  "obsidian-focus-plugin",
-  "obsidian42-brat",
   "obsidian-hypothesis-plugin",
   "obsidian-better-command-palette",
   "dataview",
@@ -22,7 +20,6 @@
   "omnisearch",
   "obsidian-query-control",
   "obsidian-plugin-update-tracker",
-  "obsidian-zoom",
   "quickadd",
   "obsidian-outliner",
   "obsidian-projects",
@@ -30,5 +27,6 @@
   "obsidian-linter",
   "obsidian-textgenerator-plugin",
   "cmdr",
-  "obsidian-daily-note-outline"
+  "obsidian-daily-note-outline",
+  "obsidian-prozen"
 ]

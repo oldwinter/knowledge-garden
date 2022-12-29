@@ -37,6 +37,8 @@ publish.js
 *.pdf
 *.epub
 *.mobi
+
+# 不上传office文件
 *.ppt
 *.pptx
 *.xls

@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-prozen",
+	"name": "ProZen",
+	"version": "0.3",
+	"minAppVersion": "0.15.0",
+	"description": "Enter Zen mode to focus on writing. The plugin expands current tab to full screen removing everything but content.",
+	"author": "Moskvitin",
+	"authorUrl": "https://moskvit.in",
+	"isDesktopOnly": true
+}

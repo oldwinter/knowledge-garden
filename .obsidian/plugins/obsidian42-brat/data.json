@@ -1,7 +1,5 @@
 {
-  "pluginList": [
-    "Make-md/makemd"
-  ],
+  "pluginList": [],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
   "updateAtStartup": true,

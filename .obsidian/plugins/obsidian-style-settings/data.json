@@ -55,7 +55,6 @@
   "customizable-page-header-buttons@@page-header-spacing-desktop": 8,
   "quick-explorer@@qe-obsidian-title": "qe-title-hide",
   "focus-plugin-css-options@@focus-plugin-opacity": 0.15,
-  "shimmering-focus@@no-tabbar-header-hybrid": true,
   "shimmering-focus@@normal-header-bar": true,
   "shimmering-focus@@show-sidebar-header-buttons": true,
   "shimmering-focus@@show-ribbon": false,
@@ -99,5 +98,11 @@
   "shimmering-focus@@hide-attachment-folders": false,
   "shimmering-focus@@mac-os-native": true,
   "things-style@@default-font-color": false,
-  "quick-explorer@@qe-hide-breadcrumbs": true
+  "quick-explorer@@qe-hide-breadcrumbs": true,
+  "shimmering-focus@@tabbar-when-one-tab": "hide-tabbar-when-one-tab",
+  "shimmering-focus@@no-active-line-highlight": false,
+  "shimmering-focus@@unrestricted-line-length-tables": true,
+  "things-style@@active-line": true,
+  "things-style@@h4-transform": "none",
+  "things-style@@h3-color": "#8B6CEF"
 }
