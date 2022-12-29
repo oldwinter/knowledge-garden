@@ -4,88 +4,32 @@
     "type": "split",
     "children": [
       {
-        "id": "16539e34e8a0bf57",
+        "id": "bb0f916608473e2a",
         "type": "tabs",
-        "dimension": 53.8866930171278,
         "children": [
           {
-            "id": "1127ac870582a824",
+            "id": "0e0dba939319d4a6",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Extras/Canvas/🧩白板canvas-示意图.canvas",
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
                 "viewState": {
-                  "x": 67.1358160919537,
-                  "y": 610.2849655172416,
-                  "zoom": -1.2285385999035578,
-                  "snapToGrid": true
+                  "x": -22.319999999999993,
+                  "y": -252.9599999999992,
+                  "zoom": 0,
+                  "snapToGrid": false
                 }
               }
             }
           },
           {
-            "id": "5a3466209325e0a0",
+            "id": "b7d5a80e74f48d80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2022-12-29.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8229cc61be47cd17",
-            "type": "leaf",
-            "state": {
-              "type": "obsidian-projects",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "40985238e40c3cdb",
-        "type": "tabs",
-        "dimension": 46.113306982872196,
-        "children": [
-          {
-            "id": "ca88289f535635d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad1f9a6291744b78",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Atlas/About Atlas.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f373fbf19b62c195",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HOMEPAGE.md",
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -93,8 +37,7 @@
             }
           }
         ],
-        "currentTab": 1,
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,7 +99,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md"
+              }
             }
           },
           {
@@ -165,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,6 +122,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -210,6 +157,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -224,7 +172,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5024719238281
+    "width": 277.5024719238281,
+    "collapsed": true
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -276,17 +225,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "8229cc61be47cd17",
+  "active": "b7d5a80e74f48d80",
   "lastOpenFiles": [
+    "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
+    "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
+    "Sources/Courses/DevOps实战笔记-石雪峰/Python.md",
+    "Sources/Courses/DevOps实战笔记-石雪峰/∑ DevOps实战笔记-石雪峰.md",
     "Calendar/Daily notes/2022-12-29.md",
-    "Calendar/Daily notes/[.md",
-    "Calendar/Daily notes/2022年度网络流行语.md",
-    "Calendar/Daily notes/🐤雪糕刺客.md",
-    "Cards/永久笔记/🐤PUA.md",
-    "Cards/永久笔记/🐤我真的会谢.md",
-    "Calendar/Daily notes/2022-12-28.md",
-    "Sources/Articles/常青笔记阅读笔记/使用笔记在内容中建立联想的优缺点.md",
-    "Sources/Articles/常青笔记阅读笔记/常青笔记的维护近似于间隔重复.md",
-    "Cards/永久笔记/第二大脑与数字花园.md"
+    "README.md",
+    "Atlas/About Atlas.md",
+    "Cards/永久笔记/中国居民膳食指南2022版.md",
+    "Spaces/2-Area/运动与健康/哈佛医学院推荐的超级食物更多的是营销概念.md",
+    "HOMEPAGE.md"
   ]
 }

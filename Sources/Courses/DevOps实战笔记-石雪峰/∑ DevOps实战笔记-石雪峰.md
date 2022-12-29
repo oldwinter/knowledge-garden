@@ -6,3 +6,9 @@ date modified: 2022-12-14
 
 - [[DevOps的定义、价值、实施与衡量]]
 - [[Devops如何让企业开始实施转型]]
+
+
+
+## 参考资料
+
+[[DevOps roadmap]]

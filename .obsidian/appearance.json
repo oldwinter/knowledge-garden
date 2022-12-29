@@ -11,7 +11,7 @@
     "隐藏LICENSE文件和logseq文件夹"
   ],
   "theme": "system",
-  "baseFontSize": 14,
+  "baseFontSize": 16,
   "baseFontSizeAction": false,
   "translucency": false,
   "accentColor": "",

@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"654a90e9659a11d8","x":-125,"y":-468,"width":250,"height":60,"color":"3","type":"text","text":"学习一门编程语言，能帮助自己实现自动化。"},
+		{"id":"cb9af17f24c2d2db","x":-620,"y":-638,"width":400,"height":50,"type":"file","file":"Sources/Courses/DevOps实战笔记-石雪峰/Python.md"},
+		{"id":"14d36b5a01b89581","x":-125,"y":-237,"width":250,"height":60,"type":"text","text":"理解各种操作系统基础概念"},
+		{"id":"21c8935a6ab7214a","x":206,"y":-687,"width":400,"height":76,"type":"file","file":"Cards/永久笔记/Golang.md"},
+		{"id":"2a5c9cde6b8ea30f","x":-628,"y":-438,"width":400,"height":50,"type":"file","file":"Sources/Courses/DevOps实战笔记-石雪峰/JavaScript.md"},
+		{"id":"eeb250b926e36fdd","x":-383,"y":-130,"width":250,"height":60,"type":"text","text":""},
+		{"id":"767f65b8838f310f","x":394,"y":-105,"width":250,"height":60,"type":"text","text":""}
+	],
+	"edges":[
+		{"id":"a270f21e89ecf3bd","fromNode":"654a90e9659a11d8","fromSide":"left","toNode":"cb9af17f24c2d2db","toSide":"right"},
+		{"id":"0506964e37f881f3","fromNode":"654a90e9659a11d8","fromSide":"bottom","toNode":"14d36b5a01b89581","toSide":"top"},
+		{"id":"a4adc2f16bd41ddf","fromNode":"654a90e9659a11d8","fromSide":"right","toNode":"21c8935a6ab7214a","toSide":"left"},
+		{"id":"8d45fb5dbad3e624","fromNode":"654a90e9659a11d8","fromSide":"left","toNode":"2a5c9cde6b8ea30f","toSide":"right"}
+	]
+}
