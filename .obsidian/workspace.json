@@ -13,10 +13,10 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
+                "file": "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas",
                 "viewState": {
-                  "x": -22.319999999999993,
-                  "y": -252.9599999999992,
+                  "x": 7.44,
+                  "y": 42.78,
                   "zoom": 0,
                   "snapToGrid": false
                 }
@@ -24,20 +24,54 @@
             }
           },
           {
-            "id": "b7d5a80e74f48d80",
+            "id": "0e0140c98fa14388",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
+                "file": "Spaces/3-Resource/golang入门与精通/∑ golang.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a0e7d1f58bf6381a",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
+                "viewState": {
+                  "x": -52.8266577629383,
+                  "y": -179.17526544240397,
+                  "zoom": -1.2239742862455045,
+                  "snapToGrid": false
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "78120fd2138f330e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ab5c71cd5243228",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md"
+                "file": "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas"
               }
             }
           },
@@ -110,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
+                "file": "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +156,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
+                "file": "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -157,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
+                "file": "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,8 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5024719238281,
-    "collapsed": true
+    "width": 222.50247192382812
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -225,17 +258,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "b7d5a80e74f48d80",
+  "active": "0e0dba939319d4a6",
   "lastOpenFiles": [
-    "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
-    "Sources/Courses/DevOps实战笔记-石雪峰/DevOps roadmap.md",
-    "Sources/Courses/DevOps实战笔记-石雪峰/Python.md",
-    "Sources/Courses/DevOps实战笔记-石雪峰/∑ DevOps实战笔记-石雪峰.md",
-    "Calendar/Daily notes/2022-12-29.md",
-    "README.md",
+    "Spaces/2-Area/运动与健康/∑ 健身补剂选择.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/2-Area/运动与健康/🧩运动健身路线图.canvas",
+    "Spaces/2-Area/运动与健康/未命名.md",
+    "Atlas/Canvas/🧩数字时代如何更好地生活与工作.canvas",
+    "Atlas/Canvas/🧩白板canvas-示意图.canvas",
     "Atlas/About Atlas.md",
-    "Cards/永久笔记/中国居民膳食指南2022版.md",
-    "Spaces/2-Area/运动与健康/哈佛医学院推荐的超级食物更多的是营销概念.md",
-    "HOMEPAGE.md"
+    "Spaces/3-Resource/计算机科学专题/go语言编程知识文档汇总.md",
+    "Spaces/3-Resource/计算机科学专题/Go安全编码规范.md",
+    "Spaces/3-Resource/计算机科学专题/现代软件工程资料汇总.md"
   ]
 }
