@@ -16,9 +16,55 @@ tags: 索引笔记
 		- 什么是域名
 		- 什么是web托管服务
 - HTML、CSS和JavaScript
-	- HTML
-		- 
-
+	- [[HTML]]
+	- [[CSS]]
+	- [[JavaScript]]
+- 版本控制系统
+	- [[🔗github]]
+	- [[🤖Git]]
+- web安全知识
+	- [[HTTPS]]
+	- [[CORS]]
+	- [[Content Security Policy]]
+	- [[OWASP Security Risks]]
+- 包管理
+	- [[pnpm、npm和yarn对比与选择]]
+- CSS前处理
+	- [[Sass]]
+	- [[PostCSS]]
+- 构建工具
+	- 静态检查与格式化
+		- [[Prettier]]
+		- [[Eslint]]
+	- Task Runners
+		- [[npm scripts]]
+	- Module Bundlers
+		- [[vite]]
+		- [[esbuild]]
+		- [[webpack]]
+- 选择一个框架
+	- [[React]]
+	- [[vue.js]]
+	- [[Angular]]
+- Modern CSS
+	- [[Styled Components]]
+	- [[CSS Modules]]
+- CSS 框架
+	- [[Tailwind]]
+	- [[Bootstrap]]
+	- [[Bulma]]
+- 应用测试
+	- [[Jest]]
+	- [[react-testing-library]]
+	- [[Cypress]]
+	- [[Playwright]]
+- 鉴权策略
+	- [[JWT]]
+	- [[OAuth]]
+	- [[SSO]]
+	- [[Basic Auth]]
+	- [[Session Auth]]
+- 
 
 
 ## 参考文献

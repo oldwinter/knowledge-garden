@@ -2,7 +2,7 @@
   "searchDelayMilliSeconds": 0,
   "maxNumberOfSuggestions": 64,
   "normalizeAccentsAndDiacritics": false,
-  "showDirectory": true,
+  "showDirectory": false,
   "showDirectoryAtNewLine": true,
   "showFullPathOfDirectory": true,
   "showAliasesOnTop": true,
@@ -93,6 +93,14 @@
           "key": "o"
         }
       ],
+      "preview": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": ","
+        }
+      ],
       "create": [
         {
           "modifiers": [
@@ -151,6 +159,14 @@
             "Shift"
           ],
           "key": "Enter"
+        }
+      ],
+      "show backlinks": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "h"
         }
       ]
     },
@@ -292,6 +308,24 @@
         }
       ],
       "open in popup": [],
+      "open in new tab in background": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "o"
+        }
+      ],
+      "open all in new tabs": [
+        {
+          "modifiers": [
+            "Mod",
+            "Shift",
+            "Alt"
+          ],
+          "key": "o"
+        }
+      ],
       "preview": [
         {
           "modifiers": [
@@ -310,7 +344,18 @@
         "link": true,
         "header": true
       },
-      "searchTarget": "markdown",
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
       "defaultInput": "",
       "commandPrefix": "",
       "sortPriorities": [
@@ -337,7 +382,18 @@
         "link": true,
         "header": true
       },
-      "searchTarget": "markdown",
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
       "defaultInput": "",
       "commandPrefix": ":r ",
       "sortPriorities": [
@@ -360,7 +416,18 @@
         "link": false,
         "header": false
       },
-      "searchTarget": "markdown",
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
       "defaultInput": "",
       "commandPrefix": ":t ",
       "sortPriorities": [
@@ -383,7 +450,18 @@
         "link": false,
         "header": false
       },
-      "searchTarget": "markdown",
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
       "defaultInput": "",
       "commandPrefix": ":s ",
       "sortPriorities": [
@@ -403,7 +481,18 @@
         "link": false,
         "header": false
       },
-      "searchTarget": "markdown",
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
       "defaultInput": "",
       "commandPrefix": ":e",
       "sortPriorities": [],

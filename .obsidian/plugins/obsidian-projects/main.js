@@ -37341,9 +37341,9 @@ var FrontMatterDataSource = class extends DataSource {
       for (const f2 in this.project.fieldConfig) {
         fields = fields.map(
           (field) => {
-            var _a;
+            var _a, _b;
             return field.name !== f2 ? field : __spreadProps(__spreadValues({}, field), {
-              typeConfig: (_a = this.project.fieldConfig[f2]) != null ? _a : {}
+              typeConfig: (_b = (_a = this.project.fieldConfig) == null ? void 0 : _a[f2]) != null ? _b : {}
             });
           }
         );
@@ -53295,30 +53295,27 @@ function take(arr, num) {
   return buffer;
 }
 
-// src/views/Calendar/components/CalendarDay/CalendarDay.svelte
-var import_obsidian41 = require("obsidian");
-
-// src/views/Calendar/components/Table/Table.svelte
+// src/views/Calendar/components/Calendar/Week.svelte
 function add_css36(target) {
-  append_styles(target, "svelte-xhhztu", "table.svelte-xhhztu{border-collapse:collapse;border-spacing:0;table-layout:fixed;overflow:auto}.grow.svelte-xhhztu{height:100%;width:100%}");
+  append_styles(target, "svelte-15iqrr1", "div.svelte-15iqrr1{display:flex;border-bottom:1px solid var(--background-modifier-border);min-height:100px}div.svelte-15iqrr1:last-child{border-bottom:0}");
 }
 function create_fragment67(ctx) {
-  let table;
+  let div;
   let current;
   const default_slot_template = ctx[2].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[1], null);
   return {
     c() {
-      table = element("table");
+      div = element("div");
       if (default_slot)
         default_slot.c();
-      attr(table, "class", "svelte-xhhztu");
-      toggle_class(table, "grow", ctx[0]);
+      attr(div, "class", "svelte-15iqrr1");
+      set_style(div, "height", ctx[0] + "%");
     },
     m(target, anchor) {
-      insert(target, table, anchor);
+      insert(target, div, anchor);
       if (default_slot) {
-        default_slot.m(table, null);
+        default_slot.m(div, null);
       }
       current = true;
     },
@@ -53335,8 +53332,8 @@ function create_fragment67(ctx) {
           );
         }
       }
-      if (!current || dirty & 1) {
-        toggle_class(table, "grow", ctx2[0]);
+      if (dirty & 1) {
+        set_style(div, "height", ctx2[0] + "%");
       }
     },
     i(local) {
@@ -53351,7 +53348,7 @@ function create_fragment67(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(table);
+        detach(div);
       if (default_slot)
         default_slot.d(detaching);
     }
@@ -53359,39 +53356,43 @@ function create_fragment67(ctx) {
 }
 function instance67($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
-  let { grow = false } = $$props;
+  let { height } = $$props;
   $$self.$$set = ($$props2) => {
-    if ("grow" in $$props2)
-      $$invalidate(0, grow = $$props2.grow);
+    if ("height" in $$props2)
+      $$invalidate(0, height = $$props2.height);
     if ("$$scope" in $$props2)
       $$invalidate(1, $$scope = $$props2.$$scope);
   };
-  return [grow, $$scope, slots];
+  return [height, $$scope, slots];
 }
-var Table = class extends SvelteComponent {
+var Week = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance67, create_fragment67, safe_not_equal, { grow: 0 }, add_css36);
+    init(this, options, instance67, create_fragment67, safe_not_equal, { height: 0 }, add_css36);
   }
 };
-var Table_default = Table;
+var Week_default = Week;
 
-// src/views/Calendar/components/Table/TableBody.svelte
+// src/views/Calendar/components/Calendar/Calendar.svelte
+function add_css37(target) {
+  append_styles(target, "svelte-rkq8la", "div.svelte-rkq8la{display:flex;flex-direction:column;height:100%}");
+}
 function create_fragment68(ctx) {
-  let tbody;
+  let div;
   let current;
   const default_slot_template = ctx[1].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
   return {
     c() {
-      tbody = element("tbody");
+      div = element("div");
       if (default_slot)
         default_slot.c();
+      attr(div, "class", "svelte-rkq8la");
     },
     m(target, anchor) {
-      insert(target, tbody, anchor);
+      insert(target, div, anchor);
       if (default_slot) {
-        default_slot.m(tbody, null);
+        default_slot.m(div, null);
       }
       current = true;
     },
@@ -53421,7 +53422,7 @@ function create_fragment68(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(tbody);
+        detach(div);
       if (default_slot)
         default_slot.d(detaching);
     }
@@ -53435,151 +53436,41 @@ function instance68($$self, $$props, $$invalidate) {
   };
   return [$$scope, slots];
 }
-var TableBody = class extends SvelteComponent {
+var Calendar = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance68, create_fragment68, safe_not_equal, {});
+    init(this, options, instance68, create_fragment68, safe_not_equal, {}, add_css37);
   }
 };
-var TableBody_default = TableBody;
+var Calendar_default = Calendar;
 
-// src/views/Calendar/components/Table/TableCell.svelte
-function add_css37(target) {
-  append_styles(target, "svelte-1u8ro2d", "td.svelte-1u8ro2d{vertical-align:top;box-sizing:border-box;padding:0;border:1px solid var(--background-modifier-border);height:calc(100% / 5)}td.svelte-1u8ro2d:first-of-type{border-left:1px solid var(--background-modifier-border)}td.svelte-1u8ro2d:last-of-type{border-right:1px solid var(--background-modifier-border)}");
+// src/views/Calendar/components/Calendar/Day.svelte
+var import_dayjs7 = __toESM(require_dayjs_min());
+var import_obsidian41 = require("obsidian");
+
+// src/views/Calendar/components/Calendar/Date.svelte
+function add_css38(target) {
+  append_styles(target, "svelte-19rown3", "span.svelte-19rown3{height:24px;line-height:24px;font-size:12px;font-weight:500;border-radius:50px;width:max-content;min-width:24px;text-align:center;display:inline-block;align-self:center}.today.svelte-19rown3{background:var(--interactive-accent);color:var(--text-on-accent)}");
 }
 function create_fragment69(ctx) {
-  let td;
-  let td_style_value;
+  let span;
   let current;
-  let mounted;
-  let dispose;
-  const default_slot_template = ctx[3].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
-  return {
-    c() {
-      td = element("td");
-      if (default_slot)
-        default_slot.c();
-      attr(td, "colspan", ctx[0]);
-      attr(td, "style", td_style_value = `width: ${ctx[1]}`);
-      attr(td, "class", "svelte-1u8ro2d");
-    },
-    m(target, anchor) {
-      insert(target, td, anchor);
-      if (default_slot) {
-        default_slot.m(td, null);
-      }
-      current = true;
-      if (!mounted) {
-        dispose = [
-          listen(td, "dblclick", ctx[4]),
-          listen(td, "mousedown", ctx[5])
-        ];
-        mounted = true;
-      }
-    },
-    p(ctx2, [dirty]) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 4)) {
-          update_slot_base(
-            default_slot,
-            default_slot_template,
-            ctx2,
-            ctx2[2],
-            !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null),
-            null
-          );
-        }
-      }
-      if (!current || dirty & 1) {
-        attr(td, "colspan", ctx2[0]);
-      }
-      if (!current || dirty & 2 && td_style_value !== (td_style_value = `width: ${ctx2[1]}`)) {
-        attr(td, "style", td_style_value);
-      }
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(default_slot, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(default_slot, local);
-      current = false;
-    },
-    d(detaching) {
-      if (detaching)
-        detach(td);
-      if (default_slot)
-        default_slot.d(detaching);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-}
-function instance69($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  let { colspan = null } = $$props;
-  let { width } = $$props;
-  function dblclick_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  $$self.$$set = ($$props2) => {
-    if ("colspan" in $$props2)
-      $$invalidate(0, colspan = $$props2.colspan);
-    if ("width" in $$props2)
-      $$invalidate(1, width = $$props2.width);
-    if ("$$scope" in $$props2)
-      $$invalidate(2, $$scope = $$props2.$$scope);
-  };
-  return [colspan, width, $$scope, slots, dblclick_handler, mousedown_handler];
-}
-var TableCell = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance69, create_fragment69, safe_not_equal, { colspan: 0, width: 1 }, add_css37);
-  }
-};
-var TableCell_default = TableCell;
-
-// src/views/Calendar/components/Table/TableColumnHeaderCell.svelte
-function add_css38(target) {
-  append_styles(target, "svelte-fwcz0t", "div.svelte-fwcz0t{display:flex;align-items:center;width:100%;justify-content:space-between;gap:1rem}th.svelte-fwcz0t{background:var(--background-secondary);border:1px solid var(--background-modifier-border);border-top:0;border-left:0;text-align:center;font-weight:500;min-width:100px;vertical-align:top;position:sticky !important;top:0;padding:0.3em}th.svelte-fwcz0t:first-child{min-width:5ch}.nopadding.svelte-fwcz0t{padding:0}");
-}
-function create_fragment70(ctx) {
-  let th;
-  let div;
-  let current;
-  let mounted;
-  let dispose;
   const default_slot_template = ctx[2].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[1], null);
   return {
     c() {
-      th = element("th");
-      div = element("div");
+      span = element("span");
       if (default_slot)
         default_slot.c();
-      attr(div, "class", "svelte-fwcz0t");
-      attr(th, "scope", "col");
-      attr(th, "class", "svelte-fwcz0t");
-      toggle_class(th, "nopadding", ctx[0]);
+      attr(span, "class", "svelte-19rown3");
+      toggle_class(span, "today", ctx[0]);
     },
     m(target, anchor) {
-      insert(target, th, anchor);
-      append(th, div);
+      insert(target, span, anchor);
       if (default_slot) {
-        default_slot.m(div, null);
+        default_slot.m(span, null);
       }
       current = true;
-      if (!mounted) {
-        dispose = listen(th, "mousedown", ctx[3]);
-        mounted = true;
-      }
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
@@ -53595,7 +53486,7 @@ function create_fragment70(ctx) {
         }
       }
       if (!current || dirty & 1) {
-        toggle_class(th, "nopadding", ctx2[0]);
+        toggle_class(span, "today", ctx2[0]);
       }
     },
     i(local) {
@@ -53610,52 +53501,100 @@ function create_fragment70(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(th);
+        detach(span);
       if (default_slot)
         default_slot.d(detaching);
-      mounted = false;
-      dispose();
+    }
+  };
+}
+function instance69($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { today = false } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("today" in $$props2)
+      $$invalidate(0, today = $$props2.today);
+    if ("$$scope" in $$props2)
+      $$invalidate(1, $$scope = $$props2.$$scope);
+  };
+  return [today, $$scope, slots];
+}
+var Date2 = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance69, create_fragment69, safe_not_equal, { today: 0 }, add_css38);
+  }
+};
+var Date_default = Date2;
+
+// src/views/Calendar/components/Calendar/ColorPill.svelte
+function create_fragment70(ctx) {
+  let span;
+  return {
+    c() {
+      span = element("span");
+      set_style(span, "height", `100%`);
+      set_style(span, "border-radius", `9999px`);
+      set_style(span, "background-color", ctx[0]);
+      set_style(span, "width", ctx[1]);
+    },
+    m(target, anchor) {
+      insert(target, span, anchor);
+    },
+    p(ctx2, [dirty]) {
+      if (dirty & 1) {
+        set_style(span, "background-color", ctx2[0]);
+      }
+      if (dirty & 2) {
+        set_style(span, "width", ctx2[1]);
+      }
+    },
+    i: noop,
+    o: noop,
+    d(detaching) {
+      if (detaching)
+        detach(span);
     }
   };
 }
 function instance70($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  let { nopadding = false } = $$props;
-  function mousedown_handler(event) {
-    bubble.call(this, $$self, event);
-  }
+  let { color } = $$props;
+  let { width = "5px" } = $$props;
   $$self.$$set = ($$props2) => {
-    if ("nopadding" in $$props2)
-      $$invalidate(0, nopadding = $$props2.nopadding);
-    if ("$$scope" in $$props2)
-      $$invalidate(1, $$scope = $$props2.$$scope);
+    if ("color" in $$props2)
+      $$invalidate(0, color = $$props2.color);
+    if ("width" in $$props2)
+      $$invalidate(1, width = $$props2.width);
   };
-  return [nopadding, $$scope, slots, mousedown_handler];
+  return [color, width];
 }
-var TableColumnHeaderCell = class extends SvelteComponent {
+var ColorPill = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance70, create_fragment70, safe_not_equal, { nopadding: 0 }, add_css38);
+    init(this, options, instance70, create_fragment70, safe_not_equal, { color: 0, width: 1 });
   }
 };
-var TableColumnHeaderCell_default = TableColumnHeaderCell;
+var ColorPill_default = ColorPill;
 
-// src/views/Calendar/components/Table/TableHead.svelte
+// src/views/Calendar/components/Calendar/Ellipsis.svelte
+function add_css39(target) {
+  append_styles(target, "svelte-16vy86e", "span.svelte-16vy86e{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
+}
 function create_fragment71(ctx) {
-  let thead;
+  let span;
   let current;
   const default_slot_template = ctx[1].default;
   const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
   return {
     c() {
-      thead = element("thead");
+      span = element("span");
       if (default_slot)
         default_slot.c();
+      attr(span, "class", "svelte-16vy86e");
     },
     m(target, anchor) {
-      insert(target, thead, anchor);
+      insert(target, span, anchor);
       if (default_slot) {
-        default_slot.m(thead, null);
+        default_slot.m(span, null);
       }
       current = true;
     },
@@ -53685,7 +53624,7 @@ function create_fragment71(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(thead);
+        detach(span);
       if (default_slot)
         default_slot.d(detaching);
     }
@@ -53699,165 +53638,48 @@ function instance71($$self, $$props, $$invalidate) {
   };
   return [$$scope, slots];
 }
-var TableHead = class extends SvelteComponent {
+var Ellipsis = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance71, create_fragment71, safe_not_equal, {});
+    init(this, options, instance71, create_fragment71, safe_not_equal, {}, add_css39);
   }
 };
-var TableHead_default = TableHead;
+var Ellipsis_default = Ellipsis;
 
-// src/views/Calendar/components/Table/TableRow.svelte
-function create_fragment72(ctx) {
-  let tr;
+// src/views/Calendar/components/Calendar/Event.svelte
+function add_css40(target) {
+  append_styles(target, "svelte-opw0t4", 'div.svelte-opw0t4{display:flex;gap:4px;align-items:center;padding:0.2em 0.4em;font-size:var(--font-ui-smaller);border:1px solid var(--background-modifier-border);background-color:var(--background-primary);border-radius:var(--radius-s)}div.svelte-opw0t4 input[type="checkbox"]{margin:0}');
+}
+function create_if_block_27(ctx) {
+  let colorpill;
   let current;
-  const default_slot_template = ctx[1].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  colorpill = new ColorPill_default({ props: { color: ctx[1] } });
   return {
     c() {
-      tr = element("tr");
-      if (default_slot)
-        default_slot.c();
+      create_component(colorpill.$$.fragment);
     },
     m(target, anchor) {
-      insert(target, tr, anchor);
-      if (default_slot) {
-        default_slot.m(tr, null);
-      }
+      mount_component(colorpill, target, anchor);
       current = true;
     },
-    p(ctx2, [dirty]) {
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 1)) {
-          update_slot_base(
-            default_slot,
-            default_slot_template,
-            ctx2,
-            ctx2[0],
-            !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null),
-            null
-          );
-        }
-      }
+    p(ctx2, dirty) {
+      const colorpill_changes = {};
+      if (dirty & 2)
+        colorpill_changes.color = ctx2[1];
+      colorpill.$set(colorpill_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(default_slot, local);
+      transition_in(colorpill.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(default_slot, local);
+      transition_out(colorpill.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      if (detaching)
-        detach(tr);
-      if (default_slot)
-        default_slot.d(detaching);
-    }
-  };
-}
-function instance72($$self, $$props, $$invalidate) {
-  let { $$slots: slots = {}, $$scope } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("$$scope" in $$props2)
-      $$invalidate(0, $$scope = $$props2.$$scope);
-  };
-  return [$$scope, slots];
-}
-var TableRow = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance72, create_fragment72, safe_not_equal, {});
-  }
-};
-var TableRow_default = TableRow;
-
-// src/views/Calendar/components/CalendarDay/CalendarDate.svelte
-var import_dayjs7 = __toESM(require_dayjs_min());
-function add_css39(target) {
-  append_styles(target, "svelte-vn6kio", "span.svelte-vn6kio{padding:0.2em 0.4em;border-radius:4px}.today.svelte-vn6kio{background:var(--interactive-accent);display:inline-block;color:var(--text-on-accent)}");
-}
-function create_fragment73(ctx) {
-  let span;
-  let t_value = ctx[0].date() + "";
-  let t3;
-  return {
-    c() {
-      span = element("span");
-      t3 = text(t_value);
-      attr(span, "class", "svelte-vn6kio");
-      toggle_class(span, "today", ctx[1]);
-    },
-    m(target, anchor) {
-      insert(target, span, anchor);
-      append(span, t3);
-    },
-    p(ctx2, [dirty]) {
-      if (dirty & 1 && t_value !== (t_value = ctx2[0].date() + ""))
-        set_data(t3, t_value);
-      if (dirty & 2) {
-        toggle_class(span, "today", ctx2[1]);
-      }
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(span);
-    }
-  };
-}
-function instance73($$self, $$props, $$invalidate) {
-  let today;
-  let { date } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("date" in $$props2)
-      $$invalidate(0, date = $$props2.date);
-  };
-  $$self.$$.update = () => {
-    if ($$self.$$.dirty & 1) {
-      $:
-        $$invalidate(1, today = date.startOf("day").isSame((0, import_dayjs7.default)().startOf("day")));
-    }
-  };
-  return [date, today];
-}
-var CalendarDate = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance73, create_fragment73, safe_not_equal, { date: 0 }, add_css39);
-  }
-};
-var CalendarDate_default = CalendarDate;
-
-// src/views/Calendar/components/CalendarDay/CalendarEntry.svelte
-function add_css40(target) {
-  append_styles(target, "svelte-ijaicr", "div.svelte-ijaicr{border-radius:var(--radius-s);padding:0.2em 0.4em;font-size:var(--font-ui-smaller);width:100%;display:grid;grid-template-columns:min-content min-content auto;border:1px solid var(--background-modifier-border);background-color:var(--background-primary);align-items:center;gap:4px}.unchecked.svelte-ijaicr{grid-template-columns:min-content auto}span.svelte-ijaicr{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}");
-}
-function create_if_block_27(ctx) {
-  let span;
-  return {
-    c() {
-      span = element("span");
-      set_style(span, "background-color", ctx[1]);
-      set_style(span, "height", "100%");
-      set_style(span, "width", "5px");
-      set_style(span, "border-radius", "9999px");
-      attr(span, "class", "svelte-ijaicr");
-    },
-    m(target, anchor) {
-      insert(target, span, anchor);
-    },
-    p(ctx2, dirty) {
-      if (dirty & 2) {
-        set_style(span, "background-color", ctx2[1]);
-      }
-    },
-    d(detaching) {
-      if (detaching)
-        detach(span);
+      destroy_component(colorpill, detaching);
     }
   };
 }
@@ -53865,7 +53687,7 @@ function create_if_block_112(ctx) {
   let checkbox;
   let current;
   checkbox = new Checkbox_default({ props: { checked: false } });
-  checkbox.$on("check", ctx[9]);
+  checkbox.$on("check", ctx[6]);
   return {
     c() {
       create_component(checkbox.$$.fragment);
@@ -53895,7 +53717,7 @@ function create_if_block22(ctx) {
   let updating_checked;
   let current;
   function checkbox_checked_binding(value) {
-    ctx[7](value);
+    ctx[4](value);
   }
   let checkbox_props = {};
   if (ctx[0] !== void 0) {
@@ -53903,7 +53725,7 @@ function create_if_block22(ctx) {
   }
   checkbox = new Checkbox_default({ props: checkbox_props });
   binding_callbacks.push(() => bind(checkbox, "checked", checkbox_checked_binding, ctx[0]));
-  checkbox.$on("check", ctx[8]);
+  checkbox.$on("check", ctx[5]);
   return {
     c() {
       create_component(checkbox.$$.fragment);
@@ -53936,13 +53758,58 @@ function create_if_block22(ctx) {
     }
   };
 }
-function create_fragment74(ctx) {
+function create_default_slot26(ctx) {
+  let current;
+  const default_slot_template = ctx[3].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[9], null);
+  return {
+    c() {
+      if (default_slot)
+        default_slot.c();
+    },
+    m(target, anchor) {
+      if (default_slot) {
+        default_slot.m(target, anchor);
+      }
+      current = true;
+    },
+    p(ctx2, dirty) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 512)) {
+          update_slot_base(
+            default_slot,
+            default_slot_template,
+            ctx2,
+            ctx2[9],
+            !current ? get_all_dirty_from_scope(ctx2[9]) : get_slot_changes(default_slot_template, ctx2[9], dirty, null),
+            null
+          );
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function create_fragment72(ctx) {
   let div;
   let t0;
   let current_block_type_index;
   let if_block1;
   let t1;
-  let span;
+  let ellipsis;
   let current;
   let mounted;
   let dispose;
@@ -53959,8 +53826,12 @@ function create_fragment74(ctx) {
   if (~(current_block_type_index = select_block_type(ctx, -1))) {
     if_block1 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
   }
-  const default_slot_template = ctx[4].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[3], null);
+  ellipsis = new Ellipsis_default({
+    props: {
+      $$slots: { default: [create_default_slot26] },
+      $$scope: { ctx }
+    }
+  });
   return {
     c() {
       div = element("div");
@@ -53970,12 +53841,8 @@ function create_fragment74(ctx) {
       if (if_block1)
         if_block1.c();
       t1 = space();
-      span = element("span");
-      if (default_slot)
-        default_slot.c();
-      attr(span, "class", "svelte-ijaicr");
-      attr(div, "class", "svelte-ijaicr");
-      toggle_class(div, "unchecked", ctx[0] === void 0);
+      create_component(ellipsis.$$.fragment);
+      attr(div, "class", "svelte-opw0t4");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -53986,17 +53853,12 @@ function create_fragment74(ctx) {
         if_blocks[current_block_type_index].m(div, null);
       }
       append(div, t1);
-      append(div, span);
-      if (default_slot) {
-        default_slot.m(span, null);
-      }
+      mount_component(ellipsis, div, null);
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div, "keypress", ctx[5]),
-          listen(div, "click", ctx[6]),
-          listen(div, "mouseenter", ctx[10]),
-          listen(div, "mouseleave", ctx[11])
+          listen(div, "mouseenter", ctx[7]),
+          listen(div, "mouseleave", ctx[8])
         ];
         mounted = true;
       }
@@ -54005,14 +53867,21 @@ function create_fragment74(ctx) {
       if (ctx2[1]) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
+          if (dirty & 2) {
+            transition_in(if_block0, 1);
+          }
         } else {
           if_block0 = create_if_block_27(ctx2);
           if_block0.c();
+          transition_in(if_block0, 1);
           if_block0.m(div, t0);
         }
       } else if (if_block0) {
-        if_block0.d(1);
-        if_block0 = null;
+        group_outros();
+        transition_out(if_block0, 1, 1, () => {
+          if_block0 = null;
+        });
+        check_outros();
       }
       let previous_block_index = current_block_type_index;
       current_block_type_index = select_block_type(ctx2, dirty);
@@ -54042,32 +53911,24 @@ function create_fragment74(ctx) {
           if_block1 = null;
         }
       }
-      if (default_slot) {
-        if (default_slot.p && (!current || dirty & 8)) {
-          update_slot_base(
-            default_slot,
-            default_slot_template,
-            ctx2,
-            ctx2[3],
-            !current ? get_all_dirty_from_scope(ctx2[3]) : get_slot_changes(default_slot_template, ctx2[3], dirty, null),
-            null
-          );
-        }
+      const ellipsis_changes = {};
+      if (dirty & 512) {
+        ellipsis_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      if (!current || dirty & 1) {
-        toggle_class(div, "unchecked", ctx2[0] === void 0);
-      }
+      ellipsis.$set(ellipsis_changes);
     },
     i(local) {
       if (current)
         return;
+      transition_in(if_block0);
       transition_in(if_block1);
-      transition_in(default_slot, local);
+      transition_in(ellipsis.$$.fragment, local);
       current = true;
     },
     o(local) {
+      transition_out(if_block0);
       transition_out(if_block1);
-      transition_out(default_slot, local);
+      transition_out(ellipsis.$$.fragment, local);
       current = false;
     },
     d(detaching) {
@@ -54078,24 +53939,17 @@ function create_fragment74(ctx) {
       if (~current_block_type_index) {
         if_blocks[current_block_type_index].d();
       }
-      if (default_slot)
-        default_slot.d(detaching);
+      destroy_component(ellipsis);
       mounted = false;
       run_all(dispose);
     }
   };
 }
-function instance74($$self, $$props, $$invalidate) {
+function instance72($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
+  let { color = null } = $$props;
   let { checked = void 0 } = $$props;
-  let { color } = $$props;
   let hover = false;
-  function keypress_handler(event) {
-    bubble.call(this, $$self, event);
-  }
-  function click_handler(event) {
-    bubble.call(this, $$self, event);
-  }
   function checkbox_checked_binding(value) {
     checked = value;
     $$invalidate(0, checked);
@@ -54109,39 +53963,37 @@ function instance74($$self, $$props, $$invalidate) {
   const mouseenter_handler = () => $$invalidate(2, hover = true);
   const mouseleave_handler = () => $$invalidate(2, hover = false);
   $$self.$$set = ($$props2) => {
-    if ("checked" in $$props2)
-      $$invalidate(0, checked = $$props2.checked);
     if ("color" in $$props2)
       $$invalidate(1, color = $$props2.color);
+    if ("checked" in $$props2)
+      $$invalidate(0, checked = $$props2.checked);
     if ("$$scope" in $$props2)
-      $$invalidate(3, $$scope = $$props2.$$scope);
+      $$invalidate(9, $$scope = $$props2.$$scope);
   };
   return [
     checked,
     color,
     hover,
-    $$scope,
     slots,
-    keypress_handler,
-    click_handler,
     checkbox_checked_binding,
     check_handler,
     check_handler_1,
     mouseenter_handler,
-    mouseleave_handler
+    mouseleave_handler,
+    $$scope
   ];
 }
-var CalendarEntry = class extends SvelteComponent {
+var Event = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance74, create_fragment74, safe_not_equal, { checked: 0, color: 1 }, add_css40);
+    init(this, options, instance72, create_fragment72, safe_not_equal, { color: 1, checked: 0 }, add_css40);
   }
 };
-var CalendarEntry_default = CalendarEntry;
+var Event_default = Event;
 
-// src/views/Calendar/components/CalendarDay/CalendarEntryList.svelte
+// src/views/Calendar/components/Calendar/EventList.svelte
 function add_css41(target) {
-  append_styles(target, "svelte-1aboi1f", "div.svelte-1aboi1f{height:100%;width:100%}");
+  append_styles(target, "svelte-49q3js", "div.svelte-49q3js{display:flex;flex-direction:column;gap:2px;height:100%;width:100%;overflow-y:auto}");
 }
 function get_each_context13(ctx, list, i2) {
   const child_ctx = ctx.slice();
@@ -54149,7 +54001,7 @@ function get_each_context13(ctx, list, i2) {
   return child_ctx;
 }
 function create_if_block23(ctx) {
-  let calendarentry;
+  let event;
   let current;
   function check_handler(...args) {
     return ctx[9](ctx[11], ...args);
@@ -54157,48 +54009,48 @@ function create_if_block23(ctx) {
   function click_handler() {
     return ctx[10](ctx[11]);
   }
-  calendarentry = new CalendarEntry_default({
+  event = new Event_default({
     props: {
       color: ctx[7](ctx[11]),
       checked: ctx[1] !== void 0 ? asOptionalBoolean(ctx[11].values[ctx[1]]) : void 0,
-      $$slots: { default: [create_default_slot26] },
+      $$slots: { default: [create_default_slot27] },
       $$scope: { ctx }
     }
   });
-  calendarentry.$on("check", check_handler);
-  calendarentry.$on("click", click_handler);
+  event.$on("check", check_handler);
+  event.$on("click", click_handler);
   return {
     c() {
-      create_component(calendarentry.$$.fragment);
+      create_component(event.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(calendarentry, target, anchor);
+      mount_component(event, target, anchor);
       current = true;
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      const calendarentry_changes = {};
+      const event_changes = {};
       if (dirty & 1)
-        calendarentry_changes.color = ctx[7](ctx[11]);
+        event_changes.color = ctx[7](ctx[11]);
       if (dirty & 3)
-        calendarentry_changes.checked = ctx[1] !== void 0 ? asOptionalBoolean(ctx[11].values[ctx[1]]) : void 0;
+        event_changes.checked = ctx[1] !== void 0 ? asOptionalBoolean(ctx[11].values[ctx[1]]) : void 0;
       if (dirty & 16405) {
-        calendarentry_changes.$$scope = { dirty, ctx };
+        event_changes.$$scope = { dirty, ctx };
       }
-      calendarentry.$set(calendarentry_changes);
+      event.$set(event_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(calendarentry.$$.fragment, local);
+      transition_in(event.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(calendarentry.$$.fragment, local);
+      transition_out(event.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(calendarentry, detaching);
+      destroy_component(event, detaching);
     }
   };
 }
@@ -54222,7 +54074,7 @@ function create_default_slot_119(ctx) {
     }
   };
 }
-function create_default_slot26(ctx) {
+function create_default_slot27(ctx) {
   let internallink;
   let t3;
   let current;
@@ -54346,7 +54198,7 @@ function create_each_block13(key_1, ctx) {
     }
   };
 }
-function create_fragment75(ctx) {
+function create_fragment73(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = /* @__PURE__ */ new Map();
@@ -54367,7 +54219,7 @@ function create_fragment75(ctx) {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
-      attr(div, "class", "svelte-1aboi1f");
+      attr(div, "class", "svelte-49q3js");
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -54444,53 +54296,53 @@ function asOptionalBoolean(value) {
   }
   return null;
 }
-function instance75($$self, $$props, $$invalidate) {
+function instance73($$self, $$props, $$invalidate) {
   let $app;
   component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
   let { records } = $$props;
   let { checkField } = $$props;
-  let { onEntryClick } = $$props;
-  let { onRecordUpdate } = $$props;
+  let { onRecordClick } = $$props;
+  let { onRecordChange } = $$props;
   function handleDndConsider(e) {
     $$invalidate(0, records = e.detail.items);
   }
   function handleDndFinalize(e) {
     $$invalidate(0, records = e.detail.items);
-    records.forEach((item) => onRecordUpdate(item));
+    records.forEach(onRecordChange);
   }
   const getRecordColor = getRecordColorContext();
   const open_handler = (record, { detail: { linkText, sourcePath, newLeaf } }) => {
     if (newLeaf) {
       $app.workspace.openLinkText(linkText, sourcePath, newLeaf);
     } else {
-      onEntryClick(record);
+      onRecordClick(record);
     }
   };
   const check_handler = (record, { detail: checked }) => {
     if (checkField) {
-      onRecordUpdate(__spreadProps(__spreadValues({}, record), {
+      onRecordChange(__spreadProps(__spreadValues({}, record), {
         values: __spreadProps(__spreadValues({}, record.values), { [checkField]: checked })
       }));
     }
   };
   const click_handler = (record) => {
-    onEntryClick(record);
+    onRecordClick(record);
   };
   $$self.$$set = ($$props2) => {
     if ("records" in $$props2)
       $$invalidate(0, records = $$props2.records);
     if ("checkField" in $$props2)
       $$invalidate(1, checkField = $$props2.checkField);
-    if ("onEntryClick" in $$props2)
-      $$invalidate(2, onEntryClick = $$props2.onEntryClick);
-    if ("onRecordUpdate" in $$props2)
-      $$invalidate(3, onRecordUpdate = $$props2.onRecordUpdate);
+    if ("onRecordClick" in $$props2)
+      $$invalidate(2, onRecordClick = $$props2.onRecordClick);
+    if ("onRecordChange" in $$props2)
+      $$invalidate(3, onRecordChange = $$props2.onRecordChange);
   };
   return [
     records,
     checkField,
-    onEntryClick,
-    onRecordUpdate,
+    onRecordClick,
+    onRecordChange,
     $app,
     handleDndConsider,
     handleDndFinalize,
@@ -54500,220 +54352,392 @@ function instance75($$self, $$props, $$invalidate) {
     click_handler
   ];
 }
-var CalendarEntryList = class extends SvelteComponent {
+var EventList = class extends SvelteComponent {
   constructor(options) {
     super();
     init(
       this,
       options,
-      instance75,
-      create_fragment75,
+      instance73,
+      create_fragment73,
       safe_not_equal,
       {
         records: 0,
         checkField: 1,
-        onEntryClick: 2,
-        onRecordUpdate: 3
+        onRecordClick: 2,
+        onRecordChange: 3
       },
       add_css41
     );
   }
 };
-var CalendarEntryList_default = CalendarEntryList;
+var EventList_default = EventList;
 
-// src/views/Calendar/components/CalendarDay/CalendarDay.svelte
+// src/views/Calendar/components/Calendar/Day.svelte
 function add_css42(target) {
-  append_styles(target, "svelte-pe597k", "div.svelte-pe597k{padding:4px;height:100%;display:flex;flex-direction:column;gap:2px;align-items:start;overflow:scroll;min-height:6rem}.weekend.svelte-pe597k{background-color:var(--background-secondary)}");
+  append_styles(target, "svelte-y223yt", "div.svelte-y223yt{border-right:1px solid var(--background-modifier-border);padding:4px;font-size:var(--font-ui-small);display:flex;flex-direction:column;gap:4px}div.svelte-y223yt:last-child{border-right:0}.weekend.svelte-y223yt{background-color:var(--background-secondary)}");
 }
-function create_default_slot27(ctx) {
-  let div;
-  let calendardate;
+function create_default_slot28(ctx) {
+  let t_value = ctx[0].date() + "";
   let t3;
-  let calendarentrylist;
+  return {
+    c() {
+      t3 = text(t_value);
+    },
+    m(target, anchor) {
+      insert(target, t3, anchor);
+    },
+    p(ctx2, dirty) {
+      if (dirty & 1 && t_value !== (t_value = ctx2[0].date() + ""))
+        set_data(t3, t_value);
+    },
+    d(detaching) {
+      if (detaching)
+        detach(t3);
+    }
+  };
+}
+function create_fragment74(ctx) {
+  let div;
+  let date_1;
+  let t3;
+  let eventlist;
   let current;
-  calendardate = new CalendarDate_default({ props: { date: ctx[0] } });
-  calendarentrylist = new CalendarEntryList_default({
+  let mounted;
+  let dispose;
+  date_1 = new Date_default({
     props: {
-      records: ctx[1],
-      onEntryClick: ctx[4],
-      onRecordUpdate: ctx[7],
-      checkField: ctx[2]
+      today: ctx[6],
+      $$slots: { default: [create_default_slot28] },
+      $$scope: { ctx }
+    }
+  });
+  eventlist = new EventList_default({
+    props: {
+      checkField: ctx[3],
+      records: ctx[2],
+      onRecordClick: ctx[4],
+      onRecordChange: ctx[5]
     }
   });
   return {
     c() {
       div = element("div");
-      create_component(calendardate.$$.fragment);
+      create_component(date_1.$$.fragment);
       t3 = space();
-      create_component(calendarentrylist.$$.fragment);
-      attr(div, "class", "svelte-pe597k");
-      toggle_class(div, "weekend", ctx[0].day() === 0 || ctx[0].day() === 6);
+      create_component(eventlist.$$.fragment);
+      attr(div, "class", "svelte-y223yt");
+      toggle_class(div, "weekend", ctx[7]);
+      set_style(div, "width", ctx[1] + "%");
     },
     m(target, anchor) {
       insert(target, div, anchor);
-      mount_component(calendardate, div, null);
+      mount_component(date_1, div, null);
       append(div, t3);
-      mount_component(calendarentrylist, div, null);
+      mount_component(eventlist, div, null);
       current = true;
+      if (!mounted) {
+        dispose = [
+          listen(div, "dblclick", ctx[8]),
+          listen(div, "mousedown", ctx[9])
+        ];
+        mounted = true;
+      }
     },
-    p(ctx2, dirty) {
-      const calendardate_changes = {};
-      if (dirty & 1)
-        calendardate_changes.date = ctx2[0];
-      calendardate.$set(calendardate_changes);
-      const calendarentrylist_changes = {};
-      if (dirty & 2)
-        calendarentrylist_changes.records = ctx2[1];
-      if (dirty & 16)
-        calendarentrylist_changes.onEntryClick = ctx2[4];
-      if (dirty & 33)
-        calendarentrylist_changes.onRecordUpdate = ctx2[7];
+    p(ctx2, [dirty]) {
+      const date_1_changes = {};
+      if (dirty & 64)
+        date_1_changes.today = ctx2[6];
+      if (dirty & 4097) {
+        date_1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      date_1.$set(date_1_changes);
+      const eventlist_changes = {};
+      if (dirty & 8)
+        eventlist_changes.checkField = ctx2[3];
       if (dirty & 4)
-        calendarentrylist_changes.checkField = ctx2[2];
-      calendarentrylist.$set(calendarentrylist_changes);
-      if (!current || dirty & 1) {
-        toggle_class(div, "weekend", ctx2[0].day() === 0 || ctx2[0].day() === 6);
+        eventlist_changes.records = ctx2[2];
+      if (dirty & 16)
+        eventlist_changes.onRecordClick = ctx2[4];
+      if (dirty & 32)
+        eventlist_changes.onRecordChange = ctx2[5];
+      eventlist.$set(eventlist_changes);
+      if (!current || dirty & 128) {
+        toggle_class(div, "weekend", ctx2[7]);
+      }
+      if (dirty & 2) {
+        set_style(div, "width", ctx2[1] + "%");
       }
     },
     i(local) {
       if (current)
         return;
-      transition_in(calendardate.$$.fragment, local);
-      transition_in(calendarentrylist.$$.fragment, local);
+      transition_in(date_1.$$.fragment, local);
+      transition_in(eventlist.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(calendardate.$$.fragment, local);
-      transition_out(calendarentrylist.$$.fragment, local);
+      transition_out(date_1.$$.fragment, local);
+      transition_out(eventlist.$$.fragment, local);
       current = false;
     },
     d(detaching) {
       if (detaching)
         detach(div);
-      destroy_component(calendardate);
-      destroy_component(calendarentrylist);
+      destroy_component(date_1);
+      destroy_component(eventlist);
+      mounted = false;
+      run_all(dispose);
     }
   };
 }
-function create_fragment76(ctx) {
-  let tablecell;
-  let current;
-  tablecell = new TableCell_default({
-    props: {
-      width: "calc(100% / 7)",
-      $$slots: { default: [create_default_slot27] },
-      $$scope: { ctx }
-    }
-  });
-  tablecell.$on("dblclick", ctx[8]);
-  tablecell.$on("mousedown", ctx[9]);
-  return {
-    c() {
-      create_component(tablecell.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(tablecell, target, anchor);
-      current = true;
-    },
-    p(ctx2, [dirty]) {
-      const tablecell_changes = {};
-      if (dirty & 1079) {
-        tablecell_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tablecell.$set(tablecell_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(tablecell.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(tablecell.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(tablecell, detaching);
-    }
-  };
-}
-function instance76($$self, $$props, $$invalidate) {
+function instance74($$self, $$props, $$invalidate) {
+  let weekend;
+  let today;
   let $i18n;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
   let { date } = $$props;
+  let { width } = $$props;
   let { records } = $$props;
   let { checkField } = $$props;
-  let { onEntryAdd } = $$props;
-  let { onEntryClick } = $$props;
-  let { onRecordUpdate } = $$props;
-  const func7 = (record) => {
-    onRecordUpdate(date, record);
-  };
-  const dblclick_handler = () => onEntryAdd();
-  const mousedown_handler = (event) => {
+  let { onRecordClick } = $$props;
+  let { onRecordChange } = $$props;
+  let { onRecordAdd } = $$props;
+  function handleDblClick(event) {
+    onRecordAdd();
+  }
+  function handleMouseDown(event) {
     if (event.button === 2) {
-      const menu = new import_obsidian41.Menu();
-      menu.addItem((item) => {
-        item.setTitle($i18n.t("views.calendar.new-note")).setIcon("file").onClick(onEntryAdd);
-      });
-      menu.showAtMouseEvent(event);
+      new import_obsidian41.Menu().addItem((item) => {
+        item.setTitle($i18n.t("views.calendar.new-note")).setIcon("file-plus").onClick(() => onRecordAdd());
+      }).showAtMouseEvent(event);
     }
-  };
+  }
   $$self.$$set = ($$props2) => {
     if ("date" in $$props2)
       $$invalidate(0, date = $$props2.date);
+    if ("width" in $$props2)
+      $$invalidate(1, width = $$props2.width);
     if ("records" in $$props2)
-      $$invalidate(1, records = $$props2.records);
+      $$invalidate(2, records = $$props2.records);
     if ("checkField" in $$props2)
-      $$invalidate(2, checkField = $$props2.checkField);
-    if ("onEntryAdd" in $$props2)
-      $$invalidate(3, onEntryAdd = $$props2.onEntryAdd);
-    if ("onEntryClick" in $$props2)
-      $$invalidate(4, onEntryClick = $$props2.onEntryClick);
-    if ("onRecordUpdate" in $$props2)
-      $$invalidate(5, onRecordUpdate = $$props2.onRecordUpdate);
+      $$invalidate(3, checkField = $$props2.checkField);
+    if ("onRecordClick" in $$props2)
+      $$invalidate(4, onRecordClick = $$props2.onRecordClick);
+    if ("onRecordChange" in $$props2)
+      $$invalidate(5, onRecordChange = $$props2.onRecordChange);
+    if ("onRecordAdd" in $$props2)
+      $$invalidate(10, onRecordAdd = $$props2.onRecordAdd);
+  };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 1) {
+      $:
+        $$invalidate(7, weekend = date.day() === 0 || date.day() === 6);
+    }
+    if ($$self.$$.dirty & 1) {
+      $:
+        $$invalidate(6, today = date.startOf("day").isSame((0, import_dayjs7.default)().startOf("day")));
+    }
   };
   return [
     date,
+    width,
     records,
     checkField,
-    onEntryAdd,
-    onEntryClick,
-    onRecordUpdate,
-    $i18n,
-    func7,
-    dblclick_handler,
-    mousedown_handler
+    onRecordClick,
+    onRecordChange,
+    today,
+    weekend,
+    handleDblClick,
+    handleMouseDown,
+    onRecordAdd
   ];
 }
-var CalendarDay = class extends SvelteComponent {
+var Day = class extends SvelteComponent {
   constructor(options) {
     super();
     init(
       this,
       options,
-      instance76,
-      create_fragment76,
+      instance74,
+      create_fragment74,
       safe_not_equal,
       {
         date: 0,
-        records: 1,
-        checkField: 2,
-        onEntryAdd: 3,
-        onEntryClick: 4,
-        onRecordUpdate: 5
+        width: 1,
+        records: 2,
+        checkField: 3,
+        onRecordClick: 4,
+        onRecordChange: 5,
+        onRecordAdd: 10
       },
       add_css42
     );
   }
 };
-var CalendarDay_default = CalendarDay;
+var Day_default = Day;
+
+// src/views/Calendar/components/Calendar/Weekday.svelte
+function add_css43(target) {
+  append_styles(target, "svelte-16ljls7", "div.svelte-16ljls7{width:calc(100% / 7);border-right:1px solid var(--background-modifier-border);padding:4px;padding-bottom:0;text-align:center;font-size:var(--font-ui-small);font-weight:500;color:var(--text-muted)}.weekend.svelte-16ljls7{background-color:var(--background-secondary)}");
+}
+function create_fragment75(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[3].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[2], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-16ljls7");
+      toggle_class(div, "weekend", ctx[0]);
+      set_style(div, "width", ctx[1] + "%");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 4)) {
+          update_slot_base(
+            default_slot,
+            default_slot_template,
+            ctx2,
+            ctx2[2],
+            !current ? get_all_dirty_from_scope(ctx2[2]) : get_slot_changes(default_slot_template, ctx2[2], dirty, null),
+            null
+          );
+        }
+      }
+      if (!current || dirty & 1) {
+        toggle_class(div, "weekend", ctx2[0]);
+      }
+      if (dirty & 2) {
+        set_style(div, "width", ctx2[1] + "%");
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance75($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  let { weekend = false } = $$props;
+  let { width } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("weekend" in $$props2)
+      $$invalidate(0, weekend = $$props2.weekend);
+    if ("width" in $$props2)
+      $$invalidate(1, width = $$props2.width);
+    if ("$$scope" in $$props2)
+      $$invalidate(2, $$scope = $$props2.$$scope);
+  };
+  return [weekend, width, $$scope, slots];
+}
+var Weekday = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance75, create_fragment75, safe_not_equal, { weekend: 0, width: 1 }, add_css43);
+  }
+};
+var Weekday_default = Weekday;
+
+// src/views/Calendar/components/Calendar/WeekHeader.svelte
+function add_css44(target) {
+  append_styles(target, "svelte-1yrjn1q", "div.svelte-1yrjn1q{display:flex}");
+}
+function create_fragment76(ctx) {
+  let div;
+  let current;
+  const default_slot_template = ctx[1].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[0], null);
+  return {
+    c() {
+      div = element("div");
+      if (default_slot)
+        default_slot.c();
+      attr(div, "class", "svelte-1yrjn1q");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      if (default_slot) {
+        default_slot.m(div, null);
+      }
+      current = true;
+    },
+    p(ctx2, [dirty]) {
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty & 1)) {
+          update_slot_base(
+            default_slot,
+            default_slot_template,
+            ctx2,
+            ctx2[0],
+            !current ? get_all_dirty_from_scope(ctx2[0]) : get_slot_changes(default_slot_template, ctx2[0], dirty, null),
+            null
+          );
+        }
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(default_slot, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(default_slot, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      if (default_slot)
+        default_slot.d(detaching);
+    }
+  };
+}
+function instance76($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  $$self.$$set = ($$props2) => {
+    if ("$$scope" in $$props2)
+      $$invalidate(0, $$scope = $$props2.$$scope);
+  };
+  return [$$scope, slots];
+}
+var WeekHeader = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance76, create_fragment76, safe_not_equal, {}, add_css44);
+  }
+};
+var WeekHeader_default = WeekHeader;
 
 // src/views/Calendar/components/Navigation/Navigation.svelte
-function add_css43(target) {
+function add_css45(target) {
   append_styles(target, "svelte-1u5a4vj", "div.svelte-1u5a4vj{display:flex;gap:4px;align-items:center}");
 }
-function create_default_slot28(ctx) {
+function create_default_slot29(ctx) {
   let t_value = ctx[3].t("views.calendar.today") + "";
   let t3;
   return {
@@ -54748,7 +54772,7 @@ function create_fragment77(ctx) {
   });
   button = new Button_default({
     props: {
-      $$slots: { default: [create_default_slot28] },
+      $$slots: { default: [create_default_slot29] },
       $$scope: { ctx }
     }
   });
@@ -54830,7 +54854,7 @@ function instance77($$self, $$props, $$invalidate) {
 var Navigation = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance77, create_fragment77, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css43);
+    init(this, options, instance77, create_fragment77, safe_not_equal, { onNext: 0, onPrevious: 1, onToday: 2 }, add_css45);
   }
 };
 var Navigation_default = Navigation;
@@ -54838,17 +54862,17 @@ var Navigation_default = Navigation;
 // src/views/Calendar/CalendarView.svelte
 function get_each_context14(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[38] = list[i2];
+  child_ctx[40] = list[i2];
   return child_ctx;
 }
 function get_each_context_12(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[41] = list[i2];
+  child_ctx[43] = list[i2];
   return child_ctx;
 }
 function get_each_context_2(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[44] = list[i2];
+  child_ctx[46] = list[i2];
   return child_ctx;
 }
 function create_left_slot2(ctx) {
@@ -54857,9 +54881,9 @@ function create_left_slot2(ctx) {
   navigation = new Navigation_default({
     props: {
       slot: "left",
-      onNext: ctx[32],
-      onPrevious: ctx[33],
-      onToday: ctx[34]
+      onNext: ctx[34],
+      onPrevious: ctx[35],
+      onToday: ctx[36]
     }
   });
   return {
@@ -54872,12 +54896,12 @@ function create_left_slot2(ctx) {
     },
     p(ctx2, dirty) {
       const navigation_changes = {};
-      if (dirty[0] & 80)
-        navigation_changes.onNext = ctx2[32];
-      if (dirty[0] & 80)
-        navigation_changes.onPrevious = ctx2[33];
-      if (dirty[0] & 16)
-        navigation_changes.onToday = ctx2[34];
+      if (dirty[0] & 10)
+        navigation_changes.onNext = ctx2[34];
+      if (dirty[0] & 10)
+        navigation_changes.onPrevious = ctx2[35];
+      if (dirty[0] & 2)
+        navigation_changes.onToday = ctx2[36];
       navigation.$set(navigation_changes);
     },
     i(local) {
@@ -54895,18 +54919,18 @@ function create_left_slot2(ctx) {
     }
   };
 }
-function create_default_slot_1110(ctx) {
+function create_default_slot_92(ctx) {
   let t3;
   return {
     c() {
-      t3 = text(ctx[12]);
+      t3 = text(ctx[7]);
     },
     m(target, anchor) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 4096)
-        set_data(t3, ctx2[12]);
+      if (dirty[0] & 128)
+        set_data(t3, ctx2[7]);
     },
     d(detaching) {
       if (detaching)
@@ -54922,7 +54946,7 @@ function create_middle_slot2(ctx) {
       slot: "middle",
       variant: "h2",
       nomargin: true,
-      $$slots: { default: [create_default_slot_1110] },
+      $$slots: { default: [create_default_slot_92] },
       $$scope: { ctx }
     }
   });
@@ -54936,7 +54960,7 @@ function create_middle_slot2(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty[0] & 4096 | dirty[1] & 65536) {
+      if (dirty[0] & 128 | dirty[1] & 262144) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -54956,18 +54980,18 @@ function create_middle_slot2(ctx) {
     }
   };
 }
-function create_default_slot_102(ctx) {
+function create_default_slot_82(ctx) {
   var _a, _b, _c;
   let select;
   let current;
   select = new Select_default({
     props: {
-      value: (_b = (_a = ctx[5]) == null ? void 0 : _a.name) != null ? _b : "",
-      options: ctx[8].map(fieldToSelectableValue),
-      placeholder: (_c = ctx[9].t("views.calendar.fields.none")) != null ? _c : ""
+      value: (_b = (_a = ctx[2]) == null ? void 0 : _a.name) != null ? _b : "",
+      options: ctx[4].map(fieldToSelectableValue),
+      placeholder: (_c = ctx[11].t("views.calendar.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[29]);
+  select.$on("change", ctx[31]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -54979,12 +55003,12 @@ function create_default_slot_102(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2, _c2;
       const select_changes = {};
-      if (dirty[0] & 32)
-        select_changes.value = (_b2 = (_a2 = ctx2[5]) == null ? void 0 : _a2.name) != null ? _b2 : "";
-      if (dirty[0] & 256)
-        select_changes.options = ctx2[8].map(fieldToSelectableValue);
-      if (dirty[0] & 512)
-        select_changes.placeholder = (_c2 = ctx2[9].t("views.calendar.fields.none")) != null ? _c2 : "";
+      if (dirty[0] & 4)
+        select_changes.value = (_b2 = (_a2 = ctx2[2]) == null ? void 0 : _a2.name) != null ? _b2 : "";
+      if (dirty[0] & 16)
+        select_changes.options = ctx2[4].map(fieldToSelectableValue);
+      if (dirty[0] & 2048)
+        select_changes.placeholder = (_c2 = ctx2[11].t("views.calendar.fields.none")) != null ? _c2 : "";
       select.$set(select_changes);
     },
     i(local) {
@@ -55002,19 +55026,19 @@ function create_default_slot_102(ctx) {
     }
   };
 }
-function create_default_slot_92(ctx) {
+function create_default_slot_74(ctx) {
   var _a, _b, _c;
   let select;
   let current;
   select = new Select_default({
     props: {
       allowEmpty: true,
-      value: (_b = (_a = ctx[14]) == null ? void 0 : _a.name) != null ? _b : "",
-      options: ctx[15].map(fieldToSelectableValue),
-      placeholder: (_c = ctx[9].t("views.calendar.fields.none")) != null ? _c : ""
+      value: (_b = (_a = ctx[9]) == null ? void 0 : _a.name) != null ? _b : "",
+      options: ctx[10].map(fieldToSelectableValue),
+      placeholder: (_c = ctx[11].t("views.calendar.fields.none")) != null ? _c : ""
     }
   });
-  select.$on("change", ctx[30]);
+  select.$on("change", ctx[32]);
   return {
     c() {
       create_component(select.$$.fragment);
@@ -55026,12 +55050,12 @@ function create_default_slot_92(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2, _c2;
       const select_changes = {};
-      if (dirty[0] & 16384)
-        select_changes.value = (_b2 = (_a2 = ctx2[14]) == null ? void 0 : _a2.name) != null ? _b2 : "";
-      if (dirty[0] & 32768)
-        select_changes.options = ctx2[15].map(fieldToSelectableValue);
       if (dirty[0] & 512)
-        select_changes.placeholder = (_c2 = ctx2[9].t("views.calendar.fields.none")) != null ? _c2 : "";
+        select_changes.value = (_b2 = (_a2 = ctx2[9]) == null ? void 0 : _a2.name) != null ? _b2 : "";
+      if (dirty[0] & 1024)
+        select_changes.options = ctx2[10].map(fieldToSelectableValue);
+      if (dirty[0] & 2048)
+        select_changes.placeholder = (_c2 = ctx2[11].t("views.calendar.fields.none")) != null ? _c2 : "";
       select.$set(select_changes);
     },
     i(local) {
@@ -55059,46 +55083,46 @@ function create_right_slot3(ctx) {
   let current;
   field0 = new Field_default({
     props: {
-      name: ctx[9].t("views.calendar.fields.date"),
-      $$slots: { default: [create_default_slot_102] },
+      name: ctx[11].t("views.calendar.fields.date"),
+      $$slots: { default: [create_default_slot_82] },
       $$scope: { ctx }
     }
   });
   field1 = new Field_default({
     props: {
-      name: ctx[9].t("views.calendar.fields.check"),
-      $$slots: { default: [create_default_slot_92] },
+      name: ctx[11].t("views.calendar.fields.check"),
+      $$slots: { default: [create_default_slot_74] },
       $$scope: { ctx }
     }
   });
   select = new Select_default({
     props: {
-      value: (_b = (_a = ctx[3]) == null ? void 0 : _a.interval) != null ? _b : "week",
+      value: (_b = (_a = ctx[0]) == null ? void 0 : _a.interval) != null ? _b : "week",
       options: [
         {
-          label: ctx[9].t("views.calendar.intervals.month", { count: 1 }),
+          label: ctx[11].t("views.calendar.intervals.month", { count: 1 }),
           value: "month"
         },
         {
-          label: ctx[9].t("views.calendar.intervals.weekWithCount", { count: 2 }),
+          label: ctx[11].t("views.calendar.intervals.weekWithCount", { count: 2 }),
           value: "2weeks"
         },
         {
-          label: ctx[9].t("views.calendar.intervals.week", { count: 1 }),
+          label: ctx[11].t("views.calendar.intervals.week", { count: 1 }),
           value: "week"
         },
         {
-          label: ctx[9].t("views.calendar.intervals.dayWithCount", { count: 3 }),
+          label: ctx[11].t("views.calendar.intervals.dayWithCount", { count: 3 }),
           value: "3days"
         },
         {
-          label: ctx[9].t("views.calendar.intervals.day", { count: 1 }),
+          label: ctx[11].t("views.calendar.intervals.day", { count: 1 }),
           value: "day"
         }
       ]
     }
   });
-  select.$on("change", ctx[31]);
+  select.$on("change", ctx[33]);
   return {
     c() {
       create_component(field0.$$.fragment);
@@ -55118,42 +55142,42 @@ function create_right_slot3(ctx) {
     p(ctx2, dirty) {
       var _a2, _b2;
       const field0_changes = {};
-      if (dirty[0] & 512)
-        field0_changes.name = ctx2[9].t("views.calendar.fields.date");
-      if (dirty[0] & 800 | dirty[1] & 65536) {
+      if (dirty[0] & 2048)
+        field0_changes.name = ctx2[11].t("views.calendar.fields.date");
+      if (dirty[0] & 2068 | dirty[1] & 262144) {
         field0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field0.$set(field0_changes);
       const field1_changes = {};
-      if (dirty[0] & 512)
-        field1_changes.name = ctx2[9].t("views.calendar.fields.check");
-      if (dirty[0] & 49664 | dirty[1] & 65536) {
+      if (dirty[0] & 2048)
+        field1_changes.name = ctx2[11].t("views.calendar.fields.check");
+      if (dirty[0] & 3584 | dirty[1] & 262144) {
         field1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       field1.$set(field1_changes);
       const select_changes = {};
-      if (dirty[0] & 8)
-        select_changes.value = (_b2 = (_a2 = ctx2[3]) == null ? void 0 : _a2.interval) != null ? _b2 : "week";
-      if (dirty[0] & 512)
+      if (dirty[0] & 1)
+        select_changes.value = (_b2 = (_a2 = ctx2[0]) == null ? void 0 : _a2.interval) != null ? _b2 : "week";
+      if (dirty[0] & 2048)
         select_changes.options = [
           {
-            label: ctx2[9].t("views.calendar.intervals.month", { count: 1 }),
+            label: ctx2[11].t("views.calendar.intervals.month", { count: 1 }),
             value: "month"
           },
           {
-            label: ctx2[9].t("views.calendar.intervals.weekWithCount", { count: 2 }),
+            label: ctx2[11].t("views.calendar.intervals.weekWithCount", { count: 2 }),
             value: "2weeks"
           },
           {
-            label: ctx2[9].t("views.calendar.intervals.week", { count: 1 }),
+            label: ctx2[11].t("views.calendar.intervals.week", { count: 1 }),
             value: "week"
           },
           {
-            label: ctx2[9].t("views.calendar.intervals.dayWithCount", { count: 3 }),
+            label: ctx2[11].t("views.calendar.intervals.dayWithCount", { count: 3 }),
             value: "3days"
           },
           {
-            label: ctx2[9].t("views.calendar.intervals.day", { count: 1 }),
+            label: ctx2[11].t("views.calendar.intervals.day", { count: 1 }),
             value: "day"
           }
         ];
@@ -55184,7 +55208,7 @@ function create_right_slot3(ctx) {
     }
   };
 }
-function create_default_slot_82(ctx) {
+function create_default_slot_67(ctx) {
   let viewtoolbar;
   let current;
   viewtoolbar = new ViewToolbar_default({
@@ -55208,7 +55232,7 @@ function create_default_slot_82(ctx) {
     },
     p(ctx2, dirty) {
       const viewtoolbar_changes = {};
-      if (dirty[0] & 54136 | dirty[1] & 65536) {
+      if (dirty[0] & 3743 | dirty[1] & 262144) {
         viewtoolbar_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewtoolbar.$set(viewtoolbar_changes);
@@ -55228,8 +55252,11 @@ function create_default_slot_82(ctx) {
     }
   };
 }
-function create_default_slot_74(ctx) {
-  let t_value = ctx[44] + "";
+function create_default_slot_59(ctx) {
+  let t_value = ctx[11].t("views.calendar.weekday", {
+    value: ctx[46].toDate(),
+    formatParams: { value: { weekday: "short" } }
+  }) + "";
   let t3;
   return {
     c() {
@@ -55239,7 +55266,10 @@ function create_default_slot_74(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 1024 && t_value !== (t_value = ctx2[44] + ""))
+      if (dirty[0] & 2080 && t_value !== (t_value = ctx2[11].t("views.calendar.weekday", {
+        value: ctx2[46].toDate(),
+        formatParams: { value: { weekday: "short" } }
+      }) + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -55249,48 +55279,54 @@ function create_default_slot_74(ctx) {
   };
 }
 function create_each_block_2(ctx) {
-  let tablecolumnheadercell;
+  let weekday;
   let current;
-  tablecolumnheadercell = new TableColumnHeaderCell_default({
+  weekday = new Weekday_default({
     props: {
-      $$slots: { default: [create_default_slot_74] },
+      width: 100 / ctx[5].length,
+      weekend: ctx[46].day() === 0 || ctx[46].day() === 6,
+      $$slots: { default: [create_default_slot_59] },
       $$scope: { ctx }
     }
   });
   return {
     c() {
-      create_component(tablecolumnheadercell.$$.fragment);
+      create_component(weekday.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(tablecolumnheadercell, target, anchor);
+      mount_component(weekday, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      const tablecolumnheadercell_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 65536) {
-        tablecolumnheadercell_changes.$$scope = { dirty, ctx: ctx2 };
+      const weekday_changes = {};
+      if (dirty[0] & 32)
+        weekday_changes.width = 100 / ctx2[5].length;
+      if (dirty[0] & 32)
+        weekday_changes.weekend = ctx2[46].day() === 0 || ctx2[46].day() === 6;
+      if (dirty[0] & 2080 | dirty[1] & 262144) {
+        weekday_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      tablecolumnheadercell.$set(tablecolumnheadercell_changes);
+      weekday.$set(weekday_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(tablecolumnheadercell.$$.fragment, local);
+      transition_in(weekday.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(tablecolumnheadercell.$$.fragment, local);
+      transition_out(weekday.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(tablecolumnheadercell, detaching);
+      destroy_component(weekday, detaching);
     }
   };
 }
-function create_default_slot_67(ctx) {
+function create_default_slot_411(ctx) {
   let each_1_anchor;
   let current;
-  let each_value_2 = ctx[10];
+  let each_value_2 = ctx[5];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value_2.length; i2 += 1) {
     each_blocks[i2] = create_each_block_2(get_each_context_2(ctx, each_value_2, i2));
@@ -55313,8 +55349,8 @@ function create_default_slot_67(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 1024) {
-        each_value_2 = ctx2[10];
+      if (dirty[0] & 2080) {
+        each_value_2 = ctx2[5];
         let i2;
         for (i2 = 0; i2 < each_value_2.length; i2 += 1) {
           const child_ctx = get_each_context_2(ctx2, each_value_2, i2);
@@ -55357,107 +55393,72 @@ function create_default_slot_67(ctx) {
     }
   };
 }
-function create_default_slot_59(ctx) {
-  let tablerow;
-  let current;
-  tablerow = new TableRow_default({
-    props: {
-      $$slots: { default: [create_default_slot_67] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(tablerow.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(tablerow, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const tablerow_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 65536) {
-        tablerow_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tablerow.$set(tablerow_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(tablerow.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(tablerow.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(tablerow, detaching);
-    }
-  };
-}
 function create_each_block_12(ctx) {
   var _a;
-  let calendarday;
+  let day;
   let current;
-  function func_5() {
-    return ctx[37](ctx[41]);
+  function func_3(...args) {
+    return ctx[37](ctx[43], ...args);
   }
-  calendarday = new CalendarDay_default({
+  function func_4() {
+    return ctx[38](ctx[43]);
+  }
+  day = new Day_default({
     props: {
-      date: ctx[41],
-      checkField: (_a = ctx[14]) == null ? void 0 : _a.name,
-      onRecordUpdate: ctx[35],
-      records: ctx[13][ctx[41].format("YYYY-MM-DD")] || [],
-      onEntryClick: ctx[36],
-      onEntryAdd: func_5
+      width: 100 / ctx[40].length,
+      date: ctx[43],
+      checkField: (_a = ctx[9]) == null ? void 0 : _a.name,
+      records: ctx[8][ctx[43].format("YYYY-MM-DD")] || [],
+      onRecordClick: ctx[16],
+      onRecordChange: func_3,
+      onRecordAdd: func_4
     }
   });
   return {
     c() {
-      create_component(calendarday.$$.fragment);
+      create_component(day.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(calendarday, target, anchor);
+      mount_component(day, target, anchor);
       current = true;
     },
     p(new_ctx, dirty) {
       var _a2;
       ctx = new_ctx;
-      const calendarday_changes = {};
-      if (dirty[0] & 2048)
-        calendarday_changes.date = ctx[41];
-      if (dirty[0] & 16384)
-        calendarday_changes.checkField = (_a2 = ctx[14]) == null ? void 0 : _a2.name;
-      if (dirty[0] & 164)
-        calendarday_changes.onRecordUpdate = ctx[35];
-      if (dirty[0] & 10240)
-        calendarday_changes.records = ctx[13][ctx[41].format("YYYY-MM-DD")] || [];
-      if (dirty[0] & 132)
-        calendarday_changes.onEntryClick = ctx[36];
-      if (dirty[0] & 67623)
-        calendarday_changes.onEntryAdd = func_5;
-      calendarday.$set(calendarday_changes);
+      const day_changes = {};
+      if (dirty[0] & 64)
+        day_changes.width = 100 / ctx[40].length;
+      if (dirty[0] & 64)
+        day_changes.date = ctx[43];
+      if (dirty[0] & 512)
+        day_changes.checkField = (_a2 = ctx[9]) == null ? void 0 : _a2.name;
+      if (dirty[0] & 320)
+        day_changes.records = ctx[8][ctx[43].format("YYYY-MM-DD")] || [];
+      if (dirty[0] & 64)
+        day_changes.onRecordChange = func_3;
+      if (dirty[0] & 64)
+        day_changes.onRecordAdd = func_4;
+      day.$set(day_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(calendarday.$$.fragment, local);
+      transition_in(day.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(calendarday.$$.fragment, local);
+      transition_out(day.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(calendarday, detaching);
+      destroy_component(day, detaching);
     }
   };
 }
-function create_default_slot_411(ctx) {
+function create_default_slot_311(ctx) {
   let t3;
   let current;
-  let each_value_1 = ctx[38];
+  let each_value_1 = ctx[40];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value_1.length; i2 += 1) {
     each_blocks[i2] = create_each_block_12(get_each_context_12(ctx, each_value_1, i2));
@@ -55480,8 +55481,8 @@ function create_default_slot_411(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 92327) {
-        each_value_1 = ctx2[38];
+      if (dirty[0] & 230208) {
+        each_value_1 = ctx2[40];
         let i2;
         for (i2 = 0; i2 < each_value_1.length; i2 += 1) {
           const child_ctx = get_each_context_12(ctx2, each_value_1, i2);
@@ -55525,48 +55526,59 @@ function create_default_slot_411(ctx) {
   };
 }
 function create_each_block14(ctx) {
-  let tablerow;
+  let week;
   let current;
-  tablerow = new TableRow_default({
+  week = new Week_default({
     props: {
-      $$slots: { default: [create_default_slot_411] },
+      height: 100 / ctx[6].length,
+      $$slots: { default: [create_default_slot_311] },
       $$scope: { ctx }
     }
   });
   return {
     c() {
-      create_component(tablerow.$$.fragment);
+      create_component(week.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(tablerow, target, anchor);
+      mount_component(week, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      const tablerow_changes = {};
-      if (dirty[0] & 92327 | dirty[1] & 65536) {
-        tablerow_changes.$$scope = { dirty, ctx: ctx2 };
+      const week_changes = {};
+      if (dirty[0] & 64)
+        week_changes.height = 100 / ctx2[6].length;
+      if (dirty[0] & 832 | dirty[1] & 262144) {
+        week_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      tablerow.$set(tablerow_changes);
+      week.$set(week_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(tablerow.$$.fragment, local);
+      transition_in(week.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(tablerow.$$.fragment, local);
+      transition_out(week.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(tablerow, detaching);
+      destroy_component(week, detaching);
     }
   };
 }
-function create_default_slot_311(ctx) {
+function create_default_slot_214(ctx) {
+  let weekheader;
+  let t3;
   let each_1_anchor;
   let current;
-  let each_value = ctx[11];
+  weekheader = new WeekHeader_default({
+    props: {
+      $$slots: { default: [create_default_slot_411] },
+      $$scope: { ctx }
+    }
+  });
+  let each_value = ctx[6];
   let each_blocks = [];
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     each_blocks[i2] = create_each_block14(get_each_context14(ctx, each_value, i2));
@@ -55576,12 +55588,16 @@ function create_default_slot_311(ctx) {
   });
   return {
     c() {
+      create_component(weekheader.$$.fragment);
+      t3 = space();
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].c();
       }
       each_1_anchor = empty();
     },
     m(target, anchor) {
+      mount_component(weekheader, target, anchor);
+      insert(target, t3, anchor);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].m(target, anchor);
       }
@@ -55589,8 +55605,13 @@ function create_default_slot_311(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 92327) {
-        each_value = ctx2[11];
+      const weekheader_changes = {};
+      if (dirty[0] & 2080 | dirty[1] & 262144) {
+        weekheader_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      weekheader.$set(weekheader_changes);
+      if (dirty[0] & 230208) {
+        each_value = ctx2[6];
         let i2;
         for (i2 = 0; i2 < each_value.length; i2 += 1) {
           const child_ctx = get_each_context14(ctx2, each_value, i2);
@@ -55614,12 +55635,14 @@ function create_default_slot_311(ctx) {
     i(local) {
       if (current)
         return;
+      transition_in(weekheader.$$.fragment, local);
       for (let i2 = 0; i2 < each_value.length; i2 += 1) {
         transition_in(each_blocks[i2]);
       }
       current = true;
     },
     o(local) {
+      transition_out(weekheader.$$.fragment, local);
       each_blocks = each_blocks.filter(Boolean);
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         transition_out(each_blocks[i2]);
@@ -55627,121 +55650,62 @@ function create_default_slot_311(ctx) {
       current = false;
     },
     d(detaching) {
+      destroy_component(weekheader, detaching);
+      if (detaching)
+        detach(t3);
       destroy_each(each_blocks, detaching);
       if (detaching)
         detach(each_1_anchor);
     }
   };
 }
-function create_default_slot_214(ctx) {
-  let tablehead;
-  let t3;
-  let tablebody;
-  let current;
-  tablehead = new TableHead_default({
-    props: {
-      $$slots: { default: [create_default_slot_59] },
-      $$scope: { ctx }
-    }
-  });
-  tablebody = new TableBody_default({
-    props: {
-      $$slots: { default: [create_default_slot_311] },
-      $$scope: { ctx }
-    }
-  });
-  return {
-    c() {
-      create_component(tablehead.$$.fragment);
-      t3 = space();
-      create_component(tablebody.$$.fragment);
-    },
-    m(target, anchor) {
-      mount_component(tablehead, target, anchor);
-      insert(target, t3, anchor);
-      mount_component(tablebody, target, anchor);
-      current = true;
-    },
-    p(ctx2, dirty) {
-      const tablehead_changes = {};
-      if (dirty[0] & 1024 | dirty[1] & 65536) {
-        tablehead_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tablehead.$set(tablehead_changes);
-      const tablebody_changes = {};
-      if (dirty[0] & 92327 | dirty[1] & 65536) {
-        tablebody_changes.$$scope = { dirty, ctx: ctx2 };
-      }
-      tablebody.$set(tablebody_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(tablehead.$$.fragment, local);
-      transition_in(tablebody.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(tablehead.$$.fragment, local);
-      transition_out(tablebody.$$.fragment, local);
-      current = false;
-    },
-    d(detaching) {
-      destroy_component(tablehead, detaching);
-      if (detaching)
-        detach(t3);
-      destroy_component(tablebody, detaching);
-    }
-  };
-}
 function create_default_slot_120(ctx) {
-  let table;
+  let calendar;
   let current;
-  table = new Table_default({
+  calendar = new Calendar_default({
     props: {
-      grow: true,
       $$slots: { default: [create_default_slot_214] },
       $$scope: { ctx }
     }
   });
   return {
     c() {
-      create_component(table.$$.fragment);
+      create_component(calendar.$$.fragment);
     },
     m(target, anchor) {
-      mount_component(table, target, anchor);
+      mount_component(calendar, target, anchor);
       current = true;
     },
     p(ctx2, dirty) {
-      const table_changes = {};
-      if (dirty[0] & 93351 | dirty[1] & 65536) {
-        table_changes.$$scope = { dirty, ctx: ctx2 };
+      const calendar_changes = {};
+      if (dirty[0] & 2912 | dirty[1] & 262144) {
+        calendar_changes.$$scope = { dirty, ctx: ctx2 };
       }
-      table.$set(table_changes);
+      calendar.$set(calendar_changes);
     },
     i(local) {
       if (current)
         return;
-      transition_in(table.$$.fragment, local);
+      transition_in(calendar.$$.fragment, local);
       current = true;
     },
     o(local) {
-      transition_out(table.$$.fragment, local);
+      transition_out(calendar.$$.fragment, local);
       current = false;
     },
     d(detaching) {
-      destroy_component(table, detaching);
+      destroy_component(calendar, detaching);
     }
   };
 }
-function create_default_slot29(ctx) {
+function create_default_slot30(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
   let current;
   viewheader = new ViewHeader_default({
     props: {
-      $$slots: { default: [create_default_slot_82] },
+      $$slots: { default: [create_default_slot_67] },
       $$scope: { ctx }
     }
   });
@@ -55765,12 +55729,12 @@ function create_default_slot29(ctx) {
     },
     p(ctx2, dirty) {
       const viewheader_changes = {};
-      if (dirty[0] & 54136 | dirty[1] & 65536) {
+      if (dirty[0] & 3743 | dirty[1] & 262144) {
         viewheader_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewheader.$set(viewheader_changes);
       const viewcontent_changes = {};
-      if (dirty[0] & 93351 | dirty[1] & 65536) {
+      if (dirty[0] & 2912 | dirty[1] & 262144) {
         viewcontent_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewcontent.$set(viewcontent_changes);
@@ -55800,7 +55764,7 @@ function create_fragment78(ctx) {
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot29] },
+      $$slots: { default: [create_default_slot30] },
       $$scope: { ctx }
     }
   });
@@ -55814,7 +55778,7 @@ function create_fragment78(ctx) {
     },
     p(ctx2, dirty) {
       const viewlayout_changes = {};
-      if (dirty[0] & 131071 | dirty[1] & 65536) {
+      if (dirty[0] & 4095 | dirty[1] & 262144) {
         viewlayout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       viewlayout.$set(viewlayout_changes);
@@ -55849,10 +55813,10 @@ function instance78($$self, $$props, $$invalidate) {
   let numColumns;
   let weeks;
   let weekDays;
-  let $i18n;
   let $app;
-  component_subscribe($$self, i18n, ($$value) => $$invalidate(9, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(16, $app = $$value));
+  let $i18n;
+  component_subscribe($$self, app, ($$value) => $$invalidate(39, $app = $$value));
+  component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
   var _a, _b;
   let { project } = $$props;
   let { frame } = $$props;
@@ -55873,26 +55837,19 @@ function instance78($$self, $$props, $$invalidate) {
   function handleCheckFieldChange(checkField) {
     onConfigChange(Object.assign(Object.assign({}, config), { checkField }));
   }
-  setRecordColorContext(getRecordColor);
-  const change_handler = ({ detail }) => handleDateFieldChange(detail);
-  const change_handler_1 = ({ detail }) => handleCheckFieldChange(detail);
-  const change_handler_2 = ({ detail }) => handleIntervalChange(detail);
-  const func7 = () => $$invalidate(4, anchorDate = addInterval(anchorDate, interval));
-  const func_14 = () => $$invalidate(4, anchorDate = subtractInterval(anchorDate, interval));
-  const func_2 = () => $$invalidate(4, anchorDate = (0, import_dayjs8.default)());
-  const func_3 = (date, record) => {
+  function handleRecordChange(date, record) {
     if (dateField) {
       api2.updateRecord(
-        __spreadProps(__spreadValues({}, record), {
-          values: __spreadProps(__spreadValues({}, record.values), {
+        Object.assign(Object.assign({}, record), {
+          values: Object.assign(Object.assign({}, record.values), {
             [dateField.name]: date.format("YYYY-MM-DD")
           })
         }),
         fields
       );
     }
-  };
-  const func_4 = (entry) => {
+  }
+  function handleRecordClick(entry) {
     if (entry) {
       new EditNoteModal(
         get_store_value(app),
@@ -55903,8 +55860,8 @@ function instance78($$self, $$props, $$invalidate) {
         entry
       ).open();
     }
-  };
-  const func_5 = (date) => {
+  }
+  function handleRecordAdd(date) {
     if (dateField && !readonly) {
       new CreateNoteModal(
         $app,
@@ -55916,106 +55873,118 @@ function instance78($$self, $$props, $$invalidate) {
         }
       ).open();
     }
+  }
+  setRecordColorContext(getRecordColor);
+  const change_handler = ({ detail }) => handleDateFieldChange(detail);
+  const change_handler_1 = ({ detail }) => handleCheckFieldChange(detail);
+  const change_handler_2 = ({ detail }) => handleIntervalChange(detail);
+  const func7 = () => $$invalidate(1, anchorDate = addInterval(anchorDate, interval));
+  const func_14 = () => $$invalidate(1, anchorDate = subtractInterval(anchorDate, interval));
+  const func_2 = () => $$invalidate(1, anchorDate = (0, import_dayjs8.default)());
+  const func_3 = (date, record) => {
+    handleRecordChange(date, record);
+  };
+  const func_4 = (date) => {
+    handleRecordAdd(date);
   };
   $$self.$$set = ($$props2) => {
     if ("project" in $$props2)
-      $$invalidate(0, project = $$props2.project);
+      $$invalidate(18, project = $$props2.project);
     if ("frame" in $$props2)
-      $$invalidate(20, frame = $$props2.frame);
+      $$invalidate(19, frame = $$props2.frame);
     if ("readonly" in $$props2)
-      $$invalidate(1, readonly = $$props2.readonly);
+      $$invalidate(20, readonly = $$props2.readonly);
     if ("api" in $$props2)
-      $$invalidate(2, api2 = $$props2.api);
+      $$invalidate(21, api2 = $$props2.api);
     if ("getRecordColor" in $$props2)
-      $$invalidate(21, getRecordColor = $$props2.getRecordColor);
+      $$invalidate(22, getRecordColor = $$props2.getRecordColor);
     if ("config" in $$props2)
-      $$invalidate(3, config = $$props2.config);
+      $$invalidate(0, config = $$props2.config);
     if ("onConfigChange" in $$props2)
-      $$invalidate(22, onConfigChange = $$props2.onConfigChange);
+      $$invalidate(23, onConfigChange = $$props2.onConfigChange);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty[0] & 1048576) {
+    if ($$self.$$.dirty[0] & 524288) {
       $:
-        $$invalidate(7, { fields, records } = frame, fields, ($$invalidate(28, records), $$invalidate(20, frame)));
-    }
-    if ($$self.$$.dirty[0] & 128) {
-      $:
-        $$invalidate(8, dateFields = fields.filter((field) => !field.repeated).filter((field) => field.type === "date" /* Date */));
-    }
-    if ($$self.$$.dirty[0] & 8388872) {
-      $:
-        $$invalidate(5, dateField = $$invalidate(23, _a = dateFields.find((field) => (config === null || config === void 0 ? void 0 : config.dateField) === field.name)) !== null && _a !== void 0 ? _a : dateFields[0]);
-    }
-    if ($$self.$$.dirty[0] & 128) {
-      $:
-        $$invalidate(15, booleanFields = fields.filter((field) => !field.repeated).filter((field) => field.type === "boolean" /* Boolean */));
-    }
-    if ($$self.$$.dirty[0] & 136) {
-      $:
-        $$invalidate(14, booleanField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.checkField) === field.name));
-    }
-    if ($$self.$$.dirty[0] & 16777224) {
-      $:
-        $$invalidate(6, interval = $$invalidate(24, _b = config === null || config === void 0 ? void 0 : config.interval) !== null && _b !== void 0 ? _b : "week");
-    }
-    if ($$self.$$.dirty[0] & 80) {
-      $:
-        $$invalidate(27, dateInterval = computeDateInterval(anchorDate, interval));
-    }
-    if ($$self.$$.dirty[0] & 268435488) {
-      $:
-        $$invalidate(13, groupedRecords = dateField ? groupRecordsByField2(records, dateField.name) : {});
-    }
-    if ($$self.$$.dirty[0] & 134217728) {
-      $:
-        $$invalidate(12, title = dateInterval ? generateTitle(dateInterval) : "");
-    }
-    if ($$self.$$.dirty[0] & 134217728) {
-      $:
-        $$invalidate(26, dates = dateInterval ? generateDates(dateInterval) : []);
+        $$invalidate(26, { fields, records } = frame, fields, ($$invalidate(30, records), $$invalidate(19, frame)));
     }
     if ($$self.$$.dirty[0] & 67108864) {
       $:
-        $$invalidate(25, numColumns = Math.min(dates.length, 7));
+        $$invalidate(4, dateFields = fields.filter((field) => !field.repeated).filter((field) => field.type === "date" /* Date */));
     }
-    if ($$self.$$.dirty[0] & 100663296) {
+    if ($$self.$$.dirty[0] & 16777233) {
       $:
-        $$invalidate(11, weeks = chunkDates(dates, numColumns));
+        $$invalidate(2, dateField = $$invalidate(24, _a = dateFields.find((field) => (config === null || config === void 0 ? void 0 : config.dateField) === field.name)) !== null && _a !== void 0 ? _a : dateFields[0]);
     }
-    if ($$self.$$.dirty[0] & 100663808) {
+    if ($$self.$$.dirty[0] & 67108864) {
       $:
-        $$invalidate(10, weekDays = dates.slice(0, numColumns).map((date) => $i18n.t("views.calendar.weekday", {
-          value: date.toDate(),
-          formatParams: { value: { weekday: "short" } }
-        })));
+        $$invalidate(10, booleanFields = fields.filter((field) => !field.repeated).filter((field) => field.type === "boolean" /* Boolean */));
+    }
+    if ($$self.$$.dirty[0] & 67108865) {
+      $:
+        $$invalidate(9, booleanField = fields.find((field) => (config === null || config === void 0 ? void 0 : config.checkField) === field.name));
+    }
+    if ($$self.$$.dirty[0] & 33554433) {
+      $:
+        $$invalidate(3, interval = $$invalidate(25, _b = config === null || config === void 0 ? void 0 : config.interval) !== null && _b !== void 0 ? _b : "week");
+    }
+    if ($$self.$$.dirty[0] & 10) {
+      $:
+        $$invalidate(29, dateInterval = computeDateInterval(anchorDate, interval));
+    }
+    if ($$self.$$.dirty[0] & 1073741828) {
+      $:
+        $$invalidate(8, groupedRecords = dateField ? groupRecordsByField2(records, dateField.name) : {});
+    }
+    if ($$self.$$.dirty[0] & 536870912) {
+      $:
+        $$invalidate(7, title = dateInterval ? generateTitle(dateInterval) : "");
+    }
+    if ($$self.$$.dirty[0] & 536870912) {
+      $:
+        $$invalidate(28, dates = dateInterval ? generateDates(dateInterval) : []);
+    }
+    if ($$self.$$.dirty[0] & 268435456) {
+      $:
+        $$invalidate(27, numColumns = Math.min(dates.length, 7));
+    }
+    if ($$self.$$.dirty[0] & 402653184) {
+      $:
+        $$invalidate(6, weeks = chunkDates(dates, numColumns));
+    }
+    if ($$self.$$.dirty[0] & 402653184) {
+      $:
+        $$invalidate(5, weekDays = dates.slice(0, numColumns));
     }
   };
   return [
-    project,
-    readonly,
-    api2,
     config,
     anchorDate,
     dateField,
     interval,
-    fields,
     dateFields,
-    $i18n,
     weekDays,
     weeks,
     title,
     groupedRecords,
     booleanField,
     booleanFields,
-    $app,
+    $i18n,
     handleIntervalChange,
     handleDateFieldChange,
     handleCheckFieldChange,
+    handleRecordChange,
+    handleRecordClick,
+    handleRecordAdd,
+    project,
     frame,
+    readonly,
+    api2,
     getRecordColor,
     onConfigChange,
     _a,
     _b,
+    fields,
     numColumns,
     dates,
     dateInterval,
@@ -56027,8 +55996,7 @@ function instance78($$self, $$props, $$invalidate) {
     func_14,
     func_2,
     func_3,
-    func_4,
-    func_5
+    func_4
   ];
 }
 var CalendarView = class extends SvelteComponent {
@@ -56041,13 +56009,13 @@ var CalendarView = class extends SvelteComponent {
       create_fragment78,
       safe_not_equal,
       {
-        project: 0,
-        frame: 20,
-        readonly: 1,
-        api: 2,
-        getRecordColor: 21,
-        config: 3,
-        onConfigChange: 22
+        project: 18,
+        frame: 19,
+        readonly: 20,
+        api: 21,
+        getRecordColor: 22,
+        config: 0,
+        onConfigChange: 23
       },
       null,
       [-1, -1]
@@ -56099,7 +56067,7 @@ var CalendarView2 = class extends ProjectView {
 };
 
 // src/modals/components/CenterBox.svelte
-function add_css44(target) {
+function add_css46(target) {
   append_styles(target, "svelte-8ezeao", "div.svelte-8ezeao{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex:1}");
 }
 function create_fragment79(ctx) {
@@ -56164,13 +56132,13 @@ function instance79($$self, $$props, $$invalidate) {
 var CenterBox = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance79, create_fragment79, safe_not_equal, {}, add_css44);
+    init(this, options, instance79, create_fragment79, safe_not_equal, {}, add_css46);
   }
 };
 var CenterBox_default = CenterBox;
 
 // src/views/Gallery/components/Card/Card.svelte
-function add_css45(target) {
+function add_css47(target) {
   append_styles(target, "svelte-xq218h", "div.svelte-xq218h{background-color:var(--background-secondary);border-radius:var(--radius-s);border:1px solid var(--background-modifier-border);padding:0;margin:0}div.svelte-xq218h:hover{border:1px solid var(--background-modifier-border-hover)}");
 }
 function create_fragment80(ctx) {
@@ -56235,13 +56203,13 @@ function instance80($$self, $$props, $$invalidate) {
 var Card = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance80, create_fragment80, safe_not_equal, {}, add_css45);
+    init(this, options, instance80, create_fragment80, safe_not_equal, {}, add_css47);
   }
 };
 var Card_default2 = Card;
 
 // src/views/Gallery/components/Card/CardContent.svelte
-function add_css46(target) {
+function add_css48(target) {
   append_styles(target, "svelte-1gcw78i", "div.svelte-1gcw78i{padding:8px;display:flex}");
 }
 function create_fragment81(ctx) {
@@ -56306,13 +56274,13 @@ function instance81($$self, $$props, $$invalidate) {
 var CardContent = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance81, create_fragment81, safe_not_equal, {}, add_css46);
+    init(this, options, instance81, create_fragment81, safe_not_equal, {}, add_css48);
   }
 };
 var CardContent_default = CardContent;
 
 // src/views/Gallery/components/Card/CardMedia.svelte
-function add_css47(target) {
+function add_css49(target) {
   append_styles(target, "svelte-1ur9trs", "div.svelte-1ur9trs{height:180px;border-top-left-radius:4px;border-top-right-radius:4px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--background-modifier-border)}");
 }
 function create_fragment82(ctx) {
@@ -56394,13 +56362,13 @@ function instance82($$self, $$props, $$invalidate) {
 var CardMedia = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance82, create_fragment82, safe_not_equal, {}, add_css47);
+    init(this, options, instance82, create_fragment82, safe_not_equal, {}, add_css49);
   }
 };
 var CardMedia_default = CardMedia;
 
 // src/views/Gallery/components/Grid/Grid.svelte
-function add_css48(target) {
+function add_css50(target) {
   append_styles(target, "svelte-29f12s", "div.svelte-29f12s{display:grid;gap:24px;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr))}");
 }
 function create_fragment83(ctx) {
@@ -56465,13 +56433,13 @@ function instance83($$self, $$props, $$invalidate) {
 var Grid = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance83, create_fragment83, safe_not_equal, {}, add_css48);
+    init(this, options, instance83, create_fragment83, safe_not_equal, {}, add_css50);
   }
 };
 var Grid_default = Grid;
 
 // src/views/Gallery/components/Image/Image.svelte
-function add_css49(target) {
+function add_css51(target) {
   append_styles(target, "svelte-ol6m5s", "img.svelte-ol6m5s{width:100%;height:100%;border-top-left-radius:4px;border-top-right-radius:4px}");
 }
 function create_fragment84(ctx) {
@@ -56525,13 +56493,13 @@ function instance84($$self, $$props, $$invalidate) {
 var Image = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance84, create_fragment84, safe_not_equal, { alt: 0, src: 1, fit: 2 }, add_css49);
+    init(this, options, instance84, create_fragment84, safe_not_equal, { alt: 0, src: 1, fit: 2 }, add_css51);
   }
 };
 var Image_default = Image;
 
 // src/views/Gallery/GalleryView.svelte
-function add_css50(target) {
+function add_css52(target) {
   append_styles(target, "svelte-3pi9m0", "div.svelte-3pi9m0{padding:24px}");
 }
 function get_each_context15(ctx, list, i2) {
@@ -56545,7 +56513,7 @@ function get_context(ctx) {
   const constants_0 = ctx[8](ctx[22]);
   ctx[26] = constants_0;
 }
-function create_default_slot_103(ctx) {
+function create_default_slot_102(ctx) {
   var _a, _b, _c;
   let select;
   let current;
@@ -56601,7 +56569,7 @@ function create_right_slot4(ctx) {
   field = new Field_default({
     props: {
       name: ctx[7].t("views.gallery.fields.cover"),
-      $$slots: { default: [create_default_slot_103] },
+      $$slots: { default: [create_default_slot_102] },
       $$scope: { ctx }
     }
   });
@@ -57339,7 +57307,7 @@ function create_default_slot_121(ctx) {
     }
   };
 }
-function create_default_slot30(ctx) {
+function create_default_slot31(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
@@ -57405,7 +57373,7 @@ function create_fragment85(ctx) {
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot30] },
+      $$slots: { default: [create_default_slot31] },
       $$scope: { ctx }
     }
   });
@@ -57578,7 +57546,7 @@ var GalleryView = class extends SvelteComponent {
         api: 14,
         getRecordColor: 1
       },
-      add_css50
+      add_css52
     );
   }
 };
@@ -57628,7 +57596,7 @@ var GalleryView2 = class extends ProjectView {
 var import_obsidian50 = require("obsidian");
 
 // src/views/Table/components/DataGrid/GridCell/Resizer.svelte
-function add_css51(target) {
+function add_css53(target) {
   append_styles(target, "svelte-ke01nl", ".handle.svelte-ke01nl{position:relative;left:7.5px;width:6px;min-width:6px;height:100%;border-radius:1px}.handle.svelte-ke01nl:hover{background-color:var(--interactive-accent);cursor:ew-resize}.visible.svelte-ke01nl{background-color:var(--interactive-accent);cursor:ew-resize}");
 }
 function create_else_block8(ctx) {
@@ -57789,14 +57757,14 @@ var Resizer = class extends SvelteComponent {
         onFinalize: 6,
         min: 7
       },
-      add_css51
+      add_css53
     );
   }
 };
 var Resizer_default = Resizer;
 
 // src/views/Table/components/DataGrid/GridCell/GridCell.svelte
-function add_css52(target) {
+function add_css54(target) {
   append_styles(target, "svelte-1glbfw2", "div.svelte-1glbfw2{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);width:100%;min-height:30px}.selected.svelte-1glbfw2{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-1glbfw2{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-1glbfw2{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-1glbfw2{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;padding:3px;gap:4px;position:relative}");
 }
 var get_read_slot_changes_2 = (dirty) => ({});
@@ -58807,7 +58775,7 @@ var GridCell = class extends SvelteComponent {
         onCut: 21,
         onPaste: 22
       },
-      add_css52,
+      add_css54,
       [-1, -1]
     );
   }
@@ -59336,7 +59304,7 @@ var GridDateCell = class extends SvelteComponent {
 var GridDateCell_default = GridDateCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberLabel.svelte
-function add_css53(target) {
+function add_css55(target) {
   append_styles(target, "svelte-1636x3v", "div.svelte-1636x3v{width:100%;padding:6px;text-align:right}");
 }
 function create_fragment90(ctx) {
@@ -59376,13 +59344,13 @@ function instance90($$self, $$props, $$invalidate) {
 var NumberLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance90, create_fragment90, safe_not_equal, { value: 0 }, add_css53);
+    init(this, options, instance90, create_fragment90, safe_not_equal, { value: 0 }, add_css55);
   }
 };
 var NumberLabel_default = NumberLabel;
 
 // src/views/Table/components/DataGrid/GridCell/GridNumberCell/NumberInput.svelte
-function add_css54(target) {
+function add_css56(target) {
   append_styles(target, "svelte-1uq2i75", "input.svelte-1uq2i75{all:unset;background-color:var(--background-primary);box-sizing:border-box;width:100%;padding:6px;font-weight:400;font-family:var(--font-default);color:var(--text-normal);text-align:right}input.svelte-1uq2i75:focus{box-shadow:none !important}input.svelte-1uq2i75:hover{background-color:transparent}");
 }
 function create_fragment91(ctx) {
@@ -59464,7 +59432,7 @@ function instance91($$self, $$props, $$invalidate) {
 var NumberInput2 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance91, create_fragment91, safe_not_equal, { value: 0, onChange: 4 }, add_css54);
+    init(this, options, instance91, create_fragment91, safe_not_equal, { value: 0, onChange: 4 }, add_css56);
   }
 };
 var NumberInput_default2 = NumberInput2;
@@ -59782,7 +59750,7 @@ var GridNumberCell = class extends SvelteComponent {
 var GridNumberCell_default = GridNumberCell;
 
 // src/views/Table/components/DataGrid/GridCell/GridTextCell/TextLabel.svelte
-function add_css55(target) {
+function add_css57(target) {
   append_styles(target, "svelte-q1s3im", "div.svelte-q1s3im{padding:6px;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}");
 }
 function create_fragment93(ctx) {
@@ -59821,7 +59789,7 @@ function instance93($$self, $$props, $$invalidate) {
 var TextLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance93, create_fragment93, safe_not_equal, { value: 0 }, add_css55);
+    init(this, options, instance93, create_fragment93, safe_not_equal, { value: 0 }, add_css57);
   }
 };
 var TextLabel_default = TextLabel;
@@ -60215,7 +60183,7 @@ var GridTextCell_default = GridTextCell;
 var import_obsidian45 = require("obsidian");
 
 // src/views/Table/components/DataGrid/GridCell/GridLinkCell/LinkLabel.svelte
-function add_css56(target) {
+function add_css58(target) {
   append_styles(target, "svelte-1ip22jj", "div.svelte-1ip22jj{padding:6px;width:100%}");
 }
 function create_if_block31(ctx) {
@@ -60226,7 +60194,7 @@ function create_if_block31(ctx) {
       linkText: ctx[0].linkText,
       sourcePath: ctx[0].sourcePath,
       resolved: !!ctx[1].metadataCache.getFirstLinkpathDest(ctx[0].linkText, ctx[0].sourcePath),
-      $$slots: { default: [create_default_slot31] },
+      $$slots: { default: [create_default_slot32] },
       $$scope: { ctx }
     }
   });
@@ -60267,7 +60235,7 @@ function create_if_block31(ctx) {
     }
   };
 }
-function create_default_slot31(ctx) {
+function create_default_slot32(ctx) {
   var _a;
   let t_value = ((_a = ctx[0].displayName) != null ? _a : ctx[0].linkText) + "";
   let t3;
@@ -60361,7 +60329,7 @@ function instance95($$self, $$props, $$invalidate) {
 var LinkLabel = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance95, create_fragment95, safe_not_equal, { value: 0 }, add_css56);
+    init(this, options, instance95, create_fragment95, safe_not_equal, { value: 0 }, add_css58);
   }
 };
 var LinkLabel_default = LinkLabel;
@@ -61556,7 +61524,7 @@ function menuOnContextMenu(event, menu) {
 }
 
 // src/views/Table/components/DataGrid/GridCellGroup.svelte
-function add_css57(target) {
+function add_css59(target) {
   append_styles(target, "svelte-1jrmech", "div.svelte-1jrmech{display:flex}.header.svelte-1jrmech{position:sticky;top:0;z-index:10}");
 }
 function create_fragment99(ctx) {
@@ -61653,7 +61621,7 @@ function instance99($$self, $$props, $$invalidate) {
 var GridCellGroup = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance99, create_fragment99, safe_not_equal, { index: 0, header: 1 }, add_css57);
+    init(this, options, instance99, create_fragment99, safe_not_equal, { index: 0, header: 1 }, add_css59);
   }
 };
 var GridCellGroup_default = GridCellGroup;
@@ -61904,7 +61872,7 @@ function create_each_block16(ctx) {
     }
   };
 }
-function create_default_slot32(ctx) {
+function create_default_slot33(ctx) {
   let gridcell;
   let t3;
   let each_1_anchor;
@@ -62006,7 +61974,7 @@ function create_fragment100(ctx) {
     props: {
       index: 1,
       header: true,
-      $$slots: { default: [create_default_slot32] },
+      $$slots: { default: [create_default_slot33] },
       $$scope: { ctx }
     }
   });
@@ -62230,7 +62198,7 @@ function create_each_block17(ctx) {
     }
   };
 }
-function create_default_slot33(ctx) {
+function create_default_slot34(ctx) {
   let gridcell;
   let t3;
   let each_1_anchor;
@@ -62344,7 +62312,7 @@ function create_fragment101(ctx) {
   gridcellgroup = new GridCellGroup_default({
     props: {
       index: ctx[1],
-      $$slots: { default: [create_default_slot33] },
+      $$slots: { default: [create_default_slot34] },
       $$scope: { ctx }
     }
   });
@@ -62503,7 +62471,7 @@ var GridRow = class extends SvelteComponent {
 var GridRow_default = GridRow;
 
 // src/views/Table/components/DataGrid/DataGrid.svelte
-function add_css58(target) {
+function add_css60(target) {
   append_styles(target, "svelte-8irtc3", "div.svelte-8irtc3{display:inline-block}span.svelte-8irtc3{padding:4px;position:sticky;left:0}");
 }
 function get_each_context18(ctx, list, i2) {
@@ -62664,7 +62632,7 @@ function create_default_slot_122(ctx) {
     }
   };
 }
-function create_default_slot34(ctx) {
+function create_default_slot35(ctx) {
   let span;
   let span_style_value;
   let current;
@@ -62755,7 +62723,7 @@ function create_fragment102(ctx) {
   gridcellgroup = new GridCellGroup_default({
     props: {
       index: ctx[9].length + 2,
-      $$slots: { default: [create_default_slot34] },
+      $$slots: { default: [create_default_slot35] },
       $$scope: { ctx }
     }
   });
@@ -63063,7 +63031,7 @@ var DataGrid = class extends SvelteComponent {
         onRowDelete: 21,
         onRowEdit: 22
       },
-      add_css58,
+      add_css60,
       [-1, -1]
     );
   }
@@ -63071,7 +63039,7 @@ var DataGrid = class extends SvelteComponent {
 var DataGrid_default = DataGrid;
 
 // src/views/Table/components/SwitchSelect/SwitchSelect.svelte
-function add_css59(target) {
+function add_css61(target) {
   append_styles(target, "svelte-zdcf2i", "div.svelte-zdcf2i{align-items:center;display:inline-flex;text-align:start}");
 }
 function get_each_context19(ctx, list, i2) {
@@ -63126,7 +63094,7 @@ function create_each_block19(ctx) {
     }
   };
 }
-function create_default_slot35(ctx) {
+function create_default_slot36(ctx) {
   let each_1_anchor;
   let current;
   let each_value = ctx[0];
@@ -63209,7 +63177,7 @@ function create_fragment103(ctx) {
       anchorEl: ctx[3],
       open: ctx[4],
       onClose: ctx[9],
-      $$slots: { default: [create_default_slot35] },
+      $$slots: { default: [create_default_slot36] },
       $$scope: { ctx }
     }
   });
@@ -63315,7 +63283,7 @@ function instance103($$self, $$props, $$invalidate) {
 var SwitchSelect = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance103, create_fragment103, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css59);
+    init(this, options, instance103, create_fragment103, safe_not_equal, { items: 0, label: 2, onChange: 1 }, add_css61);
   }
 };
 var SwitchSelect_default = SwitchSelect;
@@ -63324,7 +63292,7 @@ var SwitchSelect_default = SwitchSelect;
 var import_obsidian51 = require("obsidian");
 
 // src/components/MultiTextInput/MultiTextInput.svelte
-function add_css60(target) {
+function add_css62(target) {
   append_styles(target, "svelte-9r99fn", "div.svelte-9r99fn{display:flex;flex-direction:column;gap:4px;width:100%}span.svelte-9r99fn{display:flex;gap:4px}");
 }
 function get_each_context20(ctx, list, i2) {
@@ -63386,7 +63354,7 @@ function create_each_block20(ctx) {
     }
   };
 }
-function create_default_slot36(ctx) {
+function create_default_slot37(ctx) {
   let icon;
   let t3;
   let current;
@@ -63435,7 +63403,7 @@ function create_fragment104(ctx) {
   button = new Button_default({
     props: {
       variant: "plain",
-      $$slots: { default: [create_default_slot36] },
+      $$slots: { default: [create_default_slot37] },
       $$scope: { ctx }
     }
   });
@@ -63549,7 +63517,7 @@ function instance104($$self, $$props, $$invalidate) {
 var MultiTextInput = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance104, create_fragment104, safe_not_equal, { options: 0, onChange: 4 }, add_css60);
+    init(this, options, instance104, create_fragment104, safe_not_equal, { options: 0, onChange: 4 }, add_css62);
   }
 };
 var MultiTextInput_default = MultiTextInput;
@@ -63734,7 +63702,7 @@ function create_default_slot_313(ctx) {
       $$scope: { ctx }
     }
   });
-  let if_block = ctx[0].type === "string" /* String */ && create_if_block36(ctx);
+  let if_block = ctx[0].type === "string" /* String */ && !ctx[0].repeated && create_if_block36(ctx);
   return {
     c() {
       create_component(settingitem0.$$.fragment);
@@ -63766,7 +63734,7 @@ function create_default_slot_313(ctx) {
         settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem1.$set(settingitem1_changes);
-      if (ctx2[0].type === "string" /* String */) {
+      if (ctx2[0].type === "string" /* String */ && !ctx2[0].repeated) {
         if (if_block) {
           if_block.p(ctx2, dirty);
           if (dirty & 1) {
@@ -63870,7 +63838,7 @@ function create_default_slot_123(ctx) {
     }
   };
 }
-function create_default_slot37(ctx) {
+function create_default_slot38(ctx) {
   let modalcontent;
   let t3;
   let modalbuttongroup;
@@ -63937,7 +63905,7 @@ function create_fragment105(ctx) {
   modallayout = new ModalLayout_default({
     props: {
       title: ctx[1],
-      $$slots: { default: [create_default_slot37] },
+      $$slots: { default: [create_default_slot38] },
       $$scope: { ctx }
     }
   });
@@ -64231,7 +64199,7 @@ function create_default_slot_124(ctx) {
     }
   };
 }
-function create_default_slot38(ctx) {
+function create_default_slot39(ctx) {
   let viewheader;
   let t3;
   let viewcontent;
@@ -64297,7 +64265,7 @@ function create_fragment106(ctx) {
   let current;
   viewlayout = new ViewLayout_default({
     props: {
-      $$slots: { default: [create_default_slot38] },
+      $$slots: { default: [create_default_slot39] },
       $$scope: { ctx }
     }
   });
@@ -64418,12 +64386,13 @@ function instance106($$self, $$props, $$invalidate) {
         "Configure field",
         field,
         (field2) => {
+          var _a2;
           if (field2.name !== column.field) {
             api2.updateField(field2, column.field);
           } else {
             api2.updateField(field2);
           }
-          const projectFields = Object.fromEntries(Object.entries(project.fieldConfig).filter(([key, _24]) => fields.find((field3) => field3.name === key)));
+          const projectFields = Object.fromEntries(Object.entries((_a2 = project.fieldConfig) != null ? _a2 : {}).filter(([key, _24]) => fields.find((field3) => field3.name === key)));
           settings.updateProject(__spreadProps(__spreadValues({}, project), {
             fieldConfig: __spreadProps(__spreadValues({}, projectFields), {
               [field2.name]: field2.typeConfig
