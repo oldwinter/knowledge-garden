@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c5aa825fabeca4de",
+        "id": "2139c7d91cd48421",
         "type": "tabs",
-        "dimension": 26.48401826484018,
         "children": [
           {
-            "id": "0c20bd4afa5bc495",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Sources/Courses/DevOps实战笔记-石雪峰/🧩DevOps成长路线图.canvas",
-                "viewState": {
-                  "x": -16.496242560926078,
-                  "y": -406.1440803753909,
-                  "zoom": -0.7957117667216931,
-                  "snapToGrid": false
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "7ce3a02fca4581b3",
-        "type": "tabs",
-        "dimension": 73.51598173515981,
-        "children": [
-          {
-            "id": "c17e32cf01a4c927",
+            "id": "862eae5b0b5026a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md",
+                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md"
+                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md"
               }
             }
           },
@@ -117,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md",
+                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md",
+                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md",
+                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,8 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.50247192382812,
-    "collapsed": true
+    "width": 222.50247192382812
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -232,17 +207,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "c17e32cf01a4c927",
+  "active": "862eae5b0b5026a2",
   "lastOpenFiles": [
-    "Spaces/2-Area/前端Frontend/OWASP Security Risks.md",
-    "Spaces/2-Area/前端Frontend/∑ Fronted roadmap 前端路线图.md",
-    "Spaces/2-Area/前端Frontend/Content Security Policy.md",
-    "Spaces/2-Area/前端Frontend/CORS.md",
-    "Cards/永久笔记/🔗github.md",
-    "Spaces/3-Resource/计算机科学专题/计算机网络.md",
-    "Cards/永久笔记/七层网络模型.md",
-    "Cards/永久笔记/网络通信协议模型-OSI.md",
-    "Spaces/2-Area/运维DevOps/∑ DevOps roadmap 运维路线图.md",
-    "Calendar/Daily notes/奔跑的奶酪的浏览器书签大汇总.md"
+    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+    "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md",
+    "Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md",
+    "Cards/永久笔记/🔡STAR.md",
+    "Sources/Courses/面试现场-白海飞/现在的你，到底该不该换工作.md",
+    "Spaces/2-Area/运维DevOps/🧩DevOps成长路线图.canvas",
+    "Spaces/3-Resource/计算机科学专题/JavaScript.md",
+    "Spaces/3-Resource/计算机科学专题/Python.md",
+    "I/O管理.md",
+    "Spaces/2-Area/运维DevOps/∑ DevOps roadmap 运维路线图.md"
   ]
 }

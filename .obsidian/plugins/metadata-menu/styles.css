@@ -1070,6 +1070,8 @@ span.flatpickr-weekday {
       .metadata-menu.modal-container.note-fields-modal .fields-inheritance-manager-container .fileclass-manager-container .name.active {
         padding-bottom: 0em;
         border-bottom: 0.4em var(--color-accent) solid; }
+      .metadata-menu.modal-container.note-fields-modal .fields-inheritance-manager-container .fileclass-manager-container .name:hover {
+        cursor: context-menu; }
     .metadata-menu.modal-container.note-fields-modal .fields-inheritance-manager-container .fileclass-manager-container button svg {
       color: var(--text-faint);
       height: 1em; }
@@ -1329,8 +1331,6 @@ span.flatpickr-weekday {
       margin-right: 0; }
   .value-container .spacer {
     width: 100%; }
-  .value-container .is-selected {
-    background-color: var(--interactive-accent); }
   .value-container .icon-container {
     margin: 0em 0.7em 0em 0em;
     display: block; }
@@ -1338,6 +1338,8 @@ span.flatpickr-weekday {
       vertical-align: text-bottom; }
   .value-container.value-checked {
     background-color: var(--interactive-accent); }
+    .value-container.value-checked.is-selected {
+      background-color: var(--background-modifier-hover); }
   .value-container .item-with-add-on {
     display: flex; }
     .value-container .item-with-add-on .add-on {

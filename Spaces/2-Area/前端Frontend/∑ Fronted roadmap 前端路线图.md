@@ -1,20 +1,19 @@
 ---
-title: Fronted roadmap 前端路线图
+title: ∑ Fronted roadmap 前端路线图
 date created: 2022-12-29
-date modified: 2022-12-29
-tags: 索引笔记
+date modified: 2022-12-30
+tags: [索引笔记]
 ---
 
 ## 文字版
+
 - 网络
-	- 左
-		- 因特网如何工作？
-		- 什么是HTTP
-		- 浏览器的工作原理？
-	- 右
-		- DNS的工作原理
-		- 什么是域名
-		- 什么是web托管服务
+	- 因特网如何工作？
+	- 什么是HTTP
+	- 浏览器的工作原理？
+	- DNS的工作原理
+	- 什么是域名
+	- 什么是web托管服务
 - HTML、CSS和JavaScript
 	- [[HTML]]
 	- [[CSS]]
@@ -64,8 +63,17 @@ tags: 索引笔记
 	- [[SSO]]
 	- [[Basic Auth]]
 	- [[Session Auth]]
-- 
-
+- [[PWA - Progressive Web Apps]]
+- [[SSR 服务端渲染]]
+- [[静态网站生成器]]
+- [[GraphQL]]
+- 移动端应用
+	- [[React Native]]
+	- [[Flutter]]
+- 桌面端应用
+	- [[Electron]]
+	- [[Tauri]]
+	- [[Flutter]]
 
 ## 参考文献
 
