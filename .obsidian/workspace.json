@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2139c7d91cd48421",
+        "id": "a0d772f4e3a97035",
         "type": "tabs",
         "children": [
           {
-            "id": "862eae5b0b5026a2",
+            "id": "ec10809e491d45db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Cards/永久笔记/个人信息管理系统.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#视频笔记",
+                "query": "tag:#待办/今天",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "92910ae8836a7b22",
@@ -83,7 +84,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md"
+                "file": "Cards/永久笔记/个人信息管理系统.md"
               }
             }
           },
@@ -93,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Cards/永久笔记/个人信息管理系统.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -105,7 +106,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Cards/永久笔记/个人信息管理系统.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -140,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Cards/永久笔记/个人信息管理系统.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,17 +208,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "862eae5b0b5026a2",
+  "active": "ec10809e491d45db",
   "lastOpenFiles": [
     "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+    "🧰 本库指南/Tutorials/§ 本库obsidian使用说明书.md",
+    "Sources/Books/微信读书同步/生活百科/4分钟极速减脂-刘洹.md",
+    "README.md",
+    "Calendar/Daily notes/2022-12-31.md",
+    "Cards/永久笔记/自己部署一个v2ray服务.md",
     "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md",
     "Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md",
     "Cards/永久笔记/🔡STAR.md",
-    "Sources/Courses/面试现场-白海飞/现在的你，到底该不该换工作.md",
-    "Spaces/2-Area/运维DevOps/🧩DevOps成长路线图.canvas",
-    "Spaces/3-Resource/计算机科学专题/JavaScript.md",
-    "Spaces/3-Resource/计算机科学专题/Python.md",
-    "I/O管理.md",
-    "Spaces/2-Area/运维DevOps/∑ DevOps roadmap 运维路线图.md"
+    "Sources/Courses/面试现场-白海飞/现在的你，到底该不该换工作.md"
   ]
 }
