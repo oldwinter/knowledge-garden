@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md",
+                "file": "Calendar/Daily notes/2023-01-02.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#待办/今天",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +70,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -84,7 +83,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md"
+                "file": "Calendar/Daily notes/2023-01-02.md"
               }
             }
           },
@@ -94,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md",
+                "file": "Calendar/Daily notes/2023-01-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +105,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md",
+                "file": "Calendar/Daily notes/2023-01-02.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -141,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/个人信息管理系统.md",
+                "file": "Calendar/Daily notes/2023-01-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,18 +166,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "177f4f02a91c161a",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
             "id": "fbf20229279daad7",
             "type": "leaf",
             "state": {
               "type": "daily-note-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "422449fe44c7f22f",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
               "state": {}
             }
           }
@@ -200,25 +199,25 @@
       "canvas:Create new canvas": false,
       "templater-obsidian:Templater": true,
       "obsidian-weread-plugin:Weread": false,
-      "obsidian-spaced-repetition:复习卡片": true,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "omnisearch:Omnisearch": true,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "obsidian-spaced-repetition:复习卡片": false
     }
   },
   "active": "ec10809e491d45db",
   "lastOpenFiles": [
+    "Cards/永久笔记/个人知识笔记系统.md",
+    "Calendar/Daily notes/2023-01-02.md",
+    "Cards/永久笔记/个人信息管理系统.md",
     "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
     "🧰 本库指南/Tutorials/§ 本库obsidian使用说明书.md",
     "Sources/Books/微信读书同步/生活百科/4分钟极速减脂-刘洹.md",
     "README.md",
     "Calendar/Daily notes/2022-12-31.md",
     "Cards/永久笔记/自己部署一个v2ray服务.md",
-    "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md",
-    "Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md",
-    "Cards/永久笔记/🔡STAR.md",
-    "Sources/Courses/面试现场-白海飞/现在的你，到底该不该换工作.md"
+    "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md"
   ]
 }

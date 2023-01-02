@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.1.3
+Version 2.1.4
 Created by @colineckert
 
 Readme:
@@ -66,6 +66,12 @@ body {
   --checkbox-radius: 30%;
   --link-external-decoration: underline;
   --link-decoration: underline;
+
+  /* -------- */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+  --radius-xl: 16px;
 }
 
 /* COLOR SCHEMES
@@ -143,7 +149,11 @@ body.theme-light.is-mobile {
     calc(var(--base-s) - 5%),
     calc(var(--base-l) - 30%)
   );
-
+  --text-formatted: hsl(
+    var(--base-h),
+    calc(var(--base-s) - 5%),
+    calc(var(--base-l) - 35%)
+  );
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --text-accent-hover: hsl(
     var(--accent-h),
@@ -225,6 +235,11 @@ body.theme-dark.is-mobile {
 
   --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
   --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+  --text-formatted: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) + 50%)
+  );
 
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
   --text-accent-hover: hsl(
@@ -300,9 +315,8 @@ body:not(.default-font-color) mark em {
 .cm-formatting-strong,
 .cm-formatting-em,
 .cm-formatting.cm-formatting-quote {
-  color: var(--text-faint) !important;
+  color: var(--text-formatted) !important;
   font-weight: var(--normal-weight);
-  opacity: 0.8;
   letter-spacing: -0.02em;
 }
 
@@ -324,19 +338,138 @@ img {
   background: var(--blue);
 }
 
-/* Highlight styles */
+/* Highlight active line */
+body.active-line .cm-active {
+  background-color: var(--color-base-25);
+}
+
+/* Highlight styling */
 span.cm-highlight,
 .markdown-preview-view mark,
 span.search-result-file-matched-text {
-  padding: 0.05em 0.15em;
-  border-radius: 0.2em;
+  padding: 0.1em 0;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
-/* Highlight active line */
-body.active-line .cm-active {
-  background-color: var(--color-base-25);
+/* Code blocks */
+.cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.markdown-preview-view.markdown-preview-view :is(pre, code) {
+  --codeblock-border: var(--color-base-30);
+  --codeblock-roundness: var(--radius-s);
+  --code-block-alt-bg: var(--color-base-30);
+  --slight-code-roundish: var(--radius-xs);
+}
+
+.cm-s-obsidian .HyperMD-codeblock {
+  line-height: 1.4em;
+}
+
+body .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  padding-left: var(--size-2-2);
+}
+
+body:not(.no-codeblock-line-numbers) .HyperMD-codeblock-begin {
+  counter-reset: codeblock-line-numbers;
+}
+
+body:not(.no-codeblock-line-numbers)
+  .HyperMD-codeblock:not(
+    .HyperMD-codeblock-begin,
+    .HyperMD-codeblock-end
+  )::before {
+  counter-increment: codeblock-line-numbers;
+  content: counter(codeblock-line-numbers);
+  font-size: 0.75em;
+  line-height: 2;
+  text-align: right;
+  height: 100%;
+  width: 1.7em;
+  color: var(--text-muted);
+  /* background-color: #1e2029; */
+  background-color: var(--code-background);
+  position: absolute;
+  left: 0;
+  padding-right: 1.4em;
+}
+
+body:not(.no-codeblock-line-numbers)
+  .HyperMD-codeblock.cm-line:not(
+    .HyperMD-codeblock-begin,
+    .HyperMD-codeblock-end
+  ) {
+  padding-left: 2.8em;
+}
+
+body:not(.no-codeblock-line-numbers)
+  .cm-s-obsidian
+  div.HyperMD-codeblock-begin-bg {
+  background-color: var(--code-block-alt-bg);
+  border: var(--codeblock-border);
+  border-bottom: none;
+  border-top-right-radius: var(--codeblock-roundness);
+  border-top-left-radius: var(--codeblock-roundness);
+}
+
+div.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg) {
+  border-right: var(--codeblock-border);
+  border-left: var(--codeblock-border);
+}
+
+body:not(.no-codeblock-line-numbers)
+  .cm-line.HyperMD-codeblock
+  .code-block-flair {
+  font-size: calc(var(--code-size) * 0.9);
+  color: var(--text-muted);
+  padding: 0 1px;
+  top: 0;
+}
+
+body:not(.no-codeblock-line-numbers)
+  .markdown-reading-view
+  pre[class*='language-']::before {
+  display: block;
+  content: ' ';
+  line-height: 1.5em;
+  background-color: var(--code-block-alt-bg);
+  border-top-right-radius: calc(var(--codeblock-roundness) * 0.8);
+  border-top-left-radius: calc(var(--codeblock-roundness) * 0.8);
+}
+
+body:not(.no-codeblock-line-numbers) pre[class*='language-']::after {
+  content: attr(class);
+  font-size: 0.9rem;
+  text-shadow: none;
+  color: var(--text-muted);
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+
+.markdown-reading-view .markdown-preview-view pre:not(.frontmatter) code {
+  white-space: pre;
+}
+
+body:not(.no-codeblock-line-numbers) .markdown-preview-view pre code {
+  padding: var(--size-4-1) var(--size-4-2);
+}
+
+body:not(.no-codeblock-line-numbers)
+  .copy-code-button.copy-code-button.copy-code-button {
+  background-color: var(--interactive-normal);
+  top: unset;
+  bottom: 0;
+  padding: 0 var(--size-2-2);
+}
+
+body:not(.no-codeblock-line-numbers)
+  .markdown-preview-view.markdown-preview-view
+  pre {
+  padding: 0;
+  margin-top: var(--size-4-2);
+  border: var(--codeblock-border);
+  border-radius: var(--codeblock-roundness);
 }
 
 /* ------------------- */
@@ -364,6 +497,7 @@ body.active-line .cm-active {
 .token.property,
 .token.property-access,
 .token.dom.variable,
+span.token.variable,
 .cm-hmd-codeblock.cm-tag,
 .cm-variable,
 .cm-property,
@@ -402,6 +536,7 @@ body.active-line .cm-active {
 .cm-keyword {
   color: var(--atom-purple);
 }
+.cm-builtin,
 .token.function,
 .token.method,
 .token.macro.property {
@@ -867,6 +1002,26 @@ li[data-task='b'] > p > input:checked {
   border-radius: var(--checkbox-radius) !important;
 }
 
+/* ---------------  */
+/* Kanban */
+/* --------------- */
+
+.kanban-plugin {
+  --dot-color: hsl(0 0% 40% / 25%);
+  --dot-spacing: 9px;
+  --dot-size: 1px;
+}
+.kanban-plugin__board {
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color) var(--dot-size),
+    transparent var(--dot-size)
+  );
+  border-top: var(--thin-border);
+  background-size: var(--dot-spacing) var(--dot-spacing);
+  background-attachment: local;
+}
+
 /* ─────────────────────────────────────────────────── */
 /* Styles Settings */
 /* ─────────────────────────────────────────────────── */
@@ -897,6 +1052,12 @@ settings:
         title: Highlight active line
         description: Change background color of current working line
         id: active-line
+        type: class-toggle
+        default: false
+    -
+        title: Disable enhanced code blocks
+        description: Remove line numbers and additional styling to code blocks
+        id: no-codeblock-line-numbers
         type: class-toggle
         default: false
     -
