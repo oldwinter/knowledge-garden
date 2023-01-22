@@ -1,0 +1,364 @@
+{
+  "groups": [
+    {
+      "loadAtStartup": false,
+      "disableOnStartup": false,
+      "delay": 2,
+      "id": "pgminimal",
+      "name": "最简插件",
+      "plugins": [
+        {
+          "id": "obsidian-auto-link-title",
+          "name": "Auto Link Title"
+        },
+        {
+          "id": "cmdr",
+          "name": "Commander"
+        },
+        {
+          "id": "dataview",
+          "name": "Dataview"
+        },
+        {
+          "id": "obsidian-image-auto-upload-plugin",
+          "name": "Image auto upload Plugin"
+        },
+        {
+          "id": "obsidian-linter",
+          "name": "Linter"
+        },
+        {
+          "id": "omnisearch",
+          "name": "Omnisearch"
+        },
+        {
+          "id": "obsidian-outliner",
+          "name": "Outliner"
+        },
+        {
+          "id": "obsidian-sortable",
+          "name": "Sortable"
+        },
+        {
+          "id": "obsidian-spaced-repetition",
+          "name": "Spaced Repetition"
+        },
+        {
+          "id": "supercharged-links-obsidian",
+          "name": "Supercharged Links"
+        },
+        {
+          "id": "obsidian-style-settings",
+          "name": "Style Settings"
+        },
+        {
+          "id": "cm-chs-patch",
+          "name": "Word Splitting for Simplified Chinese in Edit Mode"
+        },
+        {
+          "id": "templater-obsidian",
+          "name": "Templater"
+        },
+        {
+          "id": "tag-wrangler",
+          "name": "Tag Wrangler"
+        },
+        {
+          "id": "obsidian-hider",
+          "name": "Hider"
+        }
+      ],
+      "groupIds": [],
+      "generateCommands": true,
+      "assignedDevices": [],
+      "autoAdd": false
+    },
+    {
+      "loadAtStartup": false,
+      "disableOnStartup": false,
+      "delay": 2,
+      "id": "pg",
+      "name": "好用插件",
+      "plugins": [
+        {
+          "id": "table-editor-obsidian",
+          "name": "Advanced Tables"
+        },
+        {
+          "id": "obsidian-advanced-slides",
+          "name": "Advanced Slides"
+        },
+        {
+          "id": "obsidian-advanced-uri",
+          "name": "Advanced URI"
+        },
+        {
+          "id": "obsidian-another-quick-switcher",
+          "name": "Another Quick Switcher"
+        },
+        {
+          "id": "obsidian-daily-note-outline",
+          "name": "Daily Note Outline"
+        },
+        {
+          "id": "obsidian-projects",
+          "name": "Projects"
+        },
+        {
+          "id": "obsidian-prozen",
+          "name": "ProZen"
+        },
+        {
+          "id": "obsidian-better-command-palette",
+          "name": "Better Command Palette"
+        },
+        {
+          "id": "obsidian-excalidraw-plugin",
+          "name": "Excalidraw"
+        },
+        {
+          "id": "obsidian-plugin-update-tracker",
+          "name": "Plugin Update Tracker"
+        }
+      ],
+      "groupIds": [],
+      "generateCommands": false
+    },
+    {
+      "loadAtStartup": false,
+      "disableOnStartup": false,
+      "delay": 2,
+      "id": "pg0",
+      "name": "全部插件",
+      "plugins": [
+        {
+          "id": "obsidian-advanced-slides",
+          "name": "Advanced Slides"
+        },
+        {
+          "id": "table-editor-obsidian",
+          "name": "Advanced Tables"
+        },
+        {
+          "id": "obsidian-advanced-uri",
+          "name": "Advanced URI"
+        },
+        {
+          "id": "obsidian-another-quick-switcher",
+          "name": "Another Quick Switcher"
+        },
+        {
+          "id": "obsidian-auto-link-title",
+          "name": "Auto Link Title"
+        },
+        {
+          "id": "obsidian-better-command-palette",
+          "name": "Better Command Palette"
+        },
+        {
+          "id": "obsidian-bulk-rename-plugin",
+          "name": "Bulk Rename"
+        },
+        {
+          "id": "chronology",
+          "name": "Chronology"
+        },
+        {
+          "id": "cmdr",
+          "name": "Commander"
+        },
+        {
+          "id": "obsidian-daily-note-outline",
+          "name": "Daily Note Outline"
+        },
+        {
+          "id": "dataview",
+          "name": "Dataview"
+        },
+        {
+          "id": "dbfolder",
+          "name": "DB Folder"
+        },
+        {
+          "id": "digitalgarden",
+          "name": "Digital Garden"
+        },
+        {
+          "id": "excalibrain",
+          "name": "ExcaliBrain"
+        },
+        {
+          "id": "obsidian-excalidraw-plugin",
+          "name": "Excalidraw"
+        },
+        {
+          "id": "execute-code",
+          "name": "Execute Code"
+        },
+        {
+          "id": "obsidian-file-cooker",
+          "name": "File Cooker"
+        },
+        {
+          "id": "find-unlinked-files",
+          "name": "Find orphaned files and broken links"
+        },
+        {
+          "id": "obsidian-focus-plugin",
+          "name": "Focus and Highlight"
+        },
+        {
+          "id": "obsidian-hider",
+          "name": "Hider"
+        },
+        {
+          "id": "homepage",
+          "name": "Homepage"
+        },
+        {
+          "id": "obsidian-hypothesis-plugin",
+          "name": "Hypothes.is"
+        },
+        {
+          "id": "obsidian-image-auto-upload-plugin",
+          "name": "Image auto upload Plugin"
+        },
+        {
+          "id": "janitor",
+          "name": "Janitor"
+        },
+        {
+          "id": "keyboard-analyzer",
+          "name": "Keyboard Analyzer"
+        },
+        {
+          "id": "obsidian-linter",
+          "name": "Linter"
+        },
+        {
+          "id": "obsidian-local-rest-api",
+          "name": "Local REST API"
+        },
+        {
+          "id": "make-md",
+          "name": "MAKE.md"
+        },
+        {
+          "id": "mermaid-tools",
+          "name": "Mermaid Tools"
+        },
+        {
+          "id": "metadata-menu",
+          "name": "Metadata Menu"
+        },
+        {
+          "id": "obsidian-minimal-settings",
+          "name": "Minimal Theme Settings"
+        },
+        {
+          "id": "note-refactor-obsidian",
+          "name": "Note Refactor"
+        },
+        {
+          "id": "obsidian42-brat",
+          "name": "Obsidian42 - BRAT"
+        },
+        {
+          "id": "obsidian42-strange-new-worlds",
+          "name": "Obsidian42 - Strange New Worlds"
+        },
+        {
+          "id": "omnisearch",
+          "name": "Omnisearch"
+        },
+        {
+          "id": "obsidian-outliner",
+          "name": "Outliner"
+        },
+        {
+          "id": "obsidian-plugin-update-tracker",
+          "name": "Plugin Update Tracker"
+        },
+        {
+          "id": "obsidian-projects",
+          "name": "Projects"
+        },
+        {
+          "id": "obsidian-prozen",
+          "name": "ProZen"
+        },
+        {
+          "id": "obsidian-query-control",
+          "name": "Query Control"
+        },
+        {
+          "id": "quickadd",
+          "name": "QuickAdd"
+        },
+        {
+          "id": "settings-search",
+          "name": "Settings Search"
+        },
+        {
+          "id": "obsidian-shellcommands",
+          "name": "Shell commands"
+        },
+        {
+          "id": "smart-connections",
+          "name": "Smart Connections"
+        },
+        {
+          "id": "obsidian-sortable",
+          "name": "Sortable"
+        },
+        {
+          "id": "obsidian-spaced-repetition",
+          "name": "Spaced Repetition"
+        },
+        {
+          "id": "obsidian-style-settings",
+          "name": "Style Settings"
+        },
+        {
+          "id": "supercharged-links-obsidian",
+          "name": "Supercharged Links"
+        },
+        {
+          "id": "tag-wrangler",
+          "name": "Tag Wrangler"
+        },
+        {
+          "id": "templater-obsidian",
+          "name": "Templater"
+        },
+        {
+          "id": "text-extractor",
+          "name": "Text Extractor"
+        },
+        {
+          "id": "obsidian-textgenerator-plugin",
+          "name": "Text Generator"
+        },
+        {
+          "id": "various-complements",
+          "name": "Various Complements"
+        },
+        {
+          "id": "webpage-html-export",
+          "name": "Webpage HTML Export"
+        },
+        {
+          "id": "obsidian-weread-plugin",
+          "name": "Weread Plugin"
+        }
+      ],
+      "groupIds": [],
+      "generateCommands": false
+    }
+  ],
+  "generateCommands": true,
+  "showNoticeOnGroupLoad": "normal",
+  "devices": [
+    "mbp"
+  ]
+}

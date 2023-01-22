@@ -8,7 +8,7 @@ title: dataview的数据来源
 
 dataview 有 3 种元数据获取方式：
 
-1，是 [[frontmatter]]，和[[dataview]]
+1，是 [[frontmatter]]，和[[Dataview]]
 
 	- **Frontmatter**: Frontmatter is a common Markdown extension which allows for YAML metadata to be added to the top of a page. All YAML fields will be available as Dataview fields:
 

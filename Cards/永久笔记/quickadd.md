@@ -1,10 +1,10 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-01-11
 title: quickadd
 ---
 
-和 [[dataview]]与[[templater]] 联动，发挥最大效用。
+和 [[Dataview]]与[[Templater]] 联动，发挥最大效用。
 
 [chhoumann/quickadd: QuickAdd for Obsidian (github.com)](https://github.com/chhoumann/quickadd)
 

@@ -1,0 +1,34 @@
+body {
+ 
+  --pink: #ff82b2;
+  --strong-color: var(--pink);
+  --em-color: var(--pink);
+}
+.theme-light,
+body.theme-light {
+  --color-base: #e4e6f1;
+}
+
+.theme-dark,
+body.theme-dark {
+  --color-base: #37373d;
+}
+
+
+
+/* 高亮当前选中行 */
+body.active-line .cm-active {
+  background-color: var(--color-base) !important;
+}
+
+/* Bold font */
+body:not(.default-font-color) strong,
+body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
+  color: var(--strong-color);
+}
+
+/* Italics */
+body:not(.default-font-color) em,
+body:not(.default-font-color) span:not(.cm-highlight).cm-em {
+  color: var(--em-color);
+}

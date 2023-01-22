@@ -1,0 +1,30 @@
+.mermaid-toolbar-container, .mermaid-toolbar-container * {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mermaid-toolbar-top-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mermaid-toolbar-elements-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mermaid-toolbar-element {
+    font-size: var(--font-ui-small);
+    cursor: pointer;
+    padding: 2px 2px 2px 5px;
+    border-radius: 3px;
+    flex: 1 0 auto;
+}
+
+.mermaid-toolbar-element:hover {
+    background-color: var(--interactive-hover);
+}

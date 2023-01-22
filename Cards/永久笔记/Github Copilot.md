@@ -4,6 +4,10 @@ date modified: 2022-09-08
 title: Github Copilot
 ---
 
+## 连接不上问题解决
+
+因为copilot也隶属于github，也被屏蔽了。最简单的方式就是配置[[vscode proxy]]。
+
 智能给出下一段代码建议，贼强。md 格式也支持，写小说写诗都很溜。
 
 [[2022-09-08]]，尝试用胡老师的大学老师信息申请github education教育优惠失败。4个关键要素填上，一次性申请通过了。

@@ -4,15 +4,28 @@
   "makeMenuPlaceholder": true,
   "mobileMakeBar": true,
   "inlineStyler": true,
+  "makerMode": true,
   "inlineStylerColors": false,
   "editorFlow": true,
+  "internalLinkClickFlow": true,
+  "saveAllContextToFrontmatter": false,
   "editorFlowStyle": "seamless",
+  "autoOpenFileContext": false,
+  "spacesCompactMode": false,
   "spacesEnabled": false,
   "spacesPerformance": false,
+  "enableFolderNote": true,
+  "revealActiveFile": false,
   "spacesStickers": false,
-  "sidebarRibbon": true,
+  "spacesDisablePatch": false,
+  "folderNoteInsideFolder": true,
   "sidebarTabs": true,
+  "showRibbon": true,
   "deleteFileOption": "trash",
+  "expandedFolders": {},
+  "expandedSpaces": [
+    "/"
+  ],
   "folderRank": {
     "node": "",
     "children": [
@@ -9317,12 +9330,26 @@
       "collapsed": false
     }
   ],
-  "vaultCollapsed": false,
+  "pinnedSpaces": [],
   "menuTriggerChar": "/",
   "emojiTriggerChar": ":",
-  "makerMode": true,
+  "folderContextFile": "context",
+  "tagContextFolder": "Context",
+  "hiddenFiles": [
+    "Context"
+  ],
+  "hiddenExtensions": [
+    "mdb"
+  ],
+  "vaultSort": [
+    "rank",
+    true
+  ],
+  "newFileLocation": "current",
+  "newFileFolderPath": "Cards",
+  "sidebarRibbon": true,
+  "vaultCollapsed": false,
   "sidebar": false,
   "sidebarPerformance": false,
-  "sidebarStickers": false,
-  "spacesDisablePatch": false
+  "sidebarStickers": false
 }

@@ -19,6 +19,7 @@
   ],
   "allRootItems": true,
   "displayFileInfo": "lines",
+  "viewPosition": "right",
   "wordsToIgnore": {
     "heading": [],
     "link": [],
@@ -37,5 +38,6 @@
     "link": [],
     "tag": [],
     "listItems": []
-  }
+  },
+  "wordsToExtract": ""
 }

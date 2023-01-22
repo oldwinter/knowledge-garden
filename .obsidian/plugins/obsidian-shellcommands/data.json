@@ -1,5 +1,5 @@
 {
-  "settings_version": "0.17.0",
+  "settings_version": "0.18.0",
   "debug": false,
   "obsidian_command_palette_prefix": "Execute: ",
   "preview_variables_in_command_palette": true,
@@ -38,7 +38,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -63,7 +66,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -88,7 +94,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     },
     {
       "platform_specific_commands": {
@@ -113,7 +122,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     },
     {
       "id": "vnphwuno3u",
@@ -138,7 +150,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     },
     {
       "id": "fqidjftr47",
@@ -163,7 +178,10 @@
         "stdout": null,
         "stderr": null
       },
-      "output_handling_mode": "buffered"
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
     }
   ],
   "prompts": [
@@ -176,6 +194,7 @@
       "execute_button_text": "Execute"
     }
   ],
+  "builtin_variables": {},
   "custom_variables": [],
   "output_wrappers": []
 }

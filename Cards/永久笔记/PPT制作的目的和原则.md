@@ -18,4 +18,4 @@ title: PPT制作的目的和原则
 
 ## slides 教程
 
-[[advanced-slides|slides学习笔记教程]]
+[[Advanced Slides|slides学习笔记教程]]

@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "a0d772f4e3a97035",
+        "id": "f0002f8640d0c8d5",
         "type": "tabs",
         "children": [
           {
-            "id": "ec10809e491d45db",
+            "id": "43e7b45727aed263",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-01-02.md",
+                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
                 "mode": "source",
-                "backlinks": true,
+                "backlinks": false,
                 "source": false
               }
             }
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#微信读书笔记",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,6 +69,14 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "8f3b2b13fce3d6c1",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       },
@@ -83,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-01-02.md"
+                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md"
               }
             }
           },
@@ -93,9 +101,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-01-02.md",
+                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -105,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-01-02.md",
+                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -128,7 +136,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1,
+                  "scale": 0.12451444219601071,
                   "close": true
                 }
               }
@@ -140,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-01-02.md",
+                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,73 +159,63 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 222.50247192382812
+    "width": 239.5
   },
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
     "children": [
       {
-        "id": "e0ca5f2ea8f2eeda",
+        "id": "b5602443fdd7086d",
         "type": "tabs",
         "children": [
           {
-            "id": "fbf20229279daad7",
+            "id": "7fce28591ed1700e",
             "type": "leaf",
             "state": {
-              "type": "daily-note-outline",
+              "type": "Strange New Worlds",
               "state": {}
             }
           },
           {
-            "id": "422449fe44c7f22f",
+            "id": "96f9db84a56d2fb2",
             "type": "leaf",
             "state": {
-              "type": "review-queue-list-view",
+              "type": "chronology-calendar-view",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 318.5,
-    "collapsed": true
+    "width": 217.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": true,
-      "workspaces:管理工作区布局": false,
-      "canvas:Create new canvas": false,
-      "templater-obsidian:Templater": true,
-      "obsidian-weread-plugin:Weread": false,
-      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "omnisearch:Omnisearch": true,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-projects:Open projects": false,
-      "obsidian-spaced-repetition:复习卡片": false
+      "switcher:打开快速切换": true,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": true,
+      "command-palette:打开命令面板": true
     }
   },
-  "active": "ec10809e491d45db",
+  "active": "43e7b45727aed263",
   "lastOpenFiles": [
-    "Cards/永久笔记/个人知识笔记系统.md",
-    "Calendar/Daily notes/2023-01-02.md",
-    "Cards/永久笔记/个人信息管理系统.md",
-    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
-    "🧰 本库指南/Tutorials/§ 本库obsidian使用说明书.md",
-    "Sources/Books/微信读书同步/生活百科/4分钟极速减脂-刘洹.md",
-    "README.md",
-    "Calendar/Daily notes/2022-12-31.md",
-    "Cards/永久笔记/自己部署一个v2ray服务.md",
-    "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md"
+    "🧰 本库指南/Tutorials/本库使用时遵守的核心原则.md",
+    "Atlas/TOCs/§ TOCs.md",
+    "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "🧰 本库指南/Tutorials/本库工作区、界面划分逻辑及图标.md",
+    "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+    "🧰 本库指南/Tutorials/本库需要单独配置的插件.md",
+    "🧰 本库指南/Tutorials/本库使用的obsidian第三方插件及原因.md",
+    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md",
+    "Calendar/Daily notes/生命之花 - 人生规划分类方法.md"
   ]
 }

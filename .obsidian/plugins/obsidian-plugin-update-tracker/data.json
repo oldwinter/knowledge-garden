@@ -4,5 +4,5 @@
   "showIconOnMobile": true,
   "excludeBetaVersions": false,
   "excludeDisabledPlugins": false,
-  "hideIconIfNoUpdatesAvailable": false
+  "hideIconIfNoUpdatesAvailable": true
 }

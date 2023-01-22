@@ -1,0 +1,218 @@
+/* @settings
+
+name: Execute Code Settings
+id: obsidian-execute-code
+settings:
+    -
+        id: color-section-title
+        title: Color Settings
+        type: heading
+        level: 3
+    -
+        id: use-custom-output-color
+        title: Custom Code Output Color
+        description: Use a custom color for the output of code blocks
+        type: class-toggle
+        default: false
+    -
+        id: code-output-text-color
+        title: Output Text Color
+        type: variable-color
+        format: hex
+        opacity: false
+        default: '#FFFFFF'
+    -
+        id: use-custom-error-color
+        title: Custom Code Error Color
+        description: Use a custom color for the error output of code blocks
+        type: class-toggle
+        default: false
+    -
+        id: code-error-text-color
+        title: Error Text Color
+        type: variable-color
+        format: hex
+        opacity: false
+        default: '#FF0000'
+*/
+
+button.run-code-button {
+	display: none;
+	color: var(--text-muted);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 5px;
+	padding: 5px 20px 5px 20px;
+	z-index: 100;
+}
+
+button.clear-button {
+	display: none;
+	color: var(--text-muted);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 5px;
+	padding: 5px 20px 5px 20px;
+	z-index: 100;
+}
+
+pre:hover .run-code-button, pre:hover .clear-button {
+	display: block;
+}
+
+pre:hover .run-button-disabled, pre:hover .clear-button-disabled {
+	display: none;
+}
+
+.run-button-disabled, .clear-button-disabled {
+	display: none;
+}
+
+pre:hover code.language-output {
+	margin-bottom: 28px;
+}
+
+:not(.use-custom-output-color) code.language-output span.stdout {
+	color: var(--text-muted) !important;
+}
+
+.use-custom-output-color code.language-output span.stdout {
+    color: var(--code-output-text-color) !important;
+}
+
+:not(.use-custom-error-color) code.language-output span.stderr {
+	color: red !important;
+}
+
+.use-custom-error-color code.language-output span.stderr {
+	color: var(--code-error-text-color) !important;
+}
+
+code.language-output hr {
+	margin: 0 0 1em;
+}
+
+.settings-code-input-box textarea, .settings-code-input-box input {
+	min-width: 400px;
+	min-height: 100px;
+	font-family: monospace;
+	resize: vertical;
+}
+
+input.interactive-stdin {
+	font: inherit;
+}
+
+.manage-executors-view h3 {
+	margin: 1em;
+}
+
+.manage-executors-view ul {
+	margin: 1em;
+	padding: 0;
+	list-style-type: none;
+}
+
+.manage-executors-view ul li {
+	padding: 0.5em;
+	background: var(--background-primary-alt);
+	border-radius: 4px;
+	display: grid;
+	flex-direction: column;
+	margin-bottom: 0.5em;
+}
+
+.manage-executors-view small {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.1ch;
+	grid-row: 1;
+}
+
+.manage-executors-view .filename {
+	grid-row: 2;
+}
+
+.manage-executors-view li button {
+	grid-column: 2;
+	grid-row: 1 / 3;
+	margin: 0;
+	padding: 0.25em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-muted);
+	background: none;
+}
+
+.manage-executors-view li button:hover {
+	background: var(--background-tertiary);
+	color: var(--icon-color-hover);
+}
+
+.manage-executors-view > div {
+	position: relative;
+}
+
+.manage-executors-view .empty-state {
+	color: var(--text-muted);
+	padding: 0.5em;
+}
+
+.has-run-code-button {
+	position: relative;
+}
+
+.has-run-code-button pre {
+	z-index: 1;
+}
+
+.load-state-indicator {
+	position: absolute;
+	top: 0.1em;
+	left: -2em;
+	width: 2em;
+	height: 2em;
+	background: var(--background-primary-alt);
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	color: var(--tx1);
+	transform: translateX(2em);
+	transition: transform 0.25s, opacity 0.25s;
+	opacity: 0;
+	pointer-events: none;
+	cursor: pointer;
+}
+
+.load-state-indicator svg {
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0.25em;
+}
+
+.load-state-indicator.visible {
+	transform: translateX(0);
+	transform: translateX(var(--folding-offset, 0));
+	opacity: 1;
+	pointer-events: all;
+}
+
+.load-state-indicator::before {
+	content: "";
+	box-shadow: -1em 0 1em -0.75em inset var(--background-modifier-box-shadow);
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: translateX(-2em);
+	opacity: 0;
+	transition: transform 0.25s, opacity 0.25s;
+	pointer-events: none;
+}
+
+.load-state-indicator.visible::before {
+	transform: translateX(0);
+	opacity: 1;
+}

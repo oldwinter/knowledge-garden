@@ -10,7 +10,7 @@ title: obsidian开箱即用示例库
 - [GitHub - cumany/Blue-topaz-examples: Blue topaz themes example vault for Obsidian](https://github.com/cumany/Blue-topaz-examples)
 	- 有非常多奇技淫巧，我个人建议可以将其作为大而全的词典，借鉴用法和代码，不推荐全盘照搬。
 - [GitHub - Rainbell129/Obsidian-Homepage: A dashboard for your obsidian vault.](https://github.com/Rainbell129/Obsidian-Homepage)
-	- 和cummany的库挺像，但功能收缩了很多，特色在于，dataview运用的很娴熟，可以作为dataview的实践教材。
+	- 和cuman的库挺像，但功能收缩了很多，特色在于，dataview运用的很娴熟，可以作为dataview的实践教材。
 
 [[2022-06-29]]更新：
 

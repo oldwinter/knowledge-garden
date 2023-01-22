@@ -9,11 +9,18 @@ x:: [[obsidian组织笔记的N个 xx first]]
 ## 5个要素，综合形成了obsidian独特的笔记组织方法
 
 - folders
+	- 传统文件组织方法，给人安全感
 - tags
+	- 丰富分类的维度
+	- 也可以用来管理状态
 - links
-- dataview
+	- 传统的单向链接已经足够好用
+	- 现在的双向链接，让信息通路进一步升级
+- dataview，数据库
 	- 综合使用[[frontmatter]]和[[inline fields]]的信息
+	- 类似notion的数据库的用法
 - files
+	- 和files对应的是大纲类软件roam和块类软件notion，放弃了文件概念，引入了最小信息承载单位-块
 
 [[ACCESS 笔记组织法]]也是将obsidian这5种要素都使用上了，发挥至极致。
 

@@ -9,7 +9,7 @@ title: 本库启用的obsidian核心插件及原因
 - 笔记重组
 	- 见[[obsidian中2个均被引用过的页面如何重组合并]]。
 - 标签列表
-	- 我习惯将tag写在[[frontmatter]]区，以管理文件状态和特殊文件，这种用法让tag不至于过度膨胀，也能配合[[dataview]]工作。
+	- 我习惯将tag写在[[frontmatter]]区，以管理文件状态和特殊文件，这种用法让tag不至于过度膨胀，也能配合[[Dataview]]工作。
 - 出链
 	- 很少用。但不打开这个功能总觉得缺点什么。
 - 大纲
@@ -22,7 +22,7 @@ title: 本库启用的obsidian核心插件及原因
 - 关系图谱
 	- 平时用不上，但打开偶尔看看，能给自己一些继续记录的动力。
 - 日记
-	- [[» Daily notes工作流]]必须。社区的Calendar插件和periodic-notes插件，我用不上，因为我几乎只关心当天的note。
+	- [[» Daily notes工作流]]必须。社区的Calendar插件和periodic-notes插件，我用不上，因为我几乎只关心当天的note。当然若有日历形式，用起来确实会更方便，但Calendar插件已经2年没更新，作者也已经加入obsidian开发者团队，所以更好用的日历核心插件，迟早会来的。
 - 搜索
 	- 这个插件其实我不常用，更多的是纯阅读场合会用。而平时记笔记时，为了多用键盘少用鼠标，我更常用的见[[本库常用的快捷键及作用#核心三件套]]，可以更方便地按各种角度搜索库内资源。
 - 文件恢复
@@ -36,7 +36,7 @@ title: 本库启用的obsidian核心插件及原因
 ## 未启用
 
 - 幻灯片
-	- [[advanced-slides]]插件完爆这个。或如果有简单展示诉求，用[[fucus and highlight]]插件也可平替使用场景。
+	- [[Advanced Slides]]插件完爆这个。或如果有简单展示诉求，用[[fucus and highlight]]插件也可平替使用场景。
 - 快速切换
 	- 改用[[another quick switcher]]。
 - 录音机
@@ -46,7 +46,7 @@ title: 本库启用的obsidian核心插件及原因
 - 命令面板
 	- 改用[[better command palette]]。
 - 模板
-	- 改用[[templater]]
+	- 改用[[Templater]]
 - 时间戳生成器
 	- zettelkasten原生方法是这么搞的，但那是纸质年代的特殊性。现在直接给page赋予一个文件名更有使用价值。
 - 同步

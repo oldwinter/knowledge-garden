@@ -248,13 +248,13 @@ var require_browser = __commonJS({
 var require_wrappy = __commonJS({
   "node_modules/wrappy/wrappy.js"(exports, module2) {
     module2.exports = wrappy;
-    function wrappy(fn, cb) {
-      if (fn && cb)
-        return wrappy(fn)(cb);
-      if (typeof fn !== "function")
+    function wrappy(fn2, cb) {
+      if (fn2 && cb)
+        return wrappy(fn2)(cb);
+      if (typeof fn2 !== "function")
         throw new TypeError("need wrapper function");
-      Object.keys(fn).forEach(function(k) {
-        wrapper[k] = fn[k];
+      Object.keys(fn2).forEach(function(k) {
+        wrapper[k] = fn2[k];
       });
       return wrapper;
       function wrapper() {
@@ -262,7 +262,7 @@ var require_wrappy = __commonJS({
         for (var i = 0; i < args.length; i++) {
           args[i] = arguments[i];
         }
-        var ret = fn.apply(this, args);
+        var ret = fn2.apply(this, args);
         var cb2 = args[args.length - 1];
         if (typeof ret === "function" && ret !== cb2) {
           Object.keys(cb2).forEach(function(k) {
@@ -295,24 +295,24 @@ var require_once = __commonJS({
         configurable: true
       });
     });
-    function once2(fn) {
+    function once2(fn2) {
       var f = function() {
         if (f.called)
           return f.value;
         f.called = true;
-        return f.value = fn.apply(this, arguments);
+        return f.value = fn2.apply(this, arguments);
       };
       f.called = false;
       return f;
     }
-    function onceStrict(fn) {
+    function onceStrict(fn2) {
       var f = function() {
         if (f.called)
           throw new Error(f.onceError);
         f.called = true;
-        return f.value = fn.apply(this, arguments);
+        return f.value = fn2.apply(this, arguments);
       };
-      var name = fn.name || "Function wrapped with `once`";
+      var name = fn2.name || "Function wrapped with `once`";
       f.onceError = name + " shouldn't be called more than once";
       f.called = false;
       return f;
@@ -1353,7 +1353,7 @@ var require_slugify = __commonJS({
       const escapedSeparator = escapeStringRegexp(separator);
       return string.replace(new RegExp(`${escapedSeparator}{2,}`, "g"), separator).replace(new RegExp(`^${escapedSeparator}|${escapedSeparator}$`, "g"), "");
     };
-    var slugify2 = (string, options) => {
+    var slugify3 = (string, options) => {
       if (typeof string !== "string") {
         throw new TypeError(`Expected a string, got \`${typeof string}\``);
       }
@@ -1391,7 +1391,7 @@ var require_slugify = __commonJS({
     var counter = () => {
       const occurrences = new Map();
       const countable = (string, options) => {
-        string = slugify2(string, options);
+        string = slugify3(string, options);
         if (!string) {
           return "";
         }
@@ -1410,7 +1410,7 @@ var require_slugify = __commonJS({
       };
       return countable;
     };
-    module2.exports = slugify2;
+    module2.exports = slugify3;
     module2.exports.counter = counter;
   }
 });
@@ -1428,39 +1428,39 @@ var require_core = __commonJS({
       }
     })(exports, function() {
       var CryptoJS = CryptoJS || function(Math2, undefined2) {
-        var crypto;
+        var crypto2;
         if (typeof window !== "undefined" && window.crypto) {
-          crypto = window.crypto;
+          crypto2 = window.crypto;
         }
         if (typeof self !== "undefined" && self.crypto) {
-          crypto = self.crypto;
+          crypto2 = self.crypto;
         }
         if (typeof globalThis !== "undefined" && globalThis.crypto) {
-          crypto = globalThis.crypto;
+          crypto2 = globalThis.crypto;
         }
-        if (!crypto && typeof window !== "undefined" && window.msCrypto) {
-          crypto = window.msCrypto;
+        if (!crypto2 && typeof window !== "undefined" && window.msCrypto) {
+          crypto2 = window.msCrypto;
         }
-        if (!crypto && typeof global !== "undefined" && global.crypto) {
-          crypto = global.crypto;
+        if (!crypto2 && typeof global !== "undefined" && global.crypto) {
+          crypto2 = global.crypto;
         }
-        if (!crypto && typeof require === "function") {
+        if (!crypto2 && typeof require === "function") {
           try {
-            crypto = require("crypto");
+            crypto2 = require("crypto");
           } catch (err) {
           }
         }
         var cryptoSecureRandomInt = function() {
-          if (crypto) {
-            if (typeof crypto.getRandomValues === "function") {
+          if (crypto2) {
+            if (typeof crypto2.getRandomValues === "function") {
               try {
-                return crypto.getRandomValues(new Uint32Array(1))[0];
+                return crypto2.getRandomValues(new Uint32Array(1))[0];
               } catch (err) {
               }
             }
-            if (typeof crypto.randomBytes === "function") {
+            if (typeof crypto2.randomBytes === "function") {
               try {
-                return crypto.randomBytes(4).readInt32LE();
+                return crypto2.randomBytes(4).readInt32LE();
               } catch (err) {
               }
             }
@@ -1650,8 +1650,8 @@ var require_core = __commonJS({
             var nWordsReady = nBlocksReady * blockSize;
             var nBytesReady = Math2.min(nWordsReady * 4, dataSigBytes);
             if (nWordsReady) {
-              for (var offset = 0; offset < nWordsReady; offset += blockSize) {
-                this._doProcessBlock(dataWords, offset);
+              for (var offset2 = 0; offset2 < nWordsReady; offset2 += blockSize) {
+                this._doProcessBlock(dataWords, offset2);
               }
               processedWords = dataWords.splice(0, nWordsReady);
               data.sigBytes -= nBytesReady;
@@ -1684,8 +1684,8 @@ var require_core = __commonJS({
             if (messageUpdate) {
               this._append(messageUpdate);
             }
-            var hash = this._doFinalize();
-            return hash;
+            var hash3 = this._doFinalize();
+            return hash3;
           },
           blockSize: 512 / 32,
           _createHelper: function(hasher) {
@@ -1736,7 +1736,7 @@ var require_sha1 = __commonJS({
               3285377520
             ]);
           },
-          _doProcessBlock: function(M, offset) {
+          _doProcessBlock: function(M, offset2) {
             var H = this._hash.words;
             var a = H[0];
             var b = H[1];
@@ -1745,7 +1745,7 @@ var require_sha1 = __commonJS({
             var e = H[4];
             for (var i = 0; i < 80; i++) {
               if (i < 16) {
-                W[i] = M[offset + i] | 0;
+                W[i] = M[offset2 + i] | 0;
               } else {
                 var n = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];
                 W[i] = n << 1 | n >>> 31;
@@ -1817,17 +1817,476 @@ var require_lib = __commonJS({
   }
 });
 
+// node_modules/lz-string/libs/lz-string.js
+var require_lz_string = __commonJS({
+  "node_modules/lz-string/libs/lz-string.js"(exports, module2) {
+    var LZString2 = function() {
+      var f = String.fromCharCode;
+      var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+      var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+      var baseReverseDic = {};
+      function getBaseValue(alphabet, character) {
+        if (!baseReverseDic[alphabet]) {
+          baseReverseDic[alphabet] = {};
+          for (var i = 0; i < alphabet.length; i++) {
+            baseReverseDic[alphabet][alphabet.charAt(i)] = i;
+          }
+        }
+        return baseReverseDic[alphabet][character];
+      }
+      var LZString3 = {
+        compressToBase64: function(input) {
+          if (input == null)
+            return "";
+          var res = LZString3._compress(input, 6, function(a) {
+            return keyStrBase64.charAt(a);
+          });
+          switch (res.length % 4) {
+            default:
+            case 0:
+              return res;
+            case 1:
+              return res + "===";
+            case 2:
+              return res + "==";
+            case 3:
+              return res + "=";
+          }
+        },
+        decompressFromBase64: function(input) {
+          if (input == null)
+            return "";
+          if (input == "")
+            return null;
+          return LZString3._decompress(input.length, 32, function(index) {
+            return getBaseValue(keyStrBase64, input.charAt(index));
+          });
+        },
+        compressToUTF16: function(input) {
+          if (input == null)
+            return "";
+          return LZString3._compress(input, 15, function(a) {
+            return f(a + 32);
+          }) + " ";
+        },
+        decompressFromUTF16: function(compressed) {
+          if (compressed == null)
+            return "";
+          if (compressed == "")
+            return null;
+          return LZString3._decompress(compressed.length, 16384, function(index) {
+            return compressed.charCodeAt(index) - 32;
+          });
+        },
+        compressToUint8Array: function(uncompressed) {
+          var compressed = LZString3.compress(uncompressed);
+          var buf = new Uint8Array(compressed.length * 2);
+          for (var i = 0, TotalLen = compressed.length; i < TotalLen; i++) {
+            var current_value = compressed.charCodeAt(i);
+            buf[i * 2] = current_value >>> 8;
+            buf[i * 2 + 1] = current_value % 256;
+          }
+          return buf;
+        },
+        decompressFromUint8Array: function(compressed) {
+          if (compressed === null || compressed === void 0) {
+            return LZString3.decompress(compressed);
+          } else {
+            var buf = new Array(compressed.length / 2);
+            for (var i = 0, TotalLen = buf.length; i < TotalLen; i++) {
+              buf[i] = compressed[i * 2] * 256 + compressed[i * 2 + 1];
+            }
+            var result = [];
+            buf.forEach(function(c) {
+              result.push(f(c));
+            });
+            return LZString3.decompress(result.join(""));
+          }
+        },
+        compressToEncodedURIComponent: function(input) {
+          if (input == null)
+            return "";
+          return LZString3._compress(input, 6, function(a) {
+            return keyStrUriSafe.charAt(a);
+          });
+        },
+        decompressFromEncodedURIComponent: function(input) {
+          if (input == null)
+            return "";
+          if (input == "")
+            return null;
+          input = input.replace(/ /g, "+");
+          return LZString3._decompress(input.length, 32, function(index) {
+            return getBaseValue(keyStrUriSafe, input.charAt(index));
+          });
+        },
+        compress: function(uncompressed) {
+          return LZString3._compress(uncompressed, 16, function(a) {
+            return f(a);
+          });
+        },
+        _compress: function(uncompressed, bitsPerChar, getCharFromInt) {
+          if (uncompressed == null)
+            return "";
+          var i, value, context_dictionary = {}, context_dictionaryToCreate = {}, context_c = "", context_wc = "", context_w = "", context_enlargeIn = 2, context_dictSize = 3, context_numBits = 2, context_data = [], context_data_val = 0, context_data_position = 0, ii;
+          for (ii = 0; ii < uncompressed.length; ii += 1) {
+            context_c = uncompressed.charAt(ii);
+            if (!Object.prototype.hasOwnProperty.call(context_dictionary, context_c)) {
+              context_dictionary[context_c] = context_dictSize++;
+              context_dictionaryToCreate[context_c] = true;
+            }
+            context_wc = context_w + context_c;
+            if (Object.prototype.hasOwnProperty.call(context_dictionary, context_wc)) {
+              context_w = context_wc;
+            } else {
+              if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate, context_w)) {
+                if (context_w.charCodeAt(0) < 256) {
+                  for (i = 0; i < context_numBits; i++) {
+                    context_data_val = context_data_val << 1;
+                    if (context_data_position == bitsPerChar - 1) {
+                      context_data_position = 0;
+                      context_data.push(getCharFromInt(context_data_val));
+                      context_data_val = 0;
+                    } else {
+                      context_data_position++;
+                    }
+                  }
+                  value = context_w.charCodeAt(0);
+                  for (i = 0; i < 8; i++) {
+                    context_data_val = context_data_val << 1 | value & 1;
+                    if (context_data_position == bitsPerChar - 1) {
+                      context_data_position = 0;
+                      context_data.push(getCharFromInt(context_data_val));
+                      context_data_val = 0;
+                    } else {
+                      context_data_position++;
+                    }
+                    value = value >> 1;
+                  }
+                } else {
+                  value = 1;
+                  for (i = 0; i < context_numBits; i++) {
+                    context_data_val = context_data_val << 1 | value;
+                    if (context_data_position == bitsPerChar - 1) {
+                      context_data_position = 0;
+                      context_data.push(getCharFromInt(context_data_val));
+                      context_data_val = 0;
+                    } else {
+                      context_data_position++;
+                    }
+                    value = 0;
+                  }
+                  value = context_w.charCodeAt(0);
+                  for (i = 0; i < 16; i++) {
+                    context_data_val = context_data_val << 1 | value & 1;
+                    if (context_data_position == bitsPerChar - 1) {
+                      context_data_position = 0;
+                      context_data.push(getCharFromInt(context_data_val));
+                      context_data_val = 0;
+                    } else {
+                      context_data_position++;
+                    }
+                    value = value >> 1;
+                  }
+                }
+                context_enlargeIn--;
+                if (context_enlargeIn == 0) {
+                  context_enlargeIn = Math.pow(2, context_numBits);
+                  context_numBits++;
+                }
+                delete context_dictionaryToCreate[context_w];
+              } else {
+                value = context_dictionary[context_w];
+                for (i = 0; i < context_numBits; i++) {
+                  context_data_val = context_data_val << 1 | value & 1;
+                  if (context_data_position == bitsPerChar - 1) {
+                    context_data_position = 0;
+                    context_data.push(getCharFromInt(context_data_val));
+                    context_data_val = 0;
+                  } else {
+                    context_data_position++;
+                  }
+                  value = value >> 1;
+                }
+              }
+              context_enlargeIn--;
+              if (context_enlargeIn == 0) {
+                context_enlargeIn = Math.pow(2, context_numBits);
+                context_numBits++;
+              }
+              context_dictionary[context_wc] = context_dictSize++;
+              context_w = String(context_c);
+            }
+          }
+          if (context_w !== "") {
+            if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate, context_w)) {
+              if (context_w.charCodeAt(0) < 256) {
+                for (i = 0; i < context_numBits; i++) {
+                  context_data_val = context_data_val << 1;
+                  if (context_data_position == bitsPerChar - 1) {
+                    context_data_position = 0;
+                    context_data.push(getCharFromInt(context_data_val));
+                    context_data_val = 0;
+                  } else {
+                    context_data_position++;
+                  }
+                }
+                value = context_w.charCodeAt(0);
+                for (i = 0; i < 8; i++) {
+                  context_data_val = context_data_val << 1 | value & 1;
+                  if (context_data_position == bitsPerChar - 1) {
+                    context_data_position = 0;
+                    context_data.push(getCharFromInt(context_data_val));
+                    context_data_val = 0;
+                  } else {
+                    context_data_position++;
+                  }
+                  value = value >> 1;
+                }
+              } else {
+                value = 1;
+                for (i = 0; i < context_numBits; i++) {
+                  context_data_val = context_data_val << 1 | value;
+                  if (context_data_position == bitsPerChar - 1) {
+                    context_data_position = 0;
+                    context_data.push(getCharFromInt(context_data_val));
+                    context_data_val = 0;
+                  } else {
+                    context_data_position++;
+                  }
+                  value = 0;
+                }
+                value = context_w.charCodeAt(0);
+                for (i = 0; i < 16; i++) {
+                  context_data_val = context_data_val << 1 | value & 1;
+                  if (context_data_position == bitsPerChar - 1) {
+                    context_data_position = 0;
+                    context_data.push(getCharFromInt(context_data_val));
+                    context_data_val = 0;
+                  } else {
+                    context_data_position++;
+                  }
+                  value = value >> 1;
+                }
+              }
+              context_enlargeIn--;
+              if (context_enlargeIn == 0) {
+                context_enlargeIn = Math.pow(2, context_numBits);
+                context_numBits++;
+              }
+              delete context_dictionaryToCreate[context_w];
+            } else {
+              value = context_dictionary[context_w];
+              for (i = 0; i < context_numBits; i++) {
+                context_data_val = context_data_val << 1 | value & 1;
+                if (context_data_position == bitsPerChar - 1) {
+                  context_data_position = 0;
+                  context_data.push(getCharFromInt(context_data_val));
+                  context_data_val = 0;
+                } else {
+                  context_data_position++;
+                }
+                value = value >> 1;
+              }
+            }
+            context_enlargeIn--;
+            if (context_enlargeIn == 0) {
+              context_enlargeIn = Math.pow(2, context_numBits);
+              context_numBits++;
+            }
+          }
+          value = 2;
+          for (i = 0; i < context_numBits; i++) {
+            context_data_val = context_data_val << 1 | value & 1;
+            if (context_data_position == bitsPerChar - 1) {
+              context_data_position = 0;
+              context_data.push(getCharFromInt(context_data_val));
+              context_data_val = 0;
+            } else {
+              context_data_position++;
+            }
+            value = value >> 1;
+          }
+          while (true) {
+            context_data_val = context_data_val << 1;
+            if (context_data_position == bitsPerChar - 1) {
+              context_data.push(getCharFromInt(context_data_val));
+              break;
+            } else
+              context_data_position++;
+          }
+          return context_data.join("");
+        },
+        decompress: function(compressed) {
+          if (compressed == null)
+            return "";
+          if (compressed == "")
+            return null;
+          return LZString3._decompress(compressed.length, 32768, function(index) {
+            return compressed.charCodeAt(index);
+          });
+        },
+        _decompress: function(length, resetValue, getNextValue) {
+          var dictionary = [], next, enlargeIn = 4, dictSize = 4, numBits = 3, entry = "", result = [], i, w, bits, resb, maxpower, power, c, data = { val: getNextValue(0), position: resetValue, index: 1 };
+          for (i = 0; i < 3; i += 1) {
+            dictionary[i] = i;
+          }
+          bits = 0;
+          maxpower = Math.pow(2, 2);
+          power = 1;
+          while (power != maxpower) {
+            resb = data.val & data.position;
+            data.position >>= 1;
+            if (data.position == 0) {
+              data.position = resetValue;
+              data.val = getNextValue(data.index++);
+            }
+            bits |= (resb > 0 ? 1 : 0) * power;
+            power <<= 1;
+          }
+          switch (next = bits) {
+            case 0:
+              bits = 0;
+              maxpower = Math.pow(2, 8);
+              power = 1;
+              while (power != maxpower) {
+                resb = data.val & data.position;
+                data.position >>= 1;
+                if (data.position == 0) {
+                  data.position = resetValue;
+                  data.val = getNextValue(data.index++);
+                }
+                bits |= (resb > 0 ? 1 : 0) * power;
+                power <<= 1;
+              }
+              c = f(bits);
+              break;
+            case 1:
+              bits = 0;
+              maxpower = Math.pow(2, 16);
+              power = 1;
+              while (power != maxpower) {
+                resb = data.val & data.position;
+                data.position >>= 1;
+                if (data.position == 0) {
+                  data.position = resetValue;
+                  data.val = getNextValue(data.index++);
+                }
+                bits |= (resb > 0 ? 1 : 0) * power;
+                power <<= 1;
+              }
+              c = f(bits);
+              break;
+            case 2:
+              return "";
+          }
+          dictionary[3] = c;
+          w = c;
+          result.push(c);
+          while (true) {
+            if (data.index > length) {
+              return "";
+            }
+            bits = 0;
+            maxpower = Math.pow(2, numBits);
+            power = 1;
+            while (power != maxpower) {
+              resb = data.val & data.position;
+              data.position >>= 1;
+              if (data.position == 0) {
+                data.position = resetValue;
+                data.val = getNextValue(data.index++);
+              }
+              bits |= (resb > 0 ? 1 : 0) * power;
+              power <<= 1;
+            }
+            switch (c = bits) {
+              case 0:
+                bits = 0;
+                maxpower = Math.pow(2, 8);
+                power = 1;
+                while (power != maxpower) {
+                  resb = data.val & data.position;
+                  data.position >>= 1;
+                  if (data.position == 0) {
+                    data.position = resetValue;
+                    data.val = getNextValue(data.index++);
+                  }
+                  bits |= (resb > 0 ? 1 : 0) * power;
+                  power <<= 1;
+                }
+                dictionary[dictSize++] = f(bits);
+                c = dictSize - 1;
+                enlargeIn--;
+                break;
+              case 1:
+                bits = 0;
+                maxpower = Math.pow(2, 16);
+                power = 1;
+                while (power != maxpower) {
+                  resb = data.val & data.position;
+                  data.position >>= 1;
+                  if (data.position == 0) {
+                    data.position = resetValue;
+                    data.val = getNextValue(data.index++);
+                  }
+                  bits |= (resb > 0 ? 1 : 0) * power;
+                  power <<= 1;
+                }
+                dictionary[dictSize++] = f(bits);
+                c = dictSize - 1;
+                enlargeIn--;
+                break;
+              case 2:
+                return result.join("");
+            }
+            if (enlargeIn == 0) {
+              enlargeIn = Math.pow(2, numBits);
+              numBits++;
+            }
+            if (dictionary[c]) {
+              entry = dictionary[c];
+            } else {
+              if (c === dictSize) {
+                entry = w + w.charAt(0);
+              } else {
+                return null;
+              }
+            }
+            result.push(entry);
+            dictionary[dictSize++] = w + entry.charAt(0);
+            enlargeIn--;
+            w = entry;
+            if (enlargeIn == 0) {
+              enlargeIn = Math.pow(2, numBits);
+              numBits++;
+            }
+          }
+        }
+      };
+      return LZString3;
+    }();
+    if (typeof define === "function" && define.amd) {
+      define(function() {
+        return LZString2;
+      });
+    } else if (typeof module2 !== "undefined" && module2 != null) {
+      module2.exports = LZString2;
+    }
+  }
+});
+
 // node_modules/axios/lib/helpers/bind.js
 var require_bind = __commonJS({
   "node_modules/axios/lib/helpers/bind.js"(exports, module2) {
     "use strict";
-    module2.exports = function bind(fn, thisArg) {
+    module2.exports = function bind(fn2, thisArg) {
       return function wrap() {
         var args = new Array(arguments.length);
         for (var i = 0; i < args.length; i++) {
           args[i] = arguments[i];
         }
-        return fn.apply(thisArg, args);
+        return fn2.apply(thisArg, args);
       };
     };
   }
@@ -1906,7 +2365,7 @@ var require_utils = __commonJS({
       }
       return typeof window !== "undefined" && typeof document !== "undefined";
     }
-    function forEach(obj, fn) {
+    function forEach(obj, fn2) {
       if (obj === null || typeof obj === "undefined") {
         return;
       }
@@ -1915,12 +2374,12 @@ var require_utils = __commonJS({
       }
       if (isArray(obj)) {
         for (var i = 0, l = obj.length; i < l; i++) {
-          fn.call(null, obj[i], i, obj);
+          fn2.call(null, obj[i], i, obj);
         }
       } else {
         for (var key in obj) {
           if (Object.prototype.hasOwnProperty.call(obj, key)) {
-            fn.call(null, obj[key], key, obj);
+            fn2.call(null, obj[key], key, obj);
           }
         }
       }
@@ -2059,10 +2518,10 @@ var require_InterceptorManager = __commonJS({
         this.handlers[id] = null;
       }
     };
-    InterceptorManager.prototype.forEach = function forEach(fn) {
+    InterceptorManager.prototype.forEach = function forEach(fn2) {
       utils.forEach(this.handlers, function forEachHandler(h) {
         if (h !== null) {
-          fn(h);
+          fn2(h);
         }
       });
     };
@@ -2165,7 +2624,7 @@ var require_cookies = __commonJS({
     var utils = require_utils();
     module2.exports = utils.isStandardBrowserEnv() ? function standardBrowserEnv() {
       return {
-        write: function write(name, value, expires, path, domain, secure) {
+        write: function write2(name, value, expires, path, domain, secure) {
           var cookie = [];
           cookie.push(name + "=" + encodeURIComponent(value));
           if (utils.isNumber(expires)) {
@@ -2182,7 +2641,7 @@ var require_cookies = __commonJS({
           }
           document.cookie = cookie.join("; ");
         },
-        read: function read(name) {
+        read: function read2(name) {
           var match = document.cookie.match(new RegExp("(^|;\\s*)(" + name + ")=([^;]*)"));
           return match ? decodeURIComponent(match[3]) : null;
         },
@@ -2192,9 +2651,9 @@ var require_cookies = __commonJS({
       };
     }() : function nonStandardBrowserEnv() {
       return {
-        write: function write() {
+        write: function write2() {
         },
-        read: function read() {
+        read: function read2() {
           return null;
         },
         remove: function remove() {
@@ -2603,8 +3062,8 @@ var require_transformData = __commonJS({
     var defaults = require_defaults();
     module2.exports = function transformData(data, headers, fns) {
       var context = this || defaults;
-      utils.forEach(fns, function transform(fn) {
-        data = fn.call(context, data, headers);
+      utils.forEach(fns, function transform(fn2) {
+        data = fn2.call(context, data, headers);
       });
       return data;
     };
@@ -3074,7 +3533,7 @@ var require_axios2 = __commonJS({
 __export(exports, {
   default: () => DigitalGarden
 });
-var import_obsidian5 = __toModule(require("obsidian"));
+var import_obsidian7 = __toModule(require("obsidian"));
 
 // src/Publisher.ts
 var import_obsidian2 = __toModule(require("obsidian"));
@@ -3096,7 +3555,7 @@ var b64tab = ((a) => {
 })(b64chs);
 var b64re = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;
 var _fromCC = String.fromCharCode.bind(String);
-var _U8Afrom = typeof Uint8Array.from === "function" ? Uint8Array.from.bind(Uint8Array) : (it, fn = (x) => x) => new Uint8Array(Array.prototype.slice.call(it, 0).map(fn));
+var _U8Afrom = typeof Uint8Array.from === "function" ? Uint8Array.from.bind(Uint8Array) : (it, fn2 = (x) => x) => new Uint8Array(Array.prototype.slice.call(it, 0).map(fn2));
 var _mkUriSafe = (src) => src.replace(/=/g, "").replace(/[+\/]/g, (m0) => m0 == "+" ? "-" : "_");
 var _tidyB64 = (s) => s.replace(/[^A-Za-z0-9\+\/]/g, "");
 var btoaPolyfill = (bin) => {
@@ -3138,8 +3597,8 @@ var re_btou = /[\xC0-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF7][\x80
 var cb_btou = (cccc) => {
   switch (cccc.length) {
     case 4:
-      var cp = (7 & cccc.charCodeAt(0)) << 18 | (63 & cccc.charCodeAt(1)) << 12 | (63 & cccc.charCodeAt(2)) << 6 | 63 & cccc.charCodeAt(3), offset = cp - 65536;
-      return _fromCC((offset >>> 10) + 55296) + _fromCC((offset & 1023) + 56320);
+      var cp = (7 & cccc.charCodeAt(0)) << 18 | (63 & cccc.charCodeAt(1)) << 12 | (63 & cccc.charCodeAt(2)) << 6 | 63 & cccc.charCodeAt(3), offset2 = cp - 65536;
+      return _fromCC((offset2 >>> 10) + 55296) + _fromCC((offset2 & 1023) + 56320);
     case 3:
       return _fromCC((15 & cccc.charCodeAt(0)) << 12 | (63 & cccc.charCodeAt(1)) << 6 | 63 & cccc.charCodeAt(2));
     default:
@@ -3495,8 +3954,8 @@ function parse(options) {
     if (options.mediaType.previews.length) {
       const previewsFromAcceptHeader = headers.accept.match(/[\w-]+(?=-preview)/g) || [];
       headers.accept = previewsFromAcceptHeader.concat(options.mediaType.previews).map((preview) => {
-        const format = options.mediaType.format ? `.${options.mediaType.format}` : "+json";
-        return `application/vnd.github.${preview}-preview${format}`;
+        const format2 = options.mediaType.format ? `.${options.mediaType.format}` : "+json";
+        return `application/vnd.github.${preview}-preview${format2}`;
       }).join(",");
     }
   }
@@ -4010,6 +4469,9 @@ function kebabize(str) {
     return letter.toUpperCase() === letter ? `${idx !== 0 ? "-" : ""}${letter.toLowerCase()}` : letter;
   }).join("");
 }
+var wrapAround = (value, size) => {
+  return (value % size + size) % size;
+};
 
 // src/Validator.ts
 var import_obsidian = __toModule(require("obsidian"));
@@ -4023,17 +4485,13 @@ function vallidatePublishFrontmatter(frontMatter) {
 
 // src/constants.ts
 var seedling = `<g style="pointer-events:all"><title style="pointer-events: none" opacity="0.33">Layer 1</title><g id="hair" style="pointer-events: none" opacity="0.33"></g><g id="skin" style="pointer-events: none" opacity="0.33"></g><g id="skin-shadow" style="pointer-events: none" opacity="0.33"></g><g id="line"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47.71119,35.9247" id="svg_3"></path><polyline fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="49.813106536865234,93.05191133916378 49.813106536865234,69.57996462285519 40.03312683105469,26.548054680228233 " id="svg_4"></polyline><line x1="49.81311" x2="59.59309" y1="69.57996" y2="50.02" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="svg_5"></line><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.99666,14.21103C35.9517,16.94766 39.92393,26.36911 39.92393,26.36911S30.99696,31.3526 23.04075,28.61655S11.11348,16.45847 11.11348,16.45847S20.04456,11.4789 27.99666,14.21103z" id="svg_6"></path><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M76.46266698455811,45.61669603088379 C84.67706698455811,47.43146603088379 89.6945869845581,56.34024603088379 89.6945869845581,56.34024603088379 S81.3917769845581,62.30603603088379 73.17639698455811,60.492046030883785 S59.94447698455811,49.768496030883796 59.94447698455811,49.768496030883796 S68.2515869845581,43.80622603088379 76.46266698455811,45.61669603088379 z" id="svg_7"></path></g></g>`;
-var excaliDrawBundle = `<style>
-.container {font-family: sans-serif; text-align: center;}
-.button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;}
-.excalidraw .App-menu_top .buttonList { display: flex;}
-.excalidraw-wrapper { height: 800px; margin: 50px; position: relative;}
-:root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;}
-</style><script src="https://unpkg.com/react@17/umd/react.production.min.js"><\/script><script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"><\/script><script type="text/javascript" src="https://unpkg.com/@excalidraw/excalidraw@0.12.0/dist/excalidraw.production.min.js"><\/script>`;
+var excaliDrawBundle = `<style> .container {font-family: sans-serif; text-align: center;} .button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;} .excalidraw .App-menu_top .buttonList { display: flex;} .excalidraw-wrapper { height: 800px; margin: 50px; position: relative;} :root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;} </style><script src="https://unpkg.com/react@17/umd/react.production.min.js"><\/script><script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"><\/script><script type="text/javascript" src="https://unpkg.com/@excalidraw/excalidraw@0/dist/excalidraw.production.min.js"><\/script>`;
 var excalidraw = (excaliDrawJson, drawingId) => `<div id="${drawingId}"></div><script>(function(){const InitialData=${excaliDrawJson};InitialData.scrollToContent=true;App=()=>{const e=React.useRef(null),t=React.useRef(null),[n,i]=React.useState({width:void 0,height:void 0});return React.useEffect(()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height});const e=()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height})};return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[t]),React.createElement(React.Fragment,null,React.createElement("div",{className:"excalidraw-wrapper",ref:t},React.createElement(ExcalidrawLib.Excalidraw,{ref:e,width:n.width,height:n.height,initialData:InitialData,viewModeEnabled:!0,zenModeEnabled:!0,gridModeEnabled:!1})))},excalidrawWrapper=document.getElementById("${drawingId}");ReactDOM.render(React.createElement(App),excalidrawWrapper);})();<\/script>`;
 
 // src/Publisher.ts
 var import_obsidian_dataview = __toModule(require_lib());
+var import_slugify2 = __toModule(require_slugify());
+var import_lz_string = __toModule(require_lz_string());
 var Publisher = class {
   constructor(vault, metadataCache, settings) {
     this.frontmatterRegex = /^\s*?---\n([\s\S]*?)\n---/g;
@@ -4126,12 +4584,30 @@ var Publisher = class {
       }
       let text = yield this.vault.cachedRead(file);
       text = yield this.convertFrontMatter(text, file.path);
+      text = yield this.createBlockIDs(text);
       text = yield this.createTranscludedText(text, file.path, 0);
       text = yield this.convertDataViews(text, file.path);
       text = yield this.convertLinksToFullPath(text, file.path);
       text = yield this.removeObsidianComments(text);
       text = yield this.createSvgEmbeds(text, file.path);
       text = yield this.createBase64Images(text, file.path);
+      return text;
+    });
+  }
+  createBlockIDs(text) {
+    return __async(this, null, function* () {
+      const block_pattern = / \^([\w\d-]+)/g;
+      const complex_block_pattern = /\n\^([\w\d-]+)\n/g;
+      text = text.replace(complex_block_pattern, (match, $1) => {
+        return `{ #${$1}}
+
+`;
+      });
+      text = text.replace(block_pattern, (match, $1) => {
+        return `
+{ #${$1}}
+`;
+      });
       return text;
     });
   }
@@ -4244,7 +4720,8 @@ var Publisher = class {
     delete fileFrontMatter["position"];
     let publishedFrontMatter = { "dg-publish": true };
     publishedFrontMatter = this.addPermalink(fileFrontMatter, publishedFrontMatter, filePath);
-    publishedFrontMatter = this.addHomePageTag(fileFrontMatter, publishedFrontMatter);
+    publishedFrontMatter = this.addDefaultPassThrough(fileFrontMatter, publishedFrontMatter);
+    publishedFrontMatter = this.addPageTags(fileFrontMatter, publishedFrontMatter);
     publishedFrontMatter = this.addFrontMatterSettings(fileFrontMatter, publishedFrontMatter);
     const fullFrontMatter = (publishedFrontMatter == null ? void 0 : publishedFrontMatter.dgPassFrontmatter) ? __spreadValues(__spreadValues({}, fileFrontMatter), publishedFrontMatter) : publishedFrontMatter;
     const frontMatterString = JSON.stringify(fullFrontMatter);
@@ -4253,8 +4730,20 @@ ${frontMatterString}
 ---
 `;
   }
+  addDefaultPassThrough(baseFrontMatter, newFrontMatter) {
+    const publishedFrontMatter = __spreadValues({}, newFrontMatter);
+    if (baseFrontMatter) {
+      if (baseFrontMatter["title"]) {
+        publishedFrontMatter["title"] = baseFrontMatter["title"];
+      }
+      if (baseFrontMatter["dg-metatags"]) {
+        publishedFrontMatter["metatags"] = baseFrontMatter["dg-metatags"];
+      }
+    }
+    return publishedFrontMatter;
+  }
   addPermalink(baseFrontMatter, newFrontMatter, filePath) {
-    let publishedFrontMatter = __spreadValues({}, newFrontMatter);
+    const publishedFrontMatter = __spreadValues({}, newFrontMatter);
     if (baseFrontMatter && baseFrontMatter["dg-permalink"]) {
       publishedFrontMatter["dg-permalink"] = baseFrontMatter["dg-permalink"];
       publishedFrontMatter["permalink"] = baseFrontMatter["dg-permalink"];
@@ -4270,18 +4759,15 @@ ${frontMatterString}
     }
     return publishedFrontMatter;
   }
-  addHomePageTag(baseFrontMatter, newFrontMatter) {
+  addPageTags(baseFrontMatter, newFrontMatter) {
     const publishedFrontMatter = __spreadValues({}, newFrontMatter);
-    if (baseFrontMatter && baseFrontMatter["dg-home"]) {
-      const tags = baseFrontMatter["tags"];
-      if (tags) {
-        if (typeof tags === "string") {
-          publishedFrontMatter["tags"] = [tags, "gardenEntry"];
-        } else {
-          publishedFrontMatter["tags"] = [...tags, "gardenEntry"];
-        }
-      } else {
-        publishedFrontMatter["tags"] = "gardenEntry";
+    if (baseFrontMatter) {
+      const tags = (typeof baseFrontMatter["tags"] == "string" ? [baseFrontMatter["tags"]] : baseFrontMatter["tags"]) || [];
+      if (baseFrontMatter["dg-home"]) {
+        tags.push("gardenEntry");
+      }
+      if (tags.length > 0) {
+        publishedFrontMatter["tags"] = tags;
       }
     }
     return publishedFrontMatter;
@@ -4346,6 +4832,7 @@ ${frontMatterString}
       if (currentDepth >= 4) {
         return text;
       }
+      const publishedFiles = yield this.getFilesMarkedForPublishing();
       let transcludedText = text;
       const transcludedRegex = /!\[\[(.*?)\]\]/g;
       const transclusionMatches = text.match(transcludedRegex);
@@ -4354,23 +4841,38 @@ ${frontMatterString}
         for (let i = 0; i < transclusionMatches.length; i++) {
           try {
             const transclusionMatch = transclusionMatches[i];
-            let [tranclusionFileName, headerName] = transclusionMatch.substring(transclusionMatch.indexOf("[") + 2, transclusionMatch.indexOf("]")).split("|");
+            const [tranclusionFileName, headerName] = transclusionMatch.substring(transclusionMatch.indexOf("[") + 2, transclusionMatch.indexOf("]")).split("|");
             const tranclusionFilePath = (0, import_obsidian2.getLinkpath)(tranclusionFileName);
             const linkedFile = this.metadataCache.getFirstLinkpathDest(tranclusionFilePath, filePath);
+            let sectionID = "";
             if (linkedFile.name.endsWith(".excalidraw.md")) {
-              let firstDrawing = ++numberOfExcaliDraws === 1;
+              const firstDrawing = ++numberOfExcaliDraws === 1;
               const excaliDrawCode = yield this.generateExcalidrawMarkdown(linkedFile, firstDrawing, `${numberOfExcaliDraws}`, false);
               transcludedText = transcludedText.replace(transclusionMatch, excaliDrawCode);
             } else if (linkedFile.extension === "md") {
               let fileText = yield this.vault.cachedRead(linkedFile);
-              if (tranclusionFileName.includes("#")) {
+              if (tranclusionFileName.includes("#^")) {
+                const metadata = this.metadataCache.getFileCache(linkedFile);
+                const refBlock = tranclusionFileName.split("#^")[1];
+                sectionID = `#${(0, import_slugify2.default)(refBlock)}`;
+                const blockInFile = metadata.blocks[refBlock];
+                if (blockInFile) {
+                  fileText = fileText.split("\n").slice(blockInFile.position.start.line, blockInFile.position.end.line + 1).join("\n").replace(`^${refBlock}`, "");
+                }
+              } else if (tranclusionFileName.includes("#")) {
                 const metadata = this.metadataCache.getFileCache(linkedFile);
                 const refHeader = tranclusionFileName.split("#")[1];
                 const headerInFile = (_a = metadata.headings) == null ? void 0 : _a.find((header2) => header2.heading === refHeader);
+                sectionID = `#${(0, import_slugify2.default)(refHeader)}`;
                 if (headerInFile) {
-                  const cutTo = metadata.headings[metadata.headings.indexOf(headerInFile) + 1];
-                  const cutToLine = (_c = (_b = cutTo == null ? void 0 : cutTo.position) == null ? void 0 : _b.start) == null ? void 0 : _c.line;
-                  fileText = fileText.split("\n").slice(headerInFile.position.start.line, cutToLine).join("\n");
+                  const headerPosition = metadata.headings.indexOf(headerInFile);
+                  const cutTo = metadata.headings.slice(headerPosition + 1).find((header2) => header2.level <= headerInFile.level);
+                  if (cutTo) {
+                    const cutToLine = (_c = (_b = cutTo == null ? void 0 : cutTo.position) == null ? void 0 : _b.start) == null ? void 0 : _c.line;
+                    fileText = fileText.split("\n").slice(headerInFile.position.start.line, cutToLine).join("\n");
+                  } else {
+                    fileText = fileText.split("\n").slice(headerInFile.position.start.line).join("\n");
+                  }
                 }
               }
               fileText = fileText.replace(this.frontmatterRegex, "");
@@ -4381,8 +4883,12 @@ ${header}
 
 </div>
 ` : "";
+              let embedded_link = "";
+              if (publishedFiles.find((f) => f.path == linkedFile.path)) {
+                embedded_link = `<a class="markdown-embed-link" href="/${generateUrlPath(linkedFile.path)}${sectionID}" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>`;
+              }
               fileText = `
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+<div class="transclusion internal-embed is-loaded">${embedded_link}<div class="markdown-embed">
 
 ${headerSection}
 
@@ -4415,7 +4921,7 @@ ${headerSection}
       if (transcludedSvgs) {
         for (const svg of transcludedSvgs) {
           try {
-            let [imageName, size] = svg.substring(svg.indexOf("[") + 2, svg.indexOf("]")).split("|");
+            const [imageName, size] = svg.substring(svg.indexOf("[") + 2, svg.indexOf("]")).split("|");
             const imagePath = (0, import_obsidian2.getLinkpath)(imageName);
             const linkedFile = this.metadataCache.getFirstLinkpathDest(imagePath, filePath);
             let svgText = yield this.vault.read(linkedFile);
@@ -4433,10 +4939,10 @@ ${headerSection}
       if (linkedSvgMatches) {
         for (const svg of linkedSvgMatches) {
           try {
-            let [imageName, size] = svg.substring(svg.indexOf("[") + 2, svg.indexOf("]")).split("|");
-            let pathStart = svg.lastIndexOf("(") + 1;
-            let pathEnd = svg.lastIndexOf(")");
-            let imagePath = svg.substring(pathStart, pathEnd);
+            const [imageName, size] = svg.substring(svg.indexOf("[") + 2, svg.indexOf("]")).split("|");
+            const pathStart = svg.lastIndexOf("(") + 1;
+            const pathEnd = svg.lastIndexOf(")");
+            const imagePath = svg.substring(pathStart, pathEnd);
             if (imagePath.startsWith("http")) {
               continue;
             }
@@ -4468,7 +4974,7 @@ ${headerSection}
         for (let i = 0; i < transcludedImageMatches.length; i++) {
           try {
             const imageMatch = transcludedImageMatches[i];
-            let [imageName, size] = imageMatch.substring(imageMatch.indexOf("[") + 2, imageMatch.indexOf("]")).split("|");
+            const [imageName, size] = imageMatch.substring(imageMatch.indexOf("[") + 2, imageMatch.indexOf("]")).split("|");
             const imagePath = (0, import_obsidian2.getLinkpath)(imageName);
             const linkedFile = this.metadataCache.getFirstLinkpathDest(imagePath, filePath);
             const image = yield this.vault.readBinary(linkedFile);
@@ -4487,16 +4993,17 @@ ${headerSection}
         for (let i = 0; i < imageMatches.length; i++) {
           try {
             const imageMatch = imageMatches[i];
-            let nameStart = imageMatch.indexOf("[") + 1;
-            let nameEnd = imageMatch.indexOf("]");
-            let imageName = imageMatch.substring(nameStart, nameEnd);
-            let pathStart = imageMatch.lastIndexOf("(") + 1;
-            let pathEnd = imageMatch.lastIndexOf(")");
-            let imagePath = imageMatch.substring(pathStart, pathEnd);
+            const nameStart = imageMatch.indexOf("[") + 1;
+            const nameEnd = imageMatch.indexOf("]");
+            const imageName = imageMatch.substring(nameStart, nameEnd);
+            const pathStart = imageMatch.lastIndexOf("(") + 1;
+            const pathEnd = imageMatch.lastIndexOf(")");
+            const imagePath = imageMatch.substring(pathStart, pathEnd);
             if (imagePath.startsWith("http")) {
               continue;
             }
-            const linkedFile = this.metadataCache.getFirstLinkpathDest(imagePath, filePath);
+            const decodedImagePath = decodeURI(imagePath);
+            const linkedFile = this.metadataCache.getFirstLinkpathDest(decodedImagePath, filePath);
             const image = yield this.vault.readBinary(linkedFile);
             const imageBase64 = arrayBufferToBase64(image);
             const imageMarkdown = `![${imageName}](data:image/${getExtension(linkedFile)};base64,${imageBase64})`;
@@ -4533,9 +5040,10 @@ ${headerSection}
         return "";
       const fileText = yield this.vault.cachedRead(file);
       const frontMatter = yield this.getProcessedFrontMatter(file.path);
-      const start = fileText.indexOf("```json") + "```json".length;
-      const end = fileText.lastIndexOf("```");
-      const excaliDrawJson = JSON.parse(fileText.slice(start, end));
+      const isCompressed = fileText.includes("```compressed-json");
+      const start2 = fileText.indexOf(isCompressed ? "```compressed-json" : "```json") + (isCompressed ? "```compressed-json" : "```json").length;
+      const end2 = fileText.lastIndexOf("```");
+      const excaliDrawJson = JSON.parse(isCompressed ? import_lz_string.default.decompressFromBase64(fileText.slice(start2, end2).replace(/[\n\r]/g, "")) : fileText.slice(start2, end2));
       const drawingId = file.name.split(" ").join("_").replace(".", "") + idAppendage;
       let excaliDrawCode = "";
       if (includeExcaliDrawJs) {
@@ -4639,7 +5147,8 @@ ${key}=${defaultNoteSettings[key]}`;
         repo: "digitalgarden"
       });
       const templateVersion = latestRelease.data.tag_name;
-      const branchName = "update-template-to-v" + templateVersion;
+      const uuid = crypto.randomUUID();
+      const branchName = "update-template-to-v" + templateVersion + "-" + uuid;
       const latestCommit = yield octokit.request("GET /repos/{owner}/{repo}/commits/main", {
         owner: this.settings.githubUserName,
         repo: this.settings.githubRepo
@@ -4672,9 +5181,8 @@ ${key}=${defaultNoteSettings[key]}`;
   }
   deleteFiles(octokit, branchName) {
     return __async(this, null, function* () {
-      const filesToDelete = [
-        "src/site/styles/style.css"
-      ];
+      const pluginInfo = yield this.getPluginInfo(octokit);
+      const filesToDelete = pluginInfo.filesToDelete;
       for (const file of filesToDelete) {
         try {
           const latestFile = yield octokit.request("GET /repos/{owner}/{repo}/contents/{path}", {
@@ -4699,46 +5207,8 @@ ${key}=${defaultNoteSettings[key]}`;
   modifyFiles(octokit, branchName) {
     return __async(this, null, function* () {
       var _a;
-      const filesToModify = [
-        ".eleventy.js",
-        ".eleventyignore",
-        "README.md",
-        "netlify.toml",
-        "package-lock.json",
-        "package.json",
-        "src/site/404.njk",
-        "src/site/index.njk",
-        "src/site/sitemap.njk",
-        "src/site/index.11tydata.js",
-        "src/site/versionednote.njk",
-        "src/site/styles/style.scss",
-        "src/site/styles/digital-garden-base.scss",
-        "src/site/styles/obsidian-base.scss",
-        "src/site/notes/notes.json",
-        "src/site/notes/notes.11tydata.js",
-        "src/site/_includes/layouts/note.njk",
-        "src/site/_includes/layouts/versionednote.njk",
-        "src/site/_includes/components/notegrowthhistory.njk",
-        "src/site/_includes/components/pageheader.njk",
-        "src/site/_includes/components/linkPreview.njk",
-        "src/site/_includes/components/sidebar.njk",
-        "src/site/_includes/components/graphScript.njk",
-        "src/site/_includes/components/filetree.njk",
-        "src/site/_includes/components/filetreeNavbar.njk",
-        "src/site/_includes/components/navbar.njk",
-        "src/site/_includes/components/searchButton.njk",
-        "src/site/_includes/components/searchContainer.njk",
-        "src/site/_includes/components/searchScript.njk",
-        "src/site/lunr-index.js",
-        "src/site/lunr.njk",
-        "src/site/_data/versionednotes.js",
-        "src/site/_data/meta.js",
-        "src/site/_data/filetree.js",
-        "src/site/img/outgoing.svg",
-        "src/helpers/constants.js",
-        "src/helpers/utils.js",
-        "netlify/functions/search/search.js"
-      ];
+      const pluginInfo = yield this.getPluginInfo(octokit);
+      const filesToModify = pluginInfo.filesToModify;
       for (const file of filesToModify) {
         const latestFile = yield octokit.request("GET /repos/{owner}/{repo}/contents/{path}", {
           owner: "oleeskild",
@@ -4787,11 +5257,8 @@ ${key}=${defaultNoteSettings[key]}`;
   }
   addFilesIfMissing(octokit, branchName) {
     return __async(this, null, function* () {
-      const filesToAdd = [
-        "src/site/styles/custom-style.scss",
-        ".env",
-        "src/site/favicon.svg"
-      ];
+      const pluginInfo = yield this.getPluginInfo(octokit);
+      const filesToAdd = pluginInfo.filesToAdd;
       for (const filePath of filesToAdd) {
         try {
           yield octokit.request("GET /repos/{owner}/{repo}/contents/{path}", {
@@ -4818,14 +5285,1747 @@ ${key}=${defaultNoteSettings[key]}`;
       }
     });
   }
+  getPluginInfo(octokit) {
+    return __async(this, null, function* () {
+      const pluginInfoResponse = yield octokit.request("GET /repos/{owner}/{repo}/contents/{path}", {
+        owner: "oleeskild",
+        repo: "digitalgarden",
+        path: "plugin-info.json"
+      });
+      const pluginInfo = JSON.parse(gBase64.decode(pluginInfoResponse.data.content));
+      return pluginInfo;
+    });
+  }
 };
 
 // src/SettingView.ts
-var import_obsidian3 = __toModule(require("obsidian"));
+var import_obsidian5 = __toModule(require("obsidian"));
 var import_axios = __toModule(require_axios2());
+
+// src/ui/file-suggest.ts
+var import_obsidian4 = __toModule(require("obsidian"));
+
+// node_modules/@popperjs/core/lib/enums.js
+var top = "top";
+var bottom = "bottom";
+var right = "right";
+var left = "left";
+var auto = "auto";
+var basePlacements = [top, bottom, right, left];
+var start = "start";
+var end = "end";
+var clippingParents = "clippingParents";
+var viewport = "viewport";
+var popper = "popper";
+var reference = "reference";
+var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function(acc, placement) {
+  return acc.concat([placement + "-" + start, placement + "-" + end]);
+}, []);
+var placements = /* @__PURE__ */ [].concat(basePlacements, [auto]).reduce(function(acc, placement) {
+  return acc.concat([placement, placement + "-" + start, placement + "-" + end]);
+}, []);
+var beforeRead = "beforeRead";
+var read = "read";
+var afterRead = "afterRead";
+var beforeMain = "beforeMain";
+var main = "main";
+var afterMain = "afterMain";
+var beforeWrite = "beforeWrite";
+var write = "write";
+var afterWrite = "afterWrite";
+var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
+
+// node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
+function getNodeName(element) {
+  return element ? (element.nodeName || "").toLowerCase() : null;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindow.js
+function getWindow(node) {
+  if (node == null) {
+    return window;
+  }
+  if (node.toString() !== "[object Window]") {
+    var ownerDocument = node.ownerDocument;
+    return ownerDocument ? ownerDocument.defaultView || window : window;
+  }
+  return node;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
+function isElement(node) {
+  var OwnElement = getWindow(node).Element;
+  return node instanceof OwnElement || node instanceof Element;
+}
+function isHTMLElement(node) {
+  var OwnElement = getWindow(node).HTMLElement;
+  return node instanceof OwnElement || node instanceof HTMLElement;
+}
+function isShadowRoot(node) {
+  if (typeof ShadowRoot === "undefined") {
+    return false;
+  }
+  var OwnElement = getWindow(node).ShadowRoot;
+  return node instanceof OwnElement || node instanceof ShadowRoot;
+}
+
+// node_modules/@popperjs/core/lib/modifiers/applyStyles.js
+function applyStyles(_ref) {
+  var state = _ref.state;
+  Object.keys(state.elements).forEach(function(name) {
+    var style = state.styles[name] || {};
+    var attributes = state.attributes[name] || {};
+    var element = state.elements[name];
+    if (!isHTMLElement(element) || !getNodeName(element)) {
+      return;
+    }
+    Object.assign(element.style, style);
+    Object.keys(attributes).forEach(function(name2) {
+      var value = attributes[name2];
+      if (value === false) {
+        element.removeAttribute(name2);
+      } else {
+        element.setAttribute(name2, value === true ? "" : value);
+      }
+    });
+  });
+}
+function effect(_ref2) {
+  var state = _ref2.state;
+  var initialStyles = {
+    popper: {
+      position: state.options.strategy,
+      left: "0",
+      top: "0",
+      margin: "0"
+    },
+    arrow: {
+      position: "absolute"
+    },
+    reference: {}
+  };
+  Object.assign(state.elements.popper.style, initialStyles.popper);
+  state.styles = initialStyles;
+  if (state.elements.arrow) {
+    Object.assign(state.elements.arrow.style, initialStyles.arrow);
+  }
+  return function() {
+    Object.keys(state.elements).forEach(function(name) {
+      var element = state.elements[name];
+      var attributes = state.attributes[name] || {};
+      var styleProperties = Object.keys(state.styles.hasOwnProperty(name) ? state.styles[name] : initialStyles[name]);
+      var style = styleProperties.reduce(function(style2, property) {
+        style2[property] = "";
+        return style2;
+      }, {});
+      if (!isHTMLElement(element) || !getNodeName(element)) {
+        return;
+      }
+      Object.assign(element.style, style);
+      Object.keys(attributes).forEach(function(attribute) {
+        element.removeAttribute(attribute);
+      });
+    });
+  };
+}
+var applyStyles_default = {
+  name: "applyStyles",
+  enabled: true,
+  phase: "write",
+  fn: applyStyles,
+  effect,
+  requires: ["computeStyles"]
+};
+
+// node_modules/@popperjs/core/lib/utils/getBasePlacement.js
+function getBasePlacement(placement) {
+  return placement.split("-")[0];
+}
+
+// node_modules/@popperjs/core/lib/utils/math.js
+var max = Math.max;
+var min = Math.min;
+var round = Math.round;
+
+// node_modules/@popperjs/core/lib/utils/userAgent.js
+function getUAString() {
+  var uaData = navigator.userAgentData;
+  if (uaData != null && uaData.brands) {
+    return uaData.brands.map(function(item) {
+      return item.brand + "/" + item.version;
+    }).join(" ");
+  }
+  return navigator.userAgent;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+function isLayoutViewport() {
+  return !/^((?!chrome|android).)*safari/i.test(getUAString());
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
+function getBoundingClientRect(element, includeScale, isFixedStrategy) {
+  if (includeScale === void 0) {
+    includeScale = false;
+  }
+  if (isFixedStrategy === void 0) {
+    isFixedStrategy = false;
+  }
+  var clientRect = element.getBoundingClientRect();
+  var scaleX = 1;
+  var scaleY = 1;
+  if (includeScale && isHTMLElement(element)) {
+    scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+    scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
+  }
+  var _ref = isElement(element) ? getWindow(element) : window, visualViewport = _ref.visualViewport;
+  var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
+  var x = (clientRect.left + (addVisualOffsets && visualViewport ? visualViewport.offsetLeft : 0)) / scaleX;
+  var y = (clientRect.top + (addVisualOffsets && visualViewport ? visualViewport.offsetTop : 0)) / scaleY;
+  var width = clientRect.width / scaleX;
+  var height = clientRect.height / scaleY;
+  return {
+    width,
+    height,
+    top: y,
+    right: x + width,
+    bottom: y + height,
+    left: x,
+    x,
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
+function getLayoutRect(element) {
+  var clientRect = getBoundingClientRect(element);
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
+  if (Math.abs(clientRect.width - width) <= 1) {
+    width = clientRect.width;
+  }
+  if (Math.abs(clientRect.height - height) <= 1) {
+    height = clientRect.height;
+  }
+  return {
+    x: element.offsetLeft,
+    y: element.offsetTop,
+    width,
+    height
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/contains.js
+function contains(parent, child) {
+  var rootNode = child.getRootNode && child.getRootNode();
+  if (parent.contains(child)) {
+    return true;
+  } else if (rootNode && isShadowRoot(rootNode)) {
+    var next = child;
+    do {
+      if (next && parent.isSameNode(next)) {
+        return true;
+      }
+      next = next.parentNode || next.host;
+    } while (next);
+  }
+  return false;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
+function getComputedStyle(element) {
+  return getWindow(element).getComputedStyle(element);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
+function isTableElement(element) {
+  return ["table", "td", "th"].indexOf(getNodeName(element)) >= 0;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
+function getDocumentElement(element) {
+  return ((isElement(element) ? element.ownerDocument : element.document) || window.document).documentElement;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
+function getParentNode(element) {
+  if (getNodeName(element) === "html") {
+    return element;
+  }
+  return element.assignedSlot || element.parentNode || (isShadowRoot(element) ? element.host : null) || getDocumentElement(element);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
+function getTrueOffsetParent(element) {
+  if (!isHTMLElement(element) || getComputedStyle(element).position === "fixed") {
+    return null;
+  }
+  return element.offsetParent;
+}
+function getContainingBlock(element) {
+  var isFirefox = /firefox/i.test(getUAString());
+  var isIE = /Trident/i.test(getUAString());
+  if (isIE && isHTMLElement(element)) {
+    var elementCss = getComputedStyle(element);
+    if (elementCss.position === "fixed") {
+      return null;
+    }
+  }
+  var currentNode = getParentNode(element);
+  if (isShadowRoot(currentNode)) {
+    currentNode = currentNode.host;
+  }
+  while (isHTMLElement(currentNode) && ["html", "body"].indexOf(getNodeName(currentNode)) < 0) {
+    var css = getComputedStyle(currentNode);
+    if (css.transform !== "none" || css.perspective !== "none" || css.contain === "paint" || ["transform", "perspective"].indexOf(css.willChange) !== -1 || isFirefox && css.willChange === "filter" || isFirefox && css.filter && css.filter !== "none") {
+      return currentNode;
+    } else {
+      currentNode = currentNode.parentNode;
+    }
+  }
+  return null;
+}
+function getOffsetParent(element) {
+  var window2 = getWindow(element);
+  var offsetParent = getTrueOffsetParent(element);
+  while (offsetParent && isTableElement(offsetParent) && getComputedStyle(offsetParent).position === "static") {
+    offsetParent = getTrueOffsetParent(offsetParent);
+  }
+  if (offsetParent && (getNodeName(offsetParent) === "html" || getNodeName(offsetParent) === "body" && getComputedStyle(offsetParent).position === "static")) {
+    return window2;
+  }
+  return offsetParent || getContainingBlock(element) || window2;
+}
+
+// node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
+function getMainAxisFromPlacement(placement) {
+  return ["top", "bottom"].indexOf(placement) >= 0 ? "x" : "y";
+}
+
+// node_modules/@popperjs/core/lib/utils/within.js
+function within(min2, value, max2) {
+  return max(min2, min(value, max2));
+}
+function withinMaxClamp(min2, value, max2) {
+  var v = within(min2, value, max2);
+  return v > max2 ? max2 : v;
+}
+
+// node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
+function getFreshSideObject() {
+  return {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
+function mergePaddingObject(paddingObject) {
+  return Object.assign({}, getFreshSideObject(), paddingObject);
+}
+
+// node_modules/@popperjs/core/lib/utils/expandToHashMap.js
+function expandToHashMap(value, keys) {
+  return keys.reduce(function(hashMap, key) {
+    hashMap[key] = value;
+    return hashMap;
+  }, {});
+}
+
+// node_modules/@popperjs/core/lib/modifiers/arrow.js
+var toPaddingObject = function toPaddingObject2(padding, state) {
+  padding = typeof padding === "function" ? padding(Object.assign({}, state.rects, {
+    placement: state.placement
+  })) : padding;
+  return mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+};
+function arrow(_ref) {
+  var _state$modifiersData$;
+  var state = _ref.state, name = _ref.name, options = _ref.options;
+  var arrowElement = state.elements.arrow;
+  var popperOffsets2 = state.modifiersData.popperOffsets;
+  var basePlacement = getBasePlacement(state.placement);
+  var axis = getMainAxisFromPlacement(basePlacement);
+  var isVertical = [left, right].indexOf(basePlacement) >= 0;
+  var len = isVertical ? "height" : "width";
+  if (!arrowElement || !popperOffsets2) {
+    return;
+  }
+  var paddingObject = toPaddingObject(options.padding, state);
+  var arrowRect = getLayoutRect(arrowElement);
+  var minProp = axis === "y" ? top : left;
+  var maxProp = axis === "y" ? bottom : right;
+  var endDiff = state.rects.reference[len] + state.rects.reference[axis] - popperOffsets2[axis] - state.rects.popper[len];
+  var startDiff = popperOffsets2[axis] - state.rects.reference[axis];
+  var arrowOffsetParent = getOffsetParent(arrowElement);
+  var clientSize = arrowOffsetParent ? axis === "y" ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
+  var centerToReference = endDiff / 2 - startDiff / 2;
+  var min2 = paddingObject[minProp];
+  var max2 = clientSize - arrowRect[len] - paddingObject[maxProp];
+  var center = clientSize / 2 - arrowRect[len] / 2 + centerToReference;
+  var offset2 = within(min2, center, max2);
+  var axisProp = axis;
+  state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset2, _state$modifiersData$.centerOffset = offset2 - center, _state$modifiersData$);
+}
+function effect2(_ref2) {
+  var state = _ref2.state, options = _ref2.options;
+  var _options$element = options.element, arrowElement = _options$element === void 0 ? "[data-popper-arrow]" : _options$element;
+  if (arrowElement == null) {
+    return;
+  }
+  if (typeof arrowElement === "string") {
+    arrowElement = state.elements.popper.querySelector(arrowElement);
+    if (!arrowElement) {
+      return;
+    }
+  }
+  if (true) {
+    if (!isHTMLElement(arrowElement)) {
+      console.error(['Popper: "arrow" element must be an HTMLElement (not an SVGElement).', "To use an SVG arrow, wrap it in an HTMLElement that will be used as", "the arrow."].join(" "));
+    }
+  }
+  if (!contains(state.elements.popper, arrowElement)) {
+    if (true) {
+      console.error(['Popper: "arrow" modifier\'s `element` must be a child of the popper', "element."].join(" "));
+    }
+    return;
+  }
+  state.elements.arrow = arrowElement;
+}
+var arrow_default = {
+  name: "arrow",
+  enabled: true,
+  phase: "main",
+  fn: arrow,
+  effect: effect2,
+  requires: ["popperOffsets"],
+  requiresIfExists: ["preventOverflow"]
+};
+
+// node_modules/@popperjs/core/lib/utils/getVariation.js
+function getVariation(placement) {
+  return placement.split("-")[1];
+}
+
+// node_modules/@popperjs/core/lib/modifiers/computeStyles.js
+var unsetSides = {
+  top: "auto",
+  right: "auto",
+  bottom: "auto",
+  left: "auto"
+};
+function roundOffsetsByDPR(_ref) {
+  var x = _ref.x, y = _ref.y;
+  var win = window;
+  var dpr = win.devicePixelRatio || 1;
+  return {
+    x: round(x * dpr) / dpr || 0,
+    y: round(y * dpr) / dpr || 0
+  };
+}
+function mapToStyles(_ref2) {
+  var _Object$assign2;
+  var popper2 = _ref2.popper, popperRect = _ref2.popperRect, placement = _ref2.placement, variation = _ref2.variation, offsets = _ref2.offsets, position = _ref2.position, gpuAcceleration = _ref2.gpuAcceleration, adaptive = _ref2.adaptive, roundOffsets = _ref2.roundOffsets, isFixed = _ref2.isFixed;
+  var _offsets$x = offsets.x, x = _offsets$x === void 0 ? 0 : _offsets$x, _offsets$y = offsets.y, y = _offsets$y === void 0 ? 0 : _offsets$y;
+  var _ref3 = typeof roundOffsets === "function" ? roundOffsets({
+    x,
+    y
+  }) : {
+    x,
+    y
+  };
+  x = _ref3.x;
+  y = _ref3.y;
+  var hasX = offsets.hasOwnProperty("x");
+  var hasY = offsets.hasOwnProperty("y");
+  var sideX = left;
+  var sideY = top;
+  var win = window;
+  if (adaptive) {
+    var offsetParent = getOffsetParent(popper2);
+    var heightProp = "clientHeight";
+    var widthProp = "clientWidth";
+    if (offsetParent === getWindow(popper2)) {
+      offsetParent = getDocumentElement(popper2);
+      if (getComputedStyle(offsetParent).position !== "static" && position === "absolute") {
+        heightProp = "scrollHeight";
+        widthProp = "scrollWidth";
+      }
+    }
+    offsetParent = offsetParent;
+    if (placement === top || (placement === left || placement === right) && variation === end) {
+      sideY = bottom;
+      var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
+      y -= offsetY - popperRect.height;
+      y *= gpuAcceleration ? 1 : -1;
+    }
+    if (placement === left || (placement === top || placement === bottom) && variation === end) {
+      sideX = right;
+      var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
+      x -= offsetX - popperRect.width;
+      x *= gpuAcceleration ? 1 : -1;
+    }
+  }
+  var commonStyles = Object.assign({
+    position
+  }, adaptive && unsetSides);
+  var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
+    x,
+    y
+  }) : {
+    x,
+    y
+  };
+  x = _ref4.x;
+  y = _ref4.y;
+  if (gpuAcceleration) {
+    var _Object$assign;
+    return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? "0" : "", _Object$assign[sideX] = hasX ? "0" : "", _Object$assign.transform = (win.devicePixelRatio || 1) <= 1 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
+  }
+  return Object.assign({}, commonStyles, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : "", _Object$assign2[sideX] = hasX ? x + "px" : "", _Object$assign2.transform = "", _Object$assign2));
+}
+function computeStyles(_ref5) {
+  var state = _ref5.state, options = _ref5.options;
+  var _options$gpuAccelerat = options.gpuAcceleration, gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat, _options$adaptive = options.adaptive, adaptive = _options$adaptive === void 0 ? true : _options$adaptive, _options$roundOffsets = options.roundOffsets, roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
+  if (true) {
+    var transitionProperty = getComputedStyle(state.elements.popper).transitionProperty || "";
+    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function(property) {
+      return transitionProperty.indexOf(property) >= 0;
+    })) {
+      console.warn(["Popper: Detected CSS transitions on at least one of the following", 'CSS properties: "transform", "top", "right", "bottom", "left".', "\n\n", 'Disable the "computeStyles" modifier\'s `adaptive` option to allow', "for smooth transitions, or remove these properties from the CSS", "transition declaration on the popper element if only transitioning", "opacity or background-color for example.", "\n\n", "We recommend using the popper element as a wrapper around an inner", "element that can have any CSS property transitioned for animations."].join(" "));
+    }
+  }
+  var commonStyles = {
+    placement: getBasePlacement(state.placement),
+    variation: getVariation(state.placement),
+    popper: state.elements.popper,
+    popperRect: state.rects.popper,
+    gpuAcceleration,
+    isFixed: state.options.strategy === "fixed"
+  };
+  if (state.modifiersData.popperOffsets != null) {
+    state.styles.popper = Object.assign({}, state.styles.popper, mapToStyles(Object.assign({}, commonStyles, {
+      offsets: state.modifiersData.popperOffsets,
+      position: state.options.strategy,
+      adaptive,
+      roundOffsets
+    })));
+  }
+  if (state.modifiersData.arrow != null) {
+    state.styles.arrow = Object.assign({}, state.styles.arrow, mapToStyles(Object.assign({}, commonStyles, {
+      offsets: state.modifiersData.arrow,
+      position: "absolute",
+      adaptive: false,
+      roundOffsets
+    })));
+  }
+  state.attributes.popper = Object.assign({}, state.attributes.popper, {
+    "data-popper-placement": state.placement
+  });
+}
+var computeStyles_default = {
+  name: "computeStyles",
+  enabled: true,
+  phase: "beforeWrite",
+  fn: computeStyles,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/modifiers/eventListeners.js
+var passive = {
+  passive: true
+};
+function effect3(_ref) {
+  var state = _ref.state, instance = _ref.instance, options = _ref.options;
+  var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
+  var window2 = getWindow(state.elements.popper);
+  var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
+  if (scroll) {
+    scrollParents.forEach(function(scrollParent) {
+      scrollParent.addEventListener("scroll", instance.update, passive);
+    });
+  }
+  if (resize) {
+    window2.addEventListener("resize", instance.update, passive);
+  }
+  return function() {
+    if (scroll) {
+      scrollParents.forEach(function(scrollParent) {
+        scrollParent.removeEventListener("scroll", instance.update, passive);
+      });
+    }
+    if (resize) {
+      window2.removeEventListener("resize", instance.update, passive);
+    }
+  };
+}
+var eventListeners_default = {
+  name: "eventListeners",
+  enabled: true,
+  phase: "write",
+  fn: function fn() {
+  },
+  effect: effect3,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
+var hash = {
+  left: "right",
+  right: "left",
+  bottom: "top",
+  top: "bottom"
+};
+function getOppositePlacement(placement) {
+  return placement.replace(/left|right|bottom|top/g, function(matched) {
+    return hash[matched];
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
+var hash2 = {
+  start: "end",
+  end: "start"
+};
+function getOppositeVariationPlacement(placement) {
+  return placement.replace(/start|end/g, function(matched) {
+    return hash2[matched];
+  });
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
+function getWindowScroll(node) {
+  var win = getWindow(node);
+  var scrollLeft = win.pageXOffset;
+  var scrollTop = win.pageYOffset;
+  return {
+    scrollLeft,
+    scrollTop
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
+function getWindowScrollBarX(element) {
+  return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
+function getViewportRect(element, strategy) {
+  var win = getWindow(element);
+  var html = getDocumentElement(element);
+  var visualViewport = win.visualViewport;
+  var width = html.clientWidth;
+  var height = html.clientHeight;
+  var x = 0;
+  var y = 0;
+  if (visualViewport) {
+    width = visualViewport.width;
+    height = visualViewport.height;
+    var layoutViewport = isLayoutViewport();
+    if (layoutViewport || !layoutViewport && strategy === "fixed") {
+      x = visualViewport.offsetLeft;
+      y = visualViewport.offsetTop;
+    }
+  }
+  return {
+    width,
+    height,
+    x: x + getWindowScrollBarX(element),
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
+function getDocumentRect(element) {
+  var _element$ownerDocumen;
+  var html = getDocumentElement(element);
+  var winScroll = getWindowScroll(element);
+  var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
+  var width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
+  var height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
+  var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
+  var y = -winScroll.scrollTop;
+  if (getComputedStyle(body || html).direction === "rtl") {
+    x += max(html.clientWidth, body ? body.clientWidth : 0) - width;
+  }
+  return {
+    width,
+    height,
+    x,
+    y
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
+function isScrollParent(element) {
+  var _getComputedStyle = getComputedStyle(element), overflow = _getComputedStyle.overflow, overflowX = _getComputedStyle.overflowX, overflowY = _getComputedStyle.overflowY;
+  return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
+function getScrollParent(node) {
+  if (["html", "body", "#document"].indexOf(getNodeName(node)) >= 0) {
+    return node.ownerDocument.body;
+  }
+  if (isHTMLElement(node) && isScrollParent(node)) {
+    return node;
+  }
+  return getScrollParent(getParentNode(node));
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
+function listScrollParents(element, list) {
+  var _element$ownerDocumen;
+  if (list === void 0) {
+    list = [];
+  }
+  var scrollParent = getScrollParent(element);
+  var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body);
+  var win = getWindow(scrollParent);
+  var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
+  var updatedList = list.concat(target);
+  return isBody ? updatedList : updatedList.concat(listScrollParents(getParentNode(target)));
+}
+
+// node_modules/@popperjs/core/lib/utils/rectToClientRect.js
+function rectToClientRect(rect) {
+  return Object.assign({}, rect, {
+    left: rect.x,
+    top: rect.y,
+    right: rect.x + rect.width,
+    bottom: rect.y + rect.height
+  });
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
+function getInnerBoundingClientRect(element, strategy) {
+  var rect = getBoundingClientRect(element, false, strategy === "fixed");
+  rect.top = rect.top + element.clientTop;
+  rect.left = rect.left + element.clientLeft;
+  rect.bottom = rect.top + element.clientHeight;
+  rect.right = rect.left + element.clientWidth;
+  rect.width = element.clientWidth;
+  rect.height = element.clientHeight;
+  rect.x = rect.left;
+  rect.y = rect.top;
+  return rect;
+}
+function getClientRectFromMixedType(element, clippingParent, strategy) {
+  return clippingParent === viewport ? rectToClientRect(getViewportRect(element, strategy)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent, strategy) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+}
+function getClippingParents(element) {
+  var clippingParents2 = listScrollParents(getParentNode(element));
+  var canEscapeClipping = ["absolute", "fixed"].indexOf(getComputedStyle(element).position) >= 0;
+  var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
+  if (!isElement(clipperElement)) {
+    return [];
+  }
+  return clippingParents2.filter(function(clippingParent) {
+    return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== "body";
+  });
+}
+function getClippingRect(element, boundary, rootBoundary, strategy) {
+  var mainClippingParents = boundary === "clippingParents" ? getClippingParents(element) : [].concat(boundary);
+  var clippingParents2 = [].concat(mainClippingParents, [rootBoundary]);
+  var firstClippingParent = clippingParents2[0];
+  var clippingRect = clippingParents2.reduce(function(accRect, clippingParent) {
+    var rect = getClientRectFromMixedType(element, clippingParent, strategy);
+    accRect.top = max(rect.top, accRect.top);
+    accRect.right = min(rect.right, accRect.right);
+    accRect.bottom = min(rect.bottom, accRect.bottom);
+    accRect.left = max(rect.left, accRect.left);
+    return accRect;
+  }, getClientRectFromMixedType(element, firstClippingParent, strategy));
+  clippingRect.width = clippingRect.right - clippingRect.left;
+  clippingRect.height = clippingRect.bottom - clippingRect.top;
+  clippingRect.x = clippingRect.left;
+  clippingRect.y = clippingRect.top;
+  return clippingRect;
+}
+
+// node_modules/@popperjs/core/lib/utils/computeOffsets.js
+function computeOffsets(_ref) {
+  var reference2 = _ref.reference, element = _ref.element, placement = _ref.placement;
+  var basePlacement = placement ? getBasePlacement(placement) : null;
+  var variation = placement ? getVariation(placement) : null;
+  var commonX = reference2.x + reference2.width / 2 - element.width / 2;
+  var commonY = reference2.y + reference2.height / 2 - element.height / 2;
+  var offsets;
+  switch (basePlacement) {
+    case top:
+      offsets = {
+        x: commonX,
+        y: reference2.y - element.height
+      };
+      break;
+    case bottom:
+      offsets = {
+        x: commonX,
+        y: reference2.y + reference2.height
+      };
+      break;
+    case right:
+      offsets = {
+        x: reference2.x + reference2.width,
+        y: commonY
+      };
+      break;
+    case left:
+      offsets = {
+        x: reference2.x - element.width,
+        y: commonY
+      };
+      break;
+    default:
+      offsets = {
+        x: reference2.x,
+        y: reference2.y
+      };
+  }
+  var mainAxis = basePlacement ? getMainAxisFromPlacement(basePlacement) : null;
+  if (mainAxis != null) {
+    var len = mainAxis === "y" ? "height" : "width";
+    switch (variation) {
+      case start:
+        offsets[mainAxis] = offsets[mainAxis] - (reference2[len] / 2 - element[len] / 2);
+        break;
+      case end:
+        offsets[mainAxis] = offsets[mainAxis] + (reference2[len] / 2 - element[len] / 2);
+        break;
+      default:
+    }
+  }
+  return offsets;
+}
+
+// node_modules/@popperjs/core/lib/utils/detectOverflow.js
+function detectOverflow(state, options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options = options, _options$placement = _options.placement, placement = _options$placement === void 0 ? state.placement : _options$placement, _options$strategy = _options.strategy, strategy = _options$strategy === void 0 ? state.strategy : _options$strategy, _options$boundary = _options.boundary, boundary = _options$boundary === void 0 ? clippingParents : _options$boundary, _options$rootBoundary = _options.rootBoundary, rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary, _options$elementConte = _options.elementContext, elementContext = _options$elementConte === void 0 ? popper : _options$elementConte, _options$altBoundary = _options.altBoundary, altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary, _options$padding = _options.padding, padding = _options$padding === void 0 ? 0 : _options$padding;
+  var paddingObject = mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+  var altContext = elementContext === popper ? reference : popper;
+  var popperRect = state.rects.popper;
+  var element = state.elements[altBoundary ? altContext : elementContext];
+  var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary, strategy);
+  var referenceClientRect = getBoundingClientRect(state.elements.reference);
+  var popperOffsets2 = computeOffsets({
+    reference: referenceClientRect,
+    element: popperRect,
+    strategy: "absolute",
+    placement
+  });
+  var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets2));
+  var elementClientRect = elementContext === popper ? popperClientRect : referenceClientRect;
+  var overflowOffsets = {
+    top: clippingClientRect.top - elementClientRect.top + paddingObject.top,
+    bottom: elementClientRect.bottom - clippingClientRect.bottom + paddingObject.bottom,
+    left: clippingClientRect.left - elementClientRect.left + paddingObject.left,
+    right: elementClientRect.right - clippingClientRect.right + paddingObject.right
+  };
+  var offsetData = state.modifiersData.offset;
+  if (elementContext === popper && offsetData) {
+    var offset2 = offsetData[placement];
+    Object.keys(overflowOffsets).forEach(function(key) {
+      var multiply = [right, bottom].indexOf(key) >= 0 ? 1 : -1;
+      var axis = [top, bottom].indexOf(key) >= 0 ? "y" : "x";
+      overflowOffsets[key] += offset2[axis] * multiply;
+    });
+  }
+  return overflowOffsets;
+}
+
+// node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
+function computeAutoPlacement(state, options) {
+  if (options === void 0) {
+    options = {};
+  }
+  var _options = options, placement = _options.placement, boundary = _options.boundary, rootBoundary = _options.rootBoundary, padding = _options.padding, flipVariations = _options.flipVariations, _options$allowedAutoP = _options.allowedAutoPlacements, allowedAutoPlacements = _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
+  var variation = getVariation(placement);
+  var placements2 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function(placement2) {
+    return getVariation(placement2) === variation;
+  }) : basePlacements;
+  var allowedPlacements = placements2.filter(function(placement2) {
+    return allowedAutoPlacements.indexOf(placement2) >= 0;
+  });
+  if (allowedPlacements.length === 0) {
+    allowedPlacements = placements2;
+    if (true) {
+      console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" "));
+    }
+  }
+  var overflows = allowedPlacements.reduce(function(acc, placement2) {
+    acc[placement2] = detectOverflow(state, {
+      placement: placement2,
+      boundary,
+      rootBoundary,
+      padding
+    })[getBasePlacement(placement2)];
+    return acc;
+  }, {});
+  return Object.keys(overflows).sort(function(a, b) {
+    return overflows[a] - overflows[b];
+  });
+}
+
+// node_modules/@popperjs/core/lib/modifiers/flip.js
+function getExpandedFallbackPlacements(placement) {
+  if (getBasePlacement(placement) === auto) {
+    return [];
+  }
+  var oppositePlacement = getOppositePlacement(placement);
+  return [getOppositeVariationPlacement(placement), oppositePlacement, getOppositeVariationPlacement(oppositePlacement)];
+}
+function flip(_ref) {
+  var state = _ref.state, options = _ref.options, name = _ref.name;
+  if (state.modifiersData[name]._skip) {
+    return;
+  }
+  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis, specifiedFallbackPlacements = options.fallbackPlacements, padding = options.padding, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, _options$flipVariatio = options.flipVariations, flipVariations = _options$flipVariatio === void 0 ? true : _options$flipVariatio, allowedAutoPlacements = options.allowedAutoPlacements;
+  var preferredPlacement = state.options.placement;
+  var basePlacement = getBasePlacement(preferredPlacement);
+  var isBasePlacement = basePlacement === preferredPlacement;
+  var fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipVariations ? [getOppositePlacement(preferredPlacement)] : getExpandedFallbackPlacements(preferredPlacement));
+  var placements2 = [preferredPlacement].concat(fallbackPlacements).reduce(function(acc, placement2) {
+    return acc.concat(getBasePlacement(placement2) === auto ? computeAutoPlacement(state, {
+      placement: placement2,
+      boundary,
+      rootBoundary,
+      padding,
+      flipVariations,
+      allowedAutoPlacements
+    }) : placement2);
+  }, []);
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var checksMap = new Map();
+  var makeFallbackChecks = true;
+  var firstFittingPlacement = placements2[0];
+  for (var i = 0; i < placements2.length; i++) {
+    var placement = placements2[i];
+    var _basePlacement = getBasePlacement(placement);
+    var isStartVariation = getVariation(placement) === start;
+    var isVertical = [top, bottom].indexOf(_basePlacement) >= 0;
+    var len = isVertical ? "width" : "height";
+    var overflow = detectOverflow(state, {
+      placement,
+      boundary,
+      rootBoundary,
+      altBoundary,
+      padding
+    });
+    var mainVariationSide = isVertical ? isStartVariation ? right : left : isStartVariation ? bottom : top;
+    if (referenceRect[len] > popperRect[len]) {
+      mainVariationSide = getOppositePlacement(mainVariationSide);
+    }
+    var altVariationSide = getOppositePlacement(mainVariationSide);
+    var checks = [];
+    if (checkMainAxis) {
+      checks.push(overflow[_basePlacement] <= 0);
+    }
+    if (checkAltAxis) {
+      checks.push(overflow[mainVariationSide] <= 0, overflow[altVariationSide] <= 0);
+    }
+    if (checks.every(function(check) {
+      return check;
+    })) {
+      firstFittingPlacement = placement;
+      makeFallbackChecks = false;
+      break;
+    }
+    checksMap.set(placement, checks);
+  }
+  if (makeFallbackChecks) {
+    var numberOfChecks = flipVariations ? 3 : 1;
+    var _loop = function _loop2(_i2) {
+      var fittingPlacement = placements2.find(function(placement2) {
+        var checks2 = checksMap.get(placement2);
+        if (checks2) {
+          return checks2.slice(0, _i2).every(function(check) {
+            return check;
+          });
+        }
+      });
+      if (fittingPlacement) {
+        firstFittingPlacement = fittingPlacement;
+        return "break";
+      }
+    };
+    for (var _i = numberOfChecks; _i > 0; _i--) {
+      var _ret = _loop(_i);
+      if (_ret === "break")
+        break;
+    }
+  }
+  if (state.placement !== firstFittingPlacement) {
+    state.modifiersData[name]._skip = true;
+    state.placement = firstFittingPlacement;
+    state.reset = true;
+  }
+}
+var flip_default = {
+  name: "flip",
+  enabled: true,
+  phase: "main",
+  fn: flip,
+  requiresIfExists: ["offset"],
+  data: {
+    _skip: false
+  }
+};
+
+// node_modules/@popperjs/core/lib/modifiers/hide.js
+function getSideOffsets(overflow, rect, preventedOffsets) {
+  if (preventedOffsets === void 0) {
+    preventedOffsets = {
+      x: 0,
+      y: 0
+    };
+  }
+  return {
+    top: overflow.top - rect.height - preventedOffsets.y,
+    right: overflow.right - rect.width + preventedOffsets.x,
+    bottom: overflow.bottom - rect.height + preventedOffsets.y,
+    left: overflow.left - rect.width - preventedOffsets.x
+  };
+}
+function isAnySideFullyClipped(overflow) {
+  return [top, right, bottom, left].some(function(side) {
+    return overflow[side] >= 0;
+  });
+}
+function hide(_ref) {
+  var state = _ref.state, name = _ref.name;
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var preventedOffsets = state.modifiersData.preventOverflow;
+  var referenceOverflow = detectOverflow(state, {
+    elementContext: "reference"
+  });
+  var popperAltOverflow = detectOverflow(state, {
+    altBoundary: true
+  });
+  var referenceClippingOffsets = getSideOffsets(referenceOverflow, referenceRect);
+  var popperEscapeOffsets = getSideOffsets(popperAltOverflow, popperRect, preventedOffsets);
+  var isReferenceHidden = isAnySideFullyClipped(referenceClippingOffsets);
+  var hasPopperEscaped = isAnySideFullyClipped(popperEscapeOffsets);
+  state.modifiersData[name] = {
+    referenceClippingOffsets,
+    popperEscapeOffsets,
+    isReferenceHidden,
+    hasPopperEscaped
+  };
+  state.attributes.popper = Object.assign({}, state.attributes.popper, {
+    "data-popper-reference-hidden": isReferenceHidden,
+    "data-popper-escaped": hasPopperEscaped
+  });
+}
+var hide_default = {
+  name: "hide",
+  enabled: true,
+  phase: "main",
+  requiresIfExists: ["preventOverflow"],
+  fn: hide
+};
+
+// node_modules/@popperjs/core/lib/modifiers/offset.js
+function distanceAndSkiddingToXY(placement, rects, offset2) {
+  var basePlacement = getBasePlacement(placement);
+  var invertDistance = [left, top].indexOf(basePlacement) >= 0 ? -1 : 1;
+  var _ref = typeof offset2 === "function" ? offset2(Object.assign({}, rects, {
+    placement
+  })) : offset2, skidding = _ref[0], distance = _ref[1];
+  skidding = skidding || 0;
+  distance = (distance || 0) * invertDistance;
+  return [left, right].indexOf(basePlacement) >= 0 ? {
+    x: distance,
+    y: skidding
+  } : {
+    x: skidding,
+    y: distance
+  };
+}
+function offset(_ref2) {
+  var state = _ref2.state, options = _ref2.options, name = _ref2.name;
+  var _options$offset = options.offset, offset2 = _options$offset === void 0 ? [0, 0] : _options$offset;
+  var data = placements.reduce(function(acc, placement) {
+    acc[placement] = distanceAndSkiddingToXY(placement, state.rects, offset2);
+    return acc;
+  }, {});
+  var _data$state$placement = data[state.placement], x = _data$state$placement.x, y = _data$state$placement.y;
+  if (state.modifiersData.popperOffsets != null) {
+    state.modifiersData.popperOffsets.x += x;
+    state.modifiersData.popperOffsets.y += y;
+  }
+  state.modifiersData[name] = data;
+}
+var offset_default = {
+  name: "offset",
+  enabled: true,
+  phase: "main",
+  requires: ["popperOffsets"],
+  fn: offset
+};
+
+// node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
+function popperOffsets(_ref) {
+  var state = _ref.state, name = _ref.name;
+  state.modifiersData[name] = computeOffsets({
+    reference: state.rects.reference,
+    element: state.rects.popper,
+    strategy: "absolute",
+    placement: state.placement
+  });
+}
+var popperOffsets_default = {
+  name: "popperOffsets",
+  enabled: true,
+  phase: "read",
+  fn: popperOffsets,
+  data: {}
+};
+
+// node_modules/@popperjs/core/lib/utils/getAltAxis.js
+function getAltAxis(axis) {
+  return axis === "x" ? "y" : "x";
+}
+
+// node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
+function preventOverflow(_ref) {
+  var state = _ref.state, options = _ref.options, name = _ref.name;
+  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, padding = options.padding, _options$tether = options.tether, tether = _options$tether === void 0 ? true : _options$tether, _options$tetherOffset = options.tetherOffset, tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
+  var overflow = detectOverflow(state, {
+    boundary,
+    rootBoundary,
+    padding,
+    altBoundary
+  });
+  var basePlacement = getBasePlacement(state.placement);
+  var variation = getVariation(state.placement);
+  var isBasePlacement = !variation;
+  var mainAxis = getMainAxisFromPlacement(basePlacement);
+  var altAxis = getAltAxis(mainAxis);
+  var popperOffsets2 = state.modifiersData.popperOffsets;
+  var referenceRect = state.rects.reference;
+  var popperRect = state.rects.popper;
+  var tetherOffsetValue = typeof tetherOffset === "function" ? tetherOffset(Object.assign({}, state.rects, {
+    placement: state.placement
+  })) : tetherOffset;
+  var normalizedTetherOffsetValue = typeof tetherOffsetValue === "number" ? {
+    mainAxis: tetherOffsetValue,
+    altAxis: tetherOffsetValue
+  } : Object.assign({
+    mainAxis: 0,
+    altAxis: 0
+  }, tetherOffsetValue);
+  var offsetModifierState = state.modifiersData.offset ? state.modifiersData.offset[state.placement] : null;
+  var data = {
+    x: 0,
+    y: 0
+  };
+  if (!popperOffsets2) {
+    return;
+  }
+  if (checkMainAxis) {
+    var _offsetModifierState$;
+    var mainSide = mainAxis === "y" ? top : left;
+    var altSide = mainAxis === "y" ? bottom : right;
+    var len = mainAxis === "y" ? "height" : "width";
+    var offset2 = popperOffsets2[mainAxis];
+    var min2 = offset2 + overflow[mainSide];
+    var max2 = offset2 - overflow[altSide];
+    var additive = tether ? -popperRect[len] / 2 : 0;
+    var minLen = variation === start ? referenceRect[len] : popperRect[len];
+    var maxLen = variation === start ? -popperRect[len] : -referenceRect[len];
+    var arrowElement = state.elements.arrow;
+    var arrowRect = tether && arrowElement ? getLayoutRect(arrowElement) : {
+      width: 0,
+      height: 0
+    };
+    var arrowPaddingObject = state.modifiersData["arrow#persistent"] ? state.modifiersData["arrow#persistent"].padding : getFreshSideObject();
+    var arrowPaddingMin = arrowPaddingObject[mainSide];
+    var arrowPaddingMax = arrowPaddingObject[altSide];
+    var arrowLen = within(0, referenceRect[len], arrowRect[len]);
+    var minOffset = isBasePlacement ? referenceRect[len] / 2 - additive - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis : minLen - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis;
+    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis : maxLen + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis;
+    var arrowOffsetParent = state.elements.arrow && getOffsetParent(state.elements.arrow);
+    var clientOffset = arrowOffsetParent ? mainAxis === "y" ? arrowOffsetParent.clientTop || 0 : arrowOffsetParent.clientLeft || 0 : 0;
+    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
+    var tetherMin = offset2 + minOffset - offsetModifierValue - clientOffset;
+    var tetherMax = offset2 + maxOffset - offsetModifierValue;
+    var preventedOffset = within(tether ? min(min2, tetherMin) : min2, offset2, tether ? max(max2, tetherMax) : max2);
+    popperOffsets2[mainAxis] = preventedOffset;
+    data[mainAxis] = preventedOffset - offset2;
+  }
+  if (checkAltAxis) {
+    var _offsetModifierState$2;
+    var _mainSide = mainAxis === "x" ? top : left;
+    var _altSide = mainAxis === "x" ? bottom : right;
+    var _offset = popperOffsets2[altAxis];
+    var _len = altAxis === "y" ? "height" : "width";
+    var _min = _offset + overflow[_mainSide];
+    var _max = _offset - overflow[_altSide];
+    var isOriginSide = [top, left].indexOf(basePlacement) !== -1;
+    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
+    var _tetherMin = isOriginSide ? _min : _offset - referenceRect[_len] - popperRect[_len] - _offsetModifierValue + normalizedTetherOffsetValue.altAxis;
+    var _tetherMax = isOriginSide ? _offset + referenceRect[_len] + popperRect[_len] - _offsetModifierValue - normalizedTetherOffsetValue.altAxis : _max;
+    var _preventedOffset = tether && isOriginSide ? withinMaxClamp(_tetherMin, _offset, _tetherMax) : within(tether ? _tetherMin : _min, _offset, tether ? _tetherMax : _max);
+    popperOffsets2[altAxis] = _preventedOffset;
+    data[altAxis] = _preventedOffset - _offset;
+  }
+  state.modifiersData[name] = data;
+}
+var preventOverflow_default = {
+  name: "preventOverflow",
+  enabled: true,
+  phase: "main",
+  fn: preventOverflow,
+  requiresIfExists: ["offset"]
+};
+
+// node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
+function getHTMLElementScroll(element) {
+  return {
+    scrollLeft: element.scrollLeft,
+    scrollTop: element.scrollTop
+  };
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
+function getNodeScroll(node) {
+  if (node === getWindow(node) || !isHTMLElement(node)) {
+    return getWindowScroll(node);
+  } else {
+    return getHTMLElementScroll(node);
+  }
+}
+
+// node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
+function isElementScaled(element) {
+  var rect = element.getBoundingClientRect();
+  var scaleX = round(rect.width) / element.offsetWidth || 1;
+  var scaleY = round(rect.height) / element.offsetHeight || 1;
+  return scaleX !== 1 || scaleY !== 1;
+}
+function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
+  if (isFixed === void 0) {
+    isFixed = false;
+  }
+  var isOffsetParentAnElement = isHTMLElement(offsetParent);
+  var offsetParentIsScaled = isHTMLElement(offsetParent) && isElementScaled(offsetParent);
+  var documentElement = getDocumentElement(offsetParent);
+  var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled, isFixed);
+  var scroll = {
+    scrollLeft: 0,
+    scrollTop: 0
+  };
+  var offsets = {
+    x: 0,
+    y: 0
+  };
+  if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
+    if (getNodeName(offsetParent) !== "body" || isScrollParent(documentElement)) {
+      scroll = getNodeScroll(offsetParent);
+    }
+    if (isHTMLElement(offsetParent)) {
+      offsets = getBoundingClientRect(offsetParent, true);
+      offsets.x += offsetParent.clientLeft;
+      offsets.y += offsetParent.clientTop;
+    } else if (documentElement) {
+      offsets.x = getWindowScrollBarX(documentElement);
+    }
+  }
+  return {
+    x: rect.left + scroll.scrollLeft - offsets.x,
+    y: rect.top + scroll.scrollTop - offsets.y,
+    width: rect.width,
+    height: rect.height
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/orderModifiers.js
+function order(modifiers) {
+  var map = new Map();
+  var visited = new Set();
+  var result = [];
+  modifiers.forEach(function(modifier) {
+    map.set(modifier.name, modifier);
+  });
+  function sort(modifier) {
+    visited.add(modifier.name);
+    var requires = [].concat(modifier.requires || [], modifier.requiresIfExists || []);
+    requires.forEach(function(dep) {
+      if (!visited.has(dep)) {
+        var depModifier = map.get(dep);
+        if (depModifier) {
+          sort(depModifier);
+        }
+      }
+    });
+    result.push(modifier);
+  }
+  modifiers.forEach(function(modifier) {
+    if (!visited.has(modifier.name)) {
+      sort(modifier);
+    }
+  });
+  return result;
+}
+function orderModifiers(modifiers) {
+  var orderedModifiers = order(modifiers);
+  return modifierPhases.reduce(function(acc, phase) {
+    return acc.concat(orderedModifiers.filter(function(modifier) {
+      return modifier.phase === phase;
+    }));
+  }, []);
+}
+
+// node_modules/@popperjs/core/lib/utils/debounce.js
+function debounce(fn2) {
+  var pending;
+  return function() {
+    if (!pending) {
+      pending = new Promise(function(resolve) {
+        Promise.resolve().then(function() {
+          pending = void 0;
+          resolve(fn2());
+        });
+      });
+    }
+    return pending;
+  };
+}
+
+// node_modules/@popperjs/core/lib/utils/format.js
+function format(str) {
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+  return [].concat(args).reduce(function(p, c) {
+    return p.replace(/%s/, c);
+  }, str);
+}
+
+// node_modules/@popperjs/core/lib/utils/validateModifiers.js
+var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
+var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
+var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
+function validateModifiers(modifiers) {
+  modifiers.forEach(function(modifier) {
+    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self2) {
+      return self2.indexOf(value) === index;
+    }).forEach(function(key) {
+      switch (key) {
+        case "name":
+          if (typeof modifier.name !== "string") {
+            console.error(format(INVALID_MODIFIER_ERROR, String(modifier.name), '"name"', '"string"', '"' + String(modifier.name) + '"'));
+          }
+          break;
+        case "enabled":
+          if (typeof modifier.enabled !== "boolean") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"enabled"', '"boolean"', '"' + String(modifier.enabled) + '"'));
+          }
+          break;
+        case "phase":
+          if (modifierPhases.indexOf(modifier.phase) < 0) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"phase"', "either " + modifierPhases.join(", "), '"' + String(modifier.phase) + '"'));
+          }
+          break;
+        case "fn":
+          if (typeof modifier.fn !== "function") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"fn"', '"function"', '"' + String(modifier.fn) + '"'));
+          }
+          break;
+        case "effect":
+          if (modifier.effect != null && typeof modifier.effect !== "function") {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"effect"', '"function"', '"' + String(modifier.fn) + '"'));
+          }
+          break;
+        case "requires":
+          if (modifier.requires != null && !Array.isArray(modifier.requires)) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requires"', '"array"', '"' + String(modifier.requires) + '"'));
+          }
+          break;
+        case "requiresIfExists":
+          if (!Array.isArray(modifier.requiresIfExists)) {
+            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requiresIfExists"', '"array"', '"' + String(modifier.requiresIfExists) + '"'));
+          }
+          break;
+        case "options":
+        case "data":
+          break;
+        default:
+          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function(s) {
+            return '"' + s + '"';
+          }).join(", ") + '; but "' + key + '" was provided.');
+      }
+      modifier.requires && modifier.requires.forEach(function(requirement) {
+        if (modifiers.find(function(mod) {
+          return mod.name === requirement;
+        }) == null) {
+          console.error(format(MISSING_DEPENDENCY_ERROR, String(modifier.name), requirement, requirement));
+        }
+      });
+    });
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/uniqueBy.js
+function uniqueBy(arr, fn2) {
+  var identifiers = new Set();
+  return arr.filter(function(item) {
+    var identifier = fn2(item);
+    if (!identifiers.has(identifier)) {
+      identifiers.add(identifier);
+      return true;
+    }
+  });
+}
+
+// node_modules/@popperjs/core/lib/utils/mergeByName.js
+function mergeByName(modifiers) {
+  var merged = modifiers.reduce(function(merged2, current) {
+    var existing = merged2[current.name];
+    merged2[current.name] = existing ? Object.assign({}, existing, current, {
+      options: Object.assign({}, existing.options, current.options),
+      data: Object.assign({}, existing.data, current.data)
+    }) : current;
+    return merged2;
+  }, {});
+  return Object.keys(merged).map(function(key) {
+    return merged[key];
+  });
+}
+
+// node_modules/@popperjs/core/lib/createPopper.js
+var INVALID_ELEMENT_ERROR = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.";
+var INFINITE_LOOP_ERROR = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.";
+var DEFAULT_OPTIONS = {
+  placement: "bottom",
+  modifiers: [],
+  strategy: "absolute"
+};
+function areValidElements() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+  return !args.some(function(element) {
+    return !(element && typeof element.getBoundingClientRect === "function");
+  });
+}
+function popperGenerator(generatorOptions) {
+  if (generatorOptions === void 0) {
+    generatorOptions = {};
+  }
+  var _generatorOptions = generatorOptions, _generatorOptions$def = _generatorOptions.defaultModifiers, defaultModifiers2 = _generatorOptions$def === void 0 ? [] : _generatorOptions$def, _generatorOptions$def2 = _generatorOptions.defaultOptions, defaultOptions = _generatorOptions$def2 === void 0 ? DEFAULT_OPTIONS : _generatorOptions$def2;
+  return function createPopper2(reference2, popper2, options) {
+    if (options === void 0) {
+      options = defaultOptions;
+    }
+    var state = {
+      placement: "bottom",
+      orderedModifiers: [],
+      options: Object.assign({}, DEFAULT_OPTIONS, defaultOptions),
+      modifiersData: {},
+      elements: {
+        reference: reference2,
+        popper: popper2
+      },
+      attributes: {},
+      styles: {}
+    };
+    var effectCleanupFns = [];
+    var isDestroyed = false;
+    var instance = {
+      state,
+      setOptions: function setOptions(setOptionsAction) {
+        var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
+        cleanupModifierEffects();
+        state.options = Object.assign({}, defaultOptions, state.options, options2);
+        state.scrollParents = {
+          reference: isElement(reference2) ? listScrollParents(reference2) : reference2.contextElement ? listScrollParents(reference2.contextElement) : [],
+          popper: listScrollParents(popper2)
+        };
+        var orderedModifiers = orderModifiers(mergeByName([].concat(defaultModifiers2, state.options.modifiers)));
+        state.orderedModifiers = orderedModifiers.filter(function(m) {
+          return m.enabled;
+        });
+        if (true) {
+          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function(_ref) {
+            var name = _ref.name;
+            return name;
+          });
+          validateModifiers(modifiers);
+          if (getBasePlacement(state.options.placement) === auto) {
+            var flipModifier = state.orderedModifiers.find(function(_ref2) {
+              var name = _ref2.name;
+              return name === "flip";
+            });
+            if (!flipModifier) {
+              console.error(['Popper: "auto" placements require the "flip" modifier be', "present and enabled to work."].join(" "));
+            }
+          }
+          var _getComputedStyle = getComputedStyle(popper2), marginTop = _getComputedStyle.marginTop, marginRight = _getComputedStyle.marginRight, marginBottom = _getComputedStyle.marginBottom, marginLeft = _getComputedStyle.marginLeft;
+          if ([marginTop, marginRight, marginBottom, marginLeft].some(function(margin) {
+            return parseFloat(margin);
+          })) {
+            console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
+          }
+        }
+        runModifierEffects();
+        return instance.update();
+      },
+      forceUpdate: function forceUpdate() {
+        if (isDestroyed) {
+          return;
+        }
+        var _state$elements = state.elements, reference3 = _state$elements.reference, popper3 = _state$elements.popper;
+        if (!areValidElements(reference3, popper3)) {
+          if (true) {
+            console.error(INVALID_ELEMENT_ERROR);
+          }
+          return;
+        }
+        state.rects = {
+          reference: getCompositeRect(reference3, getOffsetParent(popper3), state.options.strategy === "fixed"),
+          popper: getLayoutRect(popper3)
+        };
+        state.reset = false;
+        state.placement = state.options.placement;
+        state.orderedModifiers.forEach(function(modifier) {
+          return state.modifiersData[modifier.name] = Object.assign({}, modifier.data);
+        });
+        var __debug_loops__ = 0;
+        for (var index = 0; index < state.orderedModifiers.length; index++) {
+          if (true) {
+            __debug_loops__ += 1;
+            if (__debug_loops__ > 100) {
+              console.error(INFINITE_LOOP_ERROR);
+              break;
+            }
+          }
+          if (state.reset === true) {
+            state.reset = false;
+            index = -1;
+            continue;
+          }
+          var _state$orderedModifie = state.orderedModifiers[index], fn2 = _state$orderedModifie.fn, _state$orderedModifie2 = _state$orderedModifie.options, _options = _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2, name = _state$orderedModifie.name;
+          if (typeof fn2 === "function") {
+            state = fn2({
+              state,
+              options: _options,
+              name,
+              instance
+            }) || state;
+          }
+        }
+      },
+      update: debounce(function() {
+        return new Promise(function(resolve) {
+          instance.forceUpdate();
+          resolve(state);
+        });
+      }),
+      destroy: function destroy() {
+        cleanupModifierEffects();
+        isDestroyed = true;
+      }
+    };
+    if (!areValidElements(reference2, popper2)) {
+      if (true) {
+        console.error(INVALID_ELEMENT_ERROR);
+      }
+      return instance;
+    }
+    instance.setOptions(options).then(function(state2) {
+      if (!isDestroyed && options.onFirstUpdate) {
+        options.onFirstUpdate(state2);
+      }
+    });
+    function runModifierEffects() {
+      state.orderedModifiers.forEach(function(_ref3) {
+        var name = _ref3.name, _ref3$options = _ref3.options, options2 = _ref3$options === void 0 ? {} : _ref3$options, effect4 = _ref3.effect;
+        if (typeof effect4 === "function") {
+          var cleanupFn = effect4({
+            state,
+            name,
+            instance,
+            options: options2
+          });
+          var noopFn = function noopFn2() {
+          };
+          effectCleanupFns.push(cleanupFn || noopFn);
+        }
+      });
+    }
+    function cleanupModifierEffects() {
+      effectCleanupFns.forEach(function(fn2) {
+        return fn2();
+      });
+      effectCleanupFns = [];
+    }
+    return instance;
+  };
+}
+
+// node_modules/@popperjs/core/lib/popper.js
+var defaultModifiers = [eventListeners_default, popperOffsets_default, computeStyles_default, applyStyles_default, offset_default, flip_default, preventOverflow_default, arrow_default, hide_default];
+var createPopper = /* @__PURE__ */ popperGenerator({
+  defaultModifiers
+});
+
+// src/ui/suggest.ts
+var import_obsidian3 = __toModule(require("obsidian"));
+var Suggest = class {
+  constructor(owner, containerEl, scope) {
+    this.owner = owner;
+    this.containerEl = containerEl;
+    containerEl.on("click", ".suggestion-item", this.onSuggestionClick.bind(this));
+    containerEl.on("mousemove", ".suggestion-item", this.onSuggestionMouseover.bind(this));
+    scope.register([], "ArrowUp", (event) => {
+      if (!event.isComposing) {
+        this.setSelectedItem(this.selectedItem - 1, true);
+        return false;
+      }
+    });
+    scope.register([], "ArrowDown", (event) => {
+      if (!event.isComposing) {
+        this.setSelectedItem(this.selectedItem + 1, true);
+        return false;
+      }
+    });
+    scope.register([], "Enter", (event) => {
+      if (!event.isComposing) {
+        this.useSelectedItem(event);
+        return false;
+      }
+    });
+  }
+  onSuggestionClick(event, el) {
+    event.preventDefault();
+    const item = this.suggestions.indexOf(el);
+    this.setSelectedItem(item, false);
+    this.useSelectedItem(event);
+  }
+  onSuggestionMouseover(_event, el) {
+    const item = this.suggestions.indexOf(el);
+    this.setSelectedItem(item, false);
+  }
+  setSuggestions(values) {
+    this.containerEl.empty();
+    const suggestionEls = [];
+    values.forEach((value) => {
+      const suggestionEl = this.containerEl.createDiv("suggestion-item");
+      this.owner.renderSuggestion(value, suggestionEl);
+      suggestionEls.push(suggestionEl);
+    });
+    this.values = values;
+    this.suggestions = suggestionEls;
+    this.setSelectedItem(0, false);
+  }
+  useSelectedItem(event) {
+    const currentValue = this.values[this.selectedItem];
+    if (currentValue) {
+      this.owner.selectSuggestion(currentValue, event);
+    }
+  }
+  setSelectedItem(selectedIndex, scrollIntoView) {
+    const normalizedIndex = wrapAround(selectedIndex, this.suggestions.length);
+    const prevSelectedSuggestion = this.suggestions[this.selectedItem];
+    const selectedSuggestion = this.suggestions[normalizedIndex];
+    prevSelectedSuggestion == null ? void 0 : prevSelectedSuggestion.removeClass("is-selected");
+    selectedSuggestion == null ? void 0 : selectedSuggestion.addClass("is-selected");
+    this.selectedItem = normalizedIndex;
+    if (scrollIntoView) {
+      selectedSuggestion.scrollIntoView(false);
+    }
+  }
+};
+var TextInputSuggest = class {
+  constructor(app, inputEl) {
+    this.app = app;
+    this.inputEl = inputEl;
+    this.scope = new import_obsidian3.Scope();
+    this.suggestEl = createDiv("suggestion-container");
+    const suggestion = this.suggestEl.createDiv("suggestion");
+    this.suggest = new Suggest(this, suggestion, this.scope);
+    this.scope.register([], "Escape", this.close.bind(this));
+    this.inputEl.addEventListener("input", this.onInputChanged.bind(this));
+    this.inputEl.addEventListener("focus", this.onInputChanged.bind(this));
+    this.inputEl.addEventListener("blur", this.close.bind(this));
+    this.suggestEl.on("mousedown", ".suggestion-container", (event) => {
+      event.preventDefault();
+    });
+  }
+  onInputChanged() {
+    const inputStr = this.inputEl.value;
+    const suggestions = this.getSuggestions(inputStr);
+    if (suggestions.length > 0) {
+      this.suggest.setSuggestions(suggestions);
+      this.open(this.app.dom.appContainerEl, this.inputEl);
+    }
+  }
+  open(container, inputEl) {
+    this.app.keymap.pushScope(this.scope);
+    container.appendChild(this.suggestEl);
+    this.popper = createPopper(inputEl, this.suggestEl, {
+      placement: "bottom-start",
+      modifiers: [
+        {
+          name: "sameWidth",
+          enabled: true,
+          fn: ({ state, instance }) => {
+            const targetWidth = `${state.rects.reference.width}px`;
+            if (state.styles.popper.width === targetWidth) {
+              return;
+            }
+            state.styles.popper.width = targetWidth;
+            instance.update();
+          },
+          phase: "beforeWrite",
+          requires: ["computeStyles"]
+        }
+      ]
+    });
+  }
+  close() {
+    this.app.keymap.popScope(this.scope);
+    this.suggest.setSuggestions([]);
+    this.popper.destroy();
+    this.suggestEl.detach();
+  }
+};
+
+// src/ui/file-suggest.ts
+var SvgFileSuggest = class extends TextInputSuggest {
+  getSuggestions(inputStr) {
+    const abstractFiles = this.app.vault.getAllLoadedFiles();
+    const files = [];
+    const lowerCaseInputStr = inputStr.toLowerCase();
+    abstractFiles.forEach((file) => {
+      if (file instanceof import_obsidian4.TFile && file.extension === "svg" && file.path.toLowerCase().contains(lowerCaseInputStr)) {
+        files.push(file);
+      }
+    });
+    return files;
+  }
+  renderSuggestion(file, el) {
+    el.setText(file.path);
+  }
+  selectSuggestion(file) {
+    this.inputEl.value = file.path;
+    this.inputEl.trigger("input");
+    this.close();
+  }
+};
+
+// src/SettingView.ts
 var SettingView = class {
   constructor(app, settingsRootElement, settings, saveSettings) {
-    this.debouncedSaveAndUpdate = (0, import_obsidian3.debounce)(this.saveSiteSettingsAndUpdateEnv, 500, true);
+    this.debouncedSaveAndUpdate = (0, import_obsidian5.debounce)(this.saveSiteSettingsAndUpdateEnv, 500, true);
     this.app = app;
     this.settingsRootElement = settingsRootElement;
     this.settings = settings;
@@ -4850,71 +7050,78 @@ var SettingView = class {
   }
   initializeDefaultNoteSettings() {
     return __async(this, null, function* () {
-      const noteSettingsModal = new import_obsidian3.Modal(this.app);
+      const noteSettingsModal = new import_obsidian5.Modal(this.app);
       noteSettingsModal.titleEl.createEl("h1", { text: "Note Settings" });
-      new import_obsidian3.Setting(this.settingsRootElement).setName("Note Settings").setDesc(`Default settings for each published note. These can be overwritten per note via frontmatter.`).addButton((cb) => {
+      new import_obsidian5.Setting(this.settingsRootElement).setName("Note Settings").setDesc(`Default settings for each published note. These can be overwritten per note via frontmatter.`).addButton((cb) => {
         cb.setButtonText("Edit");
         cb.onClick(() => __async(this, null, function* () {
           noteSettingsModal.open();
         }));
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show home link (dg-home-link)").setDesc("Determines whether to show a link back to the homepage or not.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show home link (dg-home-link)").setDesc("Determines whether to show a link back to the homepage or not.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgHomeLink);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgHomeLink = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show local graph for notes (dg-show-local-graph)").setDesc("When turned on, notes will show its local graph on desktop. It will not be shown on mobile devices.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show local graph for notes (dg-show-local-graph)").setDesc("When turned on, notes will show its local graph in a sidebar on desktop and at the bottom of the page on mobile.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowLocalGraph);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgShowLocalGraph = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show backlinks for notes (dg-show-backlinks)").setDesc("When turned on, notes will show backlinks in a sidebar on desktop and at the bottom of the page on mobile.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show backlinks for notes (dg-show-backlinks)").setDesc("When turned on, notes will show backlinks in a sidebar on desktop and at the bottom of the page on mobile.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowBacklinks);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgShowBacklinks = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show a table of content for notes (dg-show-toc)").setDesc("When turned on, notes will show all headers as a table of content in a sidebar on desktop. It will not be shown on mobile devices.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show a table of content for notes (dg-show-toc)").setDesc("When turned on, notes will show all headers as a table of content in a sidebar on desktop. It will not be shown on mobile devices.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowToc);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgShowToc = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show inline title (dg-show-inline-title)").setDesc("When turned on, the title of the note will show on top of the page.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show inline title (dg-show-inline-title)").setDesc("When turned on, the title of the note will show on top of the page.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowInlineTitle);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgShowInlineTitle = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Show filetree sidebar (dg-show-file-tree)").setDesc("When turned on, a filetree will be shown on your site.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show filetree sidebar (dg-show-file-tree)").setDesc("When turned on, a filetree will be shown on your site.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgShowFileTree);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgShowFileTree = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Enable search (dg-enable-search)").setDesc("When turned on, users will be able to search through the content of your site.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Enable search (dg-enable-search)").setDesc("When turned on, users will be able to search through the content of your site.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgEnableSearch);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgEnableSearch = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Enable link preview (dg-link-preview)").setDesc("When turned on, hovering over links to notes in your garden shows a scrollable preview.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Enable link preview (dg-link-preview)").setDesc("When turned on, hovering over links to notes in your garden shows a scrollable preview.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgLinkPreview);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgLinkPreview = val;
           this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
         });
       });
-      new import_obsidian3.Setting(noteSettingsModal.contentEl).setName("Let all frontmatter through (dg-pass-frontmatter)").setDesc("Determines whether to let all frontmatter data through to the site template. Be aware that this could break your site if you have data in a format not recognized by the template engine, 11ty.").addToggle((t) => {
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Show Tags (dg-show-tags)").setDesc("When turned on, tags in your frontmatter will be displayed on each note. If search is enabled, clicking on a tag will bring up a search for all notes containing that tag.").addToggle((t) => {
+        t.setValue(this.settings.defaultNoteSettings.dgShowTags);
+        t.onChange((val) => {
+          this.settings.defaultNoteSettings.dgShowTags = val;
+          this.saveSiteSettingsAndUpdateEnv(this.app.metadataCache, this.settings, this.saveSettings);
+        });
+      });
+      new import_obsidian5.Setting(noteSettingsModal.contentEl).setName("Let all frontmatter through (dg-pass-frontmatter)").setDesc("Determines whether to let all frontmatter data through to the site template. Be aware that this could break your site if you have data in a format not recognized by the template engine, 11ty.").addToggle((t) => {
         t.setValue(this.settings.defaultNoteSettings.dgPassFrontmatter);
         t.onChange((val) => {
           this.settings.defaultNoteSettings.dgPassFrontmatter = val;
@@ -4925,16 +7132,16 @@ var SettingView = class {
   }
   initializeThemesSettings() {
     return __async(this, null, function* () {
-      const themeModal = new import_obsidian3.Modal(this.app);
+      const themeModal = new import_obsidian5.Modal(this.app);
       themeModal.titleEl.createEl("h1", { text: "Appearance Settings" });
-      new import_obsidian3.Setting(this.settingsRootElement).setName("Appearance").setDesc("Manage themes, sitename and favicons on your site").addButton((cb) => {
+      new import_obsidian5.Setting(this.settingsRootElement).setName("Appearance").setDesc("Manage themes, sitename and favicons on your site").addButton((cb) => {
         cb.setButtonText("Manage");
         cb.onClick(() => __async(this, null, function* () {
           themeModal.open();
         }));
       });
       const themesListResponse = yield import_axios.default.get("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json");
-      new import_obsidian3.Setting(themeModal.contentEl).setName("Theme").addDropdown((dd) => {
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Theme").addDropdown((dd) => {
         dd.addOption('{"name": "default", "modes": ["dark"]}', "Default");
         const sortedThemes = themesListResponse.data.sort((a, b) => a.name.localeCompare(b.name));
         sortedThemes.map((x) => {
@@ -4946,7 +7153,7 @@ var SettingView = class {
           }));
         });
       });
-      new import_obsidian3.Setting(themeModal.contentEl).setName("Base theme").addDropdown((dd) => {
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Base theme").addDropdown((dd) => {
         dd.addOption("dark", "Dark");
         dd.addOption("light", "Light");
         dd.setValue(this.settings.baseTheme);
@@ -4955,19 +7162,20 @@ var SettingView = class {
           yield this.saveSettings();
         }));
       });
-      new import_obsidian3.Setting(themeModal.contentEl).setName("Sitename").setDesc("The name of your site. This will be displayed as the site header.").addText((text) => text.setValue(this.settings.siteName).onChange((value) => __async(this, null, function* () {
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Sitename").setDesc("The name of your site. This will be displayed as the site header.").addText((text) => text.setValue(this.settings.siteName).onChange((value) => __async(this, null, function* () {
         this.settings.siteName = value;
         yield this.saveSettings();
       })));
-      new import_obsidian3.Setting(themeModal.contentEl).setName("Favicon").setDesc("Path to an svg in your vault you wish to use as a favicon. Leave blank to use default.").addText((tc) => {
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Favicon").setDesc("Path to an svg in your vault you wish to use as a favicon. Leave blank to use default.").addText((tc) => {
         tc.setPlaceholder("myfavicon.svg");
         tc.setValue(this.settings.faviconPath);
         tc.onChange((val) => __async(this, null, function* () {
           this.settings.faviconPath = val;
           yield this.saveSettings();
         }));
+        new SvgFileSuggest(this.app, tc.inputEl);
       });
-      new import_obsidian3.Setting(themeModal.contentEl).addButton((cb) => {
+      new import_obsidian5.Setting(themeModal.contentEl).addButton((cb) => {
         cb.setButtonText("Apply settings to site");
         cb.onClick((ev) => __async(this, null, function* () {
           const octokit = new Octokit({ auth: this.settings.githubToken });
@@ -4982,13 +7190,13 @@ var SettingView = class {
       const theme = JSON.parse(this.settings.theme);
       const baseTheme = this.settings.baseTheme;
       if (theme.modes.indexOf(baseTheme) < 0) {
-        new import_obsidian3.Notice(`The ${theme.name} theme doesn't support ${baseTheme} mode.`);
+        new import_obsidian5.Notice(`The ${theme.name} theme doesn't support ${baseTheme} mode.`);
         return;
       }
       const gardenManager = new DigitalGardenSiteManager(this.app.metadataCache, this.settings);
       yield gardenManager.updateEnv();
-      new import_obsidian3.Notice("Successfully applied theme");
-      new import_obsidian3.Notice("Successfully set sitename");
+      new import_obsidian5.Notice("Successfully applied theme");
+      new import_obsidian5.Notice("Successfully set sitename");
     });
   }
   saveSiteSettingsAndUpdateEnv(metadataCache, settings, saveSettings) {
@@ -4999,7 +7207,7 @@ var SettingView = class {
         const gardenManager = new DigitalGardenSiteManager(metadataCache, settings);
         yield gardenManager.updateEnv();
       } catch (e) {
-        new import_obsidian3.Notice("Failed to update settings. Make sure you have an internet connection.");
+        new import_obsidian5.Notice("Failed to update settings. Make sure you have an internet connection.");
         updateFailed = true;
       }
       if (!updateFailed) {
@@ -5012,8 +7220,8 @@ var SettingView = class {
       let base64SettingsFaviconContent = "";
       if (this.settings.faviconPath) {
         const faviconFile = this.app.vault.getAbstractFileByPath(this.settings.faviconPath);
-        if (!(faviconFile instanceof import_obsidian3.TFile)) {
-          new import_obsidian3.Notice(`${this.settings.faviconPath} is not a valid file.`);
+        if (!(faviconFile instanceof import_obsidian5.TFile)) {
+          new import_obsidian5.Notice(`${this.settings.faviconPath} is not a valid file.`);
           return;
         }
         const faviconContent = yield this.app.vault.readBinary(faviconFile);
@@ -5048,18 +7256,18 @@ var SettingView = class {
           content: base64SettingsFaviconContent,
           sha: faviconExists ? currentFaviconOnSite.data.sha : null
         });
-        new import_obsidian3.Notice(`Successfully set favicon`);
+        new import_obsidian5.Notice(`Successfully set favicon`);
       }
     });
   }
   initializeGitHubRepoSetting() {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("GitHub repo name").setDesc("The name of the GitHub repository").addText((text) => text.setPlaceholder("mydigitalgarden").setValue(this.settings.githubRepo).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("GitHub repo name").setDesc("The name of the GitHub repository").addText((text) => text.setPlaceholder("mydigitalgarden").setValue(this.settings.githubRepo).onChange((value) => __async(this, null, function* () {
       this.settings.githubRepo = value;
       yield this.saveSettings();
     })));
   }
   initializeGitHubUserNameSetting() {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("GitHub Username").setDesc("Your GitHub Username").addText((text) => text.setPlaceholder("myusername").setValue(this.settings.githubUserName).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("GitHub Username").setDesc("Your GitHub Username").addText((text) => text.setPlaceholder("myusername").setValue(this.settings.githubUserName).onChange((value) => __async(this, null, function* () {
       this.settings.githubUserName = value;
       yield this.saveSettings();
     })));
@@ -5073,13 +7281,13 @@ var SettingView = class {
         link.innerText = "here!";
       });
     });
-    new import_obsidian3.Setting(this.settingsRootElement).setName("GitHub token").setDesc(desc).addText((text) => text.setPlaceholder("Secret Token").setValue(this.settings.githubToken).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("GitHub token").setDesc(desc).addText((text) => text.setPlaceholder("Secret Token").setValue(this.settings.githubToken).onChange((value) => __async(this, null, function* () {
       this.settings.githubToken = value;
       yield this.saveSettings();
     })));
   }
   initializeGitHubBaseURLSetting() {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("Base URL").setDesc(`
+    new import_obsidian5.Setting(this.settingsRootElement).setName("Base URL").setDesc(`
             This is optional. It is used for the "Copy Garden URL" command, and for generating a sitemap.xml for better SEO. 
             `).addText((text) => text.setPlaceholder("https://my-garden.netlify.app").setValue(this.settings.gardenBaseUrl).onChange((value) => __async(this, null, function* () {
       this.settings.gardenBaseUrl = value;
@@ -5087,25 +7295,25 @@ var SettingView = class {
     })));
   }
   initializeRibbonIconSetting() {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("Show ribbon icon").setDesc("Show ribbon icon in the Obsidian sidebar. You need to reload Obsdian for changes to take effect.").addToggle((toggle) => toggle.setValue(this.settings.showRibbonIcon).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("Show ribbon icon").setDesc("Show ribbon icon in the Obsidian sidebar. You need to reload Obsdian for changes to take effect.").addToggle((toggle) => toggle.setValue(this.settings.showRibbonIcon).onChange((value) => __async(this, null, function* () {
       this.settings.showRibbonIcon = value;
       yield this.saveSettings();
     })));
   }
   initializeSlugifySetting() {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("Slugify Note URL").setDesc('Transform the URL from "/My Folder/My Note/" to "/my-folder/my-note". If your note titles contains non-English characters, this should be turned off.').addToggle((toggle) => toggle.setValue(this.settings.slugifyEnabled).onChange((value) => __async(this, null, function* () {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("Slugify Note URL").setDesc('Transform the URL from "/My Folder/My Note/" to "/my-folder/my-note". If your note titles contains non-English characters, this should be turned off.').addToggle((toggle) => toggle.setValue(this.settings.slugifyEnabled).onChange((value) => __async(this, null, function* () {
       this.settings.slugifyEnabled = value;
       yield this.saveSettings();
     })));
   }
   renderCreatePr(modal, handlePR) {
-    new import_obsidian3.Setting(this.settingsRootElement).setName("Site Template").setDesc("Manage updates to the base template. You should try updating the template when you update the plugin to make sure your garden support all features.").addButton((button) => {
+    new import_obsidian5.Setting(this.settingsRootElement).setName("Site Template").setDesc("Manage updates to the base template. You should try updating the template when you update the plugin to make sure your garden support all features.").addButton((button) => {
       button.setButtonText("Manage site template");
       button.onClick(() => {
         modal.open();
       });
     });
-    new import_obsidian3.Setting(modal.contentEl).setName("Update site to latest template").setDesc(`
+    new import_obsidian5.Setting(modal.contentEl).setName("Update site to latest template").setDesc(`
 				This will create a pull request with the latest template changes, which you'll need to use all plugin features. 
 				It will not publish any changes before you approve them.
 				You can even test the changes first as Netlify will automatically provide you with a test URL.
@@ -5144,7 +7352,7 @@ var SettingView = class {
   }
   renderLoading() {
     this.loading.show();
-    const text = "Creating PR. This should take less than 1 minute";
+    const text = "Creating PR. This should take about 30-60 seconds";
     const loadingText = this.loading.createEl("h4", { text });
     this.loadingInterval = setInterval(() => {
       if (loadingText.innerText === `${text}`) {
@@ -5201,10 +7409,10 @@ var PublishStatusBar = class {
 };
 
 // src/PublishModal.ts
-var import_obsidian4 = __toModule(require("obsidian"));
+var import_obsidian6 = __toModule(require("obsidian"));
 var PublishModal = class {
   constructor(app, publishStatusManager, publisher, settings) {
-    this.modal = new import_obsidian4.Modal(app);
+    this.modal = new import_obsidian6.Modal(app);
     this.settings = settings;
     this.publishStatusManager = publishStatusManager;
     this.publisher = publisher;
@@ -5214,7 +7422,7 @@ var PublishModal = class {
     const headerContainer = this.modal.contentEl.createEl("div", { attr: { style: "display: flex; justify-content: space-between; margin-bottom: 10px; align-items:center" } });
     const toggleHeader = headerContainer.createEl("h3", { text: `\u2795\uFE0F ${title}`, attr: { class: "collapsable collapsed" } });
     if (buttonText && buttonCallback) {
-      const button = new import_obsidian4.ButtonComponent(headerContainer).setButtonText(buttonText).onClick(() => __async(this, null, function* () {
+      const button = new import_obsidian6.ButtonComponent(headerContainer).setButtonText(buttonText).onClick(() => __async(this, null, function* () {
         button.setDisabled(true);
         yield buttonCallback();
         button.setDisabled(false);
@@ -5472,10 +7680,11 @@ var DEFAULT_SETTINGS = {
     dgShowFileTree: false,
     dgEnableSearch: false,
     dgShowToc: false,
-    dgLinkPreview: false
+    dgLinkPreview: false,
+    dgShowTags: false
   }
 };
-var DigitalGarden = class extends import_obsidian5.Plugin {
+var DigitalGarden = class extends import_obsidian7.Plugin {
   onload() {
     return __async(this, null, function* () {
       this.appVersion = this.manifest.version;
@@ -5483,7 +7692,7 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
       yield this.loadSettings();
       this.addSettingTab(new DigitalGardenSettingTab(this.app, this));
       yield this.addCommands();
-      (0, import_obsidian5.addIcon)("digital-garden-icon", seedling);
+      (0, import_obsidian7.addIcon)("digital-garden-icon", seedling);
       if (this.settings.showRibbonIcon) {
         this.addRibbonIcon("digital-garden-icon", "Digital Garden Publication Center", () => __async(this, null, function* () {
           this.openPublishModal();
@@ -5513,22 +7722,22 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
             const { vault, workspace, metadataCache } = this.app;
             const currentFile = workspace.getActiveFile();
             if (!currentFile) {
-              new import_obsidian5.Notice("No file is open/active. Please open a file and try again.");
+              new import_obsidian7.Notice("No file is open/active. Please open a file and try again.");
               return;
             }
             if (currentFile.extension !== "md") {
-              new import_obsidian5.Notice("The current file is not a markdown file. Please open a markdown file and try again.");
+              new import_obsidian7.Notice("The current file is not a markdown file. Please open a markdown file and try again.");
               return;
             }
-            new import_obsidian5.Notice("Publishing note...");
+            new import_obsidian7.Notice("Publishing note...");
             const publisher = new Publisher(vault, metadataCache, this.settings);
             const publishSuccessful = yield publisher.publish(currentFile);
             if (publishSuccessful) {
-              new import_obsidian5.Notice(`Successfully published note to your garden.`);
+              new import_obsidian7.Notice(`Successfully published note to your garden.`);
             }
           } catch (e) {
             console.error(e);
-            new import_obsidian5.Notice("Unable to publish note, something went wrong.");
+            new import_obsidian7.Notice("Unable to publish note, something went wrong.");
           }
         })
       });
@@ -5554,7 +7763,7 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
                 yield publisher.publish(file);
               } catch (e) {
                 errorFiles++;
-                new import_obsidian5.Notice(`Unable to publish note ${file.name}, skipping it.`);
+                new import_obsidian7.Notice(`Unable to publish note ${file.name}, skipping it.`);
               }
             }
             for (const filePath of filesToDelete) {
@@ -5563,18 +7772,18 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
                 yield publisher.delete(filePath);
               } catch (e) {
                 errorDeleteFiles++;
-                new import_obsidian5.Notice(`Unable to delete note ${filePath}, skipping it.`);
+                new import_obsidian7.Notice(`Unable to delete note ${filePath}, skipping it.`);
               }
             }
             statusBar.finish(8e3);
-            new import_obsidian5.Notice(`Successfully published ${filesToPublish.length - errorFiles} notes to your garden.`);
+            new import_obsidian7.Notice(`Successfully published ${filesToPublish.length - errorFiles} notes to your garden.`);
             if (filesToDelete.length > 0) {
-              new import_obsidian5.Notice(`Successfully deleted ${filesToDelete.length - errorDeleteFiles} notes from your garden.`);
+              new import_obsidian7.Notice(`Successfully deleted ${filesToDelete.length - errorDeleteFiles} notes from your garden.`);
             }
           } catch (e) {
             statusBarItem.remove();
             console.error(e);
-            new import_obsidian5.Notice("Unable to publish multiple notes, something went wrong.");
+            new import_obsidian7.Notice("Unable to publish multiple notes, something went wrong.");
           }
         })
       });
@@ -5586,16 +7795,16 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
             const { metadataCache, workspace } = this.app;
             const currentFile = workspace.getActiveFile();
             if (!currentFile) {
-              new import_obsidian5.Notice("No file is open/active. Please open a file and try again.");
+              new import_obsidian7.Notice("No file is open/active. Please open a file and try again.");
               return;
             }
             const siteManager = new DigitalGardenSiteManager(metadataCache, this.settings);
             const fullUrl = siteManager.getNoteUrl(currentFile);
             yield navigator.clipboard.writeText(fullUrl);
-            new import_obsidian5.Notice(`Note URL copied to clipboard`);
+            new import_obsidian7.Notice(`Note URL copied to clipboard`);
           } catch (e) {
             console.log(e);
-            new import_obsidian5.Notice("Unable to copy note URL to clipboard, something went wrong.");
+            new import_obsidian7.Notice("Unable to copy note URL to clipboard, something went wrong.");
           }
         })
       });
@@ -5626,7 +7835,7 @@ var DigitalGarden = class extends import_obsidian5.Plugin {
     this.publishModal.open();
   }
 };
-var DigitalGardenSettingTab = class extends import_obsidian5.PluginSettingTab {
+var DigitalGardenSettingTab = class extends import_obsidian7.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -5643,7 +7852,7 @@ var DigitalGardenSettingTab = class extends import_obsidian5.PluginSettingTab {
       const settingView = new SettingView(this.app, containerEl, this.plugin.settings, () => __async(this, null, function* () {
         return yield this.plugin.saveData(this.plugin.settings);
       }));
-      const prModal = new import_obsidian5.Modal(this.app);
+      const prModal = new import_obsidian7.Modal(this.app);
       yield settingView.initialize(prModal);
       const handlePR = (button) => __async(this, null, function* () {
         settingView.renderLoading();

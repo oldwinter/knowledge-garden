@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 2.1.4
+Version 2.1.6
 Created by @colineckert
 
 Readme:
@@ -338,9 +338,16 @@ img {
   background: var(--blue);
 }
 
-/* Highlight active line */
-body.active-line .cm-active {
-  background-color: var(--color-base-25);
+/* Focus active line */
+body.active-line
+  .cm-active:not(.HyperMD-quote, .HyperMD-header, .HyperMD-codeblock)::before {
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: -1.125em;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 10px 0 0 10px;
+  opacity: 0.85;
 }
 
 /* Highlight styling */
@@ -470,6 +477,14 @@ body:not(.no-codeblock-line-numbers)
   margin-top: var(--size-4-2);
   border: var(--codeblock-border);
   border-radius: var(--codeblock-roundness);
+}
+
+.markdown-reading-view .markdown-preview-view pre code {
+  display: block;
+}
+
+body:not(.no-codeblock-line-numbers) .markdown-preview-view pre code {
+  padding: var(--size-4-1) var(--size-4-5);
 }
 
 /* ------------------- */

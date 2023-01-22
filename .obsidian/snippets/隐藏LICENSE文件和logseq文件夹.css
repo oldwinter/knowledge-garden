@@ -13,9 +13,11 @@ div[data-path='logseq'] + div.nav-folder-children
 }
 
 .nav-file-title[data-path='publish.js'] {
-    display: none;
+    display: none;custom-theme
 }
 
 .nav-file-title[data-path='publish.css'] {
     display: none;
 }
+
+

@@ -90,6 +90,10 @@ If your plugin does not need CSS, delete this file.
     font-weight: 800;
 }
 
+.chronology-calendar-todaylink {
+    color: var(--text-muted);
+}
+
 
 .chronology-other-month {
     color: var(--text-muted);

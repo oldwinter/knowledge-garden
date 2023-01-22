@@ -22089,7 +22089,8 @@ var require_lib2 = __commonJS({
       defaultDateTimeFormat: "h:mm a - MMMM dd, yyyy",
       maxRecursiveRenderDepth: 4,
       tableIdColumnName: "File",
-      tableGroupColumnName: "Group"
+      tableGroupColumnName: "Group",
+      showResultCount: true
     };
     var DEFAULT_EXPORT_SETTINGS = {
       allowHtml: true
@@ -22101,7 +22102,8 @@ var require_lib2 = __commonJS({
       enableInlineDataview: true,
       enableDataviewJs: false,
       enableInlineDataviewJs: false,
-      prettyRenderInlineFields: true
+      prettyRenderInlineFields: true,
+      dataviewJsKeyword: "dataviewjs"
     });
     var Success = class {
       constructor(value) {
@@ -23520,7 +23522,7 @@ var require_lib2 = __commonJS({
           return "\\" + escaped;
       }),
       bool: (_) => parsimmon_umd_min.exports.regexp(/true|false|True|False/).map((str) => str.toLowerCase() == "true").desc("boolean ('true' or 'false')"),
-      tag: (_) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("#"), parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regexp(/[\p{Letter}0-9_/-]/u).desc("text"), parsimmon_umd_min.exports.regexp(EMOJI_REGEX).desc("text")).many(), (start, rest) => start + rest.join("")).desc("tag ('#hello/stuff')"),
+      tag: (_) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("#"), parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regexp(/[^\u2000-\u206F\u2E00-\u2E7F'!"#$%&()*+,.:;<=>?@^`{|}~\[\]\\\s]/).desc("text")).many(), (start, rest) => start + rest.join("")).desc("tag ('#hello/stuff')"),
       identifier: (_) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regexp(/\p{Letter}/u), parsimmon_umd_min.exports.regexp(EMOJI_REGEX).desc("text")), parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regexp(/[0-9\p{Letter}_-]/u), parsimmon_umd_min.exports.regexp(EMOJI_REGEX).desc("text")).many(), (first, rest) => first + rest.join("")).desc("variable identifier"),
       link: (_) => parsimmon_umd_min.exports.regexp(/\[\[([^\[\]]*?)\]\]/u, 1).map((linkInner) => parseInnerLink(linkInner)).desc("file link"),
       embedLink: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("!").atMost(1), q.link, (p, l2) => {
@@ -45819,11 +45821,11 @@ var require_decode_uri_component = __commonJS({
   "node_modules/decode-uri-component/index.js"(exports2, module2) {
     "use strict";
     var token = "%[a-f0-9]{2}";
-    var singleMatcher = new RegExp(token, "gi");
+    var singleMatcher = new RegExp("(" + token + ")|([^%]+?)", "gi");
     var multiMatcher = new RegExp("(" + token + ")+", "gi");
     function decodeComponents(components, split) {
       try {
-        return decodeURIComponent(components.join(""));
+        return [decodeURIComponent(components.join(""))];
       } catch (err) {
       }
       if (components.length === 1) {
@@ -45838,10 +45840,10 @@ var require_decode_uri_component = __commonJS({
       try {
         return decodeURIComponent(input);
       } catch (err) {
-        var tokens = input.match(singleMatcher);
+        var tokens = input.match(singleMatcher) || [];
         for (var i = 1; i < tokens.length; i++) {
           input = decodeComponents(tokens, i).join("");
-          tokens = input.match(singleMatcher);
+          tokens = input.match(singleMatcher) || [];
         }
         return input;
       }
@@ -46592,11 +46594,11 @@ var RequestHandler = class {
       } else {
         const exists = yield this.app.vault.adapter.exists(path);
         if (exists && (yield this.app.vault.adapter.stat(path)).type === "file") {
-          const content = yield this.app.vault.adapter.read(path);
+          const content = yield this.app.vault.adapter.readBinary(path);
           const mimeType = import_mime_types.default.lookup(path);
           res.set({
             "Content-Disposition": `attachment; filename="${encodeURI(path).replace(",", "%2C")}"`,
-            "Content-Type": `${mimeType}` + (mimeType == ContentTypes.markdown ? "; charset=UTF-8" : "")
+            "Content-Type": `${mimeType}` + (mimeType == ContentTypes.markdown ? "; charset=utf-8" : "")
           });
           if (req.headers.accept === ContentTypes.olrapiNoteJson) {
             const file = this.app.vault.getAbstractFileByPath(path);
@@ -46604,7 +46606,7 @@ var RequestHandler = class {
             res.send(JSON.stringify(yield this.getFileMetadataObject(file), null, 2));
             return;
           }
-          res.send(content);
+          res.send(Buffer.from(content));
         } else {
           this.returnCannedResponse(res, {
             statusCode: 404

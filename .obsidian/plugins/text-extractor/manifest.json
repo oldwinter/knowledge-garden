@@ -1,0 +1,14 @@
+{
+	"id": "text-extractor",
+	"name": "Text Extractor",
+	"version": "0.3.2",
+	"minAppVersion": "0.15.0",
+	"description": "A (companion) plugin to facilitate the extraction of text from images (OCR) and PDFs.",
+	"author": "Simon Cambier",
+	"authorUrl": "https://github.com/scambier/obsidian-text-extractor",
+	"fundingUrl": {
+		"Github": "https://github.com/sponsors/scambier",
+		"Ko-fi": "https://ko-fi.com/scambier"
+	},
+	"isDesktopOnly": false
+}

@@ -15,6 +15,7 @@
   "newFileFolderPath": "Cards",
   "newLinkFormat": "shortest",
   "pdfExportSettings": {
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",

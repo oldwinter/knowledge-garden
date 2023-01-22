@@ -5,7 +5,7 @@
   "openFileWithoutWriteInNewPane": true,
   "idField": "uid",
   "useUID": true,
-  "addFilepathWhenUsingUID": false,
+  "addFilepathWhenUsingUID": true,
   "regex": {},
   "lineRegex": {},
   "linkRegex": {},

@@ -1,4 +1,5 @@
 {
+  "accentColor": "",
   "cssTheme": "Things",
   "enabledCssSnippets": [
     "多栏callout样式",
@@ -10,11 +11,10 @@
     "supercharged-links-gen",
     "隐藏LICENSE文件和logseq文件夹"
   ],
-  "theme": "system",
+  "theme": "moonstone",
   "baseFontSize": 16,
   "baseFontSizeAction": false,
   "translucency": false,
-  "accentColor": "",
   "showViewHeader": true,
   "nativeMenus": false
 }

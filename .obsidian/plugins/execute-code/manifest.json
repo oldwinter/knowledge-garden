@@ -1,0 +1,10 @@
+{
+	"id": "execute-code",
+	"name": "Execute Code",
+	"version": "1.6.2",
+	"minAppVersion": "0.12.0",
+	"description": "Allows to execute code snippets within a note. Supported programming languages:  C, CPP, Dart, Golang, Groovy, Kotlin, Java, JavaScript, TypeScript, Lean, Lua, CSharp, Prolog, Rust, Python, R, Ruby, Wolfram Mathematica, Haskell, Scala, Racket, F#, Batch, Shell & Powershell.",
+	"author": "twibiral",
+	"authorUrl": "https://www.github.com/twibiral",
+	"isDesktopOnly": true
+}

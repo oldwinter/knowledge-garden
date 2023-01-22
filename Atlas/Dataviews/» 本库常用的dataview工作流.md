@@ -11,7 +11,7 @@ title: œ 本库常用的dataview工作流
 - 能否复用已有代码？
 
 查询手册：  
-[[dataview|dataviewjs]]
+[[Dataview|dataviewjs]]
 
 调试步骤：  
 

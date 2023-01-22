@@ -1,0 +1,10 @@
+{
+  "animationDuration": 2,
+  "showHeader": false,
+  "showScroll": false,
+  "showGraphControls": true,
+  "forceReadable": true,
+  "vignetteOpacity": 0.75,
+  "vignetteScaleLinear": 20,
+  "vignetteScaleRadial": 75
+}

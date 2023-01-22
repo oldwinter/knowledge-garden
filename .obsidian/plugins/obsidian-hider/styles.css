@@ -1,0 +1,73 @@
+/* Hides vault name */
+.hider-vault .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display:none;
+}
+
+/* Hide tabs */
+.hider-tabs .mod-root .workspace-tabs .workspace-tab-header-container {
+  display: none;
+}
+
+/* Hide sidebar buttons */
+.hider-sidebar-buttons .sidebar-toggle-button.mod-right,
+.hider-sidebar-buttons .sidebar-toggle-button.mod-left {
+  display: none;
+}
+.hider-sidebar-buttons.mod-macos.is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: 4px;
+}
+
+/* Hide ribbon */
+.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
+}
+
+.hider-ribbon .workspace-ribbon.mod-left {
+  display:none;
+}
+.hider-ribbon .workspace-ribbon.mod-right {
+  visibility:hidden;
+  position:absolute;
+}
+.hider-ribbon .workspace-split.mod-right-split {
+  margin-right:0;
+}
+.hider-ribbon .workspace-split.mod-left-split {
+  margin-left:0;
+}
+
+/* Hide meta */
+.hider-meta .frontmatter-container {
+  display:none;
+}
+
+/* Hide scrollbars */
+.hider-scroll ::-webkit-scrollbar {
+  display:none;
+}
+
+/* Hide status */
+.hider-status .status-bar {
+  display:none;
+}
+
+/* Hide tooltips */
+.hider-tooltips .tooltip {
+  display:none;
+}
+
+/* Hide search suggestions */
+.hider-search-suggestions .suggestion-container.mod-search-suggestion {
+  display: none;
+}
+
+/* Hide search count flair */
+.hider-search-counts .tree-item-flair:not(.tag-pane-tag-count) { 
+  display:none;
+}
+
+/* Hide instructions */
+.hider-instructions .prompt-instructions {
+  display:none;
+}
+

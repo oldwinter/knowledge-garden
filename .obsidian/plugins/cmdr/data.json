@@ -2,20 +2,7 @@
   "confirmDeletion": false,
   "showAddCommand": false,
   "debug": false,
-  "editorMenu": [
-    {
-      "id": "obsidian-spaced-repetition:srs-note-review-easy",
-      "icon": "chevrons-right",
-      "name": "Spaced Repetition: 标记为“简单”",
-      "mode": "any"
-    },
-    {
-      "id": "obsidian-spaced-repetition:srs-note-review-hard",
-      "icon": "shield-close",
-      "name": "Spaced Repetition: 标记为“较难”",
-      "mode": "any"
-    }
-  ],
+  "editorMenu": [],
   "fileMenu": [],
   "leftRibbon": [],
   "rightRibbon": [],
@@ -54,17 +41,41 @@
       "mode": "any"
     }
   ],
-  "macros": [],
+  "macros": [
+    {
+      "macro": [
+        {
+          "action": 0,
+          "commandId": "workspace:split-vertical"
+        },
+        {
+          "action": 1,
+          "delay": 250
+        },
+        {
+          "action": 1,
+          "delay": "250"
+        },
+        {
+          "action": 0,
+          "commandId": "workspace:undo-close-pane"
+        }
+      ],
+      "name": "Macro Name",
+      "icon": "battery-charging",
+      "startup": false
+    }
+  ],
   "explorer": [],
   "hide": {
     "statusbar": [
       "word-count",
-      "backlink",
       "janitor",
       "keyboard-analyzer",
       "various-complements",
       "obsidian-textgenerator-plugin",
-      "obsidian-focus-plugin"
+      "obsidian-focus-plugin",
+      "backlink"
     ],
     "leftRibbon": []
   },

@@ -1,0 +1,12 @@
+{
+  "api_key": "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",
+  "file_exclusions": "",
+  "folder_exclusions": "",
+  "header_exclusions": "",
+  "path_only": "Calendar",
+  "show_full_path": false,
+  "log_render": true,
+  "log_render_files": true,
+  "skip_sections": true,
+  "failed_files": []
+}

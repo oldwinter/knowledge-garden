@@ -1,8 +1,8 @@
 ---
 date created: 2022-06-09
-date modified: 2022-09-22
+date modified: 2023-01-11
 id: 7384af7a-8b51-4e01-b3ef-8fbe2c161c0a
-title: livesync
+title: LiveSync
 ---
 
 ## Obsidian 最优雅的多端同步插件 LiveSync
