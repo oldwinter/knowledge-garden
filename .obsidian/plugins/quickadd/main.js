@@ -24002,6 +24002,11 @@ var faChevronDown = {
   iconName: "chevron-down",
   icon: [512, 512, [], "f078", "M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"]
 };
+var faClone = {
+  prefix: "fas",
+  iconName: "clone",
+  icon: [512, 512, [], "f24d", "M0 448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H224c-53 0-96-43-96-96V160H64c-35.3 0-64 28.7-64 64V448zm224-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"]
+};
 
 // node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.53.1/node_modules/svelte-awesome/components/svg/Path.svelte
 function create_fragment(ctx) {
@@ -25149,7 +25154,7 @@ var Icon_default = Icon;
 function add_css2(target) {
   append_styles(target, "svelte-a47k80", ".rightButtonsContainer.svelte-a47k80{display:flex;align-items:center;gap:8px}.clickable.svelte-a47k80:hover{cursor:pointer}.alignIconInDivInMiddle.svelte-a47k80{display:flex;align-items:center}");
 }
-function create_if_block2(ctx) {
+function create_if_block_12(ctx) {
   let div;
   let icon;
   let div_aria_label_value;
@@ -25162,19 +25167,69 @@ function create_if_block2(ctx) {
       div = element("div");
       create_component(icon.$$.fragment);
       attr(div, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
-      attr(div, "aria-label", div_aria_label_value = `Configure${ctx[3] ? " " + ctx[3] : ""}`);
+      attr(div, "aria-label", div_aria_label_value = `Configure${ctx[4] ? " " + ctx[4] : ""}`);
     },
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(icon, div, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div, "click", ctx[5]);
+        dispose = listen(div, "click", ctx[6]);
         mounted = true;
       }
     },
     p(ctx2, dirty) {
-      if (!current || dirty & 8 && div_aria_label_value !== (div_aria_label_value = `Configure${ctx2[3] ? " " + ctx2[3] : ""}`)) {
+      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Configure${ctx2[4] ? " " + ctx2[4] : ""}`)) {
+        attr(div, "aria-label", div_aria_label_value);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div);
+      destroy_component(icon);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_if_block2(ctx) {
+  let div;
+  let icon;
+  let div_aria_label_value;
+  let current;
+  let mounted;
+  let dispose;
+  icon = new Icon_default({ props: { data: faClone } });
+  return {
+    c() {
+      var _a;
+      div = element("div");
+      create_component(icon.$$.fragment);
+      attr(div, "aria-label", div_aria_label_value = `Duplicate ${(_a = ctx[4]) != null ? _a : ""}`);
+      attr(div, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
+    },
+    m(target, anchor) {
+      insert(target, div, anchor);
+      mount_component(icon, div, null);
+      current = true;
+      if (!mounted) {
+        dispose = listen(div, "click", ctx[8]);
+        mounted = true;
+      }
+    },
+    p(ctx2, dirty) {
+      var _a;
+      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Duplicate ${(_a = ctx2[4]) != null ? _a : ""}`)) {
         attr(div, "aria-label", div_aria_label_value);
       }
     },
@@ -25205,10 +25260,11 @@ function create_fragment6(ctx) {
   let div0_style_value;
   let t0;
   let t1;
+  let t2;
   let div1;
   let icon1;
   let div1_aria_label_value;
-  let t2;
+  let t3;
   let div2;
   let icon2;
   let div2_tabindex_value;
@@ -25217,7 +25273,8 @@ function create_fragment6(ctx) {
   let mounted;
   let dispose;
   icon0 = new Icon_default({ props: { data: faBolt } });
-  let if_block = ctx[1] && create_if_block2(ctx);
+  let if_block0 = ctx[1] && create_if_block_12(ctx);
+  let if_block1 = ctx[2] && create_if_block2(ctx);
   icon1 = new Icon_default({ props: { data: faTrash } });
   icon2 = new Icon_default({ props: { data: faBars } });
   return {
@@ -25226,18 +25283,21 @@ function create_fragment6(ctx) {
       div0 = element("div");
       create_component(icon0.$$.fragment);
       t0 = space();
-      if (if_block)
-        if_block.c();
+      if (if_block0)
+        if_block0.c();
       t1 = space();
+      if (if_block1)
+        if_block1.c();
+      t2 = space();
       div1 = element("div");
       create_component(icon1.$$.fragment);
-      t2 = space();
+      t3 = space();
       div2 = element("div");
       create_component(icon2.$$.fragment);
       attr(div0, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
-      attr(div0, "aria-label", div0_aria_label_value = `${ctx[2] ? "Remove" : "Add"} command${ctx[3] ? " for " + ctx[3] : ""}`);
-      attr(div0, "style", div0_style_value = ctx[2] ? "color: #FDD023;" : "");
-      attr(div1, "aria-label", div1_aria_label_value = `Delete${ctx[3] ? " " + ctx[3] : ""}`);
+      attr(div0, "aria-label", div0_aria_label_value = `${ctx[3] ? "Remove" : "Add"} command${ctx[4] ? " for " + ctx[4] : ""}`);
+      attr(div0, "style", div0_style_value = ctx[3] ? "color: #FDD023;" : "");
+      attr(div1, "aria-label", div1_aria_label_value = `Delete${ctx[4] ? " " + ctx[4] : ""}`);
       attr(div1, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
       attr(div2, "tabindex", div2_tabindex_value = ctx[0] ? 0 : -1);
       attr(div2, "aria-label", "Drag-handle");
@@ -25250,52 +25310,74 @@ function create_fragment6(ctx) {
       append(div3, div0);
       mount_component(icon0, div0, null);
       append(div3, t0);
-      if (if_block)
-        if_block.m(div3, null);
+      if (if_block0)
+        if_block0.m(div3, null);
       append(div3, t1);
+      if (if_block1)
+        if_block1.m(div3, null);
+      append(div3, t2);
       append(div3, div1);
       mount_component(icon1, div1, null);
-      append(div3, t2);
+      append(div3, t3);
       append(div3, div2);
       mount_component(icon2, div2, null);
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div0, "click", ctx[6]),
-          listen(div1, "click", ctx[4]),
-          listen(div2, "mousedown", ctx[7]),
-          listen(div2, "touchstart", ctx[8])
+          listen(div0, "click", ctx[7]),
+          listen(div1, "click", ctx[5]),
+          listen(div2, "mousedown", ctx[9]),
+          listen(div2, "touchstart", ctx[10])
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
-      if (!current || dirty & 12 && div0_aria_label_value !== (div0_aria_label_value = `${ctx2[2] ? "Remove" : "Add"} command${ctx2[3] ? " for " + ctx2[3] : ""}`)) {
+      if (!current || dirty & 24 && div0_aria_label_value !== (div0_aria_label_value = `${ctx2[3] ? "Remove" : "Add"} command${ctx2[4] ? " for " + ctx2[4] : ""}`)) {
         attr(div0, "aria-label", div0_aria_label_value);
       }
-      if (!current || dirty & 4 && div0_style_value !== (div0_style_value = ctx2[2] ? "color: #FDD023;" : "")) {
+      if (!current || dirty & 8 && div0_style_value !== (div0_style_value = ctx2[3] ? "color: #FDD023;" : "")) {
         attr(div0, "style", div0_style_value);
       }
       if (ctx2[1]) {
-        if (if_block) {
-          if_block.p(ctx2, dirty);
+        if (if_block0) {
+          if_block0.p(ctx2, dirty);
           if (dirty & 2) {
-            transition_in(if_block, 1);
+            transition_in(if_block0, 1);
           }
         } else {
-          if_block = create_if_block2(ctx2);
-          if_block.c();
-          transition_in(if_block, 1);
-          if_block.m(div3, t1);
+          if_block0 = create_if_block_12(ctx2);
+          if_block0.c();
+          transition_in(if_block0, 1);
+          if_block0.m(div3, t1);
         }
-      } else if (if_block) {
+      } else if (if_block0) {
         group_outros();
-        transition_out(if_block, 1, 1, () => {
-          if_block = null;
+        transition_out(if_block0, 1, 1, () => {
+          if_block0 = null;
         });
         check_outros();
       }
-      if (!current || dirty & 8 && div1_aria_label_value !== (div1_aria_label_value = `Delete${ctx2[3] ? " " + ctx2[3] : ""}`)) {
+      if (ctx2[2]) {
+        if (if_block1) {
+          if_block1.p(ctx2, dirty);
+          if (dirty & 4) {
+            transition_in(if_block1, 1);
+          }
+        } else {
+          if_block1 = create_if_block2(ctx2);
+          if_block1.c();
+          transition_in(if_block1, 1);
+          if_block1.m(div3, t2);
+        }
+      } else if (if_block1) {
+        group_outros();
+        transition_out(if_block1, 1, 1, () => {
+          if_block1 = null;
+        });
+        check_outros();
+      }
+      if (!current || dirty & 16 && div1_aria_label_value !== (div1_aria_label_value = `Delete${ctx2[4] ? " " + ctx2[4] : ""}`)) {
         attr(div1, "aria-label", div1_aria_label_value);
       }
       if (!current || dirty & 1 && div2_tabindex_value !== (div2_tabindex_value = ctx2[0] ? 0 : -1)) {
@@ -25309,14 +25391,16 @@ function create_fragment6(ctx) {
       if (current)
         return;
       transition_in(icon0.$$.fragment, local);
-      transition_in(if_block);
+      transition_in(if_block0);
+      transition_in(if_block1);
       transition_in(icon1.$$.fragment, local);
       transition_in(icon2.$$.fragment, local);
       current = true;
     },
     o(local) {
       transition_out(icon0.$$.fragment, local);
-      transition_out(if_block);
+      transition_out(if_block0);
+      transition_out(if_block1);
       transition_out(icon1.$$.fragment, local);
       transition_out(icon2.$$.fragment, local);
       current = false;
@@ -25325,8 +25409,10 @@ function create_fragment6(ctx) {
       if (detaching)
         detach(div3);
       destroy_component(icon0);
-      if (if_block)
-        if_block.d();
+      if (if_block0)
+        if_block0.d();
+      if (if_block1)
+        if_block1.d();
       destroy_component(icon1);
       destroy_component(icon2);
       mounted = false;
@@ -25337,6 +25423,7 @@ function create_fragment6(ctx) {
 function instance6($$self, $$props, $$invalidate) {
   let { dragDisabled } = $$props;
   let { showConfigureButton = true } = $$props;
+  let { showDuplicateButton = true } = $$props;
   let { commandEnabled = false } = $$props;
   let { choiceName = "" } = $$props;
   const dispatcher = createEventDispatcher();
@@ -25349,6 +25436,9 @@ function instance6($$self, $$props, $$invalidate) {
   function emitToggleCommand() {
     dispatcher("toggleCommand");
   }
+  function emitDuplicateChoice() {
+    dispatcher("duplicateChoice");
+  }
   function mousedown_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -25360,19 +25450,23 @@ function instance6($$self, $$props, $$invalidate) {
       $$invalidate(0, dragDisabled = $$props2.dragDisabled);
     if ("showConfigureButton" in $$props2)
       $$invalidate(1, showConfigureButton = $$props2.showConfigureButton);
+    if ("showDuplicateButton" in $$props2)
+      $$invalidate(2, showDuplicateButton = $$props2.showDuplicateButton);
     if ("commandEnabled" in $$props2)
-      $$invalidate(2, commandEnabled = $$props2.commandEnabled);
+      $$invalidate(3, commandEnabled = $$props2.commandEnabled);
     if ("choiceName" in $$props2)
-      $$invalidate(3, choiceName = $$props2.choiceName);
+      $$invalidate(4, choiceName = $$props2.choiceName);
   };
   return [
     dragDisabled,
     showConfigureButton,
+    showDuplicateButton,
     commandEnabled,
     choiceName,
     emitDeleteChoice,
     emitConfigureChoice,
     emitToggleCommand,
+    emitDuplicateChoice,
     mousedown_handler,
     touchstart_handler
   ];
@@ -25389,8 +25483,9 @@ var ChoiceItemRightButtons = class extends SvelteComponent {
       {
         dragDisabled: 0,
         showConfigureButton: 1,
-        commandEnabled: 2,
-        choiceName: 3
+        showDuplicateButton: 2,
+        commandEnabled: 3,
+        choiceName: 4
       },
       add_css2
     );
@@ -25415,18 +25510,18 @@ function create_fragment7(ctx) {
   let updating_dragDisabled;
   let current;
   function rightbuttons_choiceName_binding(value) {
-    ctx[6](value);
-  }
-  function rightbuttons_commandEnabled_binding(value) {
     ctx[7](value);
   }
-  function rightbuttons_showConfigureButton_binding(value) {
+  function rightbuttons_commandEnabled_binding(value) {
     ctx[8](value);
   }
-  function rightbuttons_dragDisabled_binding(value) {
+  function rightbuttons_showConfigureButton_binding(value) {
     ctx[9](value);
   }
-  let rightbuttons_props = {};
+  function rightbuttons_dragDisabled_binding(value) {
+    ctx[10](value);
+  }
+  let rightbuttons_props = { showDuplicateButton: true };
   if (ctx[0].name !== void 0) {
     rightbuttons_props.choiceName = ctx[0].name;
   }
@@ -25444,11 +25539,12 @@ function create_fragment7(ctx) {
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "showConfigureButton", rightbuttons_showConfigureButton_binding));
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
-  rightbuttons.$on("mousedown", ctx[10]);
-  rightbuttons.$on("touchstart", ctx[11]);
+  rightbuttons.$on("mousedown", ctx[11]);
+  rightbuttons.$on("touchstart", ctx[12]);
   rightbuttons.$on("deleteChoice", ctx[3]);
   rightbuttons.$on("configureChoice", ctx[4]);
   rightbuttons.$on("toggleCommand", ctx[5]);
+  rightbuttons.$on("duplicateChoice", ctx[6]);
   return {
     c() {
       div = element("div");
@@ -25524,6 +25620,9 @@ function instance7($$self, $$props, $$invalidate) {
   function toggleCommandForChoice() {
     dispatcher("toggleCommand", { choice });
   }
+  function duplicateChoice() {
+    dispatcher("duplicateChoice", { choice });
+  }
   function rightbuttons_choiceName_binding(value) {
     if ($$self.$$.not_equal(choice.name, value)) {
       choice.name = value;
@@ -25563,6 +25662,7 @@ function instance7($$self, $$props, $$invalidate) {
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
+    duplicateChoice,
     rightbuttons_choiceName_binding,
     rightbuttons_commandEnabled_binding,
     rightbuttons_showConfigureButton_binding,
@@ -25586,7 +25686,7 @@ function add_css4(target) {
 function create_if_block3(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = !ctx[0].collapsed && create_if_block_12(ctx);
+  let if_block = !ctx[0].collapsed && create_if_block_13(ctx);
   return {
     c() {
       if (if_block)
@@ -25607,7 +25707,7 @@ function create_if_block3(ctx) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block_12(ctx2);
+          if_block = create_if_block_13(ctx2);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -25638,17 +25738,17 @@ function create_if_block3(ctx) {
     }
   };
 }
-function create_if_block_12(ctx) {
+function create_if_block_13(ctx) {
   let div;
   let choicelist;
   let updating_multiChoice;
   let updating_choices;
   let current;
   function choicelist_multiChoice_binding(value) {
-    ctx[14](value);
+    ctx[15](value);
   }
   function choicelist_choices_binding(value) {
-    ctx[15](value);
+    ctx[16](value);
   }
   let choicelist_props = {};
   if (ctx[0] !== void 0) {
@@ -25660,9 +25760,10 @@ function create_if_block_12(ctx) {
   choicelist = new ChoiceList_default({ props: choicelist_props });
   binding_callbacks.push(() => bind(choicelist, "multiChoice", choicelist_multiChoice_binding));
   binding_callbacks.push(() => bind(choicelist, "choices", choicelist_choices_binding));
-  choicelist.$on("deleteChoice", ctx[16]);
-  choicelist.$on("configureChoice", ctx[17]);
-  choicelist.$on("toggleCommand", ctx[18]);
+  choicelist.$on("deleteChoice", ctx[17]);
+  choicelist.$on("configureChoice", ctx[18]);
+  choicelist.$on("toggleCommand", ctx[19]);
+  choicelist.$on("duplicateChoice", ctx[20]);
   return {
     c() {
       div = element("div");
@@ -25731,18 +25832,18 @@ function create_fragment8(ctx) {
     }
   });
   function rightbuttons_showConfigureButton_binding(value) {
-    ctx[8](value);
-  }
-  function rightbuttons_dragDisabled_binding(value) {
     ctx[9](value);
   }
-  function rightbuttons_choiceName_binding(value) {
+  function rightbuttons_dragDisabled_binding(value) {
     ctx[10](value);
   }
-  function rightbuttons_commandEnabled_binding(value) {
+  function rightbuttons_choiceName_binding(value) {
     ctx[11](value);
   }
-  let rightbuttons_props = {};
+  function rightbuttons_commandEnabled_binding(value) {
+    ctx[12](value);
+  }
+  let rightbuttons_props = { showDuplicateButton: true };
   if (ctx[3] !== void 0) {
     rightbuttons_props.showConfigureButton = ctx[3];
   }
@@ -25760,11 +25861,12 @@ function create_fragment8(ctx) {
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "choiceName", rightbuttons_choiceName_binding));
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
-  rightbuttons.$on("mousedown", ctx[12]);
-  rightbuttons.$on("touchstart", ctx[13]);
+  rightbuttons.$on("mousedown", ctx[13]);
+  rightbuttons.$on("touchstart", ctx[14]);
   rightbuttons.$on("deleteChoice", ctx[4]);
   rightbuttons.$on("configureChoice", ctx[5]);
   rightbuttons.$on("toggleCommand", ctx[6]);
+  rightbuttons.$on("duplicateChoice", ctx[7]);
   let if_block = (!ctx[2] || ctx[2] && ctx[0].id !== ctx[2]) && create_if_block3(ctx);
   return {
     c() {
@@ -25798,7 +25900,7 @@ function create_fragment8(ctx) {
         if_block.m(div2, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div0, "click", ctx[7]);
+        dispose = listen(div0, "click", ctx[8]);
         mounted = true;
       }
     },
@@ -25892,6 +25994,9 @@ function instance8($$self, $$props, $$invalidate) {
   function toggleCommandForChoice() {
     dispatcher("toggleCommand", { choice });
   }
+  function duplicateChoice() {
+    dispatcher("duplicateChoice", { choice });
+  }
   const click_handler = () => $$invalidate(0, choice.collapsed = !choice.collapsed, choice);
   function rightbuttons_showConfigureButton_binding(value) {
     showConfigureButton = value;
@@ -25938,6 +26043,9 @@ function instance8($$self, $$props, $$invalidate) {
   function toggleCommand_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function duplicateChoice_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("choice" in $$props2)
       $$invalidate(0, choice = $$props2.choice);
@@ -25954,6 +26062,7 @@ function instance8($$self, $$props, $$invalidate) {
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
+    duplicateChoice,
     click_handler,
     rightbuttons_showConfigureButton_binding,
     rightbuttons_dragDisabled_binding,
@@ -25965,7 +26074,8 @@ function instance8($$self, $$props, $$invalidate) {
     choicelist_choices_binding,
     deleteChoice_handler,
     configureChoice_handler,
-    toggleCommand_handler
+    toggleCommand_handler,
+    duplicateChoice_handler
   ];
 }
 var MultiChoiceListItem = class extends SvelteComponent {
@@ -27491,9 +27601,9 @@ function add_css5(target) {
 }
 function get_each_context2(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[21] = list[i];
-  child_ctx[22] = list;
-  child_ctx[23] = i;
+  child_ctx[23] = list[i];
+  child_ctx[24] = list;
+  child_ctx[25] = i;
   return child_ctx;
 }
 function create_else_block(ctx) {
@@ -27503,13 +27613,13 @@ function create_else_block(ctx) {
   let updating_choice;
   let current;
   function multichoicelistitem_dragDisabled_binding(value) {
-    ctx[13](value);
-  }
-  function multichoicelistitem_collapseId_binding(value) {
     ctx[14](value);
   }
+  function multichoicelistitem_collapseId_binding(value) {
+    ctx[15](value);
+  }
   function multichoicelistitem_choice_binding(value) {
-    ctx[15](value, ctx[21], ctx[22], ctx[23]);
+    ctx[16](value, ctx[23], ctx[24], ctx[25]);
   }
   let multichoicelistitem_props = {};
   if (ctx[3] !== void 0) {
@@ -27518,8 +27628,8 @@ function create_else_block(ctx) {
   if (ctx[2] !== void 0) {
     multichoicelistitem_props.collapseId = ctx[2];
   }
-  if (ctx[21] !== void 0) {
-    multichoicelistitem_props.choice = ctx[21];
+  if (ctx[23] !== void 0) {
+    multichoicelistitem_props.choice = ctx[23];
   }
   multichoicelistitem = new MultiChoiceListItem_default({ props: multichoicelistitem_props });
   binding_callbacks.push(() => bind(multichoicelistitem, "dragDisabled", multichoicelistitem_dragDisabled_binding));
@@ -27527,9 +27637,10 @@ function create_else_block(ctx) {
   binding_callbacks.push(() => bind(multichoicelistitem, "choice", multichoicelistitem_choice_binding));
   multichoicelistitem.$on("mousedown", ctx[6]);
   multichoicelistitem.$on("touchstart", ctx[6]);
-  multichoicelistitem.$on("deleteChoice", ctx[16]);
-  multichoicelistitem.$on("configureChoice", ctx[17]);
-  multichoicelistitem.$on("toggleCommand", ctx[18]);
+  multichoicelistitem.$on("deleteChoice", ctx[17]);
+  multichoicelistitem.$on("configureChoice", ctx[18]);
+  multichoicelistitem.$on("toggleCommand", ctx[19]);
+  multichoicelistitem.$on("duplicateChoice", ctx[20]);
   return {
     c() {
       create_component(multichoicelistitem.$$.fragment);
@@ -27553,7 +27664,7 @@ function create_else_block(ctx) {
       }
       if (!updating_choice && dirty & 3) {
         updating_choice = true;
-        multichoicelistitem_changes.choice = ctx[21];
+        multichoicelistitem_changes.choice = ctx[23];
         add_flush_callback(() => updating_choice = false);
       }
       multichoicelistitem.$set(multichoicelistitem_changes);
@@ -27582,14 +27693,14 @@ function create_if_block4(ctx) {
     ctx[8](value);
   }
   function choicelistitem_choice_binding(value) {
-    ctx[9](value, ctx[21], ctx[22], ctx[23]);
+    ctx[9](value, ctx[23], ctx[24], ctx[25]);
   }
   let choicelistitem_props = {};
   if (ctx[3] !== void 0) {
     choicelistitem_props.dragDisabled = ctx[3];
   }
-  if (ctx[21] !== void 0) {
-    choicelistitem_props.choice = ctx[21];
+  if (ctx[23] !== void 0) {
+    choicelistitem_props.choice = ctx[23];
   }
   choicelistitem = new ChoiceListItem_default({ props: choicelistitem_props });
   binding_callbacks.push(() => bind(choicelistitem, "dragDisabled", choicelistitem_dragDisabled_binding));
@@ -27599,6 +27710,7 @@ function create_if_block4(ctx) {
   choicelistitem.$on("deleteChoice", ctx[10]);
   choicelistitem.$on("configureChoice", ctx[11]);
   choicelistitem.$on("toggleCommand", ctx[12]);
+  choicelistitem.$on("duplicateChoice", ctx[13]);
   return {
     c() {
       create_component(choicelistitem.$$.fragment);
@@ -27617,7 +27729,7 @@ function create_if_block4(ctx) {
       }
       if (!updating_choice && dirty & 3) {
         updating_choice = true;
-        choicelistitem_changes.choice = ctx[21];
+        choicelistitem_changes.choice = ctx[23];
         add_flush_callback(() => updating_choice = false);
       }
       choicelistitem.$set(choicelistitem_changes);
@@ -27646,7 +27758,7 @@ function create_each_block2(key_1, ctx) {
   const if_block_creators = [create_if_block4, create_else_block];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[21].type !== "Multi" /* Multi */)
+    if (ctx2[23].type !== "Multi" /* Multi */)
       return 0;
     return 1;
   }
@@ -27719,7 +27831,7 @@ function create_fragment9(ctx) {
   let mounted;
   let dispose;
   let each_value = ctx[0].filter(ctx[7]);
-  const get_key = (ctx2) => ctx2[21].id;
+  const get_key = (ctx2) => ctx2[23].id;
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context2(ctx, each_value, i);
     let key = get_key(child_ctx);
@@ -27839,6 +27951,9 @@ function instance9($$self, $$props, $$invalidate) {
   function toggleCommand_handler(event) {
     bubble.call(this, $$self, event);
   }
+  function duplicateChoice_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   function multichoicelistitem_dragDisabled_binding(value) {
     dragDisabled = value;
     $$invalidate(3, dragDisabled);
@@ -27860,6 +27975,9 @@ function instance9($$self, $$props, $$invalidate) {
   function toggleCommand_handler_1(event) {
     bubble.call(this, $$self, event);
   }
+  function duplicateChoice_handler_1(event) {
+    bubble.call(this, $$self, event);
+  }
   $$self.$$set = ($$props2) => {
     if ("choices" in $$props2)
       $$invalidate(0, choices = $$props2.choices);
@@ -27878,12 +27996,14 @@ function instance9($$self, $$props, $$invalidate) {
     deleteChoice_handler,
     configureChoice_handler,
     toggleCommand_handler,
+    duplicateChoice_handler,
     multichoicelistitem_dragDisabled_binding,
     multichoicelistitem_collapseId_binding,
     multichoicelistitem_choice_binding,
     deleteChoice_handler_1,
     configureChoice_handler_1,
-    toggleCommand_handler_1
+    toggleCommand_handler_1,
+    duplicateChoice_handler_1
   ];
 }
 var ChoiceList = class extends SvelteComponent {
@@ -32153,6 +32273,20 @@ async function getUserScript(command, app2) {
     return script;
   }
 }
+function excludeKeys(sourceObj, except) {
+  const obj = structuredClone(sourceObj);
+  for (const key of except) {
+    delete obj[key];
+  }
+  return obj;
+}
+function getChoiceType(choice) {
+  const isTemplate = (choice2) => choice2.type === "Template" /* Template */;
+  const isMacro = (choice2) => choice2.type === "Macro" /* Macro */;
+  const isCapture = (choice2) => choice2.type === "Capture" /* Capture */;
+  const isMulti = (choice2) => choice2.type === "Multi" /* Multi */;
+  return isTemplate(choice) || isMacro(choice) || isCapture(choice) || isMulti(choice);
+}
 
 // src/formatters/formatter.ts
 var Formatter = class {
@@ -35692,7 +35826,9 @@ function create_fragment15(ctx) {
       if (!mounted) {
         dispose = [
           listen(span0, "click", ctx[5]),
-          listen(span1, "click", ctx[6]),
+          listen(span0, "keypress", ctx[6]),
+          listen(span1, "click", ctx[7]),
+          listen(span1, "keypress", ctx[8]),
           listen(span2, "mousedown", function() {
             if (is_function(ctx[1]))
               ctx[1].apply(this, arguments);
@@ -35753,7 +35889,9 @@ function instance15($$self, $$props, $$invalidate) {
     dispatch("configureScript", command);
   }
   const click_handler = () => configureChoice();
+  const keypress_handler = () => configureChoice();
   const click_handler_1 = () => deleteCommand();
+  const keypress_handler_1 = () => configureChoice();
   $$self.$$set = ($$props2) => {
     if ("command" in $$props2)
       $$invalidate(0, command = $$props2.command);
@@ -35769,7 +35907,9 @@ function instance15($$self, $$props, $$invalidate) {
     deleteCommand,
     configureChoice,
     click_handler,
-    click_handler_1
+    keypress_handler,
+    click_handler_1,
+    keypress_handler_1
   ];
 }
 var UserScriptCommand = class extends SvelteComponent {
@@ -36048,7 +36188,7 @@ function create_if_block_22(ctx) {
     }
   };
 }
-function create_if_block_13(ctx) {
+function create_if_block_14(ctx) {
   let nestedchoicecommand;
   let updating_command;
   let updating_dragDisabled;
@@ -36203,7 +36343,7 @@ function create_each_block4(key_1, ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block5, create_if_block_13, create_if_block_22, create_else_block2];
+  const if_block_creators = [create_if_block5, create_if_block_14, create_if_block_22, create_else_block2];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
     if (ctx2[33].type === "Wait" /* Wait */)
@@ -37035,7 +37175,7 @@ function create_fragment17(ctx) {
   let mounted;
   let dispose;
   function choicelist_choices_binding(value) {
-    ctx[11](value);
+    ctx[12](value);
   }
   let choicelist_props = { type: "main" };
   if (ctx[0] !== void 0) {
@@ -37046,7 +37186,8 @@ function create_fragment17(ctx) {
   choicelist.$on("deleteChoice", ctx[3]);
   choicelist.$on("configureChoice", ctx[4]);
   choicelist.$on("toggleCommand", ctx[5]);
-  choicelist.$on("reorderChoices", ctx[12]);
+  choicelist.$on("duplicateChoice", ctx[6]);
+  choicelist.$on("reorderChoices", ctx[13]);
   addchoicebox = new AddChoiceBox_default({});
   addchoicebox.$on("addChoice", ctx[2]);
   return {
@@ -37072,7 +37213,7 @@ function create_fragment17(ctx) {
       mount_component(addchoicebox, div0, null);
       current = true;
       if (!mounted) {
-        dispose = listen(button, "click", ctx[6]);
+        dispose = listen(button, "click", ctx[7]);
         mounted = true;
       }
     },
@@ -37183,6 +37324,39 @@ function instance17($$self, $$props, $$invalidate) {
       saveChoices(choices);
     });
   }
+  function handleDuplicateChoice(e) {
+    return __awaiter(this, void 0, void 0, function* () {
+      const { choice: sourceChoice } = e.detail;
+      const newChoice = duplicateChoice(sourceChoice);
+      $$invalidate(0, choices = [...choices, newChoice]);
+      saveChoices(choices);
+    });
+  }
+  function duplicateChoice(choice) {
+    if (!getChoiceType(choice))
+      throw new Error("Invalid choice type");
+    let newChoice;
+    switch (choice.type) {
+      case "Template" /* Template */:
+        newChoice = new TemplateChoice(`${choice.name} (copy)`);
+        break;
+      case "Capture" /* Capture */:
+        newChoice = new CaptureChoice(`${choice.name} (copy)`);
+        break;
+      case "Macro" /* Macro */:
+        newChoice = new MacroChoice(`${choice.name} (copy)`);
+        break;
+      case "Multi" /* Multi */:
+        newChoice = new MultiChoice(`${choice.name} (copy)`);
+        break;
+    }
+    if (choice.type !== "Multi" /* Multi */) {
+      Object.assign(newChoice, excludeKeys(choice, ["id", "name"]));
+    } else {
+      newChoice.choices = choice.choices.map((c) => duplicateChoice(c));
+    }
+    return newChoice;
+  }
   function updateChoiceHelper(oldChoice, newChoice) {
     if (oldChoice.id === newChoice.id) {
       oldChoice = Object.assign(Object.assign({}, oldChoice), newChoice);
@@ -37213,7 +37387,7 @@ function instance17($$self, $$props, $$invalidate) {
       const newMacros = yield new MacrosManager(app2, plugin, macros, choices).waitForClose;
       if (newMacros) {
         saveMacros(newMacros);
-        $$invalidate(7, macros = newMacros);
+        $$invalidate(8, macros = newMacros);
       }
     });
   }
@@ -37226,15 +37400,15 @@ function instance17($$self, $$props, $$invalidate) {
     if ("choices" in $$props2)
       $$invalidate(0, choices = $$props2.choices);
     if ("macros" in $$props2)
-      $$invalidate(7, macros = $$props2.macros);
+      $$invalidate(8, macros = $$props2.macros);
     if ("saveChoices" in $$props2)
       $$invalidate(1, saveChoices = $$props2.saveChoices);
     if ("saveMacros" in $$props2)
-      $$invalidate(8, saveMacros = $$props2.saveMacros);
+      $$invalidate(9, saveMacros = $$props2.saveMacros);
     if ("app" in $$props2)
-      $$invalidate(9, app2 = $$props2.app);
+      $$invalidate(10, app2 = $$props2.app);
     if ("plugin" in $$props2)
-      $$invalidate(10, plugin = $$props2.plugin);
+      $$invalidate(11, plugin = $$props2.plugin);
   };
   return [
     choices,
@@ -37243,6 +37417,7 @@ function instance17($$self, $$props, $$invalidate) {
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
+    handleDuplicateChoice,
     openMacroManager,
     macros,
     saveMacros,
@@ -37263,11 +37438,11 @@ var ChoiceView = class extends SvelteComponent {
       safe_not_equal,
       {
         choices: 0,
-        macros: 7,
+        macros: 8,
         saveChoices: 1,
-        saveMacros: 8,
-        app: 9,
-        plugin: 10
+        saveMacros: 9,
+        app: 10,
+        plugin: 11
       },
       add_css10
     );

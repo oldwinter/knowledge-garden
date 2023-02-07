@@ -16,7 +16,7 @@ ACCESS 基于传统 [[文件夹和标签]]式的[[∑ PKM]]系统，但更引入
 
 使用这个方法不可缺少的能力之一，就是掌握[[Dataview]]。
 
-[[2022-07-01]]新增：考虑将[[text expand]]作为MOC的一部分。参见：[Obsidian 笔记重组与拆分的艺术 - 知乎](https://zhuanlan.zhihu.com/p/362762027)
+[[2022-07-01]]新增：考虑将[[Text expand]]作为MOC的一部分。参见：[Obsidian 笔记重组与拆分的艺术 - 知乎](https://zhuanlan.zhihu.com/p/362762027)
 
 [[2022-07-27]]新感悟，[[混合笔记法]]，才是能适应ACCESS多种场景的最终出路。
 
@@ -41,7 +41,7 @@ ACCESS 基于传统 [[文件夹和标签]]式的[[∑ PKM]]系统，但更引入
 	- 我理解为 [[永久笔记]]。把闪念笔记整理后的东西都放这，不做文件夹的分类了，累死了，也是我从[[PARA和MOC联用组织笔记]]转到[[ACCESS 笔记组织法]] 的根本原因。
 - Extras
 	- 翻译：让支撑材料方便被引用。比如文件、图片、照片和模板等。
-	- Draws，放 [[excalidraw]] 的图。
+	- Draws，放 [[Cards/永久笔记/excalidraw]] 的图。
 	- Media，放资源文件。
 	- Template，放各种 [[模板与套路]]。
 - Sources

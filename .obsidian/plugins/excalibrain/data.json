@@ -1,5 +1,5 @@
 {
-  "excalibrainFilepath": "Extras/Draws/excalibrain.md",
+  "excalibrainFilepath": "Extras/Draws/excalibrainFile.md",
   "indexUpdateInterval": 120000,
   "hierarchy": {
     "exclusions": [
@@ -155,5 +155,7 @@
   "ontologySuggesterFriendTrigger": "::f",
   "ontologySuggesterTrigger": ":::",
   "ontologySuggesterMidSentenceTrigger": "(",
-  "boldFields": false
+  "boldFields": false,
+  "allowAutozoom": true,
+  "allowAutofocuOnSearch": true
 }

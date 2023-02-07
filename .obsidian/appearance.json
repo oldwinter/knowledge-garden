@@ -1,17 +1,11 @@
 {
   "accentColor": "",
-  "cssTheme": "Things",
+  "cssTheme": "Catppuccin",
   "enabledCssSnippets": [
-    "多栏callout样式",
-    "隐藏文件和文件夹",
-    "图片放大",
-    "菜单栏定制",
-    "图谱",
-    "侧边栏dataview样式定制",
     "supercharged-links-gen",
     "隐藏LICENSE文件和logseq文件夹"
   ],
-  "theme": "moonstone",
+  "theme": "obsidian",
   "baseFontSize": 16,
   "baseFontSizeAction": false,
   "translucency": false,

@@ -713,6 +713,14 @@ div.database-plugin__td.data-input span:focus {
   position: relative;
 }
 
+.database-plugin__container-mobile {
+  contain: content;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
 .database-plugin__container tr input {
   background: var(--background-modifier-box-shadow);
 }

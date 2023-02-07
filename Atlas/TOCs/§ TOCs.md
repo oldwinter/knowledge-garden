@@ -81,7 +81,7 @@ title: § TOCs
 		 - [[常用命令行工具包]]
 		 - [[metacloud]]
 		 - [[raycast插件]]
-		 - [[obsidian插件]]
+		 - [[∑ obsidian插件]]
 	  - [[∑ 软件项目管理]]
 		 - [[团队建设]]
 		 - [[团队协作]]

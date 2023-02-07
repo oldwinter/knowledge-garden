@@ -126,7 +126,7 @@
       "type": "attribute",
       "name": "title",
       "value": "HOMEPAGE",
-      "matchCaseSensitive": false,
+      "matchCaseSensitive": true,
       "match": "exact",
       "uid": "f22f-8852",
       "selectText": true,

@@ -1,7 +1,7 @@
 {
 	"id": "omnisearch",
 	"name": "Omnisearch",
-	"version": "1.11.0",
+	"version": "1.11.1",
 	"minAppVersion": "1.0.0",
 	"description": "A search engine that just works",
 	"author": "Simon Cambier",

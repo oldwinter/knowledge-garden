@@ -242,7 +242,7 @@ If your plugin does not need CSS, delete this file.
 }
 
 .chrono-badge.chrono-created {
-    background-color: var(--interactive-success);
+    background-color: var(--interactive-accent);
 }
 
 .chrono-badge.chrono-modified {

@@ -182,6 +182,135 @@
       ],
       "name": "1-Project",
       "id": "fa50532f-6f9a-4f1f-bcde-7e2cf825894f"
+    },
+    {
+      "fieldConfig": {
+        "使用或不用的原因": {
+          "richText": true
+        }
+      },
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": true,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "Spaces/1-Project/obsidian插件使用",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "sortField": "name",
+            "sortAsc": true,
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              },
+              "database-plugin": {
+                "hide": true
+              },
+              "使用或不用的原因": {
+                "width": 333
+              },
+              "title": {
+                "hide": true
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "c3b2cd5b-321c-45ca-9b5a-798039ad6351",
+          "name": "Table",
+          "type": "table"
+        },
+        {
+          "config": {
+            "filepath": "Spaces/1-Project/obsidian插件使用/1669961e-92d7-4508-aaaa-d9b493aff4ae_db.md"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "1669961e-92d7-4508-aaaa-d9b493aff4ae",
+          "name": "Database Folder",
+          "type": "dbfolder-view"
+        },
+        {
+          "config": {
+            "priorityField": "",
+            "groupByField": "当前使用频率",
+            "columns": {
+              "2": {
+                "weight": 0
+              },
+              "3": {
+                "weight": 1
+              },
+              "4": {
+                "weight": 2
+              },
+              "5": {
+                "weight": 3
+              },
+              "No status": {
+                "weight": 4
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "2c898303-e647-4f94-a9b1-a84f93f13bb2",
+          "name": "Board",
+          "type": "board"
+        }
+      ],
+      "id": "f0094fdf-8a28-4612-9401-53c0673881da",
+      "name": "obsidian插件使用"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "Sources/Movies + TV/电影笔记/Movie",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "fda2636a-d5de-45ad-84b5-2387d7ab4347",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "df816c1e-fb63-4e46-a4ee-b797487f40e3",
+      "name": "豆瓣影音同步"
     }
   ],
   "preferences": {

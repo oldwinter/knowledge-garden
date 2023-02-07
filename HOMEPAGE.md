@@ -2,6 +2,7 @@
 date created: 2022-06-09
 date modified: 2022-08-20
 title: HOMEPAGE
+dg-publish: true
 ---
 
 
@@ -9,11 +10,10 @@ title: HOMEPAGE
 ## 最近编辑的笔记
 ```dataview
 table WITHOUT ID file.link AS "标题",file.mtime as "时间"
+from ""
 sort file.mtime desc
 limit 10
 ```
-
-
 
 ## 七天内创建的笔记
 ```dataview

@@ -4652,11 +4652,12 @@ var Publisher = class {
       yield octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", payload);
     });
   }
-  stripAwayCodeFences(text) {
+  stripAwayCodeFencesAndFrontmatter(text) {
     let textToBeProcessed = text;
     textToBeProcessed = textToBeProcessed.replace(this.excaliDrawRegex, "");
     textToBeProcessed = textToBeProcessed.replace(this.codeBlockRegex, "");
     textToBeProcessed = textToBeProcessed.replace(this.codeFenceRegex, "");
+    textToBeProcessed = textToBeProcessed.replace(this.frontmatterRegex, "");
     return textToBeProcessed;
   }
   removeObsidianComments(text) {
@@ -4762,7 +4763,7 @@ ${frontMatterString}
   addPageTags(baseFrontMatter, newFrontMatter) {
     const publishedFrontMatter = __spreadValues({}, newFrontMatter);
     if (baseFrontMatter) {
-      const tags = (typeof baseFrontMatter["tags"] == "string" ? [baseFrontMatter["tags"]] : baseFrontMatter["tags"]) || [];
+      const tags = (typeof baseFrontMatter["tags"] === "string" ? [baseFrontMatter["tags"]] : baseFrontMatter["tags"]) || [];
       if (baseFrontMatter["dg-home"]) {
         tags.push("gardenEntry");
       }
@@ -4790,8 +4791,8 @@ ${frontMatterString}
   convertLinksToFullPath(text, filePath) {
     return __async(this, null, function* () {
       let convertedText = text;
-      const textToBeProcessed = this.stripAwayCodeFences(text);
-      const linkedFileRegex = /\[\[(.*?)\]\]/g;
+      const textToBeProcessed = this.stripAwayCodeFencesAndFrontmatter(text);
+      const linkedFileRegex = /\[\[(.+?)\]\]/g;
       const linkedFileMatches = textToBeProcessed.match(linkedFileRegex);
       if (linkedFileMatches) {
         for (const linkMatch of linkedFileMatches) {
@@ -4834,7 +4835,7 @@ ${frontMatterString}
       }
       const publishedFiles = yield this.getFilesMarkedForPublishing();
       let transcludedText = text;
-      const transcludedRegex = /!\[\[(.*?)\]\]/g;
+      const transcludedRegex = /!\[\[(.+?)\]\]/g;
       const transclusionMatches = text.match(transcludedRegex);
       let numberOfExcaliDraws = 0;
       if (transclusionMatches) {
@@ -5127,7 +5128,7 @@ ${key}=${defaultNoteSettings[key]}`;
       const response = yield octokit.request(`GET /repos/{owner}/{repo}/git/trees/{tree_sha}?recursive=${Math.ceil(Math.random() * 1e3)}`, {
         owner: this.settings.githubUserName,
         repo: this.settings.githubRepo,
-        tree_sha: "main"
+        tree_sha: "HEAD"
       });
       const files = response.data.tree;
       const notes = files.filter((x) => x.path.startsWith("src/site/notes/") && x.type === "blob" && x.path !== "src/site/notes/notes.json");
@@ -5149,7 +5150,7 @@ ${key}=${defaultNoteSettings[key]}`;
       const templateVersion = latestRelease.data.tag_name;
       const uuid = crypto.randomUUID();
       const branchName = "update-template-to-v" + templateVersion + "-" + uuid;
-      const latestCommit = yield octokit.request("GET /repos/{owner}/{repo}/commits/main", {
+      const latestCommit = yield octokit.request("GET /repos/{owner}/{repo}/commits/HEAD", {
         owner: this.settings.githubUserName,
         repo: this.settings.githubRepo
       });
@@ -5164,12 +5165,17 @@ ${key}=${defaultNoteSettings[key]}`;
   createPullRequest(octokit, branchName, templateVersion) {
     return __async(this, null, function* () {
       try {
+        const repoInfo = yield octokit.request("GET /repos/{owner}/{repo}", {
+          owner: this.settings.githubUserName,
+          repo: this.settings.githubRepo
+        });
+        const defaultBranch = repoInfo.data.default_branch;
         const pr = yield octokit.request("POST /repos/{owner}/{repo}/pulls", {
           owner: this.settings.githubUserName,
           repo: this.settings.githubRepo,
           title: `Update template to version ${templateVersion}`,
           head: branchName,
-          base: "main",
+          base: defaultBranch,
           body: `Update to latest template version.
  [Release Notes](https://github.com/oleeskild/digitalgarden/releases/tag/${templateVersion})`
         });
@@ -7664,8 +7670,8 @@ var DEFAULT_SETTINGS = {
   githubUserName: "",
   gardenBaseUrl: "",
   prHistory: [],
-  theme: "dark",
-  baseTheme: '{"name": "default", "modes": ["dark"]}',
+  baseTheme: "dark",
+  theme: '{"name": "default", "modes": ["dark"]}',
   faviconPath: "",
   showRibbonIcon: true,
   noteSettingsIsInitialized: false,

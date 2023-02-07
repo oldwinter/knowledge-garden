@@ -4,16 +4,97 @@
     "type": "split",
     "children": [
       {
-        "id": "f0002f8640d0c8d5",
+        "id": "e8a3b084cda78563",
         "type": "tabs",
+        "dimension": 60.06944444444444,
         "children": [
           {
-            "id": "43e7b45727aed263",
+            "id": "5f537f593fa99228",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HOMEPAGE.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "1702519063ac6cfa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "966a21c8030f87c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "225608403e0a1b58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🧰 本库指南/🧰 本库使用指南.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "14f0028694e7be5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db9912006db88106",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2023-01-24.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2dc24264da52fe4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/1-Project/Obsidian插件使用/∑ obsidian插件.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -21,6 +102,40 @@
             }
           }
         ]
+      },
+      {
+        "id": "5f5e907e55457110",
+        "type": "tabs",
+        "dimension": 39.93055555555556,
+        "children": [
+          {
+            "id": "73259c4c91dad734",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/快速启动一个简易的静态httpserver.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "23bf3cb9f5cb8666",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,7 +165,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#微信读书笔记",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md"
+                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md"
               }
             }
           },
@@ -101,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
+                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -113,7 +228,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
+                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/荣耀战力与巅峰赛.md",
+                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,23 +274,30 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 239.5
+    "width": 281.5
   },
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
     "children": [
       {
-        "id": "b5602443fdd7086d",
+        "id": "ca96c6a951719db3",
         "type": "tabs",
         "children": [
           {
-            "id": "7fce28591ed1700e",
+            "id": "60734b86e1731f85",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "4ba1304d857af577",
             "type": "leaf",
             "state": {
               "type": "Strange New Worlds",
@@ -183,39 +305,74 @@
             }
           },
           {
-            "id": "96f9db84a56d2fb2",
+            "id": "473b0907c2fc43b3",
             "type": "leaf",
             "state": {
-              "type": "chronology-calendar-view",
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "d6fbcc9b676c10f9",
+            "type": "leaf",
+            "state": {
+              "type": "daily-note-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "03dde46a76dc867a",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 366.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "daily-notes:打开/创建今天的日记": false,
-      "switcher:打开快速切换": true,
+      "obsidian-projects:Open projects": false,
+      "homepage:Open homepage": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
+      "janitor:Janitor: scan vault": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-weread-plugin:Weread": false,
+      "obsidian-metatable:Metatable": false,
+      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
       "canvas:Create new canvas": true,
-      "command-palette:打开命令面板": true
+      "templater-obsidian:Templater": false,
+      "dbfolder:创建一个新数据库表": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "omnisearch:Omnisearch": false,
+      "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "43e7b45727aed263",
+  "active": "23bf3cb9f5cb8666",
   "lastOpenFiles": [
+    "Cards/永久笔记/快速启动一个简易的静态httpserver.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞美化和排版.md",
     "🧰 本库指南/Tutorials/本库使用时遵守的核心原则.md",
-    "Atlas/TOCs/§ TOCs.md",
-    "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "🧰 本库指南/Tutorials/本库工作区、界面划分逻辑及图标.md",
-    "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
-    "🧰 本库指南/Tutorials/本库需要单独配置的插件.md",
+    "🧰 本库指南/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
     "🧰 本库指南/Tutorials/本库使用的obsidian第三方插件及原因.md",
-    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md",
-    "Calendar/Daily notes/生命之花 - 人生规划分类方法.md"
+    "🧰 本库指南/Tutorials/本库使用的主题及原因.md",
+    "🧰 本库指南/Tutorials/本库内容分发至主流媒体平台的实践探索.md",
+    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md"
   ]
 }

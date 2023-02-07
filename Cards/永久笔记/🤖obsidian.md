@@ -5,7 +5,7 @@ title: 🤖obsidian
 ---
 
 up:: [[笔记软件的选择]]  
-down:: [[obsidian插件]]  
+down:: [[∑ obsidian插件]]  
 jumps:: [[🤖notion]]  
 
 [[本库使用时遵守的核心原则]]

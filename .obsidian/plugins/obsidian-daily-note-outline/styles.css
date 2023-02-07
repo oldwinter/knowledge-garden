@@ -1,11 +1,12 @@
 
+/*日付表示  date range */
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-date-range{
     text-align:center;
     font-size: var(--nav-item-size);
     padding: var(--size-2-1);
 }
 
-
+/*viewの書式指定*/
 .workspace-leaf-content[data-type="daily-note-outline"] .view-content{
     height: 100%;
     overflow-x: hidden;
@@ -20,8 +21,13 @@
 /* 100%からUI部分の高さを引いた*/
 
 
+/*デイリーノートファイル名  filename of daily notes*/
+/*要素を中央揃え  align center*/
+.workspace-leaf-content[data-type="daily-note-outline"] .nav-folder-title{
+    align-items: center;
+}
 
-/*デイリーノートファイル名   ノート横に情報を表示*/
+/*ノート横に情報を表示 display file information */
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-folder-title::after{
     content: attr(data-subinfo);
     font-size: 80%;
@@ -39,7 +45,7 @@
 }
 
 
-/* アウトライン要素*/
+/* アウトライン要素 outline elements*/
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title-content{
     
     white-space: nowrap;
@@ -49,19 +55,22 @@
     display: inline-block;
     flex-shrink: 1;
 }
-.workspace-leaf-content[data-type="daily-note-outline"] .svg-icon{
 
+/* icon */
+.workspace-leaf-content[data-type="daily-note-outline"] .nav-folder .svg-icon{
+    height: 1.2em;
     flex-shrink: 0;
 }
 
 
 
 
-/*プレビュー実験*/
+/*インラインプレビュー inline preview */
+/*アウトライン要素行の各項目を中央揃えで同じ高さに表示 align center*/
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title{
     align-items: center;
 }
-
+/*インラインプレビューのフォント inline preview font*/
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title-preview{
     display: inline-block;
     font-size: 85%;
@@ -77,4 +86,18 @@
 .daily-note-preview{
     text-align: left;
     animation: unset !important;
+}
+
+/*設定画面 settings*/
+/*インデント用*/
+.setting-indent{
+    padding-left: 2em;
+}
+
+.setting-indent-2{
+    padding-left: 3em;
+}
+/*カテゴリ名の下のスペースを減らす*/
+.setting-category{
+    margin-block-end: 0em;
 }

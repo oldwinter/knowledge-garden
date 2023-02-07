@@ -148,7 +148,7 @@ var SettingsSearch = class extends import_obsidian.Plugin {
         el.createSpan({ text: resource.text });
       });
     } else {
-      name = resource.name;
+      name = resource.text;
     }
     const setting = new import_obsidian.Setting(createDiv()).setName(name).setDesc(createFragment((e) => e.createDiv().innerHTML = resource.desc ?? ""));
     if (resource.external) {
