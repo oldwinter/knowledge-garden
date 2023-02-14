@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-08-18
-date modified: 2022-09-02
+date modified: 2023-02-14
 title: 众多双链笔记中我选obsidian的核心原因
 ---
 
@@ -18,4 +19,3 @@ title: 众多双链笔记中我选obsidian的核心原因
 
 - [[obsidian 不可回避的缺点及其解决方案]]
 - [[obsidian 让我爱不释手的功能和细节]]
-

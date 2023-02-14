@@ -111,5 +111,7 @@
   "things-style@@link-decoration": "Underline",
   "blue-topaz-theme@@background-settings-workplace-background-image": false,
   "blue-topaz-theme@@toggle-bg-panel-page": false,
-  "things-style@@mobile-black-background": false
+  "things-style@@mobile-black-background": false,
+  "anuppuccin-theme-settings@@anp-active-line": "anp-current-line-border",
+  "anuppuccin-theme-settings@@anp-canvas-dark-bg": false
 }

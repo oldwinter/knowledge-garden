@@ -18,10 +18,10 @@
     },
     "Insert YAML attributes": {
       "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
-      "Text to insert": "tags: "
+      "Text to insert": "dg-publish: true"
     },
     "Move Tags to Yaml": {
-      "Move all tags to Yaml frontmatter of the document.": true,
+      "Move all tags to Yaml frontmatter of the document.": false,
       "Body tag operation": "Nothing"
     },
     "Remove YAML Keys": {
@@ -82,7 +82,7 @@
     },
     "Emphasis Style": {
       "Makes sure the emphasis style is consistent.": true,
-      "Style": "consistent"
+      "Style": "asterisk"
     },
     "No Bare URLs": {
       "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
@@ -109,7 +109,7 @@
     },
     "Strong Style": {
       "Makes sure the strong style is consistent.": true,
-      "Style": "consistent"
+      "Style": "asterisk"
     },
     "Two Spaces Between Lines with Content": {
       "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": true
@@ -122,7 +122,7 @@
       "There should be at most one consecutive blank line.": true
     },
     "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": false,
+      "Converts leading spaces to tabs.": true,
       "Tabsize": "4"
     },
     "Empty Line Around Code Fences": {
@@ -165,44 +165,62 @@
       "Force YAML Escape on Keys": ""
     },
     "Unordered List Style": {
-      "Makes sure that unordered lists follow the style specified.": false,
-      "List item style": "consistent"
+      "Makes sure that unordered lists follow the style specified.": true,
+      "List item style": "-"
     },
     "Empty Line Around Blockquotes": {
-      "Ensures that there is an empty line around blockquotes unless they start or end a document. **Note that an empty line is either one less level of nesting for blockquotes or a newline character.**": false
+      "Ensures that there is an empty line around blockquotes unless they start or end a document. **Note that an empty line is either one less level of nesting for blockquotes or a newline character.**": true
     },
     "Empty Line Around Math Blocks": {
-      "Ensures that there is an empty line around math blocks using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": false
+      "Ensures that there is an empty line around math blocks using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": true
     },
     "Move Math Block Indicators to Their Own Line": {
-      "Move all starting and ending math block indicators to their own lines using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": false
+      "Move all starting and ending math block indicators to their own lines using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": true
     },
     "Add Blockquote Indentation on Paste": {
-      "Adds blockquotes to all but the first line, when the cursor is in a blockquote/callout line during pasting": false
+      "Adds blockquotes to all but the first line, when the cursor is in a blockquote/callout line during pasting": true
     },
     "Prevent Double Checklist Indicator on Paste": {
-      "Removes starting checklist indicator from the text to paste if the line the cursor is on in the file has a checklist indicator": false
+      "Removes starting checklist indicator from the text to paste if the line the cursor is on in the file has a checklist indicator": true
     },
     "Prevent Double List Item Indicator on Paste": {
-      "Removes starting list indicator from the text to paste if the line the cursor is on in the file has a list indicator": false
+      "Removes starting list indicator from the text to paste if the line the cursor is on in the file has a list indicator": true
     },
     "Proper Ellipsis on Paste": {
-      "Replaces three consecutive dots with an ellipsis even if they have a space between them in the text to paste": false
+      "Replaces three consecutive dots with an ellipsis even if they have a space between them in the text to paste": true
     },
     "Remove Hyphens on Paste": {
-      "Removes hyphens from the text to paste": false
+      "Removes hyphens from the text to paste": true
     },
     "Remove Leading or Trailing Whitespace on Paste": {
-      "Removes any leading non-tab whitespace and all trailing whitespace for the text to paste": false
+      "Removes any leading non-tab whitespace and all trailing whitespace for the text to paste": true
     },
     "Remove Leftover Footnotes from Quote on Paste": {
-      "Removes any leftover footnote references for the text to paste": false
+      "Removes any leftover footnote references for the text to paste": true
     },
     "Remove Multiple Blank Lines on Paste": {
-      "Condenses multiple blank lines down into one blank line for the text to paste": false
+      "Condenses multiple blank lines down into one blank line for the text to paste": true
     },
     "Space between Chinese Japanese or Korean and English or numbers": {
       "Ensures that Chinese, Japanese, or Korean and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
+    },
+    "Headings Start Line": {
+      "Headings that do not start a line will have their preceding whitespace removed to make sure they get recognized as headers.": false
+    },
+    "Remove Trailing Punctuation in Heading": {
+      "Removes the specified punctuation from the end of headings making sure to ignore the semicolon at the end of [HTML entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).": false,
+      "Trailing Punctuation": ".,;:!。，；：！"
+    },
+    "Auto-correct Common Misspellings": {
+      "Uses a dictionary of common misspellings to automatically convert them to their proper spellings. See [auto-correct map](https://github.com/platers/obsidian-linter/tree/master/src/utils/auto-correct-misspellings.ts) for the full list of auto-corrected words.": false,
+      "Ignore Words": ""
+    },
+    "Remove Space around Characters": {
+      "Ensures that certain characters are not surrounded by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": true,
+      "Include Fullwidth Forms": true,
+      "Include CJK Symbols and Punctuation": true,
+      "Include Dashes": true,
+      "Other symbols": "[]*"
     }
   },
   "lintOnSave": true,
@@ -219,6 +237,7 @@
     "aliasArrayStyle": "multi-line",
     "tagArrayStyle": "single-line",
     "minimumNumberOfDollarSignsToBeAMathBlock": 2,
-    "escapeCharacter": "\""
+    "escapeCharacter": "\"",
+    "removeUnnecessaryEscapeCharsForMultiLineArrays": true
   }
 }

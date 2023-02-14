@@ -1,8 +1,10 @@
 ---
+dg-publish: true
 date created: 2022-09-02
-date modified: 2022-09-02
-title: 本库为什么不建议在obsidian中做Iframe嵌入
+date modified: 2023-02-14
+title: 本库不建议在obsidian中做Iframe嵌入
 ---
+
 如[[本库不建议在obsidian中搞太多奇技淫巧]]所言，使用Iframe嵌入各种web网站到obsidian中，其实也算奇技淫巧的一种。
 
 首先各位要明白的一点是，iframe技术，本质上有点像在obsidian里面开了一个单独的沙盒，这个沙盒的一切操作，是独立于你的obsidian和你系统所安装的浏览器的。它能起到的最大效果就是视觉效果，就是好像直接将某个网页嵌入到了你的obsidian窗口中，仿佛成为了你笔记的一部分一样。

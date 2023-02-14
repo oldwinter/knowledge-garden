@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-09-03
-date modified: 2022-09-03
+date modified: 2023-02-14
 title: 本库如何指定笔记同步至github
 ---
 
@@ -13,4 +14,4 @@ title: 本库如何指定笔记同步至github
 
 方法很简单，使用.gitignore文件即可，可直接用vscode打开本库，根目录就有.gitignore文件。语法参见：[[gitignore 语法]]
 
-若你想要采用白名单机制：最直观简单的想法就是，只将这些笔记进行git add ，commit和push操作即可。
+若你想要采用白名单机制：最直观简单的想法就是，只将这些笔记进行git add，commit和push操作即可。

@@ -146,5 +146,24 @@
       ],
       "key": "O"
     }
+  ],
+  "grappling-hook:cycle-starred-notes": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "grappling-hook:alternate-note": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "Tab"
+    }
   ]
 }

@@ -1,7 +1,8 @@
 ---
+dg-publish: true
 date created: 2022-08-09
-date modified: 2022-08-29
-tags: 索引笔记
+date modified: 2023-02-14
+tags: [索引笔记]
 title: ∑ 本库obsidian基本配置及原因
 ---
 

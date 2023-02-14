@@ -41,31 +41,7 @@
       "mode": "any"
     }
   ],
-  "macros": [
-    {
-      "macro": [
-        {
-          "action": 0,
-          "commandId": "workspace:split-vertical"
-        },
-        {
-          "action": 1,
-          "delay": 250
-        },
-        {
-          "action": 1,
-          "delay": "250"
-        },
-        {
-          "action": 0,
-          "commandId": "workspace:undo-close-pane"
-        }
-      ],
-      "name": "Macro Name",
-      "icon": "battery-charging",
-      "startup": false
-    }
-  ],
+  "macros": [],
   "explorer": [],
   "hide": {
     "statusbar": [

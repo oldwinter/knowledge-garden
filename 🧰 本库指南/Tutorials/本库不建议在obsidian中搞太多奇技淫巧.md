@@ -1,7 +1,8 @@
 ---
+dg-publish: true
 date created: 2022-09-02
-date modified: 2022-09-02
-title: 本库为什么不建议中obsidian中搞太多奇技淫巧
+date modified: 2023-02-14
+title: 本库不建议在obsidian中搞太多奇技淫巧
 ---
 
 可能，你们的第一眼，看到本库，会觉得有点失望，相比于看到cuman或rainbell或其他示例库，简直显得有点简陋。界面配色一股性冷淡风，可视化的图标也看不到几个，简直无从下手。

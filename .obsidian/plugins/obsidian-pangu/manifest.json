@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-pangu",
+  "name": "盘古 PanGu",
+  "version": "1.6.1",
+  "minAppVersion": "0.9.12",
+  "description": "自动为中英文之间插入空格，排版强迫者的福音。",
+  "author": "Natumsol",
+  "authorUrl": "https://github.com/natumsol",
+  "isDesktopOnly": true
+}

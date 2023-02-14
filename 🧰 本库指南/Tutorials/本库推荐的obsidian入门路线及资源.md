@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-07-14
-date modified: 2022-08-20
+date modified: 2023-02-14
 title: 本库推荐的obsidian入门路线及资源
 ---
 

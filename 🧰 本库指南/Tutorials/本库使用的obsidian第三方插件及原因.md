@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-08-09
-date modified: 2022-08-20
+date modified: 2023-02-14
 title: 本库使用的obsidian第三方插件及原因
 ---
 

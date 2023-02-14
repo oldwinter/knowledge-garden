@@ -46,497 +46,6 @@ var __toBinary = /* @__PURE__ */ (() => {
   };
 })();
 
-// node_modules/tslib/tslib.js
-var require_tslib = __commonJS({
-  "node_modules/tslib/tslib.js"(exports, module2) {
-    var __extends2;
-    var __assign3;
-    var __rest3;
-    var __decorate2;
-    var __param2;
-    var __metadata2;
-    var __awaiter2;
-    var __generator2;
-    var __exportStar2;
-    var __values2;
-    var __read2;
-    var __spread2;
-    var __spreadArrays2;
-    var __spreadArray3;
-    var __await2;
-    var __asyncGenerator2;
-    var __asyncDelegator2;
-    var __asyncValues2;
-    var __makeTemplateObject2;
-    var __importStar2;
-    var __importDefault2;
-    var __classPrivateFieldGet2;
-    var __classPrivateFieldSet2;
-    var __classPrivateFieldIn2;
-    var __createBinding2;
-    (function(factory) {
-      var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
-      if (typeof define === "function" && define.amd) {
-        define("tslib", ["exports"], function(exports2) {
-          factory(createExporter(root, createExporter(exports2)));
-        });
-      } else if (typeof module2 === "object" && typeof module2.exports === "object") {
-        factory(createExporter(root, createExporter(module2.exports)));
-      } else {
-        factory(createExporter(root));
-      }
-      function createExporter(exports2, previous) {
-        if (exports2 !== root) {
-          if (typeof Object.create === "function") {
-            Object.defineProperty(exports2, "__esModule", { value: true });
-          } else {
-            exports2.__esModule = true;
-          }
-        }
-        return function(id2, v3) {
-          return exports2[id2] = previous ? previous(id2, v3) : v3;
-        };
-      }
-    })(function(exporter) {
-      var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d5, b4) {
-        d5.__proto__ = b4;
-      } || function(d5, b4) {
-        for (var p3 in b4)
-          if (Object.prototype.hasOwnProperty.call(b4, p3))
-            d5[p3] = b4[p3];
-      };
-      __extends2 = function(d5, b4) {
-        if (typeof b4 !== "function" && b4 !== null)
-          throw new TypeError("Class extends value " + String(b4) + " is not a constructor or null");
-        extendStatics(d5, b4);
-        function __() {
-          this.constructor = d5;
-        }
-        d5.prototype = b4 === null ? Object.create(b4) : (__.prototype = b4.prototype, new __());
-      };
-      __assign3 = Object.assign || function(t4) {
-        for (var s5, i4 = 1, n2 = arguments.length; i4 < n2; i4++) {
-          s5 = arguments[i4];
-          for (var p3 in s5)
-            if (Object.prototype.hasOwnProperty.call(s5, p3))
-              t4[p3] = s5[p3];
-        }
-        return t4;
-      };
-      __rest3 = function(s5, e4) {
-        var t4 = {};
-        for (var p3 in s5)
-          if (Object.prototype.hasOwnProperty.call(s5, p3) && e4.indexOf(p3) < 0)
-            t4[p3] = s5[p3];
-        if (s5 != null && typeof Object.getOwnPropertySymbols === "function")
-          for (var i4 = 0, p3 = Object.getOwnPropertySymbols(s5); i4 < p3.length; i4++) {
-            if (e4.indexOf(p3[i4]) < 0 && Object.prototype.propertyIsEnumerable.call(s5, p3[i4]))
-              t4[p3[i4]] = s5[p3[i4]];
-          }
-        return t4;
-      };
-      __decorate2 = function(decorators, target, key2, desc) {
-        var c4 = arguments.length, r3 = c4 < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key2) : desc, d5;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-          r3 = Reflect.decorate(decorators, target, key2, desc);
-        else
-          for (var i4 = decorators.length - 1; i4 >= 0; i4--)
-            if (d5 = decorators[i4])
-              r3 = (c4 < 3 ? d5(r3) : c4 > 3 ? d5(target, key2, r3) : d5(target, key2)) || r3;
-        return c4 > 3 && r3 && Object.defineProperty(target, key2, r3), r3;
-      };
-      __param2 = function(paramIndex, decorator) {
-        return function(target, key2) {
-          decorator(target, key2, paramIndex);
-        };
-      };
-      __metadata2 = function(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-          return Reflect.metadata(metadataKey, metadataValue);
-      };
-      __awaiter2 = function(thisArg, _arguments, P4, generator) {
-        function adopt(value) {
-          return value instanceof P4 ? value : new P4(function(resolve) {
-            resolve(value);
-          });
-        }
-        return new (P4 || (P4 = Promise))(function(resolve, reject) {
-          function fulfilled(value) {
-            try {
-              step(generator.next(value));
-            } catch (e4) {
-              reject(e4);
-            }
-          }
-          function rejected(value) {
-            try {
-              step(generator["throw"](value));
-            } catch (e4) {
-              reject(e4);
-            }
-          }
-          function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-          }
-          step((generator = generator.apply(thisArg, _arguments || [])).next());
-        });
-      };
-      __generator2 = function(thisArg, body) {
-        var _5 = { label: 0, sent: function() {
-          if (t4[0] & 1)
-            throw t4[1];
-          return t4[1];
-        }, trys: [], ops: [] }, f4, y5, t4, g4;
-        return g4 = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g4[Symbol.iterator] = function() {
-          return this;
-        }), g4;
-        function verb(n2) {
-          return function(v3) {
-            return step([n2, v3]);
-          };
-        }
-        function step(op) {
-          if (f4)
-            throw new TypeError("Generator is already executing.");
-          while (g4 && (g4 = 0, op[0] && (_5 = 0)), _5)
-            try {
-              if (f4 = 1, y5 && (t4 = op[0] & 2 ? y5["return"] : op[0] ? y5["throw"] || ((t4 = y5["return"]) && t4.call(y5), 0) : y5.next) && !(t4 = t4.call(y5, op[1])).done)
-                return t4;
-              if (y5 = 0, t4)
-                op = [op[0] & 2, t4.value];
-              switch (op[0]) {
-                case 0:
-                case 1:
-                  t4 = op;
-                  break;
-                case 4:
-                  _5.label++;
-                  return { value: op[1], done: false };
-                case 5:
-                  _5.label++;
-                  y5 = op[1];
-                  op = [0];
-                  continue;
-                case 7:
-                  op = _5.ops.pop();
-                  _5.trys.pop();
-                  continue;
-                default:
-                  if (!(t4 = _5.trys, t4 = t4.length > 0 && t4[t4.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                    _5 = 0;
-                    continue;
-                  }
-                  if (op[0] === 3 && (!t4 || op[1] > t4[0] && op[1] < t4[3])) {
-                    _5.label = op[1];
-                    break;
-                  }
-                  if (op[0] === 6 && _5.label < t4[1]) {
-                    _5.label = t4[1];
-                    t4 = op;
-                    break;
-                  }
-                  if (t4 && _5.label < t4[2]) {
-                    _5.label = t4[2];
-                    _5.ops.push(op);
-                    break;
-                  }
-                  if (t4[2])
-                    _5.ops.pop();
-                  _5.trys.pop();
-                  continue;
-              }
-              op = body.call(thisArg, _5);
-            } catch (e4) {
-              op = [6, e4];
-              y5 = 0;
-            } finally {
-              f4 = t4 = 0;
-            }
-          if (op[0] & 5)
-            throw op[1];
-          return { value: op[0] ? op[1] : void 0, done: true };
-        }
-      };
-      __exportStar2 = function(m5, o3) {
-        for (var p3 in m5)
-          if (p3 !== "default" && !Object.prototype.hasOwnProperty.call(o3, p3))
-            __createBinding2(o3, m5, p3);
-      };
-      __createBinding2 = Object.create ? function(o3, m5, k5, k22) {
-        if (k22 === void 0)
-          k22 = k5;
-        var desc = Object.getOwnPropertyDescriptor(m5, k5);
-        if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
-          desc = { enumerable: true, get: function() {
-            return m5[k5];
-          } };
-        }
-        Object.defineProperty(o3, k22, desc);
-      } : function(o3, m5, k5, k22) {
-        if (k22 === void 0)
-          k22 = k5;
-        o3[k22] = m5[k5];
-      };
-      __values2 = function(o3) {
-        var s5 = typeof Symbol === "function" && Symbol.iterator, m5 = s5 && o3[s5], i4 = 0;
-        if (m5)
-          return m5.call(o3);
-        if (o3 && typeof o3.length === "number")
-          return {
-            next: function() {
-              if (o3 && i4 >= o3.length)
-                o3 = void 0;
-              return { value: o3 && o3[i4++], done: !o3 };
-            }
-          };
-        throw new TypeError(s5 ? "Object is not iterable." : "Symbol.iterator is not defined.");
-      };
-      __read2 = function(o3, n2) {
-        var m5 = typeof Symbol === "function" && o3[Symbol.iterator];
-        if (!m5)
-          return o3;
-        var i4 = m5.call(o3), r3, ar = [], e4;
-        try {
-          while ((n2 === void 0 || n2-- > 0) && !(r3 = i4.next()).done)
-            ar.push(r3.value);
-        } catch (error) {
-          e4 = { error };
-        } finally {
-          try {
-            if (r3 && !r3.done && (m5 = i4["return"]))
-              m5.call(i4);
-          } finally {
-            if (e4)
-              throw e4.error;
-          }
-        }
-        return ar;
-      };
-      __spread2 = function() {
-        for (var ar = [], i4 = 0; i4 < arguments.length; i4++)
-          ar = ar.concat(__read2(arguments[i4]));
-        return ar;
-      };
-      __spreadArrays2 = function() {
-        for (var s5 = 0, i4 = 0, il = arguments.length; i4 < il; i4++)
-          s5 += arguments[i4].length;
-        for (var r3 = Array(s5), k5 = 0, i4 = 0; i4 < il; i4++)
-          for (var a5 = arguments[i4], j4 = 0, jl = a5.length; j4 < jl; j4++, k5++)
-            r3[k5] = a5[j4];
-        return r3;
-      };
-      __spreadArray3 = function(to, from, pack) {
-        if (pack || arguments.length === 2)
-          for (var i4 = 0, l3 = from.length, ar; i4 < l3; i4++) {
-            if (ar || !(i4 in from)) {
-              if (!ar)
-                ar = Array.prototype.slice.call(from, 0, i4);
-              ar[i4] = from[i4];
-            }
-          }
-        return to.concat(ar || Array.prototype.slice.call(from));
-      };
-      __await2 = function(v3) {
-        return this instanceof __await2 ? (this.v = v3, this) : new __await2(v3);
-      };
-      __asyncGenerator2 = function(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var g4 = generator.apply(thisArg, _arguments || []), i4, q5 = [];
-        return i4 = {}, verb("next"), verb("throw"), verb("return"), i4[Symbol.asyncIterator] = function() {
-          return this;
-        }, i4;
-        function verb(n2) {
-          if (g4[n2])
-            i4[n2] = function(v3) {
-              return new Promise(function(a5, b4) {
-                q5.push([n2, v3, a5, b4]) > 1 || resume(n2, v3);
-              });
-            };
-        }
-        function resume(n2, v3) {
-          try {
-            step(g4[n2](v3));
-          } catch (e4) {
-            settle(q5[0][3], e4);
-          }
-        }
-        function step(r3) {
-          r3.value instanceof __await2 ? Promise.resolve(r3.value.v).then(fulfill, reject) : settle(q5[0][2], r3);
-        }
-        function fulfill(value) {
-          resume("next", value);
-        }
-        function reject(value) {
-          resume("throw", value);
-        }
-        function settle(f4, v3) {
-          if (f4(v3), q5.shift(), q5.length)
-            resume(q5[0][0], q5[0][1]);
-        }
-      };
-      __asyncDelegator2 = function(o3) {
-        var i4, p3;
-        return i4 = {}, verb("next"), verb("throw", function(e4) {
-          throw e4;
-        }), verb("return"), i4[Symbol.iterator] = function() {
-          return this;
-        }, i4;
-        function verb(n2, f4) {
-          i4[n2] = o3[n2] ? function(v3) {
-            return (p3 = !p3) ? { value: __await2(o3[n2](v3)), done: n2 === "return" } : f4 ? f4(v3) : v3;
-          } : f4;
-        }
-      };
-      __asyncValues2 = function(o3) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var m5 = o3[Symbol.asyncIterator], i4;
-        return m5 ? m5.call(o3) : (o3 = typeof __values2 === "function" ? __values2(o3) : o3[Symbol.iterator](), i4 = {}, verb("next"), verb("throw"), verb("return"), i4[Symbol.asyncIterator] = function() {
-          return this;
-        }, i4);
-        function verb(n2) {
-          i4[n2] = o3[n2] && function(v3) {
-            return new Promise(function(resolve, reject) {
-              v3 = o3[n2](v3), settle(resolve, reject, v3.done, v3.value);
-            });
-          };
-        }
-        function settle(resolve, reject, d5, v3) {
-          Promise.resolve(v3).then(function(v4) {
-            resolve({ value: v4, done: d5 });
-          }, reject);
-        }
-      };
-      __makeTemplateObject2 = function(cooked, raw) {
-        if (Object.defineProperty) {
-          Object.defineProperty(cooked, "raw", { value: raw });
-        } else {
-          cooked.raw = raw;
-        }
-        return cooked;
-      };
-      var __setModuleDefault = Object.create ? function(o3, v3) {
-        Object.defineProperty(o3, "default", { enumerable: true, value: v3 });
-      } : function(o3, v3) {
-        o3["default"] = v3;
-      };
-      __importStar2 = function(mod) {
-        if (mod && mod.__esModule)
-          return mod;
-        var result = {};
-        if (mod != null) {
-          for (var k5 in mod)
-            if (k5 !== "default" && Object.prototype.hasOwnProperty.call(mod, k5))
-              __createBinding2(result, mod, k5);
-        }
-        __setModuleDefault(result, mod);
-        return result;
-      };
-      __importDefault2 = function(mod) {
-        return mod && mod.__esModule ? mod : { "default": mod };
-      };
-      __classPrivateFieldGet2 = function(receiver, state, kind, f4) {
-        if (kind === "a" && !f4)
-          throw new TypeError("Private accessor was defined without a getter");
-        if (typeof state === "function" ? receiver !== state || !f4 : !state.has(receiver))
-          throw new TypeError("Cannot read private member from an object whose class did not declare it");
-        return kind === "m" ? f4 : kind === "a" ? f4.call(receiver) : f4 ? f4.value : state.get(receiver);
-      };
-      __classPrivateFieldSet2 = function(receiver, state, value, kind, f4) {
-        if (kind === "m")
-          throw new TypeError("Private method is not writable");
-        if (kind === "a" && !f4)
-          throw new TypeError("Private accessor was defined without a setter");
-        if (typeof state === "function" ? receiver !== state || !f4 : !state.has(receiver))
-          throw new TypeError("Cannot write private member to an object whose class did not declare it");
-        return kind === "a" ? f4.call(receiver, value) : f4 ? f4.value = value : state.set(receiver, value), value;
-      };
-      __classPrivateFieldIn2 = function(state, receiver) {
-        if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
-          throw new TypeError("Cannot use 'in' operator on non-object");
-        return typeof state === "function" ? receiver === state : state.has(receiver);
-      };
-      exporter("__extends", __extends2);
-      exporter("__assign", __assign3);
-      exporter("__rest", __rest3);
-      exporter("__decorate", __decorate2);
-      exporter("__param", __param2);
-      exporter("__metadata", __metadata2);
-      exporter("__awaiter", __awaiter2);
-      exporter("__generator", __generator2);
-      exporter("__exportStar", __exportStar2);
-      exporter("__createBinding", __createBinding2);
-      exporter("__values", __values2);
-      exporter("__read", __read2);
-      exporter("__spread", __spread2);
-      exporter("__spreadArrays", __spreadArrays2);
-      exporter("__spreadArray", __spreadArray3);
-      exporter("__await", __await2);
-      exporter("__asyncGenerator", __asyncGenerator2);
-      exporter("__asyncDelegator", __asyncDelegator2);
-      exporter("__asyncValues", __asyncValues2);
-      exporter("__makeTemplateObject", __makeTemplateObject2);
-      exporter("__importStar", __importStar2);
-      exporter("__importDefault", __importDefault2);
-      exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
-      exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
-      exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
-    });
-  }
-});
-
-// node_modules/classnames/index.js
-var require_classnames = __commonJS({
-  "node_modules/classnames/index.js"(exports, module2) {
-    (function() {
-      "use strict";
-      var hasOwn = {}.hasOwnProperty;
-      var nativeCodeString = "[native code]";
-      function classNames8() {
-        var classes = [];
-        for (var i4 = 0; i4 < arguments.length; i4++) {
-          var arg = arguments[i4];
-          if (!arg)
-            continue;
-          var argType = typeof arg;
-          if (argType === "string" || argType === "number") {
-            classes.push(arg);
-          } else if (Array.isArray(arg)) {
-            if (arg.length) {
-              var inner = classNames8.apply(null, arg);
-              if (inner) {
-                classes.push(inner);
-              }
-            }
-          } else if (argType === "object") {
-            if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
-              classes.push(arg.toString());
-              continue;
-            }
-            for (var key2 in arg) {
-              if (hasOwn.call(arg, key2) && arg[key2]) {
-                classes.push(key2);
-              }
-            }
-          }
-        }
-        return classes.join(" ");
-      }
-      if (typeof module2 !== "undefined" && module2.exports) {
-        classNames8.default = classNames8;
-        module2.exports = classNames8;
-      } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) {
-        define("classnames", [], function() {
-          return classNames8;
-        });
-      } else {
-        window.classNames = classNames8;
-      }
-    })();
-  }
-});
-
 // node_modules/lodash/lodash.js
 var require_lodash = __commonJS({
   "node_modules/lodash/lodash.js"(exports, module2) {
@@ -1225,7 +734,7 @@ var require_lodash = __commonJS({
         return string.match(reUnicodeWord) || [];
       }
       var runInContext = function runInContext2(context) {
-        context = context == null ? root : _5.defaults(root.Object(), context, _5.pick(root, contextProps));
+        context = context == null ? root : _7.defaults(root.Object(), context, _7.pick(root, contextProps));
         var Array2 = context.Array, Date2 = context.Date, Error2 = context.Error, Function2 = context.Function, Math2 = context.Math, Object2 = context.Object, RegExp2 = context.RegExp, String2 = context.String, TypeError2 = context.TypeError;
         var arrayProto = Array2.prototype, funcProto = Function2.prototype, objectProto = Object2.prototype;
         var coreJsData = context["__core-js_shared__"];
@@ -3951,7 +3460,7 @@ var require_lodash = __commonJS({
           comparator = typeof comparator == "function" ? comparator : undefined2;
           return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true), undefined2, comparator);
         });
-        function uniq6(array) {
+        function uniq5(array) {
           return array && array.length ? baseUniq(array) : [];
         }
         function uniqBy(array, iteratee2) {
@@ -5613,7 +5122,7 @@ var require_lodash = __commonJS({
         lodash.union = union;
         lodash.unionBy = unionBy;
         lodash.unionWith = unionWith;
-        lodash.uniq = uniq6;
+        lodash.uniq = uniq5;
         lodash.uniqBy = uniqBy;
         lodash.uniqWith = uniqWith;
         lodash.unset = unset;
@@ -5959,19 +5468,510 @@ var require_lodash = __commonJS({
         }
         return lodash;
       };
-      var _5 = runInContext();
+      var _7 = runInContext();
       if (typeof define == "function" && typeof define.amd == "object" && define.amd) {
-        root._ = _5;
+        root._ = _7;
         define(function() {
-          return _5;
+          return _7;
         });
       } else if (freeModule) {
-        (freeModule.exports = _5)._ = _5;
-        freeExports._ = _5;
+        (freeModule.exports = _7)._ = _7;
+        freeExports._ = _7;
       } else {
-        root._ = _5;
+        root._ = _7;
       }
     }).call(exports);
+  }
+});
+
+// node_modules/tslib/tslib.js
+var require_tslib = __commonJS({
+  "node_modules/tslib/tslib.js"(exports, module2) {
+    var __extends2;
+    var __assign3;
+    var __rest3;
+    var __decorate2;
+    var __param2;
+    var __metadata2;
+    var __awaiter2;
+    var __generator2;
+    var __exportStar2;
+    var __values2;
+    var __read2;
+    var __spread2;
+    var __spreadArrays2;
+    var __spreadArray3;
+    var __await2;
+    var __asyncGenerator2;
+    var __asyncDelegator2;
+    var __asyncValues2;
+    var __makeTemplateObject2;
+    var __importStar2;
+    var __importDefault2;
+    var __classPrivateFieldGet2;
+    var __classPrivateFieldSet2;
+    var __classPrivateFieldIn2;
+    var __createBinding2;
+    (function(factory) {
+      var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
+      if (typeof define === "function" && define.amd) {
+        define("tslib", ["exports"], function(exports2) {
+          factory(createExporter(root, createExporter(exports2)));
+        });
+      } else if (typeof module2 === "object" && typeof module2.exports === "object") {
+        factory(createExporter(root, createExporter(module2.exports)));
+      } else {
+        factory(createExporter(root));
+      }
+      function createExporter(exports2, previous) {
+        if (exports2 !== root) {
+          if (typeof Object.create === "function") {
+            Object.defineProperty(exports2, "__esModule", { value: true });
+          } else {
+            exports2.__esModule = true;
+          }
+        }
+        return function(id2, v3) {
+          return exports2[id2] = previous ? previous(id2, v3) : v3;
+        };
+      }
+    })(function(exporter) {
+      var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d5, b4) {
+        d5.__proto__ = b4;
+      } || function(d5, b4) {
+        for (var p3 in b4)
+          if (Object.prototype.hasOwnProperty.call(b4, p3))
+            d5[p3] = b4[p3];
+      };
+      __extends2 = function(d5, b4) {
+        if (typeof b4 !== "function" && b4 !== null)
+          throw new TypeError("Class extends value " + String(b4) + " is not a constructor or null");
+        extendStatics(d5, b4);
+        function __() {
+          this.constructor = d5;
+        }
+        d5.prototype = b4 === null ? Object.create(b4) : (__.prototype = b4.prototype, new __());
+      };
+      __assign3 = Object.assign || function(t4) {
+        for (var s5, i4 = 1, n2 = arguments.length; i4 < n2; i4++) {
+          s5 = arguments[i4];
+          for (var p3 in s5)
+            if (Object.prototype.hasOwnProperty.call(s5, p3))
+              t4[p3] = s5[p3];
+        }
+        return t4;
+      };
+      __rest3 = function(s5, e4) {
+        var t4 = {};
+        for (var p3 in s5)
+          if (Object.prototype.hasOwnProperty.call(s5, p3) && e4.indexOf(p3) < 0)
+            t4[p3] = s5[p3];
+        if (s5 != null && typeof Object.getOwnPropertySymbols === "function")
+          for (var i4 = 0, p3 = Object.getOwnPropertySymbols(s5); i4 < p3.length; i4++) {
+            if (e4.indexOf(p3[i4]) < 0 && Object.prototype.propertyIsEnumerable.call(s5, p3[i4]))
+              t4[p3[i4]] = s5[p3[i4]];
+          }
+        return t4;
+      };
+      __decorate2 = function(decorators, target, key2, desc) {
+        var c4 = arguments.length, r3 = c4 < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key2) : desc, d5;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+          r3 = Reflect.decorate(decorators, target, key2, desc);
+        else
+          for (var i4 = decorators.length - 1; i4 >= 0; i4--)
+            if (d5 = decorators[i4])
+              r3 = (c4 < 3 ? d5(r3) : c4 > 3 ? d5(target, key2, r3) : d5(target, key2)) || r3;
+        return c4 > 3 && r3 && Object.defineProperty(target, key2, r3), r3;
+      };
+      __param2 = function(paramIndex, decorator) {
+        return function(target, key2) {
+          decorator(target, key2, paramIndex);
+        };
+      };
+      __metadata2 = function(metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+          return Reflect.metadata(metadataKey, metadataValue);
+      };
+      __awaiter2 = function(thisArg, _arguments, P4, generator) {
+        function adopt(value) {
+          return value instanceof P4 ? value : new P4(function(resolve) {
+            resolve(value);
+          });
+        }
+        return new (P4 || (P4 = Promise))(function(resolve, reject) {
+          function fulfilled(value) {
+            try {
+              step(generator.next(value));
+            } catch (e4) {
+              reject(e4);
+            }
+          }
+          function rejected(value) {
+            try {
+              step(generator["throw"](value));
+            } catch (e4) {
+              reject(e4);
+            }
+          }
+          function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+          }
+          step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+      };
+      __generator2 = function(thisArg, body) {
+        var _7 = { label: 0, sent: function() {
+          if (t4[0] & 1)
+            throw t4[1];
+          return t4[1];
+        }, trys: [], ops: [] }, f4, y5, t4, g4;
+        return g4 = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g4[Symbol.iterator] = function() {
+          return this;
+        }), g4;
+        function verb(n2) {
+          return function(v3) {
+            return step([n2, v3]);
+          };
+        }
+        function step(op) {
+          if (f4)
+            throw new TypeError("Generator is already executing.");
+          while (g4 && (g4 = 0, op[0] && (_7 = 0)), _7)
+            try {
+              if (f4 = 1, y5 && (t4 = op[0] & 2 ? y5["return"] : op[0] ? y5["throw"] || ((t4 = y5["return"]) && t4.call(y5), 0) : y5.next) && !(t4 = t4.call(y5, op[1])).done)
+                return t4;
+              if (y5 = 0, t4)
+                op = [op[0] & 2, t4.value];
+              switch (op[0]) {
+                case 0:
+                case 1:
+                  t4 = op;
+                  break;
+                case 4:
+                  _7.label++;
+                  return { value: op[1], done: false };
+                case 5:
+                  _7.label++;
+                  y5 = op[1];
+                  op = [0];
+                  continue;
+                case 7:
+                  op = _7.ops.pop();
+                  _7.trys.pop();
+                  continue;
+                default:
+                  if (!(t4 = _7.trys, t4 = t4.length > 0 && t4[t4.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                    _7 = 0;
+                    continue;
+                  }
+                  if (op[0] === 3 && (!t4 || op[1] > t4[0] && op[1] < t4[3])) {
+                    _7.label = op[1];
+                    break;
+                  }
+                  if (op[0] === 6 && _7.label < t4[1]) {
+                    _7.label = t4[1];
+                    t4 = op;
+                    break;
+                  }
+                  if (t4 && _7.label < t4[2]) {
+                    _7.label = t4[2];
+                    _7.ops.push(op);
+                    break;
+                  }
+                  if (t4[2])
+                    _7.ops.pop();
+                  _7.trys.pop();
+                  continue;
+              }
+              op = body.call(thisArg, _7);
+            } catch (e4) {
+              op = [6, e4];
+              y5 = 0;
+            } finally {
+              f4 = t4 = 0;
+            }
+          if (op[0] & 5)
+            throw op[1];
+          return { value: op[0] ? op[1] : void 0, done: true };
+        }
+      };
+      __exportStar2 = function(m5, o3) {
+        for (var p3 in m5)
+          if (p3 !== "default" && !Object.prototype.hasOwnProperty.call(o3, p3))
+            __createBinding2(o3, m5, p3);
+      };
+      __createBinding2 = Object.create ? function(o3, m5, k5, k22) {
+        if (k22 === void 0)
+          k22 = k5;
+        var desc = Object.getOwnPropertyDescriptor(m5, k5);
+        if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
+          desc = { enumerable: true, get: function() {
+            return m5[k5];
+          } };
+        }
+        Object.defineProperty(o3, k22, desc);
+      } : function(o3, m5, k5, k22) {
+        if (k22 === void 0)
+          k22 = k5;
+        o3[k22] = m5[k5];
+      };
+      __values2 = function(o3) {
+        var s5 = typeof Symbol === "function" && Symbol.iterator, m5 = s5 && o3[s5], i4 = 0;
+        if (m5)
+          return m5.call(o3);
+        if (o3 && typeof o3.length === "number")
+          return {
+            next: function() {
+              if (o3 && i4 >= o3.length)
+                o3 = void 0;
+              return { value: o3 && o3[i4++], done: !o3 };
+            }
+          };
+        throw new TypeError(s5 ? "Object is not iterable." : "Symbol.iterator is not defined.");
+      };
+      __read2 = function(o3, n2) {
+        var m5 = typeof Symbol === "function" && o3[Symbol.iterator];
+        if (!m5)
+          return o3;
+        var i4 = m5.call(o3), r3, ar = [], e4;
+        try {
+          while ((n2 === void 0 || n2-- > 0) && !(r3 = i4.next()).done)
+            ar.push(r3.value);
+        } catch (error) {
+          e4 = { error };
+        } finally {
+          try {
+            if (r3 && !r3.done && (m5 = i4["return"]))
+              m5.call(i4);
+          } finally {
+            if (e4)
+              throw e4.error;
+          }
+        }
+        return ar;
+      };
+      __spread2 = function() {
+        for (var ar = [], i4 = 0; i4 < arguments.length; i4++)
+          ar = ar.concat(__read2(arguments[i4]));
+        return ar;
+      };
+      __spreadArrays2 = function() {
+        for (var s5 = 0, i4 = 0, il = arguments.length; i4 < il; i4++)
+          s5 += arguments[i4].length;
+        for (var r3 = Array(s5), k5 = 0, i4 = 0; i4 < il; i4++)
+          for (var a5 = arguments[i4], j4 = 0, jl = a5.length; j4 < jl; j4++, k5++)
+            r3[k5] = a5[j4];
+        return r3;
+      };
+      __spreadArray3 = function(to, from, pack) {
+        if (pack || arguments.length === 2)
+          for (var i4 = 0, l3 = from.length, ar; i4 < l3; i4++) {
+            if (ar || !(i4 in from)) {
+              if (!ar)
+                ar = Array.prototype.slice.call(from, 0, i4);
+              ar[i4] = from[i4];
+            }
+          }
+        return to.concat(ar || Array.prototype.slice.call(from));
+      };
+      __await2 = function(v3) {
+        return this instanceof __await2 ? (this.v = v3, this) : new __await2(v3);
+      };
+      __asyncGenerator2 = function(thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator)
+          throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g4 = generator.apply(thisArg, _arguments || []), i4, q5 = [];
+        return i4 = {}, verb("next"), verb("throw"), verb("return"), i4[Symbol.asyncIterator] = function() {
+          return this;
+        }, i4;
+        function verb(n2) {
+          if (g4[n2])
+            i4[n2] = function(v3) {
+              return new Promise(function(a5, b4) {
+                q5.push([n2, v3, a5, b4]) > 1 || resume(n2, v3);
+              });
+            };
+        }
+        function resume(n2, v3) {
+          try {
+            step(g4[n2](v3));
+          } catch (e4) {
+            settle(q5[0][3], e4);
+          }
+        }
+        function step(r3) {
+          r3.value instanceof __await2 ? Promise.resolve(r3.value.v).then(fulfill, reject) : settle(q5[0][2], r3);
+        }
+        function fulfill(value) {
+          resume("next", value);
+        }
+        function reject(value) {
+          resume("throw", value);
+        }
+        function settle(f4, v3) {
+          if (f4(v3), q5.shift(), q5.length)
+            resume(q5[0][0], q5[0][1]);
+        }
+      };
+      __asyncDelegator2 = function(o3) {
+        var i4, p3;
+        return i4 = {}, verb("next"), verb("throw", function(e4) {
+          throw e4;
+        }), verb("return"), i4[Symbol.iterator] = function() {
+          return this;
+        }, i4;
+        function verb(n2, f4) {
+          i4[n2] = o3[n2] ? function(v3) {
+            return (p3 = !p3) ? { value: __await2(o3[n2](v3)), done: n2 === "return" } : f4 ? f4(v3) : v3;
+          } : f4;
+        }
+      };
+      __asyncValues2 = function(o3) {
+        if (!Symbol.asyncIterator)
+          throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m5 = o3[Symbol.asyncIterator], i4;
+        return m5 ? m5.call(o3) : (o3 = typeof __values2 === "function" ? __values2(o3) : o3[Symbol.iterator](), i4 = {}, verb("next"), verb("throw"), verb("return"), i4[Symbol.asyncIterator] = function() {
+          return this;
+        }, i4);
+        function verb(n2) {
+          i4[n2] = o3[n2] && function(v3) {
+            return new Promise(function(resolve, reject) {
+              v3 = o3[n2](v3), settle(resolve, reject, v3.done, v3.value);
+            });
+          };
+        }
+        function settle(resolve, reject, d5, v3) {
+          Promise.resolve(v3).then(function(v4) {
+            resolve({ value: v4, done: d5 });
+          }, reject);
+        }
+      };
+      __makeTemplateObject2 = function(cooked, raw) {
+        if (Object.defineProperty) {
+          Object.defineProperty(cooked, "raw", { value: raw });
+        } else {
+          cooked.raw = raw;
+        }
+        return cooked;
+      };
+      var __setModuleDefault = Object.create ? function(o3, v3) {
+        Object.defineProperty(o3, "default", { enumerable: true, value: v3 });
+      } : function(o3, v3) {
+        o3["default"] = v3;
+      };
+      __importStar2 = function(mod) {
+        if (mod && mod.__esModule)
+          return mod;
+        var result = {};
+        if (mod != null) {
+          for (var k5 in mod)
+            if (k5 !== "default" && Object.prototype.hasOwnProperty.call(mod, k5))
+              __createBinding2(result, mod, k5);
+        }
+        __setModuleDefault(result, mod);
+        return result;
+      };
+      __importDefault2 = function(mod) {
+        return mod && mod.__esModule ? mod : { "default": mod };
+      };
+      __classPrivateFieldGet2 = function(receiver, state, kind, f4) {
+        if (kind === "a" && !f4)
+          throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f4 : !state.has(receiver))
+          throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f4 : kind === "a" ? f4.call(receiver) : f4 ? f4.value : state.get(receiver);
+      };
+      __classPrivateFieldSet2 = function(receiver, state, value, kind, f4) {
+        if (kind === "m")
+          throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f4)
+          throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f4 : !state.has(receiver))
+          throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return kind === "a" ? f4.call(receiver, value) : f4 ? f4.value = value : state.set(receiver, value), value;
+      };
+      __classPrivateFieldIn2 = function(state, receiver) {
+        if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
+          throw new TypeError("Cannot use 'in' operator on non-object");
+        return typeof state === "function" ? receiver === state : state.has(receiver);
+      };
+      exporter("__extends", __extends2);
+      exporter("__assign", __assign3);
+      exporter("__rest", __rest3);
+      exporter("__decorate", __decorate2);
+      exporter("__param", __param2);
+      exporter("__metadata", __metadata2);
+      exporter("__awaiter", __awaiter2);
+      exporter("__generator", __generator2);
+      exporter("__exportStar", __exportStar2);
+      exporter("__createBinding", __createBinding2);
+      exporter("__values", __values2);
+      exporter("__read", __read2);
+      exporter("__spread", __spread2);
+      exporter("__spreadArrays", __spreadArrays2);
+      exporter("__spreadArray", __spreadArray3);
+      exporter("__await", __await2);
+      exporter("__asyncGenerator", __asyncGenerator2);
+      exporter("__asyncDelegator", __asyncDelegator2);
+      exporter("__asyncValues", __asyncValues2);
+      exporter("__makeTemplateObject", __makeTemplateObject2);
+      exporter("__importStar", __importStar2);
+      exporter("__importDefault", __importDefault2);
+      exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
+      exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
+      exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
+    });
+  }
+});
+
+// node_modules/classnames/index.js
+var require_classnames = __commonJS({
+  "node_modules/classnames/index.js"(exports, module2) {
+    (function() {
+      "use strict";
+      var hasOwn = {}.hasOwnProperty;
+      var nativeCodeString = "[native code]";
+      function classNames8() {
+        var classes = [];
+        for (var i4 = 0; i4 < arguments.length; i4++) {
+          var arg = arguments[i4];
+          if (!arg)
+            continue;
+          var argType = typeof arg;
+          if (argType === "string" || argType === "number") {
+            classes.push(arg);
+          } else if (Array.isArray(arg)) {
+            if (arg.length) {
+              var inner = classNames8.apply(null, arg);
+              if (inner) {
+                classes.push(inner);
+              }
+            }
+          } else if (argType === "object") {
+            if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
+              classes.push(arg.toString());
+              continue;
+            }
+            for (var key2 in arg) {
+              if (hasOwn.call(arg, key2) && arg[key2]) {
+                classes.push(key2);
+              }
+            }
+          }
+        }
+        return classes.join(" ");
+      }
+      if (typeof module2 !== "undefined" && module2.exports) {
+        classNames8.default = classNames8;
+        module2.exports = classNames8;
+      } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) {
+        define("classnames", [], function() {
+          return classNames8;
+        });
+      } else {
+        window.classNames = classNames8;
+      }
+    })();
   }
 });
 
@@ -8383,59 +8383,6 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 
-// src/cm-extensions/flowEditor/atomic.ts
-var import_state6 = require("@codemirror/state");
-
-// src/types/types.ts
-var eventTypes = {
-  selectedFileChange: "mkmd-selected-file-change",
-  activeFileChange: "mkmd-active-file-change",
-  refreshView: "mkmd-refresh-view",
-  revealFile: "mkmd-reveal-file",
-  tagsChange: "mkmd-tags-change",
-  vaultChange: "mkmd-vault-change",
-  mdbChange: "mkmd-mdb-change",
-  spacesChange: "mkmd-spaces-change",
-  updateSections: "mkmd-update-sections",
-  settingsChanged: "mkmd-settings-changed",
-  spawnPortal: "mkmd-portal-spawn",
-  loadPortal: "mkmd-portal-load",
-  openFilePortal: "mkmd-portal-file",
-  focusPortal: "mkmd-portal-focus"
-};
-
-// src/dispatch/flowDispatch.ts
-var createFlowEditorInElement = (id2, el, type, file, ref, from, to) => {
-  let evt = new CustomEvent(eventTypes.spawnPortal, {
-    detail: { id: id2, el, file, from, to, ref, type }
-  });
-  activeWindow.dispatchEvent(evt);
-};
-var loadFlowEditorByDOM = (el, view, id2) => {
-  let evt = new CustomEvent(eventTypes.loadPortal, {
-    detail: { id: id2, el, view }
-  });
-  activeWindow.dispatchEvent(evt);
-};
-var focusFlowEditor = (id2, top) => {
-  let evt = new CustomEvent(eventTypes.focusPortal, {
-    detail: { id: id2, parent: false, top }
-  });
-  activeWindow.dispatchEvent(evt);
-};
-var focusFlowEditorParent = (id2, top) => {
-  let evt = new CustomEvent(eventTypes.focusPortal, {
-    detail: { id: id2, parent: true, top }
-  });
-  activeWindow.dispatchEvent(evt);
-};
-var openFileFlowEditor = (file, source) => {
-  let evt = new CustomEvent(eventTypes.openFilePortal, {
-    detail: { file, source }
-  });
-  activeWindow.dispatchEvent(evt);
-};
-
 // src/cm-extensions/markSans/callout.tsx
 var import_language = require("@codemirror/language");
 var import_state = require("@codemirror/state");
@@ -8461,7 +8408,7 @@ var flowIDStateField = import_state.StateField.define({
   }
 });
 var flowTypeStateField = import_state.StateField.define({
-  create: () => "none",
+  create: (state) => "none",
   update(value, tr) {
     if (tr.annotation(portalTypeAnnotation))
       return tr.annotation(portalTypeAnnotation);
@@ -8575,7 +8522,7 @@ var calloutBlock = (range, text2, id2) => import_view.Decoration.widget({
 });
 
 // src/cm-extensions/flowEditor/flowEditor.tsx
-var import_state5 = require("@codemirror/state");
+var import_state6 = require("@codemirror/state");
 var import_view4 = require("@codemirror/view");
 
 // src/cm-extensions/tooltip.ts
@@ -9315,14 +9262,14 @@ function T(n2) {
   this.l[n2.type + true](l.event ? l.event(n2) : n2);
 }
 function j(n2, u4, i4, t4, o3, r3, f4, e4, c4) {
-  var a5, h5, v3, y5, _5, k5, b4, g4, m5, x5, A4, C3, $3, H5, I4, T6 = u4.type;
+  var a5, h5, v3, y5, _7, k5, b4, g4, m5, x5, A4, C3, $3, H5, I4, T6 = u4.type;
   if (void 0 !== u4.constructor)
     return null;
   null != i4.__h && (c4 = i4.__h, e4 = u4.__e = i4.__e, u4.__h = null, r3 = [e4]), (a5 = l.__b) && a5(u4);
   try {
     n:
       if ("function" == typeof T6) {
-        if (g4 = u4.props, m5 = (a5 = T6.contextType) && t4[a5.__c], x5 = a5 ? m5 ? m5.props.value : a5.__ : t4, i4.__c ? b4 = (h5 = u4.__c = i4.__c).__ = h5.__E : ("prototype" in T6 && T6.prototype.render ? u4.__c = h5 = new T6(g4, x5) : (u4.__c = h5 = new d(g4, x5), h5.constructor = T6, h5.render = O), m5 && m5.sub(h5), h5.props = g4, h5.state || (h5.state = {}), h5.context = x5, h5.__n = t4, v3 = h5.__d = true, h5.__h = [], h5._sb = []), null == h5.__s && (h5.__s = h5.state), null != T6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = s({}, h5.__s)), s(h5.__s, T6.getDerivedStateFromProps(g4, h5.__s))), y5 = h5.props, _5 = h5.state, v3)
+        if (g4 = u4.props, m5 = (a5 = T6.contextType) && t4[a5.__c], x5 = a5 ? m5 ? m5.props.value : a5.__ : t4, i4.__c ? b4 = (h5 = u4.__c = i4.__c).__ = h5.__E : ("prototype" in T6 && T6.prototype.render ? u4.__c = h5 = new T6(g4, x5) : (u4.__c = h5 = new d(g4, x5), h5.constructor = T6, h5.render = O), m5 && m5.sub(h5), h5.props = g4, h5.state || (h5.state = {}), h5.context = x5, h5.__n = t4, v3 = h5.__d = true, h5.__h = [], h5._sb = []), null == h5.__s && (h5.__s = h5.state), null != T6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = s({}, h5.__s)), s(h5.__s, T6.getDerivedStateFromProps(g4, h5.__s))), y5 = h5.props, _7 = h5.state, v3)
           null == T6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
         else {
           if (null == T6.getDerivedStateFromProps && g4 !== y5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(g4, x5), !h5.__e && null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(g4, h5.__s, x5) || u4.__v === i4.__v) {
@@ -9334,7 +9281,7 @@ function j(n2, u4, i4, t4, o3, r3, f4, e4, c4) {
             break n;
           }
           null != h5.componentWillUpdate && h5.componentWillUpdate(g4, h5.__s, x5), null != h5.componentDidUpdate && h5.__h.push(function() {
-            h5.componentDidUpdate(y5, _5, k5);
+            h5.componentDidUpdate(y5, _7, k5);
           });
         }
         if (h5.context = x5, h5.props = g4, h5.__v = u4, h5.__P = n2, C3 = l.__r, $3 = 0, "prototype" in T6 && T6.prototype.render) {
@@ -9345,7 +9292,7 @@ function j(n2, u4, i4, t4, o3, r3, f4, e4, c4) {
           do {
             h5.__d = false, C3 && C3(u4), a5 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
           } while (h5.__d && ++$3 < 25);
-        h5.state = h5.__s, null != h5.getChildContext && (t4 = s(s({}, t4), h5.getChildContext())), v3 || null == h5.getSnapshotBeforeUpdate || (k5 = h5.getSnapshotBeforeUpdate(y5, _5)), I4 = null != a5 && a5.type === p && null == a5.key ? a5.props.children : a5, w(n2, Array.isArray(I4) ? I4 : [I4], u4, i4, t4, o3, r3, f4, e4, c4), h5.base = u4.__e, u4.__h = null, h5.__h.length && f4.push(h5), b4 && (h5.__E = h5.__ = null), h5.__e = false;
+        h5.state = h5.__s, null != h5.getChildContext && (t4 = s(s({}, t4), h5.getChildContext())), v3 || null == h5.getSnapshotBeforeUpdate || (k5 = h5.getSnapshotBeforeUpdate(y5, _7)), I4 = null != a5 && a5.type === p && null == a5.key ? a5.props.children : a5, w(n2, Array.isArray(I4) ? I4 : [I4], u4, i4, t4, o3, r3, f4, e4, c4), h5.base = u4.__e, u4.__h = null, h5.__h.length && f4.push(h5), b4 && (h5.__E = h5.__ = null), h5.__e = false;
       } else
         null == r3 && u4.__v === i4.__v ? (u4.__k = i4.__k, u4.__e = i4.__e) : u4.__e = L(i4.__e, u4, i4, t4, o3, r3, f4, c4);
     (a5 = l.diffed) && a5(u4);
@@ -9991,6 +9938,9 @@ function iterateTreeInSelection(selection, state, iterateFns) {
     to: selection.to
   });
 }
+function iterateTreeInDocument(state, iterateFns) {
+  (0, import_language2.syntaxTree)(state).iterate({ ...iterateFns });
+}
 
 // src/i18n.ts
 var T4 = class {
@@ -10105,9 +10055,12 @@ var T4 = class {
           newNote: "New Note",
           changeIcon: "Change Sticker",
           removeIcon: "Remove Sticker",
+          changeBanner: "Change Banner",
+          removeBanner: "Remove Banner",
           rename: "Change Name",
           createFolder: "New Folder",
           createNote: "New Note",
+          createCanvas: "New Canvas",
           createSection: "New Space",
           cancel: "Cancel",
           search: "Search",
@@ -10268,6 +10221,10 @@ var T4 = class {
           sectionAdvanced: "Advanced",
           sectionAppearance: "Appearance",
           sectionContext: "Context",
+          folderIndentationLines: {
+            name: "Show Folder Indentation Lines",
+            desc: "Turn on to show a line on the left of folders to indicate indentation"
+          },
           folderNoteLocation: {
             name: "Folder Note Location Inside Folder",
             desc: "Turn on to have folder notes inside the folder, turn off to have it outside"
@@ -10279,6 +10236,18 @@ var T4 = class {
           syncContextToFrontmatter: {
             name: "Sync Context Fields to Frontmatter",
             desc: "Turn on to automatically save all context fields to frontmatter fields, not just existing frontmatter fields."
+          },
+          inlineBacklinks: {
+            name: "Show Inline Backlinks (Inline Context required)",
+            desc: "Show editable backlinks at the bottom of your notes"
+          },
+          inlineContextExplorer: {
+            name: "Show Inline Context",
+            desc: "Show the context and a banner at the top of your notes"
+          },
+          hideFrontmatter: {
+            name: "Hide Frontmatter",
+            desc: "Hide the frontmatter when inline context is enabled"
           },
           openFileContext: {
             name: "Auto Open Context Explorer",
@@ -10384,6 +10353,23 @@ var T4 = class {
 var i18n_default = new T4().texts;
 
 // src/utils/icons.ts
+var defaultIconForExtension = (type, solid) => {
+  switch (type) {
+    case "png":
+    case "jpg":
+    case "jpeg":
+    case "svg":
+      return makeIconSet["mk-make-image"];
+      break;
+    case "mov":
+    case "webm":
+      return uiIconSet["mk-ui-video"];
+      break;
+    case "canvas":
+      return uiIconSet["mk-ui-canvas"];
+  }
+  return solid ? uiIconSet["mk-ui-file-solid"] : uiIconSet["mk-ui-file"];
+};
 var uiIconSet = {
   "mk-ui-close": `<svg xmlns="http://www.w3.org/2000/svg" width='24px' height='24px' fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -10477,6 +10463,25 @@ var uiIconSet = {
 `,
   "mk-ui-cut": `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 <path stroke-linecap="round" stroke-linejoin="round" d="M7.848 8.25l1.536.887M7.848 8.25a3 3 0 11-5.196-3 3 3 0 015.196 3zm1.536.887a2.165 2.165 0 011.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 11-5.196 3 3 3 0 015.196-3zm1.536-.887a2.165 2.165 0 001.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863l2.077-1.199m0-3.328a4.323 4.323 0 012.068-1.379l5.325-1.628a4.5 4.5 0 012.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.331 4.331 0 0010.607 12m3.736 0l7.794 4.5-.802.215a4.5 4.5 0 01-2.48-.043l-5.326-1.629a4.324 4.324 0 01-2.068-1.379M14.343 12l-2.882 1.664" />
+</svg>
+`,
+  "mk-ui-backlink": `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.784 9.716a4.333 4.333 0 0 0-6.128 0L3.323 14.05a4.332 4.332 0 1 0 6.127 6.127l1.194-1.193m-.821-5.307a4.333 4.333 0 0 0 6.127 0l4.334-4.333a4.333 4.333 0 0 0-6.128-6.128l-1.191 1.192"/>
+<path fill="currentColor" d="M15.646 19.646a.5.5 0 0 0 0 .708l3.182 3.181a.5.5 0 1 0 .707-.707L16.707 20l2.828-2.828a.5.5 0 1 0-.707-.707l-3.182 3.181ZM23 20.5a.5.5 0 0 0 0-1v1Zm-7 0h7v-1h-7v1Z"/>
+</svg>`,
+  "mk-ui-canvas": `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.5" y="2.5" width="4" height="6" rx="0.5" stroke="currentColor"/>
+<rect x="2.5" y="10.5" width="4" height="3" rx="0.5" stroke="currentColor"/>
+<rect x="9.5" y="7.5" width="4" height="6" rx="0.5" stroke="currentColor"/>
+<rect x="9.5" y="2.5" width="4" height="3" rx="0.5" stroke="currentColor"/>
+</svg>
+`,
+  "mk-ui-video": `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0118 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 016 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5" />
+</svg>
+`,
+  "mk-ui-edit": `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
 </svg>
 `
 };
@@ -10643,33 +10648,81 @@ var FlowEditorHover = (props2) => {
   return props2.type == "file" ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, props2.toggle && /* @__PURE__ */ bn.createElement("div", {
     "aria-label": i18n_default.buttons.toggleFlow,
     onClick: props2.toggleFlow,
-    className: props2.toggleState ? "mk-toggle-on" : "",
+    className: `mk-hover-button ${props2.toggleState ? "mk-toggle-on" : ""}`,
     dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-flow-hover"] }
   }), /* @__PURE__ */ bn.createElement("div", {
     "aria-label": i18n_default.buttons.openLink,
     onClick: props2.openLink,
+    className: "mk-hover-button",
     dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-open-link"] }
   })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
     "aria-label": i18n_default.buttons.cutTable,
     onClick: props2.cutTable,
-    className: "mk-icon-xsmall",
+    className: "mk-icon-xsmall mk-hover-button",
     dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-cut"] }
   }), /* @__PURE__ */ bn.createElement("div", {
     "aria-label": i18n_default.buttons.deleteTable,
     onClick: props2.deleteTable,
-    className: "mk-icon-xsmall",
+    className: "mk-icon-xsmall mk-hover-button",
     dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-close"] }
   }));
 };
 
+// src/types/types.ts
+var eventTypes = {
+  selectedFileChange: "mkmd-selected-file-change",
+  activeFileChange: "mkmd-active-file-change",
+  refreshView: "mkmd-refresh-view",
+  revealFile: "mkmd-reveal-file",
+  tagsChange: "mkmd-tags-change",
+  vaultChange: "mkmd-vault-change",
+  mdbChange: "mkmd-mdb-change",
+  spacesChange: "mkmd-spaces-change",
+  updateSections: "mkmd-update-sections",
+  settingsChanged: "mkmd-settings-changed",
+  spawnPortal: "mkmd-portal-spawn",
+  loadPortal: "mkmd-portal-load",
+  openFilePortal: "mkmd-portal-file",
+  focusPortal: "mkmd-portal-focus"
+};
+
+// src/dispatch/flowDispatch.ts
+var createFlowEditorInElement = (id2, el, type, file, ref, from, to) => {
+  let evt = new CustomEvent(eventTypes.spawnPortal, {
+    detail: { id: id2, el, file, from, to, ref, type }
+  });
+  activeWindow.dispatchEvent(evt);
+};
+var loadFlowEditorByDOM = (el, view, id2) => {
+  let evt = new CustomEvent(eventTypes.loadPortal, {
+    detail: { id: id2, el, view }
+  });
+  activeWindow.dispatchEvent(evt);
+};
+var focusFlowEditor = (id2, top) => {
+  let evt = new CustomEvent(eventTypes.focusPortal, {
+    detail: { id: id2, parent: false, top }
+  });
+  activeWindow.dispatchEvent(evt);
+};
+var focusFlowEditorParent = (id2, top) => {
+  let evt = new CustomEvent(eventTypes.focusPortal, {
+    detail: { id: id2, parent: true, top }
+  });
+  activeWindow.dispatchEvent(evt);
+};
+var openFileFlowEditor = (file, source) => {
+  let evt = new CustomEvent(eventTypes.openFilePortal, {
+    detail: { file, source }
+  });
+  activeWindow.dispatchEvent(evt);
+};
+
 // src/utils/tree.ts
-var import_obsidian29 = require("obsidian");
+var import_obsidian32 = require("obsidian");
 
 // src/components/ContextView/ContextView.tsx
-var import_obsidian27 = require("obsidian");
-
-// src/utils/contexts/contexts.ts
-var import_obsidian = require("obsidian");
+var import_obsidian30 = require("obsidian");
 
 // src/utils/contexts/predicate/filter.ts
 var stringEqual = (value, filterValue) => {
@@ -10691,25 +10744,25 @@ var listIncludes = (value, filterValue) => {
 };
 var filterFnTypes = {
   include: {
-    type: ["text", "file", "link", "link-multi", "tag", "tag-multi", "fileprop"],
+    type: ["text", "file", "link", "link-multi", "fileprop"],
     fn: stringCompare,
     label: i18n_default.filterTypes.contains,
     valueType: "text"
   },
   notInclude: {
-    type: ["text", "file", "link", "link-multi", "tag", "tag-multi", "fileprop"],
+    type: ["text", "file", "link", "link-multi", "fileprop"],
     fn: (v3, f4) => !stringCompare(v3, f4),
     label: i18n_default.filterTypes.notContains,
     valueType: "text"
   },
   is: {
-    type: ["text", "file", "link", "context", "tag"],
+    type: ["text", "file", "link", "context", "fileprop"],
     fn: stringEqual,
     label: i18n_default.filterTypes.is,
     valueType: "text"
   },
   isNot: {
-    type: ["text", "file", "link", "context", "tag"],
+    type: ["text", "file", "link", "context", "fileprop"],
     fn: (v3, f4) => !stringEqual(v3, f4),
     label: i18n_default.filterTypes.isNot,
     valueType: "text"
@@ -10928,8 +10981,3802 @@ var splitPropString = (str) => {
   return (_a2 = str == null ? void 0 : str.match(/(\\.|[^.])+/g)) != null ? _a2 : [];
 };
 
-// src/utils/contexts/contexts.ts
-var tagFromString = (tag) => {
+// src/utils/contexts/tags.ts
+var import_obsidian5 = require("obsidian");
+
+// src/utils/contexts/mdb.ts
+var import_lodash3 = __toESM(require_lodash());
+
+// src/utils/array.ts
+var insert = (arr, index, newItem) => [
+  ...arr.slice(0, index),
+  newItem,
+  ...arr.slice(index)
+];
+
+// src/utils/sanitize.ts
+var sanitizeTableName = (name) => {
+  return name == null ? void 0 : name.replace(/[^a-z0-9+]+/gi, "");
+};
+var sanitizeColumnName = (name) => {
+  if ((name == null ? void 0 : name.charAt(0)) == "_") {
+    return sanitizeColumnName(name.substring(1));
+  }
+  return name == null ? void 0 : name.replace(/"/g, ``);
+};
+var sanitizeSQLStatement = (name) => {
+  return name == null ? void 0 : name.replace(/'/g, `''`);
+};
+
+// src/schemas/mdb.ts
+var fieldTypes = [
+  {
+    type: "unknown",
+    label: "",
+    restricted: true
+  },
+  {
+    type: "preview",
+    label: i18n_default.properties.preview.label,
+    restricted: true
+  },
+  {
+    type: "text",
+    label: i18n_default.properties.text.label,
+    metadata: true
+  },
+  {
+    type: "number",
+    label: i18n_default.properties.number.label,
+    metadata: true
+  },
+  {
+    type: "boolean",
+    label: i18n_default.properties.boolean.label,
+    metadata: true
+  },
+  {
+    type: "date",
+    label: i18n_default.properties.date.label,
+    metadata: true
+  },
+  {
+    type: "option",
+    label: i18n_default.properties.option.label,
+    multi: true,
+    multiType: "option-multi"
+  },
+  {
+    type: "file",
+    label: i18n_default.properties.file.label,
+    restricted: true
+  },
+  {
+    type: "fileprop",
+    label: i18n_default.properties.fileProperty.label
+  },
+  {
+    type: "link",
+    label: i18n_default.properties.link.label,
+    multi: true,
+    multiType: "link-multi",
+    metadata: true
+  },
+  {
+    type: "context",
+    label: i18n_default.properties.context.label,
+    multi: true,
+    multiType: "context-multi"
+  },
+  {
+    type: "image",
+    label: i18n_default.properties.image.label,
+    multi: true,
+    multiType: "image-multi",
+    metadata: true
+  }
+];
+var defaultFileDBSchema = {
+  id: "files",
+  name: "Files",
+  type: "db",
+  primary: "true"
+};
+var defaultFileListSchema = {
+  id: "filesView",
+  name: "Files",
+  type: "list",
+  def: "files"
+};
+var defaultFileTableSchema = {
+  id: "filesView",
+  name: "Files",
+  type: "table",
+  def: "files"
+};
+var defaultFolderSchema = {
+  uniques: ["id"],
+  cols: ["id", "name", "type", "def", "predicate", "primary"],
+  rows: [defaultFileDBSchema, defaultFileListSchema]
+};
+var defaultTagSchema = {
+  uniques: ["id"],
+  cols: ["id", "name", "type", "def", "predicate", "primary"],
+  rows: [defaultFileDBSchema, defaultFileTableSchema]
+};
+var fieldSchema = {
+  uniques: ["name,schemaId"],
+  cols: [
+    "name",
+    "schemaId",
+    "type",
+    "value",
+    "attrs",
+    "hidden",
+    "unique",
+    "primary"
+  ]
+};
+var defaultFolderFields = {
+  ...fieldSchema,
+  rows: [
+    {
+      name: "_id",
+      schemaId: "files",
+      type: "id",
+      unique: "true",
+      hidden: "true",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: "_source",
+      schemaId: "files",
+      type: "source",
+      hidden: "true",
+      unique: "",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: i18n_default.properties.preview.label,
+      schemaId: "files",
+      type: "preview",
+      hidden: "",
+      unique: "",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: "File",
+      schemaId: "files",
+      type: "file",
+      primary: "true",
+      hidden: "",
+      unique: "",
+      attrs: "",
+      value: ""
+    },
+    {
+      name: i18n_default.properties.fileProperty.createdTime,
+      schemaId: "files",
+      type: "fileprop",
+      value: "File.ctime",
+      hidden: "",
+      unique: "",
+      attrs: "",
+      primary: ""
+    }
+  ]
+};
+var defaultTableFields = [
+  {
+    name: i18n_default.properties.defaultField,
+    schemaId: "",
+    type: "text"
+  }
+];
+var defaultTagFields = {
+  ...fieldSchema,
+  rows: [
+    {
+      name: "_id",
+      schemaId: "files",
+      type: "id",
+      unique: "true",
+      hidden: "true",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: "_source",
+      schemaId: "files",
+      type: "source",
+      hidden: "true",
+      unique: "",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: "_sourceId",
+      schemaId: "files",
+      type: "sourceid",
+      hidden: "true",
+      unique: "",
+      attrs: "",
+      value: "",
+      primary: ""
+    },
+    {
+      name: "File",
+      schemaId: "files",
+      type: "file",
+      primary: "true",
+      hidden: "",
+      unique: "",
+      attrs: "",
+      value: ""
+    }
+  ]
+};
+var defaultFolderMDBTable = {
+  schema: defaultFileDBSchema,
+  cols: defaultFolderFields.rows,
+  rows: []
+};
+var defaultTagMDBTable = {
+  schema: defaultFileDBSchema,
+  cols: defaultTagFields.rows,
+  rows: []
+};
+var fieldsToTable = (fields, schemas) => {
+  return fields.filter((s5) => schemas.find((g4) => g4.id == s5.schemaId && g4.type == "db")).reduce((p3, c4) => {
+    return {
+      ...p3,
+      ...p3[c4.schemaId] ? {
+        [c4.schemaId]: {
+          uniques: c4.unique == "true" ? [...p3[c4.schemaId].uniques, c4.name] : p3[c4.schemaId].uniques,
+          cols: [...p3[c4.schemaId].cols, c4.name],
+          rows: []
+        }
+      } : {
+        [c4.schemaId]: {
+          uniques: c4.unique == "true" ? [c4.name] : [],
+          cols: [c4.name],
+          rows: []
+        }
+      }
+    };
+  }, {});
+};
+var defaultFolderTables = {
+  m_schema: defaultFolderSchema,
+  m_fields: defaultFolderFields,
+  ...fieldsToTable(
+    defaultFolderFields.rows,
+    defaultFolderSchema.rows
+  )
+};
+var defaultTagTables = {
+  m_schema: defaultTagSchema,
+  m_fields: defaultTagFields,
+  ...fieldsToTable(
+    defaultTagFields.rows,
+    defaultTagSchema.rows
+  )
+};
+
+// src/dispatch/mdb.ts
+var import_lodash2 = __toESM(require_lodash());
+var import_obsidian3 = require("obsidian");
+
+// node_modules/date-fns/esm/_lib/toInteger/index.js
+function toInteger(dirtyNumber) {
+  if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
+    return NaN;
+  }
+  var number = Number(dirtyNumber);
+  if (isNaN(number)) {
+    return number;
+  }
+  return number < 0 ? Math.ceil(number) : Math.floor(number);
+}
+
+// node_modules/date-fns/esm/_lib/requiredArgs/index.js
+function requiredArgs(required, args) {
+  if (args.length < required) {
+    throw new TypeError(required + " argument" + (required > 1 ? "s" : "") + " required, but only " + args.length + " present");
+  }
+}
+
+// node_modules/date-fns/esm/toDate/index.js
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof5(obj2) {
+      return typeof obj2;
+    };
+  } else {
+    _typeof = function _typeof5(obj2) {
+      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+    };
+  }
+  return _typeof(obj);
+}
+function toDate(argument) {
+  requiredArgs(1, arguments);
+  var argStr = Object.prototype.toString.call(argument);
+  if (argument instanceof Date || _typeof(argument) === "object" && argStr === "[object Date]") {
+    return new Date(argument.getTime());
+  } else if (typeof argument === "number" || argStr === "[object Number]") {
+    return new Date(argument);
+  } else {
+    if ((typeof argument === "string" || argStr === "[object String]") && typeof console !== "undefined") {
+      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+      console.warn(new Error().stack);
+    }
+    return new Date(NaN);
+  }
+}
+
+// node_modules/date-fns/esm/addDays/index.js
+function addDays(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var amount = toInteger(dirtyAmount);
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+  if (!amount) {
+    return date;
+  }
+  date.setDate(date.getDate() + amount);
+  return date;
+}
+
+// node_modules/date-fns/esm/addMonths/index.js
+function addMonths(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var amount = toInteger(dirtyAmount);
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+  if (!amount) {
+    return date;
+  }
+  var dayOfMonth = date.getDate();
+  var endOfDesiredMonth = new Date(date.getTime());
+  endOfDesiredMonth.setMonth(date.getMonth() + amount + 1, 0);
+  var daysInMonth = endOfDesiredMonth.getDate();
+  if (dayOfMonth >= daysInMonth) {
+    return endOfDesiredMonth;
+  } else {
+    date.setFullYear(endOfDesiredMonth.getFullYear(), endOfDesiredMonth.getMonth(), dayOfMonth);
+    return date;
+  }
+}
+
+// node_modules/date-fns/esm/addMilliseconds/index.js
+function addMilliseconds(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var timestamp = toDate(dirtyDate).getTime();
+  var amount = toInteger(dirtyAmount);
+  return new Date(timestamp + amount);
+}
+
+// node_modules/date-fns/esm/_lib/defaultOptions/index.js
+var defaultOptions = {};
+function getDefaultOptions() {
+  return defaultOptions;
+}
+
+// node_modules/date-fns/esm/startOfWeek/index.js
+function startOfWeek(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
+  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  }
+  var date = toDate(dirtyDate);
+  var day = date.getDay();
+  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+  date.setDate(date.getDate() - diff);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/startOfISOWeek/index.js
+function startOfISOWeek(dirtyDate) {
+  requiredArgs(1, arguments);
+  return startOfWeek(dirtyDate, {
+    weekStartsOn: 1
+  });
+}
+
+// node_modules/date-fns/esm/getISOWeekYear/index.js
+function getISOWeekYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var year = date.getFullYear();
+  var fourthOfJanuaryOfNextYear = new Date(0);
+  fourthOfJanuaryOfNextYear.setFullYear(year + 1, 0, 4);
+  fourthOfJanuaryOfNextYear.setHours(0, 0, 0, 0);
+  var startOfNextYear = startOfISOWeek(fourthOfJanuaryOfNextYear);
+  var fourthOfJanuaryOfThisYear = new Date(0);
+  fourthOfJanuaryOfThisYear.setFullYear(year, 0, 4);
+  fourthOfJanuaryOfThisYear.setHours(0, 0, 0, 0);
+  var startOfThisYear = startOfISOWeek(fourthOfJanuaryOfThisYear);
+  if (date.getTime() >= startOfNextYear.getTime()) {
+    return year + 1;
+  } else if (date.getTime() >= startOfThisYear.getTime()) {
+    return year;
+  } else {
+    return year - 1;
+  }
+}
+
+// node_modules/date-fns/esm/startOfISOWeekYear/index.js
+function startOfISOWeekYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var year = getISOWeekYear(dirtyDate);
+  var fourthOfJanuary = new Date(0);
+  fourthOfJanuary.setFullYear(year, 0, 4);
+  fourthOfJanuary.setHours(0, 0, 0, 0);
+  var date = startOfISOWeek(fourthOfJanuary);
+  return date;
+}
+
+// node_modules/date-fns/esm/_lib/getTimezoneOffsetInMilliseconds/index.js
+function getTimezoneOffsetInMilliseconds(date) {
+  var utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
+  utcDate.setUTCFullYear(date.getFullYear());
+  return date.getTime() - utcDate.getTime();
+}
+
+// node_modules/date-fns/esm/startOfDay/index.js
+function startOfDay(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/differenceInCalendarDays/index.js
+var MILLISECONDS_IN_DAY = 864e5;
+function differenceInCalendarDays(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var startOfDayLeft = startOfDay(dirtyDateLeft);
+  var startOfDayRight = startOfDay(dirtyDateRight);
+  var timestampLeft = startOfDayLeft.getTime() - getTimezoneOffsetInMilliseconds(startOfDayLeft);
+  var timestampRight = startOfDayRight.getTime() - getTimezoneOffsetInMilliseconds(startOfDayRight);
+  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_DAY);
+}
+
+// node_modules/date-fns/esm/addWeeks/index.js
+function addWeeks(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var amount = toInteger(dirtyAmount);
+  var days = amount * 7;
+  return addDays(dirtyDate, days);
+}
+
+// node_modules/date-fns/esm/addYears/index.js
+function addYears(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var amount = toInteger(dirtyAmount);
+  return addMonths(dirtyDate, amount * 12);
+}
+
+// node_modules/date-fns/esm/max/index.js
+function _typeof2(obj) {
+  "@babel/helpers - typeof";
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof2 = function _typeof5(obj2) {
+      return typeof obj2;
+    };
+  } else {
+    _typeof2 = function _typeof5(obj2) {
+      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+    };
+  }
+  return _typeof2(obj);
+}
+function max(dirtyDatesArray) {
+  requiredArgs(1, arguments);
+  var datesArray;
+  if (dirtyDatesArray && typeof dirtyDatesArray.forEach === "function") {
+    datesArray = dirtyDatesArray;
+  } else if (_typeof2(dirtyDatesArray) === "object" && dirtyDatesArray !== null) {
+    datesArray = Array.prototype.slice.call(dirtyDatesArray);
+  } else {
+    return new Date(NaN);
+  }
+  var result;
+  datesArray.forEach(function(dirtyDate) {
+    var currentDate = toDate(dirtyDate);
+    if (result === void 0 || result < currentDate || isNaN(Number(currentDate))) {
+      result = currentDate;
+    }
+  });
+  return result || new Date(NaN);
+}
+
+// node_modules/date-fns/esm/min/index.js
+function _typeof3(obj) {
+  "@babel/helpers - typeof";
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof3 = function _typeof5(obj2) {
+      return typeof obj2;
+    };
+  } else {
+    _typeof3 = function _typeof5(obj2) {
+      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+    };
+  }
+  return _typeof3(obj);
+}
+function min(dirtyDatesArray) {
+  requiredArgs(1, arguments);
+  var datesArray;
+  if (dirtyDatesArray && typeof dirtyDatesArray.forEach === "function") {
+    datesArray = dirtyDatesArray;
+  } else if (_typeof3(dirtyDatesArray) === "object" && dirtyDatesArray !== null) {
+    datesArray = Array.prototype.slice.call(dirtyDatesArray);
+  } else {
+    return new Date(NaN);
+  }
+  var result;
+  datesArray.forEach(function(dirtyDate) {
+    var currentDate = toDate(dirtyDate);
+    if (result === void 0 || result > currentDate || isNaN(currentDate.getDate())) {
+      result = currentDate;
+    }
+  });
+  return result || new Date(NaN);
+}
+
+// node_modules/date-fns/esm/compareAsc/index.js
+function compareAsc(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeft = toDate(dirtyDateLeft);
+  var dateRight = toDate(dirtyDateRight);
+  var diff = dateLeft.getTime() - dateRight.getTime();
+  if (diff < 0) {
+    return -1;
+  } else if (diff > 0) {
+    return 1;
+  } else {
+    return diff;
+  }
+}
+
+// node_modules/date-fns/esm/isSameDay/index.js
+function isSameDay(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeftStartOfDay = startOfDay(dirtyDateLeft);
+  var dateRightStartOfDay = startOfDay(dirtyDateRight);
+  return dateLeftStartOfDay.getTime() === dateRightStartOfDay.getTime();
+}
+
+// node_modules/date-fns/esm/isDate/index.js
+function _typeof4(obj) {
+  "@babel/helpers - typeof";
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof4 = function _typeof5(obj2) {
+      return typeof obj2;
+    };
+  } else {
+    _typeof4 = function _typeof5(obj2) {
+      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
+    };
+  }
+  return _typeof4(obj);
+}
+function isDate(value) {
+  requiredArgs(1, arguments);
+  return value instanceof Date || _typeof4(value) === "object" && Object.prototype.toString.call(value) === "[object Date]";
+}
+
+// node_modules/date-fns/esm/isValid/index.js
+function isValid(dirtyDate) {
+  requiredArgs(1, arguments);
+  if (!isDate(dirtyDate) && typeof dirtyDate !== "number") {
+    return false;
+  }
+  var date = toDate(dirtyDate);
+  return !isNaN(Number(date));
+}
+
+// node_modules/date-fns/esm/differenceInCalendarMonths/index.js
+function differenceInCalendarMonths(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeft = toDate(dirtyDateLeft);
+  var dateRight = toDate(dirtyDateRight);
+  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear();
+  var monthDiff = dateLeft.getMonth() - dateRight.getMonth();
+  return yearDiff * 12 + monthDiff;
+}
+
+// node_modules/date-fns/esm/differenceInCalendarWeeks/index.js
+var MILLISECONDS_IN_WEEK = 6048e5;
+function differenceInCalendarWeeks(dirtyDateLeft, dirtyDateRight, options) {
+  requiredArgs(2, arguments);
+  var startOfWeekLeft = startOfWeek(dirtyDateLeft, options);
+  var startOfWeekRight = startOfWeek(dirtyDateRight, options);
+  var timestampLeft = startOfWeekLeft.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekLeft);
+  var timestampRight = startOfWeekRight.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekRight);
+  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_WEEK);
+}
+
+// node_modules/date-fns/esm/differenceInMilliseconds/index.js
+function differenceInMilliseconds(dateLeft, dateRight) {
+  requiredArgs(2, arguments);
+  return toDate(dateLeft).getTime() - toDate(dateRight).getTime();
+}
+
+// node_modules/date-fns/esm/_lib/roundingMethods/index.js
+var roundingMap = {
+  ceil: Math.ceil,
+  round: Math.round,
+  floor: Math.floor,
+  trunc: function trunc(value) {
+    return value < 0 ? Math.ceil(value) : Math.floor(value);
+  }
+};
+var defaultRoundingMethod = "trunc";
+function getRoundingMethod(method) {
+  return method ? roundingMap[method] : roundingMap[defaultRoundingMethod];
+}
+
+// node_modules/date-fns/esm/endOfDay/index.js
+function endOfDay(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  date.setHours(23, 59, 59, 999);
+  return date;
+}
+
+// node_modules/date-fns/esm/endOfMonth/index.js
+function endOfMonth(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var month = date.getMonth();
+  date.setFullYear(date.getFullYear(), month + 1, 0);
+  date.setHours(23, 59, 59, 999);
+  return date;
+}
+
+// node_modules/date-fns/esm/isLastDayOfMonth/index.js
+function isLastDayOfMonth(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  return endOfDay(date).getTime() === endOfMonth(date).getTime();
+}
+
+// node_modules/date-fns/esm/differenceInMonths/index.js
+function differenceInMonths(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeft = toDate(dirtyDateLeft);
+  var dateRight = toDate(dirtyDateRight);
+  var sign = compareAsc(dateLeft, dateRight);
+  var difference = Math.abs(differenceInCalendarMonths(dateLeft, dateRight));
+  var result;
+  if (difference < 1) {
+    result = 0;
+  } else {
+    if (dateLeft.getMonth() === 1 && dateLeft.getDate() > 27) {
+      dateLeft.setDate(30);
+    }
+    dateLeft.setMonth(dateLeft.getMonth() - sign * difference);
+    var isLastMonthNotFull = compareAsc(dateLeft, dateRight) === -sign;
+    if (isLastDayOfMonth(toDate(dirtyDateLeft)) && difference === 1 && compareAsc(dirtyDateLeft, dateRight) === 1) {
+      isLastMonthNotFull = false;
+    }
+    result = sign * (difference - Number(isLastMonthNotFull));
+  }
+  return result === 0 ? 0 : result;
+}
+
+// node_modules/date-fns/esm/differenceInSeconds/index.js
+function differenceInSeconds(dateLeft, dateRight, options) {
+  requiredArgs(2, arguments);
+  var diff = differenceInMilliseconds(dateLeft, dateRight) / 1e3;
+  return getRoundingMethod(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
+}
+
+// node_modules/date-fns/esm/startOfMonth/index.js
+function startOfMonth(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  date.setDate(1);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/startOfYear/index.js
+function startOfYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var cleanDate = toDate(dirtyDate);
+  var date = new Date(0);
+  date.setFullYear(cleanDate.getFullYear(), 0, 1);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/endOfWeek/index.js
+function endOfWeek(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
+  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  }
+  var date = toDate(dirtyDate);
+  var day = date.getDay();
+  var diff = (day < weekStartsOn ? -7 : 0) + 6 - (day - weekStartsOn);
+  date.setDate(date.getDate() + diff);
+  date.setHours(23, 59, 59, 999);
+  return date;
+}
+
+// node_modules/date-fns/esm/endOfISOWeek/index.js
+function endOfISOWeek(dirtyDate) {
+  requiredArgs(1, arguments);
+  return endOfWeek(dirtyDate, {
+    weekStartsOn: 1
+  });
+}
+
+// node_modules/date-fns/esm/subMilliseconds/index.js
+function subMilliseconds(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var amount = toInteger(dirtyAmount);
+  return addMilliseconds(dirtyDate, -amount);
+}
+
+// node_modules/date-fns/esm/_lib/getUTCDayOfYear/index.js
+var MILLISECONDS_IN_DAY2 = 864e5;
+function getUTCDayOfYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var timestamp = date.getTime();
+  date.setUTCMonth(0, 1);
+  date.setUTCHours(0, 0, 0, 0);
+  var startOfYearTimestamp = date.getTime();
+  var difference = timestamp - startOfYearTimestamp;
+  return Math.floor(difference / MILLISECONDS_IN_DAY2) + 1;
+}
+
+// node_modules/date-fns/esm/_lib/startOfUTCISOWeek/index.js
+function startOfUTCISOWeek(dirtyDate) {
+  requiredArgs(1, arguments);
+  var weekStartsOn = 1;
+  var date = toDate(dirtyDate);
+  var day = date.getUTCDay();
+  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+  date.setUTCDate(date.getUTCDate() - diff);
+  date.setUTCHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/_lib/getUTCISOWeekYear/index.js
+function getUTCISOWeekYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var year = date.getUTCFullYear();
+  var fourthOfJanuaryOfNextYear = new Date(0);
+  fourthOfJanuaryOfNextYear.setUTCFullYear(year + 1, 0, 4);
+  fourthOfJanuaryOfNextYear.setUTCHours(0, 0, 0, 0);
+  var startOfNextYear = startOfUTCISOWeek(fourthOfJanuaryOfNextYear);
+  var fourthOfJanuaryOfThisYear = new Date(0);
+  fourthOfJanuaryOfThisYear.setUTCFullYear(year, 0, 4);
+  fourthOfJanuaryOfThisYear.setUTCHours(0, 0, 0, 0);
+  var startOfThisYear = startOfUTCISOWeek(fourthOfJanuaryOfThisYear);
+  if (date.getTime() >= startOfNextYear.getTime()) {
+    return year + 1;
+  } else if (date.getTime() >= startOfThisYear.getTime()) {
+    return year;
+  } else {
+    return year - 1;
+  }
+}
+
+// node_modules/date-fns/esm/_lib/startOfUTCISOWeekYear/index.js
+function startOfUTCISOWeekYear(dirtyDate) {
+  requiredArgs(1, arguments);
+  var year = getUTCISOWeekYear(dirtyDate);
+  var fourthOfJanuary = new Date(0);
+  fourthOfJanuary.setUTCFullYear(year, 0, 4);
+  fourthOfJanuary.setUTCHours(0, 0, 0, 0);
+  var date = startOfUTCISOWeek(fourthOfJanuary);
+  return date;
+}
+
+// node_modules/date-fns/esm/_lib/getUTCISOWeek/index.js
+var MILLISECONDS_IN_WEEK2 = 6048e5;
+function getUTCISOWeek(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var diff = startOfUTCISOWeek(date).getTime() - startOfUTCISOWeekYear(date).getTime();
+  return Math.round(diff / MILLISECONDS_IN_WEEK2) + 1;
+}
+
+// node_modules/date-fns/esm/_lib/startOfUTCWeek/index.js
+function startOfUTCWeek(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
+  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  }
+  var date = toDate(dirtyDate);
+  var day = date.getUTCDay();
+  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+  date.setUTCDate(date.getUTCDate() - diff);
+  date.setUTCHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/_lib/getUTCWeekYear/index.js
+function getUTCWeekYear(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var year = date.getUTCFullYear();
+  var defaultOptions3 = getDefaultOptions();
+  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
+  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  }
+  var firstWeekOfNextYear = new Date(0);
+  firstWeekOfNextYear.setUTCFullYear(year + 1, 0, firstWeekContainsDate);
+  firstWeekOfNextYear.setUTCHours(0, 0, 0, 0);
+  var startOfNextYear = startOfUTCWeek(firstWeekOfNextYear, options);
+  var firstWeekOfThisYear = new Date(0);
+  firstWeekOfThisYear.setUTCFullYear(year, 0, firstWeekContainsDate);
+  firstWeekOfThisYear.setUTCHours(0, 0, 0, 0);
+  var startOfThisYear = startOfUTCWeek(firstWeekOfThisYear, options);
+  if (date.getTime() >= startOfNextYear.getTime()) {
+    return year + 1;
+  } else if (date.getTime() >= startOfThisYear.getTime()) {
+    return year;
+  } else {
+    return year - 1;
+  }
+}
+
+// node_modules/date-fns/esm/_lib/startOfUTCWeekYear/index.js
+function startOfUTCWeekYear(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
+  var year = getUTCWeekYear(dirtyDate, options);
+  var firstWeek = new Date(0);
+  firstWeek.setUTCFullYear(year, 0, firstWeekContainsDate);
+  firstWeek.setUTCHours(0, 0, 0, 0);
+  var date = startOfUTCWeek(firstWeek, options);
+  return date;
+}
+
+// node_modules/date-fns/esm/_lib/getUTCWeek/index.js
+var MILLISECONDS_IN_WEEK3 = 6048e5;
+function getUTCWeek(dirtyDate, options) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var diff = startOfUTCWeek(date, options).getTime() - startOfUTCWeekYear(date, options).getTime();
+  return Math.round(diff / MILLISECONDS_IN_WEEK3) + 1;
+}
+
+// node_modules/date-fns/esm/_lib/addLeadingZeros/index.js
+function addLeadingZeros(number, targetLength) {
+  var sign = number < 0 ? "-" : "";
+  var output = Math.abs(number).toString();
+  while (output.length < targetLength) {
+    output = "0" + output;
+  }
+  return sign + output;
+}
+
+// node_modules/date-fns/esm/_lib/format/lightFormatters/index.js
+var formatters = {
+  y: function y3(date, token) {
+    var signedYear = date.getUTCFullYear();
+    var year = signedYear > 0 ? signedYear : 1 - signedYear;
+    return addLeadingZeros(token === "yy" ? year % 100 : year, token.length);
+  },
+  M: function M3(date, token) {
+    var month = date.getUTCMonth();
+    return token === "M" ? String(month + 1) : addLeadingZeros(month + 1, 2);
+  },
+  d: function d3(date, token) {
+    return addLeadingZeros(date.getUTCDate(), token.length);
+  },
+  a: function a3(date, token) {
+    var dayPeriodEnumValue = date.getUTCHours() / 12 >= 1 ? "pm" : "am";
+    switch (token) {
+      case "a":
+      case "aa":
+        return dayPeriodEnumValue.toUpperCase();
+      case "aaa":
+        return dayPeriodEnumValue;
+      case "aaaaa":
+        return dayPeriodEnumValue[0];
+      case "aaaa":
+      default:
+        return dayPeriodEnumValue === "am" ? "a.m." : "p.m.";
+    }
+  },
+  h: function h3(date, token) {
+    return addLeadingZeros(date.getUTCHours() % 12 || 12, token.length);
+  },
+  H: function H3(date, token) {
+    return addLeadingZeros(date.getUTCHours(), token.length);
+  },
+  m: function m3(date, token) {
+    return addLeadingZeros(date.getUTCMinutes(), token.length);
+  },
+  s: function s3(date, token) {
+    return addLeadingZeros(date.getUTCSeconds(), token.length);
+  },
+  S: function S2(date, token) {
+    var numberOfDigits = token.length;
+    var milliseconds = date.getUTCMilliseconds();
+    var fractionalSeconds = Math.floor(milliseconds * Math.pow(10, numberOfDigits - 3));
+    return addLeadingZeros(fractionalSeconds, token.length);
+  }
+};
+var lightFormatters_default = formatters;
+
+// node_modules/date-fns/esm/_lib/format/formatters/index.js
+var dayPeriodEnum = {
+  am: "am",
+  pm: "pm",
+  midnight: "midnight",
+  noon: "noon",
+  morning: "morning",
+  afternoon: "afternoon",
+  evening: "evening",
+  night: "night"
+};
+var formatters2 = {
+  G: function G2(date, token, localize2) {
+    var era = date.getUTCFullYear() > 0 ? 1 : 0;
+    switch (token) {
+      case "G":
+      case "GG":
+      case "GGG":
+        return localize2.era(era, {
+          width: "abbreviated"
+        });
+      case "GGGGG":
+        return localize2.era(era, {
+          width: "narrow"
+        });
+      case "GGGG":
+      default:
+        return localize2.era(era, {
+          width: "wide"
+        });
+    }
+  },
+  y: function y4(date, token, localize2) {
+    if (token === "yo") {
+      var signedYear = date.getUTCFullYear();
+      var year = signedYear > 0 ? signedYear : 1 - signedYear;
+      return localize2.ordinalNumber(year, {
+        unit: "year"
+      });
+    }
+    return lightFormatters_default.y(date, token);
+  },
+  Y: function Y2(date, token, localize2, options) {
+    var signedWeekYear = getUTCWeekYear(date, options);
+    var weekYear = signedWeekYear > 0 ? signedWeekYear : 1 - signedWeekYear;
+    if (token === "YY") {
+      var twoDigitYear = weekYear % 100;
+      return addLeadingZeros(twoDigitYear, 2);
+    }
+    if (token === "Yo") {
+      return localize2.ordinalNumber(weekYear, {
+        unit: "year"
+      });
+    }
+    return addLeadingZeros(weekYear, token.length);
+  },
+  R: function R2(date, token) {
+    var isoWeekYear = getUTCISOWeekYear(date);
+    return addLeadingZeros(isoWeekYear, token.length);
+  },
+  u: function u3(date, token) {
+    var year = date.getUTCFullYear();
+    return addLeadingZeros(year, token.length);
+  },
+  Q: function Q2(date, token, localize2) {
+    var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
+    switch (token) {
+      case "Q":
+        return String(quarter);
+      case "QQ":
+        return addLeadingZeros(quarter, 2);
+      case "Qo":
+        return localize2.ordinalNumber(quarter, {
+          unit: "quarter"
+        });
+      case "QQQ":
+        return localize2.quarter(quarter, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "QQQQQ":
+        return localize2.quarter(quarter, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "QQQQ":
+      default:
+        return localize2.quarter(quarter, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  q: function q4(date, token, localize2) {
+    var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
+    switch (token) {
+      case "q":
+        return String(quarter);
+      case "qq":
+        return addLeadingZeros(quarter, 2);
+      case "qo":
+        return localize2.ordinalNumber(quarter, {
+          unit: "quarter"
+        });
+      case "qqq":
+        return localize2.quarter(quarter, {
+          width: "abbreviated",
+          context: "standalone"
+        });
+      case "qqqqq":
+        return localize2.quarter(quarter, {
+          width: "narrow",
+          context: "standalone"
+        });
+      case "qqqq":
+      default:
+        return localize2.quarter(quarter, {
+          width: "wide",
+          context: "standalone"
+        });
+    }
+  },
+  M: function M4(date, token, localize2) {
+    var month = date.getUTCMonth();
+    switch (token) {
+      case "M":
+      case "MM":
+        return lightFormatters_default.M(date, token);
+      case "Mo":
+        return localize2.ordinalNumber(month + 1, {
+          unit: "month"
+        });
+      case "MMM":
+        return localize2.month(month, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "MMMMM":
+        return localize2.month(month, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "MMMM":
+      default:
+        return localize2.month(month, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  L: function L3(date, token, localize2) {
+    var month = date.getUTCMonth();
+    switch (token) {
+      case "L":
+        return String(month + 1);
+      case "LL":
+        return addLeadingZeros(month + 1, 2);
+      case "Lo":
+        return localize2.ordinalNumber(month + 1, {
+          unit: "month"
+        });
+      case "LLL":
+        return localize2.month(month, {
+          width: "abbreviated",
+          context: "standalone"
+        });
+      case "LLLLL":
+        return localize2.month(month, {
+          width: "narrow",
+          context: "standalone"
+        });
+      case "LLLL":
+      default:
+        return localize2.month(month, {
+          width: "wide",
+          context: "standalone"
+        });
+    }
+  },
+  w: function w4(date, token, localize2, options) {
+    var week = getUTCWeek(date, options);
+    if (token === "wo") {
+      return localize2.ordinalNumber(week, {
+        unit: "week"
+      });
+    }
+    return addLeadingZeros(week, token.length);
+  },
+  I: function I3(date, token, localize2) {
+    var isoWeek = getUTCISOWeek(date);
+    if (token === "Io") {
+      return localize2.ordinalNumber(isoWeek, {
+        unit: "week"
+      });
+    }
+    return addLeadingZeros(isoWeek, token.length);
+  },
+  d: function d4(date, token, localize2) {
+    if (token === "do") {
+      return localize2.ordinalNumber(date.getUTCDate(), {
+        unit: "date"
+      });
+    }
+    return lightFormatters_default.d(date, token);
+  },
+  D: function D2(date, token, localize2) {
+    var dayOfYear = getUTCDayOfYear(date);
+    if (token === "Do") {
+      return localize2.ordinalNumber(dayOfYear, {
+        unit: "dayOfYear"
+      });
+    }
+    return addLeadingZeros(dayOfYear, token.length);
+  },
+  E: function E2(date, token, localize2) {
+    var dayOfWeek = date.getUTCDay();
+    switch (token) {
+      case "E":
+      case "EE":
+      case "EEE":
+        return localize2.day(dayOfWeek, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "EEEEE":
+        return localize2.day(dayOfWeek, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "EEEEEE":
+        return localize2.day(dayOfWeek, {
+          width: "short",
+          context: "formatting"
+        });
+      case "EEEE":
+      default:
+        return localize2.day(dayOfWeek, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  e: function e3(date, token, localize2, options) {
+    var dayOfWeek = date.getUTCDay();
+    var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+    switch (token) {
+      case "e":
+        return String(localDayOfWeek);
+      case "ee":
+        return addLeadingZeros(localDayOfWeek, 2);
+      case "eo":
+        return localize2.ordinalNumber(localDayOfWeek, {
+          unit: "day"
+        });
+      case "eee":
+        return localize2.day(dayOfWeek, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "eeeee":
+        return localize2.day(dayOfWeek, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "eeeeee":
+        return localize2.day(dayOfWeek, {
+          width: "short",
+          context: "formatting"
+        });
+      case "eeee":
+      default:
+        return localize2.day(dayOfWeek, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  c: function c3(date, token, localize2, options) {
+    var dayOfWeek = date.getUTCDay();
+    var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+    switch (token) {
+      case "c":
+        return String(localDayOfWeek);
+      case "cc":
+        return addLeadingZeros(localDayOfWeek, token.length);
+      case "co":
+        return localize2.ordinalNumber(localDayOfWeek, {
+          unit: "day"
+        });
+      case "ccc":
+        return localize2.day(dayOfWeek, {
+          width: "abbreviated",
+          context: "standalone"
+        });
+      case "ccccc":
+        return localize2.day(dayOfWeek, {
+          width: "narrow",
+          context: "standalone"
+        });
+      case "cccccc":
+        return localize2.day(dayOfWeek, {
+          width: "short",
+          context: "standalone"
+        });
+      case "cccc":
+      default:
+        return localize2.day(dayOfWeek, {
+          width: "wide",
+          context: "standalone"
+        });
+    }
+  },
+  i: function i3(date, token, localize2) {
+    var dayOfWeek = date.getUTCDay();
+    var isoDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek;
+    switch (token) {
+      case "i":
+        return String(isoDayOfWeek);
+      case "ii":
+        return addLeadingZeros(isoDayOfWeek, token.length);
+      case "io":
+        return localize2.ordinalNumber(isoDayOfWeek, {
+          unit: "day"
+        });
+      case "iii":
+        return localize2.day(dayOfWeek, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "iiiii":
+        return localize2.day(dayOfWeek, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "iiiiii":
+        return localize2.day(dayOfWeek, {
+          width: "short",
+          context: "formatting"
+        });
+      case "iiii":
+      default:
+        return localize2.day(dayOfWeek, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  a: function a4(date, token, localize2) {
+    var hours = date.getUTCHours();
+    var dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+    switch (token) {
+      case "a":
+      case "aa":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "aaa":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "abbreviated",
+          context: "formatting"
+        }).toLowerCase();
+      case "aaaaa":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "aaaa":
+      default:
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  b: function b3(date, token, localize2) {
+    var hours = date.getUTCHours();
+    var dayPeriodEnumValue;
+    if (hours === 12) {
+      dayPeriodEnumValue = dayPeriodEnum.noon;
+    } else if (hours === 0) {
+      dayPeriodEnumValue = dayPeriodEnum.midnight;
+    } else {
+      dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+    }
+    switch (token) {
+      case "b":
+      case "bb":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "bbb":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "abbreviated",
+          context: "formatting"
+        }).toLowerCase();
+      case "bbbbb":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "bbbb":
+      default:
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  B: function B4(date, token, localize2) {
+    var hours = date.getUTCHours();
+    var dayPeriodEnumValue;
+    if (hours >= 17) {
+      dayPeriodEnumValue = dayPeriodEnum.evening;
+    } else if (hours >= 12) {
+      dayPeriodEnumValue = dayPeriodEnum.afternoon;
+    } else if (hours >= 4) {
+      dayPeriodEnumValue = dayPeriodEnum.morning;
+    } else {
+      dayPeriodEnumValue = dayPeriodEnum.night;
+    }
+    switch (token) {
+      case "B":
+      case "BB":
+      case "BBB":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "abbreviated",
+          context: "formatting"
+        });
+      case "BBBBB":
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "narrow",
+          context: "formatting"
+        });
+      case "BBBB":
+      default:
+        return localize2.dayPeriod(dayPeriodEnumValue, {
+          width: "wide",
+          context: "formatting"
+        });
+    }
+  },
+  h: function h4(date, token, localize2) {
+    if (token === "ho") {
+      var hours = date.getUTCHours() % 12;
+      if (hours === 0)
+        hours = 12;
+      return localize2.ordinalNumber(hours, {
+        unit: "hour"
+      });
+    }
+    return lightFormatters_default.h(date, token);
+  },
+  H: function H4(date, token, localize2) {
+    if (token === "Ho") {
+      return localize2.ordinalNumber(date.getUTCHours(), {
+        unit: "hour"
+      });
+    }
+    return lightFormatters_default.H(date, token);
+  },
+  K: function K2(date, token, localize2) {
+    var hours = date.getUTCHours() % 12;
+    if (token === "Ko") {
+      return localize2.ordinalNumber(hours, {
+        unit: "hour"
+      });
+    }
+    return addLeadingZeros(hours, token.length);
+  },
+  k: function k4(date, token, localize2) {
+    var hours = date.getUTCHours();
+    if (hours === 0)
+      hours = 24;
+    if (token === "ko") {
+      return localize2.ordinalNumber(hours, {
+        unit: "hour"
+      });
+    }
+    return addLeadingZeros(hours, token.length);
+  },
+  m: function m4(date, token, localize2) {
+    if (token === "mo") {
+      return localize2.ordinalNumber(date.getUTCMinutes(), {
+        unit: "minute"
+      });
+    }
+    return lightFormatters_default.m(date, token);
+  },
+  s: function s4(date, token, localize2) {
+    if (token === "so") {
+      return localize2.ordinalNumber(date.getUTCSeconds(), {
+        unit: "second"
+      });
+    }
+    return lightFormatters_default.s(date, token);
+  },
+  S: function S3(date, token) {
+    return lightFormatters_default.S(date, token);
+  },
+  X: function X2(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timezoneOffset = originalDate.getTimezoneOffset();
+    if (timezoneOffset === 0) {
+      return "Z";
+    }
+    switch (token) {
+      case "X":
+        return formatTimezoneWithOptionalMinutes(timezoneOffset);
+      case "XXXX":
+      case "XX":
+        return formatTimezone(timezoneOffset);
+      case "XXXXX":
+      case "XXX":
+      default:
+        return formatTimezone(timezoneOffset, ":");
+    }
+  },
+  x: function x4(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timezoneOffset = originalDate.getTimezoneOffset();
+    switch (token) {
+      case "x":
+        return formatTimezoneWithOptionalMinutes(timezoneOffset);
+      case "xxxx":
+      case "xx":
+        return formatTimezone(timezoneOffset);
+      case "xxxxx":
+      case "xxx":
+      default:
+        return formatTimezone(timezoneOffset, ":");
+    }
+  },
+  O: function O3(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timezoneOffset = originalDate.getTimezoneOffset();
+    switch (token) {
+      case "O":
+      case "OO":
+      case "OOO":
+        return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+      case "OOOO":
+      default:
+        return "GMT" + formatTimezone(timezoneOffset, ":");
+    }
+  },
+  z: function z4(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timezoneOffset = originalDate.getTimezoneOffset();
+    switch (token) {
+      case "z":
+      case "zz":
+      case "zzz":
+        return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+      case "zzzz":
+      default:
+        return "GMT" + formatTimezone(timezoneOffset, ":");
+    }
+  },
+  t: function t3(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timestamp = Math.floor(originalDate.getTime() / 1e3);
+    return addLeadingZeros(timestamp, token.length);
+  },
+  T: function T5(date, token, _localize, options) {
+    var originalDate = options._originalDate || date;
+    var timestamp = originalDate.getTime();
+    return addLeadingZeros(timestamp, token.length);
+  }
+};
+function formatTimezoneShort(offset, dirtyDelimiter) {
+  var sign = offset > 0 ? "-" : "+";
+  var absOffset = Math.abs(offset);
+  var hours = Math.floor(absOffset / 60);
+  var minutes = absOffset % 60;
+  if (minutes === 0) {
+    return sign + String(hours);
+  }
+  var delimiter = dirtyDelimiter || "";
+  return sign + String(hours) + delimiter + addLeadingZeros(minutes, 2);
+}
+function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
+  if (offset % 60 === 0) {
+    var sign = offset > 0 ? "-" : "+";
+    return sign + addLeadingZeros(Math.abs(offset) / 60, 2);
+  }
+  return formatTimezone(offset, dirtyDelimiter);
+}
+function formatTimezone(offset, dirtyDelimiter) {
+  var delimiter = dirtyDelimiter || "";
+  var sign = offset > 0 ? "-" : "+";
+  var absOffset = Math.abs(offset);
+  var hours = addLeadingZeros(Math.floor(absOffset / 60), 2);
+  var minutes = addLeadingZeros(absOffset % 60, 2);
+  return sign + hours + delimiter + minutes;
+}
+var formatters_default = formatters2;
+
+// node_modules/date-fns/esm/_lib/format/longFormatters/index.js
+var dateLongFormatter = function dateLongFormatter2(pattern, formatLong2) {
+  switch (pattern) {
+    case "P":
+      return formatLong2.date({
+        width: "short"
+      });
+    case "PP":
+      return formatLong2.date({
+        width: "medium"
+      });
+    case "PPP":
+      return formatLong2.date({
+        width: "long"
+      });
+    case "PPPP":
+    default:
+      return formatLong2.date({
+        width: "full"
+      });
+  }
+};
+var timeLongFormatter = function timeLongFormatter2(pattern, formatLong2) {
+  switch (pattern) {
+    case "p":
+      return formatLong2.time({
+        width: "short"
+      });
+    case "pp":
+      return formatLong2.time({
+        width: "medium"
+      });
+    case "ppp":
+      return formatLong2.time({
+        width: "long"
+      });
+    case "pppp":
+    default:
+      return formatLong2.time({
+        width: "full"
+      });
+  }
+};
+var dateTimeLongFormatter = function dateTimeLongFormatter2(pattern, formatLong2) {
+  var matchResult = pattern.match(/(P+)(p+)?/) || [];
+  var datePattern = matchResult[1];
+  var timePattern = matchResult[2];
+  if (!timePattern) {
+    return dateLongFormatter(pattern, formatLong2);
+  }
+  var dateTimeFormat;
+  switch (datePattern) {
+    case "P":
+      dateTimeFormat = formatLong2.dateTime({
+        width: "short"
+      });
+      break;
+    case "PP":
+      dateTimeFormat = formatLong2.dateTime({
+        width: "medium"
+      });
+      break;
+    case "PPP":
+      dateTimeFormat = formatLong2.dateTime({
+        width: "long"
+      });
+      break;
+    case "PPPP":
+    default:
+      dateTimeFormat = formatLong2.dateTime({
+        width: "full"
+      });
+      break;
+  }
+  return dateTimeFormat.replace("{{date}}", dateLongFormatter(datePattern, formatLong2)).replace("{{time}}", timeLongFormatter(timePattern, formatLong2));
+};
+var longFormatters = {
+  p: timeLongFormatter,
+  P: dateTimeLongFormatter
+};
+var longFormatters_default = longFormatters;
+
+// node_modules/date-fns/esm/_lib/protectedTokens/index.js
+var protectedDayOfYearTokens = ["D", "DD"];
+var protectedWeekYearTokens = ["YY", "YYYY"];
+function isProtectedDayOfYearToken(token) {
+  return protectedDayOfYearTokens.indexOf(token) !== -1;
+}
+function isProtectedWeekYearToken(token) {
+  return protectedWeekYearTokens.indexOf(token) !== -1;
+}
+function throwProtectedError(token, format2, input) {
+  if (token === "YYYY") {
+    throw new RangeError("Use `yyyy` instead of `YYYY` (in `".concat(format2, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
+  } else if (token === "YY") {
+    throw new RangeError("Use `yy` instead of `YY` (in `".concat(format2, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
+  } else if (token === "D") {
+    throw new RangeError("Use `d` instead of `D` (in `".concat(format2, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
+  } else if (token === "DD") {
+    throw new RangeError("Use `dd` instead of `DD` (in `".concat(format2, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
+  }
+}
+
+// node_modules/date-fns/esm/locale/en-US/_lib/formatDistance/index.js
+var formatDistanceLocale = {
+  lessThanXSeconds: {
+    one: "less than a second",
+    other: "less than {{count}} seconds"
+  },
+  xSeconds: {
+    one: "1 second",
+    other: "{{count}} seconds"
+  },
+  halfAMinute: "half a minute",
+  lessThanXMinutes: {
+    one: "less than a minute",
+    other: "less than {{count}} minutes"
+  },
+  xMinutes: {
+    one: "1 minute",
+    other: "{{count}} minutes"
+  },
+  aboutXHours: {
+    one: "about 1 hour",
+    other: "about {{count}} hours"
+  },
+  xHours: {
+    one: "1 hour",
+    other: "{{count}} hours"
+  },
+  xDays: {
+    one: "1 day",
+    other: "{{count}} days"
+  },
+  aboutXWeeks: {
+    one: "about 1 week",
+    other: "about {{count}} weeks"
+  },
+  xWeeks: {
+    one: "1 week",
+    other: "{{count}} weeks"
+  },
+  aboutXMonths: {
+    one: "about 1 month",
+    other: "about {{count}} months"
+  },
+  xMonths: {
+    one: "1 month",
+    other: "{{count}} months"
+  },
+  aboutXYears: {
+    one: "about 1 year",
+    other: "about {{count}} years"
+  },
+  xYears: {
+    one: "1 year",
+    other: "{{count}} years"
+  },
+  overXYears: {
+    one: "over 1 year",
+    other: "over {{count}} years"
+  },
+  almostXYears: {
+    one: "almost 1 year",
+    other: "almost {{count}} years"
+  }
+};
+var formatDistance = function formatDistance2(token, count2, options) {
+  var result;
+  var tokenValue = formatDistanceLocale[token];
+  if (typeof tokenValue === "string") {
+    result = tokenValue;
+  } else if (count2 === 1) {
+    result = tokenValue.one;
+  } else {
+    result = tokenValue.other.replace("{{count}}", count2.toString());
+  }
+  if (options !== null && options !== void 0 && options.addSuffix) {
+    if (options.comparison && options.comparison > 0) {
+      return "in " + result;
+    } else {
+      return result + " ago";
+    }
+  }
+  return result;
+};
+var formatDistance_default = formatDistance;
+
+// node_modules/date-fns/esm/locale/_lib/buildFormatLongFn/index.js
+function buildFormatLongFn(args) {
+  return function() {
+    var options = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+    var width = options.width ? String(options.width) : args.defaultWidth;
+    var format2 = args.formats[width] || args.formats[args.defaultWidth];
+    return format2;
+  };
+}
+
+// node_modules/date-fns/esm/locale/en-US/_lib/formatLong/index.js
+var dateFormats = {
+  full: "EEEE, MMMM do, y",
+  long: "MMMM do, y",
+  medium: "MMM d, y",
+  short: "MM/dd/yyyy"
+};
+var timeFormats = {
+  full: "h:mm:ss a zzzz",
+  long: "h:mm:ss a z",
+  medium: "h:mm:ss a",
+  short: "h:mm a"
+};
+var dateTimeFormats = {
+  full: "{{date}} 'at' {{time}}",
+  long: "{{date}} 'at' {{time}}",
+  medium: "{{date}}, {{time}}",
+  short: "{{date}}, {{time}}"
+};
+var formatLong = {
+  date: buildFormatLongFn({
+    formats: dateFormats,
+    defaultWidth: "full"
+  }),
+  time: buildFormatLongFn({
+    formats: timeFormats,
+    defaultWidth: "full"
+  }),
+  dateTime: buildFormatLongFn({
+    formats: dateTimeFormats,
+    defaultWidth: "full"
+  })
+};
+var formatLong_default = formatLong;
+
+// node_modules/date-fns/esm/locale/en-US/_lib/formatRelative/index.js
+var formatRelativeLocale = {
+  lastWeek: "'last' eeee 'at' p",
+  yesterday: "'yesterday at' p",
+  today: "'today at' p",
+  tomorrow: "'tomorrow at' p",
+  nextWeek: "eeee 'at' p",
+  other: "P"
+};
+var formatRelative = function formatRelative2(token, _date, _baseDate, _options) {
+  return formatRelativeLocale[token];
+};
+var formatRelative_default = formatRelative;
+
+// node_modules/date-fns/esm/locale/_lib/buildLocalizeFn/index.js
+function buildLocalizeFn(args) {
+  return function(dirtyIndex, options) {
+    var context = options !== null && options !== void 0 && options.context ? String(options.context) : "standalone";
+    var valuesArray;
+    if (context === "formatting" && args.formattingValues) {
+      var defaultWidth = args.defaultFormattingWidth || args.defaultWidth;
+      var width = options !== null && options !== void 0 && options.width ? String(options.width) : defaultWidth;
+      valuesArray = args.formattingValues[width] || args.formattingValues[defaultWidth];
+    } else {
+      var _defaultWidth = args.defaultWidth;
+      var _width = options !== null && options !== void 0 && options.width ? String(options.width) : args.defaultWidth;
+      valuesArray = args.values[_width] || args.values[_defaultWidth];
+    }
+    var index = args.argumentCallback ? args.argumentCallback(dirtyIndex) : dirtyIndex;
+    return valuesArray[index];
+  };
+}
+
+// node_modules/date-fns/esm/locale/en-US/_lib/localize/index.js
+var eraValues = {
+  narrow: ["B", "A"],
+  abbreviated: ["BC", "AD"],
+  wide: ["Before Christ", "Anno Domini"]
+};
+var quarterValues = {
+  narrow: ["1", "2", "3", "4"],
+  abbreviated: ["Q1", "Q2", "Q3", "Q4"],
+  wide: ["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"]
+};
+var monthValues = {
+  narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+  abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+};
+var dayValues = {
+  narrow: ["S", "M", "T", "W", "T", "F", "S"],
+  short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+  abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+};
+var dayPeriodValues = {
+  narrow: {
+    am: "a",
+    pm: "p",
+    midnight: "mi",
+    noon: "n",
+    morning: "morning",
+    afternoon: "afternoon",
+    evening: "evening",
+    night: "night"
+  },
+  abbreviated: {
+    am: "AM",
+    pm: "PM",
+    midnight: "midnight",
+    noon: "noon",
+    morning: "morning",
+    afternoon: "afternoon",
+    evening: "evening",
+    night: "night"
+  },
+  wide: {
+    am: "a.m.",
+    pm: "p.m.",
+    midnight: "midnight",
+    noon: "noon",
+    morning: "morning",
+    afternoon: "afternoon",
+    evening: "evening",
+    night: "night"
+  }
+};
+var formattingDayPeriodValues = {
+  narrow: {
+    am: "a",
+    pm: "p",
+    midnight: "mi",
+    noon: "n",
+    morning: "in the morning",
+    afternoon: "in the afternoon",
+    evening: "in the evening",
+    night: "at night"
+  },
+  abbreviated: {
+    am: "AM",
+    pm: "PM",
+    midnight: "midnight",
+    noon: "noon",
+    morning: "in the morning",
+    afternoon: "in the afternoon",
+    evening: "in the evening",
+    night: "at night"
+  },
+  wide: {
+    am: "a.m.",
+    pm: "p.m.",
+    midnight: "midnight",
+    noon: "noon",
+    morning: "in the morning",
+    afternoon: "in the afternoon",
+    evening: "in the evening",
+    night: "at night"
+  }
+};
+var ordinalNumber = function ordinalNumber2(dirtyNumber, _options) {
+  var number = Number(dirtyNumber);
+  var rem100 = number % 100;
+  if (rem100 > 20 || rem100 < 10) {
+    switch (rem100 % 10) {
+      case 1:
+        return number + "st";
+      case 2:
+        return number + "nd";
+      case 3:
+        return number + "rd";
+    }
+  }
+  return number + "th";
+};
+var localize = {
+  ordinalNumber,
+  era: buildLocalizeFn({
+    values: eraValues,
+    defaultWidth: "wide"
+  }),
+  quarter: buildLocalizeFn({
+    values: quarterValues,
+    defaultWidth: "wide",
+    argumentCallback: function argumentCallback(quarter) {
+      return quarter - 1;
+    }
+  }),
+  month: buildLocalizeFn({
+    values: monthValues,
+    defaultWidth: "wide"
+  }),
+  day: buildLocalizeFn({
+    values: dayValues,
+    defaultWidth: "wide"
+  }),
+  dayPeriod: buildLocalizeFn({
+    values: dayPeriodValues,
+    defaultWidth: "wide",
+    formattingValues: formattingDayPeriodValues,
+    defaultFormattingWidth: "wide"
+  })
+};
+var localize_default = localize;
+
+// node_modules/date-fns/esm/locale/_lib/buildMatchFn/index.js
+function buildMatchFn(args) {
+  return function(string) {
+    var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+    var width = options.width;
+    var matchPattern = width && args.matchPatterns[width] || args.matchPatterns[args.defaultMatchWidth];
+    var matchResult = string.match(matchPattern);
+    if (!matchResult) {
+      return null;
+    }
+    var matchedString = matchResult[0];
+    var parsePatterns = width && args.parsePatterns[width] || args.parsePatterns[args.defaultParseWidth];
+    var key2 = Array.isArray(parsePatterns) ? findIndex(parsePatterns, function(pattern) {
+      return pattern.test(matchedString);
+    }) : findKey(parsePatterns, function(pattern) {
+      return pattern.test(matchedString);
+    });
+    var value;
+    value = args.valueCallback ? args.valueCallback(key2) : key2;
+    value = options.valueCallback ? options.valueCallback(value) : value;
+    var rest = string.slice(matchedString.length);
+    return {
+      value,
+      rest
+    };
+  };
+}
+function findKey(object, predicate) {
+  for (var key2 in object) {
+    if (object.hasOwnProperty(key2) && predicate(object[key2])) {
+      return key2;
+    }
+  }
+  return void 0;
+}
+function findIndex(array, predicate) {
+  for (var key2 = 0; key2 < array.length; key2++) {
+    if (predicate(array[key2])) {
+      return key2;
+    }
+  }
+  return void 0;
+}
+
+// node_modules/date-fns/esm/locale/_lib/buildMatchPatternFn/index.js
+function buildMatchPatternFn(args) {
+  return function(string) {
+    var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+    var matchResult = string.match(args.matchPattern);
+    if (!matchResult)
+      return null;
+    var matchedString = matchResult[0];
+    var parseResult = string.match(args.parsePattern);
+    if (!parseResult)
+      return null;
+    var value = args.valueCallback ? args.valueCallback(parseResult[0]) : parseResult[0];
+    value = options.valueCallback ? options.valueCallback(value) : value;
+    var rest = string.slice(matchedString.length);
+    return {
+      value,
+      rest
+    };
+  };
+}
+
+// node_modules/date-fns/esm/locale/en-US/_lib/match/index.js
+var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
+var parseOrdinalNumberPattern = /\d+/i;
+var matchEraPatterns = {
+  narrow: /^(b|a)/i,
+  abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
+  wide: /^(before christ|before common era|anno domini|common era)/i
+};
+var parseEraPatterns = {
+  any: [/^b/i, /^(a|c)/i]
+};
+var matchQuarterPatterns = {
+  narrow: /^[1234]/i,
+  abbreviated: /^q[1234]/i,
+  wide: /^[1234](th|st|nd|rd)? quarter/i
+};
+var parseQuarterPatterns = {
+  any: [/1/i, /2/i, /3/i, /4/i]
+};
+var matchMonthPatterns = {
+  narrow: /^[jfmasond]/i,
+  abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
+  wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
+};
+var parseMonthPatterns = {
+  narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
+  any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
+};
+var matchDayPatterns = {
+  narrow: /^[smtwf]/i,
+  short: /^(su|mo|tu|we|th|fr|sa)/i,
+  abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
+  wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
+};
+var parseDayPatterns = {
+  narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
+  any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
+};
+var matchDayPeriodPatterns = {
+  narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
+  any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
+};
+var parseDayPeriodPatterns = {
+  any: {
+    am: /^a/i,
+    pm: /^p/i,
+    midnight: /^mi/i,
+    noon: /^no/i,
+    morning: /morning/i,
+    afternoon: /afternoon/i,
+    evening: /evening/i,
+    night: /night/i
+  }
+};
+var match = {
+  ordinalNumber: buildMatchPatternFn({
+    matchPattern: matchOrdinalNumberPattern,
+    parsePattern: parseOrdinalNumberPattern,
+    valueCallback: function valueCallback(value) {
+      return parseInt(value, 10);
+    }
+  }),
+  era: buildMatchFn({
+    matchPatterns: matchEraPatterns,
+    defaultMatchWidth: "wide",
+    parsePatterns: parseEraPatterns,
+    defaultParseWidth: "any"
+  }),
+  quarter: buildMatchFn({
+    matchPatterns: matchQuarterPatterns,
+    defaultMatchWidth: "wide",
+    parsePatterns: parseQuarterPatterns,
+    defaultParseWidth: "any",
+    valueCallback: function valueCallback2(index) {
+      return index + 1;
+    }
+  }),
+  month: buildMatchFn({
+    matchPatterns: matchMonthPatterns,
+    defaultMatchWidth: "wide",
+    parsePatterns: parseMonthPatterns,
+    defaultParseWidth: "any"
+  }),
+  day: buildMatchFn({
+    matchPatterns: matchDayPatterns,
+    defaultMatchWidth: "wide",
+    parsePatterns: parseDayPatterns,
+    defaultParseWidth: "any"
+  }),
+  dayPeriod: buildMatchFn({
+    matchPatterns: matchDayPeriodPatterns,
+    defaultMatchWidth: "any",
+    parsePatterns: parseDayPeriodPatterns,
+    defaultParseWidth: "any"
+  })
+};
+var match_default = match;
+
+// node_modules/date-fns/esm/locale/en-US/index.js
+var locale = {
+  code: "en-US",
+  formatDistance: formatDistance_default,
+  formatLong: formatLong_default,
+  formatRelative: formatRelative_default,
+  localize: localize_default,
+  match: match_default,
+  options: {
+    weekStartsOn: 0,
+    firstWeekContainsDate: 1
+  }
+};
+var en_US_default = locale;
+
+// node_modules/date-fns/esm/_lib/defaultLocale/index.js
+var defaultLocale_default = en_US_default;
+
+// node_modules/date-fns/esm/format/index.js
+var formattingTokensRegExp = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
+var longFormattingTokensRegExp = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
+var escapedStringRegExp = /^'([^]*?)'?$/;
+var doubleQuoteRegExp = /''/g;
+var unescapedLatinCharacterRegExp = /[a-zA-Z]/;
+function format(dirtyDate, dirtyFormatStr, options) {
+  var _ref, _options$locale, _ref2, _ref3, _ref4, _options$firstWeekCon, _options$locale2, _options$locale2$opti, _defaultOptions$local, _defaultOptions$local2, _ref5, _ref6, _ref7, _options$weekStartsOn, _options$locale3, _options$locale3$opti, _defaultOptions$local3, _defaultOptions$local4;
+  requiredArgs(2, arguments);
+  var formatStr = String(dirtyFormatStr);
+  var defaultOptions3 = getDefaultOptions();
+  var locale2 = (_ref = (_options$locale = options === null || options === void 0 ? void 0 : options.locale) !== null && _options$locale !== void 0 ? _options$locale : defaultOptions3.locale) !== null && _ref !== void 0 ? _ref : defaultLocale_default;
+  var firstWeekContainsDate = toInteger((_ref2 = (_ref3 = (_ref4 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale2 = options.locale) === null || _options$locale2 === void 0 ? void 0 : (_options$locale2$opti = _options$locale2.options) === null || _options$locale2$opti === void 0 ? void 0 : _options$locale2$opti.firstWeekContainsDate) !== null && _ref4 !== void 0 ? _ref4 : defaultOptions3.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : 1);
+  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  }
+  var weekStartsOn = toInteger((_ref5 = (_ref6 = (_ref7 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale3 = options.locale) === null || _options$locale3 === void 0 ? void 0 : (_options$locale3$opti = _options$locale3.options) === null || _options$locale3$opti === void 0 ? void 0 : _options$locale3$opti.weekStartsOn) !== null && _ref7 !== void 0 ? _ref7 : defaultOptions3.weekStartsOn) !== null && _ref6 !== void 0 ? _ref6 : (_defaultOptions$local3 = defaultOptions3.locale) === null || _defaultOptions$local3 === void 0 ? void 0 : (_defaultOptions$local4 = _defaultOptions$local3.options) === null || _defaultOptions$local4 === void 0 ? void 0 : _defaultOptions$local4.weekStartsOn) !== null && _ref5 !== void 0 ? _ref5 : 0);
+  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  }
+  if (!locale2.localize) {
+    throw new RangeError("locale must contain localize property");
+  }
+  if (!locale2.formatLong) {
+    throw new RangeError("locale must contain formatLong property");
+  }
+  var originalDate = toDate(dirtyDate);
+  if (!isValid(originalDate)) {
+    throw new RangeError("Invalid time value");
+  }
+  var timezoneOffset = getTimezoneOffsetInMilliseconds(originalDate);
+  var utcDate = subMilliseconds(originalDate, timezoneOffset);
+  var formatterOptions = {
+    firstWeekContainsDate,
+    weekStartsOn,
+    locale: locale2,
+    _originalDate: originalDate
+  };
+  var result = formatStr.match(longFormattingTokensRegExp).map(function(substring) {
+    var firstCharacter = substring[0];
+    if (firstCharacter === "p" || firstCharacter === "P") {
+      var longFormatter = longFormatters_default[firstCharacter];
+      return longFormatter(substring, locale2.formatLong);
+    }
+    return substring;
+  }).join("").match(formattingTokensRegExp).map(function(substring) {
+    if (substring === "''") {
+      return "'";
+    }
+    var firstCharacter = substring[0];
+    if (firstCharacter === "'") {
+      return cleanEscapedString(substring);
+    }
+    var formatter = formatters_default[firstCharacter];
+    if (formatter) {
+      if (!(options !== null && options !== void 0 && options.useAdditionalWeekYearTokens) && isProtectedWeekYearToken(substring)) {
+        throwProtectedError(substring, dirtyFormatStr, String(dirtyDate));
+      }
+      if (!(options !== null && options !== void 0 && options.useAdditionalDayOfYearTokens) && isProtectedDayOfYearToken(substring)) {
+        throwProtectedError(substring, dirtyFormatStr, String(dirtyDate));
+      }
+      return formatter(utcDate, substring, locale2.localize, formatterOptions);
+    }
+    if (firstCharacter.match(unescapedLatinCharacterRegExp)) {
+      throw new RangeError("Format string contains an unescaped latin alphabet character `" + firstCharacter + "`");
+    }
+    return substring;
+  }).join("");
+  return result;
+}
+function cleanEscapedString(input) {
+  var matched = input.match(escapedStringRegExp);
+  if (!matched) {
+    return input;
+  }
+  return matched[1].replace(doubleQuoteRegExp, "'");
+}
+
+// node_modules/date-fns/esm/_lib/assign/index.js
+function assign(target, object) {
+  if (target == null) {
+    throw new TypeError("assign requires that input parameter not be null or undefined");
+  }
+  for (var property in object) {
+    if (Object.prototype.hasOwnProperty.call(object, property)) {
+      ;
+      target[property] = object[property];
+    }
+  }
+  return target;
+}
+
+// node_modules/date-fns/esm/_lib/cloneObject/index.js
+function cloneObject(object) {
+  return assign({}, object);
+}
+
+// node_modules/date-fns/esm/formatDistance/index.js
+var MINUTES_IN_DAY = 1440;
+var MINUTES_IN_ALMOST_TWO_DAYS = 2520;
+var MINUTES_IN_MONTH = 43200;
+var MINUTES_IN_TWO_MONTHS = 86400;
+function formatDistance3(dirtyDate, dirtyBaseDate, options) {
+  var _ref, _options$locale;
+  requiredArgs(2, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var locale2 = (_ref = (_options$locale = options === null || options === void 0 ? void 0 : options.locale) !== null && _options$locale !== void 0 ? _options$locale : defaultOptions3.locale) !== null && _ref !== void 0 ? _ref : defaultLocale_default;
+  if (!locale2.formatDistance) {
+    throw new RangeError("locale must contain formatDistance property");
+  }
+  var comparison = compareAsc(dirtyDate, dirtyBaseDate);
+  if (isNaN(comparison)) {
+    throw new RangeError("Invalid time value");
+  }
+  var localizeOptions = assign(cloneObject(options), {
+    addSuffix: Boolean(options === null || options === void 0 ? void 0 : options.addSuffix),
+    comparison
+  });
+  var dateLeft;
+  var dateRight;
+  if (comparison > 0) {
+    dateLeft = toDate(dirtyBaseDate);
+    dateRight = toDate(dirtyDate);
+  } else {
+    dateLeft = toDate(dirtyDate);
+    dateRight = toDate(dirtyBaseDate);
+  }
+  var seconds = differenceInSeconds(dateRight, dateLeft);
+  var offsetInSeconds = (getTimezoneOffsetInMilliseconds(dateRight) - getTimezoneOffsetInMilliseconds(dateLeft)) / 1e3;
+  var minutes = Math.round((seconds - offsetInSeconds) / 60);
+  var months;
+  if (minutes < 2) {
+    if (options !== null && options !== void 0 && options.includeSeconds) {
+      if (seconds < 5) {
+        return locale2.formatDistance("lessThanXSeconds", 5, localizeOptions);
+      } else if (seconds < 10) {
+        return locale2.formatDistance("lessThanXSeconds", 10, localizeOptions);
+      } else if (seconds < 20) {
+        return locale2.formatDistance("lessThanXSeconds", 20, localizeOptions);
+      } else if (seconds < 40) {
+        return locale2.formatDistance("halfAMinute", 0, localizeOptions);
+      } else if (seconds < 60) {
+        return locale2.formatDistance("lessThanXMinutes", 1, localizeOptions);
+      } else {
+        return locale2.formatDistance("xMinutes", 1, localizeOptions);
+      }
+    } else {
+      if (minutes === 0) {
+        return locale2.formatDistance("lessThanXMinutes", 1, localizeOptions);
+      } else {
+        return locale2.formatDistance("xMinutes", minutes, localizeOptions);
+      }
+    }
+  } else if (minutes < 45) {
+    return locale2.formatDistance("xMinutes", minutes, localizeOptions);
+  } else if (minutes < 90) {
+    return locale2.formatDistance("aboutXHours", 1, localizeOptions);
+  } else if (minutes < MINUTES_IN_DAY) {
+    var hours = Math.round(minutes / 60);
+    return locale2.formatDistance("aboutXHours", hours, localizeOptions);
+  } else if (minutes < MINUTES_IN_ALMOST_TWO_DAYS) {
+    return locale2.formatDistance("xDays", 1, localizeOptions);
+  } else if (minutes < MINUTES_IN_MONTH) {
+    var days = Math.round(minutes / MINUTES_IN_DAY);
+    return locale2.formatDistance("xDays", days, localizeOptions);
+  } else if (minutes < MINUTES_IN_TWO_MONTHS) {
+    months = Math.round(minutes / MINUTES_IN_MONTH);
+    return locale2.formatDistance("aboutXMonths", months, localizeOptions);
+  }
+  months = differenceInMonths(dateRight, dateLeft);
+  if (months < 12) {
+    var nearestMonth = Math.round(minutes / MINUTES_IN_MONTH);
+    return locale2.formatDistance("xMonths", nearestMonth, localizeOptions);
+  } else {
+    var monthsSinceStartOfYear = months % 12;
+    var years = Math.floor(months / 12);
+    if (monthsSinceStartOfYear < 3) {
+      return locale2.formatDistance("aboutXYears", years, localizeOptions);
+    } else if (monthsSinceStartOfYear < 9) {
+      return locale2.formatDistance("overXYears", years, localizeOptions);
+    } else {
+      return locale2.formatDistance("almostXYears", years + 1, localizeOptions);
+    }
+  }
+}
+
+// node_modules/date-fns/esm/getDaysInMonth/index.js
+function getDaysInMonth(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var year = date.getFullYear();
+  var monthIndex = date.getMonth();
+  var lastDayOfMonth2 = new Date(0);
+  lastDayOfMonth2.setFullYear(year, monthIndex + 1, 0);
+  lastDayOfMonth2.setHours(0, 0, 0, 0);
+  return lastDayOfMonth2.getDate();
+}
+
+// node_modules/date-fns/esm/getISOWeek/index.js
+var MILLISECONDS_IN_WEEK4 = 6048e5;
+function getISOWeek(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var diff = startOfISOWeek(date).getTime() - startOfISOWeekYear(date).getTime();
+  return Math.round(diff / MILLISECONDS_IN_WEEK4) + 1;
+}
+
+// node_modules/date-fns/esm/getTime/index.js
+function getTime(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var timestamp = date.getTime();
+  return timestamp;
+}
+
+// node_modules/date-fns/esm/getUnixTime/index.js
+function getUnixTime(dirtyDate) {
+  requiredArgs(1, arguments);
+  return Math.floor(getTime(dirtyDate) / 1e3);
+}
+
+// node_modules/date-fns/esm/getWeekYear/index.js
+function getWeekYear(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var year = date.getFullYear();
+  var defaultOptions3 = getDefaultOptions();
+  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
+  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  }
+  var firstWeekOfNextYear = new Date(0);
+  firstWeekOfNextYear.setFullYear(year + 1, 0, firstWeekContainsDate);
+  firstWeekOfNextYear.setHours(0, 0, 0, 0);
+  var startOfNextYear = startOfWeek(firstWeekOfNextYear, options);
+  var firstWeekOfThisYear = new Date(0);
+  firstWeekOfThisYear.setFullYear(year, 0, firstWeekContainsDate);
+  firstWeekOfThisYear.setHours(0, 0, 0, 0);
+  var startOfThisYear = startOfWeek(firstWeekOfThisYear, options);
+  if (date.getTime() >= startOfNextYear.getTime()) {
+    return year + 1;
+  } else if (date.getTime() >= startOfThisYear.getTime()) {
+    return year;
+  } else {
+    return year - 1;
+  }
+}
+
+// node_modules/date-fns/esm/startOfWeekYear/index.js
+function startOfWeekYear(dirtyDate, options) {
+  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
+  requiredArgs(1, arguments);
+  var defaultOptions3 = getDefaultOptions();
+  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
+  var year = getWeekYear(dirtyDate, options);
+  var firstWeek = new Date(0);
+  firstWeek.setFullYear(year, 0, firstWeekContainsDate);
+  firstWeek.setHours(0, 0, 0, 0);
+  var date = startOfWeek(firstWeek, options);
+  return date;
+}
+
+// node_modules/date-fns/esm/getWeek/index.js
+var MILLISECONDS_IN_WEEK5 = 6048e5;
+function getWeek(dirtyDate, options) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var diff = startOfWeek(date, options).getTime() - startOfWeekYear(date, options).getTime();
+  return Math.round(diff / MILLISECONDS_IN_WEEK5) + 1;
+}
+
+// node_modules/date-fns/esm/lastDayOfMonth/index.js
+function lastDayOfMonth(dirtyDate) {
+  requiredArgs(1, arguments);
+  var date = toDate(dirtyDate);
+  var month = date.getMonth();
+  date.setFullYear(date.getFullYear(), month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date;
+}
+
+// node_modules/date-fns/esm/getWeeksInMonth/index.js
+function getWeeksInMonth(date, options) {
+  requiredArgs(1, arguments);
+  return differenceInCalendarWeeks(lastDayOfMonth(date), startOfMonth(date), options) + 1;
+}
+
+// node_modules/date-fns/esm/isAfter/index.js
+function isAfter(dirtyDate, dirtyDateToCompare) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var dateToCompare = toDate(dirtyDateToCompare);
+  return date.getTime() > dateToCompare.getTime();
+}
+
+// node_modules/date-fns/esm/isBefore/index.js
+function isBefore(dirtyDate, dirtyDateToCompare) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var dateToCompare = toDate(dirtyDateToCompare);
+  return date.getTime() < dateToCompare.getTime();
+}
+
+// node_modules/date-fns/esm/isSameMonth/index.js
+function isSameMonth(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeft = toDate(dirtyDateLeft);
+  var dateRight = toDate(dirtyDateRight);
+  return dateLeft.getFullYear() === dateRight.getFullYear() && dateLeft.getMonth() === dateRight.getMonth();
+}
+
+// node_modules/date-fns/esm/isSameYear/index.js
+function isSameYear(dirtyDateLeft, dirtyDateRight) {
+  requiredArgs(2, arguments);
+  var dateLeft = toDate(dirtyDateLeft);
+  var dateRight = toDate(dirtyDateRight);
+  return dateLeft.getFullYear() === dateRight.getFullYear();
+}
+
+// node_modules/date-fns/esm/subDays/index.js
+function subDays(dirtyDate, dirtyAmount) {
+  requiredArgs(2, arguments);
+  var amount = toInteger(dirtyAmount);
+  return addDays(dirtyDate, -amount);
+}
+
+// node_modules/date-fns/esm/setMonth/index.js
+function setMonth(dirtyDate, dirtyMonth) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var month = toInteger(dirtyMonth);
+  var year = date.getFullYear();
+  var day = date.getDate();
+  var dateWithDesiredMonth = new Date(0);
+  dateWithDesiredMonth.setFullYear(year, month, 15);
+  dateWithDesiredMonth.setHours(0, 0, 0, 0);
+  var daysInMonth = getDaysInMonth(dateWithDesiredMonth);
+  date.setMonth(month, Math.min(day, daysInMonth));
+  return date;
+}
+
+// node_modules/date-fns/esm/setYear/index.js
+function setYear(dirtyDate, dirtyYear) {
+  requiredArgs(2, arguments);
+  var date = toDate(dirtyDate);
+  var year = toInteger(dirtyYear);
+  if (isNaN(date.getTime())) {
+    return new Date(NaN);
+  }
+  date.setFullYear(year);
+  return date;
+}
+
+// src/utils/contexts/fm.ts
+var import_lodash = __toESM(require_lodash());
+var import_obsidian2 = require("obsidian");
+
+// src/utils/contexts/dv.ts
+var import_obsidian = require("obsidian");
+var LocationWrapper = {
+  "fullLine": { start: "", end: "" },
+  "brackets": { start: "[", end: "]" },
+  "parenthesis": { start: "(", end: ")" }
+};
+var fieldComponents = ["inQuote", "inList", "startStyle", "attribute", "endStyle", "beforeSeparatorSpacer", "afterSeparatorSpacer", "values"];
+var genericFieldRegex = "(?<inQuote>>(\\s+)?)?(?<inList>- )?(?<startStyle>[_\\*~`]*)(?<attribute>[0-9\\w\\p{Letter}\\p{Emoji_Presentation}][-0-9\\w\\p{Letter}\\p{Emoji_Presentation}\\s]*)(?<endStyle>[_\\*~`]*)(?<beforeSeparatorSpacer>\\s*)";
+var inlineFieldRegex = (attribute) => `(?<inQuote>>(\\s+)?)?(?<inList>- )?(?<startStyle>[_\\*~\`]*)(?<attribute>${attribute})(?<endStyle>[_\\*~\`]*)(?<beforeSeparatorSpacer>\\s*)::(?<afterSeparatorSpacer>\\s*)`;
+var fullLineRegex = new RegExp(`^${genericFieldRegex}::\\s*(?<values>.*)?`, "u");
+var inSentenceRegexBrackets = new RegExp(`\\[${genericFieldRegex}::\\s*(?<values>[^\\]]+)?\\]`, "gu");
+var inSentenceRegexPar = new RegExp(`\\(${genericFieldRegex}::\\s*(?<values>[^\\)]+)?\\)`, "gu");
+var encodeLink = (value) => {
+  return value ? value.replace(/\[\[/g, "\u{1F54C}\u{1F527}").replace(/\]\]/g, "\u{1F413}\u{1F400}") : value;
+};
+var decodeLink = (value) => {
+  return value ? value.replace(/🕌🔧/gu, "[[").replace(/🐓🐀/gu, "]]") : value;
+};
+var matchInlineFields = (regex, line, attribute, input, location = "fullLine") => {
+  const sR = line.matchAll(regex);
+  let next = sR.next();
+  const newFields = [];
+  while (!next.done) {
+    const match2 = next.value;
+    if (match2.groups && Object.keys(match2.groups).every((j4) => fieldComponents.includes(j4))) {
+      const { inList, inQuote, startStyle, endStyle, beforeSeparatorSpacer, afterSeparatorSpacer, values } = match2.groups;
+      const inputArray = input ? input.replace(/(\,\s+)/g, ",").split(",") : [""];
+      const newValue = inputArray.length == 1 ? inputArray[0] : `${inputArray.join(", ")}`;
+      const start = LocationWrapper[location].start;
+      const end = LocationWrapper[location].end;
+      newFields.push({
+        oldField: match2[0],
+        newField: `${inQuote || ""}${start}${inList || ""}${startStyle}${attribute}${endStyle}${beforeSeparatorSpacer}::${afterSeparatorSpacer}${newValue}${end}`
+      });
+    }
+    next = sR.next();
+  }
+  return newFields;
+};
+async function replaceValues(plugin, fileOrFilePath, attribute, input, previousItemsCount = 0) {
+  var _a2, _b2;
+  let file;
+  if (fileOrFilePath instanceof import_obsidian.TFile) {
+    file = fileOrFilePath;
+  } else {
+    const _file = plugin.app.vault.getAbstractFileByPath(fileOrFilePath);
+    if (_file instanceof import_obsidian.TFile && _file.extension == "md") {
+      file = _file;
+    } else {
+      throw Error("path doesn't correspond to a proper file");
+    }
+  }
+  const content = (await plugin.app.vault.read(file)).split("\n");
+  const frontmatter = (_a2 = plugin.app.metadataCache.getFileCache(file)) == null ? void 0 : _a2.frontmatter;
+  const skippedLines = [];
+  const { position: { start, end } } = frontmatter ? frontmatter : { position: { start: void 0, end: void 0 } };
+  const newContent = content.map((line, i4) => {
+    const encodedInput = encodeLink(input);
+    let encodedLine = encodeLink(line);
+    const fullLineRegex2 = new RegExp(`^${inlineFieldRegex(attribute)}(?<values>[^\\]]*)`, "u");
+    const fR = encodedLine.match(fullLineRegex2);
+    if ((fR == null ? void 0 : fR.groups) && Object.keys(fR.groups).every((j4) => fieldComponents.includes(j4))) {
+      const { inList, inQuote, startStyle, endStyle, beforeSeparatorSpacer, afterSeparatorSpacer, values } = fR.groups;
+      const inputArray = input ? input.replace(/(\,\s+)/g, ",").split(",").sort() : [];
+      let newValue;
+      let hiddenValue = "";
+      newValue = inputArray.length == 1 ? inputArray[0] : `${inputArray.join(", ")}`;
+      return `${inQuote || ""}${inList || ""}${startStyle}${attribute}${endStyle}${beforeSeparatorSpacer}::${afterSeparatorSpacer}${hiddenValue + newValue}`;
+    } else {
+      const newFields = [];
+      const inSentenceRegexBrackets2 = new RegExp(`\\[${inlineFieldRegex(attribute)}(?<values>[^\\]]+)?\\]`, "gu");
+      const inSentenceRegexPar2 = new RegExp(`\\(${inlineFieldRegex(attribute)}(?<values>[^\\)]+)?\\)`, "gu");
+      newFields.push(...matchInlineFields(inSentenceRegexBrackets2, encodedLine, attribute, encodedInput, "brackets" /* brackets */));
+      newFields.push(...matchInlineFields(inSentenceRegexPar2, encodedLine, attribute, encodedInput, "parenthesis" /* parenthesis */));
+      newFields.forEach((field) => {
+        const fieldRegex = new RegExp(field.oldField.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "u");
+        encodedLine = encodedLine.replace(fieldRegex, field.newField);
+      });
+      return decodeLink(encodedLine);
+    }
+  });
+  await plugin.app.vault.modify(file, newContent.filter((line, i4) => !skippedLines.includes(i4)).join("\n"));
+  const editor = (_b2 = plugin.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView)) == null ? void 0 : _b2.editor;
+  if (editor) {
+    const lineNumber = editor.getCursor().line;
+    editor.setCursor({ line: editor.getCursor().line, ch: editor.getLine(lineNumber).length });
+  }
+}
+
+// src/utils/contexts/fm.ts
+var saveContextToFile = (file, cols, context, plugin) => {
+  if (app.fileManager.processFrontMatter) {
+    app.fileManager.processFrontMatter(file, (frontmatter) => {
+      Object.keys(context).filter(
+        (f4) => cols.find((c4) => c4.name == f4) && cols.find((c4) => c4.name == f4).hidden != "true" && !cols.find((c4) => c4.name == f4).type.contains("file") && context[f4]
+      ).forEach((f4) => {
+        const col = cols.find((c4) => c4.name == f4);
+        frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
+        if (plugin.dataViewAPI()) {
+          if (plugin.dataViewAPI().page(file.path)[f4] && !frontmatter[f4]) {
+            replaceValues(plugin, file.path, f4, context[f4]);
+          } else {
+            frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
+          }
+        } else {
+          frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
+        }
+      });
+    });
+  }
+};
+var frontMatterForFile = (file) => {
+  let currentCache;
+  if (file instanceof import_obsidian2.TFile && app.metadataCache.getFileCache(file) !== null) {
+    currentCache = app.metadataCache.getFileCache(file);
+  }
+  return currentCache == null ? void 0 : currentCache.frontmatter;
+};
+var frontMatterKeys = (fm) => {
+  return Object.keys(fm != null ? fm : {}).filter((f4) => f4 != "position").filter((f4) => f4 != "tag" && f4 != "tags");
+};
+var yamlTypeToMDBType = (YAMLtype) => {
+  switch (YAMLtype) {
+    case "duration":
+      return "text";
+      break;
+    case "unknown":
+      return "text";
+      break;
+  }
+  return YAMLtype;
+};
+var detectYAMLType = (value, key2) => {
+  if (typeof value === "string") {
+    if (/\/\/(\S+?(?:jpe?g|png|gif|svg))/gi.test(value) || value.contains("unsplash")) {
+      return "image";
+    }
+    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      return "date";
+    }
+    if (key2 == "tag" || key2 == "tags") {
+      return "tag";
+    }
+    if (/\[\[.*?\]\]/.test(value)) {
+      return "link";
+    }
+  } else if (typeof value === "number") {
+    return "number";
+  } else if (typeof value === "boolean") {
+    return "boolean";
+  } else if (!value) {
+    return "unknown";
+  } else if (Array.isArray(value) || typeof value === "string" && value.indexOf(",") > -1) {
+    let arrayValue = Array.isArray(value) ? value : [];
+    if (typeof value === "string" && value.indexOf(",") > -1) {
+      arrayValue = splitString(value);
+    }
+    if (key2 == "tag" || key2 == "tags") {
+      return "tag-multi";
+    }
+    if (arrayValue.length == 1 && Array.isArray(arrayValue[0]) && arrayValue[0].length == 1 && typeof arrayValue[0][0] === "string") {
+      return "link";
+    }
+    const types = uniq(arrayValue.map((f4) => detectYAMLType(f4, key2)));
+    if (types.length == 1 && types[0] == "link") {
+      return "link-multi";
+    }
+    return "option-multi";
+  } else if (value.isLuxonDateTime) {
+    return "date";
+  } else if (value.isLuxonDuration) {
+    return "duration";
+  } else if (value.type == "file") {
+    return "link";
+  }
+  return "text";
+};
+var mergeTableData = (mdb, yamlmdb, types) => {
+  return {
+    ...mdb,
+    cols: [
+      ...mdb.cols,
+      ...yamlmdb.cols.filter(
+        (f4) => !mdb.cols.find((g4) => g4.name.toLowerCase() == f4.toLowerCase())
+      ).map((f4) => ({
+        name: f4,
+        schemaId: mdb.schema.id,
+        type: yamlTypeToMDBType(types[f4])
+      }))
+    ].filter(onlyUniqueProp("name")),
+    rows: mdb.rows.map((r3) => {
+      const fmRow = yamlmdb.rows.find((f4) => f4.File == r3.File);
+      if (fmRow) {
+        return {
+          ...r3,
+          ...fmRow
+        };
+      }
+      return r3;
+    })
+  };
+};
+var guestimateTypes = (_files, plugin, dv) => {
+  const typesArray = _files.map((f4) => getAbstractFileAtPath(app, f4)).filter((f4) => f4).map((k5) => {
+    const fm = dv && plugin.dataViewAPI() ? plugin.dataViewAPI().page(k5.path) : frontMatterForFile(k5);
+    const fmKeys = dv ? Object.keys(fm != null ? fm : {}).filter(
+      (f4, i4, self2) => !self2.find(
+        (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
+      ) ? true : false
+    ).filter((f4) => f4 != "file") : frontMatterKeys(fm);
+    return fmKeys.reduce(
+      (pk, ck) => ({ ...pk, [ck]: detectYAMLType(fm[ck], ck) }),
+      {}
+    );
+  });
+  const types = typesArray.reduce(
+    (p3, c4) => {
+      const newSet = Object.keys(c4).reduce(
+        (pk, ck) => {
+          var _a2;
+          return { ...pk, [ck]: [...(_a2 = p3 == null ? void 0 : p3[ck]) != null ? _a2 : [], c4[ck]] };
+        },
+        { ...p3 }
+      );
+      return newSet;
+    },
+    {}
+  );
+  const guessType = (ts) => {
+    return import_lodash.default.head((0, import_lodash.default)(ts).countBy().entries().maxBy(import_lodash.default.last));
+  };
+  const guessedTypes = Object.keys(types).reduce((p3, c4) => {
+    return { ...p3, [c4]: guessType(types[c4]) };
+  }, {});
+  return guessedTypes;
+};
+var valueForFrontmatter = (type, value) => {
+  if (type == "number") {
+    return parseInt(value);
+  } else if (type == "boolean") {
+    return value == "true";
+  } else if (type.contains("multi")) {
+    return splitString(value).map((f4) => valueForFrontmatter(type.replace("-multi", ""), f4));
+  } else if (type.contains("link") || type.contains("context")) {
+    return `[[${value}]]`;
+  }
+  return value;
+};
+var renameFrontmatterKey = (plugin, path, key2, name) => {
+  const afile = getAbstractFileAtPath(app, path);
+  if (afile) {
+    if (app.fileManager.processFrontMatter) {
+      app.fileManager.processFrontMatter(afile, (frontmatter) => {
+        if (key2 in frontmatter) {
+          frontmatter[name] = frontmatter[key2];
+          delete frontmatter[key2];
+        }
+      });
+    }
+  }
+};
+var defaultValueForType = (value, type) => {
+  if (type == "date") {
+    return format(Date.now(), "yyyy-MM-dd");
+  }
+  if (type == "number") {
+    return 0;
+  }
+  if (type == "boolean") {
+    return true;
+  }
+  if (type == "link") {
+    return "[[Select Note]]";
+  }
+  if (type == "option") {
+    return "one, two";
+  }
+  if (type == "text") {
+    return " ";
+  }
+  if (type == "image") {
+    return "https://images.unsplash.com/photo-1675789652575-0a5d2425b6c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80";
+  }
+};
+var changeFrontmatterType = (plugin, path, key2, type) => {
+  const afile = getAbstractFileAtPath(app, path);
+  if (afile) {
+    if (app.fileManager.processFrontMatter) {
+      app.fileManager.processFrontMatter(afile, (frontmatter) => {
+        if (key2 in frontmatter) {
+          frontmatter[key2] = defaultValueForType(frontmatter[key2], type);
+        }
+      });
+    }
+  }
+};
+var deleteFrontmatterValue = (plugin, path, key2) => {
+  const afile = getAbstractFileAtPath(app, path);
+  if (afile) {
+    if (app.fileManager.processFrontMatter) {
+      app.fileManager.processFrontMatter(afile, (frontmatter) => {
+        if (plugin.dataViewAPI()) {
+          if (plugin.dataViewAPI().page(path)[key2] && !frontmatter[key2]) {
+            replaceValues(plugin, path, key2, "");
+          } else {
+            if (key2 in frontmatter) {
+              delete frontmatter[key2];
+            }
+          }
+        } else {
+          if (key2 in frontmatter) {
+            delete frontmatter[key2];
+          }
+        }
+      });
+    }
+  }
+};
+var saveFrontmatterValue = (plugin, path, key2, value, type, forceSave) => {
+  const afile = getAbstractFileAtPath(app, path);
+  if (afile && afile instanceof import_obsidian2.TFile) {
+    if (app.fileManager.processFrontMatter) {
+      app.fileManager.processFrontMatter(afile, (frontmatter) => {
+        if (plugin.dataViewAPI()) {
+          if (plugin.dataViewAPI().page(path)[key2] && !frontmatter[key2]) {
+            replaceValues(plugin, path, key2, value);
+          } else {
+            if (key2 in frontmatter || forceSave) {
+              frontmatter[key2] = valueForFrontmatter(type, value);
+            }
+          }
+        } else {
+          if (key2 in frontmatter || forceSave) {
+            frontmatter[key2] = valueForFrontmatter(type, value);
+          }
+        }
+      });
+    }
+  }
+};
+var parseFrontMatter = (field, value, dv) => {
+  const YAMLtype = detectYAMLType(value, field);
+  switch (YAMLtype) {
+    case "number":
+      return value.toString();
+      break;
+    case "boolean":
+      return value ? "true" : "false";
+      break;
+    case "date":
+      if (!dv) {
+        return value;
+      } else {
+        return format(new Date(value.ts), "yyyy-MM-dd");
+        ;
+      }
+      break;
+    case "duration":
+      return Object.keys(value.values).reduce(
+        (p3, c4) => [
+          ...p3,
+          ...value.values[c4] > 0 ? [value.values[c4] + " " + c4] : []
+        ],
+        []
+      ).join(", ");
+      break;
+    case "option-multi":
+    case "link-multi":
+      if (typeof value === "string") {
+        return value;
+      }
+      return value.join(",");
+      break;
+    case "link":
+      {
+        if (Array.isArray(value) && value.length == 1 && Array.isArray(value[0]) && value[0].length == 1 && typeof value[0][0] === "string") {
+          return value[0][0];
+        } else if (typeof value === "string") {
+          return value;
+        }
+        return value.path;
+      }
+      break;
+    case "text":
+    case "tag":
+    case "image":
+      return value;
+      break;
+  }
+  return "";
+};
+
+// src/dispatch/mdb.ts
+var dispatchDatabaseFileChanged = (dbPath) => {
+  let evt = new CustomEvent(eventTypes.mdbChange, { detail: { dbPath } });
+  window.dispatchEvent(evt);
+};
+var processFolderDB = async (plugin, folderPath, processor, fallback) => {
+  let tags = [];
+  const dbPath = folderContextFromFolder(plugin, folderPath);
+  const dbFileExists = getAbstractFileAtPath(app, dbPath);
+  if (dbFileExists) {
+    const folderDB = await getMDBTable(plugin, "files", dbPath, false);
+    if (folderDB) {
+      tags.push(...folderDB.schema.def.split("&"));
+      const newDB = await processor(folderDB, dbPath);
+      const promises = tags.map((tag) => {
+        const tagdbPath = tagContextFromTag(plugin, tag);
+        const tagFileExists = getAbstractFileAtPath(app, tagdbPath);
+        if (tagFileExists) {
+          return consolidateRowsToTag(
+            plugin,
+            tagdbPath,
+            "files",
+            dbPath,
+            newDB.rows
+          ).then((f4) => {
+          });
+        }
+      });
+      return Promise.all(promises);
+    } else if (fallback) {
+      await fallback();
+    }
+  } else if (fallback) {
+    await fallback();
+  }
+};
+var saveDB = async (plugin, dbPath, newTable) => {
+  return saveMDBToPath(plugin, dbPath, newTable);
+};
+var renameRow = (folder, filePath, toFilePath) => {
+  return {
+    ...folder,
+    rows: folder.rows.map(
+      (f4) => f4.File == filePath && f4._source == "folder" ? { ...f4, File: toFilePath } : f4
+    )
+  };
+};
+var removeRows = (folder, source) => {
+  return { ...folder, rows: folder.rows.filter((f4) => f4._source != source) };
+};
+var removeRow = (folder, filePath) => {
+  return {
+    ...folder,
+    rows: folder.rows.filter(
+      (f4) => f4.File != filePath && f4._source == "folder"
+    )
+  };
+};
+var insertRow = (folder, row, parent) => {
+  const existingRow = folder.rows.find(
+    (f4) => f4.File == row.File || parent + "/" + f4.File + ".md" == row.File
+  );
+  if (existingRow) {
+    return {
+      ...folder,
+      rows: folder.rows.map(
+        (f4) => f4.File == existingRow.File ? { ...f4, File: row.File, _source: "folder", ...row } : f4
+      )
+    };
+  }
+  return { ...folder, rows: [...folder.rows, row] };
+};
+var insertColumns = (table, column) => {
+  if (table.cols.find((f4) => f4.name == column.name)) {
+    new import_obsidian3.Notice(i18n_default.notice.duplicatePropertyName);
+    return;
+  }
+  return {
+    ...table,
+    cols: [...table.cols, column]
+  };
+};
+var updateValue = (folder, lookupField, lookupValue, field, value) => {
+  return {
+    ...folder,
+    rows: folder.rows.map((f4) => f4[lookupField] == lookupValue ? {
+      ...f4,
+      [field]: value
+    } : f4)
+  };
+};
+var insertRows = (folder, rows) => {
+  const newRows = rows.filter(
+    (row) => {
+      var _a2;
+      return ((_a2 = row.File) == null ? void 0 : _a2.length) > 0 && !folder.rows.some((f4) => f4.File == row.File && f4._source == "folder");
+    }
+  );
+  return { ...folder, rows: [...folder.rows, ...newRows] };
+};
+var saveContextToFrontmatter = (file, cols, context, plugin) => {
+  const afile = getAbstractFileAtPath(app, file);
+  if (afile && afile instanceof import_obsidian3.TFile)
+    saveContextToFile(afile, cols, context, plugin);
+};
+var removeSourceFromTag = async (plugin, tag, source) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  const tagFileExists = getAbstractFileAtPath(app, dbPath);
+  if (tagFileExists) {
+    const tagDB = await getMDBTable(plugin, "files", dbPath, true);
+    const files = tagDB.rows.filter((f4) => f4._source == source);
+    files.forEach(
+      (row) => saveContextToFrontmatter(
+        row["File"],
+        tagDB.cols,
+        tagDB.cols.reduce((p3, c4) => ({ ...p3, [c4.name]: row[c4.name] }), {}),
+        plugin
+      )
+    );
+    await saveDB(plugin, dbPath, removeRows(tagDB, source));
+    await disconnectContext(plugin, tag, source);
+  }
+};
+var initiateContextIfNotExists = async (plugin, tag) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  const tagFileExists = getAbstractFileAtPath(app, dbPath);
+  if (tagFileExists)
+    return false;
+  return createDefaultDB(plugin, dbPath, true);
+};
+var updateContextValue = async (plugin, dbPath, file, field, value, tag) => {
+  const tagFileExists = getAbstractFileAtPath(app, dbPath);
+  if (!tagFileExists) {
+    await createDefaultDB(plugin, dbPath, tag);
+  }
+  await getMDBTable(plugin, "files", dbPath, tag).then(
+    (tagDB) => saveDB(plugin, dbPath, updateValue(tagDB, "File", file, field, value))
+  ).then((f4) => dispatchDatabaseFileChanged(dbPath));
+};
+var insertContextColumn = async (plugin, dbPath, field, tag) => {
+  const saveNewContextColumns = async (table, field2) => {
+    await saveDB(plugin, dbPath, insertColumns(table, field2));
+  };
+  const tagFileExists = getAbstractFileAtPath(app, dbPath);
+  if (!tagFileExists) {
+    await createDefaultDB(plugin, dbPath, tag);
+  }
+  await getMDBTable(plugin, "files", dbPath, tag).then(
+    (tagDB) => saveNewContextColumns(tagDB, field).then((f4) => {
+      dispatchDatabaseFileChanged(dbPath);
+    })
+  );
+};
+var columnsForContext = async (plugin, dbPath) => {
+  return getMDBTable(plugin, "files", dbPath, true).then(
+    (tagDB) => {
+      var _a2;
+      return (_a2 = tagDB == null ? void 0 : tagDB.cols) != null ? _a2 : [];
+    }
+  );
+};
+var insertContextItems = async (plugin, newPaths, t4) => {
+  const saveNewContextRows = async (tag, path) => {
+    const newRow = newPaths.map((newPath) => ({ File: newPath }));
+    await saveDB(plugin, path, insertRows(tag, newRow));
+  };
+  const dbPath = tagContextFromTag(plugin, t4);
+  const tagFileExists = getAbstractFileAtPath(app, dbPath);
+  if (!tagFileExists) {
+    await createDefaultDB(plugin, dbPath, true);
+  }
+  await getMDBTable(plugin, "files", dbPath, true).then(
+    (tagDB) => saveNewContextRows(tagDB, dbPath)
+  );
+};
+var fileToFM = (file, cols, plugin) => {
+  const fm = frontMatterForFile(file);
+  const fmKeys = frontMatterKeys(fm).filter((f4) => cols.some((g4) => f4 == g4));
+  const rows = fmKeys.reduce(
+    (p3, c4) => ({ ...p3, [c4]: parseFrontMatter(c4, fm[c4], false) }),
+    {}
+  );
+  if (plugin.dataViewAPI()) {
+    return { ...rows, ...fileToDV(file, cols, plugin) };
+  }
+  return rows;
+};
+var fileToDV = (file, cols, plugin) => {
+  const dvValues = plugin.dataViewAPI().page(file.path);
+  const fmKeys = uniqCaseInsensitive(
+    Object.keys(dvValues != null ? dvValues : {}).filter(
+      (f4, i4, self2) => !self2.find(
+        (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
+      ) ? true : false
+    ).filter((f4) => f4 != "file")
+  ).filter((f4) => cols.some((g4) => f4 == g4));
+  ;
+  return fmKeys.reduce(
+    (p3, c4) => ({
+      ...p3,
+      [c4]: parseFrontMatter(c4, dvValues[c4], true)
+    }),
+    {}
+  );
+};
+var onMetadataChange = async (plugin, file) => {
+  const folderPath = getFolderPathFromString(file.path);
+  let tags = [];
+  const dbPath = folderContextFromFolder(plugin, folderPath);
+  const dbFileExists = getAbstractFileAtPath(app, dbPath);
+  if (dbFileExists) {
+    const folderDB = await getMDBTable(plugin, "files", dbPath, false);
+    if (folderDB) {
+      tags.push(...folderDB.schema.def.split("&"));
+      const newDB = {
+        ...folderDB,
+        rows: folderDB.rows.map(
+          (f4) => f4.File == file.path && f4._source == "folder" ? {
+            ...f4,
+            ...fileToFM(
+              file,
+              folderDB.cols.map((f5) => f5.name),
+              plugin
+            )
+          } : f4
+        )
+      };
+      const dbChanged = !import_lodash2.default.isEqual(folderDB.rows, newDB.rows);
+      if (dbChanged) {
+        await saveDB(plugin, dbPath, newDB);
+      }
+      const promises = tags.map((tag) => {
+        const tagdbPath = tagContextFromTag(plugin, tag);
+        const tagFileExists = getAbstractFileAtPath(app, tagdbPath);
+        if (tagFileExists) {
+          return getMDBTable(plugin, "files", tagdbPath, false).then(
+            (tagDB) => {
+              const newDB2 = {
+                ...tagDB,
+                rows: tagDB.rows.map(
+                  (f4) => f4.File == file.path && f4._source == dbPath ? {
+                    ...f4,
+                    ...fileToFM(
+                      file,
+                      tagDB.cols.map((f5) => f5.name),
+                      plugin
+                    )
+                  } : f4
+                )
+              };
+              const dbChanged2 = !import_lodash2.default.isEqual(tagDB.rows, newDB2.rows);
+              if (dbChanged2) {
+                return saveDB(plugin, tagdbPath, newDB2);
+              }
+              return;
+            }
+          );
+        }
+      });
+      await Promise.all(promises);
+    }
+  }
+};
+var onFileCreated = async (plugin, newPath) => {
+  const newFolderPath = getFolderPathFromString(newPath);
+  await processFolderDB(plugin, newFolderPath, async (folder, path) => {
+    const amendedFolderDB = insertRow(
+      folder,
+      newRowByDBRow({ File: newPath, _source: "folder" }),
+      newFolderPath
+    );
+    await saveDB(plugin, path, amendedFolderDB);
+    return amendedFolderDB;
+  });
+};
+var onFileChanged = async (plugin, oldPath, newPath) => {
+  const oldFolderPath = getFolderPathFromString(oldPath);
+  const newFolderPath = getFolderPathFromString(newPath);
+  if (oldFolderPath == newFolderPath) {
+    await processFolderDB(plugin, oldFolderPath, async (folder, path) => {
+      const amendedFolderDB = renameRow(folder, oldPath, newPath);
+      await saveDB(plugin, path, amendedFolderDB);
+      return amendedFolderDB;
+    });
+  } else {
+    await processFolderDB(
+      plugin,
+      oldFolderPath,
+      async (folder, path) => {
+        const amendedFolderDB = removeRow(folder, oldPath);
+        await saveDB(plugin, path, amendedFolderDB);
+        const dbPath = folderContextFromFolder(plugin, newFolderPath);
+        const fromDBRow = folder.rows.find((f4) => f4.File == oldPath);
+        const toDBFileExists = getAbstractFileAtPath(app, dbPath);
+        if (toDBFileExists) {
+          const toFolderDB = await getMDBTable(plugin, "files", dbPath, false);
+          if (toFolderDB) {
+            const [newDBCols, fmDBCols] = Object.keys(fromDBRow).reduce(
+              (p3, c4) => fromDBRow[c4].length == 0 ? p3 : toFolderDB.cols.find((f4) => f4.name == fromDBRow[c4]) ? [[...p3[0], c4], p3[1]] : [p3[0], [...p3[1], c4]],
+              [[], []]
+            );
+            const newRow = {
+              ...newDBCols.reduce((p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }), {}),
+              File: newPath
+            };
+            await saveDB(
+              plugin,
+              dbPath,
+              insertRow(toFolderDB, newRowByDBRow(newRow), newFolderPath)
+            );
+            saveContextToFrontmatter(
+              newPath,
+              folder.cols,
+              fmDBCols.reduce((p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }), {}),
+              plugin
+            );
+          }
+        } else {
+          saveContextToFrontmatter(
+            newPath,
+            folder.cols,
+            Object.keys(fromDBRow).reduce(
+              (p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }),
+              {}
+            ),
+            plugin
+          );
+        }
+        return amendedFolderDB;
+      },
+      async () => {
+        const dbPath = folderContextFromFolder(plugin, newFolderPath);
+        const toDBFileExists = getAbstractFileAtPath(app, dbPath);
+        if (toDBFileExists) {
+          const toFolderDB = await getMDBTable(plugin, "files", dbPath, false);
+        }
+      }
+    );
+  }
+};
+var onFileDeleted = async (plugin, oldPath) => {
+  const oldFolderPath = getFolderPathFromString(oldPath);
+  await processFolderDB(plugin, oldFolderPath, async (folder, path) => {
+    const amendedFolderDB = removeRow(folder, oldPath);
+    await saveDB(plugin, path, amendedFolderDB);
+    return amendedFolderDB;
+  });
+};
+var onFolderChanged = async (plugin, oldPath, newPath) => {
+  await processFolderDB(plugin, newPath, async (folder, path) => {
+    const newDB = {
+      ...folder,
+      rows: folder.rows.map(
+        (f4) => getFolderPathFromString(f4["File"]) == oldPath ? { ...f4, File: f4["File"].replace(oldPath, newPath) } : f4
+      )
+    };
+    await saveDB(plugin, path, newDB);
+    return newDB;
+  });
+};
+var onFolderDeleted = async (oldPath) => {
+};
+
+// src/utils/db/db.ts
+var import_obsidian4 = require("obsidian");
+var getDBFile = async (path) => {
+  if (!await app.vault.adapter.exists((0, import_obsidian4.normalizePath)(path))) {
+    return null;
+  }
+  const file = await app.vault.adapter.readBinary(
+    (0, import_obsidian4.normalizePath)(path)
+  );
+  return file;
+};
+var getDB = async (sqlJS, path) => {
+  const buf = await getDBFile(path);
+  if (buf) {
+    return new sqlJS.Database(new Uint8Array(buf));
+  }
+  return new sqlJS.Database();
+};
+var saveDBAndKeepAlive = (db, path) => {
+  const results = saveDBFile(path, db.export().buffer);
+  return results;
+};
+var saveAndCloseDB = async (db, path) => {
+  await saveDBFile(path, db.export().buffer);
+  db.close();
+};
+var saveDBFile = async (path, binary) => {
+  const file = app.vault.adapter.writeBinary(
+    (0, import_obsidian4.normalizePath)(path),
+    binary
+  );
+  return file;
+};
+var dbResultsToDBTables = (res) => {
+  return res.reduce(
+    (p3, c4, i4) => [
+      ...p3,
+      {
+        cols: c4.columns,
+        rows: c4 ? c4.values.map(
+          (r3) => c4.columns.reduce(
+            (prev, curr, index) => ({ ...prev, [curr]: r3[index] }),
+            {}
+          )
+        ) : []
+      }
+    ],
+    []
+  );
+};
+var selectDB = (db, table, condition, fields) => {
+  const fieldsStr = fields != null ? fields : "*";
+  const sqlstr = condition ? `SELECT ${fieldsStr} FROM "${table}" WHERE ${condition};` : `SELECT ${fieldsStr} FROM ${table};`;
+  let tables;
+  try {
+    tables = dbResultsToDBTables(db.exec(sqlstr));
+  } catch (e4) {
+    return null;
+  }
+  if (tables.length == 1)
+    return tables[0];
+  return null;
+};
+var updateDB = (db, tables, updateCol, updateRef) => {
+  const sqlstr = Object.keys(tables).map((t4) => {
+    const tableFields = tables[t4].cols.filter((f4) => f4 != updateRef);
+    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
+      var _a2;
+      return `${prev} UPDATE "${t4}" SET ${tableFields.map((c4) => {
+        var _a3;
+        return `${c4}='${(_a3 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a3 : ""}'`;
+      }).join(", ")} WHERE ${updateCol}='${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[updateRef])) != null ? _a2 : ""}';`;
+    }, "");
+    return rowsQuery;
+  }).join("; ");
+  try {
+    db.exec(sqlstr);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var execQuery = (db, sqlstr) => {
+  try {
+    db.exec(sqlstr);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var deleteFromDB = (db, table, condition) => {
+  const sqlstr = `DELETE FROM "${table}" WHERE ${condition};`;
+  try {
+    db.exec(sqlstr);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var dropTable = (db, table) => {
+  const sqlstr = `DROP TABLE IF EXISTS "${table}";`;
+  try {
+    db.exec(sqlstr);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var insertIntoDB = (db, tables, replace) => {
+  const sqlstr = Object.keys(tables).map((t4) => {
+    const tableFields = tables[t4].cols;
+    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
+      return `${prev} ${replace ? "REPLACE" : "INSERT"} INTO "${t4}" VALUES (${tableFields.map((c4) => {
+        var _a2;
+        return `'${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a2 : ""}'`;
+      }).join(", ")});`;
+    }, "");
+    return rowsQuery;
+  }).join("; ");
+  try {
+    db.exec(`BEGIN TRANSACTION; ${sqlstr} COMMIT;`);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var replaceDB = (db, tables) => {
+  const sqlstr = Object.keys(tables).map((t4) => {
+    const tableFields = tables[t4].cols;
+    const fieldQuery = uniq(tableFields).map((f4) => `'${sanitizeSQLStatement(f4)}' char`).join(", ");
+    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
+      return `${prev} REPLACE INTO "${t4}" VALUES (${tableFields.map((c4) => {
+        var _a2;
+        return `'${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a2 : ""}'`;
+      }).join(", ")});`;
+    }, "");
+    const idxQuery = tables[t4].uniques.filter((f4) => f4).reduce((p3, c4) => {
+      return `${p3} CREATE UNIQUE INDEX IF NOT EXISTS idx_${t4}_${c4.replace(
+        /,/g,
+        "_"
+      )} ON ${t4}(${c4});`;
+    }, "");
+    const insertQuery = `CREATE TABLE IF NOT EXISTS "${t4}" (${fieldQuery}); ${idxQuery} BEGIN TRANSACTION; ${rowsQuery} COMMIT;`;
+    return `DROP TABLE IF EXISTS "${t4}"; ${fieldQuery.length > 0 ? insertQuery : ""}`;
+  }).join("; ");
+  try {
+    db.exec(sqlstr);
+  } catch (e4) {
+    console.log(e4);
+  }
+};
+var saveDBToPath = async (plugin, path, tables) => {
+  const sqlJS = await plugin.sqlJS();
+  let db = await getDB(sqlJS, path);
+  replaceDB(db, tables);
+  await saveDBFile(path, db.export().buffer);
+  dispatchDatabaseFileChanged(path);
+  db.close();
+  return true;
+};
+
+// src/utils/contexts/mdb.ts
+var dbTableToMDBTable = (table, schema, fields) => {
+  var _a2;
+  return {
+    schema,
+    cols: fields,
+    rows: (_a2 = table == null ? void 0 : table.rows) != null ? _a2 : []
+  };
+};
+var updateFieldsToSchema = (fields, tag) => {
+  if (tag) {
+    return [
+      ...fields,
+      ...defaultTagFields.rows.filter(
+        (f4) => !fields.some((g4) => g4.name == f4.name && g4.schemaId == f4.schemaId)
+      )
+    ];
+  }
+  return [
+    ...fields,
+    ...defaultFolderFields.rows.filter(
+      (f4) => !fields.some((g4) => g4.name == f4.name && g4.schemaId == f4.schemaId)
+    )
+  ];
+};
+var getMDBTable = async (plugin, table, path, tag) => {
+  const sqlJS = await plugin.sqlJS();
+  const buf = await getDBFile(path);
+  if (!buf) {
+    return null;
+  }
+  const db = new sqlJS.Database(new Uint8Array(buf));
+  await sanitizeTableSchema(plugin, db, path, tag);
+  let fieldsTables;
+  let schema;
+  try {
+    fieldsTables = dbResultsToDBTables(
+      db.exec(`SELECT * FROM m_fields WHERE schemaId = '${table}'`)
+    );
+    schema = dbResultsToDBTables(
+      db.exec(`SELECT * FROM m_schema WHERE id = '${table}'`)
+    )[0].rows[0];
+  } catch (e4) {
+    db.close();
+    return null;
+  }
+  if (fieldsTables.length == 0) {
+    db.close();
+    return {
+      schema,
+      cols: [],
+      rows: []
+    };
+  }
+  const fields = fieldsTables[0].rows.filter(
+    (f4) => f4.name.length > 0
+  );
+  const dbTable = dbResultsToDBTables(
+    db.exec(
+      `SELECT ${fields.reduce((p3, c4) => [...p3, `"${c4.name}"`], []).join(", ")} FROM "${table}"`
+    )
+  );
+  db.close();
+  return dbTableToMDBTable(
+    dbTable[0],
+    schema,
+    schema.primary ? updateFieldsToSchema(fields, tag) : fields
+  );
+};
+var deleteMDBTable = async (plugin, path, mdb) => {
+  const sqlJS = await plugin.sqlJS();
+  const buf = await getDBFile(path);
+  if (!buf) {
+    return false;
+  }
+  const db = new sqlJS.Database(new Uint8Array(buf));
+  deleteFromDB(db, "m_schema", `id = '${sanitizeSQLStatement(mdb)}'`);
+  deleteFromDB(db, "m_schema", `def = '${sanitizeSQLStatement(mdb)}'`);
+  deleteFromDB(db, "m_fields", `schemaId = '${sanitizeSQLStatement(mdb)}'`);
+  dropTable(db, mdb);
+  await saveDBFile(path, db.export().buffer);
+  db.close();
+  return true;
+};
+var getMDBTableSchemas = async (plugin, path, tag) => {
+  const sqlJS = await plugin.sqlJS();
+  const buf = await getDBFile(path);
+  if (!buf) {
+    return null;
+  }
+  const db = new sqlJS.Database(new Uint8Array(buf));
+  await sanitizeTableSchema(plugin, db, path, tag);
+  const tables = db.exec(`SELECT * FROM m_schema`);
+  db.close();
+  return tables[0].values.map((f4) => {
+    const [id2, name, type, def, predicate, primary] = f4;
+    return { id: id2, name, type, def, predicate, primary };
+  });
+};
+var getMDBSchema = async (plugin, path, schema) => {
+  const sqlJS = await plugin.sqlJS();
+  const buf = await getDBFile(path);
+  if (!buf) {
+    return null;
+  }
+  const db = new sqlJS.Database(new Uint8Array(buf));
+  const tables = db.exec(`SELECT * FROM m_schema WHERE id='${sanitizeSQLStatement(schema)}'`);
+  db.close();
+  if (!tables[0] || !tables[0].values[0]) {
+    return null;
+  }
+  return tables[0].values.map((f4) => {
+    const [id2, name, type, def, predicate, primary] = f4;
+    return { id: id2, name, type, def, predicate, primary };
+  })[0];
+};
+var saveMDBToPath = async (plugin, path, mdb) => {
+  var _a2, _b2;
+  const sqlJS = await plugin.sqlJS();
+  const buf = await getDBFile(path);
+  if (!buf) {
+    return null;
+  }
+  const db = new sqlJS.Database(new Uint8Array(buf));
+  const fieldsTables = dbResultsToDBTables(
+    db.exec(`SELECT * FROM m_fields WHERE schemaId != '${mdb.schema.id}'`)
+  );
+  const tables = {
+    m_fields: {
+      uniques: fieldSchema.uniques,
+      cols: fieldSchema.cols,
+      rows: [...(_b2 = (_a2 = fieldsTables[0]) == null ? void 0 : _a2.rows) != null ? _b2 : [], ...mdb.cols]
+    },
+    [mdb.schema.id]: {
+      uniques: mdb.cols.filter((c4) => c4.unique == "true").map((c4) => c4.name),
+      cols: mdb.cols.map((c4) => c4.name),
+      rows: mdb.rows
+    }
+  };
+  db.close();
+  return saveDBToPath(plugin, path, tables);
+};
+var optionValuesForColumn = (column, table) => {
+  var _a2;
+  return uniq(
+    (_a2 = table == null ? void 0 : table.rows.reduce((p3, c4) => {
+      return [...p3, ...splitString(c4[column])];
+    }, [])) != null ? _a2 : []
+  );
+};
+var createDefaultDB = async (plugin, path, tag) => {
+  const sqlJS = await plugin.sqlJS();
+  const table = tag ? defaultTagTables : defaultFolderTables;
+  return saveDBToPath(plugin, path, table);
+};
+var sanitizeTableSchema = async (plugin, db, path, tag) => {
+  const sqlJS = await plugin.sqlJS();
+  const tableRes = db.exec(
+    `SELECT name FROM sqlite_master WHERE type='table';`
+  );
+  if (!tableRes[0] || !tableRes[0].values.some((f4) => f4[0] == "m_schema") || !tableRes[0].values.some((f4) => f4[0] == "m_fields") || !tableRes[0].values.some((f4) => f4[0] == "files")) {
+    await createDefaultDB(plugin, path, tag);
+  }
+};
+var newRowByDBRow = (row) => ({
+  _id: genId(),
+  ...row
+});
+var rowWithID = (row, tag) => {
+  return row._id && row._id.length > 0 ? row : {
+    ...newRowByDBRow({ ...row, _source: tag ? "tag" : "folder" })
+  };
+};
+var createNewRow = (mdb, row, index) => {
+  if (index) {
+    return {
+      ...mdb,
+      rows: insert(mdb.rows, index, newRowByDBRow(row))
+    };
+  }
+  return {
+    ...mdb,
+    rows: [...mdb.rows, newRowByDBRow(row)]
+  };
+};
+var consolidateFilesToTable = async (plugin, path, table, files, tag) => {
+  const sqlJS = await plugin.sqlJS();
+  const isTag = tag ? true : false;
+  let db;
+  if (getAbstractFileAtPath(app, path)) {
+    const buf = await getDBFile(path);
+    db = new sqlJS.Database(new Uint8Array(buf));
+  } else {
+    db = new sqlJS.Database();
+    await createDefaultDB(plugin, path, false);
+  }
+  const mdbTable = await getMDBTable(plugin, table, path, isTag);
+  const missingFiles = files.filter((f4) => !mdbTable.rows.some((g4) => g4.File == f4 && g4._source != "")).map((f4) => ({ File: f4 }));
+  const mergeDuplicates = (rows, tag2) => {
+    const mergeFields = (row, row2) => {
+      return { ...row, ...row2 };
+    };
+    return rows.reduce((p3, c4) => {
+      const findIndex2 = p3.findIndex((f4) => f4._source != "" && f4.File == c4.File);
+      if (findIndex2 != -1) {
+        return p3.map((f4, i4) => i4 == findIndex2 ? mergeFields(f4, c4) : f4);
+      }
+      return [...p3, c4];
+    }, []);
+  };
+  let linkedFolderContexts = [""];
+  if (tag) {
+    const contexts = uniq(
+      mdbTable.rows.map((f4) => f4._source).filter((f4) => f4 != "" && f4 != "tag")
+    );
+    const promises = contexts.map(
+      (context) => getMDBTable(plugin, "files", context, false).then((f4) => [f4, context])
+    );
+    const results = await Promise.all(promises);
+    linkedFolderContexts.push(
+      ...results.filter(([f4, g4]) => {
+        var _a2, _b2;
+        return (_b2 = (_a2 = f4 == null ? void 0 : f4.schema) == null ? void 0 : _a2.def) == null ? void 0 : _b2.split("&").some((h5) => h5 == tag);
+      }).map(([f4, g4]) => g4)
+    );
+  }
+  const nonLinkedRows = mdbTable.rows.filter(
+    (f4) => linkedFolderContexts.some((g4) => g4 == f4._source) && !missingFiles.some((g4) => f4.File == g4.File)
+  );
+  const newRows = [
+    ...nonLinkedRows,
+    ...[
+      ...mergeDuplicates(
+        mdbTable.rows.filter(
+          (f4) => (f4._source != "" || missingFiles.some((g4) => f4.File == g4.File)) && files.some((g4) => g4 == f4.File)
+        ),
+        isTag
+      ),
+      ...missingFiles
+    ].map((f4) => rowWithID(f4, isTag))
+  ];
+  const newCols = [
+    ...(isTag ? defaultTagFields : defaultFolderFields).rows,
+    ...mdbTable.cols
+  ].filter(onlyUniqueProp("name"));
+  const newMDBTable = {
+    ...mdbTable,
+    cols: newCols,
+    rows: newRows
+  };
+  const dbChanged = !import_lodash3.default.isEqual(newMDBTable, mdbTable);
+  if (dbChanged) {
+    await saveMDBToPath(plugin, path, newMDBTable);
+  }
+  db.close();
+  return newMDBTable;
+};
+var consolidateRowsToTag = async (plugin, path, table, source, rows) => {
+  const sqlJS = await plugin.sqlJS();
+  if (getAbstractFileAtPath(app, path)) {
+  } else {
+    await createDefaultDB(plugin, path, true);
+  }
+  const mdbTable = await getMDBTable(plugin, table, path, true);
+  const prevRows = mdbTable.rows.map((f4) => {
+    if (f4._source != source) {
+      return f4;
+    }
+    const row = rows.find((g4) => g4._id == f4._sourceId);
+    return row ? { ...f4, File: row["File"] } : f4;
+  }).filter(
+    (f4) => f4._source != source || rows.some((g4) => g4._id == f4._sourceId)
+  );
+  const missingRows = rows.filter(
+    (f4) => !mdbTable.rows.some((g4) => g4._source == source && g4._sourceId == f4._id)
+  ).map(
+    (f4) => newRowByDBRow({ File: f4.File, _source: source, _sourceId: f4._id })
+  );
+  const newRows = [...prevRows, ...missingRows];
+  const newMDBTable = {
+    ...mdbTable,
+    cols: [...defaultTagFields.rows, ...mdbTable.cols].filter(
+      onlyUniqueProp("name")
+    ),
+    rows: newRows
+  };
+  const dbChanged = !import_lodash3.default.isEqual(newMDBTable, mdbTable);
+  if (dbChanged) {
+    await saveMDBToPath(plugin, path, newMDBTable);
+  }
+  return newMDBTable;
+};
+var deleteTagContext = async (plugin, tag) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  if (getAbstractFileAtPath(app, dbPath)) {
+    await deleteFile(plugin, getAbstractFileAtPath(app, dbPath));
+  }
+  app.workspace.iterateLeaves((leaf) => {
+    if (leaf.view.getViewType() == CONTEXT_VIEW_TYPE && leaf.view.getState().tag == tag) {
+      leaf.setViewState({ type: "empty" });
+    }
+  }, app.workspace["rootSplit"]);
+  let event = new CustomEvent(eventTypes.tagsChange);
+  window.dispatchEvent(event);
+};
+var connectContext = async (plugin, tag, source) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  if (getAbstractFileAtPath(app, dbPath)) {
+    const sqlJS = await plugin.sqlJS();
+    const db = await getDB(sqlJS, dbPath);
+    let table = selectDB(db, "m_context");
+    if (!table) {
+      execQuery(db, `CREATE TABLE IF NOT EXISTS "m_context" (source);`);
+    }
+    const contextExists = selectDB(db, "m_context", `source='${source}'`).rows.length > 0;
+    if (!contextExists) {
+      insertIntoDB(db, { m_context: { ...table, rows: [{ source }] } }, true);
+      saveAndCloseDB(db, dbPath);
+    } else {
+      db.close();
+    }
+  }
+};
+var disconnectContext = async (plugin, tag, source) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  if (getAbstractFileAtPath(app, dbPath)) {
+    const sqlJS = await plugin.sqlJS();
+    const db = await getDB(sqlJS, dbPath);
+    let table = selectDB(db, "m_context");
+    if (!table) {
+      execQuery(db, `CREATE TABLE IF NOT EXISTS "m_context" (source);`);
+    }
+    deleteFromDB(db, "m_context", `source = '${source}'`);
+    saveAndCloseDB(db, dbPath);
+  }
+};
+var renameTagContext = async (plugin, tag, newTag) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  if (getAbstractFileAtPath(app, dbPath)) {
+    const newTagDBPath = tagToTagPath(newTag) + ".mdb";
+    if (!getAbstractFileAtPath(app, getAbstractFileAtPath(app, dbPath).parent.path + "/" + tagToTagPath(newTag) + ".mdb")) {
+      await renameFile(getAbstractFileAtPath(app, dbPath), tagToTagPath(newTag) + ".mdb");
+    } else {
+      await deleteFile(plugin, getAbstractFileAtPath(app, dbPath));
+    }
+    app.workspace.iterateLeaves((leaf) => {
+      if (leaf.view.getViewType() == CONTEXT_VIEW_TYPE && leaf.view.getState().tag == tag) {
+        leaf.setViewState({
+          type: CONTEXT_VIEW_TYPE,
+          state: { type: "tag", tag: newTag }
+        });
+      }
+    }, app.workspace["rootSplit"]);
+    const sqlJS = await plugin.sqlJS();
+    const db = await getDB(sqlJS, newTagDBPath);
+    let table = selectDB(db, "m_context");
+    if (!table) {
+      execQuery(db, `CREATE TABLE IF NOT EXISTS "m_context" (source);`);
+    }
+    const sources = table == null ? void 0 : table.rows;
+    if ((sources == null ? void 0 : sources.length) > 0) {
+      sources.forEach((context) => {
+        if (getAbstractFileAtPath(app, context.source)) {
+          getDB(sqlJS, newTagDBPath).then((db2) => {
+            const schemas = selectDB(db2, "m_schema");
+            const newSchemas = {
+              ...schemas,
+              rows: schemas.rows.map((f4) => {
+                var _a2;
+                return ((_a2 = f4.def) == null ? void 0 : _a2.includes(tag)) ? { ...f4, def: f4.def.replace(tag, newTag) } : f4;
+              })
+            };
+            const fields = selectDB(db2, "m_fields");
+            const newFields = {
+              ...fields,
+              rows: fields.rows.map((f4) => f4.type.includes("context") && f4.value == tag ? { ...f4, value: newTag } : f4)
+            };
+            db2.close();
+            saveDBToPath(plugin, context.source, { m_fields: newFields, m_schema: newSchemas });
+          });
+        }
+      });
+      insertIntoDB(db, { m_context: table });
+      saveAndCloseDB(db, dbPath);
+    }
+    let event = new CustomEvent(eventTypes.tagsChange);
+    window.dispatchEvent(event);
+  }
+};
+
+// src/utils/contexts/tags.ts
+var tagToTagPath = (tag) => {
   if (!tag)
     return null;
   let string = tag;
@@ -10937,8 +14784,8 @@ var tagFromString = (tag) => {
     string = "#" + string;
   return string.replace(/\//g, "+");
 };
-var stringToTag = (string) => {
-  return string.replace(/\+/g, "/");
+var tagPathToTag = (string) => {
+  return filePathToString(string).replace(/\+/g, "/");
 };
 var stringFromTag = (string) => {
   if (string.charAt(0) == "#") {
@@ -10955,12 +14802,240 @@ var loadTags = (plugin) => {
   return uniq([
     ...Object.keys(app.metadataCache.getTags()),
     ...(_a2 = folder == null ? void 0 : folder.children.filter(
-      (f4) => f4 instanceof import_obsidian.TFile && f4.extension == "mdb" && f4.name.charAt(0) == "#"
-    ).map((f4) => stringToTag(fileNameToString(f4.name)))) != null ? _a2 : []
+      (f4) => f4 instanceof import_obsidian5.TFile && f4.extension == "mdb" && f4.name.charAt(0) == "#"
+    ).map((f4) => tagPathToTag(f4.name))) != null ? _a2 : []
   ]);
 };
+var tagExists = (currentCache, findTag) => {
+  let currentTags = [];
+  if ((0, import_obsidian5.getAllTags)(currentCache)) {
+    currentTags = (0, import_obsidian5.getAllTags)(currentCache);
+  }
+  return currentTags.find((tag) => tag.toLowerCase() == findTag.toLowerCase()) ? true : false;
+};
+var getAllFilesForTag = (tag) => {
+  let tagsCache = [];
+  (() => {
+    app.vault.getMarkdownFiles().forEach((tfile) => {
+      let currentCache;
+      if (app.metadataCache.getFileCache(tfile) !== null) {
+        currentCache = app.metadataCache.getFileCache(tfile);
+      }
+      let relativePath = tfile.path;
+      const hasTag = tagExists(currentCache, tag);
+      if (hasTag) {
+        tagsCache.push(relativePath);
+      }
+    });
+  })();
+  return tagsCache;
+};
+var addTagToNote = (tag, tFile) => {
+  const newTag = validateName(tag);
+  editTagInFrontmatter("", newTag, tFile);
+};
+var positionsForTag = (tag, file) => {
+  const currentCache = app.metadataCache.getFileCache(file);
+  if (currentCache.tags) {
+    const positions = currentCache.tags.filter((f4) => f4.tag == tag).map((f4) => f4.position).sort(
+      (a5, b4) => {
+        if (a5.start.offset < b4.start.offset) {
+          return -1;
+        }
+        if (a5.start.offset > b4.start.offset) {
+          return 1;
+        }
+        return 0;
+      }
+    );
+    return positions;
+  }
+  return [];
+};
+var removeTagFromFile = (tag, file) => {
+  const pos = positionsForTag(tag, file);
+  removeTagInFrontmatter(tag, file);
+  editTagInFileBody(tag, "", pos, file);
+};
+var validateName = (tag) => {
+  return tag;
+};
+var deleteTag = async (plugin, tag, subTags) => {
+  const files = getAllFilesForTag(tag).map((f4) => getAbstractFileAtPath(app, f4)).filter((f4) => f4 instanceof import_obsidian5.TFile);
+  files.forEach((file) => removeTagFromFile(tag, file));
+  deleteTagContext(plugin, tag);
+  if (subTags) {
+    const tags = getAllSubtags(plugin, tag);
+    tags.forEach((tag2) => deleteTag(plugin, tag2, subTags));
+  }
+};
+var addTag = async (plugin, tag) => {
+  const dbPath = tagContextFromTag(plugin, tag);
+  await createDefaultDB(plugin, dbPath, true);
+  let event = new CustomEvent(eventTypes.tagsChange, {
+    detail: {}
+  });
+  window.dispatchEvent(event);
+};
+var renameTag = async (plugin, tag, toTag) => {
+  const tags = getAllSubtags(plugin, tag);
+  const newTag = validateName(toTag);
+  const files = getAllFilesForTag(tag);
+  for (const file of files) {
+    const tFile = getAbstractFileAtPath(app, file);
+    if (tFile instanceof import_obsidian5.TFile) {
+      const positions = positionsForTag(tag, tFile);
+      if (positions.length > 0) {
+        await editTagInFileBody(tag, newTag, positions, tFile);
+      } else {
+        await editTagInFrontmatter(tag, newTag, tFile);
+      }
+    }
+  }
+  await renameTagContext(plugin, tag, toTag);
+  for (const subtag of tags) {
+    await renameTag(plugin, subtag, subtag.replace(tag, newTag));
+  }
+};
+var getAllSubtags = (plugin, tag) => {
+  const tags = loadTags(plugin);
+  return tags.filter((f4) => f4.startsWith(tag) && f4 != tag);
+};
+var removeTagInFrontmatter = async (oldTag, file) => {
+  var _a2;
+  let fm;
+  if (app.metadataCache.getFileCache(file) !== null) {
+    fm = (_a2 = app.metadataCache.getFileCache(file)) == null ? void 0 : _a2.frontmatter;
+  }
+  if (fm && app.fileManager.processFrontMatter) {
+    const processKey = (value) => {
+      if (Array.isArray(value)) {
+        return value.filter((f4) => stringFromTag(oldTag) != f4);
+      } else if (typeof value === "string") {
+        return value.replace(/\s/g, "").split(",").filter((f4) => stringFromTag(oldTag) != f4).join(", ");
+      }
+      return value;
+    };
+    const tagKeys = ["tag", "tags"];
+    const editKeys = tagKeys.filter(
+      (f4) => {
+        let tags = [];
+        if (Array.isArray(fm[f4])) {
+          tags = fm[f4];
+        } else if (typeof fm[f4] === "string") {
+          tags = fm[f4].replace(/\s/g, "").split(",");
+        }
+        if (tags.find((g4) => g4 == stringFromTag(oldTag)))
+          return true;
+        return false;
+      }
+    );
+    editKeys.forEach((tag) => {
+      app.fileManager.processFrontMatter(file, (frontmatter) => {
+        frontmatter[tag] = processKey(fm[tag]);
+      });
+    });
+  }
+};
+var editTagInFrontmatter = async (oldTag, newTag, file) => {
+  var _a2;
+  let fm;
+  if (app.metadataCache.getFileCache(file) !== null) {
+    fm = (_a2 = app.metadataCache.getFileCache(file)) == null ? void 0 : _a2.frontmatter;
+  }
+  const addTag3 = (value) => {
+    if (Array.isArray(value)) {
+      return uniq([...value, stringFromTag(newTag)]);
+    } else if (typeof value === "string") {
+      return uniq([...value.replace(/\s/g, "").split(","), stringFromTag(newTag)]).join(", ");
+    }
+    return stringFromTag(newTag);
+  };
+  if (app.fileManager.processFrontMatter) {
+    if (fm) {
+      const processKey = (value) => {
+        if (Array.isArray(value)) {
+          return uniq(value.map((f4) => stringFromTag(oldTag) == f4 ? stringFromTag(newTag) : f4));
+        } else if (typeof value === "string") {
+          return uniq(value.replace(/\s/g, "").split(",").map((f4) => stringFromTag(oldTag) == f4 ? stringFromTag(newTag) : f4)).join(", ");
+        }
+        return value;
+      };
+      const tagKeys = ["tag", "tags"];
+      const editKeys = tagKeys.filter(
+        (f4) => {
+          let tags = [];
+          if (Array.isArray(fm[f4])) {
+            tags = fm[f4];
+          } else if (typeof fm[f4] === "string") {
+            tags = fm[f4].replace(/\s/g, "").split(",");
+          }
+          if (tags.find((g4) => g4 == stringFromTag(oldTag)))
+            return true;
+          return false;
+        }
+      );
+      if (editKeys.length > 0) {
+        editKeys.forEach((key2) => {
+          app.fileManager.processFrontMatter(file, (frontmatter) => {
+            frontmatter[key2] = processKey(fm[key2]);
+          });
+        });
+      } else {
+        app.fileManager.processFrontMatter(file, (frontmatter) => {
+          frontmatter["tag"] = addTag3(fm["tag"]);
+        });
+      }
+    } else {
+      app.fileManager.processFrontMatter(file, (frontmatter) => {
+        frontmatter["tag"] = stringFromTag(newTag);
+      });
+    }
+  }
+};
+var editTagInFileBody = async (oldTag, newTag, positions, file) => {
+  const offsetOffset = newTag.length - oldTag.length;
+  if (positions.length == 0)
+    return false;
+  const original = await app.vault.read(file);
+  let text2 = original;
+  let offset = 0;
+  for (const { start, end } of positions) {
+    let startOff = start.offset + offset;
+    let endOff = end.offset + offset;
+    if (text2.slice(startOff, endOff) !== oldTag) {
+      return false;
+    }
+    text2 = text2.slice(0, startOff) + newTag + text2.slice(startOff + oldTag.length);
+    offset += offsetOffset;
+  }
+  if (text2 !== original) {
+    await app.vault.modify(file, text2);
+    return true;
+  }
+};
+var allTagsForFile = (file) => {
+  var _a2, _b2, _c2, _d2, _e2, _f, _g, _h, _i, _j;
+  let rt = [];
+  if (file instanceof import_obsidian5.TFile) {
+    const fCache = app.metadataCache.getCache(file.path);
+    if (fCache && fCache.tags)
+      rt.push(...(_b2 = (_a2 = fCache.tags) == null ? void 0 : _a2.map((f4) => f4.tag)) != null ? _b2 : []);
+    if (fCache && ((_c2 = fCache.frontmatter) == null ? void 0 : _c2.tags))
+      rt.push(
+        ...(typeof ((_d2 = fCache.frontmatter) == null ? void 0 : _d2.tags) === "string" ? splitString(fCache.frontmatter.tags.replace(/ /g, "")) : Array.isArray((_e2 = fCache.frontmatter) == null ? void 0 : _e2.tags) ? (_f = fCache.frontmatter) == null ? void 0 : _f.tags : []).filter((f4) => typeof f4 === "string").map((f4) => "#" + f4)
+      );
+    if (fCache && ((_g = fCache.frontmatter) == null ? void 0 : _g.tag))
+      rt.push(
+        ...(typeof ((_h = fCache.frontmatter) == null ? void 0 : _h.tag) === "string" ? splitString(fCache.frontmatter.tag.replace(/ /g, "")) : Array.isArray((_i = fCache.frontmatter) == null ? void 0 : _i.tag) ? (_j = fCache.frontmatter) == null ? void 0 : _j.tag : []).filter((f4) => typeof f4 === "string").map((f4) => "#" + f4)
+      );
+  }
+  return uniq(rt);
+};
+
+// src/utils/contexts/contexts.ts
 var tagContextFromTag = (plugin, tag) => {
-  return getFolderPathFromString(plugin.settings.tagContextFolder) + "/" + tagFromString(tag) + ".mdb";
+  return getFolderPathFromString(plugin.settings.tagContextFolder) + "/" + tagToTagPath(tag) + ".mdb";
 };
 var folderContextFromFolder = (plugin, folder) => {
   return (folder == "/" ? "" : folder + "/") + plugin.settings.folderContextFile + ".mdb";
@@ -11003,6 +15078,9 @@ var linkContextProp = (propType, rows, contextTable) => {
 };
 
 // src/utils/flow/flowEditor.ts
+var import_state5 = require("@codemirror/state");
+
+// src/cm-extensions/flowEditor/atomic.ts
 var import_state4 = require("@codemirror/state");
 
 // src/cm-extensions/flowEditor/selectiveEditor.ts
@@ -11175,8 +15253,50 @@ var editBlockExtensions = () => [
   selectiveLinesFacet
 ];
 
+// src/cm-extensions/flowEditor/atomic.ts
+var arrowKeyAnnotation = import_state4.Annotation.define();
+var atomicSelect = import_state4.EditorState.transactionFilter.of(
+  (tr) => {
+    if (tr.isUserEvent("delete") || tr.isUserEvent("input")) {
+      return tr;
+    }
+    const flowID = tr.startState.field(flowIDStateField, false);
+    if (tr.annotation(arrowKeyAnnotation) && flowID) {
+      const oldSel = tr.startState.selection.main;
+      const lineRange = tr.state.field(selectiveLinesFacet, false);
+      const posRange = lineRange && lineRange[0] != void 0 ? lineRangeToPosRange(tr.startState, lineRange) : { from: 0, to: tr.startState.doc.length };
+      if (oldSel.from <= posRange.from && tr.annotation(arrowKeyAnnotation) == 3) {
+        focusFlowEditorParent(flowID, true);
+      }
+      if (oldSel.to >= posRange.to && tr.annotation(arrowKeyAnnotation) == 4) {
+        focusFlowEditorParent(flowID, false);
+      }
+      return tr;
+    }
+    const selection = tr.newSelection.main;
+    if (selection.from == 0 && selection.to == 0 || selection.from != selection.to)
+      return tr;
+    const flowEditors = tr.state.field(flowEditorInfo, false);
+    if (flowEditors) {
+      for (let info of flowEditors) {
+        if (info.embed == 1) {
+          if (info.from - 3 <= selection.from && info.to + 2 >= selection.to && info.expandedState == 2) {
+            const top = tr.annotation(arrowKeyAnnotation) == 1 || tr.startState.selection.main.from > selection.from ? false : true;
+            focusFlowEditor(info.id, top);
+            return {
+              selection: import_state4.EditorSelection.single(info.from - 4)
+            };
+            break;
+          }
+        }
+      }
+    }
+    return tr;
+  }
+);
+
 // src/components/ContextView/InlineContextView.tsx
-var import_obsidian19 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 
 // node_modules/@dnd-kit/utilities/dist/utilities.esm.js
 function useCombinedRefs(...refs) {
@@ -11923,12 +16043,12 @@ function inverseTransform(rect, transform, transformOrigin) {
     left: x5
   };
 }
-var defaultOptions = {
+var defaultOptions2 = {
   ignoreTransform: false
 };
 function getClientRect(element, options) {
   if (options === void 0) {
-    options = defaultOptions;
+    options = defaultOptions2;
   }
   let rect = element.getBoundingClientRect();
   if (options.ignoreTransform) {
@@ -15416,7 +19536,7 @@ var sortableKeyboardCoordinates = (event, _ref) => {
         const newScrollAncestors = getScrollableAncestors(newNode);
         const hasDifferentScrollAncestors = newScrollAncestors.some((element, index) => scrollableAncestors[index] !== element);
         const hasSameContainer = isSameContainer(activeDroppable, newDroppable);
-        const isAfterActive = isAfter(activeDroppable, newDroppable);
+        const isAfterActive = isAfter2(activeDroppable, newDroppable);
         const offset = hasDifferentScrollAncestors || !hasSameContainer ? {
           x: 0,
           y: 0
@@ -15441,7 +19561,7 @@ function isSameContainer(a5, b4) {
   }
   return a5.data.current.sortable.containerId === b4.data.current.sortable.containerId;
 }
-function isAfter(a5, b4) {
+function isAfter2(a5, b4) {
   if (!hasSortableData(a5) || !hasSortableData(b4)) {
     return false;
   }
@@ -15490,3523 +19610,8 @@ function matchExact(string) {
 }
 
 // src/components/ContextView/MDBContext.tsx
+var import_lodash4 = __toESM(require_lodash());
 var import_obsidian6 = require("obsidian");
-
-// src/schemas/mdb.ts
-var fieldTypes = [
-  {
-    type: "unknown",
-    label: "",
-    restricted: true
-  },
-  {
-    type: "preview",
-    label: i18n_default.properties.preview.label,
-    restricted: true
-  },
-  {
-    type: "text",
-    label: i18n_default.properties.text.label
-  },
-  {
-    type: "number",
-    label: i18n_default.properties.number.label
-  },
-  {
-    type: "boolean",
-    label: i18n_default.properties.boolean.label
-  },
-  {
-    type: "date",
-    label: i18n_default.properties.date.label
-  },
-  {
-    type: "option",
-    label: i18n_default.properties.option.label,
-    multi: true,
-    multiType: "option-multi"
-  },
-  {
-    type: "file",
-    label: i18n_default.properties.file.label,
-    restricted: true
-  },
-  {
-    type: "fileprop",
-    label: i18n_default.properties.fileProperty.label
-  },
-  {
-    type: "link",
-    label: i18n_default.properties.link.label
-  },
-  {
-    type: "context",
-    label: i18n_default.properties.context.label
-  },
-  {
-    type: "tag",
-    label: i18n_default.properties.tag.label
-  },
-  {
-    type: "image",
-    label: i18n_default.properties.image.label,
-    multi: true,
-    multiType: "image-multi"
-  }
-];
-var defaultFileDBSchema = {
-  id: "files",
-  name: "Files",
-  type: "db",
-  primary: "true"
-};
-var defaultFileListSchema = {
-  id: "filesView",
-  name: "Files",
-  type: "list",
-  def: "files"
-};
-var defaultFileTableSchema = {
-  id: "filesView",
-  name: "Files",
-  type: "table",
-  def: "files"
-};
-var defaultFolderSchema = {
-  uniques: ["id"],
-  cols: ["id", "name", "type", "def", "predicate", "primary"],
-  rows: [defaultFileDBSchema, defaultFileListSchema]
-};
-var defaultTagSchema = {
-  uniques: ["id"],
-  cols: ["id", "name", "type", "def", "predicate", "primary"],
-  rows: [defaultFileDBSchema, defaultFileTableSchema]
-};
-var fieldSchema = {
-  uniques: ["name,schemaId"],
-  cols: [
-    "name",
-    "schemaId",
-    "type",
-    "value",
-    "attrs",
-    "hidden",
-    "unique",
-    "primary"
-  ]
-};
-var defaultFolderFields = {
-  ...fieldSchema,
-  rows: [
-    {
-      name: "_id",
-      schemaId: "files",
-      type: "id",
-      unique: "true",
-      hidden: "true"
-    },
-    {
-      name: "_source",
-      schemaId: "files",
-      type: "source",
-      hidden: "true"
-    },
-    {
-      name: i18n_default.properties.preview.label,
-      schemaId: "files",
-      type: "preview"
-    },
-    {
-      name: "File",
-      schemaId: "files",
-      type: "file",
-      primary: "true"
-    },
-    {
-      name: i18n_default.properties.fileProperty.createdTime,
-      schemaId: "files",
-      type: "fileprop",
-      value: "ctime"
-    }
-  ]
-};
-var defaultTableFields = [
-  {
-    name: i18n_default.properties.defaultField,
-    schemaId: "",
-    type: "text"
-  }
-];
-var defaultTagFields = {
-  ...fieldSchema,
-  rows: [
-    {
-      name: "_id",
-      schemaId: "files",
-      type: "id",
-      unique: "true",
-      hidden: "true"
-    },
-    {
-      name: "_source",
-      schemaId: "files",
-      type: "source",
-      hidden: "true"
-    },
-    {
-      name: "_sourceId",
-      schemaId: "files",
-      type: "sourceid",
-      hidden: "true"
-    },
-    {
-      name: "File",
-      schemaId: "files",
-      type: "file",
-      primary: "true"
-    }
-  ]
-};
-var defaultFolderMDBTable = {
-  schema: defaultFileDBSchema,
-  cols: defaultFolderFields.rows,
-  rows: []
-};
-var defaultTagMDBTable = {
-  schema: defaultFileDBSchema,
-  cols: defaultTagFields.rows,
-  rows: []
-};
-var fieldsToTable = (fields, schemas) => {
-  return fields.filter((s5) => schemas.find((g4) => g4.id == s5.schemaId && g4.type == "db")).reduce((p3, c4) => {
-    return {
-      ...p3,
-      ...p3[c4.schemaId] ? {
-        [c4.schemaId]: {
-          uniques: c4.unique == "true" ? [...p3[c4.schemaId].uniques, c4.name] : p3[c4.schemaId].uniques,
-          cols: [...p3[c4.schemaId].cols, c4.name],
-          rows: []
-        }
-      } : {
-        [c4.schemaId]: {
-          uniques: c4.unique == "true" ? [c4.name] : [],
-          cols: [c4.name],
-          rows: []
-        }
-      }
-    };
-  }, {});
-};
-var defaultFolderTables = {
-  m_schema: defaultFolderSchema,
-  m_fields: defaultFolderFields,
-  ...fieldsToTable(
-    defaultFolderFields.rows,
-    defaultFolderSchema.rows
-  )
-};
-var defaultTagTables = {
-  m_schema: defaultTagSchema,
-  m_fields: defaultTagFields,
-  ...fieldsToTable(
-    defaultTagFields.rows,
-    defaultTagSchema.rows
-  )
-};
-
-// node_modules/date-fns/esm/_lib/toInteger/index.js
-function toInteger(dirtyNumber) {
-  if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
-    return NaN;
-  }
-  var number = Number(dirtyNumber);
-  if (isNaN(number)) {
-    return number;
-  }
-  return number < 0 ? Math.ceil(number) : Math.floor(number);
-}
-
-// node_modules/date-fns/esm/_lib/requiredArgs/index.js
-function requiredArgs(required, args) {
-  if (args.length < required) {
-    throw new TypeError(required + " argument" + (required > 1 ? "s" : "") + " required, but only " + args.length + " present");
-  }
-}
-
-// node_modules/date-fns/esm/toDate/index.js
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof5(obj2) {
-      return typeof obj2;
-    };
-  } else {
-    _typeof = function _typeof5(obj2) {
-      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
-    };
-  }
-  return _typeof(obj);
-}
-function toDate(argument) {
-  requiredArgs(1, arguments);
-  var argStr = Object.prototype.toString.call(argument);
-  if (argument instanceof Date || _typeof(argument) === "object" && argStr === "[object Date]") {
-    return new Date(argument.getTime());
-  } else if (typeof argument === "number" || argStr === "[object Number]") {
-    return new Date(argument);
-  } else {
-    if ((typeof argument === "string" || argStr === "[object String]") && typeof console !== "undefined") {
-      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
-      console.warn(new Error().stack);
-    }
-    return new Date(NaN);
-  }
-}
-
-// node_modules/date-fns/esm/addDays/index.js
-function addDays(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var amount = toInteger(dirtyAmount);
-  if (isNaN(amount)) {
-    return new Date(NaN);
-  }
-  if (!amount) {
-    return date;
-  }
-  date.setDate(date.getDate() + amount);
-  return date;
-}
-
-// node_modules/date-fns/esm/addMonths/index.js
-function addMonths(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var amount = toInteger(dirtyAmount);
-  if (isNaN(amount)) {
-    return new Date(NaN);
-  }
-  if (!amount) {
-    return date;
-  }
-  var dayOfMonth = date.getDate();
-  var endOfDesiredMonth = new Date(date.getTime());
-  endOfDesiredMonth.setMonth(date.getMonth() + amount + 1, 0);
-  var daysInMonth = endOfDesiredMonth.getDate();
-  if (dayOfMonth >= daysInMonth) {
-    return endOfDesiredMonth;
-  } else {
-    date.setFullYear(endOfDesiredMonth.getFullYear(), endOfDesiredMonth.getMonth(), dayOfMonth);
-    return date;
-  }
-}
-
-// node_modules/date-fns/esm/addMilliseconds/index.js
-function addMilliseconds(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var timestamp = toDate(dirtyDate).getTime();
-  var amount = toInteger(dirtyAmount);
-  return new Date(timestamp + amount);
-}
-
-// node_modules/date-fns/esm/_lib/defaultOptions/index.js
-var defaultOptions2 = {};
-function getDefaultOptions() {
-  return defaultOptions2;
-}
-
-// node_modules/date-fns/esm/startOfWeek/index.js
-function startOfWeek(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
-  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
-    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  }
-  var date = toDate(dirtyDate);
-  var day = date.getDay();
-  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
-  date.setDate(date.getDate() - diff);
-  date.setHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/startOfISOWeek/index.js
-function startOfISOWeek(dirtyDate) {
-  requiredArgs(1, arguments);
-  return startOfWeek(dirtyDate, {
-    weekStartsOn: 1
-  });
-}
-
-// node_modules/date-fns/esm/getISOWeekYear/index.js
-function getISOWeekYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var year = date.getFullYear();
-  var fourthOfJanuaryOfNextYear = new Date(0);
-  fourthOfJanuaryOfNextYear.setFullYear(year + 1, 0, 4);
-  fourthOfJanuaryOfNextYear.setHours(0, 0, 0, 0);
-  var startOfNextYear = startOfISOWeek(fourthOfJanuaryOfNextYear);
-  var fourthOfJanuaryOfThisYear = new Date(0);
-  fourthOfJanuaryOfThisYear.setFullYear(year, 0, 4);
-  fourthOfJanuaryOfThisYear.setHours(0, 0, 0, 0);
-  var startOfThisYear = startOfISOWeek(fourthOfJanuaryOfThisYear);
-  if (date.getTime() >= startOfNextYear.getTime()) {
-    return year + 1;
-  } else if (date.getTime() >= startOfThisYear.getTime()) {
-    return year;
-  } else {
-    return year - 1;
-  }
-}
-
-// node_modules/date-fns/esm/startOfISOWeekYear/index.js
-function startOfISOWeekYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var year = getISOWeekYear(dirtyDate);
-  var fourthOfJanuary = new Date(0);
-  fourthOfJanuary.setFullYear(year, 0, 4);
-  fourthOfJanuary.setHours(0, 0, 0, 0);
-  var date = startOfISOWeek(fourthOfJanuary);
-  return date;
-}
-
-// node_modules/date-fns/esm/_lib/getTimezoneOffsetInMilliseconds/index.js
-function getTimezoneOffsetInMilliseconds(date) {
-  var utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
-  utcDate.setUTCFullYear(date.getFullYear());
-  return date.getTime() - utcDate.getTime();
-}
-
-// node_modules/date-fns/esm/startOfDay/index.js
-function startOfDay(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  date.setHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/differenceInCalendarDays/index.js
-var MILLISECONDS_IN_DAY = 864e5;
-function differenceInCalendarDays(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var startOfDayLeft = startOfDay(dirtyDateLeft);
-  var startOfDayRight = startOfDay(dirtyDateRight);
-  var timestampLeft = startOfDayLeft.getTime() - getTimezoneOffsetInMilliseconds(startOfDayLeft);
-  var timestampRight = startOfDayRight.getTime() - getTimezoneOffsetInMilliseconds(startOfDayRight);
-  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_DAY);
-}
-
-// node_modules/date-fns/esm/addWeeks/index.js
-function addWeeks(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var amount = toInteger(dirtyAmount);
-  var days = amount * 7;
-  return addDays(dirtyDate, days);
-}
-
-// node_modules/date-fns/esm/addYears/index.js
-function addYears(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var amount = toInteger(dirtyAmount);
-  return addMonths(dirtyDate, amount * 12);
-}
-
-// node_modules/date-fns/esm/max/index.js
-function _typeof2(obj) {
-  "@babel/helpers - typeof";
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof2 = function _typeof5(obj2) {
-      return typeof obj2;
-    };
-  } else {
-    _typeof2 = function _typeof5(obj2) {
-      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
-    };
-  }
-  return _typeof2(obj);
-}
-function max(dirtyDatesArray) {
-  requiredArgs(1, arguments);
-  var datesArray;
-  if (dirtyDatesArray && typeof dirtyDatesArray.forEach === "function") {
-    datesArray = dirtyDatesArray;
-  } else if (_typeof2(dirtyDatesArray) === "object" && dirtyDatesArray !== null) {
-    datesArray = Array.prototype.slice.call(dirtyDatesArray);
-  } else {
-    return new Date(NaN);
-  }
-  var result;
-  datesArray.forEach(function(dirtyDate) {
-    var currentDate = toDate(dirtyDate);
-    if (result === void 0 || result < currentDate || isNaN(Number(currentDate))) {
-      result = currentDate;
-    }
-  });
-  return result || new Date(NaN);
-}
-
-// node_modules/date-fns/esm/min/index.js
-function _typeof3(obj) {
-  "@babel/helpers - typeof";
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof3 = function _typeof5(obj2) {
-      return typeof obj2;
-    };
-  } else {
-    _typeof3 = function _typeof5(obj2) {
-      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
-    };
-  }
-  return _typeof3(obj);
-}
-function min(dirtyDatesArray) {
-  requiredArgs(1, arguments);
-  var datesArray;
-  if (dirtyDatesArray && typeof dirtyDatesArray.forEach === "function") {
-    datesArray = dirtyDatesArray;
-  } else if (_typeof3(dirtyDatesArray) === "object" && dirtyDatesArray !== null) {
-    datesArray = Array.prototype.slice.call(dirtyDatesArray);
-  } else {
-    return new Date(NaN);
-  }
-  var result;
-  datesArray.forEach(function(dirtyDate) {
-    var currentDate = toDate(dirtyDate);
-    if (result === void 0 || result > currentDate || isNaN(currentDate.getDate())) {
-      result = currentDate;
-    }
-  });
-  return result || new Date(NaN);
-}
-
-// node_modules/date-fns/esm/compareAsc/index.js
-function compareAsc(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  var diff = dateLeft.getTime() - dateRight.getTime();
-  if (diff < 0) {
-    return -1;
-  } else if (diff > 0) {
-    return 1;
-  } else {
-    return diff;
-  }
-}
-
-// node_modules/date-fns/esm/isSameDay/index.js
-function isSameDay(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeftStartOfDay = startOfDay(dirtyDateLeft);
-  var dateRightStartOfDay = startOfDay(dirtyDateRight);
-  return dateLeftStartOfDay.getTime() === dateRightStartOfDay.getTime();
-}
-
-// node_modules/date-fns/esm/isDate/index.js
-function _typeof4(obj) {
-  "@babel/helpers - typeof";
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof4 = function _typeof5(obj2) {
-      return typeof obj2;
-    };
-  } else {
-    _typeof4 = function _typeof5(obj2) {
-      return obj2 && typeof Symbol === "function" && obj2.constructor === Symbol && obj2 !== Symbol.prototype ? "symbol" : typeof obj2;
-    };
-  }
-  return _typeof4(obj);
-}
-function isDate(value) {
-  requiredArgs(1, arguments);
-  return value instanceof Date || _typeof4(value) === "object" && Object.prototype.toString.call(value) === "[object Date]";
-}
-
-// node_modules/date-fns/esm/isValid/index.js
-function isValid(dirtyDate) {
-  requiredArgs(1, arguments);
-  if (!isDate(dirtyDate) && typeof dirtyDate !== "number") {
-    return false;
-  }
-  var date = toDate(dirtyDate);
-  return !isNaN(Number(date));
-}
-
-// node_modules/date-fns/esm/differenceInCalendarMonths/index.js
-function differenceInCalendarMonths(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear();
-  var monthDiff = dateLeft.getMonth() - dateRight.getMonth();
-  return yearDiff * 12 + monthDiff;
-}
-
-// node_modules/date-fns/esm/differenceInCalendarWeeks/index.js
-var MILLISECONDS_IN_WEEK = 6048e5;
-function differenceInCalendarWeeks(dirtyDateLeft, dirtyDateRight, options) {
-  requiredArgs(2, arguments);
-  var startOfWeekLeft = startOfWeek(dirtyDateLeft, options);
-  var startOfWeekRight = startOfWeek(dirtyDateRight, options);
-  var timestampLeft = startOfWeekLeft.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekLeft);
-  var timestampRight = startOfWeekRight.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekRight);
-  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_WEEK);
-}
-
-// node_modules/date-fns/esm/differenceInMilliseconds/index.js
-function differenceInMilliseconds(dateLeft, dateRight) {
-  requiredArgs(2, arguments);
-  return toDate(dateLeft).getTime() - toDate(dateRight).getTime();
-}
-
-// node_modules/date-fns/esm/_lib/roundingMethods/index.js
-var roundingMap = {
-  ceil: Math.ceil,
-  round: Math.round,
-  floor: Math.floor,
-  trunc: function trunc(value) {
-    return value < 0 ? Math.ceil(value) : Math.floor(value);
-  }
-};
-var defaultRoundingMethod = "trunc";
-function getRoundingMethod(method) {
-  return method ? roundingMap[method] : roundingMap[defaultRoundingMethod];
-}
-
-// node_modules/date-fns/esm/endOfDay/index.js
-function endOfDay(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  date.setHours(23, 59, 59, 999);
-  return date;
-}
-
-// node_modules/date-fns/esm/endOfMonth/index.js
-function endOfMonth(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var month = date.getMonth();
-  date.setFullYear(date.getFullYear(), month + 1, 0);
-  date.setHours(23, 59, 59, 999);
-  return date;
-}
-
-// node_modules/date-fns/esm/isLastDayOfMonth/index.js
-function isLastDayOfMonth(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  return endOfDay(date).getTime() === endOfMonth(date).getTime();
-}
-
-// node_modules/date-fns/esm/differenceInMonths/index.js
-function differenceInMonths(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  var sign = compareAsc(dateLeft, dateRight);
-  var difference = Math.abs(differenceInCalendarMonths(dateLeft, dateRight));
-  var result;
-  if (difference < 1) {
-    result = 0;
-  } else {
-    if (dateLeft.getMonth() === 1 && dateLeft.getDate() > 27) {
-      dateLeft.setDate(30);
-    }
-    dateLeft.setMonth(dateLeft.getMonth() - sign * difference);
-    var isLastMonthNotFull = compareAsc(dateLeft, dateRight) === -sign;
-    if (isLastDayOfMonth(toDate(dirtyDateLeft)) && difference === 1 && compareAsc(dirtyDateLeft, dateRight) === 1) {
-      isLastMonthNotFull = false;
-    }
-    result = sign * (difference - Number(isLastMonthNotFull));
-  }
-  return result === 0 ? 0 : result;
-}
-
-// node_modules/date-fns/esm/differenceInSeconds/index.js
-function differenceInSeconds(dateLeft, dateRight, options) {
-  requiredArgs(2, arguments);
-  var diff = differenceInMilliseconds(dateLeft, dateRight) / 1e3;
-  return getRoundingMethod(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
-}
-
-// node_modules/date-fns/esm/startOfMonth/index.js
-function startOfMonth(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  date.setDate(1);
-  date.setHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/startOfYear/index.js
-function startOfYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var cleanDate = toDate(dirtyDate);
-  var date = new Date(0);
-  date.setFullYear(cleanDate.getFullYear(), 0, 1);
-  date.setHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/endOfWeek/index.js
-function endOfWeek(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
-  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
-    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  }
-  var date = toDate(dirtyDate);
-  var day = date.getDay();
-  var diff = (day < weekStartsOn ? -7 : 0) + 6 - (day - weekStartsOn);
-  date.setDate(date.getDate() + diff);
-  date.setHours(23, 59, 59, 999);
-  return date;
-}
-
-// node_modules/date-fns/esm/endOfISOWeek/index.js
-function endOfISOWeek(dirtyDate) {
-  requiredArgs(1, arguments);
-  return endOfWeek(dirtyDate, {
-    weekStartsOn: 1
-  });
-}
-
-// node_modules/date-fns/esm/subMilliseconds/index.js
-function subMilliseconds(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var amount = toInteger(dirtyAmount);
-  return addMilliseconds(dirtyDate, -amount);
-}
-
-// node_modules/date-fns/esm/_lib/getUTCDayOfYear/index.js
-var MILLISECONDS_IN_DAY2 = 864e5;
-function getUTCDayOfYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var timestamp = date.getTime();
-  date.setUTCMonth(0, 1);
-  date.setUTCHours(0, 0, 0, 0);
-  var startOfYearTimestamp = date.getTime();
-  var difference = timestamp - startOfYearTimestamp;
-  return Math.floor(difference / MILLISECONDS_IN_DAY2) + 1;
-}
-
-// node_modules/date-fns/esm/_lib/startOfUTCISOWeek/index.js
-function startOfUTCISOWeek(dirtyDate) {
-  requiredArgs(1, arguments);
-  var weekStartsOn = 1;
-  var date = toDate(dirtyDate);
-  var day = date.getUTCDay();
-  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
-  date.setUTCDate(date.getUTCDate() - diff);
-  date.setUTCHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/_lib/getUTCISOWeekYear/index.js
-function getUTCISOWeekYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var year = date.getUTCFullYear();
-  var fourthOfJanuaryOfNextYear = new Date(0);
-  fourthOfJanuaryOfNextYear.setUTCFullYear(year + 1, 0, 4);
-  fourthOfJanuaryOfNextYear.setUTCHours(0, 0, 0, 0);
-  var startOfNextYear = startOfUTCISOWeek(fourthOfJanuaryOfNextYear);
-  var fourthOfJanuaryOfThisYear = new Date(0);
-  fourthOfJanuaryOfThisYear.setUTCFullYear(year, 0, 4);
-  fourthOfJanuaryOfThisYear.setUTCHours(0, 0, 0, 0);
-  var startOfThisYear = startOfUTCISOWeek(fourthOfJanuaryOfThisYear);
-  if (date.getTime() >= startOfNextYear.getTime()) {
-    return year + 1;
-  } else if (date.getTime() >= startOfThisYear.getTime()) {
-    return year;
-  } else {
-    return year - 1;
-  }
-}
-
-// node_modules/date-fns/esm/_lib/startOfUTCISOWeekYear/index.js
-function startOfUTCISOWeekYear(dirtyDate) {
-  requiredArgs(1, arguments);
-  var year = getUTCISOWeekYear(dirtyDate);
-  var fourthOfJanuary = new Date(0);
-  fourthOfJanuary.setUTCFullYear(year, 0, 4);
-  fourthOfJanuary.setUTCHours(0, 0, 0, 0);
-  var date = startOfUTCISOWeek(fourthOfJanuary);
-  return date;
-}
-
-// node_modules/date-fns/esm/_lib/getUTCISOWeek/index.js
-var MILLISECONDS_IN_WEEK2 = 6048e5;
-function getUTCISOWeek(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var diff = startOfUTCISOWeek(date).getTime() - startOfUTCISOWeekYear(date).getTime();
-  return Math.round(diff / MILLISECONDS_IN_WEEK2) + 1;
-}
-
-// node_modules/date-fns/esm/_lib/startOfUTCWeek/index.js
-function startOfUTCWeek(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var weekStartsOn = toInteger((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
-  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
-    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  }
-  var date = toDate(dirtyDate);
-  var day = date.getUTCDay();
-  var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
-  date.setUTCDate(date.getUTCDate() - diff);
-  date.setUTCHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/_lib/getUTCWeekYear/index.js
-function getUTCWeekYear(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var year = date.getUTCFullYear();
-  var defaultOptions3 = getDefaultOptions();
-  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
-    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  }
-  var firstWeekOfNextYear = new Date(0);
-  firstWeekOfNextYear.setUTCFullYear(year + 1, 0, firstWeekContainsDate);
-  firstWeekOfNextYear.setUTCHours(0, 0, 0, 0);
-  var startOfNextYear = startOfUTCWeek(firstWeekOfNextYear, options);
-  var firstWeekOfThisYear = new Date(0);
-  firstWeekOfThisYear.setUTCFullYear(year, 0, firstWeekContainsDate);
-  firstWeekOfThisYear.setUTCHours(0, 0, 0, 0);
-  var startOfThisYear = startOfUTCWeek(firstWeekOfThisYear, options);
-  if (date.getTime() >= startOfNextYear.getTime()) {
-    return year + 1;
-  } else if (date.getTime() >= startOfThisYear.getTime()) {
-    return year;
-  } else {
-    return year - 1;
-  }
-}
-
-// node_modules/date-fns/esm/_lib/startOfUTCWeekYear/index.js
-function startOfUTCWeekYear(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-  var year = getUTCWeekYear(dirtyDate, options);
-  var firstWeek = new Date(0);
-  firstWeek.setUTCFullYear(year, 0, firstWeekContainsDate);
-  firstWeek.setUTCHours(0, 0, 0, 0);
-  var date = startOfUTCWeek(firstWeek, options);
-  return date;
-}
-
-// node_modules/date-fns/esm/_lib/getUTCWeek/index.js
-var MILLISECONDS_IN_WEEK3 = 6048e5;
-function getUTCWeek(dirtyDate, options) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var diff = startOfUTCWeek(date, options).getTime() - startOfUTCWeekYear(date, options).getTime();
-  return Math.round(diff / MILLISECONDS_IN_WEEK3) + 1;
-}
-
-// node_modules/date-fns/esm/_lib/addLeadingZeros/index.js
-function addLeadingZeros(number, targetLength) {
-  var sign = number < 0 ? "-" : "";
-  var output = Math.abs(number).toString();
-  while (output.length < targetLength) {
-    output = "0" + output;
-  }
-  return sign + output;
-}
-
-// node_modules/date-fns/esm/_lib/format/lightFormatters/index.js
-var formatters = {
-  y: function y3(date, token) {
-    var signedYear = date.getUTCFullYear();
-    var year = signedYear > 0 ? signedYear : 1 - signedYear;
-    return addLeadingZeros(token === "yy" ? year % 100 : year, token.length);
-  },
-  M: function M3(date, token) {
-    var month = date.getUTCMonth();
-    return token === "M" ? String(month + 1) : addLeadingZeros(month + 1, 2);
-  },
-  d: function d3(date, token) {
-    return addLeadingZeros(date.getUTCDate(), token.length);
-  },
-  a: function a3(date, token) {
-    var dayPeriodEnumValue = date.getUTCHours() / 12 >= 1 ? "pm" : "am";
-    switch (token) {
-      case "a":
-      case "aa":
-        return dayPeriodEnumValue.toUpperCase();
-      case "aaa":
-        return dayPeriodEnumValue;
-      case "aaaaa":
-        return dayPeriodEnumValue[0];
-      case "aaaa":
-      default:
-        return dayPeriodEnumValue === "am" ? "a.m." : "p.m.";
-    }
-  },
-  h: function h3(date, token) {
-    return addLeadingZeros(date.getUTCHours() % 12 || 12, token.length);
-  },
-  H: function H3(date, token) {
-    return addLeadingZeros(date.getUTCHours(), token.length);
-  },
-  m: function m3(date, token) {
-    return addLeadingZeros(date.getUTCMinutes(), token.length);
-  },
-  s: function s3(date, token) {
-    return addLeadingZeros(date.getUTCSeconds(), token.length);
-  },
-  S: function S2(date, token) {
-    var numberOfDigits = token.length;
-    var milliseconds = date.getUTCMilliseconds();
-    var fractionalSeconds = Math.floor(milliseconds * Math.pow(10, numberOfDigits - 3));
-    return addLeadingZeros(fractionalSeconds, token.length);
-  }
-};
-var lightFormatters_default = formatters;
-
-// node_modules/date-fns/esm/_lib/format/formatters/index.js
-var dayPeriodEnum = {
-  am: "am",
-  pm: "pm",
-  midnight: "midnight",
-  noon: "noon",
-  morning: "morning",
-  afternoon: "afternoon",
-  evening: "evening",
-  night: "night"
-};
-var formatters2 = {
-  G: function G2(date, token, localize2) {
-    var era = date.getUTCFullYear() > 0 ? 1 : 0;
-    switch (token) {
-      case "G":
-      case "GG":
-      case "GGG":
-        return localize2.era(era, {
-          width: "abbreviated"
-        });
-      case "GGGGG":
-        return localize2.era(era, {
-          width: "narrow"
-        });
-      case "GGGG":
-      default:
-        return localize2.era(era, {
-          width: "wide"
-        });
-    }
-  },
-  y: function y4(date, token, localize2) {
-    if (token === "yo") {
-      var signedYear = date.getUTCFullYear();
-      var year = signedYear > 0 ? signedYear : 1 - signedYear;
-      return localize2.ordinalNumber(year, {
-        unit: "year"
-      });
-    }
-    return lightFormatters_default.y(date, token);
-  },
-  Y: function Y2(date, token, localize2, options) {
-    var signedWeekYear = getUTCWeekYear(date, options);
-    var weekYear = signedWeekYear > 0 ? signedWeekYear : 1 - signedWeekYear;
-    if (token === "YY") {
-      var twoDigitYear = weekYear % 100;
-      return addLeadingZeros(twoDigitYear, 2);
-    }
-    if (token === "Yo") {
-      return localize2.ordinalNumber(weekYear, {
-        unit: "year"
-      });
-    }
-    return addLeadingZeros(weekYear, token.length);
-  },
-  R: function R2(date, token) {
-    var isoWeekYear = getUTCISOWeekYear(date);
-    return addLeadingZeros(isoWeekYear, token.length);
-  },
-  u: function u3(date, token) {
-    var year = date.getUTCFullYear();
-    return addLeadingZeros(year, token.length);
-  },
-  Q: function Q2(date, token, localize2) {
-    var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
-    switch (token) {
-      case "Q":
-        return String(quarter);
-      case "QQ":
-        return addLeadingZeros(quarter, 2);
-      case "Qo":
-        return localize2.ordinalNumber(quarter, {
-          unit: "quarter"
-        });
-      case "QQQ":
-        return localize2.quarter(quarter, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "QQQQQ":
-        return localize2.quarter(quarter, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "QQQQ":
-      default:
-        return localize2.quarter(quarter, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  q: function q4(date, token, localize2) {
-    var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
-    switch (token) {
-      case "q":
-        return String(quarter);
-      case "qq":
-        return addLeadingZeros(quarter, 2);
-      case "qo":
-        return localize2.ordinalNumber(quarter, {
-          unit: "quarter"
-        });
-      case "qqq":
-        return localize2.quarter(quarter, {
-          width: "abbreviated",
-          context: "standalone"
-        });
-      case "qqqqq":
-        return localize2.quarter(quarter, {
-          width: "narrow",
-          context: "standalone"
-        });
-      case "qqqq":
-      default:
-        return localize2.quarter(quarter, {
-          width: "wide",
-          context: "standalone"
-        });
-    }
-  },
-  M: function M4(date, token, localize2) {
-    var month = date.getUTCMonth();
-    switch (token) {
-      case "M":
-      case "MM":
-        return lightFormatters_default.M(date, token);
-      case "Mo":
-        return localize2.ordinalNumber(month + 1, {
-          unit: "month"
-        });
-      case "MMM":
-        return localize2.month(month, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "MMMMM":
-        return localize2.month(month, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "MMMM":
-      default:
-        return localize2.month(month, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  L: function L3(date, token, localize2) {
-    var month = date.getUTCMonth();
-    switch (token) {
-      case "L":
-        return String(month + 1);
-      case "LL":
-        return addLeadingZeros(month + 1, 2);
-      case "Lo":
-        return localize2.ordinalNumber(month + 1, {
-          unit: "month"
-        });
-      case "LLL":
-        return localize2.month(month, {
-          width: "abbreviated",
-          context: "standalone"
-        });
-      case "LLLLL":
-        return localize2.month(month, {
-          width: "narrow",
-          context: "standalone"
-        });
-      case "LLLL":
-      default:
-        return localize2.month(month, {
-          width: "wide",
-          context: "standalone"
-        });
-    }
-  },
-  w: function w4(date, token, localize2, options) {
-    var week = getUTCWeek(date, options);
-    if (token === "wo") {
-      return localize2.ordinalNumber(week, {
-        unit: "week"
-      });
-    }
-    return addLeadingZeros(week, token.length);
-  },
-  I: function I3(date, token, localize2) {
-    var isoWeek = getUTCISOWeek(date);
-    if (token === "Io") {
-      return localize2.ordinalNumber(isoWeek, {
-        unit: "week"
-      });
-    }
-    return addLeadingZeros(isoWeek, token.length);
-  },
-  d: function d4(date, token, localize2) {
-    if (token === "do") {
-      return localize2.ordinalNumber(date.getUTCDate(), {
-        unit: "date"
-      });
-    }
-    return lightFormatters_default.d(date, token);
-  },
-  D: function D2(date, token, localize2) {
-    var dayOfYear = getUTCDayOfYear(date);
-    if (token === "Do") {
-      return localize2.ordinalNumber(dayOfYear, {
-        unit: "dayOfYear"
-      });
-    }
-    return addLeadingZeros(dayOfYear, token.length);
-  },
-  E: function E2(date, token, localize2) {
-    var dayOfWeek = date.getUTCDay();
-    switch (token) {
-      case "E":
-      case "EE":
-      case "EEE":
-        return localize2.day(dayOfWeek, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "EEEEE":
-        return localize2.day(dayOfWeek, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "EEEEEE":
-        return localize2.day(dayOfWeek, {
-          width: "short",
-          context: "formatting"
-        });
-      case "EEEE":
-      default:
-        return localize2.day(dayOfWeek, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  e: function e3(date, token, localize2, options) {
-    var dayOfWeek = date.getUTCDay();
-    var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
-    switch (token) {
-      case "e":
-        return String(localDayOfWeek);
-      case "ee":
-        return addLeadingZeros(localDayOfWeek, 2);
-      case "eo":
-        return localize2.ordinalNumber(localDayOfWeek, {
-          unit: "day"
-        });
-      case "eee":
-        return localize2.day(dayOfWeek, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "eeeee":
-        return localize2.day(dayOfWeek, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "eeeeee":
-        return localize2.day(dayOfWeek, {
-          width: "short",
-          context: "formatting"
-        });
-      case "eeee":
-      default:
-        return localize2.day(dayOfWeek, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  c: function c3(date, token, localize2, options) {
-    var dayOfWeek = date.getUTCDay();
-    var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
-    switch (token) {
-      case "c":
-        return String(localDayOfWeek);
-      case "cc":
-        return addLeadingZeros(localDayOfWeek, token.length);
-      case "co":
-        return localize2.ordinalNumber(localDayOfWeek, {
-          unit: "day"
-        });
-      case "ccc":
-        return localize2.day(dayOfWeek, {
-          width: "abbreviated",
-          context: "standalone"
-        });
-      case "ccccc":
-        return localize2.day(dayOfWeek, {
-          width: "narrow",
-          context: "standalone"
-        });
-      case "cccccc":
-        return localize2.day(dayOfWeek, {
-          width: "short",
-          context: "standalone"
-        });
-      case "cccc":
-      default:
-        return localize2.day(dayOfWeek, {
-          width: "wide",
-          context: "standalone"
-        });
-    }
-  },
-  i: function i3(date, token, localize2) {
-    var dayOfWeek = date.getUTCDay();
-    var isoDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek;
-    switch (token) {
-      case "i":
-        return String(isoDayOfWeek);
-      case "ii":
-        return addLeadingZeros(isoDayOfWeek, token.length);
-      case "io":
-        return localize2.ordinalNumber(isoDayOfWeek, {
-          unit: "day"
-        });
-      case "iii":
-        return localize2.day(dayOfWeek, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "iiiii":
-        return localize2.day(dayOfWeek, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "iiiiii":
-        return localize2.day(dayOfWeek, {
-          width: "short",
-          context: "formatting"
-        });
-      case "iiii":
-      default:
-        return localize2.day(dayOfWeek, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  a: function a4(date, token, localize2) {
-    var hours = date.getUTCHours();
-    var dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
-    switch (token) {
-      case "a":
-      case "aa":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "aaa":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "abbreviated",
-          context: "formatting"
-        }).toLowerCase();
-      case "aaaaa":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "aaaa":
-      default:
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  b: function b3(date, token, localize2) {
-    var hours = date.getUTCHours();
-    var dayPeriodEnumValue;
-    if (hours === 12) {
-      dayPeriodEnumValue = dayPeriodEnum.noon;
-    } else if (hours === 0) {
-      dayPeriodEnumValue = dayPeriodEnum.midnight;
-    } else {
-      dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
-    }
-    switch (token) {
-      case "b":
-      case "bb":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "bbb":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "abbreviated",
-          context: "formatting"
-        }).toLowerCase();
-      case "bbbbb":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "bbbb":
-      default:
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  B: function B4(date, token, localize2) {
-    var hours = date.getUTCHours();
-    var dayPeriodEnumValue;
-    if (hours >= 17) {
-      dayPeriodEnumValue = dayPeriodEnum.evening;
-    } else if (hours >= 12) {
-      dayPeriodEnumValue = dayPeriodEnum.afternoon;
-    } else if (hours >= 4) {
-      dayPeriodEnumValue = dayPeriodEnum.morning;
-    } else {
-      dayPeriodEnumValue = dayPeriodEnum.night;
-    }
-    switch (token) {
-      case "B":
-      case "BB":
-      case "BBB":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "abbreviated",
-          context: "formatting"
-        });
-      case "BBBBB":
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "narrow",
-          context: "formatting"
-        });
-      case "BBBB":
-      default:
-        return localize2.dayPeriod(dayPeriodEnumValue, {
-          width: "wide",
-          context: "formatting"
-        });
-    }
-  },
-  h: function h4(date, token, localize2) {
-    if (token === "ho") {
-      var hours = date.getUTCHours() % 12;
-      if (hours === 0)
-        hours = 12;
-      return localize2.ordinalNumber(hours, {
-        unit: "hour"
-      });
-    }
-    return lightFormatters_default.h(date, token);
-  },
-  H: function H4(date, token, localize2) {
-    if (token === "Ho") {
-      return localize2.ordinalNumber(date.getUTCHours(), {
-        unit: "hour"
-      });
-    }
-    return lightFormatters_default.H(date, token);
-  },
-  K: function K2(date, token, localize2) {
-    var hours = date.getUTCHours() % 12;
-    if (token === "Ko") {
-      return localize2.ordinalNumber(hours, {
-        unit: "hour"
-      });
-    }
-    return addLeadingZeros(hours, token.length);
-  },
-  k: function k4(date, token, localize2) {
-    var hours = date.getUTCHours();
-    if (hours === 0)
-      hours = 24;
-    if (token === "ko") {
-      return localize2.ordinalNumber(hours, {
-        unit: "hour"
-      });
-    }
-    return addLeadingZeros(hours, token.length);
-  },
-  m: function m4(date, token, localize2) {
-    if (token === "mo") {
-      return localize2.ordinalNumber(date.getUTCMinutes(), {
-        unit: "minute"
-      });
-    }
-    return lightFormatters_default.m(date, token);
-  },
-  s: function s4(date, token, localize2) {
-    if (token === "so") {
-      return localize2.ordinalNumber(date.getUTCSeconds(), {
-        unit: "second"
-      });
-    }
-    return lightFormatters_default.s(date, token);
-  },
-  S: function S3(date, token) {
-    return lightFormatters_default.S(date, token);
-  },
-  X: function X2(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timezoneOffset = originalDate.getTimezoneOffset();
-    if (timezoneOffset === 0) {
-      return "Z";
-    }
-    switch (token) {
-      case "X":
-        return formatTimezoneWithOptionalMinutes(timezoneOffset);
-      case "XXXX":
-      case "XX":
-        return formatTimezone(timezoneOffset);
-      case "XXXXX":
-      case "XXX":
-      default:
-        return formatTimezone(timezoneOffset, ":");
-    }
-  },
-  x: function x4(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timezoneOffset = originalDate.getTimezoneOffset();
-    switch (token) {
-      case "x":
-        return formatTimezoneWithOptionalMinutes(timezoneOffset);
-      case "xxxx":
-      case "xx":
-        return formatTimezone(timezoneOffset);
-      case "xxxxx":
-      case "xxx":
-      default:
-        return formatTimezone(timezoneOffset, ":");
-    }
-  },
-  O: function O3(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timezoneOffset = originalDate.getTimezoneOffset();
-    switch (token) {
-      case "O":
-      case "OO":
-      case "OOO":
-        return "GMT" + formatTimezoneShort(timezoneOffset, ":");
-      case "OOOO":
-      default:
-        return "GMT" + formatTimezone(timezoneOffset, ":");
-    }
-  },
-  z: function z4(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timezoneOffset = originalDate.getTimezoneOffset();
-    switch (token) {
-      case "z":
-      case "zz":
-      case "zzz":
-        return "GMT" + formatTimezoneShort(timezoneOffset, ":");
-      case "zzzz":
-      default:
-        return "GMT" + formatTimezone(timezoneOffset, ":");
-    }
-  },
-  t: function t3(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timestamp = Math.floor(originalDate.getTime() / 1e3);
-    return addLeadingZeros(timestamp, token.length);
-  },
-  T: function T5(date, token, _localize, options) {
-    var originalDate = options._originalDate || date;
-    var timestamp = originalDate.getTime();
-    return addLeadingZeros(timestamp, token.length);
-  }
-};
-function formatTimezoneShort(offset, dirtyDelimiter) {
-  var sign = offset > 0 ? "-" : "+";
-  var absOffset = Math.abs(offset);
-  var hours = Math.floor(absOffset / 60);
-  var minutes = absOffset % 60;
-  if (minutes === 0) {
-    return sign + String(hours);
-  }
-  var delimiter = dirtyDelimiter || "";
-  return sign + String(hours) + delimiter + addLeadingZeros(minutes, 2);
-}
-function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
-  if (offset % 60 === 0) {
-    var sign = offset > 0 ? "-" : "+";
-    return sign + addLeadingZeros(Math.abs(offset) / 60, 2);
-  }
-  return formatTimezone(offset, dirtyDelimiter);
-}
-function formatTimezone(offset, dirtyDelimiter) {
-  var delimiter = dirtyDelimiter || "";
-  var sign = offset > 0 ? "-" : "+";
-  var absOffset = Math.abs(offset);
-  var hours = addLeadingZeros(Math.floor(absOffset / 60), 2);
-  var minutes = addLeadingZeros(absOffset % 60, 2);
-  return sign + hours + delimiter + minutes;
-}
-var formatters_default = formatters2;
-
-// node_modules/date-fns/esm/_lib/format/longFormatters/index.js
-var dateLongFormatter = function dateLongFormatter2(pattern, formatLong2) {
-  switch (pattern) {
-    case "P":
-      return formatLong2.date({
-        width: "short"
-      });
-    case "PP":
-      return formatLong2.date({
-        width: "medium"
-      });
-    case "PPP":
-      return formatLong2.date({
-        width: "long"
-      });
-    case "PPPP":
-    default:
-      return formatLong2.date({
-        width: "full"
-      });
-  }
-};
-var timeLongFormatter = function timeLongFormatter2(pattern, formatLong2) {
-  switch (pattern) {
-    case "p":
-      return formatLong2.time({
-        width: "short"
-      });
-    case "pp":
-      return formatLong2.time({
-        width: "medium"
-      });
-    case "ppp":
-      return formatLong2.time({
-        width: "long"
-      });
-    case "pppp":
-    default:
-      return formatLong2.time({
-        width: "full"
-      });
-  }
-};
-var dateTimeLongFormatter = function dateTimeLongFormatter2(pattern, formatLong2) {
-  var matchResult = pattern.match(/(P+)(p+)?/) || [];
-  var datePattern = matchResult[1];
-  var timePattern = matchResult[2];
-  if (!timePattern) {
-    return dateLongFormatter(pattern, formatLong2);
-  }
-  var dateTimeFormat;
-  switch (datePattern) {
-    case "P":
-      dateTimeFormat = formatLong2.dateTime({
-        width: "short"
-      });
-      break;
-    case "PP":
-      dateTimeFormat = formatLong2.dateTime({
-        width: "medium"
-      });
-      break;
-    case "PPP":
-      dateTimeFormat = formatLong2.dateTime({
-        width: "long"
-      });
-      break;
-    case "PPPP":
-    default:
-      dateTimeFormat = formatLong2.dateTime({
-        width: "full"
-      });
-      break;
-  }
-  return dateTimeFormat.replace("{{date}}", dateLongFormatter(datePattern, formatLong2)).replace("{{time}}", timeLongFormatter(timePattern, formatLong2));
-};
-var longFormatters = {
-  p: timeLongFormatter,
-  P: dateTimeLongFormatter
-};
-var longFormatters_default = longFormatters;
-
-// node_modules/date-fns/esm/_lib/protectedTokens/index.js
-var protectedDayOfYearTokens = ["D", "DD"];
-var protectedWeekYearTokens = ["YY", "YYYY"];
-function isProtectedDayOfYearToken(token) {
-  return protectedDayOfYearTokens.indexOf(token) !== -1;
-}
-function isProtectedWeekYearToken(token) {
-  return protectedWeekYearTokens.indexOf(token) !== -1;
-}
-function throwProtectedError(token, format2, input) {
-  if (token === "YYYY") {
-    throw new RangeError("Use `yyyy` instead of `YYYY` (in `".concat(format2, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-  } else if (token === "YY") {
-    throw new RangeError("Use `yy` instead of `YY` (in `".concat(format2, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-  } else if (token === "D") {
-    throw new RangeError("Use `d` instead of `D` (in `".concat(format2, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-  } else if (token === "DD") {
-    throw new RangeError("Use `dd` instead of `DD` (in `".concat(format2, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-  }
-}
-
-// node_modules/date-fns/esm/locale/en-US/_lib/formatDistance/index.js
-var formatDistanceLocale = {
-  lessThanXSeconds: {
-    one: "less than a second",
-    other: "less than {{count}} seconds"
-  },
-  xSeconds: {
-    one: "1 second",
-    other: "{{count}} seconds"
-  },
-  halfAMinute: "half a minute",
-  lessThanXMinutes: {
-    one: "less than a minute",
-    other: "less than {{count}} minutes"
-  },
-  xMinutes: {
-    one: "1 minute",
-    other: "{{count}} minutes"
-  },
-  aboutXHours: {
-    one: "about 1 hour",
-    other: "about {{count}} hours"
-  },
-  xHours: {
-    one: "1 hour",
-    other: "{{count}} hours"
-  },
-  xDays: {
-    one: "1 day",
-    other: "{{count}} days"
-  },
-  aboutXWeeks: {
-    one: "about 1 week",
-    other: "about {{count}} weeks"
-  },
-  xWeeks: {
-    one: "1 week",
-    other: "{{count}} weeks"
-  },
-  aboutXMonths: {
-    one: "about 1 month",
-    other: "about {{count}} months"
-  },
-  xMonths: {
-    one: "1 month",
-    other: "{{count}} months"
-  },
-  aboutXYears: {
-    one: "about 1 year",
-    other: "about {{count}} years"
-  },
-  xYears: {
-    one: "1 year",
-    other: "{{count}} years"
-  },
-  overXYears: {
-    one: "over 1 year",
-    other: "over {{count}} years"
-  },
-  almostXYears: {
-    one: "almost 1 year",
-    other: "almost {{count}} years"
-  }
-};
-var formatDistance = function formatDistance2(token, count2, options) {
-  var result;
-  var tokenValue = formatDistanceLocale[token];
-  if (typeof tokenValue === "string") {
-    result = tokenValue;
-  } else if (count2 === 1) {
-    result = tokenValue.one;
-  } else {
-    result = tokenValue.other.replace("{{count}}", count2.toString());
-  }
-  if (options !== null && options !== void 0 && options.addSuffix) {
-    if (options.comparison && options.comparison > 0) {
-      return "in " + result;
-    } else {
-      return result + " ago";
-    }
-  }
-  return result;
-};
-var formatDistance_default = formatDistance;
-
-// node_modules/date-fns/esm/locale/_lib/buildFormatLongFn/index.js
-function buildFormatLongFn(args) {
-  return function() {
-    var options = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    var width = options.width ? String(options.width) : args.defaultWidth;
-    var format2 = args.formats[width] || args.formats[args.defaultWidth];
-    return format2;
-  };
-}
-
-// node_modules/date-fns/esm/locale/en-US/_lib/formatLong/index.js
-var dateFormats = {
-  full: "EEEE, MMMM do, y",
-  long: "MMMM do, y",
-  medium: "MMM d, y",
-  short: "MM/dd/yyyy"
-};
-var timeFormats = {
-  full: "h:mm:ss a zzzz",
-  long: "h:mm:ss a z",
-  medium: "h:mm:ss a",
-  short: "h:mm a"
-};
-var dateTimeFormats = {
-  full: "{{date}} 'at' {{time}}",
-  long: "{{date}} 'at' {{time}}",
-  medium: "{{date}}, {{time}}",
-  short: "{{date}}, {{time}}"
-};
-var formatLong = {
-  date: buildFormatLongFn({
-    formats: dateFormats,
-    defaultWidth: "full"
-  }),
-  time: buildFormatLongFn({
-    formats: timeFormats,
-    defaultWidth: "full"
-  }),
-  dateTime: buildFormatLongFn({
-    formats: dateTimeFormats,
-    defaultWidth: "full"
-  })
-};
-var formatLong_default = formatLong;
-
-// node_modules/date-fns/esm/locale/en-US/_lib/formatRelative/index.js
-var formatRelativeLocale = {
-  lastWeek: "'last' eeee 'at' p",
-  yesterday: "'yesterday at' p",
-  today: "'today at' p",
-  tomorrow: "'tomorrow at' p",
-  nextWeek: "eeee 'at' p",
-  other: "P"
-};
-var formatRelative = function formatRelative2(token, _date, _baseDate, _options) {
-  return formatRelativeLocale[token];
-};
-var formatRelative_default = formatRelative;
-
-// node_modules/date-fns/esm/locale/_lib/buildLocalizeFn/index.js
-function buildLocalizeFn(args) {
-  return function(dirtyIndex, options) {
-    var context = options !== null && options !== void 0 && options.context ? String(options.context) : "standalone";
-    var valuesArray;
-    if (context === "formatting" && args.formattingValues) {
-      var defaultWidth = args.defaultFormattingWidth || args.defaultWidth;
-      var width = options !== null && options !== void 0 && options.width ? String(options.width) : defaultWidth;
-      valuesArray = args.formattingValues[width] || args.formattingValues[defaultWidth];
-    } else {
-      var _defaultWidth = args.defaultWidth;
-      var _width = options !== null && options !== void 0 && options.width ? String(options.width) : args.defaultWidth;
-      valuesArray = args.values[_width] || args.values[_defaultWidth];
-    }
-    var index = args.argumentCallback ? args.argumentCallback(dirtyIndex) : dirtyIndex;
-    return valuesArray[index];
-  };
-}
-
-// node_modules/date-fns/esm/locale/en-US/_lib/localize/index.js
-var eraValues = {
-  narrow: ["B", "A"],
-  abbreviated: ["BC", "AD"],
-  wide: ["Before Christ", "Anno Domini"]
-};
-var quarterValues = {
-  narrow: ["1", "2", "3", "4"],
-  abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-  wide: ["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"]
-};
-var monthValues = {
-  narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
-  abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-};
-var dayValues = {
-  narrow: ["S", "M", "T", "W", "T", "F", "S"],
-  short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-  abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-  wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-};
-var dayPeriodValues = {
-  narrow: {
-    am: "a",
-    pm: "p",
-    midnight: "mi",
-    noon: "n",
-    morning: "morning",
-    afternoon: "afternoon",
-    evening: "evening",
-    night: "night"
-  },
-  abbreviated: {
-    am: "AM",
-    pm: "PM",
-    midnight: "midnight",
-    noon: "noon",
-    morning: "morning",
-    afternoon: "afternoon",
-    evening: "evening",
-    night: "night"
-  },
-  wide: {
-    am: "a.m.",
-    pm: "p.m.",
-    midnight: "midnight",
-    noon: "noon",
-    morning: "morning",
-    afternoon: "afternoon",
-    evening: "evening",
-    night: "night"
-  }
-};
-var formattingDayPeriodValues = {
-  narrow: {
-    am: "a",
-    pm: "p",
-    midnight: "mi",
-    noon: "n",
-    morning: "in the morning",
-    afternoon: "in the afternoon",
-    evening: "in the evening",
-    night: "at night"
-  },
-  abbreviated: {
-    am: "AM",
-    pm: "PM",
-    midnight: "midnight",
-    noon: "noon",
-    morning: "in the morning",
-    afternoon: "in the afternoon",
-    evening: "in the evening",
-    night: "at night"
-  },
-  wide: {
-    am: "a.m.",
-    pm: "p.m.",
-    midnight: "midnight",
-    noon: "noon",
-    morning: "in the morning",
-    afternoon: "in the afternoon",
-    evening: "in the evening",
-    night: "at night"
-  }
-};
-var ordinalNumber = function ordinalNumber2(dirtyNumber, _options) {
-  var number = Number(dirtyNumber);
-  var rem100 = number % 100;
-  if (rem100 > 20 || rem100 < 10) {
-    switch (rem100 % 10) {
-      case 1:
-        return number + "st";
-      case 2:
-        return number + "nd";
-      case 3:
-        return number + "rd";
-    }
-  }
-  return number + "th";
-};
-var localize = {
-  ordinalNumber,
-  era: buildLocalizeFn({
-    values: eraValues,
-    defaultWidth: "wide"
-  }),
-  quarter: buildLocalizeFn({
-    values: quarterValues,
-    defaultWidth: "wide",
-    argumentCallback: function argumentCallback(quarter) {
-      return quarter - 1;
-    }
-  }),
-  month: buildLocalizeFn({
-    values: monthValues,
-    defaultWidth: "wide"
-  }),
-  day: buildLocalizeFn({
-    values: dayValues,
-    defaultWidth: "wide"
-  }),
-  dayPeriod: buildLocalizeFn({
-    values: dayPeriodValues,
-    defaultWidth: "wide",
-    formattingValues: formattingDayPeriodValues,
-    defaultFormattingWidth: "wide"
-  })
-};
-var localize_default = localize;
-
-// node_modules/date-fns/esm/locale/_lib/buildMatchFn/index.js
-function buildMatchFn(args) {
-  return function(string) {
-    var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    var width = options.width;
-    var matchPattern = width && args.matchPatterns[width] || args.matchPatterns[args.defaultMatchWidth];
-    var matchResult = string.match(matchPattern);
-    if (!matchResult) {
-      return null;
-    }
-    var matchedString = matchResult[0];
-    var parsePatterns = width && args.parsePatterns[width] || args.parsePatterns[args.defaultParseWidth];
-    var key2 = Array.isArray(parsePatterns) ? findIndex(parsePatterns, function(pattern) {
-      return pattern.test(matchedString);
-    }) : findKey(parsePatterns, function(pattern) {
-      return pattern.test(matchedString);
-    });
-    var value;
-    value = args.valueCallback ? args.valueCallback(key2) : key2;
-    value = options.valueCallback ? options.valueCallback(value) : value;
-    var rest = string.slice(matchedString.length);
-    return {
-      value,
-      rest
-    };
-  };
-}
-function findKey(object, predicate) {
-  for (var key2 in object) {
-    if (object.hasOwnProperty(key2) && predicate(object[key2])) {
-      return key2;
-    }
-  }
-  return void 0;
-}
-function findIndex(array, predicate) {
-  for (var key2 = 0; key2 < array.length; key2++) {
-    if (predicate(array[key2])) {
-      return key2;
-    }
-  }
-  return void 0;
-}
-
-// node_modules/date-fns/esm/locale/_lib/buildMatchPatternFn/index.js
-function buildMatchPatternFn(args) {
-  return function(string) {
-    var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    var matchResult = string.match(args.matchPattern);
-    if (!matchResult)
-      return null;
-    var matchedString = matchResult[0];
-    var parseResult = string.match(args.parsePattern);
-    if (!parseResult)
-      return null;
-    var value = args.valueCallback ? args.valueCallback(parseResult[0]) : parseResult[0];
-    value = options.valueCallback ? options.valueCallback(value) : value;
-    var rest = string.slice(matchedString.length);
-    return {
-      value,
-      rest
-    };
-  };
-}
-
-// node_modules/date-fns/esm/locale/en-US/_lib/match/index.js
-var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
-var parseOrdinalNumberPattern = /\d+/i;
-var matchEraPatterns = {
-  narrow: /^(b|a)/i,
-  abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
-  wide: /^(before christ|before common era|anno domini|common era)/i
-};
-var parseEraPatterns = {
-  any: [/^b/i, /^(a|c)/i]
-};
-var matchQuarterPatterns = {
-  narrow: /^[1234]/i,
-  abbreviated: /^q[1234]/i,
-  wide: /^[1234](th|st|nd|rd)? quarter/i
-};
-var parseQuarterPatterns = {
-  any: [/1/i, /2/i, /3/i, /4/i]
-};
-var matchMonthPatterns = {
-  narrow: /^[jfmasond]/i,
-  abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
-  wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
-};
-var parseMonthPatterns = {
-  narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
-  any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
-};
-var matchDayPatterns = {
-  narrow: /^[smtwf]/i,
-  short: /^(su|mo|tu|we|th|fr|sa)/i,
-  abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
-  wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
-};
-var parseDayPatterns = {
-  narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
-  any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
-};
-var matchDayPeriodPatterns = {
-  narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
-  any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i
-};
-var parseDayPeriodPatterns = {
-  any: {
-    am: /^a/i,
-    pm: /^p/i,
-    midnight: /^mi/i,
-    noon: /^no/i,
-    morning: /morning/i,
-    afternoon: /afternoon/i,
-    evening: /evening/i,
-    night: /night/i
-  }
-};
-var match = {
-  ordinalNumber: buildMatchPatternFn({
-    matchPattern: matchOrdinalNumberPattern,
-    parsePattern: parseOrdinalNumberPattern,
-    valueCallback: function valueCallback(value) {
-      return parseInt(value, 10);
-    }
-  }),
-  era: buildMatchFn({
-    matchPatterns: matchEraPatterns,
-    defaultMatchWidth: "wide",
-    parsePatterns: parseEraPatterns,
-    defaultParseWidth: "any"
-  }),
-  quarter: buildMatchFn({
-    matchPatterns: matchQuarterPatterns,
-    defaultMatchWidth: "wide",
-    parsePatterns: parseQuarterPatterns,
-    defaultParseWidth: "any",
-    valueCallback: function valueCallback2(index) {
-      return index + 1;
-    }
-  }),
-  month: buildMatchFn({
-    matchPatterns: matchMonthPatterns,
-    defaultMatchWidth: "wide",
-    parsePatterns: parseMonthPatterns,
-    defaultParseWidth: "any"
-  }),
-  day: buildMatchFn({
-    matchPatterns: matchDayPatterns,
-    defaultMatchWidth: "wide",
-    parsePatterns: parseDayPatterns,
-    defaultParseWidth: "any"
-  }),
-  dayPeriod: buildMatchFn({
-    matchPatterns: matchDayPeriodPatterns,
-    defaultMatchWidth: "any",
-    parsePatterns: parseDayPeriodPatterns,
-    defaultParseWidth: "any"
-  })
-};
-var match_default = match;
-
-// node_modules/date-fns/esm/locale/en-US/index.js
-var locale = {
-  code: "en-US",
-  formatDistance: formatDistance_default,
-  formatLong: formatLong_default,
-  formatRelative: formatRelative_default,
-  localize: localize_default,
-  match: match_default,
-  options: {
-    weekStartsOn: 0,
-    firstWeekContainsDate: 1
-  }
-};
-var en_US_default = locale;
-
-// node_modules/date-fns/esm/_lib/defaultLocale/index.js
-var defaultLocale_default = en_US_default;
-
-// node_modules/date-fns/esm/format/index.js
-var formattingTokensRegExp = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
-var longFormattingTokensRegExp = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
-var escapedStringRegExp = /^'([^]*?)'?$/;
-var doubleQuoteRegExp = /''/g;
-var unescapedLatinCharacterRegExp = /[a-zA-Z]/;
-function format(dirtyDate, dirtyFormatStr, options) {
-  var _ref, _options$locale, _ref2, _ref3, _ref4, _options$firstWeekCon, _options$locale2, _options$locale2$opti, _defaultOptions$local, _defaultOptions$local2, _ref5, _ref6, _ref7, _options$weekStartsOn, _options$locale3, _options$locale3$opti, _defaultOptions$local3, _defaultOptions$local4;
-  requiredArgs(2, arguments);
-  var formatStr = String(dirtyFormatStr);
-  var defaultOptions3 = getDefaultOptions();
-  var locale2 = (_ref = (_options$locale = options === null || options === void 0 ? void 0 : options.locale) !== null && _options$locale !== void 0 ? _options$locale : defaultOptions3.locale) !== null && _ref !== void 0 ? _ref : defaultLocale_default;
-  var firstWeekContainsDate = toInteger((_ref2 = (_ref3 = (_ref4 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale2 = options.locale) === null || _options$locale2 === void 0 ? void 0 : (_options$locale2$opti = _options$locale2.options) === null || _options$locale2$opti === void 0 ? void 0 : _options$locale2$opti.firstWeekContainsDate) !== null && _ref4 !== void 0 ? _ref4 : defaultOptions3.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : 1);
-  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
-    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  }
-  var weekStartsOn = toInteger((_ref5 = (_ref6 = (_ref7 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale3 = options.locale) === null || _options$locale3 === void 0 ? void 0 : (_options$locale3$opti = _options$locale3.options) === null || _options$locale3$opti === void 0 ? void 0 : _options$locale3$opti.weekStartsOn) !== null && _ref7 !== void 0 ? _ref7 : defaultOptions3.weekStartsOn) !== null && _ref6 !== void 0 ? _ref6 : (_defaultOptions$local3 = defaultOptions3.locale) === null || _defaultOptions$local3 === void 0 ? void 0 : (_defaultOptions$local4 = _defaultOptions$local3.options) === null || _defaultOptions$local4 === void 0 ? void 0 : _defaultOptions$local4.weekStartsOn) !== null && _ref5 !== void 0 ? _ref5 : 0);
-  if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
-    throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  }
-  if (!locale2.localize) {
-    throw new RangeError("locale must contain localize property");
-  }
-  if (!locale2.formatLong) {
-    throw new RangeError("locale must contain formatLong property");
-  }
-  var originalDate = toDate(dirtyDate);
-  if (!isValid(originalDate)) {
-    throw new RangeError("Invalid time value");
-  }
-  var timezoneOffset = getTimezoneOffsetInMilliseconds(originalDate);
-  var utcDate = subMilliseconds(originalDate, timezoneOffset);
-  var formatterOptions = {
-    firstWeekContainsDate,
-    weekStartsOn,
-    locale: locale2,
-    _originalDate: originalDate
-  };
-  var result = formatStr.match(longFormattingTokensRegExp).map(function(substring) {
-    var firstCharacter = substring[0];
-    if (firstCharacter === "p" || firstCharacter === "P") {
-      var longFormatter = longFormatters_default[firstCharacter];
-      return longFormatter(substring, locale2.formatLong);
-    }
-    return substring;
-  }).join("").match(formattingTokensRegExp).map(function(substring) {
-    if (substring === "''") {
-      return "'";
-    }
-    var firstCharacter = substring[0];
-    if (firstCharacter === "'") {
-      return cleanEscapedString(substring);
-    }
-    var formatter = formatters_default[firstCharacter];
-    if (formatter) {
-      if (!(options !== null && options !== void 0 && options.useAdditionalWeekYearTokens) && isProtectedWeekYearToken(substring)) {
-        throwProtectedError(substring, dirtyFormatStr, String(dirtyDate));
-      }
-      if (!(options !== null && options !== void 0 && options.useAdditionalDayOfYearTokens) && isProtectedDayOfYearToken(substring)) {
-        throwProtectedError(substring, dirtyFormatStr, String(dirtyDate));
-      }
-      return formatter(utcDate, substring, locale2.localize, formatterOptions);
-    }
-    if (firstCharacter.match(unescapedLatinCharacterRegExp)) {
-      throw new RangeError("Format string contains an unescaped latin alphabet character `" + firstCharacter + "`");
-    }
-    return substring;
-  }).join("");
-  return result;
-}
-function cleanEscapedString(input) {
-  var matched = input.match(escapedStringRegExp);
-  if (!matched) {
-    return input;
-  }
-  return matched[1].replace(doubleQuoteRegExp, "'");
-}
-
-// node_modules/date-fns/esm/_lib/assign/index.js
-function assign(target, object) {
-  if (target == null) {
-    throw new TypeError("assign requires that input parameter not be null or undefined");
-  }
-  for (var property in object) {
-    if (Object.prototype.hasOwnProperty.call(object, property)) {
-      ;
-      target[property] = object[property];
-    }
-  }
-  return target;
-}
-
-// node_modules/date-fns/esm/_lib/cloneObject/index.js
-function cloneObject(object) {
-  return assign({}, object);
-}
-
-// node_modules/date-fns/esm/formatDistance/index.js
-var MINUTES_IN_DAY = 1440;
-var MINUTES_IN_ALMOST_TWO_DAYS = 2520;
-var MINUTES_IN_MONTH = 43200;
-var MINUTES_IN_TWO_MONTHS = 86400;
-function formatDistance3(dirtyDate, dirtyBaseDate, options) {
-  var _ref, _options$locale;
-  requiredArgs(2, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var locale2 = (_ref = (_options$locale = options === null || options === void 0 ? void 0 : options.locale) !== null && _options$locale !== void 0 ? _options$locale : defaultOptions3.locale) !== null && _ref !== void 0 ? _ref : defaultLocale_default;
-  if (!locale2.formatDistance) {
-    throw new RangeError("locale must contain formatDistance property");
-  }
-  var comparison = compareAsc(dirtyDate, dirtyBaseDate);
-  if (isNaN(comparison)) {
-    throw new RangeError("Invalid time value");
-  }
-  var localizeOptions = assign(cloneObject(options), {
-    addSuffix: Boolean(options === null || options === void 0 ? void 0 : options.addSuffix),
-    comparison
-  });
-  var dateLeft;
-  var dateRight;
-  if (comparison > 0) {
-    dateLeft = toDate(dirtyBaseDate);
-    dateRight = toDate(dirtyDate);
-  } else {
-    dateLeft = toDate(dirtyDate);
-    dateRight = toDate(dirtyBaseDate);
-  }
-  var seconds = differenceInSeconds(dateRight, dateLeft);
-  var offsetInSeconds = (getTimezoneOffsetInMilliseconds(dateRight) - getTimezoneOffsetInMilliseconds(dateLeft)) / 1e3;
-  var minutes = Math.round((seconds - offsetInSeconds) / 60);
-  var months;
-  if (minutes < 2) {
-    if (options !== null && options !== void 0 && options.includeSeconds) {
-      if (seconds < 5) {
-        return locale2.formatDistance("lessThanXSeconds", 5, localizeOptions);
-      } else if (seconds < 10) {
-        return locale2.formatDistance("lessThanXSeconds", 10, localizeOptions);
-      } else if (seconds < 20) {
-        return locale2.formatDistance("lessThanXSeconds", 20, localizeOptions);
-      } else if (seconds < 40) {
-        return locale2.formatDistance("halfAMinute", 0, localizeOptions);
-      } else if (seconds < 60) {
-        return locale2.formatDistance("lessThanXMinutes", 1, localizeOptions);
-      } else {
-        return locale2.formatDistance("xMinutes", 1, localizeOptions);
-      }
-    } else {
-      if (minutes === 0) {
-        return locale2.formatDistance("lessThanXMinutes", 1, localizeOptions);
-      } else {
-        return locale2.formatDistance("xMinutes", minutes, localizeOptions);
-      }
-    }
-  } else if (minutes < 45) {
-    return locale2.formatDistance("xMinutes", minutes, localizeOptions);
-  } else if (minutes < 90) {
-    return locale2.formatDistance("aboutXHours", 1, localizeOptions);
-  } else if (minutes < MINUTES_IN_DAY) {
-    var hours = Math.round(minutes / 60);
-    return locale2.formatDistance("aboutXHours", hours, localizeOptions);
-  } else if (minutes < MINUTES_IN_ALMOST_TWO_DAYS) {
-    return locale2.formatDistance("xDays", 1, localizeOptions);
-  } else if (minutes < MINUTES_IN_MONTH) {
-    var days = Math.round(minutes / MINUTES_IN_DAY);
-    return locale2.formatDistance("xDays", days, localizeOptions);
-  } else if (minutes < MINUTES_IN_TWO_MONTHS) {
-    months = Math.round(minutes / MINUTES_IN_MONTH);
-    return locale2.formatDistance("aboutXMonths", months, localizeOptions);
-  }
-  months = differenceInMonths(dateRight, dateLeft);
-  if (months < 12) {
-    var nearestMonth = Math.round(minutes / MINUTES_IN_MONTH);
-    return locale2.formatDistance("xMonths", nearestMonth, localizeOptions);
-  } else {
-    var monthsSinceStartOfYear = months % 12;
-    var years = Math.floor(months / 12);
-    if (monthsSinceStartOfYear < 3) {
-      return locale2.formatDistance("aboutXYears", years, localizeOptions);
-    } else if (monthsSinceStartOfYear < 9) {
-      return locale2.formatDistance("overXYears", years, localizeOptions);
-    } else {
-      return locale2.formatDistance("almostXYears", years + 1, localizeOptions);
-    }
-  }
-}
-
-// node_modules/date-fns/esm/getDaysInMonth/index.js
-function getDaysInMonth(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var year = date.getFullYear();
-  var monthIndex = date.getMonth();
-  var lastDayOfMonth2 = new Date(0);
-  lastDayOfMonth2.setFullYear(year, monthIndex + 1, 0);
-  lastDayOfMonth2.setHours(0, 0, 0, 0);
-  return lastDayOfMonth2.getDate();
-}
-
-// node_modules/date-fns/esm/getISOWeek/index.js
-var MILLISECONDS_IN_WEEK4 = 6048e5;
-function getISOWeek(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var diff = startOfISOWeek(date).getTime() - startOfISOWeekYear(date).getTime();
-  return Math.round(diff / MILLISECONDS_IN_WEEK4) + 1;
-}
-
-// node_modules/date-fns/esm/getTime/index.js
-function getTime(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var timestamp = date.getTime();
-  return timestamp;
-}
-
-// node_modules/date-fns/esm/getUnixTime/index.js
-function getUnixTime(dirtyDate) {
-  requiredArgs(1, arguments);
-  return Math.floor(getTime(dirtyDate) / 1e3);
-}
-
-// node_modules/date-fns/esm/getWeekYear/index.js
-function getWeekYear(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var year = date.getFullYear();
-  var defaultOptions3 = getDefaultOptions();
-  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-  if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
-    throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  }
-  var firstWeekOfNextYear = new Date(0);
-  firstWeekOfNextYear.setFullYear(year + 1, 0, firstWeekContainsDate);
-  firstWeekOfNextYear.setHours(0, 0, 0, 0);
-  var startOfNextYear = startOfWeek(firstWeekOfNextYear, options);
-  var firstWeekOfThisYear = new Date(0);
-  firstWeekOfThisYear.setFullYear(year, 0, firstWeekContainsDate);
-  firstWeekOfThisYear.setHours(0, 0, 0, 0);
-  var startOfThisYear = startOfWeek(firstWeekOfThisYear, options);
-  if (date.getTime() >= startOfNextYear.getTime()) {
-    return year + 1;
-  } else if (date.getTime() >= startOfThisYear.getTime()) {
-    return year;
-  } else {
-    return year - 1;
-  }
-}
-
-// node_modules/date-fns/esm/startOfWeekYear/index.js
-function startOfWeekYear(dirtyDate, options) {
-  var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-  requiredArgs(1, arguments);
-  var defaultOptions3 = getDefaultOptions();
-  var firstWeekContainsDate = toInteger((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions3.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions3.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-  var year = getWeekYear(dirtyDate, options);
-  var firstWeek = new Date(0);
-  firstWeek.setFullYear(year, 0, firstWeekContainsDate);
-  firstWeek.setHours(0, 0, 0, 0);
-  var date = startOfWeek(firstWeek, options);
-  return date;
-}
-
-// node_modules/date-fns/esm/getWeek/index.js
-var MILLISECONDS_IN_WEEK5 = 6048e5;
-function getWeek(dirtyDate, options) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var diff = startOfWeek(date, options).getTime() - startOfWeekYear(date, options).getTime();
-  return Math.round(diff / MILLISECONDS_IN_WEEK5) + 1;
-}
-
-// node_modules/date-fns/esm/lastDayOfMonth/index.js
-function lastDayOfMonth(dirtyDate) {
-  requiredArgs(1, arguments);
-  var date = toDate(dirtyDate);
-  var month = date.getMonth();
-  date.setFullYear(date.getFullYear(), month + 1, 0);
-  date.setHours(0, 0, 0, 0);
-  return date;
-}
-
-// node_modules/date-fns/esm/getWeeksInMonth/index.js
-function getWeeksInMonth(date, options) {
-  requiredArgs(1, arguments);
-  return differenceInCalendarWeeks(lastDayOfMonth(date), startOfMonth(date), options) + 1;
-}
-
-// node_modules/date-fns/esm/isAfter/index.js
-function isAfter2(dirtyDate, dirtyDateToCompare) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var dateToCompare = toDate(dirtyDateToCompare);
-  return date.getTime() > dateToCompare.getTime();
-}
-
-// node_modules/date-fns/esm/isBefore/index.js
-function isBefore(dirtyDate, dirtyDateToCompare) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var dateToCompare = toDate(dirtyDateToCompare);
-  return date.getTime() < dateToCompare.getTime();
-}
-
-// node_modules/date-fns/esm/isSameMonth/index.js
-function isSameMonth(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  return dateLeft.getFullYear() === dateRight.getFullYear() && dateLeft.getMonth() === dateRight.getMonth();
-}
-
-// node_modules/date-fns/esm/isSameYear/index.js
-function isSameYear(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  return dateLeft.getFullYear() === dateRight.getFullYear();
-}
-
-// node_modules/date-fns/esm/subDays/index.js
-function subDays(dirtyDate, dirtyAmount) {
-  requiredArgs(2, arguments);
-  var amount = toInteger(dirtyAmount);
-  return addDays(dirtyDate, -amount);
-}
-
-// node_modules/date-fns/esm/setMonth/index.js
-function setMonth(dirtyDate, dirtyMonth) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var month = toInteger(dirtyMonth);
-  var year = date.getFullYear();
-  var day = date.getDate();
-  var dateWithDesiredMonth = new Date(0);
-  dateWithDesiredMonth.setFullYear(year, month, 15);
-  dateWithDesiredMonth.setHours(0, 0, 0, 0);
-  var daysInMonth = getDaysInMonth(dateWithDesiredMonth);
-  date.setMonth(month, Math.min(day, daysInMonth));
-  return date;
-}
-
-// node_modules/date-fns/esm/setYear/index.js
-function setYear(dirtyDate, dirtyYear) {
-  requiredArgs(2, arguments);
-  var date = toDate(dirtyDate);
-  var year = toInteger(dirtyYear);
-  if (isNaN(date.getTime())) {
-    return new Date(NaN);
-  }
-  date.setFullYear(year);
-  return date;
-}
-
-// src/utils/contexts/fm.ts
-var import_lodash = __toESM(require_lodash());
-var import_obsidian3 = require("obsidian");
-
-// src/utils/contexts/dv.ts
-var import_obsidian2 = require("obsidian");
-var LocationWrapper = {
-  "fullLine": { start: "", end: "" },
-  "brackets": { start: "[", end: "]" },
-  "parenthesis": { start: "(", end: ")" }
-};
-var fieldComponents = ["inQuote", "inList", "startStyle", "attribute", "endStyle", "beforeSeparatorSpacer", "afterSeparatorSpacer", "values"];
-var genericFieldRegex = "(?<inQuote>>(\\s+)?)?(?<inList>- )?(?<startStyle>[_\\*~`]*)(?<attribute>[0-9\\w\\p{Letter}\\p{Emoji_Presentation}][-0-9\\w\\p{Letter}\\p{Emoji_Presentation}\\s]*)(?<endStyle>[_\\*~`]*)(?<beforeSeparatorSpacer>\\s*)";
-var inlineFieldRegex = (attribute) => `(?<inQuote>>(\\s+)?)?(?<inList>- )?(?<startStyle>[_\\*~\`]*)(?<attribute>${attribute})(?<endStyle>[_\\*~\`]*)(?<beforeSeparatorSpacer>\\s*)::(?<afterSeparatorSpacer>\\s*)`;
-var fullLineRegex = new RegExp(`^${genericFieldRegex}::\\s*(?<values>.*)?`, "u");
-var inSentenceRegexBrackets = new RegExp(`\\[${genericFieldRegex}::\\s*(?<values>[^\\]]+)?\\]`, "gu");
-var inSentenceRegexPar = new RegExp(`\\(${genericFieldRegex}::\\s*(?<values>[^\\)]+)?\\)`, "gu");
-var encodeLink = (value) => {
-  return value ? value.replace(/\[\[/g, "\u{1F54C}\u{1F527}").replace(/\]\]/g, "\u{1F413}\u{1F400}") : value;
-};
-var decodeLink = (value) => {
-  return value ? value.replace(/🕌🔧/gu, "[[").replace(/🐓🐀/gu, "]]") : value;
-};
-var matchInlineFields = (regex, line, attribute, input, location = "fullLine") => {
-  const sR = line.matchAll(regex);
-  let next = sR.next();
-  const newFields = [];
-  while (!next.done) {
-    const match2 = next.value;
-    if (match2.groups && Object.keys(match2.groups).every((j4) => fieldComponents.includes(j4))) {
-      const { inList, inQuote, startStyle, endStyle, beforeSeparatorSpacer, afterSeparatorSpacer, values } = match2.groups;
-      const inputArray = input ? input.replace(/(\,\s+)/g, ",").split(",") : [""];
-      const newValue = inputArray.length == 1 ? inputArray[0] : `${inputArray.join(", ")}`;
-      const start = LocationWrapper[location].start;
-      const end = LocationWrapper[location].end;
-      newFields.push({
-        oldField: match2[0],
-        newField: `${inQuote || ""}${start}${inList || ""}${startStyle}${attribute}${endStyle}${beforeSeparatorSpacer}::${afterSeparatorSpacer}${newValue}${end}`
-      });
-    }
-    next = sR.next();
-  }
-  return newFields;
-};
-async function replaceValues(plugin, fileOrFilePath, attribute, input, previousItemsCount = 0) {
-  var _a2, _b2;
-  let file;
-  if (fileOrFilePath instanceof import_obsidian2.TFile) {
-    file = fileOrFilePath;
-  } else {
-    const _file = plugin.app.vault.getAbstractFileByPath(fileOrFilePath);
-    if (_file instanceof import_obsidian2.TFile && _file.extension == "md") {
-      file = _file;
-    } else {
-      throw Error("path doesn't correspond to a proper file");
-    }
-  }
-  const content = (await plugin.app.vault.read(file)).split("\n");
-  const frontmatter = (_a2 = plugin.app.metadataCache.getFileCache(file)) == null ? void 0 : _a2.frontmatter;
-  const skippedLines = [];
-  const { position: { start, end } } = frontmatter ? frontmatter : { position: { start: void 0, end: void 0 } };
-  const newContent = content.map((line, i4) => {
-    const encodedInput = encodeLink(input);
-    let encodedLine = encodeLink(line);
-    const fullLineRegex2 = new RegExp(`^${inlineFieldRegex(attribute)}(?<values>[^\\]]*)`, "u");
-    const fR = encodedLine.match(fullLineRegex2);
-    if ((fR == null ? void 0 : fR.groups) && Object.keys(fR.groups).every((j4) => fieldComponents.includes(j4))) {
-      const { inList, inQuote, startStyle, endStyle, beforeSeparatorSpacer, afterSeparatorSpacer, values } = fR.groups;
-      const inputArray = input ? input.replace(/(\,\s+)/g, ",").split(",").sort() : [];
-      let newValue;
-      let hiddenValue = "";
-      newValue = inputArray.length == 1 ? inputArray[0] : `${inputArray.join(", ")}`;
-      return `${inQuote || ""}${inList || ""}${startStyle}${attribute}${endStyle}${beforeSeparatorSpacer}::${afterSeparatorSpacer}${hiddenValue + newValue}`;
-    } else {
-      const newFields = [];
-      const inSentenceRegexBrackets2 = new RegExp(`\\[${inlineFieldRegex(attribute)}(?<values>[^\\]]+)?\\]`, "gu");
-      const inSentenceRegexPar2 = new RegExp(`\\(${inlineFieldRegex(attribute)}(?<values>[^\\)]+)?\\)`, "gu");
-      newFields.push(...matchInlineFields(inSentenceRegexBrackets2, encodedLine, attribute, encodedInput, "brackets" /* brackets */));
-      newFields.push(...matchInlineFields(inSentenceRegexPar2, encodedLine, attribute, encodedInput, "parenthesis" /* parenthesis */));
-      newFields.forEach((field) => {
-        const fieldRegex = new RegExp(field.oldField.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "u");
-        encodedLine = encodedLine.replace(fieldRegex, field.newField);
-      });
-      return decodeLink(encodedLine);
-    }
-  });
-  await plugin.app.vault.modify(file, newContent.filter((line, i4) => !skippedLines.includes(i4)).join("\n"));
-  const editor = (_b2 = plugin.app.workspace.getActiveViewOfType(import_obsidian2.MarkdownView)) == null ? void 0 : _b2.editor;
-  if (editor) {
-    const lineNumber = editor.getCursor().line;
-    editor.setCursor({ line: editor.getCursor().line, ch: editor.getLine(lineNumber).length });
-  }
-}
-
-// src/utils/contexts/fm.ts
-var saveContextToFile = (file, cols, context, plugin) => {
-  if (app.fileManager.processFrontMatter) {
-    app.fileManager.processFrontMatter(file, (frontmatter) => {
-      Object.keys(context).filter(
-        (f4) => cols.find((c4) => c4.name == f4) && cols.find((c4) => c4.name == f4).hidden != "true" && !cols.find((c4) => c4.name == f4).type.contains("file") && context[f4]
-      ).forEach((f4) => {
-        const col = cols.find((c4) => c4.name == f4);
-        frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
-        if (plugin.dataViewAPI()) {
-          if (plugin.dataViewAPI().page(file.path)[f4] && !frontmatter[f4]) {
-            replaceValues(plugin, file.path, f4, context[f4]);
-          } else {
-            frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
-          }
-        } else {
-          frontmatter[f4] = valueForFrontmatter(col.type, context[f4]);
-        }
-      });
-    });
-  }
-};
-var frontMatterForFile = (file) => {
-  let currentCache;
-  if (file instanceof import_obsidian3.TFile && app.metadataCache.getFileCache(file) !== null) {
-    currentCache = app.metadataCache.getFileCache(file);
-  }
-  return currentCache == null ? void 0 : currentCache.frontmatter;
-};
-var frontMatterKeys = (fm) => {
-  return Object.keys(fm != null ? fm : {}).filter((f4) => f4 != "position");
-};
-var yamlTypeToMDBType = (YAMLtype) => {
-  switch (YAMLtype) {
-    case "duration":
-      return "text";
-      break;
-    case "unknown":
-      return "text";
-      break;
-  }
-  return YAMLtype;
-};
-var detectYAMLType = (value, key2) => {
-  if (typeof value === "string") {
-    if (/\/\/(\S+?(?:jpe?g|png|gif|svg))/gi.test(value) || value.contains("unsplash")) {
-      return "image";
-    }
-    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-      return "date";
-    }
-    if (key2 == "tag" || key2 == "tags") {
-      return "tag";
-    }
-    if (/\[\[.*?\]\]/.test(value)) {
-      return "link";
-    }
-    return "text";
-  } else if (typeof value === "number") {
-    return "number";
-  } else if (typeof value === "boolean") {
-    return "boolean";
-  } else if (!value) {
-    return "unknown";
-  } else if (Array.isArray(value)) {
-    if (key2 == "tag" || key2 == "tags") {
-      return "tag-multi";
-    }
-    if (value.length == 1 && Array.isArray(value[0]) && value[0].length == 1 && typeof value[0][0] === "string") {
-      return "link";
-    }
-    const types = uniq(value.map((f4) => detectYAMLType(f4, key2)));
-    if (types.length == 1 && types[0] == "link") {
-      return "link-multi";
-    }
-    return "option-multi";
-  } else if (value.isLuxonDateTime) {
-    return "date";
-  } else if (value.isLuxonDuration) {
-    return "duration";
-  } else if (value.type == "file") {
-    return "link";
-  }
-  return "text";
-};
-var mergeTableData = (mdb, yamlmdb, types) => {
-  return {
-    ...mdb,
-    cols: [
-      ...mdb.cols,
-      ...yamlmdb.cols.filter(
-        (f4) => !mdb.cols.find((g4) => g4.name.toLowerCase() == f4.toLowerCase())
-      ).map((f4) => ({
-        name: f4,
-        schemaId: mdb.schema.id,
-        type: yamlTypeToMDBType(types[f4])
-      }))
-    ].filter(onlyUniqueProp("name")),
-    rows: mdb.rows.map((r3) => {
-      const fmRow = yamlmdb.rows.find((f4) => f4.File == r3.File);
-      if (fmRow) {
-        return {
-          ...r3,
-          ...fmRow
-        };
-      }
-      return r3;
-    })
-  };
-};
-var guestimateTypes = (_files, plugin, dv) => {
-  const typesArray = _files.map((f4) => getAbstractFileAtPath(app, f4)).filter((f4) => f4).map((k5) => {
-    const fm = dv && plugin.dataViewAPI() ? plugin.dataViewAPI().page(k5.path) : frontMatterForFile(k5);
-    const fmKeys = dv ? Object.keys(fm != null ? fm : {}).filter(
-      (f4, i4, self2) => !self2.find(
-        (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
-      ) ? true : false
-    ).filter((f4) => f4 != "file") : frontMatterKeys(fm);
-    return fmKeys.reduce(
-      (pk, ck) => ({ ...pk, [ck]: detectYAMLType(fm[ck], ck) }),
-      {}
-    );
-  });
-  const types = typesArray.reduce(
-    (p3, c4) => {
-      const newSet = Object.keys(c4).reduce(
-        (pk, ck) => {
-          var _a2;
-          return { ...pk, [ck]: [...(_a2 = p3 == null ? void 0 : p3[ck]) != null ? _a2 : [], c4[ck]] };
-        },
-        { ...p3 }
-      );
-      return newSet;
-    },
-    {}
-  );
-  const guessType = (ts) => {
-    return import_lodash.default.head((0, import_lodash.default)(ts).countBy().entries().maxBy(import_lodash.default.last));
-  };
-  const guessedTypes = Object.keys(types).reduce((p3, c4) => {
-    return { ...p3, [c4]: guessType(types[c4]) };
-  }, {});
-  return guessedTypes;
-};
-var valueForFrontmatter = (type, value) => {
-  if (type == "number") {
-    return parseInt(value);
-  } else if (type == "boolean") {
-    return value == "true";
-  } else if (type.contains("multi")) {
-    return splitString(value);
-  }
-  return value;
-};
-var saveFrontmatterValue = (plugin, path, key2, value, type, forceSave) => {
-  const afile = getAbstractFileAtPath(app, path);
-  if (afile) {
-    if (app.fileManager.processFrontMatter) {
-      app.fileManager.processFrontMatter(afile, (frontmatter) => {
-        if (plugin.dataViewAPI()) {
-          if (plugin.dataViewAPI().page(path)[key2] && !frontmatter[key2]) {
-            replaceValues(plugin, path, key2, value);
-          } else {
-            if (key2 in frontmatter || forceSave) {
-              frontmatter[key2] = valueForFrontmatter(type, value);
-            }
-          }
-        } else {
-          if (key2 in frontmatter || forceSave) {
-            frontmatter[key2] = valueForFrontmatter(type, value);
-          }
-        }
-      });
-    }
-  }
-};
-var parseFrontMatter = (field, value, dv) => {
-  const YAMLtype = detectYAMLType(value, field);
-  switch (YAMLtype) {
-    case "number":
-      return value.toString();
-      break;
-    case "boolean":
-      return value ? "true" : "false";
-      break;
-    case "date":
-      if (!dv) {
-        return value;
-      } else {
-        return format(new Date(value.ts), "yyyy-MM-dd");
-        ;
-      }
-      break;
-    case "duration":
-      return Object.keys(value.values).reduce(
-        (p3, c4) => [
-          ...p3,
-          ...value.values[c4] > 0 ? [value.values[c4] + " " + c4] : []
-        ],
-        []
-      ).join(", ");
-      break;
-    case "option-multi":
-    case "link-multi":
-    case "tag-multi":
-      return value.join(",");
-      break;
-    case "link":
-      {
-        if (Array.isArray(value) && value.length == 1 && Array.isArray(value[0]) && value[0].length == 1 && typeof value[0][0] === "string") {
-          return value[0][0];
-        } else if (typeof value === "string") {
-          return value;
-        }
-        return value.path;
-      }
-      break;
-    case "text":
-    case "tag":
-    case "image":
-      return value;
-      break;
-  }
-  return "";
-};
-
-// src/utils/array.ts
-var insert = (arr, index, newItem) => [
-  ...arr.slice(0, index),
-  newItem,
-  ...arr.slice(index)
-];
-
-// src/utils/sanitize.ts
-var sanitizeTableName = (name) => {
-  return name == null ? void 0 : name.replace(/[^a-z0-9+]+/gi, "");
-};
-var sanitizeColumnName = (name) => {
-  return name == null ? void 0 : name.replace(/"/g, ``);
-};
-var sanitizeSQLStatement = (name) => {
-  return name == null ? void 0 : name.replace(/'/g, `''`);
-};
-
-// src/dispatch/mdb.ts
-var import_lodash2 = __toESM(require_lodash());
-var import_obsidian4 = require("obsidian");
-var dispatchDatabaseFileChanged = (dbPath, tag) => {
-  let evt = new CustomEvent(eventTypes.mdbChange, { detail: { dbPath, tag } });
-  window.dispatchEvent(evt);
-};
-var processFolderDB = async (plugin, folderPath, processor, fallback) => {
-  let tags = [];
-  const dbPath = folderContextFromFolder(plugin, folderPath);
-  const dbFileExists = getAbstractFileAtPath(app, dbPath);
-  if (dbFileExists) {
-    const folderDB = await getMDBTable(plugin, "files", dbPath, false);
-    if (folderDB) {
-      tags.push(...folderDB.schema.def.split("&"));
-      const newDB = await processor(folderDB, dbPath);
-      const promises = tags.map((tag) => {
-        const tagdbPath = tagContextFromTag(plugin, tag);
-        const tagFileExists = getAbstractFileAtPath(app, tagdbPath);
-        if (tagFileExists) {
-          return consolidateRowsToTag(
-            plugin,
-            tagdbPath,
-            "files",
-            dbPath,
-            newDB.rows
-          ).then((f4) => {
-          });
-        }
-      });
-      return Promise.all(promises);
-    } else if (fallback) {
-      await fallback();
-    }
-  } else if (fallback) {
-    await fallback();
-  }
-};
-var saveDB = async (plugin, dbPath, newTable) => {
-  return saveMDBToPath(plugin, dbPath, newTable);
-};
-var renameRow = (folder, filePath, toFilePath) => {
-  return {
-    ...folder,
-    rows: folder.rows.map(
-      (f4) => f4.File == filePath && f4._source == "folder" ? { ...f4, File: toFilePath } : f4
-    )
-  };
-};
-var removeRows = (folder, source) => {
-  return { ...folder, rows: folder.rows.filter((f4) => f4._source != source) };
-};
-var removeRow = (folder, filePath) => {
-  return {
-    ...folder,
-    rows: folder.rows.filter(
-      (f4) => f4.File != filePath && f4._source == "folder"
-    )
-  };
-};
-var insertRow = (folder, row, parent) => {
-  const existingRow = folder.rows.find(
-    (f4) => f4.File == row.File || parent + "/" + f4.File + ".md" == row.File
-  );
-  if (existingRow) {
-    return {
-      ...folder,
-      rows: folder.rows.map(
-        (f4) => f4.File == existingRow.File ? { ...f4, File: row.File, _source: "folder", ...row } : f4
-      )
-    };
-  }
-  return { ...folder, rows: [...folder.rows, row] };
-};
-var insertRows = (folder, rows) => {
-  const newRows = rows.filter(
-    (row) => {
-      var _a2;
-      return ((_a2 = row.File) == null ? void 0 : _a2.length) > 0 && !folder.rows.some((f4) => f4.File == row.File && f4._source == "folder");
-    }
-  );
-  return { ...folder, rows: [...folder.rows, ...newRows] };
-};
-var saveContextToFrontmatter = (file, cols, context, plugin) => {
-  const afile = getAbstractFileAtPath(app, file);
-  if (afile && afile instanceof import_obsidian4.TFile)
-    saveContextToFile(afile, cols, context, plugin);
-};
-var removeSourceFromTag = async (plugin, tag, source) => {
-  const dbPath = tagContextFromTag(plugin, tag);
-  const tagFileExists = getAbstractFileAtPath(app, dbPath);
-  if (tagFileExists) {
-    const tagDB = await getMDBTable(plugin, "files", dbPath, true);
-    const files = tagDB.rows.filter((f4) => f4._source == source);
-    files.forEach(
-      (row) => saveContextToFrontmatter(
-        row["File"],
-        tagDB.cols,
-        tagDB.cols.reduce((p3, c4) => ({ ...p3, [c4.name]: row[c4.name] }), {}),
-        plugin
-      )
-    );
-    await saveDB(plugin, dbPath, removeRows(tagDB, source));
-  }
-};
-var contextShouldExist = async (plugin, tag) => {
-  const dbPath = tagContextFromTag(plugin, tag);
-  const tagFileExists = getAbstractFileAtPath(app, dbPath);
-  if (!tagFileExists)
-    return false;
-  return getMDBTable(plugin, "files", dbPath, true).then((f4) => (f4 == null ? void 0 : f4.rows.length) > 0);
-};
-var initiateContextIfNotExists = async (plugin, tag) => {
-  const dbPath = tagContextFromTag(plugin, tag);
-  const tagFileExists = getAbstractFileAtPath(app, dbPath);
-  if (tagFileExists)
-    return false;
-  return createDefaultDB(plugin, dbPath, true);
-};
-var insertContextItems = async (plugin, newPaths, t4) => {
-  const saveNewContextRows = async (tag, path) => {
-    const newRow = newPaths.map((newPath) => ({ File: newPath }));
-    await saveDB(plugin, path, insertRows(tag, newRow));
-  };
-  const dbPath = tagContextFromTag(plugin, t4);
-  const tagFileExists = getAbstractFileAtPath(app, dbPath);
-  if (!tagFileExists) {
-    await createDefaultDB(plugin, dbPath, true);
-  }
-  await getMDBTable(plugin, "files", dbPath, true).then(
-    (tagDB) => saveNewContextRows(tagDB, dbPath).then((f4) => {
-    })
-  );
-};
-var fileToFM = (file, cols, plugin) => {
-  const fm = frontMatterForFile(file);
-  const fmKeys = frontMatterKeys(fm).filter((f4) => cols.some((g4) => f4 == g4));
-  const rows = fmKeys.reduce(
-    (p3, c4) => ({ ...p3, [c4]: parseFrontMatter(c4, fm[c4], false) }),
-    {}
-  );
-  if (plugin.dataViewAPI()) {
-    return { ...rows, ...fileToDV(file, cols, plugin) };
-  }
-  return rows;
-};
-var fileToDV = (file, cols, plugin) => {
-  const dvValues = plugin.dataViewAPI().page(file.path);
-  const fmKeys = uniqCaseInsensitive(
-    Object.keys(dvValues != null ? dvValues : {}).filter(
-      (f4, i4, self2) => !self2.find(
-        (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
-      ) ? true : false
-    ).filter((f4) => f4 != "file")
-  ).filter((f4) => cols.some((g4) => f4 == g4));
-  ;
-  return fmKeys.reduce(
-    (p3, c4) => ({
-      ...p3,
-      [c4]: parseFrontMatter(c4, dvValues[c4], true)
-    }),
-    {}
-  );
-};
-var onMetadataChange = async (plugin, file) => {
-  const folderPath = getFolderPathFromString(file.path);
-  let tags = [];
-  const dbPath = folderContextFromFolder(plugin, folderPath);
-  const dbFileExists = getAbstractFileAtPath(app, dbPath);
-  if (dbFileExists) {
-    const folderDB = await getMDBTable(plugin, "files", dbPath, false);
-    if (folderDB) {
-      tags.push(...folderDB.schema.def.split("&"));
-      const newDB = {
-        ...folderDB,
-        rows: folderDB.rows.map(
-          (f4) => f4.File == file.path && f4._source == "folder" ? {
-            ...f4,
-            ...fileToFM(
-              file,
-              folderDB.cols.map((f5) => f5.name),
-              plugin
-            )
-          } : f4
-        )
-      };
-      const dbChanged = !import_lodash2.default.isEqual(folderDB.rows, newDB.rows);
-      if (dbChanged) {
-        await saveDB(plugin, dbPath, newDB);
-      }
-      const promises = tags.map((tag) => {
-        const tagdbPath = tagContextFromTag(plugin, tag);
-        const tagFileExists = getAbstractFileAtPath(app, tagdbPath);
-        if (tagFileExists) {
-          return getMDBTable(plugin, "files", tagdbPath, false).then(
-            (tagDB) => {
-              const newDB2 = {
-                ...tagDB,
-                rows: tagDB.rows.map(
-                  (f4) => f4.File == file.path && f4._source == dbPath ? {
-                    ...f4,
-                    ...fileToFM(
-                      file,
-                      tagDB.cols.map((f5) => f5.name),
-                      plugin
-                    )
-                  } : f4
-                )
-              };
-              const dbChanged2 = !import_lodash2.default.isEqual(tagDB.rows, newDB2.rows);
-              if (dbChanged2) {
-                return saveDB(plugin, tagdbPath, newDB2);
-              }
-              return;
-            }
-          );
-        }
-      });
-      await Promise.all(promises);
-    }
-  }
-};
-var onFileCreated = async (plugin, newPath) => {
-  const newFolderPath = getFolderPathFromString(newPath);
-  await processFolderDB(plugin, newFolderPath, async (folder, path) => {
-    const amendedFolderDB = insertRow(
-      folder,
-      newRowByDBRow({ File: newPath, _source: "folder" }),
-      newFolderPath
-    );
-    await saveDB(plugin, path, amendedFolderDB);
-    return amendedFolderDB;
-  });
-};
-var onFileChanged = async (plugin, oldPath, newPath) => {
-  const oldFolderPath = getFolderPathFromString(oldPath);
-  const newFolderPath = getFolderPathFromString(newPath);
-  if (oldFolderPath == newFolderPath) {
-    await processFolderDB(plugin, oldFolderPath, async (folder, path) => {
-      const amendedFolderDB = renameRow(folder, oldPath, newPath);
-      await saveDB(plugin, path, amendedFolderDB);
-      return amendedFolderDB;
-    });
-  } else {
-    await processFolderDB(
-      plugin,
-      oldFolderPath,
-      async (folder, path) => {
-        const amendedFolderDB = removeRow(folder, oldPath);
-        await saveDB(plugin, path, amendedFolderDB);
-        const dbPath = folderContextFromFolder(plugin, newFolderPath);
-        const fromDBRow = folder.rows.find((f4) => f4.File == oldPath);
-        const toDBFileExists = getAbstractFileAtPath(app, dbPath);
-        if (toDBFileExists) {
-          const toFolderDB = await getMDBTable(plugin, "files", dbPath, false);
-          if (toFolderDB) {
-            const [newDBCols, fmDBCols] = Object.keys(fromDBRow).reduce(
-              (p3, c4) => fromDBRow[c4].length == 0 ? p3 : toFolderDB.cols.find((f4) => f4.name == fromDBRow[c4]) ? [[...p3[0], c4], p3[1]] : [p3[0], [...p3[1], c4]],
-              [[], []]
-            );
-            const newRow = {
-              ...newDBCols.reduce((p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }), {}),
-              File: newPath
-            };
-            await saveDB(
-              plugin,
-              dbPath,
-              insertRow(toFolderDB, newRowByDBRow(newRow), newFolderPath)
-            );
-            saveContextToFrontmatter(
-              newPath,
-              folder.cols,
-              fmDBCols.reduce((p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }), {}),
-              plugin
-            );
-          }
-        } else {
-          saveContextToFrontmatter(
-            newPath,
-            folder.cols,
-            Object.keys(fromDBRow).reduce(
-              (p3, c4) => ({ ...p3, [c4]: fromDBRow[c4] }),
-              {}
-            ),
-            plugin
-          );
-        }
-        return amendedFolderDB;
-      },
-      async () => {
-        const dbPath = folderContextFromFolder(plugin, newFolderPath);
-        const toDBFileExists = getAbstractFileAtPath(app, dbPath);
-        if (toDBFileExists) {
-          const toFolderDB = await getMDBTable(plugin, "files", dbPath, false);
-        }
-      }
-    );
-  }
-};
-var onFileDeleted = async (plugin, oldPath) => {
-  const oldFolderPath = getFolderPathFromString(oldPath);
-  await processFolderDB(plugin, oldFolderPath, async (folder, path) => {
-    const amendedFolderDB = removeRow(folder, oldPath);
-    await saveDB(plugin, path, amendedFolderDB);
-    return amendedFolderDB;
-  });
-};
-var onFolderChanged = async (plugin, oldPath, newPath) => {
-  await processFolderDB(plugin, newPath, async (folder, path) => {
-    const newDB = {
-      ...folder,
-      rows: folder.rows.map(
-        (f4) => getFolderPathFromString(f4["File"]) == oldPath ? { ...f4, File: f4["File"].replace(oldPath, newPath) } : f4
-      )
-    };
-    await saveDB(plugin, path, newDB);
-    return newDB;
-  });
-};
-var onFolderDeleted = async (oldPath) => {
-};
-
-// src/utils/db/db.ts
-var import_obsidian5 = require("obsidian");
-var getDBFile = async (path) => {
-  if (!await app.vault.adapter.exists((0, import_obsidian5.normalizePath)(path))) {
-    return null;
-  }
-  const file = await app.vault.adapter.readBinary(
-    (0, import_obsidian5.normalizePath)(path)
-  );
-  return file;
-};
-var getDB = async (sqlJS, path) => {
-  const buf = await getDBFile(path);
-  if (buf) {
-    return new sqlJS.Database(new Uint8Array(buf));
-  }
-  return new sqlJS.Database();
-};
-var saveDBAndKeepAlive = (db, path) => {
-  const results = saveDBFile(path, db.export().buffer);
-  return results;
-};
-var saveDBFile = async (path, binary) => {
-  const file = app.vault.adapter.writeBinary(
-    (0, import_obsidian5.normalizePath)(path),
-    binary
-  );
-  return file;
-};
-var dbResultsToDBTables = (res) => {
-  return res.reduce(
-    (p3, c4, i4) => [
-      ...p3,
-      {
-        cols: c4.columns,
-        rows: c4 ? c4.values.map(
-          (r3) => c4.columns.reduce(
-            (prev, curr, index) => ({ ...prev, [curr]: r3[index] }),
-            {}
-          )
-        ) : []
-      }
-    ],
-    []
-  );
-};
-var selectDB = (db, table, condition, fields) => {
-  const fieldsStr = fields != null ? fields : "*";
-  const sqlstr = condition ? `SELECT ${fieldsStr} FROM "${table}" WHERE ${condition};` : `SELECT ${fieldsStr} FROM ${table};`;
-  let tables;
-  try {
-    tables = dbResultsToDBTables(db.exec(sqlstr));
-  } catch (e4) {
-    return null;
-  }
-  if (tables.length == 1)
-    return tables[0];
-  return null;
-};
-var updateDB = (db, tables, updateCol, updateRef) => {
-  const sqlstr = Object.keys(tables).map((t4) => {
-    const tableFields = tables[t4].cols.filter((f4) => f4 != updateRef);
-    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
-      var _a2;
-      return `${prev} UPDATE "${t4}" SET ${tableFields.map((c4) => {
-        var _a3;
-        return `${c4}='${(_a3 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a3 : ""}'`;
-      }).join(", ")} WHERE ${updateCol}='${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[updateRef])) != null ? _a2 : ""}';`;
-    }, "");
-    return rowsQuery;
-  }).join("; ");
-  try {
-    db.exec(sqlstr);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var execQuery = (db, sqlstr) => {
-  try {
-    db.exec(sqlstr);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var deleteFromDB = (db, table, condition) => {
-  const sqlstr = `DELETE FROM "${table}" WHERE ${condition};`;
-  try {
-    db.exec(sqlstr);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var dropTable = (db, table) => {
-  const sqlstr = `DROP TABLE IF EXISTS "${table}";`;
-  try {
-    db.exec(sqlstr);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var insertIntoDB = (db, tables) => {
-  const sqlstr = Object.keys(tables).map((t4) => {
-    const tableFields = tables[t4].cols;
-    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
-      return `${prev} INSERT INTO "${t4}" VALUES (${tableFields.map((c4) => {
-        var _a2;
-        return `'${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a2 : ""}'`;
-      }).join(", ")});`;
-    }, "");
-    return rowsQuery;
-  }).join("; ");
-  try {
-    db.exec(`BEGIN TRANSACTION; ${sqlstr} COMMIT;`);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var replaceDB = (db, tables) => {
-  const sqlstr = Object.keys(tables).map((t4) => {
-    const tableFields = tables[t4].cols;
-    const fieldQuery = uniq(tableFields).map((f4) => `'${sanitizeSQLStatement(f4)}' char`).join(", ");
-    const rowsQuery = tables[t4].rows.reduce((prev, curr) => {
-      return `${prev} REPLACE INTO "${t4}" VALUES (${tableFields.map((c4) => {
-        var _a2;
-        return `'${(_a2 = sanitizeSQLStatement(curr == null ? void 0 : curr[c4])) != null ? _a2 : ""}'`;
-      }).join(", ")});`;
-    }, "");
-    const idxQuery = tables[t4].uniques.filter((f4) => f4).reduce((p3, c4) => {
-      return `${p3} CREATE UNIQUE INDEX IF NOT EXISTS idx_${t4}_${c4.replace(
-        /,/g,
-        "_"
-      )} ON ${t4}(${c4});`;
-    }, "");
-    const insertQuery = `CREATE TABLE IF NOT EXISTS "${t4}" (${fieldQuery}); ${idxQuery} BEGIN TRANSACTION; ${rowsQuery} COMMIT;`;
-    return `DROP TABLE IF EXISTS "${t4}"; ${fieldQuery.length > 0 ? insertQuery : ""}`;
-  }).join("; ");
-  try {
-    db.exec(sqlstr);
-  } catch (e4) {
-    console.log(e4);
-  }
-};
-var saveDBToPath = async (plugin, path, tables) => {
-  const sqlJS = await plugin.sqlJS();
-  let db = await getDB(sqlJS, path);
-  replaceDB(db, tables);
-  await saveDBFile(path, db.export().buffer);
-  dispatchDatabaseFileChanged(path);
-  db.close();
-  return true;
-};
-
-// src/utils/contexts/mdb.ts
-var dbTableToMDBTable = (table, schema, fields) => {
-  var _a2;
-  return {
-    schema,
-    cols: fields,
-    rows: (_a2 = table == null ? void 0 : table.rows) != null ? _a2 : []
-  };
-};
-var updateFieldsToSchema = (fields, tag) => {
-  if (tag) {
-    return [
-      ...fields,
-      ...defaultTagFields.rows.filter(
-        (f4) => !fields.some((g4) => g4.name == f4.name && g4.schemaId == f4.schemaId)
-      )
-    ];
-  }
-  return [
-    ...fields,
-    ...defaultFolderFields.rows.filter(
-      (f4) => !fields.some((g4) => g4.name == f4.name && g4.schemaId == f4.schemaId)
-    )
-  ];
-};
-var getMDBTable = async (plugin, table, path, tag) => {
-  const sqlJS = await plugin.sqlJS();
-  const buf = await getDBFile(path);
-  if (!buf) {
-    return null;
-  }
-  const db = new sqlJS.Database(new Uint8Array(buf));
-  await sanitizeTableSchema(plugin, db, path, tag);
-  let fieldsTables;
-  let schema;
-  try {
-    fieldsTables = dbResultsToDBTables(
-      db.exec(`SELECT * FROM m_fields WHERE schemaId = '${table}'`)
-    );
-    schema = dbResultsToDBTables(
-      db.exec(`SELECT * FROM m_schema WHERE id = '${table}'`)
-    )[0].rows[0];
-  } catch (e4) {
-    db.close();
-    return null;
-  }
-  if (fieldsTables.length == 0) {
-    db.close();
-    return {
-      schema,
-      cols: [],
-      rows: []
-    };
-  }
-  const fields = fieldsTables[0].rows.filter(
-    (f4) => f4.name.length > 0
-  );
-  const dbTable = dbResultsToDBTables(
-    db.exec(
-      `SELECT ${fields.reduce((p3, c4) => [...p3, `"${c4.name}"`], []).join(", ")} FROM "${table}"`
-    )
-  );
-  db.close();
-  return dbTableToMDBTable(
-    dbTable[0],
-    schema,
-    schema.primary ? updateFieldsToSchema(fields, tag) : fields
-  );
-};
-var deleteMDBTable = async (plugin, path, mdb) => {
-  const sqlJS = await plugin.sqlJS();
-  const buf = await getDBFile(path);
-  if (!buf) {
-    return false;
-  }
-  const db = new sqlJS.Database(new Uint8Array(buf));
-  deleteFromDB(db, "m_schema", `id = '${sanitizeSQLStatement(mdb)}'`);
-  deleteFromDB(db, "m_schema", `def = '${sanitizeSQLStatement(mdb)}'`);
-  deleteFromDB(db, "m_fields", `schemaId = '${sanitizeSQLStatement(mdb)}'`);
-  dropTable(db, mdb);
-  await saveDBFile(path, db.export().buffer);
-  db.close();
-  return true;
-};
-var getMDBTableSchemas = async (plugin, path, tag) => {
-  const sqlJS = await plugin.sqlJS();
-  const buf = await getDBFile(path);
-  if (!buf) {
-    return null;
-  }
-  const db = new sqlJS.Database(new Uint8Array(buf));
-  await sanitizeTableSchema(plugin, db, path, tag);
-  const tables = db.exec(`SELECT * FROM m_schema`);
-  db.close();
-  return tables[0].values.map((f4) => {
-    const [id2, name, type, def, predicate, primary] = f4;
-    return { id: id2, name, type, def, predicate, primary };
-  });
-};
-var getMDBSchema = async (plugin, path, schema) => {
-  const sqlJS = await plugin.sqlJS();
-  const buf = await getDBFile(path);
-  if (!buf) {
-    return null;
-  }
-  const db = new sqlJS.Database(new Uint8Array(buf));
-  const tables = db.exec(`SELECT * FROM m_schema WHERE id='${sanitizeSQLStatement(schema)}'`);
-  db.close();
-  if (!tables[0] || !tables[0].values[0]) {
-    return null;
-  }
-  return tables[0].values.map((f4) => {
-    const [id2, name, type, def, predicate, primary] = f4;
-    return { id: id2, name, type, def, predicate, primary };
-  })[0];
-};
-var saveMDBToPath = async (plugin, path, mdb) => {
-  var _a2, _b2;
-  const sqlJS = await plugin.sqlJS();
-  const buf = await getDBFile(path);
-  if (!buf) {
-    return null;
-  }
-  const db = new sqlJS.Database(new Uint8Array(buf));
-  const fieldsTables = dbResultsToDBTables(
-    db.exec(`SELECT * FROM m_fields WHERE schemaId != '${mdb.schema.id}'`)
-  );
-  const tables = {
-    m_fields: {
-      uniques: fieldSchema.uniques,
-      cols: fieldSchema.cols,
-      rows: [...(_b2 = (_a2 = fieldsTables[0]) == null ? void 0 : _a2.rows) != null ? _b2 : [], ...mdb.cols]
-    },
-    [mdb.schema.id]: {
-      uniques: mdb.cols.filter((c4) => c4.unique == "true").map((c4) => c4.name),
-      cols: mdb.cols.map((c4) => c4.name),
-      rows: mdb.rows
-    }
-  };
-  db.close();
-  return saveDBToPath(plugin, path, tables);
-};
-var optionValuesForColumn = (column, table) => {
-  var _a2;
-  return uniq(
-    (_a2 = table == null ? void 0 : table.rows.reduce((p3, c4) => {
-      return [...p3, ...splitString(c4[column])];
-    }, [])) != null ? _a2 : []
-  );
-};
-var createDefaultDB = async (plugin, path, tag) => {
-  const sqlJS = await plugin.sqlJS();
-  const table = tag ? defaultTagTables : defaultFolderTables;
-  return saveDBToPath(plugin, path, table);
-};
-var sanitizeTableSchema = async (plugin, db, path, tag) => {
-  const sqlJS = await plugin.sqlJS();
-  const tableRes = db.exec(
-    `SELECT name FROM sqlite_master WHERE type='table';`
-  );
-  if (!tableRes[0] || !tableRes[0].values.some((f4) => f4[0] == "m_schema") || !tableRes[0].values.some((f4) => f4[0] == "m_fields") || !tableRes[0].values.some((f4) => f4[0] == "files")) {
-    await createDefaultDB(plugin, path, tag);
-  }
-};
-var newRowByDBRow = (row) => ({
-  _id: genId(),
-  ...row
-});
-var rowWithID = (row, tag) => {
-  return row._id && row._id.length > 0 ? row : {
-    ...newRowByDBRow({ ...row, _source: tag ? "tag" : "folder" })
-  };
-};
-var createNewRow = (mdb, row, index) => {
-  if (index) {
-    return {
-      ...mdb,
-      rows: insert(mdb.rows, index, newRowByDBRow(row))
-    };
-  }
-  return {
-    ...mdb,
-    rows: [...mdb.rows, newRowByDBRow(row)]
-  };
-};
-var consolidateFilesToTable = async (plugin, path, table, files, tag) => {
-  const sqlJS = await plugin.sqlJS();
-  const isTag = tag ? true : false;
-  let db;
-  if (getAbstractFileAtPath(app, path)) {
-    const buf = await getDBFile(path);
-    db = new sqlJS.Database(new Uint8Array(buf));
-  } else {
-    db = new sqlJS.Database();
-    await createDefaultDB(plugin, path, false);
-  }
-  const mdbTable = await getMDBTable(plugin, table, path, isTag);
-  const missingFiles = files.filter((f4) => !mdbTable.rows.some((g4) => g4.File == f4 && g4._source != "")).map((f4) => ({ File: f4 }));
-  const mergeDuplicates = (rows, tag2) => {
-    const mergeFields = (row, row2) => {
-      return { ...row, ...row2 };
-    };
-    return rows.reduce((p3, c4) => {
-      const findIndex2 = p3.findIndex((f4) => f4._source != "" && f4.File == c4.File);
-      if (findIndex2 != -1) {
-        return p3.map((f4, i4) => i4 == findIndex2 ? mergeFields(f4, c4) : f4);
-      }
-      return [...p3, c4];
-    }, []);
-  };
-  let linkedFolderContexts = [""];
-  if (tag) {
-    const contexts = uniq(
-      mdbTable.rows.map((f4) => f4._source).filter((f4) => f4 != "" && f4 != "tag")
-    );
-    const promises = contexts.map(
-      (context) => getMDBTable(plugin, "files", context, false).then((f4) => [f4, context])
-    );
-    const results = await Promise.all(promises);
-    linkedFolderContexts.push(
-      ...results.filter(([f4, g4]) => {
-        var _a2, _b2;
-        return (_b2 = (_a2 = f4 == null ? void 0 : f4.schema) == null ? void 0 : _a2.def) == null ? void 0 : _b2.split("&").some((h5) => h5 == tag);
-      }).map(([f4, g4]) => g4)
-    );
-  }
-  const nonLinkedRows = mdbTable.rows.filter(
-    (f4) => linkedFolderContexts.some((g4) => g4 == f4._source) && !missingFiles.some((g4) => f4.File == g4.File)
-  );
-  const newRows = [
-    ...nonLinkedRows,
-    ...[
-      ...mergeDuplicates(
-        mdbTable.rows.filter(
-          (f4) => (f4._source != "" || missingFiles.some((g4) => f4.File == g4.File)) && files.some((g4) => g4 == f4.File)
-        ),
-        isTag
-      ),
-      ...missingFiles
-    ].map((f4) => rowWithID(f4, isTag))
-  ];
-  const newMDBTable = {
-    ...mdbTable,
-    cols: [
-      ...(isTag ? defaultTagFields : defaultFolderFields).rows,
-      ...mdbTable.cols
-    ].filter(onlyUniqueProp("name")),
-    rows: newRows
-  };
-  await saveMDBToPath(plugin, path, newMDBTable);
-  db.close();
-  return newMDBTable;
-};
-var consolidateRowsToTag = async (plugin, path, table, source, rows) => {
-  const sqlJS = await plugin.sqlJS();
-  if (getAbstractFileAtPath(app, path)) {
-  } else {
-    await createDefaultDB(plugin, path, true);
-  }
-  const mdbTable = await getMDBTable(plugin, table, path, true);
-  const prevRows = mdbTable.rows.map((f4) => {
-    if (f4._source != source) {
-      return f4;
-    }
-    const row = rows.find((g4) => g4._id == f4._sourceId);
-    return row ? { ...f4, File: row["File"] } : f4;
-  }).filter(
-    (f4) => f4._source != source || rows.some((g4) => g4._id == f4._sourceId)
-  );
-  const missingRows = rows.filter(
-    (f4) => !mdbTable.rows.some((g4) => g4._source == source && g4._sourceId == f4._id)
-  ).map(
-    (f4) => newRowByDBRow({ File: f4.File, _source: source, _sourceId: f4._id })
-  );
-  const newRows = [...prevRows, ...missingRows];
-  const newMDBTable = {
-    ...mdbTable,
-    cols: [...defaultTagFields.rows, ...mdbTable.cols].filter(
-      onlyUniqueProp("name")
-    ),
-    rows: newRows
-  };
-  await saveMDBToPath(plugin, path, newMDBTable);
-  return newMDBTable;
-};
-
-// src/components/ContextView/MDBContext.tsx
 var MDBContext = B({
   tables: [],
   cols: [],
@@ -19193,7 +19798,7 @@ var MDBProvider = (props2) => {
     }
     setSchemaTable(newSchemaTable);
   };
-  const updateValue = (column, value, table, index, file) => {
+  const updateValue2 = (column, value, table, index, file) => {
     var _a3, _b3;
     const col = (_a3 = table == "" ? tableData : contextTable[table]) == null ? void 0 : _a3.cols.find(
       (f4) => f4.name == column
@@ -19311,19 +19916,23 @@ var MDBProvider = (props2) => {
       files,
       f4.cols.filter((f5) => !f5.type.contains("file")).map((f5) => f5.name)
     );
-    saveDB2({
-      ...f4,
-      rows: f4.rows.map((r3) => {
-        const fmRow = yamlTableData.rows.find((f5) => f5.File == r3.File);
-        if (fmRow) {
-          return {
-            ...r3,
-            ...fmRow
-          };
-        }
-        return r3;
-      })
+    const newRows = f4.rows.map((r3) => {
+      const fmRow = yamlTableData.rows.find((f5) => f5.File == r3.File);
+      if (fmRow) {
+        return {
+          ...r3,
+          ...fmRow
+        };
+      }
+      return r3;
     });
+    const dbChanged = !import_lodash4.default.isEqual(newRows, f4.rows);
+    if (dbChanged) {
+      saveDB2({
+        ...f4,
+        rows: newRows
+      });
+    }
   };
   h2(() => {
     if (props2.schema && schemaTable && (dbSchema == null ? void 0 : dbSchema.id) != props2.schema) {
@@ -19354,14 +19963,16 @@ var MDBProvider = (props2) => {
         };
         setDBSchema(newSchema);
         saveSchema(newSchema).then(
-          (f4) => saveDB2({
-            schema: newSchema,
-            cols: defaultTableFields.map((g4) => ({
-              ...g4,
-              schemaId: newSchema.id
-            })),
-            rows: []
-          })
+          (f4) => {
+            saveDB2({
+              schema: newSchema,
+              cols: defaultTableFields.map((g4) => ({
+                ...g4,
+                schemaId: newSchema.id
+              })),
+              rows: []
+            });
+          }
         );
       }
     }
@@ -19633,30 +20244,6 @@ var MDBProvider = (props2) => {
       }));
     });
   };
-  const tagExists = (currentCache, findTag) => {
-    let currentTags = [];
-    if ((0, import_obsidian6.getAllTags)(currentCache)) {
-      currentTags = (0, import_obsidian6.getAllTags)(currentCache);
-    }
-    return currentTags.find((tag) => tag.toLowerCase() == findTag.toLowerCase()) ? true : false;
-  };
-  const getAllFilesForTag = (tag) => {
-    let tagsCache = [];
-    (() => {
-      app.vault.getMarkdownFiles().forEach((tfile) => {
-        let currentCache;
-        if (app.metadataCache.getFileCache(tfile) !== null) {
-          currentCache = app.metadataCache.getFileCache(tfile);
-        }
-        let relativePath = tfile.path;
-        const hasTag = tagExists(currentCache, tag);
-        if (hasTag) {
-          tagsCache.push(relativePath);
-        }
-      });
-    })();
-    return tagsCache;
-  };
   const saveContextDB = async (newTable, context) => {
     const dbPath2 = tagContextFromTag(props2.plugin, context);
     await saveMDBToPath(props2.plugin, dbPath2, newTable).then(
@@ -19817,7 +20404,7 @@ var MDBProvider = (props2) => {
       folderPath,
       isFolderContext,
       setDBSchema,
-      updateValue,
+      updateValue: updateValue2,
       updateFieldValue
     }
   }, props2.children);
@@ -20358,7 +20945,7 @@ var ColumnSizing = {
       resetSize: () => {
         table.setColumnSizing((_ref2) => {
           let {
-            [column.id]: _5,
+            [column.id]: _7,
             ...rest
           } = _ref2;
           return rest;
@@ -20698,7 +21285,7 @@ var Expanding = {
           }
           if (exists && !expanded) {
             const {
-              [row.id]: _5,
+              [row.id]: _7,
               ...rest
             } = oldExpanded;
             return rest;
@@ -21378,7 +21965,7 @@ var Pagination = {
       getPageOptions: memo(() => [table.getPageCount()], (pageCount) => {
         let pageOptions = [];
         if (pageCount && pageCount > 0) {
-          pageOptions = [...new Array(pageCount)].fill(null).map((_5, i4) => i4);
+          pageOptions = [...new Array(pageCount)].fill(null).map((_7, i4) => i4);
         }
         return pageOptions;
       }, {
@@ -22941,7 +23528,7 @@ var SelectMenuPillComponent = (props2) => {
 var SelectMenuPill_default = SelectMenuPillComponent;
 
 // src/components/ui/menus/selectMenu/SelectMenuComponent.tsx
-var import_lodash3 = __toESM(require_lodash());
+var import_lodash5 = __toESM(require_lodash());
 var KEYS = {
   ENTER: "Enter",
   TAB: "Tab",
@@ -22984,15 +23571,15 @@ var defaultProps = {
 var findMatchIndex = (options, query) => {
   return options.findIndex((option) => matchExact(query).test(option.name));
 };
-var pressDelimiter = (props2, query, index, options, addTag) => {
+var pressDelimiter = (props2, query, index, options, addTag3) => {
   if (query.length >= props2.minQueryLength) {
     const match2 = findMatchIndex(options, query);
     const _index = index === -1 ? match2 : index;
     const tag = _index > -1 ? options[_index] : null;
     if (tag) {
-      addTag(tag);
+      addTag3(tag);
     } else {
-      addTag({ name: query, value: query });
+      addTag3({ name: query, value: query });
     }
   }
 };
@@ -23049,7 +23636,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
       debounceFn((_a2 = options[index]) == null ? void 0 : _a2.value);
     }
   }, [index, options]);
-  const debounceFn = T2((0, import_lodash3.debounce)(handleDebounceFn, 100), []);
+  const debounceFn = T2((0, import_lodash5.debounce)(handleDebounceFn, 100), []);
   function handleDebounceFn(inputValue) {
     props2.onHover(inputValue);
   }
@@ -23077,7 +23664,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
       props2.onInput(_query);
     }
     if (_query.length === query.length + 1 && props2.delimiters.indexOf(query.slice(-1)) > -1) {
-      pressDelimiter(props2, query, index, options, addTag);
+      pressDelimiter(props2, query, index, options, addTag3);
     } else if (_query !== query) {
       setQuery(_query);
     }
@@ -23087,7 +23674,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
       if (query || index > -1) {
         e4.preventDefault();
       }
-      pressDelimiter(props2, query, index, options, addTag);
+      pressDelimiter(props2, query, index, options, addTag3);
     }
     if (e4.key === KEYS.BACKSPACE) {
       pressBackspaceKey();
@@ -23115,9 +23702,9 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
     if (container.current) {
       focusNextElement(container.current, event.currentTarget);
     }
-    deleteTag(index2);
+    deleteTag2(index2);
   };
-  const addTag = (tag) => {
+  const addTag3 = (tag) => {
     if (tag.disabled) {
       return;
     }
@@ -23127,7 +23714,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
     props2.onAddition(tag);
     clearInput();
   };
-  const deleteTag = (i4) => {
+  const deleteTag2 = (i4) => {
     props2.onDelete(i4);
   };
   const clearInput = () => {
@@ -23149,7 +23736,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
   };
   function pressBackspaceKey() {
     if (!query.length) {
-      deleteTag(props2.tags.length - 1);
+      deleteTag2(props2.tags.length - 1);
     }
   }
   const focusInput = () => {
@@ -23202,7 +23789,7 @@ var SelectMenuComponent = bn.forwardRef((_props, ref) => {
     id: props2.id,
     classNames: classNames8,
     expanded,
-    addTag,
+    addTag: addTag3,
     allowNew: props2.allowNew
   }) : null, props2.previewComponent);
 });
@@ -23243,7 +23830,7 @@ var SelectMenu = bn.forwardRef(
     );
     const onDelete = T2(
       (tagIndex) => {
-        const newTags = tags.filter((_5, i4) => i4 !== tagIndex);
+        const newTags = tags.filter((_7, i4) => i4 !== tagIndex);
         setTags(newTags);
         props2.saveOptions(
           suggestions.map((f4) => f4.value),
@@ -23443,9 +24030,10 @@ var OptionCell = (props2) => {
       setValue(_value);
       props2.saveOptions(_options.filter((f4) => f4.length > 0).join(","), _value.join(","));
     } else {
+      const newValues = uniq([...value, _value[0]]);
       setOptions(_options.map((t4) => ({ name: t4, value: t4 })));
-      setValue(_value);
-      props2.saveOptions(_options.filter((f4) => f4.length > 0).join(","), _value.join(","));
+      setValue(newValues);
+      props2.saveOptions(_options.filter((f4) => f4.length > 0).join(","), newValues.join(","));
     }
   };
   const menuProps = () => ({
@@ -23530,11 +24118,11 @@ var ContextCell = (props2) => {
   var _a2, _b2, _c2;
   const initialValue = (props2.multi ? (_a2 = splitString(props2.initialValue)) != null ? _a2 : [] : [props2.initialValue]).filter((f4) => (f4 == null ? void 0 : f4.length) > 0).map((f4) => ({
     path: f4,
-    label: fileNameToString(folderPathToString(f4))
+    label: fileNameToString3(folderPathToString(f4))
   }));
   const ref = _2(null);
   const options = (_c2 = (_b2 = props2.contextTable) == null ? void 0 : _b2.rows.map((f4) => ({
-    name: fileNameToString(folderPathToString(f4["File"])),
+    name: fileNameToString3(folderPathToString(f4["File"])),
     value: f4["File"]
   }))) != null ? _c2 : [];
   const [value, setValue] = p2(initialValue);
@@ -23548,7 +24136,7 @@ var ContextCell = (props2) => {
     setValue(
       (props2.multi ? (_a3 = splitString(props2.initialValue)) != null ? _a3 : [] : [props2.initialValue]).filter((f4) => (f4 == null ? void 0 : f4.length) > 0).map((f4) => ({
         path: f4,
-        label: fileNameToString(folderPathToString(f4))
+        label: fileNameToString3(folderPathToString(f4))
       }))
     );
   }, [props2.initialValue]);
@@ -23558,7 +24146,7 @@ var ContextCell = (props2) => {
       setValue(
         _value.map((f4) => ({
           path: f4,
-          label: fileNameToString(folderPathToString(f4))
+          label: fileNameToString3(folderPathToString(f4))
         }))
       );
       props2.saveValue(_value.join(","));
@@ -23568,7 +24156,7 @@ var ContextCell = (props2) => {
         const newValues = uniq([...value.map((f4) => f4.path), newValue]);
         setValue(
           newValues.map((f4) => ({
-            label: fileNameToString(folderPathToString(f4)),
+            label: fileNameToString3(folderPathToString(f4)),
             path: f4
           }))
         );
@@ -24278,7 +24866,7 @@ function addToRange(day, range) {
   if (isSameDay(from, day)) {
     return void 0;
   }
-  if (isAfter2(from, day)) {
+  if (isAfter(from, day)) {
     return { from: day, to };
   }
   return { from, to: day };
@@ -24510,7 +25098,7 @@ function isMatch(day, matchers) {
       var diffAfter = differenceInCalendarDays(matcher.after, day);
       var isDayBefore = diffBefore > 0;
       var isDayAfter = diffAfter < 0;
-      var isClosedInterval = isAfter2(matcher.before, matcher.after);
+      var isClosedInterval = isAfter(matcher.before, matcher.after);
       if (isClosedInterval) {
         return isDayAfter && isDayBefore;
       } else {
@@ -30697,8 +31285,126 @@ var emojis = {
   ]
 };
 
-// src/components/Spaces/TreeView/FileStickerMenu/FileStickerMenu.tsx
-var import_obsidian10 = require("obsidian");
+// src/components/ui/modals/stickerModal.tsx
+var import_obsidian11 = require("obsidian");
+
+// src/components/ui/modals/vaultChangeModals.ts
+var import_obsidian9 = require("obsidian");
+var VaultChangeModal = class extends import_obsidian9.Modal {
+  constructor(plugin, file, action, space) {
+    super(plugin.app);
+    this.file = file;
+    this.action = action;
+    this.plugin = plugin;
+    this.space = space;
+  }
+  onOpen() {
+    let { contentEl } = this;
+    let myModal = this;
+    let headerText;
+    if (this.action === "rename") {
+      headerText = i18n_default.labels.rename;
+    } else if (this.action === "create folder") {
+      headerText = i18n_default.labels.createFolder;
+    } else if (this.action === "create note") {
+      headerText = i18n_default.labels.createNote;
+    }
+    const headerEl = contentEl.createEl("div", { text: headerText });
+    headerEl.addClass("modal-title");
+    const inputEl = contentEl.createEl("input");
+    inputEl.style.cssText = "width: 100%; height: 2.5em; margin-bottom: 15px;";
+    if (this.action === "rename") {
+      inputEl.value = this.file.name.substring(
+        0,
+        this.file.name.lastIndexOf(".")
+      );
+    }
+    inputEl.focus();
+    let changeButtonText;
+    if (this.action === "rename") {
+      changeButtonText = i18n_default.buttons.rename;
+    } else if (this.action === "create folder") {
+      changeButtonText = i18n_default.buttons.createFolder;
+    } else if (this.action === "create note") {
+      changeButtonText = i18n_default.buttons.createNote;
+    }
+    const changeButton = contentEl.createEl("button", {
+      text: changeButtonText
+    });
+    const cancelButton = contentEl.createEl("button", {
+      text: i18n_default.buttons.cancel
+    });
+    cancelButton.style.cssText = "float: right;";
+    cancelButton.addEventListener("click", () => {
+      myModal.close();
+    });
+    const onClickAction = async () => {
+      let newName = inputEl.value;
+      if (this.action === "rename") {
+        newName = newName + this.file.name.substring(
+          this.file.name.lastIndexOf(".")
+        );
+        renameFile(this.file, newName);
+      } else if (this.action === "create folder") {
+        const path = !this.file || this.file.path == "/" ? newName : this.file.path + "/" + newName;
+        if (getAbstractFileAtPath(app, path)) {
+          new import_obsidian9.Notice(i18n_default.notice.folderExists);
+          return;
+        }
+        this.app.vault.createFolder(path);
+        if (this.space != "/")
+          addPathsToSpace(this.plugin, this.space, [path]);
+      }
+      myModal.close();
+    };
+    changeButton.addEventListener("click", onClickAction);
+    inputEl.addEventListener("keydown", (e4) => {
+      if (e4.key === "Enter")
+        onClickAction();
+    });
+  }
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
+  }
+};
+var MoveSuggestionModal = class extends import_obsidian9.FuzzySuggestModal {
+  constructor(app2, files) {
+    super(app2);
+    this.files = files;
+  }
+  getItemText(item) {
+    return item.path;
+  }
+  getItems() {
+    return getAllFoldersInVault(this.app);
+  }
+  onChooseItem(item, evt) {
+    this.files.forEach((f4) => {
+      const file = getAbstractFileAtPath(app, f4);
+      if (file) {
+        this.app.vault.rename(file, item.path + "/" + file.name);
+      }
+    });
+  }
+};
+function getAllFoldersInVault(app2) {
+  let folders = [];
+  let rootFolder = app2.vault.getRoot();
+  folders.push(rootFolder);
+  function recursiveFx(folder) {
+    for (let child of folder.children) {
+      if (child instanceof import_obsidian9.TFolder) {
+        let childFolder = child;
+        folders.push(childFolder);
+        if (childFolder.children)
+          recursiveFx(childFolder);
+      }
+    }
+  }
+  recursiveFx(rootFolder);
+  return folders;
+}
 
 // src/schemas/spaces.ts
 var vaultSchema = {
@@ -30742,7 +31448,7 @@ var onFileCreated2 = async (plugin, newPath, folder) => {
         }
       ]
     }
-  });
+  }, true);
   plugin.saveSpacesDB();
   dispatchSpaceDatabaseFileChanged("vault");
 };
@@ -30844,7 +31550,7 @@ var onFolderDeleted2 = (plugin, oldPath) => {
 };
 
 // src/utils/spaces/spaces.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var rebuildIndex = async (plugin) => {
   console.time("Reindex Spaces Data");
   const db = plugin.spaceDBInstance();
@@ -30863,10 +31569,11 @@ var spaceItemToTreeNode = (space, collapsed, sortable) => {
     space: space.name,
     item: null,
     collapsed,
-    sortable
+    sortable,
+    childrenCount: 0
   };
 };
-var vaulItemToTreeNode = (item, space, path, depth, i4, collapsed, sortable) => ({
+var vaulItemToTreeNode = (item, space, path, depth, i4, collapsed, sortable, childrenCount) => ({
   item,
   file: getAbstractFileAtPath(app, item.path),
   space,
@@ -30875,15 +31582,16 @@ var vaulItemToTreeNode = (item, space, path, depth, i4, collapsed, sortable) => 
   depth,
   index: i4,
   collapsed,
-  sortable
+  sortable,
+  childrenCount
 });
 var folderSortFn = (sortStrategy, direction) => (a5, b4) => {
   if (sortStrategy == "rank") {
     return a5.rank.localeCompare(b4.rank, void 0, { numeric: true });
   }
   const sortFns = [
-    compareByField("folder", false),
-    compareByField(sortStrategy, direction)
+    compareByField2("folder", false),
+    compareByField2(sortStrategy, direction)
   ];
   return sortFns.reduce((p3, c4) => {
     return p3 == 0 ? c4(a5, b4) : p3;
@@ -30898,6 +31606,13 @@ var flattenedTreeFromVaultItems = (root, space, vaultItems, openNodes, depth, so
     let i4 = index;
     vaultItems2[path].sort(folderSortFn(sortStrategy, direction)).forEach((item) => {
       const collapsed = !openNodes2.includes(item.path);
+      i4 = i4 + 1;
+      let newItems = [];
+      if (vaultItems2[item.path] && !collapsed) {
+        newItems.push(
+          ...flattenTree(item.path, vaultItems2, openNodes2, depth2 + 1, i4)
+        );
+      }
       const node = vaulItemToTreeNode(
         item,
         space,
@@ -30905,16 +31620,12 @@ var flattenedTreeFromVaultItems = (root, space, vaultItems, openNodes, depth, so
         depth2,
         i4,
         collapsed,
-        sortStrategy == "rank"
+        sortStrategy == "rank",
+        newItems.length
       );
       if (node.file)
-        items.push(node);
-      i4 = i4 + 1;
-      if (vaultItems2[item.path] && !collapsed) {
-        items.push(
-          ...flattenTree(item.path, vaultItems2, openNodes2, depth2 + 1, i4)
-        );
-      }
+        newItems.splice(0, 0, node);
+      items.push(...newItems);
     });
     return items;
   };
@@ -31052,10 +31763,10 @@ var moveAFileToNewParentAtIndex = (plugin, item, newParent, vaultTree, index) =>
     );
     plugin.saveSpacesDB();
     const afile = getAbstractFileAtPath(app, item.path);
-    app.fileManager.renameFile(afile, newPath);
+    moveFile(getAbstractFileAtPath(app, newParent), afile);
   } else {
     const afile = getAbstractFileAtPath(app, item.path);
-    app.fileManager.renameFile(afile, newPath);
+    moveFile(getAbstractFileAtPath(app, newParent), afile);
   }
 };
 var insertSpaceAtIndex = (plugin, space, pinned, rank, def) => {
@@ -31353,13 +32064,13 @@ var initiateDB = (db) => {
 var indexCurrentFileTree = (db) => {
   var _a2, _b2;
   let treeItems = [];
-  import_obsidian9.Vault.recurseChildren(app.vault.getRoot(), (file) => {
+  import_obsidian10.Vault.recurseChildren(app.vault.getRoot(), (file) => {
     var _a3;
     treeItems.push({
       path: file.path,
       parent: (_a3 = file.parent) == null ? void 0 : _a3.path,
-      created: file instanceof import_obsidian9.TFile ? file.stat.ctime.toString() : void 0,
-      folder: file instanceof import_obsidian9.TFolder ? "true" : "false"
+      created: file instanceof import_obsidian10.TFile ? file.stat.ctime.toString() : void 0,
+      folder: file instanceof import_obsidian10.TFolder ? "true" : "false"
     });
   });
   const currentPaths = (_b2 = (_a2 = selectDB(db, "vault")) == null ? void 0 : _a2.rows) != null ? _b2 : [];
@@ -31467,6 +32178,35 @@ var mergeSpaces = (db, sectionTrees) => {
     }
   });
 };
+var newFolderInSpace = (plugin, space, activeFile2) => {
+  var _a2;
+  let vaultChangeModal = new VaultChangeModal(
+    plugin,
+    ((_a2 = space == null ? void 0 : space.def) == null ? void 0 : _a2.length) > 0 ? getFolderFromPath(app, space.def) : defaultNoteFolder(plugin, activeFile2),
+    "create folder",
+    space.name
+  );
+  vaultChangeModal.open();
+};
+var newFileInSpace = async (plugin, space, activeFile2, canvas) => {
+  var _a2, _b2;
+  let newFile;
+  if (canvas) {
+    newFile = await createNewCanvasFile(
+      plugin,
+      ((_a2 = space == null ? void 0 : space.def) == null ? void 0 : _a2.length) > 0 ? getFolderFromPath(app, space.def) : defaultNoteFolder(plugin, activeFile2),
+      ""
+    );
+  } else {
+    newFile = await createNewMarkdownFile(
+      plugin,
+      ((_b2 = space == null ? void 0 : space.def) == null ? void 0 : _b2.length) > 0 ? getFolderFromPath(app, space.def) : defaultNoteFolder(plugin, activeFile2),
+      ""
+    );
+  }
+  if (space.name != "/")
+    addPathsToSpace(plugin, space.name, [newFile.path]);
+};
 
 // src/utils/emoji.ts
 var unifiedToNative = (unified) => {
@@ -31502,8 +32242,8 @@ var removeFileIcon = (plugin, data) => {
   saveFileSticker(plugin, data.path, "");
 };
 
-// src/components/Spaces/TreeView/FileStickerMenu/FileStickerMenu.tsx
-var StickerModal = class extends import_obsidian10.FuzzySuggestModal {
+// src/components/ui/modals/stickerModal.tsx
+var stickerModal = class extends import_obsidian11.FuzzySuggestModal {
   constructor(app2, setIcon) {
     super(app2);
     this.setIcon = setIcon;
@@ -31540,12 +32280,20 @@ var StickerModal = class extends import_obsidian10.FuzzySuggestModal {
 };
 
 // src/components/FileSticker/FileSticker.tsx
+var import_obsidian12 = require("obsidian");
+
+// src/hooks/useLongPress.tsx
+function isMouseEvent(e4) {
+  return e4 && "screenX" in e4;
+}
+
+// src/components/FileSticker/FileSticker.tsx
 var FileSticker = (props2) => {
   const [vaultItem, setVaultItem] = p2(
     vaultItemForPath(props2.plugin, props2.filePath)
   );
   const reloadIcon = (e4) => {
-    if (e4.detail.changeType == "sticker")
+    if (e4.detail.changeType == "sticker" || e4.detail.changeType == "sync")
       setVaultItem(vaultItemForPath(props2.plugin, props2.filePath));
   };
   h2(() => {
@@ -31557,9 +32305,41 @@ var FileSticker = (props2) => {
       window.removeEventListener(eventTypes.spacesChange, reloadIcon);
     };
   }, [props2.filePath]);
+  const triggerStickerContextMenu = (e4) => {
+    e4.preventDefault();
+    const fileMenu = new import_obsidian12.Menu();
+    fileMenu.addSeparator();
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle(i18n_default.buttons.changeIcon);
+      menuItem.setIcon("lucide-sticker");
+      menuItem.onClick((ev) => {
+        let vaultChangeModal = new stickerModal(
+          props2.plugin.app,
+          (emoji) => saveFileSticker(props2.plugin, props2.filePath, emoji)
+        );
+        vaultChangeModal.open();
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle(i18n_default.buttons.removeIcon);
+      menuItem.setIcon("lucide-file-minus");
+      menuItem.onClick((ev) => {
+        removeFileIcons(props2.plugin, [props2.filePath]);
+      });
+    });
+    if (isMouseEvent(e4)) {
+      fileMenu.showAtPosition({ x: e4.pageX, y: e4.pageY });
+    } else {
+      fileMenu.showAtPosition({
+        x: e4.nativeEvent.locationX,
+        y: e4.nativeEvent.locationY
+      });
+    }
+    return false;
+  };
   const triggerStickerMenu = (e4) => {
     e4.stopPropagation();
-    let vaultChangeModal = new StickerModal(
+    let vaultChangeModal = new stickerModal(
       props2.plugin.app,
       (emoji) => saveFileSticker(props2.plugin, props2.filePath, emoji)
     );
@@ -31567,9 +32347,10 @@ var FileSticker = (props2) => {
   };
   const color = vaultItem == null ? void 0 : vaultItem.color;
   return /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-icon"
+    className: `mk-file-icon ${(vaultItem == null ? void 0 : vaultItem.sticker) ? "" : "mk-file-icon-placeholder"}`
   }, /* @__PURE__ */ bn.createElement("button", {
     "aria-label": i18n_default.buttons.changeIcon,
+    onContextMenu: triggerStickerContextMenu,
     style: (color == null ? void 0 : color.length) > 0 ? {
       "--label-color": `${vaultItem.color}`,
       "--icon-color": `#ffffff`
@@ -31579,139 +32360,15 @@ var FileSticker = (props2) => {
     dangerouslySetInnerHTML: (vaultItem == null ? void 0 : vaultItem.sticker) ? { __html: unifiedToNative(vaultItem.sticker) } : (vaultItem == null ? void 0 : vaultItem.folder) == "true" ? {
       __html: color ? uiIconSet["mk-ui-folder-solid"] : uiIconSet["mk-ui-folder"]
     } : {
-      __html: color ? uiIconSet["mk-ui-file-solid"] : uiIconSet["mk-ui-file"]
+      __html: defaultIconForExtension(fileExtensionForFile(vaultItem == null ? void 0 : vaultItem.path), color ? true : false)
     },
     onClick: (e4) => triggerStickerMenu(e4)
   }));
 };
 
-// src/components/ui/modals/vaultChangeModals.ts
-var import_obsidian11 = require("obsidian");
-var VaultChangeModal = class extends import_obsidian11.Modal {
-  constructor(plugin, file, action, space) {
-    super(plugin.app);
-    this.file = file;
-    this.action = action;
-    this.plugin = plugin;
-    this.space = space;
-  }
-  onOpen() {
-    let { contentEl } = this;
-    let myModal = this;
-    let headerText;
-    if (this.action === "rename") {
-      headerText = i18n_default.labels.rename;
-    } else if (this.action === "create folder") {
-      headerText = i18n_default.labels.createFolder;
-    } else if (this.action === "create note") {
-      headerText = i18n_default.labels.createNote;
-    }
-    const headerEl = contentEl.createEl("div", { text: headerText });
-    headerEl.addClass("modal-title");
-    const inputEl = contentEl.createEl("input");
-    inputEl.style.cssText = "width: 100%; height: 2.5em; margin-bottom: 15px;";
-    if (this.action === "rename") {
-      if (this.file.name.endsWith(".md")) {
-        inputEl.value = this.file.name.substring(
-          0,
-          this.file.name.lastIndexOf(".")
-        );
-      } else {
-        inputEl.value = this.file.name;
-      }
-    }
-    inputEl.focus();
-    let changeButtonText;
-    if (this.action === "rename") {
-      changeButtonText = i18n_default.buttons.rename;
-    } else if (this.action === "create folder") {
-      changeButtonText = i18n_default.buttons.createFolder;
-    } else if (this.action === "create note") {
-      changeButtonText = i18n_default.buttons.createNote;
-    }
-    const changeButton = contentEl.createEl("button", {
-      text: changeButtonText
-    });
-    const cancelButton = contentEl.createEl("button", {
-      text: i18n_default.buttons.cancel
-    });
-    cancelButton.style.cssText = "float: right;";
-    cancelButton.addEventListener("click", () => {
-      myModal.close();
-    });
-    const onClickAction = async () => {
-      let newName = inputEl.value;
-      if (this.action === "rename") {
-        if (this.file.name.endsWith(".md"))
-          newName = newName + ".md";
-        this.app.fileManager.renameFile(
-          this.file,
-          this.file.parent.path == "/" ? newName : this.file.parent.path + "/" + newName
-        );
-      } else if (this.action === "create folder") {
-        const path = !this.file || this.file.path == "/" ? newName : this.file.path + "/" + newName;
-        if (getAbstractFileAtPath(app, path)) {
-          new import_obsidian11.Notice(i18n_default.notice.folderExists);
-          return;
-        }
-        this.app.vault.createFolder(path);
-        if (this.space != "/")
-          addPathsToSpace(this.plugin, this.space, [path]);
-      }
-      myModal.close();
-    };
-    changeButton.addEventListener("click", onClickAction);
-    inputEl.addEventListener("keydown", (e4) => {
-      if (e4.key === "Enter")
-        onClickAction();
-    });
-  }
-  onClose() {
-    let { contentEl } = this;
-    contentEl.empty();
-  }
-};
-var MoveSuggestionModal = class extends import_obsidian11.FuzzySuggestModal {
-  constructor(app2, files) {
-    super(app2);
-    this.files = files;
-  }
-  getItemText(item) {
-    return item.path;
-  }
-  getItems() {
-    return getAllFoldersInVault(this.app);
-  }
-  onChooseItem(item, evt) {
-    this.files.forEach((f4) => {
-      const file = getAbstractFileAtPath(app, f4);
-      if (file) {
-        this.app.vault.rename(file, item.path + "/" + file.name);
-      }
-    });
-  }
-};
-function getAllFoldersInVault(app2) {
-  let folders = [];
-  let rootFolder = app2.vault.getRoot();
-  folders.push(rootFolder);
-  function recursiveFx(folder) {
-    for (let child of folder.children) {
-      if (child instanceof import_obsidian11.TFolder) {
-        let childFolder = child;
-        folders.push(childFolder);
-        if (childFolder.children)
-          recursiveFx(childFolder);
-      }
-    }
-  }
-  recursiveFx(rootFolder);
-  return folders;
-}
-
 // src/components/ui/modals/editSpaceModal.ts
-var import_obsidian12 = require("obsidian");
-var EditSpaceModal = class extends import_obsidian12.Modal {
+var import_obsidian13 = require("obsidian");
+var EditSpaceModal = class extends import_obsidian13.Modal {
   constructor(plugin, space, action) {
     super(plugin.app);
     this.space = space;
@@ -31754,11 +32411,11 @@ var EditSpaceModal = class extends import_obsidian12.Modal {
     const onClickAction = async () => {
       let newName = inputEl.value.replace(/\//g, "");
       if (newName.length == 0) {
-        new import_obsidian12.Notice(i18n_default.notice.newSpaceName);
+        new import_obsidian13.Notice(i18n_default.notice.newSpaceName);
         return;
       }
       if (retrieveSpaces(this.plugin).find((f4) => f4.name == newName)) {
-        new import_obsidian12.Notice(i18n_default.notice.duplicateSpaceName);
+        new import_obsidian13.Notice(i18n_default.notice.duplicateSpaceName);
         return;
       }
       if (this.action === "rename") {
@@ -31780,13 +32437,8 @@ var EditSpaceModal = class extends import_obsidian12.Modal {
   }
 };
 
-// src/hooks/useLongPress.tsx
-function isMouseEvent(e4) {
-  return e4 && "screenX" in e4;
-}
-
 // src/components/ui/menus/fileMenu.tsx
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 
 // src/utils/color.ts
 var colors = [
@@ -31802,9 +32454,31 @@ var colors = [
 ];
 
 // src/components/ui/menus/fileMenu.tsx
-var triggerSectionMenu = (plugin, spaceName, spaces2, e4) => {
-  const fileMenu = new import_obsidian13.Menu();
+var triggerSectionMenu = (plugin, spaceName, spaces2, e4, activeFile2) => {
+  const fileMenu = new import_obsidian14.Menu();
   const space = spaces2.find((f4) => f4.name == spaceName);
+  fileMenu.addItem((menuItem) => {
+    menuItem.setIcon("edit");
+    menuItem.setTitle(i18n_default.buttons.createNote);
+    menuItem.onClick((ev) => {
+      newFileInSpace(plugin, space, activeFile2);
+    });
+  });
+  fileMenu.addItem((menuItem) => {
+    menuItem.setIcon("layout-dashboard");
+    menuItem.setTitle(i18n_default.buttons.createCanvas);
+    menuItem.onClick((ev) => {
+      newFileInSpace(plugin, space, activeFile2, true);
+    });
+  });
+  fileMenu.addItem((menuItem) => {
+    menuItem.setIcon("folder-plus");
+    menuItem.setTitle(i18n_default.buttons.createFolder);
+    menuItem.onClick((ev) => {
+      newFolderInSpace(plugin, space, activeFile2);
+    });
+  });
+  fileMenu.addSeparator();
   fileMenu.addItem((menuItem) => {
     var _a2;
     const pinned = ((_a2 = spaces2.find((f4) => f4.name == spaceName)) == null ? void 0 : _a2.pinned) == "true";
@@ -31824,7 +32498,7 @@ var triggerSectionMenu = (plugin, spaceName, spaces2, e4) => {
       menuItem.setTitle(i18n_default.buttons.changeIcon);
       menuItem.setIcon("lucide-sticker");
       menuItem.onClick((ev) => {
-        let vaultChangeModal = new StickerModal(
+        let vaultChangeModal = new stickerModal(
           plugin.app,
           (emoji) => saveSpaceIcon(plugin, spaceName, emoji)
         );
@@ -31930,7 +32604,7 @@ var triggerMultiFileMenu = (plugin, selectedFiles2, e4) => {
   const files = selectedFiles2.map((s5) => s5.item.path);
   const spaces2 = retrieveSpaces(plugin);
   const spaceItems = retrieveSpaceItems(plugin, spaces2);
-  const fileMenu = new import_obsidian13.Menu();
+  const fileMenu = new import_obsidian14.Menu();
   fileMenu.addSeparator();
   fileMenu.addItem((menuItem) => {
     menuItem.setTitle(i18n_default.menu.spaceTitle);
@@ -31975,7 +32649,7 @@ var triggerMultiFileMenu = (plugin, selectedFiles2, e4) => {
           { name: "None", value: "" },
           ...colors.map((f4) => ({ name: f4[0], value: f4[1] }))
         ],
-        (_5, values) => {
+        (_7, values) => {
           saveFileColors(plugin, files, values[0]);
         }
       );
@@ -31984,7 +32658,7 @@ var triggerMultiFileMenu = (plugin, selectedFiles2, e4) => {
       menuItem.setTitle(i18n_default.buttons.changeIcon);
       menuItem.setIcon("lucide-sticker");
       menuItem.onClick((ev) => {
-        let vaultChangeModal = new StickerModal(
+        let vaultChangeModal = new stickerModal(
           plugin.app,
           (emoji) => saveFileIcons(plugin, files, emoji)
         );
@@ -32039,7 +32713,7 @@ var triggerMultiFileMenu = (plugin, selectedFiles2, e4) => {
 var triggerFileMenu = (plugin, file, isFolder, e4) => {
   const spaces2 = retrieveSpaces(plugin);
   const spaceItems = retrieveSpaceItems(plugin, spaces2);
-  const fileMenu = new import_obsidian13.Menu();
+  const fileMenu = new import_obsidian14.Menu();
   if (isFolder) {
     fileMenu.addSeparator();
     fileMenu.addItem((menuItem) => {
@@ -32047,6 +32721,13 @@ var triggerFileMenu = (plugin, file, isFolder, e4) => {
       menuItem.setTitle(i18n_default.buttons.createNote);
       menuItem.onClick((ev) => {
         newFileInFolder(plugin, file);
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setIcon("layout-dashboard");
+      menuItem.setTitle(i18n_default.buttons.createCanvas);
+      menuItem.onClick((ev) => {
+        createNewCanvasFile(plugin, file, "");
       });
     });
     fileMenu.addItem((menuItem) => {
@@ -32117,7 +32798,7 @@ var triggerFileMenu = (plugin, file, isFolder, e4) => {
           { name: "None", value: "" },
           ...colors.map((f4) => ({ name: f4[0], value: f4[1] }))
         ],
-        (_5, values) => {
+        (_7, values) => {
           saveFileColor(plugin, file.path, values[0]);
         }
       );
@@ -32126,7 +32807,7 @@ var triggerFileMenu = (plugin, file, isFolder, e4) => {
       menuItem.setTitle(i18n_default.buttons.changeIcon);
       menuItem.setIcon("lucide-sticker");
       menuItem.onClick((ev) => {
-        let vaultChangeModal = new StickerModal(
+        let vaultChangeModal = new stickerModal(
           plugin.app,
           (emoji) => saveFileIcon(plugin, file, emoji)
         );
@@ -32207,7 +32888,7 @@ var triggerFileMenu = (plugin, file, isFolder, e4) => {
 };
 
 // src/components/ContextView/DataTypeView/FileCell.tsx
-var import_obsidian14 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 var FileCell = (props2) => {
   var _a2;
   const fileOrCleanPath = (f4) => {
@@ -32237,7 +32918,7 @@ var FileCell = (props2) => {
     if (!ref.current)
       return;
     if (fileExists((_a3 = ref.current) == null ? void 0 : _a3.value)) {
-      new import_obsidian14.Notice(i18n_default.notice.fileExists);
+      new import_obsidian15.Notice(i18n_default.notice.fileExists);
     } else {
       props2.saveValue(ref.current.value);
       props2.setEditMode(null);
@@ -32250,7 +32931,7 @@ var FileCell = (props2) => {
       return;
     }
     if (fileExists(path)) {
-      new import_obsidian14.Notice(i18n_default.notice.fileExists);
+      new import_obsidian15.Notice(i18n_default.notice.fileExists);
     } else {
       await createNewMarkdownFile(
         props2.plugin,
@@ -32276,7 +32957,7 @@ var FileCell = (props2) => {
       if (v3.file) {
         return /* @__PURE__ */ bn.createElement("div", {
           className: "mk-cell-file-title"
-        }, v3 ? v3.file instanceof import_obsidian14.TFile ? fileNameToString(v3.file.name) : v3.file.name : "", (v3 == null ? void 0 : v3.file) instanceof import_obsidian14.TFile && v3.file.extension != "md" && /* @__PURE__ */ bn.createElement("span", {
+        }, v3 ? v3.file instanceof import_obsidian15.TFile ? fileNameToString3(v3.file.name) : v3.file.name : "", (v3 == null ? void 0 : v3.file) instanceof import_obsidian15.TFile && v3.file.extension != "md" && /* @__PURE__ */ bn.createElement("span", {
           className: "nav-file-tag"
         }, (_a3 = v3.file) == null ? void 0 : _a3.extension), /* @__PURE__ */ bn.createElement("button", {
           "aria-label": i18n_default.buttons.toggleFlow,
@@ -32284,7 +32965,12 @@ var FileCell = (props2) => {
           dangerouslySetInnerHTML: {
             __html: uiIconSet["mk-ui-flow-hover"]
           },
-          onClick: () => props2.openFlow && props2.openFlow()
+          onClick: (e4) => {
+            if (props2.openFlow) {
+              props2.openFlow(e4);
+              e4.stopPropagation();
+            }
+          }
         }));
       } else {
         return /* @__PURE__ */ bn.createElement("div", {
@@ -32298,7 +32984,7 @@ var FileCell = (props2) => {
         onContextMenu: (e4) => triggerFileMenu(
           props2.plugin,
           v3.file,
-          v3.file instanceof import_obsidian14.TFolder,
+          v3.file instanceof import_obsidian15.TFolder,
           e4
         )
       }, /* @__PURE__ */ bn.createElement(FileSticker, {
@@ -32307,11 +32993,11 @@ var FileCell = (props2) => {
       }), /* @__PURE__ */ bn.createElement("div", {
         className: "mk-cell-file-name",
         onClick: (e4) => openFile(
-          { ...v3.file, isFolder: v3.file instanceof import_obsidian14.TFolder },
+          { ...v3.file, isFolder: v3.file instanceof import_obsidian15.TFolder },
           props2.plugin,
           e4.ctrlKey || e4.metaKey
         )
-      }, v3 ? v3.file instanceof import_obsidian14.TFile ? fileNameToString(v3.file.name) : v3.file.name : "")));
+      }, v3 ? v3.file instanceof import_obsidian15.TFile ? fileNameToString3(v3.file.name) : v3.file.name : "")));
     }
     return /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
       className: "mk-cell-file-item"
@@ -32337,11 +33023,25 @@ var FileCell = (props2) => {
 };
 
 // src/components/ContextView/DataTypeView/FilePropertyCell.tsx
+var humanFileSize = (bytes, si = false, dp = 1) => {
+  const thresh = si ? 1e3 : 1024;
+  if (Math.abs(bytes) < thresh) {
+    return bytes + " B";
+  }
+  const units = si ? ["kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"] : ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+  let u4 = -1;
+  const r3 = 10 ** dp;
+  do {
+    bytes /= thresh;
+    ++u4;
+  } while (Math.round(Math.abs(bytes) * r3) / r3 >= thresh && u4 < units.length - 1);
+  return bytes.toFixed(dp) + " " + units[u4];
+};
 var FilePropertyCell = (props2) => {
   const { property } = props2;
   const [cache, setCache] = p2(null);
   const initialValue = props2.initialValue;
-  if (property == "folder") {
+  if (property == "folder" || property == "File.folder") {
     return /* @__PURE__ */ bn.createElement("div", {
       className: "mk-cell-fileprop",
       onClick: () => {
@@ -32353,19 +33053,19 @@ var FilePropertyCell = (props2) => {
       }
     }, folderPathToString(initialValue));
   }
-  if (property == "extension") {
+  if (property == "extension" || property == "File.extension") {
     return /* @__PURE__ */ bn.createElement("div", {
       className: "mk-cell-fileprop"
     }, initialValue);
-  } else if (property == "ctime" || property == "mtime") {
+  } else if (property == "ctime" || property == "mtime" || property == "File.mtime" || property == "File.ctime") {
     const date = new Date(parseInt(initialValue)).getTime() ? new Date(parseInt(initialValue)) : null;
     return /* @__PURE__ */ bn.createElement("div", {
       className: "mk-cell-fileprop"
     }, date && formatDistance3(new Date(date), new Date(), { addSuffix: true }));
-  } else if (property == "size") {
+  } else if (property == "size" || property == "File.size") {
     return /* @__PURE__ */ bn.createElement("div", {
       className: "mk-cell-fileprop"
-    }, initialValue);
+    }, humanFileSize(parseInt(initialValue)));
   }
   return /* @__PURE__ */ bn.createElement("div", {
     className: "mk-cell-fileprop"
@@ -32460,22 +33160,244 @@ var TextCell = (props2) => {
   }, value);
 };
 
+// src/components/ui/menus/newPropertyMenu.tsx
+var import_obsidian16 = require("obsidian");
+var NewPropertyMenuComponent = (props2) => {
+  const [fieldName, setFieldName] = p2("");
+  const [fieldSource, setFieldSource] = p2(props2.fileMetadata ? "fm" : props2.folder ? "" : props2.tags[0]);
+  const [fieldValue, setFieldValue] = p2("");
+  const [fieldType, setFieldType] = p2("text");
+  const [context, setContext] = p2(null);
+  const options = F(() => {
+    let options2 = [];
+    if (props2.fileMetadata) {
+      options2.push({ name: "File Metadata", value: "fm", description: "This note only" });
+    }
+    if (props2.folder) {
+      options2.push({ name: props2.folder, value: "", description: `All notes in ${props2.folder}` });
+    }
+    options2.push(...props2.tags.map((f4) => ({
+      name: f4,
+      value: f4,
+      description: `All notes tagged ${f4}`
+    })));
+    return options2;
+  }, []);
+  const fields = F(() => {
+    return [];
+  }, [context]);
+  const selectedType = (_7, value) => {
+    setFieldType(value[0]);
+  };
+  const selectedValue = (_7, value) => {
+    setFieldValue(value[0]);
+  };
+  const selectedSource = (_7, value) => {
+    setFieldSource(value[0]);
+  };
+  const toggleMulti = () => {
+    const field = fieldTypes.find((f4) => f4.type == fieldType || f4.multiType == fieldType);
+    setFieldType(field.type == fieldType ? field.multiType : field.type);
+  };
+  const selectType = (e4) => {
+    showSelectMenu(
+      e4.target.getBoundingClientRect(),
+      {
+        multi: false,
+        editable: false,
+        searchable: false,
+        saveOptions: selectedType,
+        value: [],
+        showAll: true,
+        options: fieldTypes.filter((f4) => fieldSource == "fm" ? f4.metadata : !f4.restricted).map((f4, i4) => ({
+          id: i4 + 1,
+          name: f4.label,
+          value: f4.type,
+          icon: ""
+        }))
+      }
+    );
+  };
+  const selectedContext = (_7, value) => {
+    setFieldValue(value[0]);
+  };
+  const selectContext = (e4) => {
+    showSelectMenu(
+      e4.target.getBoundingClientRect(),
+      {
+        multi: false,
+        editable: true,
+        searchable: true,
+        saveOptions: selectedContext,
+        placeholder: i18n_default.labels.propertyContext,
+        value: [fieldValue != null ? fieldValue : ""],
+        options: loadTags(props2.plugin).map((m5) => ({ name: m5, value: m5 }))
+      }
+    );
+  };
+  const selectFileProp = (e4) => {
+    const properties2 = fields.filter((f4) => f4.type == "file" || f4.type == "context").reduce((p3, c4) => {
+      var _a2, _b2;
+      return [...p3, ...c4.type == "file" ? filePropTypes.map((f4) => ({
+        name: c4.name + "." + f4.name,
+        value: c4.name + "." + f4.value
+      })) : (_b2 = (_a2 = context[c4.value]) == null ? void 0 : _a2.cols.filter((f4) => f4.hidden != "true").map((f4) => ({
+        name: c4.name + "." + f4.name,
+        value: c4.name + "." + f4.name
+      }))) != null ? _b2 : []];
+    }, []);
+    showSelectMenu(
+      e4.target.getBoundingClientRect(),
+      {
+        multi: false,
+        editable: false,
+        searchable: false,
+        saveOptions: selectedValue,
+        value: [],
+        options: properties2,
+        showAll: true
+      }
+    );
+  };
+  const type = F(() => {
+    var _a2;
+    return (_a2 = fieldTypes.find(
+      (f4) => f4.type == fieldType || f4.multiType == fieldType
+    )) != null ? _a2 : fieldTypes[0];
+  }, [fieldType]);
+  const selectSource = (e4) => {
+    showSelectMenu(
+      e4.target.getBoundingClientRect(),
+      {
+        multi: false,
+        editable: false,
+        searchable: false,
+        saveOptions: selectedSource,
+        value: [],
+        showAll: true,
+        options
+      }
+    );
+  };
+  const saveField = () => {
+    if (fieldName.length == 0) {
+      new import_obsidian16.Notice(i18n_default.notice.noPropertyName);
+      return;
+    }
+    props2.saveField(
+      fieldSource,
+      {
+        name: fieldName,
+        type: fieldType,
+        value: fieldValue,
+        schemaId: "files"
+      }
+    );
+    props2.hide();
+  };
+  const onKeyDown = (e4) => {
+    if (e4.key == "Enter") {
+      saveField();
+    }
+  };
+  h2(() => {
+    setTimeout(() => {
+      input.current.focus();
+    }, 50);
+  }, []);
+  const input = _2(null);
+  return /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item"
+  }, /* @__PURE__ */ bn.createElement("span", null, "Name"), /* @__PURE__ */ bn.createElement("input", {
+    type: "text",
+    ref: input,
+    onKeyDown,
+    onChange: (e4) => setFieldName(e4.target.value),
+    onMouseDown: (e4) => e4.stopPropagation(),
+    value: fieldName
+  })), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-separator"
+  }), options.length > 1 && /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => selectSource(e4)
+  }, /* @__PURE__ */ bn.createElement("span", null, "Context"), /* @__PURE__ */ bn.createElement("span", null, fieldSource == "fm" ? "File Metadata" : fieldSource == "" ? props2.folder : fieldSource)), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => selectType(e4)
+  }, /* @__PURE__ */ bn.createElement("span", null, "Type"), /* @__PURE__ */ bn.createElement("span", null, type.label)), type.multi ? /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item"
+  }, /* @__PURE__ */ bn.createElement("span", null, i18n_default.labels.multiple), /* @__PURE__ */ bn.createElement("input", {
+    type: "checkbox",
+    checked: fieldType == type.multiType,
+    onChange: () => toggleMulti()
+  })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-separator"
+  }), fieldType.startsWith("context") ? /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => selectContext(e4)
+  }, /* @__PURE__ */ bn.createElement("span", null, i18n_default.labels.propertyContext), /* @__PURE__ */ bn.createElement("span", null, fieldValue)) : fieldType == "fileprop" ? /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => selectFileProp(e4)
+  }, /* @__PURE__ */ bn.createElement("span", null, i18n_default.labels.propertyFileProp), /* @__PURE__ */ bn.createElement("span", null, fieldValue)) : /* @__PURE__ */ bn.createElement(bn.Fragment, null), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-separator"
+  }), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => saveField()
+  }, /* @__PURE__ */ bn.createElement("span", null, "Save Property")), /* @__PURE__ */ bn.createElement("div", {
+    className: "menu-item",
+    onClick: (e4) => props2.hide()
+  }, /* @__PURE__ */ bn.createElement("span", null, "Cancel")));
+};
+var showNewPropertyMenu = (plugin, position, tags, saveField, folder, fileMetadata) => {
+  const menu = new import_obsidian16.Menu();
+  menu.setUseNativeMenu(false);
+  const frag = document.createDocumentFragment();
+  const div = frag.createDiv();
+  div.addEventListener("click", (e4) => {
+    e4.stopImmediatePropagation();
+  });
+  div.addEventListener("keydown", (e4) => {
+  });
+  const root = createRoot(div);
+  root.render(
+    /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement(NewPropertyMenuComponent, {
+      plugin,
+      tags,
+      folder,
+      hide: () => menu.hide(),
+      saveField,
+      fileMetadata
+    }))
+  );
+  menu.addItem((menuItem) => {
+    menuItem.setTitle(frag);
+    menuItem.dom.toggleClass("mk-properties", true);
+  });
+  const keys = [...menu.scope.keys];
+  for (let i4 = 0; i4 < keys.length; i4++) {
+    if (keys[i4].key != "Escape") {
+      menu.scope.unregister(keys[i4]);
+    }
+  }
+  menu.showAtPosition(position);
+  return menu;
+};
+
 // src/components/ui/menus/propertyMenu.tsx
-var import_obsidian15 = require("obsidian");
+var import_obsidian17 = require("obsidian");
 var PropertyMenuComponent = (props2) => {
   var _a2;
   const [field, setField] = p2(props2.field);
-  const selectedType = (_5, value) => {
+  const selectedType = (_7, value) => {
     const newField = { ...field, type: value[0], value: getNewValueForType(field, value) };
     setField(newField);
     props2.saveField(newField);
   };
-  const selectedValue = (_5, value) => {
+  const selectedValue = (_7, value) => {
     const newField = { ...field, value: value[0] };
     setField(newField);
     props2.saveField(newField);
   };
-  const selectedContext = (_5, value) => {
+  const selectedContext = (_7, value) => {
     const newField = { ...field, value: value[0] };
     setField(newField);
     props2.saveContext(newField, value);
@@ -32546,7 +33468,7 @@ var PropertyMenuComponent = (props2) => {
       e4.target.getBoundingClientRect(),
       {
         multi: false,
-        editable: true,
+        editable: false,
         searchable: false,
         saveOptions: selectedValue,
         value: [],
@@ -32573,7 +33495,7 @@ var PropertyMenuComponent = (props2) => {
   })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null));
 };
 var showPropertyMenu = (plugin, position, editable, options, field, fields, contextTables, saveField, saveContext, hide, deleteColumn, sortColumn, hidden) => {
-  const menu = new import_obsidian15.Menu();
+  const menu = new import_obsidian17.Menu();
   menu.setUseNativeMenu(false);
   if (editable) {
     menu.addItem((menuItem) => {
@@ -32670,7 +33592,7 @@ function useCombinedRefs2(...refs) {
 }
 
 // src/components/ContextView/TableView/ColumnHeader.tsx
-var import_obsidian16 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 var filePropTypes = [
   {
     name: i18n_default.properties.fileProperty.createdTime,
@@ -32691,12 +33613,20 @@ var filePropTypes = [
   {
     name: i18n_default.properties.fileProperty.parentFolder,
     value: "folder"
+  },
+  {
+    name: "Links",
+    value: "links"
+  },
+  {
+    name: "Tags",
+    value: "tags"
   }
 ];
 var ColumnHeader = (props2) => {
   const [field, setField] = p2(props2.column);
   const menuRef = _2(null);
-  const { loadContextFields, predicate, tableData, contextTable, cols, newColumn, saveColumn, hideColumn, sortColumn, delColumn } = q2(MDBContext);
+  const { loadContextFields, dbPath, folderPath, predicate, tableData, tagContexts, contextTable, cols, newColumn, saveColumn, hideColumn, sortColumn, delColumn, isFolderContext } = q2(MDBContext);
   h2(() => {
     setField(props2.column);
   }, [props2.column]);
@@ -32726,7 +33656,8 @@ var ColumnHeader = (props2) => {
     }
   };
   const saveContext = (field2, value) => {
-    const newContext = tagFromString(value[0]);
+    const newContext = value[0];
+    connectContext(props2.plugin, value[0], dbPath);
     initiateContextIfNotExists(props2.plugin, newContext).then((f4) => {
       if (f4) {
         return insertContextItems(
@@ -32748,7 +33679,9 @@ var ColumnHeader = (props2) => {
   };
   const showNewMenu = (e4) => {
     const offset = ref.current.getBoundingClientRect();
-    const files = tableData.rows.map((f4) => getAbstractFileAtPath(app, f4.File)).filter((f4) => f4 instanceof import_obsidian16.TFile);
+    showNewPropertyMenu(props2.plugin, { x: offset.left, y: offset.top + 30 }, isFolderContext ? tagContexts : [folderPath], (source, field2) => newColumn({ ...field2, table: source }), isFolderContext ? folderPathToString(folderPath) : null, false);
+    return;
+    const files = tableData.rows.map((f4) => getAbstractFileAtPath(app, f4.File)).filter((f4) => f4 instanceof import_obsidian18.TFile);
     const types = guestimateTypes(
       files.map((f4) => f4.path),
       props2.plugin,
@@ -32771,7 +33704,7 @@ var ColumnHeader = (props2) => {
         value: "type." + f4.type + "." + f4.label
       }))
     ];
-    const saveOptions = (_5, values) => {
+    const saveOptions = (_7, values) => {
       const newValue = values[0];
       const newType = newValue.split(".");
       if (newType[0] == "fm") {
@@ -32841,49 +33774,95 @@ var ColumnHeader = (props2) => {
 };
 
 // src/components/ContextView/TableView/TableView.tsx
-var import_lodash4 = __toESM(require_lodash());
-var import_obsidian17 = require("obsidian");
+var import_lodash6 = __toESM(require_lodash());
+var import_obsidian20 = require("obsidian");
+
+// src/components/ui/modals/imageModal.tsx
+var import_obsidian19 = require("obsidian");
+var imageModal = class extends import_obsidian19.FuzzySuggestModal {
+  constructor(plugin, app2, selectImage) {
+    super(app2);
+    this.plugin = plugin;
+    this.selectImage = selectImage;
+    this.resultContainerEl.toggleClass("mk-image-modal", true);
+    this.inputEl.focus();
+    this.inputEl.placeholder = "Select an image or paste a URL";
+    this.emptyStateText = "No Images Found";
+    this.limit = 0;
+  }
+  renderSuggestion(item, el) {
+    var oImg = el.createEl("img");
+    const file = getAbstractFileAtPath(app, item.item);
+    oImg.setAttribute("src", file ? app.vault.getResourcePath(file) : item.item);
+    oImg.setAttribute("height", "100px");
+    oImg.setAttribute("width", "100px");
+    el.appendChild(oImg);
+  }
+  getItemText(item) {
+    return item;
+  }
+  getSuggestions(query) {
+    let allImages = [];
+    if (query.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi))
+      allImages.push(query);
+    allImages.push(...getAllAbstractFilesInVault(this.plugin, app).filter((f4) => f4 instanceof import_obsidian19.TFile && ["png", "jpg", "jpeg"].contains(f4.extension)).map((f4) => f4.path));
+    return allImages.filter((f4) => f4.contains(query)).map((f4, i4) => ({ item: f4, match: {
+      score: i4,
+      matches: []
+    } }));
+  }
+  getItems() {
+    let allImages = [];
+    allImages.push(...getAllAbstractFilesInVault(this.plugin, app).filter((f4) => f4 instanceof import_obsidian19.TFile && ["png", "jpg", "jpeg"].contains(f4.extension)).map((f4) => f4.path));
+    return allImages;
+  }
+  onChooseItem(item, evt) {
+    this.selectImage(item);
+  }
+};
 
 // src/components/ContextView/DataTypeView/ImageCell.tsx
 var ImageCell = (props2) => {
   const { initialValue, saveValue } = props2;
   const [value, setValue] = bn.useState(initialValue);
-  const ref = _2(null);
+  const menuRef = _2(null);
   h2(() => {
     if (props2.editMode == 2 /* EditModeActive */) {
-      ref.current.focus();
+      if (!menuRef.current)
+        showModal();
     }
   }, []);
-  const file = F(() => getAbstractFileAtPath(app, value), [value]);
-  const onBlur = (e4) => {
-    const newValue = e4.target.value;
-    if (initialValue != newValue) {
-      setValue(newValue);
-      saveValue(newValue);
-    }
-  };
-  const onKeyDown = (e4) => {
-    e4.stopPropagation();
-    if (e4.key == "Enter" || e4.key == "Escape") {
-      e4.target.blur();
-      props2.setEditMode(null);
-    }
-  };
+  const file = F(() => {
+    const f4 = getAbstractFileAtPath(app, value);
+    return f4 ? app.vault.getResourcePath(f4) : value;
+  }, [value]);
   bn.useEffect(() => {
     setValue(initialValue);
   }, [initialValue]);
+  const showModal = () => {
+    let vaultChangeModal = new imageModal(
+      props2.plugin,
+      props2.plugin.app,
+      (image) => saveValue(image)
+    );
+    vaultChangeModal.open();
+    props2.setEditMode(null);
+  };
   return /* @__PURE__ */ bn.createElement("div", {
     className: "mk-cell-image"
-  }, props2.editMode >= 2 && /* @__PURE__ */ bn.createElement("input", {
-    className: "mk-cell-text",
-    type: "text",
-    ref,
-    value,
-    onKeyDown,
-    onBlur
-  }), props2.editMode > 0 && /* @__PURE__ */ bn.createElement("img", {
-    src: file ? app.vault.getResourcePath(file) : value
-  }));
+  }, /* @__PURE__ */ bn.createElement("img", {
+    src: file
+  }), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-image-selector"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    onClick: showModal,
+    className: "mk-hover-button mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-edit"] }
+  }), (value == null ? void 0 : value.length) > 0 && /* @__PURE__ */ bn.createElement("div", {
+    onClick: () => saveValue(""),
+    className: "mk-hover-button mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-close"] }
+  })));
 };
 
 // src/utils/strings.ts
@@ -32923,14 +33902,14 @@ var LinkCell = (props2) => {
     setValue(newValues);
     props2.saveValue(newValues.map((f4) => f4.value).join(","));
   };
-  const saveOptions = (_5, _value) => {
+  const saveOptions = (_7, _value) => {
     if (!props2.multi) {
       setValue(resolveLinks(stringValueToLink(_value)));
-      props2.saveValue(_value.map((f4) => `[[${f4}]]`).join(","));
+      props2.saveValue(_value.join(","));
     } else {
       const newValue = _value[0];
       if (newValue) {
-        const newValues = uniq([...value.map((f4) => f4.value), `[[${newValue}]]`]);
+        const newValues = uniq([...value.map((f4) => f4.value), newValue]);
         setValue(resolveLinks(stringValueToLink(newValues)));
         props2.saveValue(newValues.join(","));
       }
@@ -32938,7 +33917,7 @@ var LinkCell = (props2) => {
   };
   const menuProps = () => {
     const options = getAllAbstractFilesInVault(props2.plugin, app).map((f4) => ({
-      name: fileNameToString(f4.name),
+      name: fileNameToString3(f4.name),
       value: f4.path
     }));
     const _options = !props2.multi ? [{ name: i18n_default.menu.none, value: "" }, ...options] : options;
@@ -33007,7 +33986,7 @@ var TagCell = (props2) => {
   const menuProps = () => {
     const options = loadTags(props2.plugin).map((f4) => ({
       name: f4,
-      value: stringFromTag(f4)
+      value: f4
     }));
     const _options = !props2.multi ? [{ name: i18n_default.menu.none, value: "" }, ...options] : options;
     return {
@@ -33051,7 +34030,7 @@ var TableView = (props2) => {
     saveDB: saveDB2,
     saveContextDB,
     updateFieldValue,
-    updateValue,
+    updateValue: updateValue2,
     saveColumn,
     delColumn,
     newColumn,
@@ -33083,7 +34062,7 @@ var TableView = (props2) => {
     debouncedSavePredicate(newColSize);
   };
   const debouncedSavePredicate = T2(
-    (0, import_lodash4.debounce)(
+    (0, import_lodash6.debounce)(
       (nextValue) => savePredicate({
         ...predicate,
         colsSize: nextValue
@@ -33148,7 +34127,7 @@ var TableView = (props2) => {
     const setCellValue = (value) => {
       var _a2;
       const columnTuple = selectedColumn.split("#");
-      updateValue(columnTuple[0], value, (_a2 = columnTuple[1]) != null ? _a2 : "", parseInt(lastSelectedIndex), "");
+      updateValue2(columnTuple[0], value, (_a2 = columnTuple[1]) != null ? _a2 : "", parseInt(lastSelectedIndex), "");
     };
     const clearCell = () => {
       setCellValue("");
@@ -33245,8 +34224,10 @@ var TableView = (props2) => {
             }) => {
               const initialValue = getValue();
               const rowIndex = parseInt(data[index]["_index" + f4.table]);
+              const tableIndex = parseInt(data[index]["_index"]);
               const saveValue = (value) => {
                 var _a3;
+                setCurrentEdit(null);
                 if (initialValue != value)
                   (_a3 = table2.options.meta) == null ? void 0 : _a3.updateData(
                     f4.name,
@@ -33265,7 +34246,7 @@ var TableView = (props2) => {
                   rowIndex
                 );
               };
-              const editMode = !cell.getIsGrouped() ? platformIsMobile() ? 3 /* EditModeAlways */ : currentEdit && currentEdit[0] == f4.name + f4.table && currentEdit[1] == rowIndex.toString() ? 2 /* EditModeActive */ : 1 /* EditModeView */ : -1 /* EditModeReadOnly */;
+              const editMode = !cell.getIsGrouped() ? platformIsMobile() ? 3 /* EditModeAlways */ : currentEdit && currentEdit[0] == f4.name + f4.table && currentEdit[1] == tableIndex.toString() ? 2 /* EditModeActive */ : 1 /* EditModeView */ : -1 /* EditModeReadOnly */;
               const cellProps = {
                 initialValue,
                 saveValue,
@@ -33381,7 +34362,7 @@ var TableView = (props2) => {
     getExpandedRowModel: getExpandedRowModel(),
     getGroupedRowModel: getGroupedRowModel(),
     meta: {
-      updateData: updateValue,
+      updateData: updateValue2,
       updateFieldValue
     }
   });
@@ -33439,7 +34420,7 @@ var TableView = (props2) => {
   };
   const showContextMenu = (e4, index) => {
     e4.preventDefault();
-    const menu = new import_obsidian17.Menu();
+    const menu = new import_obsidian20.Menu();
     menu.addItem((item) => {
       item.setIcon("trash");
       item.setTitle(i18n_default.menu.deleteRow);
@@ -33805,7 +34786,7 @@ var CardView = bn.memo(
           onSelect(3, value["_index"]);
         }
       };
-      const { updateValue, updateFieldValue, contextTable } = q2(MDBContext);
+      const { updateValue: updateValue2, updateFieldValue, contextTable } = q2(MDBContext);
       h2(() => {
         if (!dragOverlay) {
           return;
@@ -33857,7 +34838,7 @@ var CardView = bn.memo(
         index: parseInt(id2),
         file: value["File"],
         editable: false,
-        updateValue: (v3) => updateValue(f4.name, v3, f4.table, parseInt(id2), value["File"]),
+        updateValue: (v3) => updateValue2(f4.name, v3, f4.table, parseInt(id2), value["File"]),
         updateFieldValue: (v3, fv) => updateFieldValue(f4.name, fv, v3, f4.table, parseInt(id2), value["File"]),
         contextTable
       })), /* @__PURE__ */ bn.createElement("div", {
@@ -33878,7 +34859,7 @@ var CardView = bn.memo(
         tabIndex: !handle ? 0 : void 0
       }, value && cols.map((f4) => {
         var _a2;
-        return ((_a2 = value[f4.name + f4.table]) == null ? void 0 : _a2.length) > 0 || f4.type == "fileprop" ? /* @__PURE__ */ bn.createElement(DataTypeView, {
+        return ((_a2 = value[f4.name + f4.table]) == null ? void 0 : _a2.length) > 0 ? /* @__PURE__ */ bn.createElement(DataTypeView, {
           openFlow: () => setOpenFlow((o3) => !o3),
           plugin,
           initialValue: value[f4.name + f4.table],
@@ -33886,7 +34867,7 @@ var CardView = bn.memo(
           index: parseInt(id2),
           file: value["File"],
           editable: false,
-          updateValue: (v3) => updateValue(f4.name, v3, f4.table, parseInt(id2), value["File"]),
+          updateValue: (v3) => updateValue2(f4.name, v3, f4.table, parseInt(id2), value["File"]),
           updateFieldValue: (v3, fv) => updateFieldValue(f4.name, fv, v3, f4.table, parseInt(id2), value["File"]),
           contextTable
         }) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
@@ -33923,7 +34904,7 @@ var CardColumnView = k3(
     ...props2
   }, ref) => {
     const Component2 = "div";
-    const { updateValue, updateFieldValue, contextTable } = q2(MDBContext);
+    const { updateValue: updateValue2, updateFieldValue, contextTable } = q2(MDBContext);
     return /* @__PURE__ */ bn.createElement(Component2, {
       ...props2,
       ref,
@@ -33951,7 +34932,7 @@ var CardColumnView = k3(
       file,
       column: field,
       editable: false,
-      updateValue: (value) => updateValue(field.name, value, field.table, parseInt(id2) * -1, file),
+      updateValue: (value) => updateValue2(field.name, value, field.table, parseInt(id2) * -1, file),
       updateFieldValue: (value, fieldValue) => updateFieldValue(field.name, fieldValue, value, field.table, parseInt(id2) * -1, file),
       contextTable
     }), /* @__PURE__ */ bn.createElement("div", {
@@ -34035,7 +35016,7 @@ var CardsView = ({
     selectRows,
     sortedColumns: cols,
     predicate,
-    updateValue,
+    updateValue: updateValue2,
     contextTable,
     schema,
     saveDB: saveDB2,
@@ -34235,7 +35216,7 @@ var CardsView = ({
         const activeIndex = items[Object.keys(items)[parseInt(activeContainer) * -1]].indexOf(active.id);
         const overIndex = items[Object.keys(items)[parseInt(overContainer) * -1]].indexOf(overId2);
         if (activeContainer != overContainer) {
-          updateValue(groupBy2.name, Object.keys(items)[parseInt(overContainer) * -1], groupBy2.table, groupBy2.table == "" ? parseInt(activeId) : parseInt(
+          updateValue2(groupBy2.name, Object.keys(items)[parseInt(overContainer) * -1], groupBy2.table, groupBy2.table == "" ? parseInt(activeId) : parseInt(
             filteredData.find((f4) => f4._index == activeId)["_index" + groupBy2.table]
           ), "");
         }
@@ -34445,17 +35426,17 @@ function useMountStatus() {
 }
 
 // src/components/ContextView/FlowListView/FlowListView.tsx
-var import_obsidian18 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 var FlowListView = (props2) => {
   const {
     filteredData: data
   } = q2(MDBContext);
   const flowItems = F(() => {
-    return data.map((f4) => getAbstractFileAtPath(app, f4.File)).filter((f4) => f4 instanceof import_obsidian18.TFile && f4.extension == "md");
+    return data.map((f4) => getAbstractFileAtPath(app, f4.File)).filter((f4) => f4 instanceof import_obsidian21.TFile && f4.extension == "md");
   }, [data]);
   return /* @__PURE__ */ bn.createElement("div", {
     className: "mk-flow-container"
-  }, flowItems.map((f4) => /* @__PURE__ */ bn.createElement("div", null, /* @__PURE__ */ bn.createElement("span", null, fileNameToString(f4.name)), /* @__PURE__ */ bn.createElement(FlowView, {
+  }, flowItems.map((f4) => /* @__PURE__ */ bn.createElement("div", null, /* @__PURE__ */ bn.createElement("span", null, fileNameToString3(f4.name)), /* @__PURE__ */ bn.createElement(FlowView, {
     plugin: props2.plugin,
     path: f4.path,
     load: true
@@ -34496,7 +35477,7 @@ var InlineContextViewComponent = (props2) => {
 
 // src/components/ContextView/InlineContextView.tsx
 var INLINE_CONTEXT_VIEW_TYPE = "make-inline-context";
-var InlineContextView = class extends import_obsidian19.ItemView {
+var InlineContextView = class extends import_obsidian22.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.navigation = true;
@@ -34553,27 +35534,27 @@ var InlineContextView = class extends import_obsidian19.ItemView {
 };
 
 // src/components/FlowEditor/FlowEditor.tsx
-var import_obsidian20 = require("obsidian");
+var import_obsidian23 = require("obsidian");
 var popovers = /* @__PURE__ */ new WeakMap();
 var mouseCoords = { x: 0, y: 0 };
 function nosuper(base) {
   const derived = function() {
-    return Object.setPrototypeOf(new import_obsidian20.Component(), new.target.prototype);
+    return Object.setPrototypeOf(new import_obsidian23.Component(), new.target.prototype);
   };
   derived.prototype = base.prototype;
   return Object.setPrototypeOf(derived, base);
 }
 var _a, _b, _c, _d, _e;
-var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
+var FlowEditor = class extends nosuper(import_obsidian23.HoverPopover) {
   constructor(parent, targetEl, plugin, waitTime, onShowCallback) {
     super();
     this.targetEl = targetEl;
     this.plugin = plugin;
     this.onShowCallback = onShowCallback;
-    this.abortController = this.addChild(new import_obsidian20.Component());
+    this.abortController = this.addChild(new import_obsidian23.Component());
     this.detaching = false;
     this.opening = false;
-    this.rootSplit = new import_obsidian20.WorkspaceSplit(
+    this.rootSplit = new import_obsidian23.WorkspaceSplit(
       window.app.workspace,
       "vertical"
     );
@@ -34591,7 +35572,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
     this.onTarget = true;
     this.parent = parent;
     this.waitTime = waitTime;
-    this.state = import_obsidian20.PopoverState.Showing;
+    this.state = import_obsidian23.PopoverState.Showing;
     const { hoverEl } = this;
     this.abortController.load();
     this.timer = window.setTimeout(this.show.bind(this), waitTime);
@@ -34684,7 +35665,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
     this.registerEvent(
       app.workspace.on("layout-change", () => {
         this.rootSplit.children.forEach((item, index) => {
-          if (item instanceof import_obsidian20.WorkspaceTabs) {
+          if (item instanceof import_obsidian23.WorkspaceTabs) {
             this.rootSplit.replaceChild(index, item.children[0]);
           }
         });
@@ -34726,16 +35707,16 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
   }
   transition() {
     if (this.shouldShow()) {
-      if (this.state === import_obsidian20.PopoverState.Hiding) {
-        this.state = import_obsidian20.PopoverState.Shown;
+      if (this.state === import_obsidian23.PopoverState.Hiding) {
+        this.state = import_obsidian23.PopoverState.Shown;
         clearTimeout(this.timer);
       }
     } else {
-      if (this.state === import_obsidian20.PopoverState.Showing) {
+      if (this.state === import_obsidian23.PopoverState.Showing) {
         this.hide();
       } else {
-        if (this.state === import_obsidian20.PopoverState.Shown) {
-          this.state = import_obsidian20.PopoverState.Hiding;
+        if (this.state === import_obsidian23.PopoverState.Shown) {
+          this.state = import_obsidian23.PopoverState.Hiding;
           this.timer = window.setTimeout(() => {
             if (this.shouldShow()) {
               this.transition();
@@ -34759,13 +35740,13 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
     });
   }
   shouldShowSelf() {
-    return !this.detaching && !!(this.onTarget || this.state == import_obsidian20.PopoverState.Shown || this.document.querySelector(
+    return !this.detaching && !!(this.onTarget || this.state == import_obsidian23.PopoverState.Shown || this.document.querySelector(
       `body>.modal-container, body > #he${this.id} ~ .menu, body > #he${this.id} ~ .suggestion-container`
     ));
   }
   show() {
     if (!this.targetEl || this.document.body.contains(this.targetEl)) {
-      this.state = import_obsidian20.PopoverState.Shown;
+      this.state = import_obsidian23.PopoverState.Shown;
       this.timer = 0;
       this.shownPos = mouseCoords;
       this.targetEl.replaceChildren(this.hoverEl);
@@ -34807,7 +35788,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
   nativeHide() {
     var _a2;
     const { hoverEl, targetEl } = this;
-    this.state = import_obsidian20.PopoverState.Hidden;
+    this.state = import_obsidian23.PopoverState.Hidden;
     hoverEl.detach();
     if (targetEl) {
       const parent = targetEl.matchParent(".mk-hover-popover");
@@ -34818,7 +35799,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
     this.unload();
   }
   resolveLink(linkText, sourcePath) {
-    const link = (0, import_obsidian20.parseLinktext)(linkText);
+    const link = (0, import_obsidian23.parseLinktext)(linkText);
     const tFile = link ? this.plugin.app.metadataCache.getFirstLinkpathDest(
       link.path,
       sourcePath != null ? sourcePath : ""
@@ -34851,7 +35832,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
   }
   buildEphemeralState(file, link) {
     const cache = this.plugin.app.metadataCache.getFileCache(file);
-    const subpath = cache ? (0, import_obsidian20.resolveSubpath)(cache, (link == null ? void 0 : link.subpath) || "") : void 0;
+    const subpath = cache ? (0, import_obsidian23.resolveSubpath)(cache, (link == null ? void 0 : link.subpath) || "") : void 0;
     const eState = { subpath: link == null ? void 0 : link.subpath };
     if (subpath) {
       eState.line = subpath.start.line;
@@ -34863,7 +35844,7 @@ var FlowEditor = class extends nosuper(import_obsidian20.HoverPopover) {
 };
 
 // src/utils/flow/flowEditor.ts
-var import_obsidian21 = require("obsidian");
+var import_obsidian24 = require("obsidian");
 var parseOutReferences = (ostr) => {
   const str = ostr.split("|")[0];
   const refIndex = str.lastIndexOf("#");
@@ -35009,7 +35990,7 @@ var loadFlowEditor = (cm, flowEditorInfo2, source, make) => {
         );
       }
     } else {
-      if (aFile instanceof import_obsidian21.TFolder) {
+      if (aFile instanceof import_obsidian24.TFolder) {
         if (!dom.hasAttribute("ready")) {
           dom.setAttribute("ready", "");
           createFlowEditorInElement(
@@ -35049,7 +36030,7 @@ var focusPortal = async (plugin, evt) => {
             cm.focus();
             if (top) {
               cm.dispatch({
-                selection: import_state4.EditorSelection.single(foundInfo.from - 4),
+                selection: import_state5.EditorSelection.single(foundInfo.from - 4),
                 annotations: arrowKeyAnnotation.of(1)
               });
             } else {
@@ -35062,12 +36043,12 @@ var focusPortal = async (plugin, evt) => {
                       insert: cm.state.lineBreak
                     }
                   ],
-                  selection: import_state4.EditorSelection.single(foundInfo.to + 3),
+                  selection: import_state5.EditorSelection.single(foundInfo.to + 3),
                   annotations: arrowKeyAnnotation.of(2)
                 });
               } else {
                 cm.dispatch({
-                  selection: import_state4.EditorSelection.single(foundInfo.to + 3),
+                  selection: import_state5.EditorSelection.single(foundInfo.to + 3),
                   annotations: arrowKeyAnnotation.of(2)
                 });
               }
@@ -35088,11 +36069,11 @@ var focusPortal = async (plugin, evt) => {
           const posRange = lineRange && lineRange[0] != void 0 ? lineRangeToPosRange(cm.state, lineRange) : { from: 0, to: cm.state.doc.length };
           if (top) {
             cm.dispatch({
-              selection: import_state4.EditorSelection.single(posRange.from)
+              selection: import_state5.EditorSelection.single(posRange.from)
             });
           } else {
             cm.dispatch({
-              selection: import_state4.EditorSelection.single(posRange.to)
+              selection: import_state5.EditorSelection.single(posRange.to)
             });
           }
         }
@@ -35125,7 +36106,9 @@ var spawnLeafFromFile = async (plugin, file, el, type, ref, from, to) => {
     newLeaf.view.setMode(newLeaf.view.editMode);
   if (from && to) {
     (_a2 = newLeaf.view.editor) == null ? void 0 : _a2.cm.dispatch({
-      annotations: [editableRange.of([from, to])]
+      annotations: [
+        editableRange.of([from, to])
+      ]
     });
   }
   return newLeaf;
@@ -35194,8 +36177,8 @@ var spawnPortal = (plugin, initiatingEl, fileName, onShowCallback) => {
 };
 
 // src/components/ui/modals/mergeColumnModal.ts
-var import_obsidian22 = require("obsidian");
-var MergeColumnModal = class extends import_obsidian22.Modal {
+var import_obsidian25 = require("obsidian");
+var MergeColumnModal = class extends import_obsidian25.Modal {
   constructor(columns, mergeColumn) {
     super(app);
     this.columns = columns;
@@ -35250,8 +36233,8 @@ var MergeColumnModal = class extends import_obsidian22.Modal {
 };
 
 // src/components/ui/modals/saveViewModal.ts
-var import_obsidian23 = require("obsidian");
-var SaveViewModal = class extends import_obsidian23.Modal {
+var import_obsidian26 = require("obsidian");
+var SaveViewModal = class extends import_obsidian26.Modal {
   constructor(schema, saveSchema, action) {
     super(app);
     this.schema = schema;
@@ -35318,7 +36301,7 @@ var SaveViewModal = class extends import_obsidian23.Modal {
 };
 
 // src/components/ContextView/FilterBar/FilterBar.tsx
-var import_obsidian26 = require("obsidian");
+var import_obsidian29 = require("obsidian");
 
 // src/components/ContextView/FilterBar/SearchBar.tsx
 var SearchBar = (props2) => {
@@ -35340,8 +36323,8 @@ var SearchBar = (props2) => {
 };
 
 // src/components/ui/modals/syncMetadataModal.tsx
-var import_obsidian24 = require("obsidian");
-var SyncMetadataModal = class extends import_obsidian24.Modal {
+var import_obsidian27 = require("obsidian");
+var SyncMetadataModal = class extends import_obsidian27.Modal {
   constructor(plugin, files, syncColumns) {
     super(plugin.app);
     this.plugin = plugin;
@@ -35404,8 +36387,8 @@ var SyncMetadataComponent = (props2) => {
       setSyncColumns((s5) => [...s5, column]);
     }
   };
-  const saveContexts = (_5, value) => {
-    setTable(tagFromString(value[0]));
+  const saveContexts = (_7, value) => {
+    setTable(value[0]);
   };
   const showContextMenu = (e4) => {
     const offset = e4.target.getBoundingClientRect();
@@ -35476,8 +36459,73 @@ var SyncMetadataComponent = (props2) => {
 };
 
 // src/components/ContextView/FilterBar/TagSelector.tsx
-var import_lodash5 = __toESM(require_lodash());
-var import_obsidian25 = require("obsidian");
+var import_lodash7 = __toESM(require_lodash());
+
+// src/components/ContextView/TagsView/TagsView.tsx
+var import_obsidian28 = require("obsidian");
+var TagsView = (props2) => {
+  const showTagMenu = (e4, tag) => {
+    const menu = new import_obsidian28.Menu();
+    menu.addItem((menuItem) => {
+      menuItem.setIcon("hash");
+      menuItem.setTitle(i18n_default.menu.openTag);
+      menuItem.onClick(() => {
+        openTag(tag, props2.plugin, e4.metaKey);
+      });
+    });
+    if (props2.removeTag)
+      menu.addItem((menuItem) => {
+        menuItem.setIcon("trash");
+        menuItem.setTitle(i18n_default.menu.removeTag);
+        menuItem.onClick(() => {
+          props2.removeTag(tag);
+        });
+      });
+    const offset = e4.target.getBoundingClientRect();
+    menu.showAtPosition({ x: offset.left, y: offset.top + 30 });
+  };
+  const showContextMenu = (e4) => {
+    const offset = e4.target.getBoundingClientRect();
+    const f4 = loadTags(props2.plugin);
+    showSelectMenu(
+      { x: offset.left, y: offset.top + 30 },
+      {
+        multi: false,
+        editable: true,
+        value: [],
+        options: f4.map((m5) => ({ name: m5, value: m5 })),
+        saveOptions: (_7, value) => props2.addTag(value[0]),
+        placeholder: i18n_default.labels.contextItemSelectPlaceholder,
+        searchable: true,
+        showAll: true
+      }
+    );
+  };
+  return /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-tag-selector"
+  }, props2.tags.map((f4, i4) => /* @__PURE__ */ bn.createElement("div", {
+    onContextMenu: (e4) => showTagMenu(e4, f4),
+    onClick: (e4) => openTag(f4, props2.plugin, e4.metaKey)
+  }, /* @__PURE__ */ bn.createElement("span", {
+    className: "cm-hashtag cm-hashtag-begin"
+  }, "#"), /* @__PURE__ */ bn.createElement("span", {
+    className: "cm-hashtag cm-hashtag-end"
+  }, stringFromTag(f4)))), props2.addTag && /* @__PURE__ */ bn.createElement("button", {
+    "aria-label": i18n_default.buttons.addTag,
+    onClick: (e4) => showContextMenu(e4)
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-plus"] }
+  })), props2.syncTags && /* @__PURE__ */ bn.createElement("button", {
+    "aria-label": i18n_default.buttons.syncFields,
+    onClick: (e4) => props2.syncTags()
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-sync"] }
+  })));
+};
+
+// src/components/ContextView/FilterBar/TagSelector.tsx
 var TagSelector = (props2) => {
   const {
     data,
@@ -35494,71 +36542,33 @@ var TagSelector = (props2) => {
     loadContextFields
   } = q2(MDBContext);
   const removeContext = (value) => {
-    const removeTags = value.map((f4) => tagFromString(f4));
-    const tags = tagContexts.filter((f4) => !removeTags.some((t4) => t4 == f4));
-    removeTags.forEach((t4) => {
-      removeSourceFromTag(props2.plugin, t4, dbPath);
-    });
+    const tags = tagContexts.filter((f4) => value != f4);
+    removeSourceFromTag(props2.plugin, value, dbPath);
     saveSchema({
       ...dbSchema,
       def: tags.join("&")
     });
   };
-  const saveContexts = async (_5, value) => {
-    const tags = (0, import_lodash5.uniq)([...tagContexts, ...value.map((f4) => tagFromString(f4))]);
-    tags.forEach((tag) => {
-      initiateContextIfNotExists(props2.plugin, tag).then((f4) => {
+  const addTag3 = async (tag) => {
+    const tags = (0, import_lodash7.uniq)([...tagContexts, tag]);
+    tags.forEach((tag2) => {
+      initiateContextIfNotExists(props2.plugin, tag2).then((f4) => {
         if (f4) {
           return consolidateRowsToTag(
             props2.plugin,
-            tagContextFromTag(props2.plugin, tag),
+            tagContextFromTag(props2.plugin, tag2),
             dbSchema.id,
             dbPath,
             tableData.rows
           );
         }
-      }).then((f4) => loadContextFields(tag));
+      }).then((f4) => loadContextFields(tag2));
     });
     saveSchema({
       ...dbSchema,
       def: tags.join("&")
     });
-  };
-  const showContextMenu = (e4) => {
-    const offset = e4.target.getBoundingClientRect();
-    const f4 = loadTags(props2.plugin);
-    showSelectMenu(
-      { x: offset.left, y: offset.top + 30 },
-      {
-        multi: false,
-        editable: true,
-        value: [],
-        options: f4.map((m5) => ({ name: m5, value: m5 })),
-        saveOptions: saveContexts,
-        placeholder: i18n_default.labels.contextItemSelectPlaceholder,
-        searchable: true,
-        showAll: true
-      }
-    );
-  };
-  const showTagMenu = (e4, tag) => {
-    const menu = new import_obsidian25.Menu();
-    menu.addItem((menuItem) => {
-      menuItem.setIcon("hash");
-      menuItem.setTitle(i18n_default.menu.openTag);
-      menuItem.onClick(() => {
-        openTag(tag, props2.plugin, e4.metaKey);
-      });
-    });
-    menu.addItem((menuItem) => {
-      menuItem.setIcon("trash");
-      menuItem.setTitle(i18n_default.menu.removeTag);
-      menuItem.onClick(() => {
-        removeContext([tag]);
-      });
-    });
-    const offset = e4.target.getBoundingClientRect();
-    menu.showAtPosition({ x: offset.left, y: offset.top + 30 });
+    connectContext(props2.plugin, tag, dbPath);
   };
   const saveMetadata = (keys, table) => {
     const files = data.map((f4) => f4.File);
@@ -35599,7 +36609,7 @@ var TagSelector = (props2) => {
           }
           return {
             uniques: [],
-            cols: (0, import_lodash5.uniq)([...p3.cols, ...fmKeys]),
+            cols: (0, import_lodash7.uniq)([...p3.cols, ...fmKeys]),
             rows: [
               ...p3.rows,
               {
@@ -35624,8 +36634,8 @@ var TagSelector = (props2) => {
       const dvTableData = importDV(files, keys.filter((f4) => f4.type == "dv").map((f4) => f4.name));
       const dvTypes = guestimateTypes(files, props2.plugin, true);
       yamlTableData = {
-        uniques: (0, import_lodash5.uniq)([...yamlTableData.uniques, ...dvTableData.uniques]),
-        cols: (0, import_lodash5.uniq)([...yamlTableData.cols, ...dvTableData.cols]),
+        uniques: (0, import_lodash7.uniq)([...yamlTableData.uniques, ...dvTableData.uniques]),
+        cols: (0, import_lodash7.uniq)([...yamlTableData.cols, ...dvTableData.cols]),
         rows: files.map((file) => {
           var _a2, _b2;
           return { ...(_a2 = yamlTableData.rows.find((r3) => r3.File == file)) != null ? _a2 : {}, ...(_b2 = dvTableData.rows.find((r3) => r3.File == file)) != null ? _b2 : {} };
@@ -35656,7 +36666,7 @@ var TagSelector = (props2) => {
       saveContextDB(newTable, table);
       saveSchema({
         ...dbSchema,
-        def: (0, import_lodash5.uniq)([...tagContexts, table]).join("&")
+        def: (0, import_lodash7.uniq)([...tagContexts, table]).join("&")
       });
     } else {
       consolidateRowsToTag(
@@ -35673,7 +36683,7 @@ var TagSelector = (props2) => {
       }).then(() => {
         saveSchema({
           ...dbSchema,
-          def: (0, import_lodash5.uniq)([...tagContexts, table]).join("&")
+          def: (0, import_lodash7.uniq)([...tagContexts, table]).join("&")
         });
       });
     }
@@ -35686,24 +36696,13 @@ var TagSelector = (props2) => {
     );
     vaultChangeModal.open();
   };
-  return /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-tag-selector"
-  }, tagContexts.map((f4) => /* @__PURE__ */ bn.createElement("button", {
-    onContextMenu: (e4) => showTagMenu(e4, f4),
-    onClick: (e4) => openTag(f4, props2.plugin, e4.metaKey)
-  }, f4)), /* @__PURE__ */ bn.createElement("button", {
-    "aria-label": i18n_default.buttons.addTag,
-    onClick: (e4) => showContextMenu(e4)
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-icon-xsmall",
-    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-plus"] }
-  }), !dbFileExists ? i18n_default.buttons.tag : ""), /* @__PURE__ */ bn.createElement("button", {
-    "aria-label": i18n_default.buttons.syncFields,
-    onClick: (e4) => syncMetadata()
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-icon-xsmall",
-    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-sync"] }
-  }), !dbFileExists ? i18n_default.buttons.syncFields : ""));
+  return /* @__PURE__ */ bn.createElement(TagsView, {
+    plugin: props2.plugin,
+    tags: tagContexts,
+    addTag: addTag3,
+    removeTag: removeContext,
+    syncTags: syncMetadata
+  });
 };
 
 // src/components/ContextView/FilterBar/FilterBar.tsx
@@ -35724,6 +36723,7 @@ var FilterBar = (props2) => {
     setSchema,
     setSearchString,
     predicate,
+    folderPath,
     tagContexts,
     savePredicate,
     schema,
@@ -35763,7 +36763,7 @@ var FilterBar = (props2) => {
         editable: false,
         value: tagContexts,
         options: views.map((m5) => ({ name: m5.name, value: m5.id })),
-        saveOptions: (_5, value) => selectView(_dbschema, value[0]),
+        saveOptions: (_7, value) => selectView(_dbschema, value[0]),
         placeholder: i18n_default.labels.viewItemSelectPlaceholder,
         searchable: false,
         showAll: true
@@ -35793,7 +36793,7 @@ var FilterBar = (props2) => {
     });
   };
   const showFilterMenu = (e4) => {
-    const menu = new import_obsidian26.Menu();
+    const menu = new import_obsidian29.Menu();
     menu.addItem((item) => {
       item.setTitle(i18n_default.menu.tableView);
       item.setIcon("table-2");
@@ -35863,7 +36863,7 @@ var FilterBar = (props2) => {
     const offset = e4.target.getBoundingClientRect();
     menu.showAtPosition({ x: offset.left, y: offset.top + 30 });
   };
-  const addSort = (_5, sort) => {
+  const addSort = (_7, sort) => {
     var _a2;
     const field = sort[0];
     const fieldType = (_a2 = filteredCols.find((f4) => f4.name + f4.table == field)) == null ? void 0 : _a2.type;
@@ -35882,7 +36882,7 @@ var FilterBar = (props2) => {
       });
     }
   };
-  const saveGroupBy = (_5, groupBy2) => {
+  const saveGroupBy = (_7, groupBy2) => {
     savePredicate({
       ...predicate,
       groupBy: groupBy2
@@ -35895,7 +36895,7 @@ var FilterBar = (props2) => {
       sort: newSort
     });
   };
-  const addFilter = (_5, filter) => {
+  const addFilter = (_7, filter) => {
     var _a2;
     const field = filter[0];
     const fieldType = (_a2 = filteredCols.find((f4) => f4.name + f4.table == field)) == null ? void 0 : _a2.type;
@@ -35922,7 +36922,7 @@ var FilterBar = (props2) => {
   const changeSortMenu = (e4, sort) => {
     var _a2;
     const offset = e4.target.getBoundingClientRect();
-    const saveSort = (_5, newType) => {
+    const saveSort = (_7, newType) => {
       const type = newType[0];
       const newSort = {
         ...sort,
@@ -35979,7 +36979,7 @@ var FilterBar = (props2) => {
   const changeFilterMenu = (e4, filter) => {
     var _a2;
     const offset = e4.target.getBoundingClientRect();
-    const saveFilter = (_5, newType) => {
+    const saveFilter = (_7, newType) => {
       const type = newType[0];
       const newFilter = {
         ...filter,
@@ -36071,8 +37071,48 @@ var FilterBar = (props2) => {
       }
     );
   };
-  const showFMMenu = (e4) => {
-    const menu = new import_obsidian26.Menu();
+  const showAddMenu = (e4) => {
+    const fileMenu = new import_obsidian29.Menu();
+    const folder = getAbstractFileAtPath(app, folderPath);
+    fileMenu.addItem((menuItem) => {
+      menuItem.setIcon("edit");
+      menuItem.setTitle(i18n_default.buttons.createNote);
+      menuItem.onClick((ev) => {
+        newFileInFolder(props2.plugin, folder);
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setIcon("layout-dashboard");
+      menuItem.setTitle(i18n_default.buttons.createCanvas);
+      menuItem.onClick((ev) => {
+        createNewCanvasFile(props2.plugin, folder, "");
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setIcon("folder-plus");
+      menuItem.setTitle(i18n_default.buttons.createFolder);
+      menuItem.onClick((ev) => {
+        let vaultChangeModal = new VaultChangeModal(
+          props2.plugin,
+          folder,
+          "create folder",
+          "/"
+        );
+        vaultChangeModal.open();
+      });
+    });
+    if (isMouseEvent(e4)) {
+      fileMenu.showAtPosition({ x: e4.pageX, y: e4.pageY });
+    } else {
+      fileMenu.showAtPosition({
+        x: e4.nativeEvent.locationX,
+        y: e4.nativeEvent.locationY
+      });
+    }
+    return false;
+  };
+  const showFMMenu2 = (e4) => {
+    const menu = new import_obsidian29.Menu();
     menu.addItem((menuItem) => {
       menuItem.setIcon("log-in");
       menuItem.setTitle(i18n_default.menu.mergeProperties);
@@ -36138,7 +37178,7 @@ var FilterBar = (props2) => {
       case "text":
       case "number":
         {
-          const menu = new import_obsidian26.Menu();
+          const menu = new import_obsidian29.Menu();
           menu.setUseNativeMenu(false);
           const saveFilterValue = (value) => {
             const newFilter = {
@@ -36275,7 +37315,7 @@ var FilterBar = (props2) => {
     vaultChangeModal.open();
   };
   const viewContextMenu = (e4, _schema) => {
-    const fileMenu = new import_obsidian26.Menu();
+    const fileMenu = new import_obsidian29.Menu();
     fileMenu.addSeparator();
     fileMenu.addItem((menuItem) => {
       menuItem.setTitle("Rename Table");
@@ -36335,8 +37375,12 @@ var FilterBar = (props2) => {
       __html: uiIconSet["mk-ui-view-options"]
     }
   }), /* @__PURE__ */ bn.createElement("button", {
-    onClick: (e4) => showFMMenu(e4),
+    onClick: (e4) => showFMMenu2(e4),
     dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-options"] }
+  }), isFolderContext && (dbSchema == null ? void 0 : dbSchema.id) == "files" && /* @__PURE__ */ bn.createElement("button", {
+    className: "mk-button-new",
+    onClick: (e4) => showAddMenu(e4),
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-plus"] }
   }))), (predicate.filters.length > 0 || predicate.sort.length > 0 || predicate.groupBy.length > 0) && !folderNoteOpen && /* @__PURE__ */ bn.createElement("div", {
     className: "mk-filter-bar"
   }, predicate.groupBy.length > 0 && /* @__PURE__ */ bn.createElement("div", {
@@ -36480,7 +37524,7 @@ var TagContextViewComponent = (props2) => {
 
 // src/components/ContextView/ContextView.tsx
 var CONTEXT_VIEW_TYPE = "make-folder-view";
-var ContextView = class extends import_obsidian27.ItemView {
+var ContextView = class extends import_obsidian30.ItemView {
   constructor(leaf, plugin, viewType) {
     super(leaf);
     this.navigation = true;
@@ -36580,28 +37624,29 @@ var ContextView = class extends import_obsidian27.ItemView {
 };
 
 // src/utils/file.ts
-var import_obsidian28 = require("obsidian");
+var import_obsidian31 = require("obsidian");
 var defaultNoteFolder = (plugin, activeFile2) => {
   var _a2;
   return (_a2 = plugin.settings.newFileLocation == "folder" ? getFolderFromPath(app, plugin.settings.newFileFolderPath) : plugin.settings.newFileLocation == "current" && activeFile2 ? getFolderFromPath(app, activeFile2) : plugin.app.vault.getRoot()) != null ? _a2 : plugin.app.vault.getRoot();
 };
 var defaultConfigFile = async (app2) => {
   return await app2.vault.adapter.read(
-    (0, import_obsidian28.normalizePath)(app2.vault.configDir + "/app.json")
+    (0, import_obsidian31.normalizePath)(app2.vault.configDir + "/app.json")
   );
 };
-var fileExtensionForFile = (path) => path.split(".").pop();
+var fileExtensionForFile = (path) => path == null ? void 0 : path.split(".").pop();
 var appendFilesMetaData = (propType, filesString) => {
   const files = splitString(filesString).map((f4) => getAbstractFileAtPath(app, f4)).filter((f4) => f4);
   return files.map((f4) => appendFileMetaData3(propType, f4)).join(",");
 };
 var appendFileMetaData3 = (propType, file) => {
+  var _a2, _b2;
   let value = "";
   if (file) {
     if (propType == "folder") {
       value = file.parent.path;
     }
-    if (file instanceof import_obsidian28.TFile) {
+    if (file instanceof import_obsidian31.TFile) {
       if (propType == "ctime") {
         value = file.stat.ctime.toString();
       } else if (propType == "mtime") {
@@ -36610,12 +37655,25 @@ var appendFileMetaData3 = (propType, file) => {
         value = file.extension;
       } else if (propType == "size") {
         value = file.stat.size.toString();
+      } else if (propType == "links") {
+        value = ((_b2 = (_a2 = app.metadataCache.getFileCache(file)) == null ? void 0 : _a2.links) != null ? _b2 : []).map((f4) => f4.link).join(", ");
+      } else if (propType == "tags") {
+        value = allTagsForFile(file).join(", ");
       }
     } else if (propType == "extension") {
       value = i18n_default.menu.folder;
     }
   }
   return value;
+};
+var moveFile = async (folder, file) => {
+  await app.vault.rename(file, folder.path + "/" + file.name);
+};
+var renameFile = async (file, newName) => {
+  await app.fileManager.renameFile(
+    file,
+    file.parent.path == "/" ? newName : file.parent.path + "/" + newName
+  );
 };
 var viewTypeByString = (file) => {
   if (file.charAt(0) == "#") {
@@ -36625,10 +37683,10 @@ var viewTypeByString = (file) => {
     return "folder";
   }
   const portalFile = app.vault.getAbstractFileByPath(file);
-  if (portalFile instanceof import_obsidian28.TFolder) {
+  if (portalFile instanceof import_obsidian31.TFolder) {
     return "folder";
   }
-  if (portalFile instanceof import_obsidian28.TFile) {
+  if (portalFile instanceof import_obsidian31.TFile) {
     return "file";
   }
   return null;
@@ -36638,7 +37696,7 @@ function getAllAbstractFilesInVault(plugin, app2) {
   let rootFolder = app2.vault.getRoot();
   function recursiveFx(folder) {
     for (let child of folderChildren(plugin, folder)) {
-      if (child instanceof import_obsidian28.TFolder) {
+      if (child instanceof import_obsidian31.TFolder) {
         let childFolder = child;
         if (childFolder.children)
           recursiveFx(childFolder);
@@ -36649,14 +37707,14 @@ function getAllAbstractFilesInVault(plugin, app2) {
   recursiveFx(rootFolder);
   return files;
 }
-var removeTrailingSlashFromFolder = (path) => path.slice(-1) == "/" ? path.substring(0, path.length - 1) : path;
+var removeTrailingSlashFromFolder = (path) => path == "/" ? path : path.slice(-1) == "/" ? path.substring(0, path.length - 1) : path;
 var getFolderFromPath = (app2, path) => {
   if (!path)
     return null;
   const afile = getAbstractFileAtPath(app2, removeTrailingSlashFromFolder(path));
   if (!afile)
     return null;
-  return afile instanceof import_obsidian28.TFolder ? afile : afile.parent;
+  return afile instanceof import_obsidian31.TFolder ? afile : afile.parent;
 };
 var getFolderPathFromString = (file) => {
   var _a2;
@@ -36671,20 +37729,20 @@ var deleteFiles = (plugin, files) => {
 var deleteFile = (plugin, file) => {
   let deleteOption = plugin.settings.deleteFileOption;
   if (deleteOption === "permanent") {
-    plugin.app.vault.delete(file, true);
+    return plugin.app.vault.delete(file, true);
   } else if (deleteOption === "system-trash") {
-    plugin.app.vault.trash(file, true);
+    return plugin.app.vault.trash(file, true);
   } else if (deleteOption === "trash") {
-    plugin.app.vault.trash(file, false);
+    return plugin.app.vault.trash(file, false);
   }
 };
 var openFile = async (file, plugin, newLeaf) => {
   openAFile(getAbstractFileAtPath(plugin.app, file.path), plugin, newLeaf);
 };
 var openAFile = async (file, plugin, newLeaf) => {
-  if (file instanceof import_obsidian28.TFolder) {
+  if (file instanceof import_obsidian31.TFolder) {
     openTFolder(file, plugin, newLeaf);
-  } else if (file instanceof import_obsidian28.TFile) {
+  } else if (file instanceof import_obsidian31.TFile) {
     openTFile(file, plugin, newLeaf);
   }
   let evt = new CustomEvent(eventTypes.activeFileChange, {
@@ -36726,14 +37784,34 @@ var getAbstractFileAtPath = (app2, path) => {
 var openFileInNewPane = (plugin, file) => {
   openFile(file, plugin, true);
 };
-var createNewMarkdownFile = async (plugin, folder, newFileName, content) => {
+var createNewCanvasFile = async (plugin, folder, newFileName, dontOpen) => {
+  const newFile = await app.fileManager.createNewMarkdownFile(
+    folder,
+    newFileName
+  );
+  await app.vault.modify(newFile, "{}");
+  await renameFile(newFile, newFile.name.substring(0, newFile.name.lastIndexOf(".")) + ".canvas");
+  if (dontOpen) {
+    return newFile;
+  }
+  await openAFile(newFile, plugin, false);
+  let evt = new CustomEvent(eventTypes.activeFileChange, {
+    detail: { filePath: newFile.path }
+  });
+  window.dispatchEvent(evt);
+  return newFile;
+};
+var createNewMarkdownFile = async (plugin, folder, newFileName, content, dontOpen) => {
   const newFile = await app.fileManager.createNewMarkdownFile(
     folder,
     newFileName
   );
   if (content && content !== "")
     await app.vault.modify(newFile, content);
-  await openFile(newFile, plugin, false);
+  if (dontOpen) {
+    return newFile;
+  }
+  await openAFile(newFile, plugin, false);
   const titleEl = app.workspace.activeLeaf.view.containerEl.querySelector(
     ".inline-title"
   );
@@ -36748,14 +37826,15 @@ var createNewMarkdownFile = async (plugin, folder, newFileName, content) => {
   return newFile;
 };
 var platformIsMobile = () => {
-  return import_obsidian28.Platform.isMobile;
+  return import_obsidian31.Platform.isMobile;
 };
-var newFileInFolder = async (plugin, data) => {
+var newFileInFolder = async (plugin, data, dontOpen) => {
   await createNewMarkdownFile(
     plugin,
     data.parent.children.find((f4) => f4.name == data.name),
     "",
-    ""
+    "",
+    dontOpen
   );
 };
 
@@ -36778,11 +37857,19 @@ var uniqueNameFromString = (name, cols) => {
 var onlyUniqueProp = (prop) => (value, index, self2) => {
   return self2.findIndex((v3) => value[prop] == v3[prop]) === index;
 };
-var fileNameToString = (filename) => filename.substring(0, filename.lastIndexOf(".")) || filename;
+var fileNameToString3 = (filename) => filename.substring(0, filename.lastIndexOf(".")) || filename;
 var removeLeadingSlash = (path) => path.charAt(0) == "/" ? path.substring(1) : path;
-var filePathToString = (filename) => removeLeadingSlash(
-  filename.substring(filename.lastIndexOf("/"), filename.lastIndexOf("."))
-) || filename;
+var filePathToString = (filename) => {
+  if (filename.lastIndexOf("/") != -1) {
+    if (filename.lastIndexOf(".") != -1)
+      return removeLeadingSlash(filename.substring(filename.lastIndexOf("/") + 1, filename.lastIndexOf(".")));
+    return filename.substring(filename.lastIndexOf("/") + 1);
+  }
+  if (filename.lastIndexOf(".") != -1) {
+    return filename.substring(0, filename.lastIndexOf("."));
+  }
+  return filename;
+};
 var folderPathToString = (filename) => removeLeadingSlash(filename.substring(filename.lastIndexOf("/"))) || filename;
 var safelyParseJSON = (json) => {
   var parsed;
@@ -36801,18 +37888,29 @@ var nodeIsAncestorOfTarget = (node, target) => {
 var excludeVaultItemPredicate = (plugin) => (f4, index, folder) => !(f4.folder != "true" && plugin.settings.hiddenExtensions.find(
   (e4) => fileExtensionForFile(f4.path) == e4
 )) && !plugin.settings.hiddenFiles.find((e4) => e4 == f4.path) && (!plugin.settings.enableFolderNote || !plugin.settings.folderNoteInsideFolder && !folder.some((g4) => g4.path + ".md" == f4.path) || plugin.settings.folderNoteInsideFolder && !(f4.parent + "/" + folderPathToString(f4.parent) + ".md" == f4.path));
-var excludeFilePredicate = (plugin) => (f4, index, folder) => !(f4 instanceof import_obsidian29.TFile && plugin.settings.hiddenExtensions.find((e4) => f4.extension == e4)) && !plugin.settings.hiddenFiles.find((e4) => e4 == f4.path) && (!plugin.settings.enableFolderNote || !plugin.settings.folderNoteInsideFolder && !folder.some((g4) => g4.path + ".md" == f4.path) || plugin.settings.folderNoteInsideFolder && !(f4.parent.path + "/" + f4.parent.name + ".md" == f4.path));
+var excludeFilePredicate = (plugin) => (f4, index, folder) => !(f4 instanceof import_obsidian32.TFile && plugin.settings.hiddenExtensions.find((e4) => f4.extension == e4)) && !plugin.settings.hiddenFiles.find((e4) => e4 == f4.path) && (!plugin.settings.enableFolderNote || !plugin.settings.folderNoteInsideFolder && !folder.some((g4) => g4.path + ".md" == f4.path) || plugin.settings.folderNoteInsideFolder && !(f4.parent.path + "/" + f4.parent.name + ".md" == f4.path));
 var folderChildren = (plugin, f4, exclusionList) => {
   var _a2, _b2;
   return (_b2 = (_a2 = f4 == null ? void 0 : f4.children) == null ? void 0 : _a2.filter(excludeFilePredicate(plugin))) != null ? _b2 : [];
 };
-var compareByField = (field, dir) => (_a2, _b2) => {
+var compareByField2 = (field, dir) => (_a2, _b2) => {
   const a5 = dir ? _a2 : _b2;
   const b4 = dir ? _b2 : _a2;
   if (a5[field] < b4[field]) {
     return -1;
   }
   if (a5[field] > b4[field]) {
+    return 1;
+  }
+  return 0;
+};
+var compareByFieldCaseInsensitive = (field, dir) => (_a2, _b2) => {
+  const a5 = dir ? _a2 : _b2;
+  const b4 = dir ? _b2 : _a2;
+  if (a5[field].toLowerCase() < b4[field].toLowerCase()) {
+    return -1;
+  }
+  if (a5[field].toLowerCase() > b4[field].toLowerCase()) {
     return 1;
   }
   return 0;
@@ -36830,9 +37928,9 @@ function selectElementContents(el) {
 }
 
 // src/cm-extensions/flowEditor/flowEditor.tsx
-var toggleFlowEditor = import_state5.Annotation.define();
-var cacheFlowEditorHeight = import_state5.Annotation.define();
-var preloadFlowEditor = import_state5.EditorState.transactionFilter.of(
+var toggleFlowEditor = import_state6.Annotation.define();
+var cacheFlowEditorHeight = import_state6.Annotation.define();
+var preloadFlowEditor = import_state6.EditorState.transactionFilter.of(
   (tr) => {
     let newTrans = [];
     const value = tr.state.field(flowEditorInfo, false);
@@ -36926,7 +38024,7 @@ var internalLinkHover = hoverTooltip((view, pos, side) => {
   });
   return hovObject;
 });
-var flowEditorInfo = import_state5.StateField.define({
+var flowEditorInfo = import_state6.StateField.define({
   create() {
     return [];
   },
@@ -36998,12 +38096,12 @@ var flowEditorInfo = import_state5.StateField.define({
         newValues.push(info);
       }
     }
-    newValues.sort(compareByField("from", true));
+    newValues.sort(compareByField2("from", true));
     return newValues;
   }
 });
 var flowEditorRangeset = (state) => {
-  let builder = new import_state5.RangeSetBuilder();
+  let builder = new import_state6.RangeSetBuilder();
   const infoFields = state.field(flowEditorInfo);
   for (let info of infoFields) {
     const { from, to, embed: embedType, expandedState } = info;
@@ -37026,7 +38124,7 @@ var flowEditorRangeset = (state) => {
   const dec = builder.finish();
   return dec;
 };
-var flowEditorField = import_state5.StateField.define({
+var flowEditorField = import_state6.StateField.define({
   create(state) {
     return flowEditorRangeset(state);
   },
@@ -37114,48 +38212,6 @@ var flowEditorWidgetDecoration = (info) => import_view4.Decoration.widget({
   widget: new FlowEditorWidget(info),
   block: true
 });
-
-// src/cm-extensions/flowEditor/atomic.ts
-var arrowKeyAnnotation = import_state6.Annotation.define();
-var atomicSelect = import_state6.EditorState.transactionFilter.of(
-  (tr) => {
-    if (tr.isUserEvent("delete") || tr.isUserEvent("input")) {
-      return tr;
-    }
-    const flowID = tr.startState.field(flowIDStateField, false);
-    if (tr.annotation(arrowKeyAnnotation) && flowID) {
-      const oldSel = tr.startState.selection.main;
-      const lineRange = tr.state.field(selectiveLinesFacet, false);
-      const posRange = lineRange && lineRange[0] != void 0 ? lineRangeToPosRange(tr.startState, lineRange) : { from: 0, to: tr.startState.doc.length };
-      if (oldSel.from <= posRange.from && tr.annotation(arrowKeyAnnotation) == 3) {
-        focusFlowEditorParent(flowID, true);
-      }
-      if (oldSel.to >= posRange.to && tr.annotation(arrowKeyAnnotation) == 4) {
-        focusFlowEditorParent(flowID, false);
-      }
-      return tr;
-    }
-    const selection = tr.newSelection.main;
-    if (selection.from == 0 && selection.to == 0 || selection.from != selection.to)
-      return tr;
-    const flowEditors = tr.state.field(flowEditorInfo, false);
-    if (flowEditors) {
-      for (let info of flowEditors) {
-        if (info.embed == 1) {
-          if (info.from - 3 <= selection.from && info.to + 2 >= selection.to && info.expandedState == 2) {
-            const top = tr.annotation(arrowKeyAnnotation) == 1 || tr.startState.selection.main.from > selection.from ? false : true;
-            focusFlowEditor(info.id, top);
-            return {
-              selection: import_state6.EditorSelection.single(info.from - 4)
-            };
-            break;
-          }
-        }
-      }
-    }
-    return tr;
-  }
-);
 
 // src/cm-extensions/inlineStylerView/marks.ts
 var import_state7 = require("@codemirror/state");
@@ -37673,7 +38729,7 @@ var import_view6 = require("@codemirror/view");
 var import_state9 = require("@codemirror/state");
 var placeholderLine = import_view6.Decoration.line({
   attributes: { "data-ph": i18n_default.labels.placeholder },
-  class: "cm-placeholder"
+  class: "mk-placeholder"
 });
 var placeholder = import_state9.StateField.define({
   create() {
@@ -37690,9 +38746,915 @@ var placeholder = import_state9.StateField.define({
   provide: (f4) => import_view6.EditorView.decorations.from(f4)
 });
 
+// src/cm-extensions/inlineContext/inlineContext.tsx
+var import_view7 = require("@codemirror/view");
+var import_state10 = require("@codemirror/state");
+var import_obsidian37 = require("obsidian");
+
+// src/components/FileContextView/InlineFileContextView.tsx
+var import_obsidian36 = require("obsidian");
+
+// src/components/FileContextView/FileContextList.tsx
+var FileContextList = (props2) => {
+  const { path } = props2;
+  const {
+    tableData,
+    newColumn,
+    cols,
+    tagContexts,
+    contextTable,
+    folderPath,
+    isFolderContext,
+    saveColumn,
+    hideColumn,
+    delColumn,
+    sortColumn,
+    updateFieldValue,
+    updateValue: updateValue2,
+    loadContextFields,
+    predicate
+  } = q2(MDBContext);
+  const [collapsed, setCollapsed] = p2(false);
+  const fileContext = F(() => {
+    const td = tableData ? {
+      folder: {
+        cols: tableData.cols.filter(
+          (f4) => f4.name != "File" && !(f4.type == "fileprop" && (f4.value.startsWith("File") || f4.value.indexOf(".") == -1)) && f4.hidden != "true" && f4.type != "preview"
+        ),
+        data: tableData.rows.find((r3) => r3.File == path),
+        dataIndex: tableData.rows.findIndex((r3) => r3.File == path)
+      }
+    } : {};
+    const tags = tagContexts.reduce(
+      (p3, c4) => contextTable[c4] ? {
+        ...p3,
+        [c4]: {
+          cols: contextTable[c4].cols.filter(
+            (f4) => f4.name != "File" && f4.type != "fileprop" && f4.hidden != "true" && f4.type != "preview"
+          ),
+          data: contextTable[c4].rows.find(
+            (r3, index) => index == parseInt(props2.path)
+          ),
+          dataIndex: contextTable[c4].rows.findIndex(
+            (r3) => r3.File == path
+          )
+        }
+      } : p3,
+      {}
+    );
+    return {
+      ...tags,
+      ...td
+    };
+  }, [tableData, contextTable, tagContexts, path]);
+  const saveField = (field, oldField) => {
+    if (field.name.length > 0) {
+      if (field.name != oldField.name || field.type != oldField.type || field.value != oldField.value || field.attrs != oldField.attrs) {
+        const saveResult = saveColumn(field, oldField);
+      }
+    }
+  };
+  const saveContext = (field, oldField, value) => {
+    const newContext = value[0];
+    initiateContextIfNotExists(props2.plugin, newContext).then((f4) => {
+      if (f4) {
+        return insertContextItems(
+          props2.plugin,
+          optionValuesForColumn(
+            field.name,
+            field.table == "" ? tableData : contextTable[field.table]
+          ),
+          newContext
+        );
+      }
+    }).then((f4) => loadContextFields(newContext));
+    const newField = {
+      ...field,
+      value: newContext != null ? newContext : ""
+    };
+    saveColumn(newField, oldField);
+  };
+  const showMenu = (e4, field) => {
+    const offset = e4.target.getBoundingClientRect();
+    const options = optionValuesForColumn(
+      field.name,
+      field.table == "" ? tableData : contextTable[field.table]
+    );
+    showPropertyMenu(props2.plugin, { x: offset.left, y: offset.top + 30 }, true, options, field, cols, contextTable, (newField) => saveField(newField, field), (newField, val) => saveContext(newField, field, val), hideColumn, delColumn, sortColumn, predicate.colsHidden.includes(field.name + field.table));
+  };
+  return /* @__PURE__ */ bn.createElement(bn.Fragment, null, fileContext.folder && fileContext.folder.data && fileContext.folder.cols.length > 0 && /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-section"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-title",
+    onClick: (e4) => {
+      setCollapsed(!collapsed);
+      e4.stopPropagation();
+    }
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: `mk-icon-xsmall`,
+    dangerouslySetInnerHTML: {
+      __html: isFolderContext ? uiIconSet["mk-ui-folder"] : uiIconSet["mk-ui-tags"]
+    }
+  }), isFolderContext ? folderPathToString(folderPath) : stringFromTag(folderPath), /* @__PURE__ */ bn.createElement("button", {
+    className: `mk-collapse mk-inline-button mk-icon-xxsmall ${collapsed ? "mk-collapsed" : ""}`,
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-collapse-sm"]
+    }
+  })), !collapsed ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, fileContext.folder.cols.map((f4, i4) => /* @__PURE__ */ bn.createElement("div", {
+    key: i4,
+    className: "mk-file-context-row"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-field",
+    onClick: (e4) => showMenu(e4, { ...f4, table: "" })
+  }, f4.name), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-value"
+  }, /* @__PURE__ */ bn.createElement(DataTypeView, {
+    plugin: props2.plugin,
+    initialValue: fileContext.folder.data[f4.name],
+    index: fileContext.folder.dataIndex,
+    file: fileContext.folder.data["File"],
+    column: { ...f4, table: "" },
+    editable: true,
+    updateValue: (v3) => updateValue2(f4.name, v3, "", fileContext.folder.dataIndex, fileContext.folder.data["File"]),
+    updateFieldValue: (fv, v3) => updateFieldValue(f4.name, fv, v3, "", fileContext.folder.dataIndex, fileContext.folder.data["File"]),
+    contextTable
+  }))))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null)));
+};
+
+// src/components/ui/menus/fmMenu.tsx
+var import_obsidian33 = require("obsidian");
+var showFMMenu = (plugin, position, property, deleteProperty, syncProperty, renameProperty, changeType) => {
+  const menu = new import_obsidian33.Menu();
+  menu.setUseNativeMenu(false);
+  menu.addItem((menuItem) => {
+    var _a2;
+    inputMenuItem(
+      menuItem,
+      (_a2 = property == null ? void 0 : property.name) != null ? _a2 : "",
+      (value) => renameProperty(property.name, value)
+    );
+    menuItem.setIcon("type");
+  });
+  menu.addSeparator();
+  menu.addItem((menuItem) => {
+    menuItem.setTitle("Change Type");
+    menuItem.onClick(() => {
+      changeType(position, property.name);
+    });
+    menuItem.setIcon("list");
+  });
+  menu.addItem((menuItem) => {
+    menuItem.setTitle("Sync to Context");
+    menuItem.onClick(() => {
+      syncProperty(property);
+    });
+    menuItem.setIcon("sync");
+  });
+  menu.addItem((menuItem) => {
+    menuItem.setTitle(i18n_default.menu.deleteProperty);
+    menuItem.onClick(() => {
+      deleteProperty(property);
+    });
+    menuItem.setIcon("trash-2");
+  });
+  menu.addSeparator();
+  menu.showAtPosition(position);
+  return menu;
+};
+
+// src/components/ui/modals/moveMetadataModal.tsx
+var import_obsidian34 = require("obsidian");
+var MovePropertyModal = class extends import_obsidian34.Modal {
+  constructor(plugin, syncProperty, property, file) {
+    super(plugin.app);
+    this.plugin = plugin;
+    this.file = file;
+    let closeButton = this.modalEl.querySelector(
+      ".modal-close-button"
+    );
+    closeButton.style.display = "none";
+    this.syncProperty = syncProperty;
+    this.property = property;
+  }
+  onOpen() {
+    let { contentEl } = this;
+    let myModal = this;
+    let headerText;
+    const headerEl = contentEl.createEl("div", { text: headerText });
+    headerEl.addClass("modal-title");
+    headerEl.innerHTML = i18n_default.labels.syncMetadata;
+    const root = createRoot(contentEl);
+    root.render(
+      /* @__PURE__ */ bn.createElement(MovePropertyComponent, {
+        plugin: this.plugin,
+        syncProperty: this.syncProperty,
+        close: () => this.close(),
+        property: this.property,
+        file: this.file
+      })
+    );
+  }
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
+  }
+};
+var MovePropertyComponent = (props2) => {
+  const { plugin } = props2;
+  const [table, setTable] = p2("");
+  const saveContexts = (_7, value) => {
+    setTable(value[0]);
+  };
+  const showContextMenu = async (e4) => {
+    const offset = e4.target.getBoundingClientRect();
+    const tags = allTagsForFile(props2.file);
+    showSelectMenu(
+      { x: offset.left, y: offset.top + 30 },
+      {
+        multi: false,
+        editable: false,
+        value: [],
+        options: [
+          { name: props2.file.parent.name, value: "" },
+          ...tags.map((m5) => ({ name: m5, value: m5 }))
+        ],
+        saveOptions: saveContexts,
+        placeholder: i18n_default.labels.tagItemSelectPlaceholder,
+        searchable: false,
+        showAll: true
+      }
+    );
+  };
+  const sync = () => {
+    props2.syncProperty(props2.property, table);
+    props2.close();
+  };
+  return /* @__PURE__ */ bn.createElement("div", {
+    className: "modal-content"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item setting-item-heading"
+  }, i18n_default.labels.syncProperties), /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item-info"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item-name"
+  }, i18n_default.labels.selectContext), /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item-description"
+  }, i18n_default.descriptions.selectContext)), /* @__PURE__ */ bn.createElement("div", {
+    className: "setting-item-control"
+  }, /* @__PURE__ */ bn.createElement("button", {
+    onClick: (e4) => showContextMenu(e4)
+  }, table == "" ? i18n_default.buttons.currentFolder : table))), /* @__PURE__ */ bn.createElement("button", {
+    style: { marginRight: 8 },
+    onClick: () => sync()
+  }, i18n_default.buttons.sync), /* @__PURE__ */ bn.createElement("button", {
+    onClick: () => props2.close()
+  }, i18n_default.buttons.cancel));
+};
+
+// src/components/FileContextView/FrontmatterView.tsx
+var FrontmatterView = (props2) => {
+  const { path } = props2;
+  const [values, setValues] = p2({});
+  const [cols, setCols] = p2([]);
+  const refreshData = async () => {
+    const promises = await Promise.all([...props2.tags.map((f4) => tagContextFromTag(props2.plugin, f4)), folderContextFromFolder(props2.plugin, props2.folder)].map((f4) => columnsForContext(props2.plugin, f4)));
+    const columns = promises.reduce((p3, c4) => [...p3, ...c4], []);
+    let newCols = [];
+    let newValues = {};
+    const types = guestimateTypes([path], props2.plugin, false);
+    const fm = frontMatterForFile(getAbstractFileAtPath(app, path));
+    const fmKeys = uniqCaseInsensitive(frontMatterKeys(fm)).filter((f4) => !columns.some((g4) => g4.name == f4));
+    const cols2 = fmKeys.map((f4) => ({
+      table: "",
+      name: f4,
+      schemaId: "",
+      type: yamlTypeToMDBType(types[f4])
+    }));
+    if (fm) {
+      newCols.push(...cols2);
+      Object.keys(fm).forEach((c4) => {
+        newValues[c4] = parseFrontMatter(c4, fm[c4], false);
+      });
+    }
+    if (props2.plugin.dataViewAPI()) {
+      const types2 = guestimateTypes([path], props2.plugin, true);
+      const fm2 = frontMatterForFile(getAbstractFileAtPath(app, path));
+      const fmKeys2 = uniqCaseInsensitive(frontMatterKeys(fm2));
+      const dvValues = props2.plugin.dataViewAPI().page(path);
+      const dvKeys = uniqCaseInsensitive(
+        Object.keys(dvValues != null ? dvValues : {}).filter(
+          (f4, i4, self2) => !self2.find(
+            (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
+          ) ? true : false
+        ).filter((f4) => f4 != "file").filter((f4) => f4 != "tag" && f4 != "tags").filter((f4) => !fmKeys2.includes(f4)).filter((f4) => !columns.some((g4) => g4.name == f4))
+      );
+      const dvCols = dvKeys.map((f4) => ({
+        table: "",
+        name: f4,
+        schemaId: "",
+        type: yamlTypeToMDBType(types2[f4])
+      }));
+      const dv = dvKeys.reduce(
+        (p3, c4) => ({
+          ...p3,
+          [c4]: parseFrontMatter(c4, dvValues[c4], true)
+        }),
+        {}
+      );
+      newCols.push(...dvCols);
+      Object.keys(dv).forEach((c4) => {
+        newValues[c4] = parseFrontMatter(c4, dvValues[c4], true);
+      });
+    }
+    setCols(newCols.filter((f4) => {
+      var _a2;
+      return !((_a2 = props2.excludeKeys) == null ? void 0 : _a2.some((g4) => g4 == f4.name));
+    }));
+    setValues(newValues);
+  };
+  h2(() => {
+    refreshData();
+  }, [path, props2.tags]);
+  const tagsChanged = (evt) => {
+    var _a2, _b2;
+    if (((_b2 = (_a2 = evt.detail) == null ? void 0 : _a2.file) == null ? void 0 : _b2.path) == path) {
+      refreshData();
+    }
+  };
+  const mdbChanged = (evt) => {
+    if (evt.detail.dbPath && props2.tags.find((f4) => tagContextFromTag(props2.plugin, f4) == evt.detail.dbPath)) {
+      refreshData();
+    }
+  };
+  h2(() => {
+    window.addEventListener(eventTypes.tagsChange, tagsChanged);
+    window.addEventListener(eventTypes.mdbChange, mdbChanged);
+    return () => {
+      window.removeEventListener(eventTypes.tagsChange, tagsChanged);
+      window.removeEventListener(eventTypes.mdbChange, mdbChanged);
+    };
+  }, [path, props2.tags]);
+  const saveFMValue = (value, f4) => {
+    saveFrontmatterValue(props2.plugin, path, f4.name, value, f4.type);
+  };
+  const deleteFMValue = (property) => {
+    deleteFrontmatterValue(props2.plugin, path, property.name);
+  };
+  const saveMetadata = async (property, table) => {
+    const field = {
+      ...property,
+      schemaId: "files"
+    };
+    let dbPath;
+    let tag;
+    if (table == "") {
+      dbPath = folderContextFromFolder(props2.plugin, props2.folder);
+      tag = false;
+    } else {
+      dbPath = tagContextFromTag(props2.plugin, table);
+      tag = true;
+    }
+    await insertContextColumn(props2.plugin, dbPath, field, tag);
+    await updateContextValue(props2.plugin, dbPath, path, field.name, values[field.name], false);
+  };
+  const syncFMValue = (property) => {
+    let vaultChangeModal = new MovePropertyModal(
+      props2.plugin,
+      saveMetadata,
+      property,
+      getAbstractFileAtPath(app, path)
+    );
+    vaultChangeModal.open();
+  };
+  const renameFMKey = (key2, name) => {
+    renameFrontmatterKey(props2.plugin, path, key2, name);
+  };
+  const selectedType = (value, key2) => {
+    changeFrontmatterType(props2.plugin, path, key2, value[0]);
+  };
+  const selectType = (p3, key2) => {
+    showSelectMenu(
+      p3,
+      {
+        multi: false,
+        editable: false,
+        searchable: false,
+        saveOptions: (_7, v3) => selectedType(v3, key2),
+        value: [],
+        showAll: true,
+        options: fieldTypes.filter((f4) => f4.metadata).map((f4, i4) => ({
+          id: i4 + 1,
+          name: f4.label,
+          value: f4.type,
+          icon: ""
+        }))
+      }
+    );
+  };
+  const showMenu = (e4, property) => {
+    const offset = e4.target.getBoundingClientRect();
+    showFMMenu(props2.plugin, { x: offset.left, y: offset.top + 30 }, property, deleteFMValue, syncFMValue, renameFMKey, selectType);
+  };
+  return cols.length > 0 ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-section"
+  }, /* @__PURE__ */ bn.createElement(bn.Fragment, null, cols.map((f4, i4) => /* @__PURE__ */ bn.createElement("div", {
+    key: i4,
+    className: "mk-file-context-row"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-field",
+    onClick: (e4) => showMenu(e4, f4)
+  }, f4.name), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-value"
+  }, /* @__PURE__ */ bn.createElement(DataTypeView, {
+    plugin: props2.plugin,
+    initialValue: values[f4.name],
+    index: 0,
+    file: path,
+    column: { ...f4, table: "" },
+    editable: true,
+    updateValue: (value) => saveFMValue(value, f4),
+    updateFieldValue: (fieldValue, value) => saveFMValue(value, f4),
+    contextTable: {}
+  }))))))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
+};
+
+// src/components/FileContextView/NoteBannerView.tsx
+var import_obsidian35 = require("obsidian");
+var NoteBannerView = (props2) => {
+  const { file } = props2;
+  const [banner, setBanner] = p2(null);
+  h2(() => {
+    window.addEventListener(eventTypes.tagsChange, refreshBanner);
+    return () => {
+      window.removeEventListener(eventTypes.tagsChange, refreshBanner);
+    };
+  }, []);
+  h2(() => {
+    refreshBanner();
+  }, []);
+  const refreshBanner = () => {
+    var _a2;
+    const fm = frontMatterForFile(file);
+    if (fm == null ? void 0 : fm.banner) {
+      const newBanner = (_a2 = getAbstractFileAtPath(app, fm.banner)) != null ? _a2 : fm.banner;
+      setBanner(newBanner);
+    }
+  };
+  const triggerBannerContextMenu = (e4) => {
+    e4.preventDefault();
+    const fileMenu = new import_obsidian35.Menu();
+    fileMenu.addSeparator();
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle(i18n_default.buttons.changeBanner);
+      menuItem.setIcon("lucide-image");
+      menuItem.onClick((ev) => {
+        let vaultChangeModal = new imageModal(
+          props2.plugin,
+          props2.plugin.app,
+          (image) => saveFrontmatterValue(props2.plugin, file.path, "banner", image, "image", true)
+        );
+        vaultChangeModal.open();
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle(i18n_default.buttons.removeBanner);
+      menuItem.setIcon("lucide-file-minus");
+      menuItem.onClick((ev) => {
+        deleteFrontmatterValue(props2.plugin, file.path, "banner");
+      });
+    });
+    if (isMouseEvent(e4)) {
+      fileMenu.showAtPosition({ x: e4.pageX, y: e4.pageY });
+    } else {
+      fileMenu.showAtPosition({
+        x: e4.nativeEvent.locationX,
+        y: e4.nativeEvent.locationY
+      });
+    }
+    return false;
+  };
+  return /* @__PURE__ */ bn.createElement("div", {
+    className: `mk-note-header`,
+    onContextMenu: triggerBannerContextMenu
+  }, banner && /* @__PURE__ */ bn.createElement("img", {
+    src: banner instanceof import_obsidian35.TFile ? app.vault.getResourcePath(banner) : banner
+  }));
+};
+
+// src/components/FileContextView/InlineFileContextView.tsx
+var InlineFileContextView = (props2) => {
+  const { file } = props2;
+  const folderPath = file == null ? void 0 : file.parent.path;
+  const dbPath = folderContextFromFolder(props2.plugin, folderPath);
+  const [fileTags, setFileTags] = p2([]);
+  const [folderTags, setFolderTags] = p2([]);
+  const tags = F(() => [...fileTags, ...folderTags], [fileTags, folderTags]);
+  const [hasBanner, setHasBanner] = p2(false);
+  const fileNameRef = _2(null);
+  h2(() => {
+    refreshTags();
+  }, [file]);
+  const refreshTags = () => {
+    const fm = frontMatterForFile(file);
+    if (fm == null ? void 0 : fm.banner) {
+      setHasBanner(true);
+    } else {
+      setHasBanner(false);
+    }
+    const dbPath2 = folderContextFromFolder(props2.plugin, file == null ? void 0 : file.parent.path);
+    const dbFileExists = getAbstractFileAtPath(app, dbPath2);
+    if (dbFileExists) {
+      getMDBTable(props2.plugin, "files", dbPath2, false).then((folderDB) => {
+        if (folderDB) {
+          setFolderTags(folderDB.schema.def.split("&").filter((f4) => f4.length > 0));
+        }
+      });
+    }
+    const tags2 = allTagsForFile(file);
+    setFileTags(tags2);
+  };
+  h2(() => {
+    window.addEventListener(eventTypes.tagsChange, refreshTags);
+    return () => {
+      window.removeEventListener(eventTypes.tagsChange, refreshTags);
+    };
+  }, [file]);
+  const changeCover = (e4) => {
+    let vaultChangeModal = new imageModal(
+      props2.plugin,
+      props2.plugin.app,
+      (image) => saveFrontmatterValue(props2.plugin, file.path, "banner", image, "image", true)
+    );
+    vaultChangeModal.open();
+  };
+  const showContextMenu = (e4) => {
+    const offset = e4.target.getBoundingClientRect();
+    const f4 = loadTags(props2.plugin);
+    showSelectMenu(
+      { x: offset.left, y: offset.top + 30 },
+      {
+        multi: false,
+        editable: true,
+        value: [],
+        options: f4.map((m5) => ({ name: m5, value: m5 })),
+        saveOptions: (_7, value) => addTag3(value[0]),
+        placeholder: i18n_default.labels.contextItemSelectPlaceholder,
+        searchable: true,
+        showAll: true
+      }
+    );
+  };
+  const addTag3 = (tag) => {
+    if (file instanceof import_obsidian36.TFile && file.extension == "md")
+      addTagToNote(tag, file);
+  };
+  const removeTag = (tag) => {
+    if (file instanceof import_obsidian36.TFile && file.extension == "md")
+      removeTagFromFile(tag, file);
+  };
+  const saveField = (source, field) => {
+    if (source == "fm") {
+      saveFrontmatterValue(props2.plugin, file.path, field.name, "", field.type, true);
+      return;
+    }
+    if (source == "") {
+      insertContextColumn(props2.plugin, dbPath, field, false);
+      return;
+    }
+    insertContextColumn(props2.plugin, tagContextFromTag(props2.plugin, source), field, true);
+  };
+  const newProperty = (e4) => {
+    const offset = e4.target.getBoundingClientRect();
+    showNewPropertyMenu(props2.plugin, { x: offset.left, y: offset.top + 30 }, tags, saveField, folderPath, true);
+  };
+  const onBlur = (e4) => {
+    const newValue = e4.target.innerText;
+    if (newValue != fileNameToString3(file.name)) {
+      renameFile(file, newValue + ".md");
+    }
+  };
+  const onKeyDown = (e4) => {
+    e4.stopPropagation();
+    if (e4.key == "Enter") {
+      e4.target.blur();
+    }
+    if (e4.key == "Escape") {
+      fileNameRef.current.innerText = fileNameToString3(file.name);
+      e4.target.blur();
+    }
+  };
+  s2(() => {
+    var _a2;
+    (_a2 = props2.editorView) == null ? void 0 : _a2.requestMeasure();
+  }, []);
+  return /* @__PURE__ */ bn.createElement(bn.Fragment, null, props2.showHeader && /* @__PURE__ */ bn.createElement(NoteBannerView, {
+    plugin: props2.plugin,
+    file: props2.file
+  }), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-component"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: `mk-spacer ${hasBanner ? "mk-has-banner" : ""}`,
+    onContextMenu: (e4) => e4.preventDefault()
+  }), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-file"
+  }, /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement(FileSticker, {
+    plugin: props2.plugin,
+    filePath: file.path
+  }), !props2.showHeader && file && folderPath != "/" && /* @__PURE__ */ bn.createElement("button", {
+    onClick: () => openAFile(getAbstractFileAtPath(app, folderPath), props2.plugin, false),
+    className: "mk-file-context-folder"
+  }, folderPathToString(folderPath)), /* @__PURE__ */ bn.createElement("div", {
+    className: "inline-title",
+    ref: fileNameRef,
+    contentEditable: true,
+    onBlur,
+    onKeyDown
+  }, fileNameToString3(file.name))), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-field-new"
+  }, /* @__PURE__ */ bn.createElement("button", {
+    onClick: (e4) => newProperty(e4)
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-plus"] }
+  }), platformIsMobile() ? "Property" : "Add Property"), /* @__PURE__ */ bn.createElement("button", {
+    "aria-label": i18n_default.buttons.addTag,
+    onClick: (e4) => showContextMenu(e4)
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-tags"] }
+  }), platformIsMobile() ? "Tag" : "Add Tag"), props2.showHeader ? /* @__PURE__ */ bn.createElement("button", {
+    "aria-label": i18n_default.buttons.addTag,
+    onClick: (e4) => changeCover(e4)
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-icon-xsmall",
+    dangerouslySetInnerHTML: { __html: makeIconSet["mk-make-image"] }
+  }), platformIsMobile() ? "Cover" : "Change Cover") : /* @__PURE__ */ bn.createElement(bn.Fragment, null)), tags.length > 0 ? /* @__PURE__ */ bn.createElement(TagsView, {
+    plugin: props2.plugin,
+    tags,
+    removeTag
+  }) : /* @__PURE__ */ bn.createElement(bn.Fragment, null))), /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-component"
+  }, /* @__PURE__ */ bn.createElement(FrontmatterView, {
+    plugin: props2.plugin,
+    path: file.path,
+    folder: folderPath,
+    tags,
+    excludeKeys: props2.showHeader ? ["banner"] : []
+  }), tags.map((tag, i4) => /* @__PURE__ */ bn.createElement(MDBProvider, {
+    key: tag,
+    plugin: props2.plugin,
+    dbPath: tagContextFromTag(props2.plugin, tag),
+    tag
+  }, /* @__PURE__ */ bn.createElement(FileContextList, {
+    plugin: props2.plugin,
+    path: file.path,
+    context: tag,
+    color: "var(--tag-background)"
+  }))), file && folderPath != "/" && /* @__PURE__ */ bn.createElement(MDBProvider, {
+    plugin: props2.plugin,
+    dbPath,
+    folder: folderPath
+  }, /* @__PURE__ */ bn.createElement(FileContextList, {
+    plugin: props2.plugin,
+    path: file.path,
+    context: folderPath,
+    color: "var(--color-accent-1)"
+  }))));
+};
+
+// src/components/FileContextView/Backlinks.tsx
+var BacklinkItem = (props2) => {
+  const file = F(() => getAbstractFileAtPath(app, props2.path), [props2.path]);
+  const [block, setBlock] = p2([null, null]);
+  h2(() => {
+    var _a2, _b2;
+    const fCache = app.metadataCache.getCache(props2.path);
+    const link = [...(_a2 = fCache.links) != null ? _a2 : [], ...(_b2 = fCache.embeds) != null ? _b2 : []].find((f4) => props2.source.includes(f4.displayText));
+    if (link) {
+      const block2 = fCache.sections.find((f4) => f4.position.start.offset <= link.position.start.offset && f4.position.end.offset >= link.position.end.offset);
+      setBlock([Math.max(1, block2.position.start.line), Math.max(block2.position.start.line + 1, block2.position.end.line + 1)]);
+    }
+  }, [props2.path]);
+  const [collapsed, setCollapsed] = p2(false);
+  return /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-title",
+    onClick: (e4) => {
+      setCollapsed(!collapsed);
+      e4.stopPropagation();
+    }
+  }, /* @__PURE__ */ bn.createElement("button", {
+    className: `mk-collapse mk-inline-button mk-icon-xsmall ${collapsed ? "mk-collapsed" : ""}`,
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-collapse"]
+    }
+  }), fileNameToString3(file.name)), !collapsed ? /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-backlink"
+  }, /* @__PURE__ */ bn.createElement(FlowView, {
+    plugin: props2.plugin,
+    load: true,
+    path: props2.path,
+    from: block[0],
+    to: block[1]
+  })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null));
+};
+var Backlinks = (props2) => {
+  const [expanded, setExpanded] = p2(props2.expanded);
+  const [backlinks, setBacklinks] = p2([]);
+  h2(() => {
+    if (!props2.file)
+      return;
+    setBacklinks(
+      Object.keys(app.metadataCache.resolvedLinks).filter(
+        (f4) => props2.file.path in app.metadataCache.resolvedLinks[f4]
+      )
+    );
+  }, [props2.file]);
+  return backlinks.length > 0 && props2.file ? /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-component mk-note-footer"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-context-section"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    onClick: (e4) => {
+      setExpanded(!expanded);
+      e4.stopPropagation();
+    },
+    className: "mk-file-context-title"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: `mk-icon-xsmall`,
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-backlink"]
+    }
+  }), i18n_default.labels.backlinks, /* @__PURE__ */ bn.createElement("button", {
+    className: `mk-collapse mk-inline-button mk-icon-xsmall ${!expanded ? "mk-collapsed" : ""}`,
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-collapse-sm"]
+    }
+  })), /* @__PURE__ */ bn.createElement("div", null, expanded && backlinks.map((f4) => {
+    var _a2;
+    return /* @__PURE__ */ bn.createElement(BacklinkItem, {
+      path: f4,
+      plugin: props2.plugin,
+      source: (_a2 = props2.file) == null ? void 0 : _a2.path
+    });
+  })))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
+};
+
+// src/cm-extensions/inlineContext/inlineContext.tsx
+var InlineContextWidget = class extends import_view7.WidgetType {
+  constructor(plugin, file, contentEl) {
+    super();
+    this.plugin = plugin;
+    this.file = file;
+    this.filePath = file.path;
+    this.contentEl = contentEl;
+    this.removeListeners = () => {
+    };
+  }
+  eq(widget) {
+    if (widget.filePath == this.filePath)
+      return true;
+    return false;
+  }
+  toDOM(view) {
+    const container = document.createElement("div");
+    container.toggleClass("mk-header", true);
+    container.toggleClass("cm-line", true);
+    const anchor = createRoot(container);
+    anchor.render(/* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement(InlineFileContextView, {
+      plugin: this.plugin,
+      file: this.file,
+      editorView: view,
+      showHeader: true
+    })));
+    return container;
+  }
+  destroy() {
+    this.removeListeners();
+  }
+};
+var BacklinksWidget = class extends import_view7.WidgetType {
+  constructor(plugin, file, contentEl) {
+    super();
+    this.plugin = plugin;
+    this.file = file;
+    this.contentEl = contentEl;
+    this.removeListeners = () => {
+    };
+  }
+  eq(widget) {
+    return true;
+  }
+  toDOM() {
+    const container = document.createElement("div");
+    const anchor = createRoot(container);
+    anchor.render(/* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement(Backlinks, {
+      plugin: this.plugin,
+      file: this.file,
+      expanded: true
+    })));
+    return container;
+  }
+  destroy() {
+    this.removeListeners();
+  }
+};
+function defineStatefulDecoration() {
+  const update = import_state10.StateEffect.define();
+  const field = import_state10.StateField.define({
+    create() {
+      return import_view7.Decoration.none;
+    },
+    update(deco, tr) {
+      return tr.effects.reduce((deco2, effect) => {
+        return effect.is(update) ? effect.value : deco2;
+      }, deco.map(tr.changes));
+    },
+    provide: (field2) => import_view7.EditorView.decorations.from(field2)
+  });
+  return { update, field };
+}
+var statefulDecorations = defineStatefulDecoration();
+var StatefulDecorationSet = class {
+  constructor(editor, plugin) {
+    this.decoCache = /* @__PURE__ */ Object.create(null);
+    this.editor = editor;
+    this.plugin = plugin;
+  }
+  async computeAsyncDecorations(state, show) {
+    if (!state.field(import_obsidian37.editorInfoField))
+      return null;
+    const infoField = state.field(import_obsidian37.editorInfoField);
+    const file = infoField.file;
+    const contentEl = infoField.editor.cm.contentDOM;
+    const isFM = (state2, typeString, from, to) => {
+      if (typeString.contains("hmd-frontmatter")) {
+        return true;
+      }
+      return false;
+    };
+    const decorations = [];
+    let fmStart = 0;
+    let fmEnd = 0;
+    iterateTreeInDocument(state, {
+      enter: ({ type, from, to }) => {
+        if (isFM(state, type.name, from, to)) {
+          fmEnd = to;
+        }
+      }
+    });
+    decorations.push(
+      import_view7.Decoration.line({ class: "has-banner" }).range(0),
+      import_view7.Decoration.widget({ widget: new InlineContextWidget(this.plugin, file, contentEl), block: true, side: -1 }).range(0)
+    );
+    if (this.plugin.settings.inlineBacklinks)
+      decorations.push(
+        import_view7.Decoration.widget({ widget: new BacklinksWidget(this.plugin, file, contentEl), side: 1 }).range(state.doc.length)
+      );
+    if (fmEnd > 0 && fmEnd < state.doc.length && this.plugin.settings.hideFrontmatter) {
+      decorations.push(import_view7.Decoration.replace({ inclusive: true }).range(fmStart, fmEnd + 1));
+    }
+    return import_view7.Decoration.set(decorations, true);
+  }
+  async updateAsyncDecorations(state, show) {
+    const decorations = await this.computeAsyncDecorations(state, show);
+    if (decorations || this.editor.state.field(statefulDecorations.field).size) {
+      this.editor.dispatch({ effects: statefulDecorations.update.of(decorations || import_view7.Decoration.none) });
+    }
+  }
+};
+var headerViewPlugin = (plugin) => import_view7.ViewPlugin.fromClass(
+  class {
+    constructor(view) {
+      this.statefulDecorationsSet = new StatefulDecorationSet(view, plugin);
+      this.flowTypeState = view.state.field(flowTypeStateField, false);
+      if (this.flowTypeState == "doc" || !this.flowTypeState)
+        this.statefulDecorationsSet.updateAsyncDecorations(view.state, true);
+    }
+    showHeader(view) {
+      if (view.state.field(flowTypeStateField, false) == "doc" || view.state.field(flowTypeStateField, false) == null)
+        this.statefulDecorationsSet.updateAsyncDecorations(view.state, true);
+    }
+    update(update) {
+      var _a2, _b2;
+      const infoField = update.state.field(import_obsidian37.editorInfoField);
+      if (update.docChanged || update.state.field(flowTypeStateField) != this.flowTypeState || this.filePath != ((_a2 = infoField.file) == null ? void 0 : _a2.path)) {
+        this.filePath = (_b2 = infoField.file) == null ? void 0 : _b2.path;
+        this.flowTypeState = update.state.field(flowTypeStateField);
+        this.showHeader(update.view);
+      }
+    }
+    destroy() {
+    }
+  }
+);
+
 // src/cm-extensions/cmExtensions.ts
 var cmExtensions = (plugin, mobile) => {
   let extensions = [];
+  if (plugin.settings.inlineContext)
+    extensions.push(...[statefulDecorations.field, headerViewPlugin(plugin)]);
   extensions.push(...[toggleMarkExtension, tooltips({ parent: document.body })]);
   if (!mobile && plugin.settings.inlineStyler) {
     extensions.push(cursorTooltip(plugin));
@@ -37702,7 +39664,6 @@ var cmExtensions = (plugin, mobile) => {
   if (plugin.settings.editorFlow) {
     extensions.push(
       flowTypeStateField,
-      atomicSelect,
       editBlockExtensions(),
       preloadFlowEditor,
       flowEditorField,
@@ -37720,7 +39681,7 @@ var cmExtensions = (plugin, mobile) => {
 };
 
 // src/components/MakeMenu/MakeMenu.tsx
-var import_obsidian30 = require("obsidian");
+var import_obsidian38 = require("obsidian");
 
 // src/components/MakeMenu/commands/default.ts
 var default_default2 = [
@@ -37825,7 +39786,7 @@ function resolveCommands(plugin) {
 }
 
 // src/components/MakeMenu/MakeMenu.tsx
-var MakeMenu = class extends import_obsidian30.EditorSuggest {
+var MakeMenu = class extends import_obsidian38.EditorSuggest {
   constructor(app2, plugin) {
     super(app2);
     this.inCmd = false;
@@ -37915,8 +39876,8 @@ var MakeMenu = class extends import_obsidian30.EditorSuggest {
 };
 
 // src/components/StickerMenu/StickerMenu.tsx
-var import_obsidian31 = require("obsidian");
-var StickerMenu = class extends import_obsidian31.EditorSuggest {
+var import_obsidian39 = require("obsidian");
+var StickerMenu = class extends import_obsidian39.EditorSuggest {
   constructor(app2, plugin) {
     super(app2);
     this.inCmd = false;
@@ -37986,7 +39947,7 @@ var StickerMenu = class extends import_obsidian31.EditorSuggest {
 };
 
 // src/main.ts
-var import_obsidian46 = require("obsidian");
+var import_obsidian53 = require("obsidian");
 
 // src/utils/flow/markdownPost.tsx
 var getCMFromElement = (el) => {
@@ -38102,7 +40063,7 @@ var replaceAllEmbed = (el, ctx) => {
 };
 
 // src/components/Spaces/FileTreeView.tsx
-var import_obsidian38 = require("obsidian");
+var import_obsidian47 = require("obsidian");
 
 // node_modules/recoil/es/recoil.js
 function isPromise(p3) {
@@ -39640,7 +41601,7 @@ var hamt_1 = createCommonjsModule(function(module2) {
     return fold(f4, z5, this);
   };
   var forEach = hamt.forEach = function(f4, map) {
-    return fold(function(_5, value, key2) {
+    return fold(function(_7, value, key2) {
       return f4(value, key2, map);
     }, null, map);
   };
@@ -40325,9 +42286,9 @@ var {
 } = Recoil_Snapshot$1;
 var {
   useCallback,
-  useContext: useContext2,
+  useContext: useContext3,
   useEffect,
-  useMemo,
+  useMemo: useMemo2,
   useRef: useRef3,
   useState
 } = bn;
@@ -40368,10 +42329,10 @@ function startNextTreeIfNeeded(store) {
 var AppContext = bn.createContext({
   current: defaultStore
 });
-var useStoreRef = () => useContext2(AppContext);
+var useStoreRef = () => useContext3(AppContext);
 var MutableSourceContext = bn.createContext(null);
 function useRecoilMutableSource() {
-  const mutableSource = useContext2(MutableSourceContext);
+  const mutableSource = useContext3(MutableSourceContext);
   if (mutableSource == null) {
     Recoil_expectationViolation("Attempted to use a Recoil hook outside of a <RecoilRoot>. <RecoilRoot> must be an ancestor of any component that uses Recoil hooks.");
   }
@@ -40395,12 +42356,12 @@ function sendEndOfBatchNotifications(store) {
   if (dirtyAtoms.size) {
     for (const [key2, subscriptions] of storeState.nodeTransactionSubscriptions) {
       if (dirtyAtoms.has(key2)) {
-        for (const [_5, subscription] of subscriptions) {
+        for (const [_7, subscription] of subscriptions) {
           subscription(store);
         }
       }
     }
-    for (const [_5, subscription] of storeState.transactionSubscriptions) {
+    for (const [_7, subscription] of storeState.transactionSubscriptions) {
       subscription(store);
     }
     if (!Recoil_gkx_1("recoil_early_rendering_2021") || storeState.suspendedComponentResolvers.size) {
@@ -40443,7 +42404,7 @@ function Batcher({
   setNotifyBatcherOfChange
 }) {
   const storeRef = useStoreRef();
-  const [_5, setState] = useState([]);
+  const [_7, setState] = useState([]);
   setNotifyBatcherOfChange(() => setState({}));
   useEffect(() => {
     Recoil_Queue.enqueueExecution("Batcher", () => {
@@ -40590,7 +42551,7 @@ function RecoilRoot_INTERNAL({
   };
   const storeRef = useRef3(store);
   storeState = useRef3(initializeState_DEPRECATED != null ? initialStoreState_DEPRECATED(store, initializeState_DEPRECATED) : initializeState != null ? initialStoreState(initializeState) : makeEmptyStoreState$2());
-  const mutableSource = useMemo(() => createMutableSource ? createMutableSource(storeState, () => storeState.current.currentTree.version) : null, [createMutableSource, storeState]);
+  const mutableSource = useMemo2(() => createMutableSource ? createMutableSource(storeState, () => storeState.current.currentTree.version) : null, [createMutableSource, storeState]);
   useEffect(() => () => {
     for (const atomKey of storeRef.current.getState().knownAtoms) {
       cleanUpNode$2(storeRef.current, atomKey);
@@ -40960,7 +42921,7 @@ function validateRecoilValue(recoilValue, hookName) {
 }
 function useRecoilInterface_DEPRECATED() {
   const storeRef = useStoreRef$1();
-  const [_5, forceUpdate] = useState$1([]);
+  const [_7, forceUpdate] = useState$1([]);
   const recoilValuesUsed = useRef$2(/* @__PURE__ */ new Set());
   recoilValuesUsed.current = /* @__PURE__ */ new Set();
   const previousSubscriptions = useRef$2(/* @__PURE__ */ new Set());
@@ -41006,7 +42967,7 @@ function useRecoilInterface_DEPRECATED() {
   });
   useEffect$1(() => {
     const subs = subscriptions.current;
-    return () => subs.forEach((_6, key2) => unsubscribeFrom(key2));
+    return () => subs.forEach((_8, key2) => unsubscribeFrom(key2));
   }, [unsubscribeFrom]);
   return useMemo$1(() => {
     function useSetRecoilState2(recoilState) {
@@ -41112,7 +43073,7 @@ function useRecoilValueLoadable_LEGACY(recoilValue) {
     validateRecoilValue(recoilValue, "useRecoilValueLoadable");
   }
   const storeRef = useStoreRef$1();
-  const [_5, forceUpdate] = useState$1([]);
+  const [_7, forceUpdate] = useState$1([]);
   const componentName = Recoil_useComponentName();
   useEffect$1(() => {
     const store = storeRef.current;
@@ -43197,8 +45158,8 @@ var Recoil_index_34 = Recoil_index.setBatcher;
 var Recoil_index_35 = Recoil_index.snapshot_UNSTABLE;
 
 // src/components/ui/modals/hiddenFilesModal.tsx
-var import_obsidian32 = require("obsidian");
-var HiddenItemsModal = class extends import_obsidian32.Modal {
+var import_obsidian40 = require("obsidian");
+var HiddenItemsModal = class extends import_obsidian40.Modal {
   constructor(plugin) {
     super(plugin.app);
     this.plugin = plugin;
@@ -43247,7 +45208,7 @@ var HiddenFiles = (props2) => {
     ];
     plugin.saveSettings();
   };
-  const saveFile = (_5, value) => {
+  const saveFile = (_7, value) => {
     plugin.settings.hiddenFiles = [...plugin.settings.hiddenFiles, ...value];
     plugin.saveSettings();
   };
@@ -43282,7 +45243,7 @@ var HiddenFiles = (props2) => {
   const addMenu = (e4) => {
     const offset = e4.target.getBoundingClientRect();
     const options = getAllAbstractFilesInVault(props2.plugin, app).map((f4) => ({
-      name: fileNameToString(f4.name),
+      name: fileNameToString3(f4.name),
       value: f4.path
     }));
     showSelectMenu(
@@ -43339,7 +45300,7 @@ var HiddenFiles = (props2) => {
 };
 
 // src/components/Spaces/MainMenu.tsx
-var import_obsidian33 = require("obsidian");
+var import_obsidian41 = require("obsidian");
 
 // src/recoil/pluginState.ts
 var activeFile = Recoil_index_4({
@@ -43427,7 +45388,7 @@ var MainMenu = (props2) => {
   };
   const showMenu = (e4) => {
     const { spaceActive, leafs } = refreshLeafs();
-    const menu = new import_obsidian33.Menu();
+    const menu = new import_obsidian41.Menu();
     !spaceActive && menu.addItem((menuItem) => {
       menuItem.setIcon("lucide-arrow-left");
       menuItem.setTitle(i18n_default.menu.backToSpace);
@@ -43468,6 +45429,13 @@ var MainMenu = (props2) => {
       menuItem.setTitle(i18n_default.menu.newSpace);
       menuItem.onClick((ev) => {
         newSection();
+      });
+    });
+    menu.addItem((menuItem) => {
+      menuItem.setIcon("sync");
+      menuItem.setTitle("Reload Spaces");
+      menuItem.onClick((ev) => {
+        plugin.reloadSpaceDB(false);
       });
     });
     menu.addItem((menuItem) => {
@@ -43918,12 +45886,12 @@ function calculateRange(_ref4) {
 }
 
 // src/components/Spaces/TreeView/FolderTreeView.tsx
-var import_obsidian35 = require("obsidian");
+var import_obsidian43 = require("obsidian");
 var import_classnames6 = __toESM(require_classnames());
 
 // src/components/Spaces/TreeView/SectionView.tsx
 var import_classnames5 = __toESM(require_classnames());
-var import_obsidian34 = require("obsidian");
+var import_obsidian42 = require("obsidian");
 var SectionItem = k3(
   ({
     childCount,
@@ -43947,35 +45915,37 @@ var SectionItem = k3(
     const [activeFile2, setActiveFile] = Recoil_index_14(activeFile);
     const [spaces2, setSpaces] = Recoil_index_14(spaces);
     const space = spaces2.find((f4) => f4.name == data.space);
-    const newFolderInSection = () => {
-      var _a3;
-      let vaultChangeModal = new VaultChangeModal(
-        plugin,
-        ((_a3 = space == null ? void 0 : space.def) == null ? void 0 : _a3.length) > 0 ? getFolderFromPath(app, space.def) : defaultNoteFolder(plugin, activeFile2),
-        "create folder",
-        data.space
-      );
-      vaultChangeModal.open();
-    };
-    const newFileInSection = async () => {
-      var _a3;
-      const newFile = await createNewMarkdownFile(
-        plugin,
-        ((_a3 = space == null ? void 0 : space.def) == null ? void 0 : _a3.length) > 0 ? getFolderFromPath(app, space.def) : defaultNoteFolder(plugin, activeFile2),
-        ""
-      );
-      if (data.space != "/")
-        addPathsToSpace(plugin, data.space, [newFile.path]);
-    };
     const triggerMenu = (e4) => {
-      data.space == "/" ? triggerVaultMenu(e4) : triggerSectionMenu(plugin, data.space, spaces2, e4);
+      data.space == "/" ? triggerVaultMenu(e4) : triggerSectionMenu(plugin, data.space, spaces2, e4, activeFile2);
     };
     const triggerVaultMenu = (e4) => {
       const refreshFileList = () => {
         let event = new CustomEvent(eventTypes.vaultChange);
         window.dispatchEvent(event);
       };
-      const fileMenu = new import_obsidian34.Menu();
+      const fileMenu = new import_obsidian42.Menu();
+      fileMenu.addItem((menuItem) => {
+        menuItem.setIcon("edit");
+        menuItem.setTitle(i18n_default.buttons.createNote);
+        menuItem.onClick((ev) => {
+          newFileInSpace(plugin, space, activeFile2);
+        });
+      });
+      fileMenu.addItem((menuItem) => {
+        menuItem.setIcon("layout-dashboard");
+        menuItem.setTitle(i18n_default.buttons.createCanvas);
+        menuItem.onClick((ev) => {
+          newFileInSpace(plugin, space, activeFile2, true);
+        });
+      });
+      fileMenu.addItem((menuItem) => {
+        menuItem.setIcon("folder-plus");
+        menuItem.setTitle(i18n_default.buttons.createFolder);
+        menuItem.onClick((ev) => {
+          newFolderInSpace(plugin, space, activeFile2);
+        });
+      });
+      fileMenu.addSeparator();
       fileMenu.addItem((menuItem) => {
         menuItem.setTitle(i18n_default.menu.collapseAll);
         menuItem.setIcon("lucide-chevrons-down-up");
@@ -44094,7 +46064,7 @@ var SectionItem = k3(
     }, /* @__PURE__ */ bn.createElement("button", {
       "aria-label": i18n_default.buttons.createFolder,
       onClick: () => {
-        newFolderInSection();
+        newFolderInSpace(plugin, space, activeFile2);
       },
       dangerouslySetInnerHTML: {
         __html: uiIconSet["mk-ui-new-folder"]
@@ -44102,7 +46072,7 @@ var SectionItem = k3(
     }), /* @__PURE__ */ bn.createElement("button", {
       "aria-label": i18n_default.buttons.newNote,
       onClick: () => {
-        newFileInSection();
+        newFileInSpace(plugin, space, activeFile2);
       },
       dangerouslySetInnerHTML: {
         __html: uiIconSet["mk-ui-new-note"]
@@ -44228,7 +46198,7 @@ var TreeItem = k3(
         return;
       }
       const file = getAbstractFileAtPath(app, data.item.path);
-      if (file instanceof import_obsidian35.TFolder) {
+      if (file instanceof import_obsidian43.TFolder) {
         app.dragManager.onDragStart(e4, {
           icon: "lucide-folder",
           source: void 0,
@@ -44276,11 +46246,12 @@ var TreeItem = k3(
       ...handleProps
     }), /* @__PURE__ */ bn.createElement("div", {
       className: (0, import_classnames6.default)(
-        `mk-tree-item ${data.item.folder == "true" ? "nav-folder-title" : "nav-file-title"} ${active && "is-active"} ${selected && "is-selected"}`
+        `mk-tree-item ${data.item.folder == "true" ? "nav-folder-title" : "nav-file-title"} ${active ? "is-active" : ""} ${selected ? "is-selected" : ""}`
       ),
       ref,
       style: {
-        "--spacing": `${indentationWidth * depth - 28}px`
+        "--spacing": `${indentationWidth * depth - 28}px`,
+        "--childrenCount": `${childCount * plugin.settings.spaceRowHeight - 13}px`
       },
       onClick: (e4) => openFileAtTarget(data, e4),
       "data-path": data.item.path,
@@ -44306,9 +46277,9 @@ var TreeItem = k3(
       filePath: data.item.path
     }), /* @__PURE__ */ bn.createElement("div", {
       className: `mk-tree-text ${data.item.folder == "true" ? "nav-folder-title-content" : "nav-file-title-content"}`
-    }, data.file ? data.item.folder == "true" ? data.file.name : fileNameToString(data.file.name) : "", data.item.folder == "false" && data.file && data.file.extension != "md" && /* @__PURE__ */ bn.createElement("span", {
+    }, data.file ? data.item.folder == "true" ? data.file.name : fileNameToString3(data.file.name) : ""), data.item.folder == "false" && data.file && data.file.extension != "md" && /* @__PURE__ */ bn.createElement("span", {
       className: "nav-file-tag"
-    }, (_a2 = data.file) == null ? void 0 : _a2.extension)), !clone ? /* @__PURE__ */ bn.createElement("div", {
+    }, (_a2 = data.file) == null ? void 0 : _a2.extension), !clone ? /* @__PURE__ */ bn.createElement("div", {
       className: "mk-folder-buttons"
     }, /* @__PURE__ */ bn.createElement("button", {
       "aria-label": i18n_default.buttons.moreOptions,
@@ -44345,7 +46316,7 @@ function useForceUpdate() {
 }
 
 // src/components/Spaces/TreeView/FileExplorerVirtualized.tsx
-var import_obsidian36 = require("obsidian");
+var import_obsidian44 = require("obsidian");
 
 // src/utils/ui/dnd.ts
 function getMaxDepth({ previousItem }) {
@@ -44400,9 +46371,6 @@ function getProjection(items, activeItem, overItemIndex, previousItem, nextItem,
   } else if (projectedDepth < minDepth) {
     depth = minDepth;
   }
-  if (previousItem.space != "/" && depth > 1) {
-    return null;
-  }
   if (depth <= activeItem.depth && activeItem.space == previousItem.space) {
     if (!activeItem.sortable || !previousItem.sortable) {
       return null;
@@ -44449,7 +46417,7 @@ var VirtualizedList = bn.memo(
       indentationWidth
     } = props2;
     const parentRef = bn.useRef(null);
-    const rowHeight = (index) => platformIsMobile() ? flattenedTree[index].parentId == null ? 52 : 40 : flattenedTree[index].parentId == null ? 40 : 29;
+    const rowHeight = (index) => platformIsMobile() ? flattenedTree[index].parentId == null ? 52 : 40 : flattenedTree[index].parentId == null ? 40 : plugin.settings.spaceRowHeight;
     const rowVirtualizer = useVirtual({
       size: flattenedTree.length,
       paddingEnd: 24,
@@ -44494,7 +46462,7 @@ var VirtualizedList = bn.memo(
         data: flattenedTree[virtualRow.index],
         disabled: false,
         depth: flattenedTree[virtualRow.index].depth,
-        childCount: 0,
+        childCount: flattenedTree[virtualRow.index].childrenCount,
         indentationWidth,
         indicator: (projected == null ? void 0 : projected.overId) == flattenedTree[virtualRow.index].id ? flattenedTree[virtualRow.index].parentId == null && projected.parentId == null ? { state: 1 /* Top */, depth: projected.depth } : { state: 2 /* Bottom */, depth: projected.depth } : null,
         plugin,
@@ -44547,19 +46515,9 @@ var FileExplorerComponent = (props2) => {
         const itemCollapsed = !((_a3 = expandedFolders2[space.name]) == null ? void 0 : _a3.includes(
           item.path
         ));
-        tree.push(
-          vaulItemToTreeNode(
-            item,
-            space.name,
-            "",
-            1,
-            0,
-            itemCollapsed,
-            spaceSort[0] == "rank" || spaceSort[0] == ""
-          )
-        );
-        if (!itemCollapsed)
-          tree.push(
+        let items = [];
+        if (!itemCollapsed) {
+          items.push(
             ...flattenedTreeFromVaultItems(
               item.path,
               space.name,
@@ -44570,6 +46528,22 @@ var FileExplorerComponent = (props2) => {
               spaceSort[1]
             )
           );
+        }
+        items.splice(
+          0,
+          0,
+          vaulItemToTreeNode(
+            item,
+            space.name,
+            "",
+            1,
+            0,
+            itemCollapsed,
+            spaceSort[0] == "rank" || spaceSort[0] == "",
+            items.length
+          )
+        );
+        tree.push(...items);
       });
     return tree;
   };
@@ -44581,18 +46555,9 @@ var FileExplorerComponent = (props2) => {
     });
     if (!props2.activeSpace) {
       const vaultCollapsed = !expandedSpaces.includes("/");
-      tree.push({
-        id: "/",
-        parentId: null,
-        depth: 0,
-        index: 0,
-        space: "/",
-        item: null,
-        collapsed: vaultCollapsed,
-        sortable: vaultSort[0] == "rank"
-      });
+      let items = [];
       if (!vaultCollapsed)
-        tree.push(
+        items.push(
           ...flattenedTreeFromVaultItems(
             "/",
             "/",
@@ -44603,6 +46568,18 @@ var FileExplorerComponent = (props2) => {
             vaultSort[1]
           )
         );
+      items.splice(0, 0, {
+        id: "/",
+        parentId: null,
+        depth: 0,
+        index: 0,
+        space: "/",
+        item: null,
+        collapsed: vaultCollapsed,
+        sortable: vaultSort[0] == "rank",
+        childrenCount: items.length
+      });
+      tree.push(...items);
     }
     if (nextTreeScrollPath.current) {
       const index = tree.findIndex(
@@ -44671,8 +46648,9 @@ var FileExplorerComponent = (props2) => {
     if (evt.detail)
       revealFile(evt.detail.file);
   };
-  h2(() => {
-    const spaceItems = retrieveSpaceItems(plugin, spaces2);
+  const retrieveData = async (folders) => {
+    const spaces3 = retrieveSpaces(plugin);
+    const spaceItems = retrieveSpaceItems(plugin, spaces3);
     setVaultItems((g4) => ({
       ...g4,
       ...Object.keys(spaceItems).reduce(
@@ -44689,9 +46667,7 @@ var FileExplorerComponent = (props2) => {
         {}
       )
     }));
-  }, [spaces2]);
-  const retrieveData = async (folders) => {
-    setSpaces(retrieveSpaces(plugin));
+    setSpaces(spaces3);
     retrieveFolders(plugin, folders).then(
       (f4) => setVaultItems((g4) => ({ ...g4, ...f4 }))
     );
@@ -44715,7 +46691,7 @@ var FileExplorerComponent = (props2) => {
     };
   }, [flatFolders]);
   const spaceChangeEvent = (evt) => {
-    if (evt.detail.changeType == "vault" || evt.detail.changeType == "space") {
+    if (evt.detail.changeType == "vault" || evt.detail.changeType == "space" || evt.detail.changeType == "sync") {
       retrieveData(flatFolders);
     }
   };
@@ -44817,10 +46793,10 @@ var FileExplorerComponent = (props2) => {
   }
   function handleDragEnd({ active, over }) {
     resetState();
-    moveFile(active, over);
+    moveFile2(active, over);
   }
-  const moveFile = async (active, over) => {
-    var _a2, _b2;
+  const moveFile2 = async (active, over) => {
+    var _a2, _b2, _c2, _d2, _e2, _f, _g, _h, _i, _j;
     if (projected) {
       const clonedItems = flattenedTree;
       const overIndex2 = clonedItems.findIndex(({ id: id2 }) => id2 === over.id);
@@ -44846,13 +46822,80 @@ var FileExplorerComponent = (props2) => {
       const { depth, overId: overId2, parentId } = projected;
       const parentItem = clonedItems.find(({ id: id2 }) => id2 === parentId);
       if (overItem2.space != activeItem.space || overItem2.space != "/") {
+        if (parentId != activeTreeItem.parentId) {
+          const newParent = (parentItem == null ? void 0 : parentItem.item) ? parentItem.item.folder == "true" ? parentItem.item.path : parentItem.item.parent : "/";
+          const newRank = (_b2 = (_a2 = overItem2.item) == null ? void 0 : _a2.rank) != null ? _b2 : "-1";
+          const newPath = newParent == "/" ? activeItem.file.name : `${newParent}/${activeItem.file.name}`;
+          if (newPath == activeItem.item.path) {
+            removePathsFromSpace(plugin, activeItem.space, [activeTreeItem.item.path]);
+            if (!(((_c2 = overSpace == null ? void 0 : overSpace.def) == null ? void 0 : _c2.length) > 0) && !(parentItem == null ? void 0 : parentItem.item)) {
+              insertSpaceItemAtIndex(
+                plugin,
+                overItem2.space,
+                activeItem.item.path,
+                parseInt(newRank)
+              );
+            }
+            return;
+          } else {
+            if (plugin.app.vault.getAbstractFileByPath(newPath)) {
+              new import_obsidian44.Notice(i18n_default.notice.duplicateFile);
+              return;
+            }
+          }
+          removePathsFromSpace(plugin, activeItem.space, [activeTreeItem.item.path]);
+          if (!(((_d2 = overSpace == null ? void 0 : overSpace.def) == null ? void 0 : _d2.length) > 0) && !(parentItem == null ? void 0 : parentItem.item)) {
+            insertSpaceItemAtIndex(
+              plugin,
+              overItem2.space,
+              activeItem.item.path,
+              parseInt(newRank)
+            );
+          }
+          moveAFileToNewParentAtIndex(
+            plugin,
+            activeTreeItem.item,
+            newParent,
+            vaultItems,
+            parseInt(newRank)
+          );
+          return;
+        }
+        if (overItem2.space == activeItem.space && overItem2.space != "/") {
+          const newRank = (_f = (_e2 = overItem2.item) == null ? void 0 : _e2.rank) != null ? _f : "-1";
+          if (activeTreeItem.parentId == overItem2.space + "//" && (overIsSection || parentId == overItem2.space + "//")) {
+            insertSpaceItemAtIndex(
+              plugin,
+              overItem2.space,
+              activeItem.item.path,
+              parseInt(newRank)
+            );
+            return;
+          }
+          if (activeTreeItem.parentId == overItem2.id) {
+            updateFileRank(
+              plugin,
+              activeTreeItem.item,
+              vaultItems,
+              -1
+            );
+            return;
+          }
+          updateFileRank(
+            plugin,
+            activeTreeItem.item,
+            vaultItems,
+            parseInt(newRank)
+          );
+          return;
+        }
         if (overItem2.space == "/") {
           return;
         }
         if (parentId != overItem2.space + "//" && parentId != null) {
           return;
         }
-        if (activeItem.space != overItem2.space && ((_a2 = overSpace == null ? void 0 : overSpace.def) == null ? void 0 : _a2.length) > 0) {
+        if (activeItem.space != overItem2.space && ((_g = overSpace == null ? void 0 : overSpace.def) == null ? void 0 : _g.length) > 0) {
           moveAFileToNewParentAtIndex(
             plugin,
             activeTreeItem.item,
@@ -44860,18 +46903,21 @@ var FileExplorerComponent = (props2) => {
             vaultItems,
             parseInt(overItem2.item.rank)
           );
+          if (activeItem.space != "/") {
+            removePathsFromSpace(plugin, activeItem.space, [activeTreeItem.item.path]);
+          }
         } else {
           insertSpaceItemAtIndex(
             plugin,
             overItem2.space,
             activeItem.item.path,
-            parseInt((_b2 = overItem2.item) == null ? void 0 : _b2.rank)
+            parseInt((_h = overItem2.item) == null ? void 0 : _h.rank)
           );
         }
         return;
       }
       if (parentId != activeTreeItem.parentId) {
-        if (overIsSection) {
+        if (overIsSection && activeTreeItem.parentId == "///") {
           updateFileRank(
             plugin,
             activeTreeItem.item,
@@ -44880,10 +46926,11 @@ var FileExplorerComponent = (props2) => {
           );
           return;
         }
-        const newParent = parentItem ? parentItem.item.folder == "true" ? parentItem.item.path : parentItem.item.parent : "/";
+        const newParent = (parentItem == null ? void 0 : parentItem.item) ? parentItem.item.folder == "true" ? parentItem.item.path : parentItem.item.parent : "/";
+        const newRank = (_j = (_i = overItem2.item) == null ? void 0 : _i.rank) != null ? _j : "-1";
         const newPath = newParent == "/" ? activeItem.file.name : `${newParent}/${activeItem.file.name}`;
         if (plugin.app.vault.getAbstractFileByPath(newPath)) {
-          new import_obsidian36.Notice(i18n_default.notice.duplicateFile);
+          new import_obsidian44.Notice(i18n_default.notice.duplicateFile);
           return;
         }
         moveAFileToNewParentAtIndex(
@@ -44891,9 +46938,18 @@ var FileExplorerComponent = (props2) => {
           activeTreeItem.item,
           newParent,
           vaultItems,
-          parseInt(overItem2.item.rank)
+          parseInt(newRank)
         );
       } else {
+        if (activeTreeItem.parentId == overItem2.id) {
+          updateFileRank(
+            plugin,
+            activeTreeItem.item,
+            vaultItems,
+            -1
+          );
+          return;
+        }
         updateFileRank(
           plugin,
           activeTreeItem.item,
@@ -45013,6 +47069,18 @@ var SpaceSwitcher = (props2) => {
     let vaultChangeModal = new EditSpaceModal(props2.plugin, "", "create");
     vaultChangeModal.open();
   };
+  h2(() => {
+    loadCachedSpaces();
+  }, []);
+  const loadCachedSpaces = () => {
+    setActiveView(plugin.settings.activeView);
+    setActiveViewSpace(plugin.settings.activeSpace);
+  };
+  h2(() => {
+    plugin.settings.activeSpace = activeViewSpace2;
+    plugin.settings.activeView = activeView2;
+    plugin.saveSettings();
+  }, [activeView2, activeViewSpace2]);
   return props2.plugin.settings.spacesCompactMode ? /* @__PURE__ */ bn.createElement("div", {
     className: "mk-flow-bar-compact"
   }, /* @__PURE__ */ bn.createElement(MainMenu, {
@@ -45072,7 +47140,7 @@ var SpaceSwitcher = (props2) => {
   }, pinnedSpaces.map((pin) => {
     var _a2;
     return /* @__PURE__ */ bn.createElement("div", {
-      onContextMenu: (e4) => triggerSectionMenu(props2.plugin, pin.name, spaces2, e4),
+      onContextMenu: (e4) => triggerSectionMenu(props2.plugin, pin.name, spaces2, e4, activeFile2),
       className: (0, import_classnames7.default)(
         "mk-sidebar-item mk-sidebar-space",
         activeView2 == "space" && activeViewSpace2 == pin.name && "mk-sidebar-item-active"
@@ -45089,18 +47157,116 @@ var SpaceSwitcher = (props2) => {
   }, " "))));
 };
 
+// src/components/ui/modals/tagChangeModal.ts
+var import_obsidian45 = require("obsidian");
+var TagChangeModal = class extends import_obsidian45.Modal {
+  constructor(plugin, action, tag) {
+    super(plugin.app);
+    this.action = action;
+    this.plugin = plugin;
+    this.tag = tag;
+  }
+  onOpen() {
+    let { contentEl } = this;
+    let myModal = this;
+    let headerText;
+    if (this.action === "rename") {
+      headerText = "Rename Tag";
+    } else if (this.action === "create tag") {
+      headerText = "New Tag";
+    }
+    const headerEl = contentEl.createEl("div", { text: headerText });
+    headerEl.addClass("modal-title");
+    const inputEl = contentEl.createEl("input");
+    inputEl.style.cssText = "width: 100%; height: 2.5em; margin-bottom: 15px;";
+    if (this.action === "rename") {
+      inputEl.value = this.tag;
+    }
+    inputEl.focus();
+    let changeButtonText;
+    if (this.action === "rename") {
+      changeButtonText = "Rename Tag";
+    } else if (this.action === "create tag") {
+      changeButtonText = "Create Tag";
+    }
+    const changeButton = contentEl.createEl("button", {
+      text: changeButtonText
+    });
+    const cancelButton = contentEl.createEl("button", {
+      text: i18n_default.buttons.cancel
+    });
+    cancelButton.style.cssText = "float: right;";
+    cancelButton.addEventListener("click", () => {
+      myModal.close();
+    });
+    const onClickAction = async () => {
+      let newName = inputEl.value;
+      if (this.action === "rename") {
+        renameTag(this.plugin, this.tag, newName);
+      } else if (this.action === "create tag") {
+        addTag(this.plugin, newName);
+      }
+      myModal.close();
+    };
+    changeButton.addEventListener("click", onClickAction);
+    inputEl.addEventListener("keydown", (e4) => {
+      if (e4.key === "Enter") {
+        e4.preventDefault();
+        onClickAction();
+      }
+      ;
+    });
+  }
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
+  }
+};
+
 // src/components/Spaces/TagContextList/TagContextList.tsx
-var import_lodash6 = __toESM(require_lodash());
-var import_obsidian37 = require("obsidian");
+var import_lodash8 = __toESM(require_lodash());
+var import_obsidian46 = require("obsidian");
 var TagContextList = (props2) => {
-  const [tags, setTags] = p2([]);
+  const [allTags, setAllTags] = p2([]);
+  const openContextMenu = async (e4, tag) => {
+    const fileMenu = new import_obsidian46.Menu();
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle("Rename Tag");
+      menuItem.setIcon("edit");
+      menuItem.onClick((ev) => {
+        let vaultChangeModal = new TagChangeModal(
+          props2.plugin,
+          "rename",
+          tag
+        );
+        vaultChangeModal.open();
+      });
+    });
+    fileMenu.addItem((menuItem) => {
+      menuItem.setTitle("Delete Tag");
+      menuItem.setIcon("trash");
+      menuItem.onClick((ev) => {
+        deleteTag(props2.plugin, tag, true);
+      });
+    });
+    if (isMouseEvent(e4)) {
+      fileMenu.showAtPosition({ x: e4.pageX, y: e4.pageY });
+    } else {
+      fileMenu.showAtPosition({
+        x: e4.nativeEvent.locationX,
+        y: e4.nativeEvent.locationY
+      });
+    }
+  };
   const openContext = async (tag) => {
     openTag(tag, props2.plugin, false);
   };
   h2(() => {
     window.addEventListener(eventTypes.tagsChange, refreshTags);
+    window.addEventListener(eventTypes.spacesChange, refreshTags);
     return () => {
       window.removeEventListener(eventTypes.tagsChange, refreshTags);
+      window.removeEventListener(eventTypes.spacesChange, refreshTags);
     };
   }, []);
   const refreshTags = () => {
@@ -45110,21 +47276,70 @@ var TagContextList = (props2) => {
       getFolderPathFromString(props2.plugin.settings.tagContextFolder)
     );
     const f4 = (_a2 = folder == null ? void 0 : folder.children.filter(
-      (f5) => f5 instanceof import_obsidian37.TFile && f5.extension == "mdb" && f5.name.charAt(0) == "#"
-    ).map((f5) => fileNameToString(f5.name))) != null ? _a2 : [];
-    Promise.all(f4.map((t4) => contextShouldExist(props2.plugin, t4).then((g4) => g4 ? t4 : null))).then((f5) => setTags((0, import_lodash6.uniq)([...f5.filter((g4) => g4), ...Object.keys(app.metadataCache.getTags())])));
+      (f5) => f5 instanceof import_obsidian46.TFile && f5.extension == "mdb" && f5.name.charAt(0) == "#"
+    ).map((f5) => tagPathToTag(fileNameToString3(f5.name)))) != null ? _a2 : [];
+    setAllTags((0, import_lodash8.uniq)([...f4.filter((g4) => g4), ...Object.keys(app.metadataCache.getTags())]));
   };
   h2(() => {
     refreshTags();
   }, []);
+  const tags = F(() => {
+    return (0, import_lodash8.uniq)(allTags.reduce((p3, c4) => {
+      const r3 = c4.split("/");
+      const allSubTags = r3.reduce((a5, b4, i4, array) => {
+        return [...a5, array.slice(0, i4 + 1).join("/")];
+      }, []);
+      return [...p3, ...allSubTags];
+    }, [])).map((f4) => {
+      const r3 = f4.split("/");
+      return {
+        tag: f4,
+        name: stringFromTag(r3[r3.length - 1]),
+        parent: r3.length > 1 ? r3.slice(0, r3.length - 1).join("/") : null,
+        depth: r3.length - 1
+      };
+    }).sort(compareByFieldCaseInsensitive("tag", true));
+  }, [allTags]);
+  const indentationWidth = 24;
   return /* @__PURE__ */ bn.createElement("div", {
-    className: "tag-container"
+    className: "tag-container mk-context-tree"
   }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-tree-wrapper"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-section"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-section-title"
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-tree-text"
+  }, "Context")), /* @__PURE__ */ bn.createElement("div", null, /* @__PURE__ */ bn.createElement("button", {
+    "aria-label": "New Tag",
+    className: "mk-inline-button",
+    onClick: () => {
+      let vaultChangeModal = new TagChangeModal(
+        props2.plugin,
+        "create tag"
+      );
+      vaultChangeModal.open();
+    },
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-plus"]
+    }
+  })))), /* @__PURE__ */ bn.createElement("div", {
     className: "tree-item"
   }, tags.map((f4) => /* @__PURE__ */ bn.createElement("div", {
-    className: "tree-item-self is-clickable",
-    onClick: () => openContext(f4)
-  }, f4))));
+    className: "tree-item-self is-clickable mk-context-item",
+    onContextMenu: (e4) => openContextMenu(e4, f4.tag),
+    onClick: () => openContext(f4.tag),
+    style: {
+      "--spacing": `${indentationWidth * f4.depth}px`
+    }
+  }, /* @__PURE__ */ bn.createElement("div", {
+    className: "mk-file-icon"
+  }, /* @__PURE__ */ bn.createElement("button", {
+    dangerouslySetInnerHTML: {
+      __html: uiIconSet["mk-ui-tags"]
+    }
+  })), f4.name))));
 };
 
 // src/components/Spaces/MainList.tsx
@@ -45192,14 +47407,14 @@ var MainList = (props2) => {
 var FILE_TREE_VIEW_TYPE = "mk-file-view";
 var VIEW_DISPLAY_TEXT = "Spaces";
 var ICON = "layout-grid";
-var FileTreeView = class extends import_obsidian38.ItemView {
+var FileTreeView = class extends import_obsidian47.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.navigation = false;
     this.plugin = plugin;
   }
   revealInFolder(file) {
-    if (file instanceof import_obsidian38.TFolder) {
+    if (file instanceof import_obsidian47.TFolder) {
       this.plugin.app.workspace.activeLeaf.setViewState({
         type: CONTEXT_VIEW_TYPE,
         state: { type: "folder", folder: file.path }
@@ -45253,7 +47468,7 @@ var FileTreeView = class extends import_obsidian38.ItemView {
 };
 
 // src/settings.ts
-var import_obsidian39 = require("obsidian");
+var import_obsidian48 = require("obsidian");
 var DEFAULT_SETTINGS = {
   filePreviewOnHover: false,
   markSans: false,
@@ -45267,12 +47482,18 @@ var DEFAULT_SETTINGS = {
   saveAllContextToFrontmatter: false,
   editorFlowStyle: "seamless",
   autoOpenFileContext: false,
+  activeView: "root",
+  hideFrontmatter: true,
+  activeSpace: "",
   spacesCompactMode: false,
   spacesEnabled: true,
   spacesPerformance: false,
+  collapsedTags: [],
   enableFolderNote: true,
+  folderIndentationLines: true,
   revealActiveFile: false,
   spacesStickers: true,
+  spaceRowHeight: 29,
   spacesDisablePatch: false,
   folderNoteInsideFolder: true,
   sidebarTabs: true,
@@ -45297,9 +47518,11 @@ var DEFAULT_SETTINGS = {
   hiddenExtensions: ["mdb"],
   vaultSort: ["rank", true],
   newFileLocation: "root",
-  newFileFolderPath: ""
+  newFileFolderPath: "",
+  inlineBacklinks: true,
+  inlineContext: true
 };
-var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
+var MakeMDPluginSettingsTab = class extends import_obsidian48.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -45312,29 +47535,36 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
     let { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: i18n_default.settings.sectionAppearance });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.sidebarTabs.name).setDesc(i18n_default.settings.sidebarTabs.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.sidebarTabs.name).setDesc(i18n_default.settings.sidebarTabs.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.sidebarTabs).onChange((value) => {
         this.plugin.settings.sidebarTabs = value;
         this.plugin.saveSettings();
         document.body.classList.toggle("mk-hide-tabs", !value);
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.hideRibbon.name).setDesc(i18n_default.settings.hideRibbon.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.hideRibbon.name).setDesc(i18n_default.settings.hideRibbon.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.showRibbon).onChange((value) => {
         this.plugin.settings.showRibbon = value;
         this.plugin.saveSettings();
         document.body.classList.toggle("mk-hide-ribbon", !value);
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.compactMode.name).setDesc(i18n_default.settings.compactMode.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.compactMode.name).setDesc(i18n_default.settings.compactMode.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.spacesCompactMode).onChange((value) => {
         this.plugin.settings.spacesCompactMode = value;
         this.plugin.detachFileTreeLeafs();
         this.plugin.saveSettings();
       })
     );
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.folderIndentationLines.name).setDesc(i18n_default.settings.folderIndentationLines.desc).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.folderIndentationLines).onChange((value) => {
+        this.plugin.settings.folderIndentationLines = value;
+        this.plugin.saveSettings();
+        document.body.classList.toggle("mk-folder-lines", !value);
+      })
+    );
     containerEl.createEl("h2", { text: i18n_default.settings.sectionSidebar });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.spaces.name).setDesc(i18n_default.settings.spaces.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.spaces.name).setDesc(i18n_default.settings.spaces.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.spacesEnabled).onChange((value) => {
         this.plugin.settings.spacesEnabled = value;
         this.plugin.saveSettings();
@@ -45346,54 +47576,66 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.spacesStickers.name).setDesc(i18n_default.settings.spacesStickers.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.spacesStickers.name).setDesc(i18n_default.settings.spacesStickers.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.spacesStickers).onChange((value) => {
         this.plugin.settings.spacesStickers = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.folderNote.name).setDesc(i18n_default.settings.folderNote.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.folderNote.name).setDesc(i18n_default.settings.folderNote.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.enableFolderNote).onChange((value) => {
         this.plugin.settings.enableFolderNote = value;
         this.plugin.saveSettings();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.activeFile.name).setDesc(i18n_default.settings.activeFile.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.activeFile.name).setDesc(i18n_default.settings.activeFile.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.revealActiveFile).onChange((value) => {
         this.plugin.settings.revealActiveFile = value;
         this.plugin.saveSettings();
       })
     );
     containerEl.createEl("h2", { text: "Context" });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.openFileContext.name).setDesc(i18n_default.settings.openFileContext.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.inlineContextExplorer.name).setDesc(i18n_default.settings.inlineContextExplorer.desc).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.inlineContext).onChange((value) => {
+        this.plugin.settings.inlineContext = value;
+        this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.hideFrontmatter.name).setDesc(i18n_default.settings.hideFrontmatter.desc).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.hideFrontmatter).onChange((value) => {
+        this.plugin.settings.hideFrontmatter = value;
+        this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.openFileContext.name).setDesc(i18n_default.settings.openFileContext.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.autoOpenFileContext).onChange((value) => {
         this.plugin.settings.autoOpenFileContext = value;
         this.plugin.saveSettings();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.syncContextToFrontmatter.name).setDesc(i18n_default.settings.syncContextToFrontmatter.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.syncContextToFrontmatter.name).setDesc(i18n_default.settings.syncContextToFrontmatter.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.saveAllContextToFrontmatter).onChange((value) => {
         this.plugin.settings.saveAllContextToFrontmatter = value;
         this.plugin.saveSettings();
       })
     );
     containerEl.createEl("h2", { text: i18n_default.settings.sectionFlow });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.internalLinkFlowEditor.name).setDesc(i18n_default.settings.internalLinkFlowEditor.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.internalLinkFlowEditor.name).setDesc(i18n_default.settings.internalLinkFlowEditor.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.internalLinkClickFlow).onChange((value) => {
         this.plugin.settings.internalLinkClickFlow = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.editorFlowReplace.name).setDesc(i18n_default.settings.editorFlowReplace.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.editorFlowReplace.name).setDesc(i18n_default.settings.editorFlowReplace.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.editorFlow).onChange((value) => {
         this.plugin.settings.editorFlow = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.editorFlowStyle.name).setDesc(i18n_default.settings.editorFlowStyle.desc).addDropdown((dropdown) => {
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.editorFlowStyle.name).setDesc(i18n_default.settings.editorFlowStyle.desc).addDropdown((dropdown) => {
       dropdown.addOption("classic", i18n_default.settings.editorFlowStyle.classic);
       dropdown.addOption("seamless", i18n_default.settings.editorFlowStyle.seamless);
       dropdown.addOption("minimal", i18n_default.settings.editorFlowStyle.minimal);
@@ -45410,15 +47652,21 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
           document.body.classList.toggle("mk-flow-minimal", true);
       });
     });
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.inlineBacklinks.name).setDesc(i18n_default.settings.inlineBacklinks.desc).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.inlineBacklinks).onChange((value) => {
+        this.plugin.settings.inlineBacklinks = value;
+        this.plugin.saveSettings();
+      })
+    );
     containerEl.createEl("h2", { text: i18n_default.settings.sectionEditor });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.editorMakerMode.name).setDesc(i18n_default.settings.editorMakerMode.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.editorMakerMode.name).setDesc(i18n_default.settings.editorMakerMode.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.makerMode).onChange((value) => {
         this.plugin.settings.makerMode = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.makeChar.name).setDesc(i18n_default.settings.makeChar.desc).addText((text2) => {
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.makeChar.name).setDesc(i18n_default.settings.makeChar.desc).addText((text2) => {
       text2.setValue(this.plugin.settings.menuTriggerChar).onChange(async (value) => {
         if (value.trim().length < 1) {
           text2.setValue(this.plugin.settings.menuTriggerChar);
@@ -45433,21 +47681,21 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.editorMakePlacholder.name).setDesc(i18n_default.settings.editorMakePlacholder.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.editorMakePlacholder.name).setDesc(i18n_default.settings.editorMakePlacholder.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.makeMenuPlaceholder).onChange((value) => {
         this.plugin.settings.makeMenuPlaceholder = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.mobileMakeBar.name).setDesc(i18n_default.settings.mobileMakeBar.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.mobileMakeBar.name).setDesc(i18n_default.settings.mobileMakeBar.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.mobileMakeBar).onChange((value) => {
         this.plugin.settings.mobileMakeBar = value;
         this.plugin.saveSettings();
         this.refreshView();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.inlineStyler.name).setDesc(i18n_default.settings.inlineStyler.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.inlineStyler.name).setDesc(i18n_default.settings.inlineStyler.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inlineStyler).onChange((value) => {
         this.plugin.settings.inlineStyler = value;
         this.plugin.saveSettings();
@@ -45455,25 +47703,25 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
       })
     );
     containerEl.createEl("h2", { text: i18n_default.settings.sectionAdvanced });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.spacesFileExplorerDual.name).setDesc(i18n_default.settings.spacesFileExplorerDual.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.spacesFileExplorerDual.name).setDesc(i18n_default.settings.spacesFileExplorerDual.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.spacesDisablePatch).onChange((value) => {
         this.plugin.settings.spacesDisablePatch = value;
         this.plugin.saveSettings();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.folderNoteLocation.name).setDesc(i18n_default.settings.folderNoteLocation.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.folderNoteLocation.name).setDesc(i18n_default.settings.folderNoteLocation.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.folderNoteInsideFolder).onChange((value) => {
         this.plugin.settings.folderNoteInsideFolder = value;
         this.plugin.saveSettings();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.spacesPerformance.name).setDesc(i18n_default.settings.spacesPerformance.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.spacesPerformance.name).setDesc(i18n_default.settings.spacesPerformance.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.spacesPerformance).onChange((value) => {
         this.plugin.settings.spacesPerformance = value;
         this.plugin.saveSettings();
       })
     );
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.spacesDeleteOption.name).setDesc(i18n_default.settings.spacesDeleteOption.desc).addDropdown((dropdown) => {
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.spacesDeleteOption.name).setDesc(i18n_default.settings.spacesDeleteOption.desc).addDropdown((dropdown) => {
       dropdown.addOption(
         "permanent",
         i18n_default.settings.spacesDeleteOptions.permanant
@@ -45489,7 +47737,7 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
         this.plugin.saveSettings();
       });
     });
-    new import_obsidian39.Setting(containerEl).setName(i18n_default.settings.inlineStylerColor.name).setDesc(i18n_default.settings.inlineStylerColor.desc).addToggle(
+    new import_obsidian48.Setting(containerEl).setName(i18n_default.settings.inlineStylerColor.name).setDesc(i18n_default.settings.inlineStylerColor.desc).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inlineStylerColors).onChange((value) => {
         this.plugin.settings.inlineStylerColors = value;
         this.plugin.saveSettings();
@@ -45500,7 +47748,7 @@ var MakeMDPluginSettingsTab = class extends import_obsidian39.PluginSettingTab {
 };
 
 // src/components/Blink/Blink.tsx
-var import_obsidian40 = require("obsidian");
+var import_obsidian49 = require("obsidian");
 
 // src/components/Blink/BlinkComponent.tsx
 var BlinkComponent = bn.forwardRef(
@@ -45524,7 +47772,7 @@ var BlinkComponent = bn.forwardRef(
         props2.plugin,
         app
       ).map((f4) => ({
-        name: fileNameToString(f4.name),
+        name: fileNameToString3(f4.name),
         description: f4.path,
         value: f4.path
       }));
@@ -45563,7 +47811,7 @@ var BlinkComponent = bn.forwardRef(
       value: [],
       options: allItems,
       defaultOptions: defaultOptions3,
-      saveOptions: (_5, items) => selectItem(items[0]),
+      saveOptions: (_7, items) => selectItem(items[0]),
       placeholder: i18n_default.labels.blinkPlaceholder,
       searchable: true,
       showAll: true
@@ -45584,7 +47832,7 @@ var BlinkComponent = bn.forwardRef(
 );
 
 // src/components/Blink/Blink.tsx
-var Blink = class extends import_obsidian40.Modal {
+var Blink = class extends import_obsidian49.Modal {
   constructor(app2, plugin) {
     super(app2);
     this.ref = bn.createRef();
@@ -45617,9 +47865,9 @@ var Blink = class extends import_obsidian40.Modal {
 };
 
 // src/components/ContextView/MDBFileViewer.tsx
-var import_obsidian41 = require("obsidian");
+var import_obsidian50 = require("obsidian");
 var MDB_FILE_VIEWER_TYPE = "make-mdb-viewer";
-var MDBFileViewer = class extends import_obsidian41.FileView {
+var MDBFileViewer = class extends import_obsidian50.FileView {
   constructor(leaf, plugin) {
     super(leaf);
     this.navigation = true;
@@ -45686,386 +47934,11 @@ var MDBFileViewer = class extends import_obsidian41.FileView {
 };
 
 // src/components/FileContextView/FileContextView.tsx
-var import_obsidian43 = require("obsidian");
-
-// src/components/FileContextView/FileContextList.tsx
-var import_lodash7 = __toESM(require_lodash());
-var import_obsidian42 = require("obsidian");
-var FileContextList = (props2) => {
-  const { path } = props2;
-  const {
-    tableData,
-    newColumn,
-    cols,
-    tagContexts,
-    contextTable,
-    folderPath,
-    isFolderContext,
-    saveColumn,
-    hideColumn,
-    delColumn,
-    sortColumn,
-    updateFieldValue,
-    updateValue,
-    loadContextFields,
-    predicate
-  } = q2(MDBContext);
-  const [collapsed, setCollapsed] = p2(true);
-  const fileContext = F(() => {
-    const td = tableData ? {
-      folder: {
-        cols: tableData.cols.filter(
-          (f4) => f4.name != "File" && f4.type != "fileprop" && f4.hidden != "true" && f4.type != "preview"
-        ),
-        data: tableData.rows.find((r3) => r3.File == path),
-        dataIndex: tableData.rows.findIndex((r3) => r3.File == path)
-      }
-    } : {};
-    const tags = tagContexts.reduce(
-      (p3, c4) => contextTable[c4] ? {
-        ...p3,
-        [c4]: {
-          cols: contextTable[c4].cols.filter(
-            (f4) => f4.name != "File" && f4.type != "fileprop" && f4.hidden != "true" && f4.type != "preview"
-          ),
-          data: contextTable[c4].rows.find(
-            (r3, index) => index == parseInt(props2.path)
-          ),
-          dataIndex: contextTable[c4].rows.findIndex(
-            (r3) => r3.File == path
-          )
-        }
-      } : p3,
-      {}
-    );
-    return {
-      ...tags,
-      ...td
-    };
-  }, [tableData, contextTable, tagContexts, path]);
-  const showNewMenu = (e4) => {
-    const offset = e4.target.getBoundingClientRect();
-    const files = [path].map((f4) => getAbstractFileAtPath(app, f4)).filter((f4) => f4 instanceof import_obsidian42.TFile);
-    const types = guestimateTypes(
-      files.map((f4) => f4.path),
-      props2.plugin,
-      false
-    );
-    const fmFields = files.reduce((p3, c4) => {
-      const fm = frontMatterForFile(c4);
-      const fmKeys = uniqCaseInsensitive(frontMatterKeys(fm));
-      return (0, import_lodash7.uniq)([...p3, ...fmKeys]);
-    }, []).filter((f4) => !tableData.cols.some((g4) => g4.name == f4));
-    const allTypes = [
-      ...fmFields.map((f4) => ({
-        name: f4,
-        description: i18n_default.labels.syncFrontmatterProperty,
-        value: "fm." + f4 + "." + yamlTypeToMDBType(types[f4])
-      })),
-      ...fieldTypes.filter((f4) => f4.restricted != true).map((f4) => ({
-        name: f4.label,
-        description: i18n_default.labels.newProperty,
-        value: "type." + f4.type
-      }))
-    ];
-    const uniqueNameFromString2 = (name, cols2) => {
-      let newName = name;
-      if (cols2.includes(newName)) {
-        let append = 1;
-        while (cols2.includes(newName)) {
-          newName = name + append.toString();
-          append += 1;
-        }
-      }
-      return newName;
-    };
-    const saveOptions = (_5, values) => {
-      const newValue = values[0];
-      const newType = newValue.split(".");
-      if (newType[0] == "fm") {
-        newColumn({
-          name: uniqueNameFromString2(
-            newType[1],
-            tableData.cols.map((f4) => f4.name)
-          ),
-          schemaId: tableData.schema.id,
-          table: "",
-          type: newType[2]
-        });
-      } else if (newType[0] == "type") {
-        newColumn({
-          name: uniqueNameFromString2(
-            newType[1],
-            tableData.cols.map((f4) => f4.name)
-          ),
-          schemaId: tableData.schema.id,
-          table: "",
-          type: newType[1]
-        });
-      }
-    };
-    showSelectMenu(
-      { x: offset.left, y: offset.top + 30 },
-      {
-        multi: false,
-        editable: false,
-        value: [],
-        saveOptions,
-        placeholder: i18n_default.labels.propertyItemSelectPlaceholder,
-        searchable: true,
-        options: allTypes,
-        showAll: true
-      }
-    );
-  };
-  const saveField = (field, oldField) => {
-    if (field.name.length > 0) {
-      if (field.name != oldField.name || field.type != oldField.type || field.value != oldField.value || field.attrs != oldField.attrs) {
-        const saveResult = saveColumn(field, oldField);
-      }
-    }
-  };
-  const saveContext = (field, oldField, value) => {
-    const newContext = tagFromString(value[0]);
-    initiateContextIfNotExists(props2.plugin, newContext).then((f4) => {
-      if (f4) {
-        return insertContextItems(
-          props2.plugin,
-          optionValuesForColumn(
-            field.name,
-            field.table == "" ? tableData : contextTable[field.table]
-          ),
-          newContext
-        );
-      }
-    }).then((f4) => loadContextFields(newContext));
-    const newField = {
-      ...field,
-      value: newContext != null ? newContext : ""
-    };
-    saveColumn(newField, oldField);
-  };
-  const showMenu = (e4, field) => {
-    const offset = e4.target.getBoundingClientRect();
-    const options = optionValuesForColumn(
-      field.name,
-      field.table == "" ? tableData : contextTable[field.table]
-    );
-    showPropertyMenu(props2.plugin, { x: offset.left, y: offset.top + 30 }, true, options, field, cols, contextTable, (newField) => saveField(newField, field), (newField, val) => saveContext(newField, field, val), hideColumn, delColumn, sortColumn, predicate.colsHidden.includes(field.name + field.table));
-  };
-  return /* @__PURE__ */ bn.createElement(bn.Fragment, null, fileContext.folder && fileContext.folder.data && /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-section"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-title",
-    onClick: (e4) => {
-      setCollapsed(!collapsed);
-      e4.stopPropagation();
-    }
-  }, /* @__PURE__ */ bn.createElement("button", {
-    className: `mk-collapse mk-inline-button mk-icon-xsmall ${collapsed ? "mk-collapsed" : ""}`,
-    dangerouslySetInnerHTML: {
-      __html: uiIconSet["mk-ui-collapse"]
-    }
-  }), isFolderContext ? folderPathToString(folderPath) : folderPath), !collapsed ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, fileContext.folder.cols.map((f4, i4) => /* @__PURE__ */ bn.createElement("div", {
-    key: i4,
-    className: "mk-file-context-row"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-bullet"
-  }), /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-field",
-    onClick: (e4) => showMenu(e4, { ...f4, table: "" })
-  }, f4.name), /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-value"
-  }, /* @__PURE__ */ bn.createElement(DataTypeView, {
-    plugin: props2.plugin,
-    initialValue: fileContext.folder.data[f4.name],
-    index: fileContext.folder.dataIndex,
-    file: fileContext.folder.data["File"],
-    column: { ...f4, table: "" },
-    editable: true,
-    updateValue: (v3) => updateValue(f4.name, v3, "", fileContext.folder.dataIndex, fileContext.folder.data["File"]),
-    updateFieldValue: (fv, v3) => updateFieldValue(f4.name, fv, v3, "", fileContext.folder.dataIndex, fileContext.folder.data["File"]),
-    contextTable
-  })))), /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-field-new",
-    onClick: (e4) => showNewMenu(e4)
-  }, /* @__PURE__ */ bn.createElement("span", null, "+"), i18n_default.labels.newProperty)) : /* @__PURE__ */ bn.createElement(bn.Fragment, null)));
-};
-
-// src/components/FileContextView/FileContextView.tsx
-var import_obsidian44 = require("obsidian");
-
-// src/components/FileContextView/Backlinks.tsx
-var BacklinkItem = (props2) => {
-  const file = F(() => getAbstractFileAtPath(app, props2.path), [props2.path]);
-  const [block, setBlock] = p2([null, null]);
-  h2(() => {
-    var _a2, _b2;
-    const fCache = app.metadataCache.getCache(props2.path);
-    const link = [...(_a2 = fCache.links) != null ? _a2 : [], ...(_b2 = fCache.embeds) != null ? _b2 : []].find((f4) => props2.source.includes(f4.displayText));
-    if (link) {
-      const block2 = fCache.sections.find((f4) => f4.position.start.offset <= link.position.start.offset && f4.position.end.offset >= link.position.end.offset);
-      setBlock([Math.max(1, block2.position.start.line), Math.max(block2.position.start.line + 1, block2.position.end.line + 1)]);
-    }
-  }, [props2.path]);
-  const [collapsed, setCollapsed] = p2(false);
-  return /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-section"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-title",
-    onClick: (e4) => {
-      setCollapsed(!collapsed);
-      e4.stopPropagation();
-    }
-  }, /* @__PURE__ */ bn.createElement("button", {
-    className: `mk-collapse mk-inline-button mk-icon-xsmall ${collapsed ? "mk-collapsed" : ""}`,
-    dangerouslySetInnerHTML: {
-      __html: uiIconSet["mk-ui-collapse"]
-    }
-  }), file.name), !collapsed ? /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-backlink"
-  }, /* @__PURE__ */ bn.createElement(FlowView, {
-    plugin: props2.plugin,
-    load: true,
-    path: props2.path,
-    from: block[0],
-    to: block[1]
-  })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null));
-};
-var Backlinks = (props2) => {
-  const [backlinks, setBacklinks] = p2([]);
-  h2(() => {
-    if (!props2.path)
-      return;
-    setBacklinks(
-      Object.keys(app.metadataCache.resolvedLinks).filter(
-        (f4) => props2.path in app.metadataCache.resolvedLinks[f4]
-      )
-    );
-  }, [props2.path]);
-  return /* @__PURE__ */ bn.createElement("div", null, backlinks.map((f4) => /* @__PURE__ */ bn.createElement(BacklinkItem, {
-    path: f4,
-    plugin: props2.plugin,
-    source: props2.path
-  })));
-};
-
-// src/components/FileContextView/FrontmatterView.tsx
-var FrontmatterView = (props2) => {
-  const { path } = props2;
-  const [values, setValues] = p2({});
-  const [cols, setCols] = p2([]);
-  const { cols: columns, dbPath } = q2(MDBContext);
-  const refreshData = () => {
-    let newCols = [];
-    let newValues = {};
-    const types = guestimateTypes([path], props2.plugin, false);
-    const fm = frontMatterForFile(getAbstractFileAtPath(app, path));
-    const fmKeys = uniqCaseInsensitive(frontMatterKeys(fm)).filter((f4) => !columns.some((g4) => g4.name == f4));
-    const cols2 = fmKeys.map((f4) => ({
-      table: "",
-      name: f4,
-      schemaId: "",
-      type: yamlTypeToMDBType(types[f4])
-    }));
-    if (fm) {
-      newCols.push(...cols2);
-      Object.keys(fm).forEach((c4) => {
-        newValues[c4] = parseFrontMatter(c4, fm[c4], false);
-      });
-    }
-    if (props2.plugin.dataViewAPI()) {
-      const types2 = guestimateTypes([path], props2.plugin, true);
-      const fm2 = frontMatterForFile(getAbstractFileAtPath(app, path));
-      const fmKeys2 = uniqCaseInsensitive(frontMatterKeys(fm2));
-      const dvValues = props2.plugin.dataViewAPI().page(path);
-      const dvKeys = uniqCaseInsensitive(
-        Object.keys(dvValues != null ? dvValues : {}).filter(
-          (f4, i4, self2) => !self2.find(
-            (g4, j4) => g4.toLowerCase().replace(/\s/g, "-") == f4.toLowerCase().replace(/\s/g, "-") && i4 > j4
-          ) ? true : false
-        ).filter((f4) => f4 != "file").filter((f4) => !fmKeys2.includes(f4)).filter((f4) => !columns.some((g4) => g4.name == f4))
-      );
-      const dvCols = dvKeys.map((f4) => ({
-        table: "",
-        name: f4,
-        schemaId: "",
-        type: yamlTypeToMDBType(types2[f4])
-      }));
-      const dv = dvKeys.reduce(
-        (p3, c4) => ({
-          ...p3,
-          [c4]: parseFrontMatter(c4, dvValues[c4], true)
-        }),
-        {}
-      );
-      newCols.push(...dvCols);
-      Object.keys(dv).forEach((c4) => {
-        newValues[c4] = parseFrontMatter(c4, dvValues[c4], true);
-      });
-    }
-    setCols(newCols);
-    setValues(newValues);
-  };
-  h2(() => {
-    refreshData();
-  }, [path, columns]);
-  const refreshDV = (evt) => {
-    if (evt.detail.file.path == path) {
-      refreshData();
-    }
-  };
-  const [collapsed, setCollapsed] = p2(true);
-  h2(() => {
-    window.addEventListener(eventTypes.tagsChange, refreshDV);
-    return () => {
-      window.removeEventListener(eventTypes.tagsChange, refreshDV);
-    };
-  }, [path, columns]);
-  const saveFMValue = (value, f4) => {
-    saveFrontmatterValue(props2.plugin, path, f4.name, value, f4.type);
-  };
-  return cols.length > 0 ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-section"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-title",
-    onClick: (e4) => {
-      setCollapsed(!collapsed);
-      e4.stopPropagation();
-    }
-  }, /* @__PURE__ */ bn.createElement("button", {
-    className: `mk-collapse mk-inline-button mk-icon-xsmall ${collapsed ? "mk-collapsed" : ""}`,
-    dangerouslySetInnerHTML: {
-      __html: uiIconSet["mk-ui-collapse"]
-    }
-  }), i18n_default.labels.metadata), !collapsed ? /* @__PURE__ */ bn.createElement(bn.Fragment, null, cols.map((f4, i4) => /* @__PURE__ */ bn.createElement("div", {
-    key: i4,
-    className: "mk-file-context-row"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-bullet"
-  }), /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-field",
-    "aria-label": f4.type
-  }, f4.name), /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-value"
-  }, /* @__PURE__ */ bn.createElement(DataTypeView, {
-    plugin: props2.plugin,
-    initialValue: values[f4.name],
-    index: 0,
-    file: path,
-    column: { ...f4, table: "" },
-    editable: true,
-    updateValue: (value) => saveFMValue(value, f4),
-    updateFieldValue: (fieldValue, value) => saveFMValue(value, f4),
-    contextTable: {}
-  }))))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
-};
-
-// src/components/FileContextView/FileContextView.tsx
+var import_obsidian51 = require("obsidian");
 var FILE_CONTEXT_VIEW_TYPE = "make-context-view";
 var ICON2 = "component";
 var VIEW_DISPLAY_TEXT2 = "Context Explorer";
-var FileContextLeafView = class extends import_obsidian44.ItemView {
+var FileContextLeafView = class extends import_obsidian51.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.navigation = false;
@@ -46108,32 +47981,6 @@ var FileContextLeafView = class extends import_obsidian44.ItemView {
     }));
   }
 };
-var allTagsForFile = async (plugin, file) => {
-  var _a2, _b2, _c2, _d2, _e2, _f, _g, _h, _i, _j;
-  let rt = [];
-  const dbPath = folderContextFromFolder(plugin, file == null ? void 0 : file.parent.path);
-  const dbFileExists = getAbstractFileAtPath(app, dbPath);
-  if (dbFileExists) {
-    const folderDB = await getMDBTable(plugin, "files", dbPath, false);
-    if (folderDB) {
-      rt.push(...folderDB.schema.def.split("&").filter((f4) => f4.length > 0));
-    }
-  }
-  if (file instanceof import_obsidian43.TFile) {
-    const fCache = app.metadataCache.getCache(file.path);
-    if (fCache && fCache.tags)
-      rt.push(...(_b2 = (_a2 = fCache.tags) == null ? void 0 : _a2.map((f4) => f4.tag)) != null ? _b2 : []);
-    if (fCache && ((_c2 = fCache.frontmatter) == null ? void 0 : _c2.tags))
-      rt.push(
-        ...(typeof ((_d2 = fCache.frontmatter) == null ? void 0 : _d2.tags) === "string" ? splitString(fCache.frontmatter.tags.replace(/ /g, "")) : Array.isArray((_e2 = fCache.frontmatter) == null ? void 0 : _e2.tags) ? (_f = fCache.frontmatter) == null ? void 0 : _f.tags : []).filter((f4) => typeof f4 === "string").map((f4) => "#" + f4)
-      );
-    if (fCache && ((_g = fCache.frontmatter) == null ? void 0 : _g.tag))
-      rt.push(
-        ...(typeof ((_h = fCache.frontmatter) == null ? void 0 : _h.tag) === "string" ? splitString(fCache.frontmatter.tag.replace(/ /g, "")) : Array.isArray((_i = fCache.frontmatter) == null ? void 0 : _i.tag) ? (_j = fCache.frontmatter) == null ? void 0 : _j.tag : []).filter((f4) => typeof f4 === "string").map((f4) => "#" + f4)
-      );
-  }
-  return uniq(rt);
-};
 var FileContextView = (props2) => {
   const [activeFilePath, setActiveFilePath] = p2(null);
   const [selectedFilePath, setSelectedFilePath] = p2(null);
@@ -46146,20 +47993,13 @@ var FileContextView = (props2) => {
     return afile;
   }, [path]);
   const folderNoteFile = F(() => {
-    if (file instanceof import_obsidian44.TFolder) {
+    if (file instanceof import_obsidian51.TFolder) {
       const afile2 = getAbstractFileAtPath(app, path + ".md");
       return afile2;
     }
     return file;
   }, [file]);
-  const folderPath = file == null ? void 0 : file.parent.path;
-  const dbPath = folderContextFromFolder(props2.plugin, folderPath);
-  const [tags, setTags] = p2([]);
   const [expandedSections, setExpandedSections] = p2({ context: true, backlinks: true });
-  h2(() => {
-    refreshTags();
-  }, [file]);
-  const contextExists = getAbstractFileAtPath(app, dbPath);
   const changeActiveFile = (evt) => {
     setActiveFilePath(evt.detail.filePath);
     setSelectedFilePath(null);
@@ -46167,105 +48007,31 @@ var FileContextView = (props2) => {
   const changeSelectedFile = (evt) => {
     setSelectedFilePath(evt.detail.filePath);
   };
-  const refreshTags = () => {
-    allTagsForFile(props2.plugin, file).then((t4) => setTags(t4));
-  };
   h2(() => {
     props2.plugin.activeFileChange();
   }, []);
   h2(() => {
     window.addEventListener(eventTypes.activeFileChange, changeActiveFile);
     window.addEventListener(eventTypes.selectedFileChange, changeSelectedFile);
-    window.addEventListener(eventTypes.tagsChange, refreshTags);
     return () => {
       window.removeEventListener(eventTypes.activeFileChange, changeActiveFile);
       window.removeEventListener(
         eventTypes.selectedFileChange,
         changeSelectedFile
       );
-      window.removeEventListener(eventTypes.tagsChange, refreshTags);
     };
   }, [file]);
-  const saveTag = (_5, values) => {
-  };
-  const showContextMenu = (e4) => {
-    const offset = e4.target.getBoundingClientRect();
-    const f4 = loadTags(props2.plugin);
-    showSelectMenu(
-      { x: offset.left, y: offset.top + 30 },
-      {
-        multi: false,
-        editable: true,
-        value: [],
-        options: f4.map((m5) => ({ name: m5, value: m5 })),
-        saveOptions: saveTag,
-        placeholder: i18n_default.labels.contextItemSelectPlaceholder,
-        searchable: true,
-        showAll: true
-      }
-    );
-  };
   return file ? /* @__PURE__ */ bn.createElement("div", {
     className: "mk-file-context"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-component"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-file"
-  }, /* @__PURE__ */ bn.createElement(FileSticker, {
+  }, /* @__PURE__ */ bn.createElement(InlineFileContextView, {
     plugin: props2.plugin,
-    filePath: file.path
-  }), /* @__PURE__ */ bn.createElement("div", null, fileNameToString(file.name)))), /* @__PURE__ */ bn.createElement("div", {
-    onClick: (e4) => {
-      setExpandedSections((f4) => ({ ...f4, context: !f4["context"] }));
-      e4.stopPropagation();
-    },
-    className: "mk-section-title"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-tree-text"
-  }, i18n_default.labels.context), /* @__PURE__ */ bn.createElement("button", {
-    className: `mk-collapse mk-inline-button ${!expandedSections["context"] ? "mk-collapsed" : ""}`,
-    dangerouslySetInnerHTML: { __html: uiIconSet["mk-ui-collapse-sm"] }
-  })), expandedSections["context"] && /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-component"
-  }, tags.map((tag) => /* @__PURE__ */ bn.createElement(MDBProvider, {
+    file,
+    showHeader: false
+  }), /* @__PURE__ */ bn.createElement(Backlinks, {
     plugin: props2.plugin,
-    dbPath: tagContextFromTag(props2.plugin, tag),
-    tag
-  }, /* @__PURE__ */ bn.createElement(FileContextList, {
-    plugin: props2.plugin,
-    path: file.path
-  }))), file && folderPath != "/" && /* @__PURE__ */ bn.createElement(MDBProvider, {
-    plugin: props2.plugin,
-    dbPath,
-    folder: folderPath
-  }, /* @__PURE__ */ bn.createElement(FileContextList, {
-    plugin: props2.plugin,
-    path: file.path
-  }), /* @__PURE__ */ bn.createElement(FrontmatterView, {
-    plugin: props2.plugin,
-    path: file.path
-  }))), folderNoteFile && /* @__PURE__ */ bn.createElement(bn.Fragment, null, /* @__PURE__ */ bn.createElement("div", {
-    onClick: (e4) => {
-      setExpandedSections((f4) => ({
-        ...f4,
-        backlinks: !f4["backlinks"]
-      }));
-      e4.stopPropagation();
-    },
-    className: "mk-section-title"
-  }, /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-tree-text"
-  }, i18n_default.labels.backlinks), /* @__PURE__ */ bn.createElement("button", {
-    className: `mk-collapse mk-inline-button ${!expandedSections["backlinks"] ? "mk-collapsed" : ""}`,
-    dangerouslySetInnerHTML: {
-      __html: uiIconSet["mk-ui-collapse-sm"]
-    }
-  })), expandedSections["backlinks"] && /* @__PURE__ */ bn.createElement("div", {
-    className: "mk-file-context-component"
-  }, /* @__PURE__ */ bn.createElement(Backlinks, {
-    plugin: props2.plugin,
-    path: folderNoteFile.path
-  })))) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
+    file: folderNoteFile,
+    expanded: expandedSections["backlinks"]
+  })) : /* @__PURE__ */ bn.createElement(bn.Fragment, null);
 };
 
 // wasm-binary:/Users/cen/Documents/GitHub/make-md/src/utils/db/sqljs/sql-wasm.wasm
@@ -46319,10 +48085,10 @@ function around1(obj, method, createWrapper) {
 }
 
 // src/utils/spaces/patches.ts
-var import_obsidian45 = require("obsidian");
+var import_obsidian52 = require("obsidian");
 var patchFileExplorer = (plugin) => {
   plugin.register(
-    around(import_obsidian45.Workspace.prototype, {
+    around(import_obsidian52.Workspace.prototype, {
       getLeavesOfType(old) {
         return function(type) {
           if (type == "file-explorer") {
@@ -46336,7 +48102,7 @@ var patchFileExplorer = (plugin) => {
 };
 var patchWorkspace = (plugin) => {
   let layoutChanging = false;
-  const uninstaller = around(import_obsidian45.Workspace.prototype, {
+  const uninstaller = around(import_obsidian52.Workspace.prototype, {
     changeLayout(old) {
       return async function(workspace) {
         layoutChanging = true;
@@ -46357,7 +48123,7 @@ var patchWorkspace = (plugin) => {
           return false;
         if (layoutChanging)
           return false;
-        if (parent === app.workspace.rootSplit || import_obsidian45.WorkspaceContainer && parent instanceof import_obsidian45.WorkspaceContainer) {
+        if (parent === app.workspace.rootSplit || import_obsidian52.WorkspaceContainer && parent instanceof import_obsidian52.WorkspaceContainer) {
           for (const popover of FlowEditor.popoversForWindow(
             parent.win
           )) {
@@ -46391,12 +48157,12 @@ var patchWorkspace = (plugin) => {
 
 // src/main.ts
 var import_obsidian_dataview = __toESM(require_lib());
-var MakeMDPlugin = class extends import_obsidian46.Plugin {
+var MakeMDPlugin = class extends import_obsidian53.Plugin {
   constructor() {
     super(...arguments);
     this.dataViewAPI = () => (0, import_obsidian_dataview.getAPI)();
-    this.saveSpacesDB = (0, import_obsidian46.debounce)(
-      () => saveDBAndKeepAlive(this.spaceDBInstance(), this.spacesDBPath),
+    this.saveSpacesDB = (0, import_obsidian53.debounce)(
+      () => this.saveAndReloadSpaceDBIfNeeded(),
       1e3,
       true
     );
@@ -46422,10 +48188,12 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
     };
     this.metadataChange = (file, data, cache) => {
       var _a2, _b2;
-      let event = new CustomEvent(eventTypes.tagsChange, {
-        detail: { file, tags: (_b2 = (_a2 = cache == null ? void 0 : cache.tags) == null ? void 0 : _a2.map((f4) => f4.tag)) != null ? _b2 : [] }
-      });
-      window.dispatchEvent(event);
+      if ((cache == null ? void 0 : cache.tags) || (cache == null ? void 0 : cache.frontmatter)) {
+        let event = new CustomEvent(eventTypes.tagsChange, {
+          detail: { file, tags: (_b2 = (_a2 = cache == null ? void 0 : cache.tags) == null ? void 0 : _a2.map((f4) => f4.tag)) != null ? _b2 : [] }
+        });
+        window.dispatchEvent(event);
+      }
       this.addToQueue(() => onMetadataChange(this, file));
     };
     this.onCreate = (file) => {
@@ -46433,14 +48201,14 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
         return;
       this.triggerVaultChangeEvent(file, "create", "");
       this.addToQueue(() => onFileCreated(this, file.path));
-      onFileCreated2(this, file.path, file instanceof import_obsidian46.TFolder);
+      onFileCreated2(this, file.path, file instanceof import_obsidian53.TFolder);
     };
     this.onDelete = (file) => {
       this.triggerVaultChangeEvent(file, "delete", "");
-      if (file instanceof import_obsidian46.TFile && file.extension != "mdb") {
+      if (file instanceof import_obsidian53.TFile && file.extension != "mdb") {
         this.addToQueue(() => onFileDeleted(this, file.path));
         onFileDeleted2(this, file.path);
-      } else if (file instanceof import_obsidian46.TFolder) {
+      } else if (file instanceof import_obsidian53.TFolder) {
         this.addToQueue(() => onFolderDeleted(file.path));
         onFolderDeleted2(this, file.path);
       }
@@ -46448,10 +48216,10 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
     };
     this.onRename = (file, oldPath) => {
       this.triggerVaultChangeEvent(file, "rename", oldPath);
-      if (file instanceof import_obsidian46.TFile && file.extension != "mdb") {
+      if (file instanceof import_obsidian53.TFile && file.extension != "mdb") {
         this.addToQueue(() => onFileChanged(this, oldPath, file.path));
         onFileChanged2(this, oldPath, file.path);
-      } else if (file instanceof import_obsidian46.TFolder) {
+      } else if (file instanceof import_obsidian53.TFolder) {
         this.addToQueue(() => onFolderChanged(this, oldPath, file.path));
         onFolderChanged2(this, oldPath, file.path);
       }
@@ -46493,9 +48261,11 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
       if (leafs.length == 0) {
         let leaf = this.app.workspace.getRightLeaf(false);
         await leaf.setViewState({ type: FILE_CONTEXT_VIEW_TYPE });
-        this.app.workspace.revealLeaf(leaf);
       } else {
         leafs.forEach((leaf) => this.app.workspace.revealLeaf(leaf));
+      }
+      if (platformIsMobile()) {
+        app.workspace.rightSplit.collapse();
       }
     };
     this.refreshFileContextLeafs = () => {
@@ -46562,18 +48332,42 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
       });
     }
   }
+  async saveAndReloadSpaceDBIfNeeded() {
+    app.vault.adapter.stat(this.spacesDBPath).then((f4) => {
+      if ((f4 == null ? void 0 : f4.mtime) == this.spacesDBLastModify) {
+        return saveDBAndKeepAlive(this.spaceDBInstance(), this.spacesDBPath).then((f5) => app.vault.adapter.stat(this.spacesDBPath)).then((f5) => this.spacesDBLastModify = f5 == null ? void 0 : f5.mtime);
+      }
+      return this.reloadSpaceDB(false);
+    });
+  }
+  async reloadSpaceDB(firstLoad) {
+    var _a2;
+    (_a2 = this.spaceDB) == null ? void 0 : _a2.close();
+    this.spaceDB = await getDB(await loadSQL(), this.spacesDBPath);
+    dispatchSpaceDatabaseFileChanged("sync");
+    if (!firstLoad) {
+      new import_obsidian53.Notice("Spaces were updated from another device and have been reloaded");
+    }
+    return app.vault.adapter.stat(this.spacesDBPath).then((f4) => this.spacesDBLastModify = f4 == null ? void 0 : f4.mtime);
+  }
   async loadSpaces() {
-    this.spacesDBPath = (0, import_obsidian46.normalizePath)(
+    this.spacesDBPath = (0, import_obsidian53.normalizePath)(
       app.vault.configDir + "/plugins/make-md/Spaces.mdb"
     );
-    this.spaceDB = await getDB(await loadSQL(), this.spacesDBPath);
+    await this.reloadSpaceDB(true);
     patchWorkspace(this);
     document.body.classList.toggle("mk-hide-tabs", !this.settings.sidebarTabs);
     document.body.classList.toggle("mk-hide-ribbon", !this.settings.showRibbon);
+    document.body.classList.toggle("mk-folder-lines", this.settings.folderIndentationLines);
     this.registerView(CONTEXT_VIEW_TYPE, (leaf) => {
       return new ContextView(leaf, this, CONTEXT_VIEW_TYPE);
     });
     if (this.settings.spacesEnabled) {
+      this.addCommand({
+        id: "mk-spaces-reload",
+        name: "Reload Spaces",
+        callback: () => this.reloadSpaceDB(false)
+      });
       this.addCommand({
         id: "mk-spaces",
         name: i18n_default.commandPalette.openSpaces,
@@ -46613,7 +48407,7 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
             "dataview:metadata-change",
             (type, file, oldPath) => {
               if (type === "update" && this.app.metadataCache.fileCache[file.path].mtime >= this.loadTime && this.dataViewAPI().index.revision !== this.dataViewLastIndex && this.dataViewReady) {
-                if (file instanceof import_obsidian46.TFile) {
+                if (file instanceof import_obsidian53.TFile) {
                   this.metadataChange(file);
                 }
                 this.dataViewLastIndex = this.dataViewAPI().index.revision;
@@ -46636,8 +48430,8 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
       if (file)
         filePath = file.path;
     } else if ((activeLeaf == null ? void 0 : activeLeaf.view.getViewType()) == "markdown") {
-      const view = app.workspace.getActiveViewOfType(import_obsidian46.MarkdownView);
-      if (view instanceof import_obsidian46.MarkdownView) {
+      const view = app.workspace.getActiveViewOfType(import_obsidian53.MarkdownView);
+      if (view instanceof import_obsidian53.MarkdownView) {
         filePath = view.file.path;
       }
     }
@@ -46768,11 +48562,9 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
     console.time("Loading Make.md");
     this.loadTime = Date.now();
     this.queue = Promise.resolve();
-    (0, import_obsidian46.addIcon)("mk-logo", mkLogo);
-    console.time("Loading Settings");
+    (0, import_obsidian53.addIcon)("mk-logo", mkLogo);
     await this.loadSettings();
     this.addSettingTab(new MakeMDPluginSettingsTab(this.app, this));
-    console.timeEnd("Loading Settings");
     this.app.workspace.onLayoutReady(async () => {
       if (!getAbstractFileAtPath(
         this.app,
@@ -46781,21 +48573,11 @@ var MakeMDPlugin = class extends import_obsidian46.Plugin {
         this.app.vault.createFolder(this.settings.tagContextFolder);
       }
     });
-    console.time("Loading Spaces");
     await this.loadSpaces();
-    console.timeEnd("Loading Spaces");
-    console.time("Loading Context");
     this.loadContext();
-    console.timeEnd("Loading Context");
-    console.time("Loading Flow Editor");
     this.loadFlowEditor();
-    console.timeEnd("Loading Flow Editor");
-    console.time("Loading Maker Mode");
     this.loadMakerMode();
-    console.timeEnd("Loading Maker Mode");
-    console.time("Loading CM Extensions");
     this.registerEditorExtension(cmExtensions(this, platformIsMobile()));
-    console.timeEnd("Loading CM Extensions");
     console.timeEnd("Loading Make.md");
   }
   openFileFromPortal(e4) {

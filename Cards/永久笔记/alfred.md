@@ -28,7 +28,7 @@ title: alfred
 
 todo：[[🤖滴答清单]]
 
-个人创作： [[🤖obsidian]]
+个人创作： [[Obsidian]]
 
 文件：本地文件
 

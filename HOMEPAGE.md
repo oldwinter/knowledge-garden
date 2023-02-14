@@ -1,13 +1,13 @@
 ---
+uid: fd5274ed-e3c2-4370-8849-a0855642e312
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-02-13
 title: HOMEPAGE
 dg-publish: true
 ---
 
-
-
 ## 最近编辑的笔记
+
 ```dataview
 table WITHOUT ID file.link AS "标题",file.mtime as "时间"
 from ""
@@ -16,6 +16,7 @@ limit 10
 ```
 
 ## 七天内创建的笔记
+
 ```dataview
 table file.ctime as 创建时间
 from ""
@@ -24,15 +25,11 @@ sort file.ctime desc
 limit 10
 ```
 
-
-
-
 [[∑ 本库 ACCESS 的文件夹入口汇总]]
 
 [[本库涉及外部app调用的工作流]]
 
 [[本库的宏观统计数据]]
-
 
 > [!INFO]
 >

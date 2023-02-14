@@ -4,32 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e8a3b084cda78563",
+        "id": "1a4ec6d3b7e32348",
         "type": "tabs",
-        "dimension": 60.06944444444444,
+        "dimension": 54.66549295774647,
         "children": [
           {
-            "id": "5f537f593fa99228",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HOMEPAGE.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "1702519063ac6cfa",
+            "id": "ceef9a2b0b174a84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "file": "Calendar/Daily notes/2023-02-14.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -37,97 +22,12 @@
             }
           },
           {
-            "id": "966a21c8030f87c3",
+            "id": "dddce2e78a0b8265",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "225608403e0a1b58",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🧰 本库指南/🧰 本库使用指南.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "14f0028694e7be5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "db9912006db88106",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2023-01-24.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2dc24264da52fe4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/Obsidian插件使用/∑ obsidian插件.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "5f5e907e55457110",
-        "type": "tabs",
-        "dimension": 39.93055555555556,
-        "children": [
-          {
-            "id": "73259c4c91dad734",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/快速启动一个简易的静态httpserver.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "23bf3cb9f5cb8666",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -136,6 +36,39 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "1ced823e7a1eb016",
+        "type": "tabs",
+        "dimension": 45.33450704225352,
+        "children": [
+          {
+            "id": "4cd88ca2affe49d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/奔跑的奶酪的浏览器书签大汇总.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e48954cb4fe1050",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/Obsidian.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#待办/今天",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md"
+                "file": "Cards/永久笔记/gitignore 语法.md"
               }
             }
           },
@@ -216,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -228,7 +161,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -251,7 +184,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.12451444219601071,
+                  "scale": 1.247398017975529,
                   "close": true
                 }
               }
@@ -263,7 +196,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -274,11 +207,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 314
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -297,14 +231,6 @@
             }
           },
           {
-            "id": "4ba1304d857af577",
-            "type": "leaf",
-            "state": {
-              "type": "Strange New Worlds",
-              "state": {}
-            }
-          },
-          {
             "id": "473b0907c2fc43b3",
             "type": "leaf",
             "state": {
@@ -319,36 +245,25 @@
               "type": "daily-note-outline",
               "state": {}
             }
-          },
-          {
-            "id": "03dde46a76dc867a",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 366.5
+    "width": 229.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "obsidian-projects:Open projects": false,
-      "homepage:Open homepage": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "obsidian-full-calendar:Open Full Calendar": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
       "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "janitor:Janitor: scan vault": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
       "obsidian42-brat:BRAT": false,
       "obsidian-weread-plugin:Weread": false,
-      "obsidian-metatable:Metatable": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
@@ -357,22 +272,22 @@
       "templater-obsidian:Templater": false,
       "dbfolder:创建一个新数据库表": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "webpage-html-export:Export Vault to HTML": false,
       "omnisearch:Omnisearch": false,
-      "webpage-html-export:Export Vault to HTML": false
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "23bf3cb9f5cb8666",
+  "active": "dddce2e78a0b8265",
   "lastOpenFiles": [
-    "Cards/永久笔记/快速启动一个简易的静态httpserver.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞任务管理.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞美化和排版.md",
-    "🧰 本库指南/Tutorials/本库使用时遵守的核心原则.md",
-    "🧰 本库指南/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
-    "🧰 本库指南/Tutorials/本库使用的obsidian第三方插件及原因.md",
-    "🧰 本库指南/Tutorials/本库使用的主题及原因.md",
-    "🧰 本库指南/Tutorials/本库内容分发至主流媒体平台的实践探索.md",
-    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md"
+    "Cards/永久笔记/raycast.md",
+    "Spaces/1-Project/Chrome插件使用/chrome必装插件.md",
+    "Calendar/Daily notes/少数派创作手册.md",
+    "Calendar/Daily notes/2023-02-14.md",
+    "Cards/永久笔记/chatGPT的使用经验.md",
+    "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
+    "Calendar/Daily notes/Daily notes归档/2022-06-21.md",
+    "Cards/永久笔记/markdown与html和css联用.md",
+    "Calendar/Daily notes/Daily notes归档/2022-06-23.md",
+    "Calendar/Daily notes/Daily notes归档/2022-06-24.md"
   ]
 }

@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-09-07
-date modified: 2022-09-07
+date modified: 2023-02-14
 title: 本库不建议在obsidian中搞专属定制
 ---
 

@@ -1,6 +1,7 @@
 ---
+dg-publish: true
 date created: 2022-08-25
-date modified: 2022-09-09
+date modified: 2023-02-14
 title: 本库如何自动每日发布至web
 ---
 

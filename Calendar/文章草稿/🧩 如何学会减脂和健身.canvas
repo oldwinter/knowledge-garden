@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"0e14974379b7fc02","x":-214,"y":-145,"width":250,"height":60,"type":"text","text":"健身计划"},
+		{"id":"44888d191f5defac","x":-214,"y":-8,"width":250,"height":60,"type":"text","text":"健身笔记"}
+	],
+	"edges":[]
+}

@@ -4485,7 +4485,7 @@ function vallidatePublishFrontmatter(frontMatter) {
 
 // src/constants.ts
 var seedling = `<g style="pointer-events:all"><title style="pointer-events: none" opacity="0.33">Layer 1</title><g id="hair" style="pointer-events: none" opacity="0.33"></g><g id="skin" style="pointer-events: none" opacity="0.33"></g><g id="skin-shadow" style="pointer-events: none" opacity="0.33"></g><g id="line"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M47.71119,35.9247" id="svg_3"></path><polyline fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="49.813106536865234,93.05191133916378 49.813106536865234,69.57996462285519 40.03312683105469,26.548054680228233 " id="svg_4"></polyline><line x1="49.81311" x2="59.59309" y1="69.57996" y2="50.02" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="svg_5"></line><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27.99666,14.21103C35.9517,16.94766 39.92393,26.36911 39.92393,26.36911S30.99696,31.3526 23.04075,28.61655S11.11348,16.45847 11.11348,16.45847S20.04456,11.4789 27.99666,14.21103z" id="svg_6"></path><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M76.46266698455811,45.61669603088379 C84.67706698455811,47.43146603088379 89.6945869845581,56.34024603088379 89.6945869845581,56.34024603088379 S81.3917769845581,62.30603603088379 73.17639698455811,60.492046030883785 S59.94447698455811,49.768496030883796 59.94447698455811,49.768496030883796 S68.2515869845581,43.80622603088379 76.46266698455811,45.61669603088379 z" id="svg_7"></path></g></g>`;
-var excaliDrawBundle = `<style> .container {font-family: sans-serif; text-align: center;} .button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;} .excalidraw .App-menu_top .buttonList { display: flex;} .excalidraw-wrapper { height: 800px; margin: 50px; position: relative;} :root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;} </style><script src="https://unpkg.com/react@17/umd/react.production.min.js"><\/script><script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"><\/script><script type="text/javascript" src="https://unpkg.com/@excalidraw/excalidraw@0/dist/excalidraw.production.min.js"><\/script>`;
+var excaliDrawBundle = `<style> .container {font-family: sans-serif; text-align: center;} .button-wrapper button {z-index: 1;height: 40px; width: 100px; margin: 10px;padding: 5px;} .excalidraw .App-menu_top .buttonList { display: flex;} .excalidraw-wrapper { height: 800px; margin: 50px; position: relative;} :root[dir="ltr"] .excalidraw .layer-ui__wrapper .zen-mode-transition.App-menu_bottom--transition-left {transform: none;} </style><script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"><\/script><script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"><\/script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@excalidraw/excalidraw@0/dist/excalidraw.production.min.js"><\/script>`;
 var excalidraw = (excaliDrawJson, drawingId) => `<div id="${drawingId}"></div><script>(function(){const InitialData=${excaliDrawJson};InitialData.scrollToContent=true;App=()=>{const e=React.useRef(null),t=React.useRef(null),[n,i]=React.useState({width:void 0,height:void 0});return React.useEffect(()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height});const e=()=>{i({width:t.current.getBoundingClientRect().width,height:t.current.getBoundingClientRect().height})};return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[t]),React.createElement(React.Fragment,null,React.createElement("div",{className:"excalidraw-wrapper",ref:t},React.createElement(ExcalidrawLib.Excalidraw,{ref:e,width:n.width,height:n.height,initialData:InitialData,viewModeEnabled:!0,zenModeEnabled:!0,gridModeEnabled:!1})))},excalidrawWrapper=document.getElementById("${drawingId}");ReactDOM.render(React.createElement(App),excalidrawWrapper);})();<\/script>`;
 
 // src/Publisher.ts
@@ -4505,20 +4505,38 @@ var Publisher = class {
   getFilesMarkedForPublishing() {
     return __async(this, null, function* () {
       const files = this.vault.getMarkdownFiles();
-      const filesToPublish = [];
+      const notesToPublish = [];
+      const imagesToPublish = new Set();
       for (const file of files) {
         try {
           const frontMatter = this.metadataCache.getCache(file.path).frontmatter;
           if (frontMatter && frontMatter["dg-publish"] === true) {
-            filesToPublish.push(file);
+            notesToPublish.push(file);
+            let images = yield this.extractImageLinks(yield this.vault.cachedRead(file), file.path);
+            images.forEach((i) => imagesToPublish.add(i));
           }
         } catch (e) {
         }
       }
-      return filesToPublish;
+      return {
+        notes: notesToPublish,
+        images: Array.from(imagesToPublish)
+      };
     });
   }
-  delete(vaultFilePath) {
+  deleteNote(vaultFilePath) {
+    return __async(this, null, function* () {
+      const path = `src/site/notes/${vaultFilePath}`;
+      return yield this.delete(path);
+    });
+  }
+  deleteImage(vaultFilePath) {
+    return __async(this, null, function* () {
+      const path = `src/site/img/user/${encodeURI(vaultFilePath)}`;
+      return yield this.delete(path);
+    });
+  }
+  delete(path) {
     return __async(this, null, function* () {
       if (!this.settings.githubRepo) {
         new import_obsidian2.Notice("Config error: You need to define a GitHub repo in the plugin settings");
@@ -4533,12 +4551,11 @@ var Publisher = class {
         throw {};
       }
       const octokit = new Octokit({ auth: this.settings.githubToken });
-      const path = `src/site/notes/${vaultFilePath}`;
       const payload = {
         owner: this.settings.githubUserName,
         repo: this.settings.githubRepo,
         path,
-        message: `Delete note ${vaultFilePath}`,
+        message: `Delete content ${path}`,
         sha: ""
       };
       try {
@@ -4569,8 +4586,9 @@ var Publisher = class {
         return false;
       }
       try {
-        const text = yield this.generateMarkdown(file);
+        const [text, assets] = yield this.generateMarkdown(file);
         yield this.uploadText(file.path, text);
+        yield this.uploadAssets(assets);
         return true;
       } catch (e) {
         return false;
@@ -4579,8 +4597,9 @@ var Publisher = class {
   }
   generateMarkdown(file) {
     return __async(this, null, function* () {
+      const assets = { images: [] };
       if (file.name.endsWith(".excalidraw.md")) {
-        return yield this.generateExcalidrawMarkdown(file, true);
+        return [yield this.generateExcalidrawMarkdown(file, true), assets];
       }
       let text = yield this.vault.cachedRead(file);
       text = yield this.convertFrontMatter(text, file.path);
@@ -4590,8 +4609,9 @@ var Publisher = class {
       text = yield this.convertLinksToFullPath(text, file.path);
       text = yield this.removeObsidianComments(text);
       text = yield this.createSvgEmbeds(text, file.path);
-      text = yield this.createBase64Images(text, file.path);
-      return text;
+      const text_and_images = yield this.convertImageLinks(text, file.path);
+      assets.images = text_and_images[1];
+      return [text_and_images[0], assets];
     });
   }
   createBlockIDs(text) {
@@ -4611,7 +4631,7 @@ var Publisher = class {
       return text;
     });
   }
-  uploadText(filePath, content) {
+  uploadToGithub(path, content) {
     return __async(this, null, function* () {
       if (!this.settings.githubRepo) {
         new import_obsidian2.Notice("Config error: You need to define a GitHub repo in the plugin settings");
@@ -4626,14 +4646,12 @@ var Publisher = class {
         throw {};
       }
       const octokit = new Octokit({ auth: this.settings.githubToken });
-      const base64Content = gBase64.encode(content);
-      const path = `src/site/notes/${filePath}`;
       const payload = {
         owner: this.settings.githubUserName,
         repo: this.settings.githubRepo,
         path,
-        message: `Add note ${filePath}`,
-        content: base64Content,
+        message: `Add content ${path}`,
+        content,
         sha: ""
       };
       try {
@@ -4648,8 +4666,29 @@ var Publisher = class {
       } catch (e) {
         console.log(e);
       }
-      payload.message = `Update note ${filePath}`;
+      payload.message = `Update content ${path}`;
       yield octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", payload);
+    });
+  }
+  uploadText(filePath, content) {
+    return __async(this, null, function* () {
+      content = gBase64.encode(content);
+      const path = `src/site/notes/${filePath}`;
+      yield this.uploadToGithub(path, content);
+    });
+  }
+  uploadImage(filePath, content) {
+    return __async(this, null, function* () {
+      const path = `src/site${filePath}`;
+      yield this.uploadToGithub(path, content);
+    });
+  }
+  uploadAssets(assets) {
+    return __async(this, null, function* () {
+      for (let idx = 0; idx < assets.images.length; idx++) {
+        const image = assets.images[idx];
+        yield this.uploadImage(image.path, image.content);
+      }
     });
   }
   stripAwayCodeFencesAndFrontmatter(text) {
@@ -4833,7 +4872,7 @@ ${frontMatterString}
       if (currentDepth >= 4) {
         return text;
       }
-      const publishedFiles = yield this.getFilesMarkedForPublishing();
+      const { notes: publishedFiles } = yield this.getFilesMarkedForPublishing();
       let transcludedText = text;
       const transcludedRegex = /!\[\[(.+?)\]\]/g;
       const transclusionMatches = text.match(transcludedRegex);
@@ -4961,13 +5000,53 @@ ${headerSection}
       return text;
     });
   }
-  createBase64Images(text, filePath) {
+  extractImageLinks(text, filePath) {
     return __async(this, null, function* () {
-      function getExtension(linkedFile) {
-        if (linkedFile.extension === "jpg" || linkedFile.extension === "jpeg")
-          return "png";
-        return linkedFile.extension;
+      const assets = [];
+      let imageText = text;
+      const transcludedImageRegex = /!\[\[(.*?)(\.(png|jpg|jpeg|gif))\|(.*?)\]\]|!\[\[(.*?)(\.(png|jpg|jpeg|gif))\]\]/g;
+      const transcludedImageMatches = text.match(transcludedImageRegex);
+      if (transcludedImageMatches) {
+        for (let i = 0; i < transcludedImageMatches.length; i++) {
+          try {
+            const imageMatch = transcludedImageMatches[i];
+            const [imageName, _] = imageMatch.substring(imageMatch.indexOf("[") + 2, imageMatch.indexOf("]")).split("|");
+            const imagePath = (0, import_obsidian2.getLinkpath)(imageName);
+            const linkedFile = this.metadataCache.getFirstLinkpathDest(imagePath, filePath);
+            assets.push(linkedFile.path);
+          } catch (e) {
+            continue;
+          }
+        }
       }
+      const imageRegex = /!\[(.*?)\]\((.*?)(\.(png|jpg|jpeg|gif))\)/g;
+      const imageMatches = text.match(imageRegex);
+      if (imageMatches) {
+        for (let i = 0; i < imageMatches.length; i++) {
+          try {
+            const imageMatch = imageMatches[i];
+            const nameStart = imageMatch.indexOf("[") + 1;
+            const nameEnd = imageMatch.indexOf("]");
+            const pathStart = imageMatch.lastIndexOf("(") + 1;
+            const pathEnd = imageMatch.lastIndexOf(")");
+            const imagePath = imageMatch.substring(pathStart, pathEnd);
+            if (imagePath.startsWith("http")) {
+              continue;
+            }
+            const decodedImagePath = decodeURI(imagePath);
+            const linkedFile = this.metadataCache.getFirstLinkpathDest(decodedImagePath, filePath);
+            assets.push(linkedFile.path);
+          } catch (e) {
+            continue;
+          }
+        }
+      }
+      return assets;
+    });
+  }
+  convertImageLinks(text, filePath) {
+    return __async(this, null, function* () {
+      const assets = [];
       let imageText = text;
       const transcludedImageRegex = /!\[\[(.*?)(\.(png|jpg|jpeg|gif))\|(.*?)\]\]|!\[\[(.*?)(\.(png|jpg|jpeg|gif))\]\]/g;
       const transcludedImageMatches = text.match(transcludedImageRegex);
@@ -4980,8 +5059,10 @@ ${headerSection}
             const linkedFile = this.metadataCache.getFirstLinkpathDest(imagePath, filePath);
             const image = yield this.vault.readBinary(linkedFile);
             const imageBase64 = arrayBufferToBase64(image);
+            const cmsImgPath = `/img/user/${encodeURI(linkedFile.path)}`;
             const name = size ? `${imageName}|${size}` : imageName;
-            const imageMarkdown = `![${name}](data:image/${getExtension(linkedFile)};base64,${imageBase64})`;
+            const imageMarkdown = `![${name}](${cmsImgPath})`;
+            assets.push({ path: cmsImgPath, content: imageBase64 });
             imageText = imageText.replace(imageMatch, imageMarkdown);
           } catch (e) {
             continue;
@@ -5007,14 +5088,16 @@ ${headerSection}
             const linkedFile = this.metadataCache.getFirstLinkpathDest(decodedImagePath, filePath);
             const image = yield this.vault.readBinary(linkedFile);
             const imageBase64 = arrayBufferToBase64(image);
-            const imageMarkdown = `![${imageName}](data:image/${getExtension(linkedFile)};base64,${imageBase64})`;
+            const cmsImgPath = `/img/user/${linkedFile.path}`;
+            const imageMarkdown = `![${imageName}](${cmsImgPath})`;
+            assets.push({ path: cmsImgPath, content: imageBase64 });
             imageText = imageText.replace(imageMatch, imageMarkdown);
           } catch (e) {
             continue;
           }
         }
       }
-      return imageText;
+      return [imageText, assets];
     });
   }
   generateTransclusionHeader(headerName, transcludedFile) {
@@ -5136,6 +5219,24 @@ ${key}=${defaultNoteSettings[key]}`;
       for (const note of notes) {
         const vaultPath = note.path.replace("src/site/notes/", "");
         hashes[vaultPath] = note.sha;
+      }
+      return hashes;
+    });
+  }
+  getImageHashes() {
+    return __async(this, null, function* () {
+      const octokit = new Octokit({ auth: this.settings.githubToken });
+      const response = yield octokit.request(`GET /repos/{owner}/{repo}/git/trees/{tree_sha}?recursive=${Math.ceil(Math.random() * 1e3)}`, {
+        owner: this.settings.githubUserName,
+        repo: this.settings.githubRepo,
+        tree_sha: "HEAD"
+      });
+      const files = response.data.tree;
+      const images = files.filter((x) => x.path.startsWith("src/site/img/user/") && x.type === "blob");
+      const hashes = {};
+      for (const img of images) {
+        const vaultPath = decodeURI(img.path.replace("src/site/img/user/", ""));
+        hashes[vaultPath] = img.sha;
       }
       return hashes;
     });
@@ -7322,7 +7423,6 @@ var SettingView = class {
     new import_obsidian5.Setting(modal.contentEl).setName("Update site to latest template").setDesc(`
 				This will create a pull request with the latest template changes, which you'll need to use all plugin features. 
 				It will not publish any changes before you approve them.
-				You can even test the changes first as Netlify will automatically provide you with a test URL.
 			`).addButton((button) => button.setButtonText("Create PR").onClick(() => handlePR(button)));
     if (!this.progressViewTop) {
       this.progressViewTop = modal.contentEl.createEl("div", {});
@@ -7401,10 +7501,10 @@ var PublishStatusBar = class {
     this.status = this.statusBarItem.createEl("span", { text: `${this.numberOfNotesToPublish} files marked for publishing` });
   }
   increment() {
-    this.status.innerText = `\u231BPublishing Notes: ${++this.counter}/${this.numberOfNotesToPublish}`;
+    this.status.innerText = `\u231BPublishing files: ${++this.counter}/${this.numberOfNotesToPublish}`;
   }
   finish(displayDurationMillisec) {
-    this.status.innerText = `\u2705 Published Notes: ${this.counter}/${this.numberOfNotesToPublish}`;
+    this.status.innerText = `\u2705 Published files: ${this.counter}/${this.numberOfNotesToPublish}`;
     setTimeout(() => {
       this.statusBarItem.remove();
     }, displayDurationMillisec);
@@ -7480,7 +7580,7 @@ var PublishModal = class {
         let counter = 0;
         for (const note of deletedNotes) {
           this.progressContainer.innerText = `\u231BDeleting Notes: ${++counter}/${deletedNotes.length}`;
-          yield this.publisher.delete(note);
+          yield this.publisher.deleteNote(note);
         }
         const deleteDoneText = `\u2705 Deleted all notes: ${counter}/${deletedNotes.length}`;
         this.progressContainer.innerText = deleteDoneText;
@@ -7558,19 +7658,24 @@ var PublishStatusManager = class {
     return __async(this, null, function* () {
       const remoteNoteHashes = yield this.siteManager.getNoteHashes();
       const marked = yield this.publisher.getFilesMarkedForPublishing();
-      return this.generateDeletedNotePaths(remoteNoteHashes, marked);
+      return this.generateDeletedContentPaths(remoteNoteHashes, marked.notes.map((f) => f.path));
     });
   }
-  generateDeletedNotePaths(remoteNoteHashes, marked) {
-    const deletedNotePaths = [];
+  getDeletedImagesPaths() {
+    return __async(this, null, function* () {
+      const remoteImageHashes = yield this.siteManager.getImageHashes();
+      const marked = yield this.publisher.getFilesMarkedForPublishing();
+      return this.generateDeletedContentPaths(remoteImageHashes, marked.images);
+    });
+  }
+  generateDeletedContentPaths(remoteNoteHashes, marked) {
+    const deletedContentPaths = [];
     Object.keys(remoteNoteHashes).forEach((key) => {
-      if (!marked.find((f) => f.path === key)) {
-        if (!key.endsWith(".js")) {
-          deletedNotePaths.push(key);
-        }
+      if (!key.endsWith(".js") && !marked.find((f) => f === key)) {
+        deletedContentPaths.push(key);
       }
     });
-    return deletedNotePaths;
+    return deletedContentPaths;
   }
   getPublishStatus() {
     return __async(this, null, function* () {
@@ -7578,9 +7683,10 @@ var PublishStatusManager = class {
       const publishedNotes = [];
       const changedNotes = [];
       const remoteNoteHashes = yield this.siteManager.getNoteHashes();
+      const remoteImageHashes = yield this.siteManager.getImageHashes();
       const marked = yield this.publisher.getFilesMarkedForPublishing();
-      for (const file of marked) {
-        const content = yield this.publisher.generateMarkdown(file);
+      for (const file of marked.notes) {
+        const [content, _] = yield this.publisher.generateMarkdown(file);
         const localHash = generateBlobHash(content);
         const remoteHash = remoteNoteHashes[file.path];
         if (!remoteHash) {
@@ -7591,12 +7697,13 @@ var PublishStatusManager = class {
           changedNotes.push(file);
         }
       }
-      const deletedNotePaths = this.generateDeletedNotePaths(remoteNoteHashes, marked);
+      const deletedNotePaths = this.generateDeletedContentPaths(remoteNoteHashes, marked.notes.map((f) => f.path));
+      const deletedImagePaths = this.generateDeletedContentPaths(remoteImageHashes, marked.images);
       unpublishedNotes.sort((a, b) => a.path > b.path ? 1 : -1);
       publishedNotes.sort((a, b) => a.path > b.path ? 1 : -1);
       changedNotes.sort((a, b) => a.path > b.path ? 1 : -1);
       deletedNotePaths.sort((a, b) => a > b ? 1 : -1);
-      return { unpublishedNotes, publishedNotes, changedNotes, deletedNotePaths };
+      return { unpublishedNotes, publishedNotes, changedNotes, deletedNotePaths, deletedImagePaths };
     });
   }
 };
@@ -7753,6 +7860,7 @@ var DigitalGarden = class extends import_obsidian7.Plugin {
         callback: () => __async(this, null, function* () {
           const statusBarItem = this.addStatusBarItem();
           try {
+            new import_obsidian7.Notice("Processing files to publish...");
             const { vault, metadataCache } = this.app;
             const publisher = new Publisher(vault, metadataCache, this.settings);
             const siteManager = new DigitalGardenSiteManager(metadataCache, this.settings);
@@ -7760,9 +7868,12 @@ var DigitalGarden = class extends import_obsidian7.Plugin {
             const publishStatus = yield publishStatusManager.getPublishStatus();
             const filesToPublish = publishStatus.changedNotes.concat(publishStatus.unpublishedNotes);
             const filesToDelete = publishStatus.deletedNotePaths;
-            const statusBar = new PublishStatusBar(statusBarItem, filesToPublish.length + filesToDelete.length);
+            const imagesToDelete = publishStatus.deletedImagePaths;
+            const statusBar = new PublishStatusBar(statusBarItem, filesToPublish.length + filesToDelete.length + imagesToDelete.length);
             let errorFiles = 0;
             let errorDeleteFiles = 0;
+            let errorDeleteImage = 0;
+            new import_obsidian7.Notice(`Publishing ${filesToPublish.length} notes, deleting ${filesToDelete.length} notes and ${imagesToDelete.length} images. See the status bar in lower right corner for progress.`, 8e3);
             for (const file of filesToPublish) {
               try {
                 statusBar.increment();
@@ -7775,16 +7886,28 @@ var DigitalGarden = class extends import_obsidian7.Plugin {
             for (const filePath of filesToDelete) {
               try {
                 statusBar.increment();
-                yield publisher.delete(filePath);
+                yield publisher.deleteNote(filePath);
               } catch (e) {
                 errorDeleteFiles++;
                 new import_obsidian7.Notice(`Unable to delete note ${filePath}, skipping it.`);
+              }
+            }
+            for (const filePath of imagesToDelete) {
+              try {
+                statusBar.increment();
+                yield publisher.deleteImage(filePath);
+              } catch (e) {
+                errorDeleteImage++;
+                new import_obsidian7.Notice(`Unable to delete image ${filePath}, skipping it.`);
               }
             }
             statusBar.finish(8e3);
             new import_obsidian7.Notice(`Successfully published ${filesToPublish.length - errorFiles} notes to your garden.`);
             if (filesToDelete.length > 0) {
               new import_obsidian7.Notice(`Successfully deleted ${filesToDelete.length - errorDeleteFiles} notes from your garden.`);
+            }
+            if (imagesToDelete.length > 0) {
+              new import_obsidian7.Notice(`Successfully deleted ${imagesToDelete.length - errorDeleteImage} images from your garden.`);
             }
           } catch (e) {
             statusBarItem.remove();

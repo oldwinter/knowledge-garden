@@ -16,7 +16,7 @@
   },
   "local_settings": {
     "remove_field_when_delete_column": false,
-    "cell_size": "wide",
+    "cell_size": "normal",
     "sticky_first_column": true,
     "group_folder_column": "",
     "remove_empty_folders": false,
@@ -32,7 +32,7 @@
     "source_destination_path": "/",
     "row_templates_folder": "/",
     "current_row_template": "",
-    "pagination_size": 75,
+    "pagination_size": 10,
     "font_size": 16,
     "enable_js_formulas": false,
     "formula_folder_path": "/",

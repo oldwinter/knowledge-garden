@@ -2257,6 +2257,9 @@ var DoubanFuzzySuggester = class extends import_obsidian2.FuzzySuggestModal {
   onChooseItem(item, evt) {
     this.plugin.showStatus(i18nHelper.getMessage("140204", item.title));
     this.context.listItem = item;
+    if (item) {
+      this.plugin.settingsManager.debug(`\u9009\u62E9\u4E86:${item.type}:${item.id}:${item.title}`);
+    }
     this.plugin.doubanExtractHandler.handle(item, this.context);
   }
   showSearchList(doubanSearchResultExtractList) {
@@ -15863,6 +15866,8 @@ var DoubanAbstractLoadHandler = class {
     return __async(this, null, function* () {
       let headers = JSON.parse(context.settings.searchHeaders);
       headers.Cookie = context.settings.loginCookiesContent;
+      context.plugin.settingsManager.debug(`\u5F00\u59CB\u8BF7\u6C42\u5730\u5740:${url}`);
+      context.plugin.settingsManager.debug(`(\u6CE8\u610F:\u8BF7\u52FF\u5411\u4EFB\u4F55\u4EBA\u900F\u9732\u4F60\u7684Cookie,\u6B64\u5904\u82E5\u9700\u8981\u622A\u56FE\u8BF7**\u6253\u7801**)\u8BF7\u6C42cookie:${context.settings.loginCookiesContent}`);
       const requestUrlParam = {
         url,
         method: "GET",
@@ -19458,7 +19463,7 @@ var SearchParserHandler = class {
     return dataHtml(".result").get().map((i) => {
       const item = dataHtml(i);
       let idPattern = /(\d){5,10}/g;
-      let urlPattern = /(https%3A%2F%2F)\S+(\d){5,10}/g;
+      let urlPattern = /(https%3A%2F%2F)\S+(\d){5,10}(%2F)/g;
       let linkValue = item.find("div.content > div > h3 > a").attr("href");
       let ececResult = idPattern.exec(linkValue);
       let urlResult = urlPattern.exec(linkValue);

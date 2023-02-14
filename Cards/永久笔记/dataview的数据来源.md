@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: dataview的数据来源
 ---
 
-在 [[🤖obsidian]] 中，
+在 [[Obsidian]] 中，
 
 dataview 有 3 种元数据获取方式：
 

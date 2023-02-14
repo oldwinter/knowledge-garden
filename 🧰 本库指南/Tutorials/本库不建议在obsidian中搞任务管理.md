@@ -1,10 +1,11 @@
 ---
+dg-publish: true
 date created: 2022-09-02
-date modified: 2022-09-02
-title: 本库为什么不建议在obsidian中搞任务管理
+date modified: 2023-02-14
+title: 本库不建议在obsidian中搞任务管理
 ---
 
-你也许会发现，我在本库中，几乎没有使用过`- []`这个可以勾选的任务清单语法。取而代之的是，用 `#todo` 标签去做一些简易的任务管理。
+你也许会发现，我在本库中，几乎没有使用过`-[]`这个可以勾选的任务清单语法。取而代之的是，用 `#todo` 标签去做一些简易的任务管理。
 
 也试过使用dataview的task语法、社区的tasks、社区的KANBAN等任务管理类插件，以加强补足obsidian的能力。
 

@@ -16,6 +16,6 @@ title: roam-like笔记软件
 
 - [[Roam Research]]
 - [[🤖logseq]]
-- [[🤖obsidian]]
+- [[Obsidian]]
 - [[🤖思源笔记]]
 - 葫芦笔记

@@ -11,7 +11,7 @@
   "timeFormat": "HH:mm:ss",
   "arraySpilt": ", ",
   "personNameMode": "CH",
-  "dataFilePath": "",
+  "dataFilePath": "Sources/Movies + TV/豆瓣影音导入",
   "dataFileNamePath": "/{{type}}/{{title}}",
   "statusBar": true,
   "debugMode": false,
@@ -50,7 +50,7 @@
   "loginCookiesContent": "bid=vViAi0um6q4; dbcl2=\"81366805:Ci9caIfdEeY\"",
   "cacheImage": true,
   "cacheHighQuantityImage": true,
-  "attachmentPath": "assets",
+  "attachmentPath": "Extras/Media/豆瓣影音封面",
   "syncHandledDataArray": [
     {
       "key": "Sources/Movies + TV/电影笔记+movie+ALL",

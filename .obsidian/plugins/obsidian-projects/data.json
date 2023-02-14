@@ -311,6 +311,43 @@
       ],
       "id": "df816c1e-fb63-4e46-a4ee-b797487f40e3",
       "name": "豆瓣影音同步"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "Sources/Newsletter + RSS",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "width": 444
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "e2028cf3-a8fc-4502-b3c9-2d67bf7743a5",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "28735c20-ffbb-4c8b-b88e-2703b10f31b9",
+      "name": "Newsletter + RSS"
     }
   ],
   "preferences": {
