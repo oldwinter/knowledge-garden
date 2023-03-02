@@ -1285,52 +1285,6 @@ ${str}
 __export(exports, {
   default: () => DoubanPlugin
 });
-var import_obsidian30 = __toModule(require("obsidian"));
-
-// src/org/wanxp/douban/data/search/DoubanSearchFuzzySuggestModal.ts
-var import_obsidian2 = __toModule(require("obsidian"));
-
-// src/org/wanxp/utils/Logutil.ts
-var import_obsidian = __toModule(require("obsidian"));
-var Logger = class {
-  error(msg, e) {
-    new import_obsidian.Notice(msg);
-    console.log(`OB-Douban: ${msg}`);
-    console.error(e);
-    return e;
-  }
-  notice(e) {
-    new import_obsidian.Notice(e);
-    console.error(`OB-Douban: ${e}`);
-    return e;
-  }
-  warn(e) {
-    new import_obsidian.Notice(e);
-    console.warn(`OB-Douban: ${e}`);
-    return e;
-  }
-  info(e) {
-    console.log(`OB-Douban:${typeof e == "string" ? e : JSON.stringify(e)}`);
-    return e;
-  }
-  debug(e) {
-    if (e instanceof Error) {
-      console.error(e);
-    } else {
-      console.log(`OB-Douban:${(0, import_obsidian.moment)(new Date()).format("YYYY-MM-DD HH:mm:SS")}:${typeof e == "string" ? e : JSON.stringify(e)}`);
-    }
-    return e;
-  }
-  trace(e) {
-    console.log(`OB-Douban:${typeof e == "string" ? e : JSON.stringify(e)}`);
-    return e;
-  }
-  traceN(notion, e) {
-    console.log(`${notion} ${typeof e == "string" ? e : JSON.stringify(e)}`);
-    return e;
-  }
-};
-var log = new Logger();
 
 // src/org/wanxp/lang/locale/en.ts
 var en_default = {
@@ -1543,7 +1497,11 @@ PS: This file could be delete if you want to.
   "140301": `Douban: Syncing[{0}]...`,
   "140303": `Douban: User Info Expire, Please login again`,
   "140302": `Douban: Sync complete`,
+  "140304": `Douban: Need Login, Please login in Obsidian-Douban plugin`,
   "150101": `Choose an item...`,
+  "150102": `[Previous Page]...`,
+  "150103": `[Next Page]...`,
+  "150104": `[Next Page (Please Login First)]...`,
   "200101": `. `,
   "210101": `Default`,
   "210201": `Search...`,
@@ -1992,8 +1950,12 @@ var zh_cn_default = {
   "140301": `Douban: \u5F00\u59CB\u540C\u6B65[{0}]...`,
   "140302": `Douban: \u540C\u6B65\u5B8C\u6210`,
   "140303": `Douban: \u7528\u6237\u4FE1\u606F\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u81F3\u63D2\u4EF6\u4E2D\u91CD\u65B0\u767B\u5F55`,
+  "140304": `Douban: \u6B64\u529F\u80FD\u9700\u8981\u767B\u5F55, \u8BF7\u5148\u81F3\u63D2\u4EF6\u4E2D\u767B\u5F55\u8C46\u74E3`,
   "150101": `\u9009\u62E9\u4E00\u9879\u5185\u5BB9...`,
   "121902": `\u91CD\u7F6E\u4E3A\u9ED8\u8BA4\u503C`,
+  "150102": `[\u4E0A\u4E00\u9875]...`,
+  "150103": `[\u4E0B\u4E00\u9875]...`,
+  "150104": `[\u4E0B\u4E00\u9875]...(\u8BF7\u5148\u5728\u63D2\u4EF6\u4E2D\u767B\u5F55\u624D\u80FD\u4F7F\u7528\u6B64\u529F\u80FD)`,
   "200101": `\u3002`,
   "122001": `\u901A\u7528\u53C2\u6570`,
   "122002": `\u6269\u5C55\u53C2\u6570`,
@@ -2239,65 +2201,225 @@ var I18nHelper = class {
 };
 var i18nHelper = new I18nHelper();
 
+// src/org/wanxp/constant/Constsant.ts
+var BasicConst = {
+  YAML_FRONT_MATTER_SYMBOL: "---",
+  CLEAN_STATUS_BAR_DELAY: 5e3,
+  CALL_DOUBAN_DELAY: 4e3,
+  CALL_DOUBAN_DELAY_RANGE: 4e3,
+  SLOW_SIZE: 200,
+  CALL_DOUBAN_DELAY_SLOW: 1e4,
+  CALL_DOUBAN_DELAY_RANGE_SLOW: 5e3
+};
+var ESTIMATE_TIME_PER = 2e3;
+var ESTIMATE_TIME_PER_WITH_REQUEST_SLOW = ESTIMATE_TIME_PER + BasicConst.CALL_DOUBAN_DELAY_SLOW + BasicConst.CALL_DOUBAN_DELAY_RANGE_SLOW / 2;
+var ESTIMATE_TIME_PER_WITH_REQUEST = ESTIMATE_TIME_PER + BasicConst.CALL_DOUBAN_DELAY + BasicConst.CALL_DOUBAN_DELAY_RANGE / 2;
+var TemplateTextMode;
+(function(TemplateTextMode3) {
+  TemplateTextMode3[TemplateTextMode3["NORMAL"] = 0] = "NORMAL";
+  TemplateTextMode3[TemplateTextMode3["YAML"] = 1] = "YAML";
+})(TemplateTextMode || (TemplateTextMode = {}));
+var SearchHandleMode;
+(function(SearchHandleMode2) {
+  SearchHandleMode2[SearchHandleMode2["FOR_REPLACE"] = 0] = "FOR_REPLACE";
+  SearchHandleMode2[SearchHandleMode2["FOR_CREATE"] = 1] = "FOR_CREATE";
+})(SearchHandleMode || (SearchHandleMode = {}));
+var PersonNameMode;
+(function(PersonNameMode2) {
+  PersonNameMode2["CH_NAME"] = "CH";
+  PersonNameMode2["EN_NAME"] = "EN";
+  PersonNameMode2["CH_EN_NAME"] = "CH_EN";
+})(PersonNameMode || (PersonNameMode = {}));
+var TemplateKey;
+(function(TemplateKey8) {
+  TemplateKey8["movieTemplateFile"] = "movieTemplateFile";
+  TemplateKey8["bookTemplateFile"] = "bookTemplateFile";
+  TemplateKey8["musicTemplateFile"] = "musicTemplateFile";
+  TemplateKey8["noteTemplateFile"] = "noteTemplateFile";
+  TemplateKey8["gameTemplateFile"] = "gameTemplateFile";
+  TemplateKey8["teleplayTemplateFile"] = "teleplayTemplateFile";
+})(TemplateKey || (TemplateKey = {}));
+var SupportType;
+(function(SupportType2) {
+  SupportType2["ALL"] = "ALL";
+  SupportType2["MOVIE"] = "MOVIE";
+  SupportType2["BOOK"] = "BOOK";
+  SupportType2["MUSIC"] = "MUSIC";
+  SupportType2["NOTE"] = "NOTE";
+  SupportType2["GAME"] = "GAME";
+  SupportType2["TELEPLAY"] = "TELEPLAY";
+})(SupportType || (SupportType = {}));
+var PersonNameModeRecords = {
+  [PersonNameMode.CH_NAME]: i18nHelper.getMessage("121206"),
+  [PersonNameMode.EN_NAME]: i18nHelper.getMessage("121207"),
+  [PersonNameMode.CH_EN_NAME]: i18nHelper.getMessage("121208")
+};
+var SyncType;
+(function(SyncType3) {
+  SyncType3["movie"] = "movie";
+  SyncType3["book"] = "book";
+  SyncType3["broadcast"] = "broadcast";
+  SyncType3["note"] = "note";
+  SyncType3["music"] = "music";
+})(SyncType || (SyncType = {}));
+var SyncTypeRecords = {
+  [SyncType.movie]: i18nHelper.getMessage("504103"),
+  [SyncType.book]: i18nHelper.getMessage("504102"),
+  [SyncType.music]: i18nHelper.getMessage("504106")
+};
+var PAGE_SIZE = 30;
+var Action;
+(function(Action2) {
+  Action2["SearchAndReplace"] = "SearchAndReplace";
+  Action2["SearchAndCrate"] = "SearchAndCrate";
+  Action2["Sync"] = "Sync";
+  Action2["SearchEditorAndReplace"] = "SearchEditorAndReplace";
+})(Action || (Action = {}));
+var SyncItemStatus;
+(function(SyncItemStatus2) {
+  SyncItemStatus2["exists"] = "exists";
+  SyncItemStatus2["replace"] = "replace";
+  SyncItemStatus2["create"] = "create";
+  SyncItemStatus2["fail"] = "fail";
+  SyncItemStatus2["unHandle"] = "unHandle";
+})(SyncItemStatus || (SyncItemStatus = {}));
+var NavigateType;
+(function(NavigateType2) {
+  NavigateType2["previous"] = "previous";
+  NavigateType2["next"] = "next";
+  NavigateType2["nextNeedLogin"] = "nextNeedLogin";
+})(NavigateType || (NavigateType = {}));
+var DoubanSearchResultSubjectPreviousPage = {
+  cast: "",
+  datePublished: void 0,
+  desc: "",
+  genre: [],
+  id: "",
+  image: "",
+  publisher: "",
+  score: 0,
+  title: i18nHelper.getMessage("150102"),
+  type: "navigate",
+  url: NavigateType.previous
+};
+var DoubanSearchResultSubjectNextPage = {
+  cast: "",
+  datePublished: void 0,
+  desc: "",
+  genre: [],
+  id: "",
+  image: "",
+  publisher: "",
+  score: 0,
+  title: i18nHelper.getMessage("150103"),
+  type: "navigate",
+  url: NavigateType.next
+};
+var DoubanSearchResultSubjectNextPageNeedLogin = {
+  cast: "",
+  datePublished: void 0,
+  desc: "",
+  genre: [],
+  id: "",
+  image: "",
+  publisher: "",
+  score: 0,
+  title: i18nHelper.getMessage("150104"),
+  type: "navigate",
+  url: NavigateType.nextNeedLogin
+};
+
+// src/org/wanxp/main.ts
+var import_obsidian30 = __toModule(require("obsidian"));
+
+// src/org/wanxp/constant/Douban.ts
+var doubanHeaders = {
+  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
+};
+var doubanSubjectSyncListUrl = function(subjectType, userId, doType, start2) {
+  return `https://${subjectType}.douban.com/people/${userId}/${doType}?start=${start2}&sort=time&rating=all&filter=all&mode=list`;
+};
+
+// src/org/wanxp/constant/DefaultSettings.ts
+var DEFAULT_SETTINGS = {
+  movieTemplateFile: ``,
+  bookTemplateFile: ``,
+  musicTemplateFile: ``,
+  noteTemplateFile: ``,
+  gameTemplateFile: ``,
+  teleplayTemplateFile: ``,
+  searchUrl: "https://www.douban.com/search?q=",
+  searchHeaders: JSON.stringify(doubanHeaders),
+  dateFormat: "yyyy-MM-DD",
+  timeFormat: "HH:mm:ss",
+  arraySpilt: ", ",
+  personNameMode: PersonNameMode.CH_NAME,
+  dataFilePath: "",
+  dataFileNamePath: "/{{type}}/{{title}}",
+  statusBar: true,
+  debugMode: false,
+  customProperties: [
+    { name: "myType", value: "movie", field: SupportType.MOVIE },
+    { name: "myType", value: "book", field: SupportType.BOOK },
+    { name: "myType", value: "music", field: SupportType.MUSIC },
+    { name: "myType", value: "note", field: SupportType.NOTE },
+    { name: "myType", value: "game", field: SupportType.GAME },
+    { name: "myType", value: "teleplay", field: SupportType.TELEPLAY }
+  ],
+  loginCookiesContent: "",
+  cacheImage: true,
+  cacheHighQuantityImage: true,
+  attachmentPath: "assets",
+  syncHandledDataArray: []
+};
+
 // src/org/wanxp/douban/data/search/DoubanSearchFuzzySuggestModal.ts
-var DoubanFuzzySuggester = class extends import_obsidian2.FuzzySuggestModal {
-  constructor(plugin, context) {
-    super(app);
-    this.plugin = plugin;
-    this.context = context;
-    this.setPlaceholder(i18nHelper.getMessage("150101"));
+var import_obsidian3 = __toModule(require("obsidian"));
+
+// src/org/wanxp/douban/data/model/SearchPageInfo.ts
+var SearchPageInfo = class {
+  constructor(total, pageNum, pageSize) {
+    this._total = total;
+    this._pageNum = pageNum;
+    this._pageSize = pageSize;
+    this._hasNext = (pageNum + 1) * pageSize < total;
   }
-  getItems() {
-    return this.doubanSearchResultExtract;
-  }
-  getItemText(item) {
-    let text3 = item.type + "/" + (item.score ? item.score : "-") + "/" + item.title + "/" + item.cast;
-    return text3;
-  }
-  onChooseItem(item, evt) {
-    this.plugin.showStatus(i18nHelper.getMessage("140204", item.title));
-    this.context.listItem = item;
-    if (item) {
-      this.plugin.settingsManager.debug(`\u9009\u62E9\u4E86:${item.type}:${item.id}:${item.title}`);
+  nextPage() {
+    if (!this._hasNext) {
+      return this;
     }
-    this.plugin.doubanExtractHandler.handle(item, this.context);
+    return new SearchPageInfo(this.total, this._pageNum + 1, this._pageSize);
   }
-  showSearchList(doubanSearchResultExtractList) {
-    this.doubanSearchResultExtract = doubanSearchResultExtractList;
-    this.start();
-  }
-  start() {
-    try {
-      this.open();
-    } catch (e) {
-      log.error(e.toString(), e);
+  previousPage() {
+    if (this._pageNum == 0) {
+      return this;
     }
+    return new SearchPageInfo(this.total, this._pageNum - 1, this._pageSize);
+  }
+  get hasNext() {
+    return this._hasNext;
+  }
+  get hasPrevious() {
+    return this._pageNum > 0;
+  }
+  get start() {
+    return this._pageNum * this._pageSize + 1;
+  }
+  get total() {
+    return this._total;
+  }
+  get pageSize() {
+    return this._pageSize;
+  }
+  get pageNum() {
+    return this._pageNum;
   }
 };
 
-// src/org/wanxp/douban/data/model/DoubanSubject.ts
-var ParameterMap = new Map([
-  ["id", ""]
-]);
-var DoubanParameter = {
-  ID: "{{id}}",
-  TITLE: "{{title}}",
-  TYPE: "{{type}}",
-  SCORE: "{{score}}",
-  IMAGE: "{{image}}",
-  URL: "{{url}}",
-  DESC: "{{desc}}",
-  PUBLISHER: "{{publisher}}",
-  DATE_PUBLISHED: "{{datePublished}}",
-  TIME_PUBLISHED: "{{timePublished}}",
-  YEAR_PUBLISHED: "{{yearPublished}}",
-  GENRE: "{{genre}}",
-  CURRENT_DATE: "{{currentDate}}",
-  CURRENT_TIME: "{{currentTime}}"
-};
-
-// src/org/wanxp/douban/data/handler/DoubanAbstractLoadHandler.ts
-var import_obsidian4 = __toModule(require("obsidian"));
+// src/org/wanxp/douban/data/search/Search.ts
+var import_obsidian2 = __toModule(require("obsidian"));
 
 // node_modules/cheerio/lib/esm/options.js
 var defaultOpts = {
@@ -15137,6 +15259,274 @@ var parse4 = getParse((content, options, isDocument2, context) => options.xmlMod
 var load = getLoad(parse4, (dom, options) => options.xmlMode || options._useHtmlParser2 ? esm_default(dom, options) : renderWithParse5(dom));
 var esm_default2 = load([]);
 
+// src/org/wanxp/douban/data/model/SearchPage.ts
+var SearchPage = class extends SearchPageInfo {
+  constructor(total, pageNum, pageSize, list) {
+    super(total, pageNum, pageSize);
+    this._list = list;
+  }
+  get list() {
+    return this._list;
+  }
+};
+
+// src/org/wanxp/utils/Logutil.ts
+var import_obsidian = __toModule(require("obsidian"));
+var Logger = class {
+  error(msg, e) {
+    new import_obsidian.Notice(msg);
+    console.log(`OB-Douban: ${msg}`);
+    console.error(e);
+    return e;
+  }
+  notice(e) {
+    new import_obsidian.Notice(e);
+    console.error(`OB-Douban: ${e}`);
+    return e;
+  }
+  warn(e) {
+    new import_obsidian.Notice(e);
+    console.warn(`OB-Douban: ${e}`);
+    return e;
+  }
+  info(e) {
+    console.log(`OB-Douban:${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+  debug(e) {
+    if (e instanceof Error) {
+      console.error(e);
+    } else {
+      console.log(`OB-Douban:${(0, import_obsidian.moment)(new Date()).format("YYYY-MM-DD HH:mm:SS")}:${typeof e == "string" ? e : JSON.stringify(e)}`);
+    }
+    return e;
+  }
+  trace(e) {
+    console.log(`OB-Douban:${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+  traceN(notion, e) {
+    console.log(`${notion} ${typeof e == "string" ? e : JSON.stringify(e)}`);
+    return e;
+  }
+};
+var log = new Logger();
+
+// src/org/wanxp/douban/data/search/SearchParser.ts
+var SearchParserHandler = class {
+  static parseSearch(dataHtml) {
+    return dataHtml(".result").get().map((i) => {
+      const item = dataHtml(i);
+      let idPattern = /(\d){5,10}/g;
+      let urlPattern = /(https%3A%2F%2F)\S+(\d){5,10}(%2F)/g;
+      let linkValue = item.find("div.content > div > h3 > a").attr("href");
+      let ececResult = idPattern.exec(linkValue);
+      let urlResult = urlPattern.exec(linkValue);
+      let cast = item.find(".subject-cast").text();
+      let score = item.find(".rating_nums").text();
+      let title = item.find("div.content > div > h3 > a").text();
+      let type = item.find("div.content > div > h3 > span").text();
+      let desc = item.find("div.content > p").text();
+      const result = {
+        id: ececResult ? ececResult[0] : "",
+        title: title ? title : "-",
+        score: score ? Number(score) : null,
+        cast,
+        type: type ? type : "-",
+        desc: desc ? desc : "-",
+        url: urlResult ? decodeURIComponent(urlResult[0]) : "https://www.douban.com",
+        image: "",
+        publisher: "",
+        datePublished: void 0,
+        genre: []
+      };
+      return result;
+    });
+  }
+  static parseSearchJson(result, start2) {
+    log.debug("\u89E3\u6790\u7ED9\u591A\u9875\u9762\u7ED3\u679C");
+    const data2 = JSON.parse(result);
+    const list = data2.items;
+    const resultList = list.map((e) => load(e)).map((e) => this.parseSearch(e)).map((e) => e ? e[0] : null);
+    return new SearchPage(data2.total, start2 / data2.limit, data2.limit, resultList);
+  }
+};
+
+// src/org/wanxp/douban/data/search/Search.ts
+var Searcher = class {
+  static search(searchItem, doubanSettings, settingsManager) {
+    const myHeaders = JSON.parse(doubanSettings.searchHeaders);
+    if (doubanSettings.loginCookiesContent) {
+      myHeaders.Cookie = doubanSettings.loginCookiesContent;
+    }
+    let requestUrlParam = {
+      url: DEFAULT_SETTINGS.searchUrl + searchItem,
+      method: "GET",
+      headers: myHeaders,
+      throw: true
+    };
+    return (0, import_obsidian2.requestUrl)(requestUrlParam).then((requestUrlResponse) => {
+      if (requestUrlResponse.status == 403) {
+        throw new Error(i18nHelper.getMessage("130106"));
+      }
+      return requestUrlResponse.text;
+    }).then(load).then(SearchParserHandler.parseSearch).catch((e) => {
+      if (e.toString().indexOf("403") > 0) {
+        throw new Error(i18nHelper.getMessage("130106"));
+      } else {
+        throw log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
+      }
+    });
+    ;
+  }
+  static loadSearchItem(searchItem, start2, doubanSettings, settingsManager) {
+    const myHeaders = JSON.parse(doubanSettings.searchHeaders);
+    if (doubanSettings.loginCookiesContent) {
+      myHeaders.Cookie = doubanSettings.loginCookiesContent;
+    }
+    const url = `https://www.douban.com/j/search?q=${searchItem}&start=${start2}&subtype=item`;
+    log.debug(`\u8BF7\u6C42\u66F4\u591A\u9875\u9762:${url}`);
+    let requestUrlParam = {
+      url,
+      method: "GET",
+      headers: myHeaders,
+      throw: true
+    };
+    return (0, import_obsidian2.requestUrl)(requestUrlParam).then((requestUrlResponse) => {
+      if (requestUrlResponse.status == 403) {
+        throw new Error(i18nHelper.getMessage("130106"));
+      }
+      return requestUrlResponse.text;
+    }).then((e) => SearchParserHandler.parseSearchJson(e, start2)).catch((e) => {
+      if (e.toString().indexOf("403") > 0) {
+        throw new Error(i18nHelper.getMessage("130106"));
+      } else {
+        throw log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
+      }
+    });
+    ;
+  }
+};
+
+// src/org/wanxp/douban/data/search/DoubanSearchFuzzySuggestModal.ts
+var DoubanFuzzySuggester = class extends import_obsidian3.FuzzySuggestModal {
+  constructor(plugin, context, searchItem) {
+    super(app);
+    this.plugin = plugin;
+    this.context = context;
+    this.searchItem = searchItem;
+    this.setPlaceholder(i18nHelper.getMessage("150101"));
+  }
+  getItems() {
+    return this.doubanSearchResultExtract;
+  }
+  getItemText(item) {
+    if (this.isNavigate(item)) {
+      return item.title;
+    }
+    let text3 = item.type + "/" + (item.score ? item.score : "-") + "/" + item.title + "/" + item.cast;
+    return text3;
+  }
+  isNavigate(item) {
+    return item.type == "navigate";
+  }
+  onChooseItem(item, evt) {
+    return __async(this, null, function* () {
+      if (this.isNavigate(item)) {
+        if (yield this.handleNavigate(item)) {
+          this.start();
+        }
+        return;
+      }
+      this.plugin.showStatus(i18nHelper.getMessage("140204", item.title));
+      this.context.listItem = item;
+      if (item) {
+        this.plugin.settingsManager.debug(`\u9009\u62E9\u4E86:${item.type}:${item.id}:${item.title}`);
+      }
+      this.plugin.doubanExtractHandler.handle(item, this.context);
+    });
+  }
+  handleNavigate(item) {
+    return __async(this, null, function* () {
+      const { searchPage } = this.context;
+      let currentPage = searchPage;
+      let result = false;
+      switch (item.url) {
+        case NavigateType.previous:
+          currentPage = searchPage.previousPage();
+          result = true;
+          break;
+        case NavigateType.next:
+          currentPage = searchPage.nextPage();
+          result = true;
+          break;
+        case NavigateType.nextNeedLogin:
+          log.warn(i18nHelper.getMessage("140304"));
+          break;
+      }
+      if (result) {
+        const searchPageResult = yield Searcher.loadSearchItem(this.searchItem, currentPage.start, this.plugin.settings, this.plugin.settingsManager);
+        this.context.searchPage = new SearchPageInfo(searchPageResult.total, currentPage.pageNum, searchPageResult.pageSize);
+        this.updatePageResult(searchPageResult);
+      }
+      return result;
+    });
+  }
+  updatePageResult(searchPageResult) {
+    this.initItems(searchPageResult.list);
+  }
+  showSearchList(doubanSearchResultExtractList) {
+    this.initItems(doubanSearchResultExtractList);
+    this.start();
+  }
+  initItems(doubanSearchResultExtractList) {
+    let doubanList = doubanSearchResultExtractList;
+    const { searchPage } = this.context;
+    if (searchPage.hasNext) {
+      if (this.plugin.userComponent.isLogin()) {
+        doubanList.push(DoubanSearchResultSubjectNextPage);
+      } else {
+        doubanList.push(DoubanSearchResultSubjectNextPageNeedLogin);
+      }
+    }
+    if (searchPage.hasPrevious) {
+      doubanList.unshift(DoubanSearchResultSubjectPreviousPage);
+    }
+    this.doubanSearchResultExtract = doubanList;
+  }
+  start() {
+    try {
+      this.open();
+    } catch (e) {
+      log.error(e.toString(), e);
+    }
+  }
+};
+
+// src/org/wanxp/douban/data/model/DoubanSubject.ts
+var ParameterMap = new Map([
+  ["id", ""]
+]);
+var DoubanParameter = {
+  ID: "{{id}}",
+  TITLE: "{{title}}",
+  TYPE: "{{type}}",
+  SCORE: "{{score}}",
+  IMAGE: "{{image}}",
+  URL: "{{url}}",
+  DESC: "{{desc}}",
+  PUBLISHER: "{{publisher}}",
+  DATE_PUBLISHED: "{{datePublished}}",
+  TIME_PUBLISHED: "{{timePublished}}",
+  YEAR_PUBLISHED: "{{yearPublished}}",
+  GENRE: "{{genre}}",
+  CURRENT_DATE: "{{currentDate}}",
+  CURRENT_TIME: "{{currentTime}}"
+};
+
+// src/org/wanxp/douban/data/handler/DoubanAbstractLoadHandler.ts
+var import_obsidian5 = __toModule(require("obsidian"));
+
 // src/org/wanxp/utils/YamlUtil.ts
 var YamlUtil = class {
   static hasSpecialChar(str) {
@@ -15154,89 +15544,6 @@ var TITLE_ALIASES_SPECIAL_CHAR_REG_G = /[{}\[\]&*#?|\-<>=!%@:"`,， \n]/g;
 var SPECIAL_CHAR_REG_REPLACE = new Map([
   ["{", "\\{"]
 ]);
-
-// src/org/wanxp/constant/Constsant.ts
-var BasicConst = {
-  YAML_FRONT_MATTER_SYMBOL: "---",
-  CLEAN_STATUS_BAR_DELAY: 5e3,
-  CALL_DOUBAN_DELAY: 4e3,
-  CALL_DOUBAN_DELAY_RANGE: 4e3,
-  SLOW_SIZE: 200,
-  CALL_DOUBAN_DELAY_SLOW: 1e4,
-  CALL_DOUBAN_DELAY_RANGE_SLOW: 5e3
-};
-var ESTIMATE_TIME_PER = 2e3;
-var ESTIMATE_TIME_PER_WITH_REQUEST_SLOW = ESTIMATE_TIME_PER + BasicConst.CALL_DOUBAN_DELAY_SLOW + BasicConst.CALL_DOUBAN_DELAY_RANGE_SLOW / 2;
-var ESTIMATE_TIME_PER_WITH_REQUEST = ESTIMATE_TIME_PER + BasicConst.CALL_DOUBAN_DELAY + BasicConst.CALL_DOUBAN_DELAY_RANGE / 2;
-var TemplateTextMode;
-(function(TemplateTextMode3) {
-  TemplateTextMode3[TemplateTextMode3["NORMAL"] = 0] = "NORMAL";
-  TemplateTextMode3[TemplateTextMode3["YAML"] = 1] = "YAML";
-})(TemplateTextMode || (TemplateTextMode = {}));
-var SearchHandleMode;
-(function(SearchHandleMode2) {
-  SearchHandleMode2[SearchHandleMode2["FOR_REPLACE"] = 0] = "FOR_REPLACE";
-  SearchHandleMode2[SearchHandleMode2["FOR_CREATE"] = 1] = "FOR_CREATE";
-})(SearchHandleMode || (SearchHandleMode = {}));
-var PersonNameMode;
-(function(PersonNameMode2) {
-  PersonNameMode2["CH_NAME"] = "CH";
-  PersonNameMode2["EN_NAME"] = "EN";
-  PersonNameMode2["CH_EN_NAME"] = "CH_EN";
-})(PersonNameMode || (PersonNameMode = {}));
-var TemplateKey;
-(function(TemplateKey8) {
-  TemplateKey8["movieTemplateFile"] = "movieTemplateFile";
-  TemplateKey8["bookTemplateFile"] = "bookTemplateFile";
-  TemplateKey8["musicTemplateFile"] = "musicTemplateFile";
-  TemplateKey8["noteTemplateFile"] = "noteTemplateFile";
-  TemplateKey8["gameTemplateFile"] = "gameTemplateFile";
-  TemplateKey8["teleplayTemplateFile"] = "teleplayTemplateFile";
-})(TemplateKey || (TemplateKey = {}));
-var SupportType;
-(function(SupportType2) {
-  SupportType2["ALL"] = "ALL";
-  SupportType2["MOVIE"] = "MOVIE";
-  SupportType2["BOOK"] = "BOOK";
-  SupportType2["MUSIC"] = "MUSIC";
-  SupportType2["NOTE"] = "NOTE";
-  SupportType2["GAME"] = "GAME";
-  SupportType2["TELEPLAY"] = "TELEPLAY";
-})(SupportType || (SupportType = {}));
-var PersonNameModeRecords = {
-  [PersonNameMode.CH_NAME]: i18nHelper.getMessage("121206"),
-  [PersonNameMode.EN_NAME]: i18nHelper.getMessage("121207"),
-  [PersonNameMode.CH_EN_NAME]: i18nHelper.getMessage("121208")
-};
-var SyncType;
-(function(SyncType3) {
-  SyncType3["movie"] = "movie";
-  SyncType3["book"] = "book";
-  SyncType3["broadcast"] = "broadcast";
-  SyncType3["note"] = "note";
-  SyncType3["music"] = "music";
-})(SyncType || (SyncType = {}));
-var SyncTypeRecords = {
-  [SyncType.movie]: i18nHelper.getMessage("504103"),
-  [SyncType.book]: i18nHelper.getMessage("504102"),
-  [SyncType.music]: i18nHelper.getMessage("504106")
-};
-var PAGE_SIZE = 30;
-var Action;
-(function(Action2) {
-  Action2["SearchAndReplace"] = "SearchAndReplace";
-  Action2["SearchAndCrate"] = "SearchAndCrate";
-  Action2["Sync"] = "Sync";
-  Action2["SearchEditorAndReplace"] = "SearchEditorAndReplace";
-})(Action || (Action = {}));
-var SyncItemStatus;
-(function(SyncItemStatus2) {
-  SyncItemStatus2["exists"] = "exists";
-  SyncItemStatus2["replace"] = "replace";
-  SyncItemStatus2["create"] = "create";
-  SyncItemStatus2["fail"] = "fail";
-  SyncItemStatus2["unHandle"] = "unHandle";
-})(SyncItemStatus || (SyncItemStatus = {}));
 
 // src/org/wanxp/constant/DefaultTemplateContent.ts
 var DEFAULT_TEMPLATE_CONTENT = {
@@ -15577,49 +15884,6 @@ var StringUtil = class {
   }
 };
 
-// src/org/wanxp/constant/Douban.ts
-var doubanHeaders = {
-  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-  "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
-  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"
-};
-var doubanSubjectSyncListUrl = function(subjectType, userId, doType, start2) {
-  return `https://${subjectType}.douban.com/people/${userId}/${doType}?start=${start2}&sort=time&rating=all&filter=all&mode=list`;
-};
-
-// src/org/wanxp/constant/DefaultSettings.ts
-var DEFAULT_SETTINGS = {
-  movieTemplateFile: ``,
-  bookTemplateFile: ``,
-  musicTemplateFile: ``,
-  noteTemplateFile: ``,
-  gameTemplateFile: ``,
-  teleplayTemplateFile: ``,
-  searchUrl: "https://www.douban.com/search?q=",
-  searchHeaders: JSON.stringify(doubanHeaders),
-  dateFormat: "yyyy-MM-DD",
-  timeFormat: "HH:mm:ss",
-  arraySpilt: ", ",
-  personNameMode: PersonNameMode.CH_NAME,
-  dataFilePath: "",
-  dataFileNamePath: "/{{type}}/{{title}}",
-  statusBar: true,
-  debugMode: false,
-  customProperties: [
-    { name: "myType", value: "movie", field: SupportType.MOVIE },
-    { name: "myType", value: "book", field: SupportType.BOOK },
-    { name: "myType", value: "music", field: SupportType.MUSIC },
-    { name: "myType", value: "note", field: SupportType.NOTE },
-    { name: "myType", value: "game", field: SupportType.GAME },
-    { name: "myType", value: "teleplay", field: SupportType.TELEPLAY }
-  ],
-  loginCookiesContent: "",
-  cacheImage: true,
-  cacheHighQuantityImage: true,
-  attachmentPath: "assets",
-  syncHandledDataArray: []
-};
-
 // src/org/wanxp/douban/data/model/UserStateSubject.ts
 var DoubanUserParameter = {
   MY_TAGS: "{{myTags}}",
@@ -15715,7 +15979,7 @@ var DoubanSubjectStateRecords_MUSIC_SYNC = {
 };
 
 // src/org/wanxp/douban/component/DoubanHumanCheckModel.ts
-var import_obsidian3 = __toModule(require("obsidian"));
+var import_obsidian4 = __toModule(require("obsidian"));
 var DoubanHumanCheckModel = class {
   constructor(url) {
     this.url = url;
@@ -15777,7 +16041,7 @@ var DoubanHumanCheckModel = class {
   }
   onClose() {
     this.modal.close();
-    new import_obsidian3.Notice(i18nHelper.getMessage("100103"));
+    new import_obsidian4.Notice(i18nHelper.getMessage("100103"));
   }
   onReload() {
     this.modal.reload();
@@ -15874,7 +16138,7 @@ var DoubanAbstractLoadHandler = class {
         headers,
         throw: true
       };
-      yield (0, import_obsidian4.request)(requestUrlParam).then((s) => this.humanCheck(s, url)).then(load).then((data2) => this.analysisUserState(data2, context)).then(({ data: data2, userState }) => {
+      yield (0, import_obsidian5.request)(requestUrlParam).then((s) => this.humanCheck(s, url)).then(load).then((data2) => this.analysisUserState(data2, context)).then(({ data: data2, userState }) => {
         let sub = this.parseSubjectFromHtml(data2, context);
         sub.userState = userState;
         return sub;
@@ -15974,7 +16238,7 @@ var DoubanAbstractLoadHandler = class {
   }
   parsePartText(template, extract, context, textMode = TemplateTextMode.NORMAL) {
     let resultContent = this.handleCustomVariable(template, context);
-    resultContent = resultContent.replaceAll(DoubanParameter.ID, extract.id).replaceAll(DoubanParameter.TITLE, this.handleSpecialContent(extract.title, textMode)).replaceAll(DoubanParameter.TYPE, extract.type).replaceAll(DoubanParameter.SCORE, this.handleSpecialContent(extract.score)).replaceAll(DoubanParameter.IMAGE, extract.image).replaceAll(DoubanParameter.URL, extract.url).replaceAll(DoubanParameter.DESC, this.handleSpecialContent(extract.desc, textMode)).replaceAll(DoubanParameter.PUBLISHER, extract.publisher).replaceAll(DoubanParameter.YEAR_PUBLISHED, extract.datePublished ? (0, import_obsidian4.moment)(extract.datePublished).format("yyyy") : "").replaceAll(DoubanParameter.DATE_PUBLISHED, extract.datePublished ? (0, import_obsidian4.moment)(extract.datePublished).format(context.settings.dateFormat) : "").replaceAll(DoubanParameter.TIME_PUBLISHED, extract.datePublished ? (0, import_obsidian4.moment)(extract.datePublished).format(context.settings.timeFormat) : "").replaceAll(DoubanParameter.CURRENT_DATE, (0, import_obsidian4.moment)(new Date()).format(context.settings.dateFormat)).replaceAll(DoubanParameter.CURRENT_TIME, (0, import_obsidian4.moment)(new Date()).format(context.settings.timeFormat)).replaceAll(DoubanParameter.GENRE, this.handleSpecialContent(extract.genre, textMode, context));
+    resultContent = resultContent.replaceAll(DoubanParameter.ID, extract.id).replaceAll(DoubanParameter.TITLE, this.handleSpecialContent(extract.title, textMode)).replaceAll(DoubanParameter.TYPE, extract.type).replaceAll(DoubanParameter.SCORE, this.handleSpecialContent(extract.score)).replaceAll(DoubanParameter.IMAGE, extract.image).replaceAll(DoubanParameter.URL, extract.url).replaceAll(DoubanParameter.DESC, this.handleSpecialContent(extract.desc, textMode)).replaceAll(DoubanParameter.PUBLISHER, extract.publisher).replaceAll(DoubanParameter.YEAR_PUBLISHED, extract.datePublished ? (0, import_obsidian5.moment)(extract.datePublished).format("yyyy") : "").replaceAll(DoubanParameter.DATE_PUBLISHED, extract.datePublished ? (0, import_obsidian5.moment)(extract.datePublished).format(context.settings.dateFormat) : "").replaceAll(DoubanParameter.TIME_PUBLISHED, extract.datePublished ? (0, import_obsidian5.moment)(extract.datePublished).format(context.settings.timeFormat) : "").replaceAll(DoubanParameter.CURRENT_DATE, (0, import_obsidian5.moment)(new Date()).format(context.settings.dateFormat)).replaceAll(DoubanParameter.CURRENT_TIME, (0, import_obsidian5.moment)(new Date()).format(context.settings.timeFormat)).replaceAll(DoubanParameter.GENRE, this.handleSpecialContent(extract.genre, textMode, context));
     resultContent = this.parseUserInfo(resultContent, extract, context, textMode);
     return this.parseText(resultContent, extract, context, textMode);
   }
@@ -15987,7 +16251,7 @@ var DoubanAbstractLoadHandler = class {
     if (!userState) {
       return resultContent;
     }
-    return resultContent.replaceAll(DoubanUserParameter.MY_TAGS, this.handleSpecialContent(userState.tags, textMode, context)).replaceAll(DoubanUserParameter.MY_RATING, this.handleSpecialContent(userState.rate, textMode)).replaceAll(DoubanUserParameter.MY_STATE, this.getUserStateName(userState.state)).replaceAll(DoubanUserParameter.MY_COMMENT, this.handleSpecialContent(userState.comment, textMode)).replaceAll(DoubanUserParameter.MY_COLLECTION_DATE, userState.collectionDate ? (0, import_obsidian4.moment)(userState.collectionDate).format(context.settings.dateFormat) : "");
+    return resultContent.replaceAll(DoubanUserParameter.MY_TAGS, this.handleSpecialContent(userState.tags, textMode, context)).replaceAll(DoubanUserParameter.MY_RATING, this.handleSpecialContent(userState.rate, textMode)).replaceAll(DoubanUserParameter.MY_STATE, this.getUserStateName(userState.state)).replaceAll(DoubanUserParameter.MY_COMMENT, this.handleSpecialContent(userState.comment, textMode)).replaceAll(DoubanUserParameter.MY_COLLECTION_DATE, userState.collectionDate ? (0, import_obsidian5.moment)(userState.collectionDate).format(context.settings.dateFormat) : "");
   }
   handleCustomVariable(template, context) {
     let customProperties = context.settings.customProperties;
@@ -16170,7 +16434,7 @@ var DoubanBookParameter = {
 };
 
 // src/org/wanxp/douban/data/handler/DoubanBookLoadHandler.ts
-var import_obsidian5 = __toModule(require("obsidian"));
+var import_obsidian6 = __toModule(require("obsidian"));
 var DoubanBookLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
@@ -16202,7 +16466,7 @@ var DoubanBookLoadHandler = class extends DoubanAbstractLoadHandler {
       tags,
       rate: rate ? Number(rate) : null,
       state: userState1,
-      collectionDate: collectionDateStr ? (0, import_obsidian5.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
+      collectionDate: collectionDateStr ? (0, import_obsidian6.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
       comment: component
     };
     return { data: html3, userState };
@@ -16300,7 +16564,7 @@ function getProperty(o, name) {
 }
 
 // src/org/wanxp/douban/data/handler/DoubanMovieLoadHandler.ts
-var import_obsidian6 = __toModule(require("obsidian"));
+var import_obsidian7 = __toModule(require("obsidian"));
 var DoubanMovieLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
@@ -16330,7 +16594,7 @@ var DoubanMovieLoadHandler = class extends DoubanAbstractLoadHandler {
       tags,
       rate: rate ? Number(rate) : null,
       state: userState1,
-      collectionDate: collectionDateStr ? (0, import_obsidian6.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
+      collectionDate: collectionDateStr ? (0, import_obsidian7.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
       comment: component
     };
     return { data: html3, userState };
@@ -16405,7 +16669,7 @@ var MovieKeyValueMap = new Map([
 ]);
 
 // src/org/wanxp/douban/data/handler/DoubanMusicLoadHandler.ts
-var import_obsidian7 = __toModule(require("obsidian"));
+var import_obsidian8 = __toModule(require("obsidian"));
 var DoubanMusicLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
@@ -16435,7 +16699,7 @@ var DoubanMusicLoadHandler = class extends DoubanAbstractLoadHandler {
       tags,
       rate: rate ? Number(rate) : null,
       state: userState1,
-      collectionDate: collectionDateStr ? (0, import_obsidian7.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
+      collectionDate: collectionDateStr ? (0, import_obsidian8.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
       comment: component
     };
     return { data: html3, userState };
@@ -16569,7 +16833,7 @@ var DoubanOtherLoadHandler = class extends DoubanAbstractLoadHandler {
 };
 
 // src/org/wanxp/douban/data/handler/DoubanTeleplayLoadHandler.ts
-var import_obsidian8 = __toModule(require("obsidian"));
+var import_obsidian9 = __toModule(require("obsidian"));
 var DoubanTeleplayLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
@@ -16600,7 +16864,7 @@ var DoubanTeleplayLoadHandler = class extends DoubanAbstractLoadHandler {
       tags,
       rate: rate ? Number(rate) : null,
       state: userState1,
-      collectionDate: collectionDateStr ? (0, import_obsidian8.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
+      collectionDate: collectionDateStr ? (0, import_obsidian9.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
       comment: component
     };
     return { data: html3, userState };
@@ -16676,7 +16940,7 @@ var TeleplayKeyValueMap = new Map([
 ]);
 
 // src/org/wanxp/douban/data/handler/DoubanGameLoadHandler.ts
-var import_obsidian9 = __toModule(require("obsidian"));
+var import_obsidian10 = __toModule(require("obsidian"));
 var DoubanGameLoadHandler = class extends DoubanAbstractLoadHandler {
   constructor(doubanPlugin) {
     super(doubanPlugin);
@@ -16708,7 +16972,7 @@ var DoubanGameLoadHandler = class extends DoubanAbstractLoadHandler {
       tags,
       rate: rate ? Number(rate) : null,
       state: userState1,
-      collectionDate: collectionDateStr ? (0, import_obsidian9.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
+      collectionDate: collectionDateStr ? (0, import_obsidian10.moment)(collectionDateStr, "YYYY-MM-DD").toDate() : null,
       comment: component
     };
     return { data: html3, userState };
@@ -16818,8 +17082,8 @@ var DoubanSearchChooseItemHandler = class {
 };
 
 // src/org/wanxp/douban/data/search/DoubanSearchModal.ts
-var import_obsidian10 = __toModule(require("obsidian"));
-var DoubanSearchModal = class extends import_obsidian10.Modal {
+var import_obsidian11 = __toModule(require("obsidian"));
+var DoubanSearchModal = class extends import_obsidian11.Modal {
   constructor(app2, plugin, context) {
     super(app2);
     this.plugin = plugin;
@@ -16829,7 +17093,7 @@ var DoubanSearchModal = class extends import_obsidian10.Modal {
     let { contentEl } = this;
     contentEl.createEl("h3", { text: i18nHelper.getMessage("110003") });
     const inputs = contentEl.createDiv("inputs");
-    const searchInput = new import_obsidian10.TextComponent(inputs).onChange((searchTerm) => {
+    const searchInput = new import_obsidian11.TextComponent(inputs).onChange((searchTerm) => {
       this.searchTerm = searchTerm;
     });
     searchInput.inputEl.addClass("obsidian_douban_search_input");
@@ -16865,16 +17129,16 @@ var DoubanSearchModal = class extends import_obsidian10.Modal {
 };
 
 // src/org/wanxp/douban/setting/DoubanSettingTab.ts
-var import_obsidian20 = __toModule(require("obsidian"));
+var import_obsidian21 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/setting/OutputSettingsHelper.ts
-var import_obsidian15 = __toModule(require("obsidian"));
+var import_obsidian16 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/setting/model/FileSuggest.ts
-var import_obsidian12 = __toModule(require("obsidian"));
+var import_obsidian13 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/setting/model/TextInputSuggest.ts
-var import_obsidian11 = __toModule(require("obsidian"));
+var import_obsidian12 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/setting/model/Suggest.ts
 var wrapAround = (value, size) => {
@@ -18523,7 +18787,7 @@ var TextInputSuggest = class {
   constructor(app2, inputEl) {
     this.app = app2;
     this.inputEl = inputEl;
-    this.scope = new import_obsidian11.Scope();
+    this.scope = new import_obsidian12.Scope();
     this.suggestEl = createDiv("suggestion-container");
     const suggestion = this.suggestEl.createDiv("suggestion");
     this.suggest = new Suggest(this, suggestion, this.scope);
@@ -18581,7 +18845,7 @@ var FileSuggest = class extends TextInputSuggest {
     const files = [];
     const lowerCaseInputStr = inputStr.toLowerCase();
     abstractFiles.forEach((file) => {
-      if (file instanceof import_obsidian12.TFile && file.extension === "md" && file.path.toLowerCase().contains(lowerCaseInputStr)) {
+      if (file instanceof import_obsidian13.TFile && file.extension === "md" && file.path.toLowerCase().contains(lowerCaseInputStr)) {
         files.push(file);
       }
     });
@@ -18598,17 +18862,17 @@ var FileSuggest = class extends TextInputSuggest {
 };
 
 // src/org/wanxp/douban/setting/TemplateSettingHelper.ts
-var import_obsidian14 = __toModule(require("obsidian"));
+var import_obsidian15 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/setting/model/FolderSuggest.ts
-var import_obsidian13 = __toModule(require("obsidian"));
+var import_obsidian14 = __toModule(require("obsidian"));
 var FolderSuggest = class extends TextInputSuggest {
   getSuggestions(inputStr) {
     const abstractFiles = this.app.vault.getAllLoadedFiles();
     const folders = [];
     const lowerCaseInputStr = inputStr.toLowerCase();
     abstractFiles.forEach((folder) => {
-      if (folder instanceof import_obsidian13.TFolder && folder.path.toLowerCase().contains(lowerCaseInputStr)) {
+      if (folder instanceof import_obsidian14.TFolder && folder.path.toLowerCase().contains(lowerCaseInputStr)) {
         folders.push(folder);
       }
     });
@@ -18628,13 +18892,13 @@ var FolderSuggest = class extends TextInputSuggest {
 function constructTemplateUI(containerEl, manager) {
   containerEl.createEl("h3", { text: i18nHelper.getMessage("1203") });
   containerEl.createEl("p", { text: i18nHelper.getMessage("1204") });
-  new import_obsidian14.Setting(containerEl).setDesc(i18nHelper.getMessage("1205"));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "120101", desc: "120102", placeholder: "121701", key: "movieTemplateFile", manager }));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "120201", desc: "120202", placeholder: "121701", key: "bookTemplateFile", manager }));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "120301", desc: "120302", placeholder: "121701", key: "musicTemplateFile", manager }));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "120401", desc: "120402", placeholder: "121701", key: "noteTemplateFile", manager }));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "121301", desc: "121302", placeholder: "121701", key: "gameTemplateFile", manager }));
-  new import_obsidian14.Setting(containerEl).then(createFileSelectionSetting({ name: "121801", desc: "121802", placeholder: "121701", key: "teleplayTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).setDesc(i18nHelper.getMessage("1205"));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "120101", desc: "120102", placeholder: "121701", key: "movieTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "120201", desc: "120202", placeholder: "121701", key: "bookTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "120301", desc: "120302", placeholder: "121701", key: "musicTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "120401", desc: "120402", placeholder: "121701", key: "noteTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "121301", desc: "121302", placeholder: "121701", key: "gameTemplateFile", manager }));
+  new import_obsidian15.Setting(containerEl).then(createFileSelectionSetting({ name: "121801", desc: "121802", placeholder: "121701", key: "teleplayTemplateFile", manager }));
 }
 function createFileSelectionSetting({
   name,
@@ -18698,19 +18962,19 @@ function createFolderSelectionSetting({
 // src/org/wanxp/douban/setting/OutputSettingsHelper.ts
 function constructOutUI(containerEl, manager) {
   containerEl.createEl("h3", { text: i18nHelper.getMessage("1220") });
-  new import_obsidian15.Setting(containerEl);
+  new import_obsidian16.Setting(containerEl);
   let attachmentFileSetting = containerEl.createDiv({ cls: "settings-item-attachment" });
   constructAttachmentFileSettingsUI(attachmentFileSetting, manager);
-  new import_obsidian15.Setting(containerEl).then(createFolderSelectionSetting({ name: "121501", desc: "121502", placeholder: "121503", key: "dataFilePath", manager }));
+  new import_obsidian16.Setting(containerEl).then(createFolderSelectionSetting({ name: "121501", desc: "121502", placeholder: "121503", key: "dataFilePath", manager }));
   let outfolder = containerEl.createDiv({ cls: "settings-item" });
   constructOutputFileNameUI(outfolder, manager);
-  new import_obsidian15.Setting(containerEl).setName(i18nHelper.getMessage("120601")).setDesc(i18nHelper.getMessage("120602")).addText((textField) => {
+  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("120601")).setDesc(i18nHelper.getMessage("120602")).addText((textField) => {
     textField.setPlaceholder(DEFAULT_SETTINGS.arraySpilt).setValue(manager.plugin.settings.arraySpilt).onChange((value) => __async(this, null, function* () {
       manager.plugin.settings.arraySpilt = value;
       yield manager.plugin.saveSettings();
     }));
   });
-  new import_obsidian15.Setting(containerEl).setName(i18nHelper.getMessage("121201")).then((setting) => {
+  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("121201")).then((setting) => {
     setting.addDropdown((dropdwon) => {
       setting.descEl.appendChild(createFragment((frag) => {
         frag.appendText(i18nHelper.getMessage("121202"));
@@ -18734,7 +18998,7 @@ function constructOutUI(containerEl, manager) {
 }
 function constructOutputFileNameUI(containerEl, manager) {
   containerEl.empty();
-  const dataFilePathSetting = new import_obsidian15.Setting(containerEl).setName(i18nHelper.getMessage("121601")).setDesc(i18nHelper.getMessage("121602")).addText((textField) => {
+  const dataFilePathSetting = new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("121601")).setDesc(i18nHelper.getMessage("121602")).addText((textField) => {
     textField.setPlaceholder(DEFAULT_SETTINGS.dataFileNamePath).setValue(manager.plugin.settings.dataFileNamePath).onChange((value) => __async(this, null, function* () {
       manager.plugin.settings.dataFileNamePath = value;
       yield manager.plugin.saveSettings();
@@ -18750,7 +19014,7 @@ function constructOutputFileNameUI(containerEl, manager) {
 }
 function constructAttachmentFileSettingsUI(containerEl, manager) {
   containerEl.empty();
-  new import_obsidian15.Setting(containerEl).setName(i18nHelper.getMessage("121430")).setDesc(i18nHelper.getMessage("121431")).addToggle((toggleComponent) => {
+  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("121430")).setDesc(i18nHelper.getMessage("121431")).addToggle((toggleComponent) => {
     toggleComponent.setValue(manager.plugin.settings.cacheImage).onChange((value) => __async(this, null, function* () {
       manager.plugin.settings.cacheImage = value;
       yield manager.plugin.saveSettings();
@@ -18758,8 +19022,8 @@ function constructAttachmentFileSettingsUI(containerEl, manager) {
     }));
   });
   if (manager.plugin.settings.cacheImage) {
-    new import_obsidian15.Setting(containerEl).then(createFolderSelectionSetting({ name: "121432", desc: "121433", placeholder: "121434", key: "attachmentPath", manager }));
-    new import_obsidian15.Setting(containerEl).setName(i18nHelper.getMessage("121435")).setDesc(i18nHelper.getMessage("121436")).addToggle((toggleComponent) => {
+    new import_obsidian16.Setting(containerEl).then(createFolderSelectionSetting({ name: "121432", desc: "121433", placeholder: "121434", key: "attachmentPath", manager }));
+    new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("121435")).setDesc(i18nHelper.getMessage("121436")).addToggle((toggleComponent) => {
       toggleComponent.setTooltip(i18nHelper.getMessage("121437")).setValue(manager.plugin.settings.cacheHighQuantityImage).onChange((value) => __async(this, null, function* () {
         manager.plugin.settings.cacheHighQuantityImage = value;
         yield manager.plugin.saveSettings();
@@ -18770,7 +19034,7 @@ function constructAttachmentFileSettingsUI(containerEl, manager) {
 }
 
 // src/org/wanxp/douban/setting/BasicSettingsHelper.ts
-var import_obsidian16 = __toModule(require("obsidian"));
+var import_obsidian17 = __toModule(require("obsidian"));
 
 // src/org/wanxp/douban/component/DoubanLoginModel.ts
 var DoubanLoginModel = class {
@@ -18867,7 +19131,7 @@ function constructBasicUI(containerEl, manager) {
   containerEl.createDiv("login-setting", (loginSettingEl) => __async(this, null, function* () {
     constructDoubanTokenSettingsUI(loginSettingEl, manager);
   }));
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("120501")).then((setting) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("120501")).then((setting) => {
     setting.addMomentFormat((mf) => {
       setting.descEl.appendChild(createFragment((frag) => {
         frag.appendText(i18nHelper.getMessage("120503"));
@@ -18892,7 +19156,7 @@ function constructBasicUI(containerEl, manager) {
       }));
     });
   });
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("120502")).then((setting) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("120502")).then((setting) => {
     setting.addMomentFormat((mf) => {
       setting.descEl.appendChild(createFragment((frag) => {
         frag.appendText(i18nHelper.getMessage("120504"));
@@ -18917,7 +19181,7 @@ function constructBasicUI(containerEl, manager) {
       }));
     });
   });
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("121401")).setDesc(i18nHelper.getMessage("121402")).addToggle((toggleComponent) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("121401")).setDesc(i18nHelper.getMessage("121402")).addToggle((toggleComponent) => {
     toggleComponent.setValue(manager.plugin.settings.statusBar).onChange((value) => __async(this, null, function* () {
       manager.plugin.settings.statusBar = value;
       yield manager.plugin.saveSettings();
@@ -18928,7 +19192,7 @@ function constructDoubanTokenSettingsUI(containerEl, manager) {
   containerEl.empty();
   let login = manager.plugin.userComponent.isLogin();
   manager.debug(`\u914D\u7F6E\u754C\u9762:\u5C55\u793A\u8C46\u74E3\u72B6\u6001:${login ? "\u5DF2\u767B\u5F55" : "\u672A\u767B\u5F55"}`);
-  if (import_obsidian16.Platform.isDesktopApp) {
+  if (import_obsidian17.Platform.isDesktopApp) {
     if (login) {
       constructHasLoginSettingsUI(containerEl, manager);
     } else {
@@ -18946,7 +19210,7 @@ function constructLoginSettingsUI(containerEl, manager) {
   manager.debug(`\u914D\u7F6E\u754C\u9762:\u672A\u767B\u5F55-\u5C55\u793A\u767B\u5F55\u6309\u94AE`);
   let loginSetting = containerEl.createDiv("login-button");
   let loginCookie = containerEl.createDiv("login-button-cookie");
-  new import_obsidian16.Setting(loginSetting).setName(i18nHelper.getMessage("100131")).addButton((button) => {
+  new import_obsidian17.Setting(loginSetting).setName(i18nHelper.getMessage("100131")).addButton((button) => {
     return button.setButtonText(i18nHelper.getMessage("100130")).onClick(() => __async(this, null, function* () {
       button.setDisabled(true);
       manager.debug(`\u914D\u7F6E\u754C\u9762:\u70B9\u51FB\u767B\u5F55\u6309\u94AE`);
@@ -18954,7 +19218,7 @@ function constructLoginSettingsUI(containerEl, manager) {
       yield loginModel.doLogin();
     }));
   });
-  const loginCookieSetting = new import_obsidian16.Setting(loginSetting).setName(i18nHelper.getMessage("100133"));
+  const loginCookieSetting = new import_obsidian17.Setting(loginSetting).setName(i18nHelper.getMessage("100133"));
   loginCookieSetting.addButton((button) => {
     loginCookieSetting.descEl.appendChild(createFragment((frag) => {
       frag.appendText(i18nHelper.getMessage("100134"));
@@ -18975,7 +19239,7 @@ function constructLoginSettingsUI(containerEl, manager) {
 }
 function constructLoginCookieSettingsUI(containerEl, parentContainerEl, manager) {
   manager.debug(`\u914D\u7F6E\u754C\u9762:\u767B\u5F55\u5F02\u5E38\u5904\u7406\u6309\u94AE-\u5C55\u793ACookie\u8F93\u5165\u6846`);
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("100136")).setClass("obsidian_douban_settings_cookie_login").addTextArea((text3) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("100136")).setClass("obsidian_douban_settings_cookie_login").addTextArea((text3) => {
     text3.onChange((value) => manager.updateCookieTemp(value));
     return text3;
   }).addExtraButton((button) => {
@@ -19004,7 +19268,7 @@ ${i18nHelper.getMessage("100123")}: <a href="https://www.douban.com/people/${use
 		${i18nHelper.getMessage("100124")}: ${user.name}<br>
 ${i18nHelper.getMessage("100125")}`;
   manager.debug(`\u914D\u7F6E\u754C\u9762:\u5C55\u793A\u8C46\u74E3\u767B\u5F55\u4FE1\u606F:id:${StringUtil.confuse(user.id)}, \u7528\u6237\u540D:${StringUtil.confuse(user.name)}`);
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(userDom).addButton((button) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(userDom).addButton((button) => {
     return button.setButtonText(i18nHelper.getMessage("100128")).setCta().onClick(() => __async(this, null, function* () {
       button.setDisabled(true);
       manager.debug(`\u914D\u7F6E\u754C\u9762:\u70B9\u51FB\u9000\u51FA\u767B\u5F55\u6309\u94AE\uFF0C\u51C6\u5907\u9000\u51FA\u767B\u5F55`);
@@ -19015,7 +19279,7 @@ ${i18nHelper.getMessage("100125")}`;
   });
 }
 function showMobileLogin(containerEl, manager) {
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(i18nHelper.getMessage("100129"));
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(i18nHelper.getMessage("100129"));
 }
 function showMobileLogout(containerEl, manager) {
   const user = manager.plugin.userComponent.getUser();
@@ -19024,7 +19288,7 @@ function showMobileLogout(containerEl, manager) {
 ${i18nHelper.getMessage("100123")}: <a href="https://www.douban.com/people/${user.id}/">${user.id}</a><br>
 		${i18nHelper.getMessage("100124")}: ${user.name}<br>
 ${i18nHelper.getMessage("100125")}`;
-  new import_obsidian16.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(userDom).addButton((button) => {
+  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("100126")).setDesc(userDom).addButton((button) => {
     return button.setButtonText(i18nHelper.getMessage("100128")).setCta().onClick(() => __async(this, null, function* () {
       button.setDisabled(true);
       manager.updateSetting("loginCookiesContent", "");
@@ -19034,7 +19298,7 @@ ${i18nHelper.getMessage("100125")}`;
 }
 
 // src/org/wanxp/douban/setting/TemplateVariableSettingsHelper.ts
-var import_obsidian17 = __toModule(require("obsidian"));
+var import_obsidian18 = __toModule(require("obsidian"));
 function constructTemplateVariablesUI(containerEl, manager) {
   containerEl.createEl("h3", { text: i18nHelper.getMessage("1230") });
   containerEl.createEl("p", { text: i18nHelper.getMessage("122003") });
@@ -19188,7 +19452,7 @@ ${i18nHelper.getMessage("122004")}
 		<td>${i18nHelper.getMessage("330102")}</td>
 	</tr>
 </table>`;
-  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("122001")).setDesc(basicVariablesTable);
+  new import_obsidian18.Setting(containerEl).setName(i18nHelper.getMessage("122001")).setDesc(basicVariablesTable);
   const extraVariablesTable = new DocumentFragment();
   extraVariablesTable.createDiv().innerHTML = `
 ${i18nHelper.getMessage("122004")}
@@ -19308,7 +19572,7 @@ ${i18nHelper.getMessage("122004")}
 		<td>${i18nHelper.getMessage("310720")}</th>
 	</tr>
 </table>`;
-  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("122002")).setDesc(extraVariablesTable);
+  new import_obsidian18.Setting(containerEl).setName(i18nHelper.getMessage("122002")).setDesc(extraVariablesTable);
   const userInfoVariables = new DocumentFragment();
   userInfoVariables.createDiv().innerHTML = `
 ${i18nHelper.getMessage("160225")}
@@ -19321,16 +19585,16 @@ ${i18nHelper.getMessage("160225")}
 
 
 `;
-  new import_obsidian17.Setting(containerEl).setName(i18nHelper.getMessage("122010")).setDesc(userInfoVariables);
+  new import_obsidian18.Setting(containerEl).setName(i18nHelper.getMessage("122010")).setDesc(userInfoVariables);
 }
 
 // src/org/wanxp/douban/setting/CustomPropertySettingsHelper.ts
-var import_obsidian18 = __toModule(require("obsidian"));
+var import_obsidian19 = __toModule(require("obsidian"));
 function constructCustomPropertySettingsUI(containerEl, manager) {
   containerEl.createEl("h3", { text: i18nHelper.getMessage("1240") });
   containerEl.createEl("p", { text: i18nHelper.getMessage("1242") });
   const customProperties = manager.plugin.settings.customProperties;
-  new import_obsidian18.Setting(containerEl).setDesc(i18nHelper.getMessage("1241")).addButton((button) => {
+  new import_obsidian19.Setting(containerEl).setDesc(i18nHelper.getMessage("1241")).addButton((button) => {
     button.setButtonText(i18nHelper.getMessage("124101"));
     button.setTooltip(i18nHelper.getMessage("124101"));
     button.setIcon("plus");
@@ -19351,7 +19615,7 @@ function constructCustomPropertyUI(containerEl, customProperties, manager) {
 function addFilterInput(data2, el, customProperties, manager, idx) {
   const item = el.createEl("li");
   item.createEl("span", { text: i18nHelper.getMessage("124102") });
-  const nameField = new import_obsidian18.TextComponent(el);
+  const nameField = new import_obsidian19.TextComponent(el);
   nameField.setPlaceholder(i18nHelper.getMessage("124103")).setValue(data2.name).onChange((value) => __async(this, null, function* () {
     if (!value) {
       return;
@@ -19363,7 +19627,7 @@ function addFilterInput(data2, el, customProperties, manager, idx) {
   nameEl.addClass("obsidian_douban_settings_input");
   item.appendChild(nameEl);
   item.createEl("span", { text: i18nHelper.getMessage("124104") });
-  const valueField = new import_obsidian18.TextComponent(el);
+  const valueField = new import_obsidian19.TextComponent(el);
   valueField.setPlaceholder(i18nHelper.getMessage("124105")).setValue(data2.value).onChange((value) => __async(this, null, function* () {
     if (!value) {
       return;
@@ -19374,7 +19638,7 @@ function addFilterInput(data2, el, customProperties, manager, idx) {
   const valueEl = valueField.inputEl;
   valueEl.addClass("obsidian_douban_settings_input");
   item.appendChild(valueEl);
-  const fieldsDropdown = new import_obsidian18.DropdownComponent(el);
+  const fieldsDropdown = new import_obsidian19.DropdownComponent(el);
   for (const fieldSelect in SupportType) {
     fieldsDropdown.addOption(fieldSelect, i18nHelper.getMessage(fieldSelect));
   }
@@ -19386,7 +19650,7 @@ function addFilterInput(data2, el, customProperties, manager, idx) {
   const fieldSelectEl = fieldsDropdown.selectEl;
   fieldSelectEl.addClass("obsidian_douban_settings_input");
   item.appendChild(fieldSelectEl);
-  const extractButton = new import_obsidian18.ButtonComponent(el);
+  const extractButton = new import_obsidian19.ButtonComponent(el);
   extractButton.setIcon("minus-with-circle");
   extractButton.setTooltip(i18nHelper.getMessage("124107"));
   extractButton.onClick(() => __async(this, null, function* () {
@@ -19400,11 +19664,11 @@ function addFilterInput(data2, el, customProperties, manager, idx) {
 }
 
 // src/org/wanxp/douban/setting/AdvancedSettingsHelper.ts
-var import_obsidian19 = __toModule(require("obsidian"));
+var import_obsidian20 = __toModule(require("obsidian"));
 function constructAdvancedUI(containerEl, manager) {
   containerEl.createEl("h3", { text: i18nHelper.getMessage("1250") });
   containerEl.createEl("p", { text: i18nHelper.getMessage("1252") });
-  const settings = new import_obsidian19.Setting(containerEl);
+  const settings = new import_obsidian20.Setting(containerEl);
   const advancedSettings = containerEl.createDiv("advanced-settings");
   settings.setDesc(i18nHelper.getMessage("1251")).addExtraButton((extraButton) => {
     extraButton.setIcon("reset").setTooltip(i18nHelper.getMessage("121905")).onClick(() => __async(this, null, function* () {
@@ -19417,7 +19681,7 @@ function constructAdvancedUI(containerEl, manager) {
 }
 function showAdvancedSettings(containerEl, manager) {
   containerEl.empty();
-  new import_obsidian19.Setting(containerEl).setName(i18nHelper.getMessage("125001")).setDesc(i18nHelper.getMessage("125002")).addToggle((toggleComponent) => {
+  new import_obsidian20.Setting(containerEl).setName(i18nHelper.getMessage("125001")).setDesc(i18nHelper.getMessage("125002")).addToggle((toggleComponent) => {
     toggleComponent.setValue(manager.plugin.settings.debugMode).onChange((value) => __async(this, null, function* () {
       manager.plugin.settings.debugMode = value;
       if (value) {
@@ -19435,7 +19699,7 @@ function resetAdvanced(manager) {
 }
 
 // src/org/wanxp/douban/setting/DoubanSettingTab.ts
-var DoubanSettingTab = class extends import_obsidian20.PluginSettingTab {
+var DoubanSettingTab = class extends import_obsidian21.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -19445,7 +19709,7 @@ var DoubanSettingTab = class extends import_obsidian20.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "Obsidian Douban" });
-    new import_obsidian20.Setting(containerEl);
+    new import_obsidian21.Setting(containerEl);
     constructBasicUI(containerEl, this.settingsManager);
     constructTemplateUI(containerEl, this.settingsManager);
     constructOutUI(containerEl, this.settingsManager);
@@ -19457,74 +19721,341 @@ var DoubanSettingTab = class extends import_obsidian20.PluginSettingTab {
   }
 };
 
-// src/org/wanxp/douban/data/search/SearchParser.ts
-var SearchParserHandler = class {
-  static parseSearch(dataHtml) {
-    return dataHtml(".result").get().map((i) => {
-      const item = dataHtml(i);
-      let idPattern = /(\d){5,10}/g;
-      let urlPattern = /(https%3A%2F%2F)\S+(\d){5,10}(%2F)/g;
-      let linkValue = item.find("div.content > div > h3 > a").attr("href");
-      let ececResult = idPattern.exec(linkValue);
-      let urlResult = urlPattern.exec(linkValue);
-      let cast = item.find(".subject-cast").text();
-      let score = item.find(".rating_nums").text();
-      let title = item.find("div.content > div > h3 > a").text();
-      let type = item.find("div.content > div > h3 > span").text();
-      let desc = item.find("div.content > p").text();
-      const result = {
-        id: ececResult ? ececResult[0] : "",
-        title: title ? title : "-",
-        score: score ? Number(score) : null,
-        cast,
-        type: type ? type : "-",
-        desc: desc ? desc : "-",
-        url: urlResult ? decodeURIComponent(urlResult[0]) : "https://www.douban.com",
-        image: "",
-        publisher: "",
-        datePublished: void 0,
-        genre: []
-      };
-      return result;
-    });
+// src/org/wanxp/douban/component/DoubanSyncModal.ts
+var import_obsidian22 = __toModule(require("obsidian"));
+var import_timers = __toModule(require("timers"));
+
+// src/org/wanxp/utils/NumberUtil.ts
+var NumberUtil = class {
+  static getRandomNum(min2, max2) {
+    const range = max2 - min2;
+    const rand = Math.random();
+    return min2 + Math.round(rand * range);
   }
 };
 
-// src/org/wanxp/douban/data/search/Search.ts
-var import_obsidian21 = __toModule(require("obsidian"));
-var Searcher = class {
-  static search(searchItem, doubanSettings, settingsManager) {
-    const myHeaders = JSON.parse(doubanSettings.searchHeaders);
-    if (doubanSettings.loginCookiesContent) {
-      myHeaders.Cookie = doubanSettings.loginCookiesContent;
+// src/org/wanxp/utils/TimeUtil.ts
+var TimeUtil = class {
+  static estimateTime(needHandled, overSlowSize) {
+    if (needHandled <= 0) {
+      return 0;
     }
-    let requestUrlParam = {
-      url: DEFAULT_SETTINGS.searchUrl + searchItem,
-      method: "GET",
-      headers: myHeaders,
-      throw: true
-    };
-    return (0, import_obsidian21.requestUrl)(requestUrlParam).then((requestUrlResponse) => {
-      if (requestUrlResponse.status == 403) {
-        throw new Error(i18nHelper.getMessage("130106"));
-      }
-      return requestUrlResponse.text;
-    }).then(load).then(SearchParserHandler.parseSearch).catch((e) => {
-      if (e.toString().indexOf("403") > 0) {
-        throw new Error(i18nHelper.getMessage("130106"));
+    let times = 0;
+    if (overSlowSize) {
+      if (needHandled <= BasicConst.SLOW_SIZE) {
+        times = ESTIMATE_TIME_PER_WITH_REQUEST * needHandled;
       } else {
-        throw log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
+        times = ESTIMATE_TIME_PER_WITH_REQUEST * BasicConst.SLOW_SIZE + ESTIMATE_TIME_PER_WITH_REQUEST_SLOW * Math.max(needHandled - BasicConst.SLOW_SIZE, 0);
+      }
+    } else {
+      times = ESTIMATE_TIME_PER_WITH_REQUEST * needHandled;
+    }
+    return times;
+  }
+  static estimateTimeMsg(needHandled, overSlowSize) {
+    const times = this.estimateTime(needHandled, overSlowSize);
+    if (times <= 0) {
+      return 0 + i18nHelper.getMessage("SECOND");
+    }
+    return this.formatDuring(times);
+  }
+  static formatDuring(mss) {
+    let show = false;
+    let message = "";
+    const days = Math.floor(mss / (1e3 * 60 * 60 * 24));
+    const hours = Math.floor(mss % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60));
+    const minutes = Math.floor(mss % (1e3 * 60 * 60) / (1e3 * 60));
+    const seconds = Math.floor(mss % (1e3 * 60) / 1e3);
+    if (days > 0) {
+      show = true;
+      message += days + i18nHelper.getMessage("DAY");
+    }
+    if (hours > 0 || show) {
+      show = true;
+      message += hours + i18nHelper.getMessage("HOUR");
+    }
+    if (minutes > 0 || show) {
+      show = true;
+      message += minutes + i18nHelper.getMessage("MINUTE");
+    }
+    if (seconds > 0 || show) {
+      message += seconds + i18nHelper.getMessage("SECOND");
+    }
+    return message;
+  }
+};
+var sleepRange = (msMin, msMax) => {
+  const msTime = NumberUtil.getRandomNum(msMin, msMax);
+  return new Promise((resolve) => setTimeout(resolve, msTime));
+};
+
+// src/org/wanxp/douban/component/DoubanSyncModal.ts
+var DoubanSyncModal = class extends import_obsidian22.Modal {
+  constructor(app2, plugin, context) {
+    super(app2);
+    this.plugin = plugin;
+    this.context = context;
+  }
+  onOpen() {
+    let { contentEl } = this;
+    this.show(contentEl);
+  }
+  show(contentEl) {
+    contentEl.empty();
+    if (this.plugin.statusHolder.syncing()) {
+      this.showSyncStatus(contentEl);
+    } else {
+      this.showSyncConfig(contentEl);
+    }
+  }
+  showSyncStatus(contentEl) {
+    const { syncStatus } = this.plugin.statusHolder;
+    const { syncConfig } = syncStatus;
+    contentEl.createEl("h3", { text: i18nHelper.getMessage("500002") });
+    this.showConfigPan(contentEl.createDiv("config"), syncConfig, true);
+    const sliderDiv = contentEl.createEl("div");
+    sliderDiv.addClass("obsidian_douban_sync_slider");
+    const controls = contentEl.createDiv("controls");
+    const stopButton = new import_obsidian22.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110009")).onClick(() => __async(this, null, function* () {
+      this.close();
+      yield this.plugin.statusHolder.stopSync();
+    }));
+    const backgroundButton = new import_obsidian22.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110010")).onClick(() => {
+      this.close();
+    });
+    this.showProgress(sliderDiv, backgroundButton, stopButton);
+    this.timer = setInterval(() => {
+      this.showProgress(sliderDiv, backgroundButton, stopButton);
+    }, 1e3);
+    backgroundButton.setClass("obsidian_douban_status_button");
+    stopButton.setClass("obsidian_douban_status_button");
+  }
+  showProgress(sliderDiv, backgroundButton, stopButton) {
+    sliderDiv.empty();
+    new import_obsidian22.Setting(sliderDiv);
+    let progress = sliderDiv.createDiv("progress");
+    const { syncStatus } = this.plugin.statusHolder;
+    if (!this.plugin.statusHolder.syncStarted) {
+      progress.innerHTML = `<p>
+    <label for="file">${i18nHelper.getMessage("110033")}</label>
+    <progress class="obsidian_douban_sync_slider" max="${syncStatus.getTotal() == 0 ? 1 : syncStatus.getTotal()}" value="${syncStatus.getHasHandle()}"> </progress> <span> ${syncStatus.getHasHandle()}/${syncStatus.getTotal()}:${i18nHelper.getMessage("110036")}  </span>
+</p>`;
+      backgroundButton.setDisabled(true);
+      stopButton.setButtonText(i18nHelper.getMessage("110036"));
+      return;
+    }
+    progress.innerHTML = `<p>
+    <label for="file">${i18nHelper.getMessage("110033")}</label>
+    <progress class="obsidian_douban_sync_slider" max="${syncStatus.getTotal() == 0 ? 1 : syncStatus.getTotal()}" value="${syncStatus.getHasHandle()}"> </progress> <span> ${syncStatus.getTotal() == 0 ? i18nHelper.getMessage("110043") : syncStatus.getHasHandle() + "/" + syncStatus.getTotal()}
+${syncStatus.getHandle() == 0 ? "..." : i18nHelper.getMessage("110042") + ":" + TimeUtil.estimateTimeMsg(syncStatus.getNeedHandled() - syncStatus.getHandle(), syncStatus.getOverSize())} </span>
+</p>`;
+  }
+  showSyncConfig(contentEl) {
+    if (this.timer != null) {
+      (0, import_timers.clearInterval)(this.timer);
+    }
+    contentEl.createEl("h3", { text: i18nHelper.getMessage("500001") });
+    const { settings } = this.plugin;
+    let syncConfig = {
+      syncType: SyncType.movie,
+      scope: ALL,
+      force: false,
+      dataFilePath: settings.dataFilePath == "" || settings.dataFilePath == null ? DEFAULT_SETTINGS.dataFilePath : settings.dataFilePath,
+      dataFileNamePath: settings.dataFileNamePath == "" || settings.dataFileNamePath == null ? DEFAULT_SETTINGS.dataFileNamePath : settings.dataFileNamePath,
+      cacheImage: settings.cacheImage == null ? DEFAULT_SETTINGS.cacheImage : settings.cacheImage,
+      cacheHighQuantityImage: settings.cacheHighQuantityImage == null ? DEFAULT_SETTINGS.cacheHighQuantityImage : settings.cacheHighQuantityImage,
+      attachmentPath: settings.attachmentPath == "" || settings.attachmentPath == null ? DEFAULT_SETTINGS.attachmentPath : settings.attachmentPath,
+      templateFile: settings.movieTemplateFile == "" || settings.movieTemplateFile == null ? DEFAULT_SETTINGS.movieTemplateFile : settings.movieTemplateFile,
+      incrementalUpdate: true
+    };
+    this.showConfigPan(contentEl.createDiv("config"), syncConfig, false);
+    const controls = contentEl.createDiv("controls");
+    const cancelButton = new import_obsidian22.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110005")).onClick(() => {
+      this.close();
+    });
+    const syncButton = new import_obsidian22.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110007")).onClick(() => __async(this, null, function* () {
+      if (!(yield this.plugin.checkLogin(this.context))) {
+        return;
+      }
+      syncButton.setDisabled(true);
+      if (!this.plugin.statusHolder.startSync(syncConfig)) {
+        return;
+      }
+      this.updateContextByConfig(syncConfig);
+      this.show(contentEl);
+      yield this.plugin.sync(this.context);
+    }));
+    syncButton.setClass("obsidian_douban_search_button");
+    cancelButton.setClass("obsidian_douban_search_button");
+  }
+  updateContextByConfig(syncConfig) {
+    const { context } = this;
+    context.syncConfig = syncConfig;
+  }
+  showConfigPan(contentEl, config, disable) {
+    new import_obsidian22.Setting(contentEl);
+    this.showTypeDropdown(contentEl, config, disable);
+    this.showOutputFolderSelections(contentEl, config, disable);
+    this.showOutiFleName(contentEl, config, disable);
+    this.showAttachmentsFileConfig(contentEl, config, disable);
+    this.showUpdateAllConfig(contentEl, config, disable);
+    this.showForceUpdateConfig(contentEl, config, disable);
+  }
+  onClose() {
+    return __async(this, null, function* () {
+      let { contentEl } = this;
+      contentEl.empty();
+      if (this.timer != null) {
+        (0, import_timers.clearInterval)(this.timer);
       }
     });
-    ;
+  }
+  openScopeDropdown(contentEl, config, disable) {
+    switch (config.syncType) {
+      case SyncType.movie:
+        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_MOVIE_SYNC, config, disable);
+        break;
+      case SyncType.book:
+        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_BOOK_SYNC, config, disable);
+        break;
+      case SyncType.broadcast:
+        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_BROADCAST_SYNC, config, disable);
+        break;
+      case SyncType.note:
+        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_NOTE_SYNC, config, disable);
+        break;
+      case SyncType.music:
+        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_MUSIC_SYNC, config, disable);
+        break;
+    }
+  }
+  showTypeDropdown(containerEl, config, disable) {
+    const settings = new import_obsidian22.Setting(containerEl);
+    const scopeSelections = containerEl.createDiv("scope-selection");
+    const templateFile = containerEl.createDiv("template-file-path-selection");
+    settings.setName(i18nHelper.getMessage("110030")).addDropdown((dropdown) => {
+      dropdown.addOptions(SyncTypeRecords).setValue(config.syncType).onChange((value) => {
+        config.syncType = value;
+        config.templateFile = this.getDefaultTemplatePath(value);
+        this.openScopeDropdown(scopeSelections, config, disable);
+        this.showTemplateFileSelectionSetting(templateFile, config, disable);
+      });
+    }).setDisabled(disable);
+    this.openScopeDropdown(scopeSelections, config, disable);
+    this.showTemplateFileSelectionSetting(templateFile, config, disable);
+  }
+  getDefaultTemplatePath(value) {
+    let result = "";
+    const { settings } = this.plugin;
+    switch (value) {
+      case SyncType.movie:
+        result = settings.movieTemplateFile == "" || settings.movieTemplateFile == null ? DEFAULT_SETTINGS.movieTemplateFile : settings.movieTemplateFile;
+        break;
+      case SyncType.book:
+        result = settings.bookTemplateFile == "" || settings.bookTemplateFile == null ? DEFAULT_SETTINGS.bookTemplateFile : settings.bookTemplateFile;
+        break;
+      case SyncType.music:
+        result = settings.musicTemplateFile == "" || settings.musicTemplateFile == null ? DEFAULT_SETTINGS.musicTemplateFile : settings.musicTemplateFile;
+        break;
+    }
+    return result;
+  }
+  showScopeDropdown(containerEl, scopeSelections, config, disable) {
+    containerEl.empty();
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("110032")).addDropdown((dropdown) => {
+      dropdown.addOptions(scopeSelections);
+      dropdown.setValue(config.scope).onChange((value) => __async(this, null, function* () {
+        config.scope = value;
+      }));
+    }).setDisabled(disable);
+  }
+  showOutiFleName(containerEl, config, disable) {
+    const dataFilePathSetting = new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("121601")).setDesc(i18nHelper.getMessage("121602")).addText((textField) => {
+      textField.setPlaceholder(i18nHelper.getMessage("121602")).setValue(config.dataFileNamePath).onChange((value) => __async(this, null, function* () {
+        config.dataFileNamePath = value;
+      }));
+    }).setDisabled(disable);
+  }
+  showOutputFolderSelections(containerEl, config, disable) {
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("121501")).setDesc(i18nHelper.getMessage("121502")).addSearch((search) => __async(this, null, function* () {
+      new FolderSuggest(this.app, search.inputEl);
+      search.setValue(config.dataFilePath).setPlaceholder(i18nHelper.getMessage("121503")).onChange((value) => __async(this, null, function* () {
+        config.dataFilePath = value;
+      }));
+    })).setDisabled(disable);
+  }
+  showTemplateFileSelectionSetting(containerEl, config, disable) {
+    containerEl.empty();
+    const key = this.getKey(config.syncType);
+    let setting = new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("121101")).setDesc(i18nHelper.getMessage("121102")).addSearch((search) => __async(this, null, function* () {
+      new FileSuggest(this.app, search.inputEl);
+      search.setValue(config.templateFile).onChange((value) => __async(this, null, function* () {
+        config.templateFile = value;
+      }));
+    })).setDisabled(disable);
+    setting.addExtraButton((button) => {
+      button.setIcon("copy").setTooltip(i18nHelper.getMessage("121903")).onClick(() => __async(this, null, function* () {
+        navigator.clipboard.writeText(getDefaultTemplateContent(key));
+      }));
+    });
+    setting.addExtraButton((button) => {
+      button.setIcon("document").setTooltip(i18nHelper.getMessage("121901")).onClick(() => __async(this, null, function* () {
+        navigator.clipboard.writeText(getDefaultTemplateContent(key, false));
+      }));
+    });
+  }
+  getKey(supportType) {
+    return supportType + "TemplateFile";
+  }
+  showForceUpdateConfig(containerEl, config, disable) {
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("110031")).setDesc(i18nHelper.getMessage("500110")).addToggle((toggleComponent) => {
+      toggleComponent.setValue(config.force).onChange((value) => __async(this, null, function* () {
+        config.force = value;
+      }));
+    }).setDisabled(disable);
+  }
+  showAttachmentsFileConfig(containerEl, config, disable) {
+    const settings = new import_obsidian22.Setting(containerEl);
+    let attachmentFileEl = containerEl.createDiv("attachment-file-path-selection");
+    settings.setName(i18nHelper.getMessage("121430")).setDesc(i18nHelper.getMessage("121431")).addToggle((toggleComponent) => {
+      toggleComponent.setValue(config.cacheImage).onChange((value) => __async(this, null, function* () {
+        config.cacheImage = value;
+        this.showAttachmentPathSelections(value, attachmentFileEl, config, disable);
+      }));
+    }).setDisabled(disable);
+    this.showAttachmentPathSelections(config.cacheImage, attachmentFileEl, config, disable);
+  }
+  showAttachmentPathSelections(show, containerEl, config, disable) {
+    containerEl.empty();
+    if (!show) {
+      return;
+    }
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("121432")).setDesc(i18nHelper.getMessage("121433")).addSearch((search) => __async(this, null, function* () {
+      new FolderSuggest(this.plugin.app, search.inputEl);
+      search.setValue(config.attachmentPath).setPlaceholder(i18nHelper.getMessage("121434")).onChange((value) => __async(this, null, function* () {
+        config.attachmentPath = value;
+      }));
+    })).setDisabled(disable);
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("121435")).setDesc(i18nHelper.getMessage("121438")).addToggle((toggleComponent) => {
+      toggleComponent.setValue(config.cacheHighQuantityImage).onChange((value) => __async(this, null, function* () {
+        config.cacheHighQuantityImage = value;
+      }));
+    }).setDisabled(disable);
+  }
+  showUpdateAllConfig(containerEl, config, disable) {
+    new import_obsidian22.Setting(containerEl).setName(i18nHelper.getMessage("110039")).setDesc(i18nHelper.getMessage("110040")).addToggle((toggleComponent) => {
+      toggleComponent.setTooltip(i18nHelper.getMessage("110040")).setValue(config.incrementalUpdate).onChange((value) => __async(this, null, function* () {
+        config.incrementalUpdate = value;
+      }));
+    }).setDisabled(disable);
   }
 };
 
 // src/org/wanxp/file/FileHandler.ts
-var import_obsidian23 = __toModule(require("obsidian"));
+var import_obsidian24 = __toModule(require("obsidian"));
 
 // src/org/wanxp/utils/FileUtil.ts
-var import_obsidian22 = __toModule(require("obsidian"));
+var import_obsidian23 = __toModule(require("obsidian"));
 var FileUtil = {
   parse(pathString) {
     const regex = /(?<dir>([^/\\]+[/\\])*)(?<name>[^/\\]*$)/;
@@ -19535,7 +20066,7 @@ var FileUtil = {
   },
   join(...strings) {
     const parts = strings.map((s) => String(s).trim()).filter((s) => s != null);
-    return (0, import_obsidian22.normalizePath)(parts.join("/"));
+    return (0, import_obsidian23.normalizePath)(parts.join("/"));
   },
   replaceSpecialCharactersForFileName(fileName) {
     return fileName.replaceAll(/[\\/:*?"<>|]/g, "_");
@@ -19554,12 +20085,12 @@ var FileHandler = class {
       const root2 = vault.getRoot().path;
       const directoryPath = FileUtil.join(dir);
       const directoryExists = yield adapter2.exists(directoryPath);
-      if (!import_obsidian23.Platform.isIosApp) {
+      if (!import_obsidian24.Platform.isIosApp) {
         if (!directoryExists) {
-          return adapter2.mkdir((0, import_obsidian23.normalizePath)(directoryPath));
+          return adapter2.mkdir((0, import_obsidian24.normalizePath)(directoryPath));
         }
       }
-      const subPaths = (0, import_obsidian23.normalizePath)(directoryPath).split("/").filter((part) => part.trim() !== "").map((_, index2, arr) => arr.slice(0, index2 + 1).join("/"));
+      const subPaths = (0, import_obsidian24.normalizePath)(directoryPath).split("/").filter((part) => part.trim() !== "").map((_, index2, arr) => arr.slice(0, index2 + 1).join("/"));
       for (const subPath of subPaths) {
         const directoryExists2 = yield adapter2.exists(FileUtil.join(root2, subPath));
         if (!directoryExists2) {
@@ -19647,7 +20178,7 @@ var FileHandler = class {
   getFileContent(filePath) {
     return __async(this, null, function* () {
       const { metadataCache, vault } = this._app;
-      const normalizedTemplatePath = (0, import_obsidian23.normalizePath)(filePath != null ? filePath : "");
+      const normalizedTemplatePath = (0, import_obsidian24.normalizePath)(filePath != null ? filePath : "");
       if (filePath === "/") {
         return Promise.resolve("");
       }
@@ -19663,115 +20194,213 @@ var FileHandler = class {
   }
 };
 
-// src/org/wanxp/douban/user/UserComponent.ts
-var import_obsidian24 = __toModule(require("obsidian"));
+// src/org/wanxp/douban/model/GlobalStatusHolder.ts
+var import_obsidian25 = __toModule(require("obsidian"));
 
-// src/org/wanxp/douban/user/User.ts
-var User = class {
-};
-
-// src/org/wanxp/douban/user/UserComponent.ts
-var UserComponent = class {
-  constructor(settingsManager) {
-    this.settingsManager = settingsManager;
+// src/org/wanxp/douban/sync/model/SyncStatusHolder.ts
+var SyncStatusHolder = class {
+  constructor(syncConfig) {
+    this.syncResultMap = new Map();
+    this.statusHandleMap = new Map([
+      [SyncItemStatus.exists, 0],
+      [SyncItemStatus.replace, 0],
+      [SyncItemStatus.create, 0],
+      [SyncItemStatus.fail, 0],
+      [SyncItemStatus.unHandle, 0]
+    ]);
+    this.syncConfig = syncConfig;
+    this.total = 0;
+    this.handle = 0;
+    this.needHandled = 0;
+    this.key = this.getKey(syncConfig);
   }
-  getUser() {
-    return this.user;
+  handled(num) {
+    this.handle = this.handle + num;
   }
-  getUserId() {
-    return this.user ? this.user.id : null;
+  totalNum(num) {
+    this.total = num;
   }
-  isLogin() {
-    return this.user && this.user.login;
+  getTotal() {
+    return this.total;
   }
-  logout() {
-    if (this.user) {
-      this.user.login = false;
+  getHandle() {
+    return this.handle;
+  }
+  getHasHandle() {
+    return this.handle;
+  }
+  setNeedHandled(needHandled) {
+    this.needHandled = needHandled;
+  }
+  getNeedHandled() {
+    return this.needHandled;
+  }
+  replace(id, title) {
+    this.putToHandled(id, title);
+    this.updateResult(id, title, SyncItemStatus.replace);
+  }
+  exists(id, title) {
+    this.putToHandled(id, title);
+    this.updateResult(id, title, SyncItemStatus.exists);
+  }
+  unHandle(id, title) {
+    this.updateResult(id, title, SyncItemStatus.unHandle);
+  }
+  create(id, title) {
+    this.putToHandled(id, title);
+    this.updateResult(id, title, SyncItemStatus.create);
+  }
+  fail(id, title) {
+    this.updateResult(id, title, SyncItemStatus.fail);
+  }
+  updateResult(id, title, status) {
+    this.syncResultMap.set(id, { id, title, status });
+    this.statusHandleMap.set(status, this.statusHandleMap.get(status) + 1);
+    this.handled(1);
+  }
+  setTotal(total) {
+    this.totalNum(total);
+  }
+  putToHandled(id, title) {
+    if (!this.handledData) {
+      this.handledData = new Map();
     }
-    this.user = null;
-    this.settingsManager.updateSetting("loginCookiesContent", "");
+    const { key } = this;
+    if (!this.handledData.has(key)) {
+      this.handledData.set(key, new Set());
+    }
+    this.handledData.get(key).add(id);
   }
-  needLogin() {
-    const cookie = this.settingsManager.getSetting("loginCookiesContent");
-    if (!cookie) {
+  shouldSync(id) {
+    return this.handledData.get(this.key) ? !this.handledData.get(this.key).has(id) : true;
+  }
+  getKey(syncConfig) {
+    const type = syncConfig.syncType ? syncConfig.syncType : "";
+    const scope = syncConfig.scope ? syncConfig.scope : "";
+    const path = syncConfig.dataFilePath ? syncConfig.dataFilePath : "";
+    return `${path}+${type}+${scope}`;
+  }
+  getOverSize() {
+    return this.getNeedHandled() > BasicConst.SLOW_SIZE;
+  }
+  initSyncHandledData(data2) {
+    this.handledData = new Map();
+    const { handledData } = this;
+    data2.forEach((d) => {
+      handledData.set(d.key, new Set(d.value));
+    });
+    if (!this.syncConfig.incrementalUpdate) {
+      this.resetSyncHandledData();
+    }
+    this.resetTypeOtherSyncHandledData();
+  }
+  resetSyncHandledData() {
+    return this.handledData.set(this.key, new Set());
+  }
+  resetTypeOtherSyncHandledData() {
+    this.handledData.forEach((value, key) => {
+      if (this.needClearByKey(this.key, key)) {
+        value.clear();
+      }
+    });
+  }
+  needClearByKey(handleKey, savedKey) {
+    if (handleKey == savedKey) {
       return false;
     }
-    return !this.isLogin();
+    let handledKeys = handleKey.split("+");
+    let savedKeys = savedKey.split("+");
+    handledKeys = handledKeys != null ? handledKeys : [""];
+    savedKeys = savedKeys != null ? savedKeys : [""];
+    if (handledKeys[0] == savedKeys[0]) {
+      return true;
+    }
+    return false;
   }
-  loginByCookie() {
+};
+
+// src/org/wanxp/douban/model/GlobalStatusHolder.ts
+var GlobalStatusHolder = class {
+  constructor(app2, plugin) {
+    this._app = app2;
+    this._plugin = plugin;
+  }
+  completeSync() {
     return __async(this, null, function* () {
-      let cookie = this.settingsManager.getSetting("loginCookiesContent");
-      if (!cookie) {
-        this.settingsManager.debug("\u4E3B\u754C\u9762:loginByCookie:\u65E0\u8C46\u74E3cookies\u4FE1\u606F\uFF0C\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25");
-        return new User();
-      }
-      this.settingsManager.debug("\u4E3B\u754C\u9762:loginByCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F");
-      yield this.loadUserInfo(cookie).then((user) => {
-        this.user = user;
-        this.settingsManager.debug(`\u4E3B\u754C\u9762:loginByCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C${user && user.id ? "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u6210\u529Fid:" + StringUtil.confuse(user.id) + ",\u7528\u6237\u540D:" + StringUtil.confuse(user.name) : "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25"}`);
-      });
-      return this.user;
+      this.syncStarted = false;
+      yield this.saveHandledData();
     });
   }
-  loginCookie(cookie) {
+  startSync(syncConfigOut) {
+    if (this.syncStarted) {
+      const { syncConfig } = this.syncStatus;
+      new import_obsidian25.Notice(i18nHelper.getMessage("110008"), SyncTypeRecords[syncConfig.syncType], DoubanSubjectState[syncConfig.scope]);
+      return false;
+    }
+    this.syncStatus = new SyncStatusHolder(syncConfigOut);
+    this.syncStarted = true;
+    this.syncStartTime = new Date().getTime();
+    return true;
+  }
+  stopSync() {
+    this.syncStarted = false;
+  }
+  syncing() {
+    return this.syncStarted;
+  }
+  initHandledData() {
     return __async(this, null, function* () {
-      if (!cookie) {
-        return new User();
-      }
-      this.settingsManager.debug("\u914D\u7F6E\u754C\u9762:loginCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F");
-      yield this.loadUserInfo(cookie).then((user) => {
-        this.user = user;
-        this.settingsManager.debug(`\u914D\u7F6E\u754C\u9762:loginCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C${user && user.id ? "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u6210\u529Fid:" + StringUtil.confuse(user.id) + ",\u7528\u6237\u540D:" + StringUtil.confuse(user.name) : "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25"}`);
-      });
-      if (this.user) {
-        this.settingsManager.updateSetting("loginCookiesContent", cookie);
-      }
-      return this.user;
+      this.syncStatus.initSyncHandledData(this._plugin.settings.syncHandledDataArray);
     });
   }
-  loadUserInfo(cookie) {
+  saveHandledData() {
     return __async(this, null, function* () {
-      let requestUrlParam = {
-        url: "https://www.douban.com/mine/",
+      if (!this.syncStatus || !this.syncStatus.handledData) {
+        return;
+      }
+      const data2 = [];
+      this.syncStatus.handledData.forEach((value, key) => {
+        data2.push({ key, value: Array.from(value) });
+      });
+      this._plugin.settings.syncHandledDataArray = data2;
+      yield this._plugin.saveSettings();
+    });
+  }
+  onunload() {
+    return __async(this, null, function* () {
+      yield this.saveHandledData();
+    });
+  }
+};
+
+// src/org/wanxp/net/NetFileHandler.ts
+var import_obsidian26 = __toModule(require("obsidian"));
+var NetFileHandler = class {
+  constructor(fileHandler) {
+    this.fileHandler = fileHandler;
+  }
+  downloadFile(url, folder, filename, context, showError) {
+    return __async(this, null, function* () {
+      const requestUrlParam = {
+        url,
         method: "GET",
-        headers: { "Cookie": cookie },
-        throw: true
+        throw: true,
+        headers: { Cookie: context.settings.loginCookiesContent }
       };
-      this.settingsManager.debug("loadUserInfo:\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F:https://www.douban.com/mine/");
-      return (0, import_obsidian24.request)(requestUrlParam).then((requestUrlResponse) => {
-        if (requestUrlResponse.indexOf("https://sec.douban.com/a") > 0) {
-          throw new Error(i18nHelper.getMessage("130105"));
-        }
-        return requestUrlResponse;
-      }).then(load).then(this.getUserInfo).catch((e) => {
-        if (e.toString().indexOf("403") > 0) {
-          throw new Error(i18nHelper.getMessage("130105"));
+      const filePath = FileUtil.join(folder, filename);
+      return (0, import_obsidian26.requestUrl)(requestUrlParam).then((response) => {
+        this.fileHandler.creatAttachmentWithData(filePath, response.arrayBuffer);
+      }).then(() => {
+        return { success: true, error: "", filepath: filePath };
+      }).catch((e) => {
+        if (showError) {
+          return log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
         } else {
-          throw log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
+          console.error(e);
         }
       });
+      ;
     });
-  }
-  getUserInfo(dataHtml) {
-    let elements = dataHtml("#db-usr-profile > div.pic > a");
-    if (!elements) {
-      return new User();
-    }
-    let name = dataHtml(dataHtml("head > title").get(0)).text().trim();
-    let userUrl = dataHtml(elements.get(0)).attr("href");
-    let idPattern = /(\d){5,10}/g;
-    let idP = idPattern.exec(userUrl);
-    let id = idP ? idP[0] : "";
-    if (!id) {
-      return new User();
-    }
-    const result = {
-      id,
-      name,
-      url: userUrl,
-      login: true
-    };
-    return result;
   }
 };
 
@@ -19808,367 +20437,6 @@ var SettingsManager = class {
   }
   getCookieTemp() {
     return this.cookieTemp;
-  }
-};
-
-// src/org/wanxp/net/NetFileHandler.ts
-var import_obsidian25 = __toModule(require("obsidian"));
-var NetFileHandler = class {
-  constructor(fileHandler) {
-    this.fileHandler = fileHandler;
-  }
-  downloadFile(url, folder, filename, context, showError) {
-    return __async(this, null, function* () {
-      const requestUrlParam = {
-        url,
-        method: "GET",
-        throw: true,
-        headers: { Cookie: context.settings.loginCookiesContent }
-      };
-      const filePath = FileUtil.join(folder, filename);
-      return (0, import_obsidian25.requestUrl)(requestUrlParam).then((response) => {
-        this.fileHandler.creatAttachmentWithData(filePath, response.arrayBuffer);
-      }).then(() => {
-        return { success: true, error: "", filepath: filePath };
-      }).catch((e) => {
-        if (showError) {
-          return log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
-        } else {
-          console.error(e);
-        }
-      });
-      ;
-    });
-  }
-};
-
-// src/org/wanxp/douban/component/DoubanSyncModal.ts
-var import_obsidian26 = __toModule(require("obsidian"));
-var import_timers = __toModule(require("timers"));
-
-// src/org/wanxp/utils/NumberUtil.ts
-var NumberUtil = class {
-  static getRandomNum(min2, max2) {
-    const range = max2 - min2;
-    const rand = Math.random();
-    return min2 + Math.round(rand * range);
-  }
-};
-
-// src/org/wanxp/utils/TimeUtil.ts
-var TimeUtil = class {
-  static estimateTime(needHandled, overSlowSize) {
-    if (needHandled <= 0) {
-      return 0;
-    }
-    let times = 0;
-    if (overSlowSize) {
-      if (needHandled <= BasicConst.SLOW_SIZE) {
-        times = ESTIMATE_TIME_PER_WITH_REQUEST * needHandled;
-      } else {
-        times = ESTIMATE_TIME_PER_WITH_REQUEST * BasicConst.SLOW_SIZE + ESTIMATE_TIME_PER_WITH_REQUEST_SLOW * Math.max(needHandled - BasicConst.SLOW_SIZE, 0);
-      }
-    } else {
-      times = ESTIMATE_TIME_PER_WITH_REQUEST * needHandled;
-    }
-    return times;
-  }
-  static estimateTimeMsg(needHandled, overSlowSize) {
-    const times = this.estimateTime(needHandled, overSlowSize);
-    if (times <= 0) {
-      return 0 + i18nHelper.getMessage("SECOND");
-    }
-    return this.formatDuring(times);
-  }
-  static formatDuring(mss) {
-    let show = false;
-    let message = "";
-    const days = Math.floor(mss / (1e3 * 60 * 60 * 24));
-    const hours = Math.floor(mss % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60));
-    const minutes = Math.floor(mss % (1e3 * 60 * 60) / (1e3 * 60));
-    const seconds = Math.floor(mss % (1e3 * 60) / 1e3);
-    if (days > 0) {
-      show = true;
-      message += days + i18nHelper.getMessage("DAY");
-    }
-    if (hours > 0 || show) {
-      show = true;
-      message += hours + i18nHelper.getMessage("HOUR");
-    }
-    if (minutes > 0 || show) {
-      show = true;
-      message += minutes + i18nHelper.getMessage("MINUTE");
-    }
-    if (seconds > 0 || show) {
-      message += seconds + i18nHelper.getMessage("SECOND");
-    }
-    return message;
-  }
-};
-var sleepRange = (msMin, msMax) => {
-  const msTime = NumberUtil.getRandomNum(msMin, msMax);
-  return new Promise((resolve) => setTimeout(resolve, msTime));
-};
-
-// src/org/wanxp/douban/component/DoubanSyncModal.ts
-var DoubanSyncModal = class extends import_obsidian26.Modal {
-  constructor(app2, plugin, context) {
-    super(app2);
-    this.plugin = plugin;
-    this.context = context;
-  }
-  onOpen() {
-    let { contentEl } = this;
-    this.show(contentEl);
-  }
-  show(contentEl) {
-    contentEl.empty();
-    if (this.plugin.statusHolder.syncing()) {
-      this.showSyncStatus(contentEl);
-    } else {
-      this.showSyncConfig(contentEl);
-    }
-  }
-  showSyncStatus(contentEl) {
-    const { syncStatus } = this.plugin.statusHolder;
-    const { syncConfig } = syncStatus;
-    contentEl.createEl("h3", { text: i18nHelper.getMessage("500002") });
-    this.showConfigPan(contentEl.createDiv("config"), syncConfig, true);
-    const sliderDiv = contentEl.createEl("div");
-    sliderDiv.addClass("obsidian_douban_sync_slider");
-    const controls = contentEl.createDiv("controls");
-    const stopButton = new import_obsidian26.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110009")).onClick(() => __async(this, null, function* () {
-      this.close();
-      yield this.plugin.statusHolder.stopSync();
-    }));
-    const backgroundButton = new import_obsidian26.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110010")).onClick(() => {
-      this.close();
-    });
-    this.showProgress(sliderDiv, backgroundButton, stopButton);
-    this.timer = setInterval(() => {
-      this.showProgress(sliderDiv, backgroundButton, stopButton);
-    }, 1e3);
-    backgroundButton.setClass("obsidian_douban_status_button");
-    stopButton.setClass("obsidian_douban_status_button");
-  }
-  showProgress(sliderDiv, backgroundButton, stopButton) {
-    sliderDiv.empty();
-    new import_obsidian26.Setting(sliderDiv);
-    let progress = sliderDiv.createDiv("progress");
-    const { syncStatus } = this.plugin.statusHolder;
-    if (!this.plugin.statusHolder.syncStarted) {
-      progress.innerHTML = `<p>
-    <label for="file">${i18nHelper.getMessage("110033")}</label>
-    <progress class="obsidian_douban_sync_slider" max="${syncStatus.getTotal() == 0 ? 1 : syncStatus.getTotal()}" value="${syncStatus.getHasHandle()}"> </progress> <span> ${syncStatus.getHasHandle()}/${syncStatus.getTotal()}:${i18nHelper.getMessage("110036")}  </span>
-</p>`;
-      backgroundButton.setDisabled(true);
-      stopButton.setButtonText(i18nHelper.getMessage("110036"));
-      return;
-    }
-    progress.innerHTML = `<p>
-    <label for="file">${i18nHelper.getMessage("110033")}</label>
-    <progress class="obsidian_douban_sync_slider" max="${syncStatus.getTotal() == 0 ? 1 : syncStatus.getTotal()}" value="${syncStatus.getHasHandle()}"> </progress> <span> ${syncStatus.getTotal() == 0 ? i18nHelper.getMessage("110043") : syncStatus.getHasHandle() + "/" + syncStatus.getTotal()}
-${syncStatus.getHandle() == 0 ? "..." : i18nHelper.getMessage("110042") + ":" + TimeUtil.estimateTimeMsg(syncStatus.getNeedHandled() - syncStatus.getHandle(), syncStatus.getOverSize())} </span>
-</p>`;
-  }
-  showSyncConfig(contentEl) {
-    if (this.timer != null) {
-      (0, import_timers.clearInterval)(this.timer);
-    }
-    contentEl.createEl("h3", { text: i18nHelper.getMessage("500001") });
-    const { settings } = this.plugin;
-    let syncConfig = {
-      syncType: SyncType.movie,
-      scope: ALL,
-      force: false,
-      dataFilePath: settings.dataFilePath == "" || settings.dataFilePath == null ? DEFAULT_SETTINGS.dataFilePath : settings.dataFilePath,
-      dataFileNamePath: settings.dataFileNamePath == "" || settings.dataFileNamePath == null ? DEFAULT_SETTINGS.dataFileNamePath : settings.dataFileNamePath,
-      cacheImage: settings.cacheImage == null ? DEFAULT_SETTINGS.cacheImage : settings.cacheImage,
-      cacheHighQuantityImage: settings.cacheHighQuantityImage == null ? DEFAULT_SETTINGS.cacheHighQuantityImage : settings.cacheHighQuantityImage,
-      attachmentPath: settings.attachmentPath == "" || settings.attachmentPath == null ? DEFAULT_SETTINGS.attachmentPath : settings.attachmentPath,
-      templateFile: settings.movieTemplateFile == "" || settings.movieTemplateFile == null ? DEFAULT_SETTINGS.movieTemplateFile : settings.movieTemplateFile,
-      incrementalUpdate: true
-    };
-    this.showConfigPan(contentEl.createDiv("config"), syncConfig, false);
-    const controls = contentEl.createDiv("controls");
-    const cancelButton = new import_obsidian26.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110005")).onClick(() => {
-      this.close();
-    });
-    const syncButton = new import_obsidian26.ButtonComponent(controls).setButtonText(i18nHelper.getMessage("110007")).onClick(() => __async(this, null, function* () {
-      if (!(yield this.plugin.checkLogin(this.context))) {
-        return;
-      }
-      syncButton.setDisabled(true);
-      if (!this.plugin.statusHolder.startSync(syncConfig)) {
-        return;
-      }
-      this.updateContextByConfig(syncConfig);
-      this.show(contentEl);
-      yield this.plugin.sync(this.context);
-    }));
-    syncButton.setClass("obsidian_douban_search_button");
-    cancelButton.setClass("obsidian_douban_search_button");
-  }
-  updateContextByConfig(syncConfig) {
-    const { context } = this;
-    context.syncConfig = syncConfig;
-  }
-  showConfigPan(contentEl, config, disable) {
-    new import_obsidian26.Setting(contentEl);
-    this.showTypeDropdown(contentEl, config, disable);
-    this.showOutputFolderSelections(contentEl, config, disable);
-    this.showOutiFleName(contentEl, config, disable);
-    this.showAttachmentsFileConfig(contentEl, config, disable);
-    this.showUpdateAllConfig(contentEl, config, disable);
-    this.showForceUpdateConfig(contentEl, config, disable);
-  }
-  onClose() {
-    return __async(this, null, function* () {
-      let { contentEl } = this;
-      contentEl.empty();
-      if (this.timer != null) {
-        (0, import_timers.clearInterval)(this.timer);
-      }
-    });
-  }
-  openScopeDropdown(contentEl, config, disable) {
-    switch (config.syncType) {
-      case SyncType.movie:
-        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_MOVIE_SYNC, config, disable);
-        break;
-      case SyncType.book:
-        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_BOOK_SYNC, config, disable);
-        break;
-      case SyncType.broadcast:
-        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_BROADCAST_SYNC, config, disable);
-        break;
-      case SyncType.note:
-        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_NOTE_SYNC, config, disable);
-        break;
-      case SyncType.music:
-        this.showScopeDropdown(contentEl, DoubanSubjectStateRecords_MUSIC_SYNC, config, disable);
-        break;
-    }
-  }
-  showTypeDropdown(containerEl, config, disable) {
-    const settings = new import_obsidian26.Setting(containerEl);
-    const scopeSelections = containerEl.createDiv("scope-selection");
-    const templateFile = containerEl.createDiv("template-file-path-selection");
-    settings.setName(i18nHelper.getMessage("110030")).addDropdown((dropdown) => {
-      dropdown.addOptions(SyncTypeRecords).setValue(config.syncType).onChange((value) => {
-        config.syncType = value;
-        config.templateFile = this.getDefaultTemplatePath(value);
-        this.openScopeDropdown(scopeSelections, config, disable);
-        this.showTemplateFileSelectionSetting(templateFile, config, disable);
-      });
-    }).setDisabled(disable);
-    this.openScopeDropdown(scopeSelections, config, disable);
-    this.showTemplateFileSelectionSetting(templateFile, config, disable);
-  }
-  getDefaultTemplatePath(value) {
-    let result = "";
-    const { settings } = this.plugin;
-    switch (value) {
-      case SyncType.movie:
-        result = settings.movieTemplateFile == "" || settings.movieTemplateFile == null ? DEFAULT_SETTINGS.movieTemplateFile : settings.movieTemplateFile;
-        break;
-      case SyncType.book:
-        result = settings.bookTemplateFile == "" || settings.bookTemplateFile == null ? DEFAULT_SETTINGS.bookTemplateFile : settings.bookTemplateFile;
-        break;
-      case SyncType.music:
-        result = settings.musicTemplateFile == "" || settings.musicTemplateFile == null ? DEFAULT_SETTINGS.musicTemplateFile : settings.musicTemplateFile;
-        break;
-    }
-    return result;
-  }
-  showScopeDropdown(containerEl, scopeSelections, config, disable) {
-    containerEl.empty();
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("110032")).addDropdown((dropdown) => {
-      dropdown.addOptions(scopeSelections);
-      dropdown.setValue(config.scope).onChange((value) => __async(this, null, function* () {
-        config.scope = value;
-      }));
-    }).setDisabled(disable);
-  }
-  showOutiFleName(containerEl, config, disable) {
-    const dataFilePathSetting = new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("121601")).setDesc(i18nHelper.getMessage("121602")).addText((textField) => {
-      textField.setPlaceholder(i18nHelper.getMessage("121602")).setValue(config.dataFileNamePath).onChange((value) => __async(this, null, function* () {
-        config.dataFileNamePath = value;
-      }));
-    }).setDisabled(disable);
-  }
-  showOutputFolderSelections(containerEl, config, disable) {
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("121501")).setDesc(i18nHelper.getMessage("121502")).addSearch((search) => __async(this, null, function* () {
-      new FolderSuggest(this.app, search.inputEl);
-      search.setValue(config.dataFilePath).setPlaceholder(i18nHelper.getMessage("121503")).onChange((value) => __async(this, null, function* () {
-        config.dataFilePath = value;
-      }));
-    })).setDisabled(disable);
-  }
-  showTemplateFileSelectionSetting(containerEl, config, disable) {
-    containerEl.empty();
-    const key = this.getKey(config.syncType);
-    let setting = new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("121101")).setDesc(i18nHelper.getMessage("121102")).addSearch((search) => __async(this, null, function* () {
-      new FileSuggest(this.app, search.inputEl);
-      search.setValue(config.templateFile).onChange((value) => __async(this, null, function* () {
-        config.templateFile = value;
-      }));
-    })).setDisabled(disable);
-    setting.addExtraButton((button) => {
-      button.setIcon("copy").setTooltip(i18nHelper.getMessage("121903")).onClick(() => __async(this, null, function* () {
-        navigator.clipboard.writeText(getDefaultTemplateContent(key));
-      }));
-    });
-    setting.addExtraButton((button) => {
-      button.setIcon("document").setTooltip(i18nHelper.getMessage("121901")).onClick(() => __async(this, null, function* () {
-        navigator.clipboard.writeText(getDefaultTemplateContent(key, false));
-      }));
-    });
-  }
-  getKey(supportType) {
-    return supportType + "TemplateFile";
-  }
-  showForceUpdateConfig(containerEl, config, disable) {
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("110031")).setDesc(i18nHelper.getMessage("500110")).addToggle((toggleComponent) => {
-      toggleComponent.setValue(config.force).onChange((value) => __async(this, null, function* () {
-        config.force = value;
-      }));
-    }).setDisabled(disable);
-  }
-  showAttachmentsFileConfig(containerEl, config, disable) {
-    const settings = new import_obsidian26.Setting(containerEl);
-    let attachmentFileEl = containerEl.createDiv("attachment-file-path-selection");
-    settings.setName(i18nHelper.getMessage("121430")).setDesc(i18nHelper.getMessage("121431")).addToggle((toggleComponent) => {
-      toggleComponent.setValue(config.cacheImage).onChange((value) => __async(this, null, function* () {
-        config.cacheImage = value;
-        this.showAttachmentPathSelections(value, attachmentFileEl, config, disable);
-      }));
-    }).setDisabled(disable);
-    this.showAttachmentPathSelections(config.cacheImage, attachmentFileEl, config, disable);
-  }
-  showAttachmentPathSelections(show, containerEl, config, disable) {
-    containerEl.empty();
-    if (!show) {
-      return;
-    }
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("121432")).setDesc(i18nHelper.getMessage("121433")).addSearch((search) => __async(this, null, function* () {
-      new FolderSuggest(this.plugin.app, search.inputEl);
-      search.setValue(config.attachmentPath).setPlaceholder(i18nHelper.getMessage("121434")).onChange((value) => __async(this, null, function* () {
-        config.attachmentPath = value;
-      }));
-    })).setDisabled(disable);
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("121435")).setDesc(i18nHelper.getMessage("121438")).addToggle((toggleComponent) => {
-      toggleComponent.setValue(config.cacheHighQuantityImage).onChange((value) => __async(this, null, function* () {
-        config.cacheHighQuantityImage = value;
-      }));
-    }).setDisabled(disable);
-  }
-  showUpdateAllConfig(containerEl, config, disable) {
-    new import_obsidian26.Setting(containerEl).setName(i18nHelper.getMessage("110039")).setDesc(i18nHelper.getMessage("110040")).addToggle((toggleComponent) => {
-      toggleComponent.setTooltip(i18nHelper.getMessage("110040")).setValue(config.incrementalUpdate).onChange((value) => __async(this, null, function* () {
-        config.incrementalUpdate = value;
-      }));
-    }).setDisabled(disable);
   }
 };
 
@@ -20503,182 +20771,115 @@ var SyncHandler = class {
   }
 };
 
-// src/org/wanxp/douban/model/GlobalStatusHolder.ts
+// src/org/wanxp/douban/user/UserComponent.ts
 var import_obsidian29 = __toModule(require("obsidian"));
 
-// src/org/wanxp/douban/sync/model/SyncStatusHolder.ts
-var SyncStatusHolder = class {
-  constructor(syncConfig) {
-    this.syncResultMap = new Map();
-    this.statusHandleMap = new Map([
-      [SyncItemStatus.exists, 0],
-      [SyncItemStatus.replace, 0],
-      [SyncItemStatus.create, 0],
-      [SyncItemStatus.fail, 0],
-      [SyncItemStatus.unHandle, 0]
-    ]);
-    this.syncConfig = syncConfig;
-    this.total = 0;
-    this.handle = 0;
-    this.needHandled = 0;
-    this.key = this.getKey(syncConfig);
-  }
-  handled(num) {
-    this.handle = this.handle + num;
-  }
-  totalNum(num) {
-    this.total = num;
-  }
-  getTotal() {
-    return this.total;
-  }
-  getHandle() {
-    return this.handle;
-  }
-  getHasHandle() {
-    return this.handle;
-  }
-  setNeedHandled(needHandled) {
-    this.needHandled = needHandled;
-  }
-  getNeedHandled() {
-    return this.needHandled;
-  }
-  replace(id, title) {
-    this.putToHandled(id, title);
-    this.updateResult(id, title, SyncItemStatus.replace);
-  }
-  exists(id, title) {
-    this.putToHandled(id, title);
-    this.updateResult(id, title, SyncItemStatus.exists);
-  }
-  unHandle(id, title) {
-    this.updateResult(id, title, SyncItemStatus.unHandle);
-  }
-  create(id, title) {
-    this.putToHandled(id, title);
-    this.updateResult(id, title, SyncItemStatus.create);
-  }
-  fail(id, title) {
-    this.updateResult(id, title, SyncItemStatus.fail);
-  }
-  updateResult(id, title, status) {
-    this.syncResultMap.set(id, { id, title, status });
-    this.statusHandleMap.set(status, this.statusHandleMap.get(status) + 1);
-    this.handled(1);
-  }
-  setTotal(total) {
-    this.totalNum(total);
-  }
-  putToHandled(id, title) {
-    if (!this.handledData) {
-      this.handledData = new Map();
-    }
-    const { key } = this;
-    if (!this.handledData.has(key)) {
-      this.handledData.set(key, new Set());
-    }
-    this.handledData.get(key).add(id);
-  }
-  shouldSync(id) {
-    return this.handledData.get(this.key) ? !this.handledData.get(this.key).has(id) : true;
-  }
-  getKey(syncConfig) {
-    const type = syncConfig.syncType ? syncConfig.syncType : "";
-    const scope = syncConfig.scope ? syncConfig.scope : "";
-    const path = syncConfig.dataFilePath ? syncConfig.dataFilePath : "";
-    return `${path}+${type}+${scope}`;
-  }
-  getOverSize() {
-    return this.getNeedHandled() > BasicConst.SLOW_SIZE;
-  }
-  initSyncHandledData(data2) {
-    this.handledData = new Map();
-    const { handledData } = this;
-    data2.forEach((d) => {
-      handledData.set(d.key, new Set(d.value));
-    });
-    if (!this.syncConfig.incrementalUpdate) {
-      this.resetSyncHandledData();
-    }
-    this.resetTypeOtherSyncHandledData();
-  }
-  resetSyncHandledData() {
-    return this.handledData.set(this.key, new Set());
-  }
-  resetTypeOtherSyncHandledData() {
-    this.handledData.forEach((value, key) => {
-      if (this.needClearByKey(this.key, key)) {
-        value.clear();
-      }
-    });
-  }
-  needClearByKey(handleKey, savedKey) {
-    if (handleKey == savedKey) {
-      return false;
-    }
-    let handledKeys = handleKey.split("+");
-    let savedKeys = savedKey.split("+");
-    handledKeys = handledKeys != null ? handledKeys : [""];
-    savedKeys = savedKeys != null ? savedKeys : [""];
-    if (handledKeys[0] == savedKeys[0]) {
-      return true;
-    }
-    return false;
-  }
+// src/org/wanxp/douban/user/User.ts
+var User = class {
 };
 
-// src/org/wanxp/douban/model/GlobalStatusHolder.ts
-var GlobalStatusHolder = class {
-  constructor(app2, plugin) {
-    this._app = app2;
-    this._plugin = plugin;
+// src/org/wanxp/douban/user/UserComponent.ts
+var UserComponent = class {
+  constructor(settingsManager) {
+    this.settingsManager = settingsManager;
   }
-  completeSync() {
-    return __async(this, null, function* () {
-      this.syncStarted = false;
-      yield this.saveHandledData();
-    });
+  getUser() {
+    return this.user;
   }
-  startSync(syncConfigOut) {
-    if (this.syncStarted) {
-      const { syncConfig } = this.syncStatus;
-      new import_obsidian29.Notice(i18nHelper.getMessage("110008"), SyncTypeRecords[syncConfig.syncType], DoubanSubjectState[syncConfig.scope]);
+  getUserId() {
+    return this.user ? this.user.id : null;
+  }
+  isLogin() {
+    return this.user && this.user.login;
+  }
+  logout() {
+    if (this.user) {
+      this.user.login = false;
+    }
+    this.user = null;
+    this.settingsManager.updateSetting("loginCookiesContent", "");
+  }
+  needLogin() {
+    const cookie = this.settingsManager.getSetting("loginCookiesContent");
+    if (!cookie) {
       return false;
     }
-    this.syncStatus = new SyncStatusHolder(syncConfigOut);
-    this.syncStarted = true;
-    this.syncStartTime = new Date().getTime();
-    return true;
+    return !this.isLogin();
   }
-  stopSync() {
-    this.syncStarted = false;
-  }
-  syncing() {
-    return this.syncStarted;
-  }
-  initHandledData() {
+  loginByCookie() {
     return __async(this, null, function* () {
-      this.syncStatus.initSyncHandledData(this._plugin.settings.syncHandledDataArray);
-    });
-  }
-  saveHandledData() {
-    return __async(this, null, function* () {
-      if (!this.syncStatus || !this.syncStatus.handledData) {
-        return;
+      let cookie = this.settingsManager.getSetting("loginCookiesContent");
+      if (!cookie) {
+        this.settingsManager.debug("\u4E3B\u754C\u9762:loginByCookie:\u65E0\u8C46\u74E3cookies\u4FE1\u606F\uFF0C\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25");
+        return new User();
       }
-      const data2 = [];
-      this.syncStatus.handledData.forEach((value, key) => {
-        data2.push({ key, value: Array.from(value) });
+      this.settingsManager.debug("\u4E3B\u754C\u9762:loginByCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F");
+      yield this.loadUserInfo(cookie).then((user) => {
+        this.user = user;
+        this.settingsManager.debug(`\u4E3B\u754C\u9762:loginByCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C${user && user.id ? "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u6210\u529Fid:" + StringUtil.confuse(user.id) + ",\u7528\u6237\u540D:" + StringUtil.confuse(user.name) : "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25"}`);
       });
-      this._plugin.settings.syncHandledDataArray = data2;
-      yield this._plugin.saveSettings();
+      return this.user;
     });
   }
-  onunload() {
+  loginCookie(cookie) {
     return __async(this, null, function* () {
-      yield this.saveHandledData();
+      if (!cookie) {
+        return new User();
+      }
+      this.settingsManager.debug("\u914D\u7F6E\u754C\u9762:loginCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F");
+      yield this.loadUserInfo(cookie).then((user) => {
+        this.user = user;
+        this.settingsManager.debug(`\u914D\u7F6E\u754C\u9762:loginCookie:\u8C46\u74E3cookies\u4FE1\u606F\u6B63\u5E38\uFF0C${user && user.id ? "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u6210\u529Fid:" + StringUtil.confuse(user.id) + ",\u7528\u6237\u540D:" + StringUtil.confuse(user.name) : "\u83B7\u53D6\u7528\u6237\u4FE1\u606F\u5931\u8D25"}`);
+      });
+      if (this.user) {
+        this.settingsManager.updateSetting("loginCookiesContent", cookie);
+      }
+      return this.user;
     });
+  }
+  loadUserInfo(cookie) {
+    return __async(this, null, function* () {
+      let requestUrlParam = {
+        url: "https://www.douban.com/mine/",
+        method: "GET",
+        headers: { "Cookie": cookie },
+        throw: true
+      };
+      this.settingsManager.debug("loadUserInfo:\u5C1D\u8BD5\u83B7\u53D6\u7528\u6237\u4FE1\u606F:https://www.douban.com/mine/");
+      return (0, import_obsidian29.request)(requestUrlParam).then((requestUrlResponse) => {
+        if (requestUrlResponse.indexOf("https://sec.douban.com/a") > 0) {
+          throw new Error(i18nHelper.getMessage("130105"));
+        }
+        return requestUrlResponse;
+      }).then(load).then(this.getUserInfo).catch((e) => {
+        if (e.toString().indexOf("403") > 0) {
+          throw new Error(i18nHelper.getMessage("130105"));
+        } else {
+          throw log.error(i18nHelper.getMessage("130101").replace("{0}", e.toString()), e);
+        }
+      });
+    });
+  }
+  getUserInfo(dataHtml) {
+    let elements = dataHtml("#db-usr-profile > div.pic > a");
+    if (!elements) {
+      return new User();
+    }
+    let name = dataHtml(dataHtml("head > title").get(0)).text().trim();
+    let userUrl = dataHtml(elements.get(0)).attr("href");
+    let idPattern = /(\d){5,10}/g;
+    let idP = idPattern.exec(userUrl);
+    let id = idP ? idP[0] : "";
+    if (!id) {
+      return new User();
+    }
+    const result = {
+      id,
+      name,
+      url: userUrl,
+      login: true
+    };
+    return result;
   }
 };
 
@@ -20767,7 +20968,8 @@ var DoubanPlugin = class extends import_obsidian30.Plugin {
         this.showStatus(i18nHelper.getMessage("140201", searchTerm));
         const resultList = yield Searcher.search(searchTerm, this.settings, context.plugin.settingsManager);
         this.showStatus(i18nHelper.getMessage("140202", resultList.length.toString()));
-        new DoubanFuzzySuggester(this, context).showSearchList(resultList);
+        context.searchPage = new SearchPageInfo(21, -1, 20);
+        new DoubanFuzzySuggester(this, context, searchTerm).showSearchList(resultList);
       } catch (e) {
         log.error(i18nHelper.getMessage("140206").replace("{0}", e.message), e);
       } finally {

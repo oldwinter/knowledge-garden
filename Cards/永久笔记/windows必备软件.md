@@ -4,19 +4,19 @@ date modified: 2023-01-06
 title: windows必备软件
 ---
 
-[[everything]]
+[[Everything]]
 
 - [[utools]]
 - [[AutoHotkey]]
 - [[quicker]]
-- [[vscode]]
+- [[VSCode]]
 - [[xshell]]
 - [[notepad++]]
 - [[tortoiseGit]]
-- [[xmind]]
+- [[Xmind]]
 - [[goland]]
 - [[ManicTime]]
 - [[Listary]]
-- [[snipaste]]
-- [[navicat]]
-- [[🤖burp suite]]
+- [[Snipaste]]
+- [[Navicat]]
+- [[burp suite]]

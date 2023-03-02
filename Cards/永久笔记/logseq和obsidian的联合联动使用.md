@@ -13,7 +13,7 @@ obsidian 的发布功能还没试过，但看了别人的发布效果，感觉�
 ## 存在的一些问题和解决方案
 
 - logseq 自动生成的 bak 文件夹，会被 obsidian 扫描，里面大量无用信息。现在 logseq 也不给配置这个 bak 文件夹的生成规则。
-	- 先通过 [[keyboard maestro]] 定时删除 log 文件夹，作为临时规避方案。
+	- 先通过 [[Keyboard Maestro]] 定时删除 log 文件夹，作为临时规避方案。
 - 清单语法互相不兼容
 	- obsidian 的清单语法，是原生的 markdown 语法，logseq 由于其大纲类型，和清单冲突，所以自己扩展了语法。
 		- 先暂时只使用 ob 的语法，考虑到兼容性。logseq 就只看看就行。

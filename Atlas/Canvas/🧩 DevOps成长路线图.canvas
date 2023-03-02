@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"type":"file","file":"Atlas/Canvas/🧩 golang roadmap 路线图.canvas","id":"85d0307befafa4fc","x":244,"y":-1210,"width":400,"height":400},
+		{"type":"text","text":"学习一门编程语言，能帮助自己实现自动化。","id":"654a90e9659a11d8","x":-545,"y":-914,"width":250,"height":50,"color":"3"},
+		{"type":"file","file":"Spaces/3-Resource/计算机科学专题/Python.md","id":"cb9af17f24c2d2db","x":194,"y":-645,"width":450,"height":82,"subpath":"#^bd07bd"},
+		{"type":"file","file":"Spaces/3-Resource/计算机科学专题/JavaScript.md","id":"2a5c9cde6b8ea30f","x":194,"y":-464,"width":450,"height":62},
+		{"type":"text","text":"理解各种操作系统基础概念","id":"14d36b5a01b89581","x":-545,"y":-248,"width":250,"height":60,"color":"3"},
+		{"type":"text","text":"```a\n\n\n吖\n```\n\n## 发动\n\n","id":"eeb250b926e36fdd","x":-545,"y":100,"width":424,"height":217},
+		{"type":"text","text":"","id":"6479777e87d3bf62","x":-545,"y":360,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"a270f21e89ecf3bd","fromNode":"654a90e9659a11d8","fromSide":"right","toNode":"cb9af17f24c2d2db","toSide":"left"},
+		{"id":"0506964e37f881f3","fromNode":"654a90e9659a11d8","fromSide":"bottom","toNode":"14d36b5a01b89581","toSide":"top"},
+		{"id":"8d45fb5dbad3e624","fromNode":"654a90e9659a11d8","fromSide":"right","toNode":"2a5c9cde6b8ea30f","toSide":"left"},
+		{"id":"f7485ec30de03059","fromNode":"654a90e9659a11d8","fromSide":"right","toNode":"85d0307befafa4fc","toSide":"left"},
+		{"id":"a187ce3ad8d36ed5","fromNode":"eeb250b926e36fdd","fromSide":"top","toNode":"14d36b5a01b89581","toSide":"bottom","toEnd":"none"}
+	]
+}

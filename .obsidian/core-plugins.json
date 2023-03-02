@@ -4,6 +4,7 @@
   "switcher",
   "graph",
   "backlink",
+  "canvas",
   "outgoing-link",
   "tag-pane",
   "page-preview",
@@ -11,7 +12,7 @@
   "note-composer",
   "command-palette",
   "starred",
-  "outline",
+  "word-count",
   "file-recovery",
   "sync"
 ]

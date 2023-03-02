@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: vscode代码编辑和obsidian文本编辑快捷键
 ---
 
-| | [[🤖VSCode]] |[[Obsidian]] |
+| | [[VSCode]] |[[Obsidian]] |
 | ---------------- | ------------------- | ------------ |
 | 删除当前行 | cmd + shift + k | cmd + d |
 | 单行注释 | cmd + / | cmd + / |

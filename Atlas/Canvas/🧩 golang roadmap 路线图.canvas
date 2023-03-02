@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"476e353ea0793365","x":-20,"y":-496,"width":250,"height":60,"type":"text","text":""},
+		{"type":"text","text":"基础知识","id":"3de9ab3f4f589982","x":-22,"y":-352,"width":250,"height":60},
+		{"type":"text","text":"深入理解","id":"5b5b66675a259442","x":-22,"y":-198,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"7ea5518cb87ede83","fromNode":"3de9ab3f4f589982","fromSide":"bottom","toNode":"5b5b66675a259442","toSide":"top"}
+	]
+}

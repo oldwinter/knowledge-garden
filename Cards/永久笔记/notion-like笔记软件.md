@@ -18,7 +18,7 @@ title: notion-like笔记软件
 - notion
 - wolai
 - flowus
-- [[🤖思源笔记]]
+- [[思源笔记]]
 - anytype
 
 [[roam-like笔记软件]]

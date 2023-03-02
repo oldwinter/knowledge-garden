@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-chartsview-plugin",
+	"name": "Charts View",
+	"version": "1.2.1",
+	"minAppVersion": "0.9.12",
+	"description": "Data visualization solution in Obsidian based on Ant Design Charts.",
+	"author": "caronchen",
+	"authorUrl": "https://github.com/caronchen/obsidian-chartsview-plugin",
+	"isDesktopOnly": false
+}

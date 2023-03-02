@@ -4763,6 +4763,7 @@ var Publisher = class {
     publishedFrontMatter = this.addDefaultPassThrough(fileFrontMatter, publishedFrontMatter);
     publishedFrontMatter = this.addPageTags(fileFrontMatter, publishedFrontMatter);
     publishedFrontMatter = this.addFrontMatterSettings(fileFrontMatter, publishedFrontMatter);
+    publishedFrontMatter = this.addNoteIconFrontMatter(fileFrontMatter, publishedFrontMatter);
     const fullFrontMatter = (publishedFrontMatter == null ? void 0 : publishedFrontMatter.dgPassFrontmatter) ? __spreadValues(__spreadValues({}, fileFrontMatter), publishedFrontMatter) : publishedFrontMatter;
     const frontMatterString = JSON.stringify(fullFrontMatter);
     return `---
@@ -4809,6 +4810,22 @@ ${frontMatterString}
       if (tags.length > 0) {
         publishedFrontMatter["tags"] = tags;
       }
+    }
+    return publishedFrontMatter;
+  }
+  addNoteIconFrontMatter(baseFrontMatter, newFrontMatter) {
+    if (!baseFrontMatter) {
+      baseFrontMatter = {};
+    }
+    if (!this.settings.showNoteIconInFileTree && !this.settings.showNoteIconOnInternalLink && !this.settings.showNoteIconOnTitle) {
+      return newFrontMatter;
+    }
+    const publishedFrontMatter = __spreadValues({}, newFrontMatter);
+    const noteIconKey = this.settings.noteIconKey;
+    if (baseFrontMatter[noteIconKey] !== void 0) {
+      publishedFrontMatter["noteIcon"] = baseFrontMatter[noteIconKey];
+    } else {
+      publishedFrontMatter["noteIcon"] = this.settings.defaultNoteIcon;
     }
     return publishedFrontMatter;
   }
@@ -5164,6 +5181,14 @@ BASE_THEME=${baseTheme}`;
 SITE_NAME_HEADER=${siteName}`;
       envSettings += `
 SITE_BASE_URL=${gardenBaseUrl}`;
+      envSettings += `
+NOTE_ICON_DEFAULT=${this.settings.defaultNoteIcon}`;
+      envSettings += `
+NOTE_ICON_TITLE=${this.settings.showNoteIconOnTitle}`;
+      envSettings += `
+NOTE_ICON_FILETREE=${this.settings.showNoteIconInFileTree}`;
+      envSettings += `
+NOTE_ICON_INTERNAL_LINKS=${this.settings.showNoteIconOnInternalLink}`;
       const defaultNoteSettings = __spreadValues({}, this.settings.defaultNoteSettings);
       for (const key of Object.keys(defaultNoteSettings)) {
         envSettings += `
@@ -7282,6 +7307,35 @@ var SettingView = class {
         }));
         new SvgFileSuggest(this.app, tc.inputEl);
       });
+      themeModal.contentEl.createEl("h2", { text: "Note icons Settings" });
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Note icon Frontmatter Key").setDesc("Key to get the note icon value from the frontmatter").addText((text) => text.setValue(this.settings.noteIconKey).onChange((value) => __async(this, null, function* () {
+        this.settings.noteIconKey = value;
+        yield this.saveSettings();
+      })));
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Default note icon Value").setDesc("The default value for note icon if not specified").addText((text) => {
+        text.setValue(this.settings.defaultNoteIcon).onChange((value) => __async(this, null, function* () {
+          this.settings.defaultNoteIcon = value;
+          yield this.saveSettings();
+        }));
+      });
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Show note icon on Title").addToggle((t) => {
+        t.setValue(this.settings.showNoteIconOnTitle).onChange((value) => __async(this, null, function* () {
+          this.settings.showNoteIconOnTitle = value;
+          yield this.saveSettings();
+        }));
+      });
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Show note icon in FileTree").addToggle((t) => {
+        t.setValue(this.settings.showNoteIconInFileTree).onChange((value) => __async(this, null, function* () {
+          this.settings.showNoteIconInFileTree = value;
+          yield this.saveSettings();
+        }));
+      });
+      new import_obsidian5.Setting(themeModal.contentEl).setName("Show note icon on Internal Links").addToggle((t) => {
+        t.setValue(this.settings.showNoteIconOnInternalLink).onChange((value) => __async(this, null, function* () {
+          this.settings.showNoteIconOnInternalLink = value;
+          yield this.saveSettings();
+        }));
+      });
       new import_obsidian5.Setting(themeModal.contentEl).addButton((cb) => {
         cb.setButtonText("Apply settings to site");
         cb.onClick((ev) => __async(this, null, function* () {
@@ -7784,6 +7838,11 @@ var DEFAULT_SETTINGS = {
   noteSettingsIsInitialized: false,
   siteName: "Digital Garden",
   slugifyEnabled: true,
+  noteIconKey: "dg-note-icon",
+  defaultNoteIcon: "",
+  showNoteIconOnTitle: false,
+  showNoteIconInFileTree: false,
+  showNoteIconOnInternalLink: false,
   defaultNoteSettings: {
     dgHomeLink: true,
     dgPassFrontmatter: false,

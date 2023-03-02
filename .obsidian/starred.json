@@ -13,12 +13,17 @@
     {
       "type": "file",
       "title": "∑ Chrome插件",
-      "path": "Spaces/1-Project/Chrome插件使用/∑ Chrome插件.md"
+      "path": "Spaces/1-Project/人与科技融合专题/Chrome插件使用/∑ Chrome插件.md"
     },
     {
       "type": "file",
       "title": "∑ VSCode插件",
-      "path": "Spaces/1-Project/VSCode插件使用/∑ VSCode插件.md"
+      "path": "Spaces/1-Project/人与科技融合专题/VSCode插件使用/∑ VSCode插件.md"
+    },
+    {
+      "type": "file",
+      "title": "∑ AI MOC",
+      "path": "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md"
     }
   ]
 }

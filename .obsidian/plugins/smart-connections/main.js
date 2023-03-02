@@ -9,10 +9,11 @@ const DEFAULT_SETTINGS = {
   header_exclusions: "",
   path_only: "",
   show_full_path: false,
+  expanded_view: true,
   log_render: false,
   log_render_files: false,
   skip_sections: false,
-  results_count: 50,
+  results_count: 30,
 };
 const MAX_EMBED_STRING_LENGTH = 25000;
 
@@ -24,6 +25,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     this.embeddings = null;
     this.embeddings_external = null;
     this.file_exclusions = [];
+    this.has_new_embeddings = false;
     this.header_exclusions = [];
     this.nearest_cache = {};
     this.path_only = [];
@@ -36,6 +38,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     this.render_log.skipped_low_delta = {};
     this.render_log.token_usage = 0;
     this.render_log.tokens_saved_by_cache = 0;
+    this.save_timeout = null;
   }
 
   async loadSettings() {
@@ -126,14 +129,14 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // initialize when layout is ready
     this.app.workspace.onLayoutReady(this.initialize.bind(this));
 
-    /**
-     * EXPERIMENTAL
-     * - window-based API access
-     * - code-block rendering
-     */
-    this.api = new SmartConnectionsApi(this.app, this);
-    // register API to global window object
-    (window["SmartConnectionsApi"] = this.api) && this.register(() => delete window["SmartConnectionsApi"]);
+    // /**
+    //  * EXPERIMENTAL
+    //  * - window-based API access
+    //  * - code-block rendering
+    //  */
+    // this.api = new SmartConnectionsApi(this.app, this);
+    // // register API to global window object
+    // (window["SmartConnectionsApi"] = this.api) && this.register(() => delete window["SmartConnectionsApi"]);
 
     // code-block renderer
     this.registerMarkdownCodeBlockProcessor("smart-connections", this.render_code_block.bind(this));
@@ -160,12 +163,11 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       await this.open_view();
       view = this.get_view();
     }
-    await view.render_note_connections(selected_text);
+    await view.render_connections(selected_text);
   }
 
   async initialize() {
-    await this.open_view();
-    await this.add_to_gitignore();
+    this.add_to_gitignore();
   }
 
   async open_view() {
@@ -266,11 +268,30 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
   }
 
-  async save_embeddings_to_file() {
-    if(this.render_log.new_embeddings === 0) {
-      // console.log("no files embedded, skipping save_embeddings_to_file");
+  async save_embeddings_to_file(force=false) {
+    if(!this.has_new_embeddings){
       return;
     }
+    // console.log("new embeddings, saving to file");
+    if(!force) {
+      // prevent excessive writes to embeddings file by waiting 1 minute before writing
+      if(this.save_timeout) {
+        clearTimeout(this.save_timeout);
+        this.save_timeout = null;  
+      }
+      this.save_timeout = setTimeout(() => {
+        // console.log("writing embeddings to file");
+        this.save_embeddings_to_file(true);
+        // clear timeout
+        if(this.save_timeout) {
+          clearTimeout(this.save_timeout);
+          this.save_timeout = null;
+        }
+      }, 60000);
+      // console.log("scheduled save");
+      return;
+    }
+
     const embeddings = JSON.stringify(this.embeddings);
     // check if embeddings file exists
     const embeddings_file_exists = await this.app.vault.adapter.exists(".smart-connections/embeddings-2.json");
@@ -287,7 +308,8 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       if(new_file_size > (existing_file_size * 0.5)) {
         // write embeddings to file
         await this.app.vault.adapter.write(".smart-connections/embeddings-2.json", embeddings);
-        // console.log("embeddings file size: "+new_file_size+" bytes");
+        this.has_new_embeddings = false;
+        console.log("embeddings file size: "+new_file_size+" bytes");
       }else{
         // if new file size is significantly smaller than existing file size then throw error
         // show warning message including file sizes
@@ -333,6 +355,37 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // reload failed_embeddings to prevent retrying failed files until explicitly requested
     await this.load_failed_files();
   }
+  // test writing file to check if file system is read-only
+  async test_file_writing () {
+    // wrap in try catch to prevent error from crashing plugin
+    let log = "Begin test:";
+    try {
+      // check if test file already exists
+      const test_file_exists = await this.app.vault.adapter.exists(".smart-connections/embeddings-test.json");
+      // if test file exists then delete it
+      if(test_file_exists) {
+        await this.app.vault.adapter.remove(".smart-connections/embeddings-test.json");
+      }
+      // write test file
+      await this.app.vault.adapter.write(".smart-connections/embeddings-test.json", "test");
+      // update test file
+      if(this.embeddings){
+        await this.app.vault.adapter.write(".smart-connections/embeddings-test.json", JSON.stringify(this.embeddings));
+      }else{
+        log += "<br>No embeddings to test, writing test content to file."
+        await this.app.vault.adapter.write(".smart-connections/embeddings-test.json", "test2");
+      }
+      // delete test file
+      // await this.app.vault.adapter.remove(".smart-connections/embeddings-test.json");
+      // return "File writing test passed."
+      log += "<br>File writing test passed.";
+    }catch(error) {
+      // return error message
+      log += "<br>File writing test failed: "+error;
+    }
+    return log;
+  }
+  
   // load failed files from failed-embeddings.txt
   async load_failed_files () {
     // check if failed-embeddings.txt exists
@@ -759,35 +812,35 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
   }
   
-  async get_embeddings(key, embed_input, meta={}) {
-    const requestResults = await this.request_embedding_from_input(embed_input);
-    // if requestResults is null then return
-    if(!requestResults) {
-      console.log("failed embedding: " + meta.path);
-      // log failed file names to render_log
-      this.render_log.failed_embeddings.push(meta.path);
-      return;
-    }
-    // if requestResults is not null
-    if(requestResults){
-      // add embedding key to render_log
-      if(this.settings.log_render){
-        if(this.settings.log_render_files){
-          this.render_log.files.push(meta);
-        }
-        this.render_log.new_embeddings++;
-        // add token usage to render_log
-        this.render_log.token_usage += requestResults.usage.total_tokens;
-      }
-      const vec = requestResults.data[0].embedding;
-      if(vec) {
-        this.embeddings[key] = {};
-        this.embeddings[key].vec = vec;
-        this.embeddings[key].meta = meta;
-        this.embeddings[key].meta.tokens = requestResults.usage.total_tokens;
-      }
-    }
-  }
+  // async get_embeddings(key, embed_input, meta={}) {
+  //   const requestResults = await this.request_embedding_from_input(embed_input);
+  //   // if requestResults is null then return
+  //   if(!requestResults) {
+  //     console.log("failed embedding: " + meta.path);
+  //     // log failed file names to render_log
+  //     this.render_log.failed_embeddings.push(meta.path);
+  //     return;
+  //   }
+  //   // if requestResults is not null
+  //   if(requestResults){
+  //     // add embedding key to render_log
+  //     if(this.settings.log_render){
+  //       if(this.settings.log_render_files){
+  //         this.render_log.files.push(meta);
+  //       }
+  //       this.render_log.new_embeddings++;
+  //       // add token usage to render_log
+  //       this.render_log.token_usage += requestResults.usage.total_tokens;
+  //     }
+  //     const vec = requestResults.data[0].embedding;
+  //     if(vec) {
+  //       this.embeddings[key] = {};
+  //       this.embeddings[key].vec = vec;
+  //       this.embeddings[key].meta = meta;
+  //       this.embeddings[key].meta.tokens = requestResults.usage.total_tokens;
+  //     }
+  //   }
+  // }
 
   async get_embeddings_batch(req_batch) {
     // if req_batch is empty then return
@@ -805,6 +858,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
     // if requestResults is not null
     if(requestResults){
+      this.has_new_embeddings = true;
       // add embedding key to render_log
       if(this.settings.log_render){
         if(this.settings.log_render_files){
@@ -1061,7 +1115,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // split the markdown into lines
     const lines = markdown.split('\n');
     // initialize the blocks array
-    const blocks = [];
+    let blocks = [];
     // current headers array
     let currentHeaders = [];
     // remove .md file extension and convert file_path to breadcrumb formatting
@@ -1073,6 +1127,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
 
     let last_heading_line = 0;
     let i = 0;
+    let block_headings_list = [];
     // loop through the lines
     for (i = 0; i < lines.length; i++) {
       // get the line
@@ -1083,10 +1138,8 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       if (!line.startsWith('#') || (['#',' '].indexOf(line[1]) < 0)){
         // skip if line is empty
         if(line === '') continue;
-        // skip if line is empty checkbox
-        if(line === '- [ ] ') continue;
-        // skip if line is empty bullet
-        if(line === '- ') continue;
+        // skip if line is empty bullet or checkbox
+        if(['- ', '- [ ] '].indexOf(line) > -1) continue;
         // if currentHeaders is empty skip (only blocks with headers, otherwise block.path conflicts with file.path)
         if(currentHeaders.length === 0) continue;
         // add line to block
@@ -1113,22 +1166,29 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       block = file_breadcrumbs;
       block += ": " + currentHeaders.map(header => header.header).join(' > ');
       block_headings = "#"+currentHeaders.map(header => header.header).join('#');
+      // if block_headings is already in block_headings_list then add a number to the end
+      if(block_headings_list.indexOf(block_headings) > -1) {
+        let count = 1;
+        while(block_headings_list.indexOf(`${block_headings}{${count}}`) > -1) {
+          count++;
+        }
+        block_headings = `${block_headings}{${count}}`;
+      }
+      block_headings_list.push(block_headings);
       block_path = file_path + block_headings;
     }
     // handle remaining after loop
     if((last_heading_line !== (i-1)) && (block.indexOf("\n") > -1) && this.validate_headings(block_headings)) output_block();
+    // remove any blocks that are too short (length < 50)
+    blocks = blocks.filter(b => b.length > 50);
+    // console.log(blocks);
+    // return the blocks array
     return blocks;
 
     function output_block() {
       // breadcrumbs length (first line of block)
       const breadcrumbs_length = block.indexOf("\n") + 1;
-      // console.log(breadcrumbs_length);
       const block_length = block.length - breadcrumbs_length;
-      // skip if block length is less than N characters
-      if(block_length < 50) {
-        return;
-      }
-      // console.log(block);
       // trim block to max length
       if (block.length > MAX_EMBED_STRING_LENGTH) {
         block = block.substring(0, MAX_EMBED_STRING_LENGTH);
@@ -1145,7 +1205,16 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
     let block = [];
     let block_headings = path.split('#').slice(1);
+    // if path ends with number in curly braces
+    let heading_occurrence = 0;
+    if(block_headings[block_headings.length-1].indexOf('{') > -1) {
+      // get the occurrence number
+      heading_occurrence = parseInt(block_headings[block_headings.length-1].split('{')[1].replace('}', ''));
+      // remove the occurrence from the last heading
+      block_headings[block_headings.length-1] = block_headings[block_headings.length-1].split('{')[0];
+    }
     let currentHeaders = [];
+    let occurrence_count = 0;
     let begin_line = 0;
     let i = 0;
     // get file path from path
@@ -1161,9 +1230,20 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // split the file contents into lines
     const lines = file_contents.split('\n');
     // loop through the lines
+    let is_code = false;
     for (i = 0; i < lines.length; i++) {
       // get the line
       const line = lines[i];
+      // if line begins with three backticks then toggle is_code
+      if(line.indexOf('```') === 0) {
+        is_code = !is_code;
+      }
+      // if is_code is true then add line with preceding tab and continue
+      if(is_code) {
+        continue;
+      }
+      // skip if line is empty bullet or checkbox
+      if(['- ', '- [ ] '].indexOf(line) > -1) continue;
       // if line does not start with #
       // or if line starts with # and second character is a word or number indicating a "tag"
       // then continue to next line
@@ -1185,24 +1265,55 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       currentHeaders.push(heading_text);
       // if currentHeaders.length === block_headings.length then we have a match
       if (currentHeaders.length === block_headings.length) {
-        begin_line = i + 1;
-        break; // break out of loop
+        // if heading_occurrence is defined then increment occurrence_count
+        if(heading_occurrence === 0) {
+          // set begin_line to i + 1
+          begin_line = i + 1;
+          break; // break out of loop
+        }
+        // if occurrence_count !== heading_occurrence then continue
+        if(occurrence_count === heading_occurrence){
+          begin_line = i + 1;
+          break; // break out of loop
+        }
+        occurrence_count++;
+        // reset currentHeaders
+        currentHeaders.pop();
+        continue;
       }
     }
     // if no begin_line then return false
     if (begin_line === 0) return false;
     // iterate through lines starting at begin_line
+    is_code = false;
     for (i = begin_line; i < lines.length; i++) {
       if((typeof limit === "number") && (block.length > limit)){
         block.push("...");
-        break;
+        break; // ends when limit is reached
       }
-      const line = lines[i];
-      if (!line.startsWith('#') || (['#',' '].indexOf(line[1]) < 0)){
-        block.push(line);
+      let line = lines[i];
+      if ((line.indexOf('#') === 0) && (['#',' '].indexOf(line[1]) !== -1)){
+        break; // ends when encountering next header
+      }
+
+      // validate/format
+      // if line is empty, skip
+      if (line.length === 0) continue;
+      // limit length of line to N characters
+      if (line.length > 100) {
+        line = line.slice(0, 100) + "...";
+      }
+      // if line is a code block, skip
+      if (line.startsWith("```")) {
+        is_code = !is_code;
         continue;
       }
-      break; // ends at the next header
+      if (is_code){
+        // add tab to beginning of line
+        line = "\t"+line;
+      }
+      // add line to block
+      block.push(line);
     }
     return block.join("\n").trim();
   }
@@ -1227,6 +1338,8 @@ class SmartConnectionsView extends Obsidian.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.plugin = plugin;
+    this.nearest = null;
+    this.load_wait = null;
   }
   getViewType() {
     return SMART_CONNECTIONS_VIEW_TYPE;
@@ -1306,16 +1419,6 @@ class SmartConnectionsView extends Obsidian.ItemView {
     item.addEventListener("click", async (event) => {
       await this.handle_click(curr, event);
     });
-    // trigger hover event on link
-    item.addEventListener("mouseover", (event) => {
-      this.app.workspace.trigger("hover-link", {
-        event,
-        source: SMART_CONNECTIONS_VIEW_TYPE,
-        hoverParent: list,
-        targetEl: item,
-        linktext: curr.link,
-      });
-    });
     // drag-on
     // currently only works with full-file links
     item.setAttr('draggable', 'true');
@@ -1326,6 +1429,18 @@ class SmartConnectionsView extends Obsidian.ItemView {
       const dragData = dragManager.dragFile(event, file);
       // console.log(dragData);
       dragManager.onDragStart(event, dragData);
+    });
+    // if curr.link contains curly braces, return (incompatible with hover-link)
+    if (curr.link.indexOf("{") > -1) return;
+    // trigger hover event on link
+    item.addEventListener("mouseover", (event) => {
+      this.app.workspace.trigger("hover-link", {
+        event,
+        source: SMART_CONNECTIONS_VIEW_TYPE,
+        hoverParent: list,
+        targetEl: item,
+        linktext: curr.link,
+      });
     });
   }
 
@@ -1341,9 +1456,28 @@ class SmartConnectionsView extends Obsidian.ItemView {
       const target_file_cache = this.app.metadataCache.getFileCache(targetFile);
       // console.log(target_file_cache);
       // get heading
-      const heading_text = curr.link.split("#").pop();
-      // get heading from headings in file cache
-      heading = target_file_cache.headings.find(h => h.heading === heading_text);
+      let heading_text = curr.link.split("#").pop();
+      // if heading text contains a curly brace, get the number inside the curly braces as occurence
+      let occurence = 1;
+      if (heading_text.indexOf("{") > -1) {
+        // get occurence
+        occurence = parseInt(heading_text.split("{")[1].split("}")[0]);
+        // remove occurence from heading text
+        heading_text = heading_text.split("{")[0];
+      }
+      // get headings from file cache
+      const headings = target_file_cache.headings;
+      // get headings with the same depth and text as the link
+      for(let i = 0; i < headings.length; i++) {
+        if (headings[i].heading === heading_text) {
+          // if occurence is 0, set heading and break
+          if(occurence === 0) {
+            heading = headings[i];
+            break;
+          }
+          occurence--; // decrement occurence
+        }
+      }
       // console.log(heading);
     } else {
       targetFile = this.app.metadataCache.getFirstLinkpathDest(curr.link, "");
@@ -1361,7 +1495,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
     }
   }
 
-  async set_nearest(nearest, nearest_context=null, results_only=false) {
+  set_nearest(nearest, nearest_context=null, results_only=false) {
     // get container element
     const container = this.containerEl.children[1];
     // if results only is false, clear container and initiate top bar
@@ -1371,8 +1505,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
       this.initiate_top_bar(container, nearest_context);
     }
     // update results
-    await this.update_results(container, nearest);
-    this.render_brand(container);
+    this.update_results(container, nearest);
   }
   // create list of nearest notes
   async update_results(container, nearest) {
@@ -1388,6 +1521,10 @@ class SmartConnectionsView extends Obsidian.ItemView {
       // create list element
       list = container.createEl("div", { cls: "sc-list" });
     }
+    let search_result_class = "search-result";
+    // if settings expanded_view is false, add sc-collapsed class
+    if(!this.plugin.settings.expanded_view) search_result_class += " sc-collapsed";
+
     // group nearest by file
     const nearest_by_file = {};
     for (let i = 0; i < nearest.length; i++) {
@@ -1439,62 +1576,23 @@ class SmartConnectionsView extends Obsidian.ItemView {
        * Handles Internal
        */
       let file_link_text;
+      const file_similarity_pct = Math.round(file[0].similarity * 100) + "%";
       if (this.plugin.settings.show_full_path) {
         const pcs = file[0].link.split("/");
         file_link_text = pcs[pcs.length - 1];
         const path = pcs.slice(0, pcs.length - 1).join("/");
-        const file_similarity_pct = Math.round(file[0].similarity * 100) + "%";
         file_link_text = `<small>${path} | ${file_similarity_pct}</small><br>${file_link_text}`;
       } else {
         file_link_text = file[0].link.split("/").pop();
+        // add similarity percentage
+        file_link_text += ' | ' + file_similarity_pct;
       }
-      // remove file extension if .md
-      file_link_text = file_link_text.replace(".md", "").replace(/#/g, " > ");
-      // if file has multiple links, insert collapsible list toggle button
-      if (file.length > 1) {
-        const item = list.createEl("div", { cls: "search-result sc-collapsed" });
-        const toggle = item.createEl("span", { cls: "tree-item-self is-clickable" });
-        // insert right triangle svg icon as toggle button in span
-        Obsidian.setIcon(toggle, "right-triangle"); // must come before adding other elms else overwrites
-        const file_link = toggle.createEl("a", {
-          cls: "search-result-file-title",
-          title: file[0].link,
-        });
-        file_link.innerHTML = file_link_text;
-        // add link listeners to file link
-        this.add_link_listeners(file_link, file[0], toggle);
-        toggle.addEventListener("click", (event) => {
-          // find parent containing class search-result
-          let parent = event.target;
-          while (!parent.classList.contains("search-result")) {
-            parent = parent.parentElement;
-          }
-          parent.classList.toggle("sc-collapsed");
 
-          // TODO: if block container is empty, render markdown from block retriever
-        });
-        // create list of block links
-        const file_link_list = item.createEl("ul");
-        // for each link in file
-        for (let j = 0; j < file.length; j++) {
-          // skip first link (already added)
-          if (j === 0)
-            continue;
-          const block = file[j];
-          const block_link = file_link_list.createEl("li", {
-            cls: "tree-item-self search-result-file-title is-clickable",
-            title: block.link,
-          });
-          const block_context = this.render_block_context(block);
-          const block_similarity_pct = Math.round(block.similarity * 100) + "%";
-          block_link.innerHTML = `<small>${block_context} | ${block_similarity_pct}</small>`;
-          const block_container = block_link.createEl("div");
-          // TODO: move to rendering on expanding section (toggle collapsed)
-          Obsidian.MarkdownRenderer.renderMarkdown((await this.plugin.block_retriever(block.link, 10)), block_container, block.link, void 0);
-          // add link listeners to block link
-          this.add_link_listeners(block_link, block, file_link_list);
-        }
-      } else {
+
+        
+      // skip contents rendering if incompatible file type
+      // ex. not markdown or contains '.excalidraw'
+      if((file[0].link.indexOf(".md") === -1) || (file[0].link.indexOf(".excalidraw") > -1)) {
         const item = list.createEl("div", { cls: "search-result" });
         const file_link = item.createEl("a", {
           cls: "tree-item-self search-result-file-title is-clickable",
@@ -1503,8 +1601,129 @@ class SmartConnectionsView extends Obsidian.ItemView {
         file_link.innerHTML = file_link_text;
         // add link listeners to file link
         this.add_link_listeners(file_link, file[0], item);
+        continue;
+      }
+
+
+      // remove file extension if .md
+      file_link_text = file_link_text.replace(".md", "").replace(/#/g, " > ");
+      const item = list.createEl("div", { cls: search_result_class });
+      const toggle = item.createEl("span", { cls: "tree-item-self is-clickable" });
+      // insert right triangle svg icon as toggle button in span
+      Obsidian.setIcon(toggle, "right-triangle"); // must come before adding other elms else overwrites
+      const file_link = toggle.createEl("a", {
+        cls: "search-result-file-title",
+        title: file[0].link,
+      });
+      file_link.innerHTML = file_link_text;
+      // add link listeners to file link
+      this.add_link_listeners(file_link, file[0], toggle);
+      toggle.addEventListener("click", (event) => {
+        // find parent containing class search-result
+        let parent = event.target;
+        while (!parent.classList.contains("search-result")) {
+          parent = parent.parentElement;
+        }
+        parent.classList.toggle("sc-collapsed");
+        // TODO: if block container is empty, render markdown from block retriever
+      });
+      const file_link_list = item.createEl("ul");
+      // for each link in file
+      for (let j = 0; j < file.length; j++) {
+        // if is a block (has # in link)
+        if(file[j].link.indexOf("#") > -1) {
+          const block = file[j];
+          const block_link = file_link_list.createEl("li", {
+            cls: "tree-item-self search-result-file-title is-clickable",
+            title: block.link,
+          });
+          // skip block context if file.length === 1 because already added
+          if(file.length > 1) {
+            const block_context = this.render_block_context(block);
+            const block_similarity_pct = Math.round(block.similarity * 100) + "%";
+            block_link.innerHTML = `<small>${block_context} | ${block_similarity_pct}</small>`;
+          }
+          const block_container = block_link.createEl("div");
+          // TODO: move to rendering on expanding section (toggle collapsed)
+          Obsidian.MarkdownRenderer.renderMarkdown((await this.plugin.block_retriever(block.link, 10)), block_container, block.link, void 0);
+          // add link listeners to block link
+          this.add_link_listeners(block_link, block, file_link_list);
+        }else{
+          // get first ten lines of file
+          const file_link_list = item.createEl("ul");
+          const block_link = file_link_list.createEl("li", {
+            cls: "tree-item-self search-result-file-title is-clickable",
+            title: file[0].link,
+          });
+          const block_container = block_link.createEl("div");
+          const this_file = this.app.vault.getAbstractFileByPath(file[0].link);
+          // if file is not found, skip
+          if (!(this_file instanceof Obsidian.TAbstractFile)) continue;
+          // use cachedRead to get the first 10 lines of the file
+          const file_content = await this.app.vault.cachedRead(this_file);
+          const file_lines = file_content.split("\n");
+          let first_ten_lines = [];
+          let is_code = false;
+          for (let i = 0; first_ten_lines.length < 10; i++) {
+            let line = file_lines[i];
+            // if line is undefined, break
+            if (typeof line === 'undefined') break;
+            // if line is empty, skip
+            if (line.length === 0) continue;
+            // limit length of line to N characters
+            if (line.length > 100) {
+              line = line.slice(0, 100) + "...";
+            }
+            // if line is "---", skip
+            if (line === "---") continue;
+            // skip if line is empty bullet or checkbox
+            if(['- ', '- [ ] '].indexOf(line) > -1) continue;
+            // if line is a code block, skip
+            if (line.indexOf("```") === 0) {
+              is_code = !is_code;
+              continue;
+            }
+            if (is_code) {
+              // if is code, add tab to beginning of line
+              line = "\t" + line;
+            }
+            // if line is a heading
+            if (line_is_heading(line)) {
+              // look at last line in first_ten_lines to see if it is a heading
+              // note: uses last in first_ten_lines, instead of look ahead in file_lines, because..
+              // ...next line may be excluded from first_ten_lines by previous if statements
+              if((first_ten_lines.length > 0) && line_is_heading(first_ten_lines[first_ten_lines.length - 1])) {
+                // if last line is a heading, remove it
+                first_ten_lines.pop();
+              }
+            }
+            // add line to first_ten_lines
+            first_ten_lines.push(line);
+          }
+          // for each line in first_ten_lines, apply view-specific formatting
+          for(let i = 0; i < first_ten_lines.length; i++) {
+            // if line is a heading
+            if (line_is_heading(first_ten_lines[i])) {
+              // if this is the last line in first_ten_lines
+              if(i === first_ten_lines.length - 1) {
+                // remove the last line if it is a heading
+                first_ten_lines.pop();
+                break;
+              }
+              // remove heading syntax to improve readability in small space
+              first_ten_lines[i] = first_ten_lines[i].replace(/#+/, "");
+              first_ten_lines[i] = `\n${first_ten_lines[i]}:`;
+            }
+          }
+          // join first ten lines into string
+          first_ten_lines = first_ten_lines.join("\n");
+          Obsidian.MarkdownRenderer.renderMarkdown(first_ten_lines, block_container, file[0].link, void 0);
+          this.add_link_listeners(block_link, file[0], file_link_list);
+
+        }
       }
     }
+    this.render_brand(container);
   }
 
   render_block_context(block) {
@@ -1627,7 +1846,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
       // create embeddings.json file
       await this.plugin.init_embeddings_file();
       // reload view
-      await this.render_note_connections();
+      await this.render_connections();
     });
 
     // add click event to "retry" button
@@ -1653,7 +1872,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
       // return if file type is not markdown
       if(file.extension !== "md") {
         // if file is 'canvas' and length of current view content is greater than 300 then return
-        if((file.extension === "canvas") && (container.innerHTML.length > 300)) {
+        if((file.extension === "canvas") && (container.innerHTML.length > 1000)) {
           // prevents clearing view of search results when still on the same canvas
           // console.log("prevented clearing view of search results when still on the same canvas")
           return;
@@ -1663,7 +1882,15 @@ class SmartConnectionsView extends Obsidian.ItemView {
           ,"Smart Connections only works with Markdown files."
         ]);
       }
-      this.render_note_connections(file);
+      // run render_connections after 1 second to allow for file to load
+      if(this.load_wait){
+        clearTimeout(this.load_wait);
+      }
+      this.load_wait = setTimeout(() => {
+        this.render_connections(file);
+        this.load_wait = null;
+      }, 1000);
+        
     }));
 
     this.app.workspace.registerHoverLinkSource(SMART_CONNECTIONS_VIEW_TYPE, {
@@ -1678,7 +1905,17 @@ class SmartConnectionsView extends Obsidian.ItemView {
   async initialize() {
     this.addIcon();
     await this.load_embeddings_file();
-    await this.render_note_connections();
+    await this.render_connections();
+
+    /**
+     * EXPERIMENTAL
+     * - window-based API access
+     * - code-block rendering
+     */
+    this.plugin.api = new SmartConnectionsApi(this.app, this.plugin, this);
+    // register API to global window object
+    (window["SmartConnectionsApi"] = this.plugin.api) && this.register(() => delete window["SmartConnectionsApi"]);
+
   }
 
   async onClose() {
@@ -1686,7 +1923,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
     this.plugin.view = null;
   }
 
-  async render_note_connections(context=null) {
+  async render_connections(context=null) {
     // if API key is not set then update view message
     if(!this.plugin.settings.api_key) {
       this.set_message("An OpenAI API key is required to make Smart Connections");
@@ -1709,32 +1946,58 @@ class SmartConnectionsView extends Obsidian.ItemView {
     /** 
      * Begin file-level search
      */    
-    // if file is not tfile then get active file
-    let file = context;
-    if(!(file instanceof Obsidian.TFile)) {
-      // get current note
-      file = await this.app.workspace.getActiveFile();
-      // if still no current note then return
-      if(!file) {
-        return this.set_message("No active file");
+    this.nearest = null;
+    this.interval_count = 0;
+    this.rendering = false;
+    this.file = context;
+    // if this.interval is set then clear it
+    if(this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+    // set interval to check if nearest is set
+    this.interval = setInterval(() => {
+      if(!this.rendering){
+        if(this.file instanceof Obsidian.TFile) {
+          this.rendering = true;
+          this.render_note_connections(this.file);
+        }else{
+          // get current note
+          this.file = this.app.workspace.getActiveFile();
+          // if still no current note then return
+          if(!this.file && this.count > 1) {
+            clearInterval(this.interval);
+            this.set_message("No active file");
+            return; 
+          }
+        }
+      }else{
+        if(this.nearest) {
+          clearInterval(this.interval);
+          // if nearest is a string then update view message
+          if (typeof this.nearest === "string") {
+            this.set_message(this.nearest);
+          } else {
+            // set nearest connections
+            this.set_nearest(this.nearest, "File: " + this.file.name);
+          }
+          // if render_log.failed_embeddings then update failed_embeddings.txt
+          if (this.plugin.render_log.failed_embeddings.length > 0) {
+            this.plugin.save_failed_embeddings();
+          }
+          // get object keys of render_log
+          this.plugin.output_render_log();
+          return; 
+        }else{
+          this.interval_count++;
+          this.set_message("Making Smart Connections..."+this.interval_count);
+        }
       }
-    }
-    // console.log("rendering connections for file: "+file.name);
-    const nearest = await this.plugin.find_note_connections(file);
-    // if nearest is a string then update view message
-    if(typeof nearest === "string") {
-      this.set_message(nearest);
-    }else{
-      // set nearest connections
-      this.set_nearest(nearest, "File: "+file.name);
-    }
+    }, 500);
+  }
 
-    // if render_log.failed_embeddings then update failed_embeddings.txt
-    if(this.plugin.render_log.failed_embeddings.length > 0) {
-      await this.plugin.save_failed_embeddings();
-    }
-    // get object keys of render_log
-    this.plugin.output_render_log();
+  async render_note_connections(file) {
+    this.nearest = await this.plugin.find_note_connections(file);
   }
 
   clear_auto_searcher() {
@@ -1787,32 +2050,34 @@ class SmartConnectionsView extends Obsidian.ItemView {
         throw new Error("Error: Prompting user to create a new embeddings file or retry.");
       }
     }
-    // if embeddings-external.json exists then load it
-    // separate object to prevent double-saving to embeddings-2.json
-    if(await this.app.vault.adapter.exists(".smart-connections/embeddings-external.json")) {
-      const embeddings_file = await this.app.vault.adapter.read(".smart-connections/embeddings-external.json");
-      this.plugin.embeddings_external = JSON.parse(embeddings_file).embeddings;
-      console.log("loaded embeddings-external.json");
-    }
-    // if embeddings-external-2.json exists then load it
-    if(await this.app.vault.adapter.exists(".smart-connections/embeddings-external-2.json")) {
-      const embeddings_file = await this.app.vault.adapter.read(".smart-connections/embeddings-external-2.json");
-      // merge with existing embeddings_external if it exists
-      if(this.plugin.embeddings_external) {
-        this.plugin.embeddings_external = [...this.plugin.embeddings_external, ...JSON.parse(embeddings_file).embeddings];
-      }else{
-        this.plugin.embeddings_external = JSON.parse(embeddings_file).embeddings;
+    // if embeddings-external-X.json exists then load it
+    const files_list = await this.app.vault.adapter.list(".smart-connections");
+    console.log(files_list);
+    if(files_list.files){
+      console.log("loading external embeddings");
+      // get all embeddings-external-X.json files
+      const external_files = files_list.files.filter(file => file.indexOf("embeddings-external") !== -1);
+      for(let i = 0; i < external_files.length; i++) {
+        const embeddings_file = await this.app.vault.adapter.read(external_files[i]);
+        // merge with existing embeddings_external if it exists
+        if(this.plugin.embeddings_external) {
+          this.plugin.embeddings_external = [...this.plugin.embeddings_external, ...JSON.parse(embeddings_file).embeddings];
+        }else{
+          this.plugin.embeddings_external = JSON.parse(embeddings_file).embeddings;
+        }
+        console.log("loaded "+external_files[i]);
       }
-      console.log("loaded embeddings-external-2.json");
     }
+
   }
 
 }
 
 class SmartConnectionsApi {
-  constructor(app, plugin) {
+  constructor(app, plugin, view) {
     this.app = app;
     this.plugin = plugin;
+    this.view = view;
   }
   async search (search_text) {
     let nearest = [];
@@ -1825,7 +2090,12 @@ class SmartConnectionsApi {
     }
     return nearest;
   }
-
+  // trigger reload of embeddings file
+  async reload_embeddings_file() {
+    await this.view.load_embeddings_file();
+    await this.view.render_connections();
+  }
+  
 }
 
 class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
@@ -1886,6 +2156,11 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
       this.plugin.settings.show_full_path = value;
       await this.plugin.saveSettings(true);
     }));
+    // toggle expanded view by default
+    new Obsidian.Setting(containerEl).setName("expanded_view").setDesc("Expanded view by default.").addToggle((toggle) => toggle.setValue(this.plugin.settings.expanded_view).onChange(async (value) => {
+      this.plugin.settings.expanded_view = value;
+      await this.plugin.saveSettings(true);
+    }));
     containerEl.createEl("h2", {
       text: "Advanced"
     });
@@ -1904,6 +2179,41 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
       this.plugin.settings.skip_sections = value;
       await this.plugin.saveSettings(true);
     }));
+    // test file writing by creating a test file, then writing additional data to the file, and returning any error text if it fails
+    containerEl.createEl("h3", {
+      text: "Test File Writing"
+    });
+    // container for displaying test file writing results
+    let test_file_writing_results = containerEl.createEl("div");
+    new Obsidian.Setting(containerEl).setName("test_file_writing").setDesc("Test File Writing").addButton((button) => button.setButtonText("Test File Writing").onClick(async () => {
+      test_file_writing_results.empty();
+      test_file_writing_results.createEl("p", {
+        text: "Testing file writing..."
+      });
+      // test file writing
+      const resp = await this.plugin.test_file_writing();
+      test_file_writing_results.empty();
+      let log = test_file_writing_results.createEl("p");
+      log.innerHTML = resp;
+    }));
+    // manual save button
+    containerEl.createEl("h3", {
+      text: "Manual Save"
+    });
+    let manual_save_results = containerEl.createEl("div");
+    new Obsidian.Setting(containerEl).setName("manual_save").setDesc("Save current embeddings").addButton((button) => button.setButtonText("Manual Save").onClick(async () => {
+      // confirm
+      if (confirm("Are you sure you want to save your current embeddings?")) {
+        // save
+        try{
+          await this.plugin.save_embeddings_to_file(true);
+          manual_save_results.innerHTML = "Embeddings saved successfully.";
+        }catch(e){
+          manual_save_results.innerHTML = "Embeddings failed to save. Error: " + e;
+        }
+      }
+    }));
+
     // list previously failed files
     containerEl.createEl("h3", {
       text: "Previously failed files"
@@ -1955,6 +2265,10 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
       });
     }
   }
+}
+
+function line_is_heading(line) {
+  return (line.indexOf("#") === 0) && (['#', ' '].indexOf(line[1]) !== -1);
 }
 
 module.exports = SmartConnectionsPlugin;

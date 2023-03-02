@@ -41,7 +41,7 @@ title: V2rayU
 ! ### MacWk.com End
 ```
 
-使用 geoip 和 geosite，格式和手机客户端不一样，需要去掉逗号，每个地址用空行分割
+使用 geoip 和 geosite，格式和手机客户端不一样，需要去掉逗号，每个地址用空行分割。这2个文件，和routing配置相关。
 
 ## 备份配置文件夹
 
@@ -83,9 +83,9 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
 }
 ```
 
-客户端配置 example：
+客户端配置 example，即config.json文件：
 
-```
+```json
 {
   "log": {
     "error": "",
@@ -94,15 +94,29 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
   },
   "inbounds": [
     {
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "tls",
+          "http"
+        ]
+      },
       "listen": "127.0.0.1",
       "protocol": "socks",
       "settings": {
-        "udp": false,
+        "udp": true,
         "auth": "noauth"
       },
       "port": "1080"
     },
     {
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "tls",
+          "http"
+        ]
+      },
       "listen": "127.0.0.1",
       "protocol": "http",
       "settings": {
@@ -114,15 +128,16 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
   "outbounds": [
     {
       "mux": {
-        "enabled": false,
+        "enabled": true,
         "concurrency": 8
       },
       "protocol": "vmess",
       "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
+        "network": "ws",
+        "wsSettings": {
+          "path": "",
+          "headers": {
+            "host": ""
           }
         },
         "security": "none"
@@ -131,16 +146,16 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
       "settings": {
         "vnext": [
           {
-            "address": "vpn.oldwinter.top",
+            "address": "35.77.211.36",
             "users": [
               {
-                "id": "60ca58e9-003e-4c01-98de-c2223ae49153",
-                "alterId": 64,
-                "level": 1,
-                "security": "none"
+                "id": "b831381d-6324-4d53-ad4f-8cda48b30823",
+                "alterId": 0,
+                "level": 0,
+                "security": "auto"
               }
             ],
-            "port": 8899
+            "port": 443
           }
         ]
       }
@@ -166,8 +181,65 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
   "dns": {},
   "routing": {
     "settings": {
-      "domainStrategy": "AsIs",
-      "rules": []
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "proxy",
+          "domain": [
+            "geosite:google",
+            "geosite:github",
+            "geosite:netflix",
+            "geosite:steam",
+            "geosite:telegram",
+            "geosite:tumblr",
+            "geosite:speedtest",
+            "geosite:bbc",
+            "geosite:tiktok",
+            "geosite:gfw",
+            "geosite:greatfire"
+          ]
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:us",
+            "geoip:ca",
+            "geoip:telegram"
+          ],
+          "outboundTag": "proxy"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "geosite:cn",
+            "geosite:private",
+            "geosite:apple-cn",
+            "geosite:google-cn",
+            "geosite:tld-cn",
+            "geosite:category-games@cn",
+            "localhost",
+            "geosite:cn"
+          ]
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:cn",
+            "geoip:private",
+            "geoip:cn"
+          ],
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "outboundTag": "block",
+          "domain": [
+            "geosite:category-ads-all"
+          ]
+        }
+      ]
     }
   },
   "transport": {}

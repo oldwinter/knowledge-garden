@@ -2,7 +2,7 @@
 author: Tiago Forte
 bookId: CB_Eqp1jP1ju6RU6Zk6YE
 category: null
-cover: 'https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover'
+cover: https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover
 date created: 2022-08-09
 date modified: 2022-08-20
 doc_type: weread-highlights-reviews

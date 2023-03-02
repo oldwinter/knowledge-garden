@@ -27,7 +27,7 @@ title: 我的 PKM 工具变迁
 - 工具：
 	- 本机 + 云盘 +USB 移动硬盘 + 手机存储
 - 检索
-	- [[everything]] 搜索
+	- [[Everything]] 搜索
 	- 云盘文件搜索
 	- 靠记忆找到文件夹和文件
 - 分享
@@ -38,9 +38,9 @@ title: 我的 PKM 工具变迁
 - 方法论
 	- 以文档容器为中心，以内容进行分类
 - 工具：
-	- [[confluence]]+[[onenote]]+outlook+ 云盘
+	- [[confluence]]+[[Onenote]]+outlook+ 云盘
 - 检索
-	- [[everything]] 搜索
+	- [[Everything]] 搜索
 	- onenote 内搜索
 	- 邮件内搜索
 - 分享

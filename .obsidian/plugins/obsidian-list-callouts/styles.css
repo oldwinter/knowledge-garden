@@ -1,0 +1,234 @@
+/* @settings
+
+name: List Callouts
+id: list-callouts
+settings:
+  - 
+    id: lc-bg-top
+    title: "Callout Padding: Top"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-right
+    title: "Callout Padding: Right"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-bottom
+    title: "Callout Padding: Bottom"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-left
+    title: "Callout Padding: Left"
+    type: variable-number-slider
+    default: 17
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-left-checkbox-lp
+    title: "Callout Padding: Left (live preview checkbox)"
+    type: variable-number-slider
+    default: 30
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-left-checkbox
+    title: "Callout Padding: Left (source checkbox)"
+    type: variable-number-slider
+    default: 50
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-top-reading
+    title: "Callout Padding: Top (reading mode)"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-right-reading
+    title: "Callout Padding: Right (reading mode)"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-bottom-reading
+    title: "Callout Padding: Bottom (reading mode)"
+    type: variable-number-slider
+    default: 0
+    format: px
+    min: 0
+    max: 60
+    step: 1
+  - 
+    id: lc-bg-left-reading
+    title: "Callout Padding: Left (reading mode)"
+    type: variable-number-slider
+    default: 27
+    format: px
+    min: 0
+    max: 60
+    step: 1
+*/
+
+:root {
+  --lc-bg-top: 0px;
+  --lc-bg-right: 0px;
+  --lc-bg-bottom: 0px;
+  --lc-bg-left: 17px;
+  --lc-bg-left-checkbox: 50px;
+  --lc-bg-left-checkbox-lp: 30px;
+
+  --lc-bg-top-reading: 0px;
+  --lc-bg-right-reading: 0px;
+  --lc-bg-bottom-reading: 0px;
+  --lc-bg-left-reading: 27px;
+}
+
+.lc-list-bg {
+  background-color: var(--background-primary);
+  background-clip: content-box;
+  position: absolute;
+  top: calc(-1 * var(--lc-bg-top));
+  right: calc(-1 * var(--lc-bg-right));
+  bottom: calc(-1 * var(--lc-bg-bottom));
+  left: calc(-1 * var(--lc-bg-left));
+  display: block;
+  padding: inherit;
+  z-index: -1;
+}
+
+.task-list-label ~ .lc-list-bg {
+  left: calc(-1 * var(--lc-bg-left-checkbox-lp));
+}
+
+.markdown-source-view:not(.is-live-preview) .cm-formatting-task ~ .lc-list-bg {
+  left: calc(-1 * var(--lc-bg-left-checkbox));
+}
+
+.lc-list-bg::after {
+  background-color: rgba(var(--lc-callout-color), 0.1);
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.lc-list-marker {
+  font-family: var(--font-monospace);
+  font-weight: bold;
+  color: rgb(var(--lc-callout-color));
+}
+
+.lc-list-marker > svg {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  top: 0.125em;
+}
+
+.lc-li-wrapper {
+  z-index: 1;
+  position: relative;
+  display: block;
+}
+
+.lc-li-wrapper::after {
+  z-index: -1;
+  position: absolute;
+  background-color: rgba(var(--lc-callout-color), 0.1);
+  top: calc(-1 * var(--lc-bg-top-reading) + 1px);
+  right: calc(-1 * var(--lc-bg-right-reading) + 1px);
+  bottom: calc(-1 * var(--lc-bg-bottom-reading) + 1px);
+  left: calc(-1 * var(--lc-bg-left-reading) + 1px);
+  content: "";
+  display: block;
+  border-radius: 4px;
+}
+
+/* Settings */
+
+.lc-setting {
+  padding: 15px 0;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.lc-setting:last-child {
+  padding-bottom: 200px;
+}
+
+.lc-setting .lc-list-bg {
+  background-color: transparent;
+  z-index: 0;
+}
+
+.lc-setting input,
+.lc-setting .lc-input-container > button {
+  margin-right: 10px;
+}
+
+.lc-setting input {
+  width: 4em;
+}
+
+.lc-callout-container {
+  background-color: var(--background-primary);
+  padding: 10px 15px 15px;
+  margin-bottom: 10px;
+}
+
+.lc-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.lc-input-right-align {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.lc-menu {
+  --icon-color: var(--text-normal);
+	--icon-color-hover: var(--text-normal);
+	--icon-color-active: var(--text-accent);
+	--icon-color-focused: var(--text-normal);
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  width: 250px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  z-index: 10;
+  padding: 4px;
+  box-shadow: var(--shadow-s);
+}

@@ -18,7 +18,10 @@
     true
   ],
   "allRootItems": true,
-  "displayFileInfo": "lines",
+  "allTasks": true,
+  "taskOnly": false,
+  "hideCompletedTasks": false,
+  "displayFileInfo": "days",
   "viewPosition": "right",
   "wordsToIgnore": {
     "heading": [],
@@ -29,15 +32,48 @@
   "inlinePreview": true,
   "tooltipPreview": true,
   "tooltipPreviewDirection": "left",
-  "primeElement": "none",
   "includeOnly": "none",
   "wordsToInclude": [],
   "includeBeginning": true,
+  "primeElement": "none",
   "wordsToExclude": {
     "heading": [],
     "link": [],
     "tag": [],
     "listItems": []
   },
-  "wordsToExtract": ""
+  "wordsToExtract": "",
+  "icon": {
+    "heading": "none",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "customIcon": {
+    "heading": "hash",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "indent": {
+    "heading": true,
+    "link": true,
+    "listItems": true
+  },
+  "prefix": {
+    "heading": "",
+    "link": "",
+    "tag": "",
+    "listItems": "",
+    "task": "",
+    "taskDone": ""
+  },
+  "repeatHeadingPrefix": "none",
+  "addCheckboxText": false
 }

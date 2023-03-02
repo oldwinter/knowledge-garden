@@ -194,10 +194,9 @@
       "excludedNotes": [],
       "isDefault": true,
       "dataSource": {
-        "kind": "folder",
+        "kind": "tag",
         "config": {
-          "path": "Spaces/1-Project/obsidian插件使用",
-          "recursive": false
+          "tag": "#macOS软件"
         }
       },
       "newNotesFolder": "",
@@ -208,7 +207,8 @@
             "sortAsc": true,
             "fieldConfig": {
               "path": {
-                "hide": true
+                "hide": false,
+                "width": 300
               },
               "database-plugin": {
                 "hide": true
@@ -233,37 +233,17 @@
         },
         {
           "config": {
-            "filepath": "Spaces/1-Project/obsidian插件使用/1669961e-92d7-4508-aaaa-d9b493aff4ae_db.md"
-          },
-          "filter": {
-            "conditions": []
-          },
-          "colors": {
-            "conditions": []
-          },
-          "id": "1669961e-92d7-4508-aaaa-d9b493aff4ae",
-          "name": "Database Folder",
-          "type": "dbfolder-view"
-        },
-        {
-          "config": {
             "priorityField": "",
-            "groupByField": "当前使用频率",
+            "groupByField": "是否已备份",
             "columns": {
-              "2": {
+              "y": {
                 "weight": 0
               },
-              "3": {
+              "true": {
                 "weight": 1
               },
-              "4": {
-                "weight": 2
-              },
-              "5": {
-                "weight": 3
-              },
               "No status": {
-                "weight": 4
+                "weight": 2
               }
             }
           },
@@ -276,10 +256,53 @@
           "id": "2c898303-e647-4f94-a9b1-a84f93f13bb2",
           "name": "Board",
           "type": "board"
+        },
+        {
+          "config": {
+            "filepath": "/a3d934af-0b6c-4845-8477-658fa98794ae_db.md"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "a3d934af-0b6c-4845-8477-658fa98794ae",
+          "name": "Database Folder",
+          "type": "dbfolder-view"
+        },
+        {
+          "config": {
+            "includeFields": []
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "b473f071-f03f-4398-93dc-d3c0affd0546",
+          "name": "Gallery",
+          "type": "gallery"
+        },
+        {
+          "config": {
+            "dateField": "date created",
+            "interval": "week"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "4091a091-09e7-4fc1-a98b-66b6dd13db44",
+          "name": "Calendar",
+          "type": "calendar"
         }
       ],
       "id": "f0094fdf-8a28-4612-9401-53c0673881da",
-      "name": "obsidian插件使用"
+      "name": "macOS软件"
     },
     {
       "fieldConfig": {},
@@ -348,10 +371,40 @@
       ],
       "id": "28735c20-ffbb-4c8b-b88e-2703b10f31b9",
       "name": "Newsletter + RSS"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "dataview",
+        "config": {
+          "query": "table WITHOUT ID file.link AS \"File\",file.mtime as \"修改时间\"\nfrom #安卓软件 or #macOS软件"
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "3ec52283-2537-48a0-afca-d61e9141621b",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "21b0c625-8654-45a5-a7f7-0291ca0da113",
+      "name": "Untitled project"
     }
   ],
   "preferences": {
-    "projectSizeLimit": 1000,
+    "projectSizeLimit": 300,
     "frontmatter": {
       "quoteStrings": "PLAIN"
     }

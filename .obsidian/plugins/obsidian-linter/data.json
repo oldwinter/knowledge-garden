@@ -18,11 +18,12 @@
     },
     "Insert YAML attributes": {
       "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
-      "Text to insert": "dg-publish: true"
+      "Text to insert": "tags: macOS软件"
     },
     "Move Tags to Yaml": {
-      "Move all tags to Yaml frontmatter of the document.": false,
-      "Body tag operation": "Nothing"
+      "Move all tags to Yaml frontmatter of the document.": true,
+      "Body tag operation": "Nothing",
+      "Tags to ignore": ""
     },
     "Remove YAML Keys": {
       "Removes the YAML keys specified": false,

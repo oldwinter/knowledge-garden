@@ -1,0 +1,105 @@
+{
+  "defaultState": {
+    "name": "Default",
+    "mapZoom": 1,
+    "mapCenter": {
+      "lat": 40.44694705960048,
+      "lng": -180.70312500000003
+    },
+    "query": "",
+    "chosenMapSource": 0
+  },
+  "savedStates": [],
+  "markerIconRules": [
+    {
+      "ruleName": "default",
+      "preset": true,
+      "iconDetails": {
+        "prefix": "fas",
+        "icon": "fa-circle",
+        "markerColor": "blue",
+        "innerHTML": "<svg class=\"map-view-icon\"><use xlink:href=\"#icon-1804148836\"></use></svg>"
+      }
+    },
+    {
+      "ruleName": "#trip",
+      "preset": false,
+      "iconDetails": {
+        "prefix": "fas",
+        "icon": "fa-hiking",
+        "markerColor": "green"
+      }
+    },
+    {
+      "ruleName": "#trip-water",
+      "preset": false,
+      "iconDetails": {
+        "prefix": "fas",
+        "markerColor": "blue"
+      }
+    },
+    {
+      "ruleName": "#dogs",
+      "preset": false,
+      "iconDetails": {
+        "prefix": "fas",
+        "icon": "fa-paw"
+      }
+    }
+  ],
+  "zoomOnGoFromNote": 15,
+  "autoZoom": true,
+  "markerClickBehavior": "replaceCurrent",
+  "markerCtrlClickBehavior": "dedicatedPane",
+  "markerMiddleClickBehavior": "dedicatedTab",
+  "openMapBehavior": "replaceCurrent",
+  "openMapCtrlClickBehavior": "dedicatedPane",
+  "openMapMiddleClickBehavior": "dedicatedTab",
+  "newNoteNameFormat": "Location added on {{date:YYYY-MM-DD}}T{{date:HH-mm}}",
+  "showNoteNamePopup": true,
+  "showNotePreview": true,
+  "showClusterPreview": false,
+  "debug": false,
+  "openIn": [
+    {
+      "name": "Google Maps",
+      "urlPattern": "https://maps.google.com/?q={x},{y}"
+    }
+  ],
+  "urlParsingRules": [
+    {
+      "name": "OpenStreetMap Show Address",
+      "regExp": "https:\\/\\/www.openstreetmap.org\\S*query=([0-9\\.\\-]+%2C[0-9\\.\\-]+)\\S*",
+      "ruleType": "latLng",
+      "preset": true
+    },
+    {
+      "name": "Generic Lat,Lng",
+      "regExp": "([0-9\\.\\-]+), ([0-9\\.\\-]+)",
+      "ruleType": "latLng",
+      "preset": true
+    }
+  ],
+  "mapControls": {
+    "filtersDisplayed": false,
+    "viewDisplayed": true,
+    "presetsDisplayed": true
+  },
+  "maxClusterRadiusPixels": 20,
+  "searchProvider": "osm",
+  "useGooglePlaces": false,
+  "mapSources": [
+    {
+      "name": "CartoDB",
+      "urlLight": "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+      "preset": true
+    }
+  ],
+  "chosenMapMode": "auto",
+  "saveHistory": true,
+  "letZoomBeyondMax": false,
+  "queryForFollowActiveNote": "path:\"$PATH$\"",
+  "supportRealTimeGeolocation": false,
+  "fixFrontMatterOnPaste": true,
+  "newNotePath": "Atlas/地图笔记"
+}

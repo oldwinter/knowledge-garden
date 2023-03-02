@@ -42,6 +42,12 @@
           "key": "Tab"
         }
       ],
+      "open": [
+        {
+          "modifiers": [],
+          "key": "Enter"
+        }
+      ],
       "open in new tab": [
         {
           "modifiers": [
@@ -128,6 +134,7 @@
         }
       ],
       "create in new popup": [],
+      "open in default app": [],
       "open in google": [
         {
           "modifiers": [
@@ -152,6 +159,7 @@
           "key": "Enter"
         }
       ],
+      "insert to editor in background": [],
       "insert all to editor": [
         {
           "modifiers": [
@@ -167,6 +175,36 @@
             "Mod"
           ],
           "key": "h"
+        }
+      ],
+      "show links": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": "l"
+        }
+      ],
+      "navigate forward": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "ArrowRight"
+        }
+      ],
+      "navigate back": [
+        {
+          "modifiers": [
+            "Alt"
+          ],
+          "key": "ArrowLeft"
+        }
+      ],
+      "dismiss": [
+        {
+          "modifiers": [],
+          "key": "Escape"
         }
       ]
     },
@@ -185,6 +223,13 @@
             "Mod"
           ],
           "key": "n"
+        }
+      ],
+      "open in default app": [],
+      "dismiss": [
+        {
+          "modifiers": [],
+          "key": "Escape"
         }
       ]
     },
@@ -225,6 +270,20 @@
             "Shift"
           ],
           "key": "Tab"
+        }
+      ],
+      "toggle auto preview": [
+        {
+          "modifiers": [
+            "Mod"
+          ],
+          "key": ","
+        }
+      ],
+      "dismiss": [
+        {
+          "modifiers": [],
+          "key": "Escape"
         }
       ]
     },
@@ -273,6 +332,12 @@
             "Alt"
           ],
           "key": "c"
+        }
+      ],
+      "open": [
+        {
+          "modifiers": [],
+          "key": "Enter"
         }
       ],
       "open in new tab": [
@@ -333,54 +398,22 @@
           ],
           "key": ","
         }
+      ],
+      "dismiss": [
+        {
+          "modifiers": [],
+          "key": "Escape"
+        }
       ]
     }
   },
   "searchCommands": [
     {
-      "name": "Recommended search",
-      "searchBy": {
-        "tag": true,
-        "link": true,
-        "header": true
-      },
-      "searchTarget": "file",
-      "targetExtensions": [],
-      "floating": false,
-      "showFrontMatter": false,
-      "excludeFrontMatterKeys": [
-        "aliases",
-        "alias",
-        "tag",
-        "tags",
-        "cssclass",
-        "publish"
-      ],
-      "defaultInput": "",
-      "commandPrefix": "",
-      "sortPriorities": [
-        "Perfect word match",
-        "Prefix name match",
-        "Name match",
-        "Length",
-        "Tag match",
-        "Header match",
-        "Link match",
-        "Star",
-        "Last opened",
-        "Last modified"
-      ],
-      "includePrefixPathPatterns": [],
-      "excludePrefixPathPatterns": [],
-      "expand": false,
-      "isBacklinkSearch": false
-    },
-    {
       "name": "Recent search",
       "searchBy": {
         "tag": true,
-        "link": true,
-        "header": true
+        "header": false,
+        "link": false
       },
       "searchTarget": "file",
       "targetExtensions": [],
@@ -395,22 +428,19 @@
         "publish"
       ],
       "defaultInput": "",
-      "commandPrefix": ":r ",
+      "commandPrefix": ":e ",
       "sortPriorities": [
         "Name match",
-        "Tag match",
-        "Header match",
-        "Link match",
+        ".md",
         "Last opened",
         "Last modified"
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": false,
-      "isBacklinkSearch": false
+      "expand": true
     },
     {
-      "name": "Title search",
+      "name": "File name search",
       "searchBy": {
         "tag": false,
         "link": false,
@@ -429,24 +459,57 @@
         "publish"
       ],
       "defaultInput": "",
-      "commandPrefix": ":t ",
+      "commandPrefix": ":f ",
       "sortPriorities": [
-        "Perfect word match",
         "Prefix name match",
-        "Name match",
-        "Length",
+        "Alphabetical",
+        ".md",
         "Last opened",
         "Last modified"
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": false,
-      "isBacklinkSearch": false
+      "expand": false
+    },
+    {
+      "name": "Landmark search",
+      "searchBy": {
+        "tag": true,
+        "link": true,
+        "header": true
+      },
+      "searchTarget": "file",
+      "targetExtensions": [],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
+      "defaultInput": "",
+      "commandPrefix": ":l ",
+      "sortPriorities": [
+        "Prefix name match",
+        "Name match",
+        "Tag match",
+        "Header match",
+        "Link match",
+        ".md",
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": true
     },
     {
       "name": "Star search",
       "searchBy": {
-        "tag": true,
+        "tag": false,
         "link": false,
         "header": false
       },
@@ -466,22 +529,22 @@
       "commandPrefix": ":s ",
       "sortPriorities": [
         "Star",
+        ".md",
         "Last opened",
         "Last modified"
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": false,
-      "isBacklinkSearch": false
+      "expand": false
     },
     {
-      "name": "tags search",
+      "name": "Link search",
       "searchBy": {
-        "tag": true,
+        "tag": false,
         "link": false,
         "header": false
       },
-      "searchTarget": "file",
+      "searchTarget": "link",
       "targetExtensions": [],
       "floating": false,
       "showFrontMatter": false,
@@ -494,14 +557,45 @@
         "publish"
       ],
       "defaultInput": "",
-      "commandPrefix": ":e",
+      "commandPrefix": "",
       "sortPriorities": [],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": true,
-      "isBacklinkSearch": false
+      "expand": false
+    },
+    {
+      "name": "Backlink search",
+      "searchBy": {
+        "tag": false,
+        "link": false,
+        "header": false
+      },
+      "searchTarget": "backlink",
+      "targetExtensions": [
+        "md"
+      ],
+      "floating": false,
+      "showFrontMatter": false,
+      "excludeFrontMatterKeys": [
+        "aliases",
+        "alias",
+        "tag",
+        "tags",
+        "cssclass",
+        "publish"
+      ],
+      "defaultInput": "",
+      "commandPrefix": "",
+      "sortPriorities": [
+        "Last opened",
+        "Last modified"
+      ],
+      "includePrefixPathPatterns": [],
+      "excludePrefixPathPatterns": [],
+      "expand": false
     }
   ],
+  "autoPreviewInFloatingHeaderSearch": true,
   "ripgrepCommand": "rg",
   "moveFileExcludePrefixPathPatterns": [],
   "showLogAboutPerformanceInConsole": false,

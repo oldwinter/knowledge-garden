@@ -22,9 +22,3 @@ This folder called "Calendar" is mostly empty because this is just a starter kit
 - Log Notes
 - Tracking Notes
 - Outputted Materials: Articles, Speeches, etc
-- Daily Notes
-- Meeting Notes
-- Workout Notes
-- Log Notes
-- Tracking Notes
-- Outputted Materials: Articles, Speeches, etc

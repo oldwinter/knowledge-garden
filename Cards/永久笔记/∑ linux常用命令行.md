@@ -7,7 +7,7 @@ title: ∑ linux常用命令行
 - 官方下载 pkg 安装
 	- [[nodejs]]，自带[[npm]]
 	- [[Golang]]
-	- [[🤖docker]]
+	- [[Docker]]
 - [[docker compose]]
 - homebrew 安装
 	- [[npm]]
@@ -18,10 +18,10 @@ title: ∑ linux常用命令行
 	- [[powershell]]
 - 第三方
 	- [[linux命令行测速 - speedtest]]
-	- [[homebrew]]
+	- [[Homebrew]]
 	- [[zsh]]
 	- [[ohmyzsh]]
-	- [[🤖Git]]
+	- [[Git]]
 	- [[curl]]
 	- [[wget]]
 	- [[z命令]]
@@ -30,7 +30,7 @@ title: ∑ linux常用命令行
 	- [[sudo]]
 	- [[apt-get]]
 	- [[http-server]]
-	- [[🤖kubectl]]
+	- [[kubectl]]
 	- [[kubectx]]
 	- [[mackup]]
 

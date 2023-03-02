@@ -81,7 +81,7 @@ See also: Chemistry | Geology | Plants | Animals
 
 A natural progression from the previous section, this is where we take thet the fundamentals of nature and *apply* them. My undergrad was in [[Engineering MOC]], which relates to my interest in [[Building Homes MOC]]. Later on, I developed the [[Editing Manual MOC]].
 
-See also: Agriculture | Technology | Medical | [[AI MOC]] |Programming | [[Collective Intelligence MOC]] | [[Genetics MOC]] | [[Systems MOC (Kit)]]
+See also: Agriculture | Technology | Medical | [[∑ AI MOC]] |Programming | [[Collective Intelligence MOC]] | [[Genetics MOC]] | [[Systems MOC (Kit)]]
 
 ## 700 - Art & Recreation
 

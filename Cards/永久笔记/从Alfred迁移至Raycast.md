@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: 从Alfred迁移至Raycast
 ---
 
-启动器除了 [[alfred]]和[[raycast]]，还有竞品[[Utools]]、[[HapiGo]]、[[LaunchBar]]。
+启动器除了 [[Alfred]]和[[Raycast]]，还有竞品[[Utools]]、[[HapiGo]]、[[LaunchBar]]。
 
 多方考察，发现 raycast 异军突起，最有实力，开发团队全远程办公，大概有 20 人。
 
@@ -42,11 +42,11 @@ title: 从Alfred迁移至Raycast
 
 ## 插件功能迁移
 
-- [[keyboard maestro]] 的 macros 搜索与触发
+- [[Keyboard Maestro]] 的 macros 搜索与触发
 	- 平替
 - 浏览器 tabs 搜索，平替 [[chrome-omni插件]]
 	- raycast 更强，bookmark 和 history 都支持
-- [[🤖devonthink]] 搜索
+- [[Devonthink]] 搜索
 	- raycast 暂无替代，直接打开 devonthink 的 Spotlight index 开关，就可以文件直接搜索到，曲线救国
 - 词典查找
 	- 平替
@@ -64,7 +64,7 @@ title: 从Alfred迁移至Raycast
 	- alfred 的 shimming obsidian 插件功能强大，raycast 只有一个简陋的搜索的插件
 - terminal 和 finder 互相打开
 	- 平替
-- [[🤖VSCode]] 管理
+- [[VSCode]] 管理
 	- 平替
 - 变量名更改，驼峰大小写等
 	- 平替

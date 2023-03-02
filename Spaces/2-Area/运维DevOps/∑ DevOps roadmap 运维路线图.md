@@ -7,7 +7,7 @@ tags: [索引笔记]
 
 ## 自绘路线图
 
-![[🧩DevOps成长路线图.canvas]]
+![[🧩 DevOps成长路线图.canvas]]
 
 ## 文字版
 
@@ -83,7 +83,7 @@ tags: [索引笔记]
 	- [[Caching Server 缓存服务]]
 	- [[Load Balancer 负载均衡]]
 	- [[Web Server 服务器]]
-		- [[🤖nginx]]
+		- [[nginx]]
 		- [[Apache]]
 		- [[Tomcat]]
 - 基础设施即代码
@@ -97,7 +97,7 @@ tags: [索引笔记]
 		- [[Ansible]]
 		- [[Chef]]
 	- 容器编排
-		- [[🤖kubernetes]]
+		- [[Kubernetes]]
 	- 密钥管理
 		- [[Vault]]
 	- GitOps

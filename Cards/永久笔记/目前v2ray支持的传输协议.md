@@ -4,7 +4,7 @@ date created: 2023-01-06
 date modified: 2023-01-06
 ---
 
-VMess、Vless、[[Trojan]]、Socks和Shadowsocks协议，都算应用层，他们基于的传输层协议，主要有以下几种
+[[VMess]]、Vless、[[Trojan]]、Socks和[[Shadowsocks]]协议，都算应用层，他们基于的传输层协议，主要有以下几种
 
 - tcp，默认
 - kcp，或叫mKCP

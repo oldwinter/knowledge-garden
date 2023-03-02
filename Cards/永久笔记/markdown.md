@@ -21,6 +21,8 @@ markdown发明人2004年发布1.0版本，此后没有更新过。[Daring Fireba
 [[obsidian的markdown语法]]
 
 
+轻量的markdown编辑，目前最好用的是[[Typora]]
+
 ---
 
 ## 参考文献

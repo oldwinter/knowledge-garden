@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: 国外的各种社交app分析
 ---
 
-[[reddit]]
+[[Reddit]]
 
 [[Instagram]]
 
@@ -12,4 +12,4 @@ title: 国外的各种社交app分析
 
 [[Twitter]]
 
-[[discord]]
+[[Discord]]

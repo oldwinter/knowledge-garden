@@ -5,8 +5,8 @@ date modified: 2022-12-09
 ---
 - google
 - youtube
-- [[telegram]]
-- [[discord]]
+- [[Telegram]]
+- [[Discord]]
 - [[Twitter]]
 - [[facebook]]
 - [[Instagram]]

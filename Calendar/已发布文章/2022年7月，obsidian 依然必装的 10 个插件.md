@@ -30,7 +30,7 @@ title: 2022年7月，obsidian 依然必装的 10 个插件
 - [[sliding panes - andy mode]]
 	- 作用：让笔记多窗口可以无限横向卷动。
 	- 评价：配上触摸板，真的很爽。
-- [[remotely save]]
+- [[Remotely Save]]
 	- 作用：第三方最完美最少折腾的同步方案，配合阿里云的对象存储服务桶，体验飞一般的同步速度
 	- 评价：obsidian官方居然让这个插件上架，让自己少了至少一半收入。
 - [[Supercharged Links]]

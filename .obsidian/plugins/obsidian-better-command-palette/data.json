@@ -3,23 +3,18 @@
   "showPluginName": true,
   "fileSearchPrefix": "/",
   "tagSearchPrefix": "#",
+  "commandSearchHotkey": "p",
+  "fileSearchHotkey": "o",
+  "tagSearchHotkey": "t",
   "suggestionLimit": 50,
-  "recentAbovePinned": false,
+  "recentAbovePinned": true,
   "hyperKeyOverride": false,
-  "macros": [
-    {
-      "name": "自定义-进入/退出聚焦模式",
-      "commandIds": [
-        "app:toggle-left-sidebar",
-        "app:toggle-right-sidebar"
-      ],
-      "delay": 200
-    }
-  ],
+  "macros": [],
   "hotkeyStyle": "auto",
   "createNewFileMod": "Mod",
   "createNewPaneMod": "Shift",
   "hiddenCommands": [],
   "hiddenFiles": [],
-  "hiddenTags": []
+  "hiddenTags": [],
+  "fileTypeExclusion": []
 }

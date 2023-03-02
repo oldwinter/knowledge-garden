@@ -1,7 +1,5 @@
 {
-  "pluginList": [
-    "Mocca101/obsidian-plugin-groups"
-  ],
+  "pluginList": [],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
   "updateAtStartup": true,

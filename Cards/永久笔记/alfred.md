@@ -2,6 +2,13 @@
 date created: 2022-06-09
 date modified: 2022-08-20
 title: alfred
+tags:
+  - macOS软件
+作用: 搜索一切 的 hub
+评价: 5
+设置同步: icloud 自动同步
+是否已备份: y
+是否已重装:
 ---
 
 其他竞品：[[utools]]， [[go]]
@@ -16,7 +23,7 @@ title: alfred
 
 依据 [[个人查找搜索系统#搜索判断树]] 改造和聚合
 
-高速缓存聚合： [[🤖devonthink]]
+高速缓存聚合： [[Devonthink]]
 
 知识：谷歌
 
@@ -24,9 +31,9 @@ title: alfred
 
 翻译：谷歌翻译
 
-笔记：[[onenote]]
+笔记：[[Onenote]]
 
-todo：[[🤖滴答清单]]
+todo：[[滴答清单]]
 
 个人创作： [[Obsidian]]
 
@@ -41,3 +48,4 @@ todo：[[🤖滴答清单]]
 垂直领域：
 
 v2ex
+

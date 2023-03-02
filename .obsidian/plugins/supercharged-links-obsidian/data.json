@@ -6,7 +6,7 @@
   ],
   "targetTags": true,
   "getFromInlineField": true,
-  "enableTabHeader": true,
+  "enableTabHeader": false,
   "activateSnippet": true,
   "enableEditor": true,
   "enableFileList": true,
@@ -51,11 +51,11 @@
       "selectBackground": true
     },
     {
-      "type": "tag",
+      "type": "path",
       "name": "flashcards",
-      "value": "索引笔记",
+      "value": "∑",
       "matchCaseSensitive": false,
-      "match": "exact",
+      "match": "contains",
       "uid": "7c4c-9ddb",
       "selectText": true,
       "selectAppend": true,

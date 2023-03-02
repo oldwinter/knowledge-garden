@@ -33,7 +33,7 @@ chat网址后面还可能面临问题，就是如果不翻墙，会显式：Open
 bash <(curl -Ls https://cpp.li/openai)
 ```
 
-了解到，有一项[[cloudflare warp]]技术，可以让节点被cloudflare识别为可靠优质节点，也能通过openai检测。
+了解到，有一项[[cloudflare warp]]技术，可以让节点被[[cloudflare]]识别为可靠优质节点，也能通过openai检测。
 
 - 用这个封装好的warp docker: [Neilpang/wgcf-docker: CloudFlare warp in docker (github.com)](https://github.com/Neilpang/wgcf-docker)
 

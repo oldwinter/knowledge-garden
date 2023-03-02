@@ -1,0 +1,55 @@
+.chartsview-donation {
+  width: fit-content;
+  margin: 25px auto;
+  text-align: center;
+  position: absolute;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+}
+
+.chartsview-donation a.paypal {
+  display: inline-block;
+}
+
+.chartsview-thumbnail-container.is-selected .chartsview-thumbnail {
+  display: unset;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.chartsview-thumbnail-container .chartsview-thumbnail {
+  display: none;
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px) {
+  .chartsview-thumbnail-container .chartsview-thumbnail img {
+    width: 500px;
+  }
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px) {
+  .chartsview-thumbnail-container .chartsview-thumbnail img {
+    width: 300px;
+  }
+}
+
+.chartsview-export-button {
+  padding: 5px;
+  position: relative;
+  width: fit-content;
+  display: flex;
+  opacity: 0;
+  transition: opacity 500ms;
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-language-chartsview:hover .chartsview-export-button {
+  opacity: 1;
+}

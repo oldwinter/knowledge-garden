@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"type":"text","text":"嵌入思维导图","id":"2a6f13fabac1c5de","x":-125,"y":-30,"width":250,"height":60},
+		{"type":"text","text":"```markmap\n## 中心主题\n- 吖\n- 分\n### 主题1\n### 主题2\n```\n\n","id":"d37110d3f588229e","x":208,"y":-99,"width":511,"height":245},
+		{"type":"text","text":"嵌入excalidraw画板","id":"1896c1d9f414579d","x":-125,"y":188,"width":250,"height":60},
+		{"type":"file","file":"Atlas/Draws/数字时代如何更好地工作与生活 - 图.md","id":"02f6c3bfaaf62356","x":221,"y":188,"width":769,"height":645,"color":"4"},
+		{"type":"text","text":"## canvas嵌入高级视图","id":"01201e4cbc281f10","x":-555,"y":80,"width":324,"height":66},
+		{"type":"text","text":"嵌入database数据表","id":"8f2847d8008b9331","x":-531,"y":297,"width":250,"height":60},
+		{"type":"file","file":"Spaces/2-Area/运动与健康/∑ DB - 运动与健康.md","id":"c432261d076d3ec7","x":-602,"y":413,"width":624,"height":400},
+		{"type":"file","file":"Cards/永久笔记/KANBAN - 看板.md","id":"e8750232afa4a6ab","x":-1123,"y":213,"width":400,"height":400},
+		{"type":"text","text":"嵌入看板","id":"913b4531a2116b67","x":-987,"y":87,"width":250,"height":60},
+		{"type":"text","text":"嵌入其他canvas","id":"9b4ee72be27ec41e","x":-581,"y":-85,"width":250,"height":60},
+		{"type":"file","file":"Atlas/Canvas/🧩 DevOps成长路线图.canvas","id":"b8da9f6e2aabaf9a","x":-54,"y":-604,"width":400,"height":400},
+		{"type":"text","text":"嵌入pdf某一页","id":"0a811c467856f7a4","x":-973,"y":-85,"width":250,"height":60},
+		{"type":"text","text":"![[2022年元宇宙Meta知识精选笔记分享-2022.pdf#page=1]]","id":"8b12ad34c2bf0544","x":-1283,"y":-1084,"width":643,"height":832},
+		{"type":"text","text":"嵌入地图[[Location added on 2023-03-01T14-34]]","id":"a69d499b90fe68aa","x":-570,"y":-291,"width":250,"height":60},
+		{"type":"text","text":"```mapview\n{\"name\":\"Default\",\"mapZoom\":15,\"centerLat\":30.171342838018955,\"centerLng\":120.1914167404175,\"query\":\"path:\\\"Location added on 2023-03-01T14-34.md\\\"\",\"chosenMapSource\":0}\n```","id":"ac7d132149a3ce8d","x":-573,"y":-988,"width":575,"height":346}
+	],
+	"edges":[
+		{"id":"3add702e1a70ed8c","fromNode":"2a6f13fabac1c5de","fromSide":"right","toNode":"d37110d3f588229e","toSide":"left"},
+		{"id":"c29f308e5569cbf1","fromNode":"1896c1d9f414579d","fromSide":"right","toNode":"02f6c3bfaaf62356","toSide":"left"},
+		{"id":"a3c5c712ce7d078c","fromNode":"01201e4cbc281f10","fromSide":"right","toNode":"2a6f13fabac1c5de","toSide":"left"},
+		{"id":"47bfcb6d8f5939dc","fromNode":"01201e4cbc281f10","fromSide":"right","toNode":"1896c1d9f414579d","toSide":"left"},
+		{"id":"f871413cf80b388e","fromNode":"01201e4cbc281f10","fromSide":"bottom","toNode":"8f2847d8008b9331","toSide":"top"},
+		{"id":"ea9f8f0fec55100f","fromNode":"8f2847d8008b9331","fromSide":"bottom","toNode":"c432261d076d3ec7","toSide":"top"},
+		{"id":"9bd91d03efd3476a","fromNode":"01201e4cbc281f10","fromSide":"left","toNode":"913b4531a2116b67","toSide":"right"},
+		{"id":"828f8a371489816c","fromNode":"913b4531a2116b67","fromSide":"bottom","toNode":"e8750232afa4a6ab","toSide":"top"},
+		{"id":"5cde258748ac8681","fromNode":"01201e4cbc281f10","fromSide":"top","toNode":"9b4ee72be27ec41e","toSide":"bottom"},
+		{"id":"a5bb5fba41027309","fromNode":"9b4ee72be27ec41e","fromSide":"top","toNode":"b8da9f6e2aabaf9a","toSide":"bottom"},
+		{"id":"c60cb59739dd6f76","fromNode":"01201e4cbc281f10","fromSide":"top","toNode":"0a811c467856f7a4","toSide":"bottom"},
+		{"id":"61c31a6cc17e080e","fromNode":"0a811c467856f7a4","fromSide":"top","toNode":"8b12ad34c2bf0544","toSide":"bottom"},
+		{"id":"5440a084dadb64e8","fromNode":"9b4ee72be27ec41e","fromSide":"top","toNode":"a69d499b90fe68aa","toSide":"bottom"},
+		{"id":"4bb89cca73ad0ab4","fromNode":"a69d499b90fe68aa","fromSide":"top","toNode":"ac7d132149a3ce8d","toSide":"bottom"}
+	]
+}

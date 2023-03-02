@@ -8,7 +8,7 @@ title: ∑ 本库 ACCESS 工作流汇总
 
 up: [[ACCESS 笔记组织法]]
 
-根据对obsidian的使用目标不同，分为3个层次，难度逐渐加大，因人而异。
+根据对obsidian的使用目标不同，分为3个层次，难度逐渐加大，因人而异。更多的层次划分，见[[obsidian的不同人的用法]]。
 
 1. 将obsidian的库作为一个卡片笔记盒。只使用obsidian进行每天的闪念记录，工作日志记录等。
 	- 使用[[» Daily notes工作流]]即可，只保留Calendar和Cards文件夹即可，其他文件夹通通删掉，用不到。

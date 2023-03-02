@@ -102,6 +102,12 @@
         "Mod"
       ],
       "key": "P"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
     }
   ],
   "editor:toggle-source": [
@@ -138,15 +144,6 @@
       "key": "H"
     }
   ],
-  "obsidian-another-quick-switcher:search-command_recent-search": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
   "grappling-hook:cycle-starred-notes": [
     {
       "modifiers": [
@@ -164,6 +161,49 @@
         "Shift"
       ],
       "key": "Tab"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "file-explorer:move-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-another-quick-switcher:move": [],
+  "obsidian-another-quick-switcher:search-command_landmark-search": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "O"
     }
   ]
 }

@@ -4,71 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "1a4ec6d3b7e32348",
+        "id": "407896ffbf0ced21",
         "type": "tabs",
-        "dimension": 54.66549295774647,
+        "dimension": 51.523947750362844,
         "children": [
           {
-            "id": "ceef9a2b0b174a84",
+            "id": "72fa76c65c978c18",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-02-14.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "dddce2e78a0b8265",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "1ced823e7a1eb016",
-        "type": "tabs",
-        "dimension": 45.33450704225352,
-        "children": [
-          {
-            "id": "4cd88ca2affe49d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/奔跑的奶酪的浏览器书签大汇总.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e48954cb4fe1050",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/Obsidian.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              },
+              "pinned": true
             }
           }
         ]
+      },
+      {
+        "id": "b8a8af81968dcf4f",
+        "type": "split",
+        "dimension": 48.47605224963715,
+        "children": [
+          {
+            "id": "f1e213adefd52338",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f9a4ed3a76011098",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "cf2fb5516f582f5c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "70981dc75e8bc70b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Spaces/2-Area/运动与健康/睾酮.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -98,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#待办/今天",
+                "query": "推胸",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,59 +130,14 @@
         "dimension": 36.07214428857716,
         "children": [
           {
-            "id": "e3c3bc13cb0131c1",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md"
-              }
-            }
-          },
-          {
             "id": "853ef9e400d6f719",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Spaces/2-Area/运动与健康/睾酮.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "ce0157bd2897bffe",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1.247398017975529,
-                  "close": true
-                }
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -196,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Spaces/2-Area/运动与健康/睾酮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,12 +158,11 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 314
+    "width": 257.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -231,7 +181,7 @@
             }
           },
           {
-            "id": "473b0907c2fc43b3",
+            "id": "f2ff3656d8bce388",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -239,7 +189,7 @@
             }
           },
           {
-            "id": "d6fbcc9b676c10f9",
+            "id": "9f42c09e6561c37f",
             "type": "leaf",
             "state": {
               "type": "daily-note-outline",
@@ -247,47 +197,80 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 229.5
+    "width": 294.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "daily-notes:打开/创建今天的日记": false,
+      "switcher:打开快速切换": false,
+      "canvas:新建白板": false,
+      "graph:查看关系图谱": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "dbfolder:创建一个新数据库表": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "obsidian-projects:Open projects": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "janitor:Janitor: scan vault": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-weread-plugin:Weread": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "command-palette:打开命令面板": false,
-      "canvas:Create new canvas": true,
-      "templater-obsidian:Templater": false,
-      "dbfolder:创建一个新数据库表": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "webpage-html-export:Export Vault to HTML": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "dddce2e78a0b8265",
+  "active": "70981dc75e8bc70b",
   "lastOpenFiles": [
-    "Cards/永久笔记/raycast.md",
-    "Spaces/1-Project/Chrome插件使用/chrome必装插件.md",
-    "Calendar/Daily notes/少数派创作手册.md",
-    "Calendar/Daily notes/2023-02-14.md",
-    "Cards/永久笔记/chatGPT的使用经验.md",
-    "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
-    "Calendar/Daily notes/Daily notes归档/2022-06-21.md",
-    "Cards/永久笔记/markdown与html和css联用.md",
-    "Calendar/Daily notes/Daily notes归档/2022-06-23.md",
-    "Calendar/Daily notes/Daily notes归档/2022-06-24.md"
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md",
+    "🧰 本库指南/Tutorials/Dice Roller.md",
+    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md",
+    "🧰 本库指南/Tutorials/本库启用obsidian核心插件的进阶平替第三方插件.md",
+    "Spaces/1-Project/人与科技融合专题/VSCode插件使用/∑ VSCode插件.md",
+    "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Focus and Highlight.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Focus and Highlight 1.md",
+    "🧰 本库指南/Tutorials/本库常用的快捷键及作用.md",
+    "Cards/永久笔记/Better Command Palette.md",
+    "Cards/永久笔记/Another Quick Switcher.md",
+    "Cards/永久笔记/Remotely Save.md",
+    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Onedrive.md",
+    "Cards/永久笔记/onedrive.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Quiet Outline.md",
+    "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
+    "Spaces/2-Area/个人职业生涯/问题单管理.md",
+    "Cards/永久笔记/git分支管理策略.md",
+    "Spaces/2-Area/个人职业生涯/边缘云.md",
+    "Spaces/2-Area/个人职业生涯/Windows.md",
+    "Spaces/2-Area/个人职业生涯/GPGPU.md",
+    "Spaces/2-Area/个人职业生涯/CUDA.md",
+    "Extras/Templates/textgenerator模板/prompts/huggingface",
+    "主动插件和被动插件",
+    "Extras/Templates/textgenerator模板/prompts/default",
+    "Extras/Templates/textgenerator模板/prompts/dalle-2",
+    "Extras/Templates/textgenerator模板/prompts",
+    "Extras/Templates/textgenerator模板",
+    "Spaces/1-Project/人与科技融合专题/好用网站集锦",
+    "Spaces/1-Project/人与科技融合专题/命令行工具使用",
+    "Spaces/1-Project/人与科技融合专题/docker镜像使用",
+    "Spaces/1-Project/人与科技融合专题/安卓软件使用",
+    "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
+    "Atlas/Canvas/🧩 如何做读书笔记.canvas",
+    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
+    "Atlas/Canvas/🧩 白板canvas-示意图.canvas",
+    "Atlas/Draws/README 中的头图 - 图.svg",
+    "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
+    "Atlas/Canvas/🧩 数字时代如何更好地生活与工作.canvas",
+    "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
+    "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
+    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+    "Extras/Media/weread_image_1067883451661727.jpeg",
+    "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",
+    "Extras/Media/v2-0b821715f5e9eb09a79b03d80671de44.jpeg"
   ]
 }
