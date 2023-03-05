@@ -41,8 +41,13 @@
             "id": "a610142de96a9f1b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/gitignore 语法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
@@ -117,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,6 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
