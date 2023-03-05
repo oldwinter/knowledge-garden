@@ -6,7 +6,6 @@
       {
         "id": "407896ffbf0ced21",
         "type": "tabs",
-        "dimension": 51.523947750362844,
         "children": [
           {
             "id": "72fa76c65c978c18",
@@ -22,49 +21,32 @@
               },
               "pinned": true
             }
-          }
-        ]
-      },
-      {
-        "id": "b8a8af81968dcf4f",
-        "type": "split",
-        "dimension": 48.47605224963715,
-        "children": [
-          {
-            "id": "f1e213adefd52338",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f9a4ed3a76011098",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {}
-                }
-              }
-            ]
           },
           {
-            "id": "cf2fb5516f582f5c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "70981dc75e8bc70b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Spaces/2-Area/运动与健康/睾酮.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
+            "id": "0a27a3ea0f58edbf",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Atlas/Canvas/未命名 1.canvas",
+                "viewState": {
+                  "x": 9.21722412109375,
+                  "y": 33.88029479980469,
+                  "zoom": 0
                 }
               }
-            ]
+            }
+          },
+          {
+            "id": "a610142de96a9f1b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "direction": "horizontal"
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "推胸",
+                "query": "tag:#windows软件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -135,7 +117,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/睾酮.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +128,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/睾酮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,39 +147,7 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [
-      {
-        "id": "ca96c6a951719db3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "60734b86e1731f85",
-            "type": "leaf",
-            "state": {
-              "type": "chronology-calendar-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "f2ff3656d8bce388",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "9f42c09e6561c37f",
-            "type": "leaf",
-            "state": {
-              "type": "daily-note-outline",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 1
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 294.5,
     "collapsed": true
@@ -210,45 +158,41 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "dbfolder:创建一个新数据库表": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-projects:Open projects": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "70981dc75e8bc70b",
+  "active": "a610142de96a9f1b",
   "lastOpenFiles": [
+    "Atlas/Canvas/未命名 1.canvas",
+    "Atlas/Canvas/未命名.canvas",
     "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md",
-    "🧰 本库指南/Tutorials/Dice Roller.md",
-    "🧰 本库指南/Tutorials/本库启用的obsidian核心插件及原因.md",
-    "🧰 本库指南/Tutorials/本库启用obsidian核心插件的进阶平替第三方插件.md",
-    "Spaces/1-Project/人与科技融合专题/VSCode插件使用/∑ VSCode插件.md",
-    "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Focus and Highlight.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Focus and Highlight 1.md",
-    "🧰 本库指南/Tutorials/本库常用的快捷键及作用.md",
-    "Cards/永久笔记/Better Command Palette.md",
+    "Spaces/2-Area/个人职业生涯/MacOS.md",
+    "Calendar/Daily notes/2023-03-05.md",
+    "README.md",
+    "Calendar/Daily notes/前端年度流行趋势star总结.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT的使用经验.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT 用于 帮助编程.md",
+    "Cards/永久笔记/MacOS系统如何翻墙.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Another Quicker Switcher.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/掘金.md",
     "Cards/永久笔记/Another Quick Switcher.md",
-    "Cards/永久笔记/Remotely Save.md",
-    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Onedrive.md",
-    "Cards/永久笔记/onedrive.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Quiet Outline.md",
-    "🧰 本库指南/Tutorials/∑ 本库obsidian基本配置及原因.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "🧰 本库指南/Tutorials/本库不建议在obsidian中搞专属定制.md",
-    "Spaces/2-Area/个人职业生涯/问题单管理.md",
-    "Cards/永久笔记/git分支管理策略.md",
-    "Spaces/2-Area/个人职业生涯/边缘云.md",
-    "Spaces/2-Area/个人职业生涯/Windows.md",
-    "Spaces/2-Area/个人职业生涯/GPGPU.md",
-    "Spaces/2-Area/个人职业生涯/CUDA.md",
+    "Calendar/Daily notes/如何查看还未创建文件的反向链接.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/edge function 和serverless function的不同之处及其应用场景.md",
+    "Cards/永久笔记/chatGPT.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md",
+    "Sources/Movies + TV/豆瓣影音导入/闪光少女.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI API.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Various Complements.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Various Complements插件各项配置探索.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Linter.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道(python).md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道(golang).md",
+    "Extras/Media/Pasted image 20230305122456.png",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Callout.md",
+    "Extras/Media/Pasted image 20230305120820.png",
+    "Context",
     "Extras/Templates/textgenerator模板/prompts/huggingface",
     "主动插件和被动插件",
     "Extras/Templates/textgenerator模板/prompts/default",
@@ -258,7 +202,6 @@
     "Spaces/1-Project/人与科技融合专题/好用网站集锦",
     "Spaces/1-Project/人与科技融合专题/命令行工具使用",
     "Spaces/1-Project/人与科技融合专题/docker镜像使用",
-    "Spaces/1-Project/人与科技融合专题/安卓软件使用",
     "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",

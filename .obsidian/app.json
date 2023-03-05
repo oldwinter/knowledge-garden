@@ -30,8 +30,7 @@
   "showIndentGuide": true,
   "showFrontmatter": false,
   "mobileToolbarCommands": [
-    "obsidian-spaced-repetition:srs-note-review-easy",
-    "obsidian-spaced-repetition:srs-note-review-hard",
+    "obsidian-textgenerator-plugin:generate-text",
     "editor:insert-wikilink",
     "editor:insert-embed",
     "editor:insert-tag",

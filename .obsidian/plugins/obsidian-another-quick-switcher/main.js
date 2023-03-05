@@ -1865,12 +1865,10 @@ var AppHelper = class {
     var _a;
     const unsafeView = (_a = this.unsafeApp.workspace.activeLeaf) == null ? void 0 : _a.view;
     const { x, y } = unsafeView.canvas.posCenter();
-    const meta = unsafeView.canvas.createFileNode(file, "", {
-      x: x + offset.x,
-      y: y + offset.y
+    return unsafeView.canvas.createFileNode({
+      file,
+      pos: { x: x + offset.x, y: y + offset.y }
     });
-    unsafeView.requestSave();
-    return meta;
   }
   getCurrentLeafHistoryState(leaf) {
     const uLeaf = leaf;

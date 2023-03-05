@@ -29,6 +29,7 @@ title: 本库启用的obsidian核心插件及原因
 - 文件恢复
 	- 除了[[Remotely Save]]和git的几小时同步周期的备份方案，这个算是最后一道保险杠，而且5分钟的间隔，能让我们找回更多的丢失内容。
 - 文件列表
+	- 进阶版社区插件[[File Tree Alternative Plugin]]。
 - 页面预览
 - 字数统计
 

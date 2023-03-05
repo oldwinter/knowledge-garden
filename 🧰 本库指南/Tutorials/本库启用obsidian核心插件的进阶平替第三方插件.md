@@ -1,5 +1,5 @@
 - 快速切换
-	- 改用[[Another Quick Switcher]]。
+	- 改用[[Another Quicker Switcher]]。
 - 命令面板
 	- 改用[[Better Command Palette]]。
 - 模板

@@ -61,7 +61,6 @@
       "key": "E"
     }
   ],
-  "pane-relief:go-6th": [],
   "app:go-back": [
     {
       "modifiers": [
@@ -76,23 +75,6 @@
         "Mod"
       ],
       "key": "]"
-    }
-  ],
-  "pane-relief:go-5th": [],
-  "pane-relief:go-4th": [],
-  "pane-relief:go-3rd": [],
-  "pane-relief:go-2nd": [],
-  "pane-relief:go-1st": [],
-  "pane-relief:go-7th": [],
-  "pane-relief:go-8th": [],
-  "pane-relief:go-last": [],
-  "obsidian-shellcommands:shell-command-vnphwuno3u": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "S"
     }
   ],
   "obsidian-better-command-palette:open-better-commmand-palette": [
@@ -142,25 +124,6 @@
         "Mod"
       ],
       "key": "H"
-    }
-  ],
-  "grappling-hook:cycle-starred-notes": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "Tab"
-    }
-  ],
-  "grappling-hook:alternate-note": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod",
-        "Shift"
-      ],
-      "key": "Tab"
     }
   ],
   "editor:swap-line-up": [

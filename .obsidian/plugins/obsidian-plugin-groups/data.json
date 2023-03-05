@@ -64,8 +64,32 @@
           "name": "Tag Wrangler"
         },
         {
-          "id": "obsidian-hider",
-          "name": "Hider"
+          "id": "obsidian-another-quick-switcher",
+          "name": "Another Quick Switcher"
+        },
+        {
+          "id": "obsidian-better-command-palette",
+          "name": "Better Command Palette"
+        },
+        {
+          "id": "obsidian-advanced-uri",
+          "name": "Advanced URI"
+        },
+        {
+          "id": "dbfolder",
+          "name": "DB Folder"
+        },
+        {
+          "id": "obsidian-quiet-outline",
+          "name": "Quiet Outline"
+        },
+        {
+          "id": "obsidian-textgenerator-plugin",
+          "name": "Text Generator"
+        },
+        {
+          "id": "various-complements",
+          "name": "Various Complements"
         }
       ],
       "groupIds": [],
@@ -350,15 +374,79 @@
         {
           "id": "obsidian-weread-plugin",
           "name": "Weread Plugin"
+        },
+        {
+          "id": "cm-chs-patch",
+          "name": "Word Splitting for Simplified Chinese in Edit Mode and Vim Mode"
+        },
+        {
+          "id": "easy-typing-obsidian",
+          "name": "Easy Typing"
+        },
+        {
+          "id": "file-tree-alternative",
+          "name": "File Tree Alternative Plugin"
+        },
+        {
+          "id": "obsidian-chartsview-plugin",
+          "name": "Charts View"
+        },
+        {
+          "id": "obsidian-douban-plugin",
+          "name": "Douban"
+        },
+        {
+          "id": "obsidian-git",
+          "name": "Obsidian Git"
+        },
+        {
+          "id": "obsidian-hotkeys-for-specific-files",
+          "name": "Hotkeys for specific files"
+        },
+        {
+          "id": "obsidian-kanban",
+          "name": "Kanban"
+        },
+        {
+          "id": "obsidian-list-callouts",
+          "name": "List Callouts"
+        },
+        {
+          "id": "obsidian-local-images-plus",
+          "name": "Local Images Plus"
+        },
+        {
+          "id": "obsidian-map-view",
+          "name": "Map View"
+        },
+        {
+          "id": "obsidian-mindmap-nextgen",
+          "name": "Mindmap NextGen"
+        },
+        {
+          "id": "obsidian-pangu",
+          "name": "盘古 PanGu"
+        },
+        {
+          "id": "obsidian-quiet-outline",
+          "name": "Quiet Outline"
+        },
+        {
+          "id": "obsidian-version-history-diff",
+          "name": "Version History Diff"
         }
       ],
       "groupIds": [],
-      "generateCommands": false
+      "generateCommands": false,
+      "autoAdd": true
     }
   ],
-  "generateCommands": true,
-  "showNoticeOnGroupLoad": "normal",
+  "generateCommands": false,
+  "showNoticeOnGroupLoad": "short",
+  "devLogs": true,
   "devices": [
     "mbp"
-  ]
+  ],
+  "doLoadSynchronously": true,
+  "showStatusbarIcon": "Icon"
 }

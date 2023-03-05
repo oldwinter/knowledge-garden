@@ -8,7 +8,7 @@ title: Callout
 
 [Use callouts - Obsidian Help](https://help.obsidian.md/How+to/Use+callouts)
 
-用 co- 前缀，通过 [[Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Various Complements]] 变量自动补全插件自动触发。配置文件：[[dict]]。
+用 co- 前缀，通过 [[Various Complements]] 变量自动补全插件自动触发。配置文件：[[dict]]。
 
 ### 提示框类型
 

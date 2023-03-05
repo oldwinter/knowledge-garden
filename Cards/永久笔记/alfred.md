@@ -11,7 +11,7 @@ tags:
 是否已重装:
 ---
 
-其他竞品：[[utools]]， [[go]]
+其他竞品：[[uTools]]， [[go]]
 
 ## workflow 调用过程
 

@@ -4,7 +4,7 @@ date modified: 2022-08-20
 title: 从Alfred迁移至Raycast
 ---
 
-启动器除了 [[Alfred]]和[[Raycast]]，还有竞品[[Utools]]、[[HapiGo]]、[[LaunchBar]]。
+启动器除了 [[Alfred]]和[[Raycast]]，还有竞品[[uTools]]、[[HapiGo]]、[[LaunchBar]]。
 
 多方考察，发现 raycast 异军突起，最有实力，开发团队全远程办公，大概有 20 人。
 

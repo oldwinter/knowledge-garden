@@ -4,7 +4,7 @@ date modified: 2023-01-06
 title: 启动v2ray的客户端，连接并测试连通性
 ---
 
-mac 上以 [[Cards/永久笔记/V2rayU]] 为例：
+mac 上以 [[V2rayU]] 为例：
 
 和 [[启动v2ray的服务端的docker镜像]] 里的配置对应。
 

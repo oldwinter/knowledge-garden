@@ -14,8 +14,12 @@ const DEFAULT_SETTINGS = {
   log_render_files: false,
   skip_sections: false,
   results_count: 30,
+  view_open: true,
+  version: "",
 };
 const MAX_EMBED_STRING_LENGTH = 25000;
+
+const VERSION = "1.2.8";
 
 class SmartConnectionsPlugin extends Obsidian.Plugin {
   // constructor
@@ -167,6 +171,19 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
   }
 
   async initialize() {
+    // if this settings.view_open is true, open view on startup
+    if(this.settings.view_open) {
+      this.open_view();
+    }
+    // on new version
+    if(this.settings.version !== VERSION) {
+      // update version
+      this.settings.version = VERSION;
+      // save settings
+      await this.saveSettings();
+      // open view
+      this.open_view();
+    }
     this.add_to_gitignore();
   }
 
@@ -1458,7 +1475,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
       // get heading
       let heading_text = curr.link.split("#").pop();
       // if heading text contains a curly brace, get the number inside the curly braces as occurence
-      let occurence = 1;
+      let occurence = 0;
       if (heading_text.indexOf("{") > -1) {
         // get occurence
         occurence = parseInt(heading_text.split("{")[1].split("}")[0]);
@@ -2159,6 +2176,11 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
     // toggle expanded view by default
     new Obsidian.Setting(containerEl).setName("expanded_view").setDesc("Expanded view by default.").addToggle((toggle) => toggle.setValue(this.plugin.settings.expanded_view).onChange(async (value) => {
       this.plugin.settings.expanded_view = value;
+      await this.plugin.saveSettings(true);
+    }));
+    // toggle view_open on Obsidian startup
+    new Obsidian.Setting(containerEl).setName("view_open").setDesc("Open view on Obsidian startup.").addToggle((toggle) => toggle.setValue(this.plugin.settings.view_open).onChange(async (value) => {
+      this.plugin.settings.view_open = value;
       await this.plugin.saveSettings(true);
     }));
     containerEl.createEl("h2", {

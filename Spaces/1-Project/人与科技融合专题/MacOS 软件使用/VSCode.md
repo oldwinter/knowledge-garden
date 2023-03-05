@@ -4,10 +4,10 @@
 设置同步: github 账号
 是否已备份: y
 是否已重装:
-tags: [macOS软件]
+tags: [macOS软件, windows软件]
 title: VSCode
 date created: 2023-02-28
-date modified: 2023-03-02
+date modified: 2023-03-03
 ---
 
 down:: [[vscode必备插件]]

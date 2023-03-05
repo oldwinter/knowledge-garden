@@ -2,7 +2,7 @@
   "daysToSuppressNewUpdates": 0,
   "dismissedVersionsByPluginId": {},
   "showIconOnMobile": true,
-  "excludeBetaVersions": false,
+  "excludeBetaVersions": true,
   "excludeDisabledPlugins": false,
   "hideIconIfNoUpdatesAvailable": true
 }

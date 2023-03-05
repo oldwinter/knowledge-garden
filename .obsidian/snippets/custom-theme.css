@@ -1,5 +1,5 @@
 body {
- 
+
   --pink: #ff82b2;
   --strong-color: var(--pink);
   --em-color: var(--pink);
@@ -31,4 +31,34 @@ body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
 body:not(.default-font-color) em,
 body:not(.default-font-color) span:not(.cm-highlight).cm-em {
   color: var(--em-color);
+}
+
+
+
+
+
+
+
+/* ───────────────────────────────────────────────── */
+/* << Trailing Whitespace (Two Space Rule) 也就是在每行后的两个空格，显著地显示一个回车符号。copy from theme shimmering foucs。
+──────────────────────────────────────────────────── */
+body:not(.hide-trailing-whitespace) :is(.cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line)::before {
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: -2px;
+	color: var(--text-faint);
+}
+
+body:not(.hide-trailing-whitespace) :is(.cm-trailing-space-b, .cm-trailing-space-a)::before {
+	content: "\00B7"; /* dot character */
+}
+
+/* first characters */
+body:not(.hide-trailing-whitespace) :not(.cm-trailing-space-b) + .cm-trailing-space-a::before {
+	content: "\00B7  \00B7";
+	padding-left: 5px;
+}
+
+body:not(.hide-trailing-whitespace) .cm-trailing-space-new-line::before {
+	content: "\21B5"; /* return character */
 }

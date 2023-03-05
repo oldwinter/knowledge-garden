@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-15
-date modified: 2022-08-20
+date modified: 2023-03-03
 title: routing模式和配置
 ---
 
@@ -8,18 +8,51 @@ title: routing模式和配置
 
 它们有什么区别？选择哪个最好？
 
+## [[V2rayU]]中自带的路由模式：绕过局域网和大陆地址什么意思
+
+这应该是v2rayu自带的配置，初心应该是帮助新手配置。其实它的作用和下方的ip和域名设置是重叠了，比如，勾选绕过局域网和大陆地址后，发现配置文件中会自动新增domain和ip相关的4行数据，这样就无需再自己配置下方的『直连ip或域名』内容了，配了也会重叠无效果：
+```json
+"routing": {
+    "settings": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "localhost",
+            "geosite:cn"
+          ]
+        },
+        {
+          "type": "field",
+          "ip": [
+            "geoip:private",
+            "geoip:cn"
+          ],
+          "outboundTag": "direct"
+        }
+      ]
+    }
+}
+```
+
+![image.png](https://img.oldwinter.top/202303031552112.png)
+
+
+
 ## “AsIs”、”IPIfNonMatch”、”IPOnDemand”三个域名解析策略是什么意思，有什么区别？
 
-**“AsIs”：**  
+**“AsIs”：**
 只使用域名进行路由选择。快速解析，不精确分流。默认值。
 
-**“IPIfNonMatch”：**  
-当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）再次进行匹配；  
-当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；  
-解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名；  
+**“IPIfNonMatch”：**
+当域名没有匹配任何规则时，将域名解析成 IP（A 记录或 AAAA 记录）再次进行匹配；
+当一个域名有多个 A 记录时，会尝试匹配所有的 A 记录，直到其中一个与某个规则匹配为止；
+解析后的 IP 仅在路由选择时起作用，转发的数据包中依然使用原始域名；
 理论上解析比”AsIs”稍慢，但使用中通常不会觉察到。
 
-**“IPOnDemand”：**  
+**“IPOnDemand”：**
 当匹配时碰到任何基于 IP 的规则，将域名立即解析为 IP 进行匹配。解析最精确，也最慢。
 
 ## V2Ray 域名策略解析选择哪个更好？

@@ -412,8 +412,8 @@
       "name": "Recent search",
       "searchBy": {
         "tag": true,
-        "header": false,
-        "link": false
+        "link": false,
+        "header": false
       },
       "searchTarget": "file",
       "targetExtensions": [],
@@ -437,7 +437,7 @@
       ],
       "includePrefixPathPatterns": [],
       "excludePrefixPathPatterns": [],
-      "expand": true
+      "expand": false
     },
     {
       "name": "File name search",
@@ -493,11 +493,11 @@
       "defaultInput": "",
       "commandPrefix": ":l ",
       "sortPriorities": [
-        "Prefix name match",
         "Name match",
+        "Prefix name match",
+        "Link match",
         "Tag match",
         "Header match",
-        "Link match",
         ".md",
         "Last opened",
         "Last modified"
