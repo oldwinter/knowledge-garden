@@ -434,6 +434,10 @@
         {
           "id": "obsidian-version-history-diff",
           "name": "Version History Diff"
+        },
+        {
+          "id": "obsidian-omnivore",
+          "name": "Omnivore"
         }
       ],
       "groupIds": [],

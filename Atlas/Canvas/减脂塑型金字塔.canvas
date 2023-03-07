@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"type":"text","text":"如何终身保持健康与好身材","id":"731f9d7733a67407","x":77,"y":161,"width":250,"height":60},
+		{"type":"text","text":"心理","id":"534301ede675c500","x":968,"y":292,"width":250,"height":60},
+		{"type":"text","text":"烟酒等成瘾物","id":"d897456b24a75c8f","x":759,"y":409,"width":250,"height":60},
+		{"type":"text","text":"日常活动","id":"aef8e0af70915478","x":491,"y":409,"width":250,"height":60},
+		{"type":"text","text":"定义，活力，好看","id":"0179b8fb749f730e","x":530,"y":92,"width":250,"height":60},
+		{"type":"text","text":"高强度","id":"b015424e2536e453","x":-478,"y":511,"width":250,"height":60},
+		{"type":"text","text":"好习惯养成  ","id":"47e683eaabf74297","x":-478,"y":451,"width":250,"height":60},
+		{"type":"text","text":"定期体检","id":"8de84481482fa01f","x":-584,"y":322,"width":250,"height":60},
+		{"type":"text","text":"运动","id":"fdb60706cc68389f","x":-110,"y":319,"width":250,"height":120},
+		{"type":"text","text":"饮食","id":"9f3b67a63eb79c06","x":202,"y":379,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"d80545683f6fde66","fromNode":"731f9d7733a67407","fromSide":"right","toNode":"0179b8fb749f730e","toSide":"left"},
+		{"id":"6dcf84c3be8e430a","fromNode":"fdb60706cc68389f","fromSide":"left","toNode":"b015424e2536e453","toSide":"right"},
+		{"id":"03e6640c38e8e672","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"fdb60706cc68389f","toSide":"top"},
+		{"id":"5801631ae9084e42","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"9f3b67a63eb79c06","toSide":"top"}
+	]
+}

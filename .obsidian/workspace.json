@@ -26,24 +26,9 @@
             "id": "0a27a3ea0f58edbf",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Atlas/Canvas/未命名 1.canvas",
-                "viewState": {
-                  "x": 9.21722412109375,
-                  "y": 33.88029479980469,
-                  "zoom": 0
-                }
-              }
-            }
-          },
-          {
-            "id": "a610142de96a9f1b",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/安卓手机必备软件.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -51,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#windows软件",
+                "query": "```dataview",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -117,14 +102,59 @@
         "dimension": 36.07214428857716,
         "children": [
           {
+            "id": "46ac18e336e17ae3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Cards/永久笔记/安卓手机必备软件.md"
+              }
+            }
+          },
+          {
             "id": "853ef9e400d6f719",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/安卓手机必备软件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "401ecf6c95e31916",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Cards/永久笔记/安卓手机必备软件.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
               }
             }
           },
@@ -134,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/gitignore 语法.md",
+                "file": "Cards/永久笔记/安卓手机必备软件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +184,22 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "fa884f99b5b22239",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f23ef4020af85dbe",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
     "direction": "horizontal",
     "width": 294.5,
     "collapsed": true
@@ -165,39 +210,51 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "templater-obsidian:Templater": false,
+      "dbfolder:创建一个新数据库表": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "a610142de96a9f1b",
+  "active": "0a27a3ea0f58edbf",
   "lastOpenFiles": [
-    "Atlas/Canvas/未命名 1.canvas",
-    "Atlas/Canvas/未命名.canvas",
+    "Atlas/DB folders/∑ DB 安卓软件.md",
+    "Cards/永久笔记/安卓手机必备软件.md",
+    "Atlas/DB folders/∑ DB 常用网站.md",
     "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Spaces/2-Area/个人职业生涯/MacOS.md",
-    "Calendar/Daily notes/2023-03-05.md",
-    "README.md",
-    "Calendar/Daily notes/前端年度流行趋势star总结.md",
+    "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
+    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+    "Cards/永久笔记/正则表达式.md",
+    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
     "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT的使用经验.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT 用于 帮助编程.md",
-    "Cards/永久笔记/MacOS系统如何翻墙.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Another Quicker Switcher.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/掘金.md",
-    "Cards/永久笔记/Another Quick Switcher.md",
-    "Calendar/Daily notes/如何查看还未创建文件的反向链接.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/edge function 和serverless function的不同之处及其应用场景.md",
-    "Cards/永久笔记/chatGPT.md",
+    "Cards/永久笔记/mac启动台相关配置.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
+    "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
+    "Atlas/Canvas/减脂塑型金字塔.canvas",
+    "ReadItLater Inbox",
+    "Calendar/Daily notes/2023-03-06.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/检测某段文本是否由AI自动生成.md",
+    "🍀 花园导览/🍀 花园导览.md",
+    "🍀 花园导览/其他/🎥 我的PPT.md",
+    "Omnivore/2023-02-20/The Secret Power of ‘Read It Later’ Apps.md",
+    "Omnivore/2023-02-20/Organize your Omnivore library with labels.md",
+    "Omnivore/2023-02-20/Getting Started with Omnivore.md",
+    "Calendar/Daily notes/按照目标客户群，分为供应链生意和潮牌生意.md",
+    "Omnivore/2023-02-20",
+    "Omnivore",
+    "Calendar/Daily notes/2023-03-05.md",
     "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md",
-    "Sources/Movies + TV/豆瓣影音导入/闪光少女.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI API.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Various Complements.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Various Complements插件各项配置探索.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Linter.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道(python).md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/管道(golang).md",
+    "Spaces/1-Project/OpenAI 官方文档阅读笔记",
+    "Atlas/Canvas/未命名 1.canvas",
+    "README.md",
+    "Cards/永久笔记/CloudFlare.md",
+    "Cards/永久笔记/确定感.md",
+    "Cards/永久笔记/🧑吕立青.md",
+    "Atlas/Canvas/未命名.canvas",
     "Extras/Media/Pasted image 20230305122456.png",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Callout.md",
     "Extras/Media/Pasted image 20230305120820.png",
     "Context",
     "Extras/Templates/textgenerator模板/prompts/huggingface",
@@ -205,10 +262,6 @@
     "Extras/Templates/textgenerator模板/prompts/default",
     "Extras/Templates/textgenerator模板/prompts/dalle-2",
     "Extras/Templates/textgenerator模板/prompts",
-    "Extras/Templates/textgenerator模板",
-    "Spaces/1-Project/人与科技融合专题/好用网站集锦",
-    "Spaces/1-Project/人与科技融合专题/命令行工具使用",
-    "Spaces/1-Project/人与科技融合专题/docker镜像使用",
     "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
@@ -217,8 +270,6 @@
     "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
     "Atlas/Canvas/🧩 数字时代如何更好地生活与工作.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
-    "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
-    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Extras/Media/weread_image_1067883451661727.jpeg",
     "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",
     "Extras/Media/v2-0b821715f5e9eb09a79b03d80671de44.jpeg"
