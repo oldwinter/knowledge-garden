@@ -2,7 +2,8 @@
 date created: 2022-08-10
 date modified: 2023-03-07
 title: 鸟姐的dataviewjs技巧
-tags: [1]
+tags:
+  - 1
 ---
 
 ## 代码描述

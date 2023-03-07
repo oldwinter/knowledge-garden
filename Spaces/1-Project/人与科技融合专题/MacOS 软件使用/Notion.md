@@ -1,8 +1,10 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: Notion
-tags: [评论/少数派 macOS软件, 评论/少数派]
+tags:
+  - 评论/少数派 macOS软件
+  - 评论/少数派
 作用: 打造数字花园
 评价: 5
 设置同步: 谷歌账号

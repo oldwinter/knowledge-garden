@@ -11,13 +11,15 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 电子工业出版社
 reviewCount: 1
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 白帽子讲Web安全（纪念版）-吴翰清
 ---
 
 ## 元数据
 
 >[!abstract]白帽子讲Web安全（纪念版）
+
 > - ![白帽子讲Web安全（纪念版）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/273/851273/t7_851273.jpg)
 > - 书名：白帽子讲Web安全（纪念版）
 > - 作者：吴翰清

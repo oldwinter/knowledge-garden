@@ -1,7 +1,8 @@
 ---
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: About DB folders
-tags: [本库教程]
+tags:
+  - 本库教程
 date created: 2023-03-01
 ---
 

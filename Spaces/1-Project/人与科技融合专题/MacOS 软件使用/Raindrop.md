@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 高级的书签备份
 评价: 3
 设置同步: 自带账号
@@ -7,7 +8,7 @@ tags: [macOS软件]
 是否已重装:
 title: Raindrop
 date created: 2023-02-28
-date modified: 2023-03-01
+date modified: 2023-03-07
 ---
 - 国内有[[Pinbox]]。相比于原生自带的书签管理，
 	- 核心优势是

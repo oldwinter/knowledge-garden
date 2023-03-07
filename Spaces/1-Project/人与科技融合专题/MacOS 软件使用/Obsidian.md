@@ -2,7 +2,9 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: Obsidian
-tags: [评论/少数派, macOS软件]
+tags:
+  - 评论/少数派
+  - macOS软件
 设置同步: git和官方同步
 评价: 5
 作用: 个人知识管理的集大成者

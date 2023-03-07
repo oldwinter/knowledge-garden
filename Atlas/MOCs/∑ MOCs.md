@@ -1,7 +1,9 @@
 ---
 date created: 2022-06-06
 date modified: 2023-03-07
-tags: [索引笔记, 待办/持续迭代]
+tags:
+  - 索引笔记
+  - 待办/持续迭代
 title: ∑ MOCs
 ---
 

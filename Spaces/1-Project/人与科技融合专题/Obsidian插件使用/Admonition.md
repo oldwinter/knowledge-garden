@@ -5,7 +5,8 @@ title: Admonition
 当前是否还在使用: no
 使用或不用的原因: 已经被官方自带 [[Callout]] 取代
 当前使用频率: 0
-tags: [Obsidian插件]
+tags:
+  - Obsidian插件
 ---
 
 ## 各种样式预览

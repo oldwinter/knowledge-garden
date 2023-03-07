@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 跨平台高级 snippet
 评价: 3
 设置同步: 手动

@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 桌面显示按键
 评价: 3
 设置同步: 不需要
@@ -7,7 +8,7 @@ tags: [macOS软件]
 是否已重装:
 title: Keycastr
 date created: 2023-02-28
-date modified: 2023-03-03
+date modified: 2023-03-07
 ---
 
 和[[Presentify]]配合使用，进行演讲展示。

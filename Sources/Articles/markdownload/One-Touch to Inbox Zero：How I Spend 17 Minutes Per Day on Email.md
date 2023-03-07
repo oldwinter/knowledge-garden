@@ -2,7 +2,8 @@
 date created: 2022-08-15
 date modified: 2023-03-07
 title: One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email
-tags: [4]
+tags:
+  - 4
 ---
 
 I spend 17 minutes per day on email, or 7.43% of my total work time over the past 12 months.
@@ -289,6 +290,7 @@ In the midst of daily battle, on the elevator or waiting in line, it’s fine to
 >**Open the oldest email in your inbox**
 
 >**Decide what needs to be done about it, and take one of the 6 following actions:**
+
 >
 > ![](https://img.oldwinter.top/Extras/Media/1!mwx6NBeBnL8BRq03yO1UdQ.jpeg.jpg)
 

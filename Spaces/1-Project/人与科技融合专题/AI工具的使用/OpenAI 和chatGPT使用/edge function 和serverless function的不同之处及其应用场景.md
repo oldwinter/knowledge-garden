@@ -1,7 +1,7 @@
 ---
 title: edge function 和serverless function的不同之处及其应用场景
 date created: 2023-03-04
-date modified: 2023-03-04
+date modified: 2023-03-07
 ---
 
 Vercel Edge Function和Vercel Serverless Function是Vercel平台提供的两种不同的计算服务，它们有以下不同之处：

@@ -11,13 +11,15 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 人民邮电出版社
 reviewCount: 1
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 思考的乐趣：Matrix67数学笔记-顾森
 ---
 
 ## 元数据
 
 >[!abstract]思考的乐趣：Matrix67数学笔记
+
 > - ![思考的乐趣：Matrix67数学笔记|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/977/22806977/t7_22806977.jpg)
 > - 书名：思考的乐趣：Matrix67数学笔记
 > - 作者：顾森

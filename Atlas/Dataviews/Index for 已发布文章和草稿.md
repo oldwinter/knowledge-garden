@@ -2,7 +2,8 @@
 cssclass: sidebarDataview
 date created: 2022-06-09
 date modified: 2023-03-07
-tags: [dataview]
+tags:
+  - dataview
 title: Index for 已发布文章和草稿
 ---
 

@@ -1,8 +1,9 @@
 ---
 dg-publish: true
 date created: 2022-08-04
-date modified: 2023-02-14
-tags: [本库教程]
+date modified: 2023-03-07
+tags:
+  - 本库教程
 title: » 本库 PARA 笔记组织法工作流
 ---
 

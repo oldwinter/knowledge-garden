@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-13
 date modified: 2023-03-07
-tags: [索引笔记]
+tags:
+  - 索引笔记
 title: ∑ 本库Dataview汇总
 ---
 

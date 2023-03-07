@@ -11,13 +11,15 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 人民邮电出版社
 reviewCount: 1
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 简约至上：交互式设计四策略-Giles Colborne
 ---
 
 ## 元数据
 
 >[!abstract]简约至上：交互式设计四策略
+
 > - ![简约至上：交互式设计四策略|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/772/907772/t7_907772.jpg)
 > - 书名：简约至上：交互式设计四策略
 > - 作者：Giles Colborne

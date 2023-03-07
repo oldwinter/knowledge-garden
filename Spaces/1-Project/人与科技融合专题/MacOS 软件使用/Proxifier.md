@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: iptables 的更高级产品
 评价: 4
 设置同步: 不需要

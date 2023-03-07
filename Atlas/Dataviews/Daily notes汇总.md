@@ -1,7 +1,8 @@
 ---
 date created: 2022-06-10
 date modified: 2023-03-07
-tags: [dataview]
+tags:
+  - dataview
 title: Daily notes汇总
 ---
 

@@ -1,8 +1,12 @@
 ---
 dg-publish: true
 date created: 2022-08-04
-date modified: 2023-02-17
-tags: [索引笔记, 待办/持续迭代, 待办/今天, 待办/本周]
+date modified: 2023-03-07
+tags:
+  - 索引笔记
+  - 待办/持续迭代
+  - 待办/今天
+  - 待办/本周
 title: ∑ 本库 ACCESS 的文件夹入口汇总
 ---
 

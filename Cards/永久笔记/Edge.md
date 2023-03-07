@@ -2,7 +2,9 @@
 title: Edge
 date created: 2023-03-01
 date modified: 2023-03-07
-tags: [macOS软件, 安卓软件]
+tags:
+  - macOS软件
+  - 安卓软件
 是否已备份: "true"
 评价: 5
 设置同步: 微软账号自动同步

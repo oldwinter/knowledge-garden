@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-20
 date modified: 2023-03-07
-tags: [索引笔记]
+tags:
+  - 索引笔记
 title: ∑ flomo101阅读笔记
 ---
 

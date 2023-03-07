@@ -1,7 +1,9 @@
 ---
 date created: 2022-07-01
 date modified: 2023-03-07
-tags: [索引笔记, 待办/今天]
+tags:
+  - 索引笔记
+  - 待办/今天
 title: ∑ Building a Second Brain 翻译和读书笔记
 ---
 

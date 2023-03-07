@@ -2,7 +2,8 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: obsidian publish 发布
-tags: [待办/某天]
+tags:
+  - 待办/某天
 ---
 
 ## 2022年6月新发现

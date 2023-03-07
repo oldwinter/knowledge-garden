@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 开源 epub 阅读器
 评价: 3
 设置同步: 不需要

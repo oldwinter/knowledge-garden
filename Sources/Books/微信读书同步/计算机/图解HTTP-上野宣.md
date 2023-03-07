@@ -9,7 +9,8 @@ category: 计算机-计算机综合
 isbn: 9787115351531
 lastReadDate: 2022-09-06
 publisher: 人民邮电出版社
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 图解HTTP-上野宣
 date created: 2022-09-21
 date modified: 2023-03-07
@@ -18,6 +19,7 @@ date modified: 2023-03-07
 ## 元数据
 
 >[!abstract]图解HTTP
+
 > - ![图解HTTP|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/764/907764/t7_907764.jpg)
 > - 书名：图解HTTP
 > - 作者：上野宣

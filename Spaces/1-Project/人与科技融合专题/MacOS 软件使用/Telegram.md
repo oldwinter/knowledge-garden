@@ -1,8 +1,9 @@
 ---
 title: Telegram
 date created: 2023-01-04
-date modified: 2023-03-01
-tags: [macOS软件]
+date modified: 2023-03-07
+tags:
+  - macOS软件
 作用: 电报 follow 资源群和咨询群
 评价: 4
 设置同步: 不需要

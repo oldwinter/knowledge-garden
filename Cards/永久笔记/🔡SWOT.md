@@ -5,8 +5,9 @@ sr-ease: 310
 aliases:
   - 个人定位 公司定位
 date created: 2022-06-09
-date modified: 2023-03-07
-tags:[复习回顾]
+date modified: 2023-03-08
+tags:
+  - 复习回顾
 title: 🔡SWOT
 ---
 

@@ -2,7 +2,8 @@
 date created: 2022-07-06
 date modified: 2023-03-07
 title: obsidian如何做英文阅读笔记
-tags: [待办]
+tags:
+  - 待办
 ---
 
 英文阅读有几个诉求：

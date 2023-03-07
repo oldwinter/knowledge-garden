@@ -1,7 +1,8 @@
 ---
 date created: 2022-07-18
 date modified: 2023-03-07
-tags: [文章/已完成]
+tags:
+  - 文章/已完成
 title: 从anki、onenote到obsidian，一名小镇做题家的笔记进化史
 ---
 

@@ -4,7 +4,8 @@ sr-interval: 85
 sr-ease: 308
 date created: 2022-06-27
 date modified: 2023-03-07
-tags: [复习回顾]
+tags:
+  - 复习回顾
 title: 🔡SMART
 ---
 

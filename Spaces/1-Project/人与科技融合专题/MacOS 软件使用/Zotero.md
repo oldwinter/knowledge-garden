@@ -1,8 +1,9 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: Zotero
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 文献引文 pdf 阅读神器
 评价: 4
 设置同步: zotero 账号

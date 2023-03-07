@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 截图 all in one
 评价: 4
 设置同步: 不需要

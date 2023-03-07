@@ -1,7 +1,7 @@
 ---
 title: go语言编程知识文档汇总
 date created: 2022-12-14
-date modified: 2022-12-14
+date modified: 2023-03-07
 ---
 
 [[effective-go-zh-en-gitbook.pdf]]

@@ -4,7 +4,8 @@ title: Organize your Omnivore library with labels
 author: The Omnivore Team
 date_saved: 2023-02-20 09:35:09
 date_published: 2022-04-18 08:00:00
-tags: [Omnivore]
+tags:
+  - Omnivore
 date created: 2023-03-05
 date modified: 2023-03-07
 ---

@@ -2,5 +2,6 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: Wox
-tags: [windows软件]
+tags:
+  - windows软件
 ---

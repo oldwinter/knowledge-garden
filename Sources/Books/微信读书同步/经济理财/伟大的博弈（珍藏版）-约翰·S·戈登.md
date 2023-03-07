@@ -11,13 +11,15 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 中信出版社
 reviewCount: 1
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 伟大的博弈（珍藏版）-约翰·S·戈登
 ---
 
 ## 元数据
 
 >[!abstract]伟大的博弈（珍藏版）
+
 > - ![伟大的博弈（珍藏版）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/790/921790/t7_921790.jpg)
 > - 书名：伟大的博弈（珍藏版）
 > - 作者：约翰·S·戈登

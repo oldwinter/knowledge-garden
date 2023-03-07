@@ -1,6 +1,7 @@
 ---
 excalidraw-plugin: parsed
-tags: [excalidraw]
+tags:
+  - excalidraw
 title: Text Elements
 date created: 2022-09-08
 date modified: 2023-03-07

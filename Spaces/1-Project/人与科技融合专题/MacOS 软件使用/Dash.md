@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: api 聚合搜索
 评价: 2
 设置同步: 不需要

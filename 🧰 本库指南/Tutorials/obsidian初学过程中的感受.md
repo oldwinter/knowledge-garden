@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-08-16
-date modified: 2023-02-14
+date modified: 2023-03-07
 title: obsidian初学过程中的感受
 ---
 

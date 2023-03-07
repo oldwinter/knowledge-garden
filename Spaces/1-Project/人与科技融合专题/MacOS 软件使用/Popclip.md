@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 快捷操作
 评价: 4
 设置同步: icloud 同步，手动导出

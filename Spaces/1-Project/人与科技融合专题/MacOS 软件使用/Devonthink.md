@@ -2,7 +2,9 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: Devonthink
-tags: [macOS软件, 待办/某天]
+tags:
+  - macOS软件
+  - 待办/某天
 作用: 个人信息管理系统
 评价: 4
 设置同步: icloud 空间不够，同步至 onedrive

@@ -1,7 +1,9 @@
 ---
 date created: 2022-06-09
 date modified: 2023-03-07
-tags: [macOS软件, 安卓软件]
+tags:
+  - macOS软件
+  - 安卓软件
 title: bilibili
 aliases:
   - 哔哩哔哩

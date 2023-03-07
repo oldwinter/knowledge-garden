@@ -3,7 +3,8 @@ comments: true
 date created: 2022-08-06
 date modified: 2023-03-07
 id: home
-tags: [本库教程]
+tags:
+  - 本库教程
 title: AboutTheGarden
 description: 上面这些字段，大多是为了适配第三方发布方案，如hugo和jekyll。
 dg-home: true

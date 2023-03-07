@@ -2,7 +2,8 @@
 date created: 2022-07-30
 date modified: 2023-03-07
 title: obsidian和logseq都采用的开源的论坛forum方案
-tags: [待办/某天]
+tags:
+  - 待办/某天
 ---
 
 [GitHub - discourse/discourse: A platform for community discussion. Free, open, simple.](https://github.com/discourse/discourse)

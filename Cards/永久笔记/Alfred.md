@@ -2,7 +2,8 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: Alfred
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 搜索一切 的 hub
 评价: 5
 设置同步: icloud 自动同步

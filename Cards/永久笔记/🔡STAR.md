@@ -5,8 +5,9 @@ sr-ease: 290
 aliases:
   - 如何告诉对方自己值得这个价格
 date created: 2022-06-09
-date modified: 2023-03-07
-tags:[复习回顾]
+date modified: 2023-03-08
+tags:
+  - 复习回顾
 title: 🔡STAR
 ---
 

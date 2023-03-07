@@ -2,7 +2,8 @@
 date created: 2022-06-19
 date modified: 2023-03-07
 title: pkm 的定义
-tags: [评论/少数派]
+tags:
+  - 评论/少数派
 ---
 
 ## pkm 的定义

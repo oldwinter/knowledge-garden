@@ -2,7 +2,8 @@
 date created: 2022-06-09
 date modified: 2023-03-07
 title: Anki
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 周期记忆闪卡
 评价: 4
 设置同步: anki 账号

@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-22
 date modified: 2023-03-07
-tags: [复习回顾]
+tags:
+  - 复习回顾
 title: sed命令+正则表达式批量替换
 sr-due: 2022-09-27
 sr-interval: 29

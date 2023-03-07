@@ -1,8 +1,9 @@
 ---
 title: Presentify
 date created: 2023-02-15
-date modified: 2023-03-01
-tags: [macOS软件]
+date modified: 2023-03-07
+tags:
+  - macOS软件
 作用: 光标聚光
 评价: 3
 设置同步: 不需要

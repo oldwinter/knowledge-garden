@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: 查词翻译，但沙拉查词能和Anki 联动
 评价: 4
 设置同步: icloud 同步，手动导出

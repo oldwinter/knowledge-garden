@@ -1,7 +1,7 @@
 ---
 title: Excalidraw
 date created: 2023-01-23
-date modified: 2023-02-23
+date modified: 2023-03-07
 ---
 
 通过图 + 双链的形式，更容易描述清楚复杂系统，找机会尝试。

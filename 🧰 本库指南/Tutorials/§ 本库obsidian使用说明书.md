@@ -2,7 +2,9 @@
 dg-publish: true
 date created: 2022-08-05
 date modified: 2023-03-07
-tags: [目录笔记, 待办/某天]
+tags:
+  - 目录笔记
+  - 待办/某天
 title: § 本库obsidian使用说明书
 ---
 

@@ -1,7 +1,9 @@
 ---
 date created: 2022-06-09
 date modified: 2023-03-07
-tags: [文章/待写, 待办]
+tags:
+  - 文章/待写
+  - 待办
 title: 先鉴定你的做笔记风格和工作类型，再选一款app上车
 ---
 

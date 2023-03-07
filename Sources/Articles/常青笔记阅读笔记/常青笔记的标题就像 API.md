@@ -4,7 +4,9 @@ sr-interval: 182
 sr-ease: 312
 date created: 2022-08-11
 date modified: 2023-03-07
-tags: [复习回顾, 待办/持续迭代]
+tags:
+  - 复习回顾
+  - 待办/持续迭代
 title: 常青笔记的标题就像 API
 ---
 

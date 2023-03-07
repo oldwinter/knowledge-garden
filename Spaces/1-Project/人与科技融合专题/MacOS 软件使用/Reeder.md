@@ -1,5 +1,6 @@
 ---
-tags: [macOS软件]
+tags:
+  - macOS软件
 作用: RSS 阅读
 评价: 4
 设置同步: icloud 自动同步

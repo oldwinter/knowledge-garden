@@ -4,7 +4,8 @@ sr-interval: 210
 sr-ease: 310
 date created: 2022-07-22
 date modified: 2023-03-07
-tags: [复习回顾]
+tags:
+  - 复习回顾
 title: 如何用 IARP 规划标签
 ---
 

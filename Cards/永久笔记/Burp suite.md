@@ -1,8 +1,10 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-03
+date modified: 2023-03-07
 title: Burp suite
-tags: [macOS软件, windows软件]
+tags:
+  - macOS软件
+  - windows软件
 ---
 
 网络安全神器之一

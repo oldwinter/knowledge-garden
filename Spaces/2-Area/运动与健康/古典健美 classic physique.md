@@ -1,7 +1,7 @@
 ---
 title: 古典健美 classic physique
 date created: 2022-12-16
-date modified: 2022-12-16
+date modified: 2023-03-07
 ---
 
 从英文直译的话，应该是古典健体。但很多人也直接叫古典健美。

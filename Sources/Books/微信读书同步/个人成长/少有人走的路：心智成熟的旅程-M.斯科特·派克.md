@@ -9,7 +9,8 @@ category: 个人成长-认知思维
 isbn: 9787515819792
 lastReadDate: 2022-09-08
 publisher: 中华工商联合出版社
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 少有人走的路：心智成熟的旅程-M.斯科特·派克
 date created: 2022-09-21
 date modified: 2023-03-07
@@ -18,6 +19,7 @@ date modified: 2023-03-07
 ## 元数据
 
 >[!abstract]少有人走的路：心智成熟的旅程
+
 > - ![少有人走的路：心智成熟的旅程|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/862/33800862/t7_33800862.jpg)
 > - 书名：少有人走的路：心智成熟的旅程
 > - 作者：M.斯科特·派克

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: Bartender
 uid: f5430a84-1fa5-45b4-8023-14edc6137bb9
 当前是否还在使用: no
@@ -9,7 +9,8 @@ uid: f5430a84-1fa5-45b4-8023-14edc6137bb9
 设置同步: 手动
 是否已备份: y
 是否已重装:
-tags: [macOS软件]
+tags:
+  - macOS软件
 ---
 
 ## mac 的 bartender

@@ -11,13 +11,15 @@ lastReadDate: 2022-08-16T00:00:00.000Z
 noteCount: 0
 publisher: 中信出版社
 reviewCount: 1
-tags: [微信读书笔记]
+tags:
+  - 微信读书笔记
 title: 必然（KK三部曲·展望）-凯文·凯利
 ---
 
 ## 元数据
 
 >[!abstract]必然（KK三部曲·展望）
+
 > - ![必然（KK三部曲·展望）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/470/790470/t7_790470.jpg)
 > - 书名：必然（KK三部曲·展望）
 > - 作者：凯文·凯利

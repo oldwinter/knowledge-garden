@@ -4,7 +4,8 @@ sr-interval: 258
 sr-ease: 294
 date created: 2022-06-23
 date modified: 2023-03-07
-tags: [复习回顾]
+tags:
+  - 复习回顾
 title: 🔡DIKW
 ---
 
