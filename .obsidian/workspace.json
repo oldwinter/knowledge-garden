@@ -28,15 +28,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
+                "file": "Sources/Movies + TV/豆瓣影音导入/霸王别姬.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -66,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "```dataview",
+                "query": "aliases:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md"
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md"
               }
             }
           },
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
+                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,8 +212,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e07e6322b029a211",
+  "active": "a4d1994dfc9f1870",
   "lastOpenFiles": [
+    "Sources/Movies + TV/豆瓣影音导入/霸王别姬.md",
+    "Calendar/文章草稿/30岁的男人系列/2022年，借助Notion、Obsidian和微信读书，我减了15kg体脂，拿了800个star，读了1800小时书.md",
+    "Cards/永久笔记/🔡SCQA.md",
+    "Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md",
+    "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
+    "Cards/永久笔记/Chrome.md",
+    "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
+    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Linter.md",
     "README.md",
     "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
     "Cards/永久笔记/∑ 令我多次沉醉的人或作品.md",
@@ -233,16 +240,8 @@
     "Atlas/DB folders/∑ DB 安卓软件.md",
     "Atlas/DB folders/∑ DB 常用网站.md",
     "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
-    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
-    "Cards/永久笔记/正则表达式.md",
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT的使用经验.md",
-    "Cards/永久笔记/mac启动台相关配置.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
-    "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "ReadItLater Inbox",
-    "Calendar/Daily notes/2023-03-06.md",
     "Omnivore/2023-02-20",
     "Omnivore",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",
