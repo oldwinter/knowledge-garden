@@ -236,7 +236,7 @@
   "customRegexes": [],
   "commonStyles": {
     "aliasArrayStyle": "multi-line",
-    "tagArrayStyle": "single-line",
+    "tagArrayStyle": "multi-line",
     "minimumNumberOfDollarSignsToBeAMathBlock": 2,
     "escapeCharacter": "\"",
     "removeUnnecessaryEscapeCharsForMultiLineArrays": true

@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/bilibili.md",
+                "file": "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/bilibili.md"
+                "file": "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md"
               }
             }
           },
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/bilibili.md",
+                "file": "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/bilibili.md",
+                "file": "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/bilibili.md",
+                "file": "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -215,6 +215,11 @@
   },
   "active": "e07e6322b029a211",
   "lastOpenFiles": [
+    "Calendar/Daily notes/Gmail.md",
+    "Calendar/Daily notes/Roadmap.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
+    "README.md",
+    "Cards/永久笔记/bilibili.md",
     "Cards/永久笔记/b站.md",
     "Calendar/Daily notes/2023-02-24.md",
     "Calendar/Daily notes/2023-02-25.md",
@@ -238,13 +243,8 @@
     "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/检测某段文本是否由AI自动生成.md",
     "🍀 花园导览/🍀 花园导览.md",
     "🍀 花园导览/其他/🎥 我的PPT.md",
-    "Omnivore/2023-02-20/The Secret Power of ‘Read It Later’ Apps.md",
-    "Omnivore/2023-02-20/Organize your Omnivore library with labels.md",
-    "Omnivore/2023-02-20/Getting Started with Omnivore.md",
-    "Calendar/Daily notes/按照目标客户群，分为供应链生意和潮牌生意.md",
     "Omnivore/2023-02-20",
     "Omnivore",
-    "Calendar/Daily notes/2023-03-05.md",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",
     "Atlas/Canvas/未命名 1.canvas",
     "Atlas/Canvas/未命名.canvas",

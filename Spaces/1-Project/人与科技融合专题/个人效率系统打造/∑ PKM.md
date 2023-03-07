@@ -5,7 +5,8 @@ aliases:
   - 个人知识管理
 date created: 2022-06-09
 date modified: 2023-03-07
-tags:[索引笔记]
+tags:
+  - 索引笔记
 title: ∑ PKM
 ---
 
