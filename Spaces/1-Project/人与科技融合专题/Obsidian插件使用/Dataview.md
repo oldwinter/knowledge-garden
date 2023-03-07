@@ -2,7 +2,7 @@
 aliases:
   - Dataviewjs
 date created: 2022-06-09
-date modified: 2023-01-23
+date modified: 2023-03-07
 title: Dataview
 当前是否还在使用: yes
 当前使用频率: 5
@@ -53,7 +53,7 @@ dataview 的牛逼之处，在于它让我们成为自己笔记库的大数据�
 
 dataviewjs 可以实现更灵活的语法，比如表格插入一个自增长的变量，实现表格的 No 行号显示效果。
 
-dataviewjs 社区有很多酷炫的玩法和现有代码， 当要用的时候，先去找找看，别自己造轮子。
+dataviewjs 社区有很多酷炫的玩法和现有代码，当要用的时候，先去找找看，别自己造轮子。
 
 dataview 有种数据挖掘的感觉。通过不同角度分析和挖掘自己的大脑曾经的思考轨迹和路径。
 

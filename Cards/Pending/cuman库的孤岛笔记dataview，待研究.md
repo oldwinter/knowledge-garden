@@ -1,7 +1,7 @@
 ---
 created: 2022-08-09 09:10:15
 date created: 2022-08-13
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: cuman库的孤岛笔记dataview，待研究
 ---
 
@@ -17,7 +17,7 @@ WHERE !(outlinks.file) AND !(contains(meta(outlinks).path, "/"))
 
 ```
 
-### 孤岛笔记 （不显示只被moc链接的笔记 和引用图片的笔记 ）
+### 孤岛笔记（不显示只被moc链接的笔记 和引用图片的笔记）
 
 ```dataview1
 TABLE file.folder

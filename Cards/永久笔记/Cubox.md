@@ -1,9 +1,8 @@
 ---
 date created: 2022-06-17
-date modified: 2023-03-01
-title: cubox
-tags:
-  - macOS软件
+date modified: 2023-03-07
+title: Cubox
+tags: [macOS软件]
 评价: 5
 作用: 网络文章剪藏
 ---

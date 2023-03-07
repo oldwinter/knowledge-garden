@@ -1,13 +1,15 @@
 ---
-
 excalidraw-plugin: parsed
 tags: [excalidraw]
-
+title: Text Elements
+date created: 2022-09-08
+date modified: 2023-03-07
 ---
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
+==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 # Text Elements
+
 me ^JT0EJxgg
 
 my second brain ^MU3qp0VJ
@@ -16,17 +18,19 @@ my digital garden ^IC7FWrd9
 
 obsidian ^ug9UVqPl
 
-
 # Embedded files
-81f90b6f538d5a18ec3e8b5158c065bb92caf4f2: [[Extras/Media/Pasted Image 20220821140520_014.png]]
-ec3184c1605ef241707035ae2ce6781f2392049f: [[Extras/Media/Pasted Image 20220821140630_196.png]]
-927c9462c728d7294bed3e50901681273fb60e70: [[Extras/Media/Pasted Image 20220821140907_040.png]]
-7c06addad5474ce01c0f35efd722955842aa1bb0: [[Extras/Media/Pasted Image 20220821140912_644.png]]
-a09b7a7cba4bf98e23590c118f233778b306d01b: [[Extras/Media/Pasted Image 20220821142613_148.png]]
+
+81f90b6f538d5a18ec3e8b5158c065bb92caf4f2: [[Extras/Media/Pasted Image 20220821140520_014.png]]  
+ec3184c1605ef241707035ae2ce6781f2392049f: [[Extras/Media/Pasted Image 20220821140630_196.png]]  
+927c9462c728d7294bed3e50901681273fb60e70: [[Extras/Media/Pasted Image 20220821140907_040.png]]  
+7c06addad5474ce01c0f35efd722955842aa1bb0: [[Extras/Media/Pasted Image 20220821140912_644.png]]  
+a09b7a7cba4bf98e23590c118f233778b306d01b: [[Extras/Media/Pasted Image 20220821142613_148.png]]  
 86766e93eb794781411be8047a06219d58111032: [[Extras/Media/Pasted Image 20220821142616_556.png]]
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -186,4 +190,5 @@ h1VA21ZVOgnewsBoFVNyxFD4pFkAqoJAxRZ1rFF1BWT6GiMgzgwAulOl/AEA74wI
 
 ZlulREQAA===
 ```
+
 %%

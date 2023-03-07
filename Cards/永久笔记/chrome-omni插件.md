@@ -1,10 +1,8 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: chrome-omni插件
 ---
-
-			
 
 持续关注一下，以后有改良，就坚持使用，
 

@@ -4,8 +4,8 @@ aliases:
   - 『入不孵出』PKM系统
   - 个人知识管理
 date created: 2022-06-09
-date modified: 2022-08-24
-tags: 索引笔记
+date modified: 2023-03-07
+tags:[索引笔记]
 title: ∑ PKM
 ---
 
@@ -28,6 +28,5 @@ title: ∑ PKM
 ## 为什么需要构建PKM系统？
 
 为了[[终身学习]]
-
 
 [[∑ 工作和生活的效率体系建设]]

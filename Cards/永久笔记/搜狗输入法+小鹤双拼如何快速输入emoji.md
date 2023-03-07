@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-10
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: 搜狗输入法+小鹤双拼如何快速输入emoji
 ---
 

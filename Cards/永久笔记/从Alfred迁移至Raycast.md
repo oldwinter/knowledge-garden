@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: 从Alfred迁移至Raycast
 ---
 
@@ -42,29 +42,29 @@ title: 从Alfred迁移至Raycast
 
 ## 插件功能迁移
 
-- [[Keyboard Maestro]] 的 macros 搜索与触发
+- [[Keyboard Maestro]]的 macros 搜索与触发
 	- 平替
-- 浏览器 tabs 搜索，平替 [[chrome-omni插件]]
+- 浏览器 tabs 搜索，平替[[chrome-omni插件]]
 	- raycast 更强，bookmark 和 history 都支持
-- [[Devonthink]] 搜索
+- [[Devonthink]]搜索
 	- raycast 暂无替代，直接打开 devonthink 的 Spotlight index 开关，就可以文件直接搜索到，曲线救国
 - 词典查找
 	- 平替
-- [[豆瓣]] 电影和书
+- [[豆瓣]]电影和书
 	- raycast 暂无替代，只能用 quicklink 网页搜索了
-- [[🔗github]] 全集操作
+- [[🔗github]]全集操作
 	- raycast 更强，几乎搜索仓库，issure，pull request 等操作全支持
 - 菜单栏操作搜索
 	- 平替。raycast 自带，alfred 需要插件增强
-- [[Notion]] 搜索
+- [[Notion]]搜索
 	- 平替
 - 文件内搜索
 	- raycast 里需要给 file search 插件配置成搜索文件内容，才能实现。
-- [[Obsidian]] 操作
+- [[Obsidian]]操作
 	- alfred 的 shimming obsidian 插件功能强大，raycast 只有一个简陋的搜索的插件
 - terminal 和 finder 互相打开
 	- 平替
-- [[VSCode]] 管理
+- [[VSCode]]管理
 	- 平替
 - 变量名更改，驼峰大小写等
 	- 平替

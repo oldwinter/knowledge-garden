@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
-tags: dataview
+date modified: 2023-03-07
+tags: [dataview]
 title: EXTERNAL
 ---
 
@@ -51,8 +51,8 @@ www.notion.so/oldwinter
 
 ⬇⬇⬇
 
-- [[个人效率系统工作流]]  
-    <https://www.notion.so/oldwinter/d9f7ffc08a7d4a1d9476e6c8e2d16608>
+- [[个人效率系统工作流]]
+	<https://www.notion.so/oldwinter/d9f7ffc08a7d4a1d9476e6c8e2d16608>
 ---
 
 ⬆⬆⬆

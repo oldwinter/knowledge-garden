@@ -1,8 +1,9 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: z命令
 ---
+
 ```
 mkdir ~/code  
 
@@ -14,7 +15,6 @@ echo 'source ~/code/z/z.sh' >> ~/.zshrc
 
 source ~/.zshrc
 ```
-
 
 z 是一个相当实用的 cd 命令增强脚本，目前支持 bash
 

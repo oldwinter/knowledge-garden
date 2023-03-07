@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-01-23
+date modified: 2023-03-07
 uid: 7384af7a-8b51-4e01-b3ef-8fbe2c161c0a
 title: LiveSync
 ---
@@ -35,7 +35,7 @@ title: LiveSync
 #### 买一台云服务器并运行 livesync 的 server 端服务 - 耗时 10 到 30 分钟
 
 - 买服务器
-	- 为了访问速度，可以买 [[阿里云]]，[[腾讯云]]，[[华为云]] 等国内服务器，虽然我的老东家是华为云，但纯便宜角度，我推荐腾讯云，首单一年 45 元，而且还可以先申请试用 1 个月，不满意就跑路换一家。
+	- 为了访问速度，可以买[[阿里云]]，[[腾讯云]]，[[华为云]]等国内服务器，虽然我的老东家是华为云，但纯便宜角度，我推荐腾讯云，首单一年 45 元，而且还可以先申请试用 1 个月，不满意就跑路换一家。
 		- 题外话：大家可能听过『即使不是程序猿，也推荐你学习一门编程语言』这种说法。具体原因，大家有兴趣可以去搜索。我这里想提一个自己的见解『即使不是程序猿，也推荐你学会使用云服务』。原因很简单：
 			- 你会发现很多厂商提供了 docker 的方式安装他们的软件 server 端，其实 docker 纯使用而言，就是执行几条固定的命令行，本质上和双击打开某个应用程序，没难太多。
 			- 当你会使用云服务后，能为你完善自己的工作流，提升效率，带来更多想象空间和可能性。
@@ -46,7 +46,7 @@ title: LiveSync
 		- 安装 docker，[Install Docker Engine on Ubuntu | Docker Documentation](https://docs.docker.com/engine/install/ubuntu/)，就按照文档里面提供的一键式安装命令 `curl -fsSL <<<<https://get.docker.com>>>> -o get-docker.sh && sudo sh get-docker.sh`
 		- 测试是否安装成功：`sudo docker run hello-world`
 - 运行 livesync 的 server 服务
-	- 按照插件官方描述 [obsidian-livesync/setup_own_server.md at main · vrtmrz/obsidian-livesync (github.com)](https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server.md)，3 步
+	- 按照插件官方描述[obsidian-livesync/setup_own_server.md at main · vrtmrz/obsidian-livesync (github.com)](https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server.md)，3 步
 		- 新建一个 local.ini，原样复制过来即可
 		- 运行 `docker run --rm -it -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -v .local.ini:/opt/couchdb/etc/local.ini -p 5984:5984 couchdb`
 			- 注意下这条命令需要将.local.ini 改成你上一步新建的文件路径及名字，比如 `/home/local.ini`

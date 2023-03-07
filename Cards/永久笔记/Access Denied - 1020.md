@@ -1,7 +1,7 @@
 ---
 title: Access Denied - 1020
 date created: 2023-02-18
-date modified: 2023-02-18
+date modified: 2023-03-07
 ---
 
 这次[[chatGPT]]的申请，就用上了这招，大部分ip，都被1020错误码拦截了。在很多网站，也能经常看到1020的界面提示。

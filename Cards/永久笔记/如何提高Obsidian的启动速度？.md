@@ -1,9 +1,10 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 source: https://tft脚本er.medium.com/improve-obsidian-startup-time-on-older-devices-with-the-faststart-script-70a6c590309f
 title: 如何提高Obsidian的启动速度？
 ---
+
 > 本文摘抄自 [tft脚本er.medium.com](https://tft脚本er.medium.com/improve-obsidian-startup-time-on-older-devices-with-the-faststart-script-70a6c590309f)  
 > 本示例库已经内置此脚本，使用脚本后 Ob 启动速度基本都在 2 秒内。
 
@@ -50,7 +51,6 @@ title: 如何提高Obsidian的启动速度？
 - 它向用户界面加载程序的可视元素（按钮、窗格、工作区等）。
 	
 - 如果您启用了插件，Obsidian 会开始一一加载插件。
-	
 
 > 缓存和用户界面的加载速度非常快，即使您有一个很大的保管库。但是，插件的加载可能需要几毫秒到几秒钟的时间，具体取决于启用的插件的数量。
 
@@ -69,11 +69,10 @@ title: 如何提高Obsidian的启动速度？
 2. Obsidian 加载速度很快，因为只启用了几个插件，我可以开始处理我的文件。
 	
 3. 虽然我已经在处理文件，但经过短暂的延时后，在我工作时在后台加载我的其余插件。
-	
 
 令我惊讶的是，这非常有效。Obsidian 的启动速度要快得多，并且在短暂延迟后启动的插件在我工作时对性能没有负面影响。
 
-我称这个脚本为 **FastStart**
+我称这个脚本为**FastStart**
 
 ## 这是如何实现的
 
@@ -84,7 +83,6 @@ title: 如何提高Obsidian的启动速度？
 1. 它可以运行此 脚本 所需的 JavaScript 代码。
 	
 2. 它可以在 Obsidian 启动时运行脚本文件。
-	
 
 考虑到这一点，我创建了一个小文件或脚本，其中包含 Templater 将在启动时运行的 JavaScript 代码。短暂延迟后，这个小脚本将加载我确定可以推迟到以后启动的插件。
 
@@ -107,7 +105,6 @@ title: 如何提高Obsidian的启动速度？
 - 创建第二个文件，其中包含 30 秒后开始的插件 ID 列表。
 	
 - 通过在两个列表之间移动插件 ID 进行实验。
-	
 
 现在让我们详细了解这些步骤。
 
@@ -121,7 +118,7 @@ title: 如何提高Obsidian的启动速度？
 
 黑曜石中的模板设置
 
-## **FastStart-StartupScript 文件**
+##**FastStart-StartupScript 文件**
 
 接下来，在上一步定义的文件夹中，**创建一个名为 FastStart-StartupScript 的文件**。此文件是我们将放置此解决方案的 JavaScript 代码的位置。
 
@@ -141,20 +138,19 @@ FastScript Javascript 代码
 
 ## FastStart-GenerateListOfInstalledPlugins
 
-现在在模板文件夹中，如上一步所做的那样，创建另一个名为 _FastStart-GenerateListOfInstalledPlugins 的文件。_
+现在在模板文件夹中，如上一步所做的那样，创建另一个名为*FastStart-GenerateListOfInstalledPlugins 的文件。*
 
 使用此 [链接](https://gist.github.com/TfT脚本er/94e9327e7310217ef5c98ed155b1f5e7) 中的代码，将其粘贴到您刚刚在 Vault 中创建的文件中。该文件在您的 Vault 中应如下所示：
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*i5MYer7lThEjOt0O1xm6eg.png)
 
-## _FastStart-Plugins-ShortDelay 和 FastStart-Plugins-LongDelay_
+##*FastStart-Plugins-ShortDelay 和 FastStart-Plugins-LongDelay*
 
 接下来，在您的保管库中，您需要再创建两个文件。这些文件不应位于 Templater 使用的模板文件夹中，但可以存储在您喜欢的 Vault 中的任何位置。在您的 Vault 中创建这两个文件：
 
 - FastStart- 插件 -ShortDelay
 	
 - FastStart- 插件 -LongDelay
-	
 
 每个文件的名称应与此处的名称完全相同。目前，这些文件是空的。
 
@@ -187,7 +183,6 @@ FastScript Javascript 代码
 1. 记录 Obsidian 在不更改当前配置的情况下加载所有插件所需的时间。
 	
 2. 在社区插件设置屏幕中将您的设备置于“安全模式”并重新启动 Obsidian 也很好。记录在安全模式下需要多长时间。这个基线数字很有价值，因为它显示了在没有启用插件的情况下 Obsidian 需要多长时间，坦率地说，我们无法更改 Obsidian 本身需要多少时间。所以这个基线是可以添加任何优化之前的“最小”启动时间。
-	
 
 您可能还会发现在社区插件设置中启用调试启动时间很有帮助。它提供了有关插件启动所需时间的反馈：
 
@@ -206,11 +201,10 @@ FastStart 基于插件启动的 3 个阶段：
 2. 加载 Obsidian 后 2 秒应该启动哪些插件，并且您已经可以使用该程序
 	
 3. 哪些插件应在上一阶段后 30 秒加载。
-	
 
 同样，这个概念是逐步加载插件以优化 Obsidian 的启动时间。
 
-## **第 1 步：启用/禁用以 Obsidian 开头的插件**
+##**第 1 步：启用/禁用以 Obsidian 开头的插件**
 
 您需要在社区插件设置屏幕中打开插件列表。列出您已启用的所有插件。
 
@@ -220,13 +214,13 @@ FastStart 基于插件启动的 3 个阶段：
 
 ## 第 2 步：定义在 Obsidian 启动几秒钟后应该启动哪些插件
 
-之前，我们创建了一个名为 _FastStart-Plugins-ShortDelay_ 的文件。该文件列出了在 Obsidian 初始化几秒钟后应该启动的所有插件。
+之前，我们创建了一个名为*FastStart-Plugins-ShortDelay*的文件。该文件列出了在 Obsidian 初始化几秒钟后应该启动的所有插件。
 
 在这个文件中，我定义了我迟早可能需要的插件，以及我知道的插件对 Obsidian 的性能影响不大。
 
 在这个文件中，您需要列出每个插件在加载 Obsidian 后几秒钟后应该启动的列表。每个插件都应该在自己的行中，并且插件 ID 应该在文件中列出。
 
-> **插件 ID 是什么？**您安装的每个插件都有一个名称和一个标识符（或简称 ID）。我们需要为 FastStart 提供插件的 ID，因为 ID 是识别已安装插件的唯一方式。
+>**插件 ID 是什么？**您安装的每个插件都有一个名称和一个标识符（或简称 ID）。我们需要为 FastStart 提供插件的 ID，因为 ID 是识别已安装插件的唯一方式。
 
 这是我的保险库中 _ 的 FastStart-Plugins-ShortDelay_ 文件的样子：
 
@@ -234,13 +228,13 @@ FastStart 基于插件启动的 3 个阶段：
 
 您可能认识其中一些插件，但也许您从未见过它们的 ID。
 
-如何获取插件 ID？这就是我们之前制作的 _FastStart-GenerateListOfInstalledPlugins_ 脚本发挥作用的地方。此 Templater 脚本将生成所有已安装插件及其插件 ID 的列表 _。_
+如何获取插件 ID？这就是我们之前制作的*FastStart-GenerateListOfInstalledPlugins*脚本发挥作用的地方。此 Templater 脚本将生成所有已安装插件及其插件 ID 的列表*。*
 
 要使用此脚本，请在您的 Vault 中创建一个空白文件。然后从命令面板中，运行命令**Templater：打开插入模板：**
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*ycJQHqG4VqMiIZtQdmrccQ.png)
 
-然后从模板列表中选择 _FastStart-GenerateListOfInstalledPlugins。_
+然后从模板列表中选择*FastStart-GenerateListOfInstalledPlugins。*
 
 此脚本应生成所有插件的文件。这是我在黑曜石阅读视图中的列表：
 
@@ -252,11 +246,11 @@ FastStart 基于插件启动的 3 个阶段：
 
 ## 第 3 步：定义稍后应该启动的插件
 
-现在我们要打开我们在 Vault 中创建的 _FastStart-Plugins-LongDelay 文件。_ 该文件将包含我们要启动的其余插件，但稍晚一些。这是我的样子：
+现在我们要打开我们在 Vault 中创建的*FastStart-Plugins-LongDelay 文件。*该文件将包含我们要启动的其余插件，但稍晚一些。这是我的样子：
 
 ![](https://cubox.pro/c/filters:no_upscale()?imageUrl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*EJtWI9gyRQVoowDIgGHDnA.png)
 
-如您所见，此文件类似于 _FastStart-Plugins-ShortDelay_。它是相同的。它是插件 ID 的列表。
+如您所见，此文件类似于*FastStart-Plugins-ShortDelay*。它是相同的。它是插件 ID 的列表。
 
 > 注意：您现在可以在这两个文件之间移动插件 ID，并且无需重复在设置中禁用插件的第 1 步。我强烈建议尝试以各种组合测试插件，以找到为您的设备加载插件的最快方法，无论是在第 2 步或第 3 步的文件中。
 

@@ -1,11 +1,13 @@
 ---
 date created: 2022-08-31
-date modified: 2022-08-31
+date modified: 2023-03-07
 title: npm
 ---
+
 ## 快速安装
 
 ## 代理配置
+
 ```
 npm config set proxy http://127.0.0.1:1087
 npm config set https-proxy http://127.0.0.1:1087

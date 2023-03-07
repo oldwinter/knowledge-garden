@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-07-14
-date modified: 2023-02-14
+date modified: 2023-03-07
 title: 本库推荐的obsidian入门路线及资源
 ---
 
@@ -23,7 +23,7 @@ up:: [[🧰 本库使用指南]]
 	- 其他各种文章，基本都能在落山鸡的帮助文档中搜到索引。再次用文字感谢这个🐔。
 	- 这位小姐姐写的一系列入门文章深入浅出，单拎出来推荐一下：[莉莉安Obsidian文章MOC - 经验分享 - Obsidian 中文论坛](https://forum-zh.obsidian.md/t/topic/324)。
 	- 如果对插件情有独钟，这位台湾朋友，做了将近100个视频讲解各种插件的使用：[简睿学堂-emisjerry的个人空间_哔哩哔哩_bilibili](https://space.bilibili.com/1119961064)。关键在于，他**每个视频都配了文章**，小白看视频，老鸟看文章，各取所需，学习效率杠杠的。
-- [[2023-03-03]]新增， 咖啡豆obsidian入门指南写得很详尽很用心 https://coffeetea.top/zh/
+- [[2023-03-03]]新增，咖啡豆obsidian入门指南写得很详尽很用心 https://coffeetea.top/zh/
 
 ## 然后看看别人的示例库
 

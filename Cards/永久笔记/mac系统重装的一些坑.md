@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: mac系统重装的一些坑
 ---
 
@@ -16,4 +16,4 @@ title: mac系统重装的一些坑
 - 油猴脚本也没有自动同步，需要重新下载
 	- 但是有 Google drive 或 onedrive 可以备份同步，用后者。
 - zsh，git 等命令行配置会丢失，需要重新授权
-- edge 的 [[PWA]] 应用不会自动同步，需要重新手动安装。
+- edge 的[[PWA]]应用不会自动同步，需要重新手动安装。

@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-15
-date modified: 2023-01-23
+date modified: 2023-03-07
 title: ∑ obsidian插件
 ---
 
@@ -19,7 +19,7 @@ title: ∑ obsidian插件
 
 ## 插件安装
 
-johnny整理且每周更新的插件列表，带一句话中文介绍：  
+johnny整理且每周更新的插件列表，带一句话中文介绍：
 [Airtable - OB社区插件汇总 - Johnny整理 - 每周更新 - B站 Johnny学](https://airtable.com/shrdmp10Lxmf5Wmgl/tblJqnWpcKURTjysX)
 
 老外做的插件列表，有源码，有更多数据  
@@ -62,7 +62,7 @@ md原生表格编辑体验太差，以后简单表格考虑直接使用list替�
 | advanced-cursors                                   |          |                                                              | 目前不需要多光标操作                                           |
 | annotator                                          |          |                                                              | 插件太重，而且读书笔记做在这里太不轻便了                       |
 | chronology                                         |          | 以日历的形式显式文件编辑历史                                 |                                                                |
-| cmenu                                              |          | 编辑菜单很重要，而且支持定制                                 | [[cmenu学习笔记]] ，貌似没多大用，用命令行就行了               |
+| cmenu                                              |          | 编辑菜单很重要，而且支持定制                                 | [[cmenu学习笔记]]，貌似没多大用，用命令行就行了               |
 | code-block-copy                                    |          | 程序员必备：复制代码太方便了，以后应该会自带                 |                                                                |
 | creases                                            |          | 长文的局部折叠局部展开工具                                   |                                                                |
 | customizable-menu                                  |          | 自定义右键菜单                                               |                                                                |
@@ -90,7 +90,7 @@ md原生表格编辑体验太差，以后简单表格考虑直接使用list替�
 | pandoc                                             |          |                                                              | 目前还没用到导出功能                                           |
 | pane-relief                                        | y        | 给返回前进按钮加上历史记录                                   |                                                                |
 | periodic-notes                                     |          | 和 calendar 一样，能坚持必装                                 |                                                                |
-| quick-explorer                                     | y        | 在菜单栏显示当前文件所在文件夹路径，不知道是否有性能问题？   |                                                                |
+| quick-explorer                                     | y        | 在菜单栏显示当前文件所在文件夹路径，不知道是否有性能问题？|                                                                |
 | recent-files                                       | y        | 自带的 cmd +o 只能查看近 10 个，这个有 30 个而且有常驻按钮   |                                                                |
 | sliding-panes                                      | y        | 横向无限滑动场景有时候很有用                                 |                                                                |
 | spaced-repetition                                  | y        | 间隔复习，知识完美闭环，必装                                 | [[Spaced Repetition]]                                          |

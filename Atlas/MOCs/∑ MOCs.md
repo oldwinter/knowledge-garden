@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-06
-date modified: 2022-08-24
+date modified: 2023-03-07
 tags: [索引笔记, 待办/持续迭代]
 title: ∑ MOCs
 ---
@@ -10,7 +10,6 @@ title: ∑ MOCs
 ```query
 file:∑ 
 ```
-
 
 ## 初来乍到，随意走走
 

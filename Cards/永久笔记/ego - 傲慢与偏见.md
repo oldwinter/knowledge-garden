@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
-title: 傲慢与偏见
+date modified: 2023-03-07
+title: ego - 傲慢与偏见
 ---
 
 尝试打破自己固有的观念以及可能存在的，真实体验后，再来说话：

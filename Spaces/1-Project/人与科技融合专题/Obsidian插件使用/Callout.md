@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-01-23
+date modified: 2023-03-07
 title: Callout
 ---
 
@@ -12,33 +12,33 @@ title: Callout
 
 ### 提示框类型
 
-> [!note]  
+>[!note]
 > Here's a callout block.  
-> It supports **markdown** and [[Internal link|wikilinks]].
+> It supports**markdown**and [[Internal link|wikilinks]].
 
-> [!abstract]
+>[!abstract]
 
 >[!todo]
 
-> [!info]
+>[!info]
 
-> [!tip]
+>[!tip]
 
-> [!success]
+>[!success]
 
-> [!question]
+>[!question]
 
-> [!warning]
+>[!warning]
 
-> [!failure]
+>[!failure]
 
-> [!danger]
+>[!danger]
 
-> [!bug]
+>[!bug]
 
-> [!example]
+>[!example]
 
-> [!quote]
+>[!quote]
 
 除了info 类型还支持以下类型
 
@@ -58,10 +58,12 @@ title: Callout
 ### 提示框的各种用法
 
 1. 可以没有内容直接显示标题
-> [!TIP] Callouts can have custom titles, which also supports **markdown**!
+
+>[!TIP]Callouts can have custom titles, which also supports**markdown**!
 
 2. 折叠提示框
-> [!FAQ]- Are callouts foldable?  
+
+>[!FAQ]- Are callouts foldable?  
 > Yes! In a foldable callout, the contents are hidden until it is expanded.
 
 3. 自定义提示框  
@@ -83,24 +85,24 @@ title: Callout
 
 The Sidenote Callout width (宽度) and outdention is customizable (定制) in the Style Settings.
 
-> [!SIDENOTE]  
+>[!SIDENOTE]
 > aaa
 
 #### STANDARD CALLOUTS
 
-> [!LINK]
+>[!LINK]
 
-> [!URL]
+>[!URL]
 
-> [!MAIL]
+>[!MAIL]
 
-> [!EMAIL]
+>[!EMAIL]
 
-> [!FILE]
+>[!FILE]
 >
 
-> [!ATTACHMENT]
+>[!ATTACHMENT]
 
-> [!PHONE]
+>[!PHONE]
 
-> [!GOAL]
+>[!GOAL]

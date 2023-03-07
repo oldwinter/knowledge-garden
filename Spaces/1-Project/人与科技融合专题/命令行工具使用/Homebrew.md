@@ -1,8 +1,8 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: Homebrew
-tags: #命令行工具
+tags: [命令行工具]
 ---
 
 ## 快速安装

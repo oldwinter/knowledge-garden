@@ -1,13 +1,14 @@
 ---
-title: ∑ 好工具周刊 - BestXTools
+title: 好工具周刊 - BestXTools
 date created: 2023-02-10
-date modified: 2023-02-10
+date modified: 2023-03-07
 订阅官网: https://discuss-cn.bestxtools.com/
 column1: "0"
 kk: mm
 带: true
 ---
-ll:: 
+
+ll::
 
 [BestXTools](https://discuss-cn.bestxtools.com/)
 

@@ -1,3 +1,8 @@
+---
+title: ∑ AI MOC
+date created: 2023-02-22
+date modified: 2023-03-07
+---
 
 - 生成式对话AI
 	- [[chatGPT]]
@@ -7,7 +12,7 @@
 		- 聚合了包括chatgpt在内的4个对话AI，响应快且免费。
 - 图片绘制AI
 	- AI 绘图服务商
-		- [[Midjourney - AI绘图]] ，目前公认最好用
+		- [[Midjourney - AI绘图]]，目前公认最好用
 		- [[DALL·E 2 - AI绘图]]
 		- [[Stable Diffusion - AI作画]]
 	- [[AI绘图提示语prompt]]
@@ -22,8 +27,6 @@
 	- [GitHub - guaguaguaxia/weekly\_report](https://github.com/guaguaguaxia/weekly_report)
 - 自动生成ppt
 	- [Tome - The AI-powered storytelling format](https://beta.tome.app/)
-- 
-
 
 ## 参考文献
 

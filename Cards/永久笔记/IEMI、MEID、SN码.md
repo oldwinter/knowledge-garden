@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-15
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: IEMI、MEID、SN码
 ---
 
@@ -16,7 +16,7 @@ IMEI 是国际移动设备识别码，是区分移动设备的标志，一般用
 
 我们平时说的手机序列号、手机串号，就是指的 IMEI 码。
 
-### MEID 码： 移动设备识别码，英文 Mobile Equipment Identifier 的缩写
+### MEID 码：移动设备识别码，英文 Mobile Equipment Identifier 的缩写
 
 与 IMEI 一样，MEID 也是移动设备标识码，但一般用于 CDMA 制式的设备上，是 ESN 码的升级版。格式：14 位十六进制数。
 

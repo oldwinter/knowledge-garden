@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 preloadIframes: true  
 title: advanced slides奇技淫巧
 ---
@@ -9,10 +9,8 @@ title: advanced slides奇技淫巧
 
 ---
 - ## 嵌入代码块儿，并按顺序点击高亮
-  
-  
+
   ---
-  
 
   note:
 

@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2023-02-09
-title: obsidian
+date modified: 2023-03-07
+title: Obsidian
 tags: [评论/少数派, macOS软件]
 设置同步: git和官方同步
 评价: 5
@@ -41,5 +41,3 @@ jumps:: [[Notion]]
 ## 参考文献
 
 相关问答大集合。[如何使用Obsidian软件？ - 知乎](https://www.zhihu.com/question/401972085/answer/2520330932?utm_campaign=&utm_medium=social&utm_oi=627815471005831168&utm_psn=1547145735178776576&utm_source=cn.ticktick.task)
-
-

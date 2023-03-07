@@ -1,3 +1,8 @@
+---
+title: obsidian canvas当前的致命缺陷
+date created: 2023-02-27
+date modified: 2023-03-07
+---
 - canvas中引用的卡片，打开后，其反向链接面板无数据。
 - canvas中嵌套引用其他canvas，打开后，其反向链接面板无数据。
 - 以上，canvas中引用的md和canvas文件，甚至用全局搜索都搜不到，估计因为json格式存储，没被纳入搜索范围。但新版本1.1.15，已经能搜索canvas中的卡片了。所以看他们啥时候能解决。

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-09-08
+date modified: 2023-03-07
 title: Github Copilot
 ---
 
@@ -18,7 +18,6 @@ title: Github Copilot
 - 也添加了edu邮箱接收信息
 
 ![](https://img.oldwinter.top/github学生包申请成功截图.jpeg)
-
 
 毕竟有家属属于老师，却申请失败，我以此说服自己，我不是纯白嫖github。
 

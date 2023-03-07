@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-15
-date modified: 2023-03-03
+date modified: 2023-03-07
 title: routing模式和配置
 ---
 
@@ -11,6 +11,7 @@ title: routing模式和配置
 ## [[V2rayU]]中自带的路由模式：绕过局域网和大陆地址什么意思
 
 这应该是v2rayu自带的配置，初心应该是帮助新手配置。其实它的作用和下方的ip和域名设置是重叠了，比如，勾选绕过局域网和大陆地址后，发现配置文件中会自动新增domain和ip相关的4行数据，这样就无需再自己配置下方的『直连ip或域名』内容了，配了也会重叠无效果：
+
 ```json
 "routing": {
     "settings": {
@@ -38,8 +39,6 @@ title: routing模式和配置
 ```
 
 ![image.png](https://img.oldwinter.top/202303031552112.png)
-
-
 
 ## “AsIs”、”IPIfNonMatch”、”IPOnDemand”三个域名解析策略是什么意思，有什么区别？
 

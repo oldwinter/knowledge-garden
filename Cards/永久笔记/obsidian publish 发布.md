@@ -1,12 +1,13 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: obsidian publish 发布
+tags: [待办/某天]
 ---
 
 ## 2022年6月新发现
 
-有个5美元1个月的markbase服务，正在内测。关注。目前双链还不支持。 #待办/某天
+有个5美元1个月的markbase服务，正在内测。关注。目前双链还不支持。#待办/某天
 
 ## 第三方发布服务
 

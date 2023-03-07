@@ -1,3 +1,8 @@
+---
+title: 本库启用obsidian核心插件的进阶平替第三方插件
+date created: 2023-03-02
+date modified: 2023-03-07
+---
 - 快速切换
 	- 改用[[Another Quicker Switcher]]。
 - 命令面板

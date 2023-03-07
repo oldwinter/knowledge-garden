@@ -1,7 +1,7 @@
 ---
 date created: 2022-07-20
-date modified: 2022-08-20
-tags: 目录笔记
+date modified: 2023-03-07
+tags: [目录笔记]
 title: § flomo101 - 思维方式目录
 ---
 

@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
-title: devonthink
+date modified: 2023-03-07
+title: Devonthink
 tags: [macOS软件, 待办/某天]
 作用: 个人信息管理系统
 评价: 4
@@ -18,4 +18,3 @@ tags: [macOS软件, 待办/某天]
 
 - 没有直观体会到其搜索能力。
 - 和其他 app 联动也不方便。功能可以被云盘 +cubox 取代。
-

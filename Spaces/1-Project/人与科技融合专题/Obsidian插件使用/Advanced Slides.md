@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-01-23
+date modified: 2023-03-07
 title: Advanced Slides
 当前使用频率: 3
 当前是否还在使用: yes
@@ -32,17 +32,17 @@ title: Advanced Slides
 <!--
 {
  "data": {
-  "labels": ["January"," February"," March"," April"," May"," June"," July"],
+  "labels":["January"," February"," March"," April"," May"," June"," July"],
   "datasets":[
    {
-    "data":[65,59,80,81,56,55,40],
-    "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+	"data":[65,59,80,81,56,55,40],
+	"label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
    },
    {
-    "data":[28,48,40,19,86,27,90],
-    "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+	"data":[28,48,40,19,86,27,90],
+	"label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
    }
-  ]
+]
  }
 }
 -->
@@ -66,7 +66,7 @@ width: 960
 
 双向引用，直接 ppt 还有个好处，就是双向同步，不会改了这忘了那
 
-还有 [[slidev]]正在开发中，等成熟了和[[revealjs]] 综合对比看看。 ^4f22e2
+还有 [[slidev]]正在开发中，等成熟了和[[revealjs]] 综合对比看看。^4f22e2
 
 ## 奇技淫巧
 
@@ -74,10 +74,10 @@ width: 960
 
 ## 插件简介 %% fold %%
 
-这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。  
+这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。
 官方文档 [Advanced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/getting-start/)
 
-> We follow the philosophy of `convention over configuration`, which means that in most cases it is sufficient to simply write a Slide in **Obsidian Markdown syntax**.
+> We follow the philosophy of `convention over configuration`, which means that in most cases it is sufficient to simply write a Slide in**Obsidian Markdown syntax**.
 
 %% 我用的目的，应该就是基于现有的结构化的文档，进行分钟级的低时间成本改造，立马就可以达到 ppt 效果。%%
 
@@ -248,9 +248,8 @@ note 之后，就是演讲者自己的笔记和注释
 用 + 号和）号。实时阅览模式，➕会被自动变成圆，这里得换成编辑模式
 
 - aaa %% fold %%
-
-  + bbb
-  + ccc
+  - bbb
+  - ccc
 
   --
 
@@ -286,7 +285,7 @@ note 之后，就是演讲者自己的笔记和注释
 
 <split even gap="3">
 
-**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+**Lorem Ipsum**is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
 
@@ -298,7 +297,7 @@ into electronic typesetting, remaining essentially unchanged. It was popularised
 
 <split left="2" right="1" gap="2">
 
-**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+**Lorem Ipsum**is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
 
@@ -399,7 +398,7 @@ Heading
 
 ![[Image.jpg]]
 
-**Lorem Ipsum** is simply dummy text
+**Lorem Ipsum**is simply dummy text
 
 </grid>
 
@@ -411,7 +410,7 @@ Left
 
 ![[Image.jpg]]
 
-**Lorem Ipsum** is simply dummy text
+**Lorem Ipsum**is simply dummy text
 
 </grid>
 

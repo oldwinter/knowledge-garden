@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-12-11
+date modified: 2023-03-07
 title: 红蓝双方地形及ban and pick - bp方法
 ---
 
@@ -10,7 +10,7 @@ title: 红蓝双方地形及ban and pick - bp方法
 
 ## 红蓝双方的 bp 顺序
 
-- 蓝色方先ban先选。先ban1，先选1，后续都是2,2地ban和选，最后剩1 。
+- 蓝色方先ban先选。先ban1，先选1，后续都是2,2地ban和选，最后剩1。
 - 路人局单排，一般 ban 掉恶心的辅助类英雄即可。
 
 ## 从线上对线角度分析，一般哪个分路先选比较好？

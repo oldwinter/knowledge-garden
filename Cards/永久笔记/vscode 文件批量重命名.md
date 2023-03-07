@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-11
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: vscode 文件批量重命名
 ---
 

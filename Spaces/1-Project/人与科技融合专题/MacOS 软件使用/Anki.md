@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: Anki
 tags: [macOS软件]
 作用: 周期记忆闪卡
@@ -21,4 +21,3 @@ tags: [macOS软件]
 ## 后续
 
 先用一段时间，有心得了再去系统学一下别人怎么制作卡片的。
-

@@ -1,5 +1,5 @@
 ---
-tags: macOS软件
+tags: [macOS软件]
 作用: 翻墙 主力
 评价: 5
 设置同步: 手动
@@ -7,7 +7,7 @@ tags: macOS软件
 是否已重装:
 title: V2rayU
 date created: 2023-02-28
-date modified: 2023-03-01
+date modified: 2023-03-07
 ---
 
 账号网址：
@@ -255,10 +255,10 @@ sudo cp -r ~/Library/Preferences/net.yanue.V2rayU.plist /Users/$USER/Documents/�
 - 全局代理
 	- 有别于 vpn,只是将代理信息更新到系统代理 http,https,socks,若需要真正全局模式, 推荐搭配使用 Proxifier。
 	- [[routing模式和配置]]
-	- geoip.dat 和 geosite.dat 作为基础配置文件，可供 routing 列表用一行话就能快速调用。其加强版 [GitHub - Loyalsoldier/v2ray-rules-dat: 🦄 🎃 👻 V2Ray 路由规则文件加强版，可代替 V2Ray 官方 geoip.dat 和 geosite.dat，兼容 Shadowsocks-windows、Xray-core、Trojan-Go 和 leaf。Enhanced edition of V2Ray rules dat files, compatible with Xray-core, Shadowsocks-windows, Trojan-Go and leaf.](https://github.com/Loyalsoldier/v2ray-rules-dat)
+	- geoip.dat 和 geosite.dat 作为基础配置文件，可供 routing 列表用一行话就能快速调用。其加强版[GitHub - Loyalsoldier/v2ray-rules-dat: 🦄 🎃 👻 V2Ray 路由规则文件加强版，可代替 V2Ray 官方 geoip.dat 和 geosite.dat，兼容 Shadowsocks-windows、Xray-core、Trojan-Go 和 leaf。Enhanced edition of V2Ray rules dat files, compatible with Xray-core, Shadowsocks-windows, Trojan-Go and leaf.](https://github.com/Loyalsoldier/v2ray-rules-dat)
 - pac 代理
 	- [[pac模式和配置]]
-	- 目前越来越多的 app，都推荐用全局代理的 routing 模式，甚至直接删了 pac 模式，课件其应该没有 routing 好用，只要 routing 列表更新地更合理，比 [[GFW list]] 更可靠的话。
+	- 目前越来越多的 app，都推荐用全局代理的 routing 模式，甚至直接删了 pac 模式，课件其应该没有 routing 好用，只要 routing 列表更新地更合理，比[[GFW list]]更可靠的话。
 - 手动代理
 	- 不配置系统级代理。可以自行使用浏览器插件或其他软件配置需要的代理模式。浏览器推荐搭配使用 Proxy SwitchyOmega。
 	- 但是这个模式个人使用几乎没有用处和场景。

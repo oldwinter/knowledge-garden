@@ -2,7 +2,7 @@
 aliases:
   - TTRSS
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: tiny tiny RSS
 ---
 
@@ -16,5 +16,5 @@ title: tiny tiny RSS
 
 缺点：
 
-- 样式有点丑，估计需要去折腾主题，以后有需要再折腾。现在先用 [[Reeder]]
+- 样式有点丑，估计需要去折腾主题，以后有需要再折腾。现在先用[[Reeder]]
 - 部署的 server 也需要翻墙，不然抓不到信息，有点麻烦。

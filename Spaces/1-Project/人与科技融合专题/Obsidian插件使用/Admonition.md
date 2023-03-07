@@ -1,11 +1,11 @@
 ---
 date created: 2022-06-09
-date modified: 2023-01-23
+date modified: 2023-03-07
 title: Admonition
 当前是否还在使用: no
 使用或不用的原因: 已经被官方自带 [[Callout]] 取代
 当前使用频率: 0
-tags: Obsidian插件
+tags: [Obsidian插件]
 ---
 
 ## 各种样式预览

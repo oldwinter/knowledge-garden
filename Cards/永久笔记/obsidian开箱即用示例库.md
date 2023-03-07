@@ -1,10 +1,10 @@
 ---
 date created: 2022-06-29
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: obsidian开箱即用示例库
 ---
 
-> [!INFO] 提示 
+>[!INFO]提示  
 > 英文的示例库也有很多，这里只收编我看过的并学习过的中文的示例库。
 
 - [GitHub - cumany/Blue-topaz-examples: Blue topaz themes example vault for Obsidian](https://github.com/cumany/Blue-topaz-examples)
@@ -28,5 +28,6 @@ title: obsidian开箱即用示例库
 	- 科研向的库，拒绝花里胡哨，符合我的胃口。
 
 [[2022-08-29]]更新：
+
 - [GitHub - laozhou-in-germany/Chens_LMS_Public: The LMS (Life Management System) is a free tool for personal knowledge management and goal management based on Obsidian.md.](https://github.com/laozhou-in-germany/Chens_LMS_Public)
 	- 主打目标管理+dailynote+知识管理+回顾系统。配有各种丰富的模板。

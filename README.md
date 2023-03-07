@@ -1,20 +1,20 @@
 ---
 date created: 2022-08-06
-date modified: 2022-12-10
-tags: 本库教程
+date modified: 2023-03-07
+tags: [本库教程]
 title: README
 dg-publish: true
 ---
 <h1 align="center">oldwinterの数字花园</h1>
 <img src="https://img2.oldwinter.top/202208211431065.svg">
 <p align="center">
-    <a href="https://oldwinter.top/README">主发布站</a> |
-    <a href="https://notes.oldwinter.top/README">备发布站</a> |
-    <a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
+	<a href="https://oldwinter.top/README">主发布站</a> |
+	<a href="https://notes.oldwinter.top/README">备发布站</a> |
+	<a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
 </p>
 <p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
 
-> [!TIP] 重大更新💡  
+>[!TIP]重大更新💡  
 > 迎接全新的obsidian 1.0版本，本库也正式发布v1.0版本，请到release中下载。
 
 ## 这是什么
@@ -26,7 +26,7 @@ dg-publish: true
 ## 快速开始
 
 - 在线逛一逛。访问本库的[主发布站](https://garden.oldwinter.top/README#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)[^1]，借助页面底部或右侧的[[反向链接]]面板随意漫游，感受[[双链笔记]]和[[卡片笔记]]的魅力。这里是地图：[[🍀 花园导览]]。
-- 下来用一用。`Use this template`或`Code -> Download ZIP`本[源代码仓](https://github.com/oldwinter/knowledge-garden)，并用 [[Obsidian]]、[[Logseq]][^2]或[[VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
+- 下来用一用。`Use this template`或`Code -> Download ZIP`本[源代码仓](https://github.com/oldwinter/knowledge-garden)，并用[[Obsidian]]、[[Logseq]][^2]或[[VSCode]][^3]任意一款app打开本库后进行编辑和进一步探索。如果你也使用obsidian，想借鉴本库的一些配置、插件以及使用理念，这里是传送门：[[🧰 本库使用指南]]。
 - 自己试一试。你看到的全部内容，包括文字、图片、网站，都是完全开源的，如果你想知道这一套发布到web的流程是怎么运作的：[[🌏 本库发布指南]]。或许你会想知道我[[为什么要开源笔记]]。
 
 ## 目录结构和本开箱即用库截图
@@ -41,7 +41,7 @@ dg-publish: true
 
 - 如果您想参与贡献，非常抱歉目前这是我的个人笔记库，可能暂时没法儿接受其他人的笔记合入。
 - 如果您有相关问题，或希望我加速填坑，请移步[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
-- 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com 。
+- 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com。
 
 ## Star History
 

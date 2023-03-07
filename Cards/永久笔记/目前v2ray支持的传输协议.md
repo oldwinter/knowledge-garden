@@ -1,7 +1,7 @@
 ---
 title: 目前v2ray支持的传输协议
 date created: 2023-01-06
-date modified: 2023-01-06
+date modified: 2023-03-07
 ---
 
 [[VMess]]、Vless、[[Trojan]]、Socks和[[Shadowsocks]]协议，都算应用层，他们基于的传输层协议，主要有以下几种

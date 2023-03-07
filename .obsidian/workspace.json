@@ -23,12 +23,12 @@
             }
           },
           {
-            "id": "0a27a3ea0f58edbf",
+            "id": "e07e6322b029a211",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/安卓手机必备软件.md",
+                "file": "Cards/永久笔记/bilibili.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/安卓手机必备软件.md"
+                "file": "Cards/永久笔记/bilibili.md"
               }
             }
           },
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/安卓手机必备软件.md",
+                "file": "Cards/永久笔记/bilibili.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/安卓手机必备软件.md",
+                "file": "Cards/永久笔记/bilibili.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/安卓手机必备软件.md",
+                "file": "Cards/永久笔记/bilibili.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,21 +210,20 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "templater-obsidian:Templater": false,
-      "dbfolder:创建一个新数据库表": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "omnisearch:Omnisearch": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "0a27a3ea0f58edbf",
+  "active": "e07e6322b029a211",
   "lastOpenFiles": [
-    "Atlas/DB folders/∑ DB 安卓软件.md",
-    "Cards/永久笔记/安卓手机必备软件.md",
-    "Atlas/DB folders/∑ DB 常用网站.md",
+    "Cards/永久笔记/b站.md",
+    "Calendar/Daily notes/2023-02-24.md",
+    "Calendar/Daily notes/2023-02-25.md",
+    "Calendar/Daily notes/Daily notes归档/2023/2023-01-26.md",
     "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Sources/Movies + TV/豆瓣影音导入/1917.md",
+    "Cards/永久笔记/安卓手机必备软件.md",
+    "Atlas/DB folders/∑ DB 安卓软件.md",
+    "Atlas/DB folders/∑ DB 常用网站.md",
     "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
     "Cards/永久笔记/sed命令+正则表达式批量替换.md",
     "Cards/永久笔记/正则表达式.md",
@@ -246,13 +245,8 @@
     "Omnivore/2023-02-20",
     "Omnivore",
     "Calendar/Daily notes/2023-03-05.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/∑ AI MOC.md",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",
     "Atlas/Canvas/未命名 1.canvas",
-    "README.md",
-    "Cards/永久笔记/CloudFlare.md",
-    "Cards/永久笔记/确定感.md",
-    "Cards/永久笔记/🧑吕立青.md",
     "Atlas/Canvas/未命名.canvas",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",

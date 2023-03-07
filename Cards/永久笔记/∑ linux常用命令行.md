@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-09-22
-tags: 索引笔记
+date modified: 2023-03-07
+tags: [索引笔记]
 title: ∑ linux常用命令行
 ---
 - 官方下载 pkg 安装
@@ -33,5 +33,3 @@ title: ∑ linux常用命令行
 	- [[kubectl]]
 	- [[kubectx]]
 	- [[mackup]]
-
-

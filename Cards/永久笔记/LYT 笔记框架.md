@@ -2,7 +2,7 @@
 aliases:
   - lyt kit
 date created: 2022-06-19
-date modified: 2023-02-18
+date modified: 2023-03-07
 title: LYT 笔记框架
 ---
 
@@ -28,7 +28,6 @@ linking your thinking的缩写。核心就是link。这个框架虽然强调文�
 - 通过做笔记 note-making 而不是写笔记 note-taking，构建活笔记，[[如何做笔记 note-making]]。
 - 使用[[ACCESS 笔记组织法]]。
 - 强调[[用efforts而非projects思维，去发展自己的想法]]。
-
 
 ## 其他
 

@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-22
-date modified: 2022-08-22
-tags: 复习回顾
+date modified: 2023-03-07
+tags: [复习回顾]
 title: sed命令+正则表达式批量替换
 sr-due: 2022-09-27
 sr-interval: 29
@@ -10,7 +10,7 @@ sr-ease: 290
 
 [macOS grep + sed 批量替换多个文件的内容 - Dvel's Blog](https://dvel.me/posts/macos-replace-contents-multiple-files/)  
 
-`grep -lr --null 'title' * | xargs -0 sed -i -r 's/title: (.*)/title: \"\1\"/g'`
+`grep -lr --null 'title'*| xargs -0 sed -i -r 's/title: (.*)/title: \"\1\"/g'`
 
 ## mac上的sed命令有坑，和linux不完全一样，需要注意
 

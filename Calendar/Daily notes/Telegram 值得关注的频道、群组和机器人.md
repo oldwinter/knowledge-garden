@@ -1,7 +1,7 @@
 ---
 title: Telegram 值得关注的频道、群组和机器人
 date created: 2023-03-04
-date modified: 2023-03-04
+date modified: 2023-03-07
 ---
 
 ## 频道
@@ -39,6 +39,5 @@ date modified: 2023-03-04
 
 - zlib找电子书
 	- @zlibrary2bot
-
 
 [2022电报群推荐/Telegram频道/机器人推荐：免费资源、羊毛、合租](https://pandavpnpro.com/blog/zh-cn/telegram-group-channel-bot)

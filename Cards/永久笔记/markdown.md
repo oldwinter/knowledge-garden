@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: markdown
 ---
 
@@ -19,7 +19,6 @@ markdown发明人2004年发布1.0版本，此后没有更新过。[Daring Fireba
 还有个CommonMark，试图统一markdown混乱的各自为政的局面，但是由于markdown发明人不认可，导致其市场认可度没有想象中的一统天下。
 
 [[obsidian的markdown语法]]
-
 
 轻量的markdown编辑，目前最好用的是[[Typora]]
 

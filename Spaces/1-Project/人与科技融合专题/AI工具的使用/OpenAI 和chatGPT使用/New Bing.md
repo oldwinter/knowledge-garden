@@ -1,3 +1,9 @@
+---
+title: New Bing
+date created: 2023-02-28
+date modified: 2023-03-07
+---
+
 ## 申请出现Something went wrong. Please try again.提示
 
 换个账号申请，或者尝试以下方法，跟bing 的rewards系统有关：

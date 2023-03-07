@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-22
-date modified: 2022-09-21
-tags: 本库教程
+date modified: 2023-03-07
+tags: [本库教程]
 title: About Cards
 ---
 
@@ -9,7 +9,7 @@ up:: [[ACCESS 笔记组织法]]
 
 ## 我的理解
 
-虽然叫[[永久笔记]]permanent note ，但个人理解其实更贴切的翻译是常青笔记evergreen note。一来，根据形式，和[[闪念笔记]]与[[文献笔记]]区分开。二来，根据目的，它是永恒且发展的，能为将来所用的永久笔记。
+虽然叫[[永久笔记]]permanent note，但个人理解其实更贴切的翻译是常青笔记evergreen note。一来，根据形式，和[[闪念笔记]]与[[文献笔记]]区分开。二来，根据目的，它是永恒且发展的，能为将来所用的永久笔记。
 
 暂时先把日常片段式的思考和闪念，以短小的[[卡片笔记]]的方式，直接丢到这里，不强调文件夹分类，而是尝试通过特殊文件名、标签和链接等方式，让这些笔记具备可发现性，更容易被将来的自己找到。
 
@@ -21,7 +21,7 @@ up:: [[ACCESS 笔记组织法]]
 
 ## 原文解释
 
-The cards folder is one of my favorite places because it has *umami*. Apparently umami is one of the five basic tastes. There are: Sweetness, Sourness, Saltiness, Bitterness—and that oddball Umami.
+The cards folder is one of my favorite places because it has*umami*. Apparently umami is one of the five basic tastes. There are: Sweetness, Sourness, Saltiness, Bitterness—and that oddball Umami.
 
 Umami is hard to describe but you know when it's there. The same is true of this folder's contents. It's a mixture of insights and ideas, concepts and connections, all mingling together to create that mysterious full mouthfeel that magnificently completes any meal for the mind.
 

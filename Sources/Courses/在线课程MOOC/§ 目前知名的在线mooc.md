@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: § 目前知名的在线mooc
 ---
 
@@ -33,7 +33,7 @@ title: § 目前知名的在线mooc
 
 主打 [[KOL]]和[[UGC]]
 
-- [哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/)
+- [哔哩哔哩 (゜-゜)つロ干杯~-bilibili](https://www.bilibili.com/)
 - [YouTube](https://www.youtube.com/)
 - [小红书_标记我的生活](https://www.xiaohongshu.com/)  
 主打短课程，app 型课程

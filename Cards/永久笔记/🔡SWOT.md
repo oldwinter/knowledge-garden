@@ -5,8 +5,8 @@ sr-ease: 310
 aliases:
   - 个人定位 公司定位
 date created: 2022-06-09
-date modified: 2022-08-20
-tags: 复习回顾
+date modified: 2023-03-07
+tags:[复习回顾]
 title: 🔡SWOT
 ---
 
@@ -22,4 +22,4 @@ title: 🔡SWOT
 
 运用这种方法，可以对研究对象所处的情景进行全面、系统、准确的研究，从而根据研究结果制定相应的发展战略、计划以及对策等。
 
-S （strengths）是优势、W （weaknesses）是劣势、O （opportunities）是机会、T （threats）是威胁。按照企业竞争战略的完整概念，战略应是一个企业“能够做的”（即组织的强项和弱项）和“可能做的”（即环境的机会和威胁）之间的有机组合。
+S（strengths）是优势、W（weaknesses）是劣势、O（opportunities）是机会、T（threats）是威胁。按照企业竞争战略的完整概念，战略应是一个企业“能够做的”（即组织的强项和弱项）和“可能做的”（即环境的机会和威胁）之间的有机组合。

@@ -1,7 +1,7 @@
 ---
-tags: ""
+tags: [""]
 date created: 2022-06-09
-date modified: 2023-03-01
+date modified: 2023-03-07
 title: ∑ mac必备软件
 ---
 
@@ -16,11 +16,11 @@ title: ∑ mac必备软件
 编辑起来太不方便了，markdown 真的不适合处理 5 列，20 行以上的表格了。考虑迁移到 airtable。
 
 [[2023-02-28]]：将markdown表格，转换成csv，导入成[[DB Folder]]。
+
 - [[如何将markdown表格转换成csv表格]]
 - [[如何将csv表格导入database以批量创建md文件]]
 
 ![[∑ DB mac必备软件]]
-
 
 非图形化的必备软件：
 

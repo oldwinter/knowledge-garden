@@ -1,10 +1,16 @@
+---
+title: » canvas使用经验
+date created: 2023-02-27
+date modified: 2023-03-07
+---
+
 ## 熟悉各种操作
+
 官网教程，拉到 TIPS那，每个操作都有动画演示：[Obsidian Canvas - Obsidian](https://obsidian.md/canvas)
 
 ## 当前缺陷
 
 [[obsidian canvas当前的致命缺陷]]
-
 
 ## 使用技巧
 

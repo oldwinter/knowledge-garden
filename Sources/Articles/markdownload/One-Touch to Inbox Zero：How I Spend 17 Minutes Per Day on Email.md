@@ -1,7 +1,8 @@
 ---
 date created: 2022-08-15
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: One-Touch to Inbox Zero：How I Spend 17 Minutes Per Day on Email
+tags: [4]
 ---
 
 I spend 17 minutes per day on email, or 7.43% of my total work time over the past 12 months.
@@ -10,7 +11,7 @@ The average knowledge worker, in contrast, spends [28%](https://www.mckinsey.com
 
 ![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_1.png)
 
-The key to Inbox Zero, everyone knows, is to **“touch each email only once.”**
+The key to Inbox Zero, everyone knows, is to**“touch each email only once.”**
 
 But what most do not appreciate is that this level of simplicity is the ultimate sophistication — only a well-designed underlying system can make such elegant action possible.
 
@@ -24,51 +25,51 @@ But this is exactly how most people handle their email every day. Just make the 
 
 **Here is the simple truth: it takes far, FAR less time and energy to maintain your email inbox at zero than at a thousand.**
 
-Here is your annotated checklist for One-Touch Inbox Zero, in **5 EASY STEPS!**
+Here is your annotated checklist for One-Touch Inbox Zero, in**5 EASY STEPS!**
 
-> _“I must create a system or be enslaved by another man’s”_ — William Blake
+>*“I must create a system or be enslaved by another man’s”* — William Blake
 
 ## First, the obvious stuff
 
 These should be old news, but just in case:
 
-> **1\. Unsubscribe from every newsletter, notification list, and broadcast list that isn’t absolutely essential (using a service like** [**Unroll.me**](https://unroll.me/) **if necessary)**
+>**1\. Unsubscribe from every newsletter, notification list, and broadcast list that isn’t absolutely essential (using a service like**[**Unroll.me**](https://unroll.me/)**if necessary)**
 
-> **2\. Forward all your email accounts to Gmail, or whatever service you have to use for work.**
+>**2\. Forward all your email accounts to Gmail, or whatever service you have to use for work.**
 
-> **3\. Use** [**Mailstrom**](https://mailstrom.co/) **to batch delete hundreds (or thousands) of unimportant emails at a time, and then move all remaining emails from your inbox to a specially marked folder.**
+>**3\. Use**[**Mailstrom**](https://mailstrom.co/)**to batch delete hundreds (or thousands) of unimportant emails at a time, and then move all remaining emails from your inbox to a specially marked folder.**
 
 Don’t worry about getting everything — just the low-hanging fruit. You’ll be coming back and processing these once you have the rest of your workflow dialed in.
 
 ## Second, strip email down to its core function
 
-The main problem with how people use email is that they use it for _everything_.
+The main problem with how people use email is that they use it for*everything*.
 
 You wouldn’t buy a multifunction toaster-power drill-toilet bowl cleaner, would you? You wouldn’t find a combination leaf blower-immersion blender particularly useful, right?
 
 And yet for a tool central to our working lives, that represents a far worse compromise of incompatible functions, we somehow put up with a Frankenstein-like monstrosity of a communication tool/to do list/project manager/notification system/composition tool/reading list/file storage area/reference library/conversation archive/planning tool/note-taking app.
 
-We hired email for _one simple job_, and now it’s the codependent handyman living in our basement, banging away at odd jobs late into the night.
+We hired email for*one simple job*, and now it’s the codependent handyman living in our basement, banging away at odd jobs late into the night.
 
-Let’s turn back the tide and strip email down to its original function, the only one that it does better than any other tool: **collecting new inputs.**
+Let’s turn back the tide and strip email down to its original function, the only one that it does better than any other tool:**collecting new inputs.**
 
 That’s it.
 
-_Every other function_ is much more effectively handled by one of four purpose-built productivity apps, in the same way that our fictional friend could have benefited from a **to do list, an agenda, a filing cabinet, a magazine rack, and a trash can.**
+*Every other function*is much more effectively handled by one of four purpose-built productivity apps, in the same way that our fictional friend could have benefited from a**to do list, an agenda, a filing cabinet, a magazine rack, and a trash can.**
 
 In fact — those are exactly the tools we’re going to set up, but the digital versions.
 
-The crazy thing is, stripping Gmail down to this core function takes _a lot of work_. The Gmail team has surrendered to our demands to have everything happen in email, and now we have to cut off all the freakish mutated appendages to get something usable.
+The crazy thing is, stripping Gmail down to this core function takes*a lot of work*. The Gmail team has surrendered to our demands to have everything happen in email, and now we have to cut off all the freakish mutated appendages to get something usable.
 
 Here’s what to do for a streamlined email environment:
 
-> **4\. Turn off multiple inboxes**
+>**4\. Turn off multiple inboxes**
 
-When you’re able to One-Touch emails at a rate of one every few seconds, having multiple inboxes only multiplies the effort. It’s weird — once your email workflow gains economies of scale, you actually _benefit_ from greater volume.
+When you’re able to One-Touch emails at a rate of one every few seconds, having multiple inboxes only multiplies the effort. It’s weird — once your email workflow gains economies of scale, you actually*benefit*from greater volume.
 
-_Settings_ > _Inbox_ tab > set _Inbox type:_ to _Default_ > uncheck all _Categories:_ except for _Primary_
+*Settings*>*Inbox*tab > set*Inbox type:*to*Default*> uncheck all*Categories:*except for*Primary*
 
-> **5\. Turn off all “smart” features**
+>**5\. Turn off all “smart” features**
 
 Every single one of these features is a maladaptive add-on to an outdated system; a short-term solution to a long-term problem.
 
@@ -76,31 +77,31 @@ Every single one of these features is a maladaptive add-on to an outdated system
 
 Stars, personal level indicators, system labels, categories, circles, labels, importance markers, filters — get rid of them all, and breathe a sigh of relief.
 
-**Stars:** _Settings_ > _General_ > set _Presets:_ to _1 star_ (which you’re not going to use)
+**Stars:***Settings*>*General* > set*Presets:*to*1 star*(which you’re not going to use)
 
-**Personal level indicators:** _Settings_ > _General_ > set _Personal level indicators_ to _No indicators_
+**Personal level indicators:***Settings*>*General* > set*Personal level indicators* to*No indicators*
 
-**System labels:** _Settings_ > _Labels_ > hide all system labels except for _Sent_ _Mail_, _Drafts_, _All Mail_, and (if you want) _Spam_
+**System labels:***Settings*>*Labels* > hide all system labels except for*Sent**Mail*,*Drafts*,*All Mail*, and (if you want)*Spam*
 
-**Categories:** _Settings_ > _Labels_ > hide all categories in label list and message list
+**Categories:***Settings*>*Labels* > hide all categories in label list and message list
 
-**Labels:** _Settings_ > _Labels_ > delete all labels at the bottom
+**Labels:***Settings*>*Labels* > delete all labels at the bottom
 
-**Importance markers:** _Settings_ > _Inbox_ > set _Importance markers_ to _No markers_
+**Importance markers:***Settings*>*Inbox* > set*Importance markers* to*No markers*
 
-**Filters:** _Settings_ > _Filters and Blocked Addresses_ > delete all filters
+**Filters:***Settings*>*Filters and Blocked Addresses* > delete all filters
 
-> **6\. Turn off all chat and social media apps**
+>**6\. Turn off all chat and social media apps**
 
 Email is like a black hole: once it reaches critical mass, it sucks up everything it comes into contact with. You spend so much time in email that all other work activities have to be integrated into it, causing you to spend even more time in email, and so on ad infinitum.
 
-The event horizon expands to the point you start thinking that answering emails is your job. But it’s not — it’s something you have to _get out of the way_ so that you can do your job.
+The event horizon expands to the point you start thinking that answering emails is your job. But it’s not — it’s something you have to*get out of the way*so that you can do your job.
 
 Real-time collaboration and chat apps are here to stay, but by the time we’re done, you’re going to spend so little time in email, and will be so focused on processing emails at breakneck speed, chat will just be a distraction.
 
-_Settings_ > _Chat_ > set _Chat_ to _Chat off_
+*Settings*>*Chat* > set*Chat* to*Chat off*
 
-> **7\. Turn off all notifications**
+>**7\. Turn off all notifications**
 
 **Your email inbox is someone else’s To Do list.**
 
@@ -108,19 +109,19 @@ Repeat this to yourself every time you are tempted to give anyone in the whole w
 
 This single action I’ve seen transform people’s productivity overnight. Try it for just one week.
 
-_Settings_ > _General_ > set _Desktop Notifications_ to _Mail notifications off_
+*Settings*>*General* > set*Desktop Notifications*to*Mail notifications off*
 
 Also turn off all notifications in your computer’s operating system, on your phone, and any other devices.
 
 ## Third, set up four downstream systems
 
-The main reason your inbox is overflowing is the same reason any system gets blocked at the intake: **a lack of effective downstream systems.**
+The main reason your inbox is overflowing is the same reason any system gets blocked at the intake:**a lack of effective downstream systems.**
 
 Things pile up when they have nowhere to go.
 
 But be wary of simplistic, baby-out-with-the-bathwater answers. Achieving Inbox Zero is not about “dissing” email, or melodramatically declaring “email bankruptcy.”
 
-My attitude is the opposite: **EVERY. SINGLE. EMAIL. is important.**
+My attitude is the opposite:**EVERY. SINGLE. EMAIL. is important.**
 
 Every message is a piece of the puzzle keeping you sensitized to the full spectrum of possibilities streaming toward you at every moment.
 
@@ -132,17 +133,17 @@ This is the problem with “Inbox Zero crash courses” and weekend self-improve
 
 If downstream systems that appropriately handle 100.00% of incoming information have not been set up, then all you’ve done is emptied the lake via airlift — the lower water level just makes the incoming streams flow faster.
 
-Every conceivable email you receive can be handled by just 4 downstream systems: **a digital calendar, a task manager, a reference app, and a read later app**.
+Every conceivable email you receive can be handled by just 4 downstream systems:**a digital calendar, a task manager, a reference app, and a read later app**.
 
 ### Calendar
 
 This is the easy one — any time-specific event, commitment, appointment, or decision goes immediately on the calendar.
 
-> **8\. Download a calendar app on every device, and make sure your calendars are synced across all of them**
+>**8\. Download a calendar app on every device, and make sure your calendars are synced across all of them**
 
-Notice why the digital calendar is so universal and useful in modern information work: it is a **system** backed up by **clear rules and cool tools**.
+Notice why the digital calendar is so universal and useful in modern information work: it is a**system**backed up by**clear rules and cool tools**.
 
-**Rules** direct you to input ALL time-related information into the calendar, and **tools** (calendar apps, GCal invites, cloud sync) give you the confidence that the data will be backed up and synced across every device.
+**Rules**direct you to input ALL time-related information into the calendar, and**tools**(calendar apps, GCal invites, cloud sync) give you the confidence that the data will be backed up and synced across every device.
 
 Let’s continue setting up the other tools, and then we’ll get to the rules that make them all work together systemically.
 
@@ -152,21 +153,21 @@ A task manager is simply a digital version of a To Do list.
 
 The main obstacle for most people is the sheer quantity of options out there for which program to use. It feels like such a high stakes, permanent decision, it’s easy to put off forever and stick with paper. Unfortunately, paper won’t work with email and other digital messages, the primary source of new inputs in modern work.
 
-There are a lot of benefits to using a digital task manager, but for One-Touch purposes, there is one single most important feature: **the program’s ability to capture and link back to email-based tasks.**
+There are a lot of benefits to using a digital task manager, but for One-Touch purposes, there is one single most important feature:**the program’s ability to capture and link back to email-based tasks.**
 
 I personally use and recommend a task manager called [Things](https://culturedcode.com/things/) (Mac and iOS only), because it has the best implementation of this I’ve ever seen: a keyboard shortcut option (ctrl-opt-space) that instantly pops up a tiny semi-transparent window, with a link back to the original email automatically inserted, and the cursor ready for me to identify what the task actually is:
 
 ![](https://img.oldwinter.top/One-Touch%20to%20Inbox%20Zero：How%20I%20Spend%2017%20Minutes%20Per%20Day%20on%20Email_image_5.png)
 
-A good non-Apple option is [Todoist](https://todoist.com/). They offer a Gmail extension that adds an \[Add Task\] button right on the Gmail toolbar. Clicking the button opens up a small window where you can write out the task, which becomes a link back to the original email:
+A good non-Apple option is [Todoist](https://todoist.com/). They offer a Gmail extension that adds an \[Add Task\]button right on the Gmail toolbar. Clicking the button opens up a small window where you can write out the task, which becomes a link back to the original email:
 
 ![](https://img.oldwinter.top/Extras/Media/1!W-MKk2UvUL9ZXlAfVgT7Xg.png)
 
-Critically, these links work regardless of where you move this email, so _you don’t need to do any further work labeling, categorizing, prioritizing, or flagging._ Just click the link in your task manager, and it will take you directly to the original message.
+Critically, these links work regardless of where you move this email, so*you don’t need to do any further work labeling, categorizing, prioritizing, or flagging.*Just click the link in your task manager, and it will take you directly to the original message.
 
 **This small feature is the lynchpin not only of your task manager, but of the entire One-Touch approach**. Because the whole system hinges on your ability to pull to do’s out of a messy, distracting inbox and into their own dedicated tool. You’ll only trust such a tool if it can instantly and reliably point you back to the original email when it’s time to take action, whether that’s in 2 hours or 2 years.
 
-> **9\. Download the free version of** [**Todoist**](https://todoist.com/app) **or the 30-day trial of** [**Things**](https://culturedcode.com/things/)**, activate the “Add task” shortcut, and practice creating new email-based tasks**
+>**9\. Download the free version of**[**Todoist**](https://todoist.com/app)**or the 30-day trial of**[**Things**](https://culturedcode.com/things/)**, activate the “Add task” shortcut, and practice creating new email-based tasks**
 
 ### Reference app
 
@@ -184,7 +185,7 @@ Whether you use [Evernote](https://evernote.com/?var=1) (my recommendation) or a
 
 Evernote, for example, generates a custom “Add to Evernote” email address. Forwarding an email to this address automatically saves its contents and attachments in the app.
 
-> **10\. Download** [**Evernote**](https://evernote.com/?var=1) **(or another note-taking program) on all devices; add the** [**“forward-to” email address**](https://help.evernote.com/hc/en-us/articles/360050995914-Find-your-Evernote-email-address) **to your Gmail Contacts under the name “Reference”**
+>**10\. Download**[**Evernote**](https://evernote.com/?var=1)**(or another note-taking program) on all devices; add the**[**“forward-to” email address**](https://help.evernote.com/hc/en-us/articles/360050995914-Find-your-Evernote-email-address)**to your Gmail Contacts under the name “Reference”**
 
 ### Read Later app
 
@@ -200,15 +201,15 @@ Whether you use [Instapaper](https://www.instapaper.com/u) (my recommendation) o
 
 Instapaper, for example, will save anything you forward to a [designated email address](https://www.instapaper.com/save/email).
 
-> **11\. Download a Read Later app on all devices, and practice saving items to it from multiple locations**
+>**11\. Download a Read Later app on all devices, and practice saving items to it from multiple locations**
 
 ![](https://img.oldwinter.top/Extras/Media/1!KnO_ZI5DzP2SEG5CpBfsxw.jpeg.jpg)
 
 ## Fourth, streamline your workflow
 
-Activities like email don’t obey the laws of **classical Newtonian physics** — they don’t grow linearly. Meaning, as you go from receiving 100 to 200 to 300 to 400 emails, the time and energy you must spend to manage these emails does not increase proportionally from 1x, to 2x, to 3x, to 4x.
+Activities like email don’t obey the laws of**classical Newtonian physics** — they don’t grow linearly. Meaning, as you go from receiving 100 to 200 to 300 to 400 emails, the time and energy you must spend to manage these emails does not increase proportionally from 1x, to 2x, to 3x, to 4x.
 
-Instead, email operates more like **chaos theory**: at some point the time/energy required crosses a critical threshold, an unpredictable, invisible boundary. It undergoes a phase transition, like ice changing to water and then to steam. The parameters change and the effects explode, cascading across the rest of your workflow with mounting consequences.
+Instead, email operates more like**chaos theory**: at some point the time/energy required crosses a critical threshold, an unpredictable, invisible boundary. It undergoes a phase transition, like ice changing to water and then to steam. The parameters change and the effects explode, cascading across the rest of your workflow with mounting consequences.
 
 More tangibly:
 
@@ -220,11 +221,11 @@ Eventually, what started as an innocuous habit of “checking email before start
 
 ![](https://img.oldwinter.top/Extras/Media/1!nAbLLcDVJv9tQPo7h8ytnw.jpeg.jpg)
 
-What we have to do instead is think not only _systemically_ (in terms of systems, as above) but also _systematically_ (methodically). By processing our email according to a well-defined _method_, instead of haphazardly, we create the capability of **calibrating the time spent on email depending on the time available and other constraints**.
+What we have to do instead is think not only*systemically*(in terms of systems, as above) but also*systematically*(methodically). By processing our email according to a well-defined*method*, instead of haphazardly, we create the capability of**calibrating the time spent on email depending on the time available and other constraints**.
 
 The 2-Minute Rule makes sense because it is the cutoff for what is worth spending the time on to enter into your system. But the fact is, that cutoff threshold is not fixed. If you come back from vacation and slavishly follow the 2-Minute Rule to review the 1,200 new emails you’ve received, you’ll be at your desk for 2 days doing 2-Minute tasks, and probably missing more important priorities. Same thing applies when coming back from the weekend.
 
-We need to create the _option_ (but not the obligation), of scaling down this cutoff to something closer to the 10-Second Rule, processing **hundreds of emails within 15 or 20 minutes** when necessary**,** so that you can quickly get down to real work without worrying about a ticking time bomb in your inbox.
+We need to create the*option*(but not the obligation), of scaling down this cutoff to something closer to the 10-Second Rule, processing**hundreds of emails within 15 or 20 minutes**when necessary**,**so that you can quickly get down to real work without worrying about a ticking time bomb in your inbox.
 
 Sounds like a fantasy, doesn’t it?
 
@@ -238,15 +239,15 @@ This method makes checking your email about as difficult as checking for new pos
 
 There are 3 relevant leverage points within Gmail for this:
 
-> **12\. Turn on** [**Auto-advance**](http://gmailblog.blogspot.com/2010/10/new-in-labs-auto-advance-to-next.html)
+>**12\. Turn on**[**Auto-advance**](http://gmailblog.blogspot.com/2010/10/new-in-labs-auto-advance-to-next.html)
 
 The greatest challenge in checking email methodically is distractions from new emails. It’s very hard to make a decision on each message, one at a time, in order, without postponing a decision or skipping ahead, when every time you archive a message it kicks you back to your inbox, where you see the more recent stuff with its tantalizing bolded subject lines.
 
 Turn on auto-advance and, instead of getting kicked back to the inbox when you archive a message, you’ll be immediately shown the next chronological message.
 
-_Settings_ > _Advanced_ > Set auto-advance to “Enable”
+*Settings*>*Advanced*> Set auto-advance to “Enable”
 
-> **13\. Turn on** [**keyboard shortcuts**](https://support.google.com/mail/answer/6594?hl=en)
+>**13\. Turn on**[**keyboard shortcuts**](https://support.google.com/mail/answer/6594?hl=en)
 
 Much of your time in email is spent performing a small handful of operations. Turn on keyboard shortcuts and you’ll be able to process a dozen emails at a time without touching your mouse, using only:
 
@@ -257,37 +258,37 @@ Much of your time in email is spent performing a small handful of operations. Tu
 - archive: e
 - send: cmd-enter
 
-_Settings > General_ \> Keyboard Shortcuts on
+*Settings > General*\> Keyboard Shortcuts on
 
-> **14\. Turn on** [**conversation threads**](https://support.google.com/mail/answer/5900?hl=en)
+>**14\. Turn on**[**conversation threads**](https://support.google.com/mail/answer/5900?hl=en)
 
 I suggest processing emails in chronological order from oldest to newest because your craving to get to the new stuff will motivate you to power through the old stuff.
 
 Turning on conversation threads allows you to see more recent replies to group messages in the same place, so you don’t accidentally respond to an old thread.
 
-_Settings > General_ > Conversation View on
+*Settings > General*> Conversation View on
 
-## **Get Your Inbox Zero Checklist**
+##**Get Your Inbox Zero Checklist**
 
-Take control of your inbox. **Download these step-by-step actions in a handy checklist** — and stop spending so much time on email.
+Take control of your inbox.**Download these step-by-step actions in a handy checklist**—and stop spending so much time on email.
 
 __
 
 ## Fifth, practice making triage decisions
 
-Everything we’ve prepared — all the downstream systems and workflow tweaks — strengthens your **active sorting** capability, aka **triage**.
+Everything we’ve prepared — all the downstream systems and workflow tweaks — strengthens your**active sorting**capability, aka**triage**.
 
-The pivotal decision is: **what needs to be done about this?**
+The pivotal decision is:**what needs to be done about this?**
 
 In the midst of daily battle, on the elevator or waiting in line, it’s fine to do “quick emergency scans.” But every day or two (I average every 1.97 days), when it’s time to take a complete inventory of everything new that’s been sent your way, sit down in focus mode and methodically clear your inbox.
 
-> **15\. Follow the sequence:**
+>**15\. Follow the sequence:**
 
-> **Open Gmail**
+>**Open Gmail**
 
-> **Open the oldest email in your inbox**
+>**Open the oldest email in your inbox**
 
-> **Decide what needs to be done about it, and take one of the 6 following actions:**
+>**Decide what needs to be done about it, and take one of the 6 following actions:**
 >
 > ![](https://img.oldwinter.top/Extras/Media/1!mwx6NBeBnL8BRq03yO1UdQ.jpeg.jpg)
 
@@ -321,31 +322,31 @@ ___
 
 These are the rules that govern where “stuff” flows to. Follow these steps until you’ve cleared your inbox.
 
-Then, importantly, _close Gmail_.
+Then, importantly,*close Gmail*.
 
 You won’t need a continuous feed of new updates when you know you will catch true emergencies with emergency scans and attend to everything else in, at most, 24-48 hours.
 
-In case I was too subtle, notice that, in every case, _without exception_, you finish processing each email by archiving it, which removes it from your inbox while keeping a backup copy. You never “put it back into inbox.” You never “leave it for later.”
+In case I was too subtle, notice that, in every case,*without exception*, you finish processing each email by archiving it, which removes it from your inbox while keeping a backup copy. You never “put it back into inbox.” You never “leave it for later.”
 
-**Never.** Harness the power of now:
+**Never.**Harness the power of now:
 
 > Remember that there is only one important time and it is Now. The present moment is the only time over which we have dominion. — Leo Tolstoy
 
-### Any system with an unchecked positive feedback loop **will** ultimately **destroy itself**
+### Any system with an unchecked positive feedback loop**will**ultimately**destroy itself**
 
-The real value of creating a system for processing email is not that you can send and receive _even more_ emails. In fact, this is a big part of the problem.
+The real value of creating a system for processing email is not that you can send and receive*even more*emails. In fact, this is a big part of the problem.
 
-Email exhibits **powerful positive feedback loops**: the more emails you send and receive, the more your colleagues and managers and partners and vendors and clients feel compelled to send and receive. We wage a negative sum arms race against each other, our enhanced efficiency making the problem progressively worse.
+Email exhibits**powerful positive feedback loops**: the more emails you send and receive, the more your colleagues and managers and partners and vendors and clients feel compelled to send and receive. We wage a negative sum arms race against each other, our enhanced efficiency making the problem progressively worse.
 
-As Donella Meadows [writes](http://www.donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/), positive feedback loops are sources of growth and explosion, but also sources of erosion and collapse. A system with an unchecked positive feedback loop **will ultimately destroy itself** — thus we’re now seeing the demands of 24/7 connectivity encroaching on our fundamental biological and neurochemical limits.
+As Donella Meadows [writes](http://www.donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/), positive feedback loops are sources of growth and explosion, but also sources of erosion and collapse. A system with an unchecked positive feedback loop**will ultimately destroy itself** — thus we’re now seeing the demands of 24/7 connectivity encroaching on our fundamental biological and neurochemical limits.
 
-We can use _negative_ feedback loops to try and restore balance — digital detoxes, work-life balance seminars, meditation retreats, goal-setting and values exercises, New Year’s Resolutions— but none of these will be enough if we keep pouring the **fuel of reactivity** on the fire of runaway positive feedback loops.
+We can use*negative*feedback loops to try and restore balance — digital detoxes, work-life balance seminars, meditation retreats, goal-setting and values exercises, New Year’s Resolutions—but none of these will be enough if we keep pouring the**fuel of reactivity**on the fire of runaway positive feedback loops.
 
 That is our real goal — lowering our reactivity is an end in itself, because anything that forces you to react controls you.
 
 The sign that you’ve changed, that the system is working, will be the day you receive a hysterical Very Important Email, with Urgent Deadlines and Scary Consequences, and you will feel nothing as it gets mundanely processed in just the same way as every other email.
 
-You won’t react — you will _decide_ to act.
+You won’t react — you will*decide*to act.
 
 You will start to understand that a red High Priority label is just a theory — someone else’s theory about the meaning of an action and its relationship to a goal.
 

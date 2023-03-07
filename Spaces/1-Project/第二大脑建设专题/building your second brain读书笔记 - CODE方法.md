@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-30
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: building your second brain读书笔记 - CODE方法
 ---
 
@@ -12,7 +12,7 @@ title: building your second brain读书笔记 - CODE方法
 
 也对应了[[一元化收集|INBOX]]思维，有了收集做为第一步，才有后续的整理。
 
-### organize： 组织
+### organize：组织
 
 以行动为目的驱动自己去阻止这些捕获的信息，使用[[PARA]]方法。
 

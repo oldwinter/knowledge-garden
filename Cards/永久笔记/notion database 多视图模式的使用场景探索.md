@@ -1,12 +1,12 @@
 ---
 title: notion database 多视图模式的使用场景探索
 date created: 2023-02-10
-date modified: 2023-02-10
+date modified: 2023-03-07
 ---
 
 [[notion database的官方案例demo]]
 
-当前notion database支持表格常见的sort和filter两大特性。  
+当前notion database支持表格常见的sort和filter两大特性。
 
 当前notion支持以下6种视图模式：
 

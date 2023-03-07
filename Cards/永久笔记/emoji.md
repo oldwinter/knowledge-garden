@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-24
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: emoji
 ---
 
@@ -18,4 +18,4 @@ title: emoji
 
 1. 先用fn+e mac系统自带搜索表情。如果找不到，补用[[Raycast]]的quicklink方案。
 2. 手机就用手机输入法自带选按即可。
-3. [[搜狗输入法+小鹤双拼如何快速输入emoji]]
+3.[[搜狗输入法+小鹤双拼如何快速输入emoji]]

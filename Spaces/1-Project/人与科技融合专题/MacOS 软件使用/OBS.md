@@ -1,8 +1,8 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
-title: 🤖obs
-tags: macOS软件
+date modified: 2023-03-07
+title: OBS
+tags: [macOS软件]
 作用: 直播，录屏，开源
 评价: 4
 设置同步: icloud 同步，手动导出
@@ -15,4 +15,3 @@ tags: macOS软件
 [使用 OBS 錄製線上教學 + 打造個性化直播平台！還沒上車的趕快喔 ～ - YouTube](https://www.youtube.com/watch?v=GFJQLY3ldGs)
 
 [[视频制作]]
-

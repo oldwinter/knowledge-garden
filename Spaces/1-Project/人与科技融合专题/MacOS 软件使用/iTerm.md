@@ -4,9 +4,8 @@
 设置同步: icloud 自动同步
 是否已备份: y
 是否已重装:
-tags:
-  - macOS软件
+tags: [macOS软件]
 title: iTerm
 date created: 2023-02-28
-date modified: 2023-03-01
+date modified: 2023-03-07
 ---

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-15
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: vscode代码编辑和obsidian文本编辑快捷键
 ---
 

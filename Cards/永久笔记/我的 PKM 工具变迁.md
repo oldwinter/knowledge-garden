@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-19
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: 我的 PKM 工具变迁
 ---
 
@@ -27,7 +27,7 @@ title: 我的 PKM 工具变迁
 - 工具：
 	- 本机 + 云盘 +USB 移动硬盘 + 手机存储
 - 检索
-	- [[Everything]] 搜索
+	- [[Everything]]搜索
 	- 云盘文件搜索
 	- 靠记忆找到文件夹和文件
 - 分享
@@ -40,7 +40,7 @@ title: 我的 PKM 工具变迁
 - 工具：
 	- [[confluence]]+[[Onenote]]+outlook+ 云盘
 - 检索
-	- [[Everything]] 搜索
+	- [[Everything]]搜索
 	- onenote 内搜索
 	- 邮件内搜索
 - 分享

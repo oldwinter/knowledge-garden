@@ -1,7 +1,7 @@
 ---
 uid: fd5274ed-e3c2-4370-8849-a0855642e312
 date created: 2022-06-09
-date modified: 2023-02-13
+date modified: 2023-03-07
 title: HOMEPAGE
 dg-publish: true
 ---
@@ -31,6 +31,6 @@ limit 10
 
 ![[本库的宏观统计数据]]
 
-> [!INFO]
+>[!INFO]
 >
 >  主页其实也是一种 [[模板与套路]]，当我大脑放空，不知道接下来需要做什么的时候，不妨打开这里，找寻一点思路。主页同时也是[[LYT 笔记框架|lyt kit]]认为的不可或缺的组成部分，和[[MOC]]组成一个导览整体。

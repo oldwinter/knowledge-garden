@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-02
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: mac充电和键盘灯异常 - 重置SMC
 ---
 
@@ -38,7 +38,7 @@ SMC 负责管理与以下功能相关的行为：
 
 1.将 Mac 关机。
 
-2.在内建键盘上，按住「键盘左侧的 Shift + 键盘左侧的 Control + 键盘左侧的 Option (Alt) 」。
+2.在内建键盘上，按住「键盘左侧的 Shift + 键盘左侧的 Control + 键盘左侧的 Option (Alt)」。
 
 ![](https://img2.oldwinter.top/mac充电和键盘灯异常%20-%20重置SMC_image_2.jpg)
 

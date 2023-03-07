@@ -2,13 +2,13 @@
 aliases:
   - + 类似中图法的分类
 date created: 2022-06-22
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: Library
 ---
 
 现在的积累量远远不够，感觉分类耗时耗力没有意义，先放这以后再说。
 
-> [!NOTE]- Notes on this note  
+>[!NOTE]- Notes on this note  
 > This is a sanitized version of my actual note.
 > - Content and links have been removed.
 
@@ -20,9 +20,9 @@ This is a ready-made scaffolding that can hold your diverse interests. Try to on
 
 ### The LYT Classification System
 
-While I encourage you to fully customize your **home** note, I urge you to start building your library using the **LYT Classification System**.
+While I encourage you to fully customize your**home**note, I urge you to start building your library using the**LYT Classification System**.
 
-The **LYT Classification System** is lightly modified from the Cutter, Dewey, and Universal Decimal classification systems used in libraries around the world. It will provide you a time-tested foundation as you structure the interests of your digital library.
+The**LYT Classification System**is lightly modified from the Cutter, Dewey, and Universal Decimal classification systems used in libraries around the world. It will provide you a time-tested foundation as you structure the interests of your digital library.
 
 | Section | Description |
 | ------- | ------------------------------------------------- |
@@ -79,7 +79,7 @@ See also: Chemistry | Geology | Plants | Animals
 
 ## 600 - Applied Sciences
 
-A natural progression from the previous section, this is where we take thet the fundamentals of nature and *apply* them. My undergrad was in [[Engineering MOC]], which relates to my interest in [[Building Homes MOC]]. Later on, I developed the [[Editing Manual MOC]].
+A natural progression from the previous section, this is where we take thet the fundamentals of nature and*apply*them. My undergrad was in [[Engineering MOC]], which relates to my interest in [[Building Homes MOC]]. Later on, I developed the [[Editing Manual MOC]].
 
 See also: Agriculture | Technology | Medical | [[∑ AI MOC]] |Programming | [[Collective Intelligence MOC]] | [[Genetics MOC]] | [[Systems MOC (Kit)]]
 
@@ -87,11 +87,11 @@ See also: Agriculture | Technology | Medical | [[∑ AI MOC]] |Programming | [[C
 
 Ah the leisures of life. Remember leisure? Few really do. This section could easily balloon.
 
-- Art MOC | [[Design MOC]] | Architecture | Painting |
-- Film & TV | [[Movies MOC]]
-- Sports | [[Football MOC]]
-- Music | [[Jazz MOC]] |[[Vocals MOC]]
-- [[Cooking MOC]] | Leisure
+- Art MOC |[[Design MOC]]| Architecture | Painting |
+- Film & TV |[[Movies MOC]]
+- Sports |[[Football MOC]]
+- Music |[[Jazz MOC]]|[[Vocals MOC]]
+- [[Cooking MOC]]| Leisure
 - `#source/movie🎬` | `#source/tv🎬` | `#source/music🎵`
 
 ## 800 - Literature
@@ -108,4 +108,4 @@ The [[Art & Science Storytelling MOC]] look at some great storytellers of histor
 
 ## Commentary
 
-Please don't go overboard with numbering things. We’re just using a basic pre-made map as a fixed *spatial constellation* upon which to easily add dots of new interests. Too much structure stifles innovation and organic, emergent growth.
+Please don't go overboard with numbering things. We’re just using a basic pre-made map as a fixed*spatial constellation*upon which to easily add dots of new interests. Too much structure stifles innovation and organic, emergent growth.

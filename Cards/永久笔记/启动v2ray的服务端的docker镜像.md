@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-01-06
+date modified: 2023-03-07
 title: 启动v2ray的服务端的docker镜像
 ---
 
@@ -28,7 +28,7 @@ title: 启动v2ray的服务端的docker镜像
 }
 ```
 
-- 假定 config 文件是/home/cdd/v2ray-config/config.json，执行，将服务端口设置为 8899 。
+- 假定 config 文件是/home/cdd/v2ray-config/config.json，执行，将服务端口设置为 8899。
 
 ```bash
 sudo docker run -d --restart=always -v /home/cdd/v2ray-config/config.json:/etc/v2ray/config.json -p 443:443  v2fly/v2fly-core run -c /etc/v2ray/config.json

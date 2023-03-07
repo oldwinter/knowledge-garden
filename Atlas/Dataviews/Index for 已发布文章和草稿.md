@@ -1,8 +1,8 @@
 ---
 cssclass: sidebarDataview
 date created: 2022-06-09
-date modified: 2022-08-20
-tags: dataview
+date modified: 2023-03-07
+tags: [dataview]
 title: Index for 已发布文章和草稿
 ---
 
@@ -16,8 +16,6 @@ from #article/todo
 sort dates desc
 limit 99
 ```
-
- 
 
 ## 已发布文章
 

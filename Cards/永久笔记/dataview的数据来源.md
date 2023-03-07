@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: dataview的数据来源
 ---
 
@@ -31,5 +31,3 @@ dataview 有 3 种元数据获取方式：
 ```
 
 3，就是 dataview 内置的 cday，mtime，tags 等参数，应该是从 md 源文件里面读取的。
-
-		

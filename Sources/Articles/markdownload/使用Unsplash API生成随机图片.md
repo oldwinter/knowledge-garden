@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-12
-date modified: 2022-09-23
+date modified: 2023-03-07
 title: 使用Unsplash API生成随机图片
 ---
 
@@ -8,7 +8,7 @@ title: 使用Unsplash API生成随机图片
 
 如果你想使用免费版权的图片时，无论你是否用于商业用途，[Unsplash](https://unsplash.com/) 是不错的选择。
 
-我自己也经常用它来制作大型背景图片，例如：[https://www.imyangyong.com](https://www.imyangyong.com/) 。
+我自己也经常用它来制作大型背景图片，例如：[https://www.imyangyong.com](https://www.imyangyong.com/)。
 
 虽然他们为开发人员提供了很棒的 API，但他们也提供了通过 URL 访问随机图片的选项。
 
@@ -56,4 +56,4 @@ title: 使用Unsplash API生成随机图片
 
 ## 参考链接
 
-* [Generate Random Images From Unsplash Without Using The API](https://awik.io/generate-random-images-unsplash-without-using-api/)
+- [Generate Random Images From Unsplash Without Using The API](https://awik.io/generate-random-images-unsplash-without-using-api/)

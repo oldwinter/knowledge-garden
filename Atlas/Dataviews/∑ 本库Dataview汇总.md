@@ -1,11 +1,11 @@
 ---
 date created: 2022-08-13
-date modified: 2022-08-24
-tags: 索引笔记
+date modified: 2023-03-07
+tags: [索引笔记]
 title: ∑ 本库Dataview汇总
 ---
 
-x:: [[» 本库常用的dataview工作流]]
+x:: [[» 本库常用的dataview工作流]]  
 [[obsidian projects]]插件可以管理文件夹内的[[frontmatter]]，非常优雅，一定程度上替代自己写的这些针对某些文件夹的dataview。
 
 用[[DB Folder]]插件可以平替dataview的文件夹功能。

@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-15
-date modified: 2022-08-21
-tags: 文章/已完成
+date modified: 2023-03-07
+tags: [文章/已完成]
 title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 ---
 
@@ -11,7 +11,7 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 
 >支持[[双向链接]]是底线，否则随便用一个主流的静态blog方案就行了。
 
-先看最终方案的发布页面效果： [🌱 oldwinterの数字花园](https://notes.oldwinter.top/)
+先看最终方案的发布页面效果：[🌱 oldwinterの数字花园](https://notes.oldwinter.top/)
 
 ![](https://img2.oldwinter.top/obsidian%20目前最完美的免费发布方案%20-%20渐进式教程_image_1.png)
 
@@ -97,7 +97,7 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 	- 在netlify界面按提示一步步操作即可，需要有自己的域名且已经备案。
 	- [[第一次购买并备案域名的经验]]
 	- [[DNS解析]]
-- （可选）嵌入评论系统 [[2022-08-17]]新增
+- （可选）嵌入评论系统[[2022-08-17]]新增
 	- 推荐用giscus，不用自己折腾数据库这些烦人的东西。[[博客的评论系统借用github discussion模块 - giscus]]
 
 ## 写在最后

@@ -1,11 +1,11 @@
 ---
-title: raycast
+title: Raycast
 date created: 2022-12-17
-date modified: 2023-03-01
-tags:
-  - macOS软件
+date modified: 2023-03-07
+tags: [macOS软件]
 评价: 5
 ---
+
 作用:: 现代版Alfred，全能快捷助手，mac版的Quicker
 
 [[raycast deeplink]]

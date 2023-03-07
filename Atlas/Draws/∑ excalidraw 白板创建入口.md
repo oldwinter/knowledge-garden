@@ -1,7 +1,7 @@
 ---
 date created: 2022-08-04
-date modified: 2022-08-25
-tags: 索引笔记
+date modified: 2023-03-07
+tags: [索引笔记]
 title: ∑ excalidraw 白板创建入口
 ---
 

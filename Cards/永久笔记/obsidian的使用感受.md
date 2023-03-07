@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: obsidian的使用感受
 ---
 
@@ -10,7 +10,7 @@ obsidian 的使用感受
 
 ### Obsidian 官方介绍
 
-> Obsidian is a powerful **knowledge base** on top of a **local folder** of plain text Markdown files.
+> Obsidian is a powerful**knowledge base**on top of a**local folder**of plain text Markdown files.
 
 ### 写作之难
 
@@ -32,7 +32,7 @@ obsidian 的使用感受
 
 - 随时引用。随时随地双链，有种码代码的畅快感，能随时引用到曾经写过思考过的东西，很爽。这种爽感，倒逼出了创作激情。
 - [[context 切换]]极快。基础文件都是markdown，完全本地化，从而换文件阅读或编辑（[[context 切换]]）的速度极快，不像其他笔记软件，换个页面转圈圈等 3 秒，简直无法忍。notion，语雀别看了，说的就是你。
-- [[∑ 平台＋插件]] 玩法，和 chrome 与 vscode 类似，入门简单，开箱即用，又不失可玩性，且玩法上限极高，甚至无边界。
+- [[∑ 平台＋插件]]玩法，和 chrome 与 vscode 类似，入门简单，开箱即用，又不失可玩性，且玩法上限极高，甚至无边界。
 
 ### 使用初衷
 
@@ -54,7 +54,7 @@ obsidian 的使用感受
 ### 几点原则：
 
 - 文件夹和标签，有空的时候，心情好的时候，想浪费时间的时候，再去整理，否则默认的自动生成的文件，让它先在收集箱默认呆着
-- 自己写东西的时候，尽量想怎么引用已有的东西，尤其是一个偏专业的术语，打造自己的 [[数字花园 1]]
+- 自己写东西的时候，尽量想怎么引用已有的东西，尤其是一个偏专业的术语，打造自己的[[数字花园 1]]
 
 ## 参考实践
 

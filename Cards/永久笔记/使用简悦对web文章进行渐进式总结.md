@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-26
-date modified: 2022-08-20
+date modified: 2023-03-07
 title: 使用简悦对web文章进行渐进式总结
 ---
 

@@ -1,7 +1,7 @@
 ---
 date created: 2022-06-09
-date modified: 2022-08-24
-tags: 索引笔记
+date modified: 2023-03-07
+tags: [索引笔记]
 title: ∑ golang
 ---
 
@@ -11,4 +11,5 @@ title: ∑ golang
 [8小时转职Golang工程师 · 语雀](https://www.yuque.com/aceld/mo95lb/dsk886)
 
 强需求：
+
 - 文章是友好渠道发布，可以用剪藏工具完美摘录原文，从而方便做笔记。
