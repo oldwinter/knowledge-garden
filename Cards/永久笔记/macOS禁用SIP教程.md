@@ -1,7 +1,7 @@
 ---
 title: macOS禁用SIP教程
 date created: 2022-12-08
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 1、关闭SIP

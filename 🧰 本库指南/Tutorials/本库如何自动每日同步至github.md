@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-08-25
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 本库如何自动每日同步至github
 ---
 

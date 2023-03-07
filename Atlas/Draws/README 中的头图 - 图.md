@@ -4,7 +4,7 @@ tags:
   - excalidraw
 title: Text Elements
 date created: 2022-09-08
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 ==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==

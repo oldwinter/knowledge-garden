@@ -1,7 +1,7 @@
 ---
 title: 再读istio官方文档的笔记
 date created: 2022-12-11
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 动态请求路由：按权重和匹配规则（版本粒度）

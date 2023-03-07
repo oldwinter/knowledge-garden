@@ -13,7 +13,7 @@ tags:
   - 微信读书笔记
 title: 少有人走的路：心智成熟的旅程-M.斯科特·派克
 date created: 2022-09-21
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 ## 元数据

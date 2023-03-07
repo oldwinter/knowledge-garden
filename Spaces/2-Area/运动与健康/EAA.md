@@ -1,7 +1,7 @@
 ---
 title: EAA
 date created: 2022-10-05
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 是[[支链氨基酸|BCAA]]的超集，还多包含了人体可以少量合成的一些必须氨基酸。

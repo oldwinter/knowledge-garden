@@ -1,7 +1,7 @@
 ---
 title: 派评 | 近期值得关注的 App - 少数派
 date created: 2023-03-06
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 [[ReadItLater]] [[Article]]

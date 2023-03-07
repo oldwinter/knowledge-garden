@@ -2,7 +2,7 @@
 aliases:
   - 运动后延迟性肌肉疼痛
 date created: 2022-09-04
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: DOMS
 ---
 

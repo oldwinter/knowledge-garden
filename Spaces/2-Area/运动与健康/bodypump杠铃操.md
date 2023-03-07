@@ -1,7 +1,7 @@
 ---
 title: bodypump杠铃操
 date created: 2022-10-08
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 up:: [[跳操团课]]

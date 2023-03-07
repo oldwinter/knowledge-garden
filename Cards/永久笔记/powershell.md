@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: powershell
 ---
 - 👍，作者能聊聊 powershell 的用户群体，都是哪些人嘛？谁值得学它？

@@ -1,7 +1,7 @@
 ---
 title: chatGPT 用于 阅读理解
 date created: 2023-02-28
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 [阅读助理 (openai.com)](https://chat.openai.com/chat/65cf02fd-e916-4a63-b5d3-04721d2413f6)

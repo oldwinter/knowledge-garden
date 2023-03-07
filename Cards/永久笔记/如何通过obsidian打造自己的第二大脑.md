@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-20
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 如何通过obsidian打造自己的第二大脑
 ---
 

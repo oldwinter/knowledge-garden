@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-25
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 对于notion迟迟不出中文版的猜想
 tags:
   - 对话/QQ/群聊

@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-30
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: building your second brain读书笔记 - CODE方法
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: RPE
 date created: 2022-10-17
-date modified: 2023-03-07
+date modified: 2023-03-08
 aliases:
   - 主观疲劳等级
 ---

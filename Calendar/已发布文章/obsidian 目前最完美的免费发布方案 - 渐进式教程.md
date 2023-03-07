@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-15
-date modified: 2023-03-07
+date modified: 2023-03-08
 tags:
   - 文章/已完成
 title: obsidian 目前最完美的免费发布方案 - 渐进式教程

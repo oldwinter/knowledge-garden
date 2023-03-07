@@ -1,7 +1,7 @@
 ---
 title: OpenAI - chatGPT -超强AI聊天机器人注册使用
 date created: 2022-12-06
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 [[chatGPT的使用经验]]

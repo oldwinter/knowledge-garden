@@ -1,7 +1,7 @@
 ---
 title: IAAS
 date created: 2022-12-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 IaaS（Infrastructure as a Service），即“基础设施即服务”，一般指云计算所提供的计算、存储、网络等基本底层能力。

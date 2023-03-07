@@ -2,7 +2,7 @@
 dg-publish: true
 title: obsidian中如何找到以前写过的笔记
 date created: 2022-12-10
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 - 回想1个或多个标题里的关键词。通过cmd+o找到。
 	- 意味着写笔记的时候，要尽可能完整表达本篇笔记核心，宁愿多说不能少说，可以加aliases的metadata加强后期被搜索到的可能性。

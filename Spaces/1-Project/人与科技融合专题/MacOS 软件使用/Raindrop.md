@@ -8,7 +8,7 @@ tags:
 是否已重装:
 title: Raindrop
 date created: 2023-02-28
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 - 国内有[[Pinbox]]。相比于原生自带的书签管理，
 	- 核心优势是

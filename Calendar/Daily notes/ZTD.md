@@ -1,7 +1,7 @@
 ---
 title: ZTD
 date created: 2023-03-03
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 相比于[[GTD]]的任务管理体系，ZTD更注重轻量化，关注如何养成习惯以及做成事儿。

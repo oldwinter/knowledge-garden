@@ -1,7 +1,7 @@
 ---
 title: 不运动的减肥方法-NEAT
 date created: 2022-12-05
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 NEAT（Non-Exercise Activity Thermogenesis，即非运动性热消耗），也就是除了有意识运动之外的所有活动的热量消耗。NEAT减肥法，就是靠增加这种非运动性热消耗来减肥的。

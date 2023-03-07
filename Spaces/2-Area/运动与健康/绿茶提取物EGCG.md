@@ -1,7 +1,7 @@
 ---
 title: 绿茶提取物EGCG
 date created: 2022-12-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 x:: [[茶的分类]]

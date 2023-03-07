@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-09-03
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 本库如何指定笔记同步至github
 ---
 

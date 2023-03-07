@@ -4,7 +4,7 @@ bookId: '790470'
 category: 文学-经典作品
 cover: >-
 date created: 2022-08-16
-date modified: 2023-03-07
+date modified: 2023-03-08
 doc_type: weread-highlights-reviews
 isbn: 9787121272394
 lastReadDate: 2022-08-16T00:00:00.000Z

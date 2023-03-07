@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: obsidian的中括号搜索的技巧
 ---
 

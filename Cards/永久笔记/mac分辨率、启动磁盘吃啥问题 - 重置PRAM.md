@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-02
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: mac分辨率、启动磁盘吃啥问题 - 重置PRAM
 ---
 

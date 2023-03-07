@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-08-05
-date modified: 2023-03-07
+date modified: 2023-03-08
 tags:
   - 本库教程
 title: » 本库笔记的emoji符号记录

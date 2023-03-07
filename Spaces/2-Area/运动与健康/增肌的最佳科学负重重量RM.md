@@ -1,7 +1,7 @@
 ---
 title: 增肌的最佳科学负重重量RM
 date created: 2022-12-03
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 RM（Repetition Maximum）定义：

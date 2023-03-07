@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-24
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 本库obsidian如何批量重命名文件
 ---
 

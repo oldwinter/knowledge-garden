@@ -1,7 +1,7 @@
 ---
 title: obsidian、notion和logseq的异同分析及软件选用
 date created: 2023-02-18
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 - obsidian的第一公民，其实就是一个个带有metadata的md文件。

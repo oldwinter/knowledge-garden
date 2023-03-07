@@ -1,7 +1,7 @@
 ---
 title: vercel edge function
 date created: 2023-03-04
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 [[edge function 和serverless function的不同之处及其应用场景]]

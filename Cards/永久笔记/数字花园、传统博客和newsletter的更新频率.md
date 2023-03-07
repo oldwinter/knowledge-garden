@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-26
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 数字花园、传统博客和newsletter的更新频率
 ---
 

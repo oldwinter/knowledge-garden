@@ -1,7 +1,7 @@
 ---
 title: PAAS
 date created: 2022-12-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 PaaS（Platform as a Service），即“平台即服务”，通常指基于云底层能力而构建的面向领域或场景的高层服务，如数据库、应用服务等。用户可以直接开发、运行、管理应用程序，而无需构建和维护底层的基础设施。

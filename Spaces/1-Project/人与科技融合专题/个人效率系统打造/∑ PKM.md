@@ -4,7 +4,7 @@ aliases:
   - 『入不孵出』PKM系统
   - 个人知识管理
 date created: 2022-06-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 tags:
   - 索引笔记
 title: ∑ PKM

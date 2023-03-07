@@ -1,7 +1,7 @@
 ---
 title: 成就二：借助obsidian，自下而上碎片化地，学习健身相关知识，构建第二大脑
 date created: 2023-02-10
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 ## 成就二：借助obsidian，自下而上碎片化地，学习健身相关知识，构建第二大脑

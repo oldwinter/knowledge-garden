@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
+                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md"
+                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md"
               }
             }
           },
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
+                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
+                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
+                "file": "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -215,12 +215,13 @@
   },
   "active": "e07e6322b029a211",
   "lastOpenFiles": [
+    "README.md",
+    "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
     "Cards/永久笔记/∑ 令我多次沉醉的人或作品.md",
     "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
     "Calendar/Daily notes/Gmail.md",
     "Calendar/Daily notes/Roadmap.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
-    "README.md",
     "Cards/永久笔记/bilibili.md",
     "Cards/永久笔记/b站.md",
     "Calendar/Daily notes/2023-02-24.md",
@@ -242,7 +243,6 @@
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "ReadItLater Inbox",
     "Calendar/Daily notes/2023-03-06.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/检测某段文本是否由AI自动生成.md",
     "Omnivore/2023-02-20",
     "Omnivore",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",

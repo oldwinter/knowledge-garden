@@ -4,7 +4,7 @@ bookId: CB_Eqp1jP1ju6RU6Zk6YE
 category: null
 cover: https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover
 date created: 2022-08-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 doc_type: weread-highlights-reviews
 isbn: null
 lastReadDate: 2022-08-07T00:00:00.000Z

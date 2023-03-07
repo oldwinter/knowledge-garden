@@ -1,6 +1,6 @@
 ---
 date created: 2022-05-13
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 项目owner机制
 ---
 - 敏捷项目拆分成子项目后的运作问题：

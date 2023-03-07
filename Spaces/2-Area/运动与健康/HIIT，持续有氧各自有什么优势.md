@@ -1,7 +1,7 @@
 ---
 title: HIIT，持续有氧各自有什么优势
 date created: 2023-02-23
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 HIIT执行起来，身体感觉更累，持续稳定的有氧则比较轻松。

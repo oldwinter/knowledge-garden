@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-08
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: obsidian 搜索技巧
 ---
 

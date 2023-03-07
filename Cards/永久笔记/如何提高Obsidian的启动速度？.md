@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 source: https://tft脚本er.medium.com/improve-obsidian-startup-time-on-older-devices-with-the-faststart-script-70a6c590309f
 title: 如何提高Obsidian的启动速度？
 ---

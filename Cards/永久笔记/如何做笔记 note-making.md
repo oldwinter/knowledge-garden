@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-20
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 如何做笔记 note-making
 ---
 

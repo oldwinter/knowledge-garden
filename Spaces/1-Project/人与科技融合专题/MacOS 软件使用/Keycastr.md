@@ -8,7 +8,7 @@ tags:
 是否已重装:
 title: Keycastr
 date created: 2023-02-28
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 和[[Presentify]]配合使用，进行演讲展示。

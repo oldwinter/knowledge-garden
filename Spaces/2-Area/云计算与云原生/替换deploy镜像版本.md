@@ -1,7 +1,7 @@
 ---
 title: 替换deploy镜像版本
 date created: 2022-12-11
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 kubectl set image deploy istio-ingressgateway xx=xx:1.3.0-r1-casing -n istio-system

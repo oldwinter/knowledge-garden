@@ -4,7 +4,7 @@ aliases:
   - 路线图
 title: Roadmap
 date created: 2023-03-03
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 一个成熟的团队，在[[目标管理]]中，一定会有个Roadmap，常见的是按季度进行。

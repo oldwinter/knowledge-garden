@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-06
-date modified: 2023-03-07
+date modified: 2023-03-08
 tags:
   - 本库教程
 title: README
@@ -15,7 +15,7 @@ dg-publish: true
 </p>
 <p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
 
->[!TIP]重大更新💡  
+>[!TIP] 重大更新💡  
 > 迎接全新的obsidian 1.0版本，本库也正式发布v1.0版本，请到release中下载。
 
 ## 这是什么

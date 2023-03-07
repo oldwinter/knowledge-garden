@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: Advanced Tables
 当前是否还在使用: no
 使用或不用的原因: 加强后md表格编辑还是不方便，不如直接使用[[Projects]]插件编辑复杂表格

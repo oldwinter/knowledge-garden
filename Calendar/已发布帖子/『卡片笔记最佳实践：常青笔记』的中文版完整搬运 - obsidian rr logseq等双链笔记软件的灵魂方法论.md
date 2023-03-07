@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-12
-date modified: 2023-03-07
+date modified: 2023-03-08
 title: 『卡片笔记最佳实践：常青笔记』的中文版完整搬运 - obsidian rr logseq等双链笔记软件的灵魂方法论
 ---
 

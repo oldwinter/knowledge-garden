@@ -123,7 +123,7 @@
       "There should be at most one consecutive blank line.": true
     },
     "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": true,
+      "Converts leading spaces to tabs.": false,
       "Tabsize": "4"
     },
     "Empty Line Around Code Fences": {
@@ -217,7 +217,7 @@
       "Ignore Words": ""
     },
     "Remove Space around Characters": {
-      "Ensures that certain characters are not surrounded by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": true,
+      "Ensures that certain characters are not surrounded by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false,
       "Include Fullwidth Forms": true,
       "Include CJK Symbols and Punctuation": true,
       "Include Dashes": true,
@@ -228,7 +228,8 @@
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
   "foldersToIgnore": [
-    "Extras/Templates"
+    "Extras/Templates",
+    "Sources"
   ],
   "linterLocale": "zh-cn",
   "logLevel": 4,

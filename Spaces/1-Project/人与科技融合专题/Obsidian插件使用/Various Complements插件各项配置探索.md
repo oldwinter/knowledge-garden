@@ -1,7 +1,7 @@
 ---
 title: Various Complements插件各项配置探索
 date created: 2023-03-05
-date modified: 2023-03-07
+date modified: 2023-03-08
 ---
 
 官方文档：[Home - Various Complements (tadashi-aikawa.github.io)](https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/)
