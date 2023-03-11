@@ -18,7 +18,7 @@ title: 思考的乐趣：Matrix67数学笔记-顾森
 
 ## 元数据
 
->[!abstract]思考的乐趣：Matrix67数学笔记
+>[!abstract] 思考的乐趣：Matrix67数学笔记
 
 > - ![思考的乐趣：Matrix67数学笔记|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/977/22806977/t7_22806977.jpg)
 > - 书名：思考的乐趣：Matrix67数学笔记

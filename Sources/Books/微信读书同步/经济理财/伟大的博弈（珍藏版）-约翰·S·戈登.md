@@ -18,7 +18,7 @@ title: 伟大的博弈（珍藏版）-约翰·S·戈登
 
 ## 元数据
 
->[!abstract]伟大的博弈（珍藏版）
+>[!abstract] 伟大的博弈（珍藏版）
 
 > - ![伟大的博弈（珍藏版）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/790/921790/t7_921790.jpg)
 > - 书名：伟大的博弈（珍藏版）

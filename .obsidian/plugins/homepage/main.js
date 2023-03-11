@@ -1726,10 +1726,8 @@ var HomepageSettingTab = class extends import_obsidian2.PluginSettingTab {
   display() {
     var _a;
     const workspacesMode = this.plugin.workspacesMode();
+    const dailynotesAutorun = getDailynotesAutorun(this.app);
     this.containerEl.empty();
-    if (getDailynotesAutorun(this.app)) {
-      this.containerEl.insertAdjacentHTML("afterbegin", "<div class='mod-warning' style='margin-bottom: 20px'>Daily Notes' 'Open daily note on startup' setting is not compatible with this plugin, so functionality has been disabled.</div>");
-    }
     const suggestor = workspacesMode ? WorkspaceSuggest : FileSuggest;
     const homepageDesc = `The name of the ${workspacesMode ? "workspace" : "note or canvas"} to open.`;
     const homepage = workspacesMode ? "workspace" : "defaultNote";
@@ -1756,7 +1754,15 @@ var HomepageSettingTab = class extends import_obsidian2.PluginSettingTab {
     if ((_a = this.plugin.workspacePlugin) == null ? void 0 : _a.enabled) {
       this.addToggle("Use workspaces", "Open a workspace, instead of a note or canvas, as the homepage.", "workspaceEnabled", (_) => this.display(), true);
     }
-    this.addToggle("Open on startup", "When launching Obsidian, open the homepage.", "openOnStartup", (_) => this.display(), true).settingEl.setAttribute("style", "padding-top: 30px; border-top: none !important");
+    let startupSetting = this.addToggle("Open on startup", "When launching Obsidian, open the homepage.", "openOnStartup", (_) => this.display(), true);
+    if (dailynotesAutorun) {
+      startupSetting.descEl.createDiv({
+        text: `This setting has been disabled, as it isn't compatible with Daily Notes' "Open daily note on startup" functionality. To use it, disable the Daily Notes setting.`,
+        attr: { class: "mod-warning" }
+      });
+      this.disableSetting(startupSetting.settingEl);
+    }
+    startupSetting.settingEl.style.cssText += "padding-top: 30px; border-top: none !important";
     this.addToggle("Use ribbon icon", "Show a little house on the ribbon, allowing you to quickly access the homepage.", "hasRibbonIcon", (value) => this.plugin.setIcon(value), true);
     this.addHeading("Vault environment");
     let openingSetting = this.addDropdown("Opening method", "Determine how extant tabs and panes are affected on startup.", "openMode", Mode);
@@ -1775,11 +1781,11 @@ var HomepageSettingTab = class extends import_obsidian2.PluginSettingTab {
     }
     if (workspacesMode)
       Array.from(document.getElementsByClassName(HIDDEN)).forEach(this.disableSetting);
-    if (!this.settings.openOnStartup)
+    if (!this.settings.openOnStartup || dailynotesAutorun)
       this.disableSetting(openingSetting.settingEl);
   }
   disableSetting(setting) {
-    setting.setAttribute("style", "opacity: .5; pointer-events: none !important");
+    setting.setAttribute("style", "opacity: .5; pointer-events: none !important;");
   }
   addHeading(name) {
     const heading = new import_obsidian2.Setting(this.containerEl).setHeading().setName(name);
@@ -1965,8 +1971,7 @@ var Homepage = class extends import_obsidian3.Plugin {
       });
       this.executing = true;
       this.homepage = this.getHomepageName();
-      if (getDailynotesAutorun(this.app)) {
-        new import_obsidian3.Notice("Daily Notes' 'Open daily note on startup' setting is not compatible  with Homepage. Disable one of the conflicting plugins.");
+      if (getDailynotesAutorun(this.app) && !this.loaded) {
         return;
       } else if (!this.settings.autoCreate && (yield nonextant())) {
         new import_obsidian3.Notice(`Homepage "${this.homepage}" does not exist.`);

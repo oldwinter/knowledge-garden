@@ -18,7 +18,7 @@ date modified: 2023-03-08
 
 ## 元数据
 
->[!abstract]少有人走的路：心智成熟的旅程
+>[!abstract] 少有人走的路：心智成熟的旅程
 
 > - ![少有人走的路：心智成熟的旅程|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/862/33800862/t7_33800862.jpg)
 > - 书名：少有人走的路：心智成熟的旅程

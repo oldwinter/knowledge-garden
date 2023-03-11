@@ -19,7 +19,7 @@ title: Building a Second Brain-Tiago Forte
 
 ## 元数据
 
->[!abstract]Building a Second Brain
+>[!abstract] Building a Second Brain
 
 > - ![Building a Second Brain|200](https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover)
 > - 书名：Building a Second Brain

@@ -13,14 +13,108 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
+                "file": "Omnivore/2023-02-20/Getting Started with Omnivore.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c0c17a799cd45f00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Extras/Templates/ChatGPT_MD/templates/未命名.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2333787b0e5ab812",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/思维导图.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8cb901c71fcf1753",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Atlas/Canvas/SWOT分析 - 模板.canvas",
+                "viewState": {
+                  "x": -446.23664197326116,
+                  "y": 523.5050904853088,
+                  "zoom": -1.210568334360917
+                }
+              }
+            }
+          },
+          {
+            "id": "481b49e51e3c533d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Atlas/Draws/∑ excalidraw 白板创建入口.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f5bb079507d91f99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/2023-03-11.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "04e047975271e6b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/时间管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "547187de0f204021",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -50,7 +144,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aliases:",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +185,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/obsidian开箱即用示例库.md"
+                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md"
               }
             }
           },
@@ -101,7 +195,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
+                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +207,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
+                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
+                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,59 +291,62 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "3835c02b0a423af5",
+  "active": "547187de0f204021",
   "lastOpenFiles": [
-    "🧰 本库指南/Tutorials/本库推荐的obsidian入门路线及资源.md",
-    "Cards/永久笔记/obsidian开箱即用示例库.md",
-    "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
-    "Spaces/2-Area/运动与健康/常见含有反式脂肪的添加剂.md",
-    "Spaces/2-Area/运动与健康/一些改善身体健康的日常好习惯.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Calendar/Daily notes/时间管理.md",
+    "Calendar/Daily notes/FAST法则 - 张永锡.md",
+    "Calendar/Daily notes/2023-03-11.md",
+    "Atlas/Canvas/九宫格.canvas",
+    "Atlas/Canvas/九宫格 - Cubox.md",
+    "Atlas/Canvas/九宫格 - 滴答清单.md",
+    "Atlas/Draws/白板 2023-03-11.md",
+    "Atlas/Draws/白板 2023-03-11.dark.svg",
+    "Atlas/Draws/白板 2023-03-11.light.svg",
+    "Atlas/Draws/∑ excalidraw 白板创建入口.md",
+    "Atlas/Draws/测试excalidraw.md",
+    "Atlas/Draws/数字时代如何更好地工作与生活 - 图.md",
+    "Atlas/Canvas/SWOT分析 - 模板 1.canvas",
+    "Atlas/Canvas/SWOT分析 - 模板.canvas",
+    "Cards/永久笔记/🔡SWOT.md",
+    "Cards/永久笔记/SWOT分析 - 模板.md",
+    "Atlas/思维导图/思维导图 - 模板.md",
+    "Sources/Movies + TV/豆瓣影音导入/非常嫌疑犯.md",
+    "Sources/Movies + TV/豆瓣影音导入/芬奇.md",
+    "Cards/永久笔记/思维导图.md",
+    "Atlas/思维导图",
+    "Extras/Templates/Canvas模板/思维导图 - 模板.canvas",
+    "Extras/Templates/Canvas模板/思维导图 - 模板.md",
+    "Extras/Templates/其他/思维思考模板/康奈尔笔记法模板.md",
+    "Extras/Templates/其他/思维思考模板/六顶思考帽模板.md",
+    "Extras/Templates/Canvas模板/精益画布 - 模板.canvas",
+    "Sources/GPTchats/202331114835.md",
+    "Extras/Templates/Canvas模板",
+    "Extras/Templates/ChatGPT_MD/templates/未命名.md",
+    "Omnivore/2023-02-20/Getting Started with Omnivore.md",
+    "Sources/GPTchats",
+    "Extras/Templates/ChatGPT_MD/templates",
+    "Extras/Templates/ChatGPT_MD",
+    "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
+    "Cards/永久笔记/记忆宫殿.md",
+    "🧰 本库指南/Tutorials/macos系统中快捷输入各种特殊符号.md",
+    "🧰 本库指南/Tutorials/obsidian初学过程中的感受.md",
+    "🧰 本库指南/Tutorials/obsidian中如何找到以前写过的笔记.md",
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
     "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
-    "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
-    "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
-    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
-    "记忆宫殿.md",
-    "Calendar/Daily notes/肩部肌肉训练的技术细节.md",
-    "Calendar/Daily notes/2023-03-08.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Sources/Movies + TV/豆瓣影音导入/霸王别姬.md",
-    "Calendar/文章草稿/30岁的男人系列/2022年，借助Notion、Obsidian和微信读书，我减了15kg体脂，拿了800个star，读了1800小时书.md",
-    "Cards/永久笔记/🔡SCQA.md",
-    "Sources/Articles/常青笔记阅读笔记/∑ 常青笔记阅读笔记.md",
-    "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
-    "Cards/永久笔记/Chrome.md",
-    "Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md",
-    "Spaces/1-Project/人与科技融合专题/Obsidian插件使用/Linter.md",
-    "README.md",
-    "Sources/Movies + TV/豆瓣影音导入/一年一度喜剧大赛第二季.md",
-    "Cards/永久笔记/∑ 令我多次沉醉的人或作品.md",
-    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Bob.md",
-    "Calendar/Daily notes/Gmail.md",
-    "Calendar/Daily notes/Roadmap.md",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
-    "Cards/永久笔记/bilibili.md",
     "ReadItLater Inbox",
     "Omnivore/2023-02-20",
     "Omnivore",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",
-    "Atlas/Canvas/未命名 1.canvas",
-    "Atlas/Canvas/未命名.canvas",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
     "Context",
-    "Extras/Templates/textgenerator模板/prompts/huggingface",
-    "主动插件和被动插件",
-    "Extras/Templates/textgenerator模板/prompts/default",
-    "Extras/Templates/textgenerator模板/prompts/dalle-2",
-    "Extras/Templates/textgenerator模板/prompts",
     "Atlas/Draws/README 中的头图 - 图.svg",
     "Extras/Media/weread_image_1067883451661727.jpeg",
     "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",

@@ -19,7 +19,7 @@
   ],
   "showMatchStrategy": false,
   "showComplementAutomatically": false,
-  "showIndexingStatus": true,
+  "showIndexingStatus": false,
   "descriptionOnSuggestion": "Full",
   "selectSuggestionKeys": "Ctrl/Cmd+Enter",
   "additionalCycleThroughSuggestionsKeys": "Tab, Shift+Tab",
@@ -169,6 +169,22 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1678108884162
+        }
+      }
+    },
+    "人生": {
+      "人生": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1678517064981
+        }
+      }
+    },
+    "非常嫌疑犯": {
+      "非常嫌疑犯": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1678517076159
         }
       }
     }

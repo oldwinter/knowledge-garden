@@ -18,7 +18,7 @@ title: 写给大家看的设计书（第4版）-Robin Williams
 
 ## 元数据
 
->[!abstract]写给大家看的设计书（第4版）
+>[!abstract] 写给大家看的设计书（第4版）
 
 > - ![写给大家看的设计书（第4版）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/758/907758/t7_907758.jpg)
 > - 书名：写给大家看的设计书（第4版）

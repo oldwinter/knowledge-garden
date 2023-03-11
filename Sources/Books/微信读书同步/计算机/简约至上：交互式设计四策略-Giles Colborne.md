@@ -18,7 +18,7 @@ title: 简约至上：交互式设计四策略-Giles Colborne
 
 ## 元数据
 
->[!abstract]简约至上：交互式设计四策略
+>[!abstract] 简约至上：交互式设计四策略
 
 > - ![简约至上：交互式设计四策略|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/772/907772/t7_907772.jpg)
 > - 书名：简约至上：交互式设计四策略

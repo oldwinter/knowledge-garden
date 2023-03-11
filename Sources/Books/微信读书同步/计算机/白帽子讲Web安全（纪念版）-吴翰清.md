@@ -18,7 +18,7 @@ title: 白帽子讲Web安全（纪念版）-吴翰清
 
 ## 元数据
 
->[!abstract]白帽子讲Web安全（纪念版）
+>[!abstract] 白帽子讲Web安全（纪念版）
 
 > - ![白帽子讲Web安全（纪念版）|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/273/851273/t7_851273.jpg)
 > - 书名：白帽子讲Web安全（纪念版）

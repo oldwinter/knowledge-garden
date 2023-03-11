@@ -11,6 +11,9 @@ tags:
 title: 🔡SWOT
 ---
 
+## 模板
+![[SWOT分析 - 模板.canvas]]
+
 ## 个人理解
 
 - 适用场景

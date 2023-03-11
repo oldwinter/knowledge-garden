@@ -18,7 +18,7 @@ date modified: 2023-03-08
 
 ## 元数据
 
->[!abstract]图解HTTP
+>[!abstract] 图解HTTP
 
 > - ![图解HTTP|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/764/907764/t7_907764.jpg)
 > - 书名：图解HTTP

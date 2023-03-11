@@ -18,7 +18,7 @@ title: 贪婪的多巴胺-丹尼尔·利伯曼 迈克尔·E.朗
 
 ## 元数据
 
->[!abstract]贪婪的多巴胺
+>[!abstract] 贪婪的多巴胺
 
 > - ![贪婪的多巴胺|200](https://wfqqreader-1252317822.image.myqcloud.com/cover/9/41626009/t7_41626009.jpg)
 > - 书名：贪婪的多巴胺

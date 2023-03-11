@@ -17,7 +17,7 @@ Spaces/2-Area/个人职业生涯/**
 .obsidian/plugins/ava/data.json
 .obsidian/plugins/digitalgarden/data.json
 .obsidian/plugins/smart-connections/data.json
-
+.obsidian/plugins/chatgpt-md/data.json
 
 # 没必要上传的数据屏蔽
 .obsidian/plugins/recent-files-obsidian/data.json

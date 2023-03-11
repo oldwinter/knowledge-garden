@@ -24,3 +24,27 @@ date modified: 2023-03-08
 > save a link [⤴️](https://omnivore.app/me/getting-started-with-omnivore-1866c75e75c#fab7cccc-55d0-4f63-951a-51d8318158c7)
 
 ok
+
+
+<hr class="__chatgpt_plugin">
+
+role::assistant
+
+As an AI language model, I don't have any feedback on the article as it seems to be incomplete. However, it seems to be an introductory article on Omnivore, a tool that allows users to trigger webhooks and save links.
+
+<hr class="__chatgpt_plugin">
+
+role::user
+
+你能说中文吗
+
+<hr class="__chatgpt_plugin">
+
+role::assistant
+
+当然可以，我可以使用中文进行交流。请问有什么我可以帮助您的吗？
+
+<hr class="__chatgpt_plugin">
+
+role::user
+
