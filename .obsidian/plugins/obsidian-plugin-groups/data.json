@@ -438,6 +438,10 @@
         {
           "id": "obsidian-omnivore",
           "name": "Omnivore"
+        },
+        {
+          "id": "obsidian-pending-notes",
+          "name": "Pending notes"
         }
       ],
       "groupIds": [],

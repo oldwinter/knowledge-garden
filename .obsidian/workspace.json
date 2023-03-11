@@ -4,31 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "407896ffbf0ced21",
+        "id": "cd21b555dbb8ccb8",
         "type": "tabs",
         "children": [
           {
-            "id": "72fa76c65c978c18",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "e07e6322b029a211",
+            "id": "3835c02b0a423af5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Movies + TV/豆瓣影音导入/霸王别姬.md",
+                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -106,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md"
+                "file": "Cards/永久笔记/obsidian开箱即用示例库.md"
               }
             }
           },
@@ -116,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+                "file": "Cards/永久笔记/obsidian开箱即用示例库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +159,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -185,11 +171,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fa884f99b5b22239",
+        "id": "1be27f7b16e203e6",
         "type": "tabs",
         "children": [
           {
-            "id": "f23ef4020af85dbe",
+            "id": "b4e039d034accd93",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -209,11 +195,31 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "a4d1994dfc9f1870",
+  "active": "3835c02b0a423af5",
   "lastOpenFiles": [
+    "🧰 本库指南/Tutorials/本库推荐的obsidian入门路线及资源.md",
+    "Cards/永久笔记/obsidian开箱即用示例库.md",
+    "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
+    "Spaces/2-Area/运动与健康/常见含有反式脂肪的添加剂.md",
+    "Spaces/2-Area/运动与健康/一些改善身体健康的日常好习惯.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Atlas/Canvas/减脂塑型金字塔.canvas",
+    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
+    "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
+    "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
+    "Atlas/Canvas/🧩 如何做读书笔记.canvas",
+    "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
+    "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
+    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+    "记忆宫殿.md",
+    "Calendar/Daily notes/肩部肌肉训练的技术细节.md",
+    "Calendar/Daily notes/2023-03-08.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "Sources/Movies + TV/豆瓣影音导入/霸王别姬.md",
     "Calendar/文章草稿/30岁的男人系列/2022年，借助Notion、Obsidian和微信读书，我减了15kg体脂，拿了800个star，读了1800小时书.md",
     "Cards/永久笔记/🔡SCQA.md",
@@ -230,17 +236,6 @@
     "Calendar/Daily notes/Roadmap.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ PKM.md",
     "Cards/永久笔记/bilibili.md",
-    "Cards/永久笔记/b站.md",
-    "Calendar/Daily notes/2023-02-24.md",
-    "Calendar/Daily notes/2023-02-25.md",
-    "Calendar/Daily notes/Daily notes归档/2023/2023-01-26.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Sources/Movies + TV/豆瓣影音导入/1917.md",
-    "Cards/永久笔记/安卓手机必备软件.md",
-    "Atlas/DB folders/∑ DB 安卓软件.md",
-    "Atlas/DB folders/∑ DB 常用网站.md",
-    "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
-    "Atlas/Canvas/减脂塑型金字塔.canvas",
     "ReadItLater Inbox",
     "Omnivore/2023-02-20",
     "Omnivore",
@@ -255,14 +250,7 @@
     "Extras/Templates/textgenerator模板/prompts/default",
     "Extras/Templates/textgenerator模板/prompts/dalle-2",
     "Extras/Templates/textgenerator模板/prompts",
-    "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
-    "Atlas/Canvas/🧩 如何做读书笔记.canvas",
-    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
-    "Atlas/Canvas/🧩 白板canvas-示意图.canvas",
     "Atlas/Draws/README 中的头图 - 图.svg",
-    "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
-    "Atlas/Canvas/🧩 数字时代如何更好地生活与工作.canvas",
-    "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Extras/Media/weread_image_1067883451661727.jpeg",
     "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",
     "Extras/Media/v2-0b821715f5e9eb09a79b03d80671de44.jpeg"

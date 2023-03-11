@@ -1,0 +1,13 @@
+.pending-notes-view-container h1 {
+	margin-bottom: 4px;
+}
+
+.pending-notes-view-container ul {
+	margin: 0 8px;
+	padding: 16px 16px 32px;
+}
+
+.pending-notes-view-container ul li {
+	margin: 0;
+	padding: 4px;
+}

@@ -543,10 +543,10 @@ __export(main_exports, {
   default: () => QuickAdd
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian30 = require("obsidian");
+var import_obsidian31 = require("obsidian");
 
 // src/quickAddSettingsTab.ts
-var import_obsidian26 = require("obsidian");
+var import_obsidian27 = require("obsidian");
 
 // node_modules/.pnpm/svelte@3.55.1/node_modules/svelte/internal/index.mjs
 function noop() {
@@ -5549,7 +5549,7 @@ var GenericYesNoPrompt = class extends import_obsidian2.Modal {
 };
 
 // src/gui/choiceList/ChoiceView.svelte
-var import_obsidian25 = require("obsidian");
+var import_obsidian26 = require("obsidian");
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
 var import_obsidian5 = require("obsidian");
@@ -9540,9 +9540,10 @@ var Formatter = class {
   async replaceLinkToCurrentFileInString(input) {
     const currentFilePathLink = this.getCurrentFileLink();
     let output = input;
-    if (!currentFilePathLink) {
+    if (!currentFilePathLink && LINK_TO_CURRENT_FILE_REGEX.test(output)) {
       throw new Error("unable to get current file path");
-    }
+    } else if (!currentFilePathLink)
+      return output;
     while (LINK_TO_CURRENT_FILE_REGEX.test(output))
       output = this.replacer(
         output,
@@ -9750,11 +9751,8 @@ var FileNameDisplayFormatter = class extends Formatter {
   async getSelectedText() {
     return "_selected_";
   }
-  async suggestForField(variableName) {
-    return Promise.resolve(``);
-  }
-  async replaceFieldVarInString(input) {
-    return Promise.resolve(`_field_`);
+  suggestForField(variableName) {
+    return `_field: ${variableName}_`;
   }
 };
 
@@ -10167,7 +10165,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/captureChoiceBuilder.ts
-var import_obsidian19 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 
 // src/engine/QuickAddEngine.ts
 var import_obsidian8 = require("obsidian");
@@ -10535,12 +10533,13 @@ var QuickAddApi = class {
             choiceExecutor.variables.set(key, variables[key]);
           });
         }
-        await new CompleteFormatter(
+        const output = await new CompleteFormatter(
           app2,
           plugin,
           choiceExecutor
         ).formatFileContent(input);
         choiceExecutor.variables.clear();
+        return output;
       },
       utility: {
         getClipboard: async () => {
@@ -10954,7 +10953,7 @@ var SingleMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/formatters/completeFormatter.ts
-var import_obsidian17 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 
 // src/engine/SingleInlineScriptEngine.ts
 var SingleInlineScriptEngine = class extends MacroChoiceEngine {
@@ -11950,6 +11949,57 @@ var InputPrompt = class {
   }
 };
 
+// src/gui/InputSuggester/inputSuggester.ts
+var import_obsidian17 = require("obsidian");
+var InputSuggester = class extends import_obsidian17.FuzzySuggestModal {
+  constructor(app2, displayItems, items) {
+    super(app2);
+    this.displayItems = displayItems;
+    this.items = items;
+    this.promise = new Promise((resolve, reject) => {
+      this.resolvePromise = resolve;
+      this.rejectPromise = reject;
+    });
+    this.inputEl.addEventListener("keydown", (event) => {
+      var _a;
+      if (event.code !== "Tab" || !("chooser" in this)) {
+        return;
+      }
+      const { values, selectedItem } = this.chooser;
+      const { value } = this.inputEl;
+      this.inputEl.value = (_a = values[selectedItem].item) != null ? _a : value;
+    });
+    this.open();
+  }
+  static Suggest(app2, displayItems, items) {
+    const newSuggester = new InputSuggester(app2, displayItems, items);
+    return newSuggester.promise;
+  }
+  getItemText(item) {
+    if (item === this.inputEl.value)
+      return item;
+    return this.displayItems[this.items.indexOf(item)];
+  }
+  getItems() {
+    if (this.inputEl.value === "")
+      return this.items;
+    return [this.inputEl.value, ...this.items];
+  }
+  selectSuggestion(value, evt) {
+    this.resolved = true;
+    super.selectSuggestion(value, evt);
+  }
+  onChooseItem(item, evt) {
+    this.resolved = true;
+    this.resolvePromise(item);
+  }
+  onClose() {
+    super.onClose();
+    if (!this.resolved)
+      this.rejectPromise("no input given.");
+  }
+};
+
 // src/formatters/completeFormatter.ts
 var CompleteFormatter = class extends Formatter {
   constructor(app2, plugin, choiceExecutor) {
@@ -12022,25 +12072,26 @@ var CompleteFormatter = class extends Formatter {
   }
   async suggestForField(variableName) {
     var _a;
-    const suggestedValues = [];
+    const suggestedValues = /* @__PURE__ */ new Set();
     for (const file of this.app.vault.getMarkdownFiles()) {
       const cache = this.app.metadataCache.getFileCache(file);
       const value = (_a = cache == null ? void 0 : cache.frontmatter) == null ? void 0 : _a[variableName];
       if (!value || typeof value == "object")
         continue;
-      suggestedValues.push(value);
+      suggestedValues.add(value.toString());
     }
-    if (suggestedValues.length === 0) {
+    if (suggestedValues.size === 0) {
       return await GenericInputPrompt.Prompt(
         app,
         `Enter value for ${variableName}`,
         `No existing values were found in your vault.`
       );
     }
-    return await GenericSuggester.Suggest(
+    const suggestedValuesArr = Array.from(suggestedValues);
+    return await InputSuggester.Suggest(
       this.app,
-      suggestedValues,
-      suggestedValues
+      suggestedValuesArr,
+      suggestedValuesArr
     );
   }
   async getMacroValue(macroName) {
@@ -12067,7 +12118,7 @@ var CompleteFormatter = class extends Formatter {
     ).run();
   }
   async getSelectedText() {
-    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian17.MarkdownView);
+    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian18.MarkdownView);
     if (!activeView)
       return "";
     return activeView.editor.getSelection();
@@ -12097,7 +12148,7 @@ var CompleteFormatter = class extends Formatter {
 };
 
 // src/engine/TemplateEngine.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 var TemplateEngine = class extends QuickAddEngine {
   constructor(app2, plugin, choiceFormatter) {
     super(app2);
@@ -12210,7 +12261,7 @@ ${formattedTemplateContent}`;
     if (!MARKDOWN_FILE_EXTENSION_REGEX.test(templatePath))
       correctTemplatePath += ".md";
     const templateFile = this.app.vault.getAbstractFileByPath(correctTemplatePath);
-    if (!(templateFile instanceof import_obsidian18.TFile))
+    if (!(templateFile instanceof import_obsidian19.TFile))
       throw new Error(
         `Template file not found at path "${correctTemplatePath}".`
       );
@@ -12299,10 +12350,7 @@ var FormatDisplayFormatter = class extends Formatter {
     return "_selected_";
   }
   async suggestForField(variableName) {
-    return Promise.resolve(``);
-  }
-  async replaceFieldVarInString(input) {
-    return Promise.resolve(`_field_`);
+    return Promise.resolve(`_field: ${variableName}_`);
   }
 };
 
@@ -12339,12 +12387,12 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   addCapturedToSetting() {
     var _a, _b, _c;
     let textField;
-    new import_obsidian19.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
+    new import_obsidian20.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
     const captureToContainer = this.contentEl.createDiv("captureToContainer");
     const captureToActiveFileContainer = captureToContainer.createDiv("captureToActiveFileContainer");
     const captureToActiveFileText = captureToActiveFileContainer.createEl("span");
     captureToActiveFileText.textContent = "Capture to active file";
-    const captureToActiveFileToggle = new import_obsidian19.ToggleComponent(
+    const captureToActiveFileToggle = new import_obsidian20.ToggleComponent(
       captureToActiveFileContainer
     );
     captureToActiveFileToggle.setValue((_a = this.choice) == null ? void 0 : _a.captureToActiveFile);
@@ -12359,7 +12407,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       (async () => formatDisplay.textContent = await displayFormatter.format(
         this.choice.captureTo
       ))();
-      const formatInput = new import_obsidian19.TextComponent(captureToFileContainer);
+      const formatInput = new import_obsidian20.TextComponent(captureToFileContainer);
       formatInput.setPlaceholder("File name format");
       textField = formatInput;
       formatInput.inputEl.style.width = "100%";
@@ -12383,7 +12431,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addPrependSetting() {
     var _a;
-    const prependSetting = new import_obsidian19.Setting(this.contentEl);
+    const prependSetting = new import_obsidian20.Setting(this.contentEl);
     prependSetting.setName("Write to bottom of file").setDesc(
       `Put value at the bottom of the file - otherwise at the ${((_a = this.choice) == null ? void 0 : _a.captureToActiveFile) ? "active cursor location" : "top"}.`
     ).addToggle((toggle) => {
@@ -12398,14 +12446,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addTaskSetting() {
-    const taskSetting = new import_obsidian19.Setting(this.contentEl);
+    const taskSetting = new import_obsidian20.Setting(this.contentEl);
     taskSetting.setName("Task").setDesc("Formats the value as a task.").addToggle((toggle) => {
       toggle.setValue(this.choice.task);
       toggle.onChange((value) => this.choice.task = value);
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian19.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian20.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc(
       "Add a link on your current cursor position, linking to the file you're capturing to."
     ).addToggle((toggle) => {
@@ -12415,7 +12463,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addInsertAfterSetting() {
     let insertAfterInput;
-    const insertAfterSetting = new import_obsidian19.Setting(this.contentEl);
+    const insertAfterSetting = new import_obsidian20.Setting(this.contentEl);
     insertAfterSetting.setName("Insert after").setDesc(
       "Insert capture after specified line. Accepts format syntax."
     ).addToggle((toggle) => {
@@ -12434,7 +12482,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     (async () => insertAfterFormatDisplay.innerText = await displayFormatter.format(
       this.choice.insertAfter.after
     ))();
-    insertAfterInput = new import_obsidian19.TextComponent(this.contentEl);
+    insertAfterInput = new import_obsidian20.TextComponent(this.contentEl);
     insertAfterInput.setPlaceholder("Insert after");
     insertAfterInput.inputEl.style.width = "100%";
     insertAfterInput.inputEl.style.marginBottom = "8px";
@@ -12448,7 +12496,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       this.plugin
     );
     if (this.choice.insertAfter.enabled) {
-      const insertAtEndSetting = new import_obsidian19.Setting(this.contentEl);
+      const insertAtEndSetting = new import_obsidian20.Setting(this.contentEl);
       insertAtEndSetting.setName("Insert at end of section").setDesc(
         "Insert the text at the end of the section, rather than at the top."
       ).addToggle(
@@ -12459,7 +12507,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
           );
         }
       );
-      const createLineIfNotFound = new import_obsidian19.Setting(this.contentEl);
+      const createLineIfNotFound = new import_obsidian20.Setting(this.contentEl);
       createLineIfNotFound.setName("Create line if not found").setDesc("Creates the 'insert after' line if it is not found.").addToggle((toggle) => {
         var _a, _b;
         if (!((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFound))
@@ -12481,14 +12529,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian19.Setting(this.contentEl);
+    const enableSetting = new import_obsidian20.Setting(this.contentEl);
     enableSetting.setName("Capture format").setDesc("Set the format of the capture.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.format.enabled).onChange((value) => {
         this.choice.format.enabled = value;
         textField.setDisabled(!value);
       });
     });
-    const formatInput = new import_obsidian19.TextAreaComponent(this.contentEl);
+    const formatInput = new import_obsidian20.TextAreaComponent(this.contentEl);
     formatInput.setPlaceholder("Format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
@@ -12512,7 +12560,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         createWithTemplate: false,
         template: ""
       };
-    const createFileIfItDoesntExist = new import_obsidian19.Setting(this.contentEl);
+    const createFileIfItDoesntExist = new import_obsidian20.Setting(this.contentEl);
     createFileIfItDoesntExist.setName("Create file if it doesn't exist").addToggle(
       (toggle) => {
         var _a, _b;
@@ -12526,7 +12574,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   addCreateWithTemplateSetting() {
     var _a, _b, _c, _d, _e;
     let templateSelector;
-    const createWithTemplateSetting = new import_obsidian19.Setting(this.contentEl);
+    const createWithTemplateSetting = new import_obsidian20.Setting(this.contentEl);
     createWithTemplateSetting.setName("Create file with given template.").addToggle(
       (toggle) => {
         var _a2;
@@ -12538,7 +12586,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         });
       }
     );
-    templateSelector = new import_obsidian19.TextComponent(this.contentEl);
+    templateSelector = new import_obsidian20.TextComponent(this.contentEl);
     templateSelector.setValue((_c = (_b = (_a = this.choice) == null ? void 0 : _a.createFileIfItDoesntExist) == null ? void 0 : _b.template) != null ? _c : "").setPlaceholder("Template path").setDisabled(
       !((_e = (_d = this.choice) == null ? void 0 : _d.createFileIfItDoesntExist) == null ? void 0 : _e.createWithTemplate)
     );
@@ -12555,7 +12603,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian19.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian20.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the file that is captured to.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -12572,7 +12620,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian19.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian20.Setting(this.contentEl);
     newTabSetting.setName("New Tab").setDesc("Open the file that is captured to in a new tab.").addToggle((toggle) => {
       var _a, _b;
       toggle.setValue((_b = (_a = this.choice) == null ? void 0 : _a.openFileInNewTab) == null ? void 0 : _b.enabled);
@@ -12596,7 +12644,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian19.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
+    new import_obsidian20.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -12605,7 +12653,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/macroChoiceBuilder.ts
-var import_obsidian20 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 var MacroChoiceBuilder = class extends ChoiceBuilder {
   constructor(app2, choice, macros) {
     super(app2);
@@ -12620,7 +12668,7 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
   }
   addSelectMacroSearch() {
     const selectMacroDropdownContainer = this.contentEl.createDiv("selectMacroDropdownContainer");
-    const dropdown = new import_obsidian20.DropdownComponent(
+    const dropdown = new import_obsidian21.DropdownComponent(
       selectMacroDropdownContainer
     );
     const macroOptions = {};
@@ -12652,10 +12700,10 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/MacrosManager.ts
-var import_obsidian24 = require("obsidian");
+var import_obsidian25 = require("obsidian");
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var import_obsidian23 = require("obsidian");
+var import_obsidian24 = require("obsidian");
 
 // src/types/macros/UserScript.ts
 var UserScript = class extends Command {
@@ -13147,7 +13195,7 @@ var NestedChoiceCommand = class extends SvelteComponent {
 var NestedChoiceCommand_default = NestedChoiceCommand;
 
 // src/gui/MacroGUIs/CommandList.svelte
-var import_obsidian22 = require("obsidian");
+var import_obsidian23 = require("obsidian");
 
 // src/gui/MacroGUIs/Components/UserScriptCommand.svelte
 function create_fragment15(ctx) {
@@ -13312,8 +13360,8 @@ var UserScriptCommand = class extends SvelteComponent {
 var UserScriptCommand_default = UserScriptCommand;
 
 // src/gui/MacroGUIs/UserScriptSettingsModal.ts
-var import_obsidian21 = require("obsidian");
-var UserScriptSettingsModal = class extends import_obsidian21.Modal {
+var import_obsidian22 = require("obsidian");
+var UserScriptSettingsModal = class extends import_obsidian22.Modal {
   constructor(app2, command, settings) {
     super(app2);
     this.command = command;
@@ -13373,7 +13421,7 @@ var UserScriptSettingsModal = class extends import_obsidian21.Modal {
     el.type = "password";
   }
   addInputBox(name, value, placeholder, passwordOnBlur) {
-    new import_obsidian21.Setting(this.contentEl).setName(name).addText((input) => {
+    new import_obsidian22.Setting(this.contentEl).setName(name).addText((input) => {
       input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder != null ? placeholder : "");
       if (passwordOnBlur) {
         this.setPasswordOnBlur(input.inputEl);
@@ -13381,21 +13429,21 @@ var UserScriptSettingsModal = class extends import_obsidian21.Modal {
     });
   }
   addToggle(name, value) {
-    new import_obsidian21.Setting(this.contentEl).setName(name).addToggle(
+    new import_obsidian22.Setting(this.contentEl).setName(name).addToggle(
       (toggle) => toggle.setValue(value).onChange((value2) => this.command.settings[name] = value2)
     );
   }
   addDropdown(name, options, value) {
-    new import_obsidian21.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
+    new import_obsidian22.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
       options.forEach((item) => dropdown.addOption(item, item));
       dropdown.setValue(value);
       dropdown.onChange((value2) => this.command.settings[name] = value2);
     });
   }
   addFormatInput(name, value, placeholder) {
-    new import_obsidian21.Setting(this.contentEl).setName(name);
+    new import_obsidian22.Setting(this.contentEl).setName(name);
     const formatDisplay = this.contentEl.createEl("span");
-    const input = new import_obsidian21.TextComponent(this.contentEl);
+    const input = new import_obsidian22.TextAreaComponent(this.contentEl);
     new FormatSyntaxSuggester(this.app, input.inputEl, QuickAdd.instance);
     const displayFormatter = new FormatDisplayFormatter(
       this.app,
@@ -13406,6 +13454,7 @@ var UserScriptSettingsModal = class extends import_obsidian21.Modal {
       formatDisplay.innerText = await displayFormatter.format(value2);
     }).setPlaceholder(placeholder != null ? placeholder : "");
     input.inputEl.style.width = "100%";
+    input.inputEl.style.height = "100px";
     input.inputEl.style.marginBottom = "1em";
     (async () => formatDisplay.innerText = await displayFormatter.format(value))();
   }
@@ -14100,7 +14149,7 @@ var NestedChoiceCommand2 = class extends Command {
 };
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var MacroBuilder = class extends import_obsidian23.Modal {
+var MacroBuilder = class extends import_obsidian24.Modal {
   constructor(app2, plugin, macro, choices) {
     super(app2);
     this.commands = [];
@@ -14178,7 +14227,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
       this.addCommandToMacro(command);
       input.setValue("");
     };
-    new import_obsidian23.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
+    new import_obsidian24.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Obsidian command");
@@ -14226,7 +14275,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
       }
       this.addCommandToMacro(command);
     };
-    new import_obsidian23.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
+    new import_obsidian24.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
       dropdownComponent = dropdown;
       dropdown.selectEl.style.marginRight = "1em";
       dropdown.addOption("Copy" /* Copy */, "Copy" /* Copy */).addOption("Cut" /* Cut */, "Cut" /* Cut */).addOption("Paste" /* Paste */, "Paste" /* Paste */).addOption(
@@ -14253,7 +14302,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
       this.addCommandToMacro(new UserScript(value, file.path));
       input.setValue("");
     };
-    new import_obsidian23.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
+    new import_obsidian24.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("User script");
@@ -14284,7 +14333,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
       this.addCommandToMacro(new ChoiceCommand(choice.name, choice.id));
       input.setValue("");
     };
-    new import_obsidian23.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
+    new import_obsidian24.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Choice");
@@ -14358,7 +14407,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
     this.addAddWaitCommandButton(quickCommandContainer);
   }
   addAddWaitCommandButton(quickCommandContainer) {
-    const button = new import_obsidian23.ButtonComponent(
+    const button = new import_obsidian24.ButtonComponent(
       quickCommandContainer
     );
     button.setIcon("clock").setTooltip("Add wait command").onClick(() => {
@@ -14366,7 +14415,7 @@ var MacroBuilder = class extends import_obsidian23.Modal {
     });
   }
   newChoiceButton(container, typeName, type) {
-    const button = new import_obsidian23.ButtonComponent(container);
+    const button = new import_obsidian24.ButtonComponent(container);
     button.setButtonText(typeName).setTooltip(`Add ${typeName} Choice`).onClick(() => {
       const captureChoice = new type(
         `Untitled ${typeName} Choice`
@@ -14391,7 +14440,7 @@ var QuickAddMacro = class {
 };
 
 // src/MacrosManager.ts
-var MacrosManager = class extends import_obsidian24.Modal {
+var MacrosManager = class extends import_obsidian25.Modal {
   constructor(app2, plugin, macros, choices) {
     super(app2);
     this.app = app2;
@@ -14429,14 +14478,14 @@ var MacrosManager = class extends import_obsidian24.Modal {
   }
   addMacroSetting(macro, container) {
     const configureMacroContainer = container.createDiv();
-    const macroSetting = new import_obsidian24.Setting(configureMacroContainer);
+    const macroSetting = new import_obsidian25.Setting(configureMacroContainer);
     macroSetting.setName(macro.name);
     macroSetting.infoEl.style.fontWeight = "bold";
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
         this.addSpanWithText(itemContainerEl, "Run on plugin load");
-        const toggle = new import_obsidian24.ToggleComponent(
+        const toggle = new import_obsidian25.ToggleComponent(
           itemContainerEl
         );
         toggle.setValue(macro.runOnStartup);
@@ -14450,7 +14499,7 @@ var MacrosManager = class extends import_obsidian24.Modal {
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
-        const deleteButton = new import_obsidian24.ButtonComponent(
+        const deleteButton = new import_obsidian25.ButtonComponent(
           itemContainerEl
         );
         deleteButton.setClass("mod-warning");
@@ -14461,7 +14510,7 @@ var MacrosManager = class extends import_obsidian24.Modal {
           this.reload();
           this.macroContainer.scrollTop = scroll;
         });
-        const configureButton = new import_obsidian24.ButtonComponent(
+        const configureButton = new import_obsidian25.ButtonComponent(
           itemContainerEl
         );
         configureButton.setClass("mod-cta");
@@ -14521,11 +14570,11 @@ var MacrosManager = class extends import_obsidian24.Modal {
   addAddMacroBar() {
     const addMacroBarContainer = this.contentEl.createDiv();
     addMacroBarContainer.addClass("addMacroBarContainer");
-    const nameInput = new import_obsidian24.TextComponent(
+    const nameInput = new import_obsidian25.TextComponent(
       addMacroBarContainer
     );
     nameInput.setPlaceholder("Macro name");
-    const addMacroButton = new import_obsidian24.ButtonComponent(
+    const addMacroButton = new import_obsidian25.ButtonComponent(
       addMacroBarContainer
     );
     addMacroButton.setButtonText("Add macro").setClass("mod-cta").onClick(() => {
@@ -14859,7 +14908,7 @@ var DEFAULT_SETTINGS = {
     mutualExclusionInsertAfterAndWriteToBottomOfFile: false
   }
 };
-var QuickAddSettingsTab = class extends import_obsidian26.PluginSettingTab {
+var QuickAddSettingsTab = class extends import_obsidian27.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -14877,7 +14926,7 @@ var QuickAddSettingsTab = class extends import_obsidian26.PluginSettingTab {
       this.choiceView.$destroy();
   }
   addChoicesSetting() {
-    const setting = new import_obsidian26.Setting(this.containerEl);
+    const setting = new import_obsidian27.Setting(this.containerEl);
     setting.infoEl.remove();
     setting.settingEl.style.display = "block";
     this.choiceView = new ChoiceView_default({
@@ -14899,7 +14948,7 @@ var QuickAddSettingsTab = class extends import_obsidian26.PluginSettingTab {
     });
   }
   addUseMultiLineInputPromptSetting() {
-    new import_obsidian26.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
+    new import_obsidian27.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
       "Use multi-line input prompt instead of single-line input prompt"
     ).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inputPrompt === "multi-line").setTooltip("Use multi-line input prompt").onChange((value) => {
@@ -14913,7 +14962,7 @@ var QuickAddSettingsTab = class extends import_obsidian26.PluginSettingTab {
     );
   }
   addTemplateFolderPathSetting() {
-    const setting = new import_obsidian26.Setting(this.containerEl);
+    const setting = new import_obsidian27.Setting(this.containerEl);
     setting.setName("Template Folder Path");
     setting.setDesc(
       "Path to the folder where templates are stored. Used to suggest template files when configuring QuickAdd."
@@ -14928,7 +14977,7 @@ var QuickAddSettingsTab = class extends import_obsidian26.PluginSettingTab {
       new GenericTextSuggester(
         app,
         text2.inputEl,
-        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian26.TFolder && f.path !== "/").map((f) => f.path)
+        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian27.TFolder && f.path !== "/").map((f) => f.path)
       );
     });
   }
@@ -14971,7 +15020,7 @@ var ConsoleErrorLogger = class extends QuickAddLogger {
 };
 
 // src/logger/guiLogger.ts
-var import_obsidian27 = require("obsidian");
+var import_obsidian28 = require("obsidian");
 var GuiLogger = class extends QuickAddLogger {
   constructor(plugin) {
     super();
@@ -14979,11 +15028,11 @@ var GuiLogger = class extends QuickAddLogger {
   }
   logError(msg) {
     const error = this.getQuickAddError(msg, "ERROR" /* Error */);
-    new import_obsidian27.Notice(this.formatOutputString(error), 15e3);
+    new import_obsidian28.Notice(this.formatOutputString(error), 15e3);
   }
   logWarning(msg) {
     const warning = this.getQuickAddError(msg, "WARNING" /* Warning */);
-    new import_obsidian27.Notice(this.formatOutputString(warning));
+    new import_obsidian28.Notice(this.formatOutputString(warning));
   }
   logMessage(msg) {
   }
@@ -15004,7 +15053,7 @@ var StartupMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/engine/TemplateChoiceEngine.ts
-var import_obsidian28 = require("obsidian");
+var import_obsidian29 = require("obsidian");
 
 // src/utils/invariant.ts
 function invariant(condition, message) {
@@ -15048,14 +15097,11 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       let createdFile;
       if (await this.app.vault.adapter.exists(filePath)) {
         const file = this.app.vault.getAbstractFileByPath(filePath);
-        if (!(file instanceof import_obsidian28.TFile) || file.extension !== "md") {
+        if (!(file instanceof import_obsidian29.TFile) || file.extension !== "md") {
           log.logError(
             `'${filePath}' already exists and is not a valid markdown file.`
           );
           return;
-        }
-        if (this.choice.openFile) {
-          await this.app.workspace.getLeaf("tab").openFile(file);
         }
         let userChoice = this.choice.fileExistsMode;
         if (!this.choice.setFileExistsBehavior) {
@@ -15087,6 +15133,18 @@ var TemplateChoiceEngine = class extends TemplateEngine {
             );
             break;
           case fileExistsDoNothing:
+            createdFile = file;
+            break;
+          case fileExistsIncrement: {
+            const incrementFileName = await this.incrementFileName(
+              filePath
+            );
+            createdFile = await this.createFileWithTemplate(
+              incrementFileName,
+              this.choice.templatePath
+            );
+            break;
+          }
           default:
             log.logWarning("File not written to.");
             return;
@@ -16117,8 +16175,8 @@ This is in order to prevent data loss.`
 };
 
 // src/gui/suggesters/choiceSuggester.ts
-var import_obsidian29 = require("obsidian");
-var ChoiceSuggester = class extends import_obsidian29.FuzzySuggestModal {
+var import_obsidian30 = require("obsidian");
+var ChoiceSuggester = class extends import_obsidian30.FuzzySuggestModal {
   constructor(plugin, choices, choiceExecutor) {
     super(plugin.app);
     this.plugin = plugin;
@@ -16436,7 +16494,7 @@ QuickAdd will now revert to backup.`
 var migrate_default = migrate;
 
 // src/main.ts
-var QuickAdd = class extends import_obsidian30.Plugin {
+var QuickAdd = class extends import_obsidian31.Plugin {
   get api() {
     return QuickAddApi.GetApi(app, this, new ChoiceExecutor(app, this));
   }
@@ -16472,7 +16530,7 @@ var QuickAdd = class extends import_obsidian30.Plugin {
         console.log(`Test QuickAdd (dev)`);
         const fn2 = async () => {
           const activeView = await this.app.workspace.getActiveViewOfType(
-            import_obsidian30.MarkdownView
+            import_obsidian31.MarkdownView
           );
           if (!activeView)
             return false;

@@ -205,20 +205,22 @@
 
 	transition: height 1s, opacity 250ms;
 
-	overflow: hidden;
-	position: absolute;
+	overflow: scroll;
+	position: fixed;
 	background-color: var(--modal-background);
 }
 
 .pg-statusbar-icon:focus-within > .pg-settings-window {
 	height: auto;
+	max-height: 500px;
+	min-height: 100px;
 	opacity: 1;
 
 	transition: height 1s, opacity 250ms;
 
 	border-radius: var(--modal-radius);
 	border: var(--modal-border-width) solid var(--modal-border-color);
-	padding: var(--size-4-4);
+	padding: 0 0 0 16px;
 }
 
 .pg-collapsible-content.is-active {

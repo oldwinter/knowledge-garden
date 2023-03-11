@@ -1,8 +1,8 @@
 {
 	"nodes":[
-		{"type":"group","label":"实践过程及结果","id":"7df660161115ab86","x":-446,"y":-440,"width":1305,"height":869,"color":"6"},
-		{"type":"group","label":"工作流","id":"ca3e1b25616bae9c","x":-446,"y":648,"width":1305,"height":503,"color":"4"},
-		{"type":"group","label":"3个app","id":"70910f675f4e12a1","x":-908,"y":-872,"width":448,"height":354,"color":"2"},
+		{"type":"group","id":"7df660161115ab86","x":-446,"y":-440,"width":1305,"height":869,"color":"6","label":"实践过程及结果"},
+		{"type":"group","id":"ca3e1b25616bae9c","x":-446,"y":648,"width":1305,"height":503,"color":"4","label":"工作流"},
+		{"type":"group","id":"70910f675f4e12a1","x":-908,"y":-872,"width":448,"height":354,"color":"2","label":"3个app"},
 		{"type":"file","file":"Cards/永久笔记/微信读书.md","id":"568b918564147e0e","x":-888,"y":-611,"width":400,"height":73},
 		{"type":"file","file":"Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Obsidian.md","id":"b4e7d1ff6b9ca358","x":-888,"y":-840,"width":400,"height":67},
 		{"type":"file","file":"Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Notion.md","id":"14e71eb74acf652d","x":-888,"y":-726,"width":400,"height":64},

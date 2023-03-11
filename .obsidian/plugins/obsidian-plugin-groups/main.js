@@ -1285,6 +1285,7 @@ var GroupSettings = class extends HtmlComponent {
     this.generateComponent();
   }
   generateContent() {
+    var _a, _b;
     if (!this.mainEl) {
       return;
     }
@@ -1311,7 +1312,10 @@ var GroupSettings = class extends HtmlComponent {
       addBtnEl = btn.buttonEl;
       addBtnEl.addClass("btn-disabled");
     });
-    this.GenerateGroupList(content);
+    const listContainer = content.createDiv();
+    listContainer.style.overflow = "scroll";
+    listContainer.style.maxHeight = ((_b = (_a = this.options.maxListHeight) == null ? void 0 : _a.toString()) != null ? _b : "") + "px";
+    this.GenerateGroupList(listContainer);
   }
   generateContainer() {
     this.mainEl = this.parentEl.createDiv();
@@ -1389,7 +1393,7 @@ var GroupSettingsMenu = class extends HtmlComponent {
     if (!this.mainEl) {
       return;
     }
-    new GroupSettings(this.mainEl, {});
+    new GroupSettings(this.mainEl, { maxListHeight: 340 });
     this.updatePosition();
   }
   updatePosition() {
@@ -1398,7 +1402,7 @@ var GroupSettingsMenu = class extends HtmlComponent {
     }
     this.mainEl.style.transform = "translate(0px, 0px)";
     let xOffset = -this.mainEl.getBoundingClientRect().width / 2;
-    const yOffset = -this.mainEl.innerHeight / 2 - 48;
+    const yOffset = -this.mainEl.clientHeight / 2 - 30;
     const diff = window.innerWidth - this.mainEl.getBoundingClientRect().right - 16;
     if (diff < 0) {
       xOffset = diff;

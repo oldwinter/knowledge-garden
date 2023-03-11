@@ -1,4 +1,11 @@
 [
   "obsidian-plugin-groups",
-  "obsidian-linter"
+  "obsidian-linter",
+  "cm-chs-patch",
+  "various-complements",
+  "obsidian-spaced-repetition",
+  "omnisearch",
+  "obsidian-auto-link-title",
+  "obsidian-better-command-palette",
+  "obsidian-another-quick-switcher"
 ]
