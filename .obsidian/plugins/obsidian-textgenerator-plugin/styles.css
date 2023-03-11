@@ -263,3 +263,14 @@
     right: 0;
     z-index: 100;
   }
+
+  .callout[data-callout="ai"] {
+    --callout-icon: bot;
+}
+  .callout[data-callout="ai"] > .callout-title {
+  margin-left: -1rem;
+  }
+
+  .callout[data-callout="ai"] > .callout-content {
+  margin-left: 2rem;
+  }

@@ -14,14 +14,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "file": "Spaces/2-Area/运动与健康/油猴脚本开发.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b08f679bdbbd7bf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "cd21b555dbb8ccb8",
@@ -140,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md"
+                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md"
               }
             }
           },
@@ -150,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +176,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -197,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
+                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -250,8 +264,13 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "8cb901c71fcf1753",
+  "active": "b08f679bdbbd7bf6",
   "lastOpenFiles": [
+    "Spaces/2-Area/运动与健康/油猴脚本开发.md",
+    "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+    "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
+    "Spaces/2-Area/运动与健康/对食品添加剂的态度.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
     "Atlas/Canvas/九宫格.canvas",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
     "Cards/永久笔记/个人效率系统工作流.md",
@@ -281,14 +300,10 @@
     "Extras/Templates/其他/思维思考模板/康奈尔笔记法模板.md",
     "Extras/Templates/其他/思维思考模板/六顶思考帽模板.md",
     "Extras/Templates/Canvas模板/精益画布 - 模板.canvas",
-    "Sources/GPTchats/202331114835.md",
     "Extras/Templates/Canvas模板",
-    "Extras/Templates/ChatGPT_MD/templates/未命名.md",
-    "Omnivore/2023-02-20/Getting Started with Omnivore.md",
     "Sources/GPTchats",
     "Extras/Templates/ChatGPT_MD/templates",
     "Extras/Templates/ChatGPT_MD",
-    "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
