@@ -11,7 +11,7 @@
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^",
+  "firstCharactersDisableSuggestions": ":/^。，",
   "useCommonPrefixCompletionOfSuggestion": false,
   "patternsToSuppressTrigger": [
     "^~~~.*",

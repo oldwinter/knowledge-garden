@@ -4,35 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "cd21b555dbb8ccb8",
+        "id": "295c3968603a2b4f",
         "type": "tabs",
+        "dimension": 74.04761904761905,
         "children": [
           {
-            "id": "3835c02b0a423af5",
+            "id": "8cb901c71fcf1753",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Omnivore/2023-02-20/Getting Started with Omnivore.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
-          },
-          {
-            "id": "c0c17a799cd45f00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Extras/Templates/ChatGPT_MD/templates/未命名.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
+          }
+        ]
+      },
+      {
+        "id": "cd21b555dbb8ccb8",
+        "type": "tabs",
+        "dimension": 25.952380952380956,
+        "children": [
           {
             "id": "2333787b0e5ab812",
             "type": "leaf",
@@ -43,21 +38,6 @@
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "8cb901c71fcf1753",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Atlas/Canvas/SWOT分析 - 模板.canvas",
-                "viewState": {
-                  "x": -446.23664197326116,
-                  "y": 523.5050904853088,
-                  "zoom": -1.210568334360917
-                }
               }
             }
           },
@@ -75,38 +55,12 @@
             }
           },
           {
-            "id": "f5bb079507d91f99",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "04e047975271e6b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/时间管理.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "547187de0f204021",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -114,7 +68,8 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 2,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -185,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md"
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md"
               }
             }
           },
@@ -195,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,7 +162,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,7 +197,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/FAST法则 - 张永锡.md",
+                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -295,14 +250,18 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "547187de0f204021",
+  "active": "8cb901c71fcf1753",
   "lastOpenFiles": [
+    "Atlas/Canvas/九宫格.canvas",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
+    "Cards/永久笔记/个人效率系统工作流.md",
+    "Calendar/Daily notes/九宫格 - 看板.md",
+    "Atlas/Canvas/九宫格 - 滴答清单.md",
+    "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Calendar/Daily notes/时间管理.md",
     "Calendar/Daily notes/FAST法则 - 张永锡.md",
     "Calendar/Daily notes/2023-03-11.md",
-    "Atlas/Canvas/九宫格.canvas",
     "Atlas/Canvas/九宫格 - Cubox.md",
-    "Atlas/Canvas/九宫格 - 滴答清单.md",
     "Atlas/Draws/白板 2023-03-11.md",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",
@@ -310,7 +269,6 @@
     "Atlas/Draws/测试excalidraw.md",
     "Atlas/Draws/数字时代如何更好地工作与生活 - 图.md",
     "Atlas/Canvas/SWOT分析 - 模板 1.canvas",
-    "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Cards/永久笔记/🔡SWOT.md",
     "Cards/永久笔记/SWOT分析 - 模板.md",
     "Atlas/思维导图/思维导图 - 模板.md",
@@ -331,10 +289,6 @@
     "Extras/Templates/ChatGPT_MD/templates",
     "Extras/Templates/ChatGPT_MD",
     "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
-    "Cards/永久笔记/记忆宫殿.md",
-    "🧰 本库指南/Tutorials/macos系统中快捷输入各种特殊符号.md",
-    "🧰 本库指南/Tutorials/obsidian初学过程中的感受.md",
-    "🧰 本库指南/Tutorials/obsidian中如何找到以前写过的笔记.md",
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
