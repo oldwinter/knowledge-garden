@@ -4,17 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "295c3968603a2b4f",
+        "id": "0cc6d409ee0b4690",
         "type": "tabs",
-        "dimension": 74.04761904761905,
         "children": [
           {
-            "id": "8cb901c71fcf1753",
+            "id": "461ce8ca8a80cef9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本开发.md",
+                "file": "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -22,12 +21,12 @@
             }
           },
           {
-            "id": "b08f679bdbbd7bf6",
+            "id": "59cec5c83e82f5f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
+                "file": "Sources/GPTchats/202331220519.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -35,54 +34,7 @@
             }
           }
         ],
-        "currentTab": 1
-      },
-      {
-        "id": "cd21b555dbb8ccb8",
-        "type": "tabs",
-        "dimension": 25.952380952380956,
-        "children": [
-          {
-            "id": "2333787b0e5ab812",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/思维导图.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "481b49e51e3c533d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Atlas/Draws/∑ excalidraw 白板创建入口.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "547187de0f204021",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 2,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -154,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md"
+                "file": "Sources/GPTchats/202331220519.md"
               }
             }
           },
@@ -164,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
+                "file": "Sources/GPTchats/202331220519.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
+                "file": "Sources/GPTchats/202331220519.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -211,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
+                "file": "Sources/GPTchats/202331220519.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -244,8 +196,17 @@
               "type": "review-queue-list-view",
               "state": {}
             }
+          },
+          {
+            "id": "0de590f20de8ad3c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -262,44 +223,46 @@
       "obsidian-spaced-repetition:复习卡片": false,
       "omnisearch:Omnisearch": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "templater-obsidian:Templater": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "b08f679bdbbd7bf6",
+  "active": "59cec5c83e82f5f5",
   "lastOpenFiles": [
-    "Extras/Media/Pasted image 20230312131834.png",
+    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
+    "Sources/GPTchats/202331220519.md",
+    "Extras/Templates/textgenerator模板/prompts/自建/AI - 头脑风暴.md",
+    "Cards/永久笔记/渐进式总结.md",
+    "Extras/Templates/textgenerator模板/prompts/自建",
+    "Cards/永久笔记/渐进式 - progressive.md",
     "Calendar/Daily notes/2023-03-12.md",
-    "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
-    "Sources/GPTchats/202331114835.md",
-    "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+    "Calendar/Daily notes/2023-03-11.md",
+    "Calendar/Daily notes/2023-03-08.md",
+    "Calendar/Daily notes/2023-03-06.md",
+    "Calendar/Daily notes/2023-03-05.md",
+    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Clash Pro.md",
+    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Clash.md",
+    "Cards/永久笔记/∑ 科学上网.md",
+    "Cards/永久笔记/思维导图.md",
+    "Atlas/Draws/∑ excalidraw 白板创建入口.md",
+    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
     "Spaces/2-Area/运动与健康/油猴脚本开发.md",
+    "Sources/GPTchats/202331114835.md",
+    "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
+    "Extras/Media/Pasted image 20230312131834.png",
+    "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
     "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
     "Spaces/2-Area/运动与健康/对食品添加剂的态度.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
     "Atlas/Canvas/九宫格.canvas",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
     "Cards/永久笔记/个人效率系统工作流.md",
     "Calendar/Daily notes/九宫格 - 看板.md",
     "Atlas/Canvas/九宫格 - 滴答清单.md",
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
-    "Calendar/Daily notes/时间管理.md",
-    "Calendar/Daily notes/FAST法则 - 张永锡.md",
-    "Calendar/Daily notes/2023-03-11.md",
-    "Atlas/Canvas/九宫格 - Cubox.md",
-    "Atlas/Draws/白板 2023-03-11.md",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",
-    "Atlas/Draws/∑ excalidraw 白板创建入口.md",
-    "Atlas/Draws/测试excalidraw.md",
-    "Atlas/Draws/数字时代如何更好地工作与生活 - 图.md",
     "Atlas/Canvas/SWOT分析 - 模板 1.canvas",
-    "Cards/永久笔记/🔡SWOT.md",
-    "Cards/永久笔记/SWOT分析 - 模板.md",
-    "Atlas/思维导图/思维导图 - 模板.md",
-    "Sources/Movies + TV/豆瓣影音导入/非常嫌疑犯.md",
-    "Sources/Movies + TV/豆瓣影音导入/芬奇.md",
     "Atlas/思维导图",
     "Extras/Templates/Canvas模板/思维导图 - 模板.canvas",
     "Extras/Templates/Canvas模板/精益画布 - 模板.canvas",
@@ -318,7 +281,6 @@
     "Spaces/1-Project/OpenAI 官方文档阅读笔记",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
-    "Context",
     "Atlas/Draws/README 中的头图 - 图.svg",
     "Extras/Media/weread_image_1067883451661727.jpeg",
     "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",

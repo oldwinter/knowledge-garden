@@ -442,6 +442,10 @@
         {
           "id": "obsidian-pending-notes",
           "name": "Pending notes"
+        },
+        {
+          "id": "chatgpt-md",
+          "name": "ChatGPT MD"
         }
       ],
       "groupIds": [],
