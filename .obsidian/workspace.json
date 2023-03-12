@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+                "file": "Calendar/Daily notes/2023-03-12.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md"
+                "file": "Calendar/Daily notes/2023-03-12.md"
               }
             }
           },
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+                "file": "Calendar/Daily notes/2023-03-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +176,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+                "file": "Calendar/Daily notes/2023-03-12.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -211,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+                "file": "Calendar/Daily notes/2023-03-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -261,13 +261,18 @@
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "b08f679bdbbd7bf6",
   "lastOpenFiles": [
-    "Spaces/2-Area/运动与健康/油猴脚本开发.md",
+    "Sources/GPTchats/202331114835.md",
+    "Calendar/Daily notes/2023-03-12.md",
     "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
+    "Spaces/2-Area/运动与健康/油猴脚本开发.md",
     "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
     "Spaces/2-Area/运动与健康/对食品添加剂的态度.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
@@ -297,8 +302,6 @@
     "Atlas/思维导图",
     "Extras/Templates/Canvas模板/思维导图 - 模板.canvas",
     "Extras/Templates/Canvas模板/思维导图 - 模板.md",
-    "Extras/Templates/其他/思维思考模板/康奈尔笔记法模板.md",
-    "Extras/Templates/其他/思维思考模板/六顶思考帽模板.md",
     "Extras/Templates/Canvas模板/精益画布 - 模板.canvas",
     "Extras/Templates/Canvas模板",
     "Sources/GPTchats",

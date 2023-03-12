@@ -11,5 +11,13 @@
   "chatgpt-md",
   "obsidian-mindmap-nextgen",
   "obsidian-excalidraw-plugin",
-  "obsidian-plugin-update-tracker"
+  "obsidian-plugin-update-tracker",
+  "obsidian-textgenerator-plugin",
+  "templater-obsidian",
+  "obsidian-style-settings",
+  "cmdr",
+  "dataview",
+  "note-refactor-obsidian",
+  "supercharged-links-obsidian",
+  "tag-wrangler"
 ]
