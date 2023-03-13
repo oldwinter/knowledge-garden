@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+                "file": "AboutTheGarden.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md"
+                "file": "AboutTheGarden.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+                "file": "AboutTheGarden.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+                "file": "AboutTheGarden.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+                "file": "AboutTheGarden.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -230,6 +230,7 @@
   },
   "active": "59cec5c83e82f5f5",
   "lastOpenFiles": [
+    "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
     "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
     "Sources/GPTchats/202331220519.md",
     "Calendar/Daily notes/2023-03-13.md",
@@ -258,7 +259,6 @@
     "Spaces/2-Area/运动与健康/对食品添加剂的态度.md",
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
     "Atlas/Canvas/九宫格.canvas",
-    "Cards/永久笔记/个人效率系统工作流.md",
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",
