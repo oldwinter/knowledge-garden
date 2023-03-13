@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/GPTchats/202331220519.md",
+                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/GPTchats/202331220519.md"
+                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md"
               }
             }
           },
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/GPTchats/202331220519.md",
+                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/GPTchats/202331220519.md",
+                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/GPTchats/202331220519.md",
+                "file": "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -230,8 +230,10 @@
   },
   "active": "59cec5c83e82f5f5",
   "lastOpenFiles": [
-    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
+    "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
     "Sources/GPTchats/202331220519.md",
+    "Calendar/Daily notes/2023-03-13.md",
+    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
     "Extras/Templates/textgenerator模板/prompts/自建/AI - 头脑风暴.md",
     "Cards/永久笔记/渐进式总结.md",
     "Extras/Templates/textgenerator模板/prompts/自建",
@@ -257,8 +259,6 @@
     "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 平台＋插件.md",
     "Atlas/Canvas/九宫格.canvas",
     "Cards/永久笔记/个人效率系统工作流.md",
-    "Calendar/Daily notes/九宫格 - 看板.md",
-    "Atlas/Canvas/九宫格 - 滴答清单.md",
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",

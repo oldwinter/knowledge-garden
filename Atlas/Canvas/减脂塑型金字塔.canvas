@@ -10,10 +10,11 @@
 		{"type":"text","text":"烟酒等成瘾物","id":"d897456b24a75c8f","x":780,"y":379,"width":250,"height":60},
 		{"type":"text","text":"心理","id":"534301ede675c500","x":1092,"y":379,"width":250,"height":60},
 		{"type":"text","text":"好习惯养成  ","id":"47e683eaabf74297","x":-603,"y":161,"width":250,"height":60},
-		{"id":"5545b5b49ff60116","x":-253,"y":850,"width":521,"height":550,"type":"file","file":"Spaces/2-Area/运动与健康/∑ 运动与健康.md"},
-		{"id":"a718af142f2908f1","x":780,"y":560,"width":250,"height":60,"type":"text","text":"戒糖\n"},
-		{"id":"d0f658508762c284","x":491,"y":560,"width":250,"height":320,"type":"text","text":"收腹  \n挺胸\n\n鼻子呼吸\n"},
-		{"id":"5361b79145182e54","x":-603,"y":221,"width":250,"height":60,"type":"text","text":"自检，体重，精力，尿液，粪便"}
+		{"type":"file","file":"Spaces/2-Area/运动与健康/∑ 运动与健康.md","id":"5545b5b49ff60116","x":-253,"y":850,"width":521,"height":550},
+		{"type":"text","text":"戒糖\n","id":"a718af142f2908f1","x":780,"y":560,"width":250,"height":60},
+		{"type":"text","text":"收腹  \n挺胸\n\n鼻子呼吸\n","id":"d0f658508762c284","x":491,"y":560,"width":250,"height":320},
+		{"type":"text","text":"自检，体重，精力，尿液，粪便","id":"5361b79145182e54","x":-603,"y":221,"width":250,"height":60},
+		{"id":"9f76b1d24131a3e3","x":77,"y":500,"width":250,"height":60,"type":"text","text":"补剂"}
 	],
 	"edges":[
 		{"id":"d80545683f6fde66","fromNode":"731f9d7733a67407","fromSide":"right","toNode":"0179b8fb749f730e","toSide":"left"},
