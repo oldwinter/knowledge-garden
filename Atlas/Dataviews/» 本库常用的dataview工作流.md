@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-07
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: » 本库常用的dataview工作流
 ---
 
@@ -10,7 +10,7 @@ title: » 本库常用的dataview工作流
 - 是否有成熟的插件可能可以覆盖这个需求？
 - 能否复用已有代码？
 
-查询手册：
+查询手册：  
 [[Dataview|dataviewjs]]
 
 调试步骤：

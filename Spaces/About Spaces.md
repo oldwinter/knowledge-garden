@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-22
-date modified: 2023-03-08
+date modified: 2023-03-14
 tags:
   - 本库教程
 title: About Spaces
@@ -11,7 +11,7 @@ up:: [[ACCESS 笔记组织法]]
 
 ## 我的理解
 
-其实就是[[PARA]]，SPACES以项目action行动为目标，进行信息管理。但多了一个[[MOC]]，把信息串起来。我直接将其改成PARA。moc先直接放到对应文件夹里面。
+其实就是[[PARA]]，SPACES以项目action行动为目标，进行信息管理。但多了一个[[MOC]]，把信息串起来。我直接将其改成PARA。moc先直接放到对应文件夹里面。  
 与Source相比，Spaces就像社会人，高目的性，一切以项目、闭环、完成为目标，[[自下而上]]。而Source就像学生，低目的性，重在持续积累，分类，持续精进，[[自上而下]]。
 
 ## 原文解释

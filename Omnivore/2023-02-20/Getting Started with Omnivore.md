@@ -7,7 +7,7 @@ date_published: 2021-10-13 08:00:00
 tags:
   - Omnivore
 date created: 2023-03-05
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 # Getting Started with Omnivore
@@ -24,7 +24,6 @@ date modified: 2023-03-08
 > save a link [⤴️](https://omnivore.app/me/getting-started-with-omnivore-1866c75e75c#fab7cccc-55d0-4f63-951a-51d8318158c7)
 
 ok
-
 
 <hr class="__chatgpt_plugin">
 
@@ -47,4 +46,3 @@ role::assistant
 <hr class="__chatgpt_plugin">
 
 role::user
-

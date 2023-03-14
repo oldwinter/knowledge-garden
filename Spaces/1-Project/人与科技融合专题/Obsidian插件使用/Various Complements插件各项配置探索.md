@@ -1,7 +1,7 @@
 ---
 title: Various Complements插件各项配置探索
 date created: 2023-03-05
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 官方文档：[Home - Various Complements (tadashi-aikawa.github.io)](https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/)
@@ -23,7 +23,7 @@ date modified: 2023-03-08
 - ⚙Disable the up/down keys for cycle through suggestions keys，要打开，不然上下移动光标很不方便，会被影响。但这样配置之后，就需要配置如何选词了。
 - Additional cycle through suggestions keys，选择tab。
 
-当前配置，需要习惯一段时间。
+当前配置，需要习惯一段时间。  
 ![[Pasted image 20230305120820.png]]
 
 ## current file complement

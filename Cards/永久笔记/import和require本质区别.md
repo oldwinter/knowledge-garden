@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: import和require本质区别
 ---
 
@@ -72,7 +72,7 @@ export * from 'fs'
 
 1. CommonJS 还是 ES6 Module 输出都可以看成是一个具备多个属性或者方法的对象；
 2. default 是 ES6 Module 所独有的关键字，export default fs 输出默认的接口对象，import fs from 'fs' 可直接导入这个对象；
-3. ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型；而 CommonJS 则是普通的值传递或者引用传递。
+3. ES6 Module 中导入模块的属性或者方法是强绑定的，包括基础类型；而 CommonJS 则是普通的值传递或者引用传递。  
 1、2 相对比较好理解，3 需要看个例子：
 
 ```javascript

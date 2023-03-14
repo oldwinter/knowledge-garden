@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-23
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: git submodule
 ---
 
@@ -49,7 +49,6 @@ $ rm -rf assets
 $ rm -rf .git/modules/assets
 ```
 
-
-## 
+##
 
 [Git Submodule 命令使用与详细教程 - 掘金](https://juejin.cn/post/6948251963133788196)

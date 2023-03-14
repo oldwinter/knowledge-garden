@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-04
-date modified: 2023-03-08
+date modified: 2023-03-14
 tags:
   - 文章/已完成
 title: Obsidian 最优雅的多端同步插件LiveSync
@@ -59,10 +59,10 @@ title: Obsidian 最优雅的多端同步插件LiveSync
 ### 电脑端安装livesync插件作为client端，配置并连接至自己的server端 - 3到10分钟
 
 - 安装livesync插件，并打开配置项
-- 从上一步，找到自己申请的服务器的公网ip地址，比如121.111.173.186，按照如下填写，密码在上一步的命令行里面，默认是paasword。接着点击test，确认连通即可。
+- 从上一步，找到自己申请的服务器的公网ip地址，比如121.111.173.186，按照如下填写，密码在上一步的命令行里面，默认是paasword。接着点击test，确认连通即可。  
 	![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041609451.png](https://img2.oldwinter.top/Obsidian%20最优雅的多端同步插件LiveSync_image_2.png)
 	
-- 接着配置一下同步策略，我的策略如下。livesync对于未限制后台的手机端而言，可能还是有点耗电，酌情使用。
+- 接着配置一下同步策略，我的策略如下。livesync对于未限制后台的手机端而言，可能还是有点耗电，酌情使用。  
 	![https://raw.githubusercontent.com/oldwinter/my-pics/master/202204041613906.png](https://img2.oldwinter.top/Obsidian%20最优雅的多端同步插件LiveSync_image_3.png)
 
 ### 手机端新建空库安装client端，配置并连接至自己的server端，等待同步完成。 - 3到10分钟

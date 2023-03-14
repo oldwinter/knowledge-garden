@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: Advanced Slides
 当前使用频率: 3
 当前是否还在使用: yes
@@ -74,7 +74,7 @@ width: 960
 
 ## 插件简介 %% fold %%
 
-这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。
+这个插件就是魔改的 [reveal.js](https://revealjs.com/)，和 obsidian 进行了更好地融合。  
 官方文档 [Advanced Slides Documentation (mszturc.github.io)](https://mszturc.github.io/obsidian-advanced-slides/getting-start/)
 
 > We follow the philosophy of `convention over configuration`, which means that in most cases it is sufficient to simply write a Slide in**Obsidian Markdown syntax**.

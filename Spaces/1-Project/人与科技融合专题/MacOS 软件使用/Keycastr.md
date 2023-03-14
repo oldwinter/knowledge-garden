@@ -8,8 +8,8 @@ tags:
 是否已重装:
 title: Keycastr
 date created: 2023-02-28
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
-和[[Presentify]]配合使用，进行演讲展示。
+和[[Presentify]]配合使用，进行演讲展示。  
 做复杂操作时，给听众展示我按下了哪些按键。

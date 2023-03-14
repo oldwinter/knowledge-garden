@@ -1,13 +1,13 @@
 ---
 date created: 2022-08-19
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 用notion建设数字花园
 ---
 
 [Fruition - Build Your Next Website With Notion, For Free](https://fruitionsite.com/)  
 以上方案相当于直接用一个中间层，把自定义域名转发到notion。这个中间层的引入，就能使得网站自定义域名、注入js脚本、改css等等。
 
-另外一键式启用的付费方案：
+另外一键式启用的付费方案：  
 [Site Unreachable](https://popsy.co/)  
 [Super — Create Websites with Notion](https://super.so/)
 

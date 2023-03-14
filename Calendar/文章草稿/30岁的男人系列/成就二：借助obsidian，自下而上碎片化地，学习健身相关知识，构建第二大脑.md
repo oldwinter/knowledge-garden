@@ -1,12 +1,12 @@
 ---
 title: 成就二：借助obsidian，自下而上碎片化地，学习健身相关知识，构建第二大脑
 date created: 2023-02-10
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 ## 成就二：借助obsidian，自下而上碎片化地，学习健身相关知识，构建第二大脑
 
-打个不恰当的比喻，自上而下，就是读一本书，从前到后，一字不落。
+打个不恰当的比喻，自上而下，就是读一本书，从前到后，一字不落。  
 各位读者认为，我刚开始运动健身的时候，是先在obsidian上做笔记，还是在notion上建表？
 
 ### obsidian是什么以及我如何使用
@@ -15,7 +15,7 @@ date modified: 2023-03-08
 
 ### obsidian做健身笔记
 
-obsidian中的笔记，不能写到notion中吗？
+obsidian中的笔记，不能写到notion中吗？  
 上一章，着重分析了如何用notion 的database功能，通过创建一张张表，来记录我们的运动健身中，产生的各类过程执行数据。那么问题来了，假设我今天要新学一个『力量训练动作库』-『杠铃平板卧推』动作，这个笔记，直接从表格中打开，并创建记录，这样不是很好吗？如下图：
 
 ![image.png](https://img.oldwinter.top/202302101751679.png)
@@ -26,13 +26,13 @@ obsidian中的笔记，不能写到notion中吗？
 
 在双链笔记、卡片笔记等概念，已经被少数派的读者熟知的2023年，这么做也太不少数派了。我这里不打算详细介绍，这可能是又一篇长文的篇幅。若你能理解到一些优势，那证明你与我佛有缘。
 
-做的部分健身笔记截图如下：
+做的部分健身笔记截图如下：  
 ![image.png](https://img.oldwinter.top/202302092353542.png)
 
-在线浏览地址如下：
+在线浏览地址如下：  
 [∑ 运动与健康](https://garden.oldwinter.top/-%E8%BF%90%E5%8A%A8%E4%B8%8E%E5%81%A5%E5%BA%B7)
 
-我用obsidian写的2000+条笔记，且包含以上运动与健康笔记，全量开源的地址如下：
+我用obsidian写的2000+条笔记，且包含以上运动与健康笔记，全量开源的地址如下：  
 [GitHub - oldwinter/knowledge-garden: 我的第二大脑 second brain，我的数字花园 digital garden，用obsidian双链笔记软件写作而成](https://github.com/oldwinter/knowledge-garden)
 
 > 有github账号的朋友给个star，助我早日突破1K吧，Thanks♪(･ω･)ﾉ

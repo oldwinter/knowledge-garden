@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: Callout
 ---
 
@@ -12,7 +12,7 @@ title: Callout
 
 ### 提示框类型
 
->[!note]
+>[!note]  
 > Here's a callout block.  
 > It supports**markdown**and [[Internal link|wikilinks]].
 
@@ -85,7 +85,7 @@ title: Callout
 
 The Sidenote Callout width (宽度) and outdention is customizable (定制) in the Style Settings.
 
->[!SIDENOTE]
+>[!SIDENOTE]  
 > aaa
 
 #### STANDARD CALLOUTS

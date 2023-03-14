@@ -1,7 +1,7 @@
 ---
 title: 写好文档的checklist
 date created: 2023-01-04
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 适用场景：
@@ -51,18 +51,12 @@ date modified: 2023-03-08
 > - > 参考[金字塔原理](https://baike.baidu.com/item/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/14494495?fr=aladdin)来构建
 
 > -
-
-
 >
 > -
-
-
 > - > 文档目录一目了然，可以快速定位重点  
 > ![](https://yz3vq78x1p.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY0ZjRhNmU5OWRlNWRmZDE2YTMzOWMzYWJjZTY2YjZfYklxOVVNbjFPM2lubEVSRzh0YzFiZzAxVm9QRFFJd2ZfVG9rZW46Ym94Y25oeFRGVmpYa3ZXakFKeWdma0NERnVmXzE2NzI4MzU4OTI6MTY3MjgzOTQ5Ml9WNA)
 >
 > -
-
-
 >
 
 - []关键结论是否前置？

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-02.md",
+                "file": "Calendar/Daily notes/2023-03-01.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -92,7 +92,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-02.md"
+                "file": "Calendar/Daily notes/2023-03-01.md"
               }
             }
           },
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-02.md",
+                "file": "Calendar/Daily notes/2023-03-01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-02.md",
+                "file": "Calendar/Daily notes/2023-03-01.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-02.md",
+                "file": "Calendar/Daily notes/2023-03-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,6 +213,7 @@
   },
   "active": "0997e125ae6103c4",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2023-03-02.md",
     "Calendar/Daily notes/2023-03-01.md",
     "Calendar/Daily notes/Daily notes归档/2023/2023-01-02.md",
     "Calendar/Daily notes/∑ DB - 每日日志.md",
@@ -238,7 +239,6 @@
     "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
     "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
     "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
-    "Sources/GPTchats/202331220519.md",
     "Extras/Templates/textgenerator模板/prompts/自建",
     "Extras/Media/Pasted image 20230312131834.png",
     "Atlas/Canvas/九宫格.canvas",

@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-15
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: ∑ obsidian插件
 ---
 
@@ -19,7 +19,7 @@ title: ∑ obsidian插件
 
 ## 插件安装
 
-johnny整理且每周更新的插件列表，带一句话中文介绍：
+johnny整理且每周更新的插件列表，带一句话中文介绍：  
 [Airtable - OB社区插件汇总 - Johnny整理 - 每周更新 - B站 Johnny学](https://airtable.com/shrdmp10Lxmf5Wmgl/tblJqnWpcKURTjysX)
 
 老外做的插件列表，有源码，有更多数据  

@@ -1,7 +1,7 @@
 ---
 title: OpenAI - chatGPT -超强AI聊天机器人注册使用
 date created: 2022-12-06
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 [[chatGPT的使用经验]]
@@ -24,7 +24,7 @@ javascript:window.localStorage.removeItem(Object.keys(window.localStorage).find(
 
 ![](https://img.oldwinter.top/20221206203202.png)
 
-chat网址后面还可能面临问题，就是如果不翻墙，会显式：OpenAI's services are not available in your country. (error=unsupported_country)。而翻墙，像我用的是日本的vpn，则显式：access denied。所以如果换成一个美国的vpn，估计就ok了。
+chat网址后面还可能面临问题，就是如果不翻墙，会显式：OpenAI's services are not available in your country. (error=unsupported_country)。而翻墙，像我用的是日本的vpn，则显式：access denied。所以如果换成一个美国的vpn，估计就ok了。  
 像我早期注册的，就没有这个问题，我不翻墙就能正常使用。
 
 登上节点后，执行下面，可以判定ip是否已经被openai封禁了。

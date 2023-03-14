@@ -1,7 +1,7 @@
 ---
 title: macOS禁用SIP教程
 date created: 2022-12-08
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 1、关闭SIP
@@ -30,7 +30,7 @@ SIP能有效保护系统文件被恶意程序修改和删除，所以正常情�
 
 执行：csrutil enable
 
-粘贴进去按回车，返回提示：“Successfully enabled System Integrity Protection.Please restart the machine for the changes to take effect.”即SIP开启成功。
+粘贴进去按回车，返回提示：“Successfully enabled System Integrity Protection.Please restart the machine for the changes to take effect.”即SIP开启成功。  
 然后点击顶部菜单“”→“重新启动”即可。
 
 原文链接：[https://www.kejixz.com/849.html](https://www.kejixz.com/849.html)

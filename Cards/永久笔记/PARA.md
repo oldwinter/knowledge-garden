@@ -2,7 +2,7 @@
 aliases:
   - 什么是PARA笔记组织法
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: PARA
 ---
 
@@ -15,7 +15,7 @@ Tiago创造的PARA系统包含以下四个区块：
 1. Project：有明确deadline的东西（*例如：论文发表、产品发布、马拉松训练*）。另外，你会希望你的Project小到每一周都能有变化，这样你才有动力继续make progress。一旦你能清楚的列出手边的Project，这个系统就变得很容易了。
 2. Areas：你个人需要持续投资、维持的领域（*例如：健康、感情、财富*）。Areas通常是你寻找新尝试的好地方。
 3. Resources：可以和外人分享的东西（*例如：笔记、食谱、文章*）。
-4. Archive：短期不会用到的东西（请注意这不是垃圾桶），假如你有一些很久没看到资料夹或笔记本，他们就是可以被archive的。
+4. Archive：短期不会用到的东西（请注意这不是垃圾桶），假如你有一些很久没看到资料夹或笔记本，他们就是可以被archive的。  
 如果你还是不太会分辨，可以把Project想成书桌上的东西、Areas想成抽屉里的东西、Resources想成书柜上的东西、Archive则是储物间。
 
 ## 一个 PARA 的有效实践
