@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0cc6d409ee0b4690",
+        "id": "8f99f91ba4440d56",
         "type": "tabs",
         "children": [
           {
-            "id": "461ce8ca8a80cef9",
+            "id": "0997e125ae6103c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "59cec5c83e82f5f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/git submodule.md",
+                "file": "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -64,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: /-",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,8 +79,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -106,7 +92,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md"
+                "file": "Sources/Movies + TV/豆瓣影音导入/“大”人物.md"
               }
             }
           },
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+                "file": "Sources/Movies + TV/豆瓣影音导入/“大”人物.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -215,6 +201,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "digitalgarden:Digital Garden Publication Center": false,
       "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
@@ -228,12 +215,24 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "461ce8ca8a80cef9",
+  "active": "a4d1994dfc9f1870",
   "lastOpenFiles": [
-    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
-    "Cards/永久笔记/git submodule.md",
+    "Sources/Books/微信读书同步/精品小说/朝闻道-刘慈欣.md",
+    "Sources/Movies + TV/豆瓣影音导入/气球.md",
+    "Calendar/Daily notes/笔记系统构建原则.md",
+    "Calendar/Daily notes/2023-03-14.md",
     "AboutTheGarden.md",
     "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
+    "HOMEPAGE.md",
+    "Cards/永久笔记/git submodule.md",
+    "README.md",
+    "Sources/Movies + TV/豆瓣影音导入/火口的两人火口.md",
+    "Sources/Movies + TV/豆瓣影音导入/洗冤录洗冤錄.md",
+    "Sources/Movies + TV/豆瓣影音导入/我们与恶的距离我們與惡的距離.md",
+    "Sources/Movies + TV/豆瓣影音导入/奇葩说第三季.md",
+    "Calendar/Daily notes/Daily notes归档/2022/2022-12-13.md",
+    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
+    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
     "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
     "Sources/GPTchats/202331220519.md",
     "Calendar/Daily notes/2023-03-13.md",
@@ -245,19 +244,7 @@
     "Calendar/Daily notes/2023-03-11.md",
     "Calendar/Daily notes/2023-03-08.md",
     "Calendar/Daily notes/2023-03-06.md",
-    "Calendar/Daily notes/2023-03-05.md",
-    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Clash Pro.md",
-    "Spaces/1-Project/人与科技融合专题/MacOS 软件使用/Clash.md",
-    "Cards/永久笔记/∑ 科学上网.md",
-    "Cards/永久笔记/思维导图.md",
-    "Atlas/Draws/∑ excalidraw 白板创建入口.md",
-    "Spaces/1-Project/人与科技融合专题/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
-    "Spaces/2-Area/运动与健康/油猴脚本开发.md",
-    "Sources/GPTchats/202331114835.md",
-    "Calendar/Daily notes/免费白嫖一个容器服务，并开启v2ray服务.md",
     "Extras/Media/Pasted image 20230312131834.png",
-    "Spaces/2-Area/运动与健康/油猴脚本与浏览器插件的异同分析.md",
-    "Spaces/2-Area/运动与健康/我在减肥增肌期间，养成的一些习惯.md",
     "Atlas/Canvas/九宫格.canvas",
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",

@@ -1,5 +1,4 @@
 [
-  "obsidian-plugin-groups",
   "obsidian-linter",
   "cm-chs-patch",
   "various-complements",
@@ -11,7 +10,6 @@
   "chatgpt-md",
   "obsidian-mindmap-nextgen",
   "obsidian-excalidraw-plugin",
-  "obsidian-plugin-update-tracker",
   "obsidian-textgenerator-plugin",
   "templater-obsidian",
   "obsidian-style-settings",
