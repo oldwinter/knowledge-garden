@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-01
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: obsidian 让我爱不释手的功能和细节
 ---
 

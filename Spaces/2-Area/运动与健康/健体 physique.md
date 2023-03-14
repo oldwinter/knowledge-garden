@@ -1,7 +1,7 @@
 ---
 title: 健体 physique
 date created: 2022-12-16
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 2012年引入。舞台展示相比于传统健美的7个动作，只有4个：

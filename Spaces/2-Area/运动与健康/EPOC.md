@@ -1,6 +1,6 @@
 ---
 date created: 2022-09-04
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: EPOC
 aliases:
   - 运动后过量氧耗

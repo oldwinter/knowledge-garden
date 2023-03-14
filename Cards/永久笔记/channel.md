@@ -1,7 +1,7 @@
 ---
 title: channel
 date created: 2023-02-24
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 主流交流社区，channel就是一个个基于不同兴趣点的频道，所以我和你同频，也有一点这个频道的意思了，意思就是兴趣点和知识背景比较契合。

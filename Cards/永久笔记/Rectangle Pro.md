@@ -1,7 +1,7 @@
 ---
 title: Rectangle Pro
 date created: 2023-02-28
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 除了窗口的各种自动化调整。他有2项其他同类竞品没有的功能：

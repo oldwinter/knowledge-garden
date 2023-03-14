@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 手机短信和通知转发至统一hub
 tags:
   - 评论/少数派

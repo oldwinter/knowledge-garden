@@ -5,7 +5,7 @@ tags:
   - macOS软件
 title: Amphetamine
 date created: 2023-03-01
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 设置同步:: 不需要  

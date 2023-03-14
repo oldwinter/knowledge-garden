@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-10
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 中文流行emoji及编码
 ---
 

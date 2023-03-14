@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-29
-date modified: 2023-03-11
+date modified: 2023-03-14
 title: obsidian开箱即用示例库
 ---
 

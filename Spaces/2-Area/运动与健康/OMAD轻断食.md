@@ -1,7 +1,7 @@
 ---
 title: OMAD轻断食
 date created: 2022-12-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 one meal a day。一天只吃一顿，这一顿把全天需要的营养都吃完，差不多耗时一小时，所以相比于[[168轻断食]]来说，相当于231轻断食。

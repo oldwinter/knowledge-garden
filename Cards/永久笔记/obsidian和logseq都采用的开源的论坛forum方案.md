@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-30
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: obsidian和logseq都采用的开源的论坛forum方案
 tags:
   - 待办/某天

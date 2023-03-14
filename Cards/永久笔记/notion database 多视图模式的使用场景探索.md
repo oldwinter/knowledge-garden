@@ -1,7 +1,7 @@
 ---
 title: notion database 多视图模式的使用场景探索
 date created: 2023-02-10
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 [[notion database的官方案例demo]]

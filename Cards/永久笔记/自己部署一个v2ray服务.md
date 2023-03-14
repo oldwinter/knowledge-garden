@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 自己部署一个v2ray服务
 ---
 - 买一个区域位于海外的 server，预装 linux

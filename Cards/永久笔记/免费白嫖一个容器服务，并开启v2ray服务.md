@@ -1,7 +1,7 @@
 ---
 title: 免费白嫖一个容器服务，并开启v2ray服务
 date created: 2023-03-12
-date modified: 2023-03-12
+date modified: 2023-03-14
 ---
 
 另一个白嫖的服务： https://replit.com/@DongdongChen2/vpn

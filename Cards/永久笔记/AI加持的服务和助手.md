@@ -1,7 +1,7 @@
 ---
 title: AI加持的服务和助手
 date created: 2022-12-13
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 - 对话，比siri，小冰和手机自带的语音助手强大很多
 	- [[OpenAI - chatGPT -超强AI聊天机器人注册使用]]

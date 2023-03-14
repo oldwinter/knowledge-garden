@@ -1,7 +1,7 @@
 ---
 title: obsidian canvas当前的致命缺陷
 date created: 2023-02-27
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 - canvas中引用的卡片，打开后，其反向链接面板无数据。
 - canvas中嵌套引用其他canvas，打开后，其反向链接面板无数据。

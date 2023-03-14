@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-01
-date modified: 2023-03-08
+date modified: 2023-03-14
 tags:
   - 文章/已完成
 title: obsidian 不可回避的缺点及其解决方案

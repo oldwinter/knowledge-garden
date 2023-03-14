@@ -1,7 +1,7 @@
 ---
 title: chatGPT 用于 学习新单词或新概念
 date created: 2023-02-28
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 [https://chat.openai.com/chat/0afd997b-3517-4dbd-9eed-c7e06265992c](https://chat.openai.com/chat/0afd997b-3517-4dbd-9eed-c7e06265992c)

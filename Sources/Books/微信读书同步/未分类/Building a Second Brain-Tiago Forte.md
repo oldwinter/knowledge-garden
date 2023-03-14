@@ -4,7 +4,7 @@ bookId: CB_Eqp1jP1ju6RU6Zk6YE
 category: null
 cover: https://res.weread.qq.com/wrepub/CB_1x64Y84a47Mu6ZM6YE_parsecover
 date created: 2022-08-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 doc_type: weread-highlights-reviews
 isbn: null
 lastReadDate: 2022-08-07T00:00:00.000Z
@@ -182,9 +182,9 @@ title: Building a Second Brain-Tiago Forte
 #### 划线评论
 
 - 📌 There is a parallel between PARA and how kitchens are organized. ^10500316-7AM4yJJdr
-	- 💭 PARA对比厨房：餐具和食材、电冰箱、储存室、冷库。
-用比如中图法和杜威十进制分类法来组织信息，就像用食物总类来组织厨房一样，最终达不到产出美味食品的目的。
-组织信息和想法，不要在乎它们从哪来，而要在乎它们要去哪。
+	- 💭 PARA对比厨房：餐具和食材、电冰箱、储存室、冷库。  
+用比如中图法和杜威十进制分类法来组织信息，就像用食物总类来组织厨房一样，最终达不到产出美味食品的目的。  
+组织信息和想法，不要在乎它们从哪来，而要在乎它们要去哪。  
 PARA不是一个完美的分类系统，它具有足够的灵活性，快速转换位置，帮助我们适应同样快速迭代的现代工作和生活。
 	- ⏱[[2022-07-15]]20:50
 
@@ -203,32 +203,32 @@ PARA不是一个完美的分类系统，它具有足够的灵活性，快速转�
 #### 划线评论
 
 - 📌 Any note or file that isn’t relevant or actionable for a current project or area can be placed into resources for future reference. ^10500316-7AM2hgfoR
-	- 💭 Resource和Project与Area最大的区别就是，没有行动性，没有截止日期，没有具体目标。
+	- 💭 Resource和Project与Area最大的区别就是，没有行动性，没有截止日期，没有具体目标。  
 打个比方：P是作业，A是课本，R是词典。那么我的目标如果是：1个月内建设自己的第二大脑，那么相关实践类文章是我的P；知识管理，软件效率类的文章技巧，是我的A；第二大脑这本书，将成为我的R。
 	- ⏱[[2022-07-15]]20:16
 
 #### 划线评论
 
 - 📌 Each of these is an example of an area of responsibility, and together they make up the second main category of PARA. All these areas, both personal and professional, require certain information to be handled effectively, but they’re not the same as projects.[插图]^10500316-7AM1spRUY
-	- 💭 Area，和project的最大区别，就是它没有截止日期。它往往是一个概念性的、领域性的单词。比如健康、写作、财务、产品设计、法律等等。2者的关系，有点像专业课程和专业名称，前者需要我们上完一门门课，后者用一个专业名称概括了这些课的最终目的。
+	- 💭 Area，和project的最大区别，就是它没有截止日期。它往往是一个概念性的、领域性的单词。比如健康、写作、财务、产品设计、法律等等。2者的关系，有点像专业课程和专业名称，前者需要我们上完一门门课，后者用一个专业名称概括了这些课的最终目的。  
 那么执行性更强的，时效性更强的信息和材料，就放到project里面。理论性，概念性更强的信息和材料，就放到area里面。
 	- ⏱[[2022-07-15]]20:03
 
 #### 划线评论
 
 - 📌 Projects at work: Complete web-page design; Create slide deck for conference; Develop project schedule; Plan recruitment drive.Personal projects: Finish Spanish language course; Plan vacation; Buy new living room furniture; Find local volunteer opportunity.Side projects: Publish blog post; Launch crowdfunding campaign; Research best podcast microphone; Complete online course. ^10500316-7AM0SPjPS
-	- 💭 Project的定义，符合SMART原则。例如，
-当前工作聚焦的项目，网页设计、脚本编写、招聘员工等等。
-个人成长为目的的项目，比如日语课程，假期旅行计划，志愿者活动等等。
-辅助项目，比如录个视频，写个文章，学一门在线课程。这些项目的目的是辅助上面的工作和个人成长。
+	- 💭 Project的定义，符合SMART原则。例如，  
+当前工作聚焦的项目，网页设计、脚本编写、招聘员工等等。  
+个人成长为目的的项目，比如日语课程，假期旅行计划，志愿者活动等等。  
+辅助项目，比如录个视频，写个文章，学一门在线课程。这些项目的目的是辅助上面的工作和个人成长。  
 总而言之，知道自己当前应该聚焦在哪些项目上，有项目驱动时间分配的意识，很重要。
 	- ⏱[[2022-07-15]]19:54
 
 #### 划线评论
 
 - 📌 With the PARA system, every piece of information you want to save can be placed into one of just four categories:Projects: Short-term efforts in your work or life that you’re working on now.Areas: Long-term responsibilities you want to manage over time.Resources: Topics or interests that may be useful in the future.Archives: Inactive items from the other three categories. ^10500316-7AM0xU3xa
-	- 💭 P，短期的，当前聚焦的项目。
-A，长期的，感兴趣的领域。
+	- 💭 P，短期的，当前聚焦的项目。  
+A，长期的，感兴趣的领域。  
 R，将来也许有用的一些话题或有趣的内容  
 A，不活跃的归档项。
 
@@ -269,28 +269,28 @@ A，不活跃的归档项。
 #### 划线评论
 
 - 📌 Distillation is at the very heart of all effective communication. The more important it is that your audience hear and take action on your message, the more distilled that message needs to be. The details and subtleties can come later once you have your audience’s attention.What if your future self was just as important as these VIPs? How could you communicate with them through time in the most efficient, concise way? ^10500316-7B46lBllp
-	- 💭 当我们为重要场合做准备或演讲，回复一个重要邮件等等，我们肯定会想方设法让自己直击重心，不会废话连篇。那么给未来的自己做笔记也是同样，只讲重要的内容，他才能进行有效提取，知识的传递才能更有效。
+	- 💭 当我们为重要场合做准备或演讲，回复一个重要邮件等等，我们肯定会想方设法让自己直击重心，不会废话连篇。那么给未来的自己做笔记也是同样，只讲重要的内容，他才能进行有效提取，知识的传递才能更有效。  
 当然准备某个重要的东西，往往花费大量时间。写笔记不用如此，但为了达到同样的效果，需要花一定的时间精力，去取得效果和耗时的平衡。
 	- ⏱[[2022-07-27]]17:18
 
 #### 划线评论
 
 - 📌 Imagine your future self as a demanding customer. They will surely be impatient and very busy.They won’t have time to pore through page after page of details just to find the hidden gems. ^10500316-7B460MJUG
-	- 💭 如果写的笔记不具有可发现性。想象将来某个时刻的自己，正急需找到现在做的笔记，但是搜索了几秒几分钟后，发现没找到，就会失望而归，不会有足够的耐心和诉求去花大量时间找曾经做过的笔记。如果是这种场景，也就意味着，现在做的笔记就是没有用的。
+	- 💭 如果写的笔记不具有可发现性。想象将来某个时刻的自己，正急需找到现在做的笔记，但是搜索了几秒几分钟后，发现没找到，就会失望而归，不会有足够的耐心和诉求去花大量时间找曾经做过的笔记。如果是这种场景，也就意味着，现在做的笔记就是没有用的。  
 除了可发现性，还要注意其价值性。因为可发现性和价值性往往是矛盾的，越容易发现，也许信息越少价值越少。假设我们是未来的自己的销售，我们既要把笔记做精简，以便产品能被发现，又要把笔记做好，以便能让未来的自己买账。
 	- ⏱[[2022-07-27]]17:13
 
 #### 划线评论
 
 - 📌 The most important factor in whether your notes can survive that journey into the future is their discoverability—how easy it is to discover what they contain and access the specific points that are most immediately useful. ^10500316-7B45FdDy0
-	- 💭 笔记对于未来的价值，衡量指标之一就是：可发现性。将来找不到的笔记，那还是相当于零作用。
+	- 💭 笔记对于未来的价值，衡量指标之一就是：可发现性。将来找不到的笔记，那还是相当于零作用。  
 而可发现性，就意味着，不仅不能原文摘录，要用自己的思维习惯消化完后用自己的语言写笔记，而且还要建立更多的连接，将来也能在这些连接之间，通过较少步的跳转，发现目标笔记。
 	- ⏱[[2022-07-27]]17:07
 
 #### 划线评论
 
 - 📌 You’re talking to a sales prospect about their goals and challenges now, but when you could really use that information is next year, when they start taking bids for a huge new contract. ^10500316-7B45odGjq
-	- 💭 我们当前学习销售技巧，结果可能要好几年后才能用得上。这也是目前大学生都说学校学的东西没有用的原因之一，学习通过考试后，就基本束之高阁了，当然就显得学习这些知识没有用。
+	- 💭 我们当前学习销售技巧，结果可能要好几年后才能用得上。这也是目前大学生都说学校学的东西没有用的原因之一，学习通过考试后，就基本束之高阁了，当然就显得学习这些知识没有用。  
 要打破这种困境，就需要建立系统知识库，并把消化过的知识记录在这，将来有用到的时候，能够通过搜索，发现这些曾经消化学习过的东西，并快速唤醒大脑相关记忆和知识。
 	- ⏱[[2022-07-27]]17:03
 
@@ -315,7 +315,7 @@ A，不活跃的归档项。
 #### 划线评论
 
 - 📌 To attain knowledge, add things every day. To attain wisdom,remove things every day.—Lao Tzu, ancient Chinese philosopher ^10500316-7B449qOZe
-	- 💭 为学日益，为道日损，损之又损，以至于无为，无为而无不为。取天下常以无事，及其有事，不足以取天下。
+	- 💭 为学日益，为道日损，损之又损，以至于无为，无为而无不为。取天下常以无事，及其有事，不足以取天下。  
 ——老子《道德经》第四十八章
 
 搜了半天才发现原文是以上这句话。  

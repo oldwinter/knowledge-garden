@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-01.md",
+                "file": "Sources/About Sources.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -92,7 +92,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-01.md"
+                "file": "Sources/About Sources.md"
               }
             }
           },
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-01.md",
+                "file": "Sources/About Sources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-01.md",
+                "file": "Sources/About Sources.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,7 +149,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-01.md",
+                "file": "Sources/About Sources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,8 +160,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -211,13 +210,19 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "0997e125ae6103c4",
+  "active": "46ac18e336e17ae3",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2023-03-02.md",
+    "Sources/GPTchats/202331114835.md",
+    "ReadItLater Inbox/派评  近期值得关注的 App - 少数派.md",
+    "Calendar/Daily notes/2023-03-14.md",
+    "README.md",
+    "Sources/GPTchats/202331220519.md",
+    "Spaces/3-Resource/王者荣耀/项羽.md",
+    "Cards/永久笔记/tldr.md",
     "Calendar/Daily notes/2023-03-01.md",
+    "Calendar/Daily notes/2023-03-02.md",
     "Calendar/Daily notes/Daily notes归档/2023/2023-01-02.md",
     "Calendar/Daily notes/∑ DB - 每日日志.md",
-    "Calendar/Daily notes/2023-03-14.md",
     "Cards/永久笔记/ZTD.md",
     "Cards/永久笔记/按照目标客户群，分为供应链生意和潮牌生意.md",
     "Cards/永久笔记/2023年共享充电宝在没有铺设的地方，还是不是好生意.md",
@@ -230,15 +235,9 @@
     "🧰 本库指南/Tutorials/本库设计哲学及理念.md",
     "HOMEPAGE.md",
     "Cards/永久笔记/git submodule.md",
-    "README.md",
     "Sources/Movies + TV/豆瓣影音导入/火口的两人火口.md",
     "Sources/Movies + TV/豆瓣影音导入/洗冤录洗冤錄.md",
     "Sources/Movies + TV/豆瓣影音导入/我们与恶的距离我們與惡的距離.md",
-    "Sources/Movies + TV/豆瓣影音导入/奇葩说第三季.md",
-    "Calendar/Daily notes/Daily notes归档/2022/2022-12-13.md",
-    "Sources/Courses/面试现场-白海飞/§ 面试现场 - 白海飞.md",
-    "Extras/Templates/textgenerator模板/prompts/default/rewrite.md",
-    "Calendar/已发布文章/obsidian 目前最完美的免费发布方案 - 渐进式教程.md",
     "Extras/Templates/textgenerator模板/prompts/自建",
     "Extras/Media/Pasted image 20230312131834.png",
     "Atlas/Canvas/九宫格.canvas",

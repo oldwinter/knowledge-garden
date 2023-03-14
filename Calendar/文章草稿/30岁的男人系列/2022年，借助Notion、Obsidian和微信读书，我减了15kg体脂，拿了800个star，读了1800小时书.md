@@ -3,7 +3,7 @@ title: 2022年，借助Notion、Obsidian和微信读书，我减了15kg体脂，
 aliases:
   - 2022年，我借助这3个年度app，达成了这3个成就
 date created: 2023-02-09
-date modified: 2023-03-08
+date modified: 2023-03-14
 投稿链接: https://sspai.com/post/77562
 关键: 文章将以充电量和收藏量为主要参考数据进行奖励得分计算
 ---

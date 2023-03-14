@@ -1,6 +1,6 @@
 ---
 date created: 2022-08-02
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: mac充电和键盘灯异常 - 重置SMC
 ---
 

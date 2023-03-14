@@ -1,7 +1,7 @@
 ---
 title: scp ssh自动输入密码脚本
 date created: 2022-12-11
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: 配置PAC - GFW list
 date created: 2023-01-06
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 [https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)  

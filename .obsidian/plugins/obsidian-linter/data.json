@@ -228,8 +228,7 @@
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
   "foldersToIgnore": [
-    "Extras/Templates",
-    "Sources"
+    "Extras/Templates"
   ],
   "linterLocale": "zh-cn",
   "logLevel": 4,

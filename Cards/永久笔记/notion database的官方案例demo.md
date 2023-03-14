@@ -1,7 +1,7 @@
 ---
 title: notion database的官方案例demo
 date created: 2023-02-15
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 官方notion推荐的项目管理projects、sprints和tasks三件套，通过database的relation，将3个联动起来。

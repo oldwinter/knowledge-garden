@@ -1,7 +1,7 @@
 ---
 title: chatGPT
 date created: 2023-02-15
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 chatGPT的提问方式方法大集合：

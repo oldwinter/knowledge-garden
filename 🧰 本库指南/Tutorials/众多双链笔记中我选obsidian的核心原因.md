@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 date created: 2022-08-18
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 众多双链笔记中我选obsidian的核心原因
 ---
 

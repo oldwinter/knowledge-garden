@@ -1,7 +1,7 @@
 ---
 title: Cloudflare Worker
 date created: 2023-03-04
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 
 Cloudflare Worker的原理可以简单概括为：通过在全球范围内分布的数据中心部署JavaScript执行环境，通过JavaScript代码的编写，对进出Cloudflare的网络流量进行拦截、修改、重定向等操作，从而提供服务器less的应用程序构建和执行能力。

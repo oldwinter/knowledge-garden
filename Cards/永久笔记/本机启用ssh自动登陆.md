@@ -2,7 +2,7 @@
 aliases:
   - vscode中启用ssh自动登陆
 date created: 2022-05-11
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 本机启用ssh自动登陆
 ---
 

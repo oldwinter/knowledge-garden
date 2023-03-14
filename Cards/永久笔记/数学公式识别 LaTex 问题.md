@@ -1,6 +1,6 @@
 ---
 date created: 2022-06-27
-date modified: 2023-03-08
+date modified: 2023-03-14
 title: 数学公式识别 LaTex 问题
 ---
 

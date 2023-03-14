@@ -6,6 +6,7 @@
   "idField": "uid",
   "useUID": true,
   "addFilepathWhenUsingUID": false,
+  "allowEval": true,
   "regex": {},
   "lineRegex": {},
   "linkRegex": {},

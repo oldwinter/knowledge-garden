@@ -1,7 +1,7 @@
 ---
 title: ∑ canvas创建入口
 date created: 2023-02-17
-date modified: 2023-03-08
+date modified: 2023-03-14
 ---
 - [[🧩 2022年，我用3个app达成的3个小成就.canvas]]
 - [[🧩 白板canvas-示意图.canvas]]
