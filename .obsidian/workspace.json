@@ -4,26 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "fea7840037fec350",
+        "id": "ee1c75af66e96bd1",
         "type": "tabs",
         "children": [
           {
-            "id": "17ea53dd7c2ec7fd",
+            "id": "4a421a7086439be5",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
-                "viewState": {
-                  "x": -57,
-                  "y": -398,
-                  "zoom": 0
-                }
+                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
+          },
+          {
+            "id": "391ae845bf11462d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas"
+                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md"
               }
             }
           },
@@ -104,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
+                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
+                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -151,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
+                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -193,15 +198,7 @@
             }
           },
           {
-            "id": "5fa50e5fafc81a5c",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "099e1abb3f85cdee",
+            "id": "c91e5d2f25f6de74",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -209,11 +206,12 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 417.5
+    "width": 316.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,25 +230,48 @@
     "type": "floating",
     "children": [
       {
-        "id": "1d2b5d595e3bd281",
+        "id": "bedd7461b9afb26b",
         "type": "window",
         "children": [
           {
-            "id": "f415eb8a590f5200",
+            "id": "101f1539653265c2",
             "type": "tabs",
+            "dimension": 71.60714285714286,
             "children": [
               {
-                "id": "0997e125ae6103c4",
+                "id": "7a9441c26c1cc6be",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
                   "type": "canvas",
                   "state": {
-                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+                    "file": "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
                     "viewState": {
-                      "x": 279.04,
-                      "y": 706.8800000000003,
+                      "x": 239.7999999999997,
+                      "y": -65.25999999999998,
                       "zoom": 0
                     }
+                  },
+                  "pinned": true
+                }
+              }
+            ]
+          },
+          {
+            "id": "0a6e30bfbc153fde",
+            "type": "tabs",
+            "dimension": 28.392857142857142,
+            "children": [
+              {
+                "id": "b14f71b00c0c168a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "🧰 本库指南/🧰 本库使用指南.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
                   }
                 }
               }
@@ -259,43 +280,47 @@
         ],
         "direction": "vertical",
         "x": 0,
-        "y": 0,
-        "width": 1680,
-        "height": 1050,
+        "y": 25,
+        "width": 643,
+        "height": 985,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "17ea53dd7c2ec7fd",
+  "active": "4a421a7086439be5",
   "lastOpenFiles": [
+    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "🍀 花园导览/🏋 如何保持健康.md",
+    "Calendar/Daily notes/2023-03-15.md",
+    "🧰 本库指南/🏗 本库Roadmap.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
+    "Cards/永久笔记/隐私保护.md",
+    "Spaces/2-Area/个人职业生涯/质量效能.md",
+    "Extras/Media/容器域质量效能&软件工程能力指标介绍.pptx",
+    "Spaces/2-Area/个人职业生涯/版本管理.md",
+    "Extras/Media/月度开发-版本计划-转测流程190119.pptx",
     "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
+    "Cards/永久笔记/写卡片3年的8条感悟 by 汪爸刀刀.md",
+    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
+    "Calendar/Daily notes/2023-03-05.md",
+    "README.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "Sources/Courses/如何成为学习高手-高冷冷/如何提高学习和记忆能力.md",
+    "Cards/永久笔记/双链笔记与卡片笔记.md",
     "Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md",
     "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "README.md",
     "Atlas/Canvas/» canvas使用经验.md",
     "Atlas/Canvas/∑ canvas创建入口.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何提高学习和记忆能力.md",
-    "Cards/永久笔记/写卡片3年的8条感悟 by 汪爸刀刀.md",
     "Cards/永久笔记/考研备考经验.md",
     "Sources/Courses/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md",
     "Sources/Videos/📹健身新手的完全减脂指南-好人松松.md",
     "Sources/Courses/DevOps实战笔记-石雪峰/Devops如何让企业开始实施转型.md",
     "Cards/永久笔记/图床方案的选择.md",
     "Sources/Courses/如何成为学习高手-高冷冷/如何戒掉玩手机.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何告别伪学霸和学酥状态.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/连点成线记忆法，记忆时缩写，回忆时扩写.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/利用逆向思维，使自己成为一个真正自律的人.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/高效记忆的根本：主动加工和组块化记忆.md",
-    "Sources/Courses/面试现场-白海飞/想要成功面试，先要弄懂面试过程.md",
-    "Sources/Courses/面试现场-白海飞/公司到底想要什么样的人.md",
-    "Sources/Papers/zotero和obsidian的联动.md",
-    "Cards/永久笔记/note.md",
-    "Cards/永久笔记/Youtube.md",
-    "Cards/永久笔记/PARA.md",
-    "Cards/永久笔记/nginx.md",
     "Extras/Templates/textgenerator模板/prompts/自建",
     "Extras/Media/Pasted image 20230312131834.png",
     "Atlas/Canvas/九宫格.canvas",
@@ -312,12 +337,8 @@
     "Extras/Templates/ChatGPT_MD",
     "Atlas/Canvas/减脂塑型金字塔.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
-    "Atlas/Canvas/🧩 golang roadmap 路线图.canvas",
-    "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "ReadItLater Inbox",
     "Omnivore/2023-02-20",
-    "Omnivore",
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
     "Atlas/Draws/README 中的头图 - 图.svg",
