@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md",
+                "file": "Calendar/Daily notes/2023-03-18.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "825306b471e29ce8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -33,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md"
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md"
               }
             }
           },
@@ -114,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md",
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md",
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-11.md",
+                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -231,8 +245,12 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "2f9e2277b7e3c926",
+  "active": "825306b471e29ce8",
   "lastOpenFiles": [
+    "Calendar/Daily notes/不吃早餐不一定有多大危害.md",
+    "Calendar/Daily notes/2023-03-18.md",
+    "Spaces/2-Area/运动与健康/鱼油.md",
+    "Calendar/Daily notes/2023-03-11.md",
     "Calendar/Daily notes/2023-03-12.md",
     "Calendar/Daily notes/2023-03-13.md",
     "Calendar/Daily notes/2023-03-14.md",
@@ -240,10 +258,8 @@
     "Calendar/Daily notes/2023-03-16.md",
     "Calendar/Daily notes/2023-03-17.md",
     "Calendar/Daily notes/GPT 加持时代的卡片笔记与双向链接 - Amazing.md",
-    "Calendar/Daily notes/2023-03-18.md",
     "Spaces/2-Area/运动与健康/力量训练的每组重量选择变化逻辑 - 递增组、递减组、超级组.md",
     "Cards/永久笔记/✨生活中只有一种英雄主义，那就是在认清生活真相之后依然热爱生活。——罗曼罗兰.md",
-    "Spaces/2-Area/运动与健康/鱼油.md",
     "Spaces/2-Area/运动与健康/EAA.md",
     "Spaces/2-Area/运动与健康/蛋白粉.md",
     "Spaces/2-Area/运动与健康/运动补剂的级别划分.md",
@@ -257,8 +273,6 @@
     "Spaces/2-Area/运动与健康/渐进式超负荷.md",
     "Spaces/2-Area/运动与健康/力量训练.md",
     "Spaces/2-Area/运动与健康/omega-3.md",
-    "Spaces/2-Area/运动与健康/便秘.md",
-    "Spaces/2-Area/运动与健康/尿酸.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
