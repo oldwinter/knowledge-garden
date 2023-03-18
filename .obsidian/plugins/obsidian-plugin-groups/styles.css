@@ -214,6 +214,7 @@
 	height: auto;
 	max-height: 500px;
 	min-height: 100px;
+	min-width: 350px;
 	opacity: 1;
 
 	transition: height 1s, opacity 250ms;

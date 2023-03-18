@@ -54,4 +54,4 @@ https://raw.githubusercontent.com/first20hours/google-10000-english/master/googl
 
 由于我自动往[[frontmatter]]里面加入了titile，所以这边会有几万个选项，用起来并不方便。
 
-更多的时候，是想快如插入tags，那么可以前面输入#来触发选词，接着[[linter]]插件会帮我们自动去掉#。
+更多的时候，是想快如插入tags，那么可以前面输入#来触发选词，接着[[Linter]]插件会帮我们自动去掉#。

@@ -129,7 +129,7 @@ role::assistant
           }
         }
         console.log(fullstr);
-        return "streaming";
+        return { fullstr, mode: "streaming" };
       } else {
         const responseJSON = JSON.parse(response);
         return responseJSON.choices[0].message.content;
@@ -167,6 +167,7 @@ role::${role}
         throw new Error("no active file");
       }
       const metaMatter = (_a = app.metadataCache.getFileCache(noteFile)) == null ? void 0 : _a.frontmatter;
+      const shouldStream = (metaMatter == null ? void 0 : metaMatter.stream) !== void 0 ? metaMatter.stream : this.settings.stream !== void 0 ? this.settings.stream : true;
       const frontmatter = {
         title: (metaMatter == null ? void 0 : metaMatter.title) || view.file.basename,
         tags: (metaMatter == null ? void 0 : metaMatter.tags) || [],
@@ -175,7 +176,7 @@ role::${role}
         top_p: (metaMatter == null ? void 0 : metaMatter.top_p) || 1,
         presence_penalty: (metaMatter == null ? void 0 : metaMatter.presence_penalty) || 0,
         frequency_penalty: (metaMatter == null ? void 0 : metaMatter.frequency_penalty) || 0,
-        stream: (metaMatter == null ? void 0 : metaMatter.stream) || this.settings.stream || true,
+        stream: shouldStream,
         max_tokens: (metaMatter == null ? void 0 : metaMatter.max_tokens) || 512,
         stop: (metaMatter == null ? void 0 : metaMatter.stop) || null,
         n: (metaMatter == null ? void 0 : metaMatter.n) || 1,
@@ -298,8 +299,6 @@ ${JSON.stringify(
     try {
       const format = this.settings.dateFormat;
       const pattern = this.generateDatePattern(format);
-      console.log(pattern);
-      console.log(pattern.test(title));
       return title.length == format.length && pattern.test(title);
     } catch (err) {
       throw new Error(
@@ -375,7 +374,9 @@ ${JSON.stringify(
           frontmatter.logit_bias,
           frontmatter.user
         ).then((response) => {
-          if (response === "streaming") {
+          let responseStr = response;
+          if (response.mode === "streaming") {
+            responseStr = response.fullstr;
             const newLine = `
 
 <hr class="__chatgpt_plugin">
@@ -394,13 +395,14 @@ role::user
             this.appendMessage(editor, "assistant", response);
           }
           if (this.settings.autoInferTitle) {
-            console.log(
-              "auto infer title from messages: ",
-              messages
-            );
+            console.log("[ChatGPT MD] auto infer title");
             const title = view.file.basename;
-            if (this.isTitleTimestampFormat(title) && messages.length > 4) {
-              this.inferTitleFromMessages(messages).then((title2) => {
+            const messagesWithResponse = messages.concat(
+              responseStr
+            );
+            if (this.isTitleTimestampFormat(title) && messagesWithResponse.length >= 4) {
+              this.inferTitleFromMessages(messagesWithResponse).then((title2) => {
+                console.log(title2);
                 if (title2) {
                   const file = view.file;
                   const folder = this.settings.chatFolder.replace(
@@ -410,6 +412,11 @@ role::user
                   this.app.fileManager.renameFile(
                     file,
                     `${folder}/${title2}.md`
+                  );
+                } else {
+                  new import_obsidian.Notice(
+                    "[ChatGPT MD] Could not infer title",
+                    5e3
                   );
                 }
               }).catch((err) => {

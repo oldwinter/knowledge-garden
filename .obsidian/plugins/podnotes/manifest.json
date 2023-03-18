@@ -1,0 +1,11 @@
+{
+	"id": "podnotes",
+	"name": "PodNotes",
+	"version": "2.10.7",
+	"minAppVersion": "0.15.9",
+	"description": "Helps you write notes on podcasts.",
+	"author": "Christian B. B. Houmann",
+	"authorUrl": "https://bagerbach.com",
+	"fundingUrl": "https://buymeacoffee.com/chhoumann",
+	"isDesktopOnly": false
+}

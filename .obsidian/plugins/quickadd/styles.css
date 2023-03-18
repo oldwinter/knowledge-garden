@@ -175,3 +175,43 @@
 .qaFileSuggestionItem .suggestion-sub-text {
   font-style: italic;
 }
+.choiceListItem {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  margin: 12px 0 0 0;
+  transition: 1000ms ease-in-out;
+}
+.choiceListItemName {
+  flex: 1 0 0;
+}
+.choiceListItemName p {
+  margin: 0;
+  display: inline;
+}
+.quickadd-choice-suggestion p {
+  margin: 0;
+}
+.macroDropdownContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.macro-choice-buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .macroDropdownContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .macroDropdownContainer .macro-choice-buttonsContainer {
+    gap: 20px;
+  }
+}

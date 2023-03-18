@@ -1,6 +1,7 @@
 const Obsidian = require("obsidian");
 // require built-in crypto module
 const crypto = require("crypto");
+const { json } = require("stream/consumers");
 
 const DEFAULT_SETTINGS = {
   api_key: "",
@@ -13,6 +14,7 @@ const DEFAULT_SETTINGS = {
   log_render: false,
   log_render_files: false,
   skip_sections: false,
+  smart_chat_model: "gpt-3.5-turbo",
   results_count: 30,
   view_open: true,
   version: "",
@@ -96,6 +98,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
   }
   async onload() {
+    this.addIcon();
     await this.loadSettings();
     console.log("loading plugin");
     this.addCommand({
@@ -144,14 +147,14 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // initialize when layout is ready
     this.app.workspace.onLayoutReady(this.initialize.bind(this));
 
-    // /**
-    //  * EXPERIMENTAL
-    //  * - window-based API access
-    //  * - code-block rendering
-    //  */
-    // this.api = new SmartConnectionsApi(this.app, this);
-    // // register API to global window object
-    // (window["SmartConnectionsApi"] = this.api) && this.register(() => delete window["SmartConnectionsApi"]);
+    /**
+     * EXPERIMENTAL
+     * - window-based API access
+     * - code-block rendering
+     */
+    this.api = new ScSearchApi(this.app, this);
+    // register API to global window object
+    (window["SmartSearchApi"] = this.api) && this.register(() => delete window["SmartSearchApi"]);
 
     // code-block renderer
     this.registerMarkdownCodeBlockProcessor("smart-connections", this.render_code_block.bind(this));
@@ -182,7 +185,6 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
   }
 
   async initialize() {
-    this.addIcon();
     // if this settings.view_open is true, open view on startup
     if(this.settings.view_open) {
       this.open_view();
@@ -1040,7 +1042,8 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       }
       nearest.push({
         link: this.embeddings[from_keys[i]].meta.path,
-        similarity: this.computeCosineSimilarity(to_vec, this.embeddings[from_keys[i]].vec)
+        similarity: this.computeCosineSimilarity(to_vec, this.embeddings[from_keys[i]].vec),
+        len: this.embeddings[from_keys[i]].meta.len || this.embeddings[from_keys[i]].meta.size,
       });
     }
     // handle external links
@@ -1364,9 +1367,16 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       if ((line.indexOf('#') === 0) && (['#',' '].indexOf(line[1]) !== -1)){
         break; // ends when encountering next header
       }
-      // if char_count is greater than N, skip
+      // DEPRECATED: should be handled by new_line+char_count check (happens in previous iteration)
+      // if char_count is greater than limit.max_chars, skip
       if (limits.max_chars && char_count > limits.max_chars) {
         block.push("...");
+        break;
+      }
+      // if new_line + char_count is greater than limit.max_chars, skip
+      if (limits.max_chars && ((line.length + char_count) > limits.max_chars)) {
+        const max_new_chars = limits.max_chars - char_count;
+        line = line.slice(0, max_new_chars) + "...";
         break;
       }
       // validate/format
@@ -1409,6 +1419,21 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       }
     }
     return valid;
+  }
+  // render "Smart Connections" text fixed in the bottom right corner
+  render_brand(container) {
+    // brand container
+    const brand_container = container.createEl("div", { cls: "sc-brand" });
+    // add text
+    // add SVG signal icon using getIcon
+    Obsidian.setIcon(brand_container, "smart-connections");
+    const brand_p = brand_container.createEl("p");
+    brand_p.createEl("a", {
+      cls: "",
+      text: "Smart Connections",
+      href: "https://wfhbrian.com/introducing-smart-chat-transform-your-obsidian-notes-into-interactive-ai-powered-conversations/?utm_source=plugin",
+      target: "_blank"
+    });
   }
 }
 
@@ -1794,7 +1819,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
         }
       }
     }
-    this.render_brand(container);
+    this.plugin.render_brand(container);
   }
 
   render_block_context(block) {
@@ -1892,16 +1917,6 @@ class SmartConnectionsView extends Obsidian.ItemView {
     });
   }
 
-  // render "Smart Connections" text fixed in the bottom right corner
-  render_brand(container) {
-    // brand container
-    const brand_container = container.createEl("div", { cls: "sc-brand" });
-    // add text
-    // add SVG signal icon using getIcon
-    Obsidian.setIcon(brand_container, "smart-connections");
-    brand_container.createEl("p", { cls: "", text: "Smart Connections" });
-  }
-
   // render buttons: "create" and "retry" for loading embeddings.json file
   render_embeddings_buttons() {
     // get container element
@@ -1991,9 +2006,9 @@ class SmartConnectionsView extends Obsidian.ItemView {
      * - window-based API access
      * - code-block rendering
      */
-    this.plugin.api = new SmartConnectionsApi(this.app, this.plugin, this);
+    this.api = new SmartConnectionsViewApi(this.app, this.plugin, this);
     // register API to global window object
-    (window["SmartConnectionsApi"] = this.plugin.api) && this.register(() => delete window["SmartConnectionsApi"]);
+    (window["SmartConnectionsViewApi"] = this.api) && this.register(() => delete window["SmartConnectionsViewApi"]);
 
   }
 
@@ -2087,7 +2102,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
   }
 
   async search(search_text, results_only=false) {
-    const nearest = await this.plugin.api.search(search_text);
+    const nearest = await this.api.search(search_text);
     // render results in view with first 100 characters of search text
     const nearest_context = `Selection: "${search_text.length > 100 ? search_text.substring(0, 100) + "..." : search_text}"`;
     this.set_nearest(nearest, nearest_context, results_only);
@@ -2152,11 +2167,26 @@ class SmartConnectionsView extends Obsidian.ItemView {
 
 }
 
-class SmartConnectionsApi {
+class SmartConnectionsViewApi {
   constructor(app, plugin, view) {
     this.app = app;
     this.plugin = plugin;
     this.view = view;
+  }
+  async search (search_text) {
+    return await this.plugin.api.search(search_text);
+  }
+  // trigger reload of embeddings file
+  async reload_embeddings_file() {
+    await this.view.load_embeddings_file();
+    await this.view.render_connections();
+  }
+  
+}
+class ScSearchApi {
+  constructor(app, plugin) {
+    this.app = app;
+    this.plugin = plugin;
   }
   async search (search_text) {
     let nearest = [];
@@ -2169,12 +2199,6 @@ class SmartConnectionsApi {
     }
     return nearest;
   }
-  // trigger reload of embeddings file
-  async reload_embeddings_file() {
-    await this.view.load_embeddings_file();
-    await this.view.render_connections();
-  }
-  
 }
 
 class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
@@ -2204,6 +2228,16 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
         new Obsidian.Notice("Smart Connections: API key is not working as expected!");
       }
     }));
+    // add dropdown to select the model
+    new Obsidian.Setting(containerEl).setName("Smart Chat Model").setDesc("Select a model to use with Smart Chat.").addDropdown((dropdown) => {
+      dropdown.addOption("gpt-3.5-turbo", "gpt-3.5-turbo");
+      dropdown.addOption("gpt-4", "gpt-4 (limited access)");
+      dropdown.onChange(async (value) => {
+        this.plugin.settings.smart_chat_model = value;
+        await this.plugin.saveSettings();
+      });
+      dropdown.setValue(this.plugin.settings.smart_chat_model);
+    });
     containerEl.createEl("h2", {
       text: "Exclusions"
     });
@@ -2367,6 +2401,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     this.current_chat_ml = [];
     this.last_from = null;
     this.last_msg = null;
+    this.prevent_input = false;
   }
   getDisplayText() {
     return "Smart Connections Chat";
@@ -2386,7 +2421,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     this.render_chat_box();
     // render chat input
     this.render_chat_input();
-    this.render_brand(this.containerEl);
+    this.plugin.render_brand(this.containerEl);
     // render initial message from assistant
     this.render_message(INITIAL_MESSAGE, "assistant");
   }
@@ -2414,6 +2449,8 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     this.current_chat_ml = [];
     // render initial message from assistant
     this.render_message(INITIAL_MESSAGE, "assistant");
+    // update prevent input
+    this.prevent_input = false;
   }
   // render chat messages container
   render_chat_box() {
@@ -2427,14 +2464,19 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     // create container for chat input
     let chat_input = this.chat_container.createDiv("sc-chat-form");
     // create textarea
-    let textarea = chat_input.createEl("textarea", {cls: "sc-chat-input"});
+    this.textarea = chat_input.createEl("textarea", {cls: "sc-chat-input"});
     // add event listener to listen for shift+enter
     chat_input.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.shiftKey) {
+        if(this.prevent_input){
+          console.log("wait until current response is finished");
+          new Obsidian.Notice("Wait until current response is finished");
+          return;
+        }
         // get text from textarea
-        let user_input = textarea.value;
+        let user_input = this.textarea.value;
         // clear textarea
-        textarea.value = "";
+        this.textarea.value = "";
         // initiate response from assistant
         this.initialize_response(user_input);
       }
@@ -2444,15 +2486,21 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     button.innerHTML = "Send";
     // add event listener to button
     button.addEventListener("click", () => {
+      if(this.prevent_input){
+        console.log("wait until current response is finished");
+        new Obsidian.Notice("Wait until current response is finished");
+        return;
+      }
       // get text from textarea
-      let user_input = textarea.value;
+      let user_input = this.textarea.value;
       // clear textarea
-      textarea.value = "";
+      this.textarea.value = "";
       // initiate response from assistant
       this.initialize_response(user_input);
     });
   }
   async initialize_response(user_input) {
+    this.prevent_input = true;
     // render message
     this.render_message(user_input, "user");
     this.append_chatml(user_input, "user");
@@ -2469,7 +2517,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     const context = await this.get_hyde_context(user_input);
     // get user input with added context
     const context_input = this.build_context_input(context);
-    console.log(context_input);
+    // console.log(context_input);
     const chatml = [
       {
         role: "system",
@@ -2502,25 +2550,48 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
   // render message
   render_message(message, from="assistant", append_last=false) {
     if(append_last && this.last_from === from) {
-      if(this.last_msg.innerHTML === '...') this.last_msg.innerHTML = '';
+      // if(this.last_msg.innerHTML === '...') this.last_msg.innerHTML = '';
+      // if dotdotdot interval is set, then clear it
+      if(this.dotdotdot_interval) {
+        clearInterval(this.dotdotdot_interval);
+        this.dotdotdot_interval = null;
+        // clear last message
+        this.last_msg.innerHTML = '';
+      }
+      this.current_message_raw += message;
+      this.last_msg.innerHTML = '';
+      Obsidian.MarkdownRenderer.renderMarkdown(this.current_message_raw, this.last_msg, '?no-dataview', void 0);
       // append to last message
-      this.last_msg.innerHTML += message;
+      // this.last_msg.innerHTML += message;
     }else{
+      this.current_message_raw = '';
       // set last from
       this.last_from = from;
       // create message
       let message_el = this.message_container.createDiv(`sc-message ${from}`);
       // create message content
       this.last_msg = message_el.createDiv("sc-message-content");
-      // set message text
-      this.last_msg.innerHTML = message;
+      // if is '...', then initiate interval to change to '.' and then to '..' and then to '...'
+      if((from === "assistant") && (message === '...')) {
+        let dots = 0;
+        this.dotdotdot_interval = setInterval(() => {
+          dots++;
+          if(dots > 3) dots = 1;
+          this.last_msg.innerHTML = '.'.repeat(dots);
+        }, 500);
+        return;
+      }else{
+        // set message text
+        // this.last_msg.innerHTML = message;
+        Obsidian.MarkdownRenderer.renderMarkdown(message, this.last_msg, '?no-dataview', void 0);
+      }
     }
     // scroll to bottom
     this.message_container.scrollTop = this.message_container.scrollHeight;
   }
   async request_chatgpt_completion(opts={}) {
     opts = {
-      model: 'gpt-3.5-turbo',
+      model: this.plugin.settings.smart_chat_model,
       messages: this.current_chat_ml,
       max_tokens: 250,
       temperature: 0.3,
@@ -2533,7 +2604,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       // logit_bias: logit_bias,
       ...opts
     }
-    console.log(opts.messages);
+    // console.log(opts.messages);
     try{
       const response = await (0, Obsidian.requestUrl)({
         url: `https://api.openai.com/v1/chat/completions`,
@@ -2550,6 +2621,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       if(!opts.stream) {
         return JSON.parse(response.text).choices[0].message.content;
       }
+      // the following code is for streaming
       try {
         const json = response.json;
         if (json && json.error) {
@@ -2591,8 +2663,12 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
             full_str += delta;
           }
         }
+        // if is done
+        if(resp_line && resp_line.indexOf("[DONE]") !== -1) {
+          this.prevent_input = false;
+        }
       }
-      console.log(full_str);
+      // console.log(full_str);
       this.append_chatml(full_str, "assistant");
       return;
     }catch(err){
@@ -2613,7 +2689,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     // if(this.current_chat_ml.length > 1) {
     //   subject = "chat log";
     // }
-    const hyd_input = `Respond in the form of a hypothetical note written by the user. The note may contain paragraphs, lists, or checklists in markdown format with no headings. Please respond with one hypothetical note and abstain from any other commentary. Use the format: PARENT FOLDER NAME > CHILD FOLDER NAME > FILE NAME > HEADING 1 > HEADING 2 > HEADING 3: HYPOTHETICAL NOTE CONTENTS.`;
+    const hyd_input = `Anticipate what the user is seeking. Respond in the form of a hypothetical note written by the user. The note may contain statements as paragraphs, lists, or checklists in markdown format with no headings. Please respond with one hypothetical note and abstain from any other commentary. Use the format: PARENT FOLDER NAME > CHILD FOLDER NAME > FILE NAME > HEADING 1 > HEADING 2 > HEADING 3: HYPOTHETICAL NOTE CONTENTS.`;
     // complete
     const chatml = [
       {
@@ -2629,38 +2705,82 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       messages: chatml,
       stream: false,
       temperature: 0,
-      max_tokens: 150,
+      max_tokens: 137,
     });
     // this.render_message(hyd, "assistant", true);
+    // console.log(hyd);
     // search for nearest based on hyd
-    const nearest = await this.plugin.api.search(hyd);
+    let nearest = await this.plugin.api.search(hyd);
+    // get std dev of similarity
+    const sim = nearest.map((n) => n.similarity);
+    const mean = sim.reduce((a, b) => a + b) / sim.length;
+    const std_dev = Math.sqrt(sim.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / sim.length);
+    // slice where next item deviation is greater than std_dev
+    let slice_i = 0;
+    while(slice_i < nearest.length) {
+      const next = nearest[slice_i + 1];
+      if(next) {
+        const next_dev = Math.abs(next.similarity - nearest[slice_i].similarity);
+        if(next_dev > std_dev) {
+          break;
+        }
+      }
+      slice_i++;
+    }
+    // select top results
+    nearest = nearest.slice(0, slice_i);
+    // re-sort by quotient of similarity divided by len DESC
+    nearest = nearest.sort((a, b) => {
+      const a_score = a.similarity / a.len;
+      const b_score = b.similarity / b.len;
+      // if a is greater than b, return -1
+      if(a_score > b_score) return -1;
+      // if a is less than b, return 1
+      if(a_score < b_score) return 1;
+      // if a is equal to b, return 0
+      return 0;
+    });
+
     // console.log(nearest);
     // get the top 3 results excluding files (must have a # in the link)
     let top = [];
-    const MAX_SOURCES = 10; // 10 * 1000 (max chars) = 10,000 chars (must be under ~16,000 chars or 4K tokens) 
+    const MAX_SOURCES = 20; // 10 * 1000 (max chars) = 10,000 chars (must be under ~16,000 chars or 4K tokens) 
+    const MAX_CHARS = 10000;
+    let char_accum = 0;
     for(let i = 0; i < nearest.length; i++) {
       if(top.length >= MAX_SOURCES) break;
-      if((typeof nearest[i].link === 'string') && nearest[i].link.indexOf("#") !== -1){
-        const block_content = await this.plugin.block_retriever(nearest[i].link, {max_chars: 1000});
-        const breadcrumbs = nearest[i].link.replace(/#/g, " > ").replace(".md", "").replace(/\//g, " > ");
-        top.push({
-          link: nearest[i].link,
-          text: `${breadcrumbs}\n${block_content}`
-        });
+      if(char_accum >= MAX_CHARS) break;
+      if(typeof nearest[i].link !== 'string') continue;
+      // generate breadcrumbs
+      const breadcrumbs = nearest[i].link.replace(/#/g, " > ").replace(".md", "").replace(/\//g, " > ");
+      let new_context = `${breadcrumbs}:\n`;
+      // get max available chars to add to top
+      const max_available_chars = MAX_CHARS - char_accum - new_context.length;
+      if(nearest[i].link.indexOf("#") !== -1){ // is block
+        new_context += await this.plugin.block_retriever(nearest[i].link, {max_chars: max_available_chars});
+      }else{ // is file
+        const this_file = this.app.vault.getAbstractFileByPath(nearest[i].link);
+        // if file is not found, skip
+        if (!(this_file instanceof Obsidian.TAbstractFile)) continue;
+        // use cachedRead to get the first 10 lines of the file
+        const file_content = await this.app.vault.cachedRead(this_file);
+        // get up to max_available_chars from file_content
+        new_context += file_content.substring(0, max_available_chars);
       }
+      // add to char_accum
+      char_accum += new_context.length;
+      // add to top
+      top.push({
+        link: nearest[i].link,
+        text: new_context
+      });
     }
-    console.log(top);
+    // context sources
+    console.log("context sources: " + top.length);
+    // char_accum divided by 4 and rounded to nearest integer for estimated tokens
+    console.log("total context tokens: ~" + Math.round(char_accum / 4));
+    // console.log(top);
     return top;
-  }
-  
-  // render "Smart Connections" text fixed in the bottom right corner
-  render_brand(container) {
-    // brand container
-    const brand_container = container.createEl("div", { cls: "sc-brand" });
-    // add text
-    // add SVG signal icon using getIcon
-    Obsidian.setIcon(brand_container, "smart-connections");
-    brand_container.createEl("p", { cls: "", text: "Smart Connections" });
   }
 
 }

@@ -7,8 +7,6 @@
   "obsidian-auto-link-title",
   "obsidian-better-command-palette",
   "obsidian-another-quick-switcher",
-  "chatgpt-md",
-  "obsidian-mindmap-nextgen",
   "obsidian-excalidraw-plugin",
   "obsidian-style-settings",
   "cmdr",
@@ -18,5 +16,7 @@
   "tag-wrangler",
   "calendar",
   "obsidian-advanced-uri",
-  "smart-connections"
+  "obsidian-projects",
+  "smart-connections",
+  "obsidian-image-auto-upload-plugin"
 ]

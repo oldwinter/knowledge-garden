@@ -401,6 +401,36 @@
       ],
       "id": "21b0c625-8654-45a5-a7f7-0291ca0da113",
       "name": "Untitled project"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#macOS软件"
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "476381df-4fd5-47cb-9fa9-66ba63ffd533",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "cbd1431c-37d3-4a34-93a5-eac89d431a1d",
+      "name": "Untitled project 1"
     }
   ],
   "preferences": {

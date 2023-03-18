@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ee1c75af66e96bd1",
+        "id": "518de8d1d4da1979",
         "type": "tabs",
         "children": [
           {
-            "id": "4a421a7086439be5",
+            "id": "2f9e2277b7e3c926",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+                "file": "Calendar/Daily notes/2023-03-11.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,11 +21,16 @@
             }
           },
           {
-            "id": "391ae845bf11462d",
+            "id": "21b99cee549b0c7d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/crossfit.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -58,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#命令行工具",
+                "query": "tag:#macOS软件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md"
+                "file": "Calendar/Daily notes/2023-03-11.md"
               }
             }
           },
@@ -109,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+                "file": "Calendar/Daily notes/2023-03-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+                "file": "Calendar/Daily notes/2023-03-11.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+                "file": "Calendar/Daily notes/2023-03-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,22 +172,23 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 311.5
   },
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
     "children": [
       {
-        "id": "1be27f7b16e203e6",
+        "id": "1ee901a419e8396e",
         "type": "tabs",
         "children": [
           {
-            "id": "b4e039d034accd93",
+            "id": "459ca66f05aff0c0",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -190,7 +196,7 @@
             }
           },
           {
-            "id": "0de590f20de8ad3c",
+            "id": "e8d7a46c56f176c9",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -198,7 +204,7 @@
             }
           },
           {
-            "id": "c91e5d2f25f6de74",
+            "id": "ef9112d9d4fe355a",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -206,12 +212,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 316.5,
-    "collapsed": true
+    "width": 386.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,105 +227,52 @@
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "floating": {
-    "id": "6eb31ef73ead921c",
-    "type": "floating",
-    "children": [
-      {
-        "id": "bedd7461b9afb26b",
-        "type": "window",
-        "children": [
-          {
-            "id": "101f1539653265c2",
-            "type": "tabs",
-            "dimension": 71.60714285714286,
-            "children": [
-              {
-                "id": "7a9441c26c1cc6be",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
-                    "viewState": {
-                      "x": 239.7999999999997,
-                      "y": -65.25999999999998,
-                      "zoom": 0
-                    }
-                  },
-                  "pinned": true
-                }
-              }
-            ]
-          },
-          {
-            "id": "0a6e30bfbc153fde",
-            "type": "tabs",
-            "dimension": 28.392857142857142,
-            "children": [
-              {
-                "id": "b14f71b00c0c168a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "🧰 本库指南/🧰 本库使用指南.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 25,
-        "width": 643,
-        "height": 985,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "4a421a7086439be5",
+  "active": "2f9e2277b7e3c926",
   "lastOpenFiles": [
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "🍀 花园导览/🏋 如何保持健康.md",
+    "Calendar/Daily notes/2023-03-12.md",
+    "Calendar/Daily notes/2023-03-13.md",
+    "Calendar/Daily notes/2023-03-14.md",
     "Calendar/Daily notes/2023-03-15.md",
-    "🧰 本库指南/🏗 本库Roadmap.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Calendar/Daily notes/2023-03-16.md",
+    "Calendar/Daily notes/2023-03-17.md",
+    "Calendar/Daily notes/GPT 加持时代的卡片笔记与双向链接 - Amazing.md",
+    "Calendar/Daily notes/2023-03-18.md",
+    "Spaces/2-Area/运动与健康/力量训练的每组重量选择变化逻辑 - 递增组、递减组、超级组.md",
+    "Cards/永久笔记/✨生活中只有一种英雄主义，那就是在认清生活真相之后依然热爱生活。——罗曼罗兰.md",
+    "Spaces/2-Area/运动与健康/鱼油.md",
+    "Spaces/2-Area/运动与健康/EAA.md",
+    "Spaces/2-Area/运动与健康/蛋白粉.md",
+    "Spaces/2-Area/运动与健康/运动补剂的级别划分.md",
+    "Spaces/2-Area/运动与健康/氮泵.md",
+    "Spaces/2-Area/运动与健康/β-丙氨酸.md",
+    "Cards/永久笔记/渐进式总结.md",
+    "Spaces/3-Resource/思维工具/金字塔原理.md",
+    "Spaces/2-Area/运动与健康/168轻断食.md",
+    "Spaces/2-Area/运动与健康/crossfit.md",
+    "Spaces/2-Area/运动与健康/功能性训练.md",
+    "Spaces/2-Area/运动与健康/渐进式超负荷.md",
+    "Spaces/2-Area/运动与健康/力量训练.md",
+    "Spaces/2-Area/运动与健康/omega-3.md",
+    "Spaces/2-Area/运动与健康/便秘.md",
+    "Spaces/2-Area/运动与健康/尿酸.md",
+    "Atlas/Canvas/🧩 如何做读书笔记.canvas",
+    "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
+    "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
+    "Atlas/Canvas/🧩 白板canvas-示意图.canvas",
+    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+    "Extras/Media/Pasted image 20230317221306.png",
+    "Sources/Podcasts/Notes",
+    "Sources/Podcasts",
+    "PodNotes_Export1.opml",
+    "PodNotes_Export.opml",
     "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
-    "Cards/永久笔记/隐私保护.md",
-    "Spaces/2-Area/个人职业生涯/质量效能.md",
     "Extras/Media/容器域质量效能&软件工程能力指标介绍.pptx",
-    "Spaces/2-Area/个人职业生涯/版本管理.md",
     "Extras/Media/月度开发-版本计划-转测流程190119.pptx",
     "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
-    "Cards/永久笔记/写卡片3年的8条感悟 by 汪爸刀刀.md",
-    "Spaces/1-Project/人与科技融合专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
-    "Calendar/Daily notes/2023-03-05.md",
-    "README.md",
-    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何提高学习和记忆能力.md",
-    "Cards/永久笔记/双链笔记与卡片笔记.md",
-    "Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md",
-    "Sources/Courses/面试现场-白海飞/如何让你的简历更受青睐.md",
-    "Atlas/Canvas/» canvas使用经验.md",
-    "Atlas/Canvas/∑ canvas创建入口.md",
-    "Cards/永久笔记/考研备考经验.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何提高长期记忆能力，复习是唯一路径.md",
-    "Sources/Videos/📹健身新手的完全减脂指南-好人松松.md",
-    "Sources/Courses/DevOps实战笔记-石雪峰/Devops如何让企业开始实施转型.md",
-    "Cards/永久笔记/图床方案的选择.md",
-    "Sources/Courses/如何成为学习高手-高冷冷/如何戒掉玩手机.md",
     "Extras/Templates/textgenerator模板/prompts/自建",
     "Extras/Media/Pasted image 20230312131834.png",
     "Atlas/Canvas/九宫格.canvas",
@@ -329,16 +281,8 @@
     "Atlas/Draws/白板 2023-03-11.light.svg",
     "Atlas/Canvas/SWOT分析 - 模板 1.canvas",
     "Atlas/思维导图",
-    "Extras/Templates/Canvas模板/思维导图 - 模板.canvas",
-    "Extras/Templates/Canvas模板/精益画布 - 模板.canvas",
     "Extras/Templates/Canvas模板",
     "Sources/GPTchats",
-    "Extras/Templates/ChatGPT_MD/templates",
-    "Extras/Templates/ChatGPT_MD",
-    "Atlas/Canvas/减脂塑型金字塔.canvas",
-    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
-    "ReadItLater Inbox",
-    "Omnivore/2023-02-20",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
     "Atlas/Draws/README 中的头图 - 图.svg",

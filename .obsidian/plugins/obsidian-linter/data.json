@@ -32,8 +32,8 @@
     "YAML Key Sort": {
       "Sorts the YAML keys based on the order and priority specified. Note: may remove blank lines as well.": false,
       "YAML Key Priority Sort Order": "sr-due\nsr-interval\nsr-ease\n",
-      "Priority Keys at Start of YAML": true,
-      "YAML Sort Order for Other Keys": "Ascending Alphabetical",
+      "Priority Keys at Start of YAML": false,
+      "YAML Sort Order for Other Keys": "None",
       "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true
     },
     "YAML Timestamp": {

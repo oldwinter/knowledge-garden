@@ -9,9 +9,6 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -30,523 +27,16 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/tslib.js
-var require_tslib = __commonJS({
-  "node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/tslib.js"(exports, module2) {
-    var __extends2;
-    var __assign2;
-    var __rest2;
-    var __decorate2;
-    var __param2;
-    var __esDecorate2;
-    var __runInitializers2;
-    var __propKey2;
-    var __setFunctionName2;
-    var __metadata2;
-    var __awaiter2;
-    var __generator2;
-    var __exportStar2;
-    var __values2;
-    var __read2;
-    var __spread2;
-    var __spreadArrays2;
-    var __spreadArray2;
-    var __await2;
-    var __asyncGenerator2;
-    var __asyncDelegator2;
-    var __asyncValues2;
-    var __makeTemplateObject2;
-    var __importStar2;
-    var __importDefault2;
-    var __classPrivateFieldGet2;
-    var __classPrivateFieldSet2;
-    var __classPrivateFieldIn2;
-    var __createBinding2;
-    (function(factory) {
-      var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
-      if (typeof define === "function" && define.amd) {
-        define("tslib", ["exports"], function(exports2) {
-          factory(createExporter(root, createExporter(exports2)));
-        });
-      } else if (typeof module2 === "object" && typeof module2.exports === "object") {
-        factory(createExporter(root, createExporter(module2.exports)));
-      } else {
-        factory(createExporter(root));
-      }
-      function createExporter(exports2, previous) {
-        if (exports2 !== root) {
-          if (typeof Object.create === "function") {
-            Object.defineProperty(exports2, "__esModule", { value: true });
-          } else {
-            exports2.__esModule = true;
-          }
-        }
-        return function(id, v) {
-          return exports2[id] = previous ? previous(id, v) : v;
-        };
-      }
-    })(function(exporter) {
-      var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d, b) {
-        d.__proto__ = b;
-      } || function(d, b) {
-        for (var p in b)
-          if (Object.prototype.hasOwnProperty.call(b, p))
-            d[p] = b[p];
-      };
-      __extends2 = function(d, b) {
-        if (typeof b !== "function" && b !== null)
-          throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() {
-          this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-      };
-      __assign2 = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p))
-              t[p] = s[p];
-        }
-        return t;
-      };
-      __rest2 = function(s, e) {
-        var t = {};
-        for (var p in s)
-          if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-          for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-              t[p[i]] = s[p[i]];
-          }
-        return t;
-      };
-      __decorate2 = function(decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-          r = Reflect.decorate(decorators, target, key, desc);
-        else
-          for (var i = decorators.length - 1; i >= 0; i--)
-            if (d = decorators[i])
-              r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-      };
-      __param2 = function(paramIndex, decorator) {
-        return function(target, key) {
-          decorator(target, key, paramIndex);
-        };
-      };
-      __esDecorate2 = function(ctor, descriptorIn, decorators, contextIn, initializers, extraInitializers) {
-        function accept(f) {
-          if (f !== void 0 && typeof f !== "function")
-            throw new TypeError("Function expected");
-          return f;
-        }
-        var kind = contextIn.kind, key = kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
-        var target = !descriptorIn && ctor ? contextIn["static"] ? ctor : ctor.prototype : null;
-        var descriptor = descriptorIn || (target ? Object.getOwnPropertyDescriptor(target, contextIn.name) : {});
-        var _, done = false;
-        for (var i = decorators.length - 1; i >= 0; i--) {
-          var context = {};
-          for (var p in contextIn)
-            context[p] = p === "access" ? {} : contextIn[p];
-          for (var p in contextIn.access)
-            context.access[p] = contextIn.access[p];
-          context.addInitializer = function(f) {
-            if (done)
-              throw new TypeError("Cannot add initializers after decoration has completed");
-            extraInitializers.push(accept(f || null));
-          };
-          var result = (0, decorators[i])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
-          if (kind === "accessor") {
-            if (result === void 0)
-              continue;
-            if (result === null || typeof result !== "object")
-              throw new TypeError("Object expected");
-            if (_ = accept(result.get))
-              descriptor.get = _;
-            if (_ = accept(result.set))
-              descriptor.set = _;
-            if (_ = accept(result.init))
-              initializers.push(_);
-          } else if (_ = accept(result)) {
-            if (kind === "field")
-              initializers.push(_);
-            else
-              descriptor[key] = _;
-          }
-        }
-        if (target)
-          Object.defineProperty(target, contextIn.name, descriptor);
-        done = true;
-      };
-      __runInitializers2 = function(thisArg, initializers, value) {
-        var useValue = arguments.length > 2;
-        for (var i = 0; i < initializers.length; i++) {
-          value = useValue ? initializers[i].call(thisArg, value) : initializers[i].call(thisArg);
-        }
-        return useValue ? value : void 0;
-      };
-      __propKey2 = function(x) {
-        return typeof x === "symbol" ? x : "".concat(x);
-      };
-      __setFunctionName2 = function(f, name, prefix) {
-        if (typeof name === "symbol")
-          name = name.description ? "[".concat(name.description, "]") : "";
-        return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
-      };
-      __metadata2 = function(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-          return Reflect.metadata(metadataKey, metadataValue);
-      };
-      __awaiter2 = function(thisArg, _arguments, P, generator) {
-        function adopt(value) {
-          return value instanceof P ? value : new P(function(resolve) {
-            resolve(value);
-          });
-        }
-        return new (P || (P = Promise))(function(resolve, reject) {
-          function fulfilled(value) {
-            try {
-              step(generator.next(value));
-            } catch (e) {
-              reject(e);
-            }
-          }
-          function rejected(value) {
-            try {
-              step(generator["throw"](value));
-            } catch (e) {
-              reject(e);
-            }
-          }
-          function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-          }
-          step((generator = generator.apply(thisArg, _arguments || [])).next());
-        });
-      };
-      __generator2 = function(thisArg, body) {
-        var _ = { label: 0, sent: function() {
-          if (t[0] & 1)
-            throw t[1];
-          return t[1];
-        }, trys: [], ops: [] }, f, y, t, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-          return this;
-        }), g;
-        function verb(n) {
-          return function(v) {
-            return step([n, v]);
-          };
-        }
-        function step(op) {
-          if (f)
-            throw new TypeError("Generator is already executing.");
-          while (g && (g = 0, op[0] && (_ = 0)), _)
-            try {
-              if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-                return t;
-              if (y = 0, t)
-                op = [op[0] & 2, t.value];
-              switch (op[0]) {
-                case 0:
-                case 1:
-                  t = op;
-                  break;
-                case 4:
-                  _.label++;
-                  return { value: op[1], done: false };
-                case 5:
-                  _.label++;
-                  y = op[1];
-                  op = [0];
-                  continue;
-                case 7:
-                  op = _.ops.pop();
-                  _.trys.pop();
-                  continue;
-                default:
-                  if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                    _ = 0;
-                    continue;
-                  }
-                  if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                    _.label = op[1];
-                    break;
-                  }
-                  if (op[0] === 6 && _.label < t[1]) {
-                    _.label = t[1];
-                    t = op;
-                    break;
-                  }
-                  if (t && _.label < t[2]) {
-                    _.label = t[2];
-                    _.ops.push(op);
-                    break;
-                  }
-                  if (t[2])
-                    _.ops.pop();
-                  _.trys.pop();
-                  continue;
-              }
-              op = body.call(thisArg, _);
-            } catch (e) {
-              op = [6, e];
-              y = 0;
-            } finally {
-              f = t = 0;
-            }
-          if (op[0] & 5)
-            throw op[1];
-          return { value: op[0] ? op[1] : void 0, done: true };
-        }
-      };
-      __exportStar2 = function(m, o) {
-        for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
-            __createBinding2(o, m, p);
-      };
-      __createBinding2 = Object.create ? function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        var desc = Object.getOwnPropertyDescriptor(m, k);
-        if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = { enumerable: true, get: function() {
-            return m[k];
-          } };
-        }
-        Object.defineProperty(o, k2, desc);
-      } : function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        o[k2] = m[k];
-      };
-      __values2 = function(o) {
-        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-        if (m)
-          return m.call(o);
-        if (o && typeof o.length === "number")
-          return {
-            next: function() {
-              if (o && i >= o.length)
-                o = void 0;
-              return { value: o && o[i++], done: !o };
-            }
-          };
-        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-      };
-      __read2 = function(o, n) {
-        var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m)
-          return o;
-        var i = m.call(o), r, ar = [], e;
-        try {
-          while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-            ar.push(r.value);
-        } catch (error) {
-          e = { error };
-        } finally {
-          try {
-            if (r && !r.done && (m = i["return"]))
-              m.call(i);
-          } finally {
-            if (e)
-              throw e.error;
-          }
-        }
-        return ar;
-      };
-      __spread2 = function() {
-        for (var ar = [], i = 0; i < arguments.length; i++)
-          ar = ar.concat(__read2(arguments[i]));
-        return ar;
-      };
-      __spreadArrays2 = function() {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-          s += arguments[i].length;
-        for (var r = Array(s), k = 0, i = 0; i < il; i++)
-          for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-        return r;
-      };
-      __spreadArray2 = function(to, from, pack) {
-        if (pack || arguments.length === 2)
-          for (var i = 0, l = from.length, ar; i < l; i++) {
-            if (ar || !(i in from)) {
-              if (!ar)
-                ar = Array.prototype.slice.call(from, 0, i);
-              ar[i] = from[i];
-            }
-          }
-        return to.concat(ar || Array.prototype.slice.call(from));
-      };
-      __await2 = function(v) {
-        return this instanceof __await2 ? (this.v = v, this) : new __await2(v);
-      };
-      __asyncGenerator2 = function(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var g = generator.apply(thisArg, _arguments || []), i, q = [];
-        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-          return this;
-        }, i;
-        function verb(n) {
-          if (g[n])
-            i[n] = function(v) {
-              return new Promise(function(a, b) {
-                q.push([n, v, a, b]) > 1 || resume(n, v);
-              });
-            };
-        }
-        function resume(n, v) {
-          try {
-            step(g[n](v));
-          } catch (e) {
-            settle(q[0][3], e);
-          }
-        }
-        function step(r) {
-          r.value instanceof __await2 ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
-        }
-        function fulfill(value) {
-          resume("next", value);
-        }
-        function reject(value) {
-          resume("throw", value);
-        }
-        function settle(f, v) {
-          if (f(v), q.shift(), q.length)
-            resume(q[0][0], q[0][1]);
-        }
-      };
-      __asyncDelegator2 = function(o) {
-        var i, p;
-        return i = {}, verb("next"), verb("throw", function(e) {
-          throw e;
-        }), verb("return"), i[Symbol.iterator] = function() {
-          return this;
-        }, i;
-        function verb(n, f) {
-          i[n] = o[n] ? function(v) {
-            return (p = !p) ? { value: __await2(o[n](v)), done: false } : f ? f(v) : v;
-          } : f;
-        }
-      };
-      __asyncValues2 = function(o) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var m = o[Symbol.asyncIterator], i;
-        return m ? m.call(o) : (o = typeof __values2 === "function" ? __values2(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-          return this;
-        }, i);
-        function verb(n) {
-          i[n] = o[n] && function(v) {
-            return new Promise(function(resolve, reject) {
-              v = o[n](v), settle(resolve, reject, v.done, v.value);
-            });
-          };
-        }
-        function settle(resolve, reject, d, v) {
-          Promise.resolve(v).then(function(v2) {
-            resolve({ value: v2, done: d });
-          }, reject);
-        }
-      };
-      __makeTemplateObject2 = function(cooked, raw) {
-        if (Object.defineProperty) {
-          Object.defineProperty(cooked, "raw", { value: raw });
-        } else {
-          cooked.raw = raw;
-        }
-        return cooked;
-      };
-      var __setModuleDefault = Object.create ? function(o, v) {
-        Object.defineProperty(o, "default", { enumerable: true, value: v });
-      } : function(o, v) {
-        o["default"] = v;
-      };
-      __importStar2 = function(mod) {
-        if (mod && mod.__esModule)
-          return mod;
-        var result = {};
-        if (mod != null) {
-          for (var k in mod)
-            if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-              __createBinding2(result, mod, k);
-        }
-        __setModuleDefault(result, mod);
-        return result;
-      };
-      __importDefault2 = function(mod) {
-        return mod && mod.__esModule ? mod : { "default": mod };
-      };
-      __classPrivateFieldGet2 = function(receiver, state, kind, f) {
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a getter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot read private member from an object whose class did not declare it");
-        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-      };
-      __classPrivateFieldSet2 = function(receiver, state, value, kind, f) {
-        if (kind === "m")
-          throw new TypeError("Private method is not writable");
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a setter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot write private member to an object whose class did not declare it");
-        return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-      };
-      __classPrivateFieldIn2 = function(state, receiver) {
-        if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
-          throw new TypeError("Cannot use 'in' operator on non-object");
-        return typeof state === "function" ? receiver === state : state.has(receiver);
-      };
-      exporter("__extends", __extends2);
-      exporter("__assign", __assign2);
-      exporter("__rest", __rest2);
-      exporter("__decorate", __decorate2);
-      exporter("__param", __param2);
-      exporter("__esDecorate", __esDecorate2);
-      exporter("__runInitializers", __runInitializers2);
-      exporter("__propKey", __propKey2);
-      exporter("__setFunctionName", __setFunctionName2);
-      exporter("__metadata", __metadata2);
-      exporter("__awaiter", __awaiter2);
-      exporter("__generator", __generator2);
-      exporter("__exportStar", __exportStar2);
-      exporter("__createBinding", __createBinding2);
-      exporter("__values", __values2);
-      exporter("__read", __read2);
-      exporter("__spread", __spread2);
-      exporter("__spreadArrays", __spreadArrays2);
-      exporter("__spreadArray", __spreadArray2);
-      exporter("__await", __await2);
-      exporter("__asyncGenerator", __asyncGenerator2);
-      exporter("__asyncDelegator", __asyncDelegator2);
-      exporter("__asyncValues", __asyncValues2);
-      exporter("__makeTemplateObject", __makeTemplateObject2);
-      exporter("__importStar", __importStar2);
-      exporter("__importDefault", __importDefault2);
-      exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
-      exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
-      exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
-    });
-  }
-});
-
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
   default: () => QuickAdd
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian31 = require("obsidian");
+var import_obsidian34 = require("obsidian");
 
 // src/quickAddSettingsTab.ts
-var import_obsidian27 = require("obsidian");
+var import_obsidian30 = require("obsidian");
 
 // node_modules/.pnpm/svelte@3.55.1/node_modules/svelte/internal/index.mjs
 function noop() {
@@ -1145,40 +635,6 @@ var SvelteComponent = class {
     }
   }
 };
-
-// node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/modules/index.js
-var import_tslib = __toESM(require_tslib(), 1);
-var {
-  __extends,
-  __assign,
-  __rest,
-  __decorate,
-  __param,
-  __esDecorate,
-  __runInitializers,
-  __propKey,
-  __setFunctionName,
-  __metadata,
-  __awaiter,
-  __generator,
-  __exportStar,
-  __createBinding,
-  __values,
-  __read,
-  __spread,
-  __spreadArrays,
-  __spreadArray,
-  __await,
-  __asyncGenerator,
-  __asyncDelegator,
-  __asyncValues,
-  __makeTemplateObject,
-  __importStar,
-  __importDefault,
-  __classPrivateFieldGet,
-  __classPrivateFieldSet,
-  __classPrivateFieldIn
-} = import_tslib.default;
 
 // node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.2.1/node_modules/@fortawesome/free-solid-svg-icons/index.mjs
 var faBars = {
@@ -2192,7 +1648,7 @@ function instance5($$self, $$props, $$invalidate) {
   let { pulse = false } = $$props;
   let { flip: flip2 = null } = $$props;
   let { label = null } = $$props;
-  let self2 = null;
+  let self = null;
   let { style = null } = $$props;
   let width;
   let height;
@@ -2217,7 +1673,7 @@ function instance5($$self, $$props, $$invalidate) {
     if (icon.points) {
       icon.polygons.push({ points: icon.points });
     }
-    $$invalidate(6, self2 = icon);
+    $$invalidate(6, self = icon);
   }
   function normalisedScale() {
     let numScale = 1;
@@ -2231,23 +1687,23 @@ function instance5($$self, $$props, $$invalidate) {
     return numScale * outerScale;
   }
   function calculateBox() {
-    if (self2) {
-      return `0 0 ${self2.width} ${self2.height}`;
+    if (self) {
+      return `0 0 ${self.width} ${self.height}`;
     }
     return `0 0 ${width} ${height}`;
   }
   function calculateRatio() {
-    if (!self2) {
+    if (!self) {
       return 1;
     }
-    return Math.max(self2.width, self2.height) / 16;
+    return Math.max(self.width, self.height) / 16;
   }
   function calculateWidth() {
     if (childrenWidth) {
       return childrenWidth;
     }
-    if (self2) {
-      return self2.width / calculateRatio() * normalisedScale();
+    if (self) {
+      return self.width / calculateRatio() * normalisedScale();
     }
     return 0;
   }
@@ -2255,8 +1711,8 @@ function instance5($$self, $$props, $$invalidate) {
     if (childrenHeight) {
       return childrenHeight;
     }
-    if (self2) {
-      return self2.height / calculateRatio() * normalisedScale();
+    if (self) {
+      return self.height / calculateRatio() * normalisedScale();
     }
     return 0;
   }
@@ -2278,8 +1734,8 @@ function instance5($$self, $$props, $$invalidate) {
     return `${combined}font-size: ${size}em`;
   }
   function raw_data_binding(value) {
-    self2 = value;
-    $$invalidate(6, self2);
+    self = value;
+    $$invalidate(6, self);
   }
   $$self.$$set = ($$props2) => {
     if ("class" in $$props2)
@@ -2324,7 +1780,7 @@ function instance5($$self, $$props, $$invalidate) {
     pulse,
     flip2,
     label,
-    self2,
+    self,
     width,
     height,
     combinedStyle,
@@ -2417,10 +1873,9 @@ function create_if_block2(ctx) {
   icon = new Icon_default({ props: { data: faClone } });
   return {
     c() {
-      var _a;
       div = element("div");
       create_component(icon.$$.fragment);
-      attr(div, "aria-label", div_aria_label_value = `Duplicate ${(_a = ctx[4]) != null ? _a : ""}`);
+      attr(div, "aria-label", div_aria_label_value = `Duplicate ${ctx[4] ?? ""}`);
       attr(div, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
     },
     m(target, anchor) {
@@ -2433,8 +1888,7 @@ function create_if_block2(ctx) {
       }
     },
     p(ctx2, dirty) {
-      var _a;
-      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Duplicate ${(_a = ctx2[4]) != null ? _a : ""}`)) {
+      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Duplicate ${ctx2[4] ?? ""}`)) {
         attr(div, "aria-label", div_aria_label_value);
       }
     },
@@ -2699,15 +2153,11 @@ var ChoiceItemRightButtons = class extends SvelteComponent {
 var ChoiceItemRightButtons_default = ChoiceItemRightButtons;
 
 // src/gui/choiceList/ChoiceListItem.svelte
-function add_css3(target) {
-  append_styles(target, "svelte-1vcfikc", ".choiceListItem.svelte-1vcfikc{display:flex;font-size:16px;align-items:center;margin:12px 0 0 0;transition:1000ms ease-in-out}.choiceListItemName.svelte-1vcfikc{flex:1 0 0}");
-}
+var import_obsidian = require("obsidian");
 function create_fragment7(ctx) {
   let div;
   let span;
-  let t0_value = ctx[0].name + "";
-  let t0;
-  let t1;
+  let t;
   let rightbuttons;
   let updating_choiceName;
   let updating_commandEnabled;
@@ -2715,16 +2165,16 @@ function create_fragment7(ctx) {
   let updating_dragDisabled;
   let current;
   function rightbuttons_choiceName_binding(value) {
-    ctx[7](value);
-  }
-  function rightbuttons_commandEnabled_binding(value) {
-    ctx[8](value);
-  }
-  function rightbuttons_showConfigureButton_binding(value) {
     ctx[9](value);
   }
-  function rightbuttons_dragDisabled_binding(value) {
+  function rightbuttons_commandEnabled_binding(value) {
     ctx[10](value);
+  }
+  function rightbuttons_showConfigureButton_binding(value) {
+    ctx[11](value);
+  }
+  function rightbuttons_dragDisabled_binding(value) {
+    ctx[12](value);
   }
   let rightbuttons_props = { showDuplicateButton: true };
   if (ctx[0].name !== void 0) {
@@ -2733,8 +2183,8 @@ function create_fragment7(ctx) {
   if (ctx[0].command !== void 0) {
     rightbuttons_props.commandEnabled = ctx[0].command;
   }
-  if (ctx[2] !== void 0) {
-    rightbuttons_props.showConfigureButton = ctx[2];
+  if (ctx[3] !== void 0) {
+    rightbuttons_props.showConfigureButton = ctx[3];
   }
   if (ctx[1] !== void 0) {
     rightbuttons_props.dragDisabled = ctx[1];
@@ -2744,33 +2194,30 @@ function create_fragment7(ctx) {
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "showConfigureButton", rightbuttons_showConfigureButton_binding));
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
-  rightbuttons.$on("mousedown", ctx[11]);
-  rightbuttons.$on("touchstart", ctx[12]);
-  rightbuttons.$on("deleteChoice", ctx[3]);
-  rightbuttons.$on("configureChoice", ctx[4]);
-  rightbuttons.$on("toggleCommand", ctx[5]);
-  rightbuttons.$on("duplicateChoice", ctx[6]);
+  rightbuttons.$on("mousedown", ctx[13]);
+  rightbuttons.$on("touchstart", ctx[14]);
+  rightbuttons.$on("deleteChoice", ctx[4]);
+  rightbuttons.$on("configureChoice", ctx[5]);
+  rightbuttons.$on("toggleCommand", ctx[6]);
+  rightbuttons.$on("duplicateChoice", ctx[7]);
   return {
     c() {
       div = element("div");
       span = element("span");
-      t0 = text(t0_value);
-      t1 = space();
+      t = space();
       create_component(rightbuttons.$$.fragment);
-      attr(span, "class", "choiceListItemName svelte-1vcfikc");
-      attr(div, "class", "choiceListItem svelte-1vcfikc");
+      attr(span, "class", "choiceListItemName");
+      attr(div, "class", "choiceListItem");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       append(div, span);
-      append(span, t0);
-      append(div, t1);
+      ctx[8](span);
+      append(div, t);
       mount_component(rightbuttons, div, null);
       current = true;
     },
     p(ctx2, [dirty]) {
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx2[0].name + ""))
-        set_data(t0, t0_value);
       const rightbuttons_changes = {};
       if (!updating_choiceName && dirty & 1) {
         updating_choiceName = true;
@@ -2782,9 +2229,9 @@ function create_fragment7(ctx) {
         rightbuttons_changes.commandEnabled = ctx2[0].command;
         add_flush_callback(() => updating_commandEnabled = false);
       }
-      if (!updating_showConfigureButton && dirty & 4) {
+      if (!updating_showConfigureButton && dirty & 8) {
         updating_showConfigureButton = true;
-        rightbuttons_changes.showConfigureButton = ctx2[2];
+        rightbuttons_changes.showConfigureButton = ctx2[3];
         add_flush_callback(() => updating_showConfigureButton = false);
       }
       if (!updating_dragDisabled && dirty & 2) {
@@ -2807,6 +2254,7 @@ function create_fragment7(ctx) {
     d(detaching) {
       if (detaching)
         detach(div);
+      ctx[8](null);
       destroy_component(rightbuttons);
     }
   };
@@ -2828,6 +2276,13 @@ function instance7($$self, $$props, $$invalidate) {
   function duplicateChoice() {
     dispatcher("duplicateChoice", { choice });
   }
+  let nameElement;
+  function span_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      nameElement = $$value;
+      $$invalidate(2, nameElement), $$invalidate(0, choice);
+    });
+  }
   function rightbuttons_choiceName_binding(value) {
     if ($$self.$$.not_equal(choice.name, value)) {
       choice.name = value;
@@ -2842,7 +2297,7 @@ function instance7($$self, $$props, $$invalidate) {
   }
   function rightbuttons_showConfigureButton_binding(value) {
     showConfigureButton = value;
-    $$invalidate(2, showConfigureButton);
+    $$invalidate(3, showConfigureButton);
   }
   function rightbuttons_dragDisabled_binding(value) {
     dragDisabled = value;
@@ -2860,14 +2315,27 @@ function instance7($$self, $$props, $$invalidate) {
     if ("dragDisabled" in $$props2)
       $$invalidate(1, dragDisabled = $$props2.dragDisabled);
   };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 5) {
+      $: {
+        if (nameElement) {
+          $$invalidate(2, nameElement.innerHTML = "", nameElement);
+          const nameHTML = (0, import_obsidian.htmlToMarkdown)(choice.name);
+          import_obsidian.MarkdownRenderer.renderMarkdown(nameHTML, nameElement, "/", null);
+        }
+      }
+    }
+  };
   return [
     choice,
     dragDisabled,
+    nameElement,
     showConfigureButton,
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
     duplicateChoice,
+    span_binding,
     rightbuttons_choiceName_binding,
     rightbuttons_commandEnabled_binding,
     rightbuttons_showConfigureButton_binding,
@@ -2879,13 +2347,14 @@ function instance7($$self, $$props, $$invalidate) {
 var ChoiceListItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance7, create_fragment7, safe_not_equal, { choice: 0, dragDisabled: 1 }, add_css3);
+    init(this, options, instance7, create_fragment7, safe_not_equal, { choice: 0, dragDisabled: 1 });
   }
 };
 var ChoiceListItem_default = ChoiceListItem;
 
 // src/gui/choiceList/MultiChoiceListItem.svelte
-function add_css4(target) {
+var import_obsidian2 = require("obsidian");
+function add_css3(target) {
   append_styles(target, "svelte-na99np", ".multiChoiceListItem.svelte-na99np{display:flex;font-size:16px;align-items:center;margin:12px 0 0 0}.clickable.svelte-na99np:hover{cursor:pointer}.multiChoiceListItemName.svelte-na99np{flex:1 0 0;margin-left:5px}.nestedChoiceList.svelte-na99np{padding-left:25px}");
 }
 function create_if_block3(ctx) {
@@ -2950,10 +2419,10 @@ function create_if_block_13(ctx) {
   let updating_choices;
   let current;
   function choicelist_multiChoice_binding(value) {
-    ctx[15](value);
+    ctx[17](value);
   }
   function choicelist_choices_binding(value) {
-    ctx[16](value);
+    ctx[18](value);
   }
   let choicelist_props = {};
   if (ctx[0] !== void 0) {
@@ -2965,10 +2434,10 @@ function create_if_block_13(ctx) {
   choicelist = new ChoiceList_default({ props: choicelist_props });
   binding_callbacks.push(() => bind(choicelist, "multiChoice", choicelist_multiChoice_binding));
   binding_callbacks.push(() => bind(choicelist, "choices", choicelist_choices_binding));
-  choicelist.$on("deleteChoice", ctx[17]);
-  choicelist.$on("configureChoice", ctx[18]);
-  choicelist.$on("toggleCommand", ctx[19]);
-  choicelist.$on("duplicateChoice", ctx[20]);
+  choicelist.$on("deleteChoice", ctx[19]);
+  choicelist.$on("configureChoice", ctx[20]);
+  choicelist.$on("toggleCommand", ctx[21]);
+  choicelist.$on("duplicateChoice", ctx[22]);
   return {
     c() {
       div = element("div");
@@ -3018,15 +2487,13 @@ function create_fragment8(ctx) {
   let icon;
   let t0;
   let span;
-  let t1_value = ctx[0].name + "";
   let t1;
-  let t2;
   let rightbuttons;
   let updating_showConfigureButton;
   let updating_dragDisabled;
   let updating_choiceName;
   let updating_commandEnabled;
-  let t3;
+  let t2;
   let current;
   let mounted;
   let dispose;
@@ -3037,20 +2504,20 @@ function create_fragment8(ctx) {
     }
   });
   function rightbuttons_showConfigureButton_binding(value) {
-    ctx[9](value);
-  }
-  function rightbuttons_dragDisabled_binding(value) {
-    ctx[10](value);
-  }
-  function rightbuttons_choiceName_binding(value) {
     ctx[11](value);
   }
-  function rightbuttons_commandEnabled_binding(value) {
+  function rightbuttons_dragDisabled_binding(value) {
     ctx[12](value);
   }
+  function rightbuttons_choiceName_binding(value) {
+    ctx[13](value);
+  }
+  function rightbuttons_commandEnabled_binding(value) {
+    ctx[14](value);
+  }
   let rightbuttons_props = { showDuplicateButton: true };
-  if (ctx[3] !== void 0) {
-    rightbuttons_props.showConfigureButton = ctx[3];
+  if (ctx[4] !== void 0) {
+    rightbuttons_props.showConfigureButton = ctx[4];
   }
   if (ctx[1] !== void 0) {
     rightbuttons_props.dragDisabled = ctx[1];
@@ -3066,12 +2533,12 @@ function create_fragment8(ctx) {
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "choiceName", rightbuttons_choiceName_binding));
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
-  rightbuttons.$on("mousedown", ctx[13]);
-  rightbuttons.$on("touchstart", ctx[14]);
-  rightbuttons.$on("deleteChoice", ctx[4]);
-  rightbuttons.$on("configureChoice", ctx[5]);
-  rightbuttons.$on("toggleCommand", ctx[6]);
-  rightbuttons.$on("duplicateChoice", ctx[7]);
+  rightbuttons.$on("mousedown", ctx[15]);
+  rightbuttons.$on("touchstart", ctx[16]);
+  rightbuttons.$on("deleteChoice", ctx[5]);
+  rightbuttons.$on("configureChoice", ctx[6]);
+  rightbuttons.$on("toggleCommand", ctx[7]);
+  rightbuttons.$on("duplicateChoice", ctx[8]);
   let if_block = (!ctx[2] || ctx[2] && ctx[0].id !== ctx[2]) && create_if_block3(ctx);
   return {
     c() {
@@ -3081,12 +2548,12 @@ function create_fragment8(ctx) {
       create_component(icon.$$.fragment);
       t0 = space();
       span = element("span");
-      t1 = text(t1_value);
-      t2 = space();
+      t1 = space();
       create_component(rightbuttons.$$.fragment);
-      t3 = space();
+      t2 = space();
       if (if_block)
         if_block.c();
+      attr(span, "class", "choiceListItemName");
       attr(div0, "class", "multiChoiceListItemName clickable svelte-na99np");
       attr(div1, "class", "multiChoiceListItem svelte-na99np");
     },
@@ -3097,15 +2564,15 @@ function create_fragment8(ctx) {
       mount_component(icon, div0, null);
       append(div0, t0);
       append(div0, span);
-      append(span, t1);
-      append(div1, t2);
+      ctx[9](span);
+      append(div1, t1);
       mount_component(rightbuttons, div1, null);
-      append(div2, t3);
+      append(div2, t2);
       if (if_block)
         if_block.m(div2, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div0, "click", ctx[8]);
+        dispose = listen(div0, "click", ctx[10]);
         mounted = true;
       }
     },
@@ -3114,12 +2581,10 @@ function create_fragment8(ctx) {
       if (dirty & 1)
         icon_changes.style = `transform:rotate(${ctx2[0].collapsed ? -180 : 0}deg)`;
       icon.$set(icon_changes);
-      if ((!current || dirty & 1) && t1_value !== (t1_value = ctx2[0].name + ""))
-        set_data(t1, t1_value);
       const rightbuttons_changes = {};
-      if (!updating_showConfigureButton && dirty & 8) {
+      if (!updating_showConfigureButton && dirty & 16) {
         updating_showConfigureButton = true;
-        rightbuttons_changes.showConfigureButton = ctx2[3];
+        rightbuttons_changes.showConfigureButton = ctx2[4];
         add_flush_callback(() => updating_showConfigureButton = false);
       }
       if (!updating_dragDisabled && dirty & 2) {
@@ -3176,6 +2641,7 @@ function create_fragment8(ctx) {
       if (detaching)
         detach(div2);
       destroy_component(icon);
+      ctx[9](null);
       destroy_component(rightbuttons);
       if (if_block)
         if_block.d();
@@ -3202,10 +2668,17 @@ function instance8($$self, $$props, $$invalidate) {
   function duplicateChoice() {
     dispatcher("duplicateChoice", { choice });
   }
+  let nameElement;
+  function span_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      nameElement = $$value;
+      $$invalidate(3, nameElement), $$invalidate(0, choice);
+    });
+  }
   const click_handler = () => $$invalidate(0, choice.collapsed = !choice.collapsed, choice);
   function rightbuttons_showConfigureButton_binding(value) {
     showConfigureButton = value;
-    $$invalidate(3, showConfigureButton);
+    $$invalidate(4, showConfigureButton);
   }
   function rightbuttons_dragDisabled_binding(value) {
     dragDisabled = value;
@@ -3259,15 +2732,28 @@ function instance8($$self, $$props, $$invalidate) {
     if ("dragDisabled" in $$props2)
       $$invalidate(1, dragDisabled = $$props2.dragDisabled);
   };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & 9) {
+      $: {
+        if (nameElement) {
+          $$invalidate(3, nameElement.innerHTML = "", nameElement);
+          const nameHTML = (0, import_obsidian2.htmlToMarkdown)(choice.name);
+          import_obsidian2.MarkdownRenderer.renderMarkdown(nameHTML, nameElement, "/", null);
+        }
+      }
+    }
+  };
   return [
     choice,
     dragDisabled,
     collapseId,
+    nameElement,
     showConfigureButton,
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
     duplicateChoice,
+    span_binding,
     click_handler,
     rightbuttons_showConfigureButton_binding,
     rightbuttons_dragDisabled_binding,
@@ -3297,7 +2783,7 @@ var MultiChoiceListItem = class extends SvelteComponent {
         collapseId: 2,
         dragDisabled: 1
       },
-      add_css4
+      add_css3
     );
   }
 };
@@ -4396,10 +3882,7 @@ function initAria() {
 function destroyAria() {
   if (isOnServer || !alertsDiv)
     return;
-  Object.keys(ID_TO_INSTRUCTION).forEach((id) => {
-    var _a;
-    return (_a = document.getElementById(id)) == null ? void 0 : _a.remove();
-  });
+  Object.keys(ID_TO_INSTRUCTION).forEach((id) => document.getElementById(id)?.remove());
   alertsDiv.remove();
   alertsDiv = void 0;
 }
@@ -4801,7 +4284,7 @@ function isInt(value) {
 }
 
 // src/gui/choiceList/ChoiceList.svelte
-function add_css5(target) {
+function add_css4(target) {
   append_styles(target, "svelte-jb273g", ".choiceList.svelte-jb273g{width:auto;border:0 solid black;overflow-y:auto;height:auto}");
 }
 function get_each_context2(ctx, list, i) {
@@ -5214,14 +4697,14 @@ function instance9($$self, $$props, $$invalidate) {
 var ChoiceList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance9, create_fragment9, safe_not_equal, { choices: 0 }, add_css5);
+    init(this, options, instance9, create_fragment9, safe_not_equal, { choices: 0 }, add_css4);
   }
 };
 var ChoiceList_default = ChoiceList;
 
 // src/gui/choiceList/AddChoiceBox.svelte
-var import_obsidian = require("obsidian");
-function add_css6(target) {
+var import_obsidian3 = require("obsidian");
+function add_css5(target) {
   append_styles(target, "svelte-1newuee", ".addChoiceBox.svelte-1newuee{margin-top:1em;display:flex;flex-direction:row;align-items:center;gap:10px;justify-content:center}@media(max-width: 800px){.addChoiceBox.svelte-1newuee{flex-direction:column}}#addChoiceTypeSelector.svelte-1newuee{font-size:16px;padding:3px;border-radius:3px}");
 }
 function create_fragment10(ctx) {
@@ -5333,7 +4816,7 @@ function instance10($$self, $$props, $$invalidate) {
   const dispatch = createEventDispatcher();
   function addChoice() {
     if (!name) {
-      new import_obsidian.Notice("Choice name is invalid.");
+      new import_obsidian3.Notice("Choice name is invalid.");
       return;
     }
     dispatch("addChoice", { name, type });
@@ -5352,7 +4835,7 @@ function instance10($$self, $$props, $$invalidate) {
 var AddChoiceBox = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance10, create_fragment10, safe_not_equal, {}, add_css6);
+    init(this, options, instance10, create_fragment10, safe_not_equal, {}, add_css5);
   }
 };
 var AddChoiceBox_default = AddChoiceBox;
@@ -5504,8 +4987,8 @@ var MultiChoice = class extends Choice {
 };
 
 // src/gui/GenericYesNoPrompt/GenericYesNoPrompt.ts
-var import_obsidian2 = require("obsidian");
-var GenericYesNoPrompt = class extends import_obsidian2.Modal {
+var import_obsidian4 = require("obsidian");
+var GenericYesNoPrompt = class extends import_obsidian4.Modal {
   constructor(app2, header, text2) {
     super(app2);
     this.header = header;
@@ -5530,8 +5013,8 @@ var GenericYesNoPrompt = class extends import_obsidian2.Modal {
     const buttonsDiv = this.contentEl.createDiv({
       cls: "yesNoPromptButtonContainer"
     });
-    new import_obsidian2.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
-    const yesButton = new import_obsidian2.ButtonComponent(buttonsDiv).setButtonText("Yes").onClick(() => this.submit(true)).setWarning();
+    new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
+    const yesButton = new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("Yes").onClick(() => this.submit(true)).setWarning();
     yesButton.buttonEl.focus();
   }
   submit(input) {
@@ -5549,16 +5032,16 @@ var GenericYesNoPrompt = class extends import_obsidian2.Modal {
 };
 
 // src/gui/choiceList/ChoiceView.svelte
-var import_obsidian26 = require("obsidian");
+var import_obsidian29 = require("obsidian");
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 
 // src/gui/GenericInputPrompt/GenericInputPrompt.ts
-var import_obsidian4 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 
 // src/gui/suggesters/suggest.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
 // node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/enums.js
 var top = "top";
@@ -6870,8 +6353,8 @@ var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" mo
 var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
 function validateModifiers(modifiers) {
   modifiers.forEach(function(modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self2) {
-      return self2.indexOf(value) === index;
+    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self) {
+      return self.indexOf(value) === index;
     }).forEach(function(key) {
       switch (key) {
         case "name":
@@ -7204,8 +6687,8 @@ var Suggest = class {
     );
     const prevSelectedSuggestion = this.suggestions[this.selectedItem];
     const selectedSuggestion = this.suggestions[normalizedIndex];
-    prevSelectedSuggestion == null ? void 0 : prevSelectedSuggestion.removeClass("is-selected");
-    selectedSuggestion == null ? void 0 : selectedSuggestion.addClass("is-selected");
+    prevSelectedSuggestion?.removeClass("is-selected");
+    selectedSuggestion?.addClass("is-selected");
     this.selectedItem = normalizedIndex;
     if (scrollIntoView) {
       selectedSuggestion.scrollIntoView(false);
@@ -7216,7 +6699,7 @@ var TextInputSuggest = class {
   constructor(app2, inputEl) {
     this.app = app2;
     this.inputEl = inputEl;
-    this.scope = new import_obsidian3.Scope();
+    this.scope = new import_obsidian5.Scope();
     this.suggestEl = createDiv("suggestion-container");
     const suggestion = this.suggestEl.createDiv("suggestion");
     this.suggest = new Suggest(this, suggestion, this.scope);
@@ -8675,9 +8158,8 @@ function buildFileMap(files, unresolvedLinkNames) {
   return fileMap;
 }
 function getAliasesForFile(file, app2) {
-  var _a, _b, _c, _d;
   const fileMetadata = app2.metadataCache.getFileCache(file);
-  const fileMetaAlias = (_d = (_c = (_a = fileMetadata == null ? void 0 : fileMetadata.frontmatter) == null ? void 0 : _a.alias) != null ? _c : (_b = fileMetadata == null ? void 0 : fileMetadata.frontmatter) == null ? void 0 : _b.aliases) != null ? _d : "";
+  const fileMetaAlias = fileMetadata?.frontmatter?.alias ?? fileMetadata?.frontmatter?.aliases ?? "";
   const aliases = [];
   if (typeof fileMetaAlias === "string" && fileMetaAlias) {
     aliases.push(fileMetaAlias);
@@ -8729,7 +8211,6 @@ var SilentFileSuggester = class extends TextInputSuggest {
     return search2;
   }
   renderSuggestion(item, el) {
-    var _a, _b, _c;
     const suggestionItem = this.fileMap.get(item);
     if (suggestionItem === void 0) {
       el.innerHTML = `
@@ -8740,14 +8221,14 @@ var SilentFileSuggester = class extends TextInputSuggest {
       switch (suggestionItem.type) {
         case 0 /* File */:
           el.innerHTML = `
-                    <span class="suggestion-main-text">${(_a = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _a.basename}</span>
-                    <span class="suggestion-sub-text">${(_b = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _b.path}</span>
+                    <span class="suggestion-main-text">${suggestionItem?.file?.basename}</span>
+                    <span class="suggestion-sub-text">${suggestionItem?.file?.path}</span>
                 `;
           break;
         case 1 /* Alias */:
           el.innerHTML = `
                     <span class="suggestion-main-text">${item}</span>
-                    <span class="suggestion-sub-text">${(_c = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _c.path}</span>
+                    <span class="suggestion-sub-text">${suggestionItem?.file?.path}</span>
                 `;
           break;
         case 2 /* Unresolved */:
@@ -8810,7 +8291,7 @@ var SilentFileSuggester = class extends TextInputSuggest {
       file,
       "",
       "",
-      alias != null ? alias : ""
+      alias ?? ""
     );
     this.inputEl.value = this.getNewInputValueForFileLink(
       currentInputValue,
@@ -8917,7 +8398,7 @@ var SilentTagSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/GenericInputPrompt/GenericInputPrompt.ts
-var GenericInputPrompt = class extends import_obsidian4.Modal {
+var GenericInputPrompt = class extends import_obsidian6.Modal {
   constructor(app2, header, placeholder, value) {
     super(app2);
     this.header = header;
@@ -8930,8 +8411,8 @@ var GenericInputPrompt = class extends import_obsidian4.Modal {
         this.submit();
       }
     };
-    this.placeholder = placeholder != null ? placeholder : "";
-    this.input = value != null ? value : "";
+    this.placeholder = placeholder ?? "";
+    this.input = value ?? "";
     this.waitForClose = new Promise((resolve, reject) => {
       this.resolvePromise = resolve;
       this.rejectPromise = reject;
@@ -8969,13 +8450,13 @@ var GenericInputPrompt = class extends import_obsidian4.Modal {
     this.createButtonBar(mainContentContainer);
   }
   createInputField(container, placeholder, value) {
-    const textComponent = new import_obsidian4.TextComponent(container);
+    const textComponent = new import_obsidian6.TextComponent(container);
     textComponent.inputEl.style.width = "100%";
-    textComponent.setPlaceholder(placeholder != null ? placeholder : "").setValue(value != null ? value : "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
+    textComponent.setPlaceholder(placeholder ?? "").setValue(value ?? "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
     return textComponent;
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian4.ButtonComponent(container);
+    const btn = new import_obsidian6.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -9063,7 +8544,7 @@ var GenericTextSuggester = class extends TextInputSuggest {
     });
     if (!filtered)
       this.close();
-    if ((filtered == null ? void 0 : filtered.length) > 0)
+    if (filtered?.length > 0)
       return filtered;
     return [];
   }
@@ -9079,7 +8560,7 @@ var GenericTextSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
-var ChoiceBuilder = class extends import_obsidian5.Modal {
+var ChoiceBuilder = class extends import_obsidian7.Modal {
   constructor(app2) {
     super(app2);
     this.didSubmit = false;
@@ -9146,10 +8627,10 @@ var ChoiceBuilder = class extends import_obsidian5.Modal {
 };
 
 // src/gui/ChoiceBuilder/templateChoiceBuilder.ts
-var import_obsidian7 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 
 // src/gui/ChoiceBuilder/FolderList.svelte
-function add_css7(target) {
+function add_css6(target) {
   append_styles(target, "svelte-tuapcq", ".quickAddCommandListItem.svelte-tuapcq{display:flex;align-items:center;justify-content:space-between}@media(min-width: 768px){.quickAddFolderListGrid.svelte-tuapcq{display:grid;grid-template-columns:repeat(2, 1fr);column-gap:20px}}.quickAddCommandList.svelte-tuapcq{max-width:50%;margin:12px auto}.clickable.svelte-tuapcq{cursor:pointer}");
 }
 function get_each_context3(ctx, list, i) {
@@ -9324,7 +8805,7 @@ var FolderList = class extends SvelteComponent {
         deleteFolder: 1,
         updateFolders: 2
       },
-      add_css7
+      add_css6
     );
   }
   get updateFolders() {
@@ -9334,15 +8815,15 @@ var FolderList = class extends SvelteComponent {
 var FolderList_default = FolderList;
 
 // src/utility.ts
-var import_obsidian6 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 function getTemplater(app2) {
   return app2.plugins.plugins["templater-obsidian"];
 }
 async function replaceTemplaterTemplatesInCreatedFile(app2, file, force = false) {
   const templater = getTemplater(app2);
   if (templater && (force || !templater.settings["trigger_on_file_creation"])) {
-    const impl = templater == null ? void 0 : templater.templater;
-    if (impl == null ? void 0 : impl.overwrite_file_commands) {
+    const impl = templater?.templater;
+    if (impl?.overwrite_file_commands) {
       await impl.overwrite_file_commands(file);
     }
   }
@@ -9361,20 +8842,20 @@ function getNaturalLanguageDates(app2) {
 }
 function getDate(input) {
   let duration;
-  if ((input == null ? void 0 : input.offset) !== null && (input == null ? void 0 : input.offset) !== void 0 && typeof input.offset === "number") {
+  if (input?.offset !== null && input?.offset !== void 0 && typeof input.offset === "number") {
     duration = window.moment.duration(input.offset, "days");
   }
-  return (input == null ? void 0 : input.format) ? window.moment().add(duration).format(input.format) : window.moment().add(duration).format("YYYY-MM-DD");
+  return input?.format ? window.moment().add(duration).format(input.format) : window.moment().add(duration).format("YYYY-MM-DD");
 }
 function appendToCurrentLine(toAppend, app2) {
   try {
-    const activeView = app2.workspace.getActiveViewOfType(import_obsidian6.MarkdownView);
+    const activeView = app2.workspace.getActiveViewOfType(import_obsidian8.MarkdownView);
     if (!activeView) {
       log.logError(`unable to append '${toAppend}' to current line.`);
       return;
     }
     activeView.editor.replaceSelection(toAppend);
-  } catch (e) {
+  } catch {
     log.logError(`unable to append '${toAppend}' to current line.`);
   }
 }
@@ -9388,7 +8869,7 @@ function deleteObsidianCommand(app2, commandId) {
   }
 }
 function getAllFolderPathsInVault(app2) {
-  return app2.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian6.TFolder).map((folder) => folder.path);
+  return app2.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian8.TFolder).map((folder) => folder.path);
 }
 function getUserScriptMemberAccess(fullMemberPath) {
   const fullMemberArray = fullMemberPath.split("::");
@@ -9422,10 +8903,10 @@ async function openFile(app2, file, optional) {
     leaf = app2.workspace.getLeaf("tab");
   }
   await leaf.openFile(file);
-  if (optional == null ? void 0 : optional.focus) {
+  if (optional?.focus) {
     app2.workspace.setActiveLeaf(leaf, { focus: optional.focus });
   }
-  if (optional == null ? void 0 : optional.mode) {
+  if (optional?.mode) {
     const leafViewState = leaf.getViewState();
     leaf.setViewState({
       ...leafViewState,
@@ -9442,7 +8923,7 @@ async function getUserScript(command, app2) {
     log.logError(`failed to load file ${command.path}.`);
     return;
   }
-  if (file instanceof import_obsidian6.TFile) {
+  if (file instanceof import_obsidian8.TFile) {
     const req = (s) => window.require && window.require(s);
     const exp = {};
     const mod = { exports: exp };
@@ -9727,8 +9208,7 @@ var FileNameDisplayFormatter = class extends Formatter {
     return variableName;
   }
   getCurrentFileLink() {
-    var _a, _b;
-    return (_b = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : "";
+    return this.app.workspace.getActiveFile()?.path ?? "";
   }
   getNaturalLanguageDates() {
     return getNaturalLanguageDates(this.app);
@@ -9941,7 +9421,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
       this.addOpenFileInNewTabSetting();
   }
   addTemplatePathSetting() {
-    new import_obsidian7.Setting(this.contentEl).setName("Template Path").setDesc("Path to the Template.").addSearch((search2) => {
+    new import_obsidian9.Setting(this.contentEl).setName("Template Path").setDesc("Path to the Template.").addSearch((search2) => {
       const templates = this.plugin.getTemplateFiles().map((f) => f.path);
       search2.setValue(this.choice.templatePath);
       search2.setPlaceholder("Template path");
@@ -9953,7 +9433,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
   }
   addFileNameFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian7.Setting(this.contentEl);
+    const enableSetting = new import_obsidian9.Setting(this.contentEl);
     enableSetting.setName("File Name Format").setDesc("Set the file name format.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.fileNameFormat.enabled).onChange((value) => {
         this.choice.fileNameFormat.enabled = value;
@@ -9965,7 +9445,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     (async () => formatDisplay.textContent = await displayFormatter.format(
       this.choice.fileNameFormat.format
     ))();
-    const formatInput = new import_obsidian7.TextComponent(this.contentEl);
+    const formatInput = new import_obsidian9.TextComponent(this.contentEl);
     formatInput.setPlaceholder("File name format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
@@ -9984,8 +9464,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     );
   }
   addFolderSetting() {
-    var _a, _b, _c, _d;
-    const folderSetting = new import_obsidian7.Setting(this.contentEl);
+    const folderSetting = new import_obsidian9.Setting(this.contentEl);
     folderSetting.setName("Create in folder").setDesc(
       "Create the file in the specified folder. If multiple folders are specified, you will be prompted for which folder to create the file in."
     ).addToggle((toggle) => {
@@ -9998,51 +9477,45 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     if (!this.choice.folder.enabled) {
       return;
     }
-    if (!((_a = this.choice.folder) == null ? void 0 : _a.createInSameFolderAsActiveFile)) {
+    if (!this.choice.folder?.createInSameFolderAsActiveFile) {
       const chooseFolderWhenCreatingNoteContainer = this.contentEl.createDiv(
         "chooseFolderWhenCreatingNoteContainer"
       );
       chooseFolderWhenCreatingNoteContainer.createEl("span", {
         text: "Choose folder when creating a new note"
       });
-      const chooseFolderWhenCreatingNote = new import_obsidian7.ToggleComponent(chooseFolderWhenCreatingNoteContainer);
-      chooseFolderWhenCreatingNote.setValue((_b = this.choice.folder) == null ? void 0 : _b.chooseWhenCreatingNote).onChange((value) => {
+      const chooseFolderWhenCreatingNote = new import_obsidian9.ToggleComponent(chooseFolderWhenCreatingNoteContainer);
+      chooseFolderWhenCreatingNote.setValue(this.choice.folder?.chooseWhenCreatingNote).onChange((value) => {
         this.choice.folder.chooseWhenCreatingNote = value;
         this.reload();
       });
-      if (!((_c = this.choice.folder) == null ? void 0 : _c.chooseWhenCreatingNote)) {
+      if (!this.choice.folder?.chooseWhenCreatingNote) {
         this.addFolderSelector();
       }
       const chooseFolderFromSubfolderContainer = this.contentEl.createDiv("chooseFolderFromSubfolderContainer");
-      const stn = new import_obsidian7.Setting(chooseFolderFromSubfolderContainer);
+      const stn = new import_obsidian9.Setting(chooseFolderFromSubfolderContainer);
       stn.setName("Include subfolders").setDesc(
         "Get prompted to choose from both the selected folders and their subfolders when creating the note."
       ).addToggle(
-        (toggle) => {
-          var _a2;
-          return toggle.setValue((_a2 = this.choice.folder) == null ? void 0 : _a2.chooseFromSubfolders).onChange((value) => {
-            this.choice.folder.chooseFromSubfolders = value;
-            this.reload();
-          });
-        }
+        (toggle) => toggle.setValue(this.choice.folder?.chooseFromSubfolders).onChange((value) => {
+          this.choice.folder.chooseFromSubfolders = value;
+          this.reload();
+        })
       );
     }
-    if (!((_d = this.choice.folder) == null ? void 0 : _d.chooseWhenCreatingNote)) {
-      const createInSameFolderAsActiveFileSetting = new import_obsidian7.Setting(
+    if (!this.choice.folder?.chooseWhenCreatingNote) {
+      const createInSameFolderAsActiveFileSetting = new import_obsidian9.Setting(
         this.contentEl
       );
       createInSameFolderAsActiveFileSetting.setName("Create in same folder as active file").setDesc(
         "Creates the file in the same folder as the currently active file. Will not create the file if there is no active file."
       ).addToggle(
-        (toggle) => {
-          var _a2;
-          return toggle.setValue(
-            (_a2 = this.choice.folder) == null ? void 0 : _a2.createInSameFolderAsActiveFile
-          ).onChange((value) => {
-            this.choice.folder.createInSameFolderAsActiveFile = value;
-            this.reload();
-          });
-        }
+        (toggle) => toggle.setValue(
+          this.choice.folder?.createInSameFolderAsActiveFile
+        ).onChange((value) => {
+          this.choice.folder.createInSameFolderAsActiveFile = value;
+          this.reload();
+        })
       );
     }
   }
@@ -10064,7 +9537,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     const inputContainer = folderSelectionContainer.createDiv(
       "folderInputContainer"
     );
-    const folderInput = new import_obsidian7.TextComponent(inputContainer);
+    const folderInput = new import_obsidian9.TextComponent(inputContainer);
     folderInput.inputEl.style.width = "100%";
     folderInput.setPlaceholder("Folder path");
     const allFolders = getAllFolderPathsInVault(this.app);
@@ -10090,20 +9563,20 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
         addFolder();
       }
     });
-    const addButton = new import_obsidian7.ButtonComponent(inputContainer);
+    const addButton = new import_obsidian9.ButtonComponent(inputContainer);
     addButton.setCta().setButtonText("Add").onClick((evt) => {
       addFolder();
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian7.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian9.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc("Append link to created file to current file.").addToggle((toggle) => {
       toggle.setValue(this.choice.appendLink);
       toggle.onChange((value) => this.choice.appendLink = value);
     });
   }
   addFileAlreadyExistsSetting() {
-    const fileAlreadyExistsSetting = new import_obsidian7.Setting(this.contentEl);
+    const fileAlreadyExistsSetting = new import_obsidian9.Setting(this.contentEl);
     fileAlreadyExistsSetting.setName("Set default behavior if file already exists").setDesc(
       "Set default behavior rather then prompting user on what to do if a file already exists."
     ).addToggle((toggle) => {
@@ -10124,7 +9597,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian7.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian9.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the created file.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -10141,7 +9614,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian7.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian9.Setting(this.contentEl);
     newTabSetting.setName("New split").setDesc("Split your editor and open file in new split.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFileInNewTab.enabled);
       toggle.onChange(
@@ -10156,7 +9629,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian7.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately after opening").addToggle(
+    new import_obsidian9.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately after opening").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -10165,10 +9638,10 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/captureChoiceBuilder.ts
-var import_obsidian20 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 
 // src/engine/QuickAddEngine.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var QuickAddEngine = class {
   constructor(app2) {
     this.app = app2;
@@ -10196,11 +9669,11 @@ var QuickAddEngine = class {
       log.logError(`${filePath} not found`);
       throw new Error(`${filePath} not found`);
     }
-    if (file instanceof import_obsidian8.TFolder) {
+    if (file instanceof import_obsidian10.TFolder) {
       log.logError(`${filePath} found but it's a folder`);
       throw new Error(`${filePath} found but it's a folder`);
     }
-    if (!(file instanceof import_obsidian8.TFile))
+    if (!(file instanceof import_obsidian10.TFile))
       throw new Error(`${filePath} is not a file`);
     return file;
   }
@@ -10219,8 +9692,8 @@ var QuickAddEngine = class {
 };
 
 // src/gui/GenericSuggester/genericSuggester.ts
-var import_obsidian9 = require("obsidian");
-var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
+var import_obsidian11 = require("obsidian");
+var GenericSuggester = class extends import_obsidian11.FuzzySuggestModal {
   constructor(app2, displayItems, items) {
     super(app2);
     this.displayItems = displayItems;
@@ -10230,13 +9703,12 @@ var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
       this.rejectPromise = reject;
     });
     this.inputEl.addEventListener("keydown", (event) => {
-      var _a;
       if (event.code !== "Tab" || !("chooser" in this)) {
         return;
       }
       const { values, selectedItem } = this.chooser;
       const { value } = this.inputEl;
-      this.inputEl.value = (_a = values[selectedItem].item) != null ? _a : value;
+      this.inputEl.value = values[selectedItem].item ?? value;
     });
     this.open();
   }
@@ -10269,8 +9741,8 @@ var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
 var obsidian = __toESM(require("obsidian"));
 
 // src/gui/GenericInfoDialog/GenericInfoDialog.ts
-var import_obsidian10 = require("obsidian");
-var GenericInfoDialog = class extends import_obsidian10.Modal {
+var import_obsidian12 = require("obsidian");
+var GenericInfoDialog = class extends import_obsidian12.Modal {
   constructor(app2, header, text2) {
     super(app2);
     this.header = header;
@@ -10293,7 +9765,7 @@ var GenericInfoDialog = class extends import_obsidian10.Modal {
     else if (Array.isArray(this.text))
       this.text.forEach((line) => this.contentEl.createEl("p", { text: line }));
     const buttonsDiv = this.contentEl.createDiv();
-    const noButton = new import_obsidian10.ButtonComponent(buttonsDiv).setButtonText("OK").onClick(() => this.close());
+    const noButton = new import_obsidian12.ButtonComponent(buttonsDiv).setButtonText("OK").onClick(() => this.close());
     Object.assign(buttonsDiv.style, {
       "display": "flex",
       "justifyContent": "flex-end"
@@ -10307,8 +9779,8 @@ var GenericInfoDialog = class extends import_obsidian10.Modal {
 };
 
 // src/gui/GenericCheckboxPrompt/genericCheckboxPrompt.ts
-var import_obsidian11 = require("obsidian");
-var GenericCheckboxPrompt = class extends import_obsidian11.Modal {
+var import_obsidian13 = require("obsidian");
+var GenericCheckboxPrompt = class extends import_obsidian13.Modal {
   constructor(app2, items, selectedItems = []) {
     super(app2);
     this.items = items;
@@ -10351,7 +9823,7 @@ var GenericCheckboxPrompt = class extends import_obsidian11.Modal {
     checkboxRow.createEl("span", {
       text: item
     });
-    const checkbox = new import_obsidian11.ToggleComponent(checkboxRow);
+    const checkbox = new import_obsidian13.ToggleComponent(checkboxRow);
     checkbox.setTooltip(`Toggle ${item}`).setValue(this._selectedItems.contains(item)).onChange((value) => {
       if (value)
         this._selectedItems.push(item);
@@ -10367,7 +9839,7 @@ var GenericCheckboxPrompt = class extends import_obsidian11.Modal {
     const submitButtonContainer = this.contentEl.createDiv(
       "submitButtonContainer"
     );
-    const submitButton = new import_obsidian11.ButtonComponent(
+    const submitButton = new import_obsidian13.ButtonComponent(
       submitButtonContainer
     );
     submitButton.setButtonText("Submit").setCta().onClick((evt) => {
@@ -10379,11 +9851,11 @@ var GenericCheckboxPrompt = class extends import_obsidian11.Modal {
 };
 
 // src/quickAddApi.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 
 // src/gui/GenericWideInputPrompt/GenericWideInputPrompt.ts
-var import_obsidian12 = require("obsidian");
-var GenericWideInputPrompt = class extends import_obsidian12.Modal {
+var import_obsidian14 = require("obsidian");
+var GenericWideInputPrompt = class extends import_obsidian14.Modal {
   constructor(app2, header, placeholder, value) {
     super(app2);
     this.header = header;
@@ -10396,8 +9868,8 @@ var GenericWideInputPrompt = class extends import_obsidian12.Modal {
         this.submit();
       }
     };
-    this.placeholder = placeholder != null ? placeholder : "";
-    this.input = value != null ? value : "";
+    this.placeholder = placeholder ?? "";
+    this.input = value ?? "";
     this.waitForClose = new Promise((resolve, reject) => {
       this.resolvePromise = resolve;
       this.rejectPromise = reject;
@@ -10435,13 +9907,13 @@ var GenericWideInputPrompt = class extends import_obsidian12.Modal {
     this.createButtonBar(mainContentContainer);
   }
   createInputField(container, placeholder, value) {
-    const textComponent = new import_obsidian12.TextAreaComponent(container);
+    const textComponent = new import_obsidian14.TextAreaComponent(container);
     textComponent.inputEl.classList.add("wideInputPromptInputEl");
-    textComponent.setPlaceholder(placeholder != null ? placeholder : "").setValue(value != null ? value : "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
+    textComponent.setPlaceholder(placeholder ?? "").setValue(value ?? "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
     return textComponent;
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian12.ButtonComponent(container);
+    const btn = new import_obsidian14.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -10549,7 +10021,7 @@ var QuickAddApi = class {
           return await navigator.clipboard.writeText(text2);
         },
         getSelectedText: () => {
-          const activeView = app2.workspace.getActiveViewOfType(import_obsidian13.MarkdownView);
+          const activeView = app2.workspace.getActiveViewOfType(import_obsidian15.MarkdownView);
           if (!activeView) {
             log.logError(
               "no active view - could not get selected text."
@@ -10584,7 +10056,7 @@ var QuickAddApi = class {
         placeholder,
         value
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
@@ -10596,21 +10068,21 @@ var QuickAddApi = class {
         placeholder,
         value
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
   static async yesNoPrompt(app2, header, text2) {
     try {
       return await GenericYesNoPrompt.Prompt(app2, header, text2);
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
   static async infoDialog(app2, header, text2) {
     try {
       return await GenericInfoDialog.Show(app2, header, text2);
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
@@ -10627,14 +10099,14 @@ var QuickAddApi = class {
         displayedItems,
         actualItems
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
   static async checkboxPrompt(app2, items, selectedItems) {
     try {
       return await GenericCheckboxPrompt.Open(app2, items, selectedItems);
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
@@ -10654,7 +10126,7 @@ var Command = class {
 };
 
 // src/types/macros/EditorCommands/EditorCommand.ts
-var import_obsidian14 = require("obsidian");
+var import_obsidian16 = require("obsidian");
 var EditorCommand = class extends Command {
   constructor(type) {
     super(type, "EditorCommand" /* EditorCommand */);
@@ -10664,7 +10136,7 @@ var EditorCommand = class extends Command {
     return this.getActiveMarkdownView(app2).editor.getSelection();
   }
   static getActiveMarkdownView(app2) {
-    const activeView = app2.workspace.getActiveViewOfType(import_obsidian14.MarkdownView);
+    const activeView = app2.workspace.getActiveViewOfType(import_obsidian16.MarkdownView);
     if (!activeView) {
       log.logError("no active markdown view.");
       throw new Error("no active markdown view.");
@@ -10771,15 +10243,14 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
       variables: {},
       obsidian
     };
-    variables == null ? void 0 : variables.forEach((value, key) => {
+    variables?.forEach((value, key) => {
       this.params.variables[key] = value;
     });
   }
   async run() {
-    var _a, _b, _c;
-    const macroId = (_c = this.choice.macroId) != null ? _c : (_b = (_a = this.choice) == null ? void 0 : _a.macro) == null ? void 0 : _b.id;
+    const macroId = this.choice.macroId ?? this.choice?.macro?.id;
     const macro = this.macros.find((m) => m.id === macroId);
-    if (!macro || !(macro == null ? void 0 : macro.commands)) {
+    if (!macro || !macro?.commands) {
       log.logError(
         `No commands in the selected macro. Did you select a macro for '${this.choice.name}'?`
       );
@@ -10789,20 +10260,20 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
   }
   async executeCommands(commands2) {
     for (const command of commands2) {
-      if ((command == null ? void 0 : command.type) === "Obsidian" /* Obsidian */)
+      if (command?.type === "Obsidian" /* Obsidian */)
         await this.executeObsidianCommand(command);
-      if ((command == null ? void 0 : command.type) === "UserScript" /* UserScript */)
+      if (command?.type === "UserScript" /* UserScript */)
         await this.executeUserScript(command);
-      if ((command == null ? void 0 : command.type) === "Choice" /* Choice */)
+      if (command?.type === "Choice" /* Choice */)
         await this.executeChoice(command);
-      if ((command == null ? void 0 : command.type) === "Wait" /* Wait */) {
+      if (command?.type === "Wait" /* Wait */) {
         const waitCommand = command;
         await waitFor(waitCommand.time);
       }
-      if ((command == null ? void 0 : command.type) === "NestedChoice" /* NestedChoice */) {
+      if (command?.type === "NestedChoice" /* NestedChoice */) {
         await this.executeNestedChoice(command);
       }
-      if ((command == null ? void 0 : command.type) === "EditorCommand" /* EditorCommand */) {
+      if (command?.type === "EditorCommand" /* EditorCommand */) {
         await this.executeEditorCommand(command);
       }
       Object.keys(this.params.variables).forEach((key) => {
@@ -10953,7 +10424,7 @@ var SingleMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/formatters/completeFormatter.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 
 // src/engine/SingleInlineScriptEngine.ts
 var SingleInlineScriptEngine = class extends MacroChoiceEngine {
@@ -10971,7 +10442,7 @@ var SingleInlineScriptEngine = class extends MacroChoiceEngine {
 };
 
 // src/gui/MathModal.ts
-var import_obsidian16 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 
 // src/LaTeXSymbols.ts
 var LATEX_CURSOR_MOVE_HERE = "\u261A";
@@ -11745,7 +11216,7 @@ ${LATEX_CURSOR_MOVE_HERE}
 var LaTeXSymbols = [...commands, ...environments.map(beginEndGen)];
 
 // src/gui/suggesters/LaTeXSuggester.ts
-var import_obsidian15 = require("obsidian");
+var import_obsidian17 = require("obsidian");
 var LATEX_REGEX = new RegExp(/\\([a-z{}A-Z0-9]*)$/);
 var LaTeXSuggester = class extends TextInputSuggest {
   constructor(inputEl) {
@@ -11755,8 +11226,8 @@ var LaTeXSuggester = class extends TextInputSuggest {
     this.symbols = Object.assign([], LaTeXSymbols);
     this.elementsRendered = this.symbols.reduce((elements, symbol) => {
       try {
-        elements[symbol.toString()] = (0, import_obsidian15.renderMath)(symbol, true);
-      } catch (e) {
+        elements[symbol.toString()] = (0, import_obsidian17.renderMath)(symbol, true);
+      } catch {
       }
       return elements;
     }, {});
@@ -11824,7 +11295,7 @@ var LaTeXSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/MathModal.ts
-var MathModal = class extends import_obsidian16.Modal {
+var MathModal = class extends import_obsidian18.Modal {
   constructor() {
     super(QuickAdd.instance.app);
     this.didSubmit = false;
@@ -11857,12 +11328,12 @@ var MathModal = class extends import_obsidian16.Modal {
     this.contentEl.empty();
     const mathDiv = this.contentEl.createDiv();
     mathDiv.className = "math math-block is-loaded";
-    const tc = new import_obsidian16.TextAreaComponent(this.contentEl);
+    const tc = new import_obsidian18.TextAreaComponent(this.contentEl);
     tc.inputEl.style.width = "100%";
     tc.inputEl.style.height = "10rem";
     this.inputEl = tc.inputEl;
     tc.onChange(
-      (0, import_obsidian16.debounce)(
+      (0, import_obsidian18.debounce)(
         async (value) => await this.mathjaxLoop(mathDiv, value),
         50
       )
@@ -11872,11 +11343,11 @@ var MathModal = class extends import_obsidian16.Modal {
   }
   async onOpen() {
     super.onOpen();
-    await (0, import_obsidian16.loadMathJax)();
+    await (0, import_obsidian18.loadMathJax)();
   }
   async mathjaxLoop(container, value) {
-    const html = (0, import_obsidian16.renderMath)(value, true);
-    await (0, import_obsidian16.finishRenderMath)();
+    const html = (0, import_obsidian18.renderMath)(value, true);
+    await (0, import_obsidian18.finishRenderMath)();
     container.empty();
     container.append(html);
   }
@@ -11893,7 +11364,7 @@ var MathModal = class extends import_obsidian16.Modal {
     }
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian16.ButtonComponent(container);
+    const btn = new import_obsidian18.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -11950,8 +11421,8 @@ var InputPrompt = class {
 };
 
 // src/gui/InputSuggester/inputSuggester.ts
-var import_obsidian17 = require("obsidian");
-var InputSuggester = class extends import_obsidian17.FuzzySuggestModal {
+var import_obsidian19 = require("obsidian");
+var InputSuggester = class extends import_obsidian19.FuzzySuggestModal {
   constructor(app2, displayItems, items) {
     super(app2);
     this.displayItems = displayItems;
@@ -11961,13 +11432,12 @@ var InputSuggester = class extends import_obsidian17.FuzzySuggestModal {
       this.rejectPromise = reject;
     });
     this.inputEl.addEventListener("keydown", (event) => {
-      var _a;
       if (event.code !== "Tab" || !("chooser" in this)) {
         return;
       }
       const { values, selectedItem } = this.chooser;
       const { value } = this.inputEl;
-      this.inputEl.value = (_a = values[selectedItem].item) != null ? _a : value;
+      this.inputEl.value = values[selectedItem].item ?? value;
     });
     this.open();
   }
@@ -12008,7 +11478,7 @@ var CompleteFormatter = class extends Formatter {
     this.plugin = plugin;
     this.choiceExecutor = choiceExecutor;
     if (choiceExecutor) {
-      this.variables = choiceExecutor == null ? void 0 : choiceExecutor.variables;
+      this.variables = choiceExecutor?.variables;
     }
   }
   async format(input) {
@@ -12050,10 +11520,9 @@ var CompleteFormatter = class extends Formatter {
     return this.variables.get(variableName);
   }
   async promptForValue(header) {
-    var _a;
     if (!this.value) {
       const selectedText = await this.getSelectedText();
-      this.value = selectedText ? selectedText : await new InputPrompt().factory().Prompt(this.app, (_a = this.valueHeader) != null ? _a : `Enter value`);
+      this.value = selectedText ? selectedText : await new InputPrompt().factory().Prompt(this.app, this.valueHeader ?? `Enter value`);
     }
     return this.value;
   }
@@ -12071,11 +11540,10 @@ var CompleteFormatter = class extends Formatter {
     );
   }
   async suggestForField(variableName) {
-    var _a;
     const suggestedValues = /* @__PURE__ */ new Set();
     for (const file of this.app.vault.getMarkdownFiles()) {
       const cache = this.app.metadataCache.getFileCache(file);
-      const value = (_a = cache == null ? void 0 : cache.frontmatter) == null ? void 0 : _a[variableName];
+      const value = cache?.frontmatter?.[variableName];
       if (!value || typeof value == "object")
         continue;
       suggestedValues.add(value.toString());
@@ -12095,7 +11563,6 @@ var CompleteFormatter = class extends Formatter {
     );
   }
   async getMacroValue(macroName) {
-    var _a;
     const macroEngine = new SingleMacroEngine(
       this.app,
       this.plugin,
@@ -12103,7 +11570,7 @@ var CompleteFormatter = class extends Formatter {
       this.choiceExecutor,
       this.variables
     );
-    const macroOutput = (_a = await macroEngine.runAndGetOutput(macroName)) != null ? _a : "";
+    const macroOutput = await macroEngine.runAndGetOutput(macroName) ?? "";
     Object.keys(macroEngine.params.variables).forEach((key) => {
       this.variables.set(key, macroEngine.params.variables[key]);
     });
@@ -12118,17 +11585,16 @@ var CompleteFormatter = class extends Formatter {
     ).run();
   }
   async getSelectedText() {
-    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian18.MarkdownView);
+    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian20.MarkdownView);
     if (!activeView)
       return "";
     return activeView.editor.getSelection();
   }
   async replaceInlineJavascriptInString(input) {
-    var _a;
     let output = input;
     while (INLINE_JAVASCRIPT_REGEX.test(output)) {
       const match = INLINE_JAVASCRIPT_REGEX.exec(output);
-      const code = (_a = match == null ? void 0 : match.at(1)) == null ? void 0 : _a.trim();
+      const code = match?.at(1)?.trim();
       if (code) {
         const executor = new SingleInlineScriptEngine(
           this.app,
@@ -12148,7 +11614,7 @@ var CompleteFormatter = class extends Formatter {
 };
 
 // src/engine/TemplateEngine.ts
-var import_obsidian19 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 var TemplateEngine = class extends QuickAddEngine {
   constructor(app2, plugin, choiceFormatter) {
     super(app2);
@@ -12184,7 +11650,7 @@ var TemplateEngine = class extends QuickAddEngine {
   }
   async incrementFileName(fileName) {
     const exec = FILE_NUMBER_REGEX.exec(fileName);
-    const numStr = exec == null ? void 0 : exec.at(1);
+    const numStr = exec?.at(1);
     const fileExists = await this.app.vault.adapter.exists(fileName);
     let newFileName = fileName;
     if (fileExists && numStr) {
@@ -12261,7 +11727,7 @@ ${formattedTemplateContent}`;
     if (!MARKDOWN_FILE_EXTENSION_REGEX.test(templatePath))
       correctTemplatePath += ".md";
     const templateFile = this.app.vault.getAbstractFileByPath(correctTemplatePath);
-    if (!(templateFile instanceof import_obsidian19.TFile))
+    if (!(templateFile instanceof import_obsidian21.TFile))
       throw new Error(
         `Template file not found at path "${correctTemplatePath}".`
       );
@@ -12316,8 +11782,7 @@ var FormatDisplayFormatter = class extends Formatter {
     return variableName;
   }
   getCurrentFileLink() {
-    var _a, _b;
-    return (_b = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : "_noPageOpen_";
+    return this.app.workspace.getActiveFile()?.path ?? "_noPageOpen_";
   }
   getNaturalLanguageDates() {
     return getNaturalLanguageDates(this.app);
@@ -12363,14 +11828,13 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     this.display();
   }
   display() {
-    var _a, _b, _c;
     this.containerEl.addClass("captureChoiceBuilder");
     this.contentEl.empty();
     this.addCenteredChoiceNameHeader(this.choice);
     this.addCapturedToSetting();
-    if (!((_a = this.choice) == null ? void 0 : _a.captureToActiveFile)) {
+    if (!this.choice?.captureToActiveFile) {
       this.addCreateIfNotExistsSetting();
-      if ((_c = (_b = this.choice) == null ? void 0 : _b.createFileIfItDoesntExist) == null ? void 0 : _c.enabled)
+      if (this.choice?.createFileIfItDoesntExist?.enabled)
         this.addCreateWithTemplateSetting();
     }
     this.addTaskSetting();
@@ -12385,34 +11849,33 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     this.addFormatSetting();
   }
   addCapturedToSetting() {
-    var _a, _b, _c;
     let textField;
-    new import_obsidian20.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
+    new import_obsidian22.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
     const captureToContainer = this.contentEl.createDiv("captureToContainer");
     const captureToActiveFileContainer = captureToContainer.createDiv("captureToActiveFileContainer");
     const captureToActiveFileText = captureToActiveFileContainer.createEl("span");
     captureToActiveFileText.textContent = "Capture to active file";
-    const captureToActiveFileToggle = new import_obsidian20.ToggleComponent(
+    const captureToActiveFileToggle = new import_obsidian22.ToggleComponent(
       captureToActiveFileContainer
     );
-    captureToActiveFileToggle.setValue((_a = this.choice) == null ? void 0 : _a.captureToActiveFile);
+    captureToActiveFileToggle.setValue(this.choice?.captureToActiveFile);
     captureToActiveFileToggle.onChange((value) => {
       this.choice.captureToActiveFile = value;
       this.reload();
     });
-    if (!((_b = this.choice) == null ? void 0 : _b.captureToActiveFile)) {
+    if (!this.choice?.captureToActiveFile) {
       const captureToFileContainer = captureToContainer.createDiv("captureToFileContainer");
       const formatDisplay = captureToFileContainer.createEl("span");
       const displayFormatter = new FileNameDisplayFormatter(this.app);
       (async () => formatDisplay.textContent = await displayFormatter.format(
         this.choice.captureTo
       ))();
-      const formatInput = new import_obsidian20.TextComponent(captureToFileContainer);
+      const formatInput = new import_obsidian22.TextComponent(captureToFileContainer);
       formatInput.setPlaceholder("File name format");
       textField = formatInput;
       formatInput.inputEl.style.width = "100%";
       formatInput.inputEl.style.marginBottom = "8px";
-      formatInput.setValue(this.choice.captureTo).setDisabled((_c = this.choice) == null ? void 0 : _c.captureToActiveFile).onChange(async (value) => {
+      formatInput.setValue(this.choice.captureTo).setDisabled(this.choice?.captureToActiveFile).onChange(async (value) => {
         this.choice.captureTo = value;
         formatDisplay.textContent = await displayFormatter.format(
           value
@@ -12430,10 +11893,9 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     }
   }
   addPrependSetting() {
-    var _a;
-    const prependSetting = new import_obsidian20.Setting(this.contentEl);
+    const prependSetting = new import_obsidian22.Setting(this.contentEl);
     prependSetting.setName("Write to bottom of file").setDesc(
-      `Put value at the bottom of the file - otherwise at the ${((_a = this.choice) == null ? void 0 : _a.captureToActiveFile) ? "active cursor location" : "top"}.`
+      `Put value at the bottom of the file - otherwise at the ${this.choice?.captureToActiveFile ? "active cursor location" : "top"}.`
     ).addToggle((toggle) => {
       toggle.setValue(this.choice.prepend);
       toggle.onChange((value) => {
@@ -12446,14 +11908,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addTaskSetting() {
-    const taskSetting = new import_obsidian20.Setting(this.contentEl);
+    const taskSetting = new import_obsidian22.Setting(this.contentEl);
     taskSetting.setName("Task").setDesc("Formats the value as a task.").addToggle((toggle) => {
       toggle.setValue(this.choice.task);
       toggle.onChange((value) => this.choice.task = value);
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian20.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian22.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc(
       "Add a link on your current cursor position, linking to the file you're capturing to."
     ).addToggle((toggle) => {
@@ -12463,7 +11925,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addInsertAfterSetting() {
     let insertAfterInput;
-    const insertAfterSetting = new import_obsidian20.Setting(this.contentEl);
+    const insertAfterSetting = new import_obsidian22.Setting(this.contentEl);
     insertAfterSetting.setName("Insert after").setDesc(
       "Insert capture after specified line. Accepts format syntax."
     ).addToggle((toggle) => {
@@ -12482,7 +11944,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     (async () => insertAfterFormatDisplay.innerText = await displayFormatter.format(
       this.choice.insertAfter.after
     ))();
-    insertAfterInput = new import_obsidian20.TextComponent(this.contentEl);
+    insertAfterInput = new import_obsidian22.TextComponent(this.contentEl);
     insertAfterInput.setPlaceholder("Insert after");
     insertAfterInput.inputEl.style.width = "100%";
     insertAfterInput.inputEl.style.marginBottom = "8px";
@@ -12496,31 +11958,26 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       this.plugin
     );
     if (this.choice.insertAfter.enabled) {
-      const insertAtEndSetting = new import_obsidian20.Setting(this.contentEl);
+      const insertAtEndSetting = new import_obsidian22.Setting(this.contentEl);
       insertAtEndSetting.setName("Insert at end of section").setDesc(
         "Insert the text at the end of the section, rather than at the top."
       ).addToggle(
-        (toggle) => {
-          var _a;
-          return toggle.setValue((_a = this.choice.insertAfter) == null ? void 0 : _a.insertAtEnd).onChange(
-            (value) => this.choice.insertAfter.insertAtEnd = value
-          );
-        }
+        (toggle) => toggle.setValue(this.choice.insertAfter?.insertAtEnd).onChange(
+          (value) => this.choice.insertAfter.insertAtEnd = value
+        )
       );
-      const createLineIfNotFound = new import_obsidian20.Setting(this.contentEl);
+      const createLineIfNotFound = new import_obsidian22.Setting(this.contentEl);
       createLineIfNotFound.setName("Create line if not found").setDesc("Creates the 'insert after' line if it is not found.").addToggle((toggle) => {
-        var _a, _b;
-        if (!((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFound))
+        if (!this.choice.insertAfter?.createIfNotFound)
           this.choice.insertAfter.createIfNotFound = false;
-        toggle.setValue((_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFound).onChange(
+        toggle.setValue(this.choice.insertAfter?.createIfNotFound).onChange(
           (value) => this.choice.insertAfter.createIfNotFound = value
         ).toggleEl.style.marginRight = "1em";
       }).addDropdown((dropdown) => {
-        var _a, _b;
-        if (!((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFoundLocation))
+        if (!this.choice.insertAfter?.createIfNotFoundLocation)
           this.choice.insertAfter.createIfNotFoundLocation = CREATE_IF_NOT_FOUND_TOP;
         dropdown.addOption(CREATE_IF_NOT_FOUND_TOP, "Top").addOption(CREATE_IF_NOT_FOUND_BOTTOM, "Bottom").setValue(
-          (_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFoundLocation
+          this.choice.insertAfter?.createIfNotFoundLocation
         ).onChange(
           (value) => this.choice.insertAfter.createIfNotFoundLocation = value
         );
@@ -12529,14 +11986,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian20.Setting(this.contentEl);
+    const enableSetting = new import_obsidian22.Setting(this.contentEl);
     enableSetting.setName("Capture format").setDesc("Set the format of the capture.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.format.enabled).onChange((value) => {
         this.choice.format.enabled = value;
         textField.setDisabled(!value);
       });
     });
-    const formatInput = new import_obsidian20.TextAreaComponent(this.contentEl);
+    const formatInput = new import_obsidian22.TextAreaComponent(this.contentEl);
     formatInput.setPlaceholder("Format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
@@ -12560,35 +12017,28 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         createWithTemplate: false,
         template: ""
       };
-    const createFileIfItDoesntExist = new import_obsidian20.Setting(this.contentEl);
+    const createFileIfItDoesntExist = new import_obsidian22.Setting(this.contentEl);
     createFileIfItDoesntExist.setName("Create file if it doesn't exist").addToggle(
-      (toggle) => {
-        var _a, _b;
-        return toggle.setValue((_b = (_a = this.choice) == null ? void 0 : _a.createFileIfItDoesntExist) == null ? void 0 : _b.enabled).setTooltip("Create file if it doesn't exist").onChange((value) => {
-          this.choice.createFileIfItDoesntExist.enabled = value;
-          this.reload();
-        });
-      }
+      (toggle) => toggle.setValue(this.choice?.createFileIfItDoesntExist?.enabled).setTooltip("Create file if it doesn't exist").onChange((value) => {
+        this.choice.createFileIfItDoesntExist.enabled = value;
+        this.reload();
+      })
     );
   }
   addCreateWithTemplateSetting() {
-    var _a, _b, _c, _d, _e;
     let templateSelector;
-    const createWithTemplateSetting = new import_obsidian20.Setting(this.contentEl);
+    const createWithTemplateSetting = new import_obsidian22.Setting(this.contentEl);
     createWithTemplateSetting.setName("Create file with given template.").addToggle(
-      (toggle) => {
-        var _a2;
-        return toggle.setValue(
-          (_a2 = this.choice.createFileIfItDoesntExist) == null ? void 0 : _a2.createWithTemplate
-        ).onChange((value) => {
-          this.choice.createFileIfItDoesntExist.createWithTemplate = value;
-          templateSelector.setDisabled(!value);
-        });
-      }
+      (toggle) => toggle.setValue(
+        this.choice.createFileIfItDoesntExist?.createWithTemplate
+      ).onChange((value) => {
+        this.choice.createFileIfItDoesntExist.createWithTemplate = value;
+        templateSelector.setDisabled(!value);
+      })
     );
-    templateSelector = new import_obsidian20.TextComponent(this.contentEl);
-    templateSelector.setValue((_c = (_b = (_a = this.choice) == null ? void 0 : _a.createFileIfItDoesntExist) == null ? void 0 : _b.template) != null ? _c : "").setPlaceholder("Template path").setDisabled(
-      !((_e = (_d = this.choice) == null ? void 0 : _d.createFileIfItDoesntExist) == null ? void 0 : _e.createWithTemplate)
+    templateSelector = new import_obsidian22.TextComponent(this.contentEl);
+    templateSelector.setValue(this.choice?.createFileIfItDoesntExist?.template ?? "").setPlaceholder("Template path").setDisabled(
+      !this.choice?.createFileIfItDoesntExist?.createWithTemplate
     );
     templateSelector.inputEl.style.width = "100%";
     templateSelector.inputEl.style.marginBottom = "8px";
@@ -12603,7 +12053,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian20.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian22.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the file that is captured to.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -12620,16 +12070,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian20.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian22.Setting(this.contentEl);
     newTabSetting.setName("New Tab").setDesc("Open the file that is captured to in a new tab.").addToggle((toggle) => {
-      var _a, _b;
-      toggle.setValue((_b = (_a = this.choice) == null ? void 0 : _a.openFileInNewTab) == null ? void 0 : _b.enabled);
+      toggle.setValue(this.choice?.openFileInNewTab?.enabled);
       toggle.onChange(
         (value) => this.choice.openFileInNewTab.enabled = value
       );
     }).addDropdown((dropdown) => {
-      var _a, _b, _c;
-      if (!((_a = this.choice) == null ? void 0 : _a.openFileInNewTab)) {
+      if (!this.choice?.openFileInNewTab) {
         this.choice.openFileInNewTab = {
           enabled: false,
           direction: "vertical" /* vertical */,
@@ -12639,12 +12087,12 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       dropdown.selectEl.style.marginLeft = "10px";
       dropdown.addOption("vertical" /* vertical */, "Vertical");
       dropdown.addOption("horizontal" /* horizontal */, "Horizontal");
-      dropdown.setValue((_c = (_b = this.choice) == null ? void 0 : _b.openFileInNewTab) == null ? void 0 : _c.direction);
+      dropdown.setValue(this.choice?.openFileInNewTab?.direction);
       dropdown.onChange(
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian20.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
+    new import_obsidian22.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -12653,57 +12101,11 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/macroChoiceBuilder.ts
-var import_obsidian21 = require("obsidian");
-var MacroChoiceBuilder = class extends ChoiceBuilder {
-  constructor(app2, choice, macros) {
-    super(app2);
-    this.macros = macros;
-    this.choice = choice;
-    this.display();
-  }
-  display() {
-    this.containerEl.addClass("macroChoiceBuilder");
-    this.addCenteredChoiceNameHeader(this.choice);
-    this.addSelectMacroSearch();
-  }
-  addSelectMacroSearch() {
-    const selectMacroDropdownContainer = this.contentEl.createDiv("selectMacroDropdownContainer");
-    const dropdown = new import_obsidian21.DropdownComponent(
-      selectMacroDropdownContainer
-    );
-    const macroOptions = {};
-    this.macros.forEach((macro) => {
-      macroOptions[macro.name] = macro.name;
-    });
-    dropdown.addOptions(macroOptions);
-    dropdown.onChange((value) => {
-      this.selectMacro(value);
-    });
-    const selectedMacro = this.macros.find(
-      (m) => m.id === this.choice.macroId
-    );
-    if (selectedMacro) {
-      dropdown.setValue(selectedMacro.name);
-    } else {
-      const value = dropdown.getValue();
-      if (value) {
-        this.selectMacro(value);
-      }
-    }
-  }
-  selectMacro(value) {
-    const targetMacro = this.macros.find((m) => m.name === value);
-    if (!targetMacro)
-      return;
-    this.choice.macroId = targetMacro.id;
-  }
-};
-
-// src/MacrosManager.ts
-var import_obsidian25 = require("obsidian");
+var import_obsidian26 = require("obsidian");
+var import_obsidian27 = require("obsidian");
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var import_obsidian24 = require("obsidian");
+var import_obsidian25 = require("obsidian");
 
 // src/types/macros/UserScript.ts
 var UserScript = class extends Command {
@@ -12853,7 +12255,7 @@ var StandardCommand = class extends SvelteComponent {
 var StandardCommand_default = StandardCommand;
 
 // src/gui/MacroGUIs/Components/WaitCommand.svelte
-function add_css8(target) {
+function add_css7(target) {
   append_styles(target, "svelte-1196d9p", ".dotInput.svelte-1196d9p{border:none;display:inline;font-family:inherit;font-size:inherit;padding:0;width:0;text-decoration:underline dotted;background-color:transparent}.dotInput.svelte-1196d9p:hover{background-color:transparent}");
 }
 function create_fragment13(ctx) {
@@ -13032,7 +12434,7 @@ var WaitCommand = class extends SvelteComponent {
         startDrag: 1,
         dragDisabled: 2
       },
-      add_css8
+      add_css7
     );
   }
 };
@@ -13195,7 +12597,7 @@ var NestedChoiceCommand = class extends SvelteComponent {
 var NestedChoiceCommand_default = NestedChoiceCommand;
 
 // src/gui/MacroGUIs/CommandList.svelte
-var import_obsidian23 = require("obsidian");
+var import_obsidian24 = require("obsidian");
 
 // src/gui/MacroGUIs/Components/UserScriptCommand.svelte
 function create_fragment15(ctx) {
@@ -13360,8 +12762,8 @@ var UserScriptCommand = class extends SvelteComponent {
 var UserScriptCommand_default = UserScriptCommand;
 
 // src/gui/MacroGUIs/UserScriptSettingsModal.ts
-var import_obsidian22 = require("obsidian");
-var UserScriptSettingsModal = class extends import_obsidian22.Modal {
+var import_obsidian23 = require("obsidian");
+var UserScriptSettingsModal = class extends import_obsidian23.Modal {
   constructor(app2, command, settings) {
     super(app2);
     this.command = command;
@@ -13378,10 +12780,9 @@ var UserScriptSettingsModal = class extends import_obsidian22.Modal {
     }
   }
   display() {
-    var _a, _b, _c;
     this.containerEl.addClass("quickAddModal", "userScriptSettingsModal");
     this.contentEl.empty();
-    this.titleEl.innerText = `${(_a = this.settings) == null ? void 0 : _a.name}${((_b = this.settings) == null ? void 0 : _b.author) ? " by " + ((_c = this.settings) == null ? void 0 : _c.author) : ""}`;
+    this.titleEl.innerText = `${this.settings?.name}${this.settings?.author ? " by " + this.settings?.author : ""}`;
     const options = this.settings.options;
     if (!options) {
       return;
@@ -13399,7 +12800,7 @@ var UserScriptSettingsModal = class extends import_obsidian22.Modal {
         this.addInputBox(
           option,
           value,
-          entry == null ? void 0 : entry.placeholder,
+          entry?.placeholder,
           entry.secret
         );
       } else if (type === "checkbox" || type === "toggle") {
@@ -13421,29 +12822,29 @@ var UserScriptSettingsModal = class extends import_obsidian22.Modal {
     el.type = "password";
   }
   addInputBox(name, value, placeholder, passwordOnBlur) {
-    new import_obsidian22.Setting(this.contentEl).setName(name).addText((input) => {
-      input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder != null ? placeholder : "");
+    new import_obsidian23.Setting(this.contentEl).setName(name).addText((input) => {
+      input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder ?? "");
       if (passwordOnBlur) {
         this.setPasswordOnBlur(input.inputEl);
       }
     });
   }
   addToggle(name, value) {
-    new import_obsidian22.Setting(this.contentEl).setName(name).addToggle(
+    new import_obsidian23.Setting(this.contentEl).setName(name).addToggle(
       (toggle) => toggle.setValue(value).onChange((value2) => this.command.settings[name] = value2)
     );
   }
   addDropdown(name, options, value) {
-    new import_obsidian22.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
+    new import_obsidian23.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
       options.forEach((item) => dropdown.addOption(item, item));
       dropdown.setValue(value);
       dropdown.onChange((value2) => this.command.settings[name] = value2);
     });
   }
   addFormatInput(name, value, placeholder) {
-    new import_obsidian22.Setting(this.contentEl).setName(name);
+    new import_obsidian23.Setting(this.contentEl).setName(name);
     const formatDisplay = this.contentEl.createEl("span");
-    const input = new import_obsidian22.TextAreaComponent(this.contentEl);
+    const input = new import_obsidian23.TextAreaComponent(this.contentEl);
     new FormatSyntaxSuggester(this.app, input.inputEl, QuickAdd.instance);
     const displayFormatter = new FormatDisplayFormatter(
       this.app,
@@ -13452,7 +12853,7 @@ var UserScriptSettingsModal = class extends import_obsidian22.Modal {
     input.setValue(value).onChange(async (value2) => {
       this.command.settings[name] = value2;
       formatDisplay.innerText = await displayFormatter.format(value2);
-    }).setPlaceholder(placeholder != null ? placeholder : "");
+    }).setPlaceholder(placeholder ?? "");
     input.inputEl.style.width = "100%";
     input.inputEl.style.height = "100px";
     input.inputEl.style.marginBottom = "1em";
@@ -13461,7 +12862,7 @@ var UserScriptSettingsModal = class extends import_obsidian22.Modal {
 };
 
 // src/gui/MacroGUIs/CommandList.svelte
-function add_css9(target) {
+function add_css8(target) {
   append_styles(target, "svelte-1ukgrgp", ".quickAddCommandList.svelte-1ukgrgp{display:grid;grid-template-columns:auto;width:auto;border:0 solid black;overflow-y:auto;height:auto;margin-bottom:8px;padding:20px}");
 }
 function get_each_context4(ctx, list, i) {
@@ -13963,17 +13364,14 @@ function instance16($$self, $$props, $$invalidate) {
     $$invalidate(0, commands2[index] = command, commands2);
     saveCommands(commands2);
   }
-  function configureChoice(e) {
-    var _a;
-    return __awaiter(this, void 0, void 0, function* () {
-      const command = e.detail;
-      const newChoice = yield (_a = getChoiceBuilder(command.choice)) === null || _a === void 0 ? void 0 : _a.waitForClose;
-      if (!newChoice)
-        return;
-      command.choice = newChoice;
-      command.name = newChoice.name;
-      updateCommand(command);
-    });
+  async function configureChoice(e) {
+    const command = e.detail;
+    const newChoice = await getChoiceBuilder(command.choice)?.waitForClose;
+    if (!newChoice)
+      return;
+    command.choice = newChoice;
+    command.name = newChoice.name;
+    updateCommand(command);
   }
   function getChoiceBuilder(choice) {
     switch (choice.type) {
@@ -13987,16 +13385,14 @@ function instance16($$self, $$props, $$invalidate) {
         break;
     }
   }
-  function configureScript(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const command = e.detail;
-      const userScript = yield getUserScript(command, app2);
-      if (!(userScript === null || userScript === void 0 ? void 0 : userScript.settings)) {
-        log.logWarning(`${command.name} has no settings.`);
-        return;
-      }
-      new UserScriptSettingsModal(app2, command, userScript.settings).open();
-    });
+  async function configureScript(e) {
+    const command = e.detail;
+    const userScript = await getUserScript(command, app2);
+    if (!userScript?.settings) {
+      log.logWarning(`${command.name} has no settings.`);
+      return;
+    }
+    new UserScriptSettingsModal(app2, command, userScript.settings).open();
   }
   const func = (c) => c.id !== SHADOW_PLACEHOLDER_ITEM_ID;
   function waitcommand_command_binding(value, command, each_value, command_index) {
@@ -14114,7 +13510,7 @@ var CommandList = class extends SvelteComponent {
         plugin: 12,
         updateCommandList: 13
       },
-      add_css9,
+      add_css8,
       [-1, -1]
     );
   }
@@ -14149,7 +13545,7 @@ var NestedChoiceCommand2 = class extends Command {
 };
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var MacroBuilder = class extends import_obsidian24.Modal {
+var MacroBuilder = class extends import_obsidian25.Modal {
   constructor(app2, plugin, macro, choices) {
     super(app2);
     this.commands = [];
@@ -14227,7 +13623,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
       this.addCommandToMacro(command);
       input.setValue("");
     };
-    new import_obsidian24.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
+    new import_obsidian25.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Obsidian command");
@@ -14275,7 +13671,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
       }
       this.addCommandToMacro(command);
     };
-    new import_obsidian24.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
+    new import_obsidian25.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
       dropdownComponent = dropdown;
       dropdown.selectEl.style.marginRight = "1em";
       dropdown.addOption("Copy" /* Copy */, "Copy" /* Copy */).addOption("Cut" /* Cut */, "Cut" /* Cut */).addOption("Paste" /* Paste */, "Paste" /* Paste */).addOption(
@@ -14302,7 +13698,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
       this.addCommandToMacro(new UserScript(value, file.path));
       input.setValue("");
     };
-    new import_obsidian24.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
+    new import_obsidian25.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("User script");
@@ -14333,7 +13729,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
       this.addCommandToMacro(new ChoiceCommand(choice.name, choice.id));
       input.setValue("");
     };
-    new import_obsidian24.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
+    new import_obsidian25.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Choice");
@@ -14407,7 +13803,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
     this.addAddWaitCommandButton(quickCommandContainer);
   }
   addAddWaitCommandButton(quickCommandContainer) {
-    const button = new import_obsidian24.ButtonComponent(
+    const button = new import_obsidian25.ButtonComponent(
       quickCommandContainer
     );
     button.setIcon("clock").setTooltip("Add wait command").onClick(() => {
@@ -14415,7 +13811,7 @@ var MacroBuilder = class extends import_obsidian24.Modal {
     });
   }
   newChoiceButton(container, typeName, type) {
-    const button = new import_obsidian24.ButtonComponent(container);
+    const button = new import_obsidian25.ButtonComponent(container);
     button.setButtonText(typeName).setTooltip(`Add ${typeName} Choice`).onClick(() => {
       const captureChoice = new type(
         `Untitled ${typeName} Choice`
@@ -14429,6 +13825,38 @@ var MacroBuilder = class extends import_obsidian24.Modal {
   }
 };
 
+// node_modules/.pnpm/zustand@4.3.6/node_modules/zustand/esm/vanilla.mjs
+var import_meta = {};
+var createStoreImpl = (createState) => {
+  let state;
+  const listeners = /* @__PURE__ */ new Set();
+  const setState = (partial, replace) => {
+    const nextState = typeof partial === "function" ? partial(state) : partial;
+    if (!Object.is(nextState, state)) {
+      const previousState = state;
+      state = (replace != null ? replace : typeof nextState !== "object") ? nextState : Object.assign({}, state, nextState);
+      listeners.forEach((listener) => listener(state, previousState));
+    }
+  };
+  const getState = () => state;
+  const subscribe = (listener) => {
+    listeners.add(listener);
+    return () => listeners.delete(listener);
+  };
+  const destroy = () => {
+    if ((import_meta.env && import_meta.env.MODE) !== "production") {
+      console.warn(
+        "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
+      );
+    }
+    listeners.clear();
+  };
+  const api = { setState, getState, subscribe, destroy };
+  state = createState(setState, getState, api);
+  return api;
+};
+var createStore = (createState) => createState ? createStoreImpl(createState) : createStoreImpl;
+
 // src/types/macros/QuickAddMacro.ts
 var QuickAddMacro = class {
   constructor(name) {
@@ -14439,8 +13867,153 @@ var QuickAddMacro = class {
   }
 };
 
+// src/settingsStore.ts
+var settingsStore = function() {
+  const useSettingsStore = createStore((set, get2) => ({
+    ...DEFAULT_SETTINGS,
+    setSettings: (settings) => set((state) => ({ ...state, ...settings }))
+  }));
+  const { getState, setState, subscribe } = useSettingsStore;
+  return {
+    getState,
+    setState,
+    subscribe,
+    setMacro: (macroId, macro) => {
+      setState((state) => {
+        const macroIdx = state.macros.findIndex(
+          (m) => m.id === macroId
+        );
+        if (macroIdx === -1) {
+          throw new Error("Macro not found");
+        }
+        const newState = {
+          ...state,
+          macros: [...state.macros]
+        };
+        newState.macros[macroIdx] = macro;
+        return newState;
+      });
+    },
+    createMacro: (name) => {
+      if (name === "" || getState().macros.some((m) => m.name === name)) {
+        throw new Error("Invalid macro name");
+      }
+      const macro = new QuickAddMacro(name);
+      setState((state) => ({
+        ...state,
+        macros: [...state.macros, macro]
+      }));
+      return macro;
+    },
+    getMacro: (macroId) => {
+      return getState().macros.find((m) => m.id === macroId);
+    }
+  };
+}();
+
+// src/gui/ChoiceBuilder/macroChoiceBuilder.ts
+var MacroChoiceBuilder = class extends ChoiceBuilder {
+  constructor(app2, choice, macros, choices) {
+    super(app2);
+    this.choice = choice;
+    this.macros = macros;
+    this.choices = choices;
+    this.unsubscribe = settingsStore.subscribe((newSettings) => {
+      this.macros = newSettings.macros;
+      this.choices = newSettings.choices;
+      this.reload();
+    });
+    this.display();
+  }
+  onClose() {
+    this.unsubscribe();
+  }
+  display() {
+    this.containerEl.addClass("macroChoiceBuilder");
+    this.addCenteredChoiceNameHeader(this.choice);
+    const macroDropdownContainer = this.contentEl.createDiv();
+    macroDropdownContainer.addClass("macroDropdownContainer");
+    this.addSelectMacroSearch(macroDropdownContainer);
+    const buttonsContainer = macroDropdownContainer.createDiv();
+    buttonsContainer.addClass("macro-choice-buttonsContainer");
+    this.addConfigureMacroButton(buttonsContainer);
+    this.addCreateMacroButton(buttonsContainer);
+  }
+  addCreateMacroButton(container) {
+    const hasOwnMacro = settingsStore.getMacro(this.choice.macroId)?.name === this.choice.name;
+    if (hasOwnMacro)
+      return;
+    const createMacroButtonContainer = container.createDiv();
+    const createMacroButton = new import_obsidian26.ButtonComponent(
+      createMacroButtonContainer
+    );
+    createMacroButton.setIcon("plus").setCta().setTooltip("Create Macro").onClick(async () => {
+      try {
+        const macro = settingsStore.createMacro(this.choice.name);
+        this.choice.macroId = macro.id;
+        this.reload();
+      } catch (error) {
+        log.logError(error);
+      }
+    });
+  }
+  addConfigureMacroButton(container) {
+    const configureMacroButtonContainer = container.createDiv();
+    const configureMacroButton = new import_obsidian26.ButtonComponent(
+      configureMacroButtonContainer
+    );
+    configureMacroButton.setIcon("cog").setTooltip("Configure Macro").onClick(async () => {
+      const macro = this.macros.find(
+        (m) => m.id === this.choice.macroId
+      );
+      if (!macro)
+        return log.logError("Could not find macro to configure");
+      const builder = new MacroBuilder(
+        app,
+        QuickAdd.instance,
+        macro,
+        this.choices
+      );
+      const newMacro = await builder.waitForClose;
+      settingsStore.setMacro(this.choice.macroId, newMacro);
+    });
+  }
+  addSelectMacroSearch(container) {
+    const selectMacroDropdownContainer = container.createDiv("selectMacroDropdownContainer");
+    const dropdown = new import_obsidian27.DropdownComponent(
+      selectMacroDropdownContainer
+    );
+    const macroOptions = {};
+    this.macros.forEach((macro) => {
+      macroOptions[macro.name] = macro.name;
+    });
+    dropdown.addOptions(macroOptions);
+    dropdown.onChange((value) => {
+      this.selectMacro(value);
+    });
+    const selectedMacro = this.macros.find(
+      (m) => m.id === this.choice.macroId
+    );
+    if (selectedMacro) {
+      dropdown.setValue(selectedMacro.name);
+    } else {
+      const value = dropdown.getValue();
+      if (value) {
+        this.selectMacro(value);
+      }
+    }
+  }
+  selectMacro(value) {
+    const targetMacro = this.macros.find((m) => m.name === value);
+    if (!targetMacro)
+      return;
+    this.choice.macroId = targetMacro.id;
+  }
+};
+
 // src/MacrosManager.ts
-var MacrosManager = class extends import_obsidian25.Modal {
+var import_obsidian28 = require("obsidian");
+var MacrosManager = class extends import_obsidian28.Modal {
   constructor(app2, plugin, macros, choices) {
     super(app2);
     this.app = app2;
@@ -14450,6 +14023,11 @@ var MacrosManager = class extends import_obsidian25.Modal {
     this.waitForClose = new Promise((resolve, reject) => {
       this.rejectPromise = reject;
       this.resolvePromise = resolve;
+    });
+    this.unsubscribe = settingsStore.subscribe((newSettings) => {
+      this.macros = newSettings.macros;
+      this.choices = newSettings.choices;
+      this.reload();
     });
     this.open();
     this.display();
@@ -14478,14 +14056,14 @@ var MacrosManager = class extends import_obsidian25.Modal {
   }
   addMacroSetting(macro, container) {
     const configureMacroContainer = container.createDiv();
-    const macroSetting = new import_obsidian25.Setting(configureMacroContainer);
+    const macroSetting = new import_obsidian28.Setting(configureMacroContainer);
     macroSetting.setName(macro.name);
     macroSetting.infoEl.style.fontWeight = "bold";
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
         this.addSpanWithText(itemContainerEl, "Run on plugin load");
-        const toggle = new import_obsidian25.ToggleComponent(
+        const toggle = new import_obsidian28.ToggleComponent(
           itemContainerEl
         );
         toggle.setValue(macro.runOnStartup);
@@ -14499,7 +14077,7 @@ var MacrosManager = class extends import_obsidian25.Modal {
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
-        const deleteButton = new import_obsidian25.ButtonComponent(
+        const deleteButton = new import_obsidian28.ButtonComponent(
           itemContainerEl
         );
         deleteButton.setClass("mod-warning");
@@ -14510,7 +14088,7 @@ var MacrosManager = class extends import_obsidian25.Modal {
           this.reload();
           this.macroContainer.scrollTop = scroll;
         });
-        const configureButton = new import_obsidian25.ButtonComponent(
+        const configureButton = new import_obsidian28.ButtonComponent(
           itemContainerEl
         );
         configureButton.setClass("mod-cta");
@@ -14570,38 +14148,36 @@ var MacrosManager = class extends import_obsidian25.Modal {
   addAddMacroBar() {
     const addMacroBarContainer = this.contentEl.createDiv();
     addMacroBarContainer.addClass("addMacroBarContainer");
-    const nameInput = new import_obsidian25.TextComponent(
+    const nameInput = new import_obsidian28.TextComponent(
       addMacroBarContainer
     );
     nameInput.setPlaceholder("Macro name");
-    const addMacroButton = new import_obsidian25.ButtonComponent(
+    const addMacroButton = new import_obsidian28.ButtonComponent(
       addMacroBarContainer
     );
     addMacroButton.setButtonText("Add macro").setClass("mod-cta").onClick(() => {
       const inputValue = nameInput.getValue();
-      if (inputValue !== "" && !this.macros.find((m) => m.name === inputValue)) {
-        const macro = new QuickAddMacro(inputValue);
-        if (!macro) {
-          log.logError("macro invalid - will not be added");
-          return;
-        }
-        this.macros.push(macro);
+      try {
+        settingsStore.createMacro(inputValue);
         this.reload();
         this.macroContainer.scrollTo(
           0,
           this.macroContainer.scrollHeight
         );
+      } catch (error) {
+        log.logError(error);
       }
     });
   }
   onClose() {
     super.onClose();
+    this.unsubscribe();
     this.resolvePromise(this.macros);
   }
 };
 
 // src/gui/choiceList/ChoiceView.svelte
-function add_css10(target) {
+function add_css9(target) {
   append_styles(target, "svelte-wcmtyt", ".choiceViewBottomBar.svelte-wcmtyt{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem}@media(max-width: 800px){.choiceViewBottomBar.svelte-wcmtyt{flex-direction:column}}");
 }
 function create_fragment17(ctx) {
@@ -14697,6 +14273,15 @@ function instance17($$self, $$props, $$invalidate) {
   let { saveMacros } = $$props;
   let { app: app2 } = $$props;
   let { plugin } = $$props;
+  onMount(() => {
+    const unsubSettingsStore = settingsStore.subscribe((settings) => {
+      $$invalidate(0, choices = settings.choices);
+      $$invalidate(8, macros = settings.macros);
+    });
+    return () => {
+      unsubSettingsStore();
+    };
+  });
   function addChoiceToList(event) {
     const { name, type } = event.detail;
     switch (type) {
@@ -14719,18 +14304,23 @@ function instance17($$self, $$props, $$invalidate) {
     }
     saveChoices(choices);
   }
-  function deleteChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const choice = e.detail.choice;
-      const userConfirmed = yield GenericYesNoPrompt.Prompt(app2, `Confirm deletion of choice`, `Please confirm that you wish to delete '${choice.name}'.
-            ${choice.type === "Multi" /* Multi */ ? "Deleting this choice will delete all (" + choice.choices.length + ") choices inside it!" : ""}
+  async function deleteChoice(e) {
+    const choice = e.detail.choice;
+    const hasOwnMacro = choice.type === "Macro" /* Macro */ && macros.some((macro) => macro.name === choice.name);
+    const isMulti = choice.type === "Multi" /* Multi */;
+    const userConfirmed = await GenericYesNoPrompt.Prompt(app2, `Confirm deletion of choice`, `Please confirm that you wish to delete '${choice.name}'.
+            ${isMulti ? "Deleting this choice will delete all (" + choice.choices.length + ") choices inside it!" : ""}
+            ${hasOwnMacro ? "Deleting this choice will delete the macro associated with it!" : ""}
             `);
-      if (userConfirmed) {
-        $$invalidate(0, choices = choices.filter((value) => deleteChoiceHelper(choice.id, value)));
-        plugin.removeCommandForChoice(choice);
-        saveChoices(choices);
-      }
-    });
+    if (!userConfirmed)
+      return;
+    if (hasOwnMacro) {
+      $$invalidate(8, macros = macros.filter((macro) => macro.id !== choice.macroId));
+      saveMacros(macros);
+    }
+    $$invalidate(0, choices = choices.filter((value) => deleteChoiceHelper(choice.id, value)));
+    plugin.removeCommandForChoice(choice);
+    saveChoices(choices);
   }
   function deleteChoiceHelper(id, value) {
     if (value.type === "Multi" /* Multi */) {
@@ -14738,43 +14328,44 @@ function instance17($$self, $$props, $$invalidate) {
     }
     return value.id !== id;
   }
-  function configureChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: oldChoice } = e.detail;
-      let updatedChoice;
-      if (oldChoice.type === "Multi" /* Multi */) {
-        updatedChoice = oldChoice;
-        const name = yield GenericInputPrompt.Prompt(app2, `Rename ${oldChoice.name}`, "", oldChoice.name);
-        if (!name)
-          return;
-        updatedChoice.name = name;
-      } else {
-        updatedChoice = yield getChoiceBuilder(oldChoice).waitForClose;
-      }
-      if (!updatedChoice)
+  async function configureChoice(e) {
+    const { choice: oldChoice } = e.detail;
+    let updatedChoice;
+    if (oldChoice.type === "Multi" /* Multi */) {
+      updatedChoice = oldChoice;
+      const name = await GenericInputPrompt.Prompt(app2, `Rename ${oldChoice.name}`, "", oldChoice.name);
+      if (!name)
         return;
-      $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
-      plugin.removeCommandForChoice(oldChoice);
-      plugin.addCommandForChoice(updatedChoice);
-      saveChoices(choices);
-    });
+      updatedChoice.name = name;
+    } else {
+      const builder = getChoiceBuilder(oldChoice);
+      if (!builder) {
+        throw new Error("Invalid choice type");
+      }
+      updatedChoice = await builder.waitForClose;
+    }
+    if (!updatedChoice)
+      return;
+    $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
+    plugin.removeCommandForChoice(oldChoice);
+    plugin.addCommandForChoice(updatedChoice);
+    saveChoices(choices);
   }
-  function toggleCommandForChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: oldChoice } = e.detail;
-      const updatedChoice = Object.assign(Object.assign({}, oldChoice), { command: !oldChoice.command });
-      updatedChoice.command ? plugin.addCommandForChoice(updatedChoice) : plugin.removeCommandForChoice(updatedChoice);
-      $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
-      saveChoices(choices);
-    });
+  async function toggleCommandForChoice(e) {
+    const { choice: oldChoice } = e.detail;
+    const updatedChoice = {
+      ...oldChoice,
+      command: !oldChoice.command
+    };
+    updatedChoice.command ? plugin.addCommandForChoice(updatedChoice) : plugin.removeCommandForChoice(updatedChoice);
+    $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
+    saveChoices(choices);
   }
-  function handleDuplicateChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: sourceChoice } = e.detail;
-      const newChoice = duplicateChoice(sourceChoice);
-      $$invalidate(0, choices = [...choices, newChoice]);
-      saveChoices(choices);
-    });
+  async function handleDuplicateChoice(e) {
+    const { choice: sourceChoice } = e.detail;
+    const newChoice = duplicateChoice(sourceChoice);
+    $$invalidate(0, choices = [...choices, newChoice]);
+    saveChoices(choices);
   }
   function duplicateChoice(choice) {
     if (!getChoiceType(choice))
@@ -14803,13 +14394,16 @@ function instance17($$self, $$props, $$invalidate) {
   }
   function updateChoiceHelper(oldChoice, newChoice) {
     if (oldChoice.id === newChoice.id) {
-      oldChoice = Object.assign(Object.assign({}, oldChoice), newChoice);
+      oldChoice = { ...oldChoice, ...newChoice };
       return oldChoice;
     }
     if (oldChoice.type === "Multi" /* Multi */) {
       const multiChoice = oldChoice;
       const multiChoiceChoices = multiChoice.choices.map((c) => updateChoiceHelper(c, newChoice));
-      return Object.assign(Object.assign({}, multiChoice), { choices: multiChoiceChoices });
+      return {
+        ...multiChoice,
+        choices: multiChoiceChoices
+      };
     }
     return oldChoice;
   }
@@ -14820,20 +14414,18 @@ function instance17($$self, $$props, $$invalidate) {
       case "Capture" /* Capture */:
         return new CaptureChoiceBuilder(app2, choice, plugin);
       case "Macro" /* Macro */:
-        return new MacroChoiceBuilder(app2, choice, macros);
+        return new MacroChoiceBuilder(app2, choice, macros, settingsStore.getState().choices);
       case "Multi" /* Multi */:
       default:
         break;
     }
   }
-  function openMacroManager() {
-    return __awaiter(this, void 0, void 0, function* () {
-      const newMacros = yield new MacrosManager(app2, plugin, macros, choices).waitForClose;
-      if (newMacros) {
-        saveMacros(newMacros);
-        $$invalidate(8, macros = newMacros);
-      }
-    });
+  async function openMacroManager() {
+    const newMacros = await new MacrosManager(app2, plugin, macros, choices).waitForClose;
+    if (newMacros) {
+      saveMacros(newMacros);
+      $$invalidate(8, macros = newMacros);
+    }
   }
   function choicelist_choices_binding(value) {
     choices = value;
@@ -14888,7 +14480,7 @@ var ChoiceView = class extends SvelteComponent {
         app: 10,
         plugin: 11
       },
-      add_css10
+      add_css9
     );
   }
 };
@@ -14908,7 +14500,7 @@ var DEFAULT_SETTINGS = {
     mutualExclusionInsertAfterAndWriteToBottomOfFile: false
   }
 };
-var QuickAddSettingsTab = class extends import_obsidian27.PluginSettingTab {
+var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -14926,7 +14518,7 @@ var QuickAddSettingsTab = class extends import_obsidian27.PluginSettingTab {
       this.choiceView.$destroy();
   }
   addChoicesSetting() {
-    const setting = new import_obsidian27.Setting(this.containerEl);
+    const setting = new import_obsidian30.Setting(this.containerEl);
     setting.infoEl.remove();
     setting.settingEl.style.display = "block";
     this.choiceView = new ChoiceView_default({
@@ -14934,50 +14526,48 @@ var QuickAddSettingsTab = class extends import_obsidian27.PluginSettingTab {
       props: {
         app: this.app,
         plugin: this.plugin,
-        choices: this.plugin.settings.choices,
+        choices: settingsStore.getState().choices,
         saveChoices: async (choices) => {
-          this.plugin.settings.choices = choices;
-          await this.plugin.saveSettings();
+          settingsStore.setState({ choices });
         },
-        macros: this.plugin.settings.macros,
+        macros: settingsStore.getState().macros,
         saveMacros: async (macros) => {
-          this.plugin.settings.macros = macros;
-          await this.plugin.saveSettings();
+          settingsStore.setState({ macros });
         }
       }
     });
   }
   addUseMultiLineInputPromptSetting() {
-    new import_obsidian27.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
+    new import_obsidian30.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
       "Use multi-line input prompt instead of single-line input prompt"
     ).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inputPrompt === "multi-line").setTooltip("Use multi-line input prompt").onChange((value) => {
         if (value) {
-          this.plugin.settings.inputPrompt = "multi-line";
+          settingsStore.setState({
+            inputPrompt: "multi-line"
+          });
         } else {
-          this.plugin.settings.inputPrompt = "single-line";
+          settingsStore.setState({
+            inputPrompt: "single-line"
+          });
         }
-        this.plugin.saveSettings();
       })
     );
   }
   addTemplateFolderPathSetting() {
-    const setting = new import_obsidian27.Setting(this.containerEl);
+    const setting = new import_obsidian30.Setting(this.containerEl);
     setting.setName("Template Folder Path");
     setting.setDesc(
       "Path to the folder where templates are stored. Used to suggest template files when configuring QuickAdd."
     );
     setting.addText((text2) => {
-      text2.setPlaceholder(
-        "templates/"
-      ).setValue(this.plugin.settings.templateFolderPath).onChange(async (value) => {
-        this.plugin.settings.templateFolderPath = value;
-        await this.plugin.saveSettings();
+      text2.setPlaceholder("templates/").setValue(settingsStore.getState().templateFolderPath).onChange(async (value) => {
+        settingsStore.setState({ templateFolderPath: value });
       });
       new GenericTextSuggester(
         app,
         text2.inputEl,
-        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian27.TFolder && f.path !== "/").map((f) => f.path)
+        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian30.TFolder && f.path !== "/").map((f) => f.path)
       );
     });
   }
@@ -15020,7 +14610,7 @@ var ConsoleErrorLogger = class extends QuickAddLogger {
 };
 
 // src/logger/guiLogger.ts
-var import_obsidian28 = require("obsidian");
+var import_obsidian31 = require("obsidian");
 var GuiLogger = class extends QuickAddLogger {
   constructor(plugin) {
     super();
@@ -15028,11 +14618,11 @@ var GuiLogger = class extends QuickAddLogger {
   }
   logError(msg) {
     const error = this.getQuickAddError(msg, "ERROR" /* Error */);
-    new import_obsidian28.Notice(this.formatOutputString(error), 15e3);
+    new import_obsidian31.Notice(this.formatOutputString(error), 15e3);
   }
   logWarning(msg) {
     const warning = this.getQuickAddError(msg, "WARNING" /* Warning */);
-    new import_obsidian28.Notice(this.formatOutputString(warning));
+    new import_obsidian31.Notice(this.formatOutputString(warning));
   }
   logMessage(msg) {
   }
@@ -15053,7 +14643,7 @@ var StartupMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/engine/TemplateChoiceEngine.ts
-var import_obsidian29 = require("obsidian");
+var import_obsidian32 = require("obsidian");
 
 // src/utils/invariant.ts
 function invariant(condition, message) {
@@ -15097,7 +14687,7 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       let createdFile;
       if (await this.app.vault.adapter.exists(filePath)) {
         const file = this.app.vault.getAbstractFileByPath(filePath);
-        if (!(file instanceof import_obsidian29.TFile) || file.extension !== "md") {
+        if (!(file instanceof import_obsidian32.TFile) || file.extension !== "md") {
           log.logError(
             `'${filePath}' already exists and is not a valid markdown file.`
           );
@@ -15186,11 +14776,10 @@ var TemplateChoiceEngine = class extends TemplateEngine {
     return folderPaths;
   }
   async getFolderPath() {
-    var _a, _b, _c, _d, _e;
     const folders = await this.formatFolderPaths([
       ...this.choice.folder.folders
     ]);
-    if (((_a = this.choice.folder) == null ? void 0 : _a.chooseFromSubfolders) && !(((_b = this.choice.folder) == null ? void 0 : _b.chooseWhenCreatingNote) || ((_c = this.choice.folder) == null ? void 0 : _c.createInSameFolderAsActiveFile))) {
+    if (this.choice.folder?.chooseFromSubfolders && !(this.choice.folder?.chooseWhenCreatingNote || this.choice.folder?.createInSameFolderAsActiveFile)) {
       const allFoldersInVault = getAllFolderPathsInVault(
         this.app
       );
@@ -15199,13 +14788,13 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       });
       return await this.getOrCreateFolder(subfolders);
     }
-    if ((_d = this.choice.folder) == null ? void 0 : _d.chooseWhenCreatingNote) {
+    if (this.choice.folder?.chooseWhenCreatingNote) {
       const allFoldersInVault = getAllFolderPathsInVault(
         this.app
       );
       return await this.getOrCreateFolder(allFoldersInVault);
     }
-    if ((_e = this.choice.folder) == null ? void 0 : _e.createInSameFolderAsActiveFile) {
+    if (this.choice.folder?.createInSameFolderAsActiveFile) {
       const activeFile = this.app.workspace.getActiveFile();
       if (!activeFile) {
         log.logWarning(
@@ -15279,7 +14868,6 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     return formatted;
   }
   async insertAfterHandler(formatted) {
-    var _a, _b;
     const targetString = await this.format(
       this.choice.insertAfter.after
     );
@@ -15292,12 +14880,12 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     );
     const targetNotFound = targetPosition === -1;
     if (targetNotFound) {
-      if ((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFound) {
+      if (this.choice.insertAfter?.createIfNotFound) {
         return await this.createInsertAfterIfNotFound(formatted);
       }
       log.logError("unable to find insert after line in file.");
     }
-    if ((_b = this.choice.insertAfter) == null ? void 0 : _b.insertAtEnd) {
+    if (this.choice.insertAfter?.insertAtEnd) {
       const nextHeaderPositionAfterTargetPosition = fileContentLines.slice(targetPosition + 1).findIndex((line) => /^#+ |---/.test(line));
       const foundNextHeader = nextHeaderPositionAfterTargetPosition !== -1;
       let endOfSectionIndex = null;
@@ -15333,13 +14921,12 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     );
   }
   async createInsertAfterIfNotFound(formatted) {
-    var _a, _b;
     const insertAfterLine = this.replaceLinebreakInString(
       await this.format(this.choice.insertAfter.after)
     );
     const insertAfterLineAndFormatted = `${insertAfterLine}
 ${formatted}`;
-    if (((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFoundLocation) === CREATE_IF_NOT_FOUND_TOP) {
+    if (this.choice.insertAfter?.createIfNotFoundLocation === CREATE_IF_NOT_FOUND_TOP) {
       const frontmatterEndPosition = this.file ? await this.getFrontmatterEndPosition(this.file) : -1;
       return this.insertTextAfterPositionInBody(
         insertAfterLineAndFormatted,
@@ -15347,7 +14934,7 @@ ${formatted}`;
         frontmatterEndPosition
       );
     }
-    if (((_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFoundLocation) === CREATE_IF_NOT_FOUND_BOTTOM) {
+    if (this.choice.insertAfter?.createIfNotFoundLocation === CREATE_IF_NOT_FOUND_BOTTOM) {
       return `${this.fileContent}
 ${insertAfterLineAndFormatted}`;
     }
@@ -16026,9 +15613,8 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
     );
   }
   async run() {
-    var _a, _b, _c, _d;
     try {
-      if ((_a = this.choice) == null ? void 0 : _a.captureToActiveFile) {
+      if (this.choice?.captureToActiveFile) {
         await this.captureToActiveFile();
         return;
       }
@@ -16041,7 +15627,7 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
       let getFileAndAddContentFn;
       if (await this.fileExists(filePath)) {
         getFileAndAddContentFn = this.onFileExists;
-      } else if ((_c = (_b = this.choice) == null ? void 0 : _b.createFileIfItDoesntExist) == null ? void 0 : _c.enabled) {
+      } else if (this.choice?.createFileIfItDoesntExist?.enabled) {
         getFileAndAddContentFn = this.onCreateFileIfItDoesntExist;
       } else {
         log.logWarning(
@@ -16058,7 +15644,7 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
         );
         appendToCurrentLine(markdownLink, this.app);
       }
-      if ((_d = this.choice) == null ? void 0 : _d.openFile) {
+      if (this.choice?.openFile) {
         await openFile(this.app, file, {
           openInNewTab: this.choice.openFileInNewTab.enabled,
           direction: this.choice.openFileInNewTab.direction,
@@ -16175,8 +15761,8 @@ This is in order to prevent data loss.`
 };
 
 // src/gui/suggesters/choiceSuggester.ts
-var import_obsidian30 = require("obsidian");
-var ChoiceSuggester = class extends import_obsidian30.FuzzySuggestModal {
+var import_obsidian33 = require("obsidian");
+var ChoiceSuggester = class extends import_obsidian33.FuzzySuggestModal {
   constructor(plugin, choices, choiceExecutor) {
     super(plugin.app);
     this.plugin = plugin;
@@ -16190,6 +15776,11 @@ var ChoiceSuggester = class extends import_obsidian30.FuzzySuggestModal {
   }
   static Open(plugin, choices, choiceExecutor) {
     new ChoiceSuggester(plugin, choices, choiceExecutor).open();
+  }
+  renderSuggestion(item, el) {
+    el.empty();
+    import_obsidian33.MarkdownRenderer.renderMarkdown(item.item.name, el, "", this.plugin);
+    el.classList.add("quickadd-choice-suggestion");
   }
   getItemText(item) {
     return item.name;
@@ -16494,7 +16085,7 @@ QuickAdd will now revert to backup.`
 var migrate_default = migrate;
 
 // src/main.ts
-var QuickAdd = class extends import_obsidian31.Plugin {
+var QuickAdd = class extends import_obsidian34.Plugin {
   get api() {
     return QuickAddApi.GetApi(app, this, new ChoiceExecutor(app, this));
   }
@@ -16502,6 +16093,11 @@ var QuickAdd = class extends import_obsidian31.Plugin {
     console.log("Loading QuickAdd");
     QuickAdd.instance = this;
     await this.loadSettings();
+    settingsStore.setState(this.settings);
+    this.unsubscribeSettingsStore = settingsStore.subscribe((settings) => {
+      this.settings = settings;
+      this.saveSettings();
+    });
     this.addCommand({
       id: "runQuickAdd",
       name: "Run QuickAdd",
@@ -16530,7 +16126,7 @@ var QuickAdd = class extends import_obsidian31.Plugin {
         console.log(`Test QuickAdd (dev)`);
         const fn2 = async () => {
           const activeView = await this.app.workspace.getActiveViewOfType(
-            import_obsidian31.MarkdownView
+            import_obsidian34.MarkdownView
           );
           if (!activeView)
             return false;
@@ -16555,6 +16151,7 @@ var QuickAdd = class extends import_obsidian31.Plugin {
   }
   onunload() {
     console.log("Unloading QuickAdd");
+    this.unsubscribeSettingsStore?.call(this);
   }
   async loadSettings() {
     this.settings = Object.assign(

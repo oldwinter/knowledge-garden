@@ -23,6 +23,9 @@ title: ∑ mac必备软件
 
 ![[∑ DB mac必备软件]]
 
+插件：
+- [[mac微信老插件 - wechatextension]]
+
 非图形化的必备软件：
 
 [[∑ linux常用命令行]]

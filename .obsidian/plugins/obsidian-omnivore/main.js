@@ -5993,8 +5993,10 @@ var parseDateTime = (str) => {
 var wrapAround = (value, size) => {
   return (value % size + size) % size;
 };
+var REPLACEMENT_CHAR = "-";
+var ILLEGAL_CHAR_REGEX = /[/\\?%*:|"<>]/g;
 var replaceIllegalChars = (str) => {
-  return str.replace(/[/\\?%*:|"<>]/g, "-");
+  return str.replace(ILLEGAL_CHAR_REGEX, REPLACEMENT_CHAR);
 };
 var formatDate = (date, format2) => {
   return DateTime.fromISO(date).toFormat(format2);
@@ -7739,7 +7741,24 @@ var DEFAULT_SETTINGS = {
   filter: "HIGHLIGHTS",
   syncAt: "",
   customQuery: "",
-  template: `# {{{title}}}
+  template: `---
+id: {{{id}}}
+title: {{{title}}}
+{{#author}}
+author: {{{author}}}
+{{/author}}
+{{#labels.length}}
+tags:
+{{#labels}} - {{{name}}}
+{{/labels}}
+{{/labels.length}}
+date_saved: {{{dateSaved}}}
+{{#datePublished}}
+date_published: {{{datePublished}}}
+{{/datePublished}}
+---
+
+# {{{title}}}
 #Omnivore
 
 [Read on Omnivore]({{{omnivoreUrl}}})
@@ -7761,7 +7780,8 @@ var DEFAULT_SETTINGS = {
   syncing: false,
   folder: "Omnivore/{{date}}",
   folderDateFormat: "yyyy-MM-dd",
-  endpoint: "https://api-prod.omnivore.app/api/graphql"
+  endpoint: "https://api-prod.omnivore.app/api/graphql",
+  filename: "{{{title}}}"
 };
 var OmnivorePlugin = class extends import_obsidian4.Plugin {
   async onload() {
@@ -7802,8 +7822,16 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
   async saveSettings() {
     await this.saveData(this.settings);
   }
+  getFilename(article) {
+    const { filename, folderDateFormat } = this.settings;
+    const date = formatDate(article.savedAt, folderDateFormat);
+    return mustache_default.render(filename, {
+      ...article,
+      date
+    });
+  }
   async fetchOmnivore() {
-    var _a, _b, _c, _d;
+    var _a, _b, _c;
     const {
       syncAt,
       apiKey,
@@ -7859,7 +7887,9 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
           const dateFormat = this.settings.dateSavedFormat;
           const dateSaved = formatDate(article.savedAt, dateFormat);
           const siteName = article.siteName || this.siteNameFromUrl(article.originalArticleUrl);
-          const content = mustache_default.render(template, {
+          const publishedAt = article.publishedAt;
+          const datePublished = publishedAt ? formatDate(publishedAt, dateFormat) : null;
+          let content = mustache_default.render(template, {
             id: article.id,
             title: article.title,
             omnivoreUrl: `https://omnivore.app/me/${article.slug}`,
@@ -7873,29 +7903,26 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
             }),
             dateSaved,
             highlights,
-            content: article.content
+            content: article.content,
+            datePublished
           });
-          const publishedAt = article.publishedAt;
-          const datePublished = publishedAt ? formatDate(publishedAt, dateFormat) : null;
-          const frontmatter = {
-            id: article.id,
-            title: article.title,
-            author: article.author,
-            tags: (_d = article.labels) == null ? void 0 : _d.map((l2) => l2.name),
-            date_saved: dateSaved,
-            date_published: datePublished
-          };
-          const filteredFrontmatter = Object.fromEntries(Object.entries(frontmatter).filter(([_, value]) => value != null && value !== ""));
-          const frontmatterYaml = (0, import_obsidian4.stringifyYaml)(filteredFrontmatter);
-          const frontmatterString = `---
+          const frontmatterRegex = /^(---[\s\S]*?---)/gm;
+          const frontmatter = content.match(frontmatterRegex);
+          if (frontmatter) {
+            content = content.replace(frontmatter[0], frontmatter[0].replace('id: ""', `id: ${article.id}`));
+          } else {
+            const frontmatter2 = {
+              id: article.id
+            };
+            const frontmatterYaml = (0, import_obsidian4.stringifyYaml)(frontmatter2);
+            const frontmatterString = `---
 ${frontmatterYaml}---`;
-          let updatedContent = content.replace(/^(---[\s\S]*?---)/gm, frontmatterString);
-          if (!content.match(/^(---[\s\S]*?---)/gm)) {
-            updatedContent = `${frontmatterString}
+            content = `${frontmatterString}
 
 ${content}`;
           }
-          const pageName = `${folderName}/${replaceIllegalChars(article.title)}.md`;
+          const filename = replaceIllegalChars(this.getFilename(article));
+          const pageName = `${folderName}/${filename}.md`;
           const normalizedPath = (0, import_obsidian4.normalizePath)(pageName);
           const omnivoreFile = app.vault.getAbstractFileByPath(normalizedPath);
           try {
@@ -7903,26 +7930,26 @@ ${content}`;
               await app.fileManager.processFrontMatter(omnivoreFile, async (frontMatter) => {
                 const id = frontMatter.id;
                 if (id && id !== article.id) {
-                  const newPageName = `${folderName}/${replaceIllegalChars(article.title)}-${article.id}.md`;
+                  const newPageName = `${folderName}/${filename}-${article.id}.md`;
                   const newNormalizedPath = (0, import_obsidian4.normalizePath)(newPageName);
                   const newOmnivoreFile = app.vault.getAbstractFileByPath(newNormalizedPath);
                   if (newOmnivoreFile instanceof import_obsidian4.TFile) {
                     const existingContent2 = await this.app.vault.read(newOmnivoreFile);
-                    if (existingContent2 !== updatedContent) {
-                      await this.app.vault.modify(newOmnivoreFile, updatedContent);
+                    if (existingContent2 !== content) {
+                      await this.app.vault.modify(newOmnivoreFile, content);
                     }
                     return;
                   }
-                  await this.app.vault.create(newNormalizedPath, updatedContent);
+                  await this.app.vault.create(newNormalizedPath, content);
                   return;
                 }
                 const existingContent = await this.app.vault.read(omnivoreFile);
-                if (existingContent !== updatedContent) {
-                  await this.app.vault.modify(omnivoreFile, updatedContent);
+                if (existingContent !== content) {
+                  await this.app.vault.modify(omnivoreFile, content);
                 }
               });
             } else if (!omnivoreFile) {
-              await this.app.vault.create(normalizedPath, updatedContent);
+              await this.app.vault.create(normalizedPath, content);
             }
           } catch (e) {
             console.error(e);
@@ -7969,11 +7996,11 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
     containerEl.empty();
     containerEl.createEl("h2", { text: "Settings for Omnivore plugin" });
     containerEl.createEl("h3", {
-      cls: "collapsible",
+      cls: "omnivore-collapsible",
       text: "General Settings"
     });
     const generalSettings = containerEl.createEl("div", {
-      cls: "content"
+      cls: "omnivore-content"
     });
     new import_obsidian4.Setting(generalSettings).setName("API Key").setDesc(createFragment((fragment) => {
       fragment.append("You can create an API key at ", fragment.createEl("a", {
@@ -8015,7 +8042,11 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
       fragment.append("Enter template to render articles with ", fragment.createEl("a", {
         text: "Reference",
         href: "https://github.com/janl/mustache.js/#templates"
-      }), fragment.createEl("br"), fragment.createEl("br"), "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, dateSaved, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted");
+      }), fragment.createEl("p", {
+        text: "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, dateSaved, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted"
+      }), fragment.createEl("p", {
+        text: "Please note that id in the frontmatter is required for the plugin to work properly."
+      }));
     })).addTextArea((text) => {
       text.setPlaceholder("Enter the template").setValue(this.plugin.settings.template).onChange(async (value) => {
         this.plugin.settings.template = value ? value : DEFAULT_SETTINGS.template;
@@ -8031,13 +8062,10 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    containerEl.createEl("h3", {
-      cls: "collapsible",
-      text: "Advanced Settings"
-    });
-    const advancedSettings = containerEl.createEl("div", {
-      cls: "content"
-    });
+    new import_obsidian4.Setting(generalSettings).setName("Filename").setDesc("Enter the filename where the data will be stored. {{{title}}} and {{date}} could be used in the filename").addText((text) => text.setPlaceholder("Enter the filename").setValue(this.plugin.settings.filename).onChange(async (value) => {
+      this.plugin.settings.filename = value;
+      await this.plugin.saveSettings();
+    }));
     new import_obsidian4.Setting(generalSettings).setName("Folder Date Format").setDesc(createFragment((fragment) => {
       fragment.append("Enter the format date for use in rendered template. Format ", fragment.createEl("a", {
         text: "reference",
@@ -8055,6 +8083,13 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
       this.plugin.settings.dateHighlightedFormat = value;
       await this.plugin.saveSettings();
     }));
+    containerEl.createEl("h3", {
+      cls: "omnivore-collapsible",
+      text: "Advanced Settings"
+    });
+    const advancedSettings = containerEl.createEl("div", {
+      cls: "omnivore-content"
+    });
     new import_obsidian4.Setting(advancedSettings).setName("API Endpoint").setDesc("Enter the Omnivore server's API endpoint").addText((text) => text.setPlaceholder("API endpoint").setValue(this.plugin.settings.endpoint).onChange(async (value) => {
       console.log("endpoint: " + value);
       this.plugin.settings.endpoint = value;
@@ -8066,7 +8101,7 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
     let i;
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("omnivore-active");
         const content = this.nextElementSibling;
         if (content.style.maxHeight) {
           content.style.maxHeight = null;

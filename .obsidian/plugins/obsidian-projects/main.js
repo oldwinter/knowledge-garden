@@ -6599,7 +6599,7 @@ var require_lib = __commonJS({
       }
       Values2.isBoolean = isBoolean2;
       function isLink(val) {
-        return val instanceof Link2;
+        return val instanceof Link;
       }
       Values2.isLink = isLink;
       function isWidget(val) {
@@ -6648,12 +6648,12 @@ var require_lib = __commonJS({
       }
       Groupings2.count = count;
     })(Groupings || (Groupings = {}));
-    var Link2 = class {
+    var Link = class {
       constructor(fields) {
         Object.assign(this, fields);
       }
       static file(path, embed = false, display) {
-        return new Link2({
+        return new Link({
           path,
           embed,
           display,
@@ -6664,15 +6664,15 @@ var require_lib = __commonJS({
       static infer(linkpath, embed = false, display) {
         if (linkpath.includes("#^")) {
           let split = linkpath.split("#^");
-          return Link2.block(split[0], split[1], embed, display);
+          return Link.block(split[0], split[1], embed, display);
         } else if (linkpath.includes("#")) {
           let split = linkpath.split("#");
-          return Link2.header(split[0], split[1], embed, display);
+          return Link.header(split[0], split[1], embed, display);
         } else
-          return Link2.file(linkpath, embed, display);
+          return Link.file(linkpath, embed, display);
       }
       static header(path, header, embed, display) {
-        return new Link2({
+        return new Link({
           path,
           embed,
           display,
@@ -6681,7 +6681,7 @@ var require_lib = __commonJS({
         });
       }
       static block(path, blockId, embed, display) {
-        return new Link2({
+        return new Link({
           path,
           embed,
           display,
@@ -6690,7 +6690,7 @@ var require_lib = __commonJS({
         });
       }
       static fromObject(object) {
-        return new Link2(object);
+        return new Link(object);
       }
       equals(other) {
         if (other == void 0 || other == null)
@@ -6704,22 +6704,22 @@ var require_lib = __commonJS({
         return { path: this.path, type: this.type, subpath: this.subpath, display: this.display, embed: this.embed };
       }
       withPath(path) {
-        return new Link2(Object.assign({}, this, { path }));
+        return new Link(Object.assign({}, this, { path }));
       }
       withDisplay(display) {
-        return new Link2(Object.assign({}, this, { display }));
+        return new Link(Object.assign({}, this, { display }));
       }
       withHeader(header) {
-        return Link2.header(this.path, header, this.embed, this.display);
+        return Link.header(this.path, header, this.embed, this.display);
       }
       toFile() {
-        return Link2.file(this.path, this.embed, this.display);
+        return Link.file(this.path, this.embed, this.display);
       }
       toEmbed() {
         if (this.embed) {
           return this;
         } else {
-          let link = new Link2(this);
+          let link = new Link(this);
           link.embed = true;
           return link;
         }
@@ -6728,7 +6728,7 @@ var require_lib = __commonJS({
         if (!this.embed) {
           return this;
         } else {
-          let link = new Link2(this);
+          let link = new Link(this);
           link.embed = false;
           return link;
         }
@@ -6964,7 +6964,7 @@ var require_lib = __commonJS({
     }
     function parseInnerLink(rawlink) {
       let [link, display] = splitOnUnescapedPipe(rawlink);
-      return Link2.infer(link, false, display);
+      return Link.infer(link, false, display);
     }
     function createBinaryParser(child, sep, combine) {
       return parsimmon_umd_min.exports.seqMap(child, parsimmon_umd_min.exports.seq(parsimmon_umd_min.exports.optWhitespace, sep, parsimmon_umd_min.exports.optWhitespace, child).many(), (first, rest) => {
@@ -7226,14 +7226,14 @@ var require_lib = __commonJS({
         };
       })
     });
-    var getAPI2 = (app2) => {
+    var getAPI2 = (app3) => {
       var _a;
-      if (app2)
-        return (_a = app2.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
+      if (app3)
+        return (_a = app3.plugins.plugins.dataview) === null || _a === void 0 ? void 0 : _a.api;
       else
         return window.DataviewAPI;
     };
-    var isPluginEnabled3 = (app2) => app2.plugins.enabledPlugins.has("dataview");
+    var isPluginEnabled3 = (app3) => app3.plugins.enabledPlugins.has("dataview");
     exports.DATE_SHORTHANDS = DATE_SHORTHANDS;
     exports.DURATION_TYPES = DURATION_TYPES;
     exports.EXPRESSION = EXPRESSION;
@@ -17593,7 +17593,7 @@ function getTaskValidation(SE) {
 // src/main.ts
 var import_function14 = __toESM(require_function());
 var import_obsidian57 = require("obsidian");
-var import_obsidian_dataview4 = __toESM(require_lib());
+var import_obsidian_dataview3 = __toESM(require_lib());
 
 // src/lib/data-api.ts
 var import_dayjs = __toESM(require_dayjs_min());
@@ -17989,7 +17989,6 @@ var immer_esm_default = fn;
 
 // src/lib/data-api.ts
 var import_moment = __toESM(require_moment());
-var import_obsidian4 = require("obsidian");
 
 // node_modules/svelte/internal/index.mjs
 function noop() {
@@ -19274,7 +19273,7 @@ function isOptionalDate(value) {
 var import_obsidian = require("obsidian");
 
 // src/lib/stores/obsidian.ts
-var app = writable();
+var app2 = writable();
 var view = writable();
 var plugin = writable();
 
@@ -19297,7 +19296,7 @@ function uniquify(name, exists4) {
 }
 function nextUniqueFileName(path, name) {
   return uniquify(name, (name2) => {
-    return get_store_value(app).vault.getAbstractFileByPath(
+    return get_store_value(app2).vault.getAbstractFileByPath(
       (0, import_obsidian.normalizePath)(path + "/" + name2 + ".md")
     ) instanceof import_obsidian.TFile;
   });
@@ -19311,6 +19310,11 @@ function nextUniqueViewName(views, name) {
   return uniquify(name, (candidate) => {
     return !!views.find((view2) => view2.name === candidate);
   });
+}
+function getNameFromPath(path) {
+  const start2 = path.lastIndexOf("/") + 1;
+  const end2 = path.lastIndexOf(".");
+  return path.substring(start2, end2);
 }
 
 // node_modules/yaml/browser/dist/nodes/Node.js
@@ -28403,7 +28407,7 @@ i18next_default.init({
             },
             defaultName: {
               name: "Default name for new notes",
-              description: "Supports {{date}} and {{time}} template variables.",
+              description: "Supports {{date:YYYY-MM-DD}} and {{time:HHmm}} templates variables.",
               invalid: "Contains illegal characters."
             }
           },
@@ -28449,6 +28453,7 @@ i18next_default.init({
               },
               "name-taken-error": "A note with that name already exists.",
               "empty-name-error": "Name can't be empty.",
+              "dot-start-error": "File name must not start with a dot.",
               create: "Create note",
               readonly: {
                 title: "Read-only project",
@@ -29009,14 +29014,15 @@ function interpolateTemplate(template, data) {
 }
 
 // src/lib/data-api.ts
+var import_obsidian4 = require("obsidian");
 var DataApi = class {
-  constructor(app2) {
-    this.app = app2;
+  constructor(fileSystem2) {
+    this.fileSystem = fileSystem2;
   }
   updateRecord(fields, record) {
     return __async(this, null, function* () {
-      const file = this.app.vault.getAbstractFileByPath(record.id);
-      if (file instanceof import_obsidian4.TFile) {
+      const file = this.fileSystem.getFile(record.id);
+      if (file) {
         yield this.updateFile(
           file,
           (data) => doUpdateRecord(data, fields, record)
@@ -29024,50 +29030,48 @@ var DataApi = class {
       }
     });
   }
-  renameField(files, from, to) {
+  renameField(paths, from, to) {
     return __async(this, null, function* () {
-      for (const file of files) {
-        yield this.updateFile(file, (data) => doRenameField(data, from, to))();
-      }
+      Promise.all(
+        paths.map((path) => this.fileSystem.getFile(path)).filter(notEmpty).map(
+          (file) => this.updateFile(file, (data) => doRenameField(data, from, to))()
+        )
+      );
     });
   }
-  deleteField(files, name) {
+  deleteField(paths, name) {
     return __async(this, null, function* () {
-      for (const file of files) {
-        yield this.updateFile(file, (data) => doDeleteField(data, name))();
-      }
+      Promise.all(
+        paths.map((path) => this.fileSystem.getFile(path)).filter(notEmpty).map(
+          (file) => this.updateFile(file, (data) => doDeleteField(data, name))()
+        )
+      );
     });
   }
   createNote(record, templatePath) {
     return __async(this, null, function* () {
       let content = "";
       if (templatePath) {
-        const templateFile = this.app.vault.getAbstractFileByPath(templatePath);
-        if (templateFile instanceof import_obsidian4.TFile) {
-          content = yield this.app.vault.read(templateFile);
+        const file2 = this.fileSystem.getFile(templatePath);
+        if (file2) {
+          content = yield file2.read();
           content = interpolateTemplate(content, {
-            title: () => {
-              var _a;
-              return (_a = record.values["name"]) != null ? _a : "";
-            },
+            title: () => getNameFromPath(record.id),
             date: (format2) => (0, import_moment.default)().format(format2 || "YYYY-MM-DD"),
             time: (format2) => (0, import_moment.default)().format(format2 || "HH:mm")
           });
         }
       }
-      const file = yield this.app.vault.create(record.id, content);
+      const file = yield this.fileSystem.create(record.id, content);
       yield this.updateFile(file, (data) => doUpdateRecord(data, [], record))();
-      return file;
     });
   }
   updateFile(file, cb) {
     return function_exports.pipe(
-      TaskEither_exports.tryCatch(() => this.app.vault.read(file), Either_exports.toError),
+      TaskEither_exports.tryCatch(() => file.read(), Either_exports.toError),
       TaskEither_exports.map(cb),
       TaskEither_exports.chain(TaskEither_exports.fromEither),
-      TaskEither_exports.chain(
-        (result) => TaskEither_exports.tryCatch(() => this.app.vault.modify(file, result), Either_exports.toError)
-      ),
+      TaskEither_exports.chain((result) => TaskEither_exports.tryCatch(() => file.write(result), Either_exports.toError)),
       Task_exports.map(
         Either_exports.fold(
           (err) => {
@@ -29081,9 +29085,9 @@ var DataApi = class {
   }
   deleteRecord(path) {
     return __async(this, null, function* () {
-      const file = this.app.vault.getAbstractFileByPath(path);
+      const file = this.fileSystem.getFile(path);
       if (file) {
-        this.app.vault.trash(file, true);
+        file.delete();
       }
     });
   }
@@ -29167,15 +29171,202 @@ function getDefaultStringType() {
   return (_c = (_b = (_a = get_store_value(settings).preferences) == null ? void 0 : _a.frontmatter) == null ? void 0 : _b.quoteStrings) != null ? _c : "PLAIN";
 }
 
+// src/lib/filesystem/obsidian/obsidian.ts
+var import_obsidian5 = require("obsidian");
+
+// src/lib/filesystem/filesystem.ts
+var IFile = class {
+  readValue(field) {
+    return __async(this, null, function* () {
+      const values = yield this.readValues();
+      return values[field];
+    });
+  }
+  writeValue(field, value) {
+    return __async(this, null, function* () {
+      this.writeValues(
+        immer_esm_default(yield this.readValues(), (draft) => {
+          draft[field] = value;
+        })
+      );
+    });
+  }
+  readValues() {
+    return __async(this, null, function* () {
+      const data = yield this.read();
+      const values = decodeFrontMatter(data);
+      return Either_exports.isRight(values) ? values.right : {};
+    });
+  }
+  writeValues(values) {
+    return __async(this, null, function* () {
+      const data = yield this.read();
+      const updatedData = encodeFrontMatter(data, values, "PLAIN");
+      if (Either_exports.isRight(updatedData)) {
+        this.write(updatedData.right);
+      }
+    });
+  }
+};
+
+// src/lib/filesystem/obsidian/obsidian.ts
+var ObsidianFile = class extends IFile {
+  constructor(file, app3) {
+    super();
+    this.file = file;
+    this.app = app3;
+  }
+  static of(path, app3) {
+    const file = app3.vault.getAbstractFileByPath((0, import_obsidian5.normalizePath)(path));
+    if (file instanceof import_obsidian5.TFile) {
+      return new ObsidianFile(file, app3);
+    }
+    throw new Error("Not a file");
+  }
+  get basename() {
+    return this.file.basename;
+  }
+  get path() {
+    return this.file.path;
+  }
+  read() {
+    return this.app.vault.read(this.file);
+  }
+  write(content) {
+    return this.app.vault.modify(this.file, content);
+  }
+  delete() {
+    return this.app.vault.trash(this.file, true);
+  }
+  readTags() {
+    const cache = this.app.metadataCache.getFileCache(this.file);
+    if (cache) {
+      return parseTags(cache);
+    }
+    return /* @__PURE__ */ new Set();
+  }
+};
+var ObsidianFileSystem = class {
+  constructor(app3) {
+    this.app = app3;
+  }
+  create(path, content) {
+    return __async(this, null, function* () {
+      const file = yield this.app.vault.create((0, import_obsidian5.normalizePath)(path), content);
+      return new ObsidianFile(file, this.app);
+    });
+  }
+  read(path) {
+    return __async(this, null, function* () {
+      const file = this.app.vault.getAbstractFileByPath((0, import_obsidian5.normalizePath)(path));
+      if (file instanceof import_obsidian5.TFile) {
+        return this.app.vault.cachedRead(file);
+      }
+      return "";
+    });
+  }
+  write(path, content) {
+    return __async(this, null, function* () {
+      const file = this.app.vault.getAbstractFileByPath((0, import_obsidian5.normalizePath)(path));
+      if (file instanceof import_obsidian5.TFile) {
+        return this.app.vault.modify(file, content);
+      }
+    });
+  }
+  delete(path) {
+    return __async(this, null, function* () {
+      const file = this.app.vault.getAbstractFileByPath((0, import_obsidian5.normalizePath)(path));
+      if (file instanceof import_obsidian5.TFile) {
+        return this.app.vault.trash(file, true);
+      }
+    });
+  }
+  getFile(path) {
+    return ObsidianFile.of(path, this.app);
+  }
+  getAllFiles() {
+    return this.app.vault.getMarkdownFiles().map((file) => new ObsidianFile(file, this.app));
+  }
+};
+var ObsidianFileSystemWatcher = class {
+  constructor(plugin2) {
+    this.plugin = plugin2;
+  }
+  onCreate(callback) {
+    this.plugin.registerEvent(
+      this.plugin.app.vault.on("create", (file) => {
+        if (file instanceof import_obsidian5.TFile) {
+          callback(new ObsidianFile(file, app));
+        }
+      })
+    );
+  }
+  onChange(callback) {
+    this.plugin.registerEvent(
+      this.plugin.app.metadataCache.on("changed", (file) => {
+        if (file instanceof import_obsidian5.TFile) {
+          callback(new ObsidianFile(file, app));
+        }
+      })
+    );
+  }
+  onDelete(callback) {
+    this.plugin.registerEvent(
+      this.plugin.app.vault.on("delete", (file) => {
+        if (file instanceof import_obsidian5.TFile) {
+          callback(new ObsidianFile(file, app));
+        }
+      })
+    );
+  }
+  onRename(callback) {
+    this.plugin.registerEvent(
+      this.plugin.app.vault.on("rename", (file, oldPath) => {
+        if (file instanceof import_obsidian5.TFile) {
+          callback(new ObsidianFile(file, app), oldPath);
+        }
+      })
+    );
+  }
+};
+function parseTags(cache) {
+  var _a, _b, _c, _d;
+  const allTags = /* @__PURE__ */ new Set();
+  const markdownTags = (_b = (_a = cache.tags) == null ? void 0 : _a.map((tag) => tag.tag)) != null ? _b : [];
+  markdownTags.forEach((tag) => allTags.add(tag));
+  parseFrontMatterTags((_c = cache.frontmatter) == null ? void 0 : _c["tags"]).forEach(
+    (tag) => allTags.add(tag)
+  );
+  parseFrontMatterTags((_d = cache.frontmatter) == null ? void 0 : _d["tag"]).forEach(
+    (tag) => allTags.add(tag)
+  );
+  return allTags;
+}
+function parseFrontMatterTags(property) {
+  const res = [];
+  if (typeof property === "string") {
+    property.split(",").map((tag) => "#" + tag.trim()).forEach((tag) => res.push(tag));
+  } else if (Array.isArray(property)) {
+    property.filter(notEmpty).map((tag) => "#" + tag.toString()).forEach((tag) => res.push(tag));
+  }
+  return res;
+}
+
+// src/lib/stores/fileSystem.ts
+var fileSystem = derived(app2, ($app) => new ObsidianFileSystem($app));
+
 // src/lib/stores/api.ts
-var api = derived(app, ($app) => new DataApi($app));
+var api = derived(
+  fileSystem,
+  ($fileSystem) => new DataApi($fileSystem)
+);
 
 // src/modals/create-note-modal.ts
 var import_moment2 = __toESM(require_moment());
-var import_obsidian11 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 
 // src/modals/components/CreateNote.svelte
-var import_obsidian8 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 
 // node_modules/@popperjs/core/lib/enums.js
 var top = "top";
@@ -31596,12 +31787,12 @@ var IconButton = class extends SvelteComponent {
 var IconButton_default = IconButton;
 
 // node_modules/obsidian-svelte/Icon/useIcon.js
-var import_obsidian6 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 function useIcon(node, name) {
-  (0, import_obsidian6.setIcon)(node, name);
+  (0, import_obsidian8.setIcon)(node, name);
   return {
     update(name2) {
-      (0, import_obsidian6.setIcon)(node, name2);
+      (0, import_obsidian8.setIcon)(node, name2);
     }
   };
 }
@@ -35094,19 +35285,11 @@ function useClickOutside2(element2, callbackFunction) {
 }
 
 // src/lib/obsidian.ts
-var import_obsidian7 = require("obsidian");
-function isTFile(value) {
-  return value instanceof import_obsidian7.TFile;
-}
-function filesFromRecords(app2, records) {
-  return records.map((record) => record.id).map((path) => {
-    return app2.vault.getAbstractFileByPath(path);
-  }).filter(isTFile);
-}
+var import_obsidian9 = require("obsidian");
 function getFilesInFolder(folder) {
   const result = [];
-  import_obsidian7.Vault.recurseChildren(folder, (file) => {
-    if (file instanceof import_obsidian7.TFile) {
+  import_obsidian9.Vault.recurseChildren(folder, (file) => {
+    if (file instanceof import_obsidian9.TFile) {
       result.push(file);
     }
   });
@@ -35114,8 +35297,8 @@ function getFilesInFolder(folder) {
 }
 function getFoldersInFolder(folder) {
   const result = [];
-  import_obsidian7.Vault.recurseChildren(folder, (file) => {
-    if (file instanceof import_obsidian7.TFolder) {
+  import_obsidian9.Vault.recurseChildren(folder, (file) => {
+    if (file instanceof import_obsidian9.TFolder) {
       result.push(file);
     }
   });
@@ -35129,9 +35312,9 @@ function isValidPath(path) {
   return !expr.test(path);
 }
 function getIllegalCharacterSet() {
-  if (import_obsidian7.Platform.isMacOS) {
+  if (import_obsidian9.Platform.isMacOS) {
     return /[\\\/\|\#\^\[\]]/;
-  } else if (import_obsidian7.Platform.isDesktopApp) {
+  } else if (import_obsidian9.Platform.isDesktopApp) {
     return /[\\\/\|\:\<\>\*\"\?]/;
   }
   return void 0;
@@ -35615,22 +35798,25 @@ function instance31($$self, $$props, $$invalidate) {
   let $app;
   let $settings;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(5, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(11, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(11, $app = $$value));
   component_subscribe($$self, settings, ($$value) => $$invalidate(6, $settings = $$value));
   let { name } = $$props;
   let { project } = $$props;
   let { onSave } = $$props;
   let templatePath = "";
   function validateName(name2) {
-    if (name2 === "") {
+    if (name2.match(/^\s*$/)) {
       return $i18n.t("modals.note.create.empty-name-error");
     }
-    const existingFile = $app.vault.getAbstractFileByPath((0, import_obsidian8.normalizePath)(getNewNotesFolder(project) + "/" + name2 + ".md"));
-    if (existingFile instanceof import_obsidian8.TFile) {
+    const existingFile = $app.vault.getAbstractFileByPath((0, import_obsidian10.normalizePath)(getNewNotesFolder(project) + "/" + name2 + ".md"));
+    if (existingFile instanceof import_obsidian10.TFile) {
       return $i18n.t("modals.note.create.name-taken-error");
     }
     if (!isValidPath(name2)) {
       return $i18n.t("modals.project.defaultName.invalid");
+    }
+    if (name2.match(/^\x2E/)) {
+      return $i18n.t("modals.note.create.dot-start-error");
     }
     return "";
   }
@@ -35682,11 +35868,20 @@ var CreateNote = class extends SvelteComponent {
 var CreateNote_default = CreateNote;
 
 // src/modals/create-note-modal.ts
-var CreateNoteModal = class extends import_obsidian11.Modal {
-  constructor(app2, project, onSave) {
-    super(app2);
+var CreateNoteModal = class extends import_obsidian13.Modal {
+  constructor(app3, project, onSave) {
+    super(app3);
     this.project = project;
     this.onSave = onSave;
+  }
+  getNewNotesFolder(project) {
+    if (project.newNotesFolder) {
+      return project.newNotesFolder;
+    }
+    if (project.dataSource.kind === "folder") {
+      return project.dataSource.config.path;
+    }
+    return "";
   }
   onOpen() {
     this.component = new CreateNote_default({
@@ -35696,7 +35891,7 @@ var CreateNoteModal = class extends import_obsidian11.Modal {
           date: (format2) => (0, import_moment2.default)().format(format2 || "YYYY-MM-DD"),
           time: (format2) => (0, import_moment2.default)().format(format2 || "HH:mm")
         }) : nextUniqueFileName(
-          this.project.newNotesFolder,
+          this.getNewNotesFolder(this.project),
           get_store_value(i18n).t("modals.note.create.untitled")
         ),
         project: this.project,
@@ -35715,7 +35910,7 @@ var CreateNoteModal = class extends import_obsidian11.Modal {
 };
 
 // src/modals/create-project-modal.ts
-var import_obsidian17 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 
 // src/modals/components/CreateProject.svelte
 var import_moment3 = __toESM(require_moment());
@@ -35907,7 +36102,7 @@ function create_fragment32(ctx) {
 var func2 = (file) => file.path;
 function instance32($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(3, $app = $$value));
   let { paths } = $$props;
   let { onPathsChange } = $$props;
   let { buttonText } = $$props;
@@ -36234,7 +36429,7 @@ var AccordionItem_default = AccordionItem;
 
 // src/lib/stores/capabilities.ts
 var import_obsidian_dataview = __toESM(require_lib());
-var capabilities = derived(app, ($app) => {
+var capabilities = derived(app2, ($app) => {
   return {
     dataview: (0, import_obsidian_dataview.isPluginEnabled)($app)
   };
@@ -37673,7 +37868,7 @@ function instance35($$self, $$props, $$invalidate) {
   component_subscribe($$self, i18n, ($$value) => $$invalidate(6, $i18n = $$value));
   component_subscribe($$self, capabilities, ($$value) => $$invalidate(7, $capabilities = $$value));
   component_subscribe($$self, settings, ($$value) => $$invalidate(13, $settings = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(8, $app = $$value));
   var _a;
   let { title } = $$props;
   let { cta } = $$props;
@@ -37843,9 +38038,9 @@ var CreateProject = class extends SvelteComponent {
 var CreateProject_default = CreateProject;
 
 // src/modals/create-project-modal.ts
-var CreateProjectModal = class extends import_obsidian17.Modal {
-  constructor(app2, title, cta, onSave, defaults2) {
-    super(app2);
+var CreateProjectModal = class extends import_obsidian19.Modal {
+  constructor(app3, title, cta, onSave, defaults2) {
+    super(app3);
     this.title = title;
     this.cta = cta;
     this.onSave = onSave;
@@ -37871,10 +38066,6 @@ var CreateProjectModal = class extends import_obsidian17.Modal {
     }
   }
 };
-
-// src/events.ts
-var import_obsidian18 = require("obsidian");
-var import_obsidian_dataview3 = __toESM(require_lib());
 
 // src/lib/stores/dataframe.ts
 var dataSource = writable();
@@ -37975,9 +38166,6 @@ function createDataFrame() {
     }
   };
 }
-
-// src/lib/datasources/dataview/dataview.ts
-var import_obsidian_dataview2 = __toESM(require_lib());
 
 // src/lib/datasources/helpers.ts
 var import_dayjs3 = __toESM(require_dayjs_min());
@@ -38132,9 +38320,10 @@ var UnsupportedCapability = class extends Error {
   }
 };
 var DataviewDataSource = class extends DataSource {
-  constructor(app2, project, preferences) {
+  constructor(fileSystem2, project, preferences, api2) {
     super(project, preferences);
-    this.app = app2;
+    this.fileSystem = fileSystem2;
+    this.api = api2;
   }
   queryOne() {
     return __async(this, null, function* () {
@@ -38147,8 +38336,7 @@ var DataviewDataSource = class extends DataSource {
       if (this.project.dataSource.kind !== "dataview") {
         return emptyDataFrame;
       }
-      const api2 = this.getDataviewAPI();
-      const result = yield api2 == null ? void 0 : api2.query(
+      const result = yield this.api.query(
         (_a = this.project.dataSource.config.query) != null ? _a : "",
         void 0,
         {
@@ -38198,15 +38386,6 @@ var DataviewDataSource = class extends DataSource {
   readonly() {
     return true;
   }
-  getDataviewAPI() {
-    if ((0, import_obsidian_dataview2.isPluginEnabled)(this.app)) {
-      return (0, import_obsidian_dataview2.getAPI)(this.app);
-    } else {
-      throw new UnsupportedCapability(
-        get_store_value(i18n).t("errors.missingDataview.message")
-      );
-    }
-  }
   standardizeRecords(rows) {
     const records = [];
     rows.map((row) => ({ id: row["File"], row })).forEach(
@@ -38241,106 +38420,59 @@ function detectSchema(records) {
 }
 
 // src/events.ts
-function registerFileEvents(plugin2) {
-  if (get_store_value(capabilities).dataview) {
-    plugin2.registerEvent(
-      plugin2.app.metadataCache.on(
-        "dataview:metadata-change",
-        (type, file, oldPath) => __async(this, null, function* () {
-          if (file instanceof import_obsidian18.TFile) {
-            const source = get_store_value(dataSource);
-            if (!source) {
-              return;
-            }
-            if (source instanceof DataviewDataSource) {
-              dataSource.set(source);
-              return;
-            }
-            const recordExists = !!get_store_value(dataFrame).records.find(
-              (record) => record.id === file.path
-            );
-            if (source.includes(file.path)) {
-              switch (type) {
-                case "update":
-                  dataFrame.merge(
-                    yield source.queryOne(file, get_store_value(dataFrame).fields)
-                  );
-                  break;
-                case "delete":
-                  dataFrame.deleteRecord(file.path);
-                  break;
-                case "rename":
-                  dataFrame.deleteRecord(oldPath);
-                  dataFrame.merge(
-                    yield source.queryOne(file, get_store_value(dataFrame).fields)
-                  );
-                  break;
-              }
-            } else if (recordExists) {
-              dataFrame.deleteRecord(file.path);
-            }
-          }
-        })
-      )
-    );
-  } else {
-    plugin2.registerEvent(
-      plugin2.app.vault.on("create", (file) => __async(this, null, function* () {
-        if (file instanceof import_obsidian18.TFile) {
-          const source = get_store_value(dataSource);
-          if (source == null ? void 0 : source.includes(file.path)) {
-            dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
-          }
-        }
-      }))
-    );
-    plugin2.registerEvent(
-      plugin2.app.vault.on("rename", (file, oldPath) => __async(this, null, function* () {
-        if (file instanceof import_obsidian18.TFile) {
-          const source = get_store_value(dataSource);
-          if (source == null ? void 0 : source.includes(file.path)) {
-            dataFrame.deleteRecord(oldPath);
-            dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
-          }
-        }
-      }))
-    );
-    plugin2.registerEvent(
-      plugin2.app.vault.on("delete", (file) => {
-        if (file instanceof import_obsidian18.TFile) {
-          const source = get_store_value(dataSource);
-          if (source == null ? void 0 : source.includes(file.path)) {
-            dataFrame.deleteRecord(file.path);
-          }
-        }
-      })
-    );
-    plugin2.registerEvent(
-      plugin2.app.metadataCache.on("changed", (file) => __async(this, null, function* () {
-        if (file instanceof import_obsidian18.TFile) {
-          const source = get_store_value(dataSource);
-          if (!source) {
-            return;
-          }
-          const recordExists = !!get_store_value(dataFrame).records.find(
-            (record) => record.id === file.path
-          );
-          if (source.includes(file.path)) {
-            dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
-          } else if (recordExists) {
-            dataFrame.deleteRecord(file.path);
-          }
-        }
-      }))
-    );
+function withDataSource(cb) {
+  const source = get_store_value(dataSource);
+  if (!source) {
+    return;
   }
+  if (source instanceof DataviewDataSource) {
+    dataSource.set(source);
+    return;
+  }
+  return cb(source);
+}
+function registerFileEvents(watcher) {
+  watcher.onCreate((file) => __async(this, null, function* () {
+    withDataSource((source) => __async(this, null, function* () {
+      if (source.includes(file.path)) {
+        dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
+      }
+    }));
+  }));
+  watcher.onRename((file, oldPath) => __async(this, null, function* () {
+    withDataSource((source) => __async(this, null, function* () {
+      if (source.includes(file.path)) {
+        dataFrame.deleteRecord(oldPath);
+        dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
+      }
+    }));
+  }));
+  watcher.onDelete((file) => __async(this, null, function* () {
+    withDataSource((source) => __async(this, null, function* () {
+      if (source.includes(file.path)) {
+        dataFrame.deleteRecord(file.path);
+      }
+    }));
+  }));
+  watcher.onChange((file) => __async(this, null, function* () {
+    withDataSource((source) => __async(this, null, function* () {
+      const recordExists = !!get_store_value(dataFrame).records.find(
+        (record) => record.id === file.path
+      );
+      if (source.includes(file.path)) {
+        dataFrame.merge(yield source.queryOne(file, get_store_value(dataFrame).fields));
+      } else if (recordExists) {
+        dataFrame.deleteRecord(file.path);
+      }
+    }));
+  }));
 }
 
 // src/settings.ts
-var import_obsidian19 = require("obsidian");
-var ProjectsSettingTab = class extends import_obsidian19.PluginSettingTab {
-  constructor(app2, plugin2) {
-    super(app2, plugin2);
+var import_obsidian20 = require("obsidian");
+var ProjectsSettingTab = class extends import_obsidian20.PluginSettingTab {
+  constructor(app3, plugin2) {
+    super(app3, plugin2);
     this.plugin = plugin2;
   }
   display() {
@@ -38350,15 +38482,15 @@ var ProjectsSettingTab = class extends import_obsidian19.PluginSettingTab {
     };
     const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian19.Setting(containerEl).setName("Project size limit").setDesc("Avoid accidentally loading too many notes. Increasing ").addText(
+    new import_obsidian20.Setting(containerEl).setName("Project size limit").setDesc("Avoid accidentally loading too many notes. Increasing ").addText(
       (text2) => text2.setValue(preferences.projectSizeLimit.toString()).setPlaceholder("1000").onChange((value) => {
         save2(__spreadProps(__spreadValues({}, preferences), {
           projectSizeLimit: parseInt(value) || 1e3
         }));
       })
     );
-    new import_obsidian19.Setting(containerEl).setName("Front matter").setHeading();
-    new import_obsidian19.Setting(containerEl).setName("Quote strings").addDropdown(
+    new import_obsidian20.Setting(containerEl).setName("Front matter").setHeading();
+    new import_obsidian20.Setting(containerEl).setName("Quote strings").addDropdown(
       (dropdown) => dropdown.addOption("PLAIN", "If needed").addOption("QUOTE_DOUBLE", "Always").setValue(preferences.frontmatter.quoteStrings).onChange((value) => {
         if (value === "PLAIN" || value === "QUOTE_DOUBLE") {
           save2(__spreadProps(__spreadValues({}, preferences), {
@@ -38377,8 +38509,7 @@ var import_obsidian55 = require("obsidian");
 
 // src/lib/view-api.ts
 var ViewApi = class {
-  constructor(app2, dataSource2, dataApi) {
-    this.app = app2;
+  constructor(dataSource2, dataApi) {
     this.dataSource = dataSource2;
     this.dataApi = dataApi;
   }
@@ -38404,7 +38535,7 @@ var ViewApi = class {
     dataFrame.updateField(field, oldName);
     if (oldName) {
       this.dataApi.renameField(
-        filesFromRecords(this.app, get_store_value(dataFrame).records),
+        get_store_value(dataFrame).records.map((record) => record.id),
         oldName,
         field.name
       );
@@ -38413,7 +38544,7 @@ var ViewApi = class {
   deleteField(field) {
     dataFrame.deleteField(field);
     this.dataApi.deleteField(
-      filesFromRecords(this.app, get_store_value(dataFrame).records),
+      get_store_value(dataFrame).records.map((record) => record.id),
       field
     );
   }
@@ -40545,8 +40676,8 @@ var AddView_default = AddView;
 
 // src/modals/add-view-modal.ts
 var AddViewModal = class extends import_obsidian21.Modal {
-  constructor(app2, project, onSave) {
-    super(app2);
+  constructor(app3, project, onSave) {
+    super(app3);
     this.project = project;
     this.onSave = onSave;
   }
@@ -40893,8 +41024,8 @@ var ConfirmDialog_default = ConfirmDialog;
 
 // src/modals/confirm-dialog.ts
 var ConfirmDialogModal = class extends import_obsidian22.Modal {
-  constructor(app2, title, message, cta, onConfirm) {
-    super(app2);
+  constructor(app3, title, message, cta, onConfirm) {
+    super(app3);
     this.title = title;
     this.message = message;
     this.cta = cta;
@@ -41151,7 +41282,7 @@ function instance43($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(4, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(5, $app = $$value));
   let { projectId } = $$props;
   let { projects } = $$props;
   let { onProjectChange } = $$props;
@@ -44815,7 +44946,7 @@ function getFolder(recordId) {
 function instance47($$self, $$props, $$invalidate) {
   let $app;
   let $i18n;
-  component_subscribe($$self, app, ($$value) => $$invalidate(3, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(3, $app = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(4, $i18n = $$value));
   let { title } = $$props;
   let { errors } = $$props;
@@ -44848,8 +44979,8 @@ var Inspector_default = Inspector;
 
 // src/modals/inspector.ts
 var InspectorModal = class extends import_obsidian27.Modal {
-  constructor(app2, title, errors) {
-    super(app2);
+  constructor(app3, title, errors) {
+    super(app3);
     this.title = title;
     this.errors = errors;
   }
@@ -45854,7 +45985,7 @@ function instance48($$self, $$props, $$invalidate) {
   let $api;
   component_subscribe($$self, dataFrame, ($$value) => $$invalidate(6, $dataFrame = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(13, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(14, $app = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(15, $api = $$value));
   var _a, _b;
   let { projects } = $$props;
@@ -46803,8 +46934,9 @@ var Onboarding_default = Onboarding;
 
 // src/app/onboarding/onboarding-modal.ts
 var OnboardingModal = class extends import_obsidian31.Modal {
-  constructor(app2, onCreate, onTry) {
-    super(app2);
+  constructor(app3, onCreate, onTry) {
+    super(app3);
+    this.app = app3;
     this.onCreate = onCreate;
     this.onTry = onTry;
   }
@@ -47125,6 +47257,12 @@ function __awaiter2(thisArg, _arguments, P2, generator) {
   });
 }
 
+// src/app/DataFrameProvider.svelte
+var import_obsidian_dataview2 = __toESM(require_lib());
+
+// src/lib/datasources/folder/folder.ts
+var import_obsidian32 = require("obsidian");
+
 // src/lib/datasources/frontmatter/frontmatter-helpers.ts
 function standardizeRecord(id, values) {
   return {
@@ -47135,9 +47273,9 @@ function standardizeRecord(id, values) {
 
 // src/lib/datasources/frontmatter/frontmatter.ts
 var FrontMatterDataSource = class extends DataSource {
-  constructor(app2, project, preferences) {
+  constructor(fileSystem2, project, preferences) {
     super(project, preferences);
-    this.app = app2;
+    this.fileSystem = fileSystem2;
   }
   queryOne(file, fields) {
     return __async(this, null, function* () {
@@ -47146,7 +47284,7 @@ var FrontMatterDataSource = class extends DataSource {
   }
   queryAll() {
     return __async(this, null, function* () {
-      const files = this.app.vault.getMarkdownFiles().filter((file) => this.includes(file.path));
+      const files = this.fileSystem.getAllFiles().filter(({ path }) => this.includes(path));
       if (files.length > this.preferences.projectSizeLimit) {
         throw new TooManyNotesError(
           files.length,
@@ -47158,7 +47296,7 @@ var FrontMatterDataSource = class extends DataSource {
   }
   queryFiles(files, predefinedFields) {
     return __async(this, null, function* () {
-      const standardizedRecords = yield standardizeRecords(files, this.app.vault);
+      const standardizedRecords = yield standardizeRecords(files);
       const res = Array_exports.separate(standardizedRecords);
       let fields = this.sortFields(detectSchema2(res.right));
       for (const f2 in this.project.fieldConfig) {
@@ -47201,12 +47339,12 @@ var RecordError = class extends Error {
     this.err = err;
   }
 };
-function standardizeRecords(files, vault) {
+function standardizeRecords(files) {
   return __async(this, null, function* () {
     return Promise.all(
       files.map((file) => __async(this, null, function* () {
         return function_exports.pipe(
-          yield vault.read(file),
+          yield file.read(),
           decodeFrontMatter,
           Either_exports.mapLeft((e) => new RecordError(file.path, e)),
           Either_exports.map(filterUndefinedValues),
@@ -47243,9 +47381,9 @@ function detectSchema2(records) {
 
 // src/lib/datasources/folder/folder.ts
 var FolderDataSource = class extends FrontMatterDataSource {
-  constructor(app2, project, preferences) {
-    super(app2, project, preferences);
-    this.app = app2;
+  constructor(fileSystem2, project, preferences) {
+    super(fileSystem2, project, preferences);
+    this.fileSystem = fileSystem2;
   }
   includes(path) {
     var _a;
@@ -47255,25 +47393,31 @@ var FolderDataSource = class extends FrontMatterDataSource {
     if ((_a = this.project.excludedNotes) == null ? void 0 : _a.includes(path)) {
       return false;
     }
-    const trimmedPath = this.project.dataSource.config.path.startsWith("/") ? this.project.dataSource.config.path.slice(1) : this.project.dataSource.config.path;
-    if (!path.startsWith(trimmedPath)) {
+    let projectPath = (0, import_obsidian32.normalizePath)(this.project.dataSource.config.path);
+    if (projectPath === "/") {
+      projectPath = "";
+    }
+    const normalizedPath = (0, import_obsidian32.normalizePath)(path);
+    if (!normalizedPath.startsWith(projectPath)) {
       return false;
     }
     if (!this.project.dataSource.config.recursive) {
-      const pathElements = path.split("/").slice(0, -1);
-      const projectPathElements = trimmedPath.split("/").filter((el) => el);
-      return pathElements.join("/") === projectPathElements.join("/");
+      return folderContainsPath(projectPath, normalizedPath);
     }
     return true;
   }
 };
+function folderContainsPath(folderPath, filePath) {
+  const fileElements = filePath.split("/").slice(0, -1);
+  const folderElement = folderPath.split("/").filter((el) => el);
+  return fileElements.join("/") === folderElement.join("/");
+}
 
 // src/lib/datasources/tag/tag.ts
-var import_obsidian32 = require("obsidian");
 var TagDataSource = class extends FrontMatterDataSource {
-  constructor(app2, project, preferences) {
-    super(app2, project, preferences);
-    this.app = app2;
+  constructor(fileSystem2, project, preferences) {
+    super(fileSystem2, project, preferences);
+    this.fileSystem = fileSystem2;
   }
   includes(path) {
     var _a;
@@ -47284,36 +47428,13 @@ var TagDataSource = class extends FrontMatterDataSource {
       return false;
     }
     const { tag } = this.project.dataSource.config;
-    const file = this.app.vault.getAbstractFileByPath(path);
-    if (file instanceof import_obsidian32.TFile) {
-      const cache = this.app.metadataCache.getFileCache(file);
-      return cache ? parseTags(cache).has(tag) : false;
+    const file = this.fileSystem.getFile(path);
+    if (file) {
+      return file.readTags().has(tag);
     }
     return false;
   }
 };
-function parseTags(cache) {
-  var _a, _b, _c, _d;
-  const allTags = /* @__PURE__ */ new Set();
-  const markdownTags = (_b = (_a = cache.tags) == null ? void 0 : _a.map((tag) => tag.tag)) != null ? _b : [];
-  markdownTags.forEach((tag) => allTags.add(tag));
-  parseFrontMatterTags((_c = cache.frontmatter) == null ? void 0 : _c["tags"]).forEach(
-    (tag) => allTags.add(tag)
-  );
-  parseFrontMatterTags((_d = cache.frontmatter) == null ? void 0 : _d["tag"]).forEach(
-    (tag) => allTags.add(tag)
-  );
-  return allTags;
-}
-function parseFrontMatterTags(property) {
-  const res = [];
-  if (typeof property === "string") {
-    property.split(",").map((tag) => "#" + tag.trim()).forEach((tag) => res.push(tag));
-  } else if (Array.isArray(property)) {
-    property.map((tag) => "#" + tag.toString()).forEach((tag) => res.push(tag));
-  }
-  return res;
-}
 
 // src/app/DataFrameProvider.svelte
 var get_default_slot_changes2 = (dirty) => ({
@@ -47330,7 +47451,7 @@ function create_catch_block_1(ctx) {
   let current;
   callout = new Callout_default({
     props: {
-      title: ctx[14].name,
+      title: ctx[16].name,
       icon: "zap",
       variant: "danger",
       $$slots: { default: [create_default_slot16] },
@@ -47351,8 +47472,8 @@ function create_catch_block_1(ctx) {
     p(ctx2, dirty) {
       const callout_changes = {};
       if (dirty & 2)
-        callout_changes.title = ctx2[14].name;
-      if (dirty & 1026) {
+        callout_changes.title = ctx2[16].name;
+      if (dirty & 514) {
         callout_changes.$$scope = { dirty, ctx: ctx2 };
       }
       callout.$set(callout_changes);
@@ -47375,7 +47496,7 @@ function create_catch_block_1(ctx) {
   };
 }
 function create_default_slot_116(ctx) {
-  let t_value = ctx[14].message + "";
+  let t_value = ctx[16].message + "";
   let t3;
   return {
     c() {
@@ -47385,7 +47506,7 @@ function create_default_slot_116(ctx) {
       insert(target, t3, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 2 && t_value !== (t_value = ctx2[14].message + ""))
+      if (dirty & 2 && t_value !== (t_value = ctx2[16].message + ""))
         set_data(t3, t_value);
     },
     d(detaching) {
@@ -47414,7 +47535,7 @@ function create_default_slot16(ctx) {
     },
     p(ctx2, dirty) {
       const typography_changes = {};
-      if (dirty & 1026) {
+      if (dirty & 514) {
         typography_changes.$$scope = { dirty, ctx: ctx2 };
       }
       typography.$set(typography_changes);
@@ -47436,8 +47557,8 @@ function create_default_slot16(ctx) {
 }
 function create_then_block_1(ctx) {
   let current;
-  const default_slot_template = ctx[9].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[10], get_default_slot_context2);
+  const default_slot_template = ctx[8].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[9], get_default_slot_context2);
   return {
     c() {
       if (default_slot)
@@ -47451,13 +47572,13 @@ function create_then_block_1(ctx) {
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 1029)) {
+        if (default_slot.p && (!current || dirty & 517)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
-            ctx2[10],
-            !current ? get_all_dirty_from_scope(ctx2[10]) : get_slot_changes(default_slot_template, ctx2[10], dirty, get_default_slot_changes2),
+            ctx2[9],
+            !current ? get_all_dirty_from_scope(ctx2[9]) : get_slot_changes(default_slot_template, ctx2[9], dirty, get_default_slot_changes2),
             get_default_slot_context2
           );
         }
@@ -47588,7 +47709,7 @@ function create_fragment52(ctx) {
     pending: create_pending_block,
     then: create_then_block_1,
     catch: create_catch_block_1,
-    error: 14,
+    error: 16,
     blocks: [, , ,]
   };
   handle_promise(promise2 = ctx[1], info);
@@ -47643,12 +47764,14 @@ function instance52($$self, $$props, $$invalidate) {
   let projectAsText;
   let reassembledProject;
   let $settings;
-  let $dataSource;
+  let $fileSystem;
   let $app;
+  let $dataSource;
   let $dataFrame;
-  component_subscribe($$self, settings, ($$value) => $$invalidate(11, $settings = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(10, $settings = $$value));
+  component_subscribe($$self, fileSystem, ($$value) => $$invalidate(11, $fileSystem = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(12, $app = $$value));
   component_subscribe($$self, dataSource, ($$value) => $$invalidate(0, $dataSource = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(8, $app = $$value));
   component_subscribe($$self, dataFrame, ($$value) => $$invalidate(2, $dataFrame = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
   let { project } = $$props;
@@ -47657,14 +47780,25 @@ function instance52($$self, $$props, $$invalidate) {
     return foo;
   }
   let querying;
-  function resolveDataSource(project2, app2) {
+  function getDataviewAPI() {
+    if ((0, import_obsidian_dataview2.isPluginEnabled)($app)) {
+      return (0, import_obsidian_dataview2.getAPI)($app);
+    } else {
+      throw new UnsupportedCapability(get_store_value(i18n).t("errors.missingDataview.message"));
+    }
+  }
+  function resolveDataSource(project2) {
     switch (project2.dataSource.kind) {
       case "dataview":
-        return new DataviewDataSource(app2, project2, $settings.preferences);
+        const dataviewApi = getDataviewAPI();
+        if (!dataviewApi) {
+          throw new Error("Couldn't connect to Dataview. Is the Dataview plugin enabled?");
+        }
+        return new DataviewDataSource($fileSystem, project2, $settings.preferences, dataviewApi);
       case "tag":
-        return new TagDataSource(app2, project2, $settings.preferences);
+        return new TagDataSource($fileSystem, project2, $settings.preferences);
       default:
-        return new FolderDataSource(app2, project2, $settings.preferences);
+        return new FolderDataSource($fileSystem, project2, $settings.preferences);
     }
   }
   const wait2 = () => new Promise((res) => setTimeout(res, 500));
@@ -47672,7 +47806,7 @@ function instance52($$self, $$props, $$invalidate) {
     if ("project" in $$props2)
       $$invalidate(4, project = $$props2.project);
     if ("$$scope" in $$props2)
-      $$invalidate(10, $$scope = $$props2.$$scope);
+      $$invalidate(9, $$scope = $$props2.$$scope);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & 16) {
@@ -47687,9 +47821,9 @@ function instance52($$self, $$props, $$invalidate) {
       $:
         $$invalidate(5, reassembledProject = reassemble(projectAsText));
     }
-    if ($$self.$$.dirty & 288) {
+    if ($$self.$$.dirty & 32) {
       $:
-        dataSource.set(resolveDataSource(reassembledProject, $app));
+        dataSource.set(resolveDataSource(reassembledProject));
     }
     if ($$self.$$.dirty & 1) {
       $: {
@@ -47710,7 +47844,6 @@ function instance52($$self, $$props, $$invalidate) {
     reassembledProject,
     projectAsText,
     disassembedProject,
-    $app,
     slots,
     $$scope
   ];
@@ -47767,7 +47900,7 @@ function create_if_block15(ctx) {
       const dataframeprovider_changes = {};
       if (dirty & 16)
         dataframeprovider_changes.project = ctx2[4];
-      if (dirty & 106616) {
+      if (dirty & 102456) {
         dataframeprovider_changes.$$scope = { dirty, ctx: ctx2 };
       }
       dataframeprovider.$set(dataframeprovider_changes);
@@ -47795,7 +47928,7 @@ function create_if_block_19(ctx) {
       project: ctx[4],
       view: ctx[3],
       readonly: ctx[16].readonly(),
-      api: new ViewApi(ctx[5], ctx[16], ctx[6]),
+      api: new ViewApi(ctx[16], ctx[5]),
       onConfigChange: settings.updateViewConfig,
       frame: ctx[15]
     }
@@ -47816,8 +47949,8 @@ function create_if_block_19(ctx) {
         view_1_changes.view = ctx2[3];
       if (dirty & 65536)
         view_1_changes.readonly = ctx2[16].readonly();
-      if (dirty & 65632)
-        view_1_changes.api = new ViewApi(ctx2[5], ctx2[16], ctx2[6]);
+      if (dirty & 65568)
+        view_1_changes.api = new ViewApi(ctx2[16], ctx2[5]);
       if (dirty & 32768)
         view_1_changes.frame = ctx2[15];
       view_1.$set(view_1_changes);
@@ -47841,8 +47974,8 @@ function create_default_slot17(ctx) {
   let t3;
   let current;
   let if_block = ctx[4] && ctx[3] && ctx[16] && create_if_block_19(ctx);
-  const default_slot_template = ctx[10].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[13], get_default_slot_context3);
+  const default_slot_template = ctx[9].default;
+  const default_slot = create_slot(default_slot_template, ctx, ctx[12], get_default_slot_context3);
   return {
     c() {
       if (if_block)
@@ -47881,13 +48014,13 @@ function create_default_slot17(ctx) {
         check_outros();
       }
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 106520)) {
+        if (default_slot.p && (!current || dirty & 102424)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
-            ctx2[13],
-            !current ? get_all_dirty_from_scope(ctx2[13]) : get_slot_changes(default_slot_template, ctx2[13], dirty, get_default_slot_changes3),
+            ctx2[12],
+            !current ? get_all_dirty_from_scope(ctx2[12]) : get_slot_changes(default_slot_template, ctx2[12], dirty, get_default_slot_changes3),
             get_default_slot_context3
           );
         }
@@ -47926,9 +48059,9 @@ function create_fragment53(ctx) {
     props: {
       projects: ctx[2],
       projectId: (_a = ctx[4]) == null ? void 0 : _a.id,
-      onProjectChange: ctx[11],
+      onProjectChange: ctx[10],
       viewId: (_b = ctx[3]) == null ? void 0 : _b.id,
-      onViewChange: ctx[12]
+      onViewChange: ctx[11]
     }
   });
   let if_block = ctx[4] && create_if_block15(ctx);
@@ -47960,11 +48093,11 @@ function create_fragment53(ctx) {
       if (dirty & 16)
         toolbar_changes.projectId = (_a2 = ctx2[4]) == null ? void 0 : _a2.id;
       if (dirty & 1)
-        toolbar_changes.onProjectChange = ctx2[11];
+        toolbar_changes.onProjectChange = ctx2[10];
       if (dirty & 8)
         toolbar_changes.viewId = (_b2 = ctx2[3]) == null ? void 0 : _b2.id;
       if (dirty & 2)
-        toolbar_changes.onViewChange = ctx2[12];
+        toolbar_changes.onViewChange = ctx2[11];
       toolbar.$set(toolbar_changes);
       if (ctx2[4]) {
         if (if_block) {
@@ -48017,10 +48150,10 @@ function instance53($$self, $$props, $$invalidate) {
   let $i18n;
   let $settings;
   let $api;
-  component_subscribe($$self, app, ($$value) => $$invalidate(5, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(13, $app = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(14, $i18n = $$value));
-  component_subscribe($$self, settings, ($$value) => $$invalidate(9, $settings = $$value));
-  component_subscribe($$self, api, ($$value) => $$invalidate(6, $api = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(8, $settings = $$value));
+  component_subscribe($$self, api, ($$value) => $$invalidate(5, $api = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
   let projectId;
   let viewId;
@@ -48041,26 +48174,26 @@ function instance53($$self, $$props, $$invalidate) {
   const func_14 = (id) => $$invalidate(1, viewId = id);
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
-      $$invalidate(13, $$scope = $$props2.$$scope);
+      $$invalidate(12, $$scope = $$props2.$$scope);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 512) {
+    if ($$self.$$.dirty & 256) {
       $:
         $$invalidate(2, { projects } = $settings, projects);
     }
     if ($$self.$$.dirty & 4) {
       $:
-        $$invalidate(8, defaultProject = projects.find((project2) => project2.isDefault));
+        $$invalidate(7, defaultProject = projects.find((project2) => project2.isDefault));
     }
-    if ($$self.$$.dirty & 261) {
+    if ($$self.$$.dirty & 133) {
       $:
         $$invalidate(4, project = projects.find((project2) => projectId === project2.id) || defaultProject || projects[0]);
     }
     if ($$self.$$.dirty & 16) {
       $:
-        $$invalidate(7, views = (project === null || project === void 0 ? void 0 : project.views) || []);
+        $$invalidate(6, views = (project === null || project === void 0 ? void 0 : project.views) || []);
     }
-    if ($$self.$$.dirty & 130) {
+    if ($$self.$$.dirty & 66) {
       $:
         $$invalidate(3, view2 = views.find((view3) => viewId === view3.id) || views[0]);
     }
@@ -48071,7 +48204,6 @@ function instance53($$self, $$props, $$invalidate) {
     projects,
     view2,
     project,
-    $app,
     $api,
     views,
     defaultProject,
@@ -48082,13 +48214,13 @@ function instance53($$self, $$props, $$invalidate) {
     $$scope
   ];
 }
-var App9 = class extends SvelteComponent {
+var App10 = class extends SvelteComponent {
   constructor(options) {
     super();
     init4(this, options, instance53, create_fragment53, safe_not_equal, {}, add_css27);
   }
 };
-var App_default = App9;
+var App_default = App10;
 
 // src/custom-view-api.ts
 var ProjectView = class {
@@ -48759,8 +48891,8 @@ var InputDialog_default = InputDialog;
 
 // src/modals/input-dialog.ts
 var InputDialogModal = class extends import_obsidian35.Modal {
-  constructor(app2, message, cta, onSubmit, value) {
-    super(app2);
+  constructor(app3, message, cta, onSubmit, value) {
+    super(app3);
     this.message = message;
     this.cta = cta;
     this.onSubmit = onSubmit;
@@ -49176,7 +49308,7 @@ function create_fragment59(ctx) {
 function instance59($$self, $$props, $$invalidate) {
   let stringValues;
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(4, $app = $$value));
   let { values } = $$props;
   let { edit = false } = $$props;
   let { onChange = () => {
@@ -50142,8 +50274,8 @@ var EditNote_default = EditNote;
 
 // src/modals/edit-note-modal.ts
 var EditNoteModal = class extends import_obsidian37.Modal {
-  constructor(app2, fields, onSave, defaults2) {
-    super(app2);
+  constructor(app3, fields, onSave, defaults2) {
+    super(app3);
     this.fields = fields;
     this.onSave = onSave;
     this.defaults = defaults2;
@@ -52744,7 +52876,7 @@ function create_fragment65(ctx) {
 function instance65($$self, $$props, $$invalidate) {
   let $app;
   let $view;
-  component_subscribe($$self, app, ($$value) => $$invalidate(6, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(6, $app = $$value));
   component_subscribe($$self, view, ($$value) => $$invalidate(7, $view = $$value));
   let { value } = $$props;
   let { field } = $$props;
@@ -53939,7 +54071,7 @@ function create_fragment70(ctx) {
 var flipDurationMs = 200;
 function instance70($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(4, $app = $$value));
   let { items } = $$props;
   let { onRecordClick } = $$props;
   let { onDrop = () => {
@@ -54958,8 +55090,8 @@ var BoardSettings_default = BoardSettings;
 
 // src/views/Board/settings/settings-modal.ts
 var BoardSettingsModal = class extends import_obsidian41.Modal {
-  constructor(app2, config, onSave) {
-    super(app2);
+  constructor(app3, config, onSave) {
+    super(app3);
     this.config = config;
     this.onSave = onSave;
   }
@@ -55465,7 +55597,7 @@ function instance74($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(9, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(9, $app = $$value));
   let { project } = $$props;
   let { frame } = $$props;
   let { readonly } = $$props;
@@ -56845,7 +56977,7 @@ function asOptionalBoolean(value) {
 }
 function instance81($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(4, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(4, $app = $$value));
   let { records } = $$props;
   let { checkField } = $$props;
   let { onRecordClick } = $$props;
@@ -58362,7 +58494,7 @@ function instance86($$self, $$props, $$invalidate) {
   let weekDays;
   let $app;
   let $i18n;
-  component_subscribe($$self, app, ($$value) => $$invalidate(39, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(39, $app = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(11, $i18n = $$value));
   var _a, _b;
   let { project } = $$props;
@@ -58403,7 +58535,7 @@ function instance86($$self, $$props, $$invalidate) {
   function handleRecordClick(entry) {
     if (entry) {
       new EditNoteModal(
-        get_store_value(app),
+        get_store_value(app2),
         fields,
         (record) => {
           api2.updateRecord(record, fields);
@@ -59271,8 +59403,8 @@ var GallerySettings_default = GallerySettings;
 
 // src/views/Gallery/settings/settings-modal.ts
 var GallerySettingsModal = class extends import_obsidian46.Modal {
-  constructor(app2, config, onSave) {
-    super(app2);
+  constructor(app3, config, onSave) {
+    super(app3);
     this.config = config;
     this.onSave = onSave;
   }
@@ -60286,7 +60418,7 @@ function instance94($$self, $$props, $$invalidate) {
   let fitStyle;
   let $app;
   let $i18n;
-  component_subscribe($$self, app, ($$value) => $$invalidate(7, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(7, $app = $$value));
   component_subscribe($$self, i18n, ($$value) => $$invalidate(8, $i18n = $$value));
   var _a;
   let { frame } = $$props;
@@ -60675,7 +60807,7 @@ var Resizer_default = Resizer;
 
 // src/views/Table/components/DataGrid/GridCell/GridCell.svelte
 function add_css59(target) {
-  append_styles(target, "svelte-1glbfw2", "div.svelte-1glbfw2{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);width:100%;min-height:30px}.selected.svelte-1glbfw2{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-1glbfw2{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-1glbfw2{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-1glbfw2{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;padding:3px;gap:4px;position:relative}");
+  append_styles(target, "svelte-uwn3nn", "div.svelte-uwn3nn{display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-left-color:var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border);width:100%;min-height:30px}.selected.svelte-uwn3nn{box-shadow:0 0 0 3px var(--interactive-accent);z-index:4;padding:0}.columnHeader.svelte-uwn3nn{background-color:var(--background-secondary);font-weight:500;text-align:center;justify-content:space-between;padding:0 4px}.header.svelte-uwn3nn{background-color:var(--background-secondary);position:sticky;left:60px}.rowHeader.svelte-uwn3nn{left:0px;justify-content:center;z-index:5;background-color:var(--background-secondary);font-weight:500;padding:3px;gap:4px;position:sticky}");
 }
 var get_read_slot_changes_2 = (dirty) => ({});
 var get_read_slot_context_2 = (ctx) => ({});
@@ -60730,7 +60862,7 @@ function create_else_block_12(ctx) {
       attr(div, "aria-colindex", ctx[6]);
       attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
       attr(div, "tabindex", div_tabindex_value = !ctx[7] && !ctx[8] ? 1 : void 0);
-      attr(div, "class", "svelte-1glbfw2");
+      attr(div, "class", "svelte-uwn3nn");
       toggle_class(div, "header", ctx[5].header);
       toggle_class(div, "selected", ctx[0]);
       toggle_class(div, "rowHeader", ctx[8]);
@@ -60884,7 +61016,7 @@ function create_if_block32(ctx) {
       set_style(span, "height", "calc(100% - 8px)");
       attr(div, "role", div_role_value = ctx[17]());
       attr(div, "style", div_style_value = `width: ${ctx[5].width}px`);
-      attr(div, "class", "svelte-1glbfw2");
+      attr(div, "class", "svelte-uwn3nn");
       toggle_class(div, "rowHeader", ctx[8]);
     },
     m(target, anchor) {
@@ -61475,7 +61607,7 @@ function instance96($$self, $$props, $$invalidate) {
     }
   }
   function handleDoubleClick() {
-    if (!column.header && !columnHeader && !rowHeader) {
+    if (!column.header && !columnHeader && !rowHeader && column.editable) {
       onEditChange(true);
     }
   }
@@ -62709,14 +62841,17 @@ function create_if_block36(ctx) {
       insert(target, div, anchor);
       if (!mounted) {
         dispose = [
-          action_destroyer(useMarkdown_action = ctx[2].call(null, div)),
+          action_destroyer(useMarkdown_action = ctx[2].call(null, div, ctx[0])),
           listen(div, "click", ctx[3]),
           listen(div, "keypress", ctx[4])
         ];
         mounted = true;
       }
     },
-    p: noop,
+    p(ctx2, dirty) {
+      if (useMarkdown_action && is_function(useMarkdown_action.update) && dirty & 1)
+        useMarkdown_action.update.call(null, ctx2[0]);
+    },
     d(detaching) {
       if (detaching)
         detach(div);
@@ -62767,14 +62902,20 @@ function create_fragment102(ctx) {
 function instance102($$self, $$props, $$invalidate) {
   let $app;
   let $view;
-  component_subscribe($$self, app, ($$value) => $$invalidate(6, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(6, $app = $$value));
   component_subscribe($$self, view, ($$value) => $$invalidate(7, $view = $$value));
   var _a;
   let { value } = $$props;
   let { richText = false } = $$props;
   const sourcePath = (_a = getContext("sourcePath")) !== null && _a !== void 0 ? _a : "";
-  function useMarkdown(node) {
-    import_obsidian48.MarkdownRenderer.renderMarkdown(value, node, sourcePath, $view);
+  function useMarkdown(node, value2) {
+    import_obsidian48.MarkdownRenderer.renderMarkdown(value2, node, sourcePath, $view);
+    return {
+      update(newValue) {
+        node.empty();
+        import_obsidian48.MarkdownRenderer.renderMarkdown(newValue, node, sourcePath, $view);
+      }
+    };
   }
   function handleClick(event) {
     const targetEl = event.target;
@@ -64747,7 +64888,7 @@ function create_fragment108(ctx) {
 }
 function instance108($$self, $$props, $$invalidate) {
   let $app;
-  component_subscribe($$self, app, ($$value) => $$invalidate(14, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(14, $app = $$value));
   let { rowId } = $$props;
   let { index: index2 } = $$props;
   let { row } = $$props;
@@ -65294,10 +65435,14 @@ function instance109($$self, $$props, $$invalidate) {
   const func_3 = (rowId, row) => createRowMenu(rowId, row);
   const func_4 = (row, rowId, column) => createCellMenu(rowId, row, column);
   const navigate_handler = ({ detail: cell }) => {
-    $$invalidate(6, activeCell = [
-      clamp(cell[0], 2, sortedColumns.length + 1),
-      clamp(cell[1], 4, sortedRows.length + 3)
-    ]);
+    const colOffset = 1;
+    const rowOffset = 3;
+    const minColIdx = 1 + colOffset;
+    const maxColIdx = sortedColumns.length + colOffset;
+    const minRowIdx = 1 + rowOffset;
+    const maxRowIdx = sortedRows.length + rowOffset;
+    const [colIdx, rowIdx] = cell;
+    $$invalidate(6, activeCell = [clamp(colIdx, minColIdx, maxColIdx), clamp(rowIdx, minRowIdx, maxRowIdx)]);
   };
   const click_handler = () => onRowAdd();
   $$self.$$set = ($$props2) => {
@@ -66221,8 +66366,8 @@ var ConfigureField_default = ConfigureField;
 
 // src/modals/configure-field.ts
 var ConfigureFieldModal = class extends import_obsidian53.Modal {
-  constructor(app2, title, field, editable, onSave) {
-    super(app2);
+  constructor(app3, title, field, editable, onSave) {
+    super(app3);
     this.title = title;
     this.field = field;
     this.editable = editable;
@@ -66544,7 +66689,7 @@ function instance112($$self, $$props, $$invalidate) {
   let $i18n;
   let $app;
   component_subscribe($$self, i18n, ($$value) => $$invalidate(9, $i18n = $$value));
-  component_subscribe($$self, app, ($$value) => $$invalidate(10, $app = $$value));
+  component_subscribe($$self, app2, ($$value) => $$invalidate(10, $app = $$value));
   var _a, _b;
   let { project } = $$props;
   let { frame } = $$props;
@@ -66820,22 +66965,29 @@ var ProjectsView = class extends import_obsidian55.ItemView {
   }
   getViews() {
     const views = {};
-    for (const pluginId in this.app.plugins.plugins) {
-      if (this.app.plugins.enabledPlugins.has(pluginId)) {
-        const plugin2 = this.app.plugins.plugins[pluginId];
-        const registerView = plugin2 == null ? void 0 : plugin2.onRegisterProjectView;
-        if (registerView) {
-          const create = registerView.bind(plugin2);
-          const instance113 = create();
-          views[instance113.getViewType()] = instance113;
-        }
+    this.getEnabledPlugins().forEach((plugin2) => {
+      const registerView = plugin2.onRegisterProjectView;
+      if (registerView) {
+        const create = registerView.bind(plugin2);
+        const instance113 = create();
+        views[instance113.getViewType()] = instance113;
       }
-    }
+    });
     views["table"] = new TableView2();
     views["board"] = new BoardView2();
     views["calendar"] = new CalendarView2();
     views["gallery"] = new GalleryView2();
     return views;
+  }
+  getEnabledPlugins() {
+    const res = [];
+    for (const pluginId in this.app.plugins.plugins) {
+      const plugin2 = this.app.plugins.getPlugin(pluginId);
+      if (plugin2) {
+        res.push(plugin2);
+      }
+    }
+    return res;
   }
 };
 
@@ -66909,11 +67061,12 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
                 this.app,
                 projectDefinition,
                 (name, templatePath, project) => __async(this, null, function* () {
-                  const file = yield get_store_value(api).createNote(
-                    createDataRecord(name, project),
-                    templatePath
-                  );
-                  this.app.workspace.getLeaf(true).openFile(file);
+                  const record = createDataRecord(name, project);
+                  yield get_store_value(api).createNote(record, templatePath);
+                  const file = this.app.vault.getAbstractFileByPath(record.id);
+                  if (file instanceof import_obsidian57.TFile) {
+                    this.app.workspace.getLeaf(true).openFile(file);
+                  }
                 })
               ).open();
             }
@@ -66929,10 +67082,11 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
         "text",
         `<g transform="matrix(1,0,0,1,2,2)"><path d="M20,32L28,32L28,24L41.008,24L30.72,72L20,72L20,80L52,80L52,72L42.992,72L53.28,24L68,24L68,32L76,32L76,16L20,16L20,32Z" /></g>`
       );
-      app.set(this.app);
+      app2.set(this.app);
       plugin.set(this);
       yield this.loadSettings();
-      registerFileEvents(this);
+      const watcher = new ObsidianFileSystemWatcher(this);
+      registerFileEvents(watcher);
       this.unsubscribeSettings = settings.subscribe((value) => {
         this.saveData(value);
       });
