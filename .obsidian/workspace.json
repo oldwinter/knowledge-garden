@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md",
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "825306b471e29ce8",
+            "id": "27c40e1461456cd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "21b99cee549b0c7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/运动与健康/crossfit.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/168轻断食.md"
+                "file": "Calendar/Daily notes/2023-03-19.md"
               }
             }
           },
@@ -128,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/2-Area/运动与健康/168轻断食.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +178,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5
+    "width": 228.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -226,11 +213,12 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 386.5
+    "width": 386.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,39 +228,39 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "omnisearch:Omnisearch": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "825306b471e29ce8",
+  "active": "27c40e1461456cd2",
   "lastOpenFiles": [
-    "Calendar/Daily notes/不吃早餐不一定有多大危害.md",
+    "🍀 花园导览/🤖 如何用好AIGC工具.md",
+    "Calendar/Daily notes/2023-03-19.md",
+    "Cards/永久笔记/🔡PPV.md",
+    "Spaces/2-Area/运动与健康/crossfit.md",
+    "Sources/Newsletter + RSS/好工具周刊 - BestXTools.md",
+    "Sources/Newsletter + RSS/独立产品灵感周刊 DecoHack.md",
+    "Sources/Newsletter + RSS/产品沉思录 - 少楠.md",
+    "Sources/Articles/flomo101阅读笔记/为何要写卡片.md",
+    "Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md",
+    "Sources/Articles/flomo101阅读笔记/该积累什么领域知识.md",
+    "Sources/Articles/flomo101阅读笔记/∑ flomo101阅读笔记.md",
+    "🍀 花园导览/🧀 个人知识管理.md",
+    "AboutTheGarden.md",
+    "README.md",
+    "Cards/永久笔记/输入驱动输出，输出倒逼输入.md",
+    "Cards/永久笔记/要多分享自己的思考成果.md",
+    "Cards/永久笔记/本库如何免费发布至web.md",
+    "Extras/About Extras.md",
     "Calendar/Daily notes/2023-03-18.md",
+    "Spaces/2-Area/运动与健康/168轻断食.md",
+    "Calendar/Daily notes/不吃早餐不一定有多大危害.md",
     "Spaces/2-Area/运动与健康/鱼油.md",
     "Calendar/Daily notes/2023-03-11.md",
     "Calendar/Daily notes/2023-03-12.md",
     "Calendar/Daily notes/2023-03-13.md",
     "Calendar/Daily notes/2023-03-14.md",
-    "Calendar/Daily notes/2023-03-15.md",
-    "Calendar/Daily notes/2023-03-16.md",
-    "Calendar/Daily notes/2023-03-17.md",
-    "Calendar/Daily notes/GPT 加持时代的卡片笔记与双向链接 - Amazing.md",
-    "Spaces/2-Area/运动与健康/力量训练的每组重量选择变化逻辑 - 递增组、递减组、超级组.md",
-    "Cards/永久笔记/✨生活中只有一种英雄主义，那就是在认清生活真相之后依然热爱生活。——罗曼罗兰.md",
-    "Spaces/2-Area/运动与健康/EAA.md",
-    "Spaces/2-Area/运动与健康/蛋白粉.md",
-    "Spaces/2-Area/运动与健康/运动补剂的级别划分.md",
-    "Spaces/2-Area/运动与健康/氮泵.md",
-    "Spaces/2-Area/运动与健康/β-丙氨酸.md",
-    "Cards/永久笔记/渐进式总结.md",
-    "Spaces/3-Resource/思维工具/金字塔原理.md",
-    "Spaces/2-Area/运动与健康/168轻断食.md",
-    "Spaces/2-Area/运动与健康/crossfit.md",
-    "Spaces/2-Area/运动与健康/功能性训练.md",
-    "Spaces/2-Area/运动与健康/渐进式超负荷.md",
-    "Spaces/2-Area/运动与健康/力量训练.md",
-    "Spaces/2-Area/运动与健康/omega-3.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
