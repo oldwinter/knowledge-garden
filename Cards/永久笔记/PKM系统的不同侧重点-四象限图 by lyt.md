@@ -17,7 +17,7 @@ title: PKM系统的不同侧重点-四象限图 by lyt
 | - | folders | links |
 | --------- | -------- | ------- |
 | knowledge | [[Word]] |[[Wikipedia]] |
-| action | [[GTD]] |[[🔡PPV]] |
+| action | [[GTD]] |[[PPV]] |
 
 主流 PKM 方案各有侧重点。lyt 提出了一个 ACCESS 笔记组织方案，来尝试将这 PKM 系统的这 4 个维度的侧重点有机结合起来。
 

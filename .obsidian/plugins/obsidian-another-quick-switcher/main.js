@@ -744,32 +744,33 @@ var import_obsidian = require("obsidian");
 var MOD = import_obsidian.Platform.isMacOS ? "Cmd" : "Ctrl";
 var ALT = import_obsidian.Platform.isMacOS ? "Option" : "Alt";
 var quickResultSelectionModifier = (userAltInsteadOfModForQuickResultSelection) => userAltInsteadOfModForQuickResultSelection ? ALT : MOD;
-function hotkey2String(hotKey) {
-  if (!hotKey) {
+function hotkey2String(hotkey) {
+  if (!hotkey) {
     return "";
   }
-  const mods = hotKey.modifiers.join(" ");
-  return mods ? `${mods} ${hotKey.key}` : hotKey.key;
+  const mods = hotkey.modifiers.join(" ");
+  return mods ? `${mods} ${hotkey.key}` : hotkey.key;
 }
-function string2Hotkey(hotKey) {
+function string2Hotkey(hotKey, hideHotkeyGuide) {
   const keys = hotKey.split(" ");
   if (keys.length === 1) {
-    return keys[0] === "" ? null : { modifiers: [], key: keys[0] };
+    return keys[0] === "" ? null : { modifiers: [], key: keys[0], hideHotkeyGuide };
   }
   return {
     modifiers: keys.slice(0, -1),
-    key: keys.at(-1)
+    key: keys.at(-1),
+    hideHotkeyGuide
   };
 }
 function createInstructions(hotkeysByCommand) {
   return Object.keys(hotkeysByCommand).filter((x) => hotkeysByCommand[x].length > 0).map((x) => createInstruction(x, hotkeysByCommand[x][0])).filter((x) => x !== null);
 }
-function createInstruction(commandName, hotKey) {
-  if (!hotKey) {
+function createInstruction(commandName, hotkey) {
+  if (!hotkey || hotkey.hideHotkeyGuide) {
     return null;
   }
-  const mods = hotKey.modifiers.map((x) => x === "Mod" ? MOD : x === "Alt" ? ALT : x).join(" ");
-  const key = hotKey.key === "Enter" ? "\u21B5" : hotKey.key === "ArrowUp" ? "\u2191" : hotKey.key === "ArrowDown" ? "\u2193" : hotKey.key === "Escape" ? "ESC" : hotKey.key;
+  const mods = hotkey.modifiers.map((x) => x === "Mod" ? MOD : x === "Alt" ? ALT : x).join(" ");
+  const key = hotkey.key === "Enter" ? "\u21B5" : hotkey.key === "ArrowUp" ? "\u2191" : hotkey.key === "ArrowDown" ? "\u2193" : hotkey.key === "Escape" ? "ESC" : hotkey.key;
   const command = mods ? `[${mods} ${key}]` : `[${key}]`;
   return { command, purpose: commandName };
 }
@@ -791,7 +792,7 @@ function equalsAsHotkey(hotkey, keyDownEvent) {
 }
 
 // src/settings.ts
-var searchTargetList = ["file", "backlink", "link"];
+var searchTargetList = ["file", "backlink", "link", "2-hop-link"];
 var createDefaultHotkeys = () => ({
   main: {
     up: [{ modifiers: ["Mod"], key: "p" }],
@@ -922,6 +923,31 @@ var createDefaultBacklinkSearchCommand = () => ({
   excludePrefixPathPatterns: [],
   expand: false
 });
+var createDefault2HopLinkSearchCommand = () => ({
+  name: "2 hop link search",
+  searchBy: {
+    tag: true,
+    link: false,
+    header: false
+  },
+  searchTarget: "2-hop-link",
+  targetExtensions: [],
+  floating: false,
+  showFrontMatter: false,
+  excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
+  defaultInput: "",
+  commandPrefix: "",
+  sortPriorities: [
+    "Prefix name match",
+    "Alphabetical",
+    ".md",
+    "Last opened",
+    "Last modified"
+  ],
+  includePrefixPathPatterns: [],
+  excludePrefixPathPatterns: [],
+  expand: false
+});
 var createPreSettingSearchCommands = () => [
   {
     name: "Recent search",
@@ -1015,7 +1041,8 @@ var createPreSettingSearchCommands = () => [
     expand: false
   },
   createDefaultLinkSearchCommand(),
-  createDefaultBacklinkSearchCommand()
+  createDefaultBacklinkSearchCommand(),
+  createDefault2HopLinkSearchCommand()
 ];
 var DEFAULT_SETTINGS = {
   searchDelayMilliSeconds: 0,
@@ -1172,8 +1199,24 @@ var AnotherQuickSwitcherSettingTab = class extends import_obsidian2.PluginSettin
         new import_obsidian2.Setting(div).setName(name).setClass("another-quick-switcher__settings__dialog-hotkey-item").addText((cb) => {
           const dialog = this.plugin.settings.hotkeys[dialogKey];
           return cb.setValue(hotkey2String(dialog[command][0])).onChange(async (value) => {
-            const hk = string2Hotkey(value);
+            var _a, _b;
+            const hk = string2Hotkey(
+              value,
+              (_b = (_a = dialog[command][0]) == null ? void 0 : _a.hideHotkeyGuide) != null ? _b : false
+            );
             dialog[command] = hk ? [hk] : [];
+            await this.plugin.saveSettings();
+          });
+        }).addToggle((cb) => {
+          var _a;
+          const dialog = this.plugin.settings.hotkeys[dialogKey];
+          return cb.setTooltip("Show hotkey guide if enabled").setValue(!((_a = dialog[command][0]) == null ? void 0 : _a.hideHotkeyGuide)).onChange(async (showHotkeyGuide) => {
+            dialog[command] = dialog[command][0] ? [
+              {
+                ...dialog[command][0],
+                hideHotkeyGuide: !showHotkeyGuide
+              }
+            ] : [];
             await this.plugin.saveSettings();
           });
         });
@@ -2492,6 +2535,23 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
             )
           );
           break;
+        case "2-hop-link":
+          const backlinksMap2 = this.appHelper.createBacklinksMap();
+          const originFileLinkMap2 = this.originFile ? this.appHelper.createLinksMap(this.originFile) : {};
+          const linkPaths = items.filter((x) => originFileLinkMap2[x.file.path]).map((x) => x.file.path);
+          const backlinkPaths = linkPaths.flatMap(
+            (x) => Array.from(backlinksMap2[x])
+          );
+          const filteredPaths = uniq([...linkPaths, ...backlinkPaths]);
+          items = items.filter((x) => filteredPaths.includes(x.file.path)).sort(
+            sorter(
+              (x) => {
+                var _a, _b;
+                return (_b = (_a = originFileLinkMap2[x.file.path]) == null ? void 0 : _a.position.start.offset) != null ? _b : 65535;
+              }
+            )
+          );
+          break;
       }
       if (includePatterns.length > 0) {
         items = includeItems(items, includePatterns, (x) => x.file.path);
@@ -2690,6 +2750,8 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         );
         break;
       case "link":
+        break;
+      case "2-hop-link":
         break;
       default:
         throw new ExhaustiveError(this.command.searchTarget);

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,20 +21,19 @@
             }
           },
           {
-            "id": "27c40e1461456cd2",
+            "id": "ecd8c8a299e1a8f4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -64,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#macOS软件",
+                "query": "img2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,39 +182,7 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [
-      {
-        "id": "1ee901a419e8396e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "459ca66f05aff0c0",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "e8d7a46c56f176c9",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "ef9112d9d4fe355a",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 2
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 386.5,
     "collapsed": true
@@ -226,20 +193,22 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-projects:Open projects": false,
-      "omnisearch:Omnisearch": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "27c40e1461456cd2",
+  "active": "2f9e2277b7e3c926",
   "lastOpenFiles": [
-    "🍀 花园导览/🤖 如何用好AIGC工具.md",
+    "Cards/永久笔记/帕金森法则.md",
     "Calendar/Daily notes/2023-03-19.md",
-    "Cards/永久笔记/🔡PPV.md",
-    "Spaces/2-Area/运动与健康/crossfit.md",
+    "Cards/永久笔记/PPV.md",
+    "Calendar/文章草稿/» 本库文章发布工作流.md",
+    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md",
     "Sources/Newsletter + RSS/好工具周刊 - BestXTools.md",
+    "Cards/永久笔记/OKR.md",
+    "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
+    "Spaces/2-Area/个人职业生涯/GTD.md",
+    "🍀 花园导览/🤖 如何用好AIGC工具.md",
+    "Spaces/2-Area/运动与健康/crossfit.md",
     "Sources/Newsletter + RSS/独立产品灵感周刊 DecoHack.md",
     "Sources/Newsletter + RSS/产品沉思录 - 少楠.md",
     "Sources/Articles/flomo101阅读笔记/为何要写卡片.md",
@@ -255,12 +224,6 @@
     "Extras/About Extras.md",
     "Calendar/Daily notes/2023-03-18.md",
     "Spaces/2-Area/运动与健康/168轻断食.md",
-    "Calendar/Daily notes/不吃早餐不一定有多大危害.md",
-    "Spaces/2-Area/运动与健康/鱼油.md",
-    "Calendar/Daily notes/2023-03-11.md",
-    "Calendar/Daily notes/2023-03-12.md",
-    "Calendar/Daily notes/2023-03-13.md",
-    "Calendar/Daily notes/2023-03-14.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",

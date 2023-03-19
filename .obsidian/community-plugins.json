@@ -1,9 +1,7 @@
 [
   "obsidian-linter",
-  "cm-chs-patch",
   "various-complements",
   "obsidian-spaced-repetition",
-  "omnisearch",
   "obsidian-auto-link-title",
   "obsidian-better-command-palette",
   "obsidian-another-quick-switcher",
@@ -17,6 +15,6 @@
   "calendar",
   "obsidian-advanced-uri",
   "obsidian-projects",
-  "smart-connections",
-  "obsidian-image-auto-upload-plugin"
+  "obsidian-image-auto-upload-plugin",
+  "chatgpt-md"
 ]
