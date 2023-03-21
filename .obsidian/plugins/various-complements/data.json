@@ -3,6 +3,8 @@
   "cedictPath": "./Extras/Others/cedict_ts.u8",
   "matchStrategy": "partial",
   "fuzzyMatch": true,
+  "matchingWithoutEmoji": true,
+  "treatAccentDiacriticsAsAlphabeticCharacters": false,
   "maxNumberOfSuggestions": 5,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
@@ -58,6 +60,7 @@
     "maxDaysToKeepHistory": 30,
     "maxNumberOfHistoryToKeep": 0
   },
+  "disableOnMobile": false,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
     "防弹咖啡": {
@@ -209,6 +212,14 @@
         "internalLink": {
           "count": 1,
           "lastUpdated": 1679221776081
+        }
+      }
+    },
+    "co-tip": {
+      "co-tip": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1679320141477
         }
       }
     }

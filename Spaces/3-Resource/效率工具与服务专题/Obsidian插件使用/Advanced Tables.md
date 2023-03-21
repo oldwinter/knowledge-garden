@@ -5,6 +5,7 @@ title: Advanced Tables
 当前是否还在使用: no
 使用或不用的原因: 加强后md表格编辑还是不方便，不如直接使用[[Projects]]插件编辑复杂表格
 ---
+iii:: [[Spaces/3-Resource/效率工具与服务专题/安卓软件使用/小红书.md|小红书]]
 
 给 markdown 编辑简单的表格带来了极大的便利。也使得 md 写表格有了意义。不然 markdown 的表格功能其实很鸡肋，编辑不方便太耗时。
 

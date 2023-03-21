@@ -5,7 +5,6 @@
   "obsidian-auto-link-title",
   "obsidian-better-command-palette",
   "obsidian-another-quick-switcher",
-  "obsidian-excalidraw-plugin",
   "obsidian-style-settings",
   "cmdr",
   "dataview",
@@ -16,5 +15,7 @@
   "obsidian-advanced-uri",
   "obsidian-projects",
   "obsidian-image-auto-upload-plugin",
-  "chatgpt-md"
+  "chatgpt-md",
+  "smart-connections",
+  "dbfolder"
 ]

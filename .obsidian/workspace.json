@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "518de8d1d4da1979",
+        "id": "5b2b050846603d1e",
         "type": "tabs",
         "children": [
           {
-            "id": "2f9e2277b7e3c926",
+            "id": "ec77d9b1c0b0b948",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Calendar/Daily notes/白嫖服务器聚合.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,19 +21,20 @@
             }
           },
           {
-            "id": "ecd8c8a299e1a8f4",
+            "id": "b41e56315ae6cd87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
+                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md"
+                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md"
               }
             }
           },
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +183,47 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "bb9d41919eb4b7db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8139b2278f564c5e",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "46cab9ef1fabbf81",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "0e07932de73ff244",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "913c3185432b5092",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
     "direction": "horizontal",
     "width": 386.5,
     "collapsed": true
@@ -193,37 +234,41 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-projects:Open projects": false,
+      "dbfolder:创建一个新数据库表": false
     }
   },
-  "active": "2f9e2277b7e3c926",
+  "active": "b41e56315ae6cd87",
   "lastOpenFiles": [
-    "Cards/永久笔记/帕金森法则.md",
-    "Calendar/Daily notes/2023-03-19.md",
-    "Cards/永久笔记/PPV.md",
-    "Calendar/文章草稿/» 本库文章发布工作流.md",
-    "🧰 本库指南/Tutorials/» 我的复习回顾工作流.md",
-    "Sources/Newsletter + RSS/好工具周刊 - BestXTools.md",
-    "Cards/永久笔记/OKR.md",
-    "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
-    "Spaces/2-Area/个人职业生涯/GTD.md",
-    "🍀 花园导览/🤖 如何用好AIGC工具.md",
-    "Spaces/2-Area/运动与健康/crossfit.md",
-    "Sources/Newsletter + RSS/独立产品灵感周刊 DecoHack.md",
-    "Sources/Newsletter + RSS/产品沉思录 - 少楠.md",
-    "Sources/Articles/flomo101阅读笔记/为何要写卡片.md",
-    "Sources/Articles/flomo101阅读笔记/§ flomo101 - 思维方式目录.md",
-    "Sources/Articles/flomo101阅读笔记/该积累什么领域知识.md",
-    "Sources/Articles/flomo101阅读笔记/∑ flomo101阅读笔记.md",
-    "🍀 花园导览/🧀 个人知识管理.md",
+    "Calendar/Daily notes/白嫖服务器聚合.md",
+    "Calendar/Daily notes/海外收费服务器性价比对比.md",
+    "Calendar/Daily notes/2023-03-21.md",
     "AboutTheGarden.md",
-    "README.md",
-    "Cards/永久笔记/输入驱动输出，输出倒逼输入.md",
-    "Cards/永久笔记/要多分享自己的思考成果.md",
-    "Cards/永久笔记/本库如何免费发布至web.md",
-    "Extras/About Extras.md",
-    "Calendar/Daily notes/2023-03-18.md",
-    "Spaces/2-Area/运动与健康/168轻断食.md",
+    "🧰 本库指南/🌏 本库发布指南.md",
+    "🍀 花园导览/其他/👬🏻 别的数字花园收录.md",
+    "🧰 本库指南/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
+    "Cards/永久笔记/PPV.md",
+    "Atlas/Canvas/PPV人生管理系统.canvas",
+    "Cards/永久笔记/PPV 系统工作流.md",
+    "Atlas/DB folders/∑ DB 安卓软件.md",
+    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/晓晓外卖.md",
+    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/小红书.md",
+    "Cards/永久笔记/google play.md",
+    "Cards/永久笔记/淘宝.md",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/滴答清单.md",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/微信.md",
+    "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
+    "两仪.md",
+    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Advanced Tables.md",
+    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Admonition.md",
+    "Spaces/3-Resource/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
+    "Spaces/3-Resource/个人效率系统打造/∑ 快捷键.md",
+    "Calendar/Daily notes/∑ DB - 每日日志.md",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/V2rayU.md",
+    "Calendar/Daily notes/kk3.md",
+    "Calendar/Daily notes/kk2.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
@@ -244,7 +289,6 @@
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",
-    "Atlas/Canvas/SWOT分析 - 模板 1.canvas",
     "Atlas/思维导图",
     "Extras/Templates/Canvas模板",
     "Sources/GPTchats",

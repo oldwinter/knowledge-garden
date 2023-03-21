@@ -314,11 +314,25 @@ var SettingsSearch = class extends import_obsidian.Plugin {
     this.app.setting.tabHeadersEl.prepend(this.settingsSearchEl);
   }
   buildScope() {
+    this.scope.register(["Ctrl"], "N", () => {
+      if (this.activeSetting) {
+        this.activeSetting.settingEl.removeClass("active");
+      }
+      this.activeIndex = ((this.activeIndex + 1) % this.results.length + this.results.length) % this.results.length;
+      this.centerActiveSetting();
+    });
     this.scope.register([], "ArrowDown", () => {
       if (this.activeSetting) {
         this.activeSetting.settingEl.removeClass("active");
       }
       this.activeIndex = ((this.activeIndex + 1) % this.results.length + this.results.length) % this.results.length;
+      this.centerActiveSetting();
+    });
+    this.scope.register(["Ctrl"], "P", () => {
+      if (this.activeSetting) {
+        this.activeSetting.settingEl.removeClass("active");
+      }
+      this.activeIndex = ((this.activeIndex - 1) % this.results.length + this.results.length) % this.results.length;
       this.centerActiveSetting();
     });
     this.scope.register([], "ArrowUp", () => {

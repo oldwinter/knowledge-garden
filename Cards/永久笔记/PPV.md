@@ -13,7 +13,9 @@ title: PPV
 PPV就像一个人生经营系统。相比于[[PARA]]，更容易融入[[GTD]]，并强调了定期回顾和检视流程的重要性。
 ![image.png](https://img2.oldwinter.top/202303191834862.png)
 
+![[PPV人生管理系统.canvas]]
 
+[[PPV 系统工作流]]
 
 ## Pillars - 人生的经营领域
 

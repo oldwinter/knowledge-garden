@@ -222,10 +222,23 @@ var import_obsidian2 = require("obsidian");
 // stream.ts
 var import_obsidian = require("obsidian");
 var import_sse = __toESM(require_sse());
-var streamSSE = async (editor, apiKey, options, setAtCursor) => {
+
+// helpers.ts
+var unfinishedCodeBlock = (txt) => {
+  const matcher = txt.match(/```/g);
+  if (!matcher) {
+    return false;
+  }
+  if (matcher.length % 2 !== 0)
+    console.log("[ChatGPT MD] unclosed code block detected");
+  return matcher.length % 2 !== 0;
+};
+
+// stream.ts
+var streamSSE = async (editor, apiKey, options, setAtCursor, headingPrefix) => {
   return new Promise((resolve, reject) => {
     try {
-      console.log("streamSSE", options);
+      console.log("[ChatGPT MD] streamSSE", options);
       const url = "https://api.openai.com/v1/chat/completions";
       const source = new import_sse.SSE(url, {
         headers: {
@@ -236,8 +249,27 @@ var streamSSE = async (editor, apiKey, options, setAtCursor) => {
         payload: JSON.stringify(options)
       });
       let txt = "";
-      const initialCursorPosCh = editor.getCursor().ch;
-      const initialCursorPosLine = editor.getCursor().line;
+      let initialCursorPosCh = editor.getCursor().ch;
+      let initialCursorPosLine = editor.getCursor().line;
+      source.addEventListener("open", (e) => {
+        console.log("[ChatGPT MD] SSE Opened");
+        const newLine = `
+
+<hr class="__chatgpt_plugin">
+
+${headingPrefix}role::assistant
+
+`;
+        editor.replaceRange(newLine, editor.getCursor());
+        const cursor = editor.getCursor();
+        const newCursor = {
+          line: cursor.line,
+          ch: cursor.ch + newLine.length
+        };
+        editor.setCursor(newCursor);
+        initialCursorPosCh = newCursor.ch;
+        initialCursorPosLine = newCursor.line;
+      });
       source.addEventListener("message", (e) => {
         if (e.data != "[DONE]") {
           const payload = JSON.parse(e.data);
@@ -260,6 +292,10 @@ var streamSSE = async (editor, apiKey, options, setAtCursor) => {
           editor.setCursor(newCursor);
         } else {
           source.close();
+          console.log("[ChatGPT MD] SSE Closed");
+          if (unfinishedCodeBlock(txt)) {
+            txt += "\n```";
+          }
           const cursor = editor.getCursor();
           editor.replaceRange(
             txt,
@@ -284,15 +320,22 @@ var streamSSE = async (editor, apiKey, options, setAtCursor) => {
           resolve(txt);
         }
       });
-      source.addEventListener("readystatechange", (e) => {
-        if (e.readyState >= 2) {
-          console.log("ReadyState: " + e.readyState);
+      source.addEventListener("error", (e) => {
+        try {
+          console.log("[ChatGPT MD] SSE Error: ", JSON.parse(e.data));
+          source.close();
+          console.log("[ChatGPT MD] SSE Closed");
+          reject(JSON.parse(e.data));
+        } catch (err) {
+          console.log("[ChatGPT MD] Unknown Error: ", e);
+          source.close();
+          console.log("[ChatGPT MD] SSE Closed");
+          reject(e);
         }
       });
       source.stream();
     } catch (err) {
-      console.error(err);
-      new import_obsidian.Notice("[ChatGPT MD] Error streaming text. Please check console.");
+      console.log("SSE Error", err);
       reject(err);
     }
   });
@@ -303,32 +346,18 @@ var DEFAULT_SETTINGS = {
   apiKey: "default",
   defaultChatFrontmatter: "---\nsystem_commands: ['I am a helpful assistant.']\ntemperature: 0\ntop_p: 1\nmax_tokens: 512\npresence_penalty: 1\nfrequency_penalty: 1\nstream: true\nstop: null\nn: 1\nmodel: gpt-3.5-turbo\n---",
   stream: true,
-  streamSpeed: 28,
   chatTemplateFolder: "ChatGPT_MD/templates",
   chatFolder: "ChatGPT_MD/chats",
   generateAtCursor: false,
   autoInferTitle: false,
-  dateFormat: "YYYYMMDDhhmmss"
+  dateFormat: "YYYYMMDDhhmmss",
+  headingLevel: 0
 };
 var ChatGPT_MD = class extends import_obsidian2.Plugin {
   async callOpenAIAPI(editor, messages, model = "gpt-3.5-turbo", max_tokens = 250, temperature = 0.3, top_p = 1, presence_penalty = 0.5, frequency_penalty = 0.5, stream = true, stop = null, n = 1, logit_bias = null, user = null) {
     try {
       console.log("calling openai api");
       if (stream) {
-        const newLine = `
-
-<hr class="__chatgpt_plugin">
-
-role::assistant
-
-`;
-        editor.replaceRange(newLine, editor.getCursor());
-        const cursor = editor.getCursor();
-        const newCursor = {
-          line: cursor.line,
-          ch: cursor.ch + newLine.length
-        };
-        editor.setCursor(newCursor);
         const options = {
           model,
           messages,
@@ -347,7 +376,8 @@ role::assistant
           editor,
           this.settings.apiKey,
           options,
-          this.settings.generateAtCursor
+          this.settings.generateAtCursor,
+          this.getHeadingPrefix()
         );
         console.log("response from stream", response);
         return { fullstr: response, mode: "streaming" };
@@ -395,6 +425,15 @@ role::assistant
         return responseJSON.choices[0].message.content;
       }
     } catch (err) {
+      if (err instanceof Object) {
+        if (err.error) {
+          new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${err.error.message}`);
+          throw new Error(JSON.stringify(err.error));
+        } else {
+          new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${JSON.stringify(err)}`);
+          throw new Error(JSON.stringify(err));
+        }
+      }
       new import_obsidian2.Notice(
         "issue calling OpenAI API, see console for more details"
       );
@@ -408,7 +447,7 @@ role::assistant
 
 <hr class="__chatgpt_plugin">
 
-role::${role}
+${this.getHeadingPrefix()}role::${role}
 
 `;
     editor.replaceRange(newLine, editor.getCursor());
@@ -428,11 +467,12 @@ role::${role}
       }
       const metaMatter = (_a = app.metadataCache.getFileCache(noteFile)) == null ? void 0 : _a.frontmatter;
       const shouldStream = (metaMatter == null ? void 0 : metaMatter.stream) !== void 0 ? metaMatter.stream : this.settings.stream !== void 0 ? this.settings.stream : true;
+      const temperature = (metaMatter == null ? void 0 : metaMatter.temperature) !== void 0 ? metaMatter.temperature : 0.3;
       const frontmatter = {
         title: (metaMatter == null ? void 0 : metaMatter.title) || view.file.basename,
         tags: (metaMatter == null ? void 0 : metaMatter.tags) || [],
         model: (metaMatter == null ? void 0 : metaMatter.model) || "gpt-3.5-turbo",
-        temperature: (metaMatter == null ? void 0 : metaMatter.temperature) || 0.5,
+        temperature,
         top_p: (metaMatter == null ? void 0 : metaMatter.top_p) || 1,
         presence_penalty: (metaMatter == null ? void 0 : metaMatter.presence_penalty) || 0,
         frequency_penalty: (metaMatter == null ? void 0 : metaMatter.frequency_penalty) || 0,
@@ -492,18 +532,27 @@ role::${role}
       throw new Error("Error extracting role and message" + err);
     }
   }
+  getHeadingPrefix() {
+    const headingLevel = this.settings.headingLevel;
+    if (headingLevel === 0) {
+      return "";
+    } else if (headingLevel > 6) {
+      return "#".repeat(6) + " ";
+    }
+    return "#".repeat(headingLevel) + " ";
+  }
   appendMessage(editor, role, message) {
     const newLine = `
 
 <hr class="__chatgpt_plugin">
 
-role::${role}
+${this.getHeadingPrefix()}role::${role}
 
 ${message}
 
 <hr class="__chatgpt_plugin">
 
-role::user
+${this.getHeadingPrefix()}role::user
 
 `;
     editor.replaceRange(newLine, editor.getCursor());
@@ -567,7 +616,7 @@ ${JSON.stringify(
     }
   }
   generateDatePattern(format) {
-    const pattern = format.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&").replace("YYYY", "\\d{4}").replace("MM", "\\d{2}").replace("DD", "\\d{2}").replace("hh", "\\d{2}").replace("mm", "\\d{2}").replace("ss", "\\d{2}");
+    const pattern = format.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&").replace("YYYY", "\\d{4}").replace("MM", "\\d{2}").replace("DD", "\\d{2}").replace("hh", "\\d{2}").replace("mm", "\\d{2}").replace("ss", "\\d{2}");
     return new RegExp(`^${pattern}$`);
   }
   // get date from format
@@ -641,7 +690,7 @@ ${JSON.stringify(
 
 <hr class="__chatgpt_plugin">
 
-role::user
+${this.getHeadingPrefix()}role::user
 
 `;
             editor.replaceRange(newLine, editor.getCursor());
@@ -652,18 +701,25 @@ role::user
             };
             editor.setCursor(newCursor);
           } else {
-            this.appendMessage(editor, "assistant", response);
+            if (unfinishedCodeBlock(responseStr)) {
+              responseStr = responseStr + "\n```";
+            }
+            this.appendMessage(editor, "assistant", responseStr);
           }
           if (this.settings.autoInferTitle) {
-            console.log("[ChatGPT MD] auto infer title");
             const title = view.file.basename;
             const messagesWithResponse = messages.concat(responseStr);
             if (this.isTitleTimestampFormat(title) && messagesWithResponse.length >= 4) {
+              console.log(
+                "[ChatGPT MD] auto inferring title from messages"
+              );
               this.inferTitleFromMessages(
                 messagesWithResponse
               ).then((title2) => {
-                console.log(title2);
                 if (title2) {
+                  console.log(
+                    `[ChatGPT MD] inferred title: ${title2}. Changing file name...`
+                  );
                   const file = view.file;
                   const folder = this.settings.chatFolder.replace(
                     /\/$/,
@@ -692,8 +748,8 @@ role::user
         }).catch((err) => {
           if (import_obsidian2.Platform.isMobile) {
             new import_obsidian2.Notice(
-              "[ChatGPT MD] Error calling API. " + err,
-              5e3
+              "[ChatGPT MD Mobile] Full Error calling API. " + err,
+              9e3
             );
           }
           statusBarItemEl.setText("");
@@ -879,12 +935,6 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Stream Speed").setDesc("Stream speed in milliseconds").addSlider(
-      (slider) => slider.setLimits(20, 50, 1).setValue(this.plugin.settings.streamSpeed).onChange(async (value) => {
-        this.plugin.settings.streamSpeed = value;
-        await this.plugin.saveSettings();
-      })
-    );
     new import_obsidian2.Setting(containerEl).setName("Chat Folder").setDesc("Path to folder for chat files").addText(
       (text) => text.setValue(this.plugin.settings.chatFolder).onChange(async (value) => {
         this.plugin.settings.chatFolder = value;
@@ -911,9 +961,19 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Date Format").setDesc("Date format for chat files").addText(
+    new import_obsidian2.Setting(containerEl).setName("Date Format").setDesc(
+      "Date format for chat files. Valid date blocks are: YYYY, MM, DD, hh, mm, ss"
+    ).addText(
       (text) => text.setPlaceholder("YYYYMMDDhhmmss").setValue(this.plugin.settings.dateFormat).onChange(async (value) => {
         this.plugin.settings.dateFormat = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian2.Setting(containerEl).setName("Heading Level").setDesc(
+      "Heading level for messages (example for heading level 2: '## role::user'). Valid heading levels are 0, 1, 2, 3, 4, 5, 6"
+    ).addText(
+      (text) => text.setValue(this.plugin.settings.headingLevel.toString()).onChange(async (value) => {
+        this.plugin.settings.headingLevel = parseInt(value);
         await this.plugin.saveSettings();
       })
     );

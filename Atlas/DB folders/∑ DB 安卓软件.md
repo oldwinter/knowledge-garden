@@ -62,6 +62,8 @@ columns:
     skipPersist: false
     isHidden: false
     sortIndex: -1
+    isSorted: false
+    isSortedDesc: false
     config:
       enable_media_view: true
       link_alias_enabled: true
@@ -100,6 +102,31 @@ columns:
     skipPersist: false
     isHidden: false
     sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  tags:
+    input: tags
+    accessorKey: tags
+    key: tags
+    id: tags
+    label: tags
+    position: 100
+    skipPersist: false
+    isHidden: false
+    sortIndex: -1
+    width: 200
+    options:
+      - { label: "安卓软件", value: "安卓软件", color: "hsl(21, 95%, 90%)"}
+      - { label: "好用网站", value: "好用网站", color: "hsl(122, 95%, 90%)"}
+      - { label: "macOS软件", value: "macOS软件", color: "hsl(127, 95%, 90%)"}
+      - { label: "评论/少数派", value: "评论/少数派", color: "hsl(212, 95%, 90%)"}
     config:
       enable_media_view: true
       link_alias_enabled: true

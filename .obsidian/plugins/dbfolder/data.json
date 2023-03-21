@@ -15,7 +15,7 @@
     }
   },
   "local_settings": {
-    "remove_field_when_delete_column": false,
+    "remove_field_when_delete_column": true,
     "cell_size": "compact",
     "sticky_first_column": true,
     "group_folder_column": "",

@@ -5,6 +5,7 @@ title: Advanced Slides
 当前使用频率: 3
 当前是否还在使用: yes
 ---
+xxx:: [[两仪.md|两仪]]
 
 [[advanced-slides-templates模板1]]
 
