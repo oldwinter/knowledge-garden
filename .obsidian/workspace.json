@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/安装docker服务.md",
+                "file": "Cards/永久笔记/🔡STAR.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/安装docker服务.md"
+                "file": "Cards/永久笔记/🔡STAR.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/安装docker服务.md",
+                "file": "Cards/永久笔记/🔡STAR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/安装docker服务.md",
+                "file": "Cards/永久笔记/🔡STAR.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/安装docker服务.md",
+                "file": "Cards/永久笔记/🔡STAR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -241,6 +241,8 @@
   },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
+    "Sources/Videos/📹storytelling.md",
+    "Cards/永久笔记/安装docker服务.md",
     "Cards/永久笔记/自己部署一个v2ray服务.md",
     "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
     "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
@@ -266,8 +268,6 @@
     "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/微信.md",
     "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
     "两仪.md",
-    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Advanced Tables.md",
-    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Admonition.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
