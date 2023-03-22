@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/白嫖服务器聚合.md",
+                "file": "Cards/永久笔记/安装docker服务.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -33,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md"
+                "file": "Cards/永久笔记/安装docker服务.md"
               }
             }
           },
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
+                "file": "Cards/永久笔记/安装docker服务.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
+                "file": "Cards/永久笔记/安装docker服务.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -162,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
+                "file": "Cards/永久笔记/安装docker服务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -240,8 +239,14 @@
       "dbfolder:创建一个新数据库表": false
     }
   },
-  "active": "b41e56315ae6cd87",
+  "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
+    "Cards/永久笔记/自己部署一个v2ray服务.md",
+    "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
+    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
+    "Calendar/Daily notes/2023-03-22.md",
+    "Spaces/2-Area/个人职业生涯/面试自我介绍和常见问题回答.md",
+    "Spaces/2-Area/个人职业生涯/面试相关文章.md",
     "Calendar/Daily notes/白嫖服务器聚合.md",
     "Calendar/Daily notes/海外收费服务器性价比对比.md",
     "Calendar/Daily notes/2023-03-21.md",
@@ -263,12 +268,6 @@
     "两仪.md",
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Advanced Tables.md",
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Admonition.md",
-    "Spaces/3-Resource/个人效率系统打造/∑ 工作和生活的效率体系建设.md",
-    "Spaces/3-Resource/个人效率系统打造/∑ 快捷键.md",
-    "Calendar/Daily notes/∑ DB - 每日日志.md",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/V2rayU.md",
-    "Calendar/Daily notes/kk3.md",
-    "Calendar/Daily notes/kk2.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
