@@ -14,6 +14,7 @@ var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __reflectGet = Reflect.get;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __spreadValues = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
@@ -59,6 +60,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __superGet = (cls, obj, key) => __reflectGet(__getProtoOf(cls), key, obj);
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve3, reject) => {
     var fulfilled = (value) => {
@@ -28628,7 +28630,8 @@ var DEFAULT_SETTINGS = {
     projectSizeLimit: 1e3,
     frontmatter: {
       quoteStrings: "PLAIN"
-    }
+    },
+    commands: []
   }
 };
 var DEFAULT_PROJECT = {
@@ -28696,7 +28699,8 @@ var DEFAULT_SETTINGS2 = {
     projectSizeLimit: 1e3,
     frontmatter: {
       quoteStrings: "PLAIN"
-    }
+    },
+    commands: []
   }
 };
 function resolve2(unresolved) {
@@ -28734,7 +28738,8 @@ var DEFAULT_PREFERENCES = {
   projectSizeLimit: 1e3,
   frontmatter: {
     quoteStrings: "PLAIN"
-  }
+  },
+  commands: []
 };
 function resolvePreferences(unresolved) {
   return __spreadValues(__spreadValues({}, DEFAULT_PREFERENCES), unresolved);
@@ -28859,7 +28864,10 @@ function createSettings() {
           if (project) {
             draft.projects.push(__spreadProps(__spreadValues({}, project), {
               id: newId,
-              name: project.name + " Copy",
+              name: nextUniqueProjectName(
+                draft.projects,
+                project.name + " Copy"
+              ),
               views: project.views.map((v2) => __spreadProps(__spreadValues({}, v2), { id: v4_default() }))
             }));
           }
@@ -28933,7 +28941,7 @@ function createSettings() {
                     ...p2.views,
                     __spreadProps(__spreadValues({}, view2), {
                       id: newId,
-                      name: view2.name + " Copy"
+                      name: nextUniqueViewName(p2.views, view2.name + " Copy")
                     })
                   ]
                 }));
@@ -35805,7 +35813,7 @@ function instance31($$self, $$props, $$invalidate) {
   let { onSave } = $$props;
   let templatePath = "";
   function validateName(name2) {
-    if (name2.match(/^\s*$/)) {
+    if (name2.trim() === "") {
       return $i18n.t("modals.note.create.empty-name-error");
     }
     const existingFile = $app.vault.getAbstractFileByPath((0, import_obsidian10.normalizePath)(getNewNotesFolder(project) + "/" + name2 + ".md"));
@@ -35815,7 +35823,7 @@ function instance31($$self, $$props, $$invalidate) {
     if (!isValidPath(name2)) {
       return $i18n.t("modals.project.defaultName.invalid");
     }
-    if (name2.match(/^\x2E/)) {
+    if (name2.startsWith(".")) {
       return $i18n.t("modals.note.create.dot-start-error");
     }
     return "";
@@ -36647,6 +36655,7 @@ function create_default_slot_14(ctx) {
       files: getFoldersInFolder(ctx[8].vault.getRoot()),
       value: ctx[0].dataSource.config.path,
       getLabel: func3,
+      placeholder: "/",
       width: "100%"
     }
   });
@@ -37905,7 +37914,7 @@ function instance35($$self, $$props, $$invalidate) {
     if (name2 === originalName) {
       return "";
     }
-    if (name2 === "") {
+    if (name2.trim() === "") {
       return $i18n.t("modals.project.create.empty-name-error");
     }
     if (projects.find((project2) => project2.name === name2)) {
@@ -38476,8 +38485,10 @@ var ProjectsSettingTab = class extends import_obsidian20.PluginSettingTab {
     this.plugin = plugin2;
   }
   display() {
-    const { preferences } = get_store_value(settings);
+    const { projects } = get_store_value(settings);
+    let { preferences } = get_store_value(settings);
     const save2 = (prefs) => {
+      preferences = prefs;
       settings.updatePreferences(prefs);
     };
     const { containerEl } = this;
@@ -38501,6 +38512,54 @@ var ProjectsSettingTab = class extends import_obsidian20.PluginSettingTab {
         }
       })
     );
+    new import_obsidian20.Setting(containerEl).setName("Commands").setDesc("Add commands for your favorite projects and views.").setHeading();
+    projects.forEach((project) => {
+      new import_obsidian20.Setting(containerEl).setName(project.name).setDesc("Project").addToggle(
+        (toggle) => toggle.setValue(
+          !!preferences.commands.find(
+            (command) => command.project == project.id && !command.view
+          )
+        ).onChange((value) => {
+          save2(
+            immer_esm_default(preferences, (draft) => {
+              if (value) {
+                draft.commands.push({
+                  project: project.id
+                });
+              } else {
+                draft.commands = draft.commands.filter(
+                  (command) => !(command.project === project.id && !command.view)
+                );
+              }
+            })
+          );
+        })
+      );
+      project.views.forEach((view2) => {
+        new import_obsidian20.Setting(containerEl).setName(`${project.name}: ${view2.name}`).setDesc("View").addToggle(
+          (toggle) => toggle.setValue(
+            !!preferences.commands.find(
+              (command) => command.project == project.id && command.view === view2.id
+            )
+          ).onChange((value) => {
+            save2(
+              immer_esm_default(preferences, (draft) => {
+                if (value) {
+                  draft.commands.push({
+                    project: project.id,
+                    view: view2.id
+                  });
+                } else {
+                  draft.commands = draft.commands.filter(
+                    (command) => !(command.project === project.id && command.view === view2.id)
+                  );
+                }
+              })
+            );
+          })
+        );
+      });
+    });
   }
 };
 
@@ -48155,8 +48214,8 @@ function instance53($$self, $$props, $$invalidate) {
   component_subscribe($$self, settings, ($$value) => $$invalidate(8, $settings = $$value));
   component_subscribe($$self, api, ($$value) => $$invalidate(5, $api = $$value));
   let { $$slots: slots = {}, $$scope } = $$props;
-  let projectId;
-  let viewId;
+  let { projectId } = $$props;
+  let { viewId } = $$props;
   onMount(() => {
     if (!projects.length) {
       new OnboardingModal(
@@ -48173,6 +48232,10 @@ function instance53($$self, $$props, $$invalidate) {
   const func7 = (id) => $$invalidate(0, projectId = id);
   const func_14 = (id) => $$invalidate(1, viewId = id);
   $$self.$$set = ($$props2) => {
+    if ("projectId" in $$props2)
+      $$invalidate(0, projectId = $$props2.projectId);
+    if ("viewId" in $$props2)
+      $$invalidate(1, viewId = $$props2.viewId);
     if ("$$scope" in $$props2)
       $$invalidate(12, $$scope = $$props2.$$scope);
   };
@@ -48217,7 +48280,7 @@ function instance53($$self, $$props, $$invalidate) {
 var App10 = class extends SvelteComponent {
   constructor(options) {
     super();
-    init4(this, options, instance53, create_fragment53, safe_not_equal, {}, add_css27);
+    init4(this, options, instance53, create_fragment53, safe_not_equal, { projectId: 0, viewId: 1 }, add_css27);
   }
 };
 var App_default = App10;
@@ -55654,14 +55717,12 @@ function instance74($$self, $$props, $$invalidate) {
       $app,
       project,
       (name, templatePath) => {
-        if (groupByField) {
-          api2.addRecord(
-            createDataRecord(name, project, groupByField ? {
-              [groupByField.name]: column !== $i18n.t("views.board.no-status") ? column : void 0
-            } : {}),
-            templatePath
-          );
-        }
+        api2.addRecord(
+          createDataRecord(name, project, groupByField ? {
+            [groupByField.name]: column !== $i18n.t("views.board.no-status") ? column : void 0
+          } : {}),
+          templatePath
+        );
       }
     ).open();
   }
@@ -66947,6 +67008,17 @@ var ProjectsView = class extends import_obsidian55.ItemView {
       view.set(this);
     });
   }
+  setState(state, result) {
+    return __async(this, null, function* () {
+      if (this.component) {
+        this.component.$set({
+          projectId: state.projectId,
+          viewId: state.viewId
+        });
+      }
+      __superGet(ProjectsView.prototype, this, "setState").call(this, state, result);
+    });
+  }
   onOpen() {
     return __async(this, null, function* () {
       const views = this.getViews();
@@ -66994,6 +67066,7 @@ var ProjectsView = class extends import_obsidian55.ItemView {
 // src/main.ts
 import_dayjs9.default.extend(import_isoWeek.default);
 import_dayjs9.default.extend(import_localizedFormat.default);
+var PROJECTS_PLUGIN_ID = "obsidian-projects";
 var ProjectsPlugin = class extends import_obsidian57.Plugin {
   onload() {
     return __async(this, null, function* () {
@@ -67054,14 +67127,14 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
         id: "create-note",
         name: t3("commands.create-note.name"),
         checkCallback: (checking) => {
-          const projectDefinition = get_store_value(settings).projects[0];
-          if (projectDefinition) {
+          const project = get_store_value(settings).projects[0];
+          if (project) {
             if (!checking) {
               new CreateNoteModal(
                 this.app,
-                projectDefinition,
-                (name, templatePath, project) => __async(this, null, function* () {
-                  const record = createDataRecord(name, project);
+                project,
+                (name, templatePath, project2) => __async(this, null, function* () {
+                  const record = createDataRecord(name, project2);
                   yield get_store_value(api).createNote(record, templatePath);
                   const file = this.app.vault.getAbstractFileByPath(record.id);
                   if (file instanceof import_obsidian57.TFile) {
@@ -67085,11 +67158,19 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
       app2.set(this.app);
       plugin.set(this);
       yield this.loadSettings();
-      const watcher = new ObsidianFileSystemWatcher(this);
-      registerFileEvents(watcher);
       this.unsubscribeSettings = settings.subscribe((value) => {
+        this.ensureCommands(value.preferences.commands, value.projects);
         this.saveData(value);
       });
+      const watcher = new ObsidianFileSystemWatcher(this);
+      registerFileEvents(watcher);
+    });
+  }
+  onunload() {
+    return __async(this, null, function* () {
+      var _a;
+      this.app.workspace.detachLeavesOfType(VIEW_TYPE_PROJECTS);
+      (_a = this.unsubscribeSettings) == null ? void 0 : _a.call(this);
     });
   }
   loadSettings() {
@@ -67111,16 +67192,17 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
       )();
     });
   }
-  onunload() {
+  activateView(projectId, viewId) {
     return __async(this, null, function* () {
-      var _a;
-      this.app.workspace.detachLeavesOfType(VIEW_TYPE_PROJECTS);
-      (_a = this.unsubscribeSettings) == null ? void 0 : _a.call(this);
-    });
-  }
-  activateView() {
-    return __async(this, null, function* () {
-      this.app.workspace.revealLeaf(yield this.getOrCreateLeaf());
+      const leaf = yield this.getOrCreateLeaf();
+      leaf.setViewState({
+        type: VIEW_TYPE_PROJECTS,
+        state: {
+          projectId,
+          viewId
+        }
+      });
+      this.app.workspace.revealLeaf(leaf);
     });
   }
   getOrCreateLeaf() {
@@ -67129,14 +67211,88 @@ var ProjectsPlugin = class extends import_obsidian57.Plugin {
       if (existingLeaves[0]) {
         return existingLeaves[0];
       }
-      const leaf = this.app.workspace.getLeaf(true);
-      yield leaf.setViewState({
-        type: VIEW_TYPE_PROJECTS
+      return this.app.workspace.getLeaf(true);
+    });
+  }
+  ensureCommands(enabledCommands, projects) {
+    const registeredCommandIds = new Set(
+      Object.keys(this.app.commands.commands).filter(
+        (id) => id.startsWith(`${PROJECTS_PLUGIN_ID}:show:`)
+      )
+    );
+    this.removeMissingCommands(enabledCommands, projects, registeredCommandIds);
+    this.addMissingCommands(enabledCommands, projects, registeredCommandIds);
+  }
+  removeMissingCommands(enabledCommands, projects, registeredCommandIds) {
+    registeredCommandIds.forEach((id) => {
+      const enabledCommand = enabledCommands.find(
+        (command) => id === getShowCommandId(command, true)
+      );
+      if (!enabledCommand) {
+        this.app.commands.removeCommand(id);
+        return;
+      }
+      const project = projects.find((project2) => {
+        if (enabledCommand.view) {
+          return project2.id === enabledCommand.project && project2.views.find((view2) => view2.id === enabledCommand.view);
+        } else {
+          return project2.id === enabledCommand.project;
+        }
       });
-      return leaf;
+      if (!project) {
+        this.app.commands.removeCommand(id);
+      }
+    });
+  }
+  addMissingCommands(enabledCommands, projects, registeredCommandIds) {
+    enabledCommands.forEach((command) => {
+      const globalId = getShowCommandId(command, true);
+      const localId = getShowCommandId(command, false);
+      if (registeredCommandIds.has(globalId)) {
+        return;
+      }
+      const project = projects.find(
+        (project2) => project2.id === command.project
+      );
+      if (project) {
+        if (command.view) {
+          const view2 = project == null ? void 0 : project.views.find((view3) => view3.id === command.view);
+          if (view2) {
+            this.addCommand({
+              id: localId,
+              name: `Show ${project.name} > ${view2.name}`,
+              callback: () => {
+                this.activateView(project.id, view2.id);
+              }
+            });
+          }
+        } else {
+          this.addCommand({
+            id: localId,
+            name: `Show ${project.name}`,
+            callback: () => {
+              this.activateView(project.id);
+            }
+          });
+        }
+      }
     });
   }
 };
+function getShowCommandId(cmd, global2) {
+  const res = [];
+  if (global2) {
+    res.push(PROJECTS_PLUGIN_ID);
+  }
+  res.push("show");
+  if (cmd.project) {
+    res.push(cmd.project);
+  }
+  if (cmd.view) {
+    res.push(cmd.view);
+  }
+  return res.join(":");
+}
 /*! Bundled license information:
 
 moment/moment.js:

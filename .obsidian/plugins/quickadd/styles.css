@@ -215,3 +215,23 @@
     gap: 20px;
   }
 }
+.quickadd-update-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quickadd-update-modal {
+  min-width: 35%;
+  max-height: 70%;
+}
+.quickadd-update-modal img {
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+.quickadd-bmac-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

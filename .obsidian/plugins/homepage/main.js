@@ -1732,15 +1732,16 @@ var HomepageSettingTab = class extends import_obsidian2.PluginSettingTab {
     const homepageDesc = `The name of the ${workspacesMode ? "workspace" : "note or canvas"} to open.`;
     const homepage = workspacesMode ? "workspace" : "defaultNote";
     if (this.plugin.settings.useMoment && !workspacesMode) {
-      let dateSetting = new import_obsidian2.Setting(this.containerEl).setName("Homepage format").setDesc("A valid Moment format specification determining the note or canvas to open.").addMomentFormat((text) => text.setDefaultFormat("YYYY-MM-DD").setValue(this.plugin.settings.momentFormat).onChange((value) => __async(this, null, function* () {
+      const dateSetting = new import_obsidian2.Setting(this.containerEl).setName("Homepage format");
+      dateSetting.descEl.innerHTML += `A valid Moment format specification determining the note or canvas to open.<br>
+				Surround words in <code style="padding:0">[brackets]</code> to include them;
+				see the <a href="https://momentjs.com/docs/#/displaying/format/" target="_blank" rel="noopener"> 
+				reference</a> for syntax details.<br> Currently, your specification will produce: `;
+      const sample = dateSetting.descEl.createEl("b", { attr: { class: "u-pop" } });
+      dateSetting.addMomentFormat((text) => text.setDefaultFormat("YYYY-MM-DD").setValue(this.plugin.settings.momentFormat).onChange((value) => __async(this, null, function* () {
         this.plugin.settings.momentFormat = value;
         yield this.plugin.saveSettings();
-      })));
-      dateSetting.descEl.createEl("br");
-      dateSetting.descEl.createEl("a", {
-        text: "Moment formatting info",
-        attr: { href: "https://momentjs.com/docs/#/displaying/format/" }
-      });
+      })).setSampleEl(sample));
     } else {
       new import_obsidian2.Setting(this.containerEl).setName("Homepage").setDesc(homepageDesc).addText((text) => {
         new suggestor(this.app, text.inputEl);
@@ -1882,6 +1883,7 @@ var Homepage = class extends import_obsidian3.Plugin {
         return;
       const state = view.getState();
       const config = this.app.vault.config;
+      console.log(state.mode, state.source);
       state.mode = config.defaultViewMode;
       state.source = !config.livePreview;
       yield view.leaf.setViewState({ type: "markdown", state });
@@ -2019,7 +2021,7 @@ var Homepage = class extends import_obsidian3.Plugin {
         return;
       }
       const state = view.getState();
-      if (this.settings.revertView) {
+      if (this.settings.revertView && this.loaded) {
         this.lastView = new WeakRef(view);
       }
       if (this.settings.autoScroll) {

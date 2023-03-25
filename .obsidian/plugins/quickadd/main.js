@@ -33,7 +33,7 @@ __export(main_exports, {
   default: () => QuickAdd
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian34 = require("obsidian");
+var import_obsidian35 = require("obsidian");
 
 // src/quickAddSettingsTab.ts
 var import_obsidian30 = require("obsidian");
@@ -11423,7 +11423,7 @@ var InputPrompt = class {
 // src/gui/InputSuggester/inputSuggester.ts
 var import_obsidian19 = require("obsidian");
 var InputSuggester = class extends import_obsidian19.FuzzySuggestModal {
-  constructor(app2, displayItems, items) {
+  constructor(app2, displayItems, items, options = {}) {
     super(app2);
     this.displayItems = displayItems;
     this.items = items;
@@ -11439,10 +11439,21 @@ var InputSuggester = class extends import_obsidian19.FuzzySuggestModal {
       const { value } = this.inputEl;
       this.inputEl.value = values[selectedItem].item ?? value;
     });
+    if (options.placeholder)
+      this.setPlaceholder(options.placeholder);
+    if (options.limit)
+      this.limit = options.limit;
+    if (options.emptyStateText)
+      this.emptyStateText = options.emptyStateText;
     this.open();
   }
-  static Suggest(app2, displayItems, items) {
-    const newSuggester = new InputSuggester(app2, displayItems, items);
+  static Suggest(app2, displayItems, items, options = {}) {
+    const newSuggester = new InputSuggester(
+      app2,
+      displayItems,
+      items,
+      options
+    );
     return newSuggester.promise;
   }
   getItemText(item) {
@@ -11559,7 +11570,10 @@ var CompleteFormatter = class extends Formatter {
     return await InputSuggester.Suggest(
       this.app,
       suggestedValuesArr,
-      suggestedValuesArr
+      suggestedValuesArr,
+      {
+        placeholder: `Enter value for ${variableName}`
+      }
     );
   }
   async getMacroValue(macroName) {
@@ -14493,11 +14507,14 @@ var DEFAULT_SETTINGS = {
   inputPrompt: "single-line",
   devMode: false,
   templateFolderPath: "",
+  announceUpdates: true,
+  version: "0.0.0",
   migrations: {
     migrateToMacroIDFromEmbeddedMacro: false,
     useQuickAddTemplateFolder: false,
     incrementFileNameSettingMoveToDefaultBehavior: false,
-    mutualExclusionInsertAfterAndWriteToBottomOfFile: false
+    mutualExclusionInsertAfterAndWriteToBottomOfFile: false,
+    setVersionAfterUpdateModalRelease: false
   }
 };
 var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
@@ -14512,6 +14529,18 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
     this.addChoicesSetting();
     this.addUseMultiLineInputPromptSetting();
     this.addTemplateFolderPathSetting();
+    this.addAnnounceUpdatesSetting();
+  }
+  addAnnounceUpdatesSetting() {
+    const setting = new import_obsidian30.Setting(this.containerEl);
+    setting.setName("Announce Updates");
+    setting.setDesc("Display release notes when a new version is installed. This includes new features, demo videos, and bug fixes.");
+    setting.addToggle((toggle) => {
+      toggle.setValue(settingsStore.getState().announceUpdates);
+      toggle.onChange(async (value) => {
+        settingsStore.setState({ announceUpdates: value });
+      });
+    });
   }
   hide() {
     if (this.choiceView)
@@ -16045,12 +16074,22 @@ var mutualExclusionInsertAfterAndWriteToBottomOfFile = {
 };
 var mutualExclusionInsertAfterAndWriteToBottomOfFile_default = mutualExclusionInsertAfterAndWriteToBottomOfFile;
 
+// src/migrations/setVersionAfterUpdateModalRelease.ts
+var setVersionAfterUpdateModalRelease = {
+  description: "Set version to 0.14.0, which is the release version prior to the update modal release.",
+  migrate: async (_) => {
+    settingsStore.setState({ version: "0.14.0" });
+  }
+};
+var setVersionAfterUpdateModalRelease_default = setVersionAfterUpdateModalRelease;
+
 // src/migrations/migrate.ts
 var migrations = {
   migrateToMacroIDFromEmbeddedMacro: migrateToMacroIDFromEmbeddedMacro_default,
   useQuickAddTemplateFolder: useQuickAddTemplateFolder_default,
   incrementFileNameSettingMoveToDefaultBehavior: incrementFileNameSettingMoveToDefaultBehavior_default,
-  mutualExclusionInsertAfterAndWriteToBottomOfFile: mutualExclusionInsertAfterAndWriteToBottomOfFile_default
+  mutualExclusionInsertAfterAndWriteToBottomOfFile: mutualExclusionInsertAfterAndWriteToBottomOfFile_default,
+  setVersionAfterUpdateModalRelease: setVersionAfterUpdateModalRelease_default
 };
 async function migrate(plugin) {
   const migrationsToRun = Object.keys(migrations).filter(
@@ -16084,8 +16123,101 @@ QuickAdd will now revert to backup.`
 }
 var migrate_default = migrate;
 
+// src/gui/UpdateModal/UpdateModal.ts
+var import_obsidian34 = require("obsidian");
+async function getReleaseNotesAfter(repoOwner, repoName, releaseTagName) {
+  const response = await fetch(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/releases`
+  );
+  const releases = await response.json();
+  if (!response.ok && "message" in releases || !Array.isArray(releases)) {
+    throw new Error(
+      `Failed to fetch releases: ${releases.message ?? "Unknown error"}`
+    );
+  }
+  const startReleaseIdx = releases.findIndex(
+    (release) => release.tag_name === releaseTagName
+  );
+  if (startReleaseIdx === -1) {
+    throw new Error(`Could not find release with tag ${releaseTagName}`);
+  }
+  return releases.slice(0, startReleaseIdx).filter((release) => !release.draft && !release.prerelease);
+}
+function addExtraHashToHeadings(markdownText, numHashes = 1) {
+  const lines = markdownText.split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith("#")) {
+      lines[i] = "#".repeat(numHashes) + lines[i];
+    }
+  }
+  return lines.join("\n");
+}
+var UpdateModal = class extends import_obsidian34.Modal {
+  constructor(previousQAVersion) {
+    super(app);
+    this.previousVersion = previousQAVersion;
+    this.releaseNotesPromise = getReleaseNotesAfter(
+      "chhoumann",
+      "quickadd",
+      previousQAVersion
+    );
+    this.releaseNotesPromise.then((releases) => {
+      this.releases = releases;
+      if (this.releases.length === 0) {
+        this.close();
+        return;
+      }
+      this.display();
+    }).catch((err) => {
+      log.logError(`Failed to fetch release notes: ${err}`);
+    });
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.createEl("h1", {
+      text: "Fetching release notes..."
+    });
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+  display() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.classList.add("quickadd-update-modal-container");
+    const header = `### New in QuickAdd v${this.releases[0].tag_name}
+`;
+    const text2 = `Thank you for using QuickAdd! If you like the plugin, please consider supporting me by buying me a coffee. With your sponsorship, I'll be able to contribute more to my existing projects, start new ones, and be more responsive to issues & feature requests.`;
+    const buymeacoffee = `<div class="quickadd-bmac-container"><a href="https://www.buymeacoffee.com/chhoumann" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 144px !important;" ></a></div>`;
+    const contentDiv = contentEl.createDiv("quickadd-update-modal");
+    const releaseNotes = this.releases.map((release) => release.body).join("\n---\n");
+    const andNow = `And now, here is everything new in QuickAdd since your last update (v${this.previousVersion}):`;
+    const feedbackForm = `I'd love to get your feedback on QuickAdd! Please fill out this <a href="https://forms.gle/WRq1ewcKK8qmkqps6">feedback form</a> to let me know what you think.`;
+    const markdownStr = `${header}
+${text2}
+${buymeacoffee}
+${feedbackForm}
+
+${andNow}
+
+---
+
+${addExtraHashToHeadings(
+      releaseNotes
+    )}`;
+    import_obsidian34.MarkdownRenderer.renderMarkdown(
+      markdownStr,
+      contentDiv,
+      app.vault.getRoot().path,
+      null
+    );
+  }
+};
+
 // src/main.ts
-var QuickAdd = class extends import_obsidian34.Plugin {
+var QuickAdd = class extends import_obsidian35.Plugin {
   get api() {
     return QuickAddApi.GetApi(app, this, new ChoiceExecutor(app, this));
   }
@@ -16125,13 +16257,7 @@ var QuickAdd = class extends import_obsidian34.Plugin {
         }
         console.log(`Test QuickAdd (dev)`);
         const fn2 = async () => {
-          const activeView = await this.app.workspace.getActiveViewOfType(
-            import_obsidian34.MarkdownView
-          );
-          if (!activeView)
-            return false;
-          const x = this.app.workspace.getLeaf("tab");
-          x.openFile(activeView.file);
+          new UpdateModal("0.12.0").open();
         };
         fn2();
       }
@@ -16147,7 +16273,8 @@ var QuickAdd = class extends import_obsidian34.Plugin {
       ).run()
     );
     this.addCommandsForChoices(this.settings.choices);
-    migrate_default(this);
+    await migrate_default(this);
+    this.announceUpdate();
   }
   onunload() {
     console.log("Unloading QuickAdd");
@@ -16221,5 +16348,17 @@ var QuickAdd = class extends import_obsidian34.Plugin {
     return this.app.vault.getFiles().filter(
       (file) => file.path.startsWith(this.settings.templateFolderPath)
     );
+  }
+  announceUpdate() {
+    const currentVersion = this.manifest.version;
+    const knownVersion = this.settings.version;
+    if (currentVersion === knownVersion)
+      return;
+    this.settings.version = currentVersion;
+    this.saveSettings();
+    if (this.settings.announceUpdates === false)
+      return;
+    const updateModal = new UpdateModal(knownVersion);
+    updateModal.open();
   }
 };

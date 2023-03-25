@@ -1,7 +1,6 @@
 const Obsidian = require("obsidian");
 // require built-in crypto module
 const crypto = require("crypto");
-const { json } = require("stream/consumers");
 
 const DEFAULT_SETTINGS = {
   api_key: "",
@@ -1528,7 +1527,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     brand_p.createEl("a", {
       cls: "",
       text: "Smart Connections",
-      href: "https://wfhbrian.com/introducing-smart-chat-transform-your-obsidian-notes-into-interactive-ai-powered-conversations/?utm_source=plugin",
+      href: "https://github.com/brianpetro/obsidian-smart-connections/discussions",
       target: "_blank"
     });
   }
@@ -2242,7 +2241,7 @@ class SmartConnectionsView extends Obsidian.ItemView {
   }
 
   async search(search_text, results_only=false) {
-    const nearest = await this.api.search(search_text);
+    const nearest = await this.plugin.api.search(search_text);
     // render results in view with first 100 characters of search text
     const nearest_context = `Selection: "${search_text.length > 100 ? search_text.substring(0, 100) + "..." : search_text}"`;
     this.set_nearest(nearest, nearest_context, results_only);
@@ -2540,12 +2539,13 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.plugin = plugin;
-    this.chat_container = null;
+    this.active_elm = null;
+    this.active_stream = null;
+    this.chat = null;
     this.chat_box = null;
-    this.message_container = null;
+    this.chat_container = null;
     this.current_chat_ml = [];
-    this.last_from = null;
-    this.last_msg = null;
+    this.message_container = null;
     this.prevent_input = false;
   }
   getDisplayText() {
@@ -2558,6 +2558,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     return SMART_CONNECTIONS_CHAT_VIEW_TYPE;
   }
   onOpen() {
+    this.chat = new SmartConnectionsChatModel(this.plugin);
     this.containerEl.empty();
     this.chat_container = this.containerEl.createDiv("sc-chat-container");
     // render plus sign for clear button
@@ -2567,8 +2568,11 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     // render chat input
     this.render_chat_input();
     this.plugin.render_brand(this.containerEl);
-    // render initial message from assistant
-    this.render_message(INITIAL_MESSAGE, "assistant");
+    // render initial message from assistant (don't use render_message to skip adding to chat history)
+    // this.render_message(INITIAL_MESSAGE, "assistant");
+    this.new_messsage_bubble("assistant");
+    this.active_elm.innerHTML = '<p>'+INITIAL_MESSAGE+'</p>';
+    // this.test_get_nearest_until_next_dev_exceeds_std_dev();
   }
   onClose() {
   }
@@ -2588,6 +2592,11 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     });
   }
   new_chat() {
+    // save current chat
+    if(this.chat) {
+      this.chat.save_chat();
+    }
+    this.chat = new SmartConnectionsChatModel(this.plugin);
     // if this.dotdotdot_interval is not null, clear interval
     if (this.dotdotdot_interval) {
       clearInterval(this.dotdotdot_interval);
@@ -2595,7 +2604,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     // clear current chat ml
     this.current_chat_ml = [];
     // update prevent input
-    this.prevent_input = false;
+    this.end_stream();
     this.onOpen();
   }
   // render chat messages container
@@ -2627,9 +2636,19 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
         // initiate response from assistant
         this.initialize_response(user_input);
       }
-    });    
+    });
+    // button container
+    let button_container = chat_input.createDiv("sc-button-container");
+    // create hidden abort button
+    let abort_button = button_container.createEl("span", { attr: {id: "sc-abort-button", style: "display: none;"} });
+    Obsidian.setIcon(abort_button, "square");
+    // add event listener to button
+    abort_button.addEventListener("click", () => {
+      // abort current response
+      this.end_stream();
+    });
     // create button
-    let button = chat_input.createEl("button", { cls: "send-button" });
+    let button = button_container.createEl("button", { attr: {id: "sc-send-button"}, cls: "send-button" });
     button.innerHTML = "Send";
     // add event listener to button
     button.addEventListener("click", () => {
@@ -2647,37 +2666,64 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     });
   }
   async initialize_response(user_input) {
-    this.prevent_input = true;
+    this.set_streaming_ux();
     // render message
     this.render_message(user_input, "user");
-    this.append_chatml(user_input, "user");
-    // after 200 ms render "..."
-    setTimeout(() => {
-      this.render_message("...", "assistant");
-    }, 200);
+    this.chat.new_message_in_thread({
+      role: "user",
+      content: user_input
+    });
+    if(this.dotdotdot_interval) clearInterval(this.dotdotdot_interval);
+    this.render_message("...", "assistant");
+    // if is '...', then initiate interval to change to '.' and then to '..' and then to '...'
+    let dots = 0;
+    this.active_elm.innerHTML = '...';
+    this.dotdotdot_interval = setInterval(() => {
+      dots++;
+      if(dots > 3) dots = 1;
+      this.active_elm.innerHTML = '.'.repeat(dots);
+    }, 500);
+    // wait 2 seconds for testing
+    // await new Promise(r => setTimeout(r, 2000));
     // if does not include keywords referring to one's own notes, then just use chatgpt and return
     if(!this.contains_self_referential_keywords(user_input)) {
       this.request_chatgpt_completion();
-      return;
+    }else{
+      // get hyde
+      const context = await this.get_context_hyde(user_input);
+      // get user input with added context
+      // const context_input = this.build_context_input(context);
+      // console.log(context_input);
+      const chatml = [
+        {
+          role: "system",
+          // content: context_input
+          content: context
+        },
+        {
+          role: "user",
+          content: user_input
+        }
+      ];
+      this.request_chatgpt_completion({messages: chatml});
     }
-    // get hyde
-    const context = await this.get_hyde_context(user_input);
-    // get user input with added context
-    const context_input = this.build_context_input(context);
-    // console.log(context_input);
-    const chatml = [
-      {
-        role: "system",
-        content: context_input
-      },
-      {
-        role: "user",
-        content: user_input
-      }
-    ];
-    this.request_chatgpt_completion({messages: chatml});
   }
   
+  set_streaming_ux() {
+    this.prevent_input = true;
+    // hide send button
+    document.getElementById("sc-send-button").style.display = "none";
+    // show abort button
+    document.getElementById("sc-abort-button").style.display = "block";
+  }
+  unset_streaming_ux() {
+    this.prevent_input = false;
+    // show send button, remove display none
+    document.getElementById("sc-send-button").style.display = "";
+    // hide abort button
+    document.getElementById("sc-abort-button").style.display = "none";
+  }
+
   contains_self_referential_keywords(user_input) {
     const kw_regex = /\b(my|I|me|mine|our|ours|us|we)\b/gi;
     const matches = user_input.match(kw_regex);
@@ -2685,59 +2731,78 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     return false;
   }
 
-  // build context input
-  build_context_input(context) {
-    let input = `Anticipate the type of answer desired by the user. Imagine the following ${context.length} notes were written by the user and contain all the necessary information to answer the user's question. Begin responses with "Based on your notes..."`;
-    for(let i = 0; i < context.length; i++) {
-      input += `\n---BEGIN #${i+1}---\n${context[i].text}\n---END #${i+1}---`;
-    }
-    return input;
-  }
-
   // render message
   render_message(message, from="assistant", append_last=false) {
-    if(append_last && this.last_from === from) {
-      // if(this.last_msg.innerHTML === '...') this.last_msg.innerHTML = '';
-      // if dotdotdot interval is set, then clear it
-      if(this.dotdotdot_interval) {
-        clearInterval(this.dotdotdot_interval);
-        this.dotdotdot_interval = null;
-        // clear last message
-        this.last_msg.innerHTML = '';
-      }
+    // if dotdotdot interval is set, then clear it
+    if(this.dotdotdot_interval) {
+      clearInterval(this.dotdotdot_interval);
+      this.dotdotdot_interval = null;
+      // clear last message
+      this.active_elm.innerHTML = '';
+    }
+    if(append_last) {
       this.current_message_raw += message;
-      this.last_msg.innerHTML = '';
+      this.active_elm.innerHTML = '';
       // append to last message
-      Obsidian.MarkdownRenderer.renderMarkdown(this.current_message_raw, this.last_msg, '?no-dataview', void 0);
+      Obsidian.MarkdownRenderer.renderMarkdown(this.current_message_raw, this.active_elm, '?no-dataview', void 0);
     }else{
-      this.current_message_raw = '';
-      // set last from
-      this.last_from = from;
-      // create message
-      let message_el = this.message_container.createDiv(`sc-message ${from}`);
-      // create message content
-      this.last_msg = message_el.createDiv("sc-message-content");
-      // if is '...', then initiate interval to change to '.' and then to '..' and then to '...'
-      if((from === "assistant") && (message === '...')) {
-        let dots = 0;
-        this.last_msg.innerHTML = '...';
-        this.dotdotdot_interval = setInterval(() => {
-          dots++;
-          if(dots > 3) dots = 1;
-          this.last_msg.innerHTML = '.'.repeat(dots);
-        }, 500);
-      }else{
-        // set message text
-        Obsidian.MarkdownRenderer.renderMarkdown(message, this.last_msg, '?no-dataview', void 0);
+      // if final from assistant stream, then render message button
+      if(this.current_message_raw === message) {
+        if(this.chat.context && this.chat.hyd) {
+          // render button to copy hyd in smart-connections code block
+          const context_view = this.active_elm.createEl("span", {cls: "sc-msg-button"});
+          const this_hyd = this.chat.hyd;
+          Obsidian.setIcon(context_view, "eye");
+          context_view.addEventListener("click", () => {
+            // copy to clipboard
+            navigator.clipboard.writeText("```smart-connections\n" + this_hyd + "\n```\n");
+            new Obsidian.Notice("[Smart Connections] Context code block copied to clipboard");
+          });
+          // render copy context button
+          const copy_prompt_button = this.active_elm.createEl("span", {cls: "sc-msg-button"});
+          const this_context = this.chat.context.trimLeft();
+          Obsidian.setIcon(copy_prompt_button, "files");
+          copy_prompt_button.addEventListener("click", () => {
+            // copy to clipboard
+            navigator.clipboard.writeText(this_context);
+            new Obsidian.Notice("[Smart Connections] Context copied to clipboard");
+          });
+        }
+        // render copy button
+        const copy_button = this.active_elm.createEl("span", {cls: "sc-msg-button"});
+        Obsidian.setIcon(copy_button, "copy");
+        copy_button.addEventListener("click", () => {
+          // copy message to clipboard
+          navigator.clipboard.writeText(message.trimLeft());
+          new Obsidian.Notice("[Smart Connections] Message copied to clipboard");
+        });
+        return; // end here since message is already rendered
       }
+      this.current_message_raw = '';
+      if((this.chat.thread.length === 0) || (this.chat.last_from() !== from)) {
+        // create message
+        this.new_messsage_bubble(from);
+      }
+      this.chat.new_message_in_thread({
+        role: from,
+        content: message
+      });
+      // set message text
+      Obsidian.MarkdownRenderer.renderMarkdown(message, this.active_elm, '?no-dataview', void 0);
     }
     // scroll to bottom
     this.message_container.scrollTop = this.message_container.scrollHeight;
   }
+  new_messsage_bubble(from) {
+    let message_el = this.message_container.createDiv(`sc-message ${from}`);
+    // create message content
+    this.active_elm = message_el.createDiv("sc-message-content");
+  }
+
   async request_chatgpt_completion(opts={}) {
     opts = {
       model: this.plugin.settings.smart_chat_model,
-      messages: this.current_chat_ml,
+      messages: this.chat.prepare_chat_ml(),
       max_tokens: 250,
       temperature: 0.3,
       top_p: 1,
@@ -2755,7 +2820,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
         try {
           // console.log("stream", opts);
           const url = "https://api.openai.com/v1/chat/completions";
-          const source = new ScStreamer(url, {
+          this.active_stream = new ScStreamer(url, {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${this.plugin.settings.api_key}`
@@ -2764,7 +2829,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
             payload: JSON.stringify(opts)
           });
           let txt = "";
-          source.addEventListener("message", (e) => {
+          this.active_stream.addEventListener("message", (e) => {
             if (e.data != "[DONE]") {
               const payload = JSON.parse(e.data);
               const text = payload.choices[0].delta.content;
@@ -2774,27 +2839,36 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
               txt += text;
               this.render_message(text, "assistant", true);
             } else {
-              source.close();
-              // this.render_message(txt, "assistant", true);
-              this.prevent_input = false;
+              this.end_stream();
               resolve(txt);
             }
           });
-          source.addEventListener("readystatechange", (e) => {
+          this.active_stream.addEventListener("readystatechange", (e) => {
             if (e.readyState >= 2) {
               console.log("ReadyState: " + e.readyState);
             }
           });
-          source.stream();
+          this.active_stream.addEventListener("error", (e) => {
+            console.error(e);
+            new Obsidian.Notice("Smart Connections Error Streaming Response. See console for details.");
+            this.render_message("*API Error. See console logs for details.*", "assistant");
+            this.end_stream();
+            reject(e);
+          });
+          this.active_stream.stream();
         } catch (err) {
           console.error(err);
           new Obsidian.Notice("Smart Connections Error Streaming Response. See console for details.");
-          this.prevent_input = false;
+          this.end_stream();
           reject(err);
         }
       });
       // console.log(full_str);
-      this.append_chatml(full_str, "assistant");
+      this.render_message(full_str, "assistant");
+      this.chat.new_message_in_thread({
+        role: "assistant",
+        content: full_str
+      });
       return;
     }else{
       try{
@@ -2816,20 +2890,25 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       }
     }
   }
-  append_chatml(message, from="assistant") {
-    this.current_chat_ml.push({
-      role: from,
-      content: message
-    });
-    return this.current_chat_ml;
+
+  end_stream() {
+    if(this.active_stream){
+      this.active_stream.close();
+      this.active_stream = null;
+    }
+    if(this.dotdotdot_interval){
+      clearInterval(this.dotdotdot_interval);
+      this.dotdotdot_interval = null;
+      // remove parent of active_elm
+      this.active_elm.parentElement.remove();
+      this.active_elm = null;
+    }
+    this.unset_streaming_ux();
   }
 
-  async get_hyde_context(user_input) {
+  async get_context_hyde(user_input) {
+    this.chat.reset_context();
     // count current chat ml messages to determine 'question' or 'chat log' wording
-    // let subject = "question";
-    // if(this.current_chat_ml.length > 1) {
-    //   subject = "chat log";
-    // }
     const hyd_input = `Anticipate what the user is seeking. Respond in the form of a hypothetical note written by the user. The note may contain statements as paragraphs, lists, or checklists in markdown format with no headings. Please respond with one hypothetical note and abstain from any other commentary. Use the format: PARENT FOLDER NAME > CHILD FOLDER NAME > FILE NAME > HEADING 1 > HEADING 2 > HEADING 3: HYPOTHETICAL NOTE CONTENTS.`;
     // complete
     const chatml = [
@@ -2848,81 +2927,236 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       temperature: 0,
       max_tokens: 137,
     });
-    // this.render_message(hyd, "assistant", true);
+    this.chat.hyd = hyd;
     // console.log(hyd);
     // search for nearest based on hyd
     let nearest = await this.plugin.api.search(hyd);
+    console.log("nearest", nearest.length);
+    nearest = this.get_nearest_until_next_dev_exceeds_std_dev(nearest);
+    console.log("nearest after std dev slice", nearest.length);
+    nearest = this.sort_by_len_adjusted_similarity(nearest);
+    
+    return await this.get_context_for_prompt(nearest);
+  }
+  
+  
+  sort_by_len_adjusted_similarity(nearest) {
+    // re-sort by quotient of similarity divided by len DESC
+    nearest = nearest.sort((a, b) => {
+      const a_score = a.similarity / a.len;
+      const b_score = b.similarity / b.len;
+      // if a is greater than b, return -1
+      if (a_score > b_score)
+        return -1;
+      // if a is less than b, return 1
+      if (a_score < b_score)
+        return 1;
+      // if a is equal to b, return 0
+      return 0;
+    });
+    return nearest;
+  }
+
+  get_nearest_until_next_dev_exceeds_std_dev(nearest) {
     // get std dev of similarity
     const sim = nearest.map((n) => n.similarity);
     const mean = sim.reduce((a, b) => a + b) / sim.length;
     const std_dev = Math.sqrt(sim.map((x) => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / sim.length);
     // slice where next item deviation is greater than std_dev
     let slice_i = 0;
-    while(slice_i < nearest.length) {
+    while (slice_i < nearest.length) {
       const next = nearest[slice_i + 1];
-      if(next) {
+      if (next) {
         const next_dev = Math.abs(next.similarity - nearest[slice_i].similarity);
-        if(next_dev > std_dev) {
+        if (next_dev > std_dev) {
           break;
         }
       }
       slice_i++;
     }
     // select top results
-    nearest = nearest.slice(0, slice_i);
-    // re-sort by quotient of similarity divided by len DESC
-    nearest = nearest.sort((a, b) => {
-      const a_score = a.similarity / a.len;
-      const b_score = b.similarity / b.len;
-      // if a is greater than b, return -1
-      if(a_score > b_score) return -1;
-      // if a is less than b, return 1
-      if(a_score < b_score) return 1;
-      // if a is equal to b, return 0
-      return 0;
-    });
+    nearest = nearest.slice(0, slice_i+1);
+    return nearest;
+  }
+  // // test get_nearest_until_next_dev_exceeds_std_dev
+  // test_get_nearest_until_next_dev_exceeds_std_dev() {
+  //   const nearest = [{similarity: 0.99}, {similarity: 0.98}, {similarity: 0.97}, {similarity: 0.96}, {similarity: 0.95}, {similarity: 0.94}, {similarity: 0.93}, {similarity: 0.92}, {similarity: 0.91}, {similarity: 0.9}, {similarity: 0.79}, {similarity: 0.78}, {similarity: 0.77}, {similarity: 0.76}, {similarity: 0.75}, {similarity: 0.74}, {similarity: 0.73}, {similarity: 0.72}];
+  //   const result = this.get_nearest_until_next_dev_exceeds_std_dev(nearest);
+  //   if(result.length !== 10){
+  //     console.error("get_nearest_until_next_dev_exceeds_std_dev failed", result);
+  //   }
+  // }
 
-    // console.log(nearest);
-    // get the top 3 results excluding files (must have a # in the link)
-    let top = [];
+  async get_context_for_prompt(nearest) {
+    let context = [];
     const MAX_SOURCES = 20; // 10 * 1000 (max chars) = 10,000 chars (must be under ~16,000 chars or 4K tokens) 
     const MAX_CHARS = 10000;
     let char_accum = 0;
-    for(let i = 0; i < nearest.length; i++) {
-      if(top.length >= MAX_SOURCES) break;
-      if(char_accum >= MAX_CHARS) break;
-      if(typeof nearest[i].link !== 'string') continue;
+    for (let i = 0; i < nearest.length; i++) {
+      if (context.length >= MAX_SOURCES)
+        break;
+      if (char_accum >= MAX_CHARS)
+        break;
+      if (typeof nearest[i].link !== 'string')
+        continue;
       // generate breadcrumbs
       const breadcrumbs = nearest[i].link.replace(/#/g, " > ").replace(".md", "").replace(/\//g, " > ");
       let new_context = `${breadcrumbs}:\n`;
-      // get max available chars to add to top
+      // get max available chars to add to context
       const max_available_chars = MAX_CHARS - char_accum - new_context.length;
-      if(nearest[i].link.indexOf("#") !== -1){ // is block
-        new_context += await this.plugin.block_retriever(nearest[i].link, {max_chars: max_available_chars});
-      }else{ // is file
-        const this_file = this.app.vault.getAbstractFileByPath(nearest[i].link);
-        // if file is not found, skip
-        if (!(this_file instanceof Obsidian.TAbstractFile)) continue;
-        // use cachedRead to get the first 10 lines of the file
-        const file_content = await this.app.vault.cachedRead(this_file);
-        // get up to max_available_chars from file_content
-        new_context += file_content.substring(0, max_available_chars);
+      if (nearest[i].link.indexOf("#") !== -1) { // is block
+        new_context += await this.plugin.block_retriever(nearest[i].link, { max_chars: max_available_chars });
+      } else { // is file
+        new_context += await this.plugin.file_retriever(nearest[i].link, { max_chars: max_available_chars });
       }
       // add to char_accum
       char_accum += new_context.length;
-      // add to top
-      top.push({
+      // add to context
+      context.push({
         link: nearest[i].link,
         text: new_context
       });
     }
     // context sources
-    console.log("context sources: " + top.length);
+    console.log("context sources: " + context.length);
     // char_accum divided by 4 and rounded to nearest integer for estimated tokens
     console.log("total context tokens: ~" + Math.round(char_accum / 4));
-    // console.log(top);
-    return top;
+    // build context input
+    this.chat.context = `Anticipate the type of answer desired by the user. Imagine the following ${context.length} notes were written by the user and contain all the necessary information to answer the user's question. Begin responses with "Based on your notes..."`;
+    for(let i = 0; i < context.length; i++) {
+      this.chat.context += `\n---BEGIN #${i+1}---\n${context[i].text}\n---END #${i+1}---`;
+    }
+    return this.chat.context;
   }
+}
+
+/**
+ * SmartConnectionsChatModel
+ * ---
+ * - 'thread' format: Array[Array[Object{role, content, hyde}]]
+ *  - [Turn[variation{}], Turn[variation{}, variation{}], ...]
+ * - Saves in 'thread' format to JSON file in .smart-connections folder using chat_id as filename
+ * - Loads chat in 'thread' format Array[Array[Object{role, content, hyde}]] from JSON file in .smart-connections folder
+ * - prepares chat_ml returns in 'ChatML' format 
+ *  - strips all but role and content properties from Object in ChatML format
+ * - ChatML Array[Object{role, content}]
+ *  - [Current_Variation_For_Turn_1{}, Current_Variation_For_Turn_2{}, ...]
+ */
+class SmartConnectionsChatModel {
+  constructor(plugin) {
+    this.app = plugin.app;
+    this.plugin = plugin;
+    this.chat_id = null;
+    this.chat_ml = [];
+    this.context = null;
+    this.hyd = null;
+    this.thread = [];
+  }
+  async save_chat() {
+    // save chat to file in .smart-connections folder
+    // create .smart-connections/chats/ folder if it doesn't exist
+    if (!(await this.app.vault.adapter.exists(".smart-connections/chats"))) {
+      await this.app.vault.adapter.mkdir(".smart-connections/chats");
+    }
+    // if chat_id is not set, set it to human readable timestamp
+    if (!this.chat_id) {
+      this.chat_id = new Date().toISOString().replace(/(T|:|\..*)/g, " ").trim();
+    }
+    // validate chat_id is set to valid filename characters (letters, numbers, underscores, dashes, and spaces)
+    if (!this.chat_id.match(/^[a-zA-Z0-9_\- ]+$/)) {
+      console.log("Invalid chat_id: " + this.chat_id);
+      new Obsidian.Notice("[Smart Connections] Failed to save chat. Invalid chat_id: '" + this.chat_id + "'");
+    }
+    // filename is chat_id
+    const chat_file = this.chat_id + ".json";
+    this.app.vault.adapter.write(
+      ".smart-connections/chats/" + chat_file,
+      JSON.stringify(this.thread, null, 2)
+    );
+  }
+  load_chat(chat_id) {
+    this.chat_id = chat_id;
+    // load chat from file in .smart-connections folder
+    // filename is chat_id
+    const chat_file = this.chat_id + ".json";
+    // read file
+    let chat_json = this.app.vault.adapter.read(
+      ".smart-connections/chats/" + chat_file
+    );
+    // parse json
+    this.thread = JSON.parse(chat_json);
+    // load chat_ml
+    this.chat_ml = this.prepare_chat_ml();
+  }
+  // prepare chat_ml from chat
+  // gets the last message of each turn unless turn_variation_offsets=[[turn_index,variation_index]] is specified in offset
+  prepare_chat_ml(turn_variation_offsets=[]) {
+    // if no turn_variation_offsets, get the last message of each turn
+    if(turn_variation_offsets.length === 0){
+      this.chat_ml = this.thread.map(turn => {
+        return turn[turn.length - 1];
+      });
+    }else{
+      // create an array from turn_variation_offsets that indexes variation_index at turn_index
+      // ex. [[3,5]] => [undefined, undefined, undefined, 5]
+      let turn_variation_index = [];
+      for(let i = 0; i < turn_variation_offsets.length; i++){
+        turn_variation_index[turn_variation_offsets[i][0]] = turn_variation_offsets[i][1];
+      }
+      // loop through chat
+      this.chat_ml = this.thread.map((turn, turn_index) => {
+        // if there is an index for this turn, return the variation at that index
+        if(turn_variation_index[turn_index] !== undefined){
+          return turn[turn_variation_index[turn_index]];
+        }
+        // otherwise return the last message of the turn
+        return turn[turn.length - 1];
+      });
+    }
+    // strip all but role and content properties from each message
+    this.chat_ml = this.chat_ml.map(message => {
+      return {
+        role: message.role,
+        content: message.content
+      };
+    });
+    return this.chat_ml;
+  }
+  last() {
+    // get last message from chat
+    return this.thread[this.thread.length - 1][this.thread[this.thread.length - 1].length - 1];
+  }
+  last_from() {
+    return this.last().role;
+  }
+  // returns user_input or completion
+  last_message() {
+    return this.last().content;
+  }
+  // message={}
+  // add new message to thread
+  new_message_in_thread(message, turn=-1) {
+    // if turn is -1, add to new turn
+    if(this.context){
+      message.context = this.context;
+      this.context = null;
+    }
+    if(this.hyd){
+      message.hyd = this.hyd;
+      this.hyd = null;
+    }
+    if (turn === -1) {
+      this.thread.push([message]);
+    }else{
+      // otherwise add to specified turn
+      this.thread[turn].push(message);
+    }
+  }
+  reset_context(){
+    this.context = null;
+    this.hyd = null;
+  }
+
 
 }
 

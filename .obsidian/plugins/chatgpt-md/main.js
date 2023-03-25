@@ -235,110 +235,144 @@ var unfinishedCodeBlock = (txt) => {
 };
 
 // stream.ts
-var streamSSE = async (editor, apiKey, options, setAtCursor, headingPrefix) => {
-  return new Promise((resolve, reject) => {
-    try {
-      console.log("[ChatGPT MD] streamSSE", options);
-      const url = "https://api.openai.com/v1/chat/completions";
-      const source = new import_sse.SSE(url, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`
-        },
-        method: "POST",
-        payload: JSON.stringify(options)
-      });
-      let txt = "";
-      let initialCursorPosCh = editor.getCursor().ch;
-      let initialCursorPosLine = editor.getCursor().line;
-      source.addEventListener("open", (e) => {
-        console.log("[ChatGPT MD] SSE Opened");
-        const newLine = `
+var StreamManager = class {
+  constructor() {
+    this.sse = null;
+    this.manualClose = false;
+    this.stopStreaming = () => {
+      if (import_obsidian.Platform.isMobile) {
+        new import_obsidian.Notice("[ChatGPT MD] Mobile not supported.");
+        return;
+      }
+      if (this.sse) {
+        this.manualClose = true;
+        this.sse.close();
+        console.log("[ChatGPT MD] SSE manually closed");
+        this.sse = null;
+      }
+    };
+    this.streamSSE = async (editor, apiKey, url, options, setAtCursor, headingPrefix) => {
+      return new Promise((resolve, reject) => {
+        try {
+          console.log("[ChatGPT MD] streamSSE", options);
+          const source = new import_sse.SSE(url, {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${apiKey}`
+            },
+            method: "POST",
+            payload: JSON.stringify(options)
+          });
+          this.sse = source;
+          let txt = "";
+          let initialCursorPosCh = editor.getCursor().ch;
+          let initialCursorPosLine = editor.getCursor().line;
+          source.addEventListener("open", (e) => {
+            console.log("[ChatGPT MD] SSE Opened");
+            const newLine = `
 
 <hr class="__chatgpt_plugin">
 
 ${headingPrefix}role::assistant
 
 `;
-        editor.replaceRange(newLine, editor.getCursor());
-        const cursor = editor.getCursor();
-        const newCursor = {
-          line: cursor.line,
-          ch: cursor.ch + newLine.length
-        };
-        editor.setCursor(newCursor);
-        initialCursorPosCh = newCursor.ch;
-        initialCursorPosLine = newCursor.line;
-      });
-      source.addEventListener("message", (e) => {
-        if (e.data != "[DONE]") {
-          const payload = JSON.parse(e.data);
-          const text = payload.choices[0].delta.content;
-          if (!text) {
-            return;
-          }
-          const cursor = editor.getCursor();
-          const convPos = editor.posToOffset(cursor);
-          const cm6 = editor.cm;
-          const transaction = cm6.state.update({
-            changes: { from: convPos, to: convPos, insert: text }
+            editor.replaceRange(newLine, editor.getCursor());
+            const cursor = editor.getCursor();
+            const newCursor = {
+              line: cursor.line,
+              ch: cursor.ch + newLine.length
+            };
+            editor.setCursor(newCursor);
+            initialCursorPosCh = newCursor.ch;
+            initialCursorPosLine = newCursor.line;
           });
-          cm6.dispatch(transaction);
-          txt += text;
-          const newCursor = {
-            line: cursor.line,
-            ch: cursor.ch + text.length
-          };
-          editor.setCursor(newCursor);
-        } else {
-          source.close();
-          console.log("[ChatGPT MD] SSE Closed");
-          if (unfinishedCodeBlock(txt)) {
-            txt += "\n```";
-          }
-          const cursor = editor.getCursor();
-          editor.replaceRange(
-            txt,
-            { line: initialCursorPosLine, ch: initialCursorPosCh },
-            cursor
-          );
-          const newCursor = {
-            line: initialCursorPosLine,
-            ch: initialCursorPosCh + txt.length
-          };
-          editor.setCursor(newCursor);
-          if (!setAtCursor) {
-            editor.replaceRange("", newCursor, {
-              line: Infinity,
-              ch: Infinity
-            });
-          } else {
-            new import_obsidian.Notice(
-              "[ChatGPT MD] Text pasted at cursor may leave artifacts. Please remove them manually. ChatGPT MD cannot safely remove text when pasting at cursor."
-            );
-          }
-          resolve(txt);
-        }
-      });
-      source.addEventListener("error", (e) => {
-        try {
-          console.log("[ChatGPT MD] SSE Error: ", JSON.parse(e.data));
-          source.close();
-          console.log("[ChatGPT MD] SSE Closed");
-          reject(JSON.parse(e.data));
+          source.addEventListener("message", (e) => {
+            if (e.data != "[DONE]") {
+              const payload = JSON.parse(e.data);
+              const text = payload.choices[0].delta.content;
+              if (!text) {
+                return;
+              }
+              const cursor = editor.getCursor();
+              const convPos = editor.posToOffset(cursor);
+              const cm6 = editor.cm;
+              const transaction = cm6.state.update({
+                changes: {
+                  from: convPos,
+                  to: convPos,
+                  insert: text
+                }
+              });
+              cm6.dispatch(transaction);
+              txt += text;
+              const newCursor = {
+                line: cursor.line,
+                ch: cursor.ch + text.length
+              };
+              editor.setCursor(newCursor);
+            } else {
+              source.close();
+              console.log("[ChatGPT MD] SSE Closed");
+              if (unfinishedCodeBlock(txt)) {
+                txt += "\n```";
+              }
+              const cursor = editor.getCursor();
+              editor.replaceRange(
+                txt,
+                {
+                  line: initialCursorPosLine,
+                  ch: initialCursorPosCh
+                },
+                cursor
+              );
+              const newCursor = {
+                line: initialCursorPosLine,
+                ch: initialCursorPosCh + txt.length
+              };
+              editor.setCursor(newCursor);
+              if (!setAtCursor) {
+                editor.replaceRange("", newCursor, {
+                  line: Infinity,
+                  ch: Infinity
+                });
+              } else {
+                new import_obsidian.Notice(
+                  "[ChatGPT MD] Text pasted at cursor may leave artifacts. Please remove them manually. ChatGPT MD cannot safely remove text when pasting at cursor."
+                );
+              }
+              resolve(txt);
+            }
+          });
+          source.addEventListener("abort", (e) => {
+            console.log("[ChatGPT MD] SSE Closed Event");
+            if (this.manualClose) {
+              resolve(txt);
+            }
+          });
+          source.addEventListener("error", (e) => {
+            try {
+              console.log(
+                "[ChatGPT MD] SSE Error: ",
+                JSON.parse(e.data)
+              );
+              source.close();
+              console.log("[ChatGPT MD] SSE Closed");
+              reject(JSON.parse(e.data));
+            } catch (err) {
+              console.log("[ChatGPT MD] Unknown Error: ", e);
+              source.close();
+              console.log("[ChatGPT MD] SSE Closed");
+              reject(e);
+            }
+          });
+          source.stream();
         } catch (err) {
-          console.log("[ChatGPT MD] Unknown Error: ", e);
-          source.close();
-          console.log("[ChatGPT MD] SSE Closed");
-          reject(e);
+          console.log("SSE Error", err);
+          reject(err);
         }
       });
-      source.stream();
-    } catch (err) {
-      console.log("SSE Error", err);
-      reject(err);
-    }
-  });
+    };
+  }
 };
 
 // main.ts
@@ -353,8 +387,9 @@ var DEFAULT_SETTINGS = {
   dateFormat: "YYYYMMDDhhmmss",
   headingLevel: 0
 };
+var DEFAULT_URL = `https://api.openai.com/v1/chat/completions`;
 var ChatGPT_MD = class extends import_obsidian2.Plugin {
-  async callOpenAIAPI(editor, messages, model = "gpt-3.5-turbo", max_tokens = 250, temperature = 0.3, top_p = 1, presence_penalty = 0.5, frequency_penalty = 0.5, stream = true, stop = null, n = 1, logit_bias = null, user = null) {
+  async callOpenAIAPI(streamManager, editor, messages, model = "gpt-3.5-turbo", max_tokens = 250, temperature = 0.3, top_p = 1, presence_penalty = 0.5, frequency_penalty = 0.5, stream = true, stop = null, n = 1, logit_bias = null, user = null, url = DEFAULT_URL) {
     try {
       console.log("calling openai api");
       if (stream) {
@@ -372,9 +407,10 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
           // logit_bias: logit_bias, // not yet supported
           // user: user, // not yet supported
         };
-        const response = await streamSSE(
+        const response = await streamManager.streamSSE(
           editor,
           this.settings.apiKey,
+          url,
           options,
           this.settings.generateAtCursor,
           this.getHeadingPrefix()
@@ -383,7 +419,7 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
         return { fullstr: response, mode: "streaming" };
       } else {
         const responseUrl = await (0, import_obsidian2.requestUrl)({
-          url: `https://api.openai.com/v1/chat/completions`,
+          url,
           method: "POST",
           headers: {
             Authorization: `Bearer ${this.settings.apiKey}`,
@@ -410,7 +446,7 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
           const json = responseUrl.json;
           if (json && json.error) {
             new import_obsidian2.Notice(
-              `[ChatGPT MD] Error :: ${json.error.message}`
+              `[ChatGPT MD] Stream = False Error :: ${json.error.message}`
             );
             throw new Error(JSON.stringify(json.error));
           }
@@ -430,8 +466,13 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
           new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${err.error.message}`);
           throw new Error(JSON.stringify(err.error));
         } else {
-          new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${JSON.stringify(err)}`);
-          throw new Error(JSON.stringify(err));
+          if (url !== DEFAULT_URL) {
+            new import_obsidian2.Notice("[ChatGPT MD] Issue calling specified url: " + url);
+            throw new Error("[ChatGPT MD] Issue calling specified url: " + url);
+          } else {
+            new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${JSON.stringify(err)}`);
+            throw new Error(JSON.stringify(err));
+          }
         }
       }
       new import_obsidian2.Notice(
@@ -482,7 +523,8 @@ ${this.getHeadingPrefix()}role::${role}
         n: (metaMatter == null ? void 0 : metaMatter.n) || 1,
         logit_bias: (metaMatter == null ? void 0 : metaMatter.logit_bias) || null,
         user: (metaMatter == null ? void 0 : metaMatter.user) || null,
-        system_commands: (metaMatter == null ? void 0 : metaMatter.system_commands) || null
+        system_commands: (metaMatter == null ? void 0 : metaMatter.system_commands) || null,
+        url: (metaMatter == null ? void 0 : metaMatter.url) || DEFAULT_URL
       };
       return frontmatter;
     } catch (err) {
@@ -558,6 +600,7 @@ ${this.getHeadingPrefix()}role::user
     editor.replaceRange(newLine, editor.getCursor());
   }
   async inferTitleFromMessages(messages) {
+    console.log("[ChtGPT MD] Inferring Title");
     try {
       if (messages.length < 2) {
         new import_obsidian2.Notice(
@@ -600,7 +643,8 @@ ${JSON.stringify(
       const responseJSON = JSON.parse(response);
       return responseJSON.choices[0].message.content.trim().replace(/[:/\\]/g, "");
     } catch (err) {
-      throw new Error("Error inferring title from messages" + err);
+      new import_obsidian2.Notice("[ChatGPT MD] Error inferring title from messages");
+      throw new Error("[ChatGPT MD] Error inferring title from messages" + err);
     }
   }
   // only proceed to infer title if the title is in timestamp format
@@ -637,6 +681,7 @@ ${JSON.stringify(
   async onload() {
     const statusBarItemEl = this.addStatusBarItem();
     await this.loadSettings();
+    const streamManager = new StreamManager();
     this.addCommand({
       id: "call-chatgpt-api",
       name: "Chat",
@@ -669,6 +714,7 @@ ${JSON.stringify(
           new import_obsidian2.Notice("[ChatGPT MD] Calling API");
         }
         this.callOpenAIAPI(
+          streamManager,
           editor,
           messagesWithRoleAndMessage,
           frontmatter.model,
@@ -681,7 +727,8 @@ ${JSON.stringify(
           frontmatter.stop,
           frontmatter.n,
           frontmatter.logit_bias,
-          frontmatter.user
+          frontmatter.user,
+          frontmatter.url
         ).then((response) => {
           let responseStr = response;
           if (response.mode === "streaming") {
@@ -704,7 +751,11 @@ ${this.getHeadingPrefix()}role::user
             if (unfinishedCodeBlock(responseStr)) {
               responseStr = responseStr + "\n```";
             }
-            this.appendMessage(editor, "assistant", responseStr);
+            this.appendMessage(
+              editor,
+              "assistant",
+              responseStr
+            );
           }
           if (this.settings.autoInferTitle) {
             const title = view.file.basename;
@@ -766,6 +817,14 @@ ${this.getHeadingPrefix()}role::user
       }
     });
     this.addCommand({
+      id: "stop-streaming",
+      name: "Stop streaming",
+      icon: "octagon",
+      editorCallback: (editor, view) => {
+        streamManager.stopStreaming();
+      }
+    });
+    this.addCommand({
       id: "infer-title",
       name: "Infer title",
       icon: "subtitles",
@@ -790,17 +849,35 @@ ${this.getHeadingPrefix()}role::user
       name: "Create new chat with highlighted text",
       icon: "highlighter",
       editorCallback: async (editor, view) => {
-        const selectedText = editor.getSelection();
-        const newFile = await this.app.vault.create(
-          `${this.settings.chatFolder}/${this.getDate(
-            new Date(),
-            this.settings.dateFormat
-          )}.md`,
-          `${this.settings.defaultChatFrontmatter}
+        try {
+          const selectedText = editor.getSelection();
+          if (!this.settings.chatFolder || !this.app.vault.getAbstractFileByPath(
+            this.settings.chatFolder
+          )) {
+            new import_obsidian2.Notice(
+              `[ChatGPT MD] No chat folder found. Please set one in settings and make sure it exists.`
+            );
+            return;
+          }
+          const newFile = await this.app.vault.create(
+            `${this.settings.chatFolder}/${this.getDate(
+              new Date(),
+              this.settings.dateFormat
+            )}.md`,
+            `${this.settings.defaultChatFrontmatter}
 
 ${selectedText}`
-        );
-        this.app.workspace.openLinkText(newFile.basename, "", true);
+          );
+          this.app.workspace.openLinkText(newFile.basename, "", true);
+        } catch (err) {
+          console.error(
+            `[ChatGPT MD] Error in Create new chat with highlighted text`,
+            err
+          );
+          new import_obsidian2.Notice(
+            `[ChatGPT MD] Error in Create new chat with highlighted text, check console`
+          );
+        }
       }
     });
     this.addCommand({
@@ -808,6 +885,22 @@ ${selectedText}`
       name: "Create new chat from template",
       icon: "layout-template",
       editorCallback: (editor, view) => {
+        if (!this.settings.chatFolder || !this.app.vault.getAbstractFileByPath(
+          this.settings.chatFolder
+        )) {
+          new import_obsidian2.Notice(
+            `[ChatGPT MD] No chat folder found. Please set one in settings and make sure it exists.`
+          );
+          return;
+        }
+        if (!this.settings.chatTemplateFolder || !this.app.vault.getAbstractFileByPath(
+          this.settings.chatTemplateFolder
+        )) {
+          new import_obsidian2.Notice(
+            `[ChatGPT MD] No templates folder found. Please set one in settings and make sure it exists.`
+          );
+          return;
+        }
         new ChatTemplates(
           this.app,
           this.settings,

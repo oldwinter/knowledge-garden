@@ -13,20 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/🔡STAR.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b41e56315ae6cd87",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/海外收费服务器性价比对比.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -104,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/🔡STAR.md"
+                "file": "Calendar/Daily notes/2023-03-19.md"
               }
             }
           },
@@ -114,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/🔡STAR.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/🔡STAR.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/🔡STAR.md",
+                "file": "Calendar/Daily notes/2023-03-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +175,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8139b2278f564c5e",
+            "id": "1d19264a6ce91830",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -196,7 +183,7 @@
             }
           },
           {
-            "id": "46cab9ef1fabbf81",
+            "id": "59989dec063d061c",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -204,28 +191,19 @@
             }
           },
           {
-            "id": "0e07932de73ff244",
+            "id": "d31be0545ea05d7c",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
               "state": {}
             }
-          },
-          {
-            "id": "913c3185432b5092",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 386.5,
-    "collapsed": true
+    "width": 386.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,39 +213,39 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-projects:Open projects": false,
-      "dbfolder:创建一个新数据库表": false
+      "dbfolder:创建一个新数据库表": false,
+      "obsidian-projects:Open projects": false
     }
   },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2023-03-20.md",
+    "Calendar/Daily notes/2023-03-21.md",
+    "Calendar/Daily notes/2023-03-22.md",
+    "Calendar/Daily notes/2023-03-23.md",
+    "Calendar/Daily notes/2023-03-24.md",
+    "Calendar/Daily notes/2023-03-25.md",
+    "🧰 本库指南/🧰 本库使用指南.md",
+    "Calendar/Daily notes/之江实验室-研究中心-远程沟通纪要.md",
+    "🧰 本库指南/🆕 本库更新日志.md",
+    "README.md",
+    "Cards/永久笔记/微信群公告.md",
+    "Cards/永久笔记/🔡STAR.md",
+    "Calendar/Daily notes/海外收费服务器性价比对比.md",
     "Sources/Videos/📹storytelling.md",
     "Cards/永久笔记/安装docker服务.md",
     "Cards/永久笔记/自己部署一个v2ray服务.md",
     "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
     "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Calendar/Daily notes/2023-03-22.md",
     "Spaces/2-Area/个人职业生涯/面试自我介绍和常见问题回答.md",
     "Spaces/2-Area/个人职业生涯/面试相关文章.md",
     "Calendar/Daily notes/白嫖服务器聚合.md",
-    "Calendar/Daily notes/海外收费服务器性价比对比.md",
-    "Calendar/Daily notes/2023-03-21.md",
     "AboutTheGarden.md",
     "🧰 本库指南/🌏 本库发布指南.md",
     "🍀 花园导览/其他/👬🏻 别的数字花园收录.md",
     "🧰 本库指南/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
     "Cards/永久笔记/PPV.md",
     "Atlas/Canvas/PPV人生管理系统.canvas",
-    "Cards/永久笔记/PPV 系统工作流.md",
-    "Atlas/DB folders/∑ DB 安卓软件.md",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/晓晓外卖.md",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/小红书.md",
-    "Cards/永久笔记/google play.md",
-    "Cards/永久笔记/淘宝.md",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/滴答清单.md",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/微信.md",
-    "Cards/永久笔记/目标管理、任务管理、时间管理都是什么，有什么区别.md",
-    "两仪.md",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
