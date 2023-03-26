@@ -14063,6 +14063,22 @@ function kebabize(str) {
 var wrapAround = (value, size) => {
   return (value % size + size) % size;
 };
+function getRewriteRules(pathRewriteRules) {
+  return pathRewriteRules.split("\n").map((line) => {
+    return line.split(":");
+  }).filter((rule) => {
+    return rule.length == 2;
+  });
+}
+function getGardenPathForNote(vaultPath, rules) {
+  for (let index = 0; index < rules.length; index++) {
+    const rule = rules[index];
+    if (vaultPath.startsWith(rule[0])) {
+      return rule[1] + vaultPath.slice(rule[0].length);
+    }
+  }
+  return vaultPath;
+}
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -14095,6 +14111,7 @@ var Publisher = class {
     this.vault = vault;
     this.metadataCache = metadataCache;
     this.settings = settings;
+    this.rewriteRules = getRewriteRules(settings.pathRewriteRules);
   }
   getFilesMarkedForPublishing() {
     return __async(this, null, function* () {
@@ -14191,6 +14208,7 @@ var Publisher = class {
   }
   generateMarkdown(file) {
     return __async(this, null, function* () {
+      this.rewriteRules = getRewriteRules(this.settings.pathRewriteRules);
       const assets = { images: [] };
       if (file.name.endsWith(".excalidraw.md")) {
         return [yield this.generateExcalidrawMarkdown(file, true), assets];
@@ -14433,11 +14451,18 @@ ${frontMatterString}
       if (baseFrontMatter["dg-hide"]) {
         publishedFrontMatter["hide"] = baseFrontMatter["dg-hide"];
       }
+      if (baseFrontMatter["dg-pinned"]) {
+        publishedFrontMatter["pinned"] = baseFrontMatter["dg-pinned"];
+      }
     }
     return publishedFrontMatter;
   }
   addPermalink(baseFrontMatter, newFrontMatter, filePath) {
     const publishedFrontMatter = __spreadValues({}, newFrontMatter);
+    const gardenPath = baseFrontMatter && baseFrontMatter["dg-path"] ? baseFrontMatter["dg-path"] : getGardenPathForNote(filePath, this.rewriteRules);
+    if (gardenPath != filePath) {
+      publishedFrontMatter["dg-path"] = gardenPath;
+    }
     if (baseFrontMatter && baseFrontMatter["dg-permalink"]) {
       publishedFrontMatter["dg-permalink"] = baseFrontMatter["dg-permalink"];
       publishedFrontMatter["permalink"] = baseFrontMatter["dg-permalink"];
@@ -14448,8 +14473,7 @@ ${frontMatterString}
         publishedFrontMatter["permalink"] = "/" + publishedFrontMatter["permalink"];
       }
     } else {
-      const noteUrlPath = generateUrlPath(filePath, this.settings.slugifyEnabled);
-      publishedFrontMatter["permalink"] = "/" + noteUrlPath;
+      publishedFrontMatter["permalink"] = "/" + generateUrlPath(gardenPath, this.settings.slugifyEnabled);
     }
     return publishedFrontMatter;
   }
@@ -14625,7 +14649,7 @@ ${header}
 ` : "";
               let embedded_link = "";
               if (publishedFiles.find((f) => f.path == linkedFile.path)) {
-                embedded_link = `<a class="markdown-embed-link" href="/${generateUrlPath(linkedFile.path)}${sectionID}" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>`;
+                embedded_link = `<a class="markdown-embed-link" href="/${generateUrlPath(getGardenPathForNote(linkedFile.path, this.rewriteRules))}${sectionID}" aria-label="Open link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>`;
               }
               fileText = `
 <div class="transclusion internal-embed is-loaded">${embedded_link}<div class="markdown-embed">
@@ -14844,6 +14868,7 @@ var DigitalGardenSiteManager = class {
   constructor(metadataCache, settings) {
     this.settings = settings;
     this.metadataCache = metadataCache;
+    this.rewriteRules = getRewriteRules(settings.pathRewriteRules);
   }
   updateEnv() {
     return __async(this, null, function* () {
@@ -14911,7 +14936,7 @@ ${key}=${defaultNoteSettings[key]}`;
   }
   getNoteUrl(file) {
     const baseUrl = this.settings.gardenBaseUrl ? `https://${extractBaseUrl(this.settings.gardenBaseUrl)}` : `https://${this.settings.githubRepo}.netlify.app`;
-    const noteUrlPath = generateUrlPath(file.path, this.settings.slugifyEnabled);
+    const noteUrlPath = generateUrlPath(getGardenPathForNote(file.path, this.rewriteRules), this.settings.slugifyEnabled);
     let urlPath = `/${noteUrlPath}`;
     const frontMatter = this.metadataCache.getCache(file.path).frontmatter;
     if (frontMatter && frontMatter["dg-home"] === true) {
@@ -16870,7 +16895,7 @@ var SettingView = class {
       this.initializeDefaultNoteSettings();
       this.initializeThemesSettings();
       this.initializeSlugifySetting();
-      this.initializeRibbonIconSetting();
+      this.initializePathRewriteSettings();
       prModal.titleEl.createEl("h1", "Site template settings");
     });
   }
@@ -17209,17 +17234,31 @@ var SettingView = class {
       this.debouncedSaveAndUpdate(this.app.metadataCache, this.settings, this.saveSettings);
     })));
   }
-  initializeRibbonIconSetting() {
-    new import_obsidian5.Setting(this.settingsRootElement).setName("Show ribbon icon").setDesc("Show ribbon icon in the Obsidian sidebar. You need to reload Obsdian for changes to take effect.").addToggle((toggle) => toggle.setValue(this.settings.showRibbonIcon).onChange((value) => __async(this, null, function* () {
-      this.settings.showRibbonIcon = value;
-      yield this.saveSettings();
-    })));
-  }
   initializeSlugifySetting() {
     new import_obsidian5.Setting(this.settingsRootElement).setName("Slugify Note URL").setDesc('Transform the URL from "/My Folder/My Note/" to "/my-folder/my-note". If your note titles contains non-English characters, this should be turned off.').addToggle((toggle) => toggle.setValue(this.settings.slugifyEnabled).onChange((value) => __async(this, null, function* () {
       this.settings.slugifyEnabled = value;
       yield this.saveSettings();
     })));
+  }
+  initializePathRewriteSettings() {
+    const rewritesettingContainer = this.settingsRootElement.createEl("div", { attr: { class: "setting-item", style: "align-items:flex-start; flex-direction: column;" } });
+    rewritesettingContainer.createEl("h2", { text: "Path Rewrite rules", attr: { class: "setting-item-name" } });
+    rewritesettingContainer.createEl("div", { text: `Define rules to rewrite note paths, meaning folder structure, using following syntax:` });
+    const list = rewritesettingContainer.createEl("ol");
+    list.createEl("li", { text: `One rule-per line` });
+    list.createEl("li", { text: `The format is [from_vault_path]:[to_garden_path]` });
+    list.createEl("li", { text: `Matching will exit on first match` });
+    rewritesettingContainer.createEl("div", { text: `Example: If you want the vault folder "Personal/Journal" to be shown as only "Journal" in the left file sidebar in the garden, add the line "Personal/Journal:Journal"`, attr: { class: "setting-item-description" } });
+    rewritesettingContainer.createEl("div", { text: `Any affected notes will show up as changed in the publication center`, attr: { class: "setting-item-description" } });
+    new import_obsidian5.Setting(rewritesettingContainer).setName("Rules").addTextArea((field) => {
+      field.setPlaceholder("Personal/Journal:Journal");
+      field.inputEl.rows = 5;
+      field.inputEl.cols = 75;
+      field.setValue(this.settings.pathRewriteRules).onChange((value) => __async(this, null, function* () {
+        this.settings.pathRewriteRules = value;
+        yield this.saveSettings();
+      }));
+    });
   }
   renderCreatePr(modal, handlePR) {
     new import_obsidian5.Setting(this.settingsRootElement).setName("Site Template").setDesc("Manage updates to the base template. You should try updating the template when you update the plugin to make sure your garden support all features.").addButton((button) => {
@@ -17334,7 +17373,9 @@ var PublishModal = class {
   }
   createCollapsable(title, buttonText, buttonCallback) {
     const headerContainer = this.modal.contentEl.createEl("div", { attr: { style: "display: flex; justify-content: space-between; margin-bottom: 10px; align-items:center" } });
-    const toggleHeader = headerContainer.createEl("h3", { text: `\u2795\uFE0F ${title}`, attr: { class: "collapsable collapsed" } });
+    const titleContainer = headerContainer.createEl("div", { attr: { style: "display: flex; align-items:center" } });
+    const toggleHeader = titleContainer.createEl("h3", { text: `\u2795\uFE0F ${title}`, attr: { class: "collapsable collapsed" } });
+    const counter = titleContainer.createEl("span", { attr: { class: "count", style: "margin-left:10px" } });
     if (buttonText && buttonCallback) {
       const button = new import_obsidian6.ButtonComponent(headerContainer).setButtonText(buttonText).onClick(() => __async(this, null, function* () {
         button.setDisabled(true);
@@ -17357,7 +17398,7 @@ var PublishModal = class {
         toggleHeader.addClass("open");
       }
     });
-    return toggledList;
+    return [counter, toggledList];
   }
   initialize() {
     return __async(this, null, function* () {
@@ -17365,13 +17406,13 @@ var PublishModal = class {
       this.modal.contentEl.addClass("digital-garden-publish-status-view");
       this.modal.contentEl.createEl("h2", { text: "Publication Status" });
       this.progressContainer = this.modal.contentEl.createEl("div", { attr: { style: "height: 30px;" } });
-      this.publishedContainer = this.createCollapsable("Published", null, null);
-      this.changedContainer = this.createCollapsable("Changed", "Update changed files", () => __async(this, null, function* () {
+      [this.publishedContainerCount, this.publishedContainer] = this.createCollapsable("Published", null, null);
+      [this.changedContainerCount, this.changedContainer] = this.createCollapsable("Changed", "Update changed files", () => __async(this, null, function* () {
         const publishStatus = yield this.publishStatusManager.getPublishStatus();
         const changed = publishStatus.changedNotes;
         let counter = 0;
         for (const note of changed) {
-          this.progressContainer.innerText = `\u231BPublishing changed notes: ${++counter}/${changed.length}`;
+          this.progressContainer.innerText = `\u231B Publishing changed notes: ${++counter}/${changed.length}`;
           yield this.publisher.publish(note);
         }
         const publishedText = `\u2705 Published all changed notes: ${counter}/${changed.length}`;
@@ -17383,11 +17424,11 @@ var PublishModal = class {
         }, 5e3);
         yield this.refreshView();
       }));
-      this.deletedContainer = this.createCollapsable("Deleted from vault", "Delete notes from garden", () => __async(this, null, function* () {
+      [this.deletedContainerCount, this.deletedContainer] = this.createCollapsable("Deleted from vault", "Delete notes from garden", () => __async(this, null, function* () {
         const deletedNotes = yield this.publishStatusManager.getDeletedNotePaths();
         let counter = 0;
         for (const note of deletedNotes) {
-          this.progressContainer.innerText = `\u231BDeleting Notes: ${++counter}/${deletedNotes.length}`;
+          this.progressContainer.innerText = `\u231B Deleting Notes: ${++counter}/${deletedNotes.length}`;
           yield this.publisher.deleteNote(note);
         }
         const deleteDoneText = `\u2705 Deleted all notes: ${counter}/${deletedNotes.length}`;
@@ -17399,12 +17440,12 @@ var PublishModal = class {
         }, 5e3);
         yield this.refreshView();
       }));
-      this.unpublishedContainer = this.createCollapsable("Unpublished", "Publish unpublished notes", () => __async(this, null, function* () {
+      [this.unpublishedContainerCount, this.unpublishedContainer] = this.createCollapsable("Unpublished", "Publish unpublished notes", () => __async(this, null, function* () {
         const publishStatus = yield this.publishStatusManager.getPublishStatus();
         const unpublished = publishStatus.unpublishedNotes;
         let counter = 0;
         for (const note of unpublished) {
-          this.progressContainer.innerText = `\u231BPublishing unpublished notes: ${++counter}/${unpublished.length}`;
+          this.progressContainer.innerText = `\u231B Publishing unpublished notes: ${++counter}/${unpublished.length}`;
           yield this.publisher.publish(note);
         }
         const publishDoneText = `\u2705 Published all unpublished notes: ${counter}/${unpublished.length}`;
@@ -17422,6 +17463,10 @@ var PublishModal = class {
   }
   clearView() {
     return __async(this, null, function* () {
+      this.publishedContainerCount.textContent = ``;
+      this.changedContainerCount.textContent = ``;
+      this.deletedContainerCount.textContent = ``;
+      this.unpublishedContainerCount.textContent = ``;
       while (this.publishedContainer.lastElementChild) {
         this.publishedContainer.removeChild(this.publishedContainer.lastElementChild);
       }
@@ -17438,11 +17483,17 @@ var PublishModal = class {
   }
   populateWithNotes() {
     return __async(this, null, function* () {
+      this.progressContainer.innerText = `\u231B Loading publication status`;
       const publishStatus = yield this.publishStatusManager.getPublishStatus();
+      this.progressContainer.innerText = ``;
       publishStatus.publishedNotes.map((file) => this.publishedContainer.createEl("li", { text: file.path }));
+      this.publishedContainerCount.textContent = `(${publishStatus.publishedNotes.length} notes)`;
       publishStatus.unpublishedNotes.map((file) => this.unpublishedContainer.createEl("li", { text: file.path }));
+      this.unpublishedContainerCount.textContent = `(${publishStatus.unpublishedNotes.length} notes)`;
       publishStatus.changedNotes.map((file) => this.changedContainer.createEl("li", { text: file.path }));
+      this.changedContainerCount.textContent = `(${publishStatus.changedNotes.length} notes)`;
       publishStatus.deletedNotePaths.map((path) => this.deletedContainer.createEl("li", { text: path }));
+      this.deletedContainerCount.textContent = `(${publishStatus.deletedNotePaths.length} notes)`;
     });
   }
   refreshView() {
@@ -17588,7 +17639,6 @@ var DEFAULT_SETTINGS = {
   baseTheme: "dark",
   theme: '{"name": "default", "modes": ["dark"]}',
   faviconPath: "",
-  showRibbonIcon: true,
   noteSettingsIsInitialized: false,
   siteName: "Digital Garden",
   slugifyEnabled: true,
@@ -17604,6 +17654,7 @@ var DEFAULT_SETTINGS = {
   updatedTimestampKey: "dg-updated",
   timestampFormat: "MMM dd, yyyy h:mm a",
   styleSettingsCss: "",
+  pathRewriteRules: "",
   defaultNoteSettings: {
     dgHomeLink: true,
     dgPassFrontmatter: false,
@@ -17626,11 +17677,9 @@ var DigitalGarden = class extends import_obsidian7.Plugin {
       this.addSettingTab(new DigitalGardenSettingTab(this.app, this));
       yield this.addCommands();
       (0, import_obsidian7.addIcon)("digital-garden-icon", seedling);
-      if (this.settings.showRibbonIcon) {
-        this.addRibbonIcon("digital-garden-icon", "Digital Garden Publication Center", () => __async(this, null, function* () {
-          this.openPublishModal();
-        }));
-      }
+      this.addRibbonIcon("digital-garden-icon", "Digital Garden Publication Center", () => __async(this, null, function* () {
+        this.openPublishModal();
+      }));
     });
   }
   onunload() {
@@ -17654,8 +17703,7 @@ var DigitalGarden = class extends import_obsidian7.Plugin {
           new import_obsidian7.Notice("Adding publish flag to note and publishing it.");
           yield this.addPublishFlag();
           const activeFile = this.app.workspace.getActiveFile();
-          let event = this.app.metadataCache.on("changed", (file, data, cache) => __async(this, null, function* () {
-            console.log(`File ${file.path} changed with type ${data}.`);
+          const event = this.app.metadataCache.on("changed", (file, data, cache) => __async(this, null, function* () {
             if (file.path === activeFile.path) {
               const successfullyPublished = yield this.publishSingleNote();
               if (successfullyPublished) {

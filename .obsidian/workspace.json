@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Cards/永久笔记/普拉提.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md"
+                "file": "Cards/永久笔记/普拉提.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Cards/永久笔记/普拉提.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Cards/永久笔记/普拉提.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-19.md",
+                "file": "Cards/永久笔记/普拉提.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,11 +171,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bb9d41919eb4b7db",
+        "id": "deb64a75d1662ebe",
         "type": "tabs",
         "children": [
           {
-            "id": "1d19264a6ce91830",
+            "id": "c77cc68930d624a5",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -183,7 +183,7 @@
             }
           },
           {
-            "id": "59989dec063d061c",
+            "id": "6b6d89980860b790",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -191,7 +191,15 @@
             }
           },
           {
-            "id": "d31be0545ea05d7c",
+            "id": "f65359b5124020e7",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "418a4a60f6835393",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -199,7 +207,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -213,38 +221,76 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "dbfolder:创建一个新数据库表": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "dbfolder:创建一个新数据库表": false
     }
   },
-  "active": "a4d1994dfc9f1870",
+  "floating": {
+    "id": "1479316a63ea0ac0",
+    "type": "floating",
+    "children": [
+      {
+        "id": "69ec07d4e5cabf41",
+        "type": "window",
+        "children": [
+          {
+            "id": "3da4a21872b4357a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3148e4a5cfb441f5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Cards/永久笔记/对比效应.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 547,
+        "y": 515,
+        "width": 669,
+        "height": 474,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
-    "Calendar/Daily notes/海外收费服务器性价比对比.md",
-    "Calendar/Daily notes/2023-03-19.md",
-    "Calendar/Daily notes/2023-03-20.md",
-    "Calendar/Daily notes/2023-03-21.md",
-    "Calendar/Daily notes/2023-03-22.md",
-    "Calendar/Daily notes/2023-03-23.md",
-    "Calendar/Daily notes/2023-03-24.md",
-    "Calendar/Daily notes/2023-03-25.md",
-    "🧰 本库指南/🧰 本库使用指南.md",
-    "Calendar/Daily notes/之江实验室-研究中心-远程沟通纪要.md",
-    "🧰 本库指南/🆕 本库更新日志.md",
-    "README.md",
-    "Cards/永久笔记/微信群公告.md",
-    "Cards/永久笔记/🔡STAR.md",
-    "Sources/Videos/📹storytelling.md",
-    "Cards/永久笔记/安装docker服务.md",
-    "Cards/永久笔记/自己部署一个v2ray服务.md",
-    "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Spaces/2-Area/个人职业生涯/面试自我介绍和常见问题回答.md",
-    "Spaces/2-Area/个人职业生涯/面试相关文章.md",
-    "Calendar/Daily notes/白嫖服务器聚合.md",
-    "AboutTheGarden.md",
-    "🧰 本库指南/🌏 本库发布指南.md",
-    "🍀 花园导览/其他/👬🏻 别的数字花园收录.md",
-    "🧰 本库指南/Tutorials/本库使用的markdown语法和绝大多web发布方案兼容.md",
+    "Cards/永久笔记/劣币驱逐良币.md",
+    "Cards/永久笔记/框架效应.md",
+    "Cards/永久笔记/凯撒的归凯撒，上帝的归上帝.md",
+    "Cards/永久笔记/精致的利己主义者.md",
+    "Cards/永久笔记/降维打击.md",
+    "Cards/永久笔记/🐤内卷.md",
+    "Cards/永久笔记/归纳法.md",
+    "Cards/永久笔记/光环效应.md",
+    "Cards/永久笔记/公地悲剧.md",
+    "Cards/永久笔记/故事偏误.md",
+    "Cards/永久笔记/高德地图.md",
+    "Cards/永久笔记/第二大脑.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
+    "Calendar/Daily notes/2023-03-26.md",
+    "Cards/永久笔记/对比效应.md",
+    "Cards/永久笔记/锚定效应.md",
+    "Cards/永久笔记/赌徒谬误.md",
+    "Calendar/Daily notes/人生若只如初见 - 木兰词，纳兰性德.md",
+    "Cards/永久笔记/∑ 令我多次沉醉的人或作品.md",
+    "Cards/永久笔记/∑ 科学上网.md",
+    "Cards/Pending/临时file cooker使用的dataview表达式.md",
+    "Calendar/已发布文章/华为，今夜请将我遗忘.md",
+    "Cards/永久笔记/渐进式总结.md",
+    "Cards/永久笔记/文件夹和标签.md",
+    "Cards/永久笔记/ACCESS 笔记组织法.md",
+    "🧰 本库指南/🏗 本库Roadmap.md",
     "Atlas/Canvas/PPV人生管理系统.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",

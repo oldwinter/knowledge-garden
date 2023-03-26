@@ -217,13 +217,14 @@ __export(main_exports, {
   default: () => ChatGPT_MD
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian2 = require("obsidian");
+var import_obsidian3 = require("obsidian");
 
 // stream.ts
-var import_obsidian = require("obsidian");
+var import_obsidian2 = require("obsidian");
 var import_sse = __toESM(require_sse());
 
 // helpers.ts
+var import_obsidian = require("obsidian");
 var unfinishedCodeBlock = (txt) => {
   const matcher = txt.match(/```/g);
   if (!matcher) {
@@ -233,6 +234,80 @@ var unfinishedCodeBlock = (txt) => {
     console.log("[ChatGPT MD] unclosed code block detected");
   return matcher.length % 2 !== 0;
 };
+var writeInferredTitleToEditor = async (vault, view, fileManager, chatFolder, title) => {
+  try {
+    const file = view.file;
+    const folder = chatFolder.replace(/\/$/, "");
+    let newFileName = `${folder}/${title}.md`;
+    let i = 1;
+    while (await vault.adapter.exists(newFileName)) {
+      newFileName = `${folder}/${title} (${i}).md`;
+      i++;
+    }
+    fileManager.renameFile(file, newFileName);
+  } catch (err) {
+    new import_obsidian.Notice("[ChatGPT MD] Error writing inferred title to editor");
+    console.log("[ChatGPT MD] Error writing inferred title to editor", err);
+    throw err;
+  }
+};
+var createFolderModal = async (app2, vault, folderName, folderPath) => {
+  const folderCreationModal = new FolderCreationModal(
+    app2,
+    folderName,
+    folderPath
+  );
+  folderCreationModal.open();
+  const result = await folderCreationModal.waitForModalValue();
+  if (result) {
+    console.log("[ChatGPT MD] Creating folder");
+    await vault.createFolder(folderPath);
+  } else {
+    console.log("[ChatGPT MD] Not creating folder");
+  }
+  return result;
+};
+var FolderCreationModal = class extends import_obsidian.Modal {
+  constructor(app2, folderName, folderPath) {
+    super(app2);
+    this.folderName = folderName;
+    this.folderPath = folderPath;
+    this.result = false;
+    this.modalPromise = new Promise((resolve) => {
+      this.resolveModalPromise = resolve;
+    });
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.createEl("h2", {
+      text: `[ChatGPT MD] No ${this.folderName} folder found.`
+    });
+    contentEl.createEl("p", {
+      text: `If you choose "Yes, Create", the plugin will automatically create a folder at: ${this.folderPath}. You can change this path in the plugin settings.`
+    });
+    new import_obsidian.Setting(contentEl).addButton(
+      (btn) => btn.setButtonText("Yes, Create Folder").setTooltip("Create folder").setCta().onClick(() => {
+        this.result = true;
+        this.resolveModalPromise(this.result);
+        this.close();
+      })
+    );
+    new import_obsidian.Setting(contentEl).addButton(
+      (btn) => btn.setButtonText("No, I'll create it myself").setTooltip("Cancel").setCta().onClick(() => {
+        this.result = false;
+        this.resolveModalPromise(this.result);
+        this.close();
+      })
+    );
+  }
+  waitForModalValue() {
+    return this.modalPromise;
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+};
 
 // stream.ts
 var StreamManager = class {
@@ -240,8 +315,8 @@ var StreamManager = class {
     this.sse = null;
     this.manualClose = false;
     this.stopStreaming = () => {
-      if (import_obsidian.Platform.isMobile) {
-        new import_obsidian.Notice("[ChatGPT MD] Mobile not supported.");
+      if (import_obsidian2.Platform.isMobile) {
+        new import_obsidian2.Notice("[ChatGPT MD] Mobile not supported.");
         return;
       }
       if (this.sse) {
@@ -336,7 +411,7 @@ ${headingPrefix}role::assistant
                   ch: Infinity
                 });
               } else {
-                new import_obsidian.Notice(
+                new import_obsidian2.Notice(
                   "[ChatGPT MD] Text pasted at cursor may leave artifacts. Please remove them manually. ChatGPT MD cannot safely remove text when pasting at cursor."
                 );
               }
@@ -388,7 +463,7 @@ var DEFAULT_SETTINGS = {
   headingLevel: 0
 };
 var DEFAULT_URL = `https://api.openai.com/v1/chat/completions`;
-var ChatGPT_MD = class extends import_obsidian2.Plugin {
+var ChatGPT_MD = class extends import_obsidian3.Plugin {
   async callOpenAIAPI(streamManager, editor, messages, model = "gpt-3.5-turbo", max_tokens = 250, temperature = 0.3, top_p = 1, presence_penalty = 0.5, frequency_penalty = 0.5, stream = true, stop = null, n = 1, logit_bias = null, user = null, url = DEFAULT_URL) {
     try {
       console.log("calling openai api");
@@ -418,7 +493,7 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
         console.log("response from stream", response);
         return { fullstr: response, mode: "streaming" };
       } else {
-        const responseUrl = await (0, import_obsidian2.requestUrl)({
+        const responseUrl = await (0, import_obsidian3.requestUrl)({
           url,
           method: "POST",
           headers: {
@@ -445,7 +520,7 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
         try {
           const json = responseUrl.json;
           if (json && json.error) {
-            new import_obsidian2.Notice(
+            new import_obsidian3.Notice(
               `[ChatGPT MD] Stream = False Error :: ${json.error.message}`
             );
             throw new Error(JSON.stringify(json.error));
@@ -463,19 +538,25 @@ var ChatGPT_MD = class extends import_obsidian2.Plugin {
     } catch (err) {
       if (err instanceof Object) {
         if (err.error) {
-          new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${err.error.message}`);
+          new import_obsidian3.Notice(`[ChatGPT MD] Error :: ${err.error.message}`);
           throw new Error(JSON.stringify(err.error));
         } else {
           if (url !== DEFAULT_URL) {
-            new import_obsidian2.Notice("[ChatGPT MD] Issue calling specified url: " + url);
-            throw new Error("[ChatGPT MD] Issue calling specified url: " + url);
+            new import_obsidian3.Notice(
+              "[ChatGPT MD] Issue calling specified url: " + url
+            );
+            throw new Error(
+              "[ChatGPT MD] Issue calling specified url: " + url
+            );
           } else {
-            new import_obsidian2.Notice(`[ChatGPT MD] Error :: ${JSON.stringify(err)}`);
+            new import_obsidian3.Notice(
+              `[ChatGPT MD] Error :: ${JSON.stringify(err)}`
+            );
             throw new Error(JSON.stringify(err));
           }
         }
       }
-      new import_obsidian2.Notice(
+      new import_obsidian3.Notice(
         "issue calling OpenAI API, see console for more details"
       );
       throw new Error(
@@ -601,14 +682,15 @@ ${this.getHeadingPrefix()}role::user
   }
   async inferTitleFromMessages(messages) {
     console.log("[ChtGPT MD] Inferring Title");
+    new import_obsidian3.Notice("[ChatGPT] Inferring title from messages...");
     try {
       if (messages.length < 2) {
-        new import_obsidian2.Notice(
+        new import_obsidian3.Notice(
           "Not enough messages to infer title. Minimum 2 messages."
         );
         return;
       }
-      const prompt = `Infer title from the summary of the content of these messages. The title **cannot** contain any of the following characters: colon, back slash or forwad slash. Just return the title. 
+      const prompt = `Infer title from the summary of the content of these messages. The title **cannot** contain any of the following characters: colon, back slash or forward slash. Just return the title. 
 Messages:
 
 ${JSON.stringify(
@@ -620,10 +702,7 @@ ${JSON.stringify(
           content: prompt
         }
       ];
-      if (import_obsidian2.Platform.isMobile) {
-        new import_obsidian2.Notice("[ChatGPT] Inferring title from messages...");
-      }
-      const responseUrl = await (0, import_obsidian2.requestUrl)({
+      const responseUrl = await (0, import_obsidian3.requestUrl)({
         url: `https://api.openai.com/v1/chat/completions`,
         method: "POST",
         headers: {
@@ -641,10 +720,12 @@ ${JSON.stringify(
       });
       const response = responseUrl.text;
       const responseJSON = JSON.parse(response);
-      return responseJSON.choices[0].message.content.trim().replace(/[:/\\]/g, "");
+      return responseJSON.choices[0].message.content.replace(/[:/\\]/g, "").replace("Title", "").replace("title", "").trim();
     } catch (err) {
-      new import_obsidian2.Notice("[ChatGPT MD] Error inferring title from messages");
-      throw new Error("[ChatGPT MD] Error inferring title from messages" + err);
+      new import_obsidian3.Notice("[ChatGPT MD] Error inferring title from messages");
+      throw new Error(
+        "[ChatGPT MD] Error inferring title from messages" + err
+      );
     }
   }
   // only proceed to infer title if the title is in timestamp format
@@ -710,8 +791,8 @@ ${JSON.stringify(
         if (!this.settings.generateAtCursor) {
           this.moveCursorToEndOfFile(editor);
         }
-        if (import_obsidian2.Platform.isMobile) {
-          new import_obsidian2.Notice("[ChatGPT MD] Calling API");
+        if (import_obsidian3.Platform.isMobile) {
+          new import_obsidian3.Notice("[ChatGPT MD] Calling API");
         }
         this.callOpenAIAPI(
           streamManager,
@@ -764,41 +845,46 @@ ${this.getHeadingPrefix()}role::user
               console.log(
                 "[ChatGPT MD] auto inferring title from messages"
               );
+              statusBarItemEl.setText(
+                "[ChatGPT MD] Calling API..."
+              );
               this.inferTitleFromMessages(
                 messagesWithResponse
-              ).then((title2) => {
+              ).then(async (title2) => {
                 if (title2) {
                   console.log(
-                    `[ChatGPT MD] inferred title: ${title2}. Changing file name...`
+                    `[ChatGPT MD] automatically inferred title: ${title2}. Changing file name...`
                   );
-                  const file = view.file;
-                  const folder = this.settings.chatFolder.replace(
-                    /\/$/,
-                    ""
-                  );
-                  this.app.fileManager.renameFile(
-                    file,
-                    `${folder}/${title2}.md`
+                  statusBarItemEl.setText("");
+                  await writeInferredTitleToEditor(
+                    this.app.vault,
+                    view,
+                    this.app.fileManager,
+                    this.settings.chatFolder,
+                    title2
                   );
                 } else {
-                  new import_obsidian2.Notice(
+                  new import_obsidian3.Notice(
                     "[ChatGPT MD] Could not infer title",
                     5e3
                   );
                 }
               }).catch((err) => {
                 console.log(err);
-                new import_obsidian2.Notice(
-                  "[ChatGPT MD] Error inferring title. " + err,
-                  5e3
-                );
+                statusBarItemEl.setText("");
+                if (import_obsidian3.Platform.isMobile) {
+                  new import_obsidian3.Notice(
+                    "[ChatGPT MD] Error inferring title. " + err,
+                    5e3
+                  );
+                }
               });
             }
           }
           statusBarItemEl.setText("");
         }).catch((err) => {
-          if (import_obsidian2.Platform.isMobile) {
-            new import_obsidian2.Notice(
+          if (import_obsidian3.Platform.isMobile) {
+            new import_obsidian3.Notice(
               "[ChatGPT MD Mobile] Full Error calling API. " + err,
               9e3
             );
@@ -833,13 +919,16 @@ ${this.getHeadingPrefix()}role::user
           editor.getValue()
         );
         const messages = this.splitMessages(bodyWithoutYML);
+        statusBarItemEl.setText("[ChatGPT MD] Calling API...");
         const title = await this.inferTitleFromMessages(messages);
+        statusBarItemEl.setText("");
         if (title) {
-          const file = view.file;
-          const folder = this.settings.chatFolder.replace(/\/$/, "");
-          this.app.fileManager.renameFile(
-            file,
-            `${folder}/${title}.md`
+          await writeInferredTitleToEditor(
+            this.app.vault,
+            view,
+            this.app.fileManager,
+            this.settings.chatFolder,
+            title
           );
         }
       }
@@ -851,13 +940,20 @@ ${this.getHeadingPrefix()}role::user
       editorCallback: async (editor, view) => {
         try {
           const selectedText = editor.getSelection();
-          if (!this.settings.chatFolder || !this.app.vault.getAbstractFileByPath(
-            this.settings.chatFolder
-          )) {
-            new import_obsidian2.Notice(
-              `[ChatGPT MD] No chat folder found. Please set one in settings and make sure it exists.`
+          if (!this.settings.chatFolder || this.settings.chatFolder.trim() === "") {
+            new import_obsidian3.Notice(
+              `[ChatGPT MD] No chat folder value found. Please set one in settings.`
             );
             return;
+          }
+          if (!await this.app.vault.adapter.exists(this.settings.chatFolder)) {
+            const result = await createFolderModal(this.app, this.app.vault, "chatFolder", this.settings.chatFolder);
+            if (!result) {
+              new import_obsidian3.Notice(
+                `[ChatGPT MD] No chat folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
+              );
+              return;
+            }
           }
           const newFile = await this.app.vault.create(
             `${this.settings.chatFolder}/${this.getDate(
@@ -874,7 +970,7 @@ ${selectedText}`
             `[ChatGPT MD] Error in Create new chat with highlighted text`,
             err
           );
-          new import_obsidian2.Notice(
+          new import_obsidian3.Notice(
             `[ChatGPT MD] Error in Create new chat with highlighted text, check console`
           );
         }
@@ -884,22 +980,36 @@ ${selectedText}`
       id: "choose-chat-template",
       name: "Create new chat from template",
       icon: "layout-template",
-      editorCallback: (editor, view) => {
-        if (!this.settings.chatFolder || !this.app.vault.getAbstractFileByPath(
-          this.settings.chatFolder
-        )) {
-          new import_obsidian2.Notice(
-            `[ChatGPT MD] No chat folder found. Please set one in settings and make sure it exists.`
+      editorCallback: async (editor, view) => {
+        if (!this.settings.chatFolder || this.settings.chatFolder.trim() === "") {
+          new import_obsidian3.Notice(
+            `[ChatGPT MD] No chat folder value found. Please set one in settings.`
           );
           return;
         }
-        if (!this.settings.chatTemplateFolder || !this.app.vault.getAbstractFileByPath(
-          this.settings.chatTemplateFolder
-        )) {
-          new import_obsidian2.Notice(
-            `[ChatGPT MD] No templates folder found. Please set one in settings and make sure it exists.`
+        if (!await this.app.vault.adapter.exists(this.settings.chatFolder)) {
+          const result = await createFolderModal(this.app, this.app.vault, "chatFolder", this.settings.chatFolder);
+          if (!result) {
+            new import_obsidian3.Notice(
+              `[ChatGPT MD] No chat folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
+            );
+            return;
+          }
+        }
+        if (!this.settings.chatTemplateFolder || this.settings.chatTemplateFolder.trim() === "") {
+          new import_obsidian3.Notice(
+            `[ChatGPT MD] No chat template folder value found. Please set one in settings.`
           );
           return;
+        }
+        if (!await this.app.vault.adapter.exists(this.settings.chatTemplateFolder)) {
+          const result = await createFolderModal(this.app, this.app.vault, "chatTemplateFolder", this.settings.chatTemplateFolder);
+          if (!result) {
+            new import_obsidian3.Notice(
+              `[ChatGPT MD] No chat template folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
+            );
+            return;
+          }
         }
         new ChatTemplates(
           this.app,
@@ -923,7 +1033,7 @@ ${selectedText}`
     await this.saveData(this.settings);
   }
 };
-var ChatTemplates = class extends import_obsidian2.SuggestModal {
+var ChatTemplates = class extends import_obsidian3.SuggestModal {
   constructor(app2, settings, titleDate) {
     super(app2);
     this.settings = settings;
@@ -936,7 +1046,7 @@ var ChatTemplates = class extends import_obsidian2.SuggestModal {
     if (folder != null) {
       return folder.children;
     } else {
-      new import_obsidian2.Notice(
+      new import_obsidian3.Notice(
         `Error getting folder: ${this.settings.chatTemplateFolder}`
       );
       throw new Error(
@@ -970,7 +1080,7 @@ var ChatTemplates = class extends import_obsidian2.SuggestModal {
   }
   // Perform action on the selected suggestion.
   async onChooseSuggestion(template, evt) {
-    new import_obsidian2.Notice(`Selected ${template.title}`);
+    new import_obsidian3.Notice(`Selected ${template.title}`);
     const templateText = await this.app.vault.read(template.file);
     const file = await this.app.vault.create(
       `${this.settings.chatFolder}/${this.titleDate}.md`,
@@ -979,7 +1089,7 @@ var ChatTemplates = class extends import_obsidian2.SuggestModal {
     this.app.workspace.openLinkText(file.basename, "", true);
   }
 };
-var ChatGPT_MDSettingsTab = class extends import_obsidian2.PluginSettingTab {
+var ChatGPT_MDSettingsTab = class extends import_obsidian3.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -994,13 +1104,13 @@ var ChatGPT_MDSettingsTab = class extends import_obsidian2.PluginSettingTab {
       text: "https://platform.openai.com/tokenizer",
       href: "https://platform.openai.com/tokenizer"
     });
-    new import_obsidian2.Setting(containerEl).setName("OpenAI API Key").setDesc("API Key for OpenAI").addText(
+    new import_obsidian3.Setting(containerEl).setName("OpenAI API Key").setDesc("API Key for OpenAI").addText(
       (text) => text.setPlaceholder("some-api-key").setValue(this.plugin.settings.apiKey).onChange(async (value) => {
         this.plugin.settings.apiKey = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Default Chat Frontmatter").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Default Chat Frontmatter").setDesc(
       "Default frontmatter for new chat files. You can change/use all of the settings exposed by the OpenAI API here: https://platform.openai.com/docs/api-reference/chat/create"
     ).addTextArea(
       (text) => text.setPlaceholder(
@@ -1022,31 +1132,31 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Stream").setDesc("Stream responses from OpenAI").addToggle(
+    new import_obsidian3.Setting(containerEl).setName("Stream").setDesc("Stream responses from OpenAI").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.stream).onChange(async (value) => {
         this.plugin.settings.stream = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Chat Folder").setDesc("Path to folder for chat files").addText(
+    new import_obsidian3.Setting(containerEl).setName("Chat Folder").setDesc("Path to folder for chat files").addText(
       (text) => text.setValue(this.plugin.settings.chatFolder).onChange(async (value) => {
         this.plugin.settings.chatFolder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Chat Template Folder").setDesc("Path to folder for chat file templates").addText(
+    new import_obsidian3.Setting(containerEl).setName("Chat Template Folder").setDesc("Path to folder for chat file templates").addText(
       (text) => text.setPlaceholder("chat-templates").setValue(this.plugin.settings.chatTemplateFolder).onChange(async (value) => {
         this.plugin.settings.chatTemplateFolder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Generate at Cursor").setDesc("Generate text at cursor instead of end of file").addToggle(
+    new import_obsidian3.Setting(containerEl).setName("Generate at Cursor").setDesc("Generate text at cursor instead of end of file").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.generateAtCursor).onChange(async (value) => {
         this.plugin.settings.generateAtCursor = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Automatically Infer Title").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Automatically Infer Title").setDesc(
       "Automatically infer title after 4 messages have been exchanged"
     ).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.autoInferTitle).onChange(async (value) => {
@@ -1054,7 +1164,7 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Date Format").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Date Format").setDesc(
       "Date format for chat files. Valid date blocks are: YYYY, MM, DD, hh, mm, ss"
     ).addText(
       (text) => text.setPlaceholder("YYYYMMDDhhmmss").setValue(this.plugin.settings.dateFormat).onChange(async (value) => {
@@ -1062,7 +1172,7 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian2.Setting(containerEl).setName("Heading Level").setDesc(
+    new import_obsidian3.Setting(containerEl).setName("Heading Level").setDesc(
       "Heading level for messages (example for heading level 2: '## role::user'). Valid heading levels are 0, 1, 2, 3, 4, 5, 6"
     ).addText(
       (text) => text.setValue(this.plugin.settings.headingLevel.toString()).onChange(async (value) => {
