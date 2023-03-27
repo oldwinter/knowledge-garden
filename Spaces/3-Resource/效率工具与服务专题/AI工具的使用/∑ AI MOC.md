@@ -21,6 +21,7 @@ date modified: 2023-03-14
 	- https://soundraw.io/
 - 分析pdf文件的内容
 	- [ChatPDF - Chat with any PDF!](https://www.chatpdf.com/)
+	- [ChatDOC - Chat with your documents](https://chatdoc.com/)
 - 分析视频的大纲
 	- [哔哩哔哩 · 视频内容一键总结 (jimmylv.cn)](https://b.jimmylv.cn/)
 - 自动生成周报

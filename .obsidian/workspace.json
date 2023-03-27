@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/普拉提.md",
+                "file": "Calendar/Daily notes/Alist.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0ef467a22813f703",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Smart Connections.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "img2",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/普拉提.md"
+                "file": "Calendar/Daily notes/Alist.md"
               }
             }
           },
@@ -101,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/普拉提.md",
+                "file": "Calendar/Daily notes/Alist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/普拉提.md",
+                "file": "Calendar/Daily notes/Alist.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/普拉提.md",
+                "file": "Calendar/Daily notes/Alist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,29 +202,14 @@
               "type": "calendar",
               "state": {}
             }
-          },
-          {
-            "id": "f65359b5124020e7",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "418a4a60f6835393",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 386.5
+    "width": 386.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,72 +223,35 @@
       "dbfolder:创建一个新数据库表": false
     }
   },
-  "floating": {
-    "id": "1479316a63ea0ac0",
-    "type": "floating",
-    "children": [
-      {
-        "id": "69ec07d4e5cabf41",
-        "type": "window",
-        "children": [
-          {
-            "id": "3da4a21872b4357a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3148e4a5cfb441f5",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Cards/永久笔记/对比效应.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 547,
-        "y": 515,
-        "width": 669,
-        "height": 474,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2023-03-27.md",
+    "Calendar/Daily notes/Alist.md",
+    "Extras/Media/1679922749389.jpg",
+    "Extras/Media/16799226083092.png",
+    "Calendar/Daily notes/小蚕霸王餐.md",
+    "Calendar/Daily notes/沉浸式翻译.md",
+    "Cards/永久笔记/PPV.md",
+    "Cards/永久笔记/对比效应.md",
+    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Smart Connections.md",
+    "README.md",
+    "Calendar/Daily notes/2023-03-26.md",
+    "Cards/永久笔记/个人必用软件梳理.md",
+    "Cards/永久笔记/免费启用一个长期在线的容器服务，并开启v2ray.md",
+    "Cards/永久笔记/网络白嫖.md",
+    "Cards/永久笔记/薅羊毛与羊毛出在羊身上的理解.md",
+    "Calendar/Daily notes/2023-03-25.md",
+    "Calendar/Daily notes/新型的偏serverless的各种服务聚合.md",
+    "AboutTheGarden.md",
+    "Calendar/Daily notes/海外收费服务器性价比对比.md",
+    "Cards/永久笔记/🔡MECE.md",
+    "Cards/永久笔记/∑ 习惯库.md",
+    "Sources/Articles/常青笔记阅读笔记/为有潜在价值的参考引用建立一个阅读收件箱.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT 用于 阅读理解.md",
+    "Cards/永久笔记/普拉提.md",
     "Cards/永久笔记/劣币驱逐良币.md",
     "Cards/永久笔记/框架效应.md",
-    "Cards/永久笔记/凯撒的归凯撒，上帝的归上帝.md",
-    "Cards/永久笔记/精致的利己主义者.md",
-    "Cards/永久笔记/降维打击.md",
-    "Cards/永久笔记/🐤内卷.md",
-    "Cards/永久笔记/归纳法.md",
-    "Cards/永久笔记/光环效应.md",
-    "Cards/永久笔记/公地悲剧.md",
-    "Cards/永久笔记/故事偏误.md",
-    "Cards/永久笔记/高德地图.md",
-    "Cards/永久笔记/第二大脑.md",
-    "Sources/Articles/常青笔记阅读笔记/常青笔记.md",
-    "Calendar/Daily notes/2023-03-26.md",
-    "Cards/永久笔记/对比效应.md",
-    "Cards/永久笔记/锚定效应.md",
-    "Cards/永久笔记/赌徒谬误.md",
-    "Calendar/Daily notes/人生若只如初见 - 木兰词，纳兰性德.md",
-    "Cards/永久笔记/∑ 令我多次沉醉的人或作品.md",
-    "Cards/永久笔记/∑ 科学上网.md",
-    "Cards/Pending/临时file cooker使用的dataview表达式.md",
-    "Calendar/已发布文章/华为，今夜请将我遗忘.md",
-    "Cards/永久笔记/渐进式总结.md",
-    "Cards/永久笔记/文件夹和标签.md",
-    "Cards/永久笔记/ACCESS 笔记组织法.md",
-    "🧰 本库指南/🏗 本库Roadmap.md",
     "Atlas/Canvas/PPV人生管理系统.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
@@ -318,8 +279,6 @@
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
     "Atlas/Draws/README 中的头图 - 图.svg",
-    "Extras/Media/weread_image_1067883451661727.jpeg",
-    "Atlas/Draws/数字时代如何更好地工作与生活 - 图.svg",
-    "Extras/Media/v2-0b821715f5e9eb09a79b03d80671de44.jpeg"
+    "Extras/Media/weread_image_1067883451661727.jpeg"
   ]
 }

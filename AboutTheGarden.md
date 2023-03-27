@@ -1,7 +1,7 @@
 ---
 comments: true
 date created: 2022-08-06
-date modified: 2023-03-21
+date modified: 2023-03-27
 id: home
 layout: page
 tags:
@@ -12,6 +12,10 @@ dg-publish: true
 permalink: /
 description: 上面这些字段，大多是为了适配第三方发布方案，如hugo和jekyll。
 ---
+
+> [!NOTE] [[2023-03-24]]更新说明  
+> 自荐本花园至阮一峰老师的科技周刊后，带来了上万的访问量，好几百个star，也有不少朋友email我指出了一些不足之处，深表感谢。  
+> 诚惶诚恐，人无完人。可能我会有很多不小心本来只想给自己看的内容，发布到线上来了，以及，很多笔记，我都是有先挖坑，然后再慢慢填的习惯。所以各位需要
 
 hello 👋，我是 oldwinter ❄️，一个云计算工程师，写过几万行代码，带过十几人团队。
 
