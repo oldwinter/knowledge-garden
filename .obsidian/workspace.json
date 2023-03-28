@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/Alist.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/Alist.md"
+                "file": "README.md"
               }
             }
           },
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/Alist.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/Alist.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/Alist.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,31 +182,7 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [
-      {
-        "id": "deb64a75d1662ebe",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c77cc68930d624a5",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "6b6d89980860b790",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 1
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
     "width": 386.5,
     "collapsed": true
@@ -217,16 +193,14 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-projects:Open projects": false,
-      "dbfolder:创建一个新数据库表": false
+      "command-palette:打开命令面板": false
     }
   },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2023-03-27.md",
+    "Calendar/Daily notes/2023-03-28.md",
     "Calendar/Daily notes/Alist.md",
+    "Calendar/Daily notes/2023-03-27.md",
     "Extras/Media/1679922749389.jpg",
     "Extras/Media/16799226083092.png",
     "Calendar/Daily notes/小蚕霸王餐.md",
