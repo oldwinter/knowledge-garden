@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md",
+                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md"
+                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md",
+                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md",
+                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-03-18.md",
+                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,8 +185,23 @@
   },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2023-03-17.md",
+    "README.md",
+    "Sources/GPTchats/202331114835.md",
+    "Sources/Courses/AI大模型之美",
+    "Sources/Courses/Service Mesh实战",
+    "Sources/Courses/深入剖析 Kubernetes",
+    "Sources/GPTchats/202331220519.md",
+    "Cards/永久笔记/back4app.md",
+    "Calendar/Daily notes/新型的偏serverless的各种服务聚合.md",
+    "Cards/永久笔记/免费启用一个长期在线的容器服务，并开启v2ray.md",
+    "Calendar/Daily notes/逆商的评判准则- CORE.md",
+    "Calendar/Daily notes/海外收费服务器性价比对比.md",
+    "Calendar/Daily notes/更新日志应该怎么写.md",
+    "Calendar/Daily notes/次卡、共享卡思维.md",
+    "Calendar/Daily notes/沉浸式翻译.md",
     "Calendar/Daily notes/2023-03-18.md",
+    "Calendar/Daily notes/2023-03-29.md",
+    "Calendar/Daily notes/2023-03-17.md",
     "Calendar/Daily notes/2023-03-19.md",
     "Calendar/Daily notes/2023-03-20.md",
     "Calendar/Daily notes/2023-03-21.md",
@@ -199,20 +214,8 @@
     "Calendar/Daily notes/2023-03-25.md",
     "AboutTheGarden.md",
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Smart Connections.md",
-    "README.md",
-    "Calendar/Daily notes/Alist.md",
     "Extras/Media/1679922749389.jpg",
     "Extras/Media/16799226083092.png",
-    "Calendar/Daily notes/小蚕霸王餐.md",
-    "Calendar/Daily notes/沉浸式翻译.md",
-    "Cards/永久笔记/PPV.md",
-    "Cards/永久笔记/对比效应.md",
-    "Cards/永久笔记/个人必用软件梳理.md",
-    "Cards/永久笔记/免费启用一个长期在线的容器服务，并开启v2ray.md",
-    "Cards/永久笔记/网络白嫖.md",
-    "Cards/永久笔记/薅羊毛与羊毛出在羊身上的理解.md",
-    "Calendar/Daily notes/新型的偏serverless的各种服务聚合.md",
-    "Calendar/Daily notes/海外收费服务器性价比对比.md",
     "Atlas/Canvas/PPV人生管理系统.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
@@ -234,9 +237,6 @@
     "Atlas/Canvas/SWOT分析 - 模板.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg",
-    "Atlas/思维导图",
-    "Extras/Templates/Canvas模板",
-    "Sources/GPTchats",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
     "Atlas/Draws/README 中的头图 - 图.svg",
