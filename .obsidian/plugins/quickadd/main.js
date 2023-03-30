@@ -14925,7 +14925,7 @@ function getEndOfSection(lines, targetLine, shouldConsiderSubsections = false) {
   const endOfSectionLineIdx = getEndOfSectionLineByHeadings(
     targetHeading,
     headings,
-    lastLineInBodyIdx,
+    lines,
     shouldConsiderSubsections
   );
   const lastNonEmptyLineInSectionIdx = findPriorIdx(
@@ -14937,15 +14937,19 @@ function getEndOfSection(lines, targetLine, shouldConsiderSubsections = false) {
     if (lastNonEmptyLineInSectionIdx + 1 === lastLineInBodyIdx) {
       return endOfSectionLineIdx;
     }
+    if (lastNonEmptyLineInSectionIdx === 0) {
+      return lastNonEmptyLineInSectionIdx + 1;
+    }
     return lastNonEmptyLineInSectionIdx;
   }
   return endOfSectionLineIdx;
 }
-function getEndOfSectionLineByHeadings(targetHeading, headings, lastLineInBodyIdx, shouldConsiderSubsections) {
+function getEndOfSectionLineByHeadings(targetHeading, headings, lines, shouldConsiderSubsections) {
   const targetHeadingIdx = headings.findIndex(
     (heading) => isSameHeading(heading, targetHeading)
   );
   const targetHeadingIsLastHeading = targetHeadingIdx === headings.length - 1;
+  const lastLineInBodyIdx = lines.length - 1;
   if (targetHeadingIsLastHeading) {
     return lastLineInBodyIdx;
   }
@@ -14960,6 +14964,13 @@ function getEndOfSectionLineByHeadings(targetHeading, headings, lastLineInBodyId
   }
   if (foundHigherOrSameLevelHeading && !shouldConsiderSubsections) {
     return headings[targetHeadingIdx + 1].line;
+  }
+  if (!shouldConsiderSubsections && !foundHigherOrSameLevelHeading) {
+    const nextHeading = findNextHeading(targetHeading.line, headings);
+    if (nextHeading === null) {
+      return lastLineInBodyIdx;
+    }
+    return nextHeading;
   }
   return lastLineInBodyIdx;
 }
@@ -14976,6 +14987,12 @@ function findNextHigherOrSameLevelHeading(targetHeading, headings) {
     return [-1, false];
   }
   return [nextSameOrHigherLevelHeadingIdx, true];
+}
+function findNextHeading(fromIdxInBody, headings) {
+  const nextheading = headings.findIndex(
+    (heading) => heading.line > fromIdxInBody
+  );
+  return nextheading === -1 ? null : nextheading;
 }
 function findPriorIdx(items, fromIdx, condition) {
   for (let i = fromIdx - 1; i >= 0; i--) {

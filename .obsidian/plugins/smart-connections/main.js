@@ -14,24 +14,46 @@ const DEFAULT_SETTINGS = {
   language: "en",
   log_render: false,
   log_render_files: false,
+  recently_sent_retry_notice: false,
+  results_count: 30,
   skip_sections: false,
   smart_chat_model: "gpt-3.5-turbo",
-  results_count: 30,
   view_open: true,
   version: "",
 };
 const MAX_EMBED_STRING_LENGTH = 25000;
 
-const VERSION = "1.2.8";
+let VERSION;
 
-// language specific self-referential pronouns
-const SELF_REFERENTIAL_PRONOUNS = {
-  "en": ["my", "I", "me", "mine", "our", "ours", "us", "we"],
-  "es": ["mi", "yo", "mí", "tú"],
-  "fr": ["me", "mon", "ma", "mes", "moi", "nous", "notre", "nos", "je", "j'", "m'"],
-  "de": ["mein", "meine", "meinen", "meiner", "meines", "mir", "uns", "unser", "unseren", "unserer", "unseres"],
-  "it": ["mio", "mia", "miei", "mie", "noi", "nostro", "nostri", "nostra", "nostre"],
-};
+//create one object with all the translations
+// research : SMART_TRANSLATION[language][key]
+const SMART_TRANSLATION = {
+  "en": {
+    "pronous": ["my", "I", "me", "mine", "our", "ours", "us", "we"],
+    "prompt": "Based on your notes",
+    "initial_message": "Hi, I'm ChatGPT with access to your notes via Smart Connections. Ask me a question about your notes and I'll try to answer it.",
+  },
+  "es": {
+    "pronous": ["mi", "yo", "mí", "tú"],
+    "prompt": "Basándose en sus notas",
+    "initial_message": "Hola, soy ChatGPT con acceso a tus apuntes a través de Smart Connections. Hazme una pregunta sobre tus apuntes e intentaré responderte.",
+  },
+  "fr": {
+    "pronous": ["me", "mon", "ma", "mes", "moi", "nous", "notre", "nos", "je", "j'", "m'"],
+    "prompt": "D'après vos notes",
+    "initial_message": "Bonjour, je suis ChatGPT et j'ai accès à vos notes via Smart Connections. Posez-moi une question sur vos notes et j'essaierai d'y répondre.",
+  },
+  "de": {
+    "pronous": ["mein", "meine", "meinen", "meiner", "meines", "mir", "uns", "unser", "unseren", "unserer", "unseres"],
+    "prompt": "Basierend auf Ihren Notizen",
+    "initial_message": "Hallo, ich bin ChatGPT und habe über Smart Connections Zugang zu Ihren Notizen. Stellen Sie mir eine Frage zu Ihren Notizen und ich werde versuchen, sie zu beantworten.",
+  },
+  "it": {
+    "pronous": ["mio", "mia", "miei", "mie", "noi", "nostro", "nostri", "nostra", "nostre"],
+    "prompt": "Sulla base degli appunti",
+    "initial_message": "Ciao, sono ChatGPT e ho accesso ai tuoi appunti tramite Smart Connections. Fatemi una domanda sui vostri appunti e cercherò di rispondervi.",
+  },
+}
 
 class SmartConnectionsPlugin extends Obsidian.Plugin {
   // constructor
@@ -57,6 +79,89 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     this.retry_notice_timeout = null;
     this.save_timeout = null;
     this.self_ref_kw_regex = null;
+    this.update_available = false;
+  }
+
+  async onload() {
+    // initialize when layout is ready
+    this.app.workspace.onLayoutReady(this.initialize.bind(this));
+  }
+  async initialize() {
+    console.log("Loading Smart Connections plugin");
+    VERSION = this.manifest.version;
+    // VERSION = '1.0.0';
+    // console.log(VERSION);
+    await this.loadSettings();
+    await this.check_for_update();
+
+    this.addIcon();
+    this.addCommand({
+      id: "sc-find-notes",
+      name: "Find: Make Smart Connections",
+      icon: "pencil_icon",
+      hotkeys: [],
+      // editorCallback: async (editor) => {
+      editorCallback: async (editor) => {
+        if(editor.somethingSelected()) {
+          // get selected text
+          let selected_text = editor.getSelection();
+          // render connections from selected text
+          await this.make_connections(selected_text);
+        } else {
+          // clear nearest_cache on manual call to make connections
+          this.nearest_cache = {};
+          // console.log("Cleared nearest_cache");
+          await this.make_connections();
+        }
+      }
+    });
+    this.addCommand({
+      id: "smart-connections-view",
+      name: "Open: View Smart Connections",
+      callback: () => {
+        this.open_view();
+      }
+    });
+    // open chat command
+    this.addCommand({
+      id: "smart-connections-chat",
+      name: "Open: Smart Chat Conversation",
+      callback: () => {
+        this.open_chat();
+      }
+    });
+    this.addSettingTab(new SmartConnectionsSettingsTab(this.app, this));
+    // register main view type
+    this.registerView(SMART_CONNECTIONS_VIEW_TYPE, (leaf) => (new SmartConnectionsView(leaf, this)));
+    // register chat view type
+    this.registerView(SMART_CONNECTIONS_CHAT_VIEW_TYPE, (leaf) => (new SmartConnectionsChatView(leaf, this)));
+    // code-block renderer
+    this.registerMarkdownCodeBlockProcessor("smart-connections", this.render_code_block.bind(this));
+
+    // if this settings.view_open is true, open view on startup
+    if(this.settings.view_open) {
+      this.open_view();
+    }
+    // on new version
+    if(this.settings.version !== VERSION) {
+      // update version
+      this.settings.version = VERSION;
+      // save settings
+      await this.saveSettings();
+      // open view
+      this.open_view();
+    }
+    // check github release endpoint if update is available
+    this.add_to_gitignore();
+    /**
+     * EXPERIMENTAL
+     * - window-based API access
+     * - code-block rendering
+     */
+    this.api = new ScSearchApi(this.app, this);
+    // register API to global window object
+    (window["SmartSearchApi"] = this.api) && this.register(() => delete window["SmartSearchApi"]);
+
   }
 
   async loadSettings() {
@@ -96,7 +201,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       });
     }
     // load self_ref_kw_regex
-    this.self_ref_kw_regex = new RegExp(`\\b(${SELF_REFERENTIAL_PRONOUNS[this.settings.language].join("|")})\\b`, "gi");
+    this.self_ref_kw_regex = new RegExp(`\\b(${SMART_TRANSLATION[this.settings.language].pronous.join("|")})\\b`, "gi");
     // load failed files
     await this.load_failed_files();
   }
@@ -110,69 +215,33 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       await this.make_connections();
     }
   }
-  async onload() {
-    this.addIcon();
-    await this.loadSettings();
-    console.log("loading plugin");
-    this.addCommand({
-      id: "sc-find-notes",
-      name: "Find: Make Smart Connections",
-      icon: "pencil_icon",
-      hotkeys: [],
-      // editorCallback: async (editor) => {
-      editorCallback: async (editor) => {
-        if(editor.somethingSelected()) {
-          // get selected text
-          let selected_text = editor.getSelection();
-          // render connections from selected text
-          await this.make_connections(selected_text);
-        } else {
-          // clear nearest_cache on manual call to make connections
-          this.nearest_cache = {};
-          // console.log("Cleared nearest_cache");
-          await this.make_connections();
-        }
+
+  // check for update
+  async check_for_update() {
+    // fail silently, ex. if no internet connection
+    try {
+      // get latest release version from github
+      const response = await (0, Obsidian.requestUrl)({
+        url: "https://api.github.com/repos/brianpetro/obsidian-smart-connections/releases/latest",
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        contentType: "application/json",
+      });
+      // get version number from response
+      const latest_release = JSON.parse(response.text).tag_name;
+      // console.log(`Latest release: ${latest_release}`);
+      // if latest_release is newer than current version, show message
+      if(latest_release !== VERSION) {
+        new Obsidian.Notice(`[Smart Connections] A new version is available! (v${latest_release})`);
+        this.update_available = true;
       }
-    });
-    this.addCommand({
-      id: "smart-connections-view",
-      name: "Open: View Smart Connections",
-      callback: () => {
-        this.open_view();
-      }
-    });
-    // open chat command
-    this.addCommand({
-      id: "smart-connections-chat",
-      name: "Open: Smart Chat Conversation",
-      callback: () => {
-        this.open_chat();
-      }
-    });
-    // get all files in vault
-    this.addSettingTab(new SmartConnectionsSettingsTab(this.app, this));
-
-    // register main view type
-    this.registerView(SMART_CONNECTIONS_VIEW_TYPE, (leaf) => (new SmartConnectionsView(leaf, this)));
-    // register chat view type
-    this.registerView(SMART_CONNECTIONS_CHAT_VIEW_TYPE, (leaf) => (new SmartConnectionsChatView(leaf, this)));
-
-    // initialize when layout is ready
-    this.app.workspace.onLayoutReady(this.initialize.bind(this));
-
-    /**
-     * EXPERIMENTAL
-     * - window-based API access
-     * - code-block rendering
-     */
-    this.api = new ScSearchApi(this.app, this);
-    // register API to global window object
-    (window["SmartSearchApi"] = this.api) && this.register(() => delete window["SmartSearchApi"]);
-
-    // code-block renderer
-    this.registerMarkdownCodeBlockProcessor("smart-connections", this.render_code_block.bind(this));
-
+    } catch (error) {
+      console.log(error);
+    }
   }
+
   async render_code_block(contents, container, ctx) {
     let nearest;
     if(contents.trim().length > 0) {
@@ -185,15 +254,6 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
     if (nearest.length) {
       this.update_results(container, nearest);
-      // const list = container.createEl("ul");
-      // list.addClass("smart-connections-list");
-      // for (const item of nearest) {
-      //   const el = list.createEl("li", {
-      //     cls: "smart-connections-item",
-      //     text: item.link
-      //   });
-      // }
-
     }
   }
 
@@ -205,23 +265,6 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       view = this.get_view();
     }
     await view.render_connections(selected_text);
-  }
-
-  async initialize() {
-    // if this settings.view_open is true, open view on startup
-    if(this.settings.view_open) {
-      this.open_view();
-    }
-    // on new version
-    if(this.settings.version !== VERSION) {
-      // update version
-      this.settings.version = VERSION;
-      // save settings
-      await this.saveSettings();
-      // open view
-      this.open_view();
-    }
-    this.add_to_gitignore();
   }
 
   addIcon(){
@@ -297,9 +340,14 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
           clearTimeout(this.retry_notice_timeout);
           this.retry_notice_timeout = null;
         }
-        this.retry_notice_timeout = setTimeout(() => {
+        // limit to one notice every 10 minutes
+        if(!this.recently_sent_retry_notice){
           new Obsidian.Notice("Smart Connections: Skipping previously failed file, use button in settings to retry");
-        }, 3000);
+          this.recently_sent_retry_notice = true;
+          setTimeout(() => {
+            this.recently_sent_retry_notice = false;  
+          }, 600000);
+        }
         continue;
       }
       // skip files where path contains any exclusions
@@ -1537,11 +1585,21 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // add SVG signal icon using getIcon
     Obsidian.setIcon(brand_container, "smart-connections");
     const brand_p = brand_container.createEl("p");
+    let text = "Smart Connections";
+    let attr = {};
+    // if update available, change text to "Update Available"
+    if (this.update_available) {
+      text = "Update Available";
+      attr = {
+        style: "font-weight: 700;"
+      };
+    }
     brand_p.createEl("a", {
       cls: "",
-      text: "Smart Connections",
+      text: text,
       href: "https://github.com/brianpetro/obsidian-smart-connections/discussions",
-      target: "_blank"
+      target: "_blank",
+      attr: attr
     });
   }
 
@@ -2392,8 +2450,8 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
     });
     // language
     new Obsidian.Setting(containerEl).setName("Default Language").setDesc("Default language to use for Smart Chat. Changes which self-referential pronouns will trigger lookup of your notes.").addDropdown((dropdown) => {
-      // get Object keys from SELF_REFERENTIAL_PRONOUNS
-      const languages = Object.keys(SELF_REFERENTIAL_PRONOUNS);
+      // get Object keys from pronous
+      const languages = Object.keys(SMART_TRANSLATION);
       for(let i = 0; i < languages.length; i++) {
         dropdown.addOption(languages[i], languages[i]);
       }
@@ -2401,6 +2459,11 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
         this.plugin.settings.language = value;
         await this.plugin.saveSettings();
         self_ref_pronouns_list.setText(this.get_self_ref_list());
+        // if chat view is open then run new_chat()
+        const chat_view = this.app.workspace.getLeavesOfType(SMART_CONNECTIONS_CHAT_VIEW_TYPE).length > 0 ? this.app.workspace.getLeavesOfType(SMART_CONNECTIONS_CHAT_VIEW_TYPE)[0].view : null;
+        if(chat_view) {
+          chat_view.new_chat();
+        }
       });
       dropdown.setValue(this.plugin.settings.language);
     });
@@ -2528,7 +2591,7 @@ class SmartConnectionsSettingsTab extends Obsidian.PluginSettingTab {
 
   }
   get_self_ref_list() {
-    return "Current: " + SELF_REFERENTIAL_PRONOUNS[this.plugin.settings.language].join(", ");
+    return "Current: " + SMART_TRANSLATION[this.plugin.settings.language].pronous.join(", ");
   }
 
   draw_failed_files_list(failed_list) {
@@ -2569,7 +2632,7 @@ function line_is_heading(line) {
 }
 
 const SMART_CONNECTIONS_CHAT_VIEW_TYPE = "smart-connections-chat-view";
-const INITIAL_MESSAGE = "Hi, I'm ChatGPT with access to your notes via Smart Connections. Ask me a question about your notes and I'll try to answer it.";
+
 class SmartConnectionsChatView extends Obsidian.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
@@ -2669,7 +2732,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     this.render_chat();
     // render initial message from assistant (don't use render_message to skip adding to chat history)
     this.new_messsage_bubble("assistant");
-    this.active_elm.innerHTML = '<p>'+INITIAL_MESSAGE+'</p>';
+    this.active_elm.innerHTML = '<p>' + SMART_TRANSLATION[this.plugin.settings.language].initial_message+'</p>';
   }
   // open a chat from the chat history modal
   async open_chat(chat_id) {
@@ -2810,7 +2873,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
           content: user_input
         }
       ];
-      this.request_chatgpt_completion({messages: chatml});
+      this.request_chatgpt_completion({messages: chatml, temperature: 0});
     }
   }
   
@@ -3138,7 +3201,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     // char_accum divided by 4 and rounded to nearest integer for estimated tokens
     console.log("total context tokens: ~" + Math.round(char_accum / 4));
     // build context input
-    this.chat.context = `Anticipate the type of answer desired by the user. Imagine the following ${context.length} notes were written by the user and contain all the necessary information to answer the user's question. Begin responses with "Based on your notes..."`;
+    this.chat.context = `Anticipate the type of answer desired by the user. Imagine the following ${context.length} notes were written by the user and contain all the necessary information to answer the user's question. Begin responses with "${SMART_TRANSLATION[this.plugin.settings.language].prompt}..."`;
     for(let i = 0; i < context.length; i++) {
       this.chat.context += `\n---BEGIN #${i+1}---\n${context[i].text}\n---END #${i+1}---`;
     }

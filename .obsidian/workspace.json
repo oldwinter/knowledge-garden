@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
+                "file": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "62ee5923909e1d11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -71,10 +84,10 @@
             }
           },
           {
-            "id": "8f3b2b13fce3d6c1",
+            "id": "8857362beab68c4a",
             "type": "leaf",
             "state": {
-              "type": "starred",
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -91,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md"
+                "file": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md"
               }
             }
           },
@@ -101,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
+                "file": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
+                "file": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +161,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
+                "file": "Calendar/已发布文章/obsidian 是可以用一辈子不换的笔记软件吗.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,20 +172,50 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 228.5
+    "width": 302.5
   },
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [],
+    "children": [
+      {
+        "id": "ac5865f1b9a84921",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2593231eedcbd9d",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "4de411a2f9535073",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "76539a9a9b32ba8e",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
     "direction": "horizontal",
-    "width": 386.5,
-    "collapsed": true
+    "width": 386.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,12 +223,24 @@
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-projects:Open projects": false,
+      "dbfolder:创建一个新数据库表": false
     }
   },
   "active": "ec77d9b1c0b0b948",
   "lastOpenFiles": [
     "README.md",
+    "AboutTheGarden.md",
+    "HOMEPAGE.md",
+    "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Calendar/Daily notes/2023-03-30.md",
+    "Extras/Media/Pasted image 20230329192147.png",
+    "Cards/永久笔记/注意力机制.md",
+    "Cards/永久笔记/chatGPT.md",
+    "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
     "Sources/GPTchats/202331114835.md",
     "Sources/Courses/AI大模型之美",
     "Sources/Courses/Service Mesh实战",
@@ -206,14 +261,6 @@
     "Calendar/Daily notes/2023-03-20.md",
     "Calendar/Daily notes/2023-03-21.md",
     "Calendar/Daily notes/2023-03-22.md",
-    "Calendar/Daily notes/2023-03-23.md",
-    "Calendar/Daily notes/2023-03-24.md",
-    "Calendar/Daily notes/2023-03-28.md",
-    "Calendar/Daily notes/2023-03-27.md",
-    "Calendar/Daily notes/2023-03-26.md",
-    "Calendar/Daily notes/2023-03-25.md",
-    "AboutTheGarden.md",
-    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Smart Connections.md",
     "Extras/Media/1679922749389.jpg",
     "Extras/Media/16799226083092.png",
     "Atlas/Canvas/PPV人生管理系统.canvas",
@@ -239,7 +286,6 @@
     "Atlas/Draws/白板 2023-03-11.light.svg",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230305120820.png",
-    "Atlas/Draws/README 中的头图 - 图.svg",
-    "Extras/Media/weread_image_1067883451661727.jpeg"
+    "Atlas/Draws/README 中的头图 - 图.svg"
   ]
 }
