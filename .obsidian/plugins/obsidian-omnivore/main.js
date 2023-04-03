@@ -5890,118 +5890,6 @@ var mustache_default = mustache;
 // src/main.ts
 var import_obsidian4 = require("obsidian");
 
-// src/util.ts
-var import_diff_match_patch = __toESM(require_diff_match_patch());
-var import_markdown_escape = __toESM(require_markdown_escape());
-var import_obsidian = require("obsidian");
-var DATE_FORMAT_W_OUT_SECONDS = "yyyy-MM-dd'T'HH:mm";
-var DATE_FORMAT = `${DATE_FORMAT_W_OUT_SECONDS}:ss`;
-var requestHeaders = (apiKey) => ({
-  "Content-Type": "application/json",
-  authorization: apiKey,
-  "X-OmnivoreClient": "obsidian-plugin"
-});
-var loadArticles = async (endpoint, apiKey, after = 0, first = 10, updatedAt = "", query = "", includeContent = false, format2 = "html") => {
-  const res = await (0, import_obsidian.requestUrl)({
-    url: endpoint,
-    headers: requestHeaders(apiKey),
-    body: JSON.stringify({
-      query: `
-        query Search($after: String, $first: Int, $query: String, $includeContent: Boolean, $format: String) {
-          search(first: $first, after: $after, query: $query, includeContent: $includeContent, format: $format) {
-            ... on SearchSuccess {
-              edges {
-                node {
-                  id
-                  title
-                  slug
-                  siteName
-                  originalArticleUrl
-                  url
-                  author
-                  updatedAt
-                  description
-                  savedAt
-                  pageType
-                  content
-                  publishedAt
-                  highlights {
-                    id
-                    quote
-                    annotation
-                    patch
-                    updatedAt
-                    labels {
-                      name
-                    }
-                  }
-                  labels {
-                    name
-                  }
-                }
-              }
-              pageInfo {
-                hasNextPage
-              }
-            }
-            ... on SearchError {
-              errorCodes
-            }
-          }
-        }`,
-      variables: {
-        after: `${after}`,
-        first,
-        query: `${updatedAt ? "updated:" + updatedAt : ""} sort:saved-asc ${query}`,
-        includeContent,
-        format: format2
-      }
-    }),
-    method: "POST"
-  });
-  const jsonRes = res.json;
-  const articles = jsonRes.data.search.edges.map((e) => e.node);
-  return [articles, jsonRes.data.search.pageInfo.hasNextPage];
-};
-var getHighlightLocation = (patch) => {
-  const dmp = new import_diff_match_patch.diff_match_patch();
-  const patches = dmp.patch_fromText(patch);
-  return patches[0].start1 || 0;
-};
-var getHighlightPoint = (patch) => {
-  const { bbox } = JSON.parse(patch);
-  if (!bbox || bbox.length !== 4) {
-    return { left: 0, top: 0 };
-  }
-  return { left: bbox[0], top: bbox[1] };
-};
-var compareHighlightsInFile = (a, b) => {
-  const highlightPointA = getHighlightPoint(a.patch);
-  const highlightPointB = getHighlightPoint(b.patch);
-  if (highlightPointA.top === highlightPointB.top) {
-    return highlightPointA.left - highlightPointB.left;
-  }
-  return highlightPointA.top - highlightPointB.top;
-};
-var parseDateTime = (str) => {
-  const res = DateTime.fromFormat(str, DATE_FORMAT);
-  if (res.isValid) {
-    return res;
-  }
-  return DateTime.fromFormat(str, DATE_FORMAT_W_OUT_SECONDS);
-};
-var wrapAround = (value, size) => {
-  return (value % size + size) % size;
-};
-var REPLACEMENT_CHAR = "-";
-var ILLEGAL_CHAR_REGEX = /[/\\?%*:|"<>]/g;
-var replaceIllegalChars = (str) => {
-  return str.replace(ILLEGAL_CHAR_REGEX, REPLACEMENT_CHAR);
-};
-var formatDate = (date, format2) => {
-  return DateTime.fromISO(date).toFormat(format2);
-};
-
 // src/settings/file-suggest.ts
 var import_obsidian3 = require("obsidian");
 
@@ -7579,6 +7467,120 @@ var createPopper = /* @__PURE__ */ popperGenerator({
 
 // src/settings/suggest.ts
 var import_obsidian2 = require("obsidian");
+
+// src/util.ts
+var import_diff_match_patch = __toESM(require_diff_match_patch());
+var import_markdown_escape = __toESM(require_markdown_escape());
+var import_obsidian = require("obsidian");
+var DATE_FORMAT_W_OUT_SECONDS = "yyyy-MM-dd'T'HH:mm";
+var DATE_FORMAT = `${DATE_FORMAT_W_OUT_SECONDS}:ss`;
+var requestHeaders = (apiKey) => ({
+  "Content-Type": "application/json",
+  authorization: apiKey,
+  "X-OmnivoreClient": "obsidian-plugin"
+});
+var loadArticles = async (endpoint, apiKey, after = 0, first = 10, updatedAt = "", query = "", includeContent = false, format2 = "html") => {
+  const res = await (0, import_obsidian.requestUrl)({
+    url: endpoint,
+    headers: requestHeaders(apiKey),
+    body: JSON.stringify({
+      query: `
+        query Search($after: String, $first: Int, $query: String, $includeContent: Boolean, $format: String) {
+          search(first: $first, after: $after, query: $query, includeContent: $includeContent, format: $format) {
+            ... on SearchSuccess {
+              edges {
+                node {
+                  id
+                  title
+                  slug
+                  siteName
+                  originalArticleUrl
+                  url
+                  author
+                  updatedAt
+                  description
+                  savedAt
+                  pageType
+                  content
+                  publishedAt
+                  highlights {
+                    id
+                    quote
+                    annotation
+                    patch
+                    updatedAt
+                    labels {
+                      name
+                    }
+                  }
+                  labels {
+                    name
+                  }
+                }
+              }
+              pageInfo {
+                hasNextPage
+              }
+            }
+            ... on SearchError {
+              errorCodes
+            }
+          }
+        }`,
+      variables: {
+        after: `${after}`,
+        first,
+        query: `${updatedAt ? "updated:" + updatedAt : ""} sort:saved-asc ${query}`,
+        includeContent,
+        format: format2
+      }
+    }),
+    method: "POST"
+  });
+  const jsonRes = res.json;
+  const articles = jsonRes.data.search.edges.map((e) => e.node);
+  return [articles, jsonRes.data.search.pageInfo.hasNextPage];
+};
+var getHighlightLocation = (patch) => {
+  const dmp = new import_diff_match_patch.diff_match_patch();
+  const patches = dmp.patch_fromText(patch);
+  return patches[0].start1 || 0;
+};
+var getHighlightPoint = (patch) => {
+  const { bbox } = JSON.parse(patch);
+  if (!bbox || bbox.length !== 4) {
+    return { left: 0, top: 0 };
+  }
+  return { left: bbox[0], top: bbox[1] };
+};
+var compareHighlightsInFile = (a, b) => {
+  const highlightPointA = getHighlightPoint(a.patch);
+  const highlightPointB = getHighlightPoint(b.patch);
+  if (highlightPointA.top === highlightPointB.top) {
+    return highlightPointA.left - highlightPointB.left;
+  }
+  return highlightPointA.top - highlightPointB.top;
+};
+var parseDateTime = (str) => {
+  const res = DateTime.fromFormat(str, DATE_FORMAT);
+  if (res.isValid) {
+    return res;
+  }
+  return DateTime.fromFormat(str, DATE_FORMAT_W_OUT_SECONDS);
+};
+var wrapAround = (value, size) => {
+  return (value % size + size) % size;
+};
+var REPLACEMENT_CHAR = "-";
+var ILLEGAL_CHAR_REGEX = /[/\\?%*:|"<>]/g;
+var replaceIllegalChars = (str) => {
+  return str.replace(ILLEGAL_CHAR_REGEX, REPLACEMENT_CHAR);
+};
+var formatDate = (date, format2) => {
+  return DateTime.fromISO(date).toFormat(format2);
+};
+
+// src/settings/suggest.ts
 var Suggest = class {
   constructor(owner, containerEl, scope) {
     this.owner = owner;
@@ -7786,6 +7788,7 @@ date_published: {{{datePublished}}}
 var OmnivorePlugin = class extends import_obsidian4.Plugin {
   async onload() {
     await this.loadSettings();
+    await this.resetSyncingStateSetting();
     this.addCommand({
       id: "sync",
       name: "Sync",
@@ -7842,8 +7845,10 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
       template,
       folder
     } = this.settings;
-    if (syncing)
+    if (syncing) {
+      new import_obsidian4.Notice("\u{1F422} Already syncing ...");
       return;
+    }
     if (!apiKey) {
       new import_obsidian4.Notice("Missing Omnivore api key");
       return;
@@ -7877,11 +7882,15 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
             }
           }));
           const highlights = (_b = article.highlights) == null ? void 0 : _b.map((highlight) => {
+            var _a2;
             return {
               text: highlight.quote,
               highlightUrl: `https://omnivore.app/me/${article.slug}#${highlight.id}`,
               dateHighlighted: formatDate(highlight.updatedAt, this.settings.dateHighlightedFormat),
-              note: highlight.annotation
+              note: highlight.annotation,
+              labels: (_a2 = highlight.labels) == null ? void 0 : _a2.map((l2) => ({
+                name: l2.name
+              }))
             };
           });
           const dateFormat = this.settings.dateSavedFormat;
@@ -7985,6 +7994,10 @@ ${content}`;
       return "";
     }
   }
+  async resetSyncingStateSetting() {
+    this.settings.syncing = false;
+    await this.saveSettings();
+  }
 };
 var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
   constructor(app2, plugin) {
@@ -8043,7 +8056,7 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
         text: "Reference",
         href: "https://github.com/janl/mustache.js/#templates"
       }), fragment.createEl("p", {
-        text: "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, dateSaved, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted"
+        text: "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, dateSaved, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted, highlights.labels.name"
       }), fragment.createEl("p", {
         text: "Please note that id in the frontmatter is required for the plugin to work properly."
       }));

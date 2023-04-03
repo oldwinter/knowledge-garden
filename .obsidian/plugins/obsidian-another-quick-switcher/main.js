@@ -1827,15 +1827,18 @@ var AppHelper = class {
     const editor = activeMarkdownView.editor;
     editor.replaceSelection(str);
   }
-  insertLinkToActiveFileBy(file) {
+  insertLinkToActiveFileBy(file, phantom) {
     const activeMarkdownView = this.unsafeApp.workspace.getActiveViewOfType(import_obsidian3.MarkdownView);
     if (!activeMarkdownView) {
       return;
     }
-    const linkText = this.unsafeApp.fileManager.generateMarkdownLink(
+    let linkText = this.unsafeApp.fileManager.generateMarkdownLink(
       file,
       activeMarkdownView.file.path
     );
+    if (phantom) {
+      linkText = linkText.replace(/\[\[.*\/([^\]]+)]]/, "[[$1]]");
+    }
     const editor = activeMarkdownView.editor;
     editor.replaceSelection(
       linkText.endsWith(".excalidraw]]") ? `!${linkText}` : linkText
@@ -2918,7 +2921,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       }
     });
     this.registerKeys("insert to editor", async () => {
-      var _a, _b;
+      var _a, _b, _c, _d, _e;
       const file = (_b = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem]) == null ? void 0 : _b.file;
       if (!file) {
         return;
@@ -2927,11 +2930,14 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       if (this.appHelper.isActiveLeafCanvas()) {
         this.appHelper.addFileToCanvas(file);
       } else {
-        this.appHelper.insertLinkToActiveFileBy(file);
+        this.appHelper.insertLinkToActiveFileBy(
+          file,
+          (_e = (_d = (_c = this.chooser.values) == null ? void 0 : _c[this.chooser.selectedItem]) == null ? void 0 : _d.phantom) != null ? _e : false
+        );
       }
     });
     this.registerKeys("insert to editor in background", async () => {
-      var _a, _b;
+      var _a, _b, _c, _d, _e;
       const file = (_b = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem]) == null ? void 0 : _b.file;
       if (!file) {
         return;
@@ -2945,7 +2951,10 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       if (this.appHelper.isActiveLeafCanvas()) {
         this.appHelper.addFileToCanvas(file);
       } else {
-        this.appHelper.insertLinkToActiveFileBy(file);
+        this.appHelper.insertLinkToActiveFileBy(
+          file,
+          (_e = (_d = (_c = this.chooser.values) == null ? void 0 : _c[this.chooser.selectedItem]) == null ? void 0 : _d.phantom) != null ? _e : false
+        );
         this.appHelper.insertStringToActiveFile("\n");
       }
       this.initialHistory = this.appHelper.getCurrentLeafHistoryState(
@@ -2964,7 +2973,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
           });
           offsetX += cv.width + 30;
         } else {
-          this.appHelper.insertLinkToActiveFileBy(x.file);
+          this.appHelper.insertLinkToActiveFileBy(x.file, x.phantom);
           this.appHelper.insertStringToActiveFile("\n");
         }
       });

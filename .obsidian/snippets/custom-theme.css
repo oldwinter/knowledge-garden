@@ -62,3 +62,28 @@ body:not(.hide-trailing-whitespace) :not(.cm-trailing-space-b) + .cm-trailing-sp
 body:not(.hide-trailing-whitespace) .cm-trailing-space-new-line::before {
 	content: "\21B5"; /* return character */
 }
+
+
+
+
+/* 代码块显示行号 */
+.markdown-preview-view pre[class^="language-"] {
+  position: relative;
+  padding-left: 3.8em !important;
+}
+
+.markdown-preview-view pre[class^="language-"]::before {
+  content: attr(data-line-number);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3em;
+  padding: 0 0.5em;
+  text-align: right;
+  color: var(--text-normal);
+  font-size: 14px;
+  line-height: inherit;
+  white-space: nowrap;
+  pointer-events: none;
+}

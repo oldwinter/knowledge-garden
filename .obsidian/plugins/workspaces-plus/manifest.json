@@ -1,0 +1,10 @@
+{
+  "id": "workspaces-plus",
+  "name": "Workspaces Plus",
+  "version": "0.3.3",
+  "minAppVersion": "1.0.0",
+  "description": "Quickly switch and manage workspaces",
+  "author": "NothingIsLost and Johnny ✨",
+  "authorUrl": "https://github.com/nothingislost",
+  "isDesktopOnly": true
+}

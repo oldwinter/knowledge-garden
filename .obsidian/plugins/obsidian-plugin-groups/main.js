@@ -27,10 +27,10 @@ __export(main_exports, {
   default: () => PgMain
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian20 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 
 // src/PluginGroupSettings.ts
-var import_obsidian19 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 
 // src/Utils/Constants.ts
 var disableStartupTimeout = 25 * 1e3;
@@ -1679,6 +1679,9 @@ var AdvancedSettings = class extends HtmlComponent {
   }
 };
 
+// src/Components/Settings/PluginsSettings.ts
+var import_obsidian19 = require("obsidian");
+
 // src/Components/DescriptionsList.ts
 var import_obsidian16 = require("obsidian");
 var DescriptionsList = class extends SettingsList {
@@ -1823,8 +1826,219 @@ var EditPluginList = class extends DescriptionsList {
   }
 };
 
+// src/Components/Settings/PluginsSettings.ts
+var PluginSettings = class extends HtmlComponent {
+  constructor(parentEL, options) {
+    super(parentEL, options);
+    this.FilterModes = {
+      notInGroup: "Not in the Group(s)",
+      inGroup: "In the Groups"
+    };
+    this.activeFilterMode = this.FilterModes.inGroup;
+    this.filteredGroups = /* @__PURE__ */ new Map();
+    this.generateComponent();
+  }
+  generateContainer() {
+    this.mainEl = this.parentEl.createDiv();
+  }
+  generateContent() {
+    var _a, _b;
+    if (!this.mainEl) {
+      return;
+    }
+    const header = this.mainEl.createEl("h5", { text: "Plugins" });
+    this.content = this.mainEl.createDiv();
+    makeCollapsible(header, this.content);
+    if (this.options.collapsible) {
+      makeCollapsible(header, this.content, this.options.startOpened);
+    }
+    this.FilterAndSort();
+    this.GenerateFilterSection(this.content);
+    const listContainer = this.content.createDiv();
+    listContainer.style.overflow = "scroll";
+    listContainer.style.maxHeight = ((_b = (_a = this.options.maxListHeight) == null ? void 0 : _a.toString()) != null ? _b : "") + "px";
+    this.GeneratePluginsList(listContainer);
+  }
+  GeneratePluginsList(parentEl) {
+    const refresh = new import_obsidian19.ExtraButtonComponent(this.content);
+    refresh.setIcon("refresh-cw");
+    refresh.setTooltip("Refresh list for changes to the plugins and assigned groups.");
+    this.pluginsList = new EditPluginList(this.content, {
+      items: this.filteredPlugins
+    }, () => {
+      this.pluginsList.update({
+        items: this.filteredPlugins
+      });
+    });
+    refresh.onClick(() => {
+      this.pluginsList.update({
+        items: this.filteredPlugins
+      });
+    });
+  }
+  getPluginsWithGroupsAsDescription() {
+    return PluginManager.getAllAvailablePlugins().map((plugin) => {
+      const groups = Manager.getInstance().getGroupsOfPlugin(plugin.id);
+      return {
+        item: plugin,
+        description: groups.map((group) => group.name).join(", ")
+      };
+    });
+  }
+  GenerateFilterSection(parentEl) {
+    const filterSection = parentEl.createDiv();
+    new import_obsidian19.Setting(filterSection).setName("Search").addText((txt) => {
+      txt.setPlaceholder("Search for Plugin...");
+      txt.onChange((search) => {
+        this.searchPlugins(search);
+      });
+    });
+    const filtersAndSelectionContainer = filterSection.createDiv({
+      cls: "pg-plugin-filter-container"
+    });
+    const filtersAndSelection = filtersAndSelectionContainer.createDiv({
+      cls: "pg-plugin-filter-section"
+    });
+    const filters = filtersAndSelection.createDiv();
+    const filteredGroupsChips = new FilteredGroupsList(filtersAndSelectionContainer, this.filteredGroups, () => this.OnFilterOrSortUpdated());
+    const toggleGroupFilter = (group) => {
+      this.filteredGroups.has(group.id) ? this.filteredGroups.delete(group.id) : this.filteredGroups.set(group.id, group);
+    };
+    const updateGroupFilters = () => {
+      filteredGroupsChips.update(this.filteredGroups);
+      this.OnFilterOrSortUpdated();
+    };
+    const groupFilterOptions = [
+      {
+        label: "All groups",
+        func: () => {
+          if (this.filteredGroups.size === Manager.getInstance().groupsMap.size) {
+            this.filteredGroups.clear();
+          } else {
+            this.filteredGroups = new Map(Manager.getInstance().groupsMap);
+          }
+          updateGroupFilters();
+        }
+      }
+    ];
+    Manager.getInstance().groupsMap.forEach((group) => {
+      groupFilterOptions.push({
+        label: group.name,
+        func: () => {
+          toggleGroupFilter(group);
+          updateGroupFilters();
+        }
+      });
+    });
+    new DropdownActionButton(filters, {
+      mainLabel: {
+        label: "Filter Groups"
+      },
+      dropDownOptions: groupFilterOptions,
+      drpIcon: "filter"
+    });
+    const sortButton = new DropdownActionButton(filters, {
+      mainLabel: {
+        label: this.activeFilterMode
+      },
+      dropDownOptions: [
+        {
+          label: this.FilterModes.notInGroup,
+          func: () => {
+            this.onFilterModeChanged(this.FilterModes.notInGroup, sortButton);
+          }
+        },
+        {
+          label: this.FilterModes.inGroup,
+          func: () => {
+            this.onFilterModeChanged(this.FilterModes.inGroup, sortButton);
+          }
+        }
+      ],
+      minWidth: "80px",
+      drpIcon: "sort-desc"
+    });
+    return filterSection;
+  }
+  onFilterModeChanged(filterMode, sortButton) {
+    this.activeFilterMode = filterMode;
+    sortButton.options.mainLabel.label = filterMode;
+    sortButton.update();
+    this.OnFilterOrSortUpdated();
+  }
+  OnFilterOrSortUpdated() {
+    this.FilterAndSort();
+    this.showFilteredPlugins();
+  }
+  FilterAndSort() {
+    this.filteredPlugins = this.getPluginsWithGroupsAsDescription();
+    if (this.searchTerm && this.searchTerm !== "") {
+      this.filteredPlugins = this.filteredPlugins.filter((p) => p.item.name.toLowerCase().contains(this.searchTerm.toLowerCase()));
+    }
+    if (this.filteredGroups.size > 0) {
+      this.filteredPlugins = this.filterPluginsByGroups(this.filteredPlugins, this.filteredGroups);
+    }
+    this.filteredPlugins = this.sortPlugins(this.filteredPlugins);
+  }
+  filterPluginsByGroups(pluginsToFilter, filterGroups) {
+    const groupsOfPlugins = Manager.getInstance().mapOfPluginsDirectlyConnectedGroups;
+    if (this.activeFilterMode === this.FilterModes.notInGroup) {
+      return this.filterByNotInGroup(pluginsToFilter, groupsOfPlugins, filterGroups);
+    }
+    if (this.activeFilterMode === this.FilterModes.inGroup) {
+      return this.filterByInGroup(pluginsToFilter, groupsOfPlugins, filterGroups);
+    }
+    return pluginsToFilter;
+  }
+  filterByInGroup(pluginsToFilter, groupsOfPlugins, groupsToFilter) {
+    let filteredPlugins = pluginsToFilter;
+    filteredPlugins = filteredPlugins.filter((element) => {
+      return groupsOfPlugins.has(element.item.id);
+    }).filter((element) => {
+      const groupsOfPlugin = groupsOfPlugins.get(element.item.id);
+      for (const groupToFilter of groupsToFilter.keys()) {
+        if (!(groupsOfPlugin == null ? void 0 : groupsOfPlugin.has(groupToFilter))) {
+          return false;
+        }
+      }
+      return true;
+    });
+    return filteredPlugins;
+  }
+  filterByNotInGroup(pluginsToFilter, groupsOfPlugins, groupsToFilter) {
+    const filteredPlugins = pluginsToFilter.filter((element) => {
+      var _a;
+      if (!groupsOfPlugins.has(element.item.id)) {
+        return true;
+      }
+      for (const groupOfPlugin of (_a = groupsOfPlugins.get(element.item.id)) != null ? _a : []) {
+        if (groupsToFilter.has(groupOfPlugin)) {
+          return false;
+        }
+      }
+      return true;
+    });
+    return filteredPlugins;
+  }
+  searchPlugins(search) {
+    this.searchTerm = search;
+    this.OnFilterOrSortUpdated();
+    this.showFilteredPlugins();
+  }
+  showFilteredPlugins() {
+    this.pluginsList.update({ items: this.filteredPlugins });
+  }
+  sortPlugins(plugins) {
+    if (!plugins || !(typeof plugins[Symbol.iterator] === "function")) {
+      return [];
+    }
+    const sortedArray = [...plugins];
+    return sortedArray.sort((a, b) => a.item.name.localeCompare(b.item.name));
+  }
+};
+
 // src/PluginGroupSettings.ts
-var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
+var PluginGroupSettings = class extends import_obsidian20.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
   }
@@ -1838,7 +2052,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
       startOpened: true
     });
     this.GenerateDeviceList(containerEl);
-    this.GeneratePluginsList(containerEl);
+    new PluginSettings(containerEl, { collapsible: true });
     new AdvancedSettings(containerEl, { collapsible: true });
   }
   generateGeneralSettings(containerEl) {
@@ -1849,7 +2063,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
     });
     const content = generalParent.createDiv();
     makeCollapsible(header, content, true);
-    new import_obsidian19.Setting(content).setName("Generate Commands for Groups").addToggle((tgl) => {
+    new import_obsidian20.Setting(content).setName("Generate Commands for Groups").addToggle((tgl) => {
       var _a;
       tgl.setValue((_a = Manager.getInstance().generateCommands) != null ? _a : false);
       tgl.onChange(async (value) => {
@@ -1857,7 +2071,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
         await Manager.getInstance().saveSettings();
       });
     });
-    new import_obsidian19.Setting(content).setName("Notice upon un-/loading groups").addDropdown((drp) => {
+    new import_obsidian20.Setting(content).setName("Notice upon un-/loading groups").addDropdown((drp) => {
       var _a;
       drp.addOption("none", "None").addOption("short", "Short").addOption("normal", "Normal");
       drp.setValue((_a = Manager.getInstance().showNoticeOnGroupLoad) != null ? _a : "none");
@@ -1866,7 +2080,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
         await Manager.getInstance().saveSettings();
       });
     });
-    new import_obsidian19.Setting(content).setName("Statusbar Menu").addDropdown((drp) => {
+    new import_obsidian20.Setting(content).setName("Statusbar Menu").addDropdown((drp) => {
       var _a;
       drp.addOption("None", "None").addOption("Icon", "Icon").addOption("Text", "Text");
       drp.setValue((_a = Manager.getInstance().showStatusbarIcon) != null ? _a : "None");
@@ -1894,7 +2108,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
         return;
       }
       if (Manager.getInstance().devices.contains(newDeviceName)) {
-        new import_obsidian19.Notice("Name already in use for other device");
+        new import_obsidian20.Notice("Name already in use for other device");
         return;
       }
       Manager.getInstance().devices.push(newDeviceName);
@@ -1910,8 +2124,8 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
     const content = contentEl.createDiv();
     makeCollapsible(header, content);
     let deviceAddBtn;
-    const deviceNameSetting = new import_obsidian19.Setting(content).setName("New Device");
-    const newDevNameText = new import_obsidian19.TextComponent(deviceNameSetting.controlEl);
+    const deviceNameSetting = new import_obsidian20.Setting(content).setName("New Device");
+    const newDevNameText = new import_obsidian20.TextComponent(deviceNameSetting.controlEl);
     newDevNameText.setValue(newDeviceName).onChange((value) => {
       newDeviceName = value;
       if (deviceAddBtn) {
@@ -1929,7 +2143,7 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
       }).buttonEl.addClass("btn-disabled");
     });
     Manager.getInstance().devices.forEach((device) => {
-      const deviceSetting = new import_obsidian19.Setting(content).setName(device);
+      const deviceSetting = new import_obsidian20.Setting(content).setName(device);
       if (getCurrentlyActiveDevice() === device) {
         deviceSetting.setDesc("Current Device").addButton((btn) => {
           btn.setIcon("trash");
@@ -1964,39 +2178,10 @@ var PluginGroupSettings = class extends import_obsidian19.PluginSettingTab {
     setCurrentlyActiveDevice(null);
     this.display();
   }
-  GeneratePluginsList(parentEl) {
-    const header = parentEl.createEl("h4", { text: "Plugins" });
-    const content = parentEl.createDiv();
-    makeCollapsible(header, content);
-    const refresh = new import_obsidian19.ExtraButtonComponent(content);
-    refresh.setIcon("refresh-cw");
-    refresh.setTooltip("Refresh list for changes to the plugins and assigned groups.");
-    const pluginList = new EditPluginList(content, {
-      items: this.getPluginsWithGroupsAsDescription()
-    }, () => {
-      pluginList.update({
-        items: this.getPluginsWithGroupsAsDescription()
-      });
-    });
-    refresh.onClick(() => {
-      pluginList.update({
-        items: this.getPluginsWithGroupsAsDescription()
-      });
-    });
-  }
-  getPluginsWithGroupsAsDescription() {
-    return PluginManager.getAllAvailablePlugins().map((plugin) => {
-      const groups = Manager.getInstance().getGroupsOfPlugin(plugin.id);
-      return {
-        item: plugin,
-        description: groups.map((group) => group.name).join(", ")
-      };
-    });
-  }
 };
 
 // main.ts
-var PgMain = class extends import_obsidian20.Plugin {
+var PgMain = class extends import_obsidian21.Plugin {
   async onload() {
     const times = [];
     times.push({ label: "Time on Load", time: this.getCurrentTime() });
@@ -2038,7 +2223,7 @@ var PgMain = class extends import_obsidian20.Plugin {
       return;
     }
     const totalTime = Math.round(this.accTime(times.slice(1)));
-    new import_obsidian20.Notice(times.map((item) => item.label + ": " + item.time + " ms").join("\n") + "\nTotal Time: " + totalTime + " ms", 1e4);
+    new import_obsidian21.Notice(times.map((item) => item.label + ": " + item.time + " ms").join("\n") + "\nTotal Time: " + totalTime + " ms", 1e4);
   }
   elapsedTime(times) {
     if (times.length > 1) {

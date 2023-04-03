@@ -1,0 +1,15 @@
+{
+  "showInstructions": true,
+  "showDeletePrompt": true,
+  "saveOnSwitch": false,
+  "saveOnChange": false,
+  "workspaceSettings": false,
+  "systemDarkMode": false,
+  "globalSettings": {},
+  "activeWorkspaceDesktop": "dailynote",
+  "activeWorkspaceMobile": "",
+  "reloadLivePreview": false,
+  "workspaceSwitcherRibbon": false,
+  "modeSwitcherRibbon": false,
+  "replaceNativeRibbon": false
+}

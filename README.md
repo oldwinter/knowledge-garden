@@ -9,11 +9,11 @@ dg-publish: true
 <h1 align="center">oldwinterの数字花园</h1>
 <img src="https://img2.oldwinter.top/202208211431065.svg">
 <p align="center">
-	<a href="https://oldwinter.top/README">主发布站</a> |
+	<a href="https://garden.oldwinter.top/README">主发布站</a> |
 	<a href="https://notes.oldwinter.top/README">备发布站</a> |
 	<a href="https://github.com/oldwinter/knowledge-garden">源代码仓</a>
 </p>
-<p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a></p>
+<p align="center">📩订阅 <a href="https://oldwinter.zhubai.love/">我的newsletter通讯</a> 🛶随缘更</p>
 
 >[!TIP] 重大更新💡  
 > 迎接全新的obsidian 1.0版本，本库也正式发布v1.0版本，请到release中下载。

@@ -1,0 +1,199 @@
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal) {
+  box-shadow: 0px 0px 17px 4px var(--background-modifier-box-shadow);
+  z-index: var(--layer-menu);
+}
+
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal).quick-switch {
+  width: unset;
+}
+
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal) .prompt-instruction:last-child {
+  margin-right: 0px;
+}
+
+.status-bar-item.plugin-workspaces-plus.mod-clickable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal) div.suggestion-empty button.list-item-part {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal) div.suggestion-empty {
+  text-align: center;
+}
+
+.prompt-results:not(.renaming) .workspace-item.is-selected {
+  background-color: var(--background-secondary);
+  border-radius: 0.2em;
+}
+
+.prompt-results:not(.renaming) .workspace-item.is-selected ~ div.workspace-description {
+  background-color: var(--background-secondary);
+  border-radius: 0.2em;
+}
+
+.workspace-results .rename-workspace {
+  display: inline-block;
+  position: absolute;
+  right: 2em;
+  margin-top: 0.5em;
+  fill: var(--text-muted);
+  opacity: 0;
+}
+
+.workspace-results .workspace-description {
+  font-size: 0.8em;
+  padding: 0px 6rem 0.6rem 2rem;
+  color: var(--text-muted);
+  line-height: 1;
+  width: 100%;
+  /* removing max-width since it messes up the selected item background */
+  /* max-width: 40em; */
+}
+
+.workspace-results .delete-workspace {
+  display: inline-block;
+  position: absolute;
+  right: 0.7em;
+  margin-top: 0.5em;
+  fill: var(--text-muted);
+  opacity: 0;
+}
+
+.workspace-results .platform {
+  display: inline-block;
+  position: absolute;
+  right: 3.3em;
+  margin-top: 0.4em;
+  fill: var(--text-muted);
+  color: var(--text-muted);
+  opacity: 0;
+}
+
+.active-workspace {
+  display: inline-block;
+  position: absolute;
+  left: 0.5em;
+  margin-top: 0.5em;
+  fill: var(--text-muted);
+  z-index: 2;
+}
+
+.rename-workspace,
+.delete-workspace {
+  cursor: pointer;
+}
+
+.rename-workspace:hover,
+.delete-workspace:hover {
+  fill: var(--text-accent-hover);
+}
+
+.workspace-results {
+  padding: 0.1em 0.1em;
+  position: relative;
+}
+
+.prompt-results:not(.renaming) .workspace-item.is-selected ~ .rename-workspace,
+.prompt-results:not(.renaming) .workspace-item.is-selected ~ .delete-workspace,
+.prompt-results:not(.renaming) .workspace-item.is-selected ~ .platform {
+  opacity: 1;
+}
+
+body.is-mobile .prompt-results:not(.renaming) .workspace-item ~ .rename-workspace,
+body.is-mobile .prompt-results:not(.renaming) .workspace-item ~ .delete-workspace,
+body.is-mobile .prompt-results:not(.renaming) .workspace-item ~ .platform {
+  opacity: 1;
+}
+
+.workspace-item {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 6rem 5px 2rem;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  white-space: normal;
+  border: 1px solid transparent;
+}
+
+.workspaces-plus-color-scheme-icon > svg {
+  fill: var(--text-muted);
+}
+
+.workspaces-plus-color-scheme-icon:hover > svg {
+  fill: var(--text-normal);
+}
+
+.status-bar .plugin-workspaces-plus .status-bar-item-segment.icon {
+  position: absolute;
+}
+
+.status-bar .plugin-workspaces-plus .status-bar-item-segment.name {
+  margin-left: 1.7em;
+}
+
+.status-bar .plugin-workspaces-plus .icon svg {
+  height: 16px;
+  width: 16px;
+  vertical-align: text-top;
+}
+.status-bar-item.plugin-workspaces-plus.mode-switcher,
+.status-bar-item.plugin-workspaces-plus.workspace-switcher {
+  cursor: pointer;
+}
+
+:where(.workspaces-plus-modal, .workspaces-plus-mode-modal) .workspace-item[contenteditable="true"]:focus {
+  cursor: text;
+  border: 1px solid var(--interactive-accent);
+  background-color: var(--background-modifier-form-field);
+  border-radius: 0.2em;
+  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1), 0 0 0 3px hsla(var(--accent-hsl), 0.15);
+}
+
+.workspace-item[contenteditable="true"]:focus ~ div {
+  display: none;
+}
+
+body.is-mobile .side-dock-actions div[aria-label="Manage modes"] svg {
+  width: 22px;
+  height: 22px;
+}
+
+.side-dock-actions div[aria-label="Manage modes"] svg {
+  background-color: currentColor;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 24 24"><path fill="red" d="M4 4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h8v-2H4V8h16v4h2V8a2 2 0 0 0-2-2h-8l-2-2m8 10a.26.26 0 0 0-.26.21l-.19 1.32c-.3.13-.59.29-.85.47l-1.24-.5c-.11 0-.24 0-.31.13l-1 1.73c-.06.11-.04.24.06.32l1.06.82a4.193 4.193 0 0 0 0 1l-1.06.82a.26.26 0 0 0-.06.32l1 1.73c.06.13.19.13.31.13l1.24-.5c.26.18.54.35.85.47l.19 1.32c.02.12.12.21.26.21h2c.11 0 .22-.09.24-.21l.19-1.32c.3-.13.57-.29.84-.47l1.23.5c.13 0 .26 0 .33-.13l1-1.73a.26.26 0 0 0-.06-.32l-1.07-.82c.02-.17.04-.33.04-.5c0-.17-.01-.33-.04-.5l1.06-.82a.26.26 0 0 0 .06-.32l-1-1.73c-.06-.13-.19-.13-.32-.13l-1.23.5c-.27-.18-.54-.35-.85-.47l-.19-1.32A.236.236 0 0 0 20 14m-1 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5c-.84 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5z"/></svg>');
+}
+
+.side-dock-actions div[aria-label="Manage modes"] svg > path {
+  display: none;
+}
+
+.setting-item-heading.is-collapsed + .settings-container {
+  display: none;
+}
+
+.settings-container {
+  padding-left: 1.5em;
+}
+
+.workspace-modes:not(.is-enabled) ~ .requires-workspace-modes {
+  display: none;
+}
+
+.setting-item.file-override .setting-item-control .search-input-container {
+  margin-bottom: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.setting-item.file-override .setting-item-info {
+  flex: 1 1 auto;
+  flex-grow: 0;
+  margin-right: 20px;
+}

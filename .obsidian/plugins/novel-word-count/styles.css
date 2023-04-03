@@ -1,0 +1,34 @@
+.nav-files-container .nav-folder-title, .nav-files-container .nav-file-title {
+  align-items: baseline;
+}
+.nav-files-container .nav-folder-title::after, .nav-files-container .nav-file-title::after {
+  align-items: center;
+  content: attr(data-novel-word-count-plugin);
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8em;
+  opacity: 0.75;
+  padding: 0 4px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.novel-word-count--right .nav-files-container .nav-folder-title-content, .novel-word-count--right .nav-files-container .nav-file-title-content {
+  flex: 1;
+}
+.novel-word-count--below .nav-files-container .nav-folder-title, .novel-word-count--below .nav-files-container .nav-file-title {
+  flex-wrap: wrap;
+}
+.novel-word-count--below .nav-files-container .nav-folder-title-content, .novel-word-count--below .nav-files-container .nav-file-title-content {
+  flex: 100%;
+}
+.novel-word-count--below .nav-files-container .nav-folder-title::after, .novel-word-count--below .nav-files-container .nav-file-title::after {
+  margin-top: -2px;
+  padding: 0;
+}
+
+.novel-word-count-settings-header {
+  align-items: baseline;
+}
+
+/*# sourceMappingURL=styles.css.map */

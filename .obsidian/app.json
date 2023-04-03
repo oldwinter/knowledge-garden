@@ -15,6 +15,7 @@
   "newFileFolderPath": "Cards",
   "newLinkFormat": "shortest",
   "pdfExportSettings": {
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
@@ -54,5 +55,6 @@
     "editor:configure-toolbar"
   ],
   "mobilePullAction": "command-palette:open",
-  "mobileQuickRibbonItem": "daily-notes:打开/创建今天的日记"
+  "mobileQuickRibbonItem": "daily-notes:打开/创建今天的日记",
+  "focusNewTab": true
 }

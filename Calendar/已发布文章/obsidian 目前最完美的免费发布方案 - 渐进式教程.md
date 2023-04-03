@@ -79,7 +79,7 @@ title: obsidian 目前最完美的免费发布方案 - 渐进式教程
 	- ctrl + c 停止`bundle exec jekyll serve`命令，并重新执行。接着浏览器打开`http://localhost:4000/笔记名`。例如我的obsidian笔记库里面有`数字花园`这条笔记，则访问`http://localhost:4000/数字花园`即可看到笔记。
 - 2.[[🔗netlify]]配置自动构建。
 	- 按照这个教程[手把手教你使用Netlify部署博客及部署自动化 - 知乎](https://zhuanlan.zhihu.com/p/55252024)，界面一步步点，都按默认配置来，从而将上一步fork的自己仓库，通过netlify构建和发布。
-		- 主流的免费的还有[[github pages]]和[[🔗vercel]]服务，前者缺少[[CDN]]导致国内访问很慢，后者存在非html后缀的链接报404错误的问题。
+		- 主流的免费的还有[[github pages]]和[[Vercel]]服务，前者缺少[[CDN]]导致国内访问很慢，后者存在非html后缀的链接报404错误的问题。
 	- 完成上一步后，应该能得到一个`https://master--zippy-dango-d43c8d.netlify.app/`类似格式的网址，打开后正常显示原仓库的页面即可。
 - 3.将本地全部文件push至github。
 	- 本地仓库的根目录执行git三件套：`git add .` `git commit -m "first commit"` `git push`
