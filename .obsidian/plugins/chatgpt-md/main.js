@@ -460,7 +460,8 @@ var DEFAULT_SETTINGS = {
   generateAtCursor: false,
   autoInferTitle: false,
   dateFormat: "YYYYMMDDhhmmss",
-  headingLevel: 0
+  headingLevel: 0,
+  inferTitleLanguage: "English"
 };
 var DEFAULT_URL = `https://api.openai.com/v1/chat/completions`;
 var ChatGPT_MD = class extends import_obsidian3.Plugin {
@@ -620,6 +621,26 @@ ${this.getHeadingPrefix()}role::${role}
       throw new Error("Error splitting messages" + err);
     }
   }
+  clearConversationExceptFrontmatter(editor) {
+    try {
+      const YAMLFrontMatter = /---\s*[\s\S]*?\s*---/g;
+      const frontmatter = editor.getValue().match(YAMLFrontMatter);
+      if (!frontmatter) {
+        throw new Error("no frontmatter found");
+      }
+      editor.setValue("");
+      editor.replaceRange(frontmatter[0], editor.getCursor());
+      const length = editor.lastLine();
+      const newCursor = {
+        line: length + 1,
+        ch: 0
+      };
+      editor.setCursor(newCursor);
+      return newCursor;
+    } catch (err) {
+      throw new Error("Error clearing conversation" + err);
+    }
+  }
   moveCursorToEndOfFile(editor) {
     try {
       const length = editor.lastLine();
@@ -680,6 +701,15 @@ ${this.getHeadingPrefix()}role::user
 `;
     editor.replaceRange(newLine, editor.getCursor());
   }
+  removeCommentsFromMessages(message) {
+    try {
+      const commentBlock = /=begin-chatgpt-md-comment[\s\S]*?=end-chatgpt-md-comment/g;
+      const newMessage = message.replace(commentBlock, "");
+      return newMessage;
+    } catch (err) {
+      throw new Error("Error removing comments from messages" + err);
+    }
+  }
   async inferTitleFromMessages(messages) {
     console.log("[ChtGPT MD] Inferring Title");
     new import_obsidian3.Notice("[ChatGPT] Inferring title from messages...");
@@ -690,12 +720,10 @@ ${this.getHeadingPrefix()}role::user
         );
         return;
       }
-      const prompt = `Infer title from the summary of the content of these messages. The title **cannot** contain any of the following characters: colon, back slash or forward slash. Just return the title. 
+      const prompt = `Infer title from the summary of the content of these messages. The title **cannot** contain any of the following characters: colon, back slash or forward slash. Just return the title. Write the title in ${this.settings.inferTitleLanguage}. 
 Messages:
 
-${JSON.stringify(
-        messages
-      )}`;
+${JSON.stringify(messages)}`;
       const titleMessage = [
         {
           role: "user",
@@ -773,7 +801,10 @@ ${JSON.stringify(
         const bodyWithoutYML = this.removeYMLFromMessage(
           editor.getValue()
         );
-        const messages = this.splitMessages(bodyWithoutYML);
+        let messages = this.splitMessages(bodyWithoutYML);
+        messages = messages.map((message) => {
+          return this.removeCommentsFromMessages(message);
+        });
         const messagesWithRoleAndMessage = messages.map((message) => {
           return this.extractRoleAndMessage(message);
         });
@@ -840,7 +871,10 @@ ${this.getHeadingPrefix()}role::user
           }
           if (this.settings.autoInferTitle) {
             const title = view.file.basename;
-            const messagesWithResponse = messages.concat(responseStr);
+            let messagesWithResponse = messages.concat(responseStr);
+            messagesWithResponse = messagesWithResponse.map((message) => {
+              return this.removeCommentsFromMessages(message);
+            });
             if (this.isTitleTimestampFormat(title) && messagesWithResponse.length >= 4) {
               console.log(
                 "[ChatGPT MD] auto inferring title from messages"
@@ -903,6 +937,25 @@ ${this.getHeadingPrefix()}role::user
       }
     });
     this.addCommand({
+      id: "add-comment-block",
+      name: "Add comment block",
+      icon: "comment",
+      editorCallback: (editor, view) => {
+        const cursor = editor.getCursor();
+        const line = cursor.line;
+        const ch = cursor.ch;
+        const commentBlock = `=begin-chatgpt-md-comment
+
+=end-chatgpt-md-comment`;
+        editor.replaceRange(commentBlock, cursor);
+        const newCursor = {
+          line: line + 1,
+          ch
+        };
+        editor.setCursor(newCursor);
+      }
+    });
+    this.addCommand({
       id: "stop-streaming",
       name: "Stop streaming",
       icon: "octagon",
@@ -918,7 +971,10 @@ ${this.getHeadingPrefix()}role::user
         const bodyWithoutYML = this.removeYMLFromMessage(
           editor.getValue()
         );
-        const messages = this.splitMessages(bodyWithoutYML);
+        let messages = this.splitMessages(bodyWithoutYML);
+        messages = messages.map((message) => {
+          return this.removeCommentsFromMessages(message);
+        });
         statusBarItemEl.setText("[ChatGPT MD] Calling API...");
         const title = await this.inferTitleFromMessages(messages);
         statusBarItemEl.setText("");
@@ -946,8 +1002,15 @@ ${this.getHeadingPrefix()}role::user
             );
             return;
           }
-          if (!await this.app.vault.adapter.exists(this.settings.chatFolder)) {
-            const result = await createFolderModal(this.app, this.app.vault, "chatFolder", this.settings.chatFolder);
+          if (!await this.app.vault.adapter.exists(
+            this.settings.chatFolder
+          )) {
+            const result = await createFolderModal(
+              this.app,
+              this.app.vault,
+              "chatFolder",
+              this.settings.chatFolder
+            );
             if (!result) {
               new import_obsidian3.Notice(
                 `[ChatGPT MD] No chat folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
@@ -964,7 +1027,19 @@ ${this.getHeadingPrefix()}role::user
 
 ${selectedText}`
           );
-          this.app.workspace.openLinkText(newFile.basename, "", true);
+          await this.app.workspace.openLinkText(
+            newFile.basename,
+            "",
+            true,
+            { state: { mode: "source" } }
+          );
+          const activeView = this.app.workspace.getActiveViewOfType(import_obsidian3.MarkdownView);
+          if (!activeView) {
+            new import_obsidian3.Notice("No active markdown editor found.");
+            return;
+          }
+          activeView.editor.focus();
+          this.moveCursorToEndOfFile(activeView.editor);
         } catch (err) {
           console.error(
             `[ChatGPT MD] Error in Create new chat with highlighted text`,
@@ -987,8 +1062,15 @@ ${selectedText}`
           );
           return;
         }
-        if (!await this.app.vault.adapter.exists(this.settings.chatFolder)) {
-          const result = await createFolderModal(this.app, this.app.vault, "chatFolder", this.settings.chatFolder);
+        if (!await this.app.vault.adapter.exists(
+          this.settings.chatFolder
+        )) {
+          const result = await createFolderModal(
+            this.app,
+            this.app.vault,
+            "chatFolder",
+            this.settings.chatFolder
+          );
           if (!result) {
             new import_obsidian3.Notice(
               `[ChatGPT MD] No chat folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
@@ -1002,8 +1084,15 @@ ${selectedText}`
           );
           return;
         }
-        if (!await this.app.vault.adapter.exists(this.settings.chatTemplateFolder)) {
-          const result = await createFolderModal(this.app, this.app.vault, "chatTemplateFolder", this.settings.chatTemplateFolder);
+        if (!await this.app.vault.adapter.exists(
+          this.settings.chatTemplateFolder
+        )) {
+          const result = await createFolderModal(
+            this.app,
+            this.app.vault,
+            "chatTemplateFolder",
+            this.settings.chatTemplateFolder
+          );
           if (!result) {
             new import_obsidian3.Notice(
               `[ChatGPT MD] No chat template folder found. One must be created to use plugin. Set one in settings and make sure it exists.`
@@ -1016,6 +1105,14 @@ ${selectedText}`
           this.settings,
           this.getDate(new Date(), this.settings.dateFormat)
         ).open();
+      }
+    });
+    this.addCommand({
+      id: "clear-chat",
+      name: "Clear chat (except frontmatter)",
+      icon: "trash",
+      editorCallback: async (editor, view) => {
+        this.clearConversationExceptFrontmatter(editor);
       }
     });
     this.addSettingTab(new ChatGPT_MDSettingsTab(this.app, this));
@@ -1180,5 +1277,23 @@ model: gpt-3.5-turbo
         await this.plugin.saveSettings();
       })
     );
+    new import_obsidian3.Setting(containerEl).setName("Infer title language").setDesc("Language to use for title inference.").addDropdown((dropdown) => {
+      dropdown.addOptions({
+        English: "English",
+        Japanese: "Japanese",
+        Spanish: "Spanish",
+        French: "French",
+        German: "German",
+        Chinese: "Chinese",
+        Korean: "Korean",
+        Italian: "Italian",
+        Russian: "Russian"
+      });
+      dropdown.setValue(this.plugin.settings.inferTitleLanguage);
+      dropdown.onChange(async (value) => {
+        this.plugin.settings.inferTitleLanguage = value;
+        await this.plugin.saveSettings();
+      });
+    });
   }
 };

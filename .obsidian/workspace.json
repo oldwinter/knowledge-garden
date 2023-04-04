@@ -4,23 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "8521b3a1ffecb96d",
+        "id": "366dce1c03db438f",
         "type": "tabs",
         "children": [
           {
-            "id": "0cb200ea646d5946",
+            "id": "ab365fd0a65fced5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Spaces/2-Area/运动与健康/中国居民膳食指南.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f351e74537cd8c83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "aws",
+                "query": "35.77.211.36",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AboutTheGarden.md"
+                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md"
               }
             }
           },
@@ -101,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,9 +162,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AboutTheGarden.md",
+                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -159,12 +173,11 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 336.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -183,7 +196,7 @@
             }
           },
           {
-            "id": "caba2f133d460d3d",
+            "id": "d5db3c8fe8892d56",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -210,36 +223,37 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "0cb200ea646d5946",
+  "active": "f351e74537cd8c83",
   "lastOpenFiles": [
-    "README.md",
-    "Calendar/Daily notes/2023-04-03.md",
+    "Calendar/Daily notes/2023-04-04.md",
+    "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
+    "Calendar/Daily notes/∑ 优质播客列表.md",
+    "Atlas/TOCs/§ TOCs.md",
     "Spaces/2-Area/运动与健康/中国居民膳食指南.md",
-    "Cards/永久笔记/不吃早餐不一定有多大危害.md",
-    "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-    "Spaces/3-Resource/效率工具与服务专题/VSCode插件使用/∑ VSCode插件.md",
+    "Calendar/Daily notes/2023-04-03.md",
+    "Spaces/2-Area/运动与健康/力量训练前后饮食.md",
+    "Spaces/2-Area/运动与健康/力量训练的不同目标.md",
+    "Spaces/2-Area/运动与健康/力量训练的动作行程.md",
+    "Spaces/2-Area/运动与健康/力量训练必学的动作-深蹲、卧推、硬拉等.md",
+    "Spaces/2-Area/运动与健康/力量训练.md",
+    "Cards/永久笔记/web3.md",
+    "Spaces/2-Area/运动与健康/∑ 健身补剂选择.md",
+    "Spaces/2-Area/运动与健康/EAA.md",
+    "Spaces/2-Area/运动与健康/支链氨基酸.md",
+    "Spaces/2-Area/运动与健康/增肌粉.md",
+    "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
+    "Spaces/2-Area/运动与健康/咖啡因.md",
+    "Calendar/Daily notes/2023-03-31.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/∑ 安卓软件使用.md",
-    "Cards/永久笔记/生命之花 - 人生规划分类方法.md",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/高德地图.md",
-    "Atlas/未命名.md",
+    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/搜狗输入法.md",
+    "Spaces/3-Resource/效率工具与服务专题/∑ 必备软件.md",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Notion.md",
+    "Cards/永久笔记/团队信息与知识共享.md",
+    "Cards/永久笔记/PARA和MOC联用组织笔记.md",
+    "Cards/永久笔记/海外收费服务器性价比对比.md",
+    "Cards/永久笔记/chrome-omni插件.md",
     "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",
-    "Calendar/Daily notes/2023-04-01.md",
-    "Cards/永久笔记/PPV.md",
-    "Cards/永久笔记/PPV 系统工作流.md",
-    "Calendar/Daily notes/markdown 中，无序列表中如何嵌入代码块.md",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/丰收互联.md",
-    "Spaces/3-Resource/王者荣耀/天谕手游.md",
-    "Cards/永久笔记/docker compose.md",
-    "Cards/永久笔记/docker compose 常用命令.md",
-    "Spaces/3-Resource/王者荣耀/天谕手游 - 隐退の作-98.8%的玩家都不懂的干货知识.md",
-    "Calendar/Daily notes/notion database 如何批量复制粘贴数据.md",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Apifox.md",
-    "Spaces/2-Area/个人职业生涯/Jenkins.md",
-    "Spaces/2-Area/个人职业生涯/∑ 个人简历.md",
-    "Calendar/Daily notes/服务可用性检查.md",
-    "Calendar/Daily notes/Freshping.md",
     "Extras/Media/Pasted image 20230305120820.png",
     "Extras/Media/Pasted image 20230305122456.png",
     "Extras/Media/Pasted image 20230312131834.png",
@@ -249,7 +263,6 @@
     "Extras/Media/2022年元宇宙Meta知识精选笔记分享-2022.pdf",
     "Extras/Media/16799226083092.png",
     "Extras/Media/1679922749389.jpg",
-    "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
