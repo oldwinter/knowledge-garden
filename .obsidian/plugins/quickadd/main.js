@@ -15804,8 +15804,12 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
         );
         return;
       }
-      const { file, content: newFileContent } = await getFileAndAddContentFn(filePath, content);
-      await this.app.vault.modify(file, newFileContent);
+      const { file, newFileContent, captureContent } = await getFileAndAddContentFn(filePath, content);
+      if (this.choice.captureToActiveFile && !this.choice.prepend) {
+        appendToCurrentLine(captureContent, this.app);
+      } else {
+        await this.app.vault.modify(file, newFileContent);
+      }
       if (this.choice.appendLink) {
         const markdownLink = this.app.fileManager.generateMarkdownLink(
           file,
@@ -15879,9 +15883,9 @@ This is in order to prevent data loss.`
       );
       newFileContent = res.joinedResults();
     }
-    return { file, content: newFileContent };
+    return { file, newFileContent, captureContent: formatted };
   }
-  async onCreateFileIfItDoesntExist(filePath, content) {
+  async onCreateFileIfItDoesntExist(filePath, captureContent) {
     let fileContent = "";
     if (this.choice.createFileIfItDoesntExist.createWithTemplate) {
       const singleTemplateEngine = new SingleTemplateEngine(
@@ -15901,12 +15905,12 @@ This is in order to prevent data loss.`
       file
     );
     const newFileContent = await this.formatter.formatContentWithFile(
-      content,
+      captureContent,
       this.choice,
       updatedFileContent,
       file
     );
-    return { file, content: newFileContent };
+    return { file, newFileContent, captureContent };
   }
   async formatFilePath(captureTo) {
     const formattedCaptureTo = await this.formatter.formatFileName(

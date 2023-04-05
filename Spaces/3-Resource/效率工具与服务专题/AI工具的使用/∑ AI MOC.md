@@ -4,6 +4,7 @@ date created: 2023-02-22
 date modified: 2023-03-14
 ---
 
+## 按分析内容和生成内容的类型划分
 - 生成式对话AI
 	- [[chatGPT]]
 		- [[chatGPT的使用经验]]
@@ -19,15 +20,24 @@ date modified: 2023-03-14
 - AI作曲
 	- [[aiva - AI作曲]]
 	- https://soundraw.io/
-- 分析pdf文件的内容
+- 分析pdf等文件的内容，读论文等
 	- [ChatPDF - Chat with any PDF!](https://www.chatpdf.com/)
 	- [ChatDOC - Chat with your documents](https://chatdoc.com/)
+	- [Discover, Create, and Publish your research paper | SciSpace by Typeset](https://typeset.io/)
 - 分析视频的大纲
 	- [哔哩哔哩 · 视频内容一键总结 (jimmylv.cn)](https://b.jimmylv.cn/)
 - 自动生成周报
 	- [GitHub - guaguaguaxia/weekly\_report](https://github.com/guaguaguaxia/weekly_report)
 - 自动生成ppt
 	- [Tome - The AI-powered storytelling format](https://beta.tome.app/)
+
+## 按存在形式划分
+- 网页，如上
+- 客户端
+- 浏览器插件
+	- [[AIPRM]]
+	- [[Glarity]]
+- 其他插件
 
 ## 参考文献
 

@@ -26,7 +26,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
+                "file": "Calendar/Daily notes/2023-04-04.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "91f45f222b5263b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "83b6db6f5b7d2f7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -64,7 +90,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "35.77.211.36",
+                "query": "zero shot",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +118,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "92910ae8836a7b22",
@@ -105,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md"
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md"
               }
             }
           },
@@ -115,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +154,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -162,7 +189,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -223,8 +250,16 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "f351e74537cd8c83",
+  "active": "83b6db6f5b7d2f7e",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2023-04-05.md",
+    "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
+    "Calendar/Daily notes/使用google的colab，直接运行python代码.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+    "Sources/GPTchats/张继科和景甜的恋情及分手传闻.md",
+    "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
     "Calendar/Daily notes/2023-04-04.md",
     "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
     "Calendar/Daily notes/∑ 优质播客列表.md",
@@ -243,16 +278,8 @@
     "Spaces/2-Area/运动与健康/增肌粉.md",
     "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
     "Spaces/2-Area/运动与健康/咖啡因.md",
-    "Calendar/Daily notes/2023-03-31.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/搜狗输入法.md",
-    "Spaces/3-Resource/效率工具与服务专题/∑ 必备软件.md",
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Notion.md",
-    "Cards/永久笔记/团队信息与知识共享.md",
-    "Cards/永久笔记/PARA和MOC联用组织笔记.md",
-    "Cards/永久笔记/海外收费服务器性价比对比.md",
-    "Cards/永久笔记/chrome-omni插件.md",
     "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",
     "Extras/Media/Pasted image 20230305120820.png",
     "Extras/Media/Pasted image 20230305122456.png",
