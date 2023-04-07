@@ -9,7 +9,7 @@
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
-  "complementAutomatically": true,
+  "complementAutomatically": false,
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
@@ -20,7 +20,7 @@
     "^```.*"
   ],
   "showMatchStrategy": false,
-  "showComplementAutomatically": false,
+  "showComplementAutomatically": true,
   "showIndexingStatus": false,
   "descriptionOnSuggestion": "Full",
   "selectSuggestionKeys": "Ctrl/Cmd+Enter",
@@ -60,121 +60,9 @@
     "maxDaysToKeepHistory": 30,
     "maxNumberOfHistoryToKeep": 0
   },
-  "disableOnMobile": false,
+  "disableOnMobile": true,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "防弹咖啡": {
-      "防弹咖啡": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1677985319365
-        }
-      }
-    },
-    "Fig": {
-      "Fig": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1677985340442
-        }
-      }
-    },
-    "选项": {
-      "选项": {
-        "currentVault": {
-          "count": 3,
-          "lastUpdated": 1677986309867
-        }
-      }
-    },
-    "色，戒": {
-      "色，戒": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1677989003048
-        }
-      }
-    },
-    "影响力": {
-      "影响力": {
-        "currentVault": {
-          "count": 1,
-          "lastUpdated": 1677989118611
-        }
-      }
-    },
-    "词典": {
-      "词典": {
-        "currentVault": {
-          "count": 2,
-          "lastUpdated": 1677989191257
-        }
-      }
-    },
-    "✨新闻武装了愚蠢，并让傻瓜变得充满权威。 —— 福楼拜": {
-      "✨新闻武装了愚蠢，并让傻瓜变得充满权威。 —— 福楼拜": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1677989201042
-        }
-      }
-    },
-    "Callout": {
-      "Callout": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1677989796328
-        }
-      }
-    },
-    "管道（golang）": {
-      "管道（golang）": {
-        "internalLink": {
-          "count": 4,
-          "lastUpdated": 1677990571590
-        }
-      }
-    },
-    "管道(python)": {
-      "管道(python)": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1677990704625
-        }
-      }
-    },
-    "frontmatter": {
-      "frontmatter": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1677990889967
-        }
-      }
-    },
-    "如何快速入门新领域，如何快速学会新技能": {
-      "如何快速入门新领域，如何快速学会新技能": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1678076386702
-        }
-      }
-    },
-    "engineer": {
-      "engineer": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1678108863017
-        }
-      }
-    },
-    "∑ 左耳听风-陈皓（左耳朵耗子）": {
-      "∑ 左耳听风-陈皓（左耳朵耗子）": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1678108884162
-        }
-      }
-    },
     "人生": {
       "人生": {
         "internalLink": {

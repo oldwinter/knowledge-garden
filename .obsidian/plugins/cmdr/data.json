@@ -45,11 +45,8 @@
   "explorer": [],
   "hide": {
     "statusbar": [
-      "word-count",
       "janitor",
       "keyboard-analyzer",
-      "various-complements",
-      "obsidian-textgenerator-plugin",
       "obsidian-focus-plugin",
       "backlink"
     ],

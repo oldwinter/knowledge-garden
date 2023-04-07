@@ -168,5 +168,13 @@
       ],
       "key": "O"
     }
+  ],
+  "chatgpt-md:call-chatgpt-api": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "J"
+    }
   ]
 }

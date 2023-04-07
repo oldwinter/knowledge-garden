@@ -62,9 +62,32 @@ prompt example: `/imagine prompt` `<decade> cat illustration`
 
 happy，shy，angry等等
 
-## 用色彩描述词
+### 用色彩描述词
 millennial pink，千禧一代粉色
 
 ### 环境描述
 不同环境可以设置独特的情绪。
 mountain，desert等。
+
+## blend 合并图片
+
+## settings命令设置模型版本、图像生成质量等。
+也可以直接通过prompt的参数设置，如 
+- `--v 5`就代表使用模型版本5，也是目前最新。
+- `--q 2`代表质量，2是高质量，1是基本质量。
+- `--s 250`代表样式，250是高样式。
+### parameters参数列表
+
+随时查：[Midjourney Parameter List](https://docs.midjourney.com/docs/parameter-list)
+常见：
+- q，v，s
+- `--ar`：长宽比，如3:1 
+- `--no`：排除某个东西，比如`--no plants`，生成图像中不要有植物。
+- `--chaos`：越大，越随机，越发散
+- `--seed`：指定相同的seed值和prompt提示词，将更可能产生类似的最终图片。也就是通过设置seed，可以让相同提示词每次生成的图像更稳定，不那么随机和发散。⭐️，通过✉️符号，可以知道
+	- 通过生成图片的右上角，给一个信封emoji反应，机器人会私信我们这个图片的jobid和seed值。
+
+
+
+## upscalers升级
+模型4及之前，每次生成图像，会提供各种相关，让我们升级图像。现在模型5，直接提供的1024✖️1024，也不支持upscalers。

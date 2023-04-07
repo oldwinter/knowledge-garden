@@ -24,6 +24,7 @@ const DEFAULT_SETTINGS = {
 const MAX_EMBED_STRING_LENGTH = 25000;
 
 let VERSION;
+const SUPPORTED_FILE_TYPES = ["md", "canvas"];
 
 //create one object with all the translations
 // research : SMART_TRANSLATION[language][key]
@@ -63,6 +64,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     this.embeddings = null;
     this.embeddings_external = null;
     this.file_exclusions = [];
+    this.folders = [];
     this.has_new_embeddings = false;
     this.header_exclusions = [];
     this.nearest_cache = {};
@@ -130,6 +132,15 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
         this.open_chat();
       }
     });
+    // open random note from nearest cache
+    this.addCommand({
+      id: "smart-connections-random",
+      name: "Open: Random Note from Smart Connections",
+      callback: () => {
+        this.open_random_note();
+      }
+    });
+    // add settings tab
     this.addSettingTab(new SmartConnectionsSettingsTab(this.app, this));
     // register main view type
     this.registerView(SMART_CONNECTIONS_VIEW_TYPE, (leaf) => (new SmartConnectionsView(leaf, this)));
@@ -277,6 +288,22 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     <circle cx="30" cy="50" r="9" fill="currentColor"/>`);
   }
 
+  // open random note
+  async open_random_note() {
+    const curr_file = this.app.workspace.getActiveFile();
+    const curr_key = this.get_file_key(curr_file);
+    // if no nearest cache, create Obsidian notice
+    if(typeof this.nearest_cache[curr_key] === "undefined") {
+      new Obsidian.Notice("[Smart Connections] No Smart Connections found. Open a note to get Smart Connections.");
+      return;
+    }
+    // get random from nearest cache
+    const rand = Math.floor(Math.random() * this.nearest_cache[curr_key].length/2); // divide by 2 to limit to top half of results
+    const random_file = this.nearest_cache[curr_key][rand];
+    // open random file
+    this.open_note(random_file);
+  }
+
   async open_view() {
     this.app.workspace.detachLeavesOfType(SMART_CONNECTIONS_VIEW_TYPE);
     await this.app.workspace.getRightLeaf(false).setViewState({
@@ -309,8 +336,9 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
   
   // get embeddings for all files
   async get_all_embeddings() {
-    // get all files in vault
-    const files = await this.app.vault.getMarkdownFiles();
+    // get all files in vault and filter all but markdown and canvas files
+    const files = (await this.app.vault.getFiles()).filter((file) => file instanceof Obsidian.TFile && (file.extension === "md" || file.extension === "canvas"));
+    // const files = await this.app.vault.getMarkdownFiles();
     // get open files to skip if file is currently open
     const open_files = this.app.workspace.getLeavesOfType("markdown").map((leaf) => leaf.view.file);
     this.render_log.total_files = files.length;
@@ -724,7 +752,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     let req_batch = [];
     let blocks = [];
     // initiate curr_file_key from md5(curr_file.path)
-    const curr_file_key = crypto.createHash('md5').update(curr_file.path).digest('hex');
+    const curr_file_key = this.get_file_key(curr_file);
     // intiate file_file_embed_input by removing .md and converting file path to breadcrumbs (" > ")
     let file_embed_input = curr_file.path.replace(".md", "");
     file_embed_input = file_embed_input.replace(/\//g, " > ");
@@ -751,7 +779,37 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       await this.get_embeddings_batch(req_batch);
       return;
     }
-
+    /**
+     * BEGIN Canvas file type Embedding
+     */
+    if(curr_file.extension === "canvas") {
+      // get file contents and parse as JSON
+      const canvas_contents = await this.app.vault.cachedRead(curr_file);
+      const canvas_json = JSON.parse(canvas_contents);
+      if(canvas_json.nodes) {
+        // for each object in nodes array
+        for(let j = 0; j < canvas_json.nodes.length; j++) {
+          // if object has text property
+          if(canvas_json.nodes[j].text) {
+            // add to file_embed_input
+            file_embed_input += "\n" + canvas_json.nodes[j].text;
+          }
+          // if object has file property
+          if(canvas_json.nodes[j].file) {
+            // add to file_embed_input
+            file_embed_input += "\nLink: " + canvas_json.nodes[j].file;
+          }
+        }
+      }
+      // console.log(file_embed_input);
+      req_batch.push([curr_file_key, file_embed_input, {
+        mtime: curr_file.stat.mtime,
+        path: curr_file.path,
+      }]);
+      await this.get_embeddings_batch(req_batch);
+      return;
+    }
+    
     /**
      * BEGIN Block "section" embedding
      */
@@ -932,6 +990,10 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
 
   }
+  get_file_key(curr_file) {
+    return crypto.createHash('md5').update(curr_file.path).digest('hex');
+  }
+
   update_render_log(blocks, file_embed_input) {
     if (blocks.length > 0) {
       // multiply by 2 because implies we saved token spending on blocks(sections), too
@@ -1096,7 +1158,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     }
   }
 
-  find_nearest_embedding(to_vec, to_key=null) {
+  find_nearest_embedding(to_vec, filter={}) {
     let nearest = [];
     const from_keys = Object.keys(this.embeddings);
     this.render_log.total_embeddings = from_keys.length;
@@ -1107,10 +1169,18 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
         if(from_path.indexOf("#") > -1) continue; // skip if contains # indicating block (section)
         // TODO: consider using presence of meta.file to skip files (faster checking?)
       }
-      if(to_key){
-        if(to_key==from_keys[i]) continue; // skip matching to current note
-        if(to_key==this.embeddings[from_keys[i]].meta.file) continue; // skip if to_key matches meta.file
+      if(filter.skip_key){
+        if(filter.skip_key===from_keys[i]) continue; // skip matching to current note
+        if(filter.skip_key===this.embeddings[from_keys[i]].meta.file) continue; // skip if filter.skip_key matches meta.file
       }
+      // if filter.path_begins_with is set
+      if(filter.path_begins_with){
+        // if type is string & meta.path does not begin with filter.path_begins_with, skip
+        if(typeof filter.path_begins_with === "string" && !this.embeddings[from_keys[i]].meta.path.startsWith(filter.path_begins_with)) continue;
+        // if type is array & meta.path does not begin with any of the filter.path_begins_with, skip
+        if(Array.isArray(filter.path_begins_with) && !filter.path_begins_with.some((path) => this.embeddings[from_keys[i]].meta.path.startsWith(path))) continue;
+      }
+        
       nearest.push({
         link: this.embeddings[from_keys[i]].meta.path,
         similarity: this.computeCosineSimilarity(to_vec, this.embeddings[from_keys[i]].vec),
@@ -1204,7 +1274,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
       current_note_embedding_vec = this.embeddings[curr_key].vec;
       
       // compute cosine similarity between current note and all other notes via embeddings
-      nearest = this.find_nearest_embedding(current_note_embedding_vec, curr_key);
+      nearest = this.find_nearest_embedding(current_note_embedding_vec, {skip_key: curr_key});
   
       // save to this.nearest_cache
       this.nearest_cache[curr_key] = nearest;
@@ -1858,7 +1928,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
 
   add_link_listeners(item, curr, list) {
     item.addEventListener("click", async (event) => {
-      await this.handle_click(curr, event);
+      await this.open_note(curr, event);
     });
     // drag-on
     // currently only works with full-file links
@@ -1888,7 +1958,7 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
 
   // get target file from link path
   // if sub-section is linked, open file and scroll to sub-section
-  async handle_click(curr, event) {
+  async open_note(curr, event=null) {
     let targetFile;
     let heading;
     if (curr.link.indexOf("#") > -1) {
@@ -1924,10 +1994,16 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     } else {
       targetFile = this.app.metadataCache.getFirstLinkpathDest(curr.link, "");
     }
-    // properly handle if the meta/ctrl key is pressed
-    const mod = Obsidian.Keymap.isModEvent(event);
-    // get most recent leaf
-    let leaf = this.app.workspace.getLeaf(mod);
+    let leaf;
+    if(event) {
+      // properly handle if the meta/ctrl key is pressed
+      const mod = Obsidian.Keymap.isModEvent(event);
+      // get most recent leaf
+      leaf = this.app.workspace.getLeaf(mod);
+    }else{
+      // get most recent leaf
+      leaf = this.app.workspace.getMostRecentLeaf();
+    }
     await leaf.openFile(targetFile);
     if (heading) {
       let { editor } = leaf.view;
@@ -1975,7 +2051,24 @@ class SmartConnectionsPlugin extends Obsidian.Plugin {
     // wrap domain in <small> and add line break
     return `<small>🌐 ${domain}</small><br>${meta.title}`;
   }
-
+  // get all folders
+  async get_all_folders() {
+    if(!this.folders || this.folders.length === 0){
+      this.folders = await this.get_folders();
+    }
+    return this.folders;
+  }
+  // get folders, traverse non-hidden sub-folders
+  async get_folders(path = "/") {
+    let folders = (await this.app.vault.adapter.list(path)).folders;
+    let folder_list = [];
+    for (let i = 0; i < folders.length; i++) {
+      if (folders[i].startsWith(".")) continue;
+      folder_list.push(folders[i]);
+      folder_list = folder_list.concat(await this.get_folders(folders[i] + "/"));
+    }
+    return folder_list;
+  }
 }
 
 const SMART_CONNECTIONS_VIEW_TYPE = "smart-connections-view";
@@ -2174,17 +2267,11 @@ class SmartConnectionsView extends Obsidian.ItemView {
         // console.log("no file open, returning");
         return;
       }
-      // return if file type is not markdown
-      if(file.extension !== "md") {
-        // if file is 'canvas' and length of current view content is greater than 300 then return
-        if((file.extension === "canvas") && (container.innerHTML.length > 1000)) {
-          // prevents clearing view of search results when still on the same canvas
-          // console.log("prevented clearing view of search results when still on the same canvas")
-          return;
-        }
+      // return if file type is not supported
+      if(SUPPORTED_FILE_TYPES.indexOf(file.extension) === -1) {
         return this.set_message([
           "File: "+file.name
-          ,"Smart Connections only works with Markdown files."
+          ,"Unsupported file type (Supported: "+SUPPORTED_FILE_TYPES.join(", ")+")"
         ]);
       }
       // run render_connections after 1 second to allow for file to load
@@ -2403,7 +2490,7 @@ class ScSearchApi {
     this.app = app;
     this.plugin = plugin;
   }
-  async search (search_text) {
+  async search (search_text, filter={}) {
     let nearest = [];
     const resp = await this.plugin.request_embedding_from_input(search_text);
     if (resp && resp.data && resp.data[0] && resp.data[0].embedding) {
@@ -2665,6 +2752,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
   }
   onOpen() {
     this.new_chat();
+    this.plugin.get_all_folders(); // sets this.plugin.folders necessary for folder-context
   }
   onClose() {
     this.chat.save_chat();
@@ -2746,7 +2834,7 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     await this.chat.load_chat(chat_id);
     this.render_chat();
     for (let i = 0; i < this.chat.chat_ml.length; i++) {
-      this.render_message(this.chat.chat_ml[i].content, this.chat.chat_ml[i].role);
+      await this.render_message(this.chat.chat_ml[i].content, this.chat.chat_ml[i].role);
     }
   }
   // clear current chat state
@@ -2789,11 +2877,19 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
   // open file suggestion modal
   open_file_suggestion_modal() {
     // open file suggestion modal
-    this.file_selector = new SmartConnectionsFileSelectModal(this.app, this);
+    if(!this.file_selector) this.file_selector = new SmartConnectionsFileSelectModal(this.app, this);
     this.file_selector.open();
   }
-  // insert link from file suggestion modal
-  insert_link(insert_text) {
+  // open folder suggestion modal
+  async open_folder_suggestion_modal() {
+    // open folder suggestion modal
+    if(!this.folder_selector){
+      this.folder_selector = new SmartConnectionsFolderSelectModal(this.app, this);
+    }
+    this.folder_selector.open();
+  }
+  // insert_selection from file suggestion modal
+  insert_selection(insert_text) {
     // get caret position
     let caret_pos = this.textarea.selectionStart;
     // get text before caret
@@ -2817,24 +2913,37 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     this.textarea = chat_input.createEl("textarea", {
       cls: "sc-chat-input",
       attr: {
-        placeholder: `Try "Based on my notes" or "Summarize [[this note]]"`
+        placeholder: `Try "Based on my notes" or "Summarize [[this note]]" or "Important tasks in /folder/"`
       }
     });
     // use contenteditable instead of textarea
     // this.textarea = chat_input.createEl("div", {cls: "sc-chat-input", attr: {contenteditable: true}});
     // add event listener to listen for shift+enter
     chat_input.addEventListener("keyup", (e) => {
+      if(["[", "/"].indexOf(e.key) === -1) return; // skip if key is not [ or /
+      const caret_pos = this.textarea.selectionStart;
       // if key is open square bracket
       if (e.key === "[") {
-        this.brackets_ct++;
-        console.log(this.brackets_ct);
-        if(this.brackets_ct === 2){
+        // if previous char is [
+        if(this.textarea.value[caret_pos - 2] === "["){
           // open file suggestion modal
           this.open_file_suggestion_modal();
+          return;
         }
       }else{
         this.brackets_ct = 0;
       }
+      // if / is pressed
+      if (e.key === "/") {
+        // get caret position
+        // if this is first char or previous char is space
+        if (this.textarea.value.length === 1 || this.textarea.value[caret_pos - 2] === " ") {
+          // open folder suggestion modal
+          this.open_folder_suggestion_modal();
+          return;
+        }
+      }
+
     });
 
     chat_input.addEventListener("keydown", (e) => {
@@ -2898,8 +3007,14 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
       this.chat.get_response_with_note_context(user_input, this);
       return;
     }
-    // continues if no internal links found
-    if(this.contains_self_referential_keywords(user_input)) {
+    // // for testing purposes
+    // if(this.chat.contains_folder_reference(user_input)) {
+    //   const folders = this.chat.get_folder_references(user_input);
+    //   console.log(folders);
+    //   return;
+    // }
+    // if contains self referential keywords or folder reference
+    if(this.contains_self_referential_keywords(user_input) || this.chat.contains_folder_reference(user_input)) {
       // get hyde
       const context = await this.get_context_hyde(user_input);
       // get user input with added context
@@ -3219,8 +3334,21 @@ class SmartConnectionsChatView extends Obsidian.ItemView {
     });
     this.chat.hyd = hyd;
     // console.log(hyd);
+    let filter = {};
+    // if contains folder reference represented by /folder/
+    if(this.chat.contains_folder_reference(user_input)) {
+      // get folder references
+      const folder_refs = this.chat.get_folder_references(user_input);
+      // console.log(folder_refs);
+      // if folder references are valid (string or array of strings)
+      if(folder_refs){
+        filter = {
+          includes: folder_refs
+        };
+      }
+    }
     // search for nearest based on hyd
-    let nearest = await this.plugin.api.search(hyd);
+    let nearest = await this.plugin.api.search(hyd, filter);
     console.log("nearest", nearest.length);
     nearest = this.get_nearest_until_next_dev_exceeds_std_dev(nearest);
     console.log("nearest after std dev slice", nearest.length);
@@ -3368,7 +3496,7 @@ class SmartConnectionsChatModel {
       JSON.stringify(this.thread, null, 2)
     );
   }
-  async load_chat(chat_id, view) {
+  async load_chat(chat_id) {
     this.chat_id = chat_id;
     // load chat from file in .smart-connections folder
     // filename is chat_id
@@ -3484,6 +3612,7 @@ class SmartConnectionsChatModel {
   get_file_date_string() {
     return new Date().toISOString().replace(/(T|:|\..*)/g, " ").trim();
   }
+  // get response from with note context
   async get_response_with_note_context(user_input, chat_view) {
     let system_input = "Imagine the following notes were written by the user and contain the necessary information to synthesize a useful answer the user's query:\n";
     // extract internal links
@@ -3519,6 +3648,32 @@ class SmartConnectionsChatModel {
     if(user_input.indexOf("]]") === -1) return false;
     return true;
   }
+  // check if contains folder reference (ex. /folder/, or /folder/subfolder/)
+  contains_folder_reference(user_input) {
+    if(user_input.indexOf("/") === -1) return false;
+    if(user_input.indexOf("/") === user_input.lastIndexOf("/")) return false;
+    return true;
+  }
+  // get folder references from user input
+  get_folder_references(user_input) {
+    // use this.folders to extract folder references by longest first (ex. /folder/subfolder/ before /folder/) to avoid matching /folder/subfolder/ as /folder/
+    const folders = this.plugin.folders.slice(); // copy folders array
+    const matches = folders.sort((a, b) => b.length - a.length).map(folder => {
+      // check if folder is in user_input
+      if(user_input.indexOf(folder) !== -1){
+        // remove folder from user_input to prevent matching /folder/subfolder/ as /folder/
+        user_input = user_input.replace(folder, "");
+        return folder;
+      }
+      return false;
+    }).filter(folder => folder);
+    console.log(matches);
+    // return array of matches
+    if(matches) return matches;
+    return false;
+  }
+
+
   // extract internal links
   extract_internal_links(user_input) {
     const matches = user_input.match(/\[\[(.*?)\]\]/g);
@@ -3618,11 +3773,27 @@ class SmartConnectionsFileSelectModal extends Obsidian.FuzzySuggestModal {
     return item.basename;
   }
   onChooseItem(file) {
-    this.view.insert_link(file.basename + "]]");
+    this.view.insert_selection(file.basename + "]] ");
   }
 }
-  
-
+// Folder Select Fuzzy Suggest Modal
+class SmartConnectionsFolderSelectModal extends Obsidian.FuzzySuggestModal {
+  constructor(app, view) {
+    super(app);
+    this.app = app;
+    this.view = view;
+    this.setPlaceholder("Type the name of a folder...");
+  }
+  getItems() {
+    return this.view.plugin.folders;
+  }
+  getItemText(item) {
+    return item;
+  }
+  onChooseItem(folder) {
+    this.view.insert_selection(folder + "/ ");
+  }
+}
 
 
 // Handle API response streaming

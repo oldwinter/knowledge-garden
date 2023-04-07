@@ -68,10 +68,6 @@
     padding: 3px;
 }
 
-.mmng-highlight-inline-off .block-language-markmap {
-    background-color: inherit;
-}
-
 .markdown-source-view.mod-cm6 .cm-embed-block:has(.block-language-markmap):hover {
     box-shadow: none;
 }

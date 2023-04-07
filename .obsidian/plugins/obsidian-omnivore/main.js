@@ -7509,6 +7509,7 @@ var loadArticles = async (endpoint, apiKey, after = 0, first = 10, updatedAt = "
                     annotation
                     patch
                     updatedAt
+                    type
                     labels {
                       name
                     }
@@ -7744,19 +7745,19 @@ var DEFAULT_SETTINGS = {
   syncAt: "",
   customQuery: "",
   template: `---
-id: {{{id}}}
-title: {{{title}}}
+id: {{id}}
+title: "{{{title}}}"
 {{#author}}
-author: {{{author}}}
+author: "{{{author}}}"
 {{/author}}
 {{#labels.length}}
 tags:
-{{#labels}} - {{{name}}}
+{{#labels}} - "{{{name}}}"
 {{/labels}}
 {{/labels.length}}
-date_saved: {{{dateSaved}}}
+date_saved: "{{{dateSaved}}}"
 {{#datePublished}}
-date_published: {{{datePublished}}}
+date_published: "{{{datePublished}}}"
 {{/datePublished}}
 ---
 
@@ -7765,12 +7766,21 @@ date_published: {{{datePublished}}}
 
 [Read on Omnivore]({{{omnivoreUrl}}})
 [Read Original]({{{originalUrl}}})
+{{#note}}
+## Note
+
+{{{note}}}
+{{/note}}
+{{#pdfAttachment}}
+
+![[{{{pdfAttachment}}}]]
+{{/pdfAttachment}}
 
 {{#highlights.length}}
 ## Highlights
 
 {{#highlights}}
-> {{{text}}} [\u2934\uFE0F]({{{highlightUrl}}})
+> {{{text}}} [\u2934\uFE0F]({{{highlightUrl}}}) {{#labels}} #{{{name}}} {{/labels}}
 {{#note}}
 
 {{{note}}}
@@ -7780,10 +7790,11 @@ date_published: {{{datePublished}}}
 {{/highlights.length}}`,
   highlightOrder: "LOCATION",
   syncing: false,
-  folder: "Omnivore/{{date}}",
+  folder: "Omnivore/{{{date}}}",
   folderDateFormat: "yyyy-MM-dd",
   endpoint: "https://api-prod.omnivore.app/api/graphql",
-  filename: "{{{title}}}"
+  filename: "{{{title}}}",
+  attachmentFolder: "Omnivore/attachments"
 };
 var OmnivorePlugin = class extends import_obsidian4.Plugin {
   async onload() {
@@ -7833,6 +7844,33 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
       date
     });
   }
+  getAttachmentFolder(article) {
+    const { attachmentFolder, folderDateFormat } = this.settings;
+    const date = formatDate(article.savedAt, folderDateFormat);
+    return mustache_default.render(attachmentFolder, {
+      ...article,
+      date
+    });
+  }
+  async downloadPDF(article) {
+    const url = article.url;
+    const response = await (0, import_obsidian4.requestUrl)({
+      url,
+      contentType: "application/pdf"
+    });
+    const folderName = (0, import_obsidian4.normalizePath)(this.getAttachmentFolder(article));
+    const folder = app.vault.getAbstractFileByPath(folderName);
+    if (!(folder instanceof import_obsidian4.TFolder)) {
+      await this.app.vault.createFolder(folderName);
+    }
+    const fileName = (0, import_obsidian4.normalizePath)(`${folderName}/${article.id}.pdf`);
+    const file = app.vault.getAbstractFileByPath(fileName);
+    if (!(file instanceof import_obsidian4.TFile)) {
+      const newFile = await this.app.vault.createBinary(fileName, response.arrayBuffer);
+      return newFile.path;
+    }
+    return file.path;
+  }
   async fetchOmnivore() {
     var _a, _b, _c;
     const {
@@ -7863,25 +7901,28 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
         [articles, hasNextPage] = await loadArticles(this.settings.endpoint, apiKey, after, size, parseDateTime(syncAt).toISO(), this.getQueryFromFilter(filter, customQuery), true, "markdown");
         for (const article of articles) {
           const folderDate = formatDate(article.savedAt, this.settings.folderDateFormat);
-          const folderName = mustache_default.render(folder, {
+          const folderName = (0, import_obsidian4.normalizePath)(mustache_default.render(folder, {
             date: folderDate
-          });
-          const omnivoreFolder = app.vault.getAbstractFileByPath((0, import_obsidian4.normalizePath)(folderName));
+          }));
+          const omnivoreFolder = app.vault.getAbstractFileByPath(folderName);
           if (!(omnivoreFolder instanceof import_obsidian4.TFolder)) {
             await this.app.vault.createFolder(folderName);
           }
-          highlightOrder === "LOCATION" && ((_a = article.highlights) == null ? void 0 : _a.sort((a, b) => {
-            try {
-              if (article.pageType === "FILE" /* File */) {
+          const articleHighlights = ((_a = article.highlights) == null ? void 0 : _a.filter((h) => h.type === "HIGHLIGHT" /* Highlight */)) || [];
+          if (highlightOrder === "LOCATION") {
+            articleHighlights.sort((a, b) => {
+              try {
+                if (article.pageType === "FILE" /* File */) {
+                  return compareHighlightsInFile(a, b);
+                }
+                return getHighlightLocation(a.patch) - getHighlightLocation(b.patch);
+              } catch (e) {
+                console.error(e);
                 return compareHighlightsInFile(a, b);
               }
-              return getHighlightLocation(a.patch) - getHighlightLocation(b.patch);
-            } catch (e) {
-              console.error(e);
-              return compareHighlightsInFile(a, b);
-            }
-          }));
-          const highlights = (_b = article.highlights) == null ? void 0 : _b.map((highlight) => {
+            });
+          }
+          const highlights = articleHighlights.map((highlight) => {
             var _a2;
             return {
               text: highlight.quote,
@@ -7898,6 +7939,7 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
           const siteName = article.siteName || this.siteNameFromUrl(article.originalArticleUrl);
           const publishedAt = article.publishedAt;
           const datePublished = publishedAt ? formatDate(publishedAt, dateFormat) : null;
+          const articleNote = (_b = article.highlights) == null ? void 0 : _b.find((h) => h.type === "NOTE" /* Note */);
           let content = mustache_default.render(template, {
             id: article.id,
             title: article.title,
@@ -7913,7 +7955,10 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
             dateSaved,
             highlights,
             content: article.content,
-            datePublished
+            datePublished,
+            pdfAttachment: article.pageType === "FILE" /* File */ ? await this.downloadPDF(article) : void 0,
+            description: article.description,
+            note: articleNote == null ? void 0 : articleNote.annotation
           });
           const frontmatterRegex = /^(---[\s\S]*?---)/gm;
           const frontmatter = content.match(frontmatterRegex);
@@ -8056,7 +8101,7 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
         text: "Reference",
         href: "https://github.com/janl/mustache.js/#templates"
       }), fragment.createEl("p", {
-        text: "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, dateSaved, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted, highlights.labels.name"
+        text: "Available variables: id, title, omnivoreUrl, siteName, originalUrl, author, content, description, dateSaved, datePublished, pdfAttachment, note, labels.name, highlights.text, highlights.highlightUrl, highlights.note, highlights.dateHighlighted, highlights.labels.name"
       }), fragment.createEl("p", {
         text: "Please note that id in the frontmatter is required for the plugin to work properly."
       }));
@@ -8068,14 +8113,21 @@ var OmnivoreSettingTab = class extends import_obsidian4.PluginSettingTab {
       text.inputEl.setAttr("rows", 10);
       text.inputEl.setAttr("cols", 40);
     });
-    new import_obsidian4.Setting(generalSettings).setName("Folder").setDesc("Enter the folder where the data will be stored. {{date}} could be used in the folder name").addSearch((search) => {
+    new import_obsidian4.Setting(generalSettings).setName("Folder").setDesc("Enter the folder where the data will be stored. {{{date}}} could be used in the folder name").addSearch((search) => {
       new FolderSuggest(this.app, search.inputEl);
       search.setPlaceholder("Enter the folder").setValue(this.plugin.settings.folder).onChange(async (value) => {
         this.plugin.settings.folder = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian4.Setting(generalSettings).setName("Filename").setDesc("Enter the filename where the data will be stored. {{{title}}} and {{date}} could be used in the filename").addText((text) => text.setPlaceholder("Enter the filename").setValue(this.plugin.settings.filename).onChange(async (value) => {
+    new import_obsidian4.Setting(generalSettings).setName("Attachment Folder").setDesc("Enter the folder where the attachment will be downloaded to. {{{date}}} could be used in the folder name").addSearch((search) => {
+      new FolderSuggest(this.app, search.inputEl);
+      search.setPlaceholder("Enter the attachment folder").setValue(this.plugin.settings.attachmentFolder).onChange(async (value) => {
+        this.plugin.settings.attachmentFolder = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian4.Setting(generalSettings).setName("Filename").setDesc("Enter the filename where the data will be stored. {{{title}}} and {{{date}}} could be used in the filename").addText((text) => text.setPlaceholder("Enter the filename").setValue(this.plugin.settings.filename).onChange(async (value) => {
       this.plugin.settings.filename = value;
       await this.plugin.saveSettings();
     }));

@@ -8821,10 +8821,7 @@ async function templaterParseTemplate(app2, templateContent, targetFile) {
   const templater = getTemplater(app2);
   if (!templater)
     return templateContent;
-  return await templater.templater.parse_template(
-    { target_file: targetFile, run_mode: 4 },
-    templateContent
-  );
+  return await templater.templater.parse_template({ target_file: targetFile, run_mode: 4 }, templateContent);
 }
 function getNaturalLanguageDates(app2) {
   return app2.plugins.plugins["nldates-obsidian"];
@@ -8932,6 +8929,48 @@ function getChoiceType(choice) {
   const isCapture = (choice2) => choice2.type === "Capture";
   const isMulti = (choice2) => choice2.type === "Multi";
   return isTemplate(choice) || isMacro(choice) || isCapture(choice) || isMulti(choice);
+}
+function isFolder(path) {
+  const abstractItem = app.vault.getAbstractFileByPath(path);
+  return !!abstractItem && abstractItem instanceof import_obsidian8.TFolder;
+}
+function getMarkdownFilesInFolder(folderPath) {
+  return app.vault.getMarkdownFiles().filter((f) => f.path.startsWith(folderPath));
+}
+function getMarkdownFilesWithTag(tag) {
+  const hasTags = (fileCache) => fileCache.tags !== void 0 && Array.isArray(fileCache.tags);
+  const hasFrontmatterTags = (fileCache) => {
+    return fileCache.frontmatter !== void 0 && fileCache.frontmatter.tags !== void 0 && typeof fileCache.frontmatter.tags === "string" && fileCache.frontmatter.tags.length > 0;
+  };
+  const hasFrontmatterTag = (fileCache) => {
+    return fileCache.frontmatter !== void 0 && fileCache.frontmatter.tag !== void 0 && typeof fileCache.frontmatter.tag === "string" && fileCache.frontmatter.tag.length > 0;
+  };
+  return app.vault.getMarkdownFiles().filter((f) => {
+    const fileCache = app.metadataCache.getFileCache(f);
+    if (!fileCache)
+      return false;
+    if (hasTags(fileCache)) {
+      const tagInTags = fileCache.tags.find((item) => item.tag === tag);
+      if (tagInTags) {
+        return true;
+      }
+    }
+    if (hasFrontmatterTags(fileCache)) {
+      const tagWithoutHash = tag.replace(/^\#/, "");
+      const tagInFrontmatterTags = fileCache.frontmatter.tags.split(" ").find((item) => item === tagWithoutHash);
+      if (tagInFrontmatterTags) {
+        return true;
+      }
+    }
+    if (hasFrontmatterTag(fileCache)) {
+      const tagWithoutHash = tag.replace(/^\#/, "");
+      const tagInFrontmatterTag = fileCache.frontmatter.tag.split(" ").find((item) => item === tagWithoutHash);
+      if (tagInFrontmatterTag) {
+        return true;
+      }
+    }
+    return false;
+  });
 }
 
 // src/formatters/formatter.ts
@@ -14923,7 +14962,8 @@ function getEndOfSection(lines, targetLine, shouldConsiderSubsections = false) {
     if (lastNonEmptyLineInSectionIdx < targetLine) {
       return targetLine;
     }
-    if (lastNonEmptyLineInSectionIdx + 1 === lastLineInBodyIdx) {
+    const lineIsEmpty = lines[lastNonEmptyLineInSectionIdx + 1].trim() === "";
+    if (lastNonEmptyLineInSectionIdx + 1 === lastLineInBodyIdx && !lineIsEmpty) {
       return endOfSectionLineIdx;
     }
     if (lastNonEmptyLineInSectionIdx === 0) {
@@ -15787,7 +15827,9 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
   }
   async run() {
     try {
-      const filePath = await this.getFormattedPathToCaptureTo();
+      const filePath = await this.getFormattedPathToCaptureTo(
+        this.choice.captureToActiveFile
+      );
       const content = this.getCaptureContent();
       let getFileAndAddContentFn;
       if (await this.fileExists(filePath)) {
@@ -15805,8 +15847,13 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
         return;
       }
       const { file, newFileContent, captureContent } = await getFileAndAddContentFn(filePath, content);
-      if (this.choice.captureToActiveFile && !this.choice.prepend) {
-        appendToCurrentLine(captureContent, this.app);
+      if (this.choice.captureToActiveFile && !this.choice.prepend && !this.choice.insertAfter.enabled) {
+        const content2 = await templaterParseTemplate(
+          app,
+          captureContent,
+          file
+        );
+        appendToCurrentLine(content2, this.app);
       } else {
         await this.app.vault.modify(file, newFileContent);
       }
@@ -15840,8 +15887,8 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
 `;
     return content;
   }
-  async getFormattedPathToCaptureTo() {
-    if (this.choice.captureToActiveFile) {
+  async getFormattedPathToCaptureTo(shouldCaptureToActiveFile) {
+    if (shouldCaptureToActiveFile) {
       const activeFile = this.app.workspace.getActiveFile();
       invariant(
         activeFile,
@@ -15850,10 +15897,58 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
       return activeFile.path;
     }
     const captureTo = this.choice.captureTo;
-    invariant(captureTo, () => {
-      return `Invalid capture to for ${this.choice.name}. ${captureTo.length === 0 ? "Capture path is empty." : `Capture path is not valid: ${captureTo}`}`;
-    });
-    return await this.formatFilePath(captureTo);
+    const formattedCaptureTo = await this.formatFilePath(captureTo);
+    const folderPath = formattedCaptureTo.replace(
+      /^\/$|\/\.md$|^\.md$/,
+      ""
+    );
+    const captureAnywhereInVault = folderPath === "";
+    const shouldCaptureToFolder = captureAnywhereInVault || isFolder(folderPath);
+    const shouldCaptureWithTag = formattedCaptureTo.startsWith("#");
+    if (shouldCaptureToFolder) {
+      return this.selectFileInFolder(folderPath, captureAnywhereInVault);
+    }
+    if (shouldCaptureWithTag) {
+      const tag = formattedCaptureTo.replace(/\.md$/, "");
+      return this.selectFileWithTag(tag);
+    }
+    return formattedCaptureTo;
+  }
+  async selectFileInFolder(folderPath, captureAnywhereInVault) {
+    const folderPathSlash = folderPath.endsWith("/") || captureAnywhereInVault ? folderPath : `${folderPath}/`;
+    const filesInFolder = getMarkdownFilesInFolder(folderPathSlash);
+    invariant(
+      filesInFolder.length > 0,
+      `Folder ${folderPathSlash} is empty.`
+    );
+    const filePaths = filesInFolder.map((f) => f.path);
+    const targetFilePath = await InputSuggester.Suggest(
+      app,
+      filePaths.map((item) => item.replace(folderPathSlash, "")),
+      filePaths
+    );
+    invariant(
+      !!targetFilePath && targetFilePath.length > 0,
+      `No file selected for capture.`
+    );
+    const filePath = targetFilePath.startsWith(`${folderPathSlash}/`) ? targetFilePath : `${folderPathSlash}/${targetFilePath}`;
+    return await this.formatFilePath(filePath);
+  }
+  async selectFileWithTag(tag) {
+    const tagWithHash = tag.startsWith("#") ? tag : `#${tag}`;
+    const filesWithTag = getMarkdownFilesWithTag(tagWithHash);
+    invariant(filesWithTag.length > 0, `No files with tag ${tag}.`);
+    const filePaths = filesWithTag.map((f) => f.path);
+    const targetFilePath = await GenericSuggester.Suggest(
+      app,
+      filePaths,
+      filePaths
+    );
+    invariant(
+      !!targetFilePath && targetFilePath.length > 0,
+      `No file selected for capture.`
+    );
+    return await this.formatFilePath(targetFilePath);
   }
   async onFileExists(filePath, content) {
     const file = this.getFileByPath(filePath);

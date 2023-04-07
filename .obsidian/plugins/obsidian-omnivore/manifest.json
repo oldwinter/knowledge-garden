@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-omnivore",
 	"name": "Omnivore",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"minAppVersion": "0.15.0",
 	"description": "This is an Omnivore plugin for Obsidian.",
 	"author": "Omnivore",

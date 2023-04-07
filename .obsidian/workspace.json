@@ -8,51 +8,38 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ab365fd0a65fced5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/2-Area/运动与健康/中国居民膳食指南.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f351e74537cd8c83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/2023-04-04.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91f45f222b5263b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "83b6db6f5b7d2f7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+                "file": "Sources/GPTchats/云原生：软件开发和部署的新范式.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "452d8042c1199961",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/云原生和CICD的概念及应用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc330863b330f888",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "zero shot",
+                "query": "presence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,8 +105,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -132,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md"
+                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md"
               }
             }
           },
@@ -142,9 +128,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -154,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -189,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -200,7 +186,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -223,7 +210,7 @@
             }
           },
           {
-            "id": "d5db3c8fe8892d56",
+            "id": "8f2fd9f7c6582a06",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -246,17 +233,25 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian-projects:Open projects": false,
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "83b6db6f5b7d2f7e",
+  "active": "cc330863b330f888",
   "lastOpenFiles": [
+    "Sources/GPTchats/云原生和CICD的概念及应用.md",
+    "Sources/GPTchats/云原生：软件开发和部署的新范式.md",
+    "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
+    "Sources/GPTchats/运维专家的问题解答：DevOps降本、istio产品能力.md",
+    "Calendar/Daily notes/2023-04-07.md",
+    "Calendar/Daily notes/2023-04-06.md",
+    "Untitled.table",
+    "Calendar/Daily notes/2023-04-02.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
+    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
     "Calendar/Daily notes/2023-04-05.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
     "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
     "Calendar/Daily notes/使用google的colab，直接运行python代码.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
     "Sources/GPTchats/张继科和景甜的恋情及分手传闻.md",
     "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
@@ -270,14 +265,6 @@
     "Spaces/2-Area/运动与健康/力量训练的不同目标.md",
     "Spaces/2-Area/运动与健康/力量训练的动作行程.md",
     "Spaces/2-Area/运动与健康/力量训练必学的动作-深蹲、卧推、硬拉等.md",
-    "Spaces/2-Area/运动与健康/力量训练.md",
-    "Cards/永久笔记/web3.md",
-    "Spaces/2-Area/运动与健康/∑ 健身补剂选择.md",
-    "Spaces/2-Area/运动与健康/EAA.md",
-    "Spaces/2-Area/运动与健康/支链氨基酸.md",
-    "Spaces/2-Area/运动与健康/增肌粉.md",
-    "Spaces/2-Area/运动与健康/绿茶提取物EGCG.md",
-    "Spaces/2-Area/运动与健康/咖啡因.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",
@@ -304,7 +291,6 @@
     "PodNotes_Export1.opml",
     "PodNotes_Export.opml",
     "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
-    "Extras/Media/容器域质量效能&软件工程能力指标介绍.pptx",
     "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",
     "Atlas/Draws/白板 2023-03-11.light.svg"

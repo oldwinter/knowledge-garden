@@ -41,15 +41,71 @@ date modified: 2023-03-15
 
 ## 模型功能
 
-### chat
+### chat或者说completion
 
-最大特点，
+chat相比于原来的completing，最大特点，就是prompt传入数组，之前是单个字符串。
 
 ```json
 [
   {"role": "system", "content": "You are a helpful assistant that translates English to French."},
   {"role": "user", "content": 'Translate the following English text to French: "{text}"'}
 ]
+```
+
+
+### embedding
+
+### moderate
+对某个语句，获取其涉及不和谐部分的评估信息。这个接口完全免费，可以拿来做用户评论信息的过滤等等。
+
+```python
+threaten = "你不听我的我就拿刀砍死你"
+
+def moderation(text):
+    response = openai.Moderation.create(
+        input=text
+    )
+    output = response["results"][0]
+    return output
+print(moderation(threaten))
+```
+
+
+```jsonpython
+threaten = "你不听我的我就拿刀砍死你"
+
+def moderation(text):
+    response = openai.Moderation.create(
+        input=text
+    )
+    output = response["results"][0]
+    return output
+print(moderation(threaten))
+```
+
+
+```
+{
+  "categories": {
+    "hate": false,
+    "hate/threatening": false,
+    "self-harm": false,
+    "sexual": false,
+    "sexual/minors": false,
+    "violence": true,
+    "violence/graphic": false
+  },
+  "category_scores": {
+    "hate": 0.030033664777874947,
+    "hate/threatening": 0.0002820899826474488,
+    "self-harm": 0.004850226454436779,
+    "sexual": 2.2907377569936216e-05,
+    "sexual/minors": 6.477687275463495e-09,
+    "violence": 0.9996402263641357,
+    "violence/graphic": 4.35576839663554e-05
+  },
+  "flagged": true
+}
 ```
 
 ## 核心入参
@@ -75,10 +131,10 @@ chat功能的api入参[API Reference - OpenAI API --API参考-OpenAI API](https:
 - stream，默认false
 - presence_penalty，默认0
 	- Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. -
-	- 介于-2.0和2.0之间的数字。正值根据新词到目前为止是否出现在文本中来惩罚它们，**从而增加了模型讨论新主题的可能性**。
+	- 介于-2.0和2.0之间的数字。正值根据新词（token）到目前为止是否出现在文本中来惩罚它们，**从而增加了模型讨论新主题的可能性**。
 - frequency_penalty，默认0
 	- Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.  
-	- 介于-2.0和2.0之间的数字。到目前为止，正值根据新标记在文本中的现有频率来惩罚它们，从而**降低了模型逐字重复相同行的可能性**。
+	- 介于-2.0和2.0之间的数字。到目前为止，正值根据新标记在文本中的现有频率来惩罚它们，从而**降低了模型逐字重复相同行的可能性**。越大越能说用新的词语表达同一个意思，越小越容易车轱辘话。
 - [API Reference - OpenAI API](https://platform.openai.com/docs/api-reference/parameter-details)
 
 
