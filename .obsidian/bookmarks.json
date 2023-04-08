@@ -8,6 +8,12 @@
     },
     {
       "type": "file",
+      "ctime": 1680431306480,
+      "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+      "subpath": "#核心概念"
+    },
+    {
+      "type": "file",
       "title": "∑ 运动与健康",
       "path": "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
       "ctime": 1680159899203
@@ -33,7 +39,7 @@
     {
       "type": "file",
       "title": "∑ AI MOC",
-      "path": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
+      "path": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md",
       "ctime": 1680159899203
     },
     {
@@ -46,12 +52,6 @@
       "type": "file",
       "ctime": 1680431255149,
       "path": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas"
-    },
-    {
-      "type": "file",
-      "ctime": 1680431306480,
-      "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-      "subpath": "#核心概念"
     }
   ]
 }

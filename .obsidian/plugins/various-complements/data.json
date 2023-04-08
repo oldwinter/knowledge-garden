@@ -9,7 +9,7 @@
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
-  "complementAutomatically": false,
+  "complementAutomatically": true,
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": true,
   "insertAfterCompletion": false,
@@ -37,7 +37,7 @@
   "excludeCurrentVaultPathPrefixPatterns": "",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "Extras/Templates/其他/dict/dict.md",
+  "customDictionaryPaths": "Extras/Templates/其他/dict/dict.md\nExtras/Templates/其他/dict/chatgpt_prompts_dict.md",
   "columnDelimiter": "Pipe",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "+=",
@@ -108,6 +108,14 @@
         "customDictionary": {
           "count": 1,
           "lastUpdated": 1679320141477
+        }
+      }
+    },
+    "ai-translate": {
+      "ai-translate": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1680869772012
         }
       }
     }

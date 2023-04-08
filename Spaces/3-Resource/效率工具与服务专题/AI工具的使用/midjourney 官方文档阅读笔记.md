@@ -1,7 +1,9 @@
 [Midjourney Quick Start Guide](https://docs.midjourney.com/docs/quick-start)
 
-- u按钮，放大图像，生成所选图像的较大版本，并生成更多细节
-- v按钮，对所选图像进行微调。生成的芯图像，整体样式和构图，会和所选图像类似。
+- u按钮，放大图像，生成所选图像的较大版本，并生成更多细节，比如可以更改提示词，加参数等。
+- v按钮，对所选图像进行微调。生成的新图像，整体样式和构图，会和所选图像类似。
+
+fast mode每月有一定配额，会单独分配GPU，快速给我们画图，基本几秒钟就画出来。relax mode就是慢很多了，而且它有算法，用的越频繁，后面的响应时间越久，甚至长达10分钟。
 
 ## prompt
 
@@ -75,7 +77,7 @@ mountain，desert等。
 也可以直接通过prompt的参数设置，如 
 - `--v 5`就代表使用模型版本5，也是目前最新。
 - `--q 2`代表质量，2是高质量，1是基本质量。
-- `--s 250`代表样式，250是高样式。
+- `--s 250`代表样式，250是高样式。也就是settings里面的style。样式的意思是：艺术化（色彩、构图、形式）的程度。
 ### parameters参数列表
 
 随时查：[Midjourney Parameter List](https://docs.midjourney.com/docs/parameter-list)
@@ -86,8 +88,26 @@ mountain，desert等。
 - `--chaos`：越大，越随机，越发散
 - `--seed`：指定相同的seed值和prompt提示词，将更可能产生类似的最终图片。也就是通过设置seed，可以让相同提示词每次生成的图像更稳定，不那么随机和发散。⭐️，通过✉️符号，可以知道
 	- 通过生成图片的右上角，给一个信封emoji反应，机器人会私信我们这个图片的jobid和seed值。
+- `--tile`：生成分块的磁贴。相当于小图像的平铺模式。
+- `--video`：生成动图，现在版本5不支持，得用版本3及之前。
 
 
 
 ## upscalers升级
 模型4及之前，每次生成图像，会提供各种相关，让我们升级图像。现在模型5，直接提供的1024✖️1024，也不支持upscalers。
+
+## prompt高级玩法
+### 提供我们的图片做为prompt
+![image.png](https://img.oldwinter.top/202304071658749.png)
+参数
+- `--iw`，越大，提供的图的影响越高。范围是.5-2。
+### remix 混音或再混合模式
+开启后，中途可以用命令改变其prompt或参数。也就是点击variation按钮，此时会弹窗让我们修改prompt。
+
+### multi prompts
+主要解决hot dog被识别成热狗，还是很热的狗这种问题。以及解决狗和热这2个提示词的权重。
+![image.png](https://img.oldwinter.top/202304071708557.png)
+
+### permutation prompts
+相当于批量脚本。用复用句子，将句子中某个对象或者说词语，做为变量，指定为某n个值，这样同时生成n个结果。如果fast mode配额用完，处于relax mode了，就不能用了。
+Batch jobs are only available on standard and pro plans, with fast mode enabled.

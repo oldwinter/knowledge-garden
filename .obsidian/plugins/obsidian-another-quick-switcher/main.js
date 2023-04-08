@@ -2805,6 +2805,8 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
   setHotkeys() {
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Enter"));
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Escape"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "Home"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "End"));
     const openNthMod = quickResultSelectionModifier(
       this.settings.userAltInsteadOfModForQuickResultSelection
     );
@@ -3179,6 +3181,8 @@ var MoveModal = class extends import_obsidian5.SuggestModal {
   }
   setHotkeys() {
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Escape"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "Home"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "End"));
     if (!this.settings.hideHotkeyGuides) {
       this.setInstructions([
         { command: "[\u21B5]", purpose: "move to" },
@@ -3358,6 +3362,8 @@ var HeaderModal = class extends import_obsidian6.SuggestModal {
   }
   setHotkeys() {
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Escape"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "Home"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "End"));
     if (!this.settings.hideHotkeyGuides) {
       this.setInstructions([
         { command: "[\u21B5]", purpose: "move to header" },
@@ -3768,6 +3774,8 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     var _a;
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Enter"));
     this.scope.unregister(this.scope.keys.find((x) => x.key === "Escape"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "Home"));
+    this.scope.unregister(this.scope.keys.find((x) => x.key === "End"));
     const openNthMod = quickResultSelectionModifier(
       this.settings.userAltInsteadOfModForQuickResultSelection
     );

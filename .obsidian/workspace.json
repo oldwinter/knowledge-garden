@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/GPTchats/云原生：软件开发和部署的新范式.md",
+                "file": "Calendar/Daily notes/2023-04-07.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "452d8042c1199961",
+            "id": "088e183630b5659c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/GPTchats/云原生和CICD的概念及应用.md",
+                "file": "Calendar/Daily notes/服务可用性检查.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,25 @@
             }
           },
           {
-            "id": "cc330863b330f888",
+            "id": "278214ec71776c29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
+                "file": "Extras/Templates/其他/dict/dict.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "610c795e24c2bdd5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Extras/Templates/其他/dict/chatgpt_prompts_dict.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md"
+                "file": "Calendar/Daily notes/服务可用性检查.md"
               }
             }
           },
@@ -128,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
+                "file": "Calendar/Daily notes/服务可用性检查.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -140,7 +153,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
+                "file": "Calendar/Daily notes/服务可用性检查.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +188,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
+                "file": "Calendar/Daily notes/服务可用性检查.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -186,8 +199,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -236,35 +248,35 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "cc330863b330f888",
+  "active": "088e183630b5659c",
   "lastOpenFiles": [
-    "Sources/GPTchats/云原生和CICD的概念及应用.md",
+    "Calendar/Daily notes/Freshping.md",
+    "Extras/Templates/其他/dict/chatgpt_prompts_dict.md",
+    "Extras/Templates/ChatGPT_MD/templates/默认模板.md",
+    "Extras/Templates/其他/dict/dict.md",
+    "Extras/Templates/ChatGPT_MD/templates/发散思维.md",
+    "Sources/GPTchats/使用unsplash API发送图片的规则.md",
+    "Calendar/Daily notes/2023-04-07.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md",
+    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/∑ 安卓软件使用.md",
+    "Spaces/3-Resource/效率工具与服务专题/好用网站集锦/Bilibili.md",
+    "Cards/永久笔记/Bilibili.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
+    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
     "Sources/GPTchats/云原生：软件开发和部署的新范式.md",
+    "Sources/GPTchats/云原生和CICD的概念及应用.md",
     "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
     "Sources/GPTchats/运维专家的问题解答：DevOps降本、istio产品能力.md",
-    "Calendar/Daily notes/2023-04-07.md",
     "Calendar/Daily notes/2023-04-06.md",
     "Untitled.table",
     "Calendar/Daily notes/2023-04-02.md",
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
     "Calendar/Daily notes/2023-04-05.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md",
     "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
     "Calendar/Daily notes/使用google的colab，直接运行python代码.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
     "Sources/GPTchats/张继科和景甜的恋情及分手传闻.md",
     "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
-    "Calendar/Daily notes/2023-04-04.md",
-    "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md",
-    "Calendar/Daily notes/∑ 优质播客列表.md",
-    "Atlas/TOCs/§ TOCs.md",
-    "Spaces/2-Area/运动与健康/中国居民膳食指南.md",
-    "Calendar/Daily notes/2023-04-03.md",
-    "Spaces/2-Area/运动与健康/力量训练前后饮食.md",
-    "Spaces/2-Area/运动与健康/力量训练的不同目标.md",
-    "Spaces/2-Area/运动与健康/力量训练的动作行程.md",
-    "Spaces/2-Area/运动与健康/力量训练必学的动作-深蹲、卧推、硬拉等.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",

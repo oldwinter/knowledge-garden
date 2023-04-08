@@ -10,12 +10,12 @@ date modified: 2023-03-14
 		- [[chatGPT的使用经验]]
 	- [[New Bing]]
 	- [Poe - Fast, Helpful AI Chat](https://poe.com/)
-		- 聚合了包括chatgpt在内的4个对话AI，响应快且免费。
+		- 聚合了包括chatgpt在内的4个对话AI，响应快且免费。quora 出品。
 - 图片绘制AI
 	- AI 绘图服务商
 		- [[Midjourney - AI绘图]]，目前公认最好用
-		- [[DALL·E 2 - AI绘图]]
-		- [[Stable Diffusion - AI作画]]
+		- [[DALL·E 2 - AI绘图]]，openai
+		- [[Stable Diffusion - AI作画]]，开源，本地化安装目前需要6GB显存
 	- [[AI绘图提示语prompt]]
 - AI作曲
 	- [[aiva - AI作曲]]
@@ -30,6 +30,8 @@ date modified: 2023-03-14
 	- [GitHub - guaguaguaxia/weekly\_report](https://github.com/guaguaguaxia/weekly_report)
 - 自动生成ppt
 	- [Tome - The AI-powered storytelling format](https://beta.tome.app/)
+- 文字生成视频
+	- [Welcome to Runway - Runway](https://app.runwayml.com/)
 
 ## 按存在形式划分
 - 网页，如上

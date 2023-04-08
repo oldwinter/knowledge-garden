@@ -66,16 +66,6 @@
       "createdDate": 1665669916000,
       "modifiedDate": 1678940440225
     },
-    "🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 83,
-      "pageCount": 0.27666666666666667,
-      "characterCount": 244,
-      "nonWhitespaceCharacterCount": 209,
-      "createdDate": 1663751730000,
-      "modifiedDate": 1678806746726
-    },
     "🧰 本库指南/Tutorials/链接优先.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -156,16 +146,6 @@
       "createdDate": 1661700848568,
       "modifiedDate": 1678806746561
     },
-    "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 233,
-      "pageCount": 0.7766666666666666,
-      "characterCount": 999,
-      "nonWhitespaceCharacterCount": 891,
-      "createdDate": 1670755044000,
-      "modifiedDate": 1680337911467
-    },
     "🧰 本库指南/Tutorials/本库常用的快捷键及作用.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -195,6 +175,16 @@
       "nonWhitespaceCharacterCount": 534,
       "createdDate": 1662609612000,
       "modifiedDate": 1678806746582
+    },
+    "🧰 本库指南/Tutorials/本库如何自动每日发布至web.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 233,
+      "pageCount": 0.7766666666666666,
+      "characterCount": 999,
+      "nonWhitespaceCharacterCount": 891,
+      "createdDate": 1670755044000,
+      "modifiedDate": 1680337911467
     },
     "🧰 本库指南/Tutorials/本库如何指定笔记同步至github.md": {
       "isDirectory": false,
@@ -435,6 +425,16 @@
       "nonWhitespaceCharacterCount": 255,
       "createdDate": 1663751730000,
       "modifiedDate": 1678806746723
+    },
+    "🧰 本库指南/Tutorials/» 本库计划与回顾工作流.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 83,
+      "pageCount": 0.27666666666666667,
+      "characterCount": 244,
+      "nonWhitespaceCharacterCount": 209,
+      "createdDate": 1663751730000,
+      "modifiedDate": 1678806746726
     },
     "🧰 本库指南/Tutorials/» 本库笔记的emoji符号记录.md": {
       "isDirectory": false,
@@ -1246,16 +1246,6 @@
       "createdDate": 1662609626000,
       "modifiedDate": 1678806746939
     },
-    "Spaces/3-Resource/王者荣耀/天谕手游 - 隐退の作-98.8%的玩家都不懂的干货知识.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 1044,
-      "pageCount": 3.48,
-      "characterCount": 1409,
-      "nonWhitespaceCharacterCount": 1302,
-      "createdDate": 1680350238770,
-      "modifiedDate": 1680350242277
-    },
     "Spaces/3-Resource/王者荣耀/打野.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -1265,16 +1255,6 @@
       "nonWhitespaceCharacterCount": 395,
       "createdDate": 1673854311000,
       "modifiedDate": 1678806746945
-    },
-    "Spaces/3-Resource/王者荣耀/廉颇.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 69,
-      "nonWhitespaceCharacterCount": 59,
-      "createdDate": 1662609638000,
-      "modifiedDate": 1678806746962
     },
     "Spaces/3-Resource/王者荣耀/打团先手与后手.md": {
       "isDirectory": false,
@@ -1316,16 +1296,6 @@
       "createdDate": 1662619910000,
       "modifiedDate": 1678806746956
     },
-    "Spaces/3-Resource/王者荣耀/庄周.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 69,
-      "nonWhitespaceCharacterCount": 59,
-      "createdDate": 1673982902000,
-      "modifiedDate": 1678806746964
-    },
     "Spaces/3-Resource/王者荣耀/开局阵容分析与应对.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -1335,6 +1305,26 @@
       "nonWhitespaceCharacterCount": 1022,
       "createdDate": 1671967860000,
       "modifiedDate": 1678806746959
+    },
+    "Spaces/3-Resource/王者荣耀/廉颇.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 69,
+      "nonWhitespaceCharacterCount": 59,
+      "createdDate": 1662609638000,
+      "modifiedDate": 1678806746962
+    },
+    "Spaces/3-Resource/王者荣耀/庄周.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 69,
+      "nonWhitespaceCharacterCount": 59,
+      "createdDate": 1673982902000,
+      "modifiedDate": 1678806746964
     },
     "Spaces/3-Resource/王者荣耀/带线还是支援.md": {
       "isDirectory": false,
@@ -1346,16 +1336,6 @@
       "createdDate": 1673854497000,
       "modifiedDate": 1678806746967
     },
-    "Spaces/3-Resource/王者荣耀/回血、免伤、抗性、控制，四大核心机制解析.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 566,
-      "pageCount": 1.8866666666666667,
-      "characterCount": 817,
-      "nonWhitespaceCharacterCount": 733,
-      "createdDate": 1675849966573,
-      "modifiedDate": 1678806746992
-    },
     "Spaces/3-Resource/王者荣耀/对抗路.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -1366,16 +1346,6 @@
       "createdDate": 1662609634000,
       "modifiedDate": 1678806746969
     },
-    "Spaces/3-Resource/王者荣耀/嫦娥.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 561,
-      "pageCount": 1.87,
-      "characterCount": 796,
-      "nonWhitespaceCharacterCount": 709,
-      "createdDate": 1673008051000,
-      "modifiedDate": 1678806746976
-    },
     "Spaces/3-Resource/王者荣耀/孙膑.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -1385,6 +1355,16 @@
       "nonWhitespaceCharacterCount": 59,
       "createdDate": 1662609638000,
       "modifiedDate": 1678806746971
+    },
+    "Spaces/3-Resource/王者荣耀/嫦娥.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 561,
+      "pageCount": 1.87,
+      "characterCount": 796,
+      "nonWhitespaceCharacterCount": 709,
+      "createdDate": 1673008051000,
+      "modifiedDate": 1678806746976
     },
     "Spaces/3-Resource/王者荣耀/娜可露露.md": {
       "isDirectory": false,
@@ -1415,6 +1395,26 @@
       "nonWhitespaceCharacterCount": 101,
       "createdDate": 1662609632000,
       "modifiedDate": 1680350255086
+    },
+    "Spaces/3-Resource/王者荣耀/天谕手游 - 隐退の作-98.8%的玩家都不懂的干货知识.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 1044,
+      "pageCount": 3.48,
+      "characterCount": 1409,
+      "nonWhitespaceCharacterCount": 1302,
+      "createdDate": 1680350238770,
+      "modifiedDate": 1680350242277
+    },
+    "Spaces/3-Resource/王者荣耀/回血、免伤、抗性、控制，四大核心机制解析.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 566,
+      "pageCount": 1.8866666666666667,
+      "characterCount": 817,
+      "nonWhitespaceCharacterCount": 733,
+      "createdDate": 1675849966573,
+      "modifiedDate": 1678806746992
     },
     "Spaces/3-Resource/王者荣耀/后羿.md": {
       "isDirectory": false,
@@ -1599,12 +1599,12 @@
     "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/∑ 安卓软件使用.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 31,
-      "pageCount": 0.10333333333333333,
-      "characterCount": 134,
-      "nonWhitespaceCharacterCount": 108,
+      "wordCount": 268,
+      "pageCount": 0.8933333333333333,
+      "characterCount": 1079,
+      "nonWhitespaceCharacterCount": 844,
       "createdDate": 1680332574612,
-      "modifiedDate": 1680430801674
+      "modifiedDate": 1680866903478
     },
     "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/v2rayNG.md": {
       "isDirectory": false,
@@ -1625,6 +1625,16 @@
       "nonWhitespaceCharacterCount": 128,
       "createdDate": 1677640872960,
       "modifiedDate": 1680332096681
+    },
+    "Spaces/3-Resource/效率工具与服务专题/好用网站集锦/Bilibili.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 129,
+      "nonWhitespaceCharacterCount": 99,
+      "createdDate": 1662609652000,
+      "modifiedDate": 1680865443274
     },
     "Spaces/3-Resource/效率工具与服务专题/好用网站集锦/∑ 好用网站.md": {
       "isDirectory": false,
@@ -2266,16 +2276,6 @@
       "createdDate": 1674484728292,
       "modifiedDate": 1678806748789
     },
-    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Dataview.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 795,
-      "pageCount": 2.65,
-      "characterCount": 5576,
-      "nonWhitespaceCharacterCount": 4807,
-      "createdDate": 1673448783000,
-      "modifiedDate": 1678806748802
-    },
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Douban.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -2285,6 +2285,16 @@
       "nonWhitespaceCharacterCount": 63,
       "createdDate": 1674494624272,
       "modifiedDate": 1678806748798
+    },
+    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Dataview.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 795,
+      "pageCount": 2.65,
+      "characterCount": 5576,
+      "nonWhitespaceCharacterCount": 4807,
+      "createdDate": 1673448783000,
+      "modifiedDate": 1678806748802
     },
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Daily Note Outline.md": {
       "isDirectory": false,
@@ -2296,16 +2306,6 @@
       "createdDate": 1674484476245,
       "modifiedDate": 1678806748688
     },
-    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/DB Folder.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 6,
-      "pageCount": 0.02,
-      "characterCount": 76,
-      "nonWhitespaceCharacterCount": 65,
-      "createdDate": 1674484542134,
-      "modifiedDate": 1678806748794
-    },
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/DIgital Garden.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -2315,6 +2315,16 @@
       "nonWhitespaceCharacterCount": 70,
       "createdDate": 1674484568335,
       "modifiedDate": 1678806748693
+    },
+    "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/DB Folder.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 6,
+      "pageCount": 0.02,
+      "characterCount": 76,
+      "nonWhitespaceCharacterCount": 65,
+      "createdDate": 1674484542134,
+      "modifiedDate": 1678806748794
     },
     "Spaces/3-Resource/效率工具与服务专题/Obsidian插件使用/Commander.md": {
       "isDirectory": false,
@@ -2486,16 +2496,6 @@
       "createdDate": 1677599440897,
       "modifiedDate": 1678806749507
     },
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/搜狗输入法.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 1282,
-      "pageCount": 4.273333333333333,
-      "characterCount": 1798,
-      "nonWhitespaceCharacterCount": 1579,
-      "createdDate": 1677598926020,
-      "modifiedDate": 1680517304335
-    },
     "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/滴答清单.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -2506,15 +2506,15 @@
       "createdDate": 1670850171000,
       "modifiedDate": 1679314216870
     },
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/坚果云.md": {
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/搜狗输入法.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 38,
-      "pageCount": 0.12666666666666668,
-      "characterCount": 140,
-      "nonWhitespaceCharacterCount": 114,
-      "createdDate": 1677598934176,
-      "modifiedDate": 1678806749662
+      "wordCount": 1282,
+      "pageCount": 4.273333333333333,
+      "characterCount": 1798,
+      "nonWhitespaceCharacterCount": 1579,
+      "createdDate": 1677598926020,
+      "modifiedDate": 1680517304335
     },
     "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/微信.md": {
       "isDirectory": false,
@@ -2525,6 +2525,16 @@
       "nonWhitespaceCharacterCount": 127,
       "createdDate": 1677599438928,
       "modifiedDate": 1679314093504
+    },
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/坚果云.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 38,
+      "pageCount": 0.12666666666666668,
+      "characterCount": 140,
+      "nonWhitespaceCharacterCount": 114,
+      "createdDate": 1677598934176,
+      "modifiedDate": 1678806749662
     },
     "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/∑ mac必备软件.md": {
       "isDirectory": false,
@@ -3226,16 +3236,6 @@
       "createdDate": 1677598943329,
       "modifiedDate": 1678806752136
     },
-    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Bilibili.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 17,
-      "pageCount": 0.056666666666666664,
-      "characterCount": 127,
-      "nonWhitespaceCharacterCount": 99,
-      "createdDate": 1662609652000,
-      "modifiedDate": 1678806771356
-    },
     "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/BetterTouchTool.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -3376,25 +3376,25 @@
       "createdDate": 1675776347857,
       "modifiedDate": 1678806747305
     },
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md": {
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 166,
-      "pageCount": 0.5533333333333333,
-      "characterCount": 1083,
-      "nonWhitespaceCharacterCount": 922,
+      "wordCount": 188,
+      "pageCount": 0.6266666666666667,
+      "characterCount": 1185,
+      "nonWhitespaceCharacterCount": 1014,
       "createdDate": 1677074845907,
-      "modifiedDate": 1680683256857
+      "modifiedDate": 1680867967766
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 678,
-      "pageCount": 2.26,
-      "characterCount": 2331,
-      "nonWhitespaceCharacterCount": 2036,
+      "wordCount": 982,
+      "pageCount": 3.2733333333333334,
+      "characterCount": 3082,
+      "nonWhitespaceCharacterCount": 2738,
       "createdDate": 1680671313637,
-      "modifiedDate": 1680698521347
+      "modifiedDate": 1680861760464
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/aiva - AI作曲.md": {
       "isDirectory": false,
@@ -5766,6 +5766,16 @@
       "createdDate": 1666232768000,
       "modifiedDate": 1679132480491
     },
+    "Spaces/2-Area/云计算与云原生/应用托管服务 - web应用.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 77,
+      "pageCount": 0.25666666666666665,
+      "characterCount": 194,
+      "nonWhitespaceCharacterCount": 177,
+      "createdDate": 1670755125000,
+      "modifiedDate": 1680337910159
+    },
     "Spaces/2-Area/云计算与云原生/🔗netlify.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -5915,16 +5925,6 @@
       "nonWhitespaceCharacterCount": 189,
       "createdDate": 1670596783000,
       "modifiedDate": 1678806754246
-    },
-    "Spaces/2-Area/云计算与云原生/应用托管服务 - web应用.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 77,
-      "pageCount": 0.25666666666666665,
-      "characterCount": 194,
-      "nonWhitespaceCharacterCount": 177,
-      "createdDate": 1670755125000,
-      "modifiedDate": 1680337910159
     },
     "Spaces/2-Area/云计算与云原生/对象存储服务.md": {
       "isDirectory": false,
@@ -6176,15 +6176,25 @@
       "createdDate": 1662609637000,
       "modifiedDate": 1678806754315
     },
-    "Spaces/2-Area/个人职业生涯/面试自我介绍和常见问题回答.md": {
+    "Spaces/2-Area/个人职业生涯/浏览器原理.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 256,
-      "pageCount": 0.8533333333333334,
-      "characterCount": 497,
-      "nonWhitespaceCharacterCount": 421,
-      "createdDate": 1662609614000,
-      "modifiedDate": 1678806754323
+      "wordCount": 33,
+      "pageCount": 0.11,
+      "characterCount": 176,
+      "nonWhitespaceCharacterCount": 157,
+      "createdDate": 1677753539511,
+      "modifiedDate": 1678806754345
+    },
+    "Spaces/2-Area/个人职业生涯/AngularJS.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 6,
+      "pageCount": 0.02,
+      "characterCount": 76,
+      "nonWhitespaceCharacterCount": 66,
+      "createdDate": 1677753810354,
+      "modifiedDate": 1678806754489
     },
     "Spaces/2-Area/个人职业生涯/面试相关文章.md": {
       "isDirectory": false,
@@ -6195,6 +6205,16 @@
       "nonWhitespaceCharacterCount": 245,
       "createdDate": 1679413451823,
       "modifiedDate": 1679413453651
+    },
+    "Spaces/2-Area/个人职业生涯/面试自我介绍和常见问题回答.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 256,
+      "pageCount": 0.8533333333333334,
+      "characterCount": 497,
+      "nonWhitespaceCharacterCount": 421,
+      "createdDate": 1662609614000,
+      "modifiedDate": 1678806754323
     },
     "Spaces/2-Area/个人职业生涯/面试一个人，只问这四个问题就够.md": {
       "isDirectory": false,
@@ -6225,6 +6245,16 @@
       "nonWhitespaceCharacterCount": 60,
       "createdDate": 1677756332329,
       "modifiedDate": 1678806754320
+    },
+    "Spaces/2-Area/个人职业生涯/一小时快速学会.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 190,
+      "pageCount": 0.6333333333333333,
+      "characterCount": 277,
+      "nonWhitespaceCharacterCount": 257,
+      "createdDate": 1679254512905,
+      "modifiedDate": 1679280435626
     },
     "Spaces/2-Area/个人职业生涯/质量效能.md": {
       "isDirectory": false,
@@ -6285,16 +6315,6 @@
       "nonWhitespaceCharacterCount": 30,
       "createdDate": 1678890185193,
       "modifiedDate": 1678890203383
-    },
-    "Spaces/2-Area/个人职业生涯/浏览器原理.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 33,
-      "pageCount": 0.11,
-      "characterCount": 176,
-      "nonWhitespaceCharacterCount": 157,
-      "createdDate": 1677753539511,
-      "modifiedDate": 1678806754345
     },
     "Spaces/2-Area/个人职业生涯/没工作这段时间在做什么.md": {
       "isDirectory": false,
@@ -6546,15 +6566,15 @@
       "createdDate": 1663840223000,
       "modifiedDate": 1678806754443
     },
-    "Spaces/2-Area/个人职业生涯/一小时快速学会.md": {
+    "Spaces/2-Area/个人职业生涯/Jenkins.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 190,
-      "pageCount": 0.6333333333333333,
-      "characterCount": 277,
-      "nonWhitespaceCharacterCount": 257,
-      "createdDate": 1679254512905,
-      "modifiedDate": 1679280435626
+      "wordCount": 11,
+      "pageCount": 0.03666666666666667,
+      "characterCount": 109,
+      "nonWhitespaceCharacterCount": 95,
+      "createdDate": 1680344694715,
+      "modifiedDate": 1680344736019
     },
     "Spaces/2-Area/个人职业生涯/∑ 个人职业生涯.md": {
       "isDirectory": false,
@@ -6636,16 +6656,6 @@
       "createdDate": 1677753883083,
       "modifiedDate": 1678806754474
     },
-    "Spaces/2-Area/个人职业生涯/Jenkins.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 11,
-      "pageCount": 0.03666666666666667,
-      "characterCount": 109,
-      "nonWhitespaceCharacterCount": 95,
-      "createdDate": 1680344694715,
-      "modifiedDate": 1680344736019
-    },
     "Spaces/2-Area/个人职业生涯/Gin.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -6686,16 +6696,6 @@
       "createdDate": 1677753897052,
       "modifiedDate": 1678806754481
     },
-    "Spaces/2-Area/个人职业生涯/DevOps的定义、价值、实施与衡量.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 511,
-      "pageCount": 1.7033333333333334,
-      "characterCount": 897,
-      "nonWhitespaceCharacterCount": 751,
-      "createdDate": 1672136666000,
-      "modifiedDate": 1678806754484
-    },
     "Spaces/2-Area/个人职业生涯/CUDA.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -6706,15 +6706,15 @@
       "createdDate": 1677753895168,
       "modifiedDate": 1678806754486
     },
-    "Spaces/2-Area/个人职业生涯/AngularJS.md": {
+    "Spaces/2-Area/个人职业生涯/DevOps的定义、价值、实施与衡量.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 6,
-      "pageCount": 0.02,
-      "characterCount": 76,
-      "nonWhitespaceCharacterCount": 66,
-      "createdDate": 1677753810354,
-      "modifiedDate": 1678806754489
+      "wordCount": 511,
+      "pageCount": 1.7033333333333334,
+      "characterCount": 897,
+      "nonWhitespaceCharacterCount": 751,
+      "createdDate": 1672136666000,
+      "modifiedDate": 1678806754484
     },
     "Spaces/2-Area/个人形象管理/脱毛膏的原理.md": {
       "isDirectory": false,
@@ -10926,6 +10926,16 @@
       "createdDate": 1674493653241,
       "modifiedDate": 1678806760256
     },
+    "Sources/Movies + TV/豆瓣影音导入/三块广告牌.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 281,
+      "pageCount": 0.9366666666666666,
+      "characterCount": 855,
+      "nonWhitespaceCharacterCount": 760,
+      "createdDate": 1674493114204,
+      "modifiedDate": 1678806762153
+    },
     "Sources/Movies + TV/豆瓣影音导入/推拿.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -13756,16 +13766,6 @@
       "createdDate": 1674491649790,
       "modifiedDate": 1678806762148
     },
-    "Sources/Movies + TV/豆瓣影音导入/三块广告牌.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 281,
-      "pageCount": 0.9366666666666666,
-      "characterCount": 855,
-      "nonWhitespaceCharacterCount": 760,
-      "createdDate": 1674493114204,
-      "modifiedDate": 1678806762153
-    },
     "Sources/Movies + TV/豆瓣影音导入/三千鸦杀.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -14206,15 +14206,15 @@
       "createdDate": 1663751729000,
       "modifiedDate": 1678806762388
     },
-    "Sources/GPTchats/TCP的timewait请求过多如何解决.md": {
+    "Sources/GPTchats/使用unsplash API发送图片的规则.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680850576449,
-      "modifiedDate": 1680850576449
+      "wordCount": 105,
+      "pageCount": 0.35,
+      "characterCount": 746,
+      "nonWhitespaceCharacterCount": 667,
+      "createdDate": 1680868899299,
+      "modifiedDate": 1680869052931
     },
     "Sources/GPTchats/运维专家的问题解答：DevOps降本、istio产品能力.md": {
       "isDirectory": false,
@@ -14225,16 +14225,6 @@
       "nonWhitespaceCharacterCount": 3815,
       "createdDate": 1680845706476,
       "modifiedDate": 1680850574900
-    },
-    "Sources/GPTchats/云原生：软件开发和部署的新范式.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 2152,
-      "pageCount": 7.173333333333333,
-      "characterCount": 3839,
-      "nonWhitespaceCharacterCount": 3582,
-      "createdDate": 1680841217860,
-      "modifiedDate": 1680844126012
     },
     "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md": {
       "isDirectory": false,
@@ -14256,6 +14246,16 @@
       "createdDate": 1680609066134,
       "modifiedDate": 1680609144362
     },
+    "Sources/GPTchats/云原生：软件开发和部署的新范式.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 2152,
+      "pageCount": 7.173333333333333,
+      "characterCount": 3841,
+      "nonWhitespaceCharacterCount": 3582,
+      "createdDate": 1680841217860,
+      "modifiedDate": 1680850657526
+    },
     "Sources/GPTchats/云原生和CICD的概念及应用.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -14265,6 +14265,16 @@
       "nonWhitespaceCharacterCount": 953,
       "createdDate": 1680844197155,
       "modifiedDate": 1680844362409
+    },
+    "Sources/GPTchats/TCP的timewait请求过多如何解决.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 338,
+      "pageCount": 1.1266666666666667,
+      "characterCount": 605,
+      "nonWhitespaceCharacterCount": 569,
+      "createdDate": 1680850576449,
+      "modifiedDate": 1680850594198
     },
     "Sources/GPTchats/202331220519.md": {
       "isDirectory": false,
@@ -15376,6 +15386,16 @@
       "createdDate": 1663751461000,
       "modifiedDate": 1678806754700
     },
+    "Sources/Books/微信读书同步/经济理财/牛奶可乐经济学（完整版）-罗伯特·弗兰克.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 564,
+      "pageCount": 1.88,
+      "characterCount": 1162,
+      "nonWhitespaceCharacterCount": 1070,
+      "createdDate": 1668267673000,
+      "modifiedDate": 1678806754706
+    },
     "Sources/Books/微信读书同步/经济理财/结构性改革-黄奇帆.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -15395,16 +15415,6 @@
       "nonWhitespaceCharacterCount": 746,
       "createdDate": 1663751461000,
       "modifiedDate": 1678806754703
-    },
-    "Sources/Books/微信读书同步/经济理财/牛奶可乐经济学（完整版）-罗伯特·弗兰克.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 564,
-      "pageCount": 1.88,
-      "characterCount": 1162,
-      "nonWhitespaceCharacterCount": 1070,
-      "createdDate": 1668267673000,
-      "modifiedDate": 1678806754706
     },
     "Sources/Books/微信读书同步/经济理财/激荡四十年：中国企业1978—2018（全三册）-吴晓波.md": {
       "isDirectory": false,
@@ -15456,16 +15466,6 @@
       "createdDate": 1663751461000,
       "modifiedDate": 1678806754724
     },
-    "Sources/Books/微信读书同步/经济理财/大败局（修订版）（套装共2册）-吴晓波.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 531,
-      "pageCount": 1.77,
-      "characterCount": 1114,
-      "nonWhitespaceCharacterCount": 1028,
-      "createdDate": 1663751461000,
-      "modifiedDate": 1678806754727
-    },
     "Sources/Books/微信读书同步/经济理财/周鸿祎自述：我的互联网方法论-周鸿祎.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -15475,6 +15475,16 @@
       "nonWhitespaceCharacterCount": 703,
       "createdDate": 1663751460000,
       "modifiedDate": 1678806754731
+    },
+    "Sources/Books/微信读书同步/经济理财/大败局（修订版）（套装共2册）-吴晓波.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 531,
+      "pageCount": 1.77,
+      "characterCount": 1114,
+      "nonWhitespaceCharacterCount": 1028,
+      "createdDate": 1663751461000,
+      "modifiedDate": 1678806754727
     },
     "Sources/Books/微信读书同步/经济理财/原则：应对变化中的世界秩序-瑞·达利欧.md": {
       "isDirectory": false,
@@ -16256,6 +16266,16 @@
       "createdDate": 1663751453000,
       "modifiedDate": 1678806754867
     },
+    "Sources/Books/微信读书同步/文学/原谅我红尘颠倒-慕容雪村.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 421,
+      "pageCount": 1.4033333333333333,
+      "characterCount": 951,
+      "nonWhitespaceCharacterCount": 865,
+      "createdDate": 1663751452000,
+      "modifiedDate": 1678806754935
+    },
     "Sources/Books/微信读书同步/文学/沉默的大多数-王小波.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -16385,16 +16405,6 @@
       "nonWhitespaceCharacterCount": 742,
       "createdDate": 1663751452000,
       "modifiedDate": 1678806754938
-    },
-    "Sources/Books/微信读书同步/文学/原谅我红尘颠倒-慕容雪村.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 421,
-      "pageCount": 1.4033333333333333,
-      "characterCount": 951,
-      "nonWhitespaceCharacterCount": 865,
-      "createdDate": 1663751452000,
-      "modifiedDate": 1678806754935
     },
     "Sources/Books/微信读书同步/文学/卡片笔记写作法：如何实现从阅读到写作-申克·阿伦斯.md": {
       "isDirectory": false,
@@ -16736,16 +16746,6 @@
       "createdDate": 1663751449000,
       "modifiedDate": 1678806755393
     },
-    "Sources/Books/微信读书同步/医学健康/只有男科医生知道-@成都下水道.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 357,
-      "pageCount": 1.19,
-      "characterCount": 955,
-      "nonWhitespaceCharacterCount": 866,
-      "createdDate": 1662609602000,
-      "modifiedDate": 1678806755397
-    },
     "Sources/Books/微信读书同步/医学健康/戒糖：改变一生的科学饮食法-初夏之菡.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -16755,6 +16755,16 @@
       "nonWhitespaceCharacterCount": 961,
       "createdDate": 1663751449000,
       "modifiedDate": 1678806755395
+    },
+    "Sources/Books/微信读书同步/医学健康/只有男科医生知道-@成都下水道.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 357,
+      "pageCount": 1.19,
+      "characterCount": 955,
+      "nonWhitespaceCharacterCount": 866,
+      "createdDate": 1662609602000,
+      "modifiedDate": 1678806755397
     },
     "Sources/Books/微信读书同步/医学健康/健身营养书：让增肌减脂变简单-仰望尾迹云,杨昌林.md": {
       "isDirectory": false,
@@ -18076,6 +18086,36 @@
       "createdDate": 1673521451000,
       "modifiedDate": 1678806762755
     },
+    "Extras/Templates/Cards模板/Sources&Spaces卡片_标准模板.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 49,
+      "pageCount": 0.16333333333333333,
+      "characterCount": 148,
+      "nonWhitespaceCharacterCount": 129,
+      "createdDate": 1662609590000,
+      "modifiedDate": 1662609590000
+    },
+    "Extras/Templates/Cards模板/Card卡片_标准模板.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 63,
+      "pageCount": 0.21,
+      "characterCount": 224,
+      "nonWhitespaceCharacterCount": 188,
+      "createdDate": 1662609608000,
+      "modifiedDate": 1662609608000
+    },
+    "Extras/Templates/∑ 模板文件创建入口.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 154,
+      "pageCount": 0.5133333333333333,
+      "characterCount": 442,
+      "nonWhitespaceCharacterCount": 367,
+      "createdDate": 1663755334000,
+      "modifiedDate": 1663755334000
+    },
     "Extras/Templates/其他/领域入门模板.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18246,6 +18286,16 @@
       "createdDate": 1662609586000,
       "modifiedDate": 1662609586000
     },
+    "Extras/Templates/其他/dict/chatgpt_prompts_dict.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680869523286,
+      "modifiedDate": 1680869523286
+    },
     "Extras/Templates/其他/dict/dict.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18265,16 +18315,6 @@
       "nonWhitespaceCharacterCount": 134,
       "createdDate": 1663840223000,
       "modifiedDate": 1663840223000
-    },
-    "Extras/Templates/∑ 模板文件创建入口.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 154,
-      "pageCount": 0.5133333333333333,
-      "characterCount": 442,
-      "nonWhitespaceCharacterCount": 367,
-      "createdDate": 1663755334000,
-      "modifiedDate": 1663755334000
     },
     "Extras/Templates/textgenerator模板/prompts/自建/AI - 翻译英文段落.md": {
       "isDirectory": false,
@@ -18706,6 +18746,16 @@
       "createdDate": 1677732688384,
       "modifiedDate": 1677732688408
     },
+    "Extras/Templates/textgenerator模板/prompts/dalle-2/artGlitchcore.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 522,
+      "nonWhitespaceCharacterCount": 447,
+      "createdDate": 1677732686632,
+      "modifiedDate": 1677732686641
+    },
     "Extras/Templates/textgenerator模板/prompts/dalle-2/artSynthwave.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18836,16 +18886,6 @@
       "createdDate": 1677732686668,
       "modifiedDate": 1677732686670
     },
-    "Extras/Templates/textgenerator模板/prompts/dalle-2/artGlitchcore.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 10,
-      "pageCount": 0.03333333333333333,
-      "characterCount": 522,
-      "nonWhitespaceCharacterCount": 447,
-      "createdDate": 1677732686632,
-      "modifiedDate": 1677732686641
-    },
     "Extras/Templates/textgenerator模板/prompts/dalle-2/artDigital.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18926,16 +18966,6 @@
       "createdDate": 1677732686624,
       "modifiedDate": 1677732686625
     },
-    "Extras/Templates/textgenerator模板/prompts/dalle-2/artBanksy.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 10,
-      "pageCount": 0.03333333333333333,
-      "characterCount": 515,
-      "nonWhitespaceCharacterCount": 439,
-      "createdDate": 1677732686777,
-      "modifiedDate": 1677732686786
-    },
     "Extras/Templates/textgenerator模板/prompts/dalle-2/artBallPointPen.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18945,6 +18975,16 @@
       "nonWhitespaceCharacterCount": 452,
       "createdDate": 1677732686678,
       "modifiedDate": 1677732686687
+    },
+    "Extras/Templates/textgenerator模板/prompts/dalle-2/artBanksy.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 515,
+      "nonWhitespaceCharacterCount": 439,
+      "createdDate": 1677732686777,
+      "modifiedDate": 1677732686786
     },
     "Extras/Templates/textgenerator模板/prompts/dalle-2/artAnime.md": {
       "isDirectory": false,
@@ -19086,7 +19126,17 @@
       "createdDate": 1662609615000,
       "modifiedDate": 1662609615000
     },
-    "Extras/Templates/ChatGPT_MD/templates/未命名.md": {
+    "Extras/Templates/ChatGPT_MD/templates/发散思维.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 528,
+      "pageCount": 1.76,
+      "characterCount": 984,
+      "nonWhitespaceCharacterCount": 898,
+      "createdDate": 1680869118495,
+      "modifiedDate": 1680869433004
+    },
+    "Extras/Templates/ChatGPT_MD/templates/默认模板.md": {
       "isDirectory": false,
       "noteCount": 1,
       "wordCount": 8,
@@ -19095,26 +19145,6 @@
       "nonWhitespaceCharacterCount": 160,
       "createdDate": 1678514901745,
       "modifiedDate": 1678514908352
-    },
-    "Extras/Templates/Cards模板/Sources&Spaces卡片_标准模板.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 49,
-      "pageCount": 0.16333333333333333,
-      "characterCount": 148,
-      "nonWhitespaceCharacterCount": 129,
-      "createdDate": 1662609590000,
-      "modifiedDate": 1662609590000
-    },
-    "Extras/Templates/Cards模板/Card卡片_标准模板.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 63,
-      "pageCount": 0.21,
-      "characterCount": 224,
-      "nonWhitespaceCharacterCount": 188,
-      "createdDate": 1662609608000,
-      "modifiedDate": 1662609608000
     },
     "Extras/Templates/Calendar模板/文章发布模板/文章草稿-模板.md": {
       "isDirectory": false,
@@ -19476,16 +19506,6 @@
       "createdDate": 1662619910000,
       "modifiedDate": 1678806763354
     },
-    "Cards/永久笔记/🧑胡森.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 32,
-      "pageCount": 0.10666666666666667,
-      "characterCount": 100,
-      "nonWhitespaceCharacterCount": 88,
-      "createdDate": 1663840223000,
-      "modifiedDate": 1678806763406
-    },
     "Cards/永久笔记/🧑苏格拉底.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -19495,6 +19515,16 @@
       "nonWhitespaceCharacterCount": 63,
       "createdDate": 1662609661000,
       "modifiedDate": 1678806763400
+    },
+    "Cards/永久笔记/🧑胡森.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 32,
+      "pageCount": 0.10666666666666667,
+      "characterCount": 100,
+      "nonWhitespaceCharacterCount": 88,
+      "createdDate": 1663840223000,
+      "modifiedDate": 1678806763406
     },
     "Cards/永久笔记/🧑罗翔.md": {
       "isDirectory": false,
@@ -20206,16 +20236,6 @@
       "createdDate": 1672227688000,
       "modifiedDate": 1678806763876
     },
-    "Cards/永久笔记/麦特卡夫定律.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 175,
-      "pageCount": 0.5833333333333334,
-      "characterCount": 350,
-      "nonWhitespaceCharacterCount": 312,
-      "createdDate": 1663755223000,
-      "modifiedDate": 1678806763910
-    },
     "Cards/永久笔记/🐤OG.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -20245,6 +20265,16 @@
       "nonWhitespaceCharacterCount": 271,
       "createdDate": 1671969766000,
       "modifiedDate": 1678806763887
+    },
+    "Cards/永久笔记/麦特卡夫定律.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 175,
+      "pageCount": 0.5833333333333334,
+      "characterCount": 350,
+      "nonWhitespaceCharacterCount": 312,
+      "createdDate": 1663755223000,
+      "modifiedDate": 1678806763910
     },
     "Cards/永久笔记/鸟尽弓藏.md": {
       "isDirectory": false,
@@ -21776,16 +21806,6 @@
       "createdDate": 1662609648000,
       "modifiedDate": 1678806765056
     },
-    "Cards/永久笔记/短信转发器.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 217,
-      "pageCount": 0.7233333333333334,
-      "characterCount": 671,
-      "nonWhitespaceCharacterCount": 610,
-      "createdDate": 1662609663000,
-      "modifiedDate": 1678806765062
-    },
     "Cards/永久笔记/知识笔记库开源.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -21795,6 +21815,16 @@
       "nonWhitespaceCharacterCount": 212,
       "createdDate": 1662609657000,
       "modifiedDate": 1678806765065
+    },
+    "Cards/永久笔记/短信转发器.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 217,
+      "pageCount": 0.7233333333333334,
+      "characterCount": 671,
+      "nonWhitespaceCharacterCount": 610,
+      "createdDate": 1662609663000,
+      "modifiedDate": 1678806765062
     },
     "Cards/永久笔记/真实庭审解说.md": {
       "isDirectory": false,
@@ -22246,16 +22276,6 @@
       "createdDate": 1663755219000,
       "modifiedDate": 1678806765429
     },
-    "Cards/永久笔记/沙拉查词.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 10,
-      "pageCount": 0.03333333333333333,
-      "characterCount": 71,
-      "nonWhitespaceCharacterCount": 61,
-      "createdDate": 1662609667000,
-      "modifiedDate": 1678806765441
-    },
     "Cards/永久笔记/沉浸式翻译.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -22265,6 +22285,16 @@
       "nonWhitespaceCharacterCount": 0,
       "createdDate": 1679912577040,
       "modifiedDate": 1679912577040
+    },
+    "Cards/永久笔记/沙拉查词.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 71,
+      "nonWhitespaceCharacterCount": 61,
+      "createdDate": 1662609667000,
+      "modifiedDate": 1678806765441
     },
     "Cards/永久笔记/沉没成本.md": {
       "isDirectory": false,
@@ -28246,16 +28276,6 @@
       "createdDate": 1672753805000,
       "modifiedDate": 1678806772275
     },
-    "Cards/永久笔记/Golang.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 65,
-      "pageCount": 0.21666666666666667,
-      "characterCount": 440,
-      "nonWhitespaceCharacterCount": 375,
-      "createdDate": 1662609658000,
-      "modifiedDate": 1678806772295
-    },
     "Cards/永久笔记/Gmail.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -28265,6 +28285,16 @@
       "nonWhitespaceCharacterCount": 76,
       "createdDate": 1677918207486,
       "modifiedDate": 1678806762887
+    },
+    "Cards/永久笔记/Golang.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 65,
+      "pageCount": 0.21666666666666667,
+      "characterCount": 440,
+      "nonWhitespaceCharacterCount": 375,
+      "createdDate": 1662609658000,
+      "modifiedDate": 1678806772295
     },
     "Cards/永久笔记/Gmail 过滤器用法.md": {
       "isDirectory": false,
@@ -28465,16 +28495,6 @@
       "nonWhitespaceCharacterCount": 78,
       "createdDate": 1662619911000,
       "modifiedDate": 1678806772510
-    },
-    "Cards/永久笔记/Bilibili.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680331029814,
-      "modifiedDate": 1680331029814
     },
     "Cards/永久笔记/BetterTouchTool.md": {
       "isDirectory": false,
@@ -28966,16 +28986,6 @@
       "createdDate": 1670773949000,
       "modifiedDate": 1678806773014
     },
-    "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 1670,
-      "pageCount": 5.566666666666666,
-      "characterCount": 4214,
-      "nonWhitespaceCharacterCount": 3946,
-      "createdDate": 1663751681000,
-      "modifiedDate": 1678806773016
-    },
     "Calendar/已发布文章/2022年7月，obsidian 依然必装的 10 个插件.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -28985,6 +28995,16 @@
       "nonWhitespaceCharacterCount": 2111,
       "createdDate": 1673448778000,
       "modifiedDate": 1678806773018
+    },
+    "Calendar/已发布文章/Obsidian 最优雅的多端同步插件LiveSync.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 1670,
+      "pageCount": 5.566666666666666,
+      "characterCount": 4214,
+      "nonWhitespaceCharacterCount": 3946,
+      "createdDate": 1663751681000,
+      "modifiedDate": 1678806773016
     },
     "Calendar/已发布帖子/自荐obsidian开源库和发布站.md": {
       "isDirectory": false,
@@ -29015,6 +29035,36 @@
       "nonWhitespaceCharacterCount": 86,
       "createdDate": 1662609585000,
       "modifiedDate": 1678806782397
+    },
+    "Calendar/Daily notes/2023-04-02.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680370460342,
+      "modifiedDate": 1680370460342
+    },
+    "Calendar/Daily notes/2023-04-05.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 55,
+      "pageCount": 0.18333333333333332,
+      "characterCount": 96,
+      "nonWhitespaceCharacterCount": 94,
+      "createdDate": 1680682132790,
+      "modifiedDate": 1680693290031
+    },
+    "Calendar/Daily notes/2023-04-07.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680841204695,
+      "modifiedDate": 1680841204695
     },
     "Calendar/Daily notes/鼻子呼吸.md": {
       "isDirectory": false,
@@ -29055,16 +29105,6 @@
       "nonWhitespaceCharacterCount": 1035,
       "createdDate": 1680334333856,
       "modifiedDate": 1680338992793
-    },
-    "Calendar/Daily notes/2023-04-02.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680370460342,
-      "modifiedDate": 1680370460342
     },
     "Calendar/Daily notes/男性脱发只有2个药物有用，其他都是智商税.md": {
       "isDirectory": false,
@@ -31486,16 +31526,6 @@
       "createdDate": 1662609591000,
       "modifiedDate": 1678806781376
     },
-    "Calendar/Daily notes/2023-04-07.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680841204695,
-      "modifiedDate": 1680841204695
-    },
     "Calendar/Daily notes/2023-04-06.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -31505,16 +31535,6 @@
       "nonWhitespaceCharacterCount": 941,
       "createdDate": 1680770720958,
       "modifiedDate": 1680841197251
-    },
-    "Calendar/Daily notes/2023-04-05.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 55,
-      "pageCount": 0.18333333333333332,
-      "characterCount": 96,
-      "nonWhitespaceCharacterCount": 94,
-      "createdDate": 1680682132790,
-      "modifiedDate": 1680693290031
     },
     "Calendar/Daily notes/2023-04-04.md": {
       "isDirectory": false,
@@ -31911,10 +31931,10 @@
       "noteCount": 1,
       "wordCount": 65,
       "pageCount": 0.21666666666666667,
-      "characterCount": 5118,
-      "nonWhitespaceCharacterCount": 4245,
+      "characterCount": 5120,
+      "nonWhitespaceCharacterCount": 4247,
       "createdDate": 1662609655000,
-      "modifiedDate": 1678806782655
+      "modifiedDate": 1680863082824
     },
     "Atlas/Draws/白板 2023-03-11.md": {
       "isDirectory": false,
