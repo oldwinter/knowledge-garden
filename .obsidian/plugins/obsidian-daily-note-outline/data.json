@@ -2,7 +2,13 @@
   "initialSearchType": "backward",
   "offset": 7,
   "onset": "2020-03-30",
-  "duration": 14,
+  "duration": {
+    "day": 28,
+    "week": 12,
+    "month": 12,
+    "quarter": 8,
+    "year": 3
+  },
   "showElements": {
     "heading": true,
     "link": true,
@@ -75,5 +81,8 @@
     "taskDone": ""
   },
   "repeatHeadingPrefix": "none",
-  "addCheckboxText": false
+  "addCheckboxText": false,
+  "periodicNotesEnabled": false,
+  "calendarSetsEnabled": false,
+  "attachWeeklyNotesName": true
 }

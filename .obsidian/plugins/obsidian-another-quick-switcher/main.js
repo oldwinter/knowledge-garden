@@ -3673,42 +3673,43 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     return this.suggestions;
   }
   renderSuggestion(item, el) {
+    var _a;
+    const previousPath = (_a = this.suggestions[item.order - 1]) == null ? void 0 : _a.file.path;
+    const sameFileWithPrevious = previousPath === item.file.path;
     const itemDiv = createDiv({
       cls: "another-quick-switcher__item"
     });
     const entryDiv = createDiv({
       cls: "another-quick-switcher__item__entry"
     });
-    const titleDiv = createDiv({
-      cls: "another-quick-switcher__item__title",
-      text: item.file.basename
-    });
-    entryDiv.appendChild(titleDiv);
-    if (item.order < 9) {
-      const hotKeyGuide = createSpan({
-        cls: "another-quick-switcher__item__hot-key-guide",
-        text: `${item.order + 1}`
+    if (!sameFileWithPrevious) {
+      const titleDiv = createDiv({
+        cls: [
+          "another-quick-switcher__item__title",
+          "another-quick-switcher__grep__item__title_entry"
+        ],
+        text: item.file.basename
       });
-      entryDiv.appendChild(hotKeyGuide);
-    }
-    itemDiv.appendChild(entryDiv);
-    if (this.settings.showDirectory) {
-      const directoryDiv = createDiv({
-        cls: "another-quick-switcher__item__directory"
-      });
-      directoryDiv.insertAdjacentHTML("beforeend", FOLDER);
-      const text = this.settings.showFullPathOfDirectory ? item.file.parent.path : item.file.parent.name;
-      directoryDiv.appendText(` ${text}`);
-      entryDiv.appendChild(directoryDiv);
-      if (this.settings.showDirectoryAtNewLine) {
-        itemDiv.appendChild(directoryDiv);
+      entryDiv.appendChild(titleDiv);
+      itemDiv.appendChild(entryDiv);
+      if (this.settings.showDirectory) {
+        const directoryDiv = createDiv({
+          cls: "another-quick-switcher__item__directory"
+        });
+        directoryDiv.insertAdjacentHTML("beforeend", FOLDER);
+        const text = this.settings.showFullPathOfDirectory ? item.file.parent.path : item.file.parent.name;
+        directoryDiv.appendText(` ${text}`);
+        entryDiv.appendChild(directoryDiv);
+        if (this.settings.showDirectoryAtNewLine) {
+          itemDiv.appendChild(directoryDiv);
+        }
       }
     }
     const descriptionsDiv = createDiv({
       cls: "another-quick-switcher__item__descriptions"
     });
     const descriptionDiv = createDiv({
-      cls: "another-quick-switcher__item__description"
+      cls: "another-quick-switcher__grep__item__description"
     });
     let restLine = item.line;
     item.submatches.forEach((x) => {
@@ -3725,6 +3726,13 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     descriptionDiv.createSpan({
       text: restLine
     });
+    if (item.order < 9) {
+      const hotKeyGuide = createSpan({
+        cls: "another-quick-switcher__grep__item__hot-key-guide",
+        text: `${item.order + 1}`
+      });
+      descriptionsDiv.appendChild(hotKeyGuide);
+    }
     descriptionsDiv.appendChild(descriptionDiv);
     itemDiv.appendChild(descriptionsDiv);
     el.appendChild(itemDiv);

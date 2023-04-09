@@ -760,7 +760,7 @@ var require_react_development = __commonJS({
           }
           return children;
         }
-        function createContext3(defaultValue) {
+        function createContext4(defaultValue) {
           var context = {
             $$typeof: REACT_CONTEXT_TYPE,
             _currentValue: defaultValue,
@@ -1032,7 +1032,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher;
         }
-        function useContext6(Context) {
+        function useContext7(Context) {
           var dispatcher = resolveDispatcher();
           {
             if (Context._context !== void 0) {
@@ -1046,7 +1046,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState6(initialState3) {
+        function useState7(initialState3) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState3);
         }
@@ -1054,7 +1054,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef8(initialValue) {
+        function useRef7(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -1824,7 +1824,7 @@ var require_react_development = __commonJS({
         exports.Suspense = REACT_SUSPENSE_TYPE;
         exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals;
         exports.cloneElement = cloneElement$1;
-        exports.createContext = createContext3;
+        exports.createContext = createContext4;
         exports.createElement = createElement$1;
         exports.createFactory = createFactory;
         exports.createRef = createRef;
@@ -1835,7 +1835,7 @@ var require_react_development = __commonJS({
         exports.startTransition = startTransition;
         exports.unstable_act = act;
         exports.useCallback = useCallback;
-        exports.useContext = useContext6;
+        exports.useContext = useContext7;
         exports.useDebugValue = useDebugValue3;
         exports.useDeferredValue = useDeferredValue;
         exports.useEffect = useEffect7;
@@ -1845,8 +1845,8 @@ var require_react_development = __commonJS({
         exports.useLayoutEffect = useLayoutEffect2;
         exports.useMemo = useMemo4;
         exports.useReducer = useReducer;
-        exports.useRef = useRef8;
-        exports.useState = useState6;
+        exports.useRef = useRef7;
+        exports.useState = useState7;
         exports.useSyncExternalStore = useSyncExternalStore3;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -22983,7 +22983,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           return x2 === y2 && (x2 !== 0 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
-        var useState6 = React10.useState, useEffect7 = React10.useEffect, useLayoutEffect2 = React10.useLayoutEffect, useDebugValue3 = React10.useDebugValue;
+        var useState7 = React10.useState, useEffect7 = React10.useEffect, useLayoutEffect2 = React10.useLayoutEffect, useDebugValue3 = React10.useDebugValue;
         var didWarnOld18Alpha = false;
         var didWarnUncachedGetSnapshot = false;
         function useSyncExternalStore3(subscribe, getSnapshot, getServerSnapshot) {
@@ -23005,7 +23005,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
               }
             }
           }
-          var _useState = useState6({
+          var _useState = useState7({
             inst: {
               value,
               getSnapshot
@@ -23093,9 +23093,9 @@ var require_with_selector_development = __commonJS({
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
         var useSyncExternalStore3 = shim.useSyncExternalStore;
-        var useRef8 = React10.useRef, useEffect7 = React10.useEffect, useMemo4 = React10.useMemo, useDebugValue3 = React10.useDebugValue;
+        var useRef7 = React10.useRef, useEffect7 = React10.useEffect, useMemo4 = React10.useMemo, useDebugValue3 = React10.useDebugValue;
         function useSyncExternalStoreWithSelector3(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
-          var instRef = useRef8(null);
+          var instRef = useRef7(null);
           var inst;
           if (instRef.current === null) {
             inst = {
@@ -24481,11 +24481,11 @@ var require_react_jsx_runtime_development = __commonJS({
             return jsxWithValidation(type, props, key, false);
           }
         }
-        var jsx51 = jsxWithValidationDynamic;
-        var jsxs25 = jsxWithValidationStatic;
+        var jsx55 = jsxWithValidationDynamic;
+        var jsxs23 = jsxWithValidationStatic;
         exports.Fragment = REACT_FRAGMENT_TYPE;
-        exports.jsx = jsx51;
-        exports.jsxs = jsxs25;
+        exports.jsx = jsx55;
+        exports.jsxs = jsxs23;
       })();
     }
   }
@@ -28787,7 +28787,7 @@ var require_emotion_react_cjs_dev = __commonJS({
         }
       }
     };
-    var jsx51 = function jsx52(type, props) {
+    var jsx55 = function jsx56(type, props) {
       var args = arguments;
       if (props == null || !emotionElement.hasOwnProperty.call(props, "css")) {
         return React10.createElement.apply(void 0, args);
@@ -29036,9 +29036,9 @@ var require_emotion_react_cjs_dev = __commonJS({
     exports.withTheme = emotionElement.withTheme;
     exports.ClassNames = ClassNames;
     exports.Global = Global;
-    exports.createElement = jsx51;
+    exports.createElement = jsx55;
     exports.css = css;
-    exports.jsx = jsx51;
+    exports.jsx = jsx55;
     exports.keyframes = keyframes;
   }
 });
@@ -43841,60 +43841,284 @@ initializeConnect(import_shim.useSyncExternalStore);
 setBatch(import_react_dom.unstable_batchedUpdates);
 
 // src/App.tsx
-var import_react18 = __toESM(require_react());
+var import_react19 = __toESM(require_react());
 
-// src/components/Table/index.tsx
+// src/services/tableState/useTableState.tsx
+var import_react8 = __toESM(require_react());
 var import_jsx_runtime = __toESM(require_jsx_runtime());
-var TableRow = ({ row, isHeader = false }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tr", {
+var TableStateContext = (0, import_react8.createContext)(null);
+var useTableState = () => {
+  const value = (0, import_react8.useContext)(TableStateContext);
+  if (value === null) {
+    throw new Error(
+      "useTableState() called without a <ThemeProvider /> in the tree."
+    );
+  }
+  return value;
+};
+function TableStateProvider({ initialState: initialState3, children }) {
+  const [tableState, setTableState] = (0, import_react8.useState)(initialState3);
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableStateContext.Provider, {
+    value: [tableState, setTableState],
+    children
+  });
+}
+
+// src/services/tableState/types.ts
+var CellType = /* @__PURE__ */ ((CellType3) => {
+  CellType3["TEXT"] = "text";
+  CellType3["NUMBER"] = "number";
+  CellType3["CURRENCY"] = "currency";
+  CellType3["TAG"] = "tag";
+  CellType3["MULTI_TAG"] = "multi-tag";
+  CellType3["DATE"] = "date";
+  CellType3["CHECKBOX"] = "checkbox";
+  CellType3["CREATION_TIME"] = "creation-time";
+  CellType3["LAST_EDITED_TIME"] = "last-edited-time";
+  return CellType3;
+})(CellType || {});
+var DateFormat = /* @__PURE__ */ ((DateFormat6) => {
+  DateFormat6["MM_DD_YYYY"] = "mm/dd/yyyy";
+  DateFormat6["DD_MM_YYYY"] = "dd/mm/yyyy";
+  DateFormat6["YYYY_MM_DD"] = "yyyy/mm/dd";
+  DateFormat6["FULL"] = "full";
+  DateFormat6["RELATIVE"] = "relative";
+  return DateFormat6;
+})(DateFormat || {});
+var CurrencyType = /* @__PURE__ */ ((CurrencyType6) => {
+  CurrencyType6["UNITED_STATES"] = "USD";
+  CurrencyType6["CANADA"] = "CAD";
+  CurrencyType6["SINGAPORE"] = "SGB";
+  CurrencyType6["EUROPE"] = "EUR";
+  CurrencyType6["POUND"] = "GBP";
+  CurrencyType6["RUSSIA"] = "RUB";
+  CurrencyType6["AUSTRALIA"] = "AUD";
+  CurrencyType6["JAPAN"] = "JPY";
+  CurrencyType6["INDIA"] = "INR";
+  CurrencyType6["CHINA"] = "CNY";
+  CurrencyType6["BRAZIL"] = "BRL";
+  CurrencyType6["COLOMBIA"] = "COP";
+  CurrencyType6["MEXICO"] = "MXN";
+  CurrencyType6["ARGENTINA"] = "ARS";
+  return CurrencyType6;
+})(CurrencyType || {});
+
+// src/services/tableState/utils.ts
+var sortCells = (columns, rows, cells) => {
+  return rows.map((row) => {
+    return cells.filter((c2) => c2.rowId === row.id);
+  }).map((row) => {
+    return row.sort((a2, b2) => {
+      const indexA = columns.findIndex(
+        (column) => column.id === a2.columnId
+      );
+      const indexB = columns.findIndex(
+        (column) => column.id === b2.columnId
+      );
+      return indexA - indexB;
+    });
+  }).flat(1);
+};
+var getDisplayNameForDateFormat = (format) => {
+  switch (format) {
+    case "dd/mm/yyyy" /* DD_MM_YYYY */:
+      return "Day/Month/Year";
+    case "mm/dd/yyyy" /* MM_DD_YYYY */:
+      return "Month/Day/Year";
+    case "yyyy/mm/dd" /* YYYY_MM_DD */:
+      return "Year/Month/Day";
+    case "full" /* FULL */:
+      return "Full";
+    case "relative" /* RELATIVE */:
+      return "Relative";
+    default:
+      return "";
+  }
+};
+var getDisplayNameForCurrencyType = (type) => {
+  switch (type) {
+    case "USD" /* UNITED_STATES */:
+      return "United States Dollar";
+    case "CAD" /* CANADA */:
+      return "Canadian Dollar";
+    case "AUD" /* AUSTRALIA */:
+      return "Australian Dollar";
+    case "SGB" /* SINGAPORE */:
+      return "Singapore Dollar";
+    case "CNY" /* CHINA */:
+      return "Yuan";
+    case "JPY" /* JAPAN */:
+      return "Yen";
+    case "COP" /* COLOMBIA */:
+      return "Colombian Peso";
+    case "EUR" /* EUROPE */:
+      return "Euro";
+    case "BRL" /* BRAZIL */:
+      return "Real";
+    case "GBP" /* POUND */:
+      return "Pound";
+    case "INR" /* INDIA */:
+      return "Rupee";
+    case "ARS" /* ARGENTINA */:
+      return "Argentine Peso";
+    case "MXN" /* MEXICO */:
+      return "Mexican Peso";
+    case "RUB" /* RUSSIA */:
+      return "Ruble";
+    default:
+      return "";
+  }
+};
+var getDisplayNameForCellType = (type) => {
+  switch (type) {
+    case "text" /* TEXT */:
+      return "Text";
+    case "number" /* NUMBER */:
+      return "Number";
+    case "checkbox" /* CHECKBOX */:
+      return "Checkbox";
+    case "date" /* DATE */:
+      return "Date";
+    case "last-edited-time" /* LAST_EDITED_TIME */:
+      return "Last edited";
+    case "creation-time" /* CREATION_TIME */:
+      return "Creation";
+    case "tag" /* TAG */:
+      return "Tag";
+    case "multi-tag" /* MULTI_TAG */:
+      return "Multi-tag";
+    case "currency" /* CURRENCY */:
+      return "Currency";
+    default:
+      return "";
+  }
+};
+
+// src/components/Table/components/TableHeaderRow/components/TableHeaderCell/index.tsx
+var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+function TableHeaderCell({
+  columnId,
+  content,
+  isDraggable
+}) {
+  const [, setTableState] = useTableState();
+  function handleDragStart(e) {
+    const el = e.target;
+    const columnId2 = el.getAttr("data-column-id");
+    if (!columnId2)
+      throw new Error("data-column-id is required for a header cell");
+    e.dataTransfer.setData("text", columnId2);
+  }
+  function handleDrop(e) {
+    e.preventDefault();
+    const draggedId = e.dataTransfer.getData("text");
+    const targetId = e.currentTarget.getAttr(
+      "data-column-id"
+    );
+    if (!targetId)
+      throw new Error("data-column-id is required for a header cell");
+    setTableState((prevState) => {
+      const { columns, rows, cells } = prevState.model;
+      const columnsCopy = [...columns];
+      const draggedElIndex = columns.findIndex(
+        (column) => column.id === draggedId
+      );
+      const targetElIndex = columns.findIndex(
+        (column) => column.id == targetId
+      );
+      let temp = columnsCopy[targetElIndex];
+      columnsCopy[targetElIndex] = columnsCopy[draggedElIndex];
+      columnsCopy[draggedElIndex] = temp;
+      const updatedCells = sortCells(columnsCopy, rows, cells);
+      return __spreadProps(__spreadValues({}, prevState), {
+        model: __spreadProps(__spreadValues({}, prevState.model), {
+          columns: columnsCopy,
+          cells: updatedCells
+        })
+      });
+    });
+  }
+  function handleDragOver(e) {
+    e.preventDefault();
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("th", __spreadProps(__spreadValues({
+    className: "NLT__th",
+    "data-column-id": columnId
+  }, isDraggable && {
+    draggable: true,
+    onDrop: handleDrop,
+    onDragStart: handleDragStart,
+    onDragOver: handleDragOver
+  }), {
+    children: content
+  }));
+}
+
+// src/components/Table/components/TableHeaderRow/index.tsx
+var import_jsx_runtime3 = __toESM(require_jsx_runtime());
+var TableHeaderRow = ({ row }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("tr", {
+    id: row.id,
     className: "NLT__tr",
-    children: row.cells.map((cell) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+    children: row.cells.map((cell, i2) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(TableHeaderCell, {
+      columnId: cell.columnId,
       content: cell.content,
-      isHeader
+      isDraggable: i2 < row.cells.length - 1
     }, cell.id))
   });
 };
-var TableCell = ({ content, isHeader }) => {
-  if (isHeader) {
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("th", {
-      className: "NLT__th",
-      children: content
-    });
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("td", {
+
+// src/components/Table/components/TableRow/components/TableCell/index.tsx
+var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+function TableCell({ content }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("td", {
     className: "NLT__td",
     children: content
   });
+}
+
+// src/components/Table/components/TableRow/index.tsx
+var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+var TableRow = ({ row }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("tr", {
+    id: row.id,
+    className: "NLT__tr",
+    children: row.cells.map((cell) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TableCell, {
+      content: cell.content
+    }, cell.id))
+  });
 };
-function Table({ headers, rows, footers }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("table", {
+
+// src/components/Table/index.tsx
+var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+function Table({ headerRows, bodyRows, footerRows }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("table", {
     className: "NLT__table",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("thead", {
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("thead", {
         className: "NLT__thead",
-        children: headers.map((header) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableRow, {
-          row: header,
-          isHeader: true
-        }, header.id))
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tbody", {
-        className: "NLT__tbody",
-        children: rows.map((row) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableRow, {
+        children: headerRows.map((row) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TableHeaderRow, {
           row
         }, row.id))
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("tfoot", {
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("tbody", {
+        className: "NLT__tbody",
+        children: bodyRows.map((row) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TableRow, {
+          row
+        }, row.id))
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("tfoot", {
         className: "NLT__tfoot",
-        children: footers.map((footer) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableRow, {
-          row: footer
-        }, footer.id))
+        children: footerRows.map((row) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TableRow, {
+          row
+        }, row.id))
       })
     ]
   });
 }
 
 // src/components/Menu/index.tsx
-var import_react8 = __toESM(require_react());
+var import_react9 = __toESM(require_react());
 var import_react_dom2 = __toESM(require_react_dom());
 
 // src/services/redux/hooks.ts
@@ -43920,22 +44144,9 @@ var stringToCurrencyString = (value, type) => {
     currency: type
   }).format(parseFloat(value));
 };
-var dateTimeToString = (dateTime) => {
-  const date = new Date(dateTime);
-  const dateString = date.toLocaleString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true
-  });
-  const commaIndex = dateString.lastIndexOf(",");
-  return dateString.substring(0, commaIndex) + dateString.substring(commaIndex + 1);
-};
 
 // src/components/Menu/index.tsx
-var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+var import_jsx_runtime7 = __toESM(require_jsx_runtime());
 function Menu({
   id,
   isOpen,
@@ -43951,7 +44162,9 @@ function Menu({
   const dispatch = useAppDispatch();
   function handleKeyUp(e) {
     if (e.code === "Escape" || e.code === "Enter") {
-      dispatch(closeTopLevelMenu());
+      if (!e.shiftKey) {
+        dispatch(closeTopLevelMenu());
+      }
     }
   }
   function handleMouseDown(e) {
@@ -43962,7 +44175,7 @@ function Menu({
       }
     }
   }
-  (0, import_react8.useEffect)(() => {
+  (0, import_react9.useEffect)(() => {
     if (isOpen) {
       window.addEventListener("keyup", handleKeyUp);
       window.addEventListener("mousedown", handleMouseDown);
@@ -43980,12 +44193,12 @@ function Menu({
       maxW = numToPx(maxWidth2);
     }
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_jsx_runtime2.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_jsx_runtime7.Fragment, {
     children: isOpen && import_react_dom2.default.createPortal(
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", {
         className: "NLT__menu",
         id,
-        children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", {
+        children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", {
           className: "NLT__menu-container",
           style: {
             top: numToPx(top2),
@@ -46155,8 +46368,8 @@ function getSvgIconUtilityClass(slot) {
 var svgIconClasses = generateUtilityClasses("MuiSvgIcon", ["root", "colorPrimary", "colorSecondary", "colorAction", "colorError", "colorDisabled", "fontSizeInherit", "fontSizeSmall", "fontSizeMedium", "fontSizeLarge"]);
 
 // node_modules/@mui/material/esm/SvgIcon/SvgIcon.js
-var import_jsx_runtime3 = __toESM(require_jsx_runtime());
-var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+var import_jsx_runtime8 = __toESM(require_jsx_runtime());
+var import_jsx_runtime9 = __toESM(require_jsx_runtime());
 var _excluded9 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
 var useUtilityClasses = (ownerState) => {
   const {
@@ -46235,7 +46448,7 @@ var SvgIcon = /* @__PURE__ */ React6.forwardRef(function SvgIcon2(inProps, ref) 
     more.viewBox = viewBox;
   }
   const classes = useUtilityClasses(ownerState);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(SvgIconRoot, _extends({
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(SvgIconRoot, _extends({
     as: component,
     className: clsx_m_default(classes.root, className),
     ownerState,
@@ -46245,7 +46458,7 @@ var SvgIcon = /* @__PURE__ */ React6.forwardRef(function SvgIcon2(inProps, ref) 
     role: titleAccess ? "img" : void 0,
     ref
   }, more, other, {
-    children: [children, titleAccess ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("title", {
+    children: [children, titleAccess ? /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("title", {
       children: titleAccess
     }) : null]
   }));
@@ -46268,9 +46481,9 @@ SvgIcon.muiName = "SvgIcon";
 var SvgIcon_default = SvgIcon;
 
 // node_modules/@mui/material/esm/utils/createSvgIcon.js
-var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+var import_jsx_runtime10 = __toESM(require_jsx_runtime());
 function createSvgIcon(path, displayName) {
-  const Component = (props, ref) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(SvgIcon_default, _extends({
+  const Component = (props, ref) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(SvgIcon_default, _extends({
     "data-testid": `${displayName}Icon`,
     ref
   }, props, {
@@ -46283,316 +46496,326 @@ function createSvgIcon(path, displayName) {
   return /* @__PURE__ */ React7.memo(/* @__PURE__ */ React7.forwardRef(Component));
 }
 
+// node_modules/@mui/icons-material/esm/Add.js
+var import_jsx_runtime11 = __toESM(require_jsx_runtime());
+var Add_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime11.jsx)("path", {
+  d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+}), "Add");
+
 // node_modules/@mui/icons-material/esm/ArrowDownward.js
-var import_jsx_runtime6 = __toESM(require_jsx_runtime());
-var ArrowDownward_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime6.jsx)("path", {
+var import_jsx_runtime12 = __toESM(require_jsx_runtime());
+var ArrowDownward_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime12.jsx)("path", {
   d: "m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
 }), "ArrowDownward");
 
 // node_modules/@mui/icons-material/esm/ArrowUpward.js
-var import_jsx_runtime7 = __toESM(require_jsx_runtime());
-var ArrowUpward_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime7.jsx)("path", {
+var import_jsx_runtime13 = __toESM(require_jsx_runtime());
+var ArrowUpward_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime13.jsx)("path", {
   d: "m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
 }), "ArrowUpward");
 
 // node_modules/@mui/icons-material/esm/CalendarTodayOutlined.js
-var import_jsx_runtime8 = __toESM(require_jsx_runtime());
-var CalendarTodayOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime8.jsx)("path", {
+var import_jsx_runtime14 = __toESM(require_jsx_runtime());
+var CalendarTodayOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime14.jsx)("path", {
   d: "M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z"
 }), "CalendarTodayOutlined");
 
 // node_modules/@mui/icons-material/esm/CheckBoxOutlined.js
-var import_jsx_runtime9 = __toESM(require_jsx_runtime());
-var CheckBoxOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime9.jsx)("path", {
+var import_jsx_runtime15 = __toESM(require_jsx_runtime());
+var CheckBoxOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime15.jsx)("path", {
   d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM17.99 9l-1.41-1.42-6.59 6.59-2.58-2.57-1.42 1.41 4 3.99z"
 }), "CheckBoxOutlined");
 
 // node_modules/@mui/icons-material/esm/Close.js
-var import_jsx_runtime10 = __toESM(require_jsx_runtime());
-var Close_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime10.jsx)("path", {
+var import_jsx_runtime16 = __toESM(require_jsx_runtime());
+var Close_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime16.jsx)("path", {
   d: "M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
 }), "Close");
 
 // node_modules/@mui/icons-material/esm/DeleteOutline.js
-var import_jsx_runtime11 = __toESM(require_jsx_runtime());
-var DeleteOutline_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime11.jsx)("path", {
+var import_jsx_runtime17 = __toESM(require_jsx_runtime());
+var DeleteOutline_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime17.jsx)("path", {
   d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5-1-1h-5l-1 1H5v2h14V4z"
 }), "DeleteOutline");
 
 // node_modules/@mui/icons-material/esm/EditOutlined.js
-var import_jsx_runtime12 = __toESM(require_jsx_runtime());
-var EditOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime12.jsx)("path", {
+var import_jsx_runtime18 = __toESM(require_jsx_runtime());
+var EditOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime18.jsx)("path", {
   d: "m14.06 9.02.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"
 }), "EditOutlined");
 
 // node_modules/@mui/icons-material/esm/KeyboardArrowDown.js
-var import_jsx_runtime13 = __toESM(require_jsx_runtime());
-var KeyboardArrowDown_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime13.jsx)("path", {
+var import_jsx_runtime19 = __toESM(require_jsx_runtime());
+var KeyboardArrowDown_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime19.jsx)("path", {
   d: "M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
 }), "KeyboardArrowDown");
 
 // node_modules/@mui/icons-material/esm/KeyboardArrowLeft.js
-var import_jsx_runtime14 = __toESM(require_jsx_runtime());
-var KeyboardArrowLeft_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime14.jsx)("path", {
+var import_jsx_runtime20 = __toESM(require_jsx_runtime());
+var KeyboardArrowLeft_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime20.jsx)("path", {
   d: "M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
 }), "KeyboardArrowLeft");
 
 // node_modules/@mui/icons-material/esm/KeyboardArrowRight.js
-var import_jsx_runtime15 = __toESM(require_jsx_runtime());
-var KeyboardArrowRight_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime15.jsx)("path", {
+var import_jsx_runtime21 = __toESM(require_jsx_runtime());
+var KeyboardArrowRight_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime21.jsx)("path", {
   d: "M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
 }), "KeyboardArrowRight");
 
 // node_modules/@mui/icons-material/esm/KeyboardArrowUp.js
-var import_jsx_runtime16 = __toESM(require_jsx_runtime());
-var KeyboardArrowUp_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime16.jsx)("path", {
+var import_jsx_runtime22 = __toESM(require_jsx_runtime());
+var KeyboardArrowUp_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime22.jsx)("path", {
   d: "M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
 }), "KeyboardArrowUp");
 
 // node_modules/@mui/icons-material/esm/KeyboardBackspace.js
-var import_jsx_runtime17 = __toESM(require_jsx_runtime());
-var KeyboardBackspace_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime17.jsx)("path", {
+var import_jsx_runtime23 = __toESM(require_jsx_runtime());
+var KeyboardBackspace_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime23.jsx)("path", {
   d: "M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
 }), "KeyboardBackspace");
 
 // node_modules/@mui/icons-material/esm/KeyboardDoubleArrowDown.js
-var import_jsx_runtime18 = __toESM(require_jsx_runtime());
-var KeyboardDoubleArrowDown_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime18.jsx)("path", {
+var import_jsx_runtime24 = __toESM(require_jsx_runtime());
+var KeyboardDoubleArrowDown_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime24.jsx)("path", {
   d: "M18 6.41 16.59 5 12 9.58 7.41 5 6 6.41l6 6z"
-}, "0"), /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("path", {
+}, "0"), /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("path", {
   d: "m18 13-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z"
 }, "1")], "KeyboardDoubleArrowDown");
 
 // node_modules/@mui/icons-material/esm/KeyboardDoubleArrowLeft.js
-var import_jsx_runtime19 = __toESM(require_jsx_runtime());
-var KeyboardDoubleArrowLeft_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime19.jsx)("path", {
+var import_jsx_runtime25 = __toESM(require_jsx_runtime());
+var KeyboardDoubleArrowLeft_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime25.jsx)("path", {
   d: "M17.59 18 19 16.59 14.42 12 19 7.41 17.59 6l-6 6z"
-}, "0"), /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("path", {
+}, "0"), /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("path", {
   d: "m11 18 1.41-1.41L7.83 12l4.58-4.59L11 6l-6 6z"
 }, "1")], "KeyboardDoubleArrowLeft");
 
 // node_modules/@mui/icons-material/esm/KeyboardDoubleArrowRight.js
-var import_jsx_runtime20 = __toESM(require_jsx_runtime());
-var KeyboardDoubleArrowRight_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime20.jsx)("path", {
+var import_jsx_runtime26 = __toESM(require_jsx_runtime());
+var KeyboardDoubleArrowRight_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime26.jsx)("path", {
   d: "M6.41 6 5 7.41 9.58 12 5 16.59 6.41 18l6-6z"
-}, "0"), /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("path", {
+}, "0"), /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("path", {
   d: "m13 6-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6z"
 }, "1")], "KeyboardDoubleArrowRight");
 
 // node_modules/@mui/icons-material/esm/KeyboardDoubleArrowUp.js
-var import_jsx_runtime21 = __toESM(require_jsx_runtime());
-var KeyboardDoubleArrowUp_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime21.jsx)("path", {
+var import_jsx_runtime27 = __toESM(require_jsx_runtime());
+var KeyboardDoubleArrowUp_default = createSvgIcon([/* @__PURE__ */ (0, import_jsx_runtime27.jsx)("path", {
   d: "M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"
-}, "0"), /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("path", {
+}, "0"), /* @__PURE__ */ (0, import_jsx_runtime27.jsx)("path", {
   d: "m6 11 1.41 1.41L12 7.83l4.59 4.58L18 11l-6-6z"
 }, "1")], "KeyboardDoubleArrowUp");
 
 // node_modules/@mui/icons-material/esm/LabelOutlined.js
-var import_jsx_runtime22 = __toESM(require_jsx_runtime());
-var LabelOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime22.jsx)("path", {
+var import_jsx_runtime28 = __toESM(require_jsx_runtime());
+var LabelOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime28.jsx)("path", {
   d: "M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"
 }), "LabelOutlined");
 
 // node_modules/@mui/icons-material/esm/List.js
-var import_jsx_runtime23 = __toESM(require_jsx_runtime());
-var List_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime23.jsx)("path", {
+var import_jsx_runtime29 = __toESM(require_jsx_runtime());
+var List_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", {
   d: "M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"
 }), "List");
 
 // node_modules/@mui/icons-material/esm/MoreHoriz.js
-var import_jsx_runtime24 = __toESM(require_jsx_runtime());
-var MoreHoriz_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime24.jsx)("path", {
+var import_jsx_runtime30 = __toESM(require_jsx_runtime());
+var MoreHoriz_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime30.jsx)("path", {
   d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
 }), "MoreHoriz");
 
 // node_modules/@mui/icons-material/esm/MoreVert.js
-var import_jsx_runtime25 = __toESM(require_jsx_runtime());
-var MoreVert_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime25.jsx)("path", {
+var import_jsx_runtime31 = __toESM(require_jsx_runtime());
+var MoreVert_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime31.jsx)("path", {
   d: "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
 }), "MoreVert");
 
 // node_modules/@mui/icons-material/esm/MoveDownOutlined.js
-var import_jsx_runtime26 = __toESM(require_jsx_runtime());
-var MoveDownOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime26.jsx)("path", {
+var import_jsx_runtime32 = __toESM(require_jsx_runtime());
+var MoveDownOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime32.jsx)("path", {
   d: "M3 11c0 2.45 1.76 4.47 4.08 4.91l-1.49-1.49L7 13l4 4.01L7 21l-1.41-1.41 1.58-1.58v-.06C3.7 17.54 1 14.58 1 11c0-3.87 3.13-7 7-7h3v2H8c-2.76 0-5 2.24-5 5zm19 0V4h-9v7h9zm-2-2h-5V6h5v3zm-7 4h9v7h-9z"
 }), "MoveDownOutlined");
 
 // node_modules/@mui/icons-material/esm/MoveUpOutlined.js
-var import_jsx_runtime27 = __toESM(require_jsx_runtime());
-var MoveUpOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime27.jsx)("path", {
+var import_jsx_runtime33 = __toESM(require_jsx_runtime());
+var MoveUpOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime33.jsx)("path", {
   d: "M3 13c0-2.45 1.76-4.47 4.08-4.91l-1.49 1.5L7 11l4-4.01L7 3 5.59 4.41l1.58 1.58v.06C3.7 6.46 1 9.42 1 13c0 3.87 3.13 7 7 7h3v-2H8c-2.76 0-5-2.24-5-5zm10 0v7h9v-7h-9zm7 5h-5v-3h5v3zM13 4h9v7h-9z"
 }), "MoveUpOutlined");
 
 // node_modules/@mui/icons-material/esm/Notes.js
-var import_jsx_runtime28 = __toESM(require_jsx_runtime());
-var Notes_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime28.jsx)("path", {
+var import_jsx_runtime34 = __toESM(require_jsx_runtime());
+var Notes_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime34.jsx)("path", {
   d: "M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"
 }), "Notes");
 
 // node_modules/@mui/icons-material/esm/Numbers.js
-var import_jsx_runtime29 = __toESM(require_jsx_runtime());
-var Numbers_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime29.jsx)("path", {
+var import_jsx_runtime35 = __toESM(require_jsx_runtime());
+var Numbers_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime35.jsx)("path", {
   d: "m20.5 10 .5-2h-4l1-4h-2l-1 4h-4l1-4h-2L9 8H5l-.5 2h4l-1 4h-4L3 16h4l-1 4h2l1-4h4l-1 4h2l1-4h4l.5-2h-4l1-4h4zm-7 4h-4l1-4h4l-1 4z"
 }), "Numbers");
 
 // node_modules/@mui/icons-material/esm/PaymentsOutlined.js
-var import_jsx_runtime30 = __toESM(require_jsx_runtime());
-var PaymentsOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime30.jsx)("path", {
+var import_jsx_runtime36 = __toESM(require_jsx_runtime());
+var PaymentsOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime36.jsx)("path", {
   d: "M19 14V6c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-2 0H3V6h14v8zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm13 0v11c0 1.1-.9 2-2 2H4v-2h17V7h2z"
 }), "PaymentsOutlined");
 
 // node_modules/@mui/icons-material/esm/ScheduleOutlined.js
-var import_jsx_runtime31 = __toESM(require_jsx_runtime());
-var ScheduleOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime31.jsx)("path", {
+var import_jsx_runtime37 = __toESM(require_jsx_runtime());
+var ScheduleOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime37.jsx)("path", {
   d: "M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
 }), "ScheduleOutlined");
 
 // node_modules/@mui/icons-material/esm/Search.js
-var import_jsx_runtime32 = __toESM(require_jsx_runtime());
-var Search_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime32.jsx)("path", {
+var import_jsx_runtime38 = __toESM(require_jsx_runtime());
+var Search_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime38.jsx)("path", {
   d: "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
 }), "Search");
 
 // node_modules/@mui/icons-material/esm/Sort.js
-var import_jsx_runtime33 = __toESM(require_jsx_runtime());
-var Sort_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime33.jsx)("path", {
+var import_jsx_runtime39 = __toESM(require_jsx_runtime());
+var Sort_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime39.jsx)("path", {
   d: "M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"
 }), "Sort");
 
 // node_modules/@mui/icons-material/esm/TextSnippetOutlined.js
-var import_jsx_runtime34 = __toESM(require_jsx_runtime());
-var TextSnippetOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime34.jsx)("path", {
+var import_jsx_runtime40 = __toESM(require_jsx_runtime());
+var TextSnippetOutlined_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime40.jsx)("path", {
   d: "M14.17 5 19 9.83V19H5V5h9.17m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9.83c0-.53-.21-1.04-.59-1.41l-4.83-4.83c-.37-.38-.88-.59-1.41-.59zM7 15h10v2H7v-2zm0-4h10v2H7v-2zm0-4h7v2H7V7z"
 }), "TextSnippetOutlined");
 
 // node_modules/@mui/icons-material/esm/Tune.js
-var import_jsx_runtime35 = __toESM(require_jsx_runtime());
-var Tune_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime35.jsx)("path", {
+var import_jsx_runtime41 = __toESM(require_jsx_runtime());
+var Tune_default = createSvgIcon(/* @__PURE__ */ (0, import_jsx_runtime41.jsx)("path", {
   d: "M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"
 }), "Tune");
 
 // src/components/Icon/services/utils.tsx
-var import_jsx_runtime36 = __toESM(require_jsx_runtime());
+var import_jsx_runtime42 = __toESM(require_jsx_runtime());
 var findIcon = (type, className) => {
   switch (type) {
     case 0 /* ARROW_UPWARD */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(ArrowUpward_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(ArrowUpward_default, {
         className
       });
     case 1 /* ARROW_DOWNWARD */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(ArrowDownward_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(ArrowDownward_default, {
         className
       });
     case 2 /* KEYBOARD_ARROW_UP */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardArrowUp_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardArrowUp_default, {
         className
       });
     case 3 /* KEYBOARD_ARROW_DOWN */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardArrowDown_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardArrowDown_default, {
         className
       });
     case 4 /* KEYBOARD_DOUBLE_ARROW_UP */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardDoubleArrowUp_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardDoubleArrowUp_default, {
         className
       });
     case 5 /* KEYBOARD_DOUBLE_ARROW_DOWN */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardDoubleArrowDown_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardDoubleArrowDown_default, {
         className
       });
     case 6 /* KEYBOARD_ARROW_LEFT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardArrowLeft_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardArrowLeft_default, {
         className
       });
     case 7 /* KEYBOARD_ARROW_RIGHT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardArrowRight_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardArrowRight_default, {
         className
       });
     case 8 /* KEYBOARD_DOUBLE_ARROW_LEFT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardDoubleArrowLeft_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardDoubleArrowLeft_default, {
         className
       });
     case 9 /* KEYBOARD_DOUBLE_ARROW_RIGHT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardDoubleArrowRight_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardDoubleArrowRight_default, {
         className
       });
     case 11 /* DELETE */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(DeleteOutline_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(DeleteOutline_default, {
         className
       });
     case 12 /* MORE_VERT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(MoreVert_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(MoreVert_default, {
         className
       });
     case 13 /* SORT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Sort_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Sort_default, {
         className
       });
     case 10 /* KEYBOARD_BACKSPACE */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(KeyboardBackspace_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(KeyboardBackspace_default, {
         className
       });
     case 14 /* MOVE_UP */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(MoveUpOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(MoveUpOutlined_default, {
         className
       });
     case 15 /* MOVE_DOWN */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(MoveDownOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(MoveDownOutlined_default, {
         className
       });
     case 16 /* TEXT_SNIPPET */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(TextSnippetOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TextSnippetOutlined_default, {
         className
       });
     case 17 /* EDIT */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(EditOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(EditOutlined_default, {
         className
       });
     case 18 /* MORE_HORIZ */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(MoreHoriz_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(MoreHoriz_default, {
         className
       });
     case 19 /* CLOSE */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Close_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Close_default, {
         className
       });
     case 20 /* NOTES */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Notes_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Notes_default, {
         className
       });
     case 24 /* NUMBERS */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Numbers_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Numbers_default, {
         className
       });
     case 21 /* CHECK */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(CheckBoxOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CheckBoxOutlined_default, {
         className
       });
     case 22 /* LABEL */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(LabelOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(LabelOutlined_default, {
         className
       });
     case 25 /* CALENDAR_TODAY */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(CalendarTodayOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CalendarTodayOutlined_default, {
         className
       });
     case 26 /* SCHEDULE */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(ScheduleOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(ScheduleOutlined_default, {
         className
       });
     case 27 /* SEARCH */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Search_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Search_default, {
         className
       });
     case 23 /* LIST */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(List_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(List_default, {
         className
       });
     case 28 /* PAYMENTS */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(PaymentsOutlined_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(PaymentsOutlined_default, {
         className
       });
     case 29 /* TUNE */:
-      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(Tune_default, {
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Tune_default, {
+        className
+      });
+    case 30 /* ADD */:
+      return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Add_default, {
         className
       });
     default:
@@ -46601,7 +46824,7 @@ var findIcon = (type, className) => {
 };
 
 // src/components/Icon/index.tsx
-var import_jsx_runtime37 = __toESM(require_jsx_runtime());
+var import_jsx_runtime43 = __toESM(require_jsx_runtime());
 function Icon({ type, size = "md", onClick }) {
   let className = "";
   if (size === "sm") {
@@ -46611,7 +46834,7 @@ function Icon({ type, size = "md", onClick }) {
   } else if (size === "lg") {
     className = "NLT__icon--lg";
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", {
     className: "NLT__icon",
     onClick: onClick && onClick,
     children: findIcon(type, className)
@@ -46619,14 +46842,14 @@ function Icon({ type, size = "md", onClick }) {
 }
 
 // src/components/Button/index.tsx
-var import_jsx_runtime38 = __toESM(require_jsx_runtime());
+var import_jsx_runtime44 = __toESM(require_jsx_runtime());
 function Button({ children, icon, isSimple, onClick }) {
   let className = "NLT__button";
   if (icon !== void 0)
     className += " NLT__button--icon";
   if (isSimple)
     className += " NLT__button--simple";
-  return /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("button", {
+  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("button", {
     className,
     onClick: (e) => onClick(e),
     children: icon !== void 0 ? icon : children
@@ -46634,10 +46857,10 @@ function Button({ children, icon, isSimple, onClick }) {
 }
 
 // src/services/menu/hooks.ts
-var import_react9 = __toESM(require_react());
+var import_react10 = __toESM(require_react());
 var import_crypto = require("crypto");
 var useMenuPosition = () => {
-  const containerRef = (0, import_react9.useRef)(null);
+  const containerRef = (0, import_react10.useRef)(null);
   let position2 = {
     top: 0,
     left: 0,
@@ -46659,7 +46882,7 @@ var useMenuPosition = () => {
 };
 var useMenu = (level) => {
   const { position: position2, containerRef } = useMenuPosition();
-  const [id] = (0, import_react9.useState)("m" + (0, import_crypto.randomUUID)());
+  const [id] = (0, import_react10.useState)("m" + (0, import_crypto.randomUUID)());
   return {
     id,
     level,
@@ -46686,9 +46909,9 @@ var getSpacing = (size) => {
 };
 
 // src/components/Stack/index.tsx
-var import_jsx_runtime39 = __toESM(require_jsx_runtime());
+var import_jsx_runtime45 = __toESM(require_jsx_runtime());
 function Stack({ spacing: spacing2 = "md", children, isVertical }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", {
     style: {
       display: "flex",
       flexDirection: isVertical ? "column" : "row",
@@ -46701,7 +46924,7 @@ function Stack({ spacing: spacing2 = "md", children, isVertical }) {
 }
 
 // src/components/Flex/index.tsx
-var import_jsx_runtime40 = __toESM(require_jsx_runtime());
+var import_jsx_runtime46 = __toESM(require_jsx_runtime());
 function Flex({
   flexDir = "row",
   justify = "flex-start",
@@ -46709,13 +46932,14 @@ function Flex({
   className = "",
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("div", {
     style: {
       width: "100%",
       display: "flex",
       flexDirection: flexDir,
       justifyContent: justify,
-      alignItems: align
+      alignItems: align,
+      flexWrap: "wrap"
     },
     className,
     children
@@ -46723,7 +46947,7 @@ function Flex({
 }
 
 // src/components/Text/index.tsx
-var import_jsx_runtime41 = __toESM(require_jsx_runtime());
+var import_jsx_runtime47 = __toESM(require_jsx_runtime());
 function Text({ value, variant, size = "sm" }) {
   let className = "NLT__p";
   if (variant == "faint")
@@ -46740,7 +46964,7 @@ function Text({ value, variant, size = "sm" }) {
   } else if (size == "lg") {
     fontSize2 = "var(--nlt-font-size--lg)";
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("p", {
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("p", {
     className,
     style: { fontSize: fontSize2 },
     children: value
@@ -46748,7 +46972,7 @@ function Text({ value, variant, size = "sm" }) {
 }
 
 // src/components/MenuItem/index.tsx
-var import_jsx_runtime42 = __toESM(require_jsx_runtime());
+var import_jsx_runtime48 = __toESM(require_jsx_runtime());
 function MenuItem({
   iconType,
   name,
@@ -46759,23 +46983,23 @@ function MenuItem({
   let className = "NLT__menu-item NLT__selectable";
   if (isSelected)
     className += " NLT__selected";
-  return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", {
     className,
     onClick: () => onClick(),
-    children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Flex, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Flex, {
       justify: "space-between",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Stack, {
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Stack, {
           children: [
-            iconType !== void 0 && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon, {
+            iconType !== void 0 && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Icon, {
               type: iconType
             }),
-            /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Text, {
+            /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Text, {
               value: name
             })
           ]
         }),
-        value !== void 0 && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Text, {
+        value !== void 0 && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Text, {
           variant: "faint",
           value
         })
@@ -46785,7 +47009,7 @@ function MenuItem({
 }
 
 // src/components/RowMenu/index.tsx
-var import_jsx_runtime43 = __toESM(require_jsx_runtime());
+var import_jsx_runtime49 = __toESM(require_jsx_runtime());
 function RowMenu({ rowId, onDeleteClick }) {
   const menu = useMenu(0 /* ONE */);
   const dispatch = useAppDispatch();
@@ -46807,25 +47031,25 @@ function RowMenu({ rowId, onDeleteClick }) {
     dispatch(closeTopLevelMenu());
   }
   const { top: top2, left: left2, height: height2 } = menu.position;
-  return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(import_jsx_runtime43.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_jsx_runtime49.Fragment, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", {
         ref: menu.containerRef,
-        children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Button, {
-          icon: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Icon, {
+        children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Button, {
+          icon: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Icon, {
             type: 18 /* MORE_HORIZ */
           }),
           onClick: (e) => handleButtonClick(e)
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Menu, {
+      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu, {
         id: menu.id,
         isOpen,
         top: top2 + height2,
         left: left2,
-        children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", {
+        children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", {
           className: "NLT__row-menu",
-          children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(MenuItem, {
+          children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(MenuItem, {
             iconType: 11 /* DELETE */,
             name: "Delete",
             onClick: () => handleDeleteClick(rowId)
@@ -46837,38 +47061,7 @@ function RowMenu({ rowId, onDeleteClick }) {
 }
 
 // src/components/OptionBar/index.tsx
-var import_react10 = __toESM(require_react());
-
-// src/services/tableState/types.ts
-var CellType = /* @__PURE__ */ ((CellType3) => {
-  CellType3["TEXT"] = "text";
-  CellType3["NUMBER"] = "number";
-  CellType3["CURRENCY"] = "currency";
-  CellType3["TAG"] = "tag";
-  CellType3["MULTI_TAG"] = "multi-tag";
-  CellType3["DATE"] = "date";
-  CellType3["CHECKBOX"] = "checkbox";
-  CellType3["CREATION_TIME"] = "creation-time";
-  CellType3["LAST_EDITED_TIME"] = "last-edited-time";
-  return CellType3;
-})(CellType || {});
-var CurrencyType = /* @__PURE__ */ ((CurrencyType6) => {
-  CurrencyType6["UNITED_STATES"] = "USD";
-  CurrencyType6["CANADA"] = "CAD";
-  CurrencyType6["SINGAPORE"] = "SGB";
-  CurrencyType6["EUROPE"] = "EUR";
-  CurrencyType6["POUND"] = "GBP";
-  CurrencyType6["RUSSIA"] = "RUB";
-  CurrencyType6["AUSTRALIA"] = "AUD";
-  CurrencyType6["JAPAN"] = "JPY";
-  CurrencyType6["INDIA"] = "INR";
-  CurrencyType6["CHINA"] = "CNY";
-  CurrencyType6["BRAZIL"] = "BRL";
-  CurrencyType6["COLOMBIA"] = "COP";
-  CurrencyType6["MEXICO"] = "MXN";
-  CurrencyType6["ARGENTINA"] = "ARS";
-  return CurrencyType6;
-})(CurrencyType || {});
+var import_react11 = __toESM(require_react());
 
 // src/services/tableState/error.ts
 var ColumnIdError = class extends Error {
@@ -46891,24 +47084,24 @@ var CellNotFoundError = class extends Error {
 };
 
 // src/components/OptionBar/components/SearchBar/index.tsx
-var import_jsx_runtime44 = __toESM(require_jsx_runtime());
+var import_jsx_runtime50 = __toESM(require_jsx_runtime());
 function SearchBar() {
   const { searchText, isSearchBarVisible } = useAppSelector(
     (state) => state.global
   );
   const dispatch = useAppDispatch();
-  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", {
     className: "NLT__search",
-    children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Stack, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(Stack, {
       spacing: "lg",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Button, {
-          icon: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Icon, {
+        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Button, {
+          icon: /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Icon, {
             type: 27 /* SEARCH */
           }),
           onClick: () => dispatch(toggleSearchBar())
         }),
-        isSearchBarVisible && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("input", {
+        isSearchBarVisible && /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("input", {
           autoFocus: true,
           type: "text",
           placeholder: "Type to search...",
@@ -46921,33 +47114,33 @@ function SearchBar() {
 }
 
 // src/components/OptionBar/components/SortBubble/index.tsx
-var import_jsx_runtime45 = __toESM(require_jsx_runtime());
+var import_jsx_runtime51 = __toESM(require_jsx_runtime());
 function SortBubble({
   isDarkMode,
   sortDir,
   markdown,
   onRemoveClick
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", {
     className: "NLT__sort-bubble",
-    children: /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)(Stack, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Stack, {
       spacing: "lg",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)(Stack, {
+        /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Stack, {
           spacing: "sm",
           children: [
-            sortDir === "asc" /* ASC */ ? /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Icon, {
+            sortDir === "asc" /* ASC */ ? /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Icon, {
               type: 0 /* ARROW_UPWARD */
-            }) : /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Icon, {
+            }) : /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Icon, {
               type: 1 /* ARROW_DOWNWARD */
             }),
-            /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("span", {
+            /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", {
               children: markdown
             })
           ]
         }),
-        /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Button, {
-          icon: /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Icon, {
+        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Button, {
+          icon: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Icon, {
             type: 19 /* CLOSE */
           }),
           isSimple: true,
@@ -46959,12 +47152,12 @@ function SortBubble({
 }
 
 // src/components/OptionBar/index.tsx
-var import_jsx_runtime46 = __toESM(require_jsx_runtime());
+var import_jsx_runtime52 = __toESM(require_jsx_runtime());
 var SortBubbleList = ({ bubbles, onRemoveClick }) => {
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Stack, {
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Stack, {
     spacing: "sm",
-    children: bubbles.map((bubble, i2) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(SortBubble, {
+    children: bubbles.map((bubble, i2) => /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(SortBubble, {
       isDarkMode,
       sortDir: bubble.sortDir,
       markdown: bubble.markdown,
@@ -46973,7 +47166,7 @@ var SortBubbleList = ({ bubbles, onRemoveClick }) => {
   });
 };
 function OptionBar({ model, onSortRemoveClick }) {
-  const bubbles = (0, import_react10.useMemo)(() => {
+  const bubbles = (0, import_react11.useMemo)(() => {
     return model.cells.filter((c2) => c2.isHeader).filter((c2) => {
       const columnId = c2.columnId;
       const column = model.columns.find((c3) => c3.id == columnId);
@@ -46992,11 +47185,11 @@ function OptionBar({ model, onSortRemoveClick }) {
       };
     });
   }, [model]);
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("div", {
     className: "NLT__option-bar",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(SearchBar, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(SortBubbleList, {
+      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(SearchBar, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(SortBubbleList, {
         bubbles,
         onRemoveClick: onSortRemoveClick
       })
@@ -47046,8 +47239,9 @@ var StateFactory = class {
       width: "140px",
       type: "text" /* TEXT */,
       currencyType: "USD" /* UNITED_STATES */,
+      dateFormat: "mm/dd/yyyy" /* MM_DD_YYYY */,
       hasAutoWidth: false,
-      shouldWrapOverflow: false,
+      shouldWrapOverflow: true,
       footerCellId: (0, import_crypto2.randomUUID)()
     };
   }
@@ -47193,81 +47387,6 @@ var deleteTag = (prevState, tagId) => {
   });
 };
 
-// src/services/tableState/utils.ts
-var sortCells = (columns, rows, cells) => {
-  return rows.map((row) => {
-    return cells.filter((c2) => c2.rowId === row.id);
-  }).map((row) => {
-    return row.sort((a2, b2) => {
-      const indexA = columns.findIndex(
-        (column) => column.id === a2.columnId
-      );
-      const indexB = columns.findIndex(
-        (column) => column.id === b2.columnId
-      );
-      return indexA - indexB;
-    });
-  }).flat(1);
-};
-var getDisplayNameForCurrencyType = (type) => {
-  switch (type) {
-    case "USD" /* UNITED_STATES */:
-      return "United States Dollar";
-    case "CAD" /* CANADA */:
-      return "Canadian Dollar";
-    case "AUD" /* AUSTRALIA */:
-      return "Australian Dollar";
-    case "SGB" /* SINGAPORE */:
-      return "Singapore Dollar";
-    case "CNY" /* CHINA */:
-      return "Yuan";
-    case "JPY" /* JAPAN */:
-      return "Yen";
-    case "COP" /* COLOMBIA */:
-      return "Colombian Peso";
-    case "EUR" /* EUROPE */:
-      return "Euro";
-    case "BRL" /* BRAZIL */:
-      return "Real";
-    case "GBP" /* POUND */:
-      return "Pound";
-    case "INR" /* INDIA */:
-      return "Rupee";
-    case "ARS" /* ARGENTINA */:
-      return "Argentine Peso";
-    case "MXN" /* MEXICO */:
-      return "Mexican Peso";
-    case "RUB" /* RUSSIA */:
-      return "Ruble";
-    default:
-      return "";
-  }
-};
-var getDisplayNameForCellType = (type) => {
-  switch (type) {
-    case "text" /* TEXT */:
-      return "Text";
-    case "number" /* NUMBER */:
-      return "Number";
-    case "checkbox" /* CHECKBOX */:
-      return "Checkbox";
-    case "date" /* DATE */:
-      return "Date";
-    case "last-edited-time" /* LAST_EDITED_TIME */:
-      return "Last edited";
-    case "creation-time" /* CREATION_TIME */:
-      return "Creation";
-    case "tag" /* TAG */:
-      return "Tag";
-    case "multi-tag" /* MULTI_TAG */:
-      return "Multi-tag";
-    case "currency" /* CURRENCY */:
-      return "Currency";
-    default:
-      return "";
-  }
-};
-
 // src/services/tableState/column.ts
 var addColumn = (prevState) => {
   const { cells, columns, rows } = prevState.model;
@@ -47319,25 +47438,6 @@ var updateColumn = (prevState, columnId, key, value) => {
     })
   });
 };
-var insertColumn = (prevState, columnId, insertRight) => {
-  const { columns, cells, rows } = prevState.model;
-  const columnsCopy = [...columns];
-  const index = columnsCopy.findIndex((column) => column.id === columnId);
-  const insertIndex = insertRight ? index + 1 : index;
-  const newColumn = StateFactory.createColumn();
-  columnsCopy.splice(insertIndex, 0, newColumn);
-  let cellsCopy = [...cells];
-  rows.forEach((row, i2) => {
-    cellsCopy.push(StateFactory.createCell(newColumn.id, row.id, i2 === 0));
-  });
-  cellsCopy = sortCells(columnsCopy, rows, cellsCopy);
-  return __spreadProps(__spreadValues({}, prevState), {
-    model: __spreadProps(__spreadValues({}, prevState.model), {
-      columns: columnsCopy,
-      cells: cellsCopy
-    })
-  });
-};
 var deleteColumn = (prevState, columnId) => {
   const { cells, columns, tags } = prevState.model;
   return __spreadProps(__spreadValues({}, prevState), {
@@ -47345,22 +47445,6 @@ var deleteColumn = (prevState, columnId) => {
       columns: columns.filter((column) => column.id !== columnId),
       cells: cells.filter((cell) => cell.columnId !== columnId),
       tags: tags.filter((tag) => tag.columnId !== columnId)
-    })
-  });
-};
-var moveColumn = (prevState, columnId, moveRight) => {
-  const { rows, cells, columns } = prevState.model;
-  const columnsCopy = [...columns];
-  const index = columnsCopy.findIndex((column) => column.id === columnId);
-  const moveIndex = moveRight ? index + 1 : index - 1;
-  const old = columnsCopy[moveIndex];
-  columnsCopy[moveIndex] = columnsCopy[index];
-  columnsCopy[index] = old;
-  const updatedCells = sortCells(columnsCopy, rows, cells);
-  return __spreadProps(__spreadValues({}, prevState), {
-    model: __spreadProps(__spreadValues({}, prevState.model), {
-      columns: columnsCopy,
-      cells: updatedCells
     })
   });
 };
@@ -47372,6 +47456,21 @@ var changeColumnCurrencyType = (prevState, columnId, type) => {
         if (column.id === columnId) {
           return __spreadProps(__spreadValues({}, column), {
             currencyType: type
+          });
+        }
+        return column;
+      })
+    })
+  });
+};
+var changeColumnDateFormat = (prevState, columnId, format) => {
+  const { columns } = prevState.model;
+  return __spreadProps(__spreadValues({}, prevState), {
+    model: __spreadProps(__spreadValues({}, prevState.model), {
+      columns: columns.map((column) => {
+        if (column.id === columnId) {
+          return __spreadProps(__spreadValues({}, column), {
+            dateFormat: format
           });
         }
         return column;
@@ -47593,7 +47692,7 @@ var sortByLastEditedTime = (rows, sortDir) => {
     if (sortDir === "asc" /* ASC */) {
       return a2.lastEditedTime - b2.lastEditedTime;
     } else if (sortDir === "desc" /* DESC */) {
-      return a2.lastEditedTime - b2.lastEditedTime;
+      return b2.lastEditedTime - a2.lastEditedTime;
     } else {
       return 0;
     }
@@ -47645,10 +47744,10 @@ var updateCell = (prevState, cellId, rowId, markdown) => {
 };
 
 // src/services/hooks/index.ts
-var import_react11 = __toESM(require_react());
+var import_react12 = __toESM(require_react());
 var useDidMountEffect = (func, deps) => {
-  const didMount = (0, import_react11.useRef)(false);
-  (0, import_react11.useEffect)(() => {
+  const didMount = (0, import_react12.useRef)(false);
+  (0, import_react12.useEffect)(() => {
     if (didMount.current)
       func();
     else
@@ -47658,14 +47757,14 @@ var useDidMountEffect = (func, deps) => {
 
 // src/services/random/hooks.ts
 var import_crypto3 = require("crypto");
-var import_react12 = __toESM(require_react());
+var import_react13 = __toESM(require_react());
 var useId = () => {
-  const [id] = (0, import_react12.useState)((0, import_crypto3.randomUUID)());
+  const [id] = (0, import_react13.useState)((0, import_crypto3.randomUUID)());
   return id;
 };
 
 // src/components/HeaderCell/index.tsx
-var import_react14 = __toESM(require_react());
+var import_react15 = __toESM(require_react());
 
 // src/services/tableState/constants.ts
 var MIN_COLUMN_WIDTH = 40;
@@ -47673,18 +47772,18 @@ var CHECKBOX_MARKDOWN_CHECKED = "[x]";
 var CHECKBOX_MARKDOWN_UNCHECKED = "[ ]";
 
 // src/components/HeaderCell/components/HeaderMenu/index.tsx
-var import_react13 = __toESM(require_react());
+var import_react14 = __toESM(require_react());
 
 // src/components/Divider/index.tsx
-var import_jsx_runtime47 = __toESM(require_jsx_runtime());
+var import_jsx_runtime53 = __toESM(require_jsx_runtime());
 function Divider() {
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("hr", {
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("hr", {
     className: "NLT__hr"
   });
 }
 
 // src/components/Padding/index.tsx
-var import_jsx_runtime48 = __toESM(require_jsx_runtime());
+var import_jsx_runtime54 = __toESM(require_jsx_runtime());
 function Padding({
   className = "",
   paddingX,
@@ -47710,7 +47809,7 @@ function Padding({
       });
     }
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", {
     style: style3,
     className,
     children
@@ -47718,20 +47817,20 @@ function Padding({
 }
 
 // src/components/HeaderCell/components/HeaderMenu/components/Submenu/index.tsx
-var import_jsx_runtime49 = __toESM(require_jsx_runtime());
+var import_jsx_runtime55 = __toESM(require_jsx_runtime());
 function Submenu({ title, children, onBackClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_jsx_runtime49.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(import_jsx_runtime55.Fragment, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Padding, {
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Padding, {
         padding: "md",
-        children: /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Stack, {
+        children: /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(Stack, {
           spacing: "md",
           isVertical: true,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Stack, {
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(Stack, {
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Button, {
-                  icon: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Icon, {
+                /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Button, {
+                  icon: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Icon, {
                     type: 10 /* KEYBOARD_BACKSPACE */
                   }),
                   onClick: () => onBackClick()
@@ -47739,11 +47838,11 @@ function Submenu({ title, children, onBackClick }) {
                 title
               ]
             }),
-            /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Divider, {})
+            /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Divider, {})
           ]
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", {
         children
       })
     ]
@@ -47751,12 +47850,12 @@ function Submenu({ title, children, onBackClick }) {
 }
 
 // src/components/Switch/index.tsx
-var import_jsx_runtime50 = __toESM(require_jsx_runtime());
+var import_jsx_runtime56 = __toESM(require_jsx_runtime());
 function Switch({ isChecked, onToggle }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("label", {
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("label", {
     className: "NLT__switch",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("input", {
+      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("input", {
         type: "checkbox",
         checked: isChecked,
         onChange: () => {
@@ -47765,7 +47864,7 @@ function Switch({ isChecked, onToggle }) {
           onToggle(!isChecked);
         }
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", {
+      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", {
         className: "NLT__slider"
       })
     ]
@@ -47773,103 +47872,132 @@ function Switch({ isChecked, onToggle }) {
 }
 
 // src/components/HeaderCell/components/HeaderMenu/components/OptionSubmenu/components/CurrencyMenu/index.tsx
-var import_jsx_runtime51 = __toESM(require_jsx_runtime());
+var import_jsx_runtime57 = __toESM(require_jsx_runtime());
 function CurrencyMenu({
   id,
   top: top2,
   left: left2,
   isOpen,
   value,
-  onCurrencyChange
+  onChange
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu, {
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Menu, {
     isOpen,
     id,
     top: top2,
     left: left2,
     width: 175,
-    children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", {
       className: "NLT__currency-menu",
-      children: Object.values(CurrencyType).map((type) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(MenuItem, {
+      children: Object.values(CurrencyType).map((type) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(MenuItem, {
         name: getDisplayNameForCurrencyType(type),
         isSelected: value === type,
-        onClick: () => onCurrencyChange(type)
+        onClick: () => onChange(type)
       }, type))
     })
   });
 }
 
+// src/components/HeaderCell/components/HeaderMenu/components/OptionSubmenu/components/DateFormatMenu/index.tsx
+var import_jsx_runtime58 = __toESM(require_jsx_runtime());
+function DateFormatMenu({
+  id,
+  top: top2,
+  left: left2,
+  isOpen,
+  value,
+  onChange
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Menu, {
+    isOpen,
+    id,
+    top: top2,
+    left: left2,
+    width: 175,
+    children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {
+      className: "NLT__currency-menu",
+      children: Object.values(DateFormat).map((format) => /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(MenuItem, {
+        name: getDisplayNameForDateFormat(format),
+        isSelected: value === format,
+        onClick: () => onChange(format)
+      }, format))
+    })
+  });
+}
+
 // src/components/HeaderCell/components/HeaderMenu/components/OptionSubmenu/index.tsx
-var import_jsx_runtime52 = __toESM(require_jsx_runtime());
+var import_jsx_runtime59 = __toESM(require_jsx_runtime());
 function OptionSubmenu({
   columnId,
   canDeleteColumn,
-  columnCurrencyType,
+  type,
+  currencyType,
   title,
-  columnType,
+  dateFormat,
   shouldWrapOverflow,
   hasAutoWidth,
   onAutoWidthToggle,
   onWrapOverflowToggle,
   onBackClick,
   onDeleteClick,
-  onCurrencyChange
+  onCurrencyChange,
+  onDateFormatChange
 }) {
-  const currencyMenu = useMenu(1 /* TWO */);
-  const isCurrencyMenuOpen = useAppSelector(
-    (state) => isMenuOpen(state, currencyMenu.id)
+  const menu = useMenu(1 /* TWO */);
+  const shouldOpenMenu = useAppSelector(
+    (state) => isMenuOpen(state, menu.id)
   );
   const dispatch = useAppDispatch();
-  const { top: top2, left: left2, width: width2 } = currencyMenu.position;
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_jsx_runtime52.Fragment, {
+  const { top: top2, left: left2, width: width2 } = menu.position;
+  return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(import_jsx_runtime59.Fragment, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Submenu, {
+      /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Submenu, {
         title,
         onBackClick,
-        children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Padding, {
+        children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Padding, {
           paddingY: "md",
-          children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(Stack, {
+          children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Stack, {
             spacing: "md",
             isVertical: true,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Padding, {
+              /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Padding, {
                 paddingX: "lg",
-                children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(Stack, {
+                children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Stack, {
                   spacing: "md",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Text, {
+                    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Text, {
                       value: "Auto Width"
                     }),
-                    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Switch, {
+                    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Switch, {
                       isChecked: hasAutoWidth,
                       onToggle: (value) => onAutoWidthToggle(columnId, value)
                     })
                   ]
                 })
               }),
-              columnType === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", {
-                ref: currencyMenu.containerRef,
+              type === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {
+                ref: menu.containerRef,
                 style: { width: "100%" },
-                children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(MenuItem, {
+                children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(MenuItem, {
                   name: "Currency",
-                  value: columnCurrencyType,
+                  value: currencyType,
                   onClick: () => dispatch(
                     openMenu({
-                      id: currencyMenu.id,
-                      level: currencyMenu.level
+                      id: menu.id,
+                      level: menu.level
                     })
                   )
                 })
               }),
-              !hasAutoWidth && columnType === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Padding, {
+              !hasAutoWidth && type === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Padding, {
                 paddingX: "lg",
-                children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(Stack, {
+                children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Stack, {
                   spacing: "sm",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Text, {
+                    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Text, {
                       value: "Wrap Overflow"
                     }),
-                    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Switch, {
+                    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Switch, {
                       isChecked: shouldWrapOverflow,
                       onToggle: (value) => onWrapOverflowToggle(
                         columnId,
@@ -47879,9 +48007,23 @@ function OptionSubmenu({
                   ]
                 })
               }),
-              canDeleteColumn && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Padding, {
+              (type === "creation-time" /* CREATION_TIME */ || type === "last-edited-time" /* LAST_EDITED_TIME */) && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {
+                ref: menu.containerRef,
+                style: { width: "100%" },
+                children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(MenuItem, {
+                  name: "Date format",
+                  value: dateFormat,
+                  onClick: () => dispatch(
+                    openMenu({
+                      id: menu.id,
+                      level: menu.level
+                    })
+                  )
+                })
+              }),
+              canDeleteColumn && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Padding, {
                 paddingX: "lg",
-                children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(Button, {
+                children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Button, {
                   onClick: () => onDeleteClick(),
                   children: "Delete"
                 })
@@ -47890,65 +48032,21 @@ function OptionSubmenu({
           })
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(CurrencyMenu, {
-        id: currencyMenu.id,
-        isOpen: isCurrencyMenuOpen,
+      type === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(CurrencyMenu, {
+        id: menu.id,
+        isOpen: shouldOpenMenu,
         top: top2 - 125,
         left: left2 + width2 - 50,
-        value: columnCurrencyType,
-        onCurrencyChange
-      })
-    ]
-  });
-}
-
-// src/components/HeaderCell/components/HeaderMenu/components/InsertSubmenu/index.tsx
-var import_jsx_runtime53 = __toESM(require_jsx_runtime());
-function InsertSubmenu({
-  title,
-  onInsertClick,
-  onBackClick
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Submenu, {
-    title,
-    onBackClick,
-    children: [
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(MenuItem, {
-        iconType: 8 /* KEYBOARD_DOUBLE_ARROW_LEFT */,
-        name: "Insert Left",
-        onClick: () => onInsertClick(false)
+        value: currencyType,
+        onChange: onCurrencyChange
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(MenuItem, {
-        iconType: 9 /* KEYBOARD_DOUBLE_ARROW_RIGHT */,
-        name: "Insert Right",
-        onClick: () => onInsertClick(true)
-      })
-    ]
-  });
-}
-
-// src/components/HeaderCell/components/HeaderMenu/components/MoveSubmenu/index.tsx
-var import_jsx_runtime54 = __toESM(require_jsx_runtime());
-function MoveSubmenu({
-  title,
-  columnIndex,
-  numColumns,
-  onMoveClick,
-  onBackClick
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(Submenu, {
-    title,
-    onBackClick,
-    children: [
-      columnIndex !== 0 && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(MenuItem, {
-        iconType: 8 /* KEYBOARD_DOUBLE_ARROW_LEFT */,
-        name: "Move Left",
-        onClick: () => onMoveClick(false)
-      }),
-      columnIndex !== numColumns - 1 && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(MenuItem, {
-        iconType: 9 /* KEYBOARD_DOUBLE_ARROW_RIGHT */,
-        name: "Move Right",
-        onClick: () => onMoveClick(true)
+      (type === "creation-time" /* CREATION_TIME */ || type === "last-edited-time" /* LAST_EDITED_TIME */) && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(DateFormatMenu, {
+        id: menu.id,
+        isOpen: shouldOpenMenu,
+        top: top2 - 50,
+        left: left2 + width2 - 50,
+        value: dateFormat,
+        onChange: onDateFormatChange
       })
     ]
   });
@@ -47980,17 +48078,17 @@ var getIconTypeFromCellType = (type) => {
 };
 
 // src/components/HeaderCell/components/HeaderMenu/components/TypeSubmenu/index.tsx
-var import_jsx_runtime55 = __toESM(require_jsx_runtime());
+var import_jsx_runtime60 = __toESM(require_jsx_runtime());
 function TypeSubmenu({
   title,
   columnType,
   onTypeClick,
   onBackClick
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Submenu, {
+  return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(Submenu, {
     title,
     onBackClick,
-    children: Object.values(CellType).map((type) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(MenuItem, {
+    children: Object.values(CellType).map((type) => /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(MenuItem, {
       name: getDisplayNameForCellType(type),
       iconType: getIconTypeFromCellType(type),
       onClick: () => onTypeClick(type),
@@ -48000,7 +48098,7 @@ function TypeSubmenu({
 }
 
 // src/components/HeaderCell/components/HeaderMenu/components/BaseMenu/index.tsx
-var import_jsx_runtime56 = __toESM(require_jsx_runtime());
+var import_jsx_runtime61 = __toESM(require_jsx_runtime());
 function BaseMenu({
   rowId,
   cellId,
@@ -48012,66 +48110,55 @@ function BaseMenu({
   onSortClick,
   onSubmenuChange
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, {
+  return /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(Stack, {
     spacing: "sm",
     isVertical: true,
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, {
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(Stack, {
         spacing: "sm",
         isVertical: true,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Padding, {
+          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Padding, {
             paddingX: "md",
             paddingY: "sm",
-            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("input", {
+            children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("input", {
               autoFocus: true,
               value: columnName,
               onChange: (e) => onColumnNameChange(cellId, rowId, e.target.value)
             })
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
+          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(MenuItem, {
             iconType: 20 /* NOTES */,
             name: "Type",
             value: getDisplayNameForCellType(columnType),
             onClick: () => onSubmenuChange(0 /* TYPE */)
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
+          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(MenuItem, {
             iconType: 29 /* TUNE */,
             name: "Options",
             onClick: () => onSubmenuChange(1 /* OPTIONS */)
           })
         ]
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Divider, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Divider, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(MenuItem, {
         iconType: 0 /* ARROW_UPWARD */,
         name: "Ascending",
         onClick: () => onSortClick("asc" /* ASC */),
         isSelected: columnSortDir === "asc" /* ASC */
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
+      /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(MenuItem, {
         iconType: 1 /* ARROW_DOWNWARD */,
         name: "Descending",
         onClick: () => onSortClick("desc" /* DESC */),
         isSelected: columnSortDir === "desc" /* DESC */
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Divider, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
-        iconType: 14 /* MOVE_UP */,
-        name: "Move",
-        onClick: () => onSubmenuChange(2 /* MOVE */)
-      }),
-      numColumns > 1 && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(MenuItem, {
-        iconType: 9 /* KEYBOARD_DOUBLE_ARROW_RIGHT */,
-        name: "Insert",
-        onClick: () => onSubmenuChange(3 /* INSERT */)
       })
     ]
   });
 }
 
 // src/components/HeaderCell/components/HeaderMenu/index.tsx
-var import_jsx_runtime57 = __toESM(require_jsx_runtime());
+var import_jsx_runtime62 = __toESM(require_jsx_runtime());
 function HeaderMenu({
   isOpen,
   id,
@@ -48080,40 +48167,29 @@ function HeaderMenu({
   left: left2,
   cellId,
   markdown,
+  dateFormat,
   currencyType,
   canDeleteColumn,
   columnType,
   columnSortDir,
   columnId,
-  columnIndex,
   numColumns,
   hasAutoWidth,
   shouldWrapOverflow,
   onTypeSelect,
   onSortClick,
   onDeleteClick,
-  onInsertColumnClick,
-  onMoveColumnClick,
   onClose,
   onWrapOverflowToggle,
   onAutoWidthToggle,
   onNameChange,
-  onCurrencyChange
+  onCurrencyChange,
+  onDateFormatChange
 }) {
-  const [submenu, setSubmenu] = (0, import_react13.useState)(null);
-  function handleMoveColumnClick(moveRight) {
-    onMoveColumnClick(columnId, moveRight);
-    onClose();
-    setSubmenu(null);
-  }
+  const [submenu, setSubmenu] = (0, import_react14.useState)(null);
   function handleSortClick(sortDir) {
     onSortClick(columnId, sortDir);
     onClose();
-  }
-  function handleInsertColumnClick(insertRight) {
-    onInsertColumnClick(columnId, insertRight);
-    onClose();
-    setSubmenu(null);
   }
   function handleTypeClick(type) {
     onTypeSelect(columnId, type);
@@ -48133,16 +48209,19 @@ function HeaderMenu({
   function handleCurrencyChange(value) {
     onCurrencyChange(columnId, value);
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Menu, {
+  function handleDateFormatChange(value) {
+    onDateFormatChange(columnId, value);
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Menu, {
     isOpen,
     id,
     top: top2,
     left: left2,
     width: 175,
-    children: /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("div", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("div", {
       className: "NLT__header-menu",
       children: [
-        submenu === null && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(BaseMenu, {
+        submenu === null && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(BaseMenu, {
           rowId,
           cellId,
           columnName: markdown,
@@ -48153,33 +48232,23 @@ function HeaderMenu({
           onSortClick: handleSortClick,
           onSubmenuChange: setSubmenu
         }),
-        submenu === 1 /* OPTIONS */ && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(OptionSubmenu, {
+        submenu === 1 /* OPTIONS */ && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(OptionSubmenu, {
           canDeleteColumn,
           title: "Options",
-          columnType,
+          type: columnType,
           columnId,
-          columnCurrencyType: currencyType,
+          dateFormat,
+          currencyType,
           hasAutoWidth,
           shouldWrapOverflow,
           onBackClick: handleBackClick,
           onAutoWidthToggle,
           onWrapOverflowToggle,
           onCurrencyChange: handleCurrencyChange,
+          onDateFormatChange: handleDateFormatChange,
           onDeleteClick: handleDeleteClick
         }),
-        submenu == 3 /* INSERT */ && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(InsertSubmenu, {
-          title: "Insert",
-          onInsertClick: handleInsertColumnClick,
-          onBackClick: handleBackClick
-        }),
-        submenu === 2 /* MOVE */ && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(MoveSubmenu, {
-          title: "Move",
-          columnIndex,
-          numColumns,
-          onMoveClick: handleMoveColumnClick,
-          onBackClick: handleBackClick
-        }),
-        submenu === 0 /* TYPE */ && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(TypeSubmenu, {
+        submenu === 0 /* TYPE */ && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(TypeSubmenu, {
           title: "Type",
           columnType,
           onTypeClick: handleTypeClick,
@@ -48191,14 +48260,14 @@ function HeaderMenu({
 }
 
 // src/components/HeaderCell/index.tsx
-var import_jsx_runtime58 = __toESM(require_jsx_runtime());
+var import_jsx_runtime63 = __toESM(require_jsx_runtime());
 function HeaderCell({
   cellId,
   rowId,
-  columnIndex,
   columnId,
   currencyType,
   width: width2,
+  dateFormat,
   markdown,
   hasAutoWidth,
   shouldWrapOverflow,
@@ -48206,18 +48275,17 @@ function HeaderCell({
   sortDir,
   numColumns,
   onWidthChange,
-  onInsertColumnClick,
-  onMoveColumnClick,
   onSortClick,
   onTypeSelect,
   onDeleteClick,
   onWrapOverflowToggle,
   onAutoWidthToggle,
   onNameChange,
-  onCurrencyChange
+  onCurrencyChange,
+  onDateFormatChange
 }) {
-  const mouseDownX = (0, import_react14.useRef)(0);
-  const isResizing = (0, import_react14.useRef)(false);
+  const mouseDownX = (0, import_react15.useRef)(0);
+  const isResizing = (0, import_react15.useRef)(false);
   const menu = useMenu(0 /* ONE */);
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector((state) => isMenuOpen(state, menu.id));
@@ -48267,7 +48335,7 @@ function HeaderCell({
   }
   const { top: top2, left: left2 } = menu.position;
   const iconType = getIconTypeFromCellType(type);
-  return /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("div", {
     className: "NLT__th-container NLT__selectable",
     ref: menu.containerRef,
     onClick: handleHeaderClick,
@@ -48275,13 +48343,14 @@ function HeaderCell({
       width: width2
     },
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(HeaderMenu, {
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(HeaderMenu, {
         isOpen,
         top: top2,
         left: left2,
         id: menu.id,
         rowId,
         currencyType,
+        dateFormat,
         canDeleteColumn: numColumns > 1,
         columnId,
         cellId,
@@ -48290,25 +48359,23 @@ function HeaderCell({
         markdown,
         columnSortDir: sortDir,
         columnType: type,
-        columnIndex,
         numColumns,
         onSortClick,
-        onMoveColumnClick,
-        onInsertColumnClick,
         onTypeSelect,
         onDeleteClick,
         onClose: closeHeaderMenu,
         onAutoWidthToggle,
         onWrapOverflowToggle,
         onNameChange,
-        onCurrencyChange
+        onCurrencyChange,
+        onDateFormatChange
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", {
         className: "NLT__th-content",
-        children: /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(Stack, {
+        children: /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(Stack, {
           spacing: "md",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Icon, {
+            /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(Icon, {
               type: iconType,
               size: "md"
             }),
@@ -48316,9 +48383,9 @@ function HeaderCell({
           ]
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", {
         className: "NLT__th-resize-container",
-        children: !hasAutoWidth && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {
+        children: !hasAutoWidth && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", {
           className: "NLT__th-resize",
           onMouseDown: (e) => {
             closeHeaderMenu();
@@ -48344,7 +48411,7 @@ var import_obsidian4 = require("obsidian");
 
 // src/services/markdown/hooks.ts
 var import_obsidian3 = require("obsidian");
-var import_react15 = __toESM(require_react());
+var import_react16 = __toESM(require_react());
 
 // src/services/markdown/embed.ts
 var handleLinkClick = (event) => {
@@ -48365,8 +48432,8 @@ var handleLinkClick = (event) => {
 
 // src/services/markdown/hooks.ts
 var useRenderMarkdown = (markdown, hasAutoWidth, shouldWrapOverflow) => {
-  const wrapperRef = (0, import_react15.useRef)(null);
-  const contentRef = (0, import_react15.useRef)(null);
+  const wrapperRef = (0, import_react16.useRef)(null);
+  const contentRef = (0, import_react16.useRef)(null);
   function appendOrReplaceFirstChild(wrapper, child) {
     if (!child || !wrapper)
       return;
@@ -48376,7 +48443,7 @@ var useRenderMarkdown = (markdown, hasAutoWidth, shouldWrapOverflow) => {
       wrapper.replaceChild(child, wrapper.firstChild);
     }
   }
-  (0, import_react15.useEffect)(() => {
+  (0, import_react16.useEffect)(() => {
     function renderMarkdown() {
       return __async(this, null, function* () {
         const view = app.workspace.getActiveViewOfType(NLTView);
@@ -48442,7 +48509,7 @@ var useOverflowClassName = (hasAutoWidth, shouldWrapOverflow) => {
 };
 
 // src/components/Cell/components/TextCell/index.tsx
-var import_jsx_runtime59 = __toESM(require_jsx_runtime());
+var import_jsx_runtime64 = __toESM(require_jsx_runtime());
 function TextCell({
   markdown,
   shouldWrapOverflow,
@@ -48454,9 +48521,9 @@ function TextCell({
     shouldWrapOverflow
   );
   const className = "NLT__text-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", {
     className,
-    children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", {
       ref: (node) => {
         wrapperRef.current = node;
         appendOrReplaceFirstChild(node, contentRef.current);
@@ -48494,7 +48561,7 @@ var findColorClassName = (isDarkMode, color2) => {
 };
 
 // src/components/Tag/index.tsx
-var import_jsx_runtime60 = __toESM(require_jsx_runtime());
+var import_jsx_runtime65 = __toESM(require_jsx_runtime());
 function Tag2({
   isDarkMode,
   id,
@@ -48515,18 +48582,18 @@ function Tag2({
   if (maxWidth2 !== void 0) {
     contentClassName += " NLT__hide-overflow-ellipsis";
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", {
     className: tagClass,
-    children: /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(Stack, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(Stack, {
       spacing: "sm",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", __spreadProps(__spreadValues({
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", __spreadProps(__spreadValues({
           className: contentClassName
         }, maxWidth2 !== void 0 && { style: { maxWidth: maxWidth2 } }), {
           children: markdown
         })),
-        showRemove && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(Button, {
-          icon: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(Icon, {
+        showRemove && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(Button, {
+          icon: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(Icon, {
             size: "sm",
             type: 19 /* CLOSE */
           }),
@@ -48541,7 +48608,7 @@ function Tag2({
 }
 
 // src/components/Cell/components/TagCell/index.tsx
-var import_jsx_runtime61 = __toESM(require_jsx_runtime());
+var import_jsx_runtime66 = __toESM(require_jsx_runtime());
 function TagCell({
   isDarkMode,
   markdown,
@@ -48554,9 +48621,9 @@ function TagCell({
     shouldWrapOverflow
   );
   const className = "NLT__tag-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", {
     className,
-    children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Tag2, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Tag2, {
       isDarkMode,
       markdown,
       color: color2
@@ -48565,7 +48632,7 @@ function TagCell({
 }
 
 // src/components/Cell/components/CheckboxCell/index.tsx
-var import_jsx_runtime62 = __toESM(require_jsx_runtime());
+var import_jsx_runtime67 = __toESM(require_jsx_runtime());
 function CheckboxCell({ value, onCheckboxChange }) {
   const isChecked = isCheckboxChecked(value);
   function handleClick() {
@@ -48575,9 +48642,9 @@ function CheckboxCell({ value, onCheckboxChange }) {
       onCheckboxChange(CHECKBOX_MARKDOWN_CHECKED);
     }
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", {
     className: "NLT__checkbox-cell",
-    children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("input", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("input", {
       className: "task-list-item-checkbox",
       type: "checkbox",
       checked: isChecked,
@@ -48589,16 +48656,16 @@ function CheckboxCell({ value, onCheckboxChange }) {
 }
 
 // src/components/Cell/components/DateCell/index.tsx
-var import_jsx_runtime63 = __toESM(require_jsx_runtime());
+var import_jsx_runtime68 = __toESM(require_jsx_runtime());
 function DateCell({ value }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", {
     className: "NLT__date-cell",
     children: value
   });
 }
 
 // src/components/Cell/components/NumberCell/index.tsx
-var import_jsx_runtime64 = __toESM(require_jsx_runtime());
+var import_jsx_runtime69 = __toESM(require_jsx_runtime());
 function NumberCell({
   value,
   shouldWrapOverflow,
@@ -48609,18 +48676,18 @@ function NumberCell({
     shouldWrapOverflow
   );
   const className = "NLT__number-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", {
     className,
     children: value
   });
 }
 
 // src/components/Cell/components/NumberCellEdit/index.tsx
-var import_jsx_runtime65 = __toESM(require_jsx_runtime());
+var import_jsx_runtime70 = __toESM(require_jsx_runtime());
 function NumberCellEdit({ value, onInputChange }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", {
     className: "NLT__number-cell-edit",
-    children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("input", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("input", {
       type: "number",
       autoFocus: true,
       value,
@@ -48630,10 +48697,23 @@ function NumberCellEdit({ value, onInputChange }) {
 }
 
 // src/components/Cell/components/TextCellEdit/index.tsx
-var import_react16 = __toESM(require_react());
-var import_jsx_runtime66 = __toESM(require_jsx_runtime());
+var import_react17 = __toESM(require_react());
+var import_jsx_runtime71 = __toESM(require_jsx_runtime());
 function TextCellEdit({ value, onInputChange }) {
-  const inputRef = (0, import_react16.useRef)(null);
+  const [isShiftDown, setShiftDown] = (0, import_react17.useState)(false);
+  const inputRef = (0, import_react17.useRef)(null);
+  (0, import_react17.useEffect)(() => {
+    focusInput();
+    setSelection(value.length);
+  }, []);
+  (0, import_react17.useEffect)(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
   function focusInput() {
     var _a;
     (_a = inputRef.current) == null ? void 0 : _a.focus();
@@ -48644,15 +48724,24 @@ function TextCellEdit({ value, onInputChange }) {
       inputRef.current.selectionEnd = pos;
     }
   }
-  (0, import_react16.useEffect)(() => {
-    focusInput();
-    setSelection(value.length);
-  }, []);
-  function handleTextareaChange(value2) {
-    value2 = value2.replace("\n", "");
-    onInputChange(value2);
+  function handleKeyDown(e) {
+    if (e.shiftKey)
+      setShiftDown(true);
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("textarea", {
+  function handleKeyUp(e) {
+    if (!e.shiftKey)
+      setShiftDown(false);
+  }
+  function handleTextareaChange(newValue) {
+    if (!isShiftDown) {
+      if (newValue.length > value.length) {
+        if (newValue.endsWith("\n"))
+          newValue = newValue.replace(/\n$/, "");
+      }
+    }
+    onInputChange(newValue);
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("textarea", {
     className: "NLT__textarea",
     ref: inputRef,
     autoFocus: true,
@@ -48662,17 +48751,17 @@ function TextCellEdit({ value, onInputChange }) {
 }
 
 // src/components/Cell/components/TagCellEdit/index.tsx
-var import_react17 = __toESM(require_react());
+var import_react18 = __toESM(require_react());
 
 // src/components/Wrap/index.tsx
-var import_jsx_runtime67 = __toESM(require_jsx_runtime());
+var import_jsx_runtime72 = __toESM(require_jsx_runtime());
 function Stack2({
   spacingX = "md",
   spacingY = "md",
   style: style3,
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", {
     style: __spreadProps(__spreadValues({}, style3), {
       display: "flex",
       flexWrap: "wrap",
@@ -48684,7 +48773,7 @@ function Stack2({
 }
 
 // src/components/Cell/components/TagCellEdit/component/MenuHeader/index.tsx
-var import_jsx_runtime68 = __toESM(require_jsx_runtime());
+var import_jsx_runtime73 = __toESM(require_jsx_runtime());
 function MenuHeader({
   isDarkMode,
   cellId,
@@ -48693,12 +48782,12 @@ function MenuHeader({
   onInputTextChange,
   onRemoveTag
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("div", {
     className: "NLT__tag-menu-header",
-    children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(Stack2, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)(Stack2, {
       spacingX: "sm",
       children: [
-        tags.filter((tag) => tag.cellIds.find((c2) => c2 === cellId)).map((tag) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Tag2, {
+        tags.filter((tag) => tag.cellIds.find((c2) => c2 === cellId)).map((tag) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Tag2, {
           isDarkMode,
           id: tag.id,
           color: tag.color,
@@ -48707,7 +48796,7 @@ function MenuHeader({
           showRemove: true,
           onRemoveClick: onRemoveTag
         }, tag.id)),
-        /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("input", {
+        /* @__PURE__ */ (0, import_jsx_runtime73.jsx)("input", {
           autoFocus: true,
           type: "text",
           value: inputText,
@@ -48719,23 +48808,23 @@ function MenuHeader({
 }
 
 // src/components/Cell/components/TagCellEdit/component/CreateTag/index.tsx
-var import_jsx_runtime69 = __toESM(require_jsx_runtime());
+var import_jsx_runtime74 = __toESM(require_jsx_runtime());
 function CreateTag({
   isDarkMode,
   markdown,
   color: color2,
   onAddTag
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", {
     className: "NLT__create-tag NLT__selectable",
     onClick: () => {
       onAddTag(markdown, color2);
     },
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", {
         children: "Create\xA0"
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Tag2, {
+      /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Tag2, {
         isDarkMode,
         markdown,
         color: color2,
@@ -48751,7 +48840,7 @@ var uppercaseFirst = (input) => {
 };
 
 // src/components/Cell/components/TagColorMenu/components/ColorItem/index.tsx
-var import_jsx_runtime70 = __toESM(require_jsx_runtime());
+var import_jsx_runtime75 = __toESM(require_jsx_runtime());
 function ColorItem({
   isDarkMode,
   color: color2,
@@ -48764,16 +48853,16 @@ function ColorItem({
   const colorClass = findColorClassName(isDarkMode, color2);
   let squareClass = "NLT__color-item-square";
   squareClass += " " + colorClass;
-  return /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime75.jsxs)("div", {
     className: containerClass,
     onClick: (e) => {
       onColorClick(color2);
     },
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", {
         className: squareClass
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime75.jsx)("div", {
         children: uppercaseFirst(color2)
       })
     ]
@@ -48781,7 +48870,7 @@ function ColorItem({
 }
 
 // src/components/Cell/components/TagColorMenu/index.tsx
-var import_jsx_runtime71 = __toESM(require_jsx_runtime());
+var import_jsx_runtime76 = __toESM(require_jsx_runtime());
 function TagColorMenu({
   menuId,
   isOpen,
@@ -48792,34 +48881,34 @@ function TagColorMenu({
   onDeleteClick
 }) {
   const { isDarkMode } = useAppSelector((state) => state.global);
-  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Menu, {
+  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Menu, {
     id: menuId,
     isOpen,
     top: top2,
     left: left2,
-    children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", {
       className: "NLT__tag-color-menu",
-      children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(Stack, {
+      children: /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(Stack, {
         spacing: "sm",
         isVertical: true,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Padding, {
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Padding, {
             paddingX: "lg",
             paddingY: "sm",
-            children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Text, {
+            children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Text, {
               value: "Color"
             })
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", {
-            children: Object.values(Color).map((color2) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(ColorItem, {
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", {
+            children: Object.values(Color).map((color2) => /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ColorItem, {
               isDarkMode,
               color: color2,
               onColorClick,
               isSelected: selectedColor === color2
             }, color2))
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Divider, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(MenuItem, {
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Divider, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(MenuItem, {
             iconType: 11 /* DELETE */,
             name: "Delete",
             onClick: onDeleteClick
@@ -48831,7 +48920,7 @@ function TagColorMenu({
 }
 
 // src/components/Cell/components/TagCellEdit/component/SelectableTag/index.tsx
-var import_jsx_runtime72 = __toESM(require_jsx_runtime());
+var import_jsx_runtime77 = __toESM(require_jsx_runtime());
 function SelectableTag({
   isDarkMode,
   id,
@@ -48853,21 +48942,21 @@ function SelectableTag({
     dispatch(closeAllMenus());
   }
   const { top: top2, left: left2, width: width2 } = menu.position;
-  return /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(import_jsx_runtime72.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(import_jsx_runtime77.Fragment, {
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", {
         ref: menu.containerRef,
         className: "NLT__selectable-tag NLT__selectable",
         onClick: () => onClick(id),
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Tag2, {
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Tag2, {
             isDarkMode,
             markdown,
             color: color2,
             maxWidth: "150px"
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Button, {
-            icon: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Icon, {
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Button, {
+            icon: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Icon, {
               type: 18 /* MORE_HORIZ */
             }),
             isSimple: true,
@@ -48883,7 +48972,7 @@ function SelectableTag({
           })
         ]
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(TagColorMenu, {
+      /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(TagColorMenu, {
         menuId: menu.id,
         top: top2 - 125,
         left: left2 + width2 - 50,
@@ -48897,7 +48986,7 @@ function SelectableTag({
 }
 
 // src/components/Cell/components/TagCellEdit/component/MenuBody/index.tsx
-var import_jsx_runtime73 = __toESM(require_jsx_runtime());
+var import_jsx_runtime78 = __toESM(require_jsx_runtime());
 function MenuBody({
   isDarkMode,
   tags,
@@ -48910,26 +48999,26 @@ function MenuBody({
 }) {
   const found = tags.find((tag) => tag.markdown === inputText);
   const filteredTags = tags.filter((tag) => tag.markdown.includes(inputText));
-  return /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)("div", {
     className: "NLT__tag-menu-body",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Padding, {
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Padding, {
         paddingX: "lg",
         paddingY: "md",
-        children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(Text, {
+        children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Text, {
           value: "Select an option or create one"
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)("div", {
         style: { width: "100%" },
         children: [
-          !found && inputText !== "" && /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(CreateTag, {
+          !found && inputText !== "" && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(CreateTag, {
             isDarkMode,
             markdown: inputText,
             color: newTagColor,
             onAddTag
           }),
-          filteredTags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(SelectableTag, {
+          filteredTags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(SelectableTag, {
             isDarkMode,
             id: tag.id,
             color: tag.color,
@@ -48945,7 +49034,7 @@ function MenuBody({
 }
 
 // src/components/Cell/components/TagCellEdit/index.tsx
-var import_jsx_runtime74 = __toESM(require_jsx_runtime());
+var import_jsx_runtime79 = __toESM(require_jsx_runtime());
 function TagCellEdit({
   tags,
   cellId,
@@ -48955,8 +49044,8 @@ function TagCellEdit({
   onTagDeleteClick,
   onRemoveTag
 }) {
-  const [inputText, setInputText] = (0, import_react17.useState)("");
-  const [newTagColor] = (0, import_react17.useState)(randomColor());
+  const [inputText, setInputText] = (0, import_react18.useState)("");
+  const [newTagColor] = (0, import_react18.useState)(randomColor());
   const dispatch = useAppDispatch();
   const { isDarkMode } = useAppSelector((state) => state.global);
   function handleInputTextChange(value) {
@@ -48969,12 +49058,12 @@ function TagCellEdit({
     setInputText("");
     dispatch(closeTopLevelMenu());
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)("div", {
     className: "NLT__tag-menu",
-    children: /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime79.jsxs)("div", {
       className: "NLT__tag-menu-container",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(MenuHeader, {
+        /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(MenuHeader, {
           isDarkMode,
           cellId,
           inputText,
@@ -48982,7 +49071,7 @@ function TagCellEdit({
           onInputTextChange: handleInputTextChange,
           onRemoveTag
         }),
-        /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(MenuBody, {
+        /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(MenuBody, {
           isDarkMode,
           inputText,
           tags,
@@ -48999,8 +49088,8 @@ function TagCellEdit({
 
 // src/components/Cell/components/DateCellEdit/index.tsx
 var import_react_datepicker = __toESM(require_react_datepicker_min());
-var import_types33 = require("util/types");
-var import_jsx_runtime75 = __toESM(require_jsx_runtime());
+var import_types32 = require("util/types");
+var import_jsx_runtime80 = __toESM(require_jsx_runtime());
 function DateCellEdit({ value, onDateChange }) {
   function handleChange(date) {
     let value2 = "";
@@ -49009,9 +49098,9 @@ function DateCellEdit({ value, onDateChange }) {
     onDateChange(value2);
   }
   let selectedDate = new Date();
-  if ((0, import_types33.isDate)(value))
+  if ((0, import_types32.isDate)(value))
     selectedDate = new Date(value);
-  return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(import_react_datepicker.default, {
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_react_datepicker.default, {
     className: "NLT__date-input",
     autoFocus: true,
     selected: selectedDate,
@@ -49025,7 +49114,7 @@ function DateCellEdit({ value, onDateChange }) {
 }
 
 // src/components/Cell/components/MultiTagCell/index.tsx
-var import_jsx_runtime76 = __toESM(require_jsx_runtime());
+var import_jsx_runtime81 = __toESM(require_jsx_runtime());
 function MultiTagCell({
   isDarkMode,
   tags,
@@ -49037,10 +49126,10 @@ function MultiTagCell({
     shouldWrapOverflow
   );
   const className = "NLT__multi-tag-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)("div", {
     className,
-    children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Stack2, {
-      children: tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Tag2, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(Stack2, {
+      children: tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(Tag2, {
         isDarkMode,
         markdown: tag.markdown,
         color: tag.color
@@ -49049,10 +49138,78 @@ function MultiTagCell({
   });
 }
 
+// src/services/date/constants.ts
+var MILLIS_IN_DAY = 1e3 * 60 * 60 * 24;
+
+// src/services/date/index.ts
+var unixTimeToString = (unixTime, format) => {
+  const date = new Date(unixTime);
+  const dateString = getDateStringForFormat(date, format);
+  const commaIndex = dateString.lastIndexOf(",");
+  return dateString.substring(0, commaIndex) + dateString.substring(commaIndex + 1);
+};
+var getDateParts = (date) => {
+  const year = date.getFullYear();
+  const month = ("0" + (date.getMonth() + 1)).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
+  const time = date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true
+  });
+  return { year, month, day, time };
+};
+var getDateStringForFormat = (date, format) => {
+  const { year, month, day, time } = getDateParts(date);
+  switch (format) {
+    case "mm/dd/yyyy" /* MM_DD_YYYY */:
+      return `${month}/${day}/${year} ${time}`;
+    case "dd/mm/yyyy" /* DD_MM_YYYY */:
+      return `${day}/${month}/${year} ${time}`;
+    case "yyyy/mm/dd" /* YYYY_MM_DD */:
+      return `${year}/${month}/${day} ${time}`;
+    case "full" /* FULL */:
+      return date.toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
+    case "relative" /* RELATIVE */: {
+      const diff = Date.now() - date.getTime();
+      const time2 = date.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
+      if (diff < MILLIS_IN_DAY) {
+        return "Today " + time2;
+      } else if (diff < MILLIS_IN_DAY * 2) {
+        return "Yesterday " + time2;
+      } else if (diff < MILLIS_IN_DAY * 7) {
+        return date.toLocaleString("en-US", { weekday: "long" }) + " " + time2;
+      }
+      return date.toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
+    }
+    default:
+      return "";
+  }
+};
+
 // src/components/Cell/components/LastEditedTimeCell/index.tsx
-var import_jsx_runtime77 = __toESM(require_jsx_runtime());
+var import_jsx_runtime82 = __toESM(require_jsx_runtime());
 function LastEditedTimeCell({
   value,
+  format,
   hasAutoWidth,
   shouldWrapOverflow
 }) {
@@ -49061,16 +49218,17 @@ function LastEditedTimeCell({
     shouldWrapOverflow
   );
   const className = "NLT__last-edited-time-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("div", {
     className,
-    children: dateTimeToString(value)
+    children: unixTimeToString(value, format)
   });
 }
 
 // src/components/Cell/components/CreationTimeCell/index.tsx
-var import_jsx_runtime78 = __toESM(require_jsx_runtime());
+var import_jsx_runtime83 = __toESM(require_jsx_runtime());
 function CreationTimeCell({
   value,
+  format,
   hasAutoWidth,
   shouldWrapOverflow
 }) {
@@ -49079,14 +49237,14 @@ function CreationTimeCell({
     shouldWrapOverflow
   );
   const className = "NLT__creation-time-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)("div", {
     className,
-    children: dateTimeToString(value)
+    children: unixTimeToString(value, format)
   });
 }
 
 // src/components/Cell/components/CurrencyCell/index.tsx
-var import_jsx_runtime79 = __toESM(require_jsx_runtime());
+var import_jsx_runtime84 = __toESM(require_jsx_runtime());
 function CurrencyCell({
   value,
   currencyType,
@@ -49099,18 +49257,18 @@ function CurrencyCell({
   );
   const valueFormatted = stringToCurrencyString(value, currencyType);
   const className = "NLT__currency-cell " + overflowClassName;
-  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("div", {
     className,
     children: valueFormatted
   });
 }
 
 // src/components/Cell/components/CurrencyCellEdit/index.tsx
-var import_jsx_runtime80 = __toESM(require_jsx_runtime());
+var import_jsx_runtime85 = __toESM(require_jsx_runtime());
 function CurrencyCellEdit({ value, onInputChange }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("div", {
     className: "NLT__currency-cell-edit",
-    children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("input", {
+    children: /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("input", {
       type: "number",
       autoFocus: true,
       value,
@@ -49120,12 +49278,13 @@ function CurrencyCellEdit({ value, onInputChange }) {
 }
 
 // src/components/Cell/index.tsx
-var import_jsx_runtime81 = __toESM(require_jsx_runtime());
+var import_jsx_runtime86 = __toESM(require_jsx_runtime());
 function Cell4({
   cellId,
   columnId,
   rowId,
   markdown,
+  dateFormat,
   columnCurrencyType,
   columnType,
   rowCreationTime,
@@ -49227,7 +49386,7 @@ function Cell4({
   }
   const currentTag = tags.find((t2) => t2.cellIds.find((c2) => c2 === cellId));
   const filteredTags = tags.filter((t2) => t2.cellIds.find((c2) => c2 == cellId));
-  return /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime86.jsxs)("div", {
     ref: menu.containerRef,
     onClick: handleCellClick,
     onContextMenu: handleCellContextClick,
@@ -49236,7 +49395,7 @@ function Cell4({
       width: width2
     },
     children: [
-      isOpen && /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)(Menu, {
+      isOpen && /* @__PURE__ */ (0, import_jsx_runtime86.jsxs)(Menu, {
         id: menu.id,
         isOpen,
         top: top2,
@@ -49245,15 +49404,15 @@ function Cell4({
         width: measuredWidth,
         height: height2,
         children: [
-          columnType === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(TextCellEdit, {
+          columnType === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(TextCellEdit, {
             value: markdown,
             onInputChange: handleTextInputChange
           }),
-          columnType === "number" /* NUMBER */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(NumberCellEdit, {
+          columnType === "number" /* NUMBER */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(NumberCellEdit, {
             value: markdown,
             onInputChange: handleNumberInputChange
           }),
-          (columnType === "tag" /* TAG */ || columnType === "multi-tag" /* MULTI_TAG */) && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(TagCellEdit, {
+          (columnType === "tag" /* TAG */ || columnType === "multi-tag" /* MULTI_TAG */) && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(TagCellEdit, {
             tags,
             cellId,
             onTagColorChange,
@@ -49262,59 +49421,61 @@ function Cell4({
             onTagClick: handleTagClick,
             onTagDeleteClick
           }),
-          columnType === "date" /* DATE */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(DateCellEdit, {
+          columnType === "date" /* DATE */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(DateCellEdit, {
             value: markdown,
             onDateChange: handleDateChange
           }),
-          columnType === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(CurrencyCellEdit, {
+          columnType === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(CurrencyCellEdit, {
             value: markdown,
             onInputChange: handleCurrencyChange
           })
         ]
       }),
-      columnType === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(TextCell, {
+      columnType === "text" /* TEXT */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(TextCell, {
         markdown,
         shouldWrapOverflow,
         hasAutoWidth
       }),
-      columnType === "number" /* NUMBER */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(NumberCell, {
+      columnType === "number" /* NUMBER */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(NumberCell, {
         value: markdown,
         shouldWrapOverflow,
         hasAutoWidth
       }),
-      columnType === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(CurrencyCell, {
+      columnType === "currency" /* CURRENCY */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(CurrencyCell, {
         value: markdown,
         currencyType: columnCurrencyType,
         hasAutoWidth,
         shouldWrapOverflow
       }),
-      columnType === "tag" /* TAG */ && currentTag && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(TagCell, {
+      columnType === "tag" /* TAG */ && currentTag && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(TagCell, {
         isDarkMode,
         markdown: currentTag.markdown,
         color: currentTag.color,
         hasAutoWidth,
         shouldWrapOverflow
       }),
-      columnType === "multi-tag" /* MULTI_TAG */ && filteredTags.length !== 0 && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(MultiTagCell, {
+      columnType === "multi-tag" /* MULTI_TAG */ && filteredTags.length !== 0 && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(MultiTagCell, {
         isDarkMode,
         tags: filteredTags,
         hasAutoWidth,
         shouldWrapOverflow
       }),
-      columnType === "date" /* DATE */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(DateCell, {
+      columnType === "date" /* DATE */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(DateCell, {
         value: markdown
       }),
-      columnType === "checkbox" /* CHECKBOX */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(CheckboxCell, {
+      columnType === "checkbox" /* CHECKBOX */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(CheckboxCell, {
         value: markdown,
         onCheckboxChange: handleCheckboxChange
       }),
-      columnType === "creation-time" /* CREATION_TIME */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(CreationTimeCell, {
+      columnType === "creation-time" /* CREATION_TIME */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(CreationTimeCell, {
         value: rowCreationTime,
+        format: dateFormat,
         shouldWrapOverflow,
         hasAutoWidth
       }),
-      columnType === "last-edited-time" /* LAST_EDITED_TIME */ && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(LastEditedTimeCell, {
+      columnType === "last-edited-time" /* LAST_EDITED_TIME */ && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(LastEditedTimeCell, {
         value: rowLastEditedTime,
+        format: dateFormat,
         shouldWrapOverflow,
         hasAutoWidth
       })
@@ -49323,11 +49484,11 @@ function Cell4({
 }
 
 // src/App.tsx
-var import_jsx_runtime82 = __toESM(require_jsx_runtime());
+var import_jsx_runtime87 = __toESM(require_jsx_runtime());
 var FILE_NAME = "App";
-function App2({ initialState: initialState3, onSaveTableState }) {
+function App2({ onSaveTableState }) {
   const { searchText, sortTime } = useAppSelector((state) => state.global);
-  const [tableState, setTableState] = (0, import_react18.useState)(initialState3);
+  const [tableState, setTableState] = useTableState();
   const { shouldDebug } = useAppSelector((state) => state.global);
   const dispatch = useAppDispatch();
   const headerRowId = useId();
@@ -49336,7 +49497,7 @@ function App2({ initialState: initialState3, onSaveTableState }) {
   useDidMountEffect(() => {
     onSaveTableState(tableState);
   }, [tableState]);
-  (0, import_react18.useEffect)(() => {
+  (0, import_react19.useEffect)(() => {
     if (sortTime !== 0) {
       setTableState((prevState) => sortRows(prevState));
     }
@@ -49448,6 +49609,16 @@ function App2({ initialState: initialState3, onSaveTableState }) {
     );
     dispatch(updateSortTime());
   }
+  function handleDateFormatChange(columnId, dateFormat) {
+    logFunc(shouldDebug, FILE_NAME, "handleDateFormatChange", {
+      columnId,
+      dateFormat
+    });
+    setTableState(
+      (prevState) => changeColumnDateFormat(prevState, columnId, dateFormat)
+    );
+    dispatch(updateSortTime());
+  }
   function handleSortRemoveClick(columnId) {
     logFunc(shouldDebug, FILE_NAME, "handleSortRemoveClick", {
       columnId
@@ -49464,24 +49635,6 @@ function App2({ initialState: initialState3, onSaveTableState }) {
     });
     setTableState(
       (prevState) => updateColumn(prevState, columnId, "width", width2)
-    );
-  }
-  function handleMoveColumnClick(columnId, moveRight) {
-    logFunc(shouldDebug, FILE_NAME, "handleMoveColumnClick", {
-      columnId,
-      moveRight
-    });
-    setTableState(
-      (prevState) => moveColumn(prevState, columnId, moveRight)
-    );
-  }
-  function handleInsertColumnClick(columnId, insertRight) {
-    logFunc(shouldDebug, FILE_NAME, "handleInsertColumnClick", {
-      columnId,
-      insertRight
-    });
-    setTableState(
-      (prevState) => insertColumn(prevState, columnId, insertRight)
     );
   }
   function handleTagChangeColor(tagId, color2) {
@@ -49534,30 +49687,31 @@ function App2({ initialState: initialState3, onSaveTableState }) {
         );
         if (currencyString.toLowerCase().includes(searchText.toLowerCase()))
           return true;
+      } else if (cell.column.type === "last-edited-time" /* LAST_EDITED_TIME */ || cell.column.type === "creation-time" /* CREATION_TIME */) {
+        const dateString = unixTimeToString(
+          parseInt(cell.markdown),
+          cell.column.dateFormat
+        );
+        if (dateString.toLowerCase().includes(searchText.toLowerCase()))
+          return true;
       }
       return false;
     });
     if (matchedCell !== void 0)
       return true;
-    const creationTimeString = dateTimeToString(row.creationTime);
-    if (creationTimeString.toLowerCase().includes(searchText.toLowerCase()))
-      return true;
-    const lastEditedTimeString = dateTimeToString(row.lastEditedTime);
-    if (lastEditedTimeString.toLowerCase().includes(searchText.toLowerCase()))
-      return true;
     return false;
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime82.jsxs)("div", {
+  return /* @__PURE__ */ (0, import_jsx_runtime87.jsxs)("div", {
     className: "NLT__app",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(OptionBar, {
+      /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(OptionBar, {
         model: tableState.model,
         onSortRemoveClick: handleSortRemoveClick
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("div", {
+      /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("div", {
         className: "NLT__table-wrapper",
-        children: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Table, {
-          headers: [
+        children: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(Table, {
+          headerRows: [
             {
               id: headerRowId,
               cells: [
@@ -49569,7 +49723,8 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                     sortDir,
                     shouldWrapOverflow,
                     hasAutoWidth,
-                    currencyType
+                    currencyType,
+                    dateFormat
                   } = column;
                   const cell = cells.find(
                     (cell2) => cell2.columnId === columnId && cell2.isHeader
@@ -49583,10 +49738,11 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                   } = cell;
                   return {
                     id: cellId,
-                    content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(HeaderCell, {
+                    columnId,
+                    content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(HeaderCell, {
                       cellId,
                       rowId,
-                      columnIndex: i2,
+                      dateFormat,
                       currencyType,
                       numColumns: columns.length,
                       columnId: cell.columnId,
@@ -49597,12 +49753,11 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                       type,
                       sortDir,
                       onSortClick: handleHeaderSortSelect,
-                      onInsertColumnClick: handleInsertColumnClick,
-                      onMoveColumnClick: handleMoveColumnClick,
                       onWidthChange: handleHeaderWidthChange,
                       onDeleteClick: handleHeaderDeleteClick,
                       onTypeSelect: handleHeaderTypeClick,
                       onAutoWidthToggle: handleAutoWidthToggle,
+                      onDateFormatChange: handleDateFormatChange,
                       onWrapOverflowToggle: handleWrapContentToggle,
                       onNameChange: handleCellContentChange,
                       onCurrencyChange: handleCurrencyChange
@@ -49611,18 +49766,21 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                 }),
                 {
                   id: lastColumnId,
-                  content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("div", {
+                  columnId: lastColumnId,
+                  content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("div", {
                     style: { paddingLeft: "10px" },
-                    children: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Button, {
-                      onClick: () => handleAddColumn(),
-                      children: "New"
+                    children: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(Button, {
+                      icon: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(Icon, {
+                        type: 30 /* ADD */
+                      }),
+                      onClick: () => handleAddColumn()
                     })
                   })
                 }
               ]
             }
           ],
-          rows: filteredRows.filter((_row, i2) => i2 !== 0).map((row) => {
+          bodyRows: filteredRows.filter((_row, i2) => i2 !== 0).map((row) => {
             const rowCells = cells.filter(
               (cell) => cell.rowId === row.id
             );
@@ -49648,7 +49806,8 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                     type,
                     hasAutoWidth,
                     shouldWrapOverflow,
-                    currencyType
+                    currencyType,
+                    dateFormat
                   } = column;
                   const {
                     id: cellId,
@@ -49660,12 +49819,13 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                   );
                   return {
                     id: cellId,
-                    content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Cell4, {
+                    content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(Cell4, {
                       cellId,
                       rowId,
                       tags: filteredTags,
                       columnId,
                       rowCreationTime: creationTime,
+                      dateFormat,
                       columnCurrencyType: currencyType,
                       rowLastEditedTime: lastEditedTime,
                       markdown,
@@ -49684,9 +49844,9 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                 }),
                 {
                   id: menuCellId,
-                  content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("div", {
+                  content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("div", {
                     style: { paddingLeft: "10px" },
-                    children: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(RowMenu, {
+                    children: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(RowMenu, {
                       rowId,
                       onDeleteClick: handleRowDeleteClick
                     })
@@ -49695,7 +49855,7 @@ function App2({ initialState: initialState3, onSaveTableState }) {
               ]
             };
           }),
-          footers: [
+          footerRows: [
             {
               id: footerRowId,
               cells: [
@@ -49708,26 +49868,26 @@ function App2({ initialState: initialState3, onSaveTableState }) {
                   if (i2 === 0) {
                     return {
                       id: footerCellId,
-                      content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("div", {
+                      content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("div", {
                         style: {
                           paddingTop: "10px",
                           width: hasAutoWidth ? "max-content" : width2
                         },
-                        children: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Button, {
+                        children: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(Button, {
                           onClick: () => handleAddRow(),
-                          children: "New"
+                          children: "New row"
                         })
                       })
                     };
                   }
                   return {
                     id: footerCellId,
-                    content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(import_jsx_runtime82.Fragment, {})
+                    content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(import_jsx_runtime87.Fragment, {})
                   };
                 }),
                 {
                   id: lastColumnId,
-                  content: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(import_jsx_runtime82.Fragment, {})
+                  content: /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(import_jsx_runtime87.Fragment, {})
                 }
               ]
             }
@@ -49739,7 +49899,7 @@ function App2({ initialState: initialState3, onSaveTableState }) {
 }
 
 // src/constants.ts
-var CURRENT_PLUGIN_VERSION = 610;
+var CURRENT_PLUGIN_VERSION = 620;
 
 // src/services/file/Json.ts
 var Json = class {
@@ -49754,6 +49914,10 @@ var Json = class {
         tableState.model.columns.forEach((column) => {
           column.currencyType = "USD" /* UNITED_STATES */;
         });
+      } else if (pluginVersion < 620) {
+        tableState.model.columns.forEach((column) => {
+          column.dateFormat = "yyyy/mm/dd" /* YYYY_MM_DD */;
+        });
       }
     }
     tableState.pluginVersion = CURRENT_PLUGIN_VERSION;
@@ -49762,7 +49926,7 @@ var Json = class {
 };
 
 // src/NLTView.tsx
-var import_jsx_runtime83 = __toESM(require_jsx_runtime());
+var import_jsx_runtime88 = __toESM(require_jsx_runtime());
 var NOTION_LIKE_TABLES_VIEW = "notion-like-tables";
 var NLTView = class extends import_obsidian5.TextFileView {
   constructor(leaf) {
@@ -49788,11 +49952,13 @@ var NLTView = class extends import_obsidian5.TextFileView {
     }
     if (this.root) {
       this.root.render(
-        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(Provider_default, {
+        /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(Provider_default, {
           store,
-          children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(App2, {
+          children: /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(TableStateProvider, {
             initialState: tableState,
-            onSaveTableState: this.handleSaveTableState
+            children: /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(App2, {
+              onSaveTableState: this.handleSaveTableState
+            })
           })
         })
       );

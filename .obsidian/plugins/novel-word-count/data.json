@@ -3389,12 +3389,12 @@
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 982,
-      "pageCount": 3.2733333333333334,
-      "characterCount": 3082,
-      "nonWhitespaceCharacterCount": 2738,
+      "wordCount": 1001,
+      "pageCount": 3.3366666666666664,
+      "characterCount": 3112,
+      "nonWhitespaceCharacterCount": 2766,
       "createdDate": 1680671313637,
-      "modifiedDate": 1680861760464
+      "modifiedDate": 1680942801034
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/aiva - AI作曲.md": {
       "isDirectory": false,
@@ -3549,12 +3549,12 @@
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 35,
-      "pageCount": 0.11666666666666667,
-      "characterCount": 187,
-      "nonWhitespaceCharacterCount": 168,
+      "wordCount": 390,
+      "pageCount": 1.3,
+      "characterCount": 703,
+      "nonWhitespaceCharacterCount": 637,
       "createdDate": 1678109137172,
-      "modifiedDate": 1678888745126
+      "modifiedDate": 1680958377766
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI.md": {
       "isDirectory": false,
@@ -3576,16 +3576,6 @@
       "createdDate": 1677583211569,
       "modifiedDate": 1678806752666
     },
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/O.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 6,
-      "pageCount": 0.02,
-      "characterCount": 68,
-      "nonWhitespaceCharacterCount": 58,
-      "createdDate": 1677583117316,
-      "modifiedDate": 1678806752670
-    },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/New Bing.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -3599,12 +3589,12 @@
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 106,
-      "pageCount": 0.35333333333333333,
-      "characterCount": 421,
-      "nonWhitespaceCharacterCount": 400,
+      "wordCount": 110,
+      "pageCount": 0.36666666666666664,
+      "characterCount": 520,
+      "nonWhitespaceCharacterCount": 492,
       "createdDate": 1677074924135,
-      "modifiedDate": 1680671408772
+      "modifiedDate": 1681020371634
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/DALL·E 2 - AI绘图.md": {
       "isDirectory": false,
@@ -14206,6 +14196,46 @@
       "createdDate": 1663751729000,
       "modifiedDate": 1678806762388
     },
+    "Sources/GPTchats/电影名字猜猜看：用emoji表情表示.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 52,
+      "pageCount": 0.17333333333333334,
+      "characterCount": 671,
+      "nonWhitespaceCharacterCount": 585,
+      "createdDate": 1680950507843,
+      "modifiedDate": 1680950781633
+    },
+    "Sources/GPTchats/使用Python调用OpenAI API实现聊天功能和检查用户输入合法性.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 300,
+      "pageCount": 1,
+      "characterCount": 2033,
+      "nonWhitespaceCharacterCount": 1681,
+      "createdDate": 1680949821218,
+      "modifiedDate": 1680950057153
+    },
+    "Sources/GPTchats/英语语法纠错与解释.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 149,
+      "pageCount": 0.49666666666666665,
+      "characterCount": 1109,
+      "nonWhitespaceCharacterCount": 952,
+      "createdDate": 1680945637683,
+      "modifiedDate": 1680945740470
+    },
+    "Sources/GPTchats/云计算的浅显解释.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 268,
+      "pageCount": 0.8933333333333333,
+      "characterCount": 660,
+      "nonWhitespaceCharacterCount": 605,
+      "createdDate": 1680945432516,
+      "modifiedDate": 1680945564024
+    },
     "Sources/GPTchats/使用unsplash API发送图片的规则.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -18289,12 +18319,12 @@
     "Extras/Templates/其他/dict/chatgpt_prompts_dict.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
+      "wordCount": 76,
+      "pageCount": 0.25333333333333335,
+      "characterCount": 132,
+      "nonWhitespaceCharacterCount": 120,
       "createdDate": 1680869523286,
-      "modifiedDate": 1680869523286
+      "modifiedDate": 1680870075903
     },
     "Extras/Templates/其他/dict/dict.md": {
       "isDirectory": false,
@@ -19141,10 +19171,10 @@
       "noteCount": 1,
       "wordCount": 8,
       "pageCount": 0.02666666666666667,
-      "characterCount": 185,
+      "characterCount": 187,
       "nonWhitespaceCharacterCount": 160,
       "createdDate": 1678514901745,
-      "modifiedDate": 1678514908352
+      "modifiedDate": 1680870055655
     },
     "Extras/Templates/Calendar模板/文章发布模板/文章草稿-模板.md": {
       "isDirectory": false,
@@ -27509,12 +27539,12 @@
     "Cards/永久笔记/chatGPT.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 23,
-      "pageCount": 0.07666666666666666,
-      "characterCount": 272,
-      "nonWhitespaceCharacterCount": 243,
+      "wordCount": 30,
+      "pageCount": 0.1,
+      "characterCount": 294,
+      "nonWhitespaceCharacterCount": 263,
       "createdDate": 1676456574312,
-      "modifiedDate": 1680085357287
+      "modifiedDate": 1681020626973
     },
     "Cards/永久笔记/channel.md": {
       "isDirectory": false,
@@ -29036,6 +29066,16 @@
       "createdDate": 1662609585000,
       "modifiedDate": 1678806782397
     },
+    "Calendar/Daily notes/2023-04-09.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 55,
+      "pageCount": 0.18333333333333332,
+      "characterCount": 92,
+      "nonWhitespaceCharacterCount": 86,
+      "createdDate": 1681005641880,
+      "modifiedDate": 1681015557625
+    },
     "Calendar/Daily notes/2023-04-02.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -29119,12 +29159,12 @@
     "Calendar/Daily notes/服务可用性检查.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 13,
-      "pageCount": 0.043333333333333335,
-      "characterCount": 93,
-      "nonWhitespaceCharacterCount": 79,
+      "wordCount": 19,
+      "pageCount": 0.06333333333333334,
+      "characterCount": 114,
+      "nonWhitespaceCharacterCount": 97,
       "createdDate": 1680339026436,
-      "modifiedDate": 1680339038157
+      "modifiedDate": 1680939183702
     },
     "Calendar/Daily notes/使用google的colab，直接运行python代码.md": {
       "isDirectory": false,

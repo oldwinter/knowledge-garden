@@ -10,3 +10,5 @@ date modified: 2023-03-14
 [Your Midjourney Profile](https://www.midjourney.com/app/)
 
 [[midjourney 官方文档阅读笔记]]
+
+[🧭 Midjourney 学习导航 | Learning Prompt](https://learningprompt.wiki/docs/midjourney-learning-path)

@@ -21,10 +21,12 @@
   font-weight: 400 !important;
   overflow: visible;
   text-align: start;
+  background-color: var(--background-secondary) !important;
 }
 .NLT__th:last-child {
   border-top: 0 !important;
   border-bottom: 0 !important;
+  background-color: unset !important;
 }
 .NLT__td {
   border-top: 0 !important;
@@ -367,6 +369,10 @@ input:checked + .NLT__slider:before {
   width: 100%;
 }
 .NLT__text-cell p {
+  margin: 0;
+}
+.NLT__text-cell ul {
+  padding: 0 var(--nlt-spacing--lg);
   margin: 0;
 }
 

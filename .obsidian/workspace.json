@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-07.md",
+                "file": "Cards/永久笔记/chatGPT.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,51 @@
             }
           },
           {
-            "id": "088e183630b5659c",
+            "id": "684164ff21163243",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/服务可用性检查.md",
+                "file": "Sources/GPTchats/电影名字猜猜看：用emoji表情表示.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9e4253e581d439f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/使用Python调用OpenAI API实现聊天功能和检查用户输入合法性.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "39909ec2ddf0c186",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/英语语法纠错与解释.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e490c0414671345b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/GPTchats/云计算的浅显解释.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -59,8 +98,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +128,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "presence",
+                "query": "久坐",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/服务可用性检查.md"
+                "file": "Cards/永久笔记/chatGPT.md"
               }
             }
           },
@@ -141,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/服务可用性检查.md",
+                "file": "Cards/永久笔记/chatGPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -153,7 +191,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/服务可用性检查.md",
+                "file": "Cards/永久笔记/chatGPT.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -188,7 +226,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/服务可用性检查.md",
+                "file": "Cards/永久笔记/chatGPT.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -203,7 +241,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 231.5
   },
   "right": {
     "id": "c718ea3b78af998f",
@@ -228,9 +266,36 @@
               "type": "smart-connections-view",
               "state": {}
             }
+          },
+          {
+            "id": "682e73960bf99bbf",
+            "type": "leaf",
+            "state": {
+              "type": "daily-note-outline",
+              "state": {
+                "activeSet": 0,
+                "activeGranularity": 0
+              }
+            }
+          },
+          {
+            "id": "2277c8a1df65f277",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "133fa7d35c31f104",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -248,35 +313,35 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "088e183630b5659c",
+  "active": "83b6db6f5b7d2f7e",
   "lastOpenFiles": [
-    "Calendar/Daily notes/Freshping.md",
+    "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+    "Calendar/Daily notes/2023-04-09.md",
+    "Spaces/2-Area/运动与健康/碳水循环饮食法减脂.md",
+    "Calendar/Daily notes/2023-04-07.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/O.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
+    "Sources/GPTchats/电影名字猜猜看：用emoji表情表示.md",
+    "Sources/GPTchats/英语语法纠错与解释.md",
+    "Sources/GPTchats/使用Python调用OpenAI API实现聊天功能和检查用户输入合法性.md",
     "Extras/Templates/其他/dict/chatgpt_prompts_dict.md",
+    "Sources/GPTchats/云计算的浅显解释.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
+    "Calendar/Daily notes/服务可用性检查.md",
+    "Calendar/Daily notes/Freshping.md",
     "Extras/Templates/ChatGPT_MD/templates/默认模板.md",
     "Extras/Templates/其他/dict/dict.md",
     "Extras/Templates/ChatGPT_MD/templates/发散思维.md",
     "Sources/GPTchats/使用unsplash API发送图片的规则.md",
-    "Calendar/Daily notes/2023-04-07.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md",
     "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/∑ 安卓软件使用.md",
     "Spaces/3-Resource/效率工具与服务专题/好用网站集锦/Bilibili.md",
     "Cards/永久笔记/Bilibili.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
     "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-    "Sources/GPTchats/云原生：软件开发和部署的新范式.md",
-    "Sources/GPTchats/云原生和CICD的概念及应用.md",
-    "Sources/GPTchats/TCP的timewait请求过多如何解决.md",
-    "Sources/GPTchats/运维专家的问题解答：DevOps降本、istio产品能力.md",
-    "Calendar/Daily notes/2023-04-06.md",
     "Untitled.table",
-    "Calendar/Daily notes/2023-04-02.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
-    "Calendar/Daily notes/2023-04-05.md",
-    "Cards/永久笔记/chatGPT从0到1 - 李佳芮.md",
-    "Calendar/Daily notes/使用google的colab，直接运行python代码.md",
-    "Sources/GPTchats/张继科和景甜的恋情及分手传闻.md",
-    "Sources/GPTchats/运动对身心健康的积极影响及如何控制慢跑强度.md",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
     "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",

@@ -1,10 +1,16 @@
 
 /*日付表示  date range */
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-date-range{
+    display: inline-block;
     text-align:center;
     font-size: var(--nav-item-size);
-    padding: var(--size-2-1);
+    padding: var(--size-2-1) var(--size-2-3);
 }
+
+.workspace-leaf-content[data-type="daily-note-outline"] .nav-header{
+    text-align:center;
+}
+
 
 /*viewの書式指定*/
 .workspace-leaf-content[data-type="daily-note-outline"] .view-content{
@@ -62,6 +68,12 @@
     flex-shrink: 0;
 }
 
+/* obsidian ver1.2で項目にhover時、色が変わらなくなった事への暫定対応*/
+.workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title:hover,
+.workspace-leaf-content[data-type="daily-note-outline"] .nav-folder-title:hover {
+    background-color: var(--nav-item-background-hover);
+    color:var(--nav-item-color-hover);
+}
 
 
 
