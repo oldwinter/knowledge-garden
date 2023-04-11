@@ -7510,6 +7510,7 @@ var loadArticles = async (endpoint, apiKey, after = 0, first = 10, updatedAt = "
                     patch
                     updatedAt
                     type
+                    highlightPositionPercent
                     labels {
                       name
                     }
@@ -7912,6 +7913,9 @@ var OmnivorePlugin = class extends import_obsidian4.Plugin {
           if (highlightOrder === "LOCATION") {
             articleHighlights.sort((a, b) => {
               try {
+                if (a.highlightPositionPercent !== void 0 && b.highlightPositionPercent !== void 0) {
+                  return a.highlightPositionPercent - b.highlightPositionPercent;
+                }
                 if (article.pageType === "FILE" /* File */) {
                   return compareHighlightsInFile(a, b);
                 }

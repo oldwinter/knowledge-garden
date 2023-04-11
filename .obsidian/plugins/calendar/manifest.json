@@ -1,10 +1,1 @@
-{
-  "id": "calendar",
-  "name": "Calendar",
-  "description": "Calendar view of your daily notes",
-  "version": "1.5.10",
-  "author": "Liam Cain",
-  "authorUrl": "https://github.com/liamcain/",
-  "isDesktopOnly": false,
-  "minAppVersion": "0.9.11"
-}
+{"id":"calendar-beta","name":"Calendar (Beta)","description":"Calendar view of your daily notes","version":"2.0.0-beta.2","author":"Liam Cain","authorUrl":"https://github.com/liamcain/","isDesktopOnly":false,"minAppVersion":"0.9.11"}

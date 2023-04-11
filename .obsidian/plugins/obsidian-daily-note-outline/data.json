@@ -27,7 +27,7 @@
   "allTasks": true,
   "taskOnly": false,
   "hideCompletedTasks": false,
-  "displayFileInfo": "days",
+  "displayFileInfo": "lines",
   "viewPosition": "right",
   "wordsToIgnore": {
     "heading": [],

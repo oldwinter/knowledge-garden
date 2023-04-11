@@ -2488,6 +2488,12 @@ var AppHelper = class {
       alias: aliases
     };
   }
+  getBoolFrontMatter(file, key) {
+    var _a, _b;
+    return Boolean(
+      (_b = (_a = this.unsafeApp.metadataCache.getFileCache(file)) == null ? void 0 : _a.frontmatter) == null ? void 0 : _b[key]
+    );
+  }
   getMarkdownViewInActiveLeaf() {
     if (!this.unsafeApp.workspace.getActiveViewOfType(import_obsidian.MarkdownView)) {
       return null;
@@ -3222,9 +3228,18 @@ var InternalLinkWordProvider = class {
   refreshWords(option) {
     var _a;
     this.clearWords();
-    const resolvedInternalLinkWords = this.app.vault.getMarkdownFiles().filter(
-      (f) => option.excludePathPrefixPatterns.every((x) => !f.path.startsWith(x))
-    ).flatMap((x) => {
+    const resolvedInternalLinkWords = this.app.vault.getMarkdownFiles().filter((f) => {
+      if (option.excludePathPrefixPatterns.some((x) => f.path.startsWith(x))) {
+        return false;
+      }
+      if (!option.frontMatterKeyForExclusion) {
+        return true;
+      }
+      return !this.appHelper.getBoolFrontMatter(
+        f,
+        option.frontMatterKeyForExclusion
+      );
+    }).flatMap((x) => {
       const aliases = this.appHelper.getAliases(x);
       if (option.wordAsInternalLinkAlias) {
         return [
@@ -4267,7 +4282,8 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       wordAsInternalLinkAlias: this.settings.suggestInternalLinkWithAlias,
       excludePathPrefixPatterns: this.excludeInternalLinkPrefixPathPatterns,
       makeSynonymAboutEmoji: this.settings.matchingWithoutEmoji,
-      makeSynonymAboutAccentsDiacritics: this.settings.treatAccentDiacriticsAsAlphabeticCharacters
+      makeSynonymAboutAccentsDiacritics: this.settings.treatAccentDiacriticsAsAlphabeticCharacters,
+      frontMatterKeyForExclusion: this.settings.frontMatterKeyForExclusionInternalLink
     });
     this.statusBar.setInternalLinkIndexed(
       this.internalLinkWordProvider.wordCount
@@ -4647,6 +4663,7 @@ var DEFAULT_SETTINGS = {
     beforeRegExp: "",
     after: ""
   },
+  frontMatterKeyForExclusionInternalLink: "",
   enableFrontMatterComplement: true,
   frontMatterComplementMatchStrategy: "inherit",
   insertCommaAfterFrontMatterCompletion: false,
@@ -5162,6 +5179,16 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         });
         el.inputEl.className = "various-complements__settings__text-area-path";
         return el;
+      });
+      new import_obsidian4.Setting(containerEl).setName("Front matter key for exclusion").setDesc(
+        "Exclude internal links from the suggestions if whose front matters have the key whose name is same as this setting, and the value is 'true'"
+      ).addText((cb) => {
+        TextComponentEvent.onChange(cb, async (value) => {
+          this.plugin.settings.frontMatterKeyForExclusionInternalLink = value;
+          await this.plugin.saveSettings({ internalLink: true });
+        }).setValue(
+          this.plugin.settings.frontMatterKeyForExclusionInternalLink
+        );
       });
     }
   }

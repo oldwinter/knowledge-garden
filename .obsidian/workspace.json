@@ -13,85 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cards/永久笔记/chatGPT.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "684164ff21163243",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/GPTchats/电影名字猜猜看：用emoji表情表示.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9e4253e581d439f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/GPTchats/使用Python调用OpenAI API实现聊天功能和检查用户输入合法性.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "39909ec2ddf0c186",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/GPTchats/英语语法纠错与解释.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e490c0414671345b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sources/GPTchats/云计算的浅显解释.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "278214ec71776c29",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Extras/Templates/其他/dict/dict.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "610c795e24c2bdd5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Extras/Templates/其他/dict/chatgpt_prompts_dict.md",
+                "file": "Calendar/Daily notes/2023-04-10.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -169,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cards/永久笔记/chatGPT.md"
+                "file": "Calendar/Daily notes/2023-04-10.md"
               }
             }
           },
@@ -179,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cards/永久笔记/chatGPT.md",
+                "file": "Calendar/Daily notes/2023-04-10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -191,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cards/永久笔记/chatGPT.md",
+                "file": "Calendar/Daily notes/2023-04-10.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -226,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cards/永久笔记/chatGPT.md",
+                "file": "Calendar/Daily notes/2023-04-10.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -260,47 +182,19 @@
             }
           },
           {
-            "id": "8f2fd9f7c6582a06",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "682e73960bf99bbf",
-            "type": "leaf",
-            "state": {
-              "type": "daily-note-outline",
-              "state": {
-                "activeSet": 0,
-                "activeGranularity": 0
-              }
-            }
-          },
-          {
             "id": "2277c8a1df65f277",
             "type": "leaf",
             "state": {
               "type": "chronology-calendar-view",
               "state": {}
             }
-          },
-          {
-            "id": "133fa7d35c31f104",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 386.5,
-    "collapsed": true
+    "width": 386.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -315,32 +209,33 @@
   },
   "active": "83b6db6f5b7d2f7e",
   "lastOpenFiles": [
-    "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+    "Calendar/Daily notes/notion database 如何批量复制粘贴数据.md",
+    "Calendar/Daily notes/2023-04-10.md",
+    "Calendar/Daily notes/Super.so.md",
     "Calendar/Daily notes/2023-04-09.md",
-    "Spaces/2-Area/运动与健康/碳水循环饮食法减脂.md",
-    "Calendar/Daily notes/2023-04-07.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/O.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/OpenAI.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/OpenAI 和chatGPT使用/chatGPT Prompts.md",
-    "Sources/GPTchats/电影名字猜猜看：用emoji表情表示.md",
-    "Sources/GPTchats/英语语法纠错与解释.md",
-    "Sources/GPTchats/使用Python调用OpenAI API实现聊天功能和检查用户输入合法性.md",
-    "Extras/Templates/其他/dict/chatgpt_prompts_dict.md",
-    "Sources/GPTchats/云计算的浅显解释.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjourney 官方文档阅读笔记.md",
-    "Calendar/Daily notes/服务可用性检查.md",
-    "Calendar/Daily notes/Freshping.md",
-    "Extras/Templates/ChatGPT_MD/templates/默认模板.md",
-    "Extras/Templates/其他/dict/dict.md",
-    "Extras/Templates/ChatGPT_MD/templates/发散思维.md",
-    "Sources/GPTchats/使用unsplash API发送图片的规则.md",
-    "Spaces/3-Resource/效率工具与服务专题/安卓软件使用/∑ 安卓软件使用.md",
-    "Spaces/3-Resource/效率工具与服务专题/好用网站集锦/Bilibili.md",
-    "Cards/永久笔记/Bilibili.md",
-    "Spaces/2-Area/运动与健康/∑ 运动与健康.md",
-    "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+    "Calendar/Daily notes/2023-04-06.md",
+    "Calendar/Daily notes/2023-04-05.md",
+    "Calendar/Daily notes/2023-04-04.md",
+    "Calendar/Daily notes/2023-04-01.md",
+    "Calendar/Daily notes/2023-03-31.md",
+    "Calendar/Daily notes/2023-03-30.md",
+    "Calendar/Daily notes/2023-03-29.md",
+    "Calendar/Daily notes/2023-03-28.md",
+    "Calendar/Daily notes/2023-03-27.md",
+    "Calendar/Daily notes/2023-03-26.md",
+    "Calendar/Daily notes/2023-03-22.md",
+    "Calendar/Daily notes/2023-03-25.md",
+    "Calendar/Daily notes/2023-03-24.md",
+    "Calendar/Daily notes/2023-03-23.md",
+    "Calendar/Daily notes/2023-03-21.md",
+    "Calendar/Daily notes/优雅站姿和走姿.md",
+    "Calendar/Daily notes/2023-03-20.md",
+    "Cards/永久笔记/notion 和 滴答清单的分工.md",
+    "Calendar/Daily notes/2023-03-19.md",
+    "Calendar/Daily notes/2023-03-18.md",
+    "Calendar/Daily notes/2023-03-17.md",
+    "Calendar/Daily notes/2023-03-16.md",
+    "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
     "Untitled.table",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
@@ -366,7 +261,6 @@
     "Sources/Podcasts/Notes",
     "Sources/Podcasts",
     "PodNotes_Export1.opml",
-    "PodNotes_Export.opml",
     "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
     "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",

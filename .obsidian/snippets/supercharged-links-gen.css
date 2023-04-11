@@ -140,13 +140,13 @@ div[data-id="75fc-e339"] div.setting-item-description::after,
 }
 
 div[data-id="7c4c-9ddb"] div.setting-item-description,
-[data-link-tags*="索引笔记" i] {
+[data-link-path*="∑" i] {
     color: var(--7c4c-9ddb-color) !important;
     font-weight: var(--7c4c-9ddb-weight);
 }
 
 .c-7c4c-9ddb-use-background div[data-id="7c4c-9ddb"] div.setting-item-description,
-.c-7c4c-9ddb-use-background .data-link-text[data-link-tags*="索引笔记" i] {
+.c-7c4c-9ddb-use-background .data-link-text[data-link-path*="∑" i] {
     background-color: var(--7c4c-9ddb-background-color) !important;
     border-radius: 5px;
     padding-left: 2px;
@@ -155,12 +155,12 @@ div[data-id="7c4c-9ddb"] div.setting-item-description,
 }
 
 div[data-id="7c4c-9ddb"] div.setting-item-description::before,
-.data-link-icon[data-link-tags*="索引笔记" i]::before {
+.data-link-icon[data-link-path*="∑" i]::before {
     content: var(--7c4c-9ddb-before);
 }
 
 div[data-id="7c4c-9ddb"] div.setting-item-description::after,
-.data-link-icon-after[data-link-tags*="索引笔记" i]::after {
+.data-link-icon-after[data-link-path*="∑" i]::after {
     content: var(--7c4c-9ddb-after);
 }
 
@@ -290,13 +290,13 @@ div[data-id="17d0-6ee6"] div.setting-item-description::after,
 }
 
 div[data-id="f22f-8852"] div.setting-item-description,
-[data-link-title="HOMEPAGE"  i] {
+[data-link-title="HOMEPAGE" ] {
     color: var(--f22f-8852-color) !important;
     font-weight: var(--f22f-8852-weight);
 }
 
 .c-f22f-8852-use-background div[data-id="f22f-8852"] div.setting-item-description,
-.c-f22f-8852-use-background .data-link-text[data-link-title="HOMEPAGE"  i] {
+.c-f22f-8852-use-background .data-link-text[data-link-title="HOMEPAGE" ] {
     background-color: var(--f22f-8852-background-color) !important;
     border-radius: 5px;
     padding-left: 2px;
@@ -305,12 +305,12 @@ div[data-id="f22f-8852"] div.setting-item-description,
 }
 
 div[data-id="f22f-8852"] div.setting-item-description::before,
-.data-link-icon[data-link-title="HOMEPAGE"  i]::before {
+.data-link-icon[data-link-title="HOMEPAGE" ]::before {
     content: var(--f22f-8852-before);
 }
 
 div[data-id="f22f-8852"] div.setting-item-description::after,
-.data-link-icon-after[data-link-title="HOMEPAGE"  i]::after {
+.data-link-icon-after[data-link-title="HOMEPAGE" ]::after {
     content: var(--f22f-8852-after);
 }
 /* @settings
@@ -496,7 +496,7 @@ settings:
         default: '#ffffff'
     - 
         id: 7c4c-9ddb
-        title: tag is 索引笔记
+        title: path is ∑
         description: Example note
         type: heading
         collapsed: true
