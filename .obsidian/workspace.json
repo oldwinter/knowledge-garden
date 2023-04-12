@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-10.md",
-                "mode": "source",
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-10.md"
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-10.md",
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-10.md",
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-10.md",
+                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -188,6 +188,14 @@
               "type": "chronology-calendar-view",
               "state": {}
             }
+          },
+          {
+            "id": "ad2e7d7692b15610",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
@@ -207,34 +215,34 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "83b6db6f5b7d2f7e",
+  "active": "2277c8a1df65f277",
   "lastOpenFiles": [
-    "Calendar/Daily notes/notion database 如何批量复制粘贴数据.md",
+    "🍀 花园导览/🧀 个人知识管理.md",
+    "README.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjouney 令人惊艳的地方.md",
+    "Calendar/Daily notes/2023-04-12.md",
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-05.md",
+    "Cards/永久笔记/阿里云-云原生-ACA认证-笔记.md",
     "Calendar/Daily notes/2023-04-10.md",
-    "Calendar/Daily notes/Super.so.md",
-    "Calendar/Daily notes/2023-04-09.md",
+    "Calendar/Daily notes/Daily notes归档/2023-04-09.md",
+    "Calendar/Daily notes/Daily notes归档/2023-04-04.md",
+    "Calendar/Daily notes/Daily notes归档/2023-04-05.md",
+    "Cards/永久笔记/chatgpt 超长对话的技巧.md",
+    "Calendar/Daily notes/Daily notes归档/2023-04-01.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-31.md",
+    "Cards/永久笔记/Obsidian 不适合做什么以及其补足配合的软件.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-28.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-25.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-26.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-22.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-21.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-20.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-19.md",
+    "Cards/永久笔记/notion database 如何批量复制粘贴数据.md",
+    "Cards/永久笔记/Super.so.md",
     "Calendar/Daily notes/2023-04-06.md",
-    "Calendar/Daily notes/2023-04-05.md",
-    "Calendar/Daily notes/2023-04-04.md",
-    "Calendar/Daily notes/2023-04-01.md",
-    "Calendar/Daily notes/2023-03-31.md",
-    "Calendar/Daily notes/2023-03-30.md",
-    "Calendar/Daily notes/2023-03-29.md",
-    "Calendar/Daily notes/2023-03-28.md",
-    "Calendar/Daily notes/2023-03-27.md",
-    "Calendar/Daily notes/2023-03-26.md",
-    "Calendar/Daily notes/2023-03-22.md",
-    "Calendar/Daily notes/2023-03-25.md",
-    "Calendar/Daily notes/2023-03-24.md",
-    "Calendar/Daily notes/2023-03-23.md",
-    "Calendar/Daily notes/2023-03-21.md",
-    "Calendar/Daily notes/优雅站姿和走姿.md",
-    "Calendar/Daily notes/2023-03-20.md",
-    "Cards/永久笔记/notion 和 滴答清单的分工.md",
-    "Calendar/Daily notes/2023-03-19.md",
-    "Calendar/Daily notes/2023-03-18.md",
-    "Calendar/Daily notes/2023-03-17.md",
-    "Calendar/Daily notes/2023-03-16.md",
+    "Calendar/Daily notes/Daily notes归档/2023-03-30.md",
     "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
     "Untitled.table",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",

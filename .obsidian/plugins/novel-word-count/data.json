@@ -3376,6 +3376,16 @@
       "createdDate": 1675776347857,
       "modifiedDate": 1678806747305
     },
+    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjouney 令人惊艳的地方.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 61,
+      "pageCount": 0.20333333333333334,
+      "characterCount": 385,
+      "nonWhitespaceCharacterCount": 365,
+      "createdDate": 1681221740923,
+      "modifiedDate": 1681223189829
+    },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AIGC MOC.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -3599,12 +3609,12 @@
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 110,
-      "pageCount": 0.36666666666666664,
-      "characterCount": 520,
-      "nonWhitespaceCharacterCount": 492,
+      "wordCount": 117,
+      "pageCount": 0.39,
+      "characterCount": 544,
+      "nonWhitespaceCharacterCount": 512,
       "createdDate": 1677074924135,
-      "modifiedDate": 1681020371634
+      "modifiedDate": 1681221739047
     },
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/DALL·E 2 - AI绘图.md": {
       "isDirectory": false,
@@ -19276,6 +19286,176 @@
       "createdDate": 1663751814000,
       "modifiedDate": 1678806772882
     },
+    "Cards/永久笔记/Obsidian 不适合做什么以及其补足配合的软件.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 103,
+      "pageCount": 0.3433333333333333,
+      "characterCount": 266,
+      "nonWhitespaceCharacterCount": 225,
+      "createdDate": 1681221414739,
+      "modifiedDate": 1681221418461
+    },
+    "Cards/永久笔记/notion database 如何批量复制粘贴数据.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 87,
+      "pageCount": 0.29,
+      "characterCount": 208,
+      "nonWhitespaceCharacterCount": 194,
+      "createdDate": 1680346595820,
+      "modifiedDate": 1680346675567
+    },
+    "Cards/永久笔记/markdown 中，无序列表中如何嵌入代码块.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 194,
+      "pageCount": 0.6466666666666666,
+      "characterCount": 346,
+      "nonWhitespaceCharacterCount": 298,
+      "createdDate": 1680352322243,
+      "modifiedDate": 1680353164728
+    },
+    "Cards/永久笔记/Freshping.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680338994692,
+      "modifiedDate": 1680338994692
+    },
+    "Cards/永久笔记/chatGPT 优质prompt的特征概括.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 233,
+      "pageCount": 0.7766666666666666,
+      "characterCount": 392,
+      "nonWhitespaceCharacterCount": 357,
+      "createdDate": 1681042633014,
+      "modifiedDate": 1681042636048
+    },
+    "Cards/永久笔记/chatgpt 集成到不同聊天工具中 - 飞书、微信、telegram等.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 36,
+      "pageCount": 0.12,
+      "characterCount": 285,
+      "nonWhitespaceCharacterCount": 263,
+      "createdDate": 1680267242068,
+      "modifiedDate": 1680267245064
+    },
+    "Cards/永久笔记/chatgpt 超长对话的技巧.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 133,
+      "pageCount": 0.44333333333333336,
+      "characterCount": 234,
+      "nonWhitespaceCharacterCount": 221,
+      "createdDate": 1681221448833,
+      "modifiedDate": 1681221502947
+    },
+    "Cards/永久笔记/云计算、chatgpt 问世后的工程师新分类.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 40,
+      "pageCount": 0.13333333333333333,
+      "characterCount": 118,
+      "nonWhitespaceCharacterCount": 105,
+      "createdDate": 1680325990399,
+      "modifiedDate": 1680326043066
+    },
+    "Cards/永久笔记/优雅站姿和走姿.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 57,
+      "pageCount": 0.19,
+      "characterCount": 141,
+      "nonWhitespaceCharacterCount": 115,
+      "createdDate": 1681044069646,
+      "modifiedDate": 1681044077587
+    },
+    "Cards/永久笔记/褪黑素和皮质醇对人的昼夜节律生物钟调节作用.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 119,
+      "pageCount": 0.39666666666666667,
+      "characterCount": 217,
+      "nonWhitespaceCharacterCount": 201,
+      "createdDate": 1680266342190,
+      "modifiedDate": 1680266537389
+    },
+    "Cards/永久笔记/使用google的colab，直接运行python代码.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 4,
+      "pageCount": 0.013333333333333334,
+      "characterCount": 70,
+      "nonWhitespaceCharacterCount": 67,
+      "createdDate": 1680682152858,
+      "modifiedDate": 1680682192737
+    },
+    "Cards/永久笔记/男性脱发只有2个药物有用，其他都是智商税.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 4,
+      "pageCount": 0.013333333333333334,
+      "characterCount": 5,
+      "nonWhitespaceCharacterCount": 5,
+      "createdDate": 1680314860825,
+      "modifiedDate": 1680314881981
+    },
+    "Cards/永久笔记/目前自建且发布的网站集合.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 137,
+      "pageCount": 0.45666666666666667,
+      "characterCount": 1178,
+      "nonWhitespaceCharacterCount": 1035,
+      "createdDate": 1680334333856,
+      "modifiedDate": 1680338992793
+    },
+    "Cards/永久笔记/服务可用性检查.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 19,
+      "pageCount": 0.06333333333333334,
+      "characterCount": 114,
+      "nonWhitespaceCharacterCount": 97,
+      "createdDate": 1680339026436,
+      "modifiedDate": 1680939183702
+    },
+    "Cards/永久笔记/鼻子呼吸.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 132,
+      "pageCount": 0.44,
+      "characterCount": 239,
+      "nonWhitespaceCharacterCount": 221,
+      "createdDate": 1680266703290,
+      "modifiedDate": 1680266706339
+    },
+    "Cards/永久笔记/阿里云-云原生-ACA认证-笔记.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680587516630,
+      "modifiedDate": 1680587516630
+    },
+    "Cards/永久笔记/Super.so.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1680338722066,
+      "modifiedDate": 1680338722066
+    },
     "Cards/永久笔记/🪞鱼与熊掌，不可兼得.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -29066,105 +29246,15 @@
       "createdDate": 1662609585000,
       "modifiedDate": 1678806782397
     },
-    "Calendar/Daily notes/2023-03-20.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 17,
-      "pageCount": 0.056666666666666664,
-      "characterCount": 118,
-      "nonWhitespaceCharacterCount": 101,
-      "createdDate": 1679280317598,
-      "modifiedDate": 1681044040929
-    },
-    "Calendar/Daily notes/鼻子呼吸.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 132,
-      "pageCount": 0.44,
-      "characterCount": 239,
-      "nonWhitespaceCharacterCount": 221,
-      "createdDate": 1680266703290,
-      "modifiedDate": 1680266706339
-    },
-    "Calendar/Daily notes/阿里云-云原生-ACA认证-笔记.md": {
+    "Calendar/Daily notes/2023-04-12.md": {
       "isDirectory": false,
       "noteCount": 1,
       "wordCount": 0,
       "pageCount": 0,
       "characterCount": 0,
       "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680587516630,
-      "modifiedDate": 1680587516630
-    },
-    "Calendar/Daily notes/褪黑素和皮质醇对人的昼夜节律生物钟调节作用.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 119,
-      "pageCount": 0.39666666666666667,
-      "characterCount": 217,
-      "nonWhitespaceCharacterCount": 201,
-      "createdDate": 1680266342190,
-      "modifiedDate": 1680266537389
-    },
-    "Calendar/Daily notes/目前自建且发布的网站集合.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 137,
-      "pageCount": 0.45666666666666667,
-      "characterCount": 1178,
-      "nonWhitespaceCharacterCount": 1035,
-      "createdDate": 1680334333856,
-      "modifiedDate": 1680338992793
-    },
-    "Calendar/Daily notes/男性脱发只有2个药物有用，其他都是智商税.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 4,
-      "pageCount": 0.013333333333333334,
-      "characterCount": 5,
-      "nonWhitespaceCharacterCount": 5,
-      "createdDate": 1680314860825,
-      "modifiedDate": 1680314881981
-    },
-    "Calendar/Daily notes/服务可用性检查.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 19,
-      "pageCount": 0.06333333333333334,
-      "characterCount": 114,
-      "nonWhitespaceCharacterCount": 97,
-      "createdDate": 1680339026436,
-      "modifiedDate": 1680939183702
-    },
-    "Calendar/Daily notes/使用google的colab，直接运行python代码.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 4,
-      "pageCount": 0.013333333333333334,
-      "characterCount": 70,
-      "nonWhitespaceCharacterCount": 67,
-      "createdDate": 1680682152858,
-      "modifiedDate": 1680682192737
-    },
-    "Calendar/Daily notes/优雅站姿和走姿.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 57,
-      "pageCount": 0.19,
-      "characterCount": 141,
-      "nonWhitespaceCharacterCount": 115,
-      "createdDate": 1681044069646,
-      "modifiedDate": 1681044077587
-    },
-    "Calendar/Daily notes/云计算、chatgpt 问世后的工程师新分类.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 40,
-      "pageCount": 0.13333333333333333,
-      "characterCount": 118,
-      "nonWhitespaceCharacterCount": 105,
-      "createdDate": 1680325990399,
-      "modifiedDate": 1680326043066
+      "createdDate": 1681263547900,
+      "modifiedDate": 1681263547900
     },
     "Calendar/Daily notes/∑ 优质播客列表.md": {
       "isDirectory": false,
@@ -29186,65 +29276,245 @@
       "createdDate": 1676304612040,
       "modifiedDate": 1680265297768
     },
-    "Calendar/Daily notes/notion database 如何批量复制粘贴数据.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-04-05.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 87,
-      "pageCount": 0.29,
-      "characterCount": 208,
-      "nonWhitespaceCharacterCount": 194,
-      "createdDate": 1680346595820,
-      "modifiedDate": 1680346675567
+      "wordCount": 25,
+      "pageCount": 0.08333333333333333,
+      "characterCount": 137,
+      "nonWhitespaceCharacterCount": 120,
+      "createdDate": 1680682132790,
+      "modifiedDate": 1681221449030
     },
-    "Calendar/Daily notes/markdown 中，无序列表中如何嵌入代码块.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-04-04.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 194,
-      "pageCount": 0.6466666666666666,
-      "characterCount": 346,
-      "nonWhitespaceCharacterCount": 298,
-      "createdDate": 1680352322243,
-      "modifiedDate": 1680353164728
+      "wordCount": 25,
+      "pageCount": 0.08333333333333333,
+      "characterCount": 118,
+      "nonWhitespaceCharacterCount": 102,
+      "createdDate": 1680574346303,
+      "modifiedDate": 1681044434696
     },
-    "Calendar/Daily notes/chatgpt 集成到不同聊天工具中 - 飞书、微信、telegram等.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-04-01.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 36,
-      "pageCount": 0.12,
-      "characterCount": 285,
-      "nonWhitespaceCharacterCount": 263,
-      "createdDate": 1680267242068,
-      "modifiedDate": 1680267245064
+      "wordCount": 70,
+      "pageCount": 0.23333333333333334,
+      "characterCount": 202,
+      "nonWhitespaceCharacterCount": 179,
+      "createdDate": 1680278528173,
+      "modifiedDate": 1681044426813
     },
-    "Calendar/Daily notes/chatGPT 优质prompt的特征概括.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-03-31.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 233,
-      "pageCount": 0.7766666666666666,
-      "characterCount": 392,
-      "nonWhitespaceCharacterCount": 357,
-      "createdDate": 1681042633014,
-      "modifiedDate": 1681042636048
+      "wordCount": 32,
+      "pageCount": 0.10666666666666667,
+      "characterCount": 152,
+      "nonWhitespaceCharacterCount": 132,
+      "createdDate": 1680229999024,
+      "modifiedDate": 1681044417357
     },
-    "Calendar/Daily notes/Super.so.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-03-30.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680338722066,
-      "modifiedDate": 1680338722066
+      "wordCount": 18,
+      "pageCount": 0.06,
+      "characterCount": 95,
+      "nonWhitespaceCharacterCount": 83,
+      "createdDate": 1680159902193,
+      "modifiedDate": 1681044391372
     },
-    "Calendar/Daily notes/Freshping.md": {
+    "Calendar/Daily notes/Daily notes归档/2023-03-28.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "createdDate": 1680338994692,
-      "modifiedDate": 1680338994692
+      "wordCount": 25,
+      "pageCount": 0.08333333333333333,
+      "characterCount": 112,
+      "nonWhitespaceCharacterCount": 98,
+      "createdDate": 1679935801259,
+      "modifiedDate": 1681221415057
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-27.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 208,
+      "pageCount": 0.6933333333333334,
+      "characterCount": 354,
+      "nonWhitespaceCharacterCount": 328,
+      "createdDate": 1679883312975,
+      "modifiedDate": 1681044222059
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-26.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 119,
+      "pageCount": 0.39666666666666667,
+      "characterCount": 234,
+      "nonWhitespaceCharacterCount": 212,
+      "createdDate": 1679810465100,
+      "modifiedDate": 1681221361934
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-25.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 23,
+      "pageCount": 0.07666666666666666,
+      "characterCount": 100,
+      "nonWhitespaceCharacterCount": 88,
+      "createdDate": 1679724935210,
+      "modifiedDate": 1681044138919
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-22.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 47,
+      "pageCount": 0.15666666666666668,
+      "characterCount": 140,
+      "nonWhitespaceCharacterCount": 128,
+      "createdDate": 1679420420468,
+      "modifiedDate": 1681044112739
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-21.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 27,
+      "pageCount": 0.09,
+      "characterCount": 124,
+      "nonWhitespaceCharacterCount": 107,
+      "createdDate": 1679329234251,
+      "modifiedDate": 1681044087909
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-20.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 118,
+      "nonWhitespaceCharacterCount": 101,
+      "createdDate": 1679280317598,
+      "modifiedDate": 1681044040929
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-19.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 35,
+      "pageCount": 0.11666666666666667,
+      "characterCount": 125,
+      "nonWhitespaceCharacterCount": 110,
+      "createdDate": 1679155860384,
+      "modifiedDate": 1681044029724
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-18.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 35,
+      "pageCount": 0.11666666666666667,
+      "characterCount": 131,
+      "nonWhitespaceCharacterCount": 114,
+      "createdDate": 1679113535264,
+      "modifiedDate": 1679134880728
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-17.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 56,
+      "pageCount": 0.18666666666666668,
+      "characterCount": 211,
+      "nonWhitespaceCharacterCount": 185,
+      "createdDate": 1679017837888,
+      "modifiedDate": 1681044014909
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-16.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 25,
+      "pageCount": 0.08333333333333333,
+      "characterCount": 110,
+      "nonWhitespaceCharacterCount": 94,
+      "createdDate": 1678940579603,
+      "modifiedDate": 1678987927611
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-15.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 111,
+      "pageCount": 0.37,
+      "characterCount": 280,
+      "nonWhitespaceCharacterCount": 262,
+      "createdDate": 1678891796618,
+      "modifiedDate": 1681043998849
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-14.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 33,
+      "pageCount": 0.11,
+      "characterCount": 116,
+      "nonWhitespaceCharacterCount": 102,
+      "createdDate": 1678770368866,
+      "modifiedDate": 1678806781900
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-12.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 122,
+      "pageCount": 0.4066666666666667,
+      "characterCount": 300,
+      "nonWhitespaceCharacterCount": 270,
+      "createdDate": 1678594626954,
+      "modifiedDate": 1681043970306
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-11.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 27,
+      "pageCount": 0.09,
+      "characterCount": 127,
+      "nonWhitespaceCharacterCount": 110,
+      "createdDate": 1678523105297,
+      "modifiedDate": 1681043912827
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-08.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 42,
+      "pageCount": 0.14,
+      "characterCount": 131,
+      "nonWhitespaceCharacterCount": 115,
+      "createdDate": 1678276704446,
+      "modifiedDate": 1678806781979
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-06.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 22,
+      "pageCount": 0.07333333333333333,
+      "characterCount": 106,
+      "nonWhitespaceCharacterCount": 92,
+      "createdDate": 1678032394055,
+      "modifiedDate": 1680325990608
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-03-05.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 51,
+      "pageCount": 0.17,
+      "characterCount": 150,
+      "nonWhitespaceCharacterCount": 132,
+      "createdDate": 1677983939902,
+      "modifiedDate": 1678806782026
+    },
+    "Calendar/Daily notes/Daily notes归档/2023-04-09.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 106,
+      "pageCount": 0.35333333333333333,
+      "characterCount": 229,
+      "nonWhitespaceCharacterCount": 205,
+      "createdDate": 1681005641880,
+      "modifiedDate": 1681221523053
     },
     "Calendar/Daily notes/Daily notes归档/2023-03-04.md": {
       "isDirectory": false,
@@ -31565,236 +31835,6 @@
       "nonWhitespaceCharacterCount": 216,
       "createdDate": 1662609591000,
       "modifiedDate": 1678806781376
-    },
-    "Calendar/Daily notes/2023-04-09.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 106,
-      "pageCount": 0.35333333333333333,
-      "characterCount": 225,
-      "nonWhitespaceCharacterCount": 202,
-      "createdDate": 1681005641880,
-      "modifiedDate": 1681042752684
-    },
-    "Calendar/Daily notes/2023-04-05.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 87,
-      "pageCount": 0.29,
-      "characterCount": 209,
-      "nonWhitespaceCharacterCount": 195,
-      "createdDate": 1680682132790,
-      "modifiedDate": 1681044469019
-    },
-    "Calendar/Daily notes/2023-04-04.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 25,
-      "pageCount": 0.08333333333333333,
-      "characterCount": 118,
-      "nonWhitespaceCharacterCount": 102,
-      "createdDate": 1680574346303,
-      "modifiedDate": 1681044434696
-    },
-    "Calendar/Daily notes/2023-04-01.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 70,
-      "pageCount": 0.23333333333333334,
-      "characterCount": 202,
-      "nonWhitespaceCharacterCount": 179,
-      "createdDate": 1680278528173,
-      "modifiedDate": 1681044426813
-    },
-    "Calendar/Daily notes/2023-03-31.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 32,
-      "pageCount": 0.10666666666666667,
-      "characterCount": 152,
-      "nonWhitespaceCharacterCount": 132,
-      "createdDate": 1680229999024,
-      "modifiedDate": 1681044417357
-    },
-    "Calendar/Daily notes/2023-03-30.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 18,
-      "pageCount": 0.06,
-      "characterCount": 95,
-      "nonWhitespaceCharacterCount": 83,
-      "createdDate": 1680159902193,
-      "modifiedDate": 1681044391372
-    },
-    "Calendar/Daily notes/2023-03-28.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 90,
-      "pageCount": 0.3,
-      "characterCount": 250,
-      "nonWhitespaceCharacterCount": 213,
-      "createdDate": 1679935801259,
-      "modifiedDate": 1681044346448
-    },
-    "Calendar/Daily notes/2023-03-27.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 208,
-      "pageCount": 0.6933333333333334,
-      "characterCount": 354,
-      "nonWhitespaceCharacterCount": 328,
-      "createdDate": 1679883312975,
-      "modifiedDate": 1681044222059
-    },
-    "Calendar/Daily notes/2023-03-26.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 119,
-      "pageCount": 0.39666666666666667,
-      "characterCount": 236,
-      "nonWhitespaceCharacterCount": 212,
-      "createdDate": 1679810465100,
-      "modifiedDate": 1681044182351
-    },
-    "Calendar/Daily notes/2023-03-25.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 23,
-      "pageCount": 0.07666666666666666,
-      "characterCount": 100,
-      "nonWhitespaceCharacterCount": 88,
-      "createdDate": 1679724935210,
-      "modifiedDate": 1681044138919
-    },
-    "Calendar/Daily notes/2023-03-22.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 47,
-      "pageCount": 0.15666666666666668,
-      "characterCount": 140,
-      "nonWhitespaceCharacterCount": 128,
-      "createdDate": 1679420420468,
-      "modifiedDate": 1681044112739
-    },
-    "Calendar/Daily notes/2023-03-21.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 27,
-      "pageCount": 0.09,
-      "characterCount": 124,
-      "nonWhitespaceCharacterCount": 107,
-      "createdDate": 1679329234251,
-      "modifiedDate": 1681044087909
-    },
-    "Calendar/Daily notes/2023-03-19.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 35,
-      "pageCount": 0.11666666666666667,
-      "characterCount": 125,
-      "nonWhitespaceCharacterCount": 110,
-      "createdDate": 1679155860384,
-      "modifiedDate": 1681044029724
-    },
-    "Calendar/Daily notes/2023-03-18.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 35,
-      "pageCount": 0.11666666666666667,
-      "characterCount": 131,
-      "nonWhitespaceCharacterCount": 114,
-      "createdDate": 1679113535264,
-      "modifiedDate": 1679134880728
-    },
-    "Calendar/Daily notes/2023-03-17.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 56,
-      "pageCount": 0.18666666666666668,
-      "characterCount": 211,
-      "nonWhitespaceCharacterCount": 185,
-      "createdDate": 1679017837888,
-      "modifiedDate": 1681044014909
-    },
-    "Calendar/Daily notes/2023-03-16.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 25,
-      "pageCount": 0.08333333333333333,
-      "characterCount": 110,
-      "nonWhitespaceCharacterCount": 94,
-      "createdDate": 1678940579603,
-      "modifiedDate": 1678987927611
-    },
-    "Calendar/Daily notes/2023-03-15.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 111,
-      "pageCount": 0.37,
-      "characterCount": 280,
-      "nonWhitespaceCharacterCount": 262,
-      "createdDate": 1678891796618,
-      "modifiedDate": 1681043998849
-    },
-    "Calendar/Daily notes/2023-03-14.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 33,
-      "pageCount": 0.11,
-      "characterCount": 116,
-      "nonWhitespaceCharacterCount": 102,
-      "createdDate": 1678770368866,
-      "modifiedDate": 1678806781900
-    },
-    "Calendar/Daily notes/2023-03-12.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 122,
-      "pageCount": 0.4066666666666667,
-      "characterCount": 300,
-      "nonWhitespaceCharacterCount": 270,
-      "createdDate": 1678594626954,
-      "modifiedDate": 1681043970306
-    },
-    "Calendar/Daily notes/2023-03-11.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 27,
-      "pageCount": 0.09,
-      "characterCount": 127,
-      "nonWhitespaceCharacterCount": 110,
-      "createdDate": 1678523105297,
-      "modifiedDate": 1681043912827
-    },
-    "Calendar/Daily notes/2023-03-08.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 42,
-      "pageCount": 0.14,
-      "characterCount": 131,
-      "nonWhitespaceCharacterCount": 115,
-      "createdDate": 1678276704446,
-      "modifiedDate": 1678806781979
-    },
-    "Calendar/Daily notes/2023-03-06.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 22,
-      "pageCount": 0.07333333333333333,
-      "characterCount": 106,
-      "nonWhitespaceCharacterCount": 92,
-      "createdDate": 1678032394055,
-      "modifiedDate": 1680325990608
-    },
-    "Calendar/Daily notes/2023-03-05.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 51,
-      "pageCount": 0.17,
-      "characterCount": 150,
-      "nonWhitespaceCharacterCount": 132,
-      "createdDate": 1677983939902,
-      "modifiedDate": 1678806782026
     },
     "Calendar/About Calendar.md": {
       "isDirectory": false,

@@ -23,7 +23,6 @@
     width: 100%;
     height: 100%;
     display: block;
-    white-space: nowrap;
 }
 
 .markmap div { line-height: var(--mm-line-height, 1em) }
@@ -63,6 +62,8 @@
 .block-language-markmap { border-radius: 5px }
 .block-language-markmap svg { border-radius: 5px }
 
+.block-language-markmap { letter-spacing: normal }
+
 .mmng-highlight-inline .block-language-markmap {
     background-color: var(--code-background);
     padding: 3px;
@@ -70,6 +71,19 @@
 
 .markdown-source-view.mod-cm6 .cm-embed-block:has(.block-language-markmap):hover {
     box-shadow: none;
+}
+
+.block-language-markmap .workspace-leaf-resize-handle {
+    bottom: 0;
+    left: 0;
+    border-bottom-style: solid;
+    border-bottom-width: var(--divider-width);
+    height: var(--divider-width-hover);
+    width: 100%;
+    cursor: row-resize;
+}
+.workspace-split.mod-root .workspace-leaf:last-child .block-language-markmap .workspace-leaf-resize-handle {
+    display: block
 }
 
 
