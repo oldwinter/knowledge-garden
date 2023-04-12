@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
-                "mode": "preview",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md"
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🍀 花园导览/🤖 如何用好AIGC工具.md",
+                "file": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -168,41 +168,10 @@
   "right": {
     "id": "c718ea3b78af998f",
     "type": "split",
-    "children": [
-      {
-        "id": "ac5865f1b9a84921",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b2593231eedcbd9d",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "2277c8a1df65f277",
-            "type": "leaf",
-            "state": {
-              "type": "chronology-calendar-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "ad2e7d7692b15610",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 1
-      }
-    ],
+    "children": [],
     "direction": "horizontal",
-    "width": 386.5
+    "width": 386.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,12 +180,13 @@
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "2277c8a1df65f277",
+  "active": "83b6db6f5b7d2f7e",
   "lastOpenFiles": [
+    "Calendar/Daily notes/Daily notes归档/2022/2022-03-19.md",
+    "🍀 花园导览/🤖 如何用好AIGC工具.md",
     "🍀 花园导览/🧀 个人知识管理.md",
     "README.md",
     "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjouney 令人惊艳的地方.md",
@@ -241,8 +211,6 @@
     "Calendar/Daily notes/Daily notes归档/2023-03-19.md",
     "Cards/永久笔记/notion database 如何批量复制粘贴数据.md",
     "Cards/永久笔记/Super.so.md",
-    "Calendar/Daily notes/2023-04-06.md",
-    "Calendar/Daily notes/Daily notes归档/2023-03-30.md",
     "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
     "Untitled.table",
     "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
