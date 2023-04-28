@@ -1,9 +1,1 @@
-{
-  "id": "obsidian-mindmap-nextgen",
-  "name": "Mindmap NextGen",
-  "version": "1.8.1",
-  "description": "View your Markdown as a mindmap",
-  "isDesktopOnly": false,
-  "js": "main.js",
-  "minAppVersion": "1.0.0"
-}
+{"id":"obsidian-mindmap-nextgen","name":"Mindmap NextGen","version":"1.8.2","description":"View your Markdown as a mindmap","isDesktopOnly":false,"js":"main.js","minAppVersion":"1.0.0"}

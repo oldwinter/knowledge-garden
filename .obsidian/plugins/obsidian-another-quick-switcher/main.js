@@ -512,6 +512,9 @@ function smartWhitespaceSplit(text) {
   strs.push(str);
   return strs.filter((x) => x);
 }
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 // src/errors.ts
 var ExhaustiveError = class extends Error {
@@ -2795,10 +2798,12 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
   registerKeys(key, handler) {
     var _a;
     (_a = this.settings.hotkeys.main[key]) == null ? void 0 : _a.forEach((x) => {
-      this.scope.register(x.modifiers, x.key.toUpperCase(), (evt) => {
-        evt.preventDefault();
-        handler();
-        return false;
+      this.scope.register(x.modifiers, capitalizeFirstLetter(x.key), (evt) => {
+        if (!evt.isComposing) {
+          evt.preventDefault();
+          handler();
+          return false;
+        }
       });
     });
   }
@@ -3353,10 +3358,12 @@ var HeaderModal = class extends import_obsidian6.SuggestModal {
   registerKeys(key, handler) {
     var _a;
     (_a = this.settings.hotkeys.header[key]) == null ? void 0 : _a.forEach((x) => {
-      this.scope.register(x.modifiers, x.key.toUpperCase(), (evt) => {
-        evt.preventDefault();
-        handler(evt);
-        return false;
+      this.scope.register(x.modifiers, capitalizeFirstLetter(x.key), (evt) => {
+        if (!evt.isComposing) {
+          evt.preventDefault();
+          handler(evt);
+          return false;
+        }
       });
     });
   }
@@ -3771,10 +3778,12 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
   registerKeys(key, handler) {
     var _a;
     (_a = this.settings.hotkeys.grep[key]) == null ? void 0 : _a.forEach((x) => {
-      this.scope.register(x.modifiers, x.key.toUpperCase(), (evt) => {
-        evt.preventDefault();
-        handler();
-        return false;
+      this.scope.register(x.modifiers, capitalizeFirstLetter(x.key), (evt) => {
+        if (!evt.isComposing) {
+          evt.preventDefault();
+          handler();
+          return false;
+        }
       });
     });
   }

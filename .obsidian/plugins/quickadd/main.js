@@ -33,10 +33,10 @@ __export(main_exports, {
   default: () => QuickAdd
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian35 = require("obsidian");
+var import_obsidian38 = require("obsidian");
 
 // src/quickAddSettingsTab.ts
-var import_obsidian30 = require("obsidian");
+var import_obsidian33 = require("obsidian");
 
 // node_modules/.pnpm/svelte@3.55.1/node_modules/svelte/internal/index.mjs
 function noop() {
@@ -200,6 +200,13 @@ function set_data(text2, data) {
 }
 function set_input_value(input, value) {
   input.value = value == null ? "" : value;
+}
+function set_style(node, key, value, important) {
+  if (value === null) {
+    node.style.removeProperty(key);
+  } else {
+    node.style.setProperty(key, value, important ? "important" : "");
+  }
 }
 function select_option(select, value) {
   for (let i = 0; i < select.options.length; i += 1) {
@@ -511,7 +518,7 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance18, create_fragment18, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance19, create_fragment19, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
@@ -534,7 +541,7 @@ function init(component, options, instance18, create_fragment18, not_equal, prop
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance18 ? instance18(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance19 ? instance19(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -547,7 +554,7 @@ function init(component, options, instance18, create_fragment18, not_equal, prop
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment18 ? create_fragment18($$.ctx) : false;
+  $$.fragment = create_fragment19 ? create_fragment19($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -5002,9 +5009,10 @@ var GenericYesNoPrompt = class extends import_obsidian4.Modal {
     const buttonsDiv = this.contentEl.createDiv({
       cls: "yesNoPromptButtonContainer"
     });
-    new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
+    const noButton = new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
     const yesButton = new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("Yes").onClick(() => this.submit(true)).setWarning();
     yesButton.buttonEl.focus();
+    addArrowKeyNavigation([noButton.buttonEl, yesButton.buttonEl]);
   }
   submit(input) {
     this.input = input;
@@ -5019,9 +5027,21 @@ var GenericYesNoPrompt = class extends import_obsidian4.Modal {
       this.resolvePromise(this.input);
   }
 };
+function addArrowKeyNavigation(buttons) {
+  buttons.forEach((button) => {
+    button.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        const currentIndex = buttons.indexOf(button);
+        const nextIndex = (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + buttons.length) % buttons.length;
+        buttons[nextIndex].focus();
+        event.preventDefault();
+      }
+    });
+  });
+}
 
 // src/gui/choiceList/ChoiceView.svelte
-var import_obsidian29 = require("obsidian");
+var import_obsidian32 = require("obsidian");
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
 var import_obsidian7 = require("obsidian");
@@ -5565,26 +5585,26 @@ var passive = {
   passive: true
 };
 function effect3(_ref) {
-  var state = _ref.state, instance18 = _ref.instance, options = _ref.options;
+  var state = _ref.state, instance19 = _ref.instance, options = _ref.options;
   var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
     scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance18.update, passive);
+      scrollParent.addEventListener("scroll", instance19.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance18.update, passive);
+    window2.addEventListener("resize", instance19.update, passive);
   }
   return function() {
     if (scroll) {
       scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance18.update, passive);
+        scrollParent.removeEventListener("scroll", instance19.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance18.update, passive);
+      window2.removeEventListener("resize", instance19.update, passive);
     }
   };
 }
@@ -6466,7 +6486,7 @@ function popperGenerator(generatorOptions) {
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
-    var instance18 = {
+    var instance19 = {
       state,
       setOptions: function setOptions(setOptionsAction) {
         var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
@@ -6503,7 +6523,7 @@ function popperGenerator(generatorOptions) {
           }
         }
         runModifierEffects();
-        return instance18.update();
+        return instance19.update();
       },
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
@@ -6545,14 +6565,14 @@ function popperGenerator(generatorOptions) {
               state,
               options: _options,
               name,
-              instance: instance18
+              instance: instance19
             }) || state;
           }
         }
       },
       update: debounce(function() {
         return new Promise(function(resolve) {
-          instance18.forceUpdate();
+          instance19.forceUpdate();
           resolve(state);
         });
       }),
@@ -6565,9 +6585,9 @@ function popperGenerator(generatorOptions) {
       if (true) {
         console.error(INVALID_ELEMENT_ERROR);
       }
-      return instance18;
+      return instance19;
     }
-    instance18.setOptions(options).then(function(state2) {
+    instance19.setOptions(options).then(function(state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
@@ -6579,7 +6599,7 @@ function popperGenerator(generatorOptions) {
           var cleanupFn = effect4({
             state,
             name,
-            instance: instance18,
+            instance: instance19,
             options: options2
           });
           var noopFn = function noopFn2() {
@@ -6594,7 +6614,7 @@ function popperGenerator(generatorOptions) {
       });
       effectCleanupFns = [];
     }
-    return instance18;
+    return instance19;
   };
 }
 
@@ -6727,13 +6747,13 @@ var TextInputSuggest = class {
         {
           name: "sameWidth",
           enabled: true,
-          fn: ({ state, instance: instance18 }) => {
+          fn: ({ state, instance: instance19 }) => {
             const targetWidth = `${state.rects.reference.width}px`;
             if (state.styles.popper.width === targetWidth) {
               return;
             }
             state.styles.popper.width = targetWidth;
-            void instance18.update();
+            void instance19.update();
           },
           phase: "beforeWrite",
           requires: ["computeStyles"]
@@ -6753,11 +6773,13 @@ var TextInputSuggest = class {
 // src/constants.ts
 var VALUE_SYNTAX = "{{value}}";
 var DATE_SYNTAX = "{{date}}";
+var TIME_SYNTAX = "{{time}}";
 var NAME_SYNTAX = "{{name}}";
 var VARIABLE_SYNTAX = "{{value:<variable name>}}";
 var FIELD_VAR_SYNTAX = "{{field:<field name>}}";
 var MATH_VALUE_SYNTAX = "{{mvalue}}";
 var LINKCURRENT_SYNTAX = "{{linkcurrent}}";
+var SELECTED_SYNTAX = "{{selected}}";
 var FILE_NAME_FORMAT_SYNTAX = [
   DATE_SYNTAX,
   "{{date:<dateformat>}}",
@@ -6775,6 +6797,8 @@ var DATE_REGEX = new RegExp(/{{DATE(\+-?[0-9]+)?}}/i);
 var DATE_REGEX_FORMATTED = new RegExp(
   /{{DATE:([^}\n\r+]*)(\+-?[0-9]+)?}}/i
 );
+var TIME_REGEX = new RegExp(/{{TIME}}/i);
+var TIME_REGEX_FORMATTED = new RegExp(/{{TIME:([^}\n\r+]*)}}/i);
 var NAME_VALUE_REGEX = new RegExp(/{{NAME}}|{{VALUE}}/i);
 var VARIABLE_REGEX = new RegExp(/{{VALUE:([^\n\r}]*)}}/i);
 var FIELD_VAR_REGEX = new RegExp(/{{FIELD:([^\n\r}]*)}}/i);
@@ -6796,6 +6820,7 @@ var INLINE_JAVASCRIPT_REGEX = new RegExp(
 );
 var MATH_VALUE_REGEX = new RegExp(/{{MVALUE}}/i);
 var TITLE_REGEX = new RegExp(/{{TITLE}}/i);
+var SELECTED_REGEX = new RegExp(/{{SELECTED}}/i);
 var FILE_LINK_REGEX = new RegExp(/\[\[([^\]]*)$/);
 var TAG_REGEX = new RegExp(/#([^ ]*)$/);
 var DATE_SYNTAX_SUGGEST_REGEX = new RegExp(
@@ -6830,6 +6855,13 @@ var MATH_VALUE_SYNTAX_SUGGEST_REGEX = new RegExp(
 );
 var TITLE_SYNTAX_SUGGEST_REGEX = new RegExp(
   /{{[T]?[I]?[T]?[L]?[E]?[}]?[}]?/i
+);
+var SELECTED_SYNTAX_SUGGEST_REGEX = new RegExp(
+  /{{[S]?[E]?[L]?[E]?[C]?[T]?[E]?[D]?[}]?[}]?/i
+);
+var TIME_SYNTAX_SUGGEST_REGEX = new RegExp(/{{[T]?[I]?[M]?[E]?[}]?[}]?/i);
+var TIME_FORMAT_SYNTAX_SUGGEST_REGEX = new RegExp(
+  /{{[T]?[I]?[M]?[E]?[:]?$|{{TIME:[^\n\r}]*}}$/i
 );
 var fileExistsIncrement = "Increment the file name";
 var fileExistsAppendToBottom = "Append to the bottom of the file";
@@ -8937,39 +8969,46 @@ function isFolder(path) {
 function getMarkdownFilesInFolder(folderPath) {
   return app.vault.getMarkdownFiles().filter((f) => f.path.startsWith(folderPath));
 }
+function getFrontmatterTags(fileCache) {
+  const frontmatter = fileCache.frontmatter;
+  if (!frontmatter)
+    return [];
+  const frontMatterValues = Object.entries(frontmatter);
+  if (!frontMatterValues.length)
+    return [];
+  const tagPairs = frontMatterValues.filter(([key, value]) => {
+    const lowercaseKey = key.toLowerCase();
+    return lowercaseKey === "tags" || lowercaseKey === "tag";
+  });
+  if (!tagPairs)
+    return [];
+  const tags = tagPairs.flatMap(([key, value]) => {
+    if (typeof value === "string") {
+      return value.split(/,|\s+/).map((v) => v.trim());
+    } else if (Array.isArray(value)) {
+      return value;
+    }
+  }).filter((v) => !!v);
+  return tags;
+}
+function getFileTags(file) {
+  const fileCache = app.metadataCache.getFileCache(file);
+  if (!fileCache)
+    return [];
+  const tagsInFile = [];
+  if (fileCache.frontmatter) {
+    tagsInFile.push(...getFrontmatterTags(fileCache));
+  }
+  if (fileCache.tags && Array.isArray(fileCache.tags)) {
+    tagsInFile.push(...fileCache.tags.map((v) => v.tag.replace(/^\#/, "")));
+  }
+  return tagsInFile;
+}
 function getMarkdownFilesWithTag(tag) {
-  const hasTags = (fileCache) => fileCache.tags !== void 0 && Array.isArray(fileCache.tags);
-  const hasFrontmatterTags = (fileCache) => {
-    return fileCache.frontmatter !== void 0 && fileCache.frontmatter.tags !== void 0 && typeof fileCache.frontmatter.tags === "string" && fileCache.frontmatter.tags.length > 0;
-  };
-  const hasFrontmatterTag = (fileCache) => {
-    return fileCache.frontmatter !== void 0 && fileCache.frontmatter.tag !== void 0 && typeof fileCache.frontmatter.tag === "string" && fileCache.frontmatter.tag.length > 0;
-  };
+  const targetTag = tag.replace(/^\#/, "");
   return app.vault.getMarkdownFiles().filter((f) => {
-    const fileCache = app.metadataCache.getFileCache(f);
-    if (!fileCache)
-      return false;
-    if (hasTags(fileCache)) {
-      const tagInTags = fileCache.tags.find((item) => item.tag === tag);
-      if (tagInTags) {
-        return true;
-      }
-    }
-    if (hasFrontmatterTags(fileCache)) {
-      const tagWithoutHash = tag.replace(/^\#/, "");
-      const tagInFrontmatterTags = fileCache.frontmatter.tags.split(" ").find((item) => item === tagWithoutHash);
-      if (tagInFrontmatterTags) {
-        return true;
-      }
-    }
-    if (hasFrontmatterTag(fileCache)) {
-      const tagWithoutHash = tag.replace(/^\#/, "");
-      const tagInFrontmatterTag = fileCache.frontmatter.tag.split(" ").find((item) => item === tagWithoutHash);
-      if (tagInFrontmatterTag) {
-        return true;
-      }
-    }
-    return false;
+    const fileTags = getFileTags(f);
+    return fileTags.includes(targetTag);
   });
 }
 
@@ -9020,12 +9059,45 @@ var Formatter = class {
     }
     return output;
   }
+  replaceTimeInString(input) {
+    let output = input;
+    while (TIME_REGEX.test(output)) {
+      const timeMatch = TIME_REGEX.exec(output);
+      if (!timeMatch)
+        throw new Error("unable to parse time");
+      output = this.replacer(
+        output,
+        TIME_REGEX,
+        getDate({ format: "HH:mm" })
+      );
+    }
+    while (TIME_REGEX_FORMATTED.test(output)) {
+      const timeMatch = TIME_REGEX_FORMATTED.exec(output);
+      if (!timeMatch)
+        throw new Error("unable to parse time");
+      const format3 = timeMatch[1];
+      output = this.replacer(
+        output,
+        TIME_REGEX_FORMATTED,
+        getDate({ format: format3 })
+      );
+    }
+    return output;
+  }
   async replaceValueInString(input) {
     let output = input;
     while (NAME_VALUE_REGEX.test(output)) {
       if (!this.value)
         this.value = await this.promptForValue();
       output = this.replacer(output, NAME_VALUE_REGEX, this.value);
+    }
+    return output;
+  }
+  async replaceSelectedInString(input) {
+    let output = input;
+    const selectedText = await this.getSelectedText();
+    while (SELECTED_REGEX.test(output)) {
+      output = this.replacer(output, SELECTED_REGEX, selectedText);
     }
     return output;
   }
@@ -9204,6 +9276,7 @@ var FileNameDisplayFormatter = class extends Formatter {
     let output = input;
     output = await this.replaceMacrosInString(output);
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
@@ -9338,6 +9411,9 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
     const dateMatch = DATE_SYNTAX_SUGGEST_REGEX.exec(input);
     if (dateMatch)
       callback(dateMatch, 0 /* Date */, DATE_SYNTAX);
+    const timeMatch = TIME_SYNTAX_SUGGEST_REGEX.exec(input);
+    if (timeMatch)
+      callback(timeMatch, 10 /* Time */, TIME_SYNTAX);
     const nameMatch = NAME_SYNTAX_SUGGEST_REGEX.exec(input);
     if (nameMatch)
       callback(nameMatch, 4 /* Name */, NAME_SYNTAX);
@@ -9351,6 +9427,9 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
         9 /* MathValue */,
         MATH_VALUE_SYNTAX
       );
+    const selectedMatch = SELECTED_SYNTAX_SUGGEST_REGEX.exec(input);
+    if (selectedMatch)
+      callback(selectedMatch, 11 /* Selected */, SELECTED_SYNTAX);
     const variableMatch = VARIABLE_SYNTAX_SUGGEST_REGEX.exec(input);
     if (variableMatch)
       callback(variableMatch, 5 /* Variable */, "{{VALUE:}}");
@@ -9647,7 +9726,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/captureChoiceBuilder.ts
-var import_obsidian22 = require("obsidian");
+var import_obsidian23 = require("obsidian");
 
 // src/engine/QuickAddEngine.ts
 var import_obsidian10 = require("obsidian");
@@ -10009,7 +10088,7 @@ var QuickAddApi = class {
         await choiceExecutor.execute(choice);
         choiceExecutor.variables.clear();
       },
-      format: async (input, variables) => {
+      format: async (input, variables, shouldClearVariables = true) => {
         if (variables) {
           Object.keys(variables).forEach((key) => {
             choiceExecutor.variables.set(key, variables[key]);
@@ -10020,7 +10099,9 @@ var QuickAddApi = class {
           plugin,
           choiceExecutor
         ).formatFileContent(input);
-        choiceExecutor.variables.clear();
+        if (shouldClearVariables) {
+          choiceExecutor.variables.clear();
+        }
         return output;
       },
       utility: {
@@ -10258,6 +10339,244 @@ function escapeRegExp(text2) {
   return text2.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
 
+// src/ai/AIAssistant.ts
+var import_obsidian17 = require("obsidian");
+
+// src/utils/invariant.ts
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error(typeof message === "function" ? message() : message);
+  }
+  return;
+}
+
+// src/ai/AIAssistant.ts
+var noticeMsg = (task, message) => `Assistant is ${task}.${message ? `
+
+${message}` : ""}`;
+async function repeatUntilResolved(callback, promise, interval) {
+  if (typeof callback !== "function") {
+    throw new TypeError("Callback must be a function.");
+  }
+  if (!(promise instanceof Promise)) {
+    throw new TypeError("Promise must be an instance of Promise.");
+  }
+  if (typeof interval !== "number" || interval <= 0) {
+    throw new TypeError("Interval must be a positive number.");
+  }
+  let isDone = false;
+  promise.finally(() => {
+    isDone = true;
+  });
+  while (!isDone) {
+    callback();
+    await sleep(interval);
+  }
+}
+async function getTargetPromptTemplate(userDefinedPromptTemplate, promptTemplates) {
+  let targetFile;
+  if (userDefinedPromptTemplate.enable) {
+    targetFile = promptTemplates.find(
+      (item) => item.path.endsWith(userDefinedPromptTemplate.name)
+    );
+  } else {
+    const basenames = promptTemplates.map((f) => f.basename);
+    targetFile = await GenericSuggester.Suggest(
+      app,
+      basenames,
+      promptTemplates
+    );
+  }
+  invariant(targetFile, "Prompt template does not exist");
+  const targetTemplatePath = targetFile.path;
+  const file = app.vault.getAbstractFileByPath(targetTemplatePath);
+  invariant(file instanceof import_obsidian17.TFile, `${targetTemplatePath} is not a file`);
+  const targetTemplateContent = await app.vault.cachedRead(file);
+  return [targetFile.basename, targetTemplateContent];
+}
+async function runAIAssistant(settings, formatter) {
+  const notice = settings.showAssistantMessages ? new import_obsidian17.Notice(noticeMsg("starting", ""), 1e6) : { setMessage: () => {
+  }, hide: () => {
+  } };
+  try {
+    const {
+      apiKey,
+      model,
+      outputVariableName: outputVariable,
+      promptTemplate,
+      systemPrompt,
+      promptTemplateFolder
+    } = settings;
+    const promptTemplates = getMarkdownFilesInFolder(promptTemplateFolder);
+    const [targetKey, targetPrompt] = await getTargetPromptTemplate(
+      promptTemplate,
+      promptTemplates
+    );
+    notice.setMessage(
+      noticeMsg("waiting", "QuickAdd is formatting the prompt template.")
+    );
+    const formattedPrompt = await formatter(targetPrompt);
+    const promptingMsg = [
+      "prompting",
+      `Using prompt template "${targetKey}".`
+    ];
+    notice.setMessage(noticeMsg(promptingMsg[0], promptingMsg[1]));
+    const makeRequest = OpenAIRequest(apiKey, model, systemPrompt);
+    const res = makeRequest(formattedPrompt);
+    const time_start = Date.now();
+    await repeatUntilResolved(
+      () => {
+        notice.setMessage(
+          noticeMsg(
+            promptingMsg[0],
+            `${promptingMsg[1]} (${((Date.now() - time_start) / 1e3).toFixed(2)}s)`
+          )
+        );
+      },
+      res,
+      100
+    );
+    const result = await res;
+    const time_end = Date.now();
+    notice.setMessage(
+      noticeMsg(`finished`, `Took ${(time_end - time_start) / 1e3}s.`)
+    );
+    const output = result.choices[0].message.content;
+    const outputInMarkdownBlockQuote = ("> " + output).replace(
+      /\n/g,
+      "\n> "
+    );
+    const variables = {
+      [outputVariable]: output,
+      [`${outputVariable}-quoted`]: outputInMarkdownBlockQuote
+    };
+    setTimeout(() => notice.hide(), 5e3);
+    return variables;
+  } catch (error) {
+    notice.setMessage(
+      noticeMsg("dead", error.message)
+    );
+    setTimeout(() => notice.hide(), 5e3);
+  }
+}
+function OpenAIRequest(apiKey, model, systemPrompt) {
+  return async function makeRequest(prompt) {
+    try {
+      const response = await (0, import_obsidian17.requestUrl)({
+        url: `https://api.openai.com/v1/chat/completions`,
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: prompt }
+          ]
+        })
+      });
+      return response.json;
+    } catch (error) {
+      console.log(error);
+      throw new Error(
+        `Error while making request to OpenAI API: ${error.message}`
+      );
+    }
+  };
+}
+
+// node_modules/.pnpm/zustand@4.3.6/node_modules/zustand/esm/vanilla.mjs
+var import_meta = {};
+var createStoreImpl = (createState) => {
+  let state;
+  const listeners = /* @__PURE__ */ new Set();
+  const setState = (partial, replace) => {
+    const nextState = typeof partial === "function" ? partial(state) : partial;
+    if (!Object.is(nextState, state)) {
+      const previousState = state;
+      state = (replace != null ? replace : typeof nextState !== "object") ? nextState : Object.assign({}, state, nextState);
+      listeners.forEach((listener) => listener(state, previousState));
+    }
+  };
+  const getState = () => state;
+  const subscribe = (listener) => {
+    listeners.add(listener);
+    return () => listeners.delete(listener);
+  };
+  const destroy = () => {
+    if ((import_meta.env && import_meta.env.MODE) !== "production") {
+      console.warn(
+        "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
+      );
+    }
+    listeners.clear();
+  };
+  const api = { setState, getState, subscribe, destroy };
+  state = createState(setState, getState, api);
+  return api;
+};
+var createStore = (createState) => createState ? createStoreImpl(createState) : createStoreImpl;
+
+// src/types/macros/QuickAddMacro.ts
+var QuickAddMacro = class {
+  constructor(name) {
+    this.name = name;
+    this.id = v4_default();
+    this.commands = [];
+    this.runOnStartup = false;
+  }
+};
+
+// src/settingsStore.ts
+var settingsStore = function() {
+  const useSettingsStore = createStore((set, get2) => ({
+    ...DEFAULT_SETTINGS,
+    setSettings: (settings) => set((state) => ({ ...state, ...settings }))
+  }));
+  const { getState, setState, subscribe } = useSettingsStore;
+  return {
+    getState,
+    setState,
+    subscribe,
+    setMacro: (macroId, macro) => {
+      setState((state) => {
+        const macroIdx = state.macros.findIndex(
+          (m) => m.id === macroId
+        );
+        if (macroIdx === -1) {
+          throw new Error("Macro not found");
+        }
+        const newState = {
+          ...state,
+          macros: [...state.macros]
+        };
+        newState.macros[macroIdx] = macro;
+        return newState;
+      });
+    },
+    createMacro: (name) => {
+      if (name === "" || getState().macros.some((m) => m.name === name)) {
+        throw new Error("Invalid macro name");
+      }
+      const macro = new QuickAddMacro(name);
+      setState((state) => ({
+        ...state,
+        macros: [...state.macros, macro]
+      }));
+      return macro;
+    },
+    getMacro: (macroId) => {
+      return getState().macros.find((m) => m.id === macroId);
+    }
+  };
+}();
+
+// src/ai/models.ts
+var models = ["gpt-3.5-turbo", "gpt-4", "text-davinci-003"];
+var models_and_ask_me = [...models, "Ask me"];
+
 // src/engine/MacroChoiceEngine.ts
 var MacroChoiceEngine = class extends QuickAddChoiceEngine {
   constructor(app2, plugin, choice, macros, choiceExecutor, variables) {
@@ -10304,6 +10623,9 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
       }
       if (command?.type === "EditorCommand" /* EditorCommand */) {
         await this.executeEditorCommand(command);
+      }
+      if (command?.type === "AIAssistant" /* AIAssistant */) {
+        await this.executeAIAssistant(command);
       }
       Object.keys(this.params.variables).forEach((key) => {
         this.choiceExecutor.variables.set(
@@ -10440,6 +10762,33 @@ ${error.message}`
         break;
     }
   }
+  async executeAIAssistant(command) {
+    const aiSettings = settingsStore.getState().ai;
+    const options = [...models];
+    const model = command.model === "Ask me" ? await GenericSuggester.Suggest(app, options, options) : command.model;
+    const formatter = new CompleteFormatter(
+      app,
+      QuickAdd.instance,
+      this.choiceExecutor
+    );
+    const aiOutputVariables = await runAIAssistant(
+      {
+        apiKey: aiSettings.OpenAIApiKey,
+        model,
+        outputVariableName: command.outputVariableName,
+        promptTemplate: command.promptTemplate,
+        promptTemplateFolder: aiSettings.promptTemplatesFolderPath,
+        systemPrompt: command.systemPrompt,
+        showAssistantMessages: aiSettings.showAssistant
+      },
+      async (input) => {
+        return formatter.formatFileContent(input);
+      }
+    );
+    for (const key in aiOutputVariables) {
+      this.choiceExecutor.variables.set(key, aiOutputVariables[key]);
+    }
+  }
 };
 
 // src/engine/SingleMacroEngine.ts
@@ -10472,7 +10821,7 @@ var SingleMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/formatters/completeFormatter.ts
-var import_obsidian20 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 
 // src/engine/SingleInlineScriptEngine.ts
 var SingleInlineScriptEngine = class extends MacroChoiceEngine {
@@ -10490,7 +10839,7 @@ var SingleInlineScriptEngine = class extends MacroChoiceEngine {
 };
 
 // src/gui/MathModal.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 
 // src/LaTeXSymbols.ts
 var LATEX_CURSOR_MOVE_HERE = "\u261A";
@@ -11264,7 +11613,7 @@ ${LATEX_CURSOR_MOVE_HERE}
 var LaTeXSymbols = [...commands, ...environments.map(beginEndGen)];
 
 // src/gui/suggesters/LaTeXSuggester.ts
-var import_obsidian17 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 var LATEX_REGEX = new RegExp(/\\([a-z{}A-Z0-9]*)$/);
 var LaTeXSuggester = class extends TextInputSuggest {
   constructor(inputEl) {
@@ -11274,7 +11623,7 @@ var LaTeXSuggester = class extends TextInputSuggest {
     this.symbols = Object.assign([], LaTeXSymbols);
     this.elementsRendered = this.symbols.reduce((elements, symbol) => {
       try {
-        elements[symbol.toString()] = (0, import_obsidian17.renderMath)(symbol, true);
+        elements[symbol.toString()] = (0, import_obsidian18.renderMath)(symbol, true);
       } catch {
       }
       return elements;
@@ -11343,7 +11692,7 @@ var LaTeXSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/MathModal.ts
-var MathModal = class extends import_obsidian18.Modal {
+var MathModal = class extends import_obsidian19.Modal {
   constructor() {
     super(QuickAdd.instance.app);
     this.didSubmit = false;
@@ -11376,12 +11725,12 @@ var MathModal = class extends import_obsidian18.Modal {
     this.contentEl.empty();
     const mathDiv = this.contentEl.createDiv();
     mathDiv.className = "math math-block is-loaded";
-    const tc = new import_obsidian18.TextAreaComponent(this.contentEl);
+    const tc = new import_obsidian19.TextAreaComponent(this.contentEl);
     tc.inputEl.style.width = "100%";
     tc.inputEl.style.height = "10rem";
     this.inputEl = tc.inputEl;
     tc.onChange(
-      (0, import_obsidian18.debounce)(
+      (0, import_obsidian19.debounce)(
         async (value) => await this.mathjaxLoop(mathDiv, value),
         50
       )
@@ -11391,11 +11740,11 @@ var MathModal = class extends import_obsidian18.Modal {
   }
   async onOpen() {
     super.onOpen();
-    await (0, import_obsidian18.loadMathJax)();
+    await (0, import_obsidian19.loadMathJax)();
   }
   async mathjaxLoop(container, value) {
-    const html = (0, import_obsidian18.renderMath)(value, true);
-    await (0, import_obsidian18.finishRenderMath)();
+    const html = (0, import_obsidian19.renderMath)(value, true);
+    await (0, import_obsidian19.finishRenderMath)();
     container.empty();
     container.append(html);
   }
@@ -11412,7 +11761,7 @@ var MathModal = class extends import_obsidian18.Modal {
     }
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian18.ButtonComponent(container);
+    const btn = new import_obsidian19.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -11469,8 +11818,8 @@ var InputPrompt = class {
 };
 
 // src/gui/InputSuggester/inputSuggester.ts
-var import_obsidian19 = require("obsidian");
-var InputSuggester = class extends import_obsidian19.FuzzySuggestModal {
+var import_obsidian20 = require("obsidian");
+var InputSuggester = class extends import_obsidian20.FuzzySuggestModal {
   constructor(app2, displayItems, items, options = {}) {
     super(app2);
     this.displayItems = displayItems;
@@ -11546,7 +11895,9 @@ var CompleteFormatter = class extends Formatter {
     output = await this.replaceMacrosInString(output);
     output = await this.replaceTemplateInString(output);
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
+    output = await this.replaceSelectedInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
     output = await this.replaceFieldVarInString(output);
@@ -11647,7 +11998,7 @@ var CompleteFormatter = class extends Formatter {
     ).run();
   }
   async getSelectedText() {
-    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian20.MarkdownView);
+    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian21.MarkdownView);
     if (!activeView)
       return "";
     return activeView.editor.getSelection();
@@ -11676,7 +12027,7 @@ var CompleteFormatter = class extends Formatter {
 };
 
 // src/engine/TemplateEngine.ts
-var import_obsidian21 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 var TemplateEngine = class extends QuickAddEngine {
   constructor(app2, plugin, choiceFormatter) {
     super(app2);
@@ -11789,7 +12140,7 @@ ${formattedTemplateContent}`;
     if (!MARKDOWN_FILE_EXTENSION_REGEX.test(templatePath))
       correctTemplatePath += ".md";
     const templateFile = this.app.vault.getAbstractFileByPath(correctTemplatePath);
-    if (!(templateFile instanceof import_obsidian21.TFile))
+    if (!(templateFile instanceof import_obsidian22.TFile))
       throw new Error(
         `Template file not found at path "${correctTemplatePath}".`
       );
@@ -11827,6 +12178,7 @@ var FormatDisplayFormatter = class extends Formatter {
   async format(input) {
     let output = input;
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
@@ -11913,12 +12265,12 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addCapturedToSetting() {
     let textField;
-    new import_obsidian22.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
+    new import_obsidian23.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
     const captureToContainer = this.contentEl.createDiv("captureToContainer");
     const captureToActiveFileContainer = captureToContainer.createDiv("captureToActiveFileContainer");
     const captureToActiveFileText = captureToActiveFileContainer.createEl("span");
     captureToActiveFileText.textContent = "Capture to active file";
-    const captureToActiveFileToggle = new import_obsidian22.ToggleComponent(
+    const captureToActiveFileToggle = new import_obsidian23.ToggleComponent(
       captureToActiveFileContainer
     );
     captureToActiveFileToggle.setValue(this.choice?.captureToActiveFile);
@@ -11933,7 +12285,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       void (async () => formatDisplay.textContent = await displayFormatter.format(
         this.choice.captureTo
       ))();
-      const formatInput = new import_obsidian22.TextComponent(captureToFileContainer);
+      const formatInput = new import_obsidian23.TextComponent(captureToFileContainer);
       formatInput.setPlaceholder("File name format");
       textField = formatInput;
       formatInput.inputEl.style.width = "100%";
@@ -11956,7 +12308,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     }
   }
   addPrependSetting() {
-    const prependSetting = new import_obsidian22.Setting(this.contentEl);
+    const prependSetting = new import_obsidian23.Setting(this.contentEl);
     prependSetting.setName("Write to bottom of file").setDesc(
       `Put value at the bottom of the file - otherwise at the ${this.choice?.captureToActiveFile ? "active cursor location" : "top"}.`
     ).addToggle((toggle) => {
@@ -11971,14 +12323,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addTaskSetting() {
-    const taskSetting = new import_obsidian22.Setting(this.contentEl);
+    const taskSetting = new import_obsidian23.Setting(this.contentEl);
     taskSetting.setName("Task").setDesc("Formats the value as a task.").addToggle((toggle) => {
       toggle.setValue(this.choice.task);
       toggle.onChange((value) => this.choice.task = value);
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian22.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian23.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc(
       "Add a link on your current cursor position, linking to the file you're capturing to."
     ).addToggle((toggle) => {
@@ -11988,7 +12340,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addInsertAfterSetting() {
     let insertAfterInput;
-    const insertAfterSetting = new import_obsidian22.Setting(this.contentEl);
+    const insertAfterSetting = new import_obsidian23.Setting(this.contentEl);
     insertAfterSetting.setName("Insert after").setDesc(
       "Insert capture after specified line. Accepts format syntax."
     ).addToggle((toggle) => {
@@ -12007,7 +12359,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     void (async () => insertAfterFormatDisplay.innerText = await displayFormatter.format(
       this.choice.insertAfter.after
     ))();
-    insertAfterInput = new import_obsidian22.TextComponent(this.contentEl);
+    insertAfterInput = new import_obsidian23.TextComponent(this.contentEl);
     insertAfterInput.setPlaceholder("Insert after");
     insertAfterInput.inputEl.style.width = "100%";
     insertAfterInput.inputEl.style.marginBottom = "8px";
@@ -12021,7 +12373,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       this.plugin
     );
     if (this.choice.insertAfter.enabled) {
-      const insertAtEndSetting = new import_obsidian22.Setting(this.contentEl);
+      const insertAtEndSetting = new import_obsidian23.Setting(this.contentEl);
       insertAtEndSetting.setName("Insert at end of section").setDesc(
         "Insert the text at the end of the section, rather than at the top."
       ).addToggle(
@@ -12029,7 +12381,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
           (value) => this.choice.insertAfter.insertAtEnd = value
         )
       );
-      const considerSubsectionsSetting = new import_obsidian22.Setting(
+      const considerSubsectionsSetting = new import_obsidian23.Setting(
         this.contentEl
       );
       considerSubsectionsSetting.setName("Consider subsections").setDesc(
@@ -12052,7 +12404,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
           }
         })
       );
-      const createLineIfNotFound = new import_obsidian22.Setting(this.contentEl);
+      const createLineIfNotFound = new import_obsidian23.Setting(this.contentEl);
       createLineIfNotFound.setName("Create line if not found").setDesc("Creates the 'insert after' line if it is not found.").addToggle((toggle) => {
         if (!this.choice.insertAfter?.createIfNotFound)
           this.choice.insertAfter.createIfNotFound = false;
@@ -12072,19 +12424,20 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian22.Setting(this.contentEl);
+    const enableSetting = new import_obsidian23.Setting(this.contentEl);
     enableSetting.setName("Capture format").setDesc("Set the format of the capture.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.format.enabled).onChange((value) => {
         this.choice.format.enabled = value;
         textField.setDisabled(!value);
       });
     });
-    const formatInput = new import_obsidian22.TextAreaComponent(this.contentEl);
+    const formatInput = new import_obsidian23.TextAreaComponent(this.contentEl);
     formatInput.setPlaceholder("Format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
     formatInput.inputEl.style.marginBottom = "8px";
     formatInput.inputEl.style.height = "10rem";
+    formatInput.inputEl.style.minHeight = "10rem";
     formatInput.setValue(this.choice.format.format).setDisabled(!this.choice.format.enabled).onChange(async (value) => {
       this.choice.format.format = value;
       formatDisplay.innerText = await displayFormatter.format(value);
@@ -12103,7 +12456,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         createWithTemplate: false,
         template: ""
       };
-    const createFileIfItDoesntExist = new import_obsidian22.Setting(this.contentEl);
+    const createFileIfItDoesntExist = new import_obsidian23.Setting(this.contentEl);
     createFileIfItDoesntExist.setName("Create file if it doesn't exist").addToggle(
       (toggle) => toggle.setValue(this.choice?.createFileIfItDoesntExist?.enabled).setTooltip("Create file if it doesn't exist").onChange((value) => {
         this.choice.createFileIfItDoesntExist.enabled = value;
@@ -12113,7 +12466,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addCreateWithTemplateSetting() {
     let templateSelector;
-    const createWithTemplateSetting = new import_obsidian22.Setting(this.contentEl);
+    const createWithTemplateSetting = new import_obsidian23.Setting(this.contentEl);
     createWithTemplateSetting.setName("Create file with given template.").addToggle(
       (toggle) => toggle.setValue(
         this.choice.createFileIfItDoesntExist?.createWithTemplate
@@ -12122,7 +12475,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         templateSelector.setDisabled(!value);
       })
     );
-    templateSelector = new import_obsidian22.TextComponent(this.contentEl);
+    templateSelector = new import_obsidian23.TextComponent(this.contentEl);
     templateSelector.setValue(this.choice?.createFileIfItDoesntExist?.template ?? "").setPlaceholder("Template path").setDisabled(
       !this.choice?.createFileIfItDoesntExist?.createWithTemplate
     );
@@ -12139,7 +12492,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian22.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian23.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the file that is captured to.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -12156,7 +12509,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian22.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian23.Setting(this.contentEl);
     newTabSetting.setName("New Tab").setDesc("Open the file that is captured to in a new tab.").addToggle((toggle) => {
       toggle.setValue(this.choice?.openFileInNewTab?.enabled);
       toggle.onChange(
@@ -12178,7 +12531,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian22.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
+    new import_obsidian23.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -12187,11 +12540,11 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/macroChoiceBuilder.ts
-var import_obsidian26 = require("obsidian");
-var import_obsidian27 = require("obsidian");
+var import_obsidian28 = require("obsidian");
+var import_obsidian29 = require("obsidian");
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var import_obsidian25 = require("obsidian");
+var import_obsidian27 = require("obsidian");
 
 // src/types/macros/UserScript.ts
 var UserScript = class extends Command {
@@ -12683,7 +13036,7 @@ var NestedChoiceCommand = class extends SvelteComponent {
 var NestedChoiceCommand_default = NestedChoiceCommand;
 
 // src/gui/MacroGUIs/CommandList.svelte
-var import_obsidian24 = require("obsidian");
+var import_obsidian26 = require("obsidian");
 
 // src/gui/MacroGUIs/Components/UserScriptCommand.svelte
 function create_fragment15(ctx) {
@@ -12848,8 +13201,21 @@ var UserScriptCommand = class extends SvelteComponent {
 var UserScriptCommand_default = UserScriptCommand;
 
 // src/gui/MacroGUIs/UserScriptSettingsModal.ts
-var import_obsidian23 = require("obsidian");
-var UserScriptSettingsModal = class extends import_obsidian23.Modal {
+var import_obsidian24 = require("obsidian");
+
+// src/utils/setPasswordOnBlur.ts
+function setPasswordOnBlur(el) {
+  el.addEventListener("focus", () => {
+    el.type = "text";
+  });
+  el.addEventListener("blur", () => {
+    el.type = "password";
+  });
+  el.type = "password";
+}
+
+// src/gui/MacroGUIs/UserScriptSettingsModal.ts
+var UserScriptSettingsModal = class extends import_obsidian24.Modal {
   constructor(app2, command, settings) {
     super(app2);
     this.command = command;
@@ -12859,8 +13225,10 @@ var UserScriptSettingsModal = class extends import_obsidian23.Modal {
       this.command.settings = {};
     if (this.settings.options) {
       for (const setting in this.settings.options) {
-        if (this.command.settings[setting] === void 0 && typeof this.settings.options === "object" && this.settings.options && "setting" in this.settings.options && typeof this.settings.options.setting === "object" && this.settings.options.setting && "defaultValue" in this.settings.options.setting) {
-          this.command.settings[setting] = this.settings.options.setting.defaultValue;
+        const valueIsNotSetAlready = this.command.settings[setting] === void 0;
+        const defaultValueAvailable = "defaultValue" in this.settings.options[setting] && this.settings.options[setting].defaultValue !== void 0;
+        if (valueIsNotSetAlready && defaultValueAvailable) {
+          this.command.settings[setting] = this.settings.options[setting].defaultValue;
         }
       }
     }
@@ -12898,39 +13266,30 @@ var UserScriptSettingsModal = class extends import_obsidian23.Modal {
       }
     }
   }
-  setPasswordOnBlur(el) {
-    el.addEventListener("focus", () => {
-      el.type = "text";
-    });
-    el.addEventListener("blur", () => {
-      el.type = "password";
-    });
-    el.type = "password";
-  }
   addInputBox(name, value, placeholder, passwordOnBlur) {
-    new import_obsidian23.Setting(this.contentEl).setName(name).addText((input) => {
+    new import_obsidian24.Setting(this.contentEl).setName(name).addText((input) => {
       input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder ?? "");
       if (passwordOnBlur) {
-        this.setPasswordOnBlur(input.inputEl);
+        setPasswordOnBlur(input.inputEl);
       }
     });
   }
   addToggle(name, value) {
-    new import_obsidian23.Setting(this.contentEl).setName(name).addToggle(
+    new import_obsidian24.Setting(this.contentEl).setName(name).addToggle(
       (toggle) => toggle.setValue(value).onChange((value2) => this.command.settings[name] = value2)
     );
   }
   addDropdown(name, options, value) {
-    new import_obsidian23.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
+    new import_obsidian24.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
       options.forEach((item) => void dropdown.addOption(item, item));
       dropdown.setValue(value);
       dropdown.onChange((value2) => this.command.settings[name] = value2);
     });
   }
   addFormatInput(name, value, placeholder) {
-    new import_obsidian23.Setting(this.contentEl).setName(name);
+    new import_obsidian24.Setting(this.contentEl).setName(name);
     const formatDisplay = this.contentEl.createEl("span");
-    const input = new import_obsidian23.TextAreaComponent(this.contentEl);
+    const input = new import_obsidian24.TextAreaComponent(this.contentEl);
     new FormatSyntaxSuggester(this.app, input.inputEl, QuickAdd.instance);
     const displayFormatter = new FormatDisplayFormatter(
       this.app,
@@ -12947,15 +13306,295 @@ var UserScriptSettingsModal = class extends import_obsidian23.Modal {
   }
 };
 
+// src/gui/MacroGUIs/Components/AIAssistantCommand.svelte
+function create_fragment16(ctx) {
+  let div1;
+  let li;
+  let t0_value = ctx[0].name + "";
+  let t0;
+  let t1;
+  let div0;
+  let span0;
+  let icon0;
+  let t2;
+  let span1;
+  let icon1;
+  let t3;
+  let span2;
+  let icon2;
+  let span2_style_value;
+  let span2_tabindex_value;
+  let current;
+  let mounted;
+  let dispose;
+  icon0 = new Icon_default({ props: { data: faCog } });
+  icon1 = new Icon_default({ props: { data: faTrash } });
+  icon2 = new Icon_default({ props: { data: faBars } });
+  return {
+    c() {
+      div1 = element("div");
+      li = element("li");
+      t0 = text(t0_value);
+      t1 = space();
+      div0 = element("div");
+      span0 = element("span");
+      create_component(icon0.$$.fragment);
+      t2 = space();
+      span1 = element("span");
+      create_component(icon1.$$.fragment);
+      t3 = space();
+      span2 = element("span");
+      create_component(icon2.$$.fragment);
+      attr(span0, "class", "clickable");
+      attr(span1, "class", "clickable");
+      attr(span2, "aria-label", "Drag-handle");
+      attr(span2, "style", span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span2, "tabindex", span2_tabindex_value = ctx[2] ? 0 : -1);
+      attr(div1, "class", "quickAddCommandListItem");
+    },
+    m(target, anchor) {
+      insert(target, div1, anchor);
+      append(div1, li);
+      append(li, t0);
+      append(div1, t1);
+      append(div1, div0);
+      append(div0, span0);
+      mount_component(icon0, span0, null);
+      append(div0, t2);
+      append(div0, span1);
+      mount_component(icon1, span1, null);
+      append(div0, t3);
+      append(div0, span2);
+      mount_component(icon2, span2, null);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(span0, "click", ctx[5]),
+          listen(span1, "click", ctx[6]),
+          listen(span2, "mousedown", function() {
+            if (is_function(ctx[1]))
+              ctx[1].apply(this, arguments);
+          }),
+          listen(span2, "touchstart", function() {
+            if (is_function(ctx[1]))
+              ctx[1].apply(this, arguments);
+          })
+        ];
+        mounted = true;
+      }
+    },
+    p(new_ctx, [dirty]) {
+      ctx = new_ctx;
+      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[0].name + ""))
+        set_data(t0, t0_value);
+      if (!current || dirty & 4 && span2_style_value !== (span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+        attr(span2, "style", span2_style_value);
+      }
+      if (!current || dirty & 4 && span2_tabindex_value !== (span2_tabindex_value = ctx[2] ? 0 : -1)) {
+        attr(span2, "tabindex", span2_tabindex_value);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon0.$$.fragment, local);
+      transition_in(icon1.$$.fragment, local);
+      transition_in(icon2.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon0.$$.fragment, local);
+      transition_out(icon1.$$.fragment, local);
+      transition_out(icon2.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+      destroy_component(icon0);
+      destroy_component(icon1);
+      destroy_component(icon2);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance16($$self, $$props, $$invalidate) {
+  let { command } = $$props;
+  let { startDrag } = $$props;
+  let { dragDisabled } = $$props;
+  const dispatch = createEventDispatcher();
+  function deleteCommand() {
+    dispatch("deleteCommand", command.id);
+  }
+  function configureAssistant() {
+    dispatch("configureAssistant", command);
+  }
+  const click_handler = () => configureAssistant();
+  const click_handler_1 = () => deleteCommand();
+  $$self.$$set = ($$props2) => {
+    if ("command" in $$props2)
+      $$invalidate(0, command = $$props2.command);
+    if ("startDrag" in $$props2)
+      $$invalidate(1, startDrag = $$props2.startDrag);
+    if ("dragDisabled" in $$props2)
+      $$invalidate(2, dragDisabled = $$props2.dragDisabled);
+  };
+  return [
+    command,
+    startDrag,
+    dragDisabled,
+    deleteCommand,
+    configureAssistant,
+    click_handler,
+    click_handler_1
+  ];
+}
+var AIAssistantCommand = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance16, create_fragment16, safe_not_equal, {
+      command: 0,
+      startDrag: 1,
+      dragDisabled: 2
+    });
+  }
+};
+var AIAssistantCommand_default = AIAssistantCommand;
+
+// src/gui/MacroGUIs/AIAssistantCommandSettingsModal.ts
+var import_obsidian25 = require("obsidian");
+var AIAssistantCommandSettingsModal = class extends import_obsidian25.Modal {
+  constructor(settings) {
+    super(app);
+    this.settings = settings;
+    this.waitForClose = new Promise(
+      (resolve, reject) => {
+        this.rejectPromise = reject;
+        this.resolvePromise = resolve;
+      }
+    );
+    this.open();
+    this.display();
+  }
+  display() {
+    const header = this.contentEl.createEl("h2", {
+      text: `${this.settings.name} Settings`
+    });
+    header.style.textAlign = "center";
+    header.style.cursor = "pointer";
+    header.style.userSelect = "none";
+    header.addEventListener("click", async () => {
+      try {
+        const newName = await GenericInputPrompt.Prompt(
+          app,
+          "New name",
+          this.settings.name,
+          this.settings.name
+        );
+        if (newName && newName !== this.settings.name) {
+          this.settings.name = newName;
+          this.reload();
+        }
+      } catch (error) {
+      }
+    });
+    this.addPromptTemplateSetting(this.contentEl);
+    this.addModelSetting(this.contentEl);
+    this.addOutputVariableNameSetting(this.contentEl);
+    this.addSystemPromptSetting(this.contentEl);
+  }
+  reload() {
+    this.contentEl.empty();
+    this.display();
+  }
+  addPromptTemplateSetting(container) {
+    const promptTemplatesFolder = settingsStore.getState().ai.promptTemplatesFolderPath;
+    const promptTemplateFiles = getMarkdownFilesInFolder(
+      promptTemplatesFolder
+    ).map((f) => f.name);
+    new import_obsidian25.Setting(container).setName("Prompt Template").setDesc(
+      "Enabling this will have the assistant use the prompt template you specify. If disable, the assistant will ask you for a prompt template to use."
+    ).addToggle((toggle) => {
+      toggle.setValue(this.settings.promptTemplate.enable);
+      toggle.onChange((value) => {
+        this.settings.promptTemplate.enable = value;
+      });
+    }).addText((text2) => {
+      text2.setValue(this.settings.promptTemplate.name).onChange(
+        (value) => {
+          this.settings.promptTemplate.name = value;
+        }
+      );
+      new GenericTextSuggester(
+        app,
+        text2.inputEl,
+        promptTemplateFiles
+      );
+    });
+  }
+  addModelSetting(container) {
+    new import_obsidian25.Setting(container).setName("Model").setDesc("The model the AI Assistant will use").addDropdown((dropdown) => {
+      for (const model of models_and_ask_me) {
+        dropdown.addOption(model, model);
+      }
+      dropdown.setValue(this.settings.model);
+      dropdown.onChange((value) => {
+        this.settings.model = value;
+      });
+    });
+  }
+  addOutputVariableNameSetting(container) {
+    new import_obsidian25.Setting(container).setName("Output variable name").setDesc(
+      "The name of the variable used to store the AI Assistant output, i.e. {{value:output}}."
+    ).addText((text2) => {
+      text2.setValue(this.settings.outputVariableName).onChange(
+        (value) => {
+          this.settings.outputVariableName = value;
+        }
+      );
+    });
+  }
+  addSystemPromptSetting(contentEl) {
+    new import_obsidian25.Setting(contentEl).setName("System Prompt").setDesc("The system prompt for the AI Assistant");
+    const textAreaComponent = new import_obsidian25.TextAreaComponent(contentEl);
+    textAreaComponent.setValue(this.settings.systemPrompt).onChange(async (value) => {
+      this.settings.systemPrompt = value;
+      formatDisplay.innerText = await displayFormatter.format(value);
+    });
+    new FormatSyntaxSuggester(
+      this.app,
+      textAreaComponent.inputEl,
+      QuickAdd.instance
+    );
+    const displayFormatter = new FormatDisplayFormatter(
+      this.app,
+      QuickAdd.instance
+    );
+    textAreaComponent.inputEl.style.width = "100%";
+    textAreaComponent.inputEl.style.height = "100px";
+    textAreaComponent.inputEl.style.minHeight = "100px";
+    textAreaComponent.inputEl.style.marginBottom = "1em";
+    const formatDisplay = this.contentEl.createEl("span");
+    void (async () => formatDisplay.innerText = await displayFormatter.format(
+      this.settings.systemPrompt ?? ""
+    ))();
+  }
+  onClose() {
+    this.resolvePromise(this.settings);
+    super.onClose();
+  }
+};
+
 // src/gui/MacroGUIs/CommandList.svelte
 function add_css8(target) {
-  append_styles(target, "svelte-1ukgrgp", ".quickAddCommandList.svelte-1ukgrgp{display:grid;grid-template-columns:auto;width:auto;border:0 solid black;overflow-y:auto;height:auto;margin-bottom:8px;padding:20px}");
+  append_styles(target, "svelte-1ngraqt", ".quickAddCommandList.svelte-1ngraqt{display:grid;grid-template-columns:auto;width:auto;border:0 solid black;overflow-y:auto;height:auto;margin-bottom:8px;padding:20px}");
 }
 function get_each_context4(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[33] = list[i];
-  child_ctx[34] = list;
-  child_ctx[35] = i;
+  child_ctx[38] = list[i];
+  child_ctx[39] = list;
+  child_ctx[40] = i;
   return child_ctx;
 }
 function create_else_block2(ctx) {
@@ -12965,17 +13604,17 @@ function create_else_block2(ctx) {
   let updating_startDrag;
   let current;
   function standardcommand_command_binding(value) {
-    ctx[27](value, ctx[33], ctx[34], ctx[35]);
+    ctx[32](value, ctx[38], ctx[39], ctx[40]);
   }
   function standardcommand_dragDisabled_binding(value) {
-    ctx[28](value);
+    ctx[33](value);
   }
   function standardcommand_startDrag_binding(value) {
-    ctx[29](value);
+    ctx[34](value);
   }
   let standardcommand_props = {};
-  if (ctx[33] !== void 0) {
-    standardcommand_props.command = ctx[33];
+  if (ctx[38] !== void 0) {
+    standardcommand_props.command = ctx[38];
   }
   if (ctx[3] !== void 0) {
     standardcommand_props.dragDisabled = ctx[3];
@@ -12987,7 +13626,7 @@ function create_else_block2(ctx) {
   binding_callbacks.push(() => bind(standardcommand, "command", standardcommand_command_binding));
   binding_callbacks.push(() => bind(standardcommand, "dragDisabled", standardcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(standardcommand, "startDrag", standardcommand_startDrag_binding));
-  standardcommand.$on("deleteCommand", ctx[30]);
+  standardcommand.$on("deleteCommand", ctx[35]);
   standardcommand.$on("updateCommand", ctx[7]);
   return {
     c() {
@@ -13002,7 +13641,7 @@ function create_else_block2(ctx) {
       const standardcommand_changes = {};
       if (!updating_command && dirty[0] & 5) {
         updating_command = true;
-        standardcommand_changes.command = ctx[33];
+        standardcommand_changes.command = ctx[38];
         add_flush_callback(() => updating_command = false);
       }
       if (!updating_dragDisabled && dirty[0] & 8) {
@@ -13032,6 +13671,81 @@ function create_else_block2(ctx) {
     }
   };
 }
+function create_if_block_32(ctx) {
+  let aiassistantcommand;
+  let updating_command;
+  let updating_dragDisabled;
+  let updating_startDrag;
+  let current;
+  function aiassistantcommand_command_binding(value) {
+    ctx[28](value, ctx[38], ctx[39], ctx[40]);
+  }
+  function aiassistantcommand_dragDisabled_binding(value) {
+    ctx[29](value);
+  }
+  function aiassistantcommand_startDrag_binding(value) {
+    ctx[30](value);
+  }
+  let aiassistantcommand_props = {};
+  if (ctx[38] !== void 0) {
+    aiassistantcommand_props.command = ctx[38];
+  }
+  if (ctx[3] !== void 0) {
+    aiassistantcommand_props.dragDisabled = ctx[3];
+  }
+  if (ctx[4] !== void 0) {
+    aiassistantcommand_props.startDrag = ctx[4];
+  }
+  aiassistantcommand = new AIAssistantCommand_default({ props: aiassistantcommand_props });
+  binding_callbacks.push(() => bind(aiassistantcommand, "command", aiassistantcommand_command_binding));
+  binding_callbacks.push(() => bind(aiassistantcommand, "dragDisabled", aiassistantcommand_dragDisabled_binding));
+  binding_callbacks.push(() => bind(aiassistantcommand, "startDrag", aiassistantcommand_startDrag_binding));
+  aiassistantcommand.$on("deleteCommand", ctx[31]);
+  aiassistantcommand.$on("updateCommand", ctx[7]);
+  aiassistantcommand.$on("configureAssistant", ctx[10]);
+  return {
+    c() {
+      create_component(aiassistantcommand.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(aiassistantcommand, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const aiassistantcommand_changes = {};
+      if (!updating_command && dirty[0] & 5) {
+        updating_command = true;
+        aiassistantcommand_changes.command = ctx[38];
+        add_flush_callback(() => updating_command = false);
+      }
+      if (!updating_dragDisabled && dirty[0] & 8) {
+        updating_dragDisabled = true;
+        aiassistantcommand_changes.dragDisabled = ctx[3];
+        add_flush_callback(() => updating_dragDisabled = false);
+      }
+      if (!updating_startDrag && dirty[0] & 16) {
+        updating_startDrag = true;
+        aiassistantcommand_changes.startDrag = ctx[4];
+        add_flush_callback(() => updating_startDrag = false);
+      }
+      aiassistantcommand.$set(aiassistantcommand_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(aiassistantcommand.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(aiassistantcommand.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(aiassistantcommand, detaching);
+    }
+  };
+}
 function create_if_block_22(ctx) {
   let userscriptcommand;
   let updating_command;
@@ -13039,17 +13753,17 @@ function create_if_block_22(ctx) {
   let updating_startDrag;
   let current;
   function userscriptcommand_command_binding(value) {
-    ctx[23](value, ctx[33], ctx[34], ctx[35]);
+    ctx[24](value, ctx[38], ctx[39], ctx[40]);
   }
   function userscriptcommand_dragDisabled_binding(value) {
-    ctx[24](value);
-  }
-  function userscriptcommand_startDrag_binding(value) {
     ctx[25](value);
   }
+  function userscriptcommand_startDrag_binding(value) {
+    ctx[26](value);
+  }
   let userscriptcommand_props = {};
-  if (ctx[33] !== void 0) {
-    userscriptcommand_props.command = ctx[33];
+  if (ctx[38] !== void 0) {
+    userscriptcommand_props.command = ctx[38];
   }
   if (ctx[3] !== void 0) {
     userscriptcommand_props.dragDisabled = ctx[3];
@@ -13061,7 +13775,7 @@ function create_if_block_22(ctx) {
   binding_callbacks.push(() => bind(userscriptcommand, "command", userscriptcommand_command_binding));
   binding_callbacks.push(() => bind(userscriptcommand, "dragDisabled", userscriptcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(userscriptcommand, "startDrag", userscriptcommand_startDrag_binding));
-  userscriptcommand.$on("deleteCommand", ctx[26]);
+  userscriptcommand.$on("deleteCommand", ctx[27]);
   userscriptcommand.$on("updateCommand", ctx[7]);
   userscriptcommand.$on("configureScript", ctx[9]);
   return {
@@ -13077,7 +13791,7 @@ function create_if_block_22(ctx) {
       const userscriptcommand_changes = {};
       if (!updating_command && dirty[0] & 5) {
         updating_command = true;
-        userscriptcommand_changes.command = ctx[33];
+        userscriptcommand_changes.command = ctx[38];
         add_flush_callback(() => updating_command = false);
       }
       if (!updating_dragDisabled && dirty[0] & 8) {
@@ -13114,17 +13828,17 @@ function create_if_block_14(ctx) {
   let updating_startDrag;
   let current;
   function nestedchoicecommand_command_binding(value) {
-    ctx[19](value, ctx[33], ctx[34], ctx[35]);
+    ctx[20](value, ctx[38], ctx[39], ctx[40]);
   }
   function nestedchoicecommand_dragDisabled_binding(value) {
-    ctx[20](value);
-  }
-  function nestedchoicecommand_startDrag_binding(value) {
     ctx[21](value);
   }
+  function nestedchoicecommand_startDrag_binding(value) {
+    ctx[22](value);
+  }
   let nestedchoicecommand_props = {};
-  if (ctx[33] !== void 0) {
-    nestedchoicecommand_props.command = ctx[33];
+  if (ctx[38] !== void 0) {
+    nestedchoicecommand_props.command = ctx[38];
   }
   if (ctx[3] !== void 0) {
     nestedchoicecommand_props.dragDisabled = ctx[3];
@@ -13136,7 +13850,7 @@ function create_if_block_14(ctx) {
   binding_callbacks.push(() => bind(nestedchoicecommand, "command", nestedchoicecommand_command_binding));
   binding_callbacks.push(() => bind(nestedchoicecommand, "dragDisabled", nestedchoicecommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(nestedchoicecommand, "startDrag", nestedchoicecommand_startDrag_binding));
-  nestedchoicecommand.$on("deleteCommand", ctx[22]);
+  nestedchoicecommand.$on("deleteCommand", ctx[23]);
   nestedchoicecommand.$on("updateCommand", ctx[7]);
   nestedchoicecommand.$on("configureChoice", ctx[8]);
   return {
@@ -13152,7 +13866,7 @@ function create_if_block_14(ctx) {
       const nestedchoicecommand_changes = {};
       if (!updating_command && dirty[0] & 5) {
         updating_command = true;
-        nestedchoicecommand_changes.command = ctx[33];
+        nestedchoicecommand_changes.command = ctx[38];
         add_flush_callback(() => updating_command = false);
       }
       if (!updating_dragDisabled && dirty[0] & 8) {
@@ -13189,17 +13903,17 @@ function create_if_block5(ctx) {
   let updating_startDrag;
   let current;
   function waitcommand_command_binding(value) {
-    ctx[15](value, ctx[33], ctx[34], ctx[35]);
+    ctx[16](value, ctx[38], ctx[39], ctx[40]);
   }
   function waitcommand_dragDisabled_binding(value) {
-    ctx[16](value);
-  }
-  function waitcommand_startDrag_binding(value) {
     ctx[17](value);
   }
+  function waitcommand_startDrag_binding(value) {
+    ctx[18](value);
+  }
   let waitcommand_props = {};
-  if (ctx[33] !== void 0) {
-    waitcommand_props.command = ctx[33];
+  if (ctx[38] !== void 0) {
+    waitcommand_props.command = ctx[38];
   }
   if (ctx[3] !== void 0) {
     waitcommand_props.dragDisabled = ctx[3];
@@ -13211,7 +13925,7 @@ function create_if_block5(ctx) {
   binding_callbacks.push(() => bind(waitcommand, "command", waitcommand_command_binding));
   binding_callbacks.push(() => bind(waitcommand, "dragDisabled", waitcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(waitcommand, "startDrag", waitcommand_startDrag_binding));
-  waitcommand.$on("deleteCommand", ctx[18]);
+  waitcommand.$on("deleteCommand", ctx[19]);
   waitcommand.$on("updateCommand", ctx[7]);
   return {
     c() {
@@ -13226,7 +13940,7 @@ function create_if_block5(ctx) {
       const waitcommand_changes = {};
       if (!updating_command && dirty[0] & 5) {
         updating_command = true;
-        waitcommand_changes.command = ctx[33];
+        waitcommand_changes.command = ctx[38];
         add_flush_callback(() => updating_command = false);
       }
       if (!updating_dragDisabled && dirty[0] & 8) {
@@ -13262,16 +13976,24 @@ function create_each_block4(key_1, ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block5, create_if_block_14, create_if_block_22, create_else_block2];
+  const if_block_creators = [
+    create_if_block5,
+    create_if_block_14,
+    create_if_block_22,
+    create_if_block_32,
+    create_else_block2
+  ];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[33].type === "Wait" /* Wait */)
+    if (ctx2[38].type === "Wait" /* Wait */)
       return 0;
-    if (ctx2[33].type === "NestedChoice" /* NestedChoice */)
+    if (ctx2[38].type === "NestedChoice" /* NestedChoice */)
       return 1;
-    if (ctx2[33].type === "UserScript" /* UserScript */)
+    if (ctx2[38].type === "UserScript" /* UserScript */)
       return 2;
-    return 3;
+    if (ctx2[38].type === "AIAssistant" /* AIAssistant */)
+      return 3;
+    return 4;
   }
   current_block_type_index = select_block_type(ctx, [-1, -1]);
   if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
@@ -13332,7 +14054,7 @@ function create_each_block4(key_1, ctx) {
     }
   };
 }
-function create_fragment16(ctx) {
+function create_fragment17(ctx) {
   let ol;
   let each_blocks = [];
   let each_1_lookup = /* @__PURE__ */ new Map();
@@ -13340,8 +14062,8 @@ function create_fragment16(ctx) {
   let current;
   let mounted;
   let dispose;
-  let each_value = ctx[0].filter(ctx[14]);
-  const get_key = (ctx2) => ctx2[33].id;
+  let each_value = ctx[0].filter(ctx[15]);
+  const get_key = (ctx2) => ctx2[38].id;
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context4(ctx, each_value, i);
     let key = get_key(child_ctx);
@@ -13353,7 +14075,7 @@ function create_fragment16(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(ol, "class", "quickAddCommandList svelte-1ukgrgp");
+      attr(ol, "class", "quickAddCommandList svelte-1ngraqt");
     },
     m(target, anchor) {
       insert(target, ol, anchor);
@@ -13376,8 +14098,8 @@ function create_fragment16(ctx) {
       }
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 927) {
-        each_value = ctx2[0].filter(ctx2[14]);
+      if (dirty[0] & 1951) {
+        each_value = ctx2[0].filter(ctx2[15]);
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, ol, outro_and_destroy_block, create_each_block4, null, get_each_context4);
         check_outros();
@@ -13415,7 +14137,7 @@ function create_fragment16(ctx) {
     }
   };
 }
-function instance16($$self, $$props, $$invalidate) {
+function instance17($$self, $$props, $$invalidate) {
   let { commands: commands2 } = $$props;
   let { deleteCommand } = $$props;
   let { saveCommands } = $$props;
@@ -13480,6 +14202,13 @@ function instance16($$self, $$props, $$invalidate) {
     }
     new UserScriptSettingsModal(app2, command, userScript.settings).open();
   }
+  async function configureAssistant(e) {
+    const command = e.detail;
+    const newSetings = await new AIAssistantCommandSettingsModal(command).waitForClose;
+    if (newSetings) {
+      updateCommand(command);
+    }
+  }
   const func = (c) => c.id !== SHADOW_PLACEHOLDER_ITEM_ID;
   function waitcommand_command_binding(value, command, each_value, command_index) {
     each_value[command_index] = value;
@@ -13520,6 +14249,19 @@ function instance16($$self, $$props, $$invalidate) {
     $$invalidate(4, startDrag);
   }
   const deleteCommand_handler_2 = async (e) => await deleteCommand(e.detail);
+  function aiassistantcommand_command_binding(value, command, each_value, command_index) {
+    each_value[command_index] = value;
+    $$invalidate(0, commands2);
+  }
+  function aiassistantcommand_dragDisabled_binding(value) {
+    dragDisabled = value;
+    $$invalidate(3, dragDisabled);
+  }
+  function aiassistantcommand_startDrag_binding(value) {
+    startDrag = value;
+    $$invalidate(4, startDrag);
+  }
+  const deleteCommand_handler_3 = async (e) => await deleteCommand(e.detail);
   function standardcommand_command_binding(value, command, each_value, command_index) {
     each_value[command_index] = value;
     $$invalidate(0, commands2);
@@ -13532,18 +14274,18 @@ function instance16($$self, $$props, $$invalidate) {
     startDrag = value;
     $$invalidate(4, startDrag);
   }
-  const deleteCommand_handler_3 = async (e) => await deleteCommand(e.detail);
+  const deleteCommand_handler_4 = async (e) => await deleteCommand(e.detail);
   $$self.$$set = ($$props2) => {
     if ("commands" in $$props2)
       $$invalidate(0, commands2 = $$props2.commands);
     if ("deleteCommand" in $$props2)
       $$invalidate(1, deleteCommand = $$props2.deleteCommand);
     if ("saveCommands" in $$props2)
-      $$invalidate(10, saveCommands = $$props2.saveCommands);
+      $$invalidate(11, saveCommands = $$props2.saveCommands);
     if ("app" in $$props2)
-      $$invalidate(11, app2 = $$props2.app);
+      $$invalidate(12, app2 = $$props2.app);
     if ("plugin" in $$props2)
-      $$invalidate(12, plugin = $$props2.plugin);
+      $$invalidate(13, plugin = $$props2.plugin);
   };
   return [
     commands2,
@@ -13556,6 +14298,7 @@ function instance16($$self, $$props, $$invalidate) {
     updateCommandFromEvent,
     configureChoice,
     configureScript,
+    configureAssistant,
     saveCommands,
     app2,
     plugin,
@@ -13573,10 +14316,14 @@ function instance16($$self, $$props, $$invalidate) {
     userscriptcommand_dragDisabled_binding,
     userscriptcommand_startDrag_binding,
     deleteCommand_handler_2,
+    aiassistantcommand_command_binding,
+    aiassistantcommand_dragDisabled_binding,
+    aiassistantcommand_startDrag_binding,
+    deleteCommand_handler_3,
     standardcommand_command_binding,
     standardcommand_dragDisabled_binding,
     standardcommand_startDrag_binding,
-    deleteCommand_handler_3
+    deleteCommand_handler_4
   ];
 }
 var CommandList = class extends SvelteComponent {
@@ -13585,23 +14332,23 @@ var CommandList = class extends SvelteComponent {
     init(
       this,
       options,
-      instance16,
-      create_fragment16,
+      instance17,
+      create_fragment17,
       safe_not_equal,
       {
         commands: 0,
         deleteCommand: 1,
-        saveCommands: 10,
-        app: 11,
-        plugin: 12,
-        updateCommandList: 13
+        saveCommands: 11,
+        app: 12,
+        plugin: 13,
+        updateCommandList: 14
       },
       add_css8,
       [-1, -1]
     );
   }
   get updateCommandList() {
-    return this.$$.ctx[13];
+    return this.$$.ctx[14];
   }
 };
 var CommandList_default = CommandList;
@@ -13630,6 +14377,18 @@ var NestedChoiceCommand2 = class extends Command {
   }
 };
 
+// src/types/macros/QuickCommands/AIAssistantCommand.ts
+var AIAssistantCommand2 = class extends Command {
+  constructor() {
+    super("AI Assistant", "AIAssistant" /* AIAssistant */);
+    const defaults = settingsStore.getState().ai;
+    this.model = defaults.defaultModel;
+    this.systemPrompt = defaults.defaultSystemPrompt;
+    this.outputVariableName = "output";
+    this.promptTemplate = { enable: false, name: "" };
+  }
+};
+
 // src/gui/MacroGUIs/MacroBuilder.ts
 function getChoicesAsList(nestedChoices) {
   const arr = [];
@@ -13645,7 +14404,7 @@ function getChoicesAsList(nestedChoices) {
   recursive(nestedChoices);
   return arr;
 }
-var MacroBuilder = class extends import_obsidian25.Modal {
+var MacroBuilder = class extends import_obsidian27.Modal {
   constructor(app2, plugin, macro, choices) {
     super(app2);
     this.commands = [];
@@ -13721,7 +14480,7 @@ var MacroBuilder = class extends import_obsidian25.Modal {
       this.addCommandToMacro(command);
       input.setValue("");
     };
-    new import_obsidian25.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
+    new import_obsidian27.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Obsidian command");
@@ -13769,7 +14528,7 @@ var MacroBuilder = class extends import_obsidian25.Modal {
       }
       this.addCommandToMacro(command);
     };
-    new import_obsidian25.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
+    new import_obsidian27.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
       dropdownComponent = dropdown;
       dropdown.selectEl.style.marginRight = "1em";
       dropdown.addOption("Copy" /* Copy */, "Copy" /* Copy */).addOption("Cut" /* Cut */, "Cut" /* Cut */).addOption("Paste" /* Paste */, "Paste" /* Paste */).addOption(
@@ -13796,7 +14555,7 @@ var MacroBuilder = class extends import_obsidian25.Modal {
       this.addCommandToMacro(new UserScript(value, file.path));
       input.setValue("");
     };
-    new import_obsidian25.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
+    new import_obsidian27.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("User script");
@@ -13827,7 +14586,7 @@ var MacroBuilder = class extends import_obsidian25.Modal {
       this.addCommandToMacro(new ChoiceCommand(choice.name, choice.id));
       input.setValue("");
     };
-    new import_obsidian25.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
+    new import_obsidian27.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Choice");
@@ -13899,9 +14658,18 @@ var MacroBuilder = class extends import_obsidian25.Modal {
     this.newChoiceButton(quickCommandContainer, "Capture", CaptureChoice);
     this.newChoiceButton(quickCommandContainer, "Template", TemplateChoice);
     this.addAddWaitCommandButton(quickCommandContainer);
+    this.addAIAssistantCommandButton(quickCommandContainer);
+  }
+  addAIAssistantCommandButton(quickCommandContainer) {
+    const button = new import_obsidian27.ButtonComponent(
+      quickCommandContainer
+    );
+    button.setIcon("bot").setTooltip("Add AI Assistant command").onClick(() => {
+      this.addCommandToMacro(new AIAssistantCommand2());
+    });
   }
   addAddWaitCommandButton(quickCommandContainer) {
-    const button = new import_obsidian25.ButtonComponent(
+    const button = new import_obsidian27.ButtonComponent(
       quickCommandContainer
     );
     button.setIcon("clock").setTooltip("Add wait command").onClick(() => {
@@ -13909,7 +14677,7 @@ var MacroBuilder = class extends import_obsidian25.Modal {
     });
   }
   newChoiceButton(container, typeName, type) {
-    const button = new import_obsidian25.ButtonComponent(container);
+    const button = new import_obsidian27.ButtonComponent(container);
     button.setButtonText(typeName).setTooltip(`Add ${typeName} Choice`).onClick(() => {
       const captureChoice = new type(
         `Untitled ${typeName} Choice`
@@ -13922,92 +14690,6 @@ var MacroBuilder = class extends import_obsidian25.Modal {
     this.commandListEl.updateCommandList(this.macro.commands);
   }
 };
-
-// node_modules/.pnpm/zustand@4.3.6/node_modules/zustand/esm/vanilla.mjs
-var import_meta = {};
-var createStoreImpl = (createState) => {
-  let state;
-  const listeners = /* @__PURE__ */ new Set();
-  const setState = (partial, replace) => {
-    const nextState = typeof partial === "function" ? partial(state) : partial;
-    if (!Object.is(nextState, state)) {
-      const previousState = state;
-      state = (replace != null ? replace : typeof nextState !== "object") ? nextState : Object.assign({}, state, nextState);
-      listeners.forEach((listener) => listener(state, previousState));
-    }
-  };
-  const getState = () => state;
-  const subscribe = (listener) => {
-    listeners.add(listener);
-    return () => listeners.delete(listener);
-  };
-  const destroy = () => {
-    if ((import_meta.env && import_meta.env.MODE) !== "production") {
-      console.warn(
-        "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
-      );
-    }
-    listeners.clear();
-  };
-  const api = { setState, getState, subscribe, destroy };
-  state = createState(setState, getState, api);
-  return api;
-};
-var createStore = (createState) => createState ? createStoreImpl(createState) : createStoreImpl;
-
-// src/types/macros/QuickAddMacro.ts
-var QuickAddMacro = class {
-  constructor(name) {
-    this.name = name;
-    this.id = v4_default();
-    this.commands = [];
-    this.runOnStartup = false;
-  }
-};
-
-// src/settingsStore.ts
-var settingsStore = function() {
-  const useSettingsStore = createStore((set, get2) => ({
-    ...DEFAULT_SETTINGS,
-    setSettings: (settings) => set((state) => ({ ...state, ...settings }))
-  }));
-  const { getState, setState, subscribe } = useSettingsStore;
-  return {
-    getState,
-    setState,
-    subscribe,
-    setMacro: (macroId, macro) => {
-      setState((state) => {
-        const macroIdx = state.macros.findIndex(
-          (m) => m.id === macroId
-        );
-        if (macroIdx === -1) {
-          throw new Error("Macro not found");
-        }
-        const newState = {
-          ...state,
-          macros: [...state.macros]
-        };
-        newState.macros[macroIdx] = macro;
-        return newState;
-      });
-    },
-    createMacro: (name) => {
-      if (name === "" || getState().macros.some((m) => m.name === name)) {
-        throw new Error("Invalid macro name");
-      }
-      const macro = new QuickAddMacro(name);
-      setState((state) => ({
-        ...state,
-        macros: [...state.macros, macro]
-      }));
-      return macro;
-    },
-    getMacro: (macroId) => {
-      return getState().macros.find((m) => m.id === macroId);
-    }
-  };
-}();
 
 // src/gui/ChoiceBuilder/macroChoiceBuilder.ts
 var MacroChoiceBuilder = class extends ChoiceBuilder {
@@ -14042,7 +14724,7 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
     if (hasOwnMacro)
       return;
     const createMacroButtonContainer = container.createDiv();
-    const createMacroButton = new import_obsidian26.ButtonComponent(
+    const createMacroButton = new import_obsidian28.ButtonComponent(
       createMacroButtonContainer
     );
     createMacroButton.setIcon("plus").setCta().setTooltip("Create Macro").onClick(() => {
@@ -14057,7 +14739,7 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
   }
   addConfigureMacroButton(container) {
     const configureMacroButtonContainer = container.createDiv();
-    const configureMacroButton = new import_obsidian26.ButtonComponent(
+    const configureMacroButton = new import_obsidian28.ButtonComponent(
       configureMacroButtonContainer
     );
     configureMacroButton.setIcon("cog").setTooltip("Configure Macro").onClick(async () => {
@@ -14078,7 +14760,7 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
   }
   addSelectMacroSearch(container) {
     const selectMacroDropdownContainer = container.createDiv("selectMacroDropdownContainer");
-    const dropdown = new import_obsidian27.DropdownComponent(
+    const dropdown = new import_obsidian29.DropdownComponent(
       selectMacroDropdownContainer
     );
     const macroOptions = {};
@@ -14110,8 +14792,8 @@ var MacroChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/MacrosManager.ts
-var import_obsidian28 = require("obsidian");
-var MacrosManager = class extends import_obsidian28.Modal {
+var import_obsidian30 = require("obsidian");
+var MacrosManager = class extends import_obsidian30.Modal {
   constructor(app2, plugin, macros, choices) {
     super(app2);
     this.app = app2;
@@ -14154,14 +14836,14 @@ var MacrosManager = class extends import_obsidian28.Modal {
   }
   addMacroSetting(macro, container) {
     const configureMacroContainer = container.createDiv();
-    const macroSetting = new import_obsidian28.Setting(configureMacroContainer);
+    const macroSetting = new import_obsidian30.Setting(configureMacroContainer);
     macroSetting.setName(macro.name);
     macroSetting.infoEl.style.fontWeight = "bold";
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
         this.addSpanWithText(itemContainerEl, "Run on plugin load");
-        const toggle = new import_obsidian28.ToggleComponent(
+        const toggle = new import_obsidian30.ToggleComponent(
           itemContainerEl
         );
         toggle.setValue(macro.runOnStartup);
@@ -14175,7 +14857,7 @@ var MacrosManager = class extends import_obsidian28.Modal {
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
-        const deleteButton = new import_obsidian28.ButtonComponent(
+        const deleteButton = new import_obsidian30.ButtonComponent(
           itemContainerEl
         );
         deleteButton.setClass("mod-warning");
@@ -14186,7 +14868,7 @@ var MacrosManager = class extends import_obsidian28.Modal {
           this.reload();
           this.macroContainer.scrollTop = scroll;
         });
-        const configureButton = new import_obsidian28.ButtonComponent(
+        const configureButton = new import_obsidian30.ButtonComponent(
           itemContainerEl
         );
         configureButton.setClass("mod-cta");
@@ -14229,11 +14911,11 @@ var MacrosManager = class extends import_obsidian28.Modal {
   addAddMacroBar() {
     const addMacroBarContainer = this.contentEl.createDiv();
     addMacroBarContainer.addClass("addMacroBarContainer");
-    const nameInput = new import_obsidian28.TextComponent(
+    const nameInput = new import_obsidian30.TextComponent(
       addMacroBarContainer
     );
     nameInput.setPlaceholder("Macro name");
-    const addMacroButton = new import_obsidian28.ButtonComponent(
+    const addMacroButton = new import_obsidian30.ButtonComponent(
       addMacroBarContainer
     );
     addMacroButton.setButtonText("Add macro").setClass("mod-cta").onClick(() => {
@@ -14257,24 +14939,124 @@ var MacrosManager = class extends import_obsidian28.Modal {
   }
 };
 
+// src/gui/AIAssistantSettingsModal.ts
+var import_obsidian31 = require("obsidian");
+var AIAssistantSettingsModal = class extends import_obsidian31.Modal {
+  constructor(settings) {
+    super(app);
+    this.settings = settings;
+    this.waitForClose = new Promise(
+      (resolve, reject) => {
+        this.rejectPromise = reject;
+        this.resolvePromise = resolve;
+      }
+    );
+    this.open();
+    this.display();
+  }
+  display() {
+    this.contentEl.createEl("h2", {
+      text: "AI Assistant Settings"
+    }).style.textAlign = "center";
+    this.addApiKeySetting(this.contentEl);
+    this.addDefaultModelSetting(this.contentEl);
+    this.addPromptTemplateFolderPathSetting(this.contentEl);
+    this.addShowAssistantSetting(this.contentEl);
+    this.addDefaultSystemPromptSetting(this.contentEl);
+  }
+  reload() {
+    this.contentEl.empty();
+    this.display();
+  }
+  addApiKeySetting(container) {
+    new import_obsidian31.Setting(container).setName("API Key").setDesc("The API Key for the AI Assistant").addText((text2) => {
+      setPasswordOnBlur(text2.inputEl);
+      text2.setValue(this.settings.OpenAIApiKey).onChange((value) => {
+        this.settings.OpenAIApiKey = value;
+      });
+      text2.inputEl.placeholder = "sk-...";
+    });
+  }
+  addDefaultModelSetting(container) {
+    new import_obsidian31.Setting(container).setName("Default Model").setDesc("The default model for the AI Assistant").addDropdown((dropdown) => {
+      for (const model of models_and_ask_me) {
+        dropdown.addOption(model, model);
+      }
+      dropdown.setValue(this.settings.defaultModel);
+      dropdown.onChange((value) => {
+        this.settings.defaultModel = value;
+      });
+    });
+  }
+  addPromptTemplateFolderPathSetting(container) {
+    new import_obsidian31.Setting(container).setName("Prompt Template Folder Path").setDesc("Path to your folder with prompt templates").addText((text2) => {
+      text2.setValue(this.settings.promptTemplatesFolderPath).onChange(
+        (value) => {
+          this.settings.promptTemplatesFolderPath = value;
+        }
+      );
+    });
+  }
+  addShowAssistantSetting(container) {
+    new import_obsidian31.Setting(container).setName("Show Assistant").setDesc("Show status messages from the AI Assistant").addToggle((toggle) => {
+      toggle.setValue(this.settings.showAssistant);
+      toggle.onChange((value) => {
+        this.settings.showAssistant = value;
+      });
+    });
+  }
+  addDefaultSystemPromptSetting(contentEl) {
+    new import_obsidian31.Setting(contentEl).setName("Default System Prompt").setDesc("The default system prompt for the AI Assistant");
+    const textAreaComponent = new import_obsidian31.TextAreaComponent(contentEl);
+    textAreaComponent.setValue(this.settings.defaultSystemPrompt).onChange(async (value) => {
+      this.settings.defaultSystemPrompt = value;
+      formatDisplay.innerText = await displayFormatter.format(value);
+    });
+    new FormatSyntaxSuggester(
+      this.app,
+      textAreaComponent.inputEl,
+      QuickAdd.instance
+    );
+    const displayFormatter = new FormatDisplayFormatter(
+      this.app,
+      QuickAdd.instance
+    );
+    textAreaComponent.inputEl.style.width = "100%";
+    textAreaComponent.inputEl.style.height = "100px";
+    textAreaComponent.inputEl.style.minHeight = "100px";
+    textAreaComponent.inputEl.style.marginBottom = "1em";
+    const formatDisplay = this.contentEl.createEl("span");
+    void (async () => formatDisplay.innerText = await displayFormatter.format(
+      this.settings.defaultSystemPrompt ?? ""
+    ))();
+  }
+  onClose() {
+    this.resolvePromise(this.settings);
+    super.onClose();
+  }
+};
+
 // src/gui/choiceList/ChoiceView.svelte
 function add_css9(target) {
-  append_styles(target, "svelte-wcmtyt", ".choiceViewBottomBar.svelte-wcmtyt{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem}@media(max-width: 800px){.choiceViewBottomBar.svelte-wcmtyt{flex-direction:column}}");
+  append_styles(target, "svelte-1ikpkxq", ".choiceViewBottomBar.svelte-1ikpkxq{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem}@media(max-width: 800px){.choiceViewBottomBar.svelte-1ikpkxq{flex-direction:column}}");
 }
-function create_fragment17(ctx) {
-  let div1;
+function create_fragment18(ctx) {
+  let div2;
   let choicelist;
   let updating_choices;
   let t0;
+  let div1;
   let div0;
-  let button;
+  let button0;
   let t2;
+  let button1;
+  let t4;
   let addchoicebox;
   let current;
   let mounted;
   let dispose;
   function choicelist_choices_binding(value) {
-    ctx[12](value);
+    ctx[13](value);
   }
   let choicelist_props = { type: "main" };
   if (ctx[0] !== void 0) {
@@ -14286,33 +15068,46 @@ function create_fragment17(ctx) {
   choicelist.$on("configureChoice", ctx[4]);
   choicelist.$on("toggleCommand", ctx[5]);
   choicelist.$on("duplicateChoice", ctx[6]);
-  choicelist.$on("reorderChoices", ctx[13]);
+  choicelist.$on("reorderChoices", ctx[14]);
   addchoicebox = new AddChoiceBox_default({});
   addchoicebox.$on("addChoice", ctx[2]);
   return {
     c() {
-      div1 = element("div");
+      div2 = element("div");
       create_component(choicelist.$$.fragment);
       t0 = space();
+      div1 = element("div");
       div0 = element("div");
-      button = element("button");
-      button.textContent = "Manage Macros";
+      button0 = element("button");
+      button0.textContent = "Manage Macros";
       t2 = space();
+      button1 = element("button");
+      button1.textContent = "AI Assistant";
+      t4 = space();
       create_component(addchoicebox.$$.fragment);
-      attr(button, "class", "mod-cta");
-      attr(div0, "class", "choiceViewBottomBar svelte-wcmtyt");
+      attr(button0, "class", "mod-cta");
+      attr(button1, "class", "mod-cta");
+      set_style(div0, "display", "flex");
+      set_style(div0, "gap", "4px");
+      attr(div1, "class", "choiceViewBottomBar svelte-1ikpkxq");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      mount_component(choicelist, div1, null);
-      append(div1, t0);
+      insert(target, div2, anchor);
+      mount_component(choicelist, div2, null);
+      append(div2, t0);
+      append(div2, div1);
       append(div1, div0);
-      append(div0, button);
+      append(div0, button0);
       append(div0, t2);
-      mount_component(addchoicebox, div0, null);
+      append(div0, button1);
+      append(div1, t4);
+      mount_component(addchoicebox, div1, null);
       current = true;
       if (!mounted) {
-        dispose = listen(button, "click", ctx[7]);
+        dispose = [
+          listen(button0, "click", ctx[7]),
+          listen(button1, "click", ctx[8])
+        ];
         mounted = true;
       }
     },
@@ -14339,11 +15134,11 @@ function create_fragment17(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(div1);
+        detach(div2);
       destroy_component(choicelist);
       destroy_component(addchoicebox);
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
@@ -14368,7 +15163,7 @@ function updateChoiceHelper(oldChoice, newChoice) {
   }
   return oldChoice;
 }
-function instance17($$self, $$props, $$invalidate) {
+function instance18($$self, $$props, $$invalidate) {
   let { choices = [] } = $$props;
   let { macros = [] } = $$props;
   let { saveChoices } = $$props;
@@ -14378,7 +15173,7 @@ function instance17($$self, $$props, $$invalidate) {
   onMount(() => {
     const unsubSettingsStore = settingsStore.subscribe((settings) => {
       $$invalidate(0, choices = settings.choices);
-      $$invalidate(8, macros = settings.macros);
+      $$invalidate(9, macros = settings.macros);
     });
     return () => {
       unsubSettingsStore();
@@ -14417,7 +15212,7 @@ function instance17($$self, $$props, $$invalidate) {
     if (!userConfirmed)
       return;
     if (hasOwnMacro) {
-      $$invalidate(8, macros = macros.filter((macro) => macro.id !== choice.macroId));
+      $$invalidate(9, macros = macros.filter((macro) => macro.id !== choice.macroId));
       saveMacros(macros);
     }
     $$invalidate(0, choices = choices.filter((value) => deleteChoiceHelper(choice.id, value)));
@@ -14505,7 +15300,13 @@ function instance17($$self, $$props, $$invalidate) {
     const newMacros = await new MacrosManager(app2, plugin, macros, choices).waitForClose;
     if (newMacros) {
       saveMacros(newMacros);
-      $$invalidate(8, macros = newMacros);
+      $$invalidate(9, macros = newMacros);
+    }
+  }
+  async function openAISettings() {
+    const newSettings = await new AIAssistantSettingsModal(settingsStore.getState().ai).waitForClose;
+    if (newSettings) {
+      settingsStore.setState((state) => ({ ...state, ai: newSettings }));
     }
   }
   function choicelist_choices_binding(value) {
@@ -14517,15 +15318,15 @@ function instance17($$self, $$props, $$invalidate) {
     if ("choices" in $$props2)
       $$invalidate(0, choices = $$props2.choices);
     if ("macros" in $$props2)
-      $$invalidate(8, macros = $$props2.macros);
+      $$invalidate(9, macros = $$props2.macros);
     if ("saveChoices" in $$props2)
       $$invalidate(1, saveChoices = $$props2.saveChoices);
     if ("saveMacros" in $$props2)
-      $$invalidate(9, saveMacros = $$props2.saveMacros);
+      $$invalidate(10, saveMacros = $$props2.saveMacros);
     if ("app" in $$props2)
-      $$invalidate(10, app2 = $$props2.app);
+      $$invalidate(11, app2 = $$props2.app);
     if ("plugin" in $$props2)
-      $$invalidate(11, plugin = $$props2.plugin);
+      $$invalidate(12, plugin = $$props2.plugin);
   };
   return [
     choices,
@@ -14536,6 +15337,7 @@ function instance17($$self, $$props, $$invalidate) {
     toggleCommandForChoice,
     handleDuplicateChoice,
     openMacroManager,
+    openAISettings,
     macros,
     saveMacros,
     app2,
@@ -14550,16 +15352,16 @@ var ChoiceView = class extends SvelteComponent {
     init(
       this,
       options,
-      instance17,
-      create_fragment17,
+      instance18,
+      create_fragment18,
       safe_not_equal,
       {
         choices: 0,
-        macros: 8,
+        macros: 9,
         saveChoices: 1,
-        saveMacros: 9,
-        app: 10,
-        plugin: 11
+        saveMacros: 10,
+        app: 11,
+        plugin: 12
       },
       add_css9
     );
@@ -14576,6 +15378,13 @@ var DEFAULT_SETTINGS = {
   templateFolderPath: "",
   announceUpdates: true,
   version: "0.0.0",
+  ai: {
+    OpenAIApiKey: "",
+    defaultModel: "Ask me",
+    defaultSystemPrompt: `As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{	ext{new}}:=w_{ij}^{	ext{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write "($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)" inline.`,
+    promptTemplatesFolderPath: "",
+    showAssistant: true
+  },
   migrations: {
     migrateToMacroIDFromEmbeddedMacro: false,
     useQuickAddTemplateFolder: false,
@@ -14584,7 +15393,7 @@ var DEFAULT_SETTINGS = {
     setVersionAfterUpdateModalRelease: false
   }
 };
-var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
+var QuickAddSettingsTab = class extends import_obsidian33.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -14599,7 +15408,7 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
     this.addAnnounceUpdatesSetting();
   }
   addAnnounceUpdatesSetting() {
-    const setting = new import_obsidian30.Setting(this.containerEl);
+    const setting = new import_obsidian33.Setting(this.containerEl);
     setting.setName("Announce Updates");
     setting.setDesc(
       "Display release notes when a new version is installed. This includes new features, demo videos, and bug fixes."
@@ -14616,7 +15425,7 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
       this.choiceView.$destroy();
   }
   addChoicesSetting() {
-    const setting = new import_obsidian30.Setting(this.containerEl);
+    const setting = new import_obsidian33.Setting(this.containerEl);
     setting.infoEl.remove();
     setting.settingEl.style.display = "block";
     this.choiceView = new ChoiceView_default({
@@ -14636,7 +15445,7 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
     });
   }
   addUseMultiLineInputPromptSetting() {
-    new import_obsidian30.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
+    new import_obsidian33.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
       "Use multi-line input prompt instead of single-line input prompt"
     ).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inputPrompt === "multi-line").setTooltip("Use multi-line input prompt").onChange((value) => {
@@ -14653,7 +15462,7 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
     );
   }
   addTemplateFolderPathSetting() {
-    const setting = new import_obsidian30.Setting(this.containerEl);
+    const setting = new import_obsidian33.Setting(this.containerEl);
     setting.setName("Template Folder Path");
     setting.setDesc(
       "Path to the folder where templates are stored. Used to suggest template files when configuring QuickAdd."
@@ -14665,7 +15474,7 @@ var QuickAddSettingsTab = class extends import_obsidian30.PluginSettingTab {
       new GenericTextSuggester(
         app,
         text2.inputEl,
-        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian30.TFolder && f.path !== "/").map((f) => f.path)
+        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian33.TFolder && f.path !== "/").map((f) => f.path)
       );
     });
   }
@@ -14708,7 +15517,7 @@ var ConsoleErrorLogger = class extends QuickAddLogger {
 };
 
 // src/logger/guiLogger.ts
-var import_obsidian31 = require("obsidian");
+var import_obsidian34 = require("obsidian");
 var GuiLogger = class extends QuickAddLogger {
   constructor(plugin) {
     super();
@@ -14716,11 +15525,11 @@ var GuiLogger = class extends QuickAddLogger {
   }
   logError(msg) {
     const error = this.getQuickAddError(msg, "ERROR" /* Error */);
-    new import_obsidian31.Notice(this.formatOutputString(error), 15e3);
+    new import_obsidian34.Notice(this.formatOutputString(error), 15e3);
   }
   logWarning(msg) {
     const warning = this.getQuickAddError(msg, "WARNING" /* Warning */);
-    new import_obsidian31.Notice(this.formatOutputString(warning));
+    new import_obsidian34.Notice(this.formatOutputString(warning));
   }
   logMessage(msg) {
   }
@@ -14741,17 +15550,7 @@ var StartupMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/engine/TemplateChoiceEngine.ts
-var import_obsidian32 = require("obsidian");
-
-// src/utils/invariant.ts
-function invariant(condition, message) {
-  if (!condition) {
-    throw new Error(typeof message === "function" ? message() : message);
-  }
-  return;
-}
-
-// src/engine/TemplateChoiceEngine.ts
+var import_obsidian35 = require("obsidian");
 var TemplateChoiceEngine = class extends TemplateEngine {
   constructor(app2, plugin, choice, choiceExecutor) {
     super(app2, plugin, choiceExecutor);
@@ -14785,7 +15584,7 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       let createdFile;
       if (await this.app.vault.adapter.exists(filePath)) {
         const file = this.app.vault.getAbstractFileByPath(filePath);
-        if (!(file instanceof import_obsidian32.TFile) || file.extension !== "md") {
+        if (!(file instanceof import_obsidian35.TFile) || file.extension !== "md") {
           log.logError(
             `'${filePath}' already exists and is not a valid markdown file.`
           );
@@ -15931,7 +16730,7 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
       !!targetFilePath && targetFilePath.length > 0,
       `No file selected for capture.`
     );
-    const filePath = targetFilePath.startsWith(`${folderPathSlash}/`) ? targetFilePath : `${folderPathSlash}/${targetFilePath}`;
+    const filePath = targetFilePath.startsWith(`${folderPathSlash}`) ? targetFilePath : `${folderPathSlash}/${targetFilePath}`;
     return await this.formatFilePath(filePath);
   }
   async selectFileWithTag(tag) {
@@ -16017,8 +16816,8 @@ This is in order to prevent data loss.`
 };
 
 // src/gui/suggesters/choiceSuggester.ts
-var import_obsidian33 = require("obsidian");
-var ChoiceSuggester = class extends import_obsidian33.FuzzySuggestModal {
+var import_obsidian36 = require("obsidian");
+var ChoiceSuggester = class extends import_obsidian36.FuzzySuggestModal {
   constructor(plugin, choices, choiceExecutor) {
     super(plugin.app);
     this.plugin = plugin;
@@ -16035,7 +16834,7 @@ var ChoiceSuggester = class extends import_obsidian33.FuzzySuggestModal {
   }
   renderSuggestion(item, el) {
     el.empty();
-    void import_obsidian33.MarkdownRenderer.renderMarkdown(item.item.name, el, "", this.plugin);
+    void import_obsidian36.MarkdownRenderer.renderMarkdown(item.item.name, el, "", this.plugin);
     el.classList.add("quickadd-choice-suggestion");
   }
   getItemText(item) {
@@ -16351,7 +17150,7 @@ QuickAdd will now revert to backup.`
 var migrate_default = migrate;
 
 // src/gui/UpdateModal/UpdateModal.ts
-var import_obsidian34 = require("obsidian");
+var import_obsidian37 = require("obsidian");
 async function getReleaseNotesAfter(repoOwner, repoName, releaseTagName) {
   const response = await fetch(
     `https://api.github.com/repos/${repoOwner}/${repoName}/releases`
@@ -16379,7 +17178,7 @@ function addExtraHashToHeadings(markdownText, numHashes = 1) {
   }
   return lines.join("\n");
 }
-var UpdateModal = class extends import_obsidian34.Modal {
+var UpdateModal = class extends import_obsidian37.Modal {
   constructor(previousQAVersion) {
     super(app);
     this.previousVersion = previousQAVersion;
@@ -16434,7 +17233,7 @@ ${andNow}
 ${addExtraHashToHeadings(
       releaseNotes
     )}`;
-    void import_obsidian34.MarkdownRenderer.renderMarkdown(
+    void import_obsidian37.MarkdownRenderer.renderMarkdown(
       markdownStr,
       contentDiv,
       app.vault.getRoot().path,
@@ -16444,7 +17243,7 @@ ${addExtraHashToHeadings(
 };
 
 // src/main.ts
-var QuickAdd = class extends import_obsidian35.Plugin {
+var QuickAdd = class extends import_obsidian38.Plugin {
   get api() {
     return QuickAddApi.GetApi(app, this, new ChoiceExecutor(app, this));
   }

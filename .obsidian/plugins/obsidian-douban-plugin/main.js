@@ -20069,7 +20069,7 @@ var FileUtil = {
     return (0, import_obsidian23.normalizePath)(parts.join("/"));
   },
   replaceSpecialCharactersForFileName(fileName) {
-    return fileName.replaceAll(/[\\/:*?"<>|]/g, "_");
+    return fileName.replaceAll(/[\\/:*?"<>|.]/g, "_");
   }
 };
 
@@ -20867,19 +20867,19 @@ var UserComponent = class {
     }
     let name = dataHtml(dataHtml("head > title").get(0)).text().trim();
     let userUrl = dataHtml(elements.get(0)).attr("href");
-    let idPattern = /(\d){5,10}/g;
-    let idP = idPattern.exec(userUrl);
-    let id = idP ? idP[0] : "";
-    if (!id) {
+    if (!name && !userUrl) {
       return new User();
     }
-    const result = {
+    let id = "";
+    if (userUrl && userUrl.indexOf("people/") > 0) {
+      id = userUrl.substring(userUrl.lastIndexOf("people/") + 7, userUrl.lastIndexOf("/"));
+    }
+    return {
       id,
       name,
       url: userUrl,
       login: true
     };
-    return result;
   }
 };
 

@@ -11078,7 +11078,7 @@ var makeCppSettings_default = (tab, containerEl) => {
     console.log("CPP args set to: " + value);
     yield tab.plugin.saveSettings();
   })));
-  new import_obsidian.Setting(containerEl).setName("Cling std").addDropdown((dropdown) => dropdown.addOption("c++11", "C++ 11").addOption("c++14", "C++ 14").addOption("c++17", "C++ 17").setValue(tab.plugin.settings.clingStd).onChange((value) => __async(void 0, null, function* () {
+  new import_obsidian.Setting(containerEl).setName("Cling std").addDropdown((dropdown) => dropdown.addOption("c++98", "C++ 98").addOption("c++11", "C++ 11").addOption("c++14", "C++ 14").addOption("c++17", "C++ 17").addOption("c++2a", "C++ 20").setValue(tab.plugin.settings.clingStd).onChange((value) => __async(void 0, null, function* () {
     tab.plugin.settings.clingStd = value;
     console.log("Cling std set to: " + value);
     yield tab.plugin.saveSettings();
@@ -11106,7 +11106,7 @@ var makeCSettings_default = (tab, containerEl) => {
     console.log("Cling args set to: " + value);
     yield tab.plugin.saveSettings();
   })));
-  new import_obsidian2.Setting(containerEl).setName("Cling std").addDropdown((dropdown) => dropdown.addOption("c++11", "C++ 11").addOption("c++14", "C++ 14").addOption("c++17", "C++ 17").setValue(tab.plugin.settings.clingStd).onChange((value) => __async(void 0, null, function* () {
+  new import_obsidian2.Setting(containerEl).setName("Cling std").addDropdown((dropdown) => dropdown.addOption("c++98", "C++ 98").addOption("c++11", "C++ 11").addOption("c++14", "C++ 14").addOption("c++17", "C++ 17").addOption("c++2a", "C++ 20").setValue(tab.plugin.settings.clingStd).onChange((value) => __async(void 0, null, function* () {
     tab.plugin.settings.clingStd = value;
     console.log("Cling std set to: " + value);
     yield tab.plugin.saveSettings();

@@ -1,0 +1,135 @@
+.setting-item[nv-greyed] {
+	opacity: .5; 
+	pointer-events: none !important;
+}
+
+#nv-main-setting {
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+#nv-main-setting .setting-item-control {
+	padding-top: var(--size-4-2);
+	flex-basis: 100%;
+	align-items: stretch;
+}
+
+#nv-main-setting .setting-item-control input, #nv-main-setting .setting-item-control select {
+	font-size: var(--font-ui-medium);
+	font-weight: 600;
+}
+
+#nv-main-setting .setting-item-control select {
+	padding: var(--size-4-3) var(--size-4-4);
+	padding-right: var(--size-4-8);
+	height: auto;
+}
+
+#nv-main-setting .setting-item-control input {
+	flex-grow: 1;
+	padding: var(--size-4-5) var(--size-4-4);
+}
+
+#nv-main-setting .setting-item-control input[disabled] {
+	opacity: 0.3;
+}
+
+#nv-main-setting #nv-desc, #nv-main-setting #nv-info {
+	flex-basis: 100%;
+}
+
+#nv-main-setting #nv-desc {
+	font-weight: 500;
+	color: var(--text-normal);
+	font-size: var(--font-ui-small);
+	padding: 10px 0 0;
+}
+
+#nv-main-setting #nv-desc code {
+	font-family: var(--font-monospace);
+	font-size: var(--font-smaller);
+	border-radius: var(--radius-s);
+}
+
+#nv-main-setting #nv-desc small {
+	display: block;
+	font-weight: 400;
+	color: var(--text-muted);
+	font-size: calc(var(--font-ui-smaller) * 0.9);
+	padding: 5px 0 0;
+}
+
+.nv-command-desc {
+	padding: 1.2em 0 0;
+	border-top: 1px solid var(--background-modifier-border);
+}
+
+.nv-command-box {
+	margin: 1em 0 1.75em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: center;
+}
+
+.nv-command-pill {
+	background-color: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border-hover);
+	border-radius: var(--radius-s);
+	font-size: var(--font-ui-small);
+	padding: var(--size-2-1) var(--size-2-3);
+}
+
+.nv-command-pill button {
+	display: inline-block;
+	padding: 0;
+	margin: 0 0 0 var(--size-2-3);
+	vertical-align: bottom;
+}
+
+.nv-command-pill button svg {
+	height: 1em;
+	width: 1em;
+}
+
+.nv-command-add-button {
+	font-size: var(--font-ui-small);
+	padding: var(--size-2-2) var(--size-4-2);
+	height: auto;
+}
+
+#nv-main-setting + .setting-item, .nv-command-desc + .setting-item {
+	padding-top: 20px; 
+	border-top: none !important;
+}
+
+.nv-debug-button {
+	margin: 3em 0 -0.2em;
+	font-size: var(--font-ui-smaller);
+	padding: 0;
+	height: auto;
+	float: right;
+	box-shadow: none !important;
+	background: none !important;
+	color: var(--text-accent);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.nv-debug-button:hover, .nv-debug-button:active {
+	text-decoration: underline;
+}
+
+.is-phone #nv-main-setting .setting-item-control {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.is-phone #nv-main-setting .setting-item-control select {
+	width: auto;
+	max-width: auto;
+}
+
+.is-phone .nv-command-pill button, .is-phone .nv-command-add-button {
+	width: auto;
+}

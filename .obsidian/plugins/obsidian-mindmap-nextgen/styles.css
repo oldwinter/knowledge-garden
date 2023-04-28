@@ -82,9 +82,12 @@
     width: 100%;
     cursor: row-resize;
 }
-.workspace-split.mod-root .workspace-leaf:last-child .block-language-markmap .workspace-leaf-resize-handle {
-    display: block
-}
+
+.workspace-split.mod-root .workspace-leaf:last-child .block-language-markmap .workspace-leaf-resize-handle,
+                          .workspace-tabs:last-child .block-language-markmap .workspace-leaf-resize-handle
+{ display: block }
+
+
 
 
 /* Toolbars */

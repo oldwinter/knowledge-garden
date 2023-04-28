@@ -3,12 +3,6 @@ title: chatGPT的使用经验
 date created: 2023-02-14
 date modified: 2023-03-14
 ---
-chat
----
-title: 2023-03-06
-date created: 2023-03-06
-date modified: 2023-03-06
----
 
 2023年，软件工程师的分类，来自[[∑ 左耳听风-陈皓（左耳朵耗子）]]：
 
