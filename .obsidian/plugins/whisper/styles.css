@@ -1,0 +1,33 @@
+.recording-controls .modal-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 16px;
+}
+.recording-controls .button-group {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.recording-controls .button-component {
+	padding: 5px 10px;
+}
+
+.recording-controls .button-component {
+    background-color: var(--text-accent);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.recording-controls .button-component:hover {
+	background-color: var(--text-accent-hover);
+}
+
+.recording-controls .button-component:disabled {
+	pointer-events: none;
+    background-color: var(--text-accent-muted);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+

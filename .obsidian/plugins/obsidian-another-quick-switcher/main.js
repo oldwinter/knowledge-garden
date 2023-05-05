@@ -1607,8 +1607,8 @@ var AppHelper = class {
     return (_b = (_a = this.getMarkdownViewInActiveLeaf()) == null ? void 0 : _a.editor) != null ? _b : null;
   }
   getCurrentDirPath() {
-    var _a, _b;
-    return (_b = (_a = this.getActiveFile()) == null ? void 0 : _a.parent.path) != null ? _b : "";
+    var _a, _b, _c;
+    return (_c = (_b = (_a = this.getActiveFile()) == null ? void 0 : _a.parent) == null ? void 0 : _b.path) != null ? _c : "";
   }
   getCurrentOffset() {
     var _a;
@@ -1809,9 +1809,7 @@ var AppHelper = class {
     this.unsafeApp.openWithDefaultApp(folder.path);
   }
   getStarredFilePaths() {
-    return this.unsafeApp.internalPlugins.plugins.starred.instance.items.map(
-      (x) => x.path
-    );
+    return this.unsafeApp.internalPlugins.plugins.bookmarks.instance.getBookmarks().map((x) => x.type === "file" ? x.path : void 0).filter((x) => x !== void 0);
   }
   searchPhantomFiles() {
     return uniq(
@@ -1873,7 +1871,7 @@ var AppHelper = class {
     );
   }
   getPathToBeCreated(linkText) {
-    var _a, _b;
+    var _a, _b, _c;
     let linkPath = (0, import_obsidian3.getLinkpath)(linkText);
     if (extname(linkPath) !== ".md") {
       linkPath += ".md";
@@ -1885,7 +1883,7 @@ var AppHelper = class {
       case "root":
         return `/${linkPath}`;
       case "current":
-        return `${(_b = (_a = this.getActiveFile()) == null ? void 0 : _a.parent.path) != null ? _b : ""}/${linkPath}`;
+        return `${(_c = (_b = (_a = this.getActiveFile()) == null ? void 0 : _a.parent) == null ? void 0 : _b.path) != null ? _c : ""}/${linkPath}`;
       case "folder":
         return `${this.unsafeApp.vault.config.newFileFolderPath}/${linkPath}`;
       default:
@@ -1980,6 +1978,7 @@ var AppHelper = class {
 
 // src/matcher.ts
 function matchQuery(item, query, options) {
+  var _a;
   const {
     searchByTags,
     searchByHeaders,
@@ -2002,7 +2001,10 @@ function matchQuery(item, query, options) {
   const file = qs.pop();
   const dirs = qs;
   const includeDir = dirs.every(
-    (dir) => smartIncludes(item.file.parent.path, dir, isNormalizeAccentsDiacritics)
+    (dir) => {
+      var _a2;
+      return smartIncludes((_a2 = item.file.parent) == null ? void 0 : _a2.path, dir, isNormalizeAccentsDiacritics);
+    }
   );
   if (!includeDir) {
     return [{ type: "not found", query }];
@@ -2039,7 +2041,7 @@ function matchQuery(item, query, options) {
       query
     });
   }
-  if (smartIncludes(item.file.parent.path, query, isNormalizeAccentsDiacritics)) {
+  if (smartIncludes((_a = item.file.parent) == null ? void 0 : _a.path, query, isNormalizeAccentsDiacritics)) {
     results.push({ type: "directory", meta: [item.file.path], query });
   }
   if (searchByHeaders) {
@@ -2119,6 +2121,7 @@ var PREVIEW = `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" vi
 
 // src/ui/suggestion-factory.ts
 function createItemDiv(item, aliases, options) {
+  var _a, _b;
   const itemDiv = createDiv({
     cls: [
       "another-quick-switcher__item",
@@ -2158,7 +2161,7 @@ function createItemDiv(item, aliases, options) {
       cls: "another-quick-switcher__item__directory"
     });
     directoryDiv.insertAdjacentHTML("beforeend", FOLDER);
-    const text = options.showFullPathOfDirectory ? item.file.parent.path : item.file.parent.name;
+    const text = options.showFullPathOfDirectory ? (_a = item.file.parent) == null ? void 0 : _a.path : (_b = item.file.parent) == null ? void 0 : _b.name;
     directoryDiv.appendText(` ${text}`);
     entryDiv.appendChild(directoryDiv);
     if (options.showDirectoryAtNewLine) {
@@ -3079,7 +3082,14 @@ function matchQuery2(item, query, matcher, isNormalizeAccentsDiacritics) {
   const qs = query.split("/");
   const folder = qs.pop();
   return qs.every(
-    (dir) => smartIncludes(item.folder.parent.path, dir, isNormalizeAccentsDiacritics)
+    (dir) => {
+      var _a;
+      return smartIncludes(
+        (_a = item.folder.parent) == null ? void 0 : _a.path,
+        dir,
+        isNormalizeAccentsDiacritics
+      );
+    }
   ) && matcher(item, folder);
 }
 function matchQueryAll2(item, queries, matcher, isNormalizeAccentsDiacritics) {
@@ -3141,6 +3151,7 @@ var MoveModal = class extends import_obsidian5.SuggestModal {
     ).slice(0, 10);
   }
   renderSuggestion(item, el) {
+    var _a;
     const itemDiv = createDiv({
       cls: [
         "another-quick-switcher__item",
@@ -3159,7 +3170,7 @@ var MoveModal = class extends import_obsidian5.SuggestModal {
       cls: "another-quick-switcher__item__directory"
     });
     directoryDiv.insertAdjacentHTML("beforeend", FOLDER);
-    directoryDiv.appendText(` ${item.folder.parent.name}`);
+    directoryDiv.appendText(` ${(_a = item.folder.parent) == null ? void 0 : _a.name}`);
     entryDiv.appendChild(directoryDiv);
     itemDiv.appendChild(entryDiv);
     el.appendChild(itemDiv);
@@ -3680,7 +3691,7 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     return this.suggestions;
   }
   renderSuggestion(item, el) {
-    var _a;
+    var _a, _b, _c;
     const previousPath = (_a = this.suggestions[item.order - 1]) == null ? void 0 : _a.file.path;
     const sameFileWithPrevious = previousPath === item.file.path;
     const itemDiv = createDiv({
@@ -3704,7 +3715,7 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
           cls: "another-quick-switcher__item__directory"
         });
         directoryDiv.insertAdjacentHTML("beforeend", FOLDER);
-        const text = this.settings.showFullPathOfDirectory ? item.file.parent.path : item.file.parent.name;
+        const text = this.settings.showFullPathOfDirectory ? (_b = item.file.parent) == null ? void 0 : _b.path : (_c = item.file.parent) == null ? void 0 : _c.name;
         directoryDiv.appendText(` ${text}`);
         entryDiv.appendChild(directoryDiv);
         if (this.settings.showDirectoryAtNewLine) {

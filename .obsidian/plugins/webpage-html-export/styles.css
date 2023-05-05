@@ -138,3 +138,17 @@
 }
 
 
+/* Progressbar used in the render progress */
+
+.html-render-progressbar::-webkit-progress-bar {
+    background-color: var(--background-secondary);
+    border-radius: 500px;
+}
+
+.html-render-progressbar::-webkit-progress-value {
+    background-color: currentColor;
+    border-radius: 500px;
+}
+
+
+

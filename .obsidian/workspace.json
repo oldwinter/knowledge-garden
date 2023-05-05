@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-26.md",
+                "file": "Calendar/Daily notes/2023-05-04.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,15 +21,56 @@
             }
           },
           {
-            "id": "46ccb8c9004b4c45",
+            "id": "fe6a52f77d736a57",
             "type": "leaf",
             "state": {
-              "type": "swar8080/AVAILABLE_PLUGIN_UPDATES",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6b9412cda58264e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5d58eee72cf62cad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "72187dfcd3cfd0ec",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.8"
+              }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -101,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-26.md"
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md"
               }
             }
           },
@@ -111,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-26.md",
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +164,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-26.md",
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/2023-04-26.md",
+                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,59 +257,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-spaced-repetition:复习卡片": false
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "floating": {
-    "id": "332a006e6e32b30e",
-    "type": "floating",
-    "children": [
-      {
-        "id": "3ac2f079c56e2992",
-        "type": "window",
-        "children": [
-          {
-            "id": "66d37ee6011b6f79",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e01d1437cc5668be",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
-                    "viewState": {
-                      "x": 49.5,
-                      "y": -395,
-                      "zoom": -0.92093915739999
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 552,
-        "y": 49,
-        "width": 1128,
-        "height": 985,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "46ccb8c9004b4c45",
+  "active": "c6b9412cda58264e",
   "lastOpenFiles": [
+    "Calendar/Daily notes/2023-05-04.md",
+    "Calendar/Daily notes/国人如何使用chatGPT.md",
+    "Calendar/Daily notes/2023-05-05.md",
+    "Calendar/Daily notes/2023-05-03.md",
+    "Calendar/Daily notes/2023-05-02.md",
+    "Calendar/Daily notes/2023-04-28.md",
     "Calendar/Daily notes/2023-04-26.md",
     "Calendar/Daily notes/2023-04-25.md",
     "README.md",
@@ -290,12 +297,6 @@
     "Calendar/Daily notes/2023-04-10.md",
     "Calendar/Daily notes/Daily notes归档/2023-04-09.md",
     "Calendar/Daily notes/Daily notes归档/2023-04-04.md",
-    "Calendar/Daily notes/Daily notes归档/2023-04-05.md",
-    "Cards/永久笔记/chatgpt 超长对话的技巧.md",
-    "Calendar/Daily notes/Daily notes归档/2023-04-01.md",
-    "Calendar/Daily notes/Daily notes归档/2023-03-31.md",
-    "Cards/永久笔记/Obsidian 不适合做什么以及其补足配合的软件.md",
-    "Calendar/Daily notes/Daily notes归档/2023-03-28.md",
     "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
     "Untitled.table",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",

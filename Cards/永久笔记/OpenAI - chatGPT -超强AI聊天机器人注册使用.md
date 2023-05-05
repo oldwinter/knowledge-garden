@@ -39,7 +39,9 @@ bash <(curl -Ls https://cpp.li/openai)
 
 ```
 
-docker run --rm -it \
+sudo docker run --rm -it \
+    -d \
+    -p 443:443 \
     --name wgcf \
     --sysctl net.ipv6.conf.all.disable_ipv6=0 \
     --privileged --cap-add net_admin \
@@ -56,3 +58,5 @@ sudo docker run -d --restart=always -v /home/ubuntu/v2ray-config/config.json:/et
 ```
 
 大功告成~chatgpt不再有access denied了，并且走warp以后，各种网站访问速度也快了好多，原理待探索。
+
+但是目前这个方案，不支持机器重启后自动开通，需要重新手动运行上面2条命令，第一条命令不允许加 --restart 参数，后面再看怎么解决。

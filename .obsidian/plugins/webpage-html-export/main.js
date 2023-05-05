@@ -275,12 +275,12 @@ var require_jquery = __commonJS({
         }
         return typeof obj === "object" || typeof obj === "function" ? class2type[toString.call(obj)] || "object" : typeof obj;
       }
-      var version = "3.6.1", jQuery2 = function(selector, context) {
-        return new jQuery2.fn.init(selector, context);
+      var version = "3.6.1", jQuery3 = function(selector, context) {
+        return new jQuery3.fn.init(selector, context);
       };
-      jQuery2.fn = jQuery2.prototype = {
+      jQuery3.fn = jQuery3.prototype = {
         jquery: version,
-        constructor: jQuery2,
+        constructor: jQuery3,
         length: 0,
         toArray: function() {
           return slice.call(this);
@@ -292,15 +292,15 @@ var require_jquery = __commonJS({
           return num < 0 ? this[num + this.length] : this[num];
         },
         pushStack: function(elems) {
-          var ret = jQuery2.merge(this.constructor(), elems);
+          var ret = jQuery3.merge(this.constructor(), elems);
           ret.prevObject = this;
           return ret;
         },
         each: function(callback) {
-          return jQuery2.each(this, callback);
+          return jQuery3.each(this, callback);
         },
         map: function(callback) {
-          return this.pushStack(jQuery2.map(this, function(elem, i) {
+          return this.pushStack(jQuery3.map(this, function(elem, i) {
             return callback.call(elem, i, elem);
           }));
         },
@@ -314,12 +314,12 @@ var require_jquery = __commonJS({
           return this.eq(-1);
         },
         even: function() {
-          return this.pushStack(jQuery2.grep(this, function(_elem, i) {
+          return this.pushStack(jQuery3.grep(this, function(_elem, i) {
             return (i + 1) % 2;
           }));
         },
         odd: function() {
-          return this.pushStack(jQuery2.grep(this, function(_elem, i) {
+          return this.pushStack(jQuery3.grep(this, function(_elem, i) {
             return i % 2;
           }));
         },
@@ -334,7 +334,7 @@ var require_jquery = __commonJS({
         sort: arr.sort,
         splice: arr.splice
       };
-      jQuery2.extend = jQuery2.fn.extend = function() {
+      jQuery3.extend = jQuery3.fn.extend = function() {
         var options, name, src, copy, copyIsArray, clone, target = arguments[0] || {}, i = 1, length = arguments.length, deep = false;
         if (typeof target === "boolean") {
           deep = target;
@@ -355,17 +355,17 @@ var require_jquery = __commonJS({
               if (name === "__proto__" || target === copy) {
                 continue;
               }
-              if (deep && copy && (jQuery2.isPlainObject(copy) || (copyIsArray = Array.isArray(copy)))) {
+              if (deep && copy && (jQuery3.isPlainObject(copy) || (copyIsArray = Array.isArray(copy)))) {
                 src = target[name];
                 if (copyIsArray && !Array.isArray(src)) {
                   clone = [];
-                } else if (!copyIsArray && !jQuery2.isPlainObject(src)) {
+                } else if (!copyIsArray && !jQuery3.isPlainObject(src)) {
                   clone = {};
                 } else {
                   clone = src;
                 }
                 copyIsArray = false;
-                target[name] = jQuery2.extend(deep, clone, copy);
+                target[name] = jQuery3.extend(deep, clone, copy);
               } else if (copy !== void 0) {
                 target[name] = copy;
               }
@@ -374,7 +374,7 @@ var require_jquery = __commonJS({
         }
         return target;
       };
-      jQuery2.extend({
+      jQuery3.extend({
         expando: "jQuery" + (version + Math.random()).replace(/\D/g, ""),
         isReady: true,
         error: function(msg) {
@@ -426,7 +426,7 @@ var require_jquery = __commonJS({
           var ret = results || [];
           if (arr2 != null) {
             if (isArrayLike(Object(arr2))) {
-              jQuery2.merge(ret, typeof arr2 === "string" ? [arr2] : arr2);
+              jQuery3.merge(ret, typeof arr2 === "string" ? [arr2] : arr2);
             } else {
               push.call(ret, arr2);
             }
@@ -478,9 +478,9 @@ var require_jquery = __commonJS({
         support
       });
       if (typeof Symbol === "function") {
-        jQuery2.fn[Symbol.iterator] = arr[Symbol.iterator];
+        jQuery3.fn[Symbol.iterator] = arr[Symbol.iterator];
       }
-      jQuery2.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "), function(_i, name) {
+      jQuery3.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "), function(_i, name) {
         class2type["[object " + name + "]"] = name.toLowerCase();
       });
       function isArrayLike(obj) {
@@ -1657,19 +1657,19 @@ var require_jquery = __commonJS({
         }
         return Sizzle2;
       }(window2);
-      jQuery2.find = Sizzle;
-      jQuery2.expr = Sizzle.selectors;
-      jQuery2.expr[":"] = jQuery2.expr.pseudos;
-      jQuery2.uniqueSort = jQuery2.unique = Sizzle.uniqueSort;
-      jQuery2.text = Sizzle.getText;
-      jQuery2.isXMLDoc = Sizzle.isXML;
-      jQuery2.contains = Sizzle.contains;
-      jQuery2.escapeSelector = Sizzle.escape;
+      jQuery3.find = Sizzle;
+      jQuery3.expr = Sizzle.selectors;
+      jQuery3.expr[":"] = jQuery3.expr.pseudos;
+      jQuery3.uniqueSort = jQuery3.unique = Sizzle.uniqueSort;
+      jQuery3.text = Sizzle.getText;
+      jQuery3.isXMLDoc = Sizzle.isXML;
+      jQuery3.contains = Sizzle.contains;
+      jQuery3.escapeSelector = Sizzle.escape;
       var dir = function(elem, dir2, until) {
         var matched = [], truncate = until !== void 0;
         while ((elem = elem[dir2]) && elem.nodeType !== 9) {
           if (elem.nodeType === 1) {
-            if (truncate && jQuery2(elem).is(until)) {
+            if (truncate && jQuery3(elem).is(until)) {
               break;
             }
             matched.push(elem);
@@ -1686,48 +1686,48 @@ var require_jquery = __commonJS({
         }
         return matched;
       };
-      var rneedsContext = jQuery2.expr.match.needsContext;
+      var rneedsContext = jQuery3.expr.match.needsContext;
       function nodeName(elem, name) {
         return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
       }
       var rsingleTag = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
       function winnow(elements, qualifier, not) {
         if (isFunction(qualifier)) {
-          return jQuery2.grep(elements, function(elem, i) {
+          return jQuery3.grep(elements, function(elem, i) {
             return !!qualifier.call(elem, i, elem) !== not;
           });
         }
         if (qualifier.nodeType) {
-          return jQuery2.grep(elements, function(elem) {
+          return jQuery3.grep(elements, function(elem) {
             return elem === qualifier !== not;
           });
         }
         if (typeof qualifier !== "string") {
-          return jQuery2.grep(elements, function(elem) {
+          return jQuery3.grep(elements, function(elem) {
             return indexOf.call(qualifier, elem) > -1 !== not;
           });
         }
-        return jQuery2.filter(qualifier, elements, not);
+        return jQuery3.filter(qualifier, elements, not);
       }
-      jQuery2.filter = function(expr, elems, not) {
+      jQuery3.filter = function(expr, elems, not) {
         var elem = elems[0];
         if (not) {
           expr = ":not(" + expr + ")";
         }
         if (elems.length === 1 && elem.nodeType === 1) {
-          return jQuery2.find.matchesSelector(elem, expr) ? [elem] : [];
+          return jQuery3.find.matchesSelector(elem, expr) ? [elem] : [];
         }
-        return jQuery2.find.matches(expr, jQuery2.grep(elems, function(elem2) {
+        return jQuery3.find.matches(expr, jQuery3.grep(elems, function(elem2) {
           return elem2.nodeType === 1;
         }));
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         find: function(selector) {
           var i, ret, len = this.length, self = this;
           if (typeof selector !== "string") {
-            return this.pushStack(jQuery2(selector).filter(function() {
+            return this.pushStack(jQuery3(selector).filter(function() {
               for (i = 0; i < len; i++) {
-                if (jQuery2.contains(self[i], this)) {
+                if (jQuery3.contains(self[i], this)) {
                   return true;
                 }
               }
@@ -1735,9 +1735,9 @@ var require_jquery = __commonJS({
           }
           ret = this.pushStack([]);
           for (i = 0; i < len; i++) {
-            jQuery2.find(selector, self[i], ret);
+            jQuery3.find(selector, self[i], ret);
           }
-          return len > 1 ? jQuery2.uniqueSort(ret) : ret;
+          return len > 1 ? jQuery3.uniqueSort(ret) : ret;
         },
         filter: function(selector) {
           return this.pushStack(winnow(this, selector || [], false));
@@ -1746,10 +1746,10 @@ var require_jquery = __commonJS({
           return this.pushStack(winnow(this, selector || [], true));
         },
         is: function(selector) {
-          return !!winnow(this, typeof selector === "string" && rneedsContext.test(selector) ? jQuery2(selector) : selector || [], false).length;
+          return !!winnow(this, typeof selector === "string" && rneedsContext.test(selector) ? jQuery3(selector) : selector || [], false).length;
         }
       });
-      var rootjQuery, rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/, init = jQuery2.fn.init = function(selector, context, root) {
+      var rootjQuery, rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/, init = jQuery3.fn.init = function(selector, context, root) {
         var match, elem;
         if (!selector) {
           return this;
@@ -1763,9 +1763,9 @@ var require_jquery = __commonJS({
           }
           if (match && (match[1] || !context)) {
             if (match[1]) {
-              context = context instanceof jQuery2 ? context[0] : context;
-              jQuery2.merge(this, jQuery2.parseHTML(match[1], context && context.nodeType ? context.ownerDocument || context : document2, true));
-              if (rsingleTag.test(match[1]) && jQuery2.isPlainObject(context)) {
+              context = context instanceof jQuery3 ? context[0] : context;
+              jQuery3.merge(this, jQuery3.parseHTML(match[1], context && context.nodeType ? context.ownerDocument || context : document2, true));
+              if (rsingleTag.test(match[1]) && jQuery3.isPlainObject(context)) {
                 for (match in context) {
                   if (isFunction(this[match])) {
                     this[match](context[match]);
@@ -1793,55 +1793,55 @@ var require_jquery = __commonJS({
           this.length = 1;
           return this;
         } else if (isFunction(selector)) {
-          return root.ready !== void 0 ? root.ready(selector) : selector(jQuery2);
+          return root.ready !== void 0 ? root.ready(selector) : selector(jQuery3);
         }
-        return jQuery2.makeArray(selector, this);
+        return jQuery3.makeArray(selector, this);
       };
-      init.prototype = jQuery2.fn;
-      rootjQuery = jQuery2(document2);
+      init.prototype = jQuery3.fn;
+      rootjQuery = jQuery3(document2);
       var rparentsprev = /^(?:parents|prev(?:Until|All))/, guaranteedUnique = {
         children: true,
         contents: true,
         next: true,
         prev: true
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         has: function(target) {
-          var targets = jQuery2(target, this), l = targets.length;
+          var targets = jQuery3(target, this), l = targets.length;
           return this.filter(function() {
             var i = 0;
             for (; i < l; i++) {
-              if (jQuery2.contains(this, targets[i])) {
+              if (jQuery3.contains(this, targets[i])) {
                 return true;
               }
             }
           });
         },
         closest: function(selectors, context) {
-          var cur, i = 0, l = this.length, matched = [], targets = typeof selectors !== "string" && jQuery2(selectors);
+          var cur, i = 0, l = this.length, matched = [], targets = typeof selectors !== "string" && jQuery3(selectors);
           if (!rneedsContext.test(selectors)) {
             for (; i < l; i++) {
               for (cur = this[i]; cur && cur !== context; cur = cur.parentNode) {
-                if (cur.nodeType < 11 && (targets ? targets.index(cur) > -1 : cur.nodeType === 1 && jQuery2.find.matchesSelector(cur, selectors))) {
+                if (cur.nodeType < 11 && (targets ? targets.index(cur) > -1 : cur.nodeType === 1 && jQuery3.find.matchesSelector(cur, selectors))) {
                   matched.push(cur);
                   break;
                 }
               }
             }
           }
-          return this.pushStack(matched.length > 1 ? jQuery2.uniqueSort(matched) : matched);
+          return this.pushStack(matched.length > 1 ? jQuery3.uniqueSort(matched) : matched);
         },
         index: function(elem) {
           if (!elem) {
             return this[0] && this[0].parentNode ? this.first().prevAll().length : -1;
           }
           if (typeof elem === "string") {
-            return indexOf.call(jQuery2(elem), this[0]);
+            return indexOf.call(jQuery3(elem), this[0]);
           }
           return indexOf.call(this, elem.jquery ? elem[0] : elem);
         },
         add: function(selector, context) {
-          return this.pushStack(jQuery2.uniqueSort(jQuery2.merge(this.get(), jQuery2(selector, context))));
+          return this.pushStack(jQuery3.uniqueSort(jQuery3.merge(this.get(), jQuery3(selector, context))));
         },
         addBack: function(selector) {
           return this.add(selector == null ? this.prevObject : this.prevObject.filter(selector));
@@ -1852,7 +1852,7 @@ var require_jquery = __commonJS({
         }
         return cur;
       }
-      jQuery2.each({
+      jQuery3.each({
         parent: function(elem) {
           var parent = elem.parentNode;
           return parent && parent.nodeType !== 11 ? parent : null;
@@ -1894,20 +1894,20 @@ var require_jquery = __commonJS({
           if (nodeName(elem, "template")) {
             elem = elem.content || elem;
           }
-          return jQuery2.merge([], elem.childNodes);
+          return jQuery3.merge([], elem.childNodes);
         }
       }, function(name, fn) {
-        jQuery2.fn[name] = function(until, selector) {
-          var matched = jQuery2.map(this, fn, until);
+        jQuery3.fn[name] = function(until, selector) {
+          var matched = jQuery3.map(this, fn, until);
           if (name.slice(-5) !== "Until") {
             selector = until;
           }
           if (selector && typeof selector === "string") {
-            matched = jQuery2.filter(selector, matched);
+            matched = jQuery3.filter(selector, matched);
           }
           if (this.length > 1) {
             if (!guaranteedUnique[name]) {
-              jQuery2.uniqueSort(matched);
+              jQuery3.uniqueSort(matched);
             }
             if (rparentsprev.test(name)) {
               matched.reverse();
@@ -1919,13 +1919,13 @@ var require_jquery = __commonJS({
       var rnothtmlwhite = /[^\x20\t\r\n\f]+/g;
       function createOptions(options) {
         var object = {};
-        jQuery2.each(options.match(rnothtmlwhite) || [], function(_, flag) {
+        jQuery3.each(options.match(rnothtmlwhite) || [], function(_, flag) {
           object[flag] = true;
         });
         return object;
       }
-      jQuery2.Callbacks = function(options) {
-        options = typeof options === "string" ? createOptions(options) : jQuery2.extend({}, options);
+      jQuery3.Callbacks = function(options) {
+        options = typeof options === "string" ? createOptions(options) : jQuery3.extend({}, options);
         var firing, memory, fired, locked, list = [], queue = [], firingIndex = -1, fire = function() {
           locked = locked || options.once;
           fired = firing = true;
@@ -1957,7 +1957,7 @@ var require_jquery = __commonJS({
                 queue.push(memory);
               }
               (function add(args) {
-                jQuery2.each(args, function(_, arg) {
+                jQuery3.each(args, function(_, arg) {
                   if (isFunction(arg)) {
                     if (!options.unique || !self.has(arg)) {
                       list.push(arg);
@@ -1974,9 +1974,9 @@ var require_jquery = __commonJS({
             return this;
           },
           remove: function() {
-            jQuery2.each(arguments, function(_, arg) {
+            jQuery3.each(arguments, function(_, arg) {
               var index;
-              while ((index = jQuery2.inArray(arg, list, index)) > -1) {
+              while ((index = jQuery3.inArray(arg, list, index)) > -1) {
                 list.splice(index, 1);
                 if (index <= firingIndex) {
                   firingIndex--;
@@ -1986,7 +1986,7 @@ var require_jquery = __commonJS({
             return this;
           },
           has: function(fn) {
-            return fn ? jQuery2.inArray(fn, list) > -1 : list.length > 0;
+            return fn ? jQuery3.inArray(fn, list) > -1 : list.length > 0;
           },
           empty: function() {
             if (list) {
@@ -2053,29 +2053,29 @@ var require_jquery = __commonJS({
           reject.apply(void 0, [value2]);
         }
       }
-      jQuery2.extend({
+      jQuery3.extend({
         Deferred: function(func) {
           var tuples = [
             [
               "notify",
               "progress",
-              jQuery2.Callbacks("memory"),
-              jQuery2.Callbacks("memory"),
+              jQuery3.Callbacks("memory"),
+              jQuery3.Callbacks("memory"),
               2
             ],
             [
               "resolve",
               "done",
-              jQuery2.Callbacks("once memory"),
-              jQuery2.Callbacks("once memory"),
+              jQuery3.Callbacks("once memory"),
+              jQuery3.Callbacks("once memory"),
               0,
               "resolved"
             ],
             [
               "reject",
               "fail",
-              jQuery2.Callbacks("once memory"),
-              jQuery2.Callbacks("once memory"),
+              jQuery3.Callbacks("once memory"),
+              jQuery3.Callbacks("once memory"),
               1,
               "rejected"
             ]
@@ -2092,8 +2092,8 @@ var require_jquery = __commonJS({
             },
             pipe: function() {
               var fns = arguments;
-              return jQuery2.Deferred(function(newDefer) {
-                jQuery2.each(tuples, function(_i, tuple) {
+              return jQuery3.Deferred(function(newDefer) {
+                jQuery3.each(tuples, function(_i, tuple) {
                   var fn = isFunction(fns[tuple[4]]) && fns[tuple[4]];
                   deferred[tuple[1]](function() {
                     var returned = fn && fn.apply(this, arguments);
@@ -2139,8 +2139,8 @@ var require_jquery = __commonJS({
                     try {
                       mightThrow();
                     } catch (e) {
-                      if (jQuery2.Deferred.exceptionHook) {
-                        jQuery2.Deferred.exceptionHook(e, process2.stackTrace);
+                      if (jQuery3.Deferred.exceptionHook) {
+                        jQuery3.Deferred.exceptionHook(e, process2.stackTrace);
                       }
                       if (depth + 1 >= maxDepth) {
                         if (handler !== Thrower) {
@@ -2154,24 +2154,24 @@ var require_jquery = __commonJS({
                   if (depth) {
                     process2();
                   } else {
-                    if (jQuery2.Deferred.getStackHook) {
-                      process2.stackTrace = jQuery2.Deferred.getStackHook();
+                    if (jQuery3.Deferred.getStackHook) {
+                      process2.stackTrace = jQuery3.Deferred.getStackHook();
                     }
                     window2.setTimeout(process2);
                   }
                 };
               }
-              return jQuery2.Deferred(function(newDefer) {
+              return jQuery3.Deferred(function(newDefer) {
                 tuples[0][3].add(resolve(0, newDefer, isFunction(onProgress) ? onProgress : Identity, newDefer.notifyWith));
                 tuples[1][3].add(resolve(0, newDefer, isFunction(onFulfilled) ? onFulfilled : Identity));
                 tuples[2][3].add(resolve(0, newDefer, isFunction(onRejected) ? onRejected : Thrower));
               }).promise();
             },
             promise: function(obj) {
-              return obj != null ? jQuery2.extend(obj, promise) : promise;
+              return obj != null ? jQuery3.extend(obj, promise) : promise;
             }
           }, deferred = {};
-          jQuery2.each(tuples, function(i, tuple) {
+          jQuery3.each(tuples, function(i, tuple) {
             var list = tuple[2], stateString = tuple[5];
             promise[tuple[1]] = list.add;
             if (stateString) {
@@ -2193,7 +2193,7 @@ var require_jquery = __commonJS({
           return deferred;
         },
         when: function(singleValue) {
-          var remaining = arguments.length, i = remaining, resolveContexts = Array(i), resolveValues = slice.call(arguments), primary = jQuery2.Deferred(), updateFunc = function(i2) {
+          var remaining = arguments.length, i = remaining, resolveContexts = Array(i), resolveValues = slice.call(arguments), primary = jQuery3.Deferred(), updateFunc = function(i2) {
             return function(value) {
               resolveContexts[i2] = this;
               resolveValues[i2] = arguments.length > 1 ? slice.call(arguments) : value;
@@ -2215,45 +2215,45 @@ var require_jquery = __commonJS({
         }
       });
       var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
-      jQuery2.Deferred.exceptionHook = function(error, stack) {
+      jQuery3.Deferred.exceptionHook = function(error, stack) {
         if (window2.console && window2.console.warn && error && rerrorNames.test(error.name)) {
           window2.console.warn("jQuery.Deferred exception: " + error.message, error.stack, stack);
         }
       };
-      jQuery2.readyException = function(error) {
+      jQuery3.readyException = function(error) {
         window2.setTimeout(function() {
           throw error;
         });
       };
-      var readyList = jQuery2.Deferred();
-      jQuery2.fn.ready = function(fn) {
+      var readyList = jQuery3.Deferred();
+      jQuery3.fn.ready = function(fn) {
         readyList.then(fn).catch(function(error) {
-          jQuery2.readyException(error);
+          jQuery3.readyException(error);
         });
         return this;
       };
-      jQuery2.extend({
+      jQuery3.extend({
         isReady: false,
         readyWait: 1,
         ready: function(wait) {
-          if (wait === true ? --jQuery2.readyWait : jQuery2.isReady) {
+          if (wait === true ? --jQuery3.readyWait : jQuery3.isReady) {
             return;
           }
-          jQuery2.isReady = true;
-          if (wait !== true && --jQuery2.readyWait > 0) {
+          jQuery3.isReady = true;
+          if (wait !== true && --jQuery3.readyWait > 0) {
             return;
           }
-          readyList.resolveWith(document2, [jQuery2]);
+          readyList.resolveWith(document2, [jQuery3]);
         }
       });
-      jQuery2.ready.then = readyList.then;
+      jQuery3.ready.then = readyList.then;
       function completed() {
         document2.removeEventListener("DOMContentLoaded", completed);
         window2.removeEventListener("load", completed);
-        jQuery2.ready();
+        jQuery3.ready();
       }
       if (document2.readyState === "complete" || document2.readyState !== "loading" && !document2.documentElement.doScroll) {
-        window2.setTimeout(jQuery2.ready);
+        window2.setTimeout(jQuery3.ready);
       } else {
         document2.addEventListener("DOMContentLoaded", completed);
         window2.addEventListener("load", completed);
@@ -2277,7 +2277,7 @@ var require_jquery = __commonJS({
             } else {
               bulk = fn;
               fn = function(elem, _key, value2) {
-                return bulk.call(jQuery2(elem), value2);
+                return bulk.call(jQuery3(elem), value2);
               };
             }
           }
@@ -2306,7 +2306,7 @@ var require_jquery = __commonJS({
         return owner.nodeType === 1 || owner.nodeType === 9 || !+owner.nodeType;
       };
       function Data() {
-        this.expando = jQuery2.expando + Data.uid++;
+        this.expando = jQuery3.expando + Data.uid++;
       }
       Data.uid = 1;
       Data.prototype = {
@@ -2365,7 +2365,7 @@ var require_jquery = __commonJS({
               delete cache[key[i]];
             }
           }
-          if (key === void 0 || jQuery2.isEmptyObject(cache)) {
+          if (key === void 0 || jQuery3.isEmptyObject(cache)) {
             if (owner.nodeType) {
               owner[this.expando] = void 0;
             } else {
@@ -2375,7 +2375,7 @@ var require_jquery = __commonJS({
         },
         hasData: function(owner) {
           var cache = owner[this.expando];
-          return cache !== void 0 && !jQuery2.isEmptyObject(cache);
+          return cache !== void 0 && !jQuery3.isEmptyObject(cache);
         }
       };
       var dataPriv = new Data();
@@ -2416,7 +2416,7 @@ var require_jquery = __commonJS({
         }
         return data;
       }
-      jQuery2.extend({
+      jQuery3.extend({
         hasData: function(elem) {
           return dataUser.hasData(elem) || dataPriv.hasData(elem);
         },
@@ -2433,7 +2433,7 @@ var require_jquery = __commonJS({
           dataPriv.remove(elem, name);
         }
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         data: function(key, value) {
           var i, name, data, elem = this[0], attrs = elem && elem.attributes;
           if (key === void 0) {
@@ -2484,7 +2484,7 @@ var require_jquery = __commonJS({
           });
         }
       });
-      jQuery2.extend({
+      jQuery3.extend({
         queue: function(elem, type, data) {
           var queue;
           if (elem) {
@@ -2492,7 +2492,7 @@ var require_jquery = __commonJS({
             queue = dataPriv.get(elem, type);
             if (data) {
               if (!queue || Array.isArray(data)) {
-                queue = dataPriv.access(elem, type, jQuery2.makeArray(data));
+                queue = dataPriv.access(elem, type, jQuery3.makeArray(data));
               } else {
                 queue.push(data);
               }
@@ -2502,8 +2502,8 @@ var require_jquery = __commonJS({
         },
         dequeue: function(elem, type) {
           type = type || "fx";
-          var queue = jQuery2.queue(elem, type), startLength = queue.length, fn = queue.shift(), hooks = jQuery2._queueHooks(elem, type), next = function() {
-            jQuery2.dequeue(elem, type);
+          var queue = jQuery3.queue(elem, type), startLength = queue.length, fn = queue.shift(), hooks = jQuery3._queueHooks(elem, type), next = function() {
+            jQuery3.dequeue(elem, type);
           };
           if (fn === "inprogress") {
             fn = queue.shift();
@@ -2523,13 +2523,13 @@ var require_jquery = __commonJS({
         _queueHooks: function(elem, type) {
           var key = type + "queueHooks";
           return dataPriv.get(elem, key) || dataPriv.access(elem, key, {
-            empty: jQuery2.Callbacks("once memory").add(function() {
+            empty: jQuery3.Callbacks("once memory").add(function() {
               dataPriv.remove(elem, [type + "queue", key]);
             })
           });
         }
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         queue: function(type, data) {
           var setter = 2;
           if (typeof type !== "string") {
@@ -2538,26 +2538,26 @@ var require_jquery = __commonJS({
             setter--;
           }
           if (arguments.length < setter) {
-            return jQuery2.queue(this[0], type);
+            return jQuery3.queue(this[0], type);
           }
           return data === void 0 ? this : this.each(function() {
-            var queue = jQuery2.queue(this, type, data);
-            jQuery2._queueHooks(this, type);
+            var queue = jQuery3.queue(this, type, data);
+            jQuery3._queueHooks(this, type);
             if (type === "fx" && queue[0] !== "inprogress") {
-              jQuery2.dequeue(this, type);
+              jQuery3.dequeue(this, type);
             }
           });
         },
         dequeue: function(type) {
           return this.each(function() {
-            jQuery2.dequeue(this, type);
+            jQuery3.dequeue(this, type);
           });
         },
         clearQueue: function(type) {
           return this.queue(type || "fx", []);
         },
         promise: function(type, obj) {
-          var tmp, count = 1, defer = jQuery2.Deferred(), elements = this, i = this.length, resolve = function() {
+          var tmp, count = 1, defer = jQuery3.Deferred(), elements = this, i = this.length, resolve = function() {
             if (!--count) {
               defer.resolveWith(elements, [elements]);
             }
@@ -2583,36 +2583,36 @@ var require_jquery = __commonJS({
       var cssExpand = ["Top", "Right", "Bottom", "Left"];
       var documentElement = document2.documentElement;
       var isAttached = function(elem) {
-        return jQuery2.contains(elem.ownerDocument, elem);
+        return jQuery3.contains(elem.ownerDocument, elem);
       }, composed = { composed: true };
       if (documentElement.getRootNode) {
         isAttached = function(elem) {
-          return jQuery2.contains(elem.ownerDocument, elem) || elem.getRootNode(composed) === elem.ownerDocument;
+          return jQuery3.contains(elem.ownerDocument, elem) || elem.getRootNode(composed) === elem.ownerDocument;
         };
       }
       var isHiddenWithinTree = function(elem, el) {
         elem = el || elem;
-        return elem.style.display === "none" || elem.style.display === "" && isAttached(elem) && jQuery2.css(elem, "display") === "none";
+        return elem.style.display === "none" || elem.style.display === "" && isAttached(elem) && jQuery3.css(elem, "display") === "none";
       };
       function adjustCSS(elem, prop, valueParts, tween) {
         var adjusted, scale, maxIterations = 20, currentValue = tween ? function() {
           return tween.cur();
         } : function() {
-          return jQuery2.css(elem, prop, "");
-        }, initial = currentValue(), unit = valueParts && valueParts[3] || (jQuery2.cssNumber[prop] ? "" : "px"), initialInUnit = elem.nodeType && (jQuery2.cssNumber[prop] || unit !== "px" && +initial) && rcssNum.exec(jQuery2.css(elem, prop));
+          return jQuery3.css(elem, prop, "");
+        }, initial = currentValue(), unit = valueParts && valueParts[3] || (jQuery3.cssNumber[prop] ? "" : "px"), initialInUnit = elem.nodeType && (jQuery3.cssNumber[prop] || unit !== "px" && +initial) && rcssNum.exec(jQuery3.css(elem, prop));
         if (initialInUnit && initialInUnit[3] !== unit) {
           initial = initial / 2;
           unit = unit || initialInUnit[3];
           initialInUnit = +initial || 1;
           while (maxIterations--) {
-            jQuery2.style(elem, prop, initialInUnit + unit);
+            jQuery3.style(elem, prop, initialInUnit + unit);
             if ((1 - scale) * (1 - (scale = currentValue() / initial || 0.5)) <= 0) {
               maxIterations = 0;
             }
             initialInUnit = initialInUnit / scale;
           }
           initialInUnit = initialInUnit * 2;
-          jQuery2.style(elem, prop, initialInUnit + unit);
+          jQuery3.style(elem, prop, initialInUnit + unit);
           valueParts = valueParts || [];
         }
         if (valueParts) {
@@ -2633,7 +2633,7 @@ var require_jquery = __commonJS({
           return display;
         }
         temp = doc.body.appendChild(doc.createElement(nodeName2));
-        display = jQuery2.css(temp, "display");
+        display = jQuery3.css(temp, "display");
         temp.parentNode.removeChild(temp);
         if (display === "none") {
           display = "block";
@@ -2673,7 +2673,7 @@ var require_jquery = __commonJS({
         }
         return elements;
       }
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         show: function() {
           return showHide(this, true);
         },
@@ -2686,9 +2686,9 @@ var require_jquery = __commonJS({
           }
           return this.each(function() {
             if (isHiddenWithinTree(this)) {
-              jQuery2(this).show();
+              jQuery3(this).show();
             } else {
-              jQuery2(this).hide();
+              jQuery3(this).hide();
             }
           });
         }
@@ -2730,7 +2730,7 @@ var require_jquery = __commonJS({
           ret = [];
         }
         if (tag === void 0 || tag && nodeName(context, tag)) {
-          return jQuery2.merge([context], ret);
+          return jQuery3.merge([context], ret);
         }
         return ret;
       }
@@ -2747,19 +2747,19 @@ var require_jquery = __commonJS({
           elem = elems[i];
           if (elem || elem === 0) {
             if (toType(elem) === "object") {
-              jQuery2.merge(nodes, elem.nodeType ? [elem] : elem);
+              jQuery3.merge(nodes, elem.nodeType ? [elem] : elem);
             } else if (!rhtml.test(elem)) {
               nodes.push(context.createTextNode(elem));
             } else {
               tmp = tmp || fragment.appendChild(context.createElement("div"));
               tag = (rtagName.exec(elem) || ["", ""])[1].toLowerCase();
               wrap = wrapMap[tag] || wrapMap._default;
-              tmp.innerHTML = wrap[1] + jQuery2.htmlPrefilter(elem) + wrap[2];
+              tmp.innerHTML = wrap[1] + jQuery3.htmlPrefilter(elem) + wrap[2];
               j = wrap[0];
               while (j--) {
                 tmp = tmp.lastChild;
               }
-              jQuery2.merge(nodes, tmp.childNodes);
+              jQuery3.merge(nodes, tmp.childNodes);
               tmp = fragment.firstChild;
               tmp.textContent = "";
             }
@@ -2768,7 +2768,7 @@ var require_jquery = __commonJS({
         fragment.textContent = "";
         i = 0;
         while (elem = nodes[i++]) {
-          if (selection && jQuery2.inArray(elem, selection) > -1) {
+          if (selection && jQuery3.inArray(elem, selection) > -1) {
             if (ignored) {
               ignored.push(elem);
             }
@@ -2839,16 +2839,16 @@ var require_jquery = __commonJS({
         if (one === 1) {
           origFn = fn;
           fn = function(event) {
-            jQuery2().off(event);
+            jQuery3().off(event);
             return origFn.apply(this, arguments);
           };
-          fn.guid = origFn.guid || (origFn.guid = jQuery2.guid++);
+          fn.guid = origFn.guid || (origFn.guid = jQuery3.guid++);
         }
         return elem.each(function() {
-          jQuery2.event.add(this, types, fn, data, selector);
+          jQuery3.event.add(this, types, fn, data, selector);
         });
       }
-      jQuery2.event = {
+      jQuery3.event = {
         global: {},
         add: function(elem, types, handler, data, selector) {
           var handleObjIn, eventHandle, tmp, events, t, handleObj, special, handlers, type, namespaces, origType, elemData = dataPriv.get(elem);
@@ -2861,17 +2861,17 @@ var require_jquery = __commonJS({
             selector = handleObjIn.selector;
           }
           if (selector) {
-            jQuery2.find.matchesSelector(documentElement, selector);
+            jQuery3.find.matchesSelector(documentElement, selector);
           }
           if (!handler.guid) {
-            handler.guid = jQuery2.guid++;
+            handler.guid = jQuery3.guid++;
           }
           if (!(events = elemData.events)) {
             events = elemData.events = /* @__PURE__ */ Object.create(null);
           }
           if (!(eventHandle = elemData.handle)) {
             eventHandle = elemData.handle = function(e) {
-              return typeof jQuery2 !== "undefined" && jQuery2.event.triggered !== e.type ? jQuery2.event.dispatch.apply(elem, arguments) : void 0;
+              return typeof jQuery3 !== "undefined" && jQuery3.event.triggered !== e.type ? jQuery3.event.dispatch.apply(elem, arguments) : void 0;
             };
           }
           types = (types || "").match(rnothtmlwhite) || [""];
@@ -2883,17 +2883,17 @@ var require_jquery = __commonJS({
             if (!type) {
               continue;
             }
-            special = jQuery2.event.special[type] || {};
+            special = jQuery3.event.special[type] || {};
             type = (selector ? special.delegateType : special.bindType) || type;
-            special = jQuery2.event.special[type] || {};
-            handleObj = jQuery2.extend({
+            special = jQuery3.event.special[type] || {};
+            handleObj = jQuery3.extend({
               type,
               origType,
               data,
               handler,
               guid: handler.guid,
               selector,
-              needsContext: selector && jQuery2.expr.match.needsContext.test(selector),
+              needsContext: selector && jQuery3.expr.match.needsContext.test(selector),
               namespace: namespaces.join(".")
             }, handleObjIn);
             if (!(handlers = events[type])) {
@@ -2916,7 +2916,7 @@ var require_jquery = __commonJS({
             } else {
               handlers.push(handleObj);
             }
-            jQuery2.event.global[type] = true;
+            jQuery3.event.global[type] = true;
           }
         },
         remove: function(elem, types, handler, selector, mappedTypes) {
@@ -2932,11 +2932,11 @@ var require_jquery = __commonJS({
             namespaces = (tmp[2] || "").split(".").sort();
             if (!type) {
               for (type in events) {
-                jQuery2.event.remove(elem, type + types[t], handler, selector, true);
+                jQuery3.event.remove(elem, type + types[t], handler, selector, true);
               }
               continue;
             }
-            special = jQuery2.event.special[type] || {};
+            special = jQuery3.event.special[type] || {};
             type = (selector ? special.delegateType : special.bindType) || type;
             handlers = events[type] || [];
             tmp = tmp[2] && new RegExp("(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)");
@@ -2955,17 +2955,17 @@ var require_jquery = __commonJS({
             }
             if (origCount && !handlers.length) {
               if (!special.teardown || special.teardown.call(elem, namespaces, elemData.handle) === false) {
-                jQuery2.removeEvent(elem, type, elemData.handle);
+                jQuery3.removeEvent(elem, type, elemData.handle);
               }
               delete events[type];
             }
           }
-          if (jQuery2.isEmptyObject(events)) {
+          if (jQuery3.isEmptyObject(events)) {
             dataPriv.remove(elem, "handle events");
           }
         },
         dispatch: function(nativeEvent) {
-          var i, j, ret, matched, handleObj, handlerQueue, args = new Array(arguments.length), event = jQuery2.event.fix(nativeEvent), handlers = (dataPriv.get(this, "events") || /* @__PURE__ */ Object.create(null))[event.type] || [], special = jQuery2.event.special[event.type] || {};
+          var i, j, ret, matched, handleObj, handlerQueue, args = new Array(arguments.length), event = jQuery3.event.fix(nativeEvent), handlers = (dataPriv.get(this, "events") || /* @__PURE__ */ Object.create(null))[event.type] || [], special = jQuery3.event.special[event.type] || {};
           args[0] = event;
           for (i = 1; i < arguments.length; i++) {
             args[i] = arguments[i];
@@ -2974,7 +2974,7 @@ var require_jquery = __commonJS({
           if (special.preDispatch && special.preDispatch.call(this, event) === false) {
             return;
           }
-          handlerQueue = jQuery2.event.handlers.call(this, event, handlers);
+          handlerQueue = jQuery3.event.handlers.call(this, event, handlers);
           i = 0;
           while ((matched = handlerQueue[i++]) && !event.isPropagationStopped()) {
             event.currentTarget = matched.elem;
@@ -2983,7 +2983,7 @@ var require_jquery = __commonJS({
               if (!event.rnamespace || handleObj.namespace === false || event.rnamespace.test(handleObj.namespace)) {
                 event.handleObj = handleObj;
                 event.data = handleObj.data;
-                ret = ((jQuery2.event.special[handleObj.origType] || {}).handle || handleObj.handler).apply(matched.elem, args);
+                ret = ((jQuery3.event.special[handleObj.origType] || {}).handle || handleObj.handler).apply(matched.elem, args);
                 if (ret !== void 0) {
                   if ((event.result = ret) === false) {
                     event.preventDefault();
@@ -3009,7 +3009,7 @@ var require_jquery = __commonJS({
                   handleObj = handlers[i];
                   sel = handleObj.selector + " ";
                   if (matchedSelectors[sel] === void 0) {
-                    matchedSelectors[sel] = handleObj.needsContext ? jQuery2(sel, this).index(cur) > -1 : jQuery2.find(sel, this, null, [cur]).length;
+                    matchedSelectors[sel] = handleObj.needsContext ? jQuery3(sel, this).index(cur) > -1 : jQuery3.find(sel, this, null, [cur]).length;
                   }
                   if (matchedSelectors[sel]) {
                     matchedHandlers.push(handleObj);
@@ -3028,7 +3028,7 @@ var require_jquery = __commonJS({
           return handlerQueue;
         },
         addProp: function(name, hook) {
-          Object.defineProperty(jQuery2.Event.prototype, name, {
+          Object.defineProperty(jQuery3.Event.prototype, name, {
             enumerable: true,
             configurable: true,
             get: isFunction(hook) ? function() {
@@ -3051,7 +3051,7 @@ var require_jquery = __commonJS({
           });
         },
         fix: function(originalEvent) {
-          return originalEvent[jQuery2.expando] ? originalEvent : new jQuery2.Event(originalEvent);
+          return originalEvent[jQuery3.expando] ? originalEvent : new jQuery3.Event(originalEvent);
         },
         special: {
           load: {
@@ -3089,12 +3089,12 @@ var require_jquery = __commonJS({
       function leverageNative(el, type, expectSync2) {
         if (!expectSync2) {
           if (dataPriv.get(el, type) === void 0) {
-            jQuery2.event.add(el, type, returnTrue);
+            jQuery3.event.add(el, type, returnTrue);
           }
           return;
         }
         dataPriv.set(el, type, false);
-        jQuery2.event.add(el, type, {
+        jQuery3.event.add(el, type, {
           namespace: false,
           handler: function(event) {
             var notAsync, result, saved = dataPriv.get(this, type);
@@ -3115,26 +3115,26 @@ var require_jquery = __commonJS({
                   event.preventDefault();
                   return result && result.value;
                 }
-              } else if ((jQuery2.event.special[type] || {}).delegateType) {
+              } else if ((jQuery3.event.special[type] || {}).delegateType) {
                 event.stopPropagation();
               }
             } else if (saved.length) {
               dataPriv.set(this, type, {
-                value: jQuery2.event.trigger(jQuery2.extend(saved[0], jQuery2.Event.prototype), saved.slice(1), this)
+                value: jQuery3.event.trigger(jQuery3.extend(saved[0], jQuery3.Event.prototype), saved.slice(1), this)
               });
               event.stopImmediatePropagation();
             }
           }
         });
       }
-      jQuery2.removeEvent = function(elem, type, handle) {
+      jQuery3.removeEvent = function(elem, type, handle) {
         if (elem.removeEventListener) {
           elem.removeEventListener(type, handle);
         }
       };
-      jQuery2.Event = function(src, props) {
-        if (!(this instanceof jQuery2.Event)) {
-          return new jQuery2.Event(src, props);
+      jQuery3.Event = function(src, props) {
+        if (!(this instanceof jQuery3.Event)) {
+          return new jQuery3.Event(src, props);
         }
         if (src && src.type) {
           this.originalEvent = src;
@@ -3147,13 +3147,13 @@ var require_jquery = __commonJS({
           this.type = src;
         }
         if (props) {
-          jQuery2.extend(this, props);
+          jQuery3.extend(this, props);
         }
         this.timeStamp = src && src.timeStamp || Date.now();
-        this[jQuery2.expando] = true;
+        this[jQuery3.expando] = true;
       };
-      jQuery2.Event.prototype = {
-        constructor: jQuery2.Event,
+      jQuery3.Event.prototype = {
+        constructor: jQuery3.Event,
         isDefaultPrevented: returnFalse,
         isPropagationStopped: returnFalse,
         isImmediatePropagationStopped: returnFalse,
@@ -3181,7 +3181,7 @@ var require_jquery = __commonJS({
           this.stopPropagation();
         }
       };
-      jQuery2.each({
+      jQuery3.each({
         altKey: true,
         bubbles: true,
         cancelable: true,
@@ -3213,9 +3213,9 @@ var require_jquery = __commonJS({
         toElement: true,
         touches: true,
         which: true
-      }, jQuery2.event.addProp);
-      jQuery2.each({ focus: "focusin", blur: "focusout" }, function(type, delegateType) {
-        jQuery2.event.special[type] = {
+      }, jQuery3.event.addProp);
+      jQuery3.each({ focus: "focusin", blur: "focusout" }, function(type, delegateType) {
+        jQuery3.event.special[type] = {
           setup: function() {
             leverageNative(this, type, expectSync);
             return false;
@@ -3230,18 +3230,18 @@ var require_jquery = __commonJS({
           delegateType
         };
       });
-      jQuery2.each({
+      jQuery3.each({
         mouseenter: "mouseover",
         mouseleave: "mouseout",
         pointerenter: "pointerover",
         pointerleave: "pointerout"
       }, function(orig, fix) {
-        jQuery2.event.special[orig] = {
+        jQuery3.event.special[orig] = {
           delegateType: fix,
           bindType: fix,
           handle: function(event) {
             var ret, target = this, related = event.relatedTarget, handleObj = event.handleObj;
-            if (!related || related !== target && !jQuery2.contains(target, related)) {
+            if (!related || related !== target && !jQuery3.contains(target, related)) {
               event.type = handleObj.origType;
               ret = handleObj.handler.apply(this, arguments);
               event.type = fix;
@@ -3250,7 +3250,7 @@ var require_jquery = __commonJS({
           }
         };
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         on: function(types, selector, data, fn) {
           return on(this, types, selector, data, fn);
         },
@@ -3261,7 +3261,7 @@ var require_jquery = __commonJS({
           var handleObj, type;
           if (types && types.preventDefault && types.handleObj) {
             handleObj = types.handleObj;
-            jQuery2(types.delegateTarget).off(handleObj.namespace ? handleObj.origType + "." + handleObj.namespace : handleObj.origType, handleObj.selector, handleObj.handler);
+            jQuery3(types.delegateTarget).off(handleObj.namespace ? handleObj.origType + "." + handleObj.namespace : handleObj.origType, handleObj.selector, handleObj.handler);
             return this;
           }
           if (typeof types === "object") {
@@ -3278,14 +3278,14 @@ var require_jquery = __commonJS({
             fn = returnFalse;
           }
           return this.each(function() {
-            jQuery2.event.remove(this, types, fn, selector);
+            jQuery3.event.remove(this, types, fn, selector);
           });
         }
       });
       var rnoInnerhtml = /<script|<style|<link/i, rchecked = /checked\s*(?:[^=]|=\s*.checked.)/i, rcleanScript = /^\s*<!\[CDATA\[|\]\]>\s*$/g;
       function manipulationTarget(elem, content) {
         if (nodeName(elem, "table") && nodeName(content.nodeType !== 11 ? content : content.firstChild, "tr")) {
-          return jQuery2(elem).children("tbody")[0] || elem;
+          return jQuery3(elem).children("tbody")[0] || elem;
         }
         return elem;
       }
@@ -3313,14 +3313,14 @@ var require_jquery = __commonJS({
             dataPriv.remove(dest, "handle events");
             for (type in events) {
               for (i = 0, l = events[type].length; i < l; i++) {
-                jQuery2.event.add(dest, type, events[type][i]);
+                jQuery3.event.add(dest, type, events[type][i]);
               }
             }
           }
         }
         if (dataUser.hasData(src)) {
           udataOld = dataUser.access(src);
-          udataCur = jQuery2.extend({}, udataOld);
+          udataCur = jQuery3.extend({}, udataOld);
           dataUser.set(dest, udataCur);
         }
       }
@@ -3351,27 +3351,27 @@ var require_jquery = __commonJS({
             fragment = first;
           }
           if (first || ignored) {
-            scripts = jQuery2.map(getAll(fragment, "script"), disableScript);
+            scripts = jQuery3.map(getAll(fragment, "script"), disableScript);
             hasScripts = scripts.length;
             for (; i < l; i++) {
               node = fragment;
               if (i !== iNoClone) {
-                node = jQuery2.clone(node, true, true);
+                node = jQuery3.clone(node, true, true);
                 if (hasScripts) {
-                  jQuery2.merge(scripts, getAll(node, "script"));
+                  jQuery3.merge(scripts, getAll(node, "script"));
                 }
               }
               callback.call(collection[i], node, i);
             }
             if (hasScripts) {
               doc = scripts[scripts.length - 1].ownerDocument;
-              jQuery2.map(scripts, restoreScript);
+              jQuery3.map(scripts, restoreScript);
               for (i = 0; i < hasScripts; i++) {
                 node = scripts[i];
-                if (rscriptType.test(node.type || "") && !dataPriv.access(node, "globalEval") && jQuery2.contains(doc, node)) {
+                if (rscriptType.test(node.type || "") && !dataPriv.access(node, "globalEval") && jQuery3.contains(doc, node)) {
                   if (node.src && (node.type || "").toLowerCase() !== "module") {
-                    if (jQuery2._evalUrl && !node.noModule) {
-                      jQuery2._evalUrl(node.src, {
+                    if (jQuery3._evalUrl && !node.noModule) {
+                      jQuery3._evalUrl(node.src, {
                         nonce: node.nonce || node.getAttribute("nonce")
                       }, doc);
                     }
@@ -3386,10 +3386,10 @@ var require_jquery = __commonJS({
         return collection;
       }
       function remove(elem, selector, keepData) {
-        var node, nodes = selector ? jQuery2.filter(selector, elem) : elem, i = 0;
+        var node, nodes = selector ? jQuery3.filter(selector, elem) : elem, i = 0;
         for (; (node = nodes[i]) != null; i++) {
           if (!keepData && node.nodeType === 1) {
-            jQuery2.cleanData(getAll(node));
+            jQuery3.cleanData(getAll(node));
           }
           if (node.parentNode) {
             if (keepData && isAttached(node)) {
@@ -3400,13 +3400,13 @@ var require_jquery = __commonJS({
         }
         return elem;
       }
-      jQuery2.extend({
+      jQuery3.extend({
         htmlPrefilter: function(html) {
           return html;
         },
         clone: function(elem, dataAndEvents, deepDataAndEvents) {
           var i, l, srcElements, destElements, clone = elem.cloneNode(true), inPage = isAttached(elem);
-          if (!support.noCloneChecked && (elem.nodeType === 1 || elem.nodeType === 11) && !jQuery2.isXMLDoc(elem)) {
+          if (!support.noCloneChecked && (elem.nodeType === 1 || elem.nodeType === 11) && !jQuery3.isXMLDoc(elem)) {
             destElements = getAll(clone);
             srcElements = getAll(elem);
             for (i = 0, l = srcElements.length; i < l; i++) {
@@ -3431,16 +3431,16 @@ var require_jquery = __commonJS({
           return clone;
         },
         cleanData: function(elems) {
-          var data, elem, type, special = jQuery2.event.special, i = 0;
+          var data, elem, type, special = jQuery3.event.special, i = 0;
           for (; (elem = elems[i]) !== void 0; i++) {
             if (acceptData(elem)) {
               if (data = elem[dataPriv.expando]) {
                 if (data.events) {
                   for (type in data.events) {
                     if (special[type]) {
-                      jQuery2.event.remove(elem, type);
+                      jQuery3.event.remove(elem, type);
                     } else {
-                      jQuery2.removeEvent(elem, type, data.handle);
+                      jQuery3.removeEvent(elem, type, data.handle);
                     }
                   }
                 }
@@ -3453,7 +3453,7 @@ var require_jquery = __commonJS({
           }
         }
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         detach: function(selector) {
           return remove(this, selector, true);
         },
@@ -3462,7 +3462,7 @@ var require_jquery = __commonJS({
         },
         text: function(value) {
           return access(this, function(value2) {
-            return value2 === void 0 ? jQuery2.text(this) : this.empty().each(function() {
+            return value2 === void 0 ? jQuery3.text(this) : this.empty().each(function() {
               if (this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9) {
                 this.textContent = value2;
               }
@@ -3503,7 +3503,7 @@ var require_jquery = __commonJS({
           var elem, i = 0;
           for (; (elem = this[i]) != null; i++) {
             if (elem.nodeType === 1) {
-              jQuery2.cleanData(getAll(elem, false));
+              jQuery3.cleanData(getAll(elem, false));
               elem.textContent = "";
             }
           }
@@ -3513,7 +3513,7 @@ var require_jquery = __commonJS({
           dataAndEvents = dataAndEvents == null ? false : dataAndEvents;
           deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;
           return this.map(function() {
-            return jQuery2.clone(this, dataAndEvents, deepDataAndEvents);
+            return jQuery3.clone(this, dataAndEvents, deepDataAndEvents);
           });
         },
         html: function(value) {
@@ -3523,12 +3523,12 @@ var require_jquery = __commonJS({
               return elem.innerHTML;
             }
             if (typeof value2 === "string" && !rnoInnerhtml.test(value2) && !wrapMap[(rtagName.exec(value2) || ["", ""])[1].toLowerCase()]) {
-              value2 = jQuery2.htmlPrefilter(value2);
+              value2 = jQuery3.htmlPrefilter(value2);
               try {
                 for (; i < l; i++) {
                   elem = this[i] || {};
                   if (elem.nodeType === 1) {
-                    jQuery2.cleanData(getAll(elem, false));
+                    jQuery3.cleanData(getAll(elem, false));
                     elem.innerHTML = value2;
                   }
                 }
@@ -3545,8 +3545,8 @@ var require_jquery = __commonJS({
           var ignored = [];
           return domManip(this, arguments, function(elem) {
             var parent = this.parentNode;
-            if (jQuery2.inArray(this, ignored) < 0) {
-              jQuery2.cleanData(getAll(this));
+            if (jQuery3.inArray(this, ignored) < 0) {
+              jQuery3.cleanData(getAll(this));
               if (parent) {
                 parent.replaceChild(elem, this);
               }
@@ -3554,18 +3554,18 @@ var require_jquery = __commonJS({
           }, ignored);
         }
       });
-      jQuery2.each({
+      jQuery3.each({
         appendTo: "append",
         prependTo: "prepend",
         insertBefore: "before",
         insertAfter: "after",
         replaceAll: "replaceWith"
       }, function(name, original) {
-        jQuery2.fn[name] = function(selector) {
-          var elems, ret = [], insert = jQuery2(selector), last = insert.length - 1, i = 0;
+        jQuery3.fn[name] = function(selector) {
+          var elems, ret = [], insert = jQuery3(selector), last = insert.length - 1, i = 0;
           for (; i <= last; i++) {
             elems = i === last ? this : this.clone(true);
-            jQuery2(insert[i])[original](elems);
+            jQuery3(insert[i])[original](elems);
             push.apply(ret, elems.get());
           }
           return this.pushStack(ret);
@@ -3624,7 +3624,7 @@ var require_jquery = __commonJS({
         div.style.backgroundClip = "content-box";
         div.cloneNode(true).style.backgroundClip = "";
         support.clearCloneStyle = div.style.backgroundClip === "content-box";
-        jQuery2.extend(support, {
+        jQuery3.extend(support, {
           boxSizingReliable: function() {
             computeStyleTests();
             return boxSizingReliableVal;
@@ -3674,7 +3674,7 @@ var require_jquery = __commonJS({
             ret = ret.replace(rtrimCSS, "$1");
           }
           if (ret === "" && !isAttached(elem)) {
-            ret = jQuery2.style(elem, name);
+            ret = jQuery3.style(elem, name);
           }
           if (!support.pixelBoxStyles() && rnumnonpx.test(ret) && rboxStyle.test(name)) {
             width = style.width;
@@ -3711,7 +3711,7 @@ var require_jquery = __commonJS({
         }
       }
       function finalPropName(name) {
-        var final = jQuery2.cssProps[name] || vendorProps[name];
+        var final = jQuery3.cssProps[name] || vendorProps[name];
         if (final) {
           return final;
         }
@@ -3735,21 +3735,21 @@ var require_jquery = __commonJS({
         }
         for (; i < 4; i += 2) {
           if (box === "margin") {
-            delta += jQuery2.css(elem, box + cssExpand[i], true, styles);
+            delta += jQuery3.css(elem, box + cssExpand[i], true, styles);
           }
           if (!isBorderBox) {
-            delta += jQuery2.css(elem, "padding" + cssExpand[i], true, styles);
+            delta += jQuery3.css(elem, "padding" + cssExpand[i], true, styles);
             if (box !== "padding") {
-              delta += jQuery2.css(elem, "border" + cssExpand[i] + "Width", true, styles);
+              delta += jQuery3.css(elem, "border" + cssExpand[i] + "Width", true, styles);
             } else {
-              extra += jQuery2.css(elem, "border" + cssExpand[i] + "Width", true, styles);
+              extra += jQuery3.css(elem, "border" + cssExpand[i] + "Width", true, styles);
             }
           } else {
             if (box === "content") {
-              delta -= jQuery2.css(elem, "padding" + cssExpand[i], true, styles);
+              delta -= jQuery3.css(elem, "padding" + cssExpand[i], true, styles);
             }
             if (box !== "margin") {
-              delta -= jQuery2.css(elem, "border" + cssExpand[i] + "Width", true, styles);
+              delta -= jQuery3.css(elem, "border" + cssExpand[i] + "Width", true, styles);
             }
           }
         }
@@ -3759,15 +3759,15 @@ var require_jquery = __commonJS({
         return delta;
       }
       function getWidthOrHeight(elem, dimension, extra) {
-        var styles = getStyles(elem), boxSizingNeeded = !support.boxSizingReliable() || extra, isBorderBox = boxSizingNeeded && jQuery2.css(elem, "boxSizing", false, styles) === "border-box", valueIsBorderBox = isBorderBox, val = curCSS(elem, dimension, styles), offsetProp = "offset" + dimension[0].toUpperCase() + dimension.slice(1);
+        var styles = getStyles(elem), boxSizingNeeded = !support.boxSizingReliable() || extra, isBorderBox = boxSizingNeeded && jQuery3.css(elem, "boxSizing", false, styles) === "border-box", valueIsBorderBox = isBorderBox, val = curCSS(elem, dimension, styles), offsetProp = "offset" + dimension[0].toUpperCase() + dimension.slice(1);
         if (rnumnonpx.test(val)) {
           if (!extra) {
             return val;
           }
           val = "auto";
         }
-        if ((!support.boxSizingReliable() && isBorderBox || !support.reliableTrDimensions() && nodeName(elem, "tr") || val === "auto" || !parseFloat(val) && jQuery2.css(elem, "display", false, styles) === "inline") && elem.getClientRects().length) {
-          isBorderBox = jQuery2.css(elem, "boxSizing", false, styles) === "border-box";
+        if ((!support.boxSizingReliable() && isBorderBox || !support.reliableTrDimensions() && nodeName(elem, "tr") || val === "auto" || !parseFloat(val) && jQuery3.css(elem, "display", false, styles) === "inline") && elem.getClientRects().length) {
+          isBorderBox = jQuery3.css(elem, "boxSizing", false, styles) === "border-box";
           valueIsBorderBox = offsetProp in elem;
           if (valueIsBorderBox) {
             val = elem[offsetProp];
@@ -3776,7 +3776,7 @@ var require_jquery = __commonJS({
         val = parseFloat(val) || 0;
         return val + boxModelAdjustment(elem, dimension, extra || (isBorderBox ? "border" : "content"), valueIsBorderBox, styles, val) + "px";
       }
-      jQuery2.extend({
+      jQuery3.extend({
         cssHooks: {
           opacity: {
             get: function(elem, computed) {
@@ -3818,7 +3818,7 @@ var require_jquery = __commonJS({
           if (!isCustomProp) {
             name = finalPropName(origName);
           }
-          hooks = jQuery2.cssHooks[name] || jQuery2.cssHooks[origName];
+          hooks = jQuery3.cssHooks[name] || jQuery3.cssHooks[origName];
           if (value !== void 0) {
             type = typeof value;
             if (type === "string" && (ret = rcssNum.exec(value)) && ret[1]) {
@@ -3829,7 +3829,7 @@ var require_jquery = __commonJS({
               return;
             }
             if (type === "number" && !isCustomProp) {
-              value += ret && ret[3] || (jQuery2.cssNumber[origName] ? "" : "px");
+              value += ret && ret[3] || (jQuery3.cssNumber[origName] ? "" : "px");
             }
             if (!support.clearCloneStyle && value === "" && name.indexOf("background") === 0) {
               style[name] = "inherit";
@@ -3853,7 +3853,7 @@ var require_jquery = __commonJS({
           if (!isCustomProp) {
             name = finalPropName(origName);
           }
-          hooks = jQuery2.cssHooks[name] || jQuery2.cssHooks[origName];
+          hooks = jQuery3.cssHooks[name] || jQuery3.cssHooks[origName];
           if (hooks && "get" in hooks) {
             val = hooks.get(elem, true, extra);
           }
@@ -3870,41 +3870,41 @@ var require_jquery = __commonJS({
           return val;
         }
       });
-      jQuery2.each(["height", "width"], function(_i, dimension) {
-        jQuery2.cssHooks[dimension] = {
+      jQuery3.each(["height", "width"], function(_i, dimension) {
+        jQuery3.cssHooks[dimension] = {
           get: function(elem, computed, extra) {
             if (computed) {
-              return rdisplayswap.test(jQuery2.css(elem, "display")) && (!elem.getClientRects().length || !elem.getBoundingClientRect().width) ? swap(elem, cssShow, function() {
+              return rdisplayswap.test(jQuery3.css(elem, "display")) && (!elem.getClientRects().length || !elem.getBoundingClientRect().width) ? swap(elem, cssShow, function() {
                 return getWidthOrHeight(elem, dimension, extra);
               }) : getWidthOrHeight(elem, dimension, extra);
             }
           },
           set: function(elem, value, extra) {
-            var matches, styles = getStyles(elem), scrollboxSizeBuggy = !support.scrollboxSize() && styles.position === "absolute", boxSizingNeeded = scrollboxSizeBuggy || extra, isBorderBox = boxSizingNeeded && jQuery2.css(elem, "boxSizing", false, styles) === "border-box", subtract = extra ? boxModelAdjustment(elem, dimension, extra, isBorderBox, styles) : 0;
+            var matches, styles = getStyles(elem), scrollboxSizeBuggy = !support.scrollboxSize() && styles.position === "absolute", boxSizingNeeded = scrollboxSizeBuggy || extra, isBorderBox = boxSizingNeeded && jQuery3.css(elem, "boxSizing", false, styles) === "border-box", subtract = extra ? boxModelAdjustment(elem, dimension, extra, isBorderBox, styles) : 0;
             if (isBorderBox && scrollboxSizeBuggy) {
               subtract -= Math.ceil(elem["offset" + dimension[0].toUpperCase() + dimension.slice(1)] - parseFloat(styles[dimension]) - boxModelAdjustment(elem, dimension, "border", false, styles) - 0.5);
             }
             if (subtract && (matches = rcssNum.exec(value)) && (matches[3] || "px") !== "px") {
               elem.style[dimension] = value;
-              value = jQuery2.css(elem, dimension);
+              value = jQuery3.css(elem, dimension);
             }
             return setPositiveNumber(elem, value, subtract);
           }
         };
       });
-      jQuery2.cssHooks.marginLeft = addGetHookIf(support.reliableMarginLeft, function(elem, computed) {
+      jQuery3.cssHooks.marginLeft = addGetHookIf(support.reliableMarginLeft, function(elem, computed) {
         if (computed) {
           return (parseFloat(curCSS(elem, "marginLeft")) || elem.getBoundingClientRect().left - swap(elem, { marginLeft: 0 }, function() {
             return elem.getBoundingClientRect().left;
           })) + "px";
         }
       });
-      jQuery2.each({
+      jQuery3.each({
         margin: "",
         padding: "",
         border: "Width"
       }, function(prefix, suffix) {
-        jQuery2.cssHooks[prefix + suffix] = {
+        jQuery3.cssHooks[prefix + suffix] = {
           expand: function(value) {
             var i = 0, expanded = {}, parts = typeof value === "string" ? value.split(" ") : [value];
             for (; i < 4; i++) {
@@ -3914,10 +3914,10 @@ var require_jquery = __commonJS({
           }
         };
         if (prefix !== "margin") {
-          jQuery2.cssHooks[prefix + suffix].set = setPositiveNumber;
+          jQuery3.cssHooks[prefix + suffix].set = setPositiveNumber;
         }
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         css: function(name, value) {
           return access(this, function(elem, name2, value2) {
             var styles, len, map = {}, i = 0;
@@ -3925,28 +3925,28 @@ var require_jquery = __commonJS({
               styles = getStyles(elem);
               len = name2.length;
               for (; i < len; i++) {
-                map[name2[i]] = jQuery2.css(elem, name2[i], false, styles);
+                map[name2[i]] = jQuery3.css(elem, name2[i], false, styles);
               }
               return map;
             }
-            return value2 !== void 0 ? jQuery2.style(elem, name2, value2) : jQuery2.css(elem, name2);
+            return value2 !== void 0 ? jQuery3.style(elem, name2, value2) : jQuery3.css(elem, name2);
           }, name, value, arguments.length > 1);
         }
       });
       function Tween(elem, options, prop, end, easing) {
         return new Tween.prototype.init(elem, options, prop, end, easing);
       }
-      jQuery2.Tween = Tween;
+      jQuery3.Tween = Tween;
       Tween.prototype = {
         constructor: Tween,
         init: function(elem, options, prop, end, easing, unit) {
           this.elem = elem;
           this.prop = prop;
-          this.easing = easing || jQuery2.easing._default;
+          this.easing = easing || jQuery3.easing._default;
           this.options = options;
           this.start = this.now = this.cur();
           this.end = end;
-          this.unit = unit || (jQuery2.cssNumber[prop] ? "" : "px");
+          this.unit = unit || (jQuery3.cssNumber[prop] ? "" : "px");
         },
         cur: function() {
           var hooks = Tween.propHooks[this.prop];
@@ -3955,7 +3955,7 @@ var require_jquery = __commonJS({
         run: function(percent) {
           var eased, hooks = Tween.propHooks[this.prop];
           if (this.options.duration) {
-            this.pos = eased = jQuery2.easing[this.easing](percent, this.options.duration * percent, 0, 1, this.options.duration);
+            this.pos = eased = jQuery3.easing[this.easing](percent, this.options.duration * percent, 0, 1, this.options.duration);
           } else {
             this.pos = eased = percent;
           }
@@ -3979,14 +3979,14 @@ var require_jquery = __commonJS({
             if (tween.elem.nodeType !== 1 || tween.elem[tween.prop] != null && tween.elem.style[tween.prop] == null) {
               return tween.elem[tween.prop];
             }
-            result = jQuery2.css(tween.elem, tween.prop, "");
+            result = jQuery3.css(tween.elem, tween.prop, "");
             return !result || result === "auto" ? 0 : result;
           },
           set: function(tween) {
-            if (jQuery2.fx.step[tween.prop]) {
-              jQuery2.fx.step[tween.prop](tween);
-            } else if (tween.elem.nodeType === 1 && (jQuery2.cssHooks[tween.prop] || tween.elem.style[finalPropName(tween.prop)] != null)) {
-              jQuery2.style(tween.elem, tween.prop, tween.now + tween.unit);
+            if (jQuery3.fx.step[tween.prop]) {
+              jQuery3.fx.step[tween.prop](tween);
+            } else if (tween.elem.nodeType === 1 && (jQuery3.cssHooks[tween.prop] || tween.elem.style[finalPropName(tween.prop)] != null)) {
+              jQuery3.style(tween.elem, tween.prop, tween.now + tween.unit);
             } else {
               tween.elem[tween.prop] = tween.now;
             }
@@ -4000,7 +4000,7 @@ var require_jquery = __commonJS({
           }
         }
       };
-      jQuery2.easing = {
+      jQuery3.easing = {
         linear: function(p) {
           return p;
         },
@@ -4009,17 +4009,17 @@ var require_jquery = __commonJS({
         },
         _default: "swing"
       };
-      jQuery2.fx = Tween.prototype.init;
-      jQuery2.fx.step = {};
+      jQuery3.fx = Tween.prototype.init;
+      jQuery3.fx.step = {};
       var fxNow, inProgress, rfxtypes = /^(?:toggle|show|hide)$/, rrun = /queueHooks$/;
       function schedule() {
         if (inProgress) {
           if (document2.hidden === false && window2.requestAnimationFrame) {
             window2.requestAnimationFrame(schedule);
           } else {
-            window2.setTimeout(schedule, jQuery2.fx.interval);
+            window2.setTimeout(schedule, jQuery3.fx.interval);
           }
-          jQuery2.fx.tick();
+          jQuery3.fx.tick();
         }
       }
       function createFxNow() {
@@ -4051,7 +4051,7 @@ var require_jquery = __commonJS({
       function defaultPrefilter(elem, props, opts) {
         var prop, value, toggle, hooks, oldfire, propTween, restoreDisplay, display, isBox = "width" in props || "height" in props, anim = this, orig = {}, style = elem.style, hidden = elem.nodeType && isHiddenWithinTree(elem), dataShow = dataPriv.get(elem, "fxshow");
         if (!opts.queue) {
-          hooks = jQuery2._queueHooks(elem, "fx");
+          hooks = jQuery3._queueHooks(elem, "fx");
           if (hooks.unqueued == null) {
             hooks.unqueued = 0;
             oldfire = hooks.empty.fire;
@@ -4065,7 +4065,7 @@ var require_jquery = __commonJS({
           anim.always(function() {
             anim.always(function() {
               hooks.unqueued--;
-              if (!jQuery2.queue(elem, "fx").length) {
+              if (!jQuery3.queue(elem, "fx").length) {
                 hooks.empty.fire();
               }
             });
@@ -4083,11 +4083,11 @@ var require_jquery = __commonJS({
                 continue;
               }
             }
-            orig[prop] = dataShow && dataShow[prop] || jQuery2.style(elem, prop);
+            orig[prop] = dataShow && dataShow[prop] || jQuery3.style(elem, prop);
           }
         }
-        propTween = !jQuery2.isEmptyObject(props);
-        if (!propTween && jQuery2.isEmptyObject(orig)) {
+        propTween = !jQuery3.isEmptyObject(props);
+        if (!propTween && jQuery3.isEmptyObject(orig)) {
           return;
         }
         if (isBox && elem.nodeType === 1) {
@@ -4096,19 +4096,19 @@ var require_jquery = __commonJS({
           if (restoreDisplay == null) {
             restoreDisplay = dataPriv.get(elem, "display");
           }
-          display = jQuery2.css(elem, "display");
+          display = jQuery3.css(elem, "display");
           if (display === "none") {
             if (restoreDisplay) {
               display = restoreDisplay;
             } else {
               showHide([elem], true);
               restoreDisplay = elem.style.display || restoreDisplay;
-              display = jQuery2.css(elem, "display");
+              display = jQuery3.css(elem, "display");
               showHide([elem]);
             }
           }
           if (display === "inline" || display === "inline-block" && restoreDisplay != null) {
-            if (jQuery2.css(elem, "float") === "none") {
+            if (jQuery3.css(elem, "float") === "none") {
               if (!propTween) {
                 anim.done(function() {
                   style.display = restoreDisplay;
@@ -4152,7 +4152,7 @@ var require_jquery = __commonJS({
               }
               dataPriv.remove(elem, "fxshow");
               for (prop in orig) {
-                jQuery2.style(elem, prop, orig[prop]);
+                jQuery3.style(elem, prop, orig[prop]);
               }
             });
           }
@@ -4180,7 +4180,7 @@ var require_jquery = __commonJS({
             props[name] = value;
             delete props[index];
           }
-          hooks = jQuery2.cssHooks[name];
+          hooks = jQuery3.cssHooks[name];
           if (hooks && "expand" in hooks) {
             value = hooks.expand(value);
             delete props[name];
@@ -4196,7 +4196,7 @@ var require_jquery = __commonJS({
         }
       }
       function Animation(elem, properties, options) {
-        var result, stopped, index = 0, length = Animation.prefilters.length, deferred = jQuery2.Deferred().always(function() {
+        var result, stopped, index = 0, length = Animation.prefilters.length, deferred = jQuery3.Deferred().always(function() {
           delete tick.elem;
         }), tick = function() {
           if (stopped) {
@@ -4217,10 +4217,10 @@ var require_jquery = __commonJS({
           return false;
         }, animation = deferred.promise({
           elem,
-          props: jQuery2.extend({}, properties),
-          opts: jQuery2.extend(true, {
+          props: jQuery3.extend({}, properties),
+          opts: jQuery3.extend(true, {
             specialEasing: {},
-            easing: jQuery2.easing._default
+            easing: jQuery3.easing._default
           }, options),
           originalProperties: properties,
           originalOptions: options,
@@ -4228,7 +4228,7 @@ var require_jquery = __commonJS({
           duration: options.duration,
           tweens: [],
           createTween: function(prop, end) {
-            var tween = jQuery2.Tween(elem, animation.opts, prop, end, animation.opts.specialEasing[prop] || animation.opts.easing);
+            var tween = jQuery3.Tween(elem, animation.opts, prop, end, animation.opts.specialEasing[prop] || animation.opts.easing);
             animation.tweens.push(tween);
             return tween;
           },
@@ -4255,24 +4255,24 @@ var require_jquery = __commonJS({
           result = Animation.prefilters[index].call(animation, elem, props, animation.opts);
           if (result) {
             if (isFunction(result.stop)) {
-              jQuery2._queueHooks(animation.elem, animation.opts.queue).stop = result.stop.bind(result);
+              jQuery3._queueHooks(animation.elem, animation.opts.queue).stop = result.stop.bind(result);
             }
             return result;
           }
         }
-        jQuery2.map(props, createTween, animation);
+        jQuery3.map(props, createTween, animation);
         if (isFunction(animation.opts.start)) {
           animation.opts.start.call(elem, animation);
         }
         animation.progress(animation.opts.progress).done(animation.opts.done, animation.opts.complete).fail(animation.opts.fail).always(animation.opts.always);
-        jQuery2.fx.timer(jQuery2.extend(tick, {
+        jQuery3.fx.timer(jQuery3.extend(tick, {
           elem,
           anim: animation,
           queue: animation.opts.queue
         }));
         return animation;
       }
-      jQuery2.Animation = jQuery2.extend(Animation, {
+      jQuery3.Animation = jQuery3.extend(Animation, {
         tweeners: {
           "*": [function(prop, value) {
             var tween = this.createTween(prop, value);
@@ -4303,20 +4303,20 @@ var require_jquery = __commonJS({
           }
         }
       });
-      jQuery2.speed = function(speed, easing, fn) {
-        var opt = speed && typeof speed === "object" ? jQuery2.extend({}, speed) : {
+      jQuery3.speed = function(speed, easing, fn) {
+        var opt = speed && typeof speed === "object" ? jQuery3.extend({}, speed) : {
           complete: fn || !fn && easing || isFunction(speed) && speed,
           duration: speed,
           easing: fn && easing || easing && !isFunction(easing) && easing
         };
-        if (jQuery2.fx.off) {
+        if (jQuery3.fx.off) {
           opt.duration = 0;
         } else {
           if (typeof opt.duration !== "number") {
-            if (opt.duration in jQuery2.fx.speeds) {
-              opt.duration = jQuery2.fx.speeds[opt.duration];
+            if (opt.duration in jQuery3.fx.speeds) {
+              opt.duration = jQuery3.fx.speeds[opt.duration];
             } else {
-              opt.duration = jQuery2.fx.speeds._default;
+              opt.duration = jQuery3.fx.speeds._default;
             }
           }
         }
@@ -4329,18 +4329,18 @@ var require_jquery = __commonJS({
             opt.old.call(this);
           }
           if (opt.queue) {
-            jQuery2.dequeue(this, opt.queue);
+            jQuery3.dequeue(this, opt.queue);
           }
         };
         return opt;
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         fadeTo: function(speed, to, easing, callback) {
           return this.filter(isHiddenWithinTree).css("opacity", 0).show().end().animate({ opacity: to }, speed, easing, callback);
         },
         animate: function(prop, speed, easing, callback) {
-          var empty = jQuery2.isEmptyObject(prop), optall = jQuery2.speed(speed, easing, callback), doAnimation = function() {
-            var anim = Animation(this, jQuery2.extend({}, prop), optall);
+          var empty = jQuery3.isEmptyObject(prop), optall = jQuery3.speed(speed, easing, callback), doAnimation = function() {
+            var anim = Animation(this, jQuery3.extend({}, prop), optall);
             if (empty || dataPriv.get(this, "finish")) {
               anim.stop(true);
             }
@@ -4363,7 +4363,7 @@ var require_jquery = __commonJS({
             this.queue(type || "fx", []);
           }
           return this.each(function() {
-            var dequeue = true, index = type != null && type + "queueHooks", timers = jQuery2.timers, data = dataPriv.get(this);
+            var dequeue = true, index = type != null && type + "queueHooks", timers = jQuery3.timers, data = dataPriv.get(this);
             if (index) {
               if (data[index] && data[index].stop) {
                 stopQueue(data[index]);
@@ -4383,7 +4383,7 @@ var require_jquery = __commonJS({
               }
             }
             if (dequeue || !gotoEnd) {
-              jQuery2.dequeue(this, type);
+              jQuery3.dequeue(this, type);
             }
           });
         },
@@ -4392,9 +4392,9 @@ var require_jquery = __commonJS({
             type = type || "fx";
           }
           return this.each(function() {
-            var index, data = dataPriv.get(this), queue = data[type + "queue"], hooks = data[type + "queueHooks"], timers = jQuery2.timers, length = queue ? queue.length : 0;
+            var index, data = dataPriv.get(this), queue = data[type + "queue"], hooks = data[type + "queueHooks"], timers = jQuery3.timers, length = queue ? queue.length : 0;
             data.finish = true;
-            jQuery2.queue(this, type, []);
+            jQuery3.queue(this, type, []);
             if (hooks && hooks.stop) {
               hooks.stop.call(this, true);
             }
@@ -4413,13 +4413,13 @@ var require_jquery = __commonJS({
           });
         }
       });
-      jQuery2.each(["toggle", "show", "hide"], function(_i, name) {
-        var cssFn = jQuery2.fn[name];
-        jQuery2.fn[name] = function(speed, easing, callback) {
+      jQuery3.each(["toggle", "show", "hide"], function(_i, name) {
+        var cssFn = jQuery3.fn[name];
+        jQuery3.fn[name] = function(speed, easing, callback) {
           return speed == null || typeof speed === "boolean" ? cssFn.apply(this, arguments) : this.animate(genFx(name, true), speed, easing, callback);
         };
       });
-      jQuery2.each({
+      jQuery3.each({
         slideDown: genFx("show"),
         slideUp: genFx("hide"),
         slideToggle: genFx("toggle"),
@@ -4427,13 +4427,13 @@ var require_jquery = __commonJS({
         fadeOut: { opacity: "hide" },
         fadeToggle: { opacity: "toggle" }
       }, function(name, props) {
-        jQuery2.fn[name] = function(speed, easing, callback) {
+        jQuery3.fn[name] = function(speed, easing, callback) {
           return this.animate(props, speed, easing, callback);
         };
       });
-      jQuery2.timers = [];
-      jQuery2.fx.tick = function() {
-        var timer, i = 0, timers = jQuery2.timers;
+      jQuery3.timers = [];
+      jQuery3.fx.tick = function() {
+        var timer, i = 0, timers = jQuery3.timers;
         fxNow = Date.now();
         for (; i < timers.length; i++) {
           timer = timers[i];
@@ -4442,32 +4442,32 @@ var require_jquery = __commonJS({
           }
         }
         if (!timers.length) {
-          jQuery2.fx.stop();
+          jQuery3.fx.stop();
         }
         fxNow = void 0;
       };
-      jQuery2.fx.timer = function(timer) {
-        jQuery2.timers.push(timer);
-        jQuery2.fx.start();
+      jQuery3.fx.timer = function(timer) {
+        jQuery3.timers.push(timer);
+        jQuery3.fx.start();
       };
-      jQuery2.fx.interval = 13;
-      jQuery2.fx.start = function() {
+      jQuery3.fx.interval = 13;
+      jQuery3.fx.start = function() {
         if (inProgress) {
           return;
         }
         inProgress = true;
         schedule();
       };
-      jQuery2.fx.stop = function() {
+      jQuery3.fx.stop = function() {
         inProgress = null;
       };
-      jQuery2.fx.speeds = {
+      jQuery3.fx.speeds = {
         slow: 600,
         fast: 200,
         _default: 400
       };
-      jQuery2.fn.delay = function(time, type) {
-        time = jQuery2.fx ? jQuery2.fx.speeds[time] || time : time;
+      jQuery3.fn.delay = function(time, type) {
+        time = jQuery3.fx ? jQuery3.fx.speeds[time] || time : time;
         type = type || "fx";
         return this.queue(type, function(next, hooks) {
           var timeout = window2.setTimeout(next, time);
@@ -4486,32 +4486,32 @@ var require_jquery = __commonJS({
         input.type = "radio";
         support.radioValue = input.value === "t";
       })();
-      var boolHook, attrHandle = jQuery2.expr.attrHandle;
-      jQuery2.fn.extend({
+      var boolHook, attrHandle = jQuery3.expr.attrHandle;
+      jQuery3.fn.extend({
         attr: function(name, value) {
-          return access(this, jQuery2.attr, name, value, arguments.length > 1);
+          return access(this, jQuery3.attr, name, value, arguments.length > 1);
         },
         removeAttr: function(name) {
           return this.each(function() {
-            jQuery2.removeAttr(this, name);
+            jQuery3.removeAttr(this, name);
           });
         }
       });
-      jQuery2.extend({
+      jQuery3.extend({
         attr: function(elem, name, value) {
           var ret, hooks, nType = elem.nodeType;
           if (nType === 3 || nType === 8 || nType === 2) {
             return;
           }
           if (typeof elem.getAttribute === "undefined") {
-            return jQuery2.prop(elem, name, value);
+            return jQuery3.prop(elem, name, value);
           }
-          if (nType !== 1 || !jQuery2.isXMLDoc(elem)) {
-            hooks = jQuery2.attrHooks[name.toLowerCase()] || (jQuery2.expr.match.bool.test(name) ? boolHook : void 0);
+          if (nType !== 1 || !jQuery3.isXMLDoc(elem)) {
+            hooks = jQuery3.attrHooks[name.toLowerCase()] || (jQuery3.expr.match.bool.test(name) ? boolHook : void 0);
           }
           if (value !== void 0) {
             if (value === null) {
-              jQuery2.removeAttr(elem, name);
+              jQuery3.removeAttr(elem, name);
               return;
             }
             if (hooks && "set" in hooks && (ret = hooks.set(elem, value, name)) !== void 0) {
@@ -4523,7 +4523,7 @@ var require_jquery = __commonJS({
           if (hooks && "get" in hooks && (ret = hooks.get(elem, name)) !== null) {
             return ret;
           }
-          ret = jQuery2.find.attr(elem, name);
+          ret = jQuery3.find.attr(elem, name);
           return ret == null ? void 0 : ret;
         },
         attrHooks: {
@@ -4552,15 +4552,15 @@ var require_jquery = __commonJS({
       boolHook = {
         set: function(elem, value, name) {
           if (value === false) {
-            jQuery2.removeAttr(elem, name);
+            jQuery3.removeAttr(elem, name);
           } else {
             elem.setAttribute(name, name);
           }
           return name;
         }
       };
-      jQuery2.each(jQuery2.expr.match.bool.source.match(/\w+/g), function(_i, name) {
-        var getter = attrHandle[name] || jQuery2.find.attr;
+      jQuery3.each(jQuery3.expr.match.bool.source.match(/\w+/g), function(_i, name) {
+        var getter = attrHandle[name] || jQuery3.find.attr;
         attrHandle[name] = function(elem, name2, isXML) {
           var ret, handle, lowercaseName = name2.toLowerCase();
           if (!isXML) {
@@ -4573,25 +4573,25 @@ var require_jquery = __commonJS({
         };
       });
       var rfocusable = /^(?:input|select|textarea|button)$/i, rclickable = /^(?:a|area)$/i;
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         prop: function(name, value) {
-          return access(this, jQuery2.prop, name, value, arguments.length > 1);
+          return access(this, jQuery3.prop, name, value, arguments.length > 1);
         },
         removeProp: function(name) {
           return this.each(function() {
-            delete this[jQuery2.propFix[name] || name];
+            delete this[jQuery3.propFix[name] || name];
           });
         }
       });
-      jQuery2.extend({
+      jQuery3.extend({
         prop: function(elem, name, value) {
           var ret, hooks, nType = elem.nodeType;
           if (nType === 3 || nType === 8 || nType === 2) {
             return;
           }
-          if (nType !== 1 || !jQuery2.isXMLDoc(elem)) {
-            name = jQuery2.propFix[name] || name;
-            hooks = jQuery2.propHooks[name];
+          if (nType !== 1 || !jQuery3.isXMLDoc(elem)) {
+            name = jQuery3.propFix[name] || name;
+            hooks = jQuery3.propHooks[name];
           }
           if (value !== void 0) {
             if (hooks && "set" in hooks && (ret = hooks.set(elem, value, name)) !== void 0) {
@@ -4607,7 +4607,7 @@ var require_jquery = __commonJS({
         propHooks: {
           tabIndex: {
             get: function(elem) {
-              var tabindex = jQuery2.find.attr(elem, "tabindex");
+              var tabindex = jQuery3.find.attr(elem, "tabindex");
               if (tabindex) {
                 return parseInt(tabindex, 10);
               }
@@ -4624,7 +4624,7 @@ var require_jquery = __commonJS({
         }
       });
       if (!support.optSelected) {
-        jQuery2.propHooks.selected = {
+        jQuery3.propHooks.selected = {
           get: function(elem) {
             var parent = elem.parentNode;
             if (parent && parent.parentNode) {
@@ -4643,7 +4643,7 @@ var require_jquery = __commonJS({
           }
         };
       }
-      jQuery2.each([
+      jQuery3.each([
         "tabIndex",
         "readOnly",
         "maxLength",
@@ -4655,7 +4655,7 @@ var require_jquery = __commonJS({
         "frameBorder",
         "contentEditable"
       ], function() {
-        jQuery2.propFix[this.toLowerCase()] = this;
+        jQuery3.propFix[this.toLowerCase()] = this;
       });
       function stripAndCollapse(value) {
         var tokens = value.match(rnothtmlwhite) || [];
@@ -4673,12 +4673,12 @@ var require_jquery = __commonJS({
         }
         return [];
       }
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         addClass: function(value) {
           var classNames, cur, curValue, className, i, finalValue;
           if (isFunction(value)) {
             return this.each(function(j) {
-              jQuery2(this).addClass(value.call(this, j, getClass(this)));
+              jQuery3(this).addClass(value.call(this, j, getClass(this)));
             });
           }
           classNames = classesToArray(value);
@@ -4706,7 +4706,7 @@ var require_jquery = __commonJS({
           var classNames, cur, curValue, className, i, finalValue;
           if (isFunction(value)) {
             return this.each(function(j) {
-              jQuery2(this).removeClass(value.call(this, j, getClass(this)));
+              jQuery3(this).removeClass(value.call(this, j, getClass(this)));
             });
           }
           if (!arguments.length) {
@@ -4737,7 +4737,7 @@ var require_jquery = __commonJS({
           var classNames, className, i, self, type = typeof value, isValidValue = type === "string" || Array.isArray(value);
           if (isFunction(value)) {
             return this.each(function(i2) {
-              jQuery2(this).toggleClass(value.call(this, i2, getClass(this), stateVal), stateVal);
+              jQuery3(this).toggleClass(value.call(this, i2, getClass(this), stateVal), stateVal);
             });
           }
           if (typeof stateVal === "boolean" && isValidValue) {
@@ -4746,7 +4746,7 @@ var require_jquery = __commonJS({
           classNames = classesToArray(value);
           return this.each(function() {
             if (isValidValue) {
-              self = jQuery2(this);
+              self = jQuery3(this);
               for (i = 0; i < classNames.length; i++) {
                 className = classNames[i];
                 if (self.hasClass(className)) {
@@ -4778,12 +4778,12 @@ var require_jquery = __commonJS({
         }
       });
       var rreturn = /\r/g;
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         val: function(value) {
           var hooks, ret, valueIsFunction, elem = this[0];
           if (!arguments.length) {
             if (elem) {
-              hooks = jQuery2.valHooks[elem.type] || jQuery2.valHooks[elem.nodeName.toLowerCase()];
+              hooks = jQuery3.valHooks[elem.type] || jQuery3.valHooks[elem.nodeName.toLowerCase()];
               if (hooks && "get" in hooks && (ret = hooks.get(elem, "value")) !== void 0) {
                 return ret;
               }
@@ -4802,7 +4802,7 @@ var require_jquery = __commonJS({
               return;
             }
             if (valueIsFunction) {
-              val = value.call(this, i, jQuery2(this).val());
+              val = value.call(this, i, jQuery3(this).val());
             } else {
               val = value;
             }
@@ -4811,23 +4811,23 @@ var require_jquery = __commonJS({
             } else if (typeof val === "number") {
               val += "";
             } else if (Array.isArray(val)) {
-              val = jQuery2.map(val, function(value2) {
+              val = jQuery3.map(val, function(value2) {
                 return value2 == null ? "" : value2 + "";
               });
             }
-            hooks = jQuery2.valHooks[this.type] || jQuery2.valHooks[this.nodeName.toLowerCase()];
+            hooks = jQuery3.valHooks[this.type] || jQuery3.valHooks[this.nodeName.toLowerCase()];
             if (!hooks || !("set" in hooks) || hooks.set(this, val, "value") === void 0) {
               this.value = val;
             }
           });
         }
       });
-      jQuery2.extend({
+      jQuery3.extend({
         valHooks: {
           option: {
             get: function(elem) {
-              var val = jQuery2.find.attr(elem, "value");
-              return val != null ? val : stripAndCollapse(jQuery2.text(elem));
+              var val = jQuery3.find.attr(elem, "value");
+              return val != null ? val : stripAndCollapse(jQuery3.text(elem));
             }
           },
           select: {
@@ -4841,7 +4841,7 @@ var require_jquery = __commonJS({
               for (; i < max; i++) {
                 option = options[i];
                 if ((option.selected || i === index) && !option.disabled && (!option.parentNode.disabled || !nodeName(option.parentNode, "optgroup"))) {
-                  value = jQuery2(option).val();
+                  value = jQuery3(option).val();
                   if (one) {
                     return value;
                   }
@@ -4851,10 +4851,10 @@ var require_jquery = __commonJS({
               return values;
             },
             set: function(elem, value) {
-              var optionSet, option, options = elem.options, values = jQuery2.makeArray(value), i = options.length;
+              var optionSet, option, options = elem.options, values = jQuery3.makeArray(value), i = options.length;
               while (i--) {
                 option = options[i];
-                if (option.selected = jQuery2.inArray(jQuery2.valHooks.option.get(option), values) > -1) {
+                if (option.selected = jQuery3.inArray(jQuery3.valHooks.option.get(option), values) > -1) {
                   optionSet = true;
                 }
               }
@@ -4866,16 +4866,16 @@ var require_jquery = __commonJS({
           }
         }
       });
-      jQuery2.each(["radio", "checkbox"], function() {
-        jQuery2.valHooks[this] = {
+      jQuery3.each(["radio", "checkbox"], function() {
+        jQuery3.valHooks[this] = {
           set: function(elem, value) {
             if (Array.isArray(value)) {
-              return elem.checked = jQuery2.inArray(jQuery2(elem).val(), value) > -1;
+              return elem.checked = jQuery3.inArray(jQuery3(elem).val(), value) > -1;
             }
           }
         };
         if (!support.checkOn) {
-          jQuery2.valHooks[this].get = function(elem) {
+          jQuery3.valHooks[this].get = function(elem) {
             return elem.getAttribute("value") === null ? "on" : elem.value;
           };
         }
@@ -4884,14 +4884,14 @@ var require_jquery = __commonJS({
       var rfocusMorph = /^(?:focusinfocus|focusoutblur)$/, stopPropagationCallback = function(e) {
         e.stopPropagation();
       };
-      jQuery2.extend(jQuery2.event, {
+      jQuery3.extend(jQuery3.event, {
         trigger: function(event, data, elem, onlyHandlers) {
           var i, cur, tmp, bubbleType, ontype, handle, special, lastElement, eventPath = [elem || document2], type = hasOwn.call(event, "type") ? event.type : event, namespaces = hasOwn.call(event, "namespace") ? event.namespace.split(".") : [];
           cur = lastElement = tmp = elem = elem || document2;
           if (elem.nodeType === 3 || elem.nodeType === 8) {
             return;
           }
-          if (rfocusMorph.test(type + jQuery2.event.triggered)) {
+          if (rfocusMorph.test(type + jQuery3.event.triggered)) {
             return;
           }
           if (type.indexOf(".") > -1) {
@@ -4900,7 +4900,7 @@ var require_jquery = __commonJS({
             namespaces.sort();
           }
           ontype = type.indexOf(":") < 0 && "on" + type;
-          event = event[jQuery2.expando] ? event : new jQuery2.Event(type, typeof event === "object" && event);
+          event = event[jQuery3.expando] ? event : new jQuery3.Event(type, typeof event === "object" && event);
           event.isTrigger = onlyHandlers ? 2 : 3;
           event.namespace = namespaces.join(".");
           event.rnamespace = event.namespace ? new RegExp("(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)") : null;
@@ -4908,8 +4908,8 @@ var require_jquery = __commonJS({
           if (!event.target) {
             event.target = elem;
           }
-          data = data == null ? [event] : jQuery2.makeArray(data, [event]);
-          special = jQuery2.event.special[type] || {};
+          data = data == null ? [event] : jQuery3.makeArray(data, [event]);
+          special = jQuery3.event.special[type] || {};
           if (!onlyHandlers && special.trigger && special.trigger.apply(elem, data) === false) {
             return;
           }
@@ -4950,7 +4950,7 @@ var require_jquery = __commonJS({
                 if (tmp) {
                   elem[ontype] = null;
                 }
-                jQuery2.event.triggered = type;
+                jQuery3.event.triggered = type;
                 if (event.isPropagationStopped()) {
                   lastElement.addEventListener(type, stopPropagationCallback);
                 }
@@ -4958,7 +4958,7 @@ var require_jquery = __commonJS({
                 if (event.isPropagationStopped()) {
                   lastElement.removeEventListener(type, stopPropagationCallback);
                 }
-                jQuery2.event.triggered = void 0;
+                jQuery3.event.triggered = void 0;
                 if (tmp) {
                   elem[ontype] = tmp;
                 }
@@ -4968,32 +4968,32 @@ var require_jquery = __commonJS({
           return event.result;
         },
         simulate: function(type, elem, event) {
-          var e = jQuery2.extend(new jQuery2.Event(), event, {
+          var e = jQuery3.extend(new jQuery3.Event(), event, {
             type,
             isSimulated: true
           });
-          jQuery2.event.trigger(e, null, elem);
+          jQuery3.event.trigger(e, null, elem);
         }
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         trigger: function(type, data) {
           return this.each(function() {
-            jQuery2.event.trigger(type, data, this);
+            jQuery3.event.trigger(type, data, this);
           });
         },
         triggerHandler: function(type, data) {
           var elem = this[0];
           if (elem) {
-            return jQuery2.event.trigger(type, data, elem, true);
+            return jQuery3.event.trigger(type, data, elem, true);
           }
         }
       });
       if (!support.focusin) {
-        jQuery2.each({ focus: "focusin", blur: "focusout" }, function(orig, fix) {
+        jQuery3.each({ focus: "focusin", blur: "focusout" }, function(orig, fix) {
           var handler = function(event) {
-            jQuery2.event.simulate(fix, event.target, jQuery2.event.fix(event));
+            jQuery3.event.simulate(fix, event.target, jQuery3.event.fix(event));
           };
-          jQuery2.event.special[fix] = {
+          jQuery3.event.special[fix] = {
             setup: function() {
               var doc = this.ownerDocument || this.document || this, attaches = dataPriv.access(doc, fix);
               if (!attaches) {
@@ -5016,7 +5016,7 @@ var require_jquery = __commonJS({
       var location = window2.location;
       var nonce = { guid: Date.now() };
       var rquery = /\?/;
-      jQuery2.parseXML = function(data) {
+      jQuery3.parseXML = function(data) {
         var xml, parserErrorElem;
         if (!data || typeof data !== "string") {
           return null;
@@ -5027,7 +5027,7 @@ var require_jquery = __commonJS({
         }
         parserErrorElem = xml && xml.getElementsByTagName("parsererror")[0];
         if (!xml || parserErrorElem) {
-          jQuery2.error("Invalid XML: " + (parserErrorElem ? jQuery2.map(parserErrorElem.childNodes, function(el) {
+          jQuery3.error("Invalid XML: " + (parserErrorElem ? jQuery3.map(parserErrorElem.childNodes, function(el) {
             return el.textContent;
           }).join("\n") : data));
         }
@@ -5037,7 +5037,7 @@ var require_jquery = __commonJS({
       function buildParams(prefix, obj, traditional, add) {
         var name;
         if (Array.isArray(obj)) {
-          jQuery2.each(obj, function(i, v) {
+          jQuery3.each(obj, function(i, v) {
             if (traditional || rbracket.test(prefix)) {
               add(prefix, v);
             } else {
@@ -5052,7 +5052,7 @@ var require_jquery = __commonJS({
           add(prefix, obj);
         }
       }
-      jQuery2.param = function(a, traditional) {
+      jQuery3.param = function(a, traditional) {
         var prefix, s = [], add = function(key, valueOrFunction) {
           var value = isFunction(valueOrFunction) ? valueOrFunction() : valueOrFunction;
           s[s.length] = encodeURIComponent(key) + "=" + encodeURIComponent(value == null ? "" : value);
@@ -5060,8 +5060,8 @@ var require_jquery = __commonJS({
         if (a == null) {
           return "";
         }
-        if (Array.isArray(a) || a.jquery && !jQuery2.isPlainObject(a)) {
-          jQuery2.each(a, function() {
+        if (Array.isArray(a) || a.jquery && !jQuery3.isPlainObject(a)) {
+          jQuery3.each(a, function() {
             add(this.name, this.value);
           });
         } else {
@@ -5071,24 +5071,24 @@ var require_jquery = __commonJS({
         }
         return s.join("&");
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         serialize: function() {
-          return jQuery2.param(this.serializeArray());
+          return jQuery3.param(this.serializeArray());
         },
         serializeArray: function() {
           return this.map(function() {
-            var elements = jQuery2.prop(this, "elements");
-            return elements ? jQuery2.makeArray(elements) : this;
+            var elements = jQuery3.prop(this, "elements");
+            return elements ? jQuery3.makeArray(elements) : this;
           }).filter(function() {
             var type = this.type;
-            return this.name && !jQuery2(this).is(":disabled") && rsubmittable.test(this.nodeName) && !rsubmitterTypes.test(type) && (this.checked || !rcheckableType.test(type));
+            return this.name && !jQuery3(this).is(":disabled") && rsubmittable.test(this.nodeName) && !rsubmitterTypes.test(type) && (this.checked || !rcheckableType.test(type));
           }).map(function(_i, elem) {
-            var val = jQuery2(this).val();
+            var val = jQuery3(this).val();
             if (val == null) {
               return null;
             }
             if (Array.isArray(val)) {
-              return jQuery2.map(val, function(val2) {
+              return jQuery3.map(val, function(val2) {
                 return { name: elem.name, value: val2.replace(rCRLF, "\r\n") };
               });
             }
@@ -5122,7 +5122,7 @@ var require_jquery = __commonJS({
         function inspect(dataType) {
           var selected;
           inspected[dataType] = true;
-          jQuery2.each(structure[dataType] || [], function(_, prefilterOrFactory) {
+          jQuery3.each(structure[dataType] || [], function(_, prefilterOrFactory) {
             var dataTypeOrTransport = prefilterOrFactory(options, originalOptions, jqXHR);
             if (typeof dataTypeOrTransport === "string" && !seekingTransport && !inspected[dataTypeOrTransport]) {
               options.dataTypes.unshift(dataTypeOrTransport);
@@ -5137,14 +5137,14 @@ var require_jquery = __commonJS({
         return inspect(options.dataTypes[0]) || !inspected["*"] && inspect("*");
       }
       function ajaxExtend(target, src) {
-        var key, deep, flatOptions = jQuery2.ajaxSettings.flatOptions || {};
+        var key, deep, flatOptions = jQuery3.ajaxSettings.flatOptions || {};
         for (key in src) {
           if (src[key] !== void 0) {
             (flatOptions[key] ? target : deep || (deep = {}))[key] = src[key];
           }
         }
         if (deep) {
-          jQuery2.extend(true, target, deep);
+          jQuery3.extend(true, target, deep);
         }
         return target;
       }
@@ -5243,7 +5243,7 @@ var require_jquery = __commonJS({
         }
         return { state: "success", data: response };
       }
-      jQuery2.extend({
+      jQuery3.extend({
         active: 0,
         lastModified: {},
         etag: {},
@@ -5276,7 +5276,7 @@ var require_jquery = __commonJS({
             "* text": String,
             "text html": true,
             "text json": JSON.parse,
-            "text xml": jQuery2.parseXML
+            "text xml": jQuery3.parseXML
           },
           flatOptions: {
             url: true,
@@ -5284,7 +5284,7 @@ var require_jquery = __commonJS({
           }
         },
         ajaxSetup: function(target, settings) {
-          return settings ? ajaxExtend(ajaxExtend(target, jQuery2.ajaxSettings), settings) : ajaxExtend(jQuery2.ajaxSettings, target);
+          return settings ? ajaxExtend(ajaxExtend(target, jQuery3.ajaxSettings), settings) : ajaxExtend(jQuery3.ajaxSettings, target);
         },
         ajaxPrefilter: addToPrefiltersOrTransports(prefilters),
         ajaxTransport: addToPrefiltersOrTransports(transports),
@@ -5294,7 +5294,7 @@ var require_jquery = __commonJS({
             url = void 0;
           }
           options = options || {};
-          var transport, cacheURL, responseHeadersString, responseHeaders, timeoutTimer, urlAnchor, completed2, fireGlobals, i, uncached, s = jQuery2.ajaxSetup({}, options), callbackContext = s.context || s, globalEventContext = s.context && (callbackContext.nodeType || callbackContext.jquery) ? jQuery2(callbackContext) : jQuery2.event, deferred = jQuery2.Deferred(), completeDeferred = jQuery2.Callbacks("once memory"), statusCode = s.statusCode || {}, requestHeaders = {}, requestHeadersNames = {}, strAbort = "canceled", jqXHR = {
+          var transport, cacheURL, responseHeadersString, responseHeaders, timeoutTimer, urlAnchor, completed2, fireGlobals, i, uncached, s = jQuery3.ajaxSetup({}, options), callbackContext = s.context || s, globalEventContext = s.context && (callbackContext.nodeType || callbackContext.jquery) ? jQuery3(callbackContext) : jQuery3.event, deferred = jQuery3.Deferred(), completeDeferred = jQuery3.Callbacks("once memory"), statusCode = s.statusCode || {}, requestHeaders = {}, requestHeadersNames = {}, strAbort = "canceled", jqXHR = {
             readyState: 0,
             getResponseHeader: function(key) {
               var match;
@@ -5362,15 +5362,15 @@ var require_jquery = __commonJS({
             }
           }
           if (s.data && s.processData && typeof s.data !== "string") {
-            s.data = jQuery2.param(s.data, s.traditional);
+            s.data = jQuery3.param(s.data, s.traditional);
           }
           inspectPrefiltersOrTransports(prefilters, s, options, jqXHR);
           if (completed2) {
             return jqXHR;
           }
-          fireGlobals = jQuery2.event && s.global;
-          if (fireGlobals && jQuery2.active++ === 0) {
-            jQuery2.event.trigger("ajaxStart");
+          fireGlobals = jQuery3.event && s.global;
+          if (fireGlobals && jQuery3.active++ === 0) {
+            jQuery3.event.trigger("ajaxStart");
           }
           s.type = s.type.toUpperCase();
           s.hasContent = !rnoContent.test(s.type);
@@ -5390,11 +5390,11 @@ var require_jquery = __commonJS({
             s.data = s.data.replace(r20, "+");
           }
           if (s.ifModified) {
-            if (jQuery2.lastModified[cacheURL]) {
-              jqXHR.setRequestHeader("If-Modified-Since", jQuery2.lastModified[cacheURL]);
+            if (jQuery3.lastModified[cacheURL]) {
+              jqXHR.setRequestHeader("If-Modified-Since", jQuery3.lastModified[cacheURL]);
             }
-            if (jQuery2.etag[cacheURL]) {
-              jqXHR.setRequestHeader("If-None-Match", jQuery2.etag[cacheURL]);
+            if (jQuery3.etag[cacheURL]) {
+              jqXHR.setRequestHeader("If-None-Match", jQuery3.etag[cacheURL]);
             }
           }
           if (s.data && s.hasContent && s.contentType !== false || options.contentType) {
@@ -5453,7 +5453,7 @@ var require_jquery = __commonJS({
             if (responses) {
               response = ajaxHandleResponses(s, jqXHR, responses);
             }
-            if (!isSuccess && jQuery2.inArray("script", s.dataTypes) > -1 && jQuery2.inArray("json", s.dataTypes) < 0) {
+            if (!isSuccess && jQuery3.inArray("script", s.dataTypes) > -1 && jQuery3.inArray("json", s.dataTypes) < 0) {
               s.converters["text script"] = function() {
               };
             }
@@ -5462,11 +5462,11 @@ var require_jquery = __commonJS({
               if (s.ifModified) {
                 modified = jqXHR.getResponseHeader("Last-Modified");
                 if (modified) {
-                  jQuery2.lastModified[cacheURL] = modified;
+                  jQuery3.lastModified[cacheURL] = modified;
                 }
                 modified = jqXHR.getResponseHeader("etag");
                 if (modified) {
-                  jQuery2.etag[cacheURL] = modified;
+                  jQuery3.etag[cacheURL] = modified;
                 }
               }
               if (status === 204 || s.type === "HEAD") {
@@ -5503,37 +5503,37 @@ var require_jquery = __commonJS({
             completeDeferred.fireWith(callbackContext, [jqXHR, statusText]);
             if (fireGlobals) {
               globalEventContext.trigger("ajaxComplete", [jqXHR, s]);
-              if (!--jQuery2.active) {
-                jQuery2.event.trigger("ajaxStop");
+              if (!--jQuery3.active) {
+                jQuery3.event.trigger("ajaxStop");
               }
             }
           }
           return jqXHR;
         },
         getJSON: function(url, data, callback) {
-          return jQuery2.get(url, data, callback, "json");
+          return jQuery3.get(url, data, callback, "json");
         },
         getScript: function(url, callback) {
-          return jQuery2.get(url, void 0, callback, "script");
+          return jQuery3.get(url, void 0, callback, "script");
         }
       });
-      jQuery2.each(["get", "post"], function(_i, method) {
-        jQuery2[method] = function(url, data, callback, type) {
+      jQuery3.each(["get", "post"], function(_i, method) {
+        jQuery3[method] = function(url, data, callback, type) {
           if (isFunction(data)) {
             type = type || callback;
             callback = data;
             data = void 0;
           }
-          return jQuery2.ajax(jQuery2.extend({
+          return jQuery3.ajax(jQuery3.extend({
             url,
             type: method,
             dataType: type,
             data,
             success: callback
-          }, jQuery2.isPlainObject(url) && url));
+          }, jQuery3.isPlainObject(url) && url));
         };
       });
-      jQuery2.ajaxPrefilter(function(s) {
+      jQuery3.ajaxPrefilter(function(s) {
         var i;
         for (i in s.headers) {
           if (i.toLowerCase() === "content-type") {
@@ -5541,8 +5541,8 @@ var require_jquery = __commonJS({
           }
         }
       });
-      jQuery2._evalUrl = function(url, options, doc) {
-        return jQuery2.ajax({
+      jQuery3._evalUrl = function(url, options, doc) {
+        return jQuery3.ajax({
           url,
           type: "GET",
           dataType: "script",
@@ -5554,18 +5554,18 @@ var require_jquery = __commonJS({
             }
           },
           dataFilter: function(response) {
-            jQuery2.globalEval(response, options, doc);
+            jQuery3.globalEval(response, options, doc);
           }
         });
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         wrapAll: function(html) {
           var wrap;
           if (this[0]) {
             if (isFunction(html)) {
               html = html.call(this[0]);
             }
-            wrap = jQuery2(html, this[0].ownerDocument).eq(0).clone(true);
+            wrap = jQuery3(html, this[0].ownerDocument).eq(0).clone(true);
             if (this[0].parentNode) {
               wrap.insertBefore(this[0]);
             }
@@ -5582,11 +5582,11 @@ var require_jquery = __commonJS({
         wrapInner: function(html) {
           if (isFunction(html)) {
             return this.each(function(i) {
-              jQuery2(this).wrapInner(html.call(this, i));
+              jQuery3(this).wrapInner(html.call(this, i));
             });
           }
           return this.each(function() {
-            var self = jQuery2(this), contents = self.contents();
+            var self = jQuery3(this), contents = self.contents();
             if (contents.length) {
               contents.wrapAll(html);
             } else {
@@ -5597,23 +5597,23 @@ var require_jquery = __commonJS({
         wrap: function(html) {
           var htmlIsFunction = isFunction(html);
           return this.each(function(i) {
-            jQuery2(this).wrapAll(htmlIsFunction ? html.call(this, i) : html);
+            jQuery3(this).wrapAll(htmlIsFunction ? html.call(this, i) : html);
           });
         },
         unwrap: function(selector) {
           this.parent(selector).not("body").each(function() {
-            jQuery2(this).replaceWith(this.childNodes);
+            jQuery3(this).replaceWith(this.childNodes);
           });
           return this;
         }
       });
-      jQuery2.expr.pseudos.hidden = function(elem) {
-        return !jQuery2.expr.pseudos.visible(elem);
+      jQuery3.expr.pseudos.hidden = function(elem) {
+        return !jQuery3.expr.pseudos.visible(elem);
       };
-      jQuery2.expr.pseudos.visible = function(elem) {
+      jQuery3.expr.pseudos.visible = function(elem) {
         return !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
       };
-      jQuery2.ajaxSettings.xhr = function() {
+      jQuery3.ajaxSettings.xhr = function() {
         try {
           return new window2.XMLHttpRequest();
         } catch (e) {
@@ -5622,10 +5622,10 @@ var require_jquery = __commonJS({
       var xhrSuccessStatus = {
         0: 200,
         1223: 204
-      }, xhrSupported = jQuery2.ajaxSettings.xhr();
+      }, xhrSupported = jQuery3.ajaxSettings.xhr();
       support.cors = !!xhrSupported && "withCredentials" in xhrSupported;
       support.ajax = xhrSupported = !!xhrSupported;
-      jQuery2.ajaxTransport(function(options) {
+      jQuery3.ajaxTransport(function(options) {
         var callback, errorCallback;
         if (support.cors || xhrSupported && !options.crossDomain) {
           return {
@@ -5696,12 +5696,12 @@ var require_jquery = __commonJS({
           };
         }
       });
-      jQuery2.ajaxPrefilter(function(s) {
+      jQuery3.ajaxPrefilter(function(s) {
         if (s.crossDomain) {
           s.contents.script = false;
         }
       });
-      jQuery2.ajaxSetup({
+      jQuery3.ajaxSetup({
         accepts: {
           script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
         },
@@ -5710,12 +5710,12 @@ var require_jquery = __commonJS({
         },
         converters: {
           "text script": function(text) {
-            jQuery2.globalEval(text);
+            jQuery3.globalEval(text);
             return text;
           }
         }
       });
-      jQuery2.ajaxPrefilter("script", function(s) {
+      jQuery3.ajaxPrefilter("script", function(s) {
         if (s.cache === void 0) {
           s.cache = false;
         }
@@ -5723,12 +5723,12 @@ var require_jquery = __commonJS({
           s.type = "GET";
         }
       });
-      jQuery2.ajaxTransport("script", function(s) {
+      jQuery3.ajaxTransport("script", function(s) {
         if (s.crossDomain || s.scriptAttrs) {
           var script, callback;
           return {
             send: function(_, complete) {
-              script = jQuery2("<script>").attr(s.scriptAttrs || {}).prop({ charset: s.scriptCharset, src: s.url }).on("load error", callback = function(evt) {
+              script = jQuery3("<script>").attr(s.scriptAttrs || {}).prop({ charset: s.scriptCharset, src: s.url }).on("load error", callback = function(evt) {
                 script.remove();
                 callback = null;
                 if (evt) {
@@ -5746,15 +5746,15 @@ var require_jquery = __commonJS({
         }
       });
       var oldCallbacks = [], rjsonp = /(=)\?(?=&|$)|\?\?/;
-      jQuery2.ajaxSetup({
+      jQuery3.ajaxSetup({
         jsonp: "callback",
         jsonpCallback: function() {
-          var callback = oldCallbacks.pop() || jQuery2.expando + "_" + nonce.guid++;
+          var callback = oldCallbacks.pop() || jQuery3.expando + "_" + nonce.guid++;
           this[callback] = true;
           return callback;
         }
       });
-      jQuery2.ajaxPrefilter("json jsonp", function(s, originalSettings, jqXHR) {
+      jQuery3.ajaxPrefilter("json jsonp", function(s, originalSettings, jqXHR) {
         var callbackName, overwritten, responseContainer, jsonProp = s.jsonp !== false && (rjsonp.test(s.url) ? "url" : typeof s.data === "string" && (s.contentType || "").indexOf("application/x-www-form-urlencoded") === 0 && rjsonp.test(s.data) && "data");
         if (jsonProp || s.dataTypes[0] === "jsonp") {
           callbackName = s.jsonpCallback = isFunction(s.jsonpCallback) ? s.jsonpCallback() : s.jsonpCallback;
@@ -5765,7 +5765,7 @@ var require_jquery = __commonJS({
           }
           s.converters["script json"] = function() {
             if (!responseContainer) {
-              jQuery2.error(callbackName + " was not called");
+              jQuery3.error(callbackName + " was not called");
             }
             return responseContainer[0];
           };
@@ -5776,7 +5776,7 @@ var require_jquery = __commonJS({
           };
           jqXHR.always(function() {
             if (overwritten === void 0) {
-              jQuery2(window2).removeProp(callbackName);
+              jQuery3(window2).removeProp(callbackName);
             } else {
               window2[callbackName] = overwritten;
             }
@@ -5797,7 +5797,7 @@ var require_jquery = __commonJS({
         body.innerHTML = "<form></form><form></form>";
         return body.childNodes.length === 2;
       }();
-      jQuery2.parseHTML = function(data, context, keepScripts) {
+      jQuery3.parseHTML = function(data, context, keepScripts) {
         if (typeof data !== "string") {
           return [];
         }
@@ -5823,11 +5823,11 @@ var require_jquery = __commonJS({
         }
         parsed = buildFragment([data], context, scripts);
         if (scripts && scripts.length) {
-          jQuery2(scripts).remove();
+          jQuery3(scripts).remove();
         }
-        return jQuery2.merge([], parsed.childNodes);
+        return jQuery3.merge([], parsed.childNodes);
       };
-      jQuery2.fn.load = function(url, params, callback) {
+      jQuery3.fn.load = function(url, params, callback) {
         var selector, type, response, self = this, off = url.indexOf(" ");
         if (off > -1) {
           selector = stripAndCollapse(url.slice(off));
@@ -5840,14 +5840,14 @@ var require_jquery = __commonJS({
           type = "POST";
         }
         if (self.length > 0) {
-          jQuery2.ajax({
+          jQuery3.ajax({
             url,
             type: type || "GET",
             dataType: "html",
             data: params
           }).done(function(responseText) {
             response = arguments;
-            self.html(selector ? jQuery2("<div>").append(jQuery2.parseHTML(responseText)).find(selector) : responseText);
+            self.html(selector ? jQuery3("<div>").append(jQuery3.parseHTML(responseText)).find(selector) : responseText);
           }).always(callback && function(jqXHR, status) {
             self.each(function() {
               callback.apply(this, response || [jqXHR.responseText, status, jqXHR]);
@@ -5856,20 +5856,20 @@ var require_jquery = __commonJS({
         }
         return this;
       };
-      jQuery2.expr.pseudos.animated = function(elem) {
-        return jQuery2.grep(jQuery2.timers, function(fn) {
+      jQuery3.expr.pseudos.animated = function(elem) {
+        return jQuery3.grep(jQuery3.timers, function(fn) {
           return elem === fn.elem;
         }).length;
       };
-      jQuery2.offset = {
+      jQuery3.offset = {
         setOffset: function(elem, options, i) {
-          var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition, position = jQuery2.css(elem, "position"), curElem = jQuery2(elem), props = {};
+          var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition, position = jQuery3.css(elem, "position"), curElem = jQuery3(elem), props = {};
           if (position === "static") {
             elem.style.position = "relative";
           }
           curOffset = curElem.offset();
-          curCSSTop = jQuery2.css(elem, "top");
-          curCSSLeft = jQuery2.css(elem, "left");
+          curCSSTop = jQuery3.css(elem, "top");
+          curCSSLeft = jQuery3.css(elem, "left");
           calculatePosition = (position === "absolute" || position === "fixed") && (curCSSTop + curCSSLeft).indexOf("auto") > -1;
           if (calculatePosition) {
             curPosition = curElem.position();
@@ -5880,7 +5880,7 @@ var require_jquery = __commonJS({
             curLeft = parseFloat(curCSSLeft) || 0;
           }
           if (isFunction(options)) {
-            options = options.call(elem, i, jQuery2.extend({}, curOffset));
+            options = options.call(elem, i, jQuery3.extend({}, curOffset));
           }
           if (options.top != null) {
             props.top = options.top - curOffset.top + curTop;
@@ -5895,11 +5895,11 @@ var require_jquery = __commonJS({
           }
         }
       };
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         offset: function(options) {
           if (arguments.length) {
             return options === void 0 ? this : this.each(function(i) {
-              jQuery2.offset.setOffset(this, options, i);
+              jQuery3.offset.setOffset(this, options, i);
             });
           }
           var rect, win, elem = this[0];
@@ -5921,39 +5921,39 @@ var require_jquery = __commonJS({
             return;
           }
           var offsetParent, offset, doc, elem = this[0], parentOffset = { top: 0, left: 0 };
-          if (jQuery2.css(elem, "position") === "fixed") {
+          if (jQuery3.css(elem, "position") === "fixed") {
             offset = elem.getBoundingClientRect();
           } else {
             offset = this.offset();
             doc = elem.ownerDocument;
             offsetParent = elem.offsetParent || doc.documentElement;
-            while (offsetParent && (offsetParent === doc.body || offsetParent === doc.documentElement) && jQuery2.css(offsetParent, "position") === "static") {
+            while (offsetParent && (offsetParent === doc.body || offsetParent === doc.documentElement) && jQuery3.css(offsetParent, "position") === "static") {
               offsetParent = offsetParent.parentNode;
             }
             if (offsetParent && offsetParent !== elem && offsetParent.nodeType === 1) {
-              parentOffset = jQuery2(offsetParent).offset();
-              parentOffset.top += jQuery2.css(offsetParent, "borderTopWidth", true);
-              parentOffset.left += jQuery2.css(offsetParent, "borderLeftWidth", true);
+              parentOffset = jQuery3(offsetParent).offset();
+              parentOffset.top += jQuery3.css(offsetParent, "borderTopWidth", true);
+              parentOffset.left += jQuery3.css(offsetParent, "borderLeftWidth", true);
             }
           }
           return {
-            top: offset.top - parentOffset.top - jQuery2.css(elem, "marginTop", true),
-            left: offset.left - parentOffset.left - jQuery2.css(elem, "marginLeft", true)
+            top: offset.top - parentOffset.top - jQuery3.css(elem, "marginTop", true),
+            left: offset.left - parentOffset.left - jQuery3.css(elem, "marginLeft", true)
           };
         },
         offsetParent: function() {
           return this.map(function() {
             var offsetParent = this.offsetParent;
-            while (offsetParent && jQuery2.css(offsetParent, "position") === "static") {
+            while (offsetParent && jQuery3.css(offsetParent, "position") === "static") {
               offsetParent = offsetParent.offsetParent;
             }
             return offsetParent || documentElement;
           });
         }
       });
-      jQuery2.each({ scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function(method, prop) {
+      jQuery3.each({ scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function(method, prop) {
         var top = prop === "pageYOffset";
-        jQuery2.fn[method] = function(val) {
+        jQuery3.fn[method] = function(val) {
           return access(this, function(elem, method2, val2) {
             var win;
             if (isWindow(elem)) {
@@ -5972,21 +5972,21 @@ var require_jquery = __commonJS({
           }, method, val, arguments.length);
         };
       });
-      jQuery2.each(["top", "left"], function(_i, prop) {
-        jQuery2.cssHooks[prop] = addGetHookIf(support.pixelPosition, function(elem, computed) {
+      jQuery3.each(["top", "left"], function(_i, prop) {
+        jQuery3.cssHooks[prop] = addGetHookIf(support.pixelPosition, function(elem, computed) {
           if (computed) {
             computed = curCSS(elem, prop);
-            return rnumnonpx.test(computed) ? jQuery2(elem).position()[prop] + "px" : computed;
+            return rnumnonpx.test(computed) ? jQuery3(elem).position()[prop] + "px" : computed;
           }
         });
       });
-      jQuery2.each({ Height: "height", Width: "width" }, function(name, type) {
-        jQuery2.each({
+      jQuery3.each({ Height: "height", Width: "width" }, function(name, type) {
+        jQuery3.each({
           padding: "inner" + name,
           content: type,
           "": "outer" + name
         }, function(defaultExtra, funcName) {
-          jQuery2.fn[funcName] = function(margin, value) {
+          jQuery3.fn[funcName] = function(margin, value) {
             var chainable = arguments.length && (defaultExtra || typeof margin !== "boolean"), extra = defaultExtra || (margin === true || value === true ? "margin" : "border");
             return access(this, function(elem, type2, value2) {
               var doc;
@@ -5997,12 +5997,12 @@ var require_jquery = __commonJS({
                 doc = elem.documentElement;
                 return Math.max(elem.body["scroll" + name], doc["scroll" + name], elem.body["offset" + name], doc["offset" + name], doc["client" + name]);
               }
-              return value2 === void 0 ? jQuery2.css(elem, type2, extra) : jQuery2.style(elem, type2, value2, extra);
+              return value2 === void 0 ? jQuery3.css(elem, type2, extra) : jQuery3.style(elem, type2, value2, extra);
             }, type, chainable ? margin : void 0, chainable);
           };
         });
       });
-      jQuery2.each([
+      jQuery3.each([
         "ajaxStart",
         "ajaxStop",
         "ajaxComplete",
@@ -6010,11 +6010,11 @@ var require_jquery = __commonJS({
         "ajaxSuccess",
         "ajaxSend"
       ], function(_i, type) {
-        jQuery2.fn[type] = function(fn) {
+        jQuery3.fn[type] = function(fn) {
           return this.on(type, fn);
         };
       });
-      jQuery2.fn.extend({
+      jQuery3.fn.extend({
         bind: function(types, data, fn) {
           return this.on(types, null, data, fn);
         },
@@ -6031,13 +6031,13 @@ var require_jquery = __commonJS({
           return this.mouseenter(fnOver).mouseleave(fnOut || fnOver);
         }
       });
-      jQuery2.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function(_i, name) {
-        jQuery2.fn[name] = function(data, fn) {
+      jQuery3.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "), function(_i, name) {
+        jQuery3.fn[name] = function(data, fn) {
           return arguments.length > 0 ? this.on(name, null, data, fn) : this.trigger(name);
         };
       });
       var rtrim = /^[\s\uFEFF\xA0]+|([^\s\uFEFF\xA0])[\s\uFEFF\xA0]+$/g;
-      jQuery2.proxy = function(fn, context) {
+      jQuery3.proxy = function(fn, context) {
         var tmp, args, proxy;
         if (typeof context === "string") {
           tmp = fn[context];
@@ -6051,51 +6051,4119 @@ var require_jquery = __commonJS({
         proxy = function() {
           return fn.apply(context || this, args.concat(slice.call(arguments)));
         };
-        proxy.guid = fn.guid = fn.guid || jQuery2.guid++;
+        proxy.guid = fn.guid = fn.guid || jQuery3.guid++;
         return proxy;
       };
-      jQuery2.holdReady = function(hold) {
+      jQuery3.holdReady = function(hold) {
         if (hold) {
-          jQuery2.readyWait++;
+          jQuery3.readyWait++;
         } else {
-          jQuery2.ready(true);
+          jQuery3.ready(true);
         }
       };
-      jQuery2.isArray = Array.isArray;
-      jQuery2.parseJSON = JSON.parse;
-      jQuery2.nodeName = nodeName;
-      jQuery2.isFunction = isFunction;
-      jQuery2.isWindow = isWindow;
-      jQuery2.camelCase = camelCase;
-      jQuery2.type = toType;
-      jQuery2.now = Date.now;
-      jQuery2.isNumeric = function(obj) {
-        var type = jQuery2.type(obj);
+      jQuery3.isArray = Array.isArray;
+      jQuery3.parseJSON = JSON.parse;
+      jQuery3.nodeName = nodeName;
+      jQuery3.isFunction = isFunction;
+      jQuery3.isWindow = isWindow;
+      jQuery3.camelCase = camelCase;
+      jQuery3.type = toType;
+      jQuery3.now = Date.now;
+      jQuery3.isNumeric = function(obj) {
+        var type = jQuery3.type(obj);
         return (type === "number" || type === "string") && !isNaN(obj - parseFloat(obj));
       };
-      jQuery2.trim = function(text) {
+      jQuery3.trim = function(text) {
         return text == null ? "" : (text + "").replace(rtrim, "$1");
       };
       if (typeof define === "function" && define.amd) {
         define("jquery", [], function() {
-          return jQuery2;
+          return jQuery3;
         });
       }
       var _jQuery = window2.jQuery, _$ = window2.$;
-      jQuery2.noConflict = function(deep) {
-        if (window2.$ === jQuery2) {
+      jQuery3.noConflict = function(deep) {
+        if (window2.$ === jQuery3) {
           window2.$ = _$;
         }
-        if (deep && window2.jQuery === jQuery2) {
+        if (deep && window2.jQuery === jQuery3) {
           window2.jQuery = _jQuery;
         }
-        return jQuery2;
+        return jQuery3;
       };
       if (typeof noGlobal === "undefined") {
-        window2.jQuery = window2.$ = jQuery2;
+        window2.jQuery = window2.$ = jQuery3;
       }
-      return jQuery2;
+      return jQuery3;
     });
+  }
+});
+
+// node_modules/js-beautify/js/src/core/output.js
+var require_output = __commonJS({
+  "node_modules/js-beautify/js/src/core/output.js"(exports, module2) {
+    "use strict";
+    function OutputLine(parent) {
+      this.__parent = parent;
+      this.__character_count = 0;
+      this.__indent_count = -1;
+      this.__alignment_count = 0;
+      this.__wrap_point_index = 0;
+      this.__wrap_point_character_count = 0;
+      this.__wrap_point_indent_count = -1;
+      this.__wrap_point_alignment_count = 0;
+      this.__items = [];
+    }
+    OutputLine.prototype.clone_empty = function() {
+      var line = new OutputLine(this.__parent);
+      line.set_indent(this.__indent_count, this.__alignment_count);
+      return line;
+    };
+    OutputLine.prototype.item = function(index) {
+      if (index < 0) {
+        return this.__items[this.__items.length + index];
+      } else {
+        return this.__items[index];
+      }
+    };
+    OutputLine.prototype.has_match = function(pattern) {
+      for (var lastCheckedOutput = this.__items.length - 1; lastCheckedOutput >= 0; lastCheckedOutput--) {
+        if (this.__items[lastCheckedOutput].match(pattern)) {
+          return true;
+        }
+      }
+      return false;
+    };
+    OutputLine.prototype.set_indent = function(indent, alignment) {
+      if (this.is_empty()) {
+        this.__indent_count = indent || 0;
+        this.__alignment_count = alignment || 0;
+        this.__character_count = this.__parent.get_indent_size(this.__indent_count, this.__alignment_count);
+      }
+    };
+    OutputLine.prototype._set_wrap_point = function() {
+      if (this.__parent.wrap_line_length) {
+        this.__wrap_point_index = this.__items.length;
+        this.__wrap_point_character_count = this.__character_count;
+        this.__wrap_point_indent_count = this.__parent.next_line.__indent_count;
+        this.__wrap_point_alignment_count = this.__parent.next_line.__alignment_count;
+      }
+    };
+    OutputLine.prototype._should_wrap = function() {
+      return this.__wrap_point_index && this.__character_count > this.__parent.wrap_line_length && this.__wrap_point_character_count > this.__parent.next_line.__character_count;
+    };
+    OutputLine.prototype._allow_wrap = function() {
+      if (this._should_wrap()) {
+        this.__parent.add_new_line();
+        var next = this.__parent.current_line;
+        next.set_indent(this.__wrap_point_indent_count, this.__wrap_point_alignment_count);
+        next.__items = this.__items.slice(this.__wrap_point_index);
+        this.__items = this.__items.slice(0, this.__wrap_point_index);
+        next.__character_count += this.__character_count - this.__wrap_point_character_count;
+        this.__character_count = this.__wrap_point_character_count;
+        if (next.__items[0] === " ") {
+          next.__items.splice(0, 1);
+          next.__character_count -= 1;
+        }
+        return true;
+      }
+      return false;
+    };
+    OutputLine.prototype.is_empty = function() {
+      return this.__items.length === 0;
+    };
+    OutputLine.prototype.last = function() {
+      if (!this.is_empty()) {
+        return this.__items[this.__items.length - 1];
+      } else {
+        return null;
+      }
+    };
+    OutputLine.prototype.push = function(item) {
+      this.__items.push(item);
+      var last_newline_index = item.lastIndexOf("\n");
+      if (last_newline_index !== -1) {
+        this.__character_count = item.length - last_newline_index;
+      } else {
+        this.__character_count += item.length;
+      }
+    };
+    OutputLine.prototype.pop = function() {
+      var item = null;
+      if (!this.is_empty()) {
+        item = this.__items.pop();
+        this.__character_count -= item.length;
+      }
+      return item;
+    };
+    OutputLine.prototype._remove_indent = function() {
+      if (this.__indent_count > 0) {
+        this.__indent_count -= 1;
+        this.__character_count -= this.__parent.indent_size;
+      }
+    };
+    OutputLine.prototype._remove_wrap_indent = function() {
+      if (this.__wrap_point_indent_count > 0) {
+        this.__wrap_point_indent_count -= 1;
+      }
+    };
+    OutputLine.prototype.trim = function() {
+      while (this.last() === " ") {
+        this.__items.pop();
+        this.__character_count -= 1;
+      }
+    };
+    OutputLine.prototype.toString = function() {
+      var result = "";
+      if (this.is_empty()) {
+        if (this.__parent.indent_empty_lines) {
+          result = this.__parent.get_indent_string(this.__indent_count);
+        }
+      } else {
+        result = this.__parent.get_indent_string(this.__indent_count, this.__alignment_count);
+        result += this.__items.join("");
+      }
+      return result;
+    };
+    function IndentStringCache(options, baseIndentString) {
+      this.__cache = [""];
+      this.__indent_size = options.indent_size;
+      this.__indent_string = options.indent_char;
+      if (!options.indent_with_tabs) {
+        this.__indent_string = new Array(options.indent_size + 1).join(options.indent_char);
+      }
+      baseIndentString = baseIndentString || "";
+      if (options.indent_level > 0) {
+        baseIndentString = new Array(options.indent_level + 1).join(this.__indent_string);
+      }
+      this.__base_string = baseIndentString;
+      this.__base_string_length = baseIndentString.length;
+    }
+    IndentStringCache.prototype.get_indent_size = function(indent, column) {
+      var result = this.__base_string_length;
+      column = column || 0;
+      if (indent < 0) {
+        result = 0;
+      }
+      result += indent * this.__indent_size;
+      result += column;
+      return result;
+    };
+    IndentStringCache.prototype.get_indent_string = function(indent_level, column) {
+      var result = this.__base_string;
+      column = column || 0;
+      if (indent_level < 0) {
+        indent_level = 0;
+        result = "";
+      }
+      column += indent_level * this.__indent_size;
+      this.__ensure_cache(column);
+      result += this.__cache[column];
+      return result;
+    };
+    IndentStringCache.prototype.__ensure_cache = function(column) {
+      while (column >= this.__cache.length) {
+        this.__add_column();
+      }
+    };
+    IndentStringCache.prototype.__add_column = function() {
+      var column = this.__cache.length;
+      var indent = 0;
+      var result = "";
+      if (this.__indent_size && column >= this.__indent_size) {
+        indent = Math.floor(column / this.__indent_size);
+        column -= indent * this.__indent_size;
+        result = new Array(indent + 1).join(this.__indent_string);
+      }
+      if (column) {
+        result += new Array(column + 1).join(" ");
+      }
+      this.__cache.push(result);
+    };
+    function Output(options, baseIndentString) {
+      this.__indent_cache = new IndentStringCache(options, baseIndentString);
+      this.raw = false;
+      this._end_with_newline = options.end_with_newline;
+      this.indent_size = options.indent_size;
+      this.wrap_line_length = options.wrap_line_length;
+      this.indent_empty_lines = options.indent_empty_lines;
+      this.__lines = [];
+      this.previous_line = null;
+      this.current_line = null;
+      this.next_line = new OutputLine(this);
+      this.space_before_token = false;
+      this.non_breaking_space = false;
+      this.previous_token_wrapped = false;
+      this.__add_outputline();
+    }
+    Output.prototype.__add_outputline = function() {
+      this.previous_line = this.current_line;
+      this.current_line = this.next_line.clone_empty();
+      this.__lines.push(this.current_line);
+    };
+    Output.prototype.get_line_number = function() {
+      return this.__lines.length;
+    };
+    Output.prototype.get_indent_string = function(indent, column) {
+      return this.__indent_cache.get_indent_string(indent, column);
+    };
+    Output.prototype.get_indent_size = function(indent, column) {
+      return this.__indent_cache.get_indent_size(indent, column);
+    };
+    Output.prototype.is_empty = function() {
+      return !this.previous_line && this.current_line.is_empty();
+    };
+    Output.prototype.add_new_line = function(force_newline) {
+      if (this.is_empty() || !force_newline && this.just_added_newline()) {
+        return false;
+      }
+      if (!this.raw) {
+        this.__add_outputline();
+      }
+      return true;
+    };
+    Output.prototype.get_code = function(eol) {
+      this.trim(true);
+      var last_item = this.current_line.pop();
+      if (last_item) {
+        if (last_item[last_item.length - 1] === "\n") {
+          last_item = last_item.replace(/\n+$/g, "");
+        }
+        this.current_line.push(last_item);
+      }
+      if (this._end_with_newline) {
+        this.__add_outputline();
+      }
+      var sweet_code = this.__lines.join("\n");
+      if (eol !== "\n") {
+        sweet_code = sweet_code.replace(/[\n]/g, eol);
+      }
+      return sweet_code;
+    };
+    Output.prototype.set_wrap_point = function() {
+      this.current_line._set_wrap_point();
+    };
+    Output.prototype.set_indent = function(indent, alignment) {
+      indent = indent || 0;
+      alignment = alignment || 0;
+      this.next_line.set_indent(indent, alignment);
+      if (this.__lines.length > 1) {
+        this.current_line.set_indent(indent, alignment);
+        return true;
+      }
+      this.current_line.set_indent();
+      return false;
+    };
+    Output.prototype.add_raw_token = function(token) {
+      for (var x = 0; x < token.newlines; x++) {
+        this.__add_outputline();
+      }
+      this.current_line.set_indent(-1);
+      this.current_line.push(token.whitespace_before);
+      this.current_line.push(token.text);
+      this.space_before_token = false;
+      this.non_breaking_space = false;
+      this.previous_token_wrapped = false;
+    };
+    Output.prototype.add_token = function(printable_token) {
+      this.__add_space_before_token();
+      this.current_line.push(printable_token);
+      this.space_before_token = false;
+      this.non_breaking_space = false;
+      this.previous_token_wrapped = this.current_line._allow_wrap();
+    };
+    Output.prototype.__add_space_before_token = function() {
+      if (this.space_before_token && !this.just_added_newline()) {
+        if (!this.non_breaking_space) {
+          this.set_wrap_point();
+        }
+        this.current_line.push(" ");
+      }
+    };
+    Output.prototype.remove_indent = function(index) {
+      var output_length = this.__lines.length;
+      while (index < output_length) {
+        this.__lines[index]._remove_indent();
+        index++;
+      }
+      this.current_line._remove_wrap_indent();
+    };
+    Output.prototype.trim = function(eat_newlines) {
+      eat_newlines = eat_newlines === void 0 ? false : eat_newlines;
+      this.current_line.trim();
+      while (eat_newlines && this.__lines.length > 1 && this.current_line.is_empty()) {
+        this.__lines.pop();
+        this.current_line = this.__lines[this.__lines.length - 1];
+        this.current_line.trim();
+      }
+      this.previous_line = this.__lines.length > 1 ? this.__lines[this.__lines.length - 2] : null;
+    };
+    Output.prototype.just_added_newline = function() {
+      return this.current_line.is_empty();
+    };
+    Output.prototype.just_added_blankline = function() {
+      return this.is_empty() || this.current_line.is_empty() && this.previous_line.is_empty();
+    };
+    Output.prototype.ensure_empty_line_above = function(starts_with, ends_with) {
+      var index = this.__lines.length - 2;
+      while (index >= 0) {
+        var potentialEmptyLine = this.__lines[index];
+        if (potentialEmptyLine.is_empty()) {
+          break;
+        } else if (potentialEmptyLine.item(0).indexOf(starts_with) !== 0 && potentialEmptyLine.item(-1) !== ends_with) {
+          this.__lines.splice(index + 1, 0, new OutputLine(this));
+          this.previous_line = this.__lines[this.__lines.length - 2];
+          break;
+        }
+        index--;
+      }
+    };
+    module2.exports.Output = Output;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/token.js
+var require_token = __commonJS({
+  "node_modules/js-beautify/js/src/core/token.js"(exports, module2) {
+    "use strict";
+    function Token(type, text, newlines, whitespace_before) {
+      this.type = type;
+      this.text = text;
+      this.comments_before = null;
+      this.newlines = newlines || 0;
+      this.whitespace_before = whitespace_before || "";
+      this.parent = null;
+      this.next = null;
+      this.previous = null;
+      this.opened = null;
+      this.closed = null;
+      this.directives = null;
+    }
+    module2.exports.Token = Token;
+  }
+});
+
+// node_modules/js-beautify/js/src/javascript/acorn.js
+var require_acorn = __commonJS({
+  "node_modules/js-beautify/js/src/javascript/acorn.js"(exports) {
+    "use strict";
+    var baseASCIIidentifierStartChars = "\\x23\\x24\\x40\\x41-\\x5a\\x5f\\x61-\\x7a";
+    var baseASCIIidentifierChars = "\\x24\\x30-\\x39\\x41-\\x5a\\x5f\\x61-\\x7a";
+    var nonASCIIidentifierStartChars = "\\xaa\\xb5\\xba\\xc0-\\xd6\\xd8-\\xf6\\xf8-\\u02c1\\u02c6-\\u02d1\\u02e0-\\u02e4\\u02ec\\u02ee\\u0370-\\u0374\\u0376\\u0377\\u037a-\\u037d\\u0386\\u0388-\\u038a\\u038c\\u038e-\\u03a1\\u03a3-\\u03f5\\u03f7-\\u0481\\u048a-\\u0527\\u0531-\\u0556\\u0559\\u0561-\\u0587\\u05d0-\\u05ea\\u05f0-\\u05f2\\u0620-\\u064a\\u066e\\u066f\\u0671-\\u06d3\\u06d5\\u06e5\\u06e6\\u06ee\\u06ef\\u06fa-\\u06fc\\u06ff\\u0710\\u0712-\\u072f\\u074d-\\u07a5\\u07b1\\u07ca-\\u07ea\\u07f4\\u07f5\\u07fa\\u0800-\\u0815\\u081a\\u0824\\u0828\\u0840-\\u0858\\u08a0\\u08a2-\\u08ac\\u0904-\\u0939\\u093d\\u0950\\u0958-\\u0961\\u0971-\\u0977\\u0979-\\u097f\\u0985-\\u098c\\u098f\\u0990\\u0993-\\u09a8\\u09aa-\\u09b0\\u09b2\\u09b6-\\u09b9\\u09bd\\u09ce\\u09dc\\u09dd\\u09df-\\u09e1\\u09f0\\u09f1\\u0a05-\\u0a0a\\u0a0f\\u0a10\\u0a13-\\u0a28\\u0a2a-\\u0a30\\u0a32\\u0a33\\u0a35\\u0a36\\u0a38\\u0a39\\u0a59-\\u0a5c\\u0a5e\\u0a72-\\u0a74\\u0a85-\\u0a8d\\u0a8f-\\u0a91\\u0a93-\\u0aa8\\u0aaa-\\u0ab0\\u0ab2\\u0ab3\\u0ab5-\\u0ab9\\u0abd\\u0ad0\\u0ae0\\u0ae1\\u0b05-\\u0b0c\\u0b0f\\u0b10\\u0b13-\\u0b28\\u0b2a-\\u0b30\\u0b32\\u0b33\\u0b35-\\u0b39\\u0b3d\\u0b5c\\u0b5d\\u0b5f-\\u0b61\\u0b71\\u0b83\\u0b85-\\u0b8a\\u0b8e-\\u0b90\\u0b92-\\u0b95\\u0b99\\u0b9a\\u0b9c\\u0b9e\\u0b9f\\u0ba3\\u0ba4\\u0ba8-\\u0baa\\u0bae-\\u0bb9\\u0bd0\\u0c05-\\u0c0c\\u0c0e-\\u0c10\\u0c12-\\u0c28\\u0c2a-\\u0c33\\u0c35-\\u0c39\\u0c3d\\u0c58\\u0c59\\u0c60\\u0c61\\u0c85-\\u0c8c\\u0c8e-\\u0c90\\u0c92-\\u0ca8\\u0caa-\\u0cb3\\u0cb5-\\u0cb9\\u0cbd\\u0cde\\u0ce0\\u0ce1\\u0cf1\\u0cf2\\u0d05-\\u0d0c\\u0d0e-\\u0d10\\u0d12-\\u0d3a\\u0d3d\\u0d4e\\u0d60\\u0d61\\u0d7a-\\u0d7f\\u0d85-\\u0d96\\u0d9a-\\u0db1\\u0db3-\\u0dbb\\u0dbd\\u0dc0-\\u0dc6\\u0e01-\\u0e30\\u0e32\\u0e33\\u0e40-\\u0e46\\u0e81\\u0e82\\u0e84\\u0e87\\u0e88\\u0e8a\\u0e8d\\u0e94-\\u0e97\\u0e99-\\u0e9f\\u0ea1-\\u0ea3\\u0ea5\\u0ea7\\u0eaa\\u0eab\\u0ead-\\u0eb0\\u0eb2\\u0eb3\\u0ebd\\u0ec0-\\u0ec4\\u0ec6\\u0edc-\\u0edf\\u0f00\\u0f40-\\u0f47\\u0f49-\\u0f6c\\u0f88-\\u0f8c\\u1000-\\u102a\\u103f\\u1050-\\u1055\\u105a-\\u105d\\u1061\\u1065\\u1066\\u106e-\\u1070\\u1075-\\u1081\\u108e\\u10a0-\\u10c5\\u10c7\\u10cd\\u10d0-\\u10fa\\u10fc-\\u1248\\u124a-\\u124d\\u1250-\\u1256\\u1258\\u125a-\\u125d\\u1260-\\u1288\\u128a-\\u128d\\u1290-\\u12b0\\u12b2-\\u12b5\\u12b8-\\u12be\\u12c0\\u12c2-\\u12c5\\u12c8-\\u12d6\\u12d8-\\u1310\\u1312-\\u1315\\u1318-\\u135a\\u1380-\\u138f\\u13a0-\\u13f4\\u1401-\\u166c\\u166f-\\u167f\\u1681-\\u169a\\u16a0-\\u16ea\\u16ee-\\u16f0\\u1700-\\u170c\\u170e-\\u1711\\u1720-\\u1731\\u1740-\\u1751\\u1760-\\u176c\\u176e-\\u1770\\u1780-\\u17b3\\u17d7\\u17dc\\u1820-\\u1877\\u1880-\\u18a8\\u18aa\\u18b0-\\u18f5\\u1900-\\u191c\\u1950-\\u196d\\u1970-\\u1974\\u1980-\\u19ab\\u19c1-\\u19c7\\u1a00-\\u1a16\\u1a20-\\u1a54\\u1aa7\\u1b05-\\u1b33\\u1b45-\\u1b4b\\u1b83-\\u1ba0\\u1bae\\u1baf\\u1bba-\\u1be5\\u1c00-\\u1c23\\u1c4d-\\u1c4f\\u1c5a-\\u1c7d\\u1ce9-\\u1cec\\u1cee-\\u1cf1\\u1cf5\\u1cf6\\u1d00-\\u1dbf\\u1e00-\\u1f15\\u1f18-\\u1f1d\\u1f20-\\u1f45\\u1f48-\\u1f4d\\u1f50-\\u1f57\\u1f59\\u1f5b\\u1f5d\\u1f5f-\\u1f7d\\u1f80-\\u1fb4\\u1fb6-\\u1fbc\\u1fbe\\u1fc2-\\u1fc4\\u1fc6-\\u1fcc\\u1fd0-\\u1fd3\\u1fd6-\\u1fdb\\u1fe0-\\u1fec\\u1ff2-\\u1ff4\\u1ff6-\\u1ffc\\u2071\\u207f\\u2090-\\u209c\\u2102\\u2107\\u210a-\\u2113\\u2115\\u2119-\\u211d\\u2124\\u2126\\u2128\\u212a-\\u212d\\u212f-\\u2139\\u213c-\\u213f\\u2145-\\u2149\\u214e\\u2160-\\u2188\\u2c00-\\u2c2e\\u2c30-\\u2c5e\\u2c60-\\u2ce4\\u2ceb-\\u2cee\\u2cf2\\u2cf3\\u2d00-\\u2d25\\u2d27\\u2d2d\\u2d30-\\u2d67\\u2d6f\\u2d80-\\u2d96\\u2da0-\\u2da6\\u2da8-\\u2dae\\u2db0-\\u2db6\\u2db8-\\u2dbe\\u2dc0-\\u2dc6\\u2dc8-\\u2dce\\u2dd0-\\u2dd6\\u2dd8-\\u2dde\\u2e2f\\u3005-\\u3007\\u3021-\\u3029\\u3031-\\u3035\\u3038-\\u303c\\u3041-\\u3096\\u309d-\\u309f\\u30a1-\\u30fa\\u30fc-\\u30ff\\u3105-\\u312d\\u3131-\\u318e\\u31a0-\\u31ba\\u31f0-\\u31ff\\u3400-\\u4db5\\u4e00-\\u9fcc\\ua000-\\ua48c\\ua4d0-\\ua4fd\\ua500-\\ua60c\\ua610-\\ua61f\\ua62a\\ua62b\\ua640-\\ua66e\\ua67f-\\ua697\\ua6a0-\\ua6ef\\ua717-\\ua71f\\ua722-\\ua788\\ua78b-\\ua78e\\ua790-\\ua793\\ua7a0-\\ua7aa\\ua7f8-\\ua801\\ua803-\\ua805\\ua807-\\ua80a\\ua80c-\\ua822\\ua840-\\ua873\\ua882-\\ua8b3\\ua8f2-\\ua8f7\\ua8fb\\ua90a-\\ua925\\ua930-\\ua946\\ua960-\\ua97c\\ua984-\\ua9b2\\ua9cf\\uaa00-\\uaa28\\uaa40-\\uaa42\\uaa44-\\uaa4b\\uaa60-\\uaa76\\uaa7a\\uaa80-\\uaaaf\\uaab1\\uaab5\\uaab6\\uaab9-\\uaabd\\uaac0\\uaac2\\uaadb-\\uaadd\\uaae0-\\uaaea\\uaaf2-\\uaaf4\\uab01-\\uab06\\uab09-\\uab0e\\uab11-\\uab16\\uab20-\\uab26\\uab28-\\uab2e\\uabc0-\\uabe2\\uac00-\\ud7a3\\ud7b0-\\ud7c6\\ud7cb-\\ud7fb\\uf900-\\ufa6d\\ufa70-\\ufad9\\ufb00-\\ufb06\\ufb13-\\ufb17\\ufb1d\\ufb1f-\\ufb28\\ufb2a-\\ufb36\\ufb38-\\ufb3c\\ufb3e\\ufb40\\ufb41\\ufb43\\ufb44\\ufb46-\\ufbb1\\ufbd3-\\ufd3d\\ufd50-\\ufd8f\\ufd92-\\ufdc7\\ufdf0-\\ufdfb\\ufe70-\\ufe74\\ufe76-\\ufefc\\uff21-\\uff3a\\uff41-\\uff5a\\uff66-\\uffbe\\uffc2-\\uffc7\\uffca-\\uffcf\\uffd2-\\uffd7\\uffda-\\uffdc";
+    var nonASCIIidentifierChars = "\\u0300-\\u036f\\u0483-\\u0487\\u0591-\\u05bd\\u05bf\\u05c1\\u05c2\\u05c4\\u05c5\\u05c7\\u0610-\\u061a\\u0620-\\u0649\\u0672-\\u06d3\\u06e7-\\u06e8\\u06fb-\\u06fc\\u0730-\\u074a\\u0800-\\u0814\\u081b-\\u0823\\u0825-\\u0827\\u0829-\\u082d\\u0840-\\u0857\\u08e4-\\u08fe\\u0900-\\u0903\\u093a-\\u093c\\u093e-\\u094f\\u0951-\\u0957\\u0962-\\u0963\\u0966-\\u096f\\u0981-\\u0983\\u09bc\\u09be-\\u09c4\\u09c7\\u09c8\\u09d7\\u09df-\\u09e0\\u0a01-\\u0a03\\u0a3c\\u0a3e-\\u0a42\\u0a47\\u0a48\\u0a4b-\\u0a4d\\u0a51\\u0a66-\\u0a71\\u0a75\\u0a81-\\u0a83\\u0abc\\u0abe-\\u0ac5\\u0ac7-\\u0ac9\\u0acb-\\u0acd\\u0ae2-\\u0ae3\\u0ae6-\\u0aef\\u0b01-\\u0b03\\u0b3c\\u0b3e-\\u0b44\\u0b47\\u0b48\\u0b4b-\\u0b4d\\u0b56\\u0b57\\u0b5f-\\u0b60\\u0b66-\\u0b6f\\u0b82\\u0bbe-\\u0bc2\\u0bc6-\\u0bc8\\u0bca-\\u0bcd\\u0bd7\\u0be6-\\u0bef\\u0c01-\\u0c03\\u0c46-\\u0c48\\u0c4a-\\u0c4d\\u0c55\\u0c56\\u0c62-\\u0c63\\u0c66-\\u0c6f\\u0c82\\u0c83\\u0cbc\\u0cbe-\\u0cc4\\u0cc6-\\u0cc8\\u0cca-\\u0ccd\\u0cd5\\u0cd6\\u0ce2-\\u0ce3\\u0ce6-\\u0cef\\u0d02\\u0d03\\u0d46-\\u0d48\\u0d57\\u0d62-\\u0d63\\u0d66-\\u0d6f\\u0d82\\u0d83\\u0dca\\u0dcf-\\u0dd4\\u0dd6\\u0dd8-\\u0ddf\\u0df2\\u0df3\\u0e34-\\u0e3a\\u0e40-\\u0e45\\u0e50-\\u0e59\\u0eb4-\\u0eb9\\u0ec8-\\u0ecd\\u0ed0-\\u0ed9\\u0f18\\u0f19\\u0f20-\\u0f29\\u0f35\\u0f37\\u0f39\\u0f41-\\u0f47\\u0f71-\\u0f84\\u0f86-\\u0f87\\u0f8d-\\u0f97\\u0f99-\\u0fbc\\u0fc6\\u1000-\\u1029\\u1040-\\u1049\\u1067-\\u106d\\u1071-\\u1074\\u1082-\\u108d\\u108f-\\u109d\\u135d-\\u135f\\u170e-\\u1710\\u1720-\\u1730\\u1740-\\u1750\\u1772\\u1773\\u1780-\\u17b2\\u17dd\\u17e0-\\u17e9\\u180b-\\u180d\\u1810-\\u1819\\u1920-\\u192b\\u1930-\\u193b\\u1951-\\u196d\\u19b0-\\u19c0\\u19c8-\\u19c9\\u19d0-\\u19d9\\u1a00-\\u1a15\\u1a20-\\u1a53\\u1a60-\\u1a7c\\u1a7f-\\u1a89\\u1a90-\\u1a99\\u1b46-\\u1b4b\\u1b50-\\u1b59\\u1b6b-\\u1b73\\u1bb0-\\u1bb9\\u1be6-\\u1bf3\\u1c00-\\u1c22\\u1c40-\\u1c49\\u1c5b-\\u1c7d\\u1cd0-\\u1cd2\\u1d00-\\u1dbe\\u1e01-\\u1f15\\u200c\\u200d\\u203f\\u2040\\u2054\\u20d0-\\u20dc\\u20e1\\u20e5-\\u20f0\\u2d81-\\u2d96\\u2de0-\\u2dff\\u3021-\\u3028\\u3099\\u309a\\ua640-\\ua66d\\ua674-\\ua67d\\ua69f\\ua6f0-\\ua6f1\\ua7f8-\\ua800\\ua806\\ua80b\\ua823-\\ua827\\ua880-\\ua881\\ua8b4-\\ua8c4\\ua8d0-\\ua8d9\\ua8f3-\\ua8f7\\ua900-\\ua909\\ua926-\\ua92d\\ua930-\\ua945\\ua980-\\ua983\\ua9b3-\\ua9c0\\uaa00-\\uaa27\\uaa40-\\uaa41\\uaa4c-\\uaa4d\\uaa50-\\uaa59\\uaa7b\\uaae0-\\uaae9\\uaaf2-\\uaaf3\\uabc0-\\uabe1\\uabec\\uabed\\uabf0-\\uabf9\\ufb20-\\ufb28\\ufe00-\\ufe0f\\ufe20-\\ufe26\\ufe33\\ufe34\\ufe4d-\\ufe4f\\uff10-\\uff19\\uff3f";
+    var identifierStart = "(?:\\\\u[0-9a-fA-F]{4}|[" + baseASCIIidentifierStartChars + nonASCIIidentifierStartChars + "])";
+    var identifierChars = "(?:\\\\u[0-9a-fA-F]{4}|[" + baseASCIIidentifierChars + nonASCIIidentifierStartChars + nonASCIIidentifierChars + "])*";
+    exports.identifier = new RegExp(identifierStart + identifierChars, "g");
+    exports.identifierStart = new RegExp(identifierStart);
+    exports.identifierMatch = new RegExp("(?:\\\\u[0-9a-fA-F]{4}|[" + baseASCIIidentifierChars + nonASCIIidentifierStartChars + nonASCIIidentifierChars + "])+");
+    exports.newline = /[\n\r\u2028\u2029]/;
+    exports.lineBreak = new RegExp("\r\n|" + exports.newline.source);
+    exports.allLineBreaks = new RegExp(exports.lineBreak.source, "g");
+  }
+});
+
+// node_modules/js-beautify/js/src/core/options.js
+var require_options = __commonJS({
+  "node_modules/js-beautify/js/src/core/options.js"(exports, module2) {
+    "use strict";
+    function Options(options, merge_child_field) {
+      this.raw_options = _mergeOpts(options, merge_child_field);
+      this.disabled = this._get_boolean("disabled");
+      this.eol = this._get_characters("eol", "auto");
+      this.end_with_newline = this._get_boolean("end_with_newline");
+      this.indent_size = this._get_number("indent_size", 4);
+      this.indent_char = this._get_characters("indent_char", " ");
+      this.indent_level = this._get_number("indent_level");
+      this.preserve_newlines = this._get_boolean("preserve_newlines", true);
+      this.max_preserve_newlines = this._get_number("max_preserve_newlines", 32786);
+      if (!this.preserve_newlines) {
+        this.max_preserve_newlines = 0;
+      }
+      this.indent_with_tabs = this._get_boolean("indent_with_tabs", this.indent_char === "	");
+      if (this.indent_with_tabs) {
+        this.indent_char = "	";
+        if (this.indent_size === 1) {
+          this.indent_size = 4;
+        }
+      }
+      this.wrap_line_length = this._get_number("wrap_line_length", this._get_number("max_char"));
+      this.indent_empty_lines = this._get_boolean("indent_empty_lines");
+      this.templating = this._get_selection_list("templating", ["auto", "none", "django", "erb", "handlebars", "php", "smarty"], ["auto"]);
+    }
+    Options.prototype._get_array = function(name, default_value) {
+      var option_value = this.raw_options[name];
+      var result = default_value || [];
+      if (typeof option_value === "object") {
+        if (option_value !== null && typeof option_value.concat === "function") {
+          result = option_value.concat();
+        }
+      } else if (typeof option_value === "string") {
+        result = option_value.split(/[^a-zA-Z0-9_\/\-]+/);
+      }
+      return result;
+    };
+    Options.prototype._get_boolean = function(name, default_value) {
+      var option_value = this.raw_options[name];
+      var result = option_value === void 0 ? !!default_value : !!option_value;
+      return result;
+    };
+    Options.prototype._get_characters = function(name, default_value) {
+      var option_value = this.raw_options[name];
+      var result = default_value || "";
+      if (typeof option_value === "string") {
+        result = option_value.replace(/\\r/, "\r").replace(/\\n/, "\n").replace(/\\t/, "	");
+      }
+      return result;
+    };
+    Options.prototype._get_number = function(name, default_value) {
+      var option_value = this.raw_options[name];
+      default_value = parseInt(default_value, 10);
+      if (isNaN(default_value)) {
+        default_value = 0;
+      }
+      var result = parseInt(option_value, 10);
+      if (isNaN(result)) {
+        result = default_value;
+      }
+      return result;
+    };
+    Options.prototype._get_selection = function(name, selection_list, default_value) {
+      var result = this._get_selection_list(name, selection_list, default_value);
+      if (result.length !== 1) {
+        throw new Error("Invalid Option Value: The option '" + name + "' can only be one of the following values:\n" + selection_list + "\nYou passed in: '" + this.raw_options[name] + "'");
+      }
+      return result[0];
+    };
+    Options.prototype._get_selection_list = function(name, selection_list, default_value) {
+      if (!selection_list || selection_list.length === 0) {
+        throw new Error("Selection list cannot be empty.");
+      }
+      default_value = default_value || [selection_list[0]];
+      if (!this._is_valid_selection(default_value, selection_list)) {
+        throw new Error("Invalid Default Value!");
+      }
+      var result = this._get_array(name, default_value);
+      if (!this._is_valid_selection(result, selection_list)) {
+        throw new Error("Invalid Option Value: The option '" + name + "' can contain only the following values:\n" + selection_list + "\nYou passed in: '" + this.raw_options[name] + "'");
+      }
+      return result;
+    };
+    Options.prototype._is_valid_selection = function(result, selection_list) {
+      return result.length && selection_list.length && !result.some(function(item) {
+        return selection_list.indexOf(item) === -1;
+      });
+    };
+    function _mergeOpts(allOptions, childFieldName) {
+      var finalOpts = {};
+      allOptions = _normalizeOpts(allOptions);
+      var name;
+      for (name in allOptions) {
+        if (name !== childFieldName) {
+          finalOpts[name] = allOptions[name];
+        }
+      }
+      if (childFieldName && allOptions[childFieldName]) {
+        for (name in allOptions[childFieldName]) {
+          finalOpts[name] = allOptions[childFieldName][name];
+        }
+      }
+      return finalOpts;
+    }
+    function _normalizeOpts(options) {
+      var convertedOpts = {};
+      var key;
+      for (key in options) {
+        var newKey = key.replace(/-/g, "_");
+        convertedOpts[newKey] = options[key];
+      }
+      return convertedOpts;
+    }
+    module2.exports.Options = Options;
+    module2.exports.normalizeOpts = _normalizeOpts;
+    module2.exports.mergeOpts = _mergeOpts;
+  }
+});
+
+// node_modules/js-beautify/js/src/javascript/options.js
+var require_options2 = __commonJS({
+  "node_modules/js-beautify/js/src/javascript/options.js"(exports, module2) {
+    "use strict";
+    var BaseOptions = require_options().Options;
+    var validPositionValues = ["before-newline", "after-newline", "preserve-newline"];
+    function Options(options) {
+      BaseOptions.call(this, options, "js");
+      var raw_brace_style = this.raw_options.brace_style || null;
+      if (raw_brace_style === "expand-strict") {
+        this.raw_options.brace_style = "expand";
+      } else if (raw_brace_style === "collapse-preserve-inline") {
+        this.raw_options.brace_style = "collapse,preserve-inline";
+      } else if (this.raw_options.braces_on_own_line !== void 0) {
+        this.raw_options.brace_style = this.raw_options.braces_on_own_line ? "expand" : "collapse";
+      }
+      var brace_style_split = this._get_selection_list("brace_style", ["collapse", "expand", "end-expand", "none", "preserve-inline"]);
+      this.brace_preserve_inline = false;
+      this.brace_style = "collapse";
+      for (var bs = 0; bs < brace_style_split.length; bs++) {
+        if (brace_style_split[bs] === "preserve-inline") {
+          this.brace_preserve_inline = true;
+        } else {
+          this.brace_style = brace_style_split[bs];
+        }
+      }
+      this.unindent_chained_methods = this._get_boolean("unindent_chained_methods");
+      this.break_chained_methods = this._get_boolean("break_chained_methods");
+      this.space_in_paren = this._get_boolean("space_in_paren");
+      this.space_in_empty_paren = this._get_boolean("space_in_empty_paren");
+      this.jslint_happy = this._get_boolean("jslint_happy");
+      this.space_after_anon_function = this._get_boolean("space_after_anon_function");
+      this.space_after_named_function = this._get_boolean("space_after_named_function");
+      this.keep_array_indentation = this._get_boolean("keep_array_indentation");
+      this.space_before_conditional = this._get_boolean("space_before_conditional", true);
+      this.unescape_strings = this._get_boolean("unescape_strings");
+      this.e4x = this._get_boolean("e4x");
+      this.comma_first = this._get_boolean("comma_first");
+      this.operator_position = this._get_selection("operator_position", validPositionValues);
+      this.test_output_raw = this._get_boolean("test_output_raw");
+      if (this.jslint_happy) {
+        this.space_after_anon_function = true;
+      }
+    }
+    Options.prototype = new BaseOptions();
+    module2.exports.Options = Options;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/inputscanner.js
+var require_inputscanner = __commonJS({
+  "node_modules/js-beautify/js/src/core/inputscanner.js"(exports, module2) {
+    "use strict";
+    var regexp_has_sticky = RegExp.prototype.hasOwnProperty("sticky");
+    function InputScanner(input_string) {
+      this.__input = input_string || "";
+      this.__input_length = this.__input.length;
+      this.__position = 0;
+    }
+    InputScanner.prototype.restart = function() {
+      this.__position = 0;
+    };
+    InputScanner.prototype.back = function() {
+      if (this.__position > 0) {
+        this.__position -= 1;
+      }
+    };
+    InputScanner.prototype.hasNext = function() {
+      return this.__position < this.__input_length;
+    };
+    InputScanner.prototype.next = function() {
+      var val = null;
+      if (this.hasNext()) {
+        val = this.__input.charAt(this.__position);
+        this.__position += 1;
+      }
+      return val;
+    };
+    InputScanner.prototype.peek = function(index) {
+      var val = null;
+      index = index || 0;
+      index += this.__position;
+      if (index >= 0 && index < this.__input_length) {
+        val = this.__input.charAt(index);
+      }
+      return val;
+    };
+    InputScanner.prototype.__match = function(pattern, index) {
+      pattern.lastIndex = index;
+      var pattern_match = pattern.exec(this.__input);
+      if (pattern_match && !(regexp_has_sticky && pattern.sticky)) {
+        if (pattern_match.index !== index) {
+          pattern_match = null;
+        }
+      }
+      return pattern_match;
+    };
+    InputScanner.prototype.test = function(pattern, index) {
+      index = index || 0;
+      index += this.__position;
+      if (index >= 0 && index < this.__input_length) {
+        return !!this.__match(pattern, index);
+      } else {
+        return false;
+      }
+    };
+    InputScanner.prototype.testChar = function(pattern, index) {
+      var val = this.peek(index);
+      pattern.lastIndex = 0;
+      return val !== null && pattern.test(val);
+    };
+    InputScanner.prototype.match = function(pattern) {
+      var pattern_match = this.__match(pattern, this.__position);
+      if (pattern_match) {
+        this.__position += pattern_match[0].length;
+      } else {
+        pattern_match = null;
+      }
+      return pattern_match;
+    };
+    InputScanner.prototype.read = function(starting_pattern, until_pattern, until_after) {
+      var val = "";
+      var match;
+      if (starting_pattern) {
+        match = this.match(starting_pattern);
+        if (match) {
+          val += match[0];
+        }
+      }
+      if (until_pattern && (match || !starting_pattern)) {
+        val += this.readUntil(until_pattern, until_after);
+      }
+      return val;
+    };
+    InputScanner.prototype.readUntil = function(pattern, until_after) {
+      var val = "";
+      var match_index = this.__position;
+      pattern.lastIndex = this.__position;
+      var pattern_match = pattern.exec(this.__input);
+      if (pattern_match) {
+        match_index = pattern_match.index;
+        if (until_after) {
+          match_index += pattern_match[0].length;
+        }
+      } else {
+        match_index = this.__input_length;
+      }
+      val = this.__input.substring(this.__position, match_index);
+      this.__position = match_index;
+      return val;
+    };
+    InputScanner.prototype.readUntilAfter = function(pattern) {
+      return this.readUntil(pattern, true);
+    };
+    InputScanner.prototype.get_regexp = function(pattern, match_from) {
+      var result = null;
+      var flags = "g";
+      if (match_from && regexp_has_sticky) {
+        flags = "y";
+      }
+      if (typeof pattern === "string" && pattern !== "") {
+        result = new RegExp(pattern, flags);
+      } else if (pattern) {
+        result = new RegExp(pattern.source, flags);
+      }
+      return result;
+    };
+    InputScanner.prototype.get_literal_regexp = function(literal_string) {
+      return RegExp(literal_string.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"));
+    };
+    InputScanner.prototype.peekUntilAfter = function(pattern) {
+      var start = this.__position;
+      var val = this.readUntilAfter(pattern);
+      this.__position = start;
+      return val;
+    };
+    InputScanner.prototype.lookBack = function(testVal) {
+      var start = this.__position - 1;
+      return start >= testVal.length && this.__input.substring(start - testVal.length, start).toLowerCase() === testVal;
+    };
+    module2.exports.InputScanner = InputScanner;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/tokenstream.js
+var require_tokenstream = __commonJS({
+  "node_modules/js-beautify/js/src/core/tokenstream.js"(exports, module2) {
+    "use strict";
+    function TokenStream(parent_token) {
+      this.__tokens = [];
+      this.__tokens_length = this.__tokens.length;
+      this.__position = 0;
+      this.__parent_token = parent_token;
+    }
+    TokenStream.prototype.restart = function() {
+      this.__position = 0;
+    };
+    TokenStream.prototype.isEmpty = function() {
+      return this.__tokens_length === 0;
+    };
+    TokenStream.prototype.hasNext = function() {
+      return this.__position < this.__tokens_length;
+    };
+    TokenStream.prototype.next = function() {
+      var val = null;
+      if (this.hasNext()) {
+        val = this.__tokens[this.__position];
+        this.__position += 1;
+      }
+      return val;
+    };
+    TokenStream.prototype.peek = function(index) {
+      var val = null;
+      index = index || 0;
+      index += this.__position;
+      if (index >= 0 && index < this.__tokens_length) {
+        val = this.__tokens[index];
+      }
+      return val;
+    };
+    TokenStream.prototype.add = function(token) {
+      if (this.__parent_token) {
+        token.parent = this.__parent_token;
+      }
+      this.__tokens.push(token);
+      this.__tokens_length += 1;
+    };
+    module2.exports.TokenStream = TokenStream;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/pattern.js
+var require_pattern = __commonJS({
+  "node_modules/js-beautify/js/src/core/pattern.js"(exports, module2) {
+    "use strict";
+    function Pattern(input_scanner, parent) {
+      this._input = input_scanner;
+      this._starting_pattern = null;
+      this._match_pattern = null;
+      this._until_pattern = null;
+      this._until_after = false;
+      if (parent) {
+        this._starting_pattern = this._input.get_regexp(parent._starting_pattern, true);
+        this._match_pattern = this._input.get_regexp(parent._match_pattern, true);
+        this._until_pattern = this._input.get_regexp(parent._until_pattern);
+        this._until_after = parent._until_after;
+      }
+    }
+    Pattern.prototype.read = function() {
+      var result = this._input.read(this._starting_pattern);
+      if (!this._starting_pattern || result) {
+        result += this._input.read(this._match_pattern, this._until_pattern, this._until_after);
+      }
+      return result;
+    };
+    Pattern.prototype.read_match = function() {
+      return this._input.match(this._match_pattern);
+    };
+    Pattern.prototype.until_after = function(pattern) {
+      var result = this._create();
+      result._until_after = true;
+      result._until_pattern = this._input.get_regexp(pattern);
+      result._update();
+      return result;
+    };
+    Pattern.prototype.until = function(pattern) {
+      var result = this._create();
+      result._until_after = false;
+      result._until_pattern = this._input.get_regexp(pattern);
+      result._update();
+      return result;
+    };
+    Pattern.prototype.starting_with = function(pattern) {
+      var result = this._create();
+      result._starting_pattern = this._input.get_regexp(pattern, true);
+      result._update();
+      return result;
+    };
+    Pattern.prototype.matching = function(pattern) {
+      var result = this._create();
+      result._match_pattern = this._input.get_regexp(pattern, true);
+      result._update();
+      return result;
+    };
+    Pattern.prototype._create = function() {
+      return new Pattern(this._input, this);
+    };
+    Pattern.prototype._update = function() {
+    };
+    module2.exports.Pattern = Pattern;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/whitespacepattern.js
+var require_whitespacepattern = __commonJS({
+  "node_modules/js-beautify/js/src/core/whitespacepattern.js"(exports, module2) {
+    "use strict";
+    var Pattern = require_pattern().Pattern;
+    function WhitespacePattern(input_scanner, parent) {
+      Pattern.call(this, input_scanner, parent);
+      if (parent) {
+        this._line_regexp = this._input.get_regexp(parent._line_regexp);
+      } else {
+        this.__set_whitespace_patterns("", "");
+      }
+      this.newline_count = 0;
+      this.whitespace_before_token = "";
+    }
+    WhitespacePattern.prototype = new Pattern();
+    WhitespacePattern.prototype.__set_whitespace_patterns = function(whitespace_chars, newline_chars) {
+      whitespace_chars += "\\t ";
+      newline_chars += "\\n\\r";
+      this._match_pattern = this._input.get_regexp("[" + whitespace_chars + newline_chars + "]+", true);
+      this._newline_regexp = this._input.get_regexp("\\r\\n|[" + newline_chars + "]");
+    };
+    WhitespacePattern.prototype.read = function() {
+      this.newline_count = 0;
+      this.whitespace_before_token = "";
+      var resulting_string = this._input.read(this._match_pattern);
+      if (resulting_string === " ") {
+        this.whitespace_before_token = " ";
+      } else if (resulting_string) {
+        var matches = this.__split(this._newline_regexp, resulting_string);
+        this.newline_count = matches.length - 1;
+        this.whitespace_before_token = matches[this.newline_count];
+      }
+      return resulting_string;
+    };
+    WhitespacePattern.prototype.matching = function(whitespace_chars, newline_chars) {
+      var result = this._create();
+      result.__set_whitespace_patterns(whitespace_chars, newline_chars);
+      result._update();
+      return result;
+    };
+    WhitespacePattern.prototype._create = function() {
+      return new WhitespacePattern(this._input, this);
+    };
+    WhitespacePattern.prototype.__split = function(regexp, input_string) {
+      regexp.lastIndex = 0;
+      var start_index = 0;
+      var result = [];
+      var next_match = regexp.exec(input_string);
+      while (next_match) {
+        result.push(input_string.substring(start_index, next_match.index));
+        start_index = next_match.index + next_match[0].length;
+        next_match = regexp.exec(input_string);
+      }
+      if (start_index < input_string.length) {
+        result.push(input_string.substring(start_index, input_string.length));
+      } else {
+        result.push("");
+      }
+      return result;
+    };
+    module2.exports.WhitespacePattern = WhitespacePattern;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/tokenizer.js
+var require_tokenizer = __commonJS({
+  "node_modules/js-beautify/js/src/core/tokenizer.js"(exports, module2) {
+    "use strict";
+    var InputScanner = require_inputscanner().InputScanner;
+    var Token = require_token().Token;
+    var TokenStream = require_tokenstream().TokenStream;
+    var WhitespacePattern = require_whitespacepattern().WhitespacePattern;
+    var TOKEN = {
+      START: "TK_START",
+      RAW: "TK_RAW",
+      EOF: "TK_EOF"
+    };
+    var Tokenizer = function(input_string, options) {
+      this._input = new InputScanner(input_string);
+      this._options = options || {};
+      this.__tokens = null;
+      this._patterns = {};
+      this._patterns.whitespace = new WhitespacePattern(this._input);
+    };
+    Tokenizer.prototype.tokenize = function() {
+      this._input.restart();
+      this.__tokens = new TokenStream();
+      this._reset();
+      var current;
+      var previous = new Token(TOKEN.START, "");
+      var open_token = null;
+      var open_stack = [];
+      var comments = new TokenStream();
+      while (previous.type !== TOKEN.EOF) {
+        current = this._get_next_token(previous, open_token);
+        while (this._is_comment(current)) {
+          comments.add(current);
+          current = this._get_next_token(previous, open_token);
+        }
+        if (!comments.isEmpty()) {
+          current.comments_before = comments;
+          comments = new TokenStream();
+        }
+        current.parent = open_token;
+        if (this._is_opening(current)) {
+          open_stack.push(open_token);
+          open_token = current;
+        } else if (open_token && this._is_closing(current, open_token)) {
+          current.opened = open_token;
+          open_token.closed = current;
+          open_token = open_stack.pop();
+          current.parent = open_token;
+        }
+        current.previous = previous;
+        previous.next = current;
+        this.__tokens.add(current);
+        previous = current;
+      }
+      return this.__tokens;
+    };
+    Tokenizer.prototype._is_first_token = function() {
+      return this.__tokens.isEmpty();
+    };
+    Tokenizer.prototype._reset = function() {
+    };
+    Tokenizer.prototype._get_next_token = function(previous_token, open_token) {
+      this._readWhitespace();
+      var resulting_string = this._input.read(/.+/g);
+      if (resulting_string) {
+        return this._create_token(TOKEN.RAW, resulting_string);
+      } else {
+        return this._create_token(TOKEN.EOF, "");
+      }
+    };
+    Tokenizer.prototype._is_comment = function(current_token) {
+      return false;
+    };
+    Tokenizer.prototype._is_opening = function(current_token) {
+      return false;
+    };
+    Tokenizer.prototype._is_closing = function(current_token, open_token) {
+      return false;
+    };
+    Tokenizer.prototype._create_token = function(type, text) {
+      var token = new Token(type, text, this._patterns.whitespace.newline_count, this._patterns.whitespace.whitespace_before_token);
+      return token;
+    };
+    Tokenizer.prototype._readWhitespace = function() {
+      return this._patterns.whitespace.read();
+    };
+    module2.exports.Tokenizer = Tokenizer;
+    module2.exports.TOKEN = TOKEN;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/directives.js
+var require_directives = __commonJS({
+  "node_modules/js-beautify/js/src/core/directives.js"(exports, module2) {
+    "use strict";
+    function Directives(start_block_pattern, end_block_pattern) {
+      start_block_pattern = typeof start_block_pattern === "string" ? start_block_pattern : start_block_pattern.source;
+      end_block_pattern = typeof end_block_pattern === "string" ? end_block_pattern : end_block_pattern.source;
+      this.__directives_block_pattern = new RegExp(start_block_pattern + / beautify( \w+[:]\w+)+ /.source + end_block_pattern, "g");
+      this.__directive_pattern = / (\w+)[:](\w+)/g;
+      this.__directives_end_ignore_pattern = new RegExp(start_block_pattern + /\sbeautify\signore:end\s/.source + end_block_pattern, "g");
+    }
+    Directives.prototype.get_directives = function(text) {
+      if (!text.match(this.__directives_block_pattern)) {
+        return null;
+      }
+      var directives = {};
+      this.__directive_pattern.lastIndex = 0;
+      var directive_match = this.__directive_pattern.exec(text);
+      while (directive_match) {
+        directives[directive_match[1]] = directive_match[2];
+        directive_match = this.__directive_pattern.exec(text);
+      }
+      return directives;
+    };
+    Directives.prototype.readIgnored = function(input) {
+      return input.readUntilAfter(this.__directives_end_ignore_pattern);
+    };
+    module2.exports.Directives = Directives;
+  }
+});
+
+// node_modules/js-beautify/js/src/core/templatablepattern.js
+var require_templatablepattern = __commonJS({
+  "node_modules/js-beautify/js/src/core/templatablepattern.js"(exports, module2) {
+    "use strict";
+    var Pattern = require_pattern().Pattern;
+    var template_names = {
+      django: false,
+      erb: false,
+      handlebars: false,
+      php: false,
+      smarty: false
+    };
+    function TemplatablePattern(input_scanner, parent) {
+      Pattern.call(this, input_scanner, parent);
+      this.__template_pattern = null;
+      this._disabled = Object.assign({}, template_names);
+      this._excluded = Object.assign({}, template_names);
+      if (parent) {
+        this.__template_pattern = this._input.get_regexp(parent.__template_pattern);
+        this._excluded = Object.assign(this._excluded, parent._excluded);
+        this._disabled = Object.assign(this._disabled, parent._disabled);
+      }
+      var pattern = new Pattern(input_scanner);
+      this.__patterns = {
+        handlebars_comment: pattern.starting_with(/{{!--/).until_after(/--}}/),
+        handlebars_unescaped: pattern.starting_with(/{{{/).until_after(/}}}/),
+        handlebars: pattern.starting_with(/{{/).until_after(/}}/),
+        php: pattern.starting_with(/<\?(?:[= ]|php)/).until_after(/\?>/),
+        erb: pattern.starting_with(/<%[^%]/).until_after(/[^%]%>/),
+        django: pattern.starting_with(/{%/).until_after(/%}/),
+        django_value: pattern.starting_with(/{{/).until_after(/}}/),
+        django_comment: pattern.starting_with(/{#/).until_after(/#}/),
+        smarty: pattern.starting_with(/{(?=[^}{\s\n])/).until_after(/[^\s\n]}/),
+        smarty_comment: pattern.starting_with(/{\*/).until_after(/\*}/),
+        smarty_literal: pattern.starting_with(/{literal}/).until_after(/{\/literal}/)
+      };
+    }
+    TemplatablePattern.prototype = new Pattern();
+    TemplatablePattern.prototype._create = function() {
+      return new TemplatablePattern(this._input, this);
+    };
+    TemplatablePattern.prototype._update = function() {
+      this.__set_templated_pattern();
+    };
+    TemplatablePattern.prototype.disable = function(language) {
+      var result = this._create();
+      result._disabled[language] = true;
+      result._update();
+      return result;
+    };
+    TemplatablePattern.prototype.read_options = function(options) {
+      var result = this._create();
+      for (var language in template_names) {
+        result._disabled[language] = options.templating.indexOf(language) === -1;
+      }
+      result._update();
+      return result;
+    };
+    TemplatablePattern.prototype.exclude = function(language) {
+      var result = this._create();
+      result._excluded[language] = true;
+      result._update();
+      return result;
+    };
+    TemplatablePattern.prototype.read = function() {
+      var result = "";
+      if (this._match_pattern) {
+        result = this._input.read(this._starting_pattern);
+      } else {
+        result = this._input.read(this._starting_pattern, this.__template_pattern);
+      }
+      var next = this._read_template();
+      while (next) {
+        if (this._match_pattern) {
+          next += this._input.read(this._match_pattern);
+        } else {
+          next += this._input.readUntil(this.__template_pattern);
+        }
+        result += next;
+        next = this._read_template();
+      }
+      if (this._until_after) {
+        result += this._input.readUntilAfter(this._until_pattern);
+      }
+      return result;
+    };
+    TemplatablePattern.prototype.__set_templated_pattern = function() {
+      var items = [];
+      if (!this._disabled.php) {
+        items.push(this.__patterns.php._starting_pattern.source);
+      }
+      if (!this._disabled.handlebars) {
+        items.push(this.__patterns.handlebars._starting_pattern.source);
+      }
+      if (!this._disabled.erb) {
+        items.push(this.__patterns.erb._starting_pattern.source);
+      }
+      if (!this._disabled.django) {
+        items.push(this.__patterns.django._starting_pattern.source);
+        items.push(this.__patterns.django_value._starting_pattern.source);
+        items.push(this.__patterns.django_comment._starting_pattern.source);
+      }
+      if (!this._disabled.smarty) {
+        items.push(this.__patterns.smarty._starting_pattern.source);
+      }
+      if (this._until_pattern) {
+        items.push(this._until_pattern.source);
+      }
+      this.__template_pattern = this._input.get_regexp("(?:" + items.join("|") + ")");
+    };
+    TemplatablePattern.prototype._read_template = function() {
+      var resulting_string = "";
+      var c = this._input.peek();
+      if (c === "<") {
+        var peek1 = this._input.peek(1);
+        if (!this._disabled.php && !this._excluded.php && peek1 === "?") {
+          resulting_string = resulting_string || this.__patterns.php.read();
+        }
+        if (!this._disabled.erb && !this._excluded.erb && peek1 === "%") {
+          resulting_string = resulting_string || this.__patterns.erb.read();
+        }
+      } else if (c === "{") {
+        if (!this._disabled.handlebars && !this._excluded.handlebars) {
+          resulting_string = resulting_string || this.__patterns.handlebars_comment.read();
+          resulting_string = resulting_string || this.__patterns.handlebars_unescaped.read();
+          resulting_string = resulting_string || this.__patterns.handlebars.read();
+        }
+        if (!this._disabled.django) {
+          if (!this._excluded.django && !this._excluded.handlebars) {
+            resulting_string = resulting_string || this.__patterns.django_value.read();
+          }
+          if (!this._excluded.django) {
+            resulting_string = resulting_string || this.__patterns.django_comment.read();
+            resulting_string = resulting_string || this.__patterns.django.read();
+          }
+        }
+        if (!this._disabled.smarty) {
+          if (this._disabled.django && this._disabled.handlebars) {
+            resulting_string = resulting_string || this.__patterns.smarty_comment.read();
+            resulting_string = resulting_string || this.__patterns.smarty_literal.read();
+            resulting_string = resulting_string || this.__patterns.smarty.read();
+          }
+        }
+      }
+      return resulting_string;
+    };
+    module2.exports.TemplatablePattern = TemplatablePattern;
+  }
+});
+
+// node_modules/js-beautify/js/src/javascript/tokenizer.js
+var require_tokenizer2 = __commonJS({
+  "node_modules/js-beautify/js/src/javascript/tokenizer.js"(exports, module2) {
+    "use strict";
+    var InputScanner = require_inputscanner().InputScanner;
+    var BaseTokenizer = require_tokenizer().Tokenizer;
+    var BASETOKEN = require_tokenizer().TOKEN;
+    var Directives = require_directives().Directives;
+    var acorn = require_acorn();
+    var Pattern = require_pattern().Pattern;
+    var TemplatablePattern = require_templatablepattern().TemplatablePattern;
+    function in_array(what, arr) {
+      return arr.indexOf(what) !== -1;
+    }
+    var TOKEN = {
+      START_EXPR: "TK_START_EXPR",
+      END_EXPR: "TK_END_EXPR",
+      START_BLOCK: "TK_START_BLOCK",
+      END_BLOCK: "TK_END_BLOCK",
+      WORD: "TK_WORD",
+      RESERVED: "TK_RESERVED",
+      SEMICOLON: "TK_SEMICOLON",
+      STRING: "TK_STRING",
+      EQUALS: "TK_EQUALS",
+      OPERATOR: "TK_OPERATOR",
+      COMMA: "TK_COMMA",
+      BLOCK_COMMENT: "TK_BLOCK_COMMENT",
+      COMMENT: "TK_COMMENT",
+      DOT: "TK_DOT",
+      UNKNOWN: "TK_UNKNOWN",
+      START: BASETOKEN.START,
+      RAW: BASETOKEN.RAW,
+      EOF: BASETOKEN.EOF
+    };
+    var directives_core = new Directives(/\/\*/, /\*\//);
+    var number_pattern = /0[xX][0123456789abcdefABCDEF_]*n?|0[oO][01234567_]*n?|0[bB][01_]*n?|\d[\d_]*n|(?:\.\d[\d_]*|\d[\d_]*\.?[\d_]*)(?:[eE][+-]?[\d_]+)?/;
+    var digit = /[0-9]/;
+    var dot_pattern = /[^\d\.]/;
+    var positionable_operators = ">>> === !== &&= ??= ||= << && >= ** != == <= >> || ?? |> < / - + > : & % ? ^ | *".split(" ");
+    var punct = ">>>= ... >>= <<= === >>> !== **= &&= ??= ||= => ^= :: /= << <= == && -= >= >> != -- += ** || ?? ++ %= &= *= |= |> = ! ? > < : / ^ - + * & % ~ |";
+    punct = punct.replace(/[-[\]{}()*+?.,\\^$|#]/g, "\\$&");
+    punct = "\\?\\.(?!\\d) " + punct;
+    punct = punct.replace(/ /g, "|");
+    var punct_pattern = new RegExp(punct);
+    var line_starters = "continue,try,throw,return,var,let,const,if,switch,case,default,for,while,break,function,import,export".split(",");
+    var reserved_words = line_starters.concat(["do", "in", "of", "else", "get", "set", "new", "catch", "finally", "typeof", "yield", "async", "await", "from", "as", "class", "extends"]);
+    var reserved_word_pattern = new RegExp("^(?:" + reserved_words.join("|") + ")$");
+    var in_html_comment;
+    var Tokenizer = function(input_string, options) {
+      BaseTokenizer.call(this, input_string, options);
+      this._patterns.whitespace = this._patterns.whitespace.matching(/\u00A0\u1680\u180e\u2000-\u200a\u202f\u205f\u3000\ufeff/.source, /\u2028\u2029/.source);
+      var pattern_reader = new Pattern(this._input);
+      var templatable = new TemplatablePattern(this._input).read_options(this._options);
+      this.__patterns = {
+        template: templatable,
+        identifier: templatable.starting_with(acorn.identifier).matching(acorn.identifierMatch),
+        number: pattern_reader.matching(number_pattern),
+        punct: pattern_reader.matching(punct_pattern),
+        comment: pattern_reader.starting_with(/\/\//).until(/[\n\r\u2028\u2029]/),
+        block_comment: pattern_reader.starting_with(/\/\*/).until_after(/\*\//),
+        html_comment_start: pattern_reader.matching(/<!--/),
+        html_comment_end: pattern_reader.matching(/-->/),
+        include: pattern_reader.starting_with(/#include/).until_after(acorn.lineBreak),
+        shebang: pattern_reader.starting_with(/#!/).until_after(acorn.lineBreak),
+        xml: pattern_reader.matching(/[\s\S]*?<(\/?)([-a-zA-Z:0-9_.]+|{[^}]+?}|!\[CDATA\[[^\]]*?\]\]|)(\s*{[^}]+?}|\s+[-a-zA-Z:0-9_.]+|\s+[-a-zA-Z:0-9_.]+\s*=\s*('[^']*'|"[^"]*"|{([^{}]|{[^}]+?})+?}))*\s*(\/?)\s*>/),
+        single_quote: templatable.until(/['\\\n\r\u2028\u2029]/),
+        double_quote: templatable.until(/["\\\n\r\u2028\u2029]/),
+        template_text: templatable.until(/[`\\$]/),
+        template_expression: templatable.until(/[`}\\]/)
+      };
+    };
+    Tokenizer.prototype = new BaseTokenizer();
+    Tokenizer.prototype._is_comment = function(current_token) {
+      return current_token.type === TOKEN.COMMENT || current_token.type === TOKEN.BLOCK_COMMENT || current_token.type === TOKEN.UNKNOWN;
+    };
+    Tokenizer.prototype._is_opening = function(current_token) {
+      return current_token.type === TOKEN.START_BLOCK || current_token.type === TOKEN.START_EXPR;
+    };
+    Tokenizer.prototype._is_closing = function(current_token, open_token) {
+      return (current_token.type === TOKEN.END_BLOCK || current_token.type === TOKEN.END_EXPR) && (open_token && (current_token.text === "]" && open_token.text === "[" || current_token.text === ")" && open_token.text === "(" || current_token.text === "}" && open_token.text === "{"));
+    };
+    Tokenizer.prototype._reset = function() {
+      in_html_comment = false;
+    };
+    Tokenizer.prototype._get_next_token = function(previous_token, open_token) {
+      var token = null;
+      this._readWhitespace();
+      var c = this._input.peek();
+      if (c === null) {
+        return this._create_token(TOKEN.EOF, "");
+      }
+      token = token || this._read_non_javascript(c);
+      token = token || this._read_string(c);
+      token = token || this._read_word(previous_token);
+      token = token || this._read_singles(c);
+      token = token || this._read_comment(c);
+      token = token || this._read_regexp(c, previous_token);
+      token = token || this._read_xml(c, previous_token);
+      token = token || this._read_punctuation();
+      token = token || this._create_token(TOKEN.UNKNOWN, this._input.next());
+      return token;
+    };
+    Tokenizer.prototype._read_word = function(previous_token) {
+      var resulting_string;
+      resulting_string = this.__patterns.identifier.read();
+      if (resulting_string !== "") {
+        resulting_string = resulting_string.replace(acorn.allLineBreaks, "\n");
+        if (!(previous_token.type === TOKEN.DOT || previous_token.type === TOKEN.RESERVED && (previous_token.text === "set" || previous_token.text === "get")) && reserved_word_pattern.test(resulting_string)) {
+          if ((resulting_string === "in" || resulting_string === "of") && (previous_token.type === TOKEN.WORD || previous_token.type === TOKEN.STRING)) {
+            return this._create_token(TOKEN.OPERATOR, resulting_string);
+          }
+          return this._create_token(TOKEN.RESERVED, resulting_string);
+        }
+        return this._create_token(TOKEN.WORD, resulting_string);
+      }
+      resulting_string = this.__patterns.number.read();
+      if (resulting_string !== "") {
+        return this._create_token(TOKEN.WORD, resulting_string);
+      }
+    };
+    Tokenizer.prototype._read_singles = function(c) {
+      var token = null;
+      if (c === "(" || c === "[") {
+        token = this._create_token(TOKEN.START_EXPR, c);
+      } else if (c === ")" || c === "]") {
+        token = this._create_token(TOKEN.END_EXPR, c);
+      } else if (c === "{") {
+        token = this._create_token(TOKEN.START_BLOCK, c);
+      } else if (c === "}") {
+        token = this._create_token(TOKEN.END_BLOCK, c);
+      } else if (c === ";") {
+        token = this._create_token(TOKEN.SEMICOLON, c);
+      } else if (c === "." && dot_pattern.test(this._input.peek(1))) {
+        token = this._create_token(TOKEN.DOT, c);
+      } else if (c === ",") {
+        token = this._create_token(TOKEN.COMMA, c);
+      }
+      if (token) {
+        this._input.next();
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_punctuation = function() {
+      var resulting_string = this.__patterns.punct.read();
+      if (resulting_string !== "") {
+        if (resulting_string === "=") {
+          return this._create_token(TOKEN.EQUALS, resulting_string);
+        } else if (resulting_string === "?.") {
+          return this._create_token(TOKEN.DOT, resulting_string);
+        } else {
+          return this._create_token(TOKEN.OPERATOR, resulting_string);
+        }
+      }
+    };
+    Tokenizer.prototype._read_non_javascript = function(c) {
+      var resulting_string = "";
+      if (c === "#") {
+        if (this._is_first_token()) {
+          resulting_string = this.__patterns.shebang.read();
+          if (resulting_string) {
+            return this._create_token(TOKEN.UNKNOWN, resulting_string.trim() + "\n");
+          }
+        }
+        resulting_string = this.__patterns.include.read();
+        if (resulting_string) {
+          return this._create_token(TOKEN.UNKNOWN, resulting_string.trim() + "\n");
+        }
+        c = this._input.next();
+        var sharp = "#";
+        if (this._input.hasNext() && this._input.testChar(digit)) {
+          do {
+            c = this._input.next();
+            sharp += c;
+          } while (this._input.hasNext() && c !== "#" && c !== "=");
+          if (c === "#") {
+          } else if (this._input.peek() === "[" && this._input.peek(1) === "]") {
+            sharp += "[]";
+            this._input.next();
+            this._input.next();
+          } else if (this._input.peek() === "{" && this._input.peek(1) === "}") {
+            sharp += "{}";
+            this._input.next();
+            this._input.next();
+          }
+          return this._create_token(TOKEN.WORD, sharp);
+        }
+        this._input.back();
+      } else if (c === "<" && this._is_first_token()) {
+        resulting_string = this.__patterns.html_comment_start.read();
+        if (resulting_string) {
+          while (this._input.hasNext() && !this._input.testChar(acorn.newline)) {
+            resulting_string += this._input.next();
+          }
+          in_html_comment = true;
+          return this._create_token(TOKEN.COMMENT, resulting_string);
+        }
+      } else if (in_html_comment && c === "-") {
+        resulting_string = this.__patterns.html_comment_end.read();
+        if (resulting_string) {
+          in_html_comment = false;
+          return this._create_token(TOKEN.COMMENT, resulting_string);
+        }
+      }
+      return null;
+    };
+    Tokenizer.prototype._read_comment = function(c) {
+      var token = null;
+      if (c === "/") {
+        var comment = "";
+        if (this._input.peek(1) === "*") {
+          comment = this.__patterns.block_comment.read();
+          var directives = directives_core.get_directives(comment);
+          if (directives && directives.ignore === "start") {
+            comment += directives_core.readIgnored(this._input);
+          }
+          comment = comment.replace(acorn.allLineBreaks, "\n");
+          token = this._create_token(TOKEN.BLOCK_COMMENT, comment);
+          token.directives = directives;
+        } else if (this._input.peek(1) === "/") {
+          comment = this.__patterns.comment.read();
+          token = this._create_token(TOKEN.COMMENT, comment);
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_string = function(c) {
+      if (c === "`" || c === "'" || c === '"') {
+        var resulting_string = this._input.next();
+        this.has_char_escapes = false;
+        if (c === "`") {
+          resulting_string += this._read_string_recursive("`", true, "${");
+        } else {
+          resulting_string += this._read_string_recursive(c);
+        }
+        if (this.has_char_escapes && this._options.unescape_strings) {
+          resulting_string = unescape_string(resulting_string);
+        }
+        if (this._input.peek() === c) {
+          resulting_string += this._input.next();
+        }
+        resulting_string = resulting_string.replace(acorn.allLineBreaks, "\n");
+        return this._create_token(TOKEN.STRING, resulting_string);
+      }
+      return null;
+    };
+    Tokenizer.prototype._allow_regexp_or_xml = function(previous_token) {
+      return previous_token.type === TOKEN.RESERVED && in_array(previous_token.text, ["return", "case", "throw", "else", "do", "typeof", "yield"]) || previous_token.type === TOKEN.END_EXPR && previous_token.text === ")" && previous_token.opened.previous.type === TOKEN.RESERVED && in_array(previous_token.opened.previous.text, ["if", "while", "for"]) || in_array(previous_token.type, [
+        TOKEN.COMMENT,
+        TOKEN.START_EXPR,
+        TOKEN.START_BLOCK,
+        TOKEN.START,
+        TOKEN.END_BLOCK,
+        TOKEN.OPERATOR,
+        TOKEN.EQUALS,
+        TOKEN.EOF,
+        TOKEN.SEMICOLON,
+        TOKEN.COMMA
+      ]);
+    };
+    Tokenizer.prototype._read_regexp = function(c, previous_token) {
+      if (c === "/" && this._allow_regexp_or_xml(previous_token)) {
+        var resulting_string = this._input.next();
+        var esc = false;
+        var in_char_class = false;
+        while (this._input.hasNext() && ((esc || in_char_class || this._input.peek() !== c) && !this._input.testChar(acorn.newline))) {
+          resulting_string += this._input.peek();
+          if (!esc) {
+            esc = this._input.peek() === "\\";
+            if (this._input.peek() === "[") {
+              in_char_class = true;
+            } else if (this._input.peek() === "]") {
+              in_char_class = false;
+            }
+          } else {
+            esc = false;
+          }
+          this._input.next();
+        }
+        if (this._input.peek() === c) {
+          resulting_string += this._input.next();
+          resulting_string += this._input.read(acorn.identifier);
+        }
+        return this._create_token(TOKEN.STRING, resulting_string);
+      }
+      return null;
+    };
+    Tokenizer.prototype._read_xml = function(c, previous_token) {
+      if (this._options.e4x && c === "<" && this._allow_regexp_or_xml(previous_token)) {
+        var xmlStr = "";
+        var match = this.__patterns.xml.read_match();
+        if (match) {
+          var rootTag = match[2].replace(/^{\s+/, "{").replace(/\s+}$/, "}");
+          var isCurlyRoot = rootTag.indexOf("{") === 0;
+          var depth = 0;
+          while (match) {
+            var isEndTag = !!match[1];
+            var tagName = match[2];
+            var isSingletonTag = !!match[match.length - 1] || tagName.slice(0, 8) === "![CDATA[";
+            if (!isSingletonTag && (tagName === rootTag || isCurlyRoot && tagName.replace(/^{\s+/, "{").replace(/\s+}$/, "}"))) {
+              if (isEndTag) {
+                --depth;
+              } else {
+                ++depth;
+              }
+            }
+            xmlStr += match[0];
+            if (depth <= 0) {
+              break;
+            }
+            match = this.__patterns.xml.read_match();
+          }
+          if (!match) {
+            xmlStr += this._input.match(/[\s\S]*/g)[0];
+          }
+          xmlStr = xmlStr.replace(acorn.allLineBreaks, "\n");
+          return this._create_token(TOKEN.STRING, xmlStr);
+        }
+      }
+      return null;
+    };
+    function unescape_string(s) {
+      var out = "", escaped = 0;
+      var input_scan = new InputScanner(s);
+      var matched = null;
+      while (input_scan.hasNext()) {
+        matched = input_scan.match(/([\s]|[^\\]|\\\\)+/g);
+        if (matched) {
+          out += matched[0];
+        }
+        if (input_scan.peek() === "\\") {
+          input_scan.next();
+          if (input_scan.peek() === "x") {
+            matched = input_scan.match(/x([0-9A-Fa-f]{2})/g);
+          } else if (input_scan.peek() === "u") {
+            matched = input_scan.match(/u([0-9A-Fa-f]{4})/g);
+          } else {
+            out += "\\";
+            if (input_scan.hasNext()) {
+              out += input_scan.next();
+            }
+            continue;
+          }
+          if (!matched) {
+            return s;
+          }
+          escaped = parseInt(matched[1], 16);
+          if (escaped > 126 && escaped <= 255 && matched[0].indexOf("x") === 0) {
+            return s;
+          } else if (escaped >= 0 && escaped < 32) {
+            out += "\\" + matched[0];
+            continue;
+          } else if (escaped === 34 || escaped === 39 || escaped === 92) {
+            out += "\\" + String.fromCharCode(escaped);
+          } else {
+            out += String.fromCharCode(escaped);
+          }
+        }
+      }
+      return out;
+    }
+    Tokenizer.prototype._read_string_recursive = function(delimiter, allow_unescaped_newlines, start_sub) {
+      var current_char;
+      var pattern;
+      if (delimiter === "'") {
+        pattern = this.__patterns.single_quote;
+      } else if (delimiter === '"') {
+        pattern = this.__patterns.double_quote;
+      } else if (delimiter === "`") {
+        pattern = this.__patterns.template_text;
+      } else if (delimiter === "}") {
+        pattern = this.__patterns.template_expression;
+      }
+      var resulting_string = pattern.read();
+      var next = "";
+      while (this._input.hasNext()) {
+        next = this._input.next();
+        if (next === delimiter || !allow_unescaped_newlines && acorn.newline.test(next)) {
+          this._input.back();
+          break;
+        } else if (next === "\\" && this._input.hasNext()) {
+          current_char = this._input.peek();
+          if (current_char === "x" || current_char === "u") {
+            this.has_char_escapes = true;
+          } else if (current_char === "\r" && this._input.peek(1) === "\n") {
+            this._input.next();
+          }
+          next += this._input.next();
+        } else if (start_sub) {
+          if (start_sub === "${" && next === "$" && this._input.peek() === "{") {
+            next += this._input.next();
+          }
+          if (start_sub === next) {
+            if (delimiter === "`") {
+              next += this._read_string_recursive("}", allow_unescaped_newlines, "`");
+            } else {
+              next += this._read_string_recursive("`", allow_unescaped_newlines, "${");
+            }
+            if (this._input.hasNext()) {
+              next += this._input.next();
+            }
+          }
+        }
+        next += pattern.read();
+        resulting_string += next;
+      }
+      return resulting_string;
+    };
+    module2.exports.Tokenizer = Tokenizer;
+    module2.exports.TOKEN = TOKEN;
+    module2.exports.positionable_operators = positionable_operators.slice();
+    module2.exports.line_starters = line_starters.slice();
+  }
+});
+
+// node_modules/js-beautify/js/src/javascript/beautifier.js
+var require_beautifier = __commonJS({
+  "node_modules/js-beautify/js/src/javascript/beautifier.js"(exports, module2) {
+    "use strict";
+    var Output = require_output().Output;
+    var Token = require_token().Token;
+    var acorn = require_acorn();
+    var Options = require_options2().Options;
+    var Tokenizer = require_tokenizer2().Tokenizer;
+    var line_starters = require_tokenizer2().line_starters;
+    var positionable_operators = require_tokenizer2().positionable_operators;
+    var TOKEN = require_tokenizer2().TOKEN;
+    function in_array(what, arr) {
+      return arr.indexOf(what) !== -1;
+    }
+    function ltrim(s) {
+      return s.replace(/^\s+/g, "");
+    }
+    function generateMapFromStrings(list) {
+      var result = {};
+      for (var x = 0; x < list.length; x++) {
+        result[list[x].replace(/-/g, "_")] = list[x];
+      }
+      return result;
+    }
+    function reserved_word(token, word) {
+      return token && token.type === TOKEN.RESERVED && token.text === word;
+    }
+    function reserved_array(token, words) {
+      return token && token.type === TOKEN.RESERVED && in_array(token.text, words);
+    }
+    var special_words = ["case", "return", "do", "if", "throw", "else", "await", "break", "continue", "async"];
+    var validPositionValues = ["before-newline", "after-newline", "preserve-newline"];
+    var OPERATOR_POSITION = generateMapFromStrings(validPositionValues);
+    var OPERATOR_POSITION_BEFORE_OR_PRESERVE = [OPERATOR_POSITION.before_newline, OPERATOR_POSITION.preserve_newline];
+    var MODE = {
+      BlockStatement: "BlockStatement",
+      Statement: "Statement",
+      ObjectLiteral: "ObjectLiteral",
+      ArrayLiteral: "ArrayLiteral",
+      ForInitializer: "ForInitializer",
+      Conditional: "Conditional",
+      Expression: "Expression"
+    };
+    function remove_redundant_indentation(output, frame) {
+      if (frame.multiline_frame || frame.mode === MODE.ForInitializer || frame.mode === MODE.Conditional) {
+        return;
+      }
+      output.remove_indent(frame.start_line_index);
+    }
+    function split_linebreaks(s) {
+      s = s.replace(acorn.allLineBreaks, "\n");
+      var out = [], idx = s.indexOf("\n");
+      while (idx !== -1) {
+        out.push(s.substring(0, idx));
+        s = s.substring(idx + 1);
+        idx = s.indexOf("\n");
+      }
+      if (s.length) {
+        out.push(s);
+      }
+      return out;
+    }
+    function is_array(mode) {
+      return mode === MODE.ArrayLiteral;
+    }
+    function is_expression(mode) {
+      return in_array(mode, [MODE.Expression, MODE.ForInitializer, MODE.Conditional]);
+    }
+    function all_lines_start_with(lines, c) {
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (line.charAt(0) !== c) {
+          return false;
+        }
+      }
+      return true;
+    }
+    function each_line_matches_indent(lines, indent) {
+      var i = 0, len = lines.length, line;
+      for (; i < len; i++) {
+        line = lines[i];
+        if (line && line.indexOf(indent) !== 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+    function Beautifier(source_text, options) {
+      options = options || {};
+      this._source_text = source_text || "";
+      this._output = null;
+      this._tokens = null;
+      this._last_last_text = null;
+      this._flags = null;
+      this._previous_flags = null;
+      this._flag_store = null;
+      this._options = new Options(options);
+    }
+    Beautifier.prototype.create_flags = function(flags_base, mode) {
+      var next_indent_level = 0;
+      if (flags_base) {
+        next_indent_level = flags_base.indentation_level;
+        if (!this._output.just_added_newline() && flags_base.line_indent_level > next_indent_level) {
+          next_indent_level = flags_base.line_indent_level;
+        }
+      }
+      var next_flags = {
+        mode,
+        parent: flags_base,
+        last_token: flags_base ? flags_base.last_token : new Token(TOKEN.START_BLOCK, ""),
+        last_word: flags_base ? flags_base.last_word : "",
+        declaration_statement: false,
+        declaration_assignment: false,
+        multiline_frame: false,
+        inline_frame: false,
+        if_block: false,
+        else_block: false,
+        class_start_block: false,
+        do_block: false,
+        do_while: false,
+        import_block: false,
+        in_case_statement: false,
+        in_case: false,
+        case_body: false,
+        case_block: false,
+        indentation_level: next_indent_level,
+        alignment: 0,
+        line_indent_level: flags_base ? flags_base.line_indent_level : next_indent_level,
+        start_line_index: this._output.get_line_number(),
+        ternary_depth: 0
+      };
+      return next_flags;
+    };
+    Beautifier.prototype._reset = function(source_text) {
+      var baseIndentString = source_text.match(/^[\t ]*/)[0];
+      this._last_last_text = "";
+      this._output = new Output(this._options, baseIndentString);
+      this._output.raw = this._options.test_output_raw;
+      this._flag_store = [];
+      this.set_mode(MODE.BlockStatement);
+      var tokenizer = new Tokenizer(source_text, this._options);
+      this._tokens = tokenizer.tokenize();
+      return source_text;
+    };
+    Beautifier.prototype.beautify = function() {
+      if (this._options.disabled) {
+        return this._source_text;
+      }
+      var sweet_code;
+      var source_text = this._reset(this._source_text);
+      var eol = this._options.eol;
+      if (this._options.eol === "auto") {
+        eol = "\n";
+        if (source_text && acorn.lineBreak.test(source_text || "")) {
+          eol = source_text.match(acorn.lineBreak)[0];
+        }
+      }
+      var current_token = this._tokens.next();
+      while (current_token) {
+        this.handle_token(current_token);
+        this._last_last_text = this._flags.last_token.text;
+        this._flags.last_token = current_token;
+        current_token = this._tokens.next();
+      }
+      sweet_code = this._output.get_code(eol);
+      return sweet_code;
+    };
+    Beautifier.prototype.handle_token = function(current_token, preserve_statement_flags) {
+      if (current_token.type === TOKEN.START_EXPR) {
+        this.handle_start_expr(current_token);
+      } else if (current_token.type === TOKEN.END_EXPR) {
+        this.handle_end_expr(current_token);
+      } else if (current_token.type === TOKEN.START_BLOCK) {
+        this.handle_start_block(current_token);
+      } else if (current_token.type === TOKEN.END_BLOCK) {
+        this.handle_end_block(current_token);
+      } else if (current_token.type === TOKEN.WORD) {
+        this.handle_word(current_token);
+      } else if (current_token.type === TOKEN.RESERVED) {
+        this.handle_word(current_token);
+      } else if (current_token.type === TOKEN.SEMICOLON) {
+        this.handle_semicolon(current_token);
+      } else if (current_token.type === TOKEN.STRING) {
+        this.handle_string(current_token);
+      } else if (current_token.type === TOKEN.EQUALS) {
+        this.handle_equals(current_token);
+      } else if (current_token.type === TOKEN.OPERATOR) {
+        this.handle_operator(current_token);
+      } else if (current_token.type === TOKEN.COMMA) {
+        this.handle_comma(current_token);
+      } else if (current_token.type === TOKEN.BLOCK_COMMENT) {
+        this.handle_block_comment(current_token, preserve_statement_flags);
+      } else if (current_token.type === TOKEN.COMMENT) {
+        this.handle_comment(current_token, preserve_statement_flags);
+      } else if (current_token.type === TOKEN.DOT) {
+        this.handle_dot(current_token);
+      } else if (current_token.type === TOKEN.EOF) {
+        this.handle_eof(current_token);
+      } else if (current_token.type === TOKEN.UNKNOWN) {
+        this.handle_unknown(current_token, preserve_statement_flags);
+      } else {
+        this.handle_unknown(current_token, preserve_statement_flags);
+      }
+    };
+    Beautifier.prototype.handle_whitespace_and_comments = function(current_token, preserve_statement_flags) {
+      var newlines = current_token.newlines;
+      var keep_whitespace = this._options.keep_array_indentation && is_array(this._flags.mode);
+      if (current_token.comments_before) {
+        var comment_token = current_token.comments_before.next();
+        while (comment_token) {
+          this.handle_whitespace_and_comments(comment_token, preserve_statement_flags);
+          this.handle_token(comment_token, preserve_statement_flags);
+          comment_token = current_token.comments_before.next();
+        }
+      }
+      if (keep_whitespace) {
+        for (var i = 0; i < newlines; i += 1) {
+          this.print_newline(i > 0, preserve_statement_flags);
+        }
+      } else {
+        if (this._options.max_preserve_newlines && newlines > this._options.max_preserve_newlines) {
+          newlines = this._options.max_preserve_newlines;
+        }
+        if (this._options.preserve_newlines) {
+          if (newlines > 1) {
+            this.print_newline(false, preserve_statement_flags);
+            for (var j = 1; j < newlines; j += 1) {
+              this.print_newline(true, preserve_statement_flags);
+            }
+          }
+        }
+      }
+    };
+    var newline_restricted_tokens = ["async", "break", "continue", "return", "throw", "yield"];
+    Beautifier.prototype.allow_wrap_or_preserved_newline = function(current_token, force_linewrap) {
+      force_linewrap = force_linewrap === void 0 ? false : force_linewrap;
+      if (this._output.just_added_newline()) {
+        return;
+      }
+      var shouldPreserveOrForce = this._options.preserve_newlines && current_token.newlines || force_linewrap;
+      var operatorLogicApplies = in_array(this._flags.last_token.text, positionable_operators) || in_array(current_token.text, positionable_operators);
+      if (operatorLogicApplies) {
+        var shouldPrintOperatorNewline = in_array(this._flags.last_token.text, positionable_operators) && in_array(this._options.operator_position, OPERATOR_POSITION_BEFORE_OR_PRESERVE) || in_array(current_token.text, positionable_operators);
+        shouldPreserveOrForce = shouldPreserveOrForce && shouldPrintOperatorNewline;
+      }
+      if (shouldPreserveOrForce) {
+        this.print_newline(false, true);
+      } else if (this._options.wrap_line_length) {
+        if (reserved_array(this._flags.last_token, newline_restricted_tokens)) {
+          return;
+        }
+        this._output.set_wrap_point();
+      }
+    };
+    Beautifier.prototype.print_newline = function(force_newline, preserve_statement_flags) {
+      if (!preserve_statement_flags) {
+        if (this._flags.last_token.text !== ";" && this._flags.last_token.text !== "," && this._flags.last_token.text !== "=" && (this._flags.last_token.type !== TOKEN.OPERATOR || this._flags.last_token.text === "--" || this._flags.last_token.text === "++")) {
+          var next_token = this._tokens.peek();
+          while (this._flags.mode === MODE.Statement && !(this._flags.if_block && reserved_word(next_token, "else")) && !this._flags.do_block) {
+            this.restore_mode();
+          }
+        }
+      }
+      if (this._output.add_new_line(force_newline)) {
+        this._flags.multiline_frame = true;
+      }
+    };
+    Beautifier.prototype.print_token_line_indentation = function(current_token) {
+      if (this._output.just_added_newline()) {
+        if (this._options.keep_array_indentation && current_token.newlines && (current_token.text === "[" || is_array(this._flags.mode))) {
+          this._output.current_line.set_indent(-1);
+          this._output.current_line.push(current_token.whitespace_before);
+          this._output.space_before_token = false;
+        } else if (this._output.set_indent(this._flags.indentation_level, this._flags.alignment)) {
+          this._flags.line_indent_level = this._flags.indentation_level;
+        }
+      }
+    };
+    Beautifier.prototype.print_token = function(current_token) {
+      if (this._output.raw) {
+        this._output.add_raw_token(current_token);
+        return;
+      }
+      if (this._options.comma_first && current_token.previous && current_token.previous.type === TOKEN.COMMA && this._output.just_added_newline()) {
+        if (this._output.previous_line.last() === ",") {
+          var popped = this._output.previous_line.pop();
+          if (this._output.previous_line.is_empty()) {
+            this._output.previous_line.push(popped);
+            this._output.trim(true);
+            this._output.current_line.pop();
+            this._output.trim();
+          }
+          this.print_token_line_indentation(current_token);
+          this._output.add_token(",");
+          this._output.space_before_token = true;
+        }
+      }
+      this.print_token_line_indentation(current_token);
+      this._output.non_breaking_space = true;
+      this._output.add_token(current_token.text);
+      if (this._output.previous_token_wrapped) {
+        this._flags.multiline_frame = true;
+      }
+    };
+    Beautifier.prototype.indent = function() {
+      this._flags.indentation_level += 1;
+      this._output.set_indent(this._flags.indentation_level, this._flags.alignment);
+    };
+    Beautifier.prototype.deindent = function() {
+      if (this._flags.indentation_level > 0 && (!this._flags.parent || this._flags.indentation_level > this._flags.parent.indentation_level)) {
+        this._flags.indentation_level -= 1;
+        this._output.set_indent(this._flags.indentation_level, this._flags.alignment);
+      }
+    };
+    Beautifier.prototype.set_mode = function(mode) {
+      if (this._flags) {
+        this._flag_store.push(this._flags);
+        this._previous_flags = this._flags;
+      } else {
+        this._previous_flags = this.create_flags(null, mode);
+      }
+      this._flags = this.create_flags(this._previous_flags, mode);
+      this._output.set_indent(this._flags.indentation_level, this._flags.alignment);
+    };
+    Beautifier.prototype.restore_mode = function() {
+      if (this._flag_store.length > 0) {
+        this._previous_flags = this._flags;
+        this._flags = this._flag_store.pop();
+        if (this._previous_flags.mode === MODE.Statement) {
+          remove_redundant_indentation(this._output, this._previous_flags);
+        }
+        this._output.set_indent(this._flags.indentation_level, this._flags.alignment);
+      }
+    };
+    Beautifier.prototype.start_of_object_property = function() {
+      return this._flags.parent.mode === MODE.ObjectLiteral && this._flags.mode === MODE.Statement && (this._flags.last_token.text === ":" && this._flags.ternary_depth === 0 || reserved_array(this._flags.last_token, ["get", "set"]));
+    };
+    Beautifier.prototype.start_of_statement = function(current_token) {
+      var start = false;
+      start = start || reserved_array(this._flags.last_token, ["var", "let", "const"]) && current_token.type === TOKEN.WORD;
+      start = start || reserved_word(this._flags.last_token, "do");
+      start = start || !(this._flags.parent.mode === MODE.ObjectLiteral && this._flags.mode === MODE.Statement) && reserved_array(this._flags.last_token, newline_restricted_tokens) && !current_token.newlines;
+      start = start || reserved_word(this._flags.last_token, "else") && !(reserved_word(current_token, "if") && !current_token.comments_before);
+      start = start || this._flags.last_token.type === TOKEN.END_EXPR && (this._previous_flags.mode === MODE.ForInitializer || this._previous_flags.mode === MODE.Conditional);
+      start = start || this._flags.last_token.type === TOKEN.WORD && this._flags.mode === MODE.BlockStatement && !this._flags.in_case && !(current_token.text === "--" || current_token.text === "++") && this._last_last_text !== "function" && current_token.type !== TOKEN.WORD && current_token.type !== TOKEN.RESERVED;
+      start = start || this._flags.mode === MODE.ObjectLiteral && (this._flags.last_token.text === ":" && this._flags.ternary_depth === 0 || reserved_array(this._flags.last_token, ["get", "set"]));
+      if (start) {
+        this.set_mode(MODE.Statement);
+        this.indent();
+        this.handle_whitespace_and_comments(current_token, true);
+        if (!this.start_of_object_property()) {
+          this.allow_wrap_or_preserved_newline(current_token, reserved_array(current_token, ["do", "for", "if", "while"]));
+        }
+        return true;
+      }
+      return false;
+    };
+    Beautifier.prototype.handle_start_expr = function(current_token) {
+      if (!this.start_of_statement(current_token)) {
+        this.handle_whitespace_and_comments(current_token);
+      }
+      var next_mode = MODE.Expression;
+      if (current_token.text === "[") {
+        if (this._flags.last_token.type === TOKEN.WORD || this._flags.last_token.text === ")") {
+          if (reserved_array(this._flags.last_token, line_starters)) {
+            this._output.space_before_token = true;
+          }
+          this.print_token(current_token);
+          this.set_mode(next_mode);
+          this.indent();
+          if (this._options.space_in_paren) {
+            this._output.space_before_token = true;
+          }
+          return;
+        }
+        next_mode = MODE.ArrayLiteral;
+        if (is_array(this._flags.mode)) {
+          if (this._flags.last_token.text === "[" || this._flags.last_token.text === "," && (this._last_last_text === "]" || this._last_last_text === "}")) {
+            if (!this._options.keep_array_indentation) {
+              this.print_newline();
+            }
+          }
+        }
+        if (!in_array(this._flags.last_token.type, [TOKEN.START_EXPR, TOKEN.END_EXPR, TOKEN.WORD, TOKEN.OPERATOR, TOKEN.DOT])) {
+          this._output.space_before_token = true;
+        }
+      } else {
+        if (this._flags.last_token.type === TOKEN.RESERVED) {
+          if (this._flags.last_token.text === "for") {
+            this._output.space_before_token = this._options.space_before_conditional;
+            next_mode = MODE.ForInitializer;
+          } else if (in_array(this._flags.last_token.text, ["if", "while", "switch"])) {
+            this._output.space_before_token = this._options.space_before_conditional;
+            next_mode = MODE.Conditional;
+          } else if (in_array(this._flags.last_word, ["await", "async"])) {
+            this._output.space_before_token = true;
+          } else if (this._flags.last_token.text === "import" && current_token.whitespace_before === "") {
+            this._output.space_before_token = false;
+          } else if (in_array(this._flags.last_token.text, line_starters) || this._flags.last_token.text === "catch") {
+            this._output.space_before_token = true;
+          }
+        } else if (this._flags.last_token.type === TOKEN.EQUALS || this._flags.last_token.type === TOKEN.OPERATOR) {
+          if (!this.start_of_object_property()) {
+            this.allow_wrap_or_preserved_newline(current_token);
+          }
+        } else if (this._flags.last_token.type === TOKEN.WORD) {
+          this._output.space_before_token = false;
+          var peek_back_two = this._tokens.peek(-3);
+          if (this._options.space_after_named_function && peek_back_two) {
+            var peek_back_three = this._tokens.peek(-4);
+            if (reserved_array(peek_back_two, ["async", "function"]) || peek_back_two.text === "*" && reserved_array(peek_back_three, ["async", "function"])) {
+              this._output.space_before_token = true;
+            } else if (this._flags.mode === MODE.ObjectLiteral) {
+              if (peek_back_two.text === "{" || peek_back_two.text === "," || peek_back_two.text === "*" && (peek_back_three.text === "{" || peek_back_three.text === ",")) {
+                this._output.space_before_token = true;
+              }
+            } else if (this._flags.parent && this._flags.parent.class_start_block) {
+              this._output.space_before_token = true;
+            }
+          }
+        } else {
+          this.allow_wrap_or_preserved_newline(current_token);
+        }
+        if (this._flags.last_token.type === TOKEN.RESERVED && (this._flags.last_word === "function" || this._flags.last_word === "typeof") || this._flags.last_token.text === "*" && (in_array(this._last_last_text, ["function", "yield"]) || this._flags.mode === MODE.ObjectLiteral && in_array(this._last_last_text, ["{", ","]))) {
+          this._output.space_before_token = this._options.space_after_anon_function;
+        }
+      }
+      if (this._flags.last_token.text === ";" || this._flags.last_token.type === TOKEN.START_BLOCK) {
+        this.print_newline();
+      } else if (this._flags.last_token.type === TOKEN.END_EXPR || this._flags.last_token.type === TOKEN.START_EXPR || this._flags.last_token.type === TOKEN.END_BLOCK || this._flags.last_token.text === "." || this._flags.last_token.type === TOKEN.COMMA) {
+        this.allow_wrap_or_preserved_newline(current_token, current_token.newlines);
+      }
+      this.print_token(current_token);
+      this.set_mode(next_mode);
+      if (this._options.space_in_paren) {
+        this._output.space_before_token = true;
+      }
+      this.indent();
+    };
+    Beautifier.prototype.handle_end_expr = function(current_token) {
+      while (this._flags.mode === MODE.Statement) {
+        this.restore_mode();
+      }
+      this.handle_whitespace_and_comments(current_token);
+      if (this._flags.multiline_frame) {
+        this.allow_wrap_or_preserved_newline(current_token, current_token.text === "]" && is_array(this._flags.mode) && !this._options.keep_array_indentation);
+      }
+      if (this._options.space_in_paren) {
+        if (this._flags.last_token.type === TOKEN.START_EXPR && !this._options.space_in_empty_paren) {
+          this._output.trim();
+          this._output.space_before_token = false;
+        } else {
+          this._output.space_before_token = true;
+        }
+      }
+      this.deindent();
+      this.print_token(current_token);
+      this.restore_mode();
+      remove_redundant_indentation(this._output, this._previous_flags);
+      if (this._flags.do_while && this._previous_flags.mode === MODE.Conditional) {
+        this._previous_flags.mode = MODE.Expression;
+        this._flags.do_block = false;
+        this._flags.do_while = false;
+      }
+    };
+    Beautifier.prototype.handle_start_block = function(current_token) {
+      this.handle_whitespace_and_comments(current_token);
+      var next_token = this._tokens.peek();
+      var second_token = this._tokens.peek(1);
+      if (this._flags.last_word === "switch" && this._flags.last_token.type === TOKEN.END_EXPR) {
+        this.set_mode(MODE.BlockStatement);
+        this._flags.in_case_statement = true;
+      } else if (this._flags.case_body) {
+        this.set_mode(MODE.BlockStatement);
+      } else if (second_token && (in_array(second_token.text, [":", ","]) && in_array(next_token.type, [TOKEN.STRING, TOKEN.WORD, TOKEN.RESERVED]) || in_array(next_token.text, ["get", "set", "..."]) && in_array(second_token.type, [TOKEN.WORD, TOKEN.RESERVED]))) {
+        if (in_array(this._last_last_text, ["class", "interface"]) && !in_array(second_token.text, [":", ","])) {
+          this.set_mode(MODE.BlockStatement);
+        } else {
+          this.set_mode(MODE.ObjectLiteral);
+        }
+      } else if (this._flags.last_token.type === TOKEN.OPERATOR && this._flags.last_token.text === "=>") {
+        this.set_mode(MODE.BlockStatement);
+      } else if (in_array(this._flags.last_token.type, [TOKEN.EQUALS, TOKEN.START_EXPR, TOKEN.COMMA, TOKEN.OPERATOR]) || reserved_array(this._flags.last_token, ["return", "throw", "import", "default"])) {
+        this.set_mode(MODE.ObjectLiteral);
+      } else {
+        this.set_mode(MODE.BlockStatement);
+      }
+      if (this._flags.last_token) {
+        if (reserved_array(this._flags.last_token.previous, ["class", "extends"])) {
+          this._flags.class_start_block = true;
+        }
+      }
+      var empty_braces = !next_token.comments_before && next_token.text === "}";
+      var empty_anonymous_function = empty_braces && this._flags.last_word === "function" && this._flags.last_token.type === TOKEN.END_EXPR;
+      if (this._options.brace_preserve_inline) {
+        var index = 0;
+        var check_token = null;
+        this._flags.inline_frame = true;
+        do {
+          index += 1;
+          check_token = this._tokens.peek(index - 1);
+          if (check_token.newlines) {
+            this._flags.inline_frame = false;
+            break;
+          }
+        } while (check_token.type !== TOKEN.EOF && !(check_token.type === TOKEN.END_BLOCK && check_token.opened === current_token));
+      }
+      if ((this._options.brace_style === "expand" || this._options.brace_style === "none" && current_token.newlines) && !this._flags.inline_frame) {
+        if (this._flags.last_token.type !== TOKEN.OPERATOR && (empty_anonymous_function || this._flags.last_token.type === TOKEN.EQUALS || reserved_array(this._flags.last_token, special_words) && this._flags.last_token.text !== "else")) {
+          this._output.space_before_token = true;
+        } else {
+          this.print_newline(false, true);
+        }
+      } else {
+        if (is_array(this._previous_flags.mode) && (this._flags.last_token.type === TOKEN.START_EXPR || this._flags.last_token.type === TOKEN.COMMA)) {
+          if (this._flags.last_token.type === TOKEN.COMMA || this._options.space_in_paren) {
+            this._output.space_before_token = true;
+          }
+          if (this._flags.last_token.type === TOKEN.COMMA || this._flags.last_token.type === TOKEN.START_EXPR && this._flags.inline_frame) {
+            this.allow_wrap_or_preserved_newline(current_token);
+            this._previous_flags.multiline_frame = this._previous_flags.multiline_frame || this._flags.multiline_frame;
+            this._flags.multiline_frame = false;
+          }
+        }
+        if (this._flags.last_token.type !== TOKEN.OPERATOR && this._flags.last_token.type !== TOKEN.START_EXPR) {
+          if (this._flags.last_token.type === TOKEN.START_BLOCK && !this._flags.inline_frame) {
+            this.print_newline();
+          } else {
+            this._output.space_before_token = true;
+          }
+        }
+      }
+      this.print_token(current_token);
+      this.indent();
+      if (!empty_braces && !(this._options.brace_preserve_inline && this._flags.inline_frame)) {
+        this.print_newline();
+      }
+    };
+    Beautifier.prototype.handle_end_block = function(current_token) {
+      this.handle_whitespace_and_comments(current_token);
+      while (this._flags.mode === MODE.Statement) {
+        this.restore_mode();
+      }
+      var empty_braces = this._flags.last_token.type === TOKEN.START_BLOCK;
+      if (this._flags.inline_frame && !empty_braces) {
+        this._output.space_before_token = true;
+      } else if (this._options.brace_style === "expand") {
+        if (!empty_braces) {
+          this.print_newline();
+        }
+      } else {
+        if (!empty_braces) {
+          if (is_array(this._flags.mode) && this._options.keep_array_indentation) {
+            this._options.keep_array_indentation = false;
+            this.print_newline();
+            this._options.keep_array_indentation = true;
+          } else {
+            this.print_newline();
+          }
+        }
+      }
+      this.restore_mode();
+      this.print_token(current_token);
+    };
+    Beautifier.prototype.handle_word = function(current_token) {
+      if (current_token.type === TOKEN.RESERVED) {
+        if (in_array(current_token.text, ["set", "get"]) && this._flags.mode !== MODE.ObjectLiteral) {
+          current_token.type = TOKEN.WORD;
+        } else if (current_token.text === "import" && in_array(this._tokens.peek().text, ["(", "."])) {
+          current_token.type = TOKEN.WORD;
+        } else if (in_array(current_token.text, ["as", "from"]) && !this._flags.import_block) {
+          current_token.type = TOKEN.WORD;
+        } else if (this._flags.mode === MODE.ObjectLiteral) {
+          var next_token = this._tokens.peek();
+          if (next_token.text === ":") {
+            current_token.type = TOKEN.WORD;
+          }
+        }
+      }
+      if (this.start_of_statement(current_token)) {
+        if (reserved_array(this._flags.last_token, ["var", "let", "const"]) && current_token.type === TOKEN.WORD) {
+          this._flags.declaration_statement = true;
+        }
+      } else if (current_token.newlines && !is_expression(this._flags.mode) && (this._flags.last_token.type !== TOKEN.OPERATOR || (this._flags.last_token.text === "--" || this._flags.last_token.text === "++")) && this._flags.last_token.type !== TOKEN.EQUALS && (this._options.preserve_newlines || !reserved_array(this._flags.last_token, ["var", "let", "const", "set", "get"]))) {
+        this.handle_whitespace_and_comments(current_token);
+        this.print_newline();
+      } else {
+        this.handle_whitespace_and_comments(current_token);
+      }
+      if (this._flags.do_block && !this._flags.do_while) {
+        if (reserved_word(current_token, "while")) {
+          this._output.space_before_token = true;
+          this.print_token(current_token);
+          this._output.space_before_token = true;
+          this._flags.do_while = true;
+          return;
+        } else {
+          this.print_newline();
+          this._flags.do_block = false;
+        }
+      }
+      if (this._flags.if_block) {
+        if (!this._flags.else_block && reserved_word(current_token, "else")) {
+          this._flags.else_block = true;
+        } else {
+          while (this._flags.mode === MODE.Statement) {
+            this.restore_mode();
+          }
+          this._flags.if_block = false;
+          this._flags.else_block = false;
+        }
+      }
+      if (this._flags.in_case_statement && reserved_array(current_token, ["case", "default"])) {
+        this.print_newline();
+        if (!this._flags.case_block && (this._flags.case_body || this._options.jslint_happy)) {
+          this.deindent();
+        }
+        this._flags.case_body = false;
+        this.print_token(current_token);
+        this._flags.in_case = true;
+        return;
+      }
+      if (this._flags.last_token.type === TOKEN.COMMA || this._flags.last_token.type === TOKEN.START_EXPR || this._flags.last_token.type === TOKEN.EQUALS || this._flags.last_token.type === TOKEN.OPERATOR) {
+        if (!this.start_of_object_property()) {
+          this.allow_wrap_or_preserved_newline(current_token);
+        }
+      }
+      if (reserved_word(current_token, "function")) {
+        if (in_array(this._flags.last_token.text, ["}", ";"]) || this._output.just_added_newline() && !(in_array(this._flags.last_token.text, ["(", "[", "{", ":", "=", ","]) || this._flags.last_token.type === TOKEN.OPERATOR)) {
+          if (!this._output.just_added_blankline() && !current_token.comments_before) {
+            this.print_newline();
+            this.print_newline(true);
+          }
+        }
+        if (this._flags.last_token.type === TOKEN.RESERVED || this._flags.last_token.type === TOKEN.WORD) {
+          if (reserved_array(this._flags.last_token, ["get", "set", "new", "export"]) || reserved_array(this._flags.last_token, newline_restricted_tokens)) {
+            this._output.space_before_token = true;
+          } else if (reserved_word(this._flags.last_token, "default") && this._last_last_text === "export") {
+            this._output.space_before_token = true;
+          } else if (this._flags.last_token.text === "declare") {
+            this._output.space_before_token = true;
+          } else {
+            this.print_newline();
+          }
+        } else if (this._flags.last_token.type === TOKEN.OPERATOR || this._flags.last_token.text === "=") {
+          this._output.space_before_token = true;
+        } else if (!this._flags.multiline_frame && (is_expression(this._flags.mode) || is_array(this._flags.mode))) {
+        } else {
+          this.print_newline();
+        }
+        this.print_token(current_token);
+        this._flags.last_word = current_token.text;
+        return;
+      }
+      var prefix = "NONE";
+      if (this._flags.last_token.type === TOKEN.END_BLOCK) {
+        if (this._previous_flags.inline_frame) {
+          prefix = "SPACE";
+        } else if (!reserved_array(current_token, ["else", "catch", "finally", "from"])) {
+          prefix = "NEWLINE";
+        } else {
+          if (this._options.brace_style === "expand" || this._options.brace_style === "end-expand" || this._options.brace_style === "none" && current_token.newlines) {
+            prefix = "NEWLINE";
+          } else {
+            prefix = "SPACE";
+            this._output.space_before_token = true;
+          }
+        }
+      } else if (this._flags.last_token.type === TOKEN.SEMICOLON && this._flags.mode === MODE.BlockStatement) {
+        prefix = "NEWLINE";
+      } else if (this._flags.last_token.type === TOKEN.SEMICOLON && is_expression(this._flags.mode)) {
+        prefix = "SPACE";
+      } else if (this._flags.last_token.type === TOKEN.STRING) {
+        prefix = "NEWLINE";
+      } else if (this._flags.last_token.type === TOKEN.RESERVED || this._flags.last_token.type === TOKEN.WORD || this._flags.last_token.text === "*" && (in_array(this._last_last_text, ["function", "yield"]) || this._flags.mode === MODE.ObjectLiteral && in_array(this._last_last_text, ["{", ","]))) {
+        prefix = "SPACE";
+      } else if (this._flags.last_token.type === TOKEN.START_BLOCK) {
+        if (this._flags.inline_frame) {
+          prefix = "SPACE";
+        } else {
+          prefix = "NEWLINE";
+        }
+      } else if (this._flags.last_token.type === TOKEN.END_EXPR) {
+        this._output.space_before_token = true;
+        prefix = "NEWLINE";
+      }
+      if (reserved_array(current_token, line_starters) && this._flags.last_token.text !== ")") {
+        if (this._flags.inline_frame || this._flags.last_token.text === "else" || this._flags.last_token.text === "export") {
+          prefix = "SPACE";
+        } else {
+          prefix = "NEWLINE";
+        }
+      }
+      if (reserved_array(current_token, ["else", "catch", "finally"])) {
+        if ((!(this._flags.last_token.type === TOKEN.END_BLOCK && this._previous_flags.mode === MODE.BlockStatement) || this._options.brace_style === "expand" || this._options.brace_style === "end-expand" || this._options.brace_style === "none" && current_token.newlines) && !this._flags.inline_frame) {
+          this.print_newline();
+        } else {
+          this._output.trim(true);
+          var line = this._output.current_line;
+          if (line.last() !== "}") {
+            this.print_newline();
+          }
+          this._output.space_before_token = true;
+        }
+      } else if (prefix === "NEWLINE") {
+        if (reserved_array(this._flags.last_token, special_words)) {
+          this._output.space_before_token = true;
+        } else if (this._flags.last_token.text === "declare" && reserved_array(current_token, ["var", "let", "const"])) {
+          this._output.space_before_token = true;
+        } else if (this._flags.last_token.type !== TOKEN.END_EXPR) {
+          if ((this._flags.last_token.type !== TOKEN.START_EXPR || !reserved_array(current_token, ["var", "let", "const"])) && this._flags.last_token.text !== ":") {
+            if (reserved_word(current_token, "if") && reserved_word(current_token.previous, "else")) {
+              this._output.space_before_token = true;
+            } else {
+              this.print_newline();
+            }
+          }
+        } else if (reserved_array(current_token, line_starters) && this._flags.last_token.text !== ")") {
+          this.print_newline();
+        }
+      } else if (this._flags.multiline_frame && is_array(this._flags.mode) && this._flags.last_token.text === "," && this._last_last_text === "}") {
+        this.print_newline();
+      } else if (prefix === "SPACE") {
+        this._output.space_before_token = true;
+      }
+      if (current_token.previous && (current_token.previous.type === TOKEN.WORD || current_token.previous.type === TOKEN.RESERVED)) {
+        this._output.space_before_token = true;
+      }
+      this.print_token(current_token);
+      this._flags.last_word = current_token.text;
+      if (current_token.type === TOKEN.RESERVED) {
+        if (current_token.text === "do") {
+          this._flags.do_block = true;
+        } else if (current_token.text === "if") {
+          this._flags.if_block = true;
+        } else if (current_token.text === "import") {
+          this._flags.import_block = true;
+        } else if (this._flags.import_block && reserved_word(current_token, "from")) {
+          this._flags.import_block = false;
+        }
+      }
+    };
+    Beautifier.prototype.handle_semicolon = function(current_token) {
+      if (this.start_of_statement(current_token)) {
+        this._output.space_before_token = false;
+      } else {
+        this.handle_whitespace_and_comments(current_token);
+      }
+      var next_token = this._tokens.peek();
+      while (this._flags.mode === MODE.Statement && !(this._flags.if_block && reserved_word(next_token, "else")) && !this._flags.do_block) {
+        this.restore_mode();
+      }
+      if (this._flags.import_block) {
+        this._flags.import_block = false;
+      }
+      this.print_token(current_token);
+    };
+    Beautifier.prototype.handle_string = function(current_token) {
+      if (current_token.text.startsWith("`") && current_token.newlines === 0 && current_token.whitespace_before === "" && (current_token.previous.text === ")" || this._flags.last_token.type === TOKEN.WORD)) {
+      } else if (this.start_of_statement(current_token)) {
+        this._output.space_before_token = true;
+      } else {
+        this.handle_whitespace_and_comments(current_token);
+        if (this._flags.last_token.type === TOKEN.RESERVED || this._flags.last_token.type === TOKEN.WORD || this._flags.inline_frame) {
+          this._output.space_before_token = true;
+        } else if (this._flags.last_token.type === TOKEN.COMMA || this._flags.last_token.type === TOKEN.START_EXPR || this._flags.last_token.type === TOKEN.EQUALS || this._flags.last_token.type === TOKEN.OPERATOR) {
+          if (!this.start_of_object_property()) {
+            this.allow_wrap_or_preserved_newline(current_token);
+          }
+        } else if (current_token.text.startsWith("`") && this._flags.last_token.type === TOKEN.END_EXPR && (current_token.previous.text === "]" || current_token.previous.text === ")") && current_token.newlines === 0) {
+          this._output.space_before_token = true;
+        } else {
+          this.print_newline();
+        }
+      }
+      this.print_token(current_token);
+    };
+    Beautifier.prototype.handle_equals = function(current_token) {
+      if (this.start_of_statement(current_token)) {
+      } else {
+        this.handle_whitespace_and_comments(current_token);
+      }
+      if (this._flags.declaration_statement) {
+        this._flags.declaration_assignment = true;
+      }
+      this._output.space_before_token = true;
+      this.print_token(current_token);
+      this._output.space_before_token = true;
+    };
+    Beautifier.prototype.handle_comma = function(current_token) {
+      this.handle_whitespace_and_comments(current_token, true);
+      this.print_token(current_token);
+      this._output.space_before_token = true;
+      if (this._flags.declaration_statement) {
+        if (is_expression(this._flags.parent.mode)) {
+          this._flags.declaration_assignment = false;
+        }
+        if (this._flags.declaration_assignment) {
+          this._flags.declaration_assignment = false;
+          this.print_newline(false, true);
+        } else if (this._options.comma_first) {
+          this.allow_wrap_or_preserved_newline(current_token);
+        }
+      } else if (this._flags.mode === MODE.ObjectLiteral || this._flags.mode === MODE.Statement && this._flags.parent.mode === MODE.ObjectLiteral) {
+        if (this._flags.mode === MODE.Statement) {
+          this.restore_mode();
+        }
+        if (!this._flags.inline_frame) {
+          this.print_newline();
+        }
+      } else if (this._options.comma_first) {
+        this.allow_wrap_or_preserved_newline(current_token);
+      }
+    };
+    Beautifier.prototype.handle_operator = function(current_token) {
+      var isGeneratorAsterisk = current_token.text === "*" && (reserved_array(this._flags.last_token, ["function", "yield"]) || in_array(this._flags.last_token.type, [TOKEN.START_BLOCK, TOKEN.COMMA, TOKEN.END_BLOCK, TOKEN.SEMICOLON]));
+      var isUnary = in_array(current_token.text, ["-", "+"]) && (in_array(this._flags.last_token.type, [TOKEN.START_BLOCK, TOKEN.START_EXPR, TOKEN.EQUALS, TOKEN.OPERATOR]) || in_array(this._flags.last_token.text, line_starters) || this._flags.last_token.text === ",");
+      if (this.start_of_statement(current_token)) {
+      } else {
+        var preserve_statement_flags = !isGeneratorAsterisk;
+        this.handle_whitespace_and_comments(current_token, preserve_statement_flags);
+      }
+      if (current_token.text === "*" && this._flags.last_token.type === TOKEN.DOT) {
+        this.print_token(current_token);
+        return;
+      }
+      if (current_token.text === "::") {
+        this.print_token(current_token);
+        return;
+      }
+      if (this._flags.last_token.type === TOKEN.OPERATOR && in_array(this._options.operator_position, OPERATOR_POSITION_BEFORE_OR_PRESERVE)) {
+        this.allow_wrap_or_preserved_newline(current_token);
+      }
+      if (current_token.text === ":" && this._flags.in_case) {
+        this.print_token(current_token);
+        this._flags.in_case = false;
+        this._flags.case_body = true;
+        if (this._tokens.peek().type !== TOKEN.START_BLOCK) {
+          this.indent();
+          this.print_newline();
+          this._flags.case_block = false;
+        } else {
+          this._flags.case_block = true;
+          this._output.space_before_token = true;
+        }
+        return;
+      }
+      var space_before = true;
+      var space_after = true;
+      var in_ternary = false;
+      if (current_token.text === ":") {
+        if (this._flags.ternary_depth === 0) {
+          space_before = false;
+        } else {
+          this._flags.ternary_depth -= 1;
+          in_ternary = true;
+        }
+      } else if (current_token.text === "?") {
+        this._flags.ternary_depth += 1;
+      }
+      if (!isUnary && !isGeneratorAsterisk && this._options.preserve_newlines && in_array(current_token.text, positionable_operators)) {
+        var isColon = current_token.text === ":";
+        var isTernaryColon = isColon && in_ternary;
+        var isOtherColon = isColon && !in_ternary;
+        switch (this._options.operator_position) {
+          case OPERATOR_POSITION.before_newline:
+            this._output.space_before_token = !isOtherColon;
+            this.print_token(current_token);
+            if (!isColon || isTernaryColon) {
+              this.allow_wrap_or_preserved_newline(current_token);
+            }
+            this._output.space_before_token = true;
+            return;
+          case OPERATOR_POSITION.after_newline:
+            this._output.space_before_token = true;
+            if (!isColon || isTernaryColon) {
+              if (this._tokens.peek().newlines) {
+                this.print_newline(false, true);
+              } else {
+                this.allow_wrap_or_preserved_newline(current_token);
+              }
+            } else {
+              this._output.space_before_token = false;
+            }
+            this.print_token(current_token);
+            this._output.space_before_token = true;
+            return;
+          case OPERATOR_POSITION.preserve_newline:
+            if (!isOtherColon) {
+              this.allow_wrap_or_preserved_newline(current_token);
+            }
+            space_before = !(this._output.just_added_newline() || isOtherColon);
+            this._output.space_before_token = space_before;
+            this.print_token(current_token);
+            this._output.space_before_token = true;
+            return;
+        }
+      }
+      if (isGeneratorAsterisk) {
+        this.allow_wrap_or_preserved_newline(current_token);
+        space_before = false;
+        var next_token = this._tokens.peek();
+        space_after = next_token && in_array(next_token.type, [TOKEN.WORD, TOKEN.RESERVED]);
+      } else if (current_token.text === "...") {
+        this.allow_wrap_or_preserved_newline(current_token);
+        space_before = this._flags.last_token.type === TOKEN.START_BLOCK;
+        space_after = false;
+      } else if (in_array(current_token.text, ["--", "++", "!", "~"]) || isUnary) {
+        if (this._flags.last_token.type === TOKEN.COMMA || this._flags.last_token.type === TOKEN.START_EXPR) {
+          this.allow_wrap_or_preserved_newline(current_token);
+        }
+        space_before = false;
+        space_after = false;
+        if (current_token.newlines && (current_token.text === "--" || current_token.text === "++" || current_token.text === "~")) {
+          var new_line_needed = reserved_array(this._flags.last_token, special_words) && current_token.newlines;
+          if (new_line_needed && (this._previous_flags.if_block || this._previous_flags.else_block)) {
+            this.restore_mode();
+          }
+          this.print_newline(new_line_needed, true);
+        }
+        if (this._flags.last_token.text === ";" && is_expression(this._flags.mode)) {
+          space_before = true;
+        }
+        if (this._flags.last_token.type === TOKEN.RESERVED) {
+          space_before = true;
+        } else if (this._flags.last_token.type === TOKEN.END_EXPR) {
+          space_before = !(this._flags.last_token.text === "]" && (current_token.text === "--" || current_token.text === "++"));
+        } else if (this._flags.last_token.type === TOKEN.OPERATOR) {
+          space_before = in_array(current_token.text, ["--", "-", "++", "+"]) && in_array(this._flags.last_token.text, ["--", "-", "++", "+"]);
+          if (in_array(current_token.text, ["+", "-"]) && in_array(this._flags.last_token.text, ["--", "++"])) {
+            space_after = true;
+          }
+        }
+        if ((this._flags.mode === MODE.BlockStatement && !this._flags.inline_frame || this._flags.mode === MODE.Statement) && (this._flags.last_token.text === "{" || this._flags.last_token.text === ";")) {
+          this.print_newline();
+        }
+      }
+      this._output.space_before_token = this._output.space_before_token || space_before;
+      this.print_token(current_token);
+      this._output.space_before_token = space_after;
+    };
+    Beautifier.prototype.handle_block_comment = function(current_token, preserve_statement_flags) {
+      if (this._output.raw) {
+        this._output.add_raw_token(current_token);
+        if (current_token.directives && current_token.directives.preserve === "end") {
+          this._output.raw = this._options.test_output_raw;
+        }
+        return;
+      }
+      if (current_token.directives) {
+        this.print_newline(false, preserve_statement_flags);
+        this.print_token(current_token);
+        if (current_token.directives.preserve === "start") {
+          this._output.raw = true;
+        }
+        this.print_newline(false, true);
+        return;
+      }
+      if (!acorn.newline.test(current_token.text) && !current_token.newlines) {
+        this._output.space_before_token = true;
+        this.print_token(current_token);
+        this._output.space_before_token = true;
+        return;
+      } else {
+        this.print_block_commment(current_token, preserve_statement_flags);
+      }
+    };
+    Beautifier.prototype.print_block_commment = function(current_token, preserve_statement_flags) {
+      var lines = split_linebreaks(current_token.text);
+      var j;
+      var javadoc = false;
+      var starless = false;
+      var lastIndent = current_token.whitespace_before;
+      var lastIndentLength = lastIndent.length;
+      this.print_newline(false, preserve_statement_flags);
+      this.print_token_line_indentation(current_token);
+      this._output.add_token(lines[0]);
+      this.print_newline(false, preserve_statement_flags);
+      if (lines.length > 1) {
+        lines = lines.slice(1);
+        javadoc = all_lines_start_with(lines, "*");
+        starless = each_line_matches_indent(lines, lastIndent);
+        if (javadoc) {
+          this._flags.alignment = 1;
+        }
+        for (j = 0; j < lines.length; j++) {
+          if (javadoc) {
+            this.print_token_line_indentation(current_token);
+            this._output.add_token(ltrim(lines[j]));
+          } else if (starless && lines[j]) {
+            this.print_token_line_indentation(current_token);
+            this._output.add_token(lines[j].substring(lastIndentLength));
+          } else {
+            this._output.current_line.set_indent(-1);
+            this._output.add_token(lines[j]);
+          }
+          this.print_newline(false, preserve_statement_flags);
+        }
+        this._flags.alignment = 0;
+      }
+    };
+    Beautifier.prototype.handle_comment = function(current_token, preserve_statement_flags) {
+      if (current_token.newlines) {
+        this.print_newline(false, preserve_statement_flags);
+      } else {
+        this._output.trim(true);
+      }
+      this._output.space_before_token = true;
+      this.print_token(current_token);
+      this.print_newline(false, preserve_statement_flags);
+    };
+    Beautifier.prototype.handle_dot = function(current_token) {
+      if (this.start_of_statement(current_token)) {
+      } else {
+        this.handle_whitespace_and_comments(current_token, true);
+      }
+      if (this._flags.last_token.text.match("^[0-9]+$")) {
+        this._output.space_before_token = true;
+      }
+      if (reserved_array(this._flags.last_token, special_words)) {
+        this._output.space_before_token = false;
+      } else {
+        this.allow_wrap_or_preserved_newline(current_token, this._flags.last_token.text === ")" && this._options.break_chained_methods);
+      }
+      if (this._options.unindent_chained_methods && this._output.just_added_newline()) {
+        this.deindent();
+      }
+      this.print_token(current_token);
+    };
+    Beautifier.prototype.handle_unknown = function(current_token, preserve_statement_flags) {
+      this.print_token(current_token);
+      if (current_token.text[current_token.text.length - 1] === "\n") {
+        this.print_newline(false, preserve_statement_flags);
+      }
+    };
+    Beautifier.prototype.handle_eof = function(current_token) {
+      while (this._flags.mode === MODE.Statement) {
+        this.restore_mode();
+      }
+      this.handle_whitespace_and_comments(current_token);
+    };
+    module2.exports.Beautifier = Beautifier;
+  }
+});
+
+// node_modules/js-beautify/js/src/javascript/index.js
+var require_javascript = __commonJS({
+  "node_modules/js-beautify/js/src/javascript/index.js"(exports, module2) {
+    "use strict";
+    var Beautifier = require_beautifier().Beautifier;
+    var Options = require_options2().Options;
+    function js_beautify(js_source_text, options) {
+      var beautifier = new Beautifier(js_source_text, options);
+      return beautifier.beautify();
+    }
+    module2.exports = js_beautify;
+    module2.exports.defaultOptions = function() {
+      return new Options();
+    };
+  }
+});
+
+// node_modules/js-beautify/js/src/css/options.js
+var require_options3 = __commonJS({
+  "node_modules/js-beautify/js/src/css/options.js"(exports, module2) {
+    "use strict";
+    var BaseOptions = require_options().Options;
+    function Options(options) {
+      BaseOptions.call(this, options, "css");
+      this.selector_separator_newline = this._get_boolean("selector_separator_newline", true);
+      this.newline_between_rules = this._get_boolean("newline_between_rules", true);
+      var space_around_selector_separator = this._get_boolean("space_around_selector_separator");
+      this.space_around_combinator = this._get_boolean("space_around_combinator") || space_around_selector_separator;
+      var brace_style_split = this._get_selection_list("brace_style", ["collapse", "expand", "end-expand", "none", "preserve-inline"]);
+      this.brace_style = "collapse";
+      for (var bs = 0; bs < brace_style_split.length; bs++) {
+        if (brace_style_split[bs] !== "expand") {
+          this.brace_style = "collapse";
+        } else {
+          this.brace_style = brace_style_split[bs];
+        }
+      }
+    }
+    Options.prototype = new BaseOptions();
+    module2.exports.Options = Options;
+  }
+});
+
+// node_modules/js-beautify/js/src/css/beautifier.js
+var require_beautifier2 = __commonJS({
+  "node_modules/js-beautify/js/src/css/beautifier.js"(exports, module2) {
+    "use strict";
+    var Options = require_options3().Options;
+    var Output = require_output().Output;
+    var InputScanner = require_inputscanner().InputScanner;
+    var Directives = require_directives().Directives;
+    var directives_core = new Directives(/\/\*/, /\*\//);
+    var lineBreak = /\r\n|[\r\n]/;
+    var allLineBreaks = /\r\n|[\r\n]/g;
+    var whitespaceChar = /\s/;
+    var whitespacePattern = /(?:\s|\n)+/g;
+    var block_comment_pattern = /\/\*(?:[\s\S]*?)((?:\*\/)|$)/g;
+    var comment_pattern = /\/\/(?:[^\n\r\u2028\u2029]*)/g;
+    function Beautifier(source_text, options) {
+      this._source_text = source_text || "";
+      this._options = new Options(options);
+      this._ch = null;
+      this._input = null;
+      this.NESTED_AT_RULE = {
+        "@page": true,
+        "@font-face": true,
+        "@keyframes": true,
+        "@media": true,
+        "@supports": true,
+        "@document": true
+      };
+      this.CONDITIONAL_GROUP_RULE = {
+        "@media": true,
+        "@supports": true,
+        "@document": true
+      };
+      this.NON_SEMICOLON_NEWLINE_PROPERTY = [
+        "grid-template-areas",
+        "grid-template"
+      ];
+    }
+    Beautifier.prototype.eatString = function(endChars) {
+      var result = "";
+      this._ch = this._input.next();
+      while (this._ch) {
+        result += this._ch;
+        if (this._ch === "\\") {
+          result += this._input.next();
+        } else if (endChars.indexOf(this._ch) !== -1 || this._ch === "\n") {
+          break;
+        }
+        this._ch = this._input.next();
+      }
+      return result;
+    };
+    Beautifier.prototype.eatWhitespace = function(allowAtLeastOneNewLine) {
+      var result = whitespaceChar.test(this._input.peek());
+      var newline_count = 0;
+      while (whitespaceChar.test(this._input.peek())) {
+        this._ch = this._input.next();
+        if (allowAtLeastOneNewLine && this._ch === "\n") {
+          if (newline_count === 0 || newline_count < this._options.max_preserve_newlines) {
+            newline_count++;
+            this._output.add_new_line(true);
+          }
+        }
+      }
+      return result;
+    };
+    Beautifier.prototype.foundNestedPseudoClass = function() {
+      var openParen = 0;
+      var i = 1;
+      var ch = this._input.peek(i);
+      while (ch) {
+        if (ch === "{") {
+          return true;
+        } else if (ch === "(") {
+          openParen += 1;
+        } else if (ch === ")") {
+          if (openParen === 0) {
+            return false;
+          }
+          openParen -= 1;
+        } else if (ch === ";" || ch === "}") {
+          return false;
+        }
+        i++;
+        ch = this._input.peek(i);
+      }
+      return false;
+    };
+    Beautifier.prototype.print_string = function(output_string) {
+      this._output.set_indent(this._indentLevel);
+      this._output.non_breaking_space = true;
+      this._output.add_token(output_string);
+    };
+    Beautifier.prototype.preserveSingleSpace = function(isAfterSpace) {
+      if (isAfterSpace) {
+        this._output.space_before_token = true;
+      }
+    };
+    Beautifier.prototype.indent = function() {
+      this._indentLevel++;
+    };
+    Beautifier.prototype.outdent = function() {
+      if (this._indentLevel > 0) {
+        this._indentLevel--;
+      }
+    };
+    Beautifier.prototype.beautify = function() {
+      if (this._options.disabled) {
+        return this._source_text;
+      }
+      var source_text = this._source_text;
+      var eol = this._options.eol;
+      if (eol === "auto") {
+        eol = "\n";
+        if (source_text && lineBreak.test(source_text || "")) {
+          eol = source_text.match(lineBreak)[0];
+        }
+      }
+      source_text = source_text.replace(allLineBreaks, "\n");
+      var baseIndentString = source_text.match(/^[\t ]*/)[0];
+      this._output = new Output(this._options, baseIndentString);
+      this._input = new InputScanner(source_text);
+      this._indentLevel = 0;
+      this._nestedLevel = 0;
+      this._ch = null;
+      var parenLevel = 0;
+      var insideRule = false;
+      var insidePropertyValue = false;
+      var enteringConditionalGroup = false;
+      var insideAtExtend = false;
+      var insideAtImport = false;
+      var insideScssMap = false;
+      var topCharacter = this._ch;
+      var insideNonSemiColonValues = false;
+      var whitespace;
+      var isAfterSpace;
+      var previous_ch;
+      while (true) {
+        whitespace = this._input.read(whitespacePattern);
+        isAfterSpace = whitespace !== "";
+        previous_ch = topCharacter;
+        this._ch = this._input.next();
+        if (this._ch === "\\" && this._input.hasNext()) {
+          this._ch += this._input.next();
+        }
+        topCharacter = this._ch;
+        if (!this._ch) {
+          break;
+        } else if (this._ch === "/" && this._input.peek() === "*") {
+          this._output.add_new_line();
+          this._input.back();
+          var comment = this._input.read(block_comment_pattern);
+          var directives = directives_core.get_directives(comment);
+          if (directives && directives.ignore === "start") {
+            comment += directives_core.readIgnored(this._input);
+          }
+          this.print_string(comment);
+          this.eatWhitespace(true);
+          this._output.add_new_line();
+        } else if (this._ch === "/" && this._input.peek() === "/") {
+          this._output.space_before_token = true;
+          this._input.back();
+          this.print_string(this._input.read(comment_pattern));
+          this.eatWhitespace(true);
+        } else if (this._ch === "@" || this._ch === "$") {
+          this.preserveSingleSpace(isAfterSpace);
+          if (this._input.peek() === "{") {
+            this.print_string(this._ch + this.eatString("}"));
+          } else {
+            this.print_string(this._ch);
+            var variableOrRule = this._input.peekUntilAfter(/[: ,;{}()[\]\/='"]/g);
+            if (variableOrRule.match(/[ :]$/)) {
+              variableOrRule = this.eatString(": ").replace(/\s$/, "");
+              this.print_string(variableOrRule);
+              this._output.space_before_token = true;
+            }
+            variableOrRule = variableOrRule.replace(/\s$/, "");
+            if (variableOrRule === "extend") {
+              insideAtExtend = true;
+            } else if (variableOrRule === "import") {
+              insideAtImport = true;
+            }
+            if (variableOrRule in this.NESTED_AT_RULE) {
+              this._nestedLevel += 1;
+              if (variableOrRule in this.CONDITIONAL_GROUP_RULE) {
+                enteringConditionalGroup = true;
+              }
+            } else if (!insideRule && parenLevel === 0 && variableOrRule.indexOf(":") !== -1) {
+              insidePropertyValue = true;
+              this.indent();
+            }
+          }
+        } else if (this._ch === "#" && this._input.peek() === "{") {
+          this.preserveSingleSpace(isAfterSpace);
+          this.print_string(this._ch + this.eatString("}"));
+        } else if (this._ch === "{") {
+          if (insidePropertyValue) {
+            insidePropertyValue = false;
+            this.outdent();
+          }
+          if (enteringConditionalGroup) {
+            enteringConditionalGroup = false;
+            insideRule = this._indentLevel >= this._nestedLevel;
+          } else {
+            insideRule = this._indentLevel >= this._nestedLevel - 1;
+          }
+          if (this._options.newline_between_rules && insideRule) {
+            if (this._output.previous_line && this._output.previous_line.item(-1) !== "{") {
+              this._output.ensure_empty_line_above("/", ",");
+            }
+          }
+          this._output.space_before_token = true;
+          if (this._options.brace_style === "expand") {
+            this._output.add_new_line();
+            this.print_string(this._ch);
+            this.indent();
+            this._output.set_indent(this._indentLevel);
+          } else {
+            if (previous_ch === "(") {
+              this._output.space_before_token = false;
+            } else if (previous_ch !== ",") {
+              this.indent();
+            }
+            this.print_string(this._ch);
+          }
+          this.eatWhitespace(true);
+          this._output.add_new_line();
+        } else if (this._ch === "}") {
+          this.outdent();
+          this._output.add_new_line();
+          if (previous_ch === "{") {
+            this._output.trim(true);
+          }
+          insideAtImport = false;
+          insideAtExtend = false;
+          if (insidePropertyValue) {
+            this.outdent();
+            insidePropertyValue = false;
+          }
+          this.print_string(this._ch);
+          insideRule = false;
+          if (this._nestedLevel) {
+            this._nestedLevel--;
+          }
+          this.eatWhitespace(true);
+          this._output.add_new_line();
+          if (this._options.newline_between_rules && !this._output.just_added_blankline()) {
+            if (this._input.peek() !== "}") {
+              this._output.add_new_line(true);
+            }
+          }
+          if (this._input.peek() === ")") {
+            this._output.trim(true);
+            if (this._options.brace_style === "expand") {
+              this._output.add_new_line(true);
+            }
+          }
+        } else if (this._ch === ":") {
+          for (var i = 0; i < this.NON_SEMICOLON_NEWLINE_PROPERTY.length; i++) {
+            if (this._input.lookBack(this.NON_SEMICOLON_NEWLINE_PROPERTY[i])) {
+              insideNonSemiColonValues = true;
+              break;
+            }
+          }
+          if ((insideRule || enteringConditionalGroup) && !(this._input.lookBack("&") || this.foundNestedPseudoClass()) && !this._input.lookBack("(") && !insideAtExtend && parenLevel === 0) {
+            this.print_string(":");
+            if (!insidePropertyValue) {
+              insidePropertyValue = true;
+              this._output.space_before_token = true;
+              this.eatWhitespace(true);
+              this.indent();
+            }
+          } else {
+            if (this._input.lookBack(" ")) {
+              this._output.space_before_token = true;
+            }
+            if (this._input.peek() === ":") {
+              this._ch = this._input.next();
+              this.print_string("::");
+            } else {
+              this.print_string(":");
+            }
+          }
+        } else if (this._ch === '"' || this._ch === "'") {
+          var preserveQuoteSpace = previous_ch === '"' || previous_ch === "'";
+          this.preserveSingleSpace(preserveQuoteSpace || isAfterSpace);
+          this.print_string(this._ch + this.eatString(this._ch));
+          this.eatWhitespace(true);
+        } else if (this._ch === ";") {
+          insideNonSemiColonValues = false;
+          if (parenLevel === 0) {
+            if (insidePropertyValue) {
+              this.outdent();
+              insidePropertyValue = false;
+            }
+            insideAtExtend = false;
+            insideAtImport = false;
+            this.print_string(this._ch);
+            this.eatWhitespace(true);
+            if (this._input.peek() !== "/") {
+              this._output.add_new_line();
+            }
+          } else {
+            this.print_string(this._ch);
+            this.eatWhitespace(true);
+            this._output.space_before_token = true;
+          }
+        } else if (this._ch === "(") {
+          if (this._input.lookBack("url")) {
+            this.print_string(this._ch);
+            this.eatWhitespace();
+            parenLevel++;
+            this.indent();
+            this._ch = this._input.next();
+            if (this._ch === ")" || this._ch === '"' || this._ch === "'") {
+              this._input.back();
+            } else if (this._ch) {
+              this.print_string(this._ch + this.eatString(")"));
+              if (parenLevel) {
+                parenLevel--;
+                this.outdent();
+              }
+            }
+          } else {
+            var space_needed = false;
+            if (this._input.lookBack("with")) {
+              space_needed = true;
+            }
+            this.preserveSingleSpace(isAfterSpace || space_needed);
+            this.print_string(this._ch);
+            if (insidePropertyValue && previous_ch === "$" && this._options.selector_separator_newline) {
+              this._output.add_new_line();
+              insideScssMap = true;
+            } else {
+              this.eatWhitespace();
+              parenLevel++;
+              this.indent();
+            }
+          }
+        } else if (this._ch === ")") {
+          if (parenLevel) {
+            parenLevel--;
+            this.outdent();
+          }
+          if (insideScssMap && this._input.peek() === ";" && this._options.selector_separator_newline) {
+            insideScssMap = false;
+            this.outdent();
+            this._output.add_new_line();
+          }
+          this.print_string(this._ch);
+        } else if (this._ch === ",") {
+          this.print_string(this._ch);
+          this.eatWhitespace(true);
+          if (this._options.selector_separator_newline && (!insidePropertyValue || insideScssMap) && parenLevel === 0 && !insideAtImport && !insideAtExtend) {
+            this._output.add_new_line();
+          } else {
+            this._output.space_before_token = true;
+          }
+        } else if ((this._ch === ">" || this._ch === "+" || this._ch === "~") && !insidePropertyValue && parenLevel === 0) {
+          if (this._options.space_around_combinator) {
+            this._output.space_before_token = true;
+            this.print_string(this._ch);
+            this._output.space_before_token = true;
+          } else {
+            this.print_string(this._ch);
+            this.eatWhitespace();
+            if (this._ch && whitespaceChar.test(this._ch)) {
+              this._ch = "";
+            }
+          }
+        } else if (this._ch === "]") {
+          this.print_string(this._ch);
+        } else if (this._ch === "[") {
+          this.preserveSingleSpace(isAfterSpace);
+          this.print_string(this._ch);
+        } else if (this._ch === "=") {
+          this.eatWhitespace();
+          this.print_string("=");
+          if (whitespaceChar.test(this._ch)) {
+            this._ch = "";
+          }
+        } else if (this._ch === "!" && !this._input.lookBack("\\")) {
+          this._output.space_before_token = true;
+          this.print_string(this._ch);
+        } else {
+          var preserveAfterSpace = previous_ch === '"' || previous_ch === "'";
+          this.preserveSingleSpace(preserveAfterSpace || isAfterSpace);
+          this.print_string(this._ch);
+          if (!this._output.just_added_newline() && this._input.peek() === "\n" && insideNonSemiColonValues) {
+            this._output.add_new_line();
+          }
+        }
+      }
+      var sweetCode = this._output.get_code(eol);
+      return sweetCode;
+    };
+    module2.exports.Beautifier = Beautifier;
+  }
+});
+
+// node_modules/js-beautify/js/src/css/index.js
+var require_css = __commonJS({
+  "node_modules/js-beautify/js/src/css/index.js"(exports, module2) {
+    "use strict";
+    var Beautifier = require_beautifier2().Beautifier;
+    var Options = require_options3().Options;
+    function css_beautify(source_text, options) {
+      var beautifier = new Beautifier(source_text, options);
+      return beautifier.beautify();
+    }
+    module2.exports = css_beautify;
+    module2.exports.defaultOptions = function() {
+      return new Options();
+    };
+  }
+});
+
+// node_modules/js-beautify/js/src/html/options.js
+var require_options4 = __commonJS({
+  "node_modules/js-beautify/js/src/html/options.js"(exports, module2) {
+    "use strict";
+    var BaseOptions = require_options().Options;
+    function Options(options) {
+      BaseOptions.call(this, options, "html");
+      if (this.templating.length === 1 && this.templating[0] === "auto") {
+        this.templating = ["django", "erb", "handlebars", "php"];
+      }
+      this.indent_inner_html = this._get_boolean("indent_inner_html");
+      this.indent_body_inner_html = this._get_boolean("indent_body_inner_html", true);
+      this.indent_head_inner_html = this._get_boolean("indent_head_inner_html", true);
+      this.indent_handlebars = this._get_boolean("indent_handlebars", true);
+      this.wrap_attributes = this._get_selection("wrap_attributes", ["auto", "force", "force-aligned", "force-expand-multiline", "aligned-multiple", "preserve", "preserve-aligned"]);
+      this.wrap_attributes_indent_size = this._get_number("wrap_attributes_indent_size", this.indent_size);
+      this.extra_liners = this._get_array("extra_liners", ["head", "body", "/html"]);
+      this.inline = this._get_array("inline", [
+        "a",
+        "abbr",
+        "area",
+        "audio",
+        "b",
+        "bdi",
+        "bdo",
+        "br",
+        "button",
+        "canvas",
+        "cite",
+        "code",
+        "data",
+        "datalist",
+        "del",
+        "dfn",
+        "em",
+        "embed",
+        "i",
+        "iframe",
+        "img",
+        "input",
+        "ins",
+        "kbd",
+        "keygen",
+        "label",
+        "map",
+        "mark",
+        "math",
+        "meter",
+        "noscript",
+        "object",
+        "output",
+        "progress",
+        "q",
+        "ruby",
+        "s",
+        "samp",
+        "select",
+        "small",
+        "span",
+        "strong",
+        "sub",
+        "sup",
+        "svg",
+        "template",
+        "textarea",
+        "time",
+        "u",
+        "var",
+        "video",
+        "wbr",
+        "text",
+        "acronym",
+        "big",
+        "strike",
+        "tt"
+      ]);
+      this.void_elements = this._get_array("void_elements", [
+        "area",
+        "base",
+        "br",
+        "col",
+        "embed",
+        "hr",
+        "img",
+        "input",
+        "keygen",
+        "link",
+        "menuitem",
+        "meta",
+        "param",
+        "source",
+        "track",
+        "wbr",
+        "!doctype",
+        "?xml",
+        "basefont",
+        "isindex"
+      ]);
+      this.unformatted = this._get_array("unformatted", []);
+      this.content_unformatted = this._get_array("content_unformatted", [
+        "pre",
+        "textarea"
+      ]);
+      this.unformatted_content_delimiter = this._get_characters("unformatted_content_delimiter");
+      this.indent_scripts = this._get_selection("indent_scripts", ["normal", "keep", "separate"]);
+    }
+    Options.prototype = new BaseOptions();
+    module2.exports.Options = Options;
+  }
+});
+
+// node_modules/js-beautify/js/src/html/tokenizer.js
+var require_tokenizer3 = __commonJS({
+  "node_modules/js-beautify/js/src/html/tokenizer.js"(exports, module2) {
+    "use strict";
+    var BaseTokenizer = require_tokenizer().Tokenizer;
+    var BASETOKEN = require_tokenizer().TOKEN;
+    var Directives = require_directives().Directives;
+    var TemplatablePattern = require_templatablepattern().TemplatablePattern;
+    var Pattern = require_pattern().Pattern;
+    var TOKEN = {
+      TAG_OPEN: "TK_TAG_OPEN",
+      TAG_CLOSE: "TK_TAG_CLOSE",
+      ATTRIBUTE: "TK_ATTRIBUTE",
+      EQUALS: "TK_EQUALS",
+      VALUE: "TK_VALUE",
+      COMMENT: "TK_COMMENT",
+      TEXT: "TK_TEXT",
+      UNKNOWN: "TK_UNKNOWN",
+      START: BASETOKEN.START,
+      RAW: BASETOKEN.RAW,
+      EOF: BASETOKEN.EOF
+    };
+    var directives_core = new Directives(/<\!--/, /-->/);
+    var Tokenizer = function(input_string, options) {
+      BaseTokenizer.call(this, input_string, options);
+      this._current_tag_name = "";
+      var templatable_reader = new TemplatablePattern(this._input).read_options(this._options);
+      var pattern_reader = new Pattern(this._input);
+      this.__patterns = {
+        word: templatable_reader.until(/[\n\r\t <]/),
+        single_quote: templatable_reader.until_after(/'/),
+        double_quote: templatable_reader.until_after(/"/),
+        attribute: templatable_reader.until(/[\n\r\t =>]|\/>/),
+        element_name: templatable_reader.until(/[\n\r\t >\/]/),
+        handlebars_comment: pattern_reader.starting_with(/{{!--/).until_after(/--}}/),
+        handlebars: pattern_reader.starting_with(/{{/).until_after(/}}/),
+        handlebars_open: pattern_reader.until(/[\n\r\t }]/),
+        handlebars_raw_close: pattern_reader.until(/}}/),
+        comment: pattern_reader.starting_with(/<!--/).until_after(/-->/),
+        cdata: pattern_reader.starting_with(/<!\[CDATA\[/).until_after(/]]>/),
+        conditional_comment: pattern_reader.starting_with(/<!\[/).until_after(/]>/),
+        processing: pattern_reader.starting_with(/<\?/).until_after(/\?>/)
+      };
+      if (this._options.indent_handlebars) {
+        this.__patterns.word = this.__patterns.word.exclude("handlebars");
+      }
+      this._unformatted_content_delimiter = null;
+      if (this._options.unformatted_content_delimiter) {
+        var literal_regexp = this._input.get_literal_regexp(this._options.unformatted_content_delimiter);
+        this.__patterns.unformatted_content_delimiter = pattern_reader.matching(literal_regexp).until_after(literal_regexp);
+      }
+    };
+    Tokenizer.prototype = new BaseTokenizer();
+    Tokenizer.prototype._is_comment = function(current_token) {
+      return false;
+    };
+    Tokenizer.prototype._is_opening = function(current_token) {
+      return current_token.type === TOKEN.TAG_OPEN;
+    };
+    Tokenizer.prototype._is_closing = function(current_token, open_token) {
+      return current_token.type === TOKEN.TAG_CLOSE && (open_token && ((current_token.text === ">" || current_token.text === "/>") && open_token.text[0] === "<" || current_token.text === "}}" && open_token.text[0] === "{" && open_token.text[1] === "{"));
+    };
+    Tokenizer.prototype._reset = function() {
+      this._current_tag_name = "";
+    };
+    Tokenizer.prototype._get_next_token = function(previous_token, open_token) {
+      var token = null;
+      this._readWhitespace();
+      var c = this._input.peek();
+      if (c === null) {
+        return this._create_token(TOKEN.EOF, "");
+      }
+      token = token || this._read_open_handlebars(c, open_token);
+      token = token || this._read_attribute(c, previous_token, open_token);
+      token = token || this._read_close(c, open_token);
+      token = token || this._read_raw_content(c, previous_token, open_token);
+      token = token || this._read_content_word(c);
+      token = token || this._read_comment_or_cdata(c);
+      token = token || this._read_processing(c);
+      token = token || this._read_open(c, open_token);
+      token = token || this._create_token(TOKEN.UNKNOWN, this._input.next());
+      return token;
+    };
+    Tokenizer.prototype._read_comment_or_cdata = function(c) {
+      var token = null;
+      var resulting_string = null;
+      var directives = null;
+      if (c === "<") {
+        var peek1 = this._input.peek(1);
+        if (peek1 === "!") {
+          resulting_string = this.__patterns.comment.read();
+          if (resulting_string) {
+            directives = directives_core.get_directives(resulting_string);
+            if (directives && directives.ignore === "start") {
+              resulting_string += directives_core.readIgnored(this._input);
+            }
+          } else {
+            resulting_string = this.__patterns.cdata.read();
+          }
+        }
+        if (resulting_string) {
+          token = this._create_token(TOKEN.COMMENT, resulting_string);
+          token.directives = directives;
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_processing = function(c) {
+      var token = null;
+      var resulting_string = null;
+      var directives = null;
+      if (c === "<") {
+        var peek1 = this._input.peek(1);
+        if (peek1 === "!" || peek1 === "?") {
+          resulting_string = this.__patterns.conditional_comment.read();
+          resulting_string = resulting_string || this.__patterns.processing.read();
+        }
+        if (resulting_string) {
+          token = this._create_token(TOKEN.COMMENT, resulting_string);
+          token.directives = directives;
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_open = function(c, open_token) {
+      var resulting_string = null;
+      var token = null;
+      if (!open_token) {
+        if (c === "<") {
+          resulting_string = this._input.next();
+          if (this._input.peek() === "/") {
+            resulting_string += this._input.next();
+          }
+          resulting_string += this.__patterns.element_name.read();
+          token = this._create_token(TOKEN.TAG_OPEN, resulting_string);
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_open_handlebars = function(c, open_token) {
+      var resulting_string = null;
+      var token = null;
+      if (!open_token) {
+        if (this._options.indent_handlebars && c === "{" && this._input.peek(1) === "{") {
+          if (this._input.peek(2) === "!") {
+            resulting_string = this.__patterns.handlebars_comment.read();
+            resulting_string = resulting_string || this.__patterns.handlebars.read();
+            token = this._create_token(TOKEN.COMMENT, resulting_string);
+          } else {
+            resulting_string = this.__patterns.handlebars_open.read();
+            token = this._create_token(TOKEN.TAG_OPEN, resulting_string);
+          }
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_close = function(c, open_token) {
+      var resulting_string = null;
+      var token = null;
+      if (open_token) {
+        if (open_token.text[0] === "<" && (c === ">" || c === "/" && this._input.peek(1) === ">")) {
+          resulting_string = this._input.next();
+          if (c === "/") {
+            resulting_string += this._input.next();
+          }
+          token = this._create_token(TOKEN.TAG_CLOSE, resulting_string);
+        } else if (open_token.text[0] === "{" && c === "}" && this._input.peek(1) === "}") {
+          this._input.next();
+          this._input.next();
+          token = this._create_token(TOKEN.TAG_CLOSE, "}}");
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._read_attribute = function(c, previous_token, open_token) {
+      var token = null;
+      var resulting_string = "";
+      if (open_token && open_token.text[0] === "<") {
+        if (c === "=") {
+          token = this._create_token(TOKEN.EQUALS, this._input.next());
+        } else if (c === '"' || c === "'") {
+          var content = this._input.next();
+          if (c === '"') {
+            content += this.__patterns.double_quote.read();
+          } else {
+            content += this.__patterns.single_quote.read();
+          }
+          token = this._create_token(TOKEN.VALUE, content);
+        } else {
+          resulting_string = this.__patterns.attribute.read();
+          if (resulting_string) {
+            if (previous_token.type === TOKEN.EQUALS) {
+              token = this._create_token(TOKEN.VALUE, resulting_string);
+            } else {
+              token = this._create_token(TOKEN.ATTRIBUTE, resulting_string);
+            }
+          }
+        }
+      }
+      return token;
+    };
+    Tokenizer.prototype._is_content_unformatted = function(tag_name) {
+      return this._options.void_elements.indexOf(tag_name) === -1 && (this._options.content_unformatted.indexOf(tag_name) !== -1 || this._options.unformatted.indexOf(tag_name) !== -1);
+    };
+    Tokenizer.prototype._read_raw_content = function(c, previous_token, open_token) {
+      var resulting_string = "";
+      if (open_token && open_token.text[0] === "{") {
+        resulting_string = this.__patterns.handlebars_raw_close.read();
+      } else if (previous_token.type === TOKEN.TAG_CLOSE && previous_token.opened.text[0] === "<" && previous_token.text[0] !== "/") {
+        var tag_name = previous_token.opened.text.substr(1).toLowerCase();
+        if (tag_name === "script" || tag_name === "style") {
+          var token = this._read_comment_or_cdata(c);
+          if (token) {
+            token.type = TOKEN.TEXT;
+            return token;
+          }
+          resulting_string = this._input.readUntil(new RegExp("</" + tag_name + "[\\n\\r\\t ]*?>", "ig"));
+        } else if (this._is_content_unformatted(tag_name)) {
+          resulting_string = this._input.readUntil(new RegExp("</" + tag_name + "[\\n\\r\\t ]*?>", "ig"));
+        }
+      }
+      if (resulting_string) {
+        return this._create_token(TOKEN.TEXT, resulting_string);
+      }
+      return null;
+    };
+    Tokenizer.prototype._read_content_word = function(c) {
+      var resulting_string = "";
+      if (this._options.unformatted_content_delimiter) {
+        if (c === this._options.unformatted_content_delimiter[0]) {
+          resulting_string = this.__patterns.unformatted_content_delimiter.read();
+        }
+      }
+      if (!resulting_string) {
+        resulting_string = this.__patterns.word.read();
+      }
+      if (resulting_string) {
+        return this._create_token(TOKEN.TEXT, resulting_string);
+      }
+    };
+    module2.exports.Tokenizer = Tokenizer;
+    module2.exports.TOKEN = TOKEN;
+  }
+});
+
+// node_modules/js-beautify/js/src/html/beautifier.js
+var require_beautifier3 = __commonJS({
+  "node_modules/js-beautify/js/src/html/beautifier.js"(exports, module2) {
+    "use strict";
+    var Options = require_options4().Options;
+    var Output = require_output().Output;
+    var Tokenizer = require_tokenizer3().Tokenizer;
+    var TOKEN = require_tokenizer3().TOKEN;
+    var lineBreak = /\r\n|[\r\n]/;
+    var allLineBreaks = /\r\n|[\r\n]/g;
+    var Printer = function(options, base_indent_string) {
+      this.indent_level = 0;
+      this.alignment_size = 0;
+      this.max_preserve_newlines = options.max_preserve_newlines;
+      this.preserve_newlines = options.preserve_newlines;
+      this._output = new Output(options, base_indent_string);
+    };
+    Printer.prototype.current_line_has_match = function(pattern) {
+      return this._output.current_line.has_match(pattern);
+    };
+    Printer.prototype.set_space_before_token = function(value, non_breaking) {
+      this._output.space_before_token = value;
+      this._output.non_breaking_space = non_breaking;
+    };
+    Printer.prototype.set_wrap_point = function() {
+      this._output.set_indent(this.indent_level, this.alignment_size);
+      this._output.set_wrap_point();
+    };
+    Printer.prototype.add_raw_token = function(token) {
+      this._output.add_raw_token(token);
+    };
+    Printer.prototype.print_preserved_newlines = function(raw_token) {
+      var newlines = 0;
+      if (raw_token.type !== TOKEN.TEXT && raw_token.previous.type !== TOKEN.TEXT) {
+        newlines = raw_token.newlines ? 1 : 0;
+      }
+      if (this.preserve_newlines) {
+        newlines = raw_token.newlines < this.max_preserve_newlines + 1 ? raw_token.newlines : this.max_preserve_newlines + 1;
+      }
+      for (var n = 0; n < newlines; n++) {
+        this.print_newline(n > 0);
+      }
+      return newlines !== 0;
+    };
+    Printer.prototype.traverse_whitespace = function(raw_token) {
+      if (raw_token.whitespace_before || raw_token.newlines) {
+        if (!this.print_preserved_newlines(raw_token)) {
+          this._output.space_before_token = true;
+        }
+        return true;
+      }
+      return false;
+    };
+    Printer.prototype.previous_token_wrapped = function() {
+      return this._output.previous_token_wrapped;
+    };
+    Printer.prototype.print_newline = function(force) {
+      this._output.add_new_line(force);
+    };
+    Printer.prototype.print_token = function(token) {
+      if (token.text) {
+        this._output.set_indent(this.indent_level, this.alignment_size);
+        this._output.add_token(token.text);
+      }
+    };
+    Printer.prototype.indent = function() {
+      this.indent_level++;
+    };
+    Printer.prototype.get_full_indent = function(level) {
+      level = this.indent_level + (level || 0);
+      if (level < 1) {
+        return "";
+      }
+      return this._output.get_indent_string(level);
+    };
+    var get_type_attribute = function(start_token) {
+      var result = null;
+      var raw_token = start_token.next;
+      while (raw_token.type !== TOKEN.EOF && start_token.closed !== raw_token) {
+        if (raw_token.type === TOKEN.ATTRIBUTE && raw_token.text === "type") {
+          if (raw_token.next && raw_token.next.type === TOKEN.EQUALS && raw_token.next.next && raw_token.next.next.type === TOKEN.VALUE) {
+            result = raw_token.next.next.text;
+          }
+          break;
+        }
+        raw_token = raw_token.next;
+      }
+      return result;
+    };
+    var get_custom_beautifier_name = function(tag_check, raw_token) {
+      var typeAttribute = null;
+      var result = null;
+      if (!raw_token.closed) {
+        return null;
+      }
+      if (tag_check === "script") {
+        typeAttribute = "text/javascript";
+      } else if (tag_check === "style") {
+        typeAttribute = "text/css";
+      }
+      typeAttribute = get_type_attribute(raw_token) || typeAttribute;
+      if (typeAttribute.search("text/css") > -1) {
+        result = "css";
+      } else if (typeAttribute.search(/module|((text|application|dojo)\/(x-)?(javascript|ecmascript|jscript|livescript|(ld\+)?json|method|aspect))/) > -1) {
+        result = "javascript";
+      } else if (typeAttribute.search(/(text|application|dojo)\/(x-)?(html)/) > -1) {
+        result = "html";
+      } else if (typeAttribute.search(/test\/null/) > -1) {
+        result = "null";
+      }
+      return result;
+    };
+    function in_array(what, arr) {
+      return arr.indexOf(what) !== -1;
+    }
+    function TagFrame(parent, parser_token, indent_level) {
+      this.parent = parent || null;
+      this.tag = parser_token ? parser_token.tag_name : "";
+      this.indent_level = indent_level || 0;
+      this.parser_token = parser_token || null;
+    }
+    function TagStack(printer) {
+      this._printer = printer;
+      this._current_frame = null;
+    }
+    TagStack.prototype.get_parser_token = function() {
+      return this._current_frame ? this._current_frame.parser_token : null;
+    };
+    TagStack.prototype.record_tag = function(parser_token) {
+      var new_frame = new TagFrame(this._current_frame, parser_token, this._printer.indent_level);
+      this._current_frame = new_frame;
+    };
+    TagStack.prototype._try_pop_frame = function(frame) {
+      var parser_token = null;
+      if (frame) {
+        parser_token = frame.parser_token;
+        this._printer.indent_level = frame.indent_level;
+        this._current_frame = frame.parent;
+      }
+      return parser_token;
+    };
+    TagStack.prototype._get_frame = function(tag_list, stop_list) {
+      var frame = this._current_frame;
+      while (frame) {
+        if (tag_list.indexOf(frame.tag) !== -1) {
+          break;
+        } else if (stop_list && stop_list.indexOf(frame.tag) !== -1) {
+          frame = null;
+          break;
+        }
+        frame = frame.parent;
+      }
+      return frame;
+    };
+    TagStack.prototype.try_pop = function(tag, stop_list) {
+      var frame = this._get_frame([tag], stop_list);
+      return this._try_pop_frame(frame);
+    };
+    TagStack.prototype.indent_to_tag = function(tag_list) {
+      var frame = this._get_frame(tag_list);
+      if (frame) {
+        this._printer.indent_level = frame.indent_level;
+      }
+    };
+    function Beautifier(source_text, options, js_beautify, css_beautify) {
+      this._source_text = source_text || "";
+      options = options || {};
+      this._js_beautify = js_beautify;
+      this._css_beautify = css_beautify;
+      this._tag_stack = null;
+      var optionHtml = new Options(options, "html");
+      this._options = optionHtml;
+      this._is_wrap_attributes_force = this._options.wrap_attributes.substr(0, "force".length) === "force";
+      this._is_wrap_attributes_force_expand_multiline = this._options.wrap_attributes === "force-expand-multiline";
+      this._is_wrap_attributes_force_aligned = this._options.wrap_attributes === "force-aligned";
+      this._is_wrap_attributes_aligned_multiple = this._options.wrap_attributes === "aligned-multiple";
+      this._is_wrap_attributes_preserve = this._options.wrap_attributes.substr(0, "preserve".length) === "preserve";
+      this._is_wrap_attributes_preserve_aligned = this._options.wrap_attributes === "preserve-aligned";
+    }
+    Beautifier.prototype.beautify = function() {
+      if (this._options.disabled) {
+        return this._source_text;
+      }
+      var source_text = this._source_text;
+      var eol = this._options.eol;
+      if (this._options.eol === "auto") {
+        eol = "\n";
+        if (source_text && lineBreak.test(source_text)) {
+          eol = source_text.match(lineBreak)[0];
+        }
+      }
+      source_text = source_text.replace(allLineBreaks, "\n");
+      var baseIndentString = source_text.match(/^[\t ]*/)[0];
+      var last_token = {
+        text: "",
+        type: ""
+      };
+      var last_tag_token = new TagOpenParserToken();
+      var printer = new Printer(this._options, baseIndentString);
+      var tokens = new Tokenizer(source_text, this._options).tokenize();
+      this._tag_stack = new TagStack(printer);
+      var parser_token = null;
+      var raw_token = tokens.next();
+      while (raw_token.type !== TOKEN.EOF) {
+        if (raw_token.type === TOKEN.TAG_OPEN || raw_token.type === TOKEN.COMMENT) {
+          parser_token = this._handle_tag_open(printer, raw_token, last_tag_token, last_token);
+          last_tag_token = parser_token;
+        } else if (raw_token.type === TOKEN.ATTRIBUTE || raw_token.type === TOKEN.EQUALS || raw_token.type === TOKEN.VALUE || raw_token.type === TOKEN.TEXT && !last_tag_token.tag_complete) {
+          parser_token = this._handle_inside_tag(printer, raw_token, last_tag_token, tokens);
+        } else if (raw_token.type === TOKEN.TAG_CLOSE) {
+          parser_token = this._handle_tag_close(printer, raw_token, last_tag_token);
+        } else if (raw_token.type === TOKEN.TEXT) {
+          parser_token = this._handle_text(printer, raw_token, last_tag_token);
+        } else {
+          printer.add_raw_token(raw_token);
+        }
+        last_token = parser_token;
+        raw_token = tokens.next();
+      }
+      var sweet_code = printer._output.get_code(eol);
+      return sweet_code;
+    };
+    Beautifier.prototype._handle_tag_close = function(printer, raw_token, last_tag_token) {
+      var parser_token = {
+        text: raw_token.text,
+        type: raw_token.type
+      };
+      printer.alignment_size = 0;
+      last_tag_token.tag_complete = true;
+      printer.set_space_before_token(raw_token.newlines || raw_token.whitespace_before !== "", true);
+      if (last_tag_token.is_unformatted) {
+        printer.add_raw_token(raw_token);
+      } else {
+        if (last_tag_token.tag_start_char === "<") {
+          printer.set_space_before_token(raw_token.text[0] === "/", true);
+          if (this._is_wrap_attributes_force_expand_multiline && last_tag_token.has_wrapped_attrs) {
+            printer.print_newline(false);
+          }
+        }
+        printer.print_token(raw_token);
+      }
+      if (last_tag_token.indent_content && !(last_tag_token.is_unformatted || last_tag_token.is_content_unformatted)) {
+        printer.indent();
+        last_tag_token.indent_content = false;
+      }
+      if (!last_tag_token.is_inline_element && !(last_tag_token.is_unformatted || last_tag_token.is_content_unformatted)) {
+        printer.set_wrap_point();
+      }
+      return parser_token;
+    };
+    Beautifier.prototype._handle_inside_tag = function(printer, raw_token, last_tag_token, tokens) {
+      var wrapped = last_tag_token.has_wrapped_attrs;
+      var parser_token = {
+        text: raw_token.text,
+        type: raw_token.type
+      };
+      printer.set_space_before_token(raw_token.newlines || raw_token.whitespace_before !== "", true);
+      if (last_tag_token.is_unformatted) {
+        printer.add_raw_token(raw_token);
+      } else if (last_tag_token.tag_start_char === "{" && raw_token.type === TOKEN.TEXT) {
+        if (printer.print_preserved_newlines(raw_token)) {
+          raw_token.newlines = 0;
+          printer.add_raw_token(raw_token);
+        } else {
+          printer.print_token(raw_token);
+        }
+      } else {
+        if (raw_token.type === TOKEN.ATTRIBUTE) {
+          printer.set_space_before_token(true);
+          last_tag_token.attr_count += 1;
+        } else if (raw_token.type === TOKEN.EQUALS) {
+          printer.set_space_before_token(false);
+        } else if (raw_token.type === TOKEN.VALUE && raw_token.previous.type === TOKEN.EQUALS) {
+          printer.set_space_before_token(false);
+        }
+        if (raw_token.type === TOKEN.ATTRIBUTE && last_tag_token.tag_start_char === "<") {
+          if (this._is_wrap_attributes_preserve || this._is_wrap_attributes_preserve_aligned) {
+            printer.traverse_whitespace(raw_token);
+            wrapped = wrapped || raw_token.newlines !== 0;
+          }
+          if (this._is_wrap_attributes_force) {
+            var force_attr_wrap = last_tag_token.attr_count > 1;
+            if (this._is_wrap_attributes_force_expand_multiline && last_tag_token.attr_count === 1) {
+              var is_only_attribute = true;
+              var peek_index = 0;
+              var peek_token;
+              do {
+                peek_token = tokens.peek(peek_index);
+                if (peek_token.type === TOKEN.ATTRIBUTE) {
+                  is_only_attribute = false;
+                  break;
+                }
+                peek_index += 1;
+              } while (peek_index < 4 && peek_token.type !== TOKEN.EOF && peek_token.type !== TOKEN.TAG_CLOSE);
+              force_attr_wrap = !is_only_attribute;
+            }
+            if (force_attr_wrap) {
+              printer.print_newline(false);
+              wrapped = true;
+            }
+          }
+        }
+        printer.print_token(raw_token);
+        wrapped = wrapped || printer.previous_token_wrapped();
+        last_tag_token.has_wrapped_attrs = wrapped;
+      }
+      return parser_token;
+    };
+    Beautifier.prototype._handle_text = function(printer, raw_token, last_tag_token) {
+      var parser_token = {
+        text: raw_token.text,
+        type: "TK_CONTENT"
+      };
+      if (last_tag_token.custom_beautifier_name) {
+        this._print_custom_beatifier_text(printer, raw_token, last_tag_token);
+      } else if (last_tag_token.is_unformatted || last_tag_token.is_content_unformatted) {
+        printer.add_raw_token(raw_token);
+      } else {
+        printer.traverse_whitespace(raw_token);
+        printer.print_token(raw_token);
+      }
+      return parser_token;
+    };
+    Beautifier.prototype._print_custom_beatifier_text = function(printer, raw_token, last_tag_token) {
+      var local = this;
+      if (raw_token.text !== "") {
+        var text = raw_token.text, _beautifier, script_indent_level = 1, pre = "", post = "";
+        if (last_tag_token.custom_beautifier_name === "javascript" && typeof this._js_beautify === "function") {
+          _beautifier = this._js_beautify;
+        } else if (last_tag_token.custom_beautifier_name === "css" && typeof this._css_beautify === "function") {
+          _beautifier = this._css_beautify;
+        } else if (last_tag_token.custom_beautifier_name === "html") {
+          _beautifier = function(html_source, options) {
+            var beautifier = new Beautifier(html_source, options, local._js_beautify, local._css_beautify);
+            return beautifier.beautify();
+          };
+        }
+        if (this._options.indent_scripts === "keep") {
+          script_indent_level = 0;
+        } else if (this._options.indent_scripts === "separate") {
+          script_indent_level = -printer.indent_level;
+        }
+        var indentation = printer.get_full_indent(script_indent_level);
+        text = text.replace(/\n[ \t]*$/, "");
+        if (last_tag_token.custom_beautifier_name !== "html" && text[0] === "<" && text.match(/^(<!--|<!\[CDATA\[)/)) {
+          var matched = /^(<!--[^\n]*|<!\[CDATA\[)(\n?)([ \t\n]*)([\s\S]*)(-->|]]>)$/.exec(text);
+          if (!matched) {
+            printer.add_raw_token(raw_token);
+            return;
+          }
+          pre = indentation + matched[1] + "\n";
+          text = matched[4];
+          if (matched[5]) {
+            post = indentation + matched[5];
+          }
+          text = text.replace(/\n[ \t]*$/, "");
+          if (matched[2] || matched[3].indexOf("\n") !== -1) {
+            matched = matched[3].match(/[ \t]+$/);
+            if (matched) {
+              raw_token.whitespace_before = matched[0];
+            }
+          }
+        }
+        if (text) {
+          if (_beautifier) {
+            var Child_options = function() {
+              this.eol = "\n";
+            };
+            Child_options.prototype = this._options.raw_options;
+            var child_options = new Child_options();
+            text = _beautifier(indentation + text, child_options);
+          } else {
+            var white = raw_token.whitespace_before;
+            if (white) {
+              text = text.replace(new RegExp("\n(" + white + ")?", "g"), "\n");
+            }
+            text = indentation + text.replace(/\n/g, "\n" + indentation);
+          }
+        }
+        if (pre) {
+          if (!text) {
+            text = pre + post;
+          } else {
+            text = pre + text + "\n" + post;
+          }
+        }
+        printer.print_newline(false);
+        if (text) {
+          raw_token.text = text;
+          raw_token.whitespace_before = "";
+          raw_token.newlines = 0;
+          printer.add_raw_token(raw_token);
+          printer.print_newline(true);
+        }
+      }
+    };
+    Beautifier.prototype._handle_tag_open = function(printer, raw_token, last_tag_token, last_token) {
+      var parser_token = this._get_tag_open_token(raw_token);
+      if ((last_tag_token.is_unformatted || last_tag_token.is_content_unformatted) && !last_tag_token.is_empty_element && raw_token.type === TOKEN.TAG_OPEN && raw_token.text.indexOf("</") === 0) {
+        printer.add_raw_token(raw_token);
+        parser_token.start_tag_token = this._tag_stack.try_pop(parser_token.tag_name);
+      } else {
+        printer.traverse_whitespace(raw_token);
+        this._set_tag_position(printer, raw_token, parser_token, last_tag_token, last_token);
+        if (!parser_token.is_inline_element) {
+          printer.set_wrap_point();
+        }
+        printer.print_token(raw_token);
+      }
+      if (this._is_wrap_attributes_force_aligned || this._is_wrap_attributes_aligned_multiple || this._is_wrap_attributes_preserve_aligned) {
+        parser_token.alignment_size = raw_token.text.length + 1;
+      }
+      if (!parser_token.tag_complete && !parser_token.is_unformatted) {
+        printer.alignment_size = parser_token.alignment_size;
+      }
+      return parser_token;
+    };
+    var TagOpenParserToken = function(parent, raw_token) {
+      this.parent = parent || null;
+      this.text = "";
+      this.type = "TK_TAG_OPEN";
+      this.tag_name = "";
+      this.is_inline_element = false;
+      this.is_unformatted = false;
+      this.is_content_unformatted = false;
+      this.is_empty_element = false;
+      this.is_start_tag = false;
+      this.is_end_tag = false;
+      this.indent_content = false;
+      this.multiline_content = false;
+      this.custom_beautifier_name = null;
+      this.start_tag_token = null;
+      this.attr_count = 0;
+      this.has_wrapped_attrs = false;
+      this.alignment_size = 0;
+      this.tag_complete = false;
+      this.tag_start_char = "";
+      this.tag_check = "";
+      if (!raw_token) {
+        this.tag_complete = true;
+      } else {
+        var tag_check_match;
+        this.tag_start_char = raw_token.text[0];
+        this.text = raw_token.text;
+        if (this.tag_start_char === "<") {
+          tag_check_match = raw_token.text.match(/^<([^\s>]*)/);
+          this.tag_check = tag_check_match ? tag_check_match[1] : "";
+        } else {
+          tag_check_match = raw_token.text.match(/^{{~?(?:[\^]|#\*?)?([^\s}]+)/);
+          this.tag_check = tag_check_match ? tag_check_match[1] : "";
+          if ((raw_token.text.startsWith("{{#>") || raw_token.text.startsWith("{{~#>")) && this.tag_check[0] === ">") {
+            if (this.tag_check === ">" && raw_token.next !== null) {
+              this.tag_check = raw_token.next.text.split(" ")[0];
+            } else {
+              this.tag_check = raw_token.text.split(">")[1];
+            }
+          }
+        }
+        this.tag_check = this.tag_check.toLowerCase();
+        if (raw_token.type === TOKEN.COMMENT) {
+          this.tag_complete = true;
+        }
+        this.is_start_tag = this.tag_check.charAt(0) !== "/";
+        this.tag_name = !this.is_start_tag ? this.tag_check.substr(1) : this.tag_check;
+        this.is_end_tag = !this.is_start_tag || raw_token.closed && raw_token.closed.text === "/>";
+        var handlebar_starts = 2;
+        if (this.tag_start_char === "{" && this.text.length >= 3) {
+          if (this.text.charAt(2) === "~") {
+            handlebar_starts = 3;
+          }
+        }
+        this.is_end_tag = this.is_end_tag || this.tag_start_char === "{" && (this.text.length < 3 || /[^#\^]/.test(this.text.charAt(handlebar_starts)));
+      }
+    };
+    Beautifier.prototype._get_tag_open_token = function(raw_token) {
+      var parser_token = new TagOpenParserToken(this._tag_stack.get_parser_token(), raw_token);
+      parser_token.alignment_size = this._options.wrap_attributes_indent_size;
+      parser_token.is_end_tag = parser_token.is_end_tag || in_array(parser_token.tag_check, this._options.void_elements);
+      parser_token.is_empty_element = parser_token.tag_complete || parser_token.is_start_tag && parser_token.is_end_tag;
+      parser_token.is_unformatted = !parser_token.tag_complete && in_array(parser_token.tag_check, this._options.unformatted);
+      parser_token.is_content_unformatted = !parser_token.is_empty_element && in_array(parser_token.tag_check, this._options.content_unformatted);
+      parser_token.is_inline_element = in_array(parser_token.tag_name, this._options.inline) || parser_token.tag_name.includes("-") || parser_token.tag_start_char === "{";
+      return parser_token;
+    };
+    Beautifier.prototype._set_tag_position = function(printer, raw_token, parser_token, last_tag_token, last_token) {
+      if (!parser_token.is_empty_element) {
+        if (parser_token.is_end_tag) {
+          parser_token.start_tag_token = this._tag_stack.try_pop(parser_token.tag_name);
+        } else {
+          if (this._do_optional_end_element(parser_token)) {
+            if (!parser_token.is_inline_element) {
+              printer.print_newline(false);
+            }
+          }
+          this._tag_stack.record_tag(parser_token);
+          if ((parser_token.tag_name === "script" || parser_token.tag_name === "style") && !(parser_token.is_unformatted || parser_token.is_content_unformatted)) {
+            parser_token.custom_beautifier_name = get_custom_beautifier_name(parser_token.tag_check, raw_token);
+          }
+        }
+      }
+      if (in_array(parser_token.tag_check, this._options.extra_liners)) {
+        printer.print_newline(false);
+        if (!printer._output.just_added_blankline()) {
+          printer.print_newline(true);
+        }
+      }
+      if (parser_token.is_empty_element) {
+        if (parser_token.tag_start_char === "{" && parser_token.tag_check === "else") {
+          this._tag_stack.indent_to_tag(["if", "unless", "each"]);
+          parser_token.indent_content = true;
+          var foundIfOnCurrentLine = printer.current_line_has_match(/{{#if/);
+          if (!foundIfOnCurrentLine) {
+            printer.print_newline(false);
+          }
+        }
+        if (parser_token.tag_name === "!--" && last_token.type === TOKEN.TAG_CLOSE && last_tag_token.is_end_tag && parser_token.text.indexOf("\n") === -1) {
+        } else {
+          if (!(parser_token.is_inline_element || parser_token.is_unformatted)) {
+            printer.print_newline(false);
+          }
+          this._calcluate_parent_multiline(printer, parser_token);
+        }
+      } else if (parser_token.is_end_tag) {
+        var do_end_expand = false;
+        do_end_expand = parser_token.start_tag_token && parser_token.start_tag_token.multiline_content;
+        do_end_expand = do_end_expand || !parser_token.is_inline_element && !(last_tag_token.is_inline_element || last_tag_token.is_unformatted) && !(last_token.type === TOKEN.TAG_CLOSE && parser_token.start_tag_token === last_tag_token) && last_token.type !== "TK_CONTENT";
+        if (parser_token.is_content_unformatted || parser_token.is_unformatted) {
+          do_end_expand = false;
+        }
+        if (do_end_expand) {
+          printer.print_newline(false);
+        }
+      } else {
+        parser_token.indent_content = !parser_token.custom_beautifier_name;
+        if (parser_token.tag_start_char === "<") {
+          if (parser_token.tag_name === "html") {
+            parser_token.indent_content = this._options.indent_inner_html;
+          } else if (parser_token.tag_name === "head") {
+            parser_token.indent_content = this._options.indent_head_inner_html;
+          } else if (parser_token.tag_name === "body") {
+            parser_token.indent_content = this._options.indent_body_inner_html;
+          }
+        }
+        if (!(parser_token.is_inline_element || parser_token.is_unformatted) && (last_token.type !== "TK_CONTENT" || parser_token.is_content_unformatted)) {
+          printer.print_newline(false);
+        }
+        this._calcluate_parent_multiline(printer, parser_token);
+      }
+    };
+    Beautifier.prototype._calcluate_parent_multiline = function(printer, parser_token) {
+      if (parser_token.parent && printer._output.just_added_newline() && !((parser_token.is_inline_element || parser_token.is_unformatted) && parser_token.parent.is_inline_element)) {
+        parser_token.parent.multiline_content = true;
+      }
+    };
+    var p_closers = ["address", "article", "aside", "blockquote", "details", "div", "dl", "fieldset", "figcaption", "figure", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "header", "hr", "main", "nav", "ol", "p", "pre", "section", "table", "ul"];
+    var p_parent_excludes = ["a", "audio", "del", "ins", "map", "noscript", "video"];
+    Beautifier.prototype._do_optional_end_element = function(parser_token) {
+      var result = null;
+      if (parser_token.is_empty_element || !parser_token.is_start_tag || !parser_token.parent) {
+        return;
+      }
+      if (parser_token.tag_name === "body") {
+        result = result || this._tag_stack.try_pop("head");
+      } else if (parser_token.tag_name === "li") {
+        result = result || this._tag_stack.try_pop("li", ["ol", "ul"]);
+      } else if (parser_token.tag_name === "dd" || parser_token.tag_name === "dt") {
+        result = result || this._tag_stack.try_pop("dt", ["dl"]);
+        result = result || this._tag_stack.try_pop("dd", ["dl"]);
+      } else if (parser_token.parent.tag_name === "p" && p_closers.indexOf(parser_token.tag_name) !== -1) {
+        var p_parent = parser_token.parent.parent;
+        if (!p_parent || p_parent_excludes.indexOf(p_parent.tag_name) === -1) {
+          result = result || this._tag_stack.try_pop("p");
+        }
+      } else if (parser_token.tag_name === "rp" || parser_token.tag_name === "rt") {
+        result = result || this._tag_stack.try_pop("rt", ["ruby", "rtc"]);
+        result = result || this._tag_stack.try_pop("rp", ["ruby", "rtc"]);
+      } else if (parser_token.tag_name === "optgroup") {
+        result = result || this._tag_stack.try_pop("optgroup", ["select"]);
+      } else if (parser_token.tag_name === "option") {
+        result = result || this._tag_stack.try_pop("option", ["select", "datalist", "optgroup"]);
+      } else if (parser_token.tag_name === "colgroup") {
+        result = result || this._tag_stack.try_pop("caption", ["table"]);
+      } else if (parser_token.tag_name === "thead") {
+        result = result || this._tag_stack.try_pop("caption", ["table"]);
+        result = result || this._tag_stack.try_pop("colgroup", ["table"]);
+      } else if (parser_token.tag_name === "tbody" || parser_token.tag_name === "tfoot") {
+        result = result || this._tag_stack.try_pop("caption", ["table"]);
+        result = result || this._tag_stack.try_pop("colgroup", ["table"]);
+        result = result || this._tag_stack.try_pop("thead", ["table"]);
+        result = result || this._tag_stack.try_pop("tbody", ["table"]);
+      } else if (parser_token.tag_name === "tr") {
+        result = result || this._tag_stack.try_pop("caption", ["table"]);
+        result = result || this._tag_stack.try_pop("colgroup", ["table"]);
+        result = result || this._tag_stack.try_pop("tr", ["table", "thead", "tbody", "tfoot"]);
+      } else if (parser_token.tag_name === "th" || parser_token.tag_name === "td") {
+        result = result || this._tag_stack.try_pop("td", ["table", "thead", "tbody", "tfoot", "tr"]);
+        result = result || this._tag_stack.try_pop("th", ["table", "thead", "tbody", "tfoot", "tr"]);
+      }
+      parser_token.parent = this._tag_stack.get_parser_token();
+      return result;
+    };
+    module2.exports.Beautifier = Beautifier;
+  }
+});
+
+// node_modules/js-beautify/js/src/html/index.js
+var require_html = __commonJS({
+  "node_modules/js-beautify/js/src/html/index.js"(exports, module2) {
+    "use strict";
+    var Beautifier = require_beautifier3().Beautifier;
+    var Options = require_options4().Options;
+    function style_html(html_source, options, js_beautify, css_beautify) {
+      var beautifier = new Beautifier(html_source, options, js_beautify, css_beautify);
+      return beautifier.beautify();
+    }
+    module2.exports = style_html;
+    module2.exports.defaultOptions = function() {
+      return new Options();
+    };
+  }
+});
+
+// node_modules/js-beautify/js/src/index.js
+var require_src = __commonJS({
+  "node_modules/js-beautify/js/src/index.js"(exports, module2) {
+    "use strict";
+    var js_beautify = require_javascript();
+    var css_beautify = require_css();
+    var html_beautify2 = require_html();
+    function style_html(html_source, options, js, css) {
+      js = js || js_beautify;
+      css = css || css_beautify;
+      return html_beautify2(html_source, options, js, css);
+    }
+    style_html.defaultOptions = html_beautify2.defaultOptions;
+    module2.exports.js = js_beautify;
+    module2.exports.css = css_beautify;
+    module2.exports.html = style_html;
+  }
+});
+
+// node_modules/js-beautify/js/index.js
+var require_js = __commonJS({
+  "node_modules/js-beautify/js/index.js"(exports, module2) {
+    "use strict";
+    function get_beautify(js_beautify, css_beautify, html_beautify2) {
+      var beautify = function(src, config) {
+        return js_beautify.js_beautify(src, config);
+      };
+      beautify.js = js_beautify.js_beautify;
+      beautify.css = css_beautify.css_beautify;
+      beautify.html = html_beautify2.html_beautify;
+      beautify.js_beautify = js_beautify.js_beautify;
+      beautify.css_beautify = css_beautify.css_beautify;
+      beautify.html_beautify = html_beautify2.html_beautify;
+      return beautify;
+    }
+    if (typeof define === "function" && define.amd) {
+      define([
+        "./lib/beautify",
+        "./lib/beautify-css",
+        "./lib/beautify-html"
+      ], function(js_beautify, css_beautify, html_beautify2) {
+        return get_beautify(js_beautify, css_beautify, html_beautify2);
+      });
+    } else {
+      (function(mod) {
+        var beautifier = require_src();
+        beautifier.js_beautify = beautifier.js;
+        beautifier.css_beautify = beautifier.css;
+        beautifier.html_beautify = beautifier.html;
+        mod.exports = get_beautify(beautifier, beautifier, beautifier);
+      })(module2);
+    }
   }
 });
 
@@ -6105,165 +10173,1046 @@ __export(main_exports, {
   default: () => HTMLExportPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian4 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
 // scripts/export-settings.ts
-var import_obsidian2 = require("obsidian");
+var import_obsidian4 = require("obsidian");
 
-// scripts/utils.ts
+// scripts/utils/utils.ts
+var import_obsidian3 = require("obsidian");
+
+// scripts/utils/path.ts
 var import_fs = require("fs");
 var import_obsidian = require("obsidian");
-var import_process = __toESM(require("process"));
+var import_fs2 = require("fs");
 var pathTools = require_upath();
+var _Path = class {
+  constructor(path, workingDirectory = _Path.vaultPath.asString) {
+    this._root = "";
+    this._dir = "";
+    this._parent = "";
+    this._base = "";
+    this._ext = "";
+    this._name = "";
+    this._fullPath = "";
+    this._isDirectory = false;
+    this._isFile = false;
+    this._exists = void 0;
+    this._isWindows = process.platform === "win32";
+    this._workingDirectory = _Path.parsePath(workingDirectory).fullPath;
+    this.reparse(path);
+    if (this.isAbsolute)
+      this._workingDirectory = "";
+  }
+  static log(title, message, type) {
+    this.logQueue.push({ title, message, type });
+  }
+  static dequeueLog() {
+    let queue = this.logQueue;
+    this.logQueue = [];
+    return queue;
+  }
+  reparse(path) {
+    let parsed = _Path.parsePath(path);
+    this._root = parsed.root;
+    this._dir = parsed.dir;
+    this._parent = parsed.parent;
+    this._base = parsed.base;
+    this._ext = parsed.ext;
+    this._name = parsed.name;
+    this._fullPath = parsed.fullPath;
+    this._isDirectory = this._ext == "";
+    this._isFile = this._ext != "";
+    this._exists = void 0;
+    if (this._isWindows) {
+      this._root = this._root.replaceAll("/", "\\");
+      this._dir = this._dir.replaceAll("/", "\\");
+      this._parent = this._parent.replaceAll("/", "\\");
+      this._fullPath = this._fullPath.replaceAll("/", "\\");
+    }
+    this._exists;
+    return this;
+  }
+  static parsePath(path) {
+    path = decodeURI(path);
+    let parsed = pathTools.parse(path);
+    let parent = parsed.dir;
+    if (path.endsWith("/") || path.endsWith("\\") || parsed.ext == "") {
+      parsed.dir = pathTools.normalizeSafe(path);
+    }
+    let fullPath = pathTools.join(parent, parsed.base);
+    return { root: parsed.root, dir: parsed.dir, parent, base: parsed.base, ext: parsed.ext, name: parsed.name, fullPath };
+  }
+  static pathExists(path) {
+    return (0, import_fs.existsSync)(path);
+  }
+  static joinStringPaths(...paths) {
+    return decodeURI(pathTools.join(...paths));
+  }
+  static joinPath(...paths) {
+    return new _Path(_Path.joinStringPaths(...paths.map((p) => p.asString)), paths[0]._workingDirectory);
+  }
+  static joinStrings(...paths) {
+    return new _Path(_Path.joinStringPaths(...paths));
+  }
+  static getRelativePath(from, to, useAbsolute = false) {
+    let fromUse = useAbsolute ? from.absolute() : from;
+    let toUse = useAbsolute ? to.absolute() : to;
+    let relative = pathTools.relative(fromUse.directory.asString, toUse.asString);
+    let workingDir = from.absolute().directory.asString;
+    return new _Path(relative, workingDir);
+  }
+  static getRelativePathFromVault(path) {
+    return _Path.getRelativePath(_Path.vaultPath, path);
+  }
+  static get vaultPath() {
+    var _a;
+    if (this.vaultPathCache != void 0)
+      return this.vaultPathCache;
+    let adapter = app.vault.adapter;
+    if (adapter instanceof import_obsidian.FileSystemAdapter) {
+      let basePath = (_a = adapter.getBasePath()) != null ? _a : "";
+      this.vaultPathCache = new _Path(basePath, "");
+      return this.vaultPathCache;
+    }
+    throw new Error("Vault path could not be determined");
+  }
+  static get vaultConfigDir() {
+    if (this.vaultConfigDirCache == void 0) {
+      this.vaultConfigDirCache = new _Path(app.vault.configDir, "");
+    }
+    return this.vaultConfigDirCache;
+  }
+  static get emptyPath() {
+    return new _Path("", "");
+  }
+  static get rootPath() {
+    return new _Path("/", "");
+  }
+  static toWebStyle(path) {
+    return path.replaceAll(" ", "-").toLowerCase();
+  }
+  joinString(...paths) {
+    return this.copy.reparse(_Path.joinStringPaths(this.asString, ...paths));
+  }
+  join(...paths) {
+    return new _Path(_Path.joinStringPaths(this.asString, ...paths.map((p) => p.asString)), this._workingDirectory);
+  }
+  makeAbsolute(workingDirectory = this._workingDirectory) {
+    if (workingDirectory instanceof _Path && !workingDirectory.isAbsolute)
+      throw new Error("workingDirectory must be an absolute path");
+    if (!this.isAbsolute) {
+      this._fullPath = _Path.joinStringPaths(workingDirectory.toString(), this.asString);
+      this._workingDirectory = "";
+      this.reparse(this.asString);
+    }
+    return this;
+  }
+  makeNormalized() {
+    let fullPath = pathTools.normalizeSafe(this.absolute().asString);
+    let newWorkingDir = "";
+    let newFullPath = "";
+    let reachedEndOfWorkingDir = false;
+    for (let i = 0; i < fullPath.length; i++) {
+      let fullChar = fullPath.charAt(i);
+      let workingChar = this.workingDirectory.charAt(i);
+      if (fullChar == workingChar && !reachedEndOfWorkingDir) {
+        newWorkingDir += fullChar;
+        continue;
+      }
+      reachedEndOfWorkingDir = true;
+      newFullPath += fullChar;
+    }
+    this.reparse(newFullPath);
+    this._workingDirectory = newWorkingDir;
+    return this;
+  }
+  normalized() {
+    return this.copy.makeNormalized();
+  }
+  makeRootAbsolute() {
+    if (!this.isAbsolute) {
+      if (this._isWindows) {
+        if (this._fullPath.contains(":")) {
+          this._fullPath = this.asString.substring(this._fullPath.indexOf(":") - 1);
+        } else {
+          this._fullPath = "\\" + this.asString;
+        }
+      } else {
+        this._fullPath = "/" + this.asString;
+      }
+      this.reparse(this.asString);
+    }
+    return this;
+  }
+  setWorkingDirectory(workingDirectory) {
+    this._workingDirectory = workingDirectory;
+    return this;
+  }
+  makeRootRelative() {
+    if (this.isAbsolute) {
+      if (this._isWindows) {
+        this._fullPath = this.asString.replace(/^.:\/\//i, "").replace(/^.:\//i, "");
+        this._fullPath = Utils.trimStart(this._fullPath, "\\");
+      } else {
+        this._fullPath = Utils.trimStart(this._fullPath, "/");
+      }
+      this.reparse(this.asString);
+    }
+    return this;
+  }
+  makeWebStyle() {
+    this._fullPath = this.asString.replaceAll(" ", "-").toLowerCase();
+    this.reparse(this.asString);
+    return this;
+  }
+  makeWindowsStyle() {
+    this._isWindows = true;
+    this._fullPath = this.asString.replaceAll("/", "\\");
+    this.reparse(this.asString);
+    return this;
+  }
+  makeUnixStyle() {
+    this._isWindows = false;
+    this._fullPath = this.asString.replaceAll("\\", "/").replace(/^.:\/\//i, "/");
+    this.reparse(this.asString);
+    return this;
+  }
+  setExtension(extension) {
+    if (!extension.contains("."))
+      extension = "." + extension;
+    this._ext = extension;
+    this._base = this._name + this._ext;
+    this._fullPath = _Path.joinStringPaths(this._dir, this._base);
+    this.reparse(this._fullPath);
+    return this;
+  }
+  toString() {
+    return this.asString;
+  }
+  get root() {
+    return this._root;
+  }
+  get directory() {
+    return new _Path(this._dir, this._workingDirectory);
+  }
+  get parent() {
+    return new _Path(this._parent, this._workingDirectory);
+  }
+  get fullName() {
+    return this._base;
+  }
+  get extenstion() {
+    return this._ext;
+  }
+  get extensionName() {
+    return this._ext.replace(".", "");
+  }
+  get basename() {
+    return this._name;
+  }
+  get asString() {
+    return this._fullPath;
+  }
+  get isDirectory() {
+    return this._isDirectory;
+  }
+  get isEmpty() {
+    return this.asString == ".";
+  }
+  get isFile() {
+    return this._isFile;
+  }
+  get workingDirectory() {
+    return this._workingDirectory;
+  }
+  get exists() {
+    if (this._exists == void 0) {
+      try {
+        this._exists = _Path.pathExists(this.absolute().asString);
+      } catch (error) {
+        this._exists = false;
+        _Path.log("Error checking if path exists: " + this.asString, error.stack, "error");
+      }
+    }
+    return this._exists;
+  }
+  assertExists() {
+    if (!this.exists) {
+      new import_obsidian.Notice("Error: Path does not exist: \n\n" + this.asString, 5e3);
+      console.error("Path does not exist: " + this.asString);
+    }
+    return this.exists;
+  }
+  get isAbsolute() {
+    if (this._isWindows) {
+      if (this.asString.match(/^[A-Za-z]:[\\|\/|\\\\|\/\/]/))
+        return true;
+      if (this.asString.startsWith("\\") && !this.asString.contains(":"))
+        return true;
+      else
+        return false;
+    } else {
+      if (this.asString.startsWith("/"))
+        return true;
+      else
+        return false;
+    }
+  }
+  get isRelative() {
+    return !this.isAbsolute;
+  }
+  get copy() {
+    return new _Path(this.asString, this._workingDirectory);
+  }
+  absolute(workingDirectory = this._workingDirectory) {
+    return this.copy.makeAbsolute(workingDirectory);
+  }
+  async createDirectory() {
+    if (!this.exists) {
+      let path = this.absolute().directory.asString;
+      try {
+        await import_fs2.promises.mkdir(path, { recursive: true });
+      } catch (error) {
+        _Path.log("Error creating directory: " + path, error.stack, "error");
+        return false;
+      }
+    }
+    return true;
+  }
+  async readFileString(encoding = "utf-8") {
+    if (!this.exists || this.isDirectory)
+      return void 0;
+    try {
+      let data = await import_fs2.promises.readFile(this.absolute().asString, { encoding });
+      return data;
+    } catch (error) {
+      _Path.log("Error reading file: " + this.asString, error.stack, "error");
+      return void 0;
+    }
+  }
+  async readFileBuffer() {
+    if (!this.exists || this.isDirectory)
+      return void 0;
+    try {
+      let data = await import_fs2.promises.readFile(this.absolute().asString);
+      return data;
+    } catch (error) {
+      _Path.log("Error reading file buffer: " + this.asString, error.stack, "error");
+      return void 0;
+    }
+  }
+  async writeFile(data, encoding = "utf-8") {
+    if (this.isDirectory)
+      return false;
+    let dirExists = await this.createDirectory();
+    if (!dirExists)
+      return false;
+    try {
+      await import_fs2.promises.writeFile(this.absolute().asString, data, { encoding });
+      return true;
+    } catch (error) {
+      _Path.log("Error writing file: " + this.asString, error.stack, "error");
+      return false;
+    }
+  }
+};
+var Path = _Path;
+Path.logQueue = [];
+Path.vaultPathCache = void 0;
+Path.vaultConfigDirCache = void 0;
+
+// scripts/html-generation/markdown-renderer.ts
+var import_obsidian2 = require("obsidian");
+
+// scripts/html-generation/graph-gen.ts
+var GraphGenerator = class {
+  static InOutQuadBlend(start, end, t) {
+    t /= 2;
+    let t2 = 2 * t * (1 - t) + 0.5;
+    t2 -= 0.5;
+    t2 *= 2;
+    return start + (end - start) * t2;
+  }
+  static clearGraphCache() {
+    GraphGenerator.graphCache = void 0;
+  }
+  static getGlobalGraph(minRadius, maxRadius) {
+    var _a;
+    if (this.graphCache != void 0)
+      return this.graphCache;
+    let nodeCount = 0;
+    let indexedRadii = [];
+    let labels = [];
+    let linkSources = [];
+    let linkTargets = [];
+    let linkCounts = [];
+    let paths = [];
+    for (let file of app.vault.getFiles()) {
+      if (file.extension != "md" && file.extension != "canvas")
+        continue;
+      indexedRadii.push({ index: nodeCount, radius: minRadius });
+      labels.push(file.basename);
+      paths.push(file.path);
+      linkCounts.push(0);
+      nodeCount++;
+    }
+    let maxLinks = 0;
+    for (let link of Object.entries(app.metadataCache.resolvedLinks)) {
+      let sourceIndex = paths.indexOf(link[0]);
+      let targetLinks = Object.entries(link[1]);
+      for (let targetLink of targetLinks) {
+        let targetIndex = paths.indexOf(targetLink[0]);
+        if (sourceIndex == -1 || targetIndex == -1) {
+          continue;
+        }
+        linkCounts[sourceIndex]++;
+        linkCounts[targetIndex]++;
+        linkSources.push(sourceIndex);
+        linkTargets.push(targetIndex);
+      }
+      if (linkCounts[sourceIndex] > maxLinks)
+        maxLinks = linkCounts[sourceIndex];
+    }
+    for (let link of Object.entries(app.metadataCache.resolvedLinks)) {
+      let sourceIndex = paths.indexOf(link[0]);
+      indexedRadii[sourceIndex].radius = GraphGenerator.InOutQuadBlend(minRadius, maxRadius, Math.min(linkCounts[sourceIndex] / (maxLinks * 0.8), 1));
+    }
+    indexedRadii.sort((a, b) => b.radius - a.radius);
+    let radii = indexedRadii.map((r) => r.radius);
+    labels = indexedRadii.map((r) => labels[r.index]);
+    linkSources = linkSources.map((s) => indexedRadii.findIndex((r) => r.index == s));
+    linkTargets = linkTargets.map((t) => indexedRadii.findIndex((r) => r.index == t));
+    linkCounts = indexedRadii.map((r) => linkCounts[r.index]);
+    paths = indexedRadii.map((r) => ExportSettings.settings.makeNamesWebStyle ? Path.toWebStyle(paths[r.index]) : paths[r.index]);
+    paths = paths.map((p) => {
+      return new Path(p).setExtension(".html").makeUnixStyle().asString;
+    });
+    this.graphCache = { nodeCount, linkCount: linkSources.length, radii, labels, paths, linkSources, linkTargets };
+    return (_a = this.graphCache) != null ? _a : { nodeCount: 0, linkCount: 0, radii: [], labels: [], paths: [], linkSources: [], linkTargets: [] };
+  }
+};
+
+// scripts/utils/downloadable.ts
+var Downloadable = class {
+  constructor(filename, content, vaultRelativeDestination, encoding = "utf8") {
+    if (vaultRelativeDestination.isFile)
+      throw new Error("vaultRelativeDestination must be a folder");
+    this.filename = filename;
+    this.content = content;
+    this.relativeDownloadPath = vaultRelativeDestination;
+    this.encoding = encoding;
+  }
+  async download(downloadDirectory) {
+    let data = this.content instanceof Buffer ? this.content : Buffer.from(this.content.toString(), this.encoding);
+    let writePath = this.relativeDownloadPath.absolute(downloadDirectory).joinString(this.filename);
+    await writePath.writeFile(data);
+  }
+};
+
+// scripts/html-generation/asset-handler.ts
+var AssetHandler = class {
+  static async updateAssets() {
+    if (HTMLExportPlugin.updateInfo.updateAvailable)
+      return;
+    await this.assetsPath.createDirectory();
+    let webpagejs = await fetch(this.webpagejsURL);
+    let webpagejsText = await webpagejs.text();
+    await this.assetsPath.joinString("webpage.js").writeFile(webpagejsText);
+    let pluginStyles = await fetch(this.pluginStylesURL);
+    let pluginStylesText = await pluginStyles.text();
+    this.assetsPath.joinString("plugin-styles.css").writeFile(pluginStylesText);
+    let obsidianStyles = await fetch(this.obsidianStylesURL);
+    let obsidianStylesText = await obsidianStyles.text();
+    this.assetsPath.joinString("obsidian-styles.css").writeFile(obsidianStylesText);
+    let graphViewJS = await fetch(this.graphViewJSURL);
+    let graphViewJSText = await graphViewJS.text();
+    this.assetsPath.joinString("graph_view.js").writeFile(graphViewJSText);
+    let graphWASMJS = await fetch(this.graphWASMJSURL);
+    let graphWASMJSText = await graphWASMJS.text();
+    this.assetsPath.joinString("graph_wasm.js").writeFile(graphWASMJSText);
+    let graphWASM = await fetch(this.graphWASMURL);
+    let graphWASMBuffer = await graphWASM.arrayBuffer();
+    this.assetsPath.joinString("graph_wasm.wasm").writeFile(Buffer.from(graphWASMBuffer));
+    let renderWorker = await fetch(this.renderWorkerURL);
+    let renderWorkerText = await renderWorker.text();
+    this.assetsPath.joinString("graph-render-worker.js").writeFile(renderWorkerText);
+    let tinycolor = await fetch(this.tinycolorURL);
+    let tinycolorText = await tinycolor.text();
+    this.assetsPath.joinString("tinycolor.js").writeFile(tinycolorText);
+  }
+  static async loadAppStyles() {
+    var _a, _b;
+    let appSheet = document.styleSheets[1];
+    let stylesheets = document.styleSheets;
+    for (let i = 0; i < stylesheets.length; i++) {
+      if (stylesheets[i].href && ((_a = stylesheets[i].href) == null ? void 0 : _a.includes("app.css"))) {
+        appSheet = stylesheets[i];
+        break;
+      }
+    }
+    this.appStyles += (_b = await this.assetsPath.joinString("obsidian-styles.css").readFileString()) != null ? _b : "";
+    for (let i = 0; i < appSheet.cssRules.length; i++) {
+      let rule = appSheet.cssRules[i];
+      if (rule) {
+        if (rule.cssText.startsWith("@font-face"))
+          continue;
+        if (rule.cssText.startsWith(".CodeMirror"))
+          continue;
+        if (rule.cssText.startsWith(".cm-"))
+          continue;
+        let cssText = rule.cssText + "\n";
+        cssText = cssText.replaceAll("public/", "https://publish.obsidian.md/public/");
+        cssText = cssText.replaceAll("lib/", "https://publish.obsidian.md/lib/");
+        this.appStyles += cssText;
+      }
+    }
+  }
+  static async initialize(pluginID) {
+    var _a, _b, _c, _d, _e, _f, _g;
+    this.vaultPluginsPath = Path.vaultPath.joinString(app.vault.configDir, "plugins/").makeAbsolute();
+    this.thisPluginPath = this.vaultPluginsPath.joinString(pluginID + "/").makeAbsolute();
+    this.assetsPath = this.thisPluginPath.joinString("assets/").makeAbsolute();
+    await this.assetsPath.createDirectory();
+    if (this.autoDownloadExtras)
+      await this.updateAssets();
+    await this.loadAppStyles();
+    this.webpageStyles = (_a = await this.assetsPath.joinString("plugin-styles.css").readFileString()) != null ? _a : "";
+    this.themeStyles = await this.getThemeContent(this.getCurrentThemeName());
+    this.webpageJS = (_b = await this.assetsPath.joinString("webpage.js").readFileString()) != null ? _b : "";
+    this.graphViewJS = (_c = await this.assetsPath.joinString("graph_view.js").readFileString()) != null ? _c : "";
+    this.graphWASMJS = (_d = await this.assetsPath.joinString("graph_wasm.js").readFileString()) != null ? _d : "";
+    this.graphWASM = (_e = await this.assetsPath.joinString("graph_wasm.wasm").readFileBuffer()) != null ? _e : Buffer.from([]);
+    this.renderWorkerJS = (_f = await this.assetsPath.joinString("graph-render-worker.js").readFileString()) != null ? _f : "";
+    this.tinyColorJS = (_g = await this.assetsPath.joinString("tinycolor.js").readFileString()) != null ? _g : "";
+  }
+  static async getPluginStyles() {
+    let pluginCSS = "";
+    let thirdPartyPluginStyleNames = ExportSettings.settings.includePluginCSS.split("\n");
+    for (let i = 0; i < thirdPartyPluginStyleNames.length; i++) {
+      if (!thirdPartyPluginStyleNames[i] || thirdPartyPluginStyleNames[i] && !/\S/.test(thirdPartyPluginStyleNames[i]))
+        continue;
+      let path = this.vaultPluginsPath.joinString(thirdPartyPluginStyleNames[i].replace("\n", ""), "styles.css");
+      if (!path.exists)
+        continue;
+      let style = await path.readFileString();
+      if (style) {
+        pluginCSS += style;
+      }
+    }
+    return pluginCSS;
+  }
+  static async getSnippetsCSS(snippetNames) {
+    let snippetsList = await this.getStyleSnippetsContent();
+    let snippets = "\n";
+    for (let i = 0; i < snippetsList.length; i++) {
+      snippets += `/* --- ${snippetNames[i]}.css --- */  
+ ${snippetsList[i]}  
+
+
+`;
+    }
+    return snippets;
+  }
+  static async updateAssetCache() {
+    let snippetsNames = await this.getEnabledSnippets();
+    let themeName = this.getCurrentThemeName();
+    if (snippetsNames != this.lastEnabledSnippets) {
+      this.lastEnabledSnippets = snippetsNames;
+      this.snippetStyles = await this.getSnippetsCSS(snippetsNames);
+    }
+    if (themeName != this.lastEnabledTheme) {
+      this.lastEnabledTheme = themeName;
+      this.themeStyles = await this.getThemeContent(themeName);
+    }
+  }
+  static async getDownloads() {
+    let toDownload = [];
+    if (!ExportSettings.settings.inlineCSS) {
+      let pluginCSS = this.webpageStyles;
+      let thirdPartyPluginCSS = await this.getPluginStyles();
+      pluginCSS += "\n" + thirdPartyPluginCSS + "\n";
+      let appcssDownload = new Downloadable("obsidian-styles.css", this.appStyles, this.cssFolderName);
+      let plugincssDownload = new Downloadable("plugin-styles.css", pluginCSS, this.cssFolderName);
+      let themecssDownload = new Downloadable("theme.css", this.themeStyles, this.cssFolderName);
+      let snippetsDownload = new Downloadable("snippets.css", this.snippetStyles, this.cssFolderName);
+      toDownload.push(appcssDownload);
+      toDownload.push(plugincssDownload);
+      toDownload.push(themecssDownload);
+      toDownload.push(snippetsDownload);
+    }
+    if (!ExportSettings.settings.inlineJS) {
+      let webpagejsDownload = new Downloadable("webpage.js", this.webpageJS, this.jsFolderName);
+      toDownload.push(webpagejsDownload);
+    }
+    if (ExportSettings.settings.includeGraphView) {
+      let graphWASMDownload = new Downloadable("graph_wasm.wasm", this.graphWASM, this.jsFolderName);
+      let renderWorkerJSDownload = new Downloadable("graph-render-worker.js", this.renderWorkerJS, this.jsFolderName);
+      let graphWASMJSDownload = new Downloadable("graph_wasm.js", this.graphWASMJS, this.jsFolderName);
+      let graphViewJSDownload = new Downloadable("graph_view.js", this.graphViewJS, this.jsFolderName);
+      let tinyColorJS = new Downloadable("tinycolor.js", this.tinyColorJS, this.jsFolderName);
+      toDownload.push(renderWorkerJSDownload);
+      toDownload.push(graphWASMDownload);
+      toDownload.push(graphWASMJSDownload);
+      toDownload.push(graphViewJSDownload);
+      toDownload.push(tinyColorJS);
+    }
+    return toDownload;
+  }
+  static async getThemeContent(themeName) {
+    var _a;
+    if (themeName == "Default")
+      return "/* Using default theme. */";
+    let themePath = new Path(`.obsidian/themes/${themeName}/theme.css`).absolute();
+    if (!themePath.exists) {
+      RenderLog.warning("Warning: could not load theme.", "Cannot find theme at path: \n\n" + themePath);
+      return "";
+    }
+    let themeContent = (_a = await themePath.readFileString()) != null ? _a : "";
+    return themeContent;
+  }
+  static getCurrentThemeName() {
+    var _a;
+    let themeName = (_a = app.vault.config) == null ? void 0 : _a.cssTheme;
+    return (themeName != null ? themeName : "") == "" ? "Default" : themeName;
+  }
+  static getEnabledSnippets() {
+    var _a, _b;
+    return (_b = (_a = app.vault.config) == null ? void 0 : _a.enabledCssSnippets) != null ? _b : [];
+  }
+  static async getStyleSnippetsContent() {
+    var _a;
+    let snippetContents = [];
+    let enabledSnippets = this.getEnabledSnippets();
+    for (let i = 0; i < enabledSnippets.length; i++) {
+      let path = new Path(`.obsidian/snippets/${enabledSnippets[i]}.css`).absolute();
+      if (path.exists)
+        snippetContents.push((_a = await path.readFileString()) != null ? _a : "\n");
+    }
+    return snippetContents;
+  }
+};
+AssetHandler.autoDownloadExtras = true;
+AssetHandler.mediaFolderName = new Path("media");
+AssetHandler.jsFolderName = new Path("scripts");
+AssetHandler.cssFolderName = new Path("styles");
+AssetHandler.appStyles = "";
+AssetHandler.mathStyles = "";
+AssetHandler.webpageStyles = "";
+AssetHandler.themeStyles = "";
+AssetHandler.snippetStyles = "";
+AssetHandler.lastEnabledSnippets = [];
+AssetHandler.lastEnabledTheme = "";
+AssetHandler.webpageJS = "";
+AssetHandler.graphViewJS = "";
+AssetHandler.graphWASMJS = "";
+AssetHandler.renderWorkerJS = "";
+AssetHandler.tinyColorJS = "";
+AssetHandler.webpagejsURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/webpage.js";
+AssetHandler.pluginStylesURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/plugin-styles.css";
+AssetHandler.obsidianStylesURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/obsidian-styles.css";
+AssetHandler.graphViewJSURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/graph_view.js";
+AssetHandler.graphWASMJSURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/graph_wasm.js";
+AssetHandler.graphWASMURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/graph_wasm.wasm";
+AssetHandler.renderWorkerURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/graph-render-worker.js";
+AssetHandler.tinycolorURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/tinycolor.js";
+
+// scripts/utils/tab-manager.ts
+var TabManager;
+((TabManager2) => {
+  function getLeaf(navType, splitDirection = "vertical") {
+    let leaf = navType === "split" ? app.workspace.getLeaf(navType, splitDirection) : app.workspace.getLeaf(navType);
+    return leaf;
+  }
+  async function openFileInNewTab(file, navType, splitDirection = "vertical") {
+    let leaf = getLeaf(navType, splitDirection);
+    try {
+      await leaf.openFile(file, void 0).catch((reason) => {
+        console.log(reason);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    return leaf;
+  }
+  TabManager2.openFileInNewTab = openFileInNewTab;
+  function openNewTab(navType, splitDirection = "vertical") {
+    return getLeaf(navType, splitDirection);
+  }
+  TabManager2.openNewTab = openNewTab;
+})(TabManager || (TabManager = {}));
+
+// scripts/html-generation/markdown-renderer.ts
+var import_jquery = __toESM(require_jquery());
+var { clipboard } = require("electron");
+var $ = import_jquery.default;
+var MarkdownRenderer;
+((MarkdownRenderer2) => {
+  MarkdownRenderer2.problemLog = "";
+  MarkdownRenderer2.errorInBatch = false;
+  async function renderMarkdown(file) {
+    var _a;
+    if (!MarkdownRenderer2.renderLeaf) {
+      throw new Error("Cannot render document without a render leaf! Please call beginBatch() before calling this function, and endBatch() after you are done exporting all files.");
+    }
+    try {
+      await MarkdownRenderer2.renderLeaf.openFile(file.markdownFile, { active: false });
+    } catch (e) {
+      let message2 = "Failed to open file! File: " + file.markdownFile.path;
+      RenderLog.warning("Cannot render file: ", message2);
+      return generateFailDocument();
+    }
+    if (!(MarkdownRenderer2.renderLeaf.view instanceof import_obsidian2.MarkdownView)) {
+      let message2 = "This file was not a normal markdown file! File: " + file.markdownFile.path;
+      RenderLog.warning("Cannot render file: ", message2);
+      return generateFailDocument();
+    }
+    let previewModeFound = await Utils.waitUntil(() => MarkdownRenderer2.renderLeaf != void 0 && MarkdownRenderer2.renderLeaf.view.previewMode, 2e3, 10);
+    if (!previewModeFound) {
+      let message2 = "Failed to open preview mode! File: " + file.markdownFile.path;
+      RenderLog.warning("Cannot render file: ", message2);
+      return generateFailDocument();
+    }
+    let preview = MarkdownRenderer2.renderLeaf.view.previewMode;
+    await Utils.changeViewMode(MarkdownRenderer2.renderLeaf.view, "preview");
+    preview.renderer.showAll = true;
+    await preview.renderer.unfoldAllHeadings();
+    let lastRender = preview.renderer.lastRender;
+    preview.renderer.rerender(true);
+    let isRendered = false;
+    preview.renderer.onRendered(() => {
+      isRendered = true;
+    });
+    let renderfinished = await Utils.waitUntil(() => preview.renderer.lastRender != lastRender && isRendered || MarkdownRenderer2.renderLeaf == void 0, 1e4, 10);
+    if (!renderfinished) {
+      let message2 = "Failed to render file within 10 seconds! File: " + file.markdownFile.path;
+      RenderLog.warning("Cannot render file: ", message2);
+      return generateFailDocument();
+    }
+    if (MarkdownRenderer2.renderLeaf == void 0) {
+      RenderLog.warning("Render cancelled! On file: ", file.markdownFile.path);
+      return generateFailDocument();
+    }
+    let text = MarkdownRenderer2.renderLeaf.view.data;
+    let dataviews = text.matchAll(/```(dataview|dataviewjs)/g);
+    let dataviewCount = Array.from(dataviews).length;
+    if (dataviewCount > 0) {
+      await Utils.delay(ExportSettings.settings.dataviewBlockWaitTime * dataviewCount);
+    }
+    let container = preview.containerEl;
+    if (container) {
+      $(container).find(".markdown-preview-sizer").css("width", "unset");
+      $(container).find(".markdown-preview-sizer").css("height", "unset");
+      $(container).find(".markdown-preview-sizer").css("margin", "unset");
+      $(container).find(".markdown-preview-sizer").css("padding", "unset");
+      $(container).find(".markdown-preview-sizer").css("max-width", "unset");
+      $(container).find(".markdown-preview-sizer").css("min-height", "unset");
+      let stylesheet = document.getElementById("MJX-CHTML-styles");
+      if (stylesheet) {
+        if (document.getElementById("MJX-CHTML-styles")) {
+          (_a = document.getElementById("MJX-CHTML-styles")) == null ? void 0 : _a.remove();
+          document.head.appendChild(stylesheet);
+        }
+        AssetHandler.mathStyles = stylesheet.innerHTML.replaceAll("app://obsidian.md/", "https://publish.obsidian.md/").trim();
+      }
+      return container.innerHTML;
+    }
+    let message = "Could not find container with rendered content! File: " + file.markdownFile.path;
+    RenderLog.warning("Cannot render file: ", message);
+    return generateFailDocument();
+  }
+  MarkdownRenderer2.renderMarkdown = renderMarkdown;
+  async function beginBatch() {
+    GraphGenerator.clearGraphCache();
+    MarkdownRenderer2.problemLog = "";
+    MarkdownRenderer2.errorInBatch = false;
+    MarkdownRenderer2.renderLeaf = TabManager.openNewTab("window", "vertical");
+    let parentFound = await Utils.waitUntil(() => MarkdownRenderer2.renderLeaf && MarkdownRenderer2.renderLeaf.parent, 2e3, 10);
+    if (!parentFound) {
+      try {
+        MarkdownRenderer2.renderLeaf.detach();
+      } catch (e) {
+        console.log(e);
+      }
+      new import_obsidian2.Notice("Error: Failed to create leaf for rendering!");
+      throw new Error("Failed to create leaf for rendering!");
+    }
+    MarkdownRenderer2.renderLeaf.parent.containerEl.style.height = "0";
+    $(MarkdownRenderer2.renderLeaf.parent.parent.containerEl).find(".clickable-icon, .workspace-tab-header-container-inner").css("display", "none");
+    $(MarkdownRenderer2.renderLeaf.parent.containerEl).css("max-height", "var(--header-height)");
+    $(MarkdownRenderer2.renderLeaf.parent.parent.containerEl).removeClass("mod-vertical");
+    $(MarkdownRenderer2.renderLeaf.parent.parent.containerEl).addClass("mod-horizontal");
+    MarkdownRenderer2.renderLeaf.view.containerEl.win.resizeTo(900, 450);
+    MarkdownRenderer2.renderLeaf.view.containerEl.win.moveTo(window.screen.width / 2 - 450, window.screen.height - 450 - 75);
+    console.log(MarkdownRenderer2.renderLeaf);
+    await Utils.delay(1e3);
+  }
+  MarkdownRenderer2.beginBatch = beginBatch;
+  function endBatch() {
+    if (MarkdownRenderer2.renderLeaf) {
+      if (!MarkdownRenderer2.errorInBatch)
+        MarkdownRenderer2.renderLeaf.detach();
+    }
+  }
+  MarkdownRenderer2.endBatch = endBatch;
+  function generateLogEl(title, message, textColor, backgroundColor) {
+    let logEl = document.createElement("div");
+    logEl.className = "html-render-log-item";
+    logEl.style.display = "flex";
+    logEl.style.flexDirection = "column";
+    logEl.style.marginBottom = "2px";
+    logEl.style.fontSize = "12px";
+    logEl.innerHTML = `
+		<div class="html-render-log-title" style="font-weight: bold; margin-left: 1em;">${title}</div>
+		<div class="html-render-log-message" style="margin-left: 2em; font-size: 0.8em;white-space: pre-wrap;">${message}</div>
+		`;
+    logEl.style.color = textColor;
+    logEl.style.backgroundColor = backgroundColor;
+    logEl.style.borderLeft = `5px solid ${textColor}`;
+    logEl.style.borderBottom = "1px solid var(--divider-color)";
+    logEl.style.borderTop = "1px solid var(--divider-color)";
+    return logEl;
+  }
+  MarkdownRenderer2.generateLogEl = generateLogEl;
+  function _reportProgress(complete, total, message, subMessage, progressColor) {
+    if (!MarkdownRenderer2.renderLeaf)
+      return;
+    let found = Utils.waitUntil(() => MarkdownRenderer2.renderLeaf && MarkdownRenderer2.renderLeaf.parent && MarkdownRenderer2.renderLeaf.parent.parent, 2e3, 10);
+    if (!found)
+      return;
+    let loadingContainer = MarkdownRenderer2.renderLeaf.parent.parent.containerEl.querySelector(`.html-render-progress-container`);
+    if (!loadingContainer) {
+      loadingContainer = document.createElement("div");
+      loadingContainer.className = `html-render-progress-container`;
+      loadingContainer.setAttribute("style", "height: 100%; min-width: 100%; display:flex; flex-direction:column; align-content: center; justify-content: center; align-items: center;");
+      loadingContainer.innerHTML = `
+			<div class="html-render-progress-container" style="height: 100%;min-width: 100%;display:flex;flex-direction:column;">
+				<div style="display: flex;height: 100%;">
+					<div style="flex-grow: 1;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+						<h1 style="">Generating HTML</h1>
+						<progress class="html-render-progressbar" value="0" min="0" max="1" style="width: 300px; height: 15px; background-color: transparent; color: var(--color-accent);"></progress>
+						<span class="html-render-submessage" style="margin-block-start: 2em;"></span>
+					</div>
+					<div class="html-render-log" style="display:none; flex-direction: column; border-left: 1px solid var(--divider-color); overflow-y: auto; width: 300px; max-width: 300px; min-width: 300px;">
+						<h1 style="color: var(--color-yellow);padding: 0.3em;background-color: rgba(100, 70, 20, 0.1);margin: 0;">Export Problem Log</h1>
+						<button class="html-render-log-copy-button" style="margin: 10px;width: fit-content;align-self: center;">Copy Log to Clipboard</button>
+					</div>
+				</div>
+			</div>
+			`;
+      MarkdownRenderer2.renderLeaf.parent.parent.containerEl.appendChild(loadingContainer);
+      let copyButton = loadingContainer.querySelector("button.html-render-log-copy-button");
+      if (copyButton) {
+        copyButton.addEventListener("click", () => {
+          console.log(MarkdownRenderer2.problemLog);
+          clipboard.writeText(MarkdownRenderer2.problemLog);
+          new import_obsidian2.Notice("Copied to clipboard! Please paste this into your github issue as is.");
+        });
+      }
+    }
+    let progress = complete / total;
+    let progressBar = loadingContainer.querySelector("progress");
+    if (progressBar) {
+      progressBar.value = progress;
+      progressBar.style.backgroundColor = "transparent";
+      progressBar.style.color = progressColor;
+    }
+    let messageElement = loadingContainer.querySelector("h1");
+    if (messageElement) {
+      messageElement.innerText = message;
+    }
+    let subMessageElement = loadingContainer.querySelector("span.html-render-submessage");
+    if (subMessageElement) {
+      subMessageElement.innerText = subMessage;
+    }
+  }
+  MarkdownRenderer2._reportProgress = _reportProgress;
+  function _reportError(messageTitle, message, fatal) {
+    messageTitle = (fatal ? "[Fatal Error] " : "[Error] ") + messageTitle;
+    MarkdownRenderer2.problemLog += "\n\n##### " + messageTitle + "\n```\n" + message + "\n```";
+    if (!MarkdownRenderer2.renderLeaf)
+      return;
+    MarkdownRenderer2.errorInBatch = true;
+    let found = Utils.waitUntil(() => MarkdownRenderer2.renderLeaf && MarkdownRenderer2.renderLeaf.parent && MarkdownRenderer2.renderLeaf.parent.parent, 2e3, 10);
+    if (!found)
+      return;
+    let loadingContainer = MarkdownRenderer2.renderLeaf.parent.parent.containerEl.querySelector(`.html-render-progress-container`);
+    if (!loadingContainer)
+      return;
+    let titleElement = loadingContainer.querySelector("h1");
+    if (titleElement) {
+      titleElement.innerText = "\u26A0\uFE0F " + messageTitle;
+      titleElement.style.color = "var(--color-red) !important";
+    }
+    let messageElement = loadingContainer.querySelector("span.html-render-submessage");
+    if (messageElement) {
+      messageElement.innerText = messageElement.innerText + "\n\nSee the problem log \u27F6\nConsider copying the log and reporting an issue on github.";
+    }
+    let logContainer = loadingContainer.querySelector(".html-render-log");
+    if (logContainer) {
+      logContainer.style.display = "flex";
+      let logEl = generateLogEl(messageTitle, message, "var(--color-red)", "rgba(170, 10, 30, 0.1)");
+      logContainer.appendChild(logEl);
+    }
+    if (fatal) {
+      MarkdownRenderer2.renderLeaf = void 0;
+    }
+  }
+  MarkdownRenderer2._reportError = _reportError;
+  function _reportWarning(messageTitle, message) {
+    messageTitle = "[Warning] " + messageTitle;
+    MarkdownRenderer2.problemLog += "\n\n##### " + messageTitle + "\n```\n" + message + "\n```";
+    if (!ExportSettings.settings.showWarningsInExportLog)
+      return;
+    if (!MarkdownRenderer2.renderLeaf)
+      return;
+    let found = Utils.waitUntil(() => MarkdownRenderer2.renderLeaf && MarkdownRenderer2.renderLeaf.parent && MarkdownRenderer2.renderLeaf.parent.parent, 2e3, 10);
+    if (!found)
+      return;
+    let loadingContainer = MarkdownRenderer2.renderLeaf.parent.parent.containerEl.querySelector(`.html-render-progress-container`);
+    if (!loadingContainer)
+      return;
+    let logContainer = loadingContainer.querySelector(".html-render-log");
+    if (logContainer) {
+      logContainer.style.display = "flex";
+      let logEl = generateLogEl(messageTitle, message, "var(--color-yellow)", "rgba(170, 170, 10, 0.1)");
+      logContainer.appendChild(logEl);
+    }
+  }
+  MarkdownRenderer2._reportWarning = _reportWarning;
+  function _reportInfo(messageTitle, message) {
+    messageTitle = "[Info] " + messageTitle;
+    MarkdownRenderer2.problemLog += "\n\n##### " + messageTitle + "\n```\n" + message + "\n```";
+    if (!ExportSettings.settings.showWarningsInExportLog)
+      return;
+    if (!MarkdownRenderer2.renderLeaf)
+      return;
+    let found = Utils.waitUntil(() => MarkdownRenderer2.renderLeaf && MarkdownRenderer2.renderLeaf.parent && MarkdownRenderer2.renderLeaf.parent.parent, 2e3, 10);
+    if (!found)
+      return;
+    let loadingContainer = MarkdownRenderer2.renderLeaf.parent.parent.containerEl.querySelector(`.html-render-progress-container`);
+    if (!loadingContainer)
+      return;
+    let logContainer = loadingContainer.querySelector(".html-render-log");
+    if (logContainer) {
+      logContainer.style.display = "flex";
+      let logEl = generateLogEl(messageTitle, message, "var(--text-normal)", "rgba(0, 0, 0, 0.15)");
+      logContainer.appendChild(logEl);
+    }
+  }
+  MarkdownRenderer2._reportInfo = _reportInfo;
+  function generateFailDocument(message = "Page Not Found") {
+    return `
+		<div class="markdown-preview-view markdown-rendered">
+			<div class="markdown-preview-sizer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; max-width: 100%; min-height: 100%;">
+			<div>
+				<center style='position: relative; transform: translateY(20vh); width: 100%; text-align: center;'>
+					<h1 style>${message}</h1>
+				</center>
+			</div>
+		</div>
+		`;
+  }
+  MarkdownRenderer2.generateFailDocument = generateFailDocument;
+})(MarkdownRenderer || (MarkdownRenderer = {}));
+
+// scripts/html-generation/render-log.ts
+var RenderLog;
+((RenderLog2) => {
+  function log(messageTitle, message) {
+    pullPathLogs();
+    console.log(messageTitle + ": \n" + message);
+    MarkdownRenderer._reportInfo(messageTitle, message);
+  }
+  RenderLog2.log = log;
+  function warning(messageTitle, message) {
+    pullPathLogs();
+    console.warn(messageTitle + ": \n" + message);
+    MarkdownRenderer._reportWarning(messageTitle, message);
+  }
+  RenderLog2.warning = warning;
+  function error(messageTitle, message, fatal = false) {
+    pullPathLogs();
+    console.error(messageTitle + ": \n" + message);
+    MarkdownRenderer._reportError(messageTitle, message, fatal);
+  }
+  RenderLog2.error = error;
+  function progress(complete, total, message, subMessage, progressColor = "var(--color-accent)") {
+    pullPathLogs();
+    MarkdownRenderer._reportProgress(complete, total, message, subMessage, progressColor);
+  }
+  RenderLog2.progress = progress;
+  function pullPathLogs() {
+    let logs = Path.dequeueLog();
+    for (let thisLog of logs) {
+      switch (thisLog.type) {
+        case "info":
+          log(thisLog.title, thisLog.message);
+          break;
+        case "warn":
+          warning(thisLog.title, thisLog.message);
+          break;
+        case "error":
+          error(thisLog.title, thisLog.message, false);
+          break;
+        case "fatal":
+          error(thisLog.title, thisLog.message, true);
+          break;
+      }
+    }
+  }
+  function testThrowError(chance) {
+    if (Math.random() < chance) {
+      throw new Error("Test error");
+    }
+  }
+  RenderLog2.testThrowError = testThrowError;
+})(RenderLog || (RenderLog = {}));
+
+// scripts/utils/utils.ts
 var dialog = require("electron").remote.dialog;
 var Utils = class {
   static async delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
-  static parsePath(path) {
-    path = this.makePathUnicodeCompatible(path);
-    let parsed = pathTools.parse(path);
-    if (path.endsWith("/") || parsed.ext == "") {
-      parsed.dir = pathTools.normalizeSafe(path);
-      parsed.base = "";
+  static padStringBeggining(str, length, char) {
+    return char.repeat(length - str.length) + str;
+  }
+  static sampleCSSColorHex(variable, testParentEl) {
+    let testEl = document.createElement("div");
+    testEl.style.setProperty("display", "none");
+    testEl.style.setProperty("color", "var(" + variable + ")");
+    testParentEl.appendChild(testEl);
+    let col = getComputedStyle(testEl).color;
+    let opacity = getComputedStyle(testEl).opacity;
+    testEl.remove();
+    function toColorObject(str) {
+      var match = str.match(/rgb?\((\d+),\s*(\d+),\s*(\d+)\)/);
+      return match ? {
+        red: parseInt(match[1]),
+        green: parseInt(match[2]),
+        blue: parseInt(match[3]),
+        alpha: 1
+      } : null;
     }
-    let fullPath = pathTools.join(parsed.dir, parsed.base);
-    return { root: parsed.root, dir: parsed.dir, base: parsed.base, ext: parsed.ext, name: parsed.name, fullPath };
+    var color = toColorObject(col), alpha = parseFloat(opacity);
+    return isNaN(alpha) && (alpha = 1), color ? {
+      a: alpha * color.alpha,
+      hex: Utils.padStringBeggining(color.red.toString(16), 2, "0") + Utils.padStringBeggining(color.green.toString(16), 2, "0") + Utils.padStringBeggining(color.blue.toString(16), 2, "0")
+    } : {
+      a: alpha,
+      hex: "ffffff"
+    };
   }
-  static parseFullPath(path) {
-    return this.parsePath(path).fullPath;
-  }
-  static joinPaths(...paths) {
-    return this.makePathUnicodeCompatible(pathTools.join(...paths));
-  }
-  static pathExists(path, showErrors = true) {
-    if (!(0, import_fs.existsSync)(path)) {
-      if (showErrors)
-        new import_obsidian.Notice("Error: Path does not exist: \n\n" + path, 1e4);
-      if (showErrors)
-        console.error("Path does not exist: " + path);
-      return false;
-    }
-    return true;
-  }
-  static createDirectory(path) {
-    var _a;
-    path = this.parsePath((_a = this.getAbsolutePath(path, false)) != null ? _a : path).dir;
-    if (!this.pathExists(path, false)) {
-      console.log("Creating directory at: " + path);
-      (0, import_fs.mkdirSync)(path, { recursive: true });
-    }
-  }
-  static makePathUnicodeCompatible(path) {
-    return decodeURI(path);
-  }
-  static makePathWebStyle(path) {
-    return path.replaceAll(" ", "-").toLowerCase();
-  }
-  static pathIsAbsolute(path) {
-    if (import_process.default.platform == "win32") {
-      if (path.match(/^[A-Za-z]:[\\|\/]/))
-        return true;
-      else
-        return false;
-    } else {
-      if (path.match(/^[\/]/))
-        return true;
-      else
-        return false;
-    }
-  }
-  static forceRelativePath(path, forcePOSIX = false) {
-    path = path.replaceAll("\\", "/");
-    if (import_process.default.platform == "win32" && !forcePOSIX) {
-      if (!path.startsWith("/"))
-        return "/" + path;
-    } else {
-      if (path.startsWith("/"))
-        return Utils.trimStart(path, "/");
-    }
-    return path;
-  }
-  static forceAbsolutePath(path, forcePOSIX = false) {
-    path = path.replaceAll("\\", "/");
-    if (import_process.default.platform == "win32" && !forcePOSIX) {
-      if (path.startsWith("/"))
-        return Utils.trimStart(path, "/");
-    } else {
-      if (!path.startsWith("/"))
-        return "/" + path;
-    }
-    return path;
-  }
-  static getAbsolutePath(path, mustExist = true, workingDirectory = this.getVaultPath()) {
-    let reliablePath = this.parseFullPath(path);
-    if (!Utils.pathIsAbsolute(reliablePath)) {
-      reliablePath = this.joinPaths(workingDirectory, reliablePath);
-    }
-    if (mustExist && !this.pathExists(reliablePath))
-      return void 0;
-    return this.makePathUnicodeCompatible(reliablePath);
-  }
-  static getRelativePath(path, workingDirectory = this.getVaultPath()) {
-    let absolutePath = this.getAbsolutePath(Utils.parsePath(path).dir);
-    let absoluteWorkingDirectory = this.getAbsolutePath(Utils.parsePath(workingDirectory).dir);
-    if (!absolutePath || !absoluteWorkingDirectory)
-      return path;
-    return pathTools.relative(absoluteWorkingDirectory, absolutePath);
-  }
-  static async getText(path) {
-    let absolutePath = this.getAbsolutePath(path);
-    if (!absolutePath)
-      return "";
-    return new Promise((resolve, reject) => {
-      (0, import_fs.readFile)(absolutePath, { encoding: "utf8" }, (err, data) => {
-        if (err) {
-          new import_obsidian.Notice("Error: could not read text file at path: \n\n" + path + "\n\n" + err, 1e4);
-          console.error("Error: could not read text file at path: \n\n" + path + "\n\n" + err);
-          reject(err);
-        } else
-          resolve(data);
-      });
-    });
-  }
-  static async getTextBase64(path) {
-    let absolutePath = this.getAbsolutePath(path);
-    if (!absolutePath)
-      return "";
-    return new Promise((resolve, reject) => {
-      (0, import_fs.readFile)(absolutePath, { encoding: "base64" }, (err, data) => {
-        if (err) {
-          new import_obsidian.Notice("Error: could not read base64 text file at path: \n\n" + path + "\n\n" + err, 1e4);
-          console.error("Error: could not read base64 text file at path: \n\n" + path + "\n\n" + err);
-          reject(err);
-        } else
-          resolve(data);
-      });
-    });
-  }
-  static changeViewMode(view, modeName) {
+  static async changeViewMode(view, modeName) {
     const mode = view.modes[modeName];
-    mode && view.setMode(mode);
-  }
-  static createUnicodeArray(content) {
-    let charCode, byteArray = [];
-    byteArray.push(254, 255);
-    for (let i = 0; i < content.length; ++i) {
-      charCode = content.charCodeAt(i);
-      byteArray.push((charCode & 65280) >>> 8);
-      byteArray.push(charCode & 255);
-    }
-    return new Uint8Array(byteArray);
+    mode && await view.setMode(mode);
   }
   static async showSaveDialog(defaultPath, defaultFileName, showAllFilesOption = true) {
-    let absoluteDefaultPath = this.getAbsolutePath(this.parsePath(defaultPath).dir);
-    if (!absoluteDefaultPath)
-      absoluteDefaultPath = this.getVaultPath();
-    absoluteDefaultPath += "/" + defaultFileName;
-    let defaultPathParsed = this.parsePath(absoluteDefaultPath);
+    let absoluteDefaultPath = defaultPath.directory.absolute().joinString(defaultFileName);
     let filters = [{
-      name: Utils.trimStart(defaultPathParsed.ext, ".").toUpperCase() + " Files",
-      extensions: [Utils.trimStart(defaultPathParsed.ext, ".")]
+      name: Utils.trimStart(absoluteDefaultPath.extenstion, ".").toUpperCase() + " Files",
+      extensions: [Utils.trimStart(absoluteDefaultPath.extenstion, ".")]
     }];
     if (showAllFilesOption) {
       filters.push({
@@ -6272,75 +11221,52 @@ var Utils = class {
       });
     }
     let picker = await dialog.showSaveDialog({
-      defaultPath: defaultPathParsed.fullPath,
+      defaultPath: absoluteDefaultPath.asString,
       filters,
       properties: ["showOverwriteConfirmation"]
     });
     if (picker.canceled)
-      return null;
-    let pickedPath = picker.filePath;
-    ExportSettings.settings.lastExportPath = Utils.parsePath(pickedPath).fullPath;
+      return void 0;
+    let pickedPath = new Path(picker.filePath);
+    ExportSettings.settings.lastExportPath = pickedPath.asString;
     ExportSettings.saveSettings();
     return pickedPath;
   }
   static async showSelectFolderDialog(defaultPath) {
-    let absoluteDefaultPath = this.getAbsolutePath(defaultPath);
-    if (!absoluteDefaultPath)
-      absoluteDefaultPath = this.getVaultPath();
+    if (!defaultPath.exists)
+      defaultPath = Path.vaultPath;
     let picker = await dialog.showOpenDialog({
-      defaultPath: Utils.parsePath(absoluteDefaultPath).dir,
+      defaultPath: defaultPath.directory.asString,
       properties: ["openDirectory"]
     });
     if (picker.canceled)
-      return null;
-    let path = picker.filePaths[0];
-    ExportSettings.settings.lastExportPath = Utils.parsePath(path).dir;
+      return void 0;
+    let path = new Path(picker.filePaths[0]);
+    ExportSettings.settings.lastExportPath = path.directory.asString;
     ExportSettings.saveSettings();
     return path;
   }
   static idealDefaultPath() {
-    return ExportSettings.settings.lastExportPath == "" ? Utils.getVaultPath() : Utils.parsePath(ExportSettings.settings.lastExportPath).dir;
-  }
-  static async downloadFile(data, filename, path = "") {
-    var _a;
-    if (path == "") {
-      path = (_a = await Utils.showSaveDialog(Utils.idealDefaultPath(), filename)) != null ? _a : "";
-      if (path == "")
-        return;
+    let lastPath = new Path(ExportSettings.settings.lastExportPath);
+    if (lastPath.asString != "" && lastPath.exists) {
+      return lastPath.directory;
     }
-    let absolutePath = this.getAbsolutePath(path, false);
-    if (!absolutePath)
-      return "";
-    this.createDirectory(absolutePath);
-    let array = Utils.createUnicodeArray(data);
-    (0, import_fs.writeFile)(absolutePath, array, (err) => {
-      if (err) {
-        console.error("Error: could not write file at path: \n\n" + absolutePath + "\n\n" + err);
-        new import_obsidian.Notice("Error: could not write file at path: \n\n" + absolutePath + "\n\n" + err, 1e4);
-      }
-    });
+    return Path.vaultPath;
   }
   static async downloadFiles(files, folderPath) {
-    var _a, _b;
+    if (!folderPath.isAbsolute)
+      throw new Error("folderPath must be absolute");
+    RenderLog.progress(0, files.length, "Saving HTML files to disk", "...", "var(--color-green)");
     for (let i = 0; i < files.length; i++) {
-      let array = ((_a = files[i].unicode) != null ? _a : true) ? Utils.createUnicodeArray(files[i].data) : Buffer.from(files[i].data, "base64");
-      let parsedPath = this.parsePath(this.joinPaths(folderPath, (_b = files[i].relativePath) != null ? _b : "", files[i].filename));
-      this.createDirectory(parsedPath.fullPath);
-      (0, import_fs.writeFile)(parsedPath.fullPath, array, (err) => {
-        if (err) {
-          console.error("Error: could not write file at path: \n\n" + parsedPath.fullPath + "\n\n" + err);
-          new import_obsidian.Notice("Error: could not write file at path: \n\n" + parsedPath.fullPath + "\n\n" + err, 1e4);
-        }
-      });
+      let file = files[i];
+      try {
+        await file.download(folderPath.directory);
+        RenderLog.progress(i + 1, files.length, "Saving HTML files to disk", "Saving: " + file.filename, "var(--color-green)");
+      } catch (e) {
+        RenderLog.error("Could not save file: " + file.filename, e.stack);
+        continue;
+      }
     }
-  }
-  static getVaultPath() {
-    var _a;
-    let adapter = app.vault.adapter;
-    if (adapter instanceof import_obsidian.FileSystemAdapter) {
-      return this.parsePath((_a = adapter.getBasePath()) != null ? _a : "").fullPath;
-    }
-    return "";
   }
   static async waitUntil(condition, timeout = 1e3, interval = 100) {
     return new Promise((resolve, reject) => {
@@ -6348,34 +11274,16 @@ var Utils = class {
       let intervalId = setInterval(() => {
         if (condition()) {
           clearInterval(intervalId);
-          resolve();
+          resolve(true);
         } else {
           timer += interval;
           if (timer >= timeout) {
             clearInterval(intervalId);
-            reject();
+            resolve(false);
           }
         }
       }, interval);
     });
-  }
-  static async getThemeContent(themeName) {
-    if (themeName == "Default")
-      return "/* Using default theme. */";
-    let themePath = this.getAbsolutePath(this.forceRelativePath(`.obsidian/themes/${themeName}/theme.css`));
-    if (!themePath)
-      return "/* Error: Theme not found */";
-    let themeContent = await Utils.getText(themePath);
-    return themeContent;
-  }
-  static getCurrentTheme() {
-    var _a;
-    let themeName = (_a = app.vault.config) == null ? void 0 : _a.cssTheme;
-    return (themeName != null ? themeName : "") == "" ? "Default" : themeName;
-  }
-  static getEnabledSnippets() {
-    var _a, _b;
-    return (_b = (_a = app.vault.config) == null ? void 0 : _a.enabledCssSnippets) != null ? _b : [];
   }
   static getPluginIDs() {
     let pluginsArray = Array.from(app.plugins.enabledPlugins.values());
@@ -6391,68 +11299,12 @@ var Utils = class {
     var _a;
     return (_a = app.plugins.manifests[pluginID]) != null ? _a : null;
   }
-  static async getStyleSnippetsContent() {
-    let snippetContents = [];
-    let enabledSnippets = this.getEnabledSnippets();
-    for (let i = 0; i < enabledSnippets.length; i++) {
-      snippetContents.push(await Utils.getText(this.forceRelativePath(`.obsidian/snippets/${enabledSnippets[i]}.css`)));
-    }
-    return snippetContents;
-  }
-  static async viewEnableFullRender(view) {
-    Utils.changeViewMode(view, "preview");
-    await this.delay(200);
-    view.previewMode.renderer.showAll = true;
-    await view.previewMode.renderer.unfoldAllHeadings();
-    await Utils.delay(300);
-    await view.previewMode.renderer.rerender();
-  }
-  static async getRendererHeight(view, rerender = false) {
-    if (rerender)
-      await Utils.viewEnableFullRender(view);
-    let height = view.previewMode.renderer.sizerEl.offsetHeight;
-    return height;
-  }
-  static getActiveView() {
-    let view = app.workspace.getActiveViewOfType(import_obsidian.TextFileView);
+  static getActiveTextView() {
+    let view = app.workspace.getActiveViewOfType(import_obsidian3.TextFileView);
     if (!view) {
       return null;
     }
     return view;
-  }
-  static findFileInVaultByName(name) {
-    return app.vault.getFiles().find((file) => {
-      if (!name)
-        return false;
-      return file.basename == name;
-    });
-  }
-  static setLineWidth(width) {
-    var _a;
-    if (width != 0) {
-      let sizers = document.querySelectorAll(".workspace-leaf.mod-active .markdown-preview-sizer");
-      if (sizers.length > 0) {
-        sizers[0].setAttribute("style", `${(_a = sizers[0].getAttr("style")) != null ? _a : ""} max-width: ${width}px; width: unset;`);
-      }
-    }
-  }
-  static beautifyHTML(html) {
-    var div = document.createElement("div");
-    div.innerHTML = html.trim();
-    return this._beautifyhtmlrecursive(div, 0).innerHTML;
-  }
-  static _beautifyhtmlrecursive(node, level) {
-    var indentBefore = new Array(level++ + 1).join("  "), indentAfter = new Array(level - 1).join("  "), textNode;
-    for (var i = 0; i < node.children.length; i++) {
-      textNode = document.createTextNode("\n" + indentBefore);
-      node.insertBefore(textNode, node.children[i]);
-      this._beautifyhtmlrecursive(node.children[i], level);
-      if (node.lastElementChild == node.children[i]) {
-        textNode = document.createTextNode("\n" + indentAfter);
-        node.appendChild(textNode);
-      }
-    }
-    return node;
   }
   static trimEnd(inputString, trimString) {
     if (inputString.endsWith(trimString)) {
@@ -6469,16 +11321,33 @@ var Utils = class {
 };
 
 // scripts/export-settings.ts
+var import_promises = require("fs/promises");
 var DEFAULT_SETTINGS = {
   inlineCSS: true,
   inlineJS: true,
   inlineImages: true,
-  makeNamesWebStyle: false,
   includePluginCSS: "",
+  makeNamesWebStyle: false,
+  allowFoldingHeadings: true,
+  addFilenameTitle: true,
+  beautifyHTML: false,
+  dataviewBlockWaitTime: 700,
+  showWarningsInExportLog: true,
   addDarkModeToggle: true,
   includeOutline: true,
-  customLineWidth: 0,
+  includeGraphView: false,
+  includeVaultOutline: true,
+  exportPreset: "",
+  customLineWidth: "",
   openAfterExport: true,
+  keepNestedFolderStructure: false,
+  graphAttractionForce: 1,
+  graphLinkLength: 10,
+  graphRepulsionForce: 150,
+  graphCentralForce: 3,
+  graphEdgePruning: 100,
+  graphMinNodeSize: 3,
+  graphMaxNodeSize: 7,
   lastExportPath: ""
 };
 var FlowList = class {
@@ -6508,59 +11377,145 @@ var FlowList = class {
     return item;
   }
 };
-var _ExportSettings = class extends import_obsidian2.PluginSettingTab {
+var _ExportSettings = class extends import_obsidian4.PluginSettingTab {
   constructor(plugin) {
     super(app, plugin);
+    this.blacklistedPluginIDs = [];
     _ExportSettings.plugin = plugin;
+  }
+  async getBlacklistedPluginIDs() {
+    if (this.blacklistedPluginIDs.length > 0)
+      return this.blacklistedPluginIDs;
+    let blacklist = await AssetHandler.assetsPath.joinString("third-party-styles-blacklist.txt").readFileString();
+    if (blacklist) {
+      this.blacklistedPluginIDs = blacklist.split("\n");
+    }
+    return this.blacklistedPluginIDs;
   }
   static async loadSettings() {
     _ExportSettings.settings = Object.assign({}, DEFAULT_SETTINGS, await _ExportSettings.plugin.loadData());
+    _ExportSettings.settings.customLineWidth = _ExportSettings.settings.customLineWidth.toString();
+    if (_ExportSettings.settings.customLineWidth === "0")
+      _ExportSettings.settings.customLineWidth = "";
+    let thirdPartyStylesBlacklist = await fetch(_ExportSettings.thirdPartyStylesBlacklistURL);
+    let thirdPartyStylesBlacklistText = await thirdPartyStylesBlacklist.text();
+    await (0, import_promises.writeFile)(AssetHandler.assetsPath.joinString("third-party-styles-blacklist.txt").asString, thirdPartyStylesBlacklistText).catch((err) => {
+      console.log(err);
+    });
   }
   static async saveSettings() {
     await _ExportSettings.plugin.saveData(_ExportSettings.settings);
   }
   display() {
-    const { containerEl } = this;
-    containerEl.empty();
-    let header = containerEl.createEl("h2", { text: "HTML Export Settings" });
-    header.style.display = "inline-block";
-    let supporLink = containerEl.createEl("a", { href: "https://www.buymeacoffee.com/nathangeorge" });
-    let supportButton = supporLink.createEl("img");
-    supportButton.setAttribute("src", "https://cdn.buymeacoffee.com/buttons/v2/default-violet.png");
-    supportButton.setAttribute("style", "    height: 30px; margin-right: 0; margin-left: 17px; transform: translateY(25%);");
-    supportButton.setAttribute("alt", "Buy Me A Coffee");
-    containerEl.createEl("h3", { text: "Inlining Options:" });
-    new import_obsidian2.Setting(containerEl).setName("Inline CSS").setDesc("Inline the CSS into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineCSS).onChange(async (value) => {
+    const { containerEl: contentEl } = this;
+    contentEl.empty();
+    let header = contentEl.createEl("h2", { text: "HTML Export Settings" });
+    header.style.display = "block";
+    header.style.marginBottom = "15px";
+    let supportLink = contentEl.createEl("a");
+    let buttonColor = Utils.sampleCSSColorHex("--color-accent", document.body).hex;
+    let buttonTextColor = Utils.sampleCSSColorHex("--text-on-accent", document.body).hex;
+    supportLink.outerHTML = `<a href="https://www.buymeacoffee.com/nathangeorge"><img style="height:40px;" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nathangeorge&button_colour=${buttonColor}&font_colour=${buttonTextColor}&font_family=Poppins&outline_colour=${buttonTextColor}&coffee_colour=FFDD00"></a>`;
+    let supportHeader = contentEl.createDiv({ text: "Support the continued development of this plugin.", cls: "setting-item-description" });
+    supportHeader.style.display = "block";
+    supportHeader.style.marginBottom = "20px";
+    let hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    new import_obsidian4.Setting(contentEl).setName("Page Features:").setDesc("Special features to embed onto the page.").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Include theme toggle").setDesc(`Adds a theme toggle to the left sidebar of any page that doesn't already have a toggle embedded with "theme-toggle" codeblock.`).addToggle((toggle) => toggle.setValue(_ExportSettings.settings.addDarkModeToggle).onChange(async (value) => {
+      _ExportSettings.settings.addDarkModeToggle = value;
+      await _ExportSettings.saveSettings();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Include document outline").setDesc("Adds an interactive document outline tree to the right sidebar of the document.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.includeOutline).onChange(async (value) => {
+      _ExportSettings.settings.includeOutline = value;
+      await _ExportSettings.saveSettings();
+    }));
+    hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    new import_obsidian4.Setting(contentEl).setName("Embedding Options:").setDesc("If all three of these are on, the html files will be completely self-contained.").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Embed CSS").setDesc("Embed the CSS into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineCSS).onChange(async (value) => {
       _ExportSettings.settings.inlineCSS = value;
       await _ExportSettings.saveSettings();
     }));
-    new import_obsidian2.Setting(containerEl).setName("Inline JS").setDesc("Inline the JS into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineJS).onChange(async (value) => {
+    new import_obsidian4.Setting(contentEl).setName("Embed JS").setDesc("Embed the JS into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineJS).onChange(async (value) => {
       _ExportSettings.settings.inlineJS = value;
       await _ExportSettings.saveSettings();
     }));
-    new import_obsidian2.Setting(containerEl).setName("Inline Images").setDesc("Inline the images into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineImages).onChange(async (value) => {
+    new import_obsidian4.Setting(contentEl).setName("Embed Images").setDesc("Embed the images into the HTML file.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.inlineImages).onChange(async (value) => {
       _ExportSettings.settings.inlineImages = value;
       await _ExportSettings.saveSettings();
     }));
-    new import_obsidian2.Setting(containerEl).setName("Make names web style").setHeading().setDesc("Make the names of files and folders lowercase and replace spaces with dashes.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.makeNamesWebStyle).onChange(async (value) => {
+    hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    new import_obsidian4.Setting(contentEl).setName("Formatting Options:").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Page Width").setDesc("Sets the line width of the exported document. Use any css units.\nDefault units: px").addText((text) => text.setValue(_ExportSettings.settings.customLineWidth).setPlaceholder("Leave blank for default").onChange(async (value) => {
+      _ExportSettings.settings.customLineWidth = value;
+      await _ExportSettings.saveSettings();
+    })).addExtraButton((button) => button.setIcon("reset").setTooltip("Reset to default").onClick(() => {
+      _ExportSettings.settings.customLineWidth = "";
+      _ExportSettings.saveSettings();
+      this.display();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Make names web style").setDesc("Make the names of files and folders lowercase and replace spaces with dashes.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.makeNamesWebStyle).onChange(async (value) => {
       _ExportSettings.settings.makeNamesWebStyle = value;
       await _ExportSettings.saveSettings();
     }));
-    new import_obsidian2.Setting(containerEl).setName("Include Plugin CSS").setHeading();
-    let pluginsList = new FlowList(containerEl);
-    Utils.getPluginIDs().forEach((plugin) => {
+    new import_obsidian4.Setting(contentEl).setName("Allow folding headings").setDesc("Allow headings to be folded with an arrow icon beside each heading, just as in Obsidian.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.allowFoldingHeadings).onChange(async (value) => {
+      _ExportSettings.settings.allowFoldingHeadings = value;
+      await _ExportSettings.saveSettings();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Add filename as title").setDesc("If the first header is not an H1, include the file name as a title at the top of the page.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.addFilenameTitle).onChange(async (value) => {
+      _ExportSettings.settings.addFilenameTitle = value;
+      await _ExportSettings.saveSettings();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Beautify HTML").setDesc("Beautify the HTML text to make it more human readable at the cost of export speed.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.beautifyHTML).onChange(async (value) => {
+      _ExportSettings.settings.beautifyHTML = value;
+      await _ExportSettings.saveSettings();
+    }));
+    hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    new import_obsidian4.Setting(contentEl).setName("Export Options:").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Dataview Block Render Wait Time").setDesc("In milliseconds.\n\nWait this long for each dataview block to render. If you have large dataview queries this can help make sure they are rendered correctly.").addText((text) => text.setValue(_ExportSettings.settings.dataviewBlockWaitTime.toString()).setPlaceholder(DEFAULT_SETTINGS.dataviewBlockWaitTime.toString()).onChange(async (value) => {
+      if (isNaN(Number(value)))
+        return;
+      _ExportSettings.settings.dataviewBlockWaitTime = Number(value);
+      await _ExportSettings.saveSettings();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Show warnings in export log").setDesc("The export log (shown in the export window) displays only relevant warnings or errors to you. Turn this off to stop displaying warnings. Errors will always show.").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.showWarningsInExportLog).onChange(async (value) => {
+      _ExportSettings.settings.showWarningsInExportLog = value;
+      await _ExportSettings.saveSettings();
+    }));
+    hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    new import_obsidian4.Setting(contentEl).setName("Include Plugin CSS").setDesc("Include the CSS from the following plugins in the exported HTML. If plugin features aren't rendering correctly, try adding the plugin to this list.").setHeading();
+    let pluginsList = new FlowList(contentEl);
+    Utils.getPluginIDs().forEach(async (plugin) => {
       let pluginManifest = Utils.getPluginManifest(plugin);
       if (!pluginManifest)
         return;
-      if (pluginManifest.name == "Webpage HTML Export")
+      if ((await this.getBlacklistedPluginIDs()).contains(pluginManifest.id)) {
         return;
-      let pluginPath = pluginManifest.dir;
-      if (!pluginPath)
+      }
+      let pluginDir = pluginManifest.dir;
+      if (!pluginDir)
         return;
-      pluginPath = Utils.getAbsolutePath(pluginPath);
-      if (!pluginPath)
-        return;
-      let hasCSS = Utils.pathExists(Utils.joinPaths(pluginPath, "styles.css"), false);
+      let pluginPath = new Path(pluginDir);
+      let hasCSS = pluginPath.joinString("styles.css").exists;
       if (!hasCSS)
         return;
       let isChecked = _ExportSettings.settings.includePluginCSS.match(new RegExp(`^${plugin}`, "m")) != null;
@@ -6569,61 +11524,152 @@ var _ExportSettings = class extends import_obsidian2.PluginSettingTab {
         _ExportSettings.saveSettings();
       });
     });
+    let experimentalContainer = contentEl.createDiv();
+    let experimentalHR1 = experimentalContainer.createEl("hr");
+    let experimentalHeader = experimentalContainer.createEl("span", { text: "Experimental" });
+    let experimentalHR2 = experimentalContainer.createEl("hr");
+    experimentalContainer.style.display = "flex";
+    experimentalContainer.style.marginTop = "5em";
+    experimentalContainer.style.alignItems = "center";
+    experimentalHR1.style.borderColor = "var(--color-red)";
+    experimentalHR2.style.borderColor = "var(--color-red)";
+    experimentalHeader.style.color = "var(--color-red)";
+    experimentalHR1.style.flexGrow = "1";
+    experimentalHR2.style.flexGrow = "1";
+    experimentalHeader.style.flexGrow = "0.1";
+    experimentalHeader.style.textAlign = "center";
+    new import_obsidian4.Setting(contentEl).setName("Graph View (PLEASE READ DESCRIPTION)").setDesc("This CANNOT be used with the file:// protocol, the assets for this also will not be inlined into the HTML file at this point.").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Include global graph view").setDesc("Include an interactive graph view sim of the WHOLE vault similar to obsidian's. ").addToggle((toggle) => toggle.setValue(_ExportSettings.settings.includeGraphView).onChange(async (value) => {
+      _ExportSettings.settings.includeGraphView = value;
+      await _ExportSettings.saveSettings();
+    }));
+    new import_obsidian4.Setting(contentEl).setName("Graph View Settings").setDesc("Settings to control the behavior and look of the graph view. For now there is no live preview of this, so you must export your files to see your changes.").setHeading();
+    new import_obsidian4.Setting(contentEl).setName("Attraction Force").setDesc("How much should linked nodes attract each other? This will make the graph appear more clustered.").addSlider((slider) => slider.setLimits(0, 100, 1).setValue(_ExportSettings.settings.graphAttractionForce / (2 / 100)).setDynamicTooltip().onChange(async (value) => {
+      let remapMultiplier = 2 / 100;
+      _ExportSettings.settings.graphAttractionForce = value * remapMultiplier;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Link Length").setDesc("How long should the links between nodes be? The shorter the links the closer connected nodes will cluster together.").addSlider((slider) => slider.setLimits(0, 100, 1).setValue(_ExportSettings.settings.graphLinkLength).setDynamicTooltip().onChange(async (value) => {
+      _ExportSettings.settings.graphLinkLength = value;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Repulsion Force").setDesc("How much should nodes repel each other? This will make the graph appear more spread out.").addSlider((slider) => slider.setLimits(0, 100, 1).setValue(_ExportSettings.settings.graphRepulsionForce / 3).setDynamicTooltip().onChange(async (value) => {
+      _ExportSettings.settings.graphRepulsionForce = value * 3;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Central Force").setDesc("How much should nodes be attracted to the center? This will make the graph appear more dense and circular.").addSlider((slider) => slider.setLimits(0, 100, 1).setValue(_ExportSettings.settings.graphCentralForce / (5 / 100)).setDynamicTooltip().onChange(async (value) => {
+      let remapMultiplier = 5 / 100;
+      _ExportSettings.settings.graphCentralForce = value * remapMultiplier;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Max Node Radius").setDesc("How large should the largest nodes be? Nodes are sized by how many links they have. The larger a node is the more it will attract other nodes. This can be used to create a good grouping around the most important nodes.").addSlider((slider) => slider.setLimits(3, 15, 1).setValue(_ExportSettings.settings.graphMaxNodeSize).setDynamicTooltip().onChange(async (value) => {
+      _ExportSettings.settings.graphMaxNodeSize = value;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Min Node Radius").setDesc("How small should the smallest nodes be? The smaller a node is the less it will attract other nodes.").addSlider((slider) => slider.setLimits(3, 15, 1).setValue(_ExportSettings.settings.graphMinNodeSize).setDynamicTooltip().onChange(async (value) => {
+      _ExportSettings.settings.graphMinNodeSize = value;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    new import_obsidian4.Setting(contentEl).setName("Edge Pruning Factor").setDesc("Edges with a length below this threshold will not be rendered, however they will still contribute to the simulation. This can help large tangled graphs look more organised. Hovering over a node will still display these links.").addSlider((slider) => slider.setLimits(0, 100, 1).setValue(100 - _ExportSettings.settings.graphEdgePruning).setDynamicTooltip().onChange(async (value) => {
+      _ExportSettings.settings.graphEdgePruning = 100 - value;
+      await _ExportSettings.saveSettings();
+    }).showTooltip());
+    let experimentalHREnd = contentEl.createEl("hr");
+    experimentalHREnd.style.borderColor = "var(--color-red)";
   }
 };
 var ExportSettings = _ExportSettings;
 ExportSettings.settings = DEFAULT_SETTINGS;
-var _ExportModal = class extends import_obsidian2.Modal {
+ExportSettings.thirdPartyStylesBlacklistURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/third-party-styles-blacklist.txt";
+var _ExportModal = class extends import_obsidian4.Modal {
   constructor() {
     super(app);
   }
   async open() {
     _ExportModal.isClosed = false;
     _ExportModal.canceled = true;
-    _ExportModal.onlyCopy = false;
     super.open();
     const { contentEl } = this;
     contentEl.empty();
-    let header = contentEl.createEl("h2", { text: "HTML Webpage Settings" });
-    header.style.display = "inline-block";
-    let supporLink = contentEl.createEl("a", { href: "https://www.buymeacoffee.com/nathangeorge" });
-    let supportButton = supporLink.createEl("img");
-    supportButton.setAttribute("src", "https://cdn.buymeacoffee.com/buttons/v2/default-violet.png");
-    supportButton.setAttribute("style", "    height: 30px; margin-right: 0; margin-left: 17px; transform: translateY(25%);");
-    supportButton.setAttribute("alt", "Buy Me A Coffee");
-    contentEl.createEl("h3", { text: "Document Settings:" });
-    new import_obsidian2.Setting(contentEl).setName("Add global theme toggle").setDesc("Adds a fixed theme toggle to the top of any page that doesn't already have a toggle embedded with `theme-toggle`.").addToggle((toggle) => toggle.setValue(ExportSettings.settings.addDarkModeToggle).onChange(async (value) => {
-      ExportSettings.settings.addDarkModeToggle = value;
-      await ExportSettings.saveSettings();
-    }));
-    new import_obsidian2.Setting(contentEl).setName("Include document outline").setDesc("Will include an interactive document outline tree on the right side of the document.").addToggle((toggle) => toggle.setValue(ExportSettings.settings.includeOutline).onChange(async (value) => {
-      ExportSettings.settings.includeOutline = value;
-      await ExportSettings.saveSettings();
-    }));
-    new import_obsidian2.Setting(contentEl).setName("Page Width (px)").setTooltip("Sets the line width of the exported document.").setHeading().addText((text) => text.setValue(ExportSettings.settings.customLineWidth == 0 ? "" : ExportSettings.settings.customLineWidth.toString()).setPlaceholder("Leave blank for default").onChange(async (value) => {
-      let widthInt = parseInt(value);
-      ExportSettings.settings.customLineWidth = widthInt != null ? widthInt : 0;
-      await ExportSettings.saveSettings();
-    })).addExtraButton((button) => button.setIcon("reset").setTooltip("Reset to default").onClick(() => {
-      ExportSettings.settings.customLineWidth = 0;
-      ExportSettings.saveSettings();
+    this.titleEl.setText("Export to HTML");
+    if (HTMLExportPlugin.updateInfo.updateAvailable) {
+      let updateNotice = contentEl.createEl("strong", { text: `Update Available: ${HTMLExportPlugin.updateInfo.currentVersion} \u27F6 ${HTMLExportPlugin.updateInfo.latestVersion}` });
+      updateNotice.setAttribute("style", `margin-block-start: calc(var(--h3-size)/2);
+			background-color: var(--interactive-normal);
+			padding: 4px;
+			padding-left: 1em;
+			padding-right: 1em;
+			color: var(--color-red);
+			border-radius: 5px;
+			display: block;
+			width: fit-content;`);
+      let updateNotes = contentEl.createEl("div", { text: HTMLExportPlugin.updateInfo.updateNote });
+      updateNotes.setAttribute("style", `margin-block-start: calc(var(--h3-size)/2);
+			background-color: var(--background-secondary-alt);
+			padding: 4px;
+			padding-left: 1em;
+			padding-right: 1em;
+			color: var(--text-normal);
+			font-size: var(--font-ui-smaller);
+			border-radius: 5px;
+			display: block;
+			width: fit-content;
+			white-space: pre-wrap;`);
+    }
+    let hr = contentEl.createEl("hr");
+    hr.style.marginTop = "20px";
+    hr.style.marginBottom = "20px";
+    hr.style.borderColor = "var(--color-accent)";
+    hr.style.opacity = "0.5";
+    contentEl.createEl("h3", { text: "Basic Options:" });
+    new import_obsidian4.Setting(contentEl).setName("Export Presets").setHeading().addDropdown((dropdown) => dropdown.addOption("website", "Multi-File Website").addOption("documents", "Self-contained Documents").setValue(ExportSettings.settings.exportPreset).onChange(async (value) => {
+      ExportSettings.settings.exportPreset = value;
+      switch (value) {
+        case "documents":
+          ExportSettings.settings.inlineCSS = true;
+          ExportSettings.settings.inlineJS = true;
+          ExportSettings.settings.inlineImages = true;
+          ExportSettings.settings.makeNamesWebStyle = false;
+          ExportSettings.settings.includeGraphView = false;
+          await ExportSettings.saveSettings();
+          break;
+        case "website":
+          ExportSettings.settings.inlineCSS = false;
+          ExportSettings.settings.inlineJS = false;
+          ExportSettings.settings.inlineImages = false;
+          ExportSettings.settings.makeNamesWebStyle = true;
+          ExportSettings.settings.includeGraphView = true;
+          await ExportSettings.saveSettings();
+          break;
+      }
       this.open();
     }));
-    contentEl.createEl("h3", { text: "Export Options:" });
-    new import_obsidian2.Setting(contentEl).setName("Open after export").setHeading().addToggle((toggle) => toggle.setTooltip("Open the exported file after exporting.").setValue(ExportSettings.settings.openAfterExport).onChange(async (value) => {
+    contentEl.createDiv().outerHTML = `
+		<div class="setting-item-description" style="white-space: pre-wrap; margin-bottom: 1em;
+		">Multi-File Website: For multiple files as a website.
+Self-contained Documents: For documents which should each be self contained as one file.
+
+<em>For more control open the plugin settings from the button at the bottom of this popup.</em></div>`;
+    new import_obsidian4.Setting(contentEl).setName("Open after export").addToggle((toggle) => toggle.setTooltip("Open the exported file after exporting.").setValue(ExportSettings.settings.openAfterExport).onChange(async (value) => {
       ExportSettings.settings.openAfterExport = value;
       await ExportSettings.saveSettings();
     }));
-    new import_obsidian2.Setting(contentEl).setName("").setHeading().addButton((button) => button.setButtonText("Export").onClick(async () => {
-      _ExportModal.canceled = false;
-      this.close();
-    }));
-    new import_obsidian2.Setting(contentEl).setDesc("More options located on the plugin settings page.").addExtraButton((button) => button.setTooltip("Open plugin settings").onClick(() => {
+    new import_obsidian4.Setting(contentEl).setName("").setHeading().addButton((button) => {
+      button.setButtonText("Export").onClick(async () => {
+        _ExportModal.canceled = false;
+        this.close();
+      });
+      button.buttonEl.style.marginRight = "auto";
+      button.buttonEl.style.marginLeft = "auto";
+      button.buttonEl.style.width = "-webkit-fill-available";
+      button.buttonEl.style.marginBottom = "2em";
+    });
+    new import_obsidian4.Setting(contentEl).setDesc("More options located on the plugin settings page.").addExtraButton((button) => button.setTooltip("Open plugin settings").onClick(() => {
       app.setting.open();
       app.setting.openTabById("webpage-html-export");
     }));
     await Utils.waitUntil(() => _ExportModal.isClosed, 60 * 60 * 1e3, 10);
-    return { canceled: _ExportModal.canceled, copyToClipboard: _ExportModal.onlyCopy };
+    return { canceled: _ExportModal.canceled };
   }
   onClose() {
     const { contentEl } = this;
@@ -6631,373 +11677,225 @@ var _ExportModal = class extends import_obsidian2.Modal {
     _ExportModal.isClosed = true;
   }
 };
-var ExportModal2 = _ExportModal;
-ExportModal2.isClosed = true;
-ExportModal2.canceled = true;
-ExportModal2.onlyCopy = false;
+var ExportModal = _ExportModal;
+ExportModal.isClosed = true;
+ExportModal.canceled = true;
 
-// scripts/leaf-handler.ts
-var LeafHandler = class {
-  isMainPanelLeaf(leaf) {
-    const { workspace } = app;
-    const root = leaf == null ? void 0 : leaf.getRoot();
-    return root === workspace.rootSplit || root === workspace.floatingSplit;
-  }
-  getOpenLeaves(excludeMainPanelViewTypes, includeSidePanelViewTypes) {
-    const leaves = [];
-    const saveLeaf = (l) => {
-      var _a;
-      const viewType = (_a = l.view) == null ? void 0 : _a.getViewType();
-      if (this.isMainPanelLeaf(l)) {
-        if (!(excludeMainPanelViewTypes == null ? void 0 : excludeMainPanelViewTypes.includes(viewType))) {
-          leaves.push(l);
-        }
-      } else if (includeSidePanelViewTypes == null ? void 0 : includeSidePanelViewTypes.includes(viewType)) {
-        leaves.push(l);
-      }
-    };
-    app.workspace.iterateAllLeaves(saveLeaf);
-    return leaves;
-  }
-  openFileInNewLeaf(file, navType, openState, errorContext, splitDirection = "vertical") {
-    const { workspace } = app;
-    errorContext = errorContext != null ? errorContext : "";
-    const message = `HTML Export: error opening file. ${errorContext}`;
-    const getLeaf = () => {
-      return navType === "split" ? workspace.getLeaf(navType, splitDirection) : workspace.getLeaf(navType);
-    };
-    let leaf = getLeaf();
-    try {
-      leaf.openFile(file, openState).catch((reason) => {
-        console.log(message, reason);
-      });
-    } catch (error) {
-      console.log(message, error);
-    }
-    return leaf;
-  }
-};
-
-// scripts/html-gen.ts
-var import_promises = require("fs/promises");
-var import_obsidian3 = require("obsidian");
-var import_jquery = __toESM(require_jquery());
-var $ = import_jquery.default;
+// scripts/html-generation/html-generator.ts
+var import_jquery2 = __toESM(require_jquery());
+var $2 = import_jquery2.default;
 var HTMLGenerator = class {
-  constructor(pluginID) {
-    this.autoDownloadExtras = true;
-    this.vaultPluginsPath = Utils.getAbsolutePath(Utils.joinPaths(Utils.getVaultPath(), ".obsidian/plugins/"));
-    this.outlinedImages = [];
-    this.appStyles = "";
-    this.webpagejsURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/webpage.js";
-    this.pluginStylesURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/plugin-styles.css";
-    this.obsidianStylesURL = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/assets/obsidian-styles.css";
-    this.thisPluginPath = Utils.getAbsolutePath(Utils.joinPaths(this.vaultPluginsPath, pluginID, "/"));
-    this.assetsPath = Utils.getAbsolutePath(Utils.joinPaths(this.thisPluginPath, "assets/"), false);
-    Utils.createDirectory(this.assetsPath);
+  static async beginBatch() {
+    await AssetHandler.updateAssetCache();
+    await MarkdownRenderer.beginBatch();
   }
-  generateDarkmodeToggle(inline = true) {
-    let toggle = document.createElement("div");
-    let label = document.createElement("label");
-    label.classList.add(inline ? "theme-toggle-inline" : "theme-toggle");
-    label.setAttribute("for", "theme_toggle");
-    let input = document.createElement("input");
-    input.classList.add("toggle__input");
-    input.setAttribute("type", "checkbox");
-    input.setAttribute("id", "theme_toggle");
-    let div = document.createElement("div");
-    div.classList.add("toggle__fill");
-    label.appendChild(input);
-    label.appendChild(div);
-    toggle.appendChild(label);
-    return toggle;
+  static endBatch() {
+    MarkdownRenderer.endBatch();
   }
-  async downloadExtras() {
-    Utils.createDirectory(this.assetsPath);
-    let webpagejs = await fetch(this.webpagejsURL);
-    let webpagejsText = await webpagejs.text();
-    await (0, import_promises.writeFile)(Utils.joinPaths(this.assetsPath, "webpage.js"), webpagejsText).catch((err) => {
-      console.log(err);
-    });
-    let pluginStyles = await fetch(this.pluginStylesURL);
-    let pluginStylesText = await pluginStyles.text();
-    await (0, import_promises.writeFile)(Utils.joinPaths(this.assetsPath, "plugin-styles.css"), pluginStylesText).catch((err) => {
-      console.log(err);
-    });
-    let obsidianStyles = await fetch(this.obsidianStylesURL);
-    let obsidianStylesText = await obsidianStyles.text();
-    await (0, import_promises.writeFile)(Utils.joinPaths(this.assetsPath, "obsidian-styles.css"), obsidianStylesText).catch((err) => {
-      console.log(err);
-    });
-  }
-  async loadAppStyles() {
-    var _a;
-    let appSheet = document.styleSheets[1];
-    let stylesheets = document.styleSheets;
-    for (let i = 0; i < stylesheets.length; i++) {
-      if (stylesheets[i].href && ((_a = stylesheets[i].href) == null ? void 0 : _a.includes("app.css"))) {
-        appSheet = stylesheets[i];
-        break;
-      }
+  static async generateWebpage(file) {
+    await this.getDocumentHTML(file);
+    let usingDocument = file.document;
+    let sidebars = this.generateSideBars(file.contentElement, file);
+    let rightSidebar = sidebars.right;
+    let leftSidebar = sidebars.left;
+    usingDocument.body.appendChild(sidebars.container);
+    if (ExportSettings.settings.addDarkModeToggle && !usingDocument.querySelector(".theme-toggle-inline, .theme-toggle")) {
+      let toggle = this.generateDarkmodeToggle(false, usingDocument);
+      leftSidebar.appendChild(toggle);
     }
-    this.appStyles += await Utils.getText(Utils.joinPaths(this.assetsPath, "obsidian-styles.css"));
-    for (let i = 0; i < appSheet.cssRules.length; i++) {
-      let rule = appSheet.cssRules[i];
-      if (rule) {
-        if (rule.cssText.startsWith("@font-face"))
-          continue;
-        if (rule.cssText.startsWith(".CodeMirror"))
-          continue;
-        if (rule.cssText.startsWith(".cm-"))
-          continue;
-        let cssText = rule.cssText + "\n";
-        cssText = cssText.replaceAll("public/", "https://publish.obsidian.md/public/");
-        cssText = cssText.replaceAll("lib/", "https://publish.obsidian.md/lib/");
-        this.appStyles += cssText;
-      }
-    }
-  }
-  async initialize() {
-    if (this.autoDownloadExtras)
-      await this.downloadExtras();
-    await this.loadAppStyles();
-  }
-  async getThirdPartyPluginCSS() {
-    let pluginCSS = "";
-    let thirdPartyPluginStyleNames = ExportSettings.settings.includePluginCSS.split("\n");
-    for (let i = 0; i < thirdPartyPluginStyleNames.length; i++) {
-      if (!thirdPartyPluginStyleNames[i] || thirdPartyPluginStyleNames[i] && !/\S/.test(thirdPartyPluginStyleNames[i]))
-        continue;
-      let path = Utils.joinPaths(this.vaultPluginsPath, thirdPartyPluginStyleNames[i].replace("\n", ""), "styles.css");
-      if (!Utils.pathExists(path, false)) {
-        console.log("Could not find plugin css file at " + path);
-        continue;
-      }
-      let style = await Utils.getText(path);
-      if (style) {
-        pluginCSS += style;
-      }
-    }
-    return pluginCSS;
-  }
-  async getSeperateFilesToDownload() {
-    let toDownload = [];
-    if (!ExportSettings.settings.inlineCSS) {
-      let appcss = this.appStyles;
-      let plugincss = await Utils.getText(Utils.joinPaths(this.assetsPath, "plugin-styles.css"));
-      let themecss = await Utils.getThemeContent(Utils.getCurrentTheme());
-      let snippetsList = await Utils.getStyleSnippetsContent();
-      let snippetsNames = await Utils.getEnabledSnippets();
-      let snippets = "";
-      for (let i = 0; i < snippetsList.length; i++) {
-        snippets += `/* --- ${snippetsNames[i]}.css --- */  
- ${snippetsList[i]}  
-
-
-`;
-      }
-      let thirdPartyPluginCSS = await this.getThirdPartyPluginCSS();
-      plugincss += "\n" + thirdPartyPluginCSS + "\n";
-      let appcssDownload = { filename: "obsidian-styles.css", data: appcss, type: "text/css" };
-      let plugincssDownload = { filename: "plugin-styles.css", data: plugincss, type: "text/css" };
-      let themecssDownload = { filename: "theme.css", data: themecss, type: "text/css" };
-      let snippetsDownload = { filename: "snippets.css", data: snippets, type: "text/css" };
-      toDownload.push(appcssDownload);
-      toDownload.push(plugincssDownload);
-      toDownload.push(themecssDownload);
-      toDownload.push(snippetsDownload);
-    }
-    if (!ExportSettings.settings.inlineJS) {
-      let webpagejs = await Utils.getText(Utils.joinPaths(this.assetsPath, "webpage.js"));
-      let webpagejsDownload = { filename: "webpage.js", data: webpagejs, type: "text/javascript" };
-      toDownload.push(webpagejsDownload);
-    }
-    if (!ExportSettings.settings.inlineImages) {
-      for (let i = 0; i < this.outlinedImages.length; i++) {
-        let image = this.outlinedImages[i];
-        if (!Utils.pathExists(Utils.parseFullPath(image.localImagePath), false)) {
-          console.log("Could not find image at " + image.localImagePath);
-          continue;
-        }
-        let data = await Utils.getTextBase64(image.localImagePath);
-        let destinationPath = Utils.parsePath(image.relativeExportImagePath);
-        let imageDownload = {
-          filename: destinationPath.base,
-          data,
-          type: "image/png",
-          relativePath: destinationPath.dir,
-          unicode: false
-        };
-        toDownload.push(imageDownload);
-      }
-    }
-    return toDownload;
-  }
-  async getCurrentFileHTML(returnEl = false) {
-    await Utils.delay(200);
-    let view = await Utils.getActiveView();
-    if (!view)
-      return null;
-    Utils.setLineWidth(ExportSettings.settings.customLineWidth);
-    if (view instanceof import_obsidian3.MarkdownView)
-      await Utils.viewEnableFullRender(view);
-    let contentEl = this.generateBodyContents();
-    this.fixLinks(contentEl);
-    this.repairOnClick(contentEl);
-    if (ExportSettings.settings.inlineImages) {
-      await this.inlineImages(contentEl);
-    } else {
-      await this.outlineImages(contentEl, view);
-    }
-    let toggle = null;
-    if (ExportSettings.settings.addDarkModeToggle) {
-      toggle = this.generateFixedToggle(contentEl, view.file.extension != "md");
-    }
-    let outline = null;
     if (ExportSettings.settings.includeOutline) {
-      let headers = this.getHeaderList(contentEl);
+      let headers = this.getHeaderList(usingDocument);
       if (headers) {
-        outline = this.generateOutline(headers);
+        var outline = this.generateOutline(headers, usingDocument);
+        rightSidebar.appendChild(outline);
       }
     }
-    let htmlEl = document.createElement("html");
-    let headEl = await this.generateHead(view);
-    let bodyRootEl = this.generateBodyRoot();
-    let sidebars = this.generateSideBars(contentEl, toggle != null ? toggle : document.createElement("div"), outline != null ? outline : document.createElement("div"));
-    let finalContent = sidebars;
-    if (toggle == null && outline == null)
-      finalContent = contentEl;
-    bodyRootEl.appendChild(finalContent);
-    htmlEl.appendChild(headEl);
-    htmlEl.appendChild(bodyRootEl);
-    if (returnEl == true)
-      return htmlEl;
-    else
-      return "<!DOCTYPE html>\n" + htmlEl.outerHTML;
+    if (ExportSettings.settings.includeGraphView) {
+      let graph = this.generateGraphView(usingDocument);
+      let graphHeader = usingDocument.createElement("h6");
+      graphHeader.style.margin = "1em";
+      graphHeader.style.marginLeft = "12px";
+      graphHeader.innerText = "Interactive Graph";
+      rightSidebar.prepend(graph);
+      rightSidebar.prepend(graphHeader);
+    }
+    await this.fillInHead(file);
+    file.downloads.unshift(file.getSelfDownloadable());
+    return file;
   }
-  generateSideBars(middleContent, leftContent, rightContent) {
-    let flexContainer = document.createElement("div");
+  static async getDocumentHTML(file, addSelfToDownloads = false) {
+    var _a, _b;
+    let body = $2(file.document.body);
+    let bodyClasses = ((_a = document.body.getAttribute("class")) != null ? _a : "").replaceAll('"', "'");
+    let bodyStyle = ((_b = document.body.getAttribute("style")) != null ? _b : "").replaceAll('"', "'");
+    body.attr("class", bodyClasses);
+    body.attr("style", bodyStyle);
+    let lineWidth = ExportSettings.settings.customLineWidth || "50em";
+    if (!isNaN(Number(lineWidth)))
+      lineWidth += "px";
+    body.css("--line-width", lineWidth);
+    body.css("--line-width-adaptive", lineWidth);
+    body.css("--file-line-width", lineWidth);
+    let markdownViewEl = file.document.body.createDiv({ cls: "markdown-preview-view markdown-rendered" });
+    let content = await MarkdownRenderer.renderMarkdown(file);
+    markdownViewEl.outerHTML = content;
+    if (ExportSettings.settings.allowFoldingHeadings && !markdownViewEl.hasClass("allow-fold-headings")) {
+      markdownViewEl.addClass("allow-fold-headings");
+    } else if (markdownViewEl.hasClass("allow-fold-headings")) {
+      markdownViewEl.removeClass("allow-fold-headings");
+    }
+    if (ExportSettings.settings.addFilenameTitle)
+      this.addTitle(file);
+    let arrowHTML = "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon right-triangle'><path d='M3 8L12 17L21 8'></path></svg>";
+    let headings = $2(file.document).find("div h1, div h2, div h3, div h4, div h5, div h6");
+    headings.each((index, element) => {
+      if ($2(element).find(".heading-collapse-indicator").length > 0)
+        return;
+      let el = file.document.createElement("div");
+      el.setAttribute("class", "heading-collapse-indicator collapse-indicator collapse-icon");
+      el.innerHTML = arrowHTML;
+      element.prepend(el);
+    });
+    this.fixLinks(file);
+    let outlinedImages = [];
+    if (ExportSettings.settings.inlineImages) {
+      await this.inlineMedia(file);
+    } else {
+      outlinedImages = await this.outlineMedia(file);
+    }
+    if (addSelfToDownloads)
+      file.downloads.push(file.getSelfDownloadable());
+    file.downloads.push(...outlinedImages);
+    file.downloads.push(...await AssetHandler.getDownloads());
+    if (ExportSettings.settings.makeNamesWebStyle) {
+      file.downloads.forEach((file2) => {
+        var _a2;
+        file2.filename = Path.toWebStyle(file2.filename);
+        file2.relativeDownloadPath = (_a2 = file2.relativeDownloadPath) == null ? void 0 : _a2.makeWebStyle();
+      });
+    }
+    return file;
+  }
+  static addTitle(file) {
+    let currentTitle = file.document.querySelector("h1, h2, h3, h4, h5, h6");
+    if (!currentTitle || !["h1", "H1"].contains(currentTitle.tagName)) {
+      let divContainer = file.document.createElement("div");
+      let title = divContainer.createEl("h1");
+      title.innerText = file.markdownFile.basename;
+      file.contentElement.prepend(divContainer);
+    }
+  }
+  static generateSideBars(middleContent, file) {
+    let docEl = file.document;
+    let leftContent = docEl.createElement("div");
+    let rightContent = docEl.createElement("div");
+    let centerContent = docEl.createElement("div");
+    let flexContainer = docEl.createElement("div");
     flexContainer.setAttribute("class", "flex-container");
-    let leftBar = document.createElement("div");
+    centerContent.setAttribute("class", "center-content");
+    leftContent.setAttribute("class", "sidebar-content");
+    rightContent.setAttribute("class", "sidebar-content");
+    let leftBar = docEl.createElement("div");
     leftBar.setAttribute("id", "sidebar");
     leftBar.setAttribute("class", "sidebar-left");
     leftBar.appendChild(leftContent);
-    let rightBar = document.createElement("div");
+    let rightBar = docEl.createElement("div");
     rightBar.setAttribute("id", "sidebar");
     rightBar.setAttribute("class", "sidebar-right");
     rightBar.appendChild(rightContent);
+    centerContent.appendChild(middleContent);
     flexContainer.appendChild(leftBar);
-    flexContainer.appendChild(middleContent);
+    flexContainer.appendChild(centerContent);
     flexContainer.appendChild(rightBar);
-    return flexContainer;
+    return { container: flexContainer, left: leftContent, right: rightContent, center: centerContent };
   }
-  generateBodyContents() {
-    var _a;
-    let obsidianDocEl = document.querySelector(".workspace-leaf.mod-active .markdown-reading-view");
-    if (!obsidianDocEl)
-      obsidianDocEl = document.querySelector(".workspace-leaf.mod-active .view-content");
-    let width = "1000px";
-    if (ExportSettings.settings.customLineWidth > 0) {
-      width = ExportSettings.settings.customLineWidth + "px";
-    } else {
-      let sizer = obsidianDocEl.querySelector(".markdown-preview-sizer.markdown-preview-section");
-      if (sizer) {
-        width = sizer.style.width;
-      }
-      if (width == "") {
-        sizer = $(obsidianDocEl).find("div.canvas").get(0);
-        if (sizer) {
-          width = sizer.clientWidth + "px";
-        }
-      }
-      if (width == "") {
-        width = "var(--line-width)";
-      }
-    }
-    let contentEl = document.createElement("div");
-    contentEl.setAttribute("class", (_a = obsidianDocEl.getAttribute("class")) != null ? _a : "");
-    contentEl.innerHTML = obsidianDocEl.innerHTML;
-    $(contentEl).css("flex-basis", `min(${width}, 100vw)`);
-    $(contentEl).css("height", "100%");
-    return contentEl;
+  static getRelativePaths(file) {
+    let rootPath = file.pathToRoot;
+    let imagePath = rootPath.join(AssetHandler.mediaFolderName).makeUnixStyle();
+    let jsPath = rootPath.join(AssetHandler.jsFolderName).makeUnixStyle();
+    let cssPath = rootPath.join(AssetHandler.cssFolderName).makeUnixStyle();
+    return { mediaPath: imagePath, jsPath, cssPath, rootPath };
   }
-  generateBodyRoot() {
+  static async fillInHead(file) {
     var _a, _b;
-    let bodyClasses = (_a = document.body.getAttribute("class")) != null ? _a : "";
-    let bodyStyle = (_b = document.body.getAttribute("style")) != null ? _b : "";
-    bodyClasses = bodyClasses.replaceAll('"', "'");
-    bodyStyle = bodyStyle.replaceAll('"', "'");
-    let bodyEl = document.createElement("body");
-    bodyEl.setAttribute("class", bodyClasses);
-    bodyEl.setAttribute("style", bodyStyle);
-    return bodyEl;
-  }
-  getMathStyles() {
-    let mathStyles = document.styleSheets[document.styleSheets.length - 1];
-    let mathStylesString = "";
-    let success = true;
-    for (let i = 0; i < mathStyles.cssRules.length; i++) {
-      let rule = mathStyles.cssRules[i];
-      if (rule) {
-        if (i == 0 && !rule.cssText.startsWith("mjx")) {
-          success = false;
-          break;
-        }
-        if (rule.cssText.startsWith("@font-face"))
-          continue;
-        mathStylesString += rule.cssText + "\n";
-      }
-    }
-    return success ? mathStylesString : "";
-  }
-  async generateHead(view) {
-    var _a, _b;
+    let relativePaths = this.getRelativePaths(file);
     let meta = `
+		<title>${file.markdownFile.basename}</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="mobile-web-app-capable" content="yes">
-		<title>${view.file.basename}</title>
+		<meta charset="UTF-8">
 
 		<link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
-		<script src='https://code.jquery.com/jquery-3.6.0.js'><\/script>
-		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"><\/script>
-		<\/script>
 
+		<script src='https://code.jquery.com/jquery-3.6.0.js'><\/script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"><\/script><\/script>
 		<script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"><\/script>
+		<script src="https://pixijs.download/v7.2.4/pixi.js"><\/script>
 		`;
-    let mathStyles = this.getMathStyles();
-    let cssSettings = (_b = (_a = document.getElementById("css-settings-manager")) == null ? void 0 : _a.innerHTML) != null ? _b : "";
-    let scripts = `
+    let scripts = "";
+    scripts += `
+		<script id="relative-paths">
+			let rootPath = "${relativePaths.rootPath}";
+			let mediaPath = "${relativePaths.mediaPath}";
+			let jsPath = "${relativePaths.jsPath}";
+			let cssPath = "${relativePaths.cssPath}";
+		<\/script>
+		`;
+    if (ExportSettings.settings.includeGraphView) {
+      scripts += `
+			<!-- Graph View Data -->
+			<script>
+			let nodes=
+${JSON.stringify(GraphGenerator.getGlobalGraph(ExportSettings.settings.graphMinNodeSize, ExportSettings.settings.graphMaxNodeSize))};
+			let attractionForce = ${ExportSettings.settings.graphAttractionForce};
+			let linkLength = ${ExportSettings.settings.graphLinkLength};
+			let repulsionForce = ${ExportSettings.settings.graphRepulsionForce};
+			let centralForce = ${ExportSettings.settings.graphCentralForce};
+			let edgePruning = ${ExportSettings.settings.graphEdgePruning};
+			<\/script>
+			`;
+      scripts += `
+<script type='module' src='${relativePaths.jsPath}/graph_view.js'><\/script>
+`;
+      scripts += `
+<script src='${relativePaths.jsPath}/graph_wasm.js'><\/script>
+`;
+      scripts += `
+<script src="${relativePaths.jsPath}/tinycolor.js"><\/script>
+`;
+    }
+    if (ExportSettings.settings.inlineJS) {
+      scripts += `
 <script>
- ${await Utils.getText(Utils.joinPaths(this.assetsPath, "webpage.js"))} 
+${AssetHandler.webpageJS}
 <\/script>
 `;
-    if (!ExportSettings.settings.inlineJS)
-      scripts = "<script src='webpage.js'><\/script>\n";
+    } else {
+      scripts += `
+<script src='${relativePaths.jsPath}/webpage.js'><\/script>
+`;
+    }
+    let cssSettings = (_b = (_a = document.getElementById("css-settings-manager")) == null ? void 0 : _a.innerHTML) != null ? _b : "";
     if (ExportSettings.settings.inlineCSS) {
-      let pluginStyles = await Utils.getText(Utils.joinPaths(this.assetsPath, "plugin-styles.css"));
-      let snippets = await Utils.getStyleSnippetsContent();
-      let snippetNames = Utils.getEnabledSnippets();
-      let theme = await Utils.getThemeContent(Utils.getCurrentTheme());
-      let thirdPartyPluginStyles = await this.getThirdPartyPluginCSS();
-      pluginStyles += thirdPartyPluginStyles;
+      let pluginCSS = AssetHandler.webpageStyles;
+      let thirdPartyPluginStyles = await AssetHandler.getPluginStyles();
+      pluginCSS += thirdPartyPluginStyles;
       var header = `
 			${meta}
 			
 			<!-- Obsidian App Styles / Other Built-in Styles -->
-			<style> ${this.appStyles} </style>
-			<style> ${mathStyles} </style>
+			<style> ${AssetHandler.appStyles} </style>
+			<style> ${AssetHandler.mathStyles} </style>
 			<style> ${cssSettings} </style>
 
 			<!-- Plugin Styles -->
-			<style> ${pluginStyles} </style>
+			<style> ${pluginCSS} </style>
 
-			<!-- Theme Styles ( ${Utils.getCurrentTheme()} ) -->
-			<style> ${theme} </style>
+			<!-- Theme Styles -->
+			<style> ${AssetHandler.themeStyles} </style>
 
-			<!-- Snippets: ${snippetNames.join(", ")} -->
-			<style> ${snippets.join("</style><style>")} </style>
+			<!-- Snippets -->
+			<style> ${AssetHandler.snippetStyles} </style>
 		
 			${scripts}
 			`;
@@ -7005,126 +11903,125 @@ var HTMLGenerator = class {
       header = `
 			${meta}
 
-			<link rel="stylesheet" href="obsidian-styles.css">
-			<link rel="stylesheet" href="plugin-styles.css">
-			<link rel="stylesheet" href="theme.css">
-			<link rel="stylesheet" href="snippets.css">
+			<link rel="stylesheet" href="${relativePaths.cssPath}/obsidian-styles.css">
+			<link rel="stylesheet" href="${relativePaths.cssPath}/plugin-styles.css">
+			<link rel="stylesheet" href="${relativePaths.cssPath}/theme.css">
+			<link rel="stylesheet" href="${relativePaths.cssPath}/snippets.css">
 
 			<style> ${cssSettings} </style>
-			<style> ${mathStyles} </style>
+			<style> ${AssetHandler.mathStyles} </style>
 
 			${scripts}
 			`;
     }
-    let headerEl = document.createElement("head");
-    headerEl.innerHTML = header;
-    return headerEl;
+    file.document.head.innerHTML = header;
   }
-  fixLinks(page) {
-    let query = (0, import_jquery.default)(page);
+  static fixLinks(file) {
+    let htmlCompatibleExt = ["canvas", "md"];
+    let query = $2(file.document);
     query.find("a.internal-link").each(function() {
-      var _a;
-      $(this).attr("target", "_self");
-      let finalHref = "";
-      let href = $(this).attr("href");
+      $2(this).attr("target", "_self");
+      let href = $2(this).attr("href");
       if (!href)
         return;
       if (href.startsWith("#")) {
-        finalHref = "#" + href.slice(1).replaceAll(" ", "_").replaceAll("#", "");
+        $2(this).attr("href", href.replaceAll(" ", "_"));
       } else {
-        let headers = href.split("#");
-        let currentFile = app.workspace.getActiveFile();
-        if (!currentFile)
+        let targetHeader = href.split("#").length > 1 ? "#" + href.split("#")[1] : "";
+        let target = href.split("#")[0];
+        let targetFile = app.metadataCache.getFirstLinkpathDest(target, file.markdownFile.path);
+        if (!targetFile)
           return;
-        let bestPath = (_a = app.metadataCache.getFirstLinkpathDest(headers[0], currentFile.path)) == null ? void 0 : _a.path;
-        if (!bestPath)
-          return;
-        let fileDepth = currentFile.path.split("/").length - 1;
-        for (let i = 0; i < fileDepth; i++) {
-          bestPath = "../" + bestPath;
-        }
+        let targetPath = new Path(targetFile.path);
+        let targetRelativePath = Path.getRelativePath(file.exportPath, targetPath);
+        if (htmlCompatibleExt.includes(targetRelativePath.extensionName))
+          targetRelativePath.setExtension("html");
         if (ExportSettings.settings.makeNamesWebStyle)
-          bestPath = Utils.makePathWebStyle(bestPath);
-        bestPath = Utils.joinPaths(Utils.parsePath(bestPath).dir, Utils.parsePath(bestPath).name);
-        headers.shift();
-        let header = "#" + headers.join("-").replaceAll(" ", "_");
-        finalHref = bestPath + ".html" + header;
+          targetRelativePath.makeWebStyle();
+        let finalHref = targetRelativePath.makeUnixStyle() + targetHeader.replaceAll(" ", "_");
+        $2(this).attr("href", finalHref);
       }
-      $(this).attr("href", finalHref);
     });
     query.find("a.footnote-link").each(function() {
-      $(this).attr("target", "_self");
+      $2(this).attr("target", "_self");
     });
     query.find("h1, h2, h3, h4, h5, h6").each(function() {
-      $(this).attr("id", $(this).text().replaceAll(" ", "_").replaceAll("#", ""));
+      $2(this).attr("id", $2(this).text().replaceAll(" ", "_"));
     });
   }
-  async inlineImages(page) {
+  static async inlineMedia(file) {
+    var _a, _b, _c, _d, _e;
+    let query = $2(file.document);
+    let media = query.find("img, audio").toArray();
+    for (let i = 0; i < media.length; i++) {
+      let mediaEl = media[i];
+      let rawSrc = (_a = $2(mediaEl).attr("src")) != null ? _a : "";
+      if (rawSrc.startsWith("http:") || rawSrc.startsWith("https:"))
+        continue;
+      let filePath = new Path((_c = (_b = app.vault.resolveFileUrl(rawSrc)) == null ? void 0 : _b.path) != null ? _c : "");
+      let base64 = (_d = await filePath.readFileString("base64")) != null ? _d : "";
+      if (base64 === "")
+        continue;
+      let ext = filePath.extensionName;
+      if (ext === "svg")
+        ext += "+xml";
+      let type = (_e = app.viewRegistry.typeByExtension[ext]) != null ? _e : "audio";
+      $2(mediaEl).attr("src", `data:${type}/${ext};base64,${base64}`);
+    }
+  }
+  static async outlineMedia(file) {
     var _a, _b;
-    let query = (0, import_jquery.default)(page);
-    let images = query.find("img").toArray();
-    for (let i = 0; i < images.length; i++) {
-      let img = images[i];
-      if (!((_a = $(img).attr("src")) == null ? void 0 : _a.startsWith("app://local")))
+    let downloads = [];
+    let query = $2(file.document);
+    let media = query.find("img, audio, video").toArray();
+    for (let i = 0; i < media.length; i++) {
+      let mediaEl = $2(media[i]);
+      let src = (_a = mediaEl.attr("src")) != null ? _a : "";
+      if (!src.startsWith("app://local"))
         continue;
-      let path = (_b = $(img).attr("src")) == null ? void 0 : _b.replace("app://local", "").split("?")[0];
-      if (!path)
-        continue;
-      path = Utils.forceAbsolutePath(path);
-      let base64 = "";
-      try {
-        base64 = await Utils.getTextBase64(path);
-      } catch (e) {
-        console.error(e);
-        console.warn("Failed to inline image: " + path);
-        new import_obsidian3.Notice("Failed to inline image: " + path, 5e3);
+      src = src.replace("app://local", "").split("?")[0];
+      let mediaPath = new Path(src).makeRootAbsolute();
+      if (!mediaPath.exists) {
+        console.log("Could not find image at " + mediaPath);
         continue;
       }
-      $(img).attr("src", "data:image/png;base64," + base64);
-    }
-  }
-  async outlineImages(page, view) {
-    let query = (0, import_jquery.default)(page);
-    this.outlinedImages = [];
-    let imagesToOutline = [];
-    query.find("img").each(function() {
-      var _a, _b;
-      let imagePath = (_a = $(this).attr("src")) != null ? _a : "";
-      if (imagePath == "")
-        return;
-      if (!imagePath.startsWith("app://local") || imagePath.contains("data:"))
-        return;
-      imagePath = Utils.trimStart(imagePath, "app://local").split("?")[0];
-      imagePath = Utils.forceAbsolutePath(imagePath);
-      let filePath = (_b = Utils.getAbsolutePath(view.file.path)) != null ? _b : "";
-      let imageBase = Utils.parsePath(imagePath).base;
-      let relativeImagePath = Utils.joinPaths(Utils.getRelativePath(imagePath, filePath), imageBase);
-      if (relativeImagePath.startsWith("..") || relativeImagePath == "/" || relativeImagePath == "") {
-        relativeImagePath = Utils.joinPaths("images", imageBase);
+      let vaultToMedia = Path.getRelativePathFromVault(mediaPath);
+      let exportLocation = vaultToMedia;
+      let mediaPathInExport = Path.getRelativePath(file.exportFromFolder, vaultToMedia);
+      if (mediaPathInExport.asString.startsWith("..")) {
+        exportLocation = AssetHandler.mediaFolderName.joinString(vaultToMedia.fullName);
       }
-      relativeImagePath = Utils.forceRelativePath(relativeImagePath, true);
+      let relativeImagePath = Path.getRelativePath(file.exportPath, exportLocation);
       if (ExportSettings.settings.makeNamesWebStyle) {
-        relativeImagePath = Utils.makePathWebStyle(relativeImagePath);
+        relativeImagePath.makeWebStyle();
+        exportLocation.makeWebStyle();
       }
-      $(this).attr("src", relativeImagePath);
-      imagesToOutline.push({ localImagePath: imagePath, relativeExportImagePath: relativeImagePath });
-    });
-    this.outlinedImages = imagesToOutline;
-  }
-  generateFixedToggle(page, alwaysInject = false) {
-    if (!alwaysInject && page.querySelector(".theme-toggle-inline, .theme-toggle"))
-      return document.createElement("div");
-    if (ExportSettings.settings.addDarkModeToggle) {
-      return this.generateDarkmodeToggle(false);
+      mediaEl.attr("src", relativeImagePath.asString);
+      let data = (_b = await mediaPath.readFileBuffer()) != null ? _b : Buffer.from([]);
+      let imageDownload = new Downloadable(exportLocation.fullName, data, exportLocation.directory);
+      downloads.push(imageDownload);
     }
-    return document.createElement("div");
+    return downloads;
   }
-  repairOnClick(page) {
-    page.innerHTML = page.innerHTML.replaceAll("data-onclick", "onclick");
+  static generateDarkmodeToggle(inline = true, usingDocument = document) {
+    let toggle = usingDocument.createElement("div");
+    let label = usingDocument.createElement("label");
+    label.classList.add(inline ? "theme-toggle-inline" : "theme-toggle");
+    label.setAttribute("for", "theme_toggle");
+    let input = usingDocument.createElement("input");
+    input.classList.add("toggle__input");
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("id", "theme_toggle");
+    let div = usingDocument.createElement("div");
+    div.classList.add("toggle__fill");
+    label.appendChild(input);
+    label.appendChild(div);
+    toggle.appendChild(label);
+    return toggle;
   }
-  getHeaderList(page) {
+  static getHeaderList(usingDocument) {
     let headers = [];
-    let headerElements = page.querySelectorAll("h1, h2, h3, h4, h5, h6");
+    let headerElements = usingDocument.querySelectorAll("h1, h2, h3, h4, h5, h6");
     for (let i = 0; i < headerElements.length; i++) {
       let header = headerElements[i];
       let size = parseInt(header.tagName[1]);
@@ -7134,25 +12031,25 @@ var HTMLGenerator = class {
     }
     return headers;
   }
-  generateOutlineItem(header) {
+  static generateOutlineItem(header, usingDocument) {
     let arrowIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path>`;
-    let outlineItemEl = document.createElement("div");
+    let outlineItemEl = usingDocument.createElement("div");
     outlineItemEl.classList.add("outline-item");
     outlineItemEl.setAttribute("data-size", header.size.toString());
-    let outlineItemContentsEl = document.createElement("a");
+    let outlineItemContentsEl = usingDocument.createElement("a");
     outlineItemContentsEl.classList.add("outline-item-contents");
     outlineItemContentsEl.classList.add("internal-link");
     outlineItemContentsEl.setAttribute("href", "#" + header.href);
-    let outlineItemIconEl = document.createElement("div");
+    let outlineItemIconEl = usingDocument.createElement("div");
     outlineItemIconEl.classList.add("tree-item-icon");
     outlineItemIconEl.classList.add("collapse-icon");
-    let outlineItemIconSvgEl = document.createElement("svg");
+    let outlineItemIconSvgEl = usingDocument.createElement("svg");
     outlineItemIconSvgEl.innerHTML = arrowIcon;
     outlineItemIconSvgEl = outlineItemIconSvgEl.firstChild;
-    let outlineItemTitleEl = document.createElement("span");
+    let outlineItemTitleEl = usingDocument.createElement("span");
     outlineItemTitleEl.classList.add("outline-item-title");
     outlineItemTitleEl.innerText = header.title;
-    let outlineItemChildrenEl = document.createElement("div");
+    let outlineItemChildrenEl = usingDocument.createElement("div");
     outlineItemChildrenEl.classList.add("outline-item-children");
     outlineItemIconEl.appendChild(outlineItemIconSvgEl);
     outlineItemContentsEl.appendChild(outlineItemIconEl);
@@ -7161,39 +12058,26 @@ var HTMLGenerator = class {
     outlineItemEl.appendChild(outlineItemChildrenEl);
     return outlineItemEl;
   }
-  generateOutline(headers) {
+  static generateOutline(headers, usingDocument) {
     var _a;
-    if (headers.length <= 1)
-      return document.createElement("div");
-    let outlineEl = document.createElement("div");
+    let outlineEl = usingDocument.createElement("div");
     outlineEl.classList.add("outline-container");
     outlineEl.setAttribute("data-size", "0");
-    let outlineHeader = document.createElement("div");
+    let outlineHeader = usingDocument.createElement("div");
     outlineHeader.classList.add("outline-header");
-    let headerIconEl = document.createElement("svg");
-    headerIconEl.setAttribute("viewBox", "0 0 100 100");
-    headerIconEl.classList.add("bullet-list");
-    headerIconEl.setAttribute("width", "18px");
-    headerIconEl.setAttribute("height", "18px");
-    let headerIconPathEl = document.createElement("path");
-    let headerPathData = "M16.4,16.4c-3.5,0-6.4,2.9-6.4,6.4s2.9,6.4,6.4,6.4s6.4-2.9,6.4-6.4S19.9,16.4,16.4,16.4z M16.4,19.6 c1.8,0,3.2,1.4,3.2,3.2c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2C13.2,21,14.6,19.6,16.4,19.6z M29.2,21.2v3.2H90v-3.2H29.2z M16.4,43.6c-3.5,0-6.4,2.9-6.4,6.4s2.9,6.4,6.4,6.4s6.4-2.9,6.4-6.4S19.9,43.6,16.4,43.6z M16.4,46.8c1.8,0,3.2,1.4,3.2,3.2 s-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2S14.6,46.8,16.4,46.8z M29.2,48.4v3.2H90v-3.2H29.2z M16.4,70.8c-3.5,0-6.4,2.9-6.4,6.4 c0,3.5,2.9,6.4,6.4,6.4s6.4-2.9,6.4-6.4C22.8,73.7,19.9,70.8,16.4,70.8z M16.4,74c1.8,0,3.2,1.4,3.2,3.2c0,1.8-1.4,3.2-3.2,3.2 s-3.2-1.4-3.2-3.2C13.2,75.4,14.6,74,16.4,74z M29.2,75.6v3.2H90v-3.2H29.2z";
-    headerIconPathEl.setAttribute("fill", "currentColor");
-    headerIconPathEl.setAttribute("stroke", "currentColor");
-    headerIconPathEl.setAttribute("d", headerPathData);
-    let headerLabelEl = document.createElement("h6");
+    let headerLabelEl = usingDocument.createElement("h6");
     headerLabelEl.style.margin = "1em";
+    headerLabelEl.style.marginLeft = "0";
     headerLabelEl.innerText = "Table of Contents";
-    let headerCollapseAllEl = document.createElement("button");
+    let headerCollapseAllEl = usingDocument.createElement("button");
     headerCollapseAllEl.classList.add("clickable-icon", "collapse-all");
-    let headerCollapseAllIconEl = document.createElement("iconify-icon");
+    let headerCollapseAllIconEl = usingDocument.createElement("iconify-icon");
     headerCollapseAllIconEl.setAttribute("icon", "ph:arrows-in-line-horizontal-bold");
     headerCollapseAllIconEl.setAttribute("width", "18px");
     headerCollapseAllIconEl.setAttribute("height", "18px");
     headerCollapseAllIconEl.setAttribute("rotate", "90deg");
     headerCollapseAllIconEl.setAttribute("color", "currentColor");
     headerCollapseAllEl.appendChild(headerCollapseAllIconEl);
-    headerIconEl.appendChild(headerIconPathEl);
-    outlineHeader.appendChild(headerIconEl);
     outlineHeader.appendChild(headerLabelEl);
     outlineHeader.appendChild(headerCollapseAllEl);
     outlineEl.appendChild(outlineHeader);
@@ -7204,12 +12088,12 @@ var HTMLGenerator = class {
     }
     for (let i = 0; i < headers.length; i++) {
       let header = headers[i];
-      let listItem = this.generateOutlineItem(header);
+      let listItem = this.generateOutlineItem(header, usingDocument);
       while (getLastStackSize() >= header.size && listStack.length > 1) {
         listStack.pop();
       }
       let childContainer = (_a = listStack.last()) == null ? void 0 : _a.querySelector(".outline-item-children");
-      if (getLastStackSize() == 0)
+      if (getLastStackSize() === 0)
         childContainer = listStack.last();
       if (!childContainer)
         continue;
@@ -7218,27 +12102,87 @@ var HTMLGenerator = class {
     }
     return outlineEl;
   }
+  static generateGraphView(usingDocument) {
+    let graphEl = usingDocument.createElement("div");
+    graphEl.className = "graph-view-placeholder";
+    graphEl.innerHTML = `
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" width="512px" height="512px"></canvas>
+		</div>
+		`;
+    return graphEl;
+  }
+};
+
+// scripts/html-generation/export-file.ts
+var import_js_beautify = __toESM(require_js());
+var ExportFile = class {
+  constructor(file, exportToFolder, exportFromFolder, partOfBatch, fileName = "", forceExportToRoot = false) {
+    this.downloads = [];
+    this.externalDownloads = [];
+    if (exportToFolder.isFile || !exportToFolder.isAbsolute)
+      throw new Error("rootExportFolder must be an absolute path to a folder");
+    if (!fileName.endsWith(".html"))
+      throw new Error("fileName must be a .html file");
+    this.markdownFile = file;
+    this.exportToFolder = exportToFolder;
+    this.exportFromFolder = exportFromFolder;
+    this.partOfBatch = partOfBatch;
+    this.name = fileName === "" ? file.basename + ".html" : fileName;
+    let parentPath = file.parent.path;
+    if (parentPath.trim() == "/" || parentPath.trim() == "\\")
+      parentPath = "";
+    this.exportPath = Path.joinStrings(parentPath, this.name);
+    if (forceExportToRoot)
+      this.exportPath.reparse(this.name);
+    this.exportPath.setWorkingDirectory(this.exportToFolder.asString);
+    if (ExportSettings.settings.makeNamesWebStyle) {
+      this.name = Path.toWebStyle(this.name);
+      this.exportPath.makeWebStyle();
+    }
+    this.document = document.implementation.createHTMLDocument(this.markdownFile.basename);
+  }
+  get html() {
+    let htmlString = "<!DOCTYPE html>\n" + this.document.documentElement.outerHTML;
+    if (ExportSettings.settings.beautifyHTML)
+      htmlString = (0, import_js_beautify.html_beautify)(htmlString, { indent_size: 2 });
+    return htmlString;
+  }
+  get contentElement() {
+    return this.document.querySelector(".markdown-preview-view");
+  }
+  get exportPathAbsolute() {
+    return this.exportToFolder.join(this.exportPath);
+  }
+  get pathToRoot() {
+    return Path.getRelativePath(this.exportPath, new Path(this.exportPath.workingDirectory), true).makeUnixStyle();
+  }
+  getSelfDownloadable() {
+    return new Downloadable(this.name, this.html, this.exportPath.directory);
+  }
+  async generateHTML(addSelfToDownloads = false) {
+    await HTMLGenerator.getDocumentHTML(this, addSelfToDownloads);
+    return this;
+  }
+  async generateWebpage() {
+    await HTMLGenerator.generateWebpage(this);
+    return this;
+  }
 };
 
 // scripts/main.ts
-var { shell } = require("electron");
-var pathTools2 = require("path");
-var HTMLExportPlugin = class extends import_obsidian4.Plugin {
-  constructor() {
-    super(...arguments);
-    this.leafHandler = new LeafHandler();
-    this.htmlGenerator = new HTMLGenerator("webpage-html-export");
-  }
+var HTMLExportPlugin = class extends import_obsidian5.Plugin {
   addTogglePostprocessor() {
     this.registerMarkdownCodeBlockProcessor("theme-toggle", (source, el, ctx) => {
-      let toggleEl = this.htmlGenerator.generateDarkmodeToggle();
+      let toggleEl = HTMLGenerator.generateDarkmodeToggle();
       el.replaceWith(toggleEl);
     });
     this.registerMarkdownPostProcessor((element, context) => {
       let codeBlocks = element.querySelectorAll("code, span.cm-inline-code");
       codeBlocks.forEach((codeBlock) => {
-        if (codeBlock instanceof HTMLElement && codeBlock.innerText == "theme-toggle") {
-          let toggleEl = this.htmlGenerator.generateDarkmodeToggle();
+        if (codeBlock instanceof HTMLElement && codeBlock.innerText === "theme-toggle") {
+          let toggleEl = HTMLGenerator.generateDarkmodeToggle();
           codeBlock.replaceWith(toggleEl);
         }
       });
@@ -7250,11 +12194,34 @@ var HTMLExportPlugin = class extends import_obsidian4.Plugin {
       name: "Export current file to HTML",
       checkCallback: (checking) => {
         var _a;
-        let file = (_a = Utils.getActiveView()) == null ? void 0 : _a.file;
-        if (file instanceof import_obsidian4.TFile) {
+        let file = (_a = Utils.getActiveTextView()) == null ? void 0 : _a.file;
+        if (file instanceof import_obsidian5.TFile) {
           if (checking)
             return true;
-          this.exportFile(file);
+          this.exportFile(file, new Path(file.path)).then((exportedFile) => {
+            if (exportedFile && ExportSettings.settings.openAfterExport) {
+              this.openPath(exportedFile.exportPathAbsolute);
+            }
+          });
+        }
+        return false;
+      }
+    });
+    this.addCommand({
+      id: "export-html-file-default",
+      name: "Export current file to HTML - Previous Settings",
+      checkCallback: (checking) => {
+        var _a;
+        let file = (_a = Utils.getActiveTextView()) == null ? void 0 : _a.file;
+        if (file instanceof import_obsidian5.TFile) {
+          if (checking)
+            return true;
+          let path = Utils.idealDefaultPath().joinString(file.name).setExtension("html");
+          this.exportFile(file, new Path(file.path), false, path, false).then((exportedFile) => {
+            if (exportedFile && ExportSettings.settings.openAfterExport) {
+              this.openPath(exportedFile.exportPathAbsolute);
+            }
+          });
         }
         return false;
       }
@@ -7263,136 +12230,161 @@ var HTMLExportPlugin = class extends import_obsidian4.Plugin {
       id: "export-html-vault",
       name: "Export vault to HTML",
       callback: () => {
-        this.exportFolder("");
+        this.exportFolder(Path.emptyPath);
       }
     });
   }
+  async openPath(path) {
+    await window.electron.remote.shell.openPath(path.asString);
+  }
   async onload() {
+    navigator.clipboard.writeText("Hello");
     console.log("loading webpage-html-export plugin");
+    HTMLExportPlugin.plugin = this;
+    await this.checkForUpdates();
+    AssetHandler.initialize("webpage-html-export");
     this.addSettingTab(new ExportSettings(this));
     ExportSettings.loadSettings();
     this.addRibbonIcon("folder-up", "Export Vault to HTML", async () => {
-      this.exportFolder("");
+      let exportInfo = await this.exportFolder(Path.emptyPath);
+      if (exportInfo.success && ExportSettings.settings.openAfterExport) {
+        console.log("Opening: " + exportInfo.exportedPath.asString);
+        this.openPath(exportInfo.exportedPath);
+      }
     });
     this.addTogglePostprocessor();
     this.addCommands();
-    this.htmlGenerator.initialize();
     this.registerEvent(this.app.workspace.on("file-menu", (menu, file) => {
       menu.addItem((item) => {
-        item.setTitle("Export to HTML").setIcon("download").setSection("action").onClick(async () => {
-          if (file instanceof import_obsidian4.TFile) {
-            let success = await this.exportFile(file);
-            if (success && ExportSettings.settings.openAfterExport) {
-              shell.openPath(ExportSettings.settings.lastExportPath);
+        item.setTitle("Export to HTML").setIcon("download").setSection("export").onClick(async () => {
+          if (file instanceof import_obsidian5.TFile) {
+            let path = new Path(file.path);
+            let exportedFile = await this.exportFile(file, path);
+            if (exportedFile && ExportSettings.settings.openAfterExport) {
+              console.log("Opening: " + exportedFile.exportPathAbsolute.asString);
+              this.openPath(exportedFile.exportPathAbsolute);
             }
-          } else if (file instanceof import_obsidian4.TFolder) {
-            let success = await this.exportFolder(file.path);
-            if (success && ExportSettings.settings.openAfterExport) {
-              shell.openPath(ExportSettings.settings.lastExportPath);
+          } else if (file instanceof import_obsidian5.TFolder) {
+            let exportInfo = await this.exportFolder(new Path(file.path));
+            if (exportInfo.success && ExportSettings.settings.openAfterExport) {
+              console.log("Opening: " + exportInfo.exportedPath.asString);
+              this.openPath(exportInfo.exportedPath);
             }
           } else {
             console.error("File is not a TFile or TFolder! Invalid type: " + typeof file);
-            new import_obsidian4.Notice("File is not a File or Folder! Invalid type: " + typeof file, 5e3);
+            new import_obsidian5.Notice("File is not a File or Folder! Invalid type: " + typeof file, 5e3);
           }
         });
       });
     }));
   }
-  onunload() {
-    console.log("unloading webpage-html-export plugin");
-  }
-  async exportFile(file, fullPath = "", showSettings = true) {
-    var _a;
-    let copyDocToClipboard = false;
+  async exportFile(file, exportFromPath, partOfBatch = false, exportToPath = void 0, showSettings = true) {
+    if (file.extension != "md") {
+      new import_obsidian5.Notice(`\u2757 Unfortunately exporting ${file.extension.replaceAll(".", "")} files is not supported yet.`, 7e3);
+      return void 0;
+    }
     if (showSettings) {
-      let validSelection = false;
-      while (!validSelection) {
-        let result = await new ExportModal2().open();
-        if (result.canceled)
-          return false;
-        copyDocToClipboard = result.copyToClipboard;
-        if (copyDocToClipboard && (!ExportSettings.settings.inlineCSS || !ExportSettings.settings.inlineJS || !ExportSettings.settings.inlineImages)) {
-          let error = "To copy to the clipboard please enable inline CSS, JS and Images";
-          console.error(error);
-          new import_obsidian4.Notice(error, 5e3);
-          validSelection = false;
-          continue;
-        }
-        validSelection = true;
+      let result = await new ExportModal().open();
+      if (result.canceled)
+        return void 0;
+    }
+    if (exportToPath === void 0) {
+      let defaultFileName = file.basename + ".html";
+      if (ExportSettings.settings.makeNamesWebStyle)
+        defaultFileName = Path.toWebStyle(defaultFileName);
+      let saveDialogPath = await Utils.showSaveDialog(Utils.idealDefaultPath(), defaultFileName, false);
+      if (!saveDialogPath)
+        return void 0;
+      exportToPath = saveDialogPath;
+    }
+    if (!partOfBatch) {
+      await HTMLGenerator.beginBatch();
+      RenderLog.progress(1, 2, "Generating HTML", "Exporting: " + file.path);
+    }
+    try {
+      var exportedFile = new ExportFile(file, exportToPath.directory.absolute(), exportFromPath.directory, partOfBatch, exportToPath.fullName, !partOfBatch);
+      await HTMLGenerator.generateWebpage(exportedFile);
+    } catch (e) {
+      if (!partOfBatch) {
+        RenderLog.error("Could not export file: " + file.name, e.stack, true);
       }
+      throw e;
     }
-    let parsedPath = Utils.parsePath(fullPath);
-    if (fullPath == "" && !copyDocToClipboard) {
-      let defaultFileName = (ExportSettings.settings.makeNamesWebStyle ? Utils.makePathWebStyle(file.basename) : file.basename) + ".html";
-      let saveDialogPath = (_a = await Utils.showSaveDialog(Utils.idealDefaultPath(), defaultFileName, false)) != null ? _a : void 0;
-      if (saveDialogPath == void 0)
-        return false;
-      parsedPath = Utils.parsePath(saveDialogPath);
+    if (!partOfBatch) {
+      await Utils.downloadFiles(exportedFile.downloads, exportToPath.directory);
+      new import_obsidian5.Notice("\u2705 Finished HTML Export:\n\n" + exportToPath.asString, 5e3);
+      HTMLGenerator.endBatch();
     }
-    let fileTab = this.leafHandler.openFileInNewLeaf(file, true);
-    let htmlEl = await this.htmlGenerator.getCurrentFileHTML();
-    if (htmlEl == null) {
-      console.error("Failed to get HTML for file " + file.name);
-      new import_obsidian4.Notice("Failed to get HTML for file " + file.name, 5e3);
-      return false;
-    }
-    let htmlText = htmlEl instanceof HTMLHtmlElement ? htmlEl.outerHTML : htmlEl;
-    let filesToDownload = await this.htmlGenerator.getSeperateFilesToDownload();
-    fileTab.detach();
-    if (copyDocToClipboard) {
-      navigator.clipboard.writeText(htmlText);
-      return false;
-    }
-    let htmlDownload = { filename: file.basename + ".html", data: htmlText, type: "text/html" };
-    filesToDownload.unshift(htmlDownload);
-    let filename = parsedPath.base;
-    let folderPath = parsedPath.dir;
-    filesToDownload[0].filename = filename;
-    if (ExportSettings.settings.makeNamesWebStyle) {
-      filesToDownload.forEach((file2) => {
-        var _a2;
-        file2.filename = Utils.makePathWebStyle(file2.filename);
-        file2.relativePath = Utils.makePathWebStyle((_a2 = file2.relativePath) != null ? _a2 : "");
-      });
-    }
-    await Utils.downloadFiles(filesToDownload, folderPath);
-    new import_obsidian4.Notice("Exported " + file.name + " to " + parsedPath.fullPath, 5e3);
-    return true;
+    return exportedFile;
   }
   async exportFolder(folderPath, showSettings = true) {
+    performance.mark("start");
     if (showSettings) {
-      let validSelection = false;
-      while (!validSelection) {
-        let result = await new ExportModal2().open();
-        if (result.canceled)
-          return false;
-        if (result.copyToClipboard) {
-          let error = "You cannot export a folder or vault to the clipboard.";
-          console.error(error);
-          new import_obsidian4.Notice(error, 5e3);
-          validSelection = false;
-          continue;
-        }
-        validSelection = true;
-      }
+      let result = await new ExportModal().open();
+      if (result.canceled)
+        return { success: false, exportedPath: Path.emptyPath };
     }
-    let htmlPath = await Utils.showSelectFolderDialog(Utils.parsePath(Utils.idealDefaultPath()).dir);
+    let htmlPath = await Utils.showSelectFolderDialog(Utils.idealDefaultPath());
     if (!htmlPath)
-      return false;
-    let files = this.app.vault.getFiles();
-    for (let i = 0; i < files.length; i++) {
-      let file = files[i];
-      if (file.path.startsWith(folderPath) && file.extension == "md") {
-        let fullPath = "";
-        if (ExportSettings.settings.makeNamesWebStyle)
-          fullPath = Utils.joinPaths(htmlPath, Utils.makePathWebStyle(Utils.parsePath(file.path).dir), Utils.makePathWebStyle(file.basename + ".html"));
-        else
-          fullPath = Utils.joinPaths(htmlPath, Utils.parsePath(file.path).dir, file.basename + ".html");
-        await this.exportFile(file, fullPath, false);
+      return { success: false, exportedPath: Path.emptyPath };
+    let allFiles = this.app.vault.getMarkdownFiles();
+    let filesToExport = folderPath.isEmpty ? allFiles : allFiles.filter((file) => new Path(file.path).directory.asString.startsWith(folderPath.asString) && file.extension === "md");
+    if (filesToExport.length > 1e5 || filesToExport.length <= 0) {
+      new import_obsidian5.Notice(`\u2757Invalid number of files to export: ${filesToExport.length}.
+
+Please report on GitHub if there are markdown files in this folder.`, 0);
+      return { success: false, exportedPath: htmlPath };
+    }
+    await HTMLGenerator.beginBatch();
+    RenderLog.progress(0, filesToExport.length, "Generating HTML", "...", "var(--color-accent)");
+    let externalFiles = [];
+    for (let i = 0; i < filesToExport.length; i++) {
+      let file = filesToExport[i];
+      try {
+        RenderLog.progress(i, filesToExport.length, "Generating HTML", "Exporting: " + file.path, "var(--color-accent)");
+        let filePath = htmlPath.joinString(file.name).setExtension("html");
+        let exportedFile = await this.exportFile(file, folderPath, true, filePath, false);
+        if (exportedFile) {
+          externalFiles.push(...exportedFile.downloads);
+          externalFiles = externalFiles.filter((file2, index) => externalFiles.findIndex((f) => f.relativeDownloadPath == file2.relativeDownloadPath && f.filename === file2.filename) == index);
+        }
+      } catch (e) {
+        let message = "Could not export file: " + file.name;
+        RenderLog.error(message, e.stack);
+        return { success: false, exportedPath: htmlPath };
       }
     }
-    new import_obsidian4.Notice("Folder exported " + folderPath + " to " + htmlPath, 1e4);
-    return true;
+    await Utils.downloadFiles(externalFiles, htmlPath);
+    HTMLGenerator.endBatch();
+    await Utils.delay(200);
+    new import_obsidian5.Notice("\u2705 Finished HTML Export:\n\n" + htmlPath, 5e3);
+    console.log("Finished HTML Export: " + htmlPath);
+    performance.mark("end");
+    performance.measure("exportFolder", "start", "end");
+    console.log(performance.getEntriesByName("exportFolder")[0].duration + "ms");
+    return { success: true, exportedPath: htmlPath };
+  }
+  async checkForUpdates() {
+    var _a, _b;
+    let currentVersion = this.manifest.version;
+    try {
+      let url = "https://raw.githubusercontent.com/KosmosisDire/obsidian-webpage-export/master/manifest.json";
+      let manifest = await fetch(url, { cache: "no-store" }).then((response) => response.json());
+      let latestVersion = (_a = manifest.version) != null ? _a : currentVersion;
+      let updateAvailable = currentVersion < latestVersion;
+      let updateNote = (_b = manifest.updateNote) != null ? _b : "";
+      HTMLExportPlugin.updateInfo = { updateAvailable, latestVersion, currentVersion, updateNote };
+      if (updateAvailable)
+        console.log("Update available: " + latestVersion + " (current: " + currentVersion + ")");
+      return HTMLExportPlugin.updateInfo;
+    } catch (e) {
+      console.log("Could not check for update");
+      HTMLExportPlugin.updateInfo = { updateAvailable: false, latestVersion: currentVersion, currentVersion, updateNote: "" };
+      return HTMLExportPlugin.updateInfo;
+    }
+  }
+  onunload() {
+    console.log("unloading webpage-html-export plugin");
   }
 };
 /*!

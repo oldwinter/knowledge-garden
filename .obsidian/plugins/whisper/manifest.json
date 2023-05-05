@@ -1,0 +1,11 @@
+{
+	"id": "whisper",
+	"name": "Whisper",
+	"version": "1.3.0",
+	"minAppVersion": "0.15.0",
+	"description": "Speech-to-text in Obsidian using OpenAI Whisper",
+	"author": "Nik Danilov",
+	"authorUrl": "https://github.com/nikdanilov",
+	"fundingUrl": "patreon.com/NikDanilov",
+	"isDesktopOnly": false
+}

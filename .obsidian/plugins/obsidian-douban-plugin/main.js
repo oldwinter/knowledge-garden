@@ -20069,7 +20069,7 @@ var FileUtil = {
     return (0, import_obsidian23.normalizePath)(parts.join("/"));
   },
   replaceSpecialCharactersForFileName(fileName) {
-    return fileName.replaceAll(/[\\/:*?"<>|.]/g, "_");
+    return fileName.replaceAll(/[\\/:*?"<>|]/g, "_");
   }
 };
 

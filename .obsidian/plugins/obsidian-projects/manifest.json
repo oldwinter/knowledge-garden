@@ -1,11 +1,1 @@
-{
-  "id": "obsidian-projects",
-  "name": "Projects",
-  "version": "1.15.0",
-  "minAppVersion": "1.0.0",
-  "description": "Plain text project planning.",
-  "author": "Marcus Olsson",
-  "authorUrl": "https://marcus.se.net",
-  "fundingUrl": "https://www.buymeacoffee.com/marcusolsson",
-  "isDesktopOnly": false
-}
+{"id":"obsidian-projects","name":"Projects","version":"1.15.3","minAppVersion":"1.0.0","description":"Plain text project planning.","author":"Marcus Olsson","authorUrl":"https://marcus.se.net","fundingUrl":"https://www.buymeacoffee.com/marcusolsson","isDesktopOnly":false}

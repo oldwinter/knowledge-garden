@@ -18,9 +18,14 @@
 }
 
 .omnisearch-result__title {
+  white-space: pre-wrap;
   align-items: center;
   display: flex;
   gap: 5px;
+}
+
+.omnisearch-result__title > span {
+  display: flex;
 }
 
 .omnisearch-result__folder-path {

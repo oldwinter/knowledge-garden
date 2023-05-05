@@ -6041,19 +6041,19 @@ var formatHighlightQuote = (quote, template) => {
 
 // src/settings/template.ts
 var DEFAULT_TEMPLATE = `---
-id: {{{id}}}
-title: {{{title}}}
+id: "{{{id}}}"
+title: "{{{title}}}"
 {{#author}}
-author: {{{author}}}
+author: "{{{author}}}"
 {{/author}}
 {{#labels.length}}
 tags:
-{{#labels}} - {{{name}}}
+{{#labels}} - "{{{name}}}"
 {{/labels}}
 {{/labels.length}}
-date_saved: {{{dateSaved}}}
+date_saved: "{{{dateSaved}}}"
 {{#datePublished}}
-date_published: {{{datePublished}}}
+date_published: "{{{datePublished}}}"
 {{/datePublished}}
 ---
 
@@ -8126,7 +8126,7 @@ var OmnivoreSettingTab = class extends import_obsidian5.PluginSettingTab {
     new import_obsidian5.Setting(generalSettings).setName("Template").setDesc(createFragment((fragment) => {
       fragment.append("Enter template to render articles with ", fragment.createEl("a", {
         text: "Reference",
-        href: "https://docs.omnivore.app/obsidian.html#customizing-which-data-is-synced-from-omnivore-to-obsidian"
+        href: "https://docs.omnivore.app/integrations/obsidian.html#controlling-the-layout-of-the-data-imported-to-obsidian"
       }));
     })).addTextArea((text) => {
       text.setPlaceholder("Enter the template").setValue(this.plugin.settings.template).onChange(async (value) => {
