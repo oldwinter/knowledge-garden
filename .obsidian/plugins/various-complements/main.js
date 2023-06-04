@@ -669,6 +669,9 @@ var emoji_regex_default = () => {
 
 // src/util/strings.ts
 var regEmoji = new RegExp(` *(${emoji_regex_default().source}) *`, "g");
+function equalsAsLiterals(one, another) {
+  return one.replace(/[ \t]/g, "") === another.replace(/[ \t]/g, "");
+}
 function allNumbersOrFewSymbols(text2) {
   return Boolean(text2.match(/^[0-9_\-.]+$/));
 }
@@ -703,13 +706,16 @@ function lowerIncludes(one, other) {
 function lowerStartsWith(a, b) {
   return a.toLowerCase().startsWith(b.toLowerCase());
 }
+function wrapFuzzy(func) {
+  return (...xs) => func(...xs) ? { type: "concrete_match" } : { type: "none" };
+}
 function lowerFuzzy(a, b) {
   return microFuzzy(a.toLowerCase(), b.toLowerCase());
 }
 function lowerFuzzyStarsWith(a, b) {
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
-  return aLower[0] !== bLower[0] ? false : microFuzzy(aLower, bLower);
+  return aLower[0] === bLower[0] ? microFuzzy(aLower, bLower) : { type: "none" };
 }
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -749,19 +755,30 @@ function microFuzzy(value, query) {
   let i = 0;
   let lastMatchIndex = null;
   let isFuzzy = false;
+  let scoreSeed = 0;
+  let combo = 0;
   for (let j = 0; j < value.length; j++) {
     if (value[j] === query[i]) {
       if (lastMatchIndex != null && j - lastMatchIndex > 1) {
         isFuzzy = true;
       }
       lastMatchIndex = j;
+      combo++;
       i++;
+    } else {
+      if (combo > 0) {
+        scoreSeed += 2 ** combo;
+        combo = 0;
+      }
     }
     if (i === query.length) {
-      return isFuzzy ? "fuzzy" : true;
+      if (combo > 0) {
+        scoreSeed += 2 ** combo;
+      }
+      return isFuzzy ? { type: "fuzzy_match", score: scoreSeed / value.length } : { type: "concrete_match" };
     }
   }
-  return false;
+  return { type: "none" };
 }
 function joinNumberWithSymbol(tokens) {
   if (tokens.length === 0) {
@@ -787,12 +804,13 @@ function joinNumberWithSymbol(tokens) {
 function pickTokens(content, trimPattern) {
   return content.split(trimPattern).filter((x) => x !== "");
 }
-var TRIM_CHAR_PATTERN = /[\n\t\[\]$/:?!=()<>"',|;*~ `]/g;
+var TRIM_CHAR_PATTERN = /[\n\t\[\]$/:?!=()<>"',|;*~ `_]/g;
 var DefaultTokenizer = class {
   tokenize(content, raw) {
-    return raw ? Array.from(splitRaw(content, this.getTrimPattern())).filter(
+    const tokens = raw ? Array.from(splitRaw(content, this.getTrimPattern())).filter(
       (x) => x !== " "
     ) : pickTokens(content, this.getTrimPattern());
+    return tokens.map((x) => x.replace(/\.+$/g, ""));
   }
   recursiveTokenize(content) {
     const trimIndexes = Array.from(content.matchAll(this.getTrimPattern())).sort((a, b) => a.index - b.index).map((x) => x.index);
@@ -2768,8 +2786,8 @@ function pushWord(wordsByFirstLetter, key, word) {
   }
   wordsByFirstLetter[key].push(word);
 }
-function judge(word, query, queryStartWithUpper, fuzzy) {
-  var _a;
+function judge(word, query, queryStartWithUpper, options) {
+  var _a, _b, _c;
   if (query === "") {
     return {
       word: {
@@ -2780,9 +2798,9 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
       alias: false
     };
   }
-  const matcher = fuzzy ? lowerFuzzy : lowerStartsWith;
+  const matcher = (options == null ? void 0 : options.fuzzy) ? lowerFuzzy : wrapFuzzy(lowerStartsWith);
   const matched = matcher(word.value, query);
-  if (matched) {
+  if (matched.type === "concrete_match" || matched.type === "fuzzy_match" && matched.score > ((_a = options == null ? void 0 : options.fuzzy) == null ? void 0 : _a.minMatchScore)) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
       return {
@@ -2790,7 +2808,7 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
           ...word,
           value: c,
           hit: c,
-          fuzzy: matched === "fuzzy"
+          fuzzy: matched.type === "fuzzy_match"
         },
         value: c,
         alias: false
@@ -2800,20 +2818,22 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
         word: {
           ...word,
           hit: word.value,
-          fuzzy: matched === "fuzzy"
+          fuzzy: matched.type === "fuzzy_match"
         },
         value: word.value,
         alias: false
       };
     }
   }
-  const matchedAlias = (_a = word.aliases) == null ? void 0 : _a.map((a) => ({ aliases: a, matched: matcher(a, query) })).find((x) => x.matched);
-  if (matchedAlias == null ? void 0 : matchedAlias.matched) {
+  const matchedAlias = (_b = word.aliases) == null ? void 0 : _b.map((a) => ({ aliases: a, matched: matcher(a, query) })).sort(
+    (a, b) => a.matched.type === "concrete_match" && b.matched.type !== "concrete_match" ? -1 : 0
+  ).find((x) => x.matched.type !== "none");
+  if (matchedAlias && (matchedAlias.matched.type === "concrete_match" || matchedAlias.matched.type === "fuzzy_match" && matchedAlias.matched.score > ((_c = options == null ? void 0 : options.fuzzy) == null ? void 0 : _c.minMatchScore))) {
     return {
       word: {
         ...word,
         hit: matchedAlias.aliases,
-        fuzzy: matchedAlias.matched === "fuzzy"
+        fuzzy: matchedAlias.matched.type === "fuzzy_match"
       },
       value: matchedAlias.aliases,
       alias: true
@@ -2825,10 +2845,9 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
   };
 }
 function suggestWords(indexedWords, query, maxNum, option = {}) {
-  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
   const { frontMatter, selectionHistoryStorage } = option;
   const queryStartWithUpper = capitalizeFirstLetter(query) === query;
-  const fuzzy = (_a = option.fuzzy) != null ? _a : false;
   const flattenFrontMatterWords = () => {
     var _a2, _b2;
     if (frontMatter === "alias" || frontMatter === "aliases") {
@@ -2840,25 +2859,25 @@ function suggestWords(indexedWords, query, maxNum, option = {}) {
     return [];
   };
   const words = queryStartWithUpper ? frontMatter ? flattenFrontMatterWords() : [
-    ...(_b = indexedWords.currentFile[query.charAt(0)]) != null ? _b : [],
-    ...(_c = indexedWords.currentFile[query.charAt(0).toLowerCase()]) != null ? _c : [],
-    ...(_d = indexedWords.currentVault[query.charAt(0)]) != null ? _d : [],
-    ...(_e = indexedWords.currentVault[query.charAt(0).toLowerCase()]) != null ? _e : [],
-    ...(_f = indexedWords.customDictionary[query.charAt(0)]) != null ? _f : [],
-    ...(_g = indexedWords.customDictionary[query.charAt(0).toLowerCase()]) != null ? _g : [],
-    ...(_h = indexedWords.internalLink[query.charAt(0)]) != null ? _h : [],
-    ...(_i = indexedWords.internalLink[query.charAt(0).toLowerCase()]) != null ? _i : []
+    ...(_a = indexedWords.currentFile[query.charAt(0)]) != null ? _a : [],
+    ...(_b = indexedWords.currentFile[query.charAt(0).toLowerCase()]) != null ? _b : [],
+    ...(_c = indexedWords.currentVault[query.charAt(0)]) != null ? _c : [],
+    ...(_d = indexedWords.currentVault[query.charAt(0).toLowerCase()]) != null ? _d : [],
+    ...(_e = indexedWords.customDictionary[query.charAt(0)]) != null ? _e : [],
+    ...(_f = indexedWords.customDictionary[query.charAt(0).toLowerCase()]) != null ? _f : [],
+    ...(_g = indexedWords.internalLink[query.charAt(0)]) != null ? _g : [],
+    ...(_h = indexedWords.internalLink[query.charAt(0).toLowerCase()]) != null ? _h : []
   ] : frontMatter ? flattenFrontMatterWords() : [
-    ...(_j = indexedWords.currentFile[query.charAt(0)]) != null ? _j : [],
-    ...(_k = indexedWords.currentFile[query.charAt(0).toUpperCase()]) != null ? _k : [],
-    ...(_l = indexedWords.currentVault[query.charAt(0)]) != null ? _l : [],
-    ...(_m = indexedWords.currentVault[query.charAt(0).toUpperCase()]) != null ? _m : [],
-    ...(_n = indexedWords.customDictionary[query.charAt(0)]) != null ? _n : [],
-    ...(_o = indexedWords.customDictionary[query.charAt(0).toUpperCase()]) != null ? _o : [],
-    ...(_p = indexedWords.internalLink[query.charAt(0)]) != null ? _p : [],
-    ...(_q = indexedWords.internalLink[query.charAt(0).toUpperCase()]) != null ? _q : []
+    ...(_i = indexedWords.currentFile[query.charAt(0)]) != null ? _i : [],
+    ...(_j = indexedWords.currentFile[query.charAt(0).toUpperCase()]) != null ? _j : [],
+    ...(_k = indexedWords.currentVault[query.charAt(0)]) != null ? _k : [],
+    ...(_l = indexedWords.currentVault[query.charAt(0).toUpperCase()]) != null ? _l : [],
+    ...(_m = indexedWords.customDictionary[query.charAt(0)]) != null ? _m : [],
+    ...(_n = indexedWords.customDictionary[query.charAt(0).toUpperCase()]) != null ? _n : [],
+    ...(_o = indexedWords.internalLink[query.charAt(0)]) != null ? _o : [],
+    ...(_p = indexedWords.internalLink[query.charAt(0).toUpperCase()]) != null ? _p : []
   ];
-  const filteredJudgement = Array.from(words).map((x) => judge(x, query, queryStartWithUpper, fuzzy)).filter((x) => x.value !== void 0);
+  const filteredJudgement = Array.from(words).map((x) => judge(x, query, queryStartWithUpper, option)).filter((x) => x.value !== void 0);
   const latestUpdated = max(
     filteredJudgement.map(
       (x) => {
@@ -2901,8 +2920,8 @@ function suggestWords(indexedWords, query, maxNum, option = {}) {
   }).map((x) => x.word).slice(0, maxNum);
   return uniqWith(candidate, suggestionUniqPredicate);
 }
-function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
-  var _a, _b;
+function judgeByPartialMatch(word, query, queryStartWithUpper, options) {
+  var _a, _b, _c, _d, _e, _f;
   if (query === "") {
     return {
       word: { ...word, hit: word.value },
@@ -2910,10 +2929,10 @@ function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
       alias: false
     };
   }
-  const startsWithMatcher = fuzzy ? lowerFuzzyStarsWith : lowerStartsWith;
-  const includesMatcher = fuzzy ? lowerFuzzy : lowerIncludes;
+  const startsWithMatcher = (options == null ? void 0 : options.fuzzy) ? lowerFuzzyStarsWith : wrapFuzzy(lowerStartsWith);
+  const includesMatcher = (options == null ? void 0 : options.fuzzy) ? lowerFuzzy : wrapFuzzy(lowerIncludes);
   const startsWithMatched = startsWithMatcher(word.value, query);
-  if (startsWithMatched) {
+  if (startsWithMatched.type === "concrete_match" || startsWithMatched.type === "fuzzy_match" && startsWithMatched.score > ((_a = options == null ? void 0 : options.fuzzy) == null ? void 0 : _a.minMatchScore)) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
       return {
@@ -2921,7 +2940,7 @@ function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
           ...word,
           value: c,
           hit: c,
-          fuzzy: startsWithMatched === "fuzzy"
+          fuzzy: startsWithMatched.type === "fuzzy_match"
         },
         value: c,
         alias: false
@@ -2931,40 +2950,48 @@ function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
         word: {
           ...word,
           hit: word.value,
-          fuzzy: startsWithMatched === "fuzzy"
+          fuzzy: startsWithMatched.type === "fuzzy_match"
         },
         value: word.value,
         alias: false
       };
     }
   }
-  const startsWithAliasMatched = (_a = word.aliases) == null ? void 0 : _a.map((a) => ({ aliases: a, matched: startsWithMatcher(a, query) })).find((x) => x.matched);
-  if (startsWithAliasMatched) {
+  const startsWithAliasMatched = (_b = word.aliases) == null ? void 0 : _b.map((a) => ({ aliases: a, matched: startsWithMatcher(a, query) })).sort(
+    (a, b) => a.matched.type === "concrete_match" && b.matched.type !== "concrete_match" ? -1 : 0
+  ).find((x) => x.matched.type !== "none");
+  if (startsWithAliasMatched && (startsWithAliasMatched.matched.type === "concrete_match" || startsWithAliasMatched.matched.type === "fuzzy_match" && startsWithAliasMatched.matched.score > ((_c = options == null ? void 0 : options.fuzzy) == null ? void 0 : _c.minMatchScore))) {
     return {
       word: {
         ...word,
         hit: startsWithAliasMatched.aliases,
-        fuzzy: startsWithAliasMatched.matched === "fuzzy"
+        fuzzy: startsWithAliasMatched.matched.type === "fuzzy_match"
       },
       value: startsWithAliasMatched.aliases,
       alias: true
     };
   }
   const includesMatched = includesMatcher(word.value, query);
-  if (includesMatched) {
+  if (includesMatched && (includesMatched.type === "concrete_match" || includesMatched.type === "fuzzy_match" && includesMatched.score > ((_d = options == null ? void 0 : options.fuzzy) == null ? void 0 : _d.minMatchScore))) {
     return {
-      word: { ...word, hit: word.value, fuzzy: includesMatched === "fuzzy" },
+      word: {
+        ...word,
+        hit: word.value,
+        fuzzy: includesMatched.type === "fuzzy_match"
+      },
       value: word.value,
       alias: false
     };
   }
-  const matchedAliasIncluded = (_b = word.aliases) == null ? void 0 : _b.map((a) => ({ aliases: a, matched: includesMatcher(a, query) })).find((x) => x.matched);
-  if (matchedAliasIncluded) {
+  const matchedAliasIncluded = (_e = word.aliases) == null ? void 0 : _e.map((a) => ({ aliases: a, matched: includesMatcher(a, query) })).sort(
+    (a, b) => a.matched.type === "concrete_match" && b.matched.type !== "concrete_match" ? -1 : 0
+  ).find((x) => x.matched.type !== "none");
+  if (matchedAliasIncluded && (matchedAliasIncluded.matched.type === "concrete_match" || matchedAliasIncluded.matched.type === "fuzzy_match" && matchedAliasIncluded.matched.score > ((_f = options == null ? void 0 : options.fuzzy) == null ? void 0 : _f.minMatchScore))) {
     return {
       word: {
         ...word,
         hit: matchedAliasIncluded.aliases,
-        fuzzy: matchedAliasIncluded.matched === "fuzzy"
+        fuzzy: matchedAliasIncluded.matched.type === "fuzzy_match"
       },
       value: matchedAliasIncluded.aliases,
       alias: true
@@ -2973,17 +3000,15 @@ function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
   return { word, alias: false };
 }
 function suggestWordsByPartialMatch(indexedWords, query, maxNum, option = {}) {
-  var _a;
   const { frontMatter, selectionHistoryStorage } = option;
   const queryStartWithUpper = capitalizeFirstLetter(query) === query;
-  const fuzzy = (_a = option.fuzzy) != null ? _a : false;
   const flatObjectValues = (object) => Object.values(object).flat();
   const flattenFrontMatterWords = () => {
-    var _a2, _b;
+    var _a, _b;
     if (frontMatter === "alias" || frontMatter === "aliases") {
       return [];
     }
-    if (frontMatter && ((_a2 = indexedWords.frontMatter) == null ? void 0 : _a2[frontMatter])) {
+    if (frontMatter && ((_a = indexedWords.frontMatter) == null ? void 0 : _a[frontMatter])) {
       return Object.values((_b = indexedWords.frontMatter) == null ? void 0 : _b[frontMatter]).flat();
     }
     return [];
@@ -2994,12 +3019,12 @@ function suggestWordsByPartialMatch(indexedWords, query, maxNum, option = {}) {
     ...flatObjectValues(indexedWords.customDictionary),
     ...flatObjectValues(indexedWords.internalLink)
   ];
-  const filteredJudgement = Array.from(words).map((x) => judgeByPartialMatch(x, query, queryStartWithUpper, fuzzy)).filter((x) => x.value !== void 0);
+  const filteredJudgement = Array.from(words).map((x) => judgeByPartialMatch(x, query, queryStartWithUpper, option)).filter((x) => x.value !== void 0);
   const latestUpdated = max(
     filteredJudgement.map(
       (x) => {
-        var _a2, _b;
-        return (_b = (_a2 = selectionHistoryStorage == null ? void 0 : selectionHistoryStorage.getSelectionHistory(x.word)) == null ? void 0 : _a2.lastUpdated) != null ? _b : 0;
+        var _a, _b;
+        return (_b = (_a = selectionHistoryStorage == null ? void 0 : selectionHistoryStorage.getSelectionHistory(x.word)) == null ? void 0 : _a.lastUpdated) != null ? _b : 0;
       }
     ),
     0
@@ -3838,6 +3863,7 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
   constructor(app2, statusBar) {
     super(app2);
     this.pastCurrentTokenSeparatedWhiteSpace = "";
+    this.previousCurrentLine = "";
     this.previousLinksCacheInActiveFile = /* @__PURE__ */ new Set();
     this.keymapEventHandler = [];
     this.appHelper = new AppHelper(app2);
@@ -4053,7 +4079,9 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
             {
               frontMatter: parsedQuery.currentFrontMatter,
               selectionHistoryStorage: this.selectionHistoryStorage,
-              fuzzy: this.settings.fuzzyMatch
+              fuzzy: this.settings.fuzzyMatch ? {
+                minMatchScore: this.settings.minFuzzyMatchScore
+              } : void 0
             }
           ).map((word) => ({ ...word, offset: q.offset }));
         }).flat().sort((a, b) => Number(a.fuzzy) - Number(b.fuzzy));
@@ -4429,6 +4457,13 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       onReturnNull("Don't show suggestions for IME");
       return null;
     }
+    const cl = this.appHelper.getCurrentLine(editor);
+    if (equalsAsLiterals(this.previousCurrentLine, cl) && !this.runManually) {
+      this.previousCurrentLine = cl;
+      onReturnNull("Don't show suggestions because there are no changes");
+      return null;
+    }
+    this.previousCurrentLine = cl;
     const currentLineUntilCursor = this.appHelper.getCurrentLineUntilCursor(editor);
     if (currentLineUntilCursor.startsWith("---")) {
       onReturnNull(
@@ -4677,6 +4712,7 @@ var DEFAULT_SETTINGS = {
   cedictPath: "./cedict_ts.u8",
   matchStrategy: "prefix",
   fuzzyMatch: true,
+  minFuzzyMatchScore: 0.5,
   matchingWithoutEmoji: true,
   treatAccentDiacriticsAsAlphabeticCharacters: false,
   maxNumberOfSuggestions: 5,
@@ -4820,6 +4856,14 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         await this.plugin.saveSettings();
       });
     });
+    new import_obsidian4.Setting(containerEl).setName("Min fuzzy match score").setDesc(
+      "It only shows suggestions whose fuzzy matched score is more than the specific value."
+    ).addSlider(
+      (sc) => sc.setLimits(0, 5, 0.1).setValue(this.plugin.settings.minFuzzyMatchScore).setDynamicTooltip().onChange(async (value) => {
+        this.plugin.settings.minFuzzyMatchScore = value;
+        await this.plugin.saveSettings();
+      })
+    );
     new import_obsidian4.Setting(containerEl).setName("Treat accent diacritics as alphabetic characters.").setDesc("Ex: If enabled, 'aaa' matches with '\xE1\xE4\u0101'").addToggle((tc) => {
       tc.setValue(
         this.plugin.settings.treatAccentDiacriticsAsAlphabeticCharacters

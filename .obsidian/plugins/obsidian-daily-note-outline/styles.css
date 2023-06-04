@@ -69,11 +69,11 @@
 }
 
 /* obsidian ver1.2で項目にhover時、色が変わらなくなった事への暫定対応*/
-.workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title:hover,
+/* .workspace-leaf-content[data-type="daily-note-outline"] .nav-file-title:hover,
 .workspace-leaf-content[data-type="daily-note-outline"] .nav-folder-title:hover {
     background-color: var(--nav-item-background-hover);
     color:var(--nav-item-color-hover);
-}
+} */
 
 
 

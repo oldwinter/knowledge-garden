@@ -39,7 +39,7 @@ bash <(curl -Ls https://cpp.li/openai)
 
 ```
 
-sudo docker run --rm -it \
+sudo docker run --rm  -it \
     -d \
     -p 443:443 \
     --name wgcf \

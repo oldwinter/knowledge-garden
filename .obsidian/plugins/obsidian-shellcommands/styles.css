@@ -45,6 +45,17 @@
     font-size: 80%;
 }
 
+/**
+ * Used for indenting setting elements when they have relations to each other.
+ */
+.SC-indent {
+    margin-left: 20px;
+}
+
+.SC-text-right {
+    text-align: right;
+}
+
 /*
  * SETTING GROUPS
  * Related setting fields combined together.
@@ -71,6 +82,13 @@ div.SC-setting-group div.setting-item.SC-full-description div.setting-item-info 
 }
 div.SC-setting-group div.setting-item.SC-full-description div.setting-item-control {
     width: 0; /* Make room for description. */
+}
+
+div.SC-setting-group div.setting-item.SC-wide-description div.setting-item-info {
+    width: max-content; /* Grow description as wide as possible, but leave some space for setting control elements. */
+}
+div.SC-setting-group div.setting-item.SC-wide-description div.setting-item-control {
+    width: min-content; /* Make room for description. */
 }
 
 div.SC-setting-group div.setting-item input[type=text],
@@ -175,6 +193,19 @@ div.setting-item.SC-custom-variable-name-setting div.setting-item-control::after
 
 li.SC-custom-variable-view-list-item {
     margin-bottom: 1em; /* Add space between variables in list. */
+}
+
+
+/*
+ * CUSTOM SHELL SETTINGS
+ */
+div.SC-path-translator-setting div.setting-item-control::before {
+    content: "function (absolutePath) {";
+    white-space: nowrap;
+}
+
+div.SC-path-translator-setting div.setting-item-control::after {
+    content: "}";
 }
 
 

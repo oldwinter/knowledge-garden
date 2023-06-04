@@ -61,7 +61,7 @@ PPV就像一个人生经营系统。相比于[[PARA]]，更容易融入[[GTD]]�
 	- Pillar database
 	- Habits and routines database
 	- Fitness database
-	- Page: mindset and identify sculpturing
+	- [[HOMEPAGE|Page]]: mindset and identify sculpturing
 - Pipelines
 	- Value goals database
 	- Goal outcomes database

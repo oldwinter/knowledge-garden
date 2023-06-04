@@ -1,6 +1,6 @@
 {
   "folder": "Calendar/Daily notes",
-  "autorun": true,
+  "autorun": false,
   "template": "Extras/Templates/Calendar模板/Daily notes模板",
   "format": "YYYY-MM-DD"
 }

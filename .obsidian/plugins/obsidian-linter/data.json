@@ -39,7 +39,7 @@
     },
     "yaml-key-sort": {
       "enabled": false,
-      "yaml-key-priority-sort-order": "sr-due\nsr-interval\nsr-ease\n",
+      "yaml-key-priority-sort-order": "",
       "priority-keys-at-start-of-yaml": false,
       "yaml-sort-order-for-other-keys": "None"
     },

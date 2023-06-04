@@ -95,6 +95,9 @@ var CountType;
   CountType2["PageDecimal"] = "pagedecimal";
   CountType2["Note"] = "note";
   CountType2["Character"] = "character";
+  CountType2["Link"] = "link";
+  CountType2["Embed"] = "embed";
+  CountType2["Alias"] = "alias";
   CountType2["Created"] = "created";
   CountType2["Modified"] = "modified";
   CountType2["FileSize"] = "filesize";
@@ -106,6 +109,9 @@ var countTypeDisplayStrings = {
   [CountType.PageDecimal]: "Page Count (decimal)",
   [CountType.Note]: "Note Count",
   [CountType.Character]: "Character Count",
+  [CountType.Link]: "Link Count",
+  [CountType.Embed]: "Embed Count",
+  [CountType.Alias]: "First Alias",
   [CountType.Created]: "Created Date",
   [CountType.Modified]: "Last Updated Date",
   [CountType.FileSize]: "File Size"
@@ -117,6 +123,9 @@ var countTypes = [
   CountType.PageDecimal,
   CountType.Note,
   CountType.Character,
+  CountType.Link,
+  CountType.Embed,
+  CountType.Alias,
   CountType.Created,
   CountType.Modified,
   CountType.FileSize
@@ -156,20 +165,24 @@ var DEFAULT_SETTINGS = {
   debugMode: false,
   wordsPerPage: 300,
   charsPerPage: 1500,
+  charsPerPageIncludesWhitespace: false,
   wordCountType: WordCountType.SpaceDelimited,
   pageCountType: PageCountType.ByWords
 };
 
 // logic/file.ts
 var FileHelper = class {
-  constructor(vault, plugin) {
-    this.vault = vault;
+  constructor(app, plugin) {
+    this.app = app;
     this.plugin = plugin;
     this.debugHelper = new DebugHelper();
-    this.cjkRegex = /\p{Script=Han}|\p{Script=Hiragana}|\p{Script=Katakana}|\p{Script=Hangul}|[0-9]+/ug;
+    this.cjkRegex = /\p{Script=Han}|\p{Script=Hiragana}|\p{Script=Katakana}|\p{Script=Hangul}|[0-9]+/gu;
   }
   get settings() {
     return this.plugin.settings;
+  }
+  get vault() {
+    return this.app.vault;
   }
   getAllFileCounts(wordCountType) {
     return __async(this, null, function* () {
@@ -189,6 +202,20 @@ var FileHelper = class {
       return counts[path];
     }
     const childPaths = Object.keys(counts).filter((countPath) => path === "/" || countPath.startsWith(path + "/"));
+    const directoryDefault = {
+      isDirectory: true,
+      noteCount: 0,
+      wordCount: 0,
+      pageCount: 0,
+      characterCount: 0,
+      nonWhitespaceCharacterCount: 0,
+      linkCount: 0,
+      embedCount: 0,
+      aliases: null,
+      createdDate: 0,
+      modifiedDate: 0,
+      sizeInBytes: 0
+    };
     return childPaths.reduce((total, childPath) => {
       const childCount = this.getCountDataForPath(counts, childPath);
       total.isDirectory = true;
@@ -201,17 +228,7 @@ var FileHelper = class {
       total.modifiedDate = Math.max(total.modifiedDate, childCount.modifiedDate);
       total.sizeInBytes += childCount.sizeInBytes;
       return total;
-    }, {
-      isDirectory: true,
-      noteCount: 0,
-      wordCount: 0,
-      pageCount: 0,
-      characterCount: 0,
-      nonWhitespaceCharacterCount: 0,
-      createdDate: 0,
-      modifiedDate: 0,
-      sizeInBytes: 0
-    });
+    }, directoryDefault);
   }
   setDebugMode(debug) {
     this.debugHelper.setDebugMode(debug);
@@ -229,6 +246,17 @@ var FileHelper = class {
       }
     });
   }
+  countEmbeds(metadata) {
+    var _a, _b;
+    return (_b = (_a = metadata.embeds) == null ? void 0 : _a.length) != null ? _b : 0;
+  }
+  countLinks(metadata) {
+    var _a, _b;
+    return (_b = (_a = metadata.links) == null ? void 0 : _a.length) != null ? _b : 0;
+  }
+  countNonWhitespaceCharacters(content) {
+    return (content.replace(/\s+/g, "") || []).length;
+  }
   countWords(content, wordCountType) {
     switch (wordCountType) {
       case WordCountType.CJK:
@@ -242,33 +270,55 @@ var FileHelper = class {
         return (content.match(/[^\s]+/g) || []).length;
     }
   }
-  countNonWhitespaceCharacters(content) {
-    return (content.replace(/\s+/g, "") || []).length;
-  }
   setCounts(counts, file, content, wordCountType) {
+    counts[file.path] = {
+      isDirectory: false,
+      noteCount: 1,
+      wordCount: 0,
+      pageCount: 0,
+      characterCount: 0,
+      nonWhitespaceCharacterCount: 0,
+      linkCount: 0,
+      embedCount: 0,
+      aliases: [],
+      createdDate: file.stat.ctime,
+      modifiedDate: file.stat.mtime,
+      sizeInBytes: file.stat.size
+    };
+    const metadata = this.app.metadataCache.getFileCache(file);
+    if (!this.shouldCountFile(metadata)) {
+      return;
+    }
     const wordCount = this.countWords(content, wordCountType);
+    const characterCount = content.length;
     const nonWhitespaceCharacterCount = this.countNonWhitespaceCharacters(content);
     let pageCount = 0;
     if (this.settings.pageCountType === PageCountType.ByWords) {
       const wordsPerPage = Number(this.settings.wordsPerPage);
       const wordsPerPageValid = !isNaN(wordsPerPage) && wordsPerPage > 0;
       pageCount = wordCount / (wordsPerPageValid ? wordsPerPage : 300);
-    } else if (this.settings.pageCountType === PageCountType.ByChars) {
+    } else if (this.settings.pageCountType === PageCountType.ByChars && !this.settings.charsPerPageIncludesWhitespace) {
       const charsPerPage = Number(this.settings.charsPerPage);
       const charsPerPageValid = !isNaN(charsPerPage) && charsPerPage > 0;
       pageCount = nonWhitespaceCharacterCount / (charsPerPageValid ? charsPerPage : 1500);
+    } else if (this.settings.pageCountType === PageCountType.ByChars && this.settings.charsPerPageIncludesWhitespace) {
+      const charsPerPage = Number(this.settings.charsPerPage);
+      const charsPerPageValid = !isNaN(charsPerPage) && charsPerPage > 0;
+      pageCount = characterCount / (charsPerPageValid ? charsPerPage : 1500);
     }
-    counts[file.path] = {
-      isDirectory: false,
-      noteCount: 1,
+    Object.assign(counts[file.path], {
       wordCount,
       pageCount,
-      characterCount: content.length,
+      characterCount,
       nonWhitespaceCharacterCount,
-      createdDate: file.stat.ctime,
-      modifiedDate: file.stat.mtime,
-      sizeInBytes: file.stat.size
-    };
+      linkCount: this.countLinks(metadata),
+      embedCount: this.countEmbeds(metadata),
+      aliases: (0, import_obsidian.parseFrontMatterAliases)(metadata.frontmatter)
+    });
+  }
+  shouldCountFile(metadata) {
+    const tags = (0, import_obsidian.getAllTags)(metadata);
+    return !tags.includes("#excalidraw");
   }
 };
 
@@ -321,7 +371,7 @@ var NovelWordCountPlugin = class extends import_obsidian2.Plugin {
     super(app, manifest);
     this.debugHelper = new DebugHelper();
     this.fileSizeHelper = new FileSizeHelper();
-    this.fileHelper = new FileHelper(this.app.vault, this);
+    this.fileHelper = new FileHelper(this.app, this);
   }
   get settings() {
     return this.savedData.settings;
@@ -491,6 +541,15 @@ var NovelWordCountPlugin = class extends import_obsidian2.Plugin {
         return abbreviateDescriptions ? `${counts.noteCount.toLocaleString()}n` : getPluralizedCount("note", counts.noteCount);
       case CountType.Character:
         return abbreviateDescriptions ? `${counts.characterCount.toLocaleString()}ch` : getPluralizedCount("character", counts.characterCount);
+      case CountType.Link:
+        return abbreviateDescriptions ? `${counts.linkCount.toLocaleString()}x` : getPluralizedCount("link", counts.linkCount);
+      case CountType.Embed:
+        return abbreviateDescriptions ? `${counts.embedCount.toLocaleString()}em` : getPluralizedCount("embed", counts.embedCount);
+      case CountType.Alias:
+        if (!counts.aliases || !Array.isArray(counts.aliases) || !counts.aliases.length) {
+          return null;
+        }
+        return abbreviateDescriptions ? `${counts.aliases[0]}` : `alias: ${counts.aliases[0]}${counts.aliases.length > 1 ? ` +${counts.aliases.length - 1}` : ""}`;
       case CountType.Created:
         if (counts.createdDate === 0) {
           return "";
@@ -507,13 +566,26 @@ var NovelWordCountPlugin = class extends import_obsidian2.Plugin {
     return "";
   }
   getNodeLabel(counts) {
-    const countTypes2 = counts.isDirectory && !this.settings.showSameCountsOnFolders ? [this.settings.folderCountType, this.settings.folderCountType2, this.settings.folderCountType3] : [this.settings.countType, this.settings.countType2, this.settings.countType3];
+    const countTypes2 = counts.isDirectory && !this.settings.showSameCountsOnFolders ? [
+      this.settings.folderCountType,
+      this.settings.folderCountType2,
+      this.settings.folderCountType3
+    ] : [
+      this.settings.countType,
+      this.settings.countType2,
+      this.settings.countType3
+    ];
     return countTypes2.filter((ct) => ct !== CountType.None).map((ct) => this.getDataTypeLabel(counts, ct, this.settings.abbreviateDescriptions)).filter((display) => display !== null).join(" | ");
   }
   handleEvents() {
     return __async(this, null, function* () {
       this.registerEvent(this.app.vault.on("modify", (file) => __async(this, null, function* () {
         this.debugHelper.debug("[modify] vault hook fired, recounting file", file.path);
+        yield this.fileHelper.updateFileCounts(file, this.savedData.cachedCounts, this.settings.wordCountType);
+        yield this.updateDisplayedCounts(file);
+      })));
+      this.registerEvent(this.app.metadataCache.on("changed", (file) => __async(this, null, function* () {
+        this.debugHelper.debug("[changed] metadataCache hook fired, recounting file", file.path);
         yield this.fileHelper.updateFileCounts(file, this.savedData.cachedCounts, this.settings.wordCountType);
         yield this.updateDisplayedCounts(file);
       })));
@@ -694,15 +766,22 @@ var NovelWordCountSettingTab = class extends import_obsidian2.PluginSettingTab {
       });
     }
     if (this.plugin.settings.pageCountType === PageCountType.ByChars) {
+      new import_obsidian2.Setting(containerEl).setName("Include whitespace characters in page count").addToggle((toggle) => toggle.setValue(this.plugin.settings.charsPerPageIncludesWhitespace).onChange((value) => __async(this, null, function* () {
+        this.plugin.settings.charsPerPageIncludesWhitespace = value;
+        yield this.plugin.saveSettings();
+        yield this.plugin.initialize();
+        this.display();
+      })));
       const charsPerPageChanged = (txt, value) => __async(this, null, function* () {
         const asNumber = Number(value);
         const isValid = !isNaN(asNumber) && asNumber > 0;
         txt.inputEl.style.borderColor = isValid ? null : "red";
-        this.plugin.settings.charsPerPage = isValid ? Number(value) : 1500;
+        const defaultCharsPerPage = 1500;
+        this.plugin.settings.charsPerPage = isValid ? Number(value) : defaultCharsPerPage;
         yield this.plugin.saveSettings();
         yield this.plugin.initialize();
       });
-      new import_obsidian2.Setting(containerEl).setName("Characters per page (not counting whitespace)").setDesc("Used for page count. 1500 is common in German (Normseite).").addText((txt) => {
+      new import_obsidian2.Setting(containerEl).setName("Characters per page").setDesc(`Used for page count. ${this.plugin.settings.charsPerPageIncludesWhitespace ? "2400 is common in Danish." : "1500 is common in German (Normseite)."}`).addText((txt) => {
         txt.setPlaceholder("1500").setValue(this.plugin.settings.charsPerPage.toString()).onChange((0, import_obsidian2.debounce)(charsPerPageChanged.bind(this, txt), 1e3));
       });
     }

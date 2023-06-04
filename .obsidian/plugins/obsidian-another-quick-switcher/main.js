@@ -515,6 +515,45 @@ function smartWhitespaceSplit(text) {
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+function microFuzzy(value, query) {
+  if (value.startsWith(query)) {
+    return { type: "starts-with", score: 2 ** query.length / value.length };
+  }
+  const emojiLessValue = excludeEmoji(value);
+  if (emojiLessValue.startsWith(query)) {
+    return { type: "starts-with", score: 2 ** query.length / value.length };
+  }
+  if (value.includes(query)) {
+    return { type: "includes", score: 2 ** query.length / value.length };
+  }
+  let i = 0;
+  let scoreSeed = 0;
+  let combo = 0;
+  for (let j = 0; j < emojiLessValue.length; j++) {
+    if (emojiLessValue[j] === query[i]) {
+      combo++;
+      i++;
+    } else {
+      if (combo > 0) {
+        scoreSeed += 2 ** combo;
+        combo = 0;
+      }
+    }
+    if (i === query.length) {
+      if (combo > 0) {
+        scoreSeed += 2 ** combo;
+      }
+      return { type: "fuzzy", score: scoreSeed / value.length };
+    }
+  }
+  return { type: "none", score: 0 };
+}
+function smartMicroFuzzy(text, query, isNormalizeAccentsDiacritics) {
+  return microFuzzy(
+    excludeSpace(normalize(text, isNormalizeAccentsDiacritics)),
+    excludeSpace(normalize(query, isNormalizeAccentsDiacritics))
+  );
+}
 
 // src/errors.ts
 var ExhaustiveError = class extends Error {
@@ -535,6 +574,7 @@ var sortPriorityList = [
   "Name match",
   "Perfect word match",
   "Prefix name match",
+  "Fuzzy name match",
   "Star",
   "Tag match",
   "Alphabetical",
@@ -578,6 +618,8 @@ function getComparator(priority) {
       return priorityToPerfectWord;
     case "Prefix name match":
       return priorityToPrefixName;
+    case "Fuzzy name match":
+      return priorityToFuzzyScore;
     case "Star":
       return priorityToStar;
     case "Tag match":
@@ -657,6 +699,17 @@ function priorityToName(a, b) {
     a,
     b,
     (x) => x.matchResults.filter((x2) => x2.type === "name").map((x2) => x2.query).unique().length,
+    "desc"
+  );
+}
+function priorityToFuzzyScore(a, b) {
+  return compare(
+    a,
+    b,
+    (x) => Math.max(...x.matchResults.map((x2) => {
+      var _a;
+      return (_a = x2.score) != null ? _a : 0;
+    })),
     "desc"
   );
 }
@@ -877,6 +930,8 @@ var createDefaultSearchCommand = () => ({
     header: false
   },
   searchTarget: "file",
+  allowFuzzySearchForSearchTarget: false,
+  minFuzzyMatchScore: 0.5,
   targetExtensions: [],
   floating: false,
   showFrontMatter: false,
@@ -896,6 +951,8 @@ var createDefaultLinkSearchCommand = () => ({
     header: false
   },
   searchTarget: "link",
+  allowFuzzySearchForSearchTarget: false,
+  minFuzzyMatchScore: 0.5,
   targetExtensions: [],
   floating: false,
   showFrontMatter: false,
@@ -915,6 +972,8 @@ var createDefaultBacklinkSearchCommand = () => ({
     header: false
   },
   searchTarget: "backlink",
+  allowFuzzySearchForSearchTarget: false,
+  minFuzzyMatchScore: 0.5,
   targetExtensions: ["md"],
   floating: false,
   showFrontMatter: false,
@@ -934,6 +993,8 @@ var createDefault2HopLinkSearchCommand = () => ({
     header: false
   },
   searchTarget: "2-hop-link",
+  allowFuzzySearchForSearchTarget: false,
+  minFuzzyMatchScore: 0.5,
   targetExtensions: [],
   floating: false,
   showFrontMatter: false,
@@ -960,6 +1021,8 @@ var createPreSettingSearchCommands = () => [
       link: false
     },
     searchTarget: "file",
+    allowFuzzySearchForSearchTarget: false,
+    minFuzzyMatchScore: 0.5,
     targetExtensions: [],
     floating: false,
     showFrontMatter: false,
@@ -979,6 +1042,8 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "file",
+    allowFuzzySearchForSearchTarget: false,
+    minFuzzyMatchScore: 0.5,
     targetExtensions: [],
     floating: false,
     showFrontMatter: false,
@@ -997,6 +1062,33 @@ var createPreSettingSearchCommands = () => [
     expand: false
   },
   {
+    name: "File name fuzzy search",
+    searchBy: {
+      tag: false,
+      link: false,
+      header: false
+    },
+    searchTarget: "file",
+    allowFuzzySearchForSearchTarget: true,
+    minFuzzyMatchScore: 0.5,
+    targetExtensions: [],
+    floating: false,
+    showFrontMatter: false,
+    excludeFrontMatterKeys: createDefaultExcludeFrontMatterKeys(),
+    defaultInput: "",
+    commandPrefix: "",
+    sortPriorities: [
+      "Prefix name match",
+      "Fuzzy name match",
+      ".md",
+      "Last opened",
+      "Last modified"
+    ],
+    includePrefixPathPatterns: [],
+    excludePrefixPathPatterns: [],
+    expand: false
+  },
+  {
     name: "Landmark search",
     searchBy: {
       tag: true,
@@ -1004,6 +1096,8 @@ var createPreSettingSearchCommands = () => [
       header: true
     },
     searchTarget: "file",
+    allowFuzzySearchForSearchTarget: false,
+    minFuzzyMatchScore: 0.5,
     targetExtensions: [],
     floating: false,
     showFrontMatter: false,
@@ -1032,6 +1126,8 @@ var createPreSettingSearchCommands = () => [
       header: false
     },
     searchTarget: "file",
+    allowFuzzySearchForSearchTarget: false,
+    minFuzzyMatchScore: 0.5,
     targetExtensions: [],
     floating: false,
     showFrontMatter: false,
@@ -1064,7 +1160,8 @@ var DEFAULT_SETTINGS = {
   autoPreviewInFloatingHeaderSearch: true,
   ripgrepCommand: "rg",
   moveFileExcludePrefixPathPatterns: [],
-  showLogAboutPerformanceInConsole: false
+  showLogAboutPerformanceInConsole: false,
+  showFuzzyMatchScore: false
 };
 var AnotherQuickSwitcherSettingTab = class extends import_obsidian2.PluginSettingTab {
   constructor(app2, plugin) {
@@ -1415,6 +1512,20 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         command.searchTarget = value;
       });
     });
+    new import_obsidian2.Setting(div).setName('Allow fuzzy search for "Search target"').addToggle((cb) => {
+      cb.setValue(command.allowFuzzySearchForSearchTarget).onChange(
+        async (value) => {
+          command.allowFuzzySearchForSearchTarget = value;
+        }
+      );
+    });
+    new import_obsidian2.Setting(div).setName("Min fuzzy match score").setDesc(
+      "Only show suggestion those score is more than the specific score"
+    ).addSlider(
+      (sc) => sc.setLimits(0, 10, 0.1).setValue(command.minFuzzyMatchScore).setDynamicTooltip().onChange(async (value) => {
+        command.minFuzzyMatchScore = value;
+      })
+    );
     new import_obsidian2.Setting(div).setName("Target extensions").setDesc(
       "If set, only files whose extension equals will be suggested. If empty, all files will be suggested. It can set multi extensions using comma."
     ).addTextArea(
@@ -1536,6 +1647,14 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         this.plugin.settings.showLogAboutPerformanceInConsole = value;
         await this.plugin.saveSettings();
       });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Show fuzzy match score in the dialog").addToggle((tc) => {
+      tc.setValue(this.plugin.settings.showFuzzyMatchScore).onChange(
+        async (value) => {
+          this.plugin.settings.showFuzzyMatchScore = value;
+          await this.plugin.saveSettings();
+        }
+      );
     });
   }
 };
@@ -1741,65 +1860,101 @@ var AppHelper = class {
     }
     return abstractFile;
   }
-  openFile(file, option = {}) {
-    const opt = {
-      ...{ leaf: "same-tab" },
-      ...option
-    };
-    const _openFile = (leaf2, background = false) => {
-      var _a;
-      leaf2.openFile(file, {
-        ...(_a = this.unsafeApp.workspace.activeLeaf) == null ? void 0 : _a.getViewState(),
-        active: !background
-      }).then(() => {
-        const markdownView = this.unsafeApp.workspace.getActiveViewOfType(import_obsidian3.MarkdownView);
-        if (markdownView) {
-          if (opt.offset != null) {
-            this.moveTo(opt.offset, markdownView.editor);
-          } else if (opt.line != null) {
-            const p = { line: opt.line, offset: 0, col: 0 };
-            this.moveTo({ start: p, end: p });
+  captureState(initialLeaf) {
+    const currentLeaf = this.unsafeApp.workspace.activeLeaf;
+    const newLeaf = app.workspace.getLeaf();
+    const newState = newLeaf.getViewState();
+    const newEState = newLeaf.getEphemeralState();
+    return {
+      leaf: newLeaf,
+      async restore() {
+        if (!newLeaf) {
+          return;
+        }
+        if (!initialLeaf || initialLeaf.getViewState().pinned) {
+          newLeaf.detach();
+        } else {
+          await newLeaf.setViewState(
+            {
+              ...newState,
+              active: newLeaf === currentLeaf,
+              popstate: true
+            },
+            newEState
+          );
+          if (newLeaf !== currentLeaf) {
+            app.workspace.setActiveLeaf(currentLeaf, { focus: true });
           }
         }
-      });
+        this.leaf = void 0;
+      }
     };
-    let leaf;
+  }
+  getOpenState(leaf, file) {
+    let type = this.unsafeApp.viewRegistry.getTypeByExtension(file.extension);
+    if (leaf.view instanceof import_obsidian3.FileView && leaf.view.canAcceptExtension(file.extension)) {
+      type = leaf.view.getViewType();
+    }
+    return { type, state: { file: file.path } };
+  }
+  async openFile(file, option = {}, captureState) {
+    const opt = {
+      ...{ leaf: "same-tab", inplace: false },
+      ...option
+    };
+    let leaf = captureState == null ? void 0 : captureState.leaf, background = false;
     switch (opt.leaf) {
       case "same-tab":
-        leaf = this.unsafeApp.workspace.getLeaf();
-        _openFile(leaf);
+        leaf != null ? leaf : leaf = this.unsafeApp.workspace.getLeaf();
         break;
       case "new-tab":
         leaf = this.unsafeApp.workspace.getLeaf(true);
-        _openFile(leaf);
         break;
       case "new-tab-background":
         leaf = this.unsafeApp.workspace.getLeaf(true);
-        _openFile(leaf, true);
+        background = true;
         break;
       case "new-pane-horizontal":
         leaf = this.unsafeApp.workspace.getLeaf("split", "horizontal");
-        _openFile(leaf);
         break;
       case "new-pane-vertical":
         leaf = this.unsafeApp.workspace.getLeaf("split", "vertical");
-        _openFile(leaf);
         break;
       case "new-window":
-        _openFile(this.unsafeApp.workspace.openPopoutLeaf());
+        leaf = this.unsafeApp.workspace.openPopoutLeaf();
         break;
       case "popup":
         const hoverEditorInstance = this.unsafeApp.plugins.plugins["obsidian-hover-editor"];
         if (hoverEditorInstance) {
-          leaf = hoverEditorInstance.spawnPopover(void 0, () => {
-            _openFile(leaf);
-          });
+          leaf = hoverEditorInstance.spawnPopover();
         } else {
-          _openFile(this.unsafeApp.workspace.getLeaf());
+          leaf = this.unsafeApp.workspace.getLeaf(true);
         }
         break;
       default:
         throw new ExhaustiveError(opt.leaf);
+    }
+    if (opt.inplace && opt.leaf === "same-tab") {
+      await leaf.setViewState({
+        ...leaf.getViewState(),
+        active: !background,
+        popstate: true,
+        ...this.getOpenState(leaf, file)
+      });
+    } else {
+      await leaf.openFile(file, {
+        ...leaf.getViewState(),
+        active: !background
+      });
+    }
+    if (leaf.view instanceof import_obsidian3.MarkdownView) {
+      const markdownView = leaf.view;
+      if (opt.offset != null) {
+        this.moveTo(opt.offset, markdownView.editor);
+      } else if (opt.line != null) {
+        const p = { line: opt.line, offset: 0, col: 0 };
+        this.moveTo({ start: p, end: p }, markdownView.editor);
+      }
     }
   }
   openFileInDefaultApp(file) {
@@ -1917,40 +2072,6 @@ var AppHelper = class {
       pos: { x: x + offset.x, y: y + offset.y }
     });
   }
-  getCurrentLeafHistoryState(leaf) {
-    const uLeaf = leaf;
-    return uLeaf.getHistoryState();
-  }
-  getCurrentLeafForwardHistories(leaf) {
-    const uLeaf = leaf;
-    return uLeaf.history.forwardHistory;
-  }
-  async resetCurrentLeafHistoryStateTo(leaf, history) {
-    const uLeaf = leaf;
-    await uLeaf.history.updateState(history);
-    const historyIndex = uLeaf.history.backHistory.findIndex(
-      (x) => x.state.state.file === history.state.state.file
-    );
-    this.setLeafBackHistories(
-      leaf,
-      uLeaf.history.backHistory.slice(0, historyIndex)
-    );
-  }
-  cloneLeafHistories(leaf) {
-    const uLeaf = leaf;
-    return {
-      backHistories: uLeaf.history.backHistory.slice(),
-      forwardHistories: uLeaf.history.forwardHistory.slice()
-    };
-  }
-  setLeafForwardHistories(leaf, histories) {
-    const uLeaf = leaf;
-    uLeaf.history.forwardHistory = histories;
-  }
-  setLeafBackHistories(leaf, histories) {
-    const uLeaf = leaf;
-    uLeaf.history.backHistory = histories;
-  }
   createPhantomFile(linkText) {
     const linkPath = this.getPathToBeCreated(linkText);
     return {
@@ -2013,12 +2134,49 @@ function matchQuery(item, query, options) {
   if (item.tokens.some((t) => smartEquals(t, file, isNormalizeAccentsDiacritics))) {
     results.push({ type: "word-perfect", meta: [item.file.name], query });
   }
-  if (smartStartsWith(item.file.name, file, isNormalizeAccentsDiacritics)) {
-    results.push({ type: "prefix-name", meta: [item.file.name], query });
-  }
-  const prefixNameMatchedAliases = item.aliases.filter(
-    (x) => smartStartsWith(x, file, isNormalizeAccentsDiacritics)
+  const fuzzyResult = smartMicroFuzzy(
+    item.file.name,
+    query,
+    isNormalizeAccentsDiacritics
   );
+  switch (fuzzyResult.type) {
+    case "starts-with":
+      results.push({ type: "prefix-name", meta: [item.file.name], query });
+    case "includes":
+      results.push({ type: "name", meta: [item.file.name], query });
+    case "fuzzy":
+      if (options.fuzzyTarget) {
+        if (fuzzyResult.score > options.minFuzzyScore) {
+          results.push({
+            type: "fuzzy-name",
+            meta: [item.file.name],
+            query,
+            score: fuzzyResult.score
+          });
+        }
+      }
+  }
+  const prefixNameMatchedAliases = [];
+  const nameMatchedAliases = [];
+  const fuzzyNameMatchedAliases = [];
+  for (let al of item.aliases) {
+    const r = smartMicroFuzzy(al, file, isNormalizeAccentsDiacritics);
+    switch (r.type) {
+      case "starts-with":
+        prefixNameMatchedAliases.push(al);
+      case "includes":
+        nameMatchedAliases.push(al);
+      case "fuzzy":
+        if (options.fuzzyTarget) {
+          if (r.score > options.minFuzzyScore) {
+            fuzzyNameMatchedAliases.push({
+              value: al,
+              score: r.score
+            });
+          }
+        }
+    }
+  }
   if (prefixNameMatchedAliases.length > 0) {
     results.push({
       type: "prefix-name",
@@ -2027,17 +2185,21 @@ function matchQuery(item, query, options) {
       query
     });
   }
-  if (smartIncludes(item.file.name, file, isNormalizeAccentsDiacritics)) {
-    results.push({ type: "name", meta: [item.file.name], query });
-  }
-  const nameMatchedAliases = item.aliases.filter(
-    (x) => smartIncludes(x, file, isNormalizeAccentsDiacritics)
-  );
   if (nameMatchedAliases.length > 0) {
     results.push({
       type: "name",
       meta: nameMatchedAliases,
       alias: minBy(nameMatchedAliases, (x) => x.length),
+      query
+    });
+  }
+  if (options.fuzzyTarget && fuzzyNameMatchedAliases.length > 0) {
+    const m = minBy(fuzzyNameMatchedAliases, (x) => x.score);
+    results.push({
+      type: "fuzzy-name",
+      meta: fuzzyNameMatchedAliases.map((x) => x.value),
+      alias: m.value,
+      score: m.score,
       query
     });
   }
@@ -2118,6 +2280,13 @@ var FILTER = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" vie
 </svg>`;
 var FRONT_MATTER = `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20"><g fill="none"><path d="M10.32 2.013A4 4 0 0 0 6.162 7.13l-3.987 3.986a.6.6 0 0 0-.176.424V14.4a.6.6 0 0 0 .6.6h2.8a.6.6 0 0 0 .6-.6V13h1.9a.6.6 0 0 0 .6-.6v-1.693l.735-.735a5.51 5.51 0 0 1-.569-.846l-.99.991a.6.6 0 0 0-.176.424V12H5.6a.6.6 0 0 0-.6.6V14H3v-2.293l4.32-4.32l-.118-.303a3.001 3.001 0 0 1 1.96-3.965c.33-.423.72-.796 1.157-1.106zM13.5 6.25a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5zM9 6.5a4.5 4.5 0 1 1 7 3.742v2.05l.783.784a.6.6 0 0 1 0 .848L15.707 15l1.068 1.067a.6.6 0 0 1-.05.893l-2.35 1.88a.6.6 0 0 1-.75 0l-2.4-1.92a.6.6 0 0 1-.225-.468v-6.21A4.496 4.496 0 0 1 9 6.5zM13.5 3a3.5 3.5 0 0 0-1.75 6.532a.5.5 0 0 1 .25.433v6.295l2 1.6l1.751-1.401l-1.034-1.035a.6.6 0 0 1 0-.848l1.076-1.076l-.617-.617a.6.6 0 0 1-.176-.424V9.965a.5.5 0 0 1 .25-.433A3.5 3.5 0 0 0 13.5 3z" fill="currentColor"></path></g></svg>`;
 var PREVIEW = `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 20 20"><g fill="none"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5a2 2 0 0 0-2-2zm0 16H5V7h14v12zm-5.5-6c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5zM12 9c-2.73 0-5.06 1.66-6 4c.94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4zm0 6.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z" fill="currentColor"></path></g></svg>`;
+var SCORE = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 20 20"><g fill="none"><path d="M11 6H9V4h2v2zm4-2h-2v2h2V4zM9 14h2v-2H9v2zm10-4V8h-2v2h2zm0 4v-2h-2v2h2zm-6 0h2v-2h-2v2zm6-10h-2v2h2V4zm-6 4V6h-2v2h2zm-6 2V8h2V6H7V4H5v16h2v-8h2v-2H7zm8 2h2v-2h-2v2zm-4-2v2h2v-2h-2zM9 8v2h2V8H9zm4 2h2V8h-2v2zm2-4v2h2V6h-2z" fill="currentColor"></path></g></svg>`;
+
+// src/utils/math.ts
+function round(n, decimalPlace) {
+  const x = 10 ** decimalPlace;
+  return Math.round(n * x) / x;
+}
 
 // src/ui/suggestion-factory.ts
 function createItemDiv(item, aliases, options) {
@@ -2178,6 +2347,18 @@ function createMetaDiv(args) {
   const metaDiv = createDiv({
     cls: "another-quick-switcher__item__metas"
   });
+  if (options.showFuzzyMatchScore) {
+    const scoreDiv = createDiv({
+      cls: "another-quick-switcher__item__meta"
+    });
+    const scoreSpan = createSpan({
+      cls: "another-quick-switcher__item__meta__score"
+    });
+    scoreSpan.insertAdjacentHTML("beforeend", SCORE);
+    scoreSpan.appendText(String(args.score));
+    scoreDiv.appendChild(scoreSpan);
+    metaDiv.appendChild(scoreDiv);
+  }
   if (options.showFrontMatter && Object.keys(frontMatter).length > 0) {
     const frontMatterDiv = createDiv({
       cls: "another-quick-switcher__item__meta"
@@ -2292,7 +2473,18 @@ function createElements(item, options) {
     (_a = item.frontMatter) != null ? _a : {},
     (key, value) => options.excludeFrontMatterKeys.includes(key) || value == null
   );
-  const metaDiv = Object.keys(frontMatter).length > 0 ? createMetaDiv({ frontMatter, options }) : void 0;
+  const maxScore = round(
+    Math.max(...item.matchResults.map((a) => {
+      var _a2;
+      return (_a2 = a.score) != null ? _a2 : 0;
+    })),
+    6
+  );
+  const metaDiv = Object.keys(frontMatter).length > 0 || maxScore > 0 ? createMetaDiv({
+    frontMatter,
+    score: maxScore,
+    options
+  }) : void 0;
   const tags = uniqFlatMap(
     item.matchResults.filter((res) => res.type === "tag"),
     (x) => {
@@ -2373,10 +2565,13 @@ function buildLogMessage(message, msec) {
 }
 var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
   constructor(args) {
-    var _a, _b;
+    var _a;
     super(app);
     this.willSilentClose = false;
     this.historyRestoreStatus = "initial";
+    this.isClosed = new Promise((resolve) => {
+      this.markClosed = resolve;
+    });
     this.appHelper = new AppHelper(app);
     this.settings = args.settings;
     this.initialCommand = args.command;
@@ -2387,11 +2582,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
     this.navigationHistories = args.navigationHistories;
     this.currentNavigationHistoryIndex = args.currentNavigationHistoryIndex;
     this.stackHistory = args.stackHistory;
-    this.initialHistory = (_a = args.initialHistory) != null ? _a : this.appHelper.getCurrentLeafHistoryState(this.app.workspace.getLeaf());
-    this.previewedFiles = args.previewedFiles;
-    this.forwardHistories = (_b = args.forwardHistories) != null ? _b : this.appHelper.getCurrentLeafForwardHistories(
-      this.app.workspace.getLeaf()
-    );
+    this.initialLeaf = args.initialLeaf;
+    this.stateToRestore = args.initialState;
+    this.navQueue = (_a = args.navQueue) != null ? _a : Promise.resolve();
     this.limit = this.settings.maxNumberOfSuggestions;
     this.setHotkeys();
     this.phantomItems = this.settings.showExistingFilesOnly ? [] : this.appHelper.searchPhantomFiles().map((x) => ({
@@ -2414,16 +2607,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       true
     );
   }
-  async waitForHistoryRestored() {
-    if (this.historyRestoreStatus === "doing") {
-      while (this.historyRestoreStatus !== "done") {
-        await sleep(0);
-      }
-    }
-  }
-  async safeClose() {
+  safeClose() {
     this.close();
-    await this.waitForHistoryRestored();
+    return this.isClosed;
   }
   onOpen() {
     super.onOpen();
@@ -2439,7 +2625,6 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         originFile: this.originFile
       });
     }
-    this.openInSameLeaf = false;
     this.opened = true;
   }
   onClose() {
@@ -2447,24 +2632,10 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
     if (this.willSilentClose) {
       return;
     }
-    const leaf = this.app.workspace.getLeaf();
-    if (!this.openInSameLeaf) {
-      this.historyRestoreStatus = "doing";
-      this.appHelper.resetCurrentLeafHistoryStateTo(leaf, this.initialHistory).then(() => {
-        this.appHelper.setLeafForwardHistories(leaf, this.forwardHistories);
-        this.historyRestoreStatus = "done";
-      });
+    if (this.stateToRestore) {
+      this.navigate(() => this.stateToRestore.restore());
     }
-    setTimeout(() => {
-      const previewedPaths = this.previewedFiles.map((x) => x.path);
-      const { backHistories } = this.appHelper.cloneLeafHistories(leaf);
-      this.appHelper.setLeafBackHistories(
-        leaf,
-        backHistories.filter(
-          (x) => !previewedPaths.includes(x.state.state.file)
-        )
-      );
-    }, 200);
+    this.navigate(this.markClosed);
   }
   silentClose() {
     this.willSilentClose = true;
@@ -2618,7 +2789,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         isNormalizeAccentsDiacritics: this.settings.normalizeAccentsAndDiacritics,
         searchByHeaders: this.command.searchBy.header,
         searchByLinks: this.command.searchBy.link,
-        searchByTags: this.command.searchBy.tag
+        searchByTags: this.command.searchBy.tag,
+        fuzzyTarget: this.command.allowFuzzySearchForSearchTarget,
+        minFuzzyScore: this.command.minFuzzyMatchScore
       })
     ).filter((x) => x.matchResults.every((x2) => x2.type !== "not found"));
     const items = sort(
@@ -2699,7 +2872,8 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       showDirectoryAtNewLine: this.settings.showDirectoryAtNewLine,
       showFullPathOfDirectory: this.settings.showFullPathOfDirectory,
       showAliasesOnTop: this.settings.showAliasesOnTop,
-      hideGutterIcons: this.settings.hideGutterIcons
+      hideGutterIcons: this.settings.hideGutterIcons,
+      showFuzzyMatchScore: this.settings.showFuzzyMatchScore
     });
     if (metaDiv == null ? void 0 : metaDiv.hasChildNodes()) {
       itemDiv.appendChild(metaDiv);
@@ -2734,8 +2908,11 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
     div.appendChild(searchInGoogleButton);
     this.resultContainerEl.appendChild(div);
   }
+  navigate(cb) {
+    this.navQueue = this.navQueue.then(cb);
+  }
   async chooseCurrentSuggestion(leaf, option = {}) {
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
     const item = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem];
     if (!item) {
       return null;
@@ -2766,12 +2943,18 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         throw new ExhaustiveError(this.command.searchTarget);
     }
     if (!option.keepOpen) {
-      if (leaf === "same-tab") {
-        this.openInSameLeaf = true;
-      }
-      await this.safeClose();
+      this.close();
+      this.navigate(() => this.isClosed);
+    } else if (leaf === "same-tab") {
+      (_d = this.stateToRestore) != null ? _d : this.stateToRestore = this.appHelper.captureState(this.initialLeaf);
     }
-    this.appHelper.openFile(fileToOpened, { leaf, offset });
+    this.navigate(
+      () => this.appHelper.openFile(
+        fileToOpened,
+        { leaf, offset, inplace: option.keepOpen },
+        this.stateToRestore
+      )
+    );
     return fileToOpened;
   }
   async onChooseSuggestion(item, evt) {
@@ -2791,11 +2974,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       new import_obsidian4.Notice("This file already exists.");
       return true;
     }
-    if (leafType === "same-tab") {
-      this.openInSameLeaf = true;
-    }
     this.close();
-    this.appHelper.openFile(file, { leaf: leafType });
+    this.navigate(() => this.isClosed);
+    this.navigate(() => this.appHelper.openFile(file, { leaf: leafType }));
     return false;
   }
   registerKeys(key, handler) {
@@ -2878,16 +3059,13 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         })
       );
     });
-    this.registerKeys("preview", async () => {
+    this.registerKeys("preview", () => {
       if (!this.floating) {
         this.enableFloating();
       }
-      const file = await this.chooseCurrentSuggestion("same-tab", {
+      this.chooseCurrentSuggestion("same-tab", {
         keepOpen: true
       });
-      if (file) {
-        this.previewedFiles.push(file);
-      }
     });
     this.registerKeys("create", async () => {
       await this.handleCreateNewMarkdown(this.searchQuery, "same-tab");
@@ -2921,6 +3099,7 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         return;
       }
       this.close();
+      await this.isClosed;
       const urls = await this.appHelper.findExternalLinkUrls(fileToOpened);
       if (urls.length > 0) {
         activeWindow.open(urls[0]);
@@ -2953,11 +3132,10 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         return;
       }
       this.historyRestoreStatus = "doing";
-      const leaf = this.app.workspace.getLeaf();
-      await this.appHelper.resetCurrentLeafHistoryStateTo(leaf, this.initialHistory).then(() => {
-        this.appHelper.setLeafForwardHistories(leaf, this.forwardHistories);
-        this.historyRestoreStatus = "done";
-      });
+      if (this.stateToRestore) {
+        await this.stateToRestore.restore();
+        this.stateToRestore = void 0;
+      }
       if (this.appHelper.isActiveLeafCanvas()) {
         this.appHelper.addFileToCanvas(file);
       } else {
@@ -2967,9 +3145,6 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         );
         this.appHelper.insertStringToActiveFile("\n");
       }
-      this.initialHistory = this.appHelper.getCurrentLeafHistoryState(
-        this.app.workspace.getLeaf()
-      );
     });
     this.registerKeys("insert all to editor", async () => {
       var _a;
@@ -3017,9 +3192,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         ],
         currentNavigationHistoryIndex: this.currentNavigationHistoryIndex + 1,
         stackHistory: true,
-        initialHistory: this.initialHistory,
-        previewedFiles: this.previewedFiles,
-        forwardHistories: this.forwardHistories
+        initialLeaf: this.initialLeaf,
+        initialState: this.stateToRestore,
+        navQueue: this.navQueue
       });
       modal.open();
     };
@@ -3047,9 +3222,9 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         navigationHistories: this.navigationHistories,
         currentNavigationHistoryIndex: index,
         stackHistory: false,
-        initialHistory: this.initialHistory,
-        previewedFiles: this.previewedFiles,
-        forwardHistories: this.forwardHistories
+        initialState: this.stateToRestore,
+        initialLeaf: this.initialLeaf,
+        navQueue: this.navQueue
       });
       modal.open();
     };
@@ -3501,21 +3676,20 @@ function buildLogMessage2(message, msec) {
   return `${message}: ${Math.round(msec)}[ms]`;
 }
 var GrepModal = class extends import_obsidian7.SuggestModal {
-  constructor(app2, settings, initialHistory, previewedFiles, forwardHistories) {
+  constructor(app2, settings, initialLeaf) {
     super(app2);
-    this.historyRestoreStatus = "initial";
+    this.isClosed = new Promise((resolve) => {
+      this.markClosed = resolve;
+    });
+    this.navQueue = Promise.resolve();
     this.suggestions = globalInternalStorage.items;
     this.vaultRootPath = normalizePath(
       this.app.vault.adapter.basePath
     );
     this.appHelper = new AppHelper(app2);
     this.settings = settings;
+    this.initialLeaf = initialLeaf;
     this.limit = 255;
-    this.initialHistory = initialHistory != null ? initialHistory : this.appHelper.getCurrentLeafHistoryState(this.app.workspace.getLeaf());
-    this.previewedFiles = previewedFiles;
-    this.forwardHistories = forwardHistories != null ? forwardHistories : this.appHelper.getCurrentLeafForwardHistories(
-      this.app.workspace.getLeaf()
-    );
     const searchCmd = this.settings.hotkeys.grep.search.at(0);
     if (searchCmd) {
       const inst = createInstruction("_", {
@@ -3534,7 +3708,6 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     var _a;
     super.onOpen();
     setFloatingModal(this.appHelper);
-    this.openInSameLeaf = false;
     this.basePath = (_a = globalInternalStorage.basePath) != null ? _a : "";
     window.setTimeout(() => {
       if (globalInternalStorage.selected != null) {
@@ -3613,24 +3786,10 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
       "keydown",
       this.basePathInputElKeydownEventListener
     );
-    const leaf = this.app.workspace.getLeaf();
-    if (!this.openInSameLeaf) {
-      this.historyRestoreStatus = "doing";
-      this.appHelper.resetCurrentLeafHistoryStateTo(leaf, this.initialHistory).then(() => {
-        this.appHelper.setLeafForwardHistories(leaf, this.forwardHistories);
-        this.historyRestoreStatus = "done";
-      });
+    if (this.stateToRestore) {
+      this.navigate(() => this.stateToRestore.restore());
     }
-    setTimeout(() => {
-      const previewedPaths = this.previewedFiles.map((x) => x.path);
-      const { backHistories } = this.appHelper.cloneLeafHistories(leaf);
-      this.appHelper.setLeafBackHistories(
-        leaf,
-        backHistories.filter(
-          (x) => !previewedPaths.includes(x.state.state.file)
-        )
-      );
-    }, 200);
+    this.navigate(this.markClosed);
   }
   async searchSuggestions(query) {
     var _a;
@@ -3657,9 +3816,9 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
         `${this.vaultRootPath}/${absolutePathFromRoot}`
       ].filter((x) => x)
     );
-    const items = rgResults.map((x, order) => {
+    const items = rgResults.map((x) => {
       return {
-        order,
+        order: -1,
         file: this.appHelper.getMarkdownFileByPath(
           normalizePath(x.data.path.text).replace(
             this.vaultRootPath + "/",
@@ -3671,7 +3830,7 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
         offset: x.data.absolute_offset,
         submatches: x.data.submatches
       };
-    }).filter((x) => x.file != null);
+    }).filter((x) => x.file != null).sort(sorter((x) => x.file.stat.mtime, "desc")).map((x, order) => ({ ...x, order }));
     this.showDebugLog(
       () => buildLogMessage2(`getSuggestions: `, performance.now() - start)
     );
@@ -3755,27 +3914,32 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     itemDiv.appendChild(descriptionsDiv);
     el.appendChild(itemDiv);
   }
+  navigate(cb) {
+    this.navQueue = this.navQueue.then(cb);
+  }
   async chooseCurrentSuggestion(leaf, option = {}) {
-    var _a;
+    var _a, _b;
     const item = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem];
     if (!item) {
       return null;
     }
     if (!option.keepOpen) {
-      if (leaf === "same-tab") {
-        this.openInSameLeaf = true;
-      }
       this.close();
+      this.navigate(() => this.isClosed);
+    } else if (leaf === "same-tab") {
+      (_b = this.stateToRestore) != null ? _b : this.stateToRestore = this.appHelper.captureState(this.initialLeaf);
     }
-    if (this.historyRestoreStatus === "doing") {
-      while (this.historyRestoreStatus !== "done") {
-        await sleep(0);
-      }
-    }
-    this.appHelper.openFile(item.file, {
-      leaf,
-      line: item.lineNumber - 1
-    });
+    this.navigate(
+      () => this.appHelper.openFile(
+        item.file,
+        {
+          leaf,
+          line: item.lineNumber - 1,
+          inplace: option.keepOpen
+        },
+        this.stateToRestore
+      )
+    );
     return item.file;
   }
   async onChooseSuggestion(item, evt) {
@@ -3894,9 +4058,6 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
       const file = await this.chooseCurrentSuggestion("same-tab", {
         keepOpen: true
       });
-      if (file) {
-        this.previewedFiles.push(file);
-      }
     });
     const modifierKey = this.settings.userAltInsteadOfModForQuickResultSelection ? "Alt" : "Mod";
     [1, 2, 3, 4, 5, 6, 7, 8, 9].forEach((n) => {
@@ -3915,6 +4076,8 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
 // src/commands.ts
 var SEARCH_COMMAND_PREFIX = "search-command";
 function showSearchDialog(app2, settings, command) {
+  var _a, _b;
+  const activeFileLeaf = (_b = (_a = app2.workspace.getActiveViewOfType(import_obsidian8.FileView)) == null ? void 0 : _a.leaf) != null ? _b : null;
   const modal = new AnotherQuickSwitcherModal({
     app: app2,
     settings,
@@ -3924,9 +4087,7 @@ function showSearchDialog(app2, settings, command) {
     navigationHistories: [],
     currentNavigationHistoryIndex: 0,
     stackHistory: true,
-    initialHistory: void 0,
-    previewedFiles: [],
-    forwardHistories: void 0
+    initialLeaf: activeFileLeaf
   });
   modal.open();
 }
@@ -3938,6 +4099,7 @@ function showMoveDialog(app2, settings) {
   modal.open();
 }
 async function showGrepDialog(app2, settings) {
+  var _a, _b;
   if (!import_obsidian8.Platform.isDesktop) {
     new import_obsidian8.Notice("Grep is not supported on mobile.");
     return;
@@ -3948,7 +4110,8 @@ async function showGrepDialog(app2, settings) {
     );
     return;
   }
-  const modal = new GrepModal(app2, settings, void 0, [], void 0);
+  const activeFileLeaf = (_b = (_a = app2.workspace.getActiveViewOfType(import_obsidian8.FileView)) == null ? void 0 : _a.leaf) != null ? _b : null;
+  const modal = new GrepModal(app2, settings, activeFileLeaf);
   modal.open();
 }
 function showHeaderDialog(app2, settings, floating) {

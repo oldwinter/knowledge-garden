@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-plugin-update-tracker",
 	"name": "Plugin Update Tracker",
-	"version": "1.4.6",
+	"version": "1.5.1",
 	"minAppVersion": "0.15.0",
 	"description": "Know when installed plugins have updates and evaluate the risk of upgrading",
 	"author": "Obsidian",

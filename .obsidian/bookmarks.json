@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "type": "group",
-      "ctime": 1680160031660,
-      "items": [],
-      "title": "Untitled Folder"
-    },
-    {
       "type": "file",
       "ctime": 1680431306480,
       "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
@@ -44,14 +38,27 @@
     },
     {
       "type": "file",
-      "title": "OpenAI 官方文档阅读笔记",
-      "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-      "ctime": 1680159899203
-    },
-    {
-      "type": "file",
       "ctime": 1680431255149,
       "path": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas"
+    },
+    {
+      "type": "group",
+      "ctime": 1683379192687,
+      "items": [
+        {
+          "type": "file",
+          "title": "OpenAI 官方文档阅读笔记",
+          "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
+          "ctime": 1680159899203
+        }
+      ],
+      "title": "Untitled group"
+    },
+    {
+      "type": "group",
+      "ctime": 1683379208259,
+      "items": [],
+      "title": "Untitled group"
     }
   ]
 }

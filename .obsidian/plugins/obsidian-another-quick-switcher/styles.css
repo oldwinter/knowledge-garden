@@ -279,6 +279,12 @@
     margin-right: 5px;
 }
 
+.another-quick-switcher__item__meta__score {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
 .another-quick-switcher__item__descriptions {
     padding-top: 0.5rem;
 }

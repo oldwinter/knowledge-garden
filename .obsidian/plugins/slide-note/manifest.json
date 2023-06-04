@@ -1,0 +1,11 @@
+{
+	"id": "slide-note",
+	"name": "Slide Note",
+	"version": "0.0.9",
+	"minAppVersion": "0.0.9",
+	"description": "Conveniently take notes on PDF course slides :P",
+	"author": "Jinyan Xu",
+	"authorUrl": "https://github.com/Phantom1003",
+	"fundingUrl": "https://www.buymeacoffee.com/Phantom1003",
+	"isDesktopOnly": false
+}

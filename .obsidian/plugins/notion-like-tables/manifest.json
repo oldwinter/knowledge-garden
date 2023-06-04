@@ -1,1 +1,11 @@
-{"id":"notion-like-tables","name":"Notion-Like Tables","minAppVersion":"0.15.0","description":"Your premiere tool for creating and managing tabular data in Obsidian.md","author":"Trey Wallis","authorUrl":"https://github.com/trey-wallis","isDesktopOnly":false,"fundingUrl":"https://www.buymeacoffee.com/treywallis","version":"6.5.0"}
+{
+	"id": "notion-like-tables",
+	"name": "Notion-Like Tables",
+	"minAppVersion": "0.15.0",
+	"description": "Your premiere tool for creating and managing tabular data in Obsidian.md",
+	"author": "Trey Wallis",
+	"authorUrl": "https://github.com/trey-wallis",
+	"isDesktopOnly": false,
+	"fundingUrl": "https://www.buymeacoffee.com/treywallis",
+	"version": "6.14.5"
+}

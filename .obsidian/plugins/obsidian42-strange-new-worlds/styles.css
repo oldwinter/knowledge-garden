@@ -222,3 +222,34 @@ body {
 .cm-gutters {
     z-index: 0 !important;
 }
+
+.snw-breadcrumbs {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.snw-breadcrumbs > span {
+    margin-right: 1ch;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--radius-s);
+    font-weight: bold;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/* .tippy-box settings to avoid conflicts with other plugins */
+.snw-tippy .tippy-box {
+    background-color: transparent;
+}
+
+.snw-tippy .tippy-content {
+    padding: 0px;
+}
+
+.snw-tippy .tippy-arrow {
+    width:0px;
+    height:0px;
+    color: transparent;
+}

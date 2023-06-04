@@ -1,10 +1,7 @@
 [
   "obsidian-linter",
-  "various-complements",
   "obsidian-spaced-repetition",
   "obsidian-auto-link-title",
-  "obsidian-better-command-palette",
-  "obsidian-another-quick-switcher",
   "obsidian-style-settings",
   "cmdr",
   "dataview",
@@ -12,11 +9,7 @@
   "supercharged-links-obsidian",
   "tag-wrangler",
   "obsidian-advanced-uri",
-  "obsidian-image-auto-upload-plugin",
-  "novel-word-count",
   "chatgpt-md",
-  "smart-connections",
   "chronology",
-  "obsidian-plugin-update-tracker",
   "obsidian-textgenerator-plugin"
 ]

@@ -4,73 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "af3c6ba93ee12e16",
+        "id": "55302a9c1a16bb0d",
         "type": "tabs",
         "children": [
           {
-            "id": "e32448dd6f828626",
+            "id": "527725e6803ec2fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/Daily notes/2023-05-04.md",
+                "file": "Spaces/3-Resource/王者荣耀/流光.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "fe6a52f77d736a57",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c6b9412cda58264e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5d58eee72cf62cad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "72187dfcd3cfd0ec",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.2.8"
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -128,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "92910ae8836a7b22",
@@ -137,22 +86,22 @@
         "dimension": 36.07214428857716,
         "children": [
           {
-            "id": "46ac18e336e17ae3",
+            "id": "8dd91c1b9fe545b6",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md"
+                "file": "Spaces/3-Resource/王者荣耀/流光.md"
               }
             }
           },
           {
-            "id": "853ef9e400d6f719",
+            "id": "34fc1f18d8eef916",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
+                "file": "Spaces/3-Resource/王者荣耀/流光.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
+                "file": "Spaces/3-Resource/王者荣耀/流光.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -199,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calendar/Daily notes/国人如何使用chatGPT.md",
+                "file": "Spaces/3-Resource/王者荣耀/流光.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,7 +159,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -225,31 +175,22 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b2593231eedcbd9d",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "d5db3c8fe8892d56",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
             "id": "bccbc58c75411b52",
             "type": "leaf",
             "state": {
               "type": "chronology-calendar-view",
               "state": {}
             }
+          },
+          {
+            "id": "3506d2b207c61150",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -263,40 +204,46 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian-spaced-repetition:复习卡片": false
     }
   },
-  "active": "c6b9412cda58264e",
+  "active": "527725e6803ec2fb",
   "lastOpenFiles": [
-    "Calendar/Daily notes/2023-05-04.md",
+    "Spaces/3-Resource/王者荣耀/流光门派技能解析.md",
+    "Spaces/3-Resource/王者荣耀/天谕手游.md",
+    "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
+    "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+    "Cards/永久笔记/自己部署一个v2ray服务.md",
+    "Cards/永久笔记/安装docker服务.md",
+    "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
+    "Calendar/Daily notes/2023-05-16.md",
+    "Cards/永久笔记/chatGPT.md",
+    "Cards/永久笔记/启动v2ray的客户端，连接并测试连通性.md",
+    "Cards/永久笔记/cloudflare warp.md",
+    "Cards/永久笔记/Access Denied - 1020.md",
+    "Spaces/3-Resource/王者荣耀/光刃.md",
+    "Spaces/3-Resource/王者荣耀/流光.md",
+    "Calendar/Daily notes/2023-05-13.md",
+    "Extras/Media/华为Go语言安全编程规范V2_0.pdf",
+    "Calendar/Daily notes/2023-05-10.md",
+    "Calendar/Daily notes/2023-05-07.md",
     "Calendar/Daily notes/国人如何使用chatGPT.md",
-    "Calendar/Daily notes/2023-05-05.md",
-    "Calendar/Daily notes/2023-05-03.md",
-    "Calendar/Daily notes/2023-05-02.md",
-    "Calendar/Daily notes/2023-04-28.md",
-    "Calendar/Daily notes/2023-04-26.md",
-    "Calendar/Daily notes/2023-04-25.md",
-    "README.md",
-    "Calendar/Daily notes/2023-04-20.md",
-    "Calendar/Daily notes/2023-04-13.md",
-    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
-    "Spaces/3-Resource/效率工具与服务专题/VSCode插件使用/∑ VSCode插件.md",
-    "Spaces/3-Resource/效率工具与服务专题/Chrome插件使用/∑ Chrome插件.md",
     "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md",
-    "Calendar/Daily notes/Daily notes归档/2022/2022-03-19.md",
-    "Calendar/Daily notes/Daily notes归档/2023-03-19.md",
-    "Calendar/Daily notes/2023-04-12.md",
-    "🍀 花园导览/🤖 如何用好AIGC工具.md",
-    "🍀 花园导览/🧀 个人知识管理.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/midjouney 令人惊艳的地方.md",
-    "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/Midjourney - AI绘图.md",
-    "Calendar/Daily notes/Daily notes归档/2023-03-05.md",
-    "Cards/永久笔记/阿里云-云原生-ACA认证-笔记.md",
-    "Calendar/Daily notes/2023-04-10.md",
-    "Calendar/Daily notes/Daily notes归档/2023-04-09.md",
-    "Calendar/Daily notes/Daily notes归档/2023-04-04.md",
+    "OCR-Screenshots.md",
+    "Calendar/Daily notes/2023-05-06.md",
+    "Cards/永久笔记/🔡SMART.md",
+    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
+    "Cards/永久笔记/人人都是双标狗.md",
+    "Sources/Articles/常青笔记阅读笔记/让思想和信念有机地涌现.md",
+    "Calendar/Daily notes/2023-05-05.md",
+    "Extras/Templates/textgenerator模板/prompts/trash/dalle-2",
+    "Extras/Templates/textgenerator模板/prompts/trash/default",
+    "Extras/Templates/textgenerator模板/prompts/trash/huggingface",
+    "Extras/Templates/textgenerator模板/prompts/trash",
+    "Extras/Templates/textgenerator模板/prompts/awesomechatgpt",
+    "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
     "Extras/Media/ChatGPT高质量prompt技巧分享.pdf",
     "Untitled.table",
     "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
@@ -313,15 +260,9 @@
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",
     "Atlas/Canvas/🧩 canvas 嵌入高级视图使用示例.canvas",
     "Atlas/Canvas/🧩 如何构建第二大脑.canvas",
-    "Sources/Courses/AI大模型之美",
-    "Sources/Courses/Service Mesh实战",
-    "Sources/Courses/深入剖析 Kubernetes",
     "Atlas/Canvas/PPV人生管理系统.canvas",
     "Atlas/Canvas/🧩 如何做读书笔记.canvas",
     "Atlas/Canvas/🧩 白板canvas-示意图.canvas",
-    "Sources/Podcasts/Notes",
-    "Sources/Podcasts",
-    "PodNotes_Export1.opml",
     "Spaces/2-Area/个人职业生涯/远程面试 共享桌面 演示流程.canvas",
     "Atlas/Canvas/canvas尝试当做ppt的可行性.canvas",
     "Atlas/Draws/白板 2023-03-11.dark.svg",

@@ -19249,6 +19249,7 @@ function constructLoginCookieSettingsUI(containerEl, parentContainerEl, manager)
       const user = yield manager.plugin.userComponent.loginCookie(manager.getCookieTemp());
       if (!user || !user.id) {
         log.notice(i18nHelper.getMessage("100137"));
+        return;
       }
       constructDoubanTokenSettingsUI(parentContainerEl, manager);
     }));
@@ -20873,6 +20874,9 @@ var UserComponent = class {
     let id = "";
     if (userUrl && userUrl.indexOf("people/") > 0) {
       id = userUrl.substring(userUrl.lastIndexOf("people/") + 7, userUrl.lastIndexOf("/"));
+    }
+    if (!id) {
+      return new User();
     }
     return {
       id,

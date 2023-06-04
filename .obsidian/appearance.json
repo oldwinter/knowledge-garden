@@ -7,7 +7,7 @@
     "custom-theme"
   ],
   "theme": "system",
-  "baseFontSize": 16,
+  "baseFontSize": 12,
   "baseFontSizeAction": true,
   "translucency": false,
   "showViewHeader": true,
