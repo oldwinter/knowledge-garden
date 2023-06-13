@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/流光.md",
+                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/流光.md"
+                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/流光.md",
+                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/流光.md",
+                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/流光.md",
+                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,15 +206,20 @@
       "workspaces:管理工作区布局": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-spaced-repetition:复习卡片": false
+      "obsidian-spaced-repetition:复习卡片": false,
+      "notion-like-tables:Create Notion-Like table": false
     }
   },
   "active": "527725e6803ec2fb",
   "lastOpenFiles": [
     "Spaces/3-Resource/王者荣耀/流光门派技能解析.md",
+    "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+    "Spaces/3-Resource/王者荣耀/誓羽门派技能解析.md",
+    "Context",
+    "Spaces/3-Resource/王者荣耀/誓羽飞天不能躲的pvp各门派技能.md",
+    "Spaces/3-Resource/王者荣耀/流光.md",
     "Spaces/3-Resource/王者荣耀/天谕手游.md",
     "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
-    "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
     "Cards/永久笔记/自己部署一个v2ray服务.md",
     "Cards/永久笔记/安装docker服务.md",
     "Cards/永久笔记/OpenAI - chatGPT -超强AI聊天机器人注册使用.md",
@@ -224,7 +229,6 @@
     "Cards/永久笔记/cloudflare warp.md",
     "Cards/永久笔记/Access Denied - 1020.md",
     "Spaces/3-Resource/王者荣耀/光刃.md",
-    "Spaces/3-Resource/王者荣耀/流光.md",
     "Calendar/Daily notes/2023-05-13.md",
     "Extras/Media/华为Go语言安全编程规范V2_0.pdf",
     "Calendar/Daily notes/2023-05-10.md",
@@ -235,9 +239,6 @@
     "Calendar/Daily notes/2023-05-06.md",
     "Cards/永久笔记/🔡SMART.md",
     "Cards/永久笔记/sed命令+正则表达式批量替换.md",
-    "Cards/永久笔记/人人都是双标狗.md",
-    "Sources/Articles/常青笔记阅读笔记/让思想和信念有机地涌现.md",
-    "Calendar/Daily notes/2023-05-05.md",
     "Extras/Templates/textgenerator模板/prompts/trash/dalle-2",
     "Extras/Templates/textgenerator模板/prompts/trash/default",
     "Extras/Templates/textgenerator模板/prompts/trash/huggingface",
@@ -254,7 +255,6 @@
     "Extras/Media/Pasted image 20230317221306.png",
     "Extras/Media/Pasted image 20230329192147.png",
     "Extras/Media/Screenshot_2022-11-20-18-40-36-52_d138286dbdf585e65d8870f8ad4cb89b.jpg",
-    "Extras/Media/2022年元宇宙Meta知识精选笔记分享-2022.pdf",
     "Extras/Media/16799226083092.png",
     "Extras/Media/1679922749389.jpg",
     "Atlas/Canvas/🧩 如何学会减脂和健身.canvas",

@@ -271,6 +271,7 @@ var FileHelper = class {
     }
   }
   setCounts(counts, file, content, wordCountType) {
+    var _a;
     counts[file.path] = {
       isDirectory: false,
       noteCount: 1,
@@ -289,9 +290,12 @@ var FileHelper = class {
     if (!this.shouldCountFile(metadata)) {
       return;
     }
-    const wordCount = this.countWords(content, wordCountType);
-    const characterCount = content.length;
-    const nonWhitespaceCharacterCount = this.countNonWhitespaceCharacters(content);
+    const hasFrontmatter = !!metadata.frontmatter;
+    const frontmatterPos = (_a = metadata.frontmatter) == null ? void 0 : _a.position;
+    const meaningfulContent = hasFrontmatter ? content.slice(0, frontmatterPos.start.offset) + content.slice(frontmatterPos.end.offset) : content;
+    const wordCount = this.countWords(meaningfulContent, wordCountType);
+    const characterCount = meaningfulContent.length;
+    const nonWhitespaceCharacterCount = this.countNonWhitespaceCharacters(meaningfulContent);
     let pageCount = 0;
     if (this.settings.pageCountType === PageCountType.ByWords) {
       const wordsPerPage = Number(this.settings.wordsPerPage);

@@ -1,7 +1,9 @@
 {
   "defaultInitialization": false,
   "filePreviewOnHover": false,
+  "flowMenuEnabled": true,
   "markSans": true,
+  "blinkEnabled": true,
   "makeMenuPlaceholder": true,
   "mobileMakeBar": true,
   "inlineStyler": true,
@@ -28,6 +30,7 @@
   "spaceRowHeight": 29,
   "spacesDisablePatch": false,
   "folderNoteInsideFolder": true,
+  "folderNoteDefaultView": true,
   "sidebarTabs": true,
   "showRibbon": true,
   "deleteFileOption": "trash",
@@ -35,6 +38,45 @@
   "expandedSpaces": [
     "/"
   ],
+  "openFolders": [
+    "//Atlas"
+  ],
+  "fileIcons": [],
+  "cachedSpaces": [],
+  "menuTriggerChar": "/",
+  "inlineStickerMenu": true,
+  "emojiTriggerChar": ":",
+  "folderContextFile": "context",
+  "tagContextFolder": "Context",
+  "hiddenFiles": [
+    "Context"
+  ],
+  "lineNumbers": false,
+  "hiddenExtensions": [
+    "mdb"
+  ],
+  "newFileLocation": "current",
+  "newFileFolderPath": "Cards",
+  "inlineBacklinks": true,
+  "inlineContext": true,
+  "inlineBacklinksExpanded": true,
+  "inlineContextExpanded": true,
+  "inlineContextSectionsExpanded": true,
+  "dataviewInlineContext": false,
+  "inlineContextNameLayout": "vertical",
+  "spacesSyncLastUpdated": "Context/spacesLastSync.log",
+  "spacesSyncTimeoutSeconds": 10,
+  "spacesAutoBackup": true,
+  "spacesAutoBackupInterval": 10,
+  "spacesAutoBackupLast": 0,
+  "spacesUseAlias": false,
+  "precreateVaultSpace": false,
+  "fmKeyAlias": "alias",
+  "fmKeyBanner": "banner",
+  "fmKeyColor": "color",
+  "fmKeySticker": "sticker",
+  "openSpacesOnLaunch": true,
+  "indexSVG": false,
   "folderRank": {
     "node": "",
     "children": [
@@ -9328,10 +9370,6 @@
     ],
     "isFolder": true
   },
-  "openFolders": [
-    "//Atlas"
-  ],
-  "fileIcons": [],
   "spaces": [
     {
       "section": "面筋卷",
@@ -9340,29 +9378,10 @@
     }
   ],
   "pinnedSpaces": [],
-  "menuTriggerChar": "/",
-  "emojiTriggerChar": ":",
-  "folderContextFile": "context",
-  "tagContextFolder": "Context",
-  "hiddenFiles": [
-    "Context"
-  ],
-  "lineNumbers": false,
-  "hiddenExtensions": [
-    "mdb"
-  ],
   "vaultSort": [
     "rank",
     true
   ],
-  "newFileLocation": "current",
-  "newFileFolderPath": "Cards",
-  "inlineBacklinks": true,
-  "inlineContext": true,
-  "inlineBacklinksExpanded": true,
-  "inlineContextExpanded": true,
-  "dataviewInlineContext": false,
-  "inlineContextNameLayout": "vertical",
   "sidebarRibbon": true,
   "vaultCollapsed": false,
   "sidebar": false,

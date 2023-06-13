@@ -479,7 +479,7 @@ function smartEquals(text, query, isNormalizeAccentsDiacritics) {
   ) === normalize(query, isNormalizeAccentsDiacritics);
 }
 function excludeFormat(text) {
-  return text.replace(/\[\[([^\]]+)]]/g, "$1").replace(/\[([^\]]+)]\(https?[^)]+\)/g, "$1").replace(/\[([^\]]+)]/g, "$1").replace(/`([^`]+)`/g, "$1").replace(/~~([^~]+)~~/g, "$1").replace(/==([^=]+)==/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\*([^*]+)\*/g, "$1").replace(/__([^_]+)__/g, "$1").replace(/_([^_]+)_/g, "$1").replace(/<[^>]+>([^<]+)<\/[^>]+>/g, "$1");
+  return text.replace(/\[\[[^\]]+\|(.*?)]]/g, "$1").replace(/\[\[([^\]]+)]]/g, "$1").replace(/\[([^\]]+)]\(https?[^)]+\)/g, "$1").replace(/\[([^\]]+)]/g, "$1").replace(/`([^`]+)`/g, "$1").replace(/~~([^~]+)~~/g, "$1").replace(/==([^=]+)==/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\*([^*]+)\*/g, "$1").replace(/__([^_]+)__/g, "$1").replace(/_([^_]+)_/g, "$1").replace(/<[^>]+>([^<]+)<\/[^>]+>/g, "$1");
 }
 function smartCommaSplit(text) {
   return text.split(",").filter((x) => x);
@@ -869,6 +869,7 @@ var createDefaultHotkeys = () => ({
     "create in new window": [{ modifiers: ["Mod", "Shift"], key: "o" }],
     "create in new popup": [],
     "open in default app": [],
+    "show in system explorer": [],
     "open in google": [{ modifiers: ["Mod"], key: "g" }],
     "open first URL": [{ modifiers: ["Mod"], key: "]" }],
     "insert to editor": [{ modifiers: ["Alt"], key: "Enter" }],
@@ -1147,6 +1148,7 @@ var DEFAULT_SETTINGS = {
   searchDelayMilliSeconds: 0,
   maxNumberOfSuggestions: 50,
   normalizeAccentsAndDiacritics: false,
+  useSelectionWordsAsDefaultInputQuery: false,
   showDirectory: true,
   showDirectoryAtNewLine: false,
   showFullPathOfDirectory: false,
@@ -1159,6 +1161,7 @@ var DEFAULT_SETTINGS = {
   searchCommands: createPreSettingSearchCommands(),
   autoPreviewInFloatingHeaderSearch: true,
   ripgrepCommand: "rg",
+  grepExtensions: ["md"],
   moveFileExcludePrefixPathPatterns: [],
   showLogAboutPerformanceInConsole: false,
   showFuzzyMatchScore: false
@@ -1216,6 +1219,14 @@ var AnotherQuickSwitcherSettingTab = class extends import_obsidian2.PluginSettin
         cls: "another-quick-switcher__settings__warning"
       });
     }
+    new import_obsidian2.Setting(containerEl).setName("Use selection words as a default input query").addToggle((tc) => {
+      tc.setValue(
+        this.plugin.settings.useSelectionWordsAsDefaultInputQuery
+      ).onChange(async (value) => {
+        this.plugin.settings.useSelectionWordsAsDefaultInputQuery = value;
+        await this.plugin.saveSettings();
+      });
+    });
   }
   addAppearanceSettings(containerEl) {
     containerEl.createEl("h3", { text: "\u{1F441}Appearance" });
@@ -1622,6 +1633,12 @@ ${invalidValues.map((x) => `- ${x}`).join("\n")}
         await this.plugin.saveSettings();
       })
     );
+    new import_obsidian2.Setting(containerEl).setName("Extensions").addText(
+      (tc) => tc.setPlaceholder("(ex: md,html,css)").setValue(this.plugin.settings.grepExtensions.join(",")).onChange(async (value) => {
+        this.plugin.settings.grepExtensions = smartCommaSplit(value);
+        await this.plugin.saveSettings();
+      })
+    );
   }
   addMoveSettings(containerEl) {
     containerEl.createEl("h3", { text: "\u{1F4C1} Move file to another folder" });
@@ -1850,10 +1867,7 @@ var AppHelper = class {
       active: false
     });
   }
-  getMarkdownFileByPath(path) {
-    if (!path.endsWith(".md")) {
-      return null;
-    }
+  getFileByPath(path) {
     const abstractFile = this.unsafeApp.vault.getAbstractFileByPath(path);
     if (!abstractFile) {
       return null;
@@ -1962,6 +1976,9 @@ var AppHelper = class {
   }
   openFolderInDefaultApp(folder) {
     this.unsafeApp.openWithDefaultApp(folder.path);
+  }
+  openInSystemExplorer(entry) {
+    this.unsafeApp.showInFolder(entry.path);
   }
   getStarredFilePaths() {
     return this.unsafeApp.internalPlugins.plugins.bookmarks.instance.getBookmarks().map((x) => x.type === "file" ? x.path : void 0).filter((x) => x !== void 0);
@@ -2840,7 +2857,13 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
       cls: "another-quick-switcher__status__search-command"
     });
     this.searchCommandEl.insertAdjacentHTML("beforeend", SEARCH);
-    this.searchCommandEl.appendText(`${this.command.name} ... `);
+    this.searchCommandEl.createSpan({
+      text: this.command.name,
+      cls: "another-quick-switcher__status__search-command-name"
+    });
+    this.searchCommandEl.createSpan({
+      cls: "another-quick-switcher__status__search-command-separator"
+    });
     if (this.command.searchBy.tag) {
       this.searchCommandEl.insertAdjacentHTML("beforeend", TAG);
     }
@@ -3086,6 +3109,15 @@ var AnotherQuickSwitcherModal = class extends import_obsidian4.SuggestModal {
         return;
       }
       this.appHelper.openFileInDefaultApp(file);
+      this.close();
+    });
+    this.registerKeys("show in system explorer", () => {
+      var _a, _b;
+      const file = (_b = (_a = this.chooser.values) == null ? void 0 : _a[this.chooser.selectedItem]) == null ? void 0 : _b.file;
+      if (!file) {
+        return;
+      }
+      this.appHelper.openInSystemExplorer(file);
       this.close();
     });
     this.registerKeys("open in google", () => {
@@ -3808,8 +3840,7 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     const rgResults = await rg(
       this.settings.ripgrepCommand,
       ...[
-        "-t",
-        "md",
+        ...this.settings.grepExtensions.flatMap((x) => ["-t", x]),
         hasCapitalLetter ? "" : "-i",
         "--",
         query,
@@ -3819,7 +3850,7 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
     const items = rgResults.map((x) => {
       return {
         order: -1,
-        file: this.appHelper.getMarkdownFileByPath(
+        file: this.appHelper.getFileByPath(
           normalizePath(x.data.path.text).replace(
             this.vaultRootPath + "/",
             ""
@@ -3865,8 +3896,19 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
           "another-quick-switcher__item__title",
           "another-quick-switcher__grep__item__title_entry"
         ],
-        text: item.file.basename
+        text: item.file.basename,
+        attr: {
+          extension: item.file.extension
+        }
       });
+      const isExcalidraw = item.file.basename.endsWith(".excalidraw");
+      if (item.file.extension !== "md" || isExcalidraw) {
+        const extDiv = createDiv({
+          cls: "another-quick-switcher__item__extension",
+          text: isExcalidraw ? "excalidraw" : item.file.extension
+        });
+        titleDiv.appendChild(extDiv);
+      }
       entryDiv.appendChild(titleDiv);
       itemDiv.appendChild(entryDiv);
       if (this.settings.showDirectory) {
@@ -4076,14 +4118,15 @@ var GrepModal = class extends import_obsidian7.SuggestModal {
 // src/commands.ts
 var SEARCH_COMMAND_PREFIX = "search-command";
 function showSearchDialog(app2, settings, command) {
-  var _a, _b;
+  var _a, _b, _c, _d, _e;
   const activeFileLeaf = (_b = (_a = app2.workspace.getActiveViewOfType(import_obsidian8.FileView)) == null ? void 0 : _a.leaf) != null ? _b : null;
+  const editor = (_d = (_c = app2.workspace.getActiveViewOfType(import_obsidian8.MarkdownView)) == null ? void 0 : _c.editor) != null ? _d : null;
   const modal = new AnotherQuickSwitcherModal({
     app: app2,
     settings,
     command,
     originFile: app2.workspace.getActiveFile(),
-    inputQuery: "",
+    inputQuery: settings.useSelectionWordsAsDefaultInputQuery ? (_e = editor == null ? void 0 : editor.getSelection()) != null ? _e : "" : "",
     navigationHistories: [],
     currentNavigationHistoryIndex: 0,
     stackHistory: true,

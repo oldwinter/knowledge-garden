@@ -844,6 +844,11 @@ body {
   padding: 6px 8px;
   border-radius: var(--radius-s);
   display: flex;
+  flex-direction: row;
+}
+.mk-options-menu__suggestions li .mk-options-menu-inner {
+  flex: 1;
+  display: flex;
   flex-direction: column;
 }
 .mk-options-menu__suggestions li .mk-description {
@@ -1490,6 +1495,9 @@ body {
 .mk-floweditor .markdown-source-view.mod-cm6 .cm-editor {
   min-height: auto;
 }
+.mk-floweditor .embedded-backlinks {
+  display: none;
+}
 .mk-floweditor .workspace-leaf-content[data-type=canvas] .view-content {
   min-height: 600px;
   height: calc(100vh - 100px);
@@ -1958,6 +1966,9 @@ c .mk-section-title,
 .mk-file-context-backlink {
   border: thin solid var(--divider-color);
   padding: 0px 8px;
+}
+.mk-file-context-backlink .cm-content {
+  padding-bottom: 0 !important;
 }
 .mk-note-header {
   position: absolute;

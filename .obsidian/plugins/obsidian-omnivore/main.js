@@ -11391,7 +11391,7 @@ var import_obsidian2 = require("obsidian");
 var DATE_FORMAT_W_OUT_SECONDS = "yyyy-MM-dd'T'HH:mm";
 var DATE_FORMAT = `${DATE_FORMAT_W_OUT_SECONDS}:ss`;
 var REPLACEMENT_CHAR = "-";
-var ILLEGAL_CHAR_REGEX = /[/\\?%*:|"<>]/g;
+var ILLEGAL_CHAR_REGEX = /[<>:"/\\|?*\u0000-\u001F]/g;
 var getHighlightLocation = (patch) => {
   const dmp = new import_diff_match_patch.diff_match_patch();
   const patches = dmp.patch_fromText(patch);
@@ -11567,6 +11567,7 @@ var renderArticleContnet = async (article, template, highlightOrder, dateHighlig
     return {
       text: formatHighlightQuote(highlight.quote, template),
       highlightUrl: `https://omnivore.app/me/${article.slug}#${highlight.id}`,
+      highlightID: highlight.id,
       dateHighlighted: formatDate(highlight.updatedAt, dateHighlightedFormat),
       note: highlight.annotation,
       labels: renderLabels(highlight.labels)
@@ -13576,9 +13577,9 @@ var OmnivorePlugin = class extends import_obsidian6.Plugin {
               const existingContent = await this.app.vault.read(omnivoreFile);
               const contentWithoutFrontmatter = removeFrontMatterFromContent(content);
               const existingContentWithoutFrontmatter = removeFrontMatterFromContent(existingContent);
-              const existingFrontMatter = parseFrontMatterFromContent(existingContent);
-              if (!existingFrontMatter || !Array.isArray(existingFrontMatter)) {
-                throw new Error("Front matter does not exist in the note");
+              let existingFrontMatter = parseFrontMatterFromContent(existingContent) || [];
+              if (!Array.isArray(existingFrontMatter)) {
+                existingFrontMatter = [existingFrontMatter];
               }
               const newFrontMatter = parseFrontMatterFromContent(content);
               if (!newFrontMatter || !Array.isArray(newFrontMatter) || newFrontMatter.length === 0) {

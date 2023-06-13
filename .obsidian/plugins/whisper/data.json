@@ -1,8 +1,0 @@
-{
-  "apiKey": "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",
-  "apiUrl": "https://api.openai.com/v1/audio/transcriptions",
-  "model": "whisper-1",
-  "language": "zh",
-  "templateFile": "",
-  "newFilePostRecording": true
-}
