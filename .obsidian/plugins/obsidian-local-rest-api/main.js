@@ -5,12 +5,15 @@ if you want to view the source, please visit the github repository of this plugi
 
 var __create = Object.create;
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __pow = Math.pow;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __spreadValues = (a, b) => {
   for (var prop in b || (b = {}))
@@ -23,7 +26,20 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
+var __objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -16635,9 +16651,9 @@ var require_main = __commonJS({
         base = base.substring(0, base.lastIndexOf("."));
       return base;
     }
-    function ensureFolderExists(path) {
+    function ensureFolderExists(path2) {
       return __async(this, null, function* () {
-        const dirs = path.replace(/\\/g, "/").split("/");
+        const dirs = path2.replace(/\\/g, "/").split("/");
         dirs.pop();
         if (dirs.length) {
           const dir = join(...dirs);
@@ -16652,9 +16668,9 @@ var require_main = __commonJS({
         if (!filename.endsWith(".md")) {
           filename += ".md";
         }
-        const path = obsidian.normalizePath(join(directory, filename));
-        yield ensureFolderExists(path);
-        return path;
+        const path2 = obsidian.normalizePath(join(directory, filename));
+        yield ensureFolderExists(path2);
+        return path2;
       });
     }
     function getTemplateInfo(template) {
@@ -16693,8 +16709,8 @@ var require_main = __commonJS({
     function getDateFromFile(file, granularity) {
       return getDateFromFilename(file.basename, granularity);
     }
-    function getDateFromPath(path, granularity) {
-      return getDateFromFilename(basename(path), granularity);
+    function getDateFromPath(path2, granularity) {
+      return getDateFromFilename(basename(path2), granularity);
     }
     function getDateFromFilename(filename, granularity) {
       const getSettings = {
@@ -17137,231 +17153,37 @@ var require_lib2 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     require("obsidian");
-    var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
-    var luxon = {};
-    Object.defineProperty(luxon, "__esModule", { value: true });
-    function _defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor)
-          descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
+    var LuxonError = class extends Error {
+    };
+    var InvalidDateTimeError = class extends LuxonError {
+      constructor(reason) {
+        super(`Invalid DateTime: ${reason.toMessage()}`);
       }
-    }
-    function _createClass(Constructor, protoProps, staticProps) {
-      if (protoProps)
-        _defineProperties(Constructor.prototype, protoProps);
-      if (staticProps)
-        _defineProperties(Constructor, staticProps);
-      return Constructor;
-    }
-    function _extends() {
-      _extends = Object.assign || function(target) {
-        for (var i = 1; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (Object.prototype.hasOwnProperty.call(source, key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
-      };
-      return _extends.apply(this, arguments);
-    }
-    function _inheritsLoose(subClass, superClass) {
-      subClass.prototype = Object.create(superClass.prototype);
-      subClass.prototype.constructor = subClass;
-      _setPrototypeOf(subClass, superClass);
-    }
-    function _getPrototypeOf(o) {
-      _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf2(o2) {
-        return o2.__proto__ || Object.getPrototypeOf(o2);
-      };
-      return _getPrototypeOf(o);
-    }
-    function _setPrototypeOf(o, p) {
-      _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p2) {
-        o2.__proto__ = p2;
-        return o2;
-      };
-      return _setPrototypeOf(o, p);
-    }
-    function _isNativeReflectConstruct() {
-      if (typeof Reflect === "undefined" || !Reflect.construct)
-        return false;
-      if (Reflect.construct.sham)
-        return false;
-      if (typeof Proxy === "function")
-        return true;
-      try {
-        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
-        }));
-        return true;
-      } catch (e) {
-        return false;
+    };
+    var InvalidIntervalError = class extends LuxonError {
+      constructor(reason) {
+        super(`Invalid Interval: ${reason.toMessage()}`);
       }
-    }
-    function _construct(Parent, args2, Class) {
-      if (_isNativeReflectConstruct()) {
-        _construct = Reflect.construct;
-      } else {
-        _construct = function _construct2(Parent2, args3, Class2) {
-          var a = [null];
-          a.push.apply(a, args3);
-          var Constructor = Function.bind.apply(Parent2, a);
-          var instance = new Constructor();
-          if (Class2)
-            _setPrototypeOf(instance, Class2.prototype);
-          return instance;
-        };
+    };
+    var InvalidDurationError = class extends LuxonError {
+      constructor(reason) {
+        super(`Invalid Duration: ${reason.toMessage()}`);
       }
-      return _construct.apply(null, arguments);
-    }
-    function _isNativeFunction(fn2) {
-      return Function.toString.call(fn2).indexOf("[native code]") !== -1;
-    }
-    function _wrapNativeSuper(Class) {
-      var _cache = typeof Map === "function" ? new Map() : void 0;
-      _wrapNativeSuper = function _wrapNativeSuper2(Class2) {
-        if (Class2 === null || !_isNativeFunction(Class2))
-          return Class2;
-        if (typeof Class2 !== "function") {
-          throw new TypeError("Super expression must either be null or a function");
-        }
-        if (typeof _cache !== "undefined") {
-          if (_cache.has(Class2))
-            return _cache.get(Class2);
-          _cache.set(Class2, Wrapper);
-        }
-        function Wrapper() {
-          return _construct(Class2, arguments, _getPrototypeOf(this).constructor);
-        }
-        Wrapper.prototype = Object.create(Class2.prototype, {
-          constructor: {
-            value: Wrapper,
-            enumerable: false,
-            writable: true,
-            configurable: true
-          }
-        });
-        return _setPrototypeOf(Wrapper, Class2);
-      };
-      return _wrapNativeSuper(Class);
-    }
-    function _objectWithoutPropertiesLoose(source, excluded) {
-      if (source == null)
-        return {};
-      var target = {};
-      var sourceKeys = Object.keys(source);
-      var key, i;
-      for (i = 0; i < sourceKeys.length; i++) {
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0)
-          continue;
-        target[key] = source[key];
+    };
+    var ConflictingSpecificationError = class extends LuxonError {
+    };
+    var InvalidUnitError = class extends LuxonError {
+      constructor(unit) {
+        super(`Invalid unit ${unit}`);
       }
-      return target;
-    }
-    function _unsupportedIterableToArray(o, minLen) {
-      if (!o)
-        return;
-      if (typeof o === "string")
-        return _arrayLikeToArray(o, minLen);
-      var n2 = Object.prototype.toString.call(o).slice(8, -1);
-      if (n2 === "Object" && o.constructor)
-        n2 = o.constructor.name;
-      if (n2 === "Map" || n2 === "Set")
-        return Array.from(o);
-      if (n2 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n2))
-        return _arrayLikeToArray(o, minLen);
-    }
-    function _arrayLikeToArray(arr, len) {
-      if (len == null || len > arr.length)
-        len = arr.length;
-      for (var i = 0, arr2 = new Array(len); i < len; i++)
-        arr2[i] = arr[i];
-      return arr2;
-    }
-    function _createForOfIteratorHelperLoose(o, allowArrayLike) {
-      var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"];
-      if (it)
-        return (it = it.call(o)).next.bind(it);
-      if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
-        if (it)
-          o = it;
-        var i = 0;
-        return function() {
-          if (i >= o.length)
-            return {
-              done: true
-            };
-          return {
-            done: false,
-            value: o[i++]
-          };
-        };
+    };
+    var InvalidArgumentError = class extends LuxonError {
+    };
+    var ZoneIsAbstractError = class extends LuxonError {
+      constructor() {
+        super("Zone is an abstract class");
       }
-      throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-    }
-    var LuxonError = /* @__PURE__ */ function(_Error) {
-      _inheritsLoose(LuxonError2, _Error);
-      function LuxonError2() {
-        return _Error.apply(this, arguments) || this;
-      }
-      return LuxonError2;
-    }(/* @__PURE__ */ _wrapNativeSuper(Error));
-    var InvalidDateTimeError = /* @__PURE__ */ function(_LuxonError) {
-      _inheritsLoose(InvalidDateTimeError2, _LuxonError);
-      function InvalidDateTimeError2(reason) {
-        return _LuxonError.call(this, "Invalid DateTime: " + reason.toMessage()) || this;
-      }
-      return InvalidDateTimeError2;
-    }(LuxonError);
-    var InvalidIntervalError = /* @__PURE__ */ function(_LuxonError2) {
-      _inheritsLoose(InvalidIntervalError2, _LuxonError2);
-      function InvalidIntervalError2(reason) {
-        return _LuxonError2.call(this, "Invalid Interval: " + reason.toMessage()) || this;
-      }
-      return InvalidIntervalError2;
-    }(LuxonError);
-    var InvalidDurationError = /* @__PURE__ */ function(_LuxonError3) {
-      _inheritsLoose(InvalidDurationError2, _LuxonError3);
-      function InvalidDurationError2(reason) {
-        return _LuxonError3.call(this, "Invalid Duration: " + reason.toMessage()) || this;
-      }
-      return InvalidDurationError2;
-    }(LuxonError);
-    var ConflictingSpecificationError = /* @__PURE__ */ function(_LuxonError4) {
-      _inheritsLoose(ConflictingSpecificationError2, _LuxonError4);
-      function ConflictingSpecificationError2() {
-        return _LuxonError4.apply(this, arguments) || this;
-      }
-      return ConflictingSpecificationError2;
-    }(LuxonError);
-    var InvalidUnitError = /* @__PURE__ */ function(_LuxonError5) {
-      _inheritsLoose(InvalidUnitError2, _LuxonError5);
-      function InvalidUnitError2(unit) {
-        return _LuxonError5.call(this, "Invalid unit " + unit) || this;
-      }
-      return InvalidUnitError2;
-    }(LuxonError);
-    var InvalidArgumentError = /* @__PURE__ */ function(_LuxonError6) {
-      _inheritsLoose(InvalidArgumentError2, _LuxonError6);
-      function InvalidArgumentError2() {
-        return _LuxonError6.apply(this, arguments) || this;
-      }
-      return InvalidArgumentError2;
-    }(LuxonError);
-    var ZoneIsAbstractError = /* @__PURE__ */ function(_LuxonError7) {
-      _inheritsLoose(ZoneIsAbstractError2, _LuxonError7);
-      function ZoneIsAbstractError2() {
-        return _LuxonError7.call(this, "Zone is an abstract class") || this;
-      }
-      return ZoneIsAbstractError2;
-    }(LuxonError);
+    };
     var n = "numeric";
     var s = "short";
     var l = "long";
@@ -17512,6 +17334,673 @@ var require_lib2 = __commonJS({
       second: n,
       timeZoneName: l
     };
+    var Zone = class {
+      get type() {
+        throw new ZoneIsAbstractError();
+      }
+      get name() {
+        throw new ZoneIsAbstractError();
+      }
+      get ianaName() {
+        return this.name;
+      }
+      get isUniversal() {
+        throw new ZoneIsAbstractError();
+      }
+      offsetName(ts, opts) {
+        throw new ZoneIsAbstractError();
+      }
+      formatOffset(ts, format) {
+        throw new ZoneIsAbstractError();
+      }
+      offset(ts) {
+        throw new ZoneIsAbstractError();
+      }
+      equals(otherZone) {
+        throw new ZoneIsAbstractError();
+      }
+      get isValid() {
+        throw new ZoneIsAbstractError();
+      }
+    };
+    var singleton$1 = null;
+    var SystemZone = class extends Zone {
+      static get instance() {
+        if (singleton$1 === null) {
+          singleton$1 = new SystemZone();
+        }
+        return singleton$1;
+      }
+      get type() {
+        return "system";
+      }
+      get name() {
+        return new Intl.DateTimeFormat().resolvedOptions().timeZone;
+      }
+      get isUniversal() {
+        return false;
+      }
+      offsetName(ts, { format, locale }) {
+        return parseZoneInfo(ts, format, locale);
+      }
+      formatOffset(ts, format) {
+        return formatOffset(this.offset(ts), format);
+      }
+      offset(ts) {
+        return -new Date(ts).getTimezoneOffset();
+      }
+      equals(otherZone) {
+        return otherZone.type === "system";
+      }
+      get isValid() {
+        return true;
+      }
+    };
+    var dtfCache = {};
+    function makeDTF(zone) {
+      if (!dtfCache[zone]) {
+        dtfCache[zone] = new Intl.DateTimeFormat("en-US", {
+          hour12: false,
+          timeZone: zone,
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          era: "short"
+        });
+      }
+      return dtfCache[zone];
+    }
+    var typeToPos = {
+      year: 0,
+      month: 1,
+      day: 2,
+      era: 3,
+      hour: 4,
+      minute: 5,
+      second: 6
+    };
+    function hackyOffset(dtf, date) {
+      const formatted = dtf.format(date).replace(/\u200E/g, ""), parsed = /(\d+)\/(\d+)\/(\d+) (AD|BC),? (\d+):(\d+):(\d+)/.exec(formatted), [, fMonth, fDay, fYear, fadOrBc, fHour, fMinute, fSecond] = parsed;
+      return [fYear, fMonth, fDay, fadOrBc, fHour, fMinute, fSecond];
+    }
+    function partsOffset(dtf, date) {
+      const formatted = dtf.formatToParts(date);
+      const filled = [];
+      for (let i = 0; i < formatted.length; i++) {
+        const { type, value } = formatted[i];
+        const pos = typeToPos[type];
+        if (type === "era") {
+          filled[pos] = value;
+        } else if (!isUndefined(pos)) {
+          filled[pos] = parseInt(value, 10);
+        }
+      }
+      return filled;
+    }
+    var ianaZoneCache = {};
+    var IANAZone = class extends Zone {
+      static create(name) {
+        if (!ianaZoneCache[name]) {
+          ianaZoneCache[name] = new IANAZone(name);
+        }
+        return ianaZoneCache[name];
+      }
+      static resetCache() {
+        ianaZoneCache = {};
+        dtfCache = {};
+      }
+      static isValidSpecifier(s2) {
+        return this.isValidZone(s2);
+      }
+      static isValidZone(zone) {
+        if (!zone) {
+          return false;
+        }
+        try {
+          new Intl.DateTimeFormat("en-US", { timeZone: zone }).format();
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+      constructor(name) {
+        super();
+        this.zoneName = name;
+        this.valid = IANAZone.isValidZone(name);
+      }
+      get type() {
+        return "iana";
+      }
+      get name() {
+        return this.zoneName;
+      }
+      get isUniversal() {
+        return false;
+      }
+      offsetName(ts, { format, locale }) {
+        return parseZoneInfo(ts, format, locale, this.name);
+      }
+      formatOffset(ts, format) {
+        return formatOffset(this.offset(ts), format);
+      }
+      offset(ts) {
+        const date = new Date(ts);
+        if (isNaN(date))
+          return NaN;
+        const dtf = makeDTF(this.name);
+        let [year, month, day, adOrBc, hour, minute, second] = dtf.formatToParts ? partsOffset(dtf, date) : hackyOffset(dtf, date);
+        if (adOrBc === "BC") {
+          year = -Math.abs(year) + 1;
+        }
+        const adjustedHour = hour === 24 ? 0 : hour;
+        const asUTC = objToLocalTS({
+          year,
+          month,
+          day,
+          hour: adjustedHour,
+          minute,
+          second,
+          millisecond: 0
+        });
+        let asTS = +date;
+        const over = asTS % 1e3;
+        asTS -= over >= 0 ? over : 1e3 + over;
+        return (asUTC - asTS) / (60 * 1e3);
+      }
+      equals(otherZone) {
+        return otherZone.type === "iana" && otherZone.name === this.name;
+      }
+      get isValid() {
+        return this.valid;
+      }
+    };
+    var intlLFCache = {};
+    function getCachedLF(locString, opts = {}) {
+      const key = JSON.stringify([locString, opts]);
+      let dtf = intlLFCache[key];
+      if (!dtf) {
+        dtf = new Intl.ListFormat(locString, opts);
+        intlLFCache[key] = dtf;
+      }
+      return dtf;
+    }
+    var intlDTCache = {};
+    function getCachedDTF(locString, opts = {}) {
+      const key = JSON.stringify([locString, opts]);
+      let dtf = intlDTCache[key];
+      if (!dtf) {
+        dtf = new Intl.DateTimeFormat(locString, opts);
+        intlDTCache[key] = dtf;
+      }
+      return dtf;
+    }
+    var intlNumCache = {};
+    function getCachedINF(locString, opts = {}) {
+      const key = JSON.stringify([locString, opts]);
+      let inf = intlNumCache[key];
+      if (!inf) {
+        inf = new Intl.NumberFormat(locString, opts);
+        intlNumCache[key] = inf;
+      }
+      return inf;
+    }
+    var intlRelCache = {};
+    function getCachedRTF(locString, opts = {}) {
+      const _a = opts, { base } = _a, cacheKeyOpts = __objRest(_a, ["base"]);
+      const key = JSON.stringify([locString, cacheKeyOpts]);
+      let inf = intlRelCache[key];
+      if (!inf) {
+        inf = new Intl.RelativeTimeFormat(locString, opts);
+        intlRelCache[key] = inf;
+      }
+      return inf;
+    }
+    var sysLocaleCache = null;
+    function systemLocale() {
+      if (sysLocaleCache) {
+        return sysLocaleCache;
+      } else {
+        sysLocaleCache = new Intl.DateTimeFormat().resolvedOptions().locale;
+        return sysLocaleCache;
+      }
+    }
+    function parseLocaleString(localeStr) {
+      const xIndex = localeStr.indexOf("-x-");
+      if (xIndex !== -1) {
+        localeStr = localeStr.substring(0, xIndex);
+      }
+      const uIndex = localeStr.indexOf("-u-");
+      if (uIndex === -1) {
+        return [localeStr];
+      } else {
+        let options;
+        let selectedStr;
+        try {
+          options = getCachedDTF(localeStr).resolvedOptions();
+          selectedStr = localeStr;
+        } catch (e) {
+          const smaller = localeStr.substring(0, uIndex);
+          options = getCachedDTF(smaller).resolvedOptions();
+          selectedStr = smaller;
+        }
+        const { numberingSystem, calendar } = options;
+        return [selectedStr, numberingSystem, calendar];
+      }
+    }
+    function intlConfigString(localeStr, numberingSystem, outputCalendar) {
+      if (outputCalendar || numberingSystem) {
+        if (!localeStr.includes("-u-")) {
+          localeStr += "-u";
+        }
+        if (outputCalendar) {
+          localeStr += `-ca-${outputCalendar}`;
+        }
+        if (numberingSystem) {
+          localeStr += `-nu-${numberingSystem}`;
+        }
+        return localeStr;
+      } else {
+        return localeStr;
+      }
+    }
+    function mapMonths(f) {
+      const ms = [];
+      for (let i = 1; i <= 12; i++) {
+        const dt = DateTime.utc(2016, i, 1);
+        ms.push(f(dt));
+      }
+      return ms;
+    }
+    function mapWeekdays(f) {
+      const ms = [];
+      for (let i = 1; i <= 7; i++) {
+        const dt = DateTime.utc(2016, 11, 13 + i);
+        ms.push(f(dt));
+      }
+      return ms;
+    }
+    function listStuff(loc, length, defaultOK, englishFn, intlFn) {
+      const mode = loc.listingMode(defaultOK);
+      if (mode === "error") {
+        return null;
+      } else if (mode === "en") {
+        return englishFn(length);
+      } else {
+        return intlFn(length);
+      }
+    }
+    function supportsFastNumbers(loc) {
+      if (loc.numberingSystem && loc.numberingSystem !== "latn") {
+        return false;
+      } else {
+        return loc.numberingSystem === "latn" || !loc.locale || loc.locale.startsWith("en") || new Intl.DateTimeFormat(loc.intl).resolvedOptions().numberingSystem === "latn";
+      }
+    }
+    var PolyNumberFormatter = class {
+      constructor(intl, forceSimple, opts) {
+        this.padTo = opts.padTo || 0;
+        this.floor = opts.floor || false;
+        const _a = opts, { padTo, floor } = _a, otherOpts = __objRest(_a, ["padTo", "floor"]);
+        if (!forceSimple || Object.keys(otherOpts).length > 0) {
+          const intlOpts = __spreadValues({ useGrouping: false }, opts);
+          if (opts.padTo > 0)
+            intlOpts.minimumIntegerDigits = opts.padTo;
+          this.inf = getCachedINF(intl, intlOpts);
+        }
+      }
+      format(i) {
+        if (this.inf) {
+          const fixed = this.floor ? Math.floor(i) : i;
+          return this.inf.format(fixed);
+        } else {
+          const fixed = this.floor ? Math.floor(i) : roundTo(i, 3);
+          return padStart(fixed, this.padTo);
+        }
+      }
+    };
+    var PolyDateFormatter = class {
+      constructor(dt, intl, opts) {
+        this.opts = opts;
+        let z = void 0;
+        if (dt.zone.isUniversal) {
+          const gmtOffset = -1 * (dt.offset / 60);
+          const offsetZ = gmtOffset >= 0 ? `Etc/GMT+${gmtOffset}` : `Etc/GMT${gmtOffset}`;
+          if (dt.offset !== 0 && IANAZone.create(offsetZ).valid) {
+            z = offsetZ;
+            this.dt = dt;
+          } else {
+            z = "UTC";
+            if (opts.timeZoneName) {
+              this.dt = dt;
+            } else {
+              this.dt = dt.offset === 0 ? dt : DateTime.fromMillis(dt.ts + dt.offset * 60 * 1e3);
+            }
+          }
+        } else if (dt.zone.type === "system") {
+          this.dt = dt;
+        } else {
+          this.dt = dt;
+          z = dt.zone.name;
+        }
+        const intlOpts = __spreadValues({}, this.opts);
+        intlOpts.timeZone = intlOpts.timeZone || z;
+        this.dtf = getCachedDTF(intl, intlOpts);
+      }
+      format() {
+        return this.dtf.format(this.dt.toJSDate());
+      }
+      formatToParts() {
+        return this.dtf.formatToParts(this.dt.toJSDate());
+      }
+      resolvedOptions() {
+        return this.dtf.resolvedOptions();
+      }
+    };
+    var PolyRelFormatter = class {
+      constructor(intl, isEnglish, opts) {
+        this.opts = __spreadValues({ style: "long" }, opts);
+        if (!isEnglish && hasRelative()) {
+          this.rtf = getCachedRTF(intl, opts);
+        }
+      }
+      format(count, unit) {
+        if (this.rtf) {
+          return this.rtf.format(count, unit);
+        } else {
+          return formatRelativeTime(unit, count, this.opts.numeric, this.opts.style !== "long");
+        }
+      }
+      formatToParts(count, unit) {
+        if (this.rtf) {
+          return this.rtf.formatToParts(count, unit);
+        } else {
+          return [];
+        }
+      }
+    };
+    var Locale = class {
+      static fromOpts(opts) {
+        return Locale.create(opts.locale, opts.numberingSystem, opts.outputCalendar, opts.defaultToEN);
+      }
+      static create(locale, numberingSystem, outputCalendar, defaultToEN = false) {
+        const specifiedLocale = locale || Settings.defaultLocale;
+        const localeR = specifiedLocale || (defaultToEN ? "en-US" : systemLocale());
+        const numberingSystemR = numberingSystem || Settings.defaultNumberingSystem;
+        const outputCalendarR = outputCalendar || Settings.defaultOutputCalendar;
+        return new Locale(localeR, numberingSystemR, outputCalendarR, specifiedLocale);
+      }
+      static resetCache() {
+        sysLocaleCache = null;
+        intlDTCache = {};
+        intlNumCache = {};
+        intlRelCache = {};
+      }
+      static fromObject({ locale, numberingSystem, outputCalendar } = {}) {
+        return Locale.create(locale, numberingSystem, outputCalendar);
+      }
+      constructor(locale, numbering, outputCalendar, specifiedLocale) {
+        const [parsedLocale, parsedNumberingSystem, parsedOutputCalendar] = parseLocaleString(locale);
+        this.locale = parsedLocale;
+        this.numberingSystem = numbering || parsedNumberingSystem || null;
+        this.outputCalendar = outputCalendar || parsedOutputCalendar || null;
+        this.intl = intlConfigString(this.locale, this.numberingSystem, this.outputCalendar);
+        this.weekdaysCache = { format: {}, standalone: {} };
+        this.monthsCache = { format: {}, standalone: {} };
+        this.meridiemCache = null;
+        this.eraCache = {};
+        this.specifiedLocale = specifiedLocale;
+        this.fastNumbersCached = null;
+      }
+      get fastNumbers() {
+        if (this.fastNumbersCached == null) {
+          this.fastNumbersCached = supportsFastNumbers(this);
+        }
+        return this.fastNumbersCached;
+      }
+      listingMode() {
+        const isActuallyEn = this.isEnglish();
+        const hasNoWeirdness = (this.numberingSystem === null || this.numberingSystem === "latn") && (this.outputCalendar === null || this.outputCalendar === "gregory");
+        return isActuallyEn && hasNoWeirdness ? "en" : "intl";
+      }
+      clone(alts) {
+        if (!alts || Object.getOwnPropertyNames(alts).length === 0) {
+          return this;
+        } else {
+          return Locale.create(alts.locale || this.specifiedLocale, alts.numberingSystem || this.numberingSystem, alts.outputCalendar || this.outputCalendar, alts.defaultToEN || false);
+        }
+      }
+      redefaultToEN(alts = {}) {
+        return this.clone(__spreadProps(__spreadValues({}, alts), { defaultToEN: true }));
+      }
+      redefaultToSystem(alts = {}) {
+        return this.clone(__spreadProps(__spreadValues({}, alts), { defaultToEN: false }));
+      }
+      months(length, format = false, defaultOK = true) {
+        return listStuff(this, length, defaultOK, months, () => {
+          const intl = format ? { month: length, day: "numeric" } : { month: length }, formatStr = format ? "format" : "standalone";
+          if (!this.monthsCache[formatStr][length]) {
+            this.monthsCache[formatStr][length] = mapMonths((dt) => this.extract(dt, intl, "month"));
+          }
+          return this.monthsCache[formatStr][length];
+        });
+      }
+      weekdays(length, format = false, defaultOK = true) {
+        return listStuff(this, length, defaultOK, weekdays, () => {
+          const intl = format ? { weekday: length, year: "numeric", month: "long", day: "numeric" } : { weekday: length }, formatStr = format ? "format" : "standalone";
+          if (!this.weekdaysCache[formatStr][length]) {
+            this.weekdaysCache[formatStr][length] = mapWeekdays((dt) => this.extract(dt, intl, "weekday"));
+          }
+          return this.weekdaysCache[formatStr][length];
+        });
+      }
+      meridiems(defaultOK = true) {
+        return listStuff(this, void 0, defaultOK, () => meridiems, () => {
+          if (!this.meridiemCache) {
+            const intl = { hour: "numeric", hourCycle: "h12" };
+            this.meridiemCache = [DateTime.utc(2016, 11, 13, 9), DateTime.utc(2016, 11, 13, 19)].map((dt) => this.extract(dt, intl, "dayperiod"));
+          }
+          return this.meridiemCache;
+        });
+      }
+      eras(length, defaultOK = true) {
+        return listStuff(this, length, defaultOK, eras, () => {
+          const intl = { era: length };
+          if (!this.eraCache[length]) {
+            this.eraCache[length] = [DateTime.utc(-40, 1, 1), DateTime.utc(2017, 1, 1)].map((dt) => this.extract(dt, intl, "era"));
+          }
+          return this.eraCache[length];
+        });
+      }
+      extract(dt, intlOpts, field) {
+        const df = this.dtFormatter(dt, intlOpts), results = df.formatToParts(), matching = results.find((m) => m.type.toLowerCase() === field);
+        return matching ? matching.value : null;
+      }
+      numberFormatter(opts = {}) {
+        return new PolyNumberFormatter(this.intl, opts.forceSimple || this.fastNumbers, opts);
+      }
+      dtFormatter(dt, intlOpts = {}) {
+        return new PolyDateFormatter(dt, this.intl, intlOpts);
+      }
+      relFormatter(opts = {}) {
+        return new PolyRelFormatter(this.intl, this.isEnglish(), opts);
+      }
+      listFormatter(opts = {}) {
+        return getCachedLF(this.intl, opts);
+      }
+      isEnglish() {
+        return this.locale === "en" || this.locale.toLowerCase() === "en-us" || new Intl.DateTimeFormat(this.intl).resolvedOptions().locale.startsWith("en-us");
+      }
+      equals(other) {
+        return this.locale === other.locale && this.numberingSystem === other.numberingSystem && this.outputCalendar === other.outputCalendar;
+      }
+    };
+    var singleton = null;
+    var FixedOffsetZone = class extends Zone {
+      static get utcInstance() {
+        if (singleton === null) {
+          singleton = new FixedOffsetZone(0);
+        }
+        return singleton;
+      }
+      static instance(offset2) {
+        return offset2 === 0 ? FixedOffsetZone.utcInstance : new FixedOffsetZone(offset2);
+      }
+      static parseSpecifier(s2) {
+        if (s2) {
+          const r = s2.match(/^utc(?:([+-]\d{1,2})(?::(\d{2}))?)?$/i);
+          if (r) {
+            return new FixedOffsetZone(signedOffset(r[1], r[2]));
+          }
+        }
+        return null;
+      }
+      constructor(offset2) {
+        super();
+        this.fixed = offset2;
+      }
+      get type() {
+        return "fixed";
+      }
+      get name() {
+        return this.fixed === 0 ? "UTC" : `UTC${formatOffset(this.fixed, "narrow")}`;
+      }
+      get ianaName() {
+        if (this.fixed === 0) {
+          return "Etc/UTC";
+        } else {
+          return `Etc/GMT${formatOffset(-this.fixed, "narrow")}`;
+        }
+      }
+      offsetName() {
+        return this.name;
+      }
+      formatOffset(ts, format) {
+        return formatOffset(this.fixed, format);
+      }
+      get isUniversal() {
+        return true;
+      }
+      offset() {
+        return this.fixed;
+      }
+      equals(otherZone) {
+        return otherZone.type === "fixed" && otherZone.fixed === this.fixed;
+      }
+      get isValid() {
+        return true;
+      }
+    };
+    var InvalidZone = class extends Zone {
+      constructor(zoneName) {
+        super();
+        this.zoneName = zoneName;
+      }
+      get type() {
+        return "invalid";
+      }
+      get name() {
+        return this.zoneName;
+      }
+      get isUniversal() {
+        return false;
+      }
+      offsetName() {
+        return null;
+      }
+      formatOffset() {
+        return "";
+      }
+      offset() {
+        return NaN;
+      }
+      equals() {
+        return false;
+      }
+      get isValid() {
+        return false;
+      }
+    };
+    function normalizeZone(input, defaultZone2) {
+      if (isUndefined(input) || input === null) {
+        return defaultZone2;
+      } else if (input instanceof Zone) {
+        return input;
+      } else if (isString(input)) {
+        const lowered = input.toLowerCase();
+        if (lowered === "default")
+          return defaultZone2;
+        else if (lowered === "local" || lowered === "system")
+          return SystemZone.instance;
+        else if (lowered === "utc" || lowered === "gmt")
+          return FixedOffsetZone.utcInstance;
+        else
+          return FixedOffsetZone.parseSpecifier(lowered) || IANAZone.create(input);
+      } else if (isNumber(input)) {
+        return FixedOffsetZone.instance(input);
+      } else if (typeof input === "object" && input.offset && typeof input.offset === "number") {
+        return input;
+      } else {
+        return new InvalidZone(input);
+      }
+    }
+    var now = () => Date.now();
+    var defaultZone = "system";
+    var defaultLocale = null;
+    var defaultNumberingSystem = null;
+    var defaultOutputCalendar = null;
+    var twoDigitCutoffYear = 60;
+    var throwOnInvalid;
+    var Settings = class {
+      static get now() {
+        return now;
+      }
+      static set now(n2) {
+        now = n2;
+      }
+      static set defaultZone(zone) {
+        defaultZone = zone;
+      }
+      static get defaultZone() {
+        return normalizeZone(defaultZone, SystemZone.instance);
+      }
+      static get defaultLocale() {
+        return defaultLocale;
+      }
+      static set defaultLocale(locale) {
+        defaultLocale = locale;
+      }
+      static get defaultNumberingSystem() {
+        return defaultNumberingSystem;
+      }
+      static set defaultNumberingSystem(numberingSystem) {
+        defaultNumberingSystem = numberingSystem;
+      }
+      static get defaultOutputCalendar() {
+        return defaultOutputCalendar;
+      }
+      static set defaultOutputCalendar(outputCalendar) {
+        defaultOutputCalendar = outputCalendar;
+      }
+      static get twoDigitCutoffYear() {
+        return twoDigitCutoffYear;
+      }
+      static set twoDigitCutoffYear(cutoffYear) {
+        twoDigitCutoffYear = cutoffYear % 100;
+      }
+      static get throwOnInvalid() {
+        return throwOnInvalid;
+      }
+      static set throwOnInvalid(t) {
+        throwOnInvalid = t;
+      }
+      static resetCaches() {
+        Locale.resetCache();
+        IANAZone.resetCache();
+      }
+    };
     function isUndefined(o) {
       return typeof o === "undefined";
     }
@@ -17541,8 +18030,8 @@ var require_lib2 = __commonJS({
       if (arr.length === 0) {
         return void 0;
       }
-      return arr.reduce(function(best, next) {
-        var pair = [by(next), next];
+      return arr.reduce((best, next) => {
+        const pair = [by(next), next];
         if (!best) {
           return pair;
         } else if (compare(best[0], pair[0]) === best[0]) {
@@ -17553,7 +18042,7 @@ var require_lib2 = __commonJS({
       }, null)[1];
     }
     function pick(obj, keys) {
-      return keys.reduce(function(a, k) {
+      return keys.reduce((a, k) => {
         a[k] = obj[k];
         return a;
       }, {});
@@ -17567,12 +18056,9 @@ var require_lib2 = __commonJS({
     function floorMod(x, n2) {
       return x - n2 * Math.floor(x / n2);
     }
-    function padStart(input, n2) {
-      if (n2 === void 0) {
-        n2 = 2;
-      }
-      var isNeg = input < 0;
-      var padded;
+    function padStart(input, n2 = 2) {
+      const isNeg = input < 0;
+      let padded;
       if (isNeg) {
         padded = "-" + ("" + -input).padStart(n2, "0");
       } else {
@@ -17598,15 +18084,12 @@ var require_lib2 = __commonJS({
       if (isUndefined(fraction) || fraction === null || fraction === "") {
         return void 0;
       } else {
-        var f = parseFloat("0." + fraction) * 1e3;
+        const f = parseFloat("0." + fraction) * 1e3;
         return Math.floor(f);
       }
     }
-    function roundTo(number, digits, towardZero) {
-      if (towardZero === void 0) {
-        towardZero = false;
-      }
-      var factor = Math.pow(10, digits), rounder = towardZero ? Math.trunc : Math.round;
+    function roundTo(number, digits, towardZero = false) {
+      const factor = __pow(10, digits), rounder = towardZero ? Math.trunc : Math.round;
       return rounder(number * factor) / factor;
     }
     function isLeapYear(year) {
@@ -17616,7 +18099,7 @@ var require_lib2 = __commonJS({
       return isLeapYear(year) ? 366 : 365;
     }
     function daysInMonth(year, month) {
-      var modMonth = floorMod(month - 1, 12) + 1, modYear = year + (month - modMonth) / 12;
+      const modMonth = floorMod(month - 1, 12) + 1, modYear = year + (month - modMonth) / 12;
       if (modMonth === 2) {
         return isLeapYear(modYear) ? 29 : 28;
       } else {
@@ -17624,7 +18107,7 @@ var require_lib2 = __commonJS({
       }
     }
     function objToLocalTS(obj) {
-      var d = Date.UTC(obj.year, obj.month - 1, obj.day, obj.hour, obj.minute, obj.second, obj.millisecond);
+      let d = Date.UTC(obj.year, obj.month - 1, obj.day, obj.hour, obj.minute, obj.second, obj.millisecond);
       if (obj.year < 100 && obj.year >= 0) {
         d = new Date(d);
         d.setUTCFullYear(d.getUTCFullYear() - 1900);
@@ -17632,20 +18115,17 @@ var require_lib2 = __commonJS({
       return +d;
     }
     function weeksInWeekYear(weekYear) {
-      var p1 = (weekYear + Math.floor(weekYear / 4) - Math.floor(weekYear / 100) + Math.floor(weekYear / 400)) % 7, last = weekYear - 1, p2 = (last + Math.floor(last / 4) - Math.floor(last / 100) + Math.floor(last / 400)) % 7;
+      const p1 = (weekYear + Math.floor(weekYear / 4) - Math.floor(weekYear / 100) + Math.floor(weekYear / 400)) % 7, last = weekYear - 1, p2 = (last + Math.floor(last / 4) - Math.floor(last / 100) + Math.floor(last / 400)) % 7;
       return p1 === 4 || p2 === 3 ? 53 : 52;
     }
     function untruncateYear(year) {
       if (year > 99) {
         return year;
       } else
-        return year > 60 ? 1900 + year : 2e3 + year;
+        return year > Settings.twoDigitCutoffYear ? 1900 + year : 2e3 + year;
     }
-    function parseZoneInfo(ts, offsetFormat, locale, timeZone) {
-      if (timeZone === void 0) {
-        timeZone = null;
-      }
-      var date = new Date(ts), intlOpts = {
+    function parseZoneInfo(ts, offsetFormat, locale, timeZone = null) {
+      const date = new Date(ts), intlOpts = {
         hourCycle: "h23",
         year: "numeric",
         month: "2-digit",
@@ -17656,33 +18136,29 @@ var require_lib2 = __commonJS({
       if (timeZone) {
         intlOpts.timeZone = timeZone;
       }
-      var modified = _extends({
-        timeZoneName: offsetFormat
-      }, intlOpts);
-      var parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date).find(function(m) {
-        return m.type.toLowerCase() === "timezonename";
-      });
+      const modified = __spreadValues({ timeZoneName: offsetFormat }, intlOpts);
+      const parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date).find((m) => m.type.toLowerCase() === "timezonename");
       return parsed ? parsed.value : null;
     }
     function signedOffset(offHourStr, offMinuteStr) {
-      var offHour = parseInt(offHourStr, 10);
+      let offHour = parseInt(offHourStr, 10);
       if (Number.isNaN(offHour)) {
         offHour = 0;
       }
-      var offMin = parseInt(offMinuteStr, 10) || 0, offMinSigned = offHour < 0 || Object.is(offHour, -0) ? -offMin : offMin;
+      const offMin = parseInt(offMinuteStr, 10) || 0, offMinSigned = offHour < 0 || Object.is(offHour, -0) ? -offMin : offMin;
       return offHour * 60 + offMinSigned;
     }
     function asNumber(value) {
-      var numericValue = Number(value);
+      const numericValue = Number(value);
       if (typeof value === "boolean" || value === "" || Number.isNaN(numericValue))
-        throw new InvalidArgumentError("Invalid unit value " + value);
+        throw new InvalidArgumentError(`Invalid unit value ${value}`);
       return numericValue;
     }
     function normalizeObject(obj, normalizer) {
-      var normalized = {};
-      for (var u in obj) {
+      const normalized = {};
+      for (const u in obj) {
         if (hasOwnProperty(obj, u)) {
-          var v = obj[u];
+          const v = obj[u];
           if (v === void 0 || v === null)
             continue;
           normalized[normalizer(u)] = asNumber(v);
@@ -17691,33 +18167,58 @@ var require_lib2 = __commonJS({
       return normalized;
     }
     function formatOffset(offset2, format) {
-      var hours = Math.trunc(Math.abs(offset2 / 60)), minutes = Math.trunc(Math.abs(offset2 % 60)), sign = offset2 >= 0 ? "+" : "-";
+      const hours = Math.trunc(Math.abs(offset2 / 60)), minutes = Math.trunc(Math.abs(offset2 % 60)), sign = offset2 >= 0 ? "+" : "-";
       switch (format) {
         case "short":
-          return "" + sign + padStart(hours, 2) + ":" + padStart(minutes, 2);
+          return `${sign}${padStart(hours, 2)}:${padStart(minutes, 2)}`;
         case "narrow":
-          return "" + sign + hours + (minutes > 0 ? ":" + minutes : "");
+          return `${sign}${hours}${minutes > 0 ? `:${minutes}` : ""}`;
         case "techie":
-          return "" + sign + padStart(hours, 2) + padStart(minutes, 2);
+          return `${sign}${padStart(hours, 2)}${padStart(minutes, 2)}`;
         default:
-          throw new RangeError("Value format " + format + " is out of range for property format");
+          throw new RangeError(`Value format ${format} is out of range for property format`);
       }
     }
     function timeObject(obj) {
       return pick(obj, ["hour", "minute", "second", "millisecond"]);
     }
-    var ianaRegex = /[A-Za-z_+-]{1,256}(?::?\/[A-Za-z0-9_+-]{1,256}(?:\/[A-Za-z0-9_+-]{1,256})?)?/;
-    var monthsLong = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var monthsShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var monthsLong = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    var monthsShort = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
     var monthsNarrow = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
     function months(length) {
       switch (length) {
         case "narrow":
-          return [].concat(monthsNarrow);
+          return [...monthsNarrow];
         case "short":
-          return [].concat(monthsShort);
+          return [...monthsShort];
         case "long":
-          return [].concat(monthsLong);
+          return [...monthsLong];
         case "numeric":
           return ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
         case "2-digit":
@@ -17726,17 +18227,25 @@ var require_lib2 = __commonJS({
           return null;
       }
     }
-    var weekdaysLong = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var weekdaysLong = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ];
     var weekdaysShort = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     var weekdaysNarrow = ["M", "T", "W", "T", "F", "S", "S"];
     function weekdays(length) {
       switch (length) {
         case "narrow":
-          return [].concat(weekdaysNarrow);
+          return [...weekdaysNarrow];
         case "short":
-          return [].concat(weekdaysShort);
+          return [...weekdaysShort];
         case "long":
-          return [].concat(weekdaysLong);
+          return [...weekdaysLong];
         case "numeric":
           return ["1", "2", "3", "4", "5", "6", "7"];
         default:
@@ -17750,11 +18259,11 @@ var require_lib2 = __commonJS({
     function eras(length) {
       switch (length) {
         case "narrow":
-          return [].concat(erasNarrow);
+          return [...erasNarrow];
         case "short":
-          return [].concat(erasShort);
+          return [...erasShort];
         case "long":
-          return [].concat(erasLong);
+          return [...erasLong];
         default:
           return null;
       }
@@ -17771,14 +18280,8 @@ var require_lib2 = __commonJS({
     function eraForDateTime(dt, length) {
       return eras(length)[dt.year < 0 ? 0 : 1];
     }
-    function formatRelativeTime(unit, count, numeric, narrow) {
-      if (numeric === void 0) {
-        numeric = "always";
-      }
-      if (narrow === void 0) {
-        narrow = false;
-      }
-      var units = {
+    function formatRelativeTime(unit, count, numeric = "always", narrow = false) {
+      const units = {
         years: ["year", "yr."],
         quarters: ["quarter", "qtr."],
         months: ["month", "mo."],
@@ -17788,25 +18291,24 @@ var require_lib2 = __commonJS({
         minutes: ["minute", "min."],
         seconds: ["second", "sec."]
       };
-      var lastable = ["hours", "minutes", "seconds"].indexOf(unit) === -1;
+      const lastable = ["hours", "minutes", "seconds"].indexOf(unit) === -1;
       if (numeric === "auto" && lastable) {
-        var isDay = unit === "days";
+        const isDay = unit === "days";
         switch (count) {
           case 1:
-            return isDay ? "tomorrow" : "next " + units[unit][0];
+            return isDay ? "tomorrow" : `next ${units[unit][0]}`;
           case -1:
-            return isDay ? "yesterday" : "last " + units[unit][0];
+            return isDay ? "yesterday" : `last ${units[unit][0]}`;
           case 0:
-            return isDay ? "today" : "this " + units[unit][0];
+            return isDay ? "today" : `this ${units[unit][0]}`;
         }
       }
-      var isInPast = Object.is(count, -0) || count < 0, fmtValue = Math.abs(count), singular = fmtValue === 1, lilUnits = units[unit], fmtUnit = narrow ? singular ? lilUnits[1] : lilUnits[2] || lilUnits[1] : singular ? units[unit][0] : unit;
-      return isInPast ? fmtValue + " " + fmtUnit + " ago" : "in " + fmtValue + " " + fmtUnit;
+      const isInPast = Object.is(count, -0) || count < 0, fmtValue = Math.abs(count), singular = fmtValue === 1, lilUnits = units[unit], fmtUnit = narrow ? singular ? lilUnits[1] : lilUnits[2] || lilUnits[1] : singular ? units[unit][0] : unit;
+      return isInPast ? `${fmtValue} ${fmtUnit} ago` : `in ${fmtValue} ${fmtUnit}`;
     }
     function stringifyTokens(splits, tokenToString) {
-      var s2 = "";
-      for (var _iterator = _createForOfIteratorHelperLoose(splits), _step; !(_step = _iterator()).done; ) {
-        var token = _step.value;
+      let s2 = "";
+      for (const token of splits) {
         if (token.literal) {
           s2 += token.val;
         } else {
@@ -17815,7 +18317,7 @@ var require_lib2 = __commonJS({
       }
       return s2;
     }
-    var _macroTokenToFormatOpts = {
+    var macroTokenToFormatOpts = {
       D: DATE_SHORT,
       DD: DATE_MED,
       DDD: DATE_FULL,
@@ -17837,24 +18339,18 @@ var require_lib2 = __commonJS({
       FFF: DATETIME_FULL_WITH_SECONDS,
       FFFF: DATETIME_HUGE_WITH_SECONDS
     };
-    var Formatter = /* @__PURE__ */ function() {
-      Formatter2.create = function create(locale, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        return new Formatter2(locale, opts);
-      };
-      Formatter2.parseFormat = function parseFormat(fmt) {
-        var current = null, currentFull = "", bracketed = false;
-        var splits = [];
-        for (var i = 0; i < fmt.length; i++) {
-          var c = fmt.charAt(i);
+    var Formatter = class {
+      static create(locale, opts = {}) {
+        return new Formatter(locale, opts);
+      }
+      static parseFormat(fmt) {
+        let current = null, currentFull = "", bracketed = false;
+        const splits = [];
+        for (let i = 0; i < fmt.length; i++) {
+          const c = fmt.charAt(i);
           if (c === "'") {
             if (currentFull.length > 0) {
-              splits.push({
-                literal: bracketed,
-                val: currentFull
-              });
+              splits.push({ literal: bracketed, val: currentFull });
             }
             current = null;
             currentFull = "";
@@ -17865,179 +18361,118 @@ var require_lib2 = __commonJS({
             currentFull += c;
           } else {
             if (currentFull.length > 0) {
-              splits.push({
-                literal: false,
-                val: currentFull
-              });
+              splits.push({ literal: false, val: currentFull });
             }
             currentFull = c;
             current = c;
           }
         }
         if (currentFull.length > 0) {
-          splits.push({
-            literal: bracketed,
-            val: currentFull
-          });
+          splits.push({ literal: bracketed, val: currentFull });
         }
         return splits;
-      };
-      Formatter2.macroTokenToFormatOpts = function macroTokenToFormatOpts(token) {
-        return _macroTokenToFormatOpts[token];
-      };
-      function Formatter2(locale, formatOpts) {
+      }
+      static macroTokenToFormatOpts(token) {
+        return macroTokenToFormatOpts[token];
+      }
+      constructor(locale, formatOpts) {
         this.opts = formatOpts;
         this.loc = locale;
         this.systemLoc = null;
       }
-      var _proto = Formatter2.prototype;
-      _proto.formatWithSystemDefault = function formatWithSystemDefault(dt, opts) {
+      formatWithSystemDefault(dt, opts) {
         if (this.systemLoc === null) {
           this.systemLoc = this.loc.redefaultToSystem();
         }
-        var df = this.systemLoc.dtFormatter(dt, _extends({}, this.opts, opts));
+        const df = this.systemLoc.dtFormatter(dt, __spreadValues(__spreadValues({}, this.opts), opts));
         return df.format();
-      };
-      _proto.formatDateTime = function formatDateTime(dt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var df = this.loc.dtFormatter(dt, _extends({}, this.opts, opts));
+      }
+      formatDateTime(dt, opts = {}) {
+        const df = this.loc.dtFormatter(dt, __spreadValues(__spreadValues({}, this.opts), opts));
         return df.format();
-      };
-      _proto.formatDateTimeParts = function formatDateTimeParts(dt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var df = this.loc.dtFormatter(dt, _extends({}, this.opts, opts));
+      }
+      formatDateTimeParts(dt, opts = {}) {
+        const df = this.loc.dtFormatter(dt, __spreadValues(__spreadValues({}, this.opts), opts));
         return df.formatToParts();
-      };
-      _proto.resolvedOptions = function resolvedOptions(dt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var df = this.loc.dtFormatter(dt, _extends({}, this.opts, opts));
+      }
+      formatInterval(interval, opts = {}) {
+        const df = this.loc.dtFormatter(interval.start, __spreadValues(__spreadValues({}, this.opts), opts));
+        return df.dtf.formatRange(interval.start.toJSDate(), interval.end.toJSDate());
+      }
+      resolvedOptions(dt, opts = {}) {
+        const df = this.loc.dtFormatter(dt, __spreadValues(__spreadValues({}, this.opts), opts));
         return df.resolvedOptions();
-      };
-      _proto.num = function num(n2, p) {
-        if (p === void 0) {
-          p = 0;
-        }
+      }
+      num(n2, p = 0) {
         if (this.opts.forceSimple) {
           return padStart(n2, p);
         }
-        var opts = _extends({}, this.opts);
+        const opts = __spreadValues({}, this.opts);
         if (p > 0) {
           opts.padTo = p;
         }
         return this.loc.numberFormatter(opts).format(n2);
-      };
-      _proto.formatDateTimeFromString = function formatDateTimeFromString(dt, fmt) {
-        var _this = this;
-        var knownEnglish = this.loc.listingMode() === "en", useDateTimeFormatter = this.loc.outputCalendar && this.loc.outputCalendar !== "gregory", string = function string2(opts, extract) {
-          return _this.loc.extract(dt, opts, extract);
-        }, formatOffset2 = function formatOffset3(opts) {
+      }
+      formatDateTimeFromString(dt, fmt) {
+        const knownEnglish = this.loc.listingMode() === "en", useDateTimeFormatter = this.loc.outputCalendar && this.loc.outputCalendar !== "gregory", string = (opts, extract) => this.loc.extract(dt, opts, extract), formatOffset2 = (opts) => {
           if (dt.isOffsetFixed && dt.offset === 0 && opts.allowZ) {
             return "Z";
           }
           return dt.isValid ? dt.zone.formatOffset(dt.ts, opts.format) : "";
-        }, meridiem = function meridiem2() {
-          return knownEnglish ? meridiemForDateTime(dt) : string({
-            hour: "numeric",
-            hourCycle: "h12"
-          }, "dayperiod");
-        }, month = function month2(length, standalone) {
-          return knownEnglish ? monthForDateTime(dt, length) : string(standalone ? {
-            month: length
-          } : {
-            month: length,
-            day: "numeric"
-          }, "month");
-        }, weekday = function weekday2(length, standalone) {
-          return knownEnglish ? weekdayForDateTime(dt, length) : string(standalone ? {
-            weekday: length
-          } : {
-            weekday: length,
-            month: "long",
-            day: "numeric"
-          }, "weekday");
-        }, maybeMacro = function maybeMacro2(token) {
-          var formatOpts = Formatter2.macroTokenToFormatOpts(token);
+        }, meridiem = () => knownEnglish ? meridiemForDateTime(dt) : string({ hour: "numeric", hourCycle: "h12" }, "dayperiod"), month = (length, standalone) => knownEnglish ? monthForDateTime(dt, length) : string(standalone ? { month: length } : { month: length, day: "numeric" }, "month"), weekday = (length, standalone) => knownEnglish ? weekdayForDateTime(dt, length) : string(standalone ? { weekday: length } : { weekday: length, month: "long", day: "numeric" }, "weekday"), maybeMacro = (token) => {
+          const formatOpts = Formatter.macroTokenToFormatOpts(token);
           if (formatOpts) {
-            return _this.formatWithSystemDefault(dt, formatOpts);
+            return this.formatWithSystemDefault(dt, formatOpts);
           } else {
             return token;
           }
-        }, era = function era2(length) {
-          return knownEnglish ? eraForDateTime(dt, length) : string({
-            era: length
-          }, "era");
-        }, tokenToString = function tokenToString2(token) {
+        }, era = (length) => knownEnglish ? eraForDateTime(dt, length) : string({ era: length }, "era"), tokenToString = (token) => {
           switch (token) {
             case "S":
-              return _this.num(dt.millisecond);
+              return this.num(dt.millisecond);
             case "u":
             case "SSS":
-              return _this.num(dt.millisecond, 3);
+              return this.num(dt.millisecond, 3);
             case "s":
-              return _this.num(dt.second);
+              return this.num(dt.second);
             case "ss":
-              return _this.num(dt.second, 2);
+              return this.num(dt.second, 2);
             case "uu":
-              return _this.num(Math.floor(dt.millisecond / 10), 2);
+              return this.num(Math.floor(dt.millisecond / 10), 2);
             case "uuu":
-              return _this.num(Math.floor(dt.millisecond / 100));
+              return this.num(Math.floor(dt.millisecond / 100));
             case "m":
-              return _this.num(dt.minute);
+              return this.num(dt.minute);
             case "mm":
-              return _this.num(dt.minute, 2);
+              return this.num(dt.minute, 2);
             case "h":
-              return _this.num(dt.hour % 12 === 0 ? 12 : dt.hour % 12);
+              return this.num(dt.hour % 12 === 0 ? 12 : dt.hour % 12);
             case "hh":
-              return _this.num(dt.hour % 12 === 0 ? 12 : dt.hour % 12, 2);
+              return this.num(dt.hour % 12 === 0 ? 12 : dt.hour % 12, 2);
             case "H":
-              return _this.num(dt.hour);
+              return this.num(dt.hour);
             case "HH":
-              return _this.num(dt.hour, 2);
+              return this.num(dt.hour, 2);
             case "Z":
-              return formatOffset2({
-                format: "narrow",
-                allowZ: _this.opts.allowZ
-              });
+              return formatOffset2({ format: "narrow", allowZ: this.opts.allowZ });
             case "ZZ":
-              return formatOffset2({
-                format: "short",
-                allowZ: _this.opts.allowZ
-              });
+              return formatOffset2({ format: "short", allowZ: this.opts.allowZ });
             case "ZZZ":
-              return formatOffset2({
-                format: "techie",
-                allowZ: _this.opts.allowZ
-              });
+              return formatOffset2({ format: "techie", allowZ: this.opts.allowZ });
             case "ZZZZ":
-              return dt.zone.offsetName(dt.ts, {
-                format: "short",
-                locale: _this.loc.locale
-              });
+              return dt.zone.offsetName(dt.ts, { format: "short", locale: this.loc.locale });
             case "ZZZZZ":
-              return dt.zone.offsetName(dt.ts, {
-                format: "long",
-                locale: _this.loc.locale
-              });
+              return dt.zone.offsetName(dt.ts, { format: "long", locale: this.loc.locale });
             case "z":
               return dt.zoneName;
             case "a":
               return meridiem();
             case "d":
-              return useDateTimeFormatter ? string({
-                day: "numeric"
-              }, "day") : _this.num(dt.day);
+              return useDateTimeFormatter ? string({ day: "numeric" }, "day") : this.num(dt.day);
             case "dd":
-              return useDateTimeFormatter ? string({
-                day: "2-digit"
-              }, "day") : _this.num(dt.day, 2);
+              return useDateTimeFormatter ? string({ day: "2-digit" }, "day") : this.num(dt.day, 2);
             case "c":
-              return _this.num(dt.weekday);
+              return this.num(dt.weekday);
             case "ccc":
               return weekday("short", true);
             case "cccc":
@@ -18045,7 +18480,7 @@ var require_lib2 = __commonJS({
             case "ccccc":
               return weekday("narrow", true);
             case "E":
-              return _this.num(dt.weekday);
+              return this.num(dt.weekday);
             case "EEE":
               return weekday("short", false);
             case "EEEE":
@@ -18053,15 +18488,9 @@ var require_lib2 = __commonJS({
             case "EEEEE":
               return weekday("narrow", false);
             case "L":
-              return useDateTimeFormatter ? string({
-                month: "numeric",
-                day: "numeric"
-              }, "month") : _this.num(dt.month);
+              return useDateTimeFormatter ? string({ month: "numeric", day: "numeric" }, "month") : this.num(dt.month);
             case "LL":
-              return useDateTimeFormatter ? string({
-                month: "2-digit",
-                day: "numeric"
-              }, "month") : _this.num(dt.month, 2);
+              return useDateTimeFormatter ? string({ month: "2-digit", day: "numeric" }, "month") : this.num(dt.month, 2);
             case "LLL":
               return month("short", true);
             case "LLLL":
@@ -18069,13 +18498,9 @@ var require_lib2 = __commonJS({
             case "LLLLL":
               return month("narrow", true);
             case "M":
-              return useDateTimeFormatter ? string({
-                month: "numeric"
-              }, "month") : _this.num(dt.month);
+              return useDateTimeFormatter ? string({ month: "numeric" }, "month") : this.num(dt.month);
             case "MM":
-              return useDateTimeFormatter ? string({
-                month: "2-digit"
-              }, "month") : _this.num(dt.month, 2);
+              return useDateTimeFormatter ? string({ month: "2-digit" }, "month") : this.num(dt.month, 2);
             case "MMM":
               return month("short", false);
             case "MMMM":
@@ -18083,21 +18508,13 @@ var require_lib2 = __commonJS({
             case "MMMMM":
               return month("narrow", false);
             case "y":
-              return useDateTimeFormatter ? string({
-                year: "numeric"
-              }, "year") : _this.num(dt.year);
+              return useDateTimeFormatter ? string({ year: "numeric" }, "year") : this.num(dt.year);
             case "yy":
-              return useDateTimeFormatter ? string({
-                year: "2-digit"
-              }, "year") : _this.num(dt.year.toString().slice(-2), 2);
+              return useDateTimeFormatter ? string({ year: "2-digit" }, "year") : this.num(dt.year.toString().slice(-2), 2);
             case "yyyy":
-              return useDateTimeFormatter ? string({
-                year: "numeric"
-              }, "year") : _this.num(dt.year, 4);
+              return useDateTimeFormatter ? string({ year: "numeric" }, "year") : this.num(dt.year, 4);
             case "yyyyyy":
-              return useDateTimeFormatter ? string({
-                year: "numeric"
-              }, "year") : _this.num(dt.year, 6);
+              return useDateTimeFormatter ? string({ year: "numeric" }, "year") : this.num(dt.year, 6);
             case "G":
               return era("short");
             case "GG":
@@ -18105,34 +18522,33 @@ var require_lib2 = __commonJS({
             case "GGGGG":
               return era("narrow");
             case "kk":
-              return _this.num(dt.weekYear.toString().slice(-2), 2);
+              return this.num(dt.weekYear.toString().slice(-2), 2);
             case "kkkk":
-              return _this.num(dt.weekYear, 4);
+              return this.num(dt.weekYear, 4);
             case "W":
-              return _this.num(dt.weekNumber);
+              return this.num(dt.weekNumber);
             case "WW":
-              return _this.num(dt.weekNumber, 2);
+              return this.num(dt.weekNumber, 2);
             case "o":
-              return _this.num(dt.ordinal);
+              return this.num(dt.ordinal);
             case "ooo":
-              return _this.num(dt.ordinal, 3);
+              return this.num(dt.ordinal, 3);
             case "q":
-              return _this.num(dt.quarter);
+              return this.num(dt.quarter);
             case "qq":
-              return _this.num(dt.quarter, 2);
+              return this.num(dt.quarter, 2);
             case "X":
-              return _this.num(Math.floor(dt.ts / 1e3));
+              return this.num(Math.floor(dt.ts / 1e3));
             case "x":
-              return _this.num(dt.ts);
+              return this.num(dt.ts);
             default:
               return maybeMacro(token);
           }
         };
-        return stringifyTokens(Formatter2.parseFormat(fmt), tokenToString);
-      };
-      _proto.formatDurationFromString = function formatDurationFromString(dur, fmt) {
-        var _this2 = this;
-        var tokenToField = function tokenToField2(token) {
+        return stringifyTokens(Formatter.parseFormat(fmt), tokenToString);
+      }
+      formatDurationFromString(dur, fmt) {
+        const tokenToField = (token) => {
           switch (token[0]) {
             case "S":
               return "millisecond";
@@ -18153,951 +18569,57 @@ var require_lib2 = __commonJS({
             default:
               return null;
           }
-        }, tokenToString = function tokenToString2(lildur) {
-          return function(token) {
-            var mapped = tokenToField(token);
-            if (mapped) {
-              return _this2.num(lildur.get(mapped), token.length);
-            } else {
-              return token;
-            }
-          };
-        }, tokens = Formatter2.parseFormat(fmt), realTokens = tokens.reduce(function(found, _ref) {
-          var literal = _ref.literal, val = _ref.val;
-          return literal ? found : found.concat(val);
-        }, []), collapsed = dur.shiftTo.apply(dur, realTokens.map(tokenToField).filter(function(t) {
-          return t;
-        }));
+        }, tokenToString = (lildur) => (token) => {
+          const mapped = tokenToField(token);
+          if (mapped) {
+            return this.num(lildur.get(mapped), token.length);
+          } else {
+            return token;
+          }
+        }, tokens = Formatter.parseFormat(fmt), realTokens = tokens.reduce((found, { literal, val }) => literal ? found : found.concat(val), []), collapsed = dur.shiftTo(...realTokens.map(tokenToField).filter((t) => t));
         return stringifyTokens(tokens, tokenToString(collapsed));
-      };
-      return Formatter2;
-    }();
-    var Invalid = /* @__PURE__ */ function() {
-      function Invalid2(reason, explanation) {
+      }
+    };
+    var Invalid = class {
+      constructor(reason, explanation) {
         this.reason = reason;
         this.explanation = explanation;
       }
-      var _proto = Invalid2.prototype;
-      _proto.toMessage = function toMessage() {
+      toMessage() {
         if (this.explanation) {
-          return this.reason + ": " + this.explanation;
+          return `${this.reason}: ${this.explanation}`;
         } else {
           return this.reason;
         }
-      };
-      return Invalid2;
-    }();
-    var Zone = /* @__PURE__ */ function() {
-      function Zone2() {
       }
-      var _proto = Zone2.prototype;
-      _proto.offsetName = function offsetName(ts, opts) {
-        throw new ZoneIsAbstractError();
-      };
-      _proto.formatOffset = function formatOffset2(ts, format) {
-        throw new ZoneIsAbstractError();
-      };
-      _proto.offset = function offset2(ts) {
-        throw new ZoneIsAbstractError();
-      };
-      _proto.equals = function equals(otherZone) {
-        throw new ZoneIsAbstractError();
-      };
-      _createClass(Zone2, [{
-        key: "type",
-        get: function get() {
-          throw new ZoneIsAbstractError();
-        }
-      }, {
-        key: "name",
-        get: function get() {
-          throw new ZoneIsAbstractError();
-        }
-      }, {
-        key: "ianaName",
-        get: function get() {
-          return this.name;
-        }
-      }, {
-        key: "isUniversal",
-        get: function get() {
-          throw new ZoneIsAbstractError();
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          throw new ZoneIsAbstractError();
-        }
-      }]);
-      return Zone2;
-    }();
-    var singleton$1 = null;
-    var SystemZone = /* @__PURE__ */ function(_Zone) {
-      _inheritsLoose(SystemZone2, _Zone);
-      function SystemZone2() {
-        return _Zone.apply(this, arguments) || this;
-      }
-      var _proto = SystemZone2.prototype;
-      _proto.offsetName = function offsetName(ts, _ref) {
-        var format = _ref.format, locale = _ref.locale;
-        return parseZoneInfo(ts, format, locale);
-      };
-      _proto.formatOffset = function formatOffset$1(ts, format) {
-        return formatOffset(this.offset(ts), format);
-      };
-      _proto.offset = function offset2(ts) {
-        return -new Date(ts).getTimezoneOffset();
-      };
-      _proto.equals = function equals(otherZone) {
-        return otherZone.type === "system";
-      };
-      _createClass(SystemZone2, [{
-        key: "type",
-        get: function get() {
-          return "system";
-        }
-      }, {
-        key: "name",
-        get: function get() {
-          return new Intl.DateTimeFormat().resolvedOptions().timeZone;
-        }
-      }, {
-        key: "isUniversal",
-        get: function get() {
-          return false;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return true;
-        }
-      }], [{
-        key: "instance",
-        get: function get() {
-          if (singleton$1 === null) {
-            singleton$1 = new SystemZone2();
-          }
-          return singleton$1;
-        }
-      }]);
-      return SystemZone2;
-    }(Zone);
-    var dtfCache = {};
-    function makeDTF(zone) {
-      if (!dtfCache[zone]) {
-        dtfCache[zone] = new Intl.DateTimeFormat("en-US", {
-          hour12: false,
-          timeZone: zone,
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          era: "short"
-        });
-      }
-      return dtfCache[zone];
-    }
-    var typeToPos = {
-      year: 0,
-      month: 1,
-      day: 2,
-      era: 3,
-      hour: 4,
-      minute: 5,
-      second: 6
     };
-    function hackyOffset(dtf, date) {
-      var formatted = dtf.format(date).replace(/\u200E/g, ""), parsed = /(\d+)\/(\d+)\/(\d+) (AD|BC),? (\d+):(\d+):(\d+)/.exec(formatted), fMonth = parsed[1], fDay = parsed[2], fYear = parsed[3], fadOrBc = parsed[4], fHour = parsed[5], fMinute = parsed[6], fSecond = parsed[7];
-      return [fYear, fMonth, fDay, fadOrBc, fHour, fMinute, fSecond];
+    var ianaRegex = /[A-Za-z_+-]{1,256}(?::?\/[A-Za-z0-9_+-]{1,256}(?:\/[A-Za-z0-9_+-]{1,256})?)?/;
+    function combineRegexes(...regexes) {
+      const full = regexes.reduce((f, r) => f + r.source, "");
+      return RegExp(`^${full}$`);
     }
-    function partsOffset(dtf, date) {
-      var formatted = dtf.formatToParts(date);
-      var filled = [];
-      for (var i = 0; i < formatted.length; i++) {
-        var _formatted$i = formatted[i], type = _formatted$i.type, value = _formatted$i.value;
-        var pos = typeToPos[type];
-        if (type === "era") {
-          filled[pos] = value;
-        } else if (!isUndefined(pos)) {
-          filled[pos] = parseInt(value, 10);
-        }
-      }
-      return filled;
+    function combineExtractors(...extractors) {
+      return (m) => extractors.reduce(([mergedVals, mergedZone, cursor], ex) => {
+        const [val, zone, next] = ex(m, cursor);
+        return [__spreadValues(__spreadValues({}, mergedVals), val), zone || mergedZone, next];
+      }, [{}, null, 1]).slice(0, 2);
     }
-    var ianaZoneCache = {};
-    var IANAZone = /* @__PURE__ */ function(_Zone) {
-      _inheritsLoose(IANAZone2, _Zone);
-      IANAZone2.create = function create(name) {
-        if (!ianaZoneCache[name]) {
-          ianaZoneCache[name] = new IANAZone2(name);
-        }
-        return ianaZoneCache[name];
-      };
-      IANAZone2.resetCache = function resetCache() {
-        ianaZoneCache = {};
-        dtfCache = {};
-      };
-      IANAZone2.isValidSpecifier = function isValidSpecifier(s2) {
-        return this.isValidZone(s2);
-      };
-      IANAZone2.isValidZone = function isValidZone(zone) {
-        if (!zone) {
-          return false;
-        }
-        try {
-          new Intl.DateTimeFormat("en-US", {
-            timeZone: zone
-          }).format();
-          return true;
-        } catch (e) {
-          return false;
-        }
-      };
-      function IANAZone2(name) {
-        var _this;
-        _this = _Zone.call(this) || this;
-        _this.zoneName = name;
-        _this.valid = IANAZone2.isValidZone(name);
-        return _this;
-      }
-      var _proto = IANAZone2.prototype;
-      _proto.offsetName = function offsetName(ts, _ref) {
-        var format = _ref.format, locale = _ref.locale;
-        return parseZoneInfo(ts, format, locale, this.name);
-      };
-      _proto.formatOffset = function formatOffset$1(ts, format) {
-        return formatOffset(this.offset(ts), format);
-      };
-      _proto.offset = function offset2(ts) {
-        var date = new Date(ts);
-        if (isNaN(date))
-          return NaN;
-        var dtf = makeDTF(this.name);
-        var _ref2 = dtf.formatToParts ? partsOffset(dtf, date) : hackyOffset(dtf, date), year = _ref2[0], month = _ref2[1], day = _ref2[2], adOrBc = _ref2[3], hour = _ref2[4], minute = _ref2[5], second = _ref2[6];
-        if (adOrBc === "BC") {
-          year = -Math.abs(year) + 1;
-        }
-        var adjustedHour = hour === 24 ? 0 : hour;
-        var asUTC = objToLocalTS({
-          year,
-          month,
-          day,
-          hour: adjustedHour,
-          minute,
-          second,
-          millisecond: 0
-        });
-        var asTS = +date;
-        var over = asTS % 1e3;
-        asTS -= over >= 0 ? over : 1e3 + over;
-        return (asUTC - asTS) / (60 * 1e3);
-      };
-      _proto.equals = function equals(otherZone) {
-        return otherZone.type === "iana" && otherZone.name === this.name;
-      };
-      _createClass(IANAZone2, [{
-        key: "type",
-        get: function get() {
-          return "iana";
-        }
-      }, {
-        key: "name",
-        get: function get() {
-          return this.zoneName;
-        }
-      }, {
-        key: "isUniversal",
-        get: function get() {
-          return false;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return this.valid;
-        }
-      }]);
-      return IANAZone2;
-    }(Zone);
-    var singleton = null;
-    var FixedOffsetZone = /* @__PURE__ */ function(_Zone) {
-      _inheritsLoose(FixedOffsetZone2, _Zone);
-      FixedOffsetZone2.instance = function instance(offset2) {
-        return offset2 === 0 ? FixedOffsetZone2.utcInstance : new FixedOffsetZone2(offset2);
-      };
-      FixedOffsetZone2.parseSpecifier = function parseSpecifier(s2) {
-        if (s2) {
-          var r = s2.match(/^utc(?:([+-]\d{1,2})(?::(\d{2}))?)?$/i);
-          if (r) {
-            return new FixedOffsetZone2(signedOffset(r[1], r[2]));
-          }
-        }
-        return null;
-      };
-      function FixedOffsetZone2(offset2) {
-        var _this;
-        _this = _Zone.call(this) || this;
-        _this.fixed = offset2;
-        return _this;
-      }
-      var _proto = FixedOffsetZone2.prototype;
-      _proto.offsetName = function offsetName() {
-        return this.name;
-      };
-      _proto.formatOffset = function formatOffset$1(ts, format) {
-        return formatOffset(this.fixed, format);
-      };
-      _proto.offset = function offset2() {
-        return this.fixed;
-      };
-      _proto.equals = function equals(otherZone) {
-        return otherZone.type === "fixed" && otherZone.fixed === this.fixed;
-      };
-      _createClass(FixedOffsetZone2, [{
-        key: "type",
-        get: function get() {
-          return "fixed";
-        }
-      }, {
-        key: "name",
-        get: function get() {
-          return this.fixed === 0 ? "UTC" : "UTC" + formatOffset(this.fixed, "narrow");
-        }
-      }, {
-        key: "ianaName",
-        get: function get() {
-          if (this.fixed === 0) {
-            return "Etc/UTC";
-          } else {
-            return "Etc/GMT" + formatOffset(-this.fixed, "narrow");
-          }
-        }
-      }, {
-        key: "isUniversal",
-        get: function get() {
-          return true;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return true;
-        }
-      }], [{
-        key: "utcInstance",
-        get: function get() {
-          if (singleton === null) {
-            singleton = new FixedOffsetZone2(0);
-          }
-          return singleton;
-        }
-      }]);
-      return FixedOffsetZone2;
-    }(Zone);
-    var InvalidZone = /* @__PURE__ */ function(_Zone) {
-      _inheritsLoose(InvalidZone2, _Zone);
-      function InvalidZone2(zoneName) {
-        var _this;
-        _this = _Zone.call(this) || this;
-        _this.zoneName = zoneName;
-        return _this;
-      }
-      var _proto = InvalidZone2.prototype;
-      _proto.offsetName = function offsetName() {
-        return null;
-      };
-      _proto.formatOffset = function formatOffset2() {
-        return "";
-      };
-      _proto.offset = function offset2() {
-        return NaN;
-      };
-      _proto.equals = function equals() {
-        return false;
-      };
-      _createClass(InvalidZone2, [{
-        key: "type",
-        get: function get() {
-          return "invalid";
-        }
-      }, {
-        key: "name",
-        get: function get() {
-          return this.zoneName;
-        }
-      }, {
-        key: "isUniversal",
-        get: function get() {
-          return false;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return false;
-        }
-      }]);
-      return InvalidZone2;
-    }(Zone);
-    function normalizeZone(input, defaultZone2) {
-      if (isUndefined(input) || input === null) {
-        return defaultZone2;
-      } else if (input instanceof Zone) {
-        return input;
-      } else if (isString(input)) {
-        var lowered = input.toLowerCase();
-        if (lowered === "local" || lowered === "system")
-          return defaultZone2;
-        else if (lowered === "utc" || lowered === "gmt")
-          return FixedOffsetZone.utcInstance;
-        else
-          return FixedOffsetZone.parseSpecifier(lowered) || IANAZone.create(input);
-      } else if (isNumber(input)) {
-        return FixedOffsetZone.instance(input);
-      } else if (typeof input === "object" && input.offset && typeof input.offset === "number") {
-        return input;
-      } else {
-        return new InvalidZone(input);
-      }
-    }
-    var now = function now2() {
-      return Date.now();
-    };
-    var defaultZone = "system";
-    var defaultLocale = null;
-    var defaultNumberingSystem = null;
-    var defaultOutputCalendar = null;
-    var throwOnInvalid;
-    var Settings = /* @__PURE__ */ function() {
-      function Settings2() {
-      }
-      Settings2.resetCaches = function resetCaches() {
-        Locale.resetCache();
-        IANAZone.resetCache();
-      };
-      _createClass(Settings2, null, [{
-        key: "now",
-        get: function get() {
-          return now;
-        },
-        set: function set(n2) {
-          now = n2;
-        }
-      }, {
-        key: "defaultZone",
-        get: function get() {
-          return normalizeZone(defaultZone, SystemZone.instance);
-        },
-        set: function set(zone) {
-          defaultZone = zone;
-        }
-      }, {
-        key: "defaultLocale",
-        get: function get() {
-          return defaultLocale;
-        },
-        set: function set(locale) {
-          defaultLocale = locale;
-        }
-      }, {
-        key: "defaultNumberingSystem",
-        get: function get() {
-          return defaultNumberingSystem;
-        },
-        set: function set(numberingSystem) {
-          defaultNumberingSystem = numberingSystem;
-        }
-      }, {
-        key: "defaultOutputCalendar",
-        get: function get() {
-          return defaultOutputCalendar;
-        },
-        set: function set(outputCalendar) {
-          defaultOutputCalendar = outputCalendar;
-        }
-      }, {
-        key: "throwOnInvalid",
-        get: function get() {
-          return throwOnInvalid;
-        },
-        set: function set(t) {
-          throwOnInvalid = t;
-        }
-      }]);
-      return Settings2;
-    }();
-    var _excluded = ["base"];
-    var _excluded2 = ["padTo", "floor"];
-    var intlLFCache = {};
-    function getCachedLF(locString, opts) {
-      if (opts === void 0) {
-        opts = {};
-      }
-      var key = JSON.stringify([locString, opts]);
-      var dtf = intlLFCache[key];
-      if (!dtf) {
-        dtf = new Intl.ListFormat(locString, opts);
-        intlLFCache[key] = dtf;
-      }
-      return dtf;
-    }
-    var intlDTCache = {};
-    function getCachedDTF(locString, opts) {
-      if (opts === void 0) {
-        opts = {};
-      }
-      var key = JSON.stringify([locString, opts]);
-      var dtf = intlDTCache[key];
-      if (!dtf) {
-        dtf = new Intl.DateTimeFormat(locString, opts);
-        intlDTCache[key] = dtf;
-      }
-      return dtf;
-    }
-    var intlNumCache = {};
-    function getCachedINF(locString, opts) {
-      if (opts === void 0) {
-        opts = {};
-      }
-      var key = JSON.stringify([locString, opts]);
-      var inf = intlNumCache[key];
-      if (!inf) {
-        inf = new Intl.NumberFormat(locString, opts);
-        intlNumCache[key] = inf;
-      }
-      return inf;
-    }
-    var intlRelCache = {};
-    function getCachedRTF(locString, opts) {
-      if (opts === void 0) {
-        opts = {};
-      }
-      var _opts = opts;
-      _opts.base;
-      var cacheKeyOpts = _objectWithoutPropertiesLoose(_opts, _excluded);
-      var key = JSON.stringify([locString, cacheKeyOpts]);
-      var inf = intlRelCache[key];
-      if (!inf) {
-        inf = new Intl.RelativeTimeFormat(locString, opts);
-        intlRelCache[key] = inf;
-      }
-      return inf;
-    }
-    var sysLocaleCache = null;
-    function systemLocale() {
-      if (sysLocaleCache) {
-        return sysLocaleCache;
-      } else {
-        sysLocaleCache = new Intl.DateTimeFormat().resolvedOptions().locale;
-        return sysLocaleCache;
-      }
-    }
-    function parseLocaleString(localeStr) {
-      var uIndex = localeStr.indexOf("-u-");
-      if (uIndex === -1) {
-        return [localeStr];
-      } else {
-        var options;
-        var smaller = localeStr.substring(0, uIndex);
-        try {
-          options = getCachedDTF(localeStr).resolvedOptions();
-        } catch (e) {
-          options = getCachedDTF(smaller).resolvedOptions();
-        }
-        var _options = options, numberingSystem = _options.numberingSystem, calendar = _options.calendar;
-        return [smaller, numberingSystem, calendar];
-      }
-    }
-    function intlConfigString(localeStr, numberingSystem, outputCalendar) {
-      if (outputCalendar || numberingSystem) {
-        localeStr += "-u";
-        if (outputCalendar) {
-          localeStr += "-ca-" + outputCalendar;
-        }
-        if (numberingSystem) {
-          localeStr += "-nu-" + numberingSystem;
-        }
-        return localeStr;
-      } else {
-        return localeStr;
-      }
-    }
-    function mapMonths(f) {
-      var ms = [];
-      for (var i = 1; i <= 12; i++) {
-        var dt = DateTime.utc(2016, i, 1);
-        ms.push(f(dt));
-      }
-      return ms;
-    }
-    function mapWeekdays(f) {
-      var ms = [];
-      for (var i = 1; i <= 7; i++) {
-        var dt = DateTime.utc(2016, 11, 13 + i);
-        ms.push(f(dt));
-      }
-      return ms;
-    }
-    function listStuff(loc, length, defaultOK, englishFn, intlFn) {
-      var mode = loc.listingMode(defaultOK);
-      if (mode === "error") {
-        return null;
-      } else if (mode === "en") {
-        return englishFn(length);
-      } else {
-        return intlFn(length);
-      }
-    }
-    function supportsFastNumbers(loc) {
-      if (loc.numberingSystem && loc.numberingSystem !== "latn") {
-        return false;
-      } else {
-        return loc.numberingSystem === "latn" || !loc.locale || loc.locale.startsWith("en") || new Intl.DateTimeFormat(loc.intl).resolvedOptions().numberingSystem === "latn";
-      }
-    }
-    var PolyNumberFormatter = /* @__PURE__ */ function() {
-      function PolyNumberFormatter2(intl, forceSimple, opts) {
-        this.padTo = opts.padTo || 0;
-        this.floor = opts.floor || false;
-        opts.padTo;
-        opts.floor;
-        var otherOpts = _objectWithoutPropertiesLoose(opts, _excluded2);
-        if (!forceSimple || Object.keys(otherOpts).length > 0) {
-          var intlOpts = _extends({
-            useGrouping: false
-          }, opts);
-          if (opts.padTo > 0)
-            intlOpts.minimumIntegerDigits = opts.padTo;
-          this.inf = getCachedINF(intl, intlOpts);
-        }
-      }
-      var _proto = PolyNumberFormatter2.prototype;
-      _proto.format = function format(i) {
-        if (this.inf) {
-          var fixed = this.floor ? Math.floor(i) : i;
-          return this.inf.format(fixed);
-        } else {
-          var _fixed = this.floor ? Math.floor(i) : roundTo(i, 3);
-          return padStart(_fixed, this.padTo);
-        }
-      };
-      return PolyNumberFormatter2;
-    }();
-    var PolyDateFormatter = /* @__PURE__ */ function() {
-      function PolyDateFormatter2(dt, intl, opts) {
-        this.opts = opts;
-        var z;
-        if (dt.zone.isUniversal) {
-          var gmtOffset = -1 * (dt.offset / 60);
-          var offsetZ = gmtOffset >= 0 ? "Etc/GMT+" + gmtOffset : "Etc/GMT" + gmtOffset;
-          if (dt.offset !== 0 && IANAZone.create(offsetZ).valid) {
-            z = offsetZ;
-            this.dt = dt;
-          } else {
-            z = "UTC";
-            if (opts.timeZoneName) {
-              this.dt = dt;
-            } else {
-              this.dt = dt.offset === 0 ? dt : DateTime.fromMillis(dt.ts + dt.offset * 60 * 1e3);
-            }
-          }
-        } else if (dt.zone.type === "system") {
-          this.dt = dt;
-        } else {
-          this.dt = dt;
-          z = dt.zone.name;
-        }
-        var intlOpts = _extends({}, this.opts);
-        if (z) {
-          intlOpts.timeZone = z;
-        }
-        this.dtf = getCachedDTF(intl, intlOpts);
-      }
-      var _proto2 = PolyDateFormatter2.prototype;
-      _proto2.format = function format() {
-        return this.dtf.format(this.dt.toJSDate());
-      };
-      _proto2.formatToParts = function formatToParts() {
-        return this.dtf.formatToParts(this.dt.toJSDate());
-      };
-      _proto2.resolvedOptions = function resolvedOptions() {
-        return this.dtf.resolvedOptions();
-      };
-      return PolyDateFormatter2;
-    }();
-    var PolyRelFormatter = /* @__PURE__ */ function() {
-      function PolyRelFormatter2(intl, isEnglish, opts) {
-        this.opts = _extends({
-          style: "long"
-        }, opts);
-        if (!isEnglish && hasRelative()) {
-          this.rtf = getCachedRTF(intl, opts);
-        }
-      }
-      var _proto3 = PolyRelFormatter2.prototype;
-      _proto3.format = function format(count, unit) {
-        if (this.rtf) {
-          return this.rtf.format(count, unit);
-        } else {
-          return formatRelativeTime(unit, count, this.opts.numeric, this.opts.style !== "long");
-        }
-      };
-      _proto3.formatToParts = function formatToParts(count, unit) {
-        if (this.rtf) {
-          return this.rtf.formatToParts(count, unit);
-        } else {
-          return [];
-        }
-      };
-      return PolyRelFormatter2;
-    }();
-    var Locale = /* @__PURE__ */ function() {
-      Locale2.fromOpts = function fromOpts(opts) {
-        return Locale2.create(opts.locale, opts.numberingSystem, opts.outputCalendar, opts.defaultToEN);
-      };
-      Locale2.create = function create(locale, numberingSystem, outputCalendar, defaultToEN) {
-        if (defaultToEN === void 0) {
-          defaultToEN = false;
-        }
-        var specifiedLocale = locale || Settings.defaultLocale;
-        var localeR = specifiedLocale || (defaultToEN ? "en-US" : systemLocale());
-        var numberingSystemR = numberingSystem || Settings.defaultNumberingSystem;
-        var outputCalendarR = outputCalendar || Settings.defaultOutputCalendar;
-        return new Locale2(localeR, numberingSystemR, outputCalendarR, specifiedLocale);
-      };
-      Locale2.resetCache = function resetCache() {
-        sysLocaleCache = null;
-        intlDTCache = {};
-        intlNumCache = {};
-        intlRelCache = {};
-      };
-      Locale2.fromObject = function fromObject(_temp) {
-        var _ref = _temp === void 0 ? {} : _temp, locale = _ref.locale, numberingSystem = _ref.numberingSystem, outputCalendar = _ref.outputCalendar;
-        return Locale2.create(locale, numberingSystem, outputCalendar);
-      };
-      function Locale2(locale, numbering, outputCalendar, specifiedLocale) {
-        var _parseLocaleString = parseLocaleString(locale), parsedLocale = _parseLocaleString[0], parsedNumberingSystem = _parseLocaleString[1], parsedOutputCalendar = _parseLocaleString[2];
-        this.locale = parsedLocale;
-        this.numberingSystem = numbering || parsedNumberingSystem || null;
-        this.outputCalendar = outputCalendar || parsedOutputCalendar || null;
-        this.intl = intlConfigString(this.locale, this.numberingSystem, this.outputCalendar);
-        this.weekdaysCache = {
-          format: {},
-          standalone: {}
-        };
-        this.monthsCache = {
-          format: {},
-          standalone: {}
-        };
-        this.meridiemCache = null;
-        this.eraCache = {};
-        this.specifiedLocale = specifiedLocale;
-        this.fastNumbersCached = null;
-      }
-      var _proto4 = Locale2.prototype;
-      _proto4.listingMode = function listingMode() {
-        var isActuallyEn = this.isEnglish();
-        var hasNoWeirdness = (this.numberingSystem === null || this.numberingSystem === "latn") && (this.outputCalendar === null || this.outputCalendar === "gregory");
-        return isActuallyEn && hasNoWeirdness ? "en" : "intl";
-      };
-      _proto4.clone = function clone2(alts) {
-        if (!alts || Object.getOwnPropertyNames(alts).length === 0) {
-          return this;
-        } else {
-          return Locale2.create(alts.locale || this.specifiedLocale, alts.numberingSystem || this.numberingSystem, alts.outputCalendar || this.outputCalendar, alts.defaultToEN || false);
-        }
-      };
-      _proto4.redefaultToEN = function redefaultToEN(alts) {
-        if (alts === void 0) {
-          alts = {};
-        }
-        return this.clone(_extends({}, alts, {
-          defaultToEN: true
-        }));
-      };
-      _proto4.redefaultToSystem = function redefaultToSystem(alts) {
-        if (alts === void 0) {
-          alts = {};
-        }
-        return this.clone(_extends({}, alts, {
-          defaultToEN: false
-        }));
-      };
-      _proto4.months = function months$1(length, format, defaultOK) {
-        var _this = this;
-        if (format === void 0) {
-          format = false;
-        }
-        if (defaultOK === void 0) {
-          defaultOK = true;
-        }
-        return listStuff(this, length, defaultOK, months, function() {
-          var intl = format ? {
-            month: length,
-            day: "numeric"
-          } : {
-            month: length
-          }, formatStr = format ? "format" : "standalone";
-          if (!_this.monthsCache[formatStr][length]) {
-            _this.monthsCache[formatStr][length] = mapMonths(function(dt) {
-              return _this.extract(dt, intl, "month");
-            });
-          }
-          return _this.monthsCache[formatStr][length];
-        });
-      };
-      _proto4.weekdays = function weekdays$1(length, format, defaultOK) {
-        var _this2 = this;
-        if (format === void 0) {
-          format = false;
-        }
-        if (defaultOK === void 0) {
-          defaultOK = true;
-        }
-        return listStuff(this, length, defaultOK, weekdays, function() {
-          var intl = format ? {
-            weekday: length,
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          } : {
-            weekday: length
-          }, formatStr = format ? "format" : "standalone";
-          if (!_this2.weekdaysCache[formatStr][length]) {
-            _this2.weekdaysCache[formatStr][length] = mapWeekdays(function(dt) {
-              return _this2.extract(dt, intl, "weekday");
-            });
-          }
-          return _this2.weekdaysCache[formatStr][length];
-        });
-      };
-      _proto4.meridiems = function meridiems$1(defaultOK) {
-        var _this3 = this;
-        if (defaultOK === void 0) {
-          defaultOK = true;
-        }
-        return listStuff(this, void 0, defaultOK, function() {
-          return meridiems;
-        }, function() {
-          if (!_this3.meridiemCache) {
-            var intl = {
-              hour: "numeric",
-              hourCycle: "h12"
-            };
-            _this3.meridiemCache = [DateTime.utc(2016, 11, 13, 9), DateTime.utc(2016, 11, 13, 19)].map(function(dt) {
-              return _this3.extract(dt, intl, "dayperiod");
-            });
-          }
-          return _this3.meridiemCache;
-        });
-      };
-      _proto4.eras = function eras$1(length, defaultOK) {
-        var _this4 = this;
-        if (defaultOK === void 0) {
-          defaultOK = true;
-        }
-        return listStuff(this, length, defaultOK, eras, function() {
-          var intl = {
-            era: length
-          };
-          if (!_this4.eraCache[length]) {
-            _this4.eraCache[length] = [DateTime.utc(-40, 1, 1), DateTime.utc(2017, 1, 1)].map(function(dt) {
-              return _this4.extract(dt, intl, "era");
-            });
-          }
-          return _this4.eraCache[length];
-        });
-      };
-      _proto4.extract = function extract(dt, intlOpts, field) {
-        var df = this.dtFormatter(dt, intlOpts), results = df.formatToParts(), matching = results.find(function(m) {
-          return m.type.toLowerCase() === field;
-        });
-        return matching ? matching.value : null;
-      };
-      _proto4.numberFormatter = function numberFormatter(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        return new PolyNumberFormatter(this.intl, opts.forceSimple || this.fastNumbers, opts);
-      };
-      _proto4.dtFormatter = function dtFormatter(dt, intlOpts) {
-        if (intlOpts === void 0) {
-          intlOpts = {};
-        }
-        return new PolyDateFormatter(dt, this.intl, intlOpts);
-      };
-      _proto4.relFormatter = function relFormatter(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        return new PolyRelFormatter(this.intl, this.isEnglish(), opts);
-      };
-      _proto4.listFormatter = function listFormatter(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        return getCachedLF(this.intl, opts);
-      };
-      _proto4.isEnglish = function isEnglish() {
-        return this.locale === "en" || this.locale.toLowerCase() === "en-us" || new Intl.DateTimeFormat(this.intl).resolvedOptions().locale.startsWith("en-us");
-      };
-      _proto4.equals = function equals(other) {
-        return this.locale === other.locale && this.numberingSystem === other.numberingSystem && this.outputCalendar === other.outputCalendar;
-      };
-      _createClass(Locale2, [{
-        key: "fastNumbers",
-        get: function get() {
-          if (this.fastNumbersCached == null) {
-            this.fastNumbersCached = supportsFastNumbers(this);
-          }
-          return this.fastNumbersCached;
-        }
-      }]);
-      return Locale2;
-    }();
-    function combineRegexes() {
-      for (var _len = arguments.length, regexes = new Array(_len), _key = 0; _key < _len; _key++) {
-        regexes[_key] = arguments[_key];
-      }
-      var full = regexes.reduce(function(f, r) {
-        return f + r.source;
-      }, "");
-      return RegExp("^" + full + "$");
-    }
-    function combineExtractors() {
-      for (var _len2 = arguments.length, extractors = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        extractors[_key2] = arguments[_key2];
-      }
-      return function(m) {
-        return extractors.reduce(function(_ref, ex) {
-          var mergedVals = _ref[0], mergedZone = _ref[1], cursor = _ref[2];
-          var _ex = ex(m, cursor), val = _ex[0], zone = _ex[1], next = _ex[2];
-          return [_extends({}, mergedVals, val), zone || mergedZone, next];
-        }, [{}, null, 1]).slice(0, 2);
-      };
-    }
-    function parse(s2) {
+    function parse(s2, ...patterns) {
       if (s2 == null) {
         return [null, null];
       }
-      for (var _len3 = arguments.length, patterns = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
-        patterns[_key3 - 1] = arguments[_key3];
-      }
-      for (var _i = 0, _patterns = patterns; _i < _patterns.length; _i++) {
-        var _patterns$_i = _patterns[_i], regex = _patterns$_i[0], extractor = _patterns$_i[1];
-        var m = regex.exec(s2);
+      for (const [regex, extractor] of patterns) {
+        const m = regex.exec(s2);
         if (m) {
           return extractor(m);
         }
       }
       return [null, null];
     }
-    function simpleParse() {
-      for (var _len4 = arguments.length, keys = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-        keys[_key4] = arguments[_key4];
-      }
-      return function(match2, cursor) {
-        var ret = {};
-        var i;
+    function simpleParse(...keys) {
+      return (match2, cursor) => {
+        const ret = {};
+        let i;
         for (i = 0; i < keys.length; i++) {
           ret[keys[i]] = parseInteger(match2[cursor + i]);
         }
@@ -19105,24 +18627,24 @@ var require_lib2 = __commonJS({
       };
     }
     var offsetRegex = /(?:(Z)|([+-]\d\d)(?::?(\d\d))?)/;
-    var isoExtendedZone = "(?:" + offsetRegex.source + "?(?:\\[(" + ianaRegex.source + ")\\])?)?";
+    var isoExtendedZone = `(?:${offsetRegex.source}?(?:\\[(${ianaRegex.source})\\])?)?`;
     var isoTimeBaseRegex = /(\d\d)(?::?(\d\d)(?::?(\d\d)(?:[.,](\d{1,30}))?)?)?/;
-    var isoTimeRegex = RegExp("" + isoTimeBaseRegex.source + isoExtendedZone);
-    var isoTimeExtensionRegex = RegExp("(?:T" + isoTimeRegex.source + ")?");
+    var isoTimeRegex = RegExp(`${isoTimeBaseRegex.source}${isoExtendedZone}`);
+    var isoTimeExtensionRegex = RegExp(`(?:T${isoTimeRegex.source})?`);
     var isoYmdRegex = /([+-]\d{6}|\d{4})(?:-?(\d\d)(?:-?(\d\d))?)?/;
     var isoWeekRegex = /(\d{4})-?W(\d\d)(?:-?(\d))?/;
     var isoOrdinalRegex = /(\d{4})-?(\d{3})/;
     var extractISOWeekData = simpleParse("weekYear", "weekNumber", "weekDay");
     var extractISOOrdinalData = simpleParse("year", "ordinal");
     var sqlYmdRegex = /(\d{4})-(\d\d)-(\d\d)/;
-    var sqlTimeRegex = RegExp(isoTimeBaseRegex.source + " ?(?:" + offsetRegex.source + "|(" + ianaRegex.source + "))?");
-    var sqlTimeExtensionRegex = RegExp("(?: " + sqlTimeRegex.source + ")?");
+    var sqlTimeRegex = RegExp(`${isoTimeBaseRegex.source} ?(?:${offsetRegex.source}|(${ianaRegex.source}))?`);
+    var sqlTimeExtensionRegex = RegExp(`(?: ${sqlTimeRegex.source})?`);
     function int(match2, pos, fallback) {
-      var m = match2[pos];
+      const m = match2[pos];
       return isUndefined(m) ? fallback : parseInteger(m);
     }
     function extractISOYmd(match2, cursor) {
-      var item = {
+      const item = {
         year: int(match2, cursor),
         month: int(match2, cursor + 1, 1),
         day: int(match2, cursor + 2, 1)
@@ -19130,7 +18652,7 @@ var require_lib2 = __commonJS({
       return [item, null, cursor + 3];
     }
     function extractISOTime(match2, cursor) {
-      var item = {
+      const item = {
         hours: int(match2, cursor, 0),
         minutes: int(match2, cursor + 1, 0),
         seconds: int(match2, cursor + 2, 0),
@@ -19139,35 +18661,32 @@ var require_lib2 = __commonJS({
       return [item, null, cursor + 4];
     }
     function extractISOOffset(match2, cursor) {
-      var local = !match2[cursor] && !match2[cursor + 1], fullOffset = signedOffset(match2[cursor + 1], match2[cursor + 2]), zone = local ? null : FixedOffsetZone.instance(fullOffset);
+      const local = !match2[cursor] && !match2[cursor + 1], fullOffset = signedOffset(match2[cursor + 1], match2[cursor + 2]), zone = local ? null : FixedOffsetZone.instance(fullOffset);
       return [{}, zone, cursor + 3];
     }
     function extractIANAZone(match2, cursor) {
-      var zone = match2[cursor] ? IANAZone.create(match2[cursor]) : null;
+      const zone = match2[cursor] ? IANAZone.create(match2[cursor]) : null;
       return [{}, zone, cursor + 1];
     }
-    var isoTimeOnly = RegExp("^T?" + isoTimeBaseRegex.source + "$");
-    var isoDuration = /^-?P(?:(?:(-?\d{1,9}(?:\.\d{1,9})?)Y)?(?:(-?\d{1,9}(?:\.\d{1,9})?)M)?(?:(-?\d{1,9}(?:\.\d{1,9})?)W)?(?:(-?\d{1,9}(?:\.\d{1,9})?)D)?(?:T(?:(-?\d{1,9}(?:\.\d{1,9})?)H)?(?:(-?\d{1,9}(?:\.\d{1,9})?)M)?(?:(-?\d{1,20})(?:[.,](-?\d{1,9}))?S)?)?)$/;
+    var isoTimeOnly = RegExp(`^T?${isoTimeBaseRegex.source}$`);
+    var isoDuration = /^-?P(?:(?:(-?\d{1,20}(?:\.\d{1,20})?)Y)?(?:(-?\d{1,20}(?:\.\d{1,20})?)M)?(?:(-?\d{1,20}(?:\.\d{1,20})?)W)?(?:(-?\d{1,20}(?:\.\d{1,20})?)D)?(?:T(?:(-?\d{1,20}(?:\.\d{1,20})?)H)?(?:(-?\d{1,20}(?:\.\d{1,20})?)M)?(?:(-?\d{1,20})(?:[.,](-?\d{1,20}))?S)?)?)$/;
     function extractISODuration(match2) {
-      var s2 = match2[0], yearStr = match2[1], monthStr = match2[2], weekStr = match2[3], dayStr = match2[4], hourStr = match2[5], minuteStr = match2[6], secondStr = match2[7], millisecondsStr = match2[8];
-      var hasNegativePrefix = s2[0] === "-";
-      var negativeSeconds = secondStr && secondStr[0] === "-";
-      var maybeNegate = function maybeNegate2(num, force) {
-        if (force === void 0) {
-          force = false;
+      const [s2, yearStr, monthStr, weekStr, dayStr, hourStr, minuteStr, secondStr, millisecondsStr] = match2;
+      const hasNegativePrefix = s2[0] === "-";
+      const negativeSeconds = secondStr && secondStr[0] === "-";
+      const maybeNegate = (num, force = false) => num !== void 0 && (force || num && hasNegativePrefix) ? -num : num;
+      return [
+        {
+          years: maybeNegate(parseFloating(yearStr)),
+          months: maybeNegate(parseFloating(monthStr)),
+          weeks: maybeNegate(parseFloating(weekStr)),
+          days: maybeNegate(parseFloating(dayStr)),
+          hours: maybeNegate(parseFloating(hourStr)),
+          minutes: maybeNegate(parseFloating(minuteStr)),
+          seconds: maybeNegate(parseFloating(secondStr), secondStr === "-0"),
+          milliseconds: maybeNegate(parseMillis(millisecondsStr), negativeSeconds)
         }
-        return num !== void 0 && (force || num && hasNegativePrefix) ? -num : num;
-      };
-      return [{
-        years: maybeNegate(parseFloating(yearStr)),
-        months: maybeNegate(parseFloating(monthStr)),
-        weeks: maybeNegate(parseFloating(weekStr)),
-        days: maybeNegate(parseFloating(dayStr)),
-        hours: maybeNegate(parseFloating(hourStr)),
-        minutes: maybeNegate(parseFloating(minuteStr)),
-        seconds: maybeNegate(parseFloating(secondStr), secondStr === "-0"),
-        milliseconds: maybeNegate(parseMillis(millisecondsStr), negativeSeconds)
-      }];
+      ];
     }
     var obsOffsets = {
       GMT: 0,
@@ -19181,7 +18700,7 @@ var require_lib2 = __commonJS({
       PST: -8 * 60
     };
     function fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
-      var result = {
+      const result = {
         year: yearStr.length === 2 ? untruncateYear(parseInteger(yearStr)) : parseInteger(yearStr),
         month: monthsShort.indexOf(monthStr) + 1,
         day: parseInteger(dayStr),
@@ -19197,8 +18716,21 @@ var require_lib2 = __commonJS({
     }
     var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|(?:([+-]\d\d)(\d\d)))$/;
     function extractRFC2822(match2) {
-      var weekdayStr = match2[1], dayStr = match2[2], monthStr = match2[3], yearStr = match2[4], hourStr = match2[5], minuteStr = match2[6], secondStr = match2[7], obsOffset = match2[8], milOffset = match2[9], offHourStr = match2[10], offMinuteStr = match2[11], result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
-      var offset2;
+      const [
+        ,
+        weekdayStr,
+        dayStr,
+        monthStr,
+        yearStr,
+        hourStr,
+        minuteStr,
+        secondStr,
+        obsOffset,
+        milOffset,
+        offHourStr,
+        offMinuteStr
+      ] = match2, result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
+      let offset2;
       if (obsOffset) {
         offset2 = obsOffsets[obsOffset];
       } else if (milOffset) {
@@ -19209,17 +18741,17 @@ var require_lib2 = __commonJS({
       return [result, new FixedOffsetZone(offset2)];
     }
     function preprocessRFC2822(s2) {
-      return s2.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").trim();
+      return s2.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").trim();
     }
     var rfc1123 = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), (\d\d) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{4}) (\d\d):(\d\d):(\d\d) GMT$/;
-    var rfc850 = /^(Monday|Tuesday|Wedsday|Thursday|Friday|Saturday|Sunday), (\d\d)-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d\d) (\d\d):(\d\d):(\d\d) GMT$/;
+    var rfc850 = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d\d)-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d\d) (\d\d):(\d\d):(\d\d) GMT$/;
     var ascii = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ( \d|\d\d) (\d\d):(\d\d):(\d\d) (\d{4})$/;
     function extractRFC1123Or850(match2) {
-      var weekdayStr = match2[1], dayStr = match2[2], monthStr = match2[3], yearStr = match2[4], hourStr = match2[5], minuteStr = match2[6], secondStr = match2[7], result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
+      const [, weekdayStr, dayStr, monthStr, yearStr, hourStr, minuteStr, secondStr] = match2, result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
       return [result, FixedOffsetZone.utcInstance];
     }
     function extractASCII(match2) {
-      var weekdayStr = match2[1], monthStr = match2[2], dayStr = match2[3], hourStr = match2[4], minuteStr = match2[5], secondStr = match2[6], yearStr = match2[7], result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
+      const [, weekdayStr, monthStr, dayStr, hourStr, minuteStr, secondStr, yearStr] = match2, result = fromStrings(weekdayStr, yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr);
       return [result, FixedOffsetZone.utcInstance];
     }
     var isoYmdWithTimeExtensionRegex = combineRegexes(isoYmdRegex, isoTimeExtensionRegex);
@@ -19267,20 +18799,11 @@ var require_lib2 = __commonJS({
         seconds: 24 * 60 * 60,
         milliseconds: 24 * 60 * 60 * 1e3
       },
-      hours: {
-        minutes: 60,
-        seconds: 60 * 60,
-        milliseconds: 60 * 60 * 1e3
-      },
-      minutes: {
-        seconds: 60,
-        milliseconds: 60 * 1e3
-      },
-      seconds: {
-        milliseconds: 1e3
-      }
+      hours: { minutes: 60, seconds: 60 * 60, milliseconds: 60 * 60 * 1e3 },
+      minutes: { seconds: 60, milliseconds: 60 * 1e3 },
+      seconds: { milliseconds: 1e3 }
     };
-    var casualMatrix = _extends({
+    var casualMatrix = __spreadValues({
       years: {
         quarters: 4,
         months: 12,
@@ -19311,7 +18834,7 @@ var require_lib2 = __commonJS({
     }, lowOrderMatrix);
     var daysInYearAccurate = 146097 / 400;
     var daysInMonthAccurate = 146097 / 4800;
-    var accurateMatrix = _extends({
+    var accurateMatrix = __spreadValues({
       years: {
         quarters: 4,
         months: 12,
@@ -19340,16 +18863,24 @@ var require_lib2 = __commonJS({
         milliseconds: daysInMonthAccurate * 24 * 60 * 60 * 1e3
       }
     }, lowOrderMatrix);
-    var orderedUnits$1 = ["years", "quarters", "months", "weeks", "days", "hours", "minutes", "seconds", "milliseconds"];
+    var orderedUnits$1 = [
+      "years",
+      "quarters",
+      "months",
+      "weeks",
+      "days",
+      "hours",
+      "minutes",
+      "seconds",
+      "milliseconds"
+    ];
     var reverseUnits = orderedUnits$1.slice(0).reverse();
-    function clone$1(dur, alts, clear) {
-      if (clear === void 0) {
-        clear = false;
-      }
-      var conf = {
-        values: clear ? alts.values : _extends({}, dur.values, alts.values || {}),
+    function clone$1(dur, alts, clear = false) {
+      const conf = {
+        values: clear ? alts.values : __spreadValues(__spreadValues({}, dur.values), alts.values || {}),
         loc: dur.loc.clone(alts.loc),
-        conversionAccuracy: alts.conversionAccuracy || dur.conversionAccuracy
+        conversionAccuracy: alts.conversionAccuracy || dur.conversionAccuracy,
+        matrix: alts.matrix || dur.matrix
       };
       return new Duration(conf);
     }
@@ -19357,12 +18888,12 @@ var require_lib2 = __commonJS({
       return n2 < 0 ? Math.floor(n2) : Math.ceil(n2);
     }
     function convert(matrix, fromMap, fromUnit, toMap, toUnit) {
-      var conv = matrix[toUnit][fromUnit], raw = fromMap[fromUnit] / conv, sameSign = Math.sign(raw) === Math.sign(toMap[toUnit]), added = !sameSign && toMap[toUnit] !== 0 && Math.abs(raw) <= 1 ? antiTrunc(raw) : Math.trunc(raw);
+      const conv = matrix[toUnit][fromUnit], raw = fromMap[fromUnit] / conv, sameSign = Math.sign(raw) === Math.sign(toMap[toUnit]), added = !sameSign && toMap[toUnit] !== 0 && Math.abs(raw) <= 1 ? antiTrunc(raw) : Math.trunc(raw);
       toMap[toUnit] += added;
       fromMap[fromUnit] -= added * conv;
     }
     function normalizeValues(matrix, vals) {
-      reverseUnits.reduce(function(previous, current) {
+      reverseUnits.reduce((previous, current) => {
         if (!isUndefined(vals[current])) {
           if (previous) {
             convert(matrix, vals, previous, vals, current);
@@ -19373,79 +18904,83 @@ var require_lib2 = __commonJS({
         }
       }, null);
     }
-    var Duration = /* @__PURE__ */ function() {
-      function Duration2(config) {
-        var accurate = config.conversionAccuracy === "longterm" || false;
+    function removeZeroes(vals) {
+      const newVals = {};
+      for (const [key, value] of Object.entries(vals)) {
+        if (value !== 0) {
+          newVals[key] = value;
+        }
+      }
+      return newVals;
+    }
+    var Duration = class {
+      constructor(config) {
+        const accurate = config.conversionAccuracy === "longterm" || false;
+        let matrix = accurate ? accurateMatrix : casualMatrix;
+        if (config.matrix) {
+          matrix = config.matrix;
+        }
         this.values = config.values;
         this.loc = config.loc || Locale.create();
         this.conversionAccuracy = accurate ? "longterm" : "casual";
         this.invalid = config.invalid || null;
-        this.matrix = accurate ? accurateMatrix : casualMatrix;
+        this.matrix = matrix;
         this.isLuxonDuration = true;
       }
-      Duration2.fromMillis = function fromMillis(count, opts) {
-        return Duration2.fromObject({
-          milliseconds: count
-        }, opts);
-      };
-      Duration2.fromObject = function fromObject(obj, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      static fromMillis(count, opts) {
+        return Duration.fromObject({ milliseconds: count }, opts);
+      }
+      static fromObject(obj, opts = {}) {
         if (obj == null || typeof obj !== "object") {
-          throw new InvalidArgumentError("Duration.fromObject: argument expected to be an object, got " + (obj === null ? "null" : typeof obj));
+          throw new InvalidArgumentError(`Duration.fromObject: argument expected to be an object, got ${obj === null ? "null" : typeof obj}`);
         }
-        return new Duration2({
-          values: normalizeObject(obj, Duration2.normalizeUnit),
+        return new Duration({
+          values: normalizeObject(obj, Duration.normalizeUnit),
           loc: Locale.fromObject(opts),
-          conversionAccuracy: opts.conversionAccuracy
+          conversionAccuracy: opts.conversionAccuracy,
+          matrix: opts.matrix
         });
-      };
-      Duration2.fromDurationLike = function fromDurationLike(durationLike) {
+      }
+      static fromDurationLike(durationLike) {
         if (isNumber(durationLike)) {
-          return Duration2.fromMillis(durationLike);
-        } else if (Duration2.isDuration(durationLike)) {
+          return Duration.fromMillis(durationLike);
+        } else if (Duration.isDuration(durationLike)) {
           return durationLike;
         } else if (typeof durationLike === "object") {
-          return Duration2.fromObject(durationLike);
+          return Duration.fromObject(durationLike);
         } else {
-          throw new InvalidArgumentError("Unknown duration argument " + durationLike + " of type " + typeof durationLike);
+          throw new InvalidArgumentError(`Unknown duration argument ${durationLike} of type ${typeof durationLike}`);
         }
-      };
-      Duration2.fromISO = function fromISO(text, opts) {
-        var _parseISODuration = parseISODuration(text), parsed = _parseISODuration[0];
+      }
+      static fromISO(text, opts) {
+        const [parsed] = parseISODuration(text);
         if (parsed) {
-          return Duration2.fromObject(parsed, opts);
+          return Duration.fromObject(parsed, opts);
         } else {
-          return Duration2.invalid("unparsable", 'the input "' + text + `" can't be parsed as ISO 8601`);
+          return Duration.invalid("unparsable", `the input "${text}" can't be parsed as ISO 8601`);
         }
-      };
-      Duration2.fromISOTime = function fromISOTime(text, opts) {
-        var _parseISOTimeOnly = parseISOTimeOnly(text), parsed = _parseISOTimeOnly[0];
+      }
+      static fromISOTime(text, opts) {
+        const [parsed] = parseISOTimeOnly(text);
         if (parsed) {
-          return Duration2.fromObject(parsed, opts);
+          return Duration.fromObject(parsed, opts);
         } else {
-          return Duration2.invalid("unparsable", 'the input "' + text + `" can't be parsed as ISO 8601`);
+          return Duration.invalid("unparsable", `the input "${text}" can't be parsed as ISO 8601`);
         }
-      };
-      Duration2.invalid = function invalid(reason, explanation) {
-        if (explanation === void 0) {
-          explanation = null;
-        }
+      }
+      static invalid(reason, explanation = null) {
         if (!reason) {
           throw new InvalidArgumentError("need to specify a reason the Duration is invalid");
         }
-        var invalid2 = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
+        const invalid = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
         if (Settings.throwOnInvalid) {
-          throw new InvalidDurationError(invalid2);
+          throw new InvalidDurationError(invalid);
         } else {
-          return new Duration2({
-            invalid: invalid2
-          });
+          return new Duration({ invalid });
         }
-      };
-      Duration2.normalizeUnit = function normalizeUnit2(unit) {
-        var normalized = {
+      }
+      static normalizeUnit(unit) {
+        const normalized = {
           year: "years",
           years: "years",
           quarter: "quarters",
@@ -19468,53 +19003,41 @@ var require_lib2 = __commonJS({
         if (!normalized)
           throw new InvalidUnitError(unit);
         return normalized;
-      };
-      Duration2.isDuration = function isDuration(o) {
+      }
+      static isDuration(o) {
         return o && o.isLuxonDuration || false;
-      };
-      var _proto = Duration2.prototype;
-      _proto.toFormat = function toFormat(fmt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var fmtOpts = _extends({}, opts, {
+      }
+      get locale() {
+        return this.isValid ? this.loc.locale : null;
+      }
+      get numberingSystem() {
+        return this.isValid ? this.loc.numberingSystem : null;
+      }
+      toFormat(fmt, opts = {}) {
+        const fmtOpts = __spreadProps(__spreadValues({}, opts), {
           floor: opts.round !== false && opts.floor !== false
         });
         return this.isValid ? Formatter.create(this.loc, fmtOpts).formatDurationFromString(this, fmt) : INVALID$2;
-      };
-      _proto.toHuman = function toHuman(opts) {
-        var _this = this;
-        if (opts === void 0) {
-          opts = {};
-        }
-        var l2 = orderedUnits$1.map(function(unit) {
-          var val = _this.values[unit];
+      }
+      toHuman(opts = {}) {
+        const l2 = orderedUnits$1.map((unit) => {
+          const val = this.values[unit];
           if (isUndefined(val)) {
             return null;
           }
-          return _this.loc.numberFormatter(_extends({
-            style: "unit",
-            unitDisplay: "long"
-          }, opts, {
-            unit: unit.slice(0, -1)
-          })).format(val);
-        }).filter(function(n2) {
-          return n2;
-        });
-        return this.loc.listFormatter(_extends({
-          type: "conjunction",
-          style: opts.listStyle || "narrow"
-        }, opts)).format(l2);
-      };
-      _proto.toObject = function toObject() {
+          return this.loc.numberFormatter(__spreadProps(__spreadValues({ style: "unit", unitDisplay: "long" }, opts), { unit: unit.slice(0, -1) })).format(val);
+        }).filter((n2) => n2);
+        return this.loc.listFormatter(__spreadValues({ type: "conjunction", style: opts.listStyle || "narrow" }, opts)).format(l2);
+      }
+      toObject() {
         if (!this.isValid)
           return {};
-        return _extends({}, this.values);
-      };
-      _proto.toISO = function toISO() {
+        return __spreadValues({}, this.values);
+      }
+      toISO() {
         if (!this.isValid)
           return null;
-        var s2 = "P";
+        let s2 = "P";
         if (this.years !== 0)
           s2 += this.years + "Y";
         if (this.months !== 0 || this.quarters !== 0)
@@ -19534,146 +19057,125 @@ var require_lib2 = __commonJS({
         if (s2 === "P")
           s2 += "T0S";
         return s2;
-      };
-      _proto.toISOTime = function toISOTime(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      toISOTime(opts = {}) {
         if (!this.isValid)
           return null;
-        var millis = this.toMillis();
+        const millis = this.toMillis();
         if (millis < 0 || millis >= 864e5)
           return null;
-        opts = _extends({
+        opts = __spreadValues({
           suppressMilliseconds: false,
           suppressSeconds: false,
           includePrefix: false,
           format: "extended"
         }, opts);
-        var value = this.shiftTo("hours", "minutes", "seconds", "milliseconds");
-        var fmt = opts.format === "basic" ? "hhmm" : "hh:mm";
+        const value = this.shiftTo("hours", "minutes", "seconds", "milliseconds");
+        let fmt = opts.format === "basic" ? "hhmm" : "hh:mm";
         if (!opts.suppressSeconds || value.seconds !== 0 || value.milliseconds !== 0) {
           fmt += opts.format === "basic" ? "ss" : ":ss";
           if (!opts.suppressMilliseconds || value.milliseconds !== 0) {
             fmt += ".SSS";
           }
         }
-        var str = value.toFormat(fmt);
+        let str = value.toFormat(fmt);
         if (opts.includePrefix) {
           str = "T" + str;
         }
         return str;
-      };
-      _proto.toJSON = function toJSON() {
+      }
+      toJSON() {
         return this.toISO();
-      };
-      _proto.toString = function toString() {
+      }
+      toString() {
         return this.toISO();
-      };
-      _proto.toMillis = function toMillis() {
+      }
+      toMillis() {
         return this.as("milliseconds");
-      };
-      _proto.valueOf = function valueOf() {
+      }
+      valueOf() {
         return this.toMillis();
-      };
-      _proto.plus = function plus(duration) {
+      }
+      plus(duration) {
         if (!this.isValid)
           return this;
-        var dur = Duration2.fromDurationLike(duration), result = {};
-        for (var _iterator = _createForOfIteratorHelperLoose(orderedUnits$1), _step; !(_step = _iterator()).done; ) {
-          var k = _step.value;
+        const dur = Duration.fromDurationLike(duration), result = {};
+        for (const k of orderedUnits$1) {
           if (hasOwnProperty(dur.values, k) || hasOwnProperty(this.values, k)) {
             result[k] = dur.get(k) + this.get(k);
           }
         }
-        return clone$1(this, {
-          values: result
-        }, true);
-      };
-      _proto.minus = function minus(duration) {
+        return clone$1(this, { values: result }, true);
+      }
+      minus(duration) {
         if (!this.isValid)
           return this;
-        var dur = Duration2.fromDurationLike(duration);
+        const dur = Duration.fromDurationLike(duration);
         return this.plus(dur.negate());
-      };
-      _proto.mapUnits = function mapUnits(fn2) {
+      }
+      mapUnits(fn2) {
         if (!this.isValid)
           return this;
-        var result = {};
-        for (var _i = 0, _Object$keys = Object.keys(this.values); _i < _Object$keys.length; _i++) {
-          var k = _Object$keys[_i];
+        const result = {};
+        for (const k of Object.keys(this.values)) {
           result[k] = asNumber(fn2(this.values[k], k));
         }
-        return clone$1(this, {
-          values: result
-        }, true);
-      };
-      _proto.get = function get(unit) {
-        return this[Duration2.normalizeUnit(unit)];
-      };
-      _proto.set = function set(values) {
+        return clone$1(this, { values: result }, true);
+      }
+      get(unit) {
+        return this[Duration.normalizeUnit(unit)];
+      }
+      set(values) {
         if (!this.isValid)
           return this;
-        var mixed = _extends({}, this.values, normalizeObject(values, Duration2.normalizeUnit));
-        return clone$1(this, {
-          values: mixed
-        });
-      };
-      _proto.reconfigure = function reconfigure(_temp) {
-        var _ref = _temp === void 0 ? {} : _temp, locale = _ref.locale, numberingSystem = _ref.numberingSystem, conversionAccuracy = _ref.conversionAccuracy;
-        var loc = this.loc.clone({
-          locale,
-          numberingSystem
-        }), opts = {
-          loc
-        };
-        if (conversionAccuracy) {
-          opts.conversionAccuracy = conversionAccuracy;
-        }
+        const mixed = __spreadValues(__spreadValues({}, this.values), normalizeObject(values, Duration.normalizeUnit));
+        return clone$1(this, { values: mixed });
+      }
+      reconfigure({ locale, numberingSystem, conversionAccuracy, matrix } = {}) {
+        const loc = this.loc.clone({ locale, numberingSystem });
+        const opts = { loc, matrix, conversionAccuracy };
         return clone$1(this, opts);
-      };
-      _proto.as = function as(unit) {
+      }
+      as(unit) {
         return this.isValid ? this.shiftTo(unit).get(unit) : NaN;
-      };
-      _proto.normalize = function normalize() {
+      }
+      normalize() {
         if (!this.isValid)
           return this;
-        var vals = this.toObject();
+        const vals = this.toObject();
         normalizeValues(this.matrix, vals);
-        return clone$1(this, {
-          values: vals
-        }, true);
-      };
-      _proto.shiftTo = function shiftTo() {
-        for (var _len = arguments.length, units = new Array(_len), _key = 0; _key < _len; _key++) {
-          units[_key] = arguments[_key];
-        }
+        return clone$1(this, { values: vals }, true);
+      }
+      rescale() {
+        if (!this.isValid)
+          return this;
+        const vals = removeZeroes(this.normalize().shiftToAll().toObject());
+        return clone$1(this, { values: vals }, true);
+      }
+      shiftTo(...units) {
         if (!this.isValid)
           return this;
         if (units.length === 0) {
           return this;
         }
-        units = units.map(function(u) {
-          return Duration2.normalizeUnit(u);
-        });
-        var built = {}, accumulated = {}, vals = this.toObject();
-        var lastUnit;
-        for (var _iterator2 = _createForOfIteratorHelperLoose(orderedUnits$1), _step2; !(_step2 = _iterator2()).done; ) {
-          var k = _step2.value;
+        units = units.map((u) => Duration.normalizeUnit(u));
+        const built = {}, accumulated = {}, vals = this.toObject();
+        let lastUnit;
+        for (const k of orderedUnits$1) {
           if (units.indexOf(k) >= 0) {
             lastUnit = k;
-            var own = 0;
-            for (var ak in accumulated) {
+            let own = 0;
+            for (const ak in accumulated) {
               own += this.matrix[ak][k] * accumulated[ak];
               accumulated[ak] = 0;
             }
             if (isNumber(vals[k])) {
               own += vals[k];
             }
-            var i = Math.trunc(own);
+            const i = Math.trunc(own);
             built[k] = i;
             accumulated[k] = (own * 1e3 - i * 1e3) / 1e3;
-            for (var down in vals) {
+            for (const down in vals) {
               if (orderedUnits$1.indexOf(down) > orderedUnits$1.indexOf(k)) {
                 convert(this.matrix, vals, down, built, k);
               }
@@ -19682,28 +19184,64 @@ var require_lib2 = __commonJS({
             accumulated[k] = vals[k];
           }
         }
-        for (var key in accumulated) {
+        for (const key in accumulated) {
           if (accumulated[key] !== 0) {
             built[lastUnit] += key === lastUnit ? accumulated[key] : accumulated[key] / this.matrix[lastUnit][key];
           }
         }
-        return clone$1(this, {
-          values: built
-        }, true).normalize();
-      };
-      _proto.negate = function negate() {
+        return clone$1(this, { values: built }, true).normalize();
+      }
+      shiftToAll() {
         if (!this.isValid)
           return this;
-        var negated = {};
-        for (var _i2 = 0, _Object$keys2 = Object.keys(this.values); _i2 < _Object$keys2.length; _i2++) {
-          var k = _Object$keys2[_i2];
+        return this.shiftTo("years", "months", "weeks", "days", "hours", "minutes", "seconds", "milliseconds");
+      }
+      negate() {
+        if (!this.isValid)
+          return this;
+        const negated = {};
+        for (const k of Object.keys(this.values)) {
           negated[k] = this.values[k] === 0 ? 0 : -this.values[k];
         }
-        return clone$1(this, {
-          values: negated
-        }, true);
-      };
-      _proto.equals = function equals(other) {
+        return clone$1(this, { values: negated }, true);
+      }
+      get years() {
+        return this.isValid ? this.values.years || 0 : NaN;
+      }
+      get quarters() {
+        return this.isValid ? this.values.quarters || 0 : NaN;
+      }
+      get months() {
+        return this.isValid ? this.values.months || 0 : NaN;
+      }
+      get weeks() {
+        return this.isValid ? this.values.weeks || 0 : NaN;
+      }
+      get days() {
+        return this.isValid ? this.values.days || 0 : NaN;
+      }
+      get hours() {
+        return this.isValid ? this.values.hours || 0 : NaN;
+      }
+      get minutes() {
+        return this.isValid ? this.values.minutes || 0 : NaN;
+      }
+      get seconds() {
+        return this.isValid ? this.values.seconds || 0 : NaN;
+      }
+      get milliseconds() {
+        return this.isValid ? this.values.milliseconds || 0 : NaN;
+      }
+      get isValid() {
+        return this.invalid === null;
+      }
+      get invalidReason() {
+        return this.invalid ? this.invalid.reason : null;
+      }
+      get invalidExplanation() {
+        return this.invalid ? this.invalid.explanation : null;
+      }
+      equals(other) {
         if (!this.isValid || !other.isValid) {
           return false;
         }
@@ -19715,87 +19253,14 @@ var require_lib2 = __commonJS({
             return v2 === void 0 || v2 === 0;
           return v1 === v2;
         }
-        for (var _iterator3 = _createForOfIteratorHelperLoose(orderedUnits$1), _step3; !(_step3 = _iterator3()).done; ) {
-          var u = _step3.value;
+        for (const u of orderedUnits$1) {
           if (!eq(this.values[u], other.values[u])) {
             return false;
           }
         }
         return true;
-      };
-      _createClass(Duration2, [{
-        key: "locale",
-        get: function get() {
-          return this.isValid ? this.loc.locale : null;
-        }
-      }, {
-        key: "numberingSystem",
-        get: function get() {
-          return this.isValid ? this.loc.numberingSystem : null;
-        }
-      }, {
-        key: "years",
-        get: function get() {
-          return this.isValid ? this.values.years || 0 : NaN;
-        }
-      }, {
-        key: "quarters",
-        get: function get() {
-          return this.isValid ? this.values.quarters || 0 : NaN;
-        }
-      }, {
-        key: "months",
-        get: function get() {
-          return this.isValid ? this.values.months || 0 : NaN;
-        }
-      }, {
-        key: "weeks",
-        get: function get() {
-          return this.isValid ? this.values.weeks || 0 : NaN;
-        }
-      }, {
-        key: "days",
-        get: function get() {
-          return this.isValid ? this.values.days || 0 : NaN;
-        }
-      }, {
-        key: "hours",
-        get: function get() {
-          return this.isValid ? this.values.hours || 0 : NaN;
-        }
-      }, {
-        key: "minutes",
-        get: function get() {
-          return this.isValid ? this.values.minutes || 0 : NaN;
-        }
-      }, {
-        key: "seconds",
-        get: function get() {
-          return this.isValid ? this.values.seconds || 0 : NaN;
-        }
-      }, {
-        key: "milliseconds",
-        get: function get() {
-          return this.isValid ? this.values.milliseconds || 0 : NaN;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return this.invalid === null;
-        }
-      }, {
-        key: "invalidReason",
-        get: function get() {
-          return this.invalid ? this.invalid.reason : null;
-        }
-      }, {
-        key: "invalidExplanation",
-        get: function get() {
-          return this.invalid ? this.invalid.explanation : null;
-        }
-      }]);
-      return Duration2;
-    }();
+      }
+    };
     var INVALID$1 = "Invalid Interval";
     function validateStartEnd(start, end) {
       if (!start || !start.isValid) {
@@ -19803,65 +19268,60 @@ var require_lib2 = __commonJS({
       } else if (!end || !end.isValid) {
         return Interval.invalid("missing or invalid end");
       } else if (end < start) {
-        return Interval.invalid("end before start", "The end of an interval must be after its start, but you had start=" + start.toISO() + " and end=" + end.toISO());
+        return Interval.invalid("end before start", `The end of an interval must be after its start, but you had start=${start.toISO()} and end=${end.toISO()}`);
       } else {
         return null;
       }
     }
-    var Interval = /* @__PURE__ */ function() {
-      function Interval2(config) {
+    var Interval = class {
+      constructor(config) {
         this.s = config.start;
         this.e = config.end;
         this.invalid = config.invalid || null;
         this.isLuxonInterval = true;
       }
-      Interval2.invalid = function invalid(reason, explanation) {
-        if (explanation === void 0) {
-          explanation = null;
-        }
+      static invalid(reason, explanation = null) {
         if (!reason) {
           throw new InvalidArgumentError("need to specify a reason the Interval is invalid");
         }
-        var invalid2 = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
+        const invalid = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
         if (Settings.throwOnInvalid) {
-          throw new InvalidIntervalError(invalid2);
+          throw new InvalidIntervalError(invalid);
         } else {
-          return new Interval2({
-            invalid: invalid2
-          });
+          return new Interval({ invalid });
         }
-      };
-      Interval2.fromDateTimes = function fromDateTimes(start, end) {
-        var builtStart = friendlyDateTime(start), builtEnd = friendlyDateTime(end);
-        var validateError = validateStartEnd(builtStart, builtEnd);
+      }
+      static fromDateTimes(start, end) {
+        const builtStart = friendlyDateTime(start), builtEnd = friendlyDateTime(end);
+        const validateError = validateStartEnd(builtStart, builtEnd);
         if (validateError == null) {
-          return new Interval2({
+          return new Interval({
             start: builtStart,
             end: builtEnd
           });
         } else {
           return validateError;
         }
-      };
-      Interval2.after = function after(start, duration) {
-        var dur = Duration.fromDurationLike(duration), dt = friendlyDateTime(start);
-        return Interval2.fromDateTimes(dt, dt.plus(dur));
-      };
-      Interval2.before = function before(end, duration) {
-        var dur = Duration.fromDurationLike(duration), dt = friendlyDateTime(end);
-        return Interval2.fromDateTimes(dt.minus(dur), dt);
-      };
-      Interval2.fromISO = function fromISO(text, opts) {
-        var _split = (text || "").split("/", 2), s2 = _split[0], e = _split[1];
+      }
+      static after(start, duration) {
+        const dur = Duration.fromDurationLike(duration), dt = friendlyDateTime(start);
+        return Interval.fromDateTimes(dt, dt.plus(dur));
+      }
+      static before(end, duration) {
+        const dur = Duration.fromDurationLike(duration), dt = friendlyDateTime(end);
+        return Interval.fromDateTimes(dt.minus(dur), dt);
+      }
+      static fromISO(text, opts) {
+        const [s2, e] = (text || "").split("/", 2);
         if (s2 && e) {
-          var start, startIsValid;
+          let start, startIsValid;
           try {
             start = DateTime.fromISO(s2, opts);
             startIsValid = start.isValid;
           } catch (e2) {
             startIsValid = false;
           }
-          var end, endIsValid;
+          let end, endIsValid;
           try {
             end = DateTime.fromISO(e, opts);
             endIsValid = end.isValid;
@@ -19869,155 +19329,151 @@ var require_lib2 = __commonJS({
             endIsValid = false;
           }
           if (startIsValid && endIsValid) {
-            return Interval2.fromDateTimes(start, end);
+            return Interval.fromDateTimes(start, end);
           }
           if (startIsValid) {
-            var dur = Duration.fromISO(e, opts);
+            const dur = Duration.fromISO(e, opts);
             if (dur.isValid) {
-              return Interval2.after(start, dur);
+              return Interval.after(start, dur);
             }
           } else if (endIsValid) {
-            var _dur = Duration.fromISO(s2, opts);
-            if (_dur.isValid) {
-              return Interval2.before(end, _dur);
+            const dur = Duration.fromISO(s2, opts);
+            if (dur.isValid) {
+              return Interval.before(end, dur);
             }
           }
         }
-        return Interval2.invalid("unparsable", 'the input "' + text + `" can't be parsed as ISO 8601`);
-      };
-      Interval2.isInterval = function isInterval(o) {
+        return Interval.invalid("unparsable", `the input "${text}" can't be parsed as ISO 8601`);
+      }
+      static isInterval(o) {
         return o && o.isLuxonInterval || false;
-      };
-      var _proto = Interval2.prototype;
-      _proto.length = function length(unit) {
-        if (unit === void 0) {
-          unit = "milliseconds";
-        }
-        return this.isValid ? this.toDuration.apply(this, [unit]).get(unit) : NaN;
-      };
-      _proto.count = function count(unit) {
-        if (unit === void 0) {
-          unit = "milliseconds";
-        }
+      }
+      get start() {
+        return this.isValid ? this.s : null;
+      }
+      get end() {
+        return this.isValid ? this.e : null;
+      }
+      get isValid() {
+        return this.invalidReason === null;
+      }
+      get invalidReason() {
+        return this.invalid ? this.invalid.reason : null;
+      }
+      get invalidExplanation() {
+        return this.invalid ? this.invalid.explanation : null;
+      }
+      length(unit = "milliseconds") {
+        return this.isValid ? this.toDuration(...[unit]).get(unit) : NaN;
+      }
+      count(unit = "milliseconds") {
         if (!this.isValid)
           return NaN;
-        var start = this.start.startOf(unit), end = this.end.startOf(unit);
+        const start = this.start.startOf(unit), end = this.end.startOf(unit);
         return Math.floor(end.diff(start, unit).get(unit)) + 1;
-      };
-      _proto.hasSame = function hasSame(unit) {
+      }
+      hasSame(unit) {
         return this.isValid ? this.isEmpty() || this.e.minus(1).hasSame(this.s, unit) : false;
-      };
-      _proto.isEmpty = function isEmpty() {
+      }
+      isEmpty() {
         return this.s.valueOf() === this.e.valueOf();
-      };
-      _proto.isAfter = function isAfter(dateTime) {
+      }
+      isAfter(dateTime) {
         if (!this.isValid)
           return false;
         return this.s > dateTime;
-      };
-      _proto.isBefore = function isBefore(dateTime) {
+      }
+      isBefore(dateTime) {
         if (!this.isValid)
           return false;
         return this.e <= dateTime;
-      };
-      _proto.contains = function contains(dateTime) {
+      }
+      contains(dateTime) {
         if (!this.isValid)
           return false;
         return this.s <= dateTime && this.e > dateTime;
-      };
-      _proto.set = function set(_temp) {
-        var _ref = _temp === void 0 ? {} : _temp, start = _ref.start, end = _ref.end;
+      }
+      set({ start, end } = {}) {
         if (!this.isValid)
           return this;
-        return Interval2.fromDateTimes(start || this.s, end || this.e);
-      };
-      _proto.splitAt = function splitAt() {
-        var _this = this;
+        return Interval.fromDateTimes(start || this.s, end || this.e);
+      }
+      splitAt(...dateTimes) {
         if (!this.isValid)
           return [];
-        for (var _len = arguments.length, dateTimes = new Array(_len), _key = 0; _key < _len; _key++) {
-          dateTimes[_key] = arguments[_key];
-        }
-        var sorted = dateTimes.map(friendlyDateTime).filter(function(d) {
-          return _this.contains(d);
-        }).sort(), results = [];
-        var s2 = this.s, i = 0;
+        const sorted = dateTimes.map(friendlyDateTime).filter((d) => this.contains(d)).sort(), results = [];
+        let { s: s2 } = this, i = 0;
         while (s2 < this.e) {
-          var added = sorted[i] || this.e, next = +added > +this.e ? this.e : added;
-          results.push(Interval2.fromDateTimes(s2, next));
+          const added = sorted[i] || this.e, next = +added > +this.e ? this.e : added;
+          results.push(Interval.fromDateTimes(s2, next));
           s2 = next;
           i += 1;
         }
         return results;
-      };
-      _proto.splitBy = function splitBy(duration) {
-        var dur = Duration.fromDurationLike(duration);
+      }
+      splitBy(duration) {
+        const dur = Duration.fromDurationLike(duration);
         if (!this.isValid || !dur.isValid || dur.as("milliseconds") === 0) {
           return [];
         }
-        var s2 = this.s, idx = 1, next;
-        var results = [];
+        let { s: s2 } = this, idx = 1, next;
+        const results = [];
         while (s2 < this.e) {
-          var added = this.start.plus(dur.mapUnits(function(x) {
-            return x * idx;
-          }));
+          const added = this.start.plus(dur.mapUnits((x) => x * idx));
           next = +added > +this.e ? this.e : added;
-          results.push(Interval2.fromDateTimes(s2, next));
+          results.push(Interval.fromDateTimes(s2, next));
           s2 = next;
           idx += 1;
         }
         return results;
-      };
-      _proto.divideEqually = function divideEqually(numberOfParts) {
+      }
+      divideEqually(numberOfParts) {
         if (!this.isValid)
           return [];
         return this.splitBy(this.length() / numberOfParts).slice(0, numberOfParts);
-      };
-      _proto.overlaps = function overlaps(other) {
+      }
+      overlaps(other) {
         return this.e > other.s && this.s < other.e;
-      };
-      _proto.abutsStart = function abutsStart(other) {
+      }
+      abutsStart(other) {
         if (!this.isValid)
           return false;
         return +this.e === +other.s;
-      };
-      _proto.abutsEnd = function abutsEnd(other) {
+      }
+      abutsEnd(other) {
         if (!this.isValid)
           return false;
         return +other.e === +this.s;
-      };
-      _proto.engulfs = function engulfs(other) {
+      }
+      engulfs(other) {
         if (!this.isValid)
           return false;
         return this.s <= other.s && this.e >= other.e;
-      };
-      _proto.equals = function equals(other) {
+      }
+      equals(other) {
         if (!this.isValid || !other.isValid) {
           return false;
         }
         return this.s.equals(other.s) && this.e.equals(other.e);
-      };
-      _proto.intersection = function intersection(other) {
+      }
+      intersection(other) {
         if (!this.isValid)
           return this;
-        var s2 = this.s > other.s ? this.s : other.s, e = this.e < other.e ? this.e : other.e;
+        const s2 = this.s > other.s ? this.s : other.s, e = this.e < other.e ? this.e : other.e;
         if (s2 >= e) {
           return null;
         } else {
-          return Interval2.fromDateTimes(s2, e);
+          return Interval.fromDateTimes(s2, e);
         }
-      };
-      _proto.union = function union(other) {
+      }
+      union(other) {
         if (!this.isValid)
           return this;
-        var s2 = this.s < other.s ? this.s : other.s, e = this.e > other.e ? this.e : other.e;
-        return Interval2.fromDateTimes(s2, e);
-      };
-      Interval2.merge = function merge(intervals) {
-        var _intervals$sort$reduc = intervals.sort(function(a, b) {
-          return a.s - b.s;
-        }).reduce(function(_ref2, item) {
-          var sofar = _ref2[0], current = _ref2[1];
+        const s2 = this.s < other.s ? this.s : other.s, e = this.e > other.e ? this.e : other.e;
+        return Interval.fromDateTimes(s2, e);
+      }
+      static merge(intervals) {
+        const [found, final] = intervals.sort((a, b) => a.s - b.s).reduce(([sofar, current], item) => {
           if (!current) {
             return [sofar, item];
           } else if (current.overlaps(item) || current.abutsStart(item)) {
@@ -20025,239 +19481,156 @@ var require_lib2 = __commonJS({
           } else {
             return [sofar.concat([current]), item];
           }
-        }, [[], null]), found = _intervals$sort$reduc[0], final = _intervals$sort$reduc[1];
+        }, [[], null]);
         if (final) {
           found.push(final);
         }
         return found;
-      };
-      Interval2.xor = function xor(intervals) {
-        var _Array$prototype;
-        var start = null, currentCount = 0;
-        var results = [], ends = intervals.map(function(i2) {
-          return [{
-            time: i2.s,
-            type: "s"
-          }, {
-            time: i2.e,
-            type: "e"
-          }];
-        }), flattened = (_Array$prototype = Array.prototype).concat.apply(_Array$prototype, ends), arr = flattened.sort(function(a, b) {
-          return a.time - b.time;
-        });
-        for (var _iterator = _createForOfIteratorHelperLoose(arr), _step; !(_step = _iterator()).done; ) {
-          var i = _step.value;
+      }
+      static xor(intervals) {
+        let start = null, currentCount = 0;
+        const results = [], ends = intervals.map((i) => [
+          { time: i.s, type: "s" },
+          { time: i.e, type: "e" }
+        ]), flattened = Array.prototype.concat(...ends), arr = flattened.sort((a, b) => a.time - b.time);
+        for (const i of arr) {
           currentCount += i.type === "s" ? 1 : -1;
           if (currentCount === 1) {
             start = i.time;
           } else {
             if (start && +start !== +i.time) {
-              results.push(Interval2.fromDateTimes(start, i.time));
+              results.push(Interval.fromDateTimes(start, i.time));
             }
             start = null;
           }
         }
-        return Interval2.merge(results);
-      };
-      _proto.difference = function difference() {
-        var _this2 = this;
-        for (var _len2 = arguments.length, intervals = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          intervals[_key2] = arguments[_key2];
-        }
-        return Interval2.xor([this].concat(intervals)).map(function(i) {
-          return _this2.intersection(i);
-        }).filter(function(i) {
-          return i && !i.isEmpty();
-        });
-      };
-      _proto.toString = function toString() {
+        return Interval.merge(results);
+      }
+      difference(...intervals) {
+        return Interval.xor([this].concat(intervals)).map((i) => this.intersection(i)).filter((i) => i && !i.isEmpty());
+      }
+      toString() {
         if (!this.isValid)
           return INVALID$1;
-        return "[" + this.s.toISO() + " \u2013 " + this.e.toISO() + ")";
-      };
-      _proto.toISO = function toISO(opts) {
+        return `[${this.s.toISO()} \u2013 ${this.e.toISO()})`;
+      }
+      toLocaleString(formatOpts = DATE_SHORT, opts = {}) {
+        return this.isValid ? Formatter.create(this.s.loc.clone(opts), formatOpts).formatInterval(this) : INVALID$1;
+      }
+      toISO(opts) {
         if (!this.isValid)
           return INVALID$1;
-        return this.s.toISO(opts) + "/" + this.e.toISO(opts);
-      };
-      _proto.toISODate = function toISODate() {
+        return `${this.s.toISO(opts)}/${this.e.toISO(opts)}`;
+      }
+      toISODate() {
         if (!this.isValid)
           return INVALID$1;
-        return this.s.toISODate() + "/" + this.e.toISODate();
-      };
-      _proto.toISOTime = function toISOTime(opts) {
+        return `${this.s.toISODate()}/${this.e.toISODate()}`;
+      }
+      toISOTime(opts) {
         if (!this.isValid)
           return INVALID$1;
-        return this.s.toISOTime(opts) + "/" + this.e.toISOTime(opts);
-      };
-      _proto.toFormat = function toFormat(dateFormat, _temp2) {
-        var _ref3 = _temp2 === void 0 ? {} : _temp2, _ref3$separator = _ref3.separator, separator = _ref3$separator === void 0 ? " \u2013 " : _ref3$separator;
+        return `${this.s.toISOTime(opts)}/${this.e.toISOTime(opts)}`;
+      }
+      toFormat(dateFormat, { separator = " \u2013 " } = {}) {
         if (!this.isValid)
           return INVALID$1;
-        return "" + this.s.toFormat(dateFormat) + separator + this.e.toFormat(dateFormat);
-      };
-      _proto.toDuration = function toDuration(unit, opts) {
+        return `${this.s.toFormat(dateFormat)}${separator}${this.e.toFormat(dateFormat)}`;
+      }
+      toDuration(unit, opts) {
         if (!this.isValid) {
           return Duration.invalid(this.invalidReason);
         }
         return this.e.diff(this.s, unit, opts);
-      };
-      _proto.mapEndpoints = function mapEndpoints(mapFn) {
-        return Interval2.fromDateTimes(mapFn(this.s), mapFn(this.e));
-      };
-      _createClass(Interval2, [{
-        key: "start",
-        get: function get() {
-          return this.isValid ? this.s : null;
-        }
-      }, {
-        key: "end",
-        get: function get() {
-          return this.isValid ? this.e : null;
-        }
-      }, {
-        key: "isValid",
-        get: function get() {
-          return this.invalidReason === null;
-        }
-      }, {
-        key: "invalidReason",
-        get: function get() {
-          return this.invalid ? this.invalid.reason : null;
-        }
-      }, {
-        key: "invalidExplanation",
-        get: function get() {
-          return this.invalid ? this.invalid.explanation : null;
-        }
-      }]);
-      return Interval2;
-    }();
-    var Info = /* @__PURE__ */ function() {
-      function Info2() {
       }
-      Info2.hasDST = function hasDST(zone) {
-        if (zone === void 0) {
-          zone = Settings.defaultZone;
-        }
-        var proto = DateTime.now().setZone(zone).set({
-          month: 12
-        });
-        return !zone.isUniversal && proto.offset !== proto.set({
-          month: 6
-        }).offset;
-      };
-      Info2.isValidIANAZone = function isValidIANAZone(zone) {
+      mapEndpoints(mapFn) {
+        return Interval.fromDateTimes(mapFn(this.s), mapFn(this.e));
+      }
+    };
+    var Info = class {
+      static hasDST(zone = Settings.defaultZone) {
+        const proto = DateTime.now().setZone(zone).set({ month: 12 });
+        return !zone.isUniversal && proto.offset !== proto.set({ month: 6 }).offset;
+      }
+      static isValidIANAZone(zone) {
         return IANAZone.isValidZone(zone);
-      };
-      Info2.normalizeZone = function normalizeZone$1(input) {
+      }
+      static normalizeZone(input) {
         return normalizeZone(input, Settings.defaultZone);
-      };
-      Info2.months = function months2(length, _temp) {
-        if (length === void 0) {
-          length = "long";
-        }
-        var _ref = _temp === void 0 ? {} : _temp, _ref$locale = _ref.locale, locale = _ref$locale === void 0 ? null : _ref$locale, _ref$numberingSystem = _ref.numberingSystem, numberingSystem = _ref$numberingSystem === void 0 ? null : _ref$numberingSystem, _ref$locObj = _ref.locObj, locObj = _ref$locObj === void 0 ? null : _ref$locObj, _ref$outputCalendar = _ref.outputCalendar, outputCalendar = _ref$outputCalendar === void 0 ? "gregory" : _ref$outputCalendar;
+      }
+      static months(length = "long", { locale = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
         return (locObj || Locale.create(locale, numberingSystem, outputCalendar)).months(length);
-      };
-      Info2.monthsFormat = function monthsFormat(length, _temp2) {
-        if (length === void 0) {
-          length = "long";
-        }
-        var _ref2 = _temp2 === void 0 ? {} : _temp2, _ref2$locale = _ref2.locale, locale = _ref2$locale === void 0 ? null : _ref2$locale, _ref2$numberingSystem = _ref2.numberingSystem, numberingSystem = _ref2$numberingSystem === void 0 ? null : _ref2$numberingSystem, _ref2$locObj = _ref2.locObj, locObj = _ref2$locObj === void 0 ? null : _ref2$locObj, _ref2$outputCalendar = _ref2.outputCalendar, outputCalendar = _ref2$outputCalendar === void 0 ? "gregory" : _ref2$outputCalendar;
+      }
+      static monthsFormat(length = "long", { locale = null, numberingSystem = null, locObj = null, outputCalendar = "gregory" } = {}) {
         return (locObj || Locale.create(locale, numberingSystem, outputCalendar)).months(length, true);
-      };
-      Info2.weekdays = function weekdays2(length, _temp3) {
-        if (length === void 0) {
-          length = "long";
-        }
-        var _ref3 = _temp3 === void 0 ? {} : _temp3, _ref3$locale = _ref3.locale, locale = _ref3$locale === void 0 ? null : _ref3$locale, _ref3$numberingSystem = _ref3.numberingSystem, numberingSystem = _ref3$numberingSystem === void 0 ? null : _ref3$numberingSystem, _ref3$locObj = _ref3.locObj, locObj = _ref3$locObj === void 0 ? null : _ref3$locObj;
+      }
+      static weekdays(length = "long", { locale = null, numberingSystem = null, locObj = null } = {}) {
         return (locObj || Locale.create(locale, numberingSystem, null)).weekdays(length);
-      };
-      Info2.weekdaysFormat = function weekdaysFormat(length, _temp4) {
-        if (length === void 0) {
-          length = "long";
-        }
-        var _ref4 = _temp4 === void 0 ? {} : _temp4, _ref4$locale = _ref4.locale, locale = _ref4$locale === void 0 ? null : _ref4$locale, _ref4$numberingSystem = _ref4.numberingSystem, numberingSystem = _ref4$numberingSystem === void 0 ? null : _ref4$numberingSystem, _ref4$locObj = _ref4.locObj, locObj = _ref4$locObj === void 0 ? null : _ref4$locObj;
+      }
+      static weekdaysFormat(length = "long", { locale = null, numberingSystem = null, locObj = null } = {}) {
         return (locObj || Locale.create(locale, numberingSystem, null)).weekdays(length, true);
-      };
-      Info2.meridiems = function meridiems2(_temp5) {
-        var _ref5 = _temp5 === void 0 ? {} : _temp5, _ref5$locale = _ref5.locale, locale = _ref5$locale === void 0 ? null : _ref5$locale;
+      }
+      static meridiems({ locale = null } = {}) {
         return Locale.create(locale).meridiems();
-      };
-      Info2.eras = function eras2(length, _temp6) {
-        if (length === void 0) {
-          length = "short";
-        }
-        var _ref6 = _temp6 === void 0 ? {} : _temp6, _ref6$locale = _ref6.locale, locale = _ref6$locale === void 0 ? null : _ref6$locale;
+      }
+      static eras(length = "short", { locale = null } = {}) {
         return Locale.create(locale, null, "gregory").eras(length);
-      };
-      Info2.features = function features() {
-        return {
-          relative: hasRelative()
-        };
-      };
-      return Info2;
-    }();
+      }
+      static features() {
+        return { relative: hasRelative() };
+      }
+    };
     function dayDiff(earlier, later) {
-      var utcDayStart = function utcDayStart2(dt) {
-        return dt.toUTC(0, {
-          keepLocalTime: true
-        }).startOf("day").valueOf();
-      }, ms = utcDayStart(later) - utcDayStart(earlier);
+      const utcDayStart = (dt) => dt.toUTC(0, { keepLocalTime: true }).startOf("day").valueOf(), ms = utcDayStart(later) - utcDayStart(earlier);
       return Math.floor(Duration.fromMillis(ms).as("days"));
     }
     function highOrderDiffs(cursor, later, units) {
-      var differs = [["years", function(a, b) {
-        return b.year - a.year;
-      }], ["quarters", function(a, b) {
-        return b.quarter - a.quarter;
-      }], ["months", function(a, b) {
-        return b.month - a.month + (b.year - a.year) * 12;
-      }], ["weeks", function(a, b) {
-        var days = dayDiff(a, b);
-        return (days - days % 7) / 7;
-      }], ["days", dayDiff]];
-      var results = {};
-      var lowestOrder, highWater;
-      for (var _i = 0, _differs = differs; _i < _differs.length; _i++) {
-        var _differs$_i = _differs[_i], unit = _differs$_i[0], differ = _differs$_i[1];
+      const differs = [
+        ["years", (a, b) => b.year - a.year],
+        ["quarters", (a, b) => b.quarter - a.quarter + (b.year - a.year) * 4],
+        ["months", (a, b) => b.month - a.month + (b.year - a.year) * 12],
+        [
+          "weeks",
+          (a, b) => {
+            const days = dayDiff(a, b);
+            return (days - days % 7) / 7;
+          }
+        ],
+        ["days", dayDiff]
+      ];
+      const results = {};
+      const earlier = cursor;
+      let lowestOrder, highWater;
+      for (const [unit, differ] of differs) {
         if (units.indexOf(unit) >= 0) {
-          var _cursor$plus;
           lowestOrder = unit;
-          var delta = differ(cursor, later);
-          highWater = cursor.plus((_cursor$plus = {}, _cursor$plus[unit] = delta, _cursor$plus));
+          results[unit] = differ(cursor, later);
+          highWater = earlier.plus(results);
           if (highWater > later) {
-            var _cursor$plus2;
-            cursor = cursor.plus((_cursor$plus2 = {}, _cursor$plus2[unit] = delta - 1, _cursor$plus2));
-            delta -= 1;
+            results[unit]--;
+            cursor = earlier.plus(results);
           } else {
             cursor = highWater;
           }
-          results[unit] = delta;
         }
       }
       return [cursor, results, highWater, lowestOrder];
     }
-    function _diff(earlier, later, units, opts) {
-      var _highOrderDiffs = highOrderDiffs(earlier, later, units), cursor = _highOrderDiffs[0], results = _highOrderDiffs[1], highWater = _highOrderDiffs[2], lowestOrder = _highOrderDiffs[3];
-      var remainingMillis = later - cursor;
-      var lowerOrderUnits = units.filter(function(u) {
-        return ["hours", "minutes", "seconds", "milliseconds"].indexOf(u) >= 0;
-      });
+    function diff(earlier, later, units, opts) {
+      let [cursor, results, highWater, lowestOrder] = highOrderDiffs(earlier, later, units);
+      const remainingMillis = later - cursor;
+      const lowerOrderUnits = units.filter((u) => ["hours", "minutes", "seconds", "milliseconds"].indexOf(u) >= 0);
       if (lowerOrderUnits.length === 0) {
         if (highWater < later) {
-          var _cursor$plus3;
-          highWater = cursor.plus((_cursor$plus3 = {}, _cursor$plus3[lowestOrder] = 1, _cursor$plus3));
+          highWater = cursor.plus({ [lowestOrder]: 1 });
         }
         if (highWater !== cursor) {
           results[lowestOrder] = (results[lowestOrder] || 0) + remainingMillis / (highWater - cursor);
         }
       }
-      var duration = Duration.fromObject(results, opts);
+      const duration = Duration.fromObject(results, opts);
       if (lowerOrderUnits.length > 0) {
-        var _Duration$fromMillis;
-        return (_Duration$fromMillis = Duration.fromMillis(remainingMillis, opts)).shiftTo.apply(_Duration$fromMillis, lowerOrderUnits).plus(duration);
+        return Duration.fromMillis(remainingMillis, opts).shiftTo(...lowerOrderUnits).plus(duration);
       } else {
         return duration;
       }
@@ -20308,16 +19681,16 @@ var require_lib2 = __commonJS({
     };
     var hanidecChars = numberingSystems.hanidec.replace(/[\[|\]]/g, "").split("");
     function parseDigits(str) {
-      var value = parseInt(str, 10);
+      let value = parseInt(str, 10);
       if (isNaN(value)) {
         value = "";
-        for (var i = 0; i < str.length; i++) {
-          var code = str.charCodeAt(i);
+        for (let i = 0; i < str.length; i++) {
+          const code = str.charCodeAt(i);
           if (str[i].search(numberingSystems.hanidec) !== -1) {
             value += hanidecChars.indexOf(str[i]);
           } else {
-            for (var key in numberingSystemsUTF16) {
-              var _numberingSystemsUTF = numberingSystemsUTF16[key], min = _numberingSystemsUTF[0], max = _numberingSystemsUTF[1];
+            for (const key in numberingSystemsUTF16) {
+              const [min, max] = numberingSystemsUTF16[key];
               if (code >= min && code <= max) {
                 value += code - min;
               }
@@ -20329,30 +19702,15 @@ var require_lib2 = __commonJS({
         return value;
       }
     }
-    function digitRegex(_ref, append) {
-      var numberingSystem = _ref.numberingSystem;
-      if (append === void 0) {
-        append = "";
-      }
-      return new RegExp("" + numberingSystems[numberingSystem || "latn"] + append);
+    function digitRegex({ numberingSystem }, append = "") {
+      return new RegExp(`${numberingSystems[numberingSystem || "latn"]}${append}`);
     }
     var MISSING_FTP = "missing Intl.DateTimeFormat.formatToParts support";
-    function intUnit(regex, post) {
-      if (post === void 0) {
-        post = function post2(i) {
-          return i;
-        };
-      }
-      return {
-        regex,
-        deser: function deser(_ref) {
-          var s2 = _ref[0];
-          return post(parseDigits(s2));
-        }
-      };
+    function intUnit(regex, post = (i) => i) {
+      return { regex, deser: ([s2]) => post(parseDigits(s2)) };
     }
     var NBSP = String.fromCharCode(160);
-    var spaceOrNBSP = "[ " + NBSP + "]";
+    var spaceOrNBSP = `[ ${NBSP}]`;
     var spaceOrNBSPRegExp = new RegExp(spaceOrNBSP, "g");
     function fixListRegex(s2) {
       return s2.replace(/\./g, "\\.?").replace(spaceOrNBSPRegExp, spaceOrNBSP);
@@ -20366,48 +19724,21 @@ var require_lib2 = __commonJS({
       } else {
         return {
           regex: RegExp(strings.map(fixListRegex).join("|")),
-          deser: function deser(_ref2) {
-            var s2 = _ref2[0];
-            return strings.findIndex(function(i) {
-              return stripInsensitivities(s2) === stripInsensitivities(i);
-            }) + startIndex;
-          }
+          deser: ([s2]) => strings.findIndex((i) => stripInsensitivities(s2) === stripInsensitivities(i)) + startIndex
         };
       }
     }
     function offset(regex, groups) {
-      return {
-        regex,
-        deser: function deser(_ref3) {
-          var h = _ref3[1], m = _ref3[2];
-          return signedOffset(h, m);
-        },
-        groups
-      };
+      return { regex, deser: ([, h, m]) => signedOffset(h, m), groups };
     }
     function simple(regex) {
-      return {
-        regex,
-        deser: function deser(_ref4) {
-          var s2 = _ref4[0];
-          return s2;
-        }
-      };
+      return { regex, deser: ([s2]) => s2 };
     }
     function escapeToken(value) {
       return value.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
     }
     function unitForToken(token, loc) {
-      var one = digitRegex(loc), two = digitRegex(loc, "{2}"), three = digitRegex(loc, "{3}"), four = digitRegex(loc, "{4}"), six = digitRegex(loc, "{6}"), oneOrTwo = digitRegex(loc, "{1,2}"), oneToThree = digitRegex(loc, "{1,3}"), oneToSix = digitRegex(loc, "{1,6}"), oneToNine = digitRegex(loc, "{1,9}"), twoToFour = digitRegex(loc, "{2,4}"), fourToSix = digitRegex(loc, "{4,6}"), literal = function literal2(t) {
-        return {
-          regex: RegExp(escapeToken(t.val)),
-          deser: function deser(_ref5) {
-            var s2 = _ref5[0];
-            return s2;
-          },
-          literal: true
-        };
-      }, unitate = function unitate2(t) {
+      const one = digitRegex(loc), two = digitRegex(loc, "{2}"), three = digitRegex(loc, "{3}"), four = digitRegex(loc, "{4}"), six = digitRegex(loc, "{6}"), oneOrTwo = digitRegex(loc, "{1,2}"), oneToThree = digitRegex(loc, "{1,3}"), oneToSix = digitRegex(loc, "{1,6}"), oneToNine = digitRegex(loc, "{1,9}"), twoToFour = digitRegex(loc, "{2,4}"), fourToSix = digitRegex(loc, "{4,6}"), literal = (t) => ({ regex: RegExp(escapeToken(t.val)), deser: ([s2]) => s2, literal: true }), unitate = (t) => {
         if (token.literal) {
           return literal(t);
         }
@@ -20503,16 +19834,16 @@ var require_lib2 = __commonJS({
             return oneOf(loc.weekdays("long", true, false), 1);
           case "Z":
           case "ZZ":
-            return offset(new RegExp("([+-]" + oneOrTwo.source + ")(?::(" + two.source + "))?"), 2);
+            return offset(new RegExp(`([+-]${oneOrTwo.source})(?::(${two.source}))?`), 2);
           case "ZZZ":
-            return offset(new RegExp("([+-]" + oneOrTwo.source + ")(" + two.source + ")?"), 2);
+            return offset(new RegExp(`([+-]${oneOrTwo.source})(${two.source})?`), 2);
           case "z":
             return simple(/[a-z_+-/]{1,256}?/i);
           default:
             return literal(t);
         }
       };
-      var unit = unitate(token) || {
+      const unit = unitate(token) || {
         invalidReason: MISSING_FTP
       };
       unit.token = token;
@@ -20550,18 +19881,22 @@ var require_lib2 = __commonJS({
       second: {
         numeric: "s",
         "2-digit": "ss"
+      },
+      timeZoneName: {
+        long: "ZZZZZ",
+        short: "ZZZ"
       }
     };
-    function tokenForPart(part, locale, formatOpts) {
-      var type = part.type, value = part.value;
+    function tokenForPart(part, formatOpts) {
+      const { type, value } = part;
       if (type === "literal") {
         return {
           literal: true,
           val: value
         };
       }
-      var style = formatOpts[type];
-      var val = partTypeStyleToTokenVal[type];
+      const style = formatOpts[type];
+      let val = partTypeStyleToTokenVal[type];
       if (typeof val === "object") {
         val = val[style];
       }
@@ -20574,21 +19909,17 @@ var require_lib2 = __commonJS({
       return void 0;
     }
     function buildRegex(units) {
-      var re = units.map(function(u) {
-        return u.regex;
-      }).reduce(function(f, r) {
-        return f + "(" + r.source + ")";
-      }, "");
-      return ["^" + re + "$", units];
+      const re = units.map((u) => u.regex).reduce((f, r) => `${f}(${r.source})`, "");
+      return [`^${re}$`, units];
     }
     function match(input, regex, handlers) {
-      var matches = input.match(regex);
+      const matches = input.match(regex);
       if (matches) {
-        var all = {};
-        var matchIndex = 1;
-        for (var i in handlers) {
+        const all = {};
+        let matchIndex = 1;
+        for (const i in handlers) {
           if (hasOwnProperty(handlers, i)) {
-            var h = handlers[i], groups = h.groups ? h.groups + 1 : 1;
+            const h = handlers[i], groups = h.groups ? h.groups + 1 : 1;
             if (!h.literal && h.token) {
               all[h.token.val[0]] = h.deser(matches.slice(matchIndex, matchIndex + groups));
             }
@@ -20601,7 +19932,7 @@ var require_lib2 = __commonJS({
       }
     }
     function dateTimeFromMatches(matches) {
-      var toField = function toField2(token) {
+      const toField = (token) => {
         switch (token) {
           case "S":
             return "millisecond";
@@ -20634,8 +19965,8 @@ var require_lib2 = __commonJS({
             return null;
         }
       };
-      var zone = null;
-      var specificOffset;
+      let zone = null;
+      let specificOffset;
       if (!isUndefined(matches.z)) {
         zone = IANAZone.create(matches.z);
       }
@@ -20661,8 +19992,8 @@ var require_lib2 = __commonJS({
       if (!isUndefined(matches.u)) {
         matches.S = parseMillis(matches.u);
       }
-      var vals = Object.keys(matches).reduce(function(r, k) {
-        var f = toField(k);
+      const vals = Object.keys(matches).reduce((r, k) => {
+        const f = toField(k);
         if (f) {
           r[f] = matches[k];
         }
@@ -20681,87 +20012,63 @@ var require_lib2 = __commonJS({
       if (token.literal) {
         return token;
       }
-      var formatOpts = Formatter.macroTokenToFormatOpts(token.val);
-      if (!formatOpts) {
-        return token;
-      }
-      var formatter = Formatter.create(locale, formatOpts);
-      var parts = formatter.formatDateTimeParts(getDummyDateTime());
-      var tokens = parts.map(function(p) {
-        return tokenForPart(p, locale, formatOpts);
-      });
-      if (tokens.includes(void 0)) {
+      const formatOpts = Formatter.macroTokenToFormatOpts(token.val);
+      const tokens = formatOptsToTokens(formatOpts, locale);
+      if (tokens == null || tokens.includes(void 0)) {
         return token;
       }
       return tokens;
     }
     function expandMacroTokens(tokens, locale) {
-      var _Array$prototype;
-      return (_Array$prototype = Array.prototype).concat.apply(_Array$prototype, tokens.map(function(t) {
-        return maybeExpandMacroToken(t, locale);
-      }));
+      return Array.prototype.concat(...tokens.map((t) => maybeExpandMacroToken(t, locale)));
     }
     function explainFromTokens(locale, input, format) {
-      var tokens = expandMacroTokens(Formatter.parseFormat(format), locale), units = tokens.map(function(t) {
-        return unitForToken(t, locale);
-      }), disqualifyingUnit = units.find(function(t) {
-        return t.invalidReason;
-      });
+      const tokens = expandMacroTokens(Formatter.parseFormat(format), locale), units = tokens.map((t) => unitForToken(t, locale)), disqualifyingUnit = units.find((t) => t.invalidReason);
       if (disqualifyingUnit) {
-        return {
-          input,
-          tokens,
-          invalidReason: disqualifyingUnit.invalidReason
-        };
+        return { input, tokens, invalidReason: disqualifyingUnit.invalidReason };
       } else {
-        var _buildRegex = buildRegex(units), regexString = _buildRegex[0], handlers = _buildRegex[1], regex = RegExp(regexString, "i"), _match = match(input, regex, handlers), rawMatches = _match[0], matches = _match[1], _ref6 = matches ? dateTimeFromMatches(matches) : [null, null, void 0], result = _ref6[0], zone = _ref6[1], specificOffset = _ref6[2];
+        const [regexString, handlers] = buildRegex(units), regex = RegExp(regexString, "i"), [rawMatches, matches] = match(input, regex, handlers), [result, zone, specificOffset] = matches ? dateTimeFromMatches(matches) : [null, null, void 0];
         if (hasOwnProperty(matches, "a") && hasOwnProperty(matches, "H")) {
           throw new ConflictingSpecificationError("Can't include meridiem when specifying 24-hour format");
         }
-        return {
-          input,
-          tokens,
-          regex,
-          rawMatches,
-          matches,
-          result,
-          zone,
-          specificOffset
-        };
+        return { input, tokens, regex, rawMatches, matches, result, zone, specificOffset };
       }
     }
     function parseFromTokens(locale, input, format) {
-      var _explainFromTokens = explainFromTokens(locale, input, format), result = _explainFromTokens.result, zone = _explainFromTokens.zone, specificOffset = _explainFromTokens.specificOffset, invalidReason = _explainFromTokens.invalidReason;
+      const { result, zone, specificOffset, invalidReason } = explainFromTokens(locale, input, format);
       return [result, zone, specificOffset, invalidReason];
+    }
+    function formatOptsToTokens(formatOpts, locale) {
+      if (!formatOpts) {
+        return null;
+      }
+      const formatter = Formatter.create(locale, formatOpts);
+      const parts = formatter.formatDateTimeParts(getDummyDateTime());
+      return parts.map((p) => tokenForPart(p, formatOpts));
     }
     var nonLeapLadder = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
     var leapLadder = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
     function unitOutOfRange(unit, value) {
-      return new Invalid("unit out of range", "you specified " + value + " (of type " + typeof value + ") as a " + unit + ", which is invalid");
+      return new Invalid("unit out of range", `you specified ${value} (of type ${typeof value}) as a ${unit}, which is invalid`);
     }
     function dayOfWeek(year, month, day) {
-      var d = new Date(Date.UTC(year, month - 1, day));
+      const d = new Date(Date.UTC(year, month - 1, day));
       if (year < 100 && year >= 0) {
         d.setUTCFullYear(d.getUTCFullYear() - 1900);
       }
-      var js = d.getUTCDay();
+      const js = d.getUTCDay();
       return js === 0 ? 7 : js;
     }
     function computeOrdinal(year, month, day) {
       return day + (isLeapYear(year) ? leapLadder : nonLeapLadder)[month - 1];
     }
     function uncomputeOrdinal(year, ordinal) {
-      var table = isLeapYear(year) ? leapLadder : nonLeapLadder, month0 = table.findIndex(function(i) {
-        return i < ordinal;
-      }), day = ordinal - table[month0];
-      return {
-        month: month0 + 1,
-        day
-      };
+      const table = isLeapYear(year) ? leapLadder : nonLeapLadder, month0 = table.findIndex((i) => i < ordinal), day = ordinal - table[month0];
+      return { month: month0 + 1, day };
     }
     function gregorianToWeek(gregObj) {
-      var year = gregObj.year, month = gregObj.month, day = gregObj.day, ordinal = computeOrdinal(year, month, day), weekday = dayOfWeek(year, month, day);
-      var weekNumber = Math.floor((ordinal - weekday + 10) / 7), weekYear;
+      const { year, month, day } = gregObj, ordinal = computeOrdinal(year, month, day), weekday = dayOfWeek(year, month, day);
+      let weekNumber = Math.floor((ordinal - weekday + 10) / 7), weekYear;
       if (weekNumber < 1) {
         weekYear = year - 1;
         weekNumber = weeksInWeekYear(weekYear);
@@ -20771,15 +20078,11 @@ var require_lib2 = __commonJS({
       } else {
         weekYear = year;
       }
-      return _extends({
-        weekYear,
-        weekNumber,
-        weekday
-      }, timeObject(gregObj));
+      return __spreadValues({ weekYear, weekNumber, weekday }, timeObject(gregObj));
     }
     function weekToGregorian(weekData) {
-      var weekYear = weekData.weekYear, weekNumber = weekData.weekNumber, weekday = weekData.weekday, weekdayOfJan4 = dayOfWeek(weekYear, 1, 4), yearInDays = daysInYear(weekYear);
-      var ordinal = weekNumber * 7 + weekday - weekdayOfJan4 - 3, year;
+      const { weekYear, weekNumber, weekday } = weekData, weekdayOfJan4 = dayOfWeek(weekYear, 1, 4), yearInDays = daysInYear(weekYear);
+      let ordinal = weekNumber * 7 + weekday - weekdayOfJan4 - 3, year;
       if (ordinal < 1) {
         year = weekYear - 1;
         ordinal += daysInYear(year);
@@ -20789,32 +20092,21 @@ var require_lib2 = __commonJS({
       } else {
         year = weekYear;
       }
-      var _uncomputeOrdinal = uncomputeOrdinal(year, ordinal), month = _uncomputeOrdinal.month, day = _uncomputeOrdinal.day;
-      return _extends({
-        year,
-        month,
-        day
-      }, timeObject(weekData));
+      const { month, day } = uncomputeOrdinal(year, ordinal);
+      return __spreadValues({ year, month, day }, timeObject(weekData));
     }
     function gregorianToOrdinal(gregData) {
-      var year = gregData.year, month = gregData.month, day = gregData.day;
-      var ordinal = computeOrdinal(year, month, day);
-      return _extends({
-        year,
-        ordinal
-      }, timeObject(gregData));
+      const { year, month, day } = gregData;
+      const ordinal = computeOrdinal(year, month, day);
+      return __spreadValues({ year, ordinal }, timeObject(gregData));
     }
     function ordinalToGregorian(ordinalData) {
-      var year = ordinalData.year, ordinal = ordinalData.ordinal;
-      var _uncomputeOrdinal2 = uncomputeOrdinal(year, ordinal), month = _uncomputeOrdinal2.month, day = _uncomputeOrdinal2.day;
-      return _extends({
-        year,
-        month,
-        day
-      }, timeObject(ordinalData));
+      const { year, ordinal } = ordinalData;
+      const { month, day } = uncomputeOrdinal(year, ordinal);
+      return __spreadValues({ year, month, day }, timeObject(ordinalData));
     }
     function hasInvalidWeekData(obj) {
-      var validYear = isInteger(obj.weekYear), validWeek = integerBetween(obj.weekNumber, 1, weeksInWeekYear(obj.weekYear)), validWeekday = integerBetween(obj.weekday, 1, 7);
+      const validYear = isInteger(obj.weekYear), validWeek = integerBetween(obj.weekNumber, 1, weeksInWeekYear(obj.weekYear)), validWeekday = integerBetween(obj.weekday, 1, 7);
       if (!validYear) {
         return unitOutOfRange("weekYear", obj.weekYear);
       } else if (!validWeek) {
@@ -20825,7 +20117,7 @@ var require_lib2 = __commonJS({
         return false;
     }
     function hasInvalidOrdinalData(obj) {
-      var validYear = isInteger(obj.year), validOrdinal = integerBetween(obj.ordinal, 1, daysInYear(obj.year));
+      const validYear = isInteger(obj.year), validOrdinal = integerBetween(obj.ordinal, 1, daysInYear(obj.year));
       if (!validYear) {
         return unitOutOfRange("year", obj.year);
       } else if (!validOrdinal) {
@@ -20834,7 +20126,7 @@ var require_lib2 = __commonJS({
         return false;
     }
     function hasInvalidGregorianData(obj) {
-      var validYear = isInteger(obj.year), validMonth = integerBetween(obj.month, 1, 12), validDay = integerBetween(obj.day, 1, daysInMonth(obj.year, obj.month));
+      const validYear = isInteger(obj.year), validMonth = integerBetween(obj.month, 1, 12), validDay = integerBetween(obj.day, 1, daysInMonth(obj.year, obj.month));
       if (!validYear) {
         return unitOutOfRange("year", obj.year);
       } else if (!validMonth) {
@@ -20845,8 +20137,8 @@ var require_lib2 = __commonJS({
         return false;
     }
     function hasInvalidTimeData(obj) {
-      var hour = obj.hour, minute = obj.minute, second = obj.second, millisecond = obj.millisecond;
-      var validHour = integerBetween(hour, 0, 23) || hour === 24 && minute === 0 && second === 0 && millisecond === 0, validMinute = integerBetween(minute, 0, 59), validSecond = integerBetween(second, 0, 59), validMillisecond = integerBetween(millisecond, 0, 999);
+      const { hour, minute, second, millisecond } = obj;
+      const validHour = integerBetween(hour, 0, 23) || hour === 24 && minute === 0 && second === 0 && millisecond === 0, validMinute = integerBetween(minute, 0, 59), validSecond = integerBetween(second, 0, 59), validMillisecond = integerBetween(millisecond, 0, 999);
       if (!validHour) {
         return unitOutOfRange("hour", hour);
       } else if (!validMinute) {
@@ -20861,7 +20153,7 @@ var require_lib2 = __commonJS({
     var INVALID = "Invalid DateTime";
     var MAX_DATE = 864e13;
     function unsupportedZone(zone) {
-      return new Invalid("unsupported zone", 'the zone "' + zone.name + '" is not supported');
+      return new Invalid("unsupported zone", `the zone "${zone.name}" is not supported`);
     }
     function possiblyCachedWeekData(dt) {
       if (dt.weekData === null) {
@@ -20870,7 +20162,7 @@ var require_lib2 = __commonJS({
       return dt.weekData;
     }
     function clone(inst, alts) {
-      var current = {
+      const current = {
         ts: inst.ts,
         zone: inst.zone,
         c: inst.c,
@@ -20878,18 +20170,16 @@ var require_lib2 = __commonJS({
         loc: inst.loc,
         invalid: inst.invalid
       };
-      return new DateTime(_extends({}, current, alts, {
-        old: current
-      }));
+      return new DateTime(__spreadProps(__spreadValues(__spreadValues({}, current), alts), { old: current }));
     }
     function fixOffset(localTS, o, tz) {
-      var utcGuess = localTS - o * 60 * 1e3;
-      var o2 = tz.offset(utcGuess);
+      let utcGuess = localTS - o * 60 * 1e3;
+      const o2 = tz.offset(utcGuess);
       if (o === o2) {
         return [utcGuess, o];
       }
       utcGuess -= (o2 - o) * 60 * 1e3;
-      var o3 = tz.offset(utcGuess);
+      const o3 = tz.offset(utcGuess);
       if (o2 === o3) {
         return [utcGuess, o2];
       }
@@ -20897,7 +20187,7 @@ var require_lib2 = __commonJS({
     }
     function tsToObj(ts, offset2) {
       ts += offset2 * 60 * 1e3;
-      var d = new Date(ts);
+      const d = new Date(ts);
       return {
         year: d.getUTCFullYear(),
         month: d.getUTCMonth() + 1,
@@ -20912,7 +20202,7 @@ var require_lib2 = __commonJS({
       return fixOffset(objToLocalTS(obj), offset2, zone);
     }
     function adjustTime(inst, dur) {
-      var oPre = inst.o, year = inst.c.year + Math.trunc(dur.years), month = inst.c.month + Math.trunc(dur.months) + Math.trunc(dur.quarters) * 3, c = _extends({}, inst.c, {
+      const oPre = inst.o, year = inst.c.year + Math.trunc(dur.years), month = inst.c.month + Math.trunc(dur.months) + Math.trunc(dur.quarters) * 3, c = __spreadProps(__spreadValues({}, inst.c), {
         year,
         month,
         day: Math.min(inst.c.day, daysInMonth(year, month)) + Math.trunc(dur.days) + Math.trunc(dur.weeks) * 7
@@ -20927,40 +20217,34 @@ var require_lib2 = __commonJS({
         seconds: dur.seconds,
         milliseconds: dur.milliseconds
       }).as("milliseconds"), localTS = objToLocalTS(c);
-      var _fixOffset = fixOffset(localTS, oPre, inst.zone), ts = _fixOffset[0], o = _fixOffset[1];
+      let [ts, o] = fixOffset(localTS, oPre, inst.zone);
       if (millisToAdd !== 0) {
         ts += millisToAdd;
         o = inst.zone.offset(ts);
       }
-      return {
-        ts,
-        o
-      };
+      return { ts, o };
     }
     function parseDataToDateTime(parsed, parsedZone, opts, format, text, specificOffset) {
-      var setZone = opts.setZone, zone = opts.zone;
+      const { setZone, zone } = opts;
       if (parsed && Object.keys(parsed).length !== 0) {
-        var interpretationZone = parsedZone || zone, inst = DateTime.fromObject(parsed, _extends({}, opts, {
+        const interpretationZone = parsedZone || zone, inst = DateTime.fromObject(parsed, __spreadProps(__spreadValues({}, opts), {
           zone: interpretationZone,
           specificOffset
         }));
         return setZone ? inst : inst.setZone(zone);
       } else {
-        return DateTime.invalid(new Invalid("unparsable", 'the input "' + text + `" can't be parsed as ` + format));
+        return DateTime.invalid(new Invalid("unparsable", `the input "${text}" can't be parsed as ${format}`));
       }
     }
-    function toTechFormat(dt, format, allowZ) {
-      if (allowZ === void 0) {
-        allowZ = true;
-      }
+    function toTechFormat(dt, format, allowZ = true) {
       return dt.isValid ? Formatter.create(Locale.create("en-US"), {
         allowZ,
         forceSimple: true
       }).formatDateTimeFromString(dt, format) : null;
     }
-    function _toISODate(o, extended) {
-      var longFormat = o.c.year > 9999 || o.c.year < 0;
-      var c = "";
+    function toISODate(o, extended) {
+      const longFormat = o.c.year > 9999 || o.c.year < 0;
+      let c = "";
       if (longFormat && o.c.year >= 0)
         c += "+";
       c += padStart(o.c.year, longFormat ? 6 : 4);
@@ -20975,8 +20259,8 @@ var require_lib2 = __commonJS({
       }
       return c;
     }
-    function _toISOTime(o, extended, suppressSeconds, suppressMilliseconds, includeOffset, extendedZone) {
-      var c = padStart(o.c.hour);
+    function toISOTime(o, extended, suppressSeconds, suppressMilliseconds, includeOffset, extendedZone) {
+      let c = padStart(o.c.hour);
       if (extended) {
         c += ":";
         c += padStart(o.c.minute);
@@ -21037,10 +20321,18 @@ var require_lib2 = __commonJS({
       millisecond: 0
     };
     var orderedUnits = ["year", "month", "day", "hour", "minute", "second", "millisecond"];
-    var orderedWeekUnits = ["weekYear", "weekNumber", "weekday", "hour", "minute", "second", "millisecond"];
+    var orderedWeekUnits = [
+      "weekYear",
+      "weekNumber",
+      "weekday",
+      "hour",
+      "minute",
+      "second",
+      "millisecond"
+    ];
     var orderedOrdinalUnits = ["year", "ordinal", "hour", "minute", "second", "millisecond"];
     function normalizeUnit(unit) {
-      var normalized = {
+      const normalized = {
         year: "year",
         years: "year",
         month: "month",
@@ -21071,54 +20363,45 @@ var require_lib2 = __commonJS({
       return normalized;
     }
     function quickDT(obj, opts) {
-      var zone = normalizeZone(opts.zone, Settings.defaultZone), loc = Locale.fromObject(opts), tsNow = Settings.now();
-      var ts, o;
+      const zone = normalizeZone(opts.zone, Settings.defaultZone), loc = Locale.fromObject(opts), tsNow = Settings.now();
+      let ts, o;
       if (!isUndefined(obj.year)) {
-        for (var _iterator = _createForOfIteratorHelperLoose(orderedUnits), _step; !(_step = _iterator()).done; ) {
-          var u = _step.value;
+        for (const u of orderedUnits) {
           if (isUndefined(obj[u])) {
             obj[u] = defaultUnitValues[u];
           }
         }
-        var invalid = hasInvalidGregorianData(obj) || hasInvalidTimeData(obj);
+        const invalid = hasInvalidGregorianData(obj) || hasInvalidTimeData(obj);
         if (invalid) {
           return DateTime.invalid(invalid);
         }
-        var offsetProvis = zone.offset(tsNow);
-        var _objToTS = objToTS(obj, offsetProvis, zone);
-        ts = _objToTS[0];
-        o = _objToTS[1];
+        const offsetProvis = zone.offset(tsNow);
+        [ts, o] = objToTS(obj, offsetProvis, zone);
       } else {
         ts = tsNow;
       }
-      return new DateTime({
-        ts,
-        zone,
-        loc,
-        o
-      });
+      return new DateTime({ ts, zone, loc, o });
     }
     function diffRelative(start, end, opts) {
-      var round = isUndefined(opts.round) ? true : opts.round, format = function format2(c, unit2) {
+      const round = isUndefined(opts.round) ? true : opts.round, format = (c, unit) => {
         c = roundTo(c, round || opts.calendary ? 0 : 2, true);
-        var formatter = end.loc.clone(opts).relFormatter(opts);
-        return formatter.format(c, unit2);
-      }, differ = function differ2(unit2) {
+        const formatter = end.loc.clone(opts).relFormatter(opts);
+        return formatter.format(c, unit);
+      }, differ = (unit) => {
         if (opts.calendary) {
-          if (!end.hasSame(start, unit2)) {
-            return end.startOf(unit2).diff(start.startOf(unit2), unit2).get(unit2);
+          if (!end.hasSame(start, unit)) {
+            return end.startOf(unit).diff(start.startOf(unit), unit).get(unit);
           } else
             return 0;
         } else {
-          return end.diff(start, unit2).get(unit2);
+          return end.diff(start, unit).get(unit);
         }
       };
       if (opts.unit) {
         return format(differ(opts.unit), opts.unit);
       }
-      for (var _iterator2 = _createForOfIteratorHelperLoose(opts.units), _step2; !(_step2 = _iterator2()).done; ) {
-        var unit = _step2.value;
-        var count = differ(unit);
+      for (const unit of opts.units) {
+        const count = differ(unit);
         if (Math.abs(count) >= 1) {
           return format(count, unit);
         }
@@ -21126,7 +20409,7 @@ var require_lib2 = __commonJS({
       return format(start > end ? -0 : 0, opts.units[opts.units.length - 1]);
     }
     function lastOpts(argList) {
-      var opts = {}, args2;
+      let opts = {}, args2;
       if (argList.length > 0 && typeof argList[argList.length - 1] === "object") {
         opts = argList[argList.length - 1];
         args2 = Array.from(argList).slice(0, argList.length - 1);
@@ -21135,20 +20418,18 @@ var require_lib2 = __commonJS({
       }
       return [opts, args2];
     }
-    var DateTime = /* @__PURE__ */ function() {
-      function DateTime2(config) {
-        var zone = config.zone || Settings.defaultZone;
-        var invalid = config.invalid || (Number.isNaN(config.ts) ? new Invalid("invalid input") : null) || (!zone.isValid ? unsupportedZone(zone) : null);
+    var DateTime = class {
+      constructor(config) {
+        const zone = config.zone || Settings.defaultZone;
+        let invalid = config.invalid || (Number.isNaN(config.ts) ? new Invalid("invalid input") : null) || (!zone.isValid ? unsupportedZone(zone) : null);
         this.ts = isUndefined(config.ts) ? Settings.now() : config.ts;
-        var c = null, o = null;
+        let c = null, o = null;
         if (!invalid) {
-          var unchanged = config.old && config.old.ts === this.ts && config.old.zone.equals(zone);
+          const unchanged = config.old && config.old.ts === this.ts && config.old.zone.equals(zone);
           if (unchanged) {
-            var _ref = [config.old.c, config.old.o];
-            c = _ref[0];
-            o = _ref[1];
+            [c, o] = [config.old.c, config.old.o];
           } else {
-            var ot = zone.offset(this.ts);
+            const ot = zone.offset(this.ts);
             c = tsToObj(this.ts, ot);
             invalid = Number.isNaN(c.year) ? new Invalid("invalid input") : null;
             c = invalid ? null : c;
@@ -21163,100 +20444,72 @@ var require_lib2 = __commonJS({
         this.o = o;
         this.isLuxonDateTime = true;
       }
-      DateTime2.now = function now2() {
-        return new DateTime2({});
-      };
-      DateTime2.local = function local() {
-        var _lastOpts = lastOpts(arguments), opts = _lastOpts[0], args2 = _lastOpts[1], year = args2[0], month = args2[1], day = args2[2], hour = args2[3], minute = args2[4], second = args2[5], millisecond = args2[6];
-        return quickDT({
-          year,
-          month,
-          day,
-          hour,
-          minute,
-          second,
-          millisecond
-        }, opts);
-      };
-      DateTime2.utc = function utc() {
-        var _lastOpts2 = lastOpts(arguments), opts = _lastOpts2[0], args2 = _lastOpts2[1], year = args2[0], month = args2[1], day = args2[2], hour = args2[3], minute = args2[4], second = args2[5], millisecond = args2[6];
+      static now() {
+        return new DateTime({});
+      }
+      static local() {
+        const [opts, args2] = lastOpts(arguments), [year, month, day, hour, minute, second, millisecond] = args2;
+        return quickDT({ year, month, day, hour, minute, second, millisecond }, opts);
+      }
+      static utc() {
+        const [opts, args2] = lastOpts(arguments), [year, month, day, hour, minute, second, millisecond] = args2;
         opts.zone = FixedOffsetZone.utcInstance;
-        return quickDT({
-          year,
-          month,
-          day,
-          hour,
-          minute,
-          second,
-          millisecond
-        }, opts);
-      };
-      DateTime2.fromJSDate = function fromJSDate(date, options) {
-        if (options === void 0) {
-          options = {};
-        }
-        var ts = isDate(date) ? date.valueOf() : NaN;
+        return quickDT({ year, month, day, hour, minute, second, millisecond }, opts);
+      }
+      static fromJSDate(date, options = {}) {
+        const ts = isDate(date) ? date.valueOf() : NaN;
         if (Number.isNaN(ts)) {
-          return DateTime2.invalid("invalid input");
+          return DateTime.invalid("invalid input");
         }
-        var zoneToUse = normalizeZone(options.zone, Settings.defaultZone);
+        const zoneToUse = normalizeZone(options.zone, Settings.defaultZone);
         if (!zoneToUse.isValid) {
-          return DateTime2.invalid(unsupportedZone(zoneToUse));
+          return DateTime.invalid(unsupportedZone(zoneToUse));
         }
-        return new DateTime2({
+        return new DateTime({
           ts,
           zone: zoneToUse,
           loc: Locale.fromObject(options)
         });
-      };
-      DateTime2.fromMillis = function fromMillis(milliseconds, options) {
-        if (options === void 0) {
-          options = {};
-        }
+      }
+      static fromMillis(milliseconds, options = {}) {
         if (!isNumber(milliseconds)) {
-          throw new InvalidArgumentError("fromMillis requires a numerical input, but received a " + typeof milliseconds + " with value " + milliseconds);
+          throw new InvalidArgumentError(`fromMillis requires a numerical input, but received a ${typeof milliseconds} with value ${milliseconds}`);
         } else if (milliseconds < -MAX_DATE || milliseconds > MAX_DATE) {
-          return DateTime2.invalid("Timestamp out of range");
+          return DateTime.invalid("Timestamp out of range");
         } else {
-          return new DateTime2({
+          return new DateTime({
             ts: milliseconds,
             zone: normalizeZone(options.zone, Settings.defaultZone),
             loc: Locale.fromObject(options)
           });
         }
-      };
-      DateTime2.fromSeconds = function fromSeconds(seconds, options) {
-        if (options === void 0) {
-          options = {};
-        }
+      }
+      static fromSeconds(seconds, options = {}) {
         if (!isNumber(seconds)) {
           throw new InvalidArgumentError("fromSeconds requires a numerical input");
         } else {
-          return new DateTime2({
+          return new DateTime({
             ts: seconds * 1e3,
             zone: normalizeZone(options.zone, Settings.defaultZone),
             loc: Locale.fromObject(options)
           });
         }
-      };
-      DateTime2.fromObject = function fromObject(obj, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      static fromObject(obj, opts = {}) {
         obj = obj || {};
-        var zoneToUse = normalizeZone(opts.zone, Settings.defaultZone);
+        const zoneToUse = normalizeZone(opts.zone, Settings.defaultZone);
         if (!zoneToUse.isValid) {
-          return DateTime2.invalid(unsupportedZone(zoneToUse));
+          return DateTime.invalid(unsupportedZone(zoneToUse));
         }
-        var tsNow = Settings.now(), offsetProvis = !isUndefined(opts.specificOffset) ? opts.specificOffset : zoneToUse.offset(tsNow), normalized = normalizeObject(obj, normalizeUnit), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber, loc = Locale.fromObject(opts);
+        const tsNow = Settings.now(), offsetProvis = !isUndefined(opts.specificOffset) ? opts.specificOffset : zoneToUse.offset(tsNow), normalized = normalizeObject(obj, normalizeUnit), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber, loc = Locale.fromObject(opts);
         if ((containsGregor || containsOrdinal) && definiteWeekDef) {
           throw new ConflictingSpecificationError("Can't mix weekYear/weekNumber units with year/month/day or ordinals");
         }
         if (containsGregorMD && containsOrdinal) {
           throw new ConflictingSpecificationError("Can't mix ordinal dates with month/day");
         }
-        var useWeekData = definiteWeekDef || normalized.weekday && !containsGregor;
-        var units, defaultValues, objNow = tsToObj(tsNow, offsetProvis);
+        const useWeekData = definiteWeekDef || normalized.weekday && !containsGregor;
+        let units, defaultValues, objNow = tsToObj(tsNow, offsetProvis);
         if (useWeekData) {
           units = orderedWeekUnits;
           defaultValues = defaultWeekUnitValues;
@@ -21269,10 +20522,9 @@ var require_lib2 = __commonJS({
           units = orderedUnits;
           defaultValues = defaultUnitValues;
         }
-        var foundFirst = false;
-        for (var _iterator3 = _createForOfIteratorHelperLoose(units), _step3; !(_step3 = _iterator3()).done; ) {
-          var u = _step3.value;
-          var v = normalized[u];
+        let foundFirst = false;
+        for (const u of units) {
+          const v = normalized[u];
           if (!isUndefined(v)) {
             foundFirst = true;
           } else if (foundFirst) {
@@ -21281,199 +20533,270 @@ var require_lib2 = __commonJS({
             normalized[u] = objNow[u];
           }
         }
-        var higherOrderInvalid = useWeekData ? hasInvalidWeekData(normalized) : containsOrdinal ? hasInvalidOrdinalData(normalized) : hasInvalidGregorianData(normalized), invalid = higherOrderInvalid || hasInvalidTimeData(normalized);
+        const higherOrderInvalid = useWeekData ? hasInvalidWeekData(normalized) : containsOrdinal ? hasInvalidOrdinalData(normalized) : hasInvalidGregorianData(normalized), invalid = higherOrderInvalid || hasInvalidTimeData(normalized);
         if (invalid) {
-          return DateTime2.invalid(invalid);
+          return DateTime.invalid(invalid);
         }
-        var gregorian = useWeekData ? weekToGregorian(normalized) : containsOrdinal ? ordinalToGregorian(normalized) : normalized, _objToTS2 = objToTS(gregorian, offsetProvis, zoneToUse), tsFinal = _objToTS2[0], offsetFinal = _objToTS2[1], inst = new DateTime2({
+        const gregorian = useWeekData ? weekToGregorian(normalized) : containsOrdinal ? ordinalToGregorian(normalized) : normalized, [tsFinal, offsetFinal] = objToTS(gregorian, offsetProvis, zoneToUse), inst = new DateTime({
           ts: tsFinal,
           zone: zoneToUse,
           o: offsetFinal,
           loc
         });
         if (normalized.weekday && containsGregor && obj.weekday !== inst.weekday) {
-          return DateTime2.invalid("mismatched weekday", "you can't specify both a weekday of " + normalized.weekday + " and a date of " + inst.toISO());
+          return DateTime.invalid("mismatched weekday", `you can't specify both a weekday of ${normalized.weekday} and a date of ${inst.toISO()}`);
         }
         return inst;
-      };
-      DateTime2.fromISO = function fromISO(text, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var _parseISODate = parseISODate(text), vals = _parseISODate[0], parsedZone = _parseISODate[1];
+      }
+      static fromISO(text, opts = {}) {
+        const [vals, parsedZone] = parseISODate(text);
         return parseDataToDateTime(vals, parsedZone, opts, "ISO 8601", text);
-      };
-      DateTime2.fromRFC2822 = function fromRFC2822(text, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var _parseRFC2822Date = parseRFC2822Date(text), vals = _parseRFC2822Date[0], parsedZone = _parseRFC2822Date[1];
+      }
+      static fromRFC2822(text, opts = {}) {
+        const [vals, parsedZone] = parseRFC2822Date(text);
         return parseDataToDateTime(vals, parsedZone, opts, "RFC 2822", text);
-      };
-      DateTime2.fromHTTP = function fromHTTP(text, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var _parseHTTPDate = parseHTTPDate(text), vals = _parseHTTPDate[0], parsedZone = _parseHTTPDate[1];
+      }
+      static fromHTTP(text, opts = {}) {
+        const [vals, parsedZone] = parseHTTPDate(text);
         return parseDataToDateTime(vals, parsedZone, opts, "HTTP", opts);
-      };
-      DateTime2.fromFormat = function fromFormat(text, fmt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      static fromFormat(text, fmt, opts = {}) {
         if (isUndefined(text) || isUndefined(fmt)) {
           throw new InvalidArgumentError("fromFormat requires an input string and a format");
         }
-        var _opts = opts, _opts$locale = _opts.locale, locale = _opts$locale === void 0 ? null : _opts$locale, _opts$numberingSystem = _opts.numberingSystem, numberingSystem = _opts$numberingSystem === void 0 ? null : _opts$numberingSystem, localeToUse = Locale.fromOpts({
+        const { locale = null, numberingSystem = null } = opts, localeToUse = Locale.fromOpts({
           locale,
           numberingSystem,
           defaultToEN: true
-        }), _parseFromTokens = parseFromTokens(localeToUse, text, fmt), vals = _parseFromTokens[0], parsedZone = _parseFromTokens[1], specificOffset = _parseFromTokens[2], invalid = _parseFromTokens[3];
+        }), [vals, parsedZone, specificOffset, invalid] = parseFromTokens(localeToUse, text, fmt);
         if (invalid) {
-          return DateTime2.invalid(invalid);
+          return DateTime.invalid(invalid);
         } else {
-          return parseDataToDateTime(vals, parsedZone, opts, "format " + fmt, text, specificOffset);
+          return parseDataToDateTime(vals, parsedZone, opts, `format ${fmt}`, text, specificOffset);
         }
-      };
-      DateTime2.fromString = function fromString(text, fmt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        return DateTime2.fromFormat(text, fmt, opts);
-      };
-      DateTime2.fromSQL = function fromSQL(text, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-        var _parseSQL = parseSQL(text), vals = _parseSQL[0], parsedZone = _parseSQL[1];
+      }
+      static fromString(text, fmt, opts = {}) {
+        return DateTime.fromFormat(text, fmt, opts);
+      }
+      static fromSQL(text, opts = {}) {
+        const [vals, parsedZone] = parseSQL(text);
         return parseDataToDateTime(vals, parsedZone, opts, "SQL", text);
-      };
-      DateTime2.invalid = function invalid(reason, explanation) {
-        if (explanation === void 0) {
-          explanation = null;
-        }
+      }
+      static invalid(reason, explanation = null) {
         if (!reason) {
           throw new InvalidArgumentError("need to specify a reason the DateTime is invalid");
         }
-        var invalid2 = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
+        const invalid = reason instanceof Invalid ? reason : new Invalid(reason, explanation);
         if (Settings.throwOnInvalid) {
-          throw new InvalidDateTimeError(invalid2);
+          throw new InvalidDateTimeError(invalid);
         } else {
-          return new DateTime2({
-            invalid: invalid2
-          });
+          return new DateTime({ invalid });
         }
-      };
-      DateTime2.isDateTime = function isDateTime(o) {
+      }
+      static isDateTime(o) {
         return o && o.isLuxonDateTime || false;
-      };
-      var _proto = DateTime2.prototype;
-      _proto.get = function get(unit) {
+      }
+      static parseFormatForOpts(formatOpts, localeOpts = {}) {
+        const tokenList = formatOptsToTokens(formatOpts, Locale.fromObject(localeOpts));
+        return !tokenList ? null : tokenList.map((t) => t ? t.val : null).join("");
+      }
+      static expandFormat(fmt, localeOpts = {}) {
+        const expanded = expandMacroTokens(Formatter.parseFormat(fmt), Locale.fromObject(localeOpts));
+        return expanded.map((t) => t.val).join("");
+      }
+      get(unit) {
         return this[unit];
-      };
-      _proto.resolvedLocaleOptions = function resolvedLocaleOptions(opts) {
-        if (opts === void 0) {
-          opts = {};
+      }
+      get isValid() {
+        return this.invalid === null;
+      }
+      get invalidReason() {
+        return this.invalid ? this.invalid.reason : null;
+      }
+      get invalidExplanation() {
+        return this.invalid ? this.invalid.explanation : null;
+      }
+      get locale() {
+        return this.isValid ? this.loc.locale : null;
+      }
+      get numberingSystem() {
+        return this.isValid ? this.loc.numberingSystem : null;
+      }
+      get outputCalendar() {
+        return this.isValid ? this.loc.outputCalendar : null;
+      }
+      get zone() {
+        return this._zone;
+      }
+      get zoneName() {
+        return this.isValid ? this.zone.name : null;
+      }
+      get year() {
+        return this.isValid ? this.c.year : NaN;
+      }
+      get quarter() {
+        return this.isValid ? Math.ceil(this.c.month / 3) : NaN;
+      }
+      get month() {
+        return this.isValid ? this.c.month : NaN;
+      }
+      get day() {
+        return this.isValid ? this.c.day : NaN;
+      }
+      get hour() {
+        return this.isValid ? this.c.hour : NaN;
+      }
+      get minute() {
+        return this.isValid ? this.c.minute : NaN;
+      }
+      get second() {
+        return this.isValid ? this.c.second : NaN;
+      }
+      get millisecond() {
+        return this.isValid ? this.c.millisecond : NaN;
+      }
+      get weekYear() {
+        return this.isValid ? possiblyCachedWeekData(this).weekYear : NaN;
+      }
+      get weekNumber() {
+        return this.isValid ? possiblyCachedWeekData(this).weekNumber : NaN;
+      }
+      get weekday() {
+        return this.isValid ? possiblyCachedWeekData(this).weekday : NaN;
+      }
+      get ordinal() {
+        return this.isValid ? gregorianToOrdinal(this.c).ordinal : NaN;
+      }
+      get monthShort() {
+        return this.isValid ? Info.months("short", { locObj: this.loc })[this.month - 1] : null;
+      }
+      get monthLong() {
+        return this.isValid ? Info.months("long", { locObj: this.loc })[this.month - 1] : null;
+      }
+      get weekdayShort() {
+        return this.isValid ? Info.weekdays("short", { locObj: this.loc })[this.weekday - 1] : null;
+      }
+      get weekdayLong() {
+        return this.isValid ? Info.weekdays("long", { locObj: this.loc })[this.weekday - 1] : null;
+      }
+      get offset() {
+        return this.isValid ? +this.o : NaN;
+      }
+      get offsetNameShort() {
+        if (this.isValid) {
+          return this.zone.offsetName(this.ts, {
+            format: "short",
+            locale: this.locale
+          });
+        } else {
+          return null;
         }
-        var _Formatter$create$res = Formatter.create(this.loc.clone(opts), opts).resolvedOptions(this), locale = _Formatter$create$res.locale, numberingSystem = _Formatter$create$res.numberingSystem, calendar = _Formatter$create$res.calendar;
-        return {
-          locale,
-          numberingSystem,
-          outputCalendar: calendar
-        };
-      };
-      _proto.toUTC = function toUTC(offset2, opts) {
-        if (offset2 === void 0) {
-          offset2 = 0;
+      }
+      get offsetNameLong() {
+        if (this.isValid) {
+          return this.zone.offsetName(this.ts, {
+            format: "long",
+            locale: this.locale
+          });
+        } else {
+          return null;
         }
-        if (opts === void 0) {
-          opts = {};
+      }
+      get isOffsetFixed() {
+        return this.isValid ? this.zone.isUniversal : null;
+      }
+      get isInDST() {
+        if (this.isOffsetFixed) {
+          return false;
+        } else {
+          return this.offset > this.set({ month: 1, day: 1 }).offset || this.offset > this.set({ month: 5 }).offset;
         }
+      }
+      get isInLeapYear() {
+        return isLeapYear(this.year);
+      }
+      get daysInMonth() {
+        return daysInMonth(this.year, this.month);
+      }
+      get daysInYear() {
+        return this.isValid ? daysInYear(this.year) : NaN;
+      }
+      get weeksInWeekYear() {
+        return this.isValid ? weeksInWeekYear(this.weekYear) : NaN;
+      }
+      resolvedLocaleOptions(opts = {}) {
+        const { locale, numberingSystem, calendar } = Formatter.create(this.loc.clone(opts), opts).resolvedOptions(this);
+        return { locale, numberingSystem, outputCalendar: calendar };
+      }
+      toUTC(offset2 = 0, opts = {}) {
         return this.setZone(FixedOffsetZone.instance(offset2), opts);
-      };
-      _proto.toLocal = function toLocal() {
+      }
+      toLocal() {
         return this.setZone(Settings.defaultZone);
-      };
-      _proto.setZone = function setZone(zone, _temp) {
-        var _ref2 = _temp === void 0 ? {} : _temp, _ref2$keepLocalTime = _ref2.keepLocalTime, keepLocalTime = _ref2$keepLocalTime === void 0 ? false : _ref2$keepLocalTime, _ref2$keepCalendarTim = _ref2.keepCalendarTime, keepCalendarTime = _ref2$keepCalendarTim === void 0 ? false : _ref2$keepCalendarTim;
+      }
+      setZone(zone, { keepLocalTime = false, keepCalendarTime = false } = {}) {
         zone = normalizeZone(zone, Settings.defaultZone);
         if (zone.equals(this.zone)) {
           return this;
         } else if (!zone.isValid) {
-          return DateTime2.invalid(unsupportedZone(zone));
+          return DateTime.invalid(unsupportedZone(zone));
         } else {
-          var newTS = this.ts;
+          let newTS = this.ts;
           if (keepLocalTime || keepCalendarTime) {
-            var offsetGuess = zone.offset(this.ts);
-            var asObj = this.toObject();
-            var _objToTS3 = objToTS(asObj, offsetGuess, zone);
-            newTS = _objToTS3[0];
+            const offsetGuess = zone.offset(this.ts);
+            const asObj = this.toObject();
+            [newTS] = objToTS(asObj, offsetGuess, zone);
           }
-          return clone(this, {
-            ts: newTS,
-            zone
-          });
+          return clone(this, { ts: newTS, zone });
         }
-      };
-      _proto.reconfigure = function reconfigure(_temp2) {
-        var _ref3 = _temp2 === void 0 ? {} : _temp2, locale = _ref3.locale, numberingSystem = _ref3.numberingSystem, outputCalendar = _ref3.outputCalendar;
-        var loc = this.loc.clone({
-          locale,
-          numberingSystem,
-          outputCalendar
-        });
-        return clone(this, {
-          loc
-        });
-      };
-      _proto.setLocale = function setLocale(locale) {
-        return this.reconfigure({
-          locale
-        });
-      };
-      _proto.set = function set(values) {
+      }
+      reconfigure({ locale, numberingSystem, outputCalendar } = {}) {
+        const loc = this.loc.clone({ locale, numberingSystem, outputCalendar });
+        return clone(this, { loc });
+      }
+      setLocale(locale) {
+        return this.reconfigure({ locale });
+      }
+      set(values) {
         if (!this.isValid)
           return this;
-        var normalized = normalizeObject(values, normalizeUnit), settingWeekStuff = !isUndefined(normalized.weekYear) || !isUndefined(normalized.weekNumber) || !isUndefined(normalized.weekday), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber;
+        const normalized = normalizeObject(values, normalizeUnit), settingWeekStuff = !isUndefined(normalized.weekYear) || !isUndefined(normalized.weekNumber) || !isUndefined(normalized.weekday), containsOrdinal = !isUndefined(normalized.ordinal), containsGregorYear = !isUndefined(normalized.year), containsGregorMD = !isUndefined(normalized.month) || !isUndefined(normalized.day), containsGregor = containsGregorYear || containsGregorMD, definiteWeekDef = normalized.weekYear || normalized.weekNumber;
         if ((containsGregor || containsOrdinal) && definiteWeekDef) {
           throw new ConflictingSpecificationError("Can't mix weekYear/weekNumber units with year/month/day or ordinals");
         }
         if (containsGregorMD && containsOrdinal) {
           throw new ConflictingSpecificationError("Can't mix ordinal dates with month/day");
         }
-        var mixed;
+        let mixed;
         if (settingWeekStuff) {
-          mixed = weekToGregorian(_extends({}, gregorianToWeek(this.c), normalized));
+          mixed = weekToGregorian(__spreadValues(__spreadValues({}, gregorianToWeek(this.c)), normalized));
         } else if (!isUndefined(normalized.ordinal)) {
-          mixed = ordinalToGregorian(_extends({}, gregorianToOrdinal(this.c), normalized));
+          mixed = ordinalToGregorian(__spreadValues(__spreadValues({}, gregorianToOrdinal(this.c)), normalized));
         } else {
-          mixed = _extends({}, this.toObject(), normalized);
+          mixed = __spreadValues(__spreadValues({}, this.toObject()), normalized);
           if (isUndefined(normalized.day)) {
             mixed.day = Math.min(daysInMonth(mixed.year, mixed.month), mixed.day);
           }
         }
-        var _objToTS4 = objToTS(mixed, this.o, this.zone), ts = _objToTS4[0], o = _objToTS4[1];
-        return clone(this, {
-          ts,
-          o
-        });
-      };
-      _proto.plus = function plus(duration) {
+        const [ts, o] = objToTS(mixed, this.o, this.zone);
+        return clone(this, { ts, o });
+      }
+      plus(duration) {
         if (!this.isValid)
           return this;
-        var dur = Duration.fromDurationLike(duration);
+        const dur = Duration.fromDurationLike(duration);
         return clone(this, adjustTime(this, dur));
-      };
-      _proto.minus = function minus(duration) {
+      }
+      minus(duration) {
         if (!this.isValid)
           return this;
-        var dur = Duration.fromDurationLike(duration).negate();
+        const dur = Duration.fromDurationLike(duration).negate();
         return clone(this, adjustTime(this, dur));
-      };
-      _proto.startOf = function startOf(unit) {
+      }
+      startOf(unit) {
         if (!this.isValid)
           return this;
-        var o = {}, normalizedUnit = Duration.normalizeUnit(unit);
+        const o = {}, normalizedUnit = Duration.normalizeUnit(unit);
         switch (normalizedUnit) {
           case "years":
             o.month = 1;
@@ -21495,80 +20818,76 @@ var require_lib2 = __commonJS({
           o.weekday = 1;
         }
         if (normalizedUnit === "quarters") {
-          var q = Math.ceil(this.month / 3);
+          const q = Math.ceil(this.month / 3);
           o.month = (q - 1) * 3 + 1;
         }
         return this.set(o);
-      };
-      _proto.endOf = function endOf(unit) {
-        var _this$plus;
-        return this.isValid ? this.plus((_this$plus = {}, _this$plus[unit] = 1, _this$plus)).startOf(unit).minus(1) : this;
-      };
-      _proto.toFormat = function toFormat(fmt, opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      endOf(unit) {
+        return this.isValid ? this.plus({ [unit]: 1 }).startOf(unit).minus(1) : this;
+      }
+      toFormat(fmt, opts = {}) {
         return this.isValid ? Formatter.create(this.loc.redefaultToEN(opts)).formatDateTimeFromString(this, fmt) : INVALID;
-      };
-      _proto.toLocaleString = function toLocaleString(formatOpts, opts) {
-        if (formatOpts === void 0) {
-          formatOpts = DATE_SHORT;
-        }
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      toLocaleString(formatOpts = DATE_SHORT, opts = {}) {
         return this.isValid ? Formatter.create(this.loc.clone(opts), formatOpts).formatDateTime(this) : INVALID;
-      };
-      _proto.toLocaleParts = function toLocaleParts(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      toLocaleParts(opts = {}) {
         return this.isValid ? Formatter.create(this.loc.clone(opts), opts).formatDateTimeParts(this) : [];
-      };
-      _proto.toISO = function toISO(_temp3) {
-        var _ref4 = _temp3 === void 0 ? {} : _temp3, _ref4$format = _ref4.format, format = _ref4$format === void 0 ? "extended" : _ref4$format, _ref4$suppressSeconds = _ref4.suppressSeconds, suppressSeconds = _ref4$suppressSeconds === void 0 ? false : _ref4$suppressSeconds, _ref4$suppressMillise = _ref4.suppressMilliseconds, suppressMilliseconds = _ref4$suppressMillise === void 0 ? false : _ref4$suppressMillise, _ref4$includeOffset = _ref4.includeOffset, includeOffset = _ref4$includeOffset === void 0 ? true : _ref4$includeOffset, _ref4$extendedZone = _ref4.extendedZone, extendedZone = _ref4$extendedZone === void 0 ? false : _ref4$extendedZone;
+      }
+      toISO({
+        format = "extended",
+        suppressSeconds = false,
+        suppressMilliseconds = false,
+        includeOffset = true,
+        extendedZone = false
+      } = {}) {
         if (!this.isValid) {
           return null;
         }
-        var ext = format === "extended";
-        var c = _toISODate(this, ext);
+        const ext = format === "extended";
+        let c = toISODate(this, ext);
         c += "T";
-        c += _toISOTime(this, ext, suppressSeconds, suppressMilliseconds, includeOffset, extendedZone);
+        c += toISOTime(this, ext, suppressSeconds, suppressMilliseconds, includeOffset, extendedZone);
         return c;
-      };
-      _proto.toISODate = function toISODate(_temp4) {
-        var _ref5 = _temp4 === void 0 ? {} : _temp4, _ref5$format = _ref5.format, format = _ref5$format === void 0 ? "extended" : _ref5$format;
+      }
+      toISODate({ format = "extended" } = {}) {
         if (!this.isValid) {
           return null;
         }
-        return _toISODate(this, format === "extended");
-      };
-      _proto.toISOWeekDate = function toISOWeekDate() {
+        return toISODate(this, format === "extended");
+      }
+      toISOWeekDate() {
         return toTechFormat(this, "kkkk-'W'WW-c");
-      };
-      _proto.toISOTime = function toISOTime(_temp5) {
-        var _ref6 = _temp5 === void 0 ? {} : _temp5, _ref6$suppressMillise = _ref6.suppressMilliseconds, suppressMilliseconds = _ref6$suppressMillise === void 0 ? false : _ref6$suppressMillise, _ref6$suppressSeconds = _ref6.suppressSeconds, suppressSeconds = _ref6$suppressSeconds === void 0 ? false : _ref6$suppressSeconds, _ref6$includeOffset = _ref6.includeOffset, includeOffset = _ref6$includeOffset === void 0 ? true : _ref6$includeOffset, _ref6$includePrefix = _ref6.includePrefix, includePrefix = _ref6$includePrefix === void 0 ? false : _ref6$includePrefix, _ref6$extendedZone = _ref6.extendedZone, extendedZone = _ref6$extendedZone === void 0 ? false : _ref6$extendedZone, _ref6$format = _ref6.format, format = _ref6$format === void 0 ? "extended" : _ref6$format;
+      }
+      toISOTime({
+        suppressMilliseconds = false,
+        suppressSeconds = false,
+        includeOffset = true,
+        includePrefix = false,
+        extendedZone = false,
+        format = "extended"
+      } = {}) {
         if (!this.isValid) {
           return null;
         }
-        var c = includePrefix ? "T" : "";
-        return c + _toISOTime(this, format === "extended", suppressSeconds, suppressMilliseconds, includeOffset, extendedZone);
-      };
-      _proto.toRFC2822 = function toRFC2822() {
+        let c = includePrefix ? "T" : "";
+        return c + toISOTime(this, format === "extended", suppressSeconds, suppressMilliseconds, includeOffset, extendedZone);
+      }
+      toRFC2822() {
         return toTechFormat(this, "EEE, dd LLL yyyy HH:mm:ss ZZZ", false);
-      };
-      _proto.toHTTP = function toHTTP() {
+      }
+      toHTTP() {
         return toTechFormat(this.toUTC(), "EEE, dd LLL yyyy HH:mm:ss 'GMT'");
-      };
-      _proto.toSQLDate = function toSQLDate() {
+      }
+      toSQLDate() {
         if (!this.isValid) {
           return null;
         }
-        return _toISODate(this, true);
-      };
-      _proto.toSQLTime = function toSQLTime(_temp6) {
-        var _ref7 = _temp6 === void 0 ? {} : _temp6, _ref7$includeOffset = _ref7.includeOffset, includeOffset = _ref7$includeOffset === void 0 ? true : _ref7$includeOffset, _ref7$includeZone = _ref7.includeZone, includeZone = _ref7$includeZone === void 0 ? false : _ref7$includeZone, _ref7$includeOffsetSp = _ref7.includeOffsetSpace, includeOffsetSpace = _ref7$includeOffsetSp === void 0 ? true : _ref7$includeOffsetSp;
-        var fmt = "HH:mm:ss.SSS";
+        return toISODate(this, true);
+      }
+      toSQLTime({ includeOffset = true, includeZone = false, includeOffsetSpace = true } = {}) {
+        let fmt = "HH:mm:ss.SSS";
         if (includeZone || includeOffset) {
           if (includeOffsetSpace) {
             fmt += " ";
@@ -21580,478 +20899,187 @@ var require_lib2 = __commonJS({
           }
         }
         return toTechFormat(this, fmt, true);
-      };
-      _proto.toSQL = function toSQL(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      toSQL(opts = {}) {
         if (!this.isValid) {
           return null;
         }
-        return this.toSQLDate() + " " + this.toSQLTime(opts);
-      };
-      _proto.toString = function toString() {
+        return `${this.toSQLDate()} ${this.toSQLTime(opts)}`;
+      }
+      toString() {
         return this.isValid ? this.toISO() : INVALID;
-      };
-      _proto.valueOf = function valueOf() {
+      }
+      valueOf() {
         return this.toMillis();
-      };
-      _proto.toMillis = function toMillis() {
+      }
+      toMillis() {
         return this.isValid ? this.ts : NaN;
-      };
-      _proto.toSeconds = function toSeconds() {
+      }
+      toSeconds() {
         return this.isValid ? this.ts / 1e3 : NaN;
-      };
-      _proto.toUnixInteger = function toUnixInteger() {
+      }
+      toUnixInteger() {
         return this.isValid ? Math.floor(this.ts / 1e3) : NaN;
-      };
-      _proto.toJSON = function toJSON() {
+      }
+      toJSON() {
         return this.toISO();
-      };
-      _proto.toBSON = function toBSON() {
+      }
+      toBSON() {
         return this.toJSDate();
-      };
-      _proto.toObject = function toObject(opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      toObject(opts = {}) {
         if (!this.isValid)
           return {};
-        var base = _extends({}, this.c);
+        const base = __spreadValues({}, this.c);
         if (opts.includeConfig) {
           base.outputCalendar = this.outputCalendar;
           base.numberingSystem = this.loc.numberingSystem;
           base.locale = this.loc.locale;
         }
         return base;
-      };
-      _proto.toJSDate = function toJSDate() {
+      }
+      toJSDate() {
         return new Date(this.isValid ? this.ts : NaN);
-      };
-      _proto.diff = function diff(otherDateTime, unit, opts) {
-        if (unit === void 0) {
-          unit = "milliseconds";
-        }
-        if (opts === void 0) {
-          opts = {};
-        }
+      }
+      diff(otherDateTime, unit = "milliseconds", opts = {}) {
         if (!this.isValid || !otherDateTime.isValid) {
           return Duration.invalid("created by diffing an invalid DateTime");
         }
-        var durOpts = _extends({
-          locale: this.locale,
-          numberingSystem: this.numberingSystem
-        }, opts);
-        var units = maybeArray(unit).map(Duration.normalizeUnit), otherIsLater = otherDateTime.valueOf() > this.valueOf(), earlier = otherIsLater ? this : otherDateTime, later = otherIsLater ? otherDateTime : this, diffed = _diff(earlier, later, units, durOpts);
+        const durOpts = __spreadValues({ locale: this.locale, numberingSystem: this.numberingSystem }, opts);
+        const units = maybeArray(unit).map(Duration.normalizeUnit), otherIsLater = otherDateTime.valueOf() > this.valueOf(), earlier = otherIsLater ? this : otherDateTime, later = otherIsLater ? otherDateTime : this, diffed = diff(earlier, later, units, durOpts);
         return otherIsLater ? diffed.negate() : diffed;
-      };
-      _proto.diffNow = function diffNow(unit, opts) {
-        if (unit === void 0) {
-          unit = "milliseconds";
-        }
-        if (opts === void 0) {
-          opts = {};
-        }
-        return this.diff(DateTime2.now(), unit, opts);
-      };
-      _proto.until = function until(otherDateTime) {
+      }
+      diffNow(unit = "milliseconds", opts = {}) {
+        return this.diff(DateTime.now(), unit, opts);
+      }
+      until(otherDateTime) {
         return this.isValid ? Interval.fromDateTimes(this, otherDateTime) : this;
-      };
-      _proto.hasSame = function hasSame(otherDateTime, unit) {
+      }
+      hasSame(otherDateTime, unit) {
         if (!this.isValid)
           return false;
-        var inputMs = otherDateTime.valueOf();
-        var adjustedToZone = this.setZone(otherDateTime.zone, {
-          keepLocalTime: true
-        });
+        const inputMs = otherDateTime.valueOf();
+        const adjustedToZone = this.setZone(otherDateTime.zone, { keepLocalTime: true });
         return adjustedToZone.startOf(unit) <= inputMs && inputMs <= adjustedToZone.endOf(unit);
-      };
-      _proto.equals = function equals(other) {
+      }
+      equals(other) {
         return this.isValid && other.isValid && this.valueOf() === other.valueOf() && this.zone.equals(other.zone) && this.loc.equals(other.loc);
-      };
-      _proto.toRelative = function toRelative(options) {
-        if (options === void 0) {
-          options = {};
-        }
+      }
+      toRelative(options = {}) {
         if (!this.isValid)
           return null;
-        var base = options.base || DateTime2.fromObject({}, {
-          zone: this.zone
-        }), padding = options.padding ? this < base ? -options.padding : options.padding : 0;
-        var units = ["years", "months", "days", "hours", "minutes", "seconds"];
-        var unit = options.unit;
+        const base = options.base || DateTime.fromObject({}, { zone: this.zone }), padding = options.padding ? this < base ? -options.padding : options.padding : 0;
+        let units = ["years", "months", "days", "hours", "minutes", "seconds"];
+        let unit = options.unit;
         if (Array.isArray(options.unit)) {
           units = options.unit;
           unit = void 0;
         }
-        return diffRelative(base, this.plus(padding), _extends({}, options, {
+        return diffRelative(base, this.plus(padding), __spreadProps(__spreadValues({}, options), {
           numeric: "always",
           units,
           unit
         }));
-      };
-      _proto.toRelativeCalendar = function toRelativeCalendar(options) {
-        if (options === void 0) {
-          options = {};
-        }
+      }
+      toRelativeCalendar(options = {}) {
         if (!this.isValid)
           return null;
-        return diffRelative(options.base || DateTime2.fromObject({}, {
-          zone: this.zone
-        }), this, _extends({}, options, {
+        return diffRelative(options.base || DateTime.fromObject({}, { zone: this.zone }), this, __spreadProps(__spreadValues({}, options), {
           numeric: "auto",
           units: ["years", "months", "days"],
           calendary: true
         }));
-      };
-      DateTime2.min = function min() {
-        for (var _len = arguments.length, dateTimes = new Array(_len), _key = 0; _key < _len; _key++) {
-          dateTimes[_key] = arguments[_key];
-        }
-        if (!dateTimes.every(DateTime2.isDateTime)) {
+      }
+      static min(...dateTimes) {
+        if (!dateTimes.every(DateTime.isDateTime)) {
           throw new InvalidArgumentError("min requires all arguments be DateTimes");
         }
-        return bestBy(dateTimes, function(i) {
-          return i.valueOf();
-        }, Math.min);
-      };
-      DateTime2.max = function max() {
-        for (var _len2 = arguments.length, dateTimes = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          dateTimes[_key2] = arguments[_key2];
-        }
-        if (!dateTimes.every(DateTime2.isDateTime)) {
+        return bestBy(dateTimes, (i) => i.valueOf(), Math.min);
+      }
+      static max(...dateTimes) {
+        if (!dateTimes.every(DateTime.isDateTime)) {
           throw new InvalidArgumentError("max requires all arguments be DateTimes");
         }
-        return bestBy(dateTimes, function(i) {
-          return i.valueOf();
-        }, Math.max);
-      };
-      DateTime2.fromFormatExplain = function fromFormatExplain(text, fmt, options) {
-        if (options === void 0) {
-          options = {};
-        }
-        var _options = options, _options$locale = _options.locale, locale = _options$locale === void 0 ? null : _options$locale, _options$numberingSys = _options.numberingSystem, numberingSystem = _options$numberingSys === void 0 ? null : _options$numberingSys, localeToUse = Locale.fromOpts({
+        return bestBy(dateTimes, (i) => i.valueOf(), Math.max);
+      }
+      static fromFormatExplain(text, fmt, options = {}) {
+        const { locale = null, numberingSystem = null } = options, localeToUse = Locale.fromOpts({
           locale,
           numberingSystem,
           defaultToEN: true
         });
         return explainFromTokens(localeToUse, text, fmt);
-      };
-      DateTime2.fromStringExplain = function fromStringExplain(text, fmt, options) {
-        if (options === void 0) {
-          options = {};
-        }
-        return DateTime2.fromFormatExplain(text, fmt, options);
-      };
-      _createClass(DateTime2, [{
-        key: "isValid",
-        get: function get() {
-          return this.invalid === null;
-        }
-      }, {
-        key: "invalidReason",
-        get: function get() {
-          return this.invalid ? this.invalid.reason : null;
-        }
-      }, {
-        key: "invalidExplanation",
-        get: function get() {
-          return this.invalid ? this.invalid.explanation : null;
-        }
-      }, {
-        key: "locale",
-        get: function get() {
-          return this.isValid ? this.loc.locale : null;
-        }
-      }, {
-        key: "numberingSystem",
-        get: function get() {
-          return this.isValid ? this.loc.numberingSystem : null;
-        }
-      }, {
-        key: "outputCalendar",
-        get: function get() {
-          return this.isValid ? this.loc.outputCalendar : null;
-        }
-      }, {
-        key: "zone",
-        get: function get() {
-          return this._zone;
-        }
-      }, {
-        key: "zoneName",
-        get: function get() {
-          return this.isValid ? this.zone.name : null;
-        }
-      }, {
-        key: "year",
-        get: function get() {
-          return this.isValid ? this.c.year : NaN;
-        }
-      }, {
-        key: "quarter",
-        get: function get() {
-          return this.isValid ? Math.ceil(this.c.month / 3) : NaN;
-        }
-      }, {
-        key: "month",
-        get: function get() {
-          return this.isValid ? this.c.month : NaN;
-        }
-      }, {
-        key: "day",
-        get: function get() {
-          return this.isValid ? this.c.day : NaN;
-        }
-      }, {
-        key: "hour",
-        get: function get() {
-          return this.isValid ? this.c.hour : NaN;
-        }
-      }, {
-        key: "minute",
-        get: function get() {
-          return this.isValid ? this.c.minute : NaN;
-        }
-      }, {
-        key: "second",
-        get: function get() {
-          return this.isValid ? this.c.second : NaN;
-        }
-      }, {
-        key: "millisecond",
-        get: function get() {
-          return this.isValid ? this.c.millisecond : NaN;
-        }
-      }, {
-        key: "weekYear",
-        get: function get() {
-          return this.isValid ? possiblyCachedWeekData(this).weekYear : NaN;
-        }
-      }, {
-        key: "weekNumber",
-        get: function get() {
-          return this.isValid ? possiblyCachedWeekData(this).weekNumber : NaN;
-        }
-      }, {
-        key: "weekday",
-        get: function get() {
-          return this.isValid ? possiblyCachedWeekData(this).weekday : NaN;
-        }
-      }, {
-        key: "ordinal",
-        get: function get() {
-          return this.isValid ? gregorianToOrdinal(this.c).ordinal : NaN;
-        }
-      }, {
-        key: "monthShort",
-        get: function get() {
-          return this.isValid ? Info.months("short", {
-            locObj: this.loc
-          })[this.month - 1] : null;
-        }
-      }, {
-        key: "monthLong",
-        get: function get() {
-          return this.isValid ? Info.months("long", {
-            locObj: this.loc
-          })[this.month - 1] : null;
-        }
-      }, {
-        key: "weekdayShort",
-        get: function get() {
-          return this.isValid ? Info.weekdays("short", {
-            locObj: this.loc
-          })[this.weekday - 1] : null;
-        }
-      }, {
-        key: "weekdayLong",
-        get: function get() {
-          return this.isValid ? Info.weekdays("long", {
-            locObj: this.loc
-          })[this.weekday - 1] : null;
-        }
-      }, {
-        key: "offset",
-        get: function get() {
-          return this.isValid ? +this.o : NaN;
-        }
-      }, {
-        key: "offsetNameShort",
-        get: function get() {
-          if (this.isValid) {
-            return this.zone.offsetName(this.ts, {
-              format: "short",
-              locale: this.locale
-            });
-          } else {
-            return null;
-          }
-        }
-      }, {
-        key: "offsetNameLong",
-        get: function get() {
-          if (this.isValid) {
-            return this.zone.offsetName(this.ts, {
-              format: "long",
-              locale: this.locale
-            });
-          } else {
-            return null;
-          }
-        }
-      }, {
-        key: "isOffsetFixed",
-        get: function get() {
-          return this.isValid ? this.zone.isUniversal : null;
-        }
-      }, {
-        key: "isInDST",
-        get: function get() {
-          if (this.isOffsetFixed) {
-            return false;
-          } else {
-            return this.offset > this.set({
-              month: 1,
-              day: 1
-            }).offset || this.offset > this.set({
-              month: 5
-            }).offset;
-          }
-        }
-      }, {
-        key: "isInLeapYear",
-        get: function get() {
-          return isLeapYear(this.year);
-        }
-      }, {
-        key: "daysInMonth",
-        get: function get() {
-          return daysInMonth(this.year, this.month);
-        }
-      }, {
-        key: "daysInYear",
-        get: function get() {
-          return this.isValid ? daysInYear(this.year) : NaN;
-        }
-      }, {
-        key: "weeksInWeekYear",
-        get: function get() {
-          return this.isValid ? weeksInWeekYear(this.weekYear) : NaN;
-        }
-      }], [{
-        key: "DATE_SHORT",
-        get: function get() {
-          return DATE_SHORT;
-        }
-      }, {
-        key: "DATE_MED",
-        get: function get() {
-          return DATE_MED;
-        }
-      }, {
-        key: "DATE_MED_WITH_WEEKDAY",
-        get: function get() {
-          return DATE_MED_WITH_WEEKDAY;
-        }
-      }, {
-        key: "DATE_FULL",
-        get: function get() {
-          return DATE_FULL;
-        }
-      }, {
-        key: "DATE_HUGE",
-        get: function get() {
-          return DATE_HUGE;
-        }
-      }, {
-        key: "TIME_SIMPLE",
-        get: function get() {
-          return TIME_SIMPLE;
-        }
-      }, {
-        key: "TIME_WITH_SECONDS",
-        get: function get() {
-          return TIME_WITH_SECONDS;
-        }
-      }, {
-        key: "TIME_WITH_SHORT_OFFSET",
-        get: function get() {
-          return TIME_WITH_SHORT_OFFSET;
-        }
-      }, {
-        key: "TIME_WITH_LONG_OFFSET",
-        get: function get() {
-          return TIME_WITH_LONG_OFFSET;
-        }
-      }, {
-        key: "TIME_24_SIMPLE",
-        get: function get() {
-          return TIME_24_SIMPLE;
-        }
-      }, {
-        key: "TIME_24_WITH_SECONDS",
-        get: function get() {
-          return TIME_24_WITH_SECONDS;
-        }
-      }, {
-        key: "TIME_24_WITH_SHORT_OFFSET",
-        get: function get() {
-          return TIME_24_WITH_SHORT_OFFSET;
-        }
-      }, {
-        key: "TIME_24_WITH_LONG_OFFSET",
-        get: function get() {
-          return TIME_24_WITH_LONG_OFFSET;
-        }
-      }, {
-        key: "DATETIME_SHORT",
-        get: function get() {
-          return DATETIME_SHORT;
-        }
-      }, {
-        key: "DATETIME_SHORT_WITH_SECONDS",
-        get: function get() {
-          return DATETIME_SHORT_WITH_SECONDS;
-        }
-      }, {
-        key: "DATETIME_MED",
-        get: function get() {
-          return DATETIME_MED;
-        }
-      }, {
-        key: "DATETIME_MED_WITH_SECONDS",
-        get: function get() {
-          return DATETIME_MED_WITH_SECONDS;
-        }
-      }, {
-        key: "DATETIME_MED_WITH_WEEKDAY",
-        get: function get() {
-          return DATETIME_MED_WITH_WEEKDAY;
-        }
-      }, {
-        key: "DATETIME_FULL",
-        get: function get() {
-          return DATETIME_FULL;
-        }
-      }, {
-        key: "DATETIME_FULL_WITH_SECONDS",
-        get: function get() {
-          return DATETIME_FULL_WITH_SECONDS;
-        }
-      }, {
-        key: "DATETIME_HUGE",
-        get: function get() {
-          return DATETIME_HUGE;
-        }
-      }, {
-        key: "DATETIME_HUGE_WITH_SECONDS",
-        get: function get() {
-          return DATETIME_HUGE_WITH_SECONDS;
-        }
-      }]);
-      return DateTime2;
-    }();
+      }
+      static fromStringExplain(text, fmt, options = {}) {
+        return DateTime.fromFormatExplain(text, fmt, options);
+      }
+      static get DATE_SHORT() {
+        return DATE_SHORT;
+      }
+      static get DATE_MED() {
+        return DATE_MED;
+      }
+      static get DATE_MED_WITH_WEEKDAY() {
+        return DATE_MED_WITH_WEEKDAY;
+      }
+      static get DATE_FULL() {
+        return DATE_FULL;
+      }
+      static get DATE_HUGE() {
+        return DATE_HUGE;
+      }
+      static get TIME_SIMPLE() {
+        return TIME_SIMPLE;
+      }
+      static get TIME_WITH_SECONDS() {
+        return TIME_WITH_SECONDS;
+      }
+      static get TIME_WITH_SHORT_OFFSET() {
+        return TIME_WITH_SHORT_OFFSET;
+      }
+      static get TIME_WITH_LONG_OFFSET() {
+        return TIME_WITH_LONG_OFFSET;
+      }
+      static get TIME_24_SIMPLE() {
+        return TIME_24_SIMPLE;
+      }
+      static get TIME_24_WITH_SECONDS() {
+        return TIME_24_WITH_SECONDS;
+      }
+      static get TIME_24_WITH_SHORT_OFFSET() {
+        return TIME_24_WITH_SHORT_OFFSET;
+      }
+      static get TIME_24_WITH_LONG_OFFSET() {
+        return TIME_24_WITH_LONG_OFFSET;
+      }
+      static get DATETIME_SHORT() {
+        return DATETIME_SHORT;
+      }
+      static get DATETIME_SHORT_WITH_SECONDS() {
+        return DATETIME_SHORT_WITH_SECONDS;
+      }
+      static get DATETIME_MED() {
+        return DATETIME_MED;
+      }
+      static get DATETIME_MED_WITH_SECONDS() {
+        return DATETIME_MED_WITH_SECONDS;
+      }
+      static get DATETIME_MED_WITH_WEEKDAY() {
+        return DATETIME_MED_WITH_WEEKDAY;
+      }
+      static get DATETIME_FULL() {
+        return DATETIME_FULL;
+      }
+      static get DATETIME_FULL_WITH_SECONDS() {
+        return DATETIME_FULL_WITH_SECONDS;
+      }
+      static get DATETIME_HUGE() {
+        return DATETIME_HUGE;
+      }
+      static get DATETIME_HUGE_WITH_SECONDS() {
+        return DATETIME_HUGE_WITH_SECONDS;
+      }
+    };
     function friendlyDateTime(dateTimeish) {
       if (DateTime.isDateTime(dateTimeish)) {
         return dateTimeish;
@@ -22060,21 +21088,9 @@ var require_lib2 = __commonJS({
       } else if (dateTimeish && typeof dateTimeish === "object") {
         return DateTime.fromObject(dateTimeish);
       } else {
-        throw new InvalidArgumentError("Unknown datetime argument: " + dateTimeish + ", of type " + typeof dateTimeish);
+        throw new InvalidArgumentError(`Unknown datetime argument: ${dateTimeish}, of type ${typeof dateTimeish}`);
       }
     }
-    var VERSION = "2.4.0";
-    var DateTime_1 = luxon.DateTime = DateTime;
-    var Duration_1 = luxon.Duration = Duration;
-    luxon.FixedOffsetZone = FixedOffsetZone;
-    luxon.IANAZone = IANAZone;
-    luxon.Info = Info;
-    luxon.Interval = Interval;
-    luxon.InvalidZone = InvalidZone;
-    luxon.Settings = Settings;
-    luxon.SystemZone = SystemZone;
-    luxon.VERSION = VERSION;
-    luxon.Zone = Zone;
     var DEFAULT_QUERY_SETTINGS = {
       renderNullAs: "\\-",
       taskCompletionTracking: false,
@@ -22188,6 +21204,7 @@ var require_lib2 = __commonJS({
       }
       Result2.map2 = map2;
     })(Result || (Result = {}));
+    var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
     var parsimmon_umd_min = { exports: {} };
     (function(module3, exports3) {
       !function(n2, t) {
@@ -22818,14 +21835,14 @@ var require_lib2 = __commonJS({
     function normalizeDuration(dur) {
       if (dur === void 0 || dur === null)
         return dur;
-      return dur.shiftTo("years", "months", "weeks", "days", "hours", "minutes", "seconds", "milliseconds").normalize();
+      return dur.shiftToAll().normalize();
     }
-    function getFileTitle(path) {
-      if (path.includes("/"))
-        path = path.substring(path.lastIndexOf("/") + 1);
-      if (path.endsWith(".md"))
-        path = path.substring(0, path.length - 3);
-      return path;
+    function getFileTitle(path2) {
+      if (path2.includes("/"))
+        path2 = path2.substring(path2.lastIndexOf("/") + 1);
+      if (path2.endsWith(".md"))
+        path2 = path2.substring(0, path2.length - 3);
+      return path2;
     }
     parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u).map((str) => str.toLocaleLowerCase()), parsimmon_umd_min.exports.whitespace.map((_) => "-"), parsimmon_umd_min.exports.any.map((_) => "")).many().map((result) => result.join(""));
     var HEADER_CANONICALIZER = parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_min.exports.regex(/[0-9\p{Letter}_-]+/u), parsimmon_umd_min.exports.whitespace.map((_) => " "), parsimmon_umd_min.exports.any.map((_) => " ")).many().map((result) => {
@@ -22836,26 +21853,8 @@ var require_lib2 = __commonJS({
     }
     function renderMinimalDuration(dur) {
       dur = normalizeDuration(dur);
-      let result = "";
-      if (dur.years)
-        result += `${dur.years} years, `;
-      if (dur.months)
-        result += `${dur.months} months, `;
-      if (dur.weeks)
-        result += `${dur.weeks} weeks, `;
-      if (dur.days)
-        result += `${dur.days} days, `;
-      if (dur.hours)
-        result += `${dur.hours} hours, `;
-      if (dur.minutes)
-        result += `${dur.minutes} minutes, `;
-      if (dur.seconds)
-        result += `${Math.round(dur.seconds)} seconds, `;
-      if (dur.milliseconds)
-        result += `${Math.round(dur.milliseconds)} ms, `;
-      if (result.endsWith(", "))
-        result = result.substring(0, result.length - 2);
-      return result;
+      dur = Duration.fromObject(Object.fromEntries(Object.entries(dur.toObject()).filter(([, quantity]) => quantity > 0)));
+      return dur.toHuman();
     }
     var Values;
     (function(Values2) {
@@ -23096,11 +22095,11 @@ var require_lib2 = __commonJS({
       }
       Values2.isNumber = isNumber2;
       function isDate2(val) {
-        return val instanceof DateTime_1;
+        return val instanceof DateTime;
       }
       Values2.isDate = isDate2;
       function isDuration(val) {
-        return val instanceof Duration_1;
+        return val instanceof Duration;
       }
       Values2.isDuration = isDuration;
       function isNull(val) {
@@ -23169,9 +22168,9 @@ var require_lib2 = __commonJS({
       constructor(fields) {
         Object.assign(this, fields);
       }
-      static file(path, embed = false, display) {
+      static file(path2, embed = false, display) {
         return new Link({
-          path,
+          path: path2,
           embed,
           display,
           subpath: void 0,
@@ -23188,18 +22187,18 @@ var require_lib2 = __commonJS({
         } else
           return Link.file(linkpath, embed, display);
       }
-      static header(path, header, embed, display) {
+      static header(path2, header, embed, display) {
         return new Link({
-          path,
+          path: path2,
           embed,
           display,
           subpath: normalizeHeaderForLink(header),
           type: "header"
         });
       }
-      static block(path, blockId, embed, display) {
+      static block(path2, blockId, embed, display) {
         return new Link({
-          path,
+          path: path2,
           embed,
           display,
           subpath: blockId,
@@ -23220,8 +22219,8 @@ var require_lib2 = __commonJS({
       toObject() {
         return { path: this.path, type: this.type, subpath: this.subpath, display: this.display, embed: this.embed };
       }
-      withPath(path) {
-        return new Link(Object.assign({}, this, { path }));
+      withPath(path2) {
+        return new Link(Object.assign({}, this, { path: path2 }));
       }
       withDisplay(display) {
         return new Link(Object.assign({}, this, { display }));
@@ -23384,8 +22383,8 @@ var require_lib2 = __commonJS({
         return { type: "tag", tag: tag2 };
       }
       Sources2.tag = tag;
-      function csv(path) {
-        return { type: "csv", path };
+      function csv(path2) {
+        return { type: "csv", path: path2 };
       }
       Sources2.csv = csv;
       function folder(prefix) {
@@ -23419,55 +22418,55 @@ var require_lib2 = __commonJS({
     })(Sources || (Sources = {}));
     var EMOJI_REGEX = new RegExp(emojiRegex(), "");
     var DURATION_TYPES = {
-      year: Duration_1.fromObject({ years: 1 }),
-      years: Duration_1.fromObject({ years: 1 }),
-      yr: Duration_1.fromObject({ years: 1 }),
-      yrs: Duration_1.fromObject({ years: 1 }),
-      month: Duration_1.fromObject({ months: 1 }),
-      months: Duration_1.fromObject({ months: 1 }),
-      mo: Duration_1.fromObject({ months: 1 }),
-      mos: Duration_1.fromObject({ months: 1 }),
-      week: Duration_1.fromObject({ weeks: 1 }),
-      weeks: Duration_1.fromObject({ weeks: 1 }),
-      wk: Duration_1.fromObject({ weeks: 1 }),
-      wks: Duration_1.fromObject({ weeks: 1 }),
-      w: Duration_1.fromObject({ weeks: 1 }),
-      day: Duration_1.fromObject({ days: 1 }),
-      days: Duration_1.fromObject({ days: 1 }),
-      d: Duration_1.fromObject({ days: 1 }),
-      hour: Duration_1.fromObject({ hours: 1 }),
-      hours: Duration_1.fromObject({ hours: 1 }),
-      hr: Duration_1.fromObject({ hours: 1 }),
-      hrs: Duration_1.fromObject({ hours: 1 }),
-      h: Duration_1.fromObject({ hours: 1 }),
-      minute: Duration_1.fromObject({ minutes: 1 }),
-      minutes: Duration_1.fromObject({ minutes: 1 }),
-      min: Duration_1.fromObject({ minutes: 1 }),
-      mins: Duration_1.fromObject({ minutes: 1 }),
-      m: Duration_1.fromObject({ minutes: 1 }),
-      second: Duration_1.fromObject({ seconds: 1 }),
-      seconds: Duration_1.fromObject({ seconds: 1 }),
-      sec: Duration_1.fromObject({ seconds: 1 }),
-      secs: Duration_1.fromObject({ seconds: 1 }),
-      s: Duration_1.fromObject({ seconds: 1 })
+      year: Duration.fromObject({ years: 1 }),
+      years: Duration.fromObject({ years: 1 }),
+      yr: Duration.fromObject({ years: 1 }),
+      yrs: Duration.fromObject({ years: 1 }),
+      month: Duration.fromObject({ months: 1 }),
+      months: Duration.fromObject({ months: 1 }),
+      mo: Duration.fromObject({ months: 1 }),
+      mos: Duration.fromObject({ months: 1 }),
+      week: Duration.fromObject({ weeks: 1 }),
+      weeks: Duration.fromObject({ weeks: 1 }),
+      wk: Duration.fromObject({ weeks: 1 }),
+      wks: Duration.fromObject({ weeks: 1 }),
+      w: Duration.fromObject({ weeks: 1 }),
+      day: Duration.fromObject({ days: 1 }),
+      days: Duration.fromObject({ days: 1 }),
+      d: Duration.fromObject({ days: 1 }),
+      hour: Duration.fromObject({ hours: 1 }),
+      hours: Duration.fromObject({ hours: 1 }),
+      hr: Duration.fromObject({ hours: 1 }),
+      hrs: Duration.fromObject({ hours: 1 }),
+      h: Duration.fromObject({ hours: 1 }),
+      minute: Duration.fromObject({ minutes: 1 }),
+      minutes: Duration.fromObject({ minutes: 1 }),
+      min: Duration.fromObject({ minutes: 1 }),
+      mins: Duration.fromObject({ minutes: 1 }),
+      m: Duration.fromObject({ minutes: 1 }),
+      second: Duration.fromObject({ seconds: 1 }),
+      seconds: Duration.fromObject({ seconds: 1 }),
+      sec: Duration.fromObject({ seconds: 1 }),
+      secs: Duration.fromObject({ seconds: 1 }),
+      s: Duration.fromObject({ seconds: 1 })
     };
     var DATE_SHORTHANDS = {
-      now: () => DateTime_1.local(),
-      today: () => DateTime_1.local().startOf("day"),
-      yesterday: () => DateTime_1.local().startOf("day").minus(Duration_1.fromObject({ days: 1 })),
-      tomorrow: () => DateTime_1.local().startOf("day").plus(Duration_1.fromObject({ days: 1 })),
-      sow: () => DateTime_1.local().startOf("week"),
-      "start-of-week": () => DateTime_1.local().startOf("week"),
-      eow: () => DateTime_1.local().endOf("week"),
-      "end-of-week": () => DateTime_1.local().endOf("week"),
-      soy: () => DateTime_1.local().startOf("year"),
-      "start-of-year": () => DateTime_1.local().startOf("year"),
-      eoy: () => DateTime_1.local().endOf("year"),
-      "end-of-year": () => DateTime_1.local().endOf("year"),
-      som: () => DateTime_1.local().startOf("month"),
-      "start-of-month": () => DateTime_1.local().startOf("month"),
-      eom: () => DateTime_1.local().endOf("month"),
-      "end-of-month": () => DateTime_1.local().endOf("month")
+      now: () => DateTime.local(),
+      today: () => DateTime.local().startOf("day"),
+      yesterday: () => DateTime.local().startOf("day").minus(Duration.fromObject({ days: 1 })),
+      tomorrow: () => DateTime.local().startOf("day").plus(Duration.fromObject({ days: 1 })),
+      sow: () => DateTime.local().startOf("week"),
+      "start-of-week": () => DateTime.local().startOf("week"),
+      eow: () => DateTime.local().endOf("week"),
+      "end-of-week": () => DateTime.local().endOf("week"),
+      soy: () => DateTime.local().startOf("year"),
+      "start-of-year": () => DateTime.local().startOf("year"),
+      eoy: () => DateTime.local().endOf("year"),
+      "end-of-year": () => DateTime.local().endOf("year"),
+      som: () => DateTime.local().startOf("month"),
+      "start-of-month": () => DateTime.local().startOf("month"),
+      eom: () => DateTime.local().endOf("month"),
+      "end-of-month": () => DateTime.local().endOf("month")
     };
     var KEYWORDS = ["FROM", "WHERE", "LIMIT", "GROUP", "FLATTEN"];
     function splitOnUnescapedPipe(link) {
@@ -23542,7 +22541,7 @@ var require_lib2 = __commonJS({
           return str;
       }).desc("'and' or 'or'"),
       rootDate: (_) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.regexp(/\d{4}/), parsimmon_umd_min.exports.string("-"), parsimmon_umd_min.exports.regexp(/\d{2}/), (year, _2, month) => {
-        return DateTime_1.fromObject({ year: Number.parseInt(year), month: Number.parseInt(month) });
+        return DateTime.fromObject({ year: Number.parseInt(year), month: Number.parseInt(month) });
       }).desc("date in format YYYY-MM[-DDTHH-MM-SS.MS]"),
       dateShorthand: (_) => parsimmon_umd_min.exports.alt(...Object.keys(DATE_SHORTHANDS).sort((a, b) => b.length - a.length).map(parsimmon_umd_min.exports.string)),
       date: (q) => chainOpt(q.rootDate, (ym) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("-"), parsimmon_umd_min.exports.regexp(/\d{2}/), (_, day) => ym.set({ day: Number.parseInt(day) })), (ymd) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("T"), parsimmon_umd_min.exports.regexp(/\d{2}/), (_, hour) => ymd.set({ hour: Number.parseInt(hour) })), (ymdh) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string(":"), parsimmon_umd_min.exports.regexp(/\d{2}/), (_, minute) => ymdh.set({ minute: Number.parseInt(minute) })), (ymdhm) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string(":"), parsimmon_umd_min.exports.regexp(/\d{2}/), (_, second) => ymdhm.set({ second: Number.parseInt(second) })), (ymdhms) => parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("."), parsimmon_umd_min.exports.regexp(/\d{3}/), (_, millisecond) => ymdhms.set({ millisecond: Number.parseInt(millisecond) })), parsimmon_umd_min.exports.succeed(ymdhms)), (dt) => parsimmon_umd_min.exports.alt(parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("+").or(parsimmon_umd_min.exports.string("-")), parsimmon_umd_min.exports.regexp(/\d{1,2}(:\d{2})?/), (pm, hr) => dt.setZone("UTC" + pm + hr, { keepLocalTime: true })), parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("Z"), () => dt.setZone("utc", { keepLocalTime: true })), parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("["), parsimmon_umd_min.exports.regexp(/[0-9A-Za-z+-\/]+/u), parsimmon_umd_min.exports.string("]"), (_a, zone, _b) => dt.setZone(zone, { keepLocalTime: true })))).assert((dt) => dt.isValid, "valid date").desc("date in format YYYY-MM[-DDTHH-MM-SS.MS]"),
@@ -23551,7 +22550,7 @@ var require_lib2 = __commonJS({
       duration: (q) => parsimmon_umd_min.exports.seqMap(q.number, parsimmon_umd_min.exports.optWhitespace, q.durationType, (count, _, t) => DURATION_TYPES[t].mapUnits((x) => x * count)).sepBy1(parsimmon_umd_min.exports.string(",").trim(parsimmon_umd_min.exports.optWhitespace).or(parsimmon_umd_min.exports.optWhitespace)).map((durations) => durations.reduce((p, c) => p.plus(c))).desc("duration like 4hr2min"),
       rawNull: (_) => parsimmon_umd_min.exports.string("null"),
       tagSource: (q) => q.tag.map((tag) => Sources.tag(tag)),
-      csvSource: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("csv(").skip(parsimmon_umd_min.exports.optWhitespace), q.string, parsimmon_umd_min.exports.string(")"), (_1, path, _2) => Sources.csv(path)),
+      csvSource: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("csv(").skip(parsimmon_umd_min.exports.optWhitespace), q.string, parsimmon_umd_min.exports.string(")"), (_1, path2, _2) => Sources.csv(path2)),
       linkIncomingSource: (q) => q.link.map((link) => Sources.link(link.path, true)),
       linkOutgoingSource: (q) => parsimmon_umd_min.exports.seqMap(parsimmon_umd_min.exports.string("outgoing(").skip(parsimmon_umd_min.exports.optWhitespace), q.link, parsimmon_umd_min.exports.string(")"), (_1, link, _2) => Sources.link(link.path, false)),
       folderSource: (q) => q.string.map((str) => Sources.folder(str)),
@@ -24300,7 +23299,7 @@ var require_content_type = __commonJS({
         throw new TypeError("argument string is required to be a string");
       }
       var index = header.indexOf(";");
-      var type = index !== -1 ? header.substr(0, index).trim() : header.trim();
+      var type = index !== -1 ? header.slice(0, index).trim() : header.trim();
       if (!TYPE_REGEXP.test(type)) {
         throw new TypeError("invalid media type");
       }
@@ -24317,8 +23316,11 @@ var require_content_type = __commonJS({
           index += match[0].length;
           key = match[1].toLowerCase();
           value = match[2];
-          if (value[0] === '"') {
-            value = value.substr(1, value.length - 2).replace(QESC_REGEXP, "$1");
+          if (value.charCodeAt(0) === 34) {
+            value = value.slice(1, -1);
+            if (value.indexOf("\\") !== -1) {
+              value = value.replace(QESC_REGEXP, "$1");
+            }
           }
           obj.parameters[key] = value;
         }
@@ -37722,11 +36724,11 @@ var require_mime_types = __commonJS({
       }
       return exts[0];
     }
-    function lookup(path) {
-      if (!path || typeof path !== "string") {
+    function lookup(path2) {
+      if (!path2 || typeof path2 !== "string") {
         return false;
       }
-      var extension2 = extname("x." + path).toLowerCase().substr(1);
+      var extension2 = extname("x." + path2).toLowerCase().substr(1);
       if (!extension2) {
         return false;
       }
@@ -40244,13 +39246,13 @@ var require_view = __commonJS({
   "node_modules/express/lib/view.js"(exports2, module2) {
     "use strict";
     var debug = require_src3()("express:view");
-    var path = require("path");
+    var path2 = require("path");
     var fs = require("fs");
-    var dirname = path.dirname;
-    var basename = path.basename;
-    var extname = path.extname;
-    var join = path.join;
-    var resolve = path.resolve;
+    var dirname = path2.dirname;
+    var basename = path2.basename;
+    var extname = path2.extname;
+    var join = path2.join;
+    var resolve = path2.resolve;
     module2.exports = View;
     function View(name, options) {
       var opts = options || {};
@@ -40279,17 +39281,17 @@ var require_view = __commonJS({
       this.path = this.lookup(fileName);
     }
     View.prototype.lookup = function lookup(name) {
-      var path2;
+      var path3;
       var roots = [].concat(this.root);
       debug('lookup "%s"', name);
-      for (var i = 0; i < roots.length && !path2; i++) {
+      for (var i = 0; i < roots.length && !path3; i++) {
         var root = roots[i];
         var loc = resolve(root, name);
         var dir = dirname(loc);
         var file = basename(loc);
-        path2 = this.resolve(dir, file);
+        path3 = this.resolve(dir, file);
       }
-      return path2;
+      return path3;
     };
     View.prototype.render = function render(options, callback) {
       var sync = true;
@@ -40311,21 +39313,21 @@ var require_view = __commonJS({
     };
     View.prototype.resolve = function resolve2(dir, file) {
       var ext = this.ext;
-      var path2 = join(dir, file);
-      var stat = tryStat(path2);
+      var path3 = join(dir, file);
+      var stat = tryStat(path3);
       if (stat && stat.isFile()) {
-        return path2;
+        return path3;
       }
-      path2 = join(dir, basename(file, ext), "index" + ext);
-      stat = tryStat(path2);
+      path3 = join(dir, basename(file, ext), "index" + ext);
+      stat = tryStat(path3);
       if (stat && stat.isFile()) {
-        return path2;
+        return path3;
       }
     };
-    function tryStat(path2) {
-      debug('stat "%s"', path2);
+    function tryStat(path3) {
+      debug('stat "%s"', path3);
       try {
-        return fs.statSync(path2);
+        return fs.statSync(path3);
       } catch (e) {
         return void 0;
       }
@@ -41437,7 +40439,7 @@ var require_path_to_regexp = __commonJS({
       var tokens = [];
       var key = 0;
       var index = 0;
-      var path = "";
+      var path2 = "";
       var defaultDelimiter = options && options.delimiter || DEFAULT_DELIMITER;
       var whitelist = options && options.whitelist || void 0;
       var pathEscaped = false;
@@ -41446,10 +40448,10 @@ var require_path_to_regexp = __commonJS({
         var m = res[0];
         var escaped = res[1];
         var offset = res.index;
-        path += str.slice(index, offset);
+        path2 += str.slice(index, offset);
         index = offset + m.length;
         if (escaped) {
-          path += escaped[1];
+          path2 += escaped[1];
           pathEscaped = true;
           continue;
         }
@@ -41458,18 +40460,18 @@ var require_path_to_regexp = __commonJS({
         var capture = res[3];
         var group = res[4];
         var modifier = res[5];
-        if (!pathEscaped && path.length) {
-          var k = path.length - 1;
-          var c = path[k];
+        if (!pathEscaped && path2.length) {
+          var k = path2.length - 1;
+          var c = path2[k];
           var matches = whitelist ? whitelist.indexOf(c) > -1 : true;
           if (matches) {
             prev = c;
-            path = path.slice(0, k);
+            path2 = path2.slice(0, k);
           }
         }
-        if (path) {
-          tokens.push(path);
-          path = "";
+        if (path2) {
+          tokens.push(path2);
+          path2 = "";
           pathEscaped = false;
         }
         var repeat = modifier === "+" || modifier === "*";
@@ -41485,8 +40487,8 @@ var require_path_to_regexp = __commonJS({
           pattern: pattern ? escapeGroup(pattern) : "[^" + escapeString(delimiter === defaultDelimiter ? delimiter : delimiter + defaultDelimiter) + "]+?"
         });
       }
-      if (path || index < str.length) {
-        tokens.push(path + str.substr(index));
+      if (path2 || index < str.length) {
+        tokens.push(path2 + str.substr(index));
       }
       return tokens;
     }
@@ -41503,7 +40505,7 @@ var require_path_to_regexp = __commonJS({
         var m = re.exec(pathname);
         if (!m)
           return false;
-        var path = m[0];
+        var path2 = m[0];
         var index = m.index;
         var params = {};
         var decode = options && options.decode || decodeURIComponent;
@@ -41519,7 +40521,7 @@ var require_path_to_regexp = __commonJS({
             params[key.name] = decode(m[i], key);
           }
         }
-        return { path, index, params };
+        return { path: path2, index, params };
       };
     }
     function tokensToFunction(tokens, options) {
@@ -41530,13 +40532,13 @@ var require_path_to_regexp = __commonJS({
         }
       }
       return function(data, options2) {
-        var path = "";
+        var path2 = "";
         var encode = options2 && options2.encode || encodeURIComponent;
         var validate = options2 ? options2.validate !== false : true;
         for (var i2 = 0; i2 < tokens.length; i2++) {
           var token = tokens[i2];
           if (typeof token === "string") {
-            path += token;
+            path2 += token;
             continue;
           }
           var value = data ? data[token.name] : void 0;
@@ -41555,7 +40557,7 @@ var require_path_to_regexp = __commonJS({
               if (validate && !matches[i2].test(segment)) {
                 throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '"');
               }
-              path += (j === 0 ? token.prefix : token.delimiter) + segment;
+              path2 += (j === 0 ? token.prefix : token.delimiter) + segment;
             }
             continue;
           }
@@ -41564,14 +40566,14 @@ var require_path_to_regexp = __commonJS({
             if (validate && !matches[i2].test(segment)) {
               throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"');
             }
-            path += token.prefix + segment;
+            path2 += token.prefix + segment;
             continue;
           }
           if (token.optional)
             continue;
           throw new TypeError('Expected "' + token.name + '" to be ' + (token.repeat ? "an array" : "a string"));
         }
-        return path;
+        return path2;
       };
     }
     function escapeString(str) {
@@ -41583,10 +40585,10 @@ var require_path_to_regexp = __commonJS({
     function flags(options) {
       return options && options.sensitive ? "" : "i";
     }
-    function regexpToRegexp(path, keys) {
+    function regexpToRegexp(path2, keys) {
       if (!keys)
-        return path;
-      var groups = path.source.match(/\((?!\?)/g);
+        return path2;
+      var groups = path2.source.match(/\((?!\?)/g);
       if (groups) {
         for (var i = 0; i < groups.length; i++) {
           keys.push({
@@ -41599,17 +40601,17 @@ var require_path_to_regexp = __commonJS({
           });
         }
       }
-      return path;
+      return path2;
     }
-    function arrayToRegexp(path, keys, options) {
+    function arrayToRegexp(path2, keys, options) {
       var parts = [];
-      for (var i = 0; i < path.length; i++) {
-        parts.push(pathToRegexp(path[i], keys, options).source);
+      for (var i = 0; i < path2.length; i++) {
+        parts.push(pathToRegexp(path2[i], keys, options).source);
       }
       return new RegExp("(?:" + parts.join("|") + ")", flags(options));
     }
-    function stringToRegexp(path, keys, options) {
-      return tokensToRegExp(parse(path, options), keys, options);
+    function stringToRegexp(path2, keys, options) {
+      return tokensToRegExp(parse(path2, options), keys, options);
     }
     function tokensToRegExp(tokens, keys, options) {
       options = options || {};
@@ -41652,14 +40654,14 @@ var require_path_to_regexp = __commonJS({
       }
       return new RegExp(route, flags(options));
     }
-    function pathToRegexp(path, keys, options) {
-      if (path instanceof RegExp) {
-        return regexpToRegexp(path, keys);
+    function pathToRegexp(path2, keys, options) {
+      if (path2 instanceof RegExp) {
+        return regexpToRegexp(path2, keys);
       }
-      if (Array.isArray(path)) {
-        return arrayToRegexp(path, keys, options);
+      if (Array.isArray(path2)) {
+        return arrayToRegexp(path2, keys, options);
       }
-      return stringToRegexp(path, keys, options);
+      return stringToRegexp(path2, keys, options);
     }
   }
 });
@@ -41672,9 +40674,9 @@ var require_layer = __commonJS({
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     var TRAILING_SLASH_REGEXP = /\/+$/;
     module2.exports = Layer;
-    function Layer(path, options, fn2) {
+    function Layer(path2, options, fn2) {
       if (!(this instanceof Layer)) {
-        return new Layer(path, options, fn2);
+        return new Layer(path2, options, fn2);
       }
       var opts = options || {};
       this.handle = fn2;
@@ -41682,8 +40684,8 @@ var require_layer = __commonJS({
       this.name = fn2.name || "<anonymous>";
       this.params = void 0;
       this.path = void 0;
-      this.regexp = pathRegexp(opts.strict ? path : loosen(path), this.keys, opts);
-      this.regexp._slash = path === "/" && opts.end === false;
+      this.regexp = pathRegexp(opts.strict ? path2 : loosen(path2), this.keys, opts);
+      this.regexp._slash = path2 === "/" && opts.end === false;
     }
     Layer.prototype.handleError = function handleError(error, req, res, next) {
       var fn2 = this.handle;
@@ -41717,15 +40719,15 @@ var require_layer = __commonJS({
         next(err);
       }
     };
-    Layer.prototype.match = function match(path) {
+    Layer.prototype.match = function match(path2) {
       var match2;
-      if (path != null) {
+      if (path2 != null) {
         if (this.regexp._slash) {
           this.params = {};
           this.path = "";
           return true;
         }
-        match2 = this.regexp.exec(path);
+        match2 = this.regexp.exec(path2);
       }
       if (!match2) {
         this.params = void 0;
@@ -41763,13 +40765,13 @@ var require_layer = __commonJS({
     function isPromise(val) {
       return val && typeof val === "object" && typeof val.then === "function";
     }
-    function loosen(path) {
-      if (path instanceof RegExp) {
-        return path;
+    function loosen(path2) {
+      if (path2 instanceof RegExp) {
+        return path2;
       }
-      return Array.isArray(path) ? path.map(function(p) {
+      return Array.isArray(path2) ? path2.map(function(p) {
         return loosen(p);
-      }) : String(path).replace(TRAILING_SLASH_REGEXP, "");
+      }) : String(path2).replace(TRAILING_SLASH_REGEXP, "");
     }
   }
 });
@@ -41783,8 +40785,8 @@ var require_route = __commonJS({
     var methods = require_methods();
     var slice = Array.prototype.slice;
     module2.exports = Route;
-    function Route(path) {
-      this.path = path;
+    function Route(path2) {
+      this.path = path2;
       this.stack = [];
       this.methods = Object.create(null);
     }
@@ -41979,8 +40981,8 @@ var require_router = __commonJS({
           setImmediate(done, layerError);
           return;
         }
-        var path = getPathname(req);
-        if (path == null) {
+        var path2 = getPathname(req);
+        if (path2 == null) {
           return done(layerError);
         }
         var layer;
@@ -41988,7 +40990,7 @@ var require_router = __commonJS({
         var route;
         while (match !== true && idx < stack2.length) {
           layer = stack2[idx++];
-          match = matchLayer(layer, path);
+          match = matchLayer(layer, path2);
           route = layer.route;
           if (typeof match !== "boolean") {
             layerError = layerError || match;
@@ -42028,16 +41030,16 @@ var require_router = __commonJS({
           if (route) {
             return layer.handleRequest(req, res, next);
           }
-          trimPrefix(layer, layerError, layerPath, path);
+          trimPrefix(layer, layerError, layerPath, path2);
         });
       }
-      function trimPrefix(layer, layerError, layerPath, path) {
+      function trimPrefix(layer, layerError, layerPath, path2) {
         if (layerPath.length !== 0) {
-          if (layerPath !== path.substr(0, layerPath.length)) {
+          if (layerPath !== path2.substr(0, layerPath.length)) {
             next(layerError);
             return;
           }
-          var c = path[layerPath.length];
+          var c = path2[layerPath.length];
           if (c && c !== "/") {
             next(layerError);
             return;
@@ -42059,7 +41061,7 @@ var require_router = __commonJS({
     };
     Router.prototype.use = function use(handler) {
       var offset = 0;
-      var path = "/";
+      var path2 = "/";
       if (typeof handler !== "function") {
         var arg = handler;
         while (Array.isArray(arg) && arg.length !== 0) {
@@ -42067,7 +41069,7 @@ var require_router = __commonJS({
         }
         if (typeof arg !== "function") {
           offset = 1;
-          path = handler;
+          path2 = handler;
         }
       }
       var callbacks = flatten(slice.call(arguments, offset));
@@ -42079,7 +41081,7 @@ var require_router = __commonJS({
         if (typeof fn2 !== "function") {
           throw new TypeError("argument handler must be a function");
         }
-        var layer = new Layer(path, {
+        var layer = new Layer(path2, {
           sensitive: this.caseSensitive,
           strict: false,
           end: false
@@ -42089,9 +41091,9 @@ var require_router = __commonJS({
       }
       return this;
     };
-    Router.prototype.route = function route(path) {
-      var route2 = new Route(path);
-      var layer = new Layer(path, {
+    Router.prototype.route = function route(path2) {
+      var route2 = new Route(path2);
+      var layer = new Layer(path2, {
         sensitive: this.caseSensitive,
         strict: this.strict,
         end: true
@@ -42104,8 +41106,8 @@ var require_router = __commonJS({
       return route2;
     };
     methods.concat("all").forEach(function(method) {
-      Router.prototype[method] = function(path) {
-        var route = this.route(path);
+      Router.prototype[method] = function(path2) {
+        var route = this.route(path2);
         route[method].apply(route, slice.call(arguments, 1));
         return this;
       };
@@ -42134,9 +41136,9 @@ var require_router = __commonJS({
       var fqdnIndex = url.substr(0, pathLength).indexOf("://");
       return fqdnIndex !== -1 ? url.substr(0, url.indexOf("/", 3 + fqdnIndex)) : void 0;
     }
-    function matchLayer(layer, path) {
+    function matchLayer(layer, path2) {
       try {
-        return layer.match(path);
+        return layer.match(path2);
       } catch (err) {
         return err;
       }
@@ -42360,7 +41362,7 @@ var require_application = __commonJS({
     };
     app.use = function use(fn2) {
       var offset = 0;
-      var path = "/";
+      var path2 = "/";
       if (typeof fn2 !== "function") {
         var arg = fn2;
         while (Array.isArray(arg) && arg.length !== 0) {
@@ -42368,7 +41370,7 @@ var require_application = __commonJS({
         }
         if (typeof arg !== "function") {
           offset = 1;
-          path = fn2;
+          path2 = fn2;
         }
       }
       var fns = flatten(slice.call(arguments, offset));
@@ -42378,12 +41380,12 @@ var require_application = __commonJS({
       var router = this.router;
       fns.forEach(function(fn3) {
         if (!fn3 || !fn3.handle || !fn3.set) {
-          return router.use(path, fn3);
+          return router.use(path2, fn3);
         }
-        debug(".use app under %s", path);
-        fn3.mountpath = path;
+        debug(".use app under %s", path2);
+        fn3.mountpath = path2;
         fn3.parent = this;
-        router.use(path, function mounted_app(req, res, next) {
+        router.use(path2, function mounted_app(req, res, next) {
           var orig = req.app;
           fn3.handle(req, res, function(err) {
             setPrototypeOf(req, orig.request);
@@ -42395,8 +41397,8 @@ var require_application = __commonJS({
       }, this);
       return this;
     };
-    app.route = function route(path) {
-      return this.router.route(path);
+    app.route = function route(path2) {
+      return this.router.route(path2);
     };
     app.engine = function engine(ext, fn2) {
       if (typeof fn2 !== "function") {
@@ -42439,7 +41441,7 @@ var require_application = __commonJS({
       }
       return this;
     };
-    app.path = function path() {
+    app.path = function path2() {
       return this.parent ? this.parent.path() + this.mountpath : "";
     };
     app.enabled = function enabled(setting) {
@@ -42455,17 +41457,17 @@ var require_application = __commonJS({
       return this.set(setting, false);
     };
     methods.forEach(function(method) {
-      app[method] = function(path) {
+      app[method] = function(path2) {
         if (method === "get" && arguments.length === 1) {
-          return this.set(path);
+          return this.set(path2);
         }
-        var route = this.route(path);
+        var route = this.route(path2);
         route[method].apply(route, slice.call(arguments, 1));
         return this;
       };
     });
-    app.all = function all(path) {
-      var route = this.route(path);
+    app.all = function all(path2) {
+      var route = this.route(path2);
       var args2 = slice.call(arguments, 1);
       for (var i = 0; i < methods.length; i++) {
         route[methods[i]].apply(route, args2);
@@ -43371,7 +42373,7 @@ var require_request = __commonJS({
       var subdomains2 = !isIP(hostname) ? hostname.split(".").reverse() : [hostname];
       return subdomains2.slice(offset);
     });
-    defineGetter(req, "path", function path() {
+    defineGetter(req, "path", function path2() {
       return parse(this).pathname;
     });
     defineGetter(req, "host", function host() {
@@ -43590,12 +42592,12 @@ var require_content_disposition = __commonJS({
 var require_path_is_absolute = __commonJS({
   "node_modules/path-is-absolute/index.js"(exports2, module2) {
     "use strict";
-    function posix(path) {
-      return path.charAt(0) === "/";
+    function posix(path2) {
+      return path2.charAt(0) === "/";
     }
-    function win32(path) {
+    function win32(path2) {
       var splitDeviceRe = /^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$/;
-      var result = splitDeviceRe.exec(path);
+      var result = splitDeviceRe.exec(path2);
       var device = result[1] || "";
       var isUnc = Boolean(device && device.charAt(1) !== ":");
       return Boolean(result[2] || isUnc);
@@ -43904,27 +42906,27 @@ var require_send = __commonJS({
     var ms = require_ms2();
     var onFinished = require_on_finished();
     var parseRange = require_range_parser();
-    var path = require("path");
+    var path2 = require("path");
     var statuses = require_statuses();
     var Stream = require("stream");
     var util = require("util");
-    var extname = path.extname;
-    var join = path.join;
-    var normalize = path.normalize;
-    var resolve = path.resolve;
-    var sep = path.sep;
+    var extname = path2.extname;
+    var join = path2.join;
+    var normalize = path2.normalize;
+    var resolve = path2.resolve;
+    var sep = path2.sep;
     var BYTES_RANGE_REGEXP = /^ *bytes=/;
     var MAX_MAXAGE = 60 * 60 * 24 * 365 * 1e3;
     var UP_PATH_REGEXP = /(?:^|[\\/])\.\.(?:[\\/]|$)/;
     module2.exports = send;
-    function send(req, path2, options) {
-      return new SendStream(req, path2, options);
+    function send(req, path3, options) {
+      return new SendStream(req, path3, options);
     }
-    function SendStream(req, path2, options) {
+    function SendStream(req, path3, options) {
       Stream.call(this);
       var opts = options || {};
       this.options = opts;
-      this.path = path2;
+      this.path = path3;
       this.req = req;
       this._acceptRanges = opts.acceptRanges !== void 0 ? Boolean(opts.acceptRanges) : true;
       this._cacheControl = opts.cacheControl !== void 0 ? Boolean(opts.cacheControl) : true;
@@ -44042,10 +43044,10 @@ var require_send = __commonJS({
       var lastModified = this.res.getHeader("Last-Modified");
       return parseHttpDate(lastModified) <= parseHttpDate(ifRange);
     };
-    SendStream.prototype.redirect = function redirect(path2) {
+    SendStream.prototype.redirect = function redirect(path3) {
       var res = this.res;
       if (hasListeners(this, "directory")) {
-        this.emit("directory", res, path2);
+        this.emit("directory", res, path3);
         return;
       }
       if (this.hasTrailingSlash()) {
@@ -44065,38 +43067,38 @@ var require_send = __commonJS({
     SendStream.prototype.pipe = function pipe(res) {
       var root = this._root;
       this.res = res;
-      var path2 = decode(this.path);
-      if (path2 === -1) {
+      var path3 = decode(this.path);
+      if (path3 === -1) {
         this.error(400);
         return res;
       }
-      if (~path2.indexOf("\0")) {
+      if (~path3.indexOf("\0")) {
         this.error(400);
         return res;
       }
       var parts;
       if (root !== null) {
-        if (path2) {
-          path2 = normalize("." + sep + path2);
+        if (path3) {
+          path3 = normalize("." + sep + path3);
         }
-        if (UP_PATH_REGEXP.test(path2)) {
-          debug('malicious path "%s"', path2);
+        if (UP_PATH_REGEXP.test(path3)) {
+          debug('malicious path "%s"', path3);
           this.error(403);
           return res;
         }
-        parts = path2.split(sep);
-        path2 = normalize(join(root, path2));
+        parts = path3.split(sep);
+        path3 = normalize(join(root, path3));
       } else {
-        if (UP_PATH_REGEXP.test(path2)) {
-          debug('malicious path "%s"', path2);
+        if (UP_PATH_REGEXP.test(path3)) {
+          debug('malicious path "%s"', path3);
           this.error(403);
           return res;
         }
-        parts = normalize(path2).split(sep);
-        path2 = resolve(path2);
+        parts = normalize(path3).split(sep);
+        path3 = resolve(path3);
       }
       if (containsDotFile(parts)) {
-        debug('%s dotfile "%s"', this._dotfiles, path2);
+        debug('%s dotfile "%s"', this._dotfiles, path3);
         switch (this._dotfiles) {
           case "allow":
             break;
@@ -44110,13 +43112,13 @@ var require_send = __commonJS({
         }
       }
       if (this._index.length && this.hasTrailingSlash()) {
-        this.sendIndex(path2);
+        this.sendIndex(path3);
         return res;
       }
-      this.sendFile(path2);
+      this.sendFile(path3);
       return res;
     };
-    SendStream.prototype.send = function send2(path2, stat) {
+    SendStream.prototype.send = function send2(path3, stat) {
       var len = stat.size;
       var options = this.options;
       var opts = {};
@@ -44128,9 +43130,9 @@ var require_send = __commonJS({
         this.headersAlreadySent();
         return;
       }
-      debug('pipe "%s"', path2);
-      this.setHeader(path2, stat);
-      this.type(path2);
+      debug('pipe "%s"', path3);
+      this.setHeader(path3, stat);
+      this.type(path3);
       if (this.isConditionalGET()) {
         if (this.isPreconditionFailure()) {
           this.error(412);
@@ -44180,28 +43182,28 @@ var require_send = __commonJS({
         res.end();
         return;
       }
-      this.stream(path2, opts);
+      this.stream(path3, opts);
     };
-    SendStream.prototype.sendFile = function sendFile(path2) {
+    SendStream.prototype.sendFile = function sendFile(path3) {
       var i = 0;
       var self2 = this;
-      debug('stat "%s"', path2);
-      fs.stat(path2, function onstat(err, stat) {
-        if (err && err.code === "ENOENT" && !extname(path2) && path2[path2.length - 1] !== sep) {
+      debug('stat "%s"', path3);
+      fs.stat(path3, function onstat(err, stat) {
+        if (err && err.code === "ENOENT" && !extname(path3) && path3[path3.length - 1] !== sep) {
           return next(err);
         }
         if (err)
           return self2.onStatError(err);
         if (stat.isDirectory())
-          return self2.redirect(path2);
-        self2.emit("file", path2, stat);
-        self2.send(path2, stat);
+          return self2.redirect(path3);
+        self2.emit("file", path3, stat);
+        self2.send(path3, stat);
       });
       function next(err) {
         if (self2._extensions.length <= i) {
           return err ? self2.onStatError(err) : self2.error(404);
         }
-        var p = path2 + "." + self2._extensions[i++];
+        var p = path3 + "." + self2._extensions[i++];
         debug('stat "%s"', p);
         fs.stat(p, function(err2, stat) {
           if (err2)
@@ -44213,7 +43215,7 @@ var require_send = __commonJS({
         });
       }
     };
-    SendStream.prototype.sendIndex = function sendIndex(path2) {
+    SendStream.prototype.sendIndex = function sendIndex(path3) {
       var i = -1;
       var self2 = this;
       function next(err) {
@@ -44222,7 +43224,7 @@ var require_send = __commonJS({
             return self2.onStatError(err);
           return self2.error(404);
         }
-        var p = join(path2, self2._index[i]);
+        var p = join(path3, self2._index[i]);
         debug('stat "%s"', p);
         fs.stat(p, function(err2, stat) {
           if (err2)
@@ -44235,11 +43237,11 @@ var require_send = __commonJS({
       }
       next();
     };
-    SendStream.prototype.stream = function stream(path2, options) {
+    SendStream.prototype.stream = function stream(path3, options) {
       var finished = false;
       var self2 = this;
       var res = this.res;
-      var stream2 = fs.createReadStream(path2, options);
+      var stream2 = fs.createReadStream(path3, options);
       this.emit("stream", stream2);
       stream2.pipe(res);
       onFinished(res, function onfinished() {
@@ -44257,18 +43259,18 @@ var require_send = __commonJS({
         self2.emit("end");
       });
     };
-    SendStream.prototype.type = function type(path2) {
+    SendStream.prototype.type = function type(path3) {
       var res = this.res;
       if (res.getHeader("Content-Type"))
         return;
-      var ext = extname(path2);
+      var ext = extname(path3);
       var type2 = mime2.contentType(ext) || "application/octet-stream";
       debug("content-type %s", type2);
       res.setHeader("Content-Type", type2);
     };
-    SendStream.prototype.setHeader = function setHeader(path2, stat) {
+    SendStream.prototype.setHeader = function setHeader(path3, stat) {
       var res = this.res;
-      this.emit("headers", res, path2, stat);
+      this.emit("headers", res, path3, stat);
       if (this._acceptRanges && !res.getHeader("Accept-Ranges")) {
         debug("accept ranges");
         res.setHeader("Accept-Ranges", "bytes");
@@ -44321,9 +43323,9 @@ var require_send = __commonJS({
     function createHtmlDocument(title, body) {
       return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>' + title + "</title>\n</head>\n<body>\n<pre>" + body + "</pre>\n</body>\n</html>\n";
     }
-    function decode(path2) {
+    function decode(path3) {
       try {
-        return decodeURIComponent(path2);
+        return decodeURIComponent(path3);
       } catch (err) {
         return -1;
       }
@@ -44469,7 +43471,7 @@ var require_response = __commonJS({
     var http3 = require("http");
     var onFinished = require_on_finished();
     var mime2 = require_mime_types();
-    var path = require("path");
+    var path2 = require("path");
     var pathIsAbsolute = require_path_is_absolute();
     var statuses = require_statuses();
     var merge = require_utils_merge();
@@ -44479,8 +43481,8 @@ var require_response = __commonJS({
     var setCharset = require_utils2().setCharset;
     var cookie = require_cookie();
     var send = require_send();
-    var extname = path.extname;
-    var resolve = path.resolve;
+    var extname = path2.extname;
+    var resolve = path2.resolve;
     var vary = require_vary();
     var res = Object.create(http3.ServerResponse.prototype);
     module2.exports = res;
@@ -44609,26 +43611,26 @@ var require_response = __commonJS({
       this.type("txt");
       return this.send(body);
     };
-    res.sendFile = function sendFile(path2, options, callback) {
+    res.sendFile = function sendFile(path3, options, callback) {
       var done = callback;
       var req = this.req;
       var res2 = this;
       var next = req.next;
       var opts = options || {};
-      if (!path2) {
+      if (!path3) {
         throw new TypeError("path argument is required to res.sendFile");
       }
-      if (typeof path2 !== "string") {
+      if (typeof path3 !== "string") {
         throw new TypeError("path must be a string to res.sendFile");
       }
       if (typeof options === "function") {
         done = options;
         opts = {};
       }
-      if (!opts.root && !pathIsAbsolute(path2)) {
+      if (!opts.root && !pathIsAbsolute(path3)) {
         throw new TypeError("path must be absolute or specify root to res.sendFile");
       }
-      var pathname = encodeURI(path2);
+      var pathname = encodeURI(path3);
       var file = send(req, pathname, opts);
       sendfile(res2, file, opts, function(err) {
         if (done)
@@ -44640,7 +43642,7 @@ var require_response = __commonJS({
         }
       });
     };
-    res.download = function download(path2, filename, options, callback) {
+    res.download = function download(path3, filename, options, callback) {
       var done = callback;
       var name = filename;
       var opts = options || null;
@@ -44653,7 +43655,7 @@ var require_response = __commonJS({
         opts = null;
       }
       var headers = {
-        "Content-Disposition": contentDisposition(name || path2)
+        "Content-Disposition": contentDisposition(name || path3)
       };
       if (opts && opts.headers) {
         var keys = Object.keys(opts.headers);
@@ -44666,7 +43668,7 @@ var require_response = __commonJS({
       }
       opts = Object.create(opts);
       opts.headers = headers;
-      var fullPath = resolve(path2);
+      var fullPath = resolve(path3);
       return this.sendFile(fullPath, opts, done);
     };
     res.contentType = res.type = function contentType(type) {
@@ -44950,11 +43952,11 @@ var require_serve_static = __commonJS({
         }
         var forwardError = !fallthrough;
         var originalUrl = parseUrl.original(req);
-        var path = parseUrl(req).pathname;
-        if (path === "/" && originalUrl.pathname.substr(-1) !== "/") {
-          path = "";
+        var path2 = parseUrl(req).pathname;
+        if (path2 === "/" && originalUrl.pathname.substr(-1) !== "/") {
+          path2 = "";
         }
-        var stream = send(req, path, opts);
+        var stream = send(req, path2, opts);
         stream.on("directory", onDirectory);
         if (setHeaders) {
           stream.on("headers", setHeaders);
@@ -46392,6 +45394,7 @@ var import_json_logic_js = __toModule(require_logic());
 var import_response_time = __toModule(require_response_time());
 var import_query_string = __toModule(require_query_string());
 var import_glob_to_regexp = __toModule(require_glob_to_regexp());
+var import_path = __toModule(require("path"));
 
 // src/types.ts
 var ErrorCode;
@@ -46439,10 +45442,20 @@ function findHeadingBoundary(fileCache, headingPath) {
   }
   return null;
 }
+function getSplicePosition(fileLines, heading, insert, ignoreNewLines) {
+  var _a, _b;
+  let splicePosition = insert === false ? (_b = (_a = heading.end) == null ? void 0 : _a.line) != null ? _b : fileLines.length : heading.start.line + 1;
+  if (!ignoreNewLines || insert) {
+    return splicePosition;
+  }
+  while (fileLines[splicePosition - 1] === "") {
+    splicePosition--;
+  }
+  return splicePosition;
+}
 
 // src/constants.ts
 var CERT_NAME = "obsidian-local-rest-api.crt";
-var HOSTNAME = "127.0.0.1";
 var DEFAULT_SETTINGS = {
   port: 27124,
   insecurePort: 27123,
@@ -46470,6 +45483,9 @@ var ContentTypes;
   ContentTypes2["jsonLogic"] = "application/vnd.olrapi.jsonlogic+json";
   ContentTypes2["dataviewDql"] = "application/vnd.olrapi.dataview.dql+txt";
 })(ContentTypes || (ContentTypes = {}));
+var DefaultBearerTokenHeaderName = "Authorization";
+var DefaultBindingHost = "127.0.0.1";
+var LicenseUrl = "https://raw.githubusercontent.com/coddingtonbear/obsidian-local-rest-api/main/LICENSE";
 
 // src/requestHandler.ts
 var RequestHandler = class {
@@ -46495,7 +45511,8 @@ var RequestHandler = class {
     });
   }
   requestIsAuthenticated(req) {
-    const authorizationHeader = req.get("Authorization");
+    var _a;
+    const authorizationHeader = req.get((_a = this.settings.authorizationHeaderName) != null ? _a : "Authorization");
     if (authorizationHeader === `Bearer ${this.settings.apiKey}`) {
       return true;
     }
@@ -46571,12 +45588,12 @@ var RequestHandler = class {
       authenticated: this.requestIsAuthenticated(req)
     });
   }
-  _vaultGet(path, req, res) {
+  _vaultGet(path2, req, res) {
     return __async(this, null, function* () {
-      if (!path || path.endsWith("/")) {
+      if (!path2 || path2.endsWith("/")) {
         const files = [
-          ...new Set(this.app.vault.getFiles().map((e) => e.path).filter((filename) => filename.startsWith(path)).map((filename) => {
-            const subPath = filename.slice(path.length);
+          ...new Set(this.app.vault.getFiles().map((e) => e.path).filter((filename) => filename.startsWith(path2)).map((filename) => {
+            const subPath = filename.slice(path2.length);
             if (subPath.indexOf("/") > -1) {
               return subPath.slice(0, subPath.indexOf("/") + 1);
             }
@@ -46592,16 +45609,16 @@ var RequestHandler = class {
           files
         });
       } else {
-        const exists = yield this.app.vault.adapter.exists(path);
-        if (exists && (yield this.app.vault.adapter.stat(path)).type === "file") {
-          const content = yield this.app.vault.adapter.readBinary(path);
-          const mimeType = import_mime_types.default.lookup(path);
+        const exists = yield this.app.vault.adapter.exists(path2);
+        if (exists && (yield this.app.vault.adapter.stat(path2)).type === "file") {
+          const content = yield this.app.vault.adapter.readBinary(path2);
+          const mimeType = import_mime_types.default.lookup(path2);
           res.set({
-            "Content-Disposition": `attachment; filename="${encodeURI(path).replace(",", "%2C")}"`,
+            "Content-Disposition": `attachment; filename="${encodeURI(path2).replace(",", "%2C")}"`,
             "Content-Type": `${mimeType}` + (mimeType == ContentTypes.markdown ? "; charset=utf-8" : "")
           });
           if (req.headers.accept === ContentTypes.olrapiNoteJson) {
-            const file = this.app.vault.getAbstractFileByPath(path);
+            const file = this.app.vault.getAbstractFileByPath(path2);
             res.setHeader("Content-Type", ContentTypes.olrapiNoteJson);
             res.send(JSON.stringify(yield this.getFileMetadataObject(file), null, 2));
             return;
@@ -46618,13 +45635,13 @@ var RequestHandler = class {
   }
   vaultGet(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
-      return this._vaultGet(path, req, res);
+      const path2 = req.params[0];
+      return this._vaultGet(path2, req, res);
     });
   }
-  _vaultPut(path, req, res) {
+  _vaultPut(filepath, req, res) {
     return __async(this, null, function* () {
-      if (!path || path.endsWith("/")) {
+      if (!filepath || filepath.endsWith("/")) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.RequestMethodValidOnlyForFiles
         });
@@ -46636,25 +45653,29 @@ var RequestHandler = class {
         });
         return;
       }
-      yield this.app.vault.adapter.write(path, req.body);
+      try {
+        yield this.app.vault.createFolder(import_path.default.dirname(filepath));
+      } catch (e) {
+      }
+      yield this.app.vault.adapter.write(filepath, req.body);
       this.returnCannedResponse(res, { statusCode: 204 });
       return;
     });
   }
   vaultPut(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
-      return this._vaultPut(path, req, res);
+      const path2 = req.params[0];
+      return this._vaultPut(path2, req, res);
     });
   }
-  _vaultPatch(path, req, res) {
+  _vaultPatch(path2, req, res) {
     return __async(this, null, function* () {
-      var _a, _b;
       const headingBoundary = req.get("Heading-Boundary") || "::";
       const heading = (req.get("Heading") || "").split(headingBoundary).filter(Boolean);
       const contentPosition = req.get("Content-Insertion-Position");
       let insert = false;
-      if (!path || path.endsWith("/")) {
+      let aboveNewLine = false;
+      if (!path2 || path2.endsWith("/")) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.RequestMethodValidOnlyForFiles
         });
@@ -46678,13 +45699,16 @@ var RequestHandler = class {
         });
         return;
       }
+      if (typeof req.get("Content-Insertion-Ignore-Newline") == "string") {
+        aboveNewLine = req.get("Content-Insertion-Ignore-Newline").toLowerCase() == "true";
+      }
       if (!heading.length) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.MissingHeadingHeader
         });
         return;
       }
-      const file = this.app.vault.getAbstractFileByPath(path);
+      const file = this.app.vault.getAbstractFileByPath(path2);
       if (!(file instanceof import_obsidian.TFile)) {
         this.returnCannedResponse(res, {
           statusCode: 404
@@ -46701,21 +45725,22 @@ var RequestHandler = class {
       }
       const fileContents = yield this.app.vault.read(file);
       const fileLines = fileContents.split("\n");
-      fileLines.splice(insert === false ? (_b = (_a = position.end) == null ? void 0 : _a.line) != null ? _b : fileLines.length : position.start.line + 1, 0, req.body);
+      const splicePosition = getSplicePosition(fileLines, position, insert, aboveNewLine);
+      fileLines.splice(splicePosition, 0, req.body);
       const content = fileLines.join("\n");
-      yield this.app.vault.adapter.write(path, content);
+      yield this.app.vault.adapter.write(path2, content);
       res.status(200).send(content);
     });
   }
   vaultPatch(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
-      return this._vaultPatch(path, req, res);
+      const path2 = req.params[0];
+      return this._vaultPatch(path2, req, res);
     });
   }
-  _vaultPost(path, req, res) {
+  _vaultPost(filepath, req, res) {
     return __async(this, null, function* () {
-      if (!path || path.endsWith("/")) {
+      if (!filepath || filepath.endsWith("/")) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.RequestMethodValidOnlyForFiles
         });
@@ -46727,8 +45752,12 @@ var RequestHandler = class {
         });
         return;
       }
+      try {
+        yield this.app.vault.createFolder(import_path.default.dirname(filepath));
+      } catch (e) {
+      }
       let fileContents = "";
-      const file = this.app.vault.getAbstractFileByPath(path);
+      const file = this.app.vault.getAbstractFileByPath(filepath);
       if (file instanceof import_obsidian.TFile) {
         fileContents = yield this.app.vault.read(file);
         if (!fileContents.endsWith("\n")) {
@@ -46736,39 +45765,39 @@ var RequestHandler = class {
         }
       }
       fileContents += req.body;
-      yield this.app.vault.adapter.write(path, fileContents);
+      yield this.app.vault.adapter.write(filepath, fileContents);
       this.returnCannedResponse(res, { statusCode: 204 });
       return;
     });
   }
   vaultPost(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
-      return this._vaultPost(path, req, res);
+      const path2 = req.params[0];
+      return this._vaultPost(path2, req, res);
     });
   }
-  _vaultDelete(path, req, res) {
+  _vaultDelete(path2, req, res) {
     return __async(this, null, function* () {
-      if (!path || path.endsWith("/")) {
+      if (!path2 || path2.endsWith("/")) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.RequestMethodValidOnlyForFiles
         });
         return;
       }
-      const pathExists = yield this.app.vault.adapter.exists(path);
+      const pathExists = yield this.app.vault.adapter.exists(path2);
       if (!pathExists) {
         this.returnCannedResponse(res, { statusCode: 404 });
         return;
       }
-      yield this.app.vault.adapter.remove(path);
+      yield this.app.vault.adapter.remove(path2);
       this.returnCannedResponse(res, { statusCode: 204 });
       return;
     });
   }
   vaultDelete(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
-      return this._vaultDelete(path, req, res);
+      const path2 = req.params[0];
+      return this._vaultDelete(path2, req, res);
     });
   }
   getPeriodicNoteInterface() {
@@ -46858,9 +45887,9 @@ var RequestHandler = class {
     });
   }
   redirectToVaultPath(file, req, res, handler) {
-    const path = file.path;
-    res.set("Content-Location", encodeURI(path));
-    return handler(path, req, res);
+    const path2 = file.path;
+    res.set("Content-Location", encodeURI(path2));
+    return handler(path2, req, res);
   }
   periodicGet(req, res) {
     return __async(this, null, function* () {
@@ -47125,12 +46154,12 @@ var RequestHandler = class {
   }
   openPost(req, res) {
     return __async(this, null, function* () {
-      const path = req.params[0];
+      const path2 = req.params[0];
       const query = import_query_string.default.parseUrl(req.originalUrl, {
         parseBooleans: true
       }).query;
       const newLeaf = Boolean(query.newLeaf);
-      this.app.workspace.openLinkText(path, "/", newLeaf);
+      this.app.workspace.openLinkText(path2, "/", newLeaf);
       res.json();
     });
   }
@@ -47198,15 +46227,11 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
   }
   onload() {
     return __async(this, null, function* () {
+      var _a;
+      this.refreshServerState = this.debounce(this._refreshServerState.bind(this), 1e3);
       yield this.loadSettings();
       this.requestHandler = new RequestHandler(this.app, this.manifest, this.settings);
       this.requestHandler.setupRouter();
-      this.app;
-      if (this.settings.crypto && this.settings.crypto.resetOnNextLoad) {
-        delete this.settings.apiKey;
-        delete this.settings.crypto;
-        this.saveSettings();
-      }
       if (!this.settings.apiKey) {
         this.settings.apiKey = import_node_forge.default.md.sha256.create().update(import_node_forge.default.random.getBytesSync(128)).digest().toHex();
         this.saveSettings();
@@ -47256,7 +46281,7 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
             altNames: [
               {
                 type: 7,
-                ip: HOSTNAME
+                ip: (_a = this.settings.bindingHost) != null ? _a : DefaultBindingHost
               }
             ]
           }
@@ -47277,22 +46302,30 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
       this.refreshServerState();
     });
   }
-  refreshServerState() {
+  debounce(func, delay) {
+    let debounceTimer;
+    return (...args2) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => func(...args2), delay);
+    };
+  }
+  _refreshServerState() {
+    var _a, _b, _c, _d;
     if (this.secureServer) {
       this.secureServer.close();
       this.secureServer = null;
     }
     this.secureServer = https.createServer({ key: this.settings.crypto.privateKey, cert: this.settings.crypto.cert }, this.requestHandler.api);
-    this.secureServer.listen(this.settings.port, HOSTNAME);
-    console.log(`REST API listening on https://${HOSTNAME}:${this.settings.port}/`);
+    this.secureServer.listen(this.settings.port, (_a = this.settings.bindingHost) != null ? _a : DefaultBindingHost);
+    console.log(`REST API listening on https://${(_b = this.settings.bindingHost) != null ? _b : DefaultBindingHost}:${this.settings.port}/`);
     if (this.insecureServer) {
       this.insecureServer.close();
       this.insecureServer = null;
     }
     if (this.settings.enableInsecureServer) {
       this.insecureServer = http2.createServer(this.requestHandler.api);
-      this.insecureServer.listen(this.settings.insecurePort, HOSTNAME);
-      console.log(`REST API listening on http://${HOSTNAME}:${this.settings.insecurePort}/`);
+      this.insecureServer.listen(this.settings.insecurePort, (_c = this.settings.bindingHost) != null ? _c : DefaultBindingHost);
+      console.log(`REST API listening on http://${(_d = this.settings.bindingHost) != null ? _d : DefaultBindingHost}:${this.settings.insecurePort}/`);
     }
   }
   onunload() {
@@ -47317,9 +46350,11 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
 var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
+    this.showAdvancedSettings = false;
     this.plugin = plugin;
   }
   display() {
+    var _a;
     const { containerEl } = this;
     containerEl.empty();
     containerEl.classList.add("obsidian-local-rest-api-settings");
@@ -47332,7 +46367,7 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
     apiKeyDiv.createEl("pre", { text: this.plugin.settings.apiKey });
     apiKeyDiv.createEl("p", { text: "Example header: " });
     apiKeyDiv.createEl("pre", {
-      text: `Authorization: Bearer ${this.plugin.settings.apiKey}`
+      text: `${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorization"}: Bearer ${this.plugin.settings.apiKey}`
     });
     const seeMore = apiKeyDiv.createEl("p");
     seeMore.createEl("a", {
@@ -47350,49 +46385,123 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
     importCert.createEl("span", {
       text: " to use it for validating your connection's security by adding it as a trusted certificate authority in the browser or tool you are using for interacting with this API."
     });
-    new import_obsidian2.Setting(containerEl).setName("Secure HTTPS Server Port").setDesc("This configures the port on which your REST API will listen for HTTPS connections.  It is recommended that you leave this port with its default setting as tools integrating with this API may expect the default port to be in use.  In no circumstance is it recommended that you expose this service directly to the internet.").addText((cb) => cb.onChange((value) => {
+    new import_obsidian2.Setting(containerEl).setName("Encrypted (HTTPS) Server Port").setDesc("This configures the port on which your REST API will listen for HTTPS connections.  It is recommended that you leave this port with its default setting as tools integrating with this API may expect the default port to be in use.  Under no circumstances is it recommended that you expose this service directly to the internet.").addText((cb) => cb.onChange((value) => {
       this.plugin.settings.port = parseInt(value, 10);
       this.plugin.saveSettings();
       this.plugin.refreshServerState();
     }).setValue(this.plugin.settings.port.toString()));
-    new import_obsidian2.Setting(containerEl).setName("Enable Insecure HTTP Server").setDesc("Enables an insecure HTTP server on the port designated below.  By default, this plugin requires a secure HTTPS connection, but in secure environments you may turn on the insecure server to simplify interacting with the API. Interactions with the API will still require the API Key shown above.  In no circumstances is it recommended that you expose this service to the internet, especially if you turn on this feature!").addToggle((cb) => cb.onChange((value) => {
+    new import_obsidian2.Setting(containerEl).setName("Enable Non-encrypted (HTTP) Server").setDesc("Enables a non-encrypted (HTTP) server on the port designated below.  By default this plugin requires a secure HTTPS connection, but in safe environments you may turn on the non-encrypted server to simplify interacting with the API. Interactions with the API will still require the API Key shown above.  Under no circumstances is it recommended that you expose this service to the internet, especially if you turn on this feature!").addToggle((cb) => cb.onChange((value) => {
       this.plugin.settings.enableInsecureServer = value;
       this.plugin.saveSettings();
       this.plugin.refreshServerState();
     }).setValue(this.plugin.settings.enableInsecureServer));
-    new import_obsidian2.Setting(containerEl).setName("Insecure HTTP Server Port").addText((cb) => cb.onChange((value) => {
+    new import_obsidian2.Setting(containerEl).setName("Non-encrypted (HTTP) Server Port").addText((cb) => cb.onChange((value) => {
       this.plugin.settings.insecurePort = parseInt(value, 10);
       this.plugin.saveSettings();
       this.plugin.refreshServerState();
     }).setValue(this.plugin.settings.insecurePort.toString()));
-    containerEl.createEl("hr");
-    containerEl.createEl("h3", {
-      text: "HTTPs Certificate Settings"
-    });
-    containerEl.createEl("p", {
-      text: `The following are your Local REST API's public key, certificate, and private key.  These are automatically generated the first time this plugin is loaded, but you can update them to use keys you have generated if you would like to do so.`
-    });
-    new import_obsidian2.Setting(containerEl).setName("Reset Crypto on next Load").setDesc("Turning this toggle 'on' will cause your certificates and api key to be regenerated when this plugin is next loaded.  You can force a reload by running the 'Reload app without saving' command from the command palette, closing and re-opening Obsidian, or turning this plugin off and on again from the community plugins panel in Obsidian's settings.").addToggle((value) => {
-      value.onChange((value2) => {
-        this.plugin.settings.crypto.resetOnNextLoad = value2;
+    new import_obsidian2.Setting(containerEl).setName("Reset Cryptography").setDesc(`Pressing this button will cause your certificate,
+        private and public keys, and API key to be regenerated.`).addButton((cb) => {
+      cb.setWarning().setButtonText("Reset Crypo").onClick(() => {
+        delete this.plugin.settings.apiKey;
+        delete this.plugin.settings.crypto;
         this.plugin.saveSettings();
-      }).setValue(this.plugin.settings.crypto.resetOnNextLoad);
+        this.plugin.unload();
+        this.plugin.load();
+      });
     });
-    new import_obsidian2.Setting(containerEl).setName("Certificate").addTextArea((cb) => cb.onChange((value) => {
-      this.plugin.settings.crypto.cert = value;
-      this.plugin.saveSettings();
-      this.plugin.refreshServerState();
-    }).setValue(this.plugin.settings.crypto.cert));
-    new import_obsidian2.Setting(containerEl).setName("Public Key").addTextArea((cb) => cb.onChange((value) => {
-      this.plugin.settings.crypto.publicKey = value;
-      this.plugin.saveSettings();
-      this.plugin.refreshServerState();
-    }).setValue(this.plugin.settings.crypto.publicKey));
-    new import_obsidian2.Setting(containerEl).setName("Private Key").addTextArea((cb) => cb.onChange((value) => {
-      this.plugin.settings.crypto.privateKey = value;
-      this.plugin.saveSettings();
-      this.plugin.refreshServerState();
-    }).setValue(this.plugin.settings.crypto.privateKey));
+    new import_obsidian2.Setting(containerEl).setName("Restore Default Settings").setDesc(`Pressing this button will reset this plugin's
+        settings to defaults.`).addButton((cb) => {
+      cb.setWarning().setButtonText("Restore Defaults").onClick(() => {
+        this.plugin.settings = Object.assign({}, DEFAULT_SETTINGS);
+        this.plugin.saveSettings();
+        this.plugin.unload();
+        this.plugin.load();
+      });
+    });
+    new import_obsidian2.Setting(containerEl).setName("Show advanced settings").setDesc(`Advanced settings are dangerous and may make your environment less secure.`).addToggle((cb) => {
+      cb.onChange((value) => {
+        if (this.showAdvancedSettings !== value) {
+          this.showAdvancedSettings = value;
+          this.display();
+        }
+      }).setValue(this.showAdvancedSettings);
+    });
+    if (this.showAdvancedSettings) {
+      containerEl.createEl("hr");
+      containerEl.createEl("h3", {
+        text: "Advanced Settings"
+      });
+      containerEl.createEl("p", {
+        text: `
+          The settings below are potentially dangerous and
+          are intended for use only by people who know what
+          they are doing. Do not change any of these settings if
+          you do not understand what that setting is used for
+          and what security impacts changing that setting will have.
+        `
+      });
+      const noWarrantee = containerEl.createEl("p");
+      noWarrantee.createEl("span", {
+        text: `
+          Use of this software is licensed to you under the
+          MIT license, and it is important that you understand that 
+          this license provides you with no warranty.
+          For the complete license text please see
+        `
+      });
+      noWarrantee.createEl("a", {
+        href: LicenseUrl,
+        text: LicenseUrl
+      });
+      noWarrantee.createEl("span", { text: "." });
+      new import_obsidian2.Setting(containerEl).setName("API Key").addText((cb) => {
+        cb.onChange((value) => {
+          this.plugin.settings.apiKey = value;
+          this.plugin.saveSettings();
+          this.plugin.refreshServerState();
+        }).setValue(this.plugin.settings.apiKey);
+      });
+      new import_obsidian2.Setting(containerEl).setName("Certificate").addTextArea((cb) => cb.onChange((value) => {
+        this.plugin.settings.crypto.cert = value;
+        this.plugin.saveSettings();
+        this.plugin.refreshServerState();
+      }).setValue(this.plugin.settings.crypto.cert));
+      new import_obsidian2.Setting(containerEl).setName("Public Key").addTextArea((cb) => cb.onChange((value) => {
+        this.plugin.settings.crypto.publicKey = value;
+        this.plugin.saveSettings();
+        this.plugin.refreshServerState();
+      }).setValue(this.plugin.settings.crypto.publicKey));
+      new import_obsidian2.Setting(containerEl).setName("Private Key").addTextArea((cb) => cb.onChange((value) => {
+        this.plugin.settings.crypto.publicKey = value;
+        this.plugin.saveSettings();
+        this.plugin.refreshServerState();
+      }).setValue(this.plugin.settings.crypto.privateKey));
+      new import_obsidian2.Setting(containerEl).setName("Authorization Header").addText((cb) => {
+        var _a2;
+        cb.onChange((value) => {
+          if (value !== DefaultBearerTokenHeaderName) {
+            this.plugin.settings.authorizationHeaderName = value;
+          } else {
+            delete this.plugin.settings.authorizationHeaderName;
+          }
+          this.plugin.saveSettings();
+          this.plugin.refreshServerState();
+        }).setValue((_a2 = this.plugin.settings.authorizationHeaderName) != null ? _a2 : DefaultBearerTokenHeaderName);
+      });
+      new import_obsidian2.Setting(containerEl).setName("Binding Host").addText((cb) => {
+        var _a2;
+        cb.onChange((value) => {
+          if (value !== DefaultBindingHost) {
+            this.plugin.settings.bindingHost = value;
+          } else {
+            delete this.plugin.settings.bindingHost;
+          }
+          this.plugin.saveSettings();
+          this.plugin.refreshServerState();
+        }).setValue((_a2 = this.plugin.settings.bindingHost) != null ? _a2 : DefaultBindingHost);
+      });
+    }
   }
 };
 // Annotate the CommonJS export names for ESM import in node:

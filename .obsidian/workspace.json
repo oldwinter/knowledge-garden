@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+                "file": "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -91,7 +91,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md"
+                "file": "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md"
               }
             }
           },
@@ -101,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+                "file": "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+                "file": "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+                "file": "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -204,19 +205,19 @@
       "graph:查看关系图谱": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "obsidian-spaced-repetition:复习卡片": false,
       "notion-like-tables:Create Notion-Like table": false
     }
   },
   "active": "527725e6803ec2fb",
   "lastOpenFiles": [
-    "Spaces/3-Resource/王者荣耀/流光门派技能解析.md",
-    "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
     "Spaces/3-Resource/王者荣耀/誓羽门派技能解析.md",
-    "Context",
     "Spaces/3-Resource/王者荣耀/誓羽飞天不能躲的pvp各门派技能.md",
+    "Spaces/3-Resource/王者荣耀/圣堂门派技能解析.md",
+    "Spaces/3-Resource/王者荣耀/轻度服攻略.md",
+    "Spaces/3-Resource/王者荣耀/流光门派技能解析.md",
+    "Spaces/3-Resource/王者荣耀/云巅大会.md",
+    "Context",
     "Spaces/3-Resource/王者荣耀/流光.md",
     "Spaces/3-Resource/王者荣耀/天谕手游.md",
     "Cards/永久笔记/启动v2ray的服务端的docker镜像.md",
@@ -238,7 +239,6 @@
     "OCR-Screenshots.md",
     "Calendar/Daily notes/2023-05-06.md",
     "Cards/永久笔记/🔡SMART.md",
-    "Cards/永久笔记/sed命令+正则表达式批量替换.md",
     "Extras/Templates/textgenerator模板/prompts/trash/dalle-2",
     "Extras/Templates/textgenerator模板/prompts/trash/default",
     "Extras/Templates/textgenerator模板/prompts/trash/huggingface",

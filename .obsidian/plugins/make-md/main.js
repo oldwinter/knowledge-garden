@@ -42749,7 +42749,7 @@ var moveAFileToNewParentAtIndex = async (plugin, item, newParent, index) => {
     parent: newParent,
     rank: index.toString()
   };
-  if (getAbstractFileAtPath(app, newParent)) {
+  if (getAbstractFileAtPath(app, newPath)) {
     new import_obsidian39.Notice(i18n_default.notice.fileExists);
     return;
   }
@@ -55201,8 +55201,8 @@ var MakeMDPlugin = class extends import_obsidian63.Plugin {
   }
   getActiveFile() {
     let filePath = null;
-    const leaf = app.workspace.getLeaf(false);
-    const activeView2 = leaf.view;
+    const leaf = app.workspace.activeLeaf;
+    const activeView2 = leaf == null ? void 0 : leaf.view;
     if (!activeView2 || leaf.isFlowBlock)
       return null;
     if (activeView2.getViewType() == CONTEXT_VIEW_TYPE) {
