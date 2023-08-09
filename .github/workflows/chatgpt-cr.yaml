@@ -1,4 +1,4 @@
-name: Code Review
+name: 🤖 ChatGPT Code Review
 
 permissions:
   contents: read
@@ -18,4 +18,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # optional
           LANGUAGE: Chinese
-          PROMPT:
+          PROMPT: "请用中文表达"
+          top_p: 1
+          temperature: 1
