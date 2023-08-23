@@ -1,0 +1,157 @@
+.sr-flashcard-menu {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.sr-flashcard-menu-item {
+    box-shadow: none !important;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.sr-flashcard-menu-item:disabled {
+    cursor: not-allowed;
+}
+
+.sr-flashcard-input-modal {
+    height: 80%;
+}
+
+.sr-flashcard-input-area {
+    height: 80%;
+}
+
+.sr-flashcard-input-area > textarea {
+    height: 100%;
+}
+
+.sr-flashcard-edit-button-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sr-flashcard-response {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.sr-ignorestats-btn {
+    /* Bit of a hack, but it works. */
+    margin: 0px !important;
+    margin-right: 12px !important;
+}
+
+.sr-ignorestats-response {
+    grid-template-columns: auto auto !important;
+}
+
+.sr-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sr-deck-counts {
+    color: #ffffff;
+    margin-left: 4px;
+    padding: 4px;
+}
+
+#sr-show-answer {
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: #ffffff;
+    border-radius: 4px;
+    user-select: text;
+}
+
+#sr-hr-card-divide {
+    backdrop-filter: invert(40%);
+    border: none;
+    height: 2px;
+}
+
+#sr-hard-btn,
+#sr-good-btn,
+#sr-easy-btn {
+    height: 48px;
+    margin: auto;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#sr-hard-btn {
+    background-color: #f44336;
+}
+
+#sr-good-btn {
+    background-color: #2196f3;
+}
+
+#sr-easy-btn {
+    background-color: #4caf50;
+}
+
+#sr-context {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+}
+
+#sr-flashcard-view {
+    font-size: var(--font-text-size);
+    overflow-y: auto;
+    height: 80%;
+    user-select: text;
+}
+
+#sr-chart-period {
+    appearance: menulist;
+    border-right: 8px solid transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .sr-back-btn {
+        width: initial !important;
+    }
+
+    .sr-modal-content {
+        width: 98% !important;
+    }
+
+    .sr-modal-content::-webkit-scrollbar,
+    #sr-flashcard-view::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sr-flashcard-response,
+    #sr-show-answer {
+        width: 93.5% !important;
+        line-height: 60px;
+    }
+
+    #sr-hard-btn,
+    #sr-good-btn,
+    #sr-easy-btn {
+        width: 100px;
+    }
+}

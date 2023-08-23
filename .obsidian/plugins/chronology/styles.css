@@ -1,0 +1,308 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.chronology-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.chronology-cell-other-month {}
+
+.chronology-calendar-box {
+    font-size: smaller;
+    max-width: 20em;
+    flex: 0;
+}
+
+.chronology-calendar-grid {
+    border-collapse: collapse;
+    /* border: 1px solid white; */
+}
+
+.chronology-calendar-grid td,
+.chronology-calendar-grid th {
+    border: 1px solid var(--background-modifier-border);
+    width: 24pt;
+    min-width: 20pt;
+    height: 24pt;
+    text-align: center;
+}
+
+
+
+.chronology-calendar-weeknumber {
+    color: var(--text-faint);
+    /* font-weight: bold; */
+}
+
+.selected .chronology-calendar-weeknumber {
+
+    color: var(--text-normal);
+}
+
+.chronology-calendar-day {
+    position: relative;
+}
+
+.chronology-calendar-day:hover {
+    /* text-decoration: underline; */
+
+}
+
+.chronology-calendar-selectable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.chronology-calendar-day.selected::before, .chronology-calendar-week-row.selected::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    opacity: 0.25;
+    background-color: var(--text-accent-hover);
+}
+
+
+
+.chronology-cell-month {}
+
+.chronology-calendar-heat-background {
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--background-modifier-border);
+    width: 100%;
+    z-index: -1;
+}
+
+.chronology-calendar-today {
+    /* outline-style:  solid;
+	outline-color:  var(--interactive-accent); */
+
+    font-weight: 800;
+}
+
+.chronology-calendar-todaylink {
+    color: var(--text-muted);
+}
+
+
+.chronology-other-month {
+    color: var(--text-muted);
+}
+
+
+
+
+.chronology-grid-dayofweek {
+    color: var(--text-faint);
+    /* color:  var(--interactive-accent); */
+}
+
+.chronology-timeline-container {
+    overflow-y: auto;
+    flex: 1;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    padding-right: 3pt;
+    margin-top: 10pt;
+}
+
+.chrono-temp-slot1 {
+    display: flex;
+    height: 157px;
+    overflow-y: hidden;
+}
+
+.chrono-temp-slot1-info {
+    /* grid-column: 1; */
+    border-right: 1px solid var(--background-modifier-border);
+    border-top: 1px solid var(--background-modifier-border);
+    flex: 0 0 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.chrono-temp-slot1-name {
+    margin-right: 5pt;
+}
+
+.chrono-temp-slot1-content {
+    border-top: 1px solid var(--background-modifier-border);
+    flex: 1;
+    margin-left: 2pt;
+    /* margin-top: 5pt; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    overflow-y: auto;
+    
+    overflow-x: hidden;
+    padding: 2px;
+}
+
+.chrono-cluster-container {
+    min-height: 25px;;
+}
+
+.chrono-temp-note {
+    color: var(--text-muted);
+    position: relative;
+    padding: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.commented-chrono-temp-note:before {
+    content: attr(data-text);
+    /* here's the magic */
+    position: absolute;
+
+    /* vertically center */
+    top: 0%;
+    left: 0px;
+    transform: translateY(-100%);
+
+    /* move to right */
+
+    /* right: 100%; */
+    margin-left: 5px;
+    /* and add a small left margin */
+
+    /* basic styles */
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--background-secondary-alt);
+    color: var(--text-normal);
+    text-align: center;
+
+    display: none;
+    /* hide by default */
+}
+
+.commented-chrono-temp-note:hover:before {
+    display: block;
+}
+
+
+.chronology-noteslist-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
+   
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.chronology-noteslist-container .chronology-noteslist-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.chronology-noteslist-container .chronology-noteslist-wrapper .chrono-temp-note {
+    margin-top: 3px;
+}
+
+.chrono-temp-note:hover {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+.chrono-badge {
+    display: inline-block;
+    margin-right: 2pt;
+    margin-left: 2pt;
+    border-radius: 50%;
+    width: 8pt;
+    height: 8pt;
+    line-height: 8pt;
+}
+
+.chrono-note-time {
+    font-size: 60%;
+    display: inline-block;
+    vertical-align: bottom;
+    /* margin-left: -6em; */
+}
+
+.chrono-badge.chrono-created {
+    background-color: var(--interactive-accent);
+}
+
+.chrono-badge.chrono-modified {
+    background-color: var(--text-selection);
+}
+
+.chrono-notes-count {
+    margin-left: 2pt;
+    margin-right: 2pt;
+    /* color: var(--text-normal) */
+    /* background-color: var(--interactive-accent);
+    border-radius: 50%; */
+}
+
+.chrono-notes-ellipsis {
+    float: right;;
+}
+
+.chronology-calendar-chevron {
+    color: var(--text-muted);
+    cursor: var(--cursor);
+    /* padding: 5px 8px 0 8px;
+    margin: 0 3px 10px 3px; */
+    border-radius: 4px;
+}
+
+
+.chronology-calendar-chevron:hover {
+    color: var(--text-accent);
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	/* vertical-align: top; */
+	width: 0.45em;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}

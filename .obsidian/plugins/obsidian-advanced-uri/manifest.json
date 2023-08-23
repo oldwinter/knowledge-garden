@@ -1,0 +1,11 @@
+{
+    "id": "obsidian-advanced-uri",
+    "name": "Advanced URI",
+    "description": "Advanced modes for Obsidian URI",
+    "isDesktopOnly": false,
+    "js": "main.js",
+    "fundingUrl": "https://ko-fi.com/vinzent",
+    "version": "1.37.0",
+    "author": "Vinzent",
+    "authorUrl": "https://github.com/Vinzent03"
+}

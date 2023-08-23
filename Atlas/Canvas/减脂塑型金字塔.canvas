@@ -1,0 +1,30 @@
+{
+	"nodes":[
+		{"type":"text","text":"如何终身保持健康与好身材","id":"731f9d7733a67407","x":77,"y":161,"width":250,"height":60},
+		{"type":"text","text":"定义，活力，好看","id":"0179b8fb749f730e","x":530,"y":92,"width":250,"height":60},
+		{"type":"text","text":"高强度","id":"b015424e2536e453","x":-478,"y":511,"width":250,"height":60},
+		{"type":"text","text":"定期体检","id":"8de84481482fa01f","x":-584,"y":322,"width":250,"height":60},
+		{"type":"text","text":"饮食","id":"9f3b67a63eb79c06","x":202,"y":379,"width":250,"height":60},
+		{"type":"text","text":"运动","id":"fdb60706cc68389f","x":-122,"y":382,"width":199,"height":57},
+		{"type":"text","text":"日常活动","id":"aef8e0af70915478","x":491,"y":379,"width":250,"height":60},
+		{"type":"text","text":"烟酒等成瘾物","id":"d897456b24a75c8f","x":780,"y":379,"width":250,"height":60},
+		{"type":"text","text":"心理","id":"534301ede675c500","x":1092,"y":379,"width":250,"height":60},
+		{"type":"text","text":"好习惯养成  ","id":"47e683eaabf74297","x":-603,"y":161,"width":250,"height":60},
+		{"type":"file","file":"Spaces/2-Area/运动与健康/∑ 运动与健康.md","id":"5545b5b49ff60116","x":-253,"y":850,"width":521,"height":550},
+		{"type":"text","text":"戒糖\n","id":"a718af142f2908f1","x":780,"y":560,"width":250,"height":60},
+		{"type":"text","text":"收腹  \n挺胸\n\n鼻子呼吸\n","id":"d0f658508762c284","x":491,"y":560,"width":250,"height":320},
+		{"type":"text","text":"自检，体重，精力，尿液，粪便","id":"5361b79145182e54","x":-603,"y":221,"width":250,"height":60},
+		{"id":"9f76b1d24131a3e3","x":77,"y":500,"width":250,"height":60,"type":"text","text":"补剂"}
+	],
+	"edges":[
+		{"id":"d80545683f6fde66","fromNode":"731f9d7733a67407","fromSide":"right","toNode":"0179b8fb749f730e","toSide":"left"},
+		{"id":"6dcf84c3be8e430a","fromNode":"fdb60706cc68389f","fromSide":"left","toNode":"b015424e2536e453","toSide":"right"},
+		{"id":"03e6640c38e8e672","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"fdb60706cc68389f","toSide":"top"},
+		{"id":"5801631ae9084e42","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"9f3b67a63eb79c06","toSide":"top"},
+		{"id":"88459289dd5ceee7","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"aef8e0af70915478","toSide":"top"},
+		{"id":"d044cc8faa309087","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"d897456b24a75c8f","toSide":"top"},
+		{"id":"d468bb486f68234a","fromNode":"731f9d7733a67407","fromSide":"bottom","toNode":"534301ede675c500","toSide":"top"},
+		{"id":"0b8b33e28ecab0b8","fromNode":"aef8e0af70915478","fromSide":"bottom","toNode":"d0f658508762c284","toSide":"top"},
+		{"id":"89d49bee6d38d3f8","fromNode":"d897456b24a75c8f","fromSide":"bottom","toNode":"a718af142f2908f1","toSide":"top"}
+	]
+}

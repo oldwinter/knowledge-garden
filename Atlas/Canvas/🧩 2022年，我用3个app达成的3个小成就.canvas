@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"type":"group","id":"7df660161115ab86","x":-446,"y":-440,"width":1305,"height":869,"color":"6","label":"实践过程及结果"},
+		{"type":"group","id":"ca3e1b25616bae9c","x":-446,"y":648,"width":1305,"height":503,"color":"4","label":"工作流"},
+		{"type":"group","id":"70910f675f4e12a1","x":-908,"y":-872,"width":448,"height":354,"color":"2","label":"3个app"},
+		{"type":"file","file":"Spaces/3-Resource/效率工具与服务专题/安卓软件使用/微信读书.md","id":"568b918564147e0e","x":-888,"y":-611,"width":400,"height":73},
+		{"type":"file","file":"Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Notion.md","id":"14e71eb74acf652d","x":-888,"y":-726,"width":400,"height":64},
+		{"type":"file","file":"Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Obsidian.md","id":"b4e7d1ff6b9ca358","x":-888,"y":-840,"width":400,"height":67},
+		{"type":"file","file":"Extras/Media/Pasted image 20230209211644.png","id":"e1a4db09074551bf","x":-1155,"y":-584,"width":108,"height":108},
+		{"type":"file","file":"Extras/Media/Pasted Image 20220320190917_764.png","id":"8dddbca3ed987de8","x":-1155,"y":-726,"width":142,"height":80},
+		{"type":"file","file":"Extras/Media/Pasted Image 20220320191102_767.png","id":"ec23f87011124d74","x":-1155,"y":-874,"width":108,"height":85},
+		{"type":"text","text":"3个月减脂15kg","id":"0612768554b2c988","x":-426,"y":-419,"width":382,"height":59,"color":"5"},
+		{"type":"text","text":"## 2022年的3个小成就","id":"7258673a16c01f94","x":4,"y":-1075,"width":389,"height":118,"color":"1"},
+		{"type":"file","file":"Atlas/Canvas/🧩 如何做读书笔记.canvas","id":"4ec1574cd9d3ddc5","x":4,"y":731,"width":400,"height":400},
+		{"type":"file","file":"Atlas/Canvas/🧩 如何学会减脂和健身.canvas","id":"71a24bce3fb1d9b8","x":-426,"y":731,"width":400,"height":400},
+		{"type":"link","url":"https://garden.oldwinter.top/","id":"0229d9b8ef2eb324","x":439,"y":67,"width":400,"height":342},
+		{"type":"file","file":"Atlas/Canvas/🧩 如何构建第二大脑.canvas","id":"7f177ae1f24c2a87","x":439,"y":731,"width":400,"height":400},
+		{"type":"link","url":"https://github.com/oldwinter/knowledge-garden","id":"85abe9842dc1c4ab","x":439,"y":-281,"width":400,"height":300},
+		{"type":"text","text":"2022.9.24，104.6kg，","id":"768159281f752344","x":-426,"y":-319,"width":250,"height":60},
+		{"type":"text","text":"2023.2.9，90kg","id":"ffe22e5aa7faae00","x":-426,"y":-199,"width":250,"height":60},
+		{"type":"text","text":"微信读书累计1800+小时","id":"2e4a4a1d1a2acd47","x":4,"y":-420,"width":397,"height":60,"color":"5"},
+		{"type":"text","text":"用obsidian写了2000张卡片，开源并收获了800+个star","id":"1e21884380ee0929","x":439,"y":-420,"width":400,"height":60,"color":"5"}
+	],
+	"edges":[
+		{"id":"42706e43cfa8c9b3","fromNode":"7258673a16c01f94","fromSide":"bottom","toNode":"0612768554b2c988","toSide":"top"},
+		{"id":"a3ce46eccdecc49c","fromNode":"7258673a16c01f94","fromSide":"bottom","toNode":"2e4a4a1d1a2acd47","toSide":"top"},
+		{"id":"346a492582e2650a","fromNode":"7258673a16c01f94","fromSide":"bottom","toNode":"1e21884380ee0929","toSide":"top"},
+		{"id":"233db8d3fb94b648","fromNode":"568b918564147e0e","fromSide":"right","toNode":"2e4a4a1d1a2acd47","toSide":"top"},
+		{"id":"fbddfaa99b722ad4","fromNode":"14e71eb74acf652d","fromSide":"right","toNode":"0612768554b2c988","toSide":"top"},
+		{"id":"0ee224e505cdba05","fromNode":"b4e7d1ff6b9ca358","fromSide":"right","toNode":"1e21884380ee0929","toSide":"top"},
+		{"id":"4b7e94e39f49343e","fromNode":"1e21884380ee0929","fromSide":"bottom","toNode":"85abe9842dc1c4ab","toSide":"top"},
+		{"id":"b34ecb634582bae0","fromNode":"85abe9842dc1c4ab","fromSide":"bottom","toNode":"0229d9b8ef2eb324","toSide":"top"},
+		{"id":"14787f2402a6b50b","fromNode":"b4e7d1ff6b9ca358","fromSide":"left","toNode":"ec23f87011124d74","toSide":"right"},
+		{"id":"51e5c3ba53e36c80","fromNode":"14e71eb74acf652d","fromSide":"left","toNode":"8dddbca3ed987de8","toSide":"right"},
+		{"id":"02dac913bf448c82","fromNode":"568b918564147e0e","fromSide":"left","toNode":"e1a4db09074551bf","toSide":"right"},
+		{"id":"a98dac84482d8f11","fromNode":"0229d9b8ef2eb324","fromSide":"bottom","toNode":"7f177ae1f24c2a87","toSide":"top"}
+	]
+}

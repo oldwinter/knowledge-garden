@@ -1,0 +1,9 @@
+{
+  "regex": {},
+  "lineRegex": {},
+  "linkRegex": {},
+  "linkLineRegex": {},
+  "imageRegex": {},
+  "shouldReplaceSelection": false,
+  "enhanceDefaultPaste": true
+}

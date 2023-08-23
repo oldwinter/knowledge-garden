@@ -1,0 +1,10 @@
+{
+	"id": "excalibrain",
+	"name": "ExcaliBrain",
+	"version": "0.2.8",
+  "minAppVersion": "1.1.6",
+	"description": "A clean, intuitive and editable graph view for Obsidian",
+	"author": "Zsolt Viczian",
+	"authorUrl": "https://zsolt.blog",
+	"isDesktopOnly": false
+}

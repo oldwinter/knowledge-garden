@@ -1,0 +1,11 @@
+{
+  "id": "obsidian-projects",
+  "name": "Projects",
+  "version": "1.16.3",
+  "minAppVersion": "1.0.0",
+  "description": "Plain text project planning.",
+  "author": "Marcus Olsson",
+  "authorUrl": "https://marcus.se.net",
+  "fundingUrl": "https://www.buymeacoffee.com/marcusolsson",
+  "isDesktopOnly": false
+}

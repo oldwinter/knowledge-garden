@@ -1,0 +1,30 @@
+.picker_wrapper.popup,
+.picker_wrapper.popup .picker_arrow::before,
+.picker_wrapper.popup .picker_arrow::after,
+.picker_editor > input {
+  background-color: var(--background-primary);
+}
+
+.picker_editor > input {
+  color: var(--text-normal);
+}
+
+div.chart-error {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--background-secondary);
+}
+
+div.chart-error pre > code {
+  color: crimson !important;
+}
+
+.print .block-language-chart {
+  /* Hardcoded with for printed Charts, see #41 */
+  width: 500px !important;
+}
+
+a[href="https://ko-fi.com/phibr0"] > img
+{
+  height: 3em;
+}

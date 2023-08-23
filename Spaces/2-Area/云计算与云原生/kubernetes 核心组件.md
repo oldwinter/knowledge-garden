@@ -1,0 +1,9 @@
+- 控制面（master节点）
+	- [[etcd]]
+	- [[kube-apiserver]]
+	- [[kube-scheduler]]
+	- [[kube-controller-manager]]
+- 用户面（node节点）
+	- [[kubelet]]
+	- [[Spaces/2-Area/云计算与云原生/kube-proxy]]
+	- [[cri容器运行时-containerd]]

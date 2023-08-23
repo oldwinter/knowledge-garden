@@ -1,0 +1,90 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "editor:focus-top",
+      "icon": "airplay",
+      "name": "聚焦上方标签页组",
+      "mode": "any",
+      "color": "#982a2a"
+    },
+    {
+      "id": "editor:focus-left",
+      "icon": "alarm-plus",
+      "name": "聚焦左侧标签页组",
+      "mode": "any",
+      "color": "#1b6b8d"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [
+    {
+      "id": "app:toggle-right-sidebar",
+      "icon": "align-right",
+      "name": "Toggle right sidebar",
+      "mode": "any"
+    },
+    {
+      "id": "app:toggle-left-sidebar",
+      "icon": "align-left",
+      "name": "折叠/展开左侧边栏",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-weread-plugin:sync-weread-notes-command",
+      "icon": "book-open",
+      "name": "Weread Plugin: Sync Weread Notes",
+      "mode": "any"
+    }
+  ],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "editor:toggle-source",
+      "icon": "code-glyph",
+      "name": "切换实时阅览/源码模式",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "navigate-glyph",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "janitor",
+      "keyboard-analyzer",
+      "obsidian-focus-plugin",
+      "backlink"
+    ],
+    "leftRibbon": []
+  },
+  "spacing": "8",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 3,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": true,
+    "mappedIcons": [
+      {
+        "commandID": "obsidian-spaced-repetition:srs-note-review-easy",
+        "iconID": "check"
+      },
+      {
+        "commandID": "obsidian-spaced-repetition:srs-note-review-hard",
+        "iconID": "alert-triangle"
+      }
+    ],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

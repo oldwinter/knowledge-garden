@@ -1,0 +1,15 @@
+{
+  "accentColor": "",
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "supercharged-links-gen",
+    "隐藏LICENSE文件和logseq文件夹",
+    "custom-theme"
+  ],
+  "theme": "obsidian",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "translucency": false,
+  "showViewHeader": true,
+  "nativeMenus": false
+}

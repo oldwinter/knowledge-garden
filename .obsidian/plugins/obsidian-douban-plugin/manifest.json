@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-douban-plugin",
+	"name": "Douban",
+	"version": "1.8.8",
+	"minAppVersion": "0.12.0",
+	"description": "This is a plugin that can import movies/books/musics/notes/games info data from Douban for Obsidian .",
+	"author": "Wanxp",
+	"authorUrl": "https://obsidian-douban.wanxuping.com",
+	"isDesktopOnly": false
+}

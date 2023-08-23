@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-file-cooker",
+	"name": "File Cooker",
+	"version": "1.7.8",
+	"minAppVersion": "1.2.0",
+	"description": "Deal multi notes from Search results、current file、Dataview query string...",
+	"author": "iuian",
+	"authorUrl": "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MjQ1ODIzMA==&scene=124#wechat_redirect",
+	"isDesktopOnly": false
+}

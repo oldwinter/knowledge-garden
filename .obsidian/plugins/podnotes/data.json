@@ -1,0 +1,521 @@
+{
+  "savedFeeds": {
+    "少数派播客 SSPAI Podcast": {
+      "title": "少数派播客 SSPAI Podcast",
+      "url": "https://sspai.typlog.io/feed/audio.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/cd/0d/2f/cd0d2f7a-589d-ff91-115a-619fa3936748/mza_7615310903384300097.png/100x100bb.jpg",
+      "collectionId": 1483157529
+    },
+    "狗熊有话说": {
+      "title": "狗熊有话说",
+      "url": "https://feeds.redcircle.com/936a3212-92e5-41c7-b6f9-39e3596adeb8",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/00/1d/8a/001d8a99-82ff-1cd9-ad2b-ec063f904406/mza_17169098127191408206.jpg/100x100bb.jpg",
+      "collectionId": 1360794073
+    },
+    "Mac Power Users": {
+      "title": "Mac Power Users",
+      "url": "https://www.relay.fm/mpu/feed",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts122/v4/57/a0/9b/57a09baf-73cd-0b32-377b-85084bde5c1f/mza_14937665839933541779.png/100x100bb.jpg",
+      "collectionId": 458066753
+    },
+    "枫言枫语": {
+      "title": "枫言枫语",
+      "url": "https://justinyan.me/feed/podcast",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts113/v4/7a/ef/be/7aefbe9d-bb5e-17f3-6df3-23cdbc0791ee/mza_3410337588270925581.png/100x100bb.jpg",
+      "collectionId": 1069600190
+    },
+    "GQ Talk": {
+      "title": "GQ Talk",
+      "url": "https://c.qingting.fm/podcast/v1/vchannels/318085",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/74/ea/fd/74eafd38-6d50-8e2b-c820-ab42bb703180/mza_9394855991348100350.jpg/100x100bb.jpg",
+      "collectionId": 1475609450
+    },
+    "Techmeme Ride Home": {
+      "title": "Techmeme Ride Home",
+      "url": "https://rss.art19.com/techmeme-ridehome",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/61/ba/0d/61ba0deb-9039-5f9a-ce6a-25ed1143778c/mza_10697099689414881036.jpeg/100x100bb.jpg",
+      "collectionId": 1355212895
+    },
+    "Waveform: The MKBHD Podcast": {
+      "title": "Waveform: The MKBHD Podcast",
+      "url": "https://feeds.megaphone.fm/STU4418364045",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts116/v4/4d/a4/99/4da4999a-a63b-e538-f61a-32ab2d706da1/mza_3594290234478964482.jpeg/100x100bb.jpg",
+      "collectionId": 1474429475
+    },
+    "随机波动StochasticVolatility": {
+      "title": "随机波动StochasticVolatility",
+      "url": "https://feeds.fireside.fm/stovol/rss",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/a7/38/33/a7383380-6228-6a13-cf35-0488e2155deb/mza_4307002624117949781.jpg/100x100bb.jpg",
+      "collectionId": 1504681387
+    },
+    "文化有限": {
+      "title": "文化有限",
+      "url": "https://s1.proxy.wavpub.com/weknownothing.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts125/v4/32/63/02/326302a5-5fc7-cf84-34bb-10f14284fcfe/mza_16642213268929932779.jpg/100x100bb.jpg",
+      "collectionId": 1482731836
+    },
+    "忽左忽右": {
+      "title": "忽左忽右",
+      "url": "https://justpodmedia.com/rss/left-right.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/f9/99/54/f99954a7-0131-dd17-3921-2fdd00f8cc8d/mza_16635817524321063156.png/100x100bb.jpg",
+      "collectionId": 1493503146
+    },
+    "谐星聊天会": {
+      "title": "谐星聊天会",
+      "url": "https://feeds.danlirencomedy.com/xxlth.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts126/v4/01/69/55/01695567-19c2-776b-d449-e0e4f82eddd1/mza_1303390759021022728.jpg/100x100bb.jpg",
+      "collectionId": 1488080680
+    },
+    "日谈公园": {
+      "title": "日谈公园",
+      "url": "http://www.ximalaya.com/album/5574153.xml",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7f/94/9e/7f949e9e-4b07-0e66-0321-733843fed63c/mza_2625935947068091835.jpg/100x100bb.jpg",
+      "collectionId": 1166949390
+    },
+    "不合时宜": {
+      "title": "不合时宜",
+      "url": "https://feed.xyzfm.space/ww7cqnybekty",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts114/v4/12/9b/31/129b31cc-166a-1799-7085-9e1f0fe5c215/mza_4089001267238303775.png/100x100bb.jpg",
+      "collectionId": 1487143507
+    },
+    "故事 FM": {
+      "title": "故事 FM",
+      "url": "https://storyfm.cn/feed/episodes",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/21/1f/12/211f1242-c2cd-a48f-afba-9637f520cd39/mza_14529196063048661259.png/100x100bb.jpg",
+      "collectionId": 1256399960
+    },
+    "姜思达": {
+      "title": "姜思达",
+      "url": "https://feed.xyzfm.space/tdjvf7vfnbqq",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7e/d9/39/7ed93947-4ba4-ed04-af94-515f21a301c9/mza_16178597534733733887.jpg/100x100bb.jpg",
+      "collectionId": 1546599837
+    },
+    "声东击西": {
+      "title": "声东击西",
+      "url": "https://feeds.fireside.fm/shengdongjixi/rss",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/69/6e/68/696e686e-1ff4-64e7-e710-d5b6b163e2df/mza_13010803539283907785.jpg/100x100bb.jpg",
+      "collectionId": 1183662640
+    },
+    "无聊斋": {
+      "title": "无聊斋",
+      "url": "https://feeds.wlz.danlirencomedy.com/wuliaozhai.xml",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts123/v4/0a/a7/c6/0aa7c61d-bbe5-99f2-f417-c6c74170b43f/mza_5406357218725381973.jpg/100x100bb.jpg",
+      "collectionId": 1433530822
+    },
+    "商业就是这样": {
+      "title": "商业就是这样",
+      "url": "http://www.ximalaya.com/album/46587439.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts122/v4/11/3f/04/113f0488-3fef-216d-af5e-a25b6c4e05c3/mza_4671506012664430969.jpeg/100x100bb.jpg",
+      "collectionId": 1552904790
+    },
+    "疯投圈": {
+      "title": "疯投圈",
+      "url": "https://crazy.capital/feed",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/e8/d8/8e/e8d88ed9-b12c-b8d9-5e5d-25682f72c182/mza_4966428153200416701.png/100x100bb.jpg",
+      "collectionId": 1088178402
+    },
+    "段子来了": {
+      "title": "段子来了",
+      "url": "http://www.ximalaya.com/album/203355.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts115/v4/d7/b1/27/d7b12770-0fe7-800c-d6f8-855ccc0d5a06/mza_9851739495645607166.jpg/100x100bb.jpg",
+      "collectionId": 693925097
+    },
+    "贤者时间": {
+      "title": "贤者时间",
+      "url": "https://www.ximalaya.com/album/68568102.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts126/v4/89/4a/ce/894ace34-321e-d21c-9102-048b9ad8955d/mza_4738508223520342565.jpeg/100x100bb.jpg",
+      "collectionId": 1635378899
+    },
+    "跳岛FM": {
+      "title": "跳岛FM",
+      "url": "https://tiaodao.typlog.io/feed/audio.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts122/v4/5d/a7/37/5da737a7-a011-fa16-006e-3bc601fe1c79/mza_741107029768819499.png/100x100bb.jpg",
+      "collectionId": 1504037049
+    },
+    "凹凸电波": {
+      "title": "凹凸电波",
+      "url": "http://www.ximalaya.com/album/19206382.xml",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts113/v4/30/24/93/302493e7-be1c-958c-366e-8d13c2fc698c/mza_10993420535667969042.jpg/100x100bb.jpg",
+      "collectionId": 1455784513
+    },
+    "展开讲讲": {
+      "title": "展开讲讲",
+      "url": "http://www.ximalaya.com/album/24672021.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/2f/71/44/2f714442-1a95-d3ab-83c1-8f981bbf7180/mza_9040500032900088252.jpg/100x100bb.jpg",
+      "collectionId": 1470561691
+    },
+    "没理想编辑部": {
+      "title": "没理想编辑部",
+      "url": "https://api.vistopia.com.cn/rss/program/116.xml",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/a6/41/a7/a641a7b7-c1ce-0743-61cf-131ca1339fc9/mza_17767815953413711741.jpg/100x100bb.jpg",
+      "collectionId": 1494093522
+    },
+    "来都来了 | 听了再走": {
+      "title": "来都来了 | 听了再走",
+      "url": "http://www.ximalaya.com/album/31677988.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/3d/16/8d/3d168d0d-713f-b317-4b8c-526092b878f6/mza_15059309964230237188.jpg/100x100bb.jpg",
+      "collectionId": 1512932915
+    },
+    "知行小酒馆｜关注投资理财，更关注怎样更好地生活": {
+      "title": "知行小酒馆｜关注投资理财，更关注怎样更好地生活",
+      "url": "http://www.ximalaya.com/album/46199233.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts112/v4/b3/96/fc/b396fcc5-6e2b-d34e-8d3d-c849c43b6215/mza_4090324763067558601.jpeg/100x100bb.jpg",
+      "collectionId": 1559695855
+    },
+    "无人知晓": {
+      "title": "无人知晓",
+      "url": "https://feed.xyzfm.space/ypn9dydpbxpc",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts125/v4/99/76/95/99769525-5b7f-b1f4-3d11-b669ad4d0f71/mza_7503501950013528617.jpeg/100x100bb.jpg",
+      "collectionId": 1581271335
+    },
+    "得意忘形播客": {
+      "title": "得意忘形播客",
+      "url": "http://rss.lizhi.fm/rss/1959617.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/c9/11/22/c9112227-9d0f-02bb-8d24-242e8a3b1974/mza_5182228873476864380.jpg/100x100bb.jpg",
+      "collectionId": 1200767928
+    },
+    "看理想圆桌": {
+      "title": "看理想圆桌",
+      "url": "https://api.vistopia.com.cn/rss/program/13.xml",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts113/v4/71/0d/a0/710da0e8-d1c7-79e8-a2f9-0625ea9dc989/mza_8673152410750693795.jpg/100x100bb.jpg",
+      "collectionId": 1418358464
+    },
+    "限时肤浅": {
+      "title": "限时肤浅",
+      "url": "http://www.ximalaya.com/album/41317943.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/48/c6/a4/48c6a432-21e9-e79c-c54c-c99a109e9110/mza_1407246038888971064.jpg/100x100bb.jpg",
+      "collectionId": 1531669562
+    },
+    "What's Next｜科技早知道": {
+      "title": "What's Next｜科技早知道",
+      "url": "https://feeds.fireside.fm/guiguzaozhidao/rss",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts113/v4/d0/bd/0a/d0bd0a2e-e55f-20c4-76cd-c984c1a3c661/mza_6356328926108493755.jpg/100x100bb.jpg",
+      "collectionId": 1494812579
+    },
+    "螺丝在拧紧": {
+      "title": "螺丝在拧紧",
+      "url": "http://www.ximalaya.com/album/47008946.xml",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts112/v4/84/2d/c6/842dc63f-f52b-3892-6ecc-7937acae715f/mza_3287542531359866669.jpeg/100x100bb.jpg",
+      "collectionId": 1555601768
+    },
+    "Blow Your Mind (BYM 2022)": {
+      "title": "Blow Your Mind (BYM 2022)",
+      "url": "http://www.ximalaya.com/album/6990384.xml",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/7a/e1/b5/7ae1b57e-97ed-9601-8e74-f936b62fe53f/mza_6606958185929086270.jpeg/100x100bb.jpg",
+      "collectionId": 1516595082
+    },
+    "基本无害 Mostly Harmless": {
+      "title": "基本无害 Mostly Harmless",
+      "url": "https://feed.xyzfm.space/dy3ktvw6exc9",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts125/v4/ab/86/19/ab861909-345c-5695-2d76-324a0636e7e2/mza_9824889126222486642.jpg/100x100bb.jpg",
+      "collectionId": 1512748339
+    },
+    "声动早咖啡": {
+      "title": "声动早咖啡",
+      "url": "https://feeds.fireside.fm/sheng-espresso/rss",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts126/v4/82/f7/90/82f79040-d55f-f2fe-518f-1e71da1a9460/mza_6487999009326458521.jpg/100x100bb.jpg",
+      "collectionId": 1573189055
+    },
+    "宇宙乘客": {
+      "title": "宇宙乘客",
+      "url": "http://www.ximalaya.com/album/33643029.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/00/d9/3d/00d93d02-345f-b651-2845-bd235ce7e901/mza_12765779720571999990.jpeg/100x100bb.jpg",
+      "collectionId": 1540709743
+    },
+    "三五环": {
+      "title": "三五环",
+      "url": "https://proxy.wavpub.com/35huan.xml",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts126/v4/6e/d0/de/6ed0dedb-d782-a562-e40b-043ce20441d3/mza_5066303992234991879.jpeg/100x100bb.jpg",
+      "collectionId": 1475113228
+    },
+    "组织进化论": {
+      "title": "组织进化论",
+      "url": "https://feeds.fireside.fm/zuzhijinhualun/rss",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts116/v4/70/bb/ff/70bbffce-0ac3-e6ba-0212-37a27078decc/mza_16797136075481677774.jpg/100x100bb.jpg",
+      "collectionId": 1561091832
+    },
+    "硅谷101": {
+      "title": "硅谷101",
+      "url": "https://feeds.fireside.fm/sv101/rss",
+      "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/96/d6/82/96d682e0-e42f-d8bf-68c3-c18ff9c20c8f/mza_15727650922171364471.jpg/100x100bb.jpg",
+      "collectionId": 1498541229
+    },
+    "自我进化论": {
+      "title": "自我进化论",
+      "url": "https://feed.xyzfm.space/artr8kfmlmxh",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts125/v4/7e/9f/2c/7e9f2c84-e756-b687-391e-83a27724645d/mza_1150423139010350989.jpg/100x100bb.jpg",
+      "collectionId": 1498170617
+    },
+    "奇想驿 by 产品沉思录": {
+      "title": "奇想驿 by 产品沉思录",
+      "url": "https://feed.xyzfm.space/4wq8y3ymmc7p",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts115/v4/e8/88/75/e8887536-90a0-e60e-3aa1-697bf6abcdaa/mza_6176020045781415495.png/100x100bb.jpg",
+      "collectionId": 1572472132
+    },
+    "一席YiXi": {
+      "title": "一席YiXi",
+      "url": "http://www.ximalaya.com/album/242812.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts115/v4/34/b1/c7/34b1c7fa-677f-d056-1bd1-ced765a976d2/mza_17265941457939778919.jpeg/100x100bb.jpg",
+      "collectionId": 676106704
+    },
+    "非常溜佳期|爆笑吐槽欢乐解压": {
+      "title": "非常溜佳期|爆笑吐槽欢乐解压",
+      "url": "http://www.ximalaya.com/album/249020.xml",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts112/v4/9f/e5/ec/9fe5ece1-1e56-2f7d-6d13-3fe69290d6e7/mza_9011956773741090550.jpeg/100x100bb.jpg",
+      "collectionId": 888972262
+    },
+    "非常不着调": {
+      "title": "非常不着调",
+      "url": "http://www.ximalaya.com/album/222885.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts115/v4/c0/8a/0b/c08a0bb3-4b9e-181c-e733-0424bc8d7581/mza_16808437994075557339.jpg/100x100bb.jpg",
+      "collectionId": 763221643
+    },
+    "放学以后After school": {
+      "title": "放学以后After school",
+      "url": "https://anchor.fm/s/81d05f80/podcast/rss",
+      "artworkUrl": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts125/v4/65/a8/d3/65a8d325-ee59-e9aa-e720-a9bf59d4d200/mza_12124269978392524866.jpeg/100x100bb.jpg",
+      "collectionId": 1553202332
+    },
+    "喷嚏": {
+      "title": "喷嚏",
+      "url": "https://feed.xyzfm.space/9unxvjbetgyu",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts112/v4/f4/6f/a6/f46fa642-6aa0-438e-384a-ea1f5cd33c9e/mza_10954352375421010230.png/100x100bb.jpg",
+      "collectionId": 1636838966
+    },
+    "半拿铁 | 商业沉浮录": {
+      "title": "半拿铁 | 商业沉浮录",
+      "url": "https://proxy.wavpub.com/caffebreve.xml",
+      "artworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts112/v4/95/33/4d/95334de1-1492-1ab0-aa7b-8f246bf89bde/mza_10728614257690800956.jpeg/100x100bb.jpg",
+      "collectionId": 1615939013
+    },
+    "燕外之意": {
+      "title": "燕外之意",
+      "url": "http://www.ximalaya.com/album/54855197.xml",
+      "artworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/19/11/00/19110005-c82b-bd1f-1bf7-2cb207d15475/mza_14311037904270360428.jpeg/100x100bb.jpg",
+      "collectionId": 1620123449
+    },
+    "肥话连篇": {
+      "title": "肥话连篇",
+      "url": "http://www.ximalaya.com/album/56109512.xml",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts126/v4/12/08/74/1208744d-b065-1164-632b-82c97af39412/mza_14598067193335283885.jpeg/100x100bb.jpg",
+      "collectionId": 1603580035
+    },
+    "小马宋": {
+      "title": "小马宋",
+      "url": "https://feed.xyzfm.space/kbkftb78gb4e",
+      "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts112/v4/d4/46/7b/d4467b7e-dd2a-a678-a43e-5b993f245f3c/mza_12532419463094997687.jpg/100x100bb.jpg",
+      "collectionId": 1660516524
+    }
+  },
+  "podNotes": {},
+  "defaultPlaybackRate": 1,
+  "playedEpisodes": {
+    " 来一场环球旅行：面对忐忑、享受快乐、体会成长 ": {
+      "title": " 来一场环球旅行：面对忐忑、享受快乐、体会成长 ",
+      "podcastName": "少数派播客 SSPAI Podcast",
+      "time": 15.127881,
+      "duration": 4747.990204,
+      "finished": false
+    },
+    "段子来了丨朋友失恋我安慰，自己失恋我崩溃 23.3.13（采采）": {
+      "title": "段子来了丨朋友失恋我安慰，自己失恋我崩溃 23.3.13（采采）",
+      "podcastName": "段子来了",
+      "time": 2168.809716,
+      "duration": 2514.312,
+      "finished": false
+    },
+    "448 / 如何成功申请国际论坛演讲席位 - How to pitch a conference speak": {
+      "title": "448 / 如何成功申请国际论坛演讲席位 - How to pitch a conference speak",
+      "podcastName": "狗熊有话说",
+      "time": 96.262579,
+      "duration": 1438.719938,
+      "finished": false
+    },
+    "683: Workflows with Ian Byrd": {
+      "title": "683: Workflows with Ian Byrd",
+      "podcastName": "Mac Power Users",
+      "time": 138.831505,
+      "duration": 5226.1875,
+      "finished": false
+    },
+    "【059】上野千鹤子在中国为什么这么火？": {
+      "title": "【059】上野千鹤子在中国为什么这么火？",
+      "podcastName": "GQ Talk",
+      "time": 534.898631,
+      "duration": 3630.11483,
+      "finished": false
+    },
+    "Wed. 03/15 – GPT-4 Is Here": {
+      "title": "Wed. 03/15 – GPT-4 Is Here",
+      "podcastName": "Techmeme Ride Home",
+      "time": 0,
+      "duration": 3630.11483,
+      "finished": false
+    },
+    "Vol.169 春日特辑：你最棒，就算现在不棒，以后也会很棒": {
+      "title": "Vol.169 春日特辑：你最棒，就算现在不棒，以后也会很棒",
+      "podcastName": "文化有限",
+      "time": 0,
+      "duration": 0,
+      "finished": true
+    },
+    "我只想当个废物 别人越卷我越废｜非常溜佳期互动版": {
+      "title": "我只想当个废物 别人越卷我越废｜非常溜佳期互动版",
+      "podcastName": "非常溜佳期|爆笑吐槽欢乐解压",
+      "time": 0,
+      "duration": 0,
+      "finished": true
+    },
+    " 深入浅出，把 AR 开发的行业现状聊清楚 ": {
+      "title": " 深入浅出，把 AR 开发的行业现状聊清楚 ",
+      "podcastName": "少数派播客 SSPAI Podcast",
+      "time": 0,
+      "duration": 0,
+      "finished": true
+    }
+  },
+  "favorites": {
+    "icon": "lucide-star",
+    "name": "Favorites",
+    "shouldEpisodeRemoveAfterPlay": false,
+    "shouldRepeat": false,
+    "episodes": []
+  },
+  "queue": {
+    "icon": "list-ordered",
+    "name": "Queue",
+    "shouldEpisodeRemoveAfterPlay": true,
+    "shouldRepeat": false,
+    "episodes": [
+      {
+        "title": "我只想当个废物 别人越卷我越废｜非常溜佳期互动版",
+        "streamUrl": "https://jt.ximalaya.com//GKwRIasIZ0PeAGuHhQIsbXbw.m4a?channel=rss&album_id=249020&track_id=642894544&uid=3945648&jt=https://audio.xmcdn.com/storages/9360-audiofreehighqps/CD/4C/GKwRIasIZ0PeAGuHhQIsbXbw.m4a",
+        "url": "https://www.ximalaya.com//3945648/sound/642894544",
+        "description": "\n                    <p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">喜欢的男孩子送我一个保温杯，可是盖子丢了。神回复：你知道这说明什么吗?迟早会凉.</p><br><span><br></span><p data-flag=\"normal\" style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\"><b>更多搞笑段子关注订阅：非常溜佳期</b></p><p data-flag=\"normal\" style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\"><strong style=\"color:#FC5832;word-break:break-all;font-family:Helvetica,Arial,sans-serif;font-weight: normal;\">微博 | 公众号：主播佳期</strong></p><br><span><br></span><br>\n                ",
+        "content": "",
+        "podcastName": "非常溜佳期|爆笑吐槽欢乐解压",
+        "artworkUrl": "https://fdfs.xmcdn.com/group30/M0B/BE/11/wKgJXlnSZlzhov6rAAGyRtHPJBg254.jpg",
+        "episodeDate": "2023-06-20T10:34:46.000Z",
+        "feedUrl": "http://www.ximalaya.com/album/249020.xml",
+        "itunesTitle": "我只想当个废物 别人越卷我越废｜非常溜佳期互动版"
+      },
+      {
+        "title": "Vol.169 春日特辑：你最棒，就算现在不棒，以后也会很棒",
+        "streamUrl": "https://dl.wavpub.com/item/13_31587744_7729.m4a",
+        "url": "https://www.ximalaya.com//68693381/sound/617162864",
+        "description": "<p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>又是一年春来到！</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>2023年我们终于等来了一个可以出门旅行、沐浴春风、迎春赏花，与大自然和好朋友们相聚在一起的春天。</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>希望你在这个明媚的春天里，蓬勃生长，昂扬向上！</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>推荐作品清单：</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>歌：</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>超哥：《我们打着光脚在风车下跑，手上的狗尾巴草摇啊摇》-等一下就回家</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>大壹：《Para Para Sakura》-郭富城</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>星光：《致橡树》-程天意</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>书：</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>大壹：《带壳的牡蛎是大人的心脏》-拟泥nini / 王曼霓</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>星光：《谜案重现：没药花园》-何袜皮</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>超哥：《冲突的力量：如何建立安全、稳固和长久的亲密关系》-埃德·特罗尼克 / 克劳迪娅·M·戈尔德</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>电影：</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>星光：《带你去见我妈》-蓝鸿春</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>超哥：《独立时代》-杨德昌</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>大壹：《有话好好说》-张艺谋</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>电视剧：</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>超哥：《摇滚狂花》</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>大壹：《重启人生》</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>星光：《最后生还者》</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>片头曲：レミオロメン - 粉雪</span></p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>片尾曲：刘雅丽 - 我和春天有个约会</span></p><span><br></span><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>主播：星光 / 超哥 / 大壹</span></p><hr style=\"border:0px;margin:20px 0px;background:#ddd;display:inline-block;width:100%;border-style:solid;height:1px;\"><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\"><span>去 爱发电 支持我们：</span><a style=\"color:#4990E2;text-decoration:none;\">https://afdian.net/@WHYXFM</a></p><br>",
+        "content": "",
+        "podcastName": "文化有限",
+        "artworkUrl": "https://fdfs.xmcdn.com/storages/1f66-audiofreehighqps/83/CA/CKwRIJEE_Lk8AAE2lQDcTWM0.jpeg",
+        "episodeDate": "2023-03-13T23:00:00.000Z",
+        "feedUrl": "https://s1.proxy.wavpub.com/weknownothing.xml",
+        "itunesTitle": ""
+      },
+      {
+        "title": "Wed. 03/15 – GPT-4 Is Here",
+        "streamUrl": "https://rss.art19.com/episodes/503a5717-0fa1-4582-afb8-cb7b1b64b5ec.mp3?rss_browser=BAhJIgtDaHJvbWUGOgZFVA%3D%3D--d05363d83ce333c74f32188013892b2863ad051c",
+        "url": "https://rss.art19.com/techmeme-ridehome",
+        "description": "\n        <p><strong><em>GPT-4 is unveiled and it’s multimodal, and man, is everybody rushing to make use of this stuff. Alleged renders of Google's Pixel 8 Pro appear to show a mysterious new sensor. The state of the music industry in the streaming era. And Deadpool sells his phone company to another phone company.</em></strong></p><p>Links:</p><ul><li><a href=\"https://www.windowscentral.com/software-apps/openai-unveils-gpt-4-with-multimodal-input-and-more-creative-and-complex-capabilities\" rel=\"noopener noreferrer\" target=\"_blank\">OpenAI unveils GPT-4 with multimodal input and more creative and complex capabilities</a>&nbsp;(Windows Central)</li><li><a href=\"https://www.nytimes.com/2023/03/14/technology/openai-new-gpt4.html\" rel=\"noopener noreferrer\" target=\"_blank\">10 Ways GPT-4 Is Impressive but Still Flawed</a>&nbsp;(NYTimes)</li><li><a href=\"https://techcrunch.com/2023/03/14/with-evals-openai-hopes-to-crowdsource-ai-model-testing/\" rel=\"noopener noreferrer\" target=\"_blank\">With Evals, OpenAI hopes to crowdsource AI model testing</a>&nbsp;(TechCrunch)</li><li><a href=\"https://techcrunch.com/2023/03/14/duolingo-launches-new-subscription-tier-with-access-to-ai-tutor-powered-by-gpt-4/\" rel=\"noopener noreferrer\" target=\"_blank\">Duolingo launches new subscription tier with access to AI tutor powered by GPT-4</a>&nbsp;(TechCrunch)</li><li><a href=\"https://techcrunch.com/2023/03/14/gpt-4s-first-app-is-a-virtual-volunteer-for-the-visually-impaired/\" rel=\"noopener noreferrer\" target=\"_blank\">GPT-4’s new capabilities power a ‘virtual volunteer’ for the visually impaired</a>&nbsp;(TechCrunch)</li><li><a href=\"https://www.bloomberg.com/news/articles/2023-03-14/tiktok-considers-divesting-from-bytedance-if-deal-with-us-fails?sref=Szq5ylDR\" rel=\"noopener noreferrer\" target=\"_blank\">TikTok Considers Splitting From ByteDance If Deal With US Fails</a>&nbsp;(Bloomberg)</li><li><a href=\"https://9to5google.com/2023/03/14/google-pixel-8-pro-leak/\" rel=\"noopener noreferrer\" target=\"_blank\">Google Pixel 8 Pro adds a mysterious new sensor, flat display in first leaked renders</a>&nbsp;(9to5Google)</li><li><a href=\"https://9to5mac.com/2023/03/15/apple-music-boosts-streaming-music-revenue-to-record-13-3-billion-in-2022-vinyl-outpaces-cds-for-first-since-1987/\" rel=\"noopener noreferrer\" target=\"_blank\">Apple Music boosts streaming music revenue to record $13.3 billion in 2022; vinyl outpaces CDs for first since 1987</a>&nbsp;(9to5Mac)</li><li><a href=\"https://www.bloomberg.com/news/articles/2023-03-15/t-mobile-buys-mint-mobile-for-1-35-billion-keeping-ryan-reynolds-spokesman?sref=Szq5ylDR\" rel=\"noopener noreferrer\" target=\"_blank\">Ryan Reynolds-Backed Mint Is Bought by T-Mobile for $1.35 Billion</a>&nbsp;(Bloomberg)</li></ul><p>See Privacy Policy at <a href=\"https://art19.com/privacy\" rel=\"noopener noreferrer\" target=\"_blank\">https://art19.com/privacy</a> and California Privacy Notice at <a href=\"https://art19.com/privacy#do-not-sell-my-info\" rel=\"noopener noreferrer\" target=\"_blank\">https://art19.com/privacy#do-not-sell-my-info</a>.</p>\n      ",
+        "content": "\n        <p><strong><em>GPT-4 is unveiled and it’s multimodal, and man, is everybody rushing to make use of this stuff. Alleged renders of Google's Pixel 8 Pro appear to show a mysterious new sensor. The state of the music industry in the streaming era. And Deadpool sells his phone company to another phone company.</em></strong></p><p>Links:</p><ul><li><a href=\"https://www.windowscentral.com/software-apps/openai-unveils-gpt-4-with-multimodal-input-and-more-creative-and-complex-capabilities\" rel=\"noopener noreferrer\" target=\"_blank\">OpenAI unveils GPT-4 with multimodal input and more creative and complex capabilities</a>&nbsp;(Windows Central)</li><li><a href=\"https://www.nytimes.com/2023/03/14/technology/openai-new-gpt4.html\" rel=\"noopener noreferrer\" target=\"_blank\">10 Ways GPT-4 Is Impressive but Still Flawed</a>&nbsp;(NYTimes)</li><li><a href=\"https://techcrunch.com/2023/03/14/with-evals-openai-hopes-to-crowdsource-ai-model-testing/\" rel=\"noopener noreferrer\" target=\"_blank\">With Evals, OpenAI hopes to crowdsource AI model testing</a>&nbsp;(TechCrunch)</li><li><a href=\"https://techcrunch.com/2023/03/14/duolingo-launches-new-subscription-tier-with-access-to-ai-tutor-powered-by-gpt-4/\" rel=\"noopener noreferrer\" target=\"_blank\">Duolingo launches new subscription tier with access to AI tutor powered by GPT-4</a>&nbsp;(TechCrunch)</li><li><a href=\"https://techcrunch.com/2023/03/14/gpt-4s-first-app-is-a-virtual-volunteer-for-the-visually-impaired/\" rel=\"noopener noreferrer\" target=\"_blank\">GPT-4’s new capabilities power a ‘virtual volunteer’ for the visually impaired</a>&nbsp;(TechCrunch)</li><li><a href=\"https://www.bloomberg.com/news/articles/2023-03-14/tiktok-considers-divesting-from-bytedance-if-deal-with-us-fails?sref=Szq5ylDR\" rel=\"noopener noreferrer\" target=\"_blank\">TikTok Considers Splitting From ByteDance If Deal With US Fails</a>&nbsp;(Bloomberg)</li><li><a href=\"https://9to5google.com/2023/03/14/google-pixel-8-pro-leak/\" rel=\"noopener noreferrer\" target=\"_blank\">Google Pixel 8 Pro adds a mysterious new sensor, flat display in first leaked renders</a>&nbsp;(9to5Google)</li><li><a href=\"https://9to5mac.com/2023/03/15/apple-music-boosts-streaming-music-revenue-to-record-13-3-billion-in-2022-vinyl-outpaces-cds-for-first-since-1987/\" rel=\"noopener noreferrer\" target=\"_blank\">Apple Music boosts streaming music revenue to record $13.3 billion in 2022; vinyl outpaces CDs for first since 1987</a>&nbsp;(9to5Mac)</li><li><a href=\"https://www.bloomberg.com/news/articles/2023-03-15/t-mobile-buys-mint-mobile-for-1-35-billion-keeping-ryan-reynolds-spokesman?sref=Szq5ylDR\" rel=\"noopener noreferrer\" target=\"_blank\">Ryan Reynolds-Backed Mint Is Bought by T-Mobile for $1.35 Billion</a>&nbsp;(Bloomberg)</li></ul><p>See Privacy Policy at <a href=\"https://art19.com/privacy\" rel=\"noopener noreferrer\" target=\"_blank\">https://art19.com/privacy</a> and California Privacy Notice at <a href=\"https://art19.com/privacy#do-not-sell-my-info\" rel=\"noopener noreferrer\" target=\"_blank\">https://art19.com/privacy#do-not-sell-my-info</a>.</p>\n      ",
+        "podcastName": "Techmeme Ride Home",
+        "artworkUrl": "https://content.production.cdn.art19.com/images/e9/95/72/33/e9957233-ba82-4fe4-8a56-efbd175ae7f5/0ff3126d11502fa0291bc5c44fd0ae9528c8cc0a4098a571f4fe83d8fd29305b65f35d670c52518e2258d8133a961450b23fbc00527c54156dc3bec1918b63dc.jpeg",
+        "episodeDate": "2023-03-15T16:00:00.000Z",
+        "feedUrl": "https://rss.art19.com/techmeme-ridehome",
+        "itunesTitle": "Wed. 03/15 – GPT-4 Is Here"
+      },
+      {
+        "title": "【059】上野千鹤子在中国为什么这么火？",
+        "streamUrl": "https://hwod-sign.qtfm.cn/m4a/640365ee218b84253ba7b39d_25302125_24.m4a?auth_key=641d66be-839866-0-cee8b961dc3906cf1cd6331f008e382b",
+        "url": "https://c.qingting.fm/podcast/v1/vchannels/318085",
+        "description": "",
+        "content": "",
+        "podcastName": "GQ Talk",
+        "artworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/74/ea/fd/74eafd38-6d50-8e2b-c820-ab42bb703180/mza_9394855991348100350.jpg/100x100bb.jpg",
+        "episodeDate": "2023-03-05T14:04:46.000Z",
+        "feedUrl": "https://c.qingting.fm/podcast/v1/vchannels/318085",
+        "itunesTitle": ""
+      },
+      {
+        "title": "683: Workflows with Ian Byrd",
+        "streamUrl": "https://www.podtrac.com/pts/redirect.mp3/traffic.libsyn.com/secure/relaympu/mpu683.mp3",
+        "url": "http://relay.fm/mpu/683",
+        "description": "Ian Byrd returns to the Mac Power Users to share the story of how he transitioned his business from in-person speaking engagements to on-demand video. Topics include online business management tools, video production, automation, and Ian's one-person company retreats.",
+        "content": "\n        <p>Ian Byrd returns to the Mac Power Users to share the story of how he transitioned his business from in-person speaking engagements to on-demand video. Topics include online business management tools, video production, automation, and Ian&#39;s one-person company retreats.</p>\n <h4>This episode of Mac Power Users is sponsored by:</h4> <ul>\n<li><a href=\"https://textexpander.com/podcast/mpu?utm_source=Mpu+&utm_medium=Podcasts&utm_campaign=TextExpander+March+2023\">TextExpander</a>: Get 20% off with this link and type more with less effort! Expand short abbreviations into longer bits of text, even fill-ins, with TextExpander.</li>\n<li><a href=\"http://electric.ai/mpu\">Electric</a>: Unbury yourself from IT tasks. Get a free pair of Beats Solo3 Wireless Headphones when you schedule a meeting.</li>\n<li><a href=\"https://macpaw.app/mpu\">CleanMyMac X</a>: Your Mac. As good as new. Get 5% off today.</li>\n<li><a href=\"https://fastgrowingtrees.com/mpu\">Fast Growing Trees</a>: We keep you growing. Get 15% off your order.</li>\n</ul>\n<h4 style='display: inline;'>Guest Starring:</h4> <p style='display: inline;'><a href='http://www.relay.fm/people/ianbyrd'>Ian Byrd</a></p>\n<h4>Links and Show Notes:</h4>  <h5><a href='https://relay.fm/mpu/join'>More Power Users: Ad-free episodes with regular bonus segments</a></h5> <h5><a href='https://relay.fm/mpu/feedback'>Submit Feedback</a></h5> <h5><a href=\"https://twitter.com/ianabyrd?lang=en\" target=\"_blank\">Ian Byrd (@IanAByrd) / Twitter</a></h5> <h5><a href=\"https://www.byrdseed.com/\" target=\"_blank\">Byrdseed - Lessons that get kids’ brains sweating.</a></h5> <h5><a href=\"https://www.byrdseed.tv/\" target=\"_blank\">Byrdseed.TV</a></h5> <h5><a href=\"https://youtu.be/FetvqIdoscs\" target=\"_blank\">Sparky's Moom AppleScript Tutorial</a></h5> <h5><a href=\"https://www.lg.com/us/monitors/lg-38WK95C-W-ultrawide-monitor\" target=\"_blank\">LG 38WK95C-W: 38'' Class 21:9 UltraWide® WQHD+ IPS Curved LED Monitor | LG USA</a></h5> <h5><a href=\"https://www.macsparky.com/blog/2018/08/window-management-with-keyboard-maestro-and-screencast/\" target=\"_blank\">Window Management with Keyboard Maestro and Screencast - MacSparky</a></h5> <h5><a href=\"https://www.wacom.com/en-us/products/pen-tablets\" target=\"_blank\">Wacome: Pen Tablet / Digitizer Tablet</a></h5> <h5><a href=\"https://www.helpscout.com/\" target=\"_blank\">Help Scout</a></h5> <h5><a href=\"https://www.gravityforms.com/\" target=\"_blank\">Gravity Forms</a></h5> <h5><a href=\"https://www.waveapps.com/invoicing\" target=\"_blank\">Wave Financial</a></h5> <h5><a href=\"https://www.earthclassmail.com/\" target=\"_blank\">Earth Class Mail</a></h5> <h5><a href=\"https://www.etsy.com/listing/1148121754/dual-stream-deck-xl-stand?ref=yr_purchases\" target=\"_blank\">Dual Stream Deck XL Stand - Etsy</a></h5> <h5><a href=\"https://www.keyboardmaestro.com/main/\" target=\"_blank\">Keyboard Maestro</a></h5> <h5><a href=\"https://learn.macsparky.com/p/km\" target=\"_blank\">Keyboard Maestro Field Guide</a></h5> <h5><a href=\"https://alfred.app/\" target=\"_blank\">Alfred Workflows Gallery</a></h5> <h5><a href=\"https://www.macsparky.com/blog/2020/10/personal-retreat-video/\" target=\"_blank\">Personal Retreat - MacSparky</a></h5> <h5><a href=\"https://www.apparentsoft.com/trickster\" target=\"_blank\">Trickster</a></h5> <h5><a href=\"https://manytricks.com/namemangler/\" target=\"_blank\">Name Mangler</a></h5> <h5><a href=\"https://www.gl-inet.com/products/gl-ar750s/\" target=\"_blank\">GL-AR750S-Ext / Slate - GL.iNet</a></h5>\n      ",
+        "podcastName": "Mac Power Users",
+        "artworkUrl": "http://relayfm.s3.amazonaws.com/uploads/broadcast/image/16/mpu_artwork.png",
+        "episodeDate": "2023-03-12T21:00:00.000Z",
+        "feedUrl": "https://www.relay.fm/mpu/feed",
+        "itunesTitle": "Workflows with Ian Byrd"
+      },
+      {
+        "title": "448 / 如何成功申请国际论坛演讲席位 - How to pitch a conference speak",
+        "streamUrl": "https://audio4.redcircle.com/episodes/a723bc92-d0c1-48ad-b87e-9c3a35bda14c/stream.mp3",
+        "url": "http://www.beartalking.com",
+        "description": "<p>这期在新西兰首都惠灵顿海边码头录制的节目，将和你分享我如何在三年时间，通过试错、打磨、建立连接等方式，以一个设计行业半路出家自学的中年非母语设计师，成为南半球顶级设计类论坛UX New Zealand的演讲嘉宾的经验。</p><br/><br/>Support this podcast at — <a rel='payment' href='https://redcircle.com/gou-xiong-you-hua-shuo/donations'>https://redcircle.com/gou-xiong-you-hua-shuo/donations</a><br/><br/>Advertising Inquiries: <a href='https://redcircle.com/brands'>https://redcircle.com/brands</a><br/><br/>Privacy & Opt-Out: <a href='https://redcircle.com/privacy'>https://redcircle.com/privacy</a>",
+        "content": "<p>这期在新西兰首都惠灵顿海边码头录制的节目，将和你分享我如何在三年时间，通过试错、打磨、建立连接等方式，以一个设计行业半路出家自学的中年非母语设计师，成为南半球顶级设计类论坛UX New Zealand的演讲嘉宾的经验。</p><br/><br/>Support this podcast at — <a rel='payment' href='https://redcircle.com/gou-xiong-you-hua-shuo/donations'>https://redcircle.com/gou-xiong-you-hua-shuo/donations</a><br/><br/>Advertising Inquiries: <a href='https://redcircle.com/brands'>https://redcircle.com/brands</a><br/><br/>Privacy & Opt-Out: <a href='https://redcircle.com/privacy'>https://redcircle.com/privacy</a>",
+        "podcastName": "狗熊有话说",
+        "artworkUrl": "https://media.redcircle.com/images/2023/2/18/4/5b9fccd6-7055-45c3-8de9-7887dd749f39_bt448.jpg",
+        "episodeDate": "2023-02-25T04:14:08.000Z",
+        "feedUrl": "https://feeds.redcircle.com/936a3212-92e5-41c7-b6f9-39e3596adeb8",
+        "itunesTitle": "448 / 如何成功申请国际论坛演讲席位 - How to pitch a conference speak"
+      },
+      {
+        "title": "段子来了丨朋友失恋我安慰，自己失恋我崩溃 23.3.13（采采）",
+        "streamUrl": "https://jt.ximalaya.com//GKwRIJIH5PovATaWGwICGAcq.m4a?channel=rss&album_id=203355&track_id=617892695&uid=2629577&jt=https://audio.xmcdn.com/storages/be6f-audiofreehighqps/AA/C7/GKwRIJIH5PovATaWGwICGAcq.m4a",
+        "url": "https://www.ximalaya.com//2629577/sound/617892695",
+        "description": "\n                    <p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">明天是白色情人节，</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">快去告诉你喜欢的人让他给他女朋友准备礼物吧。&nbsp;</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">本来想把iPad卖了，给你买情人节礼物，服务员过来说这是点菜用的，叫我滚！</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">小白兔生气地对小鹿说：“你看人家别的女孩子都能收到花，你为什么不送给我。”</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">小鹿可怜巴巴的说：“因为我是梅花鹿啊。”&nbsp;</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">314这一天之所以浪漫，不是因为白色情人节，而是因为圆周率……无限的会永远继续。</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">如果有人喜欢你，先不要答应，先观察几天，你会发现他脱单了 。</p><p style=\"color:#333333;font-weight:normal;font-size:16px;line-height:30px;font-family:Helvetica, Arial, sans-serif;hyphens:auto;text-align:justify;\" data-flag=\"normal\">不需要节日赋予特别的意义，我天天爱你</p><span><br></span>\n                ",
+        "content": "",
+        "podcastName": "段子来了",
+        "artworkUrl": "https://fdfs.xmcdn.com/storages/259b-audiofreehighqps/3D/7A/GMCoOSUH5PpVAAJM6wICGBcG.jpeg",
+        "episodeDate": "2023-03-13T14:17:22.000Z",
+        "feedUrl": "http://www.ximalaya.com/album/203355.xml",
+        "itunesTitle": "段子来了丨朋友失恋我安慰，自己失恋我崩溃 23.3.13（采采）"
+      },
+      {
+        "title": " 来一场环球旅行：面对忐忑、享受快乐、体会成长 ",
+        "streamUrl": "https://r.typlog.com/eyJzIjoxODkzLCJlIjo2Njg3NywicCI6MiwidSI6IjQ4MjgubXAzIn0.imDtuJ1-F9xpfULrr8oi2uU7vro/sspai/8321038755_854828.mp3",
+        "url": "https://sspai.typlog.io/episodes/ep85",
+        "description": " 过去的一段时间里，少数派作者鸿苓不时出现在我派网站首页，分享她的旅途经验和经历。而她分享这些文字的灵感都来源于她在 2023 年初完成的一场环球旅行。 在这趟旅途中，鸿苓既体验了自然风光和极限运动，也游玩了 Apple Park 等科技圣地，甚至还在这趟以英语国家之旅中度过了中国春节、参拜了中国神庙，全程充满了惊叹和新奇。在本期节目中，鸿苓就分享了她的旅途奇遇。 鸿苓还在节目后段分享了出国游的小心得和小技巧，譬如筹备旅程、选择目的地、好物推荐和安全措施等。这会是一期既好玩又实用的旅行节目，欢迎收听。 🕹️ 少数派与机核网携手推出「机核・派」联合会员，左手效率，右手娱乐；一次购买，双倍快乐！ 🥳 少数派出品、知名主播婉莹、甜食制作的播客入门教程《100 小时后请叫我播客主理人》已经上线，用通俗易懂的语言带你入门播客制作，轻松完成你的「第〇期」播客节目。 节目章节 00:00:34 开场，嘉宾自我介绍 00:04:53 一条跨大洲、跨南北半球的旅行线 00:14:54 跳伞、漂流、跳瀑布 00:17:43 美国海关快速通关「技巧」 00:21:23 两个遗失的汉堡 00:24:11 在海外拜中国神 00:28:32 Apple Park 入园囧事 00:31:05 意外闯入羊驼农场 00:32:42 看话剧不用穿西装的国家们 00:37:14 旅行缓解了我的焦虑 00:46:16 「探险家」的出国游指南 01:07:46 旅行好物推荐 拓展阅读 鸿苓的少数派页面 探险家阿贝尔·塔斯曼（Abel Tasman） 《天气、账单、路线安排：我是如何用 Notion 做旅行计划的？》 《出国旅行少不了这 7 件好物：我的旅行必备清单》 《城市漫步指南：在皇后镇体验极限运动》 《总之，你就是想要出国旅游了……》 Skyscanner 马蜂窝 已经停办的旅行指导杂志《孤独星球》（Lonely Planet） 嘉宾在节目尾声推荐的产品 Google Pixel 4 护发精油 3M 胶带 肥皂纸 餐具 指甲刀 UVlens 订阅《一派・Podcast》 节目 RSS 链接 Apple Podcasts 小宇宙 Spotify Google Podcasts 其它平台 人物介绍 张奕源 Nick：少数派编辑部成员，少数派播客主播 鸿苓（伟大的探险家阿贝尔·塔斯曼）：少数派人气作者 有任何想对我们说的、听我们聊的，都欢迎写信至 nick@sspai.com。 ",
+        "content": " <p>过去的一段时间里，少数派作者鸿苓不时出现在我派网站首页，分享她的旅途经验和经历。而她分享这些文字的灵感都来源于她在 2023 年初完成的一场环球旅行。</p>\n<p>在这趟旅途中，鸿苓既体验了自然风光和极限运动，也游玩了 Apple Park 等科技圣地，甚至还在这趟以英语国家之旅中度过了中国春节、参拜了中国神庙，全程充满了惊叹和新奇。在本期节目中，鸿苓就分享了她的旅途奇遇。</p>\n<p>鸿苓还在节目后段分享了出国游的小心得和小技巧，譬如筹备旅程、选择目的地、好物推荐和安全措施等。这会是一期既好玩又实用的旅行节目，欢迎收听。</p>\n<p>🕹️ 少数派与机核网携手推出<a href=\"https://sspai.com/post/78849\">「机核・派」联合会员</a>，左手效率，右手娱乐；一次购买，双倍快乐！</p>\n<p>🥳 少数派出品、知名主播婉莹、甜食制作的播客入门教程《<a href=\"https://sspai.com/series/280\">100 小时后请叫我播客主理人</a>》已经上线，用通俗易懂的语言带你入门播客制作，轻松完成你的「第〇期」播客节目。</p>\n<h2>节目章节</h2>\n<ul>\n<li><a href=\"#t=00:00:34\">00:00:34</a> 开场，嘉宾自我介绍</li>\n<li><a href=\"#t=00:04:53\">00:04:53</a> 一条跨大洲、跨南北半球的旅行线</li>\n<li><a href=\"#t=00:14:54\">00:14:54</a> 跳伞、漂流、跳瀑布</li>\n<li><a href=\"#t=00:17:43\">00:17:43</a> 美国海关快速通关「技巧」</li>\n<li><a href=\"#t=00:21:23\">00:21:23</a> 两个遗失的汉堡</li>\n<li><a href=\"#t=00:24:11\">00:24:11</a> 在海外拜中国神</li>\n<li><a href=\"#t=00:28:32\">00:28:32</a> Apple Park 入园囧事</li>\n<li><a href=\"#t=00:31:05\">00:31:05</a> 意外闯入羊驼农场</li>\n<li><a href=\"#t=00:32:42\">00:32:42</a> 看话剧不用穿西装的国家们</li>\n<li><a href=\"#t=00:37:14\">00:37:14</a> 旅行缓解了我的焦虑</li>\n<li><a href=\"#t=00:46:16\">00:46:16</a> 「探险家」的出国游指南</li>\n<li><a href=\"#t=01:07:46\">01:07:46</a> 旅行好物推荐</li>\n</ul>\n<h2>拓展阅读</h2>\n<ul>\n<li><a href=\"https://sspai.com/u/tgwbddu0/posts\">鸿苓的少数派页面</a></li>\n<li>探险家<a href=\"https://zh.wikipedia.org/wiki/%E9%98%BF%E8%B4%9D%E5%B0%94%C2%B7%E5%A1%94%E6%96%AF%E6%9B%BC\">阿贝尔·塔斯曼</a>（Abel Tasman）</li>\n<li>《<a href=\"https://sspai.com/post/77107\">天气、账单、路线安排：我是如何用 Notion 做旅行计划的？</a>》</li>\n<li>《<a href=\"https://sspai.com/post/78492\">出国旅行少不了这 7 件好物：我的旅行必备清单</a>》</li>\n<li>《<a href=\"https://sspai.com/post/78354\">城市漫步指南：在皇后镇体验极限运动</a>》</li>\n<li>《<a href=\"https://sspai.com/post/77127\">总之，你就是想要出国旅游了……</a>》</li>\n<li><a href=\"https://www.skyscanner.net\">Skyscanner</a></li>\n<li><a href=\"https://www.mafengwo.cn/\">马蜂窝</a></li>\n<li>已经停办的旅行指导杂志《<a href=\"https://search.jd.com/Search?keyword=%E5%AD%A4%E7%8B%AC%E6%98%9F%E7%90%83\">孤独星球</a>》（Lonely Planet）</li>\n</ul>\n<h2>嘉宾在节目尾声推荐的产品</h2>\n<ul>\n<li>Google Pixel 4</li>\n<li>护发精油</li>\n<li>3M 胶带</li>\n<li>肥皂纸</li>\n<li>餐具</li>\n<li>指甲刀</li>\n<li><a href=\"https://www.uvlens.com/\">UVlens</a></li>\n</ul>\n<h2>订阅《一派・Podcast》</h2>\n<ul>\n<li><a href=\"https://sspai.typlog.io/feed/audio.xml\">节目 RSS 链接</a></li>\n<li><a href=\"https://podcasts.apple.com/hk/podcast/%E4%B8%80%E6%B4%BE-podcast/id1483157529\">Apple Podcasts</a></li>\n<li><a href=\"https://www.xiaoyuzhoufm.com/podcast/5e280fb1418a84a0461fc567\">小宇宙</a></li>\n<li><a href=\"https://open.spotify.com/show/7pJ5EHWj7i5wQwqzY9kHr5\">Spotify</a></li>\n<li><a href=\"https://podcasts.google.com/feed/aHR0cHM6Ly9zc3BhaS50eXBsb2cuaW8vZmVlZC54bWw?hl=zh-TW\">Google Podcasts</a></li>\n<li><a href=\"https://pod.link/1483157529\">其它平台</a></li>\n</ul>\n<h2>人物介绍</h2>\n<ul>\n<li>张奕源 Nick：少数派编辑部成员，少数派播客主播</li>\n<li>鸿苓（伟大的探险家阿贝尔·塔斯曼）：少数派人气作者</li>\n</ul>\n<p>有任何想对我们说的、听我们聊的，都欢迎写信至 nick@sspai.com。</p>\n ",
+        "podcastName": "少数派播客 SSPAI Podcast",
+        "artworkUrl": "https://i.typlog.com/sspai/8321038752_72815.jpg?x-oss-process=style/sl",
+        "episodeDate": "2023-03-16T10:08:28.000Z",
+        "feedUrl": "https://sspai.typlog.io/feed/audio.xml",
+        "itunesTitle": ""
+      }
+    ]
+  },
+  "playlists": {},
+  "skipBackwardLength": 15,
+  "skipForwardLength": 15,
+  "currentEpisode": {
+    "title": " 深入浅出，把 AR 开发的行业现状聊清楚 ",
+    "streamUrl": "https://r.typlog.com/eyJzIjoxODkzLCJlIjo2ODE2MywicCI6MiwidSI6IjM2OTYubXAzIn0.uQq0oJsa_F-h0lR9BUV5VZeSiLs/sspai/8314060407_33696.mp3",
+    "url": "https://sspai.typlog.io/episodes/ep97",
+    "description": " 本期节目是由少数派和 XR 基地共创，由 XR 基地两位主创 47 和御姐担任主持，邀请到浙江大学博士生章子飏和 AR 开发者、HoloKit 主程序员张宇辰，一起深度探讨了 AR 行业的现状和苹果即将推出的 AR 设备。 🕹️ 少数派与机核网携手推出「机核・派」联合会员，左手效率，右手娱乐；一次购买，双倍快乐！ 🥳 少数派出品、知名主播婉莹、甜食制作的播客入门教程《100 小时后请叫我播客主理人》已经上线，用通俗易懂的语言带你入门播客制作，轻松完成你的「第〇期」播客节目。 节目章节 00:05:55 AR 学术界的四大研究方向 00:18:27 追踪技术的「后端」在干什么 00:28:39 AR 显示的两类设备 00:34:29 AR 应用开发的方向和限制 00:49:47 苹果在 AR 领域的技术布局和实践 01:04:13 让人印象深刻的 AR 应用 01:14:43 对苹果的 AR 设备的预测 01:26:01 苹果 AR 设备可能的应用场景和交互方式 01:37:51 当苹果 AR 与其他苹果设备协同起来 01:45:08 苹果 AR 设备会有什么杀手级应用 01:53:14 买苹果 AR 设备的理由 拓展阅读 节目中提到的由御姐制作的苹果 AR 技术发展图解 订阅《少数派播客》 节目 RSS 链接 Apple Podcasts 小宇宙 Spotify Google Podcasts 其它平台 人物介绍 47：SwiftGG 翻译组负责人，XR 基地社区发起人，iOS 开发者 御姐：XR 基地负责人，iOS 开发者 章子飏：独立开发者，浙江大学博士生，移动应用创新赛 AR 赛道第一名，WWDC22 奖学金得主 张宇辰：AR 开发者，HoloKit 主程序员 有任何想对我们说的、听我们聊的，都欢迎写信至 nick@sspai.com。 ",
+    "content": " <p>本期节目是由少数派和 XR 基地共创，由 XR 基地两位主创 47 和御姐担任主持，邀请到浙江大学博士生章子飏和 AR 开发者、HoloKit 主程序员张宇辰，一起深度探讨了 AR 行业的现状和苹果即将推出的 AR 设备。</p>\n<p>🕹️ 少数派与机核网携手推出<a href=\"https://sspai.com/post/78849\">「机核・派」联合会员</a>，左手效率，右手娱乐；一次购买，双倍快乐！</p>\n<p>🥳 少数派出品、知名主播婉莹、甜食制作的播客入门教程《<a href=\"https://sspai.com/series/280\">100 小时后请叫我播客主理人</a>》已经上线，用通俗易懂的语言带你入门播客制作，轻松完成你的「第〇期」播客节目。</p>\n<h2>节目章节</h2>\n<ul>\n<li><a href=\"#t=00:05:55\">00:05:55</a> AR 学术界的四大研究方向</li>\n<li><a href=\"#t=00:18:27\">00:18:27</a> 追踪技术的「后端」在干什么</li>\n<li><a href=\"#t=00:28:39\">00:28:39</a> AR 显示的两类设备</li>\n<li><a href=\"#t=00:34:29\">00:34:29</a> AR 应用开发的方向和限制</li>\n<li><a href=\"#t=00:49:47\">00:49:47</a> 苹果在 AR 领域的技术布局和实践</li>\n<li><a href=\"#t=01:04:13\">01:04:13</a> 让人印象深刻的 AR 应用</li>\n<li><a href=\"#t=01:14:43\">01:14:43</a> 对苹果的 AR 设备的预测</li>\n<li><a href=\"#t=01:26:01\">01:26:01</a> 苹果 AR 设备可能的应用场景和交互方式</li>\n<li><a href=\"#t=01:37:51\">01:37:51</a> 当苹果 AR 与其他苹果设备协同起来</li>\n<li><a href=\"#t=01:45:08\">01:45:08</a> 苹果 AR 设备会有什么杀手级应用</li>\n<li><a href=\"#t=01:53:14\">01:53:14</a> 买苹果 AR 设备的理由</li>\n</ul>\n<h2>拓展阅读</h2>\n<ul>\n<li>节目中提到的由御姐制作的<a href=\"https://sspaime.feishu.cn/file/Uf46b0u4boXA7AxPzmVcSuy9nWn\">苹果 AR 技术发展图解</a></li>\n</ul>\n<h2>订阅《少数派播客》</h2>\n<ul>\n<li><a href=\"https://sspai.typlog.io/feed/audio.xml\">节目 RSS 链接</a></li>\n<li><a href=\"https://podcasts.apple.com/hk/podcast/%E4%B8%80%E6%B4%BE-podcast/id1483157529\">Apple Podcasts</a></li>\n<li><a href=\"https://www.xiaoyuzhoufm.com/podcast/5e280fb1418a84a0461fc567\">小宇宙</a></li>\n<li><a href=\"https://open.spotify.com/show/7pJ5EHWj7i5wQwqzY9kHr5\">Spotify</a></li>\n<li><a href=\"https://podcasts.google.com/feed/aHR0cHM6Ly9zc3BhaS50eXBsb2cuaW8vZmVlZC54bWw?hl=zh-TW\">Google Podcasts</a></li>\n<li><a href=\"https://pod.link/1483157529\">其它平台</a></li>\n</ul>\n<h2>人物介绍</h2>\n<ul>\n<li>47：SwiftGG 翻译组负责人，XR 基地社区发起人，iOS 开发者</li>\n<li>御姐：XR 基地负责人，iOS 开发者</li>\n<li>章子飏：独立开发者，浙江大学博士生，移动应用创新赛 AR 赛道第一名，WWDC22 奖学金得主</li>\n<li>张宇辰：AR 开发者，HoloKit 主程序员</li>\n</ul>\n<p>有任何想对我们说的、听我们聊的，都欢迎写信至 nick@sspai.com。</p>\n<p></p>\n ",
+    "podcastName": "少数派播客 SSPAI Podcast",
+    "artworkUrl": "https://i.typlog.com/sspai/8314005071_597462.jpg?x-oss-process=style/sl",
+    "episodeDate": "2023-06-05T04:50:50.000Z",
+    "feedUrl": "https://sspai.typlog.io/feed/audio.xml",
+    "itunesTitle": ""
+  },
+  "timestamp": {
+    "template": "- {{time}} "
+  },
+  "note": {
+    "path": "Sources/Podcasts/笔记-{{podcast}}-{{title}}",
+    "template": "## {{title}}\n"
+  },
+  "download": {
+    "path": "Sources/Podcasts/{{podcast}}-{{title}}"
+  },
+  "downloadedEpisodes": {},
+  "localFiles": {
+    "icon": "folder",
+    "name": "Local Files",
+    "shouldEpisodeRemoveAfterPlay": false,
+    "shouldRepeat": false,
+    "episodes": []
+  }
+}

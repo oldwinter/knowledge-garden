@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"type":"group","id":"660e19f96e7b3b59","x":-700,"y":-1314,"width":1231,"height":895,"label":"未命名组"},
+		{"type":"group","id":"99d9a913cbec5379","x":-1410,"y":-1314,"width":660,"height":895,"label":"未命名组"},
+		{"type":"group","id":"f16d2c9f60df8fe6","x":-541,"y":-142,"width":784,"height":590,"label":"未命名组"},
+		{"type":"file","file":"Calendar/已发布文章/obsidian 不可回避的缺点及其解决方案.md","id":"7961e7f360562bb5","x":-1246,"y":-1689,"width":400,"height":400},
+		{"type":"file","file":"Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas","id":"6c1d2d3d2603d8af","x":644,"y":-1314,"width":400,"height":400},
+		{"type":"file","file":"Cards/永久笔记/写卡片3年的8条感悟 by 汪爸刀刀.md","id":"e402b0f28f450a7d","x":117,"y":-834,"width":400,"height":400},
+		{"type":"file","file":"README.md","id":"bd39d25d948de82b","x":-283,"y":-834,"width":400,"height":400},
+		{"type":"file","file":"Sources/Movies + TV/豆瓣影音导入/触不可及.md","id":"177a3ec68f6a4a12","x":-1358,"y":-1234,"width":400,"height":400},
+		{"type":"file","file":"Sources/Movies + TV/豆瓣影音导入/三体.md","id":"97339f3610644845","x":-1286,"y":-758,"width":400,"height":294},
+		{"type":"file","file":"Atlas/Canvas/» canvas使用经验.md","id":"adea76bad4a047f6","x":-1193,"y":-1234,"width":400,"height":400},
+		{"type":"file","file":"Sources/Movies + TV/豆瓣影音导入/小欢喜.md","id":"d583f26dc3a1dffa","x":-1358,"y":-811,"width":400,"height":400},
+		{"type":"text","text":"","id":"71b53719d333f459","x":-1088,"y":-1559,"width":250,"height":60},
+		{"type":"file","file":"Sources/Courses/面试现场-白海飞/如何有效地准备一场面试.md","id":"526955a49c8141bf","x":694,"y":-777,"width":400,"height":400},
+		{"type":"file","file":"Cards/永久笔记/双链笔记与卡片笔记.md","id":"bdece6fe8903aeca","x":-690,"y":-834,"width":400,"height":400},
+		{"type":"file","file":"Sources/Courses/如何成为学习高手-高冷冷/如何提高学习和记忆能力.md","id":"856f6bcf8ab72a7d","x":-290,"y":-1267,"width":400,"height":400},
+		{"type":"file","file":"🧰 本库指南/Tutorials/本库不建议在obsidian中搞太多奇技淫巧.md","id":"6906a7cfccd13539","x":-654,"y":-1758,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"e4e1970861f50615","fromNode":"99d9a913cbec5379","fromSide":"top","toNode":"71b53719d333f459","toSide":"bottom"},
+		{"id":"b2ad3de0e6a63e7e","fromNode":"71b53719d333f459","fromSide":"right","toNode":"6906a7cfccd13539","toSide":"left"}
+	]
+}

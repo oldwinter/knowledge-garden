@@ -1,0 +1,56 @@
+{
+  "presetFields": [
+    {
+      "name": "aaa",
+      "options": {
+        "direction": "bothsides",
+        "nodeColors": [],
+        "edgeColors": [],
+        "edgeFromSides": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "edgeToSides": [
+          "left",
+          "bottom",
+          "right",
+          "top"
+        ],
+        "edgeLabels": [],
+        "canvasPath": "Atlas/Canvas/未命名.canvas"
+      },
+      "id": "1",
+      "type": "Canvas"
+    },
+    {
+      "name": "bbb",
+      "options": {
+        "groupColors": [],
+        "groupLabels": [],
+        "canvasPath": "Atlas/Canvas/未命名.canvas"
+      },
+      "id": "2",
+      "type": "CanvasGroup"
+    }
+  ],
+  "fileClassQueries": [],
+  "displayFieldsInContextMenu": true,
+  "globallyIgnoredFields": [],
+  "classFilesPath": null,
+  "isAutosuggestEnabled": true,
+  "fileClassAlias": "fileClass",
+  "settingsVersion": 3,
+  "firstDayOfWeek": 1,
+  "enableLinks": true,
+  "enableTabHeader": true,
+  "enableEditor": true,
+  "enableBacklinks": true,
+  "enableStarred": true,
+  "enableFileExplorer": true,
+  "enableSearch": true,
+  "buttonIcon": "clipboard-list",
+  "tableViewMaxRecords": 100,
+  "frontmatterListDisplay": "asArray"
+}

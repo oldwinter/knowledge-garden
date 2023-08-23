@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"type":"group","id":"c7524b0f1a630f30","x":-166,"y":-355,"width":1419,"height":483,"label":"外部因素"},
+		{"type":"group","id":"36bd6f67c9648f17","x":-887,"y":128,"width":694,"height":943,"label":"内部因素"},
+		{"type":"group","id":"db8a8653916dc34f","x":-146,"y":-292,"width":654,"height":400,"color":"4","label":"机会 Opportunities"},
+		{"type":"group","id":"d0e37db937d1e186","x":579,"y":-292,"width":654,"height":400,"color":"3","label":"威胁 Threats"},
+		{"type":"group","id":"a860e690199e185f","x":-867,"y":195,"width":654,"height":400,"color":"6","label":"优势 Strengths"},
+		{"type":"group","id":"0f836cc5cb818974","x":-867,"y":651,"width":654,"height":400,"color":"5","label":"劣势 Weaknesses"},
+		{"type":"group","id":"66561c95a4bfcb0c","x":-146,"y":195,"width":654,"height":400,"label":"通过优势利用机会"},
+		{"type":"group","id":"044098fdb3af57f9","x":579,"y":195,"width":654,"height":400,"label":"通过优势防止威胁"},
+		{"type":"group","id":"86943f61159528c7","x":-146,"y":651,"width":654,"height":400,"label":"利用机会最小化劣势"},
+		{"type":"group","id":"d63732dc9bec2e39","x":579,"y":651,"width":654,"height":400,"label":"向机会或优势转化"}
+	],
+	"edges":[
+		{"id":"8be310709cecc1ab","fromNode":"66561c95a4bfcb0c","fromSide":"bottom","toNode":"d63732dc9bec2e39","toSide":"left"}
+	]
+}

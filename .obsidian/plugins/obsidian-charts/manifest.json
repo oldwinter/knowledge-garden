@@ -1,0 +1,11 @@
+{
+    "id": "obsidian-charts",
+    "name": "Obsidian Charts",
+    "version": "3.7.2",
+    "minAppVersion": "0.12.7",
+    "description": "This Plugin lets you create Charts within Obsidian",
+    "author": "phibr0",
+    "authorUrl": "https://github.com/phibr0",
+    "isDesktopOnly": false,
+    "fundingUrl": "https://ko-fi.com/phibr0"
+}

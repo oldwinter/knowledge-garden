@@ -1,0 +1,10 @@
+body:not(.is-mobile) .easy-bake-modal .modal {
+	overflow: hidden;
+}
+
+body:not(.is-mobile) .easy-bake-modal .modal-content {
+	overflow: auto;
+	height: 100%;
+	flex-grow: 0;
+	flex-shrink: 1;
+}

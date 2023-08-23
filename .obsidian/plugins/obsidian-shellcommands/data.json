@@ -1,0 +1,217 @@
+{
+  "settings_version": "0.19.0",
+  "debug": false,
+  "obsidian_command_palette_prefix": "Execute: ",
+  "preview_variables_in_command_palette": true,
+  "show_autocomplete_menu": true,
+  "working_directory": "",
+  "default_shells": {},
+  "environment_variable_path_augmentations": {},
+  "error_message_duration": 20,
+  "notification_message_duration": 10,
+  "execution_notification_mode": "disabled",
+  "output_channel_clipboard_also_outputs_to_notification": true,
+  "enable_events": true,
+  "approve_modals_by_pressing_enter_key": true,
+  "max_visible_lines_in_shell_command_fields": false,
+  "shell_commands": [
+    {
+      "platform_specific_commands": {
+        "default": "open -a SimpRead\\ 简悦\\ ·\\ 稍后读.app"
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "id": "0",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    },
+    {
+      "platform_specific_commands": {
+        "default": "open -a Gmail.app"
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "id": "1",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    },
+    {
+      "platform_specific_commands": {
+        "default": "open -a 微信读书.app"
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "id": "2",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    },
+    {
+      "platform_specific_commands": {
+        "default": "open obsidian://advanced-uri?vault=knowledge-garden&commandid=obsidian-weread-plugin%253Async-weread-notes-command"
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "id": "3",
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    },
+    {
+      "id": "vnphwuno3u",
+      "platform_specific_commands": {
+        "default": "sed -i \"\" '1a\\\ntags: review \n' {{file_path:absolute}}"
+      },
+      "shells": {},
+      "alias": "快速添加tags: review",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    },
+    {
+      "id": "fqidjftr47",
+      "platform_specific_commands": {
+        "default": ""
+      },
+      "shells": {},
+      "alias": "",
+      "icon": null,
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "output_channels": {
+        "stdout": "ignore",
+        "stderr": "notification"
+      },
+      "output_channel_order": "stdout-first",
+      "events": {},
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {},
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_handling_mode": "buffered",
+      "input_contents": {
+        "stdin": null
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "4g8mr3yv8g",
+      "title": "啊啊",
+      "description": "额额",
+      "preview_shell_command": true,
+      "fields": [
+        {
+          "label": "",
+          "description": "",
+          "default_value": "",
+          "target_variable_id": "",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Execute"
+    },
+    {
+      "id": "zhi16fc46k",
+      "title": "",
+      "description": "",
+      "preview_shell_command": false,
+      "fields": [],
+      "execute_button_text": "Execute"
+    }
+  ],
+  "builtin_variables": {},
+  "custom_variables": [],
+  "output_wrappers": [],
+  "custom_shells": []
+}

@@ -1,0 +1,11 @@
+{
+	"id": "obsidian-importer",
+	"name": "Importer",
+	"version": "1.1.2",
+	"minAppVersion": "0.15.0",
+	"description": "Import notes from other apps like Evernote.",
+	"author": "Obsidian",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}

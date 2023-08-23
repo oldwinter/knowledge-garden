@@ -1,0 +1,11 @@
+{
+	"id": "chronology",
+	"name": "Chronology",
+	"version": "1.1.7",
+	"minAppVersion": "0.15.0",
+	"description": "Provides a calendar and a timeline of the notes creation and modification",
+	"author": "Gabriele Cannata",
+	"authorUrl": "https://github.com/Canna71",
+    "fundingUrl": "https://www.buymeacoffee.com/gcannata",
+	"isDesktopOnly": false
+}

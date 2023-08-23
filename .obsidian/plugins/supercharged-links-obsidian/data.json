@@ -1,0 +1,156 @@
+{
+  "targetAttributes": [
+    "up",
+    "x",
+    "title"
+  ],
+  "targetTags": true,
+  "getFromInlineField": true,
+  "enableTabHeader": false,
+  "activateSnippet": true,
+  "enableEditor": true,
+  "enableFileList": true,
+  "enableBacklinks": true,
+  "enableQuickSwitcher": true,
+  "enableSuggestor": true,
+  "selectors": [
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "复习回顾",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "b19c-8ca5",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "excalidraw",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "1cde-e955",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "flashcards",
+      "value": "待办",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "75fc-e339",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "path",
+      "name": "flashcards",
+      "value": "∑",
+      "matchCaseSensitive": false,
+      "match": "contains",
+      "uid": "7c4c-9ddb",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "cards",
+      "value": "微信读书笔记",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "8b14-901d",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "已完成",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "01f9-c3f3",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "目录笔记",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "2d72-a9bb",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "dataview",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "0ba9-36fe",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "tag",
+      "name": "published",
+      "value": "本库教程",
+      "matchCaseSensitive": false,
+      "match": "exact",
+      "uid": "17d0-6ee6",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "attribute",
+      "name": "title",
+      "value": "HOMEPAGE",
+      "matchCaseSensitive": true,
+      "match": "exact",
+      "uid": "f22f-8852",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    },
+    {
+      "type": "path",
+      "name": "up",
+      "value": "MOC",
+      "matchCaseSensitive": true,
+      "match": "contains",
+      "uid": "12a5-830d",
+      "selectText": true,
+      "selectAppend": true,
+      "selectPrepend": true,
+      "selectBackground": true
+    }
+  ],
+  "presetFields": [],
+  "displayFieldsInContextMenu": false,
+  "globallyIgnoredFields": [
+    ""
+  ],
+  "classFilesPath": ""
+}

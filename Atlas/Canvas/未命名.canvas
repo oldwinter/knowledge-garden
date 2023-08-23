@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"type":"link","url":"https://arc.net/e/758CB1B2-4852-4B60-8F9E-7018BA9473C9","id":"ce6f83b5524ed097","x":1060,"y":-1500,"width":1680,"height":1460},
+		{"type":"link","url":"https://www.youtube.com/watch?v=3TRymEIQgPI","id":"b7d02e09f5fd66e5","x":-160,"y":-700,"width":1080,"height":700},
+		{"type":"file","file":"Spaces/0-Work/azure openai from 秦旭.md","id":"4d10be6368e280db","x":760,"y":360,"width":400,"height":400},
+		{"id":"43d32a23226cfd1d","x":-560,"y":820,"width":1080,"height":1180,"type":"file","file":"Extras/Draws/白板 2023-08-05.md"},
+		{"id":"a53f6f4963f5b6df","x":-960,"y":160,"width":400,"height":400,"type":"file","file":"Spaces/0-Work/dev.yaml.md"}
+	],
+	"edges":[]
+}

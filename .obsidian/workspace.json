@@ -1,0 +1,383 @@
+{
+  "main": {
+    "id": "c9f9ee027468f034",
+    "type": "split",
+    "children": [
+      {
+        "id": "884a912baa4f2e20",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9bbedbc7b63b287",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/0-Work/ack集群引入istio服务网格操作日志.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "b0bda005bb73c4ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/0-Work/自建k8s与使用阿里云ack优缺点分析.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d516f152dfc452a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/0-Work/ack集群引入istio服务网格操作日志.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a3b26d0e05bafddd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/0-Work/gitops.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "edae943cd3592658",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "49d8dfbba8804bf3",
+    "type": "split",
+    "children": [
+      {
+        "id": "98bf65567db24074",
+        "type": "tabs",
+        "dimension": 51.40425531914893,
+        "children": [
+          {
+            "id": "aa5b6eac40ab5517",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2d99e2950dbcef4c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "v5/detail",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "664be766476e3a4c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "0fe66c35260def5e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "48e5c6c0b999baf4",
+        "type": "tabs",
+        "dimension": 48.59574468085107,
+        "children": [
+          {
+            "id": "6ceecea4c8d42745",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "ec24bc1f90b5ec69",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.8974052540515883,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "255e47e4612a9918",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c7e30a4edfb2b609",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 313.5
+  },
+  "right": {
+    "id": "b04bae835715e106",
+    "type": "split",
+    "children": [
+      {
+        "id": "bf92a8744d8764e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e00d8d7eab509c8",
+            "type": "leaf",
+            "state": {
+              "type": "chronology-calendar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "71abb33cf87cd2d8",
+            "type": "leaf",
+            "state": {
+              "type": "daily-note-outline",
+              "state": {
+                "activeSet": 0,
+                "activeGranularity": 1
+              }
+            }
+          },
+          {
+            "id": "c45f983fe3ed8e1a",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "d77a1adeb31c077e",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "79c8c7732340cf8d",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "c3a20b61b8cca4fb",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "21de49bada52aecc",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 360.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "dbfolder:创建一个新数据库表": false,
+      "janitor:Janitor: scan vault": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "publish:发布更改": false,
+      "obsidian-projects:Open projects": false,
+      "webpage-html-export:Export Vault to HTML": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "cmdr:聚焦上方标签页组": false,
+      "cmdr:聚焦左侧标签页组": false,
+      "copilot:Copilot Chat": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "notion-like-tables:Create new loom": false,
+      "periodic-notes:Open today": false,
+      "obsidian-weread-plugin:Weread": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "aa5b6eac40ab5517",
+  "lastOpenFiles": [
+    "Spaces/0-Work/Daily notes/2023-08-23.md",
+    "Extras/Media/Pasted image 20230823192405.png",
+    "Spaces/0-Work/ack集群引入istio服务网格操作日志.md",
+    "Extras/Media/Pasted image 20230823154948.png",
+    "Extras/Media/Pasted image 20230823154103.png",
+    "Spaces/0-Work/ack集群引入istio服务网格的技术调研.md",
+    "Spaces/0-Work/gitops.md",
+    "Spaces/0-Work/自建k8s与使用阿里云ack优缺点分析.md",
+    "Cards/永久笔记/本机启用ssh免密自动登陆.md",
+    "Spaces/0-Work/映兔现有集群集成istio服务治理能力的调研.md",
+    "Spaces/0-Work/测试环境迁移过程操作日志.md",
+    "Sources/Books/微信读书同步/未分类/Building a Second Brain-Tiago Forte.md",
+    "Extras/Templates/textgenerator模板/prompts/awesomechatgpt/smartdomainnamegeneratorAwesome.md",
+    "Spaces/3-Resource/效率工具与服务专题/MacOS 软件使用/Warp.md",
+    "Spaces/0-Work/Daily notes/2023-08-03.md",
+    "Sources/Articles/常青笔记阅读笔记/常青笔记实现顺畅而渐进的写作（「渐进写作」）.md",
+    "Cards/永久笔记/git submodule.md",
+    "Spaces/0-Work/大语言模型 - LLM.md",
+    "Spaces/0-Work/Daily notes/2023-08-22.md",
+    "rocketMQ.md",
+    "Spaces/0-Work/azure openai from 秦旭.md",
+    "Spaces/0-Work/99-映兔知识库/映兔术语整理.md",
+    "Spaces/0-Work/现有自建k8s集群迁移到阿里云ack技术方案.md",
+    "Spaces/0-Work/后端应用安装指导书.md",
+    "Atlas/Dashborads/Untitled 1.loom",
+    "MySQL.md",
+    "Spaces/0-Work/ack集群引入istio服务网格的技术调研.docx",
+    "Spaces/0-Work/Daily notes/算法安全自评估制度建设.md",
+    "Spaces/0-Work/Daily notes/算法安全自评估制度建设.docx",
+    "Extras/Media/Pasted image 20230822134833.png",
+    "Extras/Media/Pasted image 20230822103627.png",
+    "Spaces/0-Work/架构图的技巧和方法.md",
+    "Spaces/0-Work/Daily notes/Chat Models 模型.md",
+    "Spaces/0-Work/Canvas/测试环境集群部署资源.canvas",
+    "Spaces/0-Work/Canvas/映兔后端部署架构图.canvas",
+    "未命名.canvas",
+    "Spaces/0-Work/Canvas/业务开发的流程.canvas",
+    "Spaces/0-Work/Canvas/语义化搜索流程图.canvas",
+    "Extras/Media/企业微信截图_c3c46dd3-71b1-447a-abf4-5ae002ec462b.png",
+    "Extras/Media/企业微信截图_0418f07e-8edd-4f8a-ab35-b3a29d592682.png",
+    "Spaces/0-Work/Canvas/映兔ingtube-aigc-语义化检索博主技术方案流程图.canvas",
+    "Extras/Media/Pasted image 20230821145855.png",
+    "Extras/Media/企业微信截图_38fce5b1-2321-4f27-b7a2-993596173644.png",
+    "Extras/Media/企业微信截图_35a81c5a-6874-483f-97c3-89bb3776221f.png",
+    "Extras/Media/2022年元宇宙Meta知识精选笔记分享-2022.pdf",
+    "Extras/Media/【极客时间】李佳芮：ChatGPT 从0到1.pdf",
+    "Spaces/0-Work/Canvas/映兔数据流架构图.canvas",
+    "Extras/Media/映兔AI&AIGC 优先级.xmind",
+    "Spaces/0-Work/99-映兔知识库/000-映兔新人快速入门索引 - MOC.docx",
+    "tmp/Spaces/映兔现有公共文档通读和学习.docx",
+    "tmp/Spaces/Terway.docx",
+    "tmp/Spaces/映兔入职第一天日志.docx",
+    "tmp/Spaces/0-Work/Canvas/语义化搜索流程图.canvas",
+    "tmp/Spaces/0-Work/Canvas/映兔研发部署环境全貌.canvas",
+    "tmp/Spaces/0-Work/Canvas/映兔研发Devops流水线全貌.canvas"
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "workspaces": {
+    "白板": {
+      "main": {
+        "id": "3bbafcddc5676ca8",
+        "type": "split",
+        "children": [
+          {
+            "id": "5b2b050846603d1e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8b52273af27d3705",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+                    "viewState": {
+                      "x": 206.5,
+                      "y": 899.5,
+                      "zoom": -0.3465078444341812
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "e3dd4e8fbf886eda",
+        "type": "split",
+        "children": [
+          {
+            "id": "987dbc5670d8f4fa",
+            "type": "tabs",
+            "dimension": 63.92785571142284,
+            "children": [
+              {
+                "id": "a4d1994dfc9f1870",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "ce044dedd57e8849",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "35.77.211.36",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "byModifiedTime"
+                  }
+                }
+              },
+              {
+                "id": "8857362beab68c4a",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "4ea8d6f6779182a1",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "92910ae8836a7b22",
+            "type": "tabs",
+            "dimension": 36.07214428857716,
+            "children": [
+              {
+                "id": "46ac18e336e17ae3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas"
+                  }
+                }
+              },
+              {
+                "id": "853ef9e400d6f719",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "401ecf6c95e31916",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1,
+                      "close": true
+                    }
+                  }
+                }
+              },
+              {
+                "id": "687dfb8cd0c53082",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Atlas/Canvas/🧩 2022年，我用3个app达成的3个小成就.canvas",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 336.5
+      },
+      "right": {
+        "id": "c718ea3b78af998f",
+        "type": "split",
+        "children": [
+          {
+            "id": "ac5865f1b9a84921",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b2593231eedcbd9d",
+                "type": "leaf",
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "4de411a2f9535073",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "d5db3c8fe8892d56",
+                "type": "leaf",
+                "state": {
+                  "type": "smart-connections-view",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 386.5,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "daily-notes:打开/创建今天的日记": false,
+          "switcher:打开快速切换": false,
+          "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
+          "command-palette:打开命令面板": false,
+          "obsidian-spaced-repetition:复习卡片": false,
+          "obsidian-projects:Open projects": false,
+          "dbfolder:创建一个新数据库表": false,
+          "workspaces:管理工作区布局": false
+        }
+      },
+      "floating": {
+        "id": "332a006e6e32b30e",
+        "type": "floating",
+        "children": [
+          {
+            "id": "3ac2f079c56e2992",
+            "type": "window",
+            "children": [
+              {
+                "id": "66d37ee6011b6f79",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "e01d1437cc5668be",
+                    "type": "leaf",
+                    "state": {
+                      "type": "canvas",
+                      "state": {
+                        "file": "Atlas/Canvas/🧩 DevOps成长路线图.canvas",
+                        "viewState": {
+                          "x": 49.5,
+                          "y": -395,
+                          "zoom": -0.92093915739999
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "direction": "vertical",
+            "x": 552,
+            "y": 49,
+            "width": 1128,
+            "height": 985,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "8b52273af27d3705",
+      "workspaces-plus:settings-v1": {
+        "explorerFoldState": [
+          "/",
+          "Sources",
+          "Sources/GPTchats",
+          "Sources/Movies + TV"
+        ],
+        "mode": null
+      }
+    },
+    "dailynote": {
+      "main": {
+        "id": "3bbafcddc5676ca8",
+        "type": "split",
+        "children": [
+          {
+            "id": "acc7453ae69a522d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "77cf02e36e370bd9",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "README.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "e3dd4e8fbf886eda",
+        "type": "split",
+        "children": [
+          {
+            "id": "987dbc5670d8f4fa",
+            "type": "tabs",
+            "dimension": 63.92785571142284,
+            "children": [
+              {
+                "id": "a4d1994dfc9f1870",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "ce044dedd57e8849",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "35.77.211.36",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "byModifiedTime"
+                  }
+                }
+              },
+              {
+                "id": "8857362beab68c4a",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "4ea8d6f6779182a1",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "92910ae8836a7b22",
+            "type": "tabs",
+            "dimension": 36.07214428857716,
+            "children": [
+              {
+                "id": "46ac18e336e17ae3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Calendar/Daily notes/2023-03-31.md"
+                  }
+                }
+              },
+              {
+                "id": "853ef9e400d6f719",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Calendar/Daily notes/2023-03-31.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "401ecf6c95e31916",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Calendar/Daily notes/2023-03-31.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1,
+                      "close": true
+                    }
+                  }
+                }
+              },
+              {
+                "id": "687dfb8cd0c53082",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Calendar/Daily notes/2023-03-31.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 336.5
+      },
+      "right": {
+        "id": "c718ea3b78af998f",
+        "type": "split",
+        "children": [
+          {
+            "id": "ac5865f1b9a84921",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b2593231eedcbd9d",
+                "type": "leaf",
+                "state": {
+                  "type": "review-queue-list-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "4de411a2f9535073",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "d5db3c8fe8892d56",
+                "type": "leaf",
+                "state": {
+                  "type": "smart-connections-view",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 386.5,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "daily-notes:打开/创建今天的日记": false,
+          "switcher:打开快速切换": false,
+          "canvas:新建白板": false,
+          "graph:查看关系图谱": false,
+          "command-palette:打开命令面板": false,
+          "obsidian-spaced-repetition:复习卡片": false,
+          "obsidian-projects:Open projects": false,
+          "dbfolder:创建一个新数据库表": false,
+          "workspaces:管理工作区布局": false
+        }
+      },
+      "active": "ab365fd0a65fced5",
+      "workspaces-plus:settings-v1": {
+        "explorerFoldState": [
+          "/",
+          "Sources",
+          "Sources/GPTchats",
+          "Sources/Movies + TV"
+        ],
+        "mode": "Mode: 叫叫叫"
+      }
+    }
+  },
+  "active": "dailynote"
+}

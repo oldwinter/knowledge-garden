@@ -1,0 +1,54 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Extras/Templates",
+  "templates_pairs": [
+    [
+      "ls",
+      "ls"
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": true,
+  "shell_path": "/bin/bash",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Sources/Movies + TV/电视剧笔记",
+      "template": "Extras/Templates/Sources模板/电视剧笔记模板.md"
+    },
+    {
+      "folder": "Sources/Movies + TV/电影笔记",
+      "template": "Extras/Templates/Sources模板/电影笔记模板.md"
+    },
+    {
+      "folder": "Sources/Articles",
+      "template": "Extras/Templates/Sources模板/文章笔记模板.md"
+    },
+    {
+      "folder": "Sources/Books",
+      "template": "Extras/Templates/Sources模板/读书笔记模板.md"
+    },
+    {
+      "folder": "Sources/Courses",
+      "template": "Extras/Templates/Sources模板/课程笔记模板.md"
+    },
+    {
+      "folder": "Sources/Papers",
+      "template": "Extras/Templates/Sources模板/论文笔记模板.md"
+    },
+    {
+      "folder": "Sources/Talks",
+      "template": "Extras/Templates/Sources模板/播客笔记模板.md"
+    },
+    {
+      "folder": "Sources/Videos",
+      "template": "Extras/Templates/Sources模板/视频笔记模板.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [],
+  "enable_ribbon_icon": true
+}

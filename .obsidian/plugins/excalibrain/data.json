@@ -1,0 +1,252 @@
+{
+  "compactView": false,
+  "excalibrainFilepath": "excalibrain.md",
+  "indexUpdateInterval": 5000,
+  "hierarchy": {
+    "exclusions": [
+      "excalidraw-border-color",
+      "excalidraw-css",
+      "excalidraw-default-mode",
+      "excalidraw-export-dark",
+      "excalidraw-export-pngscale",
+      "excalidraw-export-svgpadding",
+      "excalidraw-export-transparent",
+      "excalidraw-font",
+      "excalidraw-font-color",
+      "excalidraw-link-brackets",
+      "excalidraw-link-prefix",
+      "excalidraw-linkbutton-opacity",
+      "excalidraw-onload-script",
+      "excalidraw-plugin",
+      "excalidraw-url-prefix",
+      "kanban-plugin"
+    ],
+    "parents": [
+      "inception",
+      "North",
+      "origin",
+      "Parent",
+      "Parents",
+      "parnet domain",
+      "source",
+      "u",
+      "up"
+    ],
+    "children": [
+      "Child",
+      "Children",
+      "contributes to",
+      "d",
+      "down",
+      "leads to",
+      "nurtures",
+      "South"
+    ],
+    "leftFriends": [
+      "advantages",
+      "alternatives",
+      "Friend",
+      "Friends",
+      "j",
+      "Jump",
+      "Jumps",
+      "pros",
+      "similar",
+      "supports"
+    ],
+    "rightFriends": [
+      "cons",
+      "disadvantages",
+      "missing",
+      "opposes"
+    ],
+    "previous": [
+      "Before",
+      "Prev",
+      "Previous",
+      "w",
+      "West"
+    ],
+    "next": [
+      "After",
+      "e",
+      "East",
+      "n",
+      "Next"
+    ]
+  },
+  "inferAllLinksAsFriends": false,
+  "inverseInfer": false,
+  "renderAlias": true,
+  "nodeTitleScript": "",
+  "backgroundColor": "#0c3e6aff",
+  "excludeFilepaths": [],
+  "showInferredNodes": true,
+  "showAttachments": true,
+  "showURLNodes": true,
+  "showVirtualNodes": true,
+  "showFolderNodes": false,
+  "showTagNodes": false,
+  "showPageNodes": true,
+  "showNeighborCount": true,
+  "showFullTagName": false,
+  "maxItemCount": 30,
+  "renderSiblings": true,
+  "baseNodeStyle": {
+    "prefix": "",
+    "backgroundColor": "#00000066",
+    "fillStyle": "solid",
+    "textColor": "#ffffffff",
+    "borderColor": "#00000000",
+    "fontSize": 20,
+    "fontFamily": 3,
+    "maxLabelLength": 30,
+    "roughness": 0,
+    "strokeShaprness": "round",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "padding": 10,
+    "gateRadius": 5,
+    "gateOffset": 15,
+    "gateStrokeColor": "#ffffffff",
+    "gateBackgroundColor": "#ffffffff",
+    "gateFillStyle": "solid"
+  },
+  "centralNodeStyle": {
+    "fontSize": 30,
+    "backgroundColor": "#B5B5B5",
+    "textColor": "#000000ff"
+  },
+  "inferredNodeStyle": {
+    "backgroundColor": "#000005b3",
+    "textColor": "#95c7f3ff"
+  },
+  "urlNodeStyle": {
+    "prefix": "🌐 "
+  },
+  "virtualNodeStyle": {
+    "backgroundColor": "#ff000066",
+    "fillStyle": "hachure",
+    "textColor": "#ffffffff"
+  },
+  "siblingNodeStyle": {
+    "fontSize": 15
+  },
+  "attachmentNodeStyle": {
+    "prefix": "📎 "
+  },
+  "folderNodeStyle": {
+    "prefix": "📂 ",
+    "strokeShaprness": "sharp",
+    "borderColor": "#ffd700ff",
+    "textColor": "#ffd700ff"
+  },
+  "tagNodeStyle": {
+    "prefix": "#",
+    "strokeShaprness": "sharp",
+    "borderColor": "#4682b4ff",
+    "textColor": "#4682b4ff"
+  },
+  "tagNodeStyles": {},
+  "tagStyleList": [],
+  "baseLinkStyle": {
+    "strokeColor": "#696969FF",
+    "strokeWidth": 1,
+    "strokeStyle": "solid",
+    "roughness": 0,
+    "startArrowHead": "none",
+    "endArrowHead": "none",
+    "showLabel": false,
+    "fontSize": 10,
+    "fontFamily": 3,
+    "textColor": "#ffffffff"
+  },
+  "inferredLinkStyle": {
+    "strokeStyle": "dashed"
+  },
+  "folderLinkStyle": {
+    "strokeColor": "#ffd700ff"
+  },
+  "tagLinkStyle": {
+    "strokeColor": "#4682b4ff"
+  },
+  "hierarchyLinkStyles": {
+    "inception": {},
+    "North": {},
+    "origin": {},
+    "Parent": {},
+    "Parents": {},
+    "parnet domain": {},
+    "source": {},
+    "u": {},
+    "up": {},
+    "Child": {},
+    "Children": {},
+    "contributes to": {},
+    "d": {},
+    "down": {},
+    "leads to": {},
+    "nurtures": {},
+    "South": {},
+    "advantages": {},
+    "alternatives": {},
+    "Friend": {},
+    "Friends": {},
+    "j": {},
+    "Jump": {},
+    "Jumps": {},
+    "pros": {},
+    "similar": {},
+    "supports": {},
+    "cons": {},
+    "disadvantages": {},
+    "missing": {},
+    "opposes": {},
+    "Before": {},
+    "Prev": {},
+    "Previous": {},
+    "w": {},
+    "West": {},
+    "After": {},
+    "e": {},
+    "East": {},
+    "n": {},
+    "Next": {}
+  },
+  "navigationHistory": [
+    "Spaces/0-Work/Daily notes/2023-08-03.md",
+    "https://github.com",
+    "如何连接对应环境的mysql",
+    "Spaces/0-Work/如何根据前端问题逐步定位到后端代码.md",
+    "Spaces/0-Work/helm调测步骤.md",
+    "Spaces/0-Work/jenkins换成阿里云效流水线pipeline的步骤拆分.md",
+    "Spaces/0-Work/github设置自己的工作邮箱，并让对应organization下仓库的通知只发往这个邮箱.md",
+    "azure openai from 秦旭.md",
+    "Spaces/0-Work/报备订单.md",
+    "library - common仓库.md",
+    "Spaces/0-Work/protobuf.md",
+    "Spaces/0-Work/common仓库走读笔记.md",
+    "config - common仓库.md",
+    "https://developer.umeng.com/docs/67966/detail/149296#h1--j-http-status-code-10",
+    "https://github.com/wenjianzhang/go-admin?utm_source=gold_browser_extension",
+    "python环境安装与执行.md",
+    "embdding原理.canvas"
+  ],
+  "allowOntologySuggester": true,
+  "ontologySuggesterParentTrigger": "::p",
+  "ontologySuggesterChildTrigger": "::c",
+  "ontologySuggesterLeftFriendTrigger": "::l",
+  "ontologySuggesterRightFriendTrigger": "::r",
+  "ontologySuggesterPreviousTrigger": "::e",
+  "ontologySuggesterNextTrigger": "::n",
+  "ontologySuggesterTrigger": ":::",
+  "ontologySuggesterMidSentenceTrigger": "(",
+  "boldFields": false,
+  "allowAutozoom": true,
+  "maxZoom": 1,
+  "allowAutofocuOnSearch": true,
+  "defaultAlwaysOnTop": false,
+  "embedCentralNode": true,
+  "centerEmbedWidth": 550,
+  "centerEmbedHeight": 700
+}

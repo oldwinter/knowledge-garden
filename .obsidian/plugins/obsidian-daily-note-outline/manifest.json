@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-daily-note-outline",
+	"name": "Daily Note Outline",
+	"version": "1.2.2",
+	"minAppVersion": "0.15.0",
+	"description": "Add a custom view which shows outline of multiple daily notes with headings, links, tags and list items",
+	"author": "iiz",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}

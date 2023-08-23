@@ -1,0 +1,20 @@
+{
+  "closeWithBackspace": true,
+  "showPluginName": true,
+  "fileSearchPrefix": "/",
+  "tagSearchPrefix": "#",
+  "commandSearchHotkey": "p",
+  "fileSearchHotkey": "o",
+  "tagSearchHotkey": "t",
+  "suggestionLimit": 50,
+  "recentAbovePinned": true,
+  "hyperKeyOverride": false,
+  "macros": [],
+  "hotkeyStyle": "auto",
+  "createNewFileMod": "Mod",
+  "createNewPaneMod": "Shift",
+  "hiddenCommands": [],
+  "hiddenFiles": [],
+  "hiddenTags": [],
+  "fileTypeExclusion": []
+}

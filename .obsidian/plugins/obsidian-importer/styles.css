@@ -1,0 +1,63 @@
+.importer-progress-bar {
+	width: 100%;
+	height: 8px;
+	background-color: var(--background-secondary-alt);
+}
+
+.importer-progress-bar-inner {
+	width: 0;
+	height: 100%;
+	background-color: var(--interactive-accent);
+}
+
+.importer-status {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: var(--size-4-2) 0;
+}
+
+.modal.mod-importer .modal-button-container {
+	justify-content: center;
+}
+
+.importer-stats-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: var(--size-4-5);
+	margin-bottom: var(--size-4-5);
+}
+
+.importer-stat {
+	text-align: center;
+}
+
+.importer-stat-count {
+	font-size: var(--font-ui-large);
+}
+
+.importer-log {
+	overflow: auto;
+	flex-grow: 1;
+	font-family: var(--font-monospace);
+	font-size: var(--font-ui-smaller);
+	color: var(--text-muted);
+	border-top: 1px solid var(--background-modifier-border);
+	border-bottom: 1px solid var(--background-modifier-border);
+	padding: var(--size-4-4);
+
+	background-color: var(--background-secondary);
+
+	max-height: 300px;
+}
+
+.importer-log .list-item {
+	display: inline-block;
+	line-height: var(--line-height-normal);
+	white-space: pre;
+	margin: var(--size-2-1);
+}
+
+.importer-error {
+	color: var(--text-error);
+}

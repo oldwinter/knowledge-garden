@@ -1,0 +1,249 @@
+{
+  "strategy": "chinese",
+  "cedictPath": "./Extras/Others/cedict_ts.u8",
+  "matchStrategy": "partial",
+  "fuzzyMatch": false,
+  "minFuzzyMatchScore": 0.5,
+  "matchingWithoutEmoji": true,
+  "treatAccentDiacriticsAsAlphabeticCharacters": false,
+  "maxNumberOfSuggestions": 5,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 0,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 0,
+  "disableSuggestionsDuringImeOn": true,
+  "insertAfterCompletion": false,
+  "firstCharactersDisableSuggestions": ":/^。，",
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
+  "showMatchStrategy": false,
+  "showComplementAutomatically": false,
+  "showIndexingStatus": false,
+  "descriptionOnSuggestion": "Full",
+  "selectSuggestionKeys": "Ctrl/Cmd+Enter",
+  "additionalCycleThroughSuggestionsKeys": "Tab, Shift+Tab",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": true,
+  "openSourceFileKey": "Alt+Enter",
+  "propagateEsc": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 3,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": false,
+  "currentVaultMinNumberOfCharacters": 4,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": false,
+  "customDictionaryPaths": "Extras/Templates/其他/dict/dict.md\nExtras/Templates/其他/dict/chatgpt_prompts_dict.md",
+  "columnDelimiter": "Pipe",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "+=",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "=>",
+  "caretLocationSymbolAfterComplement": "$END$",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": true,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "updateInternalLinksOnSave": true,
+  "insertAliasTransformedFromDisplayedInternalLink": {
+    "enabled": false,
+    "beforeRegExp": "",
+    "after": ""
+  },
+  "frontMatterKeyForExclusionInternalLink": "",
+  "enableFrontMatterComplement": false,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "historyFilePath": "",
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "disableOnMobile": true,
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {},
+  "ruleConfigs": {
+    "Escape YAML Special Characters": {
+      "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
+      "Default Escape Character": "\"",
+      "Try to Escape Single Line Arrays": true,
+      "Force Yaml Escape on Keys": "title"
+    },
+    "Format Tags in YAML": {
+      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
+    },
+    "Format Yaml Array": {
+      "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": true,
+      "Yaml aliases section style": "multi-line",
+      "Format yaml aliases section": true,
+      "Yaml tags section style": "single string to single-line",
+      "Format yaml tags section": true,
+      "Default yaml array section style": "single-line",
+      "Format yaml array sections": true,
+      "Force key values to be single-line arrays": "data created\ndata modified",
+      "Force key values to be multi-line arrays": ""
+    },
+    "Insert YAML attributes": {
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
+      "Text to insert": "tags: "
+    },
+    "Move Tags to Yaml": {
+      "Move all tags to Yaml frontmatter of the document.": true,
+      "Yaml tags section style": "single-line",
+      "Remove the hashtag from tags in content body": false
+    },
+    "Remove YAML Keys": {
+      "Removes the YAML keys specified": false,
+      "YAML Keys to Remove": ""
+    },
+    "YAML Key Sort": {
+      "Sorts the YAML keys based on the order and priority specified. Note: may remove blank lines as well.": false,
+      "YAML Key Priority Sort Order": "sr-due\nsr-interval\nsr-ease\n",
+      "Priority Keys at Start of YAML": true,
+      "YAML Sort Order for Other Keys": "Ascending Alphabetical",
+      "Sorts the YAML keys based on the order and priority specified. Note: removes blank lines as well.": true
+    },
+    "YAML Timestamp": {
+      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
+      "Date Created": true,
+      "Date Created Key": "date created",
+      "Date Modified": true,
+      "Date Modified Key": "date modified",
+      "Format": "YYYY-MM-DD"
+    },
+    "YAML Title": {
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": true,
+      "Title Key": "title",
+      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": false
+    },
+    "YAML Title Alias": {
+      "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": false,
+      "YAML aliases section style": "Multi-line array",
+      "Preserve existing aliases section style": true,
+      "Keep alias that matches the filename": false,
+      "Use the YAML key `linter-yaml-title-alias` to help with filename and heading changes": true
+    },
+    "Capitalize Headings": {
+      "Headings should be formatted with capitalization": false,
+      "Style": "Title Case",
+      "Ignore Cased Words": true,
+      "Ignore Words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
+      "Lowercase Words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
+    },
+    "File Name Heading": {
+      "Inserts the file name as a H1 heading if no H1 heading exists.": false
+    },
+    "Header Increment": {
+      "Heading levels should only increment by one level at a time": false
+    },
+    "Footnote after Punctuation": {
+      "Ensures that footnote references are placed after punctuation, not before.": true
+    },
+    "Move Footnotes to the bottom": {
+      "Move all footnotes to the bottom of the document.": true
+    },
+    "Re-Index Footnotes": {
+      "Re-indexes footnote keys and footnote, based on the order of occurrence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false,
+      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
+    },
+    "Convert Bullet List Markers": {
+      "Converts common bullet list marker symbols to markdown list markers.": true
+    },
+    "Emphasis Style": {
+      "Makes sure the emphasis style is consistent.": true,
+      "Style": "consistent"
+    },
+    "No Bare URLs": {
+      "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
+    },
+    "Ordered List Style": {
+      "Makes sure that ordered lists follow the style specified.": false,
+      "Number Style": "ascending",
+      "Ordered List Indicator End Style": "."
+    },
+    "Proper Ellipsis": {
+      "Replaces three consecutive dots with an ellipsis.": true
+    },
+    "Remove Consecutive List Markers": {
+      "Removes consecutive list markers. Useful when copy-pasting list items.": true
+    },
+    "Remove Empty List Markers": {
+      "Removes empty list markers, i.e. list items without content.": true
+    },
+    "Remove Hyphenated Line Breaks": {
+      "Removes hyphenated line breaks. Useful when pasting text from textbooks.": true
+    },
+    "Remove Multiple Spaces": {
+      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": true
+    },
+    "Strong Style": {
+      "Makes sure the strong style is consistent.": true,
+      "Style": "consistent"
+    },
+    "Two Spaces Between Lines with Content": {
+      "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": true
+    },
+    "Compact YAML": {
+      "Removes leading and trailing blank lines in the YAML front matter.": true,
+      "Inner New Lines": true
+    },
+    "Consecutive blank lines": {
+      "There should be at most one consecutive blank line.": true
+    },
+    "Convert Spaces to Tabs": {
+      "Converts leading spaces to tabs.": false,
+      "Tabsize": "4"
+    },
+    "Empty Line Around Code Fences": {
+      "Ensures that there is an empty line around code fences unless they start or end a document.": true
+    },
+    "Empty Line Around Tables": {
+      "Ensures that there is an empty line around github flavored tables unless they start or end a document.": true,
+      "Ensures that there is an empty line around tables unless they start or end a document.": true
+    },
+    "Heading blank lines": {
+      "All headings have a blank line both before and after (except where the heading is at the beginning or end of the document).": true,
+      "Bottom": true,
+      "Empty Line Between Yaml and Header": true
+    },
+    "Line Break at Document End": {
+      "Ensures that there is exactly one line break at the end of a document.": true
+    },
+    "Paragraph blank lines": {
+      "All paragraphs should have exactly one blank line both before and after.": true
+    },
+    "Remove Empty Lines Between List Markers and Checklists": {
+      "There should not be any empty lines between list markers and checklists.": true
+    },
+    "Remove link spacing": {
+      "Removes spacing around link text.": true
+    },
+    "Remove Space around Fullwidth Characters": {
+      "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false,
+      "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab)": false
+    },
+    "Space after list markers": {
+      "There should be a single space after list markers and checkboxes.": true
+    },
+    "Space between Chinese and English or numbers": {
+      "Ensures that Chinese and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false,
+      "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false
+    },
+    "Trailing spaces": {
+      "Removes extra spaces after every line.": true,
+      "Two Space Linebreak": true
+    }
+  },
+  "lintOnSave": true,
+  "displayChanged": true,
+  "foldersToIgnore": [
+    "Extras/Templates"
+  ],
+  "linterLocale": "zh-cn",
+  "logLevel": 4,
+  "lintCommands": []
+}

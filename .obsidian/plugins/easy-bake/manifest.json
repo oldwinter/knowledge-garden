@@ -1,0 +1,11 @@
+{
+	"id": "easy-bake",
+	"name": "Easy Bake",
+	"version": "1.0.5",
+	"minAppVersion": "0.15.0",
+	"description": "Easily compile many Obsidian notes down to a single file.",
+	"author": "mgmeyers",
+	"authorUrl": "https://github.com/mgmeyers",
+	"fundingUrl": "https://www.buymeacoffee.com/mgme",
+	"isDesktopOnly": false
+}

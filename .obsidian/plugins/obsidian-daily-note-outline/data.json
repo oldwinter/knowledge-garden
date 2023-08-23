@@ -1,0 +1,94 @@
+{
+  "initialSearchType": "backward",
+  "offset": 7,
+  "onset": "2020-03-30",
+  "duration": {
+    "day": 28,
+    "week": 12,
+    "month": 12,
+    "quarter": 8,
+    "year": 3
+  },
+  "showElements": {
+    "heading": true,
+    "link": true,
+    "tag": true,
+    "listItems": true
+  },
+  "headingLevel": [
+    true,
+    true,
+    true,
+    false,
+    false,
+    false
+  ],
+  "allRootItems": false,
+  "allTasks": true,
+  "taskOnly": false,
+  "hideCompletedTasks": false,
+  "displayFileInfo": "lines",
+  "displayFileInfoDaily": "lines",
+  "displayFileInfoPeriodic": "lines",
+  "viewPosition": "right",
+  "markdownOnly": true,
+  "exactMatchOnly": false,
+  "wordsToIgnore": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  },
+  "inlinePreview": true,
+  "tooltipPreview": true,
+  "tooltipPreviewDirection": "left",
+  "includeOnly": "none",
+  "wordsToInclude": [],
+  "includeBeginning": true,
+  "primeElement": "none",
+  "wordsToExclude": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  },
+  "wordsToExtract": "",
+  "icon": {
+    "heading": "none",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "customIcon": {
+    "heading": "hash",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "indent": {
+    "heading": true,
+    "link": true,
+    "listItems": true
+  },
+  "indentFollowHeading": 0,
+  "prefix": {
+    "heading": "",
+    "link": "",
+    "tag": "",
+    "listItems": "",
+    "task": "",
+    "taskDone": ""
+  },
+  "repeatHeadingPrefix": "none",
+  "addCheckboxText": false,
+  "periodicNotesEnabled": false,
+  "calendarSetsEnabled": false,
+  "attachWeeklyNotesName": true,
+  "showDebugInfo": false
+}

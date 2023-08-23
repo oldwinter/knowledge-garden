@@ -1,0 +1,11 @@
+{
+	"id": "novel-word-count",
+	"name": "Novel word count",
+	"version": "2.21.4",
+	"minAppVersion": "0.13.31",
+	"description": "Displays a word count (and more!) for each file, folder and vault in the File Explorer pane.",
+	"author": "Isaac Lyman",
+	"authorUrl": "https://isaaclyman.com",
+	"isDesktopOnly": false,
+	"fundingUrl": "https://paypal.me/isaaclyman"
+}

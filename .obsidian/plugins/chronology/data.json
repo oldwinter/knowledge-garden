@@ -1,0 +1,8 @@
+{
+  "addRibbonIcon": false,
+  "launchOnStartup": true,
+  "use24Hours": true,
+  "avgDailyNotes": 5,
+  "useSimpleList": false,
+  "groupItemsInSameSlot": false
+}

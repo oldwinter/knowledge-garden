@@ -1,0 +1,91 @@
+.obsidian_douban_settings_area {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.obsidian_douban_settings_cookie_login > .setting-item-control > textarea {
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 100px;
+	width: 100%;
+}
+
+.obsidian_douban_settings_textField {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+.obsidian_douban_settings_text {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.obsidian_douban_settings_input {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.obsidian_douban_settings_button {
+	margin: auto;
+	vertical-align: bottom;
+
+}
+
+.obsidian_douban_search_input {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 90%;
+}
+
+.obsidian_douban_search_button {
+    margin-top: 30px;
+    margin-right: 10px;
+	float:right;
+}
+
+.obsidian_douban_status_button {
+	margin-top: 5px;
+	margin-right: 10px;
+	float:right;
+}
+
+.obsidian_douban_settings_desc.has_error {
+	color: #fb464c;
+}
+
+.obsidian_douban_settings_input.has-error {
+	color: #fb464c;
+	border-color: #fb464c;
+}
+
+
+.obsidian_douban_sync_config{
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+.obsidian_douban_sync_selections{
+	width: 40px;
+}
+
+
+.obsidian_douban_sync_config_text{
+	vertical-align: bottom;
+}
+
+.obsidian_douban_sync_slider {
+	display: inline-block;
+	position: relative;
+	margin-left: 5px;
+	margin-bottom: 1px;
+	width: 90%;
+}
+
+
+
+
+

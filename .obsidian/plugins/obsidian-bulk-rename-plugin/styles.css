@@ -1,0 +1,155 @@
+.bulk_rename_plugin {
+  padding-right: 1rem;
+}
+
+.bulk_rename {
+  width: calc(100% - 20px);
+}
+
+.bulk_rename_preview {
+  width: 80%;
+  height: 100%;
+  gap: 0;
+}
+
+@media screen and (max-width: 983px) {
+  .bulk_rename_preview {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.bulk_info {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+
+.bulk_rename_preview > textarea {
+  height: 360px;
+}
+
+.replaceRenderSymbols {
+  display: flex;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.setting-item-control.replaceRenderSymbols .bulk_input {
+  min-height: 80px;
+}
+
+.setting-item-control .bulk_preview_textarea {
+  min-width: 19em;
+}
+
+.bulk_preview_textarea {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+  width: 100%;
+  height: 400px;
+  resize: none;
+}
+
+.bulk_button {
+  width: 100%;
+}
+
+.bulk_preview_header {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.setting-item-control .bulk_input {
+  width: 100%;
+  resize: none;
+  min-width: auto;
+}
+
+.setting-item-control .bulk_input:first-child {
+  margin-right: 15px;
+}
+
+.bulk_regexp_search {
+  padding-right: 1rem;
+}
+
+.bulk_toggle {
+  border-top: none;
+}
+
+.bulk_preview_label:first-child {
+  margin-right: 15px;
+}
+
+.bulk_preview_label {
+  text-align: center;
+}
+
+.bulk_regexp_container {
+  justify-content: space-between;
+}
+
+.bulk_regexp_control {
+  background: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  transition: box-shadow 0.15s ease-in-out, border 0.15s ease-in-out;
+  font-family: inherit;
+  border-radius: var(--input-radius);
+  outline: none;
+  max-width: 400px;
+}
+
+.bulk_regexp_control:hover,
+.bulk_regexp_control:focus,
+.bulk_regexp_control:focus-visible {
+  box-shadow: 0 0 0 2px var(--background-modifier-border-hover);
+}
+
+.bulk_regexp_control > input {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bulk_regexp,
+.bulk_regexp_flags {
+  width: 100%;
+}
+
+.bulk_regexp:hover,
+.bulk_regexp:focus,
+.bulk_regexp:focus-visible .bulk_regexp_flags:hover,
+.bulk_regexp_flags:focus,
+.bulk_regexp_flags:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.bulk_regexp_flags {
+  caret-color: transparent;
+  max-width: 80px;
+}
+
+.bulk_regexp_slash {
+  font-size: 1.5em;
+  opacity: 0.5;
+}
+
+.bulk-flag-selected {
+  background-color: lavender !important;
+}

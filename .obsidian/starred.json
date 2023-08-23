@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "§ 王者荣耀",
+      "path": "Spaces/3-Resource/王者荣耀/§ 王者荣耀.md"
+    },
+    {
+      "type": "file",
+      "title": "∑ Chrome插件",
+      "path": "Spaces/3-Resource/效率工具与服务专题/Chrome插件使用/∑ Chrome插件.md"
+    },
+    {
+      "type": "file",
+      "title": "∑ VSCode插件",
+      "path": "Spaces/3-Resource/效率工具与服务专题/VSCode插件使用/∑ VSCode插件.md"
+    },
+    {
+      "type": "file",
+      "title": "∑ AI MOC",
+      "path": "Spaces/3-Resource/效率工具与服务专题/AI工具的使用/∑ AI MOC.md"
+    },
+    {
+      "type": "file",
+      "title": "OpenAI 官方文档阅读笔记",
+      "path": "Spaces/1-Project/OpenAI 官方文档阅读笔记/∑ OpenAI 官方文档阅读笔记.md"
+    },
+    {
+      "type": "file",
+      "title": "∑ 运动与健康",
+      "path": "Spaces/2-Area/运动与健康/∑ 运动与健康.md"
+    }
+  ]
+}

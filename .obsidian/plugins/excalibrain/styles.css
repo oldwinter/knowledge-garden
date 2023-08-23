@@ -1,0 +1,349 @@
+/* Sets all the text color to red! */
+.excalibrain-warning {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
+}
+
+.excalibrain-prompt-center {
+  text-align: center;
+}
+
+.excalibrain-contentEl div.Island,
+.excalibrain-contentEl button.help-icon {
+  display:none;
+}
+
+.excalibrain-contentEl {
+  overflow: hidden !important;
+  position: relative;
+}
+
+/* -----------
+   TOOLS PANEL
+  ------------ */
+  .excalibrain-toolspanel-wrapper {
+    z-index: 3;
+    position: absolute;
+    top: 0.6em;
+    padding-left: 0.6em;
+    /* Set width to auto to fit its content */
+    width: 100%;
+    padding-right: 0.6em;
+    pointer-events: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .excalibrain-dropdown-wrapper,
+  .excalibrain-buttons {
+    pointer-events: none;
+    margin-top: 0.3em;
+    max-width: 37em;
+    justify-content: space-between;
+  }
+
+  .excalibrain-searchinput {
+    width: 26em;
+    vertical-align: middle;
+    pointer-events: all;
+  }
+  
+  .excalibrain-buttons {
+    margin-left: -0.3em;
+    display: flex;
+    float: right;
+    flex: 1 0 30em;
+  }
+
+  .excalibrain-toolspanel-divider {
+    width: 0.15em;
+    background-color: var(--default-border-color);
+    margin-left: 0.5em;
+    margin-right: 0.2em;
+  }
+
+  .excalibrain-button {
+    pointer-events: all;
+    vertical-align: middle;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin-left: 0.3em !important;
+    margin-right: 0px !important;
+    width: 2.4em !important;
+    justify-content: center !important;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .excalibrain-button.off {
+      background-color: var(--island-bg-color);
+  }
+
+  .excalibrain-button.on {
+      background-color: var(--color-primary-darker);
+  }
+
+  .excalibrain-button:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  .excalibrain-button:active {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .excalibrain-button.disabled {
+    background-color: var(--island-bg-color);
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* -----------
+     HISTORY
+  ------------ */
+
+.excalibrain-history-wrapper {
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 7rem;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.excalibrain-history-container {
+  overflow-y: hidden;
+  display: -webkit-box;
+  overflow-x: scroll;
+  padding-left: 0.5em;
+  background-color: #00000030;
+}
+
+.excalibrain-history-divider {
+  color: gold;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: smaller;
+}
+
+.excalibrain-history-item {
+  cursor: pointer;
+  color: silver;
+  font-size: smaller;
+}
+
+/* -----------
+    SETTINGS
+  ------------ */
+.excalibrain-settings-folding-L1 {
+  font-size: large;
+    font-weight: bold;
+    color: var(--text-title-h3);
+}
+
+.excalibrain-settings-h1 {
+  color: var(--text-title-h1);
+}
+
+.excalibrain-setting-style-section {
+  padding-left: 30px;
+  border-left: 10px solid var(--background-modifier-border);
+}
+
+.excalibrain-settings-demoimg {
+  max-width: 400px;
+}
+
+.excalibrain-setting-nameEl {
+  min-width: 10em;
+  max-width: 20em;
+}
+
+.excalibrain-setting-descEl {
+  min-width: 10em;
+  max-width: 20em;
+}
+
+.excalibrain-setting-controlEl {
+  width: 90%;
+}  
+
+.excalibrain-settings-colorlabel {
+  padding-right: 5px;
+  min-width: 3em;
+}
+
+.excalibrain-settings-colorpicker {
+  max-width: 32px;
+  min-width: 32px;
+  width: 32px !important;
+}
+
+.excalibrain-settings-opacitylabel {
+  padding-right: 5px;
+  padding-left: 10px;
+  min-width: 5em;
+}
+
+.excalibrain-settings-sliderlabel {
+  min-width: 2em;
+  text-align: right;
+}
+
+.excalibrain-settings-toggle {
+  min-width: 2em;
+  margin-right: 5px;
+}
+
+.excalibrain-dropdown-wrapper {
+  display: inline-flex;
+}
+
+/* -----------
+   MULTISELECT
+  ------------ */
+.multiselect-container {
+  padding-left: 0.3em;
+  width:14.2em;
+  pointer-events: all;
+}
+
+.multiselect-container * {
+  box-sizing:border-box;
+}
+
+.multiselect-container .multiselect-header {
+  width:100%;
+  margin-bottom:6px;
+}
+
+.multiselect-container .multiselect-wrapper {
+  position:relative;
+  width:100%;
+  height:30px;
+  background: var(--island-bg-color); /*var(--background-modifier-form-field);*/
+  border:1px solid var(--background-modifier-border);
+  display:flex;
+  align-items:center;
+  padding:0 8px;
+  cursor:pointer
+}
+
+.multiselect-container .multiselect-wrapper:after {
+  content:"";
+  position:absolute;
+  width:8px;
+  height:8px;
+  right:12px;
+  top:8px;
+  border-right:2px solid var(--text-normal);
+  border-top:2px solid var(--text-normal);
+  transform:rotate(135deg);
+  transform-origin:center center;
+  transition:all .2s ease-in-out;
+}
+
+.multiselect-container .multiselect-wrapper .selected-value {
+  padding-right:30px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.multiselect-container .multiselect-wrapper .options-wrapper {
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  max-height:300px;
+  overflow:auto;
+  background-color:var(--background-secondary);
+  border:1px solid var(--background-modifier-border);
+  display:none;
+  flex-direction:column;
+}
+
+.multiselect-container .multiselect-wrapper .option:hover {
+  cursor:pointer;
+  background-color:rgba(0,0,0,0.1);
+}
+
+.multiselect-container .multiselect-wrapper .option-text {
+  display:none;
+  padding:6px 12px;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper {
+  display:flex;
+  align-items:center;min-height:19px;
+  position:relative;
+  padding:6px 12px 6px 36px;
+  cursor:pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper .checkbox-checkmark {
+  position:absolute;
+  top:6px;
+  left:6px;
+  height:19px;
+  width:19px;
+  background-color:#eee;
+  border-radius:4px;
+  border:1px solid #000;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper .checkbox-checkmark:after {
+  content:'';
+  position:absolute;display:none;
+  left:6px;
+  top:2px;
+  width:4px;
+  height:8px;
+  border:solid white;
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input {
+  position:absolute;
+  opacity:0;
+  cursor:pointer;
+  height:0;
+  width:0;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input:checked ~ .checkbox-checkmark {
+  background-color:#2196F3;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input:checked ~ .checkbox-checkmark:after {
+  display:block;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .checkbox-wrapper {
+  display:none;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .option-text {
+  display:block;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .option-text.selected {
+  background-color:#2196F3;
+}
+
+.multiselect-container .multiselect-wrapper.opened:after {
+  top:12px;
+  transform:rotate(315deg);
+}
+
+.multiselect-container .multiselect-wrapper.opened .options-wrapper {
+  display:flex;
+}

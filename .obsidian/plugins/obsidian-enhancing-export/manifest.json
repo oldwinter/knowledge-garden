@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-enhancing-export",
+  "name": "Obsidian Enhancing Export",
+  "version": "1.8.7",
+  "minAppVersion": "0.12.0",
+  "description": "This is a enhancing export plugin for Obsidian. It allows to export to formats like Html, DOCX, ePub and PDF or Markdown(Hugo) etc.",
+  "author": "YISH",
+  "authorUrl": "https://github.com/mokeyish",
+  "isDesktopOnly": true
+}

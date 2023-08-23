@@ -1,0 +1,23 @@
+div[data-path='logseq'],
+div[data-path='logseq'] + div.nav-folder-children 
+{
+    display: none;
+}
+
+.nav-file-title[data-path='LICENSE'] {
+    display: none;
+}
+
+.nav-file-title[data-path='cedict_ts.u8'] {
+    display: none;
+}
+
+.nav-file-title[data-path='publish.js'] {
+    display: none;custom-theme
+}
+
+.nav-file-title[data-path='publish.css'] {
+    display: none;
+}
+
+

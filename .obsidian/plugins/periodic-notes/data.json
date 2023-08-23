@@ -1,0 +1,33 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": false,
+  "daily": {
+    "format": "YYYY-MM-DD",
+    "folder": "Spaces/0-Work/Daily notes",
+    "template": "Extras/Templates/Calendar模板/Daily notes模板",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "",
+    "template": "Extras/Templates/Calendar模板/回顾总结模板/周记模板.md",
+    "folder": "Spaces/0-Work/Plan & Review",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "Extras/Templates/Calendar模板/回顾总结模板/月度模板.md",
+    "folder": "Spaces/0-Work/Plan & Review",
+    "enabled": true
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}

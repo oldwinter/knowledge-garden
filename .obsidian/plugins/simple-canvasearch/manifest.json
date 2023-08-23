@@ -1,0 +1,10 @@
+{
+	"id": "simple-canvasearch",
+	"name": "Simple CanvaSearch",
+	"version": "0.1.0",
+	"minAppVersion": "1.3.3",
+	"description": "Quickly fuzzy-search and shift focus to notes or cards within the currently opened canvas.",
+	"author": "ddalexb",
+	"authorUrl": "https://github.com/ddalexb",
+	"isDesktopOnly": true
+}

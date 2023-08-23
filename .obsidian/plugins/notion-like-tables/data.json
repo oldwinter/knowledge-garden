@@ -1,0 +1,15 @@
+{
+  "shouldDebug": false,
+  "createAtObsidianAttachmentFolder": false,
+  "customFolderForNewFiles": "Atlas/Dashborads",
+  "exportRenderMarkdown": true,
+  "defaultEmbedWidth": "100%",
+  "defaultEmbedHeight": "340px",
+  "hasMigratedTo800": true,
+  "showWelcomeModal": false,
+  "showDonationModal": false,
+  "showWhatsNewModal": false,
+  "defaultFrozenColumnCount": 1,
+  "pluginVersion": "8.2.2",
+  "hasMigratedTo700": true
+}

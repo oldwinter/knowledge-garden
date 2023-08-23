@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"type":"text","text":"## 查找搜索","id":"d553e1432024e80a","x":228,"y":-605,"width":400,"height":364},
+		{"type":"text","text":"## 知识笔记\n\n[[Obsidian]]\n","id":"156e8a65ee3ca391","x":228,"y":-186,"width":400,"height":364},
+		{"type":"text","text":"## 习惯与工作流","id":"bb9fb25085ee6d22","x":228,"y":237,"width":400,"height":364},
+		{"type":"text","text":"## 信息输入\n\n[[滴答清单]]\n\n[[Cubox]]","id":"483436018044062f","x":687,"y":-605,"width":400,"height":364},
+		{"type":"text","text":"## Inbox\n\n[[滴答清单]]\n","id":"566dffeac5060028","x":687,"y":-186,"width":400,"height":364},
+		{"type":"text","text":"## 任务管理\n\n[[滴答清单]]","id":"ec5ad58650429b9b","x":687,"y":237,"width":400,"height":364},
+		{"type":"text","text":"## 资源管理\n\n[[阿里云盘]]","id":"f4aa50b45e25c39f","x":1154,"y":-605,"width":400,"height":364},
+		{"type":"text","text":"## 共享输出\n\n[[Notion]]","id":"d4fde38535bcd8a4","x":1154,"y":-186,"width":400,"height":364},
+		{"type":"text","text":"## 高效学习\n\n[[Anki]]","id":"9e90ea9868fc29e2","x":1154,"y":237,"width":400,"height":364},
+		{"type":"text","text":"","id":"4295fc909aab70cb","x":1011,"y":665,"width":250,"height":60}
+	],
+	"edges":[]
+}
