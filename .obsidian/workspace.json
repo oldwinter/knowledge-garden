@@ -67,7 +67,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -198,7 +198,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
+                "file": "Cards/永久笔记/gitignore 语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md"
+                "file": "Cards/永久笔记/gitignore 语法.md"
               }
             }
           }
@@ -322,8 +322,9 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "aa5b6eac40ab5517",
+  "active": "edae943cd3592658",
   "lastOpenFiles": [
+    "Sources/Articles/常青笔记阅读笔记/创建超链接到我的参考档案.md",
     "Spaces/0-Work/Daily notes/2023-08-23.md",
     "Extras/Media/Pasted image 20230823192405.png",
     "Spaces/0-Work/ack集群引入istio服务网格操作日志.md",
