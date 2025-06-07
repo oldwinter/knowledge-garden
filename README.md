@@ -47,6 +47,10 @@ dg-publish: true
 - 如果您有相关问题，或希望我加速填坑，请移步[Github Discussions](https://github.com/oldwinter/knowledge-garden/discussions)留言和讨论。我看到会尽快回复。
 - 如果您有钱且任性，想付费让我手把手协助你搭建个人知识库: cdd2zju@gmail.com。
 
+## 赞助
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=oldwinter/knowledge-garden&type=Date)](https://star-history.com/#oldwinter/knowledge-garden&Date)
