@@ -1,18 +1,17 @@
 ---
 alwaysApply: true
 ---
-# 发布流程（publish_by_frontmatter.py）
+# 发布流程（Quartz Syncer）
 
 - 发布基于 frontmatter 中的 `publish: true` 标记。
-- 脚本位置：[publish_by_frontmatter.py](mdc:publish_by_frontmatter.py)
+- 现存入口：Obsidian [[quartz syncer]] 的 `publication center`。详见 [🌏 本库发布指南.md](mdc:🍀 花园导览/🧰 本库指南/🌏 本库发布指南.md)。
+- 根目录没有 `publish_by_frontmatter.py`。不要运行 `python publish_by_frontmatter.py`，也不要新写会 git push 的发布脚本。
 
 ## 流程摘要
-1. 扫描仓库内 `.md` 文件。
-2. 过滤含 `publish: true` 的文档。
-3. 复制到发布仓库并执行 Git 提交/推送。
-4. 其他图片等资源文件、特殊.文件、base文件、canvas文件，逻辑写在脚本中。
+1. 给要发布的笔记打上 `publish: true`。
+2. 在 Obsidian 里执行 Quartz Syncer 的 `publication center`。
+3. 插件把文件复制到 dg3 仓库 content 目录，Netlify 更新 https://garden.oldwinter.top。
 
 ## 注意事项
-- 使用 `.gitignore` 与脚本内置规则过滤敏感文件。
+- 使用 `.gitignore` 过滤敏感文件。
 - 发布前请检查隐私信息、草稿状态与失效链接。
-
