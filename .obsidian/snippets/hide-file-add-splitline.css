@@ -12,10 +12,6 @@ div[data-path='logseq'] + div.nav-folder-children
   display: none;
 }
 
-.nav-file-title[data-path="CLAUDE.md"] {
-  display: none;
-}
-
 .nav-file-title[data-path="AGENTS.md"] {
   display: none;
 }
@@ -47,7 +43,7 @@ div[data-path='logseq'] + div.nav-folder-children
 
 /* 这里填写文件夹名称 */
 /* 例如，你填写了”学习笔记“，那就会在学习笔记后面添加分隔线 */
-/* .nav-folder:has([data-path="🍀 花园导览"])::after,
+/* .nav-folder:has([data-path="👀 花园导览"])::after,
 .nav-folder:has([data-path="Spaces"])::after {
     content: '';
     display: block;
