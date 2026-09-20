@@ -14,6 +14,7 @@ This repository is an Obsidian-based digital garden. Notes are Markdown with YAM
 ## Build, Test, and Development Commands
 - Publish: in Obsidian, set `publish: true` and run the Quartz Syncer `publication center` command. Do not run `python publish_by_frontmatter.py` — that file is gone.
 - Link check: in Obsidian, use “检查失效链接” to validate backlinks before publishing.
+- Link check (CLI): `node scripts/vault-links.mjs` reports unresolved embeds and broken relative links; `node --test scripts/` gates new breakage.
 - Repo checks: `node --test scripts/` (also `.github/workflows/ci.yml`).
 
 ## Coding Style & Naming Conventions

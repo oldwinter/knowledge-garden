@@ -15,4 +15,4 @@ publish: true
 
 ## 合并内容
 
-[](api制定.md)
+[[api制定]]
