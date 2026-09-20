@@ -4,16 +4,15 @@ publish: true
 
 # Repository Guidelines
 
-This repository is an Obsidian-based digital garden. Notes are Markdown with YAML frontmatter, organized using Zettelkasten/PARA. Publishing is controlled by the `publish: true` flag and automated by a Python script.
+This repository is an Obsidian-based digital garden. Notes are Markdown with YAML frontmatter, organized using Zettelkasten/PARA. Publishing is controlled by the `publish: true` flag and the Obsidian Quartz Syncer plugin. There is no `publish_by_frontmatter.py` at the repo root.
 
 ## Project Structure & Module Organization
 - Notes: `🍀 花园导览/`, `📥 Inbox/`, `Atlas/`, `Cards/`, `Calendar/`, `Extras/`, `Sources/`, `Spaces/`.
-- Script: `publish_by_frontmatter.py` at the repo root.
+- Publish: Obsidian Quartz Syncer `publication center` → dg3 → https://garden.oldwinter.top. See [🌏 本库发布指南](🍀%20花园导览/🧰%20本库指南/🌏%20本库发布指南.md).
 - Metadata: YAML frontmatter per note; backlinks via `[[...]]`; tags via `#标签`.
 
 ## Build, Test, and Development Commands
-- Run publish: `python publish_by_frontmatter.py` — selects notes with `publish: true`, copies to the publish repo, and performs Git actions.
-- Configure inside the script: `VAULT_PATH`, `SHOWCASE_PATH`, `FORCE_INCLUDE_DIRS`.
+- Publish: in Obsidian, set `publish: true` and run the Quartz Syncer `publication center` command. Do not run `python publish_by_frontmatter.py` — that file is gone.
 - Link check: in Obsidian, use “检查失效链接” to validate backlinks before publishing.
 
 ## Coding Style & Naming Conventions
@@ -21,14 +20,13 @@ This repository is an Obsidian-based digital garden. Notes are Markdown with YAM
 - Python: Follow PEP 8, 4-space indent, descriptive names. Keep configuration constants together and avoid hard-coding secrets.
 
 ## Testing Guidelines
-- Publishing: (1) ensure `publish: true` is set, (2) run the script, (3) confirm sensitive files are excluded, (4) verify Git actions succeed and only intended files appear in the publish repo.
+- Publishing: (1) ensure `publish: true` is set, (2) publish via Quartz Syncer `publication center`, (3) confirm only intended notes appear on garden.oldwinter.top.
 - Links: use Obsidian’s “检查失效链接”; spot-check external URLs in edited notes.
 
 ## Commit & Pull Request Guidelines
-- Commits: imperative mood and focused scope. Examples: `Cards: add MOC for AI notes`, `script: filter sensitive files`.
+- Commits: imperative mood and focused scope. Examples: `Cards: add MOC for AI notes`, `docs: point publish to Quartz Syncer`.
 - PRs: clear description, linked issues, before/after screenshots for MOCs/Canvas, and notes on any script or config changes.
 
 ## Security & Configuration Tips
 - Keep personal data and keys out of notes; `.gitignore` should exclude sensitive artifacts.
-- The publish script filters sensitive files, but always review changes before pushing.
-
+- Review notes before publishing via Quartz Syncer. Do not add a git-push publisher at the repo root.

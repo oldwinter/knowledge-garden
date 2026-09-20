@@ -21,5 +21,6 @@ alwaysApply: true
 - 详见链接规范规则：[linking.mdc](mdc:.cursor/rules/linking.mdc)
 
 ## 发布
-- 基于 frontmatter 的 `publish: true` 控制；脚本：[publish_by_frontmatter.py](mdc:publish_by_frontmatter.py)
-- 详见发布规则：[publish-flow.mdc](mdc:.cursor/rules/publish-flow.mdc)
+- 基于 frontmatter 的 `publish: true` 控制；入口：Obsidian Quartz Syncer `publication center`
+- 详见 [🌏 本库发布指南.md](mdc:🍀 花园导览/🧰 本库指南/🌏 本库发布指南.md) 与发布规则：[publish-flow.mdc](mdc:.cursor/rules/publish-flow.mdc)
+- 根目录没有 `publish_by_frontmatter.py`，不要把它写成发布命令
