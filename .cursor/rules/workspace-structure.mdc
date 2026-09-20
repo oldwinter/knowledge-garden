@@ -14,7 +14,7 @@ alwaysApply: true
 - `Calendar/`：日历区（每日、周、月、年报）
 - `Extras/`：附加区（配置、模板、脚本）
 - `Sources/`：外部资料（文章、书籍、剪藏等）
-- `Spaces/`：PARA 工作空间（1-Project/2-Area 等），详见 [_ Project Readme.md](mdc:Spaces/1-Project/_ Project Readme.md)
+- `Spaces/`：PARA 工作空间（`1-Project` / `2-Area` / `3-Resource` / `4-Archive`），详见 [Spaces Readme.md](mdc:Spaces/_ Spaces Readme.md)
 
 ## 链接与引用规范（摘要）
 - 在对话中：使用绝对路径 Markdown 链接；在仓库内 Markdown：使用 `[[双链]]` 或相对路径 Markdown 链接。

@@ -3,14 +3,14 @@ globs: **/*.canvas
 ---
 # Obsidian Advanced Canvas 规范
 
-- 遵循 [Obsidian JSON Canvas 1.0 规范.md](mdc:Extras/Documents/Obsidian JSON Canvas 1.0 规范.md)。但是虽然规范支持frontmatter，但我希望你不要往里面添加tags等内容，因为这目前和obsidian原生生态不兼容。
+- 遵循 [Obsidian JSON Canvas 1.0 规范.md](mdc:Extras/Documents/Obsidian JSON Canvas 1.0 规范.md)。规范支持 frontmatter，但不要往 canvas 里加 tags 等内容，目前和 Obsidian 原生生态不兼容。
 
 ## 基本结构（JSON Canvas 1.0）
 - `nodes`（text/file/link/group 等）与 `edges`（连接关系）。
 - 颜色：hex 或 1-6 预设（1=红，2=橙，3=黄，4=绿，5=青，6=紫）。
 
 ## 关键要求
-- 节点 `id` 不能包含短横杠 `-`；确保唯一性。必要时可用脚本批量替换处理。
+- 节点 `id` 不能包含短横杠 `-`；确保唯一性。需要批量改 id 时用仓库内已有脚本，不要引用不存在的 `replace_canvas_ids.py`。
 - `file` 引用使用相对路径，并包含后缀（`.md`/`.base`/`.canvas`/`.excalidraw`）。
 - 文本字段含双引号需转义为 `\"`；换行需使用严格换行（每行尾部两个空格加 `\n`）。
 - 根据文本长度合理设置 `width`、`x`、`y`。
