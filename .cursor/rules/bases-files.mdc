@@ -4,8 +4,8 @@ globs: **/*.base
 # Bases 文件规范
 
 - 推荐以 ∑ BASE.md 为中枢，集中维护语法与查询示例：
-  - [Bases syntax.md](mdc:Sources/Clippings/Bases syntax.md)
-  - [Bases Functions.md](mdc:Sources/Clippings/Bases Functions.md)
+  - [Bases syntax.md](mdc:Extras/Documents/Obsidian Bases syntax 规范.md)
+  - [Bases Functions.md](mdc:Extras/Documents/Obsidian Bases Function 语法.md)
   - [Atlas/Bases/∑ BASE.md](mdc:Atlas/Bases/∑ BASE.md)
 
 ## 语法与函数
