@@ -102,27 +102,6 @@
 			"label":"2. 文本/语音直接转到Obsidian处理"
 		},
 		{
-			"fromFloating":false,
-			"id":"9ea6858f12b11cfb",
-			"styleAttributes":{"path":"dotted"},
-			"toFloating":false,
-			"fromNode":"c76ead9123d7a50e",
-			"fromSide":"bottom",
-			"toNode":"7b6563b2d7a7d45b",
-			"toSide":"top",
-			"label":"语音闪念"
-		},
-		{
-			"id":"6234d9c61993639e",
-			"styleAttributes":{},
-			"toFloating":false,
-			"fromNode":"278b5875823e68be",
-			"fromSide":"right",
-			"toNode":"ae7b9643517c1b65",
-			"toSide":"left",
-			"label":"浏览器中打开阅读"
-		},
-		{
 			"id":"52052003c05c8f78",
 			"styleAttributes":{},
 			"toFloating":false,
@@ -142,49 +121,6 @@
 			"toNode":"ee53926129facf00",
 			"toSide":"left",
 			"label":"生成唯一链接，在ob中引用"
-		},
-		{
-			"fromFloating":false,
-			"id":"c62f7f8de7a2bedc",
-			"styleAttributes":{},
-			"toFloating":true,
-			"fromNode":"9c94b69632d2e3e1",
-			"fromSide":"right",
-			"toNode":"7b6563b2d7a7d45b",
-			"toSide":"top",
-			"label":"app中分享链接至统一inbox\n"
-		},
-		{
-			"fromFloating":false,
-			"id":"aeeb2d95a9233b45",
-			"styleAttributes":{},
-			"toFloating":true,
-			"fromNode":"537c9bb7dee1dd28",
-			"fromSide":"right",
-			"toNode":"7b6563b2d7a7d45b",
-			"toSide":"left",
-			"color":"1",
-			"label":"个人任务备忘\n"
-		},
-		{
-			"fromFloating":false,
-			"id":"9b1a47a4b590f22a",
-			"styleAttributes":{"path":"dotted"},
-			"toFloating":true,
-			"fromNode":"9c94b69632d2e3e1",
-			"fromSide":"right",
-			"toNode":"e8979647dbb004bf",
-			"toSide":"left"
-		},
-		{
-			"fromFloating":false,
-			"id":"b0fdb287611ab91d",
-			"styleAttributes":{"path":"dotted"},
-			"toFloating":false,
-			"fromNode":"537c9bb7dee1dd28",
-			"fromSide":"right",
-			"toNode":"e8979647dbb004bf",
-			"toSide":"left"
 		},
 		{
 			"id":"bdd30277bda4540c",
@@ -235,19 +171,9 @@
 		{"id":"91f7988f1a46038b","type":"group","ratio":1.7777777777777777,"x":791,"y":445,"width":1200,"height":675,"label":"New Slide"},
 		{"id":"eee4b1cda40de864","type":"group","ratio":1.7777777777777777,"x":-120,"y":-600,"width":1200,"height":675,"label":"New Slide"},
 		{"id":"f1d4a71bd254d6af","type":"group","x":-132,"y":-620,"width":440,"height":1524,"label":"inbox all in one"},
-		{"file":"Extras/Attachments/Images/Icons/icon-cc-image-cubox icon-cc-image.png","id":"b30c6324c1f1ea63","type":"file","zIndex":-554401,"x":660,"y":-560,"width":140,"height":140},
 		{"id":"4b94affc5ff55a3a","type":"group","x":88,"y":-1440,"width":518,"height":660,"label":"无法文本化的资源文件"},
 		{"file":"Spaces/3-Resource/软件梳理/安卓软件/滴答清单.md","id":"793e167d6834fae4","type":"file","x":-112,"y":-405,"width":400,"height":732},
-		{"file":"Extras/Attachments/Images/Icons/google drive icon-cc-image.png","id":"a997ae655023dbf1","type":"file","x":148,"y":-1400,"width":156,"height":140},
-		{"file":"Extras/Attachments/Images/Icons/icon-cc-image-folo icon-cc-image.png","id":"e5961237ea7a90e6","type":"file","x":660,"y":-1400,"width":140,"height":140},
-		{"id":"7748a357acee2482","type":"file","file":"Spaces/3-Resource/软件梳理/macos软件/Google Drive.md","x":140,"y":-1200,"width":400,"height":400},
-		{"id":"f54a4d4369601b97","type":"file","file":"Extras/Attachments/Images/Icons/arc 浏览器 icon-cc-image.png","x":1438,"y":-1400,"width":147,"height":147},
-		{"file":"Spaces/3-Resource/软件梳理/好用网站/Folo.md","id":"278b5875823e68be","type":"file","x":660,"y":-1200,"width":400,"height":400},
-		{"file":"Extras/Attachments/Images/Icons/滴答清单 ticktick icon-cc-image.png","id":"34240692a95fdd41","type":"file","x":-112,"y":-610,"width":140,"height":140},
-		{"file":"Sources/AIGC/处理 Inbox 流程.md","id":"1528dd51060719e1","type":"file","x":-112,"y":360,"width":400,"height":535},
-		{"file":"Extras/Attachments/Images/Icons/icon-cc-image-notion-light icon-cc-image.svg","id":"82e790a3e35fc6db","type":"file","x":660,"y":295,"width":140,"height":140},
 		{"file":"Spaces/3-Resource/软件梳理/安卓软件/Notion.md","id":"e6a10642fe09f7f3","type":"file","x":660,"y":495,"width":400,"height":400},
-		{"id":"ae7b9643517c1b65","type":"file","file":"Spaces/3-Resource/软件梳理/macos软件/Arc浏览器.md","x":1440,"y":-1200,"width":400,"height":400},
 		{"file":"Spaces/3-Resource/软件梳理/macos软件/Cubox.md","id":"9f08e258a6dfce9e","type":"file","x":660,"y":-360,"width":400,"height":400},
 		{
 			"id":"204aba3f47c3d7e8",
@@ -260,7 +186,6 @@
 			"height":149,
 			"color":"5"
 		},
-		{"file":"Extras/Attachments/Images/Icons/obsidian-dark icon-cc-image.svg","id":"3ecce294962b4343","type":"file","x":1430,"y":-560,"width":140,"height":140},
 		{"file":"Spaces/3-Resource/软件梳理/安卓软件/Obsidian.md","id":"ee53926129facf00","type":"file","x":1440,"y":-360,"width":400,"height":400,"color":"1"},
 		{"file":"🍀 花园导览/🧰 本库指南/Obsidian/Plugins/Cubox Obsidian 同步插件.md","id":"be8017f84a023d54","type":"file","x":1440,"y":200,"width":400,"height":343},
 		{
@@ -275,10 +200,7 @@
 		},
 		{"file":"Cards/闪念笔记.md","id":"e8979647dbb004bf","type":"file","x":-1040,"y":-1120,"width":400,"height":400},
 		{"file":"Cards/一元化收集.md","id":"7b6563b2d7a7d45b","type":"file","x":-840,"y":-420,"width":434,"height":1048},
-		{"file":"Atlas/Canvas/工作流/语音闪念收集工作流.canvas","id":"c76ead9123d7a50e","type":"file","x":-520,"y":-1120,"width":400,"height":400},
 		{"file":"Spaces/3-Resource/chrome插件/obsidian web clipper.md","id":"2ccbb9755b93aa81","type":"file","x":1500,"y":-660,"width":240,"height":100},
-		{"file":"Extras/Attachments/Images/canvas中直接引用的图片/MacBook air图-gpt4生成.png","id":"537c9bb7dee1dd28","type":"file","x":-1680,"y":-200,"width":400,"height":400},
-		{"file":"Extras/Attachments/Images/canvas中直接引用的图片/iqoo13手机图-gpt4生成.png","id":"9c94b69632d2e3e1","type":"file","x":-1680,"y":-720,"width":400,"height":400},
 		{
 			"id":"59f16b0e6e8abe2c",
 			"type":"text",
