@@ -7,7 +7,9 @@
 		{"id":"f871413cf80b388e","fromNode":"01201e4cbc281f10","fromSide":"bottom","toNode":"8f2847d8008b9331","toSide":"top"},
 		{"id":"ea9f8f0fec55100f","fromNode":"8f2847d8008b9331","fromSide":"bottom","toNode":"c432261d076d3ec7","toSide":"top"},
 		{"id":"9bd91d03efd3476a","fromNode":"01201e4cbc281f10","fromSide":"left","toNode":"913b4531a2116b67","toSide":"right"},
+		{"id":"828f8a371489816c","fromNode":"913b4531a2116b67","fromSide":"bottom","toNode":"e8750232afa4a6ab","toSide":"top"},
 		{"id":"5cde258748ac8681","fromNode":"01201e4cbc281f10","fromSide":"top","toNode":"9b4ee72be27ec41e","toSide":"bottom"},
+		{"id":"a5bb5fba41027309","fromNode":"9b4ee72be27ec41e","fromSide":"top","toNode":"b8da9f6e2aabaf9a","toSide":"bottom"},
 		{"id":"c60cb59739dd6f76","fromNode":"01201e4cbc281f10","fromSide":"top","toNode":"0a811c467856f7a4","toSide":"bottom"},
 		{"id":"61c31a6cc17e080e","fromNode":"0a811c467856f7a4","fromSide":"top","toNode":"8b12ad34c2bf0544","toSide":"bottom"},
 		{"id":"5440a084dadb64e8","fromNode":"9b4ee72be27ec41e","fromSide":"top","toNode":"a69d499b90fe68aa","toSide":"bottom"},
@@ -23,6 +25,16 @@
 			"toSide":"top"
 		},
 		{
+			"fromFloating":true,
+			"id":"d23de9f990c47108",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"4eababc5c57a6431",
+			"fromSide":"bottom",
+			"toNode":"2f1ff5ec2c527912",
+			"toSide":"top"
+		},
+		{
 			"id":"bce48433d21b212b",
 			"styleAttributes":{},
 			"fromFloating":true,
@@ -30,6 +42,16 @@
 			"fromNode":"01201e4cbc281f10",
 			"fromSide":"left",
 			"toNode":"3e3f8db71ccbcaf7",
+			"toSide":"top"
+		},
+		{
+			"id":"b940e8bed92f4440",
+			"styleAttributes":{},
+			"fromFloating":true,
+			"toFloating":false,
+			"fromNode":"3e3f8db71ccbcaf7",
+			"fromSide":"bottom",
+			"toNode":"a79ee5b1f117d3b0",
 			"toSide":"top"
 		}
 	],
@@ -106,6 +128,7 @@
 			"width":575,
 			"height":346
 		},
+		{"text":"键盘快捷键映射图 - Hyper - macOS.canvas","id":"b8da9f6e2aabaf9a","styleAttributes":{},"type":"text","x":-54,"y":-604,"width":400,"height":400},
 		{
 			"id":"01201e4cbc281f10",
 			"styleAttributes":{},
@@ -126,6 +149,7 @@
 			"width":250,
 			"height":60
 		},
+		{"text":"KANBAN - 看板.md","id":"e8750232afa4a6ab","styleAttributes":{},"type":"text","x":-1262,"y":297,"width":400,"height":400},
 		{
 			"id":"8f2847d8008b9331",
 			"styleAttributes":{},
@@ -156,6 +180,7 @@
 			"width":260,
 			"height":60
 		},
+		{"text":"花园导览.base","id":"2f1ff5ec2c527912","type":"text","x":-140,"y":980,"width":400,"height":400},
 		{
 			"id":"d37110d3f588229e",
 			"styleAttributes":{},
@@ -196,6 +221,7 @@
 			"y":800,
 			"width":260,
 			"height":60
-		}
+		},
+		{"id":"a79ee5b1f117d3b0","type":"text","text":"Wiki Home.components","x":-1200,"y":1020,"width":543,"height":400}
 	]
 }
