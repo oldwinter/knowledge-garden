@@ -7,13 +7,8 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const guideRel = "🍀 花园导览/🧰 本库指南/🌏 本库发布指南.md";
 
-const agentDocs = ["AGENTS.md", "CLAUDE.md", "GEMINI.md"].map((name) => ({
-  name,
-  text: readFileSync(join(root, name), "utf8"),
-}));
+const agentDocs = [{ name: "AGENTS.md", text: readFileSync(join(root, "AGENTS.md"), "utf8") }];
 const guide = readFileSync(join(root, guideRel), "utf8");
-const publishFlow = readFileSync(join(root, ".cursor/rules/publish-flow.mdc"), "utf8");
-const workspace = readFileSync(join(root, ".cursor/rules/workspace-structure.mdc"), "utf8");
 
 test("root has no publish_by_frontmatter.py", () => {
   assert.equal(existsSync(join(root, "publish_by_frontmatter.py")), false);
@@ -39,12 +34,14 @@ test("agent docs point to Quartz Syncer, not the missing script", () => {
   assert.ok(existsSync(join(root, guideRel)), `missing ${guideRel}`);
 });
 
-test("publish guide and cursor rules drop the dead root command", () => {
+test("CLAUDE.md and GEMINI.md import AGENTS.md instead of copying it", () => {
+  for (const name of ["CLAUDE.md", "GEMINI.md"]) {
+    assert.equal(readFileSync(join(root, name), "utf8").trim(), "@AGENTS.md", name);
+  }
+});
+
+test("publish guide drops the dead root command", () => {
   assert.doesNotMatch(guide, /执行根目录的\[\[publish_by_frontmatter\.py\]\]/);
   assert.match(guide, /quartz syncer/);
   assert.match(guide, /publication center/);
-  assert.doesNotMatch(publishFlow, /mdc:publish_by_frontmatter\.py/);
-  assert.doesNotMatch(workspace, /mdc:publish_by_frontmatter\.py/);
-  assert.match(publishFlow, /Quartz Syncer|quartz syncer/);
-  assert.match(workspace, /Quartz Syncer|quartz syncer/);
 });
