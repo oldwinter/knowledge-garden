@@ -2,31 +2,29 @@
 publish: true
 ---
 
-# Repository Guidelines
+# AGENTS.md
 
-This repository is an Obsidian-based digital garden. Notes are Markdown with YAML frontmatter, organized using Zettelkasten/PARA. Publishing is controlled by the `publish: true` flag and the Obsidian Quartz Syncer plugin. There is no `publish_by_frontmatter.py` at the repo root.
+This repository is oldwinter's public Obsidian digital garden: Markdown notes with YAML frontmatter, organized with Zettelkasten, MOCs, and PARA. Directory conventions and methodology live in [🧰 本库使用指南](🍀%20花园导览/🧰%20本库指南/🧰%20本库使用指南.md).
 
-## Project Structure & Module Organization
-- Notes: `🍀 花园导览/`, `📥 Inbox/`, `Atlas/`, `Cards/`, `Calendar/`, `Extras/`, `Sources/`, `Spaces/`.
-- Publish: Obsidian Quartz Syncer `publication center` → dg3 → https://garden.oldwinter.top. See [🌏 本库发布指南](🍀%20花园导览/🧰%20本库指南/🌏%20本库发布指南.md).
-- Metadata: YAML frontmatter per note; backlinks via `[[...]]`; tags via `#标签`.
+## Structure
 
-## Build, Test, and Development Commands
-- Publish: in Obsidian, set `publish: true` and run the Quartz Syncer `publication center` command. Do not run `python publish_by_frontmatter.py` — that file is gone.
-- Link check: in Obsidian, use “检查失效链接” to validate backlinks before publishing.
+- `🍀 花园导览/`: reader-facing navigation, MOCs, and the library guides.
+- `📥 Inbox/`: capture. `Cards/`: permanent atomic notes. `Calendar/`: daily, weekly, monthly, and yearly notes.
+- `Atlas/`: Bases, Canvas, Dataviews, and drawings (see `Atlas/_ Atlas Readme.md`). `Sources/`: clippings and external material. `Spaces/`: PARA workspaces. `Extras/`: config, templates, scripts.
 
-## Coding Style & Naming Conventions
-- Markdown: Chinese prose; English for technical terms. Headings `#` → `####`. Use `[[双链]]`, `#标签`, atomic notes, and MOCs. Emoji prefixes are allowed (e.g., `🧰`, `📂`). Frontmatter fields include `publish`, `title`, `date created`, `date modified`, `tags`.
-- Python: Follow PEP 8, 4-space indent, descriptive names. Keep configuration constants together and avoid hard-coding secrets.
+## Writing notes
 
-## Testing Guidelines
-- Publishing: (1) ensure `publish: true` is set, (2) publish via Quartz Syncer `publication center`, (3) confirm only intended notes appear on garden.oldwinter.top.
-- Links: use Obsidian’s “检查失效链接”; spot-check external URLs in edited notes.
+- Chinese prose with English technical terms, headings `#` → `####`, short paragraphs, a space between Chinese and English.
+- Inside notes, link with `[[双链]]` or relative Markdown links; keep machine-specific absolute paths out of notes.
+- A note created from scratch by AI gets frontmatter `分类: "[[AI生成 - fileclass]]"` and `date created: YYYY-MM-DD`, with no `tags`.
+- `.base` and `.canvas` files have their own rules in `.cursor/rules/bases-files.mdc` and `.cursor/rules/obsidian-canvas.mdc`; read the matching one before editing those files.
 
-## Commit & Pull Request Guidelines
-- Commits: imperative mood and focused scope. Examples: `Cards: add MOC for AI notes`, `docs: point publish to Quartz Syncer`.
-- PRs: clear description, linked issues, before/after screenshots for MOCs/Canvas, and notes on any script or config changes.
+## Publishing
 
-## Security & Configuration Tips
-- Keep personal data and keys out of notes; `.gitignore` should exclude sensitive artifacts.
-- Review notes before publishing via Quartz Syncer. Do not add a git-push publisher at the repo root.
+Publishing is opt-in per note through the `publish: true` frontmatter flag. Obsidian Quartz Syncer's `publication center` copies flagged notes into the dg3 repository, and Netlify serves https://garden.oldwinter.top. The full procedure is [🌏 本库发布指南](🍀%20花园导览/🧰%20本库指南/🌏%20本库发布指南.md). There is no `publish_by_frontmatter.py` at the repo root; Quartz Syncer is the only publish path.
+
+Before flagging a note, check it for private data, draft status, and broken links (Obsidian “检查失效链接”).
+
+## Verify
+
+`node --test scripts/*.mjs`
