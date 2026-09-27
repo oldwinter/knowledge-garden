@@ -128,16 +128,7 @@
 			"width":575,
 			"height":346
 		},
-		{
-			"file":"Atlas/Canvas/快捷键键盘布局/键盘快捷键映射图 - Hyper - macOS.canvas",
-			"id":"b8da9f6e2aabaf9a",
-			"styleAttributes":{},
-			"type":"file",
-			"x":-54,
-			"y":-604,
-			"width":400,
-			"height":400
-		},
+		{"text":"键盘快捷键映射图 - Hyper - macOS.canvas","id":"b8da9f6e2aabaf9a","styleAttributes":{},"type":"text","x":-54,"y":-604,"width":400,"height":400},
 		{
 			"id":"01201e4cbc281f10",
 			"styleAttributes":{},
@@ -158,16 +149,7 @@
 			"width":250,
 			"height":60
 		},
-		{
-			"file":"Cards/KANBAN - 看板.md",
-			"id":"e8750232afa4a6ab",
-			"styleAttributes":{},
-			"type":"file",
-			"x":-1262,
-			"y":297,
-			"width":400,
-			"height":400
-		},
+		{"text":"KANBAN - 看板.md","id":"e8750232afa4a6ab","styleAttributes":{},"type":"text","x":-1262,"y":297,"width":400,"height":400},
 		{
 			"id":"8f2847d8008b9331",
 			"styleAttributes":{},
@@ -198,7 +180,7 @@
 			"width":260,
 			"height":60
 		},
-		{"file":"Atlas/Bases/花园导览.base","id":"2f1ff5ec2c527912","type":"file","x":-140,"y":980,"width":400,"height":400},
+		{"text":"花园导览.base","id":"2f1ff5ec2c527912","type":"text","x":-140,"y":980,"width":400,"height":400},
 		{
 			"id":"d37110d3f588229e",
 			"styleAttributes":{},
@@ -240,6 +222,6 @@
 			"width":260,
 			"height":60
 		},
-		{"id":"a79ee5b1f117d3b0","type":"file","file":"Atlas/Components/view/Wiki Home.components","x":-1200,"y":1020,"width":543,"height":400}
+		{"id":"a79ee5b1f117d3b0","type":"text","text":"Wiki Home.components","x":-1200,"y":1020,"width":543,"height":400}
 	]
 }

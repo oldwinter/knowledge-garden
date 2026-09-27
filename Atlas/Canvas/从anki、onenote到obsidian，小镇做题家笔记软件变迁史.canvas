@@ -15,9 +15,9 @@
 		},
 		{"id":"d8c61194e2e1d71a","type":"file","file":"Spaces/Published/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md","subpath":"#考研三个月，我用anki","x":80,"y":-240,"width":551,"height":600},
 		{"id":"a0dd03be32d4dbd3","type":"file","file":"Spaces/Published/已发布文章/从anki、onenote到obsidian，一名小镇做题家的笔记进化史.md","subpath":"#现在，我用obsidian构建个人知识库","x":80,"y":451,"width":551,"height":710},
-		{"id":"3978baf27f96e5b5","type":"file","file":"Extras/Attachments/Images/Icons/onenote-icon-cc-image.png","x":-60,"y":380,"width":109,"height":101},
-		{"id":"fb42a6d19c23d2f8","type":"file","file":"Extras/Attachments/Images/Icons/icon-cc-image-Obsidian.png","x":561,"y":360,"width":141,"height":141},
-		{"id":"bd5f1f0e3430d16d","type":"file","file":"Extras/Attachments/Images/Icons/icon-cc-image-Anki.png","x":561,"y":-340,"width":140,"height":140},
+		{"id":"3978baf27f96e5b5","type":"text","text":"onenote","x":-60,"y":380,"width":109,"height":101},
+		{"id":"fb42a6d19c23d2f8","type":"text","text":"Obsidian","x":561,"y":360,"width":141,"height":141},
+		{"id":"bd5f1f0e3430d16d","type":"text","text":"Anki","x":561,"y":-340,"width":140,"height":140},
 		{
 			"id":"3dd617401fe34012",
 			"type":"text",
