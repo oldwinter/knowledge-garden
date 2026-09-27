@@ -2,12 +2,8 @@
   "accentColor": "",
   "nativeMenus": false,
   "enabledCssSnippets": [
-    "color-headings",
-    "aaa",
-    "bases-table-styling",
     "bullet-list-live-preview-highlight-active",
     "bullet-list-live-preview-threading-active",
-    "hide-LICENSE-file",
     "行尾2个空格显示",
     "canvas-candy",
     "supercharged-links-gen",
