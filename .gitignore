@@ -80,6 +80,9 @@ publish.js
 *.json
 *.yaml
 
+# 插件 manifest 只有 id/name/version 元数据，不屏蔽，否则插件在干净克隆里无法加载
+!.obsidian/plugins/*/manifest.json
+
 # 日志文件
 *.log
 
