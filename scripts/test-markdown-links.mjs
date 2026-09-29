@@ -7,8 +7,11 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-const files = execFileSync("git", ["ls-files", "*.md"], { cwd: root, encoding: "utf8" })
-  .split("\n")
+const files = execFileSync("git", ["ls-files", "-z", "--", "*.md"], {
+  cwd: root,
+  encoding: "utf8",
+})
+  .split("\0")
   .filter(Boolean);
 
 // Remove fenced code blocks and inline code spans while keeping line numbers.
