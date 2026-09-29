@@ -111,3 +111,9 @@ test("committed workspace is public-safe and references repository files", () =>
 test("published Bases index only links to committed files", () => {
   assertWikilinksResolve("Atlas/Bases/∑ BASE.md");
 });
+
+test("published ACCESS entry page only links to committed files", () => {
+  assertWikilinksResolve(
+    "🍀 花园导览/🧰 本库指南/Tutorials/∑ 本库 ACCESS 的文件夹入口汇总.md",
+  );
+});
