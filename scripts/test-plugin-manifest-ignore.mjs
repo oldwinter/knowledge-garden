@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
@@ -25,9 +25,15 @@ test("plugin manifest.json files are not ignored", () => {
   );
 });
 
-test("every enabled community plugin can commit its manifest.json", () => {
+test("every enabled community plugin has a loadable manifest and bundle", () => {
   const enabled = JSON.parse(readFileSync(join(root, ".obsidian/community-plugins.json"), "utf8"));
   for (const id of enabled) {
+    const pluginDir = join(root, ".obsidian/plugins", id);
+    const manifestPath = join(pluginDir, "manifest.json");
+    assert.ok(existsSync(manifestPath), `${id}/manifest.json is missing`);
+    assert.ok(existsSync(join(pluginDir, "main.js")), `${id}/main.js is missing`);
+    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+    assert.equal(manifest.id, id, `${id}/manifest.json declares id ${manifest.id}`);
     assert.equal(
       isIgnored(`.obsidian/plugins/${id}/manifest.json`),
       false,
