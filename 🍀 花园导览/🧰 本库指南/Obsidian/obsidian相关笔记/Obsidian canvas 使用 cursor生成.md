@@ -28,19 +28,19 @@ publish: true
 
 ## 示例二
 
-基于仓库内已存在的文档，让cursor分析汇总，并生成canvas，这样做的好处是，会引用仓库已有的文件，而不是单纯生成卡片。方便我们做二次修改和加工。详见[[cursor 引用Obsidian 知识库文件生成 canvas的提示词]]。
+基于仓库内已存在的文档，让cursor分析汇总，并生成canvas，这样做的好处是，会引用仓库已有的文件，而不是单纯生成卡片。方便我们做二次修改和加工。详见[[Extras/Prompts/Obsidian相关/Obsidian Canvas 生成提示词|Obsidian Canvas 生成提示词]]。
 
 ## 经验
 
 模型gemini-2.5-pro表现稳定，但会忘记text内的"引号转义。如果canvas打不开，提醒他转义既可。已经直接写到cursorrule中。
 
-cloude 4 sonnet 模型会用[[Obsidian advanced canvas 规范]]中的各种高级节点类型（菱形、圆形等），但显得不美观，审美一般。
+cloude 4 sonnet 模型会用[[Extras/Documents/Obsidian JSON Canvas 1.0 规范|Obsidian JSON Canvas 1.0 规范]]中的各种高级节点类型（菱形、圆形等），但显得不美观，审美一般。
 
 o3模型生成的会比较简单，可能是提示词给的太简短。
 
 ## cursorrules
 
-2025-06-27更新：[[my-obsidian-rules.mdc]]，全文：
+2025-06-27更新：[obsidian-canvas.mdc](../../../../.cursor/rules/obsidian-canvas.mdc)，全文：
 
 ```mdc
 # Obsidian 数字花园 Cursor Rule
@@ -99,7 +99,7 @@ o3模型生成的会比较简单，可能是提示词给的太简短。
 
 ### Obsidian advanced canvas 规范
 
-[[Obsidian advanced canvas 规范]]：
+[[Extras/Documents/Obsidian JSON Canvas 1.0 规范|Obsidian JSON Canvas 1.0 规范]]：
 
 ```
 我的额外补充说明：
