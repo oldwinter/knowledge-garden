@@ -1,10 +1,28 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, extname, join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+function assertWikilinksResolve(relativePath) {
+  const text = readFileSync(join(root, relativePath), "utf8");
+  for (const match of text.matchAll(/!?\[\[([^\]\n]+)\]\]/g)) {
+    const target = match[1].split("|")[0].split("#")[0].trim();
+    if (!target) continue;
+    const candidates = [join(root, target), join(root, dirname(relativePath), target)];
+    if (!extname(target)) {
+      for (const candidate of [...candidates]) {
+        candidates.push(`${candidate}.md`, `${candidate}.canvas`, `${candidate}.base`);
+      }
+    }
+    assert.ok(
+      candidates.some((candidate) => existsSync(candidate)),
+      `${relativePath} links to missing ${target}`,
+    );
+  }
+}
 
 test("Cursor ignore rules live at the repository root", () => {
   const canonical = join(root, ".cursorignore");
@@ -88,4 +106,8 @@ test("committed workspace is public-safe and references repository files", () =>
     if (!existsSync(join(root, recent))) missing.push(recent);
   }
   assert.deepEqual(missing, []);
+});
+
+test("published Bases index only links to committed files", () => {
+  assertWikilinksResolve("Atlas/Bases/∑ BASE.md");
 });
