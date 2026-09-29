@@ -19,3 +19,13 @@ test("Cursor ignore rules live at the repository root", () => {
   assert.match(rules, /\*\.pdf/);
 });
 
+test("plugin-backed mobile pull action has an enabled loadable provider", () => {
+  const app = JSON.parse(readFileSync(join(root, ".obsidian/app.json"), "utf8"));
+  const enabled = JSON.parse(
+    readFileSync(join(root, ".obsidian/community-plugins.json"), "utf8"),
+  );
+  const provider = app.mobilePullAction.split(":")[0];
+  assert.ok(enabled.includes(provider), `${provider} is not enabled`);
+  assert.ok(existsSync(join(root, ".obsidian/plugins", provider, "manifest.json")));
+  assert.ok(existsSync(join(root, ".obsidian/plugins", provider, "main.js")));
+});
