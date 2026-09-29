@@ -57,3 +57,35 @@ test("Daily Notes paths exist when configured", () => {
     );
   }
 });
+
+test("committed workspace is public-safe and references repository files", () => {
+  const workspacePath = join(root, ".obsidian/.workspace.json");
+  const text = readFileSync(workspacePath, "utf8");
+  assert.doesNotMatch(text, /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i);
+  assert.doesNotMatch(text, /(?:[A-Za-z]:[\\/]|\/Users\/|\/home\/)/);
+  const workspace = JSON.parse(text);
+  const missing = [];
+  const walk = (value) => {
+    if (Array.isArray(value)) {
+      value.forEach(walk);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    for (const [key, child] of Object.entries(value)) {
+      if (
+        (key === "file" || key === "path") &&
+        typeof child === "string" &&
+        !/^[a-z]+:/i.test(child) &&
+        !existsSync(join(root, child))
+      ) {
+        missing.push(child);
+      }
+      walk(child);
+    }
+  };
+  walk(workspace);
+  for (const recent of workspace.lastOpenFiles ?? []) {
+    if (!existsSync(join(root, recent))) missing.push(recent);
+  }
+  assert.deepEqual(missing, []);
+});
