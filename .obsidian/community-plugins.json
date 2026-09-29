@@ -1,5 +1,4 @@
 [
-  "mermaid-popup",
   "omnisearch",
   "better-plugins-manager",
   "copy-url-in-preview",
@@ -7,7 +6,5 @@
   "advanced-canvas",
   "hot-reload",
   "obsidian-weread-plugin",
-  "tag-wrangler",
-  "obsidian-github-stars-manager",
-  "simple-mind-map"
+  "tag-wrangler"
 ]
