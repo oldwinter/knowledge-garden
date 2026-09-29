@@ -43,3 +43,17 @@ test("non-empty hotkey chords are unique", () => {
   }
   assert.deepEqual(duplicates, []);
 });
+
+test("Daily Notes paths exist when configured", () => {
+  const config = JSON.parse(
+    readFileSync(join(root, ".obsidian/daily-notes.json"), "utf8"),
+  );
+  assert.ok(existsSync(join(root, config.folder)), `missing Daily Notes folder ${config.folder}`);
+  if (config.template) {
+    const template = join(root, config.template);
+    assert.ok(
+      existsSync(template) || existsSync(`${template}.md`),
+      `missing Daily Notes template ${config.template}`,
+    );
+  }
+});
