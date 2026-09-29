@@ -134,6 +134,8 @@ test("committed workspace is public-safe and references repository files", () =>
     if (!existsSync(join(root, recent))) missing.push(recent);
   }
   assert.deepEqual(missing, []);
+  const attributes = readFileSync(join(root, ".gitattributes"), "utf8");
+  assert.match(attributes, /^\.obsidian\/\.workspace\.json binary$/m);
 });
 
 test("published Bases index only links to committed files", () => {
