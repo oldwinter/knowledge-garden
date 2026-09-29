@@ -29,3 +29,17 @@ test("plugin-backed mobile pull action has an enabled loadable provider", () => 
   assert.ok(existsSync(join(root, ".obsidian/plugins", provider, "manifest.json")));
   assert.ok(existsSync(join(root, ".obsidian/plugins", provider, "main.js")));
 });
+
+test("non-empty hotkey chords are unique", () => {
+  const hotkeys = JSON.parse(readFileSync(join(root, ".obsidian/hotkeys.json"), "utf8"));
+  const owners = new Map();
+  const duplicates = [];
+  for (const [command, bindings] of Object.entries(hotkeys)) {
+    for (const binding of bindings) {
+      const chord = [...(binding.modifiers ?? [])].sort().join("+") + "+" + binding.key;
+      if (owners.has(chord)) duplicates.push([chord, owners.get(chord), command]);
+      else owners.set(chord, command);
+    }
+  }
+  assert.deepEqual(duplicates, []);
+});

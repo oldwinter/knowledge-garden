@@ -77,23 +77,6 @@
       "key": "]"
     }
   ],
-  "obsidian-better-command-palette:open-better-commmand-palette": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
-  "obsidian-another-quick-switcher:search-command_Recommended search": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
   "editor:open-search-replace": [
     {
       "modifiers": [
@@ -147,15 +130,6 @@
       "key": "D"
     }
   ],
-  "obsidian-another-quick-switcher:search-command_recent-search": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
   "obsidian-advanced-slides:reload-advanced-slides-preview": [],
   "obsidian-advanced-slides:open-advanced-slides-preview": [],
   "pane-relief:go-1st": [],
@@ -167,23 +141,6 @@
   "pane-relief:go-7th": [],
   "pane-relief:go-8th": [],
   "pane-relief:go-last": [],
-  "cycle-through-panes:focus-on-last-active-pane": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "Tab"
-    }
-  ],
-  "cycle-through-panes:focus-on-last-active-pane-reverse": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Shift"
-      ],
-      "key": "Tab"
-    }
-  ],
   "global-search:open": [
     {
       "modifiers": [
@@ -204,33 +161,7 @@
     }
   ],
   "workspace:previous-tab": [],
-  "float-search:search-obsidian-globally": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "F"
-    }
-  ],
   "app:open-help": [],
-  "tab-selector:go-to-previous-tab": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "Tab"
-    }
-  ],
-  "tab-selector:go-to-next-tab": [
-    {
-      "modifiers": [
-        "Ctrl",
-        "Shift"
-      ],
-      "key": "Tab"
-    }
-  ],
   "editor:swap-line-up": [
     {
       "modifiers": [
@@ -246,15 +177,6 @@
         "Shift"
       ],
       "key": "ArrowUp"
-    }
-  ],
-  "smart-composer:add-selection-to-chat": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "L"
     }
   ],
   "obsidian-command-alias-plugin:alias:1741506797019": [
