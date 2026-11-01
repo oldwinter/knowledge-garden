@@ -1,6 +1,6 @@
 ---
 date created: 2022-07-03
-date modified: 2025-07-10
+date modified: 2026-11-01
 title: 🏗 本库Roadmap
 tags:
   - todo/本周
@@ -26,7 +26,7 @@ up:: [[🍀 花园导览]]
 ## 🎉 DONE
 
 - [[旧笔记如何迁移至obsidian等双链笔记]]
-- 把历史已发布过的笔记，通过[[publish_by_frontmatter.py]]脚本重新整理push到[[knowledge-garden]]，同时，使用[[quartz syncer]]，更方便地实时更新[[garden.oldwiner.top]].
+- 把历史已发布过的笔记，通过 `publish_by_frontmatter.py` 脚本重新整理 push 到 [knowledge-garden](https://github.com/oldwinter/knowledge-garden)，同时，使用[[quartz syncer]]，更方便地实时更新 https://garden.oldwinter.top 。
 - 因为隐私过多，导致2年多没更新数字花园成为了数字荒冢，[[2025-07-09]]重新捡起来。
 - 通过1个月以上的实践，将[[ACCESS 笔记组织法]]的工作流完善。
 	- 完成[[常见笔记组织方法]]的[[混合笔记法]]，将ACCESS的使用流程固化下来。
