@@ -1,6 +1,6 @@
 ---
 date created: 2025-07-25
-date modified: 2025-07-25
+date modified: 2026-11-01
 title: obsidian publish 发布
 tags:
   - todo/某天
@@ -28,9 +28,7 @@ obsidian 的第三方发布能力，目前 [[决赛圈]]2 个，但都有点不�
 
 欠缺：中文搜索。黑暗模式切换。手机适配右上角按钮。[[frontmatter]] 需要添加 feed，content-type，date，title 字段
 
-[GitHub - oldwinter/digital-garden](https://github.com/oldwinter/digital-garden)
-
-[入口 - 🌱 oldwinterの数字花园](https://blog.oldwinter.top/)
+当时尝试过的第三方仓 `oldwinter/digital-garden` 已不存在。后续 Jekyll 方案落在已归档的 [oldwinter/dg](https://github.com/oldwinter/dg)（https://notes.oldwinter.top），当前公开花园是 [oldwinter/dg3](https://github.com/oldwinter/dg3)（https://garden.oldwinter.top）。见[[🌏 本库发布指南]]。
 
 ## andy 滑窗方案主题的 liys
 

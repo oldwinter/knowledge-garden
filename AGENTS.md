@@ -21,7 +21,7 @@ This repository is oldwinter's public Obsidian digital garden: Markdown notes wi
 
 ## Publishing
 
-Publishing is opt-in per note through the `publish: true` frontmatter flag. Obsidian Quartz Syncer's `publication center` copies flagged notes into the dg3 repository, and Netlify serves https://garden.oldwinter.top. The full procedure is [🌏 本库发布指南](🍀%20花园导览/🧰%20本库指南/🌏%20本库发布指南.md). There is no `publish_by_frontmatter.py` at the repo root; Quartz Syncer is the only publish path.
+Publishing is opt-in per note through the `publish: true` frontmatter flag. Obsidian Quartz Syncer's `publication center` copies flagged notes into the dg3 repository, and Netlify serves https://garden.oldwinter.top. The full procedure is [🌏 本库发布指南](🍀%20花园导览/🧰%20本库指南/🌏%20本库发布指南.md). There is no `publish_by_frontmatter.py` at the repo root; Quartz Syncer is the only publish path. `digital-garden-ai` is an archived predecessor (a Vite + React notes experiment). It is not Quartz, not dg3, and is not coupled to this vault's publish path.
 
 Before flagging a note, check it for private data, draft status, and broken links (Obsidian “检查失效链接”).
 

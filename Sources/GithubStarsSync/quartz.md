@@ -22,7 +22,7 @@ topics:
 size_kb: 16233
 issues: 178
 date created: 2022-08-21
-date modified: 2025-07-29
+date modified: 2026-11-01
 title: quartz
 publish: true
 分类:
@@ -31,10 +31,12 @@ publish: true
 
 x:: [[quartz syncer]]
 
-注意点:  
-要使用vercel或github pages或cloudflare pages，不能用netlify，因为netlify会自动将url小写，带来bug。
+当前公开花园：[[obsidian quartz发布方案]]，站点 https://garden.oldwinter.top ，代码仓 [oldwinter/dg3](https://github.com/oldwinter/dg3)，部署在 [[Netlify]]（见 dg3 的 `netlify.toml`）。下面是历史适配记录；其中「不能用 netlify」已过时。
 
-核心2个点，命令参考dg3仓库的deploy. yaml文件：
+注意点:  
+早期踩过 Netlify 把 URL 小写的坑，所以一度倾向 Vercel / GitHub Pages / Cloudflare Pages。当前 dg3 已用 Netlify 构建。
+
+核心2个点，命令参考 dg3 仓库的构建配置（当前是 `netlify.toml`，不是 `deploy.yaml`）：
 
 - frontmatter需要有title，且value值加双引号。我用linter实现自动生成title，但其不支持自动加双引号，目前我是自己用sed命令加上双引号，linter作者说下个版本将支持title的value也加双引号。
 - 目前已支持[[wikilink]]，但依旧需要指定绝对引用路径，而我更习惯最短路径的引用方式，所以在构建时，我用mv命令将md文件批量移动至根目录，从而减少改文件链接的麻烦。
