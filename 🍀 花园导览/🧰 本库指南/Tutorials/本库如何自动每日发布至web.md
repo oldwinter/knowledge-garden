@@ -35,4 +35,4 @@ git commit -m "auto publish3 by keyboard"
 git push
 ```
 
-当push至github后，将会自动触发后续的构建和发布流程。目前我的dg方案托管在，我的dg3方案托管在[[Vercel]]。
+当push至github后，将会自动触发后续的构建和发布流程。目前我的dg方案托管在，我的dg3方案托管在[[Netlify]]。
